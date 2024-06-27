@@ -1,7 +1,7 @@
-export default async function GraphQL(query) {
+export default async function GraphQL(query, useCache = true) {
   try {
     const response = await fetch("https://api.tarkov.dev/graphql", {
-      // cache: "no-cache",
+      cache: (useCache && "force-cache") || "no-store",
       method: "POST",
       headers: {
         "Content-Type": "application/json",
