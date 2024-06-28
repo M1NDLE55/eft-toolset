@@ -14,7 +14,7 @@ export default function Page() {
 
   return (
     <main className="flex justify-center items-center p-4">
-      <div className="max-w-2xl w-full flex flex-col gap-4">
+      <div className="max-w-xl w-full flex flex-col gap-4">
         <SearchBar
           itemSearch={itemSearch}
           setItemSearch={setItemSearch}

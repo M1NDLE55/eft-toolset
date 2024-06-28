@@ -14,14 +14,25 @@ export default function SelectedItem({ searchParams }) {
                 vendor {
                   name
                 }
-                price
+                priceRUB
               }         
               sellFor{
                 vendor {
                   name
                 }
-                price
-              }         
+                priceRUB
+              }   
+              usedInTasks {
+                name
+                minPlayerLevel
+                trader {
+                    name
+                }
+                objectives {
+                    description                  
+                }
+                wikiLink         
+              }      
         }
       }`;
 
@@ -36,33 +47,47 @@ export default function SelectedItem({ searchParams }) {
 
       try {
         const item = (await GraphQL(selectedItemQuery(id))).data.item;
+        const fleaMarket =
+          (item.fleaMarketFee &&
+            item.sellFor.find(
+              (sellFor) => sellFor.vendor.name === "Flea Market"
+            )) ||
+          null;
 
         setItem({
           name: item.name,
           fleaMarketFee: item.fleaMarketFee,
           gridImageLink: item.gridImageLink,
-          fleaMarket: {
-            buyForPrice:
-              (item.fleaMarketFee &&
-                item.buyFor.find(
-                  (buyFor) => buyFor.vendor.name === "Flea Market"
-                ).price) ||
-              null,
-            sellForPrice:
-              (item.fleaMarketFee &&
-                item.sellFor.find(
-                  (sellFor) => sellFor.vendor.name === "Flea Market"
-                ).price) ||
-              null,
-          },
-          buyFor:
-            item.buyFor
-              .filter((buyFor) => buyFor.vendor.name !== "Flea Market")
-              .sort((a, b) => a.price - b.price)[0] || null,
-          sellFor:
-            item.sellFor
-              .filter((sellFor) => sellFor.vendor.name !== "Flea Market")
-              .sort((a, b) => b.price - a.price)[0] || null,
+          buyFor: [
+            item.buyFor.reduce((acc, buyFor) => {
+              if (buyFor.vendor.name === "Flea Market") {
+                return acc;
+              }
+              if (!acc || buyFor.priceRUB < acc.priceRUB) {
+                return buyFor;
+              }
+              return acc;
+            }, null),
+            fleaMarket,
+          ]
+            .filter((item) => item !== null)
+            .sort((a, b) => a.priceRUB - b.priceRUB),
+          sellFor: [
+            item.sellFor.reduce((acc, sellFor) => {
+              if (sellFor.vendor.name === "Flea Market") {
+                return acc;
+              }
+              if (!acc || sellFor.priceRUB > acc.priceRUB) {
+                return sellFor;
+              }
+              return acc;
+            }, null),
+            ,
+            fleaMarket,
+          ]
+            .filter((item) => item !== null)
+            .sort((a, b) => b.priceRUB - a.priceRUB),
+          usedInTasks: item.usedInTasks,
         });
       } catch {
         console.log("Error on selected item load");
@@ -87,33 +112,66 @@ export default function SelectedItem({ searchParams }) {
             />
             <div>
               <p>Name: {item.name}</p>
-              <p>Flea Market Fee: {Rubles.format(item.fleaMarketFee)}</p>
+              <p>
+                {(item.fleaMarketFee &&
+                  `Flea Market Fee: ${Rubles.format(item.fleaMarketFee)}`) ||
+                  "Cannot be listed on flea market"}
+              </p>
             </div>
           </div>
         </div>
-        <div>
-          <h2 className="text-lg">Buy For</h2>
-          <div className="bg-neutral-700 rounded-md p-3 shadow-md">
-            <p>
-              {item.buyFor &&
-                `${item.buyFor.vendor.name}: ${Rubles.format(
-                  item.buyFor.price
-                )}`}
-            </p>
-            <p>Flea Market: {Rubles.format(item.fleaMarket.buyForPrice)}</p>
-          </div>
+        <div
+          className={`grid grid-cols-1 ${
+            item.buyFor.length > 0 &&
+            item.sellFor.length > 0 &&
+            "sm:grid-cols-2"
+          } gap-4`}
+        >
+          {item.buyFor.length > 0 && (
+            <div className="flex flex-col">
+              <h2 className="text-lg">Buy For</h2>
+              <div className="bg-neutral-700 rounded-md p-3 shadow-md flex-1">
+                {item.buyFor.map((buyFor) => (
+                  <p
+                    key={`buyFor${buyFor.vendor.name}`}
+                    className="flex flex-row justify-between"
+                  >
+                    <span>{buyFor.vendor.name}</span>
+                    <span>{Rubles.format(buyFor.priceRUB)}</span>
+                  </p>
+                ))}
+              </div>
+            </div>
+          )}
+          {item.sellFor.length > 0 && (
+            <div className="flex flex-col">
+              <h2 className="text-lg">Sell For</h2>
+              <div className="bg-neutral-700 rounded-md p-3 shadow-md flex-1">
+                {item.sellFor.map((sellFor) => (
+                  <p
+                    key={`sellFor${sellFor.vendor.name}`}
+                    className="flex flex-row justify-between"
+                  >
+                    <span>{sellFor.vendor.name}</span>
+                    <span>{Rubles.format(sellFor.priceRUB)}</span>
+                  </p>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
         <div>
-          <h2 className="text-lg">Sell For</h2>
-          <div className="bg-neutral-700 rounded-md p-3 shadow-md">
-            <p>
-              {item.sellFor &&
-                `${item.sellFor.vendor.name}: ${Rubles.format(
-                  item.sellFor.price
-                )}`}
-            </p>
-            <p>Flea Market: {Rubles.format(item.fleaMarket.sellForPrice)}</p>
-          </div>
+          {JSON.stringify(
+            item.usedInTasks.sort((a, b) => {
+              if (a.trader.name < b.trader.name) {
+                return -1;
+              }
+              if (a.trader.name > b.trader.name) {
+                return 1;
+              }
+              return a.minPlayerLevel - b.minPlayerLevel;
+            })
+          )}
         </div>
       </div>
     )
