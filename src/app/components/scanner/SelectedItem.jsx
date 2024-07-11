@@ -2,41 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import GraphQL from "@/app/features/data/GraphQL";
 import { Rubles } from "@/app/features/data/Currency";
 import { ChevronDown } from "lucide-react";
+import { selectedItemQuery } from "@/app/features/data/Queries";
 
 export default function SelectedItem({ searchParams }) {
   const [item, setItem] = useState(null);
   const [openTaskIndex, setOpenTaskIndex] = useState(null);
-
-  const selectedItemQuery = (id) => `{
-        item (id: "${id}") {
-              name
-              fleaMarketFee
-              gridImageLink
-              buyFor{
-                vendor {
-                  name
-                }
-                priceRUB
-              }         
-              sellFor{
-                vendor {
-                  name
-                }
-                priceRUB
-              }   
-              usedInTasks {
-                name
-                minPlayerLevel
-                trader {
-                    name
-                }
-                objectives {
-                    description                  
-                }
-                wikiLink         
-              }      
-        }
-      }`;
 
   useEffect(() => {
     async function fetchSelectedItem() {
