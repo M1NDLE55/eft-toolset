@@ -13,9 +13,9 @@ export default function Page() {
   const [filteredItems, setFilteredItems] = useState(null);
 
   return (
-    <main className="flex justify-center items-center p-4">
-      <div className="max-w-xl w-full flex flex-col gap-4">
-        <Suspense>
+    <Suspense>
+      <main className="flex justify-center items-center p-4">
+        <div className="max-w-xl w-full flex flex-col gap-4">
           <SearchBar
             itemSearch={itemSearch}
             setItemSearch={setItemSearch}
@@ -30,8 +30,8 @@ export default function Page() {
             pathname={pathname}
           />
           <SelectedItem searchParams={searchParams} />
-        </Suspense>
-      </div>
-    </main>
+        </div>
+      </main>
+    </Suspense>
   );
 }
