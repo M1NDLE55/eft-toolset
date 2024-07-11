@@ -12,7 +12,7 @@ export default function SearchBar({
   const router = useRouter();
 
   const allitemsQuery = `{
-    items {
+    items (limit: 10) {
           id
           name
     }
