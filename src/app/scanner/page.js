@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams, usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import SearchBar from "../components/scanner/SearchBar";
 import ItemSelection from "../components/scanner/ItemSelection";
 import SelectedItem from "../components/scanner/SelectedItem";
@@ -15,20 +15,22 @@ export default function Page() {
   return (
     <main className="flex justify-center items-center p-4">
       <div className="max-w-xl w-full flex flex-col gap-4">
-        <SearchBar
-          itemSearch={itemSearch}
-          setItemSearch={setItemSearch}
-          setFilteredItems={setFilteredItems}
-          pathname={pathname}
-        />
-        <ItemSelection
-          setItemSearch={setItemSearch}
-          filteredItems={filteredItems}
-          searchParams={searchParams}
-          setFilteredItems={setFilteredItems}
-          pathname={pathname}
-        />
-        <SelectedItem searchParams={searchParams} />
+        <Suspense>
+          <SearchBar
+            itemSearch={itemSearch}
+            setItemSearch={setItemSearch}
+            setFilteredItems={setFilteredItems}
+            pathname={pathname}
+          />
+          <ItemSelection
+            setItemSearch={setItemSearch}
+            filteredItems={filteredItems}
+            searchParams={searchParams}
+            setFilteredItems={setFilteredItems}
+            pathname={pathname}
+          />
+          <SelectedItem searchParams={searchParams} />
+        </Suspense>
       </div>
     </main>
   );
