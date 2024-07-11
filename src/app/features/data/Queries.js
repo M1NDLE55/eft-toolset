@@ -1,5 +1,5 @@
 export const allItemsQuery = `{
-    items (limit: 10) {
+    items {
           id
           name
     }
