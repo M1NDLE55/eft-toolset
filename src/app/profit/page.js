@@ -1,6 +1,5 @@
-import { vendored } from "next/dist/server/future/route-modules/app-page/module.compiled";
 import GraphQL from "../features/data/GraphQL";
-import { Items } from "../temp/Items";
+// import { Items } from "../temp/Items";
 
 export default async function Page() {
   return;
