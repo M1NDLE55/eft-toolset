@@ -3,17 +3,20 @@ import GraphQL from "@/app/features/data/GraphQL";
 import { Rubles } from "@/app/features/data/Currency";
 import { ChevronDown } from "lucide-react";
 import { selectedItemQuery } from "@/app/features/data/Queries";
+import { useSearchParams } from "next/navigation";
 
-export default function SelectedItem({ searchParams }) {
+export default function SelectedItem() {
   const [item, setItem] = useState(null);
   const [openTaskIndex, setOpenTaskIndex] = useState(null);
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     async function fetchSelectedItem() {
+      setItem(null);
+
       const id = searchParams.get("item");
 
       if (!id) {
-        setItem(null);
         return;
       }
 
@@ -71,7 +74,6 @@ export default function SelectedItem({ searchParams }) {
         });
       } catch {
         console.log("Error on selected item load");
-        setItem(null);
       } finally {
         setOpenTaskIndex(null);
       }
@@ -79,6 +81,22 @@ export default function SelectedItem({ searchParams }) {
 
     fetchSelectedItem();
   }, [searchParams]);
+
+  if (!item && searchParams.get("item")) {
+    return (
+      <div className="flex flex-col gap-4 animate-pulse">
+        <div className="rounded-md bg-neutral-700 h-[84px]"></div>
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-2
+           gap-4`}
+        >
+          <div className="flex-1 bg-neutral-700 h-[84px] rounded-md"></div>
+          <div className="flex-1 bg-neutral-700 h-[84px] rounded-md"></div>
+        </div>
+        <div className="rounded-md bg-neutral-700 h-[84px]"></div>
+      </div>
+    );
+  }
 
   return (
     item && (
