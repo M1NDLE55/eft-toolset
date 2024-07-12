@@ -183,6 +183,7 @@ export default function SelectedItem() {
 
 function Accordion({ task, openTaskIndex, setOpenTaskIndex, i }) {
   const content = useRef();
+  const isOpen = openTaskIndex === i;
 
   return (
     <div className="flex flex-col overflow-hidden">
@@ -192,7 +193,7 @@ function Accordion({ task, openTaskIndex, setOpenTaskIndex, i }) {
         }`}
         onClick={() => setOpenTaskIndex((index) => (index === i ? null : i))}
       >
-        <p className="truncate">
+        <p className={`${!isOpen ? "truncate" : ""}`}>
           <span className="bg-neutral-800 rounded-full px-2 mr-2">
             {task.trader.name}
           </span>
@@ -200,21 +201,19 @@ function Accordion({ task, openTaskIndex, setOpenTaskIndex, i }) {
         </p>
         <ChevronDown
           className="shrink-0 transition-rotate ease-in-out duration-500"
-          style={
-            openTaskIndex === i ? { rotate: "180deg" } : { rotate: "0deg" }
-          }
+          style={isOpen ? { rotate: "180deg" } : { rotate: "0deg" }}
         />
       </div>
       <div
         ref={content}
         className="transition-height ease-in-out duration-500"
         style={
-          openTaskIndex === i
+          isOpen
             ? { height: content.current.scrollHeight, marginBottom: "12px" }
             : { height: "0px" }
         }
       >
-        <div className="flex flex-row justify-between pb-1">
+        <div className="flex flex-col-reverse gap-1 sm:flex-row sm:justify-between pb-1">
           <p>
             Minimum Player Level:{" "}
             <span className="bg-neutral-800 rounded-full px-2">
