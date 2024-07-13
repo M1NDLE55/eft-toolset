@@ -4,15 +4,18 @@ import { Rubles } from "@/app/features/data/Currency";
 import { ChevronDown } from "lucide-react";
 import { selectedItemQuery } from "@/app/features/data/Queries";
 import { useSearchParams } from "next/navigation";
+import { AlertTriangle } from "lucide-react";
 
 export default function SelectedItem() {
   const [item, setItem] = useState(null);
+  const [errors, setErrors] = useState(null);
   const [openTaskIndex, setOpenTaskIndex] = useState(null);
   const searchParams = useSearchParams();
 
   useEffect(() => {
     async function fetchSelectedItem() {
       setItem(null);
+      setErrors(null);
 
       const id = searchParams.get("item");
 
@@ -20,67 +23,84 @@ export default function SelectedItem() {
         return;
       }
 
-      try {
-        const item = (await GraphQL(selectedItemQuery(id))).data.item;
-        const fleaMarket =
-          (item.fleaMarketFee &&
-            item.sellFor.find(
-              (sellFor) => sellFor.vendor.name === "Flea Market"
-            )) ||
-          null;
+      const response = await GraphQL(selectedItemQuery(id));
 
-        setItem({
-          name: item.name,
-          fleaMarketFee: item.fleaMarketFee,
-          gridImageLink: item.gridImageLink,
-          buyFor: [
-            item.buyFor.reduce((acc, buyFor) => {
-              if (buyFor.vendor.name === "Flea Market") {
-                return acc;
-              }
-              if (!acc || buyFor.priceRUB < acc.priceRUB) {
-                return buyFor;
-              }
-              return acc;
-            }, null),
-            fleaMarket,
-          ]
-            .filter((item) => item !== null)
-            .sort((a, b) => a.priceRUB - b.priceRUB),
-          sellFor: [
-            item.sellFor.reduce((acc, sellFor) => {
-              if (sellFor.vendor.name === "Flea Market") {
-                return acc;
-              }
-              if (!acc || sellFor.priceRUB > acc.priceRUB) {
-                return sellFor;
-              }
-              return acc;
-            }, null),
-            ,
-            fleaMarket,
-          ]
-            .filter((item) => item !== null)
-            .sort((a, b) => b.priceRUB - a.priceRUB),
-          usedInTasks: item.usedInTasks.sort((a, b) => {
-            if (a.trader.name < b.trader.name) {
-              return -1;
-            }
-            if (a.trader.name > b.trader.name) {
-              return 1;
-            }
-            return a.minPlayerLevel - b.minPlayerLevel;
-          }),
-        });
-      } catch {
-        console.log("Error on selected item load");
-      } finally {
-        setOpenTaskIndex(null);
+      if (response.errors) {
+        setErrors(response.errors);
+        return;
       }
+
+      const item = response.data.item;
+
+      const fleaMarket =
+        (item.fleaMarketFee &&
+          item.sellFor.find(
+            (sellFor) => sellFor.vendor.name === "Flea Market"
+          )) ||
+        null;
+
+      setItem({
+        name: item.name,
+        fleaMarketFee: item.fleaMarketFee,
+        gridImageLink: item.gridImageLink,
+        buyFor: [
+          item.buyFor.reduce((acc, buyFor) => {
+            if (buyFor.vendor.name === "Flea Market") {
+              return acc;
+            }
+            if (!acc || buyFor.priceRUB < acc.priceRUB) {
+              return buyFor;
+            }
+            return acc;
+          }, null),
+          fleaMarket,
+        ]
+          .filter((item) => item !== null)
+          .sort((a, b) => a.priceRUB - b.priceRUB),
+        sellFor: [
+          item.sellFor.reduce((acc, sellFor) => {
+            if (sellFor.vendor.name === "Flea Market") {
+              return acc;
+            }
+            if (!acc || sellFor.priceRUB > acc.priceRUB) {
+              return sellFor;
+            }
+            return acc;
+          }, null),
+          ,
+          fleaMarket,
+        ]
+          .filter((item) => item !== null)
+          .sort((a, b) => b.priceRUB - a.priceRUB),
+        usedInTasks: item.usedInTasks.sort((a, b) => {
+          if (a.trader.name < b.trader.name) {
+            return -1;
+          }
+          if (a.trader.name > b.trader.name) {
+            return 1;
+          }
+          return a.minPlayerLevel - b.minPlayerLevel;
+        }),
+      });
+
+      setOpenTaskIndex(null);
     }
 
     fetchSelectedItem();
   }, [searchParams]);
+
+  if (errors) {
+    return (
+      <div className="bg-red-200 border-red-700 border rounded-md p-3 flex flex-row gap-2">
+        <AlertTriangle className="text-red-700" />
+        {errors.map((error) => (
+          <p className="text-red-700" key={error.message}>
+            {error.message}
+          </p>
+        ))}
+      </div>
+    );
+  }
 
   if (!item && searchParams.get("item")) {
     return (
