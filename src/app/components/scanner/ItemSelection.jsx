@@ -1,27 +1,16 @@
 import Link from "next/link";
-import { useCallback } from "react";
 
 export default function ItemSelection({
   setItemSearch,
   filteredItems,
   setFilteredItems,
-  searchParams,
   pathname,
 }) {
-  const createQueryString = useCallback(
-    (name, value) => {
-      const params = new URLSearchParams(searchParams);
-
-      if (value) {
-        params.set(name, value);
-      } else {
-        params.delete(name);
-      }
-
-      return params.toString();
-    },
-    [searchParams]
-  );
+  function createQueryString(name, value) {
+    const params = new URLSearchParams();
+    params.set(name, value);
+    return params.toString();
+  }
 
   return (
     filteredItems && (

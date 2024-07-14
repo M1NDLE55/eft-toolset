@@ -10,6 +10,7 @@ export const selectedItemQuery = (id) => `{
           name
           fleaMarketFee
           gridImageLink
+          wikiLink
           buyFor{
             vendor {
               name

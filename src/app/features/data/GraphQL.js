@@ -13,12 +13,25 @@ export default async function GraphQL(query, useCache = true) {
     });
 
     if (!response.ok) {
-      throw new Error("Network response was not ok" + response.statusText);
+      return {
+        errors: [
+          {
+            message: `Network response was not ok: status '${response.statusText}'`,
+          },
+        ],
+      };
     }
 
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("There was a problem with the fetch operation:", error);
+    console.log(error.toString());
+    return {
+      errors: [
+        {
+          message: "A problem occured while fetching the data",
+        },
+      ],
+    };
   }
 }
