@@ -43,6 +43,7 @@ export default function SelectedItem() {
         name: item.name,
         fleaMarketFee: item.fleaMarketFee,
         gridImageLink: item.gridImageLink,
+        wikiLink: item.wikiLink,
         buyFor: [
           item.buyFor.reduce((acc, buyFor) => {
             if (buyFor.vendor.name === "Flea Market") {
@@ -137,6 +138,13 @@ export default function SelectedItem() {
                   `Flea Market Fee: ${Rubles.format(item.fleaMarketFee)}`) ||
                   "Cannot be listed on flea market"}
               </p>
+              <a
+                href={item.wikiLink}
+                target="blank"
+                className="underline underline-offset-2 text-yellow-500 hover:underline-offset-4 transition-[text-underline-offset]"
+              >
+                View on Wiki
+              </a>
             </div>
           </div>
         </div>
