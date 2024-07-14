@@ -1,35 +1,46 @@
-"use client";
+import Scanner from "../components/scanner/Scanner";
+import GraphQL from "../features/data/GraphQL";
+import { itemMetaQuery } from "../features/data/Queries";
 
-import { usePathname } from "next/navigation";
-import { useState, Suspense } from "react";
-import SearchBar from "../components/scanner/SearchBar";
-import ItemSelection from "../components/scanner/ItemSelection";
-import SelectedItem from "../components/scanner/SelectedItem";
+export async function generateMetadata({ searchParams }, parent) {
+  const id = searchParams.item;
+
+  //todo: unique scanner page metadata
+
+  if (!id) {
+    return await parent;
+  }
+
+  const response = await GraphQL(itemMetaQuery(id));
+
+  if (response.errors) {
+    return await parent;
+  }
+
+  const item = response.data.item;
+  const params = new URLSearchParams();
+  params.set("item", id);
+
+  return {
+    title: item.name,
+    description: `View details about ${item.name}`,
+    openGraph: {
+      title: item.name,
+      description: `View details about ${item.name}`,
+      url: `https://tarkov.webdevewan.com/scanner?${params.toString()}`,
+      siteName: "Item Scanner | EFT Toolset",
+      images: [
+        {
+          url: item.inspectImageLink,
+          height: 1200,
+          width: 630,
+        },
+      ],
+      type: "website",
+    },
+  };
+}
 
 export default function Page() {
-  const pathname = usePathname();
-  const [filteredItems, setFilteredItems] = useState(null);
-  const [itemSearch, setItemSearch] = useState("");
-
-  return (
-    <main className="flex justify-center items-center p-4">
-      <div className="max-w-xl w-full flex flex-col gap-4">
-        <SearchBar
-          itemSearch={itemSearch}
-          setItemSearch={setItemSearch}
-          setFilteredItems={setFilteredItems}
-          pathname={pathname}
-        />
-        <ItemSelection
-          setItemSearch={setItemSearch}
-          filteredItems={filteredItems}
-          setFilteredItems={setFilteredItems}
-          pathname={pathname}
-        />
-        <Suspense>
-          <SelectedItem />
-        </Suspense>
-      </div>
-    </main>
-  );
+  return <Scanner />;
 }

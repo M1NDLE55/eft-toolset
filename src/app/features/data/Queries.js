@@ -1,3 +1,10 @@
+export const itemMetaQuery = (id) => `{
+    item (id: "${id}") {
+          name
+          inspectImageLink 
+    }
+  }`;
+
 export const allItemsQuery = `{
     items {
           id
