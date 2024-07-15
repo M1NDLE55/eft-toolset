@@ -5,16 +5,33 @@ import { itemMetaQuery } from "../features/data/Queries";
 export async function generateMetadata({ searchParams }, parent) {
   const id = searchParams.item;
 
-  //todo: unique scanner page metadata
+  const baseMetaData = {
+    title: "Item Scanner | EFT Toolset",
+    description: "View details of any item in Escape From Tarkov",
+    openGraph: {
+      title: "Item Scanner | EFT Toolset",
+      description: "View details of any item in Escape From Tarkov",
+      url: "https://tarkov.webdevewan.com/scanner",
+      siteName: "Item Scanner | EFT Toolset",
+      images: [
+        {
+          url: "https://tarkov.webdevewan.com/item-scanner-og.png",
+          height: 1200,
+          width: 630,
+        },
+      ],
+      type: "website",
+    },
+  };
 
   if (!id) {
-    return await parent;
+    return baseMetaData;
   }
 
   const response = await GraphQL(itemMetaQuery(id));
 
   if (response.errors) {
-    return await parent;
+    return baseMetaData;
   }
 
   const item = response.data.item;
@@ -22,9 +39,7 @@ export async function generateMetadata({ searchParams }, parent) {
   params.set("item", id);
 
   return {
-    title: `${item.name.substring(0, 11)}${
-      item.name.length > 10 ? "..." : ""
-    } | EFT Toolset`,
+    title: `${item.name} | EFT Toolset`,
     description: `View details about ${item.name}`,
     openGraph: {
       title: `${item.name.substring(0, 21)}${
