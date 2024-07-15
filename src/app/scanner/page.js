@@ -22,10 +22,14 @@ export async function generateMetadata({ searchParams }, parent) {
   params.set("item", id);
 
   return {
-    title: item.name,
+    title: `${item.name.substring(0, 11)}${
+      item.name.length > 10 ? "..." : ""
+    } | EFT Toolset`,
     description: `View details about ${item.name}`,
     openGraph: {
-      title: item.name,
+      title: `${item.name.substring(0, 21)}${
+        item.name.length > 20 ? "..." : ""
+      } | EFT Toolset`,
       description: `View details about ${item.name}`,
       url: `https://tarkov.webdevewan.com/scanner?${params.toString()}`,
       siteName: "Item Scanner | EFT Toolset",

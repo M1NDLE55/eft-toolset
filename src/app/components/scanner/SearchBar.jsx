@@ -1,4 +1,3 @@
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import GraphQL from "@/app/features/data/GraphQL";
 import { allItemsQuery } from "@/app/features/data/Queries";
@@ -7,10 +6,8 @@ export default function SearchBar({
   itemSearch,
   setItemSearch,
   setFilteredItems,
-  pathname,
 }) {
   const [items, setItems] = useState([]);
-  const router = useRouter();
 
   useEffect(() => {
     async function fetchData() {
@@ -42,7 +39,6 @@ export default function SearchBar({
           );
           setFilteredItems(() => {
             if (!itemParam) {
-              router.replace(pathname);
               return null;
             }
 
