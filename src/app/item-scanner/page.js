@@ -1,9 +1,23 @@
 import Scanner from "../components/scanner/Scanner";
 import GraphQL from "../features/data/GraphQL";
-import { itemMetaQuery } from "../features/data/Queries";
+import { selectedItemQuery } from "../features/data/Queries";
+
+export const revalidate = 300;
+
+async function getItemData(searchParams) {
+  const id = searchParams.item;
+
+  if (!id) {
+    return { data: { item: "no-id" } };
+  }
+
+  const response = await GraphQL(selectedItemQuery(id));
+
+  return response;
+}
 
 export async function generateMetadata({ searchParams }) {
-  const id = searchParams.item;
+  const response = await getItemData(searchParams);
 
   const baseMetaData = {
     title: "Item Scanner | EFT Toolset",
@@ -24,11 +38,9 @@ export async function generateMetadata({ searchParams }) {
     },
   };
 
-  if (!id) {
+  if (response.data.item === "no-id") {
     return baseMetaData;
   }
-
-  const response = await GraphQL(itemMetaQuery(id));
 
   if (response.errors) {
     return baseMetaData;
@@ -36,7 +48,7 @@ export async function generateMetadata({ searchParams }) {
 
   const item = response.data.item;
   const params = new URLSearchParams();
-  params.set("item", id);
+  params.set("item", searchParams.item);
 
   return {
     title: `${item.name} | EFT Toolset`,
@@ -60,6 +72,8 @@ export async function generateMetadata({ searchParams }) {
   };
 }
 
-export default function Page() {
-  return <Scanner />;
+export default async function Page({ searchParams }) {
+  const response = await getItemData(searchParams);
+
+  return <Scanner response={response} />;
 }
