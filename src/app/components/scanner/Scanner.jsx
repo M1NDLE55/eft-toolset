@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useState, Suspense } from "react";
+import { useState } from "react";
 import SearchBar from "./SearchBar";
 import ItemSelection from "./ItemSelection";
 import SelectedItem from "./SelectedItem";
@@ -22,7 +22,7 @@ function LoadingSkeleton() {
   );
 }
 
-export default function Scanner() {
+export default function Scanner({ response }) {
   const pathname = usePathname();
   const [filteredItems, setFilteredItems] = useState(null);
   const [itemSearch, setItemSearch] = useState("");
@@ -55,16 +55,15 @@ export default function Scanner() {
           pathname={pathname}
         />
         {isLoading && <LoadingSkeleton />}
-        <Suspense>
-          <SelectedItem
-            isLoading={isLoading}
-            setIsLoading={setIsLoading}
-            item={item}
-            setItem={setItem}
-            errors={errors}
-            setErrors={setErrors}
-          />
-        </Suspense>
+        <SelectedItem
+          response={response}
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
+          item={item}
+          setItem={setItem}
+          errors={errors}
+          setErrors={setErrors}
+        />
       </div>
     </main>
   );

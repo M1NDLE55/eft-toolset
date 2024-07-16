@@ -1,12 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import GraphQL from "@/app/features/data/GraphQL";
 import { Rubles } from "@/app/features/data/Currency";
 import { ChevronDown } from "lucide-react";
-import { selectedItemQuery } from "@/app/features/data/Queries";
-import { useSearchParams } from "next/navigation";
 import { AlertTriangle } from "lucide-react";
 
 export default function SelectedItem({
+  response,
   isLoading,
   setIsLoading,
   item,
@@ -15,23 +13,18 @@ export default function SelectedItem({
   setErrors,
 }) {
   const [openTaskIndex, setOpenTaskIndex] = useState(null);
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    async function fetchSelectedItem() {
+    function setSelectedItem() {
       setErrors(null);
       if (!isLoading) {
         setIsLoading(true);
       }
 
-      const id = searchParams.get("item");
-
-      if (!id) {
+      if (response.data.item === "no-id") {
         setIsLoading(false);
         return;
       }
-
-      const response = await GraphQL(selectedItemQuery(id));
 
       if (response.errors) {
         setIsLoading(false);
@@ -97,8 +90,8 @@ export default function SelectedItem({
       setOpenTaskIndex(null);
     }
 
-    fetchSelectedItem();
-  }, [searchParams]);
+    setSelectedItem();
+  }, [response]);
 
   if (errors) {
     return (
