@@ -8,10 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "EFT Toolset",
-  description: "An awesome set of tools that will make you a chad in tarkov",
+  description: "Become a Tarkov Chad with this awesome set of tools",
   openGraph: {
     title: "EFT Toolset",
-    description: "An awesome set of tools that will make you a chad in tarkov",
+    description: "Become a Tarkov Chad with this awesome set of tools",
     url: "https://tarkov.webdevewan.com/",
     siteName: "EFT Toolset",
     images: [
@@ -44,15 +44,24 @@ export default function RootLayout({ children }) {
         {children}
         <footer className="text-neutral-200 border-t border-neutral-500 p-4 min-h-16 flex justify-center items-center">
           <div className="w-full max-w-4xl flex sm:flex-row sm:justify-between flex-col items-center gap-4">
-            <p>
-              Maintained by{" "}
-              <a
-                href="https://www.webdevewan.com/"
+            <div className="flex sm:flex-row flex-col items-center gap-4">
+              <p>
+                Maintained by{" "}
+                <a
+                  href="https://www.webdevewan.com/"
+                  className="underline underline-offset-2"
+                >
+                  WebDevEwan
+                </a>
+              </p>
+              <Link
+                href={{ pathname: "/policies/disclaimer-and-use-policy/" }}
                 className="underline underline-offset-2"
               >
-                WebDevEwan
-              </a>
-            </p>
+                Disclaimer and use policy
+              </Link>
+            </div>
+
             <a href="https://github.com/M1NDLE55">
               <Github />
             </a>

@@ -6,26 +6,35 @@ import { selectedItemQuery } from "@/app/features/data/Queries";
 import { useSearchParams } from "next/navigation";
 import { AlertTriangle } from "lucide-react";
 
-export default function SelectedItem() {
-  const [item, setItem] = useState(null);
-  const [errors, setErrors] = useState(null);
+export default function SelectedItem({
+  isLoading,
+  setIsLoading,
+  item,
+  setItem,
+  errors,
+  setErrors,
+}) {
   const [openTaskIndex, setOpenTaskIndex] = useState(null);
   const searchParams = useSearchParams();
 
   useEffect(() => {
     async function fetchSelectedItem() {
-      setItem(null);
       setErrors(null);
+      if (!isLoading) {
+        setIsLoading(true);
+      }
 
       const id = searchParams.get("item");
 
       if (!id) {
+        setIsLoading(false);
         return;
       }
 
       const response = await GraphQL(selectedItemQuery(id));
 
       if (response.errors) {
+        setIsLoading(false);
         setErrors(response.errors);
         return;
       }
@@ -84,6 +93,7 @@ export default function SelectedItem() {
         }),
       });
 
+      setIsLoading(false);
       setOpenTaskIndex(null);
     }
 
@@ -94,27 +104,13 @@ export default function SelectedItem() {
     return (
       <div className="bg-red-200 border-red-700 border rounded-md p-3 flex flex-row gap-2">
         <AlertTriangle className="text-red-700" />
-        {errors.map((error) => (
-          <p className="text-red-700" key={error.message}>
-            {error.message}
-          </p>
-        ))}
-      </div>
-    );
-  }
-
-  if (!item && searchParams.get("item")) {
-    return (
-      <div className="flex flex-col gap-4 animate-pulse">
-        <div className="rounded-md bg-neutral-700 h-[84px]"></div>
-        <div
-          className={`grid grid-cols-1 sm:grid-cols-2
-           gap-4`}
-        >
-          <div className="flex-1 bg-neutral-700 h-[84px] rounded-md"></div>
-          <div className="flex-1 bg-neutral-700 h-[84px] rounded-md"></div>
+        <div className="flex flex-col gap-2">
+          {errors.map((error, i) => (
+            <p className="text-red-700" key={error.message + `${i}`}>
+              {error.message}
+            </p>
+          ))}
         </div>
-        <div className="rounded-md bg-neutral-700 h-[84px]"></div>
       </div>
     );
   }
