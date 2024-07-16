@@ -2,7 +2,7 @@ import Scanner from "../components/scanner/Scanner";
 import GraphQL from "../features/data/GraphQL";
 import { itemMetaQuery } from "../features/data/Queries";
 
-export async function generateMetadata({ searchParams }, parent) {
+export async function generateMetadata({ searchParams }) {
   const id = searchParams.item;
 
   const baseMetaData = {
