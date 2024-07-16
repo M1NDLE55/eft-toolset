@@ -1,3 +1,10 @@
+export const itemMetaQuery = (id) => `{
+  item (id: "${id}") {
+        name
+        inspectImageLink 
+  }
+}`;
+
 export const allItemsQuery = `{
     items {
           id
@@ -10,7 +17,6 @@ export const selectedItemQuery = (id) => `{
           name
           fleaMarketFee
           gridImageLink
-          inspectImageLink
           wikiLink
           buyFor{
             vendor {
