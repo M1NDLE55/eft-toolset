@@ -8,10 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "EFT Toolset",
-  description: "An awesome set of tools that will make you a chad in tarkov",
+  description: "Become a Tarkov Chad with this awesome set of tools",
   openGraph: {
     title: "EFT Toolset",
-    description: "An awesome set of tools that will make you a chad in tarkov",
+    description: "Become a Tarkov Chad with this awesome set of tools",
     url: "https://tarkov.webdevewan.com/",
     siteName: "EFT Toolset",
     images: [
@@ -55,10 +55,10 @@ export default function RootLayout({ children }) {
                 </a>
               </p>
               <Link
-                href={{ pathname: "/policies/disclaimer-and-use/" }}
+                href={{ pathname: "/policies/disclaimer-and-use-policy/" }}
                 className="underline underline-offset-2"
               >
-                Disclaimer and Use
+                Disclaimer and use policy
               </Link>
             </div>
 

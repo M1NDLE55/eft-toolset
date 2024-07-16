@@ -39,7 +39,10 @@ export default function Scanner() {
   }
 
   return (
-    <main className="flex justify-center p-4 min-h-[calc(100vh-128px)]">
+    <main className="flex justify-center p-4 sm:min-h-[calc(100vh-128px)] min-h-[calc(100vh-64px)]">
+      <h1 className="absolute -top-10 -left-10">
+        Find information on any item in Escape From Tarkov
+      </h1>
       <div className="max-w-xl w-full flex flex-col gap-4">
         <SearchBar
           itemSearch={itemSearch}
