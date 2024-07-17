@@ -1,7 +1,6 @@
-export default async function GraphQL(query, options = {}) {
+export default async function GraphQL(query) {
   try {
     const response = await fetch("https://api.tarkov.dev/graphql", {
-      ...options,
       method: "POST",
       headers: {
         "Content-Type": "application/json",
