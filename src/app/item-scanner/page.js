@@ -2,20 +2,18 @@ import Scanner from "../components/scanner/Scanner";
 import GraphQL from "../features/data/GraphQL";
 import { itemMetaQuery, selectedItemQuery } from "../features/data/Queries";
 
-async function getItemData(id, query, options = {}) {
+async function getItemData(id, query) {
   if (!id) {
     return { data: { item: "no-id" } };
   }
 
-  const response = await GraphQL(query(id), options);
+  const response = await GraphQL(query(id));
 
   return response;
 }
 
 export async function generateMetadata({ searchParams }) {
-  const response = await getItemData(searchParams.item, itemMetaQuery, {
-    next: { revalidate: 43200 },
-  });
+  const response = await getItemData(searchParams.item, itemMetaQuery);
 
   const baseMetaData = {
     title: "Item Scanner | EFT Toolset",
@@ -71,9 +69,7 @@ export async function generateMetadata({ searchParams }) {
 }
 
 export default async function Page({ searchParams }) {
-  const response = await getItemData(searchParams.item, selectedItemQuery, {
-    next: { revalidate: 300 },
-  });
+  const response = await getItemData(searchParams.item, selectedItemQuery);
 
   return <Scanner response={response} />;
 }
