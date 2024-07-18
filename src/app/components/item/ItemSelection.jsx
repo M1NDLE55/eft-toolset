@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AlertTriangle } from "lucide-react";
+import { customEncodeURI } from "@/app/lib/URIEncoding";
 
 export default function ItemSelection({
   itemSearch,
@@ -16,7 +17,7 @@ export default function ItemSelection({
               <Link
                 key={item.name}
                 href={{
-                  pathname: `/item/${encodeURIComponent(item.name)}`,
+                  pathname: `/item/${customEncodeURI(item.name)}`,
                 }}
                 className="p-2 hover:bg-neutral-100 block"
                 onClick={() => handleSelect(item.name)}

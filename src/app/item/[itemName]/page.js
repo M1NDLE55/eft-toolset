@@ -2,12 +2,13 @@ import Item from "@/app/components/item/Item";
 import GraphQL from "@/app/lib/GraphQL";
 import { itemMetaQuery, itemDataQuery } from "@/app/lib/Queries";
 import { Suspense } from "react";
+import { customDecodeURI } from "@/app/lib/URIEncoding";
 
 function getParam(params) {
   const paramItemName = params.itemName;
 
   const URLParams = new URLSearchParams(params);
-  const itemName = decodeURIComponent(URLParams.get("itemName"));
+  const itemName = customDecodeURI(URLParams.get("itemName"));
 
   return { itemName: itemName, paramItemName: paramItemName };
 }
