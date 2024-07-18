@@ -13,9 +13,9 @@ export default function ItemSelection({
         <h2 className="text-lg text-white">Select Item</h2>
         {filteredItems.length > 0 ? (
           <div className="bg-white max-h-[200px] overflow-y-auto rounded-md">
-            {filteredItems.slice(0, 19).map((item) => (
+            {filteredItems.slice(0, 19).map((item, i) => (
               <Link
-                key={item.name}
+                key={item.name + i}
                 href={{
                   pathname: `/item/${customEncodeURI(item.name)}`,
                 }}

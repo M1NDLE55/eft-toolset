@@ -25,7 +25,12 @@ export default function SearchBar({
         return;
       }
 
-      setItems(response.data.items);
+      const allItems = response.data.items.filter(
+        (item, i, array) =>
+          i === array.findIndex((tempItem) => tempItem.name === item.name)
+      );
+
+      setItems(allItems);
       setIsLoading(false);
     }
 
