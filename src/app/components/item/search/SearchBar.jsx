@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import GraphQL from "@/app/features/data/GraphQL";
-import { allItemsQuery } from "@/app/features/data/Queries";
+import GraphQL from "@/app/lib/GraphQL";
+import { allItemsQuery } from "@/app/lib/Queries";
 import { LoaderCircle } from "lucide-react";
 
 export default function SearchBar({
@@ -13,6 +13,10 @@ export default function SearchBar({
 
   useEffect(() => {
     async function fetchData() {
+      if (!isLoading) {
+        setIsLoading(true);
+      }
+
       const response = await GraphQL(allItemsQuery);
 
       if (response.errors) {
@@ -31,13 +35,15 @@ export default function SearchBar({
   function handleChange(e) {
     setItemSearch(e.target.value);
 
-    const itemParam = e.target.value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const searchPhrase = e.target.value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     setFilteredItems(() => {
-      if (!itemParam) {
+      if (!searchPhrase) {
         return null;
       }
 
-      return items.filter((item) => new RegExp(itemParam, "i").test(item.name));
+      return items.filter((item) =>
+        new RegExp(searchPhrase, "i").test(item.name)
+      );
     });
   }
 

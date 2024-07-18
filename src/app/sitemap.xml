@@ -6,13 +6,13 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://tarkov.webdevewan.com/</loc>
-  <lastmod>2024-07-16T17:35:00+00:00</lastmod>
+  <lastmod>2024-07-18</lastmod>
   <changefreq>monthly</changefreq>
   <priority>1.0</priority>
 </url>
 <url>
-  <loc>https://tarkov.webdevewan.com/item-scanner</loc>
-  <lastmod>2024-07-16T17:35:00+00:00</lastmod>
+  <loc>https://tarkov.webdevewan.com/item/</loc>
+  <lastmod>2024-07-18</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
