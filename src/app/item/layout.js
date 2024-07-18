@@ -1,4 +1,4 @@
-import SearchItem from "../components/item/SearchItem";
+import SearchItem from "../components/item/search/SearchItem";
 
 export default function Layout({ children }) {
   return (

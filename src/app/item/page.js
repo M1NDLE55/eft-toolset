@@ -1,5 +1,3 @@
-import SearchItem from "../components/item/SearchItem";
-
 export const metadata = {
   title: "Item Scanner | EFT Toolset",
   description: "View details of any item in Escape From Tarkov",
