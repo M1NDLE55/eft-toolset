@@ -8,9 +8,9 @@ import { createItem, getParam } from "@/app/components/item/functions";
 import GenericDetails from "@/app/components/item/GenericDetails";
 
 export async function generateMetadata({ params }, parent) {
-  const { itemName, paramItemName } = getParam(params);
+  const { itemName, queryItemName, paramItemName } = getParam(params);
 
-  const response = await GraphQL(itemMetaQuery(itemName));
+  const response = await GraphQL(itemMetaQuery(queryItemName));
 
   if (response.errors || response.data.items.length === 0) {
     return parent;
@@ -41,20 +41,20 @@ export async function generateMetadata({ params }, parent) {
 }
 
 export default async function Page({ params }) {
-  const { itemName } = getParam(params);
+  const { itemName, queryItemName } = getParam(params);
 
   return (
     <>
       <h1 className="absolute -top-10 -left-10">{itemName}</h1>
       <Suspense fallback={<LoadingSkeleton />}>
-        <ItemWrapper itemName={itemName} />
+        <ItemWrapper itemName={itemName} queryItemName={queryItemName} />
       </Suspense>
     </>
   );
 }
 
-async function ItemWrapper({ itemName }) {
-  const response = await GraphQL(itemDataQuery(itemName));
+async function ItemWrapper({ itemName, queryItemName }) {
+  const response = await GraphQL(itemDataQuery(queryItemName));
 
   if (response.errors) {
     return (

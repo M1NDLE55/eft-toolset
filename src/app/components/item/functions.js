@@ -53,10 +53,15 @@ export function createItem(item, itemName) {
 }
 
 export function getParam(params) {
-  const paramItemName = params.itemName;
-
   const URLParams = new URLSearchParams(params);
-  const itemName = customDecodeURI(URLParams.get("itemName"));
 
-  return { itemName: itemName, paramItemName: paramItemName };
+  const paramItemName = URLParams.get("itemName");
+  const itemName = customDecodeURI(paramItemName);
+  const queryItemName = itemName.replace(/"/g, '\\"');
+
+  return {
+    itemName: itemName,
+    queryItemName: queryItemName,
+    paramItemName: paramItemName,
+  };
 }
