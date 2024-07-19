@@ -12,11 +12,11 @@ export const metadata = {
   openGraph: {
     title: "EFT Toolset",
     description: "Become a Tarkov Chad with this awesome set of tools",
-    url: "https://tarkov.webdevewan.com/",
+    url: "https://www.eft-toolset.com/",
     siteName: "EFT Toolset",
     images: [
       {
-        url: "https://tarkov.webdevewan.com/home-og-image.png",
+        url: "https://www.eft-toolset.com/home-og-image.png",
         height: 1200,
         width: 630,
       },

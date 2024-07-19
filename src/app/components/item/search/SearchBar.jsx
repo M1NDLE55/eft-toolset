@@ -57,6 +57,7 @@ export default function SearchBar({
       <h2 className="text-lg text-white">Search</h2>
       <div className="relative">
         <input
+          name="search"
           className="w-full p-2 rounded-md"
           disabled={isLoading}
           placeholder={isLoading ? "Loading items..." : "Enter item name"}

@@ -26,7 +26,7 @@ export async function generateMetadata({ params }, parent) {
         itemName.length > 20 ? "..." : ""
       } | EFT Toolset`,
       description: `View details about ${itemName}`,
-      url: `https://tarkov.webdevewan.com/item/${paramItemName}`,
+      url: `https://www.eft-toolset.com/item/${paramItemName}`,
       siteName: "Item Scanner | EFT Toolset",
       images: [
         {
