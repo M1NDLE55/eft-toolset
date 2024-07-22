@@ -48,10 +48,7 @@ export const itemDataQuery = (name) => `{
               level
               taskUnlock {
                 name
-                trader {
-                  name
-                }
-                minPlayerLevel
+                wikiLink
               }
               requiredItems {
                 item {
@@ -73,10 +70,7 @@ export const itemDataQuery = (name) => `{
               level
               taskUnlock {
                 name
-                trader {
-                  name
-                }
-                minPlayerLevel
+                wikiLink
               }
               requiredItems {
                 item {

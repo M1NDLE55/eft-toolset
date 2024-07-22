@@ -11,6 +11,8 @@ export function createItem(item, itemName) {
     fleaMarketFee: item.fleaMarketFee,
     gridImageLink: item.gridImageLink,
     wikiLink: item.wikiLink,
+    slots: item.width * item.height,
+    changeLast48hPercent: item.changeLast48hPercent,
     buyFor: [
       item.buyFor.reduce((acc, buyFor) => {
         if (buyFor.vendor.name === "Flea Market") {
@@ -49,6 +51,8 @@ export function createItem(item, itemName) {
       }
       return a.minPlayerLevel - b.minPlayerLevel;
     }),
+    bartersUsing: item.bartersUsing,
+    craftsUsing: item.craftsUsing,
   };
 }
 

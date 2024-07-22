@@ -37,12 +37,11 @@ export default function UsedInTasks({ tasks }) {
                 <a
                   href={task.wikiLink}
                   target="blank"
-                  className="underline underline-offset-2 text-yellow-500 hover:underline-offset-4 transition-[text-underline-offset]"
+                  className="underline underline-offset-2 text-yellow-400 hover:underline-offset-4 transition-[text-underline-offset]"
                 >
                   View on Wiki
                 </a>
               </div>
-
               <p>Objectives:</p>
               <ul className="list-disc">
                 {task.objectives.map((objective, i) => (

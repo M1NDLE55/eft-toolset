@@ -23,7 +23,7 @@ export default function GenericDetails({ item, itemName }) {
             <a
               href={item.wikiLink}
               target="blank"
-              className="underline underline-offset-2 text-yellow-500 hover:underline-offset-4 transition-[text-underline-offset]"
+              className="underline underline-offset-2 text-yellow-400 hover:underline-offset-4 transition-[text-underline-offset]"
             >
               View on Wiki
             </a>
