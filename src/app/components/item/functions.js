@@ -51,8 +51,28 @@ export function createItem(item, itemName) {
       }
       return a.minPlayerLevel - b.minPlayerLevel;
     }),
-    bartersUsing: item.bartersUsing,
-    craftsUsing: item.craftsUsing,
+    bartersUsing: item.bartersUsing.sort((a, b) => {
+      if (a.trader.name < b.trader.name) {
+        return -1;
+      }
+
+      if (a.trader.name > b.trader.name) {
+        return 1;
+      }
+
+      return a.level - b.level;
+    }),
+    craftsUsing: item.craftsUsing.sort((a, b) => {
+      if (a.station.name < b.station.name) {
+        return -1;
+      }
+
+      if (a.station.name > b.station.name) {
+        return 1;
+      }
+
+      return a.level - b.level;
+    }),
   };
 }
 

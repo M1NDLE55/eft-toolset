@@ -4,7 +4,7 @@ export default function GenericDetails({ item, itemName }) {
   return (
     <>
       <div>
-        <h2 className="text-lg">Item</h2>
+        <h2 className="text-lg">General</h2>
         <div className="bg-neutral-700 rounded-md p-3 flex flex-row gap-4 items-center shadow-md">
           {/* eslint-disable-next-line */}
           <img
@@ -20,6 +20,15 @@ export default function GenericDetails({ item, itemName }) {
                 `Flea Market Fee: ${Rubles.format(item.fleaMarketFee)}`) ||
                 "Cannot be listed on flea market"}
             </p>
+            {item.sellFor.length > 0 && (
+              <p>
+                Slot Value:{" "}
+                {Rubles.format(item.sellFor[0].priceRUB / item.slots)}
+              </p>
+            )}
+            {item.changeLast48hPercent && (
+              <p>48h Change: {item.changeLast48hPercent}%</p>
+            )}
             <a
               href={item.wikiLink}
               target="blank"
