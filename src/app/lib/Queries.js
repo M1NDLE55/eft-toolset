@@ -38,5 +38,52 @@ export const itemDataQuery = (name) => `{
               }
               wikiLink         
             }      
+            width
+            height
+            changeLast48hPercent
+            bartersUsing {
+              trader {
+                name
+              }
+              level
+              taskUnlock {
+                name
+                wikiLink
+              }
+              requiredItems {
+                item {
+                  name
+                }
+                quantity
+              }
+              rewardItems {
+                item {
+                  name
+                }
+                quantity
+              }
+            }
+            craftsUsing {
+              station {
+                name
+              }
+              level
+              taskUnlock {
+                name
+                wikiLink
+              }
+              requiredItems {
+                item {
+                  name
+                }
+                quantity
+              }
+              rewardItems {
+                item {
+                  name
+                }
+                quantity
+              }
+            }  
       }
     }`;

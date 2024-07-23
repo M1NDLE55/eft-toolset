@@ -9,8 +9,8 @@ export default function SearchItem() {
   const [filteredItems, setFilteredItems] = useState(null);
   const [itemSearch, setItemSearch] = useState("");
 
-  function handleSelect(itemName) {
-    setItemSearch(itemName);
+  function handleSelect() {
+    setItemSearch("");
     setFilteredItems(null);
   }
 

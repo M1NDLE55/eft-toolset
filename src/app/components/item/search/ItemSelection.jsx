@@ -20,7 +20,7 @@ export default function ItemSelection({
                   pathname: `/item/${customEncodeURI(item.name)}`,
                 }}
                 className="p-2 hover:bg-neutral-100 block"
-                onClick={() => handleSelect(item.name)}
+                onClick={handleSelect}
               >
                 {item.name}
               </Link>

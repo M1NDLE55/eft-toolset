@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import GraphQL from "@/app/lib/GraphQL";
 import { allItemsQuery } from "@/app/lib/Queries";
 import { LoaderCircle } from "lucide-react";
+import { useParams } from "next/navigation";
 
 export default function SearchBar({
   itemSearch,
@@ -10,6 +11,7 @@ export default function SearchBar({
 }) {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const params = useParams();
 
   useEffect(() => {
     async function fetchData() {
@@ -36,6 +38,12 @@ export default function SearchBar({
 
     fetchData();
   }, []);
+
+  useEffect(() => {
+    if (params.itemName && itemSearch !== "") {
+      setItemSearch("");
+    }
+  }, [params]);
 
   function handleChange(e) {
     setItemSearch(e.target.value);

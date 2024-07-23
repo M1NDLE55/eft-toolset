@@ -6,6 +6,8 @@ import UsedInTasks from "@/app/components/item/UsedInTasks";
 import LoadingSkeleton from "@/app/components/item/LoadingSkeleton";
 import { createItem, getParam } from "@/app/components/item/functions";
 import GenericDetails from "@/app/components/item/GenericDetails";
+import BartersUsing from "@/app/components/item/BartersUsing";
+import CraftsUsing from "@/app/components/item/CraftsUsing";
 
 export async function generateMetadata({ params }, parent) {
   const { itemName, queryItemName, paramItemName } = getParam(params);
@@ -91,6 +93,8 @@ async function ItemWrapper({ itemName, queryItemName }) {
     <div className="flex flex-col gap-4 text-white">
       <GenericDetails item={item} itemName={itemName} />
       <UsedInTasks tasks={item.usedInTasks} />
+      <BartersUsing barters={item.bartersUsing} />
+      <CraftsUsing crafts={item.craftsUsing} />
     </div>
   );
 }

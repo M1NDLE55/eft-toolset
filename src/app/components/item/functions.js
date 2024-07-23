@@ -11,6 +11,8 @@ export function createItem(item, itemName) {
     fleaMarketFee: item.fleaMarketFee,
     gridImageLink: item.gridImageLink,
     wikiLink: item.wikiLink,
+    slots: item.width * item.height,
+    changeLast48hPercent: item.changeLast48hPercent,
     buyFor: [
       item.buyFor.reduce((acc, buyFor) => {
         if (buyFor.vendor.name === "Flea Market") {
@@ -48,6 +50,28 @@ export function createItem(item, itemName) {
         return 1;
       }
       return a.minPlayerLevel - b.minPlayerLevel;
+    }),
+    bartersUsing: item.bartersUsing.sort((a, b) => {
+      if (a.trader.name < b.trader.name) {
+        return -1;
+      }
+
+      if (a.trader.name > b.trader.name) {
+        return 1;
+      }
+
+      return a.level - b.level;
+    }),
+    craftsUsing: item.craftsUsing.sort((a, b) => {
+      if (a.station.name < b.station.name) {
+        return -1;
+      }
+
+      if (a.station.name > b.station.name) {
+        return 1;
+      }
+
+      return a.level - b.level;
     }),
   };
 }
