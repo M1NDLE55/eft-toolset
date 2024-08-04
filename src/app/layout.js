@@ -48,10 +48,10 @@ export default function RootLayout({ children }) {
               <p>
                 Maintained by{" "}
                 <a
-                  href="https://www.webdevewan.com/"
+                  href="https://github.com/M1NDLE55"
                   className="underline underline-offset-2"
                 >
-                  WebDevEwan
+                  M1NDLE55
                 </a>
               </p>
               <Link
@@ -62,7 +62,10 @@ export default function RootLayout({ children }) {
               </Link>
             </div>
 
-            <a href="https://github.com/M1NDLE55">
+            <a
+              title="GitHub repository"
+              href="https://github.com/M1NDLE55/eft-toolset"
+            >
               <Github />
             </a>
           </div>
