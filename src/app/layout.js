@@ -45,6 +45,7 @@ export default function RootLayout({ children }) {
         <footer className="text-neutral-200 border-t border-neutral-500 p-4 min-h-16 flex justify-center items-center">
           <div className="w-full max-w-4xl flex sm:flex-row sm:justify-between flex-col items-center gap-4">
             <div className="flex sm:flex-row flex-col items-center gap-4">
+              <p>&copy; {new Date().getFullYear().toString()} EFT Toolset</p>
               <p>
                 Maintained by{" "}
                 <a
@@ -61,7 +62,6 @@ export default function RootLayout({ children }) {
                 Disclaimer and use policy
               </Link>
             </div>
-
             <a
               title="GitHub repository"
               href="https://github.com/M1NDLE55/eft-toolset"
