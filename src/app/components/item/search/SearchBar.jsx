@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import GraphQL from "@/app/lib/GraphQL";
-import { allItemsQuery } from "@/app/lib/Queries";
+import { GraphQLV2, allItemsQuery } from "@/app/lib/GraphQL";
 import { LoaderCircle } from "lucide-react";
 import { useParams } from "next/navigation";
 
@@ -19,15 +18,15 @@ export default function SearchBar({
         setIsLoading(true);
       }
 
-      const response = await GraphQL(allItemsQuery);
+      const data = await GraphQLV2(allItemsQuery);
 
-      if (response.errors) {
-        console.error(response.errors);
+      if (data.errors) {
+        console.error(data.errors);
         alert("Couldn't load items. Please refresh the page.");
         return;
       }
 
-      const allItems = response.data.items.filter(
+      const allItems = data.items.filter(
         (item, i, array) =>
           i === array.findIndex((tempItem) => tempItem.name === item.name)
       );
