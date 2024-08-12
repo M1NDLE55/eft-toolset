@@ -1,5 +1,4 @@
-import GraphQL from "@/app/lib/GraphQL";
-import { itemMetaQuery, itemDataQuery } from "@/app/lib/Queries";
+import { GraphQLV2, itemMetaQuery, itemDataQuery } from "@/app/lib/GraphQL";
 import { Suspense } from "react";
 import { AlertTriangle } from "lucide-react";
 import UsedInTasks from "@/app/components/item/UsedInTasks";
@@ -12,13 +11,13 @@ import CraftsUsing from "@/app/components/item/CraftsUsing";
 export async function generateMetadata({ params }, parent) {
   const { itemName, queryItemName, paramItemName } = getParam(params);
 
-  const response = await GraphQL(itemMetaQuery(queryItemName));
+  const data = await GraphQLV2(itemMetaQuery, { name: queryItemName });
 
-  if (response.errors || response.data.items.length === 0) {
+  if (data.errors || data.items.length === 0) {
     return parent;
   }
 
-  const inspectImageLink = response.data.items[0].inspectImageLink;
+  const inspectImageLink = data.items[0].inspectImageLink;
 
   return {
     title: `${itemName} | EFT Toolset`,
@@ -56,14 +55,14 @@ export default async function Page({ params }) {
 }
 
 async function ItemWrapper({ itemName, queryItemName }) {
-  const response = await GraphQL(itemDataQuery(queryItemName));
+  const data = await GraphQLV2(itemDataQuery, { name: queryItemName });
 
-  if (response.errors) {
+  if (data.errors) {
     return (
       <div className="bg-red-200 border-red-700 border rounded-md p-3 flex flex-row gap-2">
         <AlertTriangle className="text-red-700" />
         <div className="flex flex-col gap-2">
-          {response.errors.map((error, i) => (
+          {data.errors.map((error, i) => (
             <p className="text-red-700" key={error.message + `${i}`}>
               {error.message}
             </p>
@@ -73,7 +72,7 @@ async function ItemWrapper({ itemName, queryItemName }) {
     );
   }
 
-  if (response.data.items.length === 0) {
+  if (data.items.length === 0) {
     return (
       <div className="bg-red-200 border-red-700 border rounded-md p-3 flex flex-row gap-2">
         <AlertTriangle className="text-red-700" />
@@ -86,8 +85,8 @@ async function ItemWrapper({ itemName, queryItemName }) {
     );
   }
 
-  const responseItem = response.data.items[0];
-  const item = createItem(responseItem, itemName);
+  const dataItem = data.items[0];
+  const item = createItem(dataItem, itemName);
 
   return (
     <div className="flex flex-col gap-4 text-white">
