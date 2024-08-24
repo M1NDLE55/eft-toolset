@@ -3,6 +3,7 @@ import "./globals.css";
 import Link from "next/link";
 import { Github } from "lucide-react";
 import Image from "next/image";
+import FetchData from "./components/root/FetchData";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
             </Link>
           </div>
         </header>
+        <FetchData />
         {children}
         <footer className="text-neutral-200 border-t border-neutral-500 p-4 min-h-16 flex justify-center items-center">
           <div className="w-full max-w-7xl flex sm:flex-row sm:justify-between flex-col items-center gap-4">
