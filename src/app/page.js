@@ -2,8 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRightCircle } from "lucide-react";
 
-export default async function Home() {
-  const links = [{ text: "Item scanner", href: "/item" }];
+export default function Home() {
+  const links = [
+    { text: "Item scanner", href: "/item" },
+    // { text: "Item groups", href: "/item-groups" },
+  ];
 
   return (
     <main className="flex flex-col items-center px-4 pb-4 sm:min-h-[calc(100vh-128px)] min-h-[calc(100vh-64px)]">

@@ -22,7 +22,7 @@ export default function GenericDetails({ item, itemName }) {
               <div>
                 <p>Name: {itemName}</p>
                 <p>
-                  {(item.fleaMarketFee &&
+                  {(item.fleaMarketFee !== null &&
                     `Flea Market Fee: ${Rubles.format(item.fleaMarketFee)}`) ||
                     "Cannot be listed on flea market"}
                 </p>
@@ -34,7 +34,7 @@ export default function GenericDetails({ item, itemName }) {
                     {Rubles.format(item.sellFor[0].priceRUB / item.slots)}
                   </p>
                 )}
-                {item.changeLast48hPercent && (
+                {item.changeLast48hPercent !== null && (
                   <p>
                     48h Change:{" "}
                     <span
