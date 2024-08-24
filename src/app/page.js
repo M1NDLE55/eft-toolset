@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRightCircle } from "lucide-react";
 
-export default async function Home() {
+export default function Home() {
   const links = [
     { text: "Item scanner", href: "/item" },
     { text: "Item groups", href: "/item-groups" },
