@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { GraphQLV2, allItemsQuery } from "@/app/lib/GraphQL";
 import { LoaderCircle } from "lucide-react";
 import { useParams } from "next/navigation";
 
@@ -13,29 +12,24 @@ export default function SearchBar({
   const params = useParams();
 
   useEffect(() => {
-    async function fetchData() {
-      if (!isLoading) {
-        setIsLoading(true);
-      }
+    function getItems() {
+      if (localStorage.getItem("items")) {
+        const items = JSON.parse(localStorage.getItem("items"));
 
-      const data = await GraphQLV2(allItemsQuery);
-
-      if (data.errors) {
-        console.error(data.errors);
-        alert("Couldn't load items. Please refresh the page.");
+        setItems(items);
+        setIsLoading(false);
         return;
       }
 
-      const allItems = data.items.filter(
-        (item, i, array) =>
-          i === array.findIndex((tempItem) => tempItem.name === item.name)
-      );
-
-      setItems(allItems);
-      setIsLoading(false);
+      setTimeout(getItems, 200);
     }
 
-    fetchData();
+    if (!isLoading) {
+      setIsLoading(true);
+    }
+
+    // recursively check if items exist
+    getItems();
   }, []);
 
   useEffect(() => {

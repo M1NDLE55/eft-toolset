@@ -1,4 +1,6 @@
-import { GraphQLV2, itemMetaQuery, itemDataQuery } from "@/app/lib/GraphQL";
+"use client";
+
+import { GraphQLV2, itemDataQuery } from "@/app/lib/GraphQL";
 import { Suspense } from "react";
 import { AlertTriangle } from "lucide-react";
 import UsedInTasks from "@/app/components/item/UsedInTasks";
@@ -8,54 +10,21 @@ import GenericDetails from "@/app/components/item/GenericDetails";
 import BartersUsing from "@/app/components/item/BartersUsing";
 import CraftsUsing from "@/app/components/item/CraftsUsing";
 
-export async function generateMetadata({ params }, parent) {
-  const { itemName, queryItemName, paramItemName } = getParam(params);
-
-  const data = await GraphQLV2(itemMetaQuery, { name: queryItemName });
-
-  if (data.errors || data.items.length === 0) {
-    return parent;
-  }
-
-  const inspectImageLink = data.items[0].inspectImageLink;
-
-  return {
-    title: `${itemName} | EFT Toolset`,
-    description: `View details about ${itemName}`,
-    openGraph: {
-      title: `${itemName.substring(0, 21)}${
-        itemName.length > 20 ? "..." : ""
-      } | EFT Toolset`,
-      description: `View details about ${itemName}`,
-      url: `https://www.eft-toolset.com/item/${paramItemName}`,
-      siteName: "Item Scanner | EFT Toolset",
-      images: [
-        {
-          url: inspectImageLink,
-          height: 1200,
-          width: 630,
-        },
-      ],
-      type: "website",
-    },
-  };
-}
-
-export default async function Page({ params }) {
-  const { itemName, queryItemName } = getParam(params);
+export default function Page({ params }) {
+  const { itemName } = getParam(params);
 
   return (
     <>
       <h1 className="absolute -top-10 -left-10">{itemName}</h1>
       <Suspense fallback={<LoadingSkeleton />}>
-        <ItemWrapper itemName={itemName} queryItemName={queryItemName} />
+        <ItemWrapper itemName={itemName} />
       </Suspense>
     </>
   );
 }
 
-async function ItemWrapper({ itemName, queryItemName }) {
-  const data = await GraphQLV2(itemDataQuery, { name: queryItemName });
+async function ItemWrapper({ itemName }) {
+  const data = await GraphQLV2(itemDataQuery, { name: itemName });
 
   if (data.errors) {
     return (

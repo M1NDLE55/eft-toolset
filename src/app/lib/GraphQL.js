@@ -28,14 +28,6 @@ export const allItemsQuery = gql`
   }
 `;
 
-export const itemMetaQuery = gql`
-  query itemMetaQuery($name: String) {
-    items(name: $name) {
-      inspectImageLink
-    }
-  }
-`;
-
 export const itemDataQuery = gql`
   query itemDataQuery($name: String) {
     items(name: $name) {

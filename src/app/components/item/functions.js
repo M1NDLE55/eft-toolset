@@ -80,12 +80,10 @@ export function getParam(params) {
   const URLParams = new URLSearchParams(params);
 
   const paramItemName = URLParams.get("itemName");
-  const itemName = customDecodeURI(paramItemName);
-  const queryItemName = itemName.replace(/"/g, '\\"');
+  const itemName = paramItemName && customDecodeURI(paramItemName);
 
   return {
     itemName: itemName,
-    queryItemName: queryItemName,
     paramItemName: paramItemName,
   };
 }
