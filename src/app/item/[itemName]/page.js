@@ -1,3 +1,5 @@
+"use client";
+
 import { GraphQLV2, itemDataQuery } from "@/app/lib/GraphQL";
 import { Suspense } from "react";
 import { AlertTriangle } from "lucide-react";
@@ -8,7 +10,7 @@ import GenericDetails from "@/app/components/item/GenericDetails";
 import BartersUsing from "@/app/components/item/BartersUsing";
 import CraftsUsing from "@/app/components/item/CraftsUsing";
 
-export default async function Page({ params }) {
+export default function Page({ params }) {
   const { itemName } = getParam(params);
 
   return (

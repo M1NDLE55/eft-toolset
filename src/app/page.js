@@ -5,7 +5,7 @@ import { ChevronRightCircle } from "lucide-react";
 export default function Home() {
   const links = [
     { text: "Item scanner", href: "/item" },
-    { text: "Item groups", href: "/item-groups" },
+    // { text: "Item groups", href: "/item-groups" },
   ];
 
   return (

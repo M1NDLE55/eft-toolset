@@ -1,10 +1,6 @@
 import { gql, request } from "graphql-request";
 
 export async function GraphQLV2(query, variables = null) {
-  //----- TESTING VERCEL SERVER TIMEOUT -----
-  await new Promise((r) => setTimeout(r, 15000));
-  //----- TESTING VERCEL SERVER TIMEOUT -----
-
   try {
     const data = await request(
       "https://api.tarkov.dev/graphql",
