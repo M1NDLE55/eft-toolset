@@ -1,6 +1,10 @@
 import { gql, request } from "graphql-request";
 
 export async function GraphQLV2(query, variables = null) {
+  //----- TESTING VERCEL SERVER TIMEOUT -----
+  await new Promise((r) => setTimeout(r, 15000));
+  //----- TESTING VERCEL SERVER TIMEOUT -----
+
   try {
     const data = await request(
       "https://api.tarkov.dev/graphql",
@@ -24,14 +28,6 @@ export const allItemsQuery = gql`
   query allItemsQuery {
     items {
       name
-    }
-  }
-`;
-
-export const itemMetaQuery = gql`
-  query itemMetaQuery($name: String) {
-    items(name: $name) {
-      inspectImageLink
     }
   }
 `;
