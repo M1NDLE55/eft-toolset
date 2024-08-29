@@ -9,9 +9,9 @@ import BartersUsing from "@/app/components/item/BartersUsing";
 import CraftsUsing from "@/app/components/item/CraftsUsing";
 
 export async function generateMetadata({ params }, parent) {
-  const { itemName, queryItemName, paramItemName } = getParam(params);
+  const { itemName, paramItemName } = getParam(params);
 
-  const data = await GraphQLV2(itemMetaQuery, { name: queryItemName });
+  const data = await GraphQLV2(itemMetaQuery, { name: itemName });
 
   if (data.errors || data.items.length === 0) {
     return parent;
@@ -42,20 +42,20 @@ export async function generateMetadata({ params }, parent) {
 }
 
 export default async function Page({ params }) {
-  const { itemName, queryItemName } = getParam(params);
+  const { itemName } = getParam(params);
 
   return (
     <>
       <h1 className="absolute -top-10 -left-10">{itemName}</h1>
       <Suspense fallback={<LoadingSkeleton />}>
-        <ItemWrapper itemName={itemName} queryItemName={queryItemName} />
+        <ItemWrapper itemName={itemName} />
       </Suspense>
     </>
   );
 }
 
-async function ItemWrapper({ itemName, queryItemName }) {
-  const data = await GraphQLV2(itemDataQuery, { name: queryItemName });
+async function ItemWrapper({ itemName }) {
+  const data = await GraphQLV2(itemDataQuery, { name: itemName });
 
   if (data.errors) {
     return (
