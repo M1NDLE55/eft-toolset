@@ -8,6 +8,7 @@ export default function SearchBar({
   setFilteredItems,
 }) {
   const [items, setItems] = useState([]);
+  const [example, setExample] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const params = useParams();
 
@@ -15,6 +16,14 @@ export default function SearchBar({
     function getItems() {
       if (localStorage.getItem("items")) {
         const items = JSON.parse(localStorage.getItem("items"));
+
+        if (!params.itemName) {
+          setExample(
+            `e.g., ${
+              items[Math.round(Math.random() * (items.length - 1))].name
+            }`
+          );
+        }
 
         setItems(items);
         setIsLoading(false);
@@ -40,6 +49,7 @@ export default function SearchBar({
 
   function handleChange(e) {
     setItemSearch(e.target.value);
+    setExample("");
 
     const searchPhrase = e.target.value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     setFilteredItems(() => {
@@ -61,7 +71,9 @@ export default function SearchBar({
           name="search"
           className="w-full p-2 rounded-md"
           disabled={isLoading}
-          placeholder={isLoading ? "Loading items..." : "Enter item name"}
+          placeholder={
+            isLoading ? "Loading items..." : `Enter item name ${example}`
+          }
           value={itemSearch}
           onClick={(e) => e.target.select()}
           onChange={handleChange}

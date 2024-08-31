@@ -1,7 +1,7 @@
 "use client";
 
 import { GraphQLV2, itemDataQuery } from "@/app/lib/GraphQL";
-import { Suspense } from "react";
+import { Suspense, use, useEffect, useState } from "react";
 import { AlertTriangle } from "lucide-react";
 import UsedInTasks from "@/app/components/item/UsedInTasks";
 import LoadingSkeleton from "@/app/components/item/LoadingSkeleton";
@@ -12,19 +12,23 @@ import CraftsUsing from "@/app/components/item/CraftsUsing";
 
 export default function Page({ params }) {
   const { itemName } = getParam(params);
+  const [data, setData] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
-  return (
-    <>
-      <h1 className="absolute -top-10 -left-10">{itemName}</h1>
-      <Suspense fallback={<LoadingSkeleton />}>
-        <ItemWrapper itemName={itemName} />
-      </Suspense>
-    </>
-  );
-}
+  useEffect(() => {
+    async function fetchData() {
+      setIsLoading(true);
+      const d = await GraphQLV2(itemDataQuery, { name: itemName });
+      setData(d);
+      setIsLoading(false);
+    }
 
-async function ItemWrapper({ itemName }) {
-  const data = await GraphQLV2(itemDataQuery, { name: itemName });
+    fetchData();
+  }, []);
+
+  if (isLoading) {
+    return <LoadingSkeleton />;
+  }
 
   if (data.errors) {
     return (
@@ -59,6 +63,7 @@ async function ItemWrapper({ itemName }) {
 
   return (
     <div className="flex flex-col gap-4 text-white">
+      <h1 className="absolute -top-10 -left-10">{itemName}</h1>
       <GenericDetails item={item} itemName={itemName} />
       <UsedInTasks tasks={item.usedInTasks} />
       <BartersUsing barters={item.bartersUsing} />
