@@ -10,10 +10,6 @@ export default function Page() {
   const [isEditing, setIsEditing] = useState(false);
   const [groups, setGroups] = useState<Group[]>([]);
 
-  if (!localStorage.getItem("item-groups")) {
-    localStorage.setItem("item-groups", JSON.stringify([]));
-  }
-
   function handleEdit() {
     setIsEditing((e) => !e);
   }
@@ -30,6 +26,10 @@ export default function Page() {
   }
 
   useEffect(() => {
+    if (!localStorage.getItem("item-groups")) {
+      localStorage.setItem("item-groups", JSON.stringify([]));
+    }
+
     setGroups(JSON.parse(localStorage.getItem("item-groups") as string));
   }, []);
 
