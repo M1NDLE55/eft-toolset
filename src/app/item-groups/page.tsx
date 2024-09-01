@@ -18,13 +18,6 @@ export default function Page() {
     setIsEditing(false);
   }
 
-  function handleDelete(groupName: string) {
-    //todo confirmation
-    const updatedGroups = groups.filter((group) => group.name !== groupName);
-    setGroups(updatedGroups);
-    localStorage.setItem("item-groups", JSON.stringify(updatedGroups));
-  }
-
   useEffect(() => {
     if (!localStorage.getItem("item-groups")) {
       localStorage.setItem("item-groups", JSON.stringify([]));
@@ -62,7 +55,8 @@ export default function Page() {
             <GroupEditor
               key={group.name}
               group={group}
-              handleDelete={handleDelete}
+              groups={groups}
+              setGroups={setGroups}
             />
           )
         )
