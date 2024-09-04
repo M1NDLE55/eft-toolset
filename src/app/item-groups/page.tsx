@@ -1,10 +1,12 @@
 "use client";
 
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import GroupSelector from "../components/item-groups/GroupSelector";
 import GroupEditor from "../components/item-groups/GroupEditor";
 import { Group } from "./types";
 import { SquareMousePointer, SquarePlus, EditIcon } from "lucide-react";
+import Link from "next/link";
+import HeadingButton from "../components/item-groups/HeadingButton";
 
 export default function Page() {
   const [isEditing, setIsEditing] = useState(false);
@@ -35,10 +37,13 @@ export default function Page() {
             <SquareMousePointer />
             Select
           </HeadingButton>
-          <HeadingButton onClick={() => {}}>
+          <Link
+            href={{ pathname: "/item-groups/create" }}
+            className={`flex flex-row items-center gap-1 hover:text-yellow-400 transition-colors`}
+          >
             <SquarePlus />
-            Add
-          </HeadingButton>
+            Create
+          </Link>
           {groups.length > 0 && (
             <HeadingButton flag={isEditing} onClick={handleEdit}>
               <EditIcon />
@@ -66,26 +71,5 @@ export default function Page() {
         </p>
       )}
     </>
-  );
-}
-
-function HeadingButton({
-  flag = false,
-  onClick,
-  children,
-}: {
-  flag?: boolean;
-  onClick: any;
-  children: ReactNode;
-}) {
-  return (
-    <button
-      className={`flex flex-row items-center gap-1 hover:text-yellow-400 transition-colors ${
-        flag && "text-green-400"
-      }`}
-      onClick={onClick}
-    >
-      {children}
-    </button>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { GraphQLV2, itemDataQuery } from "@/app/lib/GraphQL";
-import { Suspense, use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AlertTriangle } from "lucide-react";
 import UsedInTasks from "@/app/components/item/UsedInTasks";
 import LoadingSkeleton from "@/app/components/item/LoadingSkeleton";
