@@ -1,11 +1,14 @@
-import Link from "next/link";
 import { AlertTriangle } from "lucide-react";
-import { customEncodeURI } from "@/app/lib/URIEncoding";
+import { Item } from "./types";
 
 export default function ItemSelection({
   itemSearch,
   handleSelect,
   filteredItems,
+}: {
+  itemSearch: string;
+  handleSelect: (itemName: string) => void;
+  filteredItems: Item[] | null;
 }) {
   return (
     filteredItems && (
@@ -14,16 +17,13 @@ export default function ItemSelection({
         {filteredItems.length > 0 ? (
           <div className="bg-white max-h-[200px] overflow-y-auto rounded-md">
             {filteredItems.slice(0, 19).map((item, i) => (
-              <Link
+              <button
                 key={item.name + i}
-                href={{
-                  pathname: `/item/${customEncodeURI(item.name)}`,
-                }}
                 className="p-2 hover:bg-neutral-100 block"
-                onClick={handleSelect}
+                onClick={() => handleSelect(item.name)}
               >
                 {item.name}
-              </Link>
+              </button>
             ))}
           </div>
         ) : (

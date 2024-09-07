@@ -1,23 +1,34 @@
-import { useEffect, useState } from "react";
+import {
+  ChangeEvent,
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
 import { LoaderCircle } from "lucide-react";
-import { useParams } from "next/navigation";
+import { Item } from "./types";
 
 export default function SearchBar({
   itemSearch,
   setItemSearch,
   setFilteredItems,
+  params = null,
+}: {
+  itemSearch: string;
+  setItemSearch: Dispatch<SetStateAction<string>>;
+  setFilteredItems: Dispatch<SetStateAction<Item[] | null>>;
+  params?: { itemName: string } | null;
 }) {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<Item[]>([]);
   const [example, setExample] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const params = useParams();
 
   useEffect(() => {
     function getItems() {
       if (localStorage.getItem("items")) {
-        const items = JSON.parse(localStorage.getItem("items"));
+        const items = JSON.parse(localStorage.getItem("items") as string);
 
-        if (!params.itemName) {
+        if (!params?.itemName) {
           setExample(
             `e.g., ${
               items[Math.round(Math.random() * (items.length - 1))].name
@@ -42,12 +53,12 @@ export default function SearchBar({
   }, []);
 
   useEffect(() => {
-    if (params.itemName && itemSearch !== "") {
+    if (params?.itemName && itemSearch !== "") {
       setItemSearch("");
     }
   }, [params]);
 
-  function handleChange(e) {
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
     setItemSearch(e.target.value);
     setExample("");
 
@@ -75,7 +86,7 @@ export default function SearchBar({
             isLoading ? "Loading items..." : `Enter item name ${example}`
           }
           value={itemSearch}
-          onClick={(e) => e.target.select()}
+          onClick={(e) => (e.target as HTMLInputElement).select()}
           onChange={handleChange}
         ></input>
         {isLoading && (

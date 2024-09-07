@@ -1,31 +1,16 @@
 "use client";
 
-import ItemSelection from "./ItemSelection";
-import SearchBar from "./SearchBar";
-
-import { useState } from "react";
+import { useParams, useRouter } from "next/navigation";
+import SearchWrapper from "../../global/search/SearchWrapper";
+import { customEncodeURI } from "@/app/lib/URIEncoding";
 
 export default function SearchItem() {
-  const [filteredItems, setFilteredItems] = useState(null);
-  const [itemSearch, setItemSearch] = useState("");
+  const router = useRouter();
+  const params = useParams();
 
-  function handleSelect() {
-    setItemSearch("");
-    setFilteredItems(null);
+  function handleSelect(itemName) {
+    router.push(`/item/${customEncodeURI(itemName)}`);
   }
 
-  return (
-    <>
-      <SearchBar
-        itemSearch={itemSearch}
-        setItemSearch={setItemSearch}
-        setFilteredItems={setFilteredItems}
-      />
-      <ItemSelection
-        itemSearch={itemSearch}
-        handleSelect={handleSelect}
-        filteredItems={filteredItems}
-      />
-    </>
-  );
+  return <SearchWrapper handleSelect={handleSelect} params={params} />;
 }

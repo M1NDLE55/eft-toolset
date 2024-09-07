@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import { GraphQLV2, allItemsQuery } from "@/app/lib/GraphQL";
 
 type Data = {
-  items: { name: String }[];
-  errors?: { message: String }[];
+  items: { name: string }[];
+  errors?: { message: string }[];
 };
 
 export default function FetchData() {
