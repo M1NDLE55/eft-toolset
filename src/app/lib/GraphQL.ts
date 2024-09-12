@@ -1,3 +1,4 @@
+// @ts-expect-error
 import { gql, request } from "graphql-request";
 
 type Variables = {
