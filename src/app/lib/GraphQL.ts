@@ -1,15 +1,19 @@
 import { gql, request } from "graphql-request";
 
-export async function GraphQLV2(query, variables = null) {
+type Variables = {
+  name: string;
+};
+
+export async function GraphQLV2(query: any, variables?: Variables) {
   try {
     const data = await request(
       "https://api.tarkov.dev/graphql",
       query,
-      variables
+      variables || null
     );
     return data;
   } catch (error) {
-    console.log(error.toString());
+    console.log((error as Error).toString());
     return {
       errors: [
         {
@@ -24,6 +28,14 @@ export const allItemsQuery = gql`
   query allItemsQuery {
     items {
       name
+    }
+  }
+`;
+
+export const itemPreviewQuery = gql`
+  query itemPreviewQuery($name: String) {
+    items(name: $name) {
+      gridImageLink
     }
   }
 `;

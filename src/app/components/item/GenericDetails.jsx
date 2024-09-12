@@ -1,5 +1,6 @@
 import { Rubles } from "@/app/lib/Currency";
 import Share from "./Share";
+import Image from "next/image";
 
 export default function GenericDetails({ item, itemName }) {
   return (
@@ -10,10 +11,9 @@ export default function GenericDetails({ item, itemName }) {
           <Share />
         </div>
         <div className="bg-neutral-700 rounded-md p-3 flex flex-row gap-4 items-center shadow-md">
-          {/* eslint-disable-next-line */}
-          <img
+          <Image
             src={item.gridImageLink}
-            alt={`Image of an ${itemName}`}
+            alt={itemName}
             height={64}
             width={64}
           />

@@ -2,11 +2,11 @@ import { ReactNode } from "react";
 
 export default function HeadingButton({
   flag = false,
-  onClick,
+  onClick = null,
   children,
 }: {
   flag?: boolean;
-  onClick: any;
+  onClick?: any;
   children: ReactNode;
 }) {
   return (

@@ -2,11 +2,7 @@
 
 import { useEffect } from "react";
 import { GraphQLV2, allItemsQuery } from "@/app/lib/GraphQL";
-
-type Data = {
-  items: { name: string }[];
-  errors?: { message: string }[];
-};
+import { Data } from "./types";
 
 export default function FetchData() {
   useEffect(() => {

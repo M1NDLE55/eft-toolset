@@ -75,24 +75,21 @@ export default function SearchBar({
   }
 
   return (
-    <div>
-      <h2 className="text-lg text-white">Search</h2>
-      <div className="relative">
-        <input
-          name="search"
-          className="w-full p-2 rounded-md"
-          disabled={isLoading}
-          placeholder={
-            isLoading ? "Loading items..." : `Enter item name ${example}`
-          }
-          value={itemSearch}
-          onClick={(e) => (e.target as HTMLInputElement).select()}
-          onChange={handleChange}
-        ></input>
-        {isLoading && (
-          <LoaderCircle className="absolute right-2 top-2 animate-spin text-white" />
-        )}
-      </div>
+    <div className="relative">
+      <input
+        name="search"
+        className="w-full p-2 rounded-md"
+        disabled={isLoading}
+        placeholder={
+          isLoading ? "Loading items..." : `Enter item name ${example}`
+        }
+        value={itemSearch}
+        onClick={(e) => (e.target as HTMLInputElement).select()}
+        onChange={handleChange}
+      ></input>
+      {isLoading && (
+        <LoaderCircle className="absolute right-2 top-2 animate-spin text-white" />
+      )}
     </div>
   );
 }

@@ -13,13 +13,13 @@ export default function ItemSelection({
   return (
     filteredItems && (
       <div>
-        <h2 className="text-lg text-white">Select Item</h2>
+        <h2 className="text-lg text-neutral-200">Select Item</h2>
         {filteredItems.length > 0 ? (
           <div className="bg-white max-h-[200px] overflow-y-auto rounded-md">
             {filteredItems.slice(0, 19).map((item, i) => (
               <button
                 key={item.name + i}
-                className="p-2 hover:bg-neutral-100 block"
+                className="p-2 hover:bg-neutral-100 block w-full text-left"
                 onClick={() => handleSelect(item.name)}
               >
                 {item.name}

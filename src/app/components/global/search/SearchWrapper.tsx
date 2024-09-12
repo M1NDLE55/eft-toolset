@@ -16,22 +16,25 @@ export default function SearchWrapper({
   const [itemSearch, setItemSearch] = useState("");
 
   return (
-    <>
-      <SearchBar
-        itemSearch={itemSearch}
-        setItemSearch={setItemSearch}
-        setFilteredItems={setFilteredItems}
-        params={params}
-      />
-      <ItemSelector
-        itemSearch={itemSearch}
-        handleSelect={(itemName) => {
-          handleSelect(itemName);
-          setItemSearch("");
-          setFilteredItems(null);
-        }}
-        filteredItems={filteredItems}
-      />
-    </>
+    <div>
+      <h2 className="text-lg text-neutral-200">Search item</h2>
+      <div className="flex flex-col gap-4">
+        <SearchBar
+          itemSearch={itemSearch}
+          setItemSearch={setItemSearch}
+          setFilteredItems={setFilteredItems}
+          params={params}
+        />
+        <ItemSelector
+          itemSearch={itemSearch}
+          handleSelect={(itemName) => {
+            handleSelect(itemName);
+            setItemSearch("");
+            setFilteredItems(null);
+          }}
+          filteredItems={filteredItems}
+        />
+      </div>
+    </div>
   );
 }
