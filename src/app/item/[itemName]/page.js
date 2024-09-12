@@ -9,9 +9,10 @@ import { createItem, getParam } from "@/app/components/item/functions";
 import GenericDetails from "@/app/components/item/GenericDetails";
 import BartersUsing from "@/app/components/item/BartersUsing";
 import CraftsUsing from "@/app/components/item/CraftsUsing";
+import { useParams } from "next/navigation";
 
-export default function Page({ params }) {
-  const { itemName } = getParam(params);
+export default function Page() {
+  const { itemName } = getParam(useParams());
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
