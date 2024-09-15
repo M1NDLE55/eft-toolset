@@ -25,9 +25,8 @@ export default function Page() {
       formData.get("groupName") as FormDataEntryValue
     ).toString();
 
-    const groups: Group[] = JSON.parse(
-      localStorage.getItem("item-groups") as string
-    );
+    const groups: Group[] =
+      JSON.parse(localStorage.getItem("item-groups") as string) || [];
 
     if (
       groups.find(

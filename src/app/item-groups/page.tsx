@@ -22,7 +22,7 @@ export default function Page() {
 
   useEffect(() => {
     if (!localStorage.getItem("item-groups")) {
-      localStorage.setItem("item-groups", JSON.stringify([]));
+      localStorage.setItem("item-groups", "[]");
     }
 
     setGroups(JSON.parse(localStorage.getItem("item-groups") as string));

@@ -2,7 +2,8 @@
 import { gql, request } from "graphql-request";
 
 type Variables = {
-  name: string;
+  name?: string;
+  names?: string[];
 };
 
 export async function GraphQLV2(query: any, variables?: Variables) {
@@ -37,6 +38,32 @@ export const itemPreviewQuery = gql`
   query itemPreviewQuery($name: String) {
     items(name: $name) {
       gridImageLink
+    }
+  }
+`;
+
+export const itemsInGroupQuery = gql`
+  query itemsInGroupQuery($names: [String]) {
+    items(names: $names) {
+      name
+      fleaMarketFee
+      gridImageLink
+      wikiLink
+      buyFor {
+        vendor {
+          name
+        }
+        priceRUB
+      }
+      sellFor {
+        vendor {
+          name
+        }
+        priceRUB
+      }
+      width
+      height
+      changeLast48hPercent
     }
   }
 `;
