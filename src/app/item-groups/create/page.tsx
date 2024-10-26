@@ -3,7 +3,7 @@
 import { Save } from "lucide-react";
 import HeadingButton from "@/app/components/item-groups/HeadingButton";
 import SearchWrapper from "@/app/components/global/search/SearchWrapper";
-import { BaseSyntheticEvent, useEffect, useState } from "react";
+import { BaseSyntheticEvent, useState } from "react";
 import AddItem from "@/app/components/item-groups/AddItem";
 import { Item, Group } from "@/app/components/item-groups/types";
 import ItemsInGroup from "@/app/components/item-groups/ItemsInGroup";
@@ -57,7 +57,10 @@ export default function Page() {
   }
 
   return (
-    <form onSubmit={createGroup} className="flex flex-col gap-4">
+    <form
+      onSubmit={createGroup}
+      className="max-w-xl w-full flex flex-col gap-4"
+    >
       <div className="w-full flex gap-4 text-xl text-neutral-200 justify-between items-center">
         <h1 className="text-3xl">Create group</h1>
         <HeadingButton>

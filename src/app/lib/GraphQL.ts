@@ -46,19 +46,9 @@ export const itemsInGroupQuery = gql`
   query itemsInGroupQuery($names: [String]) {
     items(names: $names) {
       name
-      fleaMarketFee
       gridImageLink
       wikiLink
-      buyFor {
-        vendor {
-          name
-        }
-        priceRUB
-      }
       sellFor {
-        vendor {
-          name
-        }
         priceRUB
       }
       width
