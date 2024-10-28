@@ -2,7 +2,7 @@ import { Rubles } from "@/app/lib/Currency";
 import Share from "./Share";
 import Image from "next/image";
 
-export default function GenericDetails({ item, itemName }) {
+export default function GenericDetails({ item }) {
   return (
     <>
       <div>
@@ -13,14 +13,14 @@ export default function GenericDetails({ item, itemName }) {
         <div className="bg-neutral-700 rounded-md p-3 flex flex-row gap-4 items-center shadow-md">
           <Image
             src={item.gridImageLink}
-            alt={itemName}
+            alt={item.name}
             height={64}
             width={64}
           />
           <div>
             <div className="grid sm:grid-cols-2 sm:gap-4">
               <div>
-                <p>Name: {itemName}</p>
+                <p>Name: {item.name}</p>
                 <p>
                   {(item.fleaMarketFee !== null &&
                     `Flea Market Fee: ${Rubles.format(item.fleaMarketFee)}`) ||

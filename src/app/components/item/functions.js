@@ -42,7 +42,7 @@ export function createItem(item, itemName) {
     ]
       .filter((item) => item !== null)
       .sort((a, b) => b.priceRUB - a.priceRUB),
-    usedInTasks: item.usedInTasks.sort((a, b) => {
+    usedInTasks: [...item.usedInTasks].sort((a, b) => {
       if (a.trader.name < b.trader.name) {
         return -1;
       }
@@ -51,7 +51,7 @@ export function createItem(item, itemName) {
       }
       return a.minPlayerLevel - b.minPlayerLevel;
     }),
-    bartersUsing: item.bartersUsing.sort((a, b) => {
+    bartersUsing: [...item.bartersUsing].sort((a, b) => {
       if (a.trader.name < b.trader.name) {
         return -1;
       }
@@ -62,7 +62,7 @@ export function createItem(item, itemName) {
 
       return a.level - b.level;
     }),
-    craftsUsing: item.craftsUsing.sort((a, b) => {
+    craftsUsing: [...item.craftsUsing].sort((a, b) => {
       if (a.station.name < b.station.name) {
         return -1;
       }
