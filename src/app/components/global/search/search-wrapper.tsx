@@ -1,9 +1,8 @@
 "use client";
 
-import SearchBar from "./SearchBar";
-import ItemSelector from "./ItemSelector";
+import SearchBar from "./search-bar";
+import ItemSelector from "./item-selector";
 import { useState } from "react";
-import { Item } from "./types";
 
 export default function SearchWrapper({
   handleSelect,
@@ -12,7 +11,9 @@ export default function SearchWrapper({
   handleSelect: (itemName: string) => void;
   params?: { itemName: string } | null;
 }) {
-  const [filteredItems, setFilteredItems] = useState<Item[] | null>(null);
+  const [filteredItems, setFilteredItems] = useState<{ name: string }[] | null>(
+    null
+  );
   const [itemSearch, setItemSearch] = useState("");
 
   return (

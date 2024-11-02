@@ -35,6 +35,7 @@ export const ITEMS_IN_GROUP = gql(`
 export const GET_ITEM = gql(`
   query GetItem($name: String) {
     items(name: $name) {
+      name
       fleaMarketFee
       gridImageLink
       wikiLink

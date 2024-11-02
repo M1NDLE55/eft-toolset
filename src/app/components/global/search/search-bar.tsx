@@ -6,7 +6,6 @@ import {
   useState,
 } from "react";
 import { LoaderCircle } from "lucide-react";
-import { Item } from "./types";
 
 export default function SearchBar({
   itemSearch,
@@ -16,10 +15,10 @@ export default function SearchBar({
 }: {
   itemSearch: string;
   setItemSearch: Dispatch<SetStateAction<string>>;
-  setFilteredItems: Dispatch<SetStateAction<Item[] | null>>;
+  setFilteredItems: Dispatch<SetStateAction<{ name: string }[] | null>>;
   params?: { itemName: string } | null;
 }) {
-  const [items, setItems] = useState<Item[]>([]);
+  const [items, setItems] = useState<{ name: string }[]>([]);
   const [example, setExample] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 

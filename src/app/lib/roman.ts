@@ -1,4 +1,4 @@
-export function RomanLiteral(number) {
+export function RomanLiteral(number: number) {
   switch (number) {
     case 1:
       return "I";

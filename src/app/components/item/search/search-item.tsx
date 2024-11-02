@@ -1,14 +1,13 @@
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
-import SearchWrapper from "../../global/search/SearchWrapper";
+import SearchWrapper from "../../global/search/search-wrapper";
 import { customEncodeURI } from "@/app/lib/URIEncoding";
-
 export default function SearchItem() {
   const router = useRouter();
-  const params = useParams();
+  const params = useParams<{ itemName: string }>();
 
-  function handleSelect(itemName) {
+  function handleSelect(itemName: string) {
     router.push(`/item/${customEncodeURI(itemName)}`);
   }
 

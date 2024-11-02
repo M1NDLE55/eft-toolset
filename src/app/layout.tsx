@@ -3,6 +3,7 @@ import "./globals.css";
 import Link from "next/link";
 import { Github } from "lucide-react";
 import Image from "next/image";
+import { ReactNode } from "react";
 // import FetchData from "./components/root/FetchData";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,7 +27,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-neutral-800`}>

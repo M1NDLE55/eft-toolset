@@ -2,7 +2,7 @@
 
 import { Save } from "lucide-react";
 import HeadingButton from "@/app/components/item-groups/HeadingButton";
-import SearchWrapper from "@/app/components/global/search/SearchWrapper";
+import SearchWrapper from "@/app/components/global/search/search-wrapper";
 import { BaseSyntheticEvent, useState } from "react";
 import AddItem from "@/app/components/item-groups/AddItem";
 import { Item, Group } from "@/app/components/item-groups/types";

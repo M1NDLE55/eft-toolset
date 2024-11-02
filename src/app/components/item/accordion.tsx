@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { ReactNode, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 
 export default function Accordion({
@@ -7,8 +7,14 @@ export default function Accordion({
   setOpenIndex,
   className,
   children,
+}: {
+  title: ReactNode;
+  isOpen: boolean;
+  setOpenIndex: VoidFunction;
+  className: string | boolean;
+  children: ReactNode;
 }) {
-  const content = useRef();
+  const content = useRef<HTMLDivElement | null>(null);
 
   return (
     <div className={`flex flex-col overflow-hidden ${className}`}>
@@ -27,7 +33,7 @@ export default function Accordion({
         className="transition-height ease-in-out duration-500"
         style={
           isOpen
-            ? { height: content.current.scrollHeight, marginBottom: "12px" }
+            ? { height: content.current!.scrollHeight, marginBottom: "12px" }
             : { height: "0px" }
         }
       >

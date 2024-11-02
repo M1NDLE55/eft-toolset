@@ -1,5 +1,4 @@
 import { AlertTriangle } from "lucide-react";
-import { Item } from "./types";
 
 export default function ItemSelection({
   itemSearch,
@@ -8,7 +7,7 @@ export default function ItemSelection({
 }: {
   itemSearch: string;
   handleSelect: (itemName: string) => void;
-  filteredItems: Item[] | null;
+  filteredItems: { name: string }[] | null;
 }) {
   return (
     filteredItems && (

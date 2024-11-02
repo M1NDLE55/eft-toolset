@@ -1,7 +1,7 @@
 "use client";
 
 import { Group } from "@/app/components/item-groups/types";
-import { Rubles } from "@/app/lib/Currency";
+import { Rubles } from "@/app/lib/currency";
 import { GraphQLV2, itemsInGroupQuery } from "@/app/lib/GraphQL";
 import { notFound, useParams } from "next/navigation";
 import { useEffect, useState } from "react";
