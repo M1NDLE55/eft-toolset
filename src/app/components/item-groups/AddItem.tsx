@@ -1,8 +1,10 @@
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { GraphQLV2, itemPreviewQuery } from "@/app/lib/GraphQL";
+import { Dispatch, SetStateAction } from "react";
 import { Plus, CircleMinusIcon } from "lucide-react";
-import { Data, Item } from "./types";
 import ItemPreview from "./ItemPreview";
+import { useQuery } from "@apollo/client";
+import { ITEM_PREVIEW } from "@/app/lib/queries";
+import { ItemPreview as ItemPreviewType } from "@/app/lib/types/itemGroups";
+import QueryError from "../global/error/query-error";
 
 export default function AddItem({
   item,
@@ -12,38 +14,30 @@ export default function AddItem({
 }: {
   item: string;
   setItem: Dispatch<SetStateAction<string>>;
-  groupItems: Item[];
-  setGroupItems: Dispatch<SetStateAction<Item[]>>;
+  groupItems: ItemPreviewType[];
+  setGroupItems: Dispatch<SetStateAction<ItemPreviewType[]>>;
 }) {
-  const [data, setData] = useState<Data | null>(null);
+  const { data, loading, error } = useQuery(ITEM_PREVIEW, {
+    variables: { name: item },
+    skip: !item,
+  });
+
   const isItemInGroup = groupItems.find((gItem) => gItem.name === item)
     ? true
     : false;
 
-  useEffect(() => {
-    async function fetchData() {
-      setData(null);
-
-      const d = (await GraphQLV2(itemPreviewQuery, { name: item })) as Data;
-
-      setData(d);
-    }
-
-    fetchData();
-  }, [item]);
-
   return (
     <div>
       <h2 className="text-lg text-neutral-200">Add item</h2>
-      {!data ? (
+      {loading && (
         <div className="animate-pulse bg-neutral-700 rounded-md p-3">
           <div className="w-full p-2 bg-neutral-500 mb-2 rounded-md"></div>
           <div className="w-full p-2 bg-neutral-500 rounded-md"></div>
         </div>
-      ) : data?.errors ? (
-        <div>{data.errors[0].message}</div>
-      ) : (
-        <ItemPreview item={item} src={data.items[0].gridImageLink}>
+      )}
+      {(error || !data) && <QueryError error={error} />}
+      {data && (
+        <ItemPreview item={item} src={data.items[0]!.gridImageLink!}>
           <button
             className={`p-3 rounded-md ${
               isItemInGroup ? "bg-neutral-500" : "bg-green-500"
@@ -57,7 +51,7 @@ export default function AddItem({
                       ...groupItems,
                       {
                         name: item,
-                        gridImageLink: data.items[0].gridImageLink,
+                        gridImageLink: data.items[0]!.gridImageLink,
                       },
                     ]
               );

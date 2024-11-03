@@ -5,13 +5,13 @@ import HeadingButton from "@/app/components/item-groups/HeadingButton";
 import SearchWrapper from "@/app/components/global/search/search-wrapper";
 import { BaseSyntheticEvent, useState } from "react";
 import AddItem from "@/app/components/item-groups/AddItem";
-import { Item, Group } from "@/app/components/item-groups/types";
 import ItemsInGroup from "@/app/components/item-groups/ItemsInGroup";
 import { useRouter } from "next/navigation";
+import { Group, ItemPreview } from "@/app/lib/types/itemGroups";
 
 export default function Page() {
   const [item, setItem] = useState("");
-  const [groupItems, setGroupItems] = useState<Item[]>([]);
+  const [groupItems, setGroupItems] = useState<ItemPreview[]>([]);
   const [hasError, setHasError] = useState("");
   const router = useRouter();
 

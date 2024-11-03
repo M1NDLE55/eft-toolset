@@ -1,118 +1,40 @@
 "use client";
 
-import { Group } from "@/app/components/item-groups/types";
+import { Group } from "@/app/lib/types/itemGroups";
 import { Rubles } from "@/app/lib/currency";
-import { GraphQLV2, itemsInGroupQuery } from "@/app/lib/GraphQL";
 import { notFound, useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { AlertTriangle, Link as LinkIcon } from "lucide-react";
+import { Link as LinkIcon } from "lucide-react";
 import Link from "next/link";
 import { customEncodeURI } from "@/app/lib/URIEncoding";
 import Image from "next/image";
-
-type BaseItem = {
-  name: string;
-  gridImageLink: string;
-  wikiLink: string;
-  changeLast48hPercent: number;
-};
-
-type RawItem = BaseItem & {
-  width: number;
-  height: number;
-  sellFor: {
-    priceRUB: number;
-  }[];
-};
-
-type ResultItem = BaseItem & {
-  slots: number;
-  sellFor: {
-    priceRUB: number | null;
-    slotValueRUB: number | null;
-  };
-};
-
-type Errors = {
-  errors?:
-    | {
-        message: string;
-      }[]
-    | null;
-};
-
-type RawData = Errors & {
-  items: RawItem[];
-};
-
-type ResultData = Errors & {
-  items: ResultItem[];
-};
+import { useQuery } from "@apollo/client";
+import { ITEMS_IN_GROUP } from "@/app/lib/queries";
+import QueryError from "@/app/components/global/error/query-error";
 
 export default function Page() {
   const groupName = useParams<{ group: string }>().group;
-  const [data, setData] = useState<ResultData>({
-    items: [],
-    errors: null,
+  const [names, setNames] = useState<string[]>([]);
+  const { data, loading, error } = useQuery(ITEMS_IN_GROUP, {
+    variables: { names: names },
+    skip: names.length === 0,
   });
-  const [isLoading, setIsloading] = useState(true);
+
+  const groups = localStorage.getItem("item-groups");
+
+  if (!groups) notFound();
+
+  const group = (JSON.parse(groups) as Group[]).find(
+    (group) => group.name.toLowerCase() === groupName.toLowerCase()
+  );
+
+  if (!group) notFound();
 
   useEffect(() => {
-    async function fetchData() {
-      setIsloading(true);
-
-      const groups = localStorage.getItem("item-groups");
-
-      if (!groups) notFound();
-
-      const group = (JSON.parse(groups) as Group[]).find(
-        (group) => group.name.toLowerCase() === groupName.toLowerCase()
-      );
-
-      if (!group) notFound();
-
-      const data = (await GraphQLV2(itemsInGroupQuery, {
-        names: group.items,
-      })) as RawData;
-
-      setData(
-        data.items.length > 0
-          ? {
-              items: data.items.map((item) => {
-                const slots = item.width * item.height;
-                const priceRUB =
-                  item.sellFor.length > 0
-                    ? item.sellFor.sort((a, b) => b.priceRUB - a.priceRUB)[0]
-                        .priceRUB
-                    : null;
-
-                return {
-                  name: item.name,
-                  gridImageLink: item.gridImageLink,
-                  changeLast48hPercent: item.changeLast48hPercent,
-                  slots: slots,
-                  wikiLink: item.wikiLink,
-                  sellFor: {
-                    priceRUB: priceRUB,
-                    slotValueRUB: priceRUB && priceRUB / slots,
-                  },
-                };
-              }),
-              errors: null,
-            }
-          : {
-              items: [],
-              errors: data.errors || null,
-            }
-      );
-
-      setIsloading(false);
-    }
-
-    fetchData();
+    setNames(group.items);
   }, []);
 
-  if (isLoading)
+  if (loading)
     return (
       <div className="max-w-4xl w-full flex flex-col gap-4">
         <h1 className="text-3xl text-neutral-200">{groupName}</h1>
@@ -123,22 +45,7 @@ export default function Page() {
       </div>
     );
 
-  if (data.errors)
-    return (
-      <div className="max-w-4xl w-full flex flex-col gap-4">
-        <h1 className="text-3xl text-neutral-200">{groupName}</h1>
-        <div className="bg-red-200 border-red-700 border rounded-md p-3 flex flex-row gap-2">
-          <AlertTriangle className="text-red-700" />
-          <div className="flex flex-col gap-2">
-            {data.errors.map((error, i) => (
-              <p className="text-red-700" key={error.message + `${i}`}>
-                {error.message}
-              </p>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
+  if (error || !data) return <QueryError error={error} />;
 
   return (
     <div className="max-w-4xl w-full flex flex-col gap-4">
@@ -158,59 +65,73 @@ export default function Page() {
             </tr>
           </thead>
           <tbody>
-            {data.items.map((item) => (
-              <tr
-                key={item.name}
-                className="odd:bg-neutral-800 border-t border-neutral-600"
-              >
-                <td className="p-3">
-                  <Image
-                    alt={item.name}
-                    src={item.gridImageLink}
-                    width={64}
-                    height={64}
-                  />
-                </td>
-                <td className="p-3">
-                  <Link
-                    href={{ pathname: `/item/${customEncodeURI(item.name)}` }}
-                    className="underline underline-offset-2"
+            {data.items.map(
+              (item) =>
+                item && (
+                  <tr
+                    key={item.name}
+                    className="odd:bg-neutral-800 border-t border-neutral-600"
                   >
-                    {item.name}
-                  </Link>
-                </td>
-                <td className="p-3">
-                  {item.sellFor.slotValueRUB !== null
-                    ? Rubles.format(item.sellFor.slotValueRUB)
-                    : "n/a"}
-                </td>
-                <td className="p-3">
-                  {item.sellFor.priceRUB !== null
-                    ? Rubles.format(item.sellFor.priceRUB)
-                    : "n/a"}
-                </td>
-                <td className="p-3">
-                  {item.changeLast48hPercent !== null ? (
-                    <span
-                      className={`${
-                        item.changeLast48hPercent >= 0
-                          ? "text-green-400 before:content-['+']"
-                          : "text-red-400"
-                      }`}
-                    >
-                      {item.changeLast48hPercent}%
-                    </span>
-                  ) : (
-                    "n/a"
-                  )}
-                </td>
-                <td className="p-3">
-                  <a href={item.wikiLink}>
-                    <LinkIcon className="hover:scale-105 transition-transform w-full" />
-                  </a>
-                </td>
-              </tr>
-            ))}
+                    <td className="p-3">
+                      <Image
+                        alt={item.name!}
+                        src={item.gridImageLink!}
+                        width={64}
+                        height={64}
+                      />
+                    </td>
+                    <td className="p-3">
+                      <Link
+                        href={{
+                          pathname: `/item/${customEncodeURI(item.name!)}`,
+                        }}
+                        className="underline underline-offset-2"
+                      >
+                        {item.name}
+                      </Link>
+                    </td>
+                    <td className="p-3">
+                      {item.sellFor && item.sellFor.length > 0
+                        ? Rubles.format(
+                            [...item.sellFor].sort(
+                              (a, b) => b.priceRUB! - a.priceRUB!
+                            )[0].priceRUB! /
+                              (item.width * item.height)
+                          )
+                        : "n/a"}
+                    </td>
+                    <td className="p-3">
+                      {item.sellFor && item.sellFor.length > 0
+                        ? Rubles.format(
+                            [...item.sellFor].sort(
+                              (a, b) => b.priceRUB! - a.priceRUB!
+                            )[0].priceRUB!
+                          )
+                        : "n/a"}
+                    </td>
+                    <td className="p-3">
+                      {item.changeLast48hPercent ? (
+                        <span
+                          className={`${
+                            item.changeLast48hPercent >= 0
+                              ? "text-green-400 before:content-['+']"
+                              : "text-red-400"
+                          }`}
+                        >
+                          {item.changeLast48hPercent}%
+                        </span>
+                      ) : (
+                        "n/a"
+                      )}
+                    </td>
+                    <td className="p-3">
+                      <a href={item.wikiLink!}>
+                        <LinkIcon className="hover:scale-105 transition-transform w-full" />
+                      </a>
+                    </td>
+                  </tr>
+                )
+            )}
           </tbody>
         </table>
       ) : (

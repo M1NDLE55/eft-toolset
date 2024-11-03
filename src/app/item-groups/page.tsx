@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import GroupSelector from "../components/item-groups/GroupSelector";
 import GroupEditor from "../components/item-groups/GroupEditor";
-import { Group } from "../components/item-groups/types";
+import { Group } from "../lib/types/itemGroups";
 import { SquareMousePointer, SquarePlus, EditIcon } from "lucide-react";
 import Link from "next/link";
 import HeadingButton from "../components/item-groups/HeadingButton";
