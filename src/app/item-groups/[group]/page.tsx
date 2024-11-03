@@ -34,7 +34,7 @@ export default function Page() {
     setNames(group.items);
   }, []);
 
-  if (loading)
+  if (loading || !data)
     return (
       <div className="max-w-4xl w-full flex flex-col gap-4">
         <h1 className="text-3xl text-neutral-200">{groupName}</h1>
@@ -45,7 +45,7 @@ export default function Page() {
       </div>
     );
 
-  if (error || !data) return <QueryError error={error} />;
+  if (error) return <QueryError error={error} />;
 
   return (
     <div className="max-w-4xl w-full flex flex-col gap-4">

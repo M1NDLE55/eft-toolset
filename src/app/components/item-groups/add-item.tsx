@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import { Plus, CircleMinusIcon } from "lucide-react";
-import ItemPreview from "./ItemPreview";
+import ItemPreview from "./item-preview";
 import { useQuery } from "@apollo/client";
 import { ITEM_PREVIEW } from "@/app/lib/queries";
 import { ItemPreview as ItemPreviewType } from "@/app/lib/types/itemGroups";

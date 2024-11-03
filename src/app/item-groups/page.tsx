@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import GroupSelector from "../components/item-groups/GroupSelector";
-import GroupEditor from "../components/item-groups/GroupEditor";
+import GroupSelector from "../components/item-groups/group-selector";
+import GroupEditor from "../components/item-groups/group-editor";
 import { Group } from "../lib/types/itemGroups";
 import { SquareMousePointer, SquarePlus, EditIcon } from "lucide-react";
 import Link from "next/link";
-import HeadingButton from "../components/item-groups/HeadingButton";
+import HeadingButton from "../components/item-groups/heading-button";
 
 export default function Page() {
   const [isEditing, setIsEditing] = useState(false);

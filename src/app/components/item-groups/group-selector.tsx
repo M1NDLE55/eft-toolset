@@ -1,4 +1,4 @@
-import { Group } from "./types";
+import { Group } from "@/app/lib/types/itemGroups";
 import Link from "next/link";
 import { ChevronRightCircle } from "lucide-react";
 

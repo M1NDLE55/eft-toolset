@@ -1,4 +1,4 @@
-import { Group } from "./types";
+import { Group } from "@/app/lib/types/itemGroups";
 import { Trash } from "lucide-react";
 import { SetStateAction, useState } from "react";
 import { Dispatch } from "react";

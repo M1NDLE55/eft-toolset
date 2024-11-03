@@ -1,5 +1,5 @@
-import ItemPreview from "./ItemPreview";
-import { Item } from "./types";
+import ItemPreview from "./item-preview";
+import { ItemPreview as ItemPreviewType } from "@/app/lib/types/itemGroups";
 import { Trash } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
 
@@ -7,8 +7,8 @@ export default function ItemsInGroup({
   groupItems,
   setGroupItems,
 }: {
-  groupItems: Item[];
-  setGroupItems: Dispatch<SetStateAction<Item[]>>;
+  groupItems: ItemPreviewType[];
+  setGroupItems: Dispatch<SetStateAction<ItemPreviewType[]>>;
 }) {
   return (
     <div>
@@ -18,7 +18,7 @@ export default function ItemsInGroup({
           <ItemPreview
             key={item.name}
             item={item.name}
-            src={item.gridImageLink}
+            src={item.gridImageLink!}
           >
             <button
               className="p-3 rounded-md bg-red-500"

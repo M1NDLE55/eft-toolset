@@ -1,11 +1,11 @@
 "use client";
 
 import { Save } from "lucide-react";
-import HeadingButton from "@/app/components/item-groups/HeadingButton";
+import HeadingButton from "@/app/components/item-groups/heading-button";
 import SearchWrapper from "@/app/components/global/search/search-wrapper";
 import { BaseSyntheticEvent, useState } from "react";
-import AddItem from "@/app/components/item-groups/AddItem";
-import ItemsInGroup from "@/app/components/item-groups/ItemsInGroup";
+import AddItem from "@/app/components/item-groups/add-item";
+import ItemsInGroup from "@/app/components/item-groups/items-in-group";
 import { useRouter } from "next/navigation";
 import { Group, ItemPreview } from "@/app/lib/types/itemGroups";
 
