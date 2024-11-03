@@ -9,14 +9,13 @@ import CraftsUsing from "@/app/components/item/crafts-using";
 import { useParams } from "next/navigation";
 import { useQuery } from "@apollo/client";
 import { GET_ITEM } from "@/app/lib/queries";
-import QueryError from "@/app/components/global/error/queryError";
-import SimpleError from "@/app/components/global/error/simpleError";
+import QueryError from "@/app/components/global/error/query-error";
+import SimpleError from "@/app/components/global/error/simple-error";
 
 export default function Page() {
   const { itemName } = getParam(useParams());
   const { data, loading, error } = useQuery(GET_ITEM, {
     variables: { name: itemName },
-    errorPolicy: "all",
   });
 
   if (loading) {

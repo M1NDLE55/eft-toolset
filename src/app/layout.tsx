@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Github } from "lucide-react";
 import Image from "next/image";
 import { ReactNode } from "react";
-// import FetchData from "./components/root/FetchData";
+import PreFetchData from "./components/root/fetch-data";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </Link>
           </div>
         </header>
-        {/* <FetchData /> */}
+        <PreFetchData />
         {children}
         <footer className="text-neutral-200 border-t border-neutral-500 p-4 min-h-16 flex justify-center items-center">
           <div className="w-full max-w-7xl flex sm:flex-row sm:justify-between flex-col items-center gap-4">
