@@ -29,13 +29,13 @@ export default function AddItem({
   return (
     <div>
       <h2 className="text-lg text-neutral-200">Add item</h2>
-      {loading && (
+      {(loading || !data) && (
         <div className="animate-pulse bg-neutral-700 rounded-md p-3">
           <div className="w-full p-2 bg-neutral-500 mb-2 rounded-md"></div>
           <div className="w-full p-2 bg-neutral-500 rounded-md"></div>
         </div>
       )}
-      {(error || !data) && <QueryError error={error} />}
+      {error && <QueryError error={error} />}
       {data && (
         <ItemPreview item={item} src={data.items[0]!.gridImageLink!}>
           <button
