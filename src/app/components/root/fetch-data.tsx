@@ -3,28 +3,27 @@
 import { useQuery } from "@apollo/client";
 import { ALL_ITEMS } from "@/app/lib/queries";
 import client from "@/app/lib/apolloClient";
+import { useEffect } from "react";
 
 export default function PreFetchData() {
-  const { data, loading, error } = useQuery(ALL_ITEMS, {
+  const { data, error } = useQuery(ALL_ITEMS, {
     client: client,
   });
 
-  if (loading) {
-    return null;
-  }
+  useEffect(() => {
+    if (error) {
+      console.warn("Couldn't fetch item names");
+      return;
+    }
 
-  if (error || !data) {
-    console.warn("Couldn't fetch item names");
-    return null;
-  }
+    if (data) {
+      // remove duplicates
+      const allItems = data.items.filter(
+        (item, i, array) =>
+          i === array.findIndex((tempItem) => tempItem!.name === item!.name)
+      );
 
-  // remove duplicates
-  const allItems = data.items.filter(
-    (item, i, array) =>
-      i === array.findIndex((tempItem) => tempItem!.name === item!.name)
-  );
-
-  localStorage.setItem("items", JSON.stringify(allItems));
-
-  return null;
+      localStorage.setItem("items", JSON.stringify(allItems));
+    }
+  }, [data, error]);
 }
