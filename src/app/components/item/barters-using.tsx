@@ -18,7 +18,7 @@ export default function BartersUsing({
     barters.length > 0 && (
       <div className="flex flex-col">
         <h2 className="text-lg">Barters Using</h2>
-        <div className="bg-neutral-700 rounded-md px-3 py-1 shadow-md flex flex-col">
+        <div className="rounded-md px-3 py-1 shadow bg-secondary flex flex-col">
           {barters.map(
             (barter, i) =>
               barter && (
@@ -26,7 +26,7 @@ export default function BartersUsing({
                   key={barter.rewardItems[0]!.item.name! + i}
                   title={
                     <>
-                      <span className="bg-neutral-800 rounded-full px-2 mr-2">
+                      <span className="border border-yellow-500 bg-yellow-500 dark:bg-inherit rounded-full px-2 mr-2">
                         {barter.trader.name + " " + RomanLiteral(barter.level)}
                       </span>
                       {barter.rewardItems[0]!.item.name}

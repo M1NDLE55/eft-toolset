@@ -5,7 +5,7 @@ import { Item } from "@/app/lib/types/item";
 import { Rubles } from "@/app/lib/currency";
 import Image from "next/image";
 import Link from "next/link";
-import { Link2 as LinkIcon, MoreHorizontal } from "lucide-react";
+import { ArrowUpRight, Link2 as LinkIcon, MoreHorizontal } from "lucide-react";
 import { customEncodeURI } from "@/app/lib/URIEncoding";
 
 import { Button } from "@/components/ui/button";
@@ -45,6 +45,7 @@ export function getColumns(handleRemove: (name: string) => void) {
         return (
           <Link href={`/item/${customEncodeURI(item.name!)}`}>
             {item.name!}
+            <ArrowUpRight className="inline" size={16} />
           </Link>
         );
       },
@@ -81,6 +82,21 @@ export function getColumns(handleRemove: (name: string) => void) {
     {
       accessorKey: "changeLast48hPercent",
       header: "48h",
+      cell: ({ row }) => {
+        const item = row.original;
+
+        return item.changeLast48hPercent ? (
+          <span
+            className={`${
+              item.changeLast48hPercent >= 0 ? "text-green-400" : "text-red-400"
+            }`}
+          >
+            {item.changeLast48hPercent}%
+          </span>
+        ) : (
+          "n/a"
+        );
+      },
     },
     {
       accessorKey: "wikiLink",

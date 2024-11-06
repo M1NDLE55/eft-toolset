@@ -6,6 +6,7 @@ import {
   useState,
 } from "react";
 import { LoaderCircle } from "lucide-react";
+import { Input } from "@/components/ui/input";
 
 export default function SearchBar({
   itemSearch,
@@ -75,9 +76,9 @@ export default function SearchBar({
 
   return (
     <div className="relative">
-      <input
+      <Input
         name="search"
-        className="w-full p-2 rounded-md"
+        className="w-full"
         disabled={isLoading}
         placeholder={
           isLoading ? "Loading items..." : `Enter item name ${example}`
@@ -85,9 +86,9 @@ export default function SearchBar({
         value={itemSearch}
         onClick={(e) => (e.target as HTMLInputElement).select()}
         onChange={handleChange}
-      ></input>
+      ></Input>
       {isLoading && (
-        <LoaderCircle className="absolute right-2 top-2 animate-spin text-white" />
+        <LoaderCircle className="absolute right-2 top-2 animate-spin" />
       )}
     </div>
   );

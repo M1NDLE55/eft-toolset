@@ -18,7 +18,7 @@ export default function SearchWrapper({
 
   return (
     <div>
-      <h2 className="text-lg text-neutral-200">Search item</h2>
+      <h2 className="text-lg">Search item</h2>
       <div className="flex flex-col gap-4">
         <SearchBar
           itemSearch={itemSearch}

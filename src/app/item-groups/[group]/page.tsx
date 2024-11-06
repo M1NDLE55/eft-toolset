@@ -21,6 +21,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Trash } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
   const router = useRouter();
@@ -90,10 +91,13 @@ export default function Page() {
   if (loading || !data)
     return (
       <div className="max-w-4xl w-full flex flex-col gap-4">
-        <h1 className="text-3xl text-neutral-200">{groupName}</h1>
-        <div className="w-full bg-neutral-700 p-3 animate-pulse rounded-md">
-          <div className="w-full p-2 bg-neutral-500 mb-2 rounded-md"></div>
-          <div className="w-full p-2 bg-neutral-500 rounded-md"></div>
+        <h1 className="text-3xl">{groupName}</h1>
+        <div className="w-full animate-pulse rounded-md">
+          <div className="w-full py-8 bg-neutral-200 dark:bg-neutral-600"></div>
+          <div className="w-full py-8 bg-neutral-100 dark:bg-neutral-500"></div>
+          <div className="w-full py-8 bg-neutral-200 dark:bg-neutral-600"></div>
+          <div className="w-full py-8 bg-neutral-100 dark:bg-neutral-500"></div>
+          <div className="w-full py-8 bg-neutral-200 dark:bg-neutral-600"></div>
         </div>
       </div>
     );
@@ -104,12 +108,11 @@ export default function Page() {
 
   return (
     <div className="max-w-4xl w-full flex flex-col gap-4">
-      <div className="w-full flex gap-4 text-xl text-neutral-200 justify-between items-center">
+      <div className="w-full flex gap-4 text-xl justify-between items-center">
         <h1 className="text-3xl">{groupName}</h1>
         <AlertDialog>
           <AlertDialogTrigger className="flex gap-1">
-            <Trash />
-            <p>Delete</p>
+            <Button variant={"destructive"}>Delete</Button>
           </AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>

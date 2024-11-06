@@ -11,7 +11,7 @@ export default function UsedInTasks({ tasks }: { tasks: Item["usedInTasks"] }) {
     tasks.length > 0 && (
       <div className="flex flex-col">
         <h2 className="text-lg">Used In Tasks</h2>
-        <div className="bg-neutral-700 rounded-md px-3 py-1 shadow-md flex flex-col">
+        <div className="rounded-md px-3 py-1 flex flex-col shadow bg-secondary">
           {tasks.map(
             (task, i) =>
               task && (
@@ -19,7 +19,7 @@ export default function UsedInTasks({ tasks }: { tasks: Item["usedInTasks"] }) {
                   key={task.name}
                   title={
                     <>
-                      <span className="bg-neutral-800 rounded-full px-2 mr-2">
+                      <span className="border border-yellow-500 bg-yellow-500 dark:bg-inherit rounded-full px-2 mr-2">
                         {task.trader.name}
                       </span>
                       {task.name}
@@ -34,7 +34,7 @@ export default function UsedInTasks({ tasks }: { tasks: Item["usedInTasks"] }) {
                   <div className="flex flex-col-reverse gap-1 sm:flex-row sm:justify-between pb-1">
                     <p>
                       Minimum Player Level:{" "}
-                      <span className="bg-neutral-800 rounded-full px-2">
+                      <span className="border border-yellow-500 bg-yellow-500 dark:bg-inherit rounded-full px-2">
                         {task.minPlayerLevel}
                       </span>
                     </p>

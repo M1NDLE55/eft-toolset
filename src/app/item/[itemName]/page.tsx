@@ -37,7 +37,7 @@ export default function Page() {
   const item = data.items[0]!;
 
   return (
-    <div className="flex flex-col gap-4 text-white">
+    <div className="flex flex-col gap-4">
       <GenericDetails item={item} />
       <UsedInTasks tasks={item.usedInTasks} />
       <BartersUsing barters={item.bartersUsing} />

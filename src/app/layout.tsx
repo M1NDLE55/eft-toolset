@@ -39,14 +39,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           enableSystem
           disableTransitionOnChange
         >
-          <header className="text-neutral-200 flex justify-center items-center border-b border-neutral-500 px-4 h-16">
+          <header className="flex justify-center items-center border-b px-4 h-16">
             <div className="sm:w-full max-w-7xl flex flex-row justify-between items-center">
-              <Link href={{ pathname: "/" }} className="text-lg">
+              <Link href={{ pathname: "/" }}>
                 <Image
                   src="/eft-toolset-logo.png"
                   alt="EFT Tools logo"
                   width={150}
                   height={55}
+                  className="invert dark:invert-0"
                 />
               </Link>
               <ModeToggle />
@@ -54,7 +55,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </header>
           <PreFetchData />
           {children}
-          <footer className="text-neutral-200 border-t border-neutral-500 p-4 min-h-16 flex justify-center items-center">
+          <footer className="border-t p-4 min-h-16 flex justify-center items-center">
             <div className="w-full max-w-7xl flex sm:flex-row sm:justify-between flex-col items-center gap-4">
               <div className="flex sm:flex-row flex-col items-center gap-4">
                 <p>&copy; {new Date().getFullYear().toString()} EFT Toolset</p>
