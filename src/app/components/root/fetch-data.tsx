@@ -26,4 +26,6 @@ export default function PreFetchData() {
       localStorage.setItem("items", JSON.stringify(allItems));
     }
   }, [data, error]);
+
+  return null;
 }
