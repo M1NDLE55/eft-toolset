@@ -1,5 +1,6 @@
 import ItemPreview from "./item-preview";
 import { ItemPreview as ItemPreviewType } from "@/app/lib/types/itemGroups";
+import { Button } from "@/components/ui/button";
 import { Trash } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
 
@@ -12,7 +13,7 @@ export default function ItemsInGroup({
 }) {
   return (
     <div>
-      <h2 className="text-neutral-200 text-lg">Items in group</h2>
+      <h2 className="text-lg">Items in group</h2>
       <div className="flex flex-col gap-2">
         {groupItems.map((item) => (
           <ItemPreview
@@ -20,8 +21,8 @@ export default function ItemsInGroup({
             item={item.name}
             src={item.gridImageLink!}
           >
-            <button
-              className="p-3 rounded-md bg-red-500"
+            <Button
+              variant={"destructive"}
               onClick={() =>
                 setGroupItems((gItems) =>
                   gItems.filter((gItem) => gItem.name !== item.name)
@@ -29,7 +30,7 @@ export default function ItemsInGroup({
               }
             >
               <Trash />
-            </button>
+            </Button>
           </ItemPreview>
         ))}
       </div>

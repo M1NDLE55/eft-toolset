@@ -9,6 +9,7 @@ export default function GroupSelector({ group }: { group: Group }) {
       key={group.name}
       variant={"secondary"}
       className="flex flex-row justify-between items-center gap-2"
+      asChild
     >
       <Link
         href={{ pathname: `/item-groups/${group.name}` }}

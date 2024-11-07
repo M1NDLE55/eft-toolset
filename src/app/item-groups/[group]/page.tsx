@@ -20,12 +20,14 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { Trash } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
+import Link from "next/link";
+import { customDecodeURI, customEncodeURI } from "@/app/lib/URIEncoding";
 
 export default function Page() {
   const router = useRouter();
-  const groupName = useParams<{ group: string }>().group;
+  const groupName = customDecodeURI(useParams<{ group: string }>().group);
   const [names, setNames] = useState<string[]>([]);
   const { data, loading, error } = useQuery(ITEMS_IN_GROUP, {
     variables: { names: names },
@@ -88,16 +90,15 @@ export default function Page() {
     setNames(group.items);
   }, []);
 
-  if (loading || !data)
+  if (loading)
     return (
       <div className="max-w-4xl w-full flex flex-col gap-4">
         <h1 className="text-3xl">{groupName}</h1>
-        <div className="w-full animate-pulse rounded-md">
-          <div className="w-full py-8 bg-neutral-200 dark:bg-neutral-600"></div>
-          <div className="w-full py-8 bg-neutral-100 dark:bg-neutral-500"></div>
-          <div className="w-full py-8 bg-neutral-200 dark:bg-neutral-600"></div>
-          <div className="w-full py-8 bg-neutral-100 dark:bg-neutral-500"></div>
-          <div className="w-full py-8 bg-neutral-200 dark:bg-neutral-600"></div>
+        <div className="flex w-full flex-col gap-3">
+          <Skeleton className="w-full py-8" />
+          <Skeleton className="w-full py-8" />
+          <Skeleton className="w-full py-8" />
+          <Skeleton className="w-full py-8" />
         </div>
       </div>
     );
@@ -110,35 +111,42 @@ export default function Page() {
     <div className="max-w-4xl w-full flex flex-col gap-4">
       <div className="w-full flex gap-4 text-xl justify-between items-center">
         <h1 className="text-3xl">{groupName}</h1>
-        <AlertDialog>
-          <AlertDialogTrigger className="flex gap-1">
-            <Button variant={"destructive"}>Delete</Button>
-          </AlertDialogTrigger>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-              <AlertDialogDescription>
-                This action cannot be undone. This will permanently delete this
-                item group.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction onClick={handleDelete}>
-                Continue
-              </AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+        <div className="flex gap-2">
+          <Button asChild>
+            <Link href={`/item-groups/edit/${customEncodeURI(groupName)}`}>
+              Edit
+            </Link>
+          </Button>
+          <AlertDialog>
+            <AlertDialogTrigger className="flex gap-1">
+              <Button variant={"destructive"}>Delete</Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  This action cannot be undone. This will permanently delete
+                  this item group.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction onClick={handleDelete}>
+                  Continue
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        </div>
       </div>
-      {data.items.length > 0 ? (
+      {data && data.items ? (
         <DataTable
           columns={columns}
-          data={data.items as Item[]}
+          data={data.items.length > 0 ? (data.items as Item[]) : []}
           sort={{ column: "name", title: "item" }}
         />
       ) : (
-        <p className="p-3 w-full rounded-md border border-neutral-600 text-xl text-neutral-600">
+        <p className="p-3 w-full rounded-md border text-xl">
           No items in group
         </p>
       )}

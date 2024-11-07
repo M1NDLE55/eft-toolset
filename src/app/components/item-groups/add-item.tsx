@@ -5,6 +5,8 @@ import { useQuery } from "@apollo/client";
 import { ITEM_PREVIEW } from "@/app/lib/queries";
 import { ItemPreview as ItemPreviewType } from "@/app/lib/types/itemGroups";
 import QueryError from "../global/error/query-error";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
 
 export default function AddItem({
   item,
@@ -28,20 +30,18 @@ export default function AddItem({
 
   return (
     <div>
-      <h2 className="text-lg text-neutral-200">Add item</h2>
+      <h2 className="text-lg">Add item</h2>
       {(loading || !data) && (
-        <div className="animate-pulse bg-neutral-700 rounded-md p-3">
-          <div className="w-full p-2 bg-neutral-500 mb-2 rounded-md"></div>
-          <div className="w-full p-2 bg-neutral-500 rounded-md"></div>
+        <div className="border rounded-md p-4 flex flex-row gap-4">
+          <Skeleton className="h-16 w-16" />
+          <Skeleton className="w-full p-2" />
         </div>
       )}
       {error && <QueryError error={error} />}
       {data && (
         <ItemPreview item={item} src={data.items[0]!.gridImageLink!}>
-          <button
-            className={`p-3 rounded-md ${
-              isItemInGroup ? "bg-neutral-500" : "bg-green-500"
-            }`}
+          <Button
+            variant={"default"}
             disabled={isItemInGroup}
             onClick={() => {
               setGroupItems((groupItems) =>
@@ -59,7 +59,7 @@ export default function AddItem({
             }}
           >
             {isItemInGroup ? <CircleMinusIcon /> : <Plus />}
-          </button>
+          </Button>
         </ItemPreview>
       )}
     </div>

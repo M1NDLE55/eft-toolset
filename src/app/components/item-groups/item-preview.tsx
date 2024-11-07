@@ -11,8 +11,8 @@ export default function ItemPreview({
   children?: ReactNode;
 }) {
   return (
-    <div className="flex flex-row gap-2 text-white">
-      <div className="p-3 bg-neutral-700 rounded-md flex flex-row gap-4 items-center shadow-md flex-1">
+    <div className="flex flex-row gap-2 bg-secondary rounded-md shadow items-center p-3">
+      <div className="flex flex-row gap-4 items-center flex-1 ">
         <Image src={src} alt={item} height={64} width={64} />
         <p>{item}</p>
       </div>

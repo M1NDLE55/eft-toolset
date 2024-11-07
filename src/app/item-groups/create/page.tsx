@@ -1,13 +1,9 @@
 "use client";
 
-import { Save } from "lucide-react";
-import HeadingButton from "@/app/components/item-groups/heading-button";
-import SearchWrapper from "@/app/components/global/search/search-wrapper";
 import { BaseSyntheticEvent, useState } from "react";
-import AddItem from "@/app/components/item-groups/add-item";
-import ItemsInGroup from "@/app/components/item-groups/items-in-group";
 import { useRouter } from "next/navigation";
 import { Group, ItemPreview } from "@/app/lib/types/itemGroups";
+import CreateOrEditForm from "@/app/components/item-groups/create-or-edit-form";
 
 export default function Page() {
   const [item, setItem] = useState("");
@@ -57,39 +53,13 @@ export default function Page() {
   }
 
   return (
-    <form
+    <CreateOrEditForm
       onSubmit={createGroup}
-      className="max-w-xl w-full flex flex-col gap-4"
-    >
-      <div className="w-full flex gap-4 text-xl text-neutral-200 justify-between items-center">
-        <h1 className="text-3xl">Create group</h1>
-        <HeadingButton>
-          <Save />
-          Save
-        </HeadingButton>
-      </div>
-      {hasError && <p className="text-red-500 text-lg">{hasError}</p>}
-      <div>
-        <h2 className="text-neutral-200 text-lg">Group name</h2>
-        <input
-          name="groupName"
-          className="w-full p-2 rounded-md"
-          placeholder="Enter group name"
-          required
-        />
-      </div>
-      <SearchWrapper handleSelect={(itemName) => setItem(itemName)} />
-      {item && (
-        <AddItem
-          item={item}
-          setItem={setItem}
-          groupItems={groupItems}
-          setGroupItems={setGroupItems}
-        />
-      )}
-      {groupItems.length > 0 && (
-        <ItemsInGroup groupItems={groupItems} setGroupItems={setGroupItems} />
-      )}
-    </form>
+      error={hasError}
+      item={item}
+      setItem={setItem}
+      groupItems={groupItems}
+      setGroupItems={setGroupItems}
+    />
   );
 }

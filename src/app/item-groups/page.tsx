@@ -5,6 +5,7 @@ import GroupSelector from "../components/item-groups/group-selector";
 import { Group } from "../lib/types/itemGroups";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Page() {
   const [groups, setGroups] = useState<Group[]>([]);
@@ -24,7 +25,7 @@ export default function Page() {
     <div className="max-w-xl w-full flex flex-col gap-4">
       <div className="w-full flex gap-4 text-xl justify-between items-center">
         <h1 className="text-3xl">Item Groups</h1>
-        <Button variant={"outline"}>
+        <Button variant={"outline"} asChild>
           <Link
             href={{ pathname: "/item-groups/create" }}
             className={`flex flex-row items-center gap-1`}
@@ -34,10 +35,10 @@ export default function Page() {
         </Button>
       </div>
       {loading ? (
-        <div className="animate-pulse flex flex-col gap-3">
-          <div className="h-[52px] w-full rounded-md bg-neutral-200 dark:bg-neutral-600"></div>
-          <div className="h-[52px] w-full rounded-md bg-neutral-200 dark:bg-neutral-600"></div>
-          <div className="h-[52px] w-full rounded-md bg-neutral-200 dark:bg-neutral-600"></div>
+        <div className="flex flex-col gap-3">
+          <Skeleton className="h-[52px] w-full" />
+          <Skeleton className="h-[52px] w-full" />
+          <Skeleton className="h-[52px] w-full" />
         </div>
       ) : groups.length > 0 ? (
         <div className="flex flex-col gap-3">
