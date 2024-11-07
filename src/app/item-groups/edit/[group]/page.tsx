@@ -21,7 +21,6 @@ export default function Page() {
 
   const { data, loading, error } = useQuery(ITEMS_IN_GROUP, {
     variables: { names: names },
-    skip: names.length === 0,
   });
 
   function editGroup(e: BaseSyntheticEvent) {
