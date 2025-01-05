@@ -35,11 +35,14 @@ export default function GenericDetails({ item }: { item: Item }) {
                   <p>
                     Slot Value:{" "}
                     {Rubles.format(
-                      item.sellFor[0].priceRUB! / (item.width * item.height)
+                      [...item.sellFor].sort(
+                        (a, b) => b.priceRUB! - a.priceRUB!
+                      )[0].priceRUB! /
+                        (item.width * item.height)
                     )}
                   </p>
                 )}
-                {item.changeLast48hPercent && (
+                {/* {item.changeLast48hPercent && (
                   <p>
                     48h Change:{" "}
                     <span
@@ -52,7 +55,7 @@ export default function GenericDetails({ item }: { item: Item }) {
                       {item.changeLast48hPercent}%
                     </span>
                   </p>
-                )}
+                )} */}
               </div>
             </div>
             {item.wikiLink && (
