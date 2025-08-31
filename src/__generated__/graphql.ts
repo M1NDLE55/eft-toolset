@@ -16,17 +16,30 @@ export type Scalars = {
   Float: { input: number; output: number; }
 };
 
+/** **In-game achievements players can earn by completing specific objectives.** */
 export type Achievement = {
   __typename?: 'Achievement';
+  /** Statistically adjusted percentage that accounts for active players, providing a more representative completion rate. Uses the percentage completion of Welcome to Tarkov as the baseline under the assumption that all active accounts have died once. */
   adjustedPlayersCompletedPercent?: Maybe<Scalars['Float']['output']>;
+  /** Text describing the conditions required to unlock the achievement (e.g., "Neutralize Killa 15 times while playing as a PMC"). */
   description?: Maybe<Scalars['String']['output']>;
+  /** Whether the achievement is hidden from players until unlocked (true) or visible from the start (false). */
   hidden: Scalars['Boolean']['output'];
+  /** A unique 24-character hexadecimal identifier for the achievement. Follows a consistent format across all achievements. */
   id: Scalars['ID']['output'];
+  /** URL to the achievement's image. */
+  imageLink?: Maybe<Scalars['String']['output']>;
+  /** The display name of the achievement (e.g., "Welcome to Tarkov", "The Kappa Path"). */
   name: Scalars['String']['output'];
+  /** Lowercase, standardized version of the rarity field used for consistent sorting and filtering (e.g., "common", "rare", "legendary"). */
   normalizedRarity?: Maybe<Scalars['String']['output']>;
+  /** Lowercase, standardized version of the side field used for consistent sorting and filtering (e.g., "pmc", "all", "scavs"). */
   normalizedSide?: Maybe<Scalars['String']['output']>;
+  /** Raw percentage of all players who have completed this achievement (e.g., 0.06, 43.48). */
   playersCompletedPercent: Scalars['Float']['output'];
+  /** The difficulty/rarity tier of the achievement. Values include "Common", "Rare", or "Legendary". */
   rarity?: Maybe<Scalars['String']['output']>;
+  /** The game faction or player type this achievement is associated with. Values include "PMC", "All", or "Scavs". */
   side?: Maybe<Scalars['String']['output']>;
 };
 
@@ -246,7 +259,7 @@ export enum HandbookCategoryName {
   InjuryTreatment = 'InjuryTreatment',
   IronSights = 'IronSights',
   Keys = 'Keys',
-  LaserTargetPointers = 'LaserTargetPointers',
+  LaserAimingModules = 'LaserAimingModules',
   Launchers = 'Launchers',
   LightLaserDevices = 'LightLaserDevices',
   MachineGuns = 'MachineGuns',
@@ -268,10 +281,8 @@ export enum HandbookCategoryName {
   PistolGrips = 'PistolGrips',
   Pistols = 'Pistols',
   Provisions = 'Provisions',
-  QuestItems = 'QuestItems',
   ReceiversSlides = 'ReceiversSlides',
   Rounds = 'Rounds',
-  SmGs = 'SMGs',
   SecureContainers = 'SecureContainers',
   Shotguns = 'Shotguns',
   Sights = 'Sights',
@@ -280,9 +291,11 @@ export enum HandbookCategoryName {
   SpecialWeapons = 'SpecialWeapons',
   StocksChassis = 'StocksChassis',
   StorageContainers = 'StorageContainers',
+  SubmachineGuns = 'SubmachineGuns',
   Suppressors = 'Suppressors',
   TacticalComboDevices = 'TacticalComboDevices',
   TacticalRigs = 'TacticalRigs',
+  TaskItems = 'TaskItems',
   Throwables = 'Throwables',
   Tools = 'Tools',
   Valuables = 'Valuables',
@@ -460,6 +473,9 @@ export type ItemArmorSlotLocked = ItemArmorSlot & {
   name?: Maybe<Scalars['String']['output']>;
   nameId?: Maybe<Scalars['String']['output']>;
   repairCost?: Maybe<Scalars['Int']['output']>;
+  ricochetX?: Maybe<Scalars['Float']['output']>;
+  ricochetY?: Maybe<Scalars['Float']['output']>;
+  ricochetZ?: Maybe<Scalars['Float']['output']>;
   speedPenalty?: Maybe<Scalars['Float']['output']>;
   turnPenalty?: Maybe<Scalars['Float']['output']>;
   zones?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
@@ -484,6 +500,8 @@ export type ItemCategory = {
   __typename?: 'ItemCategory';
   children?: Maybe<Array<Maybe<ItemCategory>>>;
   id: Scalars['ID']['output'];
+  /** Only Handbook categories have image links */
+  imageLink?: Maybe<Scalars['String']['output']>;
   name: Scalars['String']['output'];
   normalizedName: Scalars['String']['output'];
   parent?: Maybe<ItemCategory>;
@@ -516,6 +534,7 @@ export enum ItemCategoryName {
   CompoundItem = 'CompoundItem',
   CultistAmulet = 'CultistAmulet',
   CylinderMagazine = 'CylinderMagazine',
+  DialogItem = 'DialogItem',
   Drink = 'Drink',
   Drug = 'Drug',
   Electronics = 'Electronics',
@@ -524,6 +543,7 @@ export enum ItemCategoryName {
   FaceCover = 'FaceCover',
   Flashhider = 'Flashhider',
   Flashlight = 'Flashlight',
+  Flyer = 'Flyer',
   Food = 'Food',
   FoodAndDrink = 'FoodAndDrink',
   Foregrip = 'Foregrip',
@@ -549,7 +569,7 @@ export enum ItemCategoryName {
   Machinegun = 'Machinegun',
   Magazine = 'Magazine',
   Map = 'Map',
-  MarkOfUnknown = 'MarkOfUnknown',
+  MarkOfTheUnheard = 'MarkOfTheUnheard',
   MarksmanRifle = 'MarksmanRifle',
   MechanicalKey = 'MechanicalKey',
   MedicalItem = 'MedicalItem',
@@ -572,6 +592,8 @@ export enum ItemCategoryName {
   ReflexSight = 'ReflexSight',
   RepairKits = 'RepairKits',
   Revolver = 'Revolver',
+  Rocket = 'Rocket',
+  RocketLauncher = 'RocketLauncher',
   Smg = 'SMG',
   Scope = 'Scope',
   SearchableItem = 'SearchableItem',
@@ -748,6 +770,7 @@ export type ItemPropertiesGlasses = {
   bluntThroughput?: Maybe<Scalars['Float']['output']>;
   class?: Maybe<Scalars['Int']['output']>;
   durability?: Maybe<Scalars['Int']['output']>;
+  ergoPenalty?: Maybe<Scalars['Float']['output']>;
   material?: Maybe<ArmorMaterial>;
   repairCost?: Maybe<Scalars['Int']['output']>;
 };
@@ -1066,6 +1089,12 @@ export type LootContainerPosition = {
   position?: Maybe<MapPosition>;
 };
 
+export type LootLoosePosition = {
+  __typename?: 'LootLoosePosition';
+  items?: Maybe<Array<Maybe<Item>>>;
+  position?: Maybe<MapPosition>;
+};
+
 export type Map = {
   __typename?: 'Map';
   accessKeys: Array<Maybe<Item>>;
@@ -1079,6 +1108,7 @@ export type Map = {
   id: Scalars['ID']['output'];
   locks?: Maybe<Array<Maybe<Lock>>>;
   lootContainers?: Maybe<Array<Maybe<LootContainerPosition>>>;
+  lootLoose?: Maybe<Array<Maybe<LootLoosePosition>>>;
   maxPlayerLevel?: Maybe<Scalars['Int']['output']>;
   minPlayerLevel?: Maybe<Scalars['Int']['output']>;
   name: Scalars['String']['output'];
@@ -1119,6 +1149,7 @@ export type MapExtract = {
   position?: Maybe<MapPosition>;
   switches?: Maybe<Array<Maybe<MapSwitch>>>;
   top?: Maybe<Scalars['Float']['output']>;
+  transferItem?: Maybe<ContainedItem>;
 };
 
 export type MapHazard = {
@@ -1221,6 +1252,7 @@ export type PlayerLevel = {
   __typename?: 'PlayerLevel';
   exp: Scalars['Int']['output'];
   level: Scalars['Int']['output'];
+  levelBadgeImageLink?: Maybe<Scalars['String']['output']>;
 };
 
 export type PriceRequirement = {
@@ -1234,6 +1266,7 @@ export type Query = {
   __typename?: 'Query';
   achievements: Array<Maybe<Achievement>>;
   ammo?: Maybe<Array<Maybe<Ammo>>>;
+  archivedItemPrices: Array<Maybe<HistoricalPricePoint>>;
   armorMaterials: Array<Maybe<ArmorMaterial>>;
   barters?: Maybe<Array<Maybe<Barter>>>;
   bosses?: Maybe<Array<Maybe<MobInfo>>>;
@@ -1249,6 +1282,7 @@ export type Query = {
   /** @deprecated Use item instead. */
   itemByNormalizedName?: Maybe<Item>;
   itemCategories: Array<Maybe<ItemCategory>>;
+  itemPrices: Array<Maybe<HistoricalPricePoint>>;
   items: Array<Maybe<Item>>;
   /** @deprecated Use items instead. */
   itemsByBsgCategoryId: Array<Maybe<Item>>;
@@ -1286,6 +1320,13 @@ export type QueryAchievementsArgs = {
 export type QueryAmmoArgs = {
   gameMode?: InputMaybe<GameMode>;
   lang?: InputMaybe<LanguageCode>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type QueryArchivedItemPricesArgs = {
+  id: Scalars['ID']['input'];
   limit?: InputMaybe<Scalars['Int']['input']>;
   offset?: InputMaybe<Scalars['Int']['input']>;
 };
@@ -1375,6 +1416,14 @@ export type QueryItemByNormalizedNameArgs = {
 
 export type QueryItemCategoriesArgs = {
   lang?: InputMaybe<LanguageCode>;
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  offset?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type QueryItemPricesArgs = {
+  gameMode?: InputMaybe<GameMode>;
+  id: Scalars['ID']['input'];
   limit?: InputMaybe<Scalars['Int']['input']>;
   offset?: InputMaybe<Scalars['Int']['input']>;
 };
@@ -1616,6 +1665,7 @@ export type ServerStatus = {
 export type Skill = {
   __typename?: 'Skill';
   id?: Maybe<Scalars['ID']['output']>;
+  imageLink?: Maybe<Scalars['String']['output']>;
   name?: Maybe<Scalars['String']['output']>;
 };
 
@@ -1966,6 +2016,7 @@ export type TraderCashOffer = {
   buyLimit?: Maybe<Scalars['Int']['output']>;
   currency?: Maybe<Scalars['String']['output']>;
   currencyItem?: Maybe<Item>;
+  id?: Maybe<Scalars['ID']['output']>;
   item: Item;
   minTraderLevel?: Maybe<Scalars['Int']['output']>;
   price?: Maybe<Scalars['Int']['output']>;
@@ -2069,6 +2120,8 @@ export type Vendor = {
 
 export type HistoricalPricePoint = {
   __typename?: 'historicalPricePoint';
+  offerCount?: Maybe<Scalars['Int']['output']>;
+  offerCountMin?: Maybe<Scalars['Int']['output']>;
   price?: Maybe<Scalars['Int']['output']>;
   priceMin?: Maybe<Scalars['Int']['output']>;
   timestamp?: Maybe<Scalars['String']['output']>;
