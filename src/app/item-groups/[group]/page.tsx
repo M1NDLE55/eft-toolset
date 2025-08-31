@@ -24,13 +24,17 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
 import { customDecodeURI, customEncodeURI } from "@/app/lib/URIEncoding";
+import { useGameMode } from "@/components/game-mode/context";
+import { GameMode as GqlGameMode } from "@/__generated__/graphql";
 
 export default function Page() {
   const router = useRouter();
   const groupName = customDecodeURI(useParams<{ group: string }>().group);
   const [names, setNames] = useState<string[]>([]);
+  const { gameMode } = useGameMode();
+  const gqlGameMode = gameMode === "regular" ? GqlGameMode.Regular : GqlGameMode.Pve;
   const { data, loading, error } = useQuery(ITEMS_IN_GROUP, {
-    variables: { names: names },
+    variables: { names: names, gameMode: gqlGameMode },
   });
 
   function handleRemove(itemName: string) {
@@ -87,7 +91,7 @@ export default function Page() {
     if (!group) notFound();
 
     setNames(group.items);
-  }, []);
+  }, [groupName]);
 
   if (loading)
     return (

@@ -17,8 +17,8 @@ export const ITEM_PREVIEW = gql(`
 `);
 
 export const ITEMS_IN_GROUP = gql(`
-  query ItemsInGroup($names: [String]) {
-    items(names: $names) {
+  query ItemsInGroup($names: [String], $gameMode: GameMode) {
+    items(gameMode: $gameMode, names: $names) {
       name
       gridImageLink
       wikiLink
@@ -33,8 +33,8 @@ export const ITEMS_IN_GROUP = gql(`
 `);
 
 export const GET_ITEM = gql(`
-  query GetItem($name: String) {
-    items(name: $name) {
+  query GetItem($name: String, $gameMode: GameMode) {
+    items(gameMode: $gameMode, name: $name) {
       name
       fleaMarketFee
       gridImageLink

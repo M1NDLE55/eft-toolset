@@ -11,11 +11,15 @@ import { useQuery } from "@apollo/client";
 import { GET_ITEM } from "@/app/lib/queries";
 import QueryError from "@/app/components/global/error/query-error";
 import SimpleError from "@/app/components/global/error/simple-error";
+import { useGameMode } from "@/components/game-mode/context";
+import { GameMode as GqlGameMode } from "@/__generated__/graphql";
 
 export default function Page() {
   const { itemName } = getParam(useParams());
+  const { gameMode } = useGameMode();
+  const gqlGameMode = gameMode === "regular" ? GqlGameMode.Regular : GqlGameMode.Pve;
   const { data, loading, error } = useQuery(GET_ITEM, {
-    variables: { name: itemName },
+    variables: { name: itemName, gameMode: gqlGameMode },
   });
 
   if (loading) {

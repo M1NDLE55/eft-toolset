@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { ModeToggle } from '@/components/theme/toggle';
+import { GameModeToggle } from '@/components/game-mode/toggle';
 
 export function Header() {
   return (
@@ -37,6 +38,7 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-2">
+          <GameModeToggle />
           <ModeToggle />
           <div className="sm:hidden">
             <DropdownMenu>
