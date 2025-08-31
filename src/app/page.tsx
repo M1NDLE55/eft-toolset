@@ -1,14 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ChevronRightCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Image from 'next/image';
+import Link from 'next/link';
+import { ChevronRightCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { appLinks } from '@/app/lib/links';
 
 export default function Home() {
-  const links = [
-    { text: "Item scanner", href: "/item" },
-    { text: "Item groups", href: "/item-groups" },
-  ];
-
   return (
     <main className="flex flex-col items-center px-4 pb-4 sm:min-h-[calc(100vh-128px)] min-h-[calc(100vh-64px)]">
       <Image
@@ -19,8 +15,8 @@ export default function Home() {
         className="dark:invert invert-0"
       />
       <div className="max-w-xl flex flex-col gap-3 w-full">
-        {links.map((link) => (
-          <Button key={link.text} variant={"secondary"} asChild>
+        {appLinks.map((link) => (
+          <Button key={link.text} variant={'secondary'} asChild>
             <Link
               href={{ pathname: link.href }}
               className="flex flex-row justify-between items-center"

@@ -2,11 +2,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { Github } from "lucide-react";
-import Image from "next/image";
 import { ReactNode } from "react";
 import PreFetchData from "./components/root/fetch-data";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import { ModeToggle } from "@/components/theme/toggle";
+import { Header } from "@/app/components/global/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,9 +38,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           enableSystem
           disableTransitionOnChange
         >
-          <header className="flex justify-end items-center px-4 h-16 w-full">
-            <ModeToggle />
-          </header>
+          <Header />
           <PreFetchData />
           {children}
           <footer className="border-t p-4 min-h-16 flex justify-center items-center">
