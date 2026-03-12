@@ -1,12 +1,10 @@
 import { Dispatch, SetStateAction } from "react";
 import { Plus, CircleMinusIcon } from "lucide-react";
 import ItemPreview from "./item-preview";
-import { useQuery } from "@apollo/client";
-import { ITEM_PREVIEW } from "@/app/lib/queries";
 import { ItemPreview as ItemPreviewType } from "@/app/lib/types/itemGroups";
-import QueryError from "../global/error/query-error";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
+import { useItemPreview } from "@/app/lib/cache/hooks";
 
 export default function AddItem({
   item,
@@ -19,10 +17,7 @@ export default function AddItem({
   groupItems: ItemPreviewType[];
   setGroupItems: Dispatch<SetStateAction<ItemPreviewType[]>>;
 }) {
-  const { data, loading, error } = useQuery(ITEM_PREVIEW, {
-    variables: { name: item },
-    skip: !item,
-  });
+  const { gridImageLink, loading } = useItemPreview(item);
 
   const isItemInGroup = groupItems.find((gItem) => gItem.name === item)
     ? true
@@ -30,16 +25,15 @@ export default function AddItem({
 
   return (
     <div>
-      <h2 className="text-lg">Add item</h2>
-      {(loading || !data) && (
-        <div className="border rounded-md p-4 flex flex-row gap-4">
+      <h2 className="uppercase tracking-widest text-xs font-bold text-muted-foreground">Add item</h2>
+      {(loading || (!gridImageLink && item)) && (
+        <div className="border p-4 flex flex-row gap-4">
           <Skeleton className="h-16 w-16" />
           <Skeleton className="w-full p-2" />
         </div>
       )}
-      {error && <QueryError error={error} />}
-      {data && (
-        <ItemPreview item={item} src={data.items[0]!.gridImageLink!}>
+      {gridImageLink && item && (
+        <ItemPreview item={item} src={gridImageLink}>
           <Button
             variant={"default"}
             disabled={isItemInGroup}
@@ -51,7 +45,7 @@ export default function AddItem({
                       ...groupItems,
                       {
                         name: item,
-                        gridImageLink: data.items[0]!.gridImageLink,
+                        gridImageLink: gridImageLink,
                       },
                     ]
               );
