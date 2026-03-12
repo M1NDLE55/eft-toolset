@@ -11,12 +11,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { ModeToggle } from '@/components/theme/toggle';
 import { GameModeToggle } from '@/components/game-mode/toggle';
 
 export function Header() {
   return (
-    <header className="border-b w-full">
+    <header className="border-b border-[#1a1a1a] w-full bg-[#070707]">
       <div className="h-16 px-4 flex items-center justify-between max-w-7xl mx-auto w-full">
         <div className="flex items-center gap-3">
           <Link href={{ pathname: '/' }} className="flex items-center gap-2">
@@ -25,7 +24,7 @@ export function Header() {
               alt="EFT Toolset Logo"
               height={50}
               width={100}
-              className="dark:invert invert-0"
+              className="dark:invert"
             />
             <span className="sr-only">EFT Toolset</span>
           </Link>
@@ -39,7 +38,6 @@ export function Header() {
         </div>
         <div className="flex items-center gap-2">
           <GameModeToggle />
-          <ModeToggle />
           <div className="sm:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
