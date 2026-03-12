@@ -25,11 +25,11 @@ export default function GroupEditor({
       key={group.name}
       className="text-white flex flex-row justify-between items-center gap-2"
     >
-      <div className="rounded-md transition-all shadow-md bg-neutral-700 p-3 text-xl w-full flex flex-row justify-between items-center">
+      <div className="transition-all shadow-md bg-secondary p-3 text-xl w-full flex flex-row justify-between items-center">
         {group.name}
       </div>
       <button
-        className="p-3 rounded-md bg-red-500 h-full"
+        className="p-3 bg-red-500 h-full"
         onClick={() => setIsModalOpen(true)}
       >
         <Trash />
@@ -43,17 +43,17 @@ export default function GroupEditor({
             onClick={(e) => {
               e.stopPropagation();
             }}
-            className="bg-neutral-700 rounded-md text-neutral-200 p-3 text-xl"
+            className="bg-secondary text-foreground p-3 text-xl"
           >
             <p className="pb-4">Are you sure?</p>
             <button
               onClick={handleDelete}
-              className="block w-full rounded-md bg-red-500 shadow-sm mb-2 py-1 px-2"
+              className="block w-full bg-red-500 shadow-sm mb-2 py-1 px-2"
             >
               Yes
             </button>
             <button
-              className="block w-full rounded-md border py-1 px-2"
+              className="block w-full border py-1 px-2"
               onClick={() => setIsModalOpen(false)}
             >
               No

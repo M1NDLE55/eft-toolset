@@ -38,7 +38,7 @@ export default function CreateOrEditForm({
         <h2 className="text-lg">Group name</h2>
         <Input
           name="groupName"
-          className="w-full p-2 rounded-md"
+          className="w-full p-2"
           placeholder={groupName || "Enter group name"}
           required={!editForm}
         />

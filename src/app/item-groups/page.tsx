@@ -47,7 +47,7 @@ export default function Page() {
           ))}
         </div>
       ) : (
-        <p className="p-3 w-full rounded-md border border-neutral-200 dark:border-neutral-600 text-xl">
+        <p className="p-3 w-full border border-[#2a2a2a] text-xl">
           No item groups
         </p>
       )}

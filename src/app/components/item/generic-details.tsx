@@ -11,7 +11,7 @@ export default function GenericDetails({ item }: { item: Item }) {
           <h2>General</h2>
           <Share />
         </div>
-        <div className="rounded-md p-3 flex flex-row gap-4 items-center shadow bg-secondary">
+        <div className="p-3 flex flex-row gap-4 items-center shadow bg-secondary">
           {item.gridImageLink && (
             <Image
               src={item.gridImageLink}
@@ -82,7 +82,7 @@ export default function GenericDetails({ item }: { item: Item }) {
         {item.buyFor && item.buyFor.length > 0 && (
           <div className="flex flex-col">
             <h2 className="text-lg">Buy For</h2>
-            <div className="rounded-md p-3 shadow bg-secondary flex-1">
+            <div className="p-3 shadow bg-secondary flex-1">
               {[...item.buyFor]
                 .sort((a, b) => a.priceRUB! - b.priceRUB!)
                 .map((buyFor) => (
@@ -100,7 +100,7 @@ export default function GenericDetails({ item }: { item: Item }) {
         {item.sellFor && item.sellFor.length > 0 && (
           <div className="flex flex-col">
             <h2 className="text-lg">Sell For</h2>
-            <div className="rounded-md p-3 shadow bg-secondary flex-1">
+            <div className="p-3 shadow bg-secondary flex-1">
               {[...item.sellFor]
                 .sort((a, b) => b.priceRUB! - a.priceRUB!)
                 .map((sellFor) => (

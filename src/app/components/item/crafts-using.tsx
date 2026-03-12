@@ -18,7 +18,7 @@ export default function CraftsUsing({
     crafts.length > 0 && (
       <div className="flex flex-col">
         <h2 className="text-lg">Crafts Using</h2>
-        <div className="rounded-md px-3 py-1 shadow bg-secondary flex flex-col">
+        <div className="px-3 py-1 shadow bg-secondary flex flex-col">
           {crafts.map(
             (craft, i) =>
               craft && (
@@ -26,7 +26,7 @@ export default function CraftsUsing({
                   key={craft.rewardItems[0]!.item.name! + i}
                   title={
                     <>
-                      <span className="border border-yellow-500 bg-yellow-500 dark:bg-inherit rounded-full px-2 mr-2">
+                      <span className="border border-[#9a8866] bg-[#2a1800] text-[#9a8866] px-2 mr-2">
                         {craft.station.name + " " + RomanLiteral(craft.level)}
                       </span>
                       {craft.rewardItems[0]!.item.name}
