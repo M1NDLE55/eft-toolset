@@ -1,5 +1,3 @@
-import { GetItemQuery } from "@/__generated__/graphql";
+import { ComposedItem } from "@/app/lib/cache/types";
 
-type ArrayElement<T> = T extends { items: (infer U)[] } ? U : never;
-
-export type Item = NonNullable<ArrayElement<GetItemQuery>>;
+export type Item = ComposedItem;

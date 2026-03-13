@@ -5,7 +5,7 @@ import { Item } from "@/app/lib/types/item";
 import { Rubles } from "@/app/lib/currency";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Link2 as LinkIcon, MoreHorizontal } from "lucide-react";
+import { ArrowUpDown, ArrowUpRight, Link2 as LinkIcon, MoreHorizontal } from "lucide-react";
 import { customEncodeURI } from "@/app/lib/URIEncoding";
 
 import { Button } from "@/components/ui/button";
@@ -38,7 +38,12 @@ export function getColumns(handleRemove: (name: string) => void) {
     },
     {
       accessorKey: "name",
-      header: "Item",
+      header: ({ column }) => (
+        <Button variant="ghost" className="p-0 hover:bg-transparent" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
+          Item
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      ),
       cell: ({ row }) => {
         const item = row.original;
 
@@ -51,32 +56,37 @@ export function getColumns(handleRemove: (name: string) => void) {
       },
     },
     {
-      accessorKey: "slot",
-      header: "Slot Value",
+      id: "slot",
+      accessorFn: (item) =>
+        item.sellFor && item.sellFor.length > 0
+          ? [...item.sellFor].sort((a, b) => b.priceRUB! - a.priceRUB!)[0].priceRUB! / (item.width * item.height)
+          : 0,
+      header: ({ column }) => (
+        <Button variant="ghost" className="p-0 hover:bg-transparent" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
+          Slot Value
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      ),
       cell: ({ row }) => {
-        const item = row.original;
-
-        return item.sellFor && item.sellFor.length > 0
-          ? Rubles.format(
-              [...item.sellFor].sort((a, b) => b.priceRUB! - a.priceRUB!)[0]
-                .priceRUB! /
-                (item.width * item.height)
-            )
-          : "n/a";
+        const value = row.getValue("slot") as number;
+        return value > 0 ? Rubles.format(value) : "n/a";
       },
     },
     {
-      accessorKey: "price",
-      header: "Price",
+      id: "price",
+      accessorFn: (item) =>
+        item.sellFor && item.sellFor.length > 0
+          ? [...item.sellFor].sort((a, b) => b.priceRUB! - a.priceRUB!)[0].priceRUB!
+          : 0,
+      header: ({ column }) => (
+        <Button variant="ghost" className="p-0 hover:bg-transparent" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
+          Price
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      ),
       cell: ({ row }) => {
-        const item = row.original;
-
-        return item.sellFor && item.sellFor.length > 0
-          ? Rubles.format(
-              [...item.sellFor].sort((a, b) => b.priceRUB! - a.priceRUB!)[0]
-                .priceRUB!
-            )
-          : "n/a";
+        const value = row.getValue("price") as number;
+        return value > 0 ? Rubles.format(value) : "n/a";
       },
     },
     // {

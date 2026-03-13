@@ -12,12 +12,25 @@ export default function BartersUsing({
 }: {
   barters: Item["bartersUsing"];
 }) {
-  const [openBarterIndex, setOpenBarterIndex] = useState<number | null>(null);
+  const [openIndices, setOpenIndices] = useState<Set<number>>(new Set());
+
+  const toggleIndex = (i: number) => {
+    setOpenIndices((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
+  };
 
   return (
-    barters.length > 0 && (
-      <div className="flex flex-col">
-        <h2 className="text-lg">Barters Using</h2>
+    <div className="flex flex-col" id="barters">
+      <h2 className="text-lg">Barters Using</h2>
+      {barters.length === 0 ? (
+        <div className="px-3 py-3 shadow bg-secondary text-sm text-[#9a8866]">
+          No barters use this item
+        </div>
+      ) : (
         <div className="px-3 py-1 shadow bg-secondary flex flex-col">
           {barters.map(
             (barter, i) =>
@@ -26,16 +39,19 @@ export default function BartersUsing({
                   key={barter.rewardItems[0]!.item.name! + i}
                   title={
                     <>
-                      <span className="border border-[#9a8866] bg-[#2a1800] text-[#9a8866] px-2 mr-2">
+                      <span className="border border-[#9a8866] bg-[#2a1800] text-[#9a8866] px-2 mr-2 shrink-0">
                         {barter.trader.name + " " + RomanLiteral(barter.level)}
                       </span>
-                      {barter.rewardItems[0]!.item.name}
+                      <span className="truncate">
+                        {barter.rewardItems[0]!.item.name}
+                      </span>
+                      <span className="text-[#9a8866] text-sm ml-2 shrink-0">
+                        ({barter.requiredItems.length} items)
+                      </span>
                     </>
                   }
-                  isOpen={openBarterIndex === i}
-                  setOpenIndex={() =>
-                    setOpenBarterIndex((index) => (index === i ? null : i))
-                  }
+                  isOpen={openIndices.has(i)}
+                  setOpenIndex={() => toggleIndex(i)}
                   className={i > 0 && "border-t"}
                 >
                   {barter.taskUnlock ? (
@@ -43,14 +59,15 @@ export default function BartersUsing({
                       Must complete task:{" "}
                       <a
                         href={barter.taskUnlock.wikiLink!}
-                        target="blank"
+                        target="_blank"
+                        rel="noreferrer"
                         className="underline underline-offset-2 text-yellow-400 hover:underline-offset-4 transition-[text-underline-offset]"
                       >
                         {barter.taskUnlock.name}
                       </a>
                     </p>
                   ) : (
-                    <p>Not task locked</p>
+                    <p className="text-[#9a8866] text-sm">No task requirement</p>
                   )}
                   <p className="pt-1">Required Items:</p>
                   {barter.requiredItems.map(
@@ -64,7 +81,7 @@ export default function BartersUsing({
                                 item.item.name!
                               )}`,
                             }}
-                            className="underline underline-offset-2 text-red-400 hover:underline-offset-4 transition-[text-underline-offset]"
+                            className="underline underline-offset-2 text-[#9a8866] hover:text-yellow-400 hover:underline-offset-4 transition-[text-underline-offset,color]"
                           >
                             {item.item.name}
                           </Link>
@@ -94,7 +111,7 @@ export default function BartersUsing({
               )
           )}
         </div>
-      </div>
-    )
+      )}
+    </div>
   );
 }

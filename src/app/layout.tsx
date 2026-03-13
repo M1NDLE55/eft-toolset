@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </BulkCacheProvider>
           </GameModeProvider>
           <footer className="border-t border-[#1a1a1a] p-4 min-h-16 flex justify-center items-center bg-[#070707]">
-            <div className="w-full max-w-7xl flex sm:flex-row sm:justify-between flex-col-reverse items-center gap-4">
+            <div className="w-full flex sm:flex-row sm:justify-between flex-col-reverse items-center gap-4">
               <div className="flex sm:flex-row flex-col-reverse items-center gap-4">
                 <p className="text-[10px] uppercase tracking-widest text-[#444]">
                   &copy; {new Date().getFullYear().toString()} EFT Toolset

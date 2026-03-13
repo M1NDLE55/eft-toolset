@@ -11,17 +11,21 @@ export default function AddItem({
   setItem,
   groupItems,
   setGroupItems,
+  onAdd,
+  existingNames,
 }: {
   item: string;
   setItem: Dispatch<SetStateAction<string>>;
   groupItems: ItemPreviewType[];
   setGroupItems: Dispatch<SetStateAction<ItemPreviewType[]>>;
+  onAdd?: (itemName: string, gridImageLink: string) => void;
+  existingNames?: string[];
 }) {
   const { gridImageLink, loading } = useItemPreview(item);
 
-  const isItemInGroup = groupItems.find((gItem) => gItem.name === item)
-    ? true
-    : false;
+  const isItemInGroup = existingNames
+    ? existingNames.includes(item)
+    : !!groupItems.find((gItem) => gItem.name === item);
 
   return (
     <div>
@@ -38,6 +42,10 @@ export default function AddItem({
             variant={"default"}
             disabled={isItemInGroup}
             onClick={() => {
+              if (onAdd) {
+                onAdd(item, gridImageLink);
+                return;
+              }
               setGroupItems((groupItems) =>
                 groupItems.find((gItem) => gItem.name === item)
                   ? groupItems

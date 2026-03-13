@@ -6,24 +6,31 @@ import { Item } from "@/app/lib/types/item";
 export default function GenericDetails({ item }: { item: Item }) {
   return (
     <>
-      <div>
+      <div id="general">
         <div className="flex flex-row justify-between text-lg">
           <h2>General</h2>
           <Share />
         </div>
-        <div className="p-3 flex flex-row gap-4 items-center shadow bg-secondary">
+        <div className="p-3 flex flex-row gap-4 items-start shadow bg-secondary">
           {item.gridImageLink && (
             <Image
               src={item.gridImageLink}
               alt={item.name!}
-              height={64}
-              width={64}
+              height={80}
+              width={80}
+              className="shrink-0"
             />
           )}
-          <div>
+          <div className="flex flex-col gap-1 min-w-0">
+            <h1 className="text-xl font-semibold">{item.name}</h1>
             <div className="grid sm:grid-cols-2 sm:gap-4">
               <div>
-                <p>Name: {item.name}</p>
+                <p>
+                  Grid size:{" "}
+                  <span className="border border-[#9a8866] bg-[#2a1800] text-[#9a8866] px-2">
+                    {item.width} × {item.height}
+                  </span>
+                </p>
                 <p>
                   {(item.fleaMarketFee &&
                     `Flea Market Fee: ${Rubles.format(item.fleaMarketFee)}`) ||
@@ -42,26 +49,27 @@ export default function GenericDetails({ item }: { item: Item }) {
                     )}
                   </p>
                 )}
-                {/* {item.changeLast48hPercent && (
+                {item.changeLast48hPercent !== null && (
                   <p>
                     48h Change:{" "}
                     <span
-                      className={`${
+                      className={
                         item.changeLast48hPercent >= 0
                           ? "text-green-400"
                           : "text-red-400"
-                      }`}
+                      }
                     >
                       {item.changeLast48hPercent}%
                     </span>
                   </p>
-                )} */}
+                )}
               </div>
             </div>
             {item.wikiLink && (
               <a
                 href={item.wikiLink}
-                target="blank"
+                target="_blank"
+                rel="noreferrer"
                 className="underline underline-offset-2 text-yellow-400 hover:underline-offset-4 transition-[text-underline-offset]"
               >
                 View on Wiki

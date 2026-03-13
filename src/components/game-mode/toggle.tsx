@@ -20,7 +20,7 @@ export function GameModeToggle() {
     <div>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm" onClick={toggleGameMode}>
+          <Button variant="outline" size="icon" onClick={toggleGameMode}>
             {label}
             <span className="sr-only">Toggle game mode</span>
           </Button>

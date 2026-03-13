@@ -16,7 +16,7 @@ import { GameModeToggle } from '@/components/game-mode/toggle';
 export function Header() {
   return (
     <header className="border-b border-[#1a1a1a] w-full bg-[#070707]">
-      <div className="h-16 px-4 flex items-center justify-between max-w-7xl mx-auto w-full">
+      <div className="h-16 px-4 flex items-center justify-between w-full">
         <div className="flex items-center gap-3">
           <Link href={{ pathname: '/' }} className="flex items-center gap-2 uppercase tracking-widest">
             <Image
