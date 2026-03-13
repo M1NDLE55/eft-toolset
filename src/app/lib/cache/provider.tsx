@@ -88,7 +88,7 @@ function StartupLoader({ syncState }: { syncState: { items: number; tasks: numbe
                 M1NDLE55 // OS
               </h1>
               <p className="text-[9px] text-[#555] uppercase tracking-[0.4em] font-bold">
-                "this is the last time you'll see a loading bar"
+                {'"this is the last time you\'ll see a loading bar"'}
               </p>
             </div>
             <div className="text-right space-y-1 relative z-10">
@@ -112,7 +112,7 @@ function StartupLoader({ syncState }: { syncState: { items: number; tasks: numbe
                   <div className="flex-1 space-y-1.5">
                     <div className="flex justify-between text-[10px] uppercase tracking-[0.2em] font-bold">
                       <span className={hasData ? "text-[#9a8866]" : "text-[#444]"}>
-                        // {STATUS_MESSAGES[cat]}
+                        {`// ${STATUS_MESSAGES[cat]}`}
                       </span>
                       <span className={hasData ? "text-white" : "text-[#222]"}>
                         [ {count.toString().padStart(4, '0')} RAW_DATA ]
