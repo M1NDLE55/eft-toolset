@@ -42,10 +42,10 @@ export default function CraftsUsing({
                       <span className="border border-[#9a8866] bg-[#2a1800] text-[#9a8866] px-2 mr-2 shrink-0">
                         {craft.station.name + " " + RomanLiteral(craft.level)}
                       </span>
-                      <span className="truncate">
+                      <span className={openIndices.has(i) ? "basis-full mt-1" : "truncate"}>
                         {craft.rewardItems[0]!.item.name}
                       </span>
-                      <span className="text-[#9a8866] text-sm ml-2 shrink-0">
+                      <span className={`text-[#9a8866] text-sm shrink-0 ${openIndices.has(i) ? "" : "ml-2"}`}>
                         ({craft.requiredItems.length} items)
                       </span>
                     </>

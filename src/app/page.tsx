@@ -5,7 +5,7 @@ import { appLinks } from '@/app/lib/links';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-4 pb-4 sm:min-h-[calc(100vh-128px)] min-h-[calc(100vh-64px)]">
+    <main className="flex flex-col items-center px-4 pb-4 sm:min-h-[calc(100vh-130px)] min-h-[calc(100vh-65px)]">
       <Image
         src="/black-logo.svg"
         alt="EFT Toolset Logo"

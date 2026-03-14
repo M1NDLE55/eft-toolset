@@ -51,7 +51,7 @@ export default function Page() {
   };
 
   return (
-    <main className="flex justify-center p-4 min-h-[calc(100vh-128px)]">
+    <main className="flex justify-center p-4 min-h-[calc(100vh-130px)]">
       <div className="max-w-xl w-full flex flex-col gap-4">
         <h1 className="text-3xl font-bold py-4 text-center">
           {policy.heading}

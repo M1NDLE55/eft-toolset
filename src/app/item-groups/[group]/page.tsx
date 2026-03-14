@@ -158,7 +158,7 @@ export default function Page() {
 
   if (loading)
     return (
-      <div className="max-w-4xl w-full flex flex-col gap-4">
+      <div className="max-w-4xl w-full min-w-0 flex flex-col gap-4">
         <h1 className="text-3xl text-[#9a8866] uppercase tracking-widest font-black">{groupName}</h1>
         <div className="flex w-full flex-col gap-3">
           <Skeleton className="w-full py-8" />
@@ -172,10 +172,10 @@ export default function Page() {
   const columns = getColumns(handleRemove);
 
   return (
-    <div className="max-w-4xl w-full flex flex-col gap-4">
-      <div className="w-full flex gap-4 text-xl justify-between items-center">
-        <div className="flex items-center gap-2">
-          <h1 className="text-3xl text-[#9a8866] uppercase tracking-widest font-black">{groupName}</h1>
+    <div className="max-w-4xl w-full min-w-0 flex flex-col gap-4">
+      <div className="w-full flex flex-wrap gap-4 text-xl justify-between items-center">
+        <div className="flex items-center gap-2 min-w-0">
+          <h1 className="text-3xl text-[#9a8866] uppercase tracking-widest font-black truncate">{groupName}</h1>
           <Dialog open={renameOpen} onOpenChange={(open) => { setRenameOpen(open); if (open) { setRenameValue(groupName); setRenameError(""); } }}>
             <DialogTrigger asChild>
               <button className="text-muted-foreground hover:text-foreground transition-colors">

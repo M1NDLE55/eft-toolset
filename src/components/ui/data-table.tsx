@@ -71,7 +71,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div>
+    <div className="min-w-0">
       <div className="flex items-center py-4">
         <Input
           placeholder={`Filter by ${sort.title}`}

@@ -22,7 +22,7 @@ export default function Accordion({
         className="flex flex-row justify-between py-2 cursor-pointer"
         onClick={setOpenIndex}
       >
-        <p className={`${!isOpen ? "truncate" : ""}`}>{title}</p>
+        <p className={`flex min-w-0 ${!isOpen ? "items-center truncate" : "flex-wrap items-baseline"}`}>{title}</p>
         <ChevronDown
           className="shrink-0 transition-rotate ease-in-out duration-500"
           style={isOpen ? { rotate: "180deg" } : { rotate: "0deg" }}
