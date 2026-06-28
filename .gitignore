@@ -9,6 +9,7 @@
 # testing
 /coverage
 /src/app/temp
+/docs/
 
 # next.js
 /.next/

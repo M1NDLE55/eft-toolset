@@ -5,13 +5,21 @@ Welcome to EFT Toolset! This application provides a suite of tools to assist pla
 ## Current Tools
 
 ### 1. **Item Scanner**
-Provides a concise summary of an item, including purchase and sale information (vendors and flea market), as well as its usage in tasks, barters, and crafts, making it especially useful while in raid.
+Provides a concise summary of an item, including purchase and sale information (vendors and flea market), as well as its usage in tasks, barters, and crafts. It is especially useful while in raid.
+
+### 2. **Item Groups**
+Create and manage custom item groups for tracking related gear or loot. Groups are saved locally in the browser.
+
+### 3. **Gun Builder**
+Create weapon builds from tarkov.dev weapon and attachment data. The builder supports default presets, compatible slot picking, calculated prices and stats, local build storage, duplication, renaming, deletion, and shareable build links that can be imported by other users.
 
 ## API Integration
 
 This web app uses the following API(s) to provide real-time data and up-to-date information:
 
 - **API Name**: [TARKOV.DEV](https://tarkov.dev)
+
+The app fetches item, pricing, weapon, attachment, and preset data from tarkov.dev and caches data locally for faster repeat use.
 
 ## Installation
 
@@ -33,10 +41,6 @@ To get started with EFT Toolset locally, follow these steps:
     ```bash
     npm run dev
     ```
-
-## Contributing
-
-At the moment, this is a small hobby project, and I'm focusing on fleshing out the initial features. Contributions are not being accepted at this time, but feel free to fork the repository and experiment on your own. Stay tuned for future updates when contributions may be welcomed!
 
 ## License
 
