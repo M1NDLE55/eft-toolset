@@ -12,6 +12,7 @@ import React, {
 import { useGameMode, type GameMode } from "@/components/game-mode/context";
 import { cacheGet, cacheSet } from "./store";
 import { fetchAll } from "./fetcher";
+import { fetchGunList } from "./gunBuilder";
 import type {
   CachedItem,
   CachedTask,
@@ -144,7 +145,7 @@ function StartupLoader({ syncState }: { syncState: { items: number; tasks: numbe
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         @keyframes scanline {
           0% { transform: translateY(-100%); }
           100% { transform: translateY(1000%); }
@@ -280,6 +281,14 @@ export function BulkCacheProvider({ children }: { children: React.ReactNode }) {
           timestamp: Date.now(),
         }),
       ]);
+
+      // Warm the gun-builder weapon list so its picker opens instantly. It has
+      // its own lazy/TTL cache, so a failure here must not abort the sync.
+      try {
+        await fetchGunList(mode);
+      } catch (err) {
+        console.warn("Gun list prefetch failed:", err);
+      }
 
       if (mode === gameMode) {
         populate(data);

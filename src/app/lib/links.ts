@@ -6,6 +6,7 @@ export type AppLink = {
 export const appLinks: AppLink[] = [
   { text: "Item scanner", href: "/item" },
   { text: "Item groups", href: "/item-groups" },
+  { text: "Gun builder", href: "/gun-builder" },
 ];
 
 

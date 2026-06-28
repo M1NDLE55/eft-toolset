@@ -24,7 +24,7 @@ export interface FetchProgress {
   message: string;
 }
 
-async function gqlFetch<T>(
+export async function gqlFetch<T>(
   query: string,
   variables: Record<string, unknown>
 ): Promise<T> {
