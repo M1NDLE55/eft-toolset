@@ -34,6 +34,17 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { BuildCanvas } from "@/app/components/gun-builder/build-canvas";
 import { StatsPanel } from "@/app/components/gun-builder/stats-panel";
 import { ShareBuild } from "@/app/components/gun-builder/share-build";
@@ -187,10 +198,29 @@ export default function GunBuildEditorPage() {
             <Copy className="h-4 w-4" />
             Duplicate
           </Button>
-          <Button variant="destructive" onClick={handleDelete}>
-            <Trash2 className="h-4 w-4" />
-            Delete
-          </Button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="destructive">
+                <Trash2 className="h-4 w-4" />
+                Delete
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Delete this build?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  This action cannot be undone. This will permanently delete{" "}
+                  <span className="font-bold text-[#ccc]">{build.name}</span>.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction onClick={handleDelete}>
+                  Delete
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       </div>
 

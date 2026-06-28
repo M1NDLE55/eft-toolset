@@ -303,17 +303,35 @@ export function BuildCanvas({
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-2 p-3 sm:hidden">
+        <div className="flex flex-col p-3 sm:hidden">
           {flow.nodes.map((node) => (
-            <div key={node.id} style={{ marginLeft: node.path.length * 18 }}>
-              <BuilderNode
-                node={node}
-                item={node.itemId ? itemData.get(node.itemId) ?? null : null}
-                onOpenPicker={() => setActiveNode(node)}
-                onRemove={() => handleRemove(node)}
-                portalContainer={canvasShellRef.current}
-                compact
-              />
+            <div key={node.id} className="flex items-stretch">
+              {node.ancestorGuides.map((hasSibling, index) => (
+                <div key={index} className="relative w-5 shrink-0" aria-hidden>
+                  {hasSibling && (
+                    <span className="absolute bottom-0 left-1/2 top-0 w-px -translate-x-1/2 bg-[#9a8866]/60" />
+                  )}
+                </div>
+              ))}
+              {node.path.length > 0 && (
+                <div className="relative w-5 shrink-0" aria-hidden>
+                  <span className="absolute left-1/2 top-0 h-1/2 w-px -translate-x-1/2 bg-[#9a8866]/60" />
+                  <span className="absolute left-1/2 right-0 top-1/2 h-px -translate-y-1/2 bg-[#9a8866]/60" />
+                  {!node.isLastChild && (
+                    <span className="absolute bottom-0 left-1/2 top-1/2 w-px -translate-x-1/2 bg-[#9a8866]/60" />
+                  )}
+                </div>
+              )}
+              <div className="flex min-w-0 flex-1 items-center py-1">
+                <BuilderNode
+                  node={node}
+                  item={node.itemId ? itemData.get(node.itemId) ?? null : null}
+                  onOpenPicker={() => setActiveNode(node)}
+                  onRemove={() => handleRemove(node)}
+                  portalContainer={canvasShellRef.current}
+                  compact
+                />
+              </div>
             </div>
           ))}
         </div>

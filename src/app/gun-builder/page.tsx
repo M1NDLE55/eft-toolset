@@ -26,6 +26,17 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { WeaponPicker } from "@/app/components/gun-builder/weapon-picker";
 
 function formatDate(value: number) {
@@ -165,14 +176,29 @@ export default function GunBuilderPage() {
                 <Copy className="h-4 w-4" />
                 <span className="sr-only">Duplicate build</span>
               </Button>
-              <Button
-                variant="destructive"
-                size="icon"
-                onClick={() => handleDelete(build.id)}
-              >
-                <Trash2 className="h-4 w-4" />
-                <span className="sr-only">Delete build</span>
-              </Button>
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <Button variant="destructive" size="icon">
+                    <Trash2 className="h-4 w-4" />
+                    <span className="sr-only">Delete build</span>
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>Delete this build?</AlertDialogTitle>
+                    <AlertDialogDescription>
+                      This action cannot be undone. This will permanently delete{" "}
+                      <span className="font-bold text-[#ccc]">{build.name}</span>.
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel>Cancel</AlertDialogCancel>
+                    <AlertDialogAction onClick={() => handleDelete(build.id)}>
+                      Delete
+                    </AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
             </div>
           ))}
         </div>

@@ -13,6 +13,12 @@ export interface PositionedNode {
   slot: ModSlotDef | null;
   path: string[];
   parentPath: string[];
+  // Tree-connector hints for the mobile stacked view.
+  // `isLastChild` is true when this node is the last of its siblings.
+  // `ancestorGuides[i]` is true when the ancestor occupying indent column `i`
+  // still has a following sibling, so its vertical rail should continue.
+  isLastChild: boolean;
+  ancestorGuides: boolean[];
   x: number;
   y: number;
   width: number;
@@ -59,14 +65,27 @@ function buildBranch(
   data: Map<string, BuildItemData>,
   depth: number,
   path: string[],
-  slot: ModSlotDef | null
+  slot: ModSlotDef | null,
+  isLast: boolean,
+  ancestorGuides: boolean[]
 ): LayoutBranch {
   const item = data.get(node.itemId);
   const slots = item?.slots ?? [];
-  const children = slots.map((childSlot) => {
+  // The root has no parent rail, so its children start a fresh guide set.
+  const childGuides = depth === 0 ? [] : [...ancestorGuides, !isLast];
+  const children = slots.map((childSlot, index) => {
+    const childIsLast = index === slots.length - 1;
     const child = node.slots[childSlot.id];
     if (child) {
-      return buildBranch(child, data, depth + 1, [...path, childSlot.id], childSlot);
+      return buildBranch(
+        child,
+        data,
+        depth + 1,
+        [...path, childSlot.id],
+        childSlot,
+        childIsLast,
+        childGuides
+      );
     }
 
     const emptyNode: PositionedNode = {
@@ -76,6 +95,8 @@ function buildBranch(
       slot: childSlot,
       path: [...path, childSlot.id],
       parentPath: path,
+      isLastChild: childIsLast,
+      ancestorGuides: childGuides,
       x: PAD + (depth + 1) * (NODE_WIDTH + COLUMN_GAP),
       y: 0,
       width: NODE_WIDTH,
@@ -100,6 +121,8 @@ function buildBranch(
       slot,
       path,
       parentPath: path.slice(0, -1),
+      isLastChild: isLast,
+      ancestorGuides,
       x: PAD + depth * (NODE_WIDTH + COLUMN_GAP),
       y: 0,
       width: NODE_WIDTH,
@@ -140,7 +163,7 @@ export function layoutBuild(
   root: BuildNode,
   data: Map<string, BuildItemData>
 ): FlowLayout {
-  const branch = buildBranch(root, data, 0, [], null);
+  const branch = buildBranch(root, data, 0, [], null, true, []);
   const nodes: PositionedNode[] = [];
   const edges: FlowEdge[] = [];
   placeBranch(branch, PAD, nodes, edges);

@@ -166,6 +166,7 @@ export function SlotPicker({
               type="button"
               key={item.id}
               disabled={disabled}
+              title={reason ?? item.name}
               onClick={() => onSelect(item.id)}
               className="flex w-full items-center gap-3 border-b border-[#121212] p-3 text-left transition-colors last:border-b-0 hover:bg-[#111] disabled:cursor-not-allowed disabled:opacity-40"
             >
@@ -184,7 +185,7 @@ export function SlotPicker({
                 <p className="truncate text-sm font-bold text-[#ccc]">
                   {item.name}
                 </p>
-                <p className="text-xs text-[#777]">
+                <p className="truncate text-xs text-[#777]">
                   {item.ergonomics > 0 ? "+" : ""}
                   {item.ergonomics} ergo / {recoilLabel(item)} /{" "}
                   {price(item, priceSources)}
@@ -192,8 +193,8 @@ export function SlotPicker({
               </div>
               {reason && (
                 <span className="flex shrink-0 items-center gap-1 text-xs text-[#9a8866]">
-                  <AlertTriangle className="h-3.5 w-3.5" />
-                  {reason}
+                  <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
+                  <span className="hidden sm:inline">{reason}</span>
                 </span>
               )}
             </button>
