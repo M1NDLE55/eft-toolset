@@ -1,4 +1,9 @@
 import type { BuildNode, GunBuild } from "@/app/lib/types/gunBuilder";
+import {
+  decodeSharePayload,
+  encodeSharePayload,
+  slugifyName,
+} from "@/app/lib/share-codec";
 
 type SharedBuildNodeV1 = [string] | [string, [string, SharedBuildNodeV1][]];
 
@@ -15,20 +20,8 @@ export interface DecodedSharedBuild {
   root: BuildNode;
 }
 
-const GZIP_PREFIX = "gz.";
-const JSON_PREFIX = "j.";
-
 export function slugifyBuildName(name: string) {
-  const slug = name
-    .trim()
-    .toLowerCase()
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 80);
-
-  return slug || "shared-build";
+  return slugifyName(name, "shared-build");
 }
 
 export function createShareRecipe(build: GunBuild): SharedGunBuildRecipeV1 {
@@ -40,29 +33,14 @@ export function createShareRecipe(build: GunBuild): SharedGunBuildRecipeV1 {
   };
 }
 
-export async function encodeBuildSharePayload(build: GunBuild) {
-  const recipe = createShareRecipe(build);
-  const bytes = new TextEncoder().encode(JSON.stringify(recipe));
-  const compressed = await gzip(bytes);
-
-  if (compressed && compressed.length < bytes.length) {
-    return `${GZIP_PREFIX}${bytesToBase64Url(compressed)}`;
-  }
-
-  return `${JSON_PREFIX}${bytesToBase64Url(bytes)}`;
+export function encodeBuildSharePayload(build: GunBuild) {
+  return encodeSharePayload(createShareRecipe(build));
 }
 
 export async function decodeBuildSharePayload(
   payload: string
 ): Promise<DecodedSharedBuild> {
-  const trimmed = payload.trim();
-  const bytes = trimmed.startsWith(GZIP_PREFIX)
-    ? await gunzip(base64UrlToBytes(trimmed.slice(GZIP_PREFIX.length)))
-    : trimmed.startsWith(JSON_PREFIX)
-      ? base64UrlToBytes(trimmed.slice(JSON_PREFIX.length))
-      : base64UrlToBytes(trimmed);
-
-  const parsed = JSON.parse(new TextDecoder().decode(bytes)) as unknown;
+  const parsed = await decodeSharePayload(payload);
   const recipe = parseRecipe(parsed);
 
   return {
@@ -123,52 +101,4 @@ function isSharedNode(value: unknown): value is SharedBuildNodeV1 {
       typeof slot[0] === "string" &&
       isSharedNode(slot[1])
   );
-}
-
-async function gzip(bytes: Uint8Array) {
-  if (typeof CompressionStream === "undefined") return null;
-
-  const stream = new Blob([bytes])
-    .stream()
-    .pipeThrough(new CompressionStream("gzip"));
-  return new Uint8Array(await new Response(stream).arrayBuffer());
-}
-
-async function gunzip(bytes: Uint8Array) {
-  if (typeof DecompressionStream === "undefined") {
-    throw new Error("This browser cannot read compressed shared builds.");
-  }
-
-  const stream = new Blob([bytes])
-    .stream()
-    .pipeThrough(new DecompressionStream("gzip"));
-  return new Uint8Array(await new Response(stream).arrayBuffer());
-}
-
-function bytesToBase64Url(bytes: Uint8Array) {
-  let binary = "";
-  for (let index = 0; index < bytes.length; index += 1) {
-    binary += String.fromCharCode(bytes[index]);
-  }
-
-  return btoa(binary)
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/g, "");
-}
-
-function base64UrlToBytes(value: string) {
-  const normalized = value.replace(/-/g, "+").replace(/_/g, "/");
-  const padded = normalized.padEnd(
-    normalized.length + ((4 - (normalized.length % 4)) % 4),
-    "="
-  );
-  const binary = atob(padded);
-  const bytes = new Uint8Array(binary.length);
-
-  for (let index = 0; index < binary.length; index += 1) {
-    bytes[index] = binary.charCodeAt(index);
-  }
-
-  return bytes;
 }

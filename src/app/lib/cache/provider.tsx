@@ -89,7 +89,7 @@ function StartupLoader({ syncState }: { syncState: { items: number; tasks: numbe
                 M1NDLE55 // OS
               </h1>
               <p className="text-[9px] text-[#555] uppercase tracking-[0.4em] font-bold">
-                {'"this is the last time you\'ll see a loading bar"'}
+                cheeki breeki
               </p>
             </div>
             <div className="text-right space-y-1 relative z-10">
