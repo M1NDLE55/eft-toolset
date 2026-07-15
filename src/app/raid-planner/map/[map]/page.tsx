@@ -79,7 +79,7 @@ export default function MapViewerPage({
     setDetails(null);
     setDetailsError(false);
 
-    fetchMapDetails(config.key, gameMode)
+    fetchMapDetails(config.key, config.name, gameMode)
       .then((result) => {
         if (cancelled) return;
         setDetails(result);
@@ -92,7 +92,7 @@ export default function MapViewerPage({
     return () => {
       cancelled = true;
     };
-  }, [config.key, gameMode, retryToken]);
+  }, [config.key, config.name, gameMode, retryToken]);
 
   const [enabledLayers, setEnabledLayers] = useState<Set<string>>(new Set());
 

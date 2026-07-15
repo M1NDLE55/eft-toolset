@@ -12,9 +12,9 @@ import { MapCanvas } from "./map-canvas";
 const PEN_TOLERANCE_METERS = 0.5;
 const MIN_ARROW_METERS = 2;
 const MEASURE_STYLE = {
-  color: "#cccccc",
+  color: "#f0f0f0",
   weight: 2,
-  opacity: 0.9,
+  opacity: 1,
   dashArray: "2 5",
   interactive: false,
 } as const;
@@ -178,14 +178,14 @@ export function PlanEditorCanvas({
         tempLine = L.polyline([latlng], {
           color: colorRef.current,
           weight: 3,
-          opacity: 0.85,
+          opacity: 1,
         }).addTo(map);
       } else {
         arrowStart = latlng;
         tempLine = L.polyline([latlng, latlng], {
           color: colorRef.current,
           weight: 3,
-          opacity: 0.85,
+          opacity: 1,
           dashArray: "4 4",
         }).addTo(map);
       }

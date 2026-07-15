@@ -144,7 +144,7 @@
   width: 20px;
   height: 20px;
   border: 1px solid #000;
-  background: #9a8866;
+  background: #c8b384;
   color: #000;
   font-size: 11px;
   font-weight: 700;
@@ -155,7 +155,7 @@
   height: 14px;
   box-sizing: border-box;
   border: 1.5px solid var(--glyph);
-  background: color-mix(in srgb, var(--glyph) 55%, transparent);
+  background: color-mix(in srgb, var(--glyph) 75%, transparent);
   border-radius: 50% 50% 50% 0;
   transform: rotate(-45deg);
 }
@@ -189,7 +189,7 @@
   padding: 1px 6px;
   border: 1px solid #2a2a2a;
   background: rgba(9, 9, 9, 0.9);
-  color: #9a8866;
+  color: #c8b384;
   font-size: 11px;
   white-space: nowrap;
   transform: translate(-50%, -100%) translateY(-6px);

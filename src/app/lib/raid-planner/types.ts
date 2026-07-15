@@ -15,13 +15,27 @@ export type PlanTool =
 
 /** Tactical palette for drawings and notes. */
 export const PLAN_COLORS = [
-  "#9a8866",
-  "#7da05f",
-  "#c08a3e",
-  "#a04f4f",
-  "#5f8aa0",
-  "#cccccc",
+  "#c8b384",
+  "#9bc878",
+  "#e2a852",
+  "#d46b6b",
+  "#78b6d2",
+  "#f0f0f0",
 ] as const;
+
+const LEGACY_PLAN_COLORS: Record<string, (typeof PLAN_COLORS)[number]> = {
+  "#9a8866": PLAN_COLORS[0],
+  "#7da05f": PLAN_COLORS[1],
+  "#c08a3e": PLAN_COLORS[2],
+  "#a04f4f": PLAN_COLORS[3],
+  "#5f8aa0": PLAN_COLORS[4],
+  "#cccccc": PLAN_COLORS[5],
+};
+
+/** Brightens drawings created with the original muted palette. */
+export function getPlanDisplayColor(color: string): string {
+  return LEGACY_PLAN_COLORS[color.toLowerCase()] ?? color;
+}
 
 export interface Waypoint {
   id: string;

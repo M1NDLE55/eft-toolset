@@ -2,9 +2,10 @@
 // Client-only (imports leaflet); only the editor canvas should import this.
 import L from "leaflet";
 import type { Drawing, GamePoint, NotePin, RaidPlan } from "./types";
+import { getPlanDisplayColor, PLAN_COLORS } from "./types";
 import { gameToLatLng, latLngToGame } from "./coords";
 
-const ROUTE_COLOR = "#9a8866";
+const ROUTE_COLOR = PLAN_COLORS[0];
 
 export interface PlanLayerHandlers {
   /** Waypoint and note pins are draggable when this is set. */
@@ -48,12 +49,13 @@ export function buildPlanLayers(
   });
 
   for (const drawing of plan.drawings) {
+    const displayColor = getPlanDisplayColor(drawing.color);
     const layer =
       drawing.kind === "arrow"
-        ? buildArrow(map, drawing, group)
+        ? buildArrow(map, drawing, displayColor, group)
         : L.polyline(
             drawing.points.map((point) => gameToLatLng(point)),
-            { color: drawing.color, weight: 3, opacity: 0.85 }
+            { color: displayColor, weight: 3, opacity: 1 }
           ).addTo(group);
     layer.on("click", (event) => {
       L.DomEvent.stopPropagation(event);
@@ -77,11 +79,12 @@ export function buildPlanLayers(
 }
 
 export function buildNoteMarker(note: NotePin, draggable = false): L.Marker {
+  const displayColor = getPlanDisplayColor(note.color);
   const marker = L.marker(gameToLatLng(note.position), {
     draggable,
     icon: L.divIcon({
       className: "rp-glyph-wrap",
-      html: `<div class="rp-note-pin" style="--glyph:${note.color}"></div>`,
+      html: `<div class="rp-note-pin" style="--glyph:${displayColor}"></div>`,
       iconSize: [16, 16],
       iconAnchor: [8, 16],
     }),
@@ -100,15 +103,16 @@ export function buildNoteMarker(note: NotePin, draggable = false): L.Marker {
 function buildArrow(
   map: L.Map,
   drawing: Drawing,
+  displayColor: string,
   group: L.LayerGroup
 ): L.Polyline {
   const from = gameToLatLng(drawing.points[0]);
   const to = gameToLatLng(drawing.points[drawing.points.length - 1]);
 
   const line = L.polyline([from, to], {
-    color: drawing.color,
+    color: displayColor,
     weight: 3,
-    opacity: 0.85,
+    opacity: 1,
   }).addTo(group);
 
   const fromPoint = map.project(L.latLng(from), 0);
@@ -121,7 +125,7 @@ function buildArrow(
     interactive: false,
     icon: L.divIcon({
       className: "rp-glyph-wrap",
-      html: `<div class="rp-arrowhead" style="--glyph:${drawing.color}; transform: rotate(${angle}deg)"></div>`,
+      html: `<div class="rp-arrowhead" style="--glyph:${displayColor}; transform: rotate(${angle}deg)"></div>`,
       iconSize: [16, 16],
       iconAnchor: [8, 8],
     }),

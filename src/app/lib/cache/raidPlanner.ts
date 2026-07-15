@@ -220,6 +220,7 @@ function normalizeMap(key: string, raw: RawMap): MapDetails {
 
 export async function fetchMapDetails(
   mapKey: string,
+  mapName: string,
   gameMode: GameMode
 ): Promise<MapDetails | null> {
   const cacheKey = `map-details:${gameMode}:${mapKey}`;
@@ -228,7 +229,7 @@ export async function fetchMapDetails(
 
   const data = await gqlFetch<{ maps: RawMap[] }>(MAP_DETAILS, {
     gameMode,
-    name: [mapKey],
+    name: [mapName],
   });
 
   const raw = (data.maps ?? []).find((m) => m.normalizedName === mapKey);

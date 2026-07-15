@@ -79,7 +79,7 @@ export default function PlanEditorPage() {
     setDetails(null);
     setDetailsError(false);
 
-    fetchMapDetails(config.key, gameMode)
+    fetchMapDetails(config.key, config.name, gameMode)
       .then((result) => {
         if (cancelled) return;
         setDetails(result);
