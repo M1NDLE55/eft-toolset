@@ -32,10 +32,9 @@ export const MAP_DETAILS = /* GraphQL */ `
         lockType
         needsPower
         position { x y z }
-        key { id name }
+        key { name }
       }
       hazards {
-        hazardType
         name
         position { x y z }
         outline { x z }
@@ -54,10 +53,6 @@ export const MAP_DETAILS = /* GraphQL */ `
       stationaryWeapons {
         position { x y z }
         stationaryWeapon { name }
-      }
-      bosses {
-        boss { name }
-        spawnChance
       }
     }
   }

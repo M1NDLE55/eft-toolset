@@ -3,6 +3,8 @@
 
 const GZIP_PREFIX = "gz.";
 const JSON_PREFIX = "j.";
+const MAX_ENCODED_LENGTH = 400_000;
+const MAX_DECODED_BYTES = 2_000_000;
 
 export function slugifyName(name: string, fallback: string) {
   const slug = name
@@ -19,31 +21,43 @@ export function slugifyName(name: string, fallback: string) {
 
 export async function encodeSharePayload(recipe: unknown): Promise<string> {
   const bytes = new TextEncoder().encode(JSON.stringify(recipe));
+  if (bytes.length > MAX_DECODED_BYTES) {
+    throw new Error("This share payload is too large.");
+  }
   const compressed = await gzip(bytes);
 
   if (compressed && compressed.length < bytes.length) {
-    return `${GZIP_PREFIX}${bytesToBase64Url(compressed)}`;
+    const encoded = `${GZIP_PREFIX}${bytesToBase64Url(compressed)}`;
+    if (encoded.length > MAX_ENCODED_LENGTH) throw new Error("This share payload is too large.");
+    return encoded;
   }
 
-  return `${JSON_PREFIX}${bytesToBase64Url(bytes)}`;
+  const encoded = `${JSON_PREFIX}${bytesToBase64Url(bytes)}`;
+  if (encoded.length > MAX_ENCODED_LENGTH) throw new Error("This share payload is too large.");
+  return encoded;
 }
 
 export async function decodeSharePayload(payload: string): Promise<unknown> {
   const trimmed = payload.trim();
+  if (!trimmed || trimmed.length > MAX_ENCODED_LENGTH) {
+    throw new Error("Shared payload size is invalid.");
+  }
   const bytes = trimmed.startsWith(GZIP_PREFIX)
     ? await gunzip(base64UrlToBytes(trimmed.slice(GZIP_PREFIX.length)))
     : trimmed.startsWith(JSON_PREFIX)
       ? base64UrlToBytes(trimmed.slice(JSON_PREFIX.length))
       : base64UrlToBytes(trimmed);
 
-  return JSON.parse(new TextDecoder().decode(bytes)) as unknown;
+  if (bytes.length > MAX_DECODED_BYTES) throw new Error("Shared payload is too large.");
+  return JSON.parse(new TextDecoder("utf-8", { fatal: true }).decode(bytes)) as unknown;
 }
 
 async function gzip(bytes: Uint8Array) {
   if (typeof CompressionStream === "undefined") return null;
 
-  const stream = new Blob([bytes])
-    .stream()
+  const blob = new Blob([bytes]);
+  if (typeof blob.stream !== "function") return null;
+  const stream = blob.stream()
     .pipeThrough(new CompressionStream("gzip"));
   return new Uint8Array(await new Response(stream).arrayBuffer());
 }
@@ -53,10 +67,33 @@ async function gunzip(bytes: Uint8Array) {
     throw new Error("This browser cannot read compressed share links.");
   }
 
-  const stream = new Blob([bytes])
-    .stream()
+  const blob = new Blob([bytes]);
+  if (typeof blob.stream !== "function") {
+    throw new Error("This browser cannot read compressed share links.");
+  }
+  const stream = blob.stream()
     .pipeThrough(new DecompressionStream("gzip"));
-  return new Uint8Array(await new Response(stream).arrayBuffer());
+  const reader = stream.getReader();
+  const chunks: Uint8Array[] = [];
+  let total = 0;
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.length;
+    if (total > MAX_DECODED_BYTES) {
+      await reader.cancel("Shared payload is too large.");
+      throw new Error("Shared payload is too large.");
+    }
+    chunks.push(value);
+  }
+
+  const result = new Uint8Array(total);
+  let offset = 0;
+  for (const chunk of chunks) {
+    result.set(chunk, offset);
+    offset += chunk.length;
+  }
+  return result;
 }
 
 function bytesToBase64Url(bytes: Uint8Array) {
@@ -72,6 +109,9 @@ function bytesToBase64Url(bytes: Uint8Array) {
 }
 
 function base64UrlToBytes(value: string) {
+  if (!value || value.length > MAX_ENCODED_LENGTH || !/^[A-Za-z0-9_-]+$/.test(value)) {
+    throw new Error("Shared payload encoding is invalid.");
+  }
   const normalized = value.replace(/-/g, "+").replace(/_/g, "/");
   const padded = normalized.padEnd(
     normalized.length + ((4 - (normalized.length % 4)) % 4),

@@ -17,6 +17,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { customEncodeURI } from "../lib/URIEncoding";
+import { listGroups, saveGroups, subscribeGroups } from "@/app/lib/item-groups/store";
 
 export default function Page() {
   const router = useRouter();
@@ -29,12 +30,9 @@ export default function Page() {
 
   useEffect(() => {
     setLoading(true);
-    if (!localStorage.getItem("item-groups")) {
-      localStorage.setItem("item-groups", "[]");
-    }
-
-    setGroups(JSON.parse(localStorage.getItem("item-groups") as string));
+    setGroups(listGroups());
     setLoading(false);
+    return subscribeGroups(() => setGroups(listGroups()));
   }, []);
 
   function handleCreate() {
@@ -46,18 +44,14 @@ export default function Page() {
       return;
     }
 
-    const groups: Group[] =
-      JSON.parse(localStorage.getItem("item-groups") as string) || [];
+    const groups = listGroups();
 
     if (groups.find((g) => g.name.toLowerCase() === name.toLowerCase())) {
       setCreateError("A group with this name already exists");
       return;
     }
 
-    localStorage.setItem(
-      "item-groups",
-      JSON.stringify([...groups, { name, items: [] }])
-    );
+    saveGroups([...groups, { name, items: [] }]);
 
     setCreateOpen(false);
     setCreateName("");

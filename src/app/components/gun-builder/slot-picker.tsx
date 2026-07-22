@@ -13,6 +13,7 @@ import type { GameMode } from "@/components/game-mode/context";
 import { fetchPickItems } from "@/app/lib/cache/gunBuilder";
 import { effectivePrice } from "@/app/lib/builds/price";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -60,6 +61,8 @@ export function SlotPicker({
 }: SlotPickerProps) {
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<Error | null>(null);
+  const [retryToken, setRetryToken] = useState(0);
   const [pickItems, setPickItems] = useState<Map<string, PickItemData>>(
     new Map()
   );
@@ -68,23 +71,24 @@ export function SlotPicker({
     if (!open || !slot) return;
     let cancelled = false;
     setLoading(true);
+    setError(null);
     fetchPickItems(slot.allowedItemIds, gameMode)
       .then((fetched) => {
         if (cancelled) return;
-        setPickItems((prev) => {
-          const next = new Map(prev);
-          for (const item of fetched) next.set(item.id, item);
-          return next;
-        });
+        setPickItems(new Map(fetched.map((item) => [item.id, item])));
       })
-      .catch(console.warn)
+      .catch((reason: unknown) => {
+        if (!cancelled) {
+          setError(reason instanceof Error ? reason : new Error("Could not load compatible mods."));
+        }
+      })
       .finally(() => {
         if (!cancelled) setLoading(false);
       });
     return () => {
       cancelled = true;
     };
-  }, [open, slot, gameMode]);
+  }, [open, slot, gameMode, retryToken]);
 
   const installedSet = useMemo(
     () => new Set(installedItemIds.filter((id) => id !== currentItemId)),
@@ -160,6 +164,16 @@ export function SlotPicker({
             <LoaderCircle className="absolute right-3 top-2.5 h-4 w-4 animate-spin text-[#9a8866]" />
           )}
         </div>
+        {error && (
+          <div className="flex items-center justify-between gap-3 border border-red-900/60 p-3 text-sm text-red-300">
+            <span className="flex items-center gap-2">
+              <AlertTriangle className="h-4 w-4" /> Could not load compatible mods.
+            </span>
+            <Button size="sm" variant="outline" onClick={() => setRetryToken((value) => value + 1)}>
+              Retry
+            </Button>
+          </div>
+        )}
         <div className="max-h-[56vh] overflow-auto border border-[#1a1a1a]">
           {candidates.map(({ item, disabled, reason }) => (
             <button
@@ -199,7 +213,7 @@ export function SlotPicker({
               )}
             </button>
           ))}
-          {!loading && candidates.length === 0 && (
+          {!loading && !error && candidates.length === 0 && (
             <div className="p-4 text-sm text-[#777]">
               No compatible mods match this search.
             </div>

@@ -8,9 +8,9 @@ import type {
   PriceSources,
 } from "@/app/lib/types/gunBuilder";
 import type { GameMode } from "@/components/game-mode/context";
-import type { PositionedNode } from "@/app/lib/builds/layout";
+import type { PositionedNode } from "@/app/lib/builds/tree-layout";
 import { Button } from "@/components/ui/button";
-import { layoutBuild } from "@/app/lib/builds/layout";
+import { layoutBuild } from "@/app/lib/builds/tree-layout";
 import { attachMod, removeMod, saveBuild } from "@/app/lib/builds/store";
 import { collectItemIds, collectOccupiedSlotIds } from "@/app/lib/builds/tree";
 import { BuilderNode } from "./build-node";

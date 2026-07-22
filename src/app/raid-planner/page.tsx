@@ -11,6 +11,7 @@ import {
   deletePlan,
   duplicatePlan,
   listPlans,
+  subscribePlans,
 } from "@/app/lib/raid-planner/store";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -58,6 +59,7 @@ export default function RaidPlannerPage() {
   useEffect(() => {
     refresh();
     setLoading(false);
+    return subscribePlans(refresh);
   }, []);
 
   function handleCreate(config: MapConfig) {

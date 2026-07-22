@@ -30,12 +30,10 @@ export interface MapLock {
   lockType: string;
   needsPower: boolean;
   position: Required<GamePoint>;
-  keyId: string | null;
   keyName: string | null;
 }
 
 export interface MapHazard {
-  hazardType: string;
   name: string;
   position: Required<GamePoint>;
   outline: GamePoint[];
@@ -60,11 +58,6 @@ export interface MapStationaryWeapon {
   position: Required<GamePoint>;
 }
 
-export interface MapBoss {
-  name: string;
-  spawnChance: number;
-}
-
 export interface MapDetails {
   key: string;
   players: string | null;
@@ -77,5 +70,4 @@ export interface MapDetails {
   lootContainers: MapLootContainer[];
   switches: MapSwitch[];
   stationaryWeapons: MapStationaryWeapon[];
-  bosses: MapBoss[];
 }

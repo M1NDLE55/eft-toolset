@@ -1,4 +1,4 @@
-import type { Drawing, GamePoint, NotePin, RaidPlan, Waypoint } from "./types";
+import { PLAN_COLORS, type Drawing, type GamePoint, type NotePin, type RaidPlan, type Waypoint } from "./types";
 import {
   decodeSharePayload,
   encodeSharePayload,
@@ -8,6 +8,19 @@ import {
 type SharedPoint = [number, number];
 type SharedDrawingV1 = ["pen" | "arrow", string, SharedPoint[]];
 type SharedNoteV1 = [number, number, string, string, string];
+
+const MAX_NAME_LENGTH = 120;
+const MAX_MAP_KEY_LENGTH = 80;
+const MAX_ROUTE_POINTS = 500;
+const MAX_DRAWINGS = 500;
+const MAX_POINTS_PER_DRAWING = 5_000;
+const MAX_TOTAL_DRAWING_POINTS = 20_000;
+const MAX_NOTES = 500;
+const MAX_NOTE_TITLE_LENGTH = 120;
+const MAX_NOTE_BODY_LENGTH = 2_000;
+const MAX_LAYERS = 200;
+const MAX_LAYER_ID_LENGTH = 120;
+const MAX_COORDINATE = 1_000_000;
 
 export interface SharedRaidPlanRecipeV1 {
   v: 1;
@@ -112,7 +125,10 @@ function isPoint(value: unknown): value is SharedPoint {
   return (
     Array.isArray(value) &&
     value.length === 2 &&
-    value.every((entry) => typeof entry === "number" && Number.isFinite(entry))
+    value.every(
+      (entry) =>
+        typeof entry === "number" && Number.isFinite(entry) && Math.abs(entry) <= MAX_COORDINATE
+    )
   );
 }
 
@@ -122,11 +138,25 @@ function parseRecipe(value: unknown): SharedRaidPlanRecipeV1 {
   }
 
   const recipe = value as Partial<SharedRaidPlanRecipeV1>;
-  if (recipe.v !== 1 || typeof recipe.m !== "string" || !recipe.m) {
+  if (
+    recipe.v !== 1 ||
+    typeof recipe.m !== "string" ||
+    !recipe.m ||
+    recipe.m.length > MAX_MAP_KEY_LENGTH ||
+    (recipe.n !== undefined &&
+      (typeof recipe.n !== "string" || recipe.n.length > MAX_NAME_LENGTH))
+  ) {
     throw new Error("Shared plan uses an unsupported recipe version.");
   }
 
-  if (recipe.r !== undefined && !(Array.isArray(recipe.r) && recipe.r.every(isPoint))) {
+  if (
+    recipe.r !== undefined &&
+    !(
+      Array.isArray(recipe.r) &&
+      recipe.r.length <= MAX_ROUTE_POINTS &&
+      recipe.r.every(isPoint)
+    )
+  ) {
     throw new Error("Shared plan route is invalid.");
   }
 
@@ -134,10 +164,21 @@ function parseRecipe(value: unknown): SharedRaidPlanRecipeV1 {
     Array.isArray(entry) &&
     (entry[0] === "pen" || entry[0] === "arrow") &&
     typeof entry[1] === "string" &&
+    PLAN_COLORS.some((color) => color === entry[1]) &&
     Array.isArray(entry[2]) &&
     entry[2].length >= 2 &&
+    entry[2].length <= MAX_POINTS_PER_DRAWING &&
     entry[2].every(isPoint);
-  if (recipe.d !== undefined && !(Array.isArray(recipe.d) && recipe.d.every(validDrawing))) {
+  if (
+    recipe.d !== undefined &&
+    !(
+      Array.isArray(recipe.d) &&
+      recipe.d.length <= MAX_DRAWINGS &&
+      recipe.d.every(validDrawing) &&
+      recipe.d.reduce((total, drawing) => total + drawing[2].length, 0) <=
+        MAX_TOTAL_DRAWING_POINTS
+    )
+  ) {
     throw new Error("Shared plan drawings are invalid.");
   }
 
@@ -145,12 +186,35 @@ function parseRecipe(value: unknown): SharedRaidPlanRecipeV1 {
     Array.isArray(entry) &&
     entry.length === 5 &&
     typeof entry[0] === "number" &&
+    Number.isFinite(entry[0]) &&
+    Math.abs(entry[0]) <= MAX_COORDINATE &&
     typeof entry[1] === "number" &&
+    Number.isFinite(entry[1]) &&
+    Math.abs(entry[1]) <= MAX_COORDINATE &&
     typeof entry[2] === "string" &&
+    entry[2].length <= MAX_NOTE_TITLE_LENGTH &&
     typeof entry[3] === "string" &&
-    typeof entry[4] === "string";
-  if (recipe.t !== undefined && !(Array.isArray(recipe.t) && recipe.t.every(validNote))) {
+    entry[3].length <= MAX_NOTE_BODY_LENGTH &&
+    typeof entry[4] === "string" &&
+    PLAN_COLORS.some((color) => color === entry[4]);
+  if (
+    recipe.t !== undefined &&
+    !(Array.isArray(recipe.t) && recipe.t.length <= MAX_NOTES && recipe.t.every(validNote))
+  ) {
     throw new Error("Shared plan notes are invalid.");
+  }
+
+  if (
+    recipe.l !== undefined &&
+    !(
+      Array.isArray(recipe.l) &&
+      recipe.l.length <= MAX_LAYERS &&
+      recipe.l.every(
+        (layer) => typeof layer === "string" && layer.length <= MAX_LAYER_ID_LENGTH
+      )
+    )
+  ) {
+    throw new Error("Shared plan layers are invalid.");
   }
 
   return recipe as SharedRaidPlanRecipeV1;

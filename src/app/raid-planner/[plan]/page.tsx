@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
@@ -9,7 +9,7 @@ import type { PlanTool, RaidPlan } from "@/app/lib/raid-planner/types";
 import { PLAN_COLORS } from "@/app/lib/raid-planner/types";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
 import { getLayerGroups } from "@/app/lib/raid-planner/layer-options";
-import { getPlan, renamePlan, savePlan } from "@/app/lib/raid-planner/store";
+import { getPlan, savePlan } from "@/app/lib/raid-planner/store";
 import { fetchMapDetails } from "@/app/lib/cache/raidPlanner";
 import { useGameMode } from "@/components/game-mode/context";
 import type { MapDetails } from "@/app/lib/types/raidPlanner";
@@ -50,13 +50,40 @@ export default function PlanEditorPage() {
   const [selectedNoteId, setSelectedNoteId] = useState<string | null>(null);
   const [renameOpen, setRenameOpen] = useState(false);
   const [renameValue, setRenameValue] = useState("");
+  const [saveError, setSaveError] = useState("");
+  const pendingSave = useRef<RaidPlan | null>(null);
+  const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const flushSave = useCallback(() => {
+    if (saveTimer.current) clearTimeout(saveTimer.current);
+    saveTimer.current = null;
+    if (!pendingSave.current) return;
+    const pending = pendingSave.current;
+    pendingSave.current = null;
+    try {
+      savePlan(pending);
+      setSaveError("");
+    } catch (reason) {
+      setSaveError(reason instanceof Error ? reason.message : "Could not save this plan.");
+    }
+  }, []);
 
   useEffect(() => {
+    flushSave();
     const found = getPlan(params.plan);
     if (!found) notFound();
     setPlan(found);
     setRenameValue(found.name);
-  }, [params.plan]);
+  }, [flushSave, params.plan]);
+
+  useEffect(() => {
+    const handlePageHide = () => flushSave();
+    window.addEventListener("pagehide", handlePageHide);
+    return () => {
+      window.removeEventListener("pagehide", handlePageHide);
+      flushSave();
+    };
+  }, [flushSave]);
 
   const config = plan ? getMapConfig(plan.mapKey) : undefined;
 
@@ -96,9 +123,16 @@ export default function PlanEditorPage() {
 
   const updatePlan = useCallback(
     (updater: (current: RaidPlan) => RaidPlan) => {
-      setPlan((current) => (current ? savePlan(updater(current)) : current));
+      setPlan((current) => {
+        if (!current) return current;
+        const updated = { ...updater(current), updatedAt: Date.now() };
+        pendingSave.current = updated;
+        if (saveTimer.current) clearTimeout(saveTimer.current);
+        saveTimer.current = setTimeout(flushSave, 350);
+        return updated;
+      });
     },
-    []
+    [flushSave]
   );
 
   const handleLayerChange = useCallback(
@@ -139,11 +173,10 @@ export default function PlanEditorPage() {
   function handleRename() {
     const name = renameValue.trim();
     if (!name) return;
-    const updated = renamePlan(currentPlan.id, name);
-    if (updated) {
-      setPlan(updated);
-      setRenameOpen(false);
-    }
+    pendingSave.current = { ...currentPlan, name };
+    flushSave();
+    setPlan((current) => (current ? { ...current, name } : current));
+    setRenameOpen(false);
   }
 
   return (
@@ -188,6 +221,11 @@ export default function PlanEditorPage() {
           <span className="hidden text-[10px] uppercase tracking-widest text-[#555] sm:inline">
             {config.name}
           </span>
+          {saveError && (
+            <span className="max-w-48 truncate text-[10px] text-red-400" title={saveError}>
+              Not saved
+            </span>
+          )}
         </div>
 
         <div className="pointer-events-auto">
@@ -217,6 +255,7 @@ export default function PlanEditorPage() {
         <div className="pointer-events-none absolute bottom-0 left-0 z-[1000] p-3 pb-10 max-sm:bottom-14">
           <div className="pointer-events-auto">
             <NoteEditor
+              key={selectedNote.id}
               note={selectedNote}
               onChange={(changes) =>
                 updatePlan((current) => ({

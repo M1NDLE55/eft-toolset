@@ -1,15 +1,16 @@
-export function customEncodeURI(itemName: string) {
-  const custom = itemName.replace(/-/g, "_").replace(/ /g, "-");
-
-  const encoded = encodeURIComponent(custom);
-
-  return encoded;
+/**
+ * The marker distinguishes lossless new routes from the original lossy
+ * space/hyphen transform, so existing bookmarks remain readable.
+ */
+export function customEncodeURI(value: string) {
+  return `~${encodeURIComponent(value)}`;
 }
 
-export function customDecodeURI(itemName: string) {
-  const decoded = decodeURIComponent(itemName);
+export function customDecodeURI(value: string) {
+  const decoded = decodeURIComponent(value);
 
-  const custom = decoded.replace(/-/g, " ").replace(/_/g, "-");
+  if (decoded.startsWith("~")) return decoded.slice(1);
 
-  return custom;
+  // Compatibility with links created before the lossless format.
+  return decoded.replace(/-/g, " ").replace(/_/g, "-");
 }

@@ -2,6 +2,7 @@ import { Group } from "@/app/lib/types/itemGroups";
 import { Trash } from "lucide-react";
 import { SetStateAction, useState } from "react";
 import { Dispatch } from "react";
+import { saveGroups } from "@/app/lib/item-groups/store";
 
 export default function GroupEditor({
   group,
@@ -16,7 +17,7 @@ export default function GroupEditor({
 
   function handleDelete() {
     const updatedGroups = groups.filter((g) => g.name !== group.name);
-    localStorage.setItem("item-groups", JSON.stringify(updatedGroups));
+    saveGroups(updatedGroups);
     setGroups(updatedGroups);
   }
 

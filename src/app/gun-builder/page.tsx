@@ -5,13 +5,14 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Copy, Plus, Trash2 } from "lucide-react";
 import { useGameMode } from "@/components/game-mode/context";
-import type { GunBuild, GunListItem } from "@/app/lib/types/gunBuilder";
+import type { BuildNode, GunBuild, GunListItem } from "@/app/lib/types/gunBuilder";
 import {
   createBuild,
   deleteBuild,
   duplicateBuild,
   listBuilds,
   saveBuild,
+  subscribeBuilds,
 } from "@/app/lib/builds/store";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
 import { fetchBuildItems, fetchPreset } from "@/app/lib/cache/gunBuilder";
@@ -55,6 +56,7 @@ export default function GunBuilderPage() {
   const [createOpen, setCreateOpen] = useState(false);
   const [createName, setCreateName] = useState("");
   const [creating, setCreating] = useState(false);
+  const [createError, setCreateError] = useState("");
 
   function refresh() {
     setBuilds(listBuilds());
@@ -63,12 +65,14 @@ export default function GunBuilderPage() {
   useEffect(() => {
     refresh();
     setLoading(false);
+    return subscribeBuilds(refresh);
   }, []);
 
   async function handleCreate(weapon: GunListItem, useDefaultPreset: boolean) {
     setCreating(true);
+    setCreateError("");
     try {
-      const build = createBuild(createName.trim() || weapon.name, weapon.id);
+      let root: BuildNode | null = null;
 
       if (useDefaultPreset && weapon.defaultPresetId) {
         const [preset, items] = await Promise.all([
@@ -81,16 +85,20 @@ export default function GunBuilderPage() {
           const map = new Map(
             [...items, ...presetItems].map((item) => [item.id, item])
           );
-          saveBuild({
-            ...build,
-            root: reconstructPresetTree(weapon.id, preset, map),
-          });
+          root = reconstructPresetTree(weapon.id, preset, map);
         }
       }
+
+      const build = createBuild(createName.trim() || weapon.name, weapon.id);
+      if (root) saveBuild({ ...build, root });
 
       setCreateOpen(false);
       setCreateName("");
       router.push(`/gun-builder/${build.id}`);
+    } catch (reason) {
+      setCreateError(
+        reason instanceof Error ? reason.message : "Could not create this build."
+      );
     } finally {
       setCreating(false);
     }
@@ -117,7 +125,10 @@ export default function GunBuilderPage() {
           open={createOpen}
           onOpenChange={(open) => {
             setCreateOpen(open);
-            if (open) setCreateName("");
+            if (open) {
+              setCreateName("");
+              setCreateError("");
+            }
           }}
         >
           <DialogTrigger asChild>
@@ -138,6 +149,7 @@ export default function GunBuilderPage() {
               onChange={(event) => setCreateName(event.target.value)}
               placeholder="Build name, optional"
             />
+            {createError && <p className="text-sm text-red-400">{createError}</p>}
             <WeaponPicker disabled={creating} onCreate={handleCreate} />
           </DialogContent>
         </Dialog>

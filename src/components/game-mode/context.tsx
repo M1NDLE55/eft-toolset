@@ -8,11 +8,18 @@ import React, {
   useMemo,
   useState,
 } from 'react';
+import {
+  readStore,
+  subscribeStore,
+  writeStore,
+  type StoreDefinition,
+} from '@/app/lib/storage/versioned-store';
 
 export type GameMode = 'regular' | 'pve';
 
 type GameModeContextValue = {
   gameMode: GameMode;
+  hydrated: boolean;
   setGameMode: (mode: GameMode) => void;
   toggleGameMode: () => void;
 };
@@ -21,32 +28,36 @@ const GameModeContext = createContext<GameModeContextValue | undefined>(
   undefined
 );
 
-const STORAGE_KEY = 'eft-toolset:game-mode';
+const GAME_MODE_STORE: StoreDefinition<GameMode> = {
+  key: 'eft-toolset:settings:game-mode',
+  legacyKeys: ['eft-toolset:game-mode'],
+  version: 1,
+  defaultValue: () => 'regular',
+  validate: (value): value is GameMode => value === 'regular' || value === 'pve',
+};
 
 export function GameModeProvider({ children }: { children: React.ReactNode }) {
   const [gameMode, setGameModeState] = useState<GameMode>('regular');
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
     try {
-      const stored =
-        typeof window !== 'undefined'
-          ? window.localStorage.getItem(STORAGE_KEY)
-          : null;
-      if (stored === 'pve' || stored === 'regular') {
-        setGameModeState(stored);
-      }
-    } catch (_) {
+      setGameModeState(readStore(GAME_MODE_STORE));
+    } catch {
       // ignore storage errors
+    } finally {
+      setHydrated(true);
     }
+    return subscribeStore(GAME_MODE_STORE.key, () => {
+      setGameModeState(readStore(GAME_MODE_STORE));
+    });
   }, []);
 
   const setGameMode = useCallback((mode: GameMode) => {
     setGameModeState(mode);
     try {
-      if (typeof window !== 'undefined') {
-        window.localStorage.setItem(STORAGE_KEY, mode);
-      }
-    } catch (_) {
+      writeStore(GAME_MODE_STORE, mode);
+    } catch {
       // ignore storage errors
     }
   }, []);
@@ -56,8 +67,8 @@ export function GameModeProvider({ children }: { children: React.ReactNode }) {
   }, [gameMode, setGameMode]);
 
   const value = useMemo<GameModeContextValue>(
-    () => ({ gameMode, setGameMode, toggleGameMode }),
-    [gameMode, setGameMode, toggleGameMode]
+    () => ({ gameMode, hydrated, setGameMode, toggleGameMode }),
+    [gameMode, hydrated, setGameMode, toggleGameMode]
   );
 
   return (

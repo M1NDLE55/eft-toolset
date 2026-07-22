@@ -5,51 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { customEncodeURI } from "@/app/lib/URIEncoding";
 import { PanelLeftClose, PanelLeftOpen } from "lucide-react";
+import {
+  getScoutedCollapsed,
+  listScoutedItems,
+  setScoutedCollapsed,
+  subscribeScoutedItems,
+  type ScoutedItem,
+} from "@/app/lib/scouted-items/store";
 
-const STORAGE_KEY = "eft-toolset:scouted-items";
-const COLLAPSED_KEY = "eft-toolset:scouted-collapsed";
-const MAX_SCOUTED = 20;
-
-export interface ScoutedItem {
-  name: string;
-  gridImageLink: string | null;
-}
-
-export function addScoutedItem(item: ScoutedItem) {
-  if (typeof window === "undefined") return;
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    const items: ScoutedItem[] = raw ? JSON.parse(raw) : [];
-    const filtered = items.filter((i) => i.name !== item.name);
-    filtered.unshift(item);
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify(filtered.slice(0, MAX_SCOUTED))
-    );
-    window.dispatchEvent(new Event("scouted-update"));
-  } catch {
-    // ignore storage errors
-  }
-}
-
-function getScoutedItems(): ScoutedItem[] {
-  if (typeof window === "undefined") return [];
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : [];
-  } catch {
-    return [];
-  }
-}
-
-function getCollapsed(): boolean {
-  if (typeof window === "undefined") return false;
-  try {
-    return localStorage.getItem(COLLAPSED_KEY) === "true";
-  } catch {
-    return false;
-  }
-}
+export { addScoutedItem } from "@/app/lib/scouted-items/store";
 
 export default function ScoutedSidebar() {
   const [items, setItems] = useState<ScoutedItem[]>([]);
@@ -57,31 +21,16 @@ export default function ScoutedSidebar() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setItems(getScoutedItems());
-    setCollapsed(getCollapsed());
+    setItems(listScoutedItems());
+    setCollapsed(getScoutedCollapsed());
     setMounted(true);
-
-    const onStorage = (e: StorageEvent) => {
-      if (e.key === STORAGE_KEY) setItems(getScoutedItems());
-    };
-    window.addEventListener("storage", onStorage);
-    return () => window.removeEventListener("storage", onStorage);
-  }, []);
-
-  useEffect(() => {
-    const onUpdate = () => setItems(getScoutedItems());
-    window.addEventListener("scouted-update", onUpdate);
-    return () => window.removeEventListener("scouted-update", onUpdate);
+    return subscribeScoutedItems(() => setItems(listScoutedItems()));
   }, []);
 
   const toggleCollapsed = () => {
     const next = !collapsed;
     setCollapsed(next);
-    try {
-      localStorage.setItem(COLLAPSED_KEY, String(next));
-    } catch {
-      // ignore
-    }
+    setScoutedCollapsed(next);
   };
 
   if (!mounted) return <div className="w-56 shrink-0 self-stretch" />;

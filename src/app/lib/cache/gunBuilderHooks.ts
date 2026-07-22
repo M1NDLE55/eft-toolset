@@ -9,15 +9,22 @@ export function useGunList() {
   const { gameMode } = useGameMode();
   const [guns, setGuns] = useState<GunListItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
+  const [retryToken, setRetryToken] = useState(0);
 
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
+    setError(null);
     fetchGunList(gameMode)
       .then((items) => {
         if (!cancelled) setGuns(items);
       })
-      .catch(console.warn)
+      .catch((reason: unknown) => {
+        if (!cancelled) {
+          setError(reason instanceof Error ? reason : new Error("Could not load weapons."));
+        }
+      })
       .finally(() => {
         if (!cancelled) setLoading(false);
       });
@@ -25,9 +32,15 @@ export function useGunList() {
     return () => {
       cancelled = true;
     };
-  }, [gameMode]);
+  }, [gameMode, retryToken]);
 
-  return { guns, loading, gameMode };
+  return {
+    guns,
+    loading,
+    error,
+    retry: () => setRetryToken((value) => value + 1),
+    gameMode,
+  };
 }
 
 export function useBuildItemData(initialIds: string[]) {
@@ -42,18 +55,23 @@ export function useBuildItemData(initialIds: string[]) {
   // re-fires the consumers' effects (initial load + slot picker) and triggers
   // redundant fetch passes.
   const itemsRef = useRef(items);
+  const activeMode = useRef(gameMode);
+  const inFlightIds = useRef(new Set<string>());
   itemsRef.current = items;
+  activeMode.current = gameMode;
 
   const loadBuildItems = useCallback(
     async (ids: string[]) => {
       const missing = Array.from(new Set(ids)).filter(
-        (id) => id && !itemsRef.current.has(id)
+        (id) => id && !itemsRef.current.has(id) && !inFlightIds.current.has(id)
       );
       if (missing.length === 0) return [];
 
+      for (const id of missing) inFlightIds.current.add(id);
       setLoadingIds((prev) => new Set([...Array.from(prev), ...missing]));
       try {
         const fetched = await fetchBuildItems(missing, gameMode);
+        if (activeMode.current !== gameMode) return [];
         setItems((prev) => {
           const next = new Map(prev);
           for (const item of fetched) next.set(item.id, item);
@@ -61,6 +79,7 @@ export function useBuildItemData(initialIds: string[]) {
         });
         return fetched;
       } finally {
+        for (const id of missing) inFlightIds.current.delete(id);
         setLoadingIds((prev) => {
           const next = new Set(prev);
           for (const id of missing) next.delete(id);
@@ -72,6 +91,7 @@ export function useBuildItemData(initialIds: string[]) {
   );
 
   useEffect(() => {
+    inFlightIds.current.clear();
     itemsRef.current = new Map();
     setItems(new Map());
   }, [gameMode]);

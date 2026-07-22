@@ -1,4 +1,12 @@
-import { createStore, get, set, clear } from "idb-keyval";
+import {
+  clear,
+  createStore,
+  del,
+  get,
+  getMany,
+  set,
+  setMany,
+} from "idb-keyval";
 
 const store = createStore("eft-cache", "bulk-data");
 
@@ -8,6 +16,18 @@ export function cacheGet<T>(key: string): Promise<T | undefined> {
 
 export function cacheSet<T>(key: string, value: T): Promise<void> {
   return set(key, value, store);
+}
+
+export function cacheGetMany<T>(keys: string[]): Promise<(T | undefined)[]> {
+  return getMany<T>(keys, store);
+}
+
+export function cacheSetMany<T>(entries: [string, T][]): Promise<void> {
+  return setMany(entries, store);
+}
+
+export function cacheDelete(key: string): Promise<void> {
+  return del(key, store);
 }
 
 export function cacheClear(): Promise<void> {

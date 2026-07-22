@@ -95,12 +95,10 @@ export const PRESET_DETAIL = `
       properties {
         ... on ItemPropertiesPreset {
           baseItem { id }
-          moa
         }
       }
       containsItems {
         item { id }
-        attributes { name value }
       }
     }
   }

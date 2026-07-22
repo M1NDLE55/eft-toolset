@@ -14,7 +14,10 @@ export interface CachedTaskUnlock {
 }
 
 export interface CachedItem {
+  id: string;
+  normalizedName: string;
   name: string;
+  shortName: string | null;
   gridImageLink: string | null;
   wikiLink: string | null;
   fleaMarketFee: number | null;
@@ -24,6 +27,14 @@ export interface CachedItem {
   buyFor: CachedVendorPrice[];
   sellFor: CachedVendorPrice[];
   usedInTasks: { name: string }[];
+}
+
+export interface CatalogItem {
+  id: string;
+  normalizedName: string;
+  name: string;
+  shortName: string | null;
+  gridImageLink: string | null;
 }
 
 export interface CachedTask {
@@ -55,9 +66,4 @@ export interface ComposedItem extends Omit<CachedItem, "usedInTasks"> {
   usedInTasks: CachedTask[];
   bartersUsing: CachedBarter[];
   craftsUsing: CachedCraft[];
-}
-
-export interface CacheMeta {
-  version: number;
-  timestamp: number;
 }

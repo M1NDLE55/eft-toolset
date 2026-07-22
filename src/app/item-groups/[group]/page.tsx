@@ -1,6 +1,5 @@
 "use client";
 
-import { Group } from "@/app/lib/types/itemGroups";
 import { notFound, useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getColumns } from "@/app/components/item-groups/table-columns";
@@ -35,6 +34,7 @@ import { Pencil, Plus } from "lucide-react";
 import SearchWrapper from "@/app/components/global/search/search-wrapper";
 import AddItem from "@/app/components/item-groups/add-item";
 import { ItemPreview } from "@/app/lib/types/itemGroups";
+import { listGroups, saveGroups } from "@/app/lib/item-groups/store";
 
 export default function Page() {
   const router = useRouter();
@@ -51,14 +51,7 @@ export default function Page() {
   const [addItemPreviews, setAddItemPreviews] = useState<ItemPreview[]>([]);
 
   function handleRemove(itemName: string) {
-    const groups = localStorage.getItem("item-groups");
-
-    if (!groups) {
-      console.warn("No groups found");
-      return;
-    }
-
-    const updatedGroups = (JSON.parse(groups) as Group[]).map((g) => {
+    const updatedGroups = listGroups().map((g) => {
       if (g.name === groupName) {
         const updatedItems = g.items.filter((name) => name !== itemName);
 
@@ -72,22 +65,15 @@ export default function Page() {
       return g;
     });
 
-    localStorage.setItem("item-groups", JSON.stringify(updatedGroups));
+    saveGroups(updatedGroups);
   }
 
   function handleDelete() {
-    const groups = localStorage.getItem("item-groups");
-
-    if (!groups) {
-      console.warn("No groups found");
-      return;
-    }
-
-    const updatedGroups = (JSON.parse(groups) as Group[]).filter(
+    const updatedGroups = listGroups().filter(
       (g) => g.name !== groupName
     );
 
-    localStorage.setItem("item-groups", JSON.stringify(updatedGroups));
+    saveGroups(updatedGroups);
 
     router.push("/item-groups");
   }
@@ -101,8 +87,7 @@ export default function Page() {
       return;
     }
 
-    const groups: Group[] =
-      JSON.parse(localStorage.getItem("item-groups") as string) || [];
+    const groups = listGroups();
 
     if (
       newName !== groupName &&
@@ -119,14 +104,13 @@ export default function Page() {
       return g;
     });
 
-    localStorage.setItem("item-groups", JSON.stringify(updated));
+    saveGroups(updated);
     setRenameOpen(false);
     router.push(`/item-groups/${customEncodeURI(newName)}`);
   }
 
   function handleAddItem(itemName: string, gridImageLink: string) {
-    const groups: Group[] =
-      JSON.parse(localStorage.getItem("item-groups") as string) || [];
+    const groups = listGroups();
 
     const updated = groups.map((g) => {
       if (g.name === groupName) {
@@ -136,18 +120,14 @@ export default function Page() {
       return g;
     });
 
-    localStorage.setItem("item-groups", JSON.stringify(updated));
+    saveGroups(updated);
     setNames((prev) => (prev.includes(itemName) ? prev : [...prev, itemName]));
     setSearchItem("");
     setAddItemOpen(false);
   }
 
   useEffect(() => {
-    const groups = localStorage.getItem("item-groups");
-
-    if (!groups) notFound();
-
-    const group = (JSON.parse(groups) as Group[]).find(
+    const group = listGroups().find(
       (group) => group.name.toLowerCase() === groupName.toLowerCase()
     );
 

@@ -90,7 +90,9 @@ export function buildNoteMarker(note: NotePin, draggable = false): L.Marker {
     }),
   });
   if (note.title) {
-    marker.bindTooltip(note.title, { direction: "top", offset: [0, -16] });
+    const content = document.createElement("span");
+    content.textContent = note.title;
+    marker.bindTooltip(content, { direction: "top", offset: [0, -16] });
   }
   return marker;
 }

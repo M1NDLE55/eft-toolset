@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { LoaderCircle, Search } from "lucide-react";
+import { AlertTriangle, LoaderCircle, Search } from "lucide-react";
 import type { GunListItem } from "@/app/lib/types/gunBuilder";
 import { useGunList } from "@/app/lib/cache/gunBuilderHooks";
 import { Button } from "@/components/ui/button";
@@ -14,7 +14,7 @@ interface WeaponPickerProps {
 }
 
 export function WeaponPicker({ disabled, onCreate }: WeaponPickerProps) {
-  const { guns, loading } = useGunList();
+  const { guns, loading, error, retry } = useGunList();
   const [search, setSearch] = useState("");
 
   const filtered = useMemo(() => {
@@ -44,6 +44,14 @@ export function WeaponPicker({ disabled, onCreate }: WeaponPickerProps) {
           <LoaderCircle className="absolute right-3 top-2.5 h-4 w-4 animate-spin text-[#9a8866]" />
         )}
       </div>
+      {error && (
+        <div className="flex items-center justify-between gap-3 border border-red-900/60 p-3 text-sm text-red-300">
+          <span className="flex items-center gap-2">
+            <AlertTriangle className="h-4 w-4" /> Could not load weapons.
+          </span>
+          <Button size="sm" variant="outline" onClick={retry}>Retry</Button>
+        </div>
+      )}
       <div className="max-h-[55vh] overflow-auto border border-[#1a1a1a]">
         {filtered.map((gun) => (
           <div
@@ -88,7 +96,7 @@ export function WeaponPicker({ disabled, onCreate }: WeaponPickerProps) {
             </div>
           </div>
         ))}
-        {!loading && filtered.length === 0 && (
+        {!loading && !error && filtered.length === 0 && (
           <div className="p-4 text-sm text-[#777]">No weapons found.</div>
         )}
       </div>

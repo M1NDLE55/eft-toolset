@@ -11,10 +11,11 @@ import SimpleError from "@/app/components/global/error/simple-error";
 import { useItem } from "@/app/lib/cache/hooks";
 import { addScoutedItem } from "@/app/components/item/scouted-items";
 import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
   const { itemName } = getParam(useParams());
-  const { item, loading } = useItem(itemName);
+  const { item, loading, error, refresh } = useItem(itemName);
 
   useEffect(() => {
     if (item) {
@@ -24,6 +25,17 @@ export default function Page() {
 
   if (loading) {
     return <LoadingSkeleton />;
+  }
+
+  if (error && !item) {
+    return (
+      <SimpleError>
+        <span>Item data is temporarily unavailable.</span>
+        <Button variant="outline" onClick={() => void refresh()}>
+          Retry
+        </Button>
+      </SimpleError>
+    );
   }
 
   if (!item) {

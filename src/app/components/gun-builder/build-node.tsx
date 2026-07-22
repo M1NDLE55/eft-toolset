@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Check, Copy, MoreHorizontal, Plus, Trash2 } from "lucide-react";
 import type { BuildItemData } from "@/app/lib/types/gunBuilder";
-import type { PositionedNode } from "@/app/lib/builds/layout";
+import type { PositionedNode } from "@/app/lib/builds/tree-layout";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,

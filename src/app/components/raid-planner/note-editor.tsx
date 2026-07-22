@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Trash2, X } from "lucide-react";
 import type { NotePin } from "@/app/lib/raid-planner/types";
 import { PLAN_COLORS } from "@/app/lib/raid-planner/types";
@@ -14,6 +15,30 @@ interface NoteEditorProps {
 }
 
 export function NoteEditor({ note, onChange, onDelete, onClose }: NoteEditorProps) {
+  const [title, setTitle] = useState(note.title);
+  const [body, setBody] = useState(note.body);
+  const draft = useRef({ title: note.title, body: note.body });
+  const changeHandler = useRef(onChange);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const discard = useRef(false);
+  changeHandler.current = onChange;
+
+  const flush = useCallback(() => {
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = null;
+    if (!discard.current) changeHandler.current(draft.current);
+  }, []);
+
+  useEffect(() => {
+    return flush;
+  }, [flush]);
+
+  function schedule(changes: Partial<Pick<NotePin, "title" | "body">>) {
+    draft.current = { ...draft.current, ...changes };
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(flush, 300);
+  }
+
   return (
     <div className="flex w-64 flex-col gap-2 border border-[#2a2a2a] bg-[#090909]/95 p-3 backdrop-blur-sm">
       <div className="flex items-center justify-between">
@@ -23,7 +48,12 @@ export function NoteEditor({ note, onChange, onDelete, onClose }: NoteEditorProp
         <div className="flex items-center gap-2">
           <button
             type="button"
-            onClick={onDelete}
+            onClick={() => {
+              if (timer.current) clearTimeout(timer.current);
+              timer.current = null;
+              discard.current = true;
+              onDelete();
+            }}
             className="text-[#777] transition-colors hover:text-[#a04f4f]"
           >
             <Trash2 className="h-4 w-4" />
@@ -31,7 +61,11 @@ export function NoteEditor({ note, onChange, onDelete, onClose }: NoteEditorProp
           </button>
           <button
             type="button"
-            onClick={onClose}
+            onClick={() => {
+              flush();
+              discard.current = true;
+              onClose();
+            }}
             className="text-[#777] transition-colors hover:text-[#ccc]"
           >
             <X className="h-4 w-4" />
@@ -41,16 +75,24 @@ export function NoteEditor({ note, onChange, onDelete, onClose }: NoteEditorProp
       </div>
 
       <Input
-        value={note.title}
+        value={title}
         autoFocus
         placeholder="Title"
-        onChange={(event) => onChange({ title: event.target.value })}
+        onChange={(event) => {
+          setTitle(event.target.value);
+          schedule({ title: event.target.value });
+        }}
+        onBlur={flush}
       />
       <textarea
-        value={note.body}
+        value={body}
         placeholder="Details, callouts, reminders…"
         rows={3}
-        onChange={(event) => onChange({ body: event.target.value })}
+        onChange={(event) => {
+          setBody(event.target.value);
+          schedule({ body: event.target.value });
+        }}
+        onBlur={flush}
         className="w-full resize-none border border-input bg-transparent px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
       />
 

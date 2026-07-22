@@ -3,55 +3,47 @@
 import { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { LoaderCircle, AlertTriangle } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { useBulkCache } from "@/app/lib/cache/provider";
+
+const EMPTY_NAMES: string[] = [];
 
 export default function SearchWrapper({
   handleSelect,
   params = null,
-  excludeNames = [],
+  excludeNames = EMPTY_NAMES,
 }: {
   handleSelect: (itemName: string) => void;
   params?: { itemName: string } | null;
   excludeNames?: string[];
 }) {
-  const [items, setItems] = useState<{ name: string }[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
-
-  useEffect(() => {
-    function getItems() {
-      const stored = localStorage.getItem("items");
-      if (stored) {
-        setItems(JSON.parse(stored));
-        setIsLoading(false);
-        return;
-      }
-      setTimeout(getItems, 200);
-    }
-    getItems();
-  }, []);
+  const { catalog: items, loading: isLoading, error, refreshCatalog } = useBulkCache();
 
   useEffect(() => {
     if (params?.itemName) {
       setSearch("");
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [params]);
+  }, [params?.itemName]);
 
   const filtered = useMemo(() => {
     if (!search) return null;
-    const escaped = search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const regex = new RegExp(escaped, "i");
+    const needle = search.toLocaleLowerCase();
     const excluded = new Set(excludeNames);
-    return items
-      .filter((item) => regex.test(item.name) && !excluded.has(item.name))
-      .slice(0, 20);
+    const matches = [];
+    for (const item of items) {
+      if (!excluded.has(item.name) && item.name.toLocaleLowerCase().includes(needle)) {
+        matches.push(item);
+        if (matches.length === 20) break;
+      }
+    }
+    return matches;
   }, [search, items, excludeNames]);
 
   const placeholder = useMemo(() => {
     if (isLoading) return "Loading items...";
     if (params?.itemName) return "Enter item name";
-    const random = items[Math.floor(Math.random() * items.length)];
-    return random ? `e.g., ${random.name}` : "Enter item name";
+    const example = items[Math.floor(items.length / 2)];
+    return example ? `e.g., ${example.name}` : "Enter item name";
   }, [isLoading, items, params]);
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
@@ -79,6 +71,16 @@ export default function SearchWrapper({
           <LoaderCircle className="absolute right-2 top-2 animate-spin" size={20} />
         )}
       </div>
+      {error && items.length === 0 && (
+        <button
+          type="button"
+          onClick={() => void refreshCatalog()}
+          className="flex items-center gap-2 border border-[#9a8866] bg-[#2a1800] p-3 text-left text-sm text-[#c9b88d]"
+        >
+          <AlertTriangle className="h-4 w-4 shrink-0" />
+          Item catalog unavailable. Select to retry.
+        </button>
+      )}
       {filtered && (
         filtered.length > 0 ? (
           <div className="max-h-[200px] overflow-auto border">

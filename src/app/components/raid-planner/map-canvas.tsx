@@ -16,6 +16,7 @@ import {
   getActiveExtents,
   type LayerEntry,
 } from "@/app/lib/raid-planner/layers";
+import { parseSafeSvg } from "@/app/lib/raid-planner/sanitize-svg";
 
 const BASE_SVG_CLASS = "rp-base-svg";
 const HIDDEN_GROUP_CLASS = "rp-hidden";
@@ -84,6 +85,7 @@ export function MapCanvas({
         "svg"
       );
       svgElement.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+      svgElement.setAttribute("data-rp-map", "");
       svgElementRef.current = svgElement;
 
       const svgBounds = config.svgBounds
@@ -93,18 +95,26 @@ export function MapCanvas({
         className: BASE_SVG_CLASS,
       }).addTo(map);
 
-      fetch(config.svgPath)
-        .then((response) => response.text())
+      const controller = new AbortController();
+      fetch(config.svgPath, { signal: controller.signal })
+        .then((response) => {
+          if (!response.ok) throw new Error(`Map SVG request failed (${response.status}).`);
+          return response.text();
+        })
         .then((svgText) => {
-          svgElement.innerHTML = svgText;
-          const inner = svgElement.children[0];
-          const viewBox = inner?.getAttribute("viewBox");
+          const safeSvg = parseSafeSvg(svgText);
+          const viewBox = safeSvg.getAttribute("viewBox");
           if (viewBox) svgElement.setAttribute("viewBox", viewBox);
+          svgElement.replaceChildren(
+            ...Array.from(safeSvg.childNodes).map((node) => document.importNode(node, true))
+          );
           applySvgFloor(svgElement, config, activeFloorRef.current);
         })
-        .catch(() => {
+        .catch((error) => {
+          if (error instanceof DOMException && error.name === "AbortError") return;
           // Leave the overlay empty; the map background still pans/zooms.
         });
+      baseLayerRef.current.once("remove", () => controller.abort());
     }
 
     map.fitBounds(bounds);

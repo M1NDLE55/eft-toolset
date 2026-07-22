@@ -1,35 +1,34 @@
 "use client";
 
 import type { BuildNode, GunBuild } from "@/app/lib/types/gunBuilder";
+import { readStore, subscribeStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
 
-const STORAGE_KEY = "gun-builds";
+const BUILD_STORE: StoreDefinition<GunBuild[]> = {
+  key: "eft-toolset:gun-builds",
+  legacyKeys: ["gun-builds"],
+  version: 1,
+  defaultValue: () => [],
+  validate: isBuildList,
+};
 
 function now() {
   return Date.now();
 }
 
 function ensureBuilds(): GunBuild[] {
-  if (typeof window === "undefined") return [];
-  const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (!stored) {
-    window.localStorage.setItem(STORAGE_KEY, "[]");
-    return [];
-  }
-
-  try {
-    const parsed = JSON.parse(stored);
-    return Array.isArray(parsed) ? (parsed as GunBuild[]) : [];
-  } catch {
-    return [];
-  }
+  return readStore(BUILD_STORE);
 }
 
 function writeBuilds(builds: GunBuild[]) {
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(builds));
+  writeStore(BUILD_STORE, builds);
 }
 
 export function listBuilds(): GunBuild[] {
   return ensureBuilds().sort((a, b) => b.updatedAt - a.updatedAt);
+}
+
+export function subscribeBuilds(listener: () => void) {
+  return subscribeStore(BUILD_STORE.key, listener);
 }
 
 export function getBuild(id: string): GunBuild | undefined {
@@ -164,4 +163,42 @@ export function removeMod(root: BuildNode, path: string[]): BuildNode {
     delete nextSlots[slotToRemove];
     return { ...node, slots: nextSlots };
   });
+}
+
+function isBuildList(value: unknown): value is GunBuild[] {
+  return Array.isArray(value) && value.length <= 500 && value.every(isGunBuild);
+}
+
+function isGunBuild(value: unknown): value is GunBuild {
+  if (!value || typeof value !== "object") return false;
+  const build = value as Partial<GunBuild>;
+  return (
+    typeof build.id === "string" &&
+    typeof build.name === "string" &&
+    build.name.length <= 120 &&
+    typeof build.weaponId === "string" &&
+    typeof build.createdAt === "number" &&
+    Number.isFinite(build.createdAt) &&
+    typeof build.updatedAt === "number" &&
+    Number.isFinite(build.updatedAt) &&
+    isBuildNode(build.root)
+  );
+}
+
+function isBuildNode(value: unknown): value is BuildNode {
+  const stack: { node: unknown; depth: number }[] = [{ node: value, depth: 0 }];
+  let count = 0;
+  while (stack.length > 0) {
+    const { node, depth } = stack.pop()!;
+    count += 1;
+    if (count > 1_000 || depth > 64 || !node || typeof node !== "object") return false;
+    const candidate = node as Partial<BuildNode>;
+    if (typeof candidate.itemId !== "string" || !candidate.slots || typeof candidate.slots !== "object") {
+      return false;
+    }
+    const children = Object.values(candidate.slots);
+    if (children.length > 64) return false;
+    for (const child of children) stack.push({ node: child, depth: depth + 1 });
+  }
+  return true;
 }

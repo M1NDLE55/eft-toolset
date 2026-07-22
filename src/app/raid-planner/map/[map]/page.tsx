@@ -14,6 +14,7 @@ import type { MapDetails } from "@/app/lib/types/raidPlanner";
 import { FloorSwitcher } from "@/app/components/raid-planner/floor-switcher";
 import { LayerPanel } from "@/app/components/raid-planner/layer-panel";
 import { Skeleton } from "@/components/ui/skeleton";
+import { readStoredLayers, writeStoredLayers } from "@/app/lib/raid-planner/layer-store";
 
 const MapCanvas = dynamic(
   () =>
@@ -25,33 +26,6 @@ const MapCanvas = dynamic(
     loading: () => <Skeleton className="h-full w-full" />,
   }
 );
-
-const LAYER_STORAGE_KEY = "raid-planner-layers";
-
-function readStoredLayers(mapKey: string): Set<string> {
-  try {
-    const all = JSON.parse(
-      window.localStorage.getItem(LAYER_STORAGE_KEY) ?? "{}"
-    );
-    const ids = all?.[mapKey];
-    return new Set(Array.isArray(ids) ? ids : []);
-  } catch {
-    return new Set();
-  }
-}
-
-function writeStoredLayers(mapKey: string, ids: Set<string>) {
-  try {
-    const all = JSON.parse(
-      window.localStorage.getItem(LAYER_STORAGE_KEY) ?? "{}"
-    );
-    const next = typeof all === "object" && all !== null ? all : {};
-    next[mapKey] = Array.from(ids);
-    window.localStorage.setItem(LAYER_STORAGE_KEY, JSON.stringify(next));
-  } catch {
-    // localStorage unavailable — layer toggles just won't persist.
-  }
-}
 
 export default function MapViewerPage({
   params,

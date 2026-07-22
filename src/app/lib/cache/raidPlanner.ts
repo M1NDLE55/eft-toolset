@@ -1,13 +1,12 @@
 import type { GameMode } from "@/components/game-mode/context";
 import type {
   ExtractFaction,
-  MapBoss,
   MapDetails,
   MapSpawn,
   SpawnKind,
 } from "@/app/lib/types/raidPlanner";
-import { cacheGet, cacheSet } from "./store";
-import { gqlFetch } from "./fetcher";
+import { gqlFetch } from "@/app/lib/api/transport";
+import { ensureQuery, type QueryDefinition } from "@/app/lib/api/queryClient";
 import { MAP_DETAILS } from "./raidPlannerQueries";
 
 /**
@@ -15,32 +14,6 @@ import { MAP_DETAILS } from "./raidPlannerQueries";
  * changes self-invalidate, TTL'd so wipe/patch position changes surface within
  * a day.
  */
-const MAP_CACHE_VERSION = 1;
-const MAP_CACHE_TTL = 1000 * 60 * 60 * 24;
-
-interface CacheEnvelope<T> {
-  v: number;
-  t: number;
-  data: T;
-}
-
-async function readCache<T>(key: string): Promise<T | undefined> {
-  const entry = await cacheGet<CacheEnvelope<T>>(key);
-  if (!entry || typeof entry !== "object" || entry.v !== MAP_CACHE_VERSION) {
-    return undefined;
-  }
-  if (Date.now() - entry.t > MAP_CACHE_TTL) return undefined;
-  return entry.data;
-}
-
-async function writeCache<T>(key: string, data: T): Promise<void> {
-  await cacheSet<CacheEnvelope<T>>(key, {
-    v: MAP_CACHE_VERSION,
-    t: Date.now(),
-    data,
-  });
-}
-
 interface RawPosition {
   x: number;
   y: number;
@@ -75,10 +48,9 @@ interface RawMap {
     lockType?: string | null;
     needsPower?: boolean | null;
     position?: RawPosition | null;
-    key?: { id: string; name?: string | null } | null;
+    key?: { name?: string | null } | null;
   }[];
   hazards?: {
-    hazardType?: string | null;
     name?: string | null;
     position?: RawPosition | null;
     outline?: { x: number; z: number }[] | null;
@@ -97,10 +69,6 @@ interface RawMap {
   stationaryWeapons?: {
     position?: RawPosition | null;
     stationaryWeapon?: { name?: string | null } | null;
-  }[];
-  bosses?: {
-    boss?: { name?: string | null } | null;
-    spawnChance?: number | null;
   }[];
 }
 
@@ -124,17 +92,6 @@ function spawnKind(
   if (cats.includes("botpmc")) return "raider";
   if (cats.includes("bot") || cats.includes("all")) return "scav";
   return null;
-}
-
-/** De-duplicate bosses that appear once per spawn zone (e.g. Factory USEC×2). */
-function normalizeBosses(raw: RawMap["bosses"]): MapBoss[] {
-  const byName = new Map<string, number>();
-  for (const entry of raw ?? []) {
-    const name = entry.boss?.name;
-    if (!name) continue;
-    byName.set(name, Math.max(byName.get(name) ?? 0, entry.spawnChance ?? 0));
-  }
-  return Array.from(byName, ([name, spawnChance]) => ({ name, spawnChance }));
 }
 
 function normalizeMap(key: string, raw: RawMap): MapDetails {
@@ -181,13 +138,11 @@ function normalizeMap(key: string, raw: RawMap): MapDetails {
         lockType: l.lockType ?? "door",
         needsPower: Boolean(l.needsPower),
         position: l.position as RawPosition,
-        keyId: l.key?.id ?? null,
         keyName: l.key?.name ?? null,
       })),
     hazards: (raw.hazards ?? [])
       .filter((h) => h.position)
       .map((h) => ({
-        hazardType: h.hazardType ?? "hazard",
         name: h.name ?? "Hazard",
         position: h.position as RawPosition,
         outline: h.outline ?? [],
@@ -214,7 +169,6 @@ function normalizeMap(key: string, raw: RawMap): MapDetails {
         name: w.stationaryWeapon?.name ?? "Stationary weapon",
         position: w.position as RawPosition,
       })),
-    bosses: normalizeBosses(raw.bosses),
   };
 }
 
@@ -223,19 +177,35 @@ export async function fetchMapDetails(
   mapName: string,
   gameMode: GameMode
 ): Promise<MapDetails | null> {
-  const cacheKey = `map-details:${gameMode}:${mapKey}`;
-  const cached = await readCache<MapDetails>(cacheKey);
-  if (cached) return cached;
-
-  const data = await gqlFetch<{ maps: RawMap[] }>(MAP_DETAILS, {
-    gameMode,
-    name: [mapName],
-  });
-
-  const raw = (data.maps ?? []).find((m) => m.normalizedName === mapKey);
-  if (!raw) return null;
-
-  const details = normalizeMap(mapKey, raw);
-  await writeCache(cacheKey, details);
-  return details;
+  return ensureQuery(mapDetailsQuery, { mapKey, mapName, gameMode });
 }
+
+interface MapDetailsVariables {
+  mapKey: string;
+  mapName: string;
+  gameMode: GameMode;
+}
+
+export const mapDetailsQuery: QueryDefinition<MapDetailsVariables, MapDetails | null> = {
+  id: "map-details",
+  version: 2,
+  staleTime: 1000 * 60 * 60,
+  maxAge: 1000 * 60 * 60 * 24 * 7,
+  persist: true,
+  validate: (value): value is MapDetails | null =>
+    value === null ||
+    (Boolean(value) &&
+      typeof value === "object" &&
+      typeof (value as MapDetails).key === "string" &&
+      Array.isArray((value as MapDetails).extracts)),
+  fetch: async ({ mapKey, mapName, gameMode }, signal) => {
+    const data = await gqlFetch<{ maps: RawMap[] }>(
+      MAP_DETAILS,
+      { gameMode, name: [mapName] },
+      { operationName: "MapDetails", signal }
+    );
+
+    const raw = (data.maps ?? []).find((map) => map.normalizedName === mapKey);
+    return raw ? normalizeMap(mapKey, raw) : null;
+  },
+};

@@ -216,7 +216,9 @@ interface PointSpec {
 }
 
 function bindTooltip(layer: L.Layer, text: string) {
-  layer.bindTooltip(text, { direction: "top", offset: [0, -8] });
+  const content = document.createElement("span");
+  content.textContent = text;
+  layer.bindTooltip(content, { direction: "top", offset: [0, -8] });
 }
 
 function buildGlyphs(
@@ -314,14 +316,24 @@ function buildLocks(context: LayerBuildContext): LayerEntry {
     bindTooltip(marker, lock.keyName ? `${title} — ${lock.keyName}` : title);
 
     if (lock.keyName) {
-      const keyLink = `<a href="/item/${customEncodeURI(lock.keyName)}">${lock.keyName}</a>`;
-      marker.bindPopup(
-        `<div class="rp-popup"><p class="rp-popup-title">${title}</p>` +
-          `<p>Key: ${keyLink}</p>` +
-          (lock.needsPower ? "<p>Requires power</p>" : "") +
-          "</div>",
-        { closeButton: false }
-      );
+      const popup = document.createElement("div");
+      popup.className = "rp-popup";
+      const heading = document.createElement("p");
+      heading.className = "rp-popup-title";
+      heading.textContent = title;
+      const keyLine = document.createElement("p");
+      keyLine.append("Key: ");
+      const keyLink = document.createElement("a");
+      keyLink.href = `/item/${customEncodeURI(lock.keyName)}`;
+      keyLink.textContent = lock.keyName;
+      keyLine.append(keyLink);
+      popup.append(heading, keyLine);
+      if (lock.needsPower) {
+        const power = document.createElement("p");
+        power.textContent = "Requires power";
+        popup.append(power);
+      }
+      marker.bindPopup(popup, { closeButton: false });
     }
 
     marker.addTo(group);
