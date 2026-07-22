@@ -2,34 +2,25 @@ import type { GameMode } from "@/components/game-mode/context";
 import type {
   BuildItemData,
   GunListItem,
-  ModSlotDef,
   PickItemData,
   PresetContents,
 } from "@/app/lib/types/gunBuilder";
 import { cacheGet, cacheGetMany, cacheSet, cacheSetMany } from "./store";
-import { gqlFetch } from "@/app/lib/api/transport";
-import {
-  BUILD_ITEMS,
-  GUN_LIST,
-  PICK_ITEMS,
-  PRESET_DETAIL,
-} from "./gunBuilderQueries";
+import { apiFetch } from "@/app/lib/api/transport";
+import { TARKOV_OPERATIONS, type TarkovOperation } from "@/app/lib/api/operations";
 
 /**
  * Gun-builder data lives in the same idb store as the bulk cache but is fetched
  * lazily and never goes through the bulk `meta` version gate. Wrap every entry
  * in a small envelope so it self-invalidates on schema changes (bump the
- * version) or after a wipe/patch (TTL). buyFor here is trader pricing, which is
- * stable within a wipe. Volatile prices expire after 15 minutes while weapon
- * structure and presets expire after 24 hours.
+ * version) or after a wipe/patch (TTL). Volatile trader/flea projections expire
+ * after 15 minutes while weapon structure and presets expire after 24 hours.
  */
-const GUN_CACHE_VERSION = 2;
+const GUN_CACHE_VERSION = 3;
 const PRICE_CACHE_TTL = 1000 * 60 * 15;
 const STRUCTURE_CACHE_TTL = 1000 * 60 * 60 * 24;
 const ID_BATCH_SIZE = 100;
 const BATCH_CONCURRENCY = 2;
-
-const FLEA_VENDOR = "Flea Market";
 
 interface CacheEnvelope<T> {
   v: number;
@@ -78,156 +69,12 @@ async function writeCache<T>(key: string, data: T): Promise<void> {
   }
 }
 
-interface RawBuyFor {
-  priceRUB?: number | null;
-  vendor?: { name?: string | null } | null;
-}
-
-interface RawSlot {
-  id: string;
-  name: string;
-  nameId: string;
-  required: boolean;
-  filters?: { allowedItems?: { id: string }[] | null } | null;
-}
-
-interface RawBuildItem {
-  id: string;
-  name: string;
-  shortName?: string | null;
-  gridImageLink?: string | null;
-  weight?: number | null;
-  buyFor?: RawBuyFor[] | null;
-  conflictingItems?: { id: string }[] | null;
-  conflictingSlotIds?: string[] | null;
-  properties?: {
-    __typename?: string;
-    caliber?: string | null;
-    ergonomics?: number | null;
-    recoilModifier?: number | null;
-    recoilVertical?: number | null;
-    recoilHorizontal?: number | null;
-    fireRate?: number | null;
-    fireModes?: string[] | null;
-    defaultAmmo?: { name: string } | null;
-    defaultPreset?: { id: string } | null;
-    presets?: { id: string; name: string }[] | null;
-    slots?: RawSlot[] | null;
-  } | null;
-}
-
-interface RawGunListItem {
-  id: string;
-  name: string;
-  shortName?: string | null;
-  gridImageLink?: string | null;
-  properties?: {
-    defaultPreset?: { id: string } | null;
-  } | null;
-}
-
-/**
- * Splits `buyFor` offers into the cheapest trader price and the flea price.
- * tarkov.dev returns flea as a vendor named "Flea Market" inside `buyFor`;
- * everything else is a trader.
- */
-function splitPrices(buyFor?: RawBuyFor[] | null): {
-  trader: number | null;
-  flea: number | null;
-} {
-  let trader: number | null = null;
-  let flea: number | null = null;
-
-  for (const offer of buyFor ?? []) {
-    if (typeof offer.priceRUB !== "number") continue;
-    if (offer.vendor?.name === FLEA_VENDOR) {
-      flea = flea === null ? offer.priceRUB : Math.min(flea, offer.priceRUB);
-    } else {
-      trader =
-        trader === null ? offer.priceRUB : Math.min(trader, offer.priceRUB);
-    }
-  }
-
-  return { trader, flea };
-}
-
-function normalizeSlots(slots?: RawSlot[] | null): ModSlotDef[] {
-  return (slots ?? []).map((slot) => ({
-    id: slot.id,
-    name: slot.name,
-    nameId: slot.nameId,
-    required: Boolean(slot.required),
-    allowedItemIds: slot.filters?.allowedItems?.map((item) => item.id) ?? [],
-  }));
-}
-
-function normalizeBuildItem(item: RawBuildItem): BuildItemData {
-  const properties = item.properties;
-  const isWeapon = properties?.__typename === "ItemPropertiesWeapon";
-  const prices = splitPrices(item.buyFor);
-
-  return {
-    id: item.id,
-    name: item.name,
-    shortName: item.shortName ?? item.name,
-    gridImageLink: item.gridImageLink ?? null,
-    weight: item.weight ?? 0,
-    traderPriceRUB: prices.trader,
-    fleaPriceRUB: prices.flea,
-    ergonomics: properties?.ergonomics ?? 0,
-    recoilModifier: isWeapon ? 0 : properties?.recoilModifier ?? 0,
-    recoilVertical: isWeapon ? properties?.recoilVertical ?? null : null,
-    recoilHorizontal: isWeapon ? properties?.recoilHorizontal ?? null : null,
-    isWeapon,
-    caliber: properties?.caliber ?? null,
-    fireRate: properties?.fireRate ?? null,
-    fireModes: properties?.fireModes ?? [],
-    defaultAmmoName: properties?.defaultAmmo?.name ?? null,
-    defaultPresetId: properties?.defaultPreset?.id ?? null,
-    presets: properties?.presets ?? [],
-    conflictingItemIds:
-      item.conflictingItems?.map((conflict) => conflict.id) ?? [],
-    conflictingSlotIds: item.conflictingSlotIds ?? [],
-    slots: normalizeSlots(properties?.slots),
-  };
-}
-
-function normalizePickItem(item: RawBuildItem): PickItemData {
-  const prices = splitPrices(item.buyFor);
-  return {
-    id: item.id,
-    name: item.name,
-    shortName: item.shortName ?? item.name,
-    gridImageLink: item.gridImageLink ?? null,
-    weight: item.weight ?? 0,
-    traderPriceRUB: prices.trader,
-    fleaPriceRUB: prices.flea,
-    ergonomics: item.properties?.ergonomics ?? 0,
-    recoilModifier: item.properties?.recoilModifier ?? 0,
-    conflictingItemIds:
-      item.conflictingItems?.map((conflict) => conflict.id) ?? [],
-    conflictingSlotIds: item.conflictingSlotIds ?? [],
-  };
-}
-
 export async function fetchGunList(gameMode: GameMode): Promise<GunListItem[]> {
   const cacheKey = `guns:${gameMode}`;
   const cached = await readCache<GunListItem[]>(cacheKey, STRUCTURE_CACHE_TTL);
   if (cached) return cached;
 
-  const data = await gqlFetch<{ items: RawGunListItem[] }>(
-    GUN_LIST,
-    { gameMode },
-    { operationName: "GunList" }
-  );
-
-  const guns = (data.items ?? []).map((item) => ({
-    id: item.id,
-    name: item.name,
-    shortName: item.shortName ?? item.name,
-    gridImageLink: item.gridImageLink ?? null,
-    defaultPresetId: item.properties?.defaultPreset?.id ?? null,
-  }));
+  const guns = await apiFetch<GunListItem[]>(TARKOV_OPERATIONS.gunList, { gameMode });
 
   await writeCache(cacheKey, guns);
   return guns;
@@ -235,14 +82,13 @@ export async function fetchGunList(gameMode: GameMode): Promise<GunListItem[]> {
 
 /**
  * Generic batched lazy-loader for per-id detail. Reads each id from idb, issues
- * one GraphQL call for the misses, normalizes, and writes each back.
+ * one typed API call for the misses and writes each result back.
  */
 async function fetchCachedById<T extends { id: string }>(
   ids: string[],
-  query: string,
+  operation: TarkovOperation,
   gameMode: GameMode,
-  keyPrefix: string,
-  normalize: (raw: RawBuildItem) => T
+  keyPrefix: string
 ): Promise<T[]> {
   const uniqueIds = Array.from(new Set(ids)).filter(Boolean);
   if (uniqueIds.length === 0) return [];
@@ -260,15 +106,11 @@ async function fetchCachedById<T extends { id: string }>(
     const batch = chunks.slice(index, index + BATCH_CONCURRENCY);
     const responses = await Promise.all(
       batch.map((ids) =>
-        gqlFetch<{ items: RawBuildItem[] }>(
-          query,
-          { ids, gameMode },
-          { operationName: keyPrefix === "pick-item" ? "PickItems" : "BuildItems" }
-        )
+        apiFetch<T[]>(operation, { ids, gameMode })
       )
     );
     for (const response of responses) {
-      fetched.push(...(response.items ?? []).map(normalize));
+      fetched.push(...response);
     }
   }
 
@@ -298,10 +140,9 @@ export function fetchBuildItems(
 ): Promise<BuildItemData[]> {
   return fetchCachedById(
     ids,
-    BUILD_ITEMS,
+    TARKOV_OPERATIONS.buildItems,
     gameMode,
-    "build-item",
-    normalizeBuildItem
+    "build-item"
   );
 }
 
@@ -311,10 +152,9 @@ export function fetchPickItems(
 ): Promise<PickItemData[]> {
   return fetchCachedById(
     ids,
-    PICK_ITEMS,
+    TARKOV_OPERATIONS.pickItems,
     gameMode,
-    "pick-item",
-    normalizePickItem
+    "pick-item"
   );
 }
 
@@ -326,26 +166,10 @@ export async function fetchPreset(
   const cached = await readCache<PresetContents | null>(cacheKey, STRUCTURE_CACHE_TTL);
   if (cached !== undefined) return cached;
 
-  const data = await gqlFetch<{
-    items: {
-      properties?: { baseItem?: { id: string } | null } | null;
-      containsItems?: { item?: { id: string } | null }[] | null;
-    }[];
-  }>(PRESET_DETAIL, { id, gameMode }, { operationName: "Preset" });
-
-  const preset = data.items?.[0];
-  if (!preset) {
-    await writeCache(cacheKey, null);
-    return null;
-  }
-
-  const result: PresetContents = {
-    baseItemId: preset.properties?.baseItem?.id ?? null,
-    itemIds:
-      preset.containsItems
-        ?.map((entry) => entry.item?.id)
-        .filter((itemId): itemId is string => Boolean(itemId)) ?? [],
-  };
+  const result = await apiFetch<PresetContents | null>(
+    TARKOV_OPERATIONS.preset,
+    { id, gameMode }
+  );
   await writeCache(cacheKey, result);
   return result;
 }

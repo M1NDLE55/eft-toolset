@@ -1,11 +1,9 @@
 import type { GameMode } from "@/components/game-mode/context";
-import { gqlFetch } from "@/app/lib/api/transport";
+import { apiFetch } from "@/app/lib/api/transport";
+import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import type { QueryDefinition } from "@/app/lib/api/queryClient";
-import { GET_ITEM, GROUP_ITEMS, ITEM_CATALOG } from "./queries";
 import type { CachedItem, CatalogItem, ComposedItem } from "./types";
 
-const PAGE_SIZE = 500;
-const MAX_PAGES = 100;
 const NAME_BATCH_SIZE = 100;
 const BATCH_CONCURRENCY = 2;
 const MINUTE = 60_000;
@@ -21,18 +19,18 @@ interface GroupVariables extends ModeVariables {
 
 export const itemCatalogQuery: QueryDefinition<ModeVariables, CatalogItem[]> = {
   id: "item-catalog",
-  version: 1,
+  version: 2,
   staleTime: DAY,
   maxAge: 30 * DAY,
   persist: true,
   validate: isCatalog,
   fetch: ({ gameMode }, signal) =>
-    fetchPaginated<CatalogItem>(ITEM_CATALOG, "items", gameMode, signal),
+    apiFetch<CatalogItem[]>(TARKOV_OPERATIONS.itemCatalog, { gameMode }, { signal }),
 };
 
 export const groupItemsQuery: QueryDefinition<GroupVariables, CachedItem[]> = {
   id: "group-items",
-  version: 1,
+  version: 2,
   staleTime: 10 * MINUTE,
   maxAge: 30 * DAY,
   persist: true,
@@ -40,44 +38,27 @@ export const groupItemsQuery: QueryDefinition<GroupVariables, CachedItem[]> = {
   fetch: async ({ names, gameMode }, signal) => {
     const uniqueNames = Array.from(new Set(names.filter(Boolean))).sort();
     if (uniqueNames.length === 0) return [];
-    return fetchNamesBatched<CachedItem>(GROUP_ITEMS, uniqueNames, gameMode, signal);
+    const batches = chunk(uniqueNames, NAME_BATCH_SIZE);
+    const results: CachedItem[] = [];
+    for (let index = 0; index < batches.length; index += BATCH_CONCURRENCY) {
+      const responses = await Promise.all(
+        batches.slice(index, index + BATCH_CONCURRENCY).map((batch) =>
+          apiFetch<CachedItem[]>(
+            TARKOV_OPERATIONS.groupItems,
+            { names: batch, gameMode },
+            { signal }
+          )
+        )
+      );
+      for (const response of responses) results.push(...response);
+    }
+    return results;
   },
 };
 
-async function fetchNamesBatched<T>(
-  query: string,
-  names: string[],
-  gameMode: GameMode,
-  signal: AbortSignal
-): Promise<T[]> {
-  const batches = chunk(names, NAME_BATCH_SIZE);
-  const results: T[] = [];
-  for (let index = 0; index < batches.length; index += BATCH_CONCURRENCY) {
-    const responses = await Promise.all(
-      batches.slice(index, index + BATCH_CONCURRENCY).map((batch) =>
-        gqlFetch<{ items: T[] }>(
-          query,
-          { names: batch, gameMode },
-          { signal, operationName: "GroupItems" }
-        )
-      )
-    );
-    for (const response of responses) results.push(...(response.items ?? []));
-  }
-  return results;
-}
-
-function chunk<T>(values: T[], size: number) {
-  const result: T[][] = [];
-  for (let index = 0; index < values.length; index += size) {
-    result.push(values.slice(index, index + size));
-  }
-  return result;
-}
-
 export const itemDetailQuery: QueryDefinition<GroupVariables, ComposedItem | null> = {
   id: "item-detail",
-  version: 1,
+  version: 2,
   staleTime: 5 * MINUTE,
   maxAge: 30 * DAY,
   persist: true,
@@ -85,44 +66,20 @@ export const itemDetailQuery: QueryDefinition<GroupVariables, ComposedItem | nul
   fetch: async ({ names, gameMode }, signal) => {
     const name = names.find(Boolean);
     if (!name) return null;
-    const data = await gqlFetch<{ items: ComposedItem[] }>(
-      GET_ITEM,
-      { names: [name], gameMode },
-      { signal, operationName: "GetItem" }
+    return apiFetch<ComposedItem | null>(
+      TARKOV_OPERATIONS.itemDetail,
+      { name, gameMode },
+      { signal }
     );
-    return data.items?.find((item) => item.name === name) ?? data.items?.[0] ?? null;
   },
 };
 
-async function fetchPaginated<T extends { id: string }>(
-  query: string,
-  rootField: string,
-  gameMode: GameMode,
-  signal: AbortSignal
-): Promise<T[]> {
-  const results: T[] = [];
-  const seen = new Set<string>();
-
-  for (let pageNumber = 0; pageNumber < MAX_PAGES; pageNumber += 1) {
-    const data = await gqlFetch<Record<string, T[]>>(
-      query,
-      { gameMode, limit: PAGE_SIZE, offset: pageNumber * PAGE_SIZE },
-      { signal, operationName: "ItemCatalog" }
-    );
-    const page = data[rootField] ?? [];
-    let newRows = 0;
-    for (const row of page) {
-      if (!row.id || seen.has(row.id)) continue;
-      seen.add(row.id);
-      results.push(row);
-      newRows += 1;
-    }
-
-    if (page.length < PAGE_SIZE) return results;
-    if (newRows === 0) throw new Error(`Pagination for ${rootField} repeated a page.`);
+function chunk<T>(values: T[], size: number) {
+  const result: T[][] = [];
+  for (let index = 0; index < values.length; index += size) {
+    result.push(values.slice(index, index + size));
   }
-
-  throw new Error(`Pagination for ${rootField} exceeded ${MAX_PAGES} pages.`);
+  return result;
 }
 
 function isCatalog(value: unknown): value is CatalogItem[] {

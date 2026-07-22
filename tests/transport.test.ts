@@ -1,27 +1,68 @@
 import { describe, expect, it, vi } from "vitest";
-import { gqlFetch } from "@/app/lib/api/transport";
+import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
+import { apiFetch } from "@/app/lib/api/transport";
 
-describe("GraphQL transport", () => {
-  it("returns typed GraphQL errors with partial data", async () => {
-    vi.spyOn(globalThis, "fetch").mockResolvedValue(
-      new Response(JSON.stringify({ data: { items: [] }, errors: [{ message: "Unavailable" }] }), {
+describe("typed API transport", () => {
+  it("posts an allowlisted operation and returns its data", async () => {
+    const fetchMock = vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(JSON.stringify({ data: [{ id: "item-1" }] }), {
         status: 200,
         headers: { "Content-Type": "application/json" },
       })
     );
 
-    const request = gqlFetch("query Items { items { id } }", {}, { retries: 0 });
+    await expect(
+      apiFetch<{ id: string }[]>(
+        TARKOV_OPERATIONS.itemCatalog,
+        { gameMode: "regular" },
+        { retries: 0 }
+      )
+    ).resolves.toEqual([{ id: "item-1" }]);
+
+    expect(fetchMock).toHaveBeenCalledWith(
+      "/api/tarkov",
+      expect.objectContaining({
+        method: "POST",
+        body: JSON.stringify({
+          operation: TARKOV_OPERATIONS.itemCatalog,
+          variables: { gameMode: "regular" },
+        }),
+      })
+    );
+  });
+
+  it("returns typed API errors", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response(
+        JSON.stringify({ error: { message: "Unavailable", code: "UPSTREAM_UNAVAILABLE" } }),
+        {
+          status: 502,
+          headers: { "Content-Type": "application/json" },
+        }
+      )
+    );
+
+    const request = apiFetch(
+      TARKOV_OPERATIONS.itemCatalog,
+      { gameMode: "regular" },
+      { retries: 0 }
+    );
     await expect(request).rejects.toMatchObject({
-      kind: "graphql",
+      kind: "http",
+      status: 502,
+      code: "UPSTREAM_UNAVAILABLE",
       message: "Unavailable",
-      partialData: { items: [] },
     });
   });
 
   it("classifies unreadable HTTP responses", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(new Response("not json", { status: 502 }));
     await expect(
-      gqlFetch("query Items { items { id } }", {}, { retries: 0 })
+      apiFetch(
+        TARKOV_OPERATIONS.itemCatalog,
+        { gameMode: "regular" },
+        { retries: 0 }
+      )
     ).rejects.toMatchObject({ kind: "decode", status: 502 });
   });
 });

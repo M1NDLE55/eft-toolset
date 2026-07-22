@@ -1,45 +1,41 @@
-const API_URL = "https://api.tarkov.dev/graphql";
+import type { TarkovOperation } from "./operations";
+
+const API_URL = "/api/tarkov";
 const DEFAULT_TIMEOUT_MS = 15_000;
 const DEFAULT_RETRIES = 2;
 
-export interface GraphQLIssue {
-  message: string;
-  path?: readonly (string | number)[];
-  extensions?: Record<string, unknown>;
-}
-
-export class GraphQLTransportError extends Error {
+export class ApiTransportError extends Error {
   constructor(
     message: string,
-    readonly kind: "http" | "graphql" | "network" | "decode" | "timeout",
+    readonly kind: "http" | "api" | "network" | "decode" | "timeout",
     readonly status?: number,
-    readonly issues: GraphQLIssue[] = [],
-    readonly partialData?: unknown
+    readonly code?: string
   ) {
     super(message);
-    this.name = "GraphQLTransportError";
+    this.name = "ApiTransportError";
   }
 }
 
-export interface GraphQLRequestOptions {
+export interface ApiRequestOptions {
   signal?: AbortSignal;
   timeoutMs?: number;
   retries?: number;
-  operationName?: string;
 }
 
-interface GraphQLResponse<T> {
+interface ApiResponse<T> {
   data?: T;
-  errors?: unknown[];
+  error?: {
+    message?: unknown;
+    code?: unknown;
+  };
 }
 
-export async function gqlFetch<T>(
-  query: string,
+export async function apiFetch<T>(
+  operation: TarkovOperation,
   variables: Record<string, unknown>,
-  options: GraphQLRequestOptions = {}
+  options: ApiRequestOptions = {}
 ): Promise<T> {
   const startedAt = now();
-  const operationName = options.operationName ?? operationNameFrom(query);
   const requestedRetries = options.retries ?? DEFAULT_RETRIES;
   const retries = Number.isFinite(requestedRetries)
     ? Math.min(5, Math.max(0, Math.floor(requestedRetries)))
@@ -47,8 +43,8 @@ export async function gqlFetch<T>(
 
   for (let attempt = 0; ; attempt += 1) {
     try {
-      const result = await requestOnce<T>(query, variables, options);
-      reportQuery({ operationName, durationMs: now() - startedAt, status: "success", attempt });
+      const result = await requestOnce<T>(operation, variables, options);
+      reportQuery({ operation, durationMs: now() - startedAt, status: "success", attempt });
       return result;
     } catch (error) {
       const normalized = normalizeError(error);
@@ -56,7 +52,7 @@ export async function gqlFetch<T>(
 
       if (attempt >= retries || !isRetryable(normalized)) {
         reportQuery({
-          operationName,
+          operation,
           durationMs: now() - startedAt,
           status: "error",
           attempt,
@@ -72,17 +68,17 @@ export async function gqlFetch<T>(
 }
 
 async function requestOnce<T>(
-  query: string,
+  operation: TarkovOperation,
   variables: Record<string, unknown>,
-  options: GraphQLRequestOptions
+  options: ApiRequestOptions
 ): Promise<T> {
   const controller = new AbortController();
   const requestedTimeout = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
   const timeoutMs = Number.isFinite(requestedTimeout)
     ? Math.min(60_000, Math.max(1, requestedTimeout))
     : DEFAULT_TIMEOUT_MS;
-  const timeout = windowSafeSetTimeout(() => {
-    controller.abort(new GraphQLTransportError("The API request timed out.", "timeout"));
+  const timeout = setTimeout(() => {
+    controller.abort(new ApiTransportError("The API request timed out.", "timeout"));
   }, timeoutMs);
 
   const abortFromCaller = () => controller.abort(options.signal?.reason);
@@ -95,16 +91,16 @@ async function requestOnce<T>(
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ query, variables }),
+      body: JSON.stringify({ operation, variables }),
       signal: controller.signal,
       cache: "no-store",
     });
 
-    let json: GraphQLResponse<T>;
+    let json: ApiResponse<T>;
     try {
-      json = (await response.json()) as GraphQLResponse<T>;
+      json = (await response.json()) as ApiResponse<T>;
     } catch {
-      throw new GraphQLTransportError(
+      throw new ApiTransportError(
         `The API returned an unreadable response (${response.status}).`,
         "decode",
         response.status
@@ -112,47 +108,47 @@ async function requestOnce<T>(
     }
 
     if (!json || typeof json !== "object") {
-      throw new GraphQLTransportError(
+      throw new ApiTransportError(
         `The API returned an invalid response (${response.status}).`,
         "decode",
         response.status
       );
     }
 
+    const message =
+      typeof json.error?.message === "string" ? json.error.message : undefined;
+    const code = typeof json.error?.code === "string" ? json.error.code : undefined;
+
     if (!response.ok) {
-      const issues = normalizeIssues(json.errors);
-      throw new GraphQLTransportError(
-        issues[0]?.message ?? `The API request failed (${response.status}).`,
+      throw new ApiTransportError(
+        message ?? `The API request failed (${response.status}).`,
         "http",
         response.status,
-        issues,
-        json.data
+        code
       );
     }
 
-    const issues = normalizeIssues(json.errors);
-    if (issues.length > 0) {
-      throw new GraphQLTransportError(
-        issues.map((issue) => issue.message).join("; "),
-        "graphql",
+    if (json.error) {
+      throw new ApiTransportError(
+        message ?? "The API request failed.",
+        "api",
         response.status,
-        issues,
-        json.data
+        code
       );
     }
 
     if (json.data === undefined) {
-      throw new GraphQLTransportError("The API response did not contain data.", "decode", response.status);
+      throw new ApiTransportError("The API response did not contain data.", "decode", response.status);
     }
 
     return json.data;
   } catch (error) {
-    if (controller.signal.aborted && controller.signal.reason instanceof GraphQLTransportError) {
+    if (controller.signal.aborted && controller.signal.reason instanceof ApiTransportError) {
       throw controller.signal.reason;
     }
-    if (error instanceof GraphQLTransportError) throw error;
+    if (error instanceof ApiTransportError) throw error;
     if (error instanceof DOMException && error.name === "AbortError") throw error;
-    throw new GraphQLTransportError(
+    throw new ApiTransportError(
       error instanceof Error ? error.message : "The API request failed.",
       "network"
     );
@@ -162,32 +158,15 @@ async function requestOnce<T>(
   }
 }
 
-function normalizeIssues(errors: unknown): GraphQLIssue[] {
-  if (errors === undefined) return [];
-  if (!Array.isArray(errors)) return [{ message: "The API returned malformed GraphQL errors." }];
-  return errors.map((issue) => {
-    if (typeof issue === "string") return { message: issue };
-    if (!issue || typeof issue !== "object") return { message: "Unknown GraphQL error" };
-    const candidate = issue as Partial<GraphQLIssue>;
-    return {
-      message: typeof candidate.message === "string" ? candidate.message : "Unknown GraphQL error",
-      ...(Array.isArray(candidate.path) ? { path: candidate.path } : {}),
-      ...(candidate.extensions && typeof candidate.extensions === "object"
-        ? { extensions: candidate.extensions }
-        : {}),
-    };
-  });
-}
-
-function normalizeError(error: unknown): GraphQLTransportError {
-  if (error instanceof GraphQLTransportError) return error;
-  return new GraphQLTransportError(
+function normalizeError(error: unknown): ApiTransportError {
+  if (error instanceof ApiTransportError) return error;
+  return new ApiTransportError(
     error instanceof Error ? error.message : "The API request failed.",
     "network"
   );
 }
 
-function isRetryable(error: GraphQLTransportError) {
+function isRetryable(error: ApiTransportError) {
   return (
     error.kind === "network" ||
     error.kind === "timeout" ||
@@ -219,24 +198,16 @@ function delay(ms: number, signal?: AbortSignal) {
   });
 }
 
-function operationNameFrom(query: string) {
-  return /\b(?:query|mutation)\s+([A-Za-z0-9_]+)/.exec(query)?.[1] ?? "AnonymousOperation";
-}
-
 function now() {
   return typeof performance === "undefined" ? Date.now() : performance.now();
 }
 
-function windowSafeSetTimeout(callback: () => void, timeoutMs: number) {
-  return setTimeout(callback, timeoutMs);
-}
-
 interface QueryEventDetail {
-  operationName: string;
+  operation: TarkovOperation;
   durationMs: number;
   status: "success" | "error";
   attempt: number;
-  errorKind?: GraphQLTransportError["kind"];
+  errorKind?: ApiTransportError["kind"];
   httpStatus?: number;
 }
 

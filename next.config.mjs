@@ -20,7 +20,7 @@ const nextConfig = {
       "script-src-attr 'none'",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://assets.tarkov.dev",
-      "connect-src 'self' https://api.tarkov.dev https://assets.tarkov.dev",
+      "connect-src 'self' https://assets.tarkov.dev",
       "font-src 'self' data:",
       "worker-src 'self' blob:",
       "frame-src 'none'",

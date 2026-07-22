@@ -19,7 +19,11 @@ This web app uses the following API(s) to provide real-time data and up-to-date 
 
 - **API Name**: [TARKOV.DEV](https://tarkov.dev)
 
-The app fetches item, pricing, weapon, attachment, and preset data from tarkov.dev and caches data locally for faster repeat use.
+The app uses tarkov.dev's documented JSON API through a server-side typed query adapter.
+The adapter validates a fixed set of operations, caches the API's large source datasets on
+the server, joins/localizes references, and returns only the narrow data each screen needs.
+Results are also cached locally for faster repeat use. See
+[`DATA_ARCHITECTURE.md`](DATA_ARCHITECTURE.md) for the data flow and operation list.
 
 ## Installation
 
