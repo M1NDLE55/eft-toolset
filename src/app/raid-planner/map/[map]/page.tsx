@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { notFound, useRouter } from "next/navigation";
+import { notFound, useParams, useRouter } from "next/navigation";
 import { ArrowLeft, Plus } from "lucide-react";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
 import { createPlan } from "@/app/lib/raid-planner/store";
@@ -27,12 +27,9 @@ const MapCanvas = dynamic(
   }
 );
 
-export default function MapViewerPage({
-  params,
-}: {
-  params: { map: string };
-}) {
+export default function MapViewerPage() {
   const router = useRouter();
+  const params = useParams<{ map: string }>();
   const config = getMapConfig(params.map);
   if (!config) notFound();
 
