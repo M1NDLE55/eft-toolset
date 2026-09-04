@@ -153,7 +153,7 @@ export function SlotPicker({
           </DialogDescription>
         </DialogHeader>
         <div className="relative">
-          <Search className="absolute left-3 top-2.5 h-4 w-4 text-[#555]" />
+          <Search className="absolute left-3 top-2.5 h-4 w-4 text-[#888]" />
           <Input
             className="pl-9"
             value={search}
@@ -199,7 +199,7 @@ export function SlotPicker({
                 <p className="truncate text-sm font-bold text-[#ccc]">
                   {item.name}
                 </p>
-                <p className="truncate text-xs text-[#777]">
+                <p className="truncate text-xs text-[#888]">
                   {item.ergonomics > 0 ? "+" : ""}
                   {item.ergonomics} ergo / {recoilLabel(item)} /{" "}
                   {price(item, priceSources)}
@@ -214,7 +214,7 @@ export function SlotPicker({
             </button>
           ))}
           {!loading && !error && candidates.length === 0 && (
-            <div className="p-4 text-sm text-[#777]">
+            <div className="p-4 text-sm text-[#888]">
               No compatible mods match this search.
             </div>
           )}

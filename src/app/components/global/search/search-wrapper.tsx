@@ -1,9 +1,10 @@
 "use client";
 
-import { ChangeEvent, useEffect, useMemo, useState } from "react";
+import { ChangeEvent, useEffect, useId, useMemo, useState } from "react";
 import { LoaderCircle, AlertTriangle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useBulkCache } from "@/app/lib/cache/provider";
+import { filterCatalog } from "@/app/lib/search/filter-catalog";
 
 const EMPTY_NAMES: string[] = [];
 
@@ -17,7 +18,9 @@ export default function SearchWrapper({
   excludeNames?: string[];
 }) {
   const [search, setSearch] = useState("");
-  const { catalog: items, loading: isLoading, error, refreshCatalog } = useBulkCache();
+  const [activeIndex, setActiveIndex] = useState(-1);
+  const listboxId = useId();
+  const { catalog: items, loading: isLoading, error, stale, refreshCatalog } = useBulkCache();
 
   useEffect(() => {
     if (params?.itemName) {
@@ -27,16 +30,7 @@ export default function SearchWrapper({
 
   const filtered = useMemo(() => {
     if (!search) return null;
-    const needle = search.toLocaleLowerCase();
-    const excluded = new Set(excludeNames);
-    const matches = [];
-    for (const item of items) {
-      if (!excluded.has(item.name) && item.name.toLocaleLowerCase().includes(needle)) {
-        matches.push(item);
-        if (matches.length === 20) break;
-      }
-    }
-    return matches;
+    return filterCatalog(items, search, excludeNames);
   }, [search, items, excludeNames]);
 
   const placeholder = useMemo(() => {
@@ -48,6 +42,7 @@ export default function SearchWrapper({
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     setSearch(e.target.value);
+    setActiveIndex(-1);
   }
 
   function onSelect(name: string) {
@@ -66,6 +61,34 @@ export default function SearchWrapper({
           value={search}
           onClick={(e) => (e.target as HTMLInputElement).select()}
           onChange={handleChange}
+          role="combobox"
+          aria-label="Search items"
+          aria-autocomplete="list"
+          aria-expanded={Boolean(filtered?.length)}
+          aria-controls={listboxId}
+          aria-activedescendant={
+            activeIndex >= 0 && activeIndex < (filtered?.length ?? 0)
+              ? `${listboxId}-${activeIndex}`
+              : undefined
+          }
+          onKeyDown={(event) => {
+            if (!filtered?.length) return;
+            if (event.key === "ArrowDown") {
+              event.preventDefault();
+              setActiveIndex((current) => (current + 1) % filtered.length);
+            } else if (event.key === "ArrowUp") {
+              event.preventDefault();
+              setActiveIndex((current) =>
+                current <= 0 ? filtered.length - 1 : current - 1
+              );
+            } else if (event.key === "Enter" && filtered[activeIndex]) {
+              event.preventDefault();
+              onSelect(filtered[activeIndex].name);
+            } else if (event.key === "Escape") {
+              setSearch("");
+              setActiveIndex(-1);
+            }
+          }}
         />
         {isLoading && (
           <LoaderCircle className="absolute right-2 top-2 animate-spin" size={20} />
@@ -81,15 +104,24 @@ export default function SearchWrapper({
           Item catalog unavailable. Select to retry.
         </button>
       )}
+      {stale && items.length > 0 && (
+        <p role="status" className="text-xs text-amber-300">
+          Showing saved item data while the catalog refreshes.
+        </p>
+      )}
       {filtered && (
         filtered.length > 0 ? (
-          <div className="max-h-[200px] overflow-auto border">
-            {filtered.map((item) => (
+          <div id={listboxId} role="listbox" aria-label="Item search results" className="max-h-[200px] overflow-auto border">
+            {filtered.map((item, index) => (
               <button
                 key={item.name}
+                id={`${listboxId}-${index}`}
                 type="button"
+                role="option"
+                aria-selected={index === activeIndex}
                 className="block w-full text-left px-3 py-2 text-sm truncate hover:bg-accent transition-colors"
                 onClick={() => onSelect(item.name)}
+                onMouseEnter={() => setActiveIndex(index)}
               >
                 {item.name}
               </button>

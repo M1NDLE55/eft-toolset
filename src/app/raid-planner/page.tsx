@@ -36,6 +36,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { MapPicker } from "@/app/components/raid-planner/map-picker";
+import { MAX_PLAN_NAME_LENGTH, MAX_PLANS } from "@/app/lib/raid-planner/limits";
 
 function formatDate(value: number) {
   return new Intl.DateTimeFormat(undefined, {
@@ -51,6 +52,7 @@ export default function RaidPlannerPage() {
   const [loading, setLoading] = useState(true);
   const [createOpen, setCreateOpen] = useState(false);
   const [createName, setCreateName] = useState("");
+  const [actionError, setActionError] = useState("");
 
   function refresh() {
     setPlans(listPlans());
@@ -63,26 +65,45 @@ export default function RaidPlannerPage() {
   }, []);
 
   function handleCreate(config: MapConfig) {
-    const plan = createPlan(createName.trim() || `${config.name} raid`, config.key);
-    setCreateOpen(false);
-    setCreateName("");
-    router.push(`/raid-planner/${plan.id}`);
+    try {
+      if (plans.length >= MAX_PLANS) throw new Error(`You can save at most ${MAX_PLANS} plans.`);
+      const name = createName.trim() || `${config.name} raid`;
+      if (name.length > MAX_PLAN_NAME_LENGTH) throw new Error(`Plan names can contain at most ${MAX_PLAN_NAME_LENGTH} characters.`);
+      const plan = createPlan(name, config.key);
+      setCreateOpen(false);
+      setCreateName("");
+      setActionError("");
+      router.push(`/raid-planner/${plan.id}`);
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not create this plan.");
+    }
   }
 
   function handleDuplicate(id: string) {
-    const duplicate = duplicatePlan(id);
-    refresh();
-    if (duplicate) router.push(`/raid-planner/${duplicate.id}`);
+    try {
+      const duplicate = duplicatePlan(id);
+      refresh();
+      if (duplicate) router.push(`/raid-planner/${duplicate.id}`);
+      setActionError("");
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not duplicate this plan.");
+    }
   }
 
   function handleDelete(id: string) {
-    deletePlan(id);
-    refresh();
+    try {
+      deletePlan(id);
+      refresh();
+      setActionError("");
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not delete this plan.");
+    }
   }
 
   return (
     <div className="flex justify-center p-4 sm:min-h-[calc(100vh-130px)] min-h-[calc(100vh-65px)]">
       <div className="flex w-full max-w-4xl flex-col gap-4">
+        {actionError && <p role="alert" className="text-sm text-red-300">{actionError}</p>}
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h1 className="text-3xl font-black uppercase tracking-widest text-[#9a8866]">
             Raid Planner
@@ -109,6 +130,7 @@ export default function RaidPlannerPage() {
               </DialogHeader>
               <Input
                 value={createName}
+                maxLength={MAX_PLAN_NAME_LENGTH}
                 onChange={(event) => setCreateName(event.target.value)}
                 placeholder="Plan name, optional"
               />
@@ -137,7 +159,7 @@ export default function RaidPlannerPage() {
                 >
                   <Link href={{ pathname: `/raid-planner/${plan.id}` }}>
                     <span className="truncate">{plan.name}</span>
-                    <span className="text-[10px] uppercase tracking-widest text-[#777]">
+                    <span className="text-[10px] uppercase tracking-widest text-[#888]">
                       {getMapConfig(plan.mapKey)?.name ?? plan.mapKey} ·{" "}
                       {formatDate(plan.updatedAt)}
                     </span>
@@ -183,7 +205,7 @@ export default function RaidPlannerPage() {
         )}
 
         <div className="mt-4 flex flex-col gap-2">
-          <h2 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">
+          <h2 className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
             Or browse a map without a plan
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -191,7 +213,7 @@ export default function RaidPlannerPage() {
               <Link
                 key={config.key}
                 href={{ pathname: `/raid-planner/map/${config.key}` }}
-                className="flex items-center gap-1.5 border border-[#2a2a2a] bg-[#090909] px-3 py-1.5 text-[10px] uppercase tracking-widest text-[#777] transition-colors hover:border-[#9a8866] hover:text-[#ccc]"
+                className="flex items-center gap-1.5 border border-[#2a2a2a] bg-[#090909] px-3 py-1.5 text-[10px] uppercase tracking-widest text-[#888] transition-colors hover:border-[#9a8866] hover:text-[#ccc]"
               >
                 <MapIcon className="h-3 w-3" />
                 {config.name}

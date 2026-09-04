@@ -10,7 +10,7 @@ export default function NotFound() {
         <h1 className="text-5xl font-black tracking-[0.3em] text-[#9a8866] uppercase">
           NOT FOUND
         </h1>
-        <p className="text-[11px] text-[#555] uppercase tracking-[0.3em] font-bold">
+        <p className="text-[11px] text-[#888] uppercase tracking-[0.3em] font-bold">
           The page you&apos;re looking for doesn&apos;t exist
         </p>
       </div>

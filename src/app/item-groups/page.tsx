@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/dialog";
 import { customEncodeURI } from "../lib/URIEncoding";
 import { listGroups, saveGroups, subscribeGroups } from "@/app/lib/item-groups/store";
+import { MAX_GROUP_NAME_LENGTH, MAX_GROUPS } from "@/app/lib/item-groups/limits";
 
 export default function Page() {
   const router = useRouter();
@@ -43,19 +44,31 @@ export default function Page() {
       setCreateError("Name cannot be empty");
       return;
     }
+    if (name.length > MAX_GROUP_NAME_LENGTH) {
+      setCreateError(`Name must be ${MAX_GROUP_NAME_LENGTH} characters or fewer`);
+      return;
+    }
 
     const groups = listGroups();
+
+    if (groups.length >= MAX_GROUPS) {
+      setCreateError(`You can save at most ${MAX_GROUPS} groups.`);
+      return;
+    }
 
     if (groups.find((g) => g.name.toLowerCase() === name.toLowerCase())) {
       setCreateError("A group with this name already exists");
       return;
     }
 
-    saveGroups([...groups, { name, items: [] }]);
-
-    setCreateOpen(false);
-    setCreateName("");
-    router.push(`/item-groups/${customEncodeURI(name)}`);
+    try {
+      saveGroups([...groups, { name, items: [] }]);
+      setCreateOpen(false);
+      setCreateName("");
+      router.push(`/item-groups/${customEncodeURI(name)}`);
+    } catch (reason) {
+      setCreateError(reason instanceof Error ? reason.message : "Could not create this group.");
+    }
   }
 
   return (
@@ -72,8 +85,9 @@ export default function Page() {
               <DialogDescription>Enter a name for the new group.</DialogDescription>
             </DialogHeader>
             {createError && <p className="text-red-500 text-sm">{createError}</p>}
-            <Input
-              value={createName}
+              <Input
+                value={createName}
+                maxLength={MAX_GROUP_NAME_LENGTH}
               onChange={(e) => setCreateName(e.target.value)}
               onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleCreate(); } }}
               placeholder="Group name"

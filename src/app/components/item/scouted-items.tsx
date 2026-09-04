@@ -19,6 +19,7 @@ export default function ScoutedSidebar() {
   const [items, setItems] = useState<ScoutedItem[]>([]);
   const [collapsed, setCollapsed] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [storageError, setStorageError] = useState("");
 
   useEffect(() => {
     setItems(listScoutedItems());
@@ -30,7 +31,12 @@ export default function ScoutedSidebar() {
   const toggleCollapsed = () => {
     const next = !collapsed;
     setCollapsed(next);
-    setScoutedCollapsed(next);
+    try {
+      setScoutedCollapsed(next);
+      setStorageError("");
+    } catch (reason) {
+      setStorageError(reason instanceof Error ? reason.message : "Could not save sidebar settings.");
+    }
   };
 
   if (!mounted) return <div className="w-56 shrink-0 self-stretch" />;
@@ -39,7 +45,13 @@ export default function ScoutedSidebar() {
     return (
       <aside className="shrink-0 self-stretch border-r border-[#1a1a1a] bg-[#070707]">
         <div className="sticky top-0 p-2">
+          {storageError && (
+            <span role="alert" title={storageError} className="block text-center text-xs font-bold text-red-300">
+              !<span className="sr-only"> Sidebar setting not saved</span>
+            </span>
+          )}
           <button
+            type="button"
             onClick={toggleCollapsed}
             className="p-2 text-zinc-500 hover:text-zinc-300 transition-colors"
             title="Expand sidebar"
@@ -54,11 +66,13 @@ export default function ScoutedSidebar() {
   return (
     <aside className="w-56 shrink-0 self-stretch border-r border-[#1a1a1a] bg-[#070707]">
       <div className="sticky top-0 flex flex-col">
+        {storageError && <p role="alert" className="px-3 pt-2 text-[10px] text-red-300">Not saved</p>}
         <div className="flex items-center justify-between px-3 py-3 border-b border-[#1a1a1a]">
           <h2 className="text-[10px] uppercase tracking-widest text-[#9a8866] font-semibold">
             Scouted
           </h2>
           <button
+            type="button"
             onClick={toggleCollapsed}
             className="p-1 text-zinc-500 hover:text-zinc-300 transition-colors"
             title="Collapse sidebar"
@@ -68,7 +82,7 @@ export default function ScoutedSidebar() {
         </div>
         <div className="flex flex-col py-1 overflow-y-auto max-h-[calc(100vh-8rem)]">
           {items.length === 0 ? (
-            <p className="text-[11px] text-zinc-600 px-3 py-4">
+            <p className="text-[11px] text-zinc-400 px-3 py-4">
               Viewed items will appear here
             </p>
           ) : (

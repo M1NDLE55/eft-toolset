@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { notFound, useParams, useRouter } from "next/navigation";
@@ -15,6 +15,7 @@ import { FloorSwitcher } from "@/app/components/raid-planner/floor-switcher";
 import { LayerPanel } from "@/app/components/raid-planner/layer-panel";
 import { Skeleton } from "@/components/ui/skeleton";
 import { readStoredLayers, writeStoredLayers } from "@/app/lib/raid-planner/layer-store";
+import { MAX_LAYERS } from "@/app/lib/raid-planner/limits";
 
 const MapCanvas = dynamic(
   () =>
@@ -33,7 +34,7 @@ export default function MapViewerPage() {
   const config = getMapConfig(params.map);
   if (!config) notFound();
 
-  const { gameMode } = useGameMode();
+  const { gameMode, hydrated: modeHydrated } = useGameMode();
 
   const defaultFloor = useMemo(
     () => config.floors.find((floor) => floor.show)?.id ?? null,
@@ -46,11 +47,12 @@ export default function MapViewerPage() {
   const [retryToken, setRetryToken] = useState(0);
 
   useEffect(() => {
+    if (!modeHydrated) return;
     let cancelled = false;
     setDetails(null);
     setDetailsError(false);
 
-    fetchMapDetails(config.key, config.name, gameMode)
+    fetchMapDetails(config.key, gameMode)
       .then((result) => {
         if (cancelled) return;
         setDetails(result);
@@ -63,9 +65,12 @@ export default function MapViewerPage() {
     return () => {
       cancelled = true;
     };
-  }, [config.key, config.name, gameMode, retryToken]);
+  }, [config.key, config.name, gameMode, modeHydrated, retryToken]);
 
   const [enabledLayers, setEnabledLayers] = useState<Set<string>>(new Set());
+  const enabledLayersRef = useRef(enabledLayers);
+  const [actionError, setActionError] = useState("");
+  enabledLayersRef.current = enabledLayers;
 
   useEffect(() => {
     setEnabledLayers(readStoredLayers(config.key));
@@ -73,15 +78,22 @@ export default function MapViewerPage() {
 
   const handleLayerChange = useCallback(
     (ids: string[], checked: boolean) => {
-      setEnabledLayers((previous) => {
-        const next = new Set(previous);
-        for (const id of ids) {
-          if (checked) next.add(id);
-          else next.delete(id);
-        }
+      const next = new Set(enabledLayersRef.current);
+      for (const id of ids) {
+        if (checked) next.add(id);
+        else next.delete(id);
+      }
+      if (next.size > MAX_LAYERS) {
+        setActionError(`A map can enable at most ${MAX_LAYERS} layers.`);
+        return;
+      }
+      try {
         writeStoredLayers(config.key, next);
-        return next;
-      });
+        setEnabledLayers(next);
+        setActionError("");
+      } catch (reason) {
+        setActionError(reason instanceof Error ? reason.message : "Could not save layer settings.");
+      }
     },
     [config.key]
   );
@@ -97,6 +109,11 @@ export default function MapViewerPage() {
 
   return (
     <div className="relative h-[calc(100dvh-65px)] w-full overflow-hidden">
+      {actionError && (
+        <p role="alert" className="absolute bottom-3 left-1/2 z-[1100] -translate-x-1/2 border border-red-900/60 bg-[#090909]/95 px-3 py-2 text-xs text-red-200">
+          {actionError}
+        </p>
+      )}
       <MapCanvas
         key={config.key}
         config={config}
@@ -109,7 +126,7 @@ export default function MapViewerPage() {
         <div className="pointer-events-auto flex items-center gap-2 border border-[#2a2a2a] bg-[#090909]/90 px-3 py-2 backdrop-blur-sm">
           <Link
             href={{ pathname: "/raid-planner" }}
-            className="text-[#777] transition-colors hover:text-[#9a8866]"
+            className="text-[#888] transition-colors hover:text-[#9a8866]"
           >
             <ArrowLeft className="h-4 w-4" />
             <span className="sr-only">Back to map list</span>
@@ -120,16 +137,20 @@ export default function MapViewerPage() {
           <button
             type="button"
             onClick={() => {
-              const plan = createPlan(`${config.name} raid`, config.key);
-              router.push(`/raid-planner/${plan.id}`);
+              try {
+                const plan = createPlan(`${config.name} raid`, config.key);
+                router.push(`/raid-planner/${plan.id}`);
+              } catch (reason) {
+                setActionError(reason instanceof Error ? reason.message : "Could not create this plan.");
+              }
             }}
-            className="flex items-center gap-1 border border-[#2a2a2a] px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#777] transition-colors hover:border-[#9a8866] hover:text-[#ccc]"
+            className="flex items-center gap-1 border border-[#2a2a2a] px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#888] transition-colors hover:border-[#9a8866] hover:text-[#ccc]"
           >
             <Plus className="h-3 w-3" />
             Plan
           </button>
           {details?.players && details?.raidDuration && (
-            <span className="hidden text-[10px] uppercase tracking-widest text-[#555] sm:inline">
+            <span className="hidden text-[10px] uppercase tracking-widest text-[#888] sm:inline">
               {details.players} players · {details.raidDuration} min
             </span>
           )}
@@ -159,11 +180,13 @@ export default function MapViewerPage() {
 
       {config.author && (
         <div className="pointer-events-none absolute bottom-0 left-0 z-[1000] p-3">
-          <p className="pointer-events-auto bg-[#090909]/80 px-2 py-1 text-[10px] uppercase tracking-widest text-[#555]">
+          <p className="pointer-events-auto bg-[#090909]/80 px-2 py-1 text-[10px] uppercase tracking-widest text-[#888]">
             Map by{" "}
             {config.authorLink ? (
               <a
                 href={config.authorLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#9a8866] underline underline-offset-2"
               >
                 {config.author}

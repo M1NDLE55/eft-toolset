@@ -26,13 +26,15 @@ export function getColumns(handleRemove: (name: string) => void) {
       cell: ({ row }) => {
         const item = row.original;
 
-        return (
+        return item.gridImageLink ? (
           <Image
-            src={item.gridImageLink!}
-            alt={item.name!}
+            src={item.gridImageLink}
+            alt={item.name ?? "Item"}
             width={64}
             height={64}
           />
+        ) : (
+          <span className="text-xs text-muted-foreground">No image</span>
         );
       },
     },
@@ -48,8 +50,8 @@ export function getColumns(handleRemove: (name: string) => void) {
         const item = row.original;
 
         return (
-          <Link href={`/item/${customEncodeURI(item.name!)}`}>
-            {item.name!}
+          <Link href={`/item/${customEncodeURI(item.name ?? "")}`}>
+            {item.name ?? "Unknown item"}
             <ArrowUpRight className="inline" size={16} />
           </Link>
         );
@@ -58,7 +60,7 @@ export function getColumns(handleRemove: (name: string) => void) {
     {
       id: "slot",
       accessorFn: (item) =>
-        item.sellFor && item.sellFor.length > 0
+        item.sellFor && item.sellFor.length > 0 && item.width > 0 && item.height > 0
           ? [...item.sellFor].sort((a, b) => b.priceRUB! - a.priceRUB!)[0].priceRUB! / (item.width * item.height)
           : 0,
       header: ({ column }) => (
@@ -114,10 +116,13 @@ export function getColumns(handleRemove: (name: string) => void) {
       cell: ({ row }) => {
         const item = row.original;
 
-        return (
-          <Link href={item.wikiLink!}>
+        return item.wikiLink ? (
+          <a href={item.wikiLink} target="_blank" rel="noopener noreferrer">
             <LinkIcon />
-          </Link>
+            <span className="sr-only">Open wiki for {item.name}</span>
+          </a>
+        ) : (
+          <span className="text-xs text-muted-foreground">n/a</span>
         );
       },
     },

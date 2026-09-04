@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { notFound, useParams, useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { Copy, LoaderCircle, Pencil, Trash2 } from "lucide-react";
 import type { GunBuild, PriceSources } from "@/app/lib/types/gunBuilder";
 import {
@@ -48,11 +48,15 @@ import {
 import { BuildCanvas } from "@/app/components/gun-builder/build-canvas";
 import { StatsPanel } from "@/app/components/gun-builder/stats-panel";
 import { ShareBuild } from "@/app/components/gun-builder/share-build";
+import { LocalMissing } from "@/components/local-missing";
+import { MAX_BUILD_NAME_LENGTH } from "@/app/lib/builds/limits";
 
 export default function GunBuildEditorPage() {
   const router = useRouter();
   const params = useParams<{ build: string }>();
   const [build, setBuild] = useState<GunBuild | null>(null);
+  const [missing, setMissing] = useState<boolean | null>(null);
+  const [actionError, setActionError] = useState("");
   const [renameOpen, setRenameOpen] = useState(false);
   const [renameValue, setRenameValue] = useState("");
   const [presetLoading, setPresetLoading] = useState<string | null>(null);
@@ -61,7 +65,11 @@ export default function GunBuildEditorPage() {
 
   useEffect(() => {
     const found = getBuild(params.build);
-    if (!found) notFound();
+    if (!found) {
+      setMissing(true);
+      return;
+    }
+    setMissing(false);
     setBuild(found);
     setRenameValue(found.name);
   }, [params.build]);
@@ -78,7 +86,11 @@ export default function GunBuildEditorPage() {
     [build, items, priceSources]
   );
 
-  if (!build || !stats) {
+  if (missing === true) {
+    return <LocalMissing title="Build not found" backHref="/gun-builder" backLabel="Back to builds" />;
+  }
+
+  if (missing === null || !build || !stats) {
     return (
       <div className="flex w-full justify-center p-8">
         <LoaderCircle className="h-6 w-6 animate-spin text-[#9a8866]" />
@@ -91,22 +103,35 @@ export default function GunBuildEditorPage() {
   function handleRename() {
     if (!build) return;
     const name = renameValue.trim();
-    if (!name) return;
-    const updated = renameBuild(currentBuild.id, name);
-    if (updated) {
-      setBuild(updated);
-      setRenameOpen(false);
+    if (!name || name.length > MAX_BUILD_NAME_LENGTH) return;
+    try {
+      const updated = renameBuild(currentBuild.id, name);
+      if (updated) {
+        setBuild(updated);
+        setRenameOpen(false);
+        setActionError("");
+      }
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not rename this build.");
     }
   }
 
   function handleDuplicate() {
-    const duplicate = duplicateBuild(currentBuild.id);
-    if (duplicate) router.push(`/gun-builder/${duplicate.id}`);
+    try {
+      const duplicate = duplicateBuild(currentBuild.id);
+      if (duplicate) router.push(`/gun-builder/${duplicate.id}`);
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not duplicate this build.");
+    }
   }
 
   function handleDelete() {
-    deleteBuild(currentBuild.id);
-    router.push("/gun-builder");
+    try {
+      deleteBuild(currentBuild.id);
+      router.push("/gun-builder");
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not delete this build.");
+    }
   }
 
   async function handleLoadPreset(presetId: string) {
@@ -122,6 +147,9 @@ export default function GunBuildEditorPage() {
         root: reconstructPresetTree(currentBuild.weaponId, preset, map),
       });
       setBuild(updated);
+      setActionError("");
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not load this preset.");
     } finally {
       setPresetLoading(null);
     }
@@ -129,6 +157,11 @@ export default function GunBuildEditorPage() {
 
   return (
     <div className="flex w-full flex-col gap-4">
+      {actionError && (
+        <p role="alert" className="border border-red-900/60 bg-red-950/30 p-3 text-sm text-red-200">
+          {actionError}
+        </p>
+      )}
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <div className="flex min-w-0 items-center gap-2">
@@ -155,6 +188,7 @@ export default function GunBuildEditorPage() {
                 </DialogHeader>
                 <Input
                   value={renameValue}
+                  maxLength={MAX_BUILD_NAME_LENGTH}
                   onChange={(event) => setRenameValue(event.target.value)}
                   onKeyDown={(event) => {
                     if (event.key === "Enter") handleRename();
@@ -169,7 +203,7 @@ export default function GunBuildEditorPage() {
               </DialogContent>
             </Dialog>
           </div>
-          <p className="mt-1 text-xs uppercase tracking-widest text-[#666]">
+          <p className="mt-1 text-xs uppercase tracking-widest text-[#888]">
             Prices &amp; stats for {gameMode === "pve" ? "PVE" : "PVP"}
           </p>
         </div>
@@ -230,7 +264,7 @@ export default function GunBuildEditorPage() {
         onPriceSourcesChange={setPriceSources}
       />
       {loading && (
-        <div className="flex items-center gap-2 text-sm text-[#777]">
+        <div className="flex items-center gap-2 text-sm text-[#888]">
           <LoaderCircle className="h-4 w-4 animate-spin text-[#9a8866]" />
           Loading build data
         </div>

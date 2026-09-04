@@ -11,7 +11,6 @@ import {
   deleteBuild,
   duplicateBuild,
   listBuilds,
-  saveBuild,
   subscribeBuilds,
 } from "@/app/lib/builds/store";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
@@ -39,6 +38,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { WeaponPicker } from "@/app/components/gun-builder/weapon-picker";
+import { MAX_BUILD_NAME_LENGTH, MAX_BUILDS } from "@/app/lib/builds/limits";
 
 function formatDate(value: number) {
   return new Intl.DateTimeFormat(undefined, {
@@ -57,6 +57,7 @@ export default function GunBuilderPage() {
   const [createName, setCreateName] = useState("");
   const [creating, setCreating] = useState(false);
   const [createError, setCreateError] = useState("");
+  const [actionError, setActionError] = useState("");
 
   function refresh() {
     setBuilds(listBuilds());
@@ -72,6 +73,9 @@ export default function GunBuilderPage() {
     setCreating(true);
     setCreateError("");
     try {
+      if (builds.length >= MAX_BUILDS) {
+        throw new Error(`You can save at most ${MAX_BUILDS} builds.`);
+      }
       let root: BuildNode | null = null;
 
       if (useDefaultPreset && weapon.defaultPresetId) {
@@ -89,8 +93,11 @@ export default function GunBuilderPage() {
         }
       }
 
-      const build = createBuild(createName.trim() || weapon.name, weapon.id);
-      if (root) saveBuild({ ...build, root });
+      const buildName = createName.trim() || weapon.name;
+      if (buildName.length > MAX_BUILD_NAME_LENGTH) {
+        throw new Error(`Build names can contain at most ${MAX_BUILD_NAME_LENGTH} characters.`);
+      }
+      const build = createBuild(buildName, weapon.id, root ?? undefined);
 
       setCreateOpen(false);
       setCreateName("");
@@ -105,18 +112,29 @@ export default function GunBuilderPage() {
   }
 
   function handleDuplicate(id: string) {
-    const duplicate = duplicateBuild(id);
-    refresh();
-    if (duplicate) router.push(`/gun-builder/${duplicate.id}`);
+    try {
+      const duplicate = duplicateBuild(id);
+      refresh();
+      if (duplicate) router.push(`/gun-builder/${duplicate.id}`);
+      setActionError("");
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not duplicate this build.");
+    }
   }
 
   function handleDelete(id: string) {
-    deleteBuild(id);
-    refresh();
+    try {
+      deleteBuild(id);
+      refresh();
+      setActionError("");
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not delete this build.");
+    }
   }
 
   return (
     <div className="flex w-full max-w-4xl flex-col gap-4">
+      {actionError && <p role="alert" className="text-sm text-red-300">{actionError}</p>}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-3xl font-black uppercase tracking-widest text-[#9a8866]">
           Gun Builder
@@ -146,6 +164,7 @@ export default function GunBuilderPage() {
             </DialogHeader>
             <Input
               value={createName}
+              maxLength={MAX_BUILD_NAME_LENGTH}
               onChange={(event) => setCreateName(event.target.value)}
               placeholder="Build name, optional"
             />
@@ -175,7 +194,7 @@ export default function GunBuilderPage() {
               >
                 <Link href={{ pathname: `/gun-builder/${build.id}` }}>
                   <span className="truncate">{build.name}</span>
-                  <span className="text-[10px] uppercase tracking-widest text-[#777]">
+                  <span className="text-[10px] uppercase tracking-widest text-[#888]">
                     {formatDate(build.updatedAt)}
                   </span>
                 </Link>

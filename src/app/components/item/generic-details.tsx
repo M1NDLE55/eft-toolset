@@ -32,9 +32,9 @@ export default function GenericDetails({ item }: { item: Item }) {
                   </span>
                 </p>
                 <p>
-                  {(item.fleaMarketFee &&
-                    `Flea Market Fee: ${Rubles.format(item.fleaMarketFee)}`) ||
-                    "Cannot be listed on flea market"}
+                  {item.fleaMarketFee !== null
+                    ? `Flea Market Fee: ${Rubles.format(item.fleaMarketFee)}`
+                    : "Cannot be listed on flea market"}
                 </p>
               </div>
               <div>

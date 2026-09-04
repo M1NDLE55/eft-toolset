@@ -1,6 +1,6 @@
 "use client";
 
-import { notFound, useParams, useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getColumns } from "@/app/components/item-groups/table-columns";
 import { DataTable } from "@/components/ui/data-table";
@@ -35,12 +35,19 @@ import SearchWrapper from "@/app/components/global/search/search-wrapper";
 import AddItem from "@/app/components/item-groups/add-item";
 import { ItemPreview } from "@/app/lib/types/itemGroups";
 import { listGroups, saveGroups } from "@/app/lib/item-groups/store";
+import {
+  MAX_GROUP_ITEMS,
+  MAX_GROUP_NAME_LENGTH,
+} from "@/app/lib/item-groups/limits";
+import { LocalMissing } from "@/components/local-missing";
 
 export default function Page() {
   const router = useRouter();
   const groupName = customDecodeURI(useParams<{ group: string }>().group);
   const [names, setNames] = useState<string[]>([]);
-  const { items, loading } = useItemsInGroup(names);
+  const { items, loading, stale } = useItemsInGroup(names);
+  const [missing, setMissing] = useState<boolean | null>(null);
+  const [storageError, setStorageError] = useState("");
 
   const [renameOpen, setRenameOpen] = useState(false);
   const [renameValue, setRenameValue] = useState(groupName);
@@ -51,11 +58,11 @@ export default function Page() {
   const [addItemPreviews, setAddItemPreviews] = useState<ItemPreview[]>([]);
 
   function handleRemove(itemName: string) {
+    let nextNames = names;
     const updatedGroups = listGroups().map((g) => {
       if (g.name === groupName) {
         const updatedItems = g.items.filter((name) => name !== itemName);
-
-        setNames(updatedItems);
+        nextNames = updatedItems;
 
         return {
           name: g.name,
@@ -65,7 +72,13 @@ export default function Page() {
       return g;
     });
 
-    saveGroups(updatedGroups);
+    try {
+      saveGroups(updatedGroups);
+      setNames(nextNames);
+      setStorageError("");
+    } catch (reason) {
+      setStorageError(reason instanceof Error ? reason.message : "Could not save this group.");
+    }
   }
 
   function handleDelete() {
@@ -73,9 +86,12 @@ export default function Page() {
       (g) => g.name !== groupName
     );
 
-    saveGroups(updatedGroups);
-
-    router.push("/item-groups");
+    try {
+      saveGroups(updatedGroups);
+      router.push("/item-groups");
+    } catch (reason) {
+      setStorageError(reason instanceof Error ? reason.message : "Could not delete this group.");
+    }
   }
 
   function handleRename() {
@@ -84,6 +100,10 @@ export default function Page() {
 
     if (!newName) {
       setRenameError("Name cannot be empty");
+      return;
+    }
+    if (newName.length > MAX_GROUP_NAME_LENGTH) {
+      setRenameError(`Name must be ${MAX_GROUP_NAME_LENGTH} characters or fewer`);
       return;
     }
 
@@ -104,23 +124,39 @@ export default function Page() {
       return g;
     });
 
-    saveGroups(updated);
-    setRenameOpen(false);
-    router.push(`/item-groups/${customEncodeURI(newName)}`);
+    try {
+      saveGroups(updated);
+      setRenameOpen(false);
+      router.push(`/item-groups/${customEncodeURI(newName)}`);
+    } catch (reason) {
+      setRenameError(reason instanceof Error ? reason.message : "Could not rename this group.");
+    }
   }
 
-  function handleAddItem(itemName: string, gridImageLink: string) {
+  function handleAddItem(itemName: string, _gridImageLink: string) {
     const groups = listGroups();
 
     const updated = groups.map((g) => {
       if (g.name === groupName) {
         if (g.items.includes(itemName)) return g;
+        if (g.items.length >= MAX_GROUP_ITEMS) return g;
         return { name: g.name, items: [...g.items, itemName] };
       }
       return g;
     });
 
-    saveGroups(updated);
+    const group = groups.find((candidate) => candidate.name === groupName);
+    if (group && group.items.length >= MAX_GROUP_ITEMS) {
+      setStorageError(`A group can contain at most ${MAX_GROUP_ITEMS} items.`);
+      return;
+    }
+    try {
+      saveGroups(updated);
+      setStorageError("");
+    } catch (reason) {
+      setStorageError(reason instanceof Error ? reason.message : "Could not add this item.");
+      return;
+    }
     setNames((prev) => (prev.includes(itemName) ? prev : [...prev, itemName]));
     setSearchItem("");
     setAddItemOpen(false);
@@ -131,12 +167,19 @@ export default function Page() {
       (group) => group.name.toLowerCase() === groupName.toLowerCase()
     );
 
-    if (!group) notFound();
-
+    if (!group) {
+      setMissing(true);
+      return;
+    }
+    setMissing(false);
     setNames(group.items);
   }, [groupName]);
 
-  if (loading)
+  if (missing === true) {
+    return <LocalMissing title="Item group not found" backHref="/item-groups" backLabel="Back to groups" />;
+  }
+
+  if (missing === null || loading)
     return (
       <div className="max-w-4xl w-full min-w-0 flex flex-col gap-4">
         <h1 className="text-3xl text-[#9a8866] uppercase tracking-widest font-black">{groupName}</h1>
@@ -153,6 +196,11 @@ export default function Page() {
 
   return (
     <div className="max-w-4xl w-full min-w-0 flex flex-col gap-4">
+      {(storageError || stale) && (
+        <p role="status" className="border border-amber-700/60 bg-amber-950/30 p-3 text-sm text-amber-200">
+          {storageError || "Showing saved data while fresh prices are loaded."}
+        </p>
+      )}
       <div className="w-full flex flex-wrap gap-4 text-xl justify-between items-center">
         <div className="flex items-center gap-2 min-w-0">
           <h1 className="text-3xl text-[#9a8866] uppercase tracking-widest font-black truncate">{groupName}</h1>
@@ -170,6 +218,7 @@ export default function Page() {
               {renameError && <p className="text-red-500 text-sm">{renameError}</p>}
               <Input
                 value={renameValue}
+                maxLength={MAX_GROUP_NAME_LENGTH}
                 onChange={(e) => setRenameValue(e.target.value)}
                 onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleRename(); } }}
                 autoFocus

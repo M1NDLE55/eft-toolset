@@ -32,7 +32,7 @@ function SourceBadge({
         "border px-2 py-1 text-[10px] font-bold uppercase tracking-widest transition-colors",
         active
           ? "border-[#9a8866] bg-[#9a8866] text-[#070707]"
-          : "border-[#2a2a2a] text-[#777] hover:border-[#4a4234]",
+          : "border-[#2a2a2a] text-[#888] hover:border-[#4a4234]",
       ].join(" ")}
     >
       {label}
@@ -57,7 +57,7 @@ export function StatsPanel({
     <div className="border border-[#2a2a2a] bg-[#090909] p-3">
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-widest text-[#666]">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
             Ergo
           </p>
           <p className="text-lg font-black text-[#ccc]">
@@ -65,7 +65,7 @@ export function StatsPanel({
           </p>
         </div>
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-widest text-[#666]">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
             Vertical
           </p>
           <p className="text-lg font-black text-[#ccc]">
@@ -73,7 +73,7 @@ export function StatsPanel({
           </p>
         </div>
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-widest text-[#666]">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
             Horizontal
           </p>
           <p className="text-lg font-black text-[#ccc]">
@@ -81,7 +81,7 @@ export function StatsPanel({
           </p>
         </div>
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-widest text-[#666]">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
             Weight
           </p>
           <p className="text-lg font-black text-[#ccc]">
@@ -89,7 +89,7 @@ export function StatsPanel({
           </p>
         </div>
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-widest text-[#666]">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
             Cost{hasMissingPrices ? "*" : ""}
           </p>
           <p className="text-lg font-black text-[#ccc]">{rub(stats.costRUB)}</p>
@@ -97,7 +97,7 @@ export function StatsPanel({
       </div>
 
       <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-[#1a1a1a] pt-3">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-[#666]">
+        <span className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
           Cost from
         </span>
         <SourceBadge
@@ -119,7 +119,7 @@ export function StatsPanel({
         />
       </div>
 
-      <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-[#1a1a1a] pt-3 text-xs text-[#777]">
+      <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-[#1a1a1a] pt-3 text-xs text-[#888]">
         <span>Recoil is an approximation.</span>
         {noSources ? (
           <span className="text-[#9a8866]">

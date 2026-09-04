@@ -2,6 +2,7 @@ import { Group } from "@/app/lib/types/itemGroups";
 import Link from "next/link";
 import { ChevronRightCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { customEncodeURI } from "@/app/lib/URIEncoding";
 
 export default function GroupSelector({ group }: { group: Group }) {
   return (
@@ -12,7 +13,7 @@ export default function GroupSelector({ group }: { group: Group }) {
       asChild
     >
       <Link
-        href={{ pathname: `/item-groups/${group.name}` }}
+        href={{ pathname: `/item-groups/${customEncodeURI(group.name)}` }}
         className="w-full flex flex-row justify-between items-center"
       >
         <p>{group.name}</p>

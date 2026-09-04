@@ -19,6 +19,7 @@ export default function SharedGunBuildPage() {
   const router = useRouter();
   const [state, setState] = useState<ImportState>({ status: "reading" });
   const [importing, setImporting] = useState(false);
+  const [importError, setImportError] = useState("");
 
   useEffect(() => {
     const hash = window.location.hash.replace(/^#/, "");
@@ -46,12 +47,18 @@ export default function SharedGunBuildPage() {
     if (state.status !== "ready") return;
 
     setImporting(true);
-    const build = importBuild(
-      state.build.name,
-      state.build.weaponId,
-      state.build.root
-    );
-    router.replace(`/gun-builder/${build.id}`);
+    setImportError("");
+    try {
+      const build = importBuild(
+        state.build.name,
+        state.build.weaponId,
+        state.build.root
+      );
+      router.replace(`/gun-builder/${build.id}`);
+    } catch (reason) {
+      setImporting(false);
+      setImportError(reason instanceof Error ? reason.message : "Could not import this build.");
+    }
   }
 
   if (state.status === "reading") {
@@ -97,6 +104,7 @@ export default function SharedGunBuildPage() {
           Cancel
         </Button>
       </div>
+      {importError && <p role="alert" className="text-sm text-red-300">{importError}</p>}
     </div>
   );
 }

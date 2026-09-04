@@ -14,11 +14,17 @@ export default function GroupEditor({
   setGroups: Dispatch<SetStateAction<Group[]>>;
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [error, setError] = useState("");
 
   function handleDelete() {
     const updatedGroups = groups.filter((g) => g.name !== group.name);
-    saveGroups(updatedGroups);
-    setGroups(updatedGroups);
+    try {
+      saveGroups(updatedGroups);
+      setGroups(updatedGroups);
+      setError("");
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Could not delete this group.");
+    }
   }
 
   return (
@@ -30,11 +36,13 @@ export default function GroupEditor({
         {group.name}
       </div>
       <button
+        type="button"
         className="p-3 bg-red-500 h-full"
         onClick={() => setIsModalOpen(true)}
       >
         <Trash />
       </button>
+      {error && <span role="alert" className="text-xs text-red-300">{error}</span>}
       {isModalOpen && (
         <div
           onClick={() => setIsModalOpen(false)}

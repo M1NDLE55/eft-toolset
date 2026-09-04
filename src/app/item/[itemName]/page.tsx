@@ -1,57 +1,37 @@
-"use client";
+import type { Metadata } from "next";
+import { customDecodeURI, customEncodeURI } from "@/app/lib/URIEncoding";
+import { ItemPageClient } from "./item-page-client";
+import { notFound } from "next/navigation";
 
-import UsedInTasks from "@/app/components/item/used-in-tasks";
-import LoadingSkeleton from "@/app/components/item/loading-skeleton";
-import { getParam } from "@/app/lib/params";
-import GenericDetails from "@/app/components/item/generic-details";
-import BartersUsing from "@/app/components/item/barters-using";
-import CraftsUsing from "@/app/components/item/crafts-using";
-import { useParams } from "next/navigation";
-import SimpleError from "@/app/components/global/error/simple-error";
-import { useItem } from "@/app/lib/cache/hooks";
-import { addScoutedItem } from "@/app/components/item/scouted-items";
-import { useEffect } from "react";
-import { Button } from "@/components/ui/button";
+interface ItemPageProps {
+  params: Promise<{ itemName: string }>;
+}
 
-export default function Page() {
-  const { itemName } = getParam(useParams());
-  const { item, loading, error, refresh } = useItem(itemName);
+export async function generateMetadata({ params }: ItemPageProps): Promise<Metadata> {
+  const itemName = customDecodeURI((await params).itemName);
+  if (!itemName) return { title: "Item not found", robots: { index: false, follow: false } };
+  return {
+    title: itemName,
+    description: `Prices, trader offers, tasks, barters, and crafts for ${itemName} in Escape from Tarkov.`,
+    alternates: { canonical: `/item/${customEncodeURI(itemName)}` },
+    openGraph: {
+      title: `${itemName} | EFT Toolset`,
+      description: `Escape from Tarkov market and task details for ${itemName}.`,
+      type: "article",
+      url: `/item/${customEncodeURI(itemName)}`,
+      images: [{ url: "/item-scanner-og.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${itemName} | EFT Toolset`,
+      description: `Escape from Tarkov market and task details for ${itemName}.`,
+      images: ["/item-scanner-og.png"],
+    },
+  };
+}
 
-  useEffect(() => {
-    if (item) {
-      addScoutedItem({ name: item.name, gridImageLink: item.gridImageLink });
-    }
-  }, [item]);
-
-  if (loading) {
-    return <LoadingSkeleton />;
-  }
-
-  if (error && !item) {
-    return (
-      <SimpleError>
-        <span>Item data is temporarily unavailable.</span>
-        <Button variant="outline" onClick={() => void refresh()}>
-          Retry
-        </Button>
-      </SimpleError>
-    );
-  }
-
-  if (!item) {
-    return (
-      <SimpleError>
-        The item &quot;{itemName}&quot; wasn&apos;t found
-      </SimpleError>
-    );
-  }
-
-  return (
-    <div className="flex flex-col gap-4">
-      <GenericDetails item={item} />
-      <UsedInTasks tasks={item.usedInTasks} />
-      <BartersUsing barters={item.bartersUsing} />
-      <CraftsUsing crafts={item.craftsUsing} />
-    </div>
-  );
+export default async function Page({ params }: ItemPageProps) {
+  const itemName = customDecodeURI((await params).itemName);
+  if (!itemName) notFound();
+  return <ItemPageClient itemName={itemName} />;
 }

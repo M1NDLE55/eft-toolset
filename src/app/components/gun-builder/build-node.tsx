@@ -13,6 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { copyText } from "@/app/lib/browser/clipboard";
 
 interface BuilderNodeProps {
   node: PositionedNode;
@@ -55,8 +56,12 @@ export function BuilderNode({
   async function handleCopyName() {
     if (!item) return;
 
-    await navigator.clipboard.writeText(item.name);
-    setCopied(true);
+    try {
+      await copyText(item.name);
+      setCopied(true);
+    } catch {
+      setCopied(false);
+    }
   }
 
   return (
@@ -87,7 +92,7 @@ export function BuilderNode({
               className="max-h-12 w-auto object-contain"
             />
           ) : (
-            <span className="text-[10px] font-bold uppercase tracking-widest text-[#555]">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
               N/A
             </span>
           )}
@@ -96,11 +101,11 @@ export function BuilderNode({
           <p className="truncate text-sm font-black uppercase tracking-widest text-[#ccc]">
             {title}
           </p>
-          <p className="mt-1 truncate text-[10px] font-bold uppercase tracking-widest text-[#666]">
+          <p className="mt-1 truncate text-[10px] font-bold uppercase tracking-widest text-[#888]">
             {subtitle}
           </p>
           {item && !isEmpty && (
-            <p className="mt-1 truncate text-xs text-[#777]">
+            <p className="mt-1 truncate text-xs text-[#888]">
               {item.ergonomics > 0 ? "+" : ""}
               {item.ergonomics} ergo / {Math.round(item.weight * 100) / 100} kg
             </p>

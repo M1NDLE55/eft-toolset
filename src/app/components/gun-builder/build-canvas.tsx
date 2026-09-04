@@ -57,6 +57,7 @@ export function BuildCanvas({
   const [viewport, setViewport] = useState({ x: 0, y: 0, scale: 1 });
   const [isPanning, setIsPanning] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [actionError, setActionError] = useState("");
 
   useEffect(() => {
     const container = viewportRef.current;
@@ -127,12 +128,16 @@ export function BuildCanvas({
     const shell = canvasShellRef.current;
     if (!shell) return;
 
-    if (document.fullscreenElement === shell) {
-      await document.exitFullscreen();
-      return;
+    try {
+      if (document.fullscreenElement === shell) {
+        await document.exitFullscreen();
+        return;
+      }
+      await shell.requestFullscreen();
+      setActionError("");
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Fullscreen is unavailable.");
     }
-
-    await shell.requestFullscreen();
   }
 
   // Drag empty canvas space by translating the diagram instead of relying on
@@ -167,30 +172,45 @@ export function BuildCanvas({
 
   async function handleSelect(itemId: string) {
     if (!activeNode?.slot) return;
-    await loadBuildItems([itemId]);
-    const updated = saveBuild({
-      ...build,
-      root: attachMod(
-        build.root,
-        activeNode.parentPath,
-        activeNode.slot.id,
-        itemId
-      ),
-    });
-    onBuildChange(updated);
-    setActiveNode(null);
+    try {
+      await loadBuildItems([itemId]);
+      const updated = saveBuild({
+        ...build,
+        root: attachMod(
+          build.root,
+          activeNode.parentPath,
+          activeNode.slot.id,
+          itemId
+        ),
+      });
+      onBuildChange(updated);
+      setActiveNode(null);
+      setActionError("");
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not add this item.");
+    }
   }
 
   function handleRemove(node: PositionedNode) {
-    const updated = saveBuild({
-      ...build,
-      root: removeMod(build.root, node.path),
-    });
-    onBuildChange(updated);
+    try {
+      const updated = saveBuild({
+        ...build,
+        root: removeMod(build.root, node.path),
+      });
+      onBuildChange(updated);
+      setActionError("");
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not remove this item.");
+    }
   }
 
   return (
     <>
+      {actionError && (
+        <p role="alert" className="border border-red-900/60 bg-red-950/30 p-3 text-sm text-red-200">
+          {actionError}
+        </p>
+      )}
       <div
         ref={canvasShellRef}
         className={`border border-[#1a1a1a] bg-[#050505] ${

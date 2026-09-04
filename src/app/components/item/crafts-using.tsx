@@ -36,14 +36,14 @@ export default function CraftsUsing({
             (craft, i) =>
               craft && (
                 <Accordion
-                  key={craft.rewardItems[0]!.item.name! + i}
+                  key={(craft.rewardItems[0]?.item.name ?? "craft") + i}
                   title={
                     <>
                       <span className="border border-[#9a8866] bg-[#2a1800] text-[#9a8866] px-2 mr-2 shrink-0">
                         {craft.station.name + " " + RomanLiteral(craft.level)}
                       </span>
                       <span className={openIndices.has(i) ? "basis-full mt-1" : "truncate"}>
-                        {craft.rewardItems[0]!.item.name}
+                        {craft.rewardItems[0]?.item.name ?? "Unknown reward"}
                       </span>
                       <span className={`text-[#9a8866] text-sm shrink-0 ${openIndices.has(i) ? "" : "ml-2"}`}>
                         ({craft.requiredItems.length} items)
@@ -54,11 +54,11 @@ export default function CraftsUsing({
                   setOpenIndex={() => toggleIndex(i)}
                   className={i > 0 && "border-t"}
                 >
-                  {craft.taskUnlock ? (
+                  {craft.taskUnlock?.wikiLink ? (
                     <p>
                       Must complete task:{" "}
                       <a
-                        href={craft.taskUnlock.wikiLink!}
+                        href={craft.taskUnlock.wikiLink}
                         target="_blank"
                         rel="noreferrer"
                         className="underline underline-offset-2 text-yellow-400 hover:underline-offset-4 transition-[text-underline-offset]"
@@ -66,6 +66,8 @@ export default function CraftsUsing({
                         {craft.taskUnlock.name}
                       </a>
                     </p>
+                  ) : craft.taskUnlock ? (
+                    <p>Must complete task: {craft.taskUnlock.name}</p>
                   ) : (
                     <p className="text-[#9a8866] text-sm">No task requirement</p>
                   )}

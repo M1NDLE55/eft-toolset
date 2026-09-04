@@ -36,14 +36,14 @@ export default function BartersUsing({
             (barter, i) =>
               barter && (
                 <Accordion
-                  key={barter.rewardItems[0]!.item.name! + i}
+                  key={(barter.rewardItems[0]?.item.name ?? "barter") + i}
                   title={
                     <>
                       <span className="border border-[#9a8866] bg-[#2a1800] text-[#9a8866] px-2 mr-2 shrink-0">
                         {barter.trader.name + " " + RomanLiteral(barter.level)}
                       </span>
                       <span className={openIndices.has(i) ? "basis-full mt-1" : "truncate"}>
-                        {barter.rewardItems[0]!.item.name}
+                        {barter.rewardItems[0]?.item.name ?? "Unknown reward"}
                       </span>
                       <span className={`text-[#9a8866] text-sm shrink-0 ${openIndices.has(i) ? "" : "ml-2"}`}>
                         ({barter.requiredItems.length} items)
@@ -54,11 +54,11 @@ export default function BartersUsing({
                   setOpenIndex={() => toggleIndex(i)}
                   className={i > 0 && "border-t"}
                 >
-                  {barter.taskUnlock ? (
+                  {barter.taskUnlock?.wikiLink ? (
                     <p>
                       Must complete task:{" "}
                       <a
-                        href={barter.taskUnlock.wikiLink!}
+                        href={barter.taskUnlock.wikiLink}
                         target="_blank"
                         rel="noreferrer"
                         className="underline underline-offset-2 text-yellow-400 hover:underline-offset-4 transition-[text-underline-offset]"
@@ -66,6 +66,8 @@ export default function BartersUsing({
                         {barter.taskUnlock.name}
                       </a>
                     </p>
+                  ) : barter.taskUnlock ? (
+                    <p>Must complete task: {barter.taskUnlock.name}</p>
                   ) : (
                     <p className="text-[#9a8866] text-sm">No task requirement</p>
                   )}

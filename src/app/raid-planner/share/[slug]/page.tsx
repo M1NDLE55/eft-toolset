@@ -34,6 +34,7 @@ export default function SharedPlanPage() {
   const router = useRouter();
   const [state, setState] = useState<ImportState>({ status: "reading" });
   const [importing, setImporting] = useState(false);
+  const [importError, setImportError] = useState("");
 
   useEffect(() => {
     const hash = window.location.hash.replace(/^#/, "");
@@ -117,15 +118,21 @@ export default function SharedPlanPage() {
     if (state.status !== "ready") return;
 
     setImporting(true);
-    const plan = importPlan({
-      name: state.plan.name,
-      mapKey: state.plan.mapKey,
-      enabledLayers: state.plan.enabledLayers,
-      route: state.plan.route,
-      drawings: state.plan.drawings,
-      notes: state.plan.notes,
-    });
-    router.replace(`/raid-planner/${plan.id}`);
+    setImportError("");
+    try {
+      const plan = importPlan({
+        name: state.plan.name,
+        mapKey: state.plan.mapKey,
+        enabledLayers: state.plan.enabledLayers,
+        route: state.plan.route,
+        drawings: state.plan.drawings,
+        notes: state.plan.notes,
+      });
+      router.replace(`/raid-planner/${plan.id}`);
+    } catch (reason) {
+      setImporting(false);
+      setImportError(reason instanceof Error ? reason.message : "Could not import this plan.");
+    }
   }
 
   return (
@@ -138,7 +145,7 @@ export default function SharedPlanPage() {
           <p className="truncate text-lg font-bold text-[#ddd]">
             {state.plan.name}
           </p>
-          <p className="text-[10px] uppercase tracking-widest text-[#777]">
+          <p className="text-[10px] uppercase tracking-widest text-[#888]">
             {config.name}
           </p>
         </div>
@@ -173,6 +180,7 @@ export default function SharedPlanPage() {
             Cancel
           </Button>
         </div>
+        {importError && <p role="alert" className="text-sm text-red-300">{importError}</p>}
       </div>
     </div>
   );

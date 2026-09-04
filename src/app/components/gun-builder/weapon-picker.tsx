@@ -32,7 +32,7 @@ export function WeaponPicker({ disabled, onCreate }: WeaponPickerProps) {
   return (
     <div className="flex min-h-0 flex-col gap-3">
       <div className="relative">
-        <Search className="absolute left-3 top-2.5 h-4 w-4 text-[#555]" />
+        <Search className="absolute left-3 top-2.5 h-4 w-4 text-[#888]" />
         <Input
           className="pl-9"
           value={search}
@@ -73,7 +73,7 @@ export function WeaponPicker({ disabled, onCreate }: WeaponPickerProps) {
               <p className="truncate text-sm font-bold text-[#ccc]">
                 {gun.name}
               </p>
-              <p className="text-xs text-[#777]">{gun.shortName}</p>
+              <p className="text-xs text-[#888]">{gun.shortName}</p>
             </div>
             <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
               {gun.defaultPresetId && (
@@ -97,7 +97,7 @@ export function WeaponPicker({ disabled, onCreate }: WeaponPickerProps) {
           </div>
         ))}
         {!loading && !error && filtered.length === 0 && (
-          <div className="p-4 text-sm text-[#777]">No weapons found.</div>
+          <div className="p-4 text-sm text-[#888]">No weapons found.</div>
         )}
       </div>
     </div>

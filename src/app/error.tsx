@@ -22,7 +22,7 @@ export default function Error({
         <h1 className="text-5xl font-black tracking-[0.3em] text-[#9a8866] uppercase">
           ERROR
         </h1>
-        <p className="text-[11px] text-[#555] uppercase tracking-[0.3em] font-bold">
+        <p className="text-[11px] text-[#888] uppercase tracking-[0.3em] font-bold">
           Something went wrong
         </p>
       </div>

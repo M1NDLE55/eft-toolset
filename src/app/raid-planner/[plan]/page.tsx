@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { notFound, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import { ArrowLeft, LoaderCircle, Pencil } from "lucide-react";
 import type { PlanTool, RaidPlan } from "@/app/lib/raid-planner/types";
 import { PLAN_COLORS } from "@/app/lib/raid-planner/types";
@@ -28,6 +28,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { MAX_LAYERS, MAX_PLAN_NAME_LENGTH } from "@/app/lib/raid-planner/limits";
+import { LocalMissing } from "@/components/local-missing";
 
 const PlanEditorCanvas = dynamic(
   () =>
@@ -42,9 +44,10 @@ const PlanEditorCanvas = dynamic(
 
 export default function PlanEditorPage() {
   const params = useParams<{ plan: string }>();
-  const { gameMode } = useGameMode();
+  const { gameMode, hydrated: modeHydrated } = useGameMode();
 
   const [plan, setPlan] = useState<RaidPlan | null>(null);
+  const [missing, setMissing] = useState<boolean | null>(null);
   const [tool, setTool] = useState<PlanTool>("select");
   const [color, setColor] = useState<string>(PLAN_COLORS[0]);
   const [selectedNoteId, setSelectedNoteId] = useState<string | null>(null);
@@ -59,9 +62,9 @@ export default function PlanEditorPage() {
     saveTimer.current = null;
     if (!pendingSave.current) return;
     const pending = pendingSave.current;
-    pendingSave.current = null;
     try {
       savePlan(pending);
+      pendingSave.current = null;
       setSaveError("");
     } catch (reason) {
       setSaveError(reason instanceof Error ? reason.message : "Could not save this plan.");
@@ -71,7 +74,11 @@ export default function PlanEditorPage() {
   useEffect(() => {
     flushSave();
     const found = getPlan(params.plan);
-    if (!found) notFound();
+    if (!found) {
+      setMissing(true);
+      return;
+    }
+    setMissing(false);
     setPlan(found);
     setRenameValue(found.name);
   }, [flushSave, params.plan]);
@@ -101,12 +108,12 @@ export default function PlanEditorPage() {
   const [retryToken, setRetryToken] = useState(0);
 
   useEffect(() => {
-    if (!config) return;
+    if (!config || !modeHydrated) return;
     let cancelled = false;
     setDetails(null);
     setDetailsError(false);
 
-    fetchMapDetails(config.key, config.name, gameMode)
+    fetchMapDetails(config.key, gameMode)
       .then((result) => {
         if (cancelled) return;
         setDetails(result);
@@ -119,7 +126,7 @@ export default function PlanEditorPage() {
     return () => {
       cancelled = true;
     };
-  }, [config, gameMode, retryToken]);
+  }, [config, gameMode, modeHydrated, retryToken]);
 
   const updatePlan = useCallback(
     (updater: (current: RaidPlan) => RaidPlan) => {
@@ -137,6 +144,13 @@ export default function PlanEditorPage() {
 
   const handleLayerChange = useCallback(
     (ids: string[], checked: boolean) => {
+      if (checked && plan) {
+        const proposed = new Set([...plan.enabledLayers, ...ids]);
+        if (proposed.size > MAX_LAYERS) {
+          setSaveError(`A plan can enable at most ${MAX_LAYERS} layers.`);
+          return;
+        }
+      }
       updatePlan((current) => {
         const next = new Set(current.enabledLayers);
         for (const id of ids) {
@@ -146,7 +160,7 @@ export default function PlanEditorPage() {
         return { ...current, enabledLayers: Array.from(next) };
       });
     },
-    [updatePlan]
+    [plan, updatePlan]
   );
 
   const layerGroups = useMemo(
@@ -158,7 +172,15 @@ export default function PlanEditorPage() {
     [plan?.enabledLayers]
   );
 
-  if (!plan || !config) {
+  if (missing === true) {
+    return <LocalMissing title="Plan not found" backHref="/raid-planner" backLabel="Back to plans" />;
+  }
+
+  if (plan && !config) {
+    return <LocalMissing title="Plan map is no longer available" backHref="/raid-planner" backLabel="Back to plans" />;
+  }
+
+  if (missing === null || !plan || !config) {
     return (
       <div className="flex w-full justify-center p-8">
         <LoaderCircle className="h-6 w-6 animate-spin text-[#9a8866]" />
@@ -172,7 +194,7 @@ export default function PlanEditorPage() {
 
   function handleRename() {
     const name = renameValue.trim();
-    if (!name) return;
+    if (!name || name.length > MAX_PLAN_NAME_LENGTH) return;
     pendingSave.current = { ...currentPlan, name };
     flushSave();
     setPlan((current) => (current ? { ...current, name } : current));
@@ -192,13 +214,14 @@ export default function PlanEditorPage() {
         color={color}
         onPlanChange={updatePlan}
         onSelectNote={setSelectedNoteId}
+        onLimitError={setSaveError}
       />
 
       <div className="pointer-events-none absolute inset-x-0 top-0 z-[1000] flex items-start justify-between gap-2 p-3">
         <div className="pointer-events-auto flex items-center gap-2 border border-[#2a2a2a] bg-[#090909]/90 px-3 py-2 backdrop-blur-sm">
           <Link
             href={{ pathname: "/raid-planner" }}
-            className="text-[#777] transition-colors hover:text-[#9a8866]"
+            className="text-[#888] transition-colors hover:text-[#9a8866]"
           >
             <ArrowLeft className="h-4 w-4" />
             <span className="sr-only">Back to plans</span>
@@ -212,19 +235,19 @@ export default function PlanEditorPage() {
               setRenameValue(currentPlan.name);
               setRenameOpen(true);
             }}
-            className="text-[#777] transition-colors hover:text-[#9a8866]"
+            className="text-[#888] transition-colors hover:text-[#9a8866]"
           >
             <Pencil className="h-3.5 w-3.5" />
             <span className="sr-only">Rename plan</span>
           </button>
           <SharePlan plan={currentPlan} />
-          <span className="hidden text-[10px] uppercase tracking-widest text-[#555] sm:inline">
+          <span className="hidden text-[10px] uppercase tracking-widest text-[#888] sm:inline">
             {config.name}
           </span>
           {saveError && (
-            <span className="max-w-48 truncate text-[10px] text-red-400" title={saveError}>
-              Not saved
-            </span>
+            <button type="button" onClick={flushSave} className="max-w-48 truncate text-[10px] text-red-400 underline" title={saveError}>
+              Not saved — retry
+            </button>
           )}
         </div>
 
@@ -292,11 +315,13 @@ export default function PlanEditorPage() {
 
       {config.author && (
         <div className="pointer-events-none absolute bottom-0 left-0 z-[999] p-3 max-sm:pb-16">
-          <p className="pointer-events-auto bg-[#090909]/80 px-2 py-1 text-[10px] uppercase tracking-widest text-[#555]">
+          <p className="pointer-events-auto bg-[#090909]/80 px-2 py-1 text-[10px] uppercase tracking-widest text-[#888]">
             Map by{" "}
             {config.authorLink ? (
               <a
                 href={config.authorLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#9a8866] underline underline-offset-2"
               >
                 {config.author}
@@ -315,6 +340,7 @@ export default function PlanEditorPage() {
           </DialogHeader>
           <Input
             value={renameValue}
+            maxLength={MAX_PLAN_NAME_LENGTH}
             onChange={(event) => setRenameValue(event.target.value)}
             onKeyDown={(event) => {
               if (event.key === "Enter") handleRename();
