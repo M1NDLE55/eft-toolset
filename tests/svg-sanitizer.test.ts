@@ -26,4 +26,16 @@ describe("SVG sanitization", () => {
   it("rejects non-SVG documents", () => {
     expect(() => parseSafeSvg("<html />")).toThrow(/not an SVG/i);
   });
+
+  it("blocks animation, entities, oversized trees, and CSS escape bypasses", () => {
+    const svg = parseSafeSvg(`
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <animate attributeName="href" values="x;javascript:alert(1)" />
+        <path style="fill:j\\61vascript:alert(1)" />
+      </svg>
+    `);
+    expect(svg.querySelector("animate")).toBeNull();
+    expect(svg.querySelector("path")?.getAttribute("style")).toBe("fill:none");
+    expect(() => parseSafeSvg('<!DOCTYPE svg [<!ENTITY x "boom">]><svg>&x;</svg>')).toThrow(/limits/i);
+  });
 });

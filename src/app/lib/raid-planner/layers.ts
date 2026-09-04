@@ -9,6 +9,7 @@ import type {
 import type { FloorExtent, GamePoint, MapConfig } from "./types";
 import { gameToLatLng } from "./coords";
 import { customEncodeURI } from "@/app/lib/URIEncoding";
+import { makeLayerAccessible } from "./leaflet-accessibility";
 
 const COLORS = {
   pmc: "#7da05f",
@@ -219,6 +220,7 @@ function bindTooltip(layer: L.Layer, text: string) {
   const content = document.createElement("span");
   content.textContent = text;
   layer.bindTooltip(content, { direction: "top", offset: [0, -8] });
+  makeLayerAccessible(layer, text);
 }
 
 function buildGlyphs(
@@ -250,7 +252,7 @@ function buildDots(
 
   for (const point of points) {
     const marker = L.circleMarker(gameToLatLng(point.position), {
-      renderer: style.renderer,
+      ...(points.length > 500 ? { renderer: style.renderer } : {}),
       radius: style.radius,
       color: style.color,
       weight: 1.5,

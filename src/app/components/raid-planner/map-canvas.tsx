@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import type { MapConfig } from "@/app/lib/raid-planner/types";
@@ -22,6 +22,7 @@ const BASE_SVG_CLASS = "rp-base-svg";
 const HIDDEN_GROUP_CLASS = "rp-hidden";
 const DIMMED_GROUP_CLASS = "rp-dimmed";
 const OFF_LEVEL_CLASS = "rp-off-level";
+const MAX_MAP_SVG_BYTES = 8 * 1024 * 1024;
 
 interface MapCanvasProps {
   config: MapConfig;
@@ -48,12 +49,15 @@ export function MapCanvas({
   const entriesRef = useRef<Map<string, LayerEntry>>(new Map());
   const entriesDetailsRef = useRef<MapDetails | null>(null);
   const activeFloorRef = useRef(activeFloor);
+  const [baseMapError, setBaseMapError] = useState("");
+  const [baseRetry, setBaseRetry] = useState(0);
   activeFloorRef.current = activeFloor;
 
   // Create the map once per map config.
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+    setBaseMapError("");
 
     const bounds = getMapBounds(config.bounds);
     const maxZoom = Math.max(7, config.maxZoom);
@@ -78,7 +82,9 @@ export function MapCanvas({
         bounds,
         maxNativeZoom: config.maxZoom,
         maxZoom,
-      }).addTo(map);
+      })
+        .on("tileerror", () => setBaseMapError("Some map tiles could not be loaded."))
+        .addTo(map);
     } else if (config.svgPath) {
       const svgElement = document.createElementNS(
         "http://www.w3.org/2000/svg",
@@ -99,7 +105,7 @@ export function MapCanvas({
       fetch(config.svgPath, { signal: controller.signal })
         .then((response) => {
           if (!response.ok) throw new Error(`Map SVG request failed (${response.status}).`);
-          return response.text();
+          return readTextWithLimit(response, MAX_MAP_SVG_BYTES);
         })
         .then((svgText) => {
           const safeSvg = parseSafeSvg(svgText);
@@ -112,7 +118,9 @@ export function MapCanvas({
         })
         .catch((error) => {
           if (error instanceof DOMException && error.name === "AbortError") return;
-          // Leave the overlay empty; the map background still pans/zooms.
+          setBaseMapError(
+            error instanceof Error ? error.message : "The map image could not be loaded."
+          );
         });
       baseLayerRef.current.once("remove", () => controller.abort());
     }
@@ -133,7 +141,7 @@ export function MapCanvas({
     };
     // The canvas is remounted via `key` when the map changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [config]);
+  }, [baseRetry, config]);
 
   // Apply floor changes to the base imagery.
   useEffect(() => {
@@ -154,7 +162,9 @@ export function MapCanvas({
           bounds: getMapBounds(config.bounds),
           maxNativeZoom: config.maxZoom,
           maxZoom: Math.max(7, config.maxZoom),
-        }).addTo(map);
+        })
+          .on("tileerror", () => setBaseMapError("Some floor tiles could not be loaded."))
+          .addTo(map);
         baseContainer?.classList.add(OFF_LEVEL_CLASS);
       } else {
         baseContainer?.classList.remove(OFF_LEVEL_CLASS);
@@ -204,7 +214,52 @@ export function MapCanvas({
     });
   }, [config, details, enabledLayers, activeFloor]);
 
-  return <div ref={containerRef} className="rp-map h-full w-full" />;
+  return (
+    <div className="relative h-full w-full">
+      <div
+        ref={containerRef}
+        className="rp-map h-full w-full"
+        role="region"
+        aria-label={`${config.name} interactive map`}
+      />
+      {baseMapError && (
+        <div role="alert" className="absolute bottom-3 left-1/2 z-[1001] flex -translate-x-1/2 items-center gap-2 border border-red-900/60 bg-[#090909]/95 px-3 py-2 text-xs text-red-200">
+          <span>{baseMapError}</span>
+          <button type="button" className="underline underline-offset-2" onClick={() => setBaseRetry((value) => value + 1)}>
+            Retry
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+async function readTextWithLimit(response: Response, maxBytes: number): Promise<string> {
+  const contentLength = Number(response.headers.get("content-length"));
+  if (Number.isFinite(contentLength) && contentLength > maxBytes) {
+    throw new Error("The map image is too large.");
+  }
+  if (!response.body) throw new Error("The map image response was empty.");
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder("utf-8", { fatal: true });
+  let bytes = 0;
+  const chunks: string[] = [];
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      bytes += value.byteLength;
+      if (bytes > maxBytes) {
+        await reader.cancel("Map image exceeded its size limit.");
+        throw new Error("The map image is too large.");
+      }
+      chunks.push(decoder.decode(value, { stream: true }));
+    }
+    chunks.push(decoder.decode());
+    return chunks.join("");
+  } finally {
+    reader.releaseLock();
+  }
 }
 
 /**

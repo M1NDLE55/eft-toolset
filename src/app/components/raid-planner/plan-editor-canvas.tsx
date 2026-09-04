@@ -8,6 +8,14 @@ import { latLngToGame } from "@/app/lib/raid-planner/coords";
 import { simplifyPoints } from "@/app/lib/raid-planner/simplify";
 import { buildPlanLayers } from "@/app/lib/raid-planner/plan-layers";
 import { MapCanvas } from "./map-canvas";
+import { createId } from "@/app/lib/id";
+import {
+  MAX_DRAWINGS,
+  MAX_NOTES,
+  MAX_POINTS_PER_DRAWING,
+  MAX_ROUTE_POINTS,
+  MAX_TOTAL_DRAWING_POINTS,
+} from "@/app/lib/raid-planner/limits";
 
 const PEN_TOLERANCE_METERS = 0.5;
 const MIN_ARROW_METERS = 2;
@@ -31,6 +39,7 @@ interface PlanEditorCanvasProps {
   interactive?: boolean;
   onPlanChange: (updater: (plan: RaidPlan) => RaidPlan) => void;
   onSelectNote: (id: string | null) => void;
+  onLimitError?: (message: string) => void;
 }
 
 interface Measurement {
@@ -50,6 +59,7 @@ export function PlanEditorCanvas({
   interactive = true,
   onPlanChange,
   onSelectNote,
+  onLimitError,
 }: PlanEditorCanvasProps) {
   const [map, setMap] = useState<L.Map | null>(null);
   const planGroupRef = useRef<L.LayerGroup | null>(null);
@@ -63,7 +73,11 @@ export function PlanEditorCanvas({
   const onPlanChangeRef = useRef(onPlanChange);
   onPlanChangeRef.current = onPlanChange;
   const onSelectNoteRef = useRef(onSelectNote);
+  const onLimitErrorRef = useRef(onLimitError);
+  const planRef = useRef(plan);
   onSelectNoteRef.current = onSelectNote;
+  onLimitErrorRef.current = onLimitError;
+  planRef.current = plan;
 
   // Tool-dependent map behavior: freehand tools own the pointer.
   useEffect(() => {
@@ -120,12 +134,25 @@ export function PlanEditorCanvas({
         PEN_TOLERANCE_METERS
       );
       if (points.length >= 2) {
+        const currentPlan = planRef.current;
+        const totalPoints = currentPlan.drawings.reduce(
+          (total, drawing) => total + drawing.points.length,
+          0
+        );
+        if (
+          points.length > MAX_POINTS_PER_DRAWING ||
+          currentPlan.drawings.length >= MAX_DRAWINGS ||
+          totalPoints + points.length > MAX_TOTAL_DRAWING_POINTS
+        ) {
+          onLimitErrorRef.current?.("This plan has reached its drawing limit.");
+          return clearTemp();
+        }
         const drawingColor = colorRef.current;
         onPlanChangeRef.current((current) => ({
           ...current,
           drawings: [
             ...current.drawings,
-            { id: crypto.randomUUID(), kind: "pen", color: drawingColor, points },
+            { id: createId(), kind: "pen", color: drawingColor, points },
           ],
         }));
       }
@@ -137,13 +164,25 @@ export function PlanEditorCanvas({
       const from = latLngToGame(arrowStart);
       const to = latLngToGame(end);
       if (Math.hypot(to.x - from.x, to.z - from.z) >= MIN_ARROW_METERS) {
+        const currentPlan = planRef.current;
+        const totalPoints = currentPlan.drawings.reduce(
+          (total, drawing) => total + drawing.points.length,
+          0
+        );
+        if (
+          currentPlan.drawings.length >= MAX_DRAWINGS ||
+          totalPoints + 2 > MAX_TOTAL_DRAWING_POINTS
+        ) {
+          onLimitErrorRef.current?.("This plan has reached its drawing limit.");
+          return clearTemp();
+        }
         const drawingColor = colorRef.current;
         onPlanChangeRef.current((current) => ({
           ...current,
           drawings: [
             ...current.drawings,
             {
-              id: crypto.randomUUID(),
+              id: createId(),
               kind: "arrow",
               color: drawingColor,
               points: [from, to],
@@ -216,14 +255,22 @@ export function PlanEditorCanvas({
     const handleClick = (event: L.LeafletMouseEvent) => {
       const activeTool = toolRef.current;
       if (activeTool === "route") {
+        if (planRef.current.route.length >= MAX_ROUTE_POINTS) {
+          onLimitErrorRef.current?.("This plan has reached its route-point limit.");
+          return;
+        }
         const position = latLngToGame(event.latlng);
         onPlanChangeRef.current((current) => ({
           ...current,
-          route: [...current.route, { id: crypto.randomUUID(), position }],
+          route: [...current.route, { id: createId(), position }],
         }));
       } else if (activeTool === "note") {
+        if (planRef.current.notes.length >= MAX_NOTES) {
+          onLimitErrorRef.current?.("This plan has reached its note limit.");
+          return;
+        }
         const position = latLngToGame(event.latlng);
-        const id = crypto.randomUUID();
+        const id = createId();
         const noteColor = colorRef.current;
         onPlanChangeRef.current((current) => ({
           ...current,

@@ -39,18 +39,19 @@ export function Toolbar({
   onColorChange,
 }: ToolbarProps) {
   return (
-    <div className="flex flex-row border border-[#2a2a2a] bg-[#090909]/90 backdrop-blur-sm sm:flex-col">
+    <div role="toolbar" aria-label="Plan tools" className="flex flex-row border border-[#2a2a2a] bg-[#090909]/90 backdrop-blur-sm sm:flex-col">
       {TOOLS.map(({ tool: id, label, icon: Icon }) => (
         <button
           key={id}
           type="button"
           title={label}
           onClick={() => onToolChange(id)}
+          aria-pressed={id === tool}
           className={cn(
             "flex h-9 w-9 items-center justify-center transition-colors",
             id === tool
               ? "bg-[#9a8866] text-black"
-              : "text-[#777] hover:bg-[#1a1a1a] hover:text-[#ccc]"
+              : "text-[#888] hover:bg-[#1a1a1a] hover:text-[#ccc]"
           )}
         >
           <Icon className="h-4 w-4" />
@@ -66,6 +67,7 @@ export function Toolbar({
               type="button"
               title={swatch}
               onClick={() => onColorChange(swatch)}
+              aria-pressed={swatch === color}
               className={cn(
                 "h-4 w-4 border",
                 swatch === color ? "border-white" : "border-transparent"

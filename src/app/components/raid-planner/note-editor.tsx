@@ -6,6 +6,10 @@ import type { NotePin } from "@/app/lib/raid-planner/types";
 import { PLAN_COLORS } from "@/app/lib/raid-planner/types";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import {
+  MAX_NOTE_BODY_LENGTH,
+  MAX_NOTE_TITLE_LENGTH,
+} from "@/app/lib/raid-planner/limits";
 
 interface NoteEditorProps {
   note: NotePin;
@@ -54,7 +58,7 @@ export function NoteEditor({ note, onChange, onDelete, onClose }: NoteEditorProp
               discard.current = true;
               onDelete();
             }}
-            className="text-[#777] transition-colors hover:text-[#a04f4f]"
+            className="text-[#888] transition-colors hover:text-[#a04f4f]"
           >
             <Trash2 className="h-4 w-4" />
             <span className="sr-only">Delete note</span>
@@ -66,7 +70,7 @@ export function NoteEditor({ note, onChange, onDelete, onClose }: NoteEditorProp
               discard.current = true;
               onClose();
             }}
-            className="text-[#777] transition-colors hover:text-[#ccc]"
+            className="text-[#888] transition-colors hover:text-[#ccc]"
           >
             <X className="h-4 w-4" />
             <span className="sr-only">Close note editor</span>
@@ -76,6 +80,7 @@ export function NoteEditor({ note, onChange, onDelete, onClose }: NoteEditorProp
 
       <Input
         value={title}
+        maxLength={MAX_NOTE_TITLE_LENGTH}
         autoFocus
         placeholder="Title"
         onChange={(event) => {
@@ -86,6 +91,7 @@ export function NoteEditor({ note, onChange, onDelete, onClose }: NoteEditorProp
       />
       <textarea
         value={body}
+        maxLength={MAX_NOTE_BODY_LENGTH}
         placeholder="Details, callouts, reminders…"
         rows={3}
         onChange={(event) => {

@@ -4,6 +4,7 @@ import L from "leaflet";
 import type { Drawing, GamePoint, NotePin, RaidPlan } from "./types";
 import { getPlanDisplayColor, PLAN_COLORS } from "./types";
 import { gameToLatLng, latLngToGame } from "./coords";
+import { makeLayerAccessible } from "./leaflet-accessibility";
 
 const ROUTE_COLOR = PLAN_COLORS[0];
 
@@ -42,6 +43,9 @@ export function buildPlanLayers(
       }),
     });
     marker.on("click", () => handlers.onWaypointClick(waypoint.id));
+    makeLayerAccessible(marker, `Waypoint ${index + 1}`, () =>
+      handlers.onWaypointClick(waypoint.id)
+    );
     marker.on("dragend", () =>
       handlers.onWaypointMove(waypoint.id, latLngToGame(marker.getLatLng()))
     );
@@ -61,6 +65,11 @@ export function buildPlanLayers(
       L.DomEvent.stopPropagation(event);
       handlers.onDrawingClick(drawing.id);
     });
+    makeLayerAccessible(
+      layer,
+      drawing.kind === "arrow" ? "Arrow drawing" : "Freehand drawing",
+      () => handlers.onDrawingClick(drawing.id)
+    );
   }
 
   for (const note of plan.notes) {
@@ -69,6 +78,9 @@ export function buildPlanLayers(
       L.DomEvent.stopPropagation(event);
       handlers.onNoteClick(note.id);
     });
+    makeLayerAccessible(marker, note.title || "Plan note", () =>
+      handlers.onNoteClick(note.id)
+    );
     marker.on("dragend", () =>
       handlers.onNoteMove(note.id, latLngToGame(marker.getLatLng()))
     );
@@ -119,9 +131,10 @@ function buildArrow(
 
   const fromPoint = map.project(L.latLng(from), 0);
   const toPoint = map.project(L.latLng(to), 0);
-  const angle =
+  const rawAngle =
     (Math.atan2(toPoint.y - fromPoint.y, toPoint.x - fromPoint.x) * 180) /
     Math.PI;
+  const angle = Number.isFinite(rawAngle) ? rawAngle : 0;
 
   L.marker(to, {
     interactive: false,

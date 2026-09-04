@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { Check, Layers, X } from "lucide-react";
 import type { LayerGroupOptions } from "@/app/lib/raid-planner/layer-options";
 import { cn } from "@/lib/utils";
@@ -23,13 +23,16 @@ export function LayerPanel({
   onRetry,
 }: LayerPanelProps) {
   const [open, setOpen] = useState(false);
+  const panelId = useId();
 
   if (!open) {
     return (
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2 border border-[#2a2a2a] bg-[#090909]/90 px-3 py-2 text-[10px] uppercase tracking-widest text-[#777] backdrop-blur-sm transition-colors hover:border-[#9a8866] hover:text-[#ccc]"
+        aria-expanded="false"
+        aria-controls={panelId}
+        className="flex items-center gap-2 border border-[#2a2a2a] bg-[#090909]/90 px-3 py-2 text-[10px] uppercase tracking-widest text-[#888] backdrop-blur-sm transition-colors hover:border-[#9a8866] hover:text-[#ccc]"
       >
         <Layers className="h-4 w-4" />
         Layers
@@ -43,7 +46,7 @@ export function LayerPanel({
   }
 
   return (
-    <div className="flex max-h-[70dvh] w-64 flex-col border border-[#2a2a2a] bg-[#090909]/95 backdrop-blur-sm">
+    <div id={panelId} aria-label="Map layers" className="flex max-h-[70dvh] w-64 flex-col border border-[#2a2a2a] bg-[#090909]/95 backdrop-blur-sm">
       <div className="flex items-center justify-between border-b border-[#2a2a2a] px-3 py-2">
         <span className="text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">
           Layers
@@ -51,7 +54,7 @@ export function LayerPanel({
         <button
           type="button"
           onClick={() => setOpen(false)}
-          className="text-[#777] transition-colors hover:text-[#ccc]"
+          className="text-[#888] transition-colors hover:text-[#ccc]"
         >
           <X className="h-4 w-4" />
           <span className="sr-only">Close layer panel</span>
@@ -60,7 +63,7 @@ export function LayerPanel({
 
       <div className="min-h-0 flex-1 overflow-y-auto p-2">
         {loading ? (
-          <p className="px-1 py-2 text-[10px] uppercase tracking-widest text-[#555]">
+          <p className="px-1 py-2 text-[10px] uppercase tracking-widest text-[#888]">
             Loading map data…
           </p>
         ) : error ? (
@@ -71,7 +74,7 @@ export function LayerPanel({
             <button
               type="button"
               onClick={onRetry}
-              className="self-start border border-[#2a2a2a] px-2 py-1 text-[10px] uppercase tracking-widest text-[#777] hover:border-[#9a8866] hover:text-[#ccc]"
+              className="self-start border border-[#2a2a2a] px-2 py-1 text-[10px] uppercase tracking-widest text-[#888] hover:border-[#9a8866] hover:text-[#ccc]"
             >
               Retry
             </button>
@@ -86,7 +89,8 @@ export function LayerPanel({
                 <button
                   type="button"
                   onClick={() => onChange(groupIds, !allOn)}
-                  className="w-full px-1 py-1 text-left text-[10px] font-bold uppercase tracking-widest text-[#777] transition-colors hover:text-[#9a8866]"
+                  aria-pressed={allOn}
+                  className="w-full px-1 py-1 text-left text-[10px] font-bold uppercase tracking-widest text-[#888] transition-colors hover:text-[#9a8866]"
                   title={allOn ? "Hide all" : "Show all"}
                 >
                   {group.name}
@@ -98,6 +102,7 @@ export function LayerPanel({
                       key={option.id}
                       type="button"
                       onClick={() => onChange([option.id], !checked)}
+                      aria-pressed={checked}
                       className="flex w-full items-center gap-2 px-1 py-1 text-left transition-colors hover:bg-[#141414]"
                     >
                       <span
@@ -113,12 +118,12 @@ export function LayerPanel({
                       <span
                         className={cn(
                           "min-w-0 flex-1 truncate text-xs",
-                          checked ? "text-[#ccc]" : "text-[#777]"
+                          checked ? "text-[#ccc]" : "text-[#888]"
                         )}
                       >
                         {option.label}
                       </span>
-                      <span className="text-[10px] text-[#555]">
+                      <span className="text-[10px] text-[#888]">
                         {option.count}
                       </span>
                     </button>

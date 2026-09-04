@@ -22,17 +22,18 @@ export function FloorSwitcher({
   ];
 
   return (
-    <div className="flex flex-col border border-[#2a2a2a] bg-[#090909]/90 backdrop-blur-sm">
+    <div role="group" aria-label="Map floor" className="flex flex-col border border-[#2a2a2a] bg-[#090909]/90 backdrop-blur-sm">
       {options.map((option) => (
         <button
           key={option.id ?? "ground"}
           type="button"
           onClick={() => onChange(option.id)}
+          aria-pressed={option.id === activeFloor}
           className={cn(
             "px-3 py-2 text-left text-[10px] uppercase tracking-widest transition-colors",
             option.id === activeFloor
               ? "bg-[#9a8866] text-black"
-              : "text-[#777] hover:bg-[#1a1a1a] hover:text-[#ccc]"
+              : "text-[#888] hover:bg-[#1a1a1a] hover:text-[#ccc]"
           )}
         >
           {option.name}

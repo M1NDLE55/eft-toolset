@@ -23,7 +23,7 @@ export function MapPicker({ disabled, onPick }: MapPickerProps) {
           <span className="text-sm font-bold uppercase tracking-widest text-[#ccc] group-hover:text-[#9a8866]">
             {config.name}
           </span>
-          <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest text-[#555]">
+          <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest text-[#888]">
             <Layers className="h-3 w-3" />
             {config.floors.length + 1}{" "}
             {config.floors.length === 0 ? "level" : "levels"}
