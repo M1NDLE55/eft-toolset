@@ -2,6 +2,12 @@
 
 import type { Group } from "@/app/lib/types/itemGroups";
 import { readStore, subscribeStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
+import {
+  MAX_GROUP_ITEM_NAME_LENGTH,
+  MAX_GROUP_ITEMS,
+  MAX_GROUP_NAME_LENGTH,
+  MAX_GROUPS,
+} from "./limits";
 
 const DEFAULT_GROUPS: Group[] = [
   {
@@ -39,6 +45,7 @@ const GROUP_STORE: StoreDefinition<Group[]> = {
   version: 1,
   defaultValue: () => structuredClone(DEFAULT_GROUPS),
   validate: isGroupList,
+  recover: recoverGroups,
 };
 
 export function listGroups() {
@@ -54,20 +61,48 @@ export function subscribeGroups(listener: () => void) {
 }
 
 function isGroupList(value: unknown): value is Group[] {
+  return Array.isArray(value) && value.length <= MAX_GROUPS && value.every(isGroup);
+}
+
+function recoverGroups(value: unknown): Group[] | undefined {
+  if (!Array.isArray(value)) return undefined;
+  return value
+    .flatMap((candidate): Group[] => {
+      if (!candidate || typeof candidate !== "object") return [];
+      const group = candidate as Partial<Group>;
+      if (
+        typeof group.name !== "string" ||
+        !group.name.trim() ||
+        group.name.length > MAX_GROUP_NAME_LENGTH ||
+        !Array.isArray(group.items)
+      ) {
+        return [];
+      }
+      return [{
+        name: group.name,
+        items: group.items
+          .filter(
+            (item): item is string =>
+              typeof item === "string" && item.length <= MAX_GROUP_ITEM_NAME_LENGTH
+          )
+          .slice(0, MAX_GROUP_ITEMS),
+      }];
+    })
+    .slice(0, MAX_GROUPS);
+}
+
+function isGroup(value: unknown): value is Group {
+  if (!value || typeof value !== "object") return false;
+  const group = value as Partial<Group>;
   return (
-    Array.isArray(value) &&
-    value.length <= 200 &&
-    value.every(
-      (group) =>
-        Boolean(group) &&
-        typeof group.name === "string" &&
-        group.name.trim().length > 0 &&
-        group.name.length <= 120 &&
-        Array.isArray(group.items) &&
-        group.items.length <= 2_000 &&
-        group.items.every(
-          (item: unknown) => typeof item === "string" && item.length <= 240
-        )
+    typeof group.name === "string" &&
+    group.name.trim().length > 0 &&
+    group.name.length <= MAX_GROUP_NAME_LENGTH &&
+    Array.isArray(group.items) &&
+    group.items.length <= MAX_GROUP_ITEMS &&
+    group.items.every(
+      (item: unknown) =>
+        typeof item === "string" && item.length <= MAX_GROUP_ITEM_NAME_LENGTH
     )
   );
 }

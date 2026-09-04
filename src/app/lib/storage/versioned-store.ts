@@ -7,6 +7,7 @@ export interface StoreDefinition<T> {
   defaultValue: () => T;
   validate: (value: unknown) => value is T;
   migrate?: (value: unknown, version: number) => T | undefined;
+  recover?: (value: unknown) => T | undefined;
 }
 
 interface StoreEnvelope<T> {
@@ -64,7 +65,7 @@ export function readStore<T>(definition: StoreDefinition<T>): T {
         return parsed.data;
       }
       const migrated = definition.migrate?.(parsed.data, parsed.version);
-      if (migrated && definition.validate(migrated)) {
+      if (migrated !== undefined && definition.validate(migrated)) {
         try {
           writeStore(definition, migrated);
           if (sourceKey !== definition.key) window.localStorage.removeItem(sourceKey);
@@ -73,6 +74,16 @@ export function readStore<T>(definition: StoreDefinition<T>): T {
         }
         return migrated;
       }
+    }
+    const recovered = definition.recover?.(isEnvelope(parsed) ? parsed.data : parsed);
+    if (recovered !== undefined && definition.validate(recovered)) {
+      try {
+        writeStore(definition, recovered);
+        if (sourceKey !== definition.key) window.localStorage.removeItem(sourceKey);
+      } catch {
+        // The recovered in-memory value is still useful when storage is read-only.
+      }
+      return recovered;
     }
     quarantine(sourceKey, raw);
   } catch {
@@ -128,8 +139,18 @@ function isEnvelope(value: unknown): value is StoreEnvelope<unknown> {
 
 function quarantine(key: string, raw: string) {
   try {
-    window.localStorage.setItem(`${key}:corrupt:${Date.now()}`, raw);
+    const prefix = `${key}:corrupt:`;
+    window.localStorage.setItem(`${prefix}${Date.now()}`, raw);
     window.localStorage.removeItem(key);
+    const backups: string[] = [];
+    for (let index = 0; index < window.localStorage.length; index += 1) {
+      const candidate = window.localStorage.key(index);
+      if (candidate?.startsWith(prefix)) backups.push(candidate);
+    }
+    backups.sort();
+    for (const obsolete of backups.slice(0, Math.max(0, backups.length - 3))) {
+      window.localStorage.removeItem(obsolete);
+    }
   } catch {
     // Preserve the original key when quarantine cannot be written.
   }

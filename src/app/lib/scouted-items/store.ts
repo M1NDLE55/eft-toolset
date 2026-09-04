@@ -17,18 +17,43 @@ const ITEMS_STORE: StoreDefinition<ScoutedItem[]> = {
   key: "eft-toolset:scouted-items",
   version: 1,
   defaultValue: () => [],
-  validate: (value): value is ScoutedItem[] =>
-    Array.isArray(value) &&
-    value.length <= MAX_SCOUTED &&
-    value.every(
-      (item: unknown) =>
-        Boolean(item) &&
-        typeof (item as ScoutedItem).name === "string" &&
-        (item as ScoutedItem).name.length <= 240 &&
-        ((item as ScoutedItem).gridImageLink === null ||
-          typeof (item as ScoutedItem).gridImageLink === "string")
-    ),
+  validate: isScoutedList,
+  recover: recoverScoutedItems,
 };
+
+function isScoutedList(value: unknown): value is ScoutedItem[] {
+  return Array.isArray(value) && value.length <= MAX_SCOUTED && value.every(isScoutedItem);
+}
+
+function isScoutedItem(value: unknown): value is ScoutedItem {
+  if (!value || typeof value !== "object") return false;
+  const item = value as Partial<ScoutedItem>;
+  return (
+    typeof item.name === "string" &&
+    item.name.length <= 240 &&
+    (item.gridImageLink === null || isSafeAssetUrl(item.gridImageLink))
+  );
+}
+
+function recoverScoutedItems(value: unknown): ScoutedItem[] | undefined {
+  if (!Array.isArray(value)) return undefined;
+  return value.flatMap((candidate): ScoutedItem[] => {
+    if (!candidate || typeof candidate !== "object") return [];
+    const item = candidate as Partial<ScoutedItem>;
+    if (typeof item.name !== "string" || item.name.length > 240) return [];
+    return [{ name: item.name, gridImageLink: isSafeAssetUrl(item.gridImageLink) ? item.gridImageLink : null }];
+  }).slice(0, MAX_SCOUTED);
+}
+
+function isSafeAssetUrl(value: unknown): value is string {
+  if (typeof value !== "string" || value.length > 2_048) return false;
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" && url.hostname === "assets.tarkov.dev" && !url.username && !url.password;
+  } catch {
+    return false;
+  }
+}
 
 const COLLAPSED_STORE: StoreDefinition<boolean> = {
   key: "eft-toolset:scouted-collapsed",

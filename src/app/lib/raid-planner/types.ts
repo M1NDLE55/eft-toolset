@@ -34,7 +34,12 @@ const LEGACY_PLAN_COLORS: Record<string, (typeof PLAN_COLORS)[number]> = {
 
 /** Brightens drawings created with the original muted palette. */
 export function getPlanDisplayColor(color: string): string {
-  return LEGACY_PLAN_COLORS[color.toLowerCase()] ?? color;
+  const normalized = color.toLowerCase();
+  return (
+    LEGACY_PLAN_COLORS[normalized] ??
+    PLAN_COLORS.find((candidate) => candidate === normalized) ??
+    PLAN_COLORS[0]
+  );
 }
 
 export interface Waypoint {

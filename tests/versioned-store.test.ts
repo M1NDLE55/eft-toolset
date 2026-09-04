@@ -42,4 +42,44 @@ describe("versioned local storage", () => {
     expect(listener).toHaveBeenCalledOnce();
     unsubscribe();
   });
+
+  it("recovers valid records instead of discarding the collection", () => {
+    const recoverable: StoreDefinition<string[]> = {
+      ...definition,
+      recover: (value) =>
+        Array.isArray(value)
+          ? value.filter((entry): entry is string => typeof entry === "string")
+          : undefined,
+    };
+    localStorage.setItem(
+      definition.key,
+      JSON.stringify({ version: definition.version, data: ["valid", 42] })
+    );
+    expect(readStore(recoverable)).toEqual(["valid"]);
+    expect(JSON.parse(localStorage.getItem(definition.key)!).data).toEqual(["valid"]);
+  });
+
+  it("surfaces quota and blocked-storage write failures", () => {
+    const write = vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => {
+      throw new DOMException("full", "QuotaExceededError");
+    });
+    expect(() => writeStore(definition, ["value"])).toThrow(/storage may be full/i);
+    write.mockRestore();
+  });
+
+  it("accepts valid falsy migration results", () => {
+    const booleanStore: StoreDefinition<boolean> = {
+      key: "test:boolean",
+      version: 2,
+      defaultValue: () => true,
+      validate: (value): value is boolean => typeof value === "boolean",
+      migrate: () => false,
+    };
+    localStorage.setItem(
+      booleanStore.key,
+      JSON.stringify({ version: 1, data: true })
+    );
+
+    expect(readStore(booleanStore)).toBe(false);
+  });
 });

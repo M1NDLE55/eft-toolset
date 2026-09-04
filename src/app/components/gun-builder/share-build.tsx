@@ -18,6 +18,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { copyText } from "@/app/lib/browser/clipboard";
 
 interface ShareBuildProps {
   build: GunBuild;
@@ -63,9 +64,14 @@ export function ShareBuild({ build }: ShareBuildProps) {
   async function handleCopy() {
     if (!url) return;
 
-    await navigator.clipboard.writeText(url);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1500);
+    try {
+      await copyText(url);
+      setCopied(true);
+      setError("");
+      window.setTimeout(() => setCopied(false), 1500);
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Could not copy the link.");
+    }
   }
 
   async function handleNativeShare() {
@@ -74,6 +80,10 @@ export function ShareBuild({ build }: ShareBuildProps) {
     setSharing(true);
     try {
       await navigator.share({ title: build.name, url });
+    } catch (reason) {
+      if (!(reason instanceof DOMException && reason.name === "AbortError")) {
+        setError(reason instanceof Error ? reason.message : "Could not share the link.");
+      }
     } finally {
       setSharing(false);
     }

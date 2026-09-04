@@ -21,6 +21,20 @@ const LAYER_STORE: StoreDefinition<StoredLayers> = {
         ids.length <= 200 &&
         ids.every((id) => typeof id === "string" && id.length <= 120)
     ),
+  recover: (value) => {
+    if (!value || typeof value !== "object" || Array.isArray(value)) return undefined;
+    return Object.fromEntries(
+      Object.entries(value as Record<string, unknown>)
+        .filter(
+          ([mapKey, ids]) =>
+            mapKey.length <= 80 &&
+            Array.isArray(ids) &&
+            ids.every((id) => typeof id === "string" && id.length <= 120)
+        )
+        .slice(0, 100)
+        .map(([mapKey, ids]) => [mapKey, (ids as string[]).slice(0, 200)])
+    );
+  },
 };
 
 export function readStoredLayers(mapKey: string) {

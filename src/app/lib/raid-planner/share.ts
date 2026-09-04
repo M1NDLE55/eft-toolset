@@ -1,26 +1,28 @@
-import { PLAN_COLORS, type Drawing, type GamePoint, type NotePin, type RaidPlan, type Waypoint } from "./types";
+import { getPlanDisplayColor, PLAN_COLORS, type Drawing, type GamePoint, type NotePin, type RaidPlan, type Waypoint } from "./types";
 import {
   decodeSharePayload,
   encodeSharePayload,
   slugifyName,
 } from "@/app/lib/share-codec";
+import { createId } from "@/app/lib/id";
+import {
+  MAX_COORDINATE,
+  MAX_DRAWINGS,
+  MAX_LAYERS,
+  MAX_LAYER_ID_LENGTH,
+  MAX_MAP_KEY_LENGTH,
+  MAX_NOTES,
+  MAX_NOTE_BODY_LENGTH,
+  MAX_NOTE_TITLE_LENGTH,
+  MAX_PLAN_NAME_LENGTH,
+  MAX_POINTS_PER_DRAWING,
+  MAX_ROUTE_POINTS,
+  MAX_TOTAL_DRAWING_POINTS,
+} from "./limits";
 
 type SharedPoint = [number, number];
 type SharedDrawingV1 = ["pen" | "arrow", string, SharedPoint[]];
 type SharedNoteV1 = [number, number, string, string, string];
-
-const MAX_NAME_LENGTH = 120;
-const MAX_MAP_KEY_LENGTH = 80;
-const MAX_ROUTE_POINTS = 500;
-const MAX_DRAWINGS = 500;
-const MAX_POINTS_PER_DRAWING = 5_000;
-const MAX_TOTAL_DRAWING_POINTS = 20_000;
-const MAX_NOTES = 500;
-const MAX_NOTE_TITLE_LENGTH = 120;
-const MAX_NOTE_BODY_LENGTH = 2_000;
-const MAX_LAYERS = 200;
-const MAX_LAYER_ID_LENGTH = 120;
-const MAX_COORDINATE = 1_000_000;
 
 export interface SharedRaidPlanRecipeV1 {
   v: 1;
@@ -59,6 +61,7 @@ function decodePoint(point: SharedPoint): GamePoint {
 }
 
 export function createPlanShareRecipe(plan: RaidPlan): SharedRaidPlanRecipeV1 {
+  assertPlanWithinLimits(plan);
   const recipe: SharedRaidPlanRecipeV1 = { v: 1, n: plan.name, m: plan.mapKey };
 
   if (plan.route.length > 0) {
@@ -67,7 +70,7 @@ export function createPlanShareRecipe(plan: RaidPlan): SharedRaidPlanRecipeV1 {
   if (plan.drawings.length > 0) {
     recipe.d = plan.drawings.map((drawing) => [
       drawing.kind,
-      drawing.color,
+      getPlanDisplayColor(drawing.color),
       drawing.points.map(encodePoint),
     ]);
   }
@@ -77,7 +80,7 @@ export function createPlanShareRecipe(plan: RaidPlan): SharedRaidPlanRecipeV1 {
       round(note.position.z),
       note.title,
       note.body,
-      note.color,
+      getPlanDisplayColor(note.color),
     ]);
   }
   if (plan.enabledLayers.length > 0) {
@@ -102,17 +105,17 @@ export async function decodePlanSharePayload(
     mapKey: recipe.m,
     enabledLayers: (recipe.l ?? []).filter((id) => typeof id === "string"),
     route: (recipe.r ?? []).map((point) => ({
-      id: crypto.randomUUID(),
+      id: createId(),
       position: decodePoint(point),
     })),
     drawings: (recipe.d ?? []).map(([kind, color, points]) => ({
-      id: crypto.randomUUID(),
+      id: createId(),
       kind,
       color,
       points: points.map(decodePoint),
     })),
     notes: (recipe.t ?? []).map(([x, z, title, body, color]) => ({
-      id: crypto.randomUUID(),
+      id: createId(),
       position: { x, z },
       title,
       body,
@@ -144,7 +147,7 @@ function parseRecipe(value: unknown): SharedRaidPlanRecipeV1 {
     !recipe.m ||
     recipe.m.length > MAX_MAP_KEY_LENGTH ||
     (recipe.n !== undefined &&
-      (typeof recipe.n !== "string" || recipe.n.length > MAX_NAME_LENGTH))
+      (typeof recipe.n !== "string" || recipe.n.length > MAX_PLAN_NAME_LENGTH))
   ) {
     throw new Error("Shared plan uses an unsupported recipe version.");
   }
@@ -218,4 +221,51 @@ function parseRecipe(value: unknown): SharedRaidPlanRecipeV1 {
   }
 
   return recipe as SharedRaidPlanRecipeV1;
+}
+
+function assertPlanWithinLimits(plan: RaidPlan) {
+  const totalPoints = plan.drawings.reduce(
+    (total, drawing) => total + drawing.points.length,
+    0
+  );
+  if (
+    plan.name.length > MAX_PLAN_NAME_LENGTH ||
+    !plan.mapKey ||
+    plan.mapKey.length > MAX_MAP_KEY_LENGTH ||
+    plan.route.length > MAX_ROUTE_POINTS ||
+    plan.route.some((waypoint) => !isSharePoint(waypoint.position)) ||
+    plan.drawings.length > MAX_DRAWINGS ||
+    plan.drawings.some(
+      (drawing) =>
+        (drawing.kind !== "pen" && drawing.kind !== "arrow") ||
+        typeof drawing.color !== "string" ||
+        drawing.points.length < 2 ||
+        drawing.points.length > MAX_POINTS_PER_DRAWING ||
+        drawing.points.some((point) => !isSharePoint(point))
+    ) ||
+    totalPoints > MAX_TOTAL_DRAWING_POINTS ||
+    plan.notes.length > MAX_NOTES ||
+    plan.notes.some(
+      (note) =>
+        note.title.length > MAX_NOTE_TITLE_LENGTH ||
+        note.body.length > MAX_NOTE_BODY_LENGTH ||
+        typeof note.color !== "string" ||
+        !isSharePoint(note.position)
+    ) ||
+    plan.enabledLayers.length > MAX_LAYERS ||
+    plan.enabledLayers.some(
+      (layer) => !layer || layer.length > MAX_LAYER_ID_LENGTH
+    )
+  ) {
+    throw new Error("This plan exceeds the safe sharing limits.");
+  }
+}
+
+function isSharePoint(point: GamePoint) {
+  return (
+    Number.isFinite(point.x) &&
+    Math.abs(point.x) <= MAX_COORDINATE &&
+    Number.isFinite(point.z) &&
+    Math.abs(point.z) <= MAX_COORDINATE
+  );
 }

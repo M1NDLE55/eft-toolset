@@ -1,0 +1,14 @@
+export const MAX_PLANS = 500;
+export const MAX_PLAN_ID_LENGTH = 160;
+export const MAX_PLAN_NAME_LENGTH = 120;
+export const MAX_MAP_KEY_LENGTH = 80;
+export const MAX_ROUTE_POINTS = 500;
+export const MAX_DRAWINGS = 500;
+export const MAX_POINTS_PER_DRAWING = 5_000;
+export const MAX_TOTAL_DRAWING_POINTS = 20_000;
+export const MAX_NOTES = 500;
+export const MAX_NOTE_TITLE_LENGTH = 120;
+export const MAX_NOTE_BODY_LENGTH = 2_000;
+export const MAX_LAYERS = 200;
+export const MAX_LAYER_ID_LENGTH = 120;
+export const MAX_COORDINATE = 1_000_000;

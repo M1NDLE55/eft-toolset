@@ -18,6 +18,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { copyText } from "@/app/lib/browser/clipboard";
 
 const LONG_URL_THRESHOLD = 8000;
 
@@ -65,9 +66,14 @@ export function SharePlan({ plan }: SharePlanProps) {
   async function handleCopy() {
     if (!url) return;
 
-    await navigator.clipboard.writeText(url);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1500);
+    try {
+      await copyText(url);
+      setCopied(true);
+      setError("");
+      window.setTimeout(() => setCopied(false), 1500);
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Could not copy the link.");
+    }
   }
 
   async function handleNativeShare() {
@@ -76,6 +82,10 @@ export function SharePlan({ plan }: SharePlanProps) {
     setSharing(true);
     try {
       await navigator.share({ title: plan.name, url });
+    } catch (reason) {
+      if (!(reason instanceof DOMException && reason.name === "AbortError")) {
+        setError(reason instanceof Error ? reason.message : "Could not share the link.");
+      }
     } finally {
       setSharing(false);
     }
@@ -86,7 +96,7 @@ export function SharePlan({ plan }: SharePlanProps) {
       <DialogTrigger asChild>
         <button
           type="button"
-          className="text-[#777] transition-colors hover:text-[#9a8866]"
+          className="text-[#888] transition-colors hover:text-[#9a8866]"
         >
           <Share2 className="h-3.5 w-3.5" />
           <span className="sr-only">Share plan</span>
@@ -133,7 +143,7 @@ export function SharePlan({ plan }: SharePlanProps) {
         )}
 
         {url.length > LONG_URL_THRESHOLD && (
-          <p className="text-xs text-[#777]">
+          <p className="text-xs text-[#888]">
             This link is very long — heavy freehand drawings inflate it. Some
             messengers truncate long URLs.
           </p>

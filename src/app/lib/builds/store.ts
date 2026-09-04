@@ -2,6 +2,15 @@
 
 import type { BuildNode, GunBuild } from "@/app/lib/types/gunBuilder";
 import { readStore, subscribeStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
+import { createId } from "@/app/lib/id";
+import {
+  MAX_BUILD_ID_LENGTH,
+  MAX_BUILD_NAME_LENGTH,
+  MAX_BUILD_TREE_DEPTH,
+  MAX_BUILD_TREE_NODES,
+  MAX_BUILDS,
+  MAX_SLOTS_PER_NODE,
+} from "./limits";
 
 const BUILD_STORE: StoreDefinition<GunBuild[]> = {
   key: "eft-toolset:gun-builds",
@@ -9,6 +18,8 @@ const BUILD_STORE: StoreDefinition<GunBuild[]> = {
   version: 1,
   defaultValue: () => [],
   validate: isBuildList,
+  recover: (value) =>
+    Array.isArray(value) ? value.filter(isGunBuild).slice(0, MAX_BUILDS) : undefined,
 };
 
 function now() {
@@ -35,13 +46,13 @@ export function getBuild(id: string): GunBuild | undefined {
   return ensureBuilds().find((build) => build.id === id);
 }
 
-export function createBuild(name: string, weaponId: string): GunBuild {
+export function createBuild(name: string, weaponId: string, root?: BuildNode): GunBuild {
   const timestamp = now();
   const build: GunBuild = {
-    id: crypto.randomUUID(),
+    id: createId(),
     name,
     weaponId,
-    root: { itemId: weaponId, slots: {} },
+    root: root ? cloneNode(root) : { itemId: weaponId, slots: {} },
     createdAt: timestamp,
     updatedAt: timestamp,
   };
@@ -57,7 +68,7 @@ export function importBuild(
 ): GunBuild {
   const timestamp = now();
   const build: GunBuild = {
-    id: crypto.randomUUID(),
+    id: createId(),
     name,
     weaponId,
     root: cloneNode(root),
@@ -71,9 +82,13 @@ export function importBuild(
 
 export function saveBuild(build: GunBuild): GunBuild {
   const updated: GunBuild = { ...build, updatedAt: now() };
-  const builds = ensureBuilds().map((candidate) =>
-    candidate.id === build.id ? updated : candidate
-  );
+  let found = false;
+  const builds = ensureBuilds().map((candidate) => {
+    if (candidate.id !== build.id) return candidate;
+    found = true;
+    return updated;
+  });
+  if (!found) throw new Error("This build no longer exists in browser storage.");
   writeBuilds(builds);
   return updated;
 }
@@ -91,8 +106,8 @@ export function duplicateBuild(id: string): GunBuild | undefined {
   const timestamp = now();
   const duplicate: GunBuild = {
     ...build,
-    id: crypto.randomUUID(),
-    name: `${build.name} copy`,
+    id: createId(),
+    name: `${build.name.slice(0, MAX_BUILD_NAME_LENGTH - 5)} copy`,
     root: cloneNode(build.root),
     createdAt: timestamp,
     updatedAt: timestamp,
@@ -166,7 +181,7 @@ export function removeMod(root: BuildNode, path: string[]): BuildNode {
 }
 
 function isBuildList(value: unknown): value is GunBuild[] {
-  return Array.isArray(value) && value.length <= 500 && value.every(isGunBuild);
+  return Array.isArray(value) && value.length <= MAX_BUILDS && value.every(isGunBuild);
 }
 
 function isGunBuild(value: unknown): value is GunBuild {
@@ -174,14 +189,19 @@ function isGunBuild(value: unknown): value is GunBuild {
   const build = value as Partial<GunBuild>;
   return (
     typeof build.id === "string" &&
+    build.id.length > 0 &&
+    build.id.length <= MAX_BUILD_ID_LENGTH &&
     typeof build.name === "string" &&
-    build.name.length <= 120 &&
+    build.name.length <= MAX_BUILD_NAME_LENGTH &&
     typeof build.weaponId === "string" &&
+    build.weaponId.length > 0 &&
+    build.weaponId.length <= MAX_BUILD_ID_LENGTH &&
     typeof build.createdAt === "number" &&
     Number.isFinite(build.createdAt) &&
     typeof build.updatedAt === "number" &&
     Number.isFinite(build.updatedAt) &&
-    isBuildNode(build.root)
+    isBuildNode(build.root) &&
+    build.root.itemId === build.weaponId
   );
 }
 
@@ -191,13 +211,14 @@ function isBuildNode(value: unknown): value is BuildNode {
   while (stack.length > 0) {
     const { node, depth } = stack.pop()!;
     count += 1;
-    if (count > 1_000 || depth > 64 || !node || typeof node !== "object") return false;
+    if (count > MAX_BUILD_TREE_NODES || depth > MAX_BUILD_TREE_DEPTH || !node || typeof node !== "object" || Array.isArray(node)) return false;
     const candidate = node as Partial<BuildNode>;
-    if (typeof candidate.itemId !== "string" || !candidate.slots || typeof candidate.slots !== "object") {
+    if (typeof candidate.itemId !== "string" || !candidate.itemId || candidate.itemId.length > MAX_BUILD_ID_LENGTH || !candidate.slots || typeof candidate.slots !== "object" || Array.isArray(candidate.slots)) {
       return false;
     }
     const children = Object.values(candidate.slots);
-    if (children.length > 64) return false;
+    const entries = Object.entries(candidate.slots);
+    if (children.length > MAX_SLOTS_PER_NODE || entries.some(([slotId]) => !slotId || slotId.length > MAX_BUILD_ID_LENGTH)) return false;
     for (const child of children) stack.push({ node: child, depth: depth + 1 });
   }
   return true;

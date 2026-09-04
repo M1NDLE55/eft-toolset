@@ -2,6 +2,23 @@
 
 import type { GamePoint, RaidPlan } from "./types";
 import { readStore, subscribeStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
+import { createId } from "@/app/lib/id";
+import {
+  MAX_COORDINATE,
+  MAX_DRAWINGS,
+  MAX_LAYERS,
+  MAX_LAYER_ID_LENGTH,
+  MAX_MAP_KEY_LENGTH,
+  MAX_NOTES,
+  MAX_NOTE_BODY_LENGTH,
+  MAX_NOTE_TITLE_LENGTH,
+  MAX_PLAN_ID_LENGTH,
+  MAX_PLAN_NAME_LENGTH,
+  MAX_PLANS,
+  MAX_POINTS_PER_DRAWING,
+  MAX_ROUTE_POINTS,
+  MAX_TOTAL_DRAWING_POINTS,
+} from "./limits";
 
 const PLAN_STORE: StoreDefinition<RaidPlan[]> = {
   key: "eft-toolset:raid-plans",
@@ -9,6 +26,8 @@ const PLAN_STORE: StoreDefinition<RaidPlan[]> = {
   version: 1,
   defaultValue: () => [],
   validate: isPlanList,
+  recover: (value) =>
+    Array.isArray(value) ? value.filter(isPlan).slice(0, MAX_PLANS) : undefined,
 };
 
 function now() {
@@ -38,7 +57,7 @@ export function getPlan(id: string): RaidPlan | undefined {
 export function createPlan(name: string, mapKey: string): RaidPlan {
   const timestamp = now();
   const plan: RaidPlan = {
-    id: crypto.randomUUID(),
+    id: createId(),
     name,
     mapKey,
     createdAt: timestamp,
@@ -59,7 +78,7 @@ export function importPlan(
   const timestamp = now();
   const imported: RaidPlan = {
     ...plan,
-    id: crypto.randomUUID(),
+    id: createId(),
     createdAt: timestamp,
     updatedAt: timestamp,
   };
@@ -70,9 +89,13 @@ export function importPlan(
 
 export function savePlan(plan: RaidPlan): RaidPlan {
   const updated: RaidPlan = { ...plan, updatedAt: now() };
-  const plans = ensurePlans().map((candidate) =>
-    candidate.id === plan.id ? updated : candidate
-  );
+  let found = false;
+  const plans = ensurePlans().map((candidate) => {
+    if (candidate.id !== plan.id) return candidate;
+    found = true;
+    return updated;
+  });
+  if (!found) throw new Error("This plan no longer exists in browser storage.");
   writePlans(plans);
   return updated;
 }
@@ -90,8 +113,8 @@ export function duplicatePlan(id: string): RaidPlan | undefined {
   const timestamp = now();
   const duplicate: RaidPlan = {
     ...(JSON.parse(JSON.stringify(plan)) as RaidPlan),
-    id: crypto.randomUUID(),
-    name: `${plan.name} copy`,
+    id: createId(),
+    name: `${plan.name.slice(0, MAX_PLAN_NAME_LENGTH - 5)} copy`,
     createdAt: timestamp,
     updatedAt: timestamp,
   };
@@ -105,7 +128,7 @@ export function deletePlan(id: string) {
 }
 
 function isPlanList(value: unknown): value is RaidPlan[] {
-  return Array.isArray(value) && value.length <= 500 && value.every(isPlan);
+  return Array.isArray(value) && value.length <= MAX_PLANS && value.every(isPlan);
 }
 
 function isPlan(value: unknown): value is RaidPlan {
@@ -113,49 +136,60 @@ function isPlan(value: unknown): value is RaidPlan {
   const plan = value as Partial<RaidPlan>;
   return (
     typeof plan.id === "string" &&
+    plan.id.length > 0 &&
+    plan.id.length <= MAX_PLAN_ID_LENGTH &&
     typeof plan.name === "string" &&
-    plan.name.length <= 120 &&
+    plan.name.length <= MAX_PLAN_NAME_LENGTH &&
     typeof plan.mapKey === "string" &&
-    plan.mapKey.length <= 80 &&
+    plan.mapKey.length > 0 &&
+    plan.mapKey.length <= MAX_MAP_KEY_LENGTH &&
     typeof plan.createdAt === "number" &&
     Number.isFinite(plan.createdAt) &&
     typeof plan.updatedAt === "number" &&
     Number.isFinite(plan.updatedAt) &&
     Array.isArray(plan.enabledLayers) &&
-    plan.enabledLayers.length <= 200 &&
-    plan.enabledLayers.every((layer) => typeof layer === "string" && layer.length <= 120) &&
+    plan.enabledLayers.length <= MAX_LAYERS &&
+    plan.enabledLayers.every((layer) => typeof layer === "string" && layer.length <= MAX_LAYER_ID_LENGTH) &&
     Array.isArray(plan.route) &&
-    plan.route.length <= 500 &&
+    plan.route.length <= MAX_ROUTE_POINTS &&
     plan.route.every(
       (waypoint) =>
         Boolean(waypoint) &&
         typeof waypoint.id === "string" &&
+        waypoint.id.length > 0 &&
+        waypoint.id.length <= MAX_PLAN_ID_LENGTH &&
         isPoint(waypoint.position)
     ) &&
     Array.isArray(plan.drawings) &&
-    plan.drawings.length <= 500 &&
+    plan.drawings.length <= MAX_DRAWINGS &&
     plan.drawings.every(
       (drawing) =>
         Boolean(drawing) &&
         typeof drawing.id === "string" &&
+        drawing.id.length > 0 &&
+        drawing.id.length <= MAX_PLAN_ID_LENGTH &&
         (drawing.kind === "pen" || drawing.kind === "arrow") &&
         isColor(drawing.color) &&
         Array.isArray(drawing.points) &&
         drawing.points.length >= 2 &&
-        drawing.points.length <= 5_000 &&
+        drawing.points.length <= MAX_POINTS_PER_DRAWING &&
         drawing.points.every(isPoint)
     ) &&
+    plan.drawings.reduce((total, drawing) => total + drawing.points.length, 0) <=
+      MAX_TOTAL_DRAWING_POINTS &&
     Array.isArray(plan.notes) &&
-    plan.notes.length <= 500 &&
+    plan.notes.length <= MAX_NOTES &&
     plan.notes.every(
       (note) =>
         Boolean(note) &&
         typeof note.id === "string" &&
+        note.id.length > 0 &&
+        note.id.length <= MAX_PLAN_ID_LENGTH &&
         isPoint(note.position) &&
         typeof note.title === "string" &&
-        note.title.length <= 120 &&
+        note.title.length <= MAX_NOTE_TITLE_LENGTH &&
         typeof note.body === "string" &&
-        note.body.length <= 2_000 &&
+        note.body.length <= MAX_NOTE_BODY_LENGTH &&
         isColor(note.color)
     )
   );
@@ -167,12 +201,12 @@ function isPoint(value: unknown): value is GamePoint {
   return (
     typeof point.x === "number" &&
     Number.isFinite(point.x) &&
-    Math.abs(point.x) <= 1_000_000 &&
+    Math.abs(point.x) <= MAX_COORDINATE &&
     typeof point.z === "number" &&
     Number.isFinite(point.z) &&
-    Math.abs(point.z) <= 1_000_000 &&
+    Math.abs(point.z) <= MAX_COORDINATE &&
     (point.y === undefined ||
-      (typeof point.y === "number" && Number.isFinite(point.y) && Math.abs(point.y) <= 1_000_000))
+      (typeof point.y === "number" && Number.isFinite(point.y) && Math.abs(point.y) <= MAX_COORDINATE))
   );
 }
 
