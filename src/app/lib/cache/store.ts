@@ -2,8 +2,10 @@ import {
   clear,
   createStore,
   del,
+  delMany,
   get,
   getMany,
+  keys,
   set,
   setMany,
 } from "idb-keyval";
@@ -28,6 +30,14 @@ export function cacheSetMany<T>(entries: [string, T][]): Promise<void> {
 
 export function cacheDelete(key: string): Promise<void> {
   return del(key, store);
+}
+
+export function cacheDeleteMany(keysToDelete: string[]): Promise<void> {
+  return delMany(keysToDelete, store);
+}
+
+export function cacheKeys(): Promise<IDBValidKey[]> {
+  return keys(store);
 }
 
 export function cacheClear(): Promise<void> {

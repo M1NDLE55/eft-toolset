@@ -197,6 +197,65 @@ beforeEach(() => {
 });
 
 describe("Tarkov JSON adapter", () => {
+  it("rejects malformed resource shapes before they enter the cache", async () => {
+    vi.mocked(globalThis.fetch).mockImplementation(async (input) => {
+      const resource = new URL(String(input)).pathname.split("/").pop()!;
+      const body = resource === "items" ? { data: { items: [] } } : fixtures[resource];
+      return new Response(JSON.stringify(body), { status: 200 });
+    });
+    await expect(
+      executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" })
+    ).rejects.toThrow(/invalid items data/i);
+  });
+
+  it("drops unsafe projected URLs", async () => {
+    const weapon = (fixtures.items as { data: { items: { weapon: Record<string, unknown> } } }).data.items.weapon;
+    const originalImage = weapon.gridImageLink;
+    const originalWiki = weapon.wikiLink;
+    weapon.gridImageLink = "javascript:alert(1)";
+    weapon.wikiLink = "javascript:alert(1)";
+    try {
+      const detail = await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, {
+        gameMode: "regular",
+        name: "Test Rifle",
+      }) as { gridImageLink: string | null; wikiLink: string | null };
+      expect(detail.gridImageLink).toBeNull();
+      expect(detail.wikiLink).toBeNull();
+    } finally {
+      weapon.gridImageLink = originalImage;
+      weapon.wikiLink = originalWiki;
+    }
+  });
+
+  it("serves a bounded stale copy when an upstream refresh fails and reports it", async () => {
+    vi.useFakeTimers();
+    try {
+      const initial = await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, {
+        gameMode: "regular",
+      });
+      vi.advanceTimersByTime(5 * 60_000 + 1);
+      vi.mocked(globalThis.fetch).mockRejectedValue(new Error("offline"));
+      const onStale = vi.fn();
+      const secondOnStale = vi.fn();
+      const firstRequest = executeTarkovOperation(
+          TARKOV_OPERATIONS.itemCatalog,
+          { gameMode: "regular" },
+          { onStale }
+      );
+      const deduplicatedRequest = executeTarkovOperation(
+        TARKOV_OPERATIONS.itemCatalog,
+        { gameMode: "regular" },
+        { onStale: secondOnStale }
+      );
+      await expect(firstRequest).resolves.toEqual(initial);
+      await expect(deduplicatedRequest).resolves.toEqual(initial);
+      expect(onStale).toHaveBeenCalledOnce();
+      expect(secondOnStale).toHaveBeenCalledOnce();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
   it("localizes the catalog and returns only its narrow projection", async () => {
     const result = await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, {
       gameMode: "regular",
@@ -331,5 +390,28 @@ describe("Tarkov JSON adapter", () => {
     const urls = vi.mocked(globalThis.fetch).mock.calls.map(([input]) => String(input));
     expect(urls.filter((url) => url.endsWith("/items"))).toHaveLength(1);
     expect(urls.filter((url) => url.endsWith("/items_en"))).toHaveLength(1);
+  });
+
+  it("stops waiting promptly when the caller disconnects", async () => {
+    vi.mocked(globalThis.fetch).mockImplementation(
+      (input) =>
+        new Promise((resolve) => {
+          const resource = new URL(String(input)).pathname.split("/").pop()!;
+          setTimeout(
+            () => resolve(new Response(JSON.stringify(fixtures[resource]), { status: 200 })),
+            25
+          );
+        })
+    );
+    const controller = new AbortController();
+    const request = executeTarkovOperation(
+      TARKOV_OPERATIONS.itemCatalog,
+      { gameMode: "regular" },
+      { signal: controller.signal }
+    );
+
+    controller.abort();
+    await expect(request).rejects.toMatchObject({ name: "AbortError" });
+    await new Promise((resolve) => setTimeout(resolve, 30));
   });
 });

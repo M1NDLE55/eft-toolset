@@ -11,6 +11,8 @@ interface DataCacheContextValue {
   loading: boolean;
   error: Error | null;
   gameMode: GameMode;
+  hydrated: boolean;
+  stale: boolean;
   catalog: CatalogItem[];
   itemsByName: Map<string, CatalogItem>;
   refreshCatalog: () => Promise<CatalogItem[]>;
@@ -35,11 +37,13 @@ export function BulkCacheProvider({ children }: { children: React.ReactNode }) {
       loading: query.status === "loading",
       error: query.error ?? null,
       gameMode,
+      hydrated,
+      stale: query.stale,
       catalog,
       itemsByName,
       refreshCatalog: query.refresh,
     }),
-    [catalog, gameMode, itemsByName, query.data, query.error, query.refresh, query.status]
+    [catalog, gameMode, hydrated, itemsByName, query.data, query.error, query.refresh, query.stale, query.status]
   );
 
   return <DataCacheContext.Provider value={value}>{children}</DataCacheContext.Provider>;

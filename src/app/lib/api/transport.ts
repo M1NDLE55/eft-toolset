@@ -1,15 +1,17 @@
 import type { TarkovOperation } from "./operations";
 
 const API_URL = "/api/tarkov";
-const DEFAULT_TIMEOUT_MS = 15_000;
-const DEFAULT_RETRIES = 2;
+const DEFAULT_TIMEOUT_MS = 25_000;
+const DEFAULT_RETRIES = 1;
+const MAX_API_RESPONSE_BYTES = 16 * 1024 * 1024;
 
 export class ApiTransportError extends Error {
   constructor(
     message: string,
     readonly kind: "http" | "api" | "network" | "decode" | "timeout",
     readonly status?: number,
-    readonly code?: string
+    readonly code?: string,
+    readonly retryAfterMs?: number
   ) {
     super(message);
     this.name = "ApiTransportError";
@@ -62,7 +64,7 @@ export async function apiFetch<T>(
         throw normalized;
       }
 
-      await delay(retryDelay(attempt), options.signal);
+      await delay(retryDelay(attempt, normalized), options.signal);
     }
   }
 }
@@ -98,7 +100,7 @@ async function requestOnce<T>(
 
     let json: ApiResponse<T>;
     try {
-      json = (await response.json()) as ApiResponse<T>;
+      json = (await readJsonWithLimit(response)) as ApiResponse<T>;
     } catch {
       throw new ApiTransportError(
         `The API returned an unreadable response (${response.status}).`,
@@ -118,13 +120,15 @@ async function requestOnce<T>(
     const message =
       typeof json.error?.message === "string" ? json.error.message : undefined;
     const code = typeof json.error?.code === "string" ? json.error.code : undefined;
+    const retryAfterMs = parseRetryAfter(response.headers.get("retry-after"));
 
     if (!response.ok) {
       throw new ApiTransportError(
         message ?? `The API request failed (${response.status}).`,
         "http",
         response.status,
-        code
+        code,
+        retryAfterMs
       );
     }
 
@@ -139,6 +143,14 @@ async function requestOnce<T>(
 
     if (json.data === undefined) {
       throw new ApiTransportError("The API response did not contain data.", "decode", response.status);
+    }
+
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(
+        new CustomEvent("eft-toolset:stale-upstream", {
+          detail: response.headers.get("x-eft-data-stale") === "true",
+        })
+      );
     }
 
     return json.data;
@@ -172,13 +184,51 @@ function isRetryable(error: ApiTransportError) {
     error.kind === "timeout" ||
     error.status === 408 ||
     error.status === 429 ||
-    (typeof error.status === "number" && error.status >= 500)
+    (typeof error.status === "number" && error.status >= 500 && error.status !== 501)
   );
 }
 
-function retryDelay(attempt: number) {
+function retryDelay(attempt: number, error: ApiTransportError) {
+  if (error.retryAfterMs !== undefined) return Math.min(30_000, error.retryAfterMs);
   const exponential = Math.min(2_000, 250 * 2 ** attempt);
   return exponential * (0.75 + Math.random() * 0.5);
+}
+
+async function readJsonWithLimit(response: Response): Promise<unknown> {
+  const contentLength = Number(response.headers.get("content-length"));
+  if (Number.isFinite(contentLength) && contentLength > MAX_API_RESPONSE_BYTES) {
+    throw new Error("The API response was too large.");
+  }
+  if (!response.body) throw new Error("The API returned an empty response.");
+
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder("utf-8", { fatal: true });
+  let bytesRead = 0;
+  const chunks: string[] = [];
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      bytesRead += value.byteLength;
+      if (bytesRead > MAX_API_RESPONSE_BYTES) {
+        await reader.cancel("Response exceeded the configured limit.");
+        throw new Error("The API response was too large.");
+      }
+      chunks.push(decoder.decode(value, { stream: true }));
+    }
+    chunks.push(decoder.decode());
+    return JSON.parse(chunks.join("")) as unknown;
+  } finally {
+    reader.releaseLock();
+  }
+}
+
+function parseRetryAfter(value: string | null): number | undefined {
+  if (!value) return undefined;
+  const seconds = Number(value);
+  if (Number.isFinite(seconds) && seconds >= 0) return Math.ceil(seconds * 1000);
+  const date = Date.parse(value);
+  return Number.isFinite(date) ? Math.max(0, date - Date.now()) : undefined;
 }
 
 function delay(ms: number, signal?: AbortSignal) {

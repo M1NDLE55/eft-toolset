@@ -20,6 +20,7 @@ export type GameMode = 'regular' | 'pve';
 type GameModeContextValue = {
   gameMode: GameMode;
   hydrated: boolean;
+  storageError: string;
   setGameMode: (mode: GameMode) => void;
   toggleGameMode: () => void;
 };
@@ -39,17 +40,22 @@ const GAME_MODE_STORE: StoreDefinition<GameMode> = {
 export function GameModeProvider({ children }: { children: React.ReactNode }) {
   const [gameMode, setGameModeState] = useState<GameMode>('regular');
   const [hydrated, setHydrated] = useState(false);
+  const [storageError, setStorageError] = useState("");
 
   useEffect(() => {
     try {
       setGameModeState(readStore(GAME_MODE_STORE));
-    } catch {
-      // ignore storage errors
+    } catch (reason) {
+      setStorageError(reason instanceof Error ? reason.message : "Could not read game-mode settings.");
     } finally {
       setHydrated(true);
     }
     return subscribeStore(GAME_MODE_STORE.key, () => {
-      setGameModeState(readStore(GAME_MODE_STORE));
+      try {
+        setGameModeState(readStore(GAME_MODE_STORE));
+      } catch (reason) {
+        setStorageError(reason instanceof Error ? reason.message : "Could not read game-mode settings.");
+      }
     });
   }, []);
 
@@ -57,8 +63,9 @@ export function GameModeProvider({ children }: { children: React.ReactNode }) {
     setGameModeState(mode);
     try {
       writeStore(GAME_MODE_STORE, mode);
-    } catch {
-      // ignore storage errors
+      setStorageError("");
+    } catch (reason) {
+      setStorageError(reason instanceof Error ? reason.message : "Could not save game mode.");
     }
   }, []);
 
@@ -67,8 +74,8 @@ export function GameModeProvider({ children }: { children: React.ReactNode }) {
   }, [gameMode, setGameMode]);
 
   const value = useMemo<GameModeContextValue>(
-    () => ({ gameMode, hydrated, setGameMode, toggleGameMode }),
-    [gameMode, hydrated, setGameMode, toggleGameMode]
+    () => ({ gameMode, hydrated, storageError, setGameMode, toggleGameMode }),
+    [gameMode, hydrated, setGameMode, storageError, toggleGameMode]
   );
 
   return (

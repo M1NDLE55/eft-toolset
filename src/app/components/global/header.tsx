@@ -12,8 +12,18 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { GameModeToggle } from '@/components/game-mode/toggle';
+import { useEffect, useState } from 'react';
 
 export function Header() {
+  const [staleUpstream, setStaleUpstream] = useState(false);
+
+  useEffect(() => {
+    const update = (event: Event) =>
+      setStaleUpstream(Boolean((event as CustomEvent<boolean>).detail));
+    window.addEventListener('eft-toolset:stale-upstream', update);
+    return () => window.removeEventListener('eft-toolset:stale-upstream', update);
+  }, []);
+
   return (
     <header className="border-b border-[#1a1a1a] w-full bg-[#070707]">
       <div className="h-16 px-4 flex items-center justify-between w-full">
@@ -37,6 +47,11 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-2">
+          {staleUpstream && (
+            <span role="status" title="The live data service is unavailable; cached data is being used." className="text-[10px] uppercase tracking-widest text-amber-300">
+              Cached data
+            </span>
+          )}
           <GameModeToggle />
           <div className="sm:hidden">
             <DropdownMenu>

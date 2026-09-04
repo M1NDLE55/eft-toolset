@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { POST } from "@/app/api/tarkov/route";
 
 describe("Tarkov query route", () => {
@@ -24,5 +24,28 @@ describe("Tarkov query route", () => {
       })
     );
     expect(response.status).toBe(413);
+  });
+
+  it("rate-limits repeated requests from the same client", async () => {
+    vi.spyOn(Date, "now").mockReturnValue(1_900_000_000_000);
+    const responses = [];
+    for (let index = 0; index < 61; index += 1) {
+      responses.push(
+        await POST(
+          new Request("http://localhost/api/tarkov", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "CF-Connecting-IP": "203.0.113.44",
+            },
+            body: JSON.stringify({ operation: "arbitrary.query", variables: {} }),
+          })
+        )
+      );
+    }
+
+    expect(responses[59].status).toBe(400);
+    expect(responses[60].status).toBe(429);
+    expect(responses[60].headers.get("retry-after")).toBe("1");
   });
 });

@@ -22,11 +22,17 @@ import type {
   SpawnKind,
 } from "@/app/lib/types/raidPlanner";
 import { TARKOV_OPERATIONS, type TarkovOperation } from "./operations";
+import { AsyncLocalStorage } from "node:async_hooks";
 
 const UPSTREAM_BASE_URL = "https://json.tarkov.dev";
-const UPSTREAM_TIMEOUT_MS = 45_000;
+const UPSTREAM_TIMEOUT_MS = 20_000;
 const UPSTREAM_MAX_BYTES = 32 * 1024 * 1024;
 const RESOURCE_TTL_MS = 5 * 60_000;
+const RESOURCE_STALE_MS = 15 * 60_000;
+const MAX_RESOURCE_RECORDS = 100_000;
+const MAX_NESTED_ENTRIES = 20_000;
+const MAX_STRING_LENGTH = 10_000;
+const MAX_OBJECTIVE_NODES = 10_000;
 const MAX_NAMES = 100;
 const MAX_IDS = 100;
 
@@ -234,7 +240,37 @@ interface MapsData {
 
 interface ResourceCacheEntry {
   expiresAt: number;
+  staleUntil: number;
+  value?: UpstreamEnvelope<unknown>;
+  inFlight?: Promise<UpstreamEnvelope<unknown>>;
+  lastStaleAt?: number;
+}
+
+interface ItemsContext {
+  items: RawItem[];
+  byId: Map<string, RawItem>;
+  byName: Map<string, RawItem>;
+  nameById: Map<string, string>;
+  translations: TranslationDictionary;
+  fleaMarket?: ItemsData["fleaMarket"];
+}
+
+interface TasksContext {
+  tasks: RawTask[];
+  byId: Map<string, RawTask>;
+  byItem: Map<string, RawTask[]>;
+  translations: TranslationDictionary;
+}
+
+interface RelationsContext {
+  bartersByItem: Map<string, RawBarter[]>;
+  craftsByItem: Map<string, RawCraft[]>;
+}
+
+interface DerivedCacheEntry {
+  expiresAt: number;
   value: Promise<unknown>;
+  stale?: boolean;
 }
 
 export class TarkovUpstreamError extends Error {
@@ -252,37 +288,88 @@ export class TarkovRequestError extends Error {
 }
 
 const resourceCache = new Map<string, ResourceCacheEntry>();
+const derivedCache = new Map<string, DerivedCacheEntry>();
+const operationContext = new AsyncLocalStorage<{
+  startedAt: number;
+  resources: Set<ResourceCacheEntry>;
+  stale: boolean;
+  signal?: AbortSignal;
+}>();
 
 export async function executeTarkovOperation(
   operation: TarkovOperation,
-  variables: unknown
+  variables: unknown,
+  options: { signal?: AbortSignal; onStale?: () => void } = {}
 ): Promise<unknown> {
-  const input = asRecord(variables);
-  const gameMode = readGameMode(input);
-
-  switch (operation) {
+  return operationContext.run(
+    { startedAt: Date.now(), resources: new Set(), stale: false, signal: options.signal },
+    async () => {
+      const input = asRecord(variables);
+      const gameMode = readGameMode(input);
+      let result: Promise<unknown>;
+      switch (operation) {
     case TARKOV_OPERATIONS.itemCatalog:
-      return getItemCatalog(gameMode);
+      result = getItemCatalog(gameMode);
+      break;
     case TARKOV_OPERATIONS.groupItems:
-      return getGroupItems(gameMode, readStringList(input.names, "names", MAX_NAMES));
+      result = getGroupItems(gameMode, readStringList(input.names, "names", MAX_NAMES));
+      break;
     case TARKOV_OPERATIONS.itemDetail:
-      return getItemDetail(gameMode, readString(input.name, "name", 500));
+      result = getItemDetail(gameMode, readString(input.name, "name", 500));
+      break;
     case TARKOV_OPERATIONS.gunList:
-      return getGunList(gameMode);
+      result = getGunList(gameMode);
+      break;
     case TARKOV_OPERATIONS.buildItems:
-      return getBuildItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
+      result = getBuildItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
+      break;
     case TARKOV_OPERATIONS.pickItems:
-      return getPickItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
+      result = getPickItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
+      break;
     case TARKOV_OPERATIONS.preset:
-      return getPreset(gameMode, readString(input.id, "id", 80));
+      result = getPreset(gameMode, readString(input.id, "id", 80));
+      break;
     case TARKOV_OPERATIONS.mapDetails:
-      return getMapDetails(gameMode, readString(input.mapKey, "mapKey", 80));
-  }
+      result = getMapDetails(gameMode, readString(input.mapKey, "mapKey", 80));
+      break;
+    default:
+      throw new TarkovRequestError("Unknown query operation.", "INVALID_OPERATION");
+      }
+      const data = await waitForCaller(result, options.signal);
+      const context = operationContext.getStore();
+      if (
+        context &&
+        (context.stale ||
+          Array.from(context.resources).some(
+            (entry) => (entry.lastStaleAt ?? 0) >= context.startedAt
+          ))
+      ) options.onStale?.();
+      return data;
+    }
+  );
+}
+
+function waitForCaller<T>(work: Promise<T>, signal?: AbortSignal): Promise<T> {
+  if (!signal) return work;
+  signal.throwIfAborted();
+  return new Promise<T>((resolve, reject) => {
+    const onAbort = () =>
+      reject(signal.reason ?? new DOMException("The request was aborted.", "AbortError"));
+    signal.addEventListener("abort", onAbort, { once: true });
+    work.then(resolve, reject).finally(() => signal.removeEventListener("abort", onAbort));
+  });
+}
+
+function throwIfRequestAborted() {
+  operationContext.getStore()?.signal?.throwIfAborted();
 }
 
 async function getItemCatalog(gameMode: GameMode): Promise<CatalogItem[]> {
-  const { items, translations } = await loadItems(gameMode);
-  return projectItemCatalog(items, translations);
+  return loadDerived(`${gameMode}/catalog-projection`, async () => {
+    const { items, translations } = await loadItems(gameMode);
+    throwIfRequestAborted();
+    return projectItemCatalog(items, translations);
+  });
 }
 
 async function getGroupItems(gameMode: GameMode, names: string[]): Promise<CachedItem[]> {
@@ -292,13 +379,12 @@ async function getGroupItems(gameMode: GameMode, names: string[]): Promise<Cache
     loadTraderNames(gameMode),
     loadTasks(gameMode),
   ]);
-  const { items, translations, fleaMarket } = itemContext;
-  const requested = new Set(names);
-  const tasksByItem = indexTasksByItem(taskContext.tasks);
-  return items.flatMap((item) => {
-    const name = translate(item.name, translations);
-    if (!requested.has(name)) return [];
-    const usedInTasks = (tasksByItem.get(item.id ?? "") ?? []).map((task) => ({
+  const { translations, fleaMarket } = itemContext;
+  throwIfRequestAborted();
+  return names.flatMap((name) => {
+    const item = itemContext.byName.get(name);
+    if (!item) return [];
+    const usedInTasks = (taskContext.byItem.get(item.id ?? "") ?? []).map((task) => ({
       name: translate(task.name, taskContext.translations),
     }));
     return [
@@ -311,56 +397,46 @@ async function getItemDetail(
   gameMode: GameMode,
   requestedName: string
 ): Promise<ComposedItem | null> {
-  const [itemContext, traderNames, taskContext, barters, crafts, stations] =
+  const [itemContext, traderNames, taskContext, relations, stations] =
     await Promise.all([
       loadItems(gameMode),
       loadTraderNames(gameMode),
       loadTasks(gameMode),
-      loadArrayResource<RawBarter>(gameMode, "barters"),
-      loadArrayResource<RawCraft>(gameMode, "crafts"),
+      loadRelations(gameMode),
       loadStationNames(gameMode),
     ]);
+  throwIfRequestAborted();
 
-  const item = itemContext.items.find(
-    (candidate) => translate(candidate.name, itemContext.translations) === requestedName
-  );
+  const item = itemContext.byName.get(requestedName);
   if (!item?.id) return null;
 
-  const itemById = new Map(
-    itemContext.items.flatMap((candidate) =>
-      candidate.id ? ([[candidate.id, candidate]] as const) : []
-    )
-  );
-  const taskById = new Map(
-    taskContext.tasks.flatMap((task) => (task.id ? ([[task.id, task]] as const) : []))
-  );
-  const tasks = (indexTasksByItem(taskContext.tasks).get(item.id) ?? []).map((task) =>
+  const tasks = (taskContext.byItem.get(item.id) ?? []).map((task) =>
     projectTask(task, taskContext.translations, traderNames)
   );
-  const bartersUsing = barters
-    .filter((barter) => containsBarterItem(barter.requiredItems, item.id!))
+  const bartersUsing = relatedBarters(relations.bartersByItem, item.id)
     .map((barter) =>
       projectBarter(
         barter,
-        itemById,
+        itemContext.byId,
         itemContext.translations,
         traderNames,
-        taskById,
+        taskContext.byId,
         taskContext.translations
       )
-    );
-  const craftsUsing = crafts
-    .filter((craft) => containsItem(craft.requiredItems, item.id!))
+    )
+    .filter((barter) => barter.rewardItems.length > 0);
+  const craftsUsing = (relations.craftsByItem.get(item.id) ?? [])
     .map((craft) =>
       projectCraft(
         craft,
-        itemById,
+        itemContext.byId,
         itemContext.translations,
         stations,
-        taskById,
+        taskContext.byId,
         taskContext.translations
       )
-    );
+    )
+    .filter((craft) => craft.rewardItems.length > 0);
 
   return {
     ...projectCachedItem(
@@ -378,26 +454,29 @@ async function getItemDetail(
 }
 
 async function getGunList(gameMode: GameMode): Promise<GunListItem[]> {
-  const { items, translations } = await loadItems(gameMode);
-  return items
-    .filter((item) => item.types?.includes("gun"))
-    .map((item) => ({
-      id: item.id ?? "",
-      name: translate(item.name, translations),
-      shortName: translate(item.shortName, translations) || translate(item.name, translations),
-      gridImageLink: item.gridImageLink ?? null,
-      defaultPresetId: item.properties?.defaultPreset ?? null,
-    }))
-    .filter((item) => Boolean(item.id));
+  return loadDerived(`${gameMode}/gun-list-projection`, async () => {
+    const { items, translations } = await loadItems(gameMode);
+    throwIfRequestAborted();
+    return items
+      .filter((item) => item.types?.includes("gun"))
+      .map((item) => ({
+        id: item.id ?? "",
+        name: translate(item.name, translations),
+        shortName: translate(item.shortName, translations) || translate(item.name, translations),
+        gridImageLink: safeAssetUrl(item.gridImageLink),
+        defaultPresetId: item.properties?.defaultPreset ?? null,
+      }))
+      .filter((item) => Boolean(item.id));
+  });
 }
 
 async function getBuildItems(gameMode: GameMode, ids: string[]): Promise<BuildItemData[]> {
   if (ids.length === 0) return [];
-  const [{ items, translations }, traderNames] = await Promise.all([
+  const [{ byId, translations }, traderNames] = await Promise.all([
     loadItems(gameMode),
     loadTraderNames(gameMode),
   ]);
-  const byId = new Map(items.flatMap((item) => (item.id ? ([[item.id, item]] as const) : [])));
+  throwIfRequestAborted();
   return ids.flatMap((id) => {
     const item = byId.get(id);
     return item ? [projectBuildItem(item, byId, translations, traderNames)] : [];
@@ -406,11 +485,11 @@ async function getBuildItems(gameMode: GameMode, ids: string[]): Promise<BuildIt
 
 async function getPickItems(gameMode: GameMode, ids: string[]): Promise<PickItemData[]> {
   if (ids.length === 0) return [];
-  const [{ items, translations }, traderNames] = await Promise.all([
+  const [{ byId, translations }, traderNames] = await Promise.all([
     loadItems(gameMode),
     loadTraderNames(gameMode),
   ]);
-  const byId = new Map(items.flatMap((item) => (item.id ? ([[item.id, item]] as const) : [])));
+  throwIfRequestAborted();
   return ids.flatMap((id) => {
     const item = byId.get(id);
     return item ? [projectPickItem(item, translations, traderNames)] : [];
@@ -418,8 +497,9 @@ async function getPickItems(gameMode: GameMode, ids: string[]): Promise<PickItem
 }
 
 async function getPreset(gameMode: GameMode, id: string): Promise<PresetContents | null> {
-  const { items } = await loadItems(gameMode);
-  const item = items.find((candidate) => candidate.id === id);
+  const { byId } = await loadItems(gameMode);
+  throwIfRequestAborted();
+  const item = byId.get(id);
   if (!item) return null;
   return {
     baseItemId: item.properties?.baseItem ?? null,
@@ -430,80 +510,137 @@ async function getPreset(gameMode: GameMode, id: string): Promise<PresetContents
 }
 
 async function getMapDetails(gameMode: GameMode, mapKey: string): Promise<MapDetails | null> {
-  const [mapsEnvelope, translationsEnvelope, { items, translations: itemTranslations }] =
+  const [mapsEnvelope, translationsEnvelope, { nameById }] =
     await Promise.all([
       loadResource<MapsData>(gameMode, "maps"),
       loadResource<TranslationDictionary>(gameMode, "maps_en"),
       loadItems(gameMode),
     ]);
+  throwIfRequestAborted();
   const raw = Object.values(mapsEnvelope.data.maps ?? {}).find(
     (map) => map.normalizedName === mapKey
   );
   if (!raw) return null;
-  const itemNames = new Map(
-    items.flatMap((item) =>
-      item.id
-        ? ([[item.id, translate(item.name, itemTranslations)]] as const)
-        : []
-    )
-  );
   return projectMap(
     mapKey,
     raw,
     translationsEnvelope.data,
     mapsEnvelope.data.lootContainers ?? {},
     mapsEnvelope.data.stationaryWeapons ?? {},
-    itemNames
+    nameById
   );
 }
 
 async function loadItems(gameMode: GameMode) {
-  const [itemsEnvelope, translationsEnvelope] = await Promise.all([
-    loadResource<ItemsData>(gameMode, "items"),
-    loadResource<TranslationDictionary>(gameMode, "items_en"),
-  ]);
-  return {
-    items: Object.values(itemsEnvelope.data.items ?? {}),
-    translations: translationsEnvelope.data,
-    fleaMarket: itemsEnvelope.data.fleaMarket,
-  };
+  return loadDerived<ItemsContext>(`${gameMode}/items-context`, async () => {
+    const [itemsEnvelope, translationsEnvelope] = await Promise.all([
+      loadResource<ItemsData>(gameMode, "items"),
+      loadResource<TranslationDictionary>(gameMode, "items_en"),
+    ]);
+    const items = Object.values(itemsEnvelope.data.items ?? {});
+    const translations = translationsEnvelope.data;
+    return {
+      items,
+      byId: new Map(
+        items.flatMap((item) => (item.id ? ([[item.id, item]] as const) : []))
+      ),
+      byName: new Map(
+        items.map((item) => [translate(item.name, translations), item] as const)
+      ),
+      nameById: new Map(
+        items.flatMap((item) =>
+          item.id ? ([[item.id, translate(item.name, translations)]] as const) : []
+        )
+      ),
+      translations,
+      fleaMarket: itemsEnvelope.data.fleaMarket,
+    };
+  });
 }
 
 async function loadTasks(gameMode: GameMode) {
-  const [tasksEnvelope, translationsEnvelope] = await Promise.all([
-    loadResource<TasksData>(gameMode, "tasks"),
-    loadResource<TranslationDictionary>(gameMode, "tasks_en"),
-  ]);
-  return {
-    tasks: Object.values(tasksEnvelope.data.tasks ?? {}),
-    translations: translationsEnvelope.data,
-  };
+  return loadDerived<TasksContext>(`${gameMode}/tasks-context`, async () => {
+    const [tasksEnvelope, translationsEnvelope] = await Promise.all([
+      loadResource<TasksData>(gameMode, "tasks"),
+      loadResource<TranslationDictionary>(gameMode, "tasks_en"),
+    ]);
+    const tasks = Object.values(tasksEnvelope.data.tasks ?? {});
+    return {
+      tasks,
+      byId: new Map(
+        tasks.flatMap((task) => (task.id ? ([[task.id, task]] as const) : []))
+      ),
+      byItem: indexTasksByItem(tasks),
+      translations: translationsEnvelope.data,
+    };
+  });
 }
 
 async function loadTraderNames(gameMode: GameMode) {
-  const [tradersEnvelope, translationsEnvelope] = await Promise.all([
-    loadResource<Dictionary<RawNamedEntity>>(gameMode, "traders"),
-    loadResource<TranslationDictionary>(gameMode, "traders_en"),
-  ]);
-  return new Map(
-    Object.entries(tradersEnvelope.data).map(([id, trader]) => [
-      id,
-      translate(trader.name, translationsEnvelope.data) || trader.normalizedName || id,
-    ])
-  );
+  return loadDerived<Map<string, string>>(`${gameMode}/trader-names`, async () => {
+    const [tradersEnvelope, translationsEnvelope] = await Promise.all([
+      loadResource<Dictionary<RawNamedEntity>>(gameMode, "traders"),
+      loadResource<TranslationDictionary>(gameMode, "traders_en"),
+    ]);
+    return new Map(
+      Object.entries(tradersEnvelope.data).map(([id, trader]) => [
+        id,
+        translate(trader.name, translationsEnvelope.data) || trader.normalizedName || id,
+      ])
+    );
+  });
 }
 
 async function loadStationNames(gameMode: GameMode) {
-  const [stationsEnvelope, translationsEnvelope] = await Promise.all([
-    loadResource<Dictionary<RawNamedEntity>>(gameMode, "hideout"),
-    loadResource<TranslationDictionary>(gameMode, "hideout_en"),
-  ]);
-  return new Map(
-    Object.entries(stationsEnvelope.data).map(([id, station]) => [
-      id,
-      translate(station.name, translationsEnvelope.data) || station.normalizedName || id,
-    ])
-  );
+  return loadDerived<Map<string, string>>(`${gameMode}/station-names`, async () => {
+    const [stationsEnvelope, translationsEnvelope] = await Promise.all([
+      loadResource<Dictionary<RawNamedEntity>>(gameMode, "hideout"),
+      loadResource<TranslationDictionary>(gameMode, "hideout_en"),
+    ]);
+    return new Map(
+      Object.entries(stationsEnvelope.data).map(([id, station]) => [
+        id,
+        translate(station.name, translationsEnvelope.data) || station.normalizedName || id,
+      ])
+    );
+  });
+}
+
+async function loadDerived<T>(key: string, loader: () => Promise<T>): Promise<T> {
+  const cached = derivedCache.get(key);
+  if (cached && cached.expiresAt > Date.now()) {
+    const result = await (cached.value as Promise<T>);
+    if (cached.stale) {
+      const currentContext = operationContext.getStore();
+      if (currentContext) currentContext.stale = true;
+    }
+    return result;
+  }
+  const loaderContext = operationContext.getStore();
+  const value = loader();
+  const entry: DerivedCacheEntry = { expiresAt: Number.POSITIVE_INFINITY, value };
+  derivedCache.set(key, entry);
+  try {
+    const result = await value;
+    if (derivedCache.get(key) === entry) {
+      entry.expiresAt = Date.now() + RESOURCE_TTL_MS;
+      entry.stale = Boolean(
+        loaderContext &&
+          (loaderContext.stale ||
+            Array.from(loaderContext.resources).some(
+              (resource) => (resource.lastStaleAt ?? 0) >= loaderContext.startedAt
+            ))
+      );
+    }
+    if (entry.stale) {
+      const currentContext = operationContext.getStore();
+      if (currentContext) currentContext.stale = true;
+    }
+    return result;
+  } catch (error) {
+    if (derivedCache.get(key) === entry) derivedCache.delete(key);
+    throw error;
+  }
 }
 
 async function loadArrayResource<T>(gameMode: GameMode, resource: "barters" | "crafts") {
@@ -514,17 +651,67 @@ async function loadArrayResource<T>(gameMode: GameMode, resource: "barters" | "c
 async function loadResource<T>(gameMode: GameMode, resource: Resource) {
   const cacheKey = `${gameMode}/${resource}`;
   const cached = resourceCache.get(cacheKey);
-  if (cached && cached.expiresAt > Date.now()) {
-    return cached.value as Promise<UpstreamEnvelope<T>>;
+  if (cached) operationContext.getStore()?.resources.add(cached);
+  const now = Date.now();
+  if (cached?.value && cached.expiresAt > now) {
+    return cached.value as UpstreamEnvelope<T>;
   }
+  if (cached?.inFlight) return cached.inFlight as Promise<UpstreamEnvelope<T>>;
 
-  const value = fetchResource<T>(gameMode, resource);
-  resourceCache.set(cacheKey, {
-    expiresAt: Date.now() + RESOURCE_TTL_MS,
-    value,
-  });
-  value.catch(() => resourceCache.delete(cacheKey));
+  const entry: ResourceCacheEntry = cached ?? {
+    expiresAt: 0,
+    staleUntil: 0,
+  };
+  operationContext.getStore()?.resources.add(entry);
+  const staleValue = entry.value;
+  const value = fetchResource<T>(gameMode, resource)
+    .then((result) => {
+      const completedAt = Date.now();
+      entry.value = result;
+      entry.expiresAt = completedAt + RESOURCE_TTL_MS;
+      entry.staleUntil = completedAt + RESOURCE_TTL_MS + RESOURCE_STALE_MS;
+      entry.inFlight = undefined;
+      return result;
+    })
+    .catch((error) => {
+      entry.inFlight = undefined;
+      if (staleValue && Date.now() <= entry.staleUntil) {
+        entry.lastStaleAt = Date.now();
+        console.warn(`Serving stale Tarkov ${resource} data after refresh failed.`);
+        return staleValue as UpstreamEnvelope<T>;
+      }
+      if (resourceCache.get(cacheKey) === entry) resourceCache.delete(cacheKey);
+      throw error;
+    });
+  entry.inFlight = value as Promise<UpstreamEnvelope<unknown>>;
+  resourceCache.set(cacheKey, entry);
   return value;
+}
+
+async function loadRelations(gameMode: GameMode): Promise<RelationsContext> {
+  return loadDerived(`${gameMode}/relations-context`, async () => {
+    const [barters, crafts] = await Promise.all([
+      loadArrayResource<RawBarter>(gameMode, "barters"),
+      loadArrayResource<RawCraft>(gameMode, "crafts"),
+    ]);
+    const bartersByItem = new Map<string, RawBarter[]>();
+    const craftsByItem = new Map<string, RawCraft[]>();
+    for (const barter of barters) indexRelation(bartersByItem, barter.requiredItems, barter);
+    for (const craft of crafts) indexRelation(craftsByItem, craft.requiredItems, craft);
+    return { bartersByItem, craftsByItem };
+  });
+}
+
+function indexRelation<T>(
+  index: Map<string, T[]>,
+  requiredItems: RawContainedItem[] | null | undefined,
+  relation: T
+) {
+  for (const id of new Set((requiredItems ?? []).flatMap((entry) => entry.item ? [entry.item] : []))) {
+    const matches = index.get(id) ?? [];
+    matches.push(relation);
+    index.set(id, matches);
+  }
 }
 
 async function fetchResource<T>(gameMode: GameMode, resource: Resource) {
@@ -534,7 +721,7 @@ async function fetchResource<T>(gameMode: GameMode, resource: Resource) {
     const response = await fetch(`${UPSTREAM_BASE_URL}/${gameMode}/${resource}`, {
       headers: { Accept: "application/json" },
       signal: controller.signal,
-      next: { revalidate: RESOURCE_TTL_MS / 1000 },
+      cache: "no-store",
     });
     if (!response.ok) {
       throw new TarkovUpstreamError(
@@ -546,11 +733,11 @@ async function fetchResource<T>(gameMode: GameMode, resource: Resource) {
     if (Number.isFinite(contentLength) && contentLength > UPSTREAM_MAX_BYTES) {
       throw new TarkovUpstreamError(`Tarkov.dev returned an oversized ${resource} payload.`);
     }
-    const body = (await response.json()) as unknown;
-    if (!body || typeof body !== "object" || !("data" in body)) {
+    const body = await readJsonWithLimit(response, resource);
+    if (!isRecord(body) || !("data" in body) || !validateResourceData(resource, body.data)) {
       throw new TarkovUpstreamError(`Tarkov.dev returned invalid ${resource} data.`);
     }
-    return body as UpstreamEnvelope<T>;
+    return body as unknown as UpstreamEnvelope<T>;
   } catch (error) {
     if (error instanceof TarkovUpstreamError) throw error;
     if (controller.signal.aborted) {
@@ -566,6 +753,387 @@ async function fetchResource<T>(gameMode: GameMode, resource: Resource) {
   }
 }
 
+async function readJsonWithLimit(response: Response, resource: Resource): Promise<unknown> {
+  if (!response.body) {
+    throw new TarkovUpstreamError(`Tarkov.dev returned an empty ${resource} payload.`);
+  }
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder("utf-8", { fatal: true });
+  let bytesRead = 0;
+  const chunks: string[] = [];
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      bytesRead += value.byteLength;
+      if (bytesRead > UPSTREAM_MAX_BYTES) {
+        await reader.cancel("Payload exceeded the configured limit.");
+        throw new TarkovUpstreamError(
+          `Tarkov.dev returned an oversized ${resource} payload.`
+        );
+      }
+      chunks.push(decoder.decode(value, { stream: true }));
+    }
+    chunks.push(decoder.decode());
+    return JSON.parse(chunks.join("")) as unknown;
+  } catch (error) {
+    if (error instanceof TarkovUpstreamError) throw error;
+    throw new TarkovUpstreamError(`Tarkov.dev returned invalid ${resource} JSON.`);
+  } finally {
+    reader.releaseLock();
+  }
+}
+
+function validateResourceData(resource: Resource, data: unknown): boolean {
+  switch (resource) {
+    case "items":
+      return (
+        isRecord(data) &&
+        optionalDictionary(data.items, isRawItem) &&
+        optional(data.fleaMarket, (value) =>
+          isRecord(value) &&
+          optionalFiniteNumber(value.sellOfferFeeRate) &&
+          optionalFiniteNumber(value.sellRequirementFeeRate)
+        )
+      );
+    case "tasks":
+      return isRecord(data) && optionalDictionary(data.tasks, isRawTask);
+    case "maps":
+      return (
+        isRecord(data) &&
+        optionalDictionary(data.maps, isRawMap) &&
+        optionalDictionary(data.lootContainers, isRawNamedEntity) &&
+        optionalDictionary(data.stationaryWeapons, isRawNamedEntity)
+      );
+    case "barters":
+      return boundedArray(data, isRawBarter, MAX_RESOURCE_RECORDS);
+    case "crafts":
+      return boundedArray(data, isRawCraft, MAX_RESOURCE_RECORDS);
+    case "traders":
+    case "hideout":
+      return dictionary(data, isRawNamedEntity);
+    case "items_en":
+    case "tasks_en":
+    case "traders_en":
+    case "hideout_en":
+    case "maps_en":
+      return dictionary(data, isShortString);
+  }
+}
+
+function isRawItem(value: unknown): value is RawItem {
+  if (!isRecord(value)) return false;
+  const stringFields = [
+    value.id,
+    value.normalizedName,
+    value.name,
+    value.shortName,
+    value.gridImageLink,
+    value.wikiLink,
+  ];
+  const numberFields = [
+    value.fleaMarketFee,
+    value.width,
+    value.height,
+    value.weight,
+    value.basePrice,
+    value.lastLowPrice,
+    value.avg24hPrice,
+    value.changeLast48hPercent,
+  ];
+  return (
+    stringFields.every(optionalShortString) &&
+    numberFields.every(optionalFiniteNumber) &&
+    optionalStringArray(value.types) &&
+    optionalArray(value.buyFromTrader, isRawTraderOffer) &&
+    optionalArray(value.sellToTrader, isRawTraderOffer) &&
+    optionalStringArray(value.conflictingItems) &&
+    optionalStringArray(value.conflictingSlotIds) &&
+    optional(value.properties, isRawItemProperties) &&
+    optionalArray(value.containsItems, isRawContainedItem)
+  );
+}
+
+function isRawItemProperties(value: unknown): value is RawItemProperties {
+  if (!isRecord(value)) return false;
+  return (
+    [
+      value.propertiesType,
+      value.caliber,
+      value.defaultAmmo,
+      value.defaultPreset,
+      value.baseItem,
+    ].every(optionalShortString) &&
+    [
+      value.ergonomics,
+      value.recoilModifier,
+      value.recoilVertical,
+      value.recoilHorizontal,
+      value.fireRate,
+    ].every(optionalFiniteNumber) &&
+    optionalStringArray(value.fireModes) &&
+    optionalStringArray(value.presets) &&
+    optionalArray(value.slots, isRawSlot)
+  );
+}
+
+function isRawSlot(value: unknown): value is RawSlot {
+  if (!isRecord(value)) return false;
+  return (
+    [value.id, value.name, value.nameId].every(optionalShortString) &&
+    optional(value.required, (entry) => typeof entry === "boolean") &&
+    optional(value.filters, (filters) =>
+      isRecord(filters) && optionalStringArray(filters.allowedItems)
+    )
+  );
+}
+
+function isRawTraderOffer(value: unknown): value is RawTraderOffer {
+  return (
+    isRecord(value) &&
+    optionalShortString(value.trader) &&
+    optionalFiniteNumber(value.priceRUB)
+  );
+}
+
+function isRawContainedItem(value: unknown): value is RawContainedItem {
+  return (
+    isRecord(value) &&
+    optionalShortString(value.item) &&
+    optionalFiniteNumber(value.count)
+  );
+}
+
+function isRawTask(value: unknown): value is RawTask {
+  return (
+    isRecord(value) &&
+    [value.id, value.name, value.normalizedName, value.wikiLink, value.trader].every(
+      optionalShortString
+    ) &&
+    optionalFiniteNumber(value.minPlayerLevel) &&
+    optionalArray(value.objectives, isRawTaskObjective)
+  );
+}
+
+function isRawTaskObjective(value: unknown): value is RawTaskObjective {
+  if (!isRecord(value)) return false;
+  return (
+    [value.description, value.item, value.markerItem].every(optionalShortString) &&
+    optionalStringArray(value.items) &&
+    [
+      value.containsAll,
+      value.containsOne,
+      value.wearing,
+      value.usingWeapon,
+      value.usingWeaponMods,
+    ].every((entry) => optional(entry, isBoundedJsonTree))
+  );
+}
+
+function isRawBarter(value: unknown): value is RawBarter {
+  return (
+    isRecord(value) &&
+    optionalShortString(value.trader) &&
+    optionalShortString(value.taskUnlock) &&
+    optionalFiniteNumber(value.minTraderLevel) &&
+    optionalArray(value.requiredItems, isRawContainedItem) &&
+    optional(value.offeredItem, isRawContainedItem)
+  );
+}
+
+function isRawCraft(value: unknown): value is RawCraft {
+  return (
+    isRecord(value) &&
+    optionalShortString(value.station) &&
+    optionalShortString(value.taskUnlock) &&
+    optionalFiniteNumber(value.level) &&
+    optionalArray(value.requiredItems, isRawContainedItem) &&
+    optional(value.productItem, isRawContainedItem)
+  );
+}
+
+function isRawNamedEntity(value: unknown): value is RawNamedEntity {
+  return (
+    isRecord(value) &&
+    [value.id, value.name, value.normalizedName].every(optionalShortString)
+  );
+}
+
+function isRawMap(value: unknown): value is RawMap {
+  if (!isRecord(value)) return false;
+  return (
+    [value.normalizedName, value.name, value.players].every(optionalShortString) &&
+    optionalFiniteNumber(value.raidDuration) &&
+    optionalArray(value.extracts, (entry) =>
+      isRecord(entry) &&
+      [entry.id, entry.name, entry.faction].every(optionalShortString) &&
+      optional(entry.position, isPosition) &&
+      optionalArray(entry.outline, isOutlinePoint) &&
+      optionalFiniteNumber(entry.top) &&
+      optionalFiniteNumber(entry.bottom)
+    ) &&
+    optionalArray(value.transits, (entry) =>
+      isRecord(entry) &&
+      [entry.id, entry.description].every(optionalShortString) &&
+      optional(entry.position, isPosition)
+    ) &&
+    optionalArray(value.spawns, (entry) =>
+      isRecord(entry) &&
+      optionalShortString(entry.zoneName) &&
+      optional(entry.position, isPosition) &&
+      optionalStringArray(entry.sides) &&
+      optionalStringArray(entry.categories)
+    ) &&
+    optionalArray(value.locks, (entry) =>
+      isRecord(entry) &&
+      [entry.lockType, entry.key].every(optionalShortString) &&
+      optional(entry.needsPower, (item) => typeof item === "boolean") &&
+      optional(entry.position, isPosition)
+    ) &&
+    optionalArray(value.hazards, (entry) =>
+      isRecord(entry) &&
+      optionalShortString(entry.name) &&
+      optional(entry.position, isPosition) &&
+      optionalArray(entry.outline, isOutlinePoint) &&
+      optionalFiniteNumber(entry.top) &&
+      optionalFiniteNumber(entry.bottom)
+    ) &&
+    optionalArray(value.lootContainers, (entry) =>
+      isRecord(entry) &&
+      optional(entry.position, isPosition) &&
+      optionalShortString(entry.lootContainer)
+    ) &&
+    optionalArray(value.switches, (entry) =>
+      isRecord(entry) &&
+      [entry.id, entry.name].every(optionalShortString) &&
+      optional(entry.position, isPosition)
+    ) &&
+    optionalArray(value.stationaryWeapons, (entry) =>
+      isRecord(entry) &&
+      optional(entry.position, isPosition) &&
+      optionalShortString(entry.stationaryWeapon)
+    )
+  );
+}
+
+function isPosition(value: unknown): value is RawPosition {
+  return (
+    isRecord(value) &&
+    typeof value.x === "number" &&
+    Number.isFinite(value.x) &&
+    typeof value.y === "number" &&
+    Number.isFinite(value.y) &&
+    typeof value.z === "number" &&
+    Number.isFinite(value.z)
+  );
+}
+
+function isOutlinePoint(value: unknown): value is { x: number; z: number } {
+  return (
+    isRecord(value) &&
+    typeof value.x === "number" &&
+    Number.isFinite(value.x) &&
+    typeof value.z === "number" &&
+    Number.isFinite(value.z)
+  );
+}
+
+function isBoundedJsonTree(value: unknown): boolean {
+  const pending = [value];
+  let nodes = 0;
+  while (pending.length > 0) {
+    const current = pending.pop();
+    nodes += 1;
+    if (nodes > MAX_OBJECTIVE_NODES) return false;
+    if (typeof current === "string" && !isShortString(current)) return false;
+    if (typeof current === "number" && !Number.isFinite(current)) return false;
+    if (Array.isArray(current)) {
+      if (current.length > MAX_NESTED_ENTRIES) return false;
+      pending.push(...current);
+    } else if (isRecord(current)) {
+      const entries = Object.entries(current);
+      if (entries.length > MAX_NESTED_ENTRIES) return false;
+      for (const [key, entry] of entries) {
+        if (!isShortString(key)) return false;
+        pending.push(entry);
+      }
+    } else if (
+      current !== null &&
+      current !== undefined &&
+      typeof current !== "string" &&
+      typeof current !== "number" &&
+      typeof current !== "boolean"
+    ) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function optional<T>(value: unknown, predicate: (value: unknown) => value is T): value is T | null | undefined;
+function optional(value: unknown, predicate: (value: unknown) => boolean): boolean;
+function optional(value: unknown, predicate: (value: unknown) => boolean) {
+  return value === null || value === undefined || predicate(value);
+}
+
+function optionalArray<T>(
+  value: unknown,
+  predicate: (entry: unknown) => entry is T
+): value is T[] | null | undefined;
+function optionalArray(value: unknown, predicate: (entry: unknown) => boolean): boolean;
+function optionalArray(value: unknown, predicate: (entry: unknown) => boolean) {
+  return optional(value, (entry) => boundedArray(entry, predicate, MAX_NESTED_ENTRIES));
+}
+
+function boundedArray(
+  value: unknown,
+  predicate: (entry: unknown) => boolean,
+  maxEntries: number
+): value is unknown[] {
+  return Array.isArray(value) && value.length <= maxEntries && value.every(predicate);
+}
+
+function dictionary(
+  value: unknown,
+  predicate: (entry: unknown) => boolean
+): value is Record<string, unknown> {
+  if (!isRecord(value)) return false;
+  const entries = Object.entries(value);
+  return (
+    entries.length <= MAX_RESOURCE_RECORDS &&
+    entries.every(([key, entry]) => isShortString(key) && predicate(entry))
+  );
+}
+
+function optionalDictionary(
+  value: unknown,
+  predicate: (entry: unknown) => boolean
+): boolean {
+  return optional(value, (entry) => dictionary(entry, predicate));
+}
+
+function optionalStringArray(value: unknown): boolean {
+  return optionalArray(value, isShortString);
+}
+
+function isShortString(value: unknown): value is string {
+  return typeof value === "string" && value.length <= MAX_STRING_LENGTH;
+}
+
+function optionalShortString(value: unknown): boolean {
+  return optional(value, isShortString);
+}
+
+function optionalFiniteNumber(value: unknown): boolean {
+  return optional(value, (entry): entry is number =>
+    typeof entry === "number" && Number.isFinite(entry)
+  );
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
 export function projectItemCatalog(
   items: RawItem[],
   translations: TranslationDictionary
@@ -578,7 +1146,7 @@ export function projectItemCatalog(
         normalizedName: item.normalizedName,
         name: translate(item.name, translations),
         shortName: translateNullable(item.shortName, translations),
-        gridImageLink: item.gridImageLink ?? null,
+        gridImageLink: safeAssetUrl(item.gridImageLink),
       },
     ];
   });
@@ -608,12 +1176,12 @@ function projectCachedItem(
     normalizedName: item.normalizedName ?? "",
     name,
     shortName: translateNullable(item.shortName, translations),
-    gridImageLink: item.gridImageLink ?? null,
-    wikiLink: item.wikiLink ?? null,
+    gridImageLink: safeAssetUrl(item.gridImageLink),
+    wikiLink: safeHttpsUrl(item.wikiLink),
     fleaMarketFee:
       finiteNumber(item.fleaMarketFee) ?? calculateFleaMarketFee(item, fleaMarket),
-    width: finiteNumber(item.width) ?? 1,
-    height: finiteNumber(item.height) ?? 1,
+    width: positiveFiniteNumber(item.width) ?? 1,
+    height: positiveFiniteNumber(item.height) ?? 1,
     changeLast48hPercent: finiteNumber(item.changeLast48hPercent),
     buyFor,
     sellFor,
@@ -640,7 +1208,7 @@ function projectTask(
   return {
     name: translate(task.name, translations),
     minPlayerLevel: finiteNumber(task.minPlayerLevel) ?? 0,
-    wikiLink: task.wikiLink ?? null,
+    wikiLink: safeHttpsUrl(task.wikiLink),
     trader: { name: (task.trader && traderNames.get(task.trader)) || task.trader || "Unknown" },
     objectives: (task.objectives ?? []).map((objective) => ({
       description: translateNullable(objective.description, translations),
@@ -704,7 +1272,7 @@ function projectTaskUnlock(
   if (!task) return null;
   return {
     name: translate(task.name, translations),
-    wikiLink: task.wikiLink ?? null,
+    wikiLink: safeHttpsUrl(task.wikiLink),
   };
 }
 
@@ -749,26 +1317,21 @@ function indexTasksByItem(tasks: RawTask[]) {
 }
 
 function collectItemIds(value: unknown, ids: Set<string>) {
-  if (typeof value === "string") {
-    ids.add(value);
-    return;
+  const pending = [value];
+  let visited = 0;
+  while (pending.length > 0 && visited < MAX_OBJECTIVE_NODES) {
+    const current = pending.pop();
+    visited += 1;
+    if (typeof current === "string") {
+      ids.add(current);
+    } else if (Array.isArray(current)) {
+      pending.push(...current);
+    } else if (isRecord(current)) {
+      if (typeof current.id === "string") ids.add(current.id);
+      if (typeof current.item === "string") ids.add(current.item);
+      pending.push(...Object.values(current));
+    }
   }
-  if (Array.isArray(value)) {
-    for (const entry of value) collectItemIds(entry, ids);
-    return;
-  }
-  if (!value || typeof value !== "object") return;
-  const entry = value as Record<string, unknown>;
-  if (typeof entry.id === "string") ids.add(entry.id);
-  if (typeof entry.item === "string") ids.add(entry.item);
-}
-
-function containsItem(entries: RawContainedItem[] | null | undefined, id: string) {
-  return (entries ?? []).some((entry) => entry.item === id);
-}
-
-function containsBarterItem(entries: RawContainedItem[] | null | undefined, id: string) {
-  return (entries ?? []).some((entry) => equivalentBarterItem(entry.item, id));
 }
 
 const DOGTAG_IDS = new Set([
@@ -778,13 +1341,17 @@ const DOGTAG_IDS = new Set([
 ]);
 const BOTH_DOGTAGS_ID = "5b9b9020e7ef6f5716480215";
 
-function equivalentBarterItem(entryId: string | undefined, requestedId: string) {
-  if (!entryId) return false;
-  return (
-    entryId === requestedId ||
-    (entryId === BOTH_DOGTAGS_ID && DOGTAG_IDS.has(requestedId)) ||
-    (requestedId === BOTH_DOGTAGS_ID && DOGTAG_IDS.has(entryId))
-  );
+function relatedBarters(index: Map<string, RawBarter[]>, requestedId: string) {
+  const ids = new Set([requestedId]);
+  if (DOGTAG_IDS.has(requestedId)) ids.add(BOTH_DOGTAGS_ID);
+  if (requestedId === BOTH_DOGTAGS_ID) {
+    for (const id of DOGTAG_IDS) ids.add(id);
+  }
+  const result = new Set<RawBarter>();
+  for (const id of ids) {
+    for (const barter of index.get(id) ?? []) result.add(barter);
+  }
+  return Array.from(result);
 }
 
 function projectBuildItem(
@@ -799,7 +1366,7 @@ function projectBuildItem(
     id: item.id ?? "",
     name: translate(item.name, translations),
     shortName: translate(item.shortName, translations) || translate(item.name, translations),
-    gridImageLink: item.gridImageLink ?? null,
+    gridImageLink: safeAssetUrl(item.gridImageLink),
     weight: finiteNumber(item.weight) ?? 0,
     traderPriceRUB: cheapestTraderPrice(item.buyFromTrader, traderNames),
     fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
@@ -835,7 +1402,7 @@ function projectPickItem(
     id: item.id ?? "",
     name: translate(item.name, translations),
     shortName: translate(item.shortName, translations) || translate(item.name, translations),
-    gridImageLink: item.gridImageLink ?? null,
+    gridImageLink: safeAssetUrl(item.gridImageLink),
     weight: finiteNumber(item.weight) ?? 0,
     traderPriceRUB: cheapestTraderPrice(item.buyFromTrader, traderNames),
     fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
@@ -1021,6 +1588,28 @@ function finiteNumber(value: unknown): number | null {
   return typeof value === "number" && Number.isFinite(value) ? value : null;
 }
 
+function positiveFiniteNumber(value: unknown): number | null {
+  const number = finiteNumber(value);
+  return number !== null && number > 0 ? number : null;
+}
+
+function safeHttpsUrl(value: unknown): string | null {
+  if (typeof value !== "string" || value.length === 0 || value.length > 2_048) return null;
+  try {
+    const url = new URL(value);
+    if (url.protocol !== "https:" || url.username || url.password) return null;
+    return url.toString();
+  } catch {
+    return null;
+  }
+}
+
+function safeAssetUrl(value: unknown): string | null {
+  const safe = safeHttpsUrl(value);
+  if (!safe) return null;
+  return new URL(safe).hostname === "assets.tarkov.dev" ? safe : null;
+}
+
 function calculateFleaMarketFee(
   item: RawItem,
   fleaMarket: ItemsData["fleaMarket"]
@@ -1084,4 +1673,5 @@ function readStringList(value: unknown, name: string, maxItems: number) {
 
 export function clearTarkovResourceCache() {
   resourceCache.clear();
+  derivedCache.clear();
 }

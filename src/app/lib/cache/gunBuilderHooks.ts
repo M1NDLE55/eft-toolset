@@ -6,13 +6,14 @@ import type { BuildItemData, GunListItem } from "@/app/lib/types/gunBuilder";
 import { fetchBuildItems, fetchGunList } from "./gunBuilder";
 
 export function useGunList() {
-  const { gameMode } = useGameMode();
+  const { gameMode, hydrated } = useGameMode();
   const [guns, setGuns] = useState<GunListItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
   const [retryToken, setRetryToken] = useState(0);
 
   useEffect(() => {
+    if (!hydrated) return;
     let cancelled = false;
     setLoading(true);
     setError(null);
@@ -32,7 +33,7 @@ export function useGunList() {
     return () => {
       cancelled = true;
     };
-  }, [gameMode, retryToken]);
+  }, [gameMode, hydrated, retryToken]);
 
   return {
     guns,
@@ -47,7 +48,7 @@ export function useBuildItemData(initialIds: string[]) {
   // Builds are mode-agnostic: item data (prices, stats) always resolves against
   // the active game mode, so toggling the mode live-converts the open build.
   // The reset effect below clears the map on mode change and reloads the ids.
-  const { gameMode } = useGameMode();
+  const { gameMode, hydrated } = useGameMode();
   const [items, setItems] = useState<Map<string, BuildItemData>>(new Map());
   const [loadingIds, setLoadingIds] = useState<Set<string>>(new Set());
   // Mirror `items` in a ref so `loadBuildItems` can stay referentially stable.
@@ -62,6 +63,7 @@ export function useBuildItemData(initialIds: string[]) {
 
   const loadBuildItems = useCallback(
     async (ids: string[]) => {
+      if (!hydrated) return [];
       const missing = Array.from(new Set(ids)).filter(
         (id) => id && !itemsRef.current.has(id) && !inFlightIds.current.has(id)
       );
@@ -87,7 +89,7 @@ export function useBuildItemData(initialIds: string[]) {
         });
       }
     },
-    [gameMode]
+    [gameMode, hydrated]
   );
 
   useEffect(() => {
@@ -97,10 +99,11 @@ export function useBuildItemData(initialIds: string[]) {
   }, [gameMode]);
 
   useEffect(() => {
+    if (!hydrated) return;
     loadBuildItems(initialIds).catch(console.warn);
-  }, [initialIds, loadBuildItems]);
+  }, [hydrated, initialIds, loadBuildItems]);
 
   const loading = loadingIds.size > 0;
 
-  return { items, loading, loadingIds, gameMode, loadBuildItems };
+  return { items, loading: !hydrated || loading, loadingIds, gameMode, loadBuildItems };
 }
