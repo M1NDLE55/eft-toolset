@@ -9,6 +9,7 @@ import { headers } from "next/headers";
 import { BulkCacheProvider } from "@/app/lib/cache/provider";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { GameModeProvider } from "@/components/game-mode/context";
+import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
 import { Header } from "@/app/components/global/header";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -93,6 +94,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
             </div>
           </footer>
         </ThemeProvider>
+        <CloudflareAnalytics nonce={nonce} />
       </body>
     </html>
   );
