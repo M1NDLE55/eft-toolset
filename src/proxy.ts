@@ -1,25 +1,32 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { CLOUDFLARE_BEACON_HOST, CLOUDFLARE_INSIGHTS_HOST } from "@/app/lib/analytics/cloudflare";
 
-export function proxy(request: NextRequest) {
-  const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
-  const developmentEval = process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : "";
-  const csp = [
+export function buildContentSecurityPolicy(nonce: string, nodeEnv = process.env.NODE_ENV) {
+  const developmentEval = nodeEnv === "development" ? " 'unsafe-eval'" : "";
+  return [
     "default-src 'self'",
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'none'",
     "object-src 'none'",
-    `script-src 'self' 'nonce-${nonce}' 'strict-dynamic'${developmentEval}`,
+    // strict-dynamic ignores the host allowlist. The beacon script carries this
+    // request's nonce; the host remains for browsers that do not implement it.
+    `script-src 'self' ${CLOUDFLARE_BEACON_HOST} 'nonce-${nonce}' 'strict-dynamic'${developmentEval}`,
     "script-src-attr 'none'",
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: blob: https://assets.tarkov.dev",
-    "connect-src 'self' https://assets.tarkov.dev",
+    `connect-src 'self' https://assets.tarkov.dev ${CLOUDFLARE_INSIGHTS_HOST}`,
     "font-src 'self' data:",
     "worker-src 'self' blob:",
     "frame-src 'none'",
     "manifest-src 'self'",
     "upgrade-insecure-requests",
   ].join("; ");
+}
+
+export function proxy(request: NextRequest) {
+  const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
+  const csp = buildContentSecurityPolicy(nonce);
 
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-nonce", nonce);
