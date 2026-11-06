@@ -550,7 +550,7 @@ async function getPreset(gameMode: GameMode, id: string): Promise<PresetContents
 }
 
 async function getMapDetails(gameMode: GameMode, mapKey: string): Promise<MapDetails | null> {
-  const [mapsEnvelope, translationsEnvelope, { nameById }] =
+  const [mapsEnvelope, translationsEnvelope, { nameById, byId }] =
     await Promise.all([
       loadResource<MapsData>(gameMode, "maps"),
       loadResource<TranslationDictionary>(gameMode, "maps_en"),
@@ -567,7 +567,8 @@ async function getMapDetails(gameMode: GameMode, mapKey: string): Promise<MapDet
     translationsEnvelope.data,
     mapsEnvelope.data.lootContainers ?? {},
     mapsEnvelope.data.stationaryWeapons ?? {},
-    nameById
+    nameById,
+    byId
   );
 }
 
@@ -1449,7 +1450,8 @@ function projectMap(
   translations: TranslationDictionary,
   lootContainerById: Dictionary<RawNamedEntity>,
   stationaryWeaponById: Dictionary<RawNamedEntity>,
-  itemNames: Map<string, string>
+  itemNames: Map<string, string>,
+  itemById: Map<string, RawItem>
 ): MapDetails {
   const spawns: MapSpawn[] = [];
   for (const spawn of raw.spawns ?? []) {
@@ -1502,6 +1504,7 @@ function projectMap(
               needsPower: Boolean(lock.needsPower),
               position: lock.position,
               keyName: (lock.key && itemNames.get(lock.key)) || null,
+              keyNormalizedName: (lock.key && itemById.get(lock.key)?.normalizedName) || null,
             },
           ]
         : []

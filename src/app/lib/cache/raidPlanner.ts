@@ -36,7 +36,7 @@ interface MapDetailsVariables {
 
 export const mapDetailsQuery: QueryDefinition<MapDetailsVariables, MapDetails | null> = {
   id: "map-details",
-  version: 3,
+  version: 4,
   staleTime: 1000 * 60 * 60,
   maxAge: 1000 * 60 * 60 * 24 * 7,
   persist: true,

@@ -440,7 +440,7 @@ describe("Tarkov JSON adapter", () => {
       expect.objectContaining({
         key: "factory",
         extracts: [expect.objectContaining({ name: "Gate" })],
-        locks: [expect.objectContaining({ keyName: "Test Key" })],
+        locks: [expect.objectContaining({ keyName: "Test Key", keyNormalizedName: "test-key" })],
         lootContainers: [
           expect.objectContaining({ typeId: "crate", typeName: "Supply crate" }),
         ],
