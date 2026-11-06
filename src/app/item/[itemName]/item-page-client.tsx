@@ -1,20 +1,38 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import LoadingSkeleton from "@/app/components/item/loading-skeleton";
 import GenericDetails from "@/app/components/item/generic-details";
 import { BartersUsing, CraftsUsing, UsedInTasks } from "@/app/components/item/item-relations";
 import SimpleError from "@/app/components/global/error/simple-error";
-import { useItem } from "@/app/lib/cache/hooks";
+import { primeItem, useItem } from "@/app/lib/cache/hooks";
+import type { ItemReference } from "@/app/lib/cache/fetcher";
+import type { ComposedItem } from "@/app/lib/cache/types";
+import type { GameMode } from "@/components/game-mode/mode";
 import { addScoutedItem } from "@/app/lib/scouted-items/store";
 import { Button } from "@/components/ui/button";
 
-export function ItemPageClient({ itemName }: { itemName: string }) {
-  const { item, loading, error, refresh, stale } = useItem(itemName);
+export function ItemPageClient({
+  reference,
+  initial,
+}: {
+  reference: ItemReference;
+  initial: { gameMode: GameMode; item: ComposedItem } | null;
+}) {
+  useState(() => {
+    if (initial && typeof window !== "undefined") primeItem(reference, initial.gameMode, initial.item);
+    return null;
+  });
+  const query = useItem(reference);
+  const serverItem = initial && !query.item ? initial.item : null;
+  const item = query.item ?? serverItem;
+  const { error, refresh, stale } = query;
+  const loading = query.loading && !item;
+  const itemName = reference.name ?? reference.slug;
   useEffect(() => {
     if (!item) return;
     try {
-      addScoutedItem({ name: item.name, gridImageLink: item.gridImageLink });
+      addScoutedItem({ name: item.name, gridImageLink: item.gridImageLink, normalizedName: item.normalizedName || null });
     } catch {
       return;
     }

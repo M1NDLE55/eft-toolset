@@ -1,8 +1,11 @@
 import type { ReactNode } from "react";
-import { notFound } from "next/navigation";
-import { customDecodeURI } from "@/app/lib/URIEncoding";
+import { notFound, permanentRedirect } from "next/navigation";
+import { resolveItemRoute } from "./item-route";
 
 export default async function Layout({ children, params }: { children: ReactNode; params: Promise<{ itemName: string }> }) {
-  if (!customDecodeURI((await params).itemName)) notFound();
+  const segment = (await params).itemName;
+  const { item, canonical, reference } = await resolveItemRoute(segment);
+  if (canonical && canonical !== segment) permanentRedirect(`/item/${canonical}`);
+  if (!reference || item === null) notFound();
   return children;
 }

@@ -1,10 +1,17 @@
 "use client";
 
-import { createContext, useContext, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
 import { useHydrated, useStore } from "@/app/lib/storage/use-store";
 
-export type GameMode = "regular" | "pve";
+import { GAME_MODE_COOKIE, isGameMode, type GameMode } from "./mode";
+
+export type { GameMode };
+
+function writeGameModeCookie(mode: GameMode) {
+  const secure = window.location.protocol === "https:" ? "; Secure" : "";
+  document.cookie = `${GAME_MODE_COOKIE}=${mode}; Path=/; Max-Age=31536000; SameSite=Lax${secure}`;
+}
 
 type GameModeContextValue = {
   gameMode: GameMode;
@@ -20,7 +27,7 @@ const GAME_MODE_STORE: StoreDefinition<GameMode> = {
   legacyKeys: ["eft-toolset:game-mode"],
   version: 1,
   defaultValue: () => "regular",
-  validate: (value): value is GameMode => value === "regular" || value === "pve",
+  validate: isGameMode,
 };
 
 export function GameModeProvider({ children }: { children: ReactNode }) {
@@ -28,6 +35,11 @@ export function GameModeProvider({ children }: { children: ReactNode }) {
   const hydrated = useHydrated();
   const [fallbackMode, setFallbackMode] = useState<GameMode | null>(null);
   const [storageError, setStorageError] = useState("");
+  const gameMode = fallbackMode ?? storedMode;
+
+  useEffect(() => {
+    if (hydrated) writeGameModeCookie(gameMode);
+  }, [gameMode, hydrated]);
 
   const setGameMode = (mode: GameMode) => {
     try {
@@ -41,7 +53,7 @@ export function GameModeProvider({ children }: { children: ReactNode }) {
   };
 
   const value: GameModeContextValue = {
-    gameMode: fallbackMode ?? storedMode,
+    gameMode,
     hydrated,
     storageError,
     setGameMode,

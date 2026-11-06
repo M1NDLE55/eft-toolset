@@ -4,6 +4,7 @@ import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import type { QueryDefinition } from "@/app/lib/api/queryClient";
 import type { CachedItem, CatalogEntry, CatalogItem, ComposedItem } from "./types";
 import { MAX_GROUP_ITEMS } from "@/app/lib/item-groups/limits";
+import { isItemSlug } from "@/app/lib/item-links";
 
 const NAME_BATCH_SIZE = 100;
 const BATCH_CONCURRENCY = 2;
@@ -18,15 +19,15 @@ interface GroupVariables extends ModeVariables {
   names: string[];
 }
 
-interface DetailVariables extends ModeVariables {
-  name: string;
-}
+export type ItemReference = { name: string; slug?: never } | { slug: string; name?: never };
+
+type DetailVariables = ModeVariables & ItemReference;
 
 const ASSET_ORIGIN = "https://assets.tarkov.dev/";
 
 export const itemCatalogQuery: QueryDefinition<ModeVariables, CatalogItem[]> = {
   id: "item-catalog",
-  version: 3,
+  version: 4,
   staleTime: DAY,
   maxAge: 30 * DAY,
   persist: true,
@@ -43,20 +44,22 @@ export const itemCatalogQuery: QueryDefinition<ModeVariables, CatalogItem[]> = {
 function isCatalogEntry(value: unknown): value is CatalogEntry {
   return (
     Array.isArray(value) &&
-    value.length === 4 &&
+    value.length === 5 &&
     typeof value[0] === "string" &&
     /^[A-Za-z0-9_-]{1,64}$/.test(value[0]) &&
     typeof value[1] === "string" &&
     value[1].length > 0 &&
     value[1].length <= 500 &&
     (value[2] === null || (typeof value[2] === "string" && value[2].length <= 500)) &&
-    (value[3] === null || (typeof value[3] === "string" && /^[A-Za-z0-9._-]{0,200}$/.test(value[3])))
+    (value[3] === null || (typeof value[3] === "string" && /^[A-Za-z0-9._-]{0,200}$/.test(value[3]))) &&
+    (value[4] === null || (typeof value[4] === "string" && isItemSlug(value[4])))
   );
 }
 
-function expandCatalogEntry([id, name, shortName, image]: CatalogEntry): CatalogItem {
+function expandCatalogEntry([id, name, shortName, image, normalizedName]: CatalogEntry): CatalogItem {
   return {
     id,
+    normalizedName,
     name,
     shortName,
     gridImageLink: image === null ? null : `${ASSET_ORIGIN}${image || `${id}-grid-image.webp`}`,
@@ -96,19 +99,17 @@ export const groupItemsQuery: QueryDefinition<GroupVariables, CachedItem[]> = {
 
 export const itemDetailQuery: QueryDefinition<DetailVariables, ComposedItem | null> = {
   id: "item-detail",
-  version: 2,
+  version: 3,
   staleTime: 5 * MINUTE,
   maxAge: DAY,
   persist: true,
   validate: (value): value is ComposedItem | null => value === null || isComposedItem(value),
-  fetch: async ({ name, gameMode }, signal) => {
-    if (!name) return null;
-    return apiFetch<ComposedItem | null>(
+  fetch: async ({ gameMode, name, slug }, signal) =>
+    apiFetch<ComposedItem | null>(
       TARKOV_OPERATIONS.itemDetail,
-      { name, gameMode },
+      slug ? { gameMode, slug } : { gameMode, name },
       { signal }
-    );
-  },
+    ),
 };
 
 function chunk<T>(values: T[], size: number) {
@@ -128,6 +129,7 @@ function isCatalogItem(value: unknown): value is CatalogItem {
   const item = value as Partial<CatalogItem>;
   return (
     typeof item.id === "string" &&
+    (item.normalizedName === null || (typeof item.normalizedName === "string" && isItemSlug(item.normalizedName))) &&
     typeof item.name === "string" &&
     item.name.length <= 500 &&
     (item.shortName === null || typeof item.shortName === "string") &&

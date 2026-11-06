@@ -2,10 +2,12 @@
 
 import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
 import { useStore } from "@/app/lib/storage/use-store";
+import { isItemSlug } from "@/app/lib/item-links";
 
 export interface ScoutedItem {
   name: string;
   gridImageLink: string | null;
+  normalizedName?: string | null;
 }
 
 const MAX_SCOUTED = 20;
@@ -27,7 +29,8 @@ function isScoutedItem(value: unknown): value is ScoutedItem {
   return (
     typeof item.name === "string" &&
     item.name.length <= 240 &&
-    (item.gridImageLink === null || isSafeAssetUrl(item.gridImageLink))
+    (item.gridImageLink === null || isSafeAssetUrl(item.gridImageLink)) &&
+    (item.normalizedName === undefined || item.normalizedName === null || (typeof item.normalizedName === "string" && isItemSlug(item.normalizedName)))
   );
 }
 
@@ -37,7 +40,11 @@ function recoverScoutedItems(value: unknown): ScoutedItem[] | undefined {
     if (!candidate || typeof candidate !== "object") return [];
     const item = candidate as Partial<ScoutedItem>;
     if (typeof item.name !== "string" || item.name.length > 240) return [];
-    return [{ name: item.name, gridImageLink: isSafeAssetUrl(item.gridImageLink) ? item.gridImageLink : null }];
+    return [{
+      name: item.name,
+      gridImageLink: isSafeAssetUrl(item.gridImageLink) ? item.gridImageLink : null,
+      normalizedName: typeof item.normalizedName === "string" && isItemSlug(item.normalizedName) ? item.normalizedName : null,
+    }];
   }).slice(0, MAX_SCOUTED);
 }
 

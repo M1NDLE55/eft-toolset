@@ -310,7 +310,7 @@ describe("Tarkov JSON adapter", () => {
     const second = executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" });
     controller.abort();
     await expect(first).rejects.toMatchObject({ name: "AbortError" });
-    await expect(second).resolves.toContainEqual(["weapon", "Test Rifle", "Rifle", "weapon.webp"]);
+    await expect(second).resolves.toContainEqual(["weapon", "Test Rifle", "Rifle", "weapon.webp", "test-rifle"]);
   });
 
   it("rejects variables the operation does not declare", async () => {
@@ -319,11 +319,29 @@ describe("Tarkov JSON adapter", () => {
     ).rejects.toMatchObject({ name: "TarkovRequestError" });
   });
 
+  it("looks items up by slug and requires exactly one of name or slug", async () => {
+    await expect(
+      executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, { gameMode: "regular", slug: "test-rifle" })
+    ).resolves.toMatchObject({ name: "Test Rifle", normalizedName: "test-rifle" });
+    await expect(
+      executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, { gameMode: "regular", slug: "missing" })
+    ).resolves.toBeNull();
+    for (const variables of [
+      { gameMode: "regular" },
+      { gameMode: "regular", name: "Test Rifle", slug: "test-rifle" },
+      { gameMode: "regular", slug: "Bad Slug" },
+    ]) {
+      await expect(executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, variables)).rejects.toMatchObject({
+        name: "TarkovRequestError",
+      });
+    }
+  });
+
   it("localizes the catalog and returns only its narrow projection", async () => {
     const result = await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, {
       gameMode: "regular",
     });
-    expect(result).toContainEqual(["weapon", "Test Rifle", "Rifle", "weapon.webp"]);
+    expect(result).toContainEqual(["weapon", "Test Rifle", "Rifle", "weapon.webp", "test-rifle"]);
   });
 
   it("joins item, pricing, slot, and preset data", async () => {
@@ -399,14 +417,14 @@ describe("Tarkov JSON adapter", () => {
           expect.objectContaining({
             level: 2,
             trader: { name: "Tester" },
-            rewardItems: [{ item: { name: "Reward" }, quantity: 1 }],
+            rewardItems: [{ item: { name: "Reward", normalizedName: "reward" }, quantity: 1 }],
           }),
         ],
         craftsUsing: [
           expect.objectContaining({
             level: 3,
             station: { name: "Workbench" },
-            rewardItems: [{ item: { name: "Reward" }, quantity: 2 }],
+            rewardItems: [{ item: { name: "Reward", normalizedName: "reward" }, quantity: 2 }],
           }),
         ],
       })

@@ -3,8 +3,8 @@
 import { useMemo, useState } from "react";
 import { useGameMode, type GameMode } from "@/components/game-mode/context";
 import { useDataQuery } from "@/app/lib/api/useDataQuery";
-import { ensureQuery } from "@/app/lib/api/queryClient";
-import { groupItemsQuery, itemCatalogQuery, itemDetailQuery } from "./fetcher";
+import { primeQuery } from "@/app/lib/api/queryClient";
+import { groupItemsQuery, itemCatalogQuery, itemDetailQuery, type ItemReference } from "./fetcher";
 import type { CachedItem, CatalogItem, ComposedItem } from "./types";
 
 const EMPTY_CATALOG: CatalogItem[] = [];
@@ -34,12 +34,11 @@ export function useCatalog() {
   };
 }
 
-export function prefetchItem(name: string, gameMode: GameMode) {
-  if (!name) return;
-  void ensureQuery(itemDetailQuery, { name, gameMode }).catch(() => undefined);
+export function primeItem(reference: ItemReference, gameMode: GameMode, item: ComposedItem) {
+  primeQuery(itemDetailQuery, { ...reference, gameMode } as ItemReference & { gameMode: GameMode }, item);
 }
 
-export function useItem(name: string): {
+export function useItem(reference: ItemReference): {
   item: ComposedItem | null;
   loading: boolean;
   error: Error | null;
@@ -47,12 +46,12 @@ export function useItem(name: string): {
   refresh: () => Promise<ComposedItem | null>;
 } {
   const { gameMode, hydrated } = useGameMode();
-  const variables = useMemo(() => ({ name, gameMode }), [gameMode, name]);
-  const query = useDataQuery(itemDetailQuery, variables, { enabled: hydrated && Boolean(name) });
+  const variables = { ...reference, gameMode } as ItemReference & { gameMode: GameMode };
+  const query = useDataQuery(itemDetailQuery, variables, { enabled: hydrated });
 
   return {
     item: query.data ?? null,
-    loading: Boolean(name) && (query.status === "idle" || query.status === "loading"),
+    loading: query.status === "idle" || query.status === "loading",
     error: query.error ?? null,
     stale: query.stale,
     refresh: query.refresh,

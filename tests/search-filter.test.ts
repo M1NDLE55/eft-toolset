@@ -3,7 +3,7 @@ import { filterCatalog, MAX_SEARCH_RESULTS } from "@/app/lib/search/filter-catal
 import type { CatalogItem } from "@/app/lib/cache/types";
 
 function item(name: string, shortName: string | null = null, id = name): CatalogItem {
-  return { id, name, shortName, gridImageLink: null };
+  return { id, normalizedName: null, name, shortName, gridImageLink: null };
 }
 
 describe("catalog search", () => {

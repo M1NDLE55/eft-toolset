@@ -1,37 +1,30 @@
 import type { Metadata } from "next";
-import { customDecodeURI, customEncodeURI } from "@/app/lib/URIEncoding";
 import { ItemPageClient } from "./item-page-client";
-import { notFound } from "next/navigation";
+import { resolveItemRoute } from "./item-route";
 
 interface ItemPageProps {
   params: Promise<{ itemName: string }>;
 }
 
 export async function generateMetadata({ params }: ItemPageProps): Promise<Metadata> {
-  const itemName = customDecodeURI((await params).itemName);
-  if (!itemName) return { title: "Item not found", robots: { index: false, follow: false } };
+  const { item, name, canonical } = await resolveItemRoute((await params).itemName);
+  if (!item && !name) return { title: "Item", robots: { index: false, follow: true } };
+  if (!name) return { title: "Item not found", robots: { index: false, follow: false } };
+  const description = `Prices, trader offers, tasks, barters, and crafts for ${name} in Escape from Tarkov.`;
+  const images = item?.gridImageLink ? [{ url: item.gridImageLink }] : [{ url: "/item-scanner-og.png", width: 1200, height: 630 }];
+  const url = canonical ? `/item/${canonical}` : undefined;
   return {
-    title: itemName,
-    description: `Prices, trader offers, tasks, barters, and crafts for ${itemName} in Escape from Tarkov.`,
-    alternates: { canonical: `/item/${customEncodeURI(itemName)}` },
-    openGraph: {
-      title: `${itemName} | EFT Toolset`,
-      description: `Escape from Tarkov market and task details for ${itemName}.`,
-      type: "article",
-      url: `/item/${customEncodeURI(itemName)}`,
-      images: [{ url: "/item-scanner-og.png", width: 1200, height: 630 }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${itemName} | EFT Toolset`,
-      description: `Escape from Tarkov market and task details for ${itemName}.`,
-      images: ["/item-scanner-og.png"],
-    },
+    title: name,
+    description,
+    alternates: url ? { canonical: url } : undefined,
+    robots: item ? undefined : { index: false, follow: true },
+    openGraph: { title: `${name} | EFT Toolset`, description, type: "article", url, images },
+    twitter: { card: "summary", title: `${name} | EFT Toolset`, description, images: images.map((image) => image.url) },
   };
 }
 
 export default async function Page({ params }: ItemPageProps) {
-  const itemName = customDecodeURI((await params).itemName);
-  if (!itemName) notFound();
-  return <ItemPageClient itemName={itemName} />;
+  const { gameMode, item, reference } = await resolveItemRoute((await params).itemName);
+  if (!reference) return null;
+  return <ItemPageClient reference={reference} initial={item ? { gameMode, item } : null} />;
 }

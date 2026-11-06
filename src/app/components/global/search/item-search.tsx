@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
 import { AlertTriangle, LoaderCircle, Search, X } from "lucide-react";
-import { useGameMode } from "@/components/game-mode/context";
-import { prefetchItem, useCatalog } from "@/app/lib/cache/hooks";
+import { useCatalog } from "@/app/lib/cache/hooks";
 import { filterCatalog } from "@/app/lib/search/filter-catalog";
 import type { CatalogItem } from "@/app/lib/cache/types";
 import { cn } from "@/lib/utils";
@@ -16,7 +15,7 @@ export function ItemSearch({
   placeholder = "Search by name or short name",
   autoFocus = false,
   shortcut = false,
-  prefetch = false,
+  onPrefetch,
   keepOpenOnSelect = false,
 }: {
   onSelect: (item: CatalogItem) => void;
@@ -25,7 +24,7 @@ export function ItemSearch({
   placeholder?: string;
   autoFocus?: boolean;
   shortcut?: boolean;
-  prefetch?: boolean;
+  onPrefetch?: (item: CatalogItem) => void;
   keepOpenOnSelect?: boolean;
 }) {
   const [search, setSearch] = useState("");
@@ -34,7 +33,6 @@ export function ItemSearch({
   const listboxId = useId();
   const inputRef = useRef<HTMLInputElement>(null);
   const prefetchTimer = useRef<number | undefined>(undefined);
-  const { gameMode } = useGameMode();
   const { catalog, loading, error, stale, refresh } = useCatalog();
 
   const results = search.trim() ? filterCatalog(catalog, search, excludeNames) : [];
@@ -65,8 +63,8 @@ export function ItemSearch({
     setActiveIndex(index);
     window.clearTimeout(prefetchTimer.current);
     const target = results[index];
-    if (prefetch && target) {
-      prefetchTimer.current = window.setTimeout(() => prefetchItem(target.name, gameMode), 150);
+    if (onPrefetch && target) {
+      prefetchTimer.current = window.setTimeout(() => onPrefetch(target), 150);
     }
   };
 
@@ -129,8 +127,8 @@ export function ItemSearch({
             setOpen(true);
             setActiveIndex(0);
             window.clearTimeout(prefetchTimer.current);
-            const top = prefetch && value.trim() ? filterCatalog(catalog, value, excludeNames, 1)[0] : undefined;
-            if (top) prefetchTimer.current = window.setTimeout(() => prefetchItem(top.name, gameMode), 300);
+            const top = onPrefetch && value.trim() ? filterCatalog(catalog, value, excludeNames, 1)[0] : undefined;
+            if (top) prefetchTimer.current = window.setTimeout(() => onPrefetch?.(top), 300);
           }}
           onFocus={() => setOpen(true)}
           onBlur={() => setOpen(false)}

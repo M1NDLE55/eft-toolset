@@ -61,7 +61,7 @@ export default function GenericDetails({ item }: { item: ComposedItem }) {
       <div className="flex gap-4 border border-[#1a1a1a] bg-[#0c0c0c] p-4">
         {item.gridImageLink && (
           <div className="flex h-20 w-20 shrink-0 items-center justify-center bg-[#111]">
-            <Image src={item.gridImageLink} alt="" height={80} width={80} priority className="max-h-20 w-auto object-contain" />
+            <Image src={item.gridImageLink} alt="" width={64 * item.width} height={64 * item.height} priority className="h-auto max-h-20 w-auto max-w-20 object-contain" />
           </div>
         )}
         <div className="flex min-w-0 flex-1 flex-col gap-2">

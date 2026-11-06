@@ -250,6 +250,7 @@ interface ItemsContext {
   items: RawItem[];
   byId: Map<string, RawItem>;
   byName: Map<string, RawItem>;
+  bySlug: Map<string, RawItem>;
   nameById: Map<string, string>;
   translations: TranslationDictionary;
   fleaMarket?: ItemsData["fleaMarket"];
@@ -286,12 +287,13 @@ export class TarkovRequestError extends Error {
   }
 }
 
+const CACHE_KEY = "__eftTarkovCache:2";
 const sharedCache = globalThis as typeof globalThis & {
-  __eftTarkovCache?: { resources: Map<string, ResourceCacheEntry>; memos: Map<string, MemoEntry> };
+  [CACHE_KEY]?: { resources: Map<string, ResourceCacheEntry>; memos: Map<string, MemoEntry> };
 };
-sharedCache.__eftTarkovCache ??= { resources: new Map(), memos: new Map() };
-const resourceCache = sharedCache.__eftTarkovCache.resources;
-const memoCache = sharedCache.__eftTarkovCache.memos;
+sharedCache[CACHE_KEY] ??= { resources: new Map(), memos: new Map() };
+const resourceCache = sharedCache[CACHE_KEY].resources;
+const memoCache = sharedCache[CACHE_KEY].memos;
 const operationContext = new AsyncLocalStorage<{
   resources: Set<ResourceCacheEntry>;
   signal?: AbortSignal;
@@ -300,7 +302,7 @@ const operationContext = new AsyncLocalStorage<{
 const OPERATION_VARIABLES: Record<TarkovOperation, readonly string[]> = {
   [TARKOV_OPERATIONS.itemCatalog]: ["gameMode"],
   [TARKOV_OPERATIONS.groupItems]: ["gameMode", "names"],
-  [TARKOV_OPERATIONS.itemDetail]: ["gameMode", "name"],
+  [TARKOV_OPERATIONS.itemDetail]: ["gameMode", "name", "slug"],
   [TARKOV_OPERATIONS.gunList]: ["gameMode"],
   [TARKOV_OPERATIONS.buildItems]: ["gameMode", "ids"],
   [TARKOV_OPERATIONS.pickItems]: ["gameMode", "ids"],
@@ -331,7 +333,7 @@ export async function executeTarkovOperation(
         result = getGroupItems(gameMode, readStringList(input.names, "names", MAX_NAMES));
         break;
       case TARKOV_OPERATIONS.itemDetail:
-        result = getItemDetail(gameMode, readString(input.name, "name", 500));
+        result = getItemDetail(gameMode, readItemReference(input));
         break;
       case TARKOV_OPERATIONS.gunList:
         result = getGunList(gameMode);
@@ -415,9 +417,21 @@ async function getGroupItems(gameMode: GameMode, names: string[]): Promise<Cache
   });
 }
 
-async function getItemDetail(
+export type ItemReference = { name: string } | { slug: string };
+
+function readItemReference(input: Record<string, unknown>): ItemReference {
+  if ((input.name === undefined) === (input.slug === undefined)) {
+    throw new TarkovRequestError("Provide exactly one of name or slug.");
+  }
+  if (input.name !== undefined) return { name: readString(input.name, "name", 500) };
+  const slug = readString(input.slug, "slug", 200);
+  if (!/^[a-z0-9][a-z0-9-]*$/.test(slug)) throw new TarkovRequestError("slug is invalid.");
+  return { slug };
+}
+
+export async function getItemDetail(
   gameMode: GameMode,
-  requestedName: string
+  reference: ItemReference
 ): Promise<ComposedItem | null> {
   const [itemContext, traderNames, taskContext, relations, stations] =
     await Promise.all([
@@ -429,8 +443,10 @@ async function getItemDetail(
     ]);
   throwIfRequestAborted();
 
-  const item = itemContext.byName.get(requestedName);
+  const item =
+    "slug" in reference ? itemContext.bySlug.get(reference.slug) : itemContext.byName.get(reference.name);
   if (!item?.id) return null;
+  const requestedName = translate(item.name, itemContext.translations);
 
   const tasks = (taskContext.byItem.get(item.id) ?? []).map((task) =>
     projectTask(task, taskContext.translations, traderNames)
@@ -565,16 +581,18 @@ async function loadItems(gameMode: GameMode): Promise<ItemsContext> {
     const translations = translationsEnvelope.data;
     const byId = new Map<string, RawItem>();
     const byName = new Map<string, RawItem>();
+    const bySlug = new Map<string, RawItem>();
     const nameById = new Map<string, string>();
     for (const item of items) {
       const name = translate(item.name, translations);
       byName.set(name, item);
+      if (item.normalizedName) bySlug.set(item.normalizedName, item);
       if (item.id) {
         byId.set(item.id, item);
         nameById.set(item.id, name);
       }
     }
-    return { items, byId, byName, nameById, translations, fleaMarket: itemsEnvelope.data.fleaMarket };
+    return { items, byId, byName, bySlug, nameById, translations, fleaMarket: itemsEnvelope.data.fleaMarket };
   });
 }
 
@@ -1116,7 +1134,13 @@ export function projectItemCatalog(
     if (!item.id) return [];
     const name = translate(item.name, translations);
     if (!name) return [];
-    return [[item.id, name, translateNullable(item.shortName, translations), catalogImage(item.id, item.gridImageLink)]];
+    return [[
+      item.id,
+      name,
+      translateNullable(item.shortName, translations),
+      catalogImage(item.id, item.gridImageLink),
+      item.normalizedName ?? null,
+    ]];
   });
 }
 
@@ -1261,7 +1285,10 @@ function projectContainedItems(
     const item = itemById.get(entry.item);
     return [
       {
-        item: { name: item ? translate(item.name, translations) : entry.item },
+        item: {
+          name: item ? translate(item.name, translations) : entry.item,
+          normalizedName: item?.normalizedName ?? null,
+        },
         quantity: finiteNumber(entry.count) ?? 0,
       },
     ];
@@ -1649,6 +1676,13 @@ function readStringList(value: unknown, name: string, maxItems: number) {
 export function clearTarkovResourceCache() {
   resourceCache.clear();
   memoCache.clear();
+}
+
+export async function listItemSlugs(gameMode: GameMode = "regular") {
+  const context = await loadItems(gameMode);
+  return memo(`${gameMode}/slugs`, [context], () =>
+    Array.from(context.bySlug.keys()).filter((slug) => /^[a-z0-9][a-z0-9-]*$/.test(slug))
+  );
 }
 
 export async function warmTarkovCache(gameModes: GameMode[] = ["regular", "pve"]) {

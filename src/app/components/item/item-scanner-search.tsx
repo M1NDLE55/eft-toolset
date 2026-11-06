@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { ItemSearch } from "@/app/components/global/search/item-search";
-import { customEncodeURI } from "@/app/lib/URIEncoding";
+import { itemHref } from "@/app/lib/item-links";
 
 export function ItemScannerSearch() {
   const router = useRouter();
@@ -10,10 +10,10 @@ export function ItemScannerSearch() {
 
   return (
     <ItemSearch
-      onSelect={(item) => router.push(`/item/${customEncodeURI(item.name)}`)}
+      onSelect={(item) => router.push(itemHref(item))}
+      onPrefetch={(item) => router.prefetch(itemHref(item))}
       autoFocus={pathname === "/item"}
       shortcut
-      prefetch
     />
   );
 }

@@ -122,6 +122,28 @@ export async function ensureQuery<Variables, Data>(
   return revalidate(definition, variables, key);
 }
 
+export function primeQuery<Variables, Data>(
+  definition: QueryDefinition<Variables, Data>,
+  variables: Variables,
+  data: Data,
+  updatedAt = Date.now()
+) {
+  const key = queryKey(definition, variables);
+  const existing = memory.get(key);
+  if (existing && existing.updatedAt >= updatedAt) return;
+  const entry: CacheEnvelope<Data> = {
+    version: definition.version,
+    updatedAt,
+    expiresAt: updatedAt + definition.maxAge,
+    data,
+  };
+  memory.set(key, entry);
+  evictMemoryEntries();
+  snapshots.set(key, { data, status: "success", isFetching: false, updatedAt, stale: false });
+  queueMicrotask(() => notify(key));
+  if (definition.persist) void cacheSet(persistenceKey(key), entry).catch(() => undefined);
+}
+
 export async function invalidateQuery<Variables, Data>(
   definition: QueryDefinition<Variables, Data>,
   variables: Variables

@@ -13,7 +13,8 @@ import { LocalMissing } from "@/components/local-missing";
 import { ItemSearch } from "@/app/components/global/search/item-search";
 import { customDecodeURI, customEncodeURI } from "@/app/lib/URIEncoding";
 import { useCatalog, useItemsInGroup } from "@/app/lib/cache/hooks";
-import type { CachedItem } from "@/app/lib/cache/types";
+import type { CachedItem, CatalogItem } from "@/app/lib/cache/types";
+import { itemHref } from "@/app/lib/item-links";
 import { Rubles } from "@/app/lib/currency";
 import { bestSell } from "@/app/lib/item-price";
 import { useHydrated } from "@/app/lib/storage/use-store";
@@ -33,6 +34,7 @@ type SortKey = "order" | "name" | "price" | "slot";
 interface Row {
   name: string;
   image: string | null;
+  slug: string | null;
   data: CachedItem | undefined;
   price: number | null;
   vendor: string | null;
@@ -40,11 +42,12 @@ interface Row {
   multiSlot: boolean;
 }
 
-function toRow(name: string, image: string | null, data: CachedItem | undefined): Row {
+function toRow(name: string, catalog: CatalogItem | undefined, data: CachedItem | undefined): Row {
   const best = data ? bestSell(data) : null;
   return {
     name,
-    image: data?.gridImageLink ?? image,
+    image: data?.gridImageLink ?? catalog?.gridImageLink ?? null,
+    slug: data?.normalizedName || catalog?.normalizedName || null,
     data,
     price: best?.price ?? null,
     vendor: best ? (best.flea ? "Flea" : best.vendor) : null,
@@ -112,7 +115,7 @@ export default function Page() {
 
   const dataByName = new Map(items.map((item) => [item.name, item]));
   const rows = sortRows(
-    names.map((name) => toRow(name, itemsByName.get(name)?.gridImageLink ?? null, dataByName.get(name))),
+    names.map((name) => toRow(name, itemsByName.get(name), dataByName.get(name))),
     sort.key,
     sort.descending
   );
@@ -240,7 +243,7 @@ export default function Page() {
                 )}
                 <div className="flex min-w-0 flex-1 flex-col gap-0.5 sm:flex-row sm:items-center sm:gap-4">
                   <Link
-                    href={`/item/${customEncodeURI(row.name)}`}
+                    href={itemHref({ name: row.name, normalizedName: row.slug })}
                     className="min-w-0 flex-1 truncate text-sm text-[#ddd] hover:text-[#e6d9b8] hover:underline"
                   >
                     {row.name}

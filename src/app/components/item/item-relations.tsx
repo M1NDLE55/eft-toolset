@@ -5,7 +5,7 @@ import { useState, type ReactNode } from "react";
 import { ExternalLink } from "lucide-react";
 import Accordion from "./accordion";
 import { RomanLiteral } from "@/app/lib/roman";
-import { customEncodeURI } from "@/app/lib/URIEncoding";
+import { itemHref } from "@/app/lib/item-links";
 import type {
   CachedBarter,
   CachedContainedItem,
@@ -83,7 +83,7 @@ function ItemLines({ items, tone }: { items: CachedContainedItem[]; tone: "in" |
         <li key={`${entry.item.name}-${index}`} className="flex gap-2">
           <span className="w-10 shrink-0 text-right tabular-nums text-[#888]">{entry.quantity}×</span>
           <Link
-            href={`/item/${customEncodeURI(entry.item.name)}`}
+            href={itemHref(entry.item)}
             className={
               tone === "out"
                 ? "text-emerald-400 underline-offset-2 hover:underline"

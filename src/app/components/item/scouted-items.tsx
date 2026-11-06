@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { PanelLeftClose, PanelLeftOpen } from "lucide-react";
-import { customEncodeURI } from "@/app/lib/URIEncoding";
+import { itemHref } from "@/app/lib/item-links";
 import { useHydrated } from "@/app/lib/storage/use-store";
 import {
   clearScoutedItems,
@@ -17,7 +17,7 @@ import {
 function ScoutedLink({ item, compact = false }: { item: ScoutedItem; compact?: boolean }) {
   return (
     <Link
-      href={`/item/${customEncodeURI(item.name)}`}
+      href={itemHref(item)}
       className={
         compact
           ? "flex min-w-0 items-center gap-2 border border-[#1a1a1a] bg-[#0c0c0c] p-2 transition-colors hover:border-[#9a8866]"
