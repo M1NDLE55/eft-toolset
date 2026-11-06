@@ -14,7 +14,7 @@ export default function Home() {
         alt="EFT Toolset Logo"
         height={274}
         width={627}
-        className="dark:invert"
+        className="invert"
       />
       <div className="max-w-xl flex flex-col gap-3 w-full">
         {appLinks.map((link) => (

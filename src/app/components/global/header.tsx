@@ -34,7 +34,7 @@ export function Header() {
               alt="EFT Toolset Logo"
               height={50}
               width={100}
-              className="dark:invert"
+              className="invert"
             />
             <span className="sr-only">EFT Toolset</span>
           </Link>

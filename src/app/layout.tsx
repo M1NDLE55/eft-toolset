@@ -6,7 +6,6 @@ import type { Metadata } from "next";
 import { connection } from "next/server";
 import { headers } from "next/headers";
 import { BulkCacheProvider } from "@/app/lib/cache/provider";
-import { ThemeProvider } from "@/components/theme/theme-provider";
 import { GameModeProvider } from "@/components/game-mode/context";
 import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
 import { Header } from "@/app/components/global/header";
@@ -43,14 +42,8 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   await connection();
   const nonce = (await headers()).get("x-nonce") ?? undefined;
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className={`${inter.className}`}>
-        <ThemeProvider
-          attribute="class"
-          forcedTheme="dark"
-          disableTransitionOnChange
-          nonce={nonce}
-        >
           <GameModeProvider>
             <Header />
             <BulkCacheProvider>
@@ -92,7 +85,6 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
               </a>
             </div>
           </footer>
-        </ThemeProvider>
         <CloudflareAnalytics nonce={nonce} />
       </body>
     </html>
