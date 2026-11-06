@@ -15,14 +15,13 @@ import {
   MAX_ROUTE_POINTS,
   MAX_TOTAL_DRAWING_POINTS,
 } from "./limits";
+import { isSafeTimestamp } from "@/app/lib/text-safety";
 
 function isId(value: unknown): value is string {
   return typeof value === "string" && value.length > 0 && value.length <= MAX_PLAN_ID_LENGTH;
 }
 
-function isTimestamp(value: unknown): value is number {
-  return typeof value === "number" && Number.isFinite(value);
-}
+const isTimestamp = isSafeTimestamp;
 
 export function isPlanPoint(value: unknown): value is GamePoint {
   if (!value || typeof value !== "object") return false;

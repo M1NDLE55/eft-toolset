@@ -105,6 +105,36 @@ export function writeStore<T>(definition: StoreDefinition<T>, value: T): T {
   return value;
 }
 
+export function writeStores(entries: readonly { definition: StoreDefinition<unknown>; value: unknown }[]) {
+  const serialized = entries.map(({ definition, value }) => {
+    if (!definition.validate(value)) throw new Error(`Refusing to persist invalid ${definition.key} data.`);
+    let text: string;
+    try {
+      text = JSON.stringify({ version: definition.version, data: value });
+    } catch {
+      throw new Error(`Could not prepare ${definition.key} for saving.`);
+    }
+    return { key: definition.key, text };
+  });
+  const previous = serialized.map(({ key }) => ({ key, text: window.localStorage.getItem(key) }));
+  try {
+    for (const { key, text } of serialized) window.localStorage.setItem(key, text);
+  } catch (error) {
+    for (const { key, text } of previous) {
+      try {
+        if (text === null) window.localStorage.removeItem(key);
+        else window.localStorage.setItem(key, text);
+      } catch {
+        continue;
+      }
+    }
+    throw new Error("Could not save. Browser storage may be full or unavailable; nothing was changed.", { cause: error });
+  }
+  for (const { key } of serialized) {
+    window.dispatchEvent(new CustomEvent("eft-toolset:storage", { detail: key }));
+  }
+}
+
 export function subscribeStore(key: string, listener: () => void) {
   const local = (event: Event) => {
     if ((event as CustomEvent<string>).detail === key) listener();

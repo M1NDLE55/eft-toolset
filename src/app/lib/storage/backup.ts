@@ -1,4 +1,4 @@
-import { readStore, writeStore, type StoreDefinition } from "./versioned-store";
+import { readStore, writeStores, type StoreDefinition } from "./versioned-store";
 import { GROUP_STORE } from "@/app/lib/item-groups/store";
 import { COLLAPSED_STORE, SCOUTED_STORE } from "@/app/lib/scouted-items/store";
 import { BUILD_STORE, PRICE_SOURCE_STORE, VIEW_STORE } from "@/app/lib/builds/store";
@@ -115,7 +115,7 @@ export function applyRestore(plan: RestorePlan, mode: "merge" | "replace") {
     if (!store.definition.validate(value)) {
       throw new Error(`${store.label} would exceed its limit after merging. Use Replace or remove some first.`);
     }
-    return [{ store, value }];
+    return [{ definition: store.definition, value }];
   });
-  for (const { store, value } of prepared) writeStore(store.definition, value);
+  writeStores(prepared);
 }

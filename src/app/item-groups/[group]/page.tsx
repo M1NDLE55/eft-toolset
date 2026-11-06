@@ -6,6 +6,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ArrowDown, ArrowLeft, ArrowUp, Check, ClipboardList, ExternalLink, Pencil, Trash2, X } from "lucide-react";
 import { copyText } from "@/app/lib/browser/clipboard";
+import { escapeDiscordText } from "@/app/lib/text-safety";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { NameDialog } from "@/components/name-dialog";
@@ -62,9 +63,11 @@ function toRow(name: string, catalog: CatalogItem | undefined, data: CachedItem 
 
 function groupAsText(name: string, rows: Row[], total: number) {
   const lines = rows.map((row) =>
-    row.price !== null ? `• ${row.name} — ${Rubles.format(row.price)} (${row.vendor})` : `• ${row.name} — no buyer`
+    row.price !== null
+      ? `• ${escapeDiscordText(row.name)} — ${Rubles.format(row.price)} (${escapeDiscordText(row.vendor ?? "")})`
+      : `• ${escapeDiscordText(row.name)} — no buyer`
   );
-  return [`**${name}**`, ...lines, total > 0 ? `Total: ${Rubles.format(total)}` : ""].filter(Boolean).join("\n");
+  return [`**${escapeDiscordText(name)}**`, ...lines, total > 0 ? `Total: ${Rubles.format(total)}` : ""].filter(Boolean).join("\n");
 }
 
 function sortRows(rows: Row[], key: SortKey, descending: boolean) {

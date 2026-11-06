@@ -38,6 +38,34 @@ describe("backup and restore", () => {
     expect(readStore(GROUP_STORE).map((group) => group.name)).toEqual(["keys", "Meds"]);
   });
 
+  it("leaves every store untouched when any write fails", () => {
+    writeStore(GROUP_STORE, [{ name: "Keys", items: [] }]);
+    writeStore(GAME_MODE_STORE, "regular");
+    const plan = parseBackup(backup({ [GROUP_STORE.key]: [{ name: "Meds", items: [] }], [GAME_MODE_STORE.key]: "pve" }));
+    const original = Storage.prototype.setItem;
+    let calls = 0;
+    Storage.prototype.setItem = function (key: string, value: string) {
+      calls += 1;
+      if (calls === 2) throw new DOMException("full", "QuotaExceededError");
+      return original.call(this, key, value);
+    };
+    try {
+      expect(() => applyRestore(plan, "replace")).toThrow(/nothing was changed/);
+    } finally {
+      Storage.prototype.setItem = original;
+    }
+    expect(readStore(GROUP_STORE).map((group) => group.name)).toEqual(["Keys"]);
+    expect(readStore(GAME_MODE_STORE)).toBe("regular");
+  });
+
+  it("rejects out-of-range timestamps and escapes Discord markup", async () => {
+    const { isSafeTimestamp, escapeDiscordText } = await import("@/app/lib/text-safety");
+    expect(isSafeTimestamp(Date.now())).toBe(true);
+    expect(isSafeTimestamp(1e100)).toBe(false);
+    expect(isSafeTimestamp(1.5)).toBe(false);
+    expect(escapeDiscordText("[eft-toolset.com](https://evil.example) @everyone")).not.toMatch(/\]\(|https:\/\/|@everyone/);
+  });
+
   it("keeps current settings when merging", () => {
     writeStore(GAME_MODE_STORE, "regular");
     applyRestore(parseBackup(backup({ [GAME_MODE_STORE.key]: "pve" })), "merge");

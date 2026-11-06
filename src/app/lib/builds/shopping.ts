@@ -1,3 +1,4 @@
+import { escapeDiscordText } from "@/app/lib/text-safety";
 import type { BuildNode, PriceSources } from "@/app/lib/types/gunBuilder";
 import type { ItemLookup } from "./stats";
 
@@ -107,8 +108,8 @@ export function formatShoppingList(
 ): string {
   const showVendor = list.rows.some((row) => row.traderName);
   const title = [
-    `**${defuseMentions(clean(details.buildName) || "Untitled build")}**`,
-    details.weaponName ? defuseMentions(clean(details.weaponName)) : null,
+    `**${escapeDiscordText(details.buildName) || "Untitled build"}**`,
+    details.weaponName ? escapeDiscordText(details.weaponName) : null,
     `${details.modeLabel} prices`,
   ]
     .filter(Boolean)

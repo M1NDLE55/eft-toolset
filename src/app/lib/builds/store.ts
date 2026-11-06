@@ -2,6 +2,7 @@ import type { BuildNode, GunBuild, PriceSources } from "@/app/lib/types/gunBuild
 import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
 import { useStore } from "@/app/lib/storage/use-store";
 import { createId } from "@/app/lib/id";
+import { isSafeTimestamp } from "@/app/lib/text-safety";
 import { MAX_BUILD_NAME_LENGTH, MAX_BUILDS } from "./limits";
 import { cloneTree, isBuildTree, isValidBuildId } from "./tree";
 
@@ -165,10 +166,8 @@ function isGunBuild(value: unknown): value is GunBuild {
     typeof build.name === "string" &&
     build.name.length <= MAX_BUILD_NAME_LENGTH &&
     isValidBuildId(build.weaponId) &&
-    typeof build.createdAt === "number" &&
-    Number.isFinite(build.createdAt) &&
-    typeof build.updatedAt === "number" &&
-    Number.isFinite(build.updatedAt) &&
+    isSafeTimestamp(build.createdAt) &&
+    isSafeTimestamp(build.updatedAt) &&
     isBuildTree(build.root) &&
     build.root.itemId === build.weaponId &&
     (build.ammoId === undefined || isValidBuildId(build.ammoId))
