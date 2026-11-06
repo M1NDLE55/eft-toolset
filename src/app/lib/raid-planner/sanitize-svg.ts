@@ -1,3 +1,4 @@
+const SVG_NAMESPACE = "http://www.w3.org/2000/svg";
 const MAX_SVG_SOURCE_CHARS = 8 * 1024 * 1024;
 const MAX_SVG_ELEMENTS = 100_000;
 
@@ -49,50 +50,54 @@ export function parseSafeSvg(source: string): SVGSVGElement {
   if (document.querySelector("parsererror")) throw new Error("Map SVG could not be parsed.");
 
   const root = document.documentElement;
-  if (root.localName.toLowerCase() !== "svg") throw new Error("Map asset is not an SVG.");
+  if (root.namespaceURI !== SVG_NAMESPACE || root.localName.toLowerCase() !== "svg") {
+    throw new Error("Map asset is not an SVG.");
+  }
   const descendants = Array.from(root.querySelectorAll("*"));
   if (descendants.length > MAX_SVG_ELEMENTS) throw new Error("Map SVG contains too many elements.");
   root.setAttribute("data-rp-map", "");
 
   for (const element of [root, ...descendants]) {
     const elementName = element.localName.toLowerCase();
-    if (!ALLOWED_ELEMENTS.has(elementName)) {
+    if (element.namespaceURI !== SVG_NAMESPACE || !ALLOWED_ELEMENTS.has(elementName)) {
       element.remove();
       continue;
     }
+    sanitizeAttributes(element);
     if (elementName === "style") {
       const css = sanitizeStyleSheet(element.textContent ?? "");
       if (css) element.textContent = css;
       else element.remove();
-      continue;
-    }
-
-    for (const attribute of Array.from(element.attributes)) {
-      const name = attribute.name.toLowerCase();
-      const value = attribute.value.trim();
-      const allowedData = name.startsWith("data-") && /^[a-z0-9_.:-]+$/.test(name);
-      const allowedAria = name.startsWith("aria-") && /^[a-z0-9_.:-]+$/.test(name);
-      if (name.startsWith("on") || (!ALLOWED_ATTRIBUTES.has(name) && !allowedData && !allowedAria)) {
-        element.removeAttribute(attribute.name);
-        continue;
-      }
-      if (name === "href" || name === "xlink:href") {
-        if (!LOCAL_REFERENCE.test(value)) element.removeAttribute(attribute.name);
-        continue;
-      }
-      if (name === "style") {
-        const style = sanitizeDeclarations(value);
-        if (style) element.setAttribute(attribute.name, style);
-        else element.removeAttribute(attribute.name);
-        continue;
-      }
-      const safeValue = sanitizeCssValue(value);
-      if (safeValue === null) element.removeAttribute(attribute.name);
-      else if (safeValue !== value) element.setAttribute(attribute.name, safeValue);
     }
   }
 
   return root as unknown as SVGSVGElement;
+}
+
+function sanitizeAttributes(element: Element) {
+  for (const attribute of Array.from(element.attributes)) {
+    const name = attribute.name.toLowerCase();
+    const value = attribute.value.trim();
+    const allowedData = name.startsWith("data-") && /^[a-z0-9_.:-]+$/.test(name);
+    const allowedAria = name.startsWith("aria-") && /^[a-z0-9_.:-]+$/.test(name);
+    if (name.startsWith("on") || (!ALLOWED_ATTRIBUTES.has(name) && !allowedData && !allowedAria)) {
+      element.removeAttribute(attribute.name);
+      continue;
+    }
+    if (name === "href" || name === "xlink:href") {
+      if (!LOCAL_REFERENCE.test(value)) element.removeAttribute(attribute.name);
+      continue;
+    }
+    if (name === "style") {
+      const style = sanitizeDeclarations(value);
+      if (style) element.setAttribute(attribute.name, style);
+      else element.removeAttribute(attribute.name);
+      continue;
+    }
+    const safeValue = sanitizeCssValue(value);
+    if (safeValue === null) element.removeAttribute(attribute.name);
+    else if (safeValue !== value) element.setAttribute(attribute.name, safeValue);
+  }
 }
 
 function sanitizeStyleSheet(value: string): string {
