@@ -7,7 +7,7 @@ import { createId } from "@/app/lib/id";
 import { MAX_BUILD_NAME_LENGTH, MAX_BUILDS } from "./limits";
 import { cloneTree, isBuildTree, isValidBuildId } from "./tree";
 
-const BUILD_STORE: StoreDefinition<GunBuild[]> = {
+export const BUILD_STORE: StoreDefinition<GunBuild[]> = {
   key: "eft-toolset:gun-builds",
   legacyKeys: ["gun-builds"],
   version: 1,
@@ -17,7 +17,7 @@ const BUILD_STORE: StoreDefinition<GunBuild[]> = {
     Array.isArray(value) ? value.filter(isGunBuild).slice(0, MAX_BUILDS) : undefined,
 };
 
-const PRICE_SOURCE_STORE: StoreDefinition<PriceSources> = {
+export const PRICE_SOURCE_STORE: StoreDefinition<PriceSources> = {
   key: "eft-toolset:gun-builder:price-sources",
   version: 1,
   defaultValue: () => ({ traders: true, flea: true }),
@@ -28,7 +28,7 @@ const PRICE_SOURCE_STORE: StoreDefinition<PriceSources> = {
     typeof (value as PriceSources).flea === "boolean",
 };
 
-const VIEW_STORE: StoreDefinition<{ hideEmpty: boolean }> = {
+export const VIEW_STORE: StoreDefinition<{ hideEmpty: boolean }> = {
   key: "eft-toolset:gun-builder:view",
   version: 1,
   defaultValue: () => ({ hideEmpty: false }),
