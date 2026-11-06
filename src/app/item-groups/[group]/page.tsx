@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ArrowDown, ArrowLeft, ArrowUp, ExternalLink, Pencil, Trash2, X } from "lucide-react";
+import { ArrowDown, ArrowLeft, ArrowUp, Check, ClipboardList, ExternalLink, Pencil, Trash2, X } from "lucide-react";
+import { copyText } from "@/app/lib/browser/clipboard";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { NameDialog } from "@/components/name-dialog";
@@ -59,6 +60,13 @@ function toRow(name: string, catalog: CatalogItem | undefined, data: CachedItem 
   };
 }
 
+function groupAsText(name: string, rows: Row[], total: number) {
+  const lines = rows.map((row) =>
+    row.price !== null ? `• ${row.name} — ${Rubles.format(row.price)} (${row.vendor})` : `• ${row.name} — no buyer`
+  );
+  return [`**${name}**`, ...lines, total > 0 ? `Total: ${Rubles.format(total)}` : ""].filter(Boolean).join("\n");
+}
+
 function sortRows(rows: Row[], key: SortKey, descending: boolean) {
   if (key === "order") return rows;
   const direction = descending ? -1 : 1;
@@ -90,6 +98,7 @@ export default function Page() {
   const { itemsByName } = useCatalog();
   const [sort, setSort] = useState<{ key: SortKey; descending: boolean }>({ key: "order", descending: false });
   const [actionError, setActionError] = useState("");
+  const [copied, setCopied] = useState(false);
   const { gameMode } = useGameMode();
   const [now] = useState(() => Date.now());
   const history = usePriceHistories(gameMode, names, hydrated);
@@ -221,6 +230,23 @@ export default function Page() {
                 </>
               )}
             </p>
+            <div className="flex flex-wrap items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() =>
+                void copyText(groupAsText(group.name, rows, total)).then(
+                  () => {
+                    setCopied(true);
+                    window.setTimeout(() => setCopied(false), 1800);
+                  },
+                  () => setActionError("Your browser blocked clipboard access.")
+                )
+              }
+            >
+              {copied ? <Check className="text-emerald-400" /> : <ClipboardList />}
+              {copied ? "Copied" : "Copy list"}
+            </Button>
             <div role="group" aria-label="Sort items" className="flex border border-[#2a2a2a]">
               {SORTS.map((option) => {
                 const active = sort.key === option.key;
@@ -247,6 +273,7 @@ export default function Page() {
                   </button>
                 );
               })}
+            </div>
             </div>
           </div>
 
