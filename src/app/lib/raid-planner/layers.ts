@@ -6,7 +6,7 @@ import type {
 } from "@/app/lib/types/raidPlanner";
 import type { FloorExtent, GamePoint, MapConfig } from "./types";
 import { gameToLatLng } from "./coords";
-import { customEncodeURI } from "@/app/lib/URIEncoding";
+import { itemHref } from "@/app/lib/item-links";
 import { makeLayerAccessible } from "./leaflet-accessibility";
 
 const COLORS = {
@@ -323,7 +323,7 @@ function buildLocks(context: LayerBuildContext): LayerEntry {
       const keyLine = document.createElement("p");
       keyLine.append("Key: ");
       const keyLink = document.createElement("a");
-      keyLink.href = `/item/${customEncodeURI(lock.keyName)}`;
+      keyLink.href = itemHref({ name: lock.keyName, normalizedName: lock.keyNormalizedName });
       keyLink.textContent = lock.keyName;
       keyLine.append(keyLink);
       popup.append(heading, keyLine);
