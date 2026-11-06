@@ -11,7 +11,7 @@ import { updateToolbarPrefs, useToolbarPrefs, type ToolbarPrefs } from "@/app/li
 import { EMPTY_HISTORY, recordChange, redoStep, undoStep, type PlanHistory } from "@/app/lib/raid-planner/history";
 import { loadMapSvg } from "@/app/lib/raid-planner/map-svg";
 import { MAX_LAYERS, MAX_PLAN_NAME_LENGTH } from "@/app/lib/raid-planner/limits";
-import { formatDistance, routeLength } from "@/app/lib/raid-planner/route";
+import { formatDistance, routeLength } from "@/app/lib/raid-planner/route-distance";
 import { useMapDetails } from "@/app/lib/cache/raidPlanner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

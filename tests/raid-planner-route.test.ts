@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { formatDistance, routeLength } from "@/app/lib/raid-planner/route";
+import { formatDistance, routeLength } from "@/app/lib/raid-planner/route-distance";
 
 const waypoint = (x: number, z: number) => ({ id: `${x}:${z}`, position: { x, z } });
 

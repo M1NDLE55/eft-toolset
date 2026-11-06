@@ -8,7 +8,7 @@ import type { MapConfig, RaidPlan } from "@/app/lib/raid-planner/types";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
 import { createPlan, deletePlan, duplicatePlan, importPlans, usePlans } from "@/app/lib/raid-planner/store";
 import { downloadPlanFile, readPlanFile } from "@/app/lib/raid-planner/plan-file";
-import { formatDistance, routeLength } from "@/app/lib/raid-planner/route";
+import { formatDistance, routeLength } from "@/app/lib/raid-planner/route-distance";
 import { prefetchMap } from "@/app/lib/raid-planner/prefetch";
 import { MAX_PLAN_NAME_LENGTH } from "@/app/lib/raid-planner/limits";
 import { useHydrated } from "@/app/lib/storage/use-store";
