@@ -1,4 +1,4 @@
-const VERSION = "v2";
+const VERSION = "v3";
 const STATIC_CACHE = `eft-static-${VERSION}`;
 const PAGE_CACHE = `eft-pages-${VERSION}`;
 const DATA_CACHE = `eft-data-${VERSION}`;
@@ -37,29 +37,36 @@ self.addEventListener("fetch", (event) => {
 });
 
 async function cacheFirst(request) {
-  const cache = await caches.open(STATIC_CACHE);
+  const cache = await caches.open(STATIC_CACHE).catch(() => null);
+  if (!cache) return fetch(request);
   const cached = await cache.match(request);
   if (cached) return cached;
   const response = await fetch(request);
-  if (response.ok) await cache.put(request, response.clone());
+  if (response.ok) await cache.put(request, response.clone()).catch(() => undefined);
   return response;
 }
 
 async function networkFirst(request, cacheName, fallback) {
-  const cache = await caches.open(cacheName);
+  const cache = await caches.open(cacheName).catch(() => null);
+  if (!cache) return fetch(request).catch(() => (fallback ? fallback() : Promise.reject(new Error("offline"))));
+  let response;
   try {
-    const response = await withTimeout(fetch(request), NETWORK_TIMEOUT_MS);
-    if (response.ok && response.type === "basic") {
-      await cache.put(request, response.clone());
-      await trim(cache, LIMITS[cacheName]);
-    }
-    return response;
+    response = await withTimeout(fetch(request), NETWORK_TIMEOUT_MS);
   } catch (error) {
     const cached = await cache.match(request);
     if (cached && (cacheName !== PAGE_CACHE || isFresh(cached))) return cached;
     if (fallback) return fallback();
     throw error;
   }
+  if (response.ok && response.type === "basic") {
+    try {
+      await cache.put(request, response.clone());
+      await trim(cache, LIMITS[cacheName]);
+    } catch {
+      return response;
+    }
+  }
+  return response;
 }
 
 function isFresh(response) {
