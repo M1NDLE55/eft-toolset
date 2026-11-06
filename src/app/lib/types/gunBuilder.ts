@@ -34,6 +34,28 @@ export interface BuildItemData extends ItemExtras {
   conflictingItemIds: string[];
   conflictingSlotIds: string[];
   slots: ModSlotDef[];
+  allowedAmmoIds?: string[];
+}
+
+export interface AmmoItemData {
+  id: string;
+  normalizedName: string;
+  name: string;
+  shortName: string;
+  gridImageLink: string | null;
+  caliber: string | null;
+  damage: number;
+  penetrationPower: number;
+  armorDamage: number;
+  fragmentationChance: number;
+  projectileCount: number;
+  initialSpeed: number | null;
+  recoilModifier: number;
+  accuracyModifier: number;
+  traderPriceRUB: number | null;
+  fleaPriceRUB: number | null;
+  traderName: string | null;
+  traderLevel: number | null;
 }
 
 export interface PickItemData extends ItemExtras {

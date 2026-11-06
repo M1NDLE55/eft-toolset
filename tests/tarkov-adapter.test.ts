@@ -24,7 +24,10 @@ const fixtures: Record<string, unknown> = {
           avg24hPrice: 55_000,
           changeLast48hPercent: 5,
           types: ["gun"],
-          buyFromTrader: [{ trader: "trader", priceRUB: 40_000 }],
+          buyFromTrader: [
+            { trader: "trader", priceRUB: 45_000, minTraderLevel: 1 },
+            { trader: "trader", priceRUB: 40_000, minTraderLevel: 3 },
+          ],
           sellToTrader: [{ trader: "trader", priceRUB: 20_000 }],
           properties: {
             propertiesType: "ItemPropertiesWeapon",
@@ -34,6 +37,7 @@ const fixtures: Record<string, unknown> = {
             fireRate: 700,
             fireModes: ["single"],
             defaultAmmo: "ammo",
+            allowedAmmo: ["ammo", "mod"],
             defaultPreset: "preset",
             presets: ["preset"],
             slots: [
@@ -63,7 +67,13 @@ const fixtures: Record<string, unknown> = {
             recoilModifier: -0.05,
           },
         },
-        ammo: { id: "ammo", name: "ammo-name", normalizedName: "test-ammo" },
+        ammo: {
+          id: "ammo",
+          name: "ammo-name",
+          normalizedName: "test-ammo",
+          buyFromTrader: [{ trader: "trader", priceRUB: 150, minTraderLevel: 2 }],
+          properties: { propertiesType: "ItemPropertiesAmmo", caliber: "Caliber556x45NATO", damage: 54, penetrationPower: 31, armorDamage: 37, fragmentationChance: 0.5, initialSpeed: 922 },
+        },
         preset: {
           id: "preset",
           name: "preset-name",
@@ -387,6 +397,25 @@ describe("Tarkov JSON adapter", () => {
         fleaPriceRUB: 12_000,
         recoilModifier: -0.05,
       }),
+    ]);
+  });
+
+  it("projects trader details, allowed ammo, and ammo stats", async () => {
+    const [weapon] = (await executeTarkovOperation(TARKOV_OPERATIONS.buildItems, {
+      gameMode: "regular",
+      ids: ["weapon"],
+    })) as Record<string, unknown>[];
+    expect(weapon).toMatchObject({
+      normalizedName: "test-rifle",
+      traderPriceRUB: 40_000,
+      traderName: "Tester",
+      traderLevel: 3,
+      allowedAmmoIds: ["ammo"],
+    });
+    await expect(
+      executeTarkovOperation(TARKOV_OPERATIONS.ammoItems, { gameMode: "regular", ids: ["ammo", "mod"] })
+    ).resolves.toEqual([
+      expect.objectContaining({ id: "ammo", damage: 54, penetrationPower: 31, projectileCount: 1, traderLevel: 2 }),
     ]);
   });
 

@@ -6,6 +6,7 @@ export const TARKOV_OPERATIONS = {
   buildItems: "gun.build-items",
   pickItems: "gun.pick-items",
   preset: "gun.preset",
+  ammoItems: "gun.ammo-items",
   mapDetails: "map.details",
 } as const;
 

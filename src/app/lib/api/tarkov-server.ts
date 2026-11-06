@@ -9,6 +9,7 @@ import type {
   ComposedItem,
 } from "@/app/lib/cache/types";
 import type {
+  AmmoItemData,
   BuildItemData,
   GunListItem,
   ModSlotDef,
@@ -66,6 +67,7 @@ interface RawContainedItem {
 interface RawTraderOffer {
   trader?: string;
   priceRUB?: number | null;
+  minTraderLevel?: number | null;
 }
 
 interface RawSlot {
@@ -92,6 +94,14 @@ interface RawItemProperties {
   presets?: string[] | null;
   slots?: RawSlot[] | null;
   baseItem?: string | null;
+  allowedAmmo?: string[] | null;
+  damage?: number | null;
+  armorDamage?: number | null;
+  penetrationPower?: number | null;
+  fragmentationChance?: number | null;
+  projectileCount?: number | null;
+  initialSpeed?: number | null;
+  accuracyModifier?: number | null;
 }
 
 interface RawItem {
@@ -307,6 +317,7 @@ const OPERATION_VARIABLES: Record<TarkovOperation, readonly string[]> = {
   [TARKOV_OPERATIONS.buildItems]: ["gameMode", "ids"],
   [TARKOV_OPERATIONS.pickItems]: ["gameMode", "ids"],
   [TARKOV_OPERATIONS.preset]: ["gameMode", "id"],
+  [TARKOV_OPERATIONS.ammoItems]: ["gameMode", "ids"],
   [TARKOV_OPERATIONS.mapDetails]: ["gameMode", "mapKey"],
 };
 
@@ -343,6 +354,9 @@ export async function executeTarkovOperation(
         break;
       case TARKOV_OPERATIONS.pickItems:
         result = getPickItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
+        break;
+      case TARKOV_OPERATIONS.ammoItems:
+        result = getAmmoItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
         break;
       case TARKOV_OPERATIONS.preset:
         result = getPreset(gameMode, readString(input.id, "id", 80));
@@ -531,6 +545,21 @@ async function getPickItems(gameMode: GameMode, ids: string[]): Promise<PickItem
   return ids.flatMap((id) => {
     const item = byId.get(id);
     return item ? [projectPickItem(item, translations, traderNames)] : [];
+  });
+}
+
+async function getAmmoItems(gameMode: GameMode, ids: string[]): Promise<AmmoItemData[]> {
+  if (ids.length === 0) return [];
+  const [{ byId, translations }, traderNames] = await Promise.all([
+    loadItems(gameMode),
+    loadTraderNames(gameMode),
+  ]);
+  throwIfRequestAborted();
+  return ids.flatMap((id) => {
+    const item = byId.get(id);
+    return item?.properties?.propertiesType === "ItemPropertiesAmmo"
+      ? [projectAmmoItem(item, translations, traderNames)]
+      : [];
   });
 }
 
@@ -863,9 +892,17 @@ function isRawItemProperties(value: unknown): value is RawItemProperties {
       value.recoilVertical,
       value.recoilHorizontal,
       value.fireRate,
+      value.damage,
+      value.armorDamage,
+      value.penetrationPower,
+      value.fragmentationChance,
+      value.projectileCount,
+      value.initialSpeed,
+      value.accuracyModifier,
     ].every(optionalFiniteNumber) &&
     optionalStringArray(value.fireModes) &&
     optionalStringArray(value.presets) &&
+    optionalStringArray(value.allowedAmmo) &&
     optionalArray(value.slots, isRawSlot)
   );
 }
@@ -885,7 +922,8 @@ function isRawTraderOffer(value: unknown): value is RawTraderOffer {
   return (
     isRecord(value) &&
     optionalShortString(value.trader) &&
-    optionalFiniteNumber(value.priceRUB)
+    optionalFiniteNumber(value.priceRUB) &&
+    optionalFiniteNumber(value.minTraderLevel)
   );
 }
 
@@ -1371,7 +1409,7 @@ function projectBuildItem(
     shortName: translate(item.shortName, translations) || translate(item.name, translations),
     gridImageLink: safeAssetUrl(item.gridImageLink),
     weight: finiteNumber(item.weight) ?? 0,
-    traderPriceRUB: cheapestTraderPrice(item.buyFromTrader, traderNames),
+    ...traderDetails(item, traderNames),
     fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
     ergonomics: finiteNumber(properties?.ergonomics) ?? 0,
     recoilModifier: isWeapon ? 0 : finiteNumber(properties?.recoilModifier) ?? 0,
@@ -1393,6 +1431,37 @@ function projectBuildItem(
     conflictingItemIds: item.conflictingItems ?? [],
     conflictingSlotIds: item.conflictingSlotIds ?? [],
     slots: projectSlots(properties?.slots, translations),
+    allowedAmmoIds: (properties?.allowedAmmo ?? []).filter((id) => byIdHasAmmo(itemById, id)),
+  };
+}
+
+function byIdHasAmmo(itemById: Map<string, RawItem>, id: string) {
+  return itemById.get(id)?.properties?.propertiesType === "ItemPropertiesAmmo";
+}
+
+function projectAmmoItem(
+  item: RawItem,
+  translations: TranslationDictionary,
+  traderNames: Map<string, string>
+): AmmoItemData {
+  const properties = item.properties;
+  return {
+    id: item.id ?? "",
+    ...traderDetails(item, traderNames),
+    normalizedName: item.normalizedName ?? "",
+    name: translate(item.name, translations),
+    shortName: translate(item.shortName, translations) || translate(item.name, translations),
+    gridImageLink: safeAssetUrl(item.gridImageLink),
+    caliber: properties?.caliber ?? null,
+    damage: finiteNumber(properties?.damage) ?? 0,
+    penetrationPower: finiteNumber(properties?.penetrationPower) ?? 0,
+    armorDamage: finiteNumber(properties?.armorDamage) ?? 0,
+    fragmentationChance: finiteNumber(properties?.fragmentationChance) ?? 0,
+    projectileCount: positiveFiniteNumber(properties?.projectileCount) ?? 1,
+    initialSpeed: finiteNumber(properties?.initialSpeed),
+    recoilModifier: finiteNumber(properties?.recoilModifier) ?? 0,
+    accuracyModifier: finiteNumber(properties?.accuracyModifier) ?? 0,
+    fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
   };
 }
 
@@ -1407,7 +1476,7 @@ function projectPickItem(
     shortName: translate(item.shortName, translations) || translate(item.name, translations),
     gridImageLink: safeAssetUrl(item.gridImageLink),
     weight: finiteNumber(item.weight) ?? 0,
-    traderPriceRUB: cheapestTraderPrice(item.buyFromTrader, traderNames),
+    ...traderDetails(item, traderNames),
     fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
     ergonomics: finiteNumber(item.properties?.ergonomics) ?? 0,
     recoilModifier: finiteNumber(item.properties?.recoilModifier) ?? 0,
@@ -1434,12 +1503,20 @@ function projectSlots(
   });
 }
 
-function cheapestTraderPrice(
-  offers: RawTraderOffer[] | null | undefined,
-  traderNames: Map<string, string>
-) {
-  const prices = projectTraderPrices(offers, traderNames).map((offer) => offer.priceRUB);
-  return prices.length > 0 ? Math.min(...prices) : null;
+function traderDetails(item: RawItem, traderNames: Map<string, string>) {
+  let best: RawTraderOffer | null = null;
+  for (const offer of item.buyFromTrader ?? []) {
+    const price = finiteNumber(offer.priceRUB);
+    if (!offer.trader || price === null || price <= 0) continue;
+    if (!best || price < (best.priceRUB ?? Infinity)) best = offer;
+  }
+  const level = finiteNumber(best?.minTraderLevel);
+  return {
+    normalizedName: item.normalizedName ?? "",
+    traderPriceRUB: best ? finiteNumber(best.priceRUB) : null,
+    traderName: best?.trader ? (traderNames.get(best.trader) ?? best.trader) : null,
+    traderLevel: level !== null && Number.isInteger(level) && level >= 1 && level <= 10 ? level : null,
+  };
 }
 
 const EXTRACT_FACTIONS: ExtractFaction[] = ["pmc", "scav", "shared"];
