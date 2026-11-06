@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowDown, ArrowLeft, ArrowUp, ExternalLink, Pencil, Trash2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -18,6 +18,9 @@ import { itemHref } from "@/app/lib/item-links";
 import { Rubles } from "@/app/lib/currency";
 import { bestSell } from "@/app/lib/item-price";
 import { useHydrated } from "@/app/lib/storage/use-store";
+import { recordPrices, usePriceHistories } from "@/app/lib/price-history";
+import { ChangeBadge } from "@/app/components/item/price-trend";
+import { useGameMode } from "@/components/game-mode/context";
 import {
   addGroupItem,
   deleteGroup,
@@ -87,6 +90,20 @@ export default function Page() {
   const { itemsByName } = useCatalog();
   const [sort, setSort] = useState<{ key: SortKey; descending: boolean }>({ key: "order", descending: false });
   const [actionError, setActionError] = useState("");
+  const { gameMode } = useGameMode();
+  const [now] = useState(() => Date.now());
+  const history = usePriceHistories(gameMode, names, hydrated);
+
+  useEffect(() => {
+    if (stale || items.length === 0) return;
+    void recordPrices(
+      gameMode,
+      items.flatMap((item) => {
+        const best = bestSell(item);
+        return best ? [{ name: item.name, price: best.price }] : [];
+      })
+    );
+  }, [gameMode, items, stale]);
 
   if (!hydrated) {
     return (
@@ -254,6 +271,9 @@ export default function Page() {
                         <span className="text-[#e6d9b8] sm:w-28 sm:text-right" title={row.vendor ?? undefined}>
                           {row.price !== null ? Rubles.format(row.price) : "No buyer"}
                           {row.vendor && <span className="ml-1 text-[10px] uppercase text-[#777]">{row.vendor}</span>}
+                          <span className="ml-1.5">
+                            <ChangeBadge points={history(row.name)} price={row.price} now={now} />
+                          </span>
                         </span>
                         <span className="text-[#888] sm:w-24 sm:text-right">
                           {row.perSlot !== null && row.multiSlot ? `${Rubles.format(row.perSlot)}/slot` : ""}

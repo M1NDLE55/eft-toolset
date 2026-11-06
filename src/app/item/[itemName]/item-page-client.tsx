@@ -11,6 +11,10 @@ import type { ComposedItem } from "@/app/lib/cache/types";
 import type { GameMode } from "@/components/game-mode/mode";
 import { addScoutedItem } from "@/app/lib/scouted-items/store";
 import { Button } from "@/components/ui/button";
+import { PriceTrend } from "@/app/components/item/price-trend";
+import { bestSell } from "@/app/lib/item-price";
+import { recordPrices, usePriceHistories } from "@/app/lib/price-history";
+import { useGameMode } from "@/components/game-mode/context";
 
 export function ItemPageClient({
   reference,
@@ -29,6 +33,16 @@ export function ItemPageClient({
   const { error, refresh, stale } = query;
   const loading = query.loading && !item;
   const itemName = reference.name ?? reference.slug;
+  const { gameMode, hydrated } = useGameMode();
+  const [now] = useState(() => Date.now());
+  const history = usePriceHistories(gameMode, item ? [item.name] : [], hydrated);
+  const liveItem = query.item;
+  const livePrice = liveItem ? (bestSell(liveItem)?.price ?? null) : null;
+
+  useEffect(() => {
+    if (liveItem && livePrice !== null) void recordPrices(gameMode, [{ name: liveItem.name, price: livePrice }]);
+  }, [gameMode, liveItem, livePrice]);
+
   useEffect(() => {
     if (!item) return;
     try {
@@ -61,6 +75,7 @@ export function ItemPageClient({
         </p>
       )}
       <GenericDetails item={item} />
+      {liveItem && livePrice !== null && <PriceTrend points={history(liveItem.name)} price={livePrice} now={now} />}
       <UsedInTasks tasks={item.usedInTasks} />
       <BartersUsing barters={item.bartersUsing} />
       <CraftsUsing crafts={item.craftsUsing} />
