@@ -8,6 +8,7 @@ import type { MapConfig, RaidPlan } from "@/app/lib/raid-planner/types";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
 import { createPlan, deletePlan, duplicatePlan, importPlans, usePlans } from "@/app/lib/raid-planner/store";
 import { downloadPlanFile, readPlanFile } from "@/app/lib/raid-planner/plan-file";
+import { formatDistance, routeLength } from "@/app/lib/raid-planner/route";
 import { prefetchMap } from "@/app/lib/raid-planner/prefetch";
 import { MAX_PLAN_NAME_LENGTH } from "@/app/lib/raid-planner/limits";
 import { useHydrated } from "@/app/lib/storage/use-store";
@@ -278,7 +279,9 @@ function PlanRow({
   const { gameMode } = useGameMode();
   const config = getMapConfig(plan.mapKey);
   const summary = [
-    plural(plan.route.length, "waypoint"),
+    plan.route.length > 1
+      ? `${plural(plan.route.length, "waypoint")} (${formatDistance(routeLength(plan.route))})`
+      : plural(plan.route.length, "waypoint"),
     plural(plan.drawings.length, "drawing"),
     plural(plan.notes.length, "note"),
   ].join(" · ");
