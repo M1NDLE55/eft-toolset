@@ -13,6 +13,9 @@ Create and manage custom item groups for tracking related gear or loot. Groups a
 ### 3. **Gun Builder**
 Create weapon builds from tarkov.dev weapon and attachment data. The builder supports default presets, compatible slot picking, calculated prices and stats, local build storage, duplication, renaming, deletion, and shareable build links that can be imported by other users.
 
+### 4. **Raid Planner**
+Plan raids on interactive maps: draw routes, arrows, and notes on each floor, toggle extracts, spawns, keys, and loot layers, and share plans by link.
+
 ## API Integration
 
 This web app uses the following API(s) to provide real-time data and up-to-date information:
@@ -21,8 +24,9 @@ This web app uses the following API(s) to provide real-time data and up-to-date 
 
 The app uses tarkov.dev's documented JSON API through a server-side typed query adapter.
 The adapter validates a fixed set of operations, caches the API's large source datasets on
-the server, joins/localizes references, and returns only the narrow data each screen needs.
-Results are also cached locally for faster repeat use. See
+the server with background revalidation, joins/localizes references, and returns only the
+narrow data each screen needs. Public reads are CDN-cacheable, and results are also cached
+in IndexedDB for instant repeat visits. See
 [`DATA_ARCHITECTURE.md`](DATA_ARCHITECTURE.md) for the data flow and operation list.
 
 ## Installation
