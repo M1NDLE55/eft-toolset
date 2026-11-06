@@ -93,12 +93,15 @@ a stable `UPSTREAM_UNAVAILABLE` response without exposing internals.
 
 ## Rate limiting
 
-The route keeps an in-process token bucket per client and a global bucket. By default the
-client is identified by `CF-Connecting-IP`, `X-Real-IP`, or the first `X-Forwarded-For`
-entry. These headers are spoofable unless the ingress overwrites them, so set
-`CLIENT_IP_HEADER` to the single header your proxy sets authoritatively (for example
-`cf-connecting-ip` behind Cloudflare or `x-forwarded-for` on Vercel) and block direct
-origin access.
+The route keeps an in-process token bucket per client and a global bucket, and server-
+rendered pages share the API's concurrency cap. On Vercel the client is identified by
+`X-Real-IP`, which Vercel sets itself. Elsewhere it falls back to `CF-Connecting-IP`,
+`X-Real-IP`, or the first `X-Forwarded-For` entry; those are spoofable unless the ingress
+overwrites them, so set `CLIENT_IP_HEADER` to the single header your proxy sets
+authoritatively and block direct origin access.
+
+Successful public GETs are cached by Vercel's edge network, which honours `s-maxage` and
+`stale-while-revalidate` and keys on the full URL including the query string.
 
 ## Adding a query
 

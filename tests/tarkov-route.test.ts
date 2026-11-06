@@ -65,6 +65,34 @@ describe("Tarkov query route", () => {
   });
 });
 
+describe("client identity on Vercel", () => {
+  it("ignores spoofed forwarding headers and uses Vercel's client IP", async () => {
+    vi.stubEnv("VERCEL", "1");
+    vi.spyOn(Date, "now").mockReturnValue(1_950_000_000_000);
+    try {
+      const responses = [];
+      for (let index = 0; index < 121; index += 1) {
+        responses.push(
+          await POST(
+            new Request("http://localhost/api/tarkov", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "X-Real-IP": "198.51.100.99",
+                "CF-Connecting-IP": `203.0.113.${index % 250}`,
+              },
+              body: JSON.stringify({ operation: "arbitrary.query", variables: {} }),
+            })
+          )
+        );
+      }
+      expect(responses[120].status).toBe(429);
+    } finally {
+      vi.unstubAllEnvs();
+    }
+  });
+});
+
 describe("public cache policy", () => {
   it("never lets shared caches outlive the server's stale ceiling", async () => {
     const { publicCacheControl } = await import("@/app/lib/api/cache-control");

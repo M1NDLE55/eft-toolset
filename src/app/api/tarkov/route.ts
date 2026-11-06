@@ -283,7 +283,8 @@ function consumeToken(
 }
 
 function clientKey(request: Request) {
-  const trustedHeader = process.env.CLIENT_IP_HEADER?.trim().toLowerCase();
+  const trustedHeader =
+    process.env.CLIENT_IP_HEADER?.trim().toLowerCase() || (process.env.VERCEL ? "x-real-ip" : undefined);
   if (trustedHeader) {
     return (request.headers.get(trustedHeader)?.split(",")[0]?.trim() || "unknown").slice(0, 128);
   }
