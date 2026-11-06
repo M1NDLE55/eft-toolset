@@ -33,6 +33,7 @@ export function ItemSearch({
   const [activeIndex, setActiveIndex] = useState(0);
   const listboxId = useId();
   const inputRef = useRef<HTMLInputElement>(null);
+  const prefetchTimer = useRef<number | undefined>(undefined);
   const { gameMode } = useGameMode();
   const { catalog, loading, error, stale, refresh } = useCatalog();
 
@@ -43,6 +44,8 @@ export function ItemSearch({
   useEffect(() => {
     if (autoFocus && window.matchMedia("(pointer: fine)").matches) inputRef.current?.focus();
   }, [autoFocus]);
+
+  useEffect(() => () => window.clearTimeout(prefetchTimer.current), []);
 
   useEffect(() => {
     if (!shortcut) return;
@@ -60,7 +63,11 @@ export function ItemSearch({
 
   const highlight = (index: number) => {
     setActiveIndex(index);
-    if (prefetch && results[index]) prefetchItem(results[index].name, gameMode);
+    window.clearTimeout(prefetchTimer.current);
+    const target = results[index];
+    if (prefetch && target) {
+      prefetchTimer.current = window.setTimeout(() => prefetchItem(target.name, gameMode), 150);
+    }
   };
 
   const choose = (item: CatalogItem) => {
