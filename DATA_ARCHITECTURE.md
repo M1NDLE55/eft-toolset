@@ -29,11 +29,12 @@ server-side, cached in-process, and never forwarded wholesale to a browser.
 | --- | --- | --- |
 | `item.catalog` | `gameMode` | Search/catalog item projection |
 | `item.group` | `gameMode`, up to 100 names | Item-group prices and task names |
-| `item.detail` | `gameMode`, item name | Item, tasks, barters, and crafts |
+| `item.detail` | `gameMode`, item name or slug | Item, tasks, barters, and crafts |
 | `gun.list` | `gameMode` | Weapon-picker rows |
 | `gun.build-items` | `gameMode`, up to 100 IDs | Complete build nodes |
 | `gun.pick-items` | `gameMode`, up to 100 IDs | Lightweight slot-picker rows |
 | `gun.preset` | `gameMode`, preset ID | Base item and contained IDs |
+| `gun.ammo-items` | `gameMode`, up to 100 IDs | Ammo ballistics, prices, and trader details |
 | `map.details` | `gameMode`, normalized map key | One joined map projection |
 
 Operation names live in `src/app/lib/api/operations.ts`. The route rejects unknown
@@ -49,8 +50,17 @@ stale window is capped so shared caches never serve data past the six-hour stale
 Responses built from a failed upstream refresh get a 30-second shared cache, and errors
 are `no-store`. Configure the CDN to key on the full query string.
 
-The catalog is sent as `[id, name, shortName, image]` tuples, where an empty image means
-the standard `{id}-grid-image.webp` asset.
+The catalog is sent as `[id, name, shortName, image, normalizedName]` tuples, where an
+empty image means the standard `{id}-grid-image.webp` asset.
+
+## Item pages
+
+Item pages live at `/item/<normalizedName>` and are rendered on the server with the
+adapter's data for the visitor's game mode, read from the `eft-game-mode` cookie that the
+client keeps in sync with its stored setting. The client query cache is seeded with the
+same data. Older name-based links redirect permanently, unknown slugs return 404, and if
+the adapter takes longer than 2.5 seconds the page renders and loads data in the browser
+instead. Every item slug is listed in the sitemap.
 
 ## Upstream resources
 
