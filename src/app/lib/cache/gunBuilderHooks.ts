@@ -10,6 +10,7 @@ import {
   getGunItemState,
   gunListQuery,
   subscribeGunItems,
+  unresolvedGunItems,
   type GunItemState,
 } from "./gunBuilder";
 
@@ -84,7 +85,7 @@ export function useGunItems(
     return merged;
   }, [current.items, fallback.items, ids]);
 
-  const unresolved = ids.filter((id) => !current.items.has(id) && !current.missing.has(id));
+  const unresolved = unresolvedGunItems(ids, current, detail);
   const pending = ids.some((id) => current.pending.has(id));
   const waiting = unresolved.length > 0 && (pending || !current.error);
 

@@ -132,6 +132,14 @@ function isFresh(gameMode: GameMode, detail: Detail, id: string) {
   return Boolean(known) && Date.now() - (fetchedAt.get(stampKey(gameMode, detail, id)) ?? 0) < FRESH_MS;
 }
 
+export function unresolvedGunItems(ids: readonly string[], state: GunItemState, detail: Detail) {
+  return ids.filter((id) => {
+    if (state.missing.has(id)) return false;
+    const item = state.items.get(id);
+    return !item || (detail === "full" && !isDetailed(item));
+  });
+}
+
 export async function ensureGunItems(
   ids: readonly string[],
   gameMode: GameMode,

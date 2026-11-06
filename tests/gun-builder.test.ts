@@ -223,3 +223,14 @@ describe("build share links", () => {
     await expect(decodeBuildSharePayload(payload)).rejects.toThrow(/tree is invalid/i);
   });
 });
+
+describe("gun item completeness", () => {
+  it("treats basic picker data as unresolved when full details were requested", async () => {
+    const { unresolvedGunItems } = await import("@/app/lib/cache/gunBuilder");
+    const basic = { id: "mod", name: "Mod", shortName: "Mod" } as unknown as BuildItemData;
+    const full = { ...basic, slots: [] } as BuildItemData;
+    const state = { items: new Map([["mod", basic], ["full", { ...full, id: "full" }]]), pending: new Set<string>(), missing: new Set(["gone"]), error: null };
+    expect(unresolvedGunItems(["mod", "full", "gone", "new"], state, "full")).toEqual(["mod", "new"]);
+    expect(unresolvedGunItems(["mod", "full", "gone", "new"], state, "basic")).toEqual(["new"]);
+  });
+});
