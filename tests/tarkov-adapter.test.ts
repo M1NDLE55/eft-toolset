@@ -69,7 +69,7 @@ const fixtures: Record<string, unknown> = {
           name: "preset-name",
           normalizedName: "test-preset",
           properties: { propertiesType: "ItemPropertiesPreset", baseItem: "weapon" },
-          containsItems: [{ item: "weapon", count: 1 }, { item: "mod", count: 1 }],
+          containsItems: [{ item: "weapon", count: 1 }, { item: "mod", count: 2 }],
         },
         reward: { id: "reward", name: "reward-name", normalizedName: "reward" },
         key: { id: "key", name: "key-name", normalizedName: "test-key" },
@@ -355,7 +355,7 @@ describe("Tarkov JSON adapter", () => {
         gameMode: "regular",
         id: "preset",
       })
-    ).resolves.toEqual({ baseItemId: "weapon", itemIds: ["weapon", "mod"] });
+    ).resolves.toEqual({ baseItemId: "weapon", itemIds: ["weapon", "mod", "mod"] });
 
     await expect(
       executeTarkovOperation(TARKOV_OPERATIONS.pickItems, {

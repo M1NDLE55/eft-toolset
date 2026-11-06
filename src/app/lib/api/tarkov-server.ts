@@ -525,7 +525,9 @@ async function getPreset(gameMode: GameMode, id: string): Promise<PresetContents
   return {
     baseItemId: item.properties?.baseItem ?? null,
     itemIds: (item.containsItems ?? []).flatMap((entry) =>
-      typeof entry.item === "string" ? [entry.item] : []
+      typeof entry.item === "string"
+        ? Array.from({ length: Math.min(8, Math.max(1, Math.floor(finiteNumber(entry.count) ?? 1))) }, () => entry.item as string)
+        : []
     ),
   };
 }
