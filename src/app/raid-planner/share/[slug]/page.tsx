@@ -9,8 +9,7 @@ import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
 import { importPlan } from "@/app/lib/raid-planner/store";
 import { decodePlanSharePayload, type DecodedSharedPlan } from "@/app/lib/raid-planner/share";
 import { Button } from "@/components/ui/button";
-import { defaultFloor } from "@/app/components/raid-planner/floor-switcher";
-import { LazyPlanEditorCanvas } from "@/app/components/raid-planner/lazy-canvas";
+import { SharedPreview } from "@/app/components/raid-planner/shared-preview";
 
 type Decoded = { payload: string; plan: DecodedSharedPlan } | { payload: string; error: string };
 
@@ -162,17 +161,11 @@ export default function SharedPlanPage() {
           </p>
         )}
 
-        <div className="relative isolate h-[min(60dvh,40rem)] min-h-72 w-full overflow-hidden border border-[#2a2a2a] bg-[#050505]">
-          {previewPlan && config && (
-            <LazyPlanEditorCanvas
-              config={config}
-              activeFloor={defaultFloor(config)}
-              details={null}
-              enabledLayers={[]}
-              plan={previewPlan}
-            />
-          )}
-        </div>
+        {previewPlan && config ? (
+          <SharedPreview config={config} plan={previewPlan} />
+        ) : (
+          <div className="h-[min(60dvh,40rem)] min-h-72 w-full animate-pulse border border-[#2a2a2a] bg-[#050505]" />
+        )}
         <p className="text-xs text-[#888]">
           Saving keeps a private copy in this browser. You can edit it freely without changing the original.
         </p>
