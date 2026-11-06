@@ -31,11 +31,12 @@ export interface CachedItem {
 
 export interface CatalogItem {
   id: string;
-  normalizedName: string;
   name: string;
   shortName: string | null;
   gridImageLink: string | null;
 }
+
+export type CatalogEntry = [id: string, name: string, shortName: string | null, image: string | null];
 
 export interface CachedTask {
   name: string;

@@ -1,5 +1,11 @@
 import { NextResponse } from "next/server";
-import { isTarkovOperation } from "@/app/lib/api/operations";
+import {
+  CACHEABLE_OPERATIONS,
+  MAX_GET_VARIABLES_LENGTH,
+  canonicalJson,
+  isTarkovOperation,
+  type TarkovOperation,
+} from "@/app/lib/api/operations";
 import {
   executeTarkovOperation,
   TarkovRequestError,
@@ -15,6 +21,8 @@ const CLIENT_REFILL_PER_SECOND = 1;
 const GLOBAL_BURST = 300;
 const GLOBAL_REFILL_PER_SECOND = 5;
 const MAX_RATE_LIMIT_ENTRIES = 10_000;
+const PUBLIC_CACHE = "public, max-age=60, s-maxage=300, stale-while-revalidate=86400";
+const STALE_PUBLIC_CACHE = "public, max-age=0, s-maxage=30";
 
 interface TokenBucket {
   tokens: number;
@@ -25,13 +33,46 @@ const clientBuckets = new Map<string, TokenBucket>();
 const globalBucket: TokenBucket = { tokens: GLOBAL_BURST, updatedAt: Date.now() };
 let activeRequests = 0;
 
-export async function POST(request: Request) {
-  const rateLimit = consumeRequestBudget(request);
-  if (!rateLimit.allowed) {
-    return errorResponse("Too many requests.", "RATE_LIMITED", 429, {
-      "Retry-After": String(rateLimit.retryAfterSeconds),
-    });
+export async function GET(request: Request) {
+  const rateLimited = rateLimitResponse(request);
+  if (rateLimited) return rateLimited;
+
+  const url = new URL(request.url);
+  const keys = Array.from(url.searchParams.keys());
+  const operation = url.searchParams.get("op");
+  const encoded = url.searchParams.get("v");
+  if (
+    keys.length !== 2 ||
+    operation === null ||
+    encoded === null ||
+    url.searchParams.getAll("op").length !== 1 ||
+    url.searchParams.getAll("v").length !== 1
+  ) {
+    return errorResponse("Expected exactly the op and v query parameters.", "INVALID_REQUEST", 400);
   }
+  if (!isTarkovOperation(operation) || !CACHEABLE_OPERATIONS.has(operation)) {
+    return errorResponse("Unknown query operation.", "INVALID_OPERATION", 400);
+  }
+  if (encoded.length > MAX_GET_VARIABLES_LENGTH) {
+    return errorResponse("Query variables are too large.", "INVALID_REQUEST", 414);
+  }
+
+  let variables: unknown;
+  try {
+    variables = JSON.parse(encoded) as unknown;
+  } catch {
+    return errorResponse("Query variables must be valid JSON.", "INVALID_REQUEST", 400);
+  }
+  if (canonicalJson(variables) !== encoded) {
+    return errorResponse("Query variables must be canonical JSON.", "INVALID_REQUEST", 400);
+  }
+
+  return execute(request, operation, variables, true);
+}
+
+export async function POST(request: Request) {
+  const rateLimited = rateLimitResponse(request);
+  if (rateLimited) return rateLimited;
 
   const contentLength = Number(request.headers.get("content-length"));
   if (Number.isFinite(contentLength) && contentLength > MAX_REQUEST_BYTES) {
@@ -68,6 +109,15 @@ export async function POST(request: Request) {
     return errorResponse("Unknown query operation.", "INVALID_OPERATION", 400);
   }
 
+  return execute(request, operation, variables, false);
+}
+
+async function execute(
+  request: Request,
+  operation: TarkovOperation,
+  variables: unknown,
+  cacheable: boolean
+) {
   if (activeRequests >= MAX_CONCURRENT_REQUESTS) {
     return errorResponse("The service is busy. Try again shortly.", "RATE_LIMITED", 429, {
       "Retry-After": "1",
@@ -89,7 +139,7 @@ export async function POST(request: Request) {
       { data },
       {
         headers: {
-          "Cache-Control": "private, no-store",
+          "Cache-Control": cacheable ? (stale ? STALE_PUBLIC_CACHE : PUBLIC_CACHE) : "private, no-store",
           "X-Content-Type-Options": "nosniff",
           ...(stale ? { "X-EFT-Data-Stale": "true" } : {}),
         },
@@ -107,11 +157,22 @@ export async function POST(request: Request) {
         { "Retry-After": "3" }
       );
     }
+    if (request.signal.aborted) {
+      return errorResponse("The request was cancelled.", "CANCELLED", 499);
+    }
     console.error("Tarkov query failed", error);
     return errorResponse("The query could not be completed.", "INTERNAL_ERROR", 500);
   } finally {
     activeRequests -= 1;
   }
+}
+
+function rateLimitResponse(request: Request) {
+  const rateLimit = consumeRequestBudget(request);
+  if (rateLimit.allowed) return null;
+  return errorResponse("Too many requests.", "RATE_LIMITED", 429, {
+    "Retry-After": String(rateLimit.retryAfterSeconds),
+  });
 }
 
 function errorResponse(
@@ -168,12 +229,7 @@ function consumeRequestBudget(request: Request): {
   const now = Date.now();
   const key = clientKey(request);
   const bucket = clientBuckets.get(key) ?? { tokens: CLIENT_BURST, updatedAt: now };
-  const clientResult = consumeToken(
-    bucket,
-    CLIENT_BURST,
-    CLIENT_REFILL_PER_SECOND,
-    now
-  );
+  const clientResult = consumeToken(bucket, CLIENT_BURST, CLIENT_REFILL_PER_SECOND, now);
   clientBuckets.delete(key);
   clientBuckets.set(key, bucket);
   while (clientBuckets.size > MAX_RATE_LIMIT_ENTRIES) {

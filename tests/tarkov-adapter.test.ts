@@ -260,13 +260,7 @@ describe("Tarkov JSON adapter", () => {
     const result = await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, {
       gameMode: "regular",
     });
-    expect(result).toContainEqual({
-      id: "weapon",
-      name: "Test Rifle",
-      shortName: "Rifle",
-      normalizedName: "test-rifle",
-      gridImageLink: "https://assets.tarkov.dev/weapon.webp",
-    });
+    expect(result).toContainEqual(["weapon", "Test Rifle", "Rifle", "weapon.webp"]);
   });
 
   it("joins item, pricing, slot, and preset data", async () => {

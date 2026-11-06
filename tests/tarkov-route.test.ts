@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { POST } from "@/app/api/tarkov/route";
+import { GET, POST } from "@/app/api/tarkov/route";
 
 describe("Tarkov query route", () => {
   it("rejects operations outside the allowlist", async () => {
@@ -14,6 +14,21 @@ describe("Tarkov query route", () => {
       error: { message: "Unknown query operation.", code: "INVALID_OPERATION" },
     });
     expect(response.status).toBe(400);
+  });
+
+  it("only accepts canonical GET requests for cacheable operations", async () => {
+    const get = (query: string) =>
+      GET(new Request(`http://localhost/api/tarkov?${query}`, { headers: { "CF-Connecting-IP": "198.51.100.7" } }));
+    const v = encodeURIComponent('{"gameMode":"regular","name":"x"}');
+
+    expect((await get(`op=item.group&v=${encodeURIComponent('{"gameMode":"regular","names":[]}')}`)).status).toBe(400);
+    expect((await get(`op=item.detail&v=${encodeURIComponent('{"name":"x","gameMode":"regular"}')}`)).status).toBe(400);
+    expect((await get(`op=item.detail&v=${v}&extra=1`)).status).toBe(400);
+    expect((await get(`op=item.detail&op=item.detail&v=${v}`)).status).toBe(400);
+    expect((await get(`op=item.detail&v=${encodeURIComponent("x".repeat(2_000))}`)).status).toBe(414);
+    const invalid = await get(`op=item.detail&v=${encodeURIComponent('{"gameMode":"nope","name":"x"}')}`);
+    expect(invalid.status).toBe(400);
+    expect(invalid.headers.get("cache-control")).toBe("no-store");
   });
 
   it("enforces the body limit even without a content-length header", async () => {

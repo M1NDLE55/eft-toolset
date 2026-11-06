@@ -2,7 +2,7 @@ import type { GameMode } from "@/components/game-mode/context";
 import { apiFetch } from "@/app/lib/api/transport";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import type { QueryDefinition } from "@/app/lib/api/queryClient";
-import type { CachedItem, CatalogItem, ComposedItem } from "./types";
+import type { CachedItem, CatalogEntry, CatalogItem, ComposedItem } from "./types";
 import { MAX_GROUP_ITEMS } from "@/app/lib/item-groups/limits";
 
 const NAME_BATCH_SIZE = 100;
@@ -22,16 +22,46 @@ interface DetailVariables extends ModeVariables {
   name: string;
 }
 
+const ASSET_ORIGIN = "https://assets.tarkov.dev/";
+
 export const itemCatalogQuery: QueryDefinition<ModeVariables, CatalogItem[]> = {
   id: "item-catalog",
-  version: 2,
+  version: 3,
   staleTime: DAY,
   maxAge: 30 * DAY,
   persist: true,
   validate: isCatalog,
-  fetch: ({ gameMode }, signal) =>
-    apiFetch<CatalogItem[]>(TARKOV_OPERATIONS.itemCatalog, { gameMode }, { signal }),
+  fetch: async ({ gameMode }, signal) => {
+    const entries = await apiFetch<unknown>(TARKOV_OPERATIONS.itemCatalog, { gameMode }, { signal });
+    if (!Array.isArray(entries) || entries.length > 100_000) {
+      throw new Error("The item catalog response was invalid.");
+    }
+    return entries.flatMap((entry) => (isCatalogEntry(entry) ? [expandCatalogEntry(entry)] : []));
+  },
 };
+
+function isCatalogEntry(value: unknown): value is CatalogEntry {
+  return (
+    Array.isArray(value) &&
+    value.length === 4 &&
+    typeof value[0] === "string" &&
+    /^[A-Za-z0-9_-]{1,64}$/.test(value[0]) &&
+    typeof value[1] === "string" &&
+    value[1].length > 0 &&
+    value[1].length <= 500 &&
+    (value[2] === null || (typeof value[2] === "string" && value[2].length <= 500)) &&
+    (value[3] === null || (typeof value[3] === "string" && /^[A-Za-z0-9._-]{0,200}$/.test(value[3])))
+  );
+}
+
+function expandCatalogEntry([id, name, shortName, image]: CatalogEntry): CatalogItem {
+  return {
+    id,
+    name,
+    shortName,
+    gridImageLink: image === null ? null : `${ASSET_ORIGIN}${image || `${id}-grid-image.webp`}`,
+  };
+}
 
 export const groupItemsQuery: QueryDefinition<GroupVariables, CachedItem[]> = {
   id: "group-items",
@@ -98,7 +128,6 @@ function isCatalogItem(value: unknown): value is CatalogItem {
   const item = value as Partial<CatalogItem>;
   return (
     typeof item.id === "string" &&
-    typeof item.normalizedName === "string" &&
     typeof item.name === "string" &&
     item.name.length <= 500 &&
     (item.shortName === null || typeof item.shortName === "string") &&

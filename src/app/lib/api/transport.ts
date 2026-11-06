@@ -1,9 +1,27 @@
-import type { TarkovOperation } from "./operations";
+import {
+  CACHEABLE_OPERATIONS,
+  MAX_GET_VARIABLES_LENGTH,
+  canonicalJson,
+  type TarkovOperation,
+} from "./operations";
 
 const API_URL = "/api/tarkov";
 const DEFAULT_TIMEOUT_MS = 25_000;
 const DEFAULT_RETRIES = 1;
 const MAX_API_RESPONSE_BYTES = 16 * 1024 * 1024;
+
+export const STALE_UPSTREAM_EVENT = "eft-toolset:stale-upstream";
+let upstreamStale = false;
+
+export function isUpstreamStale() {
+  return upstreamStale;
+}
+
+function setUpstreamStale(stale: boolean) {
+  if (stale === upstreamStale || typeof window === "undefined") return;
+  upstreamStale = stale;
+  window.dispatchEvent(new Event(STALE_UPSTREAM_EVENT));
+}
 
 export class ApiTransportError extends Error {
   constructor(
@@ -32,38 +50,43 @@ interface ApiResponse<T> {
   };
 }
 
+export function apiRequestInit(
+  operation: TarkovOperation,
+  variables: Record<string, unknown>
+): { url: string; init: RequestInit } {
+  const encoded = canonicalJson(variables);
+  if (CACHEABLE_OPERATIONS.has(operation) && encoded.length <= MAX_GET_VARIABLES_LENGTH) {
+    const query = new URLSearchParams({ op: operation, v: encoded });
+    return {
+      url: `${API_URL}?${query.toString()}`,
+      init: { method: "GET", headers: { Accept: "application/json" } },
+    };
+  }
+  return {
+    url: API_URL,
+    init: {
+      method: "POST",
+      headers: { Accept: "application/json", "Content-Type": "application/json" },
+      body: JSON.stringify({ operation, variables }),
+      cache: "no-store",
+    },
+  };
+}
+
 export async function apiFetch<T>(
   operation: TarkovOperation,
   variables: Record<string, unknown>,
   options: ApiRequestOptions = {}
 ): Promise<T> {
-  const startedAt = now();
-  const requestedRetries = options.retries ?? DEFAULT_RETRIES;
-  const retries = Number.isFinite(requestedRetries)
-    ? Math.min(5, Math.max(0, Math.floor(requestedRetries)))
-    : DEFAULT_RETRIES;
+  const retries = clamp(options.retries, 0, 5, DEFAULT_RETRIES);
 
   for (let attempt = 0; ; attempt += 1) {
     try {
-      const result = await requestOnce<T>(operation, variables, options);
-      reportQuery({ operation, durationMs: now() - startedAt, status: "success", attempt });
-      return result;
+      return await requestOnce<T>(operation, variables, options);
     } catch (error) {
       const normalized = normalizeError(error);
       if (options.signal?.aborted) throw options.signal.reason ?? normalized;
-
-      if (attempt >= retries || !isRetryable(normalized)) {
-        reportQuery({
-          operation,
-          durationMs: now() - startedAt,
-          status: "error",
-          attempt,
-          errorKind: normalized.kind,
-          httpStatus: normalized.status,
-        });
-        throw normalized;
-      }
-
+      if (attempt >= retries || !isRetryable(normalized)) throw normalized;
       await delay(retryDelay(attempt, normalized), options.signal);
     }
   }
@@ -75,10 +98,7 @@ async function requestOnce<T>(
   options: ApiRequestOptions
 ): Promise<T> {
   const controller = new AbortController();
-  const requestedTimeout = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
-  const timeoutMs = Number.isFinite(requestedTimeout)
-    ? Math.min(60_000, Math.max(1, requestedTimeout))
-    : DEFAULT_TIMEOUT_MS;
+  const timeoutMs = clamp(options.timeoutMs, 1, 60_000, DEFAULT_TIMEOUT_MS);
   const timeout = setTimeout(() => {
     controller.abort(new ApiTransportError("The API request timed out.", "timeout"));
   }, timeoutMs);
@@ -87,16 +107,8 @@ async function requestOnce<T>(
   options.signal?.addEventListener("abort", abortFromCaller, { once: true });
 
   try {
-    const response = await fetch(API_URL, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ operation, variables }),
-      signal: controller.signal,
-      cache: "no-store",
-    });
+    const { url, init } = apiRequestInit(operation, variables);
+    const response = await fetch(url, { ...init, signal: controller.signal });
 
     let json: ApiResponse<T>;
     try {
@@ -117,10 +129,8 @@ async function requestOnce<T>(
       );
     }
 
-    const message =
-      typeof json.error?.message === "string" ? json.error.message : undefined;
+    const message = typeof json.error?.message === "string" ? json.error.message : undefined;
     const code = typeof json.error?.code === "string" ? json.error.code : undefined;
-    const retryAfterMs = parseRetryAfter(response.headers.get("retry-after"));
 
     if (!response.ok) {
       throw new ApiTransportError(
@@ -128,31 +138,19 @@ async function requestOnce<T>(
         "http",
         response.status,
         code,
-        retryAfterMs
+        parseRetryAfter(response.headers.get("retry-after"))
       );
     }
 
     if (json.error) {
-      throw new ApiTransportError(
-        message ?? "The API request failed.",
-        "api",
-        response.status,
-        code
-      );
+      throw new ApiTransportError(message ?? "The API request failed.", "api", response.status, code);
     }
 
     if (json.data === undefined) {
       throw new ApiTransportError("The API response did not contain data.", "decode", response.status);
     }
 
-    if (typeof window !== "undefined") {
-      window.dispatchEvent(
-        new CustomEvent("eft-toolset:stale-upstream", {
-          detail: response.headers.get("x-eft-data-stale") === "true",
-        })
-      );
-    }
-
+    setUpstreamStale(response.headers.get("x-eft-data-stale") === "true");
     return json.data;
   } catch (error) {
     if (controller.signal.aborted && controller.signal.reason instanceof ApiTransportError) {
@@ -168,6 +166,11 @@ async function requestOnce<T>(
     clearTimeout(timeout);
     options.signal?.removeEventListener("abort", abortFromCaller);
   }
+}
+
+function clamp(value: number | undefined, min: number, max: number, fallback: number) {
+  if (value === undefined || !Number.isFinite(value)) return fallback;
+  return Math.min(max, Math.max(min, Math.floor(value)));
 }
 
 function normalizeError(error: unknown): ApiTransportError {
@@ -246,23 +249,4 @@ function delay(ms: number, signal?: AbortSignal) {
     signal?.addEventListener("abort", abort, { once: true });
     if (signal?.aborted) abort();
   });
-}
-
-function now() {
-  return typeof performance === "undefined" ? Date.now() : performance.now();
-}
-
-interface QueryEventDetail {
-  operation: TarkovOperation;
-  durationMs: number;
-  status: "success" | "error";
-  attempt: number;
-  errorKind?: ApiTransportError["kind"];
-  httpStatus?: number;
-}
-
-function reportQuery(detail: QueryEventDetail) {
-  if (typeof window !== "undefined") {
-    window.dispatchEvent(new CustomEvent("eft-toolset:query", { detail }));
-  }
 }

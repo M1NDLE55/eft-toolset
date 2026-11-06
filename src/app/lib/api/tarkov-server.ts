@@ -5,7 +5,7 @@ import type {
   CachedCraft,
   CachedItem,
   CachedTask,
-  CatalogItem,
+  CatalogEntry,
   ComposedItem,
 } from "@/app/lib/cache/types";
 import type {
@@ -364,7 +364,7 @@ function throwIfRequestAborted() {
   operationContext.getStore()?.signal?.throwIfAborted();
 }
 
-async function getItemCatalog(gameMode: GameMode): Promise<CatalogItem[]> {
+async function getItemCatalog(gameMode: GameMode): Promise<CatalogEntry[]> {
   return loadDerived(`${gameMode}/catalog-projection`, async () => {
     const { items, translations } = await loadItems(gameMode);
     throwIfRequestAborted();
@@ -1137,19 +1137,20 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 export function projectItemCatalog(
   items: RawItem[],
   translations: TranslationDictionary
-): CatalogItem[] {
-  return items.flatMap((item) => {
-    if (!item.id || !item.normalizedName) return [];
-    return [
-      {
-        id: item.id,
-        normalizedName: item.normalizedName,
-        name: translate(item.name, translations),
-        shortName: translateNullable(item.shortName, translations),
-        gridImageLink: safeAssetUrl(item.gridImageLink),
-      },
-    ];
+): CatalogEntry[] {
+  return items.flatMap((item): CatalogEntry[] => {
+    if (!item.id) return [];
+    const name = translate(item.name, translations);
+    if (!name) return [];
+    return [[item.id, name, translateNullable(item.shortName, translations), catalogImage(item.id, item.gridImageLink)]];
   });
+}
+
+function catalogImage(id: string, link: string | null | undefined): string | null {
+  const safe = safeAssetUrl(link);
+  if (!safe) return null;
+  const path = new URL(safe).pathname.slice(1);
+  return path === `${id}-grid-image.webp` ? "" : path;
 }
 
 function projectCachedItem(
