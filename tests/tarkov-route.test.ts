@@ -64,3 +64,14 @@ describe("Tarkov query route", () => {
     expect(responses[120].headers.get("retry-after")).toBe("1");
   });
 });
+
+describe("public cache policy", () => {
+  it("never lets shared caches outlive the server's stale ceiling", async () => {
+    const { publicCacheControl } = await import("@/app/lib/api/cache-control");
+    expect(publicCacheControl(false, 0)).toBe("public, max-age=60, s-maxage=300, stale-while-revalidate=21300");
+    expect(publicCacheControl(false, 5 * 60 * 60_000)).toBe("public, max-age=60, s-maxage=300, stale-while-revalidate=3300");
+    expect(publicCacheControl(false, 6 * 60 * 60_000 - 200_000)).toBe("no-store");
+    expect(publicCacheControl(true, 60_000)).toBe("public, max-age=0, s-maxage=30");
+    expect(publicCacheControl(true, 6 * 60 * 60_000)).toBe("no-store");
+  });
+});

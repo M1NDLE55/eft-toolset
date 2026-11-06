@@ -6,6 +6,7 @@ import {
   isTarkovOperation,
   type TarkovOperation,
 } from "@/app/lib/api/operations";
+import { publicCacheControl } from "@/app/lib/api/cache-control";
 import {
   executeTarkovOperation,
   TarkovRequestError,
@@ -23,8 +24,6 @@ const GLOBAL_REFILL_PER_SECOND = 5;
 const MAX_RATE_LIMIT_ENTRIES = 10_000;
 const MAX_URL_LENGTH = 2_048;
 const BODY_READ_TIMEOUT_MS = 5_000;
-const PUBLIC_CACHE = "public, max-age=60, s-maxage=300, stale-while-revalidate=86400";
-const STALE_PUBLIC_CACHE = "public, max-age=0, s-maxage=30";
 
 interface TokenBucket {
   tokens: number;
@@ -143,11 +142,15 @@ async function execute(
 ) {
   try {
     let stale = false;
+    let dataAgeMs = 0;
     request.signal.throwIfAborted();
     const data = await executeTarkovOperation(operation, variables, {
       signal: request.signal,
       onStale: () => {
         stale = true;
+      },
+      onDataAge: (ageMs) => {
+        dataAgeMs = ageMs;
       },
     });
     request.signal.throwIfAborted();
@@ -155,7 +158,7 @@ async function execute(
       { data },
       {
         headers: {
-          "Cache-Control": cacheable ? (stale ? STALE_PUBLIC_CACHE : PUBLIC_CACHE) : "private, no-store",
+          "Cache-Control": cacheable ? publicCacheControl(stale, dataAgeMs) : "private, no-store",
           "X-Content-Type-Options": "nosniff",
           ...(stale ? { "X-EFT-Data-Stale": "true" } : {}),
         },

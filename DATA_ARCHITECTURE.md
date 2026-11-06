@@ -44,9 +44,10 @@ resource name, field selection, or arbitrary query.
 `item.catalog`, `item.detail`, `gun.list`, `gun.preset`, and `map.details` are also served
 over GET. The variables must be canonical JSON (sorted keys, no extra query parameters),
 so each logical request has exactly one URL. Successful GETs are sent with
-`Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400`; responses
-built from a failed upstream refresh get a 30-second shared cache, and errors are
-`no-store`. Configure the CDN to key on the full query string.
+`Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=<n>`, where the
+stale window is capped so shared caches never serve data past the six-hour stale ceiling.
+Responses built from a failed upstream refresh get a 30-second shared cache, and errors
+are `no-store`. Configure the CDN to key on the full query string.
 
 The catalog is sent as `[id, name, shortName, image]` tuples, where an empty image means
 the standard `{id}-grid-image.webp` asset.

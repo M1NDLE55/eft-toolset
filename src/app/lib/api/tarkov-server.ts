@@ -29,7 +29,7 @@ const UPSTREAM_TIMEOUT_MS = 20_000;
 const UPSTREAM_MAX_BYTES = 32 * 1024 * 1024;
 const RESOURCE_TTL_MS = 5 * 60_000;
 const RESOURCE_REVALIDATE_MS = 30 * 60_000;
-const RESOURCE_MAX_STALE_MS = 6 * 60 * 60_000;
+export const RESOURCE_MAX_STALE_MS = 6 * 60 * 60_000;
 const MAX_RESOURCE_RECORDS = 100_000;
 const MAX_NESTED_ENTRIES = 20_000;
 const MAX_STRING_LENGTH = 10_000;
@@ -311,7 +311,7 @@ const OPERATION_VARIABLES: Record<TarkovOperation, readonly string[]> = {
 export async function executeTarkovOperation(
   operation: TarkovOperation,
   variables: unknown,
-  options: { signal?: AbortSignal; onStale?: () => void } = {}
+  options: { signal?: AbortSignal; onStale?: () => void; onDataAge?: (ageMs: number) => void } = {}
 ): Promise<unknown> {
   const allowed = OPERATION_VARIABLES[operation];
   if (!allowed) throw new TarkovRequestError("Unknown query operation.", "INVALID_OPERATION");
@@ -350,9 +350,10 @@ export async function executeTarkovOperation(
         break;
     }
     const data = await waitForCaller(result, options.signal);
-    if (Array.from(context.resources).some((entry) => entry.failedAt !== undefined)) {
-      options.onStale?.();
-    }
+    const entries = Array.from(context.resources);
+    if (entries.some((entry) => entry.failedAt !== undefined)) options.onStale?.();
+    const oldest = Math.min(...entries.map((entry) => entry.fetchedAt));
+    if (Number.isFinite(oldest)) options.onDataAge?.(Math.max(0, Date.now() - oldest));
     return data;
   });
 }
