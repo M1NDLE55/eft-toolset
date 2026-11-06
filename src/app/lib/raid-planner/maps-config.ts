@@ -33,19 +33,6 @@ export const mapConfigs: MapConfig[] = [
     ],
     "floors": [
       {
-        "id": "underground",
-        "name": "Underground",
-        "svgLayer": "Underground_Level",
-        "extents": [
-          {
-            "height": [
-              -10000,
-              -6
-            ]
-          }
-        ]
-      },
-      {
         "id": "2nd-floor",
         "name": "2nd Floor",
         "svgLayer": "Second_Floor",
@@ -96,6 +83,19 @@ export const mapConfigs: MapConfig[] = [
             ]
           }
         ]
+      },
+      {
+        "id": "underground",
+        "name": "Underground",
+        "svgLayer": "Underground_Level",
+        "extents": [
+          {
+            "height": [
+              -10000,
+              -6
+            ]
+          }
+        ]
       }
     ],
     "author": "Shebuka",
@@ -131,41 +131,6 @@ export const mapConfigs: MapConfig[] = [
       28
     ],
     "floors": [
-      {
-        "id": "garage",
-        "name": "Garage",
-        "tilePath": "https://assets.tarkov.dev/maps/groundzero/garage/{z}/{x}/{y}.png",
-        "extents": [
-          {
-            "height": [
-              -1000,
-              21
-            ],
-            "bounds": [
-              [
-                [
-                  117,
-                  -100
-                ],
-                [
-                  43,
-                  190
-                ]
-              ],
-              [
-                [
-                  143,
-                  49
-                ],
-                [
-                  117,
-                  80
-                ]
-              ]
-            ]
-          }
-        ]
-      },
       {
         "id": "2nd-floor",
         "name": "2nd Floor",
@@ -209,10 +174,71 @@ export const mapConfigs: MapConfig[] = [
             ]
           }
         ]
+      },
+      {
+        "id": "garage",
+        "name": "Garage",
+        "tilePath": "https://assets.tarkov.dev/maps/groundzero/garage/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              -1000,
+              21
+            ],
+            "bounds": [
+              [
+                [
+                  117,
+                  -100
+                ],
+                [
+                  43,
+                  190
+                ]
+              ],
+              [
+                [
+                  143,
+                  49
+                ],
+                [
+                  117,
+                  80
+                ]
+              ]
+            ]
+          }
+        ]
       }
     ],
     "author": "Shebuka",
-    "authorLink": "https://github.com/the-hideout/tarkov-dev-svg-maps/"
+    "authorLink": "https://github.com/the-hideout/tarkov-dev-svg-maps/",
+    "tileGrid": {
+      "1": [
+        2,
+        2
+      ],
+      "2": [
+        4,
+        4
+      ],
+      "3": [
+        8,
+        8
+      ],
+      "4": [
+        16,
+        16
+      ],
+      "5": [
+        32,
+        32
+      ],
+      "6": [
+        64,
+        64
+      ]
+    }
   },
   {
     "key": "customs",
@@ -244,81 +270,6 @@ export const mapConfigs: MapConfig[] = [
       1000
     ],
     "floors": [
-      {
-        "id": "underground",
-        "name": "Underground",
-        "tilePath": "https://assets.tarkov.dev/maps/customs_0.16/underground/{z}/{x}/{y}.png",
-        "extents": [
-          {
-            "height": [
-              -1000,
-              0.5
-            ],
-            "bounds": [
-              [
-                [
-                  635,
-                  -137
-                ],
-                [
-                  620,
-                  -125
-                ]
-              ],
-              [
-                [
-                  473,
-                  -122
-                ],
-                [
-                  458,
-                  -110
-                ]
-              ],
-              [
-                [
-                  314,
-                  -173
-                ],
-                [
-                  308,
-                  -184
-                ]
-              ],
-              [
-                [
-                  349,
-                  -88
-                ],
-                [
-                  323,
-                  -32
-                ]
-              ],
-              [
-                [
-                  219,
-                  -158
-                ],
-                [
-                  193,
-                  -137
-                ]
-              ],
-              [
-                [
-                  122,
-                  -61
-                ],
-                [
-                  88,
-                  -40
-                ]
-              ]
-            ]
-          }
-        ]
-      },
       {
         "id": "2nd-floor",
         "name": "2nd Floor",
@@ -647,10 +598,107 @@ export const mapConfigs: MapConfig[] = [
             ]
           }
         ]
+      },
+      {
+        "id": "underground",
+        "name": "Underground",
+        "tilePath": "https://assets.tarkov.dev/maps/customs_0.16/underground/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              -1000,
+              0.5
+            ],
+            "bounds": [
+              [
+                [
+                  635,
+                  -137
+                ],
+                [
+                  620,
+                  -125
+                ]
+              ],
+              [
+                [
+                  473,
+                  -122
+                ],
+                [
+                  458,
+                  -110
+                ]
+              ],
+              [
+                [
+                  314,
+                  -173
+                ],
+                [
+                  308,
+                  -184
+                ]
+              ],
+              [
+                [
+                  349,
+                  -88
+                ],
+                [
+                  323,
+                  -32
+                ]
+              ],
+              [
+                [
+                  219,
+                  -158
+                ],
+                [
+                  193,
+                  -137
+                ]
+              ],
+              [
+                [
+                  122,
+                  -61
+                ],
+                [
+                  88,
+                  -40
+                ]
+              ]
+            ]
+          }
+        ]
       }
     ],
     "author": "Shebuka",
-    "authorLink": "https://github.com/the-hideout/tarkov-dev-svg-maps/"
+    "authorLink": "https://github.com/the-hideout/tarkov-dev-svg-maps/",
+    "tileGrid": {
+      "2": [
+        4,
+        4
+      ],
+      "3": [
+        8,
+        8
+      ],
+      "4": [
+        16,
+        16
+      ],
+      "5": [
+        32,
+        32
+      ],
+      "6": [
+        64,
+        64
+      ]
+    }
   },
   {
     "key": "factory",
@@ -723,7 +771,33 @@ export const mapConfigs: MapConfig[] = [
       }
     ],
     "author": "Shebuka",
-    "authorLink": "https://github.com/the-hideout/tarkov-dev-svg-maps/"
+    "authorLink": "https://github.com/the-hideout/tarkov-dev-svg-maps/",
+    "tileGrid": {
+      "1": [
+        2,
+        2
+      ],
+      "2": [
+        4,
+        4
+      ],
+      "3": [
+        8,
+        8
+      ],
+      "4": [
+        16,
+        16
+      ],
+      "5": [
+        32,
+        32
+      ],
+      "6": [
+        64,
+        64
+      ]
+    }
   },
   {
     "key": "interchange",
@@ -881,7 +955,29 @@ export const mapConfigs: MapConfig[] = [
       }
     ],
     "author": "Tarkov.dev",
-    "authorLink": "https://tarkov.dev"
+    "authorLink": "https://tarkov.dev",
+    "tileGrid": {
+      "2": [
+        4,
+        4
+      ],
+      "3": [
+        8,
+        8
+      ],
+      "4": [
+        16,
+        16
+      ],
+      "5": [
+        32,
+        32
+      ],
+      "6": [
+        64,
+        64
+      ]
+    }
   },
   {
     "key": "the-labyrinth",
@@ -910,7 +1006,33 @@ export const mapConfigs: MapConfig[] = [
     ],
     "floors": [],
     "author": "Tarkov.dev",
-    "authorLink": "https://tarkov.dev"
+    "authorLink": "https://tarkov.dev",
+    "tileGrid": {
+      "1": [
+        2,
+        2
+      ],
+      "2": [
+        4,
+        4
+      ],
+      "3": [
+        8,
+        8
+      ],
+      "4": [
+        16,
+        16
+      ],
+      "5": [
+        32,
+        32
+      ],
+      "6": [
+        64,
+        64
+      ]
+    }
   },
   {
     "key": "lighthouse",
@@ -972,123 +1094,6 @@ export const mapConfigs: MapConfig[] = [
       10000
     ],
     "floors": [
-      {
-        "id": "bunkers",
-        "name": "Bunkers",
-        "tilePath": "https://assets.tarkov.dev/maps/reserve/bunkers/{z}/{x}/{y}.png",
-        "extents": [
-          {
-            "height": [
-              -10000,
-              -7.27
-            ],
-            "bounds": [
-              [
-                [
-                  128,
-                  -208
-                ],
-                [
-                  18,
-                  -33
-                ]
-              ],
-              [
-                [
-                  -46,
-                  -42
-                ],
-                [
-                  -176,
-                  127
-                ]
-              ]
-            ]
-          },
-          {
-            "height": [
-              -10000,
-              -12
-            ],
-            "bounds": [
-              [
-                [
-                  -40,
-                  124
-                ],
-                [
-                  -124,
-                  189
-                ]
-              ]
-            ]
-          },
-          {
-            "height": [
-              -10000,
-              18
-            ],
-            "bounds": [
-              [
-                [
-                  23,
-                  173
-                ],
-                [
-                  -65,
-                  189
-                ]
-              ]
-            ]
-          },
-          {
-            "height": [
-              -7.27,
-              -3.2
-            ],
-            "bounds": [
-              [
-                [
-                  74,
-                  -196
-                ],
-                [
-                  19,
-                  -149
-                ]
-              ]
-            ]
-          },
-          {
-            "height": [
-              -11,
-              -4.6
-            ],
-            "bounds": [
-              [
-                [
-                  -246,
-                  -79
-                ],
-                [
-                  -274,
-                  -53
-                ]
-              ],
-              [
-                [
-                  238,
-                  -26
-                ],
-                [
-                  126,
-                  45
-                ]
-              ]
-            ]
-          }
-        ]
-      },
       {
         "id": "2nd-floor",
         "name": "2nd Floor",
@@ -1526,10 +1531,149 @@ export const mapConfigs: MapConfig[] = [
             ]
           }
         ]
+      },
+      {
+        "id": "bunkers",
+        "name": "Bunkers",
+        "tilePath": "https://assets.tarkov.dev/maps/reserve/bunkers/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              -10000,
+              -7.27
+            ],
+            "bounds": [
+              [
+                [
+                  128,
+                  -208
+                ],
+                [
+                  18,
+                  -33
+                ]
+              ],
+              [
+                [
+                  -46,
+                  -42
+                ],
+                [
+                  -176,
+                  127
+                ]
+              ]
+            ]
+          },
+          {
+            "height": [
+              -10000,
+              -12
+            ],
+            "bounds": [
+              [
+                [
+                  -40,
+                  124
+                ],
+                [
+                  -124,
+                  189
+                ]
+              ]
+            ]
+          },
+          {
+            "height": [
+              -10000,
+              18
+            ],
+            "bounds": [
+              [
+                [
+                  23,
+                  173
+                ],
+                [
+                  -65,
+                  189
+                ]
+              ]
+            ]
+          },
+          {
+            "height": [
+              -7.27,
+              -3.2
+            ],
+            "bounds": [
+              [
+                [
+                  74,
+                  -196
+                ],
+                [
+                  19,
+                  -149
+                ]
+              ]
+            ]
+          },
+          {
+            "height": [
+              -11,
+              -4.6
+            ],
+            "bounds": [
+              [
+                [
+                  -246,
+                  -79
+                ],
+                [
+                  -274,
+                  -53
+                ]
+              ],
+              [
+                [
+                  238,
+                  -26
+                ],
+                [
+                  126,
+                  45
+                ]
+              ]
+            ]
+          }
+        ]
       }
     ],
     "author": "Shebuka",
-    "authorLink": "https://github.com/the-hideout/tarkov-dev-svg-maps/"
+    "authorLink": "https://github.com/the-hideout/tarkov-dev-svg-maps/",
+    "tileGrid": {
+      "2": [
+        4,
+        4
+      ],
+      "3": [
+        8,
+        8
+      ],
+      "4": [
+        16,
+        16
+      ],
+      "5": [
+        32,
+        32
+      ],
+      "6": [
+        64,
+        64
+      ]
+    }
   },
   {
     "key": "shoreline",
@@ -1563,6 +1707,32 @@ export const mapConfigs: MapConfig[] = [
     ],
     "floors": [
       {
+        "id": "2nd-floor",
+        "name": "2nd Floor",
+        "svgLayer": "Second_Floor",
+        "extents": [
+          {
+            "height": [
+              -1,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3rd-floor",
+        "name": "3rd Floor",
+        "svgLayer": "Third_Floor",
+        "extents": [
+          {
+            "height": [
+              2,
+              1000
+            ]
+          }
+        ]
+      },
+      {
         "id": "underground",
         "name": "Underground",
         "svgLayer": "Underground_Level",
@@ -1593,32 +1763,6 @@ export const mapConfigs: MapConfig[] = [
                   -163
                 ]
               ]
-            ]
-          }
-        ]
-      },
-      {
-        "id": "2nd-floor",
-        "name": "2nd Floor",
-        "svgLayer": "Second_Floor",
-        "extents": [
-          {
-            "height": [
-              -1,
-              2
-            ]
-          }
-        ]
-      },
-      {
-        "id": "3rd-floor",
-        "name": "3rd Floor",
-        "svgLayer": "Third_Floor",
-        "extents": [
-          {
-            "height": [
-              2,
-              1000
             ]
           }
         ]
@@ -1684,7 +1828,29 @@ export const mapConfigs: MapConfig[] = [
     ],
     "floors": [],
     "author": "Shebuka",
-    "authorLink": "https://github.com/the-hideout/tarkov-dev-svg-maps/"
+    "authorLink": "https://github.com/the-hideout/tarkov-dev-svg-maps/",
+    "tileGrid": {
+      "2": [
+        4,
+        4
+      ],
+      "3": [
+        8,
+        8
+      ],
+      "4": [
+        16,
+        16
+      ],
+      "5": [
+        32,
+        32
+      ],
+      "6": [
+        64,
+        64
+      ]
+    }
   }
 ];
 

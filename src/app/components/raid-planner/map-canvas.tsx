@@ -13,6 +13,7 @@ import {
   type LayerEntry,
 } from "@/app/lib/raid-planner/layers";
 import { fillMapSvg } from "@/app/lib/raid-planner/map-svg";
+import { createMapTileLayer } from "@/app/lib/raid-planner/tiles";
 import { cn } from "@/lib/utils";
 
 const SVG_NS = "http://www.w3.org/2000/svg";
@@ -79,13 +80,7 @@ export function MapCanvas({
       let cancelled = false;
       const next: BaseMap = { map };
       if (config.strategy === "tile" && config.tilePath) {
-        next.tiles = L.tileLayer(config.tilePath, {
-          tileSize: config.tileSize,
-          bounds,
-          maxNativeZoom: config.maxZoom,
-          maxZoom,
-          keepBuffer: 4,
-        }).addTo(map);
+        next.tiles = createMapTileLayer(config, config.tilePath, { keepBuffer: 4 }).addTo(map);
         watchTiles(next.tiles, () => setBaseReady(true), () => setBaseError("The map tiles could not be loaded."));
       } else if (config.svgPath) {
         const svg = document.createElementNS(SVG_NS, "svg");
@@ -126,12 +121,7 @@ export function MapCanvas({
     const floor = config.floors.find((candidate) => candidate.id === activeFloor);
     const baseContainer = base.tiles?.getContainer();
     if (!floor?.tilePath) return;
-    const overlay = L.tileLayer(floor.tilePath, {
-      tileSize: config.tileSize,
-      bounds: getMapBounds(config.bounds),
-      maxNativeZoom: config.maxZoom,
-      maxZoom: Math.max(7, config.maxZoom),
-    }).addTo(base.map);
+    const overlay = createMapTileLayer(config, floor.tilePath).addTo(base.map);
     watchTiles(overlay, () => undefined, () => setBaseError("The floor tiles could not be loaded."));
     baseContainer?.classList.add(OFF_LEVEL_CLASS);
     return () => {

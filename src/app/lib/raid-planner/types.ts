@@ -86,6 +86,8 @@ export interface MapFloor {
   extents?: FloorExtent[];
 }
 
+export type TileGrid = Record<string, [number, number]>;
+
 export interface MapConfig {
   key: string;
   name: string;
@@ -104,4 +106,5 @@ export interface MapConfig {
   floors: MapFloor[];
   author?: string;
   authorLink?: string;
+  tileGrid?: TileGrid;
 }

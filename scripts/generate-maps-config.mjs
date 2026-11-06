@@ -27,6 +27,86 @@ function floorId(name) {
     .replace(/^-+|-+$/g, "");
 }
 
+const PROBE_CONCURRENCY = 8;
+const tileStatusCache = new Map();
+
+async function tileExists(tilePath, z, x, y) {
+  if (x < 0 || y < 0) return false;
+  const url = tilePath.replace("{z}", z).replace("{x}", x).replace("{y}", y);
+  if (!tileStatusCache.has(url)) {
+    tileStatusCache.set(
+      url,
+      (async () => {
+        for (let attempt = 0; attempt < 3; attempt += 1) {
+          const result = await fetch(url, { method: "HEAD" }).catch(() => null);
+          if (result && (result.status === 200 || result.status === 404 || result.status === 403)) {
+            return result.status === 200;
+          }
+        }
+        throw new Error(`Could not probe ${url}`);
+      })()
+    );
+  }
+  return tileStatusCache.get(url);
+}
+
+async function measureAxis(probe) {
+  if (!(await probe(0))) return 0;
+  let low = 0;
+  let high = 1;
+  while (await probe(high)) {
+    low = high;
+    high *= 2;
+    if (high > 1 << 16) throw new Error("Tile grid is unexpectedly large.");
+  }
+  while (high - low > 1) {
+    const middle = Math.floor((low + high) / 2);
+    if (await probe(middle)) low = middle;
+    else high = middle;
+  }
+  return high;
+}
+
+async function measureTileGrid(tilePath, z) {
+  const side = 2 ** z;
+  const [lastCorner, pastColumn, pastRow, pastCorner] = await Promise.all([
+    tileExists(tilePath, z, side - 1, side - 1),
+    tileExists(tilePath, z, side, 0),
+    tileExists(tilePath, z, 0, side),
+    tileExists(tilePath, z, side, side),
+  ]);
+  if (lastCorner && !pastColumn && !pastRow && !pastCorner) return [side, side];
+  const columns = await measureAxis((x) => tileExists(tilePath, z, x, 0));
+  const rows = await measureAxis((y) => tileExists(tilePath, z, 0, y));
+  return [columns, rows];
+}
+
+async function mapInBatches(items, task) {
+  const results = [];
+  for (let index = 0; index < items.length; index += PROBE_CONCURRENCY) {
+    results.push(...(await Promise.all(items.slice(index, index + PROBE_CONCURRENCY).map(task))));
+  }
+  return results;
+}
+
+async function computeTileGrid(config) {
+  const paths = [config.tilePath, ...config.floors.map((floor) => floor.tilePath)].filter(Boolean);
+  const zooms = [];
+  for (let z = config.minZoom; z <= config.maxZoom; z += 1) zooms.push(z);
+  const grid = {};
+  for (const z of zooms) {
+    const sizes = await mapInBatches(paths, (path) => measureTileGrid(path, z));
+    const columns = Math.min(...sizes.map(([value]) => value));
+    const rows = Math.min(...sizes.map(([, value]) => value));
+    if (sizes.some(([c, r]) => c !== columns || r !== rows)) {
+      console.warn(`"${config.key}" floors disagree on the zoom ${z} tile grid; using the smallest.`);
+    }
+    if (columns === 0 || rows === 0) throw new Error(`"${config.key}" has no tiles at zoom ${z}.`);
+    grid[z] = [columns, rows];
+  }
+  return grid;
+}
+
 const response = await fetch(SOURCE_URL);
 if (!response.ok) {
   throw new Error(`Failed to fetch maps.json: ${response.status}`);
@@ -101,6 +181,12 @@ for (const entry of source) {
     ...(interactive.author ? { author: interactive.author } : {}),
     ...(interactive.authorLink ? { authorLink: interactive.authorLink } : {}),
   });
+}
+
+for (const config of configs) {
+  if (config.strategy !== "tile") continue;
+  config.tileGrid = await computeTileGrid(config);
+  console.log(`Measured ${config.key} tile grid: ${JSON.stringify(config.tileGrid)}`);
 }
 
 const order = Object.keys(DISPLAY_NAMES);
