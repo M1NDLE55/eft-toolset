@@ -7,6 +7,7 @@ import type { MapConfig, PlanTool, RaidPlan } from "@/app/lib/raid-planner/types
 import { PLAN_COLORS } from "@/app/lib/raid-planner/types";
 import { getLayerGroups } from "@/app/lib/raid-planner/layer-options";
 import { getPlan, savePlan } from "@/app/lib/raid-planner/store";
+import { EMPTY_HISTORY, recordChange, redoStep, undoStep, type PlanHistory } from "@/app/lib/raid-planner/history";
 import { loadMapSvg } from "@/app/lib/raid-planner/map-svg";
 import { MAX_LAYERS, MAX_PLAN_NAME_LENGTH } from "@/app/lib/raid-planner/limits";
 import { useMapDetails } from "@/app/lib/cache/raidPlanner";
@@ -23,13 +24,11 @@ import { SharePlan } from "./share-plan";
 import { TOOLS, Toolbar } from "./toolbar";
 import { iconButton, overlayPanel } from "./ui";
 
-const HISTORY_LIMIT = 50;
-
 type PlanUpdater = (plan: RaidPlan) => RaidPlan;
 
 export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; config: MapConfig }) {
   const [draft, setDraft] = useState<RaidPlan | null>(null);
-  const [history, setHistory] = useState<RaidPlan[]>([]);
+  const [history, setHistory] = useState<PlanHistory>(EMPTY_HISTORY);
   const [saveError, setSaveError] = useState("");
   const [notice, setNotice] = useState("");
   const [tool, setTool] = useState<PlanTool>("select");
@@ -56,22 +55,27 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
     }
   }
 
+  function latestPlan() {
+    return draft ?? getPlan(storedPlan.id) ?? storedPlan;
+  }
+
   function updatePlan(updater: PlanUpdater, options: { undoable?: boolean } = {}) {
-    const base = draft ?? getPlan(storedPlan.id) ?? storedPlan;
+    const base = latestPlan();
     const next = updater(base);
     if (next === base) return;
-    if (options.undoable !== false) {
-      setHistory((entries) => [...entries.slice(1 - HISTORY_LIMIT), base]);
-    }
+    if (options.undoable !== false) setHistory((current) => recordChange(current, base));
     persist(next);
   }
 
-  function undo() {
-    const previous = history.at(-1);
-    if (!previous) return;
-    setHistory((entries) => entries.slice(0, -1));
-    persist(previous);
+  function step(move: typeof undoStep) {
+    const result = move(history, latestPlan());
+    if (!result) return;
+    setHistory(result.history);
+    persist(result.plan);
   }
+
+  const undo = () => step(undoStep);
+  const redo = () => step(redoStep);
 
   function changeLayers(ids: string[], checked: boolean) {
     const next = new Set(plan.enabledLayers);
@@ -94,9 +98,11 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
   }
 
   const onShortcut = useEffectEvent((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && !event.shiftKey && !event.altKey && event.key.toLowerCase() === "z") {
+    const key = event.key.toLowerCase();
+    if ((event.ctrlKey || event.metaKey) && !event.altKey && (key === "z" || (key === "y" && !event.shiftKey))) {
       event.preventDefault();
-      undo();
+      if (key === "z" && !event.shiftKey) undo();
+      else redo();
       return;
     }
     if (event.ctrlKey || event.metaKey || event.altKey) return;
@@ -219,8 +225,10 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
             onToolChange={setTool}
             color={color}
             onColorChange={setColor}
-            canUndo={history.length > 0}
+            canUndo={history.past.length > 0}
+            canRedo={history.future.length > 0}
             onUndo={undo}
+            onRedo={redo}
           />
         </div>
       </div>

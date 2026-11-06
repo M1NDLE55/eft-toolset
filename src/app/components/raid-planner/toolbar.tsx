@@ -8,6 +8,7 @@ import {
   Route,
   Ruler,
   StickyNote,
+  Redo2,
   Undo2,
 } from "lucide-react";
 import type { PlanTool } from "@/app/lib/raid-planner/types";
@@ -47,10 +48,21 @@ interface ToolbarProps {
   color: string;
   onColorChange: (color: string) => void;
   canUndo: boolean;
+  canRedo: boolean;
   onUndo: () => void;
+  onRedo: () => void;
 }
 
-export function Toolbar({ tool, onToolChange, color, onColorChange, canUndo, onUndo }: ToolbarProps) {
+export function Toolbar({
+  tool,
+  onToolChange,
+  color,
+  onColorChange,
+  canUndo,
+  canRedo,
+  onUndo,
+  onRedo,
+}: ToolbarProps) {
   return (
     <div className="flex flex-col-reverse items-center gap-2 sm:flex-col sm:items-start">
       <div
@@ -86,6 +98,17 @@ export function Toolbar({ tool, onToolChange, color, onColorChange, canUndo, onU
         >
           <Undo2 className="h-4 w-4" aria-hidden />
           <span className="sr-only">Undo</span>
+        </button>
+        <button
+          type="button"
+          title="Redo (Ctrl+Shift+Z)"
+          aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z Control+Y"
+          onClick={onRedo}
+          disabled={!canRedo}
+          className={cn(toolButton, "text-[#999] hover:bg-[#1a1a1a] hover:text-[#ddd]")}
+        >
+          <Redo2 className="h-4 w-4" aria-hidden />
+          <span className="sr-only">Redo</span>
         </button>
       </div>
 
