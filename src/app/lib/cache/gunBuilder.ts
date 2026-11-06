@@ -9,13 +9,6 @@ import { cacheDelete, cacheDeleteMany, cacheGet, cacheGetMany, cacheKeys, cacheS
 import { apiFetch } from "@/app/lib/api/transport";
 import { TARKOV_OPERATIONS, type TarkovOperation } from "@/app/lib/api/operations";
 
-/**
- * Gun-builder data lives in the same idb store as the bulk cache but is fetched
- * lazily and never goes through the bulk `meta` version gate. Wrap every entry
- * in a small envelope so it self-invalidates on schema changes (bump the
- * version) or after a wipe/patch (TTL). Volatile trader/flea projections expire
- * after 15 minutes while weapon structure and presets expire after 24 hours.
- */
 const GUN_CACHE_VERSION = 3;
 const PRICE_CACHE_TTL = 1000 * 60 * 15;
 const STRUCTURE_CACHE_TTL = 1000 * 60 * 60 * 24;
@@ -77,7 +70,6 @@ async function writeCache<T>(key: string, data: T): Promise<void> {
       data,
     });
   } catch {
-    // IndexedDB persistence is optional; return network data normally.
   }
 }
 
@@ -95,10 +87,6 @@ export async function fetchGunList(gameMode: GameMode): Promise<GunListItem[]> {
   return guns;
 }
 
-/**
- * Generic batched lazy-loader for per-id detail. Reads each id from idb, issues
- * one typed API call for the misses and writes each result back.
- */
 async function fetchCachedById<T extends { id: string }>(
   ids: string[],
   operation: TarkovOperation,
@@ -153,7 +141,6 @@ async function fetchCachedById<T extends { id: string }>(
         ])
       );
     } catch {
-      // IndexedDB persistence is optional; return network data normally.
     }
   }
 
@@ -327,7 +314,6 @@ function startGunCacheSweep() {
       });
       if (obsolete.length > 0) await cacheDeleteMany(obsolete);
     } catch {
-      // IndexedDB cleanup is best-effort.
     }
   })().finally(() => {
     gunCacheSweep = null;

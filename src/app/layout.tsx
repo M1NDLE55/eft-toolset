@@ -40,8 +40,6 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
-  // Nonce-based CSP requires per-request rendering so every framework script
-  // receives the nonce created by proxy.ts.
   await connection();
   const nonce = (await headers()).get("x-nonce") ?? undefined;
   return (

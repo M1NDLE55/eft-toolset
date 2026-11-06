@@ -174,7 +174,6 @@ function consumeRequestBudget(request: Request): {
     CLIENT_REFILL_PER_SECOND,
     now
   );
-  // Refresh insertion order so the bounded map doubles as an O(1) LRU.
   clientBuckets.delete(key);
   clientBuckets.set(key, bucket);
   while (clientBuckets.size > MAX_RATE_LIMIT_ENTRIES) {
@@ -208,9 +207,6 @@ function consumeToken(
 }
 
 function clientKey(request: Request) {
-  // These headers must be overwritten by the trusted production proxy. The
-  // global bucket and concurrency cap still protect direct/self-hosted traffic
-  // when a client can spoof forwarding headers.
   const forwarded = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
   return (
     request.headers.get("cf-connecting-ip")?.trim() ||

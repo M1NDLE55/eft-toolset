@@ -1,6 +1,3 @@
-// Panel model for the layer toggles. Kept free of leaflet imports so server
-// components and the (SSR'd) viewer page can use it; leaflet-side building
-// lives in layers.ts.
 import type { MapDetails, SpawnKind } from "@/app/lib/types/raidPlanner";
 
 export interface LayerOption {
@@ -22,7 +19,6 @@ export const SPAWN_KIND_LABELS: { kind: SpawnKind; label: string }[] = [
   { kind: "raider", label: "Raider / Rogue" },
 ];
 
-/** Grouped toggles with counts, zero-count entries dropped. */
 export function getLayerGroups(details: MapDetails): LayerGroupOptions[] {
   const extractCount = (faction: string) =>
     details.extracts.filter((e) => e.faction === faction).length;

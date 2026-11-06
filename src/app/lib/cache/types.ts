@@ -61,7 +61,6 @@ export interface CachedCraft {
   rewardItems: CachedContainedItem[];
 }
 
-/** Composed item with full relations resolved from separate caches */
 export interface ComposedItem extends Omit<CachedItem, "usedInTasks"> {
   usedInTasks: CachedTask[];
   bartersUsing: CachedBarter[];

@@ -26,7 +26,6 @@ const MAX_MAP_SVG_BYTES = 8 * 1024 * 1024;
 
 interface MapCanvasProps {
   config: MapConfig;
-  /** Floor id from config.floors, or null for ground level. */
   activeFloor: string | null;
   details: MapDetails | null;
   enabledLayers: string[];
@@ -53,7 +52,6 @@ export function MapCanvas({
   const [baseRetry, setBaseRetry] = useState(0);
   activeFloorRef.current = activeFloor;
 
-  // Create the map once per map config.
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -139,11 +137,9 @@ export function MapCanvas({
       entriesRef.current = new Map();
       entriesDetailsRef.current = null;
     };
-    // The canvas is remounted via `key` when the map changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [baseRetry, config]);
 
-  // Apply floor changes to the base imagery.
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
@@ -174,14 +170,12 @@ export function MapCanvas({
     }
   }, [config, activeFloor]);
 
-  // Sync data layers with the enabled set and dim markers off the active floor.
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
 
     const entries = entriesRef.current;
 
-    // Drop layers built from stale details (map data or game mode changed).
     if (entriesDetailsRef.current !== details) {
       entries.forEach((entry) => entry.group.removeFrom(map));
       entries.clear();
@@ -209,7 +203,6 @@ export function MapCanvas({
         entry = built;
       }
       if (!map.hasLayer(entry.group)) entry.group.addTo(map);
-      // After the group is on the map so marker elements exist.
       applyFloorDimming(entry, extents);
     });
   }, [config, details, enabledLayers, activeFloor]);
@@ -262,11 +255,6 @@ async function readTextWithLimit(response: Response, maxBytes: number): Promise<
   }
 }
 
-/**
- * Show the requested floor's SVG group, dim the ground group while a floor is
- * active, and hide all other floor groups. Groups marked to travel with the
- * ground level (data-keep-with-group) stay visible with it.
- */
 function applySvgFloor(
   svgElement: SVGSVGElement,
   config: MapConfig,

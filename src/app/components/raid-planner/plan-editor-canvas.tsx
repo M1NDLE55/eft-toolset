@@ -35,7 +35,6 @@ interface PlanEditorCanvasProps {
   plan: RaidPlan;
   tool: PlanTool;
   color: string;
-  /** false renders the plan read-only (share preview): no tools, no dragging. */
   interactive?: boolean;
   onPlanChange: (updater: (plan: RaidPlan) => RaidPlan) => void;
   onSelectNote: (id: string | null) => void;
@@ -65,7 +64,6 @@ export function PlanEditorCanvas({
   const planGroupRef = useRef<L.LayerGroup | null>(null);
   const measureRef = useRef<Measurement>({ start: null, line: null, label: null });
 
-  // Live refs so leaflet handlers (bound once) always see current values.
   const toolRef = useRef(tool);
   toolRef.current = tool;
   const colorRef = useRef(color);
@@ -79,7 +77,6 @@ export function PlanEditorCanvas({
   onLimitErrorRef.current = onLimitError;
   planRef.current = plan;
 
-  // Tool-dependent map behavior: freehand tools own the pointer.
   useEffect(() => {
     if (!map || !interactive) return;
     const container = map.getContainer();
@@ -106,7 +103,6 @@ export function PlanEditorCanvas({
     };
   }, [map, tool, interactive]);
 
-  // Freehand sketching via pointer events so mouse and touch behave alike.
   useEffect(() => {
     if (!map || !interactive) return;
     const container = map.getContainer();
@@ -200,10 +196,9 @@ export function PlanEditorCanvas({
         event.target instanceof Element &&
         event.target.closest(".leaflet-marker-icon")
       ) {
-        return; // marker drags win over sketching
+        return;
       }
       if (pointerId !== null) {
-        // A second finger means a pinch gesture, not a stroke.
         clearTemp();
         return;
       }
@@ -251,7 +246,6 @@ export function PlanEditorCanvas({
       if (event.pointerId === pointerId) clearTemp();
     };
 
-    // Clicks stay on the leaflet map so taps work like clicks.
     const handleClick = (event: L.LeafletMouseEvent) => {
       const activeTool = toolRef.current;
       if (activeTool === "route") {
@@ -311,7 +305,6 @@ export function PlanEditorCanvas({
     };
   }, [map, interactive]);
 
-  // Sync plan geometry.
   useEffect(() => {
     if (!map) return;
 
@@ -399,7 +392,6 @@ function handleMeasureClick(
   latlng: L.LatLng
 ) {
   if (measurement.start) {
-    // Second click freezes the measurement until the next one starts.
     updateMeasurement(measurement, latlng);
     measurement.start = null;
     return;

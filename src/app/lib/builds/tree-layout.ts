@@ -13,10 +13,6 @@ export interface PositionedNode {
   slot: ModSlotDef | null;
   path: string[];
   parentPath: string[];
-  // Tree-connector hints for the mobile stacked view.
-  // `isLastChild` is true when this node is the last of its siblings.
-  // `ancestorGuides[i]` is true when the ancestor occupying indent column `i`
-  // still has a following sibling, so its vertical rail should continue.
   isLastChild: boolean;
   ancestorGuides: boolean[];
   x: number;
@@ -71,7 +67,6 @@ function buildBranch(
 ): LayoutBranch {
   const item = data.get(node.itemId);
   const slots = item?.slots ?? [];
-  // The root has no parent rail, so its children start a fresh guide set.
   const childGuides = depth === 0 ? [] : [...ancestorGuides, !isLast];
   const children = slots.map((childSlot, index) => {
     const childIsLast = index === slots.length - 1;

@@ -140,8 +140,6 @@ export function BuildCanvas({
     }
   }
 
-  // Drag empty canvas space by translating the diagram instead of relying on
-  // scroll offsets, which keeps panning unbounded.
   function handlePanStart(event: React.PointerEvent<HTMLDivElement>) {
     if (event.pointerType === "mouse" && event.button !== 0) return;
     if ((event.target as HTMLElement).closest("[data-builder-node]")) return;

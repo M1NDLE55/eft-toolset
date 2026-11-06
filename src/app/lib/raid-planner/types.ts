@@ -13,7 +13,6 @@ export type PlanTool =
   | "eraser"
   | "measure";
 
-/** Tactical palette for drawings and notes. */
 export const PLAN_COLORS = [
   "#c8b384",
   "#9bc878",
@@ -32,7 +31,6 @@ const LEGACY_PLAN_COLORS: Record<string, (typeof PLAN_COLORS)[number]> = {
   "#cccccc": PLAN_COLORS[5],
 };
 
-/** Brightens drawings created with the original muted palette. */
 export function getPlanDisplayColor(color: string): string {
   const normalized = color.toLowerCase();
   return (
@@ -51,7 +49,6 @@ export interface Drawing {
   id: string;
   kind: "pen" | "arrow";
   color: string;
-  /** pen: full polyline; arrow: [from, to]. Stored in game coordinates. */
   points: GamePoint[];
 }
 
@@ -76,20 +73,15 @@ export interface RaidPlan {
 }
 
 export interface FloorExtent {
-  /** Game-coordinate y range [bottom, top] this floor covers. */
   height: [number, number];
-  /** Optional [x, z] corner-pair rectangles limiting where the range applies. */
   bounds?: [[number, number], [number, number]][];
 }
 
 export interface MapFloor {
   id: string;
   name: string;
-  /** Tile pyramid for this floor (tile-strategy maps). */
   tilePath?: string;
-  /** SVG group id for this floor (svg-strategy maps). */
   svgLayer?: string;
-  /** Floor that should be active when the map opens (e.g. Interchange 2nd floor). */
   show?: boolean;
   extents?: FloorExtent[];
 }
@@ -97,27 +89,17 @@ export interface MapFloor {
 export interface MapConfig {
   key: string;
   name: string;
-  /**
-   * How the base imagery renders. "tile" maps use z/x/y pyramids for the base
-   * and every floor; "svg" maps use a single SVG overlay whose top-level groups
-   * are the floors.
-   */
   strategy: "tile" | "svg";
   tilePath?: string;
   svgPath?: string;
-  /** SVG group id of the ground level (svg-strategy maps). */
   svgLayer?: string;
-  /** Explicit bounds for the SVG overlay when they differ from `bounds`. */
   svgBounds?: [[number, number], [number, number]];
   tileSize: number;
   minZoom: number;
   maxZoom: number;
-  /** [scaleX, marginX, scaleY, marginY] — game coords → leaflet CRS. */
   transform: [number, number, number, number];
   coordinateRotation: number;
-  /** Game-coordinate corners as [x, z] pairs. */
   bounds: [[number, number], [number, number]];
-  /** Game-coordinate y range covered by the ground level. */
   heightRange?: [number, number];
   floors: MapFloor[];
   author?: string;

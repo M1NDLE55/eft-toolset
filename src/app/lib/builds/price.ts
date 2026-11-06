@@ -2,11 +2,6 @@ import type { PriceSources } from "@/app/lib/types/gunBuilder";
 
 export const ALL_PRICE_SOURCES: PriceSources = { traders: true, flea: true };
 
-/**
- * Cheapest price for an item across the enabled purchase sources. Returns null
- * when the item has no price in any enabled source (e.g. barter/craft-only, or
- * flea-only with flea disabled).
- */
 export function effectivePrice(
   item: { traderPriceRUB: number | null; fleaPriceRUB: number | null },
   sources: PriceSources

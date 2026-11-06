@@ -137,7 +137,6 @@ export async function invalidateQuery<Variables, Data>(
   try {
     await cacheDelete(persistenceKey(key));
   } catch {
-    // Persistence is optional.
   }
   notify(key);
 }
@@ -165,7 +164,6 @@ async function hydrate<Variables, Data>(definition: QueryDefinition<Variables, D
       }
       if ((generations.get(key) ?? 0) === generation) memory.set(key, entry);
     } catch {
-      // IndexedDB can be blocked or unavailable. The network path remains usable.
     }
   })().finally(() => hydration.delete(key));
 
@@ -306,7 +304,6 @@ function startPersistenceSweep() {
       });
       if (obsolete.length > 0) await cacheDeleteMany(obsolete);
     } catch {
-      // Persistence cleanup is best-effort; IndexedDB may be unavailable.
     }
   })().finally(() => {
     persistenceSweep = null;

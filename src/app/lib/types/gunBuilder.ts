@@ -30,11 +30,6 @@ export interface BuildItemData {
   slots: ModSlotDef[];
 }
 
-/**
- * Lightweight projection used to populate the slot picker. Omits the recursive
- * `slots` tree (the heavy part of `BuildItemData`) — full detail is fetched only
- * when a mod is actually attached.
- */
 export interface PickItemData {
   id: string;
   name: string;
@@ -49,7 +44,6 @@ export interface PickItemData {
   conflictingSlotIds: string[];
 }
 
-/** Which purchase sources feed the "cheapest price" used for build cost. */
 export interface PriceSources {
   traders: boolean;
   flea: boolean;

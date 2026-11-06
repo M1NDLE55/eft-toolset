@@ -1,5 +1,3 @@
-// Builds Leaflet layer groups from map details and handles per-floor dimming.
-// Client-only (imports leaflet); only map-canvas should import this.
 import L from "leaflet";
 import type {
   MapDetails,
@@ -51,7 +49,6 @@ export interface LayerBuildContext {
   renderer: L.Canvas;
 }
 
-/** Extents the active floor covers; ground level falls back to heightRange. */
 export function getActiveExtents(
   config: MapConfig,
   activeFloor: string | null

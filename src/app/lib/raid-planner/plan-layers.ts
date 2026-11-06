@@ -1,5 +1,3 @@
-// Renders a plan's route, drawings, and notes as a Leaflet layer group.
-// Client-only (imports leaflet); only the editor canvas should import this.
 import L from "leaflet";
 import type { Drawing, GamePoint, NotePin, RaidPlan } from "./types";
 import { getPlanDisplayColor, PLAN_COLORS } from "./types";
@@ -9,7 +7,6 @@ import { makeLayerAccessible } from "./leaflet-accessibility";
 const ROUTE_COLOR = PLAN_COLORS[0];
 
 export interface PlanLayerHandlers {
-  /** Waypoint and note pins are draggable when this is set. */
   draggable: boolean;
   onWaypointClick: (id: string) => void;
   onDrawingClick: (id: string) => void;
@@ -109,11 +106,6 @@ export function buildNoteMarker(note: NotePin, draggable = false): L.Marker {
   return marker;
 }
 
-/**
- * Arrow = polyline plus a rotated arrowhead marker at the end. The screen
- * angle is zoom-invariant (uniform CRS scaling), so it can be projected once
- * at build time.
- */
 function buildArrow(
   map: L.Map,
   drawing: Drawing,

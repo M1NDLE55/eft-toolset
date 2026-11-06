@@ -45,16 +45,9 @@ export function useGunList() {
 }
 
 export function useBuildItemData(initialIds: string[]) {
-  // Builds are mode-agnostic: item data (prices, stats) always resolves against
-  // the active game mode, so toggling the mode live-converts the open build.
-  // The reset effect below clears the map on mode change and reloads the ids.
   const { gameMode, hydrated } = useGameMode();
   const [items, setItems] = useState<Map<string, BuildItemData>>(new Map());
   const [loadingIds, setLoadingIds] = useState<Set<string>>(new Set());
-  // Mirror `items` in a ref so `loadBuildItems` can stay referentially stable.
-  // Keeping `items` in the callback deps recreates it on every load, which
-  // re-fires the consumers' effects (initial load + slot picker) and triggers
-  // redundant fetch passes.
   const itemsRef = useRef(items);
   const activeMode = useRef(gameMode);
   const inFlightIds = useRef(new Set<string>());

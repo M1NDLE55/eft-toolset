@@ -91,25 +91,7 @@ export function getColumns(handleRemove: (name: string) => void) {
         return value > 0 ? Rubles.format(value) : "n/a";
       },
     },
-    // {
-    //   accessorKey: "changeLast48hPercent",
-    //   header: "48h",
-    //   cell: ({ row }) => {
-    //     const item = row.original;
 
-    //     return item.changeLast48hPercent ? (
-    //       <span
-    //         className={`${
-    //           item.changeLast48hPercent >= 0 ? "text-green-400" : "text-red-400"
-    //         }`}
-    //       >
-    //         {item.changeLast48hPercent}%
-    //       </span>
-    //     ) : (
-    //       "n/a"
-    //     );
-    //   },
-    // },
     {
       accessorKey: "wikiLink",
       header: "Wiki",
