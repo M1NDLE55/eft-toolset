@@ -17,8 +17,13 @@ interface NoteEditorProps {
 }
 
 export function NoteEditor({ note, onChange, onDelete, onClose }: NoteEditorProps) {
-  const [title, setTitle] = useState(note.title);
-  const [body, setBody] = useState(note.body);
+  const [draft, setDraft] = useState({ title: note.title, body: note.body, base: note });
+  if (draft.base.title !== note.title || draft.base.body !== note.body) {
+    setDraft({ title: note.title, body: note.body, base: note });
+  }
+  const { title, body } = draft;
+  const setTitle = (value: string) => setDraft((current) => ({ ...current, title: value }));
+  const setBody = (value: string) => setDraft((current) => ({ ...current, body: value }));
   const titleId = useId();
   const activeColor = getPlanDisplayColor(note.color);
 
