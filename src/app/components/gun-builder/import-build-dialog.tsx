@@ -89,7 +89,7 @@ function ImportForm() {
     if (!build || unknownWeapon) return;
     try {
       const fallback = gun?.name.slice(0, MAX_BUILD_NAME_LENGTH) ?? "Imported build";
-      const created = createBuild(name.trim() || fallback, build.weaponId, build.root);
+      const created = createBuild(name.trim() || fallback, build.weaponId, build.root, build.ammoId);
       router.push(`/gun-builder/${created.id}`);
     } catch (reason) {
       setSaveError(reason instanceof Error ? reason.message : "Could not save this build.");

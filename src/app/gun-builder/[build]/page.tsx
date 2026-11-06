@@ -12,6 +12,7 @@ import {
   duplicateBuild,
   findBuild,
   renameBuild,
+  setBuildAmmo,
   setHideEmptySlots,
   setPriceSources,
   updateBuildTree,
@@ -32,6 +33,7 @@ import {
 import { MAX_BUILD_NAME_LENGTH } from "@/app/lib/builds/limits";
 import { optimizeBuild } from "@/app/lib/builds/optimizer";
 import { treesEqual } from "@/app/lib/builds/compare";
+import { ammoFits, ammoOptions } from "@/app/lib/builds/ammo";
 import {
   detailedItems,
   ensureGunItems,
@@ -40,7 +42,7 @@ import {
   loadPresetTree,
   prefetchSlotItems,
 } from "@/app/lib/cache/gunBuilder";
-import { useGunItems, useGunList } from "@/app/lib/cache/gunBuilderHooks";
+import { useAmmoItems, useGunItems, useGunList } from "@/app/lib/cache/gunBuilderHooks";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { NameDialog } from "@/components/name-dialog";
@@ -50,6 +52,7 @@ import { BuildCanvas } from "@/app/components/gun-builder/build-canvas";
 import { StatsPanel, missingKey } from "@/app/components/gun-builder/stats-panel";
 import { OptimizerDialog } from "@/app/components/gun-builder/optimizer-dialog";
 import { UndoToast } from "@/app/components/gun-builder/undo-toast";
+import { AmmoPanel, AmmoPicker } from "@/app/components/gun-builder/ammo-picker";
 import { useDocumentTitle } from "@/app/components/gun-builder/use-document-title";
 import { ShareBuild } from "@/app/components/gun-builder/share-build";
 import { PresetDialog } from "@/app/components/gun-builder/preset-dialog";
@@ -105,13 +108,19 @@ function BuildEditor({ build }: { build: GunBuild }) {
   const [actionError, setActionError] = useState("");
   const [undo, setUndo] = useState<{ root: BuildNode; label: string } | null>(null);
   const [filling, setFilling] = useState<string | null>(null);
+  const [ammoOpen, setAmmoOpen] = useState(false);
+  const selectedAmmoIds = useMemo(() => (build.ammoId ? [build.ammoId] : []), [build.ammoId]);
+  const { items: ammoItems, loading: ammoLoading } = useAmmoItems(selectedAmmoIds);
   const intentTimer = useRef<number | undefined>(undefined);
   const undoTimer = useRef<number | undefined>(undefined);
 
   const gun = byId.get(build.weaponId);
   const weaponData = items.get(build.weaponId);
   const weapon = isDetailed(weaponData) ? weaponData : null;
-  const stats = computeStats(build.root, items, priceSources);
+  const ammoChoice = ammoOptions(build.root, items);
+  const ammoData = build.ammoId ? ammoItems.get(build.ammoId) : undefined;
+  const activeAmmo = ammoData && ammoFits(build.ammoId, ammoChoice) ? ammoData : null;
+  const stats = computeStats(build.root, items, priceSources, activeAmmo);
   const flow = useMemo(() => layoutBuild(build.root, items, hideEmpty), [build.root, items, hideEmpty]);
   const parts = countParts(build.root);
   const image = weaponData?.gridImageLink ?? gun?.gridImageLink ?? null;
@@ -230,6 +239,7 @@ function BuildEditor({ build }: { build: GunBuild }) {
         priceSources,
         replaceExisting: false,
         target: missing ? { parentPath: missing.parentPath, slotId: missing.slot.id } : null,
+        ammoId: build.ammoId ?? null,
       });
       if (!result.changed) {
         throw new Error(
@@ -339,6 +349,7 @@ function BuildEditor({ build }: { build: GunBuild }) {
             gameMode={gameMode}
             priceSources={priceSources}
             currentCost={stats.costRUB}
+            ammo={ammoData ?? null}
             disabled={!weapon}
             onApply={(root, base, label) => run(() => replaceTree(base, root, label))}
           />
@@ -404,6 +415,27 @@ function BuildEditor({ build }: { build: GunBuild }) {
         onFillSlot={openMissing}
         onFillCheapest={(missing) => void fillCheapest(missing)}
         filling={filling}
+      />
+
+      <AmmoPanel
+        ammo={ammoData}
+        ammoId={build.ammoId ?? null}
+        options={ammoChoice}
+        loading={ammoLoading}
+        priceSources={priceSources}
+        onOpen={() => setAmmoOpen(true)}
+        onClear={() => run(() => setBuildAmmo(build.id, null))}
+      />
+      <AmmoPicker
+        open={ammoOpen}
+        options={ammoChoice}
+        selectedId={build.ammoId ?? null}
+        priceSources={priceSources}
+        onClose={() => setAmmoOpen(false)}
+        onSelect={(ammoId) => {
+          setAmmoOpen(false);
+          run(() => setBuildAmmo(build.id, ammoId));
+        }}
       />
 
       <div className="-mb-2 flex items-center justify-between gap-3">

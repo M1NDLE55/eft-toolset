@@ -12,7 +12,9 @@ import { decodeBuildSharePayload, type DecodedSharedBuild } from "@/app/lib/buil
 import { collectItemIds, countParts } from "@/app/lib/builds/tree";
 import { computeStats } from "@/app/lib/builds/stats";
 import { layoutBuild } from "@/app/lib/builds/tree-layout";
-import { useGunItems } from "@/app/lib/cache/gunBuilderHooks";
+import { useAmmoItems, useGunItems } from "@/app/lib/cache/gunBuilderHooks";
+import { ammoFits, ammoOptions } from "@/app/lib/builds/ammo";
+import { formatDamage } from "@/app/components/gun-builder/ammo-picker";
 import { formatRub } from "@/app/components/gun-builder/format";
 import { MAX_BUILD_NAME_LENGTH } from "@/app/lib/builds/limits";
 import { itemHref } from "@/app/lib/item-links";
@@ -97,7 +99,15 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
   const [importing, setImporting] = useState(false);
   const [importError, setImportError] = useState("");
   const weapon = items.get(build.weaponId);
-  const stats = computeStats(build.root, items, priceSources);
+  const ammoIds = useMemo(() => (build.ammoId ? [build.ammoId] : []), [build.ammoId]);
+  const { items: ammoItems } = useAmmoItems(ammoIds);
+  const ammo = build.ammoId ? ammoItems.get(build.ammoId) : undefined;
+  const stats = computeStats(
+    build.root,
+    items,
+    priceSources,
+    ammo && ammoFits(ammo.id, ammoOptions(build.root, items)) ? ammo : null
+  );
   const parts = countParts(build.root);
   const rows = layoutBuild(build.root, items).nodes.filter((node) => node.kind === "item");
   const name = build.name || weapon?.name.slice(0, MAX_BUILD_NAME_LENGTH) || "Shared build";
@@ -107,7 +117,7 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
     setImporting(true);
     setImportError("");
     try {
-      const created = createBuild(name, build.weaponId, build.root);
+      const created = createBuild(name, build.weaponId, build.root, build.ammoId);
       router.replace(`/gun-builder/${created.id}`);
     } catch (reason) {
       setImporting(false);
@@ -153,6 +163,24 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
           </div>
         ))}
       </dl>
+
+      {build.ammoId && (
+        <p className="flex flex-wrap items-center gap-x-3 gap-y-1 border border-[#1a1a1a] bg-[#0c0c0c] px-3 py-2 text-sm">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-[#888]">Ammo</span>
+          {ammo ? (
+            <Link href={itemHref(ammo)} prefetch={false} className="min-w-0 truncate text-[#ddd] hover:text-[#e6d9b8] hover:underline">
+              {ammo.name}
+            </Link>
+          ) : (
+            <span className="text-[#888]">Loading…</span>
+          )}
+          {ammo && (
+            <span className="text-xs tabular-nums text-[#888]">
+              Pen {ammo.penetrationPower} · Dmg {formatDamage(ammo)}
+            </span>
+          )}
+        </p>
+      )}
 
       <div className="flex flex-col gap-2 sm:flex-row">
         <Button onClick={handleImport} disabled={importing} className="sm:flex-1">

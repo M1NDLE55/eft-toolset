@@ -10,14 +10,15 @@ import { useHydrated } from "@/app/lib/storage/use-store";
 import { findBuild, setPriceSources, useBuilds, usePriceSources } from "@/app/lib/builds/store";
 import { collectItemIds } from "@/app/lib/builds/tree";
 import { buildShoppingList, formatShoppingList } from "@/app/lib/builds/shopping";
-import { useGunItems, useGunList } from "@/app/lib/cache/gunBuilderHooks";
+import { useAmmoItems, useGunItems, useGunList } from "@/app/lib/cache/gunBuilderHooks";
+import { effectivePrice } from "@/app/lib/builds/price";
 import { itemHref } from "@/app/lib/item-links";
 import { copyText } from "@/app/lib/browser/clipboard";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LocalMissing } from "@/components/local-missing";
 import { PriceSourcesControl } from "@/app/components/gun-builder/stats-panel";
-import { formatRub, modeLabel } from "@/app/components/gun-builder/format";
+import { formatRub, formatTrader, modeLabel } from "@/app/components/gun-builder/format";
 import { useDocumentTitle } from "@/app/components/gun-builder/use-document-title";
 import { cn } from "@/lib/utils";
 
@@ -62,6 +63,9 @@ function ShoppingList({ build }: { build: GunBuild }) {
   const priceSources = usePriceSources();
   const { byId } = useGunList();
   const [includeWeapon, setIncludeWeapon] = useState(true);
+  const ammoIds = useMemo(() => (build.ammoId ? [build.ammoId] : []), [build.ammoId]);
+  const { items: ammoItems } = useAmmoItems(ammoIds);
+  const ammo = build.ammoId ? ammoItems.get(build.ammoId) : undefined;
   const [notice, setNotice] = useState<{ ok: boolean; text: string } | null>(null);
   useDocumentTitle(`Shopping list · ${build.name || "Untitled build"}`);
 
@@ -263,6 +267,17 @@ function ShoppingList({ build }: { build: GunBuild }) {
           </tfoot>
         </table>
       </div>
+      {ammo && (
+        <p className="flex flex-wrap items-center gap-x-3 gap-y-1 border border-[#1a1a1a] bg-[#0c0c0c] px-3 py-2 text-sm">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-[#888]">Ammo</span>
+          <Link href={itemHref(ammo)} prefetch={false} className="min-w-0 truncate font-semibold text-[#ddd] hover:text-[#e6d9b8] hover:underline">
+            {ammo.name}
+          </Link>
+          <span className="tabular-nums text-[#ccc]">{formatRub(effectivePrice(ammo, priceSources))} per round</span>
+          {formatTrader(ammo) && <span className="text-xs text-[#9a8866]">{formatTrader(ammo)}</span>}
+          <span className="text-xs text-[#666]">Not included in the total</span>
+        </p>
+      )}
       <p className="text-xs text-[#666]">
         Best uses the cheaper of your selected sources. Prices refresh every 15 minutes.
       </p>

@@ -2,12 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AlertTriangle, Check, LoaderCircle, Sparkles } from "lucide-react";
-import type { BuildNode, GunBuild, PriceSources } from "@/app/lib/types/gunBuilder";
+import type { AmmoItemData, BuildNode, GunBuild, PriceSources } from "@/app/lib/types/gunBuilder";
 import type { GameMode } from "@/components/game-mode/context";
 import { optimizeBuild, type OptimizeGoal } from "@/app/lib/builds/optimizer";
 import { computeStats, type ItemLookup } from "@/app/lib/builds/stats";
 import { diffBuildTrees, statDeltas, type SlotDiffRow, type StatDelta } from "@/app/lib/builds/compare";
 import { collectItemIds } from "@/app/lib/builds/tree";
+import { ammoFits, ammoOptions } from "@/app/lib/builds/ammo";
 import { getGunItemState, loadCompatibilityGraph } from "@/app/lib/cache/gunBuilder";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -96,6 +97,7 @@ export function OptimizerDialog({
   gameMode,
   priceSources,
   currentCost,
+  ammo,
   disabled,
   onApply,
 }: {
@@ -103,6 +105,7 @@ export function OptimizerDialog({
   gameMode: GameMode;
   priceSources: PriceSources;
   currentCost: number | null;
+  ammo: AmmoItemData | null;
   disabled: boolean;
   onApply: (root: BuildNode, base: BuildNode, label: string) => void;
 }) {
@@ -154,7 +157,14 @@ export function OptimizerDialog({
       const result = await optimizeBuild(
         base,
         lookup,
-        { goal, priceSources, budget: goal === "cost" ? null : budget, replaceExisting, allowUnpriced },
+        {
+          goal,
+          priceSources,
+          budget: goal === "cost" ? null : budget,
+          replaceExisting,
+          allowUnpriced,
+          ammoId: build.ammoId ?? null,
+        },
         {
           signal: active.signal,
           onProgress: (step) => {
@@ -163,8 +173,10 @@ export function OptimizerDialog({
         }
       );
       if (active.signal.aborted) return;
-      const before = computeStats(base, lookup, priceSources);
-      const after = computeStats(result.root, lookup, priceSources);
+      const ammoFor = (root: BuildNode) =>
+        ammo && ammoFits(ammo.id, ammoOptions(root, lookup)) ? ammo : null;
+      const before = computeStats(base, lookup, priceSources, ammoFor(base));
+      const after = computeStats(result.root, lookup, priceSources, ammoFor(result.root));
       setPhase({
         status: "done",
         base,

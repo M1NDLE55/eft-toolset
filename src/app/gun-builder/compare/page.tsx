@@ -11,7 +11,8 @@ import { findBuild, sortBuilds, useBuilds, usePriceSources, setPriceSources } fr
 import { collectItemIds, countParts } from "@/app/lib/builds/tree";
 import { computeStats } from "@/app/lib/builds/stats";
 import { diffBuildTrees, statDeltas } from "@/app/lib/builds/compare";
-import { useGunItems, useGunList } from "@/app/lib/cache/gunBuilderHooks";
+import { useAmmoItems, useGunItems, useGunList } from "@/app/lib/cache/gunBuilderHooks";
+import { ammoFits, ammoOptions } from "@/app/lib/builds/ammo";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { StatDeltaTable } from "@/app/components/gun-builder/stat-deltas";
@@ -158,8 +159,17 @@ function Comparison({
   const { byId } = useGunList();
   const [showSame, setShowSame] = useState(false);
 
-  const leftStats = computeStats(left.root, items, priceSources);
-  const rightStats = computeStats(right.root, items, priceSources);
+  const ammoIds = useMemo(
+    () => [left.ammoId, right.ammoId].filter((id): id is string => Boolean(id)),
+    [left.ammoId, right.ammoId]
+  );
+  const { items: ammoItems } = useAmmoItems(ammoIds);
+  const ammoFor = (build: GunBuild) => {
+    const ammo = build.ammoId ? ammoItems.get(build.ammoId) : undefined;
+    return ammo && ammoFits(ammo.id, ammoOptions(build.root, items)) ? ammo : null;
+  };
+  const leftStats = computeStats(left.root, items, priceSources, ammoFor(left));
+  const rightStats = computeStats(right.root, items, priceSources, ammoFor(right));
   const deltas = statDeltas(leftStats, rightStats);
   const rows = diffBuildTrees(left.root, right.root, items);
   const changed = rows.filter((row) => row.status !== "same");
@@ -207,6 +217,11 @@ function Comparison({
                   {weapon?.shortName ?? "Weapon"} · {parts} part{parts === 1 ? "" : "s"}
                   <span className="max-sm:hidden"> · {formatDate(build.updatedAt)}</span>
                 </span>
+                {build.ammoId && (
+                  <span className="block truncate text-xs text-[#9a8866]">
+                    {ammoItems.get(build.ammoId)?.shortName ?? "Ammo"}
+                  </span>
+                )}
               </span>
             </Link>
           );
