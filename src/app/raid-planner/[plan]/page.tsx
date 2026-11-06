@@ -217,8 +217,8 @@ export default function PlanEditorPage() {
         onLimitError={setSaveError}
       />
 
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-[1000] flex items-start justify-between gap-2 p-3">
-        <div className="pointer-events-auto flex items-center gap-2 border border-[#2a2a2a] bg-[#090909]/90 px-3 py-2 backdrop-blur-sm">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-1000 flex items-start justify-between gap-2 p-3">
+        <div className="pointer-events-auto flex items-center gap-2 border border-[#2a2a2a] bg-[#090909]/90 px-3 py-2 backdrop-blur-xs">
           <Link
             href={{ pathname: "/raid-planner" }}
             className="text-[#888] transition-colors hover:text-[#9a8866]"
@@ -263,7 +263,7 @@ export default function PlanEditorPage() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute z-[1000] p-3 max-sm:inset-x-0 max-sm:bottom-0 max-sm:flex max-sm:justify-center sm:left-0 sm:top-1/2 sm:-translate-y-1/2">
+      <div className="pointer-events-none absolute z-1000 p-3 max-sm:inset-x-0 max-sm:bottom-0 max-sm:flex max-sm:justify-center sm:left-0 sm:top-1/2 sm:-translate-y-1/2">
         <div className="pointer-events-auto">
           <Toolbar
             tool={tool}
@@ -275,7 +275,7 @@ export default function PlanEditorPage() {
       </div>
 
       {selectedNote && (
-        <div className="pointer-events-none absolute bottom-0 left-0 z-[1000] p-3 pb-10 max-sm:bottom-14">
+        <div className="pointer-events-none absolute bottom-0 left-0 z-1000 p-3 pb-10 max-sm:bottom-14">
           <div className="pointer-events-auto">
             <NoteEditor
               key={selectedNote.id}
@@ -303,7 +303,7 @@ export default function PlanEditorPage() {
         </div>
       )}
 
-      <div className="pointer-events-none absolute bottom-0 right-0 z-[1000] flex flex-col items-end gap-2 p-3 pb-24">
+      <div className="pointer-events-none absolute bottom-0 right-0 z-1000 flex flex-col items-end gap-2 p-3 pb-24">
         <div className="pointer-events-auto">
           <FloorSwitcher
             config={config}
@@ -314,7 +314,7 @@ export default function PlanEditorPage() {
       </div>
 
       {config.author && (
-        <div className="pointer-events-none absolute bottom-0 left-0 z-[999] p-3 max-sm:pb-16">
+        <div className="pointer-events-none absolute bottom-0 left-0 z-999 p-3 max-sm:pb-16">
           <p className="pointer-events-auto bg-[#090909]/80 px-2 py-1 text-[10px] uppercase tracking-widest text-[#888]">
             Map by{" "}
             {config.authorLink ? (

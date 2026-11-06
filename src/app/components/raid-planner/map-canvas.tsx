@@ -223,7 +223,7 @@ export function MapCanvas({
         aria-label={`${config.name} interactive map`}
       />
       {baseMapError && (
-        <div role="alert" className="absolute bottom-3 left-1/2 z-[1001] flex -translate-x-1/2 items-center gap-2 border border-red-900/60 bg-[#090909]/95 px-3 py-2 text-xs text-red-200">
+        <div role="alert" className="absolute bottom-3 left-1/2 z-1001 flex -translate-x-1/2 items-center gap-2 border border-red-900/60 bg-[#090909]/95 px-3 py-2 text-xs text-red-200">
           <span>{baseMapError}</span>
           <button type="button" className="underline underline-offset-2" onClick={() => setBaseRetry((value) => value + 1)}>
             Retry

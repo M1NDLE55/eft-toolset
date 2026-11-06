@@ -20,11 +20,11 @@ export default function UsedInTasks({ tasks }: { tasks: Item["usedInTasks"] }) {
     <div className="flex flex-col" id="tasks">
       <h2 className="text-lg">Used In Tasks</h2>
       {tasks.length === 0 ? (
-        <div className="px-3 py-3 shadow bg-secondary text-sm text-[#9a8866]">
+        <div className="px-3 py-3 shadow-sm bg-secondary text-sm text-[#9a8866]">
           This item is not used in any tasks
         </div>
       ) : (
-        <div className="px-3 py-1 flex flex-col shadow bg-secondary">
+        <div className="px-3 py-1 flex flex-col shadow-sm bg-secondary">
           {tasks.map(
             (task, i) =>
               task && (

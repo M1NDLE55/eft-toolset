@@ -39,7 +39,7 @@ export function Toolbar({
   onColorChange,
 }: ToolbarProps) {
   return (
-    <div role="toolbar" aria-label="Plan tools" className="flex flex-row border border-[#2a2a2a] bg-[#090909]/90 backdrop-blur-sm sm:flex-col">
+    <div role="toolbar" aria-label="Plan tools" className="flex flex-row border border-[#2a2a2a] bg-[#090909]/90 backdrop-blur-xs sm:flex-col">
       {TOOLS.map(({ tool: id, label, icon: Icon }) => (
         <button
           key={id}

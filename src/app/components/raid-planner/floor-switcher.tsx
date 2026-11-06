@@ -22,7 +22,7 @@ export function FloorSwitcher({
   ];
 
   return (
-    <div role="group" aria-label="Map floor" className="flex flex-col border border-[#2a2a2a] bg-[#090909]/90 backdrop-blur-sm">
+    <div role="group" aria-label="Map floor" className="flex flex-col border border-[#2a2a2a] bg-[#090909]/90 backdrop-blur-xs">
       {options.map((option) => (
         <button
           key={option.id ?? "ground"}

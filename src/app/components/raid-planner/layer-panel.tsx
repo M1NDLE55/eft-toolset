@@ -32,7 +32,7 @@ export function LayerPanel({
         onClick={() => setOpen(true)}
         aria-expanded="false"
         aria-controls={panelId}
-        className="flex items-center gap-2 border border-[#2a2a2a] bg-[#090909]/90 px-3 py-2 text-[10px] uppercase tracking-widest text-[#888] backdrop-blur-sm transition-colors hover:border-[#9a8866] hover:text-[#ccc]"
+        className="flex items-center gap-2 border border-[#2a2a2a] bg-[#090909]/90 px-3 py-2 text-[10px] uppercase tracking-widest text-[#888] backdrop-blur-xs transition-colors hover:border-[#9a8866] hover:text-[#ccc]"
       >
         <Layers className="h-4 w-4" />
         Layers
@@ -46,7 +46,7 @@ export function LayerPanel({
   }
 
   return (
-    <div id={panelId} aria-label="Map layers" className="flex max-h-[70dvh] w-64 flex-col border border-[#2a2a2a] bg-[#090909]/95 backdrop-blur-sm">
+    <div id={panelId} aria-label="Map layers" className="flex max-h-[70dvh] w-64 flex-col border border-[#2a2a2a] bg-[#090909]/95 backdrop-blur-xs">
       <div className="flex items-center justify-between border-b border-[#2a2a2a] px-3 py-2">
         <span className="text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">
           Layers

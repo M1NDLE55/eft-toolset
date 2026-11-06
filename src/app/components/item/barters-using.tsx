@@ -27,11 +27,11 @@ export default function BartersUsing({
     <div className="flex flex-col" id="barters">
       <h2 className="text-lg">Barters Using</h2>
       {barters.length === 0 ? (
-        <div className="px-3 py-3 shadow bg-secondary text-sm text-[#9a8866]">
+        <div className="px-3 py-3 shadow-sm bg-secondary text-sm text-[#9a8866]">
           No barters use this item
         </div>
       ) : (
-        <div className="px-3 py-1 shadow bg-secondary flex flex-col">
+        <div className="px-3 py-1 shadow-sm bg-secondary flex flex-col">
           {barters.map(
             (barter, i) =>
               barter && (

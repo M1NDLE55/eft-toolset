@@ -44,7 +44,7 @@ export function NoteEditor({ note, onChange, onDelete, onClose }: NoteEditorProp
   }
 
   return (
-    <div className="flex w-64 flex-col gap-2 border border-[#2a2a2a] bg-[#090909]/95 p-3 backdrop-blur-sm">
+    <div className="flex w-64 flex-col gap-2 border border-[#2a2a2a] bg-[#090909]/95 p-3 backdrop-blur-xs">
       <div className="flex items-center justify-between">
         <span className="text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">
           Note
@@ -99,7 +99,7 @@ export function NoteEditor({ note, onChange, onDelete, onClose }: NoteEditorProp
           schedule({ body: event.target.value });
         }}
         onBlur={flush}
-        className="w-full resize-none border border-input bg-transparent px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+        className="w-full resize-none border border-input bg-transparent px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring"
       />
 
       <div className="flex gap-1.5">

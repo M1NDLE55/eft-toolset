@@ -27,11 +27,11 @@ export default function CraftsUsing({
     <div className="flex flex-col" id="crafts">
       <h2 className="text-lg">Crafts Using</h2>
       {crafts.length === 0 ? (
-        <div className="px-3 py-3 shadow bg-secondary text-sm text-[#9a8866]">
+        <div className="px-3 py-3 shadow-sm bg-secondary text-sm text-[#9a8866]">
           No crafts use this item
         </div>
       ) : (
-        <div className="px-3 py-1 shadow bg-secondary flex flex-col">
+        <div className="px-3 py-1 shadow-sm bg-secondary flex flex-col">
           {crafts.map(
             (craft, i) =>
               craft && (

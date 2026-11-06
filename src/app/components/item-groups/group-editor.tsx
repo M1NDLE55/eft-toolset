@@ -46,7 +46,7 @@ export default function GroupEditor({
       {isModalOpen && (
         <div
           onClick={() => setIsModalOpen(false)}
-          className="absolute top-0 left-0 flex justify-center items-center h-full w-full backdrop-blur"
+          className="absolute top-0 left-0 flex justify-center items-center h-full w-full backdrop-blur-sm"
         >
           <div
             onClick={(e) => {
@@ -57,7 +57,7 @@ export default function GroupEditor({
             <p className="pb-4">Are you sure?</p>
             <button
               onClick={handleDelete}
-              className="block w-full bg-red-500 shadow-sm mb-2 py-1 px-2"
+              className="block w-full bg-red-500 shadow-xs mb-2 py-1 px-2"
             >
               Yes
             </button>
