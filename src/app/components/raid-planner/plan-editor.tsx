@@ -7,6 +7,7 @@ import type { MapConfig, PlanTool, RaidPlan } from "@/app/lib/raid-planner/types
 import { PLAN_COLORS } from "@/app/lib/raid-planner/types";
 import { getLayerGroups } from "@/app/lib/raid-planner/layer-options";
 import { getPlan, savePlan } from "@/app/lib/raid-planner/store";
+import { updateToolbarPrefs, useToolbarPrefs, type ToolbarPrefs } from "@/app/lib/raid-planner/toolbar-store";
 import { EMPTY_HISTORY, recordChange, redoStep, undoStep, type PlanHistory } from "@/app/lib/raid-planner/history";
 import { loadMapSvg } from "@/app/lib/raid-planner/map-svg";
 import { MAX_LAYERS, MAX_PLAN_NAME_LENGTH } from "@/app/lib/raid-planner/limits";
@@ -38,6 +39,7 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
   const [renameOpen, setRenameOpen] = useState(false);
   const [renameValue, setRenameValue] = useState("");
   const { details, loading, error: detailsError, retry } = useMapDetails(config.key);
+  const toolbarPrefs = useToolbarPrefs();
 
   const plan = draft ?? storedPlan;
   const layerGroups = useMemo(() => (details ? getLayerGroups(details) : null), [details]);
@@ -88,6 +90,14 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
       return;
     }
     updatePlan((current) => ({ ...current, enabledLayers: Array.from(next) }), { undoable: false });
+  }
+
+  function changeToolbarPrefs(changes: Partial<ToolbarPrefs>) {
+    try {
+      updateToolbarPrefs(changes);
+    } catch (reason) {
+      setNotice(reason instanceof Error ? reason.message : "Could not save toolbar settings.");
+    }
   }
 
   function rename() {
@@ -153,7 +163,7 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
         onLimitError={setNotice}
       />
 
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-1000 flex items-start gap-2 p-2 sm:p-3">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-1001 flex items-start gap-2 p-2 sm:p-3">
         <div className={cn(overlayPanel, "pointer-events-auto flex min-w-0 items-center max-sm:flex-1")}>
           <Link href="/raid-planner" className={iconButton} title="Back to plans">
             <ArrowLeft className="h-4 w-4" aria-hidden />
@@ -218,7 +228,12 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
         </div>
       )}
 
-      <div className="pointer-events-none absolute z-1000 max-sm:inset-x-0 max-sm:bottom-0 max-sm:flex max-sm:justify-center max-sm:p-2 max-sm:pb-[max(0.5rem,env(safe-area-inset-bottom))] sm:left-3 sm:top-16">
+      <div
+        className={cn(
+          "pointer-events-none absolute z-1000 max-sm:bottom-[max(0.5rem,env(safe-area-inset-bottom))] sm:left-3 sm:top-16",
+          toolbarPrefs.side === "right" ? "max-sm:right-2" : "max-sm:left-2"
+        )}
+      >
         <div className="pointer-events-auto">
           <Toolbar
             tool={tool}
@@ -229,6 +244,8 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
             canRedo={history.future.length > 0}
             onUndo={undo}
             onRedo={redo}
+            prefs={toolbarPrefs}
+            onPrefsChange={changeToolbarPrefs}
           />
         </div>
       </div>
@@ -262,7 +279,12 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
         </div>
       )}
 
-      <div className="pointer-events-auto absolute bottom-[7.5rem] right-2 z-1000 sm:bottom-24 sm:right-3">
+      <div
+        className={cn(
+          "pointer-events-auto absolute z-1000 max-sm:bottom-[max(0.5rem,env(safe-area-inset-bottom))] sm:bottom-24 sm:right-3",
+          toolbarPrefs.side === "right" ? "max-sm:left-2" : "max-sm:right-2"
+        )}
+      >
         <FloorSwitcher config={config} activeFloor={activeFloor} onChange={setActiveFloor} />
       </div>
 
