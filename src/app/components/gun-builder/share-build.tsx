@@ -1,150 +1,143 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { Check, Copy, LoaderCircle, Share2 } from "lucide-react";
 import type { GunBuild } from "@/app/lib/types/gunBuilder";
-import {
-  encodeBuildSharePayload,
-  slugifyBuildName,
-} from "@/app/lib/builds/share";
+import { encodeBuildSharePayload, slugifyBuildName } from "@/app/lib/builds/share";
+import { countParts } from "@/app/lib/builds/tree";
+import { copyText } from "@/app/lib/browser/clipboard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { copyText } from "@/app/lib/browser/clipboard";
 
-interface ShareBuildProps {
-  build: GunBuild;
-}
+type LinkState =
+  | { status: "idle" }
+  | { status: "ready"; url: string; buildKey: string }
+  | { status: "error"; message: string };
 
-export function ShareBuild({ build }: ShareBuildProps) {
+const noopSubscribe = () => () => undefined;
+
+export function ShareBuild({ build }: { build: GunBuild }) {
   const [open, setOpen] = useState(false);
-  const [url, setUrl] = useState("");
-  const [error, setError] = useState("");
+  const [link, setLink] = useState<LinkState>({ status: "idle" });
   const [copied, setCopied] = useState(false);
-  const [sharing, setSharing] = useState(false);
-  const [canNativeShare, setCanNativeShare] = useState(false);
+  const [notice, setNotice] = useState("");
+  const canNativeShare = useSyncExternalStore(
+    noopSubscribe,
+    () => typeof navigator.share === "function",
+    () => false
+  );
+  const buildKey = `${build.id}:${build.updatedAt}`;
+  const url = link.status === "ready" && link.buildKey === buildKey ? link.url : "";
 
-  useEffect(() => {
-    setCanNativeShare(Boolean(navigator.share));
-  }, []);
-
-  useEffect(() => {
-    if (!open) return;
-
-    let cancelled = false;
-    setUrl("");
-    setError("");
+  function generate() {
     setCopied(false);
-
+    setNotice("");
     encodeBuildSharePayload(build)
-      .then((payload) => {
-        if (cancelled) return;
-        const slug = slugifyBuildName(build.name);
-        setUrl(
-          `${window.location.origin}/gun-builder/share/${slug}#b=${payload}`
-        );
-      })
-      .catch(() => {
-        if (!cancelled) setError("The share link could not be generated.");
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [build, open]);
+      .then((payload) =>
+        setLink({
+          status: "ready",
+          buildKey,
+          url: `${window.location.origin}/gun-builder/share/${slugifyBuildName(build.name)}#b=${payload}`,
+        })
+      )
+      .catch((reason: unknown) =>
+        setLink({
+          status: "error",
+          message: reason instanceof Error ? reason.message : "The share link could not be generated.",
+        })
+      );
+  }
 
   async function handleCopy() {
     if (!url) return;
-
     try {
       await copyText(url);
       setCopied(true);
-      setError("");
-      window.setTimeout(() => setCopied(false), 1500);
+      setNotice("Link copied to clipboard.");
+      window.setTimeout(() => setCopied(false), 2000);
     } catch (reason) {
-      setError(reason instanceof Error ? reason.message : "Could not copy the link.");
+      setNotice(reason instanceof Error ? reason.message : "Could not copy the link.");
     }
   }
 
   async function handleNativeShare() {
-    if (!url || !navigator.share) return;
-
-    setSharing(true);
+    if (!url) return;
     try {
       await navigator.share({ title: build.name, url });
     } catch (reason) {
       if (!(reason instanceof DOMException && reason.name === "AbortError")) {
-        setError(reason instanceof Error ? reason.message : "Could not share the link.");
+        setNotice(reason instanceof Error ? reason.message : "Could not share the link.");
       }
-    } finally {
-      setSharing(false);
     }
   }
 
+  const parts = countParts(build.root);
+
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog
+      open={open}
+      onOpenChange={(next) => {
+        setOpen(next);
+        if (next) generate();
+      }}
+    >
       <DialogTrigger asChild>
-        <Button variant="outline">
-          <Share2 className="h-4 w-4" />
-          Share
+        <Button variant="outline" className="max-sm:px-0" aria-label="Share build">
+          <Share2 />
+          <span className="max-sm:sr-only">Share</span>
         </Button>
       </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>Share build</DialogTitle>
+      <DialogContent className="max-w-md">
+        <DialogHeader className="text-left">
+          <DialogTitle className="text-base font-black uppercase tracking-widest text-[#e6d9b8]">
+            Share build
+          </DialogTitle>
           <DialogDescription>
-            Anyone with this link can import a local copy.
+            The whole build is stored in the link, so anyone who opens it can save their own copy. Nothing is uploaded.
           </DialogDescription>
         </DialogHeader>
-
-        {error ? (
-          <p className="border border-[#2a2a2a] bg-[#090909] p-3 text-sm text-[#c9b88d]">
-            {error}
+        <div className="border border-[#1a1a1a] bg-[#080808] px-3 py-2">
+          <p className="truncate text-sm font-semibold text-[#ddd]">{build.name}</p>
+          <p className="text-xs text-[#888]">
+            {parts} part{parts === 1 ? "" : "s"}
+          </p>
+        </div>
+        {link.status === "error" ? (
+          <p role="alert" className="border border-red-900/60 bg-red-950/30 p-3 text-sm text-red-200">
+            {link.message}
           </p>
         ) : (
           <div className="flex gap-2">
             <Input
               readOnly
               value={url}
-              placeholder="Generating link"
+              placeholder="Generating link…"
+              aria-label="Share link"
               onFocus={(event) => event.currentTarget.select()}
+              className="font-mono text-xs"
             />
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={handleCopy}
-              disabled={!url}
-            >
-              {url ? (
-                copied ? (
-                  <Check className="h-4 w-4" />
-                ) : (
-                  <Copy className="h-4 w-4" />
-                )
-              ) : (
-                <LoaderCircle className="h-4 w-4 animate-spin" />
-              )}
-              <span className="sr-only">Copy link</span>
+            <Button onClick={handleCopy} disabled={!url} className="w-28 shrink-0">
+              {!url ? <LoaderCircle className="animate-spin" /> : copied ? <Check /> : <Copy />}
+              {copied ? "Copied" : "Copy"}
             </Button>
           </div>
         )}
-
         {canNativeShare && (
-          <DialogFooter>
-            <Button onClick={handleNativeShare} disabled={!url || sharing}>
-              <Share2 className="h-4 w-4" />
-              {sharing ? "Sharing" : "Share"}
-            </Button>
-          </DialogFooter>
+          <Button variant="outline" onClick={handleNativeShare} disabled={!url}>
+            <Share2 /> Share via…
+          </Button>
         )}
+        <p aria-live="polite" className="min-h-4 text-xs text-[#888]">
+          {notice}
+        </p>
       </DialogContent>
     </Dialog>
   );

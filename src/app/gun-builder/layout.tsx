@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <main className="flex justify-center p-4 min-w-0 sm:min-h-[calc(100vh-130px)] min-h-[calc(100vh-65px)]">
+    <main className="flex min-w-0 flex-1 justify-center px-4 py-5 sm:py-6">
       {children}
     </main>
   );

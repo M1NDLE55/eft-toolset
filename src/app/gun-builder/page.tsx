@@ -1,240 +1,177 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Copy, Plus, Trash2 } from "lucide-react";
-import { useGameMode } from "@/components/game-mode/context";
-import type { BuildNode, GunBuild, GunListItem } from "@/app/lib/types/gunBuilder";
-import {
-  createBuild,
-  deleteBuild,
-  duplicateBuild,
-  listBuilds,
-  subscribeBuilds,
-} from "@/app/lib/builds/store";
-import { reconstructPresetTree } from "@/app/lib/builds/presets";
-import { fetchBuildItems, fetchPreset } from "@/app/lib/cache/gunBuilder";
+import { ChevronRight, Copy, Plus, Search, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { WeaponPicker } from "@/app/components/gun-builder/weapon-picker";
-import { MAX_BUILD_NAME_LENGTH, MAX_BUILDS } from "@/app/lib/builds/limits";
+import { ConfirmDialog } from "@/components/confirm-dialog";
+import { useHydrated } from "@/app/lib/storage/use-store";
+import { deleteBuild, duplicateBuild, sortBuilds, useBuilds } from "@/app/lib/builds/store";
+import { countParts } from "@/app/lib/builds/tree";
+import { useGunList } from "@/app/lib/cache/gunBuilderHooks";
+import { NewBuildDialog } from "@/app/components/gun-builder/weapon-picker";
+import { formatDate } from "@/app/components/gun-builder/format";
 
-function formatDate(value: number) {
-  return new Intl.DateTimeFormat(undefined, {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  }).format(value);
-}
+const FILTER_THRESHOLD = 6;
 
 export default function GunBuilderPage() {
   const router = useRouter();
-  const { gameMode } = useGameMode();
-  const [builds, setBuilds] = useState<GunBuild[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [createOpen, setCreateOpen] = useState(false);
-  const [createName, setCreateName] = useState("");
-  const [creating, setCreating] = useState(false);
-  const [createError, setCreateError] = useState("");
+  const hydrated = useHydrated();
+  const builds = sortBuilds(useBuilds());
+  const { byId, loading: gunsLoading } = useGunList();
+  const [filter, setFilter] = useState("");
   const [actionError, setActionError] = useState("");
 
-  function refresh() {
-    setBuilds(listBuilds());
-  }
+  const phrase = filter.trim().toLowerCase();
+  const visible = phrase
+    ? builds.filter((build) => {
+        const gun = byId.get(build.weaponId);
+        return (
+          build.name.toLowerCase().includes(phrase) ||
+          gun?.name.toLowerCase().includes(phrase) ||
+          gun?.shortName.toLowerCase().includes(phrase)
+        );
+      })
+    : builds;
 
-  useEffect(() => {
-    refresh();
-    setLoading(false);
-    return subscribeBuilds(refresh);
-  }, []);
-
-  async function handleCreate(weapon: GunListItem, useDefaultPreset: boolean) {
-    setCreating(true);
-    setCreateError("");
+  function run(action: () => void) {
     try {
-      if (builds.length >= MAX_BUILDS) {
-        throw new Error(`You can save at most ${MAX_BUILDS} builds.`);
-      }
-      let root: BuildNode | null = null;
-
-      if (useDefaultPreset && weapon.defaultPresetId) {
-        const [preset, items] = await Promise.all([
-          fetchPreset(weapon.defaultPresetId, gameMode),
-          fetchBuildItems([weapon.id], gameMode),
-        ]);
-
-        if (preset) {
-          const presetItems = await fetchBuildItems(preset.itemIds, gameMode);
-          const map = new Map(
-            [...items, ...presetItems].map((item) => [item.id, item])
-          );
-          root = reconstructPresetTree(weapon.id, preset, map);
-        }
-      }
-
-      const buildName = createName.trim() || weapon.name;
-      if (buildName.length > MAX_BUILD_NAME_LENGTH) {
-        throw new Error(`Build names can contain at most ${MAX_BUILD_NAME_LENGTH} characters.`);
-      }
-      const build = createBuild(buildName, weapon.id, root ?? undefined);
-
-      setCreateOpen(false);
-      setCreateName("");
-      router.push(`/gun-builder/${build.id}`);
-    } catch (reason) {
-      setCreateError(
-        reason instanceof Error ? reason.message : "Could not create this build."
-      );
-    } finally {
-      setCreating(false);
-    }
-  }
-
-  function handleDuplicate(id: string) {
-    try {
-      const duplicate = duplicateBuild(id);
-      refresh();
-      if (duplicate) router.push(`/gun-builder/${duplicate.id}`);
+      action();
       setActionError("");
     } catch (reason) {
-      setActionError(reason instanceof Error ? reason.message : "Could not duplicate this build.");
-    }
-  }
-
-  function handleDelete(id: string) {
-    try {
-      deleteBuild(id);
-      refresh();
-      setActionError("");
-    } catch (reason) {
-      setActionError(reason instanceof Error ? reason.message : "Could not delete this build.");
+      setActionError(reason instanceof Error ? reason.message : "Could not save this change.");
     }
   }
 
   return (
-    <div className="flex w-full max-w-4xl flex-col gap-4">
-      {actionError && <p role="alert" className="text-sm text-red-300">{actionError}</p>}
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="text-3xl font-black uppercase tracking-widest text-[#9a8866]">
-          Gun Builder
-        </h1>
-        <Dialog
-          open={createOpen}
-          onOpenChange={(open) => {
-            setCreateOpen(open);
-            if (open) {
-              setCreateName("");
-              setCreateError("");
-            }
-          }}
-        >
-          <DialogTrigger asChild>
+    <div className="flex w-full max-w-3xl flex-col gap-5">
+      <div className="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-black uppercase tracking-widest text-[#e6d9b8]">Gun builder</h1>
+          <p className="mt-1 text-sm text-[#888]">Assemble weapons, compare stats and cost. Saved in this browser.</p>
+        </div>
+        <NewBuildDialog
+          trigger={
             <Button>
-              <Plus className="h-4 w-4" />
-              Create
+              <Plus /> New build
             </Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-3xl">
-            <DialogHeader>
-              <DialogTitle>Create build</DialogTitle>
-              <DialogDescription>
-                Name the build, then choose a weapon.
-              </DialogDescription>
-            </DialogHeader>
-            <Input
-              value={createName}
-              maxLength={MAX_BUILD_NAME_LENGTH}
-              onChange={(event) => setCreateName(event.target.value)}
-              placeholder="Build name, optional"
-            />
-            {createError && <p className="text-sm text-red-400">{createError}</p>}
-            <WeaponPicker disabled={creating} onCreate={handleCreate} />
-          </DialogContent>
-        </Dialog>
+          }
+        />
       </div>
 
-      {loading ? (
-        <div className="flex flex-col gap-3">
-          <Skeleton className="h-[72px] w-full" />
-          <Skeleton className="h-[72px] w-full" />
-          <Skeleton className="h-[72px] w-full" />
-        </div>
-      ) : builds.length > 0 ? (
-        <div className="flex flex-col gap-3">
-          {builds.map((build) => (
-            <div
-              key={build.id}
-              className="flex flex-wrap items-center gap-3 border border-[#2a2a2a] bg-[#090909] p-3"
-            >
-              <Button
-                variant="secondary"
-                className="min-w-0 flex-1 justify-between"
-                asChild
-              >
-                <Link href={{ pathname: `/gun-builder/${build.id}` }}>
-                  <span className="truncate">{build.name}</span>
-                  <span className="text-[10px] uppercase tracking-widest text-[#888]">
-                    {formatDate(build.updatedAt)}
-                  </span>
-                </Link>
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => handleDuplicate(build.id)}
-              >
-                <Copy className="h-4 w-4" />
-                <span className="sr-only">Duplicate build</span>
-              </Button>
-              <AlertDialog>
-                <AlertDialogTrigger asChild>
-                  <Button variant="destructive" size="icon">
-                    <Trash2 className="h-4 w-4" />
-                    <span className="sr-only">Delete build</span>
-                  </Button>
-                </AlertDialogTrigger>
-                <AlertDialogContent>
-                  <AlertDialogHeader>
-                    <AlertDialogTitle>Delete this build?</AlertDialogTitle>
-                    <AlertDialogDescription>
-                      This action cannot be undone. This will permanently delete{" "}
-                      <span className="font-bold text-[#ccc]">{build.name}</span>.
-                    </AlertDialogDescription>
-                  </AlertDialogHeader>
-                  <AlertDialogFooter>
-                    <AlertDialogCancel>Cancel</AlertDialogCancel>
-                    <AlertDialogAction onClick={() => handleDelete(build.id)}>
-                      Delete
-                    </AlertDialogAction>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
-            </div>
+      {actionError && (
+        <p role="alert" className="border border-red-900/60 bg-red-950/30 px-3 py-2 text-sm text-red-200">
+          {actionError}
+        </p>
+      )}
+
+      {!hydrated ? (
+        <div className="flex flex-col gap-2">
+          {Array.from({ length: 3 }, (_, index) => (
+            <Skeleton key={index} className="h-[74px] w-full" />
           ))}
         </div>
+      ) : builds.length === 0 ? (
+        <div className="flex flex-col items-center gap-3 border border-dashed border-[#2a2a2a] px-6 py-12 text-center">
+          <p className="font-semibold text-[#ccc]">No builds yet</p>
+          <p className="max-w-sm text-sm text-[#888]">
+            Start from a weapon&apos;s factory preset or a bare receiver, then swap parts to see ergonomics, recoil and cost update live.
+          </p>
+          <NewBuildDialog
+            trigger={
+              <Button variant="outline" className="mt-1">
+                <Plus /> Create your first build
+              </Button>
+            }
+          />
+        </div>
       ) : (
-        <p className="border border-[#2a2a2a] p-3 text-xl">No gun builds</p>
+        <>
+          {builds.length >= FILTER_THRESHOLD && (
+            <div className="relative">
+              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#666]" />
+              <Input
+                className="pl-9"
+                value={filter}
+                onChange={(event) => setFilter(event.target.value)}
+                placeholder={`Filter ${builds.length} builds`}
+                aria-label="Filter builds"
+              />
+            </div>
+          )}
+          <ul className="flex flex-col gap-2">
+            {visible.map((build) => {
+              const gun = byId.get(build.weaponId);
+              const parts = countParts(build.root);
+              return (
+                <li key={build.id} className="group flex items-stretch border border-[#1a1a1a] bg-[#0c0c0c] transition-colors hover:border-[#9a8866] focus-within:border-[#9a8866]">
+                  <Link
+                    href={`/gun-builder/${build.id}`}
+                    className="flex min-w-0 flex-1 items-center gap-3 p-3 focus-visible:outline-hidden"
+                  >
+                    <span className="flex h-10 w-14 shrink-0 items-center justify-center bg-[#080808] sm:h-12 sm:w-20">
+                      {gun?.gridImageLink ? (
+                        <Image src={gun.gridImageLink} alt="" width={80} height={48} className="h-full w-full object-contain p-0.5" />
+                      ) : gunsLoading ? (
+                        <span className="h-8 w-14 animate-shimmer" />
+                      ) : null}
+                    </span>
+                    <span className="flex min-w-0 flex-1 flex-col gap-0.5">
+                      <span className="line-clamp-2 font-semibold leading-snug break-words text-[#ddd] group-hover:text-[#e6d9b8] sm:truncate">
+                        {build.name || "Untitled build"}
+                      </span>
+                      <span className="truncate text-xs text-[#888]">
+                        {gun?.shortName ?? "Weapon"} · {parts} part{parts === 1 ? "" : "s"} · {formatDate(build.updatedAt)}
+                      </span>
+                    </span>
+                    <ChevronRight className="hidden h-4 w-4 shrink-0 text-[#9a8866] sm:block" />
+                  </Link>
+                  <div className="flex shrink-0 items-center border-l border-[#1a1a1a]">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-full min-h-10 w-11"
+                      aria-label={`Duplicate ${build.name}`}
+                      onClick={() =>
+                        run(() => {
+                          const copy = duplicateBuild(build.id);
+                          router.push(`/gun-builder/${copy.id}`);
+                        })
+                      }
+                    >
+                      <Copy />
+                    </Button>
+                    <ConfirmDialog
+                      trigger={
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="h-full min-h-10 w-11 hover:text-red-300"
+                          aria-label={`Delete ${build.name}`}
+                        >
+                          <Trash2 />
+                        </Button>
+                      }
+                      title={`Delete “${build.name}”?`}
+                      description="This permanently removes the build from this browser."
+                      confirmLabel="Delete build"
+                      onConfirm={() => run(() => deleteBuild(build.id))}
+                    />
+                  </div>
+                </li>
+              );
+            })}
+            {visible.length === 0 && (
+              <li className="border border-dashed border-[#2a2a2a] p-6 text-center text-sm text-[#888]">
+                No builds match “{filter.trim()}”.
+              </li>
+            )}
+          </ul>
+        </>
       )}
     </div>
   );

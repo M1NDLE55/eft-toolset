@@ -5,12 +5,12 @@ import {
   slugifyName,
 } from "@/app/lib/share-codec";
 import {
-  MAX_BUILD_ID_LENGTH,
   MAX_BUILD_NAME_LENGTH,
   MAX_BUILD_TREE_DEPTH,
   MAX_BUILD_TREE_NODES,
   MAX_SLOTS_PER_NODE,
 } from "./limits";
+import { isBuildTree, isValidBuildId } from "./tree";
 
 type SharedBuildNodeV1 = [string] | [string, [string, SharedBuildNodeV1][]];
 
@@ -34,9 +34,8 @@ export function slugifyBuildName(name: string) {
 export function createShareRecipe(build: GunBuild): SharedGunBuildRecipeV1 {
   if (
     build.name.length > MAX_BUILD_NAME_LENGTH ||
-    !build.weaponId ||
-    build.weaponId.length > MAX_BUILD_ID_LENGTH ||
-    !isBuildNodeWithinLimits(build.root) ||
+    !isValidBuildId(build.weaponId) ||
+    !isBuildTree(build.root) ||
     build.root.itemId !== build.weaponId
   ) {
     throw new Error("This build exceeds the safe sharing limits.");
@@ -60,7 +59,7 @@ export async function decodeBuildSharePayload(
   const recipe = parseRecipe(parsed);
 
   return {
-    name: recipe.n?.trim() || "Shared build",
+    name: recipe.n?.trim() ?? "",
     weaponId: recipe.w,
     root: decodeNode(recipe.r),
   };
@@ -96,9 +95,7 @@ function parseRecipe(value: unknown): SharedGunBuildRecipeV1 {
   const recipe = value as Partial<SharedGunBuildRecipeV1>;
   if (
     recipe.v !== 1 ||
-    typeof recipe.w !== "string" ||
-    !recipe.w ||
-    recipe.w.length > MAX_BUILD_ID_LENGTH ||
+    !isValidBuildId(recipe.w) ||
     (recipe.n !== undefined &&
       (typeof recipe.n !== "string" || recipe.n.length > MAX_BUILD_NAME_LENGTH))
   ) {
@@ -120,7 +117,7 @@ function isSharedNode(value: unknown): value is SharedBuildNodeV1 {
     const { node, depth } = stack.pop()!;
     count += 1;
     if (count > MAX_BUILD_TREE_NODES || depth > MAX_BUILD_TREE_DEPTH) return false;
-    if (!Array.isArray(node) || typeof node[0] !== "string" || !node[0] || node[0].length > MAX_BUILD_ID_LENGTH) {
+    if (!Array.isArray(node) || !isValidBuildId(node[0])) {
       return false;
     }
     if (node.length === 1) continue;
@@ -133,9 +130,7 @@ function isSharedNode(value: unknown): value is SharedBuildNodeV1 {
       if (
         !Array.isArray(slot) ||
         slot.length !== 2 ||
-        typeof slot[0] !== "string" ||
-        !slot[0] ||
-        slot[0].length > MAX_BUILD_ID_LENGTH ||
+        !isValidBuildId(slot[0]) ||
         slotIds.has(slot[0])
       ) {
         return false;
@@ -145,37 +140,5 @@ function isSharedNode(value: unknown): value is SharedBuildNodeV1 {
     }
   }
 
-  return true;
-}
-
-function isBuildNodeWithinLimits(value: unknown): value is BuildNode {
-  const stack: { node: unknown; depth: number }[] = [{ node: value, depth: 0 }];
-  let count = 0;
-  while (stack.length > 0) {
-    const { node, depth } = stack.pop()!;
-    count += 1;
-    if (
-      count > MAX_BUILD_TREE_NODES ||
-      depth > MAX_BUILD_TREE_DEPTH ||
-      !node ||
-      typeof node !== "object" ||
-      Array.isArray(node)
-    ) return false;
-    const candidate = node as Partial<BuildNode>;
-    if (
-      typeof candidate.itemId !== "string" ||
-      !candidate.itemId ||
-      candidate.itemId.length > MAX_BUILD_ID_LENGTH ||
-      !candidate.slots ||
-      typeof candidate.slots !== "object" ||
-      Array.isArray(candidate.slots)
-    ) return false;
-    const entries = Object.entries(candidate.slots);
-    if (
-      entries.length > MAX_SLOTS_PER_NODE ||
-      entries.some(([slotId]) => !slotId || slotId.length > MAX_BUILD_ID_LENGTH)
-    ) return false;
-    for (const [, child] of entries) stack.push({ node: child, depth: depth + 1 });
-  }
   return true;
 }

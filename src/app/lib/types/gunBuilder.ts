@@ -75,3 +75,5 @@ export interface PresetContents {
   baseItemId: string | null;
   itemIds: string[];
 }
+
+export type GunItem = PickItemData | BuildItemData;

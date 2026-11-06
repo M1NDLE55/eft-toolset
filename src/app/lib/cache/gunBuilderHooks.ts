@@ -1,102 +1,100 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
-import { useGameMode } from "@/components/game-mode/context";
-import type { BuildItemData, GunListItem } from "@/app/lib/types/gunBuilder";
-import { fetchBuildItems, fetchGunList } from "./gunBuilder";
+import { useEffect, useEffectEvent, useMemo, useState, useSyncExternalStore } from "react";
+import { useGameMode, type GameMode } from "@/components/game-mode/context";
+import { useDataQuery } from "@/app/lib/api/useDataQuery";
+import type { GunItem, GunListItem } from "@/app/lib/types/gunBuilder";
+import type { ItemLookup } from "@/app/lib/builds/stats";
+import {
+  ensureGunItems,
+  getGunItemState,
+  gunListQuery,
+  subscribeGunItems,
+  type GunItemState,
+} from "./gunBuilder";
+
+const EMPTY_GUNS: GunListItem[] = [];
+
+function otherMode(gameMode: GameMode): GameMode {
+  return gameMode === "pve" ? "regular" : "pve";
+}
 
 export function useGunList() {
   const { gameMode, hydrated } = useGameMode();
-  const [guns, setGuns] = useState<GunListItem[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<Error | null>(null);
-  const [retryToken, setRetryToken] = useState(0);
-
-  useEffect(() => {
-    if (!hydrated) return;
-    let cancelled = false;
-    setLoading(true);
-    setError(null);
-    fetchGunList(gameMode)
-      .then((items) => {
-        if (!cancelled) setGuns(items);
-      })
-      .catch((reason: unknown) => {
-        if (!cancelled) {
-          setError(reason instanceof Error ? reason : new Error("Could not load weapons."));
-        }
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [gameMode, hydrated, retryToken]);
+  const variables = useMemo(() => ({ gameMode }), [gameMode]);
+  const query = useDataQuery(gunListQuery, variables, { enabled: hydrated });
+  const [previous, setPrevious] = useState<GunListItem[] | null>(null);
+  if (query.data && query.data !== previous) setPrevious(query.data);
+  const guns = query.data ?? previous ?? EMPTY_GUNS;
+  const byId = useMemo(() => new Map(guns.map((gun) => [gun.id, gun])), [guns]);
 
   return {
     guns,
-    loading,
-    error,
-    retry: () => setRetryToken((value) => value + 1),
-    gameMode,
+    byId,
+    loading: guns.length === 0 && query.status !== "error",
+    error: guns.length === 0 ? (query.error ?? null) : null,
+    retry: () => void query.refresh().catch(() => undefined),
   };
 }
 
-export function useBuildItemData(initialIds: string[]) {
-  const { gameMode, hydrated } = useGameMode();
-  const [items, setItems] = useState<Map<string, BuildItemData>>(new Map());
-  const [loadingIds, setLoadingIds] = useState<Set<string>>(new Set());
-  const itemsRef = useRef(items);
-  const activeMode = useRef(gameMode);
-  const inFlightIds = useRef(new Set<string>());
-  itemsRef.current = items;
-  activeMode.current = gameMode;
-
-  const loadBuildItems = useCallback(
-    async (ids: string[]) => {
-      if (!hydrated) return [];
-      const missing = Array.from(new Set(ids)).filter(
-        (id) => id && !itemsRef.current.has(id) && !inFlightIds.current.has(id)
-      );
-      if (missing.length === 0) return [];
-
-      for (const id of missing) inFlightIds.current.add(id);
-      setLoadingIds((prev) => new Set([...Array.from(prev), ...missing]));
-      try {
-        const fetched = await fetchBuildItems(missing, gameMode);
-        if (activeMode.current !== gameMode) return [];
-        setItems((prev) => {
-          const next = new Map(prev);
-          for (const item of fetched) next.set(item.id, item);
-          return next;
-        });
-        return fetched;
-      } finally {
-        for (const id of missing) inFlightIds.current.delete(id);
-        setLoadingIds((prev) => {
-          const next = new Set(prev);
-          for (const id of missing) next.delete(id);
-          return next;
-        });
-      }
-    },
-    [gameMode, hydrated]
+function useModeState(gameMode: GameMode): GunItemState {
+  return useSyncExternalStore(
+    subscribeGunItems,
+    () => getGunItemState(gameMode),
+    () => getGunItemState(gameMode)
   );
+}
+
+export function useGunItems(
+  ids: readonly string[],
+  detail: "full" | "basic",
+  enabled = true
+): {
+  items: ItemLookup;
+  loading: boolean;
+  refreshing: boolean;
+  unavailable: ReadonlySet<string>;
+  error: Error | null;
+  retry: () => void;
+  gameMode: GameMode;
+} {
+  const { gameMode, hydrated } = useGameMode();
+  const current = useModeState(gameMode);
+  const fallback = useModeState(otherMode(gameMode));
+  const key = useMemo(() => Array.from(new Set(ids)).sort().join(","), [ids]);
+  const active = hydrated && enabled && key.length > 0;
+
+  const load = useEffectEvent(() => {
+    void ensureGunItems(ids, gameMode, detail).catch(() => undefined);
+  });
 
   useEffect(() => {
-    inFlightIds.current.clear();
-    itemsRef.current = new Map();
-    setItems(new Map());
-  }, [gameMode]);
+    if (active) load();
+  }, [active, key, gameMode, detail]);
 
-  useEffect(() => {
-    if (!hydrated) return;
-    loadBuildItems(initialIds).catch(console.warn);
-  }, [hydrated, initialIds, loadBuildItems]);
+  const items = useMemo(() => {
+    const complete = ids.every((id) => current.items.has(id));
+    if (complete || fallback.items.size === 0) return current.items;
+    const merged = new Map<string, GunItem>();
+    for (const id of ids) {
+      const item = current.items.get(id) ?? fallback.items.get(id);
+      if (item) merged.set(id, item);
+    }
+    for (const [id, item] of current.items) merged.set(id, item);
+    return merged;
+  }, [current.items, fallback.items, ids]);
 
-  const loading = loadingIds.size > 0;
+  const unresolved = ids.filter((id) => !current.items.has(id) && !current.missing.has(id));
+  const pending = ids.some((id) => current.pending.has(id));
+  const waiting = unresolved.length > 0 && (pending || !current.error);
 
-  return { items, loading: !hydrated || loading, loadingIds, gameMode, loadBuildItems };
+  return {
+    items,
+    loading: !hydrated || (enabled && waiting && unresolved.some((id) => !items.has(id))),
+    refreshing: enabled && (pending || waiting),
+    unavailable: current.missing,
+    error: unresolved.length > 0 ? current.error : null,
+    retry: () => void ensureGunItems(ids, gameMode, detail).catch(() => undefined),
+    gameMode,
+  };
 }

@@ -1,18 +1,19 @@
-import type {
-  BuildItemData,
-  BuildNode,
-  ModSlotDef,
-} from "@/app/lib/types/gunBuilder";
+import type { BuildNode, ModSlotDef } from "@/app/lib/types/gunBuilder";
+import { isDetailed, type ItemLookup } from "./stats";
+import { childAt } from "./tree";
 
-export type FlowNodeKind = "weapon" | "filled" | "empty" | "missing";
+export type FlowNodeKind = "weapon" | "item" | "empty";
 
 export interface PositionedNode {
   id: string;
   kind: FlowNodeKind;
   itemId: string | null;
   slot: ModSlotDef | null;
+  slotId: string | null;
   path: string[];
   parentPath: string[];
+  parentItemId: string | null;
+  incompatible: boolean;
   isLastChild: boolean;
   ancestorGuides: boolean[];
   x: number;
@@ -23,12 +24,11 @@ export interface PositionedNode {
 
 export interface FlowEdge {
   id: string;
-  from: string;
-  to: string;
   x1: number;
   y1: number;
   x2: number;
   y2: number;
+  empty: boolean;
 }
 
 export interface FlowLayout {
@@ -38,140 +38,134 @@ export interface FlowLayout {
   height: number;
 }
 
-const NODE_WIDTH = 220;
-const NODE_HEIGHT = 88;
-const ROOT_HEIGHT = 112;
-const COLUMN_GAP = 92;
-const ROW_GAP = 18;
-const PAD = 24;
+export const NODE_WIDTH = 232;
+export const NODE_HEIGHT = 72;
+const COLUMN_GAP = 56;
+const ROW_GAP = 12;
+const PAD = 20;
 
-interface LayoutBranch {
+interface Branch {
   node: PositionedNode;
-  children: LayoutBranch[];
+  children: Branch[];
   extent: number;
 }
 
-function nodeId(path: string[], slotId?: string) {
-  if (path.length === 0 && !slotId) return "root";
-  return [...path, slotId].filter(Boolean).join(":");
+interface ChildEntry {
+  slotId: string;
+  slot: ModSlotDef | null;
+  child: BuildNode | undefined;
+  incompatible: boolean;
+}
+
+function childEntries(node: BuildNode, lookup: ItemLookup): ChildEntry[] {
+  const item = lookup.get(node.itemId);
+  if (!isDetailed(item)) {
+    return Object.entries(node.slots).map(([slotId, child]) => ({
+      slotId,
+      slot: null,
+      child,
+      incompatible: false,
+    }));
+  }
+  const defined = new Set(item.slots.map((slot) => slot.id));
+  return [
+    ...item.slots.map((slot) => {
+      const child = childAt(node, slot.id);
+      return {
+        slotId: slot.id,
+        slot,
+        child,
+        incompatible: Boolean(child && !slot.allowedItemIds.includes(child.itemId)),
+      };
+    }),
+    ...Object.entries(node.slots)
+      .filter(([slotId]) => !defined.has(slotId))
+      .map(([slotId, child]) => ({ slotId, slot: null, child, incompatible: true })),
+  ];
 }
 
 function buildBranch(
-  node: BuildNode,
-  data: Map<string, BuildItemData>,
+  node: BuildNode | undefined,
+  itemId: string | null,
+  lookup: ItemLookup,
+  hideEmpty: boolean,
   depth: number,
   path: string[],
-  slot: ModSlotDef | null,
-  isLast: boolean,
+  entry: ChildEntry | null,
+  parentItemId: string | null,
+  isLastChild: boolean,
   ancestorGuides: boolean[]
-): LayoutBranch {
-  const item = data.get(node.itemId);
-  const slots = item?.slots ?? [];
-  const childGuides = depth === 0 ? [] : [...ancestorGuides, !isLast];
-  const children = slots.map((childSlot, index) => {
-    const childIsLast = index === slots.length - 1;
-    const child = node.slots[childSlot.id];
-    if (child) {
-      return buildBranch(
-        child,
-        data,
-        depth + 1,
-        [...path, childSlot.id],
-        childSlot,
-        childIsLast,
-        childGuides
-      );
-    }
-
-    const emptyNode: PositionedNode = {
-      id: nodeId(path, childSlot.id),
-      kind: "empty",
-      itemId: null,
-      slot: childSlot,
-      path: [...path, childSlot.id],
-      parentPath: path,
-      isLastChild: childIsLast,
-      ancestorGuides: childGuides,
-      x: PAD + (depth + 1) * (NODE_WIDTH + COLUMN_GAP),
-      y: 0,
-      width: NODE_WIDTH,
-      height: NODE_HEIGHT,
-    };
-    return { node: emptyNode, children: [], extent: NODE_HEIGHT };
-  });
-
-  const extent =
-    children.length === 0
-      ? depth === 0
-        ? ROOT_HEIGHT
-        : NODE_HEIGHT
-      : children.reduce((total, child) => total + child.extent, 0) +
-        ROW_GAP * Math.max(0, children.length - 1);
-
-  return {
-    node: {
-      id: nodeId(path),
-      kind: depth === 0 ? "weapon" : item ? "filled" : "missing",
-      itemId: node.itemId,
-      slot,
-      path,
-      parentPath: path.slice(0, -1),
-      isLastChild: isLast,
-      ancestorGuides,
-      x: PAD + depth * (NODE_WIDTH + COLUMN_GAP),
-      y: 0,
-      width: NODE_WIDTH,
-      height: depth === 0 ? ROOT_HEIGHT : NODE_HEIGHT,
-    },
-    children,
-    extent: Math.max(extent, depth === 0 ? ROOT_HEIGHT : NODE_HEIGHT),
+): Branch {
+  const positioned: PositionedNode = {
+    id: path.length === 0 ? "root" : path.join("/"),
+    kind: depth === 0 ? "weapon" : node ? "item" : "empty",
+    itemId,
+    slot: entry?.slot ?? null,
+    slotId: entry?.slotId ?? null,
+    path,
+    parentPath: path.slice(0, -1),
+    parentItemId,
+    incompatible: entry?.incompatible ?? false,
+    isLastChild,
+    ancestorGuides,
+    x: PAD + depth * (NODE_WIDTH + COLUMN_GAP),
+    y: 0,
+    width: NODE_WIDTH,
+    height: NODE_HEIGHT,
   };
+  if (!node) return { node: positioned, children: [], extent: NODE_HEIGHT };
+
+  const entries = childEntries(node, lookup).filter(
+    (entry) => !hideEmpty || entry.child || entry.slot?.required
+  );
+  const childGuides = depth === 0 ? [] : [...ancestorGuides, !isLastChild];
+  const children = entries.map((child, index) =>
+    buildBranch(
+      child.child,
+      child.child?.itemId ?? null,
+      lookup,
+      hideEmpty,
+      depth + 1,
+      [...path, child.slotId],
+      child,
+      node.itemId,
+      index === entries.length - 1,
+      childGuides
+    )
+  );
+  const stacked =
+    children.reduce((total, child) => total + child.extent, 0) +
+    ROW_GAP * Math.max(0, children.length - 1);
+  return { node: positioned, children, extent: Math.max(NODE_HEIGHT, stacked) };
 }
 
-function placeBranch(
-  branch: LayoutBranch,
-  top: number,
-  nodes: PositionedNode[],
-  edges: FlowEdge[]
-) {
-  const centerY = top + branch.extent / 2;
-  branch.node.y = centerY - branch.node.height / 2;
+function place(branch: Branch, top: number, nodes: PositionedNode[], edges: FlowEdge[]) {
+  branch.node.y = top;
   nodes.push(branch.node);
-
   let childTop = top;
   for (const child of branch.children) {
-    placeBranch(child, childTop, nodes, edges);
+    place(child, childTop, nodes, edges);
     edges.push({
-      id: `${branch.node.id}->${child.node.id}`,
-      from: branch.node.id,
-      to: child.node.id,
+      id: child.node.id,
       x1: branch.node.x + branch.node.width,
       y1: branch.node.y + branch.node.height / 2,
       x2: child.node.x,
       y2: child.node.y + child.node.height / 2,
+      empty: child.node.kind === "empty",
     });
     childTop += child.extent + ROW_GAP;
   }
 }
 
-export function layoutBuild(
-  root: BuildNode,
-  data: Map<string, BuildItemData>
-): FlowLayout {
-  const branch = buildBranch(root, data, 0, [], null, true, []);
+export function layoutBuild(root: BuildNode, lookup: ItemLookup, hideEmpty = false): FlowLayout {
+  const branch = buildBranch(root, root.itemId, lookup, hideEmpty, 0, [], null, null, true, []);
   const nodes: PositionedNode[] = [];
   const edges: FlowEdge[] = [];
-  placeBranch(branch, PAD, nodes, edges);
-
-  const width =
-    nodes.reduce((max, node) => Math.max(max, node.x + node.width), 0) + PAD;
-  const height =
-    nodes.reduce((max, node) => Math.max(max, node.y + node.height), 0) + PAD;
-
+  place(branch, PAD, nodes, edges);
   return {
     nodes,
     edges,
-    width,
-    height: Math.max(height, ROOT_HEIGHT + PAD * 2),
+    width: nodes.reduce((max, node) => Math.max(max, node.x + node.width), 0) + PAD,
+    height: nodes.reduce((max, node) => Math.max(max, node.y + node.height), 0) + PAD,
   };
 }

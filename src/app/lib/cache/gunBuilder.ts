@@ -1,23 +1,32 @@
 import type { GameMode } from "@/components/game-mode/context";
 import type {
   BuildItemData,
+  BuildNode,
+  GunItem,
   GunListItem,
   PickItemData,
   PresetContents,
 } from "@/app/lib/types/gunBuilder";
-import { cacheDelete, cacheDeleteMany, cacheGet, cacheGetMany, cacheKeys, cacheSet, cacheSetMany } from "./store";
+import { cacheDeleteMany, cacheGetMany, cacheKeys, cacheSetMany } from "./store";
 import { apiFetch } from "@/app/lib/api/transport";
-import { TARKOV_OPERATIONS, type TarkovOperation } from "@/app/lib/api/operations";
+import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
+import { ensureQuery, type QueryDefinition } from "@/app/lib/api/queryClient";
+import { reconstructPresetTree } from "@/app/lib/builds/presets";
+import { isDetailed } from "@/app/lib/builds/stats";
 
 const GUN_CACHE_VERSION = 3;
-const PRICE_CACHE_TTL = 1000 * 60 * 15;
-const STRUCTURE_CACHE_TTL = 1000 * 60 * 60 * 24;
+const MINUTE = 60_000;
+const DAY = 24 * 60 * MINUTE;
+const FRESH_MS = 15 * MINUTE;
+const MAX_AGE_MS = DAY;
 const ID_BATCH_SIZE = 100;
 const BATCH_CONCURRENCY = 2;
 const MAX_LAZY_IDS = 1_000;
-const GUN_CACHE_SWEEP_INTERVAL_MS = 60 * 60_000;
-let lastGunCacheSweepAt = 0;
-let gunCacheSweep: Promise<void> | null = null;
+const SWEEP_INTERVAL_MS = 60 * MINUTE;
+const LEGACY_PREFIXES = ["guns:", "preset:"];
+const ITEM_PREFIXES = { full: "build-item", basic: "pick-item" } as const;
+
+type Detail = keyof typeof ITEM_PREFIXES;
 
 interface CacheEnvelope<T> {
   v: number;
@@ -25,175 +34,261 @@ interface CacheEnvelope<T> {
   data: T;
 }
 
-async function readCache<T>(key: string, ttl = PRICE_CACHE_TTL): Promise<T | undefined> {
-  let entry: CacheEnvelope<T> | undefined;
-  try {
-    entry = await cacheGet<CacheEnvelope<T>>(key);
-  } catch {
-    return undefined;
-  }
-  if (!entry || typeof entry !== "object" || entry.v !== GUN_CACHE_VERSION) {
-    await cacheDelete(key).catch(() => undefined);
-    return undefined;
-  }
-  if (Date.now() - entry.t > ttl) {
-    await cacheDelete(key).catch(() => undefined);
-    return undefined;
-  }
-  return entry.data;
+export interface GunItemState {
+  items: ReadonlyMap<string, GunItem>;
+  pending: ReadonlySet<string>;
+  missing: ReadonlySet<string>;
+  error: Error | null;
 }
 
-async function readCacheMany<T>(keys: string[], ttl = PRICE_CACHE_TTL) {
-  let entries: (CacheEnvelope<T> | undefined)[];
-  try {
-    entries = await cacheGetMany<CacheEnvelope<T>>(keys);
-  } catch {
-    return keys.map(() => undefined);
-  }
-  const expiredKeys: string[] = [];
-  const values = entries.map((entry, index) => {
-    if (!entry || entry.v !== GUN_CACHE_VERSION || Date.now() - entry.t > ttl) {
-      if (entry) expiredKeys.push(keys[index]);
-      return undefined;
+interface ModeVariables {
+  gameMode: GameMode;
+}
+
+export const gunListQuery: QueryDefinition<ModeVariables, GunListItem[]> = {
+  id: "gun-list",
+  version: 1,
+  staleTime: DAY,
+  maxAge: 30 * DAY,
+  persist: true,
+  validate: isGunList,
+  fetch: async ({ gameMode }, signal) => {
+    const guns = await apiFetch<unknown>(TARKOV_OPERATIONS.gunList, { gameMode }, { signal });
+    if (!isGunList(guns)) throw new Error("The weapon list response was invalid.");
+    return guns.toSorted((a, b) => a.name.localeCompare(b.name));
+  },
+};
+
+export const presetQuery: QueryDefinition<ModeVariables & { id: string }, PresetContents | null> = {
+  id: "gun-preset",
+  version: 1,
+  staleTime: DAY,
+  maxAge: 30 * DAY,
+  persist: true,
+  validate: isPreset,
+  fetch: async ({ gameMode, id }, signal) => {
+    const preset = await apiFetch<unknown>(TARKOV_OPERATIONS.preset, { id, gameMode }, { signal });
+    if (!isPreset(preset)) throw new Error("The preset response was invalid.");
+    return preset;
+  },
+};
+
+const EMPTY_STATE: GunItemState = Object.freeze({
+  items: new Map(),
+  pending: new Set<string>(),
+  missing: new Set<string>(),
+  error: null,
+});
+const states = new Map<GameMode, GunItemState>();
+const fetchedAt = new Map<string, number>();
+const inFlight = new Map<string, Promise<void>>();
+const listeners = new Set<() => void>();
+let lastSweepAt = 0;
+
+export function subscribeGunItems(listener: () => void) {
+  listeners.add(listener);
+  return () => {
+    listeners.delete(listener);
+  };
+}
+
+export function getGunItemState(gameMode: GameMode): GunItemState {
+  return states.get(gameMode) ?? EMPTY_STATE;
+}
+
+function update(gameMode: GameMode, change: (state: GunItemState) => Partial<GunItemState>) {
+  const current = getGunItemState(gameMode);
+  states.set(gameMode, { ...current, ...change(current) });
+  for (const listener of listeners) listener();
+}
+
+function merge(gameMode: GameMode, detail: Detail, entries: { item: GunItem; t: number }[]) {
+  if (entries.length === 0) return;
+  update(gameMode, (state) => {
+    const items = new Map(state.items);
+    for (const { item, t } of entries) {
+      if ((fetchedAt.get(stampKey(gameMode, detail, item.id)) ?? 0) > t) continue;
+      const existing = items.get(item.id);
+      if (detail === "basic" && isDetailed(existing)) {
+        items.set(item.id, { ...existing, ...item });
+      } else {
+        items.set(item.id, item);
+      }
+      fetchedAt.set(stampKey(gameMode, detail, item.id), t);
+      if (detail === "full") fetchedAt.set(stampKey(gameMode, "basic", item.id), t);
     }
-    return entry.data;
+    return { items };
   });
-  if (expiredKeys.length > 0) void cacheDeleteMany(expiredKeys).catch(() => undefined);
-  return values;
 }
 
-async function writeCache<T>(key: string, data: T): Promise<void> {
-  try {
-    await cacheSet<CacheEnvelope<T>>(key, {
-      v: GUN_CACHE_VERSION,
-      t: Date.now(),
-      data,
-    });
-  } catch {
-  }
+function stampKey(gameMode: GameMode, detail: Detail, id: string) {
+  return `${detail}:${gameMode}:${id}`;
 }
 
-export async function fetchGunList(gameMode: GameMode): Promise<GunListItem[]> {
-  startGunCacheSweep();
-  const cacheKey = `guns:${gameMode}`;
-  const cached = await readCache<GunListItem[]>(cacheKey, STRUCTURE_CACHE_TTL);
-  if (cached && isGunList(cached)) return cached;
-  if (cached) await cacheDelete(cacheKey).catch(() => undefined);
-
-  const guns = await apiFetch<GunListItem[]>(TARKOV_OPERATIONS.gunList, { gameMode });
-  if (!isGunList(guns)) throw new Error("The weapon list response was invalid.");
-
-  await writeCache(cacheKey, guns);
-  return guns;
+function isFresh(gameMode: GameMode, detail: Detail, id: string) {
+  const state = getGunItemState(gameMode);
+  const item = state.items.get(id);
+  const known = state.missing.has(id) || (item && (detail === "basic" || isDetailed(item)));
+  return Boolean(known) && Date.now() - (fetchedAt.get(stampKey(gameMode, detail, id)) ?? 0) < FRESH_MS;
 }
 
-async function fetchCachedById<T extends { id: string }>(
-  ids: string[],
-  operation: TarkovOperation,
+export async function ensureGunItems(
+  ids: readonly string[],
   gameMode: GameMode,
-  keyPrefix: string,
-  validate: (value: unknown) => value is T
-): Promise<T[]> {
-  startGunCacheSweep();
-  const uniqueIds = Array.from(new Set(ids)).filter(Boolean);
-  if (uniqueIds.length === 0) return [];
-  if (uniqueIds.length > MAX_LAZY_IDS) {
+  detail: Detail
+): Promise<void> {
+  sweepPersistentCache();
+  const unique = Array.from(new Set(ids)).filter(Boolean);
+  if (unique.length > MAX_LAZY_IDS) {
     throw new Error(`A build can load at most ${MAX_LAZY_IDS} unique items.`);
   }
-
-  const cacheKeys = uniqueIds.map((id) => `${keyPrefix}:${gameMode}:${id}`);
-  const rawCachedEntries = await readCacheMany<T>(cacheKeys);
-  const invalidCacheKeys: string[] = [];
-  const cachedEntries = rawCachedEntries.map((entry, index) => {
-    if (entry === undefined || validate(entry)) return entry;
-    invalidCacheKeys.push(cacheKeys[index]);
-    return undefined;
-  });
-  if (invalidCacheKeys.length > 0) void cacheDeleteMany(invalidCacheKeys).catch(() => undefined);
-  const cached = cachedEntries.filter((item): item is T => Boolean(item));
-  const missingIds = uniqueIds.filter((_, index) => !cachedEntries[index]);
-
-  if (missingIds.length === 0) return cached;
-
-  const chunks = chunk(missingIds, ID_BATCH_SIZE);
-  const fetched: T[] = [];
-  for (let index = 0; index < chunks.length; index += BATCH_CONCURRENCY) {
-    const batch = chunks.slice(index, index + BATCH_CONCURRENCY);
-    const responses = await Promise.all(
-      batch.map((ids) =>
-        apiFetch<T[]>(operation, { ids, gameMode })
-      )
-    );
-    for (const response of responses) {
-      if (!Array.isArray(response) || !response.every(validate)) {
-        throw new Error("The item-detail response was invalid.");
-      }
-      fetched.push(...response);
-    }
+  const waits: Promise<void>[] = [];
+  const missing: string[] = [];
+  for (const id of unique) {
+    if (isFresh(gameMode, detail, id)) continue;
+    const active =
+      inFlight.get(stampKey(gameMode, "full", id)) ??
+      (detail === "basic" ? inFlight.get(stampKey(gameMode, "basic", id)) : undefined);
+    if (active) waits.push(active);
+    else missing.push(id);
   }
+  if (missing.length > 0) {
+    const task = loadItems(missing, gameMode, detail);
+    for (const id of missing) inFlight.set(stampKey(gameMode, detail, id), task);
+    waits.push(task);
+  }
+  await Promise.all(waits);
+}
 
-  if (fetched.length > 0) {
-    try {
-      await cacheSetMany(
-        fetched.map((item) => [
-          `${keyPrefix}:${gameMode}:${item.id}`,
-          { v: GUN_CACHE_VERSION, t: Date.now(), data: item },
-        ])
+async function loadItems(ids: string[], gameMode: GameMode, detail: Detail) {
+  update(gameMode, (state) => ({ pending: new Set([...state.pending, ...ids]) }));
+  try {
+    const remaining = await readPersisted(ids, gameMode, detail);
+    const fetched: GunItem[] = [];
+    const batches = chunk(remaining, ID_BATCH_SIZE);
+    for (let index = 0; index < batches.length; index += BATCH_CONCURRENCY) {
+      const responses = await Promise.all(
+        batches.slice(index, index + BATCH_CONCURRENCY).map((batch) =>
+          apiFetch<unknown>(
+            detail === "full" ? TARKOV_OPERATIONS.buildItems : TARKOV_OPERATIONS.pickItems,
+            { ids: batch, gameMode }
+          )
+        )
       );
-    } catch {
+      for (const response of responses) {
+        const validate = detail === "full" ? isBuildItem : isPickItem;
+        if (!Array.isArray(response) || !response.every(validate)) {
+          throw new Error("The item-detail response was invalid.");
+        }
+        fetched.push(...response);
+      }
     }
+    const now = Date.now();
+    merge(gameMode, detail, fetched.map((item) => ({ item, t: now })));
+    const found = new Set(fetched.map((item) => item.id));
+    update(gameMode, (state) => {
+      const missing = new Set(state.missing);
+      for (const id of remaining) {
+        if (found.has(id)) missing.delete(id);
+        else if (!state.items.has(id)) {
+          missing.add(id);
+          fetchedAt.set(stampKey(gameMode, detail, id), now);
+        }
+      }
+      return { missing, error: null };
+    });
+    if (fetched.length > 0) {
+      void cacheSetMany(
+        fetched.map((item) => [
+          `${ITEM_PREFIXES[detail]}:${gameMode}:${item.id}`,
+          { v: GUN_CACHE_VERSION, t: now, data: item },
+        ])
+      ).catch(() => undefined);
+    }
+  } catch (reason) {
+    update(gameMode, () => ({
+      error: reason instanceof Error ? reason : new Error("Could not load item data."),
+    }));
+    throw reason;
+  } finally {
+    for (const id of ids) {
+      const key = stampKey(gameMode, detail, id);
+      inFlight.delete(key);
+    }
+    update(gameMode, (state) => {
+      const pending = new Set(state.pending);
+      for (const id of ids) pending.delete(id);
+      return { pending };
+    });
   }
+}
 
-  const byId = new Map([...cached, ...fetched].map((item) => [item.id, item]));
-  return uniqueIds.flatMap((id) => {
-    const item = byId.get(id);
-    return item ? [item] : [];
+async function readPersisted(ids: string[], gameMode: GameMode, detail: Detail) {
+  const keys = ids.map((id) => `${ITEM_PREFIXES[detail]}:${gameMode}:${id}`);
+  let entries: (CacheEnvelope<unknown> | undefined)[];
+  try {
+    entries = await cacheGetMany<CacheEnvelope<unknown>>(keys);
+  } catch {
+    return ids;
+  }
+  const validate = detail === "full" ? isBuildItem : isPickItem;
+  const now = Date.now();
+  const usable: { item: GunItem; t: number }[] = [];
+  const obsolete: string[] = [];
+  const remaining: string[] = [];
+  entries.forEach((entry, index) => {
+    const valid =
+      entry &&
+      entry.v === GUN_CACHE_VERSION &&
+      typeof entry.t === "number" &&
+      now - entry.t < MAX_AGE_MS &&
+      validate(entry.data) &&
+      entry.data.id === ids[index];
+    if (!valid) {
+      if (entry) obsolete.push(keys[index]);
+      remaining.push(ids[index]);
+      return;
+    }
+    usable.push({ item: entry.data as GunItem, t: entry.t });
+    if (now - entry.t >= FRESH_MS) remaining.push(ids[index]);
   });
+  merge(gameMode, detail, usable);
+  if (obsolete.length > 0) void cacheDeleteMany(obsolete).catch(() => undefined);
+  return remaining;
 }
 
-export function fetchBuildItems(
-  ids: string[],
-  gameMode: GameMode
-): Promise<BuildItemData[]> {
-  return fetchCachedById(
-    ids,
-    TARKOV_OPERATIONS.buildItems,
-    gameMode,
-    "build-item",
-    isBuildItem
-  );
-}
-
-export function fetchPickItems(
-  ids: string[],
-  gameMode: GameMode
-): Promise<PickItemData[]> {
-  return fetchCachedById(
-    ids,
-    TARKOV_OPERATIONS.pickItems,
-    gameMode,
-    "pick-item",
-    isPickItem
-  );
-}
-
-export async function fetchPreset(
-  id: string,
-  gameMode: GameMode
-): Promise<PresetContents | null> {
-  startGunCacheSweep();
-  const cacheKey = `preset:${gameMode}:${id}`;
-  const cached = await readCache<PresetContents | null>(cacheKey, STRUCTURE_CACHE_TTL);
-  if (cached !== undefined && isPreset(cached)) return cached;
-  if (cached !== undefined) await cacheDelete(cacheKey).catch(() => undefined);
-
-  const result = await apiFetch<PresetContents | null>(
-    TARKOV_OPERATIONS.preset,
-    { id, gameMode }
-  );
-  if (!isPreset(result)) throw new Error("The preset response was invalid.");
-  await writeCache(cacheKey, result);
+export function detailedItems(gameMode: GameMode) {
+  const result = new Map<string, BuildItemData>();
+  for (const [id, item] of getGunItemState(gameMode).items) {
+    if (isDetailed(item)) result.set(id, item);
+  }
   return result;
+}
+
+export async function loadPresetTree(
+  presetId: string,
+  weaponId: string,
+  gameMode: GameMode
+): Promise<BuildNode | null> {
+  const [preset] = await Promise.all([
+    ensureQuery(presetQuery, { gameMode, id: presetId }),
+    ensureGunItems([weaponId], gameMode, "full"),
+  ]);
+  if (!preset || (preset.baseItemId !== null && preset.baseItemId !== weaponId)) return null;
+  await ensureGunItems([weaponId, ...preset.itemIds], gameMode, "full");
+  return reconstructPresetTree(weaponId, preset, detailedItems(gameMode));
+}
+
+export function prefetchGunList(gameMode: GameMode) {
+  void ensureQuery(gunListQuery, { gameMode }).catch(() => undefined);
+}
+
+export function prefetchPreset(presetId: string, weaponId: string, gameMode: GameMode) {
+  void loadPresetTree(presetId, weaponId, gameMode).catch(() => undefined);
+}
+
+export function prefetchSlotItems(ids: readonly string[], gameMode: GameMode) {
+  void ensureGunItems(ids, gameMode, "basic").catch(() => undefined);
 }
 
 function isGunList(value: unknown): value is GunListItem[] {
@@ -291,33 +386,30 @@ function validAssetUrl(value: unknown): value is string | null {
   }
 }
 
-function startGunCacheSweep() {
+function sweepPersistentCache() {
   const now = Date.now();
-  if (gunCacheSweep || now - lastGunCacheSweepAt < GUN_CACHE_SWEEP_INTERVAL_MS) return;
-  lastGunCacheSweepAt = now;
-  gunCacheSweep = (async () => {
-    try {
-      const prefixes = ["guns:", "build-item:", "pick-item:", "preset:"];
-      const keys = (await cacheKeys()).filter(
-        (key): key is string =>
-          typeof key === "string" && prefixes.some((prefix) => key.startsWith(prefix))
+  if (now - lastSweepAt < SWEEP_INTERVAL_MS) return;
+  lastSweepAt = now;
+  void (async () => {
+    const prefixes = Object.values(ITEM_PREFIXES).map((prefix) => `${prefix}:`);
+    const keys = (await cacheKeys()).filter(
+      (key): key is string =>
+        typeof key === "string" &&
+        [...prefixes, ...LEGACY_PREFIXES].some((prefix) => key.startsWith(prefix))
+    );
+    const entries = await cacheGetMany<CacheEnvelope<unknown>>(keys);
+    const obsolete = keys.filter((key, index) => {
+      const entry = entries[index];
+      return (
+        LEGACY_PREFIXES.some((prefix) => key.startsWith(prefix)) ||
+        !entry ||
+        entry.v !== GUN_CACHE_VERSION ||
+        typeof entry.t !== "number" ||
+        now - entry.t > MAX_AGE_MS
       );
-      const entries = await cacheGetMany<CacheEnvelope<unknown>>(keys);
-      const obsolete = keys.filter((_, index) => {
-        const entry = entries[index];
-        return (
-          !entry ||
-          entry.v !== GUN_CACHE_VERSION ||
-          typeof entry.t !== "number" ||
-          Date.now() - entry.t > STRUCTURE_CACHE_TTL
-        );
-      });
-      if (obsolete.length > 0) await cacheDeleteMany(obsolete);
-    } catch {
-    }
-  })().finally(() => {
-    gunCacheSweep = null;
-  });
+    });
+    if (obsolete.length > 0) await cacheDeleteMany(obsolete);
+  })().catch(() => undefined);
 }
 
 function chunk<T>(values: T[], size: number): T[][] {
