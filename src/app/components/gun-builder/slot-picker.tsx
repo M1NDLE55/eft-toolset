@@ -119,7 +119,7 @@ export function SlotPicker({
     <Dialog open={Boolean(target)} onOpenChange={(open) => !open && onClose()}>
       <DialogContent
         portalContainer={target?.container}
-        className="flex h-[min(88dvh,760px)] max-w-3xl flex-col gap-3 p-4 sm:p-5"
+        className="flex max-h-[min(88dvh,760px)] max-w-3xl flex-col gap-3 p-4 sm:p-5"
       >
         {target && (
           <PickerBody
@@ -278,7 +278,7 @@ function PickerBody({
         {loading && !showSkeleton && <LoaderCircle className="h-3.5 w-3.5 animate-spin text-[#9a8866]" />}
       </div>
 
-      <ul className="min-h-0 flex-1 overflow-y-auto overscroll-contain border border-[#1a1a1a] bg-[#080808]">
+      <ul className="min-h-24 flex-1 overflow-y-auto overscroll-contain border border-[#1a1a1a] bg-[#080808]">
         {showSkeleton &&
           Array.from({ length: 6 }, (_, index) => (
             <li key={index} className="flex items-center gap-3 border-t border-[#141414] p-3 first:border-t-0">

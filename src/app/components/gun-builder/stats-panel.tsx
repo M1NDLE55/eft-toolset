@@ -130,7 +130,7 @@ export function StatsPanel({
           label="Weight"
           className="col-span-3 lg:col-span-1"
           loading={statsLoading}
-          value={`${stats.weight.toFixed(2)} kg`}
+          value={stats.ergonomics === null ? "—" : `${stats.weight.toFixed(2)} kg`}
           delta={base && <Delta value={stats.weight - base.weight} better="down" digits={2} />}
         />
         <Stat
