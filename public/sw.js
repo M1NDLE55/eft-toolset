@@ -1,10 +1,11 @@
-const VERSION = "v1";
+const VERSION = "v2";
 const STATIC_CACHE = `eft-static-${VERSION}`;
 const PAGE_CACHE = `eft-pages-${VERSION}`;
 const DATA_CACHE = `eft-data-${VERSION}`;
 const CACHES = [STATIC_CACHE, PAGE_CACHE, DATA_CACHE];
 const LIMITS = { [PAGE_CACHE]: 40, [DATA_CACHE]: 200 };
 const NETWORK_TIMEOUT_MS = 4000;
+const MAX_PAGE_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 
 self.addEventListener("install", () => {
   self.skipWaiting();
@@ -55,10 +56,15 @@ async function networkFirst(request, cacheName, fallback) {
     return response;
   } catch (error) {
     const cached = await cache.match(request);
-    if (cached) return cached;
+    if (cached && (cacheName !== PAGE_CACHE || isFresh(cached))) return cached;
     if (fallback) return fallback();
     throw error;
   }
+}
+
+function isFresh(response) {
+  const date = Date.parse(response.headers.get("date") || "");
+  return Number.isFinite(date) && Date.now() - date < MAX_PAGE_AGE_MS;
 }
 
 function withTimeout(promise, ms) {

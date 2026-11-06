@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 }
 
 export default async function Page({ params }: ItemPageProps) {
-  const { gameMode, item, reference } = await resolveItemRoute((await params).itemName);
+  const { gameMode, item, reference, renderedAt } = await resolveItemRoute((await params).itemName);
   if (!reference) return null;
-  return <ItemPageClient reference={reference} initial={item ? { gameMode, item } : null} />;
+  return <ItemPageClient reference={reference} initial={item ? { gameMode, item, renderedAt } : null} />;
 }

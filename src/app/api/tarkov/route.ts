@@ -9,6 +9,8 @@ import {
 import { publicCacheControl } from "@/app/lib/api/cache-control";
 import {
   executeTarkovOperation,
+  releaseOperationSlot,
+  tryAcquireOperationSlot,
   TarkovRequestError,
   TarkovUpstreamError,
 } from "@/app/lib/api/tarkov-server";
@@ -16,7 +18,6 @@ import {
 export const runtime = "nodejs";
 
 const MAX_REQUEST_BYTES = 64 * 1024;
-const MAX_CONCURRENT_REQUESTS = 16;
 const CLIENT_BURST = 120;
 const CLIENT_REFILL_PER_SECOND = 2;
 const GLOBAL_BURST = 300;
@@ -32,7 +33,6 @@ interface TokenBucket {
 
 const clientBuckets = new Map<string, TokenBucket>();
 const globalBucket: TokenBucket = { tokens: GLOBAL_BURST, updatedAt: Date.now() };
-let activeRequests = 0;
 
 export async function GET(request: Request) {
   const rateLimited = rateLimitResponse(request);
@@ -121,16 +121,15 @@ async function handlePost(request: Request) {
 }
 
 async function withSlot(handler: () => Promise<Response>) {
-  if (activeRequests >= MAX_CONCURRENT_REQUESTS) {
+  if (!tryAcquireOperationSlot()) {
     return errorResponse("The service is busy. Try again shortly.", "RATE_LIMITED", 429, {
       "Retry-After": "1",
     });
   }
-  activeRequests += 1;
   try {
     return await handler();
   } finally {
-    activeRequests -= 1;
+    releaseOperationSlot();
   }
 }
 

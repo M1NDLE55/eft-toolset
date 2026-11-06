@@ -2,12 +2,30 @@ export const dynamic = "force-dynamic";
 
 import type { MetadataRoute } from "next";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
-import { listItemSlugs } from "@/app/lib/api/tarkov-server";
+import { listItemSlugs, releaseOperationSlot, tryAcquireOperationSlot } from "@/app/lib/api/tarkov-server";
 
 const ORIGIN = "https://www.eft-toolset.com";
 
+async function loadItemSlugs(): Promise<string[]> {
+  if (!tryAcquireOperationSlot()) return [];
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  try {
+    return await Promise.race([
+      listItemSlugs(),
+      new Promise<string[]>((resolve) => {
+        timer = setTimeout(() => resolve([]), 5_000);
+      }),
+    ]);
+  } catch {
+    return [];
+  } finally {
+    clearTimeout(timer);
+    releaseOperationSlot();
+  }
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const itemSlugs = await listItemSlugs().catch(() => [] as string[]);
+  const itemSlugs = await loadItemSlugs();
   const routes = [
     { path: "/", priority: 1, changeFrequency: "monthly" as const },
     { path: "/item", priority: 0.9, changeFrequency: "weekly" as const },

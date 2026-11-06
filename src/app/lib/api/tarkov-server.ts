@@ -309,6 +309,19 @@ const operationContext = new AsyncLocalStorage<{
   signal?: AbortSignal;
 }>();
 
+const MAX_CONCURRENT_OPERATIONS = 16;
+let activeOperations = 0;
+
+export function tryAcquireOperationSlot() {
+  if (activeOperations >= MAX_CONCURRENT_OPERATIONS) return false;
+  activeOperations += 1;
+  return true;
+}
+
+export function releaseOperationSlot() {
+  activeOperations = Math.max(0, activeOperations - 1);
+}
+
 const OPERATION_VARIABLES: Record<TarkovOperation, readonly string[]> = {
   [TARKOV_OPERATIONS.itemCatalog]: ["gameMode"],
   [TARKOV_OPERATIONS.groupItems]: ["gameMode", "names"],
@@ -462,10 +475,18 @@ export async function getItemDetail(
   if (!item?.id) return null;
   const requestedName = translate(item.name, itemContext.translations);
 
-  const tasks = (taskContext.byItem.get(item.id) ?? []).map((task) =>
+  const itemId = item.id;
+  const details = memo(
+    `${gameMode}/details`,
+    [itemContext, traderNames, taskContext, relations, stations],
+    () => new Map<string, ComposedItem>()
+  );
+  const cached = details.get(itemId);
+  if (cached) return cached;
+  const tasks = (taskContext.byItem.get(itemId) ?? []).map((task) =>
     projectTask(task, taskContext.translations, traderNames)
   );
-  const bartersUsing = relatedBarters(relations.bartersByItem, item.id)
+  const bartersUsing = relatedBarters(relations.bartersByItem, itemId)
     .map((barter) =>
       projectBarter(
         barter,
@@ -477,7 +498,7 @@ export async function getItemDetail(
       )
     )
     .filter((barter) => barter.rewardItems.length > 0);
-  const craftsUsing = (relations.craftsByItem.get(item.id) ?? [])
+  const craftsUsing = (relations.craftsByItem.get(itemId) ?? [])
     .map((craft) =>
       projectCraft(
         craft,
@@ -490,7 +511,7 @@ export async function getItemDetail(
     )
     .filter((craft) => craft.rewardItems.length > 0);
 
-  return {
+  const detail: ComposedItem = {
     ...projectCachedItem(
       item,
       requestedName,
@@ -503,6 +524,8 @@ export async function getItemDetail(
     bartersUsing,
     craftsUsing,
   };
+  details.set(itemId, detail);
+  return detail;
 }
 
 async function getGunList(gameMode: GameMode): Promise<GunListItem[]> {

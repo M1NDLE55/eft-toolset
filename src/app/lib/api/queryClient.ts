@@ -139,7 +139,7 @@ export function primeQuery<Variables, Data>(
   };
   memory.set(key, entry);
   evictMemoryEntries();
-  snapshots.set(key, { data, status: "success", isFetching: false, updatedAt, stale: false });
+  snapshots.set(key, { data, status: "success", isFetching: false, updatedAt, stale: Date.now() - updatedAt > definition.staleTime });
   queueMicrotask(() => notify(key));
   if (definition.persist) void cacheSet(persistenceKey(key), entry).catch(() => undefined);
 }

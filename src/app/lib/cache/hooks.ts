@@ -32,8 +32,8 @@ export function useCatalog() {
   };
 }
 
-export function primeItem(reference: ItemReference, gameMode: GameMode, item: ComposedItem) {
-  primeQuery(itemDetailQuery, { ...reference, gameMode } as ItemReference & { gameMode: GameMode }, item);
+export function primeItem(reference: ItemReference, gameMode: GameMode, item: ComposedItem, updatedAt: number) {
+  primeQuery(itemDetailQuery, { ...reference, gameMode } as ItemReference & { gameMode: GameMode }, item, updatedAt);
 }
 
 export function useItem(reference: ItemReference): {

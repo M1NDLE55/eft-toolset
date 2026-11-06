@@ -21,19 +21,19 @@ export function ItemPageClient({
   initial,
 }: {
   reference: ItemReference;
-  initial: { gameMode: GameMode; item: ComposedItem } | null;
+  initial: { gameMode: GameMode; item: ComposedItem; renderedAt: number } | null;
 }) {
   useState(() => {
-    if (initial && typeof window !== "undefined") primeItem(reference, initial.gameMode, initial.item);
+    if (initial && typeof window !== "undefined") primeItem(reference, initial.gameMode, initial.item, initial.renderedAt);
     return null;
   });
   const query = useItem(reference);
-  const serverItem = initial && !query.item ? initial.item : null;
+  const { gameMode, hydrated } = useGameMode();
+  const serverItem = initial && !query.item && (!hydrated || initial.gameMode === gameMode) ? initial.item : null;
   const item = query.item ?? serverItem;
   const { error, refresh, stale } = query;
   const loading = query.loading && !item;
   const itemName = reference.name ?? reference.slug;
-  const { gameMode, hydrated } = useGameMode();
   const [now] = useState(() => Date.now());
   const history = usePriceHistories(gameMode, item ? [item.name] : [], hydrated);
   const liveItem = query.item;
