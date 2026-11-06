@@ -7,7 +7,7 @@ import { makeLayerAccessible } from "./leaflet-accessibility";
 const ROUTE_COLOR = PLAN_COLORS[0];
 
 export interface PlanLayerHandlers {
-  draggable: boolean;
+  editable: boolean;
   onWaypointClick: (id: string) => void;
   onDrawingClick: (id: string) => void;
   onNoteClick: (id: string) => void;
@@ -31,7 +31,7 @@ export function buildPlanLayers(
 
   plan.route.forEach((waypoint, index) => {
     const marker = L.marker(gameToLatLng(waypoint.position), {
-      draggable: handlers.draggable,
+      draggable: handlers.editable,
       icon: L.divIcon({
         className: "rp-glyph-wrap",
         html: `<div class="rp-waypoint">${index + 1}</div>`,
@@ -51,17 +51,25 @@ export function buildPlanLayers(
 
   for (const drawing of plan.drawings) {
     const displayColor = getPlanDisplayColor(drawing.color);
+    const latLngs = drawing.points.map((point) => gameToLatLng(point));
     const layer =
       drawing.kind === "arrow"
         ? buildArrow(map, drawing, displayColor, group)
-        : L.polyline(
-            drawing.points.map((point) => gameToLatLng(point)),
-            { color: displayColor, weight: 3, opacity: 1 }
-          ).addTo(group);
-    layer.on("click", (event) => {
+        : L.polyline(latLngs, { color: displayColor, weight: 3, opacity: 1 }).addTo(group);
+    const activate = (event: L.LeafletEvent) => {
       L.DomEvent.stopPropagation(event);
       handlers.onDrawingClick(drawing.id);
-    });
+    };
+    layer.on("click", activate);
+    if (handlers.editable) {
+      L.polyline(drawing.kind === "arrow" ? [latLngs[0], latLngs[latLngs.length - 1]] : latLngs, {
+        weight: 18,
+        opacity: 0,
+        className: "rp-hit-line",
+      })
+        .on("click", activate)
+        .addTo(group);
+    }
     makeLayerAccessible(
       layer,
       drawing.kind === "arrow" ? "Arrow drawing" : "Freehand drawing",
@@ -70,7 +78,7 @@ export function buildPlanLayers(
   }
 
   for (const note of plan.notes) {
-    const marker = buildNoteMarker(note, handlers.draggable);
+    const marker = buildNoteMarker(note, handlers.editable);
     marker.on("click", (event) => {
       L.DomEvent.stopPropagation(event);
       handlers.onNoteClick(note.id);
@@ -87,7 +95,7 @@ export function buildPlanLayers(
   return group;
 }
 
-export function buildNoteMarker(note: NotePin, draggable = false): L.Marker {
+function buildNoteMarker(note: NotePin, draggable: boolean): L.Marker {
   const displayColor = getPlanDisplayColor(note.color);
   const marker = L.marker(gameToLatLng(note.position), {
     draggable,

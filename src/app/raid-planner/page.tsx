@@ -1,21 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Copy, Map as MapIcon, Plus, Trash2 } from "lucide-react";
 import type { MapConfig, RaidPlan } from "@/app/lib/raid-planner/types";
-import { getMapConfig, mapConfigs } from "@/app/lib/raid-planner/maps-config";
-import {
-  createPlan,
-  deletePlan,
-  duplicatePlan,
-  listPlans,
-  subscribePlans,
-} from "@/app/lib/raid-planner/store";
+import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
+import { createPlan, deletePlan, duplicatePlan, usePlans } from "@/app/lib/raid-planner/store";
+import { prefetchMap } from "@/app/lib/raid-planner/prefetch";
+import { MAX_PLAN_NAME_LENGTH } from "@/app/lib/raid-planner/limits";
+import { useHydrated } from "@/app/lib/storage/use-store";
+import { useGameMode } from "@/components/game-mode/context";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Skeleton } from "@/components/ui/skeleton";
 import {
   Dialog,
   DialogContent,
@@ -35,193 +32,218 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { MapPicker } from "@/app/components/raid-planner/map-picker";
-import { MAX_PLAN_NAME_LENGTH, MAX_PLANS } from "@/app/lib/raid-planner/limits";
+import { MapLinks, MapPicker } from "@/app/components/raid-planner/map-picker";
+import { eyebrow, focusRing } from "@/app/components/raid-planner/ui";
+import { cn } from "@/lib/utils";
 
-function formatDate(value: number) {
-  return new Intl.DateTimeFormat(undefined, {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  }).format(value);
+const dateFormat = new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric", year: "numeric" });
+
+function plural(count: number, word: string) {
+  return `${count} ${word}${count === 1 ? "" : "s"}`;
 }
 
 export default function RaidPlannerPage() {
   const router = useRouter();
-  const [plans, setPlans] = useState<RaidPlan[]>([]);
-  const [loading, setLoading] = useState(true);
+  const hydrated = useHydrated();
+  const plans = usePlans();
   const [createOpen, setCreateOpen] = useState(false);
   const [createName, setCreateName] = useState("");
   const [actionError, setActionError] = useState("");
 
-  function refresh() {
-    setPlans(listPlans());
+  function run(action: () => void, fallback: string) {
+    try {
+      action();
+      setActionError("");
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : fallback);
+    }
   }
-
-  useEffect(() => {
-    refresh();
-    setLoading(false);
-    return subscribePlans(refresh);
-  }, []);
 
   function handleCreate(config: MapConfig) {
-    try {
-      if (plans.length >= MAX_PLANS) throw new Error(`You can save at most ${MAX_PLANS} plans.`);
-      const name = createName.trim() || `${config.name} raid`;
-      if (name.length > MAX_PLAN_NAME_LENGTH) throw new Error(`Plan names can contain at most ${MAX_PLAN_NAME_LENGTH} characters.`);
-      const plan = createPlan(name, config.key);
+    run(() => {
+      const plan = createPlan(createName.trim() || `${config.name} raid`, config.key);
       setCreateOpen(false);
-      setCreateName("");
-      setActionError("");
       router.push(`/raid-planner/${plan.id}`);
-    } catch (reason) {
-      setActionError(reason instanceof Error ? reason.message : "Could not create this plan.");
-    }
+    }, "Could not create this plan.");
   }
 
-  function handleDuplicate(id: string) {
-    try {
-      const duplicate = duplicatePlan(id);
-      refresh();
-      if (duplicate) router.push(`/raid-planner/${duplicate.id}`);
-      setActionError("");
-    } catch (reason) {
-      setActionError(reason instanceof Error ? reason.message : "Could not duplicate this plan.");
-    }
-  }
-
-  function handleDelete(id: string) {
-    try {
-      deletePlan(id);
-      refresh();
-      setActionError("");
-    } catch (reason) {
-      setActionError(reason instanceof Error ? reason.message : "Could not delete this plan.");
-    }
-  }
+  const createDialog = (
+    <Dialog
+      open={createOpen}
+      onOpenChange={(open) => {
+        setCreateOpen(open);
+        if (open) setCreateName("");
+      }}
+    >
+      <DialogTrigger asChild>
+        <Button>
+          <Plus aria-hidden />
+          New plan
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="flex max-h-[calc(100dvh-2rem)] max-w-2xl flex-col">
+        <DialogHeader>
+          <DialogTitle>New plan</DialogTitle>
+          <DialogDescription>Name it, then pick the map. You can rename it later.</DialogDescription>
+        </DialogHeader>
+        <Input
+          value={createName}
+          maxLength={MAX_PLAN_NAME_LENGTH}
+          aria-label="Plan name"
+          onChange={(event) => setCreateName(event.target.value)}
+          placeholder="Plan name (optional)"
+          className="shrink-0 max-sm:text-base"
+        />
+        <div className="-mx-1 min-h-0 overflow-y-auto px-1 pb-1">
+          <MapPicker onPick={handleCreate} />
+        </div>
+        {actionError && createOpen && (
+          <p role="alert" className="text-sm text-red-300">
+            {actionError}
+          </p>
+        )}
+      </DialogContent>
+    </Dialog>
+  );
 
   return (
-    <div className="flex justify-center p-4 sm:min-h-[calc(100vh-130px)] min-h-[calc(100vh-65px)]">
-      <div className="flex w-full max-w-4xl flex-col gap-4">
-        {actionError && <p role="alert" className="text-sm text-red-300">{actionError}</p>}
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <h1 className="text-3xl font-black uppercase tracking-widest text-[#9a8866]">
-            Raid Planner
-          </h1>
-          <Dialog
-            open={createOpen}
-            onOpenChange={(open) => {
-              setCreateOpen(open);
-              if (open) setCreateName("");
-            }}
-          >
-            <DialogTrigger asChild>
-              <Button>
-                <Plus className="h-4 w-4" />
-                Create
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="max-w-2xl">
-              <DialogHeader>
-                <DialogTitle>Create plan</DialogTitle>
-                <DialogDescription>
-                  Name the plan, then choose a map.
-                </DialogDescription>
-              </DialogHeader>
-              <Input
-                value={createName}
-                maxLength={MAX_PLAN_NAME_LENGTH}
-                onChange={(event) => setCreateName(event.target.value)}
-                placeholder="Plan name, optional"
-              />
-              <MapPicker onPick={handleCreate} />
-            </DialogContent>
-          </Dialog>
-        </div>
+    <div className="flex justify-center px-4 py-6 sm:py-10">
+      <div className="flex w-full max-w-4xl flex-col gap-8">
+        <header className="flex flex-wrap items-end justify-between gap-4">
+          <div className="min-w-0">
+            <h1 className="text-3xl font-black uppercase tracking-widest text-[#9a8866]">Raid Planner</h1>
+            <p className="mt-1 max-w-xl text-sm text-[#999]">
+              Draw routes, arrows and callouts on interactive maps, then share the plan with your squad as a link.
+            </p>
+          </div>
+          {createDialog}
+        </header>
 
-        {loading ? (
-          <div className="flex flex-col gap-3">
-            <Skeleton className="h-[72px] w-full" />
-            <Skeleton className="h-[72px] w-full" />
-            <Skeleton className="h-[72px] w-full" />
-          </div>
-        ) : plans.length > 0 ? (
-          <div className="flex flex-col gap-3">
-            {plans.map((plan) => (
-              <div
-                key={plan.id}
-                className="flex flex-wrap items-center gap-3 border border-[#2a2a2a] bg-[#090909] p-3"
-              >
-                <Button
-                  variant="secondary"
-                  className="min-w-0 flex-1 justify-between"
-                  asChild
-                >
-                  <Link href={{ pathname: `/raid-planner/${plan.id}` }}>
-                    <span className="truncate">{plan.name}</span>
-                    <span className="text-[10px] uppercase tracking-widest text-[#888]">
-                      {getMapConfig(plan.mapKey)?.name ?? plan.mapKey} ·{" "}
-                      {formatDate(plan.updatedAt)}
-                    </span>
-                  </Link>
-                </Button>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => handleDuplicate(plan.id)}
-                >
-                  <Copy className="h-4 w-4" />
-                  <span className="sr-only">Duplicate plan</span>
-                </Button>
-                <AlertDialog>
-                  <AlertDialogTrigger asChild>
-                    <Button variant="destructive" size="icon">
-                      <Trash2 className="h-4 w-4" />
-                      <span className="sr-only">Delete plan</span>
-                    </Button>
-                  </AlertDialogTrigger>
-                  <AlertDialogContent>
-                    <AlertDialogHeader>
-                      <AlertDialogTitle>Delete this plan?</AlertDialogTitle>
-                      <AlertDialogDescription>
-                        This action cannot be undone. This will permanently
-                        delete{" "}
-                        <span className="font-bold text-[#ccc]">{plan.name}</span>.
-                      </AlertDialogDescription>
-                    </AlertDialogHeader>
-                    <AlertDialogFooter>
-                      <AlertDialogCancel>Cancel</AlertDialogCancel>
-                      <AlertDialogAction onClick={() => handleDelete(plan.id)}>
-                        Delete
-                      </AlertDialogAction>
-                    </AlertDialogFooter>
-                  </AlertDialogContent>
-                </AlertDialog>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <p className="border border-[#2a2a2a] p-3 text-xl">No raid plans</p>
+        {actionError && !createOpen && (
+          <p role="alert" className="border border-red-900/60 bg-[#090909] px-3 py-2 text-sm text-red-200">
+            {actionError}
+          </p>
         )}
 
-        <div className="mt-4 flex flex-col gap-2">
-          <h2 className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
-            Or browse a map without a plan
+        <section aria-labelledby="plans-heading" className="flex flex-col gap-3">
+          <h2 id="plans-heading" className={eyebrow}>
+            Your plans{hydrated && plans.length > 0 ? ` · ${plans.length}` : ""}
           </h2>
-          <div className="flex flex-wrap gap-2">
-            {mapConfigs.map((config) => (
-              <Link
-                key={config.key}
-                href={{ pathname: `/raid-planner/map/${config.key}` }}
-                className="flex items-center gap-1.5 border border-[#2a2a2a] bg-[#090909] px-3 py-1.5 text-[10px] uppercase tracking-widest text-[#888] transition-colors hover:border-[#9a8866] hover:text-[#ccc]"
-              >
-                <MapIcon className="h-3 w-3" />
-                {config.name}
-              </Link>
-            ))}
-          </div>
-        </div>
+          {!hydrated ? (
+            <div className="flex flex-col gap-2" aria-busy="true">
+              {[0, 1].map((index) => (
+                <div key={index} className="h-[66px] animate-pulse border border-[#1d1d1d] bg-[#0c0c0c]" />
+              ))}
+            </div>
+          ) : plans.length > 0 ? (
+            <ul className="flex flex-col gap-2">
+              {plans.map((plan) => (
+                <PlanRow
+                  key={plan.id}
+                  plan={plan}
+                  onDuplicate={() =>
+                    run(() => {
+                      const copy = duplicatePlan(plan.id);
+                      if (copy) router.push(`/raid-planner/${copy.id}`);
+                    }, "Could not duplicate this plan.")
+                  }
+                  onDelete={() => run(() => deletePlan(plan.id), "Could not delete this plan.")}
+                />
+              ))}
+            </ul>
+          ) : (
+            <div className="flex flex-col items-start gap-3 border border-dashed border-[#2a2a2a] p-5">
+              <p className="text-sm font-bold uppercase tracking-widest text-[#ccc]">No plans yet</p>
+              <p className="text-sm text-[#888]">
+                Plans are stored in this browser. Create one, or open a map below to look around first.
+              </p>
+            </div>
+          )}
+        </section>
+
+        <section aria-labelledby="maps-heading" className="flex flex-col gap-3">
+          <h2 id="maps-heading" className={eyebrow}>
+            Browse a map
+          </h2>
+          <MapLinks />
+        </section>
       </div>
     </div>
+  );
+}
+
+function PlanRow({ plan, onDuplicate, onDelete }: { plan: RaidPlan; onDuplicate: () => void; onDelete: () => void }) {
+  const { gameMode } = useGameMode();
+  const config = getMapConfig(plan.mapKey);
+  const summary = [
+    plural(plan.route.length, "waypoint"),
+    plural(plan.drawings.length, "drawing"),
+    plural(plan.notes.length, "note"),
+  ].join(" · ");
+
+  return (
+    <li className="flex items-stretch border border-[#2a2a2a] bg-[#090909] transition-colors hover:border-[#3a3a3a]">
+      <Link
+        href={`/raid-planner/${plan.id}`}
+        onPointerEnter={() => config && prefetchMap(config, gameMode)}
+        onFocus={() => config && prefetchMap(config, gameMode)}
+        onTouchStart={() => config && prefetchMap(config, gameMode)}
+        className={cn("group flex min-w-0 flex-1 flex-col justify-center gap-1 px-3 py-3 sm:px-4", focusRing)}
+      >
+        <span className="truncate text-sm font-bold text-[#ddd] group-hover:text-[#c9b88d]">
+          {plan.name || "Untitled raid"}
+        </span>
+        <span className="flex flex-wrap items-center gap-x-3 gap-y-0.5 text-[10px] uppercase tracking-widest text-[#888]">
+          <span className="flex items-center gap-1 text-[#9a8866]">
+            <MapIcon className="h-3 w-3" aria-hidden />
+            {config?.name ?? "Unknown map"}
+          </span>
+          <span className="max-sm:hidden">{summary}</span>
+          <span>{dateFormat.format(plan.updatedAt)}</span>
+        </span>
+      </Link>
+      <div className="flex shrink-0 items-center border-l border-[#1d1d1d]">
+        <button
+          type="button"
+          title="Duplicate plan"
+          onClick={onDuplicate}
+          className={cn(
+            "flex h-full min-h-12 w-12 items-center justify-center text-[#888] transition-colors hover:bg-[#141414] hover:text-[#ddd]",
+            focusRing
+          )}
+        >
+          <Copy className="h-4 w-4" aria-hidden />
+          <span className="sr-only">Duplicate {plan.name}</span>
+        </button>
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <button
+              type="button"
+              title="Delete plan"
+              className={cn(
+                "flex h-full min-h-12 w-12 items-center justify-center text-[#888] transition-colors hover:bg-[#1a0e0e] hover:text-red-300",
+                focusRing
+              )}
+            >
+              <Trash2 className="h-4 w-4" aria-hidden />
+              <span className="sr-only">Delete {plan.name}</span>
+            </button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Delete this plan?</AlertDialogTitle>
+              <AlertDialogDescription>
+                <span className="font-bold text-[#ccc]">{plan.name || "Untitled raid"}</span> will be permanently
+                removed from this browser. Shared links keep working.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction onClick={onDelete}>Delete</AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      </div>
+    </li>
   );
 }
