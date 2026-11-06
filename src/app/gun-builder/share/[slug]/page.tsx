@@ -15,6 +15,8 @@ import { layoutBuild } from "@/app/lib/builds/tree-layout";
 import { useGunItems } from "@/app/lib/cache/gunBuilderHooks";
 import { formatRub } from "@/app/components/gun-builder/format";
 import { MAX_BUILD_NAME_LENGTH } from "@/app/lib/builds/limits";
+import { itemHref } from "@/app/lib/item-links";
+import { useDocumentTitle } from "@/app/components/gun-builder/use-document-title";
 
 type Decoded =
   | { payload: string; status: "ready"; build: DecodedSharedBuild }
@@ -99,6 +101,7 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
   const parts = countParts(build.root);
   const rows = layoutBuild(build.root, items).nodes.filter((node) => node.kind === "item");
   const name = build.name || weapon?.name.slice(0, MAX_BUILD_NAME_LENGTH) || "Shared build";
+  useDocumentTitle(`${name} · Shared build`);
 
   function handleImport() {
     setImporting(true);
@@ -191,9 +194,17 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
                     )}
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate text-sm text-[#ddd]">
-                      {item?.name ?? (loading ? "Loading…" : "Unavailable item")}
-                    </span>
+                    {item ? (
+                      <Link
+                        href={itemHref(item)}
+                        prefetch={false}
+                        className="block truncate text-sm text-[#ddd] hover:text-[#e6d9b8] hover:underline"
+                      >
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <span className="block truncate text-sm text-[#ddd]">{loading ? "Loading…" : "Unavailable item"}</span>
+                    )}
                     {node.slot && <span className="block truncate text-[10px] uppercase tracking-widest text-[#666]">{node.slot.name}</span>}
                   </span>
                 </li>

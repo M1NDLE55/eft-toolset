@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ChevronRight, Copy, Plus, Search, Trash2 } from "lucide-react";
+import { ChevronRight, Copy, GitCompareArrows, Plus, Search, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -17,6 +17,7 @@ import { useGameMode } from "@/components/game-mode/context";
 import type { GunBuild } from "@/app/lib/types/gunBuilder";
 import { useGunList } from "@/app/lib/cache/gunBuilderHooks";
 import { NewBuildDialog } from "@/app/components/gun-builder/weapon-picker";
+import { ImportBuildDialog } from "@/app/components/gun-builder/import-build-dialog";
 import { formatDate } from "@/app/components/gun-builder/format";
 
 const FILTER_THRESHOLD = 6;
@@ -64,13 +65,23 @@ export default function GunBuilderPage() {
           <h1 className="text-2xl font-black uppercase tracking-widest text-[#e6d9b8]">Gun builder</h1>
           <p className="mt-1 text-sm text-[#888]">Assemble weapons, compare stats and cost. Saved in this browser.</p>
         </div>
-        <NewBuildDialog
-          trigger={
-            <Button>
-              <Plus /> New build
+        <div className="flex flex-wrap gap-2 max-sm:w-full max-sm:[&>*]:flex-1">
+          {hydrated && builds.length >= 2 && (
+            <Button asChild variant="outline">
+              <Link href="/gun-builder/compare">
+                <GitCompareArrows /> Compare
+              </Link>
             </Button>
-          }
-        />
+          )}
+          <ImportBuildDialog />
+          <NewBuildDialog
+            trigger={
+              <Button>
+                <Plus /> New build
+              </Button>
+            }
+          />
+        </div>
       </div>
 
       {actionError && (
