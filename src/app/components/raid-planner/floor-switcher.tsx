@@ -60,7 +60,7 @@ export function FloorSwitcher({ config, activeFloor, onChange }: FloorSwitcherPr
         aria-label="Map level"
         className={cn(
           overlayPanel,
-          "max-h-[min(60vh,32rem)] flex-col overflow-y-auto overscroll-contain max-sm:order-first",
+          "max-h-[min(45dvh,24rem)] flex-col overflow-y-auto overscroll-contain max-sm:order-first",
           compact && "order-first",
           expanded ? "flex" : compact ? "hidden" : "hidden sm:flex"
         )}
