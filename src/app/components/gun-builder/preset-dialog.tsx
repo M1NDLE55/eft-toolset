@@ -52,9 +52,9 @@ export function PresetDialog({
       }}
     >
       <DialogTrigger asChild>
-        <Button variant="outline" disabled={!weapon} className="max-sm:px-0" aria-label="Presets">
+        <Button variant="outline" disabled={!weapon} aria-label="Presets">
           <Layers />
-          <span className="max-sm:sr-only">Presets</span>
+          <span className="max-lg:sr-only">Presets</span>
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-md">

@@ -90,9 +90,9 @@ export function ShareBuild({ build }: { build: GunBuild }) {
       }}
     >
       <DialogTrigger asChild>
-        <Button variant="outline" className="max-sm:px-0" aria-label="Share build">
+        <Button variant="outline" aria-label="Share build">
           <Share2 />
-          <span className="max-sm:sr-only">Share</span>
+          <span className="max-lg:sr-only">Share</span>
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-md">

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { AlertTriangle, ArrowLeft, Copy, LoaderCircle, Pencil, Trash2 } from "lucide-react";
+import { AlertTriangle, ArrowLeft, Copy, GitCompareArrows, ListChecks, LoaderCircle, Pencil, Trash2 } from "lucide-react";
 import type { BuildNode, GunBuild } from "@/app/lib/types/gunBuilder";
 import { useHydrated } from "@/app/lib/storage/use-store";
 import {
@@ -30,9 +30,13 @@ import {
   removeMod,
 } from "@/app/lib/builds/tree";
 import { MAX_BUILD_NAME_LENGTH } from "@/app/lib/builds/limits";
+import { optimizeBuild } from "@/app/lib/builds/optimizer";
+import { treesEqual } from "@/app/lib/builds/compare";
 import {
   detailedItems,
   ensureGunItems,
+  getGunItemState,
+  loadCompatibilityGraph,
   loadPresetTree,
   prefetchSlotItems,
 } from "@/app/lib/cache/gunBuilder";
@@ -43,7 +47,10 @@ import { NameDialog } from "@/components/name-dialog";
 import { ConfirmDialog } from "@/components/confirm-dialog";
 import { LocalMissing } from "@/components/local-missing";
 import { BuildCanvas } from "@/app/components/gun-builder/build-canvas";
-import { StatsPanel } from "@/app/components/gun-builder/stats-panel";
+import { StatsPanel, missingKey } from "@/app/components/gun-builder/stats-panel";
+import { OptimizerDialog } from "@/app/components/gun-builder/optimizer-dialog";
+import { UndoToast } from "@/app/components/gun-builder/undo-toast";
+import { useDocumentTitle } from "@/app/components/gun-builder/use-document-title";
 import { ShareBuild } from "@/app/components/gun-builder/share-build";
 import { PresetDialog } from "@/app/components/gun-builder/preset-dialog";
 import { SlotPicker, type PickerTarget } from "@/app/components/gun-builder/slot-picker";
@@ -97,6 +104,7 @@ function BuildEditor({ build }: { build: GunBuild }) {
   const [target, setTarget] = useState<PickerTarget | null>(null);
   const [actionError, setActionError] = useState("");
   const [undo, setUndo] = useState<{ root: BuildNode; label: string } | null>(null);
+  const [filling, setFilling] = useState<string | null>(null);
   const intentTimer = useRef<number | undefined>(undefined);
   const undoTimer = useRef<number | undefined>(undefined);
 
@@ -108,6 +116,7 @@ function BuildEditor({ build }: { build: GunBuild }) {
   const parts = countParts(build.root);
   const image = weaponData?.gridImageLink ?? gun?.gridImageLink ?? null;
   const weaponName = weaponData?.name ?? gun?.name ?? null;
+  useDocumentTitle(build.name || "Untitled build");
 
   function run(action: () => void) {
     try {
@@ -118,8 +127,7 @@ function BuildEditor({ build }: { build: GunBuild }) {
     }
   }
 
-  function offerUndo(label: string) {
-    const previous = build.root;
+  function offerUndo(label: string, previous: BuildNode = build.root) {
     window.clearTimeout(undoTimer.current);
     setUndo({ root: previous, label });
     undoTimer.current = window.setTimeout(() => setUndo(null), UNDO_MS);
@@ -193,6 +201,58 @@ function BuildEditor({ build }: { build: GunBuild }) {
     void ensureGunItems([itemId], gameMode, "full").catch(() => undefined);
   }
 
+  function replaceTree(base: BuildNode, next: BuildNode, label: string) {
+    let applied = false;
+    updateBuildTree(build.id, (root) => {
+      if (!treesEqual(root, base)) return root;
+      applied = true;
+      return next;
+    });
+    if (!applied) throw new Error("The build changed in the meantime. Try again.");
+    offerUndo(label, base);
+  }
+
+  async function fillCheapest(missing: MissingSlot | null) {
+    const targets = missing ? [missing] : stats.missingRequired;
+    if (filling || targets.length === 0) return;
+    setFilling(missing ? missingKey(missing) : "all");
+    setActionError("");
+    const base = build.root;
+    try {
+      await ensureGunItems(collectItemIds(base), gameMode, "full");
+      await loadCompatibilityGraph(
+        targets.flatMap((entry) => entry.slot.allowedItemIds),
+        gameMode,
+        { requiredOnly: true }
+      );
+      const result = await optimizeBuild(base, getGunItemState(gameMode).items, {
+        goal: "cost",
+        priceSources,
+        replaceExisting: false,
+        target: missing ? { parentPath: missing.parentPath, slotId: missing.slot.id } : null,
+      });
+      if (!result.changed) {
+        throw new Error(
+          missing
+            ? `No part with a price from your selected sources fits ${missing.slot.name}.`
+            : "No parts with a price from your selected sources fit the empty required slots."
+        );
+      }
+      const added = countParts(result.root) - countParts(base);
+      replaceTree(
+        base,
+        result.root,
+        missing
+          ? `Filled ${missing.slot.name}${added > 1 ? ` (+${added} parts)` : ""}`
+          : `Added ${added} cheapest part${added === 1 ? "" : "s"}`
+      );
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not fill the slot.");
+    } finally {
+      setFilling(null);
+    }
+  }
+
   async function loadPreset(presetId: string, name: string) {
     const tree = await loadPresetTree(presetId, build.weaponId, gameMode);
     if (!tree) throw new Error("This preset is not available for this weapon.");
@@ -203,12 +263,20 @@ function BuildEditor({ build }: { build: GunBuild }) {
 
   return (
     <div className="flex w-full min-w-0 flex-col gap-4">
-      <Link
-        href="/gun-builder"
-        className="inline-flex h-6 w-fit items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
-      >
-        <ArrowLeft className="h-3.5 w-3.5" /> All builds
-      </Link>
+      <div className="flex items-center justify-between gap-3">
+        <Link
+          href="/gun-builder"
+          className="inline-flex h-6 w-fit items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" /> All builds
+        </Link>
+        <Link
+          href={`/gun-builder/compare?a=${encodeURIComponent(build.id)}`}
+          className="inline-flex h-6 w-fit items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
+        >
+          <GitCompareArrows className="h-3.5 w-3.5" /> Compare
+        </Link>
+      </div>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex min-w-0 flex-1 items-center gap-3">
@@ -254,7 +322,7 @@ function BuildEditor({ build }: { build: GunBuild }) {
             </p>
           </div>
         </div>
-        <div className="flex shrink-0 gap-2 max-sm:[&>*]:flex-1">
+        <div className="flex shrink-0 gap-2 max-sm:[&>*]:flex-1 max-lg:[&>*]:px-0 sm:max-lg:[&>*]:w-10">
           <PresetDialog
             weapon={weapon}
             hasParts={parts > 0}
@@ -266,10 +334,23 @@ function BuildEditor({ build }: { build: GunBuild }) {
               })
             }
           />
+          <OptimizerDialog
+            build={build}
+            gameMode={gameMode}
+            priceSources={priceSources}
+            currentCost={stats.costRUB}
+            disabled={!weapon}
+            onApply={(root, base, label) => run(() => replaceTree(base, root, label))}
+          />
           <ShareBuild build={build} />
+          <Button asChild variant="outline">
+            <Link href={`/gun-builder/${build.id}/list`} aria-label="Shopping list">
+              <ListChecks />
+              <span className="max-lg:sr-only">List</span>
+            </Link>
+          </Button>
           <Button
             variant="outline"
-            className="max-sm:px-0"
             aria-label="Duplicate build"
             onClick={() =>
               run(() => {
@@ -279,13 +360,13 @@ function BuildEditor({ build }: { build: GunBuild }) {
             }
           >
             <Copy />
-            <span className="max-sm:sr-only">Duplicate</span>
+            <span className="max-lg:sr-only">Duplicate</span>
           </Button>
           <ConfirmDialog
             trigger={
-              <Button variant="outline" className="text-red-300 hover:text-red-200 max-sm:px-0" aria-label="Delete build">
+              <Button variant="outline" className="text-red-300 hover:text-red-200" aria-label="Delete build">
                 <Trash2 />
-                <span className="max-sm:sr-only">Delete</span>
+                <span className="max-lg:sr-only">Delete</span>
               </Button>
             }
             title={`Delete “${build.name}”?`}
@@ -321,6 +402,8 @@ function BuildEditor({ build }: { build: GunBuild }) {
         priceSources={priceSources}
         onPriceSourcesChange={(sources) => run(() => setPriceSources(sources))}
         onFillSlot={openMissing}
+        onFillCheapest={(missing) => void fillCheapest(missing)}
+        filling={filling}
       />
 
       <div className="-mb-2 flex items-center justify-between gap-3">
@@ -375,16 +458,7 @@ function BuildEditor({ build }: { build: GunBuild }) {
         }}
       />
 
-      <div aria-live="polite" className="pointer-events-none fixed inset-x-0 bottom-4 z-40 flex justify-center px-4">
-        {undo && (
-          <div className="pointer-events-auto flex max-w-full items-center gap-3 border border-[#2a2a2a] bg-[#0c0c0c] py-1.5 pl-4 pr-1.5 shadow-2xl">
-            <span className="truncate text-sm text-[#ccc]">{undo.label}</span>
-            <Button size="sm" variant="outline" onClick={applyUndo}>
-              Undo
-            </Button>
-          </div>
-        )}
-      </div>
+      <UndoToast label={undo?.label ?? null} onUndo={applyUndo} />
     </div>
   );
 }

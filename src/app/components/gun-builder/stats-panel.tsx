@@ -1,6 +1,6 @@
 "use client";
 
-import { AlertTriangle, Plus } from "lucide-react";
+import { AlertTriangle, LoaderCircle, Plus, RussianRuble } from "lucide-react";
 import type { BuildStats, MissingSlot } from "@/app/lib/builds/stats";
 import type { PriceSources } from "@/app/lib/types/gunBuilder";
 import { cn } from "@/lib/utils";
@@ -76,18 +76,52 @@ function SourceToggle({ label, active, onClick }: { label: string; active: boole
   );
 }
 
+export function missingKey(missing: MissingSlot) {
+  return `${missing.parentPath.join("/")}/${missing.slot.id}`;
+}
+
+export function PriceSourcesControl({
+  priceSources,
+  onChange,
+}: {
+  priceSources: PriceSources;
+  onChange: (sources: PriceSources) => void;
+}) {
+  return (
+    <div className="flex items-center gap-2">
+      <span className="text-[10px] font-bold uppercase tracking-widest text-[#666]">Prices</span>
+      <div role="group" aria-label="Price sources" className="flex border border-[#2a2a2a]">
+        <SourceToggle
+          label="Traders"
+          active={priceSources.traders}
+          onClick={() => onChange({ ...priceSources, traders: !priceSources.traders })}
+        />
+        <SourceToggle
+          label="Flea"
+          active={priceSources.flea}
+          onClick={() => onChange({ ...priceSources, flea: !priceSources.flea })}
+        />
+      </div>
+    </div>
+  );
+}
+
 export function StatsPanel({
   stats,
   loading,
   priceSources,
   onPriceSourcesChange,
   onFillSlot,
+  onFillCheapest,
+  filling,
 }: {
   stats: BuildStats;
   loading: boolean;
   priceSources: PriceSources;
   onPriceSourcesChange: (sources: PriceSources) => void;
   onFillSlot: (slot: MissingSlot) => void;
+  onFillCheapest: (slot: MissingSlot | null) => void;
+  filling: string | null;
 }) {
   const base = stats.base;
   const noSources = !priceSources.traders && !priceSources.flea;
@@ -142,21 +176,7 @@ export function StatsPanel({
       </dl>
 
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2 bg-[#0c0c0c] px-3 py-2">
-        <div className="flex items-center gap-2">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-[#666]">Prices</span>
-          <div role="group" aria-label="Price sources" className="flex border border-[#2a2a2a]">
-            <SourceToggle
-              label="Traders"
-              active={priceSources.traders}
-              onClick={() => onPriceSourcesChange({ ...priceSources, traders: !priceSources.traders })}
-            />
-            <SourceToggle
-              label="Flea"
-              active={priceSources.flea}
-              onClick={() => onPriceSourcesChange({ ...priceSources, flea: !priceSources.flea })}
-            />
-          </div>
-        </div>
+        <PriceSourcesControl priceSources={priceSources} onChange={onPriceSourcesChange} />
         <p className="text-xs text-[#777]">
           {noSources
             ? "Select a price source to see the build cost."
@@ -167,23 +187,50 @@ export function StatsPanel({
       </div>
 
       {stats.missingRequired.length > 0 && (
-        <div className="flex flex-wrap items-center gap-2 bg-[#0e0b07] px-3 py-2">
-          <span className="flex items-center gap-1.5 text-xs font-bold text-[#c8b384]">
-            <AlertTriangle className="h-3.5 w-3.5" />
-            {stats.missingRequired.length} required slot{stats.missingRequired.length === 1 ? "" : "s"} empty
-          </span>
-          {stats.missingRequired.map((missing) => (
-            <button
-              key={`${missing.parentPath.join("/")}/${missing.slot.id}`}
-              type="button"
-              onClick={() => onFillSlot(missing)}
-              title={missing.label}
-              className="flex h-8 max-w-full items-center gap-1 border border-dashed border-[#7a6a48] px-2 text-[10px] font-bold uppercase tracking-widest text-[#c8b384] transition-colors hover:border-[#c8b384] hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:outline-[#e6d9b8]"
-            >
-              <Plus className="h-3 w-3 shrink-0" />
-              <span className="truncate">{missing.slot.name}</span>
-            </button>
-          ))}
+        <div className="flex flex-col gap-2 bg-[#0e0b07] px-3 py-2 sm:flex-row sm:items-start">
+          <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">
+            <span className="flex items-center gap-1.5 text-xs font-bold text-[#c8b384]">
+              <AlertTriangle className="h-3.5 w-3.5" />
+              {stats.missingRequired.length} required slot{stats.missingRequired.length === 1 ? "" : "s"} empty
+            </span>
+            {stats.missingRequired.map((missing) => {
+              const key = missingKey(missing);
+              const busy = filling === key || filling === "all";
+              return (
+                <span key={key} className="flex h-8 max-w-full items-stretch border border-dashed border-[#7a6a48]">
+                  <button
+                    type="button"
+                    onClick={() => onFillSlot(missing)}
+                    title={`Choose a part for ${missing.label}`}
+                    className="flex min-w-0 items-center gap-1 px-2 text-[10px] font-bold uppercase tracking-widest text-[#c8b384] transition-colors hover:bg-[#1a1610] hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e6d9b8]"
+                  >
+                    <Plus className="h-3 w-3 shrink-0" />
+                    <span className="truncate">{missing.slot.name}</span>
+                  </button>
+                  <button
+                    type="button"
+                    disabled={Boolean(filling) || noSources}
+                    onClick={() => onFillCheapest(missing)}
+                    aria-label={`Fill ${missing.label} with the cheapest compatible part`}
+                    title="Fill with the cheapest compatible part"
+                    className="flex w-8 shrink-0 items-center justify-center border-l border-dashed border-[#7a6a48] text-[#9a8866] transition-colors hover:bg-[#1a1610] hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e6d9b8] disabled:opacity-40"
+                  >
+                    {busy ? <LoaderCircle className="h-3.5 w-3.5 animate-spin" /> : <RussianRuble className="h-3.5 w-3.5" />}
+                  </button>
+                </span>
+              );
+            })}
+          </div>
+          <button
+            type="button"
+            disabled={Boolean(filling) || noSources}
+            onClick={() => onFillCheapest(null)}
+            title={noSources ? "Select a price source first" : "Fill every empty required slot with the cheapest compatible part"}
+            className="flex h-8 shrink-0 items-center justify-center gap-1.5 border border-[#9a8866] px-3 text-[10px] font-bold uppercase tracking-widest text-[#e6d9b8] transition-colors hover:bg-[#9a8866] hover:text-[#070707] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6d9b8] disabled:pointer-events-none disabled:opacity-40"
+          >
+            {filling === "all" ? <LoaderCircle className="h-3.5 w-3.5 animate-spin" /> : <RussianRuble className="h-3.5 w-3.5" />}
+            Fill all cheapest
+          </button>
         </div>
       )}
     </section>
