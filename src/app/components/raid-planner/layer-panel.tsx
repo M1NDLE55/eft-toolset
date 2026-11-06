@@ -96,7 +96,7 @@ export function LayerPanel({ groups, enabled, onChange, loading, error, onRetry 
                   Retry
                 </button>
               </div>
-            ) : loading || !groups ? (
+            ) : !groups ? (
               <div className="flex flex-col gap-1.5 p-1.5" aria-label="Loading map layers">
                 {Array.from({ length: 8 }, (_, index) => (
                   <div key={index} className="h-7 animate-pulse bg-[#151515]" />

@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useGameMode, type GameMode } from "@/components/game-mode/context";
 import { useDataQuery } from "@/app/lib/api/useDataQuery";
 import type { MapDetails } from "@/app/lib/types/raidPlanner";
@@ -10,11 +10,16 @@ export function useMapDetails(mapKey: string) {
   const { gameMode, hydrated } = useGameMode();
   const variables = useMemo(() => ({ mapKey, gameMode }), [mapKey, gameMode]);
   const query = useDataQuery(mapDetailsQuery, variables, { enabled: hydrated });
-  const details = query.data ?? null;
-  const failed = query.status === "error" || (query.status === "success" && !details);
+  const fresh = query.data ?? null;
+  const failed = query.status === "error" || (query.status === "success" && !fresh);
+  const [kept, setKept] = useState<MapDetails | null>(null);
+  if (fresh && fresh !== kept) setKept(fresh);
+  const previous = !failed && kept?.key === mapKey ? kept : null;
+  const details = fresh ?? previous;
   return {
     details,
-    loading: !details && !failed,
+    loading: !fresh && !failed,
+    stale: !fresh && Boolean(previous),
     error: failed,
     retry: () => void query.refresh().catch(() => undefined),
   };
