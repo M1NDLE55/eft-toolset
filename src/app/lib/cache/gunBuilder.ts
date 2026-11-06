@@ -22,6 +22,7 @@ const MAX_AGE_MS = DAY;
 const ID_BATCH_SIZE = 100;
 const BATCH_CONCURRENCY = 2;
 const MAX_LAZY_IDS = 1_000;
+const MAX_GRAPH_ITEMS = 4_000;
 const SWEEP_INTERVAL_MS = 60 * MINUTE;
 const LEGACY_PREFIXES = ["guns:", "preset:"];
 const ITEM_PREFIXES = { full: "build-item", basic: "pick-item" } as const;
@@ -265,6 +266,50 @@ async function readPersisted(ids: string[], gameMode: GameMode, detail: Detail) 
   return remaining;
 }
 
+export interface GraphLoadOptions {
+  requiredOnly?: boolean;
+  signal?: AbortSignal;
+  onProgress?: (loaded: number) => void;
+}
+
+export async function loadCompatibilityGraph(
+  seeds: readonly string[],
+  gameMode: GameMode,
+  options: GraphLoadOptions = {}
+): Promise<{ count: number; truncated: boolean }> {
+  const seen = new Set<string>();
+  let frontier = Array.from(new Set(seeds)).filter(Boolean);
+  let truncated = false;
+  while (frontier.length > 0) {
+    options.signal?.throwIfAborted();
+    if (seen.size + frontier.length > MAX_GRAPH_ITEMS) {
+      frontier = frontier.slice(0, Math.max(0, MAX_GRAPH_ITEMS - seen.size));
+      truncated = true;
+    }
+    for (const id of frontier) seen.add(id);
+    for (const part of chunk(frontier, MAX_LAZY_IDS)) {
+      await ensureGunItems(part, gameMode, "full");
+      options.signal?.throwIfAborted();
+    }
+    options.onProgress?.(seen.size);
+    if (truncated) break;
+    const items = getGunItemState(gameMode).items;
+    const next = new Set<string>();
+    for (const id of frontier) {
+      const item = items.get(id);
+      if (!isDetailed(item)) continue;
+      for (const slot of item.slots) {
+        if (options.requiredOnly && !slot.required) continue;
+        for (const allowed of slot.allowedItemIds) {
+          if (!seen.has(allowed)) next.add(allowed);
+        }
+      }
+    }
+    frontier = Array.from(next);
+  }
+  return { count: seen.size, truncated };
+}
+
 export function detailedItems(gameMode: GameMode) {
   const result = new Map<string, BuildItemData>();
   for (const [id, item] of getGunItemState(gameMode).items) {
@@ -357,7 +402,12 @@ function isPickItem(value: unknown): value is PickItemData {
     finite(item.ergonomics) &&
     finite(item.recoilModifier) &&
     validStringArray(item.conflictingItemIds, 20_000) &&
-    validStringArray(item.conflictingSlotIds, 20_000)
+    validStringArray(item.conflictingSlotIds, 20_000) &&
+    (item.normalizedName === undefined || validString(item.normalizedName, 200)) &&
+    (item.traderName === undefined || item.traderName === null || validString(item.traderName, 100, true)) &&
+    (item.traderLevel === undefined ||
+      item.traderLevel === null ||
+      (Number.isInteger(item.traderLevel) && item.traderLevel >= 1 && item.traderLevel <= 10))
   );
 }
 

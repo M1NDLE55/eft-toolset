@@ -6,7 +6,13 @@ export interface ModSlotDef {
   allowedItemIds: string[];
 }
 
-export interface BuildItemData {
+export interface ItemExtras {
+  normalizedName?: string;
+  traderName?: string | null;
+  traderLevel?: number | null;
+}
+
+export interface BuildItemData extends ItemExtras {
   id: string;
   name: string;
   shortName: string;
@@ -30,7 +36,7 @@ export interface BuildItemData {
   slots: ModSlotDef[];
 }
 
-export interface PickItemData {
+export interface PickItemData extends ItemExtras {
   id: string;
   name: string;
   shortName: string;
