@@ -124,9 +124,13 @@ export function ItemSearch({
           placeholder={placeholder}
           value={search}
           onChange={(event) => {
-            setSearch(event.target.value);
+            const value = event.target.value;
+            setSearch(value);
             setOpen(true);
             setActiveIndex(0);
+            window.clearTimeout(prefetchTimer.current);
+            const top = prefetch && value.trim() ? filterCatalog(catalog, value, excludeNames, 1)[0] : undefined;
+            if (top) prefetchTimer.current = window.setTimeout(() => prefetchItem(top.name, gameMode), 300);
           }}
           onFocus={() => setOpen(true)}
           onBlur={() => setOpen(false)}
