@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-[calc(100dvh-4rem)]">
+    <div className="flex flex-1">
       <div className="hidden lg:flex">
         <ScoutedSidebar />
       </div>

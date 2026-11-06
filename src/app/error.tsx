@@ -14,7 +14,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <main className="flex justify-center flex-col gap-6 items-center p-4 min-h-[calc(100vh-130px)]">
+    <main className="flex justify-center flex-col gap-6 items-center p-4 flex-1">
       <div className="text-center space-y-3">
         <div className="bg-[#9a8866] text-black text-[10px] font-bold px-2 py-0.5 inline-block uppercase tracking-[0.2em]">
           System Error

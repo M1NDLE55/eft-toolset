@@ -37,6 +37,7 @@ interface Row {
   price: number | null;
   vendor: string | null;
   perSlot: number | null;
+  multiSlot: boolean;
 }
 
 function toRow(name: string, image: string | null, data: CachedItem | undefined): Row {
@@ -48,6 +49,7 @@ function toRow(name: string, image: string | null, data: CachedItem | undefined)
     price: best?.price ?? null,
     vendor: best ? (best.flea ? "Flea" : best.vendor) : null,
     perSlot: best && data ? best.price / (data.width * data.height) : null,
+    multiSlot: data ? data.width * data.height > 1 : false,
   };
 }
 
@@ -251,7 +253,7 @@ export default function Page() {
                           {row.vendor && <span className="ml-1 text-[10px] uppercase text-[#777]">{row.vendor}</span>}
                         </span>
                         <span className="text-[#888] sm:w-24 sm:text-right">
-                          {row.perSlot !== null ? `${Rubles.format(row.perSlot)}/slot` : ""}
+                          {row.perSlot !== null && row.multiSlot ? `${Rubles.format(row.perSlot)}/slot` : ""}
                         </span>
                       </>
                     ) : loading || !error ? (

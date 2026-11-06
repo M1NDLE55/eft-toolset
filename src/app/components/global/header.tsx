@@ -35,7 +35,7 @@ export function Header() {
       <div className="flex h-16 w-full items-center justify-between gap-3 px-4">
         <div className="flex min-w-0 items-center gap-4">
           <Link href="/" className="flex shrink-0 items-center" aria-label="EFT Toolset home">
-            <Image src="/black-logo.svg" alt="" height={50} width={100} priority className="h-auto w-[100px] invert" />
+            <Image src="/black-logo.svg" alt="" height={37} width={100} priority className="invert" />
           </Link>
           <nav aria-label="Tools" className="hidden items-center md:flex">
             {appLinks.map((link) => {
