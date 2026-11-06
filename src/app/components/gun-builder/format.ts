@@ -25,3 +25,12 @@ export function formatDate(value: number) {
 export function modeLabel(gameMode: string) {
   return gameMode === "pve" ? "PVE" : "PVP";
 }
+
+export function formatWeight(value: number) {
+  return `${value.toFixed(2)} kg`;
+}
+
+export function formatTrader(item: { traderName?: string | null; traderLevel?: number | null }) {
+  if (!item.traderName) return null;
+  return item.traderLevel ? `${item.traderName} LL${item.traderLevel}` : item.traderName;
+}

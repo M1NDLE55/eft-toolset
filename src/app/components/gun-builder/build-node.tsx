@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { AlertTriangle, Plus, X } from "lucide-react";
+import Link from "next/link";
+import { AlertTriangle, ArrowUpRight, Plus, X } from "lucide-react";
 import type { GunItem } from "@/app/lib/types/gunBuilder";
 import type { PositionedNode } from "@/app/lib/builds/tree-layout";
+import { itemHref } from "@/app/lib/item-links";
 import { cn } from "@/lib/utils";
 import { formatErgo, formatRecoilModifier } from "./format";
 
@@ -67,14 +69,17 @@ export function BuilderNode({
     return (
       <div
         data-builder-node
+        data-nav-id={node.id}
+        tabIndex={-1}
+        aria-label={`Weapon: ${item?.name ?? fallback?.shortName ?? "loading"}`}
         style={style}
         className={cn(
           position,
-          "flex items-center gap-3 border border-[#9a8866] bg-[#0f0d0a] p-2.5"
+          "flex items-center gap-3 border border-[#9a8866] bg-[#0f0d0a] p-2.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6d9b8]"
         )}
       >
         <Thumb item={item ?? fallback} size="md" />
-        <span className="min-w-0">
+        <span className="min-w-0 flex-1">
           <span className="block truncate text-sm font-black uppercase tracking-widest text-[#e6d9b8]">
             {item?.shortName ?? fallback?.shortName ?? MISSING_LABEL[status]}
           </span>
@@ -82,6 +87,17 @@ export function BuilderNode({
             Weapon
           </span>
         </span>
+        {item && (
+          <Link
+            href={itemHref(item)}
+            prefetch={false}
+            aria-label={`View ${item.name}`}
+            title="View item"
+            className="flex h-8 w-8 shrink-0 items-center justify-center text-[#9a8866] transition-colors hover:bg-[#1a1712] hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e6d9b8]"
+          >
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        )}
       </div>
     );
   }
@@ -92,6 +108,7 @@ export function BuilderNode({
       <button
         type="button"
         data-builder-node
+        data-nav-id={node.id}
         style={style}
         onClick={onOpen}
         onPointerEnter={onIntent}
@@ -136,6 +153,7 @@ export function BuilderNode({
     >
       <button
         type="button"
+        data-nav-id={node.id}
         onClick={onOpen}
         onPointerEnter={onIntent}
         onFocus={onIntent}
@@ -163,14 +181,28 @@ export function BuilderNode({
           ) : null}
         </span>
       </button>
-      <button
-        type="button"
-        onClick={onRemove}
-        aria-label={`Remove ${item?.name ?? "part"}`}
-        className="flex w-10 shrink-0 items-center justify-center border-l border-[#1a1a1a] text-[#666] transition-colors hover:bg-red-950/40 hover:text-red-300 focus-visible:bg-red-950/40 focus-visible:text-red-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-red-300"
-      >
-        <X className="h-4 w-4" />
-      </button>
+      <span className={cn("flex shrink-0 flex-col border-l border-[#1a1a1a]", compact ? "w-11" : "w-10")}>
+        <button
+          type="button"
+          onClick={onRemove}
+          aria-label={`Remove ${item?.name ?? "part"}`}
+          title="Remove part"
+          className="flex flex-1 items-center justify-center text-[#666] transition-colors hover:bg-red-950/40 hover:text-red-300 focus-visible:bg-red-950/40 focus-visible:text-red-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-red-300"
+        >
+          <X className="h-4 w-4" />
+        </button>
+        {item && (
+          <Link
+            href={itemHref(item)}
+            prefetch={false}
+            aria-label={`View ${item.name}`}
+            title="View item"
+            className="flex flex-1 items-center justify-center border-t border-[#1a1a1a] text-[#666] transition-colors hover:bg-[#1a1712] hover:text-[#e6d9b8] focus-visible:bg-[#1a1712] focus-visible:text-[#e6d9b8] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e6d9b8]"
+          >
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        )}
+      </span>
     </div>
   );
 }

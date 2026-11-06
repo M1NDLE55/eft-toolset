@@ -43,13 +43,65 @@ function subscribeFullscreen(listener: () => void) {
   return () => document.removeEventListener("fullscreenchange", listener);
 }
 
+function focusTarget(container: HTMLElement | null, id: string) {
+  const element = container?.querySelector<HTMLElement>(`[data-nav-id="${CSS.escape(id)}"]`);
+  if (!element || (element instanceof HTMLButtonElement && element.disabled)) return false;
+  element.focus({ preventScroll: true });
+  element.scrollIntoView({ block: "nearest", inline: "nearest" });
+  return true;
+}
+
+function handleTreeKeys(event: React.KeyboardEvent<HTMLElement>, nodes: PositionedNode[]) {
+  if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+  const origin = (event.target as HTMLElement).closest<HTMLElement>("[data-builder-node]");
+  const current = origin?.dataset.navId ?? origin?.querySelector<HTMLElement>("[data-nav-id]")?.dataset.navId;
+  const index = nodes.findIndex((node) => node.id === current);
+  if (index === -1) return;
+  const node = nodes[index];
+  const pathKey = node.path.join("/");
+  let order: PositionedNode[] = [];
+  switch (event.key) {
+    case "ArrowDown":
+      order = nodes.slice(index + 1);
+      break;
+    case "ArrowUp":
+      order = nodes.slice(0, index).reverse();
+      break;
+    case "ArrowRight":
+      order = nodes.filter((entry) => entry.parentPath.join("/") === pathKey && entry.path.length === node.path.length + 1);
+      break;
+    case "ArrowLeft":
+      order = node.path.length === 0 ? [] : nodes.filter((entry) => entry.path.join("/") === node.parentPath.join("/"));
+      break;
+    case "Home":
+      order = nodes;
+      break;
+    case "End":
+      order = nodes.toReversed();
+      break;
+    default:
+      return;
+  }
+  event.preventDefault();
+  for (const entry of order) {
+    if (focusTarget(event.currentTarget, entry.id)) return;
+  }
+}
+
 export function BuildCanvas(props: BuildCanvasProps) {
   const desktop = useSyncExternalStore(
     subscribeMedia,
     () => window.matchMedia(DESKTOP_QUERY).matches,
     () => true
   );
-  return desktop ? <TreeCanvas {...props} /> : <TreeList {...props} />;
+  return (
+    <>
+      <p id="build-tree-keys" className="sr-only">
+        Use the arrow keys to move between parts. Right opens a part&apos;s slots, left returns to its parent.
+      </p>
+      {desktop ? <TreeCanvas {...props} /> : <TreeList {...props} />}
+    </>
+  );
 }
 
 function TreeCanvas({
@@ -212,7 +264,7 @@ function TreeCanvas({
                 );
               })}
             </svg>
-            <ul aria-label="Build parts">
+            <ul aria-label="Build parts" aria-describedby="build-tree-keys" onKeyDown={(event) => handleTreeKeys(event, flow.nodes)}>
               {flow.nodes.map((node) => (
                 <li key={node.id}>
                   <BuilderNode
@@ -245,7 +297,12 @@ function TreeList({
   onIntent,
 }: BuildCanvasProps) {
   return (
-    <ul aria-label="Build parts" className="flex flex-col border border-[#1a1a1a] bg-[#070707] p-2">
+    <ul
+      aria-label="Build parts"
+      aria-describedby="build-tree-keys"
+      onKeyDown={(event) => handleTreeKeys(event, flow.nodes)}
+      className="flex flex-col border border-[#1a1a1a] bg-[#070707] p-2"
+    >
       {flow.nodes.map((node) => (
         <li key={node.id} className="flex items-stretch">
           {node.ancestorGuides.map((hasSibling, index) => (
