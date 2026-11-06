@@ -5,7 +5,6 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { connection } from "next/server";
 import { headers } from "next/headers";
-import { BulkCacheProvider } from "@/app/lib/cache/provider";
 import { GameModeProvider } from "@/components/game-mode/context";
 import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
 import { Header } from "@/app/components/global/header";
@@ -46,9 +45,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       <body className={`${inter.className}`}>
           <GameModeProvider>
             <Header />
-            <BulkCacheProvider>
-              {children}
-            </BulkCacheProvider>
+            {children}
           </GameModeProvider>
           <footer className="border-t border-[#1a1a1a] p-4 min-h-16 flex justify-center items-center bg-[#070707]">
             <div className="w-full flex sm:flex-row sm:justify-between flex-col-reverse items-center gap-4">

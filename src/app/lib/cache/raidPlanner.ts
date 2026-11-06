@@ -1,14 +1,27 @@
-import type { GameMode } from "@/components/game-mode/context";
+import { useMemo } from "react";
+import { useGameMode, type GameMode } from "@/components/game-mode/context";
+import { useDataQuery } from "@/app/lib/api/useDataQuery";
 import type { MapDetails } from "@/app/lib/types/raidPlanner";
 import { apiFetch } from "@/app/lib/api/transport";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import { ensureQuery, type QueryDefinition } from "@/app/lib/api/queryClient";
 
-export async function fetchMapDetails(
-  mapKey: string,
-  gameMode: GameMode
-): Promise<MapDetails | null> {
-  return ensureQuery(mapDetailsQuery, { mapKey, gameMode });
+export function useMapDetails(mapKey: string) {
+  const { gameMode, hydrated } = useGameMode();
+  const variables = useMemo(() => ({ mapKey, gameMode }), [mapKey, gameMode]);
+  const query = useDataQuery(mapDetailsQuery, variables, { enabled: hydrated });
+  const details = query.data ?? null;
+  const failed = query.status === "error" || (query.status === "success" && !details);
+  return {
+    details,
+    loading: !details && !failed,
+    error: failed,
+    retry: () => void query.refresh().catch(() => undefined),
+  };
+}
+
+export function prefetchMapDetails(mapKey: string, gameMode: GameMode) {
+  void ensureQuery(mapDetailsQuery, { mapKey, gameMode }).catch(() => undefined);
 }
 
 interface MapDetailsVariables {
