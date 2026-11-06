@@ -14,7 +14,7 @@ const EMPTY: readonly PricePoint[] = [];
 
 let store: ReturnType<typeof createStore> | null = null;
 const histories = new Map<string, readonly PricePoint[]>();
-const loading = new Set<string>();
+const loading = new Map<string, Promise<void>>();
 const listeners = new Set<() => void>();
 let version = 0;
 
@@ -64,22 +64,27 @@ export function changeSinceLastVisit(points: readonly PricePoint[], price: numbe
   return null;
 }
 
-async function load(gameMode: GameMode, names: readonly string[]) {
-  const missing = names.filter((name) => !histories.has(key(gameMode, name)) && !loading.has(key(gameMode, name)));
-  if (missing.length === 0) return;
-  for (const name of missing) loading.add(key(gameMode, name));
-  try {
-    const values = await getMany(missing.map((name) => key(gameMode, name)), idb());
-    missing.forEach((name, index) => {
-      const value = values[index];
-      histories.set(key(gameMode, name), isPoints(value) ? value : EMPTY);
-    });
-  } catch {
-    for (const name of missing) histories.set(key(gameMode, name), EMPTY);
-  } finally {
-    for (const name of missing) loading.delete(key(gameMode, name));
-    notify();
+function load(gameMode: GameMode, names: readonly string[]): Promise<void> {
+  const ids = names.map((name) => key(gameMode, name));
+  const missing = ids.filter((id) => !histories.has(id) && !loading.has(id));
+  if (missing.length > 0) {
+    const task = (async () => {
+      try {
+        const values = await getMany(missing, idb());
+        missing.forEach((id, index) => {
+          const value = values[index];
+          histories.set(id, isPoints(value) ? value : EMPTY);
+        });
+      } catch {
+        for (const id of missing) histories.set(id, EMPTY);
+      } finally {
+        for (const id of missing) loading.delete(id);
+        notify();
+      }
+    })();
+    for (const id of missing) loading.set(id, task);
   }
+  return Promise.all(ids.flatMap((id) => (loading.has(id) ? [loading.get(id)] : []))).then(() => undefined);
 }
 
 export async function recordPrices(gameMode: GameMode, entries: readonly { name: string; price: number }[]) {
