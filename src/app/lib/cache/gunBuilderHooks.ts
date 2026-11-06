@@ -1,12 +1,12 @@
-"use client";
-
 import { useEffect, useEffectEvent, useMemo, useState, useSyncExternalStore } from "react";
 import { useGameMode, type GameMode } from "@/components/game-mode/context";
 import { useDataQuery } from "@/app/lib/api/useDataQuery";
-import type { GunItem, GunListItem } from "@/app/lib/types/gunBuilder";
+import type { AmmoItemData, GunItem, GunListItem } from "@/app/lib/types/gunBuilder";
 import type { ItemLookup } from "@/app/lib/builds/stats";
 import {
+  ensureAmmoItems,
   ensureGunItems,
+  getAmmoState,
   getGunItemState,
   gunListQuery,
   subscribeGunItems,
@@ -97,5 +97,37 @@ export function useGunItems(
     error: unresolved.length > 0 ? current.error : null,
     retry: () => void ensureGunItems(ids, gameMode, detail).catch(() => undefined),
     gameMode,
+  };
+}
+
+export function useAmmoItems(ids: readonly string[], enabled = true): {
+  items: ReadonlyMap<string, AmmoItemData>;
+  loading: boolean;
+  error: Error | null;
+  retry: () => void;
+} {
+  const { gameMode, hydrated } = useGameMode();
+  const state = useSyncExternalStore(
+    subscribeGunItems,
+    () => getAmmoState(gameMode),
+    () => getAmmoState(gameMode)
+  );
+  const key = useMemo(() => Array.from(new Set(ids)).sort().join(","), [ids]);
+  const active = hydrated && enabled && key.length > 0;
+
+  const load = useEffectEvent(() => {
+    void ensureAmmoItems(ids, gameMode).catch(() => undefined);
+  });
+
+  useEffect(() => {
+    if (active) load();
+  }, [active, key, gameMode]);
+
+  const unresolved = ids.filter((id) => !state.items.has(id) && !state.missing.has(id));
+  return {
+    items: state.items,
+    loading: !hydrated || (active && unresolved.length > 0 && !state.error),
+    error: unresolved.length > 0 ? state.error : null,
+    retry: () => void ensureAmmoItems(ids, gameMode).catch(() => undefined),
   };
 }

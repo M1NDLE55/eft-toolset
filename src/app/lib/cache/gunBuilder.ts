@@ -1,5 +1,6 @@
 import type { GameMode } from "@/components/game-mode/context";
 import type {
+  AmmoItemData,
   BuildItemData,
   BuildNode,
   GunItem,
@@ -14,7 +15,7 @@ import { ensureQuery, type QueryDefinition } from "@/app/lib/api/queryClient";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
 import { isDetailed } from "@/app/lib/builds/stats";
 
-const GUN_CACHE_VERSION = 3;
+const GUN_CACHE_VERSION = 4;
 const MINUTE = 60_000;
 const DAY = 24 * 60 * MINUTE;
 const FRESH_MS = 15 * MINUTE;
@@ -26,6 +27,7 @@ const MAX_GRAPH_ITEMS = 4_000;
 const SWEEP_INTERVAL_MS = 60 * MINUTE;
 const LEGACY_PREFIXES = ["guns:", "preset:"];
 const ITEM_PREFIXES = { full: "build-item", basic: "pick-item" } as const;
+const AMMO_PREFIX = "ammo-item";
 
 type Detail = keyof typeof ITEM_PREFIXES;
 
@@ -266,6 +268,149 @@ async function readPersisted(ids: string[], gameMode: GameMode, detail: Detail) 
   return remaining;
 }
 
+export interface AmmoState {
+  items: ReadonlyMap<string, AmmoItemData>;
+  pending: ReadonlySet<string>;
+  missing: ReadonlySet<string>;
+  error: Error | null;
+}
+
+const EMPTY_AMMO: AmmoState = Object.freeze({
+  items: new Map(),
+  pending: new Set<string>(),
+  missing: new Set<string>(),
+  error: null,
+});
+const ammoStates = new Map<GameMode, AmmoState>();
+const ammoFetchedAt = new Map<string, number>();
+const ammoInFlight = new Map<string, Promise<void>>();
+
+export function getAmmoState(gameMode: GameMode): AmmoState {
+  return ammoStates.get(gameMode) ?? EMPTY_AMMO;
+}
+
+function updateAmmo(gameMode: GameMode, change: (state: AmmoState) => Partial<AmmoState>) {
+  const current = getAmmoState(gameMode);
+  ammoStates.set(gameMode, { ...current, ...change(current) });
+  for (const listener of listeners) listener();
+}
+
+function storeAmmo(gameMode: GameMode, entries: { item: AmmoItemData; t: number }[]) {
+  if (entries.length === 0) return;
+  updateAmmo(gameMode, (state) => {
+    const items = new Map(state.items);
+    const missing = new Set(state.missing);
+    for (const { item, t } of entries) {
+      const key = `${gameMode}:${item.id}`;
+      if ((ammoFetchedAt.get(key) ?? 0) > t) continue;
+      items.set(item.id, item);
+      missing.delete(item.id);
+      ammoFetchedAt.set(key, t);
+    }
+    return { items, missing };
+  });
+}
+
+export async function ensureAmmoItems(ids: readonly string[], gameMode: GameMode): Promise<void> {
+  sweepPersistentCache();
+  const unique = Array.from(new Set(ids)).filter(Boolean);
+  if (unique.length > MAX_LAZY_IDS) throw new Error(`At most ${MAX_LAZY_IDS} ammo types can be loaded at once.`);
+  const state = getAmmoState(gameMode);
+  const now = Date.now();
+  const waits: Promise<void>[] = [];
+  const missing: string[] = [];
+  for (const id of unique) {
+    const key = `${gameMode}:${id}`;
+    const known = state.items.has(id) || state.missing.has(id);
+    if (known && now - (ammoFetchedAt.get(key) ?? 0) < FRESH_MS) continue;
+    const active = ammoInFlight.get(key);
+    if (active) waits.push(active);
+    else missing.push(id);
+  }
+  if (missing.length > 0) {
+    const task = loadAmmo(missing, gameMode);
+    for (const id of missing) ammoInFlight.set(`${gameMode}:${id}`, task);
+    waits.push(task);
+  }
+  await Promise.all(waits);
+}
+
+async function loadAmmo(ids: string[], gameMode: GameMode) {
+  updateAmmo(gameMode, (state) => ({ pending: new Set([...state.pending, ...ids]) }));
+  try {
+    const keys = ids.map((id) => `${AMMO_PREFIX}:${gameMode}:${id}`);
+    let entries: (CacheEnvelope<unknown> | undefined)[] = [];
+    try {
+      entries = await cacheGetMany<CacheEnvelope<unknown>>(keys);
+    } catch {
+      entries = [];
+    }
+    const now = Date.now();
+    const usable: { item: AmmoItemData; t: number }[] = [];
+    const remaining: string[] = [];
+    ids.forEach((id, index) => {
+      const entry = entries[index];
+      const valid =
+        entry &&
+        entry.v === GUN_CACHE_VERSION &&
+        typeof entry.t === "number" &&
+        now - entry.t < MAX_AGE_MS &&
+        isAmmoItem(entry.data) &&
+        entry.data.id === id;
+      if (valid) usable.push({ item: entry.data as AmmoItemData, t: entry.t });
+      if (!valid || now - entry.t >= FRESH_MS) remaining.push(id);
+    });
+    storeAmmo(gameMode, usable);
+    const fetched: AmmoItemData[] = [];
+    const batches = chunk(remaining, ID_BATCH_SIZE);
+    for (let index = 0; index < batches.length; index += BATCH_CONCURRENCY) {
+      const responses = await Promise.all(
+        batches
+          .slice(index, index + BATCH_CONCURRENCY)
+          .map((batch) => apiFetch<unknown>(TARKOV_OPERATIONS.ammoItems, { ids: batch, gameMode }))
+      );
+      for (const response of responses) {
+        if (!Array.isArray(response) || !response.every(isAmmoItem)) {
+          throw new Error("The ammo response was invalid.");
+        }
+        fetched.push(...response);
+      }
+    }
+    const fetchedAtNow = Date.now();
+    storeAmmo(gameMode, fetched.map((item) => ({ item, t: fetchedAtNow })));
+    const found = new Set(fetched.map((item) => item.id));
+    updateAmmo(gameMode, (state) => {
+      const missing = new Set(state.missing);
+      for (const id of remaining) {
+        if (found.has(id) || state.items.has(id)) continue;
+        missing.add(id);
+        ammoFetchedAt.set(`${gameMode}:${id}`, fetchedAtNow);
+      }
+      return { missing, error: null };
+    });
+    if (fetched.length > 0) {
+      void cacheSetMany(
+        fetched.map((item) => [
+          `${AMMO_PREFIX}:${gameMode}:${item.id}`,
+          { v: GUN_CACHE_VERSION, t: fetchedAtNow, data: item },
+        ])
+      ).catch(() => undefined);
+    }
+  } catch (reason) {
+    updateAmmo(gameMode, () => ({
+      error: reason instanceof Error ? reason : new Error("Could not load ammo data."),
+    }));
+    throw reason;
+  } finally {
+    for (const id of ids) ammoInFlight.delete(`${gameMode}:${id}`);
+    updateAmmo(gameMode, (state) => {
+      const pending = new Set(state.pending);
+      for (const id of ids) pending.delete(id);
+      return { pending };
+    });
+  }
+}
+
 export interface GraphLoadOptions {
   requiredOnly?: boolean;
   signal?: AbortSignal;
@@ -378,6 +523,7 @@ function isBuildItem(value: unknown): value is BuildItemData {
       (Array.isArray(item.presets) && item.presets.length <= 1_000 && item.presets.every(
         (preset) => validString(preset?.id, 160, true) && validString(preset?.name, 500, true)
       ))) &&
+    (item.allowedAmmoIds === undefined || validStringArray(item.allowedAmmoIds, 2_000)) &&
     Array.isArray(item.slots) && item.slots.length <= 64 && item.slots.every((slot) =>
       validString(slot?.id, 160, true) &&
       validString(slot?.name, 500, true) &&
@@ -404,10 +550,43 @@ function isPickItem(value: unknown): value is PickItemData {
     validStringArray(item.conflictingItemIds, 20_000) &&
     validStringArray(item.conflictingSlotIds, 20_000) &&
     (item.normalizedName === undefined || validString(item.normalizedName, 200)) &&
-    (item.traderName === undefined || item.traderName === null || validString(item.traderName, 100, true)) &&
-    (item.traderLevel === undefined ||
-      item.traderLevel === null ||
-      (Number.isInteger(item.traderLevel) && item.traderLevel >= 1 && item.traderLevel <= 10))
+    (item.traderName === undefined || validTraderName(item.traderName)) &&
+    (item.traderLevel === undefined || validTraderLevel(item.traderLevel))
+  );
+}
+
+function validTraderName(value: unknown) {
+  return value === null || validString(value, 100, true);
+}
+
+function validTraderLevel(value: unknown) {
+  return value === null || (typeof value === "number" && Number.isInteger(value) && value >= 1 && value <= 10);
+}
+
+export function isAmmoItem(value: unknown): value is AmmoItemData {
+  if (!value || typeof value !== "object") return false;
+  const ammo = value as Partial<AmmoItemData>;
+  return (
+    validString(ammo.id, 160, true) &&
+    validString(ammo.normalizedName, 200) &&
+    validString(ammo.name, 500, true) &&
+    validString(ammo.shortName, 500, true) &&
+    validAssetUrl(ammo.gridImageLink) &&
+    (ammo.caliber === null || validString(ammo.caliber, 100)) &&
+    [
+      ammo.damage,
+      ammo.penetrationPower,
+      ammo.armorDamage,
+      ammo.fragmentationChance,
+      ammo.projectileCount,
+      ammo.recoilModifier,
+      ammo.accuracyModifier,
+    ].every(finite) &&
+    nullableFinite(ammo.initialSpeed) &&
+    nullableFinite(ammo.traderPriceRUB) &&
+    nullableFinite(ammo.fleaPriceRUB) &&
+    validTraderName(ammo.traderName) &&
+    validTraderLevel(ammo.traderLevel)
   );
 }
 
@@ -453,7 +632,7 @@ function sweepPersistentCache() {
   if (now - lastSweepAt < SWEEP_INTERVAL_MS) return;
   lastSweepAt = now;
   void (async () => {
-    const prefixes = Object.values(ITEM_PREFIXES).map((prefix) => `${prefix}:`);
+    const prefixes = [...Object.values(ITEM_PREFIXES), AMMO_PREFIX].map((prefix) => `${prefix}:`);
     const keys = (await cacheKeys()).filter(
       (key): key is string =>
         typeof key === "string" &&

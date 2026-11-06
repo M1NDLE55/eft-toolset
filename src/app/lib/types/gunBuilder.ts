@@ -95,6 +95,7 @@ export interface GunBuild {
   name: string;
   weaponId: string;
   root: BuildNode;
+  ammoId?: string;
   createdAt: number;
   updatedAt: number;
 }
