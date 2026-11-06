@@ -1,5 +1,3 @@
-"use client";
-
 import type { BuildNode, GunBuild, PriceSources } from "@/app/lib/types/gunBuilder";
 import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
 import { useStore } from "@/app/lib/storage/use-store";
@@ -10,9 +8,10 @@ import { cloneTree, isBuildTree, isValidBuildId } from "./tree";
 export const BUILD_STORE: StoreDefinition<GunBuild[]> = {
   key: "eft-toolset:gun-builds",
   legacyKeys: ["gun-builds"],
-  version: 1,
+  version: 2,
   defaultValue: () => [],
   validate: isBuildList,
+  migrate: (value, version) => (version === 1 && isBuildList(value) ? value : undefined),
   recover: (value) =>
     Array.isArray(value) ? value.filter(isGunBuild).slice(0, MAX_BUILDS) : undefined,
 };
@@ -84,15 +83,31 @@ function insert(build: GunBuild) {
   return build;
 }
 
-export function createBuild(name: string, weaponId: string, root?: BuildNode): GunBuild {
+export function createBuild(
+  name: string,
+  weaponId: string,
+  root?: BuildNode,
+  ammoId?: string | null
+): GunBuild {
   const timestamp = Date.now();
   return insert({
     id: createId(),
     name: validBuildName(name),
     weaponId,
     root: root && root.itemId === weaponId ? cloneTree(root) : { itemId: weaponId, slots: {} },
+    ...(ammoId && isValidBuildId(ammoId) ? { ammoId } : {}),
     createdAt: timestamp,
     updatedAt: timestamp,
+  });
+}
+
+export function setBuildAmmo(id: string, ammoId: string | null) {
+  if (ammoId !== null && !isValidBuildId(ammoId)) throw new Error("That ammo type is not valid.");
+  return updateBuild(id, (build) => {
+    const next = { ...build };
+    if (ammoId) next.ammoId = ammoId;
+    else delete next.ammoId;
+    return next;
   });
 }
 
@@ -155,6 +170,7 @@ function isGunBuild(value: unknown): value is GunBuild {
     typeof build.updatedAt === "number" &&
     Number.isFinite(build.updatedAt) &&
     isBuildTree(build.root) &&
-    build.root.itemId === build.weaponId
+    build.root.itemId === build.weaponId &&
+    (build.ammoId === undefined || isValidBuildId(build.ammoId))
   );
 }

@@ -13,7 +13,7 @@ import {
 import { computeStats } from "@/app/lib/builds/stats";
 import { effectivePrice } from "@/app/lib/builds/price";
 import { layoutBuild } from "@/app/lib/builds/tree-layout";
-import { createBuild, duplicateBuild, renameBuild, updateBuildTree } from "@/app/lib/builds/store";
+import { BUILD_STORE, createBuild, duplicateBuild, renameBuild, updateBuildTree } from "@/app/lib/builds/store";
 import { readStore } from "@/app/lib/storage/versioned-store";
 import { encodeSharePayload } from "@/app/lib/share-codec";
 import { decodeBuildSharePayload, encodeBuildSharePayload } from "@/app/lib/builds/share";
@@ -187,12 +187,7 @@ describe("build store", () => {
     updateBuildTree(build.id, (root) => attachMod(root, [], "a", { itemId: "x", slots: {} }));
     updateBuildTree(build.id, (root) => attachMod(root, [], "b", { itemId: "y", slots: {} }));
     renameBuild(build.id, "Renamed");
-    const stored = readStore({
-      key: "eft-toolset:gun-builds",
-      version: 1,
-      defaultValue: () => [],
-      validate: (value): value is { name: string; root: BuildNode }[] => Array.isArray(value),
-    })[0];
+    const stored = readStore(BUILD_STORE)[0];
     expect(stored.name).toBe("Renamed");
     expect(Object.keys(stored.root.slots).sort()).toEqual(["a", "b"]);
     expect(duplicateBuild(build.id).name).toBe("Renamed copy");
@@ -215,7 +210,7 @@ describe("build share links", () => {
       createdAt: 0,
       updatedAt: 0,
     });
-    await expect(decodeBuildSharePayload(payload)).resolves.toEqual({ name: "Shared", weaponId: "gun", root });
+    await expect(decodeBuildSharePayload(payload)).resolves.toEqual({ name: "Shared", weaponId: "gun", root, ammoId: null });
   });
 
   it("rejects identifiers with unexpected characters", async () => {

@@ -20,6 +20,7 @@ export interface OptimizeOptions {
   replaceExisting?: boolean;
   allowUnpriced?: boolean;
   target?: OptimizeTarget | null;
+  ammoId?: string | null;
 }
 
 export interface OptimizeControl {
@@ -40,6 +41,7 @@ export interface OptimizeResult {
 const REQUIRED_PENALTY = 1e7;
 const KEEP_PENALTY = 1e5;
 const CONFLICT_PENALTY = 1e6;
+const AMMO_PENALTY = 1e4;
 const BEAM_WIDTH = 3;
 const MAX_REPAIR_ROUNDS = 12;
 const BUDGET_STEPS = 18;
@@ -58,7 +60,10 @@ interface Restrictions {
 
 interface Pass {
   lookup: ItemLookup;
-  options: Required<Omit<OptimizeOptions, "target" | "budget">> & { target: OptimizeTarget | null };
+  options: Required<Omit<OptimizeOptions, "target" | "budget" | "ammoId">> & {
+    target: OptimizeTarget | null;
+    ammoId: string | null;
+  };
   lambda: number;
   restrictions: Restrictions;
   memo: Map<BuildNode | null, Map<string, Solved | null>>;
@@ -123,6 +128,12 @@ function counterparts(defs: ModSlotDef[], old: BuildNode | undefined, sameItem: 
   return result;
 }
 
+function ammoFitsItem(item: GunItem, ammoId: string | null) {
+  if (!ammoId || !isDetailed(item) || item.isWeapon) return true;
+  const allowed = item.allowedAmmoIds ?? [];
+  return allowed.length === 0 || allowed.includes(ammoId);
+}
+
 function emptyPenalty(slot: ModSlotDef, occupied: boolean) {
   return slot.required ? REQUIRED_PENALTY : occupied ? KEEP_PENALTY : 0;
 }
@@ -165,6 +176,7 @@ function solveFree(itemId: string, old: BuildNode | undefined, pass: Pass): Solv
   }
   pass.stack.add(itemId);
   let value = itemScore(item, price, goal) - (pass.lambda * (price ?? 0)) / 1000;
+  if (!ammoFitsItem(item, pass.options.ammoId)) value -= AMMO_PENALTY;
   let cost = price ?? 0;
   const slots: Record<string, BuildNode> = {};
   const defs = isDetailed(item) ? item.slots : [];
@@ -253,6 +265,7 @@ export async function optimizeBuild(
     replaceExisting: options.replaceExisting ?? true,
     allowUnpriced: options.allowUnpriced ?? false,
     target: options.target ?? null,
+    ammoId: options.ammoId ?? null,
   };
   const budget =
     typeof options.budget === "number" && Number.isFinite(options.budget) && options.budget >= 0

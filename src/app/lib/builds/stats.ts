@@ -60,11 +60,12 @@ function findMissing(
 export function computeStats(
   root: BuildNode,
   lookup: ItemLookup,
-  sources: PriceSources
+  sources: PriceSources,
+  ammo: { recoilModifier: number } | null = null
 ): BuildStats {
   const weapon = lookup.get(root.itemId);
   let ergonomics = weapon?.ergonomics ?? 0;
-  let recoilModifier = 0;
+  let recoilModifier = ammo && Number.isFinite(ammo.recoilModifier) ? ammo.recoilModifier : 0;
   let weight = 0;
   let cost = 0;
   let priced = 0;

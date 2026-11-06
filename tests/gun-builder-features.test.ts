@@ -402,7 +402,7 @@ describe("share link import", () => {
       `  ${payload}  `,
     ];
     for (const link of links) expect(extractSharePayload(link)).toBe(payload);
-    await expect(parseSharedBuildInput(links[0])).resolves.toEqual({ name: "Imported", weaponId: "gun", root: build.root });
+    await expect(parseSharedBuildInput(links[0])).resolves.toEqual({ name: "Imported", weaponId: "gun", root: build.root, ammoId: null });
   });
 
   it("rejects anything that is not a strict share link", async () => {

@@ -19,13 +19,17 @@ export interface SharedGunBuildRecipeV1 {
   n?: string;
   w: string;
   r: SharedBuildNodeV1;
+  a?: string;
 }
 
 export interface DecodedSharedBuild {
   name: string;
   weaponId: string;
   root: BuildNode;
+  ammoId: string | null;
 }
+
+const RECIPE_KEYS = new Set(["v", "n", "w", "r", "a"]);
 
 export function slugifyBuildName(name: string) {
   return slugifyName(name, "shared-build");
@@ -36,7 +40,8 @@ export function createShareRecipe(build: GunBuild): SharedGunBuildRecipeV1 {
     build.name.length > MAX_BUILD_NAME_LENGTH ||
     !isValidBuildId(build.weaponId) ||
     !isBuildTree(build.root) ||
-    build.root.itemId !== build.weaponId
+    build.root.itemId !== build.weaponId ||
+    (build.ammoId !== undefined && !isValidBuildId(build.ammoId))
   ) {
     throw new Error("This build exceeds the safe sharing limits.");
   }
@@ -45,6 +50,7 @@ export function createShareRecipe(build: GunBuild): SharedGunBuildRecipeV1 {
     n: build.name,
     w: build.weaponId,
     r: encodeNode(build.root),
+    ...(build.ammoId ? { a: build.ammoId } : {}),
   };
 }
 
@@ -62,6 +68,7 @@ export async function decodeBuildSharePayload(
     name: recipe.n?.trim() ?? "",
     weaponId: recipe.w,
     root: decodeNode(recipe.r),
+    ammoId: recipe.a ?? null,
   };
 }
 
@@ -88,8 +95,11 @@ function decodeNode(node: SharedBuildNodeV1): BuildNode {
 }
 
 function parseRecipe(value: unknown): SharedGunBuildRecipeV1 {
-  if (!value || typeof value !== "object") {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
     throw new Error("Shared build is not a valid recipe.");
+  }
+  if (Object.keys(value).some((key) => !RECIPE_KEYS.has(key))) {
+    throw new Error("Shared build contains unsupported fields.");
   }
 
   const recipe = value as Partial<SharedGunBuildRecipeV1>;
@@ -97,7 +107,8 @@ function parseRecipe(value: unknown): SharedGunBuildRecipeV1 {
     recipe.v !== 1 ||
     !isValidBuildId(recipe.w) ||
     (recipe.n !== undefined &&
-      (typeof recipe.n !== "string" || recipe.n.length > MAX_BUILD_NAME_LENGTH))
+      (typeof recipe.n !== "string" || recipe.n.length > MAX_BUILD_NAME_LENGTH)) ||
+    (recipe.a !== undefined && !isValidBuildId(recipe.a))
   ) {
     throw new Error("Shared build uses an unsupported recipe version.");
   }
