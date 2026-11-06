@@ -233,7 +233,7 @@ describe("Tarkov JSON adapter", () => {
       const initial = await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, {
         gameMode: "regular",
       });
-      vi.advanceTimersByTime(5 * 60_000 + 1);
+      vi.advanceTimersByTime(31 * 60_000);
       vi.mocked(globalThis.fetch).mockRejectedValue(new Error("offline"));
       const onStale = vi.fn();
       const secondOnStale = vi.fn();
@@ -254,6 +254,69 @@ describe("Tarkov JSON adapter", () => {
     } finally {
       vi.useRealTimers();
     }
+  });
+
+  it("revalidates in the background without making callers wait", async () => {
+    vi.useFakeTimers();
+    try {
+      const initial = await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" });
+      vi.advanceTimersByTime(10 * 60_000);
+      let release: (() => void) | undefined;
+      vi.mocked(globalThis.fetch).mockImplementation(
+        () => new Promise((resolve) => {
+          release = () => resolve(new Response("{}", { status: 500 }));
+        })
+      );
+      const onStale = vi.fn();
+      await expect(
+        executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" }, { onStale })
+      ).resolves.toEqual(initial);
+      expect(onStale).not.toHaveBeenCalled();
+      expect(release).toBeDefined();
+      release?.();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("refuses to serve data older than the stale limit when upstream is down", async () => {
+    vi.useFakeTimers();
+    try {
+      await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" });
+      vi.advanceTimersByTime(7 * 60 * 60_000);
+      vi.mocked(globalThis.fetch).mockRejectedValue(new Error("offline"));
+      await expect(
+        executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" })
+      ).rejects.toMatchObject({ name: "TarkovUpstreamError" });
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("does not fail other callers when one caller disconnects during a shared load", async () => {
+    vi.mocked(globalThis.fetch).mockImplementation(
+      (input) =>
+        new Promise((resolve) => {
+          const resource = new URL(String(input)).pathname.split("/").pop()!;
+          setTimeout(() => resolve(new Response(JSON.stringify(fixtures[resource]), { status: 200 })), 10);
+        })
+    );
+    const controller = new AbortController();
+    const first = executeTarkovOperation(
+      TARKOV_OPERATIONS.itemCatalog,
+      { gameMode: "regular" },
+      { signal: controller.signal }
+    );
+    const second = executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" });
+    controller.abort();
+    await expect(first).rejects.toMatchObject({ name: "AbortError" });
+    await expect(second).resolves.toContainEqual(["weapon", "Test Rifle", "Rifle", "weapon.webp"]);
+  });
+
+  it("rejects variables the operation does not declare", async () => {
+    await expect(
+      executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular", extra: 1 })
+    ).rejects.toMatchObject({ name: "TarkovRequestError" });
   });
 
   it("localizes the catalog and returns only its narrow projection", async () => {

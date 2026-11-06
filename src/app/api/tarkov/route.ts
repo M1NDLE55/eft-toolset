@@ -21,6 +21,8 @@ const CLIENT_REFILL_PER_SECOND = 1;
 const GLOBAL_BURST = 300;
 const GLOBAL_REFILL_PER_SECOND = 5;
 const MAX_RATE_LIMIT_ENTRIES = 10_000;
+const MAX_URL_LENGTH = 2_048;
+const BODY_READ_TIMEOUT_MS = 5_000;
 const PUBLIC_CACHE = "public, max-age=60, s-maxage=300, stale-while-revalidate=86400";
 const STALE_PUBLIC_CACHE = "public, max-age=0, s-maxage=30";
 
@@ -37,6 +39,9 @@ export async function GET(request: Request) {
   const rateLimited = rateLimitResponse(request);
   if (rateLimited) return rateLimited;
 
+  if (request.url.length > MAX_URL_LENGTH) {
+    return errorResponse("Request URL is too long.", "INVALID_REQUEST", 414);
+  }
   const url = new URL(request.url);
   const keys = Array.from(url.searchParams.keys());
   const operation = url.searchParams.get("op");
@@ -67,7 +72,7 @@ export async function GET(request: Request) {
     return errorResponse("Query variables must be canonical JSON.", "INVALID_REQUEST", 400);
   }
 
-  return execute(request, operation, variables, true);
+  return withSlot(() => execute(request, operation, variables, true));
 }
 
 export async function POST(request: Request) {
@@ -79,6 +84,10 @@ export async function POST(request: Request) {
     return errorResponse("Request body is too large.", "INVALID_REQUEST", 413);
   }
 
+  return withSlot(() => handlePost(request));
+}
+
+async function handlePost(request: Request) {
   let rawBody: string;
   try {
     rawBody = await readBodyWithLimit(request);
@@ -112,19 +121,26 @@ export async function POST(request: Request) {
   return execute(request, operation, variables, false);
 }
 
+async function withSlot(handler: () => Promise<Response>) {
+  if (activeRequests >= MAX_CONCURRENT_REQUESTS) {
+    return errorResponse("The service is busy. Try again shortly.", "RATE_LIMITED", 429, {
+      "Retry-After": "1",
+    });
+  }
+  activeRequests += 1;
+  try {
+    return await handler();
+  } finally {
+    activeRequests -= 1;
+  }
+}
+
 async function execute(
   request: Request,
   operation: TarkovOperation,
   variables: unknown,
   cacheable: boolean
 ) {
-  if (activeRequests >= MAX_CONCURRENT_REQUESTS) {
-    return errorResponse("The service is busy. Try again shortly.", "RATE_LIMITED", 429, {
-      "Retry-After": "1",
-    });
-  }
-
-  activeRequests += 1;
   try {
     let stale = false;
     request.signal.throwIfAborted();
@@ -162,8 +178,6 @@ async function execute(
     }
     console.error("Tarkov query failed", error);
     return errorResponse("The query could not be completed.", "INTERNAL_ERROR", 500);
-  } finally {
-    activeRequests -= 1;
   }
 }
 
@@ -203,6 +217,9 @@ async function readBodyWithLimit(request: Request): Promise<string> {
   const decoder = new TextDecoder("utf-8", { fatal: true });
   let result = "";
   let bytesRead = 0;
+  const deadline = setTimeout(() => {
+    void reader.cancel("Request body read timed out.").catch(() => undefined);
+  }, BODY_READ_TIMEOUT_MS);
 
   try {
     while (true) {
@@ -218,6 +235,7 @@ async function readBodyWithLimit(request: Request): Promise<string> {
     result += decoder.decode();
     return result;
   } finally {
+    clearTimeout(deadline);
     reader.releaseLock();
   }
 }
@@ -263,6 +281,10 @@ function consumeToken(
 }
 
 function clientKey(request: Request) {
+  const trustedHeader = process.env.CLIENT_IP_HEADER?.trim().toLowerCase();
+  if (trustedHeader) {
+    return (request.headers.get(trustedHeader)?.split(",")[0]?.trim() || "unknown").slice(0, 128);
+  }
   const forwarded = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
   return (
     request.headers.get("cf-connecting-ip")?.trim() ||

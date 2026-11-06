@@ -28,7 +28,8 @@ const UPSTREAM_BASE_URL = "https://json.tarkov.dev";
 const UPSTREAM_TIMEOUT_MS = 20_000;
 const UPSTREAM_MAX_BYTES = 32 * 1024 * 1024;
 const RESOURCE_TTL_MS = 5 * 60_000;
-const RESOURCE_STALE_MS = 15 * 60_000;
+const RESOURCE_REVALIDATE_MS = 30 * 60_000;
+const RESOURCE_MAX_STALE_MS = 6 * 60 * 60_000;
 const MAX_RESOURCE_RECORDS = 100_000;
 const MAX_NESTED_ENTRIES = 20_000;
 const MAX_STRING_LENGTH = 10_000;
@@ -239,11 +240,10 @@ interface MapsData {
 }
 
 interface ResourceCacheEntry {
-  expiresAt: number;
-  staleUntil: number;
+  fetchedAt: number;
   value?: UpstreamEnvelope<unknown>;
   inFlight?: Promise<UpstreamEnvelope<unknown>>;
-  lastStaleAt?: number;
+  failedAt?: number;
 }
 
 interface ItemsContext {
@@ -267,10 +267,9 @@ interface RelationsContext {
   craftsByItem: Map<string, RawCraft[]>;
 }
 
-interface DerivedCacheEntry {
-  expiresAt: number;
-  value: Promise<unknown>;
-  stale?: boolean;
+interface MemoEntry {
+  inputs: readonly unknown[];
+  value: unknown;
 }
 
 export class TarkovUpstreamError extends Error {
@@ -287,66 +286,75 @@ export class TarkovRequestError extends Error {
   }
 }
 
-const resourceCache = new Map<string, ResourceCacheEntry>();
-const derivedCache = new Map<string, DerivedCacheEntry>();
+const sharedCache = globalThis as typeof globalThis & {
+  __eftTarkovCache?: { resources: Map<string, ResourceCacheEntry>; memos: Map<string, MemoEntry> };
+};
+sharedCache.__eftTarkovCache ??= { resources: new Map(), memos: new Map() };
+const resourceCache = sharedCache.__eftTarkovCache.resources;
+const memoCache = sharedCache.__eftTarkovCache.memos;
 const operationContext = new AsyncLocalStorage<{
-  startedAt: number;
   resources: Set<ResourceCacheEntry>;
-  stale: boolean;
   signal?: AbortSignal;
 }>();
+
+const OPERATION_VARIABLES: Record<TarkovOperation, readonly string[]> = {
+  [TARKOV_OPERATIONS.itemCatalog]: ["gameMode"],
+  [TARKOV_OPERATIONS.groupItems]: ["gameMode", "names"],
+  [TARKOV_OPERATIONS.itemDetail]: ["gameMode", "name"],
+  [TARKOV_OPERATIONS.gunList]: ["gameMode"],
+  [TARKOV_OPERATIONS.buildItems]: ["gameMode", "ids"],
+  [TARKOV_OPERATIONS.pickItems]: ["gameMode", "ids"],
+  [TARKOV_OPERATIONS.preset]: ["gameMode", "id"],
+  [TARKOV_OPERATIONS.mapDetails]: ["gameMode", "mapKey"],
+};
 
 export async function executeTarkovOperation(
   operation: TarkovOperation,
   variables: unknown,
   options: { signal?: AbortSignal; onStale?: () => void } = {}
 ): Promise<unknown> {
-  return operationContext.run(
-    { startedAt: Date.now(), resources: new Set(), stale: false, signal: options.signal },
-    async () => {
-      const input = asRecord(variables);
-      const gameMode = readGameMode(input);
-      let result: Promise<unknown>;
-      switch (operation) {
-    case TARKOV_OPERATIONS.itemCatalog:
-      result = getItemCatalog(gameMode);
-      break;
-    case TARKOV_OPERATIONS.groupItems:
-      result = getGroupItems(gameMode, readStringList(input.names, "names", MAX_NAMES));
-      break;
-    case TARKOV_OPERATIONS.itemDetail:
-      result = getItemDetail(gameMode, readString(input.name, "name", 500));
-      break;
-    case TARKOV_OPERATIONS.gunList:
-      result = getGunList(gameMode);
-      break;
-    case TARKOV_OPERATIONS.buildItems:
-      result = getBuildItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
-      break;
-    case TARKOV_OPERATIONS.pickItems:
-      result = getPickItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
-      break;
-    case TARKOV_OPERATIONS.preset:
-      result = getPreset(gameMode, readString(input.id, "id", 80));
-      break;
-    case TARKOV_OPERATIONS.mapDetails:
-      result = getMapDetails(gameMode, readString(input.mapKey, "mapKey", 80));
-      break;
-    default:
-      throw new TarkovRequestError("Unknown query operation.", "INVALID_OPERATION");
-      }
-      const data = await waitForCaller(result, options.signal);
-      const context = operationContext.getStore();
-      if (
-        context &&
-        (context.stale ||
-          Array.from(context.resources).some(
-            (entry) => (entry.lastStaleAt ?? 0) >= context.startedAt
-          ))
-      ) options.onStale?.();
-      return data;
+  const allowed = OPERATION_VARIABLES[operation];
+  if (!allowed) throw new TarkovRequestError("Unknown query operation.", "INVALID_OPERATION");
+  const input = asRecord(variables);
+  if (Object.keys(input).some((key) => !allowed.includes(key))) {
+    throw new TarkovRequestError("Variables contain unsupported fields.");
+  }
+  const gameMode = readGameMode(input);
+  const context = { resources: new Set<ResourceCacheEntry>(), signal: options.signal };
+  return operationContext.run(context, async () => {
+    let result: Promise<unknown>;
+    switch (operation) {
+      case TARKOV_OPERATIONS.itemCatalog:
+        result = getItemCatalog(gameMode);
+        break;
+      case TARKOV_OPERATIONS.groupItems:
+        result = getGroupItems(gameMode, readStringList(input.names, "names", MAX_NAMES));
+        break;
+      case TARKOV_OPERATIONS.itemDetail:
+        result = getItemDetail(gameMode, readString(input.name, "name", 500));
+        break;
+      case TARKOV_OPERATIONS.gunList:
+        result = getGunList(gameMode);
+        break;
+      case TARKOV_OPERATIONS.buildItems:
+        result = getBuildItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
+        break;
+      case TARKOV_OPERATIONS.pickItems:
+        result = getPickItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
+        break;
+      case TARKOV_OPERATIONS.preset:
+        result = getPreset(gameMode, readString(input.id, "id", 80));
+        break;
+      case TARKOV_OPERATIONS.mapDetails:
+        result = getMapDetails(gameMode, readString(input.mapKey, "mapKey", 80));
+        break;
     }
-  );
+    const data = await waitForCaller(result, options.signal);
+    if (Array.from(context.resources).some((entry) => entry.failedAt !== undefined)) {
+      options.onStale?.();
+    }
+    return data;
+  });
 }
 
 function waitForCaller<T>(work: Promise<T>, signal?: AbortSignal): Promise<T> {
@@ -364,12 +372,25 @@ function throwIfRequestAborted() {
   operationContext.getStore()?.signal?.throwIfAborted();
 }
 
+function memo<T>(key: string, inputs: readonly unknown[], compute: () => T): T {
+  const cached = memoCache.get(key);
+  if (
+    cached &&
+    cached.inputs.length === inputs.length &&
+    cached.inputs.every((input, index) => input === inputs[index])
+  ) {
+    return cached.value as T;
+  }
+  const value = compute();
+  memoCache.set(key, { inputs, value });
+  return value;
+}
+
 async function getItemCatalog(gameMode: GameMode): Promise<CatalogEntry[]> {
-  return loadDerived(`${gameMode}/catalog-projection`, async () => {
-    const { items, translations } = await loadItems(gameMode);
-    throwIfRequestAborted();
-    return projectItemCatalog(items, translations);
-  });
+  const context = await loadItems(gameMode);
+  return memo(`${gameMode}/catalog`, [context], () =>
+    projectItemCatalog(context.items, context.translations)
+  );
 }
 
 async function getGroupItems(gameMode: GameMode, names: string[]): Promise<CachedItem[]> {
@@ -454,20 +475,20 @@ async function getItemDetail(
 }
 
 async function getGunList(gameMode: GameMode): Promise<GunListItem[]> {
-  return loadDerived(`${gameMode}/gun-list-projection`, async () => {
-    const { items, translations } = await loadItems(gameMode);
-    throwIfRequestAborted();
-    return items
+  const context = await loadItems(gameMode);
+  return memo(`${gameMode}/gun-list`, [context], () =>
+    context.items
       .filter((item) => item.types?.includes("gun"))
       .map((item) => ({
         id: item.id ?? "",
-        name: translate(item.name, translations),
-        shortName: translate(item.shortName, translations) || translate(item.name, translations),
+        name: translate(item.name, context.translations),
+        shortName:
+          translate(item.shortName, context.translations) || translate(item.name, context.translations),
         gridImageLink: safeAssetUrl(item.gridImageLink),
         defaultPresetId: item.properties?.defaultPreset ?? null,
       }))
-      .filter((item) => Boolean(item.id));
-  });
+      .filter((item) => Boolean(item.id))
+  );
 }
 
 async function getBuildItems(gameMode: GameMode, ids: string[]): Promise<BuildItemData[]> {
@@ -531,173 +552,123 @@ async function getMapDetails(gameMode: GameMode, mapKey: string): Promise<MapDet
   );
 }
 
-async function loadItems(gameMode: GameMode) {
-  return loadDerived<ItemsContext>(`${gameMode}/items-context`, async () => {
-    const [itemsEnvelope, translationsEnvelope] = await Promise.all([
-      loadResource<ItemsData>(gameMode, "items"),
-      loadResource<TranslationDictionary>(gameMode, "items_en"),
-    ]);
+async function loadItems(gameMode: GameMode): Promise<ItemsContext> {
+  const [itemsEnvelope, translationsEnvelope] = await Promise.all([
+    loadResource<ItemsData>(gameMode, "items"),
+    loadResource<TranslationDictionary>(gameMode, "items_en"),
+  ]);
+  return memo(`${gameMode}/items-context`, [itemsEnvelope, translationsEnvelope], () => {
     const items = Object.values(itemsEnvelope.data.items ?? {});
     const translations = translationsEnvelope.data;
-    return {
-      items,
-      byId: new Map(
-        items.flatMap((item) => (item.id ? ([[item.id, item]] as const) : []))
-      ),
-      byName: new Map(
-        items.map((item) => [translate(item.name, translations), item] as const)
-      ),
-      nameById: new Map(
-        items.flatMap((item) =>
-          item.id ? ([[item.id, translate(item.name, translations)]] as const) : []
-        )
-      ),
-      translations,
-      fleaMarket: itemsEnvelope.data.fleaMarket,
-    };
+    const byId = new Map<string, RawItem>();
+    const byName = new Map<string, RawItem>();
+    const nameById = new Map<string, string>();
+    for (const item of items) {
+      const name = translate(item.name, translations);
+      byName.set(name, item);
+      if (item.id) {
+        byId.set(item.id, item);
+        nameById.set(item.id, name);
+      }
+    }
+    return { items, byId, byName, nameById, translations, fleaMarket: itemsEnvelope.data.fleaMarket };
   });
 }
 
-async function loadTasks(gameMode: GameMode) {
-  return loadDerived<TasksContext>(`${gameMode}/tasks-context`, async () => {
-    const [tasksEnvelope, translationsEnvelope] = await Promise.all([
-      loadResource<TasksData>(gameMode, "tasks"),
-      loadResource<TranslationDictionary>(gameMode, "tasks_en"),
-    ]);
+async function loadTasks(gameMode: GameMode): Promise<TasksContext> {
+  const [tasksEnvelope, translationsEnvelope] = await Promise.all([
+    loadResource<TasksData>(gameMode, "tasks"),
+    loadResource<TranslationDictionary>(gameMode, "tasks_en"),
+  ]);
+  return memo(`${gameMode}/tasks-context`, [tasksEnvelope, translationsEnvelope], () => {
     const tasks = Object.values(tasksEnvelope.data.tasks ?? {});
     return {
       tasks,
-      byId: new Map(
-        tasks.flatMap((task) => (task.id ? ([[task.id, task]] as const) : []))
-      ),
+      byId: new Map(tasks.flatMap((task) => (task.id ? ([[task.id, task]] as const) : []))),
       byItem: indexTasksByItem(tasks),
       translations: translationsEnvelope.data,
     };
   });
 }
 
-async function loadTraderNames(gameMode: GameMode) {
-  return loadDerived<Map<string, string>>(`${gameMode}/trader-names`, async () => {
-    const [tradersEnvelope, translationsEnvelope] = await Promise.all([
-      loadResource<Dictionary<RawNamedEntity>>(gameMode, "traders"),
-      loadResource<TranslationDictionary>(gameMode, "traders_en"),
-    ]);
-    return new Map(
-      Object.entries(tradersEnvelope.data).map(([id, trader]) => [
+async function loadNames(gameMode: GameMode, resource: "traders" | "hideout") {
+  const [entitiesEnvelope, translationsEnvelope] = await Promise.all([
+    loadResource<Dictionary<RawNamedEntity>>(gameMode, resource),
+    loadResource<TranslationDictionary>(gameMode, `${resource}_en`),
+  ]);
+  return memo(`${gameMode}/${resource}-names`, [entitiesEnvelope, translationsEnvelope], () =>
+    new Map(
+      Object.entries(entitiesEnvelope.data).map(([id, entity]) => [
         id,
-        translate(trader.name, translationsEnvelope.data) || trader.normalizedName || id,
+        translate(entity.name, translationsEnvelope.data) || entity.normalizedName || id,
       ])
-    );
-  });
+    )
+  );
 }
 
-async function loadStationNames(gameMode: GameMode) {
-  return loadDerived<Map<string, string>>(`${gameMode}/station-names`, async () => {
-    const [stationsEnvelope, translationsEnvelope] = await Promise.all([
-      loadResource<Dictionary<RawNamedEntity>>(gameMode, "hideout"),
-      loadResource<TranslationDictionary>(gameMode, "hideout_en"),
-    ]);
-    return new Map(
-      Object.entries(stationsEnvelope.data).map(([id, station]) => [
-        id,
-        translate(station.name, translationsEnvelope.data) || station.normalizedName || id,
-      ])
-    );
-  });
+function loadTraderNames(gameMode: GameMode) {
+  return loadNames(gameMode, "traders");
 }
 
-async function loadDerived<T>(key: string, loader: () => Promise<T>): Promise<T> {
-  const cached = derivedCache.get(key);
-  if (cached && cached.expiresAt > Date.now()) {
-    const result = await (cached.value as Promise<T>);
-    if (cached.stale) {
-      const currentContext = operationContext.getStore();
-      if (currentContext) currentContext.stale = true;
-    }
-    return result;
-  }
-  const loaderContext = operationContext.getStore();
-  const value = loader();
-  const entry: DerivedCacheEntry = { expiresAt: Number.POSITIVE_INFINITY, value };
-  derivedCache.set(key, entry);
-  try {
-    const result = await value;
-    if (derivedCache.get(key) === entry) {
-      entry.expiresAt = Date.now() + RESOURCE_TTL_MS;
-      entry.stale = Boolean(
-        loaderContext &&
-          (loaderContext.stale ||
-            Array.from(loaderContext.resources).some(
-              (resource) => (resource.lastStaleAt ?? 0) >= loaderContext.startedAt
-            ))
-      );
-    }
-    if (entry.stale) {
-      const currentContext = operationContext.getStore();
-      if (currentContext) currentContext.stale = true;
-    }
-    return result;
-  } catch (error) {
-    if (derivedCache.get(key) === entry) derivedCache.delete(key);
-    throw error;
-  }
+function loadStationNames(gameMode: GameMode) {
+  return loadNames(gameMode, "hideout");
 }
 
-async function loadArrayResource<T>(gameMode: GameMode, resource: "barters" | "crafts") {
-  const envelope = await loadResource<T[]>(gameMode, resource);
-  return Array.isArray(envelope.data) ? envelope.data : [];
-}
-
-async function loadResource<T>(gameMode: GameMode, resource: Resource) {
+async function loadResource<T>(
+  gameMode: GameMode,
+  resource: Resource
+): Promise<UpstreamEnvelope<T>> {
   const cacheKey = `${gameMode}/${resource}`;
-  const cached = resourceCache.get(cacheKey);
-  if (cached) operationContext.getStore()?.resources.add(cached);
-  const now = Date.now();
-  if (cached?.value && cached.expiresAt > now) {
-    return cached.value as UpstreamEnvelope<T>;
+  let entry = resourceCache.get(cacheKey);
+  if (!entry) {
+    entry = { fetchedAt: 0 };
+    resourceCache.set(cacheKey, entry);
   }
-  if (cached?.inFlight) return cached.inFlight as Promise<UpstreamEnvelope<T>>;
-
-  const entry: ResourceCacheEntry = cached ?? {
-    expiresAt: 0,
-    staleUntil: 0,
-  };
   operationContext.getStore()?.resources.add(entry);
-  const staleValue = entry.value;
-  const value = fetchResource<T>(gameMode, resource)
+
+  const age = Date.now() - entry.fetchedAt;
+  if (entry.value && age < RESOURCE_TTL_MS) return entry.value as UpstreamEnvelope<T>;
+  if (entry.value && age < RESOURCE_REVALIDATE_MS) {
+    void refreshResource(gameMode, resource, entry).catch(() => undefined);
+    return entry.value as UpstreamEnvelope<T>;
+  }
+  return refreshResource(gameMode, resource, entry) as Promise<UpstreamEnvelope<T>>;
+}
+
+function refreshResource(gameMode: GameMode, resource: Resource, entry: ResourceCacheEntry) {
+  if (entry.inFlight) return entry.inFlight;
+  const inFlight = fetchResource<unknown>(gameMode, resource)
     .then((result) => {
-      const completedAt = Date.now();
       entry.value = result;
-      entry.expiresAt = completedAt + RESOURCE_TTL_MS;
-      entry.staleUntil = completedAt + RESOURCE_TTL_MS + RESOURCE_STALE_MS;
-      entry.inFlight = undefined;
+      entry.fetchedAt = Date.now();
+      entry.failedAt = undefined;
       return result;
     })
-    .catch((error) => {
-      entry.inFlight = undefined;
-      if (staleValue && Date.now() <= entry.staleUntil) {
-        entry.lastStaleAt = Date.now();
+    .catch((error: unknown) => {
+      entry.failedAt = Date.now();
+      if (entry.value && Date.now() - entry.fetchedAt < RESOURCE_MAX_STALE_MS) {
         console.warn(`Serving stale Tarkov ${resource} data after refresh failed.`);
-        return staleValue as UpstreamEnvelope<T>;
+        return entry.value;
       }
-      if (resourceCache.get(cacheKey) === entry) resourceCache.delete(cacheKey);
       throw error;
+    })
+    .finally(() => {
+      entry.inFlight = undefined;
     });
-  entry.inFlight = value as Promise<UpstreamEnvelope<unknown>>;
-  resourceCache.set(cacheKey, entry);
-  return value;
+  entry.inFlight = inFlight;
+  return inFlight;
 }
 
 async function loadRelations(gameMode: GameMode): Promise<RelationsContext> {
-  return loadDerived(`${gameMode}/relations-context`, async () => {
-    const [barters, crafts] = await Promise.all([
-      loadArrayResource<RawBarter>(gameMode, "barters"),
-      loadArrayResource<RawCraft>(gameMode, "crafts"),
-    ]);
+  const [bartersEnvelope, craftsEnvelope] = await Promise.all([
+    loadResource<RawBarter[]>(gameMode, "barters"),
+    loadResource<RawCraft[]>(gameMode, "crafts"),
+  ]);
+  return memo(`${gameMode}/relations-context`, [bartersEnvelope, craftsEnvelope], () => {
     const bartersByItem = new Map<string, RawBarter[]>();
     const craftsByItem = new Map<string, RawCraft[]>();
-    for (const barter of barters) indexRelation(bartersByItem, barter.requiredItems, barter);
-    for (const craft of crafts) indexRelation(craftsByItem, craft.requiredItems, craft);
+    for (const barter of bartersEnvelope.data) indexRelation(bartersByItem, barter.requiredItems, barter);
+    for (const craft of craftsEnvelope.data) indexRelation(craftsByItem, craft.requiredItems, craft);
     return { bartersByItem, craftsByItem };
   });
 }
@@ -1674,5 +1645,9 @@ function readStringList(value: unknown, name: string, maxItems: number) {
 
 export function clearTarkovResourceCache() {
   resourceCache.clear();
-  derivedCache.clear();
+  memoCache.clear();
+}
+
+export async function warmTarkovCache(gameModes: GameMode[] = ["regular", "pve"]) {
+  await Promise.allSettled(gameModes.map((gameMode) => getItemCatalog(gameMode)));
 }
