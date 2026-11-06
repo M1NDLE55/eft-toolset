@@ -1,49 +1,47 @@
-import { ReactNode, useId, useRef } from "react";
+import { useId, type ReactNode } from "react";
 import { ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function Accordion({
   title,
   isOpen,
-  setOpenIndex,
-  className,
+  onToggle,
   children,
 }: {
   title: ReactNode;
   isOpen: boolean;
-  setOpenIndex: VoidFunction;
-  className: string | boolean;
+  onToggle: () => void;
   children: ReactNode;
 }) {
-  const content = useRef<HTMLDivElement | null>(null);
   const contentId = useId();
 
   return (
-    <div className={`flex flex-col overflow-hidden ${className}`}>
+    <div className="border-t border-[#1a1a1a] first:border-t-0">
       <button
         type="button"
-        className="flex w-full flex-row justify-between py-2 text-left"
-        onClick={setOpenIndex}
+        className="flex min-h-11 w-full items-center gap-2 py-2 text-left focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#9a8866]"
+        onClick={onToggle}
         aria-expanded={isOpen}
         aria-controls={contentId}
       >
-        <span className={`flex min-w-0 ${!isOpen ? "items-center truncate" : "flex-wrap items-baseline"}`}>{title}</span>
+        <span className="flex min-w-0 flex-1 items-center gap-2">{title}</span>
         <ChevronDown
-          className="shrink-0 transition-rotate ease-in-out duration-500"
-          style={isOpen ? { rotate: "180deg" } : { rotate: "0deg" }}
+          aria-hidden
+          className={cn("h-4 w-4 shrink-0 text-[#888] transition-transform duration-200", isOpen && "rotate-180")}
         />
       </button>
       <div
         id={contentId}
-        ref={content}
-        aria-hidden={!isOpen}
-        className="transition-height ease-in-out duration-500"
-        style={
-          isOpen
-            ? { height: content.current?.scrollHeight ?? "auto", marginBottom: "12px", visibility: "visible" }
-            : { height: "0px", visibility: "hidden" }
-        }
+        role="region"
+        inert={!isOpen}
+        className={cn(
+          "grid transition-[grid-template-rows] duration-200 ease-out motion-reduce:transition-none",
+          isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        )}
       >
-        {children}
+        <div className="overflow-hidden">
+          <div className="pb-3 text-sm">{children}</div>
+        </div>
       </div>
     </div>
   );

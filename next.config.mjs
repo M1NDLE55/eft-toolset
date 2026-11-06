@@ -4,6 +4,7 @@ const nextConfig = {
   agentRules: false,
   reactCompiler: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

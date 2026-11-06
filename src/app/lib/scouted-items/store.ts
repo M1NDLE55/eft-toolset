@@ -1,11 +1,7 @@
 "use client";
 
-import {
-  readStore,
-  subscribeStore,
-  writeStore,
-  type StoreDefinition,
-} from "@/app/lib/storage/versioned-store";
+import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
+import { useStore } from "@/app/lib/storage/use-store";
 
 export interface ScoutedItem {
   name: string;
@@ -67,16 +63,16 @@ export function addScoutedItem(item: ScoutedItem) {
   writeStore(ITEMS_STORE, [item, ...filtered].slice(0, MAX_SCOUTED));
 }
 
-export function listScoutedItems() {
-  return readStore(ITEMS_STORE);
+export function useScoutedItems() {
+  return useStore(ITEMS_STORE);
 }
 
-export function subscribeScoutedItems(listener: () => void) {
-  return subscribeStore(ITEMS_STORE.key, listener);
+export function useScoutedCollapsed() {
+  return useStore(COLLAPSED_STORE);
 }
 
-export function getScoutedCollapsed() {
-  return readStore(COLLAPSED_STORE);
+export function clearScoutedItems() {
+  writeStore(ITEMS_STORE, []);
 }
 
 export function setScoutedCollapsed(collapsed: boolean) {
