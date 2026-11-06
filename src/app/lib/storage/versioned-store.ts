@@ -120,13 +120,24 @@ export function writeStores(entries: readonly { definition: StoreDefinition<unkn
   try {
     for (const { key, text } of serialized) window.localStorage.setItem(key, text);
   } catch (error) {
-    for (const { key, text } of previous) {
+    for (const { key } of serialized) {
       try {
-        if (text === null) window.localStorage.removeItem(key);
-        else window.localStorage.setItem(key, text);
+        window.localStorage.removeItem(key);
       } catch {
         continue;
       }
+    }
+    const lost = previous.filter(({ key, text }) => {
+      if (text === null) return false;
+      try {
+        window.localStorage.setItem(key, text);
+        return false;
+      } catch {
+        return true;
+      }
+    });
+    if (lost.length > 0) {
+      throw new Error("Could not save, and some existing data could not be put back. Free up browser storage and try again.", { cause: error });
     }
     throw new Error("Could not save. Browser storage may be full or unavailable; nothing was changed.", { cause: error });
   }

@@ -4,6 +4,7 @@ import { readStore, writeStore } from "@/app/lib/storage/versioned-store";
 import { GROUP_STORE } from "@/app/lib/item-groups/store";
 import { MAX_GROUPS } from "@/app/lib/item-groups/limits";
 import { GAME_MODE_STORE } from "@/components/game-mode/mode";
+import { SCOUTED_STORE } from "@/app/lib/scouted-items/store";
 
 const backup = (stores: Record<string, unknown>) =>
   JSON.stringify({ format: "eft-toolset/backup", version: 1, exportedAt: "2026-11-06T00:00:00.000Z", stores });
@@ -77,5 +78,40 @@ describe("backup and restore", () => {
     const plan = parseBackup(backup({ [GROUP_STORE.key]: [{ name: "New", items: [] }] }));
     expect(() => applyRestore(plan, "merge")).toThrow(/exceed its limit/);
     expect(readStore(GROUP_STORE)).toHaveLength(MAX_GROUPS);
+  });
+});
+
+describe("restore rollback under a storage quota", () => {
+  beforeEach(() => window.localStorage.clear());
+
+  it("frees replacement data before putting originals back", () => {
+    writeStore(GROUP_STORE, Array.from({ length: 20 }, (_, index) => ({ name: `Group ${index}`, items: ["x".repeat(200)] })));
+    const before = window.localStorage.getItem(GROUP_STORE.key);
+    const plan = parseBackup(
+      backup({
+        [GROUP_STORE.key]: [{ name: "Small", items: [] }],
+        [SCOUTED_STORE.key]: Array.from({ length: 20 }, (_, index) => ({ name: `${index}${"y".repeat(230)}`, gridImageLink: null })),
+        "eft-toolset:settings:game-mode": "pve",
+      })
+    );
+    const original = Storage.prototype.setItem;
+    const quota = 7_000;
+    Storage.prototype.setItem = function (key: string, value: string) {
+      let used = 0;
+      for (let index = 0; index < this.length; index += 1) {
+        const existing = this.key(index)!;
+        if (existing !== key) used += existing.length + (this.getItem(existing)?.length ?? 0);
+      }
+      if (key === "eft-toolset:settings:game-mode" || used + key.length + value.length > quota) {
+        throw new DOMException("full", "QuotaExceededError");
+      }
+      return original.call(this, key, value);
+    };
+    try {
+      expect(() => applyRestore(plan, "replace")).toThrow(/nothing was changed/);
+    } finally {
+      Storage.prototype.setItem = original;
+    }
+    expect(window.localStorage.getItem(GROUP_STORE.key)).toBe(before);
   });
 });
