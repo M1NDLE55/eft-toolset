@@ -53,6 +53,11 @@ import { cn } from "@/lib/utils";
 const UNDO_MS = 8_000;
 const INTENT_DELAY_MS = 150;
 
+function fullscreenContainer() {
+  const element = document.fullscreenElement;
+  return element instanceof HTMLElement ? element : null;
+}
+
 export default function GunBuildEditorPage() {
   const params = useParams<{ build: string }>();
   const hydrated = useHydrated();
@@ -85,7 +90,7 @@ function EditorSkeleton() {
 function BuildEditor({ build }: { build: GunBuild }) {
   const router = useRouter();
   const ids = useMemo(() => collectItemIds(build.root), [build.root]);
-  const { items, loading, refreshing, error, retry, gameMode } = useGunItems(ids, "full");
+  const { items, loading, refreshing, unavailable, error, retry, gameMode } = useGunItems(ids, "full");
   const priceSources = usePriceSources();
   const { hideEmpty } = useBuilderView();
   const { byId } = useGunList();
@@ -136,6 +141,7 @@ function BuildEditor({ build }: { build: GunBuild }) {
       slot: node.slot,
       currentItemId: node.itemId,
       parentItemId: node.parentItemId,
+      container: fullscreenContainer(),
     });
   }
 
@@ -146,6 +152,7 @@ function BuildEditor({ build }: { build: GunBuild }) {
       slot: missing.slot,
       currentItemId: null,
       parentItemId: nodeAt(build.root, missing.parentPath)?.itemId ?? null,
+      container: null,
     });
   }
 
@@ -341,6 +348,8 @@ function BuildEditor({ build }: { build: GunBuild }) {
         flow={flow}
         items={items}
         loading={loading}
+        unavailable={unavailable}
+        weaponFallback={gun}
         onOpen={openNode}
         onRemove={(node) =>
           removeAt(node.path, `Removed ${(node.itemId && items.get(node.itemId)?.shortName) || "part"}`)

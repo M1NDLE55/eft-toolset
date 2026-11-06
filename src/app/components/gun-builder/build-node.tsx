@@ -7,17 +7,26 @@ import type { PositionedNode } from "@/app/lib/builds/tree-layout";
 import { cn } from "@/lib/utils";
 import { formatErgo, formatRecoilModifier } from "./format";
 
+export type MissingStatus = "loading" | "unavailable" | "failed";
+
+const MISSING_LABEL: Record<MissingStatus, string> = {
+  loading: "Loading…",
+  unavailable: "Unavailable item",
+  failed: "Not loaded",
+};
+
 interface BuilderNodeProps {
   node: PositionedNode;
   item: GunItem | undefined;
-  loading: boolean;
+  fallback?: { shortName: string; gridImageLink: string | null };
+  status: MissingStatus;
   onOpen: () => void;
   onRemove: () => void;
   onIntent: () => void;
   compact?: boolean;
 }
 
-function Thumb({ item, size }: { item: GunItem | undefined; size: "sm" | "md" }) {
+function Thumb({ item, size }: { item: { gridImageLink: string | null } | undefined; size: "sm" | "md" }) {
   return (
     <span
       className={cn(
@@ -41,7 +50,8 @@ function Thumb({ item, size }: { item: GunItem | undefined; size: "sm" | "md" })
 export function BuilderNode({
   node,
   item,
-  loading,
+  fallback,
+  status,
   onOpen,
   onRemove,
   onIntent,
@@ -63,10 +73,10 @@ export function BuilderNode({
           "flex items-center gap-3 border border-[#9a8866] bg-[#0f0d0a] p-2.5"
         )}
       >
-        <Thumb item={item} size="md" />
+        <Thumb item={item ?? fallback} size="md" />
         <span className="min-w-0">
           <span className="block truncate text-sm font-black uppercase tracking-widest text-[#e6d9b8]">
-            {item?.shortName ?? (loading ? "Loading" : "Unknown weapon")}
+            {item?.shortName ?? fallback?.shortName ?? MISSING_LABEL[status]}
           </span>
           <span className="mt-0.5 block truncate text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">
             Weapon
@@ -88,7 +98,7 @@ export function BuilderNode({
         onFocus={onIntent}
         className={cn(
           position,
-          "group flex items-center gap-3 border border-dashed p-2.5 text-left transition-colors hover:border-[#9a8866] hover:bg-[#0f0d0a] focus-visible:border-[#e6d9b8] focus-visible:outline-hidden",
+          "group flex items-center gap-3 border border-dashed p-2.5 text-left transition-colors hover:border-[#9a8866] hover:bg-[#0f0d0a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6d9b8]",
           required ? "border-[#7a6a48] bg-[#0c0a07]" : "border-[#2a2a2a] bg-[#080808]"
         )}
       >
@@ -131,15 +141,15 @@ export function BuilderNode({
         onFocus={onIntent}
         disabled={!node.slot}
         aria-label={`${slotLabel}: ${item?.name ?? "unknown item"}. Change part`}
-        className="flex min-w-0 flex-1 items-center gap-3 p-2.5 text-left focus-visible:outline-hidden disabled:cursor-default"
+        className="flex min-w-0 flex-1 items-center gap-3 p-2.5 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e6d9b8] disabled:cursor-default"
       >
-        {item ? <Thumb item={item} size="sm" /> : <span className="h-10 w-12 shrink-0 animate-shimmer" />}
+        {item || status !== "loading" ? <Thumb item={item} size="sm" /> : <span className="h-10 w-12 shrink-0 animate-shimmer" />}
         <span className="min-w-0 flex-1">
           <span className="block truncate text-[10px] font-bold uppercase tracking-widest text-[#888]">
             {slotLabel}
           </span>
           <span className="mt-0.5 block truncate text-sm font-bold text-[#ddd] group-hover:text-[#e6d9b8]">
-            {item?.shortName ?? (loading ? "Loading…" : "Unavailable item")}
+            {item?.shortName ?? MISSING_LABEL[status]}
           </span>
           {node.incompatible ? (
             <span className="mt-0.5 flex items-center gap-1 text-[11px] text-amber-300">
@@ -157,7 +167,7 @@ export function BuilderNode({
         type="button"
         onClick={onRemove}
         aria-label={`Remove ${item?.name ?? "part"}`}
-        className="flex w-10 shrink-0 items-center justify-center border-l border-[#1a1a1a] text-[#666] transition-colors hover:bg-red-950/40 hover:text-red-300 focus-visible:bg-red-950/40 focus-visible:text-red-300 focus-visible:outline-hidden"
+        className="flex w-10 shrink-0 items-center justify-center border-l border-[#1a1a1a] text-[#666] transition-colors hover:bg-red-950/40 hover:text-red-300 focus-visible:bg-red-950/40 focus-visible:text-red-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-red-300"
       >
         <X className="h-4 w-4" />
       </button>

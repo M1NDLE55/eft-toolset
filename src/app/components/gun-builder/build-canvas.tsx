@@ -6,12 +6,19 @@ import { Maximize2, Minimize2, Scan, ZoomIn, ZoomOut } from "lucide-react";
 import type { FlowLayout, PositionedNode } from "@/app/lib/builds/tree-layout";
 import type { ItemLookup } from "@/app/lib/builds/stats";
 import { cn } from "@/lib/utils";
-import { BuilderNode } from "./build-node";
+import { BuilderNode, type MissingStatus } from "./build-node";
+
+function missingStatus(node: PositionedNode, loading: boolean, unavailable: ReadonlySet<string>): MissingStatus {
+  if (node.itemId && unavailable.has(node.itemId)) return "unavailable";
+  return loading ? "loading" : "failed";
+}
 
 interface BuildCanvasProps {
   flow: FlowLayout;
   items: ItemLookup;
   loading: boolean;
+  unavailable: ReadonlySet<string>;
+  weaponFallback?: { shortName: string; gridImageLink: string | null };
   onOpen: (node: PositionedNode) => void;
   onRemove: (node: PositionedNode) => void;
   onIntent: (node: PositionedNode) => void;
@@ -45,7 +52,16 @@ export function BuildCanvas(props: BuildCanvasProps) {
   return desktop ? <TreeCanvas {...props} /> : <TreeList {...props} />;
 }
 
-function TreeCanvas({ flow, items, loading, onOpen, onRemove, onIntent }: BuildCanvasProps) {
+function TreeCanvas({
+  flow,
+  items,
+  loading,
+  unavailable,
+  weaponFallback,
+  onOpen,
+  onRemove,
+  onIntent,
+}: BuildCanvasProps) {
   const shellRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
@@ -202,7 +218,8 @@ function TreeCanvas({ flow, items, loading, onOpen, onRemove, onIntent }: BuildC
                   <BuilderNode
                     node={node}
                     item={node.itemId ? items.get(node.itemId) : undefined}
-                    loading={loading}
+                    status={missingStatus(node, loading, unavailable)}
+                    fallback={weaponFallback}
                     onOpen={() => onOpen(node)}
                     onRemove={() => onRemove(node)}
                     onIntent={() => onIntent(node)}
@@ -217,7 +234,16 @@ function TreeCanvas({ flow, items, loading, onOpen, onRemove, onIntent }: BuildC
   );
 }
 
-function TreeList({ flow, items, loading, onOpen, onRemove, onIntent }: BuildCanvasProps) {
+function TreeList({
+  flow,
+  items,
+  loading,
+  unavailable,
+  weaponFallback,
+  onOpen,
+  onRemove,
+  onIntent,
+}: BuildCanvasProps) {
   return (
     <ul aria-label="Build parts" className="flex flex-col border border-[#1a1a1a] bg-[#070707] p-2">
       {flow.nodes.map((node) => (
@@ -238,7 +264,8 @@ function TreeList({ flow, items, loading, onOpen, onRemove, onIntent }: BuildCan
             <BuilderNode
               node={node}
               item={node.itemId ? items.get(node.itemId) : undefined}
-              loading={loading}
+              status={missingStatus(node, loading, unavailable)}
+              fallback={weaponFallback}
               onOpen={() => onOpen(node)}
               onRemove={() => onRemove(node)}
               onIntent={() => onIntent(node)}

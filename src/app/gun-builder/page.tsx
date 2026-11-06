@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronRight, Copy, Plus, Search, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,10 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { ConfirmDialog } from "@/components/confirm-dialog";
 import { useHydrated } from "@/app/lib/storage/use-store";
 import { deleteBuild, duplicateBuild, sortBuilds, useBuilds } from "@/app/lib/builds/store";
-import { countParts } from "@/app/lib/builds/tree";
+import { collectItemIds, countParts } from "@/app/lib/builds/tree";
+import { prefetchBuildItems } from "@/app/lib/cache/gunBuilder";
+import { useGameMode } from "@/components/game-mode/context";
+import type { GunBuild } from "@/app/lib/types/gunBuilder";
 import { useGunList } from "@/app/lib/cache/gunBuilderHooks";
 import { NewBuildDialog } from "@/app/components/gun-builder/weapon-picker";
 import { formatDate } from "@/app/components/gun-builder/format";
@@ -25,6 +28,13 @@ export default function GunBuilderPage() {
   const { byId, loading: gunsLoading } = useGunList();
   const [filter, setFilter] = useState("");
   const [actionError, setActionError] = useState("");
+  const { gameMode } = useGameMode();
+  const intent = useRef<number | undefined>(undefined);
+
+  function prefetch(build: GunBuild, delay: number) {
+    window.clearTimeout(intent.current);
+    intent.current = window.setTimeout(() => prefetchBuildItems(collectItemIds(build.root), gameMode), delay);
+  }
 
   const phrase = filter.trim().toLowerCase();
   const visible = phrase
@@ -111,7 +121,11 @@ export default function GunBuilderPage() {
                 <li key={build.id} className="group flex items-stretch border border-[#1a1a1a] bg-[#0c0c0c] transition-colors hover:border-[#9a8866] focus-within:border-[#9a8866]">
                   <Link
                     href={`/gun-builder/${build.id}`}
-                    className="flex min-w-0 flex-1 items-center gap-3 p-3 focus-visible:outline-hidden"
+                    onPointerEnter={() => prefetch(build, 80)}
+                    onPointerLeave={() => window.clearTimeout(intent.current)}
+                    onPointerDown={() => prefetch(build, 0)}
+                    onFocus={() => prefetch(build, 0)}
+                    className="flex min-w-0 flex-1 items-center gap-3 p-3 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e6d9b8]"
                   >
                     <span className="flex h-10 w-14 shrink-0 items-center justify-center bg-[#080808] sm:h-12 sm:w-20">
                       {gun?.gridImageLink ? (

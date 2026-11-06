@@ -26,6 +26,7 @@ export interface PickerTarget {
   slot: ModSlotDef;
   currentItemId: string | null;
   parentItemId: string | null;
+  container: HTMLElement | null;
 }
 
 type SortKey = "name" | "ergo" | "recoil" | "price";
@@ -58,17 +59,16 @@ function installedOutside(root: BuildNode, excluded: BuildNode | undefined) {
       stack.push(child);
     }
   }
-  return { items, slots };
+  return { items, itemSet: new Set(items), slots };
 }
 
 function conflictReason(
   candidate: GunItem,
   slotId: string,
-  installed: { items: string[]; slots: Set<string> },
+  installed: ReturnType<typeof installedOutside>,
   lookup: ItemLookup
 ) {
-  const installedSet = new Set(installed.items);
-  const own = candidate.conflictingItemIds.find((id) => installedSet.has(id));
+  const own = candidate.conflictingItemIds.find((id) => installed.itemSet.has(id));
   if (own) return `Conflicts with ${lookup.get(own)?.shortName ?? "an installed part"}`;
   for (const id of installed.items) {
     const other = lookup.get(id);
@@ -117,7 +117,10 @@ export function SlotPicker({
 }) {
   return (
     <Dialog open={Boolean(target)} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="flex h-[min(88dvh,760px)] max-w-3xl flex-col gap-3 p-4 sm:p-5">
+      <DialogContent
+        portalContainer={target?.container}
+        className="flex h-[min(88dvh,760px)] max-w-3xl flex-col gap-3 p-4 sm:p-5"
+      >
         {target && (
           <PickerBody
             key={`${target.parentPath.join("/")}/${target.slotId}`}

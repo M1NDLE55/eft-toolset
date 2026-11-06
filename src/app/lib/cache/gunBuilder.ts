@@ -287,6 +287,10 @@ export function prefetchPreset(presetId: string, weaponId: string, gameMode: Gam
   void loadPresetTree(presetId, weaponId, gameMode).catch(() => undefined);
 }
 
+export function prefetchBuildItems(ids: readonly string[], gameMode: GameMode) {
+  void ensureGunItems(ids, gameMode, "full").catch(() => undefined);
+}
+
 export function prefetchSlotItems(ids: readonly string[], gameMode: GameMode) {
   void ensureGunItems(ids, gameMode, "basic").catch(() => undefined);
 }
