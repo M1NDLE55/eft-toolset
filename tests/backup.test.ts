@@ -3,6 +3,7 @@ import { applyRestore, createBackup, parseBackup } from "@/app/lib/storage/backu
 import { readStore, writeStore } from "@/app/lib/storage/versioned-store";
 import { GROUP_STORE } from "@/app/lib/item-groups/store";
 import { MAX_GROUPS } from "@/app/lib/item-groups/limits";
+import { GAME_MODE_STORE } from "@/components/game-mode/mode";
 
 const backup = (stores: Record<string, unknown>) =>
   JSON.stringify({ format: "eft-toolset/backup", version: 1, exportedAt: "2026-11-06T00:00:00.000Z", stores });
@@ -35,6 +36,12 @@ describe("backup and restore", () => {
     expect(readStore(GROUP_STORE).map((group) => group.name)).toEqual(["Keys", "Meds"]);
     applyRestore(plan, "replace");
     expect(readStore(GROUP_STORE).map((group) => group.name)).toEqual(["keys", "Meds"]);
+  });
+
+  it("keeps current settings when merging", () => {
+    writeStore(GAME_MODE_STORE, "regular");
+    applyRestore(parseBackup(backup({ [GAME_MODE_STORE.key]: "pve" })), "merge");
+    expect(readStore(GAME_MODE_STORE)).toBe("regular");
   });
 
   it("refuses a merge that would exceed a store's limit", () => {

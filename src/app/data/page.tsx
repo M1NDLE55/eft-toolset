@@ -139,7 +139,7 @@ export default function Page() {
               <p className="text-xs text-amber-200">Skipped because they failed validation: {plan.rejected.join(", ")}.</p>
             )}
             <p className="text-xs text-[#999]">
-              Merge adds groups, builds, and plans you don&apos;t already have. Replace overwrites each of the items above.
+              Merge adds groups, builds, plans, and recent items you don&apos;t already have and keeps your settings. Replace overwrites everything listed above.
             </p>
             <div className="flex flex-wrap gap-2">
               <Button onClick={() => restore("merge")}>Merge</Button>

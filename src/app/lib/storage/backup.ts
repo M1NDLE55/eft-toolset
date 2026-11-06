@@ -106,16 +106,16 @@ export function mergeValues(existing: unknown, incoming: unknown, identity: (ent
 }
 
 export function applyRestore(plan: RestorePlan, mode: "merge" | "replace") {
-  const prepared = plan.entries.map((entry) => {
+  const prepared = plan.entries.flatMap((entry) => {
     const store = BACKUP_STORES.find((candidate) => candidate.definition.key === entry.key)!;
-    const value =
-      mode === "merge" && store.identity
-        ? mergeValues(readStore(store.definition), entry.incoming, store.identity)
-        : entry.incoming;
+    if (mode === "merge" && !store.identity) return [];
+    const value = store.identity && mode === "merge"
+      ? mergeValues(readStore(store.definition), entry.incoming, store.identity)
+      : entry.incoming;
     if (!store.definition.validate(value)) {
       throw new Error(`${store.label} would exceed its limit after merging. Use Replace or remove some first.`);
     }
-    return { store, value };
+    return [{ store, value }];
   });
   for (const { store, value } of prepared) writeStore(store.definition, value);
 }
