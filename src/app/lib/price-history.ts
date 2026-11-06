@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useSyncExternalStore } from "react";
 import { createStore, getMany, setMany } from "idb-keyval";
 import type { GameMode } from "@/components/game-mode/mode";

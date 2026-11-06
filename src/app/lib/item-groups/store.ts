@@ -1,5 +1,3 @@
-"use client";
-
 import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
 import { useStore } from "@/app/lib/storage/use-store";
 import {
@@ -44,7 +42,7 @@ const DEFAULT_GROUPS: Group[] = [
   },
 ];
 
-const GROUP_STORE: StoreDefinition<Group[]> = {
+export const GROUP_STORE: StoreDefinition<Group[]> = {
   key: "eft-toolset:item-groups",
   legacyKeys: ["item-groups"],
   version: 1,

@@ -1,5 +1,3 @@
-"use client";
-
 import type { RaidPlan } from "./types";
 import { useMemo } from "react";
 import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";

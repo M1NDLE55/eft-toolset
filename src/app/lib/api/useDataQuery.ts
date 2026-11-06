@@ -1,5 +1,3 @@
-"use client";
-
 import { useCallback, useEffect, useEffectEvent, useSyncExternalStore } from "react";
 import {
   ensureQuery,

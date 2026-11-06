@@ -1,5 +1,3 @@
-"use client";
-
 export interface StoreDefinition<T> {
   key: string;
   legacyKeys?: string[];

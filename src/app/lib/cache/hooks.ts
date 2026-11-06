@@ -1,5 +1,3 @@
-"use client";
-
 import { useMemo, useState } from "react";
 import { useGameMode, type GameMode } from "@/components/game-mode/context";
 import { useDataQuery } from "@/app/lib/api/useDataQuery";

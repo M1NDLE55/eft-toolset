@@ -1,10 +1,10 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import { writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
+import { writeStore } from "@/app/lib/storage/versioned-store";
 import { useHydrated, useStore } from "@/app/lib/storage/use-store";
 
-import { GAME_MODE_COOKIE, isGameMode, type GameMode } from "./mode";
+import { GAME_MODE_COOKIE, GAME_MODE_STORE, type GameMode } from "./mode";
 
 export type { GameMode };
 
@@ -22,13 +22,6 @@ type GameModeContextValue = {
 
 const GameModeContext = createContext<GameModeContextValue | undefined>(undefined);
 
-const GAME_MODE_STORE: StoreDefinition<GameMode> = {
-  key: "eft-toolset:settings:game-mode",
-  legacyKeys: ["eft-toolset:game-mode"],
-  version: 1,
-  defaultValue: () => "regular",
-  validate: isGameMode,
-};
 
 export function GameModeProvider({ children }: { children: ReactNode }) {
   const storedMode = useStore(GAME_MODE_STORE);

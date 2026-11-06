@@ -9,6 +9,7 @@ import { headers } from "next/headers";
 import { GameModeProvider } from "@/components/game-mode/context";
 import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
 import { Header } from "@/app/components/global/header";
+import { ServiceWorker } from "@/app/components/global/service-worker";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -73,6 +74,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
                   M1NDLE55
                 </a>
               </p>
+              <Link href="/data" className="underline underline-offset-2 hover:text-[#ccc]">
+                Backup &amp; restore
+              </Link>
               <Link href="/policies/disclaimer-and-use-policy" className="underline underline-offset-2 hover:text-[#ccc]">
                 Disclaimer and use policy
               </Link>
@@ -96,6 +100,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
             </a>
           </div>
         </footer>
+        <ServiceWorker />
         <CloudflareAnalytics nonce={nonce} />
       </body>
     </html>

@@ -1,5 +1,3 @@
-"use client";
-
 import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
 import { useStore } from "@/app/lib/storage/use-store";
 import { MAX_LAYERS, MAX_LAYER_ID_LENGTH, MAX_MAP_KEY_LENGTH } from "./limits";
