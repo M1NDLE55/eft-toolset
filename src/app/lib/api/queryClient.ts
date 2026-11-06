@@ -6,6 +6,7 @@ import {
   cacheKeys,
   cacheSet,
 } from "@/app/lib/cache/store";
+import { canonicalJson } from "./operations";
 
 export interface QueryDefinition<Variables, Data> {
   id: string;
@@ -54,7 +55,7 @@ const IDLE_SNAPSHOT: QuerySnapshot<never> = Object.freeze({
 });
 
 export function queryKey<Variables>(definition: QueryDefinition<Variables, unknown>, variables: Variables) {
-  return `${definition.id}:${stableSerialize(variables)}`;
+  return `${definition.id}:${canonicalJson(variables)}`;
 }
 
 export function getQuerySnapshot<Data>(key: string): QuerySnapshot<Data> {
@@ -332,14 +333,4 @@ function evictMemoryEntries() {
     memory.delete(key);
     snapshots.delete(key);
   }
-}
-
-function stableSerialize(value: unknown): string {
-  if (value === undefined) return "undefined";
-  if (value === null || typeof value !== "object") return JSON.stringify(value);
-  if (Array.isArray(value)) return `[${value.map(stableSerialize).join(",")}]`;
-  return `{${Object.entries(value as Record<string, unknown>)
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([key, entry]) => `${JSON.stringify(key)}:${stableSerialize(entry)}`)
-    .join(",")}}`;
 }
