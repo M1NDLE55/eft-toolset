@@ -11,7 +11,7 @@ export interface LayerGroupOptions {
   options: LayerOption[];
 }
 
-export const SPAWN_KIND_LABELS: { kind: SpawnKind; label: string }[] = [
+const SPAWN_KIND_LABELS: { kind: SpawnKind; label: string }[] = [
   { kind: "pmc", label: "PMC" },
   { kind: "scav", label: "Scav" },
   { kind: "sniper", label: "Sniper scav" },

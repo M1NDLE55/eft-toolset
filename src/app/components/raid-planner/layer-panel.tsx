@@ -118,7 +118,7 @@ export function LayerPanel({ groups, enabled, onChange, loading, error, onRetry 
                         type="button"
                         onClick={() => onChange(groupIds, !allOn)}
                         className={cn(
-                          "min-h-8 px-1.5 text-[10px] uppercase tracking-widest text-[#777] hover:text-[#9a8866]",
+                          "min-h-10 px-1.5 text-[10px] uppercase tracking-widest text-[#777] hover:text-[#9a8866] sm:min-h-8",
                           focusRing
                         )}
                       >
