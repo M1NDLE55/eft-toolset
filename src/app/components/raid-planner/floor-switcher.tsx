@@ -3,6 +3,7 @@
 import { useId, useState } from "react";
 import { ChevronsUpDown } from "lucide-react";
 import type { MapConfig } from "@/app/lib/raid-planner/types";
+import { floorName, getFloorStack } from "@/app/lib/raid-planner/floors";
 import { cn } from "@/lib/utils";
 import { focusRing, overlayPanel } from "./ui";
 
@@ -21,11 +22,8 @@ export function FloorSwitcher({ config, activeFloor, onChange }: FloorSwitcherPr
   const listId = useId();
   if (config.floors.length === 0) return null;
 
-  const options = [
-    { id: null, name: "Ground" },
-    ...config.floors.map((floor) => ({ id: floor.id, name: floor.name })),
-  ];
-  const activeName = options.find((option) => option.id === activeFloor)?.name ?? "Ground";
+  const options = getFloorStack(config);
+  const activeName = floorName(config, activeFloor);
 
   return (
     <div className="flex flex-col items-end gap-1">

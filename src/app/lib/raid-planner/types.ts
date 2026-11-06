@@ -103,6 +103,7 @@ export interface MapConfig {
   coordinateRotation: number;
   bounds: [[number, number], [number, number]];
   heightRange?: [number, number];
+  baseFloorName?: string;
   floors: MapFloor[];
   author?: string;
   authorLink?: string;

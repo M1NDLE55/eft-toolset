@@ -914,10 +914,11 @@ export const mapConfigs: MapConfig[] = [
       -0.9,
       3
     ],
+    "baseFloorName": "1st Floor",
     "floors": [
       {
         "id": "second-level",
-        "name": "Second Level",
+        "name": "2nd Floor",
         "tilePath": "https://assets.tarkov.dev/maps/labs_v4/2nd/{z}/{x}/{y}.png",
         "extents": [
           {

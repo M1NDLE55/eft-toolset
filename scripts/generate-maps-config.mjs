@@ -20,6 +20,14 @@ const DISPLAY_NAMES = {
   woods: "Woods",
 };
 
+const BASE_FLOOR_NAMES = {
+  "the-lab": "1st Floor",
+};
+
+const FLOOR_NAMES = {
+  "the-lab": { "second-level": "2nd Floor" },
+};
+
 function floorId(name) {
   return name
     .toLowerCase()
@@ -138,9 +146,10 @@ for (const entry of source) {
 
   const floors = layers
     .map((layer) => {
+      const id = floorId(layer.name);
       const floor = {
-        id: floorId(layer.name),
-        name: layer.name,
+        id,
+        name: FLOOR_NAMES[interactive.key]?.[id] ?? layer.name,
       };
       if (strategy === "tile") floor.tilePath = layer.tilePath;
       else floor.svgLayer = layer.svgLayer;
@@ -177,6 +186,7 @@ for (const entry of source) {
     coordinateRotation: interactive.coordinateRotation ?? 0,
     bounds: interactive.bounds,
     ...(heightRange ? { heightRange } : {}),
+    ...(BASE_FLOOR_NAMES[interactive.key] ? { baseFloorName: BASE_FLOOR_NAMES[interactive.key] } : {}),
     floors,
     ...(interactive.author ? { author: interactive.author } : {}),
     ...(interactive.authorLink ? { authorLink: interactive.authorLink } : {}),
