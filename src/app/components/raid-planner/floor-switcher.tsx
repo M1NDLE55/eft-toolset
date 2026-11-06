@@ -13,6 +13,8 @@ interface FloorSwitcherProps {
   onChange: (floor: string | null) => void;
 }
 
+const COMPACT_AFTER = 6;
+
 export function defaultFloor(config: MapConfig) {
   return config.floors.find((floor) => floor.show)?.id ?? null;
 }
@@ -24,9 +26,18 @@ export function FloorSwitcher({ config, activeFloor, onChange }: FloorSwitcherPr
 
   const options = getFloorStack(config);
   const activeName = floorName(config, activeFloor);
+  const compact = options.length > COMPACT_AFTER;
 
   return (
-    <div className="flex flex-col items-end gap-1">
+    <div
+      className="flex flex-col items-end gap-1"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && expanded) {
+          event.stopPropagation();
+          setExpanded(false);
+        }
+      }}
+    >
       <button
         type="button"
         aria-expanded={expanded}
@@ -34,7 +45,8 @@ export function FloorSwitcher({ config, activeFloor, onChange }: FloorSwitcherPr
         onClick={() => setExpanded((value) => !value)}
         className={cn(
           overlayPanel,
-          "flex h-10 items-center gap-2 px-3 text-[10px] font-bold uppercase tracking-widest text-[#c9b88d] sm:hidden",
+          "flex h-10 items-center gap-2 px-3 text-[10px] font-bold uppercase tracking-widest text-[#c9b88d]",
+          !compact && "sm:hidden",
           focusRing
         )}
       >
@@ -46,7 +58,12 @@ export function FloorSwitcher({ config, activeFloor, onChange }: FloorSwitcherPr
         id={listId}
         role="group"
         aria-label="Map level"
-        className={cn(overlayPanel, "flex-col max-sm:order-first", expanded ? "flex" : "hidden sm:flex")}
+        className={cn(
+          overlayPanel,
+          "max-h-[min(60vh,32rem)] flex-col overflow-y-auto overscroll-contain max-sm:order-first",
+          compact && "order-first",
+          expanded ? "flex" : compact ? "hidden" : "hidden sm:flex"
+        )}
       >
         {options.map((option) => {
           const active = option.id === activeFloor;

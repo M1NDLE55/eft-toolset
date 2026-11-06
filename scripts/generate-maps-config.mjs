@@ -8,6 +8,7 @@ const SOURCE_URL =
 const DISPLAY_NAMES = {
   "streets-of-tarkov": "Streets of Tarkov",
   "ground-zero": "Ground Zero",
+  icebreaker: "Icebreaker",
   customs: "Customs",
   factory: "Factory",
   interchange: "Interchange",
@@ -133,7 +134,10 @@ for (const entry of source) {
     continue;
   }
 
-  const layers = interactive.layers ?? [];
+  const baseLayer = (interactive.layers ?? []).find(
+    (layer) => interactive.tilePath && layer.tilePath === interactive.tilePath
+  );
+  const layers = (interactive.layers ?? []).filter((layer) => layer !== baseLayer);
   const strategy =
     interactive.tilePath && layers.every((layer) => layer.tilePath)
       ? "tile"
@@ -186,7 +190,9 @@ for (const entry of source) {
     coordinateRotation: interactive.coordinateRotation ?? 0,
     bounds: interactive.bounds,
     ...(heightRange ? { heightRange } : {}),
-    ...(BASE_FLOOR_NAMES[interactive.key] ? { baseFloorName: BASE_FLOOR_NAMES[interactive.key] } : {}),
+    ...((BASE_FLOOR_NAMES[interactive.key] ?? baseLayer?.name)
+      ? { baseFloorName: BASE_FLOOR_NAMES[interactive.key] ?? baseLayer.name }
+      : {}),
     floors,
     ...(interactive.author ? { author: interactive.author } : {}),
     ...(interactive.authorLink ? { authorLink: interactive.authorLink } : {}),

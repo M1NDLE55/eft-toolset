@@ -241,6 +241,258 @@ export const mapConfigs: MapConfig[] = [
     }
   },
   {
+    "key": "icebreaker",
+    "name": "Icebreaker",
+    "strategy": "tile",
+    "tilePath": "https://assets.tarkov.dev/maps/icebreaker/06_infirmary/{z}/{x}/{y}.png",
+    "tileSize": 256,
+    "minZoom": 1,
+    "maxZoom": 5,
+    "transform": [
+      2,
+      125,
+      3.5,
+      91
+    ],
+    "coordinateRotation": 180,
+    "bounds": [
+      [
+        77,
+        -64.5
+      ],
+      [
+        -65.5,
+        67.4
+      ]
+    ],
+    "heightRange": [
+      18.92,
+      19.56
+    ],
+    "baseFloorName": "Infirmary",
+    "floors": [
+      {
+        "id": "helipad",
+        "name": "Helipad",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/07_helipad/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              19.57,
+              22.1
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gym-canteen",
+        "name": "Gym/Canteen",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/08_gym-canteen/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              22.2,
+              25.2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "accommodation-lower",
+        "name": "Accommodation (lower)",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/09_accommodation_lower/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              25.3,
+              28.2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "accommodation-mid",
+        "name": "Accommodation (mid)",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/10_accommodation_mid/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              28.3,
+              31.3
+            ]
+          }
+        ]
+      },
+      {
+        "id": "accommodation-upper",
+        "name": "Accommodation (upper)",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/11_accommodation_upper/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              31.4,
+              34.4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "officers-deck",
+        "name": "Officers' Deck",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/12_officers_deck/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              34.5,
+              37.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": "stairs-blocked",
+        "name": "Stairs (blocked)",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/13_stairs_blocked/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              37.6,
+              40.6
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bridge",
+        "name": "Bridge",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/14_bridge/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              40.7,
+              43.7
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bridge-roof",
+        "name": "Bridge Roof",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/15_bridge_roof/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              43.8,
+              10000
+            ]
+          }
+        ]
+      },
+      {
+        "id": "control-room",
+        "name": "Control Room",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/00_control_room/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              -10000,
+              3.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": "engine-room",
+        "name": "Engine Room",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/01_engine_room/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              3.6,
+              5.6
+            ]
+          }
+        ]
+      },
+      {
+        "id": "engine-room-upper",
+        "name": "Engine Room (upper)",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/02_engine_room_upper/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              5.7,
+              8.7
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fuel-pumps-lower",
+        "name": "Fuel Pumps (lower)",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/03_fuel_pumps_lower/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              8.8,
+              11.8
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fuel-pumps",
+        "name": "Fuel Pumps",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/04_fuel_pumps/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              11.9,
+              14.9
+            ]
+          }
+        ]
+      },
+      {
+        "id": "storage-security",
+        "name": "Storage/Security",
+        "tilePath": "https://assets.tarkov.dev/maps/icebreaker/05_storage_ecurity/{z}/{x}/{y}.png",
+        "extents": [
+          {
+            "height": [
+              15,
+              18.93
+            ]
+          }
+        ]
+      }
+    ],
+    "author": "TarkovBOT.eu",
+    "authorLink": "https://tarkovbot.eu/",
+    "tileGrid": {
+      "1": [
+        2,
+        2
+      ],
+      "2": [
+        4,
+        4
+      ],
+      "3": [
+        8,
+        8
+      ],
+      "4": [
+        16,
+        16
+      ],
+      "5": [
+        32,
+        32
+      ]
+    }
+  },
+  {
     "key": "customs",
     "name": "Customs",
     "strategy": "tile",
