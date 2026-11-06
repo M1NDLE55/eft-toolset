@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { Check, Copy, LoaderCircle, Share2 } from "lucide-react";
+import { Check, Copy, Download, LoaderCircle, Share2 } from "lucide-react";
 import type { RaidPlan } from "@/app/lib/raid-planner/types";
 import { encodePlanSharePayload, slugifyPlanName } from "@/app/lib/raid-planner/share";
 import { copyText } from "@/app/lib/browser/clipboard";
+import { downloadPlanFile } from "@/app/lib/raid-planner/plan-file";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -153,14 +154,32 @@ export function SharePlan({ plan }: { plan: RaidPlan }) {
           </p>
         )}
 
-        {canNativeShare && (
-          <DialogFooter>
-            <Button variant="outline" onClick={handleNativeShare} disabled={!url || sharing}>
-              <Share2 aria-hidden />
-              {sharing ? "Sharing…" : "Share via…"}
+        <DialogFooter className="gap-2 sm:items-center sm:justify-between">
+          <p className="text-xs text-[#888] max-sm:order-first">
+            Prefer a file? Download it and import it from the raid planner page.
+          </p>
+          <div className="flex gap-2 max-sm:[&>*]:flex-1">
+            <Button
+              variant="outline"
+              onClick={() => {
+                try {
+                  downloadPlanFile([plan]);
+                } catch (reason) {
+                  setActionError(reason instanceof Error ? reason.message : "Could not download this plan.");
+                }
+              }}
+            >
+              <Download aria-hidden />
+              Download file
             </Button>
-          </DialogFooter>
-        )}
+            {canNativeShare && (
+              <Button variant="outline" onClick={handleNativeShare} disabled={!url || sharing}>
+                <Share2 aria-hidden />
+                {sharing ? "Sharing…" : "Share via…"}
+              </Button>
+            )}
+          </div>
+        </DialogFooter>
       </DialogContent>
     </Dialog>
   );

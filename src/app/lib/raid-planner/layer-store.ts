@@ -6,7 +6,7 @@ import { MAX_LAYERS, MAX_LAYER_ID_LENGTH, MAX_MAP_KEY_LENGTH } from "./limits";
 
 type StoredLayers = Record<string, string[]>;
 
-const LAYER_STORE: StoreDefinition<StoredLayers> = {
+export const LAYER_STORE: StoreDefinition<StoredLayers> = {
   key: "eft-toolset:raid-planner-layers",
   legacyKeys: ["raid-planner-layers"],
   version: 1,

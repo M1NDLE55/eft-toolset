@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState, type DragEvent } from "react";
 import { useRouter } from "next/navigation";
-import { Copy, Map as MapIcon, Plus, Trash2 } from "lucide-react";
+import { Copy, Download, FileUp, Map as MapIcon, Plus, Trash2 } from "lucide-react";
 import type { MapConfig, RaidPlan } from "@/app/lib/raid-planner/types";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
-import { createPlan, deletePlan, duplicatePlan, usePlans } from "@/app/lib/raid-planner/store";
+import { createPlan, deletePlan, duplicatePlan, importPlans, usePlans } from "@/app/lib/raid-planner/store";
+import { downloadPlanFile, readPlanFile } from "@/app/lib/raid-planner/plan-file";
 import { prefetchMap } from "@/app/lib/raid-planner/prefetch";
 import { MAX_PLAN_NAME_LENGTH } from "@/app/lib/raid-planner/limits";
 import { useHydrated } from "@/app/lib/storage/use-store";
@@ -49,14 +50,38 @@ export default function RaidPlannerPage() {
   const [createOpen, setCreateOpen] = useState(false);
   const [createName, setCreateName] = useState("");
   const [actionError, setActionError] = useState("");
+  const [notice, setNotice] = useState("");
+  const [importing, setImporting] = useState(false);
+  const [dragging, setDragging] = useState(false);
+  const fileInput = useRef<HTMLInputElement>(null);
 
   function run(action: () => void, fallback: string) {
+    setNotice("");
     try {
       action();
       setActionError("");
     } catch (reason) {
       setActionError(reason instanceof Error ? reason.message : fallback);
     }
+  }
+
+  async function importFile(file: File | undefined) {
+    if (!file || importing) return;
+    setImporting(true);
+    setNotice("");
+    try {
+      const imported = importPlans(await readPlanFile(file));
+      setActionError("");
+      setNotice(`Imported ${plural(imported.length, "plan")} from ${file.name}.`);
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not import this file.");
+    } finally {
+      setImporting(false);
+    }
+  }
+
+  function isFileDrag(event: DragEvent) {
+    return Array.from(event.dataTransfer.types).includes("Files");
   }
 
   function handleCreate(config: MapConfig) {
@@ -107,7 +132,32 @@ export default function RaidPlannerPage() {
   );
 
   return (
-    <div className="flex justify-center px-4 py-6 sm:py-10">
+    <div
+      className="relative flex justify-center px-4 py-6 sm:py-10"
+      onDragOver={(event) => {
+        if (!isFileDrag(event)) return;
+        event.preventDefault();
+        event.dataTransfer.dropEffect = "copy";
+        setDragging(true);
+      }}
+      onDragLeave={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setDragging(false);
+      }}
+      onDrop={(event) => {
+        if (!isFileDrag(event)) return;
+        event.preventDefault();
+        setDragging(false);
+        void importFile(event.dataTransfer.files[0]);
+      }}
+    >
+      {dragging && (
+        <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center border-2 border-dashed border-[#9a8866] bg-black/80">
+          <p className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#e6d9b8]">
+            <FileUp className="h-5 w-5" aria-hidden />
+            Drop a plan file to import it
+          </p>
+        </div>
+      )}
       <div className="flex w-full max-w-4xl flex-col gap-8">
         <header className="flex flex-wrap items-end justify-between gap-4">
           <div className="min-w-0">
@@ -116,12 +166,52 @@ export default function RaidPlannerPage() {
               Draw routes, arrows and callouts on interactive maps, then share the plan with your squad as a link.
             </p>
           </div>
-          {createDialog}
+          <div className="flex flex-wrap gap-2 max-sm:w-full">
+            <input
+              ref={fileInput}
+              type="file"
+              accept=".json,application/json"
+              className="sr-only"
+              tabIndex={-1}
+              aria-hidden
+              onChange={(event) => {
+                const file = event.currentTarget.files?.[0];
+                event.currentTarget.value = "";
+                void importFile(file);
+              }}
+            />
+            <Button
+              variant="outline"
+              onClick={() => fileInput.current?.click()}
+              disabled={!hydrated || importing}
+              title="Import plans from a .json file"
+              className="max-sm:flex-1"
+            >
+              <FileUp aria-hidden />
+              {importing ? "Importing…" : "Import"}
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => run(() => downloadPlanFile(plans), "Could not export your plans.")}
+              disabled={!hydrated || plans.length === 0}
+              title="Download every plan as a .json file"
+              className="max-sm:flex-1"
+            >
+              <Download aria-hidden />
+              Export all
+            </Button>
+            <div className="max-sm:w-full max-sm:[&>button]:w-full">{createDialog}</div>
+          </div>
         </header>
 
         {actionError && !createOpen && (
           <p role="alert" className="border border-red-900/60 bg-[#090909] px-3 py-2 text-sm text-red-200">
             {actionError}
+          </p>
+        )}
+        {notice && !actionError && (
+          <p role="status" className="border border-[#9a8866]/50 bg-[#0e0d0b] px-3 py-2 text-sm text-[#e6d9b8]">
+            {notice}
           </p>
         )}
 
@@ -147,6 +237,7 @@ export default function RaidPlannerPage() {
                       if (copy) router.push(`/raid-planner/${copy.id}`);
                     }, "Could not duplicate this plan.")
                   }
+                  onExport={() => run(() => downloadPlanFile([plan]), "Could not export this plan.")}
                   onDelete={() => run(() => deletePlan(plan.id), "Could not delete this plan.")}
                 />
               ))}
@@ -155,7 +246,8 @@ export default function RaidPlannerPage() {
             <div className="flex flex-col items-start gap-3 border border-dashed border-[#2a2a2a] p-5">
               <p className="text-sm font-bold uppercase tracking-widest text-[#ccc]">No plans yet</p>
               <p className="text-sm text-[#888]">
-                Plans are stored in this browser. Create one, or open a map below to look around first.
+                Plans are stored in this browser. Create one, import a plan file, or open a map below to look around
+                first.
               </p>
             </div>
           )}
@@ -172,7 +264,17 @@ export default function RaidPlannerPage() {
   );
 }
 
-function PlanRow({ plan, onDuplicate, onDelete }: { plan: RaidPlan; onDuplicate: () => void; onDelete: () => void }) {
+function PlanRow({
+  plan,
+  onDuplicate,
+  onExport,
+  onDelete,
+}: {
+  plan: RaidPlan;
+  onDuplicate: () => void;
+  onExport: () => void;
+  onDelete: () => void;
+}) {
   const { gameMode } = useGameMode();
   const config = getMapConfig(plan.mapKey);
   const summary = [
@@ -214,6 +316,18 @@ function PlanRow({ plan, onDuplicate, onDelete }: { plan: RaidPlan; onDuplicate:
         >
           <Copy className="h-4 w-4" aria-hidden />
           <span className="sr-only">Duplicate {plan.name}</span>
+        </button>
+        <button
+          type="button"
+          title="Download plan file"
+          onClick={onExport}
+          className={cn(
+            "flex h-full min-h-12 w-12 items-center justify-center text-[#888] transition-colors hover:bg-[#141414] hover:text-[#ddd]",
+            focusRing
+          )}
+        >
+          <Download className="h-4 w-4" aria-hidden />
+          <span className="sr-only">Download {plan.name} as a file</span>
         </button>
         <AlertDialog>
           <AlertDialogTrigger asChild>
