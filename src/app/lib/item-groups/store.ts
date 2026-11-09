@@ -6,11 +6,8 @@ import {
   MAX_GROUP_NAME_LENGTH,
   MAX_GROUPS,
 } from "./limits";
-
-export interface Group {
-  name: string;
-  items: string[];
-}
+import { isGroupList, type Group } from "./validation";
+import { STORE_KEYS } from "@/app/lib/storage/store-keys";
 
 const DEFAULT_GROUPS: Group[] = [
   {
@@ -43,7 +40,7 @@ const DEFAULT_GROUPS: Group[] = [
 ];
 
 export const GROUP_STORE: StoreDefinition<Group[]> = {
-  key: "eft-toolset:item-groups",
+  key: STORE_KEYS.itemGroups,
   legacyKeys: ["item-groups"],
   version: 1,
   defaultValue: () => structuredClone(DEFAULT_GROUPS),
@@ -123,10 +120,6 @@ export function removeGroupItem(groupName: string, itemName: string) {
   );
 }
 
-function isGroupList(value: unknown): value is Group[] {
-  return Array.isArray(value) && value.length <= MAX_GROUPS && value.every(isGroup);
-}
-
 function recoverGroups(value: unknown): Group[] | undefined {
   if (!Array.isArray(value)) return undefined;
   return value
@@ -152,20 +145,4 @@ function recoverGroups(value: unknown): Group[] | undefined {
       }];
     })
     .slice(0, MAX_GROUPS);
-}
-
-function isGroup(value: unknown): value is Group {
-  if (!value || typeof value !== "object") return false;
-  const group = value as Partial<Group>;
-  return (
-    typeof group.name === "string" &&
-    group.name.trim().length > 0 &&
-    group.name.length <= MAX_GROUP_NAME_LENGTH &&
-    Array.isArray(group.items) &&
-    group.items.length <= MAX_GROUP_ITEMS &&
-    group.items.every(
-      (item: unknown) =>
-        typeof item === "string" && item.length <= MAX_GROUP_ITEM_NAME_LENGTH
-    )
-  );
 }

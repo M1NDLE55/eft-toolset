@@ -1,4 +1,4 @@
-import type { MapConfig, MapFloor } from "./types";
+import type { FloorExtent, GamePoint, MapConfig, MapFloor } from "./types";
 
 export interface FloorOption {
   id: string | null;
@@ -34,4 +34,28 @@ export function getFloorStack(config: MapConfig): FloorOption[] {
 
 export function floorName(config: MapConfig, floorId: string | null) {
   return config.floors.find((floor) => floor.id === floorId)?.name ?? baseFloorName(config);
+}
+
+function contains(extent: FloorExtent, point: GamePoint, height: number) {
+  if (height < extent.height[0] || height >= extent.height[1]) return false;
+  if (!extent.bounds) return true;
+  return extent.bounds.some(
+    ([[x1, z1], [x2, z2]]) =>
+      point.x >= Math.min(x1, x2) &&
+      point.x <= Math.max(x1, x2) &&
+      point.z >= Math.min(z1, z2) &&
+      point.z <= Math.max(z1, z2)
+  );
+}
+
+/** The floor a point with a height is on, or the base floor. */
+export function floorAt(config: MapConfig, point: GamePoint): FloorOption {
+  if (typeof point.y === "number") {
+    const height = point.y;
+    const floor = config.floors.find((candidate) =>
+      (candidate.extents ?? []).some((extent) => contains(extent, point, height))
+    );
+    if (floor) return { id: floor.id, name: floor.name };
+  }
+  return { id: null, name: baseFloorName(config) };
 }

@@ -6,7 +6,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ArrowDown, ArrowLeft, ArrowUp, Check, ClipboardList, ExternalLink, Pencil, Trash2, X } from "lucide-react";
 import { copyText } from "@/app/lib/browser/clipboard";
-import { escapeDiscordText } from "@/app/lib/text-safety";
+import { formatGroupPriceList } from "@/app/lib/item-groups/format";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { NameDialog } from "@/components/name-dialog";
@@ -59,15 +59,6 @@ function toRow(name: string, catalog: CatalogItem | undefined, data: CachedItem 
     perSlot: best && data ? best.price / (data.width * data.height) : null,
     multiSlot: data ? data.width * data.height > 1 : false,
   };
-}
-
-function groupAsText(name: string, rows: Row[], total: number) {
-  const lines = rows.map((row) =>
-    row.price !== null
-      ? `• ${escapeDiscordText(row.name)} — ${Rubles.format(row.price)} (${escapeDiscordText(row.vendor ?? "")})`
-      : `• ${escapeDiscordText(row.name)} — no buyer`
-  );
-  return [`**${escapeDiscordText(name)}**`, ...lines, total > 0 ? `Total: ${Rubles.format(total)}` : ""].filter(Boolean).join("\n");
 }
 
 function sortRows(rows: Row[], key: SortKey, descending: boolean) {
@@ -238,7 +229,7 @@ export default function Page() {
               variant="outline"
               size="sm"
               onClick={() =>
-                void copyText(groupAsText(group.name, rows, total)).then(
+                void copyText(formatGroupPriceList(group.name, rows, total)).then(
                   () => {
                     setCopied(true);
                     window.setTimeout(() => setCopied(false), 1800);

@@ -1,6 +1,8 @@
 const GZIP_PREFIX = "gz.";
 const JSON_PREFIX = "j.";
 const MAX_ENCODED_LENGTH = 400_000;
+/** The longest share link accepted: the largest payload plus room for the URL around it. */
+export const MAX_SHARE_LINK_LENGTH = MAX_ENCODED_LENGTH + 2_048;
 const MAX_DECODED_BYTES = 2_000_000;
 
 export function slugifyName(name: string, fallback: string) {
@@ -49,7 +51,7 @@ export async function decodeSharePayload(payload: string): Promise<unknown> {
   return JSON.parse(new TextDecoder("utf-8", { fatal: true }).decode(bytes)) as unknown;
 }
 
-async function gzip(bytes: Uint8Array) {
+async function gzip(bytes: Uint8Array<ArrayBuffer>) {
   if (typeof CompressionStream === "undefined") return null;
 
   const blob = new Blob([bytes]);
@@ -59,7 +61,7 @@ async function gzip(bytes: Uint8Array) {
   return new Uint8Array(await new Response(stream).arrayBuffer());
 }
 
-async function gunzip(bytes: Uint8Array) {
+async function gunzip(bytes: Uint8Array<ArrayBuffer>) {
   if (typeof DecompressionStream === "undefined") {
     throw new Error("This browser cannot read compressed share links.");
   }

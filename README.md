@@ -21,6 +21,13 @@ Assemble weapons part by part with compatible slots, factory presets, and live e
 ### Raid Planner
 Plan raids on interactive maps, including Icebreaker and its decks. Draw routes, arrows, waypoints, and notes on each level, measure distances, and toggle extracts, transits, spawns, locks, hazards, and loot layers. Plans support undo and redo, show their total route distance, and can be shared by link or exported to a file.
 
+### AI assistants (MCP)
+Every tool is also available to Claude and other AI assistants through a public [Model Context Protocol](https://modelcontextprotocol.io) server at `https://www.eft-toolset.com/api/mcp`. Assistants get the same live data and calculations as the app: item lookups and loot pricing, weapon builds that they can modify part by part, optimise, and compare, and raid plans drawn from named extracts and spawns. Builds and plans come back as share links that open in the app, and `create_import_link` bundles item groups, builds, and plans into one import link that opens `/data` ready to merge. Connection steps for each client are on the [`/mcp`](https://www.eft-toolset.com/mcp) page; for Claude Code:
+
+```bash
+claude mcp add --transport http eft-toolset https://www.eft-toolset.com/api/mcp
+```
+
 ## Also included
 
 - **PVP and PVE:** one switch in the header changes every price and data set.
@@ -32,7 +39,9 @@ Plan raids on interactive maps, including Icebreaker and its decks. Draw routes,
 
 The app uses tarkov.dev's JSON API through a server-side adapter that accepts only a fixed set of operations, caches the large upstream datasets with background revalidation, and returns just the data each screen needs. Public reads are cacheable at the edge, and the browser keeps results in IndexedDB for instant repeat visits. See [`DATA_ARCHITECTURE.md`](DATA_ARCHITECTURE.md) for the data flow, operations, caching, and rate limiting.
 
-Built with Next.js 16 (App Router), React 19 with the React Compiler, Tailwind CSS 4, Leaflet, and Vitest.
+The MCP endpoint reuses the same adapter and the app's own gun-builder and raid-planner logic, so assistants and the app always agree.
+
+Built with Next.js 16 (App Router), React 19 with the React Compiler, Tailwind CSS 4, Leaflet, the MCP TypeScript SDK, and Vitest.
 
 ## Development
 
@@ -61,7 +70,7 @@ All are optional.
 | Variable | Purpose |
 | --- | --- |
 | `CLOUDFLARE_WEB_ANALYTICS_TOKEN` | Enables Cloudflare Web Analytics |
-| `CLIENT_IP_HEADER` | The header your proxy sets with the real client IP, used for API rate limiting. On Vercel, `X-Real-IP` is used automatically. |
+| `CLIENT_IP_HEADER` | The header your proxy sets with the real client IP, used for per-client API rate limiting. On Vercel, `X-Real-IP` is used automatically. Elsewhere, without it, only the global rate limit applies. |
 | `WARM_TARKOV_CACHE` | Set to `0` to skip preloading tarkov.dev data when the server starts |
 
 ## License

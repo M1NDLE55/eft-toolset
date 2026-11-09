@@ -6,9 +6,8 @@ import { PLAN_STORE } from "@/app/lib/raid-planner/store";
 import { LAYER_STORE } from "@/app/lib/raid-planner/layer-store";
 import { TOOLBAR_STORE } from "@/app/lib/raid-planner/toolbar-store";
 import { GAME_MODE_STORE } from "@/components/game-mode/mode";
+import { BACKUP_FORMAT, BACKUP_VERSION } from "./store-keys";
 
-export const BACKUP_FORMAT = "eft-toolset/backup";
-export const BACKUP_VERSION = 1;
 export const MAX_BACKUP_BYTES = 10 * 1024 * 1024;
 
 interface BackupEntry {

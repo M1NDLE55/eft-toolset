@@ -334,10 +334,33 @@ const OPERATION_VARIABLES: Record<TarkovOperation, readonly string[]> = {
   [TARKOV_OPERATIONS.mapDetails]: ["gameMode", "mapKey"],
 };
 
+export interface TarkovReadOptions {
+  signal?: AbortSignal;
+  onStale?: () => void;
+  onDataAge?: (ageMs: number) => void;
+}
+
+// Track cancellation and freshness for server-side reads.
+export async function runTarkovRead<T>(
+  work: () => Promise<T>,
+  options: TarkovReadOptions = {}
+): Promise<T> {
+  const context = { resources: new Set<ResourceCacheEntry>(), signal: options.signal };
+  return operationContext.run(context, async () => {
+    options.signal?.throwIfAborted();
+    const data = await waitForCaller(work(), options.signal);
+    const entries = Array.from(context.resources);
+    if (entries.some((entry) => entry.failedAt !== undefined)) options.onStale?.();
+    const oldest = Math.min(...entries.map((entry) => entry.fetchedAt));
+    if (Number.isFinite(oldest)) options.onDataAge?.(Math.max(0, Date.now() - oldest));
+    return data;
+  });
+}
+
 export async function executeTarkovOperation(
   operation: TarkovOperation,
   variables: unknown,
-  options: { signal?: AbortSignal; onStale?: () => void; onDataAge?: (ageMs: number) => void } = {}
+  options: TarkovReadOptions = {}
 ): Promise<unknown> {
   const allowed = OPERATION_VARIABLES[operation];
   if (!allowed) throw new TarkovRequestError("Unknown query operation.", "INVALID_OPERATION");
@@ -346,45 +369,28 @@ export async function executeTarkovOperation(
     throw new TarkovRequestError("Variables contain unsupported fields.");
   }
   const gameMode = readGameMode(input);
-  const context = { resources: new Set<ResourceCacheEntry>(), signal: options.signal };
-  return operationContext.run(context, async () => {
-    let result: Promise<unknown>;
+  return runTarkovRead<unknown>(() => {
     switch (operation) {
       case TARKOV_OPERATIONS.itemCatalog:
-        result = getItemCatalog(gameMode);
-        break;
+        return getItemCatalog(gameMode);
       case TARKOV_OPERATIONS.groupItems:
-        result = getGroupItems(gameMode, readStringList(input.names, "names", MAX_NAMES));
-        break;
+        return getGroupItems(gameMode, readStringList(input.names, "names", MAX_NAMES));
       case TARKOV_OPERATIONS.itemDetail:
-        result = getItemDetail(gameMode, readItemReference(input));
-        break;
+        return getItemDetail(gameMode, readItemReference(input));
       case TARKOV_OPERATIONS.gunList:
-        result = getGunList(gameMode);
-        break;
+        return getGunList(gameMode);
       case TARKOV_OPERATIONS.buildItems:
-        result = getBuildItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
-        break;
+        return getBuildItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
       case TARKOV_OPERATIONS.pickItems:
-        result = getPickItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
-        break;
+        return getPickItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
       case TARKOV_OPERATIONS.ammoItems:
-        result = getAmmoItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
-        break;
+        return getAmmoItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
       case TARKOV_OPERATIONS.preset:
-        result = getPreset(gameMode, readString(input.id, "id", 80));
-        break;
+        return getPreset(gameMode, readString(input.id, "id", 80));
       case TARKOV_OPERATIONS.mapDetails:
-        result = getMapDetails(gameMode, readString(input.mapKey, "mapKey", 80));
-        break;
+        return getMapDetails(gameMode, readString(input.mapKey, "mapKey", 80));
     }
-    const data = await waitForCaller(result, options.signal);
-    const entries = Array.from(context.resources);
-    if (entries.some((entry) => entry.failedAt !== undefined)) options.onStale?.();
-    const oldest = Math.min(...entries.map((entry) => entry.fetchedAt));
-    if (Number.isFinite(oldest)) options.onDataAge?.(Math.max(0, Date.now() - oldest));
-    return data;
-  });
+  }, options);
 }
 
 function waitForCaller<T>(work: Promise<T>, signal?: AbortSignal): Promise<T> {
@@ -416,14 +422,14 @@ function memo<T>(key: string, inputs: readonly unknown[], compute: () => T): T {
   return value;
 }
 
-async function getItemCatalog(gameMode: GameMode): Promise<CatalogEntry[]> {
+export async function getItemCatalog(gameMode: GameMode): Promise<CatalogEntry[]> {
   const context = await loadItems(gameMode);
   return memo(`${gameMode}/catalog`, [context], () =>
     projectItemCatalog(context.items, context.translations)
   );
 }
 
-async function getGroupItems(gameMode: GameMode, names: string[]): Promise<CachedItem[]> {
+export async function getGroupItems(gameMode: GameMode, names: string[]): Promise<CachedItem[]> {
   if (names.length === 0) return [];
   const [itemContext, traderNames, taskContext] = await Promise.all([
     loadItems(gameMode),
@@ -528,7 +534,7 @@ export async function getItemDetail(
   return detail;
 }
 
-async function getGunList(gameMode: GameMode): Promise<GunListItem[]> {
+export async function getGunList(gameMode: GameMode): Promise<GunListItem[]> {
   const context = await loadItems(gameMode);
   return memo(`${gameMode}/gun-list`, [context], () =>
     context.items
@@ -558,6 +564,27 @@ async function getBuildItems(gameMode: GameMode, ids: string[]): Promise<BuildIt
   });
 }
 
+// Include every weapon and compatible part in one lookup.
+export async function getGunPartLookup(gameMode: GameMode): Promise<ReadonlyMap<string, BuildItemData>> {
+  const [context, traderNames] = await Promise.all([loadItems(gameMode), loadTraderNames(gameMode)]);
+  return memo(`${gameMode}/gun-part-lookup`, [context, traderNames], () => {
+    const ids = new Set<string>();
+    for (const item of context.items) {
+      if (!item.id) continue;
+      if (item.types?.includes("gun")) ids.add(item.id);
+      for (const slot of item.properties?.slots ?? []) {
+        for (const allowed of slot.filters?.allowedItems ?? []) ids.add(allowed);
+      }
+    }
+    const lookup = new Map<string, BuildItemData>();
+    for (const id of ids) {
+      const item = context.byId.get(id);
+      if (item) lookup.set(id, projectBuildItem(item, context.byId, context.translations, traderNames));
+    }
+    return lookup;
+  });
+}
+
 async function getPickItems(gameMode: GameMode, ids: string[]): Promise<PickItemData[]> {
   if (ids.length === 0) return [];
   const [{ byId, translations }, traderNames] = await Promise.all([
@@ -571,7 +598,7 @@ async function getPickItems(gameMode: GameMode, ids: string[]): Promise<PickItem
   });
 }
 
-async function getAmmoItems(gameMode: GameMode, ids: string[]): Promise<AmmoItemData[]> {
+export async function getAmmoItems(gameMode: GameMode, ids: string[]): Promise<AmmoItemData[]> {
   if (ids.length === 0) return [];
   const [{ byId, translations }, traderNames] = await Promise.all([
     loadItems(gameMode),
@@ -586,7 +613,7 @@ async function getAmmoItems(gameMode: GameMode, ids: string[]): Promise<AmmoItem
   });
 }
 
-async function getPreset(gameMode: GameMode, id: string): Promise<PresetContents | null> {
+export async function getPreset(gameMode: GameMode, id: string): Promise<PresetContents | null> {
   const { byId } = await loadItems(gameMode);
   throwIfRequestAborted();
   const item = byId.get(id);
@@ -601,7 +628,7 @@ async function getPreset(gameMode: GameMode, id: string): Promise<PresetContents
   };
 }
 
-async function getMapDetails(gameMode: GameMode, mapKey: string): Promise<MapDetails | null> {
+export async function getMapDetails(gameMode: GameMode, mapKey: string): Promise<MapDetails | null> {
   const [mapsEnvelope, translationsEnvelope, { nameById, byId }] =
     await Promise.all([
       loadResource<MapsData>(gameMode, "maps"),
