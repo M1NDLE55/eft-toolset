@@ -77,7 +77,7 @@ Limits:
   (`src/app/lib/api/rate-limit.ts`), both kept apart from the website's, so assistants can't
   starve the site. Tool calls cost 1 token, `modify_build` 2, and `optimize_build` 3;
   everything else costs 0.25. That base cost is charged before the body is read, and a tool
-  call pays the rest once the body is parsed.
+  call pays the rest once the body is parsed, or gets the base cost back if it can't.
 - A tool call takes a slot from the shared operation pool, and at most 6 run at once per
   instance. Handshakes and lists don't wait for slots.
 - Bodies may be up to 1 MiB, and at most 16 are read at once, apart from the website's 32

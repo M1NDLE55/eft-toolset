@@ -483,6 +483,19 @@ describe("MCP endpoint", () => {
     expect(limited.headers.get("retry-after")).toBe("1");
   });
 
+  it("lets parallel tool calls near the limit use what is left of the budget", async () => {
+    vi.spyOn(Date, "now").mockReturnValue(1_990_000_000_000);
+    const client = { "CF-Connecting-IP": "198.51.100.60" };
+    // 474 pings at 0.25 tokens leave 1.5 of the client's 120: enough for one tool call.
+    for (let id = 1; id <= 474; id += 1) expect((await post({ jsonrpc: "2.0", id, method: "ping" }, client)).status).toBe(200);
+    const responses = await Promise.all(
+      [1, 2, 3, 4].map((id) =>
+        post({ jsonrpc: "2.0", id, method: "tools/call", params: { name: "list_maps", arguments: {} } }, client)
+      )
+    );
+    expect(responses.map((response) => response.status).toSorted()).toEqual([200, 429, 429, 429]);
+  });
+
   it("stops slow tools with a tool error and caps concurrent requests", async () => {
     vi.mocked(globalThis.fetch).mockImplementation(hangUntilAborted);
     const limits = { ...DEFAULT_MCP_LIMITS, toolDeadlineMs: 100 };

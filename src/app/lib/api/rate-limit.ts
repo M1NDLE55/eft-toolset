@@ -47,6 +47,15 @@ export function consumeRequestBudget(request: Request, cost = 1, pool: BudgetPoo
   return consumeTokens(globalBuckets[pool], limits.burst, limits.refill, now, cost);
 }
 
+/** Gives back tokens taken for a request that was then turned away. */
+export function refundRequestBudget(request: Request, cost: number, pool: BudgetPool = "web") {
+  const client = clientKey(request);
+  const bucket = client === null ? undefined : clientBuckets.get(`${pool}:${client}`);
+  if (bucket) bucket.tokens = Math.min(CLIENT_BURST, bucket.tokens + cost);
+  const global = globalBuckets[pool];
+  global.tokens = Math.min(GLOBAL_LIMITS[pool].burst, global.tokens + cost);
+}
+
 function consumeTokens(
   bucket: TokenBucket,
   capacity: number,

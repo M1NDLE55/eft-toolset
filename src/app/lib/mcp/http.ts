@@ -1,5 +1,5 @@
 import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
-import { consumeRequestBudget } from "@/app/lib/api/rate-limit";
+import { consumeRequestBudget, refundRequestBudget } from "@/app/lib/api/rate-limit";
 import {
   RequestBodyBusyError,
   RequestBodyTooLargeError,
@@ -69,7 +69,9 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
     return jsonRpcError(cors, 429, -32000, "Too many requests.", { "Retry-After": String(budget.retryAfterSeconds) });
   };
   // Every request pays the base cost before its body is read, so a client over its budget
-  // can't keep body reads busy. Tool calls pay the rest once the body shows which tool it is.
+  // can't keep body reads busy. Tool calls pay the rest once the body shows which tool it is,
+  // and get the base cost back if they can't, so parallel calls near the limit don't spend
+  // the budget on calls that never run.
   const limited = charge(BASE_COST);
   if (limited) return limited;
   const message = await readMessage(request, limits, cors);
@@ -78,7 +80,10 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
   if (isToolCall) {
     const toolName = typeof message.params?.name === "string" ? message.params.name : "";
     const limitedTool = charge((TOOL_COSTS[toolName] ?? TOOL_CALL_COST) - BASE_COST);
-    if (limitedTool) return limitedTool;
+    if (limitedTool) {
+      refundRequestBudget(request, BASE_COST, "mcp");
+      return limitedTool;
+    }
   }
 
   // A stateless server has nothing to do with a notification.
