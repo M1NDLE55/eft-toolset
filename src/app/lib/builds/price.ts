@@ -1,22 +1,16 @@
 import type { PriceSources } from "@/app/lib/types/gunBuilder";
 
-export const ALL_PRICE_SOURCES: PriceSources = { traders: true, flea: true };
+function positive(value: number | null) {
+  return typeof value === "number" && Number.isFinite(value) && value > 0 ? value : null;
+}
 
-/**
- * Cheapest price for an item across the enabled purchase sources. Returns null
- * when the item has no price in any enabled source (e.g. barter/craft-only, or
- * flea-only with flea disabled).
- */
 export function effectivePrice(
   item: { traderPriceRUB: number | null; fleaPriceRUB: number | null },
   sources: PriceSources
 ): number | null {
-  const prices: number[] = [];
-  if (sources.traders && Number.isFinite(item.traderPriceRUB)) {
-    prices.push(item.traderPriceRUB as number);
-  }
-  if (sources.flea && Number.isFinite(item.fleaPriceRUB)) {
-    prices.push(item.fleaPriceRUB as number);
-  }
-  return prices.length ? Math.min(...prices) : null;
+  const trader = sources.traders ? positive(item.traderPriceRUB) : null;
+  const flea = sources.flea ? positive(item.fleaPriceRUB) : null;
+  if (trader === null) return flea;
+  if (flea === null) return trader;
+  return Math.min(trader, flea);
 }

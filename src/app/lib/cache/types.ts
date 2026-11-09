@@ -4,7 +4,7 @@ export interface CachedVendorPrice {
 }
 
 export interface CachedContainedItem {
-  item: { name: string };
+  item: { name: string; normalizedName?: string | null };
   quantity: number;
 }
 
@@ -31,11 +31,19 @@ export interface CachedItem {
 
 export interface CatalogItem {
   id: string;
-  normalizedName: string;
+  normalizedName: string | null;
   name: string;
   shortName: string | null;
   gridImageLink: string | null;
 }
+
+export type CatalogEntry = [
+  id: string,
+  name: string,
+  shortName: string | null,
+  image: string | null,
+  normalizedName: string | null,
+];
 
 export interface CachedTask {
   name: string;
@@ -61,7 +69,6 @@ export interface CachedCraft {
   rewardItems: CachedContainedItem[];
 }
 
-/** Composed item with full relations resolved from separate caches */
 export interface ComposedItem extends Omit<CachedItem, "usedInTasks"> {
   usedInTasks: CachedTask[];
   bartersUsing: CachedBarter[];

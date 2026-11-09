@@ -1,6 +1,5 @@
 const BASE64_MARKER = "~b.";
 
-/** The versioned base64url form survives the router's own URI decoding. */
 export function customEncodeURI(value: string) {
   const bytes = new TextEncoder().encode(value);
   let binary = "";
@@ -36,14 +35,11 @@ export function customDecodeURI(value: string) {
   try {
     decoded = decodeURIComponent(value);
   } catch {
-    // Next already decodes dynamic route segments. Preserve a valid old
-    // marker containing a literal percent even when a second decode fails.
     return value.startsWith("~") && value.length <= 501 ? value.slice(1) : "";
   }
   if (decoded.length > 500) return "";
 
   if (decoded.startsWith("~")) return decoded.slice(1);
 
-  // Compatibility with links created before the lossless format.
   return decoded.replace(/-/g, " ").replace(/_/g, "-");
 }

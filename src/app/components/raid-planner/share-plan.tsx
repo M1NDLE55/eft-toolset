@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Check, Copy, LoaderCircle, Share2 } from "lucide-react";
+import { useEffect, useState, useSyncExternalStore } from "react";
+import { Check, Copy, Download, LoaderCircle, Share2 } from "lucide-react";
 import type { RaidPlan } from "@/app/lib/raid-planner/types";
-import {
-  encodePlanSharePayload,
-  slugifyPlanName,
-} from "@/app/lib/raid-planner/share";
+import { encodePlanSharePayload, slugifyPlanName } from "@/app/lib/raid-planner/share";
+import { copyText } from "@/app/lib/browser/clipboard";
+import { downloadPlanFile } from "@/app/lib/raid-planner/plan-file";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -18,73 +17,81 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { copyText } from "@/app/lib/browser/clipboard";
+import { iconButton } from "./ui";
 
 const LONG_URL_THRESHOLD = 8000;
 
-interface SharePlanProps {
+interface ShareLink {
   plan: RaidPlan;
+  url?: string;
+  error?: string;
 }
 
-export function SharePlan({ plan }: SharePlanProps) {
+const subscribeNothing = () => () => undefined;
+
+export function SharePlan({ plan }: { plan: RaidPlan }) {
   const [open, setOpen] = useState(false);
-  const [url, setUrl] = useState("");
-  const [error, setError] = useState("");
+  const [link, setLink] = useState<ShareLink | null>(null);
+  const [actionError, setActionError] = useState("");
   const [copied, setCopied] = useState(false);
   const [sharing, setSharing] = useState(false);
-  const [canNativeShare, setCanNativeShare] = useState(false);
-
-  useEffect(() => {
-    setCanNativeShare(Boolean(navigator.share));
-  }, []);
+  const canNativeShare = useSyncExternalStore(
+    subscribeNothing,
+    () => typeof navigator.share === "function",
+    () => false
+  );
 
   useEffect(() => {
     if (!open) return;
-
     let cancelled = false;
-    setUrl("");
-    setError("");
-    setCopied(false);
-
-    encodePlanSharePayload(plan)
-      .then((payload) => {
+    encodePlanSharePayload(plan).then(
+      (payload) => {
         if (cancelled) return;
         const slug = slugifyPlanName(plan.name);
-        setUrl(
-          `${window.location.origin}/raid-planner/share/${slug}#p=${payload}`
-        );
-      })
-      .catch(() => {
-        if (!cancelled) setError("The share link could not be generated.");
-      });
-
+        setLink({ plan, url: `${window.location.origin}/raid-planner/share/${slug}#p=${payload}` });
+      },
+      (reason: unknown) => {
+        if (cancelled) return;
+        setLink({
+          plan,
+          error: reason instanceof Error ? reason.message : "The share link could not be generated.",
+        });
+      }
+    );
     return () => {
       cancelled = true;
     };
   }, [plan, open]);
 
+  useEffect(() => {
+    if (!copied) return;
+    const timer = setTimeout(() => setCopied(false), 1800);
+    return () => clearTimeout(timer);
+  }, [copied]);
+
+  const current = link?.plan === plan ? link : null;
+  const url = current?.url ?? "";
+  const error = current?.error ?? actionError;
+
   async function handleCopy() {
     if (!url) return;
-
     try {
       await copyText(url);
       setCopied(true);
-      setError("");
-      window.setTimeout(() => setCopied(false), 1500);
+      setActionError("");
     } catch (reason) {
-      setError(reason instanceof Error ? reason.message : "Could not copy the link.");
+      setActionError(reason instanceof Error ? reason.message : "Could not copy the link.");
     }
   }
 
   async function handleNativeShare() {
-    if (!url || !navigator.share) return;
-
+    if (!url) return;
     setSharing(true);
     try {
       await navigator.share({ title: plan.name, url });
     } catch (reason) {
       if (!(reason instanceof DOMException && reason.name === "AbortError")) {
-        setError(reason instanceof Error ? reason.message : "Could not share the link.");
+        setActionError(reason instanceof Error ? reason.message : "Could not share the link.");
       }
     } finally {
       setSharing(false);
@@ -92,13 +99,17 @@ export function SharePlan({ plan }: SharePlanProps) {
   }
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog
+      open={open}
+      onOpenChange={(next) => {
+        setOpen(next);
+        setActionError("");
+        setCopied(false);
+      }}
+    >
       <DialogTrigger asChild>
-        <button
-          type="button"
-          className="text-[#888] transition-colors hover:text-[#9a8866]"
-        >
-          <Share2 className="h-3.5 w-3.5" />
+        <button type="button" className={iconButton} title="Share plan">
+          <Share2 className="h-4 w-4" aria-hidden />
           <span className="sr-only">Share plan</span>
         </button>
       </DialogTrigger>
@@ -106,57 +117,69 @@ export function SharePlan({ plan }: SharePlanProps) {
         <DialogHeader>
           <DialogTitle>Share plan</DialogTitle>
           <DialogDescription>
-            Anyone with this link can import a local copy.
+            The whole plan is packed into the link. Anyone who opens it can preview and save their own copy.
           </DialogDescription>
         </DialogHeader>
 
-        {error ? (
-          <p className="border border-[#2a2a2a] bg-[#090909] p-3 text-sm text-[#c9b88d]">
+        <div className="flex gap-2">
+          <Input
+            readOnly
+            value={url}
+            aria-label="Share link"
+            placeholder={current?.error ? "Link unavailable" : "Generating link…"}
+            onFocus={(event) => event.currentTarget.select()}
+            className="min-w-0 font-mono text-xs max-sm:text-base"
+          />
+          <Button onClick={handleCopy} disabled={!url} className="shrink-0" aria-live="polite">
+            {!url && !current?.error ? (
+              <LoaderCircle className="animate-spin" aria-hidden />
+            ) : copied ? (
+              <Check aria-hidden />
+            ) : (
+              <Copy aria-hidden />
+            )}
+            {copied ? "Copied" : "Copy"}
+          </Button>
+        </div>
+
+        {error && (
+          <p role="alert" className="text-sm text-red-300">
             {error}
           </p>
-        ) : (
-          <div className="flex gap-2">
-            <Input
-              readOnly
-              value={url}
-              placeholder="Generating link"
-              onFocus={(event) => event.currentTarget.select()}
-            />
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={handleCopy}
-              disabled={!url}
-            >
-              {url ? (
-                copied ? (
-                  <Check className="h-4 w-4" />
-                ) : (
-                  <Copy className="h-4 w-4" />
-                )
-              ) : (
-                <LoaderCircle className="h-4 w-4 animate-spin" />
-              )}
-              <span className="sr-only">Copy link</span>
-            </Button>
-          </div>
         )}
 
         {url.length > LONG_URL_THRESHOLD && (
           <p className="text-xs text-[#888]">
-            This link is very long — heavy freehand drawings inflate it. Some
-            messengers truncate long URLs.
+            This link is long because of detailed freehand drawings. Some messengers cut off long links.
           </p>
         )}
 
-        {canNativeShare && (
-          <DialogFooter>
-            <Button onClick={handleNativeShare} disabled={!url || sharing}>
-              <Share2 className="h-4 w-4" />
-              {sharing ? "Sharing" : "Share"}
+        <DialogFooter className="gap-2 sm:items-center sm:justify-between">
+          <p className="text-xs text-[#888] max-sm:order-first">
+            Prefer a file? Download it and import it from the raid planner page.
+          </p>
+          <div className="flex gap-2 max-sm:[&>*]:flex-1">
+            <Button
+              variant="outline"
+              onClick={() => {
+                try {
+                  downloadPlanFile([plan]);
+                } catch (reason) {
+                  setActionError(reason instanceof Error ? reason.message : "Could not download this plan.");
+                }
+              }}
+            >
+              <Download aria-hidden />
+              Download file
             </Button>
-          </DialogFooter>
-        )}
+            {canNativeShare && (
+              <Button variant="outline" onClick={handleNativeShare} disabled={!url || sharing}>
+                <Share2 aria-hidden />
+                {sharing ? "Sharing…" : "Share via…"}
+              </Button>
+            )}
+          </div>
+        </DialogFooter>
       </DialogContent>
     </Dialog>
   );

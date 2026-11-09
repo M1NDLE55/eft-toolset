@@ -1,6 +1,3 @@
-// Generic share-link encoding shared by the gun builder and raid planner:
-// JSON → gzip (when it helps) → base64url, with a prefix marking the variant.
-
 const GZIP_PREFIX = "gz.";
 const JSON_PREFIX = "j.";
 const MAX_ENCODED_LENGTH = 400_000;

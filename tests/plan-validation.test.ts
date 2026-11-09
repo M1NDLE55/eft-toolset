@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import { importPlan } from "@/app/lib/raid-planner/store";
+import { createPlan, importPlan } from "@/app/lib/raid-planner/store";
+import { MAX_PLAN_NAME_LENGTH, MAX_PLANS } from "@/app/lib/raid-planner/limits";
 import { getPlanDisplayColor, PLAN_COLORS } from "@/app/lib/raid-planner/types";
 
 describe("raid-plan validation", () => {
@@ -28,4 +29,26 @@ describe("raid-plan validation", () => {
       })
     ).toThrow(/refusing to persist invalid/i);
   });
+
+  it("explains the plan cap instead of failing validation", () => {
+    const plans = Array.from({ length: MAX_PLANS }, (_, index) => ({
+      id: `plan-${index}`,
+      name: `Plan ${index}`,
+      mapKey: "customs",
+      createdAt: 0,
+      updatedAt: 0,
+      enabledLayers: [],
+      route: [],
+      drawings: [],
+      notes: [],
+    }));
+    localStorage.setItem("eft-toolset:raid-plans", JSON.stringify({ version: 1, data: plans }));
+    expect(() => createPlan("One more", "customs")).toThrow(/at most 500 plans/i);
+  });
+
+  it("trims and bounds plan names on creation", () => {
+    expect(createPlan("   ", "customs").name).toBe("Untitled raid");
+    expect(createPlan("x".repeat(500), "customs").name).toHaveLength(MAX_PLAN_NAME_LENGTH);
+  });
 });
+

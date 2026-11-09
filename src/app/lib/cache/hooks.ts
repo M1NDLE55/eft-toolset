@@ -1,29 +1,55 @@
-"use client";
-
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import { useGameMode, type GameMode } from "@/components/game-mode/context";
 import { useDataQuery } from "@/app/lib/api/useDataQuery";
-import { groupItemsQuery, itemDetailQuery } from "./fetcher";
-import { useBulkCache } from "./provider";
-import type { CachedItem, ComposedItem } from "./types";
+import { primeQuery } from "@/app/lib/api/queryClient";
+import { groupItemsQuery, itemCatalogQuery, itemDetailQuery, type ItemReference } from "./fetcher";
+import type { CachedItem, CatalogItem, ComposedItem } from "./types";
 
-export function useCacheReady(): boolean {
-  return useBulkCache().ready;
+const EMPTY_CATALOG: CatalogItem[] = [];
+const nameIndexes = new WeakMap<CatalogItem[], Map<string, CatalogItem>>();
+
+function nameIndex(catalog: CatalogItem[]) {
+  let index = nameIndexes.get(catalog);
+  if (!index) {
+    index = new Map(catalog.map((item) => [item.name, item]));
+    nameIndexes.set(catalog, index);
+  }
+  return index;
 }
 
-export function useItem(name: string): {
+export function useCatalog() {
+  const { gameMode, hydrated } = useGameMode();
+  const variables = useMemo(() => ({ gameMode }), [gameMode]);
+  const query = useDataQuery(itemCatalogQuery, variables, { enabled: hydrated });
+  const catalog = query.data ?? EMPTY_CATALOG;
+  return {
+    catalog,
+    itemsByName: nameIndex(catalog),
+    loading: !query.data && query.status !== "error",
+    error: query.error ?? null,
+    stale: query.stale,
+    refresh: query.refresh,
+  };
+}
+
+export function primeItem(reference: ItemReference, gameMode: GameMode, item: ComposedItem, updatedAt: number) {
+  primeQuery(itemDetailQuery, { ...reference, gameMode } as ItemReference & { gameMode: GameMode }, item, updatedAt);
+}
+
+export function useItem(reference: ItemReference): {
   item: ComposedItem | null;
   loading: boolean;
   error: Error | null;
   stale: boolean;
   refresh: () => Promise<ComposedItem | null>;
 } {
-  const { gameMode, hydrated } = useBulkCache();
-  const variables = useMemo(() => ({ name, gameMode }), [gameMode, name]);
-  const query = useDataQuery(itemDetailQuery, variables, { enabled: hydrated && Boolean(name) });
+  const { gameMode, hydrated } = useGameMode();
+  const variables = { ...reference, gameMode } as ItemReference & { gameMode: GameMode };
+  const query = useDataQuery(itemDetailQuery, variables, { enabled: hydrated });
 
   return {
     item: query.data ?? null,
-    loading: Boolean(name) && (query.status === "idle" || query.status === "loading"),
+    loading: query.status === "idle" || query.status === "loading",
     error: query.error ?? null,
     stale: query.stale,
     refresh: query.refresh,
@@ -37,36 +63,25 @@ export function useItemsInGroup(names: string[]): {
   stale: boolean;
   refresh: () => Promise<CachedItem[]>;
 } {
-  const { gameMode, hydrated } = useBulkCache();
+  const { gameMode, hydrated } = useGameMode();
   const stableNames = useMemo(() => Array.from(new Set(names)).sort(), [names]);
   const variables = useMemo(() => ({ names: stableNames, gameMode }), [gameMode, stableNames]);
   const query = useDataQuery(groupItemsQuery, variables, {
     enabled: hydrated && stableNames.length > 0,
   });
-  const order = useMemo(() => new Map(names.map((name, index) => [name, index])), [names]);
-  const items = useMemo(
-    () => [...(query.data ?? [])].sort((a, b) => (order.get(a.name) ?? 0) - (order.get(b.name) ?? 0)),
-    [order, query.data]
-  );
+  const [previous, setPrevious] = useState<{ gameMode: GameMode; data: CachedItem[] } | null>(null);
+  if (query.data && query.data !== previous?.data) setPrevious({ gameMode, data: query.data });
+  const data = query.data ?? (previous?.gameMode === gameMode ? previous.data : undefined);
+  const items = useMemo(() => {
+    const wanted = new Set(names);
+    return (data ?? []).filter((item) => wanted.has(item.name));
+  }, [names, data]);
 
   return {
     items,
-    loading: stableNames.length > 0 && (query.status === "idle" || query.status === "loading"),
+    loading: stableNames.length > 0 && !data && (query.status === "idle" || query.status === "loading"),
     error: query.error ?? null,
     stale: query.stale,
     refresh: query.refresh,
   };
-}
-
-export function useItemPreview(
-  name: string
-): { gridImageLink: string | null; loading: boolean } {
-  const { ready, loading, itemsByName } = useBulkCache();
-  return useMemo(
-    () => ({
-      gridImageLink: itemsByName.get(name)?.gridImageLink ?? null,
-      loading: Boolean(name) && !ready && loading,
-    }),
-    [itemsByName, loading, name, ready]
-  );
 }

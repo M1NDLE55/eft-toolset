@@ -1,5 +1,3 @@
-// Builds Leaflet layer groups from map details and handles per-floor dimming.
-// Client-only (imports leaflet); only map-canvas should import this.
 import L from "leaflet";
 import type {
   MapDetails,
@@ -8,7 +6,7 @@ import type {
 } from "@/app/lib/types/raidPlanner";
 import type { FloorExtent, GamePoint, MapConfig } from "./types";
 import { gameToLatLng } from "./coords";
-import { customEncodeURI } from "@/app/lib/URIEncoding";
+import { itemHref } from "@/app/lib/item-links";
 import { makeLayerAccessible } from "./leaflet-accessibility";
 
 const COLORS = {
@@ -51,7 +49,6 @@ export interface LayerBuildContext {
   renderer: L.Canvas;
 }
 
-/** Extents the active floor covers; ground level falls back to heightRange. */
 export function getActiveExtents(
   config: MapConfig,
   activeFloor: string | null
@@ -326,7 +323,7 @@ function buildLocks(context: LayerBuildContext): LayerEntry {
       const keyLine = document.createElement("p");
       keyLine.append("Key: ");
       const keyLink = document.createElement("a");
-      keyLink.href = `/item/${customEncodeURI(lock.keyName)}`;
+      keyLink.href = itemHref({ name: lock.keyName, normalizedName: lock.keyNormalizedName });
       keyLink.textContent = lock.keyName;
       keyLine.append(keyLink);
       popup.append(heading, keyLine);

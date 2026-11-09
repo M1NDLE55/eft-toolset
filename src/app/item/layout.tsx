@@ -1,7 +1,7 @@
-import SearchItem from "../components/item/search/search-item";
-import ScoutedSidebar from "../components/item/scouted-items";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
+import ScoutedSidebar from "@/app/components/item/scouted-items";
+import { ItemScannerSearch } from "@/app/components/item/item-scanner-search";
 
 export const metadata: Metadata = {
   title: "Item database",
@@ -22,13 +22,15 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex sm:min-h-[calc(100vh-130px)] min-h-[calc(100vh-65px)]">
+    <div className="flex flex-1">
       <div className="hidden lg:flex">
         <ScoutedSidebar />
       </div>
-      <main className="flex-1 min-w-0 flex justify-center p-4">
-        <div className="max-w-xl w-full flex flex-col gap-4">
-          <SearchItem />
+      <main className="flex min-w-0 flex-1 justify-center px-4 pb-8">
+        <div className="flex w-full max-w-2xl flex-col gap-5">
+          <div className="sticky top-0 z-30 -mx-4 bg-background/95 px-4 pb-3 pt-4 backdrop-blur supports-backdrop-filter:bg-background/80">
+            <ItemScannerSearch />
+          </div>
           {children}
         </div>
       </main>

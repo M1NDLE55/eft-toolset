@@ -6,7 +6,13 @@ export interface ModSlotDef {
   allowedItemIds: string[];
 }
 
-export interface BuildItemData {
+export interface ItemExtras {
+  normalizedName?: string;
+  traderName?: string | null;
+  traderLevel?: number | null;
+}
+
+export interface BuildItemData extends ItemExtras {
   id: string;
   name: string;
   shortName: string;
@@ -28,14 +34,31 @@ export interface BuildItemData {
   conflictingItemIds: string[];
   conflictingSlotIds: string[];
   slots: ModSlotDef[];
+  allowedAmmoIds?: string[];
 }
 
-/**
- * Lightweight projection used to populate the slot picker. Omits the recursive
- * `slots` tree (the heavy part of `BuildItemData`) — full detail is fetched only
- * when a mod is actually attached.
- */
-export interface PickItemData {
+export interface AmmoItemData {
+  id: string;
+  normalizedName: string;
+  name: string;
+  shortName: string;
+  gridImageLink: string | null;
+  caliber: string | null;
+  damage: number;
+  penetrationPower: number;
+  armorDamage: number;
+  fragmentationChance: number;
+  projectileCount: number;
+  initialSpeed: number | null;
+  recoilModifier: number;
+  accuracyModifier: number;
+  traderPriceRUB: number | null;
+  fleaPriceRUB: number | null;
+  traderName: string | null;
+  traderLevel: number | null;
+}
+
+export interface PickItemData extends ItemExtras {
   id: string;
   name: string;
   shortName: string;
@@ -49,7 +72,6 @@ export interface PickItemData {
   conflictingSlotIds: string[];
 }
 
-/** Which purchase sources feed the "cheapest price" used for build cost. */
 export interface PriceSources {
   traders: boolean;
   flea: boolean;
@@ -73,6 +95,7 @@ export interface GunBuild {
   name: string;
   weaponId: string;
   root: BuildNode;
+  ammoId?: string;
   createdAt: number;
   updatedAt: number;
 }
@@ -81,3 +104,5 @@ export interface PresetContents {
   baseItemId: string | null;
   itemIds: string[];
 }
+
+export type GunItem = PickItemData | BuildItemData;

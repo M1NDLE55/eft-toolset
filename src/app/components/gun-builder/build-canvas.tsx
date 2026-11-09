@@ -1,376 +1,336 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import { Maximize2, Minimize2, RotateCcw, ZoomIn, ZoomOut } from "lucide-react";
-import type {
-  BuildItemData,
-  GunBuild,
-  PriceSources,
-} from "@/app/lib/types/gunBuilder";
-import type { GameMode } from "@/components/game-mode/context";
-import type { PositionedNode } from "@/app/lib/builds/tree-layout";
-import { Button } from "@/components/ui/button";
-import { layoutBuild } from "@/app/lib/builds/tree-layout";
-import { attachMod, removeMod, saveBuild } from "@/app/lib/builds/store";
-import { collectItemIds, collectOccupiedSlotIds } from "@/app/lib/builds/tree";
-import { BuilderNode } from "./build-node";
-import { SlotPicker } from "./slot-picker";
+import { useEffect, useEffectEvent, useRef, useState, useSyncExternalStore } from "react";
+import { flushSync } from "react-dom";
+import { Maximize2, Minimize2, Scan, ZoomIn, ZoomOut } from "lucide-react";
+import type { FlowLayout, PositionedNode } from "@/app/lib/builds/tree-layout";
+import type { ItemLookup } from "@/app/lib/builds/stats";
+import { cn } from "@/lib/utils";
+import { BuilderNode, type MissingStatus } from "./build-node";
+
+function missingStatus(node: PositionedNode, loading: boolean, unavailable: ReadonlySet<string>): MissingStatus {
+  if (node.itemId && unavailable.has(node.itemId)) return "unavailable";
+  return loading ? "loading" : "failed";
+}
 
 interface BuildCanvasProps {
-  build: GunBuild;
-  itemData: Map<string, BuildItemData>;
-  gameMode: GameMode;
-  priceSources: PriceSources;
-  onBuildChange: (build: GunBuild) => void;
-  loadBuildItems: (ids: string[]) => Promise<BuildItemData[]>;
+  flow: FlowLayout;
+  items: ItemLookup;
+  loading: boolean;
+  unavailable: ReadonlySet<string>;
+  weaponFallback?: { shortName: string; gridImageLink: string | null };
+  onOpen: (node: PositionedNode) => void;
+  onRemove: (node: PositionedNode) => void;
+  onIntent: (node: PositionedNode) => void;
 }
 
-const MIN_ZOOM = 0.45;
-const MAX_ZOOM = 1.8;
-const BUTTON_ZOOM_STEP = 1.2;
-const WHEEL_ZOOM_SPEED = 0.001;
+const MIN_ZOOM = 0.4;
+const MAX_ZOOM = 1.6;
+const DESKTOP_QUERY = "(min-width: 640px)";
 
 function clampZoom(value: number) {
-  return Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, value));
+  return Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, Math.round(value * 100) / 100));
 }
 
-export function BuildCanvas({
-  build,
-  itemData,
-  gameMode,
-  priceSources,
-  onBuildChange,
-  loadBuildItems,
+function subscribeMedia(listener: () => void) {
+  const media = window.matchMedia(DESKTOP_QUERY);
+  media.addEventListener("change", listener);
+  return () => media.removeEventListener("change", listener);
+}
+
+function subscribeFullscreen(listener: () => void) {
+  document.addEventListener("fullscreenchange", listener);
+  return () => document.removeEventListener("fullscreenchange", listener);
+}
+
+function focusTarget(container: HTMLElement | null, id: string) {
+  const element = container?.querySelector<HTMLElement>(`[data-nav-id="${CSS.escape(id)}"]`);
+  if (!element || (element instanceof HTMLButtonElement && element.disabled)) return false;
+  element.focus({ preventScroll: true });
+  element.scrollIntoView({ block: "nearest", inline: "nearest" });
+  return true;
+}
+
+function handleTreeKeys(event: React.KeyboardEvent<HTMLElement>, nodes: PositionedNode[]) {
+  if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+  const origin = (event.target as HTMLElement).closest<HTMLElement>("[data-builder-node]");
+  const current = origin?.dataset.navId ?? origin?.querySelector<HTMLElement>("[data-nav-id]")?.dataset.navId;
+  const index = nodes.findIndex((node) => node.id === current);
+  if (index === -1) return;
+  const node = nodes[index];
+  const pathKey = node.path.join("/");
+  let order: PositionedNode[] = [];
+  switch (event.key) {
+    case "ArrowDown":
+      order = nodes.slice(index + 1);
+      break;
+    case "ArrowUp":
+      order = nodes.slice(0, index).reverse();
+      break;
+    case "ArrowRight":
+      order = nodes.filter((entry) => entry.parentPath.join("/") === pathKey && entry.path.length === node.path.length + 1);
+      break;
+    case "ArrowLeft":
+      order = node.path.length === 0 ? [] : nodes.filter((entry) => entry.path.join("/") === node.parentPath.join("/"));
+      break;
+    case "Home":
+      order = nodes;
+      break;
+    case "End":
+      order = nodes.toReversed();
+      break;
+    default:
+      return;
+  }
+  event.preventDefault();
+  for (const entry of order) {
+    if (focusTarget(event.currentTarget, entry.id)) return;
+  }
+}
+
+export function BuildCanvas(props: BuildCanvasProps) {
+  const desktop = useSyncExternalStore(
+    subscribeMedia,
+    () => window.matchMedia(DESKTOP_QUERY).matches,
+    () => true
+  );
+  return (
+    <>
+      <p id="build-tree-keys" className="sr-only">
+        Use the arrow keys to move between parts. Right opens a part&apos;s slots, left returns to its parent.
+      </p>
+      {desktop ? <TreeCanvas {...props} /> : <TreeList {...props} />}
+    </>
+  );
+}
+
+function TreeCanvas({
+  flow,
+  items,
+  loading,
+  unavailable,
+  weaponFallback,
+  onOpen,
+  onRemove,
+  onIntent,
 }: BuildCanvasProps) {
-  const [activeNode, setActiveNode] = useState<PositionedNode | null>(null);
-  const flow = useMemo(() => layoutBuild(build.root, itemData), [build.root, itemData]);
-  const installedItemIds = useMemo(
-    () => collectItemIds(build.root),
-    [build.root]
+  const shellRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+  const isFullscreen = useSyncExternalStore(
+    subscribeFullscreen,
+    () => document.fullscreenElement !== null,
+    () => false
   );
-  const occupiedSlotIds = useMemo(
-    () => collectOccupiedSlotIds(build.root),
-    [build.root]
-  );
-  const canvasShellRef = useRef<HTMLDivElement>(null);
-  const viewportRef = useRef<HTMLDivElement>(null);
-  const [viewport, setViewport] = useState({ x: 0, y: 0, scale: 1 });
-  const [isPanning, setIsPanning] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [actionError, setActionError] = useState("");
+
+  function zoomTo(next: number, anchorX?: number, anchorY?: number) {
+    const container = scrollRef.current;
+    const target = clampZoom(next);
+    if (!container || target === scale) return;
+    const x = anchorX ?? container.clientWidth / 2;
+    const y = anchorY ?? container.clientHeight / 2;
+    const graphX = (container.scrollLeft + x) / scale;
+    const graphY = (container.scrollTop + y) / scale;
+    flushSync(() => setScale(target));
+    container.scrollLeft = graphX * target - x;
+    container.scrollTop = graphY * target - y;
+  }
+
+  const zoomWithWheel = useEffectEvent((factor: number, x: number, y: number) => {
+    zoomTo(scale * factor, x, y);
+  });
 
   useEffect(() => {
-    const container = viewportRef.current;
+    const container = scrollRef.current;
     if (!container) return;
-
-    function onWheel(event: WheelEvent) {
+    const onWheel = (event: WheelEvent) => {
+      if (!event.ctrlKey && !event.metaKey) return;
       event.preventDefault();
-
-      const rect = container!.getBoundingClientRect();
-      const pointX = event.clientX - rect.left;
-      const pointY = event.clientY - rect.top;
-      const zoomFactor = Math.exp(-event.deltaY * WHEEL_ZOOM_SPEED);
-
-      setViewport((current) => {
-        const scale = clampZoom(current.scale * zoomFactor);
-        const graphX = (pointX - current.x) / current.scale;
-        const graphY = (pointY - current.y) / current.scale;
-
-        return {
-          x: pointX - graphX * scale,
-          y: pointY - graphY * scale,
-          scale,
-        };
-      });
-    }
-
+      const rect = container.getBoundingClientRect();
+      zoomWithWheel(
+        Math.exp(-event.deltaY * 0.002),
+        event.clientX - rect.left,
+        event.clientY - rect.top
+      );
+    };
     container.addEventListener("wheel", onWheel, { passive: false });
     return () => container.removeEventListener("wheel", onWheel);
   }, []);
 
-  useEffect(() => {
-    function handleFullscreenChange() {
-      setIsFullscreen(document.fullscreenElement === canvasShellRef.current);
-    }
-
-    document.addEventListener("fullscreenchange", handleFullscreenChange);
-    return () =>
-      document.removeEventListener("fullscreenchange", handleFullscreenChange);
-  }, []);
-
-  function zoomToPoint(
-    pointX: number,
-    pointY: number,
-    getNextScale: (currentScale: number) => number
-  ) {
-    setViewport((current) => {
-      const scale = clampZoom(getNextScale(current.scale));
-      const graphX = (pointX - current.x) / current.scale;
-      const graphY = (pointY - current.y) / current.scale;
-
-      return {
-        x: pointX - graphX * scale,
-        y: pointY - graphY * scale,
-        scale,
-      };
-    });
-  }
-
-  function zoomFromCenter(getNextScale: (currentScale: number) => number) {
-    const container = viewportRef.current;
+  function fit() {
+    const container = scrollRef.current;
     if (!container) return;
-
-    const rect = container.getBoundingClientRect();
-    zoomToPoint(rect.width / 2, rect.height / 2, getNextScale);
+    const next = clampZoom(Math.min(1, (container.clientWidth - 2) / flow.width));
+    flushSync(() => setScale(next));
+    container.scrollTo({ left: 0, top: 0 });
   }
 
   async function toggleFullscreen() {
-    const shell = canvasShellRef.current;
+    const shell = shellRef.current;
     if (!shell) return;
-
     try {
-      if (document.fullscreenElement === shell) {
-        await document.exitFullscreen();
-        return;
-      }
-      await shell.requestFullscreen();
-      setActionError("");
-    } catch (reason) {
-      setActionError(reason instanceof Error ? reason.message : "Fullscreen is unavailable.");
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else await shell.requestFullscreen();
+    } catch {
     }
   }
 
-  // Drag empty canvas space by translating the diagram instead of relying on
-  // scroll offsets, which keeps panning unbounded.
   function handlePanStart(event: React.PointerEvent<HTMLDivElement>) {
-    if (event.pointerType === "mouse" && event.button !== 0) return;
+    if (event.pointerType !== "mouse" || event.button !== 0) return;
     if ((event.target as HTMLElement).closest("[data-builder-node]")) return;
-
-    const startX = event.clientX;
-    const startY = event.clientY;
-    const startViewport = viewport;
-    setIsPanning(true);
+    const container = scrollRef.current;
+    if (!container) return;
+    const start = { x: event.clientX, y: event.clientY, left: container.scrollLeft, top: container.scrollTop };
+    container.dataset.panning = "true";
     event.preventDefault();
-
-    function onMove(moveEvent: PointerEvent) {
-      setViewport({
-        ...startViewport,
-        x: startViewport.x + moveEvent.clientX - startX,
-        y: startViewport.y + moveEvent.clientY - startY,
-      });
-    }
-    function onUp() {
-      setIsPanning(false);
+    const onMove = (move: PointerEvent) => {
+      container.scrollLeft = start.left - (move.clientX - start.x);
+      container.scrollTop = start.top - (move.clientY - start.y);
+    };
+    const onUp = () => {
+      delete container.dataset.panning;
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerup", onUp);
       window.removeEventListener("pointercancel", onUp);
-    }
+    };
     window.addEventListener("pointermove", onMove);
     window.addEventListener("pointerup", onUp);
     window.addEventListener("pointercancel", onUp);
   }
 
-  async function handleSelect(itemId: string) {
-    if (!activeNode?.slot) return;
-    try {
-      await loadBuildItems([itemId]);
-      const updated = saveBuild({
-        ...build,
-        root: attachMod(
-          build.root,
-          activeNode.parentPath,
-          activeNode.slot.id,
-          itemId
-        ),
-      });
-      onBuildChange(updated);
-      setActiveNode(null);
-      setActionError("");
-    } catch (reason) {
-      setActionError(reason instanceof Error ? reason.message : "Could not add this item.");
-    }
-  }
-
-  function handleRemove(node: PositionedNode) {
-    try {
-      const updated = saveBuild({
-        ...build,
-        root: removeMod(build.root, node.path),
-      });
-      onBuildChange(updated);
-      setActionError("");
-    } catch (reason) {
-      setActionError(reason instanceof Error ? reason.message : "Could not remove this item.");
-    }
-  }
+  const toolButton =
+    "flex h-8 w-8 items-center justify-center text-[#888] transition-colors hover:bg-[#151515] hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#9a8866] disabled:pointer-events-none disabled:opacity-40";
 
   return (
-    <>
-      {actionError && (
-        <p role="alert" className="border border-red-900/60 bg-red-950/30 p-3 text-sm text-red-200">
-          {actionError}
-        </p>
+    <div
+      ref={shellRef}
+      className={cn(
+        "relative border border-[#1a1a1a] bg-[#070707]",
+        isFullscreen && "flex h-screen w-screen flex-col"
       )}
-      <div
-        ref={canvasShellRef}
-        className={`border border-[#1a1a1a] bg-[#050505] ${
-          isFullscreen ? "h-screen w-screen" : ""
-        }`}
-      >
-        <div
-          ref={viewportRef}
-          onPointerDown={handlePanStart}
-          className={`relative hidden overflow-hidden sm:block ${
-            isFullscreen ? "h-screen max-h-none" : "max-h-[75vh]"
-          } ${
-            isPanning ? "cursor-grabbing" : "cursor-grab"
-          }`}
+    >
+      <div className="absolute right-2 top-2 z-10 flex items-center border border-[#1a1a1a] bg-[#0c0c0c]/95 backdrop-blur-sm">
+        <button type="button" className={toolButton} onClick={() => zoomTo(scale / 1.2)} disabled={scale <= MIN_ZOOM} aria-label="Zoom out">
+          <ZoomOut className="h-4 w-4" />
+        </button>
+        <button
+          type="button"
+          className="h-8 min-w-12 px-1 text-[10px] font-bold tabular-nums tracking-widest text-[#888] hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#9a8866]"
+          onClick={() => zoomTo(1)}
+          aria-label="Reset zoom to 100%"
         >
+          {Math.round(scale * 100)}%
+        </button>
+        <button type="button" className={toolButton} onClick={() => zoomTo(scale * 1.2)} disabled={scale >= MAX_ZOOM} aria-label="Zoom in">
+          <ZoomIn className="h-4 w-4" />
+        </button>
+        <button type="button" className={cn(toolButton, "border-l border-[#1a1a1a]")} onClick={fit} aria-label="Fit tree to width">
+          <Scan className="h-4 w-4" />
+        </button>
+        <button
+          type="button"
+          className={cn(toolButton, "border-l border-[#1a1a1a]")}
+          onClick={toggleFullscreen}
+          aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+        >
+          {isFullscreen ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
+        </button>
+      </div>
+      <div
+        ref={scrollRef}
+        onPointerDown={handlePanStart}
+        className={cn(
+          "overflow-auto overscroll-contain cursor-grab data-[panning]:cursor-grabbing data-[panning]:select-none",
+          isFullscreen ? "flex-1" : "max-h-[72vh]"
+        )}
+      >
+        <div className="relative" style={{ width: flow.width * scale, height: flow.height * scale }}>
           <div
-            className="absolute right-3 top-3 z-10 flex border border-[#1a1a1a] bg-[#080808]"
-            data-builder-node
+            className="absolute left-0 top-0 origin-top-left"
+            style={{ width: flow.width, height: flow.height, transform: `scale(${scale})` }}
           >
-            <Button
-              type="button"
-              variant="ghost"
-              size="icon"
-              className="h-8 w-8 border-r border-[#1a1a1a]"
-              onClick={() => zoomFromCenter((scale) => scale / BUTTON_ZOOM_STEP)}
-              disabled={viewport.scale <= MIN_ZOOM}
-            >
-              <ZoomOut className="h-4 w-4" />
-              <span className="sr-only">Zoom out</span>
-            </Button>
-            <Button
-              type="button"
-              variant="ghost"
-              size="icon"
-              className="h-8 w-8 border-r border-[#1a1a1a]"
-              onClick={() => setViewport({ x: 0, y: 0, scale: 1 })}
-              disabled={
-                viewport.x === 0 && viewport.y === 0 && viewport.scale === 1
-              }
-            >
-              <RotateCcw className="h-4 w-4" />
-              <span className="sr-only">Reset canvas view</span>
-            </Button>
-            <Button
-              type="button"
-              variant="ghost"
-              size="icon"
-              className="h-8 w-8 border-r border-[#1a1a1a]"
-              onClick={() => zoomFromCenter((scale) => scale * BUTTON_ZOOM_STEP)}
-              disabled={viewport.scale >= MAX_ZOOM}
-            >
-              <ZoomIn className="h-4 w-4" />
-              <span className="sr-only">Zoom in</span>
-            </Button>
-            <Button
-              type="button"
-              variant="ghost"
-              size="icon"
-              className="h-8 w-8"
-              onClick={toggleFullscreen}
-            >
-              {isFullscreen ? (
-                <Minimize2 className="h-4 w-4" />
-              ) : (
-                <Maximize2 className="h-4 w-4" />
-              )}
-              <span className="sr-only">
-                {isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
-              </span>
-            </Button>
-          </div>
-          <div
-            className="relative select-none"
-            style={{
-              width: flow.width,
-              height: flow.height,
-              transform: `translate(${viewport.x}px, ${viewport.y}px) scale(${viewport.scale})`,
-              transformOrigin: "0 0",
-            }}
-          >
-            <svg
-              className="pointer-events-none absolute inset-0"
-              width={flow.width}
-              height={flow.height}
-              aria-hidden="true"
-            >
+            <svg className="pointer-events-none absolute inset-0" width={flow.width} height={flow.height} aria-hidden="true">
               {flow.edges.map((edge) => {
                 const mid = edge.x1 + (edge.x2 - edge.x1) / 2;
                 return (
                   <path
                     key={edge.id}
-                    d={`M ${edge.x1} ${edge.y1} C ${mid} ${edge.y1}, ${mid} ${edge.y2}, ${edge.x2} ${edge.y2}`}
+                    d={`M ${edge.x1} ${edge.y1} H ${mid} V ${edge.y2} H ${edge.x2}`}
                     fill="none"
-                    stroke="#9a8866"
-                    strokeOpacity="0.65"
+                    stroke={edge.empty ? "#333" : "#9a8866"}
+                    strokeOpacity={edge.empty ? 1 : 0.6}
                     strokeWidth="1"
                   />
                 );
               })}
             </svg>
-            {flow.nodes.map((node) => (
-              <BuilderNode
-                key={node.id}
-                node={node}
-                item={node.itemId ? itemData.get(node.itemId) ?? null : null}
-                onOpenPicker={() => setActiveNode(node)}
-                onRemove={() => handleRemove(node)}
-                portalContainer={canvasShellRef.current}
-              />
-            ))}
+            <ul aria-label="Build parts" aria-describedby="build-tree-keys" onKeyDown={(event) => handleTreeKeys(event, flow.nodes)}>
+              {flow.nodes.map((node) => (
+                <li key={node.id}>
+                  <BuilderNode
+                    node={node}
+                    item={node.itemId ? items.get(node.itemId) : undefined}
+                    status={missingStatus(node, loading, unavailable)}
+                    fallback={weaponFallback}
+                    onOpen={() => onOpen(node)}
+                    onRemove={() => onRemove(node)}
+                    onIntent={() => onIntent(node)}
+                  />
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-        <div className="flex flex-col p-3 sm:hidden">
-          {flow.nodes.map((node) => (
-            <div key={node.id} className="flex items-stretch">
-              {node.ancestorGuides.map((hasSibling, index) => (
-                <div key={index} className="relative w-5 shrink-0" aria-hidden>
-                  {hasSibling && (
-                    <span className="absolute bottom-0 left-1/2 top-0 w-px -translate-x-1/2 bg-[#9a8866]/60" />
-                  )}
-                </div>
-              ))}
-              {node.path.length > 0 && (
-                <div className="relative w-5 shrink-0" aria-hidden>
-                  <span className="absolute left-1/2 top-0 h-1/2 w-px -translate-x-1/2 bg-[#9a8866]/60" />
-                  <span className="absolute left-1/2 right-0 top-1/2 h-px -translate-y-1/2 bg-[#9a8866]/60" />
-                  {!node.isLastChild && (
-                    <span className="absolute bottom-0 left-1/2 top-1/2 w-px -translate-x-1/2 bg-[#9a8866]/60" />
-                  )}
-                </div>
-              )}
-              <div className="flex min-w-0 flex-1 items-center py-1">
-                <BuilderNode
-                  node={node}
-                  item={node.itemId ? itemData.get(node.itemId) ?? null : null}
-                  onOpenPicker={() => setActiveNode(node)}
-                  onRemove={() => handleRemove(node)}
-                  portalContainer={canvasShellRef.current}
-                  compact
-                />
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
-      <SlotPicker
-        open={Boolean(activeNode?.slot)}
-        slot={activeNode?.slot ?? null}
-        currentItemId={activeNode?.itemId ?? null}
-        itemData={itemData}
-        installedItemIds={installedItemIds}
-        occupiedSlotIds={occupiedSlotIds}
-        gameMode={gameMode}
-        priceSources={priceSources}
-        portalContainer={canvasShellRef.current}
-        onOpenChange={(open) => {
-          if (!open) setActiveNode(null);
-        }}
-        onSelect={handleSelect}
-      />
-    </>
+    </div>
+  );
+}
+
+function TreeList({
+  flow,
+  items,
+  loading,
+  unavailable,
+  weaponFallback,
+  onOpen,
+  onRemove,
+  onIntent,
+}: BuildCanvasProps) {
+  return (
+    <ul
+      aria-label="Build parts"
+      aria-describedby="build-tree-keys"
+      onKeyDown={(event) => handleTreeKeys(event, flow.nodes)}
+      className="flex flex-col border border-[#1a1a1a] bg-[#070707] p-2"
+    >
+      {flow.nodes.map((node) => (
+        <li key={node.id} className="flex items-stretch">
+          {node.ancestorGuides.map((hasSibling, index) => (
+            <span key={index} className="relative w-3 shrink-0" aria-hidden>
+              {hasSibling && <span className="absolute inset-y-0 left-1/2 w-px bg-[#9a8866]/40" />}
+            </span>
+          ))}
+          {node.path.length > 0 && (
+            <span className="relative w-3 shrink-0" aria-hidden>
+              <span className="absolute left-1/2 top-0 h-1/2 w-px bg-[#9a8866]/40" />
+              <span className="absolute left-1/2 right-0 top-1/2 h-px bg-[#9a8866]/40" />
+              {!node.isLastChild && <span className="absolute bottom-0 left-1/2 top-1/2 w-px bg-[#9a8866]/40" />}
+            </span>
+          )}
+          <div className="flex min-w-0 flex-1 py-0.5">
+            <BuilderNode
+              node={node}
+              item={node.itemId ? items.get(node.itemId) : undefined}
+              status={missingStatus(node, loading, unavailable)}
+              fallback={weaponFallback}
+              onOpen={() => onOpen(node)}
+              onRemove={() => onRemove(node)}
+              onIntent={() => onIntent(node)}
+              compact
+            />
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 }

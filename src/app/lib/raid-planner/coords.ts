@@ -1,7 +1,3 @@
-// Game-world ↔ Leaflet coordinate conversion, ported from tarkov-dev's map page
-// (src/pages/map/index.jsx). Game positions are (x, z) meters; Leaflet latLngs
-// map to (lat = z, lng = x), and the per-map CRS applies the transform array and
-// coordinate rotation from maps-config so positions land on the imagery.
 import L from "leaflet";
 import type { GamePoint, MapConfig } from "./types";
 
@@ -44,7 +40,6 @@ export function getMapCRS(config: MapConfig): L.CRS {
   }) as L.CRS;
 }
 
-/** Config bounds are [x, z] pairs; Leaflet wants [lat = z, lng = x]. */
 export function getMapBounds(
   bounds: [[number, number], [number, number]]
 ): L.LatLngBounds {
@@ -54,7 +49,6 @@ export function getMapBounds(
   );
 }
 
-/** Bounds grown around their center, for maxBounds panning slack. */
 export function getScaledBounds(
   bounds: [[number, number], [number, number]],
   scaleFactor: number

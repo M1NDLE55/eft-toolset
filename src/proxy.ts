@@ -9,8 +9,6 @@ export function buildContentSecurityPolicy(nonce: string, nodeEnv = process.env.
     "form-action 'self'",
     "frame-ancestors 'none'",
     "object-src 'none'",
-    // strict-dynamic ignores the host allowlist. The beacon script carries this
-    // request's nonce; the host remains for browsers that do not implement it.
     `script-src 'self' ${CLOUDFLARE_BEACON_HOST} 'nonce-${nonce}' 'strict-dynamic'${developmentEval}`,
     "script-src-attr 'none'",
     "style-src 'self' 'unsafe-inline'",

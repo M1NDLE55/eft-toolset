@@ -1,6 +1,3 @@
-// Regenerates src/app/lib/raid-planner/maps-config.ts from tarkov-dev's maps.json.
-// Tile paths are version-stamped upstream (e.g. customs_0.16), so rerun after wipes:
-//   node scripts/generate-maps-config.mjs
 import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -11,6 +8,7 @@ const SOURCE_URL =
 const DISPLAY_NAMES = {
   "streets-of-tarkov": "Streets of Tarkov",
   "ground-zero": "Ground Zero",
+  icebreaker: "Icebreaker",
   customs: "Customs",
   factory: "Factory",
   interchange: "Interchange",
@@ -23,11 +21,99 @@ const DISPLAY_NAMES = {
   woods: "Woods",
 };
 
+const BASE_FLOOR_NAMES = {
+  "the-lab": "1st Floor",
+};
+
+const FLOOR_NAMES = {
+  "the-lab": { "second-level": "2nd Floor" },
+};
+
 function floorId(name) {
   return name
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+const PROBE_CONCURRENCY = 8;
+const tileStatusCache = new Map();
+
+async function tileExists(tilePath, z, x, y) {
+  if (x < 0 || y < 0) return false;
+  const url = tilePath.replace("{z}", z).replace("{x}", x).replace("{y}", y);
+  if (!tileStatusCache.has(url)) {
+    tileStatusCache.set(
+      url,
+      (async () => {
+        for (let attempt = 0; attempt < 3; attempt += 1) {
+          const result = await fetch(url, { method: "HEAD" }).catch(() => null);
+          if (result && (result.status === 200 || result.status === 404 || result.status === 403)) {
+            return result.status === 200;
+          }
+        }
+        throw new Error(`Could not probe ${url}`);
+      })()
+    );
+  }
+  return tileStatusCache.get(url);
+}
+
+async function measureAxis(probe) {
+  if (!(await probe(0))) return 0;
+  let low = 0;
+  let high = 1;
+  while (await probe(high)) {
+    low = high;
+    high *= 2;
+    if (high > 1 << 16) throw new Error("Tile grid is unexpectedly large.");
+  }
+  while (high - low > 1) {
+    const middle = Math.floor((low + high) / 2);
+    if (await probe(middle)) low = middle;
+    else high = middle;
+  }
+  return high;
+}
+
+async function measureTileGrid(tilePath, z) {
+  const side = 2 ** z;
+  const [lastCorner, pastColumn, pastRow, pastCorner] = await Promise.all([
+    tileExists(tilePath, z, side - 1, side - 1),
+    tileExists(tilePath, z, side, 0),
+    tileExists(tilePath, z, 0, side),
+    tileExists(tilePath, z, side, side),
+  ]);
+  if (lastCorner && !pastColumn && !pastRow && !pastCorner) return [side, side];
+  const columns = await measureAxis((x) => tileExists(tilePath, z, x, 0));
+  const rows = await measureAxis((y) => tileExists(tilePath, z, 0, y));
+  return [columns, rows];
+}
+
+async function mapInBatches(items, task) {
+  const results = [];
+  for (let index = 0; index < items.length; index += PROBE_CONCURRENCY) {
+    results.push(...(await Promise.all(items.slice(index, index + PROBE_CONCURRENCY).map(task))));
+  }
+  return results;
+}
+
+async function computeTileGrid(config) {
+  const paths = [config.tilePath, ...config.floors.map((floor) => floor.tilePath)].filter(Boolean);
+  const zooms = [];
+  for (let z = config.minZoom; z <= config.maxZoom; z += 1) zooms.push(z);
+  const grid = {};
+  for (const z of zooms) {
+    const sizes = await mapInBatches(paths, (path) => measureTileGrid(path, z));
+    const columns = Math.min(...sizes.map(([value]) => value));
+    const rows = Math.min(...sizes.map(([, value]) => value));
+    if (sizes.some(([c, r]) => c !== columns || r !== rows)) {
+      console.warn(`"${config.key}" floors disagree on the zoom ${z} tile grid; using the smallest.`);
+    }
+    if (columns === 0 || rows === 0) throw new Error(`"${config.key}" has no tiles at zoom ${z}.`);
+    grid[z] = [columns, rows];
+  }
+  return grid;
 }
 
 const response = await fetch(SOURCE_URL);
@@ -48,10 +134,10 @@ for (const entry of source) {
     continue;
   }
 
-  const layers = interactive.layers ?? [];
-  // One render strategy per map: tiles only when the base AND every floor has a
-  // tile pyramid; otherwise fall back to the SVG overlay (which carries floor
-  // groups inside the file).
+  const baseLayer = (interactive.layers ?? []).find(
+    (layer) => interactive.tilePath && layer.tilePath === interactive.tilePath
+  );
+  const layers = (interactive.layers ?? []).filter((layer) => layer !== baseLayer);
   const strategy =
     interactive.tilePath && layers.every((layer) => layer.tilePath)
       ? "tile"
@@ -64,16 +150,15 @@ for (const entry of source) {
 
   const floors = layers
     .map((layer) => {
+      const id = floorId(layer.name);
       const floor = {
-        id: floorId(layer.name),
-        name: layer.name,
+        id,
+        name: FLOOR_NAMES[interactive.key]?.[id] ?? layer.name,
       };
       if (strategy === "tile") floor.tilePath = layer.tilePath;
       else floor.svgLayer = layer.svgLayer;
       if (layer.show) floor.show = true;
       if (layer.extents) {
-        // Extent bounds entries are [[x,z],[x,z]] corner pairs with an optional
-        // trailing label string — keep only the corners.
         floor.extents = layer.extents.map((extent) => ({
           height: extent.height,
           ...(extent.bounds
@@ -105,22 +190,25 @@ for (const entry of source) {
     coordinateRotation: interactive.coordinateRotation ?? 0,
     bounds: interactive.bounds,
     ...(heightRange ? { heightRange } : {}),
+    ...((BASE_FLOOR_NAMES[interactive.key] ?? baseLayer?.name)
+      ? { baseFloorName: BASE_FLOOR_NAMES[interactive.key] ?? baseLayer.name }
+      : {}),
     floors,
     ...(interactive.author ? { author: interactive.author } : {}),
     ...(interactive.authorLink ? { authorLink: interactive.authorLink } : {}),
   });
 }
 
+for (const config of configs) {
+  if (config.strategy !== "tile") continue;
+  config.tileGrid = await computeTileGrid(config);
+  console.log(`Measured ${config.key} tile grid: ${JSON.stringify(config.tileGrid)}`);
+}
+
 const order = Object.keys(DISPLAY_NAMES);
 configs.sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key));
 
-const banner = `// Generated by scripts/generate-maps-config.mjs — do not edit by hand.
-// Source: ${SOURCE_URL}
-// Regenerate after game wipes/patches (tile paths are version-stamped upstream).
-`;
-
-const body = `${banner}
-import type { MapConfig } from "./types";
+const body = `import type { MapConfig } from "./types";
 
 export const mapConfigs: MapConfig[] = ${JSON.stringify(configs, null, 2)};
 

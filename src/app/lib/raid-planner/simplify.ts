@@ -1,10 +1,5 @@
 import type { GamePoint } from "./types";
 
-/**
- * Douglas-Peucker polyline simplification in game coordinates (meters).
- * Freehand pen strokes are thinned with this before saving so localStorage
- * stays small and share payloads stay viable.
- */
 export function simplifyPoints(
   points: GamePoint[],
   tolerance = 0.5

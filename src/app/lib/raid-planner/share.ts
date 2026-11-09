@@ -47,7 +47,6 @@ export function slugifyPlanName(name: string) {
   return slugifyName(name, "shared-plan");
 }
 
-/** 0.1 m is plenty for map geometry and keeps payloads short. */
 function round(value: number) {
   return Math.round(value * 10) / 10;
 }
