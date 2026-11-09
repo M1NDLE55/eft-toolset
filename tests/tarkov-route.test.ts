@@ -65,6 +65,29 @@ describe("Tarkov query route", () => {
   });
 });
 
+describe("slow uploads", () => {
+  it("do not hold shared operation slots while their bodies are still arriving", async () => {
+    const { tryAcquireOperationSlot, releaseOperationSlot } = await import("@/app/lib/api/tarkov-server");
+    const streams: ReadableStreamDefaultController<Uint8Array>[] = [];
+    const pending = Array.from({ length: 20 }, (_, index) =>
+      POST(
+        new Request("http://localhost/api/tarkov", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "CF-Connecting-IP": `192.0.2.${index}` },
+          body: new ReadableStream<Uint8Array>({ start: (controller) => void streams.push(controller) }),
+          duplex: "half",
+        } as RequestInit)
+      )
+    );
+    await new Promise((resolve) => setTimeout(resolve, 10));
+    const acquired = Array.from({ length: 16 }, () => tryAcquireOperationSlot());
+    acquired.forEach((ok) => ok && releaseOperationSlot());
+    for (const controller of streams) controller.close();
+    await Promise.all(pending);
+    expect(acquired.every(Boolean)).toBe(true);
+  });
+});
+
 describe("client identity on Vercel", () => {
   it("ignores spoofed forwarding headers and uses Vercel's client IP", async () => {
     vi.stubEnv("VERCEL", "1");

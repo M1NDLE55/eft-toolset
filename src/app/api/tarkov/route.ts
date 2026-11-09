@@ -25,12 +25,14 @@ const GLOBAL_REFILL_PER_SECOND = 5;
 const MAX_RATE_LIMIT_ENTRIES = 10_000;
 const MAX_URL_LENGTH = 2_048;
 const BODY_READ_TIMEOUT_MS = 5_000;
+const MAX_CONCURRENT_BODY_READS = 32;
 
 interface TokenBucket {
   tokens: number;
   updatedAt: number;
 }
 
+let activeBodyReads = 0;
 const clientBuckets = new Map<string, TokenBucket>();
 const globalBucket: TokenBucket = { tokens: GLOBAL_BURST, updatedAt: Date.now() };
 
@@ -83,11 +85,14 @@ export async function POST(request: Request) {
     return errorResponse("Request body is too large.", "INVALID_REQUEST", 413);
   }
 
-  return withSlot(() => handlePost(request));
-}
+  if (activeBodyReads >= MAX_CONCURRENT_BODY_READS) {
+    return errorResponse("The service is busy. Try again shortly.", "RATE_LIMITED", 429, {
+      "Retry-After": "1",
+    });
+  }
 
-async function handlePost(request: Request) {
   let rawBody: string;
+  activeBodyReads += 1;
   try {
     rawBody = await readBodyWithLimit(request);
   } catch (error) {
@@ -95,6 +100,8 @@ async function handlePost(request: Request) {
       return errorResponse("Request body is too large.", "INVALID_REQUEST", 413);
     }
     return errorResponse("Request body could not be read.", "INVALID_REQUEST", 400);
+  } finally {
+    activeBodyReads -= 1;
   }
 
   const contentType = request.headers.get("content-type");
@@ -117,7 +124,7 @@ async function handlePost(request: Request) {
     return errorResponse("Unknown query operation.", "INVALID_OPERATION", 400);
   }
 
-  return execute(request, operation, variables, false);
+  return withSlot(() => execute(request, operation, variables, false));
 }
 
 async function withSlot(handler: () => Promise<Response>) {
