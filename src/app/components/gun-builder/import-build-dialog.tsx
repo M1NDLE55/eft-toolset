@@ -83,12 +83,13 @@ function ImportForm() {
   const build = parsed.status === "ready" ? parsed.build : null;
   const gun = build ? byId.get(build.weaponId) : undefined;
   const unknownWeapon = Boolean(build && !gun && !gunsLoading && guns.length > 0);
+  const canSave = Boolean(build && gun);
   const parts = build ? countParts(build.root) : 0;
 
   function save() {
-    if (!build || unknownWeapon) return;
+    if (!build || !gun) return;
     try {
-      const fallback = gun?.name.slice(0, MAX_BUILD_NAME_LENGTH) ?? "Imported build";
+      const fallback = gun.name.slice(0, MAX_BUILD_NAME_LENGTH);
       const created = createBuild(name.trim() || fallback, build.weaponId, build.root, build.ammoId);
       router.push(`/gun-builder/${created.id}`);
     } catch (reason) {
@@ -167,8 +168,8 @@ function ImportForm() {
           {saveError}
         </p>
       )}
-      <Button type="submit" disabled={!build || unknownWeapon}>
-        <Download /> Save to my builds
+      <Button type="submit" disabled={!canSave}>
+        <Download /> {build && !gun && !unknownWeapon ? "Loading weapons…" : "Save to my builds"}
       </Button>
     </form>
   );
