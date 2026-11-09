@@ -51,7 +51,7 @@ export function ImportBuildDialog() {
 
 function ImportForm() {
   const router = useRouter();
-  const { byId, guns, loading: gunsLoading } = useGunList();
+  const { byId, guns, loading: gunsLoading, error: gunsError, retry: retryGuns } = useGunList();
   const [text, setText] = useState("");
   const [name, setName] = useState("");
   const [parsed, setParsed] = useState<Parsed>({ status: "empty" });
@@ -140,7 +140,7 @@ function ImportForm() {
             </span>
             <span className="min-w-0">
               <span className="block truncate text-sm font-semibold text-[#ddd]">
-                {gun?.name ?? (gunsLoading ? "Loading weapon…" : "Unknown weapon")}
+                {gun?.name ?? (gunsLoading ? "Loading weapon…" : gunsError ? "Weapon list unavailable" : "Unknown weapon")}
               </span>
               <span className="block text-xs text-[#888]">
                 {parts} part{parts === 1 ? "" : "s"}
@@ -163,13 +163,21 @@ function ImportForm() {
           )}
         </div>
       )}
+      {build && !gun && gunsError && (
+        <p role="alert" className="flex flex-wrap items-center justify-between gap-2 border border-red-900/60 bg-red-950/30 px-3 py-2 text-sm text-red-200">
+          The weapon list could not be loaded, so this build can&apos;t be checked yet.
+          <Button type="button" size="sm" variant="outline" onClick={retryGuns}>
+            Retry
+          </Button>
+        </p>
+      )}
       {saveError && (
         <p role="alert" className="border border-red-900/60 bg-red-950/30 px-3 py-2 text-sm text-red-200">
           {saveError}
         </p>
       )}
       <Button type="submit" disabled={!canSave}>
-        <Download /> {build && !gun && !unknownWeapon ? "Loading weapons…" : "Save to my builds"}
+        <Download /> {build && !gun && gunsLoading ? "Loading weapons…" : "Save to my builds"}
       </Button>
     </form>
   );
