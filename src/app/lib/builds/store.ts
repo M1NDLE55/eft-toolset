@@ -2,12 +2,13 @@ import type { BuildNode, GunBuild, PriceSources } from "@/app/lib/types/gunBuild
 import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
 import { useStore } from "@/app/lib/storage/use-store";
 import { createId } from "@/app/lib/id";
-import { isSafeTimestamp } from "@/app/lib/text-safety";
 import { MAX_BUILD_NAME_LENGTH, MAX_BUILDS } from "./limits";
-import { cloneTree, isBuildTree, isValidBuildId } from "./tree";
+import { cloneTree, isValidBuildId } from "./tree";
+import { isBuildList, isGunBuild } from "./validation";
+import { STORE_KEYS } from "@/app/lib/storage/store-keys";
 
 export const BUILD_STORE: StoreDefinition<GunBuild[]> = {
-  key: "eft-toolset:gun-builds",
+  key: STORE_KEYS.gunBuilds,
   legacyKeys: ["gun-builds"],
   version: 2,
   defaultValue: () => [],
@@ -151,25 +152,5 @@ export function deleteBuild(id: string) {
   writeStore(
     BUILD_STORE,
     readStore(BUILD_STORE).filter((build) => build.id !== id)
-  );
-}
-
-function isBuildList(value: unknown): value is GunBuild[] {
-  return Array.isArray(value) && value.length <= MAX_BUILDS && value.every(isGunBuild);
-}
-
-function isGunBuild(value: unknown): value is GunBuild {
-  if (!value || typeof value !== "object") return false;
-  const build = value as Partial<GunBuild>;
-  return (
-    isValidBuildId(build.id) &&
-    typeof build.name === "string" &&
-    build.name.length <= MAX_BUILD_NAME_LENGTH &&
-    isValidBuildId(build.weaponId) &&
-    isSafeTimestamp(build.createdAt) &&
-    isSafeTimestamp(build.updatedAt) &&
-    isBuildTree(build.root) &&
-    build.root.itemId === build.weaponId &&
-    (build.ammoId === undefined || isValidBuildId(build.ammoId))
   );
 }

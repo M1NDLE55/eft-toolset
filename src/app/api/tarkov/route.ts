@@ -14,27 +14,17 @@ import {
   TarkovRequestError,
   TarkovUpstreamError,
 } from "@/app/lib/api/tarkov-server";
+import { consumeRequestBudget } from "@/app/lib/api/rate-limit";
+import {
+  RequestBodyBusyError,
+  RequestBodyTooLargeError,
+  readBodyWithLimit,
+} from "@/app/lib/api/request-body";
 
 export const runtime = "nodejs";
 
 const MAX_REQUEST_BYTES = 64 * 1024;
-const CLIENT_BURST = 120;
-const CLIENT_REFILL_PER_SECOND = 2;
-const GLOBAL_BURST = 300;
-const GLOBAL_REFILL_PER_SECOND = 5;
-const MAX_RATE_LIMIT_ENTRIES = 10_000;
 const MAX_URL_LENGTH = 2_048;
-const BODY_READ_TIMEOUT_MS = 5_000;
-const MAX_CONCURRENT_BODY_READS = 32;
-
-interface TokenBucket {
-  tokens: number;
-  updatedAt: number;
-}
-
-let activeBodyReads = 0;
-const clientBuckets = new Map<string, TokenBucket>();
-const globalBucket: TokenBucket = { tokens: GLOBAL_BURST, updatedAt: Date.now() };
 
 export async function GET(request: Request) {
   const rateLimited = rateLimitResponse(request);
@@ -80,28 +70,19 @@ export async function POST(request: Request) {
   const rateLimited = rateLimitResponse(request);
   if (rateLimited) return rateLimited;
 
-  const contentLength = Number(request.headers.get("content-length"));
-  if (Number.isFinite(contentLength) && contentLength > MAX_REQUEST_BYTES) {
-    return errorResponse("Request body is too large.", "INVALID_REQUEST", 413);
-  }
-
-  if (activeBodyReads >= MAX_CONCURRENT_BODY_READS) {
-    return errorResponse("The service is busy. Try again shortly.", "RATE_LIMITED", 429, {
-      "Retry-After": "1",
-    });
-  }
-
   let rawBody: string;
-  activeBodyReads += 1;
   try {
-    rawBody = await readBodyWithLimit(request);
+    rawBody = await readBodyWithLimit(request, MAX_REQUEST_BYTES);
   } catch (error) {
     if (error instanceof RequestBodyTooLargeError) {
       return errorResponse("Request body is too large.", "INVALID_REQUEST", 413);
     }
+    if (error instanceof RequestBodyBusyError) {
+      return errorResponse("The service is busy. Try again shortly.", "RATE_LIMITED", 429, {
+        "Retry-After": "1",
+      });
+    }
     return errorResponse("Request body could not be read.", "INVALID_REQUEST", 400);
-  } finally {
-    activeBodyReads -= 1;
   }
 
   const contentType = request.headers.get("content-type");
@@ -215,91 +196,4 @@ function errorResponse(
       },
     }
   );
-}
-
-class RequestBodyTooLargeError extends Error {}
-
-async function readBodyWithLimit(request: Request): Promise<string> {
-  if (!request.body) return "";
-
-  const reader = request.body.getReader();
-  const decoder = new TextDecoder("utf-8", { fatal: true });
-  let result = "";
-  let bytesRead = 0;
-  const deadline = setTimeout(() => {
-    void reader.cancel("Request body read timed out.").catch(() => undefined);
-  }, BODY_READ_TIMEOUT_MS);
-
-  try {
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      bytesRead += value.byteLength;
-      if (bytesRead > MAX_REQUEST_BYTES) {
-        await reader.cancel("Request body is too large.");
-        throw new RequestBodyTooLargeError();
-      }
-      result += decoder.decode(value, { stream: true });
-    }
-    result += decoder.decode();
-    return result;
-  } finally {
-    clearTimeout(deadline);
-    reader.releaseLock();
-  }
-}
-
-function consumeRequestBudget(request: Request): {
-  allowed: boolean;
-  retryAfterSeconds: number;
-} {
-  const now = Date.now();
-  const key = clientKey(request);
-  const bucket = clientBuckets.get(key) ?? { tokens: CLIENT_BURST, updatedAt: now };
-  const clientResult = consumeToken(bucket, CLIENT_BURST, CLIENT_REFILL_PER_SECOND, now);
-  clientBuckets.delete(key);
-  clientBuckets.set(key, bucket);
-  while (clientBuckets.size > MAX_RATE_LIMIT_ENTRIES) {
-    const oldestKey = clientBuckets.keys().next().value;
-    if (oldestKey === undefined) break;
-    clientBuckets.delete(oldestKey);
-  }
-
-  if (!clientResult.allowed) return clientResult;
-
-  return consumeToken(globalBucket, GLOBAL_BURST, GLOBAL_REFILL_PER_SECOND, now);
-}
-
-function consumeToken(
-  bucket: TokenBucket,
-  capacity: number,
-  refillPerSecond: number,
-  now: number
-) {
-  const elapsedSeconds = Math.max(0, now - bucket.updatedAt) / 1000;
-  bucket.tokens = Math.min(capacity, bucket.tokens + elapsedSeconds * refillPerSecond);
-  bucket.updatedAt = now;
-  if (bucket.tokens >= 1) {
-    bucket.tokens -= 1;
-    return { allowed: true, retryAfterSeconds: 0 };
-  }
-  return {
-    allowed: false,
-    retryAfterSeconds: Math.max(1, Math.ceil((1 - bucket.tokens) / refillPerSecond)),
-  };
-}
-
-function clientKey(request: Request) {
-  const trustedHeader =
-    process.env.CLIENT_IP_HEADER?.trim().toLowerCase() || (process.env.VERCEL ? "x-real-ip" : undefined);
-  if (trustedHeader) {
-    return (request.headers.get(trustedHeader)?.split(",")[0]?.trim() || "unknown").slice(0, 128);
-  }
-  const forwarded = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
-  return (
-    request.headers.get("cf-connecting-ip")?.trim() ||
-    request.headers.get("x-real-ip")?.trim() ||
-    forwarded ||
-    "unknown"
-  ).slice(0, 128);
 }

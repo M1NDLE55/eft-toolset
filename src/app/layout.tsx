@@ -10,22 +10,23 @@ import { GameModeProvider } from "@/components/game-mode/context";
 import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
 import { Header } from "@/app/components/global/header";
 import { ServiceWorker } from "@/app/components/global/service-worker";
+import { SITE_ORIGIN } from "@/app/lib/site";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 const description = "Become a Tarkov Chad with this awesome set of tools";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.eft-toolset.com"),
+  metadataBase: new URL(SITE_ORIGIN),
   title: { default: "EFT Toolset", template: "%s | EFT Toolset" },
   description,
   applicationName: "EFT Toolset",
   openGraph: {
     title: "EFT Toolset",
     description,
-    url: "https://www.eft-toolset.com/",
+    url: `${SITE_ORIGIN}/`,
     siteName: "EFT Toolset",
-    images: [{ url: "https://www.eft-toolset.com/home-og-image.png", width: 1200, height: 630 }],
+    images: [{ url: `${SITE_ORIGIN}/home-og-image.png`, width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
@@ -76,6 +77,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
               </p>
               <Link href="/data" className="underline underline-offset-2 hover:text-[#ccc]">
                 Backup &amp; restore
+              </Link>
+              <Link href="/mcp" className="underline underline-offset-2 hover:text-[#ccc]">
+                AI assistants
               </Link>
               <Link href="/policies/disclaimer-and-use-policy" className="underline underline-offset-2 hover:text-[#ccc]">
                 Disclaimer and use policy

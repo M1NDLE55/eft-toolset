@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ChangeEvent } from "react";
+import { useEffect, useState, useSyncExternalStore, type ChangeEvent } from "react";
 import { Download, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ConfirmDialog } from "@/components/confirm-dialog";
@@ -14,7 +14,28 @@ import {
   parseBackup,
   type RestorePlan,
 } from "@/app/lib/storage/backup";
+import { decodeSharePayload } from "@/app/lib/share-codec";
+import { BACKUP_IMPORT_PARAM } from "@/app/lib/storage/store-keys";
 import { cn } from "@/lib/utils";
+
+function subscribeHash(listener: () => void) {
+  window.addEventListener("hashchange", listener);
+  return () => window.removeEventListener("hashchange", listener);
+}
+
+/** The backup in a /data#import=… link, as made by the MCP endpoint's create_import_link. */
+function useImportPayload() {
+  const hash = useSyncExternalStore(
+    subscribeHash,
+    () => window.location.hash,
+    () => ""
+  );
+  return new URLSearchParams(hash.replace(/^#/, "")).get(BACKUP_IMPORT_PARAM);
+}
+
+function clearImportHash() {
+  window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+}
 
 function StoreCount({ index }: { index: number }) {
   const { label, definition } = BACKUP_STORES[index];
@@ -41,6 +62,31 @@ export default function Page() {
   const hydrated = useHydrated();
   const [plan, setPlan] = useState<RestorePlan | null>(null);
   const [message, setMessage] = useState<{ tone: "ok" | "error"; text: string } | null>(null);
+  const importPayload = useImportPayload();
+
+  useEffect(() => {
+    if (!importPayload) return;
+    let cancelled = false;
+    decodeSharePayload(importPayload)
+      .then((value) => parseBackup(JSON.stringify(value)))
+      .then(
+        (parsed) => {
+          if (cancelled) return;
+          setPlan(parsed);
+          setMessage({ tone: "ok", text: "Review the data from this link, then merge it into yours." });
+        },
+        (reason: unknown) => {
+          if (cancelled) return;
+          setMessage({
+            tone: "error",
+            text: reason instanceof Error ? `This import link can't be used: ${reason.message}` : "This import link is damaged.",
+          });
+        }
+      );
+    return () => {
+      cancelled = true;
+    };
+  }, [importPayload]);
 
   const exportAll = () => {
     const backup = createBackup();
@@ -67,6 +113,7 @@ export default function Page() {
     try {
       applyRestore(plan, mode);
       setPlan(null);
+      if (importPayload) clearImportHash();
       setMessage({ tone: "ok", text: mode === "merge" ? "Backup merged into your data." : "Your data was replaced with the backup." });
     } catch (reason) {
       setMessage({ tone: "error", text: reason instanceof Error ? reason.message : "Could not restore this backup." });
@@ -150,7 +197,13 @@ export default function Page() {
                 confirmLabel="Replace"
                 onConfirm={() => restore("replace")}
               />
-              <Button variant="ghost" onClick={() => setPlan(null)}>
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  setPlan(null);
+                  if (importPayload) clearImportHash();
+                }}
+              >
                 Cancel
               </Button>
             </div>

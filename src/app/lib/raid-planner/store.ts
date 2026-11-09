@@ -3,11 +3,12 @@ import { useMemo } from "react";
 import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
 import { useStore } from "@/app/lib/storage/use-store";
 import { createId } from "@/app/lib/id";
+import { STORE_KEYS } from "@/app/lib/storage/store-keys";
 import { MAX_PLAN_NAME_LENGTH, MAX_PLANS } from "./limits";
 import { isPlan, isPlanList } from "./plan-validation";
 
 export const PLAN_STORE: StoreDefinition<RaidPlan[]> = {
-  key: "eft-toolset:raid-plans",
+  key: STORE_KEYS.raidPlans,
   legacyKeys: ["raid-plans"],
   version: 1,
   defaultValue: () => [],

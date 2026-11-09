@@ -1,5 +1,15 @@
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { GET, POST } from "@/app/api/tarkov/route";
+import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
+
+beforeEach(() => {
+  resetRequestBudgets();
+  vi.stubEnv("CLIENT_IP_HEADER", "cf-connecting-ip");
+});
+
+afterEach(() => {
+  vi.unstubAllEnvs();
+});
 
 describe("Tarkov query route", () => {
   it("rejects operations outside the allowlist", async () => {
@@ -90,6 +100,7 @@ describe("slow uploads", () => {
 
 describe("client identity on Vercel", () => {
   it("ignores spoofed forwarding headers and uses Vercel's client IP", async () => {
+    vi.stubEnv("CLIENT_IP_HEADER", "");
     vi.stubEnv("VERCEL", "1");
     vi.spyOn(Date, "now").mockReturnValue(1_950_000_000_000);
     try {
@@ -113,6 +124,32 @@ describe("client identity on Vercel", () => {
     } finally {
       vi.unstubAllEnvs();
     }
+  });
+});
+
+describe("client identity without a trusted header", () => {
+  it("applies only the global limit instead of trusting forgeable forwarding headers", async () => {
+    vi.stubEnv("CLIENT_IP_HEADER", "");
+    vi.spyOn(Date, "now").mockReturnValue(1_960_000_000_000);
+    const responses = [];
+    // More than one client's 120 requests, up to the global 300.
+    for (let index = 0; index < 301; index += 1) {
+      responses.push(
+        await POST(
+          new Request("http://localhost/api/tarkov", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "CF-Connecting-IP": "203.0.113.7",
+              "X-Forwarded-For": `198.51.100.${index % 250}`,
+            },
+            body: JSON.stringify({ operation: "arbitrary.query", variables: {} }),
+          })
+        )
+      );
+    }
+    expect(responses[299].status).toBe(400);
+    expect(responses[300].status).toBe(429);
   });
 });
 
