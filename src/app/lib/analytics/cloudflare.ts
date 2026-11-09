@@ -9,8 +9,6 @@ export function cloudflareAnalyticsToken(env: NodeJS.ProcessEnv = process.env) {
   return env[TOKEN_ENV];
 }
 
-// The site token is public in the page, but it still has to stay inside the
-// JSON attribute. Reject anything that is not the token shape Cloudflare issues.
 export function cloudflareBeaconAttribute(token: string | undefined) {
   const trimmed = token?.trim() ?? "";
   if (!TOKEN_PATTERN.test(trimmed)) return null;

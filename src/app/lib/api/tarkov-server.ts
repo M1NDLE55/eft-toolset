@@ -5,10 +5,11 @@ import type {
   CachedCraft,
   CachedItem,
   CachedTask,
-  CatalogItem,
+  CatalogEntry,
   ComposedItem,
 } from "@/app/lib/cache/types";
 import type {
+  AmmoItemData,
   BuildItemData,
   GunListItem,
   ModSlotDef,
@@ -28,7 +29,8 @@ const UPSTREAM_BASE_URL = "https://json.tarkov.dev";
 const UPSTREAM_TIMEOUT_MS = 20_000;
 const UPSTREAM_MAX_BYTES = 32 * 1024 * 1024;
 const RESOURCE_TTL_MS = 5 * 60_000;
-const RESOURCE_STALE_MS = 15 * 60_000;
+const RESOURCE_REVALIDATE_MS = 30 * 60_000;
+export const RESOURCE_MAX_STALE_MS = 6 * 60 * 60_000;
 const MAX_RESOURCE_RECORDS = 100_000;
 const MAX_NESTED_ENTRIES = 20_000;
 const MAX_STRING_LENGTH = 10_000;
@@ -65,6 +67,7 @@ interface RawContainedItem {
 interface RawTraderOffer {
   trader?: string;
   priceRUB?: number | null;
+  minTraderLevel?: number | null;
 }
 
 interface RawSlot {
@@ -91,6 +94,14 @@ interface RawItemProperties {
   presets?: string[] | null;
   slots?: RawSlot[] | null;
   baseItem?: string | null;
+  allowedAmmo?: string[] | null;
+  damage?: number | null;
+  armorDamage?: number | null;
+  penetrationPower?: number | null;
+  fragmentationChance?: number | null;
+  projectileCount?: number | null;
+  initialSpeed?: number | null;
+  accuracyModifier?: number | null;
 }
 
 interface RawItem {
@@ -239,17 +250,17 @@ interface MapsData {
 }
 
 interface ResourceCacheEntry {
-  expiresAt: number;
-  staleUntil: number;
+  fetchedAt: number;
   value?: UpstreamEnvelope<unknown>;
   inFlight?: Promise<UpstreamEnvelope<unknown>>;
-  lastStaleAt?: number;
+  failedAt?: number;
 }
 
 interface ItemsContext {
   items: RawItem[];
   byId: Map<string, RawItem>;
   byName: Map<string, RawItem>;
+  bySlug: Map<string, RawItem>;
   nameById: Map<string, string>;
   translations: TranslationDictionary;
   fleaMarket?: ItemsData["fleaMarket"];
@@ -267,10 +278,9 @@ interface RelationsContext {
   craftsByItem: Map<string, RawCraft[]>;
 }
 
-interface DerivedCacheEntry {
-  expiresAt: number;
-  value: Promise<unknown>;
-  stale?: boolean;
+interface MemoEntry {
+  inputs: readonly unknown[];
+  value: unknown;
 }
 
 export class TarkovUpstreamError extends Error {
@@ -287,66 +297,94 @@ export class TarkovRequestError extends Error {
   }
 }
 
-const resourceCache = new Map<string, ResourceCacheEntry>();
-const derivedCache = new Map<string, DerivedCacheEntry>();
+const CACHE_KEY = "__eftTarkovCache:2";
+const sharedCache = globalThis as typeof globalThis & {
+  [CACHE_KEY]?: { resources: Map<string, ResourceCacheEntry>; memos: Map<string, MemoEntry> };
+};
+sharedCache[CACHE_KEY] ??= { resources: new Map(), memos: new Map() };
+const resourceCache = sharedCache[CACHE_KEY].resources;
+const memoCache = sharedCache[CACHE_KEY].memos;
 const operationContext = new AsyncLocalStorage<{
-  startedAt: number;
   resources: Set<ResourceCacheEntry>;
-  stale: boolean;
   signal?: AbortSignal;
 }>();
+
+const MAX_CONCURRENT_OPERATIONS = 16;
+let activeOperations = 0;
+
+export function tryAcquireOperationSlot() {
+  if (activeOperations >= MAX_CONCURRENT_OPERATIONS) return false;
+  activeOperations += 1;
+  return true;
+}
+
+export function releaseOperationSlot() {
+  activeOperations = Math.max(0, activeOperations - 1);
+}
+
+const OPERATION_VARIABLES: Record<TarkovOperation, readonly string[]> = {
+  [TARKOV_OPERATIONS.itemCatalog]: ["gameMode"],
+  [TARKOV_OPERATIONS.groupItems]: ["gameMode", "names"],
+  [TARKOV_OPERATIONS.itemDetail]: ["gameMode", "name", "slug"],
+  [TARKOV_OPERATIONS.gunList]: ["gameMode"],
+  [TARKOV_OPERATIONS.buildItems]: ["gameMode", "ids"],
+  [TARKOV_OPERATIONS.pickItems]: ["gameMode", "ids"],
+  [TARKOV_OPERATIONS.preset]: ["gameMode", "id"],
+  [TARKOV_OPERATIONS.ammoItems]: ["gameMode", "ids"],
+  [TARKOV_OPERATIONS.mapDetails]: ["gameMode", "mapKey"],
+};
 
 export async function executeTarkovOperation(
   operation: TarkovOperation,
   variables: unknown,
-  options: { signal?: AbortSignal; onStale?: () => void } = {}
+  options: { signal?: AbortSignal; onStale?: () => void; onDataAge?: (ageMs: number) => void } = {}
 ): Promise<unknown> {
-  return operationContext.run(
-    { startedAt: Date.now(), resources: new Set(), stale: false, signal: options.signal },
-    async () => {
-      const input = asRecord(variables);
-      const gameMode = readGameMode(input);
-      let result: Promise<unknown>;
-      switch (operation) {
-    case TARKOV_OPERATIONS.itemCatalog:
-      result = getItemCatalog(gameMode);
-      break;
-    case TARKOV_OPERATIONS.groupItems:
-      result = getGroupItems(gameMode, readStringList(input.names, "names", MAX_NAMES));
-      break;
-    case TARKOV_OPERATIONS.itemDetail:
-      result = getItemDetail(gameMode, readString(input.name, "name", 500));
-      break;
-    case TARKOV_OPERATIONS.gunList:
-      result = getGunList(gameMode);
-      break;
-    case TARKOV_OPERATIONS.buildItems:
-      result = getBuildItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
-      break;
-    case TARKOV_OPERATIONS.pickItems:
-      result = getPickItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
-      break;
-    case TARKOV_OPERATIONS.preset:
-      result = getPreset(gameMode, readString(input.id, "id", 80));
-      break;
-    case TARKOV_OPERATIONS.mapDetails:
-      result = getMapDetails(gameMode, readString(input.mapKey, "mapKey", 80));
-      break;
-    default:
-      throw new TarkovRequestError("Unknown query operation.", "INVALID_OPERATION");
-      }
-      const data = await waitForCaller(result, options.signal);
-      const context = operationContext.getStore();
-      if (
-        context &&
-        (context.stale ||
-          Array.from(context.resources).some(
-            (entry) => (entry.lastStaleAt ?? 0) >= context.startedAt
-          ))
-      ) options.onStale?.();
-      return data;
+  const allowed = OPERATION_VARIABLES[operation];
+  if (!allowed) throw new TarkovRequestError("Unknown query operation.", "INVALID_OPERATION");
+  const input = asRecord(variables);
+  if (Object.keys(input).some((key) => !allowed.includes(key))) {
+    throw new TarkovRequestError("Variables contain unsupported fields.");
+  }
+  const gameMode = readGameMode(input);
+  const context = { resources: new Set<ResourceCacheEntry>(), signal: options.signal };
+  return operationContext.run(context, async () => {
+    let result: Promise<unknown>;
+    switch (operation) {
+      case TARKOV_OPERATIONS.itemCatalog:
+        result = getItemCatalog(gameMode);
+        break;
+      case TARKOV_OPERATIONS.groupItems:
+        result = getGroupItems(gameMode, readStringList(input.names, "names", MAX_NAMES));
+        break;
+      case TARKOV_OPERATIONS.itemDetail:
+        result = getItemDetail(gameMode, readItemReference(input));
+        break;
+      case TARKOV_OPERATIONS.gunList:
+        result = getGunList(gameMode);
+        break;
+      case TARKOV_OPERATIONS.buildItems:
+        result = getBuildItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
+        break;
+      case TARKOV_OPERATIONS.pickItems:
+        result = getPickItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
+        break;
+      case TARKOV_OPERATIONS.ammoItems:
+        result = getAmmoItems(gameMode, readStringList(input.ids, "ids", MAX_IDS));
+        break;
+      case TARKOV_OPERATIONS.preset:
+        result = getPreset(gameMode, readString(input.id, "id", 80));
+        break;
+      case TARKOV_OPERATIONS.mapDetails:
+        result = getMapDetails(gameMode, readString(input.mapKey, "mapKey", 80));
+        break;
     }
-  );
+    const data = await waitForCaller(result, options.signal);
+    const entries = Array.from(context.resources);
+    if (entries.some((entry) => entry.failedAt !== undefined)) options.onStale?.();
+    const oldest = Math.min(...entries.map((entry) => entry.fetchedAt));
+    if (Number.isFinite(oldest)) options.onDataAge?.(Math.max(0, Date.now() - oldest));
+    return data;
+  });
 }
 
 function waitForCaller<T>(work: Promise<T>, signal?: AbortSignal): Promise<T> {
@@ -364,12 +402,25 @@ function throwIfRequestAborted() {
   operationContext.getStore()?.signal?.throwIfAborted();
 }
 
-async function getItemCatalog(gameMode: GameMode): Promise<CatalogItem[]> {
-  return loadDerived(`${gameMode}/catalog-projection`, async () => {
-    const { items, translations } = await loadItems(gameMode);
-    throwIfRequestAborted();
-    return projectItemCatalog(items, translations);
-  });
+function memo<T>(key: string, inputs: readonly unknown[], compute: () => T): T {
+  const cached = memoCache.get(key);
+  if (
+    cached &&
+    cached.inputs.length === inputs.length &&
+    cached.inputs.every((input, index) => input === inputs[index])
+  ) {
+    return cached.value as T;
+  }
+  const value = compute();
+  memoCache.set(key, { inputs, value });
+  return value;
+}
+
+async function getItemCatalog(gameMode: GameMode): Promise<CatalogEntry[]> {
+  const context = await loadItems(gameMode);
+  return memo(`${gameMode}/catalog`, [context], () =>
+    projectItemCatalog(context.items, context.translations)
+  );
 }
 
 async function getGroupItems(gameMode: GameMode, names: string[]): Promise<CachedItem[]> {
@@ -393,9 +444,21 @@ async function getGroupItems(gameMode: GameMode, names: string[]): Promise<Cache
   });
 }
 
-async function getItemDetail(
+export type ItemReference = { name: string } | { slug: string };
+
+function readItemReference(input: Record<string, unknown>): ItemReference {
+  if ((input.name === undefined) === (input.slug === undefined)) {
+    throw new TarkovRequestError("Provide exactly one of name or slug.");
+  }
+  if (input.name !== undefined) return { name: readString(input.name, "name", 500) };
+  const slug = readString(input.slug, "slug", 200);
+  if (!/^[a-z0-9][a-z0-9-]*$/.test(slug)) throw new TarkovRequestError("slug is invalid.");
+  return { slug };
+}
+
+export async function getItemDetail(
   gameMode: GameMode,
-  requestedName: string
+  reference: ItemReference
 ): Promise<ComposedItem | null> {
   const [itemContext, traderNames, taskContext, relations, stations] =
     await Promise.all([
@@ -407,13 +470,23 @@ async function getItemDetail(
     ]);
   throwIfRequestAborted();
 
-  const item = itemContext.byName.get(requestedName);
+  const item =
+    "slug" in reference ? itemContext.bySlug.get(reference.slug) : itemContext.byName.get(reference.name);
   if (!item?.id) return null;
+  const requestedName = translate(item.name, itemContext.translations);
 
-  const tasks = (taskContext.byItem.get(item.id) ?? []).map((task) =>
+  const itemId = item.id;
+  const details = memo(
+    `${gameMode}/details`,
+    [itemContext, traderNames, taskContext, relations, stations],
+    () => new Map<string, ComposedItem>()
+  );
+  const cached = details.get(itemId);
+  if (cached) return cached;
+  const tasks = (taskContext.byItem.get(itemId) ?? []).map((task) =>
     projectTask(task, taskContext.translations, traderNames)
   );
-  const bartersUsing = relatedBarters(relations.bartersByItem, item.id)
+  const bartersUsing = relatedBarters(relations.bartersByItem, itemId)
     .map((barter) =>
       projectBarter(
         barter,
@@ -425,7 +498,7 @@ async function getItemDetail(
       )
     )
     .filter((barter) => barter.rewardItems.length > 0);
-  const craftsUsing = (relations.craftsByItem.get(item.id) ?? [])
+  const craftsUsing = (relations.craftsByItem.get(itemId) ?? [])
     .map((craft) =>
       projectCraft(
         craft,
@@ -438,7 +511,7 @@ async function getItemDetail(
     )
     .filter((craft) => craft.rewardItems.length > 0);
 
-  return {
+  const detail: ComposedItem = {
     ...projectCachedItem(
       item,
       requestedName,
@@ -451,23 +524,25 @@ async function getItemDetail(
     bartersUsing,
     craftsUsing,
   };
+  details.set(itemId, detail);
+  return detail;
 }
 
 async function getGunList(gameMode: GameMode): Promise<GunListItem[]> {
-  return loadDerived(`${gameMode}/gun-list-projection`, async () => {
-    const { items, translations } = await loadItems(gameMode);
-    throwIfRequestAborted();
-    return items
+  const context = await loadItems(gameMode);
+  return memo(`${gameMode}/gun-list`, [context], () =>
+    context.items
       .filter((item) => item.types?.includes("gun"))
       .map((item) => ({
         id: item.id ?? "",
-        name: translate(item.name, translations),
-        shortName: translate(item.shortName, translations) || translate(item.name, translations),
+        name: translate(item.name, context.translations),
+        shortName:
+          translate(item.shortName, context.translations) || translate(item.name, context.translations),
         gridImageLink: safeAssetUrl(item.gridImageLink),
         defaultPresetId: item.properties?.defaultPreset ?? null,
       }))
-      .filter((item) => Boolean(item.id));
-  });
+      .filter((item) => Boolean(item.id))
+  );
 }
 
 async function getBuildItems(gameMode: GameMode, ids: string[]): Promise<BuildItemData[]> {
@@ -496,6 +571,21 @@ async function getPickItems(gameMode: GameMode, ids: string[]): Promise<PickItem
   });
 }
 
+async function getAmmoItems(gameMode: GameMode, ids: string[]): Promise<AmmoItemData[]> {
+  if (ids.length === 0) return [];
+  const [{ byId, translations }, traderNames] = await Promise.all([
+    loadItems(gameMode),
+    loadTraderNames(gameMode),
+  ]);
+  throwIfRequestAborted();
+  return ids.flatMap((id) => {
+    const item = byId.get(id);
+    return item?.properties?.propertiesType === "ItemPropertiesAmmo"
+      ? [projectAmmoItem(item, translations, traderNames)]
+      : [];
+  });
+}
+
 async function getPreset(gameMode: GameMode, id: string): Promise<PresetContents | null> {
   const { byId } = await loadItems(gameMode);
   throwIfRequestAborted();
@@ -504,13 +594,15 @@ async function getPreset(gameMode: GameMode, id: string): Promise<PresetContents
   return {
     baseItemId: item.properties?.baseItem ?? null,
     itemIds: (item.containsItems ?? []).flatMap((entry) =>
-      typeof entry.item === "string" ? [entry.item] : []
+      typeof entry.item === "string"
+        ? Array.from({ length: Math.min(8, Math.max(1, Math.floor(finiteNumber(entry.count) ?? 1))) }, () => entry.item as string)
+        : []
     ),
   };
 }
 
 async function getMapDetails(gameMode: GameMode, mapKey: string): Promise<MapDetails | null> {
-  const [mapsEnvelope, translationsEnvelope, { nameById }] =
+  const [mapsEnvelope, translationsEnvelope, { nameById, byId }] =
     await Promise.all([
       loadResource<MapsData>(gameMode, "maps"),
       loadResource<TranslationDictionary>(gameMode, "maps_en"),
@@ -527,177 +619,130 @@ async function getMapDetails(gameMode: GameMode, mapKey: string): Promise<MapDet
     translationsEnvelope.data,
     mapsEnvelope.data.lootContainers ?? {},
     mapsEnvelope.data.stationaryWeapons ?? {},
-    nameById
+    nameById,
+    byId
   );
 }
 
-async function loadItems(gameMode: GameMode) {
-  return loadDerived<ItemsContext>(`${gameMode}/items-context`, async () => {
-    const [itemsEnvelope, translationsEnvelope] = await Promise.all([
-      loadResource<ItemsData>(gameMode, "items"),
-      loadResource<TranslationDictionary>(gameMode, "items_en"),
-    ]);
+async function loadItems(gameMode: GameMode): Promise<ItemsContext> {
+  const [itemsEnvelope, translationsEnvelope] = await Promise.all([
+    loadResource<ItemsData>(gameMode, "items"),
+    loadResource<TranslationDictionary>(gameMode, "items_en"),
+  ]);
+  return memo(`${gameMode}/items-context`, [itemsEnvelope, translationsEnvelope], () => {
     const items = Object.values(itemsEnvelope.data.items ?? {});
     const translations = translationsEnvelope.data;
-    return {
-      items,
-      byId: new Map(
-        items.flatMap((item) => (item.id ? ([[item.id, item]] as const) : []))
-      ),
-      byName: new Map(
-        items.map((item) => [translate(item.name, translations), item] as const)
-      ),
-      nameById: new Map(
-        items.flatMap((item) =>
-          item.id ? ([[item.id, translate(item.name, translations)]] as const) : []
-        )
-      ),
-      translations,
-      fleaMarket: itemsEnvelope.data.fleaMarket,
-    };
+    const byId = new Map<string, RawItem>();
+    const byName = new Map<string, RawItem>();
+    const bySlug = new Map<string, RawItem>();
+    const nameById = new Map<string, string>();
+    for (const item of items) {
+      const name = translate(item.name, translations);
+      byName.set(name, item);
+      if (item.normalizedName) bySlug.set(item.normalizedName, item);
+      if (item.id) {
+        byId.set(item.id, item);
+        nameById.set(item.id, name);
+      }
+    }
+    return { items, byId, byName, bySlug, nameById, translations, fleaMarket: itemsEnvelope.data.fleaMarket };
   });
 }
 
-async function loadTasks(gameMode: GameMode) {
-  return loadDerived<TasksContext>(`${gameMode}/tasks-context`, async () => {
-    const [tasksEnvelope, translationsEnvelope] = await Promise.all([
-      loadResource<TasksData>(gameMode, "tasks"),
-      loadResource<TranslationDictionary>(gameMode, "tasks_en"),
-    ]);
+async function loadTasks(gameMode: GameMode): Promise<TasksContext> {
+  const [tasksEnvelope, translationsEnvelope] = await Promise.all([
+    loadResource<TasksData>(gameMode, "tasks"),
+    loadResource<TranslationDictionary>(gameMode, "tasks_en"),
+  ]);
+  return memo(`${gameMode}/tasks-context`, [tasksEnvelope, translationsEnvelope], () => {
     const tasks = Object.values(tasksEnvelope.data.tasks ?? {});
     return {
       tasks,
-      byId: new Map(
-        tasks.flatMap((task) => (task.id ? ([[task.id, task]] as const) : []))
-      ),
+      byId: new Map(tasks.flatMap((task) => (task.id ? ([[task.id, task]] as const) : []))),
       byItem: indexTasksByItem(tasks),
       translations: translationsEnvelope.data,
     };
   });
 }
 
-async function loadTraderNames(gameMode: GameMode) {
-  return loadDerived<Map<string, string>>(`${gameMode}/trader-names`, async () => {
-    const [tradersEnvelope, translationsEnvelope] = await Promise.all([
-      loadResource<Dictionary<RawNamedEntity>>(gameMode, "traders"),
-      loadResource<TranslationDictionary>(gameMode, "traders_en"),
-    ]);
-    return new Map(
-      Object.entries(tradersEnvelope.data).map(([id, trader]) => [
+async function loadNames(gameMode: GameMode, resource: "traders" | "hideout") {
+  const [entitiesEnvelope, translationsEnvelope] = await Promise.all([
+    loadResource<Dictionary<RawNamedEntity>>(gameMode, resource),
+    loadResource<TranslationDictionary>(gameMode, `${resource}_en`),
+  ]);
+  return memo(`${gameMode}/${resource}-names`, [entitiesEnvelope, translationsEnvelope], () =>
+    new Map(
+      Object.entries(entitiesEnvelope.data).map(([id, entity]) => [
         id,
-        translate(trader.name, translationsEnvelope.data) || trader.normalizedName || id,
+        translate(entity.name, translationsEnvelope.data) || entity.normalizedName || id,
       ])
-    );
-  });
+    )
+  );
 }
 
-async function loadStationNames(gameMode: GameMode) {
-  return loadDerived<Map<string, string>>(`${gameMode}/station-names`, async () => {
-    const [stationsEnvelope, translationsEnvelope] = await Promise.all([
-      loadResource<Dictionary<RawNamedEntity>>(gameMode, "hideout"),
-      loadResource<TranslationDictionary>(gameMode, "hideout_en"),
-    ]);
-    return new Map(
-      Object.entries(stationsEnvelope.data).map(([id, station]) => [
-        id,
-        translate(station.name, translationsEnvelope.data) || station.normalizedName || id,
-      ])
-    );
-  });
+function loadTraderNames(gameMode: GameMode) {
+  return loadNames(gameMode, "traders");
 }
 
-async function loadDerived<T>(key: string, loader: () => Promise<T>): Promise<T> {
-  const cached = derivedCache.get(key);
-  if (cached && cached.expiresAt > Date.now()) {
-    const result = await (cached.value as Promise<T>);
-    if (cached.stale) {
-      const currentContext = operationContext.getStore();
-      if (currentContext) currentContext.stale = true;
-    }
-    return result;
-  }
-  const loaderContext = operationContext.getStore();
-  const value = loader();
-  const entry: DerivedCacheEntry = { expiresAt: Number.POSITIVE_INFINITY, value };
-  derivedCache.set(key, entry);
-  try {
-    const result = await value;
-    if (derivedCache.get(key) === entry) {
-      entry.expiresAt = Date.now() + RESOURCE_TTL_MS;
-      entry.stale = Boolean(
-        loaderContext &&
-          (loaderContext.stale ||
-            Array.from(loaderContext.resources).some(
-              (resource) => (resource.lastStaleAt ?? 0) >= loaderContext.startedAt
-            ))
-      );
-    }
-    if (entry.stale) {
-      const currentContext = operationContext.getStore();
-      if (currentContext) currentContext.stale = true;
-    }
-    return result;
-  } catch (error) {
-    if (derivedCache.get(key) === entry) derivedCache.delete(key);
-    throw error;
-  }
+function loadStationNames(gameMode: GameMode) {
+  return loadNames(gameMode, "hideout");
 }
 
-async function loadArrayResource<T>(gameMode: GameMode, resource: "barters" | "crafts") {
-  const envelope = await loadResource<T[]>(gameMode, resource);
-  return Array.isArray(envelope.data) ? envelope.data : [];
-}
-
-async function loadResource<T>(gameMode: GameMode, resource: Resource) {
+async function loadResource<T>(
+  gameMode: GameMode,
+  resource: Resource
+): Promise<UpstreamEnvelope<T>> {
   const cacheKey = `${gameMode}/${resource}`;
-  const cached = resourceCache.get(cacheKey);
-  if (cached) operationContext.getStore()?.resources.add(cached);
-  const now = Date.now();
-  if (cached?.value && cached.expiresAt > now) {
-    return cached.value as UpstreamEnvelope<T>;
+  let entry = resourceCache.get(cacheKey);
+  if (!entry) {
+    entry = { fetchedAt: 0 };
+    resourceCache.set(cacheKey, entry);
   }
-  if (cached?.inFlight) return cached.inFlight as Promise<UpstreamEnvelope<T>>;
-
-  const entry: ResourceCacheEntry = cached ?? {
-    expiresAt: 0,
-    staleUntil: 0,
-  };
   operationContext.getStore()?.resources.add(entry);
-  const staleValue = entry.value;
-  const value = fetchResource<T>(gameMode, resource)
+
+  const age = Date.now() - entry.fetchedAt;
+  if (entry.value && age < RESOURCE_TTL_MS) return entry.value as UpstreamEnvelope<T>;
+  if (entry.value && age < RESOURCE_REVALIDATE_MS) {
+    void refreshResource(gameMode, resource, entry).catch(() => undefined);
+    return entry.value as UpstreamEnvelope<T>;
+  }
+  return refreshResource(gameMode, resource, entry) as Promise<UpstreamEnvelope<T>>;
+}
+
+function refreshResource(gameMode: GameMode, resource: Resource, entry: ResourceCacheEntry) {
+  if (entry.inFlight) return entry.inFlight;
+  const inFlight = fetchResource<unknown>(gameMode, resource)
     .then((result) => {
-      const completedAt = Date.now();
       entry.value = result;
-      entry.expiresAt = completedAt + RESOURCE_TTL_MS;
-      entry.staleUntil = completedAt + RESOURCE_TTL_MS + RESOURCE_STALE_MS;
-      entry.inFlight = undefined;
+      entry.fetchedAt = Date.now();
+      entry.failedAt = undefined;
       return result;
     })
-    .catch((error) => {
-      entry.inFlight = undefined;
-      if (staleValue && Date.now() <= entry.staleUntil) {
-        entry.lastStaleAt = Date.now();
+    .catch((error: unknown) => {
+      entry.failedAt = Date.now();
+      if (entry.value && Date.now() - entry.fetchedAt < RESOURCE_MAX_STALE_MS) {
         console.warn(`Serving stale Tarkov ${resource} data after refresh failed.`);
-        return staleValue as UpstreamEnvelope<T>;
+        return entry.value;
       }
-      if (resourceCache.get(cacheKey) === entry) resourceCache.delete(cacheKey);
       throw error;
+    })
+    .finally(() => {
+      entry.inFlight = undefined;
     });
-  entry.inFlight = value as Promise<UpstreamEnvelope<unknown>>;
-  resourceCache.set(cacheKey, entry);
-  return value;
+  entry.inFlight = inFlight;
+  return inFlight;
 }
 
 async function loadRelations(gameMode: GameMode): Promise<RelationsContext> {
-  return loadDerived(`${gameMode}/relations-context`, async () => {
-    const [barters, crafts] = await Promise.all([
-      loadArrayResource<RawBarter>(gameMode, "barters"),
-      loadArrayResource<RawCraft>(gameMode, "crafts"),
-    ]);
+  const [bartersEnvelope, craftsEnvelope] = await Promise.all([
+    loadResource<RawBarter[]>(gameMode, "barters"),
+    loadResource<RawCraft[]>(gameMode, "crafts"),
+  ]);
+  return memo(`${gameMode}/relations-context`, [bartersEnvelope, craftsEnvelope], () => {
     const bartersByItem = new Map<string, RawBarter[]>();
     const craftsByItem = new Map<string, RawCraft[]>();
-    for (const barter of barters) indexRelation(bartersByItem, barter.requiredItems, barter);
-    for (const craft of crafts) indexRelation(craftsByItem, craft.requiredItems, craft);
+    for (const barter of bartersEnvelope.data) indexRelation(bartersByItem, barter.requiredItems, barter);
+    for (const craft of craftsEnvelope.data) indexRelation(craftsByItem, craft.requiredItems, craft);
     return { bartersByItem, craftsByItem };
   });
 }
@@ -870,9 +915,17 @@ function isRawItemProperties(value: unknown): value is RawItemProperties {
       value.recoilVertical,
       value.recoilHorizontal,
       value.fireRate,
+      value.damage,
+      value.armorDamage,
+      value.penetrationPower,
+      value.fragmentationChance,
+      value.projectileCount,
+      value.initialSpeed,
+      value.accuracyModifier,
     ].every(optionalFiniteNumber) &&
     optionalStringArray(value.fireModes) &&
     optionalStringArray(value.presets) &&
+    optionalStringArray(value.allowedAmmo) &&
     optionalArray(value.slots, isRawSlot)
   );
 }
@@ -892,7 +945,8 @@ function isRawTraderOffer(value: unknown): value is RawTraderOffer {
   return (
     isRecord(value) &&
     optionalShortString(value.trader) &&
-    optionalFiniteNumber(value.priceRUB)
+    optionalFiniteNumber(value.priceRUB) &&
+    optionalFiniteNumber(value.minTraderLevel)
   );
 }
 
@@ -1137,19 +1191,26 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 export function projectItemCatalog(
   items: RawItem[],
   translations: TranslationDictionary
-): CatalogItem[] {
-  return items.flatMap((item) => {
-    if (!item.id || !item.normalizedName) return [];
-    return [
-      {
-        id: item.id,
-        normalizedName: item.normalizedName,
-        name: translate(item.name, translations),
-        shortName: translateNullable(item.shortName, translations),
-        gridImageLink: safeAssetUrl(item.gridImageLink),
-      },
-    ];
+): CatalogEntry[] {
+  return items.flatMap((item): CatalogEntry[] => {
+    if (!item.id) return [];
+    const name = translate(item.name, translations);
+    if (!name) return [];
+    return [[
+      item.id,
+      name,
+      translateNullable(item.shortName, translations),
+      catalogImage(item.id, item.gridImageLink),
+      item.normalizedName ?? null,
+    ]];
   });
+}
+
+function catalogImage(id: string, link: string | null | undefined): string | null {
+  const safe = safeAssetUrl(link);
+  if (!safe) return null;
+  const path = new URL(safe).pathname.slice(1);
+  return path === `${id}-grid-image.webp` ? "" : path;
 }
 
 function projectCachedItem(
@@ -1286,7 +1347,10 @@ function projectContainedItems(
     const item = itemById.get(entry.item);
     return [
       {
-        item: { name: item ? translate(item.name, translations) : entry.item },
+        item: {
+          name: item ? translate(item.name, translations) : entry.item,
+          normalizedName: item?.normalizedName ?? null,
+        },
         quantity: finiteNumber(entry.count) ?? 0,
       },
     ];
@@ -1368,7 +1432,7 @@ function projectBuildItem(
     shortName: translate(item.shortName, translations) || translate(item.name, translations),
     gridImageLink: safeAssetUrl(item.gridImageLink),
     weight: finiteNumber(item.weight) ?? 0,
-    traderPriceRUB: cheapestTraderPrice(item.buyFromTrader, traderNames),
+    ...traderDetails(item, traderNames),
     fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
     ergonomics: finiteNumber(properties?.ergonomics) ?? 0,
     recoilModifier: isWeapon ? 0 : finiteNumber(properties?.recoilModifier) ?? 0,
@@ -1390,6 +1454,37 @@ function projectBuildItem(
     conflictingItemIds: item.conflictingItems ?? [],
     conflictingSlotIds: item.conflictingSlotIds ?? [],
     slots: projectSlots(properties?.slots, translations),
+    allowedAmmoIds: (properties?.allowedAmmo ?? []).filter((id) => byIdHasAmmo(itemById, id)),
+  };
+}
+
+function byIdHasAmmo(itemById: Map<string, RawItem>, id: string) {
+  return itemById.get(id)?.properties?.propertiesType === "ItemPropertiesAmmo";
+}
+
+function projectAmmoItem(
+  item: RawItem,
+  translations: TranslationDictionary,
+  traderNames: Map<string, string>
+): AmmoItemData {
+  const properties = item.properties;
+  return {
+    id: item.id ?? "",
+    ...traderDetails(item, traderNames),
+    normalizedName: item.normalizedName ?? "",
+    name: translate(item.name, translations),
+    shortName: translate(item.shortName, translations) || translate(item.name, translations),
+    gridImageLink: safeAssetUrl(item.gridImageLink),
+    caliber: properties?.caliber ?? null,
+    damage: finiteNumber(properties?.damage) ?? 0,
+    penetrationPower: finiteNumber(properties?.penetrationPower) ?? 0,
+    armorDamage: finiteNumber(properties?.armorDamage) ?? 0,
+    fragmentationChance: finiteNumber(properties?.fragmentationChance) ?? 0,
+    projectileCount: positiveFiniteNumber(properties?.projectileCount) ?? 1,
+    initialSpeed: finiteNumber(properties?.initialSpeed),
+    recoilModifier: finiteNumber(properties?.recoilModifier) ?? 0,
+    accuracyModifier: finiteNumber(properties?.accuracyModifier) ?? 0,
+    fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
   };
 }
 
@@ -1404,7 +1499,7 @@ function projectPickItem(
     shortName: translate(item.shortName, translations) || translate(item.name, translations),
     gridImageLink: safeAssetUrl(item.gridImageLink),
     weight: finiteNumber(item.weight) ?? 0,
-    traderPriceRUB: cheapestTraderPrice(item.buyFromTrader, traderNames),
+    ...traderDetails(item, traderNames),
     fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
     ergonomics: finiteNumber(item.properties?.ergonomics) ?? 0,
     recoilModifier: finiteNumber(item.properties?.recoilModifier) ?? 0,
@@ -1431,12 +1526,20 @@ function projectSlots(
   });
 }
 
-function cheapestTraderPrice(
-  offers: RawTraderOffer[] | null | undefined,
-  traderNames: Map<string, string>
-) {
-  const prices = projectTraderPrices(offers, traderNames).map((offer) => offer.priceRUB);
-  return prices.length > 0 ? Math.min(...prices) : null;
+function traderDetails(item: RawItem, traderNames: Map<string, string>) {
+  let best: RawTraderOffer | null = null;
+  for (const offer of item.buyFromTrader ?? []) {
+    const price = finiteNumber(offer.priceRUB);
+    if (!offer.trader || price === null || price <= 0) continue;
+    if (!best || price < (best.priceRUB ?? Infinity)) best = offer;
+  }
+  const level = finiteNumber(best?.minTraderLevel);
+  return {
+    normalizedName: item.normalizedName ?? "",
+    traderPriceRUB: best ? finiteNumber(best.priceRUB) : null,
+    traderName: best?.trader ? (traderNames.get(best.trader) ?? best.trader) : null,
+    traderLevel: level !== null && Number.isInteger(level) && level >= 1 && level <= 10 ? level : null,
+  };
 }
 
 const EXTRACT_FACTIONS: ExtractFaction[] = ["pmc", "scav", "shared"];
@@ -1447,7 +1550,8 @@ function projectMap(
   translations: TranslationDictionary,
   lootContainerById: Dictionary<RawNamedEntity>,
   stationaryWeaponById: Dictionary<RawNamedEntity>,
-  itemNames: Map<string, string>
+  itemNames: Map<string, string>,
+  itemById: Map<string, RawItem>
 ): MapDetails {
   const spawns: MapSpawn[] = [];
   for (const spawn of raw.spawns ?? []) {
@@ -1500,6 +1604,7 @@ function projectMap(
               needsPower: Boolean(lock.needsPower),
               position: lock.position,
               keyName: (lock.key && itemNames.get(lock.key)) || null,
+              keyNormalizedName: (lock.key && itemById.get(lock.key)?.normalizedName) || null,
             },
           ]
         : []
@@ -1673,5 +1778,16 @@ function readStringList(value: unknown, name: string, maxItems: number) {
 
 export function clearTarkovResourceCache() {
   resourceCache.clear();
-  derivedCache.clear();
+  memoCache.clear();
+}
+
+export async function listItemSlugs(gameMode: GameMode = "regular") {
+  const context = await loadItems(gameMode);
+  return memo(`${gameMode}/slugs`, [context], () =>
+    Array.from(context.bySlug.keys()).filter((slug) => /^[a-z0-9][a-z0-9-]*$/.test(slug))
+  );
+}
+
+export async function warmTarkovCache(gameModes: GameMode[] = ["regular", "pve"]) {
+  await Promise.allSettled(gameModes.map((gameMode) => getItemCatalog(gameMode)));
 }

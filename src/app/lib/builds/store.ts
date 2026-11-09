@@ -1,183 +1,157 @@
-"use client";
-
-import type { BuildNode, GunBuild } from "@/app/lib/types/gunBuilder";
-import { readStore, subscribeStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
+import type { BuildNode, GunBuild, PriceSources } from "@/app/lib/types/gunBuilder";
+import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
+import { useStore } from "@/app/lib/storage/use-store";
 import { createId } from "@/app/lib/id";
-import {
-  MAX_BUILD_ID_LENGTH,
-  MAX_BUILD_NAME_LENGTH,
-  MAX_BUILD_TREE_DEPTH,
-  MAX_BUILD_TREE_NODES,
-  MAX_BUILDS,
-  MAX_SLOTS_PER_NODE,
-} from "./limits";
+import { isSafeTimestamp } from "@/app/lib/text-safety";
+import { MAX_BUILD_NAME_LENGTH, MAX_BUILDS } from "./limits";
+import { cloneTree, isBuildTree, isValidBuildId } from "./tree";
 
-const BUILD_STORE: StoreDefinition<GunBuild[]> = {
+export const BUILD_STORE: StoreDefinition<GunBuild[]> = {
   key: "eft-toolset:gun-builds",
   legacyKeys: ["gun-builds"],
-  version: 1,
+  version: 2,
   defaultValue: () => [],
   validate: isBuildList,
+  migrate: (value, version) => (version === 1 && isBuildList(value) ? value : undefined),
   recover: (value) =>
     Array.isArray(value) ? value.filter(isGunBuild).slice(0, MAX_BUILDS) : undefined,
 };
 
-function now() {
-  return Date.now();
+export const PRICE_SOURCE_STORE: StoreDefinition<PriceSources> = {
+  key: "eft-toolset:gun-builder:price-sources",
+  version: 1,
+  defaultValue: () => ({ traders: true, flea: true }),
+  validate: (value): value is PriceSources =>
+    Boolean(value) &&
+    typeof value === "object" &&
+    typeof (value as PriceSources).traders === "boolean" &&
+    typeof (value as PriceSources).flea === "boolean",
+};
+
+export const VIEW_STORE: StoreDefinition<{ hideEmpty: boolean }> = {
+  key: "eft-toolset:gun-builder:view",
+  version: 1,
+  defaultValue: () => ({ hideEmpty: false }),
+  validate: (value): value is { hideEmpty: boolean } =>
+    Boolean(value) &&
+    typeof value === "object" &&
+    typeof (value as { hideEmpty: unknown }).hideEmpty === "boolean",
+};
+
+export function useBuilderView() {
+  return useStore(VIEW_STORE);
 }
 
-function ensureBuilds(): GunBuild[] {
-  return readStore(BUILD_STORE);
+export function setHideEmptySlots(hideEmpty: boolean) {
+  writeStore(VIEW_STORE, { hideEmpty });
 }
 
-function writeBuilds(builds: GunBuild[]) {
-  writeStore(BUILD_STORE, builds);
+export function useBuilds() {
+  return useStore(BUILD_STORE);
 }
 
-export function listBuilds(): GunBuild[] {
-  return ensureBuilds().sort((a, b) => b.updatedAt - a.updatedAt);
+export function usePriceSources() {
+  return useStore(PRICE_SOURCE_STORE);
 }
 
-export function subscribeBuilds(listener: () => void) {
-  return subscribeStore(BUILD_STORE.key, listener);
+export function setPriceSources(sources: PriceSources) {
+  writeStore(PRICE_SOURCE_STORE, sources);
 }
 
-export function getBuild(id: string): GunBuild | undefined {
-  return ensureBuilds().find((build) => build.id === id);
+export function findBuild(builds: GunBuild[], id: string) {
+  return builds.find((build) => build.id === id);
 }
 
-export function createBuild(name: string, weaponId: string, root?: BuildNode): GunBuild {
-  const timestamp = now();
-  const build: GunBuild = {
-    id: createId(),
-    name,
-    weaponId,
-    root: root ? cloneNode(root) : { itemId: weaponId, slots: {} },
-    createdAt: timestamp,
-    updatedAt: timestamp,
-  };
+export function sortBuilds(builds: GunBuild[]) {
+  return builds.toSorted((a, b) => b.updatedAt - a.updatedAt);
+}
 
-  writeBuilds([...ensureBuilds(), build]);
+export function validBuildName(name: string) {
+  const trimmed = name.trim();
+  if (!trimmed) throw new Error("Enter a build name.");
+  if (trimmed.length > MAX_BUILD_NAME_LENGTH) {
+    throw new Error(`Build names can be at most ${MAX_BUILD_NAME_LENGTH} characters.`);
+  }
+  return trimmed;
+}
+
+function insert(build: GunBuild) {
+  const builds = readStore(BUILD_STORE);
+  if (builds.length >= MAX_BUILDS) {
+    throw new Error(`You can save at most ${MAX_BUILDS} builds. Delete one to make room.`);
+  }
+  writeStore(BUILD_STORE, [...builds, build]);
   return build;
 }
 
-export function importBuild(
+export function createBuild(
   name: string,
   weaponId: string,
-  root: BuildNode
+  root?: BuildNode,
+  ammoId?: string | null
 ): GunBuild {
-  const timestamp = now();
-  const build: GunBuild = {
+  const timestamp = Date.now();
+  return insert({
     id: createId(),
-    name,
+    name: validBuildName(name),
     weaponId,
-    root: cloneNode(root),
+    root: root && root.itemId === weaponId ? cloneTree(root) : { itemId: weaponId, slots: {} },
+    ...(ammoId && isValidBuildId(ammoId) ? { ammoId } : {}),
     createdAt: timestamp,
     updatedAt: timestamp,
-  };
-
-  writeBuilds([...ensureBuilds(), build]);
-  return build;
-}
-
-export function saveBuild(build: GunBuild): GunBuild {
-  const updated: GunBuild = { ...build, updatedAt: now() };
-  let found = false;
-  const builds = ensureBuilds().map((candidate) => {
-    if (candidate.id !== build.id) return candidate;
-    found = true;
-    return updated;
   });
-  if (!found) throw new Error("This build no longer exists in browser storage.");
-  writeBuilds(builds);
-  return updated;
 }
 
-export function renameBuild(id: string, name: string): GunBuild | undefined {
-  const build = getBuild(id);
-  if (!build) return undefined;
-  return saveBuild({ ...build, name });
+export function setBuildAmmo(id: string, ammoId: string | null) {
+  if (ammoId !== null && !isValidBuildId(ammoId)) throw new Error("That ammo type is not valid.");
+  return updateBuild(id, (build) => {
+    const next = { ...build };
+    if (ammoId) next.ammoId = ammoId;
+    else delete next.ammoId;
+    return next;
+  });
 }
 
-export function duplicateBuild(id: string): GunBuild | undefined {
-  const build = getBuild(id);
-  if (!build) return undefined;
+export function updateBuild(id: string, update: (build: GunBuild) => GunBuild): GunBuild {
+  const builds = readStore(BUILD_STORE);
+  const current = findBuild(builds, id);
+  if (!current) throw new Error("This build no longer exists in browser storage.");
+  const next: GunBuild = { ...update(current), id, updatedAt: Date.now() };
+  writeStore(
+    BUILD_STORE,
+    builds.map((build) => (build.id === id ? next : build))
+  );
+  return next;
+}
 
-  const timestamp = now();
-  const duplicate: GunBuild = {
+export function updateBuildTree(id: string, update: (root: BuildNode) => BuildNode) {
+  return updateBuild(id, (build) => ({ ...build, root: update(build.root) }));
+}
+
+export function renameBuild(id: string, name: string) {
+  const trimmed = validBuildName(name);
+  return updateBuild(id, (build) => ({ ...build, name: trimmed }));
+}
+
+export function duplicateBuild(id: string): GunBuild {
+  const build = findBuild(readStore(BUILD_STORE), id);
+  if (!build) throw new Error("This build no longer exists in browser storage.");
+  const timestamp = Date.now();
+  return insert({
     ...build,
     id: createId(),
     name: `${build.name.slice(0, MAX_BUILD_NAME_LENGTH - 5)} copy`,
-    root: cloneNode(build.root),
+    root: cloneTree(build.root),
     createdAt: timestamp,
     updatedAt: timestamp,
-  };
-
-  writeBuilds([...ensureBuilds(), duplicate]);
-  return duplicate;
+  });
 }
 
 export function deleteBuild(id: string) {
-  writeBuilds(ensureBuilds().filter((build) => build.id !== id));
-}
-
-function cloneNode(node: BuildNode): BuildNode {
-  return {
-    itemId: node.itemId,
-    slots: Object.fromEntries(
-      Object.entries(node.slots).map(([slotId, child]) => [
-        slotId,
-        cloneNode(child),
-      ])
-    ),
-  };
-}
-
-function updateAtPath(
-  node: BuildNode,
-  path: string[],
-  updater: (node: BuildNode) => BuildNode
-): BuildNode {
-  if (path.length === 0) return updater(node);
-  const [slotId, ...rest] = path;
-  const child = node.slots[slotId];
-  if (!child) return node;
-
-  return {
-    ...node,
-    slots: {
-      ...node.slots,
-      [slotId]: updateAtPath(child, rest, updater),
-    },
-  };
-}
-
-export function attachMod(
-  root: BuildNode,
-  path: string[],
-  slotId: string,
-  itemId: string
-): BuildNode {
-  return updateAtPath(root, path, (node) => ({
-    ...node,
-    slots: {
-      ...node.slots,
-      [slotId]: { itemId, slots: {} },
-    },
-  }));
-}
-
-export function removeMod(root: BuildNode, path: string[]): BuildNode {
-  if (path.length === 0) return root;
-
-  const parentPath = path.slice(0, -1);
-  const slotToRemove = path[path.length - 1];
-
-  return updateAtPath(root, parentPath, (node) => {
-    const nextSlots = { ...node.slots };
-    delete nextSlots[slotToRemove];
-    return { ...node, slots: nextSlots };
-  });
+  writeStore(
+    BUILD_STORE,
+    readStore(BUILD_STORE).filter((build) => build.id !== id)
+  );
 }
 
 function isBuildList(value: unknown): value is GunBuild[] {
@@ -188,38 +162,14 @@ function isGunBuild(value: unknown): value is GunBuild {
   if (!value || typeof value !== "object") return false;
   const build = value as Partial<GunBuild>;
   return (
-    typeof build.id === "string" &&
-    build.id.length > 0 &&
-    build.id.length <= MAX_BUILD_ID_LENGTH &&
+    isValidBuildId(build.id) &&
     typeof build.name === "string" &&
     build.name.length <= MAX_BUILD_NAME_LENGTH &&
-    typeof build.weaponId === "string" &&
-    build.weaponId.length > 0 &&
-    build.weaponId.length <= MAX_BUILD_ID_LENGTH &&
-    typeof build.createdAt === "number" &&
-    Number.isFinite(build.createdAt) &&
-    typeof build.updatedAt === "number" &&
-    Number.isFinite(build.updatedAt) &&
-    isBuildNode(build.root) &&
-    build.root.itemId === build.weaponId
+    isValidBuildId(build.weaponId) &&
+    isSafeTimestamp(build.createdAt) &&
+    isSafeTimestamp(build.updatedAt) &&
+    isBuildTree(build.root) &&
+    build.root.itemId === build.weaponId &&
+    (build.ammoId === undefined || isValidBuildId(build.ammoId))
   );
-}
-
-function isBuildNode(value: unknown): value is BuildNode {
-  const stack: { node: unknown; depth: number }[] = [{ node: value, depth: 0 }];
-  let count = 0;
-  while (stack.length > 0) {
-    const { node, depth } = stack.pop()!;
-    count += 1;
-    if (count > MAX_BUILD_TREE_NODES || depth > MAX_BUILD_TREE_DEPTH || !node || typeof node !== "object" || Array.isArray(node)) return false;
-    const candidate = node as Partial<BuildNode>;
-    if (typeof candidate.itemId !== "string" || !candidate.itemId || candidate.itemId.length > MAX_BUILD_ID_LENGTH || !candidate.slots || typeof candidate.slots !== "object" || Array.isArray(candidate.slots)) {
-      return false;
-    }
-    const children = Object.values(candidate.slots);
-    const entries = Object.entries(candidate.slots);
-    if (children.length > MAX_SLOTS_PER_NODE || entries.some(([slotId]) => !slotId || slotId.length > MAX_BUILD_ID_LENGTH)) return false;
-    for (const child of children) stack.push({ node: child, depth: depth + 1 });
-  }
-  return true;
 }

@@ -4,13 +4,13 @@ import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { GameModeProvider, useGameMode } from "@/components/game-mode/context";
 
 function Probe() {
-  const { gameMode, hydrated, toggleGameMode } = useGameMode();
+  const { gameMode, hydrated, setGameMode } = useGameMode();
   return (
     <button
       type="button"
       data-mode={gameMode}
       data-hydrated={String(hydrated)}
-      onClick={toggleGameMode}
+      onClick={() => setGameMode(gameMode === "pve" ? "regular" : "pve")}
     >
       Toggle
     </button>

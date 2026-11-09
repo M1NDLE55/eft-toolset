@@ -1,13 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useEffectEvent, useRef } from "react";
 import L from "leaflet";
-import type { MapConfig, PlanTool, RaidPlan } from "@/app/lib/raid-planner/types";
+import type { GamePoint, MapConfig, PlanTool, RaidPlan } from "@/app/lib/raid-planner/types";
 import type { MapDetails } from "@/app/lib/types/raidPlanner";
 import { latLngToGame } from "@/app/lib/raid-planner/coords";
 import { simplifyPoints } from "@/app/lib/raid-planner/simplify";
 import { buildPlanLayers } from "@/app/lib/raid-planner/plan-layers";
-import { MapCanvas } from "./map-canvas";
 import { createId } from "@/app/lib/id";
 import {
   MAX_DRAWINGS,
@@ -16,6 +15,7 @@ import {
   MAX_ROUTE_POINTS,
   MAX_TOTAL_DRAWING_POINTS,
 } from "@/app/lib/raid-planner/limits";
+import { MapCanvas } from "./map-canvas";
 
 const PEN_TOLERANCE_METERS = 0.5;
 const MIN_ARROW_METERS = 2;
@@ -27,19 +27,23 @@ const MEASURE_STYLE = {
   interactive: false,
 } as const;
 
-interface PlanEditorCanvasProps {
+type PlanUpdater = (plan: RaidPlan) => RaidPlan;
+
+interface PlanOverlayProps {
+  plan: RaidPlan;
+  tool?: PlanTool;
+  color?: string;
+  interactive?: boolean;
+  onPlanChange?: (updater: PlanUpdater) => void;
+  onSelectNote?: (id: string | null) => void;
+  onLimitError?: (message: string) => void;
+}
+
+interface PlanEditorCanvasProps extends PlanOverlayProps {
   config: MapConfig;
   activeFloor: string | null;
   details: MapDetails | null;
   enabledLayers: string[];
-  plan: RaidPlan;
-  tool: PlanTool;
-  color: string;
-  /** false renders the plan read-only (share preview): no tools, no dragging. */
-  interactive?: boolean;
-  onPlanChange: (updater: (plan: RaidPlan) => RaidPlan) => void;
-  onSelectNote: (id: string | null) => void;
-  onLimitError?: (message: string) => void;
 }
 
 interface Measurement {
@@ -53,179 +57,125 @@ export function PlanEditorCanvas({
   activeFloor,
   details,
   enabledLayers,
+  ...overlay
+}: PlanEditorCanvasProps) {
+  return (
+    <MapCanvas config={config} activeFloor={activeFloor} details={details} enabledLayers={enabledLayers}>
+      {(map) => <PlanOverlay map={map} {...overlay} />}
+    </MapCanvas>
+  );
+}
+
+function PlanOverlay({
+  map,
   plan,
-  tool,
-  color,
-  interactive = true,
+  tool = "select",
+  color = "#c8b384",
+  interactive = false,
   onPlanChange,
   onSelectNote,
   onLimitError,
-}: PlanEditorCanvasProps) {
-  const [map, setMap] = useState<L.Map | null>(null);
-  const planGroupRef = useRef<L.LayerGroup | null>(null);
+}: PlanOverlayProps & { map: L.Map }) {
   const measureRef = useRef<Measurement>({ start: null, line: null, label: null });
 
-  // Live refs so leaflet handlers (bound once) always see current values.
-  const toolRef = useRef(tool);
-  toolRef.current = tool;
-  const colorRef = useRef(color);
-  colorRef.current = color;
-  const onPlanChangeRef = useRef(onPlanChange);
-  onPlanChangeRef.current = onPlanChange;
-  const onSelectNoteRef = useRef(onSelectNote);
-  const onLimitErrorRef = useRef(onLimitError);
-  const planRef = useRef(plan);
-  onSelectNoteRef.current = onSelectNote;
-  onLimitErrorRef.current = onLimitError;
-  planRef.current = plan;
+  const current = useEffectEvent(() => ({ tool, color, plan }));
+  const change = useEffectEvent((updater: PlanUpdater) => onPlanChange?.(updater));
+  const selectNote = useEffectEvent((id: string | null) => onSelectNote?.(id));
+  const reportLimit = useEffectEvent((message: string) => onLimitError?.(message));
 
-  // Tool-dependent map behavior: freehand tools own the pointer.
   useEffect(() => {
-    if (!map || !interactive) return;
+    if (!interactive) return;
     const container = map.getContainer();
     const drawing = tool === "pen" || tool === "arrow";
-
     if (drawing) map.dragging.disable();
     else map.dragging.enable();
-
     container.classList.toggle("rp-touch-draw", drawing);
     container.classList.toggle(
       "rp-cursor-crosshair",
       drawing || tool === "route" || tool === "note" || tool === "measure"
     );
     container.classList.toggle("rp-cursor-eraser", tool === "eraser");
-
-    if (tool !== "measure") clearMeasurement(map, measureRef.current);
-
+    const measurement = measureRef.current;
     return () => {
-      container.classList.remove(
-        "rp-touch-draw",
-        "rp-cursor-crosshair",
-        "rp-cursor-eraser"
-      );
+      clearMeasurement(map, measurement);
+      container.classList.remove("rp-touch-draw", "rp-cursor-crosshair", "rp-cursor-eraser");
     };
   }, [map, tool, interactive]);
 
-  // Freehand sketching via pointer events so mouse and touch behave alike.
   useEffect(() => {
-    if (!map || !interactive) return;
+    if (!interactive) return;
     const container = map.getContainer();
+    const measurement = measureRef.current;
 
     let pointerId: number | null = null;
     let stroke: L.LatLng[] | null = null;
     let arrowStart: L.LatLng | null = null;
     let tempLine: L.Polyline | null = null;
 
-    const toLatLng = (event: PointerEvent) =>
-      map.mouseEventToLatLng(event as unknown as MouseEvent);
+    const toLatLng = (event: PointerEvent) => map.mouseEventToLatLng(event);
 
-    const clearTemp = () => {
-      tempLine?.removeFrom(map);
+    const reset = () => {
+      tempLine?.remove();
       tempLine = null;
       stroke = null;
       arrowStart = null;
       pointerId = null;
     };
 
-    const commitPen = () => {
-      if (!stroke) return clearTemp();
-      const points = simplifyPoints(
-        stroke.map((latlng) => latLngToGame(latlng)),
-        PEN_TOLERANCE_METERS
-      );
-      if (points.length >= 2) {
-        const currentPlan = planRef.current;
-        const totalPoints = currentPlan.drawings.reduce(
-          (total, drawing) => total + drawing.points.length,
-          0
-        );
-        if (
-          points.length > MAX_POINTS_PER_DRAWING ||
-          currentPlan.drawings.length >= MAX_DRAWINGS ||
-          totalPoints + points.length > MAX_TOTAL_DRAWING_POINTS
-        ) {
-          onLimitErrorRef.current?.("This plan has reached its drawing limit.");
-          return clearTemp();
-        }
-        const drawingColor = colorRef.current;
-        onPlanChangeRef.current((current) => ({
-          ...current,
-          drawings: [
-            ...current.drawings,
-            { id: createId(), kind: "pen", color: drawingColor, points },
-          ],
-        }));
+    const addDrawing = (kind: "pen" | "arrow", points: GamePoint[]) => {
+      const { plan: latest, color: drawingColor } = current();
+      const totalPoints = latest.drawings.reduce((total, entry) => total + entry.points.length, 0);
+      if (
+        points.length > MAX_POINTS_PER_DRAWING ||
+        latest.drawings.length >= MAX_DRAWINGS ||
+        totalPoints + points.length > MAX_TOTAL_DRAWING_POINTS
+      ) {
+        reportLimit("This plan has reached its drawing limit.");
+        return;
       }
-      clearTemp();
+      change((plan) => ({
+        ...plan,
+        drawings: [...plan.drawings, { id: createId(), kind, color: drawingColor, points }],
+      }));
     };
 
-    const commitArrow = (end: L.LatLng) => {
-      if (!arrowStart) return clearTemp();
-      const from = latLngToGame(arrowStart);
-      const to = latLngToGame(end);
-      if (Math.hypot(to.x - from.x, to.z - from.z) >= MIN_ARROW_METERS) {
-        const currentPlan = planRef.current;
-        const totalPoints = currentPlan.drawings.reduce(
-          (total, drawing) => total + drawing.points.length,
-          0
-        );
-        if (
-          currentPlan.drawings.length >= MAX_DRAWINGS ||
-          totalPoints + 2 > MAX_TOTAL_DRAWING_POINTS
-        ) {
-          onLimitErrorRef.current?.("This plan has reached its drawing limit.");
-          return clearTemp();
-        }
-        const drawingColor = colorRef.current;
-        onPlanChangeRef.current((current) => ({
-          ...current,
-          drawings: [
-            ...current.drawings,
-            {
-              id: createId(),
-              kind: "arrow",
-              color: drawingColor,
-              points: [from, to],
-            },
-          ],
-        }));
+    const finish = (end: L.LatLng) => {
+      if (stroke) {
+        const points = simplifyPoints(stroke.map(latLngToGame), PEN_TOLERANCE_METERS);
+        if (points.length >= 2) addDrawing("pen", points);
+      } else if (arrowStart) {
+        const from = latLngToGame(arrowStart);
+        const to = latLngToGame(end);
+        if (Math.hypot(to.x - from.x, to.z - from.z) >= MIN_ARROW_METERS) addDrawing("arrow", [from, to]);
       }
-      clearTemp();
+      reset();
     };
 
     const handlePointerDown = (event: PointerEvent) => {
-      const activeTool = toolRef.current;
+      const { tool: activeTool, color: drawingColor } = current();
       if (activeTool !== "pen" && activeTool !== "arrow") return;
-      if (
-        event.target instanceof Element &&
-        event.target.closest(".leaflet-marker-icon")
-      ) {
-        return; // marker drags win over sketching
-      }
-      if (pointerId !== null) {
-        // A second finger means a pinch gesture, not a stroke.
-        clearTemp();
+      if (event.target instanceof Element && event.target.closest(".leaflet-marker-icon, .leaflet-control")) {
         return;
       }
-
+      if (pointerId !== null) {
+        reset();
+        return;
+      }
+      if (event.pointerType === "mouse" && event.button !== 0) return;
       event.preventDefault();
       pointerId = event.pointerId;
       const latlng = toLatLng(event);
-
       if (activeTool === "pen") {
         stroke = [latlng];
-        tempLine = L.polyline([latlng], {
-          color: colorRef.current,
-          weight: 3,
-          opacity: 1,
-        }).addTo(map);
+        tempLine = L.polyline([latlng], { color: drawingColor, weight: 3, opacity: 1, interactive: false }).addTo(map);
       } else {
         arrowStart = latlng;
         tempLine = L.polyline([latlng, latlng], {
-          color: colorRef.current,
+          color: drawingColor,
           weight: 3,
           opacity: 1,
           dashArray: "4 4",
+          interactive: false,
         }).addTo(map);
       }
     };
@@ -242,141 +192,112 @@ export function PlanEditorCanvas({
     };
 
     const handlePointerUp = (event: PointerEvent) => {
-      if (event.pointerId !== pointerId) return;
-      if (stroke) commitPen();
-      else if (arrowStart) commitArrow(toLatLng(event));
+      if (event.pointerId === pointerId) finish(toLatLng(event));
     };
 
     const handlePointerCancel = (event: PointerEvent) => {
-      if (event.pointerId === pointerId) clearTemp();
+      if (event.pointerId === pointerId) reset();
     };
 
-    // Clicks stay on the leaflet map so taps work like clicks.
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      reset();
+      clearMeasurement(map, measurement);
+    };
+
     const handleClick = (event: L.LeafletMouseEvent) => {
-      const activeTool = toolRef.current;
+      const { tool: activeTool, color: noteColor, plan: latest } = current();
       if (activeTool === "route") {
-        if (planRef.current.route.length >= MAX_ROUTE_POINTS) {
-          onLimitErrorRef.current?.("This plan has reached its route-point limit.");
+        if (latest.route.length >= MAX_ROUTE_POINTS) {
+          reportLimit("This plan has reached its route-point limit.");
           return;
         }
         const position = latLngToGame(event.latlng);
-        onPlanChangeRef.current((current) => ({
-          ...current,
-          route: [...current.route, { id: createId(), position }],
-        }));
+        change((plan) => ({ ...plan, route: [...plan.route, { id: createId(), position }] }));
       } else if (activeTool === "note") {
-        if (planRef.current.notes.length >= MAX_NOTES) {
-          onLimitErrorRef.current?.("This plan has reached its note limit.");
+        if (latest.notes.length >= MAX_NOTES) {
+          reportLimit("This plan has reached its note limit.");
           return;
         }
         const position = latLngToGame(event.latlng);
         const id = createId();
-        const noteColor = colorRef.current;
-        onPlanChangeRef.current((current) => ({
-          ...current,
-          notes: [
-            ...current.notes,
-            { id, position, title: "", body: "", color: noteColor },
-          ],
+        change((plan) => ({
+          ...plan,
+          notes: [...plan.notes, { id, position, title: "", body: "", color: noteColor }],
         }));
-        onSelectNoteRef.current(id);
+        selectNote(id);
       } else if (activeTool === "measure") {
-        handleMeasureClick(map, measureRef.current, event.latlng);
+        handleMeasureClick(map, measurement, event.latlng);
       } else if (activeTool === "select") {
-        onSelectNoteRef.current(null);
+        selectNote(null);
       }
     };
 
     const handleMapMouseMove = (event: L.LeafletMouseEvent) => {
-      if (toolRef.current === "measure") {
-        updateMeasurement(measureRef.current, event.latlng);
-      }
+      if (current().tool === "measure") updateMeasurement(measurement, event.latlng);
     };
 
     container.addEventListener("pointerdown", handlePointerDown);
+    container.addEventListener("pointercancel", handlePointerCancel);
     window.addEventListener("pointermove", handlePointerMove);
     window.addEventListener("pointerup", handlePointerUp);
-    container.addEventListener("pointercancel", handlePointerCancel);
+    window.addEventListener("keydown", handleKeyDown);
     map.on("click", handleClick);
     map.on("mousemove", handleMapMouseMove);
 
     return () => {
       container.removeEventListener("pointerdown", handlePointerDown);
+      container.removeEventListener("pointercancel", handlePointerCancel);
       window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("pointerup", handlePointerUp);
-      container.removeEventListener("pointercancel", handlePointerCancel);
+      window.removeEventListener("keydown", handleKeyDown);
       map.off("click", handleClick);
       map.off("mousemove", handleMapMouseMove);
-      clearTemp();
+      reset();
     };
   }, [map, interactive]);
 
-  // Sync plan geometry.
   useEffect(() => {
-    if (!map) return;
-
-    planGroupRef.current?.removeFrom(map);
-    planGroupRef.current = buildPlanLayers(map, plan, {
-      draggable: interactive,
+    const group = buildPlanLayers(map, plan, {
+      editable: interactive,
       onWaypointClick: (id) => {
-        if (toolRef.current !== "eraser") return;
-        onPlanChangeRef.current((current) => ({
-          ...current,
-          route: current.route.filter((waypoint) => waypoint.id !== id),
-        }));
+        if (current().tool !== "eraser") return;
+        change((latest) => ({ ...latest, route: latest.route.filter((waypoint) => waypoint.id !== id) }));
       },
       onDrawingClick: (id) => {
-        if (toolRef.current !== "eraser") return;
-        onPlanChangeRef.current((current) => ({
-          ...current,
-          drawings: current.drawings.filter((drawing) => drawing.id !== id),
+        if (current().tool !== "eraser") return;
+        change((latest) => ({
+          ...latest,
+          drawings: latest.drawings.filter((drawing) => drawing.id !== id),
         }));
       },
       onNoteClick: (id) => {
-        if (toolRef.current === "eraser") {
-          onSelectNoteRef.current(null);
-          onPlanChangeRef.current((current) => ({
-            ...current,
-            notes: current.notes.filter((note) => note.id !== id),
-          }));
-        } else {
-          onSelectNoteRef.current(id);
+        if (current().tool !== "eraser") {
+          selectNote(id);
+          return;
         }
+        selectNote(null);
+        change((latest) => ({ ...latest, notes: latest.notes.filter((note) => note.id !== id) }));
       },
       onWaypointMove: (id, position) => {
-        onPlanChangeRef.current((current) => ({
-          ...current,
-          route: current.route.map((waypoint) =>
-            waypoint.id === id ? { ...waypoint, position } : waypoint
-          ),
+        change((latest) => ({
+          ...latest,
+          route: latest.route.map((waypoint) => (waypoint.id === id ? { ...waypoint, position } : waypoint)),
         }));
       },
       onNoteMove: (id, position) => {
-        onPlanChangeRef.current((current) => ({
-          ...current,
-          notes: current.notes.map((note) =>
-            note.id === id ? { ...note, position } : note
-          ),
+        change((latest) => ({
+          ...latest,
+          notes: latest.notes.map((note) => (note.id === id ? { ...note, position } : note)),
         }));
       },
-    });
-    planGroupRef.current.addTo(map);
-
+    }).addTo(map);
     return () => {
-      planGroupRef.current?.removeFrom(map);
-      planGroupRef.current = null;
+      group.remove();
     };
   }, [map, plan, interactive]);
 
-  return (
-    <MapCanvas
-      config={config}
-      activeFloor={activeFloor}
-      details={details}
-      enabledLayers={enabledLayers}
-      onReady={setMap}
-    />
-  );
+  return null;
 }
 
 function measureText(from: L.LatLng, to: L.LatLng) {
@@ -393,23 +314,18 @@ function clearMeasurement(map: L.Map, measurement: Measurement) {
   measurement.label = null;
 }
 
-function handleMeasureClick(
-  map: L.Map,
-  measurement: Measurement,
-  latlng: L.LatLng
-) {
+function handleMeasureClick(map: L.Map, measurement: Measurement, latlng: L.LatLng) {
   if (measurement.start) {
-    // Second click freezes the measurement until the next one starts.
     updateMeasurement(measurement, latlng);
     measurement.start = null;
     return;
   }
-
   clearMeasurement(map, measurement);
   measurement.start = latlng;
   measurement.line = L.polyline([latlng, latlng], MEASURE_STYLE).addTo(map);
   measurement.label = L.marker(latlng, {
     interactive: false,
+    keyboard: false,
     icon: L.divIcon({
       className: "rp-glyph-wrap",
       html: `<div class="rp-measure-label">0 m</div>`,
@@ -421,11 +337,8 @@ function handleMeasureClick(
 function updateMeasurement(measurement: Measurement, latlng: L.LatLng) {
   const { start, line, label } = measurement;
   if (!start || !line || !label) return;
-
   line.setLatLngs([start, latlng]);
-  label.setLatLng(
-    L.latLng((start.lat + latlng.lat) / 2, (start.lng + latlng.lng) / 2)
-  );
-  const el = label.getElement()?.querySelector(".rp-measure-label");
-  if (el) el.textContent = measureText(start, latlng);
+  label.setLatLng(L.latLng((start.lat + latlng.lat) / 2, (start.lng + latlng.lng) / 2));
+  const element = label.getElement()?.querySelector(".rp-measure-label");
+  if (element) element.textContent = measureText(start, latlng);
 }

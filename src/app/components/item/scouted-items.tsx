@@ -1,62 +1,86 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { customEncodeURI } from "@/app/lib/URIEncoding";
+import { useState } from "react";
 import { PanelLeftClose, PanelLeftOpen } from "lucide-react";
+import { itemHref } from "@/app/lib/item-links";
+import { useHydrated } from "@/app/lib/storage/use-store";
 import {
-  getScoutedCollapsed,
-  listScoutedItems,
+  clearScoutedItems,
   setScoutedCollapsed,
-  subscribeScoutedItems,
+  useScoutedCollapsed,
+  useScoutedItems,
   type ScoutedItem,
 } from "@/app/lib/scouted-items/store";
 
-export { addScoutedItem } from "@/app/lib/scouted-items/store";
+function ScoutedLink({ item, compact = false }: { item: ScoutedItem; compact?: boolean }) {
+  return (
+    <Link
+      href={itemHref(item)}
+      className={
+        compact
+          ? "flex min-w-0 items-center gap-2 border border-[#1a1a1a] bg-[#0c0c0c] p-2 transition-colors hover:border-[#9a8866]"
+          : "group flex items-center gap-2.5 px-3 py-2 transition-colors hover:bg-[#111]"
+      }
+    >
+      {item.gridImageLink ? (
+        <Image src={item.gridImageLink} alt="" width={28} height={28} className="h-7 w-7 shrink-0 object-contain" />
+      ) : (
+        <span className="h-7 w-7 shrink-0 bg-[#151515]" />
+      )}
+      <span className="truncate text-xs text-[#aaa] transition-colors group-hover:text-[#ddd]">{item.name}</span>
+    </Link>
+  );
+}
+
+export function RecentItems() {
+  const items = useScoutedItems();
+  const hydrated = useHydrated();
+  if (!hydrated || items.length === 0) return null;
+  return (
+    <section aria-labelledby="recent-items" className="flex flex-col gap-2 lg:hidden">
+      <h2 id="recent-items" className="text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">
+        Recently viewed
+      </h2>
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+        {items.slice(0, 8).map((item) => (
+          <ScoutedLink key={item.name} item={item} compact />
+        ))}
+      </div>
+    </section>
+  );
+}
 
 export default function ScoutedSidebar() {
-  const [items, setItems] = useState<ScoutedItem[]>([]);
-  const [collapsed, setCollapsed] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const items = useScoutedItems();
+  const collapsed = useScoutedCollapsed();
+  const hydrated = useHydrated();
   const [storageError, setStorageError] = useState("");
 
-  useEffect(() => {
-    setItems(listScoutedItems());
-    setCollapsed(getScoutedCollapsed());
-    setMounted(true);
-    return subscribeScoutedItems(() => setItems(listScoutedItems()));
-  }, []);
-
   const toggleCollapsed = () => {
-    const next = !collapsed;
-    setCollapsed(next);
     try {
-      setScoutedCollapsed(next);
+      setScoutedCollapsed(!collapsed);
       setStorageError("");
     } catch (reason) {
       setStorageError(reason instanceof Error ? reason.message : "Could not save sidebar settings.");
     }
   };
 
-  if (!mounted) return <div className="w-56 shrink-0 self-stretch" />;
+  if (!hydrated) return <div className="w-56 shrink-0 self-stretch border-r border-[#1a1a1a] bg-[#070707]" />;
 
   if (collapsed) {
     return (
-      <aside className="shrink-0 self-stretch border-r border-[#1a1a1a] bg-[#070707]">
+      <aside aria-label="Recently viewed items" className="shrink-0 self-stretch border-r border-[#1a1a1a] bg-[#070707]">
         <div className="sticky top-0 p-2">
-          {storageError && (
-            <span role="alert" title={storageError} className="block text-center text-xs font-bold text-red-300">
-              !<span className="sr-only"> Sidebar setting not saved</span>
-            </span>
-          )}
           <button
             type="button"
             onClick={toggleCollapsed}
-            className="p-2 text-zinc-500 hover:text-zinc-300 transition-colors"
+            className="flex h-9 w-9 items-center justify-center text-[#777] transition-colors hover:text-[#ccc]"
+            aria-label="Expand recently viewed items"
             title="Expand sidebar"
           >
-            <PanelLeftOpen className="w-4 h-4" />
+            <PanelLeftOpen className="h-4 w-4" />
           </button>
         </div>
       </aside>
@@ -64,50 +88,37 @@ export default function ScoutedSidebar() {
   }
 
   return (
-    <aside className="w-56 shrink-0 self-stretch border-r border-[#1a1a1a] bg-[#070707]">
+    <aside aria-label="Recently viewed items" className="w-56 shrink-0 self-stretch border-r border-[#1a1a1a] bg-[#070707]">
       <div className="sticky top-0 flex flex-col">
-        {storageError && <p role="alert" className="px-3 pt-2 text-[10px] text-red-300">Not saved</p>}
-        <div className="flex items-center justify-between px-3 py-3 border-b border-[#1a1a1a]">
-          <h2 className="text-[10px] uppercase tracking-widest text-[#9a8866] font-semibold">
-            Scouted
-          </h2>
-          <button
-            type="button"
-            onClick={toggleCollapsed}
-            className="p-1 text-zinc-500 hover:text-zinc-300 transition-colors"
-            title="Collapse sidebar"
-          >
-            <PanelLeftClose className="w-4 h-4" />
-          </button>
-        </div>
-        <div className="flex flex-col py-1 overflow-y-auto max-h-[calc(100vh-8rem)]">
-          {items.length === 0 ? (
-            <p className="text-[11px] text-zinc-400 px-3 py-4">
-              Viewed items will appear here
-            </p>
-          ) : (
-            items.map((item) => (
-              <Link
-                key={item.name}
-                href={`/item/${customEncodeURI(item.name)}`}
-                className="flex items-center gap-2.5 px-3 py-2 hover:bg-[#111] transition-colors group"
+        <div className="flex items-center justify-between border-b border-[#1a1a1a] px-3 py-2">
+          <h2 className="text-[10px] font-semibold uppercase tracking-widest text-[#9a8866]">Recently viewed</h2>
+          <div className="flex items-center">
+            {items.length > 0 && (
+              <button
+                type="button"
+                onClick={() => clearScoutedItems()}
+                className="px-2 py-2 text-[10px] uppercase tracking-widest text-[#777] hover:text-[#ccc]"
               >
-                {item.gridImageLink ? (
-                  <Image
-                    src={item.gridImageLink}
-                    alt={item.name}
-                    width={28}
-                    height={28}
-                    className="object-contain shrink-0"
-                  />
-                ) : (
-                  <div className="w-7 h-7 bg-zinc-800 shrink-0" />
-                )}
-                <span className="text-xs text-zinc-400 group-hover:text-zinc-200 truncate transition-colors">
-                  {item.name}
-                </span>
-              </Link>
-            ))
+                Clear
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={toggleCollapsed}
+              className="flex h-9 w-9 items-center justify-center text-[#777] transition-colors hover:text-[#ccc]"
+              aria-label="Collapse recently viewed items"
+              title="Collapse sidebar"
+            >
+              <PanelLeftClose className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+        {storageError && <p role="alert" className="px-3 pt-2 text-[10px] text-red-300">{storageError}</p>}
+        <div className="flex max-h-[calc(100dvh-8rem)] flex-col overflow-y-auto py-1">
+          {items.length === 0 ? (
+            <p className="px-3 py-4 text-[11px] text-[#888]">Items you open will appear here.</p>
+          ) : (
+            items.map((item) => <ScoutedLink key={item.name} item={item} />)
           )}
         </div>
       </div>

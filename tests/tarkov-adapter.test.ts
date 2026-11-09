@@ -24,7 +24,10 @@ const fixtures: Record<string, unknown> = {
           avg24hPrice: 55_000,
           changeLast48hPercent: 5,
           types: ["gun"],
-          buyFromTrader: [{ trader: "trader", priceRUB: 40_000 }],
+          buyFromTrader: [
+            { trader: "trader", priceRUB: 45_000, minTraderLevel: 1 },
+            { trader: "trader", priceRUB: 40_000, minTraderLevel: 3 },
+          ],
           sellToTrader: [{ trader: "trader", priceRUB: 20_000 }],
           properties: {
             propertiesType: "ItemPropertiesWeapon",
@@ -34,6 +37,7 @@ const fixtures: Record<string, unknown> = {
             fireRate: 700,
             fireModes: ["single"],
             defaultAmmo: "ammo",
+            allowedAmmo: ["ammo", "mod"],
             defaultPreset: "preset",
             presets: ["preset"],
             slots: [
@@ -63,13 +67,19 @@ const fixtures: Record<string, unknown> = {
             recoilModifier: -0.05,
           },
         },
-        ammo: { id: "ammo", name: "ammo-name", normalizedName: "test-ammo" },
+        ammo: {
+          id: "ammo",
+          name: "ammo-name",
+          normalizedName: "test-ammo",
+          buyFromTrader: [{ trader: "trader", priceRUB: 150, minTraderLevel: 2 }],
+          properties: { propertiesType: "ItemPropertiesAmmo", caliber: "Caliber556x45NATO", damage: 54, penetrationPower: 31, armorDamage: 37, fragmentationChance: 0.5, initialSpeed: 922 },
+        },
         preset: {
           id: "preset",
           name: "preset-name",
           normalizedName: "test-preset",
           properties: { propertiesType: "ItemPropertiesPreset", baseItem: "weapon" },
-          containsItems: [{ item: "weapon", count: 1 }, { item: "mod", count: 1 }],
+          containsItems: [{ item: "weapon", count: 1 }, { item: "mod", count: 2 }],
         },
         reward: { id: "reward", name: "reward-name", normalizedName: "reward" },
         key: { id: "key", name: "key-name", normalizedName: "test-key" },
@@ -233,7 +243,7 @@ describe("Tarkov JSON adapter", () => {
       const initial = await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, {
         gameMode: "regular",
       });
-      vi.advanceTimersByTime(5 * 60_000 + 1);
+      vi.advanceTimersByTime(31 * 60_000);
       vi.mocked(globalThis.fetch).mockRejectedValue(new Error("offline"));
       const onStale = vi.fn();
       const secondOnStale = vi.fn();
@@ -256,17 +266,92 @@ describe("Tarkov JSON adapter", () => {
     }
   });
 
+  it("revalidates in the background without making callers wait", async () => {
+    vi.useFakeTimers();
+    try {
+      const initial = await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" });
+      vi.advanceTimersByTime(10 * 60_000);
+      let release: (() => void) | undefined;
+      vi.mocked(globalThis.fetch).mockImplementation(
+        () => new Promise((resolve) => {
+          release = () => resolve(new Response("{}", { status: 500 }));
+        })
+      );
+      const onStale = vi.fn();
+      await expect(
+        executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" }, { onStale })
+      ).resolves.toEqual(initial);
+      expect(onStale).not.toHaveBeenCalled();
+      expect(release).toBeDefined();
+      release?.();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("refuses to serve data older than the stale limit when upstream is down", async () => {
+    vi.useFakeTimers();
+    try {
+      await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" });
+      vi.advanceTimersByTime(7 * 60 * 60_000);
+      vi.mocked(globalThis.fetch).mockRejectedValue(new Error("offline"));
+      await expect(
+        executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" })
+      ).rejects.toMatchObject({ name: "TarkovUpstreamError" });
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("does not fail other callers when one caller disconnects during a shared load", async () => {
+    vi.mocked(globalThis.fetch).mockImplementation(
+      (input) =>
+        new Promise((resolve) => {
+          const resource = new URL(String(input)).pathname.split("/").pop()!;
+          setTimeout(() => resolve(new Response(JSON.stringify(fixtures[resource]), { status: 200 })), 10);
+        })
+    );
+    const controller = new AbortController();
+    const first = executeTarkovOperation(
+      TARKOV_OPERATIONS.itemCatalog,
+      { gameMode: "regular" },
+      { signal: controller.signal }
+    );
+    const second = executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" });
+    controller.abort();
+    await expect(first).rejects.toMatchObject({ name: "AbortError" });
+    await expect(second).resolves.toContainEqual(["weapon", "Test Rifle", "Rifle", "weapon.webp", "test-rifle"]);
+  });
+
+  it("rejects variables the operation does not declare", async () => {
+    await expect(
+      executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular", extra: 1 })
+    ).rejects.toMatchObject({ name: "TarkovRequestError" });
+  });
+
+  it("looks items up by slug and requires exactly one of name or slug", async () => {
+    await expect(
+      executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, { gameMode: "regular", slug: "test-rifle" })
+    ).resolves.toMatchObject({ name: "Test Rifle", normalizedName: "test-rifle" });
+    await expect(
+      executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, { gameMode: "regular", slug: "missing" })
+    ).resolves.toBeNull();
+    for (const variables of [
+      { gameMode: "regular" },
+      { gameMode: "regular", name: "Test Rifle", slug: "test-rifle" },
+      { gameMode: "regular", slug: "Bad Slug" },
+    ]) {
+      await expect(executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, variables)).rejects.toMatchObject({
+        name: "TarkovRequestError",
+      });
+    }
+  });
+
   it("localizes the catalog and returns only its narrow projection", async () => {
     const result = await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, {
       gameMode: "regular",
     });
-    expect(result).toContainEqual({
-      id: "weapon",
-      name: "Test Rifle",
-      shortName: "Rifle",
-      normalizedName: "test-rifle",
-      gridImageLink: "https://assets.tarkov.dev/weapon.webp",
-    });
+    expect(result).toContainEqual(["weapon", "Test Rifle", "Rifle", "weapon.webp", "test-rifle"]);
   });
 
   it("joins item, pricing, slot, and preset data", async () => {
@@ -298,7 +383,7 @@ describe("Tarkov JSON adapter", () => {
         gameMode: "regular",
         id: "preset",
       })
-    ).resolves.toEqual({ baseItemId: "weapon", itemIds: ["weapon", "mod"] });
+    ).resolves.toEqual({ baseItemId: "weapon", itemIds: ["weapon", "mod", "mod"] });
 
     await expect(
       executeTarkovOperation(TARKOV_OPERATIONS.pickItems, {
@@ -312,6 +397,25 @@ describe("Tarkov JSON adapter", () => {
         fleaPriceRUB: 12_000,
         recoilModifier: -0.05,
       }),
+    ]);
+  });
+
+  it("projects trader details, allowed ammo, and ammo stats", async () => {
+    const [weapon] = (await executeTarkovOperation(TARKOV_OPERATIONS.buildItems, {
+      gameMode: "regular",
+      ids: ["weapon"],
+    })) as Record<string, unknown>[];
+    expect(weapon).toMatchObject({
+      normalizedName: "test-rifle",
+      traderPriceRUB: 40_000,
+      traderName: "Tester",
+      traderLevel: 3,
+      allowedAmmoIds: ["ammo"],
+    });
+    await expect(
+      executeTarkovOperation(TARKOV_OPERATIONS.ammoItems, { gameMode: "regular", ids: ["ammo", "mod"] })
+    ).resolves.toEqual([
+      expect.objectContaining({ id: "ammo", damage: 54, penetrationPower: 31, projectileCount: 1, traderLevel: 2 }),
     ]);
   });
 
@@ -342,14 +446,14 @@ describe("Tarkov JSON adapter", () => {
           expect.objectContaining({
             level: 2,
             trader: { name: "Tester" },
-            rewardItems: [{ item: { name: "Reward" }, quantity: 1 }],
+            rewardItems: [{ item: { name: "Reward", normalizedName: "reward" }, quantity: 1 }],
           }),
         ],
         craftsUsing: [
           expect.objectContaining({
             level: 3,
             station: { name: "Workbench" },
-            rewardItems: [{ item: { name: "Reward" }, quantity: 2 }],
+            rewardItems: [{ item: { name: "Reward", normalizedName: "reward" }, quantity: 2 }],
           }),
         ],
       })
@@ -365,7 +469,7 @@ describe("Tarkov JSON adapter", () => {
       expect.objectContaining({
         key: "factory",
         extracts: [expect.objectContaining({ name: "Gate" })],
-        locks: [expect.objectContaining({ keyName: "Test Key" })],
+        locks: [expect.objectContaining({ keyName: "Test Key", keyNormalizedName: "test-key" })],
         lootContainers: [
           expect.objectContaining({ typeId: "crate", typeName: "Supply crate" }),
         ],

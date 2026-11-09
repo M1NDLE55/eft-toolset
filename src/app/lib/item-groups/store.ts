@@ -1,13 +1,16 @@
-"use client";
-
-import type { Group } from "@/app/lib/types/itemGroups";
-import { readStore, subscribeStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
+import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
+import { useStore } from "@/app/lib/storage/use-store";
 import {
   MAX_GROUP_ITEM_NAME_LENGTH,
   MAX_GROUP_ITEMS,
   MAX_GROUP_NAME_LENGTH,
   MAX_GROUPS,
 } from "./limits";
+
+export interface Group {
+  name: string;
+  items: string[];
+}
 
 const DEFAULT_GROUPS: Group[] = [
   {
@@ -39,7 +42,7 @@ const DEFAULT_GROUPS: Group[] = [
   },
 ];
 
-const GROUP_STORE: StoreDefinition<Group[]> = {
+export const GROUP_STORE: StoreDefinition<Group[]> = {
   key: "eft-toolset:item-groups",
   legacyKeys: ["item-groups"],
   version: 1,
@@ -48,16 +51,76 @@ const GROUP_STORE: StoreDefinition<Group[]> = {
   recover: recoverGroups,
 };
 
-export function listGroups() {
-  return readStore(GROUP_STORE);
+export function useGroups() {
+  return useStore(GROUP_STORE);
 }
 
-export function saveGroups(groups: Group[]) {
-  return writeStore(GROUP_STORE, groups);
+export function findGroup(groups: Group[], name: string) {
+  const needle = name.toLocaleLowerCase();
+  return groups.find((group) => group.name.toLocaleLowerCase() === needle);
 }
 
-export function subscribeGroups(listener: () => void) {
-  return subscribeStore(GROUP_STORE.key, listener);
+function validName(name: string, groups: Group[], current?: string) {
+  const trimmed = name.trim();
+  if (!trimmed) throw new Error("Enter a group name.");
+  if (trimmed.length > MAX_GROUP_NAME_LENGTH) {
+    throw new Error(`Names can be at most ${MAX_GROUP_NAME_LENGTH} characters.`);
+  }
+  const existing = findGroup(groups, trimmed);
+  if (existing && existing.name !== current) throw new Error("A group with this name already exists.");
+  return trimmed;
+}
+
+export function createGroup(name: string) {
+  const groups = readStore(GROUP_STORE);
+  if (groups.length >= MAX_GROUPS) throw new Error(`You can save at most ${MAX_GROUPS} groups.`);
+  const trimmed = validName(name, groups);
+  writeStore(GROUP_STORE, [...groups, { name: trimmed, items: [] }]);
+  return trimmed;
+}
+
+export function renameGroup(current: string, name: string) {
+  const groups = readStore(GROUP_STORE);
+  const trimmed = validName(name, groups, current);
+  writeStore(
+    GROUP_STORE,
+    groups.map((group) => (group.name === current ? { ...group, name: trimmed } : group))
+  );
+  return trimmed;
+}
+
+export function deleteGroup(name: string) {
+  writeStore(
+    GROUP_STORE,
+    readStore(GROUP_STORE).filter((group) => group.name !== name)
+  );
+}
+
+export function addGroupItem(groupName: string, itemName: string) {
+  const groups = readStore(GROUP_STORE);
+  const group = groups.find((candidate) => candidate.name === groupName);
+  if (!group) throw new Error("This group no longer exists.");
+  if (group.items.includes(itemName)) return;
+  if (group.items.length >= MAX_GROUP_ITEMS) {
+    throw new Error(`A group can contain at most ${MAX_GROUP_ITEMS} items.`);
+  }
+  writeStore(
+    GROUP_STORE,
+    groups.map((candidate) =>
+      candidate === group ? { ...candidate, items: [...candidate.items, itemName] } : candidate
+    )
+  );
+}
+
+export function removeGroupItem(groupName: string, itemName: string) {
+  writeStore(
+    GROUP_STORE,
+    readStore(GROUP_STORE).map((group) =>
+      group.name === groupName
+        ? { ...group, items: group.items.filter((name) => name !== itemName) }
+        : group
+    )
+  );
 }
 
 function isGroupList(value: unknown): value is Group[] {

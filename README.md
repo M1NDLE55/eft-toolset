@@ -1,55 +1,73 @@
 # EFT Toolset
 
-Welcome to EFT Toolset! This application provides a suite of tools to assist players of Escape From Tarkov (EFT) in their gameplay experience.
+Fast, free tools for Escape From Tarkov players, built on live [tarkov.dev](https://tarkov.dev) data for both PVP and PVE. Everything you create is saved in your browser and can be shared by link. Live at [eft-toolset.com](https://www.eft-toolset.com).
 
-## Current Tools
+## Tools
 
-### 1. **Item Scanner**
-Provides a concise summary of an item, including purchase and sale information (vendors and flea market), as well as its usage in tasks, barters, and crafts. It is especially useful while in raid.
+### Item Scanner
+Look up any item for trader and flea prices, the best place to sell it (flea price after the listing fee), value per slot, and every task, barter, and craft that uses it. Search ranks results by name and short name; press `/` anywhere to search. Item pages render on the server at readable URLs such as `/item/salewa-first-aid-kit`, and the prices you have seen are kept so the page can show how they changed since your last visit.
 
-### 2. **Item Groups**
-Create and manage custom item groups for tracking related gear or loot. Groups are saved locally in the browser.
+### Item Groups
+Build watchlists of loot with live best-sell prices, value per slot, totals, and changes since your last visit. Add items straight from search, sort by price or value per slot, and copy a group as a price list ready to paste into Discord.
 
-### 3. **Gun Builder**
-Create weapon builds from tarkov.dev weapon and attachment data. The builder supports default presets, compatible slot picking, calculated prices and stats, local build storage, duplication, renaming, deletion, and shareable build links that can be imported by other users.
+### Gun Builder
+Assemble weapons part by part with compatible slots, factory presets, and live ergonomics, recoil, weight, and cost. It includes:
+- an optimiser for ergonomics, recoil, or cost, with an optional budget;
+- an ammo picker that adds the ammo's recoil to the build's stats;
+- one-click cheapest parts for empty required slots;
+- side-by-side build comparison and a printable or copyable shopping list;
+- undo, keyboard navigation, and share links that others can import by pasting.
 
-## API Integration
+### Raid Planner
+Plan raids on interactive maps, including Icebreaker and its decks. Draw routes, arrows, waypoints, and notes on each level, measure distances, and toggle extracts, transits, spawns, locks, hazards, and loot layers. Plans support undo and redo, show their total route distance, and can be shared by link or exported to a file.
 
-This web app uses the following API(s) to provide real-time data and up-to-date information:
+## Also included
 
-- **API Name**: [TARKOV.DEV](https://tarkov.dev)
+- **PVP and PVE:** one switch in the header changes every price and data set.
+- **Backup and restore:** export all your groups, builds, plans, and settings to one file from `/data`, then restore them by merging or replacing.
+- **Offline use:** pages and data you have visited keep working without a connection.
+- **Phone friendly:** every tool is designed for both desktop and mobile.
 
-The app uses tarkov.dev's documented JSON API through a server-side typed query adapter.
-The adapter validates a fixed set of operations, caches the API's large source datasets on
-the server, joins/localizes references, and returns only the narrow data each screen needs.
-Results are also cached locally for faster repeat use. See
-[`DATA_ARCHITECTURE.md`](DATA_ARCHITECTURE.md) for the data flow and operation list.
+## How it works
 
-## Installation
+The app uses tarkov.dev's JSON API through a server-side adapter that accepts only a fixed set of operations, caches the large upstream datasets with background revalidation, and returns just the data each screen needs. Public reads are cacheable at the edge, and the browser keeps results in IndexedDB for instant repeat visits. See [`DATA_ARCHITECTURE.md`](DATA_ARCHITECTURE.md) for the data flow, operations, caching, and rate limiting.
 
-To get started with EFT Toolset locally, follow these steps:
+Built with Next.js 16 (App Router), React 19 with the React Compiler, Tailwind CSS 4, Leaflet, and Vitest.
 
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/M1NDLE55/eft-toolset.git
-    ```
-2. **Navigate to the project directory:**
-    ```bash
-    cd eft-toolset
-    ```
-3. **Install the dependencies:**
-    ```bash
-    npm install
-    ```
-4. **Run the development server:**
-    ```bash
-    npm run dev
-    ```
+## Development
+
+Requires Node.js 20.9 or newer.
+
+```bash
+git clone https://github.com/M1NDLE55/eft-toolset.git
+cd eft-toolset
+npm install
+npm run dev
+```
+
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the development server on http://localhost:3000 |
+| `npm run build` | Create a production build |
+| `npm start` | Serve the production build |
+| `npm run lint` | Run ESLint, including the React Compiler rules |
+| `npm test` | Run the Vitest suite |
+| `node scripts/generate-maps-config.mjs` | Regenerate the raid planner's map configuration from tarkov.dev after a game update |
+
+### Environment variables
+
+All are optional.
+
+| Variable | Purpose |
+| --- | --- |
+| `CLOUDFLARE_WEB_ANALYTICS_TOKEN` | Enables Cloudflare Web Analytics |
+| `CLIENT_IP_HEADER` | The header your proxy sets with the real client IP, used for API rate limiting. On Vercel, `X-Real-IP` is used automatically. |
+| `WARM_TARKOV_CACHE` | Set to `0` to skip preloading tarkov.dev data when the server starts |
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
+Licensed under the GNU General Public License v3.0. See [LICENSE](LICENSE) for details.
 
 ## Contact
 
-For any bugs, suggestions, or questions, please open an issue here: [Issues](https://github.com/M1NDLE55/eft-toolset/issues).
+For bugs, suggestions, or questions, please [open an issue](https://github.com/M1NDLE55/eft-toolset/issues).

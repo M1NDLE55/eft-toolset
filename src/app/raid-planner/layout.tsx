@@ -1,5 +1,8 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
+import { preconnect } from "react-dom";
+
+const MAP_ASSET_ORIGIN = "https://assets.tarkov.dev";
 
 export const metadata: Metadata = {
   title: "Raid planner",
@@ -20,5 +23,7 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: { children: ReactNode }) {
+  preconnect(MAP_ASSET_ORIGIN);
+  preconnect(MAP_ASSET_ORIGIN, { crossOrigin: "anonymous" });
   return <main className="min-w-0">{children}</main>;
 }

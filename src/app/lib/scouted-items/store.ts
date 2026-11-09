@@ -1,19 +1,15 @@
-"use client";
-
-import {
-  readStore,
-  subscribeStore,
-  writeStore,
-  type StoreDefinition,
-} from "@/app/lib/storage/versioned-store";
+import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
+import { useStore } from "@/app/lib/storage/use-store";
+import { isItemSlug } from "@/app/lib/item-links";
 
 export interface ScoutedItem {
   name: string;
   gridImageLink: string | null;
+  normalizedName?: string | null;
 }
 
 const MAX_SCOUTED = 20;
-const ITEMS_STORE: StoreDefinition<ScoutedItem[]> = {
+export const SCOUTED_STORE: StoreDefinition<ScoutedItem[]> = {
   key: "eft-toolset:scouted-items",
   version: 1,
   defaultValue: () => [],
@@ -31,7 +27,8 @@ function isScoutedItem(value: unknown): value is ScoutedItem {
   return (
     typeof item.name === "string" &&
     item.name.length <= 240 &&
-    (item.gridImageLink === null || isSafeAssetUrl(item.gridImageLink))
+    (item.gridImageLink === null || isSafeAssetUrl(item.gridImageLink)) &&
+    (item.normalizedName === undefined || item.normalizedName === null || (typeof item.normalizedName === "string" && isItemSlug(item.normalizedName)))
   );
 }
 
@@ -41,7 +38,11 @@ function recoverScoutedItems(value: unknown): ScoutedItem[] | undefined {
     if (!candidate || typeof candidate !== "object") return [];
     const item = candidate as Partial<ScoutedItem>;
     if (typeof item.name !== "string" || item.name.length > 240) return [];
-    return [{ name: item.name, gridImageLink: isSafeAssetUrl(item.gridImageLink) ? item.gridImageLink : null }];
+    return [{
+      name: item.name,
+      gridImageLink: isSafeAssetUrl(item.gridImageLink) ? item.gridImageLink : null,
+      normalizedName: typeof item.normalizedName === "string" && isItemSlug(item.normalizedName) ? item.normalizedName : null,
+    }];
   }).slice(0, MAX_SCOUTED);
 }
 
@@ -55,7 +56,7 @@ function isSafeAssetUrl(value: unknown): value is string {
   }
 }
 
-const COLLAPSED_STORE: StoreDefinition<boolean> = {
+export const COLLAPSED_STORE: StoreDefinition<boolean> = {
   key: "eft-toolset:scouted-collapsed",
   version: 1,
   defaultValue: () => false,
@@ -63,20 +64,20 @@ const COLLAPSED_STORE: StoreDefinition<boolean> = {
 };
 
 export function addScoutedItem(item: ScoutedItem) {
-  const filtered = readStore(ITEMS_STORE).filter((candidate) => candidate.name !== item.name);
-  writeStore(ITEMS_STORE, [item, ...filtered].slice(0, MAX_SCOUTED));
+  const filtered = readStore(SCOUTED_STORE).filter((candidate) => candidate.name !== item.name);
+  writeStore(SCOUTED_STORE, [item, ...filtered].slice(0, MAX_SCOUTED));
 }
 
-export function listScoutedItems() {
-  return readStore(ITEMS_STORE);
+export function useScoutedItems() {
+  return useStore(SCOUTED_STORE);
 }
 
-export function subscribeScoutedItems(listener: () => void) {
-  return subscribeStore(ITEMS_STORE.key, listener);
+export function useScoutedCollapsed() {
+  return useStore(COLLAPSED_STORE);
 }
 
-export function getScoutedCollapsed() {
-  return readStore(COLLAPSED_STORE);
+export function clearScoutedItems() {
+  writeStore(SCOUTED_STORE, []);
 }
 
 export function setScoutedCollapsed(collapsed: boolean) {

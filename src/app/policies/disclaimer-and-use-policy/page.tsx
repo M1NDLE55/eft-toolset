@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Disclaimer and use policy",
+  alternates: { canonical: "/policies/disclaimer-and-use-policy" },
+};
+
 export default function Page() {
   const policy = {
     heading: "Disclaimer and Use Policy",
@@ -51,20 +58,20 @@ export default function Page() {
   };
 
   return (
-    <main className="flex justify-center p-4 min-h-[calc(100vh-130px)]">
-      <div className="max-w-xl w-full flex flex-col gap-4">
-        <h1 className="text-3xl font-bold py-4 text-center">
-          {policy.heading}
-        </h1>
-        <ol className="list-decimal pl-6">
-          {policy.sections.map((section, i) => (
-            <li key={i} className="text-xl mb-4">
-              <h2>{section.heading}</h2>
-              <p className="text-base">{section.content}</p>
+    <main className="flex flex-1 justify-center p-4 pb-12">
+      <article className="flex w-full max-w-2xl flex-col gap-6">
+        <h1 className="pt-6 text-2xl font-black uppercase tracking-widest text-[#e6d9b8]">{policy.heading}</h1>
+        <ol className="flex flex-col gap-5">
+          {policy.sections.map((section, index) => (
+            <li key={section.heading} className="flex flex-col gap-1.5">
+              <h2 className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">
+                {index + 1}. {section.heading}
+              </h2>
+              <p className="text-sm leading-relaxed text-[#bbb]">{section.content}</p>
             </li>
           ))}
         </ol>
-      </div>
+      </article>
     </main>
   );
 }

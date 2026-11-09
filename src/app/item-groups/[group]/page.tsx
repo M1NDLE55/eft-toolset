@@ -1,293 +1,344 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { getColumns } from "@/app/components/item-groups/table-columns";
-import { DataTable } from "@/components/ui/data-table";
-import { Item } from "@/app/lib/types/item";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { ArrowDown, ArrowLeft, ArrowUp, Check, ClipboardList, ExternalLink, Pencil, Trash2, X } from "lucide-react";
+import { copyText } from "@/app/lib/browser/clipboard";
+import { escapeDiscordText } from "@/app/lib/text-safety";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
-import { customDecodeURI, customEncodeURI } from "@/app/lib/URIEncoding";
-import { useItemsInGroup } from "@/app/lib/cache/hooks";
-import { Pencil, Plus } from "lucide-react";
-import SearchWrapper from "@/app/components/global/search/search-wrapper";
-import AddItem from "@/app/components/item-groups/add-item";
-import { ItemPreview } from "@/app/lib/types/itemGroups";
-import { listGroups, saveGroups } from "@/app/lib/item-groups/store";
-import {
-  MAX_GROUP_ITEMS,
-  MAX_GROUP_NAME_LENGTH,
-} from "@/app/lib/item-groups/limits";
+import { NameDialog } from "@/components/name-dialog";
+import { ConfirmDialog } from "@/components/confirm-dialog";
 import { LocalMissing } from "@/components/local-missing";
+import { ItemSearch } from "@/app/components/global/search/item-search";
+import { customDecodeURI, customEncodeURI } from "@/app/lib/URIEncoding";
+import { useCatalog, useItemsInGroup } from "@/app/lib/cache/hooks";
+import type { CachedItem, CatalogItem } from "@/app/lib/cache/types";
+import { itemHref } from "@/app/lib/item-links";
+import { Rubles } from "@/app/lib/currency";
+import { bestSell } from "@/app/lib/item-price";
+import { useHydrated } from "@/app/lib/storage/use-store";
+import { recordPrices, usePriceHistories } from "@/app/lib/price-history";
+import { ChangeBadge } from "@/app/components/item/price-trend";
+import { useGameMode } from "@/components/game-mode/context";
+import {
+  addGroupItem,
+  deleteGroup,
+  findGroup,
+  removeGroupItem,
+  renameGroup,
+  useGroups,
+} from "@/app/lib/item-groups/store";
+import { MAX_GROUP_ITEMS, MAX_GROUP_NAME_LENGTH } from "@/app/lib/item-groups/limits";
+import { cn } from "@/lib/utils";
+
+type SortKey = "order" | "name" | "price" | "slot";
+
+interface Row {
+  name: string;
+  image: string | null;
+  slug: string | null;
+  data: CachedItem | undefined;
+  price: number | null;
+  vendor: string | null;
+  perSlot: number | null;
+  multiSlot: boolean;
+}
+
+function toRow(name: string, catalog: CatalogItem | undefined, data: CachedItem | undefined): Row {
+  const best = data ? bestSell(data) : null;
+  return {
+    name,
+    image: data?.gridImageLink ?? catalog?.gridImageLink ?? null,
+    slug: data?.normalizedName || catalog?.normalizedName || null,
+    data,
+    price: best?.price ?? null,
+    vendor: best ? (best.flea ? "Flea" : best.vendor) : null,
+    perSlot: best && data ? best.price / (data.width * data.height) : null,
+    multiSlot: data ? data.width * data.height > 1 : false,
+  };
+}
+
+function groupAsText(name: string, rows: Row[], total: number) {
+  const lines = rows.map((row) =>
+    row.price !== null
+      ? `• ${escapeDiscordText(row.name)} — ${Rubles.format(row.price)} (${escapeDiscordText(row.vendor ?? "")})`
+      : `• ${escapeDiscordText(row.name)} — no buyer`
+  );
+  return [`**${escapeDiscordText(name)}**`, ...lines, total > 0 ? `Total: ${Rubles.format(total)}` : ""].filter(Boolean).join("\n");
+}
+
+function sortRows(rows: Row[], key: SortKey, descending: boolean) {
+  if (key === "order") return rows;
+  const direction = descending ? -1 : 1;
+  return [...rows].sort((a, b) => {
+    if (key === "name") return a.name.localeCompare(b.name) * direction;
+    const left = key === "price" ? a.price : a.perSlot;
+    const right = key === "price" ? b.price : b.perSlot;
+    if (left === null) return right === null ? 0 : 1;
+    if (right === null) return -1;
+    return (left - right) * direction;
+  });
+}
+
+const SORTS: { key: SortKey; label: string }[] = [
+  { key: "order", label: "Added" },
+  { key: "name", label: "Name" },
+  { key: "price", label: "Price" },
+  { key: "slot", label: "Per slot" },
+];
 
 export default function Page() {
   const router = useRouter();
-  const groupName = customDecodeURI(useParams<{ group: string }>().group);
-  const [names, setNames] = useState<string[]>([]);
-  const { items, loading, stale } = useItemsInGroup(names);
-  const [missing, setMissing] = useState<boolean | null>(null);
-  const [storageError, setStorageError] = useState("");
-
-  const [renameOpen, setRenameOpen] = useState(false);
-  const [renameValue, setRenameValue] = useState(groupName);
-  const [renameError, setRenameError] = useState("");
-
-  const [addItemOpen, setAddItemOpen] = useState(false);
-  const [searchItem, setSearchItem] = useState("");
-  const [addItemPreviews, setAddItemPreviews] = useState<ItemPreview[]>([]);
-
-  function handleRemove(itemName: string) {
-    let nextNames = names;
-    const updatedGroups = listGroups().map((g) => {
-      if (g.name === groupName) {
-        const updatedItems = g.items.filter((name) => name !== itemName);
-        nextNames = updatedItems;
-
-        return {
-          name: g.name,
-          items: updatedItems,
-        };
-      }
-      return g;
-    });
-
-    try {
-      saveGroups(updatedGroups);
-      setNames(nextNames);
-      setStorageError("");
-    } catch (reason) {
-      setStorageError(reason instanceof Error ? reason.message : "Could not save this group.");
-    }
-  }
-
-  function handleDelete() {
-    const updatedGroups = listGroups().filter(
-      (g) => g.name !== groupName
-    );
-
-    try {
-      saveGroups(updatedGroups);
-      router.push("/item-groups");
-    } catch (reason) {
-      setStorageError(reason instanceof Error ? reason.message : "Could not delete this group.");
-    }
-  }
-
-  function handleRename() {
-    setRenameError("");
-    const newName = renameValue.trim();
-
-    if (!newName) {
-      setRenameError("Name cannot be empty");
-      return;
-    }
-    if (newName.length > MAX_GROUP_NAME_LENGTH) {
-      setRenameError(`Name must be ${MAX_GROUP_NAME_LENGTH} characters or fewer`);
-      return;
-    }
-
-    const groups = listGroups();
-
-    if (
-      newName !== groupName &&
-      groups.find((g) => g.name.toLowerCase() === newName.toLowerCase())
-    ) {
-      setRenameError("A group with this name already exists");
-      return;
-    }
-
-    const updated = groups.map((g) => {
-      if (g.name === groupName) {
-        return { name: newName, items: g.items };
-      }
-      return g;
-    });
-
-    try {
-      saveGroups(updated);
-      setRenameOpen(false);
-      router.push(`/item-groups/${customEncodeURI(newName)}`);
-    } catch (reason) {
-      setRenameError(reason instanceof Error ? reason.message : "Could not rename this group.");
-    }
-  }
-
-  function handleAddItem(itemName: string, _gridImageLink: string) {
-    const groups = listGroups();
-
-    const updated = groups.map((g) => {
-      if (g.name === groupName) {
-        if (g.items.includes(itemName)) return g;
-        if (g.items.length >= MAX_GROUP_ITEMS) return g;
-        return { name: g.name, items: [...g.items, itemName] };
-      }
-      return g;
-    });
-
-    const group = groups.find((candidate) => candidate.name === groupName);
-    if (group && group.items.length >= MAX_GROUP_ITEMS) {
-      setStorageError(`A group can contain at most ${MAX_GROUP_ITEMS} items.`);
-      return;
-    }
-    try {
-      saveGroups(updated);
-      setStorageError("");
-    } catch (reason) {
-      setStorageError(reason instanceof Error ? reason.message : "Could not add this item.");
-      return;
-    }
-    setNames((prev) => (prev.includes(itemName) ? prev : [...prev, itemName]));
-    setSearchItem("");
-    setAddItemOpen(false);
-  }
+  const routeName = customDecodeURI(useParams<{ group: string }>().group);
+  const groups = useGroups();
+  const hydrated = useHydrated();
+  const group = findGroup(groups, routeName);
+  const names = group?.items ?? [];
+  const { items, loading, stale, error, refresh } = useItemsInGroup(names);
+  const { itemsByName } = useCatalog();
+  const [sort, setSort] = useState<{ key: SortKey; descending: boolean }>({ key: "order", descending: false });
+  const [actionError, setActionError] = useState("");
+  const [copied, setCopied] = useState(false);
+  const { gameMode } = useGameMode();
+  const [now] = useState(() => Date.now());
+  const history = usePriceHistories(gameMode, names, hydrated);
 
   useEffect(() => {
-    const group = listGroups().find(
-      (group) => group.name.toLowerCase() === groupName.toLowerCase()
+    if (stale || items.length === 0) return;
+    void recordPrices(
+      gameMode,
+      items.flatMap((item) => {
+        const best = bestSell(item);
+        return best ? [{ name: item.name, price: best.price }] : [];
+      })
     );
+  }, [gameMode, items, stale]);
 
-    if (!group) {
-      setMissing(true);
-      return;
-    }
-    setMissing(false);
-    setNames(group.items);
-  }, [groupName]);
+  if (!hydrated) {
+    return (
+      <div className="flex w-full max-w-4xl flex-col gap-4">
+        <Skeleton className="h-10 w-64" />
+        <Skeleton className="h-12 w-full" />
+        {Array.from({ length: 4 }, (_, index) => (
+          <Skeleton key={index} className="h-14 w-full" />
+        ))}
+      </div>
+    );
+  }
 
-  if (missing === true) {
+  if (!group) {
     return <LocalMissing title="Item group not found" backHref="/item-groups" backLabel="Back to groups" />;
   }
 
-  if (missing === null || loading)
-    return (
-      <div className="max-w-4xl w-full min-w-0 flex flex-col gap-4">
-        <h1 className="text-3xl text-[#9a8866] uppercase tracking-widest font-black">{groupName}</h1>
-        <div className="flex w-full flex-col gap-3">
-          <Skeleton className="w-full py-8" />
-          <Skeleton className="w-full py-8" />
-          <Skeleton className="w-full py-8" />
-          <Skeleton className="w-full py-8" />
-        </div>
-      </div>
-    );
+  const run = (action: () => void) => {
+    try {
+      action();
+      setActionError("");
+    } catch (reason) {
+      setActionError(reason instanceof Error ? reason.message : "Could not save this change.");
+    }
+  };
 
-  const columns = getColumns(handleRemove);
+  const dataByName = new Map(items.map((item) => [item.name, item]));
+  const rows = sortRows(
+    names.map((name) => toRow(name, itemsByName.get(name), dataByName.get(name))),
+    sort.key,
+    sort.descending
+  );
+  const total = rows.reduce((sum, row) => sum + (row.price ?? 0), 0);
 
   return (
-    <div className="max-w-4xl w-full min-w-0 flex flex-col gap-4">
-      {(storageError || stale) && (
-        <p role="status" className="border border-amber-700/60 bg-amber-950/30 p-3 text-sm text-amber-200">
-          {storageError || "Showing saved data while fresh prices are loaded."}
-        </p>
-      )}
-      <div className="w-full flex flex-wrap gap-4 text-xl justify-between items-center">
-        <div className="flex items-center gap-2 min-w-0">
-          <h1 className="text-3xl text-[#9a8866] uppercase tracking-widest font-black truncate">{groupName}</h1>
-          <Dialog open={renameOpen} onOpenChange={(open) => { setRenameOpen(open); if (open) { setRenameValue(groupName); setRenameError(""); } }}>
-            <DialogTrigger asChild>
-              <button className="text-muted-foreground hover:text-foreground transition-colors">
-                <Pencil size={16} />
-              </button>
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>Rename group</DialogTitle>
-                <DialogDescription>Enter a new name for this group.</DialogDescription>
-              </DialogHeader>
-              {renameError && <p className="text-red-500 text-sm">{renameError}</p>}
-              <Input
-                value={renameValue}
-                maxLength={MAX_GROUP_NAME_LENGTH}
-                onChange={(e) => setRenameValue(e.target.value)}
-                onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleRename(); } }}
-                autoFocus
-              />
-              <DialogFooter>
-                <Button variant="outline" onClick={() => setRenameOpen(false)}>Cancel</Button>
-                <Button onClick={handleRename}>Save</Button>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-        </div>
-        <div className="flex gap-2">
-          <Dialog open={addItemOpen} onOpenChange={(open) => { setAddItemOpen(open); if (!open) { setSearchItem(""); setAddItemPreviews([]); } }}>
-            <DialogTrigger asChild>
-              <Button>
-                <Plus size={16} />
-                Add Item
+    <div className="flex w-full max-w-4xl min-w-0 flex-col gap-4">
+      <Link
+        href="/item-groups"
+        className="inline-flex w-fit items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
+      >
+        <ArrowLeft className="h-3.5 w-3.5" /> All groups
+      </Link>
+
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex min-w-0 items-center gap-1">
+          <h1 className="truncate text-2xl font-black uppercase tracking-widest text-[#e6d9b8]">{group.name}</h1>
+          <NameDialog
+            trigger={
+              <Button variant="ghost" size="icon" aria-label="Rename group">
+                <Pencil />
               </Button>
-            </DialogTrigger>
-            <DialogContent className="max-w-xl">
-              <DialogHeader>
-                <DialogTitle>Add item to group</DialogTitle>
-                <DialogDescription>Search for an item to add.</DialogDescription>
-              </DialogHeader>
-              <SearchWrapper handleSelect={(itemName) => setSearchItem(itemName)} excludeNames={names} />
-              {searchItem && (
-                <AddItem
-                  item={searchItem}
-                  setItem={setSearchItem}
-                  groupItems={addItemPreviews}
-                  setGroupItems={setAddItemPreviews}
-                  onAdd={handleAddItem}
-                  existingNames={names}
-                />
-              )}
-            </DialogContent>
-          </Dialog>
-          <AlertDialog>
-            <AlertDialogTrigger className="flex gap-1">
-              <Button variant={"destructive"}>Delete</Button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-                <AlertDialogDescription>
-                  This action cannot be undone. This will permanently delete
-                  this item group.
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction onClick={handleDelete}>
-                  Continue
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+            }
+            title="Rename group"
+            description="Enter a new name for this group."
+            initialName={group.name}
+            submitLabel="Save"
+            maxLength={MAX_GROUP_NAME_LENGTH}
+            onSubmit={(name) => router.replace(`/item-groups/${customEncodeURI(renameGroup(group.name, name))}`)}
+          />
         </div>
-      </div>
-      {items.length > 0 ? (
-        <DataTable
-          columns={columns}
-          data={items as unknown as Item[]}
-          sort={{ column: "name", title: "item" }}
+        <ConfirmDialog
+          trigger={
+            <Button variant="outline" className="text-red-300 hover:text-red-200">
+              <Trash2 /> Delete
+            </Button>
+          }
+          title={`Delete “${group.name}”?`}
+          description="This permanently removes the group from this browser."
+          confirmLabel="Delete group"
+          onConfirm={() =>
+            run(() => {
+              deleteGroup(group.name);
+              router.push("/item-groups");
+            })
+          }
         />
+      </div>
+
+      <ItemSearch
+        label="Add items to this group"
+        placeholder={names.length >= MAX_GROUP_ITEMS ? "This group is full" : "Add an item…"}
+        excludeNames={names}
+        keepOpenOnSelect
+        onSelect={(item) => run(() => addGroupItem(group.name, item.name))}
+      />
+
+      {(actionError || stale || error) && (
+        <div
+          role="status"
+          className="flex flex-wrap items-center justify-between gap-2 border border-amber-700/60 bg-amber-950/30 px-3 py-2 text-xs text-amber-200"
+        >
+          <span>{actionError || (error ? "Prices are temporarily unavailable." : "Showing saved prices while fresh ones load.")}</span>
+          {error && !actionError && (
+            <button type="button" className="underline" onClick={() => void refresh().catch(() => undefined)}>
+              Retry
+            </button>
+          )}
+        </div>
+      )}
+
+      {names.length === 0 ? (
+        <div className="flex flex-col items-center gap-1 border border-dashed border-[#2a2a2a] p-8 text-center">
+          <p className="font-semibold text-[#ccc]">This group is empty</p>
+          <p className="text-sm text-[#888]">Search above to add items.</p>
+        </div>
       ) : (
-        <p className="p-3 w-full border text-xl">
-          No items in group
-        </p>
+        <>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <p className="text-sm text-[#999]">
+              {names.length} item{names.length === 1 ? "" : "s"}
+              {total > 0 && (
+                <>
+                  {" · "}
+                  <span className="text-[#e6d9b8] tabular-nums">{Rubles.format(total)}</span> best total
+                </>
+              )}
+            </p>
+            <div className="flex flex-wrap items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() =>
+                void copyText(groupAsText(group.name, rows, total)).then(
+                  () => {
+                    setCopied(true);
+                    window.setTimeout(() => setCopied(false), 1800);
+                  },
+                  () => setActionError("Your browser blocked clipboard access.")
+                )
+              }
+            >
+              {copied ? <Check className="text-emerald-400" /> : <ClipboardList />}
+              {copied ? "Copied" : "Copy list"}
+            </Button>
+            <div role="group" aria-label="Sort items" className="flex border border-[#2a2a2a]">
+              {SORTS.map((option) => {
+                const active = sort.key === option.key;
+                return (
+                  <button
+                    key={option.key}
+                    type="button"
+                    aria-pressed={active}
+                    onClick={() =>
+                      setSort((current) =>
+                        current.key === option.key && option.key !== "order"
+                          ? { key: option.key, descending: !current.descending }
+                          : { key: option.key, descending: option.key === "price" || option.key === "slot" }
+                      )
+                    }
+                    className={cn(
+                      "flex h-9 items-center gap-1 px-2.5 text-[10px] font-bold uppercase tracking-widest transition-colors",
+                      active ? "bg-[#1a1712] text-[#e6d9b8]" : "text-[#888] hover:text-[#ccc]"
+                    )}
+                  >
+                    {option.label}
+                    {active && option.key !== "order" &&
+                      (sort.descending ? <ArrowDown className="h-3 w-3" /> : <ArrowUp className="h-3 w-3" />)}
+                  </button>
+                );
+              })}
+            </div>
+            </div>
+          </div>
+
+          <ul className="border border-[#1a1a1a] bg-[#0c0c0c]">
+            {rows.map((row) => (
+              <li key={row.name} className="flex items-center gap-3 border-t border-[#1a1a1a] px-3 py-2 first:border-t-0">
+                {row.image ? (
+                  <Image src={row.image} alt="" width={40} height={40} className="h-10 w-10 shrink-0 bg-[#111] object-contain" />
+                ) : (
+                  <span className="h-10 w-10 shrink-0 bg-[#111]" />
+                )}
+                <div className="flex min-w-0 flex-1 flex-col gap-0.5 sm:flex-row sm:items-center sm:gap-4">
+                  <Link
+                    href={itemHref({ name: row.name, normalizedName: row.slug })}
+                    className="min-w-0 flex-1 truncate text-sm text-[#ddd] hover:text-[#e6d9b8] hover:underline"
+                  >
+                    {row.name}
+                  </Link>
+                  <div className="flex items-center gap-3 text-xs tabular-nums sm:text-sm">
+                    {row.data ? (
+                      <>
+                        <span className="text-[#e6d9b8] sm:w-28 sm:text-right" title={row.vendor ?? undefined}>
+                          {row.price !== null ? Rubles.format(row.price) : "No buyer"}
+                          {row.vendor && <span className="ml-1 text-[10px] uppercase text-[#777]">{row.vendor}</span>}
+                          <span className="ml-1.5">
+                            <ChangeBadge points={history(row.name)} price={row.price} now={now} />
+                          </span>
+                        </span>
+                        <span className="text-[#888] sm:w-24 sm:text-right">
+                          {row.perSlot !== null && row.multiSlot ? `${Rubles.format(row.perSlot)}/slot` : ""}
+                        </span>
+                      </>
+                    ) : loading || !error ? (
+                      <Skeleton className="h-4 w-32" />
+                    ) : (
+                      <span className="text-[#777]">Unavailable</span>
+                    )}
+                  </div>
+                </div>
+                {row.data?.wikiLink && (
+                  <a
+                    href={row.data.wikiLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open the wiki for ${row.name}`}
+                    className="hidden h-9 w-9 shrink-0 items-center justify-center text-[#888] hover:text-[#d4b86a] sm:flex"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                )}
+                <button
+                  type="button"
+                  aria-label={`Remove ${row.name}`}
+                  onClick={() => run(() => removeGroupItem(group.name, row.name))}
+                  className="flex h-10 w-10 shrink-0 items-center justify-center text-[#777] transition-colors hover:text-red-300"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              </li>
+            ))}
+          </ul>
+        </>
       )}
     </div>
   );

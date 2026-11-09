@@ -1,5 +1,3 @@
-"use client";
-
 export interface StoreDefinition<T> {
   key: string;
   legacyKeys?: string[];
@@ -40,7 +38,6 @@ export function readStore<T>(definition: StoreDefinition<T>): T {
     try {
       parsed = JSON.parse(raw) as unknown;
     } catch {
-      // Older scalar settings were stored as unquoted strings.
       parsed = raw;
     }
     if (definition.validate(parsed)) {
@@ -48,7 +45,6 @@ export function readStore<T>(definition: StoreDefinition<T>): T {
         writeStore(definition, parsed);
         if (sourceKey !== definition.key) window.localStorage.removeItem(sourceKey);
       } catch {
-        // The legacy value is still valid and readable if migration cannot be persisted.
       }
       return parsed;
     }
@@ -59,7 +55,6 @@ export function readStore<T>(definition: StoreDefinition<T>): T {
             writeStore(definition, parsed.data);
             window.localStorage.removeItem(sourceKey);
           } catch {
-            // Keep the valid legacy envelope in place.
           }
         }
         return parsed.data;
@@ -70,7 +65,6 @@ export function readStore<T>(definition: StoreDefinition<T>): T {
           writeStore(definition, migrated);
           if (sourceKey !== definition.key) window.localStorage.removeItem(sourceKey);
         } catch {
-          // The in-memory migration is still safe to return.
         }
         return migrated;
       }
@@ -81,7 +75,6 @@ export function readStore<T>(definition: StoreDefinition<T>): T {
         writeStore(definition, recovered);
         if (sourceKey !== definition.key) window.localStorage.removeItem(sourceKey);
       } catch {
-        // The recovered in-memory value is still useful when storage is read-only.
       }
       return recovered;
     }
@@ -108,9 +101,49 @@ export function writeStore<T>(definition: StoreDefinition<T>, value: T): T {
   try {
     window.dispatchEvent(new CustomEvent("eft-toolset:storage", { detail: definition.key }));
   } catch {
-    // Notification failure does not mean persistence failed.
   }
   return value;
+}
+
+export function writeStores(entries: readonly { definition: StoreDefinition<unknown>; value: unknown }[]) {
+  const serialized = entries.map(({ definition, value }) => {
+    if (!definition.validate(value)) throw new Error(`Refusing to persist invalid ${definition.key} data.`);
+    let text: string;
+    try {
+      text = JSON.stringify({ version: definition.version, data: value });
+    } catch {
+      throw new Error(`Could not prepare ${definition.key} for saving.`);
+    }
+    return { key: definition.key, text };
+  });
+  const previous = serialized.map(({ key }) => ({ key, text: window.localStorage.getItem(key) }));
+  try {
+    for (const { key, text } of serialized) window.localStorage.setItem(key, text);
+  } catch (error) {
+    for (const { key } of serialized) {
+      try {
+        window.localStorage.removeItem(key);
+      } catch {
+        continue;
+      }
+    }
+    const lost = previous.filter(({ key, text }) => {
+      if (text === null) return false;
+      try {
+        window.localStorage.setItem(key, text);
+        return false;
+      } catch {
+        return true;
+      }
+    });
+    if (lost.length > 0) {
+      throw new Error("Could not save, and some existing data could not be put back. Free up browser storage and try again.", { cause: error });
+    }
+    throw new Error("Could not save. Browser storage may be full or unavailable; nothing was changed.", { cause: error });
+  }
+  for (const { key } of serialized) {
+    window.dispatchEvent(new CustomEvent("eft-toolset:storage", { detail: key }));
+  }
 }
 
 export function subscribeStore(key: string, listener: () => void) {
@@ -152,6 +185,5 @@ function quarantine(key: string, raw: string) {
       window.localStorage.removeItem(obsolete);
     }
   } catch {
-    // Preserve the original key when quarantine cannot be written.
   }
 }

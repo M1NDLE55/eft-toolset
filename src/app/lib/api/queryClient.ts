@@ -6,6 +6,7 @@ import {
   cacheKeys,
   cacheSet,
 } from "@/app/lib/cache/store";
+import { canonicalJson } from "./operations";
 
 export interface QueryDefinition<Variables, Data> {
   id: string;
@@ -54,7 +55,7 @@ const IDLE_SNAPSHOT: QuerySnapshot<never> = Object.freeze({
 });
 
 export function queryKey<Variables>(definition: QueryDefinition<Variables, unknown>, variables: Variables) {
-  return `${definition.id}:${stableSerialize(variables)}`;
+  return `${definition.id}:${canonicalJson(variables)}`;
 }
 
 export function getQuerySnapshot<Data>(key: string): QuerySnapshot<Data> {
@@ -121,6 +122,28 @@ export async function ensureQuery<Variables, Data>(
   return revalidate(definition, variables, key);
 }
 
+export function primeQuery<Variables, Data>(
+  definition: QueryDefinition<Variables, Data>,
+  variables: Variables,
+  data: Data,
+  updatedAt = Date.now()
+) {
+  const key = queryKey(definition, variables);
+  const existing = memory.get(key);
+  if (existing && existing.updatedAt >= updatedAt) return;
+  const entry: CacheEnvelope<Data> = {
+    version: definition.version,
+    updatedAt,
+    expiresAt: updatedAt + definition.maxAge,
+    data,
+  };
+  memory.set(key, entry);
+  evictMemoryEntries();
+  snapshots.set(key, { data, status: "success", isFetching: false, updatedAt, stale: Date.now() - updatedAt > definition.staleTime });
+  queueMicrotask(() => notify(key));
+  if (definition.persist) void cacheSet(persistenceKey(key), entry).catch(() => undefined);
+}
+
 export async function invalidateQuery<Variables, Data>(
   definition: QueryDefinition<Variables, Data>,
   variables: Variables
@@ -137,7 +160,6 @@ export async function invalidateQuery<Variables, Data>(
   try {
     await cacheDelete(persistenceKey(key));
   } catch {
-    // Persistence is optional.
   }
   notify(key);
 }
@@ -165,7 +187,6 @@ async function hydrate<Variables, Data>(definition: QueryDefinition<Variables, D
       }
       if ((generations.get(key) ?? 0) === generation) memory.set(key, entry);
     } catch {
-      // IndexedDB can be blocked or unavailable. The network path remains usable.
     }
   })().finally(() => hydration.delete(key));
 
@@ -306,7 +327,6 @@ function startPersistenceSweep() {
       });
       if (obsolete.length > 0) await cacheDeleteMany(obsolete);
     } catch {
-      // Persistence cleanup is best-effort; IndexedDB may be unavailable.
     }
   })().finally(() => {
     persistenceSweep = null;
@@ -335,14 +355,4 @@ function evictMemoryEntries() {
     memory.delete(key);
     snapshots.delete(key);
   }
-}
-
-function stableSerialize(value: unknown): string {
-  if (value === undefined) return "undefined";
-  if (value === null || typeof value !== "object") return JSON.stringify(value);
-  if (Array.isArray(value)) return `[${value.map(stableSerialize).join(",")}]`;
-  return `{${Object.entries(value as Record<string, unknown>)
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([key, entry]) => `${JSON.stringify(key)}:${stableSerialize(entry)}`)
-    .join(",")}}`;
 }

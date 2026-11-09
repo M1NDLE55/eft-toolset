@@ -1,10 +1,31 @@
 import type {
   BuildItemData,
   BuildNode,
+  GunItem,
+  ModSlotDef,
   PriceSources,
 } from "@/app/lib/types/gunBuilder";
-import { collectItemIds } from "./tree";
+import { childAt } from "./tree";
 import { effectivePrice } from "./price";
+
+export type ItemLookup = ReadonlyMap<string, GunItem>;
+
+export function isDetailed(item: GunItem | undefined): item is BuildItemData {
+  return Boolean(item && "slots" in item);
+}
+
+export interface MissingSlot {
+  label: string;
+  parentPath: string[];
+  slot: ModSlotDef;
+}
+
+export interface BaseStats {
+  ergonomics: number;
+  recoilVertical: number | null;
+  recoilHorizontal: number | null;
+  weight: number;
+}
 
 export interface BuildStats {
   ergonomics: number | null;
@@ -13,79 +34,91 @@ export interface BuildStats {
   weight: number;
   costRUB: number | null;
   costMissingCount: number;
-  missingRequiredSlots: string[];
-  installedItemIds: string[];
+  partCount: number;
+  unknownCount: number;
+  missingRequired: MissingSlot[];
+  base: BaseStats | null;
 }
 
-function missingRequired(
+function findMissing(
   node: BuildNode,
-  data: Map<string, BuildItemData>,
-  labelPrefix = ""
-): string[] {
-  const item = data.get(node.itemId);
-  if (!item) return [];
-
-  return item.slots.flatMap((slot) => {
-    const label = labelPrefix ? `${labelPrefix} / ${slot.name}` : slot.name;
-    const child = node.slots[slot.id];
-    const own = slot.required && !child ? [label] : [];
-    return child ? [...own, ...missingRequired(child, data, label)] : own;
-  });
+  lookup: ItemLookup,
+  path: string[],
+  prefix: string,
+  result: MissingSlot[]
+) {
+  const item = lookup.get(node.itemId);
+  if (!isDetailed(item)) return;
+  for (const slot of item.slots) {
+    const label = prefix ? `${prefix} / ${slot.name}` : slot.name;
+    const child = childAt(node, slot.id);
+    if (child) findMissing(child, lookup, [...path, slot.id], label, result);
+    else if (slot.required) result.push({ label, parentPath: path, slot });
+  }
 }
 
 export function computeStats(
   root: BuildNode,
-  data: Map<string, BuildItemData>,
-  sources: PriceSources
+  lookup: ItemLookup,
+  sources: PriceSources,
+  ammo: { recoilModifier: number } | null = null
 ): BuildStats {
-  const installedItemIds = collectItemIds(root);
-  const items = installedItemIds
-    .map((id) => data.get(id))
-    .filter((item): item is BuildItemData => Boolean(item));
-  const weapon = data.get(root.itemId);
+  const weapon = lookup.get(root.itemId);
+  let ergonomics = weapon?.ergonomics ?? 0;
+  let recoilModifier = ammo && Number.isFinite(ammo.recoilModifier) ? ammo.recoilModifier : 0;
+  let weight = 0;
+  let cost = 0;
+  let priced = 0;
+  let costMissingCount = 0;
+  let partCount = 0;
+  let unknownCount = 0;
 
-  if (!weapon) {
-    return {
-      ergonomics: null,
-      recoilVertical: null,
-      recoilHorizontal: null,
-      weight: 0,
-      costRUB: null,
-      costMissingCount: 0,
-      missingRequiredSlots: [],
-      installedItemIds,
-    };
+  const stack = [root];
+  while (stack.length > 0) {
+    const node = stack.pop()!;
+    stack.push(...Object.values(node.slots));
+    if (node !== root) partCount += 1;
+    const item = lookup.get(node.itemId);
+    if (!item) {
+      unknownCount += 1;
+      continue;
+    }
+    weight += item.weight;
+    const price = effectivePrice(item, sources);
+    if (price === null) costMissingCount += 1;
+    else {
+      cost += price;
+      priced += 1;
+    }
+    if (node !== root) {
+      ergonomics += item.ergonomics;
+      recoilModifier += item.recoilModifier;
+    }
   }
 
-  const modItems = items.filter((item) => item.id !== root.itemId);
-  const ergonomics =
-    weapon.ergonomics +
-    modItems.reduce((total, item) => total + item.ergonomics, 0);
-  const recoilModifier = modItems.reduce(
-    (total, item) => total + item.recoilModifier,
-    0
-  );
-  const weight = items.reduce((total, item) => total + item.weight, 0);
-  const knownPrices = items
-    .map((item) => effectivePrice(item, sources))
-    .filter((price): price is number => typeof price === "number");
+  const missingRequired: MissingSlot[] = [];
+  findMissing(root, lookup, [], "", missingRequired);
+  const detailed = isDetailed(weapon) ? weapon : null;
+  const scale = (value: number | null | undefined) =>
+    typeof value === "number" ? value * Math.max(0, 1 + recoilModifier) : null;
 
   return {
-    ergonomics,
-    recoilVertical:
-      typeof weapon.recoilVertical === "number"
-        ? weapon.recoilVertical * (1 + recoilModifier)
-        : null,
-    recoilHorizontal:
-      typeof weapon.recoilHorizontal === "number"
-        ? weapon.recoilHorizontal * (1 + recoilModifier)
-        : null,
+    ergonomics: weapon ? ergonomics : null,
+    recoilVertical: scale(detailed?.recoilVertical),
+    recoilHorizontal: scale(detailed?.recoilHorizontal),
     weight,
-    costRUB: knownPrices.length
-      ? knownPrices.reduce((total, price) => total + price, 0)
+    costRUB: priced > 0 ? cost : null,
+    costMissingCount,
+    partCount,
+    unknownCount,
+    missingRequired,
+    base: detailed
+      ? {
+          ergonomics: detailed.ergonomics,
+          recoilVertical: detailed.recoilVertical,
+          recoilHorizontal: detailed.recoilHorizontal,
+          weight: detailed.weight,
+        }
       : null,
-    costMissingCount: items.length - knownPrices.length,
-    missingRequiredSlots: missingRequired(root, data),
-    installedItemIds,
   };
 }

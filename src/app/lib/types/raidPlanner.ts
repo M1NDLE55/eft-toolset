@@ -31,6 +31,7 @@ export interface MapLock {
   needsPower: boolean;
   position: Required<GamePoint>;
   keyName: string | null;
+  keyNormalizedName?: string | null;
 }
 
 export interface MapHazard {

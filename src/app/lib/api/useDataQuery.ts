@@ -1,6 +1,4 @@
-"use client";
-
-import { useCallback, useEffect, useMemo, useRef, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useEffectEvent, useSyncExternalStore } from "react";
 import {
   ensureQuery,
   getQuerySnapshot,
@@ -15,29 +13,27 @@ export function useDataQuery<Variables, Data>(
   variables: Variables,
   options: { enabled?: boolean } = {}
 ): QuerySnapshot<Data> & { refresh: () => Promise<Data> } {
-  const key = useMemo(() => queryKey(definition, variables), [definition, variables]);
-  const variablesRef = useRef(variables);
-  variablesRef.current = variables;
+  const key = queryKey(definition, variables);
   const enabled = options.enabled ?? true;
 
   const snapshot = useSyncExternalStore(
     useCallback(
-      (listener) => (enabled ? subscribeQuery(key, listener) : () => undefined),
+      (listener: () => void) => (enabled ? subscribeQuery(key, listener) : () => undefined),
       [enabled, key]
     ),
-    useCallback(() => getQuerySnapshot<Data>(key), [key]),
-    useCallback(() => getQuerySnapshot<Data>(key), [key])
+    () => getQuerySnapshot<Data>(key),
+    () => getQuerySnapshot<Data>(key)
   );
+
+  const load = useEffectEvent(() => {
+    void ensureQuery(definition, variables).catch(() => undefined);
+  });
 
   useEffect(() => {
-    if (!enabled) return;
-    void ensureQuery(definition, variablesRef.current).catch(() => undefined);
-  }, [definition, enabled, key]);
+    if (enabled) load();
+  }, [enabled, key]);
 
-  const refresh = useCallback(
-    () => ensureQuery(definition, variablesRef.current, { force: true }),
-    [definition]
-  );
+  const refresh = () => ensureQuery(definition, variables, { force: true });
 
   return { ...snapshot, refresh };
 }
