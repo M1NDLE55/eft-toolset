@@ -62,6 +62,65 @@ same data. Older name-based links redirect permanently, unknown slugs return 404
 the adapter takes longer than 2.5 seconds the page renders and loads data in the browser
 instead. Every item slug is listed in the sitemap.
 
+## MCP endpoint
+
+`/api/mcp` is a public, read-only [Model Context Protocol](https://modelcontextprotocol.io)
+server using the Streamable HTTP transport in stateless mode. The route is a thin wrapper
+around `handleMcpPost` in `src/app/lib/mcp/http.ts`. Each POST carries one JSON-RPC message
+and builds a fresh server, so no session state lives between requests and any instance can
+serve any request. Responses are JSON; GET and DELETE return 405, and JSON-RPC batches,
+which MCP dropped in 2025-06-18, return 400.
+
+Limits:
+
+- Each request is charged from the client's MCP budget and the global MCP budget
+  (`src/app/lib/api/rate-limit.ts`), both kept apart from the website's, so assistants can't
+  starve the site. Tool calls cost 1 token, `modify_build` 2, and `optimize_build` 3;
+  everything else, including requests that can't be read, costs 0.2.
+- A tool call takes a slot from the shared operation pool, and at most 6 run at once per
+  instance. Handshakes and lists don't wait for slots.
+- Bodies may be up to 1 MiB.
+- Tools stop at 40 seconds and return a tool error. The optimiser, which is CPU-bound, gets
+  one 20-second limit per tool call and at most 2 runs at once per instance.
+
+Requests with no `Origin` header (most clients), from this site, or from localhost (such as
+the MCP Inspector) are accepted, and CORS headers echo the allowed origin; other browser
+origins get 403, including on preflight. Responses are `no-store`. Links in results point
+to the canonical site in production and to the request's origin in development. Each tool
+call logs one JSON line (`event: "mcp_tool_call"`) with a request id, the tool, game mode,
+outcome, duration, and whether the data was stale. Unexpected failures return the request
+id as a reference.
+
+The layers are kept apart:
+
+- `src/app/lib/mcp/` holds only schemas, registration, and result shaping. `catalog.ts`
+  defines every tool's name, title, description, and the summary the `/mcp` page shows, and
+  the server instructions list the tools from it. Tools are registered through
+  `define-tool.ts`, which adds the catalog entry, annotations, and `runTool`'s error
+  handling, logging, and stale-data notice. `schemas.ts` holds the shared input schemas and
+  `output-schemas.ts` the output schemas, which TypeScript checks each tool body against and
+  the SDK enforces at runtime.
+- Resolving references lives with the feature it belongs to:
+  `src/app/lib/search/item-reference.ts` (items), `src/app/lib/builds/resolve.ts` (weapons,
+  presets, trees, slot paths, ammo), and `src/app/lib/raid-planner/resolve.ts` (maps, named
+  places, spawn zones, plan links). They throw `InputError`, whose message the tool returns.
+- Builds load data through a `BuildSource`, so the resolver doesn't depend on the adapter.
+
+Tools call the adapter's projections (`getItemCatalog`, `getItemDetail`, `getGroupItems`,
+`getGunList`, `getAmmoItems`, `getPreset`, `getMapDetails`) inside `runTarkovRead`, which
+applies the same cancellation and stale-data tracking as the route. Results built from stale
+data carry a `dataNotice` with the data's age. `getGunPartLookup` projects every weapon and
+every part any slot accepts once per upstream refresh, so builds are evaluated and optimised
+with the browser's own modules (`src/app/lib/builds/*`).
+
+Results put the payload in `structuredContent` and as JSON text. Builds are passed between
+calls as a share link, or restated as a weapon, preset, and `parts` (each part's slot path
+and item, as build results list them). List tools take `offset` and return `nextOffset`
+while more results remain. Raid plans use the planner's share codec and validation.
+`create_import_link` encodes a backup with the share codec into a `/data#import=…` link,
+which the Backup & restore page decodes and shows for review before Merge; it uses the store
+keys in `src/app/lib/storage/store-keys.ts`.
+
 ## Upstream resources
 
 - Items, weapon structures, prices, presets: `/{gameMode}/items` and `_en`.
@@ -95,10 +154,10 @@ a stable `UPSTREAM_UNAVAILABLE` response without exposing internals.
 
 The route keeps an in-process token bucket per client and a global bucket, and server-
 rendered pages share the API's concurrency cap. On Vercel the client is identified by
-`X-Real-IP`, which Vercel sets itself. Elsewhere it falls back to `CF-Connecting-IP`,
-`X-Real-IP`, or the first `X-Forwarded-For` entry; those are spoofable unless the ingress
-overwrites them, so set `CLIENT_IP_HEADER` to the single header your proxy sets
-authoritatively and block direct origin access.
+`X-Real-IP`, which Vercel sets itself. Elsewhere set `CLIENT_IP_HEADER` to the single header
+your proxy sets authoritatively and block direct origin access. Without it, forwarding
+headers could be forged to dodge the per-client limit, so clients aren't told apart and only
+the global bucket applies (and production logs a warning once).
 
 Successful public GETs are cached by Vercel's edge network, which honours `s-maxage` and
 `stale-while-revalidate` and keys on the full URL including the query string.

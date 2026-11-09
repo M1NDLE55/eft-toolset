@@ -1,4 +1,5 @@
 import type { CatalogItem } from "@/app/lib/cache/types";
+import { normalizeText } from "./normalize-text";
 
 export const MAX_SEARCH_RESULTS = 20;
 
@@ -10,17 +11,13 @@ interface IndexedItem {
 
 const indexes = new WeakMap<readonly CatalogItem[], IndexedItem[]>();
 
-function normalize(value: string) {
-  return value.toLocaleLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "");
-}
-
 function indexFor(items: readonly CatalogItem[]) {
   let index = indexes.get(items);
   if (!index) {
     index = items.map((item) => ({
       item,
-      name: normalize(item.name),
-      short: item.shortName ? normalize(item.shortName) : "",
+      name: normalizeText(item.name),
+      short: item.shortName ? normalizeText(item.shortName) : "",
     }));
     indexes.set(items, index);
   }
@@ -52,15 +49,15 @@ export function filterCatalog(
   items: readonly CatalogItem[],
   search: string,
   excludeNames: readonly string[] = [],
-  limit = MAX_SEARCH_RESULTS
+  limit = MAX_SEARCH_RESULTS,
+  /** Raises the cap for callers that page through results. */
+  maxResults = MAX_SEARCH_RESULTS
 ): CatalogItem[] {
-  const needle = normalize(search.trim()).replace(/\s+/g, " ");
+  const needle = normalizeText(search).replace(/\s+/g, " ");
   if (!needle || limit <= 0) return [];
   const tokens = needle.split(" ");
   const excluded = new Set(excludeNames);
-  const boundedLimit = Number.isFinite(limit)
-    ? Math.min(Math.floor(limit), MAX_SEARCH_RESULTS)
-    : MAX_SEARCH_RESULTS;
+  const boundedLimit = Number.isFinite(limit) ? Math.min(Math.floor(limit), maxResults) : maxResults;
 
   const ranked: { entry: IndexedItem; score: number }[] = [];
   for (const entry of indexFor(items)) {

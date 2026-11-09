@@ -3,8 +3,7 @@ export const dynamic = "force-dynamic";
 import type { MetadataRoute } from "next";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
 import { listItemSlugs, releaseOperationSlot, tryAcquireOperationSlot } from "@/app/lib/api/tarkov-server";
-
-const ORIGIN = "https://www.eft-toolset.com";
+import { SITE_ORIGIN as ORIGIN } from "@/app/lib/site";
 
 async function loadItemSlugs(): Promise<string[]> {
   if (!tryAcquireOperationSlot()) return [];
@@ -32,6 +31,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/item-groups", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/gun-builder", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/raid-planner", priority: 0.8, changeFrequency: "weekly" as const },
+    { path: "/mcp", priority: 0.5, changeFrequency: "monthly" as const },
     {
       path: "/policies/disclaimer-and-use-policy",
       priority: 0.2,
