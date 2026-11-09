@@ -28,8 +28,9 @@ export const DEFAULT_MCP_LIMITS: McpHttpLimits = {
 };
 
 // Rate-limit tokens per request: tool calls cost more than handshakes and lists, and the
-// tools that run the optimiser cost most.
-const BASE_COST = 0.2;
+// tools that run the optimiser cost most. The base cost is a binary fraction so that the two
+// charges of a tool call add up exactly.
+const BASE_COST = 0.25;
 const TOOL_CALL_COST = 1;
 const TOOL_COSTS: Record<string, number> = { optimize_build: 3, modify_build: 2 };
 
@@ -55,23 +56,30 @@ interface JsonRpcMessage {
 }
 
 /**
- * Handles one stateless MCP POST: origin check, body limit, rate limit, a concurrency slot
+ * Handles one stateless MCP POST: origin check, rate limit, body limit, a concurrency slot
  * for tool calls, then a fresh server and transport that answer with JSON.
  */
 export async function handleMcpPost(request: Request, limits: McpHttpLimits = DEFAULT_MCP_LIMITS) {
   const cors = corsHeaders(request);
   if (!cors) return jsonRpcError(null, 403, -32000, "Requests from this origin are not allowed.");
 
-  const parsed = await readMessage(request, limits, cors);
-  const message = parsed instanceof Response ? null : parsed;
-  const isToolCall = message?.method === "tools/call";
-  const toolName = typeof message?.params?.name === "string" ? message.params.name : "";
-  // Requests that can't be read still cost the base amount.
-  const budget = consumeRequestBudget(request, isToolCall ? (TOOL_COSTS[toolName] ?? TOOL_CALL_COST) : BASE_COST, "mcp");
-  if (!budget.allowed) {
+  const charge = (cost: number) => {
+    const budget = consumeRequestBudget(request, cost, "mcp");
+    if (budget.allowed) return null;
     return jsonRpcError(cors, 429, -32000, "Too many requests.", { "Retry-After": String(budget.retryAfterSeconds) });
+  };
+  // Every request pays the base cost before its body is read, so a client over its budget
+  // can't keep body reads busy. Tool calls pay the rest once the body shows which tool it is.
+  const limited = charge(BASE_COST);
+  if (limited) return limited;
+  const message = await readMessage(request, limits, cors);
+  if (message instanceof Response) return message;
+  const isToolCall = message.method === "tools/call";
+  if (isToolCall) {
+    const toolName = typeof message.params?.name === "string" ? message.params.name : "";
+    const limitedTool = charge((TOOL_COSTS[toolName] ?? TOOL_CALL_COST) - BASE_COST);
+    if (limitedTool) return limitedTool;
   }
-  if (!message) return parsed as Response;
 
   // A stateless server has nothing to do with a notification.
   if (typeof message.method === "string" && !("id" in message)) {
@@ -113,7 +121,7 @@ async function readMessage(
 ): Promise<JsonRpcMessage | Response> {
   let rawBody: string;
   try {
-    rawBody = await readBodyWithLimit(request, limits.maxRequestBytes);
+    rawBody = await readBodyWithLimit(request, limits.maxRequestBytes, "mcp");
   } catch (error) {
     if (error instanceof RequestBodyTooLargeError) {
       const limit = `${Math.round(limits.maxRequestBytes / 1024)} KiB`;

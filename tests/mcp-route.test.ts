@@ -435,6 +435,54 @@ describe("MCP endpoint", () => {
     expect((await post({ jsonrpc: "2.0", id: 1, method: "ping" })).status).toBe(200);
   });
 
+  it("keeps slow uploads from holding the website's body reads, and skips reading for clients over budget", async () => {
+    const { POST: tarkovPost } = await import("@/app/api/tarkov/route");
+    const slowBody = (streams: ReadableStreamDefaultController<Uint8Array>[]) =>
+      ({
+        body: new ReadableStream<Uint8Array>({ start: (controller) => void streams.push(controller) }),
+        duplex: "half",
+      }) as RequestInit;
+    const streams: ReadableStreamDefaultController<Uint8Array>[] = [];
+    // More slow MCP uploads than the website's cap of 32 body reads.
+    const uploads = Array.from({ length: 40 }, (_, index) =>
+      POST(
+        new Request("http://localhost/api/mcp", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "CF-Connecting-IP": `192.0.2.${index}` },
+          ...slowBody(streams),
+        })
+      )
+    );
+    await new Promise((resolve) => setTimeout(resolve, 10));
+    expect(streams).toHaveLength(40);
+    const website = await tarkovPost(
+      new Request("http://localhost/api/tarkov", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "CF-Connecting-IP": "192.0.2.200" },
+        body: JSON.stringify({ operation: "arbitrary.query", variables: {} }),
+      })
+    );
+    expect(website.status).toBe(400);
+    for (const controller of streams) controller.close();
+    const statuses = (await Promise.all(uploads)).map((response) => response.status);
+    expect(statuses.filter((status) => status === 429)).toHaveLength(24);
+
+    vi.spyOn(Date, "now").mockReturnValue(1_980_000_000_000);
+    const client = { "CF-Connecting-IP": "198.51.100.50" };
+    // 480 pings at 0.25 tokens spend the client's 120.
+    for (let id = 1; id <= 480; id += 1) expect((await post({ jsonrpc: "2.0", id, method: "ping" }, client)).status).toBe(200);
+    const unread: ReadableStreamDefaultController<Uint8Array>[] = [];
+    const limited = await POST(
+      new Request("http://localhost/api/mcp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", ...client },
+        ...slowBody(unread),
+      })
+    );
+    expect(limited.status).toBe(429);
+    expect(limited.headers.get("retry-after")).toBe("1");
+  });
+
   it("stops slow tools with a tool error and caps concurrent requests", async () => {
     vi.mocked(globalThis.fetch).mockImplementation(hangUntilAborted);
     const limits = { ...DEFAULT_MCP_LIMITS, toolDeadlineMs: 100 };

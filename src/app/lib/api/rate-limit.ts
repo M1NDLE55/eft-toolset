@@ -12,7 +12,7 @@ export interface RequestBudget {
   retryAfterSeconds: number;
 }
 
-type BudgetPool = "web" | "mcp";
+export type BudgetPool = "web" | "mcp";
 
 // Each client has a budget per pool, and each pool has a global one, so assistants can't use
 // up the website's budget, even when clients can't be told apart.

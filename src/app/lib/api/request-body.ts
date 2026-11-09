@@ -1,22 +1,25 @@
-const BODY_READ_TIMEOUT_MS = 5_000;
-const MAX_CONCURRENT_BODY_READS = 32;
+import type { BudgetPool } from "./rate-limit";
 
-let activeBodyReads = 0;
+const BODY_READ_TIMEOUT_MS = 5_000;
+// Each pool has its own cap, so slow MCP uploads can't make the website's POSTs wait.
+const MAX_CONCURRENT_BODY_READS: Record<BudgetPool, number> = { web: 32, mcp: 16 };
+
+const activeBodyReads: Record<BudgetPool, number> = { web: 0, mcp: 0 };
 
 export class RequestBodyTooLargeError extends Error {}
 export class RequestBodyBusyError extends Error {}
 
-export async function readBodyWithLimit(request: Request, maxBytes: number): Promise<string> {
+export async function readBodyWithLimit(request: Request, maxBytes: number, pool: BudgetPool = "web"): Promise<string> {
   const contentLength = Number(request.headers.get("content-length"));
   if (Number.isFinite(contentLength) && contentLength > maxBytes) {
     throw new RequestBodyTooLargeError();
   }
-  if (activeBodyReads >= MAX_CONCURRENT_BODY_READS) throw new RequestBodyBusyError();
-  activeBodyReads += 1;
+  if (activeBodyReads[pool] >= MAX_CONCURRENT_BODY_READS[pool]) throw new RequestBodyBusyError();
+  activeBodyReads[pool] += 1;
   try {
     return await readBody(request, maxBytes);
   } finally {
-    activeBodyReads -= 1;
+    activeBodyReads[pool] -= 1;
   }
 }
 
