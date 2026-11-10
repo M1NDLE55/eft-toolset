@@ -4,7 +4,7 @@ import Share from "./share";
 import { Rubles } from "@/app/lib/currency";
 import type { CachedVendorPrice, ComposedItem } from "@/app/lib/cache/types";
 import { cn } from "@/lib/utils";
-import { FLEA_MARKET, bestSell } from "@/app/lib/item-price";
+import { FLEA_MARKET, bestSell, fleaPrices } from "@/app/lib/item-price";
 
 function Stat({ label, value, hint, tone }: { label: string; value: string; hint?: string; tone?: "good" | "bad" }) {
   return (
@@ -23,7 +23,17 @@ function Stat({ label, value, hint, tone }: { label: string; value: string; hint
   );
 }
 
-function PriceList({ title, offers, best }: { title: string; offers: CachedVendorPrice[]; best: CachedVendorPrice | undefined }) {
+function PriceList({
+  title,
+  offers,
+  best,
+  fleaNote,
+}: {
+  title: string;
+  offers: CachedVendorPrice[];
+  best: CachedVendorPrice | undefined;
+  fleaNote?: string;
+}) {
   return (
     <section aria-label={title} className="flex flex-col gap-2">
       <h2 className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">{title}</h2>
@@ -38,6 +48,7 @@ function PriceList({ title, offers, best }: { title: string; offers: CachedVendo
           >
             <span className="truncate">
               {offer.vendor.name}
+              {fleaNote && offer.vendor.name === FLEA_MARKET && <span className="ml-2 text-xs text-[#777]">{fleaNote}</span>}
               {offer === best && <span className="ml-2 text-[10px] uppercase tracking-widest text-[#9a8866]">Best</span>}
             </span>
             <span className="shrink-0 tabular-nums">{Rubles.format(offer.priceRUB)}</span>
@@ -52,6 +63,7 @@ export default function GenericDetails({ item }: { item: ComposedItem }) {
   const sellFor = [...item.sellFor].sort((a, b) => b.priceRUB - a.priceRUB);
   const buyFor = [...item.buyFor].sort((a, b) => a.priceRUB - b.priceRUB);
   const flea = item.sellFor.find((offer) => offer.vendor.name === FLEA_MARKET);
+  const fleaBuy = fleaPrices(item);
   const best = bestSell(item);
   const slots = item.width * item.height;
   const change = item.changeLast48hPercent;
@@ -116,8 +128,22 @@ export default function GenericDetails({ item }: { item: ComposedItem }) {
 
       {(buyFor.length > 0 || sellFor.length > 0) && (
         <div className={cn("grid grid-cols-1 gap-4", buyFor.length > 0 && sellFor.length > 0 && "sm:grid-cols-2")}>
-          {buyFor.length > 0 && <PriceList title="Buy from" offers={buyFor} best={buyFor[0]} />}
-          {sellFor.length > 0 && <PriceList title="Sell to" offers={sellFor} best={sellFor.find((offer) => offer.vendor.name === best?.vendor)} />}
+          {buyFor.length > 0 && (
+            <PriceList
+              title="Buy from"
+              offers={buyFor}
+              best={buyFor[0]}
+              fleaNote={fleaBuy?.avg24h != null ? "24h avg" : "lowest listing"}
+            />
+          )}
+          {sellFor.length > 0 && (
+            <PriceList
+              title="Sell to"
+              offers={sellFor}
+              best={sellFor.find((offer) => offer.vendor.name === best?.vendor)}
+              fleaNote="lowest listing"
+            />
+          )}
         </div>
       )}
     </>

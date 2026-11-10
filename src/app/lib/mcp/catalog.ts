@@ -37,7 +37,7 @@ export const MCP_TOOL_GROUPS = [
         title: "Get item",
         summary: "Prices, best place to sell, value per slot, and every task, barter, and craft that uses an item.",
         description:
-          "Item Scanner. Everything the item page shows for one item: trader and flea prices, the best place to sell it after the flea listing fee, value per inventory slot, the 48-hour price change, and the tasks that need it, with counts of the barters and crafts that use it (list those with include). Flea buy prices are the 24-hour average and flea sell prices the lowest current listing.",
+          "Item Scanner. Everything the item page shows for one item: trader and flea prices, the best place to sell it after the flea listing fee, value per inventory slot, the 48-hour price change, and the tasks that need it, with counts of the barters and crafts that use it (list those with include). Flea buy and sell prices are the lowest current listing; the flea buy offer also gives the 24-hour average the item page shows.",
       },
     ],
   },
@@ -50,7 +50,7 @@ export const MCP_TOOL_GROUPS = [
         title: "Price a list of items",
         summary: "Price up to 100 items with counts, totals, value per slot, and a Discord-ready list.",
         description:
-          "Item Groups. Prices a watchlist or a haul of loot in one call: the best place to sell each item (flea after its listing fee, or the best trader), value per slot, the cheapest place to buy it, the tasks that need it, totals, and optionally the same Discord-ready price list the item-groups page copies. Accepts up to 100 items, each with an optional count.",
+          "Item Groups. Prices a watchlist or a haul of loot in one call: the best place to sell each item (flea after its listing fee, or the best trader), value per slot, the cheapest place to buy it (a trader or the lowest current flea listing), the tasks that need it, totals, and optionally the same Discord-ready price list the item-groups page copies. Accepts up to 100 items, each with an optional count.",
       },
     ],
   },
@@ -91,7 +91,7 @@ export const MCP_TOOL_GROUPS = [
         title: "Evaluate build",
         summary: "Stats, missing parts, conflicts, shopping list, and a share link for a build.",
         description:
-          "Gun Builder. Computes a build's ergonomics, recoil (including the loaded ammo), weight, and cost the same way the builder does, and lists its parts, empty required slots, part conflicts, and an optional shopping list. Returns a share link that opens the build in the app, where it can be saved.",
+          "Gun Builder. Computes a build's ergonomics, recoil (including the loaded ammo), weight, and cost the same way the builder does (flea parts at their 24-hour average), and lists its parts, empty required slots, part conflicts, and an optional shopping list. Returns a share link that opens the build in the app, where it can be saved.",
       },
       {
         name: "modify_build",

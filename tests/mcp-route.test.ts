@@ -100,6 +100,7 @@ describe("MCP endpoint", () => {
     expect(init.response.headers.get("cache-control")).toBe("no-store");
     expect(init.body.result.serverInfo).toMatchObject({ name: "eft-toolset", title: "EFT Toolset" });
     expect(init.body.result.instructions).toContain("gameMode");
+    expect(init.body.result.instructions).toContain("flea buy and sell prices are the lowest current listing");
 
     const { body } = await rpc("tools/list");
     const names = (body.result.tools as { name: string; annotations?: { readOnlyHint?: boolean } }[]).map(
@@ -137,8 +138,15 @@ describe("MCP endpoint", () => {
       size: "2x1",
       bestSell: { vendor: "Flea Market", priceRUB: 47_314, afterFleaFee: true, perSlotRUB: 23_657 },
       fleaListingFeeRUB: 2_686,
-      cheapestBuy: { vendor: "Tester", priceRUB: 40_000 },
+      cheapestBuy: { vendor: "Tester", priceRUB: 40_000, basis: "trader" },
     });
+    expect(item.data.buyFrom).toContainEqual({
+      vendor: "Flea Market",
+      priceRUB: 50_000,
+      basis: "lowest flea listing",
+      avg24hRUB: 55_000,
+    });
+    expect(item.data.sellTo).toContainEqual({ vendor: "Flea Market", priceRUB: 50_000, basis: "lowest flea listing" });
     expect(item.data.usedInTasks[0]).toMatchObject({ name: "Test Task", trader: "Tester", minPlayerLevel: 10 });
     expect(item.data.barters[0]).toMatchObject({ give: ["2× Test Rifle"], receive: ["1× Reward"] });
     expect(item.data.crafts[0]).toMatchObject({ station: "Workbench", output: ["2× Reward"] });
@@ -148,6 +156,36 @@ describe("MCP endpoint", () => {
 
     const missing = await call("get_item", { item: "zzzz qqqq" });
     expect(missing.result.isError).toBe(true);
+  });
+
+  it("never reports a flea 24-hour average as the cheapest buy when listings are cheaper", async () => {
+    // Water filter on PVP: a ₽60,000 lowest listing against a ₽102,539 24-hour average.
+    const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
+    Object.assign(items.weapon, {
+      lastLowPrice: 60_000,
+      avg24hPrice: 102_539,
+      buyFromTrader: [{ trader: "trader", priceRUB: 80_000, minTraderLevel: 1 }],
+    });
+
+    const item = await call("get_item", { item: "Test Rifle" });
+    expect(item.data.cheapestBuy).toEqual({
+      vendor: "Flea Market",
+      priceRUB: 60_000,
+      basis: "lowest flea listing",
+      avg24hRUB: 102_539,
+    });
+    expect(item.data.buyFrom).toEqual([
+      { vendor: "Flea Market", priceRUB: 60_000, basis: "lowest flea listing", avg24hRUB: 102_539 },
+      { vendor: "Tester", priceRUB: 80_000, basis: "trader" },
+    ]);
+
+    const prices = await call("get_item_prices", { items: ["Test Rifle"] });
+    expect(prices.data.rows[0].cheapestBuy).toMatchObject({ vendor: "Flea Market", priceRUB: 60_000 });
+
+    // The gun builder keeps pricing the flea at the 24-hour average, and says so.
+    const { body } = await rpc("tools/list");
+    const ammoTool = body.result.tools.find((tool: { name: string }) => tool.name === "get_ammo_options");
+    expect(ammoTool.outputSchema.properties.ammo.items.properties.fleaPriceRUB.description).toMatch(/24-hour average/);
   });
 
   it("prices item lists with counts, totals, and the Discord text the item groups page copies", async () => {
