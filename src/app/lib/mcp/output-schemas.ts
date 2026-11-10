@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { PRICE_BASIS } from "./item-projection";
+import { FLEA_STATUS, PRICE_BASIS } from "./item-projection";
 
 // Output schemas name the fields clients can rely on. Objects stay open so later additions
 // don't break older clients.
@@ -18,7 +18,32 @@ function result<Shape extends z.ZodRawShape>(shape: Shape) {
   return object({ ...shape, dataNotice: text.optional().describe("Set when tarkov.dev was unreachable.") });
 }
 
-const sale = object({ vendor: text, priceRUB: num, afterFleaFee: bool, perSlotRUB: num }).nullable();
+const sale = object({
+  vendor: text,
+  priceRUB: num,
+  afterFleaFee: bool,
+  perSlotRUB: maybeNum.describe("Null for weapons, whose size depends on attachments (see sizeNote)."),
+}).nullable();
+const flea = object({
+  status: z.enum([FLEA_STATUS.listed, FLEA_STATUS.noListings, FLEA_STATUS.banned]),
+  minPlayerLevel: maybeNum.describe("Player level needed to trade this item on the flea."),
+});
+const needed = object({
+  total: num.describe("Items needed for all tasks and hideout upgrades, ignoring the player's progress."),
+  foundInRaid: num.describe("How many of total must be found in raid."),
+  forTasks: num.optional(),
+  forHideout: num.optional(),
+  hideoutSlots: num.optional().describe("Hideout slots it can be installed in, e.g. Bitcoin Farm graphics cards; not consumed."),
+  summary: text,
+})
+  .nullable()
+  .describe("Why to keep it: counts for tasks (hand-overs; find-only tasks count once) and hideout upgrades. Null when nothing needs it.");
+const priceReasons = {
+  noSellReason: text.optional().describe("Set when bestSell is null."),
+  noBuyReason: text.optional().describe("Set when cheapestBuy is null."),
+  flea,
+  sizeNote: text.optional(),
+};
 const offer = object({
   vendor: text,
   priceRUB: num,
@@ -122,14 +147,32 @@ export const getItemOutput = result({
   wikiLink: maybeText,
   size: text,
   slots: num,
+  defaultBuildSize: text.optional().describe("Weapons: size of the default build."),
   bestSell: sale,
   cheapestBuy,
+  ...priceReasons,
   fleaListingFeeRUB: maybeNum,
   change48hPercent: maybeNum,
   buyFrom: list(offer).describe("Trader prices and the lowest current flea listing, cheapest first."),
   sellTo: list(offer).describe("Trader prices and the lowest current flea listing (before the listing fee), highest first."),
-  usedInTasks: list(object({ name: text, trader: text, minPlayerLevel: maybeNum, objectives: list(text) })).optional(),
+  needed,
+  usedInTasks: list(
+    object({
+      name: text,
+      trader: text,
+      faction: text.optional().describe("USEC or BEAR when only that faction gets the task."),
+      minPlayerLevel: maybeNum,
+      count: num.describe("Items the task takes; 0 when it only uses the item or accepts other items."),
+      foundInRaid: bool,
+      objectives: list(text).describe("Only the objectives involving this item, with counts."),
+    })
+  ).optional(),
   usedInTaskCount: num.optional(),
+  hideout: list(object({ station: text, level: num, count: num, foundInRaid: bool }))
+    .optional()
+    .describe("Hideout station upgrades that consume the item."),
+  hideoutSlots: list(object({ station: text, level: num, slots: num })).optional(),
+  hideoutUpgradeCount: num.optional(),
   barters: list(object({ trader: text, give: list(text), receive: list(text) })).optional(),
   barterCount: num.optional(),
   crafts: list(object({ station: text, input: list(text), output: list(text) })).optional(),
@@ -148,7 +191,10 @@ export const getItemPricesOutput = result({
       count: num,
       bestSell: sale.optional(),
       cheapestBuy: cheapestBuy.optional(),
+      ...priceReasons,
+      flea: flea.optional(),
       totalRUB: maybeNum,
+      needed,
       usedInTasks: list(text),
     })
   ),

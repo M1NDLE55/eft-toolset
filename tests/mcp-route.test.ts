@@ -119,6 +119,8 @@ describe("MCP endpoint", () => {
       "build_weapon",
       "price_loot",
     ]);
+    const priceLoot = await rpc("prompts/get", { name: "price_loot", arguments: { items: "LEDX" } });
+    expect(priceLoot.body.result.messages[0].content.text).toContain("still needed for tasks or hideout upgrades");
   });
 
   it("searches items and returns item scanner details with links into the app", async () => {
@@ -136,9 +138,11 @@ describe("MCP endpoint", () => {
     expect(item.data).toMatchObject({
       name: "Test Rifle",
       size: "2x1",
-      bestSell: { vendor: "Flea Market", priceRUB: 47_314, afterFleaFee: true, perSlotRUB: 23_657 },
+      // A weapon's size depends on its attachments, so it has no per-slot value.
+      bestSell: { vendor: "Flea Market", priceRUB: 47_314, afterFleaFee: true, perSlotRUB: null },
+      sizeNote: expect.stringContaining("stripped weapon"),
       fleaListingFeeRUB: 2_686,
-      cheapestBuy: { vendor: "Tester", priceRUB: 40_000, basis: "trader" },
+      cheapestBuy: { vendor: "Tester", priceRUB: 40_000, basis: "trader", loyaltyLevel: 3 },
     });
     expect(item.data.buyFrom).toContainEqual({
       vendor: "Flea Market",
@@ -176,7 +180,7 @@ describe("MCP endpoint", () => {
     });
     expect(item.data.buyFrom).toEqual([
       { vendor: "Flea Market", priceRUB: 60_000, basis: "lowest flea listing", avg24hRUB: 102_539 },
-      { vendor: "Tester", priceRUB: 80_000, basis: "trader" },
+      { vendor: "Tester", priceRUB: 80_000, basis: "trader", loyaltyLevel: 1 },
     ]);
 
     const prices = await call("get_item_prices", { items: ["Test Rifle"] });
@@ -198,6 +202,115 @@ describe("MCP endpoint", () => {
     expect(data.unresolved).toEqual(["zzzz qqqq"]);
     expect(data.discordText).toContain("**Loot**");
     expect(data.discordText).toContain("2× Test Rifle");
+  });
+
+  it("says what an item is needed for: task counts, found in raid, hideout upgrades and slots", async () => {
+    const tasks = fixtures.tasks as { data: { tasks: Record<string, Record<string, unknown>> } };
+    tasks.data.tasks.task.objectives = [
+      { description: "find-mod", type: "findItem", count: 3, foundInRaid: true, items: ["mod"] },
+      { description: "hand-over", type: "giveItem", count: 3, foundInRaid: true, items: ["mod"] },
+    ];
+    tasks.data.tasks.any = {
+      id: "any",
+      name: "any-name",
+      trader: "trader",
+      objectives: [{ description: "hand-over", type: "giveItem", count: 5, foundInRaid: true, items: ["mod", "ammo"] }],
+    };
+    Object.assign((fixtures.tasks_en as { data: Record<string, string> }).data, {
+      "find-mod": "Find the item in raid: Test Mod",
+      "hand-over": "Hand over the item",
+      "any-name": "Any Task",
+    });
+
+    const item = await call("get_item", { item: "Test Mod" });
+    expect(item.data.needed).toEqual({
+      total: 8,
+      foundInRaid: 5,
+      forTasks: 3,
+      forHideout: 5,
+      hideoutSlots: 5,
+      summary:
+        "8 needed (5 FIR): 3 for 1 task (3 FIR); 5 for 2 hideout upgrades (2 FIR); Workbench holds up to 5 installed; not counted: 1 task using it or accepting other items",
+    });
+    expect(item.data.usedInTasks).toEqual([
+      expect.objectContaining({
+        name: "Test Task",
+        count: 3,
+        foundInRaid: true,
+        objectives: ["Find the item in raid: Test Mod (3×, found in raid)", "Hand over the item (3× Test Mod, found in raid)"],
+      }),
+      expect.objectContaining({
+        name: "Any Task",
+        count: 0,
+        objectives: ["Hand over the item (5 of this or 1 other item, found in raid)"],
+      }),
+    ]);
+    expect(item.data.hideout).toEqual([
+      { station: "Workbench", level: 1, count: 2, foundInRaid: true },
+      { station: "Workbench", level: 2, count: 3, foundInRaid: false },
+    ]);
+    expect(item.data.hideoutSlots).toEqual([{ station: "Workbench", level: 2, slots: 5 }]);
+
+    const counts = await call("get_item", { item: "Test Mod", include: [] });
+    expect(counts.data).toMatchObject({ hideoutUpgradeCount: 2, usedInTaskCount: 2 });
+    expect(counts.data.needed.total).toBe(8);
+    expect(counts.data.hideout).toBeUndefined();
+
+    const prices = await call("get_item_prices", { items: ["Test Mod", "Test Ammo"] });
+    expect(prices.data.rows[0].needed).toEqual({ total: 8, foundInRaid: 5, summary: item.data.needed.summary });
+    expect(prices.data.rows[0].usedInTasks).toEqual(["Test Task", "Any Task"]);
+    expect(prices.data.rows[1].needed).toMatchObject({ total: 0 });
+
+    const nothing = await call("get_item", { item: "Reward" });
+    expect(nothing.data.needed).toBeNull();
+  });
+
+  it("states flea eligibility and why a price is missing", async () => {
+    const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
+    Object.assign(items.ammo, { types: ["ammo", "noFlea"], buyFromTrader: [], sellToTrader: [] });
+    Object.assign(items.mod, { minLevelForFlea: 35, lastLowPrice: null, sellToTrader: [], buyFromTrader: [] });
+
+    const ammo = await call("get_item", { item: "Test Ammo" });
+    expect(ammo.data).toMatchObject({
+      flea: { status: "banned", minPlayerLevel: null },
+      bestSell: null,
+      noSellReason: "No trader buys it and it is banned from the flea market.",
+      cheapestBuy: null,
+      noBuyReason: "No trader sells it for roubles and it is banned from the flea market.",
+    });
+
+    const prices = await call("get_item_prices", { items: ["Test Mod", "Test Rifle"] });
+    expect(prices.data.rows[0]).toMatchObject({
+      flea: { status: "no listings", minPlayerLevel: 35 },
+      noBuyReason: "No trader sells it for roubles and it has no current flea listings.",
+    });
+    expect(prices.data.rows[1].flea).toEqual({ status: "listed", minPlayerLevel: null });
+    expect(prices.data.rows[1].noBuyReason).toBeUndefined();
+  });
+
+  it("gives weapons no per-slot value and reports their default build size", async () => {
+    const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
+    Object.assign(items.weapon, { width: 1, height: 1 });
+    Object.assign(items.mod, { sellToTrader: [{ trader: "trader", priceRUB: 9_000 }] });
+    Object.assign(items.weapon.properties as Record<string, unknown>, { defaultWidth: 5, defaultHeight: 2 });
+
+    const item = await call("get_item", { item: "Test Rifle" });
+    expect(item.data).toMatchObject({ size: "1x1", slots: 1, defaultBuildSize: "5x2" });
+    expect(item.data.bestSell.perSlotRUB).toBeNull();
+    expect(item.data.sizeNote).toBe(
+      "Weapon: 1x1 is the stripped weapon; its default build is 5x2 and the real size depends on attachments, so there is no per-slot value. Flea prices are for the default build; trader prices are for the stripped weapon."
+    );
+
+    const mod = await call("get_item", { item: "Test Mod" });
+    expect(mod.data.bestSell.perSlotRUB).toBe(9_000);
+    expect(mod.data.sizeNote).toBeUndefined();
+  });
+
+  it("marks craft tools as kept", async () => {
+    const crafts = fixtures.crafts as { data: { requiredItems: unknown[] }[] };
+    crafts.data[0].requiredItems.push({ item: "mod", count: 1, attributes: { tool: true } });
+    const item = await call("get_item", { item: "Test Mod", include: ["crafts"] });
+    expect(item.data.crafts[0].input).toEqual(["1× Test Rifle", "1× Test Mod (tool, kept)"]);
   });
 
   it("builds, modifies, optimises, and shares guns with the builder's own logic", async () => {

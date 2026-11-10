@@ -1,13 +1,13 @@
 import { z } from "zod";
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { getGroupItems, getItemDetail } from "@/app/lib/api/tarkov-server";
+import { getGroupItems, getItemDetail, getItemUses } from "@/app/lib/api/tarkov-server";
 import type { CatalogItem } from "@/app/lib/cache/types";
 import { filterCatalog } from "@/app/lib/search/filter-catalog";
 import { resolveItemReference, type ResolvedItem } from "@/app/lib/search/item-reference";
 import { formatGroupPriceList } from "@/app/lib/item-groups/format";
 import { MAX_GROUP_NAME_LENGTH } from "@/app/lib/item-groups/limits";
 import { InputError, type ToolContext } from "./context";
-import { priceSummary, projectDetail } from "./item-projection";
+import { neededSummary, priceSummary, projectDetail } from "./item-projection";
 import { getItemOutput, getItemPricesOutput, searchItemsOutput } from "./output-schemas";
 import { toolDefiner } from "./define-tool";
 import { gameModeSchema } from "./schemas";
@@ -78,8 +78,8 @@ export function registerItemTools(server: McpServer, context: ToolContext) {
           .describe("Item id, slug, exact name, short name, item page URL, or search text."),
         gameMode: gameModeSchema,
         include: z
-          .array(z.enum(["tasks", "barters", "crafts"]))
-          .default(["tasks"])
+          .array(z.enum(["tasks", "hideout", "barters", "crafts"]))
+          .default(["tasks", "hideout"])
           .describe('Relations to list in full; the rest are returned as counts. Add "barters" or "crafts" to list them.'),
       },
     },
@@ -143,11 +143,15 @@ export function registerItemTools(server: McpServer, context: ToolContext) {
           count: (existing?.count ?? 0) + count,
         });
       }
-      const priced = await read(() => getGroupItems(gameMode, Array.from(requested.keys())));
+      const names = Array.from(requested.keys());
+      const [priced, uses] = await read(() =>
+        Promise.all([getGroupItems(gameMode, names), getItemUses(gameMode, names)])
+      );
       const byName = new Map(priced.map((item) => [item.name, item]));
       let rows = Array.from(requested.values()).map(({ item, count }) => {
         const data = byName.get(item.name);
         const summary = data ? priceSummary(data) : null;
+        const itemUses = uses.get(item.name);
         const unit = summary?.bestSell?.priceRUB ?? null;
         return {
           name: item.name,
@@ -157,6 +161,7 @@ export function registerItemTools(server: McpServer, context: ToolContext) {
           size: data ? `${data.width}x${data.height}` : null,
           ...summary,
           totalRUB: unit === null ? null : unit * count,
+          needed: itemUses ? neededSummary(itemUses) : null,
           usedInTasks: data ? Array.from(new Set(data.usedInTasks.map((task) => task.name))) : [],
         };
       });
