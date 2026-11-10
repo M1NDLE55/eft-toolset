@@ -67,6 +67,10 @@ export default function GenericDetails({ item }: { item: ComposedItem }) {
   const best = bestSell(item);
   const slots = item.width * item.height;
   const change = item.changeLast48hPercent;
+  const buildSize =
+    item.weapon?.defaultWidth && item.weapon.defaultHeight
+      ? `${item.weapon.defaultWidth}×${item.weapon.defaultHeight}`
+      : null;
 
   return (
     <>
@@ -87,7 +91,11 @@ export default function GenericDetails({ item }: { item: ComposedItem }) {
             )}
             <span className="border border-[#2a2a2a] px-1.5 py-0.5 tabular-nums">
               {item.width}×{item.height}
+              {item.weapon && " stripped"}
             </span>
+            {buildSize && (
+              <span className="border border-[#2a2a2a] px-1.5 py-0.5 tabular-nums">{buildSize} default build</span>
+            )}
             {item.wikiLink && (
               <a
                 href={item.wikiLink}
@@ -110,13 +118,19 @@ export default function GenericDetails({ item }: { item: ComposedItem }) {
         />
         <Stat
           label="Per slot"
-          value={best ? Rubles.format(best.price / slots) : "—"}
-          hint={`${slots} slot${slots === 1 ? "" : "s"}`}
+          value={best && !item.weapon ? Rubles.format(best.price / slots) : "—"}
+          hint={item.weapon ? "Depends on attachments" : `${slots} slot${slots === 1 ? "" : "s"}`}
         />
         <Stat
           label="Flea fee"
           value={item.fleaMarketFee !== null ? Rubles.format(item.fleaMarketFee) : "—"}
-          hint={item.fleaMarketFee !== null ? (flea ? `Lists at ${Rubles.format(flea.priceRUB)}` : undefined) : "Not on flea"}
+          hint={
+            item.fleaBanned
+              ? "Banned from flea"
+              : item.fleaMarketFee !== null
+                ? flea ? `Lists at ${Rubles.format(flea.priceRUB)}` : undefined
+                : "Not on flea"
+          }
         />
         <Stat
           label="48h change"
