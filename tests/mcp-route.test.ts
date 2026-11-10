@@ -437,6 +437,12 @@ describe("MCP endpoint", () => {
 
     const loaded = await call("modify_build", { build: full, changes: [{ action: "set_ammo", ammo: "Test Ammo" }] });
     expect(loaded.data.ammo).toMatchObject({ name: "Test Ammo", fits: true });
+    const weapon = await call("get_weapon", { weapon: "carbine", priceSources: { traders: false } });
+    expect(weapon.data.caliber).toBe("5.56x45mm NATO");
+    expect(weapon.data.baseStats).toMatchObject({
+      priceRUB: null,
+      priceNote: "Can't be bought: trader prices are turned off, and it has no flea price.",
+    });
     const noAmmo = await call("modify_build", { build: full, changes: [{ action: "set_ammo" }] });
     expect(noAmmo.text).toContain("set_ammo needs item");
   });

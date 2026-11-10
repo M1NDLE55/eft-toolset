@@ -25,7 +25,15 @@ import {
 import { buildShoppingList, formatShoppingList } from "@/app/lib/builds/shopping";
 import { computeStats } from "@/app/lib/builds/stats";
 import { removeMod } from "@/app/lib/builds/tree";
-import { caliberId, describeBuild, formatCaliber, itemRow, projectAmmo, projectStats } from "./build-projection";
+import {
+  caliberId,
+  describeBuild,
+  formatCaliber,
+  itemRow,
+  priceNote,
+  projectAmmo,
+  projectStats,
+} from "./build-projection";
 import { loadBuildPricing } from "./build-prices";
 import { InputError, round, type ToolContext } from "./context";
 import {
@@ -99,7 +107,7 @@ const buildChangeSchema = z.discriminatedUnion("action", [
       action: z.literal("fill_required"),
       slotPath: slotPathSchema.optional().describe("Only fill this slot and what attaches to it."),
     })
-    .describe("Fill empty required slots with the cheapest compatible parts."),
+    .describe("Fill empty required slots and an empty magazine slot with the cheapest compatible parts."),
   z
     .object({
       action: z.literal("set_ammo"),
@@ -169,7 +177,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       },
     },
     async ({ weapon: reference, gameMode, priceSources: prices }, { read }) => {
-      const { data, sources: priceSources } = await loadBuildPricing(read, gameMode, prices);
+      const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
       const weapon = resolveWeapon(data, reference);
       let defaultPreset = null;
       if (weapon.defaultPresetId) {
@@ -200,6 +208,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
           recoilHorizontal: weapon.recoilHorizontal,
           weightKg: weapon.weight,
           priceRUB: effectivePrice(weapon, priceSources),
+          ...(effectivePrice(weapon, priceSources) === null ? { priceNote: priceNote(weapon, priceSources, limits) } : {}),
         },
         presets: weapon.presets ?? [],
         defaultPreset,
