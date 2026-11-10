@@ -277,12 +277,22 @@ export const getMapDetailsOutput = result({
   raidDurationMinutes: maybeNum,
   levels: list(text),
   layers: list(object({ group: text, options: list(object({ id: text, label: text, count: num })) })),
-  extracts: named({ faction: text }),
+  extracts: named({ faction: text, requiresItem: text.optional().describe("Item handed over to extract.") }),
   transits: named(),
-  spawnZones: list(object({ kind: text, zone: maybeText, points: num, ...position })).optional(),
+  bosses: list(
+    object({ name: text, spawnChance: num, locations: list(object({ name: text, chance: num })) })
+  ).optional(),
+  areas: named({ source: maybeText }),
+  spawnZones: list(
+    object({ kind: text, zone: maybeText, near: text.optional(), bosses: list(text).optional(), points: num, ...position })
+  ).optional(),
+  spawnTotal: num.optional(),
   spawns: list(object({ kind: text, zone: maybeText, ...position })).optional(),
+  nextSpawnOffset: maybeNum.optional(),
+  lockTotal: num.optional(),
   locks: list(object({ type: text, key: maybeText, keyUrl: maybeText, needsPower: bool, ...position })).optional(),
-  hazards: named(),
+  nextLockOffset: maybeNum.optional(),
+  hazards: named({ count: num.optional() }),
   switches: named(),
   stationaryWeapons: named(),
   lootContainerTotal: num.optional(),
@@ -300,7 +310,17 @@ export const createRaidPlanOutput = result({
   drawings: num,
   notes: num,
   layers: list(text),
-  resolvedPlaces: list(object({ input: text, resolved: text })).optional(),
+  resolvedPlaces: list(
+    object({
+      input: text,
+      resolved: text,
+      match: z.enum(["exact", "partial", "typo"]).optional(),
+      approximate: bool.optional(),
+      level: maybeText.optional(),
+      note: text.optional(),
+      alsoNamed: list(text).optional(),
+    })
+  ).optional(),
   warnings,
 });
 
@@ -313,6 +333,7 @@ export const readRaidPlanOutput = result({
   drawings: list(object({ kind: text, color: text, points: num, from: maybeText, to: maybeText })),
   notes: list(object({ title: text, body: text, x: num, z: num, near: maybeText })),
   layers: list(text),
+  warnings,
 });
 
 export const createImportLinkOutput = result({

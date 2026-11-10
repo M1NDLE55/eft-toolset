@@ -388,6 +388,110 @@ describe("MCP endpoint", () => {
     expect(ambiguous.result.isError).toBe(true);
   });
 
+  it("summarises map details compactly, with bosses, extract items, and filtered, paged lists", async () => {
+    const details = await call("get_map_details", { map: "factory" });
+    expect(details.data.extracts[1]).toMatchObject({ name: "Car V-Ex", requiresItem: "Test Rifle" });
+    expect(details.data.bosses).toEqual([
+      {
+        name: "Reshala",
+        spawnChance: 0.5,
+        locations: [
+          { name: "Stronghold", chance: 0.5, x: -42, z: 42, level: "Ground" },
+          { name: "Dorms", chance: 0.5 },
+        ],
+        escorts: 4,
+      },
+    ]);
+    expect(details.data.spawnZones).toContainEqual({
+      kind: "boss",
+      zone: "Stronghold",
+      points: 1,
+      x: -44,
+      z: 44,
+      level: "Ground",
+      bosses: ["Reshala 25%"],
+    });
+    expect(details.data.spawnZones).toContainEqual(expect.objectContaining({ kind: "pmc", zone: null, near: "Gate" }));
+    expect(details.data.spawns).toBeUndefined();
+    expect(details.data.locks).toBeUndefined();
+
+    const filtered = await call("get_map_details", { map: "factory", spawnKinds: ["pmc"], lockKeys: ["test"] });
+    expect(filtered.data).toMatchObject({ spawnTotal: 1, nextSpawnOffset: null, lockTotal: 1, nextLockOffset: null });
+    expect(filtered.data.spawns).toEqual([{ kind: "pmc", zone: null, x: 2, z: 5, y: 2, level: "Ground" }]);
+    expect(filtered.data.spawnZones).toBeUndefined();
+    const none = await call("get_map_details", { map: "factory", lockKeys: ["nothing"] });
+    expect(none.data).toMatchObject({ lockTotal: 0, locks: [] });
+
+    const paged = await call("get_map_details", { map: "factory", sections: ["spawns", "locks", "lootContainers"], spawnOffset: 2 });
+    expect(paged.data).toMatchObject({ spawnTotal: 3, nextSpawnOffset: null });
+    expect(paged.data.spawns).toHaveLength(1);
+  });
+
+  it("reports every plan problem at once and only warns about cosmetic ones", async () => {
+    const rejected = await call("create_raid_plan", {
+      map: "factory",
+      route: [{ place: "Gaet" }, { place: "nowhere at all" }, { x: 99_999, z: -99_999 }],
+      drawings: [{ kind: "pen", color: "purple", points: [{ x: 0, z: 0 }, { place: "Car" }] }],
+      notes: [{ at: { x: 1, z: 99_999 }, title: "Far" }],
+    });
+    expect(rejected.result.isError).toBe(true);
+    expect(rejected.text).toContain("Fix these 3 problems");
+    expect(rejected.text).toContain('route[1]: No place is named "nowhere at all".');
+    expect(rejected.text).toContain("route[2]: x 99999, z -99999 is outside Factory");
+    expect(rejected.text).toContain("notes[0].at: x 1, z 99999 is outside Factory");
+
+    const created = await call("create_raid_plan", {
+      map: "factory",
+      route: [{ place: "Gaet" }, { place: "car" }],
+      drawings: [{ kind: "arrow", color: "purple", points: [{ x: 0, z: 0 }, { place: "stronghold" }] }],
+      layers: ["extracts:pmc", "spawns:nowhere"],
+    });
+    expect(created.data.name).toBe("Factory: Gate to Car V-Ex");
+    expect(created.data.resolvedPlaces).toEqual([
+      { input: "Gaet", resolved: "Gate (pmc extract)", match: "typo", approximate: true, level: "Ground" },
+      { input: "car", resolved: "Car V-Ex (pmc extract)", match: "partial", approximate: true, level: "Ground" },
+      {
+        input: "stronghold",
+        resolved: "Stronghold (scav spawn)",
+        match: "exact",
+        level: "Ground",
+        alsoNamed: ["Stronghold (boss spawn)"],
+      },
+    ]);
+    expect(created.data.warnings).toEqual([
+      '"Gaet" was placed at Gate (pmc extract), a typo match. Describe it by that name, or give coordinates.',
+      '"car" was placed at Car V-Ex (pmc extract), a partial match. Describe it by that name, or give coordinates.',
+      'Colour "purple" is not available, so red was used. Colours: tan, green, orange, red, blue, white.',
+      "Left out layer ids this map does not have: spawns:nowhere.",
+    ]);
+    const plan = await decodePlanSharePayload(new URLSearchParams(created.data.shareLink.split("#")[1]).get("p")!);
+    expect(plan.drawings[0].color).toBe("#d46b6b");
+    expect(plan.name).toBe("Factory: Gate to Car V-Ex");
+
+    const unnamed = await call("create_raid_plan", { map: "factory", route: [{ x: 1, z: 1 }] });
+    expect(unnamed.data.name).toBe("Factory raid plan");
+    const badMap = await call("create_raid_plan", { map: "the moon" });
+    expect(badMap.text).toContain('No map matches "the moon"');
+  });
+
+  it("warns when a plan link has points outside the map", async () => {
+    const { encodePlanSharePayload } = await import("@/app/lib/raid-planner/share");
+    const payload = await encodePlanSharePayload({
+      id: "plan",
+      name: "Far away",
+      mapKey: "factory",
+      createdAt: 1,
+      updatedAt: 1,
+      enabledLayers: [],
+      route: [{ id: "a", position: { x: 1, z: 3 } }, { id: "b", position: { x: 5000, z: 5000 } }],
+      drawings: [],
+      notes: [],
+    });
+    const read = await call("read_raid_plan", { link: payload });
+    expect(read.data.warnings).toEqual(["1 point is outside the map."]);
+    expect(read.data.route[0].near).toBe("Gate (pmc extract, 0 m)");
+  });
+
   it("bundles groups, builds, and plans into an import link the app's restore accepts", async () => {
     const plan = await call("create_raid_plan", { map: "factory", name: "Plan", route: [{ place: "Gate" }] });
     const { data } = await call("create_import_link", {
