@@ -82,6 +82,13 @@ describe("item reference matching", () => {
       status: "ambiguous",
       candidates: ["Folder with intelligence on Norvinsk region facilities", "Intelligence folder"],
     });
+    // A word that is a whole word of one match and only inside a longer word of the others names that one.
+    const guns = indexCatalog(
+      ["HK UMP .45 ACP submachine gun", "MP-133 12ga pump-action shotgun", "Remington Model 870 12ga pump-action shotgun"].map(
+        (name) => entry(name, null)
+      )
+    );
+    expect(matchItemReference(guns, "ump")).toMatchObject({ status: "found", matchedBy: "search", item: { name: "HK UMP .45 ACP submachine gun" } });
     expect(matchItemReference(folders, "norvinsk")).toMatchObject({ status: "found", item: { name: expect.stringMatching(/^Folder/) } });
     // Several words narrow it down: take the best-ranked match and list the rest.
     expect(matchItemReference(index, "red keycard")).toMatchObject({

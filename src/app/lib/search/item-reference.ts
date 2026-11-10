@@ -154,6 +154,12 @@ export function matchItemReference(index: CatalogIndex, reference: string, optio
   // mean the Intelligence folder just as well.
   if (oneWord && sharingShortName.length === 0) {
     const distinct = uniqueByName(pool.map((item) => baseIn(item) ?? item));
+    // Unless only one of them has it as a whole word: "ump" is the UMP, not every pump-action.
+    const isWhole = wholeWordTest(normalized);
+    const whole = distinct.filter((item) => isWhole(normalizeText(item.name)) || isWhole(normalizeText(item.shortName ?? "")));
+    if (distinct.length > MAX_ONE_WORD_MATCHES && whole.length === 1) {
+      return { status: "found", item: whole[0], matchedBy, alternatives: alternativesTo(whole[0], pool) };
+    }
     if (distinct.length > MAX_ONE_WORD_MATCHES) {
       return { status: "ambiguous", candidates: distinct.slice(0, MAX_CANDIDATES).map((item) => item.name) };
     }
@@ -185,6 +191,13 @@ export function matchItemReference(index: CatalogIndex, reference: string, optio
     return { status: "ambiguous", candidates: resolved.slice(0, MAX_CANDIDATES).map((item) => item.name) };
   }
   return { status: "found", item: resolved[0], matchedBy, alternatives: alternativesTo(resolved[0], pool) };
+}
+
+/** Tests whether normalised text has the word as a whole word, not inside a longer one. */
+function wholeWordTest(word: string) {
+  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = new RegExp(`(^|[^\\p{L}\\p{N}])${escaped}($|[^\\p{L}\\p{N}])`, "u");
+  return (text: string) => pattern.test(text);
 }
 
 const familyHeadNames = new WeakMap<CatalogIndex, ReadonlySet<string>>();
@@ -227,12 +240,11 @@ const MAX_FAMILY_HEADS = 4;
  */
 function familyHeads(index: CatalogIndex, word: string): CatalogItem[] {
   const heads = familyHeadSet(index);
-  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const wholeWord = new RegExp(`(^|[^\\p{L}\\p{N}])${escaped}($|[^\\p{L}\\p{N}])`, "u");
+  const isWhole = wholeWordTest(word);
   const rankOf = (item: CatalogItem) => {
     const short = normalizeText(item.shortName ?? "");
     if (short === word) return 0;
-    if (wholeWord.test(normalizeText(item.name))) return 1;
+    if (isWhole(normalizeText(item.name))) return 1;
     if (short.startsWith(word) && /^[\p{L}\p{N}]{1,2}$/u.test(short.slice(word.length))) return 2;
     return -1;
   };
