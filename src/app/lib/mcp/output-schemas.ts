@@ -273,8 +273,8 @@ export const getSlotOptionsOutput = result({
       priceNote,
       capacity: num.optional(),
       sight: text.optional().describe('"optic", "iron", or "front" (a built-in front sight).'),
-      conflict: maybeText,
-      installed: bool,
+      conflict: text.optional().describe("Set when the part conflicts with an installed part."),
+      installed: z.literal(true).optional().describe("Set on the installed part."),
     })
   ),
   warnings,

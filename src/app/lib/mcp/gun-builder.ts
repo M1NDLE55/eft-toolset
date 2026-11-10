@@ -253,7 +253,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         query: z.string().max(200).optional().describe("Filter parts by name."),
         sortBy: z.enum(["ergonomics", "recoil", "price", "name"]).default("ergonomics"),
         buyableOnly: buyableOnlySchema,
-        limit: z.number().int().min(1).max(100).default(40),
+        limit: z.number().int().min(1).max(100).default(20),
         offset: offsetSchema,
         gameMode: gameModeSchema,
         priceSources: priceSourcesSchema,
@@ -275,11 +275,15 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         candidates = candidates.filter((item) => ids.has(item.id));
       }
       const rows = candidates
-        .map((item) => ({
-          ...itemRow(item, priceSources, limits),
-          conflict: conflictReason(item, target.slot.id, installed, data.lookup),
-          installed: target.current?.itemId === item.id,
-        }))
+        .map((item) => {
+          // Most parts neither conflict nor are installed, so both are only stated when true.
+          const conflict = conflictReason(item, target.slot.id, installed, data.lookup);
+          return {
+            ...itemRow(item, priceSources, limits),
+            ...(conflict ? { conflict } : {}),
+            ...(target.current?.itemId === item.id ? { installed: true as const } : {}),
+          };
+        })
         .filter((row) => !buyableOnly || row.priceRUB !== null);
       const price = (row: (typeof rows)[number]) => row.priceRUB ?? Number.POSITIVE_INFINITY;
       const sorted = rows.toSorted((a, b) => {

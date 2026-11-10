@@ -501,7 +501,9 @@ describe("MCP endpoint", () => {
     ]);
 
     const options = await call("get_slot_options", { build: { weapon: "weapon" }, slotPath: ["slot"] });
-    expect(options.data.options[0]).toMatchObject({ id: "mod", priceRUB: 10_000, trader: "Tester", conflict: null });
+    expect(options.data.options[0]).toMatchObject({ id: "mod", priceRUB: 10_000, trader: "Tester" });
+    expect(options.data.options[0]).not.toHaveProperty("conflict");
+    expect(options.data.options[0]).not.toHaveProperty("installed");
 
     const ammo = await call("get_ammo_options", { build: { weapon: "weapon" } });
     expect(ammo.data.ammo.map((entry: { id: string }) => entry.id)).toEqual(["ammo"]);
@@ -622,6 +624,8 @@ describe("MCP endpoint", () => {
       priceSources: { maxTraderLevel: 2 },
     });
     expect(gas.data.slot.slotPath).toEqual(["c-rec", "u-gas"]);
+    const current = gas.data.options.filter((row: { installed?: boolean }) => row.installed);
+    expect(current.map((row: { name: string }) => row.name)).toEqual([gas.data.current]);
     expect(gas.data.options.find((row: { id: string }) => row.id === "gbPlain")).toMatchObject({
       priceRUB: null,
       priceNote: expect.stringContaining("only Tester LL3 sells it"),
