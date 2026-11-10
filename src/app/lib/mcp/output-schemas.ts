@@ -220,6 +220,7 @@ export const getItemPricesOutput = result({
   )
     .optional()
     .describe("Why each unresolved input was left out, with names it could mean."),
+  unmatchedNote: text.optional(),
   discordText: text.optional(),
 });
 

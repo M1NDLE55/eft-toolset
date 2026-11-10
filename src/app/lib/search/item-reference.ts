@@ -1,5 +1,5 @@
 import type { CatalogEntry, CatalogItem } from "@/app/lib/cache/types";
-import { findBaseItem, searchCatalog, suggestNames } from "./filter-catalog";
+import { baseFinder, type FuzzyBudget, searchCatalog, suggestNames } from "./filter-catalog";
 import { normalizeText } from "./normalize-text";
 
 export interface CatalogIndex {
@@ -26,7 +26,17 @@ export type ItemMatch =
       assumed?: string;
     })
   | { status: "ambiguous"; candidates: string[] }
-  | { status: "none"; suggestions: string[] };
+  | {
+      status: "none";
+      suggestions: string[];
+      /** Set when typo matching was skipped because the request's budget was spent. */
+      skipped?: true;
+    };
+
+export interface MatchOptions {
+  /** Shared by the references of one request, to bound typo matching across all of them. */
+  budget?: FuzzyBudget;
+}
 
 const MAX_ALTERNATIVES = 5;
 const MAX_CANDIDATES = 8;
@@ -109,7 +119,7 @@ function uniqueByName(items: readonly CatalogItem[]) {
  * ("injector"). A multi-word search tie takes the best-ranked match. With no match at all,
  * words may be a typo off ("graphics crad"), flagged as fuzzy.
  */
-export function matchItemReference(index: CatalogIndex, reference: string): ItemMatch {
+export function matchItemReference(index: CatalogIndex, reference: string, options: MatchOptions = {}): ItemMatch {
   const value = cleanReference(reference);
   if (!value) return { status: "none", suggestions: [] };
   const exact = exactMatch(index, value);
@@ -119,9 +129,13 @@ export function matchItemReference(index: CatalogIndex, reference: string): Item
   const sharingShortName = uniqueByName(index.byShortName.get(normalized) ?? []);
   if (sharingShortName.length === 1) return { status: "found", item: sharingShortName[0], matchedBy: "shortName" };
 
-  const search = searchCatalog(index.items, value, { fuzzy: true, limit: SEARCH_POOL });
-  if (search.matches.length === 0) return { status: "none", suggestions: suggestNames(index.items, value) };
+  const search = searchCatalog(index.items, value, { fuzzy: true, limit: SEARCH_POOL, budget: options.budget });
+  if (search.matches.length === 0) {
+    if (search.skipped) return { status: "none", suggestions: [], skipped: true };
+    return { status: "none", suggestions: suggestNames(index.items, value) };
+  }
   const pool = search.matches.map((match) => match.item);
+  const baseIn = baseFinder(pool);
   const matchedBy = search.fuzzy ? "fuzzy" : "search";
 
   // The items with the best claim: every item sharing the short name, or the top-scoring tie.
@@ -129,12 +143,12 @@ export function matchItemReference(index: CatalogIndex, reference: string): Item
     sharingShortName.length > 1
       ? sharingShortName
       : search.matches.filter((match) => match.score === search.matches[0].score).map((match) => match.item);
-  const resolved = uniqueByName(contenders.map((item) => findBaseItem(item, pool) ?? item));
+  const resolved = uniqueByName(contenders.map((item) => baseIn(item) ?? item));
   const oneWord = !normalized.includes(" ");
 
   // One word that only partly matches many distinct items ("injector", "folder") names none of them.
   if (oneWord && sharingShortName.length === 0) {
-    const distinct = uniqueByName(pool.map((item) => findBaseItem(item, pool) ?? item));
+    const distinct = uniqueByName(pool.map((item) => baseIn(item) ?? item));
     if (distinct.length > MAX_ONE_WORD_MATCHES) {
       return { status: "ambiguous", candidates: distinct.slice(0, MAX_CANDIDATES).map((item) => item.name) };
     }

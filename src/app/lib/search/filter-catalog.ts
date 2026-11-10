@@ -2,15 +2,39 @@ import type { CatalogItem } from "@/app/lib/cache/types";
 import { normalizeText } from "./normalize-text";
 
 export const MAX_SEARCH_RESULTS = 20;
+/** Typo matching looks at no more words than this; a longer search must match exactly. */
+const MAX_FUZZY_WORDS = 12;
+/** Suggestions consider only this many distinct words of a search. */
+const MAX_SUGGESTION_WORDS = 6;
+/** Typo matches remembered per catalog, by search word. */
+const TYPO_CACHE_SIZE = 2_000;
 
 interface IndexedItem {
   item: CatalogItem;
   name: string;
   short: string;
-  /** Words of the name and short name, for typo matching. */
-  words: string[];
+  /** Ids (in the catalog's word list) of the words of the name and short name. */
+  wordIds: number[];
   /** Word-aligned runs inside the name, computed on first use. */
   inner?: string[];
+}
+
+/** Each distinct word in a catalog once, for typo matching against words rather than items. */
+interface WordIndex {
+  words: string[];
+  /** A character bitmask per word, for ruling words out before measuring edit distance. */
+  masks: Uint32Array;
+  /** Word ids by word length. */
+  byLength: Map<number, number[]>;
+  /** For each prefix length, the word ids sharing each prefix, among words long enough to be cut. */
+  prefixes: Map<number, Map<string, number[]>>;
+  /** Typo matches per search word: word id to distance. */
+  typos: Map<string, ReadonlyMap<number, number>>;
+}
+
+interface CatalogEntries {
+  entries: IndexedItem[];
+  wordIndex: WordIndex;
 }
 
 export interface RankedItem {
@@ -26,6 +50,11 @@ export interface CatalogSearchOptions {
   fuzzy?: boolean;
   /** Stops ordering after this many matches; total still counts every match. */
   limit?: number;
+  /**
+   * Shared across the searches of one request; typo matching runs only while it lasts. A
+   * search that matches nothing exactly spends one unit, which also covers suggestNames.
+   */
+  budget?: FuzzyBudget;
 }
 
 export interface CatalogSearch {
@@ -35,22 +64,66 @@ export interface CatalogSearch {
   total: number;
   /** True when the matches came from typo matching because nothing matched exactly. */
   fuzzy: boolean;
+  /** True when typo matching was skipped because the request's budget was spent. */
+  skipped?: boolean;
 }
 
 const WORD = /[\p{L}\p{N}]+/gu;
-const indexes = new WeakMap<readonly CatalogItem[], IndexedItem[]>();
+const indexes = new WeakMap<readonly CatalogItem[], CatalogEntries>();
 
-function indexFor(items: readonly CatalogItem[]) {
+/** Normalises every item's names and lists each distinct word once. Memoised per items array. */
+function indexFor(items: readonly CatalogItem[]): CatalogEntries {
   let index = indexes.get(items);
   if (!index) {
-    index = items.map((item) => {
+    const ids = new Map<string, number>();
+    const words: string[] = [];
+    const entries = items.map((item) => {
       const name = normalizeText(item.name);
       const short = item.shortName ? normalizeText(item.shortName) : "";
-      return { item, name, short, words: [...new Set(`${name} ${short}`.match(WORD) ?? [])] };
+      const wordIds = [...new Set(`${name} ${short}`.match(WORD) ?? [])].map((word) => {
+        let id = ids.get(word);
+        if (id === undefined) {
+          id = words.length;
+          ids.set(word, id);
+          words.push(word);
+        }
+        return id;
+      });
+      return { item, name, short, wordIds };
     });
+    const byLength = new Map<number, number[]>();
+    words.forEach((word, id) => pushTo(byLength, word.length, id));
+    index = {
+      entries,
+      wordIndex: { words, masks: Uint32Array.from(words, charMask), byLength, prefixes: new Map(), typos: new Map() },
+    };
     indexes.set(items, index);
   }
   return index;
+}
+
+function pushTo<K>(map: Map<K, number[]>, key: K, value: number) {
+  const list = map.get(key);
+  if (list) list.push(value);
+  else map.set(key, [value]);
+}
+
+/** One bit per character class: a word missing k of another's characters is at least k edits away. */
+function charMask(word: string) {
+  let mask = 0;
+  for (let i = 0; i < word.length; i++) mask |= 1 << (word.charCodeAt(i) % 32);
+  return mask >>> 0;
+}
+
+function bitCount(value: number) {
+  let count = 0;
+  for (let rest = value >>> 0; rest; rest &= rest - 1) count++;
+  return count;
+}
+
+/** False when the characters alone show the two words are more than max edits apart. */
+function couldBeWithin(maskA: number, maskB: number, max: number) {
+  return bitCount(maskA & ~maskB) <= max && bitCount(maskB & ~maskA) <= max;
 }
 
 function isWordStart(haystack: string, position: number) {
@@ -101,41 +174,101 @@ function allowedTypos(token: string) {
   return token.length < 4 || /^\d+$/.test(token) ? 0 : token.length < 8 ? 1 : 2;
 }
 
-/** The fewest typos between token and a word (or the start of a longer word), or -1. */
-function typos(entry: IndexedItem, token: string) {
-  const max = allowedTypos(token);
-  if (max === 0) return -1;
-  let best = max + 1;
-  for (const word of entry.words) {
-    best = Math.min(best, editDistance(token, word, max));
-    if (word.length > token.length + max) best = Math.min(best, editDistance(token, word.slice(0, token.length), max));
-    if (best === 1) break;
+const NO_TYPOS: ReadonlyMap<number, number> = new Map();
+
+/** Word ids prefixLength-letter prefixes of words longer than prefixLength plus its typo allowance. */
+function prefixGroups(index: WordIndex, prefixLength: number) {
+  let groups = index.prefixes.get(prefixLength);
+  if (!groups) {
+    groups = new Map();
+    const minLength = prefixLength + allowedTypos("x".repeat(prefixLength)) + 1;
+    index.words.forEach((word, id) => {
+      if (word.length < minLength) return;
+      pushTo(groups!, word.slice(0, prefixLength), id);
+    });
+    index.prefixes.set(prefixLength, groups);
   }
-  return best > max ? -1 : best;
+  return groups;
 }
 
-/** Scores a match that allows typos: each word must appear exactly or within its typo allowance. */
-function fuzzyScore(entry: IndexedItem, tokens: string[]): number | null {
-  let total = 0;
-  let edits = 0;
-  for (const token of tokens) {
-    const inName = entry.name.indexOf(token);
-    const inShort = entry.short.indexOf(token);
-    if (inName !== -1 || inShort !== -1) {
-      if (inName !== -1 && isWordStart(entry.name, inName)) total += 4;
-      if (inShort !== -1 && isWordStart(entry.short, inShort)) total += 3;
-      continue;
-    }
-    const distance = typos(entry, token);
-    if (distance === -1) return null;
-    edits += distance;
+/**
+ * The catalog words within a token's typo allowance, whole or as the start of a longer word,
+ * with the fewest typos for each. Computed once per catalog and token: the work depends on
+ * the number of distinct catalog words of a similar length, not on the number of items.
+ */
+function typoWords(index: WordIndex, token: string): ReadonlyMap<number, number> {
+  const max = allowedTypos(token);
+  if (max === 0) return NO_TYPOS;
+  const cached = index.typos.get(token);
+  if (cached) {
+    // Refresh its place so the cache drops the least recently used tokens first.
+    index.typos.delete(token);
+    index.typos.set(token, cached);
+    return cached;
   }
-  return total - 3 * edits;
+  const found = new Map<number, number>();
+  const mask = charMask(token);
+  const note = (id: number, distance: number) => {
+    if (distance <= max && distance < (found.get(id) ?? Infinity)) found.set(id, distance);
+  };
+  for (let length = token.length - max; length <= token.length + max; length++) {
+    for (const id of index.byLength.get(length) ?? []) {
+      if (couldBeWithin(mask, index.masks[id], max)) note(id, editDistance(token, index.words[id], max));
+    }
+  }
+  for (const [prefix, ids] of prefixGroups(index, token.length)) {
+    if (!couldBeWithin(mask, charMask(prefix), max)) continue;
+    const distance = editDistance(token, prefix, max);
+    if (distance <= max) for (const id of ids) note(id, distance);
+  }
+  const result = found.size ? found : NO_TYPOS;
+  index.typos.set(token, result);
+  if (index.typos.size > TYPO_CACHE_SIZE) index.typos.delete(index.typos.keys().next().value!);
+  return result;
+}
+
+/** The fewest typos between an item's words and the token, or -1. */
+function typosIn(entry: IndexedItem, matches: ReadonlyMap<number, number>) {
+  let best = -1;
+  for (const id of entry.wordIds) {
+    const distance = matches.get(id);
+    if (distance !== undefined && (best === -1 || distance < best)) best = distance;
+  }
+  return best;
+}
+
+/**
+ * Items where each token appears exactly or within its typo allowance, scored. Tokens narrow
+ * the candidates one at a time, so a word nothing resembles ends the search at once.
+ */
+function fuzzyMatches(index: CatalogEntries, entries: IndexedItem[], tokens: string[]) {
+  let candidates = entries.map((entry) => ({ entry, total: 0, edits: 0 }));
+  for (const token of tokens) {
+    if (candidates.length === 0) break;
+    let typos: ReadonlyMap<number, number> | undefined;
+    candidates = candidates.filter((candidate) => {
+      const { entry } = candidate;
+      const inName = entry.name.indexOf(token);
+      const inShort = entry.short.indexOf(token);
+      if (inName !== -1 || inShort !== -1) {
+        if (inName !== -1 && isWordStart(entry.name, inName)) candidate.total += 4;
+        if (inShort !== -1 && isWordStart(entry.short, inShort)) candidate.total += 3;
+        return true;
+      }
+      typos ??= typoWords(index.wordIndex, token);
+      const distance = typosIn(entry, typos);
+      if (distance === -1) return false;
+      candidate.edits += distance;
+      return true;
+    });
+  }
+  return new Map(candidates.map((candidate) => [candidate.entry, candidate.total - 3 * candidate.edits]));
 }
 
 function prepare(search: string) {
   const needle = normalizeText(search).replace(/\s+/g, " ");
-  return { needle, tokens: needle ? needle.split(" ") : [] };
+  // A repeated word adds nothing to what matches, only to the work.
+  return { needle, tokens: needle ? [...new Set(needle.split(" "))] : [] };
 }
 
 type Ranked = { entry: IndexedItem; score: number };
@@ -222,16 +355,37 @@ function basesFirst(ranked: Ranked[], limit: number): RankedItem[] {
  * Bitcoin"), preferring the longest such name.
  */
 export function findBaseItem(item: CatalogItem, among: readonly CatalogItem[]): CatalogItem | undefined {
+  return baseFinder(among)(item);
+}
+
+/** findBaseItem for many items against the same list, normalising the list once. */
+export function baseFinder(among: readonly CatalogItem[]): (item: CatalogItem) => CatalogItem | undefined {
   const byName = new Map<string, Ranked>();
-  for (const other of among) {
-    if (other.name !== item.name) byName.set(normalizeText(other.name), { entry: indexEntry(other), score: 0 });
-  }
-  return baseOf(indexEntry(item), byName)?.entry.item;
+  for (const other of among) byName.set(normalizeText(other.name), { entry: indexEntry(other), score: 0 });
+  return (item) => {
+    const base = baseOf(indexEntry(item), byName)?.entry.item;
+    return base && base.name !== item.name ? base : undefined;
+  };
 }
 
 function indexEntry(item: CatalogItem): IndexedItem {
   const name = normalizeText(item.name);
-  return { item, name, short: "", words: [] };
+  return { item, name, short: "", wordIds: [] };
+}
+
+/**
+ * Limits how many references in one request get typo matching and suggestions, the costly
+ * part of resolving a name. Once spent, names that match nothing exactly are simply not found.
+ */
+export class FuzzyBudget {
+  constructor(private remaining: number) {}
+
+  /** Spends one unit, or returns false when none are left. */
+  take() {
+    if (this.remaining <= 0) return false;
+    this.remaining -= 1;
+    return true;
+  }
 }
 
 /**
@@ -245,10 +399,19 @@ export function searchCatalog(
 ): CatalogSearch {
   const { needle, tokens } = prepare(search);
   if (!needle) return { matches: [], total: 0, fuzzy: false };
-  const entries = indexFor(items);
-  const strict = rank(entries, (entry) => nonNegative(score(entry, needle, tokens)), options);
+  const index = indexFor(items);
+  const strict = rank(index.entries, (entry) => nonNegative(score(entry, needle, tokens)), options);
   if (strict.total > 0 || !options.fuzzy) return { ...strict, fuzzy: false };
-  const fuzzy = rank(entries, (entry) => fuzzyScore(entry, tokens), options);
+  // An unmatched search spends a unit even when too long to match with typos, since the
+  // suggestions that usually follow are paid for by the same unit.
+  if (options.budget && !options.budget.take()) return { ...strict, fuzzy: false, skipped: true };
+  if (tokens.length > MAX_FUZZY_WORDS) return { ...strict, fuzzy: false };
+  const excluded = new Set(options.excludeNames ?? []);
+  const eligible = index.entries.filter(
+    (entry) => !excluded.has(entry.item.name) && (!options.filter || options.filter(entry.item))
+  );
+  const scores = fuzzyMatches(index, eligible, tokens);
+  const fuzzy = rank([...scores.keys()], (entry) => scores.get(entry) ?? null, { ...options, filter: undefined });
   return { ...fuzzy, fuzzy: fuzzy.total > 0 };
 }
 
@@ -271,23 +434,29 @@ export function listCatalog(
 
 /**
  * Closest names for a search that matched nothing: items matching the most of its words
- * (each exactly or within a typo), ignoring words under three letters.
+ * (each exactly or within a typo), ignoring words under three letters. Only the first few
+ * distinct words count, so the work stays small however long the search is.
  */
-export function suggestNames(items: readonly CatalogItem[], search: string, limit = 5): string[] {
+export function suggestNames(
+  items: readonly CatalogItem[],
+  search: string,
+  limit = 5,
+  budget?: FuzzyBudget
+): string[] {
   const { tokens } = prepare(search);
-  const useful = tokens.filter((token) => token.length >= 3);
-  if (useful.length === 0) return [];
-  const ranked = rank(
-    indexFor(items),
-    (entry) => {
-      let matched = 0;
-      for (const token of useful) {
-        if (entry.name.includes(token) || entry.short.includes(token) || typos(entry, token) !== -1) matched += 1;
+  const useful = [...new Set(tokens.filter((token) => token.length >= 3))].slice(0, MAX_SUGGESTION_WORDS);
+  if (useful.length === 0 || (budget && !budget.take())) return [];
+  const index = indexFor(items);
+  const matched = new Map<IndexedItem, number>();
+  for (const token of useful) {
+    const typos = typoWords(index.wordIndex, token);
+    for (const entry of index.entries) {
+      if (entry.name.includes(token) || entry.short.includes(token) || typosIn(entry, typos) !== -1) {
+        matched.set(entry, (matched.get(entry) ?? 0) + 1);
       }
-      return matched === 0 ? null : matched;
-    },
-    { limit }
-  );
+    }
+  }
+  const ranked = rank([...matched.keys()], (entry) => matched.get(entry) ?? null, { limit });
   return ranked.matches.map((match) => match.item.name);
 }
 

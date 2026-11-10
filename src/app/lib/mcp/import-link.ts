@@ -12,14 +12,17 @@ import { MAX_PLAN_NAME_LENGTH, MAX_PLANS } from "@/app/lib/raid-planner/limits";
 import { BACKUP_FORMAT, BACKUP_IMPORT_PARAM, BACKUP_VERSION, STORE_KEYS } from "@/app/lib/storage/store-keys";
 import { resolveBuild } from "@/app/lib/builds/resolve";
 import { decodePlanLink, planFromShared } from "@/app/lib/raid-planner/resolve";
-import { matchItemReference, type MatchKind } from "@/app/lib/search/item-reference";
+import { matchItemReference, type ItemMatch, type MatchKind } from "@/app/lib/search/item-reference";
 import { encodeSharePayload, MAX_SHARE_LINK_LENGTH } from "@/app/lib/share-codec";
-import { InputError, type ToolContext } from "./context";
-import { isInexact } from "./item-match";
+import { betweenItems, InputError, type ToolContext } from "./context";
+import { fuzzyBudget, isInexact, SKIPPED_NOTE } from "./item-match";
 import { createImportLinkOutput } from "./output-schemas";
 import { toolDefiner } from "./define-tool";
 import { buildInputSchema, gameModeSchema } from "./schemas";
 import { loadBuildSource, loadCatalogIndex } from "./sources";
+
+/** Notes about individual item-group inputs listed in one reply. */
+const MAX_ITEM_NOTES = 20;
 
 export function registerImportLinkTools(server: McpServer, context: ToolContext) {
   const define = toolDefiner(server, context);
@@ -63,12 +66,25 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
 
       if (itemGroups.length > 0) {
         const index = await loadCatalogIndex(read, gameMode);
-        const groups: Group[] = itemGroups.map((group) => {
+        const budget = fuzzyBudget();
+        const matches = new Map<string, ItemMatch>();
+        // Notes about single items stop after a few; itemMatches still lists every input.
+        let itemNotes = 0;
+        let skipped = false;
+        const noteItem = (note: string) => {
+          itemNotes += 1;
+          if (itemNotes <= MAX_ITEM_NOTES) notes.push(note);
+        };
+        const groups: Group[] = [];
+        for (const group of itemGroups) {
           const names: string[] = [];
           for (const reference of group.items) {
-            const match = matchItemReference(index, reference);
+            await betweenItems(context.signal);
+            const match = matches.get(reference) ?? matchItemReference(index, reference, { budget });
+            matches.set(reference, match);
             if (match.status !== "found") {
-              notes.push(
+              if (match.status === "none" && match.skipped) skipped = true;
+              noteItem(
                 match.status === "ambiguous"
                   ? `${group.name}: "${reference}" could be any of ${match.candidates.join("; ")}, so it was left out. Add the one you mean by its full name.`
                   : `${group.name}: no item matches "${reference}", so it was left out.${match.suggestions.length ? ` Did you mean: ${match.suggestions.join("; ")}?` : ""}`
@@ -78,7 +94,7 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
             }
             if (isInexact(match)) {
               const why = match.assumed ?? (match.matchedBy === "fuzzy" ? "Closest spelling." : "Best search match.");
-              notes.push(`${group.name}: "${reference}" was matched to ${match.item.name}. ${why}`);
+              noteItem(`${group.name}: "${reference}" was matched to ${match.item.name}. ${why}`);
             }
             itemMatches.push({
               group: group.name,
@@ -90,8 +106,12 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
           }
           const value = { name: group.name.trim(), items: names };
           if (!isGroup(value)) throw new InputError(`Item group "${group.name}" is invalid.`);
-          return value;
-        });
+          groups.push(value);
+        }
+        if (itemNotes > MAX_ITEM_NOTES) {
+          notes.push(`${itemNotes - MAX_ITEM_NOTES} more inputs were left out or matched inexactly; itemMatches lists them.`);
+        }
+        if (skipped) notes.push(`Some inputs were not checked for typos: ${SKIPPED_NOTE}.`);
         const seen = new Set<string>();
         for (const group of groups) {
           const key = group.name.toLocaleLowerCase();
@@ -105,6 +125,7 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
         const data = await loadBuildSource(read, gameMode);
         const saved: GunBuild[] = [];
         for (const input of builds) {
+          await betweenItems(context.signal);
           const build = await resolveBuild(data, input);
           for (const warning of build.warnings) notes.push(`${build.name}: ${warning}`);
           const value: GunBuild = {
@@ -125,6 +146,7 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
       if (raidPlans.length > 0) {
         const plans: RaidPlan[] = [];
         for (const entry of raidPlans) {
+          await betweenItems(context.signal);
           const plan = planFromShared(await decodePlanLink(entry.link), now);
           if (entry.name?.trim()) plan.name = entry.name.trim();
           const problem = describePlanProblem(plan);

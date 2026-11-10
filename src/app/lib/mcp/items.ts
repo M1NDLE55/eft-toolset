@@ -4,11 +4,11 @@ import { getGroupItems, getItemDetail, getItemFacets, getItemUses, type ItemFace
 import type { CatalogItem } from "@/app/lib/cache/types";
 import { listCatalog, searchCatalog, suggestNames } from "@/app/lib/search/filter-catalog";
 import { matchItemReference, type ItemMatch, type MatchKind } from "@/app/lib/search/item-reference";
-import { describeInexact, isInexact, unmatchedMessage } from "./item-match";
+import { describeInexact, fuzzyBudget, isInexact, SKIPPED_NOTE, unmatchedMessage } from "./item-match";
 import { normalizeText } from "@/app/lib/search/normalize-text";
 import { formatGroupPriceList } from "@/app/lib/item-groups/format";
 import { MAX_GROUP_NAME_LENGTH } from "@/app/lib/item-groups/limits";
-import { InputError, type ToolContext } from "./context";
+import { betweenItems, InputError, type ToolContext } from "./context";
 import { neededSummary, priceSummary, projectDetail } from "./item-projection";
 import { getItemOutput, getItemPricesOutput, searchItemsOutput } from "./output-schemas";
 import { toolDefiner } from "./define-tool";
@@ -200,12 +200,18 @@ export function registerItemTools(server: McpServer, context: ToolContext) {
       const unmatched: { input: string; reason: "ambiguous" | "not found"; candidates: string[] }[] = [];
       const fuzzy: { input: string; matched: string; matchedBy: MatchKind; note: string }[] = [];
       const requested = new Map<string, { item: CatalogItem; count: number; inputs: string[] }>();
+      const budget = fuzzyBudget();
+      const matches = new Map<string, ItemMatch>();
+      let skipped = false;
       for (const entry of items) {
+        await betweenItems(context.signal);
         const reference = typeof entry === "string" ? entry : entry.item;
         const count = typeof entry === "string" ? 1 : entry.count;
-        const match = matchItemReference(index, reference);
+        const match = matches.get(reference) ?? matchItemReference(index, reference, { budget });
+        matches.set(reference, match);
         if (match.status !== "found") {
           unresolved.push(reference);
+          if (match.status === "none" && match.skipped) skipped = true;
           unmatched.push(
             match.status === "ambiguous"
               ? { input: reference, reason: "ambiguous", candidates: match.candidates }
@@ -267,6 +273,7 @@ export function registerItemTools(server: McpServer, context: ToolContext) {
         rows,
         ...(fuzzy.length ? { fuzzyMatches: fuzzy } : {}),
         ...(unresolved.length ? { unresolved, unmatched } : {}),
+        ...(skipped ? { unmatchedNote: `Some names were not checked for typos: ${SKIPPED_NOTE}.` } : {}),
         ...(includeDiscordText
           ? {
               discordText: formatGroupPriceList(

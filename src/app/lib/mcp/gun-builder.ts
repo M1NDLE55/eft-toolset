@@ -437,7 +437,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       const deadline = optimizerDeadline(context);
       for (const change of changes) {
         if (change.action === "install") {
-          const installed = installPart(root, data.lookup, change.slotPath, change.item);
+          const installed = installPart(root, data.lookup, change.slotPath, change.item, data.budget);
           root = installed.root;
           applied.push(
             `Installed ${installed.part.name} in ${installed.label}${installed.replaced ? ` (replacing ${itemName(data.lookup, installed.replaced.itemId)})` : ""}${installed.conflict ? `. Warning: ${installed.conflict}.` : "."}${installed.note ? ` ${installed.note}` : ""}`

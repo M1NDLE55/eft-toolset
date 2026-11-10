@@ -95,6 +95,19 @@ function classifyError(error: unknown, context: ToolContext): Exclude<ToolOutcom
   return "crash";
 }
 
+const nextTurn: (callback: () => void) => void =
+  typeof setImmediate === "function" ? (callback) => setImmediate(callback) : (callback) => setTimeout(callback, 0);
+
+/**
+ * Lets other requests run between the items of a long list, then stops if the request has
+ * ended or its deadline has passed. Synchronous work can't be interrupted, so loops over
+ * many inputs call this between inputs.
+ */
+export async function betweenItems(signal: AbortSignal) {
+  await new Promise<void>((resolve) => nextTurn(resolve));
+  signal.throwIfAborted();
+}
+
 export function round(value: number | null | undefined, digits = 0): number | null {
   if (typeof value !== "number" || !Number.isFinite(value)) return null;
   const factor = 10 ** digits;

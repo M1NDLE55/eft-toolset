@@ -12,6 +12,7 @@ import type { MapConfig } from "@/app/lib/raid-planner/types";
 import { indexCatalog, type CatalogIndex } from "@/app/lib/search/item-reference";
 import type { MapDetails } from "@/app/lib/types/raidPlanner";
 import { InputError, type GameMode, type Read, type ToolContext } from "./context";
+import { fuzzyBudget } from "./item-match";
 
 // Data loaders and links shared by the tool modules. Loaders read through the tool's reader
 // so cancellation and freshness tracking apply.
@@ -32,6 +33,7 @@ export async function loadBuildSource(read: Read, gameMode: GameMode): Promise<B
     guns,
     loadPreset: (id) => read(() => getPreset(gameMode, id)),
     loadAmmo: (ids) => read(() => getAmmoItems(gameMode, [...ids])),
+    budget: fuzzyBudget(),
   };
 }
 

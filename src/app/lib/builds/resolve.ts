@@ -9,7 +9,8 @@ import type {
 import type { CatalogItem } from "@/app/lib/cache/types";
 import type { GameMode } from "@/components/game-mode/mode";
 import { InputError } from "@/app/lib/input-error";
-import { indexItems, matchItemReference } from "@/app/lib/search/item-reference";
+import { indexItems, matchItemReference, type CatalogIndex } from "@/app/lib/search/item-reference";
+import type { FuzzyBudget } from "@/app/lib/search/filter-catalog";
 import { normalizeText } from "@/app/lib/search/normalize-text";
 import { ammoFits, ammoOptions } from "./ammo";
 import { slotKey } from "./compare";
@@ -28,6 +29,8 @@ export interface BuildSource {
   guns: readonly GunListItem[];
   loadPreset(id: string): Promise<PresetContents | null>;
   loadAmmo(ids: readonly string[]): Promise<AmmoItemData[]>;
+  /** Bounds typo matching across every name resolved in one request. */
+  budget?: FuzzyBudget;
 }
 
 /** A part to install: the slot path from the weapon down, and a part id or name. */
@@ -66,6 +69,18 @@ export function asCatalog(items: readonly { id: string; name: string; shortName:
   }));
 }
 
+const candidateIndexes = new WeakMap<readonly object[], CatalogIndex>();
+
+/** The name index of a candidate list, built once per list. */
+function candidateIndex(candidates: readonly { id: string; name: string; shortName: string | null }[]) {
+  let index = candidateIndexes.get(candidates);
+  if (!index) {
+    index = indexItems(asCatalog(candidates));
+    candidateIndexes.set(candidates, index);
+  }
+  return index;
+}
+
 /**
  * Picks a candidate the way item names resolve everywhere else (matchItemReference): id,
  * exact name, unique short name, then search with typo tolerance. A name several candidates
@@ -77,9 +92,10 @@ function pickByReference<T extends { id: string; name: string; shortName: string
   reference: string,
   noun: string,
   notes?: string[],
-  plural = `${noun}s`
+  plural = `${noun}s`,
+  budget?: FuzzyBudget
 ): T {
-  const match = matchItemReference(indexItems(asCatalog(candidates)), reference);
+  const match = matchItemReference(candidateIndex(candidates), reference, { budget });
   if (match.status === "ambiguous") {
     throw new AmbiguousReferenceError(
       `"${reference}" matches several ${plural}: ${match.candidates.join("; ")}. Use a full name or id.`
@@ -101,11 +117,11 @@ function pickByReference<T extends { id: string; name: string; shortName: string
 }
 
 export function resolveWeapon(
-  source: Pick<BuildSource, "guns" | "lookup">,
+  source: Pick<BuildSource, "guns" | "lookup" | "budget">,
   reference: string,
   notes?: string[]
 ): BuildItemData {
-  const gun = pickByReference(source.guns, reference, "weapon", notes);
+  const gun = pickByReference(source.guns, reference, "weapon", notes, undefined, source.budget);
   const item = source.lookup.get(gun.id);
   if (!isDetailed(item)) throw new InputError(`Weapon data for ${gun.name} is unavailable.`);
   return item;
@@ -267,14 +283,37 @@ export function resolveSlotPath(root: BuildNode, lookup: PartLookup, segments: r
   throw new InputError("slotPath could not be resolved.");
 }
 
-function pickPartForSlot(slot: ModSlotDef, lookup: PartLookup, reference: string, notes?: string[]): BuildItemData {
-  const allowed = slot.allowedItemIds.flatMap((id) => {
-    const item = lookup.get(id);
-    return item ? [item] : [];
-  });
+const allowedParts = new WeakMap<PartLookup, WeakMap<ModSlotDef, BuildItemData[]>>();
+
+/** The known parts a slot accepts, listed once per slot so their name index is reused. */
+function partsForSlot(slot: ModSlotDef, lookup: PartLookup) {
+  let bySlot = allowedParts.get(lookup);
+  if (!bySlot) {
+    bySlot = new WeakMap();
+    allowedParts.set(lookup, bySlot);
+  }
+  let allowed = bySlot.get(slot);
+  if (!allowed) {
+    allowed = slot.allowedItemIds.flatMap((id) => {
+      const item = lookup.get(id);
+      return item ? [item] : [];
+    });
+    bySlot.set(slot, allowed);
+  }
+  return allowed;
+}
+
+function pickPartForSlot(
+  slot: ModSlotDef,
+  lookup: PartLookup,
+  reference: string,
+  notes?: string[],
+  budget?: FuzzyBudget
+): BuildItemData {
+  const allowed = partsForSlot(slot, lookup);
   if (allowed.length === 0) throw new InputError(`No parts are known for ${slot.name}.`);
   try {
-    return pickByReference(allowed, reference, `part for ${slot.name}`, notes, `parts for ${slot.name}`);
+    return pickByReference(allowed, reference, `part for ${slot.name}`, notes, `parts for ${slot.name}`, budget);
   } catch (error) {
     if (!(error instanceof InputError) || error instanceof AmbiguousReferenceError) throw error;
     const examples = allowed
@@ -303,7 +342,7 @@ export async function resolveAmmo(
   if (ammo.length === 0) throw new InputError("This build does not accept any known ammo.");
   try {
     const notes: string[] = [];
-    const picked = pickByReference(ammo, value, "compatible ammo", notes, "compatible rounds");
+    const picked = pickByReference(ammo, value, "compatible ammo", notes, "compatible rounds", source.budget);
     return { ammo: picked, fits: ammoFits(picked.id, options), ...(notes.length ? { note: notes[0] } : {}) };
   } catch (error) {
     if (error instanceof InputError && !(error instanceof AmbiguousReferenceError)) {
@@ -327,10 +366,16 @@ interface InstalledPart {
  * Installs a part in a slot, replacing what is there and carrying its attachments over where
  * they fit, as the builder does. Reports a conflict with other installed parts, if any.
  */
-export function installPart(root: BuildNode, lookup: PartLookup, slotPath: readonly string[], item: string): InstalledPart {
+export function installPart(
+  root: BuildNode,
+  lookup: PartLookup,
+  slotPath: readonly string[],
+  item: string,
+  budget?: FuzzyBudget
+): InstalledPart {
   const target = resolveSlotPath(root, lookup, slotPath);
   const notes: string[] = [];
-  const part = pickPartForSlot(target.slot, lookup, item, notes);
+  const part = pickPartForSlot(target.slot, lookup, item, notes, budget);
   const conflict = conflictReason(part, target.slot.id, installedOutside(root, target.current), lookup);
   const node = target.current
     ? carryOverChildren(target.current, lookup.get(target.current.itemId), part)
@@ -396,7 +441,7 @@ export async function resolveBuild(source: BuildSource, input: BuildInput): Prom
     // Parents before children, so every slot path exists when its part goes in.
     const parts = [...(input.parts ?? [])].sort((a, b) => a.slotPath.length - b.slotPath.length);
     for (const entry of parts) {
-      const installed = installPart(root, source.lookup, entry.slotPath, entry.item);
+      const installed = installPart(root, source.lookup, entry.slotPath, entry.item, source.budget);
       root = installed.root;
       if (installed.note) warnings.push(installed.note);
       if (installed.conflict) warnings.push(`${installed.part.name} in ${installed.label}: ${installed.conflict}.`);
