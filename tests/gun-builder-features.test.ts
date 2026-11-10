@@ -730,6 +730,35 @@ describe("gun-builder name resolution", () => {
     ).rejects.toThrow(/"GEN M3" matches several/);
   });
 
+  it("picks a preset by the name after the weapon's, even when a longer preset name contains it", async () => {
+    const m4 = "Colt M4A1 5.56x45 assault rifle";
+    const presets = ["SOPMOD II", "SOPMOD II Flash", "SOPMOD I", "Carbine", "Flash", ...Array.from({ length: 30 }, (_, i) => `Extra ${i}`)];
+    const withPresets = {
+      ...source,
+      lookup: lookup(
+        gun([slot("mod_magazine", ["stanag"])], {
+          name: m4,
+          shortName: "M4A1",
+          presets: presets.map((name) => ({ id: `p-${name}`, name: `${m4} ${name}` })),
+        }),
+        parts.get("stanag")!
+      ),
+      loadPreset: async (id: string) => ({ baseItemId: "gun", itemIds: ["gun", id === "p-SOPMOD II" ? "stanag" : "gun"] }),
+    } as unknown as BuildSource;
+    const named = await resolveBuild(withPresets, { weapon: "gun", preset: "SOPMOD II" });
+    expect(named.name).toBe(`${m4} SOPMOD II`);
+    // "flash" is one preset's name after the weapon's, though "SOPMOD II Flash" ends with it too.
+    expect((await resolveBuild(withPresets, { weapon: "gun", preset: "flash" })).name).toBe(`${m4} Flash`);
+    expect((await resolveBuild(withPresets, { weapon: "gun", preset: "ii flash" })).name).toBe(`${m4} SOPMOD II Flash`);
+    // Ambiguous and unknown names list presets without the weapon name, and at most 20.
+    await expect(resolveBuild(withPresets, { weapon: "gun", preset: "sopmod" })).rejects.toThrow(
+      /"sopmod" matches several Colt M4A1 5.56x45 assault rifle presets: SOPMOD II; SOPMOD II Flash; SOPMOD I\./
+    );
+    const unknown = await resolveBuild(withPresets, { weapon: "gun", preset: "nope" }).catch((error: Error) => error.message);
+    expect(unknown).toMatch(/Its presets are: SOPMOD II; SOPMOD II Flash; SOPMOD I; Carbine; Flash; Extra 0;.*; and 15 more\./);
+    expect(unknown).not.toContain(`${m4} Extra`);
+  });
+
   it("tolerates a typo in a weapon name and says what it assumed", async () => {
     const build = await resolveBuild(source, { weapon: "Colt M4A1 assualt rifle" });
     expect(build.weaponId).toBe("gun");

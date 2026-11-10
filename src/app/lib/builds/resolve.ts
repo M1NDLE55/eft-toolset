@@ -390,16 +390,45 @@ export function installPart(
   };
 }
 
+/** Presets listed in an error message. */
+const MAX_LISTED_PRESETS = 20;
+
+/** A preset's name without the weapon's: "SOPMOD II" for "Colt M4A1 5.56x45 assault rifle SOPMOD II". */
+function presetSuffix(weapon: BuildItemData, presetName: string) {
+  const name = normalizeText(presetName);
+  const weaponName = normalizeText(weapon.name);
+  return name.startsWith(weaponName) ? name.slice(weaponName.length).trim() : name;
+}
+
+/** "SOPMOD II; Carbine; …", by their names without the weapon's, at most 20. */
+function listPresets(weapon: BuildItemData, presets: readonly { name: string }[]) {
+  const names = presets.slice(0, MAX_LISTED_PRESETS).map((preset) => {
+    const own = normalizeText(preset.name).startsWith(normalizeText(weapon.name)) && preset.name.slice(weapon.name.length).trim();
+    return own || preset.name;
+  });
+  const more = presets.length - MAX_LISTED_PRESETS;
+  return `${names.join("; ")}${more > 0 ? `; and ${more} more` : ""}`;
+}
+
+/**
+ * The preset a name means: "default", an id, the full name, the name without the weapon's
+ * ("SOPMOD II"), the end of one preset's name, or a part of one preset's name.
+ */
 function findPresetId(weapon: BuildItemData, wanted: string) {
   const needle = normalizeText(wanted);
   if (needle === "default") return weapon.defaultPresetId ?? undefined;
   const presets = weapon.presets ?? [];
   const exact = presets.find((preset) => preset.id === wanted.trim() || normalizeText(preset.name) === needle);
   if (exact) return exact.id;
+  // "SOPMOD II" is exactly one preset's distinguishing name, though "SOPMOD II Flash" contains it.
+  const bySuffix = presets.filter((preset) => presetSuffix(weapon, preset.name) === needle);
+  if (bySuffix.length === 1) return bySuffix[0].id;
+  const ending = presets.filter((preset) => normalizeText(preset.name).endsWith(` ${needle}`));
+  if (ending.length === 1) return ending[0].id;
   const partial = presets.filter((preset) => normalizeText(preset.name).includes(needle));
   if (partial.length > 1) {
     throw new AmbiguousReferenceError(
-      `"${wanted}" matches several ${weapon.name} presets: ${partial.map((preset) => preset.name).join("; ")}. Use the full preset name or "default".`
+      `"${wanted}" matches several ${weapon.name} presets: ${listPresets(weapon, partial)}. Use the preset's full name, the part after the weapon name, or "default".`
     );
   }
   return partial[0]?.id;
@@ -428,9 +457,9 @@ export async function resolveBuild(source: BuildSource, input: BuildInput): Prom
     if (input.preset) {
       const presetId = findPresetId(weapon, input.preset);
       if (!presetId) {
-        const names = (weapon.presets ?? []).map((preset) => preset.name).join("; ");
+        const presets = weapon.presets ?? [];
         throw new InputError(
-          `${weapon.name} has no preset "${input.preset}".${names ? ` Its presets are: ${names}.` : " It has no presets."}`
+          `${weapon.name} has no preset "${input.preset}".${presets.length ? ` Its presets are: ${listPresets(weapon, presets)}.` : " It has no presets."}`
         );
       }
       const contents = await source.loadPreset(presetId);
