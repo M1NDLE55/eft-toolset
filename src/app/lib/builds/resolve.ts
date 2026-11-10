@@ -76,12 +76,13 @@ function pickByReference<T extends { id: string; name: string; shortName: string
   candidates: readonly T[],
   reference: string,
   noun: string,
-  notes?: string[]
+  notes?: string[],
+  plural = `${noun}s`
 ): T {
   const match = matchItemReference(indexItems(asCatalog(candidates)), reference);
   if (match.status === "ambiguous") {
     throw new AmbiguousReferenceError(
-      `"${reference}" matches several ${noun}s: ${match.candidates.join("; ")}. Use a full name or id.`
+      `"${reference}" matches several ${plural}: ${match.candidates.join("; ")}. Use a full name or id.`
     );
   }
   if (match.status === "none") {
@@ -273,7 +274,7 @@ function pickPartForSlot(slot: ModSlotDef, lookup: PartLookup, reference: string
   });
   if (allowed.length === 0) throw new InputError(`No parts are known for ${slot.name}.`);
   try {
-    return pickByReference(allowed, reference, `part for ${slot.name}`, notes);
+    return pickByReference(allowed, reference, `part for ${slot.name}`, notes, `parts for ${slot.name}`);
   } catch (error) {
     if (!(error instanceof InputError) || error instanceof AmbiguousReferenceError) throw error;
     const examples = allowed
@@ -302,7 +303,7 @@ export async function resolveAmmo(
   if (ammo.length === 0) throw new InputError("This build does not accept any known ammo.");
   try {
     const notes: string[] = [];
-    const picked = pickByReference(ammo, value, "compatible ammo", notes);
+    const picked = pickByReference(ammo, value, "compatible ammo", notes, "compatible rounds");
     return { ammo: picked, fits: ammoFits(picked.id, options), ...(notes.length ? { note: notes[0] } : {}) };
   } catch (error) {
     if (error instanceof InputError && !(error instanceof AmbiguousReferenceError)) {
