@@ -879,6 +879,18 @@ describe("MCP endpoint", () => {
     expect(paged.data.spawns).toHaveLength(1);
   });
 
+  it("bounds typo matching per call and keeps long junk inputs from inflating replies", async () => {
+    const junk = Array.from({ length: 40 }, (_, index) => `${"qzxv ".repeat(60)}${index}`);
+    const priced = await call("get_item_prices", { items: junk });
+    expect(priced.data.unmatched).toHaveLength(40);
+    expect(Math.max(...priced.data.unmatched.map((row: { input: string }) => row.input.length))).toBeLessThanOrEqual(100);
+    expect(priced.data.unmatchedNote).toMatch(/first 25 unmatched names/);
+    const linked = await call("create_import_link", { itemGroups: [{ name: "Junk", items: junk }] });
+    expect(linked.data.notes.length).toBeLessThanOrEqual(22);
+    expect(linked.data.notes).toContain("20 more inputs were left out or matched inexactly; itemMatches lists them.");
+    expect(linked.data.itemMatches.every((row: { input: string }) => row.input.length <= 100)).toBe(true);
+  });
+
   it("caps the problems one plan error lists and refuses oversized drawings before resolving names", async () => {
     const names = Array.from({ length: 300 }, (_, index) => ({ place: `nowhere number ${index} zzqq` }));
     const rejected = await call("create_raid_plan", { map: "factory", route: names });

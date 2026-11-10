@@ -15,7 +15,7 @@ import { decodePlanLink, planFromShared } from "@/app/lib/raid-planner/resolve";
 import { matchItemReference, type ItemMatch, type MatchKind } from "@/app/lib/search/item-reference";
 import { encodeSharePayload, MAX_SHARE_LINK_LENGTH } from "@/app/lib/share-codec";
 import { betweenItems, InputError, type ToolContext } from "./context";
-import { fuzzyBudget, isInexact, SKIPPED_NOTE } from "./item-match";
+import { echo, fuzzyBudget, isInexact, SKIPPED_NOTE } from "./item-match";
 import { createImportLinkOutput } from "./output-schemas";
 import { toolDefiner } from "./define-tool";
 import { buildInputSchema, gameModeSchema } from "./schemas";
@@ -83,23 +83,24 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
             await betweenItems(context.signal);
             const match = matches.get(reference) ?? matchItemReference(index, reference, { budget });
             matches.set(reference, match);
+            const input = echo(reference);
             if (match.status !== "found") {
               if (match.status === "none" && match.skipped) skipped = true;
               noteItem(
                 match.status === "ambiguous"
-                  ? `${group.name}: "${reference}" could be any of ${match.candidates.join("; ")}, so it was left out. Add the one you mean by its full name.`
-                  : `${group.name}: no item matches "${reference}", so it was left out.${match.suggestions.length ? ` Did you mean: ${match.suggestions.join("; ")}?` : ""}`
+                  ? `${group.name}: "${input}" could be any of ${match.candidates.join("; ")}, so it was left out. Add the one you mean by its full name.`
+                  : `${group.name}: no item matches "${input}", so it was left out.${match.suggestions.length ? ` Did you mean: ${match.suggestions.join("; ")}?` : ""}`
               );
-              itemMatches.push({ group: group.name, input: reference, item: null });
+              itemMatches.push({ group: group.name, input, item: null });
               continue;
             }
             if (isInexact(match)) {
               const why = match.assumed ?? (match.matchedBy === "fuzzy" ? "Closest spelling." : "Best search match.");
-              noteItem(`${group.name}: "${reference}" was matched to ${match.item.name}. ${why}`);
+              noteItem(`${group.name}: "${input}" was matched to ${match.item.name}. ${why}`);
             }
             itemMatches.push({
               group: group.name,
-              input: reference,
+              input,
               item: match.item.name,
               ...(isInexact(match) ? { matchedBy: match.matchedBy } : {}),
             });

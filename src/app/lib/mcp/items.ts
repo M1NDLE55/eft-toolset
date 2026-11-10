@@ -4,7 +4,7 @@ import { getGroupItems, getItemDetail, getItemFacets, getItemUses, type ItemFace
 import type { CatalogItem } from "@/app/lib/cache/types";
 import { listCatalog, searchCatalog, suggestNames } from "@/app/lib/search/filter-catalog";
 import { matchItemReference, type ItemMatch, type MatchKind } from "@/app/lib/search/item-reference";
-import { describeInexact, fuzzyBudget, isInexact, SKIPPED_NOTE, unmatchedMessage } from "./item-match";
+import { describeInexact, echo, fuzzyBudget, isInexact, SKIPPED_NOTE, unmatchedMessage } from "./item-match";
 import { normalizeText } from "@/app/lib/search/normalize-text";
 import { formatGroupPriceList } from "@/app/lib/item-groups/format";
 import { MAX_GROUP_NAME_LENGTH } from "@/app/lib/item-groups/limits";
@@ -230,22 +230,23 @@ export function registerItemTools(server: McpServer, context: ToolContext) {
       for (const entry of items) {
         await betweenItems(context.signal);
         const reference = typeof entry === "string" ? entry : entry.item;
+        const input = echo(reference);
         const count = typeof entry === "string" ? 1 : entry.count;
         const match = matches.get(reference) ?? matchItemReference(index, reference, { budget });
         matches.set(reference, match);
         if (match.status !== "found") {
-          unresolved.push(reference);
+          unresolved.push(input);
           if (match.status === "none" && match.skipped) skipped = true;
           unmatched.push(
             match.status === "ambiguous"
-              ? { input: reference, reason: "ambiguous", candidates: match.candidates }
-              : { input: reference, reason: "not found", candidates: match.suggestions }
+              ? { input, reason: "ambiguous", candidates: match.candidates }
+              : { input, reason: "not found", candidates: match.suggestions }
           );
           continue;
         }
         if (isInexact(match)) {
           fuzzy.push({
-            input: reference,
+            input,
             matched: match.item.name,
             matchedBy: match.matchedBy,
             note: describeInexact(reference, match),
@@ -255,7 +256,7 @@ export function registerItemTools(server: McpServer, context: ToolContext) {
         requested.set(match.item.name, {
           item: match.item,
           count: (existing?.count ?? 0) + count,
-          inputs: [...(existing?.inputs ?? []), reference],
+          inputs: [...(existing?.inputs ?? []), input],
         });
       }
       const names = Array.from(requested.keys());
