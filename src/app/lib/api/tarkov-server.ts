@@ -15,6 +15,7 @@ import type {
   ModSlotDef,
   PickItemData,
   PresetContents,
+  SightKind,
 } from "@/app/lib/types/gunBuilder";
 import type {
   ExtractFaction,
@@ -97,6 +98,7 @@ interface RawItemProperties {
   presets?: string[] | null;
   slots?: RawSlot[] | null;
   baseItem?: string | null;
+  capacity?: number | null;
   allowedAmmo?: string[] | null;
   damage?: number | null;
   armorDamage?: number | null;
@@ -123,6 +125,7 @@ interface RawItem {
   avg24hPrice?: number | null;
   changeLast48hPercent?: number | null;
   types?: string[] | null;
+  categories?: string[] | null;
   buyFromTrader?: RawTraderOffer[] | null;
   sellToTrader?: RawTraderOffer[] | null;
   conflictingItems?: string[] | null;
@@ -926,6 +929,7 @@ function isRawItem(value: unknown): value is RawItem {
     stringFields.every(optionalShortString) &&
     numberFields.every(optionalFiniteNumber) &&
     optionalStringArray(value.types) &&
+    optionalStringArray(value.categories) &&
     optionalArray(value.buyFromTrader, isRawTraderOffer) &&
     optionalArray(value.sellToTrader, isRawTraderOffer) &&
     optionalStringArray(value.conflictingItems) &&
@@ -958,6 +962,7 @@ function isRawItemProperties(value: unknown): value is RawItemProperties {
       value.projectileCount,
       value.initialSpeed,
       value.accuracyModifier,
+      value.capacity,
     ].every(optionalFiniteNumber) &&
     optionalStringArray(value.fireModes) &&
     optionalStringArray(value.presets) &&
@@ -1503,6 +1508,41 @@ function projectBuildItem(
     conflictingSlotIds: item.conflictingSlotIds ?? [],
     slots: projectSlots(properties?.slots, translations),
     allowedAmmoIds: (properties?.allowedAmmo ?? []).filter((id) => byIdHasAmmo(itemById, id)),
+    ...gunBuilderExtras(item, traderNames),
+    capacity:
+      properties?.propertiesType === "ItemPropertiesMagazine" ? positiveFiniteNumber(properties.capacity) : null,
+    sight: sightKind(item, translate(item.name, translations)),
+  };
+}
+
+// tarkov.dev item category for iron sights; other items with scope properties are optics.
+const IRON_SIGHT_CATEGORY = "55818ac54bdc2d5b648b456e";
+
+function sightKind(item: RawItem, name: string): SightKind | null {
+  if (item.properties?.propertiesType === "ItemPropertiesScope") {
+    return item.categories?.includes(IRON_SIGHT_CATEGORY) ? "iron" : "optic";
+  }
+  // Gas blocks, barrels, and handguards with a front sight built in.
+  return /\bfront sight\b/i.test(name) ? "front" : null;
+}
+
+/** Every trader offer and the flea ban, so the gun builder can price parts at a player's loyalty levels. */
+function gunBuilderExtras(item: RawItem, traderNames: Map<string, string>) {
+  const traderOffers = (item.buyFromTrader ?? []).flatMap((offer) => {
+    const priceRUB = finiteNumber(offer.priceRUB);
+    if (!offer.trader || priceRUB === null || priceRUB <= 0) return [];
+    const level = finiteNumber(offer.minTraderLevel);
+    return [
+      {
+        trader: traderNames.get(offer.trader) ?? offer.trader,
+        priceRUB,
+        level: level !== null && Number.isInteger(level) && level >= 1 && level <= 10 ? level : null,
+      },
+    ];
+  });
+  return {
+    traderOffers: traderOffers.sort((a, b) => a.priceRUB - b.priceRUB),
+    fleaBanned: Boolean(item.types?.includes("noFlea")),
   };
 }
 
@@ -1533,6 +1573,7 @@ function projectAmmoItem(
     recoilModifier: finiteNumber(properties?.recoilModifier) ?? 0,
     accuracyModifier: finiteNumber(properties?.accuracyModifier) ?? 0,
     fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
+    ...gunBuilderExtras(item, traderNames),
   };
 }
 

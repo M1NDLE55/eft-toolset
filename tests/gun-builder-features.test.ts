@@ -6,6 +6,8 @@ import { diffBuildTrees, statDeltas, treesEqual } from "@/app/lib/builds/compare
 import { buildShoppingList, formatShoppingList } from "@/app/lib/builds/shopping";
 import { computeStats } from "@/app/lib/builds/stats";
 import { collectItemIds } from "@/app/lib/builds/tree";
+import { checkSights, installedMagazineCapacity } from "@/app/lib/builds/sights";
+import { effectivePrice, withTraderLimits } from "@/app/lib/builds/price";
 import { extractSharePayload, parseSharedBuildInput } from "@/app/lib/builds/share-import";
 import { encodeBuildSharePayload } from "@/app/lib/builds/share";
 import { encodeSharePayload } from "@/app/lib/share-codec";
@@ -259,7 +261,58 @@ describe("optimiser", () => {
     ).rejects.toBeDefined();
     await expect(optimize({ itemId: "missing", slots: {} }, data, {})).rejects.toThrow(/weapon details/i);
   });
+  it("keeps a magazine, even when it is optional and the budget is tight", async () => {
+    const data = lookup(
+      gun([slot("magazine", ["mag"], { nameId: "mod_magazine" })], { traderPriceRUB: 10_000 }),
+      item("mag", { capacity: 30, traderPriceRUB: 2_000, ergonomics: -3 })
+    );
+    const cheapest = await optimize(bare, data, { goal: "cost" });
+    expect(cheapest.root.slots.magazine?.itemId).toBe("mag");
+    const tight = await optimize(bare, data, { goal: "recoil", budget: 5_000 });
+    expect(tight.root.slots.magazine?.itemId).toBe("mag");
+    expect(tight.withinBudget).toBe(false);
+    const without = await optimize(bare, data, { goal: "cost", requireMagazine: false });
+    expect(without.root.slots).toEqual({});
+  });
+
+  it("does not trade magazine capacity for stats unless allowed", async () => {
+    const data = lookup(
+      gun([slot("magazine", ["mag30", "mag10"], { nameId: "mod_magazine" })]),
+      item("mag30", { capacity: 30, ergonomics: -1, traderPriceRUB: 3_000 }),
+      item("mag10", { capacity: 10, ergonomics: 5, traderPriceRUB: 1_000 })
+    );
+    const root: BuildNode = { itemId: "gun", slots: { magazine: { itemId: "mag30", slots: {} } } };
+    for (const goal of ["ergonomics", "recoil", "cost"] as const) {
+      expect((await optimize(root, data, { goal })).root.slots.magazine.itemId).toBe("mag30");
+    }
+    expect((await optimize(root, data, { minMagazineCapacity: 10 })).root.slots.magazine.itemId).toBe("mag10");
+    expect((await optimize(root, data, { minMagazineCapacity: null })).root.slots.magazine.itemId).toBe("mag10");
+  });
+
+  it("replaces a sight only with a sight of the same kind", async () => {
+    const data = lookup(
+      gun([
+        slot("gas", ["gbSight", "gbPlain"], { nameId: "mod_gas_block" }),
+        slot("rear", ["carry", "flip"], { nameId: "mod_sight_rear" }),
+      ]),
+      item("gbSight", { sight: "front", ergonomics: 0 }),
+      item("gbPlain", { ergonomics: 4 }),
+      item("carry", { sight: "iron", ergonomics: -2 }),
+      item("flip", { sight: "iron", ergonomics: 1 })
+    );
+    const root: BuildNode = {
+      itemId: "gun",
+      slots: { gas: { itemId: "gbSight", slots: {} }, rear: { itemId: "carry", slots: {} } },
+    };
+    const kept = await optimize(root, data, {});
+    expect(kept.root.slots).toEqual({ gas: { itemId: "gbSight", slots: {} }, rear: { itemId: "flip", slots: {} } });
+    const dropped = await optimize(root, data, { keepSights: false });
+    expect(dropped.root.slots.gas.itemId).toBe("gbPlain");
+    // Without a sight to keep, the optimiser has no reason to add one.
+    expect((await optimize(bare, data, {})).root.slots.gas.itemId).toBe("gbPlain");
+  });
 });
+
 
 describe("conflict detection", () => {
   it("reports item and slot conflicts once each", () => {
@@ -465,5 +518,62 @@ describe("compatibility graph loading", () => {
     expect(full.count).toBe(4);
     vi.doUnmock("@/app/lib/api/transport");
     vi.doUnmock("@/app/lib/cache/store");
+  });
+});
+
+describe("sights and loyalty levels", () => {
+  const data = lookup(
+    gun([
+      slot("gas", ["gbSight", "gbPlain"], { nameId: "mod_gas_block" }),
+      slot("rear", ["flip"], { nameId: "mod_sight_rear" }),
+      slot("scope", ["dot"], { nameId: "mod_scope" }),
+      slot("magazine", ["mag"], { nameId: "mod_magazine" }),
+    ]),
+    item("gbSight", { sight: "front" }),
+    item("gbPlain"),
+    item("flip", { sight: "iron" }),
+    item("dot", { sight: "optic" }),
+    item("mag", { capacity: 30 })
+  );
+  const build = (slots: Record<string, string>): BuildNode => ({
+    itemId: "gun",
+    slots: Object.fromEntries(Object.entries(slots).map(([slotId, itemId]) => [slotId, { itemId, slots: {} }])),
+  });
+
+  it("needs an optic or every iron sight the weapon takes", () => {
+    expect(checkSights(build({ gas: "gbSight", rear: "flip" }), data)).toMatchObject({ usable: true, missing: [] });
+    expect(checkSights(build({ gas: "gbPlain", rear: "flip" }), data)).toMatchObject({
+      usable: false,
+      missing: ["front sight"],
+    });
+    expect(checkSights(build({ gas: "gbPlain", scope: "dot" }), data).usable).toBe(true);
+    expect(checkSights(build({}), data).missing).toEqual(["rear sight", "front sight"]);
+    // A weapon with no sight parts at all has built-in sights.
+    const plain = lookup(gun([slot("grip", ["g"])]), item("g"));
+    expect(checkSights(bare, plain)).toMatchObject({ usable: true, sights: [] });
+  });
+
+  it("reads the installed magazine's capacity", () => {
+    expect(installedMagazineCapacity(build({ magazine: "mag" }), data)).toBe(30);
+    expect(installedMagazineCapacity(bare, data)).toBeNull();
+  });
+
+  it("prices parts at the cheapest offer the player's loyalty levels allow", () => {
+    const part = item("part", {
+      traderPriceRUB: 1_000,
+      traderName: "Skier",
+      traderLevel: 4,
+      traderOffers: [
+        { trader: "Skier", priceRUB: 1_000, level: 4 },
+        { trader: "Mechanic", priceRUB: 1_500, level: 2 },
+      ],
+    });
+    expect(withTraderLimits(part, { maxLevel: 4 })).toBe(part);
+    expect(withTraderLimits(part, { maxLevel: 2 })).toMatchObject({ traderPriceRUB: 1_500, traderName: "Mechanic", traderLevel: 2 });
+    expect(withTraderLimits(part, { maxLevel: 4, levels: { mechanic: 0, skier: 3 } })).toMatchObject({
+      traderPriceRUB: null,
+      traderName: null,
+    });
+    expect(effectivePrice(withTraderLimits(part, { maxLevel: 1 }), BOTH)).toBeNull();
   });
 });

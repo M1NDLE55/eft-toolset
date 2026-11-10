@@ -15,7 +15,8 @@ import { ensureQuery, type QueryDefinition } from "@/app/lib/api/queryClient";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
 import { isDetailed } from "@/app/lib/builds/stats";
 
-const GUN_CACHE_VERSION = 4;
+// 5: build items carry magazine capacity and sight kinds for the optimiser.
+const GUN_CACHE_VERSION = 5;
 const MINUTE = 60_000;
 const DAY = 24 * 60 * MINUTE;
 const FRESH_MS = 15 * MINUTE;
@@ -524,6 +525,8 @@ function isBuildItem(value: unknown): value is BuildItemData {
         (preset) => validString(preset?.id, 160, true) && validString(preset?.name, 500, true)
       ))) &&
     (item.allowedAmmoIds === undefined || validStringArray(item.allowedAmmoIds, 2_000)) &&
+    (item.capacity === undefined || item.capacity === null || finite(item.capacity)) &&
+    (item.sight === undefined || item.sight === null || ["optic", "iron", "front"].includes(item.sight)) &&
     Array.isArray(item.slots) && item.slots.length <= 64 && item.slots.every((slot) =>
       validString(slot?.id, 160, true) &&
       validString(slot?.name, 500, true) &&
