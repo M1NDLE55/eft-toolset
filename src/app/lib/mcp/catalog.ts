@@ -77,21 +77,21 @@ export const MCP_TOOL_GROUPS = [
         title: "List parts for a slot",
         summary: "Parts that fit a slot, with stats, prices, and conflicts.",
         description:
-          "Gun Builder slot picker. Lists the parts that fit one slot of a build with their ergonomics, recoil modifier, weight, price, trader and loyalty level, how many slots of their own they have, and whether they conflict with parts already installed. Use the returned ids with modify_build.",
+          "Gun Builder slot picker. Lists the parts that fit one slot of a build with their ergonomics, recoil modifier, weight, price, trader and loyalty level, magazine capacity, how many slots of their own they have, and whether they conflict with parts already installed. buyableOnly hides parts the player can't buy. Use the returned ids with modify_build.",
       },
       {
         name: "get_ammo_options",
         title: "List ammo for a build",
         summary: "Ammo a build accepts, with ballistics and prices.",
         description:
-          "Gun Builder ammo picker. Lists the ammo a build's magazine and chamber accept (or the weapon's, without a magazine) with damage, penetration, armor damage, fragmentation, speed, recoil and accuracy modifiers, and prices.",
+          "Gun Builder ammo picker. Lists the ammo a build's magazine and chamber accept (or the weapon's, without a magazine) with damage, penetration, armor damage, fragmentation, speed, recoil and accuracy modifiers, and prices. The best rounds are often flea-banned and sold by no trader; buyableOnly hides those.",
       },
       {
         name: "evaluate_build",
         title: "Evaluate build",
         summary: "Stats, missing parts, conflicts, shopping list, and a share link for a build.",
         description:
-          "Gun Builder. Computes a build's ergonomics, recoil (including the loaded ammo), weight, and cost the same way the builder does (flea parts at their 24-hour average), and lists its parts, empty required slots, part conflicts, and an optional shopping list. Returns a share link that opens the build in the app, where it can be saved.",
+          "Gun Builder. Computes a build's ergonomics, recoil (including the loaded ammo, if any), weight, and cost the same way the builder does (flea parts at their 24-hour average), and lists its parts, magazine, sights, empty required slots, part conflicts, problems (no magazine, no usable sights, unbuyable parts), and an optional shopping list. Returns a share link that opens the build in the app, where it can be saved.",
       },
       {
         name: "modify_build",
@@ -105,7 +105,7 @@ export const MCP_TOOL_GROUPS = [
         title: "Optimise build",
         summary: "Optimise for ergonomics, recoil, or cost, with an optional budget.",
         description:
-          "Gun Builder optimiser. Picks parts for the best ergonomics, the lowest recoil, or the lowest cost, optionally within a budget, avoiding part conflicts. By default it may replace installed parts; set keepInstalledParts to only fill empty slots, or slotPath to optimise one slot. Returns the optimised build, what changed, stat changes, and a share link.",
+          "Gun Builder optimiser. Picks parts for the best ergonomics, the lowest recoil, or the lowest cost, optionally within a budget, avoiding part conflicts. It keeps a magazine no smaller than the installed one and replaces sights only with sights of the same kind; it does not choose ammo. By default it may replace installed parts; set keepInstalledParts to only fill empty slots, or slotPath to optimise one slot. Returns the optimised build, what changed, stat changes, and a share link; an unreachable budget returns the cheapest build with minimumCostRUB.",
       },
       {
         name: "compare_builds",

@@ -51,11 +51,16 @@ const stats = object({
   unknownParts: num,
 });
 
+const caliber = maybeText;
+const caliberId = maybeText.optional();
+const priceNote = text.optional().describe("Why priceRUB is null.");
+
 const ammoRow = object({
   id: text,
   name: text,
   shortName: maybeText,
-  caliber: maybeText,
+  caliber,
+  caliberId,
   damage: z.union([num, text]),
   totalDamage: num,
   penetration: num,
@@ -68,6 +73,7 @@ const ammoRow = object({
   traderPriceRUB: maybeNum,
   trader: maybeText,
   fleaPriceRUB: fleaAverage,
+  priceNote,
 });
 
 const verdict = z.enum(["better", "worse", "even"]).nullable();
@@ -76,12 +82,15 @@ const slotDiff = object({ slot: text, status: text });
 const build = {
   gameMode,
   name: text,
-  weapon: object({ id: text, name: text, caliber: maybeText.optional(), url: text.optional() }),
+  weapon: object({ id: text, name: text, caliber: caliber.optional(), caliberId, url: text.optional() }),
   stats,
   ammo: z.union([
     ammoRow.extend({ fits: bool }),
-    object({ loaded: z.null(), compatibleCount: num }),
+    object({ loaded: z.null(), compatibleCount: num, note: text.optional() }),
   ]),
+  magazine: object({ name: text, capacity: maybeNum, slotPath: list(text) }).nullable().optional(),
+  sights: list(object({ kind: text, name: text, slotPath: list(text) })).optional(),
+  problems: list(text).optional().describe("No magazine, no usable sights, or unpriced parts."),
   missingRequiredSlots: list(object({ slot: text, slotPath: list(text), optionCount: num })),
   conflicts: list(object({ kind: text, part: text, with: text })),
   parts: list(
@@ -93,6 +102,7 @@ const build = {
       ergonomics: num,
       recoilModifierPercent: maybeNum,
       priceRUB: buildPrice,
+      priceNote,
     })
   ),
   shareLink: maybeText,
@@ -161,7 +171,7 @@ export const listWeaponsOutput = result({
   gameMode,
   total: num,
   nextOffset: maybeNum,
-  weapons: list(object({ id: text, name: text, shortName: maybeText, caliber: maybeText, hasDefaultPreset: bool })),
+  weapons: list(object({ id: text, name: text, shortName: maybeText, caliber, caliberId, hasDefaultPreset: bool })),
 });
 
 export const getWeaponOutput = result({
@@ -170,7 +180,8 @@ export const getWeaponOutput = result({
   name: text,
   shortName: maybeText,
   url: text,
-  caliber: maybeText,
+  caliber,
+  caliberId,
   fireRate: maybeNum,
   fireModes: list(text),
   defaultAmmo: maybeText,
@@ -195,6 +206,9 @@ export const getSlotOptionsOutput = result({
       recoilModifierPercent: maybeNum,
       priceRUB: buildPrice,
       fleaPriceRUB: fleaAverage.optional(),
+      priceNote,
+      capacity: num.optional(),
+      sight: text.optional().describe('"optic", "iron", or "front" (a built-in front sight).'),
       conflict: maybeText,
       installed: bool,
     })
@@ -243,6 +257,7 @@ export const optimizeBuildOutput = result({
   changed: bool,
   withinBudget: bool,
   notice: text.optional().describe("Set when nothing fits the budget."),
+  minimumCostRUB: num.optional().describe("Set when nothing fits the budget: the cheapest build found (returned)."),
   remainingConflicts: num,
   changes: list(object({ slot: text, status: text, before: maybeText, after: maybeText })),
   statChanges: list(object({ stat: text, before: maybeNum, after: maybeNum, change: maybeNum, verdict })),

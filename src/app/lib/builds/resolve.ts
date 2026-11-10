@@ -146,31 +146,18 @@ function treeProblems(root: BuildNode, lookup: PartLookup): string[] {
   return problems;
 }
 
-function matchSlot(item: BuildItemData, segment: string): ModSlotDef {
+/** The slots of a part matching a segment by id, name id, or name, most exact first. */
+function slotMatches(item: BuildItemData, segment: string): ModSlotDef[] {
   const value = segment.trim();
-  const byId = item.slots.find((slot) => slot.id === value);
-  if (byId) return byId;
+  const byId = item.slots.filter((slot) => slot.id === value);
+  if (byId.length) return byId;
   const needle = normalizeText(value);
-  const candidates = [
+  const tiers = [
     item.slots.filter((slot) => normalizeText(slot.nameId) === needle),
     item.slots.filter((slot) => normalizeText(slot.name) === needle),
     item.slots.filter((slot) => slotKey(slot.nameId) === slotKey(needle)),
   ];
-  for (const matches of candidates) {
-    if (matches.length === 1) return matches[0];
-    if (matches.length > 1) {
-      throw new InputError(
-        `"${segment}" matches several slots on ${item.name}: ${matches
-          .map((slot) => `${slot.name} (id ${slot.id})`)
-          .join(", ")}. Use the slot id.`
-      );
-    }
-  }
-  throw new InputError(
-    `${item.name} has no slot "${segment}". Its slots are: ${
-      item.slots.map((slot) => `${slot.name} (${slot.nameId}, id ${slot.id})`).join(", ") || "none"
-    }.`
-  );
+  return tiers.find((matches) => matches.length > 0) ?? [];
 }
 
 interface ResolvedSlot {
@@ -180,23 +167,89 @@ interface ResolvedSlot {
   current: BuildNode | undefined;
 }
 
-/** Follows slot ids, name ids, or names from the weapon down to a slot. */
+type SlotHit = Omit<ResolvedSlot, "current">;
+
+/** Matching slots on parts installed below a node, so a nested slot can be named alone. */
+function nestedSlotMatches(node: BuildNode, path: string[], lookup: PartLookup, segment: string): SlotHit[] {
+  const hits: SlotHit[] = [];
+  const walk = (parent: BuildNode, parentPath: string[]) => {
+    const item = lookup.get(parent.itemId);
+    if (!isDetailed(item)) return;
+    if (parent !== node) hits.push(...slotMatches(item, segment).map((slot) => ({ parentPath, parent, slot })));
+    for (const slot of item.slots) {
+      const child = childAt(parent, slot.id);
+      if (child) walk(child, [...parentPath, slot.id]);
+    }
+  };
+  walk(node, path);
+  return hits;
+}
+
+const MAX_LISTED_SLOTS = 40;
+
+/** Every slot of the installed parts, as name paths, for error messages. */
+function slotTree(root: BuildNode, lookup: PartLookup) {
+  const labels: string[] = [];
+  const walk = (node: BuildNode, path: string[]) => {
+    for (const slot of lookup.get(node.itemId)?.slots ?? []) {
+      const childPath = [...path, slot.id];
+      const child = childAt(node, slot.id);
+      labels.push(`${slotLabel(root, lookup, childPath)}${child ? "" : " (empty)"}`);
+      if (child) walk(child, childPath);
+    }
+  };
+  walk(root, []);
+  return labels.length > MAX_LISTED_SLOTS ? [...labels.slice(0, MAX_LISTED_SLOTS), "…"] : labels;
+}
+
+/**
+ * Follows slot ids, name ids, or names from the weapon down to a slot. A segment that names
+ * no slot at its level may name one slot on the parts installed below it.
+ */
 export function resolveSlotPath(root: BuildNode, lookup: PartLookup, segments: readonly string[]): ResolvedSlot {
   if (segments.length === 0) throw new InputError("slotPath needs at least one slot.");
   let node = root;
-  const parentPath: string[] = [];
+  let parentPath: string[] = [];
   for (let index = 0; index < segments.length; index += 1) {
+    const segment = segments[index];
     const item = lookup.get(node.itemId);
     if (!isDetailed(item)) throw new InputError(`Part data for ${node.itemId} is unavailable.`);
-    const slot = matchSlot(item, segments[index]);
-    const child = childAt(node, slot.id);
-    if (index === segments.length - 1) return { parentPath, parent: node, slot, current: child };
-    if (!child) {
+    const matches = slotMatches(item, segment);
+    if (matches.length > 1) {
       throw new InputError(
-        `${slotLabel(root, lookup, [...parentPath, slot.id])} is empty, so it has no slot "${segments[index + 1]}". Install a part there first.`
+        `"${segment}" matches several slots on ${item.name}: ${matches
+          .map((slot) => `${slot.name} (id ${slot.id})`)
+          .join(", ")}. Use the slot id.`
       );
     }
-    parentPath.push(slot.id);
+    let hit: SlotHit | undefined = matches[0] && { parentPath, parent: node, slot: matches[0] };
+    if (!hit) {
+      const nested = nestedSlotMatches(node, parentPath, lookup, segment);
+      if (nested.length > 1) {
+        throw new InputError(
+          `"${segment}" matches several slots: ${nested
+            .map((entry) => `${slotLabel(root, lookup, [...entry.parentPath, entry.slot.id])} (slotPath ${JSON.stringify([...entry.parentPath, entry.slot.id])})`)
+            .join("; ")}. Give the full slotPath.`
+        );
+      }
+      hit = nested[0];
+    }
+    if (!hit) {
+      throw new InputError(
+        `${item.name} has no slot "${segment}", and no installed part below it has one. Its slots are: ${
+          item.slots.map((slot) => `${slot.name} (${slot.nameId}, id ${slot.id})`).join(", ") || "none"
+        }. Slots in this build: ${slotTree(root, lookup).join("; ") || "none"}.`
+      );
+    }
+    ({ parentPath, parent: node } = hit);
+    const child = childAt(node, hit.slot.id);
+    if (index === segments.length - 1) return { parentPath, parent: node, slot: hit.slot, current: child };
+    if (!child) {
+      throw new InputError(
+        `${slotLabel(root, lookup, [...parentPath, hit.slot.id])} is empty, so it has no slot "${segments[index + 1]}". Install a part there first.`
+      );
+    }
+    parentPath = [...parentPath, hit.slot.id];
     node = child;
   }
   throw new InputError("slotPath could not be resolved.");

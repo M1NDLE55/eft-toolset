@@ -5,9 +5,18 @@ import { MAX_SHARE_LINK_LENGTH } from "@/app/lib/share-codec";
 export const gameModeSchema = z.enum(["regular", "pve"]).default("regular").describe('"regular" (PVP) or "pve".');
 
 export const priceSourcesSchema = z
-  .object({ traders: z.boolean().default(true), flea: z.boolean().default(true) })
+  .object({
+    traders: z.boolean().default(true),
+    flea: z.boolean().default(true),
+    maxTraderLevel: z.number().int().min(1).max(4).optional().describe("Loyalty level with all traders."),
+    traderLevels: z
+      .record(z.string().max(40), z.number().int().min(0).max(4))
+      .refine((levels) => Object.keys(levels).length <= 20, "At most 20 traders.")
+      .optional()
+      .describe('Per-trader levels over maxTraderLevel, e.g. {"Jaeger": 0} (0 = locked).'),
+  })
   .default({ traders: true, flea: true })
-  .describe("Price sources to count; each part costs its cheapest enabled source.");
+  .describe("Price sources to count; each part costs its cheapest enabled source within the trader levels.");
 
 export const slotPathSchema = z
   .array(z.string().min(1).max(160))

@@ -8,6 +8,7 @@ import { computeStats } from "@/app/lib/builds/stats";
 import { collectItemIds } from "@/app/lib/builds/tree";
 import { checkSights, installedMagazineCapacity } from "@/app/lib/builds/sights";
 import { effectivePrice, withTraderLimits } from "@/app/lib/builds/price";
+import { resolveSlotPath } from "@/app/lib/builds/resolve";
 import { extractSharePayload, parseSharedBuildInput } from "@/app/lib/builds/share-import";
 import { encodeBuildSharePayload } from "@/app/lib/builds/share";
 import { encodeSharePayload } from "@/app/lib/share-codec";
@@ -575,5 +576,52 @@ describe("sights and loyalty levels", () => {
       traderName: null,
     });
     expect(effectivePrice(withTraderLimits(part, { maxLevel: 1 }), BOTH)).toBeNull();
+  });
+});
+
+describe("slot paths", () => {
+  const data = lookup(
+    gun([slot("rec", ["upper"], { name: "Receiver" }), slot("hg", ["rail"], { name: "Handguard" })]),
+    item("upper", { slots: [slot("u-scope", ["dot"], { name: "Scope", nameId: "mod_scope" }), slot("u-rear", ["carry"], { name: "Rear sight" })] }),
+    item("carry", { slots: [slot("c-scope", ["dot"], { name: "Scope", nameId: "mod_scope" })] }),
+    item("rail", { slots: [slot("r-light", ["dot"], { name: "Tactical" })] }),
+    item("dot")
+  );
+  const root: BuildNode = {
+    itemId: "gun",
+    slots: {
+      rec: { itemId: "upper", slots: { "u-rear": { itemId: "carry", slots: {} } } },
+      hg: { itemId: "rail", slots: {} },
+    },
+  };
+
+  it("finds a nested slot by name when only one installed part has it", () => {
+    expect(resolveSlotPath(root, data, ["Tactical"])).toMatchObject({ parentPath: ["hg"], slot: { id: "r-light" } });
+    expect(resolveSlotPath(root, data, ["Receiver", "Rear sight", "Scope"])).toMatchObject({
+      parentPath: ["rec", "u-rear"],
+      slot: { id: "c-scope" },
+    });
+    expect(resolveSlotPath(root, data, ["Rear sight", "Scope"]).parentPath).toEqual(["rec", "u-rear"]);
+  });
+
+  it("lists where an ambiguous or unknown slot name lives", () => {
+    expect(() => resolveSlotPath(root, data, ["Scope"])).toThrow(
+      /"Scope" matches several slots: Receiver \/ Scope \(slotPath \["rec","u-scope"\]\); Receiver \/ Rear sight \/ Scope/
+    );
+    expect(() => resolveSlotPath(root, data, ["Muzzle"])).toThrow(/Slots in this build: Receiver; Receiver \/ Scope \(empty\)/);
+  });
+});
+
+describe("calibers", () => {
+  it("reads caliber ids naturally and keeps the id", async () => {
+    const { caliberId, formatCaliber } = await import("@/app/lib/mcp/build-projection");
+    expect(formatCaliber("Caliber556x45NATO")).toBe("5.56x45mm NATO");
+    expect(formatCaliber("Caliber1143x23ACP")).toBe(".45 ACP");
+    expect(formatCaliber("Caliber762x39")).toBe("7.62x39mm");
+    expect(formatCaliber("Caliber127x55")).toBe("12.7x55mm");
+    expect(formatCaliber("Caliber9x39")).toBe("9x39mm");
+    expect(formatCaliber("Caliber20x1mm")).toBe("20x1mm");
+    expect(formatCaliber(null)).toBeNull();
+    expect(caliberId("Caliber556x45NATO")).toBe("556x45NATO");
   });
 });

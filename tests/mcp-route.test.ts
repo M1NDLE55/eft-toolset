@@ -294,6 +294,153 @@ describe("MCP endpoint", () => {
     expect(compared.data.right.ammo).toBe("Test Ammo");
   });
 
+  it("keeps optimised guns usable, explains prices, and limits trader levels", async () => {
+    const items = (fixtures.items as { data: { items: Record<string, unknown> } }).data.items;
+    const translations = (fixtures.items_en as { data: Record<string, string> }).data;
+    const ironSight = "55818ac54bdc2d5b648b456e";
+    const part = (id: string, name: string, price: number | null, properties: Record<string, unknown>, extra = {}) => {
+      translations[`${id}-name`] = name;
+      items[id] = {
+        id,
+        name: `${id}-name`,
+        normalizedName: id,
+        types: ["mods"],
+        buyFromTrader: price === null ? [] : [{ trader: "trader", priceRUB: price, minTraderLevel: 1 }],
+        properties: { propertiesType: "ItemPropertiesWeaponMod", ergonomics: 0, recoilModifier: 0, ...properties },
+        ...extra,
+      };
+    };
+    const slot = (id: string, nameId: string, name: string, allowed: string[], required = false) => {
+      translations[`${id}-slot`] = name;
+      return { id, name: `${id}-slot`, nameId, required, filters: { allowedItems: allowed } };
+    };
+    part("carbine", "Test Carbine", 20_000, {
+      propertiesType: "ItemPropertiesWeapon",
+      ergonomics: 40,
+      recoilVertical: 100,
+      recoilHorizontal: 200,
+      caliber: "Caliber556x45NATO",
+      allowedAmmo: ["ammo", "ssa"],
+      slots: [
+        slot("c-mag", "mod_magazine", "Magazine", ["mag30", "mag10"]),
+        slot("c-rec", "mod_reciever", "Receiver", ["upper"], true),
+      ],
+    }, { types: ["gun"] });
+    part("upper", "Test Upper", 5_000, {
+      slots: [
+        slot("u-scope", "mod_scope", "Scope", ["dot"]),
+        slot("u-rear", "mod_sight_rear", "Rear sight", ["rear"]),
+        slot("u-gas", "mod_gas_block", "Gas block", ["gbSight", "gbPlain"]),
+      ],
+    });
+    part("mag30", "Test 30-round magazine", 3_000, {
+      propertiesType: "ItemPropertiesMagazine",
+      ergonomics: -2,
+      capacity: 30,
+      allowedAmmo: ["ammo", "ssa"],
+    });
+    part("mag10", "Test 10-round magazine", 1_000, {
+      propertiesType: "ItemPropertiesMagazine",
+      ergonomics: 5,
+      capacity: 10,
+      allowedAmmo: ["ammo", "ssa"],
+    });
+    part("rear", "Test rear sight", 1_000, { propertiesType: "ItemPropertiesScope" }, { categories: [ironSight] });
+    part("dot", "Test red dot", 9_000, { propertiesType: "ItemPropertiesScope" });
+    part("gbSight", "Test front sight gas block", 2_000, {});
+    part("gbPlain", "Test plain gas block", null, { ergonomics: 3, recoilModifier: -0.02 }, {
+      buyFromTrader: [{ trader: "trader", priceRUB: 1_500, minTraderLevel: 3 }],
+    });
+    items.ssa = {
+      id: "ssa",
+      name: "ssa-name",
+      normalizedName: "ssa",
+      types: ["ammo", "noFlea"],
+      properties: { propertiesType: "ItemPropertiesAmmo", caliber: "Caliber556x45NATO", damage: 38, penetrationPower: 57 },
+    };
+    translations["ssa-name"] = "Test SSA AP";
+    const full = {
+      weapon: "Test Carbine",
+      parts: [
+        { slotPath: ["Magazine"], item: "mag30" },
+        { slotPath: ["Receiver"], item: "upper" },
+        { slotPath: ["Receiver", "Rear sight"], item: "rear" },
+        { slotPath: ["Receiver", "Gas block"], item: "gbSight" },
+      ],
+    };
+
+    const optimised = await call("optimize_build", { build: full, goal: "ergonomics" });
+    expect(optimised.data.magazine).toEqual({ name: "Test 30-round magazine", capacity: 30, slotPath: ["c-mag"] });
+    expect(optimised.data.sights.map((sight: { kind: string }) => sight.kind)).toEqual(["rear sight", "front sight"]);
+    expect(optimised.data.problems).toEqual([]);
+    expect(optimised.data.weapon).toMatchObject({ caliber: "5.56x45mm NATO", caliberId: "556x45NATO" });
+    expect(optimised.data.ammo).toMatchObject({ loaded: null, note: expect.stringContaining("No ammo loaded") });
+    const smaller = await call("optimize_build", { build: full, goal: "ergonomics", minMagazineCapacity: 0 });
+    expect(smaller.data.magazine.capacity).toBe(10);
+
+    const fromBare = await call("optimize_build", { build: { weapon: "carbine" }, goal: "cost" });
+    expect(fromBare.data.magazine).not.toBeNull();
+
+    const unusable = await call("evaluate_build", {
+      build: { weapon: "carbine", parts: [{ slotPath: ["Receiver"], item: "upper" }, { slotPath: ["Gas block"], item: "gbPlain" }] },
+    });
+    expect(unusable.data.magazine).toBeNull();
+    expect(unusable.data.problems).toEqual([
+      expect.stringMatching(/^No magazine.*\["c-mag"\]/),
+      expect.stringMatching(/^No usable sights: no optic and no rear sight or front sight/),
+    ]);
+
+    const overBudget = await call("optimize_build", { build: full, goal: "recoil", budgetRUB: 1_000 });
+    expect(overBudget.data.withinBudget).toBe(false);
+    expect(overBudget.data.minimumCostRUB).toBe(overBudget.data.stats.costRUB);
+    expect(overBudget.data.notice).toMatch(/budget of 1,000 RUB can't be met.*weapon alone costs 20,000 RUB/);
+
+    // Nested slots can be named alone; the plain gas block needs trader level 3.
+    const gas = await call("get_slot_options", {
+      build: full,
+      slotPath: ["Gas block"],
+      priceSources: { maxTraderLevel: 2 },
+    });
+    expect(gas.data.slot.slotPath).toEqual(["c-rec", "u-gas"]);
+    expect(gas.data.options.find((row: { id: string }) => row.id === "gbPlain")).toMatchObject({
+      priceRUB: null,
+      priceNote: expect.stringContaining("only Tester LL3 sells it"),
+    });
+    const buyable = await call("get_slot_options", {
+      build: full,
+      slotPath: ["Gas block"],
+      buyableOnly: true,
+      priceSources: { traderLevels: { tester: 2 } },
+    });
+    expect(buyable.data.options.map((row: { id: string }) => row.id)).toEqual(["gbSight"]);
+    const levelThree = await call("get_slot_options", { build: full, slotPath: ["Gas block"], priceSources: { maxTraderLevel: 3 } });
+    expect(levelThree.data.options.find((row: { id: string }) => row.id === "gbPlain").priceRUB).toBe(1_500);
+    const unknownTrader = await call("get_slot_options", {
+      build: full,
+      slotPath: ["Gas block"],
+      priceSources: { traderLevels: { Nobody: 1 } },
+    });
+    expect(unknownTrader.text).toContain('unknown trader "Nobody". Traders: Tester');
+
+    const missingSlot = await call("get_slot_options", { build: full, slotPath: ["Muzzle"] });
+    expect(missingSlot.text).toContain("Slots in this build: Magazine; Receiver; Receiver / Scope (empty); Receiver / Rear sight");
+
+    const ammo = await call("get_ammo_options", { build: full });
+    expect(ammo.data.ammo[0]).toMatchObject({
+      name: "Test SSA AP",
+      caliber: "5.56x45mm NATO",
+      priceRUB: null,
+      priceNote: expect.stringMatching(/no trader sells it, and it is banned on the flea market/),
+    });
+    const buyableAmmo = await call("get_ammo_options", { build: full, buyableOnly: true });
+    expect(buyableAmmo.data.ammo.map((row: { id: string }) => row.id)).toEqual(["ammo"]);
+
+    const loaded = await call("modify_build", { build: full, changes: [{ action: "set_ammo", ammo: "Test Ammo" }] });
+    expect(loaded.data.ammo).toMatchObject({ name: "Test Ammo", fits: true });
+    const noAmmo = await call("modify_build", { build: full, changes: [{ action: "set_ammo" }] });
+    expect(noAmmo.text).toContain("set_ammo needs item");
+  });
+
   it("filters weapons by caliber before limiting name matches", async () => {
     const items = (fixtures.items as { data: { items: Record<string, unknown> } }).data.items;
     for (let index = 1; index <= 25; index += 1) {
@@ -310,8 +457,18 @@ describe("MCP endpoint", () => {
     const { data } = await call("list_weapons", { query: "AK", caliber: "7.62x39" });
     expect(data.total).toBe(1);
     expect(data.weapons).toEqual([
-      { id: "ak-25", name: "AK test 25", shortName: "AK test 25", caliber: "762x39", hasDefaultPreset: false },
+      {
+        id: "ak-25",
+        name: "AK test 25",
+        shortName: "AK test 25",
+        caliber: "7.62x39mm",
+        caliberId: "762x39",
+        hasDefaultPreset: false,
+      },
     ]);
+    // Calibers match by id or by their readable name.
+    expect((await call("list_weapons", { caliber: "762x39" })).data.total).toBe(1);
+    expect((await call("list_weapons", { caliber: "7.62x39mm" })).data.total).toBe(1);
     const all = await call("list_weapons", { query: "AK test", limit: 30 });
     expect(all.data.total).toBe(25);
     expect(all.data.nextOffset).toBeNull();
