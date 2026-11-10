@@ -5,6 +5,7 @@ import {
   executeTarkovOperation,
 } from "@/app/lib/api/tarkov-server";
 import { createTarkovFixtures } from "./fixtures/tarkov";
+import type { MapDetails } from "@/app/lib/types/raidPlanner";
 
 let fixtures: Record<string, unknown> = createTarkovFixtures();
 
@@ -339,7 +340,10 @@ describe("Tarkov JSON adapter", () => {
     expect(map).toEqual(
       expect.objectContaining({
         key: "factory",
-        extracts: [expect.objectContaining({ name: "Gate" })],
+        extracts: [
+          expect.objectContaining({ name: "Gate", transferItem: null }),
+          expect.objectContaining({ name: "Car V-Ex", transferItem: { name: "Test Rifle", count: 1 } }),
+        ],
         locks: [expect.objectContaining({ keyName: "Test Key", keyNormalizedName: "test-key" })],
         lootContainers: [
           expect.objectContaining({ typeId: "crate", typeName: "Supply crate" }),
@@ -347,6 +351,27 @@ describe("Tarkov JSON adapter", () => {
         stationaryWeapons: [expect.objectContaining({ name: "Mounted gun" })],
       })
     );
+  });
+
+  it("names spawn zones and bosses from the map translations, skipping malformed bosses", async () => {
+    const map = (await executeTarkovOperation(TARKOV_OPERATIONS.mapDetails, {
+      gameMode: "regular",
+      mapKey: "factory",
+    })) as MapDetails;
+    expect(map.spawns.map((spawn) => spawn.zoneLabel ?? null)).toEqual(["Stronghold", "Stronghold", null]);
+    expect(map.bosses).toEqual([
+      {
+        name: "Reshala",
+        spawnChance: 0.5,
+        locations: [
+          { zone: "ZoneScavBase", name: "Stronghold", chance: 0.5 },
+          { zone: "ZoneDormitory", name: "Dorms", chance: 0.5 },
+        ],
+        escorts: 4,
+        spawnTimeSeconds: null,
+        trigger: null,
+      },
+    ]);
   });
 
   it("rejects variables outside the operation contract", async () => {

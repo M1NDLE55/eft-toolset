@@ -355,9 +355,9 @@ describe("MCP endpoint", () => {
 
     const details = await call("get_map_details", { map: "Factory", sections: ["extracts", "locks"] });
     expect(details.data).toMatchObject({ players: "5-6", raidDurationMinutes: 20 });
-    expect(details.data.extracts).toEqual([{ name: "Gate", faction: "pmc", x: 1, z: 3, y: 2, level: "Ground" }]);
+    expect(details.data.extracts[0]).toEqual({ name: "Gate", faction: "pmc", x: 1, z: 3, y: 2, level: "Ground" });
     expect(details.data.locks[0]).toMatchObject({ key: "Test Key", keyUrl: "http://localhost/item/test-key" });
-    expect(details.data.layers[0].options[0]).toEqual({ id: "extracts:pmc", label: "PMC", count: 1 });
+    expect(details.data.layers[0].options[0]).toEqual({ id: "extracts:pmc", label: "PMC", count: 2 });
 
     const created = await call("create_raid_plan", {
       map: "factory",

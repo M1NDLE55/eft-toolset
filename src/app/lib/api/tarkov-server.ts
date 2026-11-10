@@ -18,6 +18,7 @@ import type {
 } from "@/app/lib/types/gunBuilder";
 import type {
   ExtractFaction,
+  MapBoss,
   MapDetails,
   MapSpawn,
   SpawnKind,
@@ -194,6 +195,7 @@ interface RawMap {
     outline?: { x: number; z: number }[] | null;
     top?: number | null;
     bottom?: number | null;
+    transferItem?: { item?: unknown; count?: unknown } | null;
   }[];
   transits?: {
     id?: string;
@@ -232,6 +234,8 @@ interface RawMap {
     position?: RawPosition | null;
     stationaryWeapon?: string | null;
   }[];
+  // Read defensively in projectBosses, so a format change drops bosses rather than the map.
+  bosses?: Record<string, unknown>[];
 }
 
 interface ItemsData {
@@ -250,6 +254,7 @@ interface MapsData {
   maps?: Dictionary<RawMap>;
   lootContainers?: Dictionary<RawNamedEntity>;
   stationaryWeapons?: Dictionary<RawNamedEntity>;
+  mobs?: Record<string, unknown>;
 }
 
 interface ResourceCacheEntry {
@@ -656,7 +661,8 @@ export async function getMapDetails(gameMode: GameMode, mapKey: string): Promise
     mapsEnvelope.data.lootContainers ?? {},
     mapsEnvelope.data.stationaryWeapons ?? {},
     nameById,
-    byId
+    byId,
+    mapsEnvelope.data.mobs ?? {}
   );
 }
 
@@ -884,7 +890,8 @@ function validateResourceData(resource: Resource, data: unknown): boolean {
         isRecord(data) &&
         optionalDictionary(data.maps, isRawMap) &&
         optionalDictionary(data.lootContainers, isRawNamedEntity) &&
-        optionalDictionary(data.stationaryWeapons, isRawNamedEntity)
+        optionalDictionary(data.stationaryWeapons, isRawNamedEntity) &&
+        optional(data.mobs, isRecord)
       );
     case "barters":
       return boundedArray(data, isRawBarter, MAX_RESOURCE_RECORDS);
@@ -1060,7 +1067,8 @@ function isRawMap(value: unknown): value is RawMap {
       optional(entry.position, isPosition) &&
       optionalArray(entry.outline, isOutlinePoint) &&
       optionalFiniteNumber(entry.top) &&
-      optionalFiniteNumber(entry.bottom)
+      optionalFiniteNumber(entry.bottom) &&
+      optional(entry.transferItem, isRecord)
     ) &&
     optionalArray(value.transits, (entry) =>
       isRecord(entry) &&
@@ -1102,7 +1110,8 @@ function isRawMap(value: unknown): value is RawMap {
       isRecord(entry) &&
       optional(entry.position, isPosition) &&
       optionalShortString(entry.stationaryWeapon)
-    )
+    ) &&
+    optionalArray(value.bosses, isRecord)
   );
 }
 
@@ -1599,15 +1608,18 @@ function projectMap(
   lootContainerById: Dictionary<RawNamedEntity>,
   stationaryWeaponById: Dictionary<RawNamedEntity>,
   itemNames: Map<string, string>,
-  itemById: Map<string, RawItem>
+  itemById: Map<string, RawItem>,
+  mobs: Record<string, unknown>
 ): MapDetails {
   const spawns: MapSpawn[] = [];
   for (const spawn of raw.spawns ?? []) {
     if (!spawn.position) continue;
     const kind = spawnKind(spawn.sides, spawn.categories);
     if (!kind) continue;
+    const zoneLabel = spawn.zoneName ? translations[spawn.zoneName] : undefined;
     spawns.push({
       zoneName: spawn.zoneName ?? null,
+      ...(zoneLabel ? { zoneLabel } : {}),
       kind,
       position: spawn.position,
     });
@@ -1630,6 +1642,7 @@ function projectMap(
           outline: extract.outline ?? [],
           top: finiteNumber(extract.top),
           bottom: finiteNumber(extract.bottom),
+          transferItem: projectTransferItem(extract.transferItem, itemNames),
         },
       ];
     }),
@@ -1703,7 +1716,62 @@ function projectMap(
         },
       ];
     }),
+    bosses: projectBosses(raw.bosses ?? [], translations, mobs),
   };
+}
+
+function projectTransferItem(
+  value: { item?: unknown; count?: unknown } | null | undefined,
+  itemNames: Map<string, string>
+) {
+  if (!value || typeof value.item !== "string") return null;
+  const count = finiteNumber(value.count);
+  return { name: itemNames.get(value.item) ?? value.item, count: count ?? 1 };
+}
+
+const MAX_BOSS_LOCATIONS = 20;
+
+/** Boss spawns with translated names; entries in an unexpected shape are skipped. */
+function projectBosses(
+  bosses: Record<string, unknown>[],
+  translations: TranslationDictionary,
+  mobs: Record<string, unknown>
+): MapBoss[] {
+  return bosses.flatMap((boss): MapBoss[] => {
+    const mobId = typeof boss.mob === "string" ? boss.mob : null;
+    const spawnChance = finiteNumber(boss.spawnChance);
+    if (!mobId || spawnChance === null) return [];
+    const mob = mobs[mobId];
+    const mobName = isRecord(mob) && typeof mob.name === "string" ? mob.name : mobId;
+    const locations = (Array.isArray(boss.spawnLocations) ? boss.spawnLocations : [])
+      .slice(0, MAX_BOSS_LOCATIONS)
+      .flatMap((location) => {
+        if (!isRecord(location) || typeof location.name !== "string") return [];
+        return [
+          {
+            zone: location.name,
+            name: translate(location.name, translations),
+            chance: finiteNumber(location.chance) ?? 0,
+          },
+        ];
+      });
+    const escorts = (Array.isArray(boss.escorts) ? boss.escorts : []).reduce<number>((total, escort) => {
+      if (!isRecord(escort) || !Array.isArray(escort.amount)) return total;
+      const counts = escort.amount.map((amount) => (isRecord(amount) ? finiteNumber(amount.count) ?? 0 : 0));
+      return total + Math.max(0, ...counts);
+    }, 0);
+    const spawnTime = finiteNumber(boss.spawnTime);
+    return [
+      {
+        name: translate(mobName, translations),
+        spawnChance,
+        locations,
+        escorts,
+        spawnTimeSeconds: spawnTime !== null && spawnTime >= 0 ? spawnTime : null,
+        trigger: typeof boss.spawnTrigger === "string" && isShortString(boss.spawnTrigger) ? boss.spawnTrigger : null,
+      },
+    ];
+  });
 }
 
 function spawnKind(
