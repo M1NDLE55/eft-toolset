@@ -71,6 +71,17 @@ describe("item reference matching", () => {
     );
     expect(matchItemReference(injectors, "injector")).toMatchObject({ status: "ambiguous", candidates: expect.arrayContaining(["Injector case"]) });
     expect(matchItemReference(injectors, "morphine")).toMatchObject({ status: "found", item: { name: "Morphine injector" } });
+    // Even when one of them ranks higher by starting with the word.
+    const folders = indexCatalog(
+      ["Folder with intelligence on Norvinsk region facilities", "Intelligence folder", "Decrypted intelligence folder"].map(
+        (name) => entry(name, null)
+      )
+    );
+    expect(matchItemReference(folders, "folder")).toEqual({
+      status: "ambiguous",
+      candidates: ["Folder with intelligence on Norvinsk region facilities", "Intelligence folder"],
+    });
+    expect(matchItemReference(folders, "norvinsk")).toMatchObject({ status: "found", item: { name: expect.stringMatching(/^Folder/) } });
     // Several words narrow it down: take the best-ranked match and list the rest.
     expect(matchItemReference(index, "red keycard")).toMatchObject({
       status: "found",

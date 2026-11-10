@@ -41,8 +41,11 @@ export interface MatchOptions {
 const MAX_ALTERNATIVES = 5;
 const MAX_CANDIDATES = 8;
 const SEARCH_POOL = 60;
-/** A one-word partial match resolves only when it matches at most this many distinct items. */
-const MAX_ONE_WORD_MATCHES = 3;
+/**
+ * A one-word partial match resolves only when it matches this many distinct items or fewer,
+ * counting variants, packs, and parts of an item as that item.
+ */
+const MAX_ONE_WORD_MATCHES = 1;
 
 const catalogIndexes = new WeakMap<readonly CatalogEntry[], CatalogIndex>();
 
@@ -115,8 +118,8 @@ function uniqueByName(items: readonly CatalogItem[]) {
  * one item that also matches ("btc" names both halves of a Physical Bitcoin, so it means the
  * Physical Bitcoin; "m855" names the round and its ammo packs). Otherwise a one-word or short
  * name reference is ambiguous and returns the candidates instead of guessing ("red" is a
- * keycard and two flares), as is one word found inside more than a few distinct items
- * ("injector"). A multi-word search tie takes the best-ranked match. With no match at all,
+ * keycard and two flares), as is one word found inside more than one distinct item
+ * ("injector", "folder"). A multi-word search tie takes the best-ranked match. With no match at all,
  * words may be a typo off ("graphics crad"), flagged as fuzzy.
  */
 export function matchItemReference(index: CatalogIndex, reference: string, options: MatchOptions = {}): ItemMatch {
@@ -146,7 +149,9 @@ export function matchItemReference(index: CatalogIndex, reference: string, optio
   const resolved = uniqueByName(contenders.map((item) => baseIn(item) ?? item));
   const oneWord = !normalized.includes(" ");
 
-  // One word that only partly matches many distinct items ("injector", "folder") names none of them.
+  // One word that only partly matches several distinct items ("injector", "folder") names none
+  // of them, even when one ranks higher: "folder" starts one item's name, but the player may
+  // mean the Intelligence folder just as well.
   if (oneWord && sharingShortName.length === 0) {
     const distinct = uniqueByName(pool.map((item) => baseIn(item) ?? item));
     if (distinct.length > MAX_ONE_WORD_MATCHES) {
