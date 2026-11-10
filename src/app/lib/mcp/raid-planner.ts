@@ -43,13 +43,23 @@ import { gameModeSchema, offsetSchema } from "./schemas";
 import { loadMapDetails } from "./sources";
 import { describeMap, SECTIONS, DEFAULT_SECTIONS, MAX_LISTED_ROWS, SPAWN_KINDS } from "./map-projection";
 
-const pointSchema = z.union([
-  z.object({ x: z.number(), z: z.number() }).describe("Game coordinates in metres."),
-  z
-    .object({ place: z.string().min(1).max(200) })
-    .describe("A place name from get_map_details: extract, transit, area, spawn zone, switch, hazard, stationary weapon, or key lock (key name)."),
-]);
-type PointInput = z.infer<typeof pointSchema>;
+// One object with optional fields, rather than a union, publishes the point once per use. It
+// accepts what the union {x, z} | {place} did: coordinates win when both are given, and a
+// field of the wrong type is ignored when the other form is complete.
+const pointSchema = z
+  .object({
+    x: z.number().optional().catch(undefined),
+    z: z.number().optional().catch(undefined),
+    place: z.string().min(1).max(200).optional().catch(undefined),
+  })
+  .describe("Game coordinates {x, z} in metres, or {place} named as in get_map_details.")
+  .transform((point, context): { x: number; z: number } | { place: string } => {
+    if (point.x !== undefined && point.z !== undefined) return { x: point.x, z: point.z };
+    if (point.place !== undefined) return { place: point.place };
+    context.addIssue({ code: "custom", message: 'A point is {"x": ..., "z": ...} in game metres, or {"place": ...}.' });
+    return z.NEVER;
+  });
+type PointInput = z.output<typeof pointSchema>;
 
 type ResolvedPlace = {
   input: string;
@@ -158,7 +168,7 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
           .max(MAX_LAYERS)
           .optional()
           .describe('Layer ids from get_map_details, such as "extracts:pmc" or "spawns:boss". Default: PMC and shared extracts and transits.'),
-        gameMode: gameModeSchema.describe("Game mode whose map data resolves named places."),
+        gameMode: gameModeSchema,
       },
     },
     async ({ map, name, route, drawings, notes, layers, gameMode }, { read }) => {
@@ -298,7 +308,7 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
       outputSchema: readRaidPlanOutput,
       inputSchema: {
         link: z.string().min(1).max(MAX_SHARE_LINK_LENGTH).describe("The share link or its payload."),
-        gameMode: gameModeSchema.describe("Game mode whose map data names nearby places."),
+        gameMode: gameModeSchema,
       },
     },
     async ({ link, gameMode }, { read }) => {

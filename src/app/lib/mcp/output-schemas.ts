@@ -2,7 +2,10 @@ import { z } from "zod";
 import { FLEA_STATUS, PRICE_BASIS } from "./item-projection";
 
 // Output schemas name the fields clients can rely on. Objects stay open so later additions
-// don't break older clients.
+// don't break older clients. The server validates every result against these schemas, but
+// tools/list publishes only their top level (see tool-list.ts), so descriptions on nested
+// fields are for this code's readers; anything a caller must know belongs in the tool
+// description or the server instructions.
 const object = z.looseObject;
 const text = z.string();
 const maybeText = z.string().nullable();
@@ -13,9 +16,9 @@ const list = <T extends z.ZodType>(entry: T) => z.array(entry);
 const gameMode = z.enum(["regular", "pve"]);
 const warnings = list(text).optional();
 
-/** Every result can carry a dataNotice when it was built from cached data. */
+/** Every result can carry a dataNotice when it was built from cached data (the server instructions explain it). */
 function result<Shape extends z.ZodRawShape>(shape: Shape) {
-  return object({ ...shape, dataNotice: text.optional().describe("Set when tarkov.dev was unreachable.") });
+  return object({ ...shape, dataNotice: text.optional() });
 }
 
 const sale = object({

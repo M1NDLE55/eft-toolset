@@ -119,6 +119,23 @@ const buildChangeSchema = z.discriminatedUnion("action", [
   z.object({ action: z.literal("clear_ammo") }).describe("Unload the ammo."),
 ]);
 
+/**
+ * What modify_build publishes for a change: one object whose action says what the other
+ * fields mean, instead of a five-way union that repeats slotPath. It passes the change on
+ * unchanged, so the union above still validates it and words its errors.
+ */
+const buildChangeInput = z
+  .looseObject({
+    action: z
+      .enum(["install", "remove", "fill_required", "set_ammo", "clear_ammo"])
+      .describe(
+        "install: put item in slotPath, replacing what is there and keeping attachments that fit. remove: empty slotPath. fill_required: fill empty required slots and an empty magazine slot (only under slotPath, if given) with the cheapest parts. set_ammo: load item. clear_ammo: unload."
+      ),
+    slotPath: slotPathSchema.optional(),
+    item: itemReference.optional().describe("Part or ammo id or name."),
+  })
+  .pipe(buildChangeSchema);
+
 export function registerGunBuilderTools(server: McpServer, context: ToolContext) {
   const define = toolDefiner(server, context);
   define(
@@ -399,7 +416,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       inputSchema: {
         build: buildInputSchema,
         changes: z
-          .array(buildChangeSchema)
+          .array(buildChangeInput)
           .min(1)
           .max(40)
           .describe("Changes applied in order."),

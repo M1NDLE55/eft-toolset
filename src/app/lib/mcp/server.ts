@@ -6,6 +6,7 @@ import { registerItemTools } from "./items";
 import { registerGunBuilderTools } from "./gun-builder";
 import { registerRaidPlannerTools } from "./raid-planner";
 import { registerImportLinkTools } from "./import-link";
+import { serveCompactToolList } from "./tool-list";
 
 // The MCP interface version: bump the minor for new tools or fields, the major for breaking changes.
 const MCP_SERVER_VERSION = "1.2.0";
@@ -42,6 +43,7 @@ export function createEftMcpServer(context: ToolContext) {
   registerGunBuilderTools(server, context);
   registerRaidPlannerTools(server, context);
   registerImportLinkTools(server, context);
+  serveCompactToolList(server);
   registerPrompts(server);
   return server;
 }

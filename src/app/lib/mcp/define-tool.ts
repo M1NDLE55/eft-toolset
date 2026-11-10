@@ -2,9 +2,10 @@ import type { McpServer, ToolCallback } from "@modelcontextprotocol/sdk/server/m
 import type { ShapeOutput, ZodRawShapeCompat } from "@modelcontextprotocol/sdk/server/zod-compat.js";
 import type { RequestHandlerExtra } from "@modelcontextprotocol/sdk/shared/protocol.js";
 import type { ServerNotification, ServerRequest, ToolAnnotations } from "@modelcontextprotocol/sdk/types.js";
-import type { z } from "zod";
+import { z } from "zod";
 import { toolInfo, type McpToolName } from "./catalog";
 import { runTool, type GameMode, type Read, type ToolContext } from "./context";
+import { listTool } from "./tool-list";
 
 export type DefineTool = <Args extends ZodRawShapeCompat, Out extends z.ZodObject>(
   name: McpToolName,
@@ -27,17 +28,21 @@ export function toolDefiner(server: McpServer, context: ToolContext): DefineTool
       runTool(context, { tool: name, gameMode: (args as { gameMode?: GameMode }).gameMode }, (read) =>
         body(args, { read })
       );
+    const info = toolInfo(name);
+    const annotations = { readOnlyHint: true, idempotentHint: true, openWorldHint: true, ...config.annotations };
     server.registerTool(
       name,
-      {
-        ...toolInfo(name),
-        inputSchema: config.inputSchema,
-        outputSchema: config.outputSchema,
-        annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true, ...config.annotations },
-      },
+      { ...info, inputSchema: config.inputSchema, outputSchema: config.outputSchema, annotations },
       // The SDK's callback type is conditional on the shape, which TypeScript can't resolve
       // for a generic shape; the handler above has the type it resolves to.
       handler as ToolCallback<typeof config.inputSchema>
     );
+    listTool(server, {
+      name,
+      ...info,
+      inputSchema: z.object(config.inputSchema as z.ZodRawShape),
+      outputSchema: config.outputSchema,
+      annotations,
+    });
   };
 }

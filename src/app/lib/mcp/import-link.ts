@@ -49,7 +49,7 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
           )
           .max(MAX_PLANS)
           .default([]),
-        gameMode: gameModeSchema.describe("Game mode used to resolve item and part names."),
+        gameMode: gameModeSchema,
       },
     },
     async ({ itemGroups, builds, raidPlans, gameMode }, { read }) => {

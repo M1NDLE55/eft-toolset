@@ -189,7 +189,7 @@ describe("MCP endpoint", () => {
     // The gun builder keeps pricing the flea at the 24-hour average, and says so.
     const { body } = await rpc("tools/list");
     const ammoTool = body.result.tools.find((tool: { name: string }) => tool.name === "get_ammo_options");
-    expect(ammoTool.outputSchema.properties.ammo.items.properties.fleaPriceRUB.description).toMatch(/24-hour average/);
+    expect(ammoTool.description).toMatch(/flea at the 24-hour average/);
   });
 
   it("prices item lists with counts, totals, and the Discord text the item groups page copies", async () => {
@@ -730,6 +730,50 @@ describe("MCP endpoint", () => {
     const mixed = await call("evaluate_build", { build: { weapon: "weapon", shareLink: "x", preset: "default" } });
     expect(mixed.result.isError).toBe(true);
     expect(mixed.text).toContain("A build is");
+  });
+
+  it("accepts every build, change, and point form the published schemas once spelled out as unions", async () => {
+    const link = (await call("evaluate_build", { build: { weapon: "weapon", preset: "default" } })).data.shareLink;
+    for (const build of [
+      { shareLink: link },
+      { shareLink: link, ammo: "Test Ammo", name: "Named" },
+      { weapon: "weapon" },
+      { weapon: "weapon", preset: "default", parts: [{ slotPath: ["slot"], item: "mod" }], ammo: "ammo", name: "x" },
+    ]) {
+      expect((await call("evaluate_build", { build })).result.isError, JSON.stringify(build)).toBeFalsy();
+    }
+    for (const build of [{}, { shareLink: link, weapon: "weapon" }, { shareLink: link, parts: [] }, { weapon: "weapon", extra: 1 }]) {
+      const rejected = await call("evaluate_build", { build });
+      expect(rejected.result.isError, JSON.stringify(build)).toBe(true);
+      expect(rejected.text).toContain("A build is");
+    }
+
+    const modified = await call("modify_build", {
+      build: { weapon: "weapon" },
+      changes: [{ action: "set_ammo", ammo: "Test Ammo" }, { action: "fill_required" }, { action: "clear_ammo" }],
+    });
+    expect(modified.result.isError).toBeFalsy();
+    expect(modified.data.applied).toHaveLength(3);
+    const badChange = await call("modify_build", { build: { weapon: "weapon" }, changes: [{ action: "set_ammo" }] });
+    expect(badChange.text).toContain("set_ammo needs item");
+    const noSlot = await call("modify_build", { build: { weapon: "weapon" }, changes: [{ action: "install", item: "mod" }] });
+    expect(noSlot.result.isError).toBe(true);
+
+    // Coordinates win when a point has both, as the first branch of the old union did.
+    const plan = await call("create_raid_plan", {
+      map: "factory",
+      name: "Points",
+      route: [{ x: 1, z: 13, place: "nowhere at all" }, { place: "gate", x: "1" }, { x: 1, place: "gate" }],
+    });
+    expect(plan.result.isError).toBeFalsy();
+    const decoded = await decodePlanSharePayload(new URLSearchParams(plan.data.shareLink.split("#")[1]).get("p")!);
+    expect(decoded.route.map((waypoint) => waypoint.position)).toEqual([
+      { x: 1, z: 13 },
+      { x: 1, z: 3 },
+      { x: 1, z: 3 },
+    ]);
+    const badPoint = await call("create_raid_plan", { map: "factory", route: [{ x: 1 }] });
+    expect(badPoint.text).toContain('A point is {"x"');
   });
 
   it("describes maps and creates plans from named places that open in the raid planner", async () => {
