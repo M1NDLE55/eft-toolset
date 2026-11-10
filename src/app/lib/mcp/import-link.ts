@@ -12,9 +12,10 @@ import { MAX_PLAN_NAME_LENGTH, MAX_PLANS } from "@/app/lib/raid-planner/limits";
 import { BACKUP_FORMAT, BACKUP_IMPORT_PARAM, BACKUP_VERSION, STORE_KEYS } from "@/app/lib/storage/store-keys";
 import { resolveBuild } from "@/app/lib/builds/resolve";
 import { decodePlanLink, planFromShared } from "@/app/lib/raid-planner/resolve";
-import { resolveItemReference } from "@/app/lib/search/item-reference";
+import { matchItemReference, type MatchKind } from "@/app/lib/search/item-reference";
 import { encodeSharePayload, MAX_SHARE_LINK_LENGTH } from "@/app/lib/share-codec";
 import { InputError, type ToolContext } from "./context";
+import { isInexact } from "./item-match";
 import { createImportLinkOutput } from "./output-schemas";
 import { toolDefiner } from "./define-tool";
 import { buildInputSchema, gameModeSchema } from "./schemas";
@@ -58,21 +59,34 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
       const now = Date.now();
       const notes: string[] = [];
       const stores: Record<string, unknown> = {};
+      const itemMatches: { group: string; input: string; item: string | null; matchedBy?: MatchKind }[] = [];
 
       if (itemGroups.length > 0) {
         const index = await loadCatalogIndex(read, gameMode);
         const groups: Group[] = itemGroups.map((group) => {
           const names: string[] = [];
           for (const reference of group.items) {
-            const resolved = resolveItemReference(index, reference);
-            if (!resolved) {
-              notes.push(`${group.name}: no item matches "${reference}", so it was left out.`);
+            const match = matchItemReference(index, reference);
+            if (match.status !== "found") {
+              notes.push(
+                match.status === "ambiguous"
+                  ? `${group.name}: "${reference}" could be any of ${match.candidates.join("; ")}, so it was left out. Add the one you mean by its full name.`
+                  : `${group.name}: no item matches "${reference}", so it was left out.${match.suggestions.length ? ` Did you mean: ${match.suggestions.join("; ")}?` : ""}`
+              );
+              itemMatches.push({ group: group.name, input: reference, item: null });
               continue;
             }
-            if (resolved.matchedBy === "search") {
-              notes.push(`${group.name}: "${reference}" was matched to ${resolved.item.name}.`);
+            if (isInexact(match)) {
+              const why = match.assumed ?? (match.matchedBy === "fuzzy" ? "Closest spelling." : "Best search match.");
+              notes.push(`${group.name}: "${reference}" was matched to ${match.item.name}. ${why}`);
             }
-            if (!names.includes(resolved.item.name)) names.push(resolved.item.name);
+            itemMatches.push({
+              group: group.name,
+              input: reference,
+              item: match.item.name,
+              ...(isInexact(match) ? { matchedBy: match.matchedBy } : {}),
+            });
+            if (!names.includes(match.item.name)) names.push(match.item.name);
           }
           const value = { name: group.name.trim(), items: names };
           if (!isGroup(value)) throw new InputError(`Item group "${group.name}" is invalid.`);
@@ -138,6 +152,7 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
         builds: builds.length,
         raidPlans: raidPlans.length,
         notes,
+        ...(itemMatches.length ? { itemMatches } : {}),
       };
     }
   );

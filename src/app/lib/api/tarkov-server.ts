@@ -126,6 +126,7 @@ interface RawItem {
   changeLast48hPercent?: number | null;
   types?: string[] | null;
   categories?: string[] | null;
+  handbookCategories?: string[] | null;
   buyFromTrader?: RawTraderOffer[] | null;
   sellToTrader?: RawTraderOffer[] | null;
   conflictingItems?: string[] | null;
@@ -237,8 +238,16 @@ interface RawMap {
   }[];
 }
 
+interface RawCategory {
+  name?: string;
+  normalizedName?: string;
+  parent?: string | null;
+}
+
 interface ItemsData {
   items?: Dictionary<RawItem>;
+  itemCategories?: Dictionary<RawCategory>;
+  handbookCategories?: Dictionary<RawCategory>;
   fleaMarket?: {
     sellOfferFeeRate?: number | null;
     sellRequirementFeeRate?: number | null;
@@ -439,6 +448,64 @@ export async function getItemCatalog(gameMode: GameMode): Promise<CatalogEntry[]
   return memo(`${gameMode}/catalog`, [context], () =>
     projectItemCatalog(context.items, context.translations)
   );
+}
+
+export interface ItemFacet {
+  /** tarkov.dev item types, such as "ammo", "keys", or "injectors". */
+  types: string[];
+  /** Lower-case names and slugs of the item's handbook and item categories and their parents. */
+  categories: string[];
+  /** Ammo caliber as tarkov.dev names it, such as "Caliber556x45NATO". */
+  caliber: string | null;
+}
+
+export interface ItemFacets {
+  byId: ReadonlyMap<string, ItemFacet>;
+  /** Handbook category names: the tree the trader and flea market screens use. */
+  categoryNames: string[];
+  /** The game's own item category names, such as "Stimulant" or "Keycard". */
+  itemCategoryNames: string[];
+}
+
+/** Types, categories, and calibers per item id, for filtering item lists. */
+export async function getItemFacets(gameMode: GameMode): Promise<ItemFacets> {
+  const [itemsEnvelope, translationsEnvelope] = await Promise.all([
+    loadResource<ItemsData>(gameMode, "items"),
+    loadResource<TranslationDictionary>(gameMode, "items_en"),
+  ]);
+  return memo(`${gameMode}/facets`, [itemsEnvelope, translationsEnvelope], () => {
+    const translations = translationsEnvelope.data;
+    const trees = [itemsEnvelope.data.handbookCategories ?? {}, itemsEnvelope.data.itemCategories ?? {}];
+    const labels = (tree: Dictionary<RawCategory>, id: string) => {
+      const keys: string[] = [];
+      const seen = new Set<string>();
+      for (let current: string | null | undefined = id; current && !seen.has(current); current = tree[current]?.parent) {
+        seen.add(current);
+        const category = tree[current];
+        if (!category) break;
+        const name = translate(category.name, translations).toLocaleLowerCase();
+        if (name) keys.push(name);
+        if (category.normalizedName) keys.push(category.normalizedName);
+      }
+      return keys;
+    };
+    const byId = new Map<string, ItemFacet>();
+    for (const item of Object.values(itemsEnvelope.data.items ?? {})) {
+      if (!item.id) continue;
+      const categories = new Set([
+        ...(item.handbookCategories ?? []).flatMap((id) => labels(trees[0], id)),
+        ...(item.categories ?? []).flatMap((id) => labels(trees[1], id)),
+      ]);
+      byId.set(item.id, {
+        types: item.types ?? [],
+        categories: [...categories],
+        caliber: item.properties?.caliber ?? null,
+      });
+    }
+    const names = (tree: Dictionary<RawCategory>) =>
+      Array.from(new Set(Object.values(tree).map((category) => translate(category.name, translations)))).filter(Boolean);
+    return { byId, categoryNames: names(trees[0]), itemCategoryNames: names(trees[1]) };
+  });
 }
 
 export async function getGroupItems(gameMode: GameMode, names: string[]): Promise<CachedItem[]> {
@@ -874,6 +941,8 @@ function validateResourceData(resource: Resource, data: unknown): boolean {
       return (
         isRecord(data) &&
         optionalDictionary(data.items, isRawItem) &&
+        optionalDictionary(data.itemCategories, isRawCategory) &&
+        optionalDictionary(data.handbookCategories, isRawCategory) &&
         optional(data.fleaMarket, (value) =>
           isRecord(value) &&
           optionalFiniteNumber(value.sellOfferFeeRate) &&
@@ -930,6 +999,7 @@ function isRawItem(value: unknown): value is RawItem {
     numberFields.every(optionalFiniteNumber) &&
     optionalStringArray(value.types) &&
     optionalStringArray(value.categories) &&
+    optionalStringArray(value.handbookCategories) &&
     optionalArray(value.buyFromTrader, isRawTraderOffer) &&
     optionalArray(value.sellToTrader, isRawTraderOffer) &&
     optionalStringArray(value.conflictingItems) &&
@@ -1044,6 +1114,13 @@ function isRawCraft(value: unknown): value is RawCraft {
     optionalFiniteNumber(value.level) &&
     optionalArray(value.requiredItems, isRawContainedItem) &&
     optional(value.productItem, isRawContainedItem)
+  );
+}
+
+function isRawCategory(value: unknown): value is RawCategory {
+  return (
+    isRecord(value) &&
+    [value.name, value.normalizedName, value.parent].every(optionalShortString)
   );
 }
 

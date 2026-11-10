@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
 import { AlertTriangle, LoaderCircle, Search, X } from "lucide-react";
 import { useCatalog } from "@/app/lib/cache/hooks";
-import { filterCatalog } from "@/app/lib/search/filter-catalog";
+import { filterCatalog, MAX_SEARCH_RESULTS, searchCatalog } from "@/app/lib/search/filter-catalog";
 import type { CatalogItem } from "@/app/lib/cache/types";
 import { cn } from "@/lib/utils";
 
@@ -35,7 +35,11 @@ export function ItemSearch({
   const prefetchTimer = useRef<number | undefined>(undefined);
   const { catalog, loading, error, stale, refresh } = useCatalog();
 
-  const results = search.trim() ? filterCatalog(catalog, search, excludeNames) : [];
+  // Typo matches only appear when nothing matches exactly.
+  const found = search.trim()
+    ? searchCatalog(catalog, search, { excludeNames, fuzzy: true, limit: MAX_SEARCH_RESULTS })
+    : null;
+  const results = found ? found.matches.map((match) => match.item) : [];
   const showList = open && search.trim().length > 0;
   const active = results[Math.min(activeIndex, results.length - 1)];
 
@@ -165,6 +169,9 @@ export function ItemSearch({
 
       {showList && (
         <div className="absolute inset-x-0 top-full z-40 mt-1 border border-[#2a2a2a] bg-[#0a0a0a] shadow-2xl shadow-black">
+          {found?.fuzzy && results.length > 0 && (
+            <p className="px-3 pt-2 text-[11px] uppercase tracking-wider text-[#777]">No exact match. Close spellings:</p>
+          )}
           {results.length > 0 ? (
             <ul
               id={listboxId}

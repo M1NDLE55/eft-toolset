@@ -114,16 +114,24 @@ const build = {
 const position = { x: maybeNum, z: maybeNum, y: maybeNum.optional(), level: text };
 const named = (extra: z.ZodRawShape = {}) => list(object({ name: maybeText, ...position, ...extra })).optional();
 
+const matchedBy = z.enum(["id", "slug", "name", "shortName", "search", "fuzzy"]);
+
 export const searchItemsOutput = result({
-  query: text,
+  query: text.optional(),
   gameMode,
+  total: num.describe("How many items match."),
   nextOffset: maybeNum,
-  results: list(object({ id: text, name: text, shortName: maybeText, slug: maybeText, url: text })),
+  fuzzy: z.literal(true).optional().describe("Results allow typos; nothing matched exactly."),
+  didYouMean: list(text).optional().describe("Closest names when nothing matched."),
+  results: list(
+    object({ id: text.optional(), name: text, shortName: maybeText, slug: maybeText.optional(), url: text.optional() })
+  ).describe("compact results have only name and shortName."),
 });
 
 export const getItemOutput = result({
   gameMode,
-  note: text.optional().describe("Set when the item was found by search rather than an exact match."),
+  matchedBy: matchedBy.optional().describe("Set when the match was not exact."),
+  note: text.optional().describe("What was assumed when the match was not exact."),
   otherMatches: list(text).optional(),
   id: text,
   name: text,
@@ -153,6 +161,7 @@ export const getItemPricesOutput = result({
   noBuyer: list(text),
   rows: list(
     object({
+      inputs: list(text).describe("The inputs this row prices; inputs naming the same item share one row."),
       name: text,
       url: text,
       count: num,
@@ -162,8 +171,15 @@ export const getItemPricesOutput = result({
       usedInTasks: list(text),
     })
   ),
-  fuzzyMatches: list(object({ input: text, matched: text })).optional(),
-  unresolved: list(text).optional(),
+  fuzzyMatches: list(object({ input: text, matched: text, matchedBy, note: text }))
+    .optional()
+    .describe("Inputs matched by search, typo, or assumption."),
+  unresolved: list(text).optional().describe("Inputs left unpriced."),
+  unmatched: list(
+    object({ input: text, reason: z.enum(["ambiguous", "not found"]), candidates: list(text) })
+  )
+    .optional()
+    .describe("Why each unresolved input was left out, with names it could mean."),
   discordText: text.optional(),
 });
 
@@ -343,4 +359,7 @@ export const createImportLinkOutput = result({
   builds: num,
   raidPlans: num,
   notes: list(text).describe("Items that were left out or matched by search."),
+  itemMatches: list(object({ group: text, input: text, item: maybeText, matchedBy: matchedBy.optional() }))
+    .optional()
+    .describe("The item each item-group input became; null when left out."),
 });
