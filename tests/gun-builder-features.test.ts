@@ -312,6 +312,17 @@ describe("optimiser", () => {
     // Without a sight to keep, the optimiser has no reason to add one.
     expect((await optimize(bare, data, {})).root.slots.gas.itemId).toBe("gbPlain");
   });
+
+  it("does not add optics for the stats of their attachments", async () => {
+    const data = lookup(
+      gun([slot("scope", ["dot"], { nameId: "mod_scope" })]),
+      item("dot", { sight: "optic", ergonomics: -2, slots: [slot("shade", ["shade"], { nameId: "mod_tactical" })] }),
+      item("shade", { ergonomics: 3 })
+    );
+    expect((await optimize(bare, data, {})).root.slots).toEqual({});
+    const kept: BuildNode = { itemId: "gun", slots: { scope: { itemId: "dot", slots: {} } } };
+    expect((await optimize(kept, data, {})).root.slots.scope.itemId).toBe("dot");
+  });
 });
 
 

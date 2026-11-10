@@ -55,6 +55,8 @@ const AMMO_PENALTY = 1e4;
 // Above leaving an occupied slot empty, below a part conflict.
 const SMALL_MAGAZINE_PENALTY = 5e5;
 const SIGHT_BONUS = 5e5;
+// Optics are for aiming: adding one for a point of ergonomics from its attachments is silly.
+const NEW_OPTIC_PENALTY = 10;
 const BEAM_WIDTH = 3;
 const MAX_REPAIR_ROUNDS = 12;
 const BUDGET_STEPS = 18;
@@ -157,7 +159,9 @@ function emptyPenalty(slot: ModSlotDef, occupied: boolean, pass: Pass) {
 function slotAdjustment(slot: ModSlotDef, itemId: string, oldRole: string | null, pass: Pass) {
   const item = pass.lookup.get(itemId);
   let value = 0;
-  if (oldRole && sightRole(item, slot.nameId) === oldRole) value += SIGHT_BONUS;
+  const role = sightRole(item, slot.nameId);
+  if (oldRole && role === oldRole) value += SIGHT_BONUS;
+  else if (role === "optic" && pass.options.keepSights) value -= NEW_OPTIC_PENALTY;
   const floor = pass.options.minMagazineCapacity;
   if (floor !== null && isMagazineSlot(slot) && typeof item?.capacity === "number" && item.capacity < floor) {
     value -= SMALL_MAGAZINE_PENALTY;
