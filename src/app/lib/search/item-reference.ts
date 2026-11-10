@@ -172,10 +172,76 @@ export function matchItemReference(index: CatalogIndex, reference: string, optio
         : {}),
     };
   }
-  if (sharingShortName.length > 1 || oneWord) {
+  if (sharingShortName.length > 1) {
+    // Weapons and other family heads come first, then the rest of the short name's holders.
+    return {
+      status: "ambiguous",
+      candidates: uniqueByName([...familyHeads(index, normalized), ...resolved])
+        .slice(0, MAX_CANDIDATES)
+        .map((item) => item.name),
+    };
+  }
+  if (oneWord) {
     return { status: "ambiguous", candidates: resolved.slice(0, MAX_CANDIDATES).map((item) => item.name) };
   }
   return { status: "found", item: resolved[0], matchedBy, alternatives: alternativesTo(resolved[0], pool) };
+}
+
+const familyHeadNames = new WeakMap<CatalogIndex, ReadonlySet<string>>();
+
+/**
+ * Names that head a family of catalogue items: other items are named after them plus a
+ * suffix (weapon presets such as "Mosin 7.62x54R bolt-action rifle (Sniper) Default", or
+ * colour variants), and they are not themselves named after another item.
+ */
+function familyHeadSet(index: CatalogIndex): ReadonlySet<string> {
+  let heads = familyHeadNames.get(index);
+  if (!heads) {
+    const names = [...new Set(index.items.map((item) => item.name))].sort();
+    // Names extending another sort right after it, so one pass finds every family.
+    const extended = new Set<string>();
+    const extension = new Set<string>();
+    const stack: string[] = [];
+    for (const name of names) {
+      while (stack.length && !name.startsWith(`${stack[stack.length - 1]} `)) stack.pop();
+      if (stack.length) {
+        extended.add(stack[stack.length - 1]);
+        extension.add(name);
+      }
+      stack.push(name);
+    }
+    heads = new Set([...extended].filter((name) => !extension.has(name)));
+    familyHeadNames.set(index, heads);
+  }
+  return heads;
+}
+
+const MAX_FAMILY_HEADS = 4;
+
+/**
+ * Family heads a short reference most plausibly means, best first: the short name is the
+ * word, the word is a whole word of the name, or the short name is the word plus a letter or
+ * two (SVDS for SVD, MP7A1 for MP7). Parts often carry a short name that is also a weapon's
+ * ("Mosin" is a magazine and a pistol grip; "SVD" two magazines), and these put the weapons
+ * (the Mosin rifles, the SVDS) among the candidates.
+ */
+function familyHeads(index: CatalogIndex, word: string): CatalogItem[] {
+  const heads = familyHeadSet(index);
+  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const wholeWord = new RegExp(`(^|[^\\p{L}\\p{N}])${escaped}($|[^\\p{L}\\p{N}])`, "u");
+  const rankOf = (item: CatalogItem) => {
+    const short = normalizeText(item.shortName ?? "");
+    if (short === word) return 0;
+    if (wholeWord.test(normalizeText(item.name))) return 1;
+    if (short.startsWith(word) && /^[\p{L}\p{N}]{1,2}$/u.test(short.slice(word.length))) return 2;
+    return -1;
+  };
+  return uniqueByName(index.items.filter((item) => heads.has(item.name)))
+    .map((item) => ({ item, rank: rankOf(item) }))
+    .filter((entry) => entry.rank >= 0)
+    .sort((a, b) => a.rank - b.rank || a.item.name.length - b.item.name.length || a.item.name.localeCompare(b.item.name))
+    .slice(0, MAX_FAMILY_HEADS)
+    .map((entry) => entry.item);
 }
 
 function alternativesTo(item: CatalogItem, pool: readonly CatalogItem[]) {

@@ -63,7 +63,8 @@ describe("item reference matching", () => {
     });
     expect(matchItemReference(index, "ps")).toEqual({
       status: "ambiguous",
-      candidates: ["7.62x39mm PS gzh", "5.45x39mm PS gs"],
+      // The round with ammo packs heads a family, so it comes first.
+      candidates: ["5.45x39mm PS gs", "7.62x39mm PS gzh"],
     });
     // One word found inside many distinct items names none of them.
     const injectors = indexCatalog(
@@ -91,6 +92,43 @@ describe("item reference matching", () => {
     });
     // The compatibility wrapper still returns one item for older callers.
     expect(resolveItemReference(index, "red")).toMatchObject({ matchedBy: "search", item: { name: "TerraGroup Labs keycard (Red)" } });
+  });
+
+  it("lists the weapons a shared short name most plausibly means, not only the parts that carry it", () => {
+    const guns = indexCatalog([
+      entry("Mosin Rifle 7.62x54R 5-round magazine", "Mosin"),
+      entry("Mosin Rifle Tacfire pistol grip", "Mosin"),
+      entry("Mosin Rifle AIM Sports Recoil Pad", "Recoil pad"),
+      entry("Mosin 7.62x54R bolt-action rifle (Sniper)", "Mosin Sniper"),
+      entry("Mosin 7.62x54R bolt-action rifle (Sniper) Default", "Mosin Sniper Default"),
+      entry("Mosin 7.62x54R bolt-action rifle (Sniper) Obrez", "Mosin Sniper Obrez"),
+      entry("Mosin 7.62x54R bolt-action rifle (Sniper) Obrez M", "Mosin Sniper Obrez M"),
+      entry("Mosin 7.62x54R bolt-action rifle (Infantry)", "Mosin Infantry"),
+      entry("Mosin 7.62x54R bolt-action rifle (Infantry) Default", "Mosin Infantry Default"),
+      entry("SVD 7.62x54R 10-round magazine", "SVD"),
+      entry("SVD 7.62x54R 20-round magazine", "SVD"),
+      entry("SVDS 7.62x54R sniper rifle", "SVDS"),
+      entry("SVDS 7.62x54R sniper rifle Default", "SVDS Default"),
+      entry("Car first aid kit", "Car"),
+      entry("Folding car key", "Car"),
+      entry("TKPD 9.3x64 carbine", "TKPD"),
+      entry("TKPD 9.3x64 carbine Assault", "TKPD Assault"),
+    ]);
+    expect(matchItemReference(guns, "Mosin")).toEqual({
+      status: "ambiguous",
+      candidates: [
+        "Mosin 7.62x54R bolt-action rifle (Sniper)",
+        "Mosin 7.62x54R bolt-action rifle (Infantry)",
+        "Mosin Rifle 7.62x54R 5-round magazine",
+        "Mosin Rifle Tacfire pistol grip",
+      ],
+    });
+    expect(matchItemReference(guns, "svd")).toEqual({
+      status: "ambiguous",
+      candidates: ["SVDS 7.62x54R sniper rifle", "SVD 7.62x54R 10-round magazine", "SVD 7.62x54R 20-round magazine"],
+    });
+    // A word that only starts a longer word ("car" in "carbine") does not add the weapon.
+    expect(matchItemReference(guns, "car")).toEqual({ status: "ambiguous", candidates: ["Car first aid kit", "Folding car key"] });
   });
 
   it("matches typos as fuzzy and suggests names for references it cannot match", () => {
