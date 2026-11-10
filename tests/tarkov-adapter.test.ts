@@ -448,6 +448,14 @@ describe("Tarkov JSON adapter", () => {
     ]);
   });
 
+  it("spells out mob names tarkov.dev left untranslated", async () => {
+    const { readableMobName } = await import("@/app/lib/api/tarkov-server");
+    expect(readableMobName("infectedScreamer")).toBe("Infected screamer");
+    expect(readableMobName("Reshala")).toBe("Reshala");
+    expect(readableMobName("AF")).toBe("AF");
+    expect(readableMobName("Infected Tagilla")).toBe("Infected Tagilla");
+  });
+
   it("rejects variables outside the operation contract", async () => {
     await expect(
       executeTarkovOperation(TARKOV_OPERATIONS.buildItems, {

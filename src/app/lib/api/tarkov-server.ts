@@ -2028,6 +2028,16 @@ function projectTransferItem(
 
 const MAX_BOSS_LOCATIONS = 20;
 
+/**
+ * A mob name tarkov.dev left untranslated, such as "infectedScreamer", as words: "Infected
+ * screamer". Translated names are kept as they are.
+ */
+export function readableMobName(name: string) {
+  if (!/^[a-z]+(?:[A-Z][a-z]+)+$/.test(name)) return name;
+  const words = name.replace(/([A-Z])/g, " $1").toLowerCase();
+  return words.charAt(0).toUpperCase() + words.slice(1);
+}
+
 /** Boss spawns with translated names; entries in an unexpected shape are skipped. */
 function projectBosses(
   bosses: Record<string, unknown>[],
@@ -2060,7 +2070,7 @@ function projectBosses(
     const spawnTime = finiteNumber(boss.spawnTime);
     return [
       {
-        name: translate(mobName, translations),
+        name: readableMobName(translate(mobName, translations)),
         spawnChance,
         locations,
         escorts,
