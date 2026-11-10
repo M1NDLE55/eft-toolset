@@ -1,5 +1,5 @@
 import type { CatalogEntry, CatalogItem } from "@/app/lib/cache/types";
-import { filterCatalog } from "./filter-catalog";
+import { findBaseItem, searchCatalog, suggestNames } from "./filter-catalog";
 import { normalizeText } from "./normalize-text";
 
 export interface CatalogIndex {
@@ -10,11 +10,27 @@ export interface CatalogIndex {
   byShortName: Map<string, CatalogItem[]>;
 }
 
+export type MatchKind = "id" | "slug" | "name" | "shortName" | "search" | "fuzzy";
+
 export interface ResolvedItem {
   item: CatalogItem;
-  matchedBy: "id" | "slug" | "name" | "shortName" | "search";
+  matchedBy: MatchKind;
   alternatives?: string[];
 }
+
+/** How a reference resolved: one item, several equally likely items, or nothing. */
+export type ItemMatch =
+  | (ResolvedItem & {
+      status: "found";
+      /** Set when other items matched as well and this one was assumed. */
+      assumed?: string;
+    })
+  | { status: "ambiguous"; candidates: string[] }
+  | { status: "none"; suggestions: string[] };
+
+const MAX_ALTERNATIVES = 5;
+const MAX_CANDIDATES = 8;
+const SEARCH_POOL = 60;
 
 const catalogIndexes = new WeakMap<readonly CatalogEntry[], CatalogIndex>();
 
@@ -44,11 +60,7 @@ export function indexCatalog(entries: readonly CatalogEntry[]): CatalogIndex {
   return index;
 }
 
-/**
- * Finds the item an id, slug, item page URL, name, or short name refers to, falling back to
- * the best search match (with the runners-up) when nothing matches exactly.
- */
-export function resolveItemReference(index: CatalogIndex, reference: string): ResolvedItem | null {
+function cleanReference(reference: string) {
   let value = reference.trim();
   const fromUrl = /\/item\/([^/?#]+)/.exec(value);
   if (fromUrl) {
@@ -58,21 +70,95 @@ export function resolveItemReference(index: CatalogIndex, reference: string): Re
       value = fromUrl[1];
     }
   }
-  if (!value) return null;
+  return value;
+}
+
+function exactMatch(index: CatalogIndex, value: string): ResolvedItem | null {
   const byId = index.byId.get(value);
   if (byId) return { item: byId, matchedBy: "id" };
   const bySlug = index.bySlug.get(value);
   if (bySlug) return { item: bySlug, matchedBy: "slug" };
-  const normalized = normalizeText(value);
-  const byName = index.byName.get(normalized);
+  const byName = index.byName.get(normalizeText(value));
   if (byName) return { item: byName, matchedBy: "name" };
-  const byShort = index.byShortName.get(normalized);
-  if (byShort?.length === 1) return { item: byShort[0], matchedBy: "shortName" };
-  const matches = filterCatalog(index.items, value, [], 6);
-  if (matches.length === 0) return null;
-  return {
-    item: matches[0],
-    matchedBy: "search",
-    alternatives: matches.slice(1).map((match) => match.name),
-  };
+  return null;
+}
+
+function uniqueByName(items: readonly CatalogItem[]) {
+  const seen = new Set<string>();
+  return items.filter((item) => !seen.has(item.name) && seen.add(item.name));
+}
+
+/**
+ * Finds the item an id, slug, item page URL, name, or short name refers to.
+ *
+ * Exact ids, slugs, and names win. A short name several items share, or a search whose best
+ * matches tie, resolves only when the tied items are variants, packs, presets, or parts of
+ * one item that also matches ("btc" names both halves of a Physical Bitcoin, so it means the
+ * Physical Bitcoin; "m855" names the round and its ammo packs). Otherwise a one-word or short
+ * name reference is ambiguous and returns the candidates instead of guessing ("red" is a
+ * keycard and two flares). A multi-word search tie takes the best-ranked match. With no
+ * match at all, words may be a typo off ("graphics crad"), flagged as fuzzy.
+ */
+export function matchItemReference(index: CatalogIndex, reference: string): ItemMatch {
+  const value = cleanReference(reference);
+  if (!value) return { status: "none", suggestions: [] };
+  const exact = exactMatch(index, value);
+  if (exact) return { status: "found", ...exact };
+
+  const normalized = normalizeText(value).replace(/\s+/g, " ");
+  const sharingShortName = uniqueByName(index.byShortName.get(normalized) ?? []);
+  if (sharingShortName.length === 1) return { status: "found", item: sharingShortName[0], matchedBy: "shortName" };
+
+  const search = searchCatalog(index.items, value, { fuzzy: true, limit: SEARCH_POOL });
+  if (search.matches.length === 0) return { status: "none", suggestions: suggestNames(index.items, value) };
+  const pool = search.matches.map((match) => match.item);
+  const matchedBy = search.fuzzy ? "fuzzy" : "search";
+
+  // The items with the best claim: every item sharing the short name, or the top-scoring tie.
+  const contenders =
+    sharingShortName.length > 1
+      ? sharingShortName
+      : search.matches.filter((match) => match.score === search.matches[0].score).map((match) => match.item);
+  const resolved = uniqueByName(contenders.map((item) => findBaseItem(item, pool) ?? item));
+
+  if (resolved.length === 1) {
+    const [item] = resolved;
+    const others = contenders.filter((contender) => contender.name !== item.name).map((contender) => contender.name);
+    return {
+      status: "found",
+      item,
+      matchedBy: normalizeText(item.shortName ?? "") === normalized ? "shortName" : matchedBy,
+      alternatives: alternativesTo(item, pool),
+      ...(others.length
+        ? { assumed: `"${value}" also matches ${others.join(", ")}; chose ${item.name}, which they are variants or parts of.` }
+        : {}),
+    };
+  }
+  const oneWord = !normalized.includes(" ");
+  if (sharingShortName.length > 1 || oneWord) {
+    return { status: "ambiguous", candidates: resolved.slice(0, MAX_CANDIDATES).map((item) => item.name) };
+  }
+  return { status: "found", item: resolved[0], matchedBy, alternatives: alternativesTo(resolved[0], pool) };
+}
+
+function alternativesTo(item: CatalogItem, pool: readonly CatalogItem[]) {
+  return pool
+    .filter((other) => other.name !== item.name)
+    .slice(0, MAX_ALTERNATIVES)
+    .map((other) => other.name);
+}
+
+/**
+ * The single item a reference most likely means, or null. Ambiguous references return the
+ * first candidate as a search match; use matchItemReference to tell them apart.
+ */
+export function resolveItemReference(index: CatalogIndex, reference: string): ResolvedItem | null {
+  const match = matchItemReference(index, reference);
+  if (match.status === "none") return null;
+  if (match.status === "ambiguous") {
+    const [first, ...rest] = match.candidates;
+    const item = index.byName.get(normalizeText(first));
+    return item ? { item, matchedBy: "search", alternatives: rest } : null;
+  }
+  return { item: match.item, matchedBy: match.matchedBy, ...(match.alternatives ? { alternatives: match.alternatives } : {}) };
 }
