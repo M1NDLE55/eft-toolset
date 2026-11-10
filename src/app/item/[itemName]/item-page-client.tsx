@@ -79,8 +79,8 @@ export function ItemPageClient({
       <GenericDetails item={item} />
       {liveItem && livePrice !== null && <PriceTrend points={history(liveItem.name)} price={livePrice} now={now} />}
       {needs && (
-        <p className="border border-[#3a3326] bg-[#1a1610] px-3 py-2 text-sm text-[#c8b384]">
-          Needed: {needs.summary}
+        <p role="note" className="border border-[#3a3326] bg-[#1a1610] px-3 py-2 text-sm text-[#c8b384]">
+          {needs.summary}
         </p>
       )}
       <UsedInTasks tasks={item.usedInTasks} />

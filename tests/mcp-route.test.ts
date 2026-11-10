@@ -267,7 +267,7 @@ describe("MCP endpoint", () => {
 
   it("states flea eligibility and why a price is missing", async () => {
     const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
-    Object.assign(items.ammo, { types: ["ammo", "noFlea"], buyFromTrader: [], sellToTrader: [] });
+    Object.assign(items.ammo, { types: ["ammo", "noFlea"], minLevelForFlea: 30, buyFromTrader: [], sellToTrader: [] });
     Object.assign(items.mod, { minLevelForFlea: 35, lastLowPrice: null, sellToTrader: [], buyFromTrader: [] });
 
     const ammo = await call("get_item", { item: "Test Ammo" });
@@ -298,7 +298,7 @@ describe("MCP endpoint", () => {
     expect(item.data).toMatchObject({ size: "1x1", slots: 1, defaultBuildSize: "5x2" });
     expect(item.data.bestSell.perSlotRUB).toBeNull();
     expect(item.data.sizeNote).toBe(
-      "Weapon: 1x1 is the stripped weapon; its default build is 5x2 and the real size depends on attachments, so there is no per-slot value. Flea prices are for the default build; trader prices are for the stripped weapon."
+      "Weapon: 1x1 is the stripped weapon (default build 5x2; real size depends on attachments), so no per-slot value. Flea prices are for the default build, trader prices for the stripped weapon."
     );
 
     const mod = await call("get_item", { item: "Test Mod" });

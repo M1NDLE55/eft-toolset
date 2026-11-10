@@ -22,25 +22,18 @@ const sale = object({
   vendor: text,
   priceRUB: num,
   afterFleaFee: bool,
-  perSlotRUB: maybeNum.describe("Null for weapons, whose size depends on attachments (see sizeNote)."),
+  perSlotRUB: maybeNum.describe("Null for weapons (see sizeNote)."),
 }).nullable();
 const flea = object({
   status: z.enum([FLEA_STATUS.listed, FLEA_STATUS.noListings, FLEA_STATUS.banned]),
-  minPlayerLevel: maybeNum.describe("Player level needed to trade this item on the flea."),
+  minPlayerLevel: maybeNum,
 });
-const needed = object({
-  total: num.describe("Items needed for all tasks and hideout upgrades, ignoring the player's progress."),
-  foundInRaid: num.describe("How many of total must be found in raid."),
-  forTasks: num.optional(),
-  forHideout: num.optional(),
-  hideoutSlots: num.optional().describe("Hideout slots it can be installed in, e.g. Bitcoin Farm graphics cards; not consumed."),
-  summary: text,
-})
+const needed = object({ total: num, foundInRaid: num, summary: text })
   .nullable()
-  .describe("Why to keep it: counts for tasks (hand-overs; find-only tasks count once) and hideout upgrades. Null when nothing needs it.");
+  .describe("Items all tasks and hideout upgrades take, ignoring progress; foundInRaid of them FIR. Null if unused.");
 const priceReasons = {
-  noSellReason: text.optional().describe("Set when bestSell is null."),
-  noBuyReason: text.optional().describe("Set when cheapestBuy is null."),
+  noSellReason: text.optional(),
+  noBuyReason: text.optional(),
   flea,
   sizeNote: text.optional(),
 };
@@ -147,7 +140,7 @@ export const getItemOutput = result({
   wikiLink: maybeText,
   size: text,
   slots: num,
-  defaultBuildSize: text.optional().describe("Weapons: size of the default build."),
+  defaultBuildSize: text.optional(),
   bestSell: sale,
   cheapestBuy,
   ...priceReasons,
@@ -160,17 +153,15 @@ export const getItemOutput = result({
     object({
       name: text,
       trader: text,
-      faction: text.optional().describe("USEC or BEAR when only that faction gets the task."),
+      faction: text.optional(),
       minPlayerLevel: maybeNum,
-      count: num.describe("Items the task takes; 0 when it only uses the item or accepts other items."),
+      count: num.describe("Items it takes; 0 if it only uses the item or accepts others."),
       foundInRaid: bool,
-      objectives: list(text).describe("Only the objectives involving this item, with counts."),
+      objectives: list(text),
     })
   ).optional(),
   usedInTaskCount: num.optional(),
-  hideout: list(object({ station: text, level: num, count: num, foundInRaid: bool }))
-    .optional()
-    .describe("Hideout station upgrades that consume the item."),
+  hideout: list(object({ station: text, level: num, count: num, foundInRaid: bool })).optional(),
   hideoutSlots: list(object({ station: text, level: num, slots: num })).optional(),
   hideoutUpgradeCount: num.optional(),
   barters: list(object({ trader: text, give: list(text), receive: list(text) })).optional(),

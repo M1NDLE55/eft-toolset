@@ -157,8 +157,8 @@ function fleaStatus(item: CachedItem) {
 function weaponNote(item: CachedItem) {
   if (!item.weapon) return undefined;
   const { defaultWidth, defaultHeight } = item.weapon;
-  const build = defaultWidth && defaultHeight ? `its default build is ${defaultWidth}x${defaultHeight} and ` : "";
-  return `Weapon: ${item.width}x${item.height} is the stripped weapon; ${build}the real size depends on attachments, so there is no per-slot value. Flea prices are for the default build; trader prices are for the stripped weapon.`;
+  const build = defaultWidth && defaultHeight ? `default build ${defaultWidth}x${defaultHeight}; ` : "";
+  return `Weapon: ${item.width}x${item.height} is the stripped weapon (${build}real size depends on attachments), so no per-slot value. Flea prices are for the default build, trader prices for the stripped weapon.`;
 }
 
 export function priceSummary(item: CachedItem) {
@@ -184,7 +184,7 @@ export function priceSummary(item: CachedItem) {
     ...(best ? {} : { noSellReason: `No trader buys it and ${noFlea}.` }),
     cheapestBuy,
     ...(cheapestBuy ? {} : { noBuyReason: `No trader sells it for roubles and ${noFlea}.` }),
-    flea: { status, minPlayerLevel: item.fleaMinLevel ?? null },
+    flea: { status, minPlayerLevel: status === FLEA_STATUS.banned ? null : (item.fleaMinLevel ?? null) },
     fleaListingFeeRUB: item.fleaMarketFee,
     change48hPercent: round(item.changeLast48hPercent, 2),
     ...(note ? { sizeNote: note } : {}),
