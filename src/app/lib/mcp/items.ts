@@ -30,20 +30,42 @@ function describeMatch(reference: string, match: Extract<ItemMatch, { status: "f
 
 const compactKey = (value: string) => normalizeText(value).replace(/[^\p{L}\p{N}]/gu, "");
 
+/** Category and caliber keys per item, compacted once per facets object rather than per search. */
+interface FacetKeys {
+  all: Set<string>;
+  byId: Map<string, { categories: Set<string>; caliber: string }>;
+}
+
+const facetKeyCache = new WeakMap<ItemFacets, FacetKeys>();
+
+function facetKeys(facets: ItemFacets): FacetKeys {
+  let keys = facetKeyCache.get(facets);
+  if (!keys) {
+    keys = { all: new Set(), byId: new Map() };
+    for (const [id, facet] of facets.byId) {
+      const categories = new Set([...facet.categories, ...facet.types].map(compactKey));
+      for (const key of categories) keys.all.add(key);
+      keys.byId.set(id, { categories, caliber: compactKey(facet.caliber?.replace(/^Caliber/, "") ?? "") });
+    }
+    facetKeyCache.set(facets, keys);
+  }
+  return keys;
+}
+
+/** Category names listed in an unknown-category error. */
+const MAX_LISTED_CATEGORIES = 40;
+
 /** Keeps items in a handbook category, item category, or tarkov.dev type, and of a caliber. */
 function facetFilter(facets: ItemFacets, category: string | undefined, caliber: string | undefined) {
+  const keys = facetKeys(facets);
   let categoryKey: string | undefined;
   if (category) {
     const wanted = compactKey(category);
-    const keys = new Set<string>();
-    for (const facet of facets.byId.values()) {
-      for (const key of [...facet.categories, ...facet.types]) keys.add(compactKey(key));
-    }
-    categoryKey = [wanted, `${wanted}s`, wanted.replace(/e?s$/, "")].find((key) => keys.has(key));
+    categoryKey = [wanted, `${wanted}s`, wanted.replace(/e?s$/, "")].find((key) => keys.all.has(key));
     if (!categoryKey && wanted.length >= 4) {
       // A unique prefix: "stim" or "stims" for "Stimulant".
       const stem = wanted.replace(/s$/, "");
-      const prefixed = [...keys].filter((key) => key.startsWith(stem));
+      const prefixed = [...keys.all].filter((key) => key.startsWith(stem));
       if (prefixed.length === 1) categoryKey = prefixed[0];
     }
     if (!categoryKey) {
@@ -55,17 +77,19 @@ function facetFilter(facets: ItemFacets, category: string | undefined, caliber: 
         gridImageLink: null,
       }));
       const close = suggestNames(names, category, 5);
+      const listed = facets.categoryNames.slice(0, MAX_LISTED_CATEGORIES).join(", ");
+      const more = facets.categoryNames.length - MAX_LISTED_CATEGORIES;
       throw new InputError(
-        `Unknown category "${category}". ${close.length ? `Did you mean: ${close.join("; ")}? ` : ""}Handbook categories: ${facets.categoryNames.join(", ")}.`
+        `Unknown category "${category}". ${close.length ? `Did you mean: ${close.join("; ")}? ` : ""}Handbook categories: ${listed}${more > 0 ? `, and ${more} more` : ""}.`
       );
     }
   }
   const caliberKey = caliber ? compactKey(caliber) : undefined;
   return (item: CatalogItem) => {
-    const facet = facets.byId.get(item.id);
+    const facet = keys.byId.get(item.id);
     if (!facet) return false;
-    if (categoryKey && ![...facet.categories, ...facet.types].some((key) => compactKey(key) === categoryKey)) return false;
-    if (caliberKey && !compactKey(facet.caliber?.replace(/^Caliber/, "") ?? "").includes(caliberKey)) return false;
+    if (categoryKey && !facet.categories.has(categoryKey)) return false;
+    if (caliberKey && !facet.caliber.includes(caliberKey)) return false;
     return true;
   };
 }
