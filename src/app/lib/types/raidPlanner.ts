@@ -12,6 +12,8 @@ export interface MapExtract {
   outline: GamePoint[];
   top: number | null;
   bottom: number | null;
+  /** Item handed over to use the extract, such as roubles for a car extract. */
+  transferItem?: { name: string; count: number } | null;
 }
 
 export interface MapTransit {
@@ -22,6 +24,8 @@ export interface MapTransit {
 
 export interface MapSpawn {
   zoneName: string | null;
+  /** tarkov.dev's English name for the zone, when it has one (for example "Stronghold"). */
+  zoneLabel?: string | null;
   kind: SpawnKind;
   position: Required<GamePoint>;
 }
@@ -59,6 +63,20 @@ export interface MapStationaryWeapon {
   position: Required<GamePoint>;
 }
 
+export interface MapBoss {
+  name: string;
+  /** 0 to 1. */
+  spawnChance: number;
+  /** zone is the game's zone id, matching MapSpawn.zoneName. */
+  locations: { zone: string; name: string; chance: number }[];
+  /** Largest escort group that can come with the boss. */
+  escorts: number;
+  /** Seconds into the raid when the boss spawns, or null for the raid start. */
+  spawnTimeSeconds: number | null;
+  /** The game's trigger id when the spawn waits for an event, such as a switch. */
+  trigger: string | null;
+}
+
 export interface MapDetails {
   key: string;
   players: string | null;
@@ -71,4 +89,5 @@ export interface MapDetails {
   lootContainers: MapLootContainer[];
   switches: MapSwitch[];
   stationaryWeapons: MapStationaryWeapon[];
+  bosses?: MapBoss[];
 }

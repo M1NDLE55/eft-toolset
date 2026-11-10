@@ -175,6 +175,36 @@ export function createTarkovFixtures(): Record<string, unknown> {
                 faction: "pmc",
                 position: { x: 1, y: 2, z: 3 },
               },
+              {
+                id: "car",
+                name: "car-name",
+                faction: "pmc",
+                position: { x: 30, y: 1, z: -40 },
+                transferItem: { item: "weapon", count: 1 },
+              },
+            ],
+            spawns: [
+              { zoneName: "ZoneScavBase", sides: ["scav"], categories: ["player", "bot"], position: { x: -40, y: 1, z: 40 } },
+              { zoneName: "ZoneScavBase", sides: ["scav"], categories: ["bot", "boss"], position: { x: -44, y: 1, z: 44 } },
+              {
+                zoneName: "0327c5d1-cc7f-432f-92dc-f95fb4719f1b",
+                sides: ["pmc"],
+                categories: ["player"],
+                position: { x: 2, y: 2, z: 5 },
+              },
+            ],
+            bosses: [
+              {
+                mob: "bossBully",
+                spawnChance: 0.5,
+                spawnLocations: [
+                  { name: "ZoneScavBase", chance: 0.5 },
+                  { name: "ZoneDormitory", chance: 0.5 },
+                ],
+                escorts: [{ mob: "followerBully", amount: [{ chance: 0.5, count: 2 }, { chance: 0.5, count: 4 }] }],
+                spawnTime: -1,
+              },
+              { mob: "unknownBoss", spawnChance: "high" },
             ],
             locks: [
               {
@@ -197,11 +227,16 @@ export function createTarkovFixtures(): Record<string, unknown> {
         stationaryWeapons: {
           turret: { id: "turret", name: "turret-name", normalizedName: "turret" },
         },
+        mobs: { bossBully: { id: "bossBully", name: "bossBully" } },
       },
     },
     maps_en: {
       data: {
         "extract-name": "Gate",
+        "car-name": "Car V-Ex",
+        ZoneScavBase: "Stronghold",
+        ZoneDormitory: "Dorms",
+        bossBully: "Reshala",
         "container-name": "Supply crate",
         "turret-name": "Mounted gun",
       },

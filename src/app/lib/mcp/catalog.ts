@@ -129,23 +129,23 @@ export const MCP_TOOL_GROUPS = [
       {
         name: "get_map_details",
         title: "Get map details",
-        summary: "Extracts, transits, spawns, locks, hazards, switches, and loot with coordinates and levels.",
+        summary: "Extracts, bosses, spawns, areas, locks, hazards, and loot with coordinates and levels.",
         description:
-          "Raid Planner map data: player count and raid time, extracts (PMC, scav, shared), transits, spawn zones (PMC, scav, sniper, boss, raider), key locks, hazards, switches, stationary weapons, and loot containers, each with game coordinates (metres) and the level it is on. Also returns the layer ids, with counts, that create_raid_plan accepts.",
+          "Raid Planner map data: player count and raid time, extracts (PMC, scav, shared, with any item they take), transits, bosses (chance, locations, escorts), areas named after key-lock groups, spawn zones grouped with counts, hazards, switches, and stationary weapons, each with game coordinates (metres) and level. Spawn points, key locks, and loot containers are listed on request, filtered and paged. Also returns the layer ids create_raid_plan accepts. tarkov.dev has no landmark names (such as Big Red) and no extract conditions beyond the name, so use coordinates, areas, or locks for those.",
       },
       {
         name: "create_raid_plan",
         title: "Create raid plan",
         summary: "Draw routes, arrows, and notes, using named places, and get a share link.",
         description:
-          "Raid Planner. Draws a plan on a map and returns a share link that opens it in the app, where it can be viewed, edited, and saved. A plan has a route of waypoints, pen and arrow drawings, note pins, and the map layers to show. Points can be game coordinates or named places such as an extract, so a route can run from a spawn zone to an extract without looking up coordinates.",
+          "Raid Planner. Draws a plan on a map and returns a share link that opens it in the app, where it can be viewed, edited, and saved. A plan has a route of waypoints, pen and arrow drawings, note pins, and the map layers to show. Points can be game coordinates or place names from get_map_details; names ignore case and punctuation and allow small typos. resolvedPlaces shows what each name became: when approximate is true, call the place by its resolved name. Every problem is reported at once; unknown colours and layer ids only warn. Route distance is straight-line and ignores floors.",
       },
       {
         name: "read_raid_plan",
         title: "Read raid plan link",
         summary: "Describe a plan from its share link.",
         description:
-          "Raid Planner. Opens a raid plan share link (…/raid-planner/share/…#p=…) and describes it: the map, route waypoints with their nearest named places and total distance, drawings, notes, and enabled layers.",
+          "Raid Planner. Opens a raid plan share link (…/raid-planner/share/…#p=…) and describes it: the map, route waypoints with their nearest named places (and their level, off the ground floor) and straight-line distance, drawings, notes, and enabled layers.",
       },
     ],
   },

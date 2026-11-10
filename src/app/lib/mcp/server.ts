@@ -23,7 +23,7 @@ ${TOOL_LIST}
 - Keep or sell: needed counts what all tasks (hand-overs) and hideout upgrades take, with how many must be found in raid. It ignores the player's progress, so ask what they have done before saying an item is still needed.
 - Gun-builder flea prices (fleaPriceRUB, and the part prices, costs, and shopping lists built from them) are the 24-hour average, so current listings can be cheaper.
 - Gun builder: start with list_weapons or get_weapon. Builds are passed as {"shareLink": ...} or {"weapon": ..., "preset"?: ..., "parts"?: [{"slotPath", "item"}]}; a result's parts (slotPath and itemId) can be passed back as parts to restate a build. Every build result includes a shareLink: pass it to the next build tool to keep working on the same build, and give it to the user so they can open and save the build in the app. A nested slot can be named alone in slotPath when its name is unique. Gun-builder priceSources take maxTraderLevel and traderLevels: ask the player's loyalty levels so builds use parts they can buy. Check a build's problems before presenting it, and load ammo (build.ammo) so recoil includes it.
-- Raid planner: coordinates are game metres (x, z). Route points and notes can name places such as extracts instead of coordinates. create_raid_plan returns a share link that opens the plan in the app.
+- Raid planner: coordinates are game metres (x, z). Route points and notes can name places from get_map_details (extracts, areas, spawn zones, key locks) instead of coordinates. Describe places by the names in resolvedPlaces and pass on warnings. create_raid_plan returns a share link that opens the plan in the app.
 - Item names: a short name several unrelated items share (such as "red") is not guessed; the tool returns the candidates, so call again with the full name. Check fuzzyMatches and note fields for typo and search matches.
 - create_import_link bundles item groups, builds, and plans into one import link that adds them to the user's app data.
 - List results with a nextOffset have more: pass it as offset to get the next page.
@@ -67,7 +67,7 @@ function registerPrompts(server: McpServer) {
           role: "user",
           content: {
             type: "text",
-            text: `Plan an Escape from Tarkov raid on ${map}${goal ? ` for: ${goal}` : ""}${gameMode ? ` (${gameMode} mode)` : ""}. Use get_map_details to find spawns, extracts, locks, and hazards, then create_raid_plan with a route, arrows, and notes explaining each step. Finish with the share link and the route distance.`,
+            text: `Plan an Escape from Tarkov raid on ${map}${goal ? ` for: ${goal}` : ""}${gameMode ? ` (${gameMode} mode)` : ""}. Use get_map_details to find spawn zones, extracts and what they take, bosses, areas, and hazards (sections ["locks"] with lockKeys for key doors), then create_raid_plan with a route, arrows, and notes explaining each step. Name places as resolvedPlaces names them, and mention any warnings. Finish with the share link and the route distance.`,
           },
         },
       ],
