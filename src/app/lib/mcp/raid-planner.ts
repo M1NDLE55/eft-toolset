@@ -321,7 +321,11 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
       } catch (error) {
         throw new InputError(error instanceof Error ? error.message : "The plan could not be shared.");
       }
-      if (unknownLayers.length) warnings.push(`Left out layer ids this map does not have: ${unknownLayers.join(", ")}.`);
+      if (unknownLayers.length) {
+        const listed = unknownLayers.slice(0, MAX_LISTED_PROBLEMS).join(", ");
+        const more = unknownLayers.length - MAX_LISTED_PROBLEMS;
+        warnings.push(`Left out layer ids this map does not have: ${listed}${more > 0 ? `, and ${more} more` : ""}.`);
+      }
       const distance = routeLength(plan.route);
       return {
         shareLink: `${context.origin}/raid-planner/share/${slugifyPlanName(plan.name)}#p=${payload}`,

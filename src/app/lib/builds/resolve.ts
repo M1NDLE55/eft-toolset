@@ -488,7 +488,15 @@ export async function resolveBuild(source: BuildSource, input: BuildInput): Prom
     if (note) warnings.push(note);
     if (!fits) warnings.push(`${ammo.name} does not fit this build's magazine or chamber.`);
   }
-  return { name: name || `${weapon.shortName} build`, weaponId: root.itemId, root, ammoId, warnings };
+  return { name: name || `${weapon.shortName} build`, weaponId: root.itemId, root, ammoId, warnings: capList(warnings) };
+}
+
+/** Warnings listed for one build; a build of a thousand unknown parts would otherwise list them all. */
+const MAX_WARNINGS = 20;
+
+function capList(warnings: string[]) {
+  if (warnings.length <= MAX_WARNINGS) return warnings;
+  return [...warnings.slice(0, MAX_WARNINGS), `And ${warnings.length - MAX_WARNINGS} more warnings like these.`];
 }
 
 /** "/slot:item" paths for every installed part, for counting what changed. */

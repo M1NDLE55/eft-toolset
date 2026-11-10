@@ -759,6 +759,13 @@ describe("gun-builder name resolution", () => {
     expect(unknown).not.toContain(`${m4} Extra`);
   });
 
+  it("lists at most 20 warnings for one build", async () => {
+    const parts = Array.from({ length: 30 }, () => ({ slotPath: ["mod_magazine"], item: "PMAG 30" }));
+    const build = await resolveBuild(source, { weapon: "M4A1", parts });
+    expect(build.warnings).toHaveLength(21);
+    expect(build.warnings[20]).toBe("And 10 more warnings like these.");
+  });
+
   it("tolerates a typo in a weapon name and says what it assumed", async () => {
     const build = await resolveBuild(source, { weapon: "Colt M4A1 assualt rifle" });
     expect(build.weaponId).toBe("gun");

@@ -21,8 +21,9 @@ import { toolDefiner } from "./define-tool";
 import { buildInputSchema, gameModeSchema } from "./schemas";
 import { loadBuildSource, loadCatalogIndex } from "./sources";
 
-/** Notes about individual item-group inputs listed in one reply. */
+/** Notes about individual item-group inputs, and build warnings, listed in one reply. */
 const MAX_ITEM_NOTES = 20;
+const MAX_BUILD_NOTES = 40;
 
 export function registerImportLinkTools(server: McpServer, context: ToolContext) {
   const define = toolDefiner(server, context);
@@ -124,10 +125,14 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
       if (builds.length > 0) {
         const data = await loadBuildSource(read, gameMode);
         const saved: GunBuild[] = [];
+        let buildNotes = 0;
         for (const input of builds) {
           await betweenItems(context.signal);
           const build = await resolveBuild(data, input);
-          for (const warning of build.warnings) notes.push(`${build.name}: ${warning}`);
+          for (const warning of build.warnings) {
+            buildNotes += 1;
+            if (buildNotes <= MAX_BUILD_NOTES) notes.push(`${build.name}: ${warning}`);
+          }
           const value: GunBuild = {
             id: createId(),
             name: build.name.slice(0, MAX_BUILD_NAME_LENGTH),
@@ -140,6 +145,7 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
           if (!isGunBuild(value)) throw new InputError(`Build "${build.name}" exceeds the builder's limits.`);
           saved.push(value);
         }
+        if (buildNotes > MAX_BUILD_NOTES) notes.push(`And ${buildNotes - MAX_BUILD_NOTES} more build warnings.`);
         stores[STORE_KEYS.gunBuilds] = saved;
       }
 
