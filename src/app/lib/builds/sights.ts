@@ -24,72 +24,74 @@ export function isMagazineSlot(slot: { nameId: string }) {
   return slot.nameId.startsWith("mod_magazine");
 }
 
-const capabilityCache = new WeakMap<ItemLookup, Map<string, ReadonlySet<SightRole>>>();
-
-/** The sight roles any compatible part could fill on a weapon. Built-in sights have no part, so they don't count. */
-export function sightCapabilities(weaponId: string, lookup: ItemLookup): ReadonlySet<SightRole> {
-  let byWeapon = capabilityCache.get(lookup);
-  if (!byWeapon) {
-    byWeapon = new Map();
-    capabilityCache.set(lookup, byWeapon);
-  }
-  const cached = byWeapon.get(weaponId);
-  if (cached) return cached;
-  const roles = new Set<SightRole>();
-  const seen = new Set<string>([weaponId]);
-  const queue = [weaponId];
-  while (queue.length > 0 && roles.size < 3) {
-    const item = lookup.get(queue.shift()!);
-    if (!isDetailed(item)) continue;
+/** Installed aiming parts, outermost first, and the kinds (name ids) of every slot the build has. */
+function installedSights(root: BuildNode, lookup: ItemLookup) {
+  const sights: (SightCheck["sights"][number] & { slotNameId: string })[] = [];
+  const slotKinds = new Set<string>();
+  const walk = (node: BuildNode, path: string[]) => {
+    const item = lookup.get(node.itemId);
+    if (!isDetailed(item)) return;
     for (const slot of item.slots) {
-      for (const id of slot.allowedItemIds) {
-        const role = sightRole(lookup.get(id), slot.nameId);
-        if (role) roles.add(role);
-        if (!seen.has(id)) {
-          seen.add(id);
-          queue.push(id);
-        }
-      }
+      slotKinds.add(slot.nameId);
+      const child = childAt(node, slot.id);
+      if (!child) continue;
+      const childPath = [...path, slot.id];
+      const role = sightRole(lookup.get(child.itemId), slot.nameId);
+      if (role) sights.push({ role, itemId: child.itemId, path: childPath, slotNameId: slot.nameId });
+      walk(child, childPath);
     }
-  }
-  byWeapon.set(weaponId, roles);
-  return roles;
+  };
+  walk(root, []);
+  return { sights, slotKinds };
 }
+
+export type MissingSight = "rear sight" | "front sight" | "optic";
 
 export interface SightCheck {
   /** Installed aiming parts, outermost first. */
   sights: { role: SightRole; itemId: string; path: string[] }[];
   usable: boolean;
-  /** Iron sights the weapon takes but lacks, when there is no optic. */
-  missing: ("rear sight" | "front sight")[];
+  /** Aiming parts the factory gun has that the build lost, when it has no optic. */
+  missing: MissingSight[];
+  /** The factory gun's aiming parts that the build lacks, for the message. */
+  factorySights: string[];
 }
 
 /**
- * Whether a build can aim: an optic, or every iron sight the weapon takes. Weapons whose
- * iron sights are built in take no sight parts, so they always pass.
+ * Whether a build can still aim, judged against the weapon's factory (default) preset, which
+ * is known to work. Sights built into a weapon, barrel, receiver, or dust cover are not parts,
+ * so the data can't show them; what it can show is a build losing a sight part the factory gun
+ * has. An optic always passes. Otherwise the build needs every iron sight role the factory gun
+ * fills with a part; a factory gun that aims only through an optic needs an optic or some iron
+ * sight. A factory sight counts as lost only while the build still has a slot of the kind it
+ * sat in, filled with something else or empty: a part without that slot, such as a sawn-off
+ * barrel with no front sight slot, may have the sight built in. Without a factory preset, or
+ * when it has no sight parts (built-in sights), there is nothing to judge and the build passes.
  */
-export function checkSights(root: BuildNode, lookup: ItemLookup): SightCheck {
-  const sights: SightCheck["sights"] = [];
-  const walk = (node: BuildNode, path: string[]) => {
-    const item = lookup.get(node.itemId);
-    if (!isDetailed(item)) return;
-    for (const slot of item.slots) {
-      const child = childAt(node, slot.id);
-      if (!child) continue;
-      const childPath = [...path, slot.id];
-      const role = sightRole(lookup.get(child.itemId), slot.nameId);
-      if (role) sights.push({ role, itemId: child.itemId, path: childPath });
-      walk(child, childPath);
-    }
-  };
-  walk(root, []);
+export function checkSights(root: BuildNode, lookup: ItemLookup, factory: BuildNode | null): SightCheck {
+  const { sights: found, slotKinds } = installedSights(root, lookup);
+  const sights = found.map(({ role, itemId, path }) => ({ role, itemId, path }));
+  const pass = { sights, usable: true, missing: [], factorySights: [] };
   const has = (role: SightRole) => sights.some((sight) => sight.role === role);
-  if (has("optic")) return { sights, usable: true, missing: [] };
-  const capable = sightCapabilities(root.itemId, lookup);
-  const missing: SightCheck["missing"] = [];
-  if (capable.has("rear") && !has("rear")) missing.push("rear sight");
-  if (capable.has("front") && !has("front")) missing.push("front sight");
-  return { sights, usable: missing.length === 0, missing };
+  if (!factory || has("optic")) return pass;
+  const reference = installedSights(factory, lookup).sights.filter((sight) => slotKinds.has(sight.slotNameId));
+  const iron = reference.filter((sight) => sight.role !== "optic");
+  const lost =
+    iron.length > 0
+      ? iron.filter((sight) => !has(sight.role))
+      : sights.length === 0
+        ? reference.filter((sight) => sight.role === "optic")
+        : [];
+  if (lost.length === 0) return pass;
+  const labels: Record<SightRole, MissingSight> = { optic: "optic", rear: "rear sight", front: "front sight" };
+  return {
+    sights,
+    usable: false,
+    missing: (["rear sight", "front sight", "optic"] as const).filter((kind) =>
+      lost.some((sight) => labels[sight.role] === kind)
+    ),
+    factorySights: [...new Set(lost.map((sight) => sight.itemId))],
+  };
 }
 
 /** The largest magazine installed, as a capacity. */

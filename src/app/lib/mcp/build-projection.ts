@@ -4,6 +4,7 @@ import { findConflicts } from "@/app/lib/builds/conflicts";
 import { MAX_BUILD_NAME_LENGTH } from "@/app/lib/builds/limits";
 import { effectivePrice, offerAllowed, type TraderLimits } from "@/app/lib/builds/price";
 import { checkSights, isMagazineSlot, type SightRole } from "@/app/lib/builds/sights";
+import { reconstructPresetTree } from "@/app/lib/builds/presets";
 import { itemName, slotLabel, type BuildSource, type ResolvedBuild } from "@/app/lib/builds/resolve";
 import { encodeBuildSharePayload, slugifyBuildName } from "@/app/lib/builds/share";
 import { computeStats, type BuildStats } from "@/app/lib/builds/stats";
@@ -145,11 +146,20 @@ export function projectStats(stats: BuildStats) {
 const SIGHT_LABELS = { optic: "optic", rear: "rear sight", front: "front sight" } as const satisfies Record<SightRole, string>;
 
 /** The magazine, the sights, and anything that makes the build unusable or its cost incomplete. */
+/** The weapon's default preset as a tree, or null when it has none or it can't be loaded. */
+async function factoryTree(data: BuildSource, weaponId: string): Promise<BuildNode | null> {
+  const presetId = data.lookup.get(weaponId)?.defaultPresetId;
+  if (!presetId) return null;
+  const contents = await data.loadPreset(presetId);
+  return contents ? reconstructPresetTree(weaponId, contents, data.lookup) : null;
+}
+
 function usability(
   build: Omit<ResolvedBuild, "warnings">,
   lookup: BuildSource["lookup"],
   sources: PriceSources,
-  limits: TraderLimits | null
+  limits: TraderLimits | null,
+  factory: BuildNode | null
 ) {
   const { root } = build;
   let magazine: { name: string; capacity: number | null; slotPath: string[] } | null = null;
@@ -172,7 +182,7 @@ function usability(
     }
   };
   walk(root, []);
-  const sights = checkSights(root, lookup);
+  const sights = checkSights(root, lookup, factory);
   const problems: string[] = [];
   if (!magazine && magazineSlot) {
     problems.push(
@@ -181,8 +191,9 @@ function usability(
   }
   if (!sights.usable) {
     const installed = sights.sights.map((sight) => itemName(lookup, sight.itemId)).join(", ");
+    const factoryParts = sights.factorySights.map((id) => itemName(lookup, id)).join(", ");
     problems.push(
-      `No usable sights: no optic and no ${sights.missing.join(" or ")}${installed ? ` (only ${installed})` : ""}. Install an optic or the missing iron sight.`
+      `No usable sights: no optic and no ${sights.missing.filter((kind) => kind !== "optic").join(" or ") || "iron sights"}${installed ? ` (only ${installed})` : ""}, which the default preset aims with (${factoryParts}). Install an optic${sights.missing.includes("optic") ? " or iron sights" : " or the missing iron sight"}.`
     );
   }
   const weapon = lookup.get(root.itemId);
@@ -283,7 +294,7 @@ export async function describeBuild(
           compatibleCount: options.ids.length,
           note: "No ammo loaded, so recoil leaves out the ammo's modifier. List rounds with get_ammo_options and load one with build.ammo or set_ammo.",
         },
-    ...usability(build, lookup, sources, limits),
+    ...usability(build, lookup, sources, limits, await factoryTree(data, build.root.itemId)),
     missingRequiredSlots: stats.missingRequired.map((missing) => ({
       slot: missing.label,
       slotPath: [...missing.parentPath, missing.slot.id],

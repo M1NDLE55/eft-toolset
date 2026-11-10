@@ -1776,7 +1776,9 @@ function sightKind(item: RawItem, name: string): SightKind | null {
     return item.categories?.includes(IRON_SIGHT_CATEGORY) ? "iron" : "optic";
   }
   // Gas blocks, barrels, and handguards with a front sight built in.
-  return /\bfront sight\b/i.test(name) ? "front" : null;
+  if (/\bfront sight\b/i.test(name)) return "front";
+  // Rails with both iron sights built in, such as the HK G36 optic rail with flip-up sights.
+  return /\bflip-up sights\b/i.test(name) ? "iron" : null;
 }
 
 /** Rouble trader offers with their loyalty levels, cheapest first. */

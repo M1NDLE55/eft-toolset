@@ -552,17 +552,65 @@ describe("sights and loyalty levels", () => {
     slots: Object.fromEntries(Object.entries(slots).map(([slotId, itemId]) => [slotId, { itemId, slots: {} }])),
   });
 
-  it("needs an optic or every iron sight the weapon takes", () => {
-    expect(checkSights(build({ gas: "gbSight", rear: "flip" }), data)).toMatchObject({ usable: true, missing: [] });
-    expect(checkSights(build({ gas: "gbPlain", rear: "flip" }), data)).toMatchObject({
+  // The factory preset: a front sight gas block and a flip-up rear sight.
+  const factory = build({ gas: "gbSight", rear: "flip" });
+
+  it("flags a build that lost an iron sight the default preset has, unless it has an optic", () => {
+    expect(checkSights(factory, data, factory)).toMatchObject({ usable: true, missing: [] });
+    // The M4A1 case: the front sight gas block swapped for a plain one, only the rear sight left.
+    expect(checkSights(build({ gas: "gbPlain", rear: "flip" }), data, factory)).toMatchObject({
+      usable: false,
+      missing: ["front sight"],
+      factorySights: ["gbSight"],
+    });
+    expect(checkSights(build({ gas: "gbPlain", scope: "dot" }), data, factory).usable).toBe(true);
+    expect(checkSights(build({ gas: "gbPlain" }), data, factory).missing).toEqual(["rear sight", "front sight"]);
+    expect(checkSights(build({ gas: "gbPlain" }), data, null).usable).toBe(true);
+  });
+
+  it("does not require a sight role just because some compatible part could fill it", () => {
+    // Like the AKM: the factory rear sight is a part, the front sight is built into the
+    // barrel, and a "front sight device" fits the muzzle.
+    const akm = lookup(
+      gun([slot("muzzle", ["frontDevice", "brake"], { nameId: "mod_muzzle" }), slot("rear", ["akRear"], { nameId: "mod_sight_rear" })]),
+      item("frontDevice", { sight: "front" }),
+      item("brake"),
+      item("akRear", { sight: "iron" })
+    );
+    const preset = build({ muzzle: "brake", rear: "akRear" });
+    expect(checkSights(preset, akm, preset)).toMatchObject({ usable: true, missing: [] });
+    expect(checkSights(build({ muzzle: "brake" }), akm, preset)).toMatchObject({ usable: false, missing: ["rear sight"] });
+  });
+
+  it("says nothing when the default preset has no sight parts, as with built-in sights", () => {
+    // Like the AKS-74U, whose rear sight is part of the dust cover: rear sight parts fit, but
+    // the factory gun has none.
+    const preset = build({ gas: "gbPlain" });
+    expect(checkSights(build({ gas: "gbPlain" }), data, preset)).toMatchObject({ usable: true, sights: [] });
+    expect(checkSights(bare, data, preset).usable).toBe(true);
+  });
+
+  it("does not judge a sight whose slot the build no longer has", () => {
+    // Like a sawn-off Mosin: the factory front sight sits on the barrel, and the short barrel
+    // has no front sight slot.
+    const mosin = lookup(
+      gun([slot("barrel", ["long", "short"], { nameId: "mod_barrel" })]),
+      item("long", { slots: [slot("front", ["post"], { nameId: "mod_sight_front" })] }),
+      item("short"),
+      item("post", { sight: "iron" })
+    );
+    const preset: BuildNode = { itemId: "gun", slots: { barrel: { itemId: "long", slots: { front: { itemId: "post", slots: {} } } } } };
+    expect(checkSights({ itemId: "gun", slots: { barrel: { itemId: "short", slots: {} } } }, mosin, preset).usable).toBe(true);
+    expect(checkSights({ itemId: "gun", slots: { barrel: { itemId: "long", slots: {} } } }, mosin, preset)).toMatchObject({
       usable: false,
       missing: ["front sight"],
     });
-    expect(checkSights(build({ gas: "gbPlain", scope: "dot" }), data).usable).toBe(true);
-    expect(checkSights(build({}), data).missing).toEqual(["rear sight", "front sight"]);
-    // A weapon with no sight parts at all has built-in sights.
-    const plain = lookup(gun([slot("grip", ["g"])]), item("g"));
-    expect(checkSights(bare, plain)).toMatchObject({ usable: true, sights: [] });
+  });
+
+  it("needs an optic or an iron sight when the default preset aims only through an optic", () => {
+    const preset = build({ scope: "dot" });
+    expect(checkSights(bare, data, preset)).toMatchObject({ usable: false, missing: ["optic"], factorySights: ["dot"] });
+    expect(checkSights(build({ rear: "flip" }), data, preset).usable).toBe(true);
   });
 
   it("reads the installed magazine's capacity", () => {

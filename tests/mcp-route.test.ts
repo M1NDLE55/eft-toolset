@@ -543,6 +543,8 @@ describe("MCP endpoint", () => {
       recoilHorizontal: 200,
       caliber: "Caliber556x45NATO",
       allowedAmmo: ["ammo", "ssa"],
+      defaultPreset: "carbine-default",
+      presets: ["carbine-default"],
       slots: [
         slot("c-mag", "mod_magazine", "Magazine", ["mag30", "mag10"]),
         slot("c-rec", "mod_reciever", "Receiver", ["upper"], true),
@@ -573,6 +575,15 @@ describe("MCP endpoint", () => {
     part("gbPlain", "Test plain gas block", null, { ergonomics: 3, recoilModifier: -0.02 }, {
       buyFromTrader: [{ trader: "trader", priceRUB: 1_500, minTraderLevel: 3 }],
     });
+    // The factory gun aims with a rear sight and a front sight gas block.
+    translations["carbine-default-name"] = "Test Carbine Default";
+    items["carbine-default"] = {
+      id: "carbine-default",
+      name: "carbine-default-name",
+      normalizedName: "carbine-default",
+      properties: { propertiesType: "ItemPropertiesPreset", baseItem: "carbine" },
+      containsItems: ["carbine", "mag30", "upper", "rear", "gbSight"].map((item) => ({ item, count: 1 })),
+    };
     items.ssa = {
       id: "ssa",
       name: "ssa-name",
@@ -609,7 +620,17 @@ describe("MCP endpoint", () => {
     expect(unusable.data.magazine).toBeNull();
     expect(unusable.data.problems).toEqual([
       expect.stringMatching(/^No magazine.*\["c-mag"\]/),
-      expect.stringMatching(/^No usable sights: no optic and no rear sight or front sight/),
+      expect.stringMatching(
+        /^No usable sights: no optic and no rear sight or front sight, which the default preset aims with \(Test rear sight, Test front sight gas block\)/
+      ),
+    ]);
+    const factory = await call("evaluate_build", { build: { weapon: "carbine", preset: "default" } });
+    expect(factory.data.problems).toEqual([]);
+    const lostFront = await call("evaluate_build", {
+      build: { weapon: "carbine", preset: "default", parts: [{ slotPath: ["Gas block"], item: "gbPlain" }] },
+    });
+    expect(lostFront.data.problems).toEqual([
+      expect.stringMatching(/^No usable sights: no optic and no front sight \(only Test rear sight\), which the default preset aims with \(Test front sight gas block\)/),
     ]);
 
     const overBudget = await call("optimize_build", { build: full, goal: "recoil", budgetRUB: 1_000 });
