@@ -25,7 +25,16 @@ import {
 import { buildShoppingList, formatShoppingList } from "@/app/lib/builds/shopping";
 import { computeStats } from "@/app/lib/builds/stats";
 import { removeMod } from "@/app/lib/builds/tree";
-import { describeBuild, formatCaliber, itemRow, projectAmmo, projectStats } from "./build-projection";
+import {
+  caliberId,
+  describeBuild,
+  formatCaliber,
+  itemRow,
+  priceNote,
+  projectAmmo,
+  projectStats,
+} from "./build-projection";
+import { loadBuildPricing } from "./build-prices";
 import { InputError, round, type ToolContext } from "./context";
 import {
   compareBuildsOutput,
@@ -79,6 +88,15 @@ async function runOptimizer(
 
 const itemReference = z.string().min(1).max(200);
 
+function formatRoubles(value: number) {
+  return `${Math.round(value).toLocaleString("en-US")} RUB`;
+}
+
+const buyableOnlySchema = z
+  .boolean()
+  .default(false)
+  .describe("Only list what can be bought from the price sources at the allowed trader levels.");
+
 const buildChangeSchema = z.discriminatedUnion("action", [
   z
     .object({ action: z.literal("install"), slotPath: slotPathSchema, item: itemReference.describe("Part id or name.") })
@@ -89,10 +107,34 @@ const buildChangeSchema = z.discriminatedUnion("action", [
       action: z.literal("fill_required"),
       slotPath: slotPathSchema.optional().describe("Only fill this slot and what attaches to it."),
     })
-    .describe("Fill empty required slots with the cheapest compatible parts."),
-  z.object({ action: z.literal("set_ammo"), item: itemReference.describe("Ammo id or name.") }).describe("Load ammo."),
+    .describe("Fill empty required slots and an empty magazine slot with the cheapest compatible parts."),
+  z
+    .object({
+      action: z.literal("set_ammo"),
+      item: itemReference.optional().describe("Ammo id or name."),
+      ammo: itemReference.optional().describe("Same as item."),
+    })
+    .refine((change) => Boolean(change.item ?? change.ammo), { message: "set_ammo needs item (an ammo id or name)." })
+    .describe("Load ammo."),
   z.object({ action: z.literal("clear_ammo") }).describe("Unload the ammo."),
 ]);
+
+/**
+ * What modify_build publishes for a change: one object whose action says what the other
+ * fields mean, instead of a five-way union that repeats slotPath. It passes the change on
+ * unchanged, so the union above still validates it and words its errors.
+ */
+const buildChangeInput = z
+  .looseObject({
+    action: z
+      .enum(["install", "remove", "fill_required", "set_ammo", "clear_ammo"])
+      .describe(
+        "install: put item in slotPath, replacing what is there and keeping attachments that fit. remove: empty slotPath. fill_required: fill empty required slots and an empty magazine slot (only under slotPath, if given) with the cheapest parts. set_ammo: load item. clear_ammo: unload."
+      ),
+    slotPath: slotPathSchema.optional(),
+    item: itemReference.optional().describe("Part or ammo id or name."),
+  })
+  .pipe(buildChangeSchema);
 
 export function registerGunBuilderTools(server: McpServer, context: ToolContext) {
   const define = toolDefiner(server, context);
@@ -110,13 +152,13 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
     },
     async ({ query, caliber, gameMode, limit, offset }, { read }) => {
       const data = await loadBuildSource(read, gameMode);
-      const caliberNeedle = caliber ? normalizeText(caliber).replace(/[^a-z0-9]/g, "") : "";
+      const compact = (value: string) => normalizeText(value).replace(/[^a-z0-9]/g, "");
+      const caliberNeedle = caliber ? compact(caliber) : "";
       let rows = data.guns.flatMap((gun) => {
-        const weaponCaliber = formatCaliber(data.lookup.get(gun.id)?.caliber);
-        if (
-          caliberNeedle &&
-          !normalizeText(weaponCaliber ?? "").replace(/[^a-z0-9]/g, "").includes(caliberNeedle)
-        ) {
+        const raw = data.lookup.get(gun.id)?.caliber;
+        const weaponCaliber = formatCaliber(raw);
+        const id = caliberId(raw);
+        if (caliberNeedle && ![weaponCaliber, id].some((value) => value && compact(value).includes(caliberNeedle))) {
           return [];
         }
         return [
@@ -125,6 +167,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
             name: gun.name,
             shortName: gun.shortName,
             caliber: weaponCaliber,
+            caliberId: id,
             hasDefaultPreset: Boolean(gun.defaultPresetId),
           },
         ];
@@ -150,9 +193,10 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ weapon: reference, gameMode, priceSources }, { read }) => {
-      const data = await loadBuildSource(read, gameMode);
-      const weapon = resolveWeapon(data, reference);
+    async ({ weapon: reference, gameMode, priceSources: prices }, { read }) => {
+      const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
+      const notes: string[] = [];
+      const weapon = resolveWeapon(data, reference, notes);
       let defaultPreset = null;
       if (weapon.defaultPresetId) {
         const contents = await read(() => getPreset(gameMode, weapon.defaultPresetId!));
@@ -172,6 +216,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         shortName: weapon.shortName,
         url: itemUrl(context, weapon),
         caliber: formatCaliber(weapon.caliber),
+        caliberId: caliberId(weapon.caliber),
         fireRate: weapon.fireRate ?? null,
         fireModes: weapon.fireModes ?? [],
         defaultAmmo: weapon.defaultAmmoName ?? null,
@@ -181,6 +226,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
           recoilHorizontal: weapon.recoilHorizontal,
           weightKg: weapon.weight,
           priceRUB: effectivePrice(weapon, priceSources),
+          ...(effectivePrice(weapon, priceSources) === null ? { priceNote: priceNote(weapon, priceSources, limits) } : {}),
         },
         presets: weapon.presets ?? [],
         defaultPreset,
@@ -192,6 +238,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
           optionCount: slot.allowedItemIds.filter((id) => data.lookup.has(id)).length,
         })),
         compatibleAmmoCount: weapon.allowedAmmoIds?.length ?? 0,
+        ...(notes.length ? { note: notes[0] } : {}),
       };
     }
   );
@@ -205,14 +252,15 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         slotPath: slotPathSchema,
         query: z.string().max(200).optional().describe("Filter parts by name."),
         sortBy: z.enum(["ergonomics", "recoil", "price", "name"]).default("ergonomics"),
-        limit: z.number().int().min(1).max(100).default(40),
+        buyableOnly: buyableOnlySchema,
+        limit: z.number().int().min(1).max(100).default(20),
         offset: offsetSchema,
         gameMode: gameModeSchema,
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ build: input, slotPath, query, sortBy, limit, offset, gameMode, priceSources }, { read }) => {
-      const data = await loadBuildSource(read, gameMode);
+    async ({ build: input, slotPath, query, sortBy, buyableOnly, limit, offset, gameMode, priceSources: prices }, { read }) => {
+      const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
       const build = await resolveBuild(data, input);
       const target = resolveSlotPath(build.root, data.lookup, slotPath);
       const installed = installedOutside(build.root, target.current);
@@ -226,11 +274,17 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         );
         candidates = candidates.filter((item) => ids.has(item.id));
       }
-      const rows = candidates.map((item) => ({
-        ...itemRow(item, priceSources),
-        conflict: conflictReason(item, target.slot.id, installed, data.lookup),
-        installed: target.current?.itemId === item.id,
-      }));
+      const rows = candidates
+        .map((item) => {
+          // Most parts neither conflict nor are installed, so both are only stated when true.
+          const conflict = conflictReason(item, target.slot.id, installed, data.lookup);
+          return {
+            ...itemRow(item, priceSources, limits),
+            ...(conflict ? { conflict } : {}),
+            ...(target.current?.itemId === item.id ? { installed: true as const } : {}),
+          };
+        })
+        .filter((row) => !buyableOnly || row.priceRUB !== null);
       const price = (row: (typeof rows)[number]) => row.priceRUB ?? Number.POSITIVE_INFINITY;
       const sorted = rows.toSorted((a, b) => {
         if (sortBy === "ergonomics") return b.ergonomics - a.ergonomics || price(a) - price(b);
@@ -265,14 +319,15 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       inputSchema: {
         build: buildInputSchema,
         sortBy: z.enum(["penetration", "damage", "price", "recoil"]).default("penetration"),
+        buyableOnly: buyableOnlySchema,
         limit: z.number().int().min(1).max(100).default(20),
         offset: offsetSchema,
         gameMode: gameModeSchema,
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ build: input, sortBy, limit, offset, gameMode, priceSources }, { read }) => {
-      const data = await loadBuildSource(read, gameMode);
+    async ({ build: input, sortBy, buyableOnly, limit, offset, gameMode, priceSources: prices }, { read }) => {
+      const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
       const build = await resolveBuild(data, input);
       const options = ammoOptions(build.root, data.lookup);
       const ammoIds = build.ammoId && !options.ids.includes(build.ammoId) ? [...options.ids, build.ammoId] : options.ids;
@@ -280,7 +335,8 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       const loadedName = build.ammoId ? loaded.find((entry) => entry.id === build.ammoId)?.name ?? build.ammoId : null;
       const ammo = loaded
         .filter((entry) => options.ids.includes(entry.id))
-        .map((entry) => projectAmmo(entry, priceSources));
+        .map((entry) => projectAmmo(entry, priceSources, limits))
+        .filter((row) => !buyableOnly || row.priceRUB !== null);
       const price = (row: (typeof ammo)[number]) => row.priceRUB ?? Number.POSITIVE_INFINITY;
       const sorted = ammo.toSorted((a, b) => {
         if (sortBy === "penetration") return b.penetration - a.penetration || b.totalDamage - a.totalDamage;
@@ -317,10 +373,10 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ build: input, includeShoppingList, includeDiscordText, gameMode, priceSources }, { read }) => {
-      const data = await loadBuildSource(read, gameMode);
+    async ({ build: input, includeShoppingList, includeDiscordText, gameMode, priceSources: prices }, { read }) => {
+      const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
       const build = await resolveBuild(data, input);
-      const description = await describeBuild(context, data, build, priceSources);
+      const description = await describeBuild(context, data, build, priceSources, limits);
       const list =
         includeShoppingList || includeDiscordText ? buildShoppingList(build.root, data.lookup, priceSources) : null;
       return {
@@ -364,7 +420,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       inputSchema: {
         build: buildInputSchema,
         changes: z
-          .array(buildChangeSchema)
+          .array(buildChangeInput)
           .min(1)
           .max(40)
           .describe("Changes applied in order."),
@@ -372,8 +428,8 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ build: input, changes, gameMode, priceSources }, { read }) => {
-      const data = await loadBuildSource(read, gameMode);
+    async ({ build: input, changes, gameMode, priceSources: prices }, { read }) => {
+      const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
       const build = await resolveBuild(data, input);
       const applied: string[] = [];
       let root = build.root;
@@ -381,10 +437,10 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       const deadline = optimizerDeadline(context);
       for (const change of changes) {
         if (change.action === "install") {
-          const installed = installPart(root, data.lookup, change.slotPath, change.item);
+          const installed = installPart(root, data.lookup, change.slotPath, change.item, data.budget);
           root = installed.root;
           applied.push(
-            `Installed ${installed.part.name} in ${installed.label}${installed.replaced ? ` (replacing ${itemName(data.lookup, installed.replaced.itemId)})` : ""}${installed.conflict ? `. Warning: ${installed.conflict}.` : "."}`
+            `Installed ${installed.part.name} in ${installed.label}${installed.replaced ? ` (replacing ${itemName(data.lookup, installed.replaced.itemId)})` : ""}${installed.conflict ? `. Warning: ${installed.conflict}.` : "."}${installed.note ? ` ${installed.note}` : ""}`
           );
         } else if (change.action === "remove") {
           const target = resolveSlotPath(root, data.lookup, change.slotPath);
@@ -420,15 +476,17 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
           );
           root = result.root;
         } else if (change.action === "set_ammo") {
-          const { ammo, fits } = await resolveAmmo(data, root, change.item);
+          const { ammo, fits, note } = await resolveAmmo(data, root, (change.item ?? change.ammo)!);
           ammoId = ammo.id;
-          applied.push(`Loaded ${ammo.name}${fits ? "." : ". Warning: it does not fit this build's magazine or chamber."}`);
+          applied.push(
+            `Loaded ${ammo.name}${fits ? "." : ". Warning: it does not fit this build's magazine or chamber."}${note ? ` ${note}` : ""}`
+          );
         } else {
           ammoId = null;
           applied.push("Cleared the ammo.");
         }
       }
-      const description = await describeBuild(context, data, { ...build, root, ammoId }, priceSources);
+      const description = await describeBuild(context, data, { ...build, root, ammoId }, priceSources, limits);
       return {
         gameMode,
         applied,
@@ -451,13 +509,38 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
           .boolean()
           .default(false)
           .describe("Allow parts with no price from the selected sources (ignored for the cost goal)."),
+        minMagazineCapacity: z
+          .number()
+          .int()
+          .min(0)
+          .max(1_000)
+          .optional()
+          .describe("Smallest magazine allowed. Defaults to the installed magazine's capacity; 0 allows any."),
+        keepSights: z
+          .boolean()
+          .default(true)
+          .describe("Replace a sight only with one of the same kind (optic, rear, or front sight)."),
         slotPath: slotPathSchema.optional().describe("Only optimise this slot and what attaches to it."),
         gameMode: gameModeSchema,
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ build: input, goal, budgetRUB, keepInstalledParts, allowUnpriced, slotPath, gameMode, priceSources }, { read }) => {
-      const data = await loadBuildSource(read, gameMode);
+    async (
+      {
+        build: input,
+        goal,
+        budgetRUB,
+        keepInstalledParts,
+        allowUnpriced,
+        minMagazineCapacity,
+        keepSights,
+        slotPath,
+        gameMode,
+        priceSources: prices,
+      },
+      { read }
+    ) => {
+      const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
       const build = await resolveBuild(data, input);
       const target = slotPath ? resolveSlotPath(build.root, data.lookup, slotPath) : null;
       const result = await runOptimizer(
@@ -471,6 +554,8 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
           allowUnpriced,
           target: target ? { parentPath: target.parentPath, slotId: target.slot.id } : null,
           ammoId: build.ammoId,
+          keepSights,
+          ...(minMagazineCapacity === undefined ? {} : { minMagazineCapacity: minMagazineCapacity || null }),
         },
         optimizerDeadline(context),
         context
@@ -480,14 +565,21 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       const after = computeStats(result.root, data.lookup, priceSources, ammo);
       // Optimising an optimised build replaces the goal in its name instead of stacking another.
       const name = input.name?.trim() || `${build.name.replace(/ \((?:ergonomics|recoil|cost)\)$/, "")} (${goal})`;
-      const description = await describeBuild(context, data, { ...build, root: result.root, name }, priceSources);
+      const description = await describeBuild(context, data, { ...build, root: result.root, name }, priceSources, limits);
+      const overBudget = budgetRUB !== undefined && !result.withinBudget;
+      const weapon = data.lookup.get(build.weaponId);
+      const weaponPrice = weapon ? effectivePrice(weapon, priceSources) : null;
+      const cheapest = Math.round(result.costRUB);
       return {
         gameMode,
         goal,
         changed: result.changed,
         withinBudget: result.withinBudget,
-        ...(budgetRUB !== undefined && !result.withinBudget
-          ? { notice: "No combination fits the budget. This is the cheapest build found." }
+        ...(overBudget
+          ? {
+              minimumCostRUB: cheapest,
+              notice: `The budget of ${formatRoubles(budgetRUB)} can't be met: the cheapest build the optimiser found costs ${formatRoubles(cheapest)}${weaponPrice === null ? "" : ` (the weapon alone costs ${formatRoubles(weaponPrice)})`}. This is that build; raise the budget to at least ${formatRoubles(cheapest)}, or allow more price sources or trader levels.`,
+            }
           : {}),
         remainingConflicts: result.conflicts,
         changes: diffBuildTrees(build.root, result.root, data.lookup)
@@ -523,8 +615,8 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ left: leftInput, right: rightInput, includeUnchangedSlots, gameMode, priceSources }, { read }) => {
-      const data = await loadBuildSource(read, gameMode);
+    async ({ left: leftInput, right: rightInput, includeUnchangedSlots, gameMode, priceSources: prices }, { read }) => {
+      const { data, sources: priceSources } = await loadBuildPricing(read, gameMode, prices);
       const [left, right] = await Promise.all([
         resolveBuild(data, leftInput),
         resolveBuild(data, rightInput),

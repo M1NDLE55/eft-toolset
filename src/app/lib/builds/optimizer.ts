@@ -5,6 +5,7 @@ import { isDetailed, type ItemLookup } from "./stats";
 import { childAt, collectItemIds } from "./tree";
 import { findConflicts, type BuildConflict } from "./conflicts";
 import { slotKey, treesEqual } from "./compare";
+import { installedMagazineCapacity, isMagazineSlot, sightRole } from "./sights";
 
 export type OptimizeGoal = "ergonomics" | "recoil" | "cost";
 
@@ -21,6 +22,15 @@ export interface OptimizeOptions {
   allowUnpriced?: boolean;
   target?: OptimizeTarget | null;
   ammoId?: string | null;
+  /** Keep a magazine in every magazine slot, though the game marks them optional. Default true. */
+  requireMagazine?: boolean;
+  /**
+   * Avoid magazines smaller than this. Defaults to the largest magazine installed, so the
+   * optimiser never trades capacity for stats; null allows any size.
+   */
+  minMagazineCapacity?: number | null;
+  /** A slot that held a sight keeps a sight of the same kind (optic, rear, or front). Default true. */
+  keepSights?: boolean;
 }
 
 export interface OptimizeControl {
@@ -42,6 +52,11 @@ const REQUIRED_PENALTY = 1e7;
 const KEEP_PENALTY = 1e5;
 const CONFLICT_PENALTY = 1e6;
 const AMMO_PENALTY = 1e4;
+// Above leaving an occupied slot empty, below a part conflict.
+const SMALL_MAGAZINE_PENALTY = 5e5;
+const SIGHT_BONUS = 5e5;
+// Optics are for aiming: adding one for a point of ergonomics from its attachments is silly.
+const NEW_OPTIC_PENALTY = 10;
 const BEAM_WIDTH = 3;
 const MAX_REPAIR_ROUNDS = 12;
 const BUDGET_STEPS = 18;
@@ -60,9 +75,10 @@ interface Restrictions {
 
 interface Pass {
   lookup: ItemLookup;
-  options: Required<Omit<OptimizeOptions, "target" | "budget" | "ammoId">> & {
+  options: Required<Omit<OptimizeOptions, "target" | "budget" | "ammoId" | "minMagazineCapacity">> & {
     target: OptimizeTarget | null;
     ammoId: string | null;
+    minMagazineCapacity: number | null;
   };
   lambda: number;
   restrictions: Restrictions;
@@ -134,20 +150,39 @@ function ammoFitsItem(item: GunItem, ammoId: string | null) {
   return allowed.length === 0 || allowed.includes(ammoId);
 }
 
-function emptyPenalty(slot: ModSlotDef, occupied: boolean) {
-  return slot.required ? REQUIRED_PENALTY : occupied ? KEEP_PENALTY : 0;
+function emptyPenalty(slot: ModSlotDef, occupied: boolean, pass: Pass) {
+  if (slot.required || (pass.options.requireMagazine && isMagazineSlot(slot))) return REQUIRED_PENALTY;
+  return occupied ? KEEP_PENALTY : 0;
+}
+
+/** Slot-specific value on top of a part's own: keeping sights and magazine capacity. */
+function slotAdjustment(slot: ModSlotDef, itemId: string, oldRole: string | null, pass: Pass) {
+  const item = pass.lookup.get(itemId);
+  let value = 0;
+  const role = sightRole(item, slot.nameId);
+  if (oldRole && role === oldRole) value += SIGHT_BONUS;
+  else if (role === "optic" && pass.options.keepSights) value -= NEW_OPTIC_PENALTY;
+  const floor = pass.options.minMagazineCapacity;
+  if (floor !== null && isMagazineSlot(slot) && typeof item?.capacity === "number" && item.capacity < floor) {
+    value -= SMALL_MAGAZINE_PENALTY;
+  }
+  return value;
 }
 
 function chooseForSlot(slot: ModSlotDef, old: BuildNode | undefined, pass: Pass): Solved | null {
-  const emptyValue = -emptyPenalty(slot, Boolean(old));
+  const emptyValue = -emptyPenalty(slot, Boolean(old), pass);
   if (pass.restrictions.slots.has(slot.id)) return { node: { itemId: "", slots: {} }, value: emptyValue, cost: 0 };
+  const oldRole = pass.options.keepSights && old ? sightRole(pass.lookup.get(old.itemId), slot.nameId) : null;
   let best: Solved | null = null;
   const tried = new Set<string>();
   for (const id of slot.allowedItemIds) {
     if (tried.has(id) || pass.restrictions.items.has(id)) continue;
     tried.add(id);
-    const solved = solveFree(id, old, pass);
-    if (solved && (!best || solved.value > best.value)) best = solved;
+    const free = solveFree(id, old, pass);
+    if (!free) continue;
+    const adjustment = slotAdjustment(slot, id, oldRole, pass);
+    const solved = adjustment ? { ...free, value: free.value + adjustment } : free;
+    if (!best || solved.value > best.value) best = solved;
   }
   if (!best || best.value <= emptyValue) return { node: { itemId: "", slots: {} }, value: emptyValue, cost: 0 };
   return best;
@@ -266,6 +301,12 @@ export async function optimizeBuild(
     allowUnpriced: options.allowUnpriced ?? false,
     target: options.target ?? null,
     ammoId: options.ammoId ?? null,
+    requireMagazine: options.requireMagazine ?? true,
+    keepSights: options.keepSights ?? true,
+    minMagazineCapacity:
+      options.minMagazineCapacity === undefined
+        ? installedMagazineCapacity(root, lookup)
+        : options.minMagazineCapacity,
   };
   const budget =
     typeof options.budget === "number" && Number.isFinite(options.budget) && options.budget >= 0

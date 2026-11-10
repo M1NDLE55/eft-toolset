@@ -6,6 +6,9 @@ import { diffBuildTrees, statDeltas, treesEqual } from "@/app/lib/builds/compare
 import { buildShoppingList, formatShoppingList } from "@/app/lib/builds/shopping";
 import { computeStats } from "@/app/lib/builds/stats";
 import { collectItemIds } from "@/app/lib/builds/tree";
+import { checkSights, installedMagazineCapacity } from "@/app/lib/builds/sights";
+import { effectivePrice, withTraderLimits } from "@/app/lib/builds/price";
+import { resolveBuild, resolveSlotPath, type BuildSource } from "@/app/lib/builds/resolve";
 import { extractSharePayload, parseSharedBuildInput } from "@/app/lib/builds/share-import";
 import { encodeBuildSharePayload } from "@/app/lib/builds/share";
 import { encodeSharePayload } from "@/app/lib/share-codec";
@@ -259,7 +262,69 @@ describe("optimiser", () => {
     ).rejects.toBeDefined();
     await expect(optimize({ itemId: "missing", slots: {} }, data, {})).rejects.toThrow(/weapon details/i);
   });
+  it("keeps a magazine, even when it is optional and the budget is tight", async () => {
+    const data = lookup(
+      gun([slot("magazine", ["mag"], { nameId: "mod_magazine" })], { traderPriceRUB: 10_000 }),
+      item("mag", { capacity: 30, traderPriceRUB: 2_000, ergonomics: -3 })
+    );
+    const cheapest = await optimize(bare, data, { goal: "cost" });
+    expect(cheapest.root.slots.magazine?.itemId).toBe("mag");
+    const tight = await optimize(bare, data, { goal: "recoil", budget: 5_000 });
+    expect(tight.root.slots.magazine?.itemId).toBe("mag");
+    expect(tight.withinBudget).toBe(false);
+    const without = await optimize(bare, data, { goal: "cost", requireMagazine: false });
+    expect(without.root.slots).toEqual({});
+  });
+
+  it("does not trade magazine capacity for stats unless allowed", async () => {
+    const data = lookup(
+      gun([slot("magazine", ["mag30", "mag10"], { nameId: "mod_magazine" })]),
+      item("mag30", { capacity: 30, ergonomics: -1, traderPriceRUB: 3_000 }),
+      item("mag10", { capacity: 10, ergonomics: 5, traderPriceRUB: 1_000 })
+    );
+    const root: BuildNode = { itemId: "gun", slots: { magazine: { itemId: "mag30", slots: {} } } };
+    for (const goal of ["ergonomics", "recoil", "cost"] as const) {
+      expect((await optimize(root, data, { goal })).root.slots.magazine.itemId).toBe("mag30");
+    }
+    expect((await optimize(root, data, { minMagazineCapacity: 10 })).root.slots.magazine.itemId).toBe("mag10");
+    expect((await optimize(root, data, { minMagazineCapacity: null })).root.slots.magazine.itemId).toBe("mag10");
+  });
+
+  it("replaces a sight only with a sight of the same kind", async () => {
+    const data = lookup(
+      gun([
+        slot("gas", ["gbSight", "gbPlain"], { nameId: "mod_gas_block" }),
+        slot("rear", ["carry", "flip"], { nameId: "mod_sight_rear" }),
+      ]),
+      item("gbSight", { sight: "front", ergonomics: 0 }),
+      item("gbPlain", { ergonomics: 4 }),
+      item("carry", { sight: "iron", ergonomics: -2 }),
+      item("flip", { sight: "iron", ergonomics: 1 })
+    );
+    const root: BuildNode = {
+      itemId: "gun",
+      slots: { gas: { itemId: "gbSight", slots: {} }, rear: { itemId: "carry", slots: {} } },
+    };
+    const kept = await optimize(root, data, {});
+    expect(kept.root.slots).toEqual({ gas: { itemId: "gbSight", slots: {} }, rear: { itemId: "flip", slots: {} } });
+    const dropped = await optimize(root, data, { keepSights: false });
+    expect(dropped.root.slots.gas.itemId).toBe("gbPlain");
+    // Without a sight to keep, the optimiser has no reason to add one.
+    expect((await optimize(bare, data, {})).root.slots.gas.itemId).toBe("gbPlain");
+  });
+
+  it("does not add optics for the stats of their attachments", async () => {
+    const data = lookup(
+      gun([slot("scope", ["dot"], { nameId: "mod_scope" })]),
+      item("dot", { sight: "optic", ergonomics: -2, slots: [slot("shade", ["shade"], { nameId: "mod_tactical" })] }),
+      item("shade", { ergonomics: 3 })
+    );
+    expect((await optimize(bare, data, {})).root.slots).toEqual({});
+    const kept: BuildNode = { itemId: "gun", slots: { scope: { itemId: "dot", slots: {} } } };
+    expect((await optimize(kept, data, {})).root.slots.scope.itemId).toBe("dot");
+  });
 });
+
 
 describe("conflict detection", () => {
   it("reports item and slot conflicts once each", () => {
@@ -465,5 +530,245 @@ describe("compatibility graph loading", () => {
     expect(full.count).toBe(4);
     vi.doUnmock("@/app/lib/api/transport");
     vi.doUnmock("@/app/lib/cache/store");
+  });
+});
+
+describe("sights and loyalty levels", () => {
+  const data = lookup(
+    gun([
+      slot("gas", ["gbSight", "gbPlain"], { nameId: "mod_gas_block" }),
+      slot("rear", ["flip"], { nameId: "mod_sight_rear" }),
+      slot("scope", ["dot"], { nameId: "mod_scope" }),
+      slot("magazine", ["mag"], { nameId: "mod_magazine" }),
+    ]),
+    item("gbSight", { sight: "front" }),
+    item("gbPlain"),
+    item("flip", { sight: "iron" }),
+    item("dot", { sight: "optic" }),
+    item("mag", { capacity: 30 })
+  );
+  const build = (slots: Record<string, string>): BuildNode => ({
+    itemId: "gun",
+    slots: Object.fromEntries(Object.entries(slots).map(([slotId, itemId]) => [slotId, { itemId, slots: {} }])),
+  });
+
+  // The factory preset: a front sight gas block and a flip-up rear sight.
+  const factory = build({ gas: "gbSight", rear: "flip" });
+
+  it("flags a build that lost an iron sight the default preset has, unless it has an optic", () => {
+    expect(checkSights(factory, data, factory)).toMatchObject({ usable: true, missing: [] });
+    // The M4A1 case: the front sight gas block swapped for a plain one, only the rear sight left.
+    expect(checkSights(build({ gas: "gbPlain", rear: "flip" }), data, factory)).toMatchObject({
+      usable: false,
+      missing: ["front sight"],
+      factorySights: ["gbSight"],
+    });
+    expect(checkSights(build({ gas: "gbPlain", scope: "dot" }), data, factory).usable).toBe(true);
+    expect(checkSights(build({ gas: "gbPlain" }), data, factory).missing).toEqual(["rear sight", "front sight"]);
+    expect(checkSights(build({ gas: "gbPlain" }), data, null).usable).toBe(true);
+  });
+
+  it("does not require a sight role just because some compatible part could fill it", () => {
+    // Like the AKM: the factory rear sight is a part, the front sight is built into the
+    // barrel, and a "front sight device" fits the muzzle.
+    const akm = lookup(
+      gun([slot("muzzle", ["frontDevice", "brake"], { nameId: "mod_muzzle" }), slot("rear", ["akRear"], { nameId: "mod_sight_rear" })]),
+      item("frontDevice", { sight: "front" }),
+      item("brake"),
+      item("akRear", { sight: "iron" })
+    );
+    const preset = build({ muzzle: "brake", rear: "akRear" });
+    expect(checkSights(preset, akm, preset)).toMatchObject({ usable: true, missing: [] });
+    expect(checkSights(build({ muzzle: "brake" }), akm, preset)).toMatchObject({ usable: false, missing: ["rear sight"] });
+  });
+
+  it("says nothing when the default preset has no sight parts, as with built-in sights", () => {
+    // Like the AKS-74U, whose rear sight is part of the dust cover: rear sight parts fit, but
+    // the factory gun has none.
+    const preset = build({ gas: "gbPlain" });
+    expect(checkSights(build({ gas: "gbPlain" }), data, preset)).toMatchObject({ usable: true, sights: [] });
+    expect(checkSights(bare, data, preset).usable).toBe(true);
+  });
+
+  it("does not judge a sight whose slot the build no longer has", () => {
+    // Like a sawn-off Mosin: the factory front sight sits on the barrel, and the short barrel
+    // has no front sight slot.
+    const mosin = lookup(
+      gun([slot("barrel", ["long", "short"], { nameId: "mod_barrel" })]),
+      item("long", { slots: [slot("front", ["post"], { nameId: "mod_sight_front" })] }),
+      item("short"),
+      item("post", { sight: "iron" })
+    );
+    const preset: BuildNode = { itemId: "gun", slots: { barrel: { itemId: "long", slots: { front: { itemId: "post", slots: {} } } } } };
+    expect(checkSights({ itemId: "gun", slots: { barrel: { itemId: "short", slots: {} } } }, mosin, preset).usable).toBe(true);
+    expect(checkSights({ itemId: "gun", slots: { barrel: { itemId: "long", slots: {} } } }, mosin, preset)).toMatchObject({
+      usable: false,
+      missing: ["front sight"],
+    });
+  });
+
+  it("needs an optic or an iron sight when the default preset aims only through an optic", () => {
+    const preset = build({ scope: "dot" });
+    expect(checkSights(bare, data, preset)).toMatchObject({ usable: false, missing: ["optic"], factorySights: ["dot"] });
+    expect(checkSights(build({ rear: "flip" }), data, preset).usable).toBe(true);
+  });
+
+  it("reads the installed magazine's capacity", () => {
+    expect(installedMagazineCapacity(build({ magazine: "mag" }), data)).toBe(30);
+    expect(installedMagazineCapacity(bare, data)).toBeNull();
+  });
+
+  it("prices parts at the cheapest offer the player's loyalty levels allow", () => {
+    const part = item("part", {
+      traderPriceRUB: 1_000,
+      traderName: "Skier",
+      traderLevel: 4,
+      traderOffers: [
+        { trader: "Skier", priceRUB: 1_000, level: 4 },
+        { trader: "Mechanic", priceRUB: 1_500, level: 2 },
+      ],
+    });
+    expect(withTraderLimits(part, { maxLevel: 4 })).toBe(part);
+    expect(withTraderLimits(part, { maxLevel: 2 })).toMatchObject({ traderPriceRUB: 1_500, traderName: "Mechanic", traderLevel: 2 });
+    expect(withTraderLimits(part, { maxLevel: 4, levels: { mechanic: 0, skier: 3 } })).toMatchObject({
+      traderPriceRUB: null,
+      traderName: null,
+    });
+    expect(effectivePrice(withTraderLimits(part, { maxLevel: 1 }), BOTH)).toBeNull();
+  });
+});
+
+describe("slot paths", () => {
+  const data = lookup(
+    gun([slot("rec", ["upper"], { name: "Receiver" }), slot("hg", ["rail"], { name: "Handguard" })]),
+    item("upper", { slots: [slot("u-scope", ["dot"], { name: "Scope", nameId: "mod_scope" }), slot("u-rear", ["carry"], { name: "Rear sight" })] }),
+    item("carry", { slots: [slot("c-scope", ["dot"], { name: "Scope", nameId: "mod_scope" })] }),
+    item("rail", { slots: [slot("r-light", ["dot"], { name: "Tactical" })] }),
+    item("dot")
+  );
+  const root: BuildNode = {
+    itemId: "gun",
+    slots: {
+      rec: { itemId: "upper", slots: { "u-rear": { itemId: "carry", slots: {} } } },
+      hg: { itemId: "rail", slots: {} },
+    },
+  };
+
+  it("finds a nested slot by name when only one installed part has it", () => {
+    expect(resolveSlotPath(root, data, ["Tactical"])).toMatchObject({ parentPath: ["hg"], slot: { id: "r-light" } });
+    expect(resolveSlotPath(root, data, ["Receiver", "Rear sight", "Scope"])).toMatchObject({
+      parentPath: ["rec", "u-rear"],
+      slot: { id: "c-scope" },
+    });
+    expect(resolveSlotPath(root, data, ["Rear sight", "Scope"]).parentPath).toEqual(["rec", "u-rear"]);
+  });
+
+  it("lists where an ambiguous or unknown slot name lives", () => {
+    expect(() => resolveSlotPath(root, data, ["Scope"])).toThrow(
+      /"Scope" matches several slots: Receiver \/ Scope \(slotPath \["rec","u-scope"\]\); Receiver \/ Rear sight \/ Scope/
+    );
+    expect(() => resolveSlotPath(root, data, ["Muzzle"])).toThrow(/Slots in this build: Receiver; Receiver \/ Scope \(empty\)/);
+  });
+});
+
+describe("calibers", () => {
+  it("reads caliber ids naturally and keeps the id", async () => {
+    const { caliberId, formatCaliber } = await import("@/app/lib/mcp/build-projection");
+    expect(formatCaliber("Caliber556x45NATO")).toBe("5.56x45mm NATO");
+    expect(formatCaliber("Caliber1143x23ACP")).toBe(".45 ACP");
+    expect(formatCaliber("Caliber762x39")).toBe("7.62x39mm");
+    expect(formatCaliber("Caliber127x55")).toBe("12.7x55mm");
+    expect(formatCaliber("Caliber9x39")).toBe("9x39mm");
+    expect(formatCaliber("Caliber20x1mm")).toBe("20x1mm");
+    expect(formatCaliber(null)).toBeNull();
+    expect(caliberId("Caliber556x45NATO")).toBe("556x45NATO");
+  });
+});
+
+describe("gun-builder name resolution", () => {
+  const mag = (id: string, name: string, shortName: string) => item(id, { name, shortName });
+  const parts = lookup(
+    gun([slot("mod_magazine", ["pmag", "pmag-fde", "pmag-window", "stanag"])], { name: "Colt M4A1 5.56x45 assault rifle", shortName: "M4A1" }),
+    mag("pmag", "5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine", "GEN M3"),
+    mag("pmag-fde", "5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine (FDE)", "GEN M3"),
+    mag("pmag-window", "5.56x45 Magpul PMAG 30 GEN M3 Window STANAG 30-round magazine", "GEN M3 W"),
+    mag("stanag", "5.56x45 Colt AR-15 STANAG 30-round magazine", "STANAG")
+  );
+  const source = {
+    gameMode: "regular" as const,
+    lookup: parts,
+    guns: [
+      { id: "gun", name: "Colt M4A1 5.56x45 assault rifle", shortName: "M4A1" },
+      { id: "hk", name: "HK 416A5 5.56x45 assault rifle", shortName: "HK 416A5" },
+    ],
+    loadPreset: async () => null,
+    loadAmmo: async () => [],
+  } as unknown as BuildSource;
+
+  it("resolves ordinary weapon and part names, preferring an item over its own variants", async () => {
+    const build = await resolveBuild(source, { weapon: "M4A1", parts: [{ slotPath: ["mod_magazine"], item: "PMAG 30" }] });
+    expect(build.weaponId).toBe("gun");
+    expect(build.root.slots.mod_magazine.itemId).toBe("pmag");
+    expect(build.warnings.join(" ")).toContain("5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine");
+  });
+
+  it("refuses a shared short name instead of taking the first part", async () => {
+    await expect(
+      resolveBuild(source, { weapon: "M4A1", parts: [{ slotPath: ["mod_magazine"], item: "gen m3 w" }] })
+    ).resolves.toMatchObject({ root: { slots: { mod_magazine: { itemId: "pmag-window" } } } });
+    const shared = item("pmag-black", { name: "Some other 30-round magazine", shortName: "GEN M3" });
+    const ambiguous = {
+      ...source,
+      lookup: lookup(
+        gun([slot("mod_magazine", ["pmag-fde", "pmag-black"])], { shortName: "M4A1" }),
+        parts.get("pmag-fde")!,
+        shared
+      ),
+    } as BuildSource;
+    await expect(
+      resolveBuild(ambiguous, { weapon: "gun", parts: [{ slotPath: ["mod_magazine"], item: "GEN M3" }] })
+    ).rejects.toThrow(/"GEN M3" matches several/);
+  });
+
+  it("picks a preset by the name after the weapon's, even when a longer preset name contains it", async () => {
+    const m4 = "Colt M4A1 5.56x45 assault rifle";
+    const presets = ["SOPMOD II", "SOPMOD II Flash", "SOPMOD I", "Carbine", "Flash", ...Array.from({ length: 30 }, (_, i) => `Extra ${i}`)];
+    const withPresets = {
+      ...source,
+      lookup: lookup(
+        gun([slot("mod_magazine", ["stanag"])], {
+          name: m4,
+          shortName: "M4A1",
+          presets: presets.map((name) => ({ id: `p-${name}`, name: `${m4} ${name}` })),
+        }),
+        parts.get("stanag")!
+      ),
+      loadPreset: async (id: string) => ({ baseItemId: "gun", itemIds: ["gun", id === "p-SOPMOD II" ? "stanag" : "gun"] }),
+    } as unknown as BuildSource;
+    const named = await resolveBuild(withPresets, { weapon: "gun", preset: "SOPMOD II" });
+    expect(named.name).toBe(`${m4} SOPMOD II`);
+    // "flash" is one preset's name after the weapon's, though "SOPMOD II Flash" ends with it too.
+    expect((await resolveBuild(withPresets, { weapon: "gun", preset: "flash" })).name).toBe(`${m4} Flash`);
+    expect((await resolveBuild(withPresets, { weapon: "gun", preset: "ii flash" })).name).toBe(`${m4} SOPMOD II Flash`);
+    // Ambiguous and unknown names list presets without the weapon name, and at most 20.
+    await expect(resolveBuild(withPresets, { weapon: "gun", preset: "sopmod" })).rejects.toThrow(
+      /"sopmod" matches several Colt M4A1 5.56x45 assault rifle presets: SOPMOD II; SOPMOD II Flash; SOPMOD I\./
+    );
+    const unknown = await resolveBuild(withPresets, { weapon: "gun", preset: "nope" }).catch((error: Error) => error.message);
+    expect(unknown).toMatch(/Its presets are: SOPMOD II; SOPMOD II Flash; SOPMOD I; Carbine; Flash; Extra 0;.*; and 15 more\./);
+    expect(unknown).not.toContain(`${m4} Extra`);
+  });
+
+  it("lists at most 20 warnings for one build", async () => {
+    const parts = Array.from({ length: 30 }, () => ({ slotPath: ["mod_magazine"], item: "PMAG 30" }));
+    const build = await resolveBuild(source, { weapon: "M4A1", parts });
+    expect(build.warnings).toHaveLength(21);
+    expect(build.warnings[20]).toBe("And 10 more warnings like these.");
+  });
+
+  it("tolerates a typo in a weapon name and says what it assumed", async () => {
+    const build = await resolveBuild(source, { weapon: "Colt M4A1 assualt rifle" });
+    expect(build.weaponId).toBe("gun");
+    expect(build.warnings[0]).toMatch(/closest spelling/);
   });
 });

@@ -12,13 +12,18 @@ import { MAX_PLAN_NAME_LENGTH, MAX_PLANS } from "@/app/lib/raid-planner/limits";
 import { BACKUP_FORMAT, BACKUP_IMPORT_PARAM, BACKUP_VERSION, STORE_KEYS } from "@/app/lib/storage/store-keys";
 import { resolveBuild } from "@/app/lib/builds/resolve";
 import { decodePlanLink, planFromShared } from "@/app/lib/raid-planner/resolve";
-import { resolveItemReference } from "@/app/lib/search/item-reference";
+import { matchItemReference, type ItemMatch, type MatchKind } from "@/app/lib/search/item-reference";
 import { encodeSharePayload, MAX_SHARE_LINK_LENGTH } from "@/app/lib/share-codec";
-import { InputError, type ToolContext } from "./context";
+import { betweenItems, InputError, type ToolContext } from "./context";
+import { echo, fuzzyBudget, isInexact, SKIPPED_NOTE } from "./item-match";
 import { createImportLinkOutput } from "./output-schemas";
 import { toolDefiner } from "./define-tool";
 import { buildInputSchema, gameModeSchema } from "./schemas";
 import { loadBuildSource, loadCatalogIndex } from "./sources";
+
+/** Notes about individual item-group inputs, and build warnings, listed in one reply. */
+const MAX_ITEM_NOTES = 20;
+const MAX_BUILD_NOTES = 40;
 
 export function registerImportLinkTools(server: McpServer, context: ToolContext) {
   const define = toolDefiner(server, context);
@@ -48,7 +53,7 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
           )
           .max(MAX_PLANS)
           .default([]),
-        gameMode: gameModeSchema.describe("Game mode used to resolve item and part names."),
+        gameMode: gameModeSchema,
       },
     },
     async ({ itemGroups, builds, raidPlans, gameMode }, { read }) => {
@@ -58,26 +63,57 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
       const now = Date.now();
       const notes: string[] = [];
       const stores: Record<string, unknown> = {};
+      const itemMatches: { group: string; input: string; item: string | null; matchedBy?: MatchKind }[] = [];
 
       if (itemGroups.length > 0) {
         const index = await loadCatalogIndex(read, gameMode);
-        const groups: Group[] = itemGroups.map((group) => {
+        const budget = fuzzyBudget();
+        const matches = new Map<string, ItemMatch>();
+        // Notes about single items stop after a few; itemMatches still lists every input.
+        let itemNotes = 0;
+        let skipped = false;
+        const noteItem = (note: string) => {
+          itemNotes += 1;
+          if (itemNotes <= MAX_ITEM_NOTES) notes.push(note);
+        };
+        const groups: Group[] = [];
+        for (const group of itemGroups) {
           const names: string[] = [];
           for (const reference of group.items) {
-            const resolved = resolveItemReference(index, reference);
-            if (!resolved) {
-              notes.push(`${group.name}: no item matches "${reference}", so it was left out.`);
+            await betweenItems(context.signal);
+            const match = matches.get(reference) ?? matchItemReference(index, reference, { budget });
+            matches.set(reference, match);
+            const input = echo(reference);
+            if (match.status !== "found") {
+              if (match.status === "none" && match.skipped) skipped = true;
+              noteItem(
+                match.status === "ambiguous"
+                  ? `${group.name}: "${input}" could be any of ${match.candidates.join("; ")}, so it was left out. Add the one you mean by its full name.`
+                  : `${group.name}: no item matches "${input}", so it was left out.${match.suggestions.length ? ` Did you mean: ${match.suggestions.join("; ")}?` : ""}`
+              );
+              itemMatches.push({ group: group.name, input, item: null });
               continue;
             }
-            if (resolved.matchedBy === "search") {
-              notes.push(`${group.name}: "${reference}" was matched to ${resolved.item.name}.`);
+            if (isInexact(match)) {
+              const why = match.assumed ?? (match.matchedBy === "fuzzy" ? "Closest spelling." : "Best search match.");
+              noteItem(`${group.name}: "${input}" was matched to ${match.item.name}. ${why}`);
             }
-            if (!names.includes(resolved.item.name)) names.push(resolved.item.name);
+            itemMatches.push({
+              group: group.name,
+              input,
+              item: match.item.name,
+              ...(isInexact(match) ? { matchedBy: match.matchedBy } : {}),
+            });
+            if (!names.includes(match.item.name)) names.push(match.item.name);
           }
           const value = { name: group.name.trim(), items: names };
           if (!isGroup(value)) throw new InputError(`Item group "${group.name}" is invalid.`);
-          return value;
-        });
+          groups.push(value);
+        }
+        if (itemNotes > MAX_ITEM_NOTES) {
+          notes.push(`${itemNotes - MAX_ITEM_NOTES} more inputs were left out or matched inexactly; itemMatches lists them.`);
+        }
+        if (skipped) notes.push(`Some inputs were not checked for typos: ${SKIPPED_NOTE}.`);
         const seen = new Set<string>();
         for (const group of groups) {
           const key = group.name.toLocaleLowerCase();
@@ -90,9 +126,14 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
       if (builds.length > 0) {
         const data = await loadBuildSource(read, gameMode);
         const saved: GunBuild[] = [];
+        let buildNotes = 0;
         for (const input of builds) {
+          await betweenItems(context.signal);
           const build = await resolveBuild(data, input);
-          for (const warning of build.warnings) notes.push(`${build.name}: ${warning}`);
+          for (const warning of build.warnings) {
+            buildNotes += 1;
+            if (buildNotes <= MAX_BUILD_NOTES) notes.push(`${build.name}: ${warning}`);
+          }
           const value: GunBuild = {
             id: createId(),
             name: build.name.slice(0, MAX_BUILD_NAME_LENGTH),
@@ -105,12 +146,14 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
           if (!isGunBuild(value)) throw new InputError(`Build "${build.name}" exceeds the builder's limits.`);
           saved.push(value);
         }
+        if (buildNotes > MAX_BUILD_NOTES) notes.push(`And ${buildNotes - MAX_BUILD_NOTES} more build warnings.`);
         stores[STORE_KEYS.gunBuilds] = saved;
       }
 
       if (raidPlans.length > 0) {
         const plans: RaidPlan[] = [];
         for (const entry of raidPlans) {
+          await betweenItems(context.signal);
           const plan = planFromShared(await decodePlanLink(entry.link), now);
           if (entry.name?.trim()) plan.name = entry.name.trim();
           const problem = describePlanProblem(plan);
@@ -138,6 +181,7 @@ export function registerImportLinkTools(server: McpServer, context: ToolContext)
         builds: builds.length,
         raidPlans: raidPlans.length,
         notes,
+        ...(itemMatches.length ? { itemMatches } : {}),
       };
     }
   );

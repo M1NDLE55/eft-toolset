@@ -6,9 +6,10 @@ import { registerItemTools } from "./items";
 import { registerGunBuilderTools } from "./gun-builder";
 import { registerRaidPlannerTools } from "./raid-planner";
 import { registerImportLinkTools } from "./import-link";
+import { serveCompactToolList } from "./tool-list";
 
 // The MCP interface version: bump the minor for new tools or fields, the major for breaking changes.
-const MCP_SERVER_VERSION = "1.0.0";
+const MCP_SERVER_VERSION = "1.2.0";
 
 const TOOL_LIST = MCP_TOOL_GROUPS.map(
   (group) => `- ${group.tool}: ${group.tools.map((tool) => tool.name).join(", ")}.`
@@ -18,10 +19,12 @@ const INSTRUCTIONS = `EFT Toolset: Escape from Tarkov tools built on live tarkov
 
 ${TOOL_LIST}
 
-- Every data tool takes gameMode: "regular" (PVP, the default) or "pve". Prices and availability differ between them, so ask or use the mode the user plays.
-- Prices are in roubles. Flea sell prices are the lowest current listing; the best sell price subtracts the flea listing fee.
-- Gun builder: start with list_weapons or get_weapon. Builds are passed as {"shareLink": ...} or {"weapon": ..., "preset"?: ..., "parts"?: [{"slotPath", "item"}]}; a result's parts (slotPath and itemId) can be passed back as parts to restate a build. Every build result includes a shareLink: pass it to the next build tool to keep working on the same build, and give it to the user so they can open and save the build in the app.
-- Raid planner: coordinates are game metres (x, z). Route points and notes can name places such as extracts instead of coordinates. create_raid_plan returns a share link that opens the plan in the app.
+- Every data tool takes gameMode: "regular" (PVP, the default) or "pve". Prices and availability differ, so ask or use the mode the user plays.
+- Names of items, weapons, parts, and ammo can be ids, exact names, short names, or search text, and typos are tolerated. A name several unrelated items share (such as "red") is not guessed: the tool returns the candidates, so call again with the full name. Inexact matches are reported (matchedBy, note, fuzzyMatches, warnings); tell the user what was assumed.
+- Prices are in roubles. In get_item and get_item_prices, flea buy and sell prices are the lowest current listing (it can sell out quickly) and each offer's basis says what its price is; the flea buy offer also carries avg24hRUB, the 24-hour average. The best sell price subtracts the flea listing fee. flea.status says whether the item is listed, has no listings, or is banned; noBuyReason and noSellReason explain a missing price. Gun-builder flea prices (fleaPriceRUB, and the costs and shopping lists built from them) are the 24-hour average, so current listings can be cheaper; priceNote explains a missing one.
+- Keep or sell: needed counts what all tasks and hideout upgrades take, with how many must be found in raid. It ignores the player's progress, so ask what they have done before saying an item is still needed.
+- Gun builder: start with list_weapons or get_weapon. Pass builds as {"shareLink": ...} or {"weapon": ..., "preset"?: ..., "parts"?: [{"slotPath", "item"}]}; a result's parts (slotPath and itemId) can be passed back to restate a build, and a nested slot can be named alone in slotPath when its name is unique. Every build result has a shareLink: pass it to the next build tool, and give it to the user to open and save the build in the app. priceSources take maxTraderLevel and traderLevels: ask the player's loyalty levels so builds use parts they can buy. Check a build's problems before presenting it, and load ammo (build.ammo) so recoil includes it.
+- Raid planner: coordinates are game metres (x, z). Route points and notes can name places from get_map_details (extracts, areas, spawn zones, key locks) instead of coordinates. Describe places by the names in resolvedPlaces and pass on warnings. create_raid_plan returns a share link that opens the plan in the app.
 - create_import_link bundles item groups, builds, and plans into one import link that adds them to the user's app data.
 - List results with a nextOffset have more: pass it as offset to get the next page.
 - If a result has a dataNotice, tarkov.dev was unreachable and the data is cached; mention it when quoting prices.`;
@@ -40,6 +43,7 @@ export function createEftMcpServer(context: ToolContext) {
   registerGunBuilderTools(server, context);
   registerRaidPlannerTools(server, context);
   registerImportLinkTools(server, context);
+  serveCompactToolList(server);
   registerPrompts(server);
   return server;
 }
@@ -64,7 +68,7 @@ function registerPrompts(server: McpServer) {
           role: "user",
           content: {
             type: "text",
-            text: `Plan an Escape from Tarkov raid on ${map}${goal ? ` for: ${goal}` : ""}${gameMode ? ` (${gameMode} mode)` : ""}. Use get_map_details to find spawns, extracts, locks, and hazards, then create_raid_plan with a route, arrows, and notes explaining each step. Finish with the share link and the route distance.`,
+            text: `Plan an Escape from Tarkov raid on ${map}${goal ? ` for: ${goal}` : ""}${gameMode ? ` (${gameMode} mode)` : ""}. Use get_map_details to find spawn zones, extracts and what they take, bosses, areas, and hazards (sections ["locks"] with lockKeys for key doors), then create_raid_plan with a route, arrows, and notes explaining each step. Name places as resolvedPlaces names them, and mention any warnings. Finish with the share link and the route distance.`,
           },
         },
       ],
@@ -112,7 +116,7 @@ function registerPrompts(server: McpServer) {
           role: "user",
           content: {
             type: "text",
-            text: `Price this Escape from Tarkov loot${gameMode ? ` in ${gameMode} mode` : ""} with get_item_prices, sorted by value per slot. Say where to sell each item, flag anything worth keeping for tasks, and give the total.\n\n${items}`,
+            text: `Price this Escape from Tarkov loot${gameMode ? ` in ${gameMode} mode` : ""} with get_item_prices, sorted by value per slot. Say where to sell each item, flag anything still needed for tasks or hideout upgrades (from needed, noting found-in-raid counts), and give the total.\n\n${items}`,
           },
         },
       ],

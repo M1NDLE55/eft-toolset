@@ -230,7 +230,7 @@ export function OptimizerDialog({
             Optimise build
           </DialogTitle>
           <DialogDescription>
-            Searches every compatible part for this weapon. Occupied and required slots stay filled. Preview the result before applying.
+            Searches every compatible part for this weapon. Occupied and required slots stay filled, the magazine keeps its capacity, and sights are replaced only with sights of the same kind. Preview the result before applying.
           </DialogDescription>
         </DialogHeader>
 

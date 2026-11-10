@@ -10,9 +10,23 @@ import type {
   CachedBarter,
   CachedContainedItem,
   CachedCraft,
+  CachedHideoutRequirement,
+  CachedHideoutSlot,
   CachedTask,
+  CachedTaskObjective,
   CachedTaskUnlock,
 } from "@/app/lib/cache/types";
+
+const ITEM_COUNT_OBJECTIVES = new Set(["giveItem", "findItem", "plantItem", "sellItem", "mark"]);
+
+/** "3×, found in raid" for objectives that take a number of the item. */
+function objectiveCount(objective: CachedTaskObjective) {
+  const { count } = objective;
+  if (typeof count !== "number" || count <= 0 || !ITEM_COUNT_OBJECTIVES.has(objective.type ?? "")) return null;
+  const parts = [objective.alternatives ? `${count}, any of ${objective.alternatives + 1} items` : `${count}×`];
+  if (objective.foundInRaid) parts.push("found in raid");
+  return parts.join(", ");
+}
 
 function useOpenSet() {
   const [open, setOpen] = useState<Set<number>>(() => new Set());
@@ -92,6 +106,7 @@ function ItemLines({ items, tone }: { items: CachedContainedItem[]; tone: "in" |
           >
             {entry.item.name}
           </Link>
+          {entry.tool && <span className="text-xs text-[#777]">(tool, kept)</span>}
         </li>
       ))}
     </ul>
@@ -120,6 +135,7 @@ export function UsedInTasks({ tasks }: { tasks: CachedTask[] }) {
           title={
             <>
               <Badge>{task.trader.name}</Badge>
+              {task.faction && <Badge>{task.faction}</Badge>}
               <span className={open.has(index) ? "min-w-0" : "min-w-0 truncate"}>{task.name}</span>
             </>
           }
@@ -132,13 +148,53 @@ export function UsedInTasks({ tasks }: { tasks: CachedTask[] }) {
           </div>
           {task.objectives.length > 0 && (
             <ul className="ml-5 list-disc space-y-1 text-[#ccc]">
-              {task.objectives.map((objective, objectiveIndex) =>
-                objective.description ? <li key={objectiveIndex}>{objective.description}</li> : null
-              )}
+              {task.objectives.map((objective, objectiveIndex) => {
+                if (!objective.description) return null;
+                const count = objectiveCount(objective);
+                return (
+                  <li key={objectiveIndex}>
+                    {objective.description}
+                    {count && <span className="ml-2 text-xs text-[#9a8866]">{count}</span>}
+                  </li>
+                );
+              })}
             </ul>
           )}
         </Accordion>
       ))}
+    </Section>
+  );
+}
+
+export function HideoutUses({
+  requirements,
+  slots,
+}: {
+  requirements: CachedHideoutRequirement[];
+  slots: CachedHideoutSlot[];
+}) {
+  const rows = [
+    ...requirements.map((entry) => ({
+      ...entry,
+      text: `${entry.count}× for the upgrade${entry.foundInRaid ? ", found in raid" : ""}`,
+    })),
+    ...slots.map((entry) => ({
+      ...entry,
+      text: `Adds ${entry.slots} slot${entry.slots === 1 ? "" : "s"} to install it in`,
+    })),
+  ];
+  return (
+    <Section id="hideout" title="Hideout" count={rows.length} empty="Not needed for any hideout upgrade.">
+      <ul>
+        {rows.map((row, index) => (
+          <li key={index} className="flex items-center gap-2 border-b border-[#1a1a1a] py-2 text-sm last:border-b-0">
+            <Badge>
+              {row.station.name} {RomanLiteral(row.level) ?? row.level}
+            </Badge>
+            <span className="text-[#ccc]">{row.text}</span>
+          </li>
+        ))}
+      </ul>
     </Section>
   );
 }

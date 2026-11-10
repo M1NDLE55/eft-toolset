@@ -100,6 +100,7 @@ describe("MCP endpoint", () => {
     expect(init.response.headers.get("cache-control")).toBe("no-store");
     expect(init.body.result.serverInfo).toMatchObject({ name: "eft-toolset", title: "EFT Toolset" });
     expect(init.body.result.instructions).toContain("gameMode");
+    expect(init.body.result.instructions).toContain("flea buy and sell prices are the lowest current listing");
 
     const { body } = await rpc("tools/list");
     const names = (body.result.tools as { name: string; annotations?: { readOnlyHint?: boolean } }[]).map(
@@ -118,6 +119,8 @@ describe("MCP endpoint", () => {
       "build_weapon",
       "price_loot",
     ]);
+    const priceLoot = await rpc("prompts/get", { name: "price_loot", arguments: { items: "LEDX" } });
+    expect(priceLoot.body.result.messages[0].content.text).toContain("still needed for tasks or hideout upgrades");
   });
 
   it("searches items and returns item scanner details with links into the app", async () => {
@@ -135,10 +138,19 @@ describe("MCP endpoint", () => {
     expect(item.data).toMatchObject({
       name: "Test Rifle",
       size: "2x1",
-      bestSell: { vendor: "Flea Market", priceRUB: 47_314, afterFleaFee: true, perSlotRUB: 23_657 },
+      // A weapon's size depends on its attachments, so it has no per-slot value.
+      bestSell: { vendor: "Flea Market", priceRUB: 47_314, afterFleaFee: true, perSlotRUB: null },
+      sizeNote: expect.stringContaining("stripped weapon"),
       fleaListingFeeRUB: 2_686,
-      cheapestBuy: { vendor: "Tester", priceRUB: 40_000 },
+      cheapestBuy: { vendor: "Tester", priceRUB: 40_000, basis: "trader", loyaltyLevel: 3 },
     });
+    expect(item.data.buyFrom).toContainEqual({
+      vendor: "Flea Market",
+      priceRUB: 50_000,
+      basis: "lowest flea listing",
+      avg24hRUB: 55_000,
+    });
+    expect(item.data.sellTo).toContainEqual({ vendor: "Flea Market", priceRUB: 50_000, basis: "lowest flea listing" });
     expect(item.data.usedInTasks[0]).toMatchObject({ name: "Test Task", trader: "Tester", minPlayerLevel: 10 });
     expect(item.data.barters[0]).toMatchObject({ give: ["2× Test Rifle"], receive: ["1× Reward"] });
     expect(item.data.crafts[0]).toMatchObject({ station: "Workbench", output: ["2× Reward"] });
@@ -148,6 +160,36 @@ describe("MCP endpoint", () => {
 
     const missing = await call("get_item", { item: "zzzz qqqq" });
     expect(missing.result.isError).toBe(true);
+  });
+
+  it("never reports a flea 24-hour average as the cheapest buy when listings are cheaper", async () => {
+    // Water filter on PVP: a ₽60,000 lowest listing against a ₽102,539 24-hour average.
+    const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
+    Object.assign(items.weapon, {
+      lastLowPrice: 60_000,
+      avg24hPrice: 102_539,
+      buyFromTrader: [{ trader: "trader", priceRUB: 80_000, minTraderLevel: 1 }],
+    });
+
+    const item = await call("get_item", { item: "Test Rifle" });
+    expect(item.data.cheapestBuy).toEqual({
+      vendor: "Flea Market",
+      priceRUB: 60_000,
+      basis: "lowest flea listing",
+      avg24hRUB: 102_539,
+    });
+    expect(item.data.buyFrom).toEqual([
+      { vendor: "Flea Market", priceRUB: 60_000, basis: "lowest flea listing", avg24hRUB: 102_539 },
+      { vendor: "Tester", priceRUB: 80_000, basis: "trader", loyaltyLevel: 1 },
+    ]);
+
+    const prices = await call("get_item_prices", { items: ["Test Rifle"] });
+    expect(prices.data.rows[0].cheapestBuy).toMatchObject({ vendor: "Flea Market", priceRUB: 60_000 });
+
+    // The gun builder keeps pricing the flea at the 24-hour average, and says so.
+    const { body } = await rpc("tools/list");
+    const ammoTool = body.result.tools.find((tool: { name: string }) => tool.name === "get_ammo_options");
+    expect(ammoTool.description).toMatch(/flea at the 24-hour average/);
   });
 
   it("prices item lists with counts, totals, and the Discord text the item groups page copies", async () => {
@@ -160,6 +202,222 @@ describe("MCP endpoint", () => {
     expect(data.unresolved).toEqual(["zzzz qqqq"]);
     expect(data.discordText).toContain("**Loot**");
     expect(data.discordText).toContain("2× Test Rifle");
+  });
+
+  it("prices only the item a name plausibly means and says which input each row came from", async () => {
+    const data = fixtures.items as { data: { items: Record<string, Record<string, unknown>> } };
+    const add = (id: string, name: string, shortName: string, basePrice: number) => {
+      data.data.items[id] = { id, name, shortName, normalizedName: id, basePrice, width: 1, height: 1, sellToTrader: [{ trader: "trader", priceRUB: basePrice }] };
+    };
+    add("bitcoin-item", "Physical Bitcoin", "0.2BTC", 1_000_000);
+    add("bitcoin-left", "Left half of a Physical Bitcoin", "BTC", 12_000);
+    add("bitcoin-right", "Right half of a Physical Bitcoin", "BTC", 12_000);
+    add("red-card", "TerraGroup Labs keycard (Red)", "Red", 1_650_000);
+    add("red-flare", "26x75mm flare cartridge (Red)", "Red", 30_000);
+    add("gpu-item", "Graphics card", "GPU", 200_000);
+
+    const { data: prices } = await call("get_item_prices", {
+      items: ["btc", "red", { item: "GPU", count: 2 }, "graphics crad", "Test Rifle", "test rifle", "graphics zzzz"],
+    });
+    expect(prices.rows.map((row: { name: string; inputs: string[]; count: number }) => [row.name, row.inputs, row.count])).toEqual([
+      ["Physical Bitcoin", ["btc"], 1],
+      ["Graphics card", ["GPU", "graphics crad"], 3],
+      ["Test Rifle", ["Test Rifle", "test rifle"], 2],
+    ]);
+    expect(prices.fuzzyMatches).toEqual([
+      expect.objectContaining({ input: "btc", matched: "Physical Bitcoin", matchedBy: "search", note: expect.stringContaining("Left half") }),
+      expect.objectContaining({ input: "graphics crad", matched: "Graphics card", matchedBy: "fuzzy" }),
+    ]);
+    expect(prices.unresolved).toEqual(["red", "graphics zzzz"]);
+    expect(prices.unmatched).toEqual([
+      { input: "red", reason: "ambiguous", candidates: ["TerraGroup Labs keycard (Red)", "26x75mm flare cartridge (Red)"] },
+      { input: "graphics zzzz", reason: "not found", candidates: ["Graphics card"] },
+    ]);
+
+    const btc = await call("get_item", { item: "btc" });
+    expect(btc.data).toMatchObject({ name: "Physical Bitcoin", matchedBy: "search", note: expect.stringContaining("chose Physical Bitcoin") });
+    expect(btc.data.otherMatches).toContain("Left half of a Physical Bitcoin");
+    const exact = await call("get_item", { item: "Graphics card" });
+    expect(exact.data.matchedBy).toBeUndefined();
+    expect(exact.data.note).toBeUndefined();
+    const red = await call("get_item", { item: "red" });
+    expect(red.result.isError).toBe(true);
+    expect(red.text).toContain("could be any of: TerraGroup Labs keycard (Red); 26x75mm flare cartridge (Red)");
+    const typo = await call("get_item", { item: "graphics zzzz" });
+    expect(typo.text).toContain("Did you mean: Graphics card?");
+
+    const { data: link } = await call("create_import_link", { itemGroups: [{ name: "Loot", items: ["btc", "red", "GPU"] }] });
+    expect(link.itemMatches).toEqual([
+      { group: "Loot", input: "btc", item: "Physical Bitcoin", matchedBy: "search" },
+      { group: "Loot", input: "red", item: null },
+      { group: "Loot", input: "GPU", item: "Graphics card" },
+    ]);
+    expect(link.notes).toEqual([
+      expect.stringMatching(/^Loot: "btc" was matched to Physical Bitcoin\. "btc" also matches/),
+      'Loot: "red" could be any of TerraGroup Labs keycard (Red); 26x75mm flare cartridge (Red), so it was left out. Add the one you mean by its full name.',
+    ]);
+  });
+
+  it("lists whole categories, item types, and calibers in compact pages", async () => {
+    const data = fixtures.items as {
+      data: { items: Record<string, Record<string, unknown>>; handbookCategories?: Record<string, unknown> };
+    };
+    data.data.handbookCategories = {
+      meds: { name: "meds-name", normalizedName: "medication", parent: null },
+      injectors: { name: "injectors-name", normalizedName: "injectors", parent: "meds" },
+    };
+    (fixtures.items_en as { data: Record<string, string> }).data["injectors-name"] = "Injectors";
+    (fixtures.items_en as { data: Record<string, string> }).data["meds-name"] = "Medication";
+    for (let index = 0; index < 30; index += 1) {
+      data.data.items[`stim-${index}`] = {
+        id: `stim-${index}`,
+        name: `Stim ${String(index).padStart(2, "0")} injector`,
+        shortName: `S${index}`,
+        types: ["injectors"],
+        handbookCategories: ["injectors"],
+      };
+    }
+    data.data.items["case"] = { id: "case", name: "Injector case", shortName: "Injectors", types: ["container"] };
+
+    const first = await call("search_items", { category: "Injectors", limit: 25, compact: true });
+    expect(first.data).toMatchObject({ total: 30, nextOffset: 25 });
+    expect(first.data.query).toBeUndefined();
+    expect(first.data.results[0]).toEqual({ name: "Stim 00 injector", shortName: "S0" });
+    const rest = await call("search_items", { category: "injector", limit: 25, offset: 25, compact: true });
+    expect(rest.data.results).toHaveLength(5);
+    expect(rest.data.nextOffset).toBeNull();
+    // Parent categories and item types work too, and a query ranks within the category.
+    expect((await call("search_items", { category: "medication", limit: 1 })).data.total).toBe(30);
+    expect((await call("search_items", { category: "injectors", query: "stim 07" })).data.results[0].name).toBe("Stim 07 injector");
+    expect((await call("search_items", { query: "injector", limit: 100 })).data.total).toBe(31);
+
+    const ammo = await call("search_items", { caliber: "5.56x45", compact: true });
+    expect(ammo.data.results).toEqual([{ name: "Test Ammo", shortName: null }]);
+
+    const unknown = await call("search_items", { category: "injectros" });
+    expect(unknown.result.isError).toBe(true);
+    expect(unknown.text).toContain("Did you mean: Injectors?");
+    expect((await call("search_items", {})).result.isError).toBe(true);
+
+    const typo = await call("search_items", { query: "injectro" });
+    expect(typo.data).toMatchObject({ fuzzy: true, total: 31 });
+    const nothing = await call("search_items", { query: "stim zzzz" });
+    expect(nothing.data).toMatchObject({ total: 0, results: [] });
+    expect(nothing.data.didYouMean[0]).toMatch(/^Stim/);
+  });
+
+  it("says what an item is needed for: task counts, found in raid, hideout upgrades and slots", async () => {
+    const tasks = fixtures.tasks as { data: { tasks: Record<string, Record<string, unknown>> } };
+    tasks.data.tasks.task.objectives = [
+      { description: "find-mod", type: "findItem", count: 3, foundInRaid: true, items: ["mod"] },
+      { description: "hand-over", type: "giveItem", count: 3, foundInRaid: true, items: ["mod"] },
+    ];
+    tasks.data.tasks.any = {
+      id: "any",
+      name: "any-name",
+      trader: "trader",
+      objectives: [{ description: "hand-over", type: "giveItem", count: 5, foundInRaid: true, items: ["mod", "ammo"] }],
+    };
+    Object.assign((fixtures.tasks_en as { data: Record<string, string> }).data, {
+      "find-mod": "Find the item in raid: Test Mod",
+      "hand-over": "Hand over the item",
+      "any-name": "Any Task",
+    });
+
+    const item = await call("get_item", { item: "Test Mod" });
+    expect(item.data.needed).toEqual({
+      total: 8,
+      foundInRaid: 5,
+      forTasks: 3,
+      forHideout: 5,
+      hideoutSlots: 5,
+      summary:
+        "8 needed (5 FIR): 3 for 1 task (3 FIR); 5 for 2 hideout upgrades (2 FIR); Workbench holds up to 5 installed; not counted: 1 task using it or accepting other items",
+    });
+    expect(item.data.usedInTasks).toEqual([
+      expect.objectContaining({
+        name: "Test Task",
+        count: 3,
+        foundInRaid: true,
+        objectives: ["Find the item in raid: Test Mod (3×, found in raid)", "Hand over the item (3× Test Mod, found in raid)"],
+      }),
+      expect.objectContaining({
+        name: "Any Task",
+        count: 0,
+        objectives: ["Hand over the item (5 of any of 2 items, this one included, found in raid)"],
+      }),
+    ]);
+    expect(item.data.hideout).toEqual([
+      { station: "Workbench", level: 1, count: 2, foundInRaid: true },
+      { station: "Workbench", level: 2, count: 3, foundInRaid: false },
+    ]);
+    expect(item.data.hideoutSlots).toEqual([{ station: "Workbench", level: 2, slots: 5 }]);
+
+    const counts = await call("get_item", { item: "Test Mod", include: [] });
+    expect(counts.data).toMatchObject({ hideoutUpgradeCount: 2, usedInTaskCount: 2 });
+    expect(counts.data.needed.total).toBe(8);
+    expect(counts.data.hideout).toBeUndefined();
+
+    const prices = await call("get_item_prices", { items: ["Test Mod", "Test Ammo"] });
+    expect(prices.data.rows[0].needed).toEqual({ total: 8, foundInRaid: 5, summary: item.data.needed.summary });
+    expect(prices.data.rows[0].usedInTasks).toEqual(["Test Task", "Any Task"]);
+    expect(prices.data.rows[1].needed).toMatchObject({ total: 0 });
+
+    const nothing = await call("get_item", { item: "Reward" });
+    expect(nothing.data.needed).toBeNull();
+  });
+
+  it("states flea eligibility and why a price is missing", async () => {
+    const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
+    Object.assign(items.ammo, { types: ["ammo", "noFlea"], minLevelForFlea: 30, buyFromTrader: [], sellToTrader: [] });
+    Object.assign(items.mod, { minLevelForFlea: 35, lastLowPrice: null, sellToTrader: [], buyFromTrader: [] });
+
+    const ammo = await call("get_item", { item: "Test Ammo" });
+    expect(ammo.data).toMatchObject({
+      flea: { status: "banned", minPlayerLevel: null },
+      bestSell: null,
+      noSellReason: "No trader buys it and it is banned from the flea market.",
+      cheapestBuy: null,
+      noBuyReason: "No trader sells it for roubles and it is banned from the flea market. Only found in raid, bartered, or crafted.",
+    });
+    // The gun builder reads the same ban and words it the same way.
+    const ammoOptions = await call("get_ammo_options", { build: { weapon: "Test Rifle" } });
+    const ammoRow = ammoOptions.data.ammo.find((row: { name: string }) => row.name === "Test Ammo");
+    expect(ammoRow).toMatchObject({ fleaPriceRUB: null, priceRUB: null });
+    expect(ammoRow.priceNote).toContain("it is banned from the flea market. Only found in raid, bartered, or crafted.");
+
+    const prices = await call("get_item_prices", { items: ["Test Mod", "Test Rifle"] });
+    expect(prices.data.rows[0]).toMatchObject({
+      flea: { status: "no listings", minPlayerLevel: 35 },
+      noBuyReason: "No trader sells it for roubles and it has no current flea listings.",
+    });
+    expect(prices.data.rows[1].flea).toEqual({ status: "listed", minPlayerLevel: null });
+    expect(prices.data.rows[1].noBuyReason).toBeUndefined();
+  });
+
+  it("gives weapons no per-slot value and reports their default build size", async () => {
+    const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
+    Object.assign(items.weapon, { width: 1, height: 1 });
+    Object.assign(items.mod, { sellToTrader: [{ trader: "trader", priceRUB: 9_000 }] });
+    Object.assign(items.weapon.properties as Record<string, unknown>, { defaultWidth: 5, defaultHeight: 2 });
+
+    const item = await call("get_item", { item: "Test Rifle" });
+    expect(item.data).toMatchObject({ size: "1x1", slots: 1, defaultBuildSize: "5x2" });
+    expect(item.data.bestSell.perSlotRUB).toBeNull();
+    expect(item.data.sizeNote).toBe(
+      "Weapon: 1x1 is the stripped weapon (default build 5x2; real size depends on attachments), so no per-slot value. Flea prices are for the default build, trader prices for the stripped weapon."
+    );
+
+    const mod = await call("get_item", { item: "Test Mod" });
+    expect(mod.data.bestSell.perSlotRUB).toBe(9_000);
+    expect(mod.data.sizeNote).toBeUndefined();
+  });
+
+  it("marks craft tools as kept", async () => {
+    const crafts = fixtures.crafts as { data: { requiredItems: unknown[] }[] };
+    crafts.data[0].requiredItems.push({ item: "mod", count: 1, attributes: { tool: true } });
+    const item = await call("get_item", { item: "Test Mod", include: ["crafts"] });
+    expect(item.data.crafts[0].input).toEqual(["1× Test Rifle", "1× Test Mod (tool, kept)"]);
   });
 
   it("builds, modifies, optimises, and shares guns with the builder's own logic", async () => {
@@ -243,7 +501,9 @@ describe("MCP endpoint", () => {
     ]);
 
     const options = await call("get_slot_options", { build: { weapon: "weapon" }, slotPath: ["slot"] });
-    expect(options.data.options[0]).toMatchObject({ id: "mod", priceRUB: 10_000, trader: "Tester", conflict: null });
+    expect(options.data.options[0]).toMatchObject({ id: "mod", priceRUB: 10_000, trader: "Tester" });
+    expect(options.data.options[0]).not.toHaveProperty("conflict");
+    expect(options.data.options[0]).not.toHaveProperty("installed");
 
     const ammo = await call("get_ammo_options", { build: { weapon: "weapon" } });
     expect(ammo.data.ammo.map((entry: { id: string }) => entry.id)).toEqual(["ammo"]);
@@ -254,6 +514,182 @@ describe("MCP endpoint", () => {
     });
     expect(compared.data.slots).toEqual([{ slot: "Scope", status: "added", left: null, right: "Test Mod" }]);
     expect(compared.data.right.ammo).toBe("Test Ammo");
+  });
+
+  it("keeps optimised guns usable, explains prices, and limits trader levels", async () => {
+    const items = (fixtures.items as { data: { items: Record<string, unknown> } }).data.items;
+    const translations = (fixtures.items_en as { data: Record<string, string> }).data;
+    const ironSight = "55818ac54bdc2d5b648b456e";
+    const part = (id: string, name: string, price: number | null, properties: Record<string, unknown>, extra = {}) => {
+      translations[`${id}-name`] = name;
+      items[id] = {
+        id,
+        name: `${id}-name`,
+        normalizedName: id,
+        types: ["mods"],
+        buyFromTrader: price === null ? [] : [{ trader: "trader", priceRUB: price, minTraderLevel: 1 }],
+        properties: { propertiesType: "ItemPropertiesWeaponMod", ergonomics: 0, recoilModifier: 0, ...properties },
+        ...extra,
+      };
+    };
+    const slot = (id: string, nameId: string, name: string, allowed: string[], required = false) => {
+      translations[`${id}-slot`] = name;
+      return { id, name: `${id}-slot`, nameId, required, filters: { allowedItems: allowed } };
+    };
+    part("carbine", "Test Carbine", 20_000, {
+      propertiesType: "ItemPropertiesWeapon",
+      ergonomics: 40,
+      recoilVertical: 100,
+      recoilHorizontal: 200,
+      caliber: "Caliber556x45NATO",
+      allowedAmmo: ["ammo", "ssa"],
+      defaultPreset: "carbine-default",
+      presets: ["carbine-default"],
+      slots: [
+        slot("c-mag", "mod_magazine", "Magazine", ["mag30", "mag10"]),
+        slot("c-rec", "mod_reciever", "Receiver", ["upper"], true),
+      ],
+    }, { types: ["gun"] });
+    part("upper", "Test Upper", 5_000, {
+      slots: [
+        slot("u-scope", "mod_scope", "Scope", ["dot"]),
+        slot("u-rear", "mod_sight_rear", "Rear sight", ["rear"]),
+        slot("u-gas", "mod_gas_block", "Gas block", ["gbSight", "gbPlain"]),
+      ],
+    });
+    part("mag30", "Test 30-round magazine", 3_000, {
+      propertiesType: "ItemPropertiesMagazine",
+      ergonomics: -2,
+      capacity: 30,
+      allowedAmmo: ["ammo", "ssa"],
+    });
+    part("mag10", "Test 10-round magazine", 1_000, {
+      propertiesType: "ItemPropertiesMagazine",
+      ergonomics: 5,
+      capacity: 10,
+      allowedAmmo: ["ammo", "ssa"],
+    });
+    part("rear", "Test rear sight", 1_000, { propertiesType: "ItemPropertiesScope" }, { categories: [ironSight] });
+    part("dot", "Test red dot", 9_000, { propertiesType: "ItemPropertiesScope" });
+    part("gbSight", "Test front sight gas block", 2_000, {});
+    part("gbPlain", "Test plain gas block", null, { ergonomics: 3, recoilModifier: -0.02 }, {
+      buyFromTrader: [{ trader: "trader", priceRUB: 1_500, minTraderLevel: 3 }],
+    });
+    // The factory gun aims with a rear sight and a front sight gas block.
+    translations["carbine-default-name"] = "Test Carbine Default";
+    items["carbine-default"] = {
+      id: "carbine-default",
+      name: "carbine-default-name",
+      normalizedName: "carbine-default",
+      properties: { propertiesType: "ItemPropertiesPreset", baseItem: "carbine" },
+      containsItems: ["carbine", "mag30", "upper", "rear", "gbSight"].map((item) => ({ item, count: 1 })),
+    };
+    items.ssa = {
+      id: "ssa",
+      name: "ssa-name",
+      normalizedName: "ssa",
+      types: ["ammo", "noFlea"],
+      properties: { propertiesType: "ItemPropertiesAmmo", caliber: "Caliber556x45NATO", damage: 38, penetrationPower: 57 },
+    };
+    translations["ssa-name"] = "Test SSA AP";
+    const full = {
+      weapon: "Test Carbine",
+      parts: [
+        { slotPath: ["Magazine"], item: "mag30" },
+        { slotPath: ["Receiver"], item: "upper" },
+        { slotPath: ["Receiver", "Rear sight"], item: "rear" },
+        { slotPath: ["Receiver", "Gas block"], item: "gbSight" },
+      ],
+    };
+
+    const optimised = await call("optimize_build", { build: full, goal: "ergonomics" });
+    expect(optimised.data.magazine).toEqual({ name: "Test 30-round magazine", capacity: 30, slotPath: ["c-mag"] });
+    expect(optimised.data.sights.map((sight: { kind: string }) => sight.kind)).toEqual(["rear sight", "front sight"]);
+    expect(optimised.data.problems).toEqual([]);
+    expect(optimised.data.weapon).toMatchObject({ caliber: "5.56x45mm NATO", caliberId: "556x45NATO" });
+    expect(optimised.data.ammo).toMatchObject({ loaded: null, note: expect.stringContaining("No ammo loaded") });
+    const smaller = await call("optimize_build", { build: full, goal: "ergonomics", minMagazineCapacity: 0 });
+    expect(smaller.data.magazine.capacity).toBe(10);
+
+    const fromBare = await call("optimize_build", { build: { weapon: "carbine" }, goal: "cost" });
+    expect(fromBare.data.magazine).not.toBeNull();
+
+    const unusable = await call("evaluate_build", {
+      build: { weapon: "carbine", parts: [{ slotPath: ["Receiver"], item: "upper" }, { slotPath: ["Gas block"], item: "gbPlain" }] },
+    });
+    expect(unusable.data.magazine).toBeNull();
+    expect(unusable.data.problems).toEqual([
+      expect.stringMatching(/^No magazine.*\["c-mag"\]/),
+      expect.stringMatching(
+        /^No usable sights: no optic and no rear sight or front sight, which the default preset aims with \(Test rear sight, Test front sight gas block\)/
+      ),
+    ]);
+    const factory = await call("evaluate_build", { build: { weapon: "carbine", preset: "default" } });
+    expect(factory.data.problems).toEqual([]);
+    const lostFront = await call("evaluate_build", {
+      build: { weapon: "carbine", preset: "default", parts: [{ slotPath: ["Gas block"], item: "gbPlain" }] },
+    });
+    expect(lostFront.data.problems).toEqual([
+      expect.stringMatching(/^No usable sights: no optic and no front sight \(only Test rear sight\), which the default preset aims with \(Test front sight gas block\)/),
+    ]);
+
+    const overBudget = await call("optimize_build", { build: full, goal: "recoil", budgetRUB: 1_000 });
+    expect(overBudget.data.withinBudget).toBe(false);
+    expect(overBudget.data.minimumCostRUB).toBe(overBudget.data.stats.costRUB);
+    expect(overBudget.data.notice).toMatch(/budget of 1,000 RUB can't be met.*weapon alone costs 20,000 RUB/);
+
+    // Nested slots can be named alone; the plain gas block needs trader level 3.
+    const gas = await call("get_slot_options", {
+      build: full,
+      slotPath: ["Gas block"],
+      priceSources: { maxTraderLevel: 2 },
+    });
+    expect(gas.data.slot.slotPath).toEqual(["c-rec", "u-gas"]);
+    const current = gas.data.options.filter((row: { installed?: boolean }) => row.installed);
+    expect(current.map((row: { name: string }) => row.name)).toEqual([gas.data.current]);
+    expect(gas.data.options.find((row: { id: string }) => row.id === "gbPlain")).toMatchObject({
+      priceRUB: null,
+      priceNote: expect.stringContaining("only Tester LL3 sells it"),
+    });
+    const buyable = await call("get_slot_options", {
+      build: full,
+      slotPath: ["Gas block"],
+      buyableOnly: true,
+      priceSources: { traderLevels: { tester: 2 } },
+    });
+    expect(buyable.data.options.map((row: { id: string }) => row.id)).toEqual(["gbSight"]);
+    const levelThree = await call("get_slot_options", { build: full, slotPath: ["Gas block"], priceSources: { maxTraderLevel: 3 } });
+    expect(levelThree.data.options.find((row: { id: string }) => row.id === "gbPlain").priceRUB).toBe(1_500);
+    const unknownTrader = await call("get_slot_options", {
+      build: full,
+      slotPath: ["Gas block"],
+      priceSources: { traderLevels: { Nobody: 1 } },
+    });
+    expect(unknownTrader.text).toContain('unknown trader "Nobody". Traders: Tester');
+
+    const missingSlot = await call("get_slot_options", { build: full, slotPath: ["Muzzle"] });
+    expect(missingSlot.text).toContain("Slots in this build: Magazine; Receiver; Receiver / Scope (empty); Receiver / Rear sight");
+
+    const ammo = await call("get_ammo_options", { build: full });
+    expect(ammo.data.ammo[0]).toMatchObject({
+      name: "Test SSA AP",
+      caliber: "5.56x45mm NATO",
+      priceRUB: null,
+      priceNote: expect.stringMatching(/no trader sells it, and it is banned from the flea market/),
+    });
+    const buyableAmmo = await call("get_ammo_options", { build: full, buyableOnly: true });
+    expect(buyableAmmo.data.ammo.map((row: { id: string }) => row.id)).toEqual(["ammo"]);
+
+    const loaded = await call("modify_build", { build: full, changes: [{ action: "set_ammo", ammo: "Test Ammo" }] });
+    expect(loaded.data.ammo).toMatchObject({ name: "Test Ammo", fits: true });
+    const weapon = await call("get_weapon", { weapon: "carbine", priceSources: { traders: false } });
+    expect(weapon.data.caliber).toBe("5.56x45mm NATO");
+    expect(weapon.data.baseStats).toMatchObject({
+      priceRUB: null,
+      priceNote: "Can't be bought: trader prices are turned off, and it has no flea price.",
+    });
+    const noAmmo = await call("modify_build", { build: full, changes: [{ action: "set_ammo" }] });
+    expect(noAmmo.text).toContain("set_ammo needs item");
   });
 
   it("filters weapons by caliber before limiting name matches", async () => {
@@ -272,8 +708,18 @@ describe("MCP endpoint", () => {
     const { data } = await call("list_weapons", { query: "AK", caliber: "7.62x39" });
     expect(data.total).toBe(1);
     expect(data.weapons).toEqual([
-      { id: "ak-25", name: "AK test 25", shortName: "AK test 25", caliber: "762x39", hasDefaultPreset: false },
+      {
+        id: "ak-25",
+        name: "AK test 25",
+        shortName: "AK test 25",
+        caliber: "7.62x39mm",
+        caliberId: "762x39",
+        hasDefaultPreset: false,
+      },
     ]);
+    // Calibers match by id or by their readable name.
+    expect((await call("list_weapons", { caliber: "762x39" })).data.total).toBe(1);
+    expect((await call("list_weapons", { caliber: "7.62x39mm" })).data.total).toBe(1);
     const all = await call("list_weapons", { query: "AK test", limit: 30 });
     expect(all.data.total).toBe(25);
     expect(all.data.nextOffset).toBeNull();
@@ -311,15 +757,59 @@ describe("MCP endpoint", () => {
     expect(mixed.text).toContain("A build is");
   });
 
+  it("accepts every build, change, and point form the published schemas once spelled out as unions", async () => {
+    const link = (await call("evaluate_build", { build: { weapon: "weapon", preset: "default" } })).data.shareLink;
+    for (const build of [
+      { shareLink: link },
+      { shareLink: link, ammo: "Test Ammo", name: "Named" },
+      { weapon: "weapon" },
+      { weapon: "weapon", preset: "default", parts: [{ slotPath: ["slot"], item: "mod" }], ammo: "ammo", name: "x" },
+    ]) {
+      expect((await call("evaluate_build", { build })).result.isError, JSON.stringify(build)).toBeFalsy();
+    }
+    for (const build of [{}, { shareLink: link, weapon: "weapon" }, { shareLink: link, parts: [] }, { weapon: "weapon", extra: 1 }]) {
+      const rejected = await call("evaluate_build", { build });
+      expect(rejected.result.isError, JSON.stringify(build)).toBe(true);
+      expect(rejected.text).toContain("A build is");
+    }
+
+    const modified = await call("modify_build", {
+      build: { weapon: "weapon" },
+      changes: [{ action: "set_ammo", ammo: "Test Ammo" }, { action: "fill_required" }, { action: "clear_ammo" }],
+    });
+    expect(modified.result.isError).toBeFalsy();
+    expect(modified.data.applied).toHaveLength(3);
+    const badChange = await call("modify_build", { build: { weapon: "weapon" }, changes: [{ action: "set_ammo" }] });
+    expect(badChange.text).toContain("set_ammo needs item");
+    const noSlot = await call("modify_build", { build: { weapon: "weapon" }, changes: [{ action: "install", item: "mod" }] });
+    expect(noSlot.result.isError).toBe(true);
+
+    // Coordinates win when a point has both, as the first branch of the old union did.
+    const plan = await call("create_raid_plan", {
+      map: "factory",
+      name: "Points",
+      route: [{ x: 1, z: 13, place: "nowhere at all" }, { place: "gate", x: "1" }, { x: 1, place: "gate" }],
+    });
+    expect(plan.result.isError).toBeFalsy();
+    const decoded = await decodePlanSharePayload(new URLSearchParams(plan.data.shareLink.split("#")[1]).get("p")!);
+    expect(decoded.route.map((waypoint) => waypoint.position)).toEqual([
+      { x: 1, z: 13 },
+      { x: 1, z: 3 },
+      { x: 1, z: 3 },
+    ]);
+    const badPoint = await call("create_raid_plan", { map: "factory", route: [{ x: 1 }] });
+    expect(badPoint.text).toContain('A point is {"x"');
+  });
+
   it("describes maps and creates plans from named places that open in the raid planner", async () => {
     const maps = await call("list_maps");
     expect(maps.data.maps.map((map: { key: string }) => map.key)).toContain("factory");
 
     const details = await call("get_map_details", { map: "Factory", sections: ["extracts", "locks"] });
     expect(details.data).toMatchObject({ players: "5-6", raidDurationMinutes: 20 });
-    expect(details.data.extracts).toEqual([{ name: "Gate", faction: "pmc", x: 1, z: 3, y: 2, level: "Ground" }]);
+    expect(details.data.extracts[0]).toEqual({ name: "Gate", faction: "pmc", x: 1, z: 3, y: 2, level: "Ground" });
     expect(details.data.locks[0]).toMatchObject({ key: "Test Key", keyUrl: "http://localhost/item/test-key" });
-    expect(details.data.layers[0].options[0]).toEqual({ id: "extracts:pmc", label: "PMC", count: 1 });
+    expect(details.data.layers[0].options[0]).toEqual({ id: "extracts:pmc", label: "PMC", count: 2 });
 
     const created = await call("create_raid_plan", {
       map: "factory",
@@ -348,6 +838,140 @@ describe("MCP endpoint", () => {
 
     const ambiguous = await call("create_raid_plan", { map: "the moon", name: "x" });
     expect(ambiguous.result.isError).toBe(true);
+  });
+
+  it("summarises map details compactly, with bosses, extract items, and filtered, paged lists", async () => {
+    const details = await call("get_map_details", { map: "factory" });
+    expect(details.data.extracts[1]).toMatchObject({ name: "Car V-Ex", requiresItem: "Test Rifle" });
+    expect(details.data.bosses).toEqual([
+      {
+        name: "Reshala",
+        spawnChance: 0.5,
+        locations: [
+          { name: "Stronghold", chance: 0.5, x: -44, z: 44, level: "Ground" },
+          { name: "Dorms", chance: 0.5 },
+        ],
+        escorts: 4,
+      },
+    ]);
+    expect(details.data.spawnZones).toContainEqual({
+      kind: "boss",
+      zone: "Stronghold",
+      points: 1,
+      x: -44,
+      z: 44,
+      level: "Ground",
+      bosses: ["Reshala 25%"],
+    });
+    expect(details.data.spawnZones).toContainEqual(expect.objectContaining({ kind: "pmc", zone: null, near: "Gate" }));
+    expect(details.data.spawns).toBeUndefined();
+    expect(details.data.locks).toBeUndefined();
+
+    const filtered = await call("get_map_details", { map: "factory", spawnKinds: ["pmc"], lockKeys: ["test"] });
+    expect(filtered.data).toMatchObject({ spawnTotal: 1, nextSpawnOffset: null, lockTotal: 1, nextLockOffset: null });
+    expect(filtered.data.spawns).toEqual([{ kind: "pmc", zone: null, x: 2, z: 5, y: 2, level: "Ground" }]);
+    expect(filtered.data.spawnZones).toBeUndefined();
+    const none = await call("get_map_details", { map: "factory", lockKeys: ["nothing"] });
+    expect(none.data).toMatchObject({ lockTotal: 0, locks: [] });
+
+    const paged = await call("get_map_details", { map: "factory", sections: ["spawns", "locks", "lootContainers"], spawnOffset: 2 });
+    expect(paged.data).toMatchObject({ spawnTotal: 3, nextSpawnOffset: null });
+    expect(paged.data.spawns).toHaveLength(1);
+  });
+
+  it("bounds typo matching per call and keeps long junk inputs from inflating replies", async () => {
+    const junk = Array.from({ length: 40 }, (_, index) => `${"qzxv ".repeat(60)}${index}`);
+    const priced = await call("get_item_prices", { items: junk });
+    expect(priced.data.unmatched).toHaveLength(40);
+    expect(Math.max(...priced.data.unmatched.map((row: { input: string }) => row.input.length))).toBeLessThanOrEqual(100);
+    expect(priced.data.unmatchedNote).toMatch(/first 25 unmatched names/);
+    const linked = await call("create_import_link", { itemGroups: [{ name: "Junk", items: junk }] });
+    expect(linked.data.notes.length).toBeLessThanOrEqual(22);
+    expect(linked.data.notes).toContain("20 more inputs were left out or matched inexactly; itemMatches lists them.");
+    expect(linked.data.itemMatches.every((row: { input: string }) => row.input.length <= 100)).toBe(true);
+  });
+
+  it("caps the problems one plan error lists and refuses oversized drawings before resolving names", async () => {
+    const names = Array.from({ length: 300 }, (_, index) => ({ place: `nowhere number ${index} zzqq` }));
+    const rejected = await call("create_raid_plan", { map: "factory", route: names });
+    expect(rejected.result.isError).toBe(true);
+    expect(rejected.text).toContain("Fix these 300 problems");
+    expect(rejected.text).toContain('route[19]: No place is named "nowhere number 19 zzqq"');
+    expect(rejected.text).not.toContain("route[20]:");
+    expect(rejected.text).toContain("- and 280 more.");
+    expect(rejected.text).toContain("Close spellings are only suggested for the first 20 unknown names.");
+    expect(rejected.text.length).toBeLessThan(4_000);
+
+    const oversized = await call("create_raid_plan", {
+      map: "factory",
+      drawings: Array.from({ length: 5 }, () => ({ kind: "pen", points: Array.from({ length: 4_100 }, () => ({ place: "nowhere" })) })),
+    });
+    expect(oversized.text).toMatch(/^The plan has 20500 drawing points; the limit is 20000/);
+  });
+
+  it("reports every plan problem at once and only warns about cosmetic ones", async () => {
+    const rejected = await call("create_raid_plan", {
+      map: "factory",
+      route: [{ place: "Gaet" }, { place: "nowhere at all" }, { x: 99_999, z: -99_999 }],
+      drawings: [{ kind: "pen", color: "purple", points: [{ x: 0, z: 0 }, { place: "Car" }] }],
+      notes: [{ at: { x: 1, z: 99_999 }, title: "Far" }],
+    });
+    expect(rejected.result.isError).toBe(true);
+    expect(rejected.text).toContain("Fix these 3 problems");
+    expect(rejected.text).toContain('route[1]: No place is named "nowhere at all".');
+    expect(rejected.text).toContain("route[2]: x 99999, z -99999 is outside Factory");
+    expect(rejected.text).toContain("notes[0].at: x 1, z 99999 is outside Factory");
+
+    const created = await call("create_raid_plan", {
+      map: "factory",
+      route: [{ place: "Gaet" }, { place: "car" }],
+      drawings: [{ kind: "arrow", color: "purple", points: [{ x: 0, z: 0 }, { place: "stronghold" }] }],
+      layers: ["extracts:pmc", "spawns:nowhere"],
+    });
+    expect(created.data.name).toBe("Factory: Gate to Car V-Ex");
+    expect(created.data.resolvedPlaces).toEqual([
+      { input: "Gaet", resolved: "Gate (pmc extract)", match: "typo", approximate: true, level: "Ground" },
+      { input: "car", resolved: "Car V-Ex (pmc extract)", match: "partial", approximate: true, level: "Ground" },
+      {
+        input: "stronghold",
+        resolved: "Stronghold (scav spawn)",
+        match: "exact",
+        level: "Ground",
+        alsoNamed: ["Stronghold (boss spawn)"],
+      },
+    ]);
+    expect(created.data.warnings).toEqual([
+      '"Gaet" was placed at Gate (pmc extract), a typo match. Describe it by that name, or give coordinates.',
+      '"car" was placed at Car V-Ex (pmc extract), a partial match. Describe it by that name, or give coordinates.',
+      'Colour "purple" is not available, so red was used. Colours: tan, green, orange, red, blue, white.',
+      "Left out layer ids this map does not have: spawns:nowhere.",
+    ]);
+    const plan = await decodePlanSharePayload(new URLSearchParams(created.data.shareLink.split("#")[1]).get("p")!);
+    expect(plan.drawings[0].color).toBe("#d46b6b");
+    expect(plan.name).toBe("Factory: Gate to Car V-Ex");
+
+    const unnamed = await call("create_raid_plan", { map: "factory", route: [{ x: 1, z: 1 }] });
+    expect(unnamed.data.name).toBe("Factory raid plan");
+    const badMap = await call("create_raid_plan", { map: "the moon" });
+    expect(badMap.text).toContain('No map matches "the moon"');
+  });
+
+  it("warns when a plan link has points outside the map", async () => {
+    const { encodePlanSharePayload } = await import("@/app/lib/raid-planner/share");
+    const payload = await encodePlanSharePayload({
+      id: "plan",
+      name: "Far away",
+      mapKey: "factory",
+      createdAt: 1,
+      updatedAt: 1,
+      enabledLayers: [],
+      route: [{ id: "a", position: { x: 1, z: 3 } }, { id: "b", position: { x: 5000, z: 5000 } }],
+      drawings: [],
+      notes: [],
+    });
+    const read = await call("read_raid_plan", { link: payload });
+    expect(read.data.warnings).toEqual(["1 point is outside the map."]);
+    expect(read.data.route[0].near).toBe("Gate (pmc extract, 0 m)");
   });
 
   it("bundles groups, builds, and plans into an import link the app's restore accepts", async () => {

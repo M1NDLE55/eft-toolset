@@ -5,6 +5,7 @@ import {
   executeTarkovOperation,
 } from "@/app/lib/api/tarkov-server";
 import { createTarkovFixtures } from "./fixtures/tarkov";
+import type { MapDetails } from "@/app/lib/types/raidPlanner";
 
 let fixtures: Record<string, unknown> = createTarkovFixtures();
 
@@ -244,7 +245,7 @@ describe("Tarkov JSON adapter", () => {
       expect.objectContaining({
         name: "Test Rifle",
         buyFor: expect.arrayContaining([
-          { vendor: { name: "Tester" }, priceRUB: 40_000 },
+          { vendor: { name: "Tester" }, priceRUB: 40_000, minTraderLevel: 3 },
           { vendor: { name: "Flea Market" }, priceRUB: 55_000 },
         ]),
         sellFor: expect.arrayContaining([
@@ -255,7 +256,7 @@ describe("Tarkov JSON adapter", () => {
           expect.objectContaining({
             name: "Test Task",
             trader: { name: "Tester" },
-            objectives: [{ description: "Find the rifle" }],
+            objectives: [expect.objectContaining({ description: "Find the rifle" })],
           }),
         ],
         bartersUsing: [
@@ -276,6 +277,135 @@ describe("Tarkov JSON adapter", () => {
     );
   });
 
+  it("lists only tasks and objectives that need the item, not any-item objectives", async () => {
+    // tarkov.dev expands "Sell any items to <trader>" into every sellable item ID.
+    const everyItem = ["weapon", ...Array.from({ length: 3_300 }, (_, index) => `filler-${index}`)];
+    const tasks = fixtures.tasks as { data: { tasks: Record<string, unknown> } };
+    tasks.data.tasks["any-item"] = {
+      id: "any-item",
+      name: "any-item-name",
+      trader: "trader",
+      objectives: [
+        { description: "sell-any", type: "sellItem", items: everyItem },
+        { description: "sell-any", type: "sellItem", items: [] },
+      ],
+    };
+    tasks.data.tasks.mixed = {
+      id: "mixed",
+      name: "mixed-name",
+      trader: "trader",
+      objectives: [
+        { description: "sell-any", type: "sellItem", items: everyItem },
+        { description: "extract", type: "extract" },
+        { description: "plant-rifle", type: "plantItem", items: ["weapon", "mod"] },
+      ],
+    };
+    Object.assign((fixtures.tasks_en as { data: Record<string, string> }).data, {
+      "any-item-name": "Any Item Task",
+      "mixed-name": "Mixed Task",
+      "sell-any": "Sell any items to Tester",
+      extract: "Survive and extract",
+      "plant-rifle": "Stash the rifle",
+    });
+
+    const detail = await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, {
+      gameMode: "regular",
+      name: "Test Rifle",
+    }) as { usedInTasks: { name: string; objectives: { description: string | null }[] }[] };
+    expect(
+      detail.usedInTasks.map(({ name, objectives }) => ({
+        name,
+        objectives: objectives.map(({ description }) => ({ description })),
+      }))
+    ).toEqual([
+      { name: "Test Task", objectives: [{ description: "Find the rifle" }] },
+      { name: "Mixed Task", objectives: [{ description: "Stash the rifle" }] },
+    ]);
+
+    const [group] = await executeTarkovOperation(TARKOV_OPERATIONS.groupItems, {
+      gameMode: "regular",
+      names: ["Test Rifle"],
+    }) as { usedInTasks: { name: string }[] }[];
+    expect(group.usedInTasks).toEqual([{ name: "Test Task" }, { name: "Mixed Task" }]);
+
+    const modDetail = await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, {
+      gameMode: "regular",
+      name: "Test Mod",
+    }) as { usedInTasks: { name: string }[] };
+    expect(modDetail.usedInTasks.map(({ name }) => name)).toEqual(["Mixed Task"]);
+  });
+
+  it("joins the hideout upgrades that consume an item and the station slots it is installed in", async () => {
+    const detail = await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, {
+      gameMode: "pve",
+      name: "Test Mod",
+    }) as { hideoutRequirements: unknown[]; hideoutSlots: unknown[] };
+    expect(detail.hideoutRequirements).toEqual([
+      { station: { name: "Workbench" }, level: 1, count: 2, foundInRaid: true },
+      { station: { name: "Workbench" }, level: 2, count: 3, foundInRaid: false },
+    ]);
+    expect(detail.hideoutSlots).toEqual([{ station: { name: "Workbench" }, level: 2, slots: 5 }]);
+    expect(vi.mocked(globalThis.fetch).mock.calls.map(([url]) => String(url))).toContain(
+      "https://json.tarkov.dev/pve/hideout"
+    );
+  });
+
+  it("rejects malformed hideout levels", async () => {
+    const hideout = fixtures.hideout as { data: { station: { levels: unknown } } };
+    hideout.data.station.levels = [{ level: 1, itemRequirements: [{ item: "mod", count: "two" }] }];
+    await expect(
+      executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, { gameMode: "regular", name: "Test Mod" })
+    ).rejects.toThrow(/invalid hideout data/i);
+  });
+
+  it("keeps each objective's type, count, found-in-raid flag, and the task's faction", async () => {
+    const tasks = fixtures.tasks as { data: { tasks: Record<string, Record<string, unknown>> } };
+    Object.assign(tasks.data.tasks.task, {
+      factionName: "USEC",
+      objectives: [
+        { description: "task-objective", type: "findItem", count: 2, foundInRaid: true, optional: false, items: ["weapon"] },
+        { description: "task-objective", type: "giveItem", count: 2, foundInRaid: true, items: ["weapon", "mod"] },
+      ],
+    });
+    const detail = await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, {
+      gameMode: "regular",
+      name: "Test Rifle",
+    }) as { usedInTasks: { faction: string | null; objectives: unknown[] }[] };
+    expect(detail.usedInTasks[0].faction).toBe("USEC");
+    expect(detail.usedInTasks[0].objectives).toEqual([
+      { description: "Find the rifle", type: "findItem", count: 2, foundInRaid: true, optional: false, alternatives: 0 },
+      { description: "Find the rifle", type: "giveItem", count: 2, foundInRaid: true, optional: false, alternatives: 1 },
+    ]);
+  });
+
+  it("flags flea-banned items, the flea level, weapon build sizes, and craft tools", async () => {
+    const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
+    Object.assign(items.ammo, { types: ["ammo", "noFlea"], minLevelForFlea: 0, lastLowPrice: 90 });
+    Object.assign(items.mod, { minLevelForFlea: 35 });
+    Object.assign(items.weapon.properties as Record<string, unknown>, { defaultWidth: 5, defaultHeight: 2 });
+    const crafts = fixtures.crafts as { data: { requiredItems: unknown[] }[] };
+    crafts.data[0].requiredItems.push({ item: "mod", count: 1, attributes: { tool: true } });
+
+    const [ammo, mod, weapon] = await executeTarkovOperation(TARKOV_OPERATIONS.groupItems, {
+      gameMode: "regular",
+      names: ["Test Ammo", "Test Mod", "Test Rifle"],
+    }) as { fleaBanned: boolean; fleaMinLevel: number | null; weapon?: unknown; sellFor: { vendor: { name: string } }[] }[];
+    expect(ammo).toMatchObject({ fleaBanned: true, fleaMinLevel: 0 });
+    expect(ammo.sellFor.map((offer) => offer.vendor.name)).not.toContain("Flea Market");
+    expect(mod).toMatchObject({ fleaBanned: false, fleaMinLevel: 35 });
+    expect(mod.weapon).toBeUndefined();
+    expect(weapon.weapon).toEqual({ defaultWidth: 5, defaultHeight: 2 });
+
+    const detail = await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, {
+      gameMode: "regular",
+      name: "Test Mod",
+    }) as { craftsUsing: { requiredItems: { item: { name: string }; tool?: boolean }[] }[] };
+    expect(detail.craftsUsing[0].requiredItems).toEqual([
+      expect.not.objectContaining({ tool: true }),
+      expect.objectContaining({ item: expect.objectContaining({ name: "Test Mod" }), tool: true }),
+    ]);
+  });
+
   it("joins map reference IDs without exposing the bulk map payload", async () => {
     const map = await executeTarkovOperation(TARKOV_OPERATIONS.mapDetails, {
       gameMode: "regular",
@@ -284,7 +414,10 @@ describe("Tarkov JSON adapter", () => {
     expect(map).toEqual(
       expect.objectContaining({
         key: "factory",
-        extracts: [expect.objectContaining({ name: "Gate" })],
+        extracts: [
+          expect.objectContaining({ name: "Gate", transferItem: null }),
+          expect.objectContaining({ name: "Car V-Ex", transferItem: { name: "Test Rifle", count: 1 } }),
+        ],
         locks: [expect.objectContaining({ keyName: "Test Key", keyNormalizedName: "test-key" })],
         lootContainers: [
           expect.objectContaining({ typeId: "crate", typeName: "Supply crate" }),
@@ -292,6 +425,35 @@ describe("Tarkov JSON adapter", () => {
         stationaryWeapons: [expect.objectContaining({ name: "Mounted gun" })],
       })
     );
+  });
+
+  it("names spawn zones and bosses from the map translations, skipping malformed bosses", async () => {
+    const map = (await executeTarkovOperation(TARKOV_OPERATIONS.mapDetails, {
+      gameMode: "regular",
+      mapKey: "factory",
+    })) as MapDetails;
+    expect(map.spawns.map((spawn) => spawn.zoneLabel ?? null)).toEqual(["Stronghold", "Stronghold", null]);
+    expect(map.bosses).toEqual([
+      {
+        name: "Reshala",
+        spawnChance: 0.5,
+        locations: [
+          { zone: "ZoneScavBase", name: "Stronghold", chance: 0.5 },
+          { zone: "ZoneDormitory", name: "Dorms", chance: 0.5 },
+        ],
+        escorts: 4,
+        spawnTimeSeconds: null,
+        trigger: null,
+      },
+    ]);
+  });
+
+  it("spells out mob names tarkov.dev left untranslated", async () => {
+    const { readableMobName } = await import("@/app/lib/api/tarkov-server");
+    expect(readableMobName("infectedScreamer")).toBe("Infected screamer");
+    expect(readableMobName("Reshala")).toBe("Reshala");
+    expect(readableMobName("AF")).toBe("AF");
+    expect(readableMobName("Infected Tagilla")).toBe("Infected Tagilla");
   });
 
   it("rejects variables outside the operation contract", async () => {

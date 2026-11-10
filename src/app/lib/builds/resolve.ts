@@ -9,7 +9,8 @@ import type {
 import type { CatalogItem } from "@/app/lib/cache/types";
 import type { GameMode } from "@/components/game-mode/mode";
 import { InputError } from "@/app/lib/input-error";
-import { filterCatalog } from "@/app/lib/search/filter-catalog";
+import { indexItems, matchItemReference, type CatalogIndex } from "@/app/lib/search/item-reference";
+import type { FuzzyBudget } from "@/app/lib/search/filter-catalog";
 import { normalizeText } from "@/app/lib/search/normalize-text";
 import { ammoFits, ammoOptions } from "./ammo";
 import { slotKey } from "./compare";
@@ -28,6 +29,8 @@ export interface BuildSource {
   guns: readonly GunListItem[];
   loadPreset(id: string): Promise<PresetContents | null>;
   loadAmmo(ids: readonly string[]): Promise<AmmoItemData[]>;
+  /** Bounds typo matching across every name resolved in one request. */
+  budget?: FuzzyBudget;
 }
 
 /** A part to install: the slot path from the weapon down, and a part id or name. */
@@ -66,34 +69,59 @@ export function asCatalog(items: readonly { id: string; name: string; shortName:
   }));
 }
 
-/** Picks a candidate by id, exact name, unique short name, or best search match. */
+const candidateIndexes = new WeakMap<readonly object[], CatalogIndex>();
+
+/** The name index of a candidate list, built once per list. */
+function candidateIndex(candidates: readonly { id: string; name: string; shortName: string | null }[]) {
+  let index = candidateIndexes.get(candidates);
+  if (!index) {
+    index = indexItems(asCatalog(candidates));
+    candidateIndexes.set(candidates, index);
+  }
+  return index;
+}
+
+/**
+ * Picks a candidate the way item names resolve everywhere else (matchItemReference): id,
+ * exact name, unique short name, then search with typo tolerance. A name several candidates
+ * share equally is ambiguous and throws with the candidates instead of taking the first.
+ * Inexact matches add a note saying what was assumed.
+ */
 function pickByReference<T extends { id: string; name: string; shortName: string | null }>(
   candidates: readonly T[],
   reference: string,
-  noun: string
+  noun: string,
+  notes?: string[],
+  plural = `${noun}s`,
+  budget?: FuzzyBudget
 ): T {
-  const value = reference.trim();
-  const byId = candidates.find((candidate) => candidate.id === value);
-  if (byId) return byId;
-  const needle = normalizeText(value);
-  const byName = candidates.find((candidate) => normalizeText(candidate.name) === needle);
-  if (byName) return byName;
-  const byShort = candidates.filter(
-    (candidate) => candidate.shortName && normalizeText(candidate.shortName) === needle
-  );
-  if (byShort.length === 1) return byShort[0];
-  if (byShort.length > 1) {
+  const match = matchItemReference(candidateIndex(candidates), reference, { budget });
+  if (match.status === "ambiguous") {
     throw new AmbiguousReferenceError(
-      `"${reference}" matches several ${noun}s: ${byShort.map((candidate) => candidate.name).join("; ")}. Use a full name or id.`
+      `"${reference}" matches several ${plural}: ${match.candidates.join("; ")}. Use a full name or id.`
     );
   }
-  const [match] = filterCatalog(asCatalog(candidates), value, [], 1);
-  if (!match) throw new InputError(`No ${noun} matches "${reference}".`);
-  return candidates.find((candidate) => candidate.id === match.id)!;
+  if (match.status === "none") {
+    throw new InputError(
+      `No ${noun} matches "${reference}".${match.suggestions.length ? ` Did you mean: ${match.suggestions.join("; ")}?` : ""}`
+    );
+  }
+  const picked = candidates.find((candidate) => candidate.id === match.item.id)!;
+  if (notes && (match.matchedBy === "search" || match.matchedBy === "fuzzy" || match.assumed)) {
+    notes.push(
+      match.assumed ??
+        `"${reference}" was read as ${picked.name}${match.matchedBy === "fuzzy" ? " (closest spelling)" : " (best search match)"}.`
+    );
+  }
+  return picked;
 }
 
-export function resolveWeapon(source: Pick<BuildSource, "guns" | "lookup">, reference: string): BuildItemData {
-  const gun = pickByReference(source.guns, reference, "weapon");
+export function resolveWeapon(
+  source: Pick<BuildSource, "guns" | "lookup" | "budget">,
+  reference: string,
+  notes?: string[]
+): BuildItemData {
+  const gun = pickByReference(source.guns, reference, "weapon", notes, undefined, source.budget);
   const item = source.lookup.get(gun.id);
   if (!isDetailed(item)) throw new InputError(`Weapon data for ${gun.name} is unavailable.`);
   return item;
@@ -146,31 +174,18 @@ function treeProblems(root: BuildNode, lookup: PartLookup): string[] {
   return problems;
 }
 
-function matchSlot(item: BuildItemData, segment: string): ModSlotDef {
+/** The slots of a part matching a segment by id, name id, or name, most exact first. */
+function slotMatches(item: BuildItemData, segment: string): ModSlotDef[] {
   const value = segment.trim();
-  const byId = item.slots.find((slot) => slot.id === value);
-  if (byId) return byId;
+  const byId = item.slots.filter((slot) => slot.id === value);
+  if (byId.length) return byId;
   const needle = normalizeText(value);
-  const candidates = [
+  const tiers = [
     item.slots.filter((slot) => normalizeText(slot.nameId) === needle),
     item.slots.filter((slot) => normalizeText(slot.name) === needle),
     item.slots.filter((slot) => slotKey(slot.nameId) === slotKey(needle)),
   ];
-  for (const matches of candidates) {
-    if (matches.length === 1) return matches[0];
-    if (matches.length > 1) {
-      throw new InputError(
-        `"${segment}" matches several slots on ${item.name}: ${matches
-          .map((slot) => `${slot.name} (id ${slot.id})`)
-          .join(", ")}. Use the slot id.`
-      );
-    }
-  }
-  throw new InputError(
-    `${item.name} has no slot "${segment}". Its slots are: ${
-      item.slots.map((slot) => `${slot.name} (${slot.nameId}, id ${slot.id})`).join(", ") || "none"
-    }.`
-  );
+  return tiers.find((matches) => matches.length > 0) ?? [];
 }
 
 interface ResolvedSlot {
@@ -180,36 +195,125 @@ interface ResolvedSlot {
   current: BuildNode | undefined;
 }
 
-/** Follows slot ids, name ids, or names from the weapon down to a slot. */
+type SlotHit = Omit<ResolvedSlot, "current">;
+
+/** Matching slots on parts installed below a node, so a nested slot can be named alone. */
+function nestedSlotMatches(node: BuildNode, path: string[], lookup: PartLookup, segment: string): SlotHit[] {
+  const hits: SlotHit[] = [];
+  const walk = (parent: BuildNode, parentPath: string[]) => {
+    const item = lookup.get(parent.itemId);
+    if (!isDetailed(item)) return;
+    if (parent !== node) hits.push(...slotMatches(item, segment).map((slot) => ({ parentPath, parent, slot })));
+    for (const slot of item.slots) {
+      const child = childAt(parent, slot.id);
+      if (child) walk(child, [...parentPath, slot.id]);
+    }
+  };
+  walk(node, path);
+  return hits;
+}
+
+const MAX_LISTED_SLOTS = 40;
+
+/** Every slot of the installed parts, as name paths, for error messages. */
+function slotTree(root: BuildNode, lookup: PartLookup) {
+  const labels: string[] = [];
+  const walk = (node: BuildNode, path: string[]) => {
+    for (const slot of lookup.get(node.itemId)?.slots ?? []) {
+      const childPath = [...path, slot.id];
+      const child = childAt(node, slot.id);
+      labels.push(`${slotLabel(root, lookup, childPath)}${child ? "" : " (empty)"}`);
+      if (child) walk(child, childPath);
+    }
+  };
+  walk(root, []);
+  return labels.length > MAX_LISTED_SLOTS ? [...labels.slice(0, MAX_LISTED_SLOTS), "…"] : labels;
+}
+
+/**
+ * Follows slot ids, name ids, or names from the weapon down to a slot. A segment that names
+ * no slot at its level may name one slot on the parts installed below it.
+ */
 export function resolveSlotPath(root: BuildNode, lookup: PartLookup, segments: readonly string[]): ResolvedSlot {
   if (segments.length === 0) throw new InputError("slotPath needs at least one slot.");
   let node = root;
-  const parentPath: string[] = [];
+  let parentPath: string[] = [];
   for (let index = 0; index < segments.length; index += 1) {
+    const segment = segments[index];
     const item = lookup.get(node.itemId);
     if (!isDetailed(item)) throw new InputError(`Part data for ${node.itemId} is unavailable.`);
-    const slot = matchSlot(item, segments[index]);
-    const child = childAt(node, slot.id);
-    if (index === segments.length - 1) return { parentPath, parent: node, slot, current: child };
-    if (!child) {
+    const matches = slotMatches(item, segment);
+    if (matches.length > 1) {
       throw new InputError(
-        `${slotLabel(root, lookup, [...parentPath, slot.id])} is empty, so it has no slot "${segments[index + 1]}". Install a part there first.`
+        `"${segment}" matches several slots on ${item.name}: ${matches
+          .map((slot) => `${slot.name} (id ${slot.id})`)
+          .join(", ")}. Use the slot id.`
       );
     }
-    parentPath.push(slot.id);
+    let hit: SlotHit | undefined = matches[0] && { parentPath, parent: node, slot: matches[0] };
+    if (!hit) {
+      const nested = nestedSlotMatches(node, parentPath, lookup, segment);
+      if (nested.length > 1) {
+        throw new InputError(
+          `"${segment}" matches several slots: ${nested
+            .map((entry) => `${slotLabel(root, lookup, [...entry.parentPath, entry.slot.id])} (slotPath ${JSON.stringify([...entry.parentPath, entry.slot.id])})`)
+            .join("; ")}. Give the full slotPath.`
+        );
+      }
+      hit = nested[0];
+    }
+    if (!hit) {
+      throw new InputError(
+        `${item.name} has no slot "${segment}", and no installed part below it has one. Its slots are: ${
+          item.slots.map((slot) => `${slot.name} (${slot.nameId}, id ${slot.id})`).join(", ") || "none"
+        }. Slots in this build: ${slotTree(root, lookup).join("; ") || "none"}.`
+      );
+    }
+    ({ parentPath, parent: node } = hit);
+    const child = childAt(node, hit.slot.id);
+    if (index === segments.length - 1) return { parentPath, parent: node, slot: hit.slot, current: child };
+    if (!child) {
+      throw new InputError(
+        `${slotLabel(root, lookup, [...parentPath, hit.slot.id])} is empty, so it has no slot "${segments[index + 1]}". Install a part there first.`
+      );
+    }
+    parentPath = [...parentPath, hit.slot.id];
     node = child;
   }
   throw new InputError("slotPath could not be resolved.");
 }
 
-function pickPartForSlot(slot: ModSlotDef, lookup: PartLookup, reference: string): BuildItemData {
-  const allowed = slot.allowedItemIds.flatMap((id) => {
-    const item = lookup.get(id);
-    return item ? [item] : [];
-  });
+const allowedParts = new WeakMap<PartLookup, WeakMap<ModSlotDef, BuildItemData[]>>();
+
+/** The known parts a slot accepts, listed once per slot so their name index is reused. */
+function partsForSlot(slot: ModSlotDef, lookup: PartLookup) {
+  let bySlot = allowedParts.get(lookup);
+  if (!bySlot) {
+    bySlot = new WeakMap();
+    allowedParts.set(lookup, bySlot);
+  }
+  let allowed = bySlot.get(slot);
+  if (!allowed) {
+    allowed = slot.allowedItemIds.flatMap((id) => {
+      const item = lookup.get(id);
+      return item ? [item] : [];
+    });
+    bySlot.set(slot, allowed);
+  }
+  return allowed;
+}
+
+function pickPartForSlot(
+  slot: ModSlotDef,
+  lookup: PartLookup,
+  reference: string,
+  notes?: string[],
+  budget?: FuzzyBudget
+): BuildItemData {
+  const allowed = partsForSlot(slot, lookup);
   if (allowed.length === 0) throw new InputError(`No parts are known for ${slot.name}.`);
   try {
-    return pickByReference(allowed, reference, `part for ${slot.name}`);
+    return pickByReference(allowed, reference, `part for ${slot.name}`, notes, `parts for ${slot.name}`, budget);
   } catch (error) {
     if (!(error instanceof InputError) || error instanceof AmbiguousReferenceError) throw error;
     const examples = allowed
@@ -227,7 +331,7 @@ export async function resolveAmmo(
   source: BuildSource,
   root: BuildNode,
   reference: string
-): Promise<{ ammo: AmmoItemData; fits: boolean }> {
+): Promise<{ ammo: AmmoItemData; fits: boolean; note?: string }> {
   const options = ammoOptions(root, source.lookup);
   const ammo = await source.loadAmmo(options.ids);
   const value = reference.trim();
@@ -237,8 +341,9 @@ export async function resolveAmmo(
   }
   if (ammo.length === 0) throw new InputError("This build does not accept any known ammo.");
   try {
-    const picked = pickByReference(ammo, value, "compatible ammo");
-    return { ammo: picked, fits: ammoFits(picked.id, options) };
+    const notes: string[] = [];
+    const picked = pickByReference(ammo, value, "compatible ammo", notes, "compatible rounds", source.budget);
+    return { ammo: picked, fits: ammoFits(picked.id, options), ...(notes.length ? { note: notes[0] } : {}) };
   } catch (error) {
     if (error instanceof InputError && !(error instanceof AmbiguousReferenceError)) {
       throw new InputError(`${error.message} Use get_ammo_options to list the ammo this build accepts.`);
@@ -253,15 +358,24 @@ interface InstalledPart {
   label: string;
   replaced: BuildNode | undefined;
   conflict: string | null;
+  /** Set when the part name was not an exact match: what it was read as. */
+  note?: string;
 }
 
 /**
  * Installs a part in a slot, replacing what is there and carrying its attachments over where
  * they fit, as the builder does. Reports a conflict with other installed parts, if any.
  */
-export function installPart(root: BuildNode, lookup: PartLookup, slotPath: readonly string[], item: string): InstalledPart {
+export function installPart(
+  root: BuildNode,
+  lookup: PartLookup,
+  slotPath: readonly string[],
+  item: string,
+  budget?: FuzzyBudget
+): InstalledPart {
   const target = resolveSlotPath(root, lookup, slotPath);
-  const part = pickPartForSlot(target.slot, lookup, item);
+  const notes: string[] = [];
+  const part = pickPartForSlot(target.slot, lookup, item, notes, budget);
   const conflict = conflictReason(part, target.slot.id, installedOutside(root, target.current), lookup);
   const node = target.current
     ? carryOverChildren(target.current, lookup.get(target.current.itemId), part)
@@ -272,17 +386,52 @@ export function installPart(root: BuildNode, lookup: PartLookup, slotPath: reado
     label: slotLabel(root, lookup, [...target.parentPath, target.slot.id]),
     replaced: target.current,
     conflict,
+    ...(notes.length ? { note: notes[0] } : {}),
   };
 }
 
+/** Presets listed in an error message. */
+const MAX_LISTED_PRESETS = 20;
+
+/** A preset's name without the weapon's: "SOPMOD II" for "Colt M4A1 5.56x45 assault rifle SOPMOD II". */
+function presetSuffix(weapon: BuildItemData, presetName: string) {
+  const name = normalizeText(presetName);
+  const weaponName = normalizeText(weapon.name);
+  return name.startsWith(weaponName) ? name.slice(weaponName.length).trim() : name;
+}
+
+/** "SOPMOD II; Carbine; …", by their names without the weapon's, at most 20. */
+function listPresets(weapon: BuildItemData, presets: readonly { name: string }[]) {
+  const names = presets.slice(0, MAX_LISTED_PRESETS).map((preset) => {
+    const own = normalizeText(preset.name).startsWith(normalizeText(weapon.name)) && preset.name.slice(weapon.name.length).trim();
+    return own || preset.name;
+  });
+  const more = presets.length - MAX_LISTED_PRESETS;
+  return `${names.join("; ")}${more > 0 ? `; and ${more} more` : ""}`;
+}
+
+/**
+ * The preset a name means: "default", an id, the full name, the name without the weapon's
+ * ("SOPMOD II"), the end of one preset's name, or a part of one preset's name.
+ */
 function findPresetId(weapon: BuildItemData, wanted: string) {
   const needle = normalizeText(wanted);
   if (needle === "default") return weapon.defaultPresetId ?? undefined;
   const presets = weapon.presets ?? [];
-  return (
-    presets.find((preset) => preset.id === wanted.trim() || normalizeText(preset.name) === needle)?.id ??
-    presets.find((preset) => normalizeText(preset.name).includes(needle))?.id
-  );
+  const exact = presets.find((preset) => preset.id === wanted.trim() || normalizeText(preset.name) === needle);
+  if (exact) return exact.id;
+  // "SOPMOD II" is exactly one preset's distinguishing name, though "SOPMOD II Flash" contains it.
+  const bySuffix = presets.filter((preset) => presetSuffix(weapon, preset.name) === needle);
+  if (bySuffix.length === 1) return bySuffix[0].id;
+  const ending = presets.filter((preset) => normalizeText(preset.name).endsWith(` ${needle}`));
+  if (ending.length === 1) return ending[0].id;
+  const partial = presets.filter((preset) => normalizeText(preset.name).includes(needle));
+  if (partial.length > 1) {
+    throw new AmbiguousReferenceError(
+      `"${wanted}" matches several ${weapon.name} presets: ${listPresets(weapon, partial)}. Use the preset's full name, the part after the weapon name, or "default".`
+    );
+  }
+  return partial[0]?.id;
 }
 
 /** Turns a share link, or a weapon and preset, into a checked build tree. */
@@ -303,14 +452,14 @@ export async function resolveBuild(source: BuildSource, input: BuildInput): Prom
     ammoId = decoded.ammoId;
     name ||= decoded.name;
   } else if (input.weapon) {
-    const weapon = resolveWeapon(source, input.weapon);
+    const weapon = resolveWeapon(source, input.weapon, warnings);
     root = { itemId: weapon.id, slots: {} };
     if (input.preset) {
       const presetId = findPresetId(weapon, input.preset);
       if (!presetId) {
-        const names = (weapon.presets ?? []).map((preset) => preset.name).join("; ");
+        const presets = weapon.presets ?? [];
         throw new InputError(
-          `${weapon.name} has no preset "${input.preset}".${names ? ` Its presets are: ${names}.` : " It has no presets."}`
+          `${weapon.name} has no preset "${input.preset}".${presets.length ? ` Its presets are: ${listPresets(weapon, presets)}.` : " It has no presets."}`
         );
       }
       const contents = await source.loadPreset(presetId);
@@ -321,8 +470,9 @@ export async function resolveBuild(source: BuildSource, input: BuildInput): Prom
     // Parents before children, so every slot path exists when its part goes in.
     const parts = [...(input.parts ?? [])].sort((a, b) => a.slotPath.length - b.slotPath.length);
     for (const entry of parts) {
-      const installed = installPart(root, source.lookup, entry.slotPath, entry.item);
+      const installed = installPart(root, source.lookup, entry.slotPath, entry.item, source.budget);
       root = installed.root;
+      if (installed.note) warnings.push(installed.note);
       if (installed.conflict) warnings.push(`${installed.part.name} in ${installed.label}: ${installed.conflict}.`);
     }
   } else {
@@ -333,11 +483,20 @@ export async function resolveBuild(source: BuildSource, input: BuildInput): Prom
   if (!weapon?.isWeapon) throw new InputError("The build's root item is not a known weapon.");
   warnings.push(...treeProblems(root, source.lookup));
   if (input.ammo) {
-    const { ammo, fits } = await resolveAmmo(source, root, input.ammo);
+    const { ammo, fits, note } = await resolveAmmo(source, root, input.ammo);
     ammoId = ammo.id;
+    if (note) warnings.push(note);
     if (!fits) warnings.push(`${ammo.name} does not fit this build's magazine or chamber.`);
   }
-  return { name: name || `${weapon.shortName} build`, weaponId: root.itemId, root, ammoId, warnings };
+  return { name: name || `${weapon.shortName} build`, weaponId: root.itemId, root, ammoId, warnings: capList(warnings) };
+}
+
+/** Warnings listed for one build; a build of a thousand unknown parts would otherwise list them all. */
+const MAX_WARNINGS = 20;
+
+function capList(warnings: string[]) {
+  if (warnings.length <= MAX_WARNINGS) return warnings;
+  return [...warnings.slice(0, MAX_WARNINGS), `And ${warnings.length - MAX_WARNINGS} more warnings like these.`];
 }
 
 /** "/slot:item" paths for every installed part, for counting what changed. */

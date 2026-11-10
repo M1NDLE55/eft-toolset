@@ -3,10 +3,13 @@ import type {
   CachedBarter,
   CachedContainedItem,
   CachedCraft,
+  CachedHideoutRequirement,
+  CachedHideoutSlot,
   CachedItem,
   CachedTask,
   CatalogEntry,
   ComposedItem,
+  ItemUses,
 } from "@/app/lib/cache/types";
 import type {
   AmmoItemData,
@@ -15,9 +18,12 @@ import type {
   ModSlotDef,
   PickItemData,
   PresetContents,
+  SightKind,
+  TraderOffer,
 } from "@/app/lib/types/gunBuilder";
 import type {
   ExtractFaction,
+  MapBoss,
   MapDetails,
   MapSpawn,
   SpawnKind,
@@ -35,6 +41,9 @@ const MAX_RESOURCE_RECORDS = 100_000;
 const MAX_NESTED_ENTRIES = 20_000;
 const MAX_STRING_LENGTH = 10_000;
 const MAX_OBJECTIVE_NODES = 10_000;
+// tarkov.dev expands "any item" objectives (e.g. "Sell any items to Prapor") into
+// every eligible item: 3,000+ IDs. The largest real category objective is ~110.
+const MAX_ITEM_SPECIFIC_OBJECTIVE_IDS = 1_000;
 const MAX_NAMES = 100;
 const MAX_IDS = 100;
 
@@ -62,6 +71,7 @@ interface UpstreamEnvelope<T> {
 interface RawContainedItem {
   item?: string;
   count?: number;
+  attributes?: { tool?: boolean | null } | null;
 }
 
 interface RawTraderOffer {
@@ -91,9 +101,12 @@ interface RawItemProperties {
   fireModes?: string[] | null;
   defaultAmmo?: string | null;
   defaultPreset?: string | null;
+  defaultWidth?: number | null;
+  defaultHeight?: number | null;
   presets?: string[] | null;
   slots?: RawSlot[] | null;
   baseItem?: string | null;
+  capacity?: number | null;
   allowedAmmo?: string[] | null;
   damage?: number | null;
   armorDamage?: number | null;
@@ -112,6 +125,7 @@ interface RawItem {
   gridImageLink?: string | null;
   wikiLink?: string | null;
   fleaMarketFee?: number | null;
+  minLevelForFlea?: number | null;
   width?: number | null;
   height?: number | null;
   weight?: number | null;
@@ -120,6 +134,8 @@ interface RawItem {
   avg24hPrice?: number | null;
   changeLast48hPercent?: number | null;
   types?: string[] | null;
+  categories?: string[] | null;
+  handbookCategories?: string[] | null;
   buyFromTrader?: RawTraderOffer[] | null;
   sellToTrader?: RawTraderOffer[] | null;
   conflictingItems?: string[] | null;
@@ -130,6 +146,10 @@ interface RawItem {
 
 interface RawTaskObjective {
   description?: string | null;
+  type?: string | null;
+  count?: number | null;
+  foundInRaid?: boolean | null;
+  optional?: boolean | null;
   item?: string | null;
   items?: string[] | null;
   markerItem?: string | null;
@@ -147,6 +167,7 @@ interface RawTask {
   minPlayerLevel?: number | null;
   wikiLink?: string | null;
   trader?: string | null;
+  factionName?: string | null;
   objectives?: RawTaskObjective[] | null;
 }
 
@@ -172,6 +193,18 @@ interface RawNamedEntity {
   normalizedName?: string;
 }
 
+interface RawHideoutStation extends RawNamedEntity {
+  levels?: {
+    level?: number | null;
+    itemRequirements?: {
+      item?: string | null;
+      count?: number | null;
+      attributes?: { foundInRaid?: boolean | null } | null;
+    }[] | null;
+    bonuses?: { type?: string | null; value?: number | null; slotItems?: string[] | null }[] | null;
+  }[] | null;
+}
+
 interface RawPosition {
   x: number;
   y: number;
@@ -191,6 +224,7 @@ interface RawMap {
     outline?: { x: number; z: number }[] | null;
     top?: number | null;
     bottom?: number | null;
+    transferItem?: { item?: unknown; count?: unknown } | null;
   }[];
   transits?: {
     id?: string;
@@ -229,10 +263,20 @@ interface RawMap {
     position?: RawPosition | null;
     stationaryWeapon?: string | null;
   }[];
+  // Read defensively in projectBosses, so a format change drops bosses rather than the map.
+  bosses?: Record<string, unknown>[];
+}
+
+interface RawCategory {
+  name?: string;
+  normalizedName?: string;
+  parent?: string | null;
 }
 
 interface ItemsData {
   items?: Dictionary<RawItem>;
+  itemCategories?: Dictionary<RawCategory>;
+  handbookCategories?: Dictionary<RawCategory>;
   fleaMarket?: {
     sellOfferFeeRate?: number | null;
     sellRequirementFeeRate?: number | null;
@@ -247,6 +291,7 @@ interface MapsData {
   maps?: Dictionary<RawMap>;
   lootContainers?: Dictionary<RawNamedEntity>;
   stationaryWeapons?: Dictionary<RawNamedEntity>;
+  mobs?: Record<string, unknown>;
 }
 
 interface ResourceCacheEntry {
@@ -269,8 +314,20 @@ interface ItemsContext {
 interface TasksContext {
   tasks: RawTask[];
   byId: Map<string, RawTask>;
-  byItem: Map<string, RawTask[]>;
+  byItem: Map<string, TaskItemUse[]>;
   translations: TranslationDictionary;
+}
+
+interface TaskItemUse {
+  task: RawTask;
+  /** The task's objectives that involve the indexed item. */
+  objectives: RawTaskObjective[];
+}
+
+interface HideoutContext {
+  stationNames: Map<string, string>;
+  requirementsByItem: Map<string, CachedHideoutRequirement[]>;
+  slotsByItem: Map<string, CachedHideoutSlot[]>;
 }
 
 interface RelationsContext {
@@ -429,6 +486,64 @@ export async function getItemCatalog(gameMode: GameMode): Promise<CatalogEntry[]
   );
 }
 
+export interface ItemFacet {
+  /** tarkov.dev item types, such as "ammo", "keys", or "injectors". */
+  types: string[];
+  /** Lower-case names and slugs of the item's handbook and item categories and their parents. */
+  categories: string[];
+  /** Ammo caliber as tarkov.dev names it, such as "Caliber556x45NATO". */
+  caliber: string | null;
+}
+
+export interface ItemFacets {
+  byId: ReadonlyMap<string, ItemFacet>;
+  /** Handbook category names: the tree the trader and flea market screens use. */
+  categoryNames: string[];
+  /** The game's own item category names, such as "Stimulant" or "Keycard". */
+  itemCategoryNames: string[];
+}
+
+/** Types, categories, and calibers per item id, for filtering item lists. */
+export async function getItemFacets(gameMode: GameMode): Promise<ItemFacets> {
+  const [itemsEnvelope, translationsEnvelope] = await Promise.all([
+    loadResource<ItemsData>(gameMode, "items"),
+    loadResource<TranslationDictionary>(gameMode, "items_en"),
+  ]);
+  return memo(`${gameMode}/facets`, [itemsEnvelope, translationsEnvelope], () => {
+    const translations = translationsEnvelope.data;
+    const trees = [itemsEnvelope.data.handbookCategories ?? {}, itemsEnvelope.data.itemCategories ?? {}];
+    const labels = (tree: Dictionary<RawCategory>, id: string) => {
+      const keys: string[] = [];
+      const seen = new Set<string>();
+      for (let current: string | null | undefined = id; current && !seen.has(current); current = tree[current]?.parent) {
+        seen.add(current);
+        const category = tree[current];
+        if (!category) break;
+        const name = translate(category.name, translations).toLocaleLowerCase();
+        if (name) keys.push(name);
+        if (category.normalizedName) keys.push(category.normalizedName);
+      }
+      return keys;
+    };
+    const byId = new Map<string, ItemFacet>();
+    for (const item of Object.values(itemsEnvelope.data.items ?? {})) {
+      if (!item.id) continue;
+      const categories = new Set([
+        ...(item.handbookCategories ?? []).flatMap((id) => labels(trees[0], id)),
+        ...(item.categories ?? []).flatMap((id) => labels(trees[1], id)),
+      ]);
+      byId.set(item.id, {
+        types: item.types ?? [],
+        categories: [...categories],
+        caliber: item.properties?.caliber ?? null,
+      });
+    }
+    const names = (tree: Dictionary<RawCategory>) =>
+      Array.from(new Set(Object.values(tree).map((category) => translate(category.name, translations)))).filter(Boolean);
+    return { byId, categoryNames: names(trees[0]), itemCategoryNames: names(trees[1]) };
+  });
+}
+
 export async function getGroupItems(gameMode: GameMode, names: string[]): Promise<CachedItem[]> {
   if (names.length === 0) return [];
   const [itemContext, traderNames, taskContext] = await Promise.all([
@@ -441,7 +556,7 @@ export async function getGroupItems(gameMode: GameMode, names: string[]): Promis
   return names.flatMap((name) => {
     const item = itemContext.byName.get(name);
     if (!item) return [];
-    const usedInTasks = (taskContext.byItem.get(item.id ?? "") ?? []).map((task) => ({
+    const usedInTasks = (taskContext.byItem.get(item.id ?? "") ?? []).map(({ task }) => ({
       name: translate(task.name, taskContext.translations),
     }));
     return [
@@ -466,14 +581,15 @@ export async function getItemDetail(
   gameMode: GameMode,
   reference: ItemReference
 ): Promise<ComposedItem | null> {
-  const [itemContext, traderNames, taskContext, relations, stations] =
+  const [itemContext, traderNames, taskContext, relations, hideout] =
     await Promise.all([
       loadItems(gameMode),
       loadTraderNames(gameMode),
       loadTasks(gameMode),
       loadRelations(gameMode),
-      loadStationNames(gameMode),
+      loadHideout(gameMode),
     ]);
+  const stations = hideout.stationNames;
   throwIfRequestAborted();
 
   const item =
@@ -484,14 +600,13 @@ export async function getItemDetail(
   const itemId = item.id;
   const details = memo(
     `${gameMode}/details`,
-    [itemContext, traderNames, taskContext, relations, stations],
+    [itemContext, traderNames, taskContext, relations, hideout],
     () => new Map<string, ComposedItem>()
   );
   const cached = details.get(itemId);
   if (cached) return cached;
-  const tasks = (taskContext.byItem.get(itemId) ?? []).map((task) =>
-    projectTask(task, taskContext.translations, traderNames)
-  );
+  const uses = itemUses(itemId, taskContext, traderNames, hideout);
+  const tasks = uses.usedInTasks;
   const bartersUsing = relatedBarters(relations.bartersByItem, itemId)
     .map((barter) =>
       projectBarter(
@@ -526,12 +641,45 @@ export async function getItemDetail(
       tasks.map(({ name }) => ({ name })),
       itemContext.fleaMarket
     ),
-    usedInTasks: tasks,
+    ...uses,
     bartersUsing,
     craftsUsing,
   };
   details.set(itemId, detail);
   return detail;
+}
+
+function itemUses(
+  itemId: string,
+  taskContext: TasksContext,
+  traderNames: Map<string, string>,
+  hideout: HideoutContext
+): ItemUses {
+  return {
+    usedInTasks: (taskContext.byItem.get(itemId) ?? []).map(({ task, objectives }) =>
+      projectTask(task, objectives, taskContext.translations, traderNames)
+    ),
+    hideoutRequirements: hideout.requirementsByItem.get(itemId) ?? [],
+    hideoutSlots: hideout.slotsByItem.get(itemId) ?? [],
+  };
+}
+
+/** Tasks and hideout uses for items by exact name, keyed by name; for pricing lists of loot. */
+export async function getItemUses(gameMode: GameMode, names: string[]): Promise<Map<string, ItemUses>> {
+  const result = new Map<string, ItemUses>();
+  if (names.length === 0) return result;
+  const [itemContext, traderNames, taskContext, hideout] = await Promise.all([
+    loadItems(gameMode),
+    loadTraderNames(gameMode),
+    loadTasks(gameMode),
+    loadHideout(gameMode),
+  ]);
+  throwIfRequestAborted();
+  for (const name of names) {
+    const id = itemContext.byName.get(name)?.id;
+    if (id) result.set(name, itemUses(id, taskContext, traderNames, hideout));
+  }
+  return result;
 }
 
 export async function getGunList(gameMode: GameMode): Promise<GunListItem[]> {
@@ -647,7 +795,8 @@ export async function getMapDetails(gameMode: GameMode, mapKey: string): Promise
     mapsEnvelope.data.lootContainers ?? {},
     mapsEnvelope.data.stationaryWeapons ?? {},
     nameById,
-    byId
+    byId,
+    mapsEnvelope.data.mobs ?? {}
   );
 }
 
@@ -713,6 +862,48 @@ function loadTraderNames(gameMode: GameMode) {
 
 function loadStationNames(gameMode: GameMode) {
   return loadNames(gameMode, "hideout");
+}
+
+/** Hideout upgrades that consume each item, and station slots each item is installed in. */
+async function loadHideout(gameMode: GameMode): Promise<HideoutContext> {
+  const [stationsEnvelope, translationsEnvelope, stationNames] = await Promise.all([
+    loadResource<Dictionary<RawHideoutStation>>(gameMode, "hideout"),
+    loadResource<TranslationDictionary>(gameMode, "hideout_en"),
+    loadStationNames(gameMode),
+  ]);
+  return memo(`${gameMode}/hideout-context`, [stationsEnvelope, translationsEnvelope, stationNames], () => {
+    const requirementsByItem = new Map<string, CachedHideoutRequirement[]>();
+    const slotsByItem = new Map<string, CachedHideoutSlot[]>();
+    const push = <T>(index: Map<string, T[]>, id: string, entry: T) => {
+      const entries = index.get(id) ?? [];
+      entries.push(entry);
+      index.set(id, entries);
+    };
+    for (const [id, station] of Object.entries(stationsEnvelope.data)) {
+      const name = stationNames.get(id) ?? id;
+      for (const level of station.levels ?? []) {
+        const levelNumber = finiteNumber(level.level) ?? 0;
+        for (const requirement of level.itemRequirements ?? []) {
+          const count = finiteNumber(requirement.count);
+          if (!requirement.item || count === null || count <= 0) continue;
+          push(requirementsByItem, requirement.item, {
+            station: { name },
+            level: levelNumber,
+            count,
+            foundInRaid: requirement.attributes?.foundInRaid === true,
+          });
+        }
+        for (const bonus of level.bonuses ?? []) {
+          const slots = finiteNumber(bonus.value);
+          if (bonus.type !== "AdditionalSlots" || slots === null || slots <= 0) continue;
+          for (const itemId of new Set(bonus.slotItems ?? [])) {
+            push(slotsByItem, itemId, { station: { name }, level: levelNumber, slots });
+          }
+        }
+      }
+    }
+    return { stationNames, requirementsByItem, slotsByItem };
+  });
 }
 
 async function loadResource<T>(
@@ -862,6 +1053,8 @@ function validateResourceData(resource: Resource, data: unknown): boolean {
       return (
         isRecord(data) &&
         optionalDictionary(data.items, isRawItem) &&
+        optionalDictionary(data.itemCategories, isRawCategory) &&
+        optionalDictionary(data.handbookCategories, isRawCategory) &&
         optional(data.fleaMarket, (value) =>
           isRecord(value) &&
           optionalFiniteNumber(value.sellOfferFeeRate) &&
@@ -875,15 +1068,17 @@ function validateResourceData(resource: Resource, data: unknown): boolean {
         isRecord(data) &&
         optionalDictionary(data.maps, isRawMap) &&
         optionalDictionary(data.lootContainers, isRawNamedEntity) &&
-        optionalDictionary(data.stationaryWeapons, isRawNamedEntity)
+        optionalDictionary(data.stationaryWeapons, isRawNamedEntity) &&
+        optional(data.mobs, isRecord)
       );
     case "barters":
       return boundedArray(data, isRawBarter, MAX_RESOURCE_RECORDS);
     case "crafts":
       return boundedArray(data, isRawCraft, MAX_RESOURCE_RECORDS);
     case "traders":
-    case "hideout":
       return dictionary(data, isRawNamedEntity);
+    case "hideout":
+      return dictionary(data, isRawHideoutStation);
     case "items_en":
     case "tasks_en":
     case "traders_en":
@@ -905,6 +1100,7 @@ function isRawItem(value: unknown): value is RawItem {
   ];
   const numberFields = [
     value.fleaMarketFee,
+    value.minLevelForFlea,
     value.width,
     value.height,
     value.weight,
@@ -917,6 +1113,8 @@ function isRawItem(value: unknown): value is RawItem {
     stringFields.every(optionalShortString) &&
     numberFields.every(optionalFiniteNumber) &&
     optionalStringArray(value.types) &&
+    optionalStringArray(value.categories) &&
+    optionalStringArray(value.handbookCategories) &&
     optionalArray(value.buyFromTrader, isRawTraderOffer) &&
     optionalArray(value.sellToTrader, isRawTraderOffer) &&
     optionalStringArray(value.conflictingItems) &&
@@ -938,6 +1136,8 @@ function isRawItemProperties(value: unknown): value is RawItemProperties {
     ].every(optionalShortString) &&
     [
       value.ergonomics,
+      value.defaultWidth,
+      value.defaultHeight,
       value.recoilModifier,
       value.recoilVertical,
       value.recoilHorizontal,
@@ -949,6 +1149,7 @@ function isRawItemProperties(value: unknown): value is RawItemProperties {
       value.projectileCount,
       value.initialSpeed,
       value.accuracyModifier,
+      value.capacity,
     ].every(optionalFiniteNumber) &&
     optionalStringArray(value.fireModes) &&
     optionalStringArray(value.presets) &&
@@ -961,7 +1162,7 @@ function isRawSlot(value: unknown): value is RawSlot {
   if (!isRecord(value)) return false;
   return (
     [value.id, value.name, value.nameId].every(optionalShortString) &&
-    optional(value.required, (entry) => typeof entry === "boolean") &&
+    optionalBoolean(value.required) &&
     optional(value.filters, (filters) =>
       isRecord(filters) && optionalStringArray(filters.allowedItems)
     )
@@ -981,14 +1182,15 @@ function isRawContainedItem(value: unknown): value is RawContainedItem {
   return (
     isRecord(value) &&
     optionalShortString(value.item) &&
-    optionalFiniteNumber(value.count)
+    optionalFiniteNumber(value.count) &&
+    optional(value.attributes, (attributes) => isRecord(attributes) && optionalBoolean(attributes.tool))
   );
 }
 
 function isRawTask(value: unknown): value is RawTask {
   return (
     isRecord(value) &&
-    [value.id, value.name, value.normalizedName, value.wikiLink, value.trader].every(
+    [value.id, value.name, value.normalizedName, value.wikiLink, value.trader, value.factionName].every(
       optionalShortString
     ) &&
     optionalFiniteNumber(value.minPlayerLevel) &&
@@ -999,7 +1201,10 @@ function isRawTask(value: unknown): value is RawTask {
 function isRawTaskObjective(value: unknown): value is RawTaskObjective {
   if (!isRecord(value)) return false;
   return (
-    [value.description, value.item, value.markerItem].every(optionalShortString) &&
+    [value.description, value.type, value.item, value.markerItem].every(optionalShortString) &&
+    optionalFiniteNumber(value.count) &&
+    optionalBoolean(value.foundInRaid) &&
+    optionalBoolean(value.optional) &&
     optionalStringArray(value.items) &&
     [
       value.containsAll,
@@ -1033,10 +1238,41 @@ function isRawCraft(value: unknown): value is RawCraft {
   );
 }
 
+function isRawCategory(value: unknown): value is RawCategory {
+  return (
+    isRecord(value) &&
+    [value.name, value.normalizedName, value.parent].every(optionalShortString)
+  );
+}
+
 function isRawNamedEntity(value: unknown): value is RawNamedEntity {
   return (
     isRecord(value) &&
     [value.id, value.name, value.normalizedName].every(optionalShortString)
+  );
+}
+
+function isRawHideoutStation(value: unknown): value is RawHideoutStation {
+  return (
+    isRawNamedEntity(value) &&
+    optionalArray((value as Record<string, unknown>).levels, (level) =>
+      isRecord(level) &&
+      optionalFiniteNumber(level.level) &&
+      optionalArray(level.itemRequirements, (requirement) =>
+        isRecord(requirement) &&
+        optionalShortString(requirement.item) &&
+        optionalFiniteNumber(requirement.count) &&
+        optional(requirement.attributes, (attributes) =>
+          isRecord(attributes) && optionalBoolean(attributes.foundInRaid)
+        )
+      ) &&
+      optionalArray(level.bonuses, (bonus) =>
+        isRecord(bonus) &&
+        optionalShortString(bonus.type) &&
+        optionalFiniteNumber(bonus.value) &&
+        optionalStringArray(bonus.slotItems)
+      )
+    )
   );
 }
 
@@ -1051,7 +1287,8 @@ function isRawMap(value: unknown): value is RawMap {
       optional(entry.position, isPosition) &&
       optionalArray(entry.outline, isOutlinePoint) &&
       optionalFiniteNumber(entry.top) &&
-      optionalFiniteNumber(entry.bottom)
+      optionalFiniteNumber(entry.bottom) &&
+      optional(entry.transferItem, isRecord)
     ) &&
     optionalArray(value.transits, (entry) =>
       isRecord(entry) &&
@@ -1068,7 +1305,7 @@ function isRawMap(value: unknown): value is RawMap {
     optionalArray(value.locks, (entry) =>
       isRecord(entry) &&
       [entry.lockType, entry.key].every(optionalShortString) &&
-      optional(entry.needsPower, (item) => typeof item === "boolean") &&
+      optionalBoolean(entry.needsPower) &&
       optional(entry.position, isPosition)
     ) &&
     optionalArray(value.hazards, (entry) =>
@@ -1093,7 +1330,8 @@ function isRawMap(value: unknown): value is RawMap {
       isRecord(entry) &&
       optional(entry.position, isPosition) &&
       optionalShortString(entry.stationaryWeapon)
-    )
+    ) &&
+    optionalArray(value.bosses, isRecord)
   );
 }
 
@@ -1205,6 +1443,10 @@ function optionalShortString(value: unknown): boolean {
   return optional(value, isShortString);
 }
 
+function optionalBoolean(value: unknown): boolean {
+  return optional(value, (entry): entry is boolean => typeof entry === "boolean");
+}
+
 function optionalFiniteNumber(value: unknown): boolean {
   return optional(value, (entry): entry is number =>
     typeof entry === "number" && Number.isFinite(entry)
@@ -1248,10 +1490,10 @@ function projectCachedItem(
   usedInTasks: { name: string }[],
   fleaMarket?: ItemsData["fleaMarket"]
 ): CachedItem {
-  const fleaBuyPrice = finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice);
-  const fleaSellPrice = finiteNumber(item.lastLowPrice);
-  const canUseFlea = !item.types?.includes("noFlea") && fleaSellPrice !== null;
-  const buyFor = projectTraderPrices(item.buyFromTrader, traderNames);
+  const fleaBuyPrice = fleaAveragePrice(item);
+  const fleaSellPrice = isFleaBanned(item) ? null : finiteNumber(item.lastLowPrice);
+  const canUseFlea = fleaSellPrice !== null;
+  const buyFor = projectTraderPrices(item.buyFromTrader, traderNames, true);
   const sellFor = projectTraderPrices(item.sellToTrader, traderNames);
   if (canUseFlea && fleaBuyPrice !== null) {
     buyFor.push({ vendor: { name: "Flea Market" }, priceRUB: fleaBuyPrice });
@@ -1274,32 +1516,56 @@ function projectCachedItem(
     buyFor,
     sellFor,
     usedInTasks,
+    fleaBanned: isFleaBanned(item),
+    fleaMinLevel: finiteNumber(item.minLevelForFlea),
+    ...(item.properties?.propertiesType === "ItemPropertiesWeapon"
+      ? {
+          weapon: {
+            defaultWidth: positiveFiniteNumber(item.properties.defaultWidth),
+            defaultHeight: positiveFiniteNumber(item.properties.defaultHeight),
+          },
+        }
+      : {}),
   };
 }
 
 function projectTraderPrices(
   offers: RawTraderOffer[] | null | undefined,
-  traderNames: Map<string, string>
+  traderNames: Map<string, string>,
+  withLevel = false
 ) {
   return (offers ?? []).flatMap((offer) => {
     const priceRUB = finiteNumber(offer.priceRUB);
     if (!offer.trader || priceRUB === null) return [];
-    return [{ vendor: { name: traderNames.get(offer.trader) ?? offer.trader }, priceRUB }];
+    const level = withLevel ? traderLoyaltyLevel(offer) : null;
+    return [{
+      vendor: { name: traderNames.get(offer.trader) ?? offer.trader },
+      priceRUB,
+      ...(level === null ? {} : { minTraderLevel: level }),
+    }];
   });
 }
 
 function projectTask(
   task: RawTask,
+  objectives: RawTaskObjective[],
   translations: TranslationDictionary,
   traderNames: Map<string, string>
 ): CachedTask {
+  const faction = task.factionName && task.factionName !== "Any" ? task.factionName : null;
   return {
     name: translate(task.name, translations),
     minPlayerLevel: finiteNumber(task.minPlayerLevel) ?? 0,
     wikiLink: safeHttpsUrl(task.wikiLink),
     trader: { name: (task.trader && traderNames.get(task.trader)) || task.trader || "Unknown" },
-    objectives: (task.objectives ?? []).map((objective) => ({
+    faction,
+    objectives: objectives.map((objective) => ({
       description: translateNullable(objective.description, translations),
+      type: objective.type ?? null,
+      count: finiteNumber(objective.count),
+      foundInRaid: typeof objective.foundInRaid === "boolean" ? objective.foundInRaid : null,
+      optional: objective.optional === true,
+      alternatives: Math.max(0, objectiveItemIds(objective).size - 1),
     })),
   };
 }
@@ -1341,7 +1607,7 @@ function projectCraft(
     },
     level: finiteNumber(craft.level) ?? 0,
     taskUnlock: projectTaskUnlock(craft.taskUnlock, taskById, taskTranslations),
-    requiredItems: projectContainedItems(craft.requiredItems, itemById, itemTranslations),
+    requiredItems: projectContainedItems(craft.requiredItems, itemById, itemTranslations, true),
     rewardItems: projectContainedItems(
       craft.productItem ? [craft.productItem] : [],
       itemById,
@@ -1367,7 +1633,8 @@ function projectTaskUnlock(
 function projectContainedItems(
   entries: RawContainedItem[] | null | undefined,
   itemById: Map<string, RawItem>,
-  translations: TranslationDictionary
+  translations: TranslationDictionary,
+  markTools = false
 ): CachedContainedItem[] {
   return (entries ?? []).flatMap((entry) => {
     if (!entry.item) return [];
@@ -1379,32 +1646,44 @@ function projectContainedItems(
           normalizedName: item?.normalizedName ?? null,
         },
         quantity: finiteNumber(entry.count) ?? 0,
+        ...(markTools && entry.attributes?.tool === true ? { tool: true } : {}),
       },
     ];
   });
 }
 
 function indexTasksByItem(tasks: RawTask[]) {
-  const index = new Map<string, RawTask[]>();
+  const index = new Map<string, TaskItemUse[]>();
   for (const task of tasks) {
-    const itemIds = new Set<string>();
+    const objectivesByItem = new Map<string, RawTaskObjective[]>();
     for (const objective of task.objectives ?? []) {
-      collectItemIds(objective.item, itemIds);
-      collectItemIds(objective.items, itemIds);
-      collectItemIds(objective.markerItem, itemIds);
-      collectItemIds(objective.containsOne, itemIds);
-      collectItemIds(objective.containsAll, itemIds);
-      collectItemIds(objective.wearing, itemIds);
-      collectItemIds(objective.usingWeapon, itemIds);
-      collectItemIds(objective.usingWeaponMods, itemIds);
+      for (const itemId of objectiveItemIds(objective)) {
+        const objectives = objectivesByItem.get(itemId) ?? [];
+        objectives.push(objective);
+        objectivesByItem.set(itemId, objectives);
+      }
     }
-    for (const itemId of itemIds) {
+    for (const [itemId, objectives] of objectivesByItem) {
       const matches = index.get(itemId) ?? [];
-      matches.push(task);
+      matches.push({ task, objectives });
       index.set(itemId, matches);
     }
   }
   return index;
+}
+
+/** Item IDs an objective specifically needs; empty for objectives any item satisfies. */
+function objectiveItemIds(objective: RawTaskObjective) {
+  const itemIds = new Set<string>();
+  collectItemIds(objective.item, itemIds);
+  collectItemIds(objective.items, itemIds);
+  collectItemIds(objective.markerItem, itemIds);
+  collectItemIds(objective.containsOne, itemIds);
+  collectItemIds(objective.containsAll, itemIds);
+  collectItemIds(objective.wearing, itemIds);
+  collectItemIds(objective.usingWeapon, itemIds);
+  collectItemIds(objective.usingWeaponMods, itemIds);
+  return itemIds.size > MAX_ITEM_SPECIFIC_OBJECTIVE_IDS ? new Set<string>() : itemIds;
 }
 
 function collectItemIds(value: unknown, ids: Set<string>) {
@@ -1460,7 +1739,7 @@ function projectBuildItem(
     gridImageLink: safeAssetUrl(item.gridImageLink),
     weight: finiteNumber(item.weight) ?? 0,
     ...traderDetails(item, traderNames),
-    fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
+    fleaPriceRUB: fleaAveragePrice(item),
     ergonomics: finiteNumber(properties?.ergonomics) ?? 0,
     recoilModifier: isWeapon ? 0 : finiteNumber(properties?.recoilModifier) ?? 0,
     recoilVertical: isWeapon ? finiteNumber(properties?.recoilVertical) : null,
@@ -1482,7 +1761,40 @@ function projectBuildItem(
     conflictingSlotIds: item.conflictingSlotIds ?? [],
     slots: projectSlots(properties?.slots, translations),
     allowedAmmoIds: (properties?.allowedAmmo ?? []).filter((id) => byIdHasAmmo(itemById, id)),
+    ...gunBuilderExtras(item, traderNames),
+    capacity:
+      properties?.propertiesType === "ItemPropertiesMagazine" ? positiveFiniteNumber(properties.capacity) : null,
+    sight: sightKind(item, translate(item.name, translations)),
   };
+}
+
+// tarkov.dev item category for iron sights; other items with scope properties are optics.
+const IRON_SIGHT_CATEGORY = "55818ac54bdc2d5b648b456e";
+
+function sightKind(item: RawItem, name: string): SightKind | null {
+  if (item.properties?.propertiesType === "ItemPropertiesScope") {
+    return item.categories?.includes(IRON_SIGHT_CATEGORY) ? "iron" : "optic";
+  }
+  // Gas blocks, barrels, and handguards with a front sight built in.
+  if (/\bfront sight\b/i.test(name)) return "front";
+  // Rails with both iron sights built in, such as the HK G36 optic rail with flip-up sights.
+  return /\bflip-up sights\b/i.test(name) ? "iron" : null;
+}
+
+/** Rouble trader offers with their loyalty levels, cheapest first. */
+function traderOffersOf(item: RawItem, traderNames: Map<string, string>): TraderOffer[] {
+  return (item.buyFromTrader ?? [])
+    .flatMap((offer) => {
+      const priceRUB = finiteNumber(offer.priceRUB);
+      if (!offer.trader || priceRUB === null || priceRUB <= 0) return [];
+      return [{ trader: traderNames.get(offer.trader) ?? offer.trader, priceRUB, level: traderLoyaltyLevel(offer) }];
+    })
+    .sort((a, b) => a.priceRUB - b.priceRUB);
+}
+
+/** Every trader offer and the flea ban, so the gun builder can price parts at a player's loyalty levels. */
+function gunBuilderExtras(item: RawItem, traderNames: Map<string, string>) {
+  return { traderOffers: traderOffersOf(item, traderNames), fleaBanned: isFleaBanned(item) };
 }
 
 function byIdHasAmmo(itemById: Map<string, RawItem>, id: string) {
@@ -1511,7 +1823,8 @@ function projectAmmoItem(
     initialSpeed: finiteNumber(properties?.initialSpeed),
     recoilModifier: finiteNumber(properties?.recoilModifier) ?? 0,
     accuracyModifier: finiteNumber(properties?.accuracyModifier) ?? 0,
-    fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
+    fleaPriceRUB: fleaAveragePrice(item),
+    ...gunBuilderExtras(item, traderNames),
   };
 }
 
@@ -1527,7 +1840,7 @@ function projectPickItem(
     gridImageLink: safeAssetUrl(item.gridImageLink),
     weight: finiteNumber(item.weight) ?? 0,
     ...traderDetails(item, traderNames),
-    fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
+    fleaPriceRUB: fleaAveragePrice(item),
     ergonomics: finiteNumber(item.properties?.ergonomics) ?? 0,
     recoilModifier: finiteNumber(item.properties?.recoilModifier) ?? 0,
     conflictingItemIds: item.conflictingItems ?? [],
@@ -1554,19 +1867,33 @@ function projectSlots(
 }
 
 function traderDetails(item: RawItem, traderNames: Map<string, string>) {
-  let best: RawTraderOffer | null = null;
-  for (const offer of item.buyFromTrader ?? []) {
-    const price = finiteNumber(offer.priceRUB);
-    if (!offer.trader || price === null || price <= 0) continue;
-    if (!best || price < (best.priceRUB ?? Infinity)) best = offer;
-  }
-  const level = finiteNumber(best?.minTraderLevel);
+  const [best] = traderOffersOf(item, traderNames);
   return {
     normalizedName: item.normalizedName ?? "",
-    traderPriceRUB: best ? finiteNumber(best.priceRUB) : null,
-    traderName: best?.trader ? (traderNames.get(best.trader) ?? best.trader) : null,
-    traderLevel: level !== null && Number.isInteger(level) && level >= 1 && level <= 10 ? level : null,
+    traderPriceRUB: best?.priceRUB ?? null,
+    traderName: best?.trader ?? null,
+    traderLevel: best?.level ?? null,
   };
+}
+
+/**
+ * The one test for flea eligibility: tarkov.dev's noFlea type. Item pages, price lists, and
+ * the gun builder all read it from here, so they never disagree about a ban.
+ */
+function isFleaBanned(item: RawItem) {
+  return Boolean(item.types?.includes("noFlea"));
+}
+
+/** The 24-hour flea average (or the lowest listing without one); null when the item can't be traded there. */
+function fleaAveragePrice(item: RawItem) {
+  if (isFleaBanned(item)) return null;
+  return finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice);
+}
+
+/** A trader offer's loyalty level, 1 to 10, or null when tarkov.dev gives none or an odd value. */
+function traderLoyaltyLevel(offer: RawTraderOffer) {
+  const level = finiteNumber(offer.minTraderLevel);
+  return level !== null && Number.isInteger(level) && level >= 1 && level <= 10 ? level : null;
 }
 
 const EXTRACT_FACTIONS: ExtractFaction[] = ["pmc", "scav", "shared"];
@@ -1578,15 +1905,18 @@ function projectMap(
   lootContainerById: Dictionary<RawNamedEntity>,
   stationaryWeaponById: Dictionary<RawNamedEntity>,
   itemNames: Map<string, string>,
-  itemById: Map<string, RawItem>
+  itemById: Map<string, RawItem>,
+  mobs: Record<string, unknown>
 ): MapDetails {
   const spawns: MapSpawn[] = [];
   for (const spawn of raw.spawns ?? []) {
     if (!spawn.position) continue;
     const kind = spawnKind(spawn.sides, spawn.categories);
     if (!kind) continue;
+    const zoneLabel = spawn.zoneName ? translations[spawn.zoneName] : undefined;
     spawns.push({
       zoneName: spawn.zoneName ?? null,
+      ...(zoneLabel ? { zoneLabel } : {}),
       kind,
       position: spawn.position,
     });
@@ -1609,6 +1939,7 @@ function projectMap(
           outline: extract.outline ?? [],
           top: finiteNumber(extract.top),
           bottom: finiteNumber(extract.bottom),
+          transferItem: projectTransferItem(extract.transferItem, itemNames),
         },
       ];
     }),
@@ -1682,7 +2013,72 @@ function projectMap(
         },
       ];
     }),
+    bosses: projectBosses(raw.bosses ?? [], translations, mobs),
   };
+}
+
+function projectTransferItem(
+  value: { item?: unknown; count?: unknown } | null | undefined,
+  itemNames: Map<string, string>
+) {
+  if (!value || typeof value.item !== "string") return null;
+  const count = finiteNumber(value.count);
+  return { name: itemNames.get(value.item) ?? value.item, count: count ?? 1 };
+}
+
+const MAX_BOSS_LOCATIONS = 20;
+
+/**
+ * A mob name tarkov.dev left untranslated, such as "infectedScreamer", as words: "Infected
+ * screamer". Translated names are kept as they are.
+ */
+export function readableMobName(name: string) {
+  if (!/^[a-z]+(?:[A-Z][a-z]+)+$/.test(name)) return name;
+  const words = name.replace(/([A-Z])/g, " $1").toLowerCase();
+  return words.charAt(0).toUpperCase() + words.slice(1);
+}
+
+/** Boss spawns with translated names; entries in an unexpected shape are skipped. */
+function projectBosses(
+  bosses: Record<string, unknown>[],
+  translations: TranslationDictionary,
+  mobs: Record<string, unknown>
+): MapBoss[] {
+  return bosses.flatMap((boss): MapBoss[] => {
+    const mobId = typeof boss.mob === "string" ? boss.mob : null;
+    const spawnChance = finiteNumber(boss.spawnChance);
+    if (!mobId || spawnChance === null) return [];
+    const mob = mobs[mobId];
+    const mobName = isRecord(mob) && typeof mob.name === "string" ? mob.name : mobId;
+    const locations = (Array.isArray(boss.spawnLocations) ? boss.spawnLocations : [])
+      .slice(0, MAX_BOSS_LOCATIONS)
+      .flatMap((location) => {
+        if (!isRecord(location) || typeof location.name !== "string") return [];
+        return [
+          {
+            zone: location.name,
+            name: translate(location.name, translations),
+            chance: finiteNumber(location.chance) ?? 0,
+          },
+        ];
+      });
+    const escorts = (Array.isArray(boss.escorts) ? boss.escorts : []).reduce<number>((total, escort) => {
+      if (!isRecord(escort) || !Array.isArray(escort.amount)) return total;
+      const counts = escort.amount.map((amount) => (isRecord(amount) ? finiteNumber(amount.count) ?? 0 : 0));
+      return total + Math.max(0, ...counts);
+    }, 0);
+    const spawnTime = finiteNumber(boss.spawnTime);
+    return [
+      {
+        name: readableMobName(translate(mobName, translations)),
+        spawnChance,
+        locations,
+        escorts,
+        spawnTimeSeconds: spawnTime !== null && spawnTime >= 0 ? spawnTime : null,
+        trigger: typeof boss.spawnTrigger === "string" && isShortString(boss.spawnTrigger) ? boss.spawnTrigger : null,
+      },
+    ];
+  });
 }
 
 function spawnKind(
@@ -1746,7 +2142,7 @@ function calculateFleaMarketFee(
   item: RawItem,
   fleaMarket: ItemsData["fleaMarket"]
 ): number | null {
-  if (item.types?.includes("noFlea")) return null;
+  if (isFleaBanned(item)) return null;
   const basePrice = finiteNumber(item.basePrice);
   const listingPrice = finiteNumber(item.lastLowPrice) ?? basePrice;
   const offerRate = finiteNumber(fleaMarket?.sellOfferFeeRate);

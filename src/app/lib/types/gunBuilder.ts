@@ -6,10 +6,26 @@ export interface ModSlotDef {
   allowedItemIds: string[];
 }
 
+/** One trader's offer for an item, with the loyalty level it needs. */
+export interface TraderOffer {
+  trader: string;
+  priceRUB: number;
+  level: number | null;
+}
+
+/** What kind of aiming part an item is: an optic, an iron sight, or a part with a built-in front sight. */
+export type SightKind = "optic" | "iron" | "front";
+
 export interface ItemExtras {
   normalizedName?: string;
   traderName?: string | null;
   traderLevel?: number | null;
+  /** Every trader offer, cheapest first; traderPriceRUB and traderName describe the cheapest. */
+  traderOffers?: TraderOffer[];
+  fleaBanned?: boolean;
+  /** Magazines only: how many rounds it holds. */
+  capacity?: number | null;
+  sight?: SightKind | null;
 }
 
 export interface BuildItemData extends ItemExtras {
@@ -56,6 +72,8 @@ export interface AmmoItemData {
   fleaPriceRUB: number | null;
   traderName: string | null;
   traderLevel: number | null;
+  traderOffers?: TraderOffer[];
+  fleaBanned?: boolean;
 }
 
 export interface PickItemData extends ItemExtras {

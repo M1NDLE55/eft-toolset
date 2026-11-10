@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import LoadingSkeleton from "@/app/components/item/loading-skeleton";
 import GenericDetails from "@/app/components/item/generic-details";
-import { BartersUsing, CraftsUsing, UsedInTasks } from "@/app/components/item/item-relations";
+import { BartersUsing, CraftsUsing, HideoutUses, UsedInTasks } from "@/app/components/item/item-relations";
 import SimpleError from "@/app/components/global/error/simple-error";
 import { primeItem, useItem } from "@/app/lib/cache/hooks";
 import type { ItemReference } from "@/app/lib/cache/fetcher";
@@ -13,6 +13,7 @@ import { addScoutedItem } from "@/app/lib/scouted-items/store";
 import { Button } from "@/components/ui/button";
 import { PriceTrend } from "@/app/components/item/price-trend";
 import { bestSell } from "@/app/lib/item-price";
+import { summarizeNeeds } from "@/app/lib/item-needs";
 import { recordPrices, usePriceHistories } from "@/app/lib/price-history";
 import { useGameMode } from "@/components/game-mode/context";
 
@@ -66,6 +67,7 @@ export function ItemPageClient({
   if (!item) {
     return <SimpleError>No item named &ldquo;{itemName}&rdquo; was found.</SimpleError>;
   }
+  const needs = summarizeNeeds(item);
 
   return (
     <article className="flex flex-col gap-5">
@@ -76,7 +78,13 @@ export function ItemPageClient({
       )}
       <GenericDetails item={item} />
       {liveItem && livePrice !== null && <PriceTrend points={history(liveItem.name)} price={livePrice} now={now} />}
+      {needs && (
+        <p role="note" className="border border-[#3a3326] bg-[#1a1610] px-3 py-2 text-sm text-[#c8b384]">
+          {needs.summary}
+        </p>
+      )}
       <UsedInTasks tasks={item.usedInTasks} />
+      <HideoutUses requirements={item.hideoutRequirements} slots={item.hideoutSlots} />
       <BartersUsing barters={item.bartersUsing} />
       <CraftsUsing crafts={item.craftsUsing} />
     </article>
