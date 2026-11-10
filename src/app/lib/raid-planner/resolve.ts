@@ -81,8 +81,22 @@ export interface Place {
 
 const EXTRACT_ORDER = { pmc: 0, shared: 1, scav: 2 } as const;
 
-/** Named places a route or note can refer to instead of coordinates, most useful first. */
+const placeLists = new WeakMap<MapDetails, Place[]>();
+
+/**
+ * Named places a route or note can refer to instead of coordinates, most useful first. The
+ * list is built once per map data, so its name index is reused across calls.
+ */
 export function placesOf(details: MapDetails): Place[] {
+  let places = placeLists.get(details);
+  if (!places) {
+    places = collectPlaces(details);
+    placeLists.set(details, places);
+  }
+  return places;
+}
+
+function collectPlaces(details: MapDetails): Place[] {
   const extracts = details.extracts.toSorted((a, b) => EXTRACT_ORDER[a.faction] - EXTRACT_ORDER[b.faction]);
   return [
     ...extracts.map((extract) => ({ kind: `${extract.faction} extract`, name: extract.name, position: extract.position })),
@@ -314,70 +328,116 @@ export type PlaceMatch =
     }
   | { error: string };
 
-function distinctByName(places: Place[]) {
-  const groups = new Map<string, Place[]>();
-  for (const place of places) {
-    const key = placeWords(place.name).join("");
-    groups.set(key, [...(groups.get(key) ?? []), place]);
+interface IndexedPlace {
+  place: Place;
+  words: string[];
+  compact: string;
+}
+
+/** Places with their words worked out once, so matching a name costs one pass over them. */
+interface PlaceIndex {
+  entries: IndexedPlace[];
+  byCompact: Map<string, Place[]>;
+  /** One group per distinct name, in place order, for suggestions and typo matching. */
+  groups: IndexedPlace[][];
+  longestCompact: number;
+}
+
+const placeIndexes = new WeakMap<readonly Place[], PlaceIndex>();
+
+function indexPlaces(places: readonly Place[]): PlaceIndex {
+  let index = placeIndexes.get(places);
+  if (!index) {
+    const entries = places.map((place) => {
+      const words = placeWords(place.name);
+      return { place, words, compact: words.join("") };
+    });
+    const groupOf = new Map<string, IndexedPlace[]>();
+    for (const entry of entries) {
+      const group = groupOf.get(entry.compact);
+      if (group) group.push(entry);
+      else groupOf.set(entry.compact, [entry]);
+    }
+    index = {
+      entries,
+      byCompact: new Map([...groupOf].map(([key, group]) => [key, group.map((entry) => entry.place)])),
+      groups: [...groupOf.values()],
+      longestCompact: Math.max(0, ...entries.map((entry) => entry.compact.length)),
+    };
+    placeIndexes.set(places, index);
   }
-  return Array.from(groups.values());
+  return index;
 }
 
 function label(place: Place) {
   return `${place.name} (${place.kind})`;
 }
 
+/** Words of a reference that count for typo matching, and the longest reference it tries. */
+const MAX_TYPO_WORDS = 8;
+const MAX_TYPO_LENGTH = 60;
+
+export interface PlaceMatchOptions {
+  /** False to skip typo matching and suggestions, once a request has spent its budget. */
+  typos?: boolean;
+}
+
 /** Matches a place name, from exact to a close spelling; never throws. */
-export function matchPlace(places: Place[], reference: string): PlaceMatch {
+export function matchPlace(places: readonly Place[], reference: string, options: PlaceMatchOptions = {}): PlaceMatch {
   const given = placeWords(reference);
   // "the Smugglers' Boat extract" means Smugglers' Boat.
   const meaningful = given.filter((word) => !FILLER_WORDS.has(word));
   const words = meaningful.length ? meaningful : given;
   const compact = words.join("");
   if (!compact) return { error: `"${reference}" is not a place name.` };
-  const indexed = places.map((place) => ({ place, words: placeWords(place.name) }));
+  const index = indexPlaces(places);
   const found = (group: Place[], match: "exact" | "partial" | "typo") => ({
     place: group[0],
     match,
     others: group.slice(1).filter((other) => other.name !== group[0].name || other.kind !== group[0].kind),
   });
 
-  const exact = indexed.filter((entry) => entry.words.join("") === compact).map((entry) => entry.place);
-  if (exact.length > 0) return found(exact, "exact");
+  const exact = index.byCompact.get(compact);
+  if (exact) return found(exact, "exact");
 
-  const partial = distinctByName(
-    indexed
-      .filter(
-        (entry) =>
-          words.every((word) => entry.words.some((candidate) => candidate.startsWith(word))) ||
-          (compact.length >= 2 && entry.words.join("").includes(compact))
-      )
-      .map((entry) => entry.place)
-  ).toSorted((a, b) => {
-    // Names that start with the words given come first, then shorter names.
-    const starts = (group: Place[]) => (placeWords(group[0].name).join("").startsWith(compact) ? 0 : 1);
-    return starts(a) - starts(b) || a[0].name.length - b[0].name.length;
-  });
-  if (partial.length === 1) return found(partial[0], "partial");
-  if (partial.length > 1) {
+  // A reference longer than every name can't be part of one.
+  const partialGroups =
+    compact.length > index.longestCompact
+      ? []
+      : index.groups
+          .filter((group) =>
+            group.some(
+              (entry) =>
+                words.every((word) => entry.words.some((candidate) => candidate.startsWith(word))) ||
+                (compact.length >= 2 && entry.compact.includes(compact))
+            )
+          )
+          .toSorted((a, b) => {
+            // Names that start with the words given come first, then shorter names.
+            const starts = (group: IndexedPlace[]) => (group[0].compact.startsWith(compact) ? 0 : 1);
+            return starts(a) - starts(b) || a[0].place.name.length - b[0].place.name.length;
+          })
+          .map((group) => group.map((entry) => entry.place));
+  if (partialGroups.length === 1) return found(partialGroups[0], "partial");
+  if (partialGroups.length > 1) {
     return {
-      error: `"${reference}" matches several places: ${partial
+      error: `"${reference}" matches several places: ${partialGroups
         .slice(0, 10)
         .map((group) => label(group[0]))
         .join("; ")}. Use the full name.`,
     };
   }
 
+  if (options.typos === false || compact.length > MAX_TYPO_LENGTH) return { error: `No place is named "${reference}".` };
   const limit = Math.max(2, Math.ceil(compact.length / 3));
-  const scored = distinctByName(places)
+  const typoWords = words.filter((word) => word.length >= 4).slice(0, MAX_TYPO_WORDS);
+  const scored = index.groups
     .map((group) => {
-      const candidate = placeWords(group[0].name);
-      const whole = editDistance(compact, candidate.join(""), limit);
+      const candidate = group[0];
+      const whole = editDistance(compact, candidate.compact, limit);
       // A misspelt word of a longer name, such as "smuglers" for Smugglers' Boat, makes a suggestion only.
-      const wordHit = words.some(
-        (word) => word.length >= 4 && candidate.some((other) => editDistance(word, other, 1) <= 1)
-      );
-      return { group, whole, score: wordHit ? Math.min(whole, limit) : whole };
+      const wordHit = typoWords.some((word) => candidate.words.some((other) => editDistance(word, other, 1) <= 1));
+      return { group: group.map((entry) => entry.place), whole, score: wordHit ? Math.min(whole, limit) : whole };
     })
     .filter((entry) => entry.score <= limit)
     .toSorted((a, b) => a.score - b.score || a.whole - b.whole);
@@ -394,7 +454,7 @@ export function matchPlace(places: Place[], reference: string): PlaceMatch {
 export const PLACE_HELP =
   "Places are extracts, transits, areas, spawn zones, switches, hazards, stationary weapons, and key locks (by key name). Use get_map_details to list them, or give x and z coordinates.";
 
-export function findPlace(places: Place[], reference: string): Place {
+export function findPlace(places: readonly Place[], reference: string): Place {
   const result = matchPlace(places, reference);
   if ("error" in result) throw new InputError(`${result.error} ${PLACE_HELP}`);
   return result.place;

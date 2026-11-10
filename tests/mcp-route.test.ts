@@ -879,6 +879,24 @@ describe("MCP endpoint", () => {
     expect(paged.data.spawns).toHaveLength(1);
   });
 
+  it("caps the problems one plan error lists and refuses oversized drawings before resolving names", async () => {
+    const names = Array.from({ length: 300 }, (_, index) => ({ place: `nowhere number ${index} zzqq` }));
+    const rejected = await call("create_raid_plan", { map: "factory", route: names });
+    expect(rejected.result.isError).toBe(true);
+    expect(rejected.text).toContain("Fix these 300 problems");
+    expect(rejected.text).toContain('route[19]: No place is named "nowhere number 19 zzqq"');
+    expect(rejected.text).not.toContain("route[20]:");
+    expect(rejected.text).toContain("- and 280 more.");
+    expect(rejected.text).toContain("Close spellings are only suggested for the first 20 unknown names.");
+    expect(rejected.text.length).toBeLessThan(4_000);
+
+    const oversized = await call("create_raid_plan", {
+      map: "factory",
+      drawings: Array.from({ length: 5 }, () => ({ kind: "pen", points: Array.from({ length: 4_100 }, () => ({ place: "nowhere" })) })),
+    });
+    expect(oversized.text).toMatch(/^The plan has 20500 drawing points; the limit is 20000/);
+  });
+
   it("reports every plan problem at once and only warns about cosmetic ones", async () => {
     const rejected = await call("create_raid_plan", {
       map: "factory",

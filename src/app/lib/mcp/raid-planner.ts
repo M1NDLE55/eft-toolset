@@ -32,11 +32,12 @@ import {
   MAX_PLAN_NAME_LENGTH,
   MAX_POINTS_PER_DRAWING,
   MAX_ROUTE_POINTS,
+  MAX_TOTAL_DRAWING_POINTS,
 } from "@/app/lib/raid-planner/limits";
 import { PLAN_COLORS, type GamePoint, type RaidPlan } from "@/app/lib/raid-planner/types";
 import type { MapDetails } from "@/app/lib/types/raidPlanner";
 import { createId } from "@/app/lib/id";
-import { InputError, round, type ToolContext } from "./context";
+import { betweenItems, InputError, round, type ToolContext } from "./context";
 import { createRaidPlanOutput, getMapDetailsOutput, listMapsOutput, readRaidPlanOutput } from "./output-schemas";
 import { toolDefiner } from "./define-tool";
 import { gameModeSchema, offsetSchema } from "./schemas";
@@ -82,6 +83,13 @@ function defaultPlanName(mapName: string, route: PointInput[], resolvedPlaces: R
   const name = from && to ? `${mapName}: ${from} to ${to}` : `${mapName} raid plan`;
   return name.slice(0, MAX_PLAN_NAME_LENGTH);
 }
+
+/** Problems listed in one error; the rest are counted. */
+const MAX_LISTED_PROBLEMS = 20;
+/** Place names per call that get typo matching and suggestions when they match nothing exactly. */
+const PLACE_TYPO_BUDGET = 20;
+/** Points resolved between yields to other requests. */
+const POINTS_PER_TURN = 500;
 
 export function registerRaidPlannerTools(server: McpServer, context: ToolContext) {
   const define = toolDefiner(server, context);
@@ -173,6 +181,13 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
     },
     async ({ map, name, route, drawings, notes, layers, gameMode }, { read }) => {
       const config = resolveMap(map);
+      // Checked before any names are resolved, so an oversized plan costs nothing to refuse.
+      const drawingPoints = drawings.reduce((total, drawing) => total + drawing.points.length, 0);
+      if (drawingPoints > MAX_TOTAL_DRAWING_POINTS) {
+        throw new InputError(
+          `The plan has ${drawingPoints} drawing points; the limit is ${MAX_TOTAL_DRAWING_POINTS}. Simplify the drawings.`
+        );
+      }
       const needsPlaces = [...route, ...drawings.flatMap((d) => d.points), ...notes.map((n) => n.at)].some(
         (entry) => "place" in entry
       );
@@ -192,6 +207,8 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
       let placeProblem = false;
       const resolvedPlaces: ResolvedPlace[] = [];
       const resolved = new Map<string, GamePoint | null>();
+      let typoBudget = PLACE_TYPO_BUDGET;
+      let typosSkipped = false;
       const toPoint = (entry: PointInput, where: string): GamePoint => {
         if (!("place" in entry)) {
           if (!isInArea(area, entry)) {
@@ -203,8 +220,10 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
         }
         const known = resolved.get(entry.place);
         if (known !== undefined) return known ?? { x: 0, z: 0 };
-        const result = matchPlace(places, entry.place);
+        const result = matchPlace(places, entry.place, { typos: typoBudget > 0 });
+        if ("error" in result || result.match === "typo") typoBudget -= 1;
         if ("error" in result) {
+          if (typoBudget < 0) typosSkipped = true;
           problems.push(`${where}: ${result.error}`);
           placeProblem = true;
           resolved.set(entry.place, null);
@@ -244,23 +263,41 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
         layers ?? ["extracts:pmc", "extracts:shared", "transits"].filter((id) => !available || available.has(id));
       const unknownLayers = available ? enabledLayers.filter((id) => !available.has(id)) : [];
       const now = Date.now();
-      const planRoute = route.map((entry, index) => ({ id: createId(), position: toPoint(entry, `route[${index}]`) }));
-      const planDrawings = drawings.map((drawing, index) => ({
-        id: createId(),
-        kind: drawing.kind,
-        color: colorOf(drawing.color, PLAN_COLORS[3]),
-        points: drawing.points.map((point, pointIndex) => toPoint(point, `drawings[${index}].points[${pointIndex}]`)),
-      }));
-      const planNotes = notes.map((note, index) => ({
-        id: createId(),
-        position: toPoint(note.at, `notes[${index}].at`),
-        title: note.title,
-        body: note.body,
-        color: colorOf(note.color, PLAN_COLORS[0]),
-      }));
+      // Resolving thousands of points is synchronous work, so other requests get turns between batches.
+      let pointsResolved = 0;
+      const resolvePoint = async (entry: PointInput, where: string) => {
+        if (++pointsResolved % POINTS_PER_TURN === 0) await betweenItems(context.signal);
+        return toPoint(entry, where);
+      };
+      const planRoute = [];
+      for (const [index, entry] of route.entries()) {
+        planRoute.push({ id: createId(), position: await resolvePoint(entry, `route[${index}]`) });
+      }
+      const planDrawings = [];
+      for (const [index, drawing] of drawings.entries()) {
+        const points: GamePoint[] = [];
+        for (const [pointIndex, point] of drawing.points.entries()) {
+          points.push(await resolvePoint(point, `drawings[${index}].points[${pointIndex}]`));
+        }
+        planDrawings.push({ id: createId(), kind: drawing.kind, color: colorOf(drawing.color, PLAN_COLORS[3]), points });
+      }
+      const planNotes = [];
+      for (const [index, note] of notes.entries()) {
+        planNotes.push({
+          id: createId(),
+          position: await resolvePoint(note.at, `notes[${index}].at`),
+          title: note.title,
+          body: note.body,
+          color: colorOf(note.color, PLAN_COLORS[0]),
+        });
+      }
       if (problems.length > 0) {
+        const listed = problems.slice(0, MAX_LISTED_PROBLEMS);
+        const more = problems.length - listed.length;
         throw new InputError(
-          `The plan was not created. Fix ${problems.length === 1 ? "this" : `these ${problems.length} problems`}:\n- ${problems.join("\n- ")}${
+          `The plan was not created. Fix ${problems.length === 1 ? "this" : `these ${problems.length} problems`}:\n- ${listed.join("\n- ")}${
+            more > 0 ? `\n- and ${more} more.` : ""
+          }${typosSkipped ? `\nClose spellings are only suggested for the first ${PLACE_TYPO_BUDGET} unknown names.` : ""}${
             placeProblem ? `\n${PLACE_HELP}` : ""
           }`
         );

@@ -82,6 +82,16 @@ describe("place names", () => {
     return "error" in result ? result.error : `${result.place.name} (${result.place.kind}) ${result.match}`;
   };
 
+  it("builds the place list and its name index once per map, so many names stay cheap", () => {
+    const data = details();
+    expect(placesOf(data)).toBe(placesOf(data));
+    // Before, each name re-tokenised every place: 4,900 nonsense names took 2.4 s on Customs.
+    const names = Array.from({ length: 5_000 }, (_, index) => `qzx ${index} vbn ${index % 7} wwk`);
+    const started = performance.now();
+    for (const name of names) matchPlace(places, name, { typos: false });
+    expect(performance.now() - started).toBeLessThan(1_000);
+  });
+
   it("ignores case, apostrophes, hyphens, spacing, and plurals", () => {
     expect(resolve("Smugglers Boat")).toBe("Smugglers' Boat (pmc extract) exact");
     expect(resolve("SMUGGLERS’ BOAT")).toBe("Smugglers' Boat (pmc extract) exact");
@@ -117,6 +127,8 @@ describe("place names", () => {
     );
     expect(resolve("Big Red")).toBe('No place is named "Big Red".');
     expect(() => findPlace(places, "Big Red")).toThrow(/get_map_details/);
+    // Without typo matching, a misspelling is simply unknown.
+    expect(matchPlace(places, "Gaet", { typos: false })).toEqual({ error: 'No place is named "Gaet".' });
   });
 
   it("places named spawn zones at their centre, using tarkov.dev's English zone names", () => {
