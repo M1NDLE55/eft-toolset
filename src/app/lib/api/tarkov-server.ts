@@ -35,6 +35,9 @@ const MAX_RESOURCE_RECORDS = 100_000;
 const MAX_NESTED_ENTRIES = 20_000;
 const MAX_STRING_LENGTH = 10_000;
 const MAX_OBJECTIVE_NODES = 10_000;
+// tarkov.dev expands "any item" objectives (e.g. "Sell any items to Prapor") into
+// every eligible item: 3,000+ IDs. The largest real category objective is ~110.
+const MAX_ITEM_SPECIFIC_OBJECTIVE_IDS = 1_000;
 const MAX_NAMES = 100;
 const MAX_IDS = 100;
 
@@ -269,8 +272,14 @@ interface ItemsContext {
 interface TasksContext {
   tasks: RawTask[];
   byId: Map<string, RawTask>;
-  byItem: Map<string, RawTask[]>;
+  byItem: Map<string, TaskItemUse[]>;
   translations: TranslationDictionary;
+}
+
+interface TaskItemUse {
+  task: RawTask;
+  /** The task's objectives that involve the indexed item. */
+  objectives: RawTaskObjective[];
 }
 
 interface RelationsContext {
@@ -441,7 +450,7 @@ export async function getGroupItems(gameMode: GameMode, names: string[]): Promis
   return names.flatMap((name) => {
     const item = itemContext.byName.get(name);
     if (!item) return [];
-    const usedInTasks = (taskContext.byItem.get(item.id ?? "") ?? []).map((task) => ({
+    const usedInTasks = (taskContext.byItem.get(item.id ?? "") ?? []).map(({ task }) => ({
       name: translate(task.name, taskContext.translations),
     }));
     return [
@@ -489,8 +498,8 @@ export async function getItemDetail(
   );
   const cached = details.get(itemId);
   if (cached) return cached;
-  const tasks = (taskContext.byItem.get(itemId) ?? []).map((task) =>
-    projectTask(task, taskContext.translations, traderNames)
+  const tasks = (taskContext.byItem.get(itemId) ?? []).map(({ task, objectives }) =>
+    projectTask(task, objectives, taskContext.translations, traderNames)
   );
   const bartersUsing = relatedBarters(relations.bartersByItem, itemId)
     .map((barter) =>
@@ -1290,6 +1299,7 @@ function projectTraderPrices(
 
 function projectTask(
   task: RawTask,
+  objectives: RawTaskObjective[],
   translations: TranslationDictionary,
   traderNames: Map<string, string>
 ): CachedTask {
@@ -1298,7 +1308,7 @@ function projectTask(
     minPlayerLevel: finiteNumber(task.minPlayerLevel) ?? 0,
     wikiLink: safeHttpsUrl(task.wikiLink),
     trader: { name: (task.trader && traderNames.get(task.trader)) || task.trader || "Unknown" },
-    objectives: (task.objectives ?? []).map((objective) => ({
+    objectives: objectives.map((objective) => ({
       description: translateNullable(objective.description, translations),
     })),
   };
@@ -1385,26 +1395,37 @@ function projectContainedItems(
 }
 
 function indexTasksByItem(tasks: RawTask[]) {
-  const index = new Map<string, RawTask[]>();
+  const index = new Map<string, TaskItemUse[]>();
   for (const task of tasks) {
-    const itemIds = new Set<string>();
+    const objectivesByItem = new Map<string, RawTaskObjective[]>();
     for (const objective of task.objectives ?? []) {
-      collectItemIds(objective.item, itemIds);
-      collectItemIds(objective.items, itemIds);
-      collectItemIds(objective.markerItem, itemIds);
-      collectItemIds(objective.containsOne, itemIds);
-      collectItemIds(objective.containsAll, itemIds);
-      collectItemIds(objective.wearing, itemIds);
-      collectItemIds(objective.usingWeapon, itemIds);
-      collectItemIds(objective.usingWeaponMods, itemIds);
+      for (const itemId of objectiveItemIds(objective)) {
+        const objectives = objectivesByItem.get(itemId) ?? [];
+        objectives.push(objective);
+        objectivesByItem.set(itemId, objectives);
+      }
     }
-    for (const itemId of itemIds) {
+    for (const [itemId, objectives] of objectivesByItem) {
       const matches = index.get(itemId) ?? [];
-      matches.push(task);
+      matches.push({ task, objectives });
       index.set(itemId, matches);
     }
   }
   return index;
+}
+
+/** Item IDs an objective specifically needs; empty for objectives any item satisfies. */
+function objectiveItemIds(objective: RawTaskObjective) {
+  const itemIds = new Set<string>();
+  collectItemIds(objective.item, itemIds);
+  collectItemIds(objective.items, itemIds);
+  collectItemIds(objective.markerItem, itemIds);
+  collectItemIds(objective.containsOne, itemIds);
+  collectItemIds(objective.containsAll, itemIds);
+  collectItemIds(objective.wearing, itemIds);
+  collectItemIds(objective.usingWeapon, itemIds);
+  collectItemIds(objective.usingWeaponMods, itemIds);
+  return itemIds.size > MAX_ITEM_SPECIFIC_OBJECTIVE_IDS ? new Set<string>() : itemIds;
 }
 
 function collectItemIds(value: unknown, ids: Set<string>) {

@@ -276,6 +276,61 @@ describe("Tarkov JSON adapter", () => {
     );
   });
 
+  it("lists only tasks and objectives that need the item, not any-item objectives", async () => {
+    // tarkov.dev expands "Sell any items to <trader>" into every sellable item ID.
+    const everyItem = ["weapon", ...Array.from({ length: 3_300 }, (_, index) => `filler-${index}`)];
+    const tasks = fixtures.tasks as { data: { tasks: Record<string, unknown> } };
+    tasks.data.tasks["any-item"] = {
+      id: "any-item",
+      name: "any-item-name",
+      trader: "trader",
+      objectives: [
+        { description: "sell-any", type: "sellItem", items: everyItem },
+        { description: "sell-any", type: "sellItem", items: [] },
+      ],
+    };
+    tasks.data.tasks.mixed = {
+      id: "mixed",
+      name: "mixed-name",
+      trader: "trader",
+      objectives: [
+        { description: "sell-any", type: "sellItem", items: everyItem },
+        { description: "extract", type: "extract" },
+        { description: "plant-rifle", type: "plantItem", items: ["weapon", "mod"] },
+      ],
+    };
+    Object.assign((fixtures.tasks_en as { data: Record<string, string> }).data, {
+      "any-item-name": "Any Item Task",
+      "mixed-name": "Mixed Task",
+      "sell-any": "Sell any items to Tester",
+      extract: "Survive and extract",
+      "plant-rifle": "Stash the rifle",
+    });
+
+    const detail = await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, {
+      gameMode: "regular",
+      name: "Test Rifle",
+    }) as { usedInTasks: { name: string; objectives: { description: string | null }[] }[] };
+    expect(
+      detail.usedInTasks.map(({ name, objectives }) => ({ name, objectives }))
+    ).toEqual([
+      { name: "Test Task", objectives: [{ description: "Find the rifle" }] },
+      { name: "Mixed Task", objectives: [{ description: "Stash the rifle" }] },
+    ]);
+
+    const [group] = await executeTarkovOperation(TARKOV_OPERATIONS.groupItems, {
+      gameMode: "regular",
+      names: ["Test Rifle"],
+    }) as { usedInTasks: { name: string }[] }[];
+    expect(group.usedInTasks).toEqual([{ name: "Test Task" }, { name: "Mixed Task" }]);
+
+    const modDetail = await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, {
+      gameMode: "regular",
+      name: "Test Mod",
+    }) as { usedInTasks: { name: string }[] };
+    expect(modDetail.usedInTasks.map(({ name }) => name)).toEqual(["Mixed Task"]);
+  });
+
   it("joins map reference IDs without exposing the bulk map payload", async () => {
     const map = await executeTarkovOperation(TARKOV_OPERATIONS.mapDetails, {
       gameMode: "regular",
