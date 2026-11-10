@@ -138,6 +138,17 @@ function namedSpawnZones(details: MapDetails): Place[] {
 }
 
 const LOCK_AREA_SPREAD_METERS = 150;
+/** A lock area may span at most this fraction of the map's extent. */
+const LOCK_AREA_MAP_FRACTION = 1 / 6;
+
+/** The diagonal of the box holding the map's extracts, transits, spawns, and locks, in metres. */
+function mapExtent(details: MapDetails) {
+  const points = [...details.extracts, ...details.transits, ...details.spawns, ...details.locks].map((entry) => entry.position);
+  if (points.length === 0) return 0;
+  const xs = points.map((point) => point.x);
+  const zs = points.map((point) => point.z);
+  return Math.hypot(Math.max(...xs) - Math.min(...xs), Math.max(...zs) - Math.min(...zs));
+}
 
 function keyStem(keyName: string) {
   return keyName
@@ -149,9 +160,11 @@ function keyStem(keyName: string) {
 /**
  * Areas named after groups of key locks, such as "Dorm" from the Dorm room keys on Customs.
  * A group needs three different keys, or two whose names share at least two words, all
- * within 150 m of their centre.
+ * within 150 m of their centre and within a sixth of the map's extent: on a small map such
+ * as the Lab, 150 m spans the whole map, and the centre of locks spread across it is no place.
  */
 export function lockAreas(details: MapDetails): Place[] {
+  const maxSpread = Math.min(LOCK_AREA_SPREAD_METERS, mapExtent(details) * LOCK_AREA_MAP_FRACTION);
   const groups = new Map<string, { key: string; words: string[]; position: GamePoint }[]>();
   for (const lock of details.locks) {
     if (!lock.keyName) continue;
@@ -174,7 +187,7 @@ export function lockAreas(details: MapDetails): Place[] {
     if (keys < 3 && prefix.length < 2) continue;
     const middle = centre(group.map((entry) => entry.position));
     const spread = Math.max(...group.map((entry) => Math.hypot(entry.position.x - middle.x, entry.position.z - middle.z)));
-    if (spread > LOCK_AREA_SPREAD_METERS) continue;
+    if (spread > maxSpread) continue;
     areas.push({
       kind: "area",
       name: prefix.join(" "),

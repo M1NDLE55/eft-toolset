@@ -151,6 +151,16 @@ describe("key-lock areas", () => {
     const spread = details({ locks: [lock("Dorm a key", 0, 0), lock("Dorm b key", 0, 200), lock("Dorm c key", 0, 400)] });
     expect(lockAreas(spread)).toEqual([]);
   });
+
+  it("drops a group spread over a large part of a small map, as the keycard doors across the Lab", () => {
+    const keycards = [lock("TerraGroup Labs keycard (Red)", 0, 0), lock("TerraGroup Labs keycard (Blue)", 100, 0), lock("TerraGroup Labs keycard (Green)", 50, 80)];
+    // A 250 m map: locks 55 m from their centre span too much of it to be one place.
+    const lab = details({ extracts: [extract("Elevator", "pmc", -50, -50), extract("Parking", "pmc", 150, 100)], spawns: [], transits: [], locks: keycards });
+    expect(lockAreas(lab)).toEqual([]);
+    // The same locks on a map ten times the size are one building.
+    const large = details({ extracts: [extract("Far", "pmc", -1_000, -1_000), extract("Away", "pmc", 1_000, 1_000)], spawns: [], transits: [], locks: keycards });
+    expect(lockAreas(large).map((area) => area.name)).toEqual(["TerraGroup Labs"]);
+  });
 });
 
 describe("spawn zones", () => {
