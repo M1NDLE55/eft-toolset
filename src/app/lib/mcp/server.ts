@@ -19,7 +19,8 @@ const INSTRUCTIONS = `EFT Toolset: Escape from Tarkov tools built on live tarkov
 ${TOOL_LIST}
 
 - Every data tool takes gameMode: "regular" (PVP, the default) or "pve". Prices and availability differ between them, so ask or use the mode the user plays.
-- Prices are in roubles. In get_item and get_item_prices, flea buy and sell prices are the lowest current listing (it can sell out quickly), and each offer's basis says what its price is. The flea buy offer also carries avg24hRUB, the 24-hour average the item page shows. The best sell price subtracts the flea listing fee.
+- Prices are in roubles. In get_item and get_item_prices, flea buy and sell prices are the lowest current listing (it can sell out quickly), and each offer's basis says what its price is. The flea buy offer also carries avg24hRUB, the 24-hour average the item page shows. The best sell price subtracts the flea listing fee. flea.status says whether the item is listed, has no listings, or is banned from the flea; noBuyReason and noSellReason explain a missing price.
+- Keep or sell: needed counts what all tasks (hand-overs) and hideout upgrades take, with how many must be found in raid. It ignores the player's progress, so ask what they have done before saying an item is still needed.
 - Gun-builder flea prices (fleaPriceRUB, and the part prices, costs, and shopping lists built from them) are the 24-hour average, so current listings can be cheaper.
 - Gun builder: start with list_weapons or get_weapon. Builds are passed as {"shareLink": ...} or {"weapon": ..., "preset"?: ..., "parts"?: [{"slotPath", "item"}]}; a result's parts (slotPath and itemId) can be passed back as parts to restate a build. Every build result includes a shareLink: pass it to the next build tool to keep working on the same build, and give it to the user so they can open and save the build in the app. A nested slot can be named alone in slotPath when its name is unique. Gun-builder priceSources take maxTraderLevel and traderLevels: ask the player's loyalty levels so builds use parts they can buy. Check a build's problems before presenting it, and load ammo (build.ammo) so recoil includes it.
 - Raid planner: coordinates are game metres (x, z). Route points and notes can name places such as extracts instead of coordinates. create_raid_plan returns a share link that opens the plan in the app.
@@ -114,7 +115,7 @@ function registerPrompts(server: McpServer) {
           role: "user",
           content: {
             type: "text",
-            text: `Price this Escape from Tarkov loot${gameMode ? ` in ${gameMode} mode` : ""} with get_item_prices, sorted by value per slot. Say where to sell each item, flag anything worth keeping for tasks, and give the total.\n\n${items}`,
+            text: `Price this Escape from Tarkov loot${gameMode ? ` in ${gameMode} mode` : ""} with get_item_prices, sorted by value per slot. Say where to sell each item, flag anything still needed for tasks or hideout upgrades (from needed, noting found-in-raid counts), and give the total.\n\n${items}`,
           },
         },
       ],

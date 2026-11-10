@@ -35,9 +35,9 @@ export const MCP_TOOL_GROUPS = [
       {
         name: "get_item",
         title: "Get item",
-        summary: "Prices, best place to sell, value per slot, and every task, barter, and craft that uses an item.",
+        summary: "Prices, best place to sell, value per slot, and every task, hideout upgrade, barter, and craft that uses an item.",
         description:
-          "Item Scanner. Everything the item page shows for one item: trader and flea prices, the best place to sell it after the flea listing fee, value per inventory slot, the 48-hour price change, and the tasks that need it, with counts of the barters and crafts that use it (list those with include). Flea buy and sell prices are the lowest current listing; the flea buy offer also gives the 24-hour average the item page shows. A name several unrelated items share returns the candidates instead of a guess; inexact matches carry matchedBy and a note.",
+          "Item Scanner. Everything the item page shows for one item: trader and flea prices, the best place to sell it after the flea listing fee, value per inventory slot, flea eligibility, the 48-hour price change, and what needs it: a total for tasks and hideout upgrades with found-in-raid counts, those tasks and upgrades, and counts of the barters and crafts that use it (list those with include). Flea buy and sell prices are the lowest current listing; the flea buy offer also gives the 24-hour average the item page shows. A name several unrelated items share returns the candidates instead of a guess; inexact matches carry matchedBy and a note.",
       },
     ],
   },
@@ -50,7 +50,7 @@ export const MCP_TOOL_GROUPS = [
         title: "Price a list of items",
         summary: "Price up to 100 items with counts, totals, value per slot, and a Discord-ready list.",
         description:
-          "Item Groups. Prices a watchlist or a haul of loot in one call: the best place to sell each item (flea after its listing fee, or the best trader), value per slot, the cheapest place to buy it (a trader or the lowest current flea listing), the tasks that need it, totals, and optionally the same Discord-ready price list the item-groups page copies. Accepts up to 100 items, each with an optional count. Each row lists the inputs it prices; inexact matches are listed in fuzzyMatches, and ambiguous or unknown inputs are left unpriced in unmatched with their candidates.",
+          "Item Groups. Prices a watchlist or a haul of loot in one call: the best place to sell each item (flea after its listing fee, or the best trader), value per slot, the cheapest place to buy it (a trader or the lowest current flea listing), how many tasks and hideout upgrades need it (needed), totals, and optionally the same Discord-ready price list the item-groups page copies. Accepts up to 100 items, each with an optional count. Each row lists the inputs it prices; inexact matches are listed in fuzzyMatches, and ambiguous or unknown inputs are left unpriced in unmatched with their candidates.",
       },
     ],
   },

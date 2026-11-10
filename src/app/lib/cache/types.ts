@@ -1,11 +1,15 @@
 export interface CachedVendorPrice {
   vendor: { name: string };
   priceRUB: number;
+  /** Trader buy offers: the loyalty level the offer needs. */
+  minTraderLevel?: number;
 }
 
 export interface CachedContainedItem {
   item: { name: string; normalizedName?: string | null };
   quantity: number;
+  /** Craft inputs only: a tool the craft needs but gives back. */
+  tool?: boolean;
 }
 
 export interface CachedTaskUnlock {
@@ -27,6 +31,15 @@ export interface CachedItem {
   buyFor: CachedVendorPrice[];
   sellFor: CachedVendorPrice[];
   usedInTasks: { name: string }[];
+  /** True when the item can't be traded on the flea market in this game mode. */
+  fleaBanned?: boolean;
+  /** Player level needed to trade this item on the flea market. */
+  fleaMinLevel?: number | null;
+  /**
+   * Set for weapons. width and height above are the stripped weapon's; this is the size of
+   * the weapon's default build, which tarkov.dev's flea price is for.
+   */
+  weapon?: { defaultWidth: number | null; defaultHeight: number | null };
 }
 
 export interface CatalogItem {
@@ -45,12 +58,40 @@ export type CatalogEntry = [
   normalizedName: string | null,
 ];
 
+export interface CachedTaskObjective {
+  description: string | null;
+  /** tarkov.dev objective type, such as giveItem, findItem, plantItem, or shoot. */
+  type?: string | null;
+  count?: number | null;
+  foundInRaid?: boolean | null;
+  optional?: boolean;
+  /** How many other items also satisfy the objective; 0 when only this item does. */
+  alternatives?: number;
+}
+
 export interface CachedTask {
   name: string;
   minPlayerLevel: number;
   wikiLink: string | null;
   trader: { name: string };
-  objectives: { description: string | null }[];
+  /** USEC or BEAR when only that faction gets the task. */
+  faction?: string | null;
+  objectives: CachedTaskObjective[];
+}
+
+/** One hideout station upgrade that consumes the item. */
+export interface CachedHideoutRequirement {
+  station: { name: string };
+  level: number;
+  count: number;
+  foundInRaid: boolean;
+}
+
+/** Slots a hideout station level adds that the item is installed in (and not consumed by). */
+export interface CachedHideoutSlot {
+  station: { name: string };
+  level: number;
+  slots: number;
 }
 
 export interface CachedBarter {
@@ -71,6 +112,15 @@ export interface CachedCraft {
 
 export interface ComposedItem extends Omit<CachedItem, "usedInTasks"> {
   usedInTasks: CachedTask[];
+  hideoutRequirements: CachedHideoutRequirement[];
+  hideoutSlots: CachedHideoutSlot[];
   bartersUsing: CachedBarter[];
   craftsUsing: CachedCraft[];
+}
+
+/** What an item is needed for, without prices: the input to the needs summary. */
+export interface ItemUses {
+  usedInTasks: CachedTask[];
+  hideoutRequirements: CachedHideoutRequirement[];
+  hideoutSlots: CachedHideoutSlot[];
 }

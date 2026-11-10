@@ -99,7 +99,7 @@ export const groupItemsQuery: QueryDefinition<GroupVariables, CachedItem[]> = {
 
 export const itemDetailQuery: QueryDefinition<DetailVariables, ComposedItem | null> = {
   id: "item-detail",
-  version: 3,
+  version: 4,
   staleTime: 5 * MINUTE,
   maxAge: DAY,
   persist: true,
@@ -202,12 +202,32 @@ function isComposedItem(value: unknown): value is ComposedItem {
             (typeof objective.description === "string" && objective.description.length <= 10_000)
         )
     ) &&
+    Array.isArray(item.hideoutRequirements) &&
+    item.hideoutRequirements.length <= 1_000 &&
+    item.hideoutRequirements.every(
+      (entry) => isStationLevel(entry) && isFiniteNumber(entry.count) && typeof entry.foundInRaid === "boolean"
+    ) &&
+    Array.isArray(item.hideoutSlots) &&
+    item.hideoutSlots.length <= 1_000 &&
+    item.hideoutSlots.every((entry) => isStationLevel(entry) && isFiniteNumber(entry.slots)) &&
     Array.isArray(item.bartersUsing) &&
     item.bartersUsing.length <= 5_000 &&
     item.bartersUsing.every(isBarter) &&
     Array.isArray(item.craftsUsing) &&
     item.craftsUsing.length <= 5_000 &&
     item.craftsUsing.every(isCraft)
+  );
+}
+
+function isFiniteNumber(value: unknown): value is number {
+  return typeof value === "number" && Number.isFinite(value);
+}
+
+function isStationLevel(value: unknown) {
+  if (!value || typeof value !== "object") return false;
+  const entry = value as { station?: { name?: unknown }; level?: unknown };
+  return (
+    typeof entry.station?.name === "string" && entry.station.name.length <= 500 && isFiniteNumber(entry.level)
   );
 }
 

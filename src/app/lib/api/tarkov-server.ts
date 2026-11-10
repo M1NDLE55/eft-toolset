@@ -3,10 +3,13 @@ import type {
   CachedBarter,
   CachedContainedItem,
   CachedCraft,
+  CachedHideoutRequirement,
+  CachedHideoutSlot,
   CachedItem,
   CachedTask,
   CatalogEntry,
   ComposedItem,
+  ItemUses,
 } from "@/app/lib/cache/types";
 import type {
   AmmoItemData,
@@ -66,6 +69,7 @@ interface UpstreamEnvelope<T> {
 interface RawContainedItem {
   item?: string;
   count?: number;
+  attributes?: { tool?: boolean | null } | null;
 }
 
 interface RawTraderOffer {
@@ -95,6 +99,8 @@ interface RawItemProperties {
   fireModes?: string[] | null;
   defaultAmmo?: string | null;
   defaultPreset?: string | null;
+  defaultWidth?: number | null;
+  defaultHeight?: number | null;
   presets?: string[] | null;
   slots?: RawSlot[] | null;
   baseItem?: string | null;
@@ -117,6 +123,7 @@ interface RawItem {
   gridImageLink?: string | null;
   wikiLink?: string | null;
   fleaMarketFee?: number | null;
+  minLevelForFlea?: number | null;
   width?: number | null;
   height?: number | null;
   weight?: number | null;
@@ -137,6 +144,10 @@ interface RawItem {
 
 interface RawTaskObjective {
   description?: string | null;
+  type?: string | null;
+  count?: number | null;
+  foundInRaid?: boolean | null;
+  optional?: boolean | null;
   item?: string | null;
   items?: string[] | null;
   markerItem?: string | null;
@@ -154,6 +165,7 @@ interface RawTask {
   minPlayerLevel?: number | null;
   wikiLink?: string | null;
   trader?: string | null;
+  factionName?: string | null;
   objectives?: RawTaskObjective[] | null;
 }
 
@@ -177,6 +189,18 @@ interface RawNamedEntity {
   id?: string;
   name?: string;
   normalizedName?: string;
+}
+
+interface RawHideoutStation extends RawNamedEntity {
+  levels?: {
+    level?: number | null;
+    itemRequirements?: {
+      item?: string | null;
+      count?: number | null;
+      attributes?: { foundInRaid?: boolean | null } | null;
+    }[] | null;
+    bonuses?: { type?: string | null; value?: number | null; slotItems?: string[] | null }[] | null;
+  }[] | null;
 }
 
 interface RawPosition {
@@ -292,6 +316,12 @@ interface TaskItemUse {
   task: RawTask;
   /** The task's objectives that involve the indexed item. */
   objectives: RawTaskObjective[];
+}
+
+interface HideoutContext {
+  stationNames: Map<string, string>;
+  requirementsByItem: Map<string, CachedHideoutRequirement[]>;
+  slotsByItem: Map<string, CachedHideoutSlot[]>;
 }
 
 interface RelationsContext {
@@ -545,14 +575,15 @@ export async function getItemDetail(
   gameMode: GameMode,
   reference: ItemReference
 ): Promise<ComposedItem | null> {
-  const [itemContext, traderNames, taskContext, relations, stations] =
+  const [itemContext, traderNames, taskContext, relations, hideout] =
     await Promise.all([
       loadItems(gameMode),
       loadTraderNames(gameMode),
       loadTasks(gameMode),
       loadRelations(gameMode),
-      loadStationNames(gameMode),
+      loadHideout(gameMode),
     ]);
+  const stations = hideout.stationNames;
   throwIfRequestAborted();
 
   const item =
@@ -563,14 +594,13 @@ export async function getItemDetail(
   const itemId = item.id;
   const details = memo(
     `${gameMode}/details`,
-    [itemContext, traderNames, taskContext, relations, stations],
+    [itemContext, traderNames, taskContext, relations, hideout],
     () => new Map<string, ComposedItem>()
   );
   const cached = details.get(itemId);
   if (cached) return cached;
-  const tasks = (taskContext.byItem.get(itemId) ?? []).map(({ task, objectives }) =>
-    projectTask(task, objectives, taskContext.translations, traderNames)
-  );
+  const uses = itemUses(itemId, taskContext, traderNames, hideout);
+  const tasks = uses.usedInTasks;
   const bartersUsing = relatedBarters(relations.bartersByItem, itemId)
     .map((barter) =>
       projectBarter(
@@ -605,12 +635,45 @@ export async function getItemDetail(
       tasks.map(({ name }) => ({ name })),
       itemContext.fleaMarket
     ),
-    usedInTasks: tasks,
+    ...uses,
     bartersUsing,
     craftsUsing,
   };
   details.set(itemId, detail);
   return detail;
+}
+
+function itemUses(
+  itemId: string,
+  taskContext: TasksContext,
+  traderNames: Map<string, string>,
+  hideout: HideoutContext
+): ItemUses {
+  return {
+    usedInTasks: (taskContext.byItem.get(itemId) ?? []).map(({ task, objectives }) =>
+      projectTask(task, objectives, taskContext.translations, traderNames)
+    ),
+    hideoutRequirements: hideout.requirementsByItem.get(itemId) ?? [],
+    hideoutSlots: hideout.slotsByItem.get(itemId) ?? [],
+  };
+}
+
+/** Tasks and hideout uses for items by exact name, keyed by name; for pricing lists of loot. */
+export async function getItemUses(gameMode: GameMode, names: string[]): Promise<Map<string, ItemUses>> {
+  const result = new Map<string, ItemUses>();
+  if (names.length === 0) return result;
+  const [itemContext, traderNames, taskContext, hideout] = await Promise.all([
+    loadItems(gameMode),
+    loadTraderNames(gameMode),
+    loadTasks(gameMode),
+    loadHideout(gameMode),
+  ]);
+  throwIfRequestAborted();
+  for (const name of names) {
+    const id = itemContext.byName.get(name)?.id;
+    if (id) result.set(name, itemUses(id, taskContext, traderNames, hideout));
+  }
+  return result;
 }
 
 export async function getGunList(gameMode: GameMode): Promise<GunListItem[]> {
@@ -794,6 +857,48 @@ function loadStationNames(gameMode: GameMode) {
   return loadNames(gameMode, "hideout");
 }
 
+/** Hideout upgrades that consume each item, and station slots each item is installed in. */
+async function loadHideout(gameMode: GameMode): Promise<HideoutContext> {
+  const [stationsEnvelope, translationsEnvelope, stationNames] = await Promise.all([
+    loadResource<Dictionary<RawHideoutStation>>(gameMode, "hideout"),
+    loadResource<TranslationDictionary>(gameMode, "hideout_en"),
+    loadStationNames(gameMode),
+  ]);
+  return memo(`${gameMode}/hideout-context`, [stationsEnvelope, translationsEnvelope, stationNames], () => {
+    const requirementsByItem = new Map<string, CachedHideoutRequirement[]>();
+    const slotsByItem = new Map<string, CachedHideoutSlot[]>();
+    const push = <T>(index: Map<string, T[]>, id: string, entry: T) => {
+      const entries = index.get(id) ?? [];
+      entries.push(entry);
+      index.set(id, entries);
+    };
+    for (const [id, station] of Object.entries(stationsEnvelope.data)) {
+      const name = stationNames.get(id) ?? id;
+      for (const level of station.levels ?? []) {
+        const levelNumber = finiteNumber(level.level) ?? 0;
+        for (const requirement of level.itemRequirements ?? []) {
+          const count = finiteNumber(requirement.count);
+          if (!requirement.item || count === null || count <= 0) continue;
+          push(requirementsByItem, requirement.item, {
+            station: { name },
+            level: levelNumber,
+            count,
+            foundInRaid: requirement.attributes?.foundInRaid === true,
+          });
+        }
+        for (const bonus of level.bonuses ?? []) {
+          const slots = finiteNumber(bonus.value);
+          if (bonus.type !== "AdditionalSlots" || slots === null || slots <= 0) continue;
+          for (const itemId of new Set(bonus.slotItems ?? [])) {
+            push(slotsByItem, itemId, { station: { name }, level: levelNumber, slots });
+          }
+        }
+      }
+    }
+    return { stationNames, requirementsByItem, slotsByItem };
+  });
+}
+
 async function loadResource<T>(
   gameMode: GameMode,
   resource: Resource
@@ -963,8 +1068,9 @@ function validateResourceData(resource: Resource, data: unknown): boolean {
     case "crafts":
       return boundedArray(data, isRawCraft, MAX_RESOURCE_RECORDS);
     case "traders":
-    case "hideout":
       return dictionary(data, isRawNamedEntity);
+    case "hideout":
+      return dictionary(data, isRawHideoutStation);
     case "items_en":
     case "tasks_en":
     case "traders_en":
@@ -986,6 +1092,7 @@ function isRawItem(value: unknown): value is RawItem {
   ];
   const numberFields = [
     value.fleaMarketFee,
+    value.minLevelForFlea,
     value.width,
     value.height,
     value.weight,
@@ -1021,6 +1128,8 @@ function isRawItemProperties(value: unknown): value is RawItemProperties {
     ].every(optionalShortString) &&
     [
       value.ergonomics,
+      value.defaultWidth,
+      value.defaultHeight,
       value.recoilModifier,
       value.recoilVertical,
       value.recoilHorizontal,
@@ -1065,14 +1174,15 @@ function isRawContainedItem(value: unknown): value is RawContainedItem {
   return (
     isRecord(value) &&
     optionalShortString(value.item) &&
-    optionalFiniteNumber(value.count)
+    optionalFiniteNumber(value.count) &&
+    optional(value.attributes, (attributes) => isRecord(attributes) && optionalBoolean(attributes.tool))
   );
 }
 
 function isRawTask(value: unknown): value is RawTask {
   return (
     isRecord(value) &&
-    [value.id, value.name, value.normalizedName, value.wikiLink, value.trader].every(
+    [value.id, value.name, value.normalizedName, value.wikiLink, value.trader, value.factionName].every(
       optionalShortString
     ) &&
     optionalFiniteNumber(value.minPlayerLevel) &&
@@ -1083,7 +1193,10 @@ function isRawTask(value: unknown): value is RawTask {
 function isRawTaskObjective(value: unknown): value is RawTaskObjective {
   if (!isRecord(value)) return false;
   return (
-    [value.description, value.item, value.markerItem].every(optionalShortString) &&
+    [value.description, value.type, value.item, value.markerItem].every(optionalShortString) &&
+    optionalFiniteNumber(value.count) &&
+    optionalBoolean(value.foundInRaid) &&
+    optionalBoolean(value.optional) &&
     optionalStringArray(value.items) &&
     [
       value.containsAll,
@@ -1128,6 +1241,30 @@ function isRawNamedEntity(value: unknown): value is RawNamedEntity {
   return (
     isRecord(value) &&
     [value.id, value.name, value.normalizedName].every(optionalShortString)
+  );
+}
+
+function isRawHideoutStation(value: unknown): value is RawHideoutStation {
+  return (
+    isRawNamedEntity(value) &&
+    optionalArray((value as Record<string, unknown>).levels, (level) =>
+      isRecord(level) &&
+      optionalFiniteNumber(level.level) &&
+      optionalArray(level.itemRequirements, (requirement) =>
+        isRecord(requirement) &&
+        optionalShortString(requirement.item) &&
+        optionalFiniteNumber(requirement.count) &&
+        optional(requirement.attributes, (attributes) =>
+          isRecord(attributes) && optionalBoolean(attributes.foundInRaid)
+        )
+      ) &&
+      optionalArray(level.bonuses, (bonus) =>
+        isRecord(bonus) &&
+        optionalShortString(bonus.type) &&
+        optionalFiniteNumber(bonus.value) &&
+        optionalStringArray(bonus.slotItems)
+      )
+    )
   );
 }
 
@@ -1296,6 +1433,10 @@ function optionalShortString(value: unknown): boolean {
   return optional(value, isShortString);
 }
 
+function optionalBoolean(value: unknown): boolean {
+  return optional(value, (entry): entry is boolean => typeof entry === "boolean");
+}
+
 function optionalFiniteNumber(value: unknown): boolean {
   return optional(value, (entry): entry is number =>
     typeof entry === "number" && Number.isFinite(entry)
@@ -1342,7 +1483,7 @@ function projectCachedItem(
   const fleaBuyPrice = finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice);
   const fleaSellPrice = finiteNumber(item.lastLowPrice);
   const canUseFlea = !item.types?.includes("noFlea") && fleaSellPrice !== null;
-  const buyFor = projectTraderPrices(item.buyFromTrader, traderNames);
+  const buyFor = projectTraderPrices(item.buyFromTrader, traderNames, true);
   const sellFor = projectTraderPrices(item.sellToTrader, traderNames);
   if (canUseFlea && fleaBuyPrice !== null) {
     buyFor.push({ vendor: { name: "Flea Market" }, priceRUB: fleaBuyPrice });
@@ -1365,17 +1506,33 @@ function projectCachedItem(
     buyFor,
     sellFor,
     usedInTasks,
+    fleaBanned: Boolean(item.types?.includes("noFlea")),
+    fleaMinLevel: finiteNumber(item.minLevelForFlea),
+    ...(item.properties?.propertiesType === "ItemPropertiesWeapon"
+      ? {
+          weapon: {
+            defaultWidth: positiveFiniteNumber(item.properties.defaultWidth),
+            defaultHeight: positiveFiniteNumber(item.properties.defaultHeight),
+          },
+        }
+      : {}),
   };
 }
 
 function projectTraderPrices(
   offers: RawTraderOffer[] | null | undefined,
-  traderNames: Map<string, string>
+  traderNames: Map<string, string>,
+  withLevel = false
 ) {
   return (offers ?? []).flatMap((offer) => {
     const priceRUB = finiteNumber(offer.priceRUB);
     if (!offer.trader || priceRUB === null) return [];
-    return [{ vendor: { name: traderNames.get(offer.trader) ?? offer.trader }, priceRUB }];
+    const level = withLevel ? finiteNumber(offer.minTraderLevel) : null;
+    return [{
+      vendor: { name: traderNames.get(offer.trader) ?? offer.trader },
+      priceRUB,
+      ...(level === null ? {} : { minTraderLevel: level }),
+    }];
   });
 }
 
@@ -1385,13 +1542,20 @@ function projectTask(
   translations: TranslationDictionary,
   traderNames: Map<string, string>
 ): CachedTask {
+  const faction = task.factionName && task.factionName !== "Any" ? task.factionName : null;
   return {
     name: translate(task.name, translations),
     minPlayerLevel: finiteNumber(task.minPlayerLevel) ?? 0,
     wikiLink: safeHttpsUrl(task.wikiLink),
     trader: { name: (task.trader && traderNames.get(task.trader)) || task.trader || "Unknown" },
+    faction,
     objectives: objectives.map((objective) => ({
       description: translateNullable(objective.description, translations),
+      type: objective.type ?? null,
+      count: finiteNumber(objective.count),
+      foundInRaid: typeof objective.foundInRaid === "boolean" ? objective.foundInRaid : null,
+      optional: objective.optional === true,
+      alternatives: Math.max(0, objectiveItemIds(objective).size - 1),
     })),
   };
 }
@@ -1433,7 +1597,7 @@ function projectCraft(
     },
     level: finiteNumber(craft.level) ?? 0,
     taskUnlock: projectTaskUnlock(craft.taskUnlock, taskById, taskTranslations),
-    requiredItems: projectContainedItems(craft.requiredItems, itemById, itemTranslations),
+    requiredItems: projectContainedItems(craft.requiredItems, itemById, itemTranslations, true),
     rewardItems: projectContainedItems(
       craft.productItem ? [craft.productItem] : [],
       itemById,
@@ -1459,7 +1623,8 @@ function projectTaskUnlock(
 function projectContainedItems(
   entries: RawContainedItem[] | null | undefined,
   itemById: Map<string, RawItem>,
-  translations: TranslationDictionary
+  translations: TranslationDictionary,
+  markTools = false
 ): CachedContainedItem[] {
   return (entries ?? []).flatMap((entry) => {
     if (!entry.item) return [];
@@ -1471,6 +1636,7 @@ function projectContainedItems(
           normalizedName: item?.normalizedName ?? null,
         },
         quantity: finiteNumber(entry.count) ?? 0,
+        ...(markTools && entry.attributes?.tool === true ? { tool: true } : {}),
       },
     ];
   });

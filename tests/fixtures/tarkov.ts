@@ -137,7 +137,28 @@ export function createTarkovFixtures(): Record<string, unknown> {
       ],
     },
     hideout: {
-      data: { station: { id: "station", name: "station-name", normalizedName: "workbench" } },
+      data: {
+        station: {
+          id: "station",
+          name: "station-name",
+          normalizedName: "workbench",
+          levels: [
+            {
+              level: 1,
+              itemRequirements: [
+                { item: "mod", count: 2, attributes: { foundInRaid: true } },
+                { item: "weapon", count: 1, attributes: { foundInRaid: false } },
+              ],
+              bonuses: [{ type: "ExperienceRate", value: 0.1 }],
+            },
+            {
+              level: 2,
+              itemRequirements: [{ item: "mod", count: 3, attributes: { foundInRaid: false } }],
+              bonuses: [{ type: "AdditionalSlots", value: 5, slotItems: ["mod"] }],
+            },
+          ],
+        },
+      },
     },
     hideout_en: { data: { "station-name": "Workbench" } },
     maps: {
