@@ -37,7 +37,7 @@ export const MCP_TOOL_GROUPS = [
         title: "Get item",
         summary: "Prices, best place to sell, value per slot, and every task, hideout upgrade, barter, and craft that uses an item.",
         description:
-          "Item Scanner. Everything the item page shows for one item: trader and flea prices, the best place to sell it after the flea listing fee, value per inventory slot, flea eligibility, the 48-hour price change, and what needs it: a total for tasks and hideout upgrades with found-in-raid counts, those tasks and upgrades, and counts of the barters and crafts that use it (list those with include). Flea buy and sell prices are the lowest current listing; the flea buy offer also gives the 24-hour average the item page shows. A name several unrelated items share returns the candidates instead of a guess; inexact matches carry matchedBy and a note.",
+          "Item Scanner. Everything the item page shows for one item: trader and flea prices, the best place to sell it after the flea listing fee, value per inventory slot, flea eligibility, the 48-hour price change, and what needs it: a total for tasks and hideout upgrades with found-in-raid counts, those tasks and upgrades, and counts of the barters and crafts that use it (list those with include). Flea buy and sell prices are the lowest current listing; the flea buy offer also gives the 24-hour average the item page shows. Ambiguous names return the candidates; inexact matches carry matchedBy and a note.",
       },
     ],
   },

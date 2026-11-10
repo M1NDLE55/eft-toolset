@@ -250,6 +250,7 @@ export const getWeaponOutput = result({
   defaultPreset: object({ id: text, name: maybeText, stats }).nullable(),
   slots: list(object({ id: text, nameId: text, name: text, required: bool, optionCount: num })),
   compatibleAmmoCount: num,
+  note: text.optional().describe("Set when the weapon name was not an exact match."),
 });
 
 export const getSlotOptionsOutput = result({

@@ -19,6 +19,7 @@ import type {
   PickItemData,
   PresetContents,
   SightKind,
+  TraderOffer,
 } from "@/app/lib/types/gunBuilder";
 import type {
   ExtractFaction,
@@ -1161,7 +1162,7 @@ function isRawSlot(value: unknown): value is RawSlot {
   if (!isRecord(value)) return false;
   return (
     [value.id, value.name, value.nameId].every(optionalShortString) &&
-    optional(value.required, (entry) => typeof entry === "boolean") &&
+    optionalBoolean(value.required) &&
     optional(value.filters, (filters) =>
       isRecord(filters) && optionalStringArray(filters.allowedItems)
     )
@@ -1304,7 +1305,7 @@ function isRawMap(value: unknown): value is RawMap {
     optionalArray(value.locks, (entry) =>
       isRecord(entry) &&
       [entry.lockType, entry.key].every(optionalShortString) &&
-      optional(entry.needsPower, (item) => typeof item === "boolean") &&
+      optionalBoolean(entry.needsPower) &&
       optional(entry.position, isPosition)
     ) &&
     optionalArray(value.hazards, (entry) =>
@@ -1489,9 +1490,9 @@ function projectCachedItem(
   usedInTasks: { name: string }[],
   fleaMarket?: ItemsData["fleaMarket"]
 ): CachedItem {
-  const fleaBuyPrice = finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice);
-  const fleaSellPrice = finiteNumber(item.lastLowPrice);
-  const canUseFlea = !item.types?.includes("noFlea") && fleaSellPrice !== null;
+  const fleaBuyPrice = fleaAveragePrice(item);
+  const fleaSellPrice = isFleaBanned(item) ? null : finiteNumber(item.lastLowPrice);
+  const canUseFlea = fleaSellPrice !== null;
   const buyFor = projectTraderPrices(item.buyFromTrader, traderNames, true);
   const sellFor = projectTraderPrices(item.sellToTrader, traderNames);
   if (canUseFlea && fleaBuyPrice !== null) {
@@ -1515,7 +1516,7 @@ function projectCachedItem(
     buyFor,
     sellFor,
     usedInTasks,
-    fleaBanned: Boolean(item.types?.includes("noFlea")),
+    fleaBanned: isFleaBanned(item),
     fleaMinLevel: finiteNumber(item.minLevelForFlea),
     ...(item.properties?.propertiesType === "ItemPropertiesWeapon"
       ? {
@@ -1536,7 +1537,7 @@ function projectTraderPrices(
   return (offers ?? []).flatMap((offer) => {
     const priceRUB = finiteNumber(offer.priceRUB);
     if (!offer.trader || priceRUB === null) return [];
-    const level = withLevel ? finiteNumber(offer.minTraderLevel) : null;
+    const level = withLevel ? traderLoyaltyLevel(offer) : null;
     return [{
       vendor: { name: traderNames.get(offer.trader) ?? offer.trader },
       priceRUB,
@@ -1738,7 +1739,7 @@ function projectBuildItem(
     gridImageLink: safeAssetUrl(item.gridImageLink),
     weight: finiteNumber(item.weight) ?? 0,
     ...traderDetails(item, traderNames),
-    fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
+    fleaPriceRUB: fleaAveragePrice(item),
     ergonomics: finiteNumber(properties?.ergonomics) ?? 0,
     recoilModifier: isWeapon ? 0 : finiteNumber(properties?.recoilModifier) ?? 0,
     recoilVertical: isWeapon ? finiteNumber(properties?.recoilVertical) : null,
@@ -1778,24 +1779,20 @@ function sightKind(item: RawItem, name: string): SightKind | null {
   return /\bfront sight\b/i.test(name) ? "front" : null;
 }
 
+/** Rouble trader offers with their loyalty levels, cheapest first. */
+function traderOffersOf(item: RawItem, traderNames: Map<string, string>): TraderOffer[] {
+  return (item.buyFromTrader ?? [])
+    .flatMap((offer) => {
+      const priceRUB = finiteNumber(offer.priceRUB);
+      if (!offer.trader || priceRUB === null || priceRUB <= 0) return [];
+      return [{ trader: traderNames.get(offer.trader) ?? offer.trader, priceRUB, level: traderLoyaltyLevel(offer) }];
+    })
+    .sort((a, b) => a.priceRUB - b.priceRUB);
+}
+
 /** Every trader offer and the flea ban, so the gun builder can price parts at a player's loyalty levels. */
 function gunBuilderExtras(item: RawItem, traderNames: Map<string, string>) {
-  const traderOffers = (item.buyFromTrader ?? []).flatMap((offer) => {
-    const priceRUB = finiteNumber(offer.priceRUB);
-    if (!offer.trader || priceRUB === null || priceRUB <= 0) return [];
-    const level = finiteNumber(offer.minTraderLevel);
-    return [
-      {
-        trader: traderNames.get(offer.trader) ?? offer.trader,
-        priceRUB,
-        level: level !== null && Number.isInteger(level) && level >= 1 && level <= 10 ? level : null,
-      },
-    ];
-  });
-  return {
-    traderOffers: traderOffers.sort((a, b) => a.priceRUB - b.priceRUB),
-    fleaBanned: Boolean(item.types?.includes("noFlea")),
-  };
+  return { traderOffers: traderOffersOf(item, traderNames), fleaBanned: isFleaBanned(item) };
 }
 
 function byIdHasAmmo(itemById: Map<string, RawItem>, id: string) {
@@ -1824,7 +1821,7 @@ function projectAmmoItem(
     initialSpeed: finiteNumber(properties?.initialSpeed),
     recoilModifier: finiteNumber(properties?.recoilModifier) ?? 0,
     accuracyModifier: finiteNumber(properties?.accuracyModifier) ?? 0,
-    fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
+    fleaPriceRUB: fleaAveragePrice(item),
     ...gunBuilderExtras(item, traderNames),
   };
 }
@@ -1841,7 +1838,7 @@ function projectPickItem(
     gridImageLink: safeAssetUrl(item.gridImageLink),
     weight: finiteNumber(item.weight) ?? 0,
     ...traderDetails(item, traderNames),
-    fleaPriceRUB: finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice),
+    fleaPriceRUB: fleaAveragePrice(item),
     ergonomics: finiteNumber(item.properties?.ergonomics) ?? 0,
     recoilModifier: finiteNumber(item.properties?.recoilModifier) ?? 0,
     conflictingItemIds: item.conflictingItems ?? [],
@@ -1868,19 +1865,33 @@ function projectSlots(
 }
 
 function traderDetails(item: RawItem, traderNames: Map<string, string>) {
-  let best: RawTraderOffer | null = null;
-  for (const offer of item.buyFromTrader ?? []) {
-    const price = finiteNumber(offer.priceRUB);
-    if (!offer.trader || price === null || price <= 0) continue;
-    if (!best || price < (best.priceRUB ?? Infinity)) best = offer;
-  }
-  const level = finiteNumber(best?.minTraderLevel);
+  const [best] = traderOffersOf(item, traderNames);
   return {
     normalizedName: item.normalizedName ?? "",
-    traderPriceRUB: best ? finiteNumber(best.priceRUB) : null,
-    traderName: best?.trader ? (traderNames.get(best.trader) ?? best.trader) : null,
-    traderLevel: level !== null && Number.isInteger(level) && level >= 1 && level <= 10 ? level : null,
+    traderPriceRUB: best?.priceRUB ?? null,
+    traderName: best?.trader ?? null,
+    traderLevel: best?.level ?? null,
   };
+}
+
+/**
+ * The one test for flea eligibility: tarkov.dev's noFlea type. Item pages, price lists, and
+ * the gun builder all read it from here, so they never disagree about a ban.
+ */
+function isFleaBanned(item: RawItem) {
+  return Boolean(item.types?.includes("noFlea"));
+}
+
+/** The 24-hour flea average (or the lowest listing without one); null when the item can't be traded there. */
+function fleaAveragePrice(item: RawItem) {
+  if (isFleaBanned(item)) return null;
+  return finiteNumber(item.avg24hPrice) ?? finiteNumber(item.lastLowPrice);
+}
+
+/** A trader offer's loyalty level, 1 to 10, or null when tarkov.dev gives none or an odd value. */
+function traderLoyaltyLevel(offer: RawTraderOffer) {
+  const level = finiteNumber(offer.minTraderLevel);
+  return level !== null && Number.isInteger(level) && level >= 1 && level <= 10 ? level : null;
 }
 
 const EXTRACT_FACTIONS: ExtractFaction[] = ["pmc", "scav", "shared"];
@@ -2119,7 +2130,7 @@ function calculateFleaMarketFee(
   item: RawItem,
   fleaMarket: ItemsData["fleaMarket"]
 ): number | null {
-  if (item.types?.includes("noFlea")) return null;
+  if (isFleaBanned(item)) return null;
   const basePrice = finiteNumber(item.basePrice);
   const listingPrice = finiteNumber(item.lastLowPrice) ?? basePrice;
   const offerRate = finiteNumber(fleaMarket?.sellOfferFeeRate);

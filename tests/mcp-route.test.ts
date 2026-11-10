@@ -378,8 +378,13 @@ describe("MCP endpoint", () => {
       bestSell: null,
       noSellReason: "No trader buys it and it is banned from the flea market.",
       cheapestBuy: null,
-      noBuyReason: "No trader sells it for roubles and it is banned from the flea market.",
+      noBuyReason: "No trader sells it for roubles and it is banned from the flea market. Only found in raid, bartered, or crafted.",
     });
+    // The gun builder reads the same ban and words it the same way.
+    const ammoOptions = await call("get_ammo_options", { build: { weapon: "Test Rifle" } });
+    const ammoRow = ammoOptions.data.ammo.find((row: { name: string }) => row.name === "Test Ammo");
+    expect(ammoRow).toMatchObject({ fleaPriceRUB: null, priceRUB: null });
+    expect(ammoRow.priceNote).toContain("it is banned from the flea market. Only found in raid, bartered, or crafted.");
 
     const prices = await call("get_item_prices", { items: ["Test Mod", "Test Rifle"] });
     expect(prices.data.rows[0]).toMatchObject({
@@ -645,7 +650,7 @@ describe("MCP endpoint", () => {
       name: "Test SSA AP",
       caliber: "5.56x45mm NATO",
       priceRUB: null,
-      priceNote: expect.stringMatching(/no trader sells it, and it is banned on the flea market/),
+      priceNote: expect.stringMatching(/no trader sells it, and it is banned from the flea market/),
     });
     const buyableAmmo = await call("get_ammo_options", { build: full, buyableOnly: true });
     expect(buyableAmmo.data.ammo.map((row: { id: string }) => row.id)).toEqual(["ammo"]);

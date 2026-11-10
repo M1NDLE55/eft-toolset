@@ -8,7 +8,7 @@ import { computeStats } from "@/app/lib/builds/stats";
 import { collectItemIds } from "@/app/lib/builds/tree";
 import { checkSights, installedMagazineCapacity } from "@/app/lib/builds/sights";
 import { effectivePrice, withTraderLimits } from "@/app/lib/builds/price";
-import { resolveSlotPath } from "@/app/lib/builds/resolve";
+import { resolveBuild, resolveSlotPath, type BuildSource } from "@/app/lib/builds/resolve";
 import { extractSharePayload, parseSharedBuildInput } from "@/app/lib/builds/share-import";
 import { encodeBuildSharePayload } from "@/app/lib/builds/share";
 import { encodeSharePayload } from "@/app/lib/share-codec";
@@ -634,5 +634,57 @@ describe("calibers", () => {
     expect(formatCaliber("Caliber20x1mm")).toBe("20x1mm");
     expect(formatCaliber(null)).toBeNull();
     expect(caliberId("Caliber556x45NATO")).toBe("556x45NATO");
+  });
+});
+
+describe("gun-builder name resolution", () => {
+  const mag = (id: string, name: string, shortName: string) => item(id, { name, shortName });
+  const parts = lookup(
+    gun([slot("mod_magazine", ["pmag", "pmag-fde", "pmag-window", "stanag"])], { name: "Colt M4A1 5.56x45 assault rifle", shortName: "M4A1" }),
+    mag("pmag", "5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine", "GEN M3"),
+    mag("pmag-fde", "5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine (FDE)", "GEN M3"),
+    mag("pmag-window", "5.56x45 Magpul PMAG 30 GEN M3 Window STANAG 30-round magazine", "GEN M3 W"),
+    mag("stanag", "5.56x45 Colt AR-15 STANAG 30-round magazine", "STANAG")
+  );
+  const source = {
+    gameMode: "regular" as const,
+    lookup: parts,
+    guns: [
+      { id: "gun", name: "Colt M4A1 5.56x45 assault rifle", shortName: "M4A1" },
+      { id: "hk", name: "HK 416A5 5.56x45 assault rifle", shortName: "HK 416A5" },
+    ],
+    loadPreset: async () => null,
+    loadAmmo: async () => [],
+  } as unknown as BuildSource;
+
+  it("resolves ordinary weapon and part names, preferring an item over its own variants", async () => {
+    const build = await resolveBuild(source, { weapon: "M4A1", parts: [{ slotPath: ["mod_magazine"], item: "PMAG 30" }] });
+    expect(build.weaponId).toBe("gun");
+    expect(build.root.slots.mod_magazine.itemId).toBe("pmag");
+    expect(build.warnings.join(" ")).toContain("5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine");
+  });
+
+  it("refuses a shared short name instead of taking the first part", async () => {
+    await expect(
+      resolveBuild(source, { weapon: "M4A1", parts: [{ slotPath: ["mod_magazine"], item: "gen m3 w" }] })
+    ).resolves.toMatchObject({ root: { slots: { mod_magazine: { itemId: "pmag-window" } } } });
+    const shared = item("pmag-black", { name: "Some other 30-round magazine", shortName: "GEN M3" });
+    const ambiguous = {
+      ...source,
+      lookup: lookup(
+        gun([slot("mod_magazine", ["pmag-fde", "pmag-black"])], { shortName: "M4A1" }),
+        parts.get("pmag-fde")!,
+        shared
+      ),
+    } as BuildSource;
+    await expect(
+      resolveBuild(ambiguous, { weapon: "gun", parts: [{ slotPath: ["mod_magazine"], item: "GEN M3" }] })
+    ).rejects.toThrow(/"GEN M3" matches several/);
+  });
+
+  it("tolerates a typo in a weapon name and says what it assumed", async () => {
+    const build = await resolveBuild(source, { weapon: "Colt M4A1 assualt rifle" });
+    expect(build.weaponId).toBe("gun");
+    expect(build.warnings[0]).toMatch(/closest spelling/);
   });
 });

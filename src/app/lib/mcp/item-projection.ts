@@ -8,7 +8,7 @@ import type {
   ComposedItem,
   ItemUses,
 } from "@/app/lib/cache/types";
-import { FLEA_MARKET, bestSell, fleaPrices } from "@/app/lib/item-price";
+import { FLEA_MARKET, LOOT_ONLY, NO_FLEA_PRICE, bestSell, fleaPrices } from "@/app/lib/item-price";
 import { summarizeNeeds, taskNeed } from "@/app/lib/item-needs";
 import { round, type ToolContext } from "./context";
 import { itemUrl } from "./sources";
@@ -170,7 +170,8 @@ export function priceSummary(item: CachedItem) {
     null
   );
   const status = fleaStatus(item);
-  const noFlea = status === FLEA_STATUS.banned ? "it is banned from the flea market" : "it has no current flea listings";
+  const banned = status === FLEA_STATUS.banned;
+  const noFlea = banned ? NO_FLEA_PRICE.banned : NO_FLEA_PRICE.noListings;
   const note = weaponNote(item);
   return {
     bestSell: best
@@ -183,8 +184,8 @@ export function priceSummary(item: CachedItem) {
       : null,
     ...(best ? {} : { noSellReason: `No trader buys it and ${noFlea}.` }),
     cheapestBuy,
-    ...(cheapestBuy ? {} : { noBuyReason: `No trader sells it for roubles and ${noFlea}.` }),
-    flea: { status, minPlayerLevel: status === FLEA_STATUS.banned ? null : (item.fleaMinLevel ?? null) },
+    ...(cheapestBuy ? {} : { noBuyReason: `No trader sells it for roubles and ${noFlea}.${banned ? ` ${LOOT_ONLY}` : ""}` }),
+    flea: { status, minPlayerLevel: banned ? null : (item.fleaMinLevel ?? null) },
     fleaListingFeeRUB: item.fleaMarketFee,
     change48hPercent: round(item.changeLast48hPercent, 2),
     ...(note ? { sizeNote: note } : {}),

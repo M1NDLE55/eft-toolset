@@ -2,6 +2,20 @@ import type { CachedItem } from "@/app/lib/cache/types";
 
 export const FLEA_MARKET = "Flea Market";
 
+/**
+ * Why an item has no flea price, worded once for the item tools and the gun builder. Whether an
+ * item is banned comes from one place too: the fleaBanned flag tarkov-server.ts sets.
+ */
+export const NO_FLEA_PRICE = {
+  banned: "it is banned from the flea market",
+  noListings: "it has no current flea listings",
+  noPrice: "it has no flea price",
+  turnedOff: "flea prices are turned off",
+} as const;
+
+/** Said of a flea-banned item no trader sells for roubles. */
+export const LOOT_ONLY = "Only found in raid, bartered, or crafted.";
+
 export interface BestSell {
   vendor: string;
   price: number;

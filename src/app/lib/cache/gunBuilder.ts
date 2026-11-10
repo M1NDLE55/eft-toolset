@@ -15,7 +15,8 @@ import { ensureQuery, type QueryDefinition } from "@/app/lib/api/queryClient";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
 import { isDetailed } from "@/app/lib/builds/stats";
 
-// 5: build items carry magazine capacity and sight kinds for the optimiser.
+// 5: build items and ammo carry magazine capacity, sight kinds, trader offers with loyalty levels,
+// and the flea ban (with no flea price when banned).
 const GUN_CACHE_VERSION = 5;
 const MINUTE = 60_000;
 const DAY = 24 * 60 * MINUTE;

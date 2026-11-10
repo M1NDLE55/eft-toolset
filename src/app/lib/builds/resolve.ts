@@ -9,7 +9,7 @@ import type {
 import type { CatalogItem } from "@/app/lib/cache/types";
 import type { GameMode } from "@/components/game-mode/mode";
 import { InputError } from "@/app/lib/input-error";
-import { filterCatalog } from "@/app/lib/search/filter-catalog";
+import { indexItems, matchItemReference } from "@/app/lib/search/item-reference";
 import { normalizeText } from "@/app/lib/search/normalize-text";
 import { ammoFits, ammoOptions } from "./ammo";
 import { slotKey } from "./compare";
@@ -66,34 +66,45 @@ export function asCatalog(items: readonly { id: string; name: string; shortName:
   }));
 }
 
-/** Picks a candidate by id, exact name, unique short name, or best search match. */
+/**
+ * Picks a candidate the way item names resolve everywhere else (matchItemReference): id,
+ * exact name, unique short name, then search with typo tolerance. A name several candidates
+ * share equally is ambiguous and throws with the candidates instead of taking the first.
+ * Inexact matches add a note saying what was assumed.
+ */
 function pickByReference<T extends { id: string; name: string; shortName: string | null }>(
   candidates: readonly T[],
   reference: string,
-  noun: string
+  noun: string,
+  notes?: string[]
 ): T {
-  const value = reference.trim();
-  const byId = candidates.find((candidate) => candidate.id === value);
-  if (byId) return byId;
-  const needle = normalizeText(value);
-  const byName = candidates.find((candidate) => normalizeText(candidate.name) === needle);
-  if (byName) return byName;
-  const byShort = candidates.filter(
-    (candidate) => candidate.shortName && normalizeText(candidate.shortName) === needle
-  );
-  if (byShort.length === 1) return byShort[0];
-  if (byShort.length > 1) {
+  const match = matchItemReference(indexItems(asCatalog(candidates)), reference);
+  if (match.status === "ambiguous") {
     throw new AmbiguousReferenceError(
-      `"${reference}" matches several ${noun}s: ${byShort.map((candidate) => candidate.name).join("; ")}. Use a full name or id.`
+      `"${reference}" matches several ${noun}s: ${match.candidates.join("; ")}. Use a full name or id.`
     );
   }
-  const [match] = filterCatalog(asCatalog(candidates), value, [], 1);
-  if (!match) throw new InputError(`No ${noun} matches "${reference}".`);
-  return candidates.find((candidate) => candidate.id === match.id)!;
+  if (match.status === "none") {
+    throw new InputError(
+      `No ${noun} matches "${reference}".${match.suggestions.length ? ` Did you mean: ${match.suggestions.join("; ")}?` : ""}`
+    );
+  }
+  const picked = candidates.find((candidate) => candidate.id === match.item.id)!;
+  if (notes && (match.matchedBy === "search" || match.matchedBy === "fuzzy" || match.assumed)) {
+    notes.push(
+      match.assumed ??
+        `"${reference}" was read as ${picked.name}${match.matchedBy === "fuzzy" ? " (closest spelling)" : " (best search match)"}.`
+    );
+  }
+  return picked;
 }
 
-export function resolveWeapon(source: Pick<BuildSource, "guns" | "lookup">, reference: string): BuildItemData {
-  const gun = pickByReference(source.guns, reference, "weapon");
+export function resolveWeapon(
+  source: Pick<BuildSource, "guns" | "lookup">,
+  reference: string,
+  notes?: string[]
+): BuildItemData {
+  const gun = pickByReference(source.guns, reference, "weapon", notes);
   const item = source.lookup.get(gun.id);
   if (!isDetailed(item)) throw new InputError(`Weapon data for ${gun.name} is unavailable.`);
   return item;
@@ -255,14 +266,14 @@ export function resolveSlotPath(root: BuildNode, lookup: PartLookup, segments: r
   throw new InputError("slotPath could not be resolved.");
 }
 
-function pickPartForSlot(slot: ModSlotDef, lookup: PartLookup, reference: string): BuildItemData {
+function pickPartForSlot(slot: ModSlotDef, lookup: PartLookup, reference: string, notes?: string[]): BuildItemData {
   const allowed = slot.allowedItemIds.flatMap((id) => {
     const item = lookup.get(id);
     return item ? [item] : [];
   });
   if (allowed.length === 0) throw new InputError(`No parts are known for ${slot.name}.`);
   try {
-    return pickByReference(allowed, reference, `part for ${slot.name}`);
+    return pickByReference(allowed, reference, `part for ${slot.name}`, notes);
   } catch (error) {
     if (!(error instanceof InputError) || error instanceof AmbiguousReferenceError) throw error;
     const examples = allowed
@@ -280,7 +291,7 @@ export async function resolveAmmo(
   source: BuildSource,
   root: BuildNode,
   reference: string
-): Promise<{ ammo: AmmoItemData; fits: boolean }> {
+): Promise<{ ammo: AmmoItemData; fits: boolean; note?: string }> {
   const options = ammoOptions(root, source.lookup);
   const ammo = await source.loadAmmo(options.ids);
   const value = reference.trim();
@@ -290,8 +301,9 @@ export async function resolveAmmo(
   }
   if (ammo.length === 0) throw new InputError("This build does not accept any known ammo.");
   try {
-    const picked = pickByReference(ammo, value, "compatible ammo");
-    return { ammo: picked, fits: ammoFits(picked.id, options) };
+    const notes: string[] = [];
+    const picked = pickByReference(ammo, value, "compatible ammo", notes);
+    return { ammo: picked, fits: ammoFits(picked.id, options), ...(notes.length ? { note: notes[0] } : {}) };
   } catch (error) {
     if (error instanceof InputError && !(error instanceof AmbiguousReferenceError)) {
       throw new InputError(`${error.message} Use get_ammo_options to list the ammo this build accepts.`);
@@ -306,6 +318,8 @@ interface InstalledPart {
   label: string;
   replaced: BuildNode | undefined;
   conflict: string | null;
+  /** Set when the part name was not an exact match: what it was read as. */
+  note?: string;
 }
 
 /**
@@ -314,7 +328,8 @@ interface InstalledPart {
  */
 export function installPart(root: BuildNode, lookup: PartLookup, slotPath: readonly string[], item: string): InstalledPart {
   const target = resolveSlotPath(root, lookup, slotPath);
-  const part = pickPartForSlot(target.slot, lookup, item);
+  const notes: string[] = [];
+  const part = pickPartForSlot(target.slot, lookup, item, notes);
   const conflict = conflictReason(part, target.slot.id, installedOutside(root, target.current), lookup);
   const node = target.current
     ? carryOverChildren(target.current, lookup.get(target.current.itemId), part)
@@ -325,6 +340,7 @@ export function installPart(root: BuildNode, lookup: PartLookup, slotPath: reado
     label: slotLabel(root, lookup, [...target.parentPath, target.slot.id]),
     replaced: target.current,
     conflict,
+    ...(notes.length ? { note: notes[0] } : {}),
   };
 }
 
@@ -332,10 +348,15 @@ function findPresetId(weapon: BuildItemData, wanted: string) {
   const needle = normalizeText(wanted);
   if (needle === "default") return weapon.defaultPresetId ?? undefined;
   const presets = weapon.presets ?? [];
-  return (
-    presets.find((preset) => preset.id === wanted.trim() || normalizeText(preset.name) === needle)?.id ??
-    presets.find((preset) => normalizeText(preset.name).includes(needle))?.id
-  );
+  const exact = presets.find((preset) => preset.id === wanted.trim() || normalizeText(preset.name) === needle);
+  if (exact) return exact.id;
+  const partial = presets.filter((preset) => normalizeText(preset.name).includes(needle));
+  if (partial.length > 1) {
+    throw new AmbiguousReferenceError(
+      `"${wanted}" matches several ${weapon.name} presets: ${partial.map((preset) => preset.name).join("; ")}. Use the full preset name or "default".`
+    );
+  }
+  return partial[0]?.id;
 }
 
 /** Turns a share link, or a weapon and preset, into a checked build tree. */
@@ -356,7 +377,7 @@ export async function resolveBuild(source: BuildSource, input: BuildInput): Prom
     ammoId = decoded.ammoId;
     name ||= decoded.name;
   } else if (input.weapon) {
-    const weapon = resolveWeapon(source, input.weapon);
+    const weapon = resolveWeapon(source, input.weapon, warnings);
     root = { itemId: weapon.id, slots: {} };
     if (input.preset) {
       const presetId = findPresetId(weapon, input.preset);
@@ -376,6 +397,7 @@ export async function resolveBuild(source: BuildSource, input: BuildInput): Prom
     for (const entry of parts) {
       const installed = installPart(root, source.lookup, entry.slotPath, entry.item);
       root = installed.root;
+      if (installed.note) warnings.push(installed.note);
       if (installed.conflict) warnings.push(`${installed.part.name} in ${installed.label}: ${installed.conflict}.`);
     }
   } else {
@@ -386,8 +408,9 @@ export async function resolveBuild(source: BuildSource, input: BuildInput): Prom
   if (!weapon?.isWeapon) throw new InputError("The build's root item is not a known weapon.");
   warnings.push(...treeProblems(root, source.lookup));
   if (input.ammo) {
-    const { ammo, fits } = await resolveAmmo(source, root, input.ammo);
+    const { ammo, fits, note } = await resolveAmmo(source, root, input.ammo);
     ammoId = ammo.id;
+    if (note) warnings.push(note);
     if (!fits) warnings.push(`${ammo.name} does not fit this build's magazine or chamber.`);
   }
   return { name: name || `${weapon.shortName} build`, weaponId: root.itemId, root, ammoId, warnings };

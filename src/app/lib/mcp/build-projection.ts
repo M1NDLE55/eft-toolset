@@ -10,6 +10,7 @@ import { computeStats, type BuildStats } from "@/app/lib/builds/stats";
 import { childAt } from "@/app/lib/builds/tree";
 import { round, type ToolContext } from "./context";
 import { itemUrl } from "./sources";
+import { LOOT_ONLY, NO_FLEA_PRICE } from "@/app/lib/item-price";
 
 // How gun-builder results describe builds, parts, and ammo.
 
@@ -92,11 +93,11 @@ export function priceNote(
       : "it has no trader price";
   }
   const flea = item.fleaBanned
-    ? "it is banned on the flea market"
+    ? NO_FLEA_PRICE.banned
     : !sources.flea
-      ? "flea prices are turned off"
-      : "it has no flea price";
-  const lootOnly = item.fleaBanned && offers.length === 0 ? " Only found in raid, bartered, or crafted." : "";
+      ? NO_FLEA_PRICE.turnedOff
+      : NO_FLEA_PRICE.noPrice;
+  const lootOnly = item.fleaBanned && offers.length === 0 ? ` ${LOOT_ONLY}` : "";
   return `Can't be bought: ${trader}, and ${flea}.${lootOnly}`;
 }
 

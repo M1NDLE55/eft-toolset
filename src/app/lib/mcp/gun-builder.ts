@@ -178,7 +178,8 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
     },
     async ({ weapon: reference, gameMode, priceSources: prices }, { read }) => {
       const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
-      const weapon = resolveWeapon(data, reference);
+      const notes: string[] = [];
+      const weapon = resolveWeapon(data, reference, notes);
       let defaultPreset = null;
       if (weapon.defaultPresetId) {
         const contents = await read(() => getPreset(gameMode, weapon.defaultPresetId!));
@@ -220,6 +221,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
           optionCount: slot.allowedItemIds.filter((id) => data.lookup.has(id)).length,
         })),
         compatibleAmmoCount: weapon.allowedAmmoIds?.length ?? 0,
+        ...(notes.length ? { note: notes[0] } : {}),
       };
     }
   );
@@ -417,7 +419,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
           const installed = installPart(root, data.lookup, change.slotPath, change.item);
           root = installed.root;
           applied.push(
-            `Installed ${installed.part.name} in ${installed.label}${installed.replaced ? ` (replacing ${itemName(data.lookup, installed.replaced.itemId)})` : ""}${installed.conflict ? `. Warning: ${installed.conflict}.` : "."}`
+            `Installed ${installed.part.name} in ${installed.label}${installed.replaced ? ` (replacing ${itemName(data.lookup, installed.replaced.itemId)})` : ""}${installed.conflict ? `. Warning: ${installed.conflict}.` : "."}${installed.note ? ` ${installed.note}` : ""}`
           );
         } else if (change.action === "remove") {
           const target = resolveSlotPath(root, data.lookup, change.slotPath);
@@ -453,9 +455,11 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
           );
           root = result.root;
         } else if (change.action === "set_ammo") {
-          const { ammo, fits } = await resolveAmmo(data, root, (change.item ?? change.ammo)!);
+          const { ammo, fits, note } = await resolveAmmo(data, root, (change.item ?? change.ammo)!);
           ammoId = ammo.id;
-          applied.push(`Loaded ${ammo.name}${fits ? "." : ". Warning: it does not fit this build's magazine or chamber."}`);
+          applied.push(
+            `Loaded ${ammo.name}${fits ? "." : ". Warning: it does not fit this build's magazine or chamber."}${note ? ` ${note}` : ""}`
+          );
         } else {
           ammoId = null;
           applied.push("Cleared the ammo.");

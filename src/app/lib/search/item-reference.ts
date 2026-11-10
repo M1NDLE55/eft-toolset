@@ -40,13 +40,21 @@ const catalogIndexes = new WeakMap<readonly CatalogEntry[], CatalogIndex>();
 export function indexCatalog(entries: readonly CatalogEntry[]): CatalogIndex {
   const cached = catalogIndexes.get(entries);
   if (cached) return cached;
-  const items = entries.map<CatalogItem>(([id, name, shortName, , normalizedName]) => ({
-    id,
-    name,
-    shortName,
-    normalizedName,
-    gridImageLink: null,
-  }));
+  const index = indexItems(
+    entries.map<CatalogItem>(([id, name, shortName, , normalizedName]) => ({
+      id,
+      name,
+      shortName,
+      normalizedName,
+      gridImageLink: null,
+    }))
+  );
+  catalogIndexes.set(entries, index);
+  return index;
+}
+
+/** Indexes items by id, slug, name, and short name, for matching against any list of items. */
+export function indexItems(items: CatalogItem[]): CatalogIndex {
   const index: CatalogIndex = { items, byId: new Map(), bySlug: new Map(), byName: new Map(), byShortName: new Map() };
   for (const item of items) {
     index.byId.set(item.id, item);
@@ -58,7 +66,6 @@ export function indexCatalog(entries: readonly CatalogEntry[]): CatalogIndex {
       index.byShortName.set(short, [...(index.byShortName.get(short) ?? []), item]);
     }
   }
-  catalogIndexes.set(entries, index);
   return index;
 }
 
