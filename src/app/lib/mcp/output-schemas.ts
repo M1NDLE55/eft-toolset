@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { PRICE_BASIS } from "./item-projection";
 
 // Output schemas name the fields clients can rely on. Objects stay open so later additions
 // don't break older clients.
@@ -18,14 +19,33 @@ function result<Shape extends z.ZodRawShape>(shape: Shape) {
 }
 
 const sale = object({ vendor: text, priceRUB: num, afterFleaFee: bool, perSlotRUB: num }).nullable();
-const offer = object({ vendor: text, priceRUB: num });
+const offer = object({
+  vendor: text,
+  priceRUB: num,
+  basis: z
+    .enum([PRICE_BASIS.trader, PRICE_BASIS.fleaListing, PRICE_BASIS.fleaAverage])
+    .optional()
+    .describe('What priceRUB is. Flea offers use "lowest flea listing", which can sell out quickly.'),
+  avg24hRUB: maybeNum
+    .optional()
+    .describe("Flea offers only: the 24-hour average flea price the item page shows; null when there is none or it equals the lowest listing."),
+});
+const cheapestBuy = offer
+  .nullable()
+  .describe("The cheapest buy offer: the lowest trader price or the lowest current flea listing, whichever is lower.");
+const fleaAverage = maybeNum.describe(
+  "Flea 24-hour average (the lowest listing when there is no average), not the lowest current listing, which can be lower."
+);
+const buildPrice = maybeNum.describe(
+  "The cheaper of the trader price and the flea 24-hour average, from the enabled price sources."
+);
 
 const stats = object({
   ergonomics: maybeNum,
   recoilVertical: maybeNum,
   recoilHorizontal: maybeNum,
   weightKg: maybeNum,
-  costRUB: maybeNum,
+  costRUB: maybeNum.describe("Build cost from the enabled price sources, with flea prices at the 24-hour average."),
   partsWithoutPrice: num,
   partCount: num,
   unknownParts: num,
@@ -44,10 +64,10 @@ const ammoRow = object({
   speedMps: maybeNum,
   recoilModifierPercent: maybeNum,
   accuracyModifierPercent: maybeNum,
-  priceRUB: maybeNum,
+  priceRUB: buildPrice,
   traderPriceRUB: maybeNum,
   trader: maybeText,
-  fleaPriceRUB: maybeNum,
+  fleaPriceRUB: fleaAverage,
 });
 
 const verdict = z.enum(["better", "worse", "even"]).nullable();
@@ -72,7 +92,7 @@ const build = {
       name: text,
       ergonomics: num,
       recoilModifierPercent: maybeNum,
-      priceRUB: maybeNum,
+      priceRUB: buildPrice,
     })
   ),
   shareLink: maybeText,
@@ -103,11 +123,11 @@ export const getItemOutput = result({
   size: text,
   slots: num,
   bestSell: sale,
-  cheapestBuy: offer.nullable(),
+  cheapestBuy,
   fleaListingFeeRUB: maybeNum,
   change48hPercent: maybeNum,
-  buyFrom: list(offer),
-  sellTo: list(offer),
+  buyFrom: list(offer).describe("Trader prices and the lowest current flea listing, cheapest first."),
+  sellTo: list(offer).describe("Trader prices and the lowest current flea listing (before the listing fee), highest first."),
   usedInTasks: list(object({ name: text, trader: text, minPlayerLevel: maybeNum, objectives: list(text) })).optional(),
   usedInTaskCount: num.optional(),
   barters: list(object({ trader: text, give: list(text), receive: list(text) })).optional(),
@@ -127,6 +147,7 @@ export const getItemPricesOutput = result({
       url: text,
       count: num,
       bestSell: sale.optional(),
+      cheapestBuy: cheapestBuy.optional(),
       totalRUB: maybeNum,
       usedInTasks: list(text),
     })
@@ -153,7 +174,7 @@ export const getWeaponOutput = result({
   fireRate: maybeNum,
   fireModes: list(text),
   defaultAmmo: maybeText,
-  baseStats: object({ ergonomics: num, recoilVertical: maybeNum, recoilHorizontal: maybeNum, weightKg: num, priceRUB: maybeNum }),
+  baseStats: object({ ergonomics: num, recoilVertical: maybeNum, recoilHorizontal: maybeNum, weightKg: num, priceRUB: buildPrice }),
   presets: list(object({ id: text, name: text })),
   defaultPreset: object({ id: text, name: maybeText, stats }).nullable(),
   slots: list(object({ id: text, nameId: text, name: text, required: bool, optionCount: num })),
@@ -172,7 +193,8 @@ export const getSlotOptionsOutput = result({
       name: text,
       ergonomics: num,
       recoilModifierPercent: maybeNum,
-      priceRUB: maybeNum,
+      priceRUB: buildPrice,
+      fleaPriceRUB: fleaAverage.optional(),
       conflict: maybeText,
       installed: bool,
     })
@@ -193,7 +215,23 @@ export const getAmmoOptionsOutput = result({
 
 export const evaluateBuildOutput = result({
   ...build,
-  shoppingList: object({ totalRUB: num, itemCount: num, unpricedCount: num, rows: list(object({ name: text, count: num })) }).optional(),
+  shoppingList: object({
+    totalRUB: num,
+    itemCount: num,
+    unpricedCount: num,
+    rows: list(
+      object({
+        name: text,
+        count: num,
+        source: z.enum(["trader", "flea"]).nullable().optional(),
+        unitPriceRUB: maybeNum
+          .optional()
+          .describe("For flea rows, the 24-hour average; the lowest current listing can be lower."),
+      })
+    ),
+  })
+    .optional()
+    .describe("Flea rows are priced at the 24-hour average, as the gun builder prices them."),
   discordText: text.optional(),
 });
 

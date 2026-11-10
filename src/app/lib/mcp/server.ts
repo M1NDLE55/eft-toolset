@@ -8,7 +8,7 @@ import { registerRaidPlannerTools } from "./raid-planner";
 import { registerImportLinkTools } from "./import-link";
 
 // The MCP interface version: bump the minor for new tools or fields, the major for breaking changes.
-const MCP_SERVER_VERSION = "1.0.0";
+const MCP_SERVER_VERSION = "1.1.0";
 
 const TOOL_LIST = MCP_TOOL_GROUPS.map(
   (group) => `- ${group.tool}: ${group.tools.map((tool) => tool.name).join(", ")}.`
@@ -19,7 +19,8 @@ const INSTRUCTIONS = `EFT Toolset: Escape from Tarkov tools built on live tarkov
 ${TOOL_LIST}
 
 - Every data tool takes gameMode: "regular" (PVP, the default) or "pve". Prices and availability differ between them, so ask or use the mode the user plays.
-- Prices are in roubles. Flea sell prices are the lowest current listing; the best sell price subtracts the flea listing fee.
+- Prices are in roubles. In get_item and get_item_prices, flea buy and sell prices are the lowest current listing (it can sell out quickly), and each offer's basis says what its price is. The flea buy offer also carries avg24hRUB, the 24-hour average the item page shows. The best sell price subtracts the flea listing fee.
+- Gun-builder flea prices (fleaPriceRUB, and the part prices, costs, and shopping lists built from them) are the 24-hour average, so current listings can be cheaper.
 - Gun builder: start with list_weapons or get_weapon. Builds are passed as {"shareLink": ...} or {"weapon": ..., "preset"?: ..., "parts"?: [{"slotPath", "item"}]}; a result's parts (slotPath and itemId) can be passed back as parts to restate a build. Every build result includes a shareLink: pass it to the next build tool to keep working on the same build, and give it to the user so they can open and save the build in the app.
 - Raid planner: coordinates are game metres (x, z). Route points and notes can name places such as extracts instead of coordinates. create_raid_plan returns a share link that opens the plan in the app.
 - create_import_link bundles item groups, builds, and plans into one import link that adds them to the user's app data.

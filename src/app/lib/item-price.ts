@@ -18,3 +18,21 @@ export function bestSell(item: Pick<CachedItem, "sellFor" | "fleaMarketFee">): B
   }
   return best;
 }
+
+export interface FleaPrices {
+  /** The lowest current listing (tarkov.dev lastLowPrice). */
+  lowestListing: number;
+  /** The 24-hour average, or null when tarkov.dev has none (or it equals the lowest listing). */
+  avg24h: number | null;
+}
+
+/**
+ * An item's flea prices. The cached item's flea sell offer is the lowest current listing and its
+ * flea buy offer is the 24-hour average, falling back to the lowest listing when there is no average.
+ */
+export function fleaPrices(item: Pick<CachedItem, "buyFor" | "sellFor">): FleaPrices | null {
+  const listing = item.sellFor.find((offer) => offer.vendor.name === FLEA_MARKET)?.priceRUB;
+  if (listing === undefined) return null;
+  const buy = item.buyFor.find((offer) => offer.vendor.name === FLEA_MARKET)?.priceRUB;
+  return { lowestListing: listing, avg24h: buy !== undefined && buy !== listing ? buy : null };
+}
