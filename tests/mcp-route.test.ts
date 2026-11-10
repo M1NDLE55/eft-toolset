@@ -200,6 +200,108 @@ describe("MCP endpoint", () => {
     expect(data.discordText).toContain("2× Test Rifle");
   });
 
+  it("prices only the item a name plausibly means and says which input each row came from", async () => {
+    const data = fixtures.items as { data: { items: Record<string, Record<string, unknown>> } };
+    const add = (id: string, name: string, shortName: string, basePrice: number) => {
+      data.data.items[id] = { id, name, shortName, normalizedName: id, basePrice, width: 1, height: 1, sellToTrader: [{ trader: "trader", priceRUB: basePrice }] };
+    };
+    add("bitcoin-item", "Physical Bitcoin", "0.2BTC", 1_000_000);
+    add("bitcoin-left", "Left half of a Physical Bitcoin", "BTC", 12_000);
+    add("bitcoin-right", "Right half of a Physical Bitcoin", "BTC", 12_000);
+    add("red-card", "TerraGroup Labs keycard (Red)", "Red", 1_650_000);
+    add("red-flare", "26x75mm flare cartridge (Red)", "Red", 30_000);
+    add("gpu-item", "Graphics card", "GPU", 200_000);
+
+    const { data: prices } = await call("get_item_prices", {
+      items: ["btc", "red", { item: "GPU", count: 2 }, "graphics crad", "Test Rifle", "test rifle", "graphics zzzz"],
+    });
+    expect(prices.rows.map((row: { name: string; inputs: string[]; count: number }) => [row.name, row.inputs, row.count])).toEqual([
+      ["Physical Bitcoin", ["btc"], 1],
+      ["Graphics card", ["GPU", "graphics crad"], 3],
+      ["Test Rifle", ["Test Rifle", "test rifle"], 2],
+    ]);
+    expect(prices.fuzzyMatches).toEqual([
+      expect.objectContaining({ input: "btc", matched: "Physical Bitcoin", matchedBy: "search", note: expect.stringContaining("Left half") }),
+      expect.objectContaining({ input: "graphics crad", matched: "Graphics card", matchedBy: "fuzzy" }),
+    ]);
+    expect(prices.unresolved).toEqual(["red", "graphics zzzz"]);
+    expect(prices.unmatched).toEqual([
+      { input: "red", reason: "ambiguous", candidates: ["TerraGroup Labs keycard (Red)", "26x75mm flare cartridge (Red)"] },
+      { input: "graphics zzzz", reason: "not found", candidates: ["Graphics card"] },
+    ]);
+
+    const btc = await call("get_item", { item: "btc" });
+    expect(btc.data).toMatchObject({ name: "Physical Bitcoin", matchedBy: "search", note: expect.stringContaining("chose Physical Bitcoin") });
+    expect(btc.data.otherMatches).toContain("Left half of a Physical Bitcoin");
+    const exact = await call("get_item", { item: "Graphics card" });
+    expect(exact.data.matchedBy).toBeUndefined();
+    expect(exact.data.note).toBeUndefined();
+    const red = await call("get_item", { item: "red" });
+    expect(red.result.isError).toBe(true);
+    expect(red.text).toContain("could be any of: TerraGroup Labs keycard (Red); 26x75mm flare cartridge (Red)");
+    const typo = await call("get_item", { item: "graphics zzzz" });
+    expect(typo.text).toContain("Did you mean: Graphics card?");
+
+    const { data: link } = await call("create_import_link", { itemGroups: [{ name: "Loot", items: ["btc", "red", "GPU"] }] });
+    expect(link.itemMatches).toEqual([
+      { group: "Loot", input: "btc", item: "Physical Bitcoin", matchedBy: "search" },
+      { group: "Loot", input: "red", item: null },
+      { group: "Loot", input: "GPU", item: "Graphics card" },
+    ]);
+    expect(link.notes).toEqual([
+      expect.stringMatching(/^Loot: "btc" was matched to Physical Bitcoin\. "btc" also matches/),
+      'Loot: "red" could be any of TerraGroup Labs keycard (Red); 26x75mm flare cartridge (Red), so it was left out. Add the one you mean by its full name.',
+    ]);
+  });
+
+  it("lists whole categories, item types, and calibers in compact pages", async () => {
+    const data = fixtures.items as {
+      data: { items: Record<string, Record<string, unknown>>; handbookCategories?: Record<string, unknown> };
+    };
+    data.data.handbookCategories = {
+      meds: { name: "meds-name", normalizedName: "medication", parent: null },
+      injectors: { name: "injectors-name", normalizedName: "injectors", parent: "meds" },
+    };
+    (fixtures.items_en as { data: Record<string, string> }).data["injectors-name"] = "Injectors";
+    (fixtures.items_en as { data: Record<string, string> }).data["meds-name"] = "Medication";
+    for (let index = 0; index < 30; index += 1) {
+      data.data.items[`stim-${index}`] = {
+        id: `stim-${index}`,
+        name: `Stim ${String(index).padStart(2, "0")} injector`,
+        shortName: `S${index}`,
+        types: ["injectors"],
+        handbookCategories: ["injectors"],
+      };
+    }
+    data.data.items["case"] = { id: "case", name: "Injector case", shortName: "Injectors", types: ["container"] };
+
+    const first = await call("search_items", { category: "Injectors", limit: 25, compact: true });
+    expect(first.data).toMatchObject({ total: 30, nextOffset: 25 });
+    expect(first.data.query).toBeUndefined();
+    expect(first.data.results[0]).toEqual({ name: "Stim 00 injector", shortName: "S0" });
+    const rest = await call("search_items", { category: "injector", limit: 25, offset: 25, compact: true });
+    expect(rest.data.results).toHaveLength(5);
+    expect(rest.data.nextOffset).toBeNull();
+    // Parent categories and item types work too, and a query ranks within the category.
+    expect((await call("search_items", { category: "medication", limit: 1 })).data.total).toBe(30);
+    expect((await call("search_items", { category: "injectors", query: "stim 07" })).data.results[0].name).toBe("Stim 07 injector");
+    expect((await call("search_items", { query: "injector", limit: 100 })).data.total).toBe(31);
+
+    const ammo = await call("search_items", { caliber: "5.56x45", compact: true });
+    expect(ammo.data.results).toEqual([{ name: "Test Ammo", shortName: null }]);
+
+    const unknown = await call("search_items", { category: "injectros" });
+    expect(unknown.result.isError).toBe(true);
+    expect(unknown.text).toContain("Did you mean: Injectors?");
+    expect((await call("search_items", {})).result.isError).toBe(true);
+
+    const typo = await call("search_items", { query: "injectro" });
+    expect(typo.data).toMatchObject({ fuzzy: true, total: 31 });
+    const nothing = await call("search_items", { query: "stim zzzz" });
+    expect(nothing.data).toMatchObject({ total: 0, results: [] });
+    expect(nothing.data.didYouMean[0]).toMatch(/^Stim/);
+  });
+
   it("builds, modifies, optimises, and shares guns with the builder's own logic", async () => {
     const weapon = await call("get_weapon", { weapon: "Rifle" });
     expect(weapon.data).toMatchObject({ id: "weapon", fireRate: 700, fireModes: ["Single fire"], defaultAmmo: "Test Ammo" });

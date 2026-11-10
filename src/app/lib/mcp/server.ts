@@ -8,7 +8,7 @@ import { registerRaidPlannerTools } from "./raid-planner";
 import { registerImportLinkTools } from "./import-link";
 
 // The MCP interface version: bump the minor for new tools or fields, the major for breaking changes.
-const MCP_SERVER_VERSION = "1.1.0";
+const MCP_SERVER_VERSION = "1.2.0";
 
 const TOOL_LIST = MCP_TOOL_GROUPS.map(
   (group) => `- ${group.tool}: ${group.tools.map((tool) => tool.name).join(", ")}.`
@@ -23,6 +23,7 @@ ${TOOL_LIST}
 - Gun-builder flea prices (fleaPriceRUB, and the part prices, costs, and shopping lists built from them) are the 24-hour average, so current listings can be cheaper.
 - Gun builder: start with list_weapons or get_weapon. Builds are passed as {"shareLink": ...} or {"weapon": ..., "preset"?: ..., "parts"?: [{"slotPath", "item"}]}; a result's parts (slotPath and itemId) can be passed back as parts to restate a build. Every build result includes a shareLink: pass it to the next build tool to keep working on the same build, and give it to the user so they can open and save the build in the app.
 - Raid planner: coordinates are game metres (x, z). Route points and notes can name places such as extracts instead of coordinates. create_raid_plan returns a share link that opens the plan in the app.
+- Item names: a short name several unrelated items share (such as "red") is not guessed; the tool returns the candidates, so call again with the full name. Check fuzzyMatches and note fields for typo and search matches.
 - create_import_link bundles item groups, builds, and plans into one import link that adds them to the user's app data.
 - List results with a nextOffset have more: pass it as offset to get the next page.
 - If a result has a dataNotice, tarkov.dev was unreachable and the data is cached; mention it when quoting prices.`;

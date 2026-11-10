@@ -47,6 +47,9 @@ it("serves every tool to the SDK client, whose output validation accepts each re
     // Optional output branches.
     ["get_item", { item: "Test Rifle", include: ["tasks", "barters", "crafts"] }],
     ["get_item", { item: "rifle", include: [] }],
+    ["search_items", { caliber: "5.56", compact: true, limit: 100 }],
+    ["search_items", { query: "rilfe", category: "gun" }],
+    ["create_import_link", { itemGroups: [{ name: "b", items: ["rilfe", "zzzz qqqq"] }] }],
     ["get_item_prices", { items: ["Test Rifle", { item: "Test Mod", count: 3 }, "zzzz qqqq"], includeDiscordText: true, sortBy: "perSlot" }],
     ["get_map_details", { map: "factory", sections: ["spawns", "locks", "lootContainers"], lootContainerTypes: ["safe"] }],
     ["evaluate_build", { build: { weapon: "weapon", preset: "default", ammo: "Test Ammo" }, includeDiscordText: true }],
