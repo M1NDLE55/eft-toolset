@@ -396,7 +396,7 @@ describe("MCP endpoint", () => {
         name: "Reshala",
         spawnChance: 0.5,
         locations: [
-          { name: "Stronghold", chance: 0.5, x: -42, z: 42, level: "Ground" },
+          { name: "Stronghold", chance: 0.5, x: -44, z: 44, level: "Ground" },
           { name: "Dorms", chance: 0.5 },
         ],
         escorts: 4,

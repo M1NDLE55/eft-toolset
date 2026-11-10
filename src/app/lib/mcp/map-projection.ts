@@ -75,15 +75,19 @@ type Boss = NonNullable<MapDetails["bosses"]>[number];
 
 /** Boss spawns, merging identical entries, with coordinates for the locations the map has spawn points for. */
 function describeBosses(config: MapConfig, details: MapDetails) {
+  // A zone's boss spawn points place its bosses best; its other spawn points stand in otherwise.
   const zonePoints = new Map<string, GamePoint[]>();
+  const bossPoints = new Map<string, GamePoint[]>();
   for (const spawn of details.spawns) {
-    if (spawn.zoneName) zonePoints.set(spawn.zoneName, [...(zonePoints.get(spawn.zoneName) ?? []), spawn.position]);
+    if (!spawn.zoneName) continue;
+    const into = spawn.kind === "boss" ? bossPoints : zonePoints;
+    into.set(spawn.zoneName, [...(into.get(spawn.zoneName) ?? []), spawn.position]);
   }
   const describe = (boss: Boss) => ({
     name: boss.name,
     spawnChance: boss.spawnChance,
     locations: boss.locations.map((location) => {
-      const points = zonePoints.get(location.zone);
+      const points = bossPoints.get(location.zone) ?? zonePoints.get(location.zone);
       return {
         name: location.name,
         chance: location.chance,
