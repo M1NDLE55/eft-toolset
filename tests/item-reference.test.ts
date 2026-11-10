@@ -65,6 +65,12 @@ describe("item reference matching", () => {
       status: "ambiguous",
       candidates: ["7.62x39mm PS gzh", "5.45x39mm PS gs"],
     });
+    // One word found inside many distinct items names none of them.
+    const injectors = indexCatalog(
+      ["Injector case", "Morphine injector", "Meldonin injector", "Adrenaline injector"].map((name) => entry(name, null))
+    );
+    expect(matchItemReference(injectors, "injector")).toMatchObject({ status: "ambiguous", candidates: expect.arrayContaining(["Injector case"]) });
+    expect(matchItemReference(injectors, "morphine")).toMatchObject({ status: "found", item: { name: "Morphine injector" } });
     // Several words narrow it down: take the best-ranked match and list the rest.
     expect(matchItemReference(index, "red keycard")).toMatchObject({
       status: "found",

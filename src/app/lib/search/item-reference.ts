@@ -31,6 +31,8 @@ export type ItemMatch =
 const MAX_ALTERNATIVES = 5;
 const MAX_CANDIDATES = 8;
 const SEARCH_POOL = 60;
+/** A one-word partial match resolves only when it matches at most this many distinct items. */
+const MAX_ONE_WORD_MATCHES = 3;
 
 const catalogIndexes = new WeakMap<readonly CatalogEntry[], CatalogIndex>();
 
@@ -96,8 +98,9 @@ function uniqueByName(items: readonly CatalogItem[]) {
  * one item that also matches ("btc" names both halves of a Physical Bitcoin, so it means the
  * Physical Bitcoin; "m855" names the round and its ammo packs). Otherwise a one-word or short
  * name reference is ambiguous and returns the candidates instead of guessing ("red" is a
- * keycard and two flares). A multi-word search tie takes the best-ranked match. With no
- * match at all, words may be a typo off ("graphics crad"), flagged as fuzzy.
+ * keycard and two flares), as is one word found inside more than a few distinct items
+ * ("injector"). A multi-word search tie takes the best-ranked match. With no match at all,
+ * words may be a typo off ("graphics crad"), flagged as fuzzy.
  */
 export function matchItemReference(index: CatalogIndex, reference: string): ItemMatch {
   const value = cleanReference(reference);
@@ -120,6 +123,15 @@ export function matchItemReference(index: CatalogIndex, reference: string): Item
       ? sharingShortName
       : search.matches.filter((match) => match.score === search.matches[0].score).map((match) => match.item);
   const resolved = uniqueByName(contenders.map((item) => findBaseItem(item, pool) ?? item));
+  const oneWord = !normalized.includes(" ");
+
+  // One word that only partly matches many distinct items ("injector", "folder") names none of them.
+  if (oneWord && sharingShortName.length === 0) {
+    const distinct = uniqueByName(pool.map((item) => findBaseItem(item, pool) ?? item));
+    if (distinct.length > MAX_ONE_WORD_MATCHES) {
+      return { status: "ambiguous", candidates: distinct.slice(0, MAX_CANDIDATES).map((item) => item.name) };
+    }
+  }
 
   if (resolved.length === 1) {
     const [item] = resolved;
@@ -134,7 +146,6 @@ export function matchItemReference(index: CatalogIndex, reference: string): Item
         : {}),
     };
   }
-  const oneWord = !normalized.includes(" ");
   if (sharingShortName.length > 1 || oneWord) {
     return { status: "ambiguous", candidates: resolved.slice(0, MAX_CANDIDATES).map((item) => item.name) };
   }
