@@ -32,7 +32,8 @@ function objectiveText(objective: CachedTaskObjective, item: Pick<CachedItem, "n
     const named = [item.name, item.shortName].some((name) => name && text.includes(name.toLowerCase()));
     details.push(
       objective.alternatives
-        ? `${count} of this or ${objective.alternatives} other item${objective.alternatives === 1 ? "" : "s"}`
+        ? // The count is shared: 10 of any mix of the 11 items it accepts, not 10 of each.
+          `${count} of any of ${objective.alternatives + 1} items, this one included`
         : `${count}×${named ? "" : ` ${item.name}`}`
     );
     if (objective.foundInRaid) details.push("found in raid");

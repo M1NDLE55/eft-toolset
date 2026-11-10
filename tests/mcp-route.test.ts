@@ -344,7 +344,7 @@ describe("MCP endpoint", () => {
       expect.objectContaining({
         name: "Any Task",
         count: 0,
-        objectives: ["Hand over the item (5 of this or 1 other item, found in raid)"],
+        objectives: ["Hand over the item (5 of any of 2 items, this one included, found in raid)"],
       }),
     ]);
     expect(item.data.hideout).toEqual([
