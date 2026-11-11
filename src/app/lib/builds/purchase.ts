@@ -1,6 +1,6 @@
 import type { BuildNode, GunItem, PresetContents, PriceSources } from "@/app/lib/types/gunBuilder";
 import { reconstructPresetTree } from "./presets";
-import { bestOffer, effectivePrice, priceChoice, type PriceChoice, type TraderLimits } from "./price";
+import { bestOffer, effectivePrice, priceChoice, traderQuote, type PriceChoice, type TraderLimits } from "./price";
 import type { ItemLookup } from "./stats";
 
 export interface PresetParts {
@@ -60,12 +60,7 @@ export function weaponChoices(weapon: GunItem, sources: PriceSources, limits: Tr
     const barterOffers = weapon.barterOffers?.filter((offer) => Boolean(offer.preset) === asPreset);
     return priceChoice(
       {
-        // Items without offer lists only have a price for the weapon itself.
-        traderPriceRUB: traderOffers
-          ? (bestOffer(traderOffers, limits)?.priceRUB ?? null)
-          : asPreset
-            ? null
-            : weapon.traderPriceRUB,
+        traderPriceRUB: traderQuote(weapon, limits, asPreset)?.priceRUB ?? null,
         traderOffers,
         // The flea market sells weapons as their default preset.
         fleaPriceRUB: asPreset ? weapon.fleaPriceRUB : null,

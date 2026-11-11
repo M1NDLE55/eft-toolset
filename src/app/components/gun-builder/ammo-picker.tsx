@@ -6,7 +6,6 @@ import { useRef, useState } from "react";
 import { AlertTriangle, ArrowDown, ArrowUp, ArrowUpRight, Check, Crosshair, LoaderCircle, Search, X } from "lucide-react";
 import type { AmmoItemData, PriceSources } from "@/app/lib/types/gunBuilder";
 import type { AmmoOptions } from "@/app/lib/builds/ammo";
-import { effectivePrice } from "@/app/lib/builds/price";
 import { useAmmoItems } from "@/app/lib/cache/gunBuilderHooks";
 import { itemHref } from "@/app/lib/item-links";
 import { Button } from "@/components/ui/button";
@@ -19,7 +18,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-import { formatRecoilModifier, formatRub, formatTrader } from "./format";
+import { formatRecoilModifier, formatRub, shownPrice } from "./format";
+import { PriceSource } from "./price-source";
 
 type SortKey = "name" | "penetration" | "damage" | "armor" | "recoil" | "price";
 
@@ -82,7 +82,8 @@ export function AmmoPanel({
 }) {
   if (options.ids.length === 0 && !ammoId) return null;
   const fits = Boolean(ammoId && options.ids.includes(ammoId));
-  const price = ammo ? effectivePrice(ammo, priceSources) : null;
+  const shown = ammo ? shownPrice(ammo, priceSources) : null;
+  const price = shown?.price ?? null;
   return (
     <section aria-label="Ammo" className="flex items-stretch border border-[#1a1a1a] bg-[#0c0c0c]">
       <button
@@ -110,7 +111,7 @@ export function AmmoPanel({
                   </span>
                   {ammo.recoilModifier !== 0 && <span>Recoil {formatRecoilModifier(ammo.recoilModifier)}</span>}
                   <span className="text-[#ccc]">{price === null ? "No price" : `${formatRub(price)}/round`}</span>
-                  {formatTrader(ammo) && <span className="text-[#9a8866]">{formatTrader(ammo)}</span>}
+                  {shown && <PriceSource shown={shown} />}
                 </span>
               )}
               {!fits && ammo && options.ids.length > 0 && (
@@ -191,7 +192,9 @@ function AmmoPickerBody({
   const rows = options.ids
     .flatMap((id) => {
       const ammo = items.get(id);
-      return ammo ? [{ ammo, price: effectivePrice(ammo, priceSources) }] : [];
+      if (!ammo) return [];
+      const shown = shownPrice(ammo, priceSources);
+      return [{ ammo, price: shown.price, shown }];
     })
     .filter(
       ({ ammo }) =>
@@ -322,9 +325,8 @@ function AmmoPickerBody({
               <span className="h-4 flex-1 animate-shimmer" />
             </li>
           ))}
-        {rows.map(({ ammo, price }) => {
+        {rows.map(({ ammo, price, shown }) => {
           const current = ammo.id === selectedId;
-          const trader = formatTrader(ammo);
           return (
             <li key={ammo.id} className="border-t border-[#141414] first:border-t-0">
               <button
@@ -349,7 +351,7 @@ function AmmoPickerBody({
                     <span className={price === null ? "text-[#666]" : "text-[#ccc]"}>
                       {price === null ? "No price" : formatRub(price)}
                     </span>
-                    {trader && <span className="text-[#9a8866]">{trader}</span>}
+                    <PriceSource shown={shown} />
                   </span>
                 </span>
                 <span className="hidden text-right text-xs tabular-nums text-[#ccc] sm:block">{formatDamage(ammo)}</span>
@@ -367,7 +369,7 @@ function AmmoPickerBody({
                 </span>
                 <span className="hidden flex-col items-end text-xs tabular-nums sm:flex">
                   <span className="text-[#ccc]">{formatRub(price)}</span>
-                  {trader && <span className="max-w-full truncate text-[10px] text-[#9a8866]">{trader}</span>}
+                  <PriceSource shown={shown} className="max-w-full text-[10px]" lockClassName="h-2.5 w-2.5" />
                 </span>
                 {current ? <Check className="h-4 w-4 text-[#9a8866]" /> : <span />}
               </button>

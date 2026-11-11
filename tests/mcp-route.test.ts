@@ -843,6 +843,24 @@ describe("MCP endpoint", () => {
     expect(included.data).not.toHaveProperty("requiredTasks");
   });
 
+  it("never labels a weapon bought as its flea preset with the bare weapon's trader", async () => {
+    const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
+    // A trader sells only the bare weapon; parts cost enough that the flea preset is cheaper.
+    items.weapon.buyFromTrader = [{ trader: "trader", priceRUB: 45_000, minTraderLevel: 1 }];
+    items.mod.buyFromTrader = [{ trader: "trader", priceRUB: 30_000 }];
+    items.mod.lastLowPrice = 30_000;
+    const evaluated = await call("evaluate_build", {
+      build: { weapon: "Test Rifle", preset: "default" },
+      includeShoppingList: true,
+      includeDiscordText: true,
+    });
+    expect(evaluated.data.weapon).toMatchObject({ priceRUB: 55_000, source: "flea", boughtAsPreset: true });
+    expect(evaluated.data.shoppingList.rows[0]).toMatchObject({ name: "Test Rifle", source: "flea", unitPriceRUB: 55_000, trader: null });
+    const weaponLine = (evaluated.data.discordText as string).split("\n").find((line) => line.startsWith("Test Rifle"));
+    expect(weaponLine).not.toMatch(/45,000|Tester/);
+    expect(weaponLine).toMatch(/55,000\*\s+Flea$/);
+  });
+
   it("filters weapons by caliber before limiting name matches", async () => {
     const items = (fixtures.items as { data: { items: Record<string, unknown> } }).data.items;
     for (let index = 1; index <= 25; index += 1) {

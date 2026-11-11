@@ -123,7 +123,15 @@ describe("barters as a price source", () => {
   it("show in the shopping list with the trader and offer they come from", () => {
     const lookup = new Map([["suppressor", part()]]);
     const [row] = buildShoppingList({ itemId: "suppressor", slots: {} }, lookup, { traders: true, flea: true, barters: true }).rows;
-    expect(row).toMatchObject({ source: "barter", unitPriceRUB: 90_000, traderName: "Peacekeeper", traderLevel: 1, offer: barter });
+    expect(row).toMatchObject({
+      source: "barter",
+      unitPriceRUB: 90_000,
+      offer: barter,
+      traderPriceRUB: 100_000,
+      traderName: "Skier",
+      traderLevel: 1,
+      traderTask: "Chemical - Part 2",
+    });
     const [cash] = buildShoppingList({ itemId: "suppressor", slots: {} }, lookup, { traders: true, flea: true }).rows;
     expect(cash).toMatchObject({ source: "trader", traderName: "Skier", offer: locked });
   });

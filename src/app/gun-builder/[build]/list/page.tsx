@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useParams } from "next/navigation";
-import { AlertTriangle, ArrowLeft, Check, ClipboardCopy, Printer } from "lucide-react";
+import { AlertTriangle, ArrowLeft, Check, ClipboardCopy, Lock, Printer } from "lucide-react";
 import type { GunBuild } from "@/app/lib/types/gunBuilder";
 import { useHydrated } from "@/app/lib/storage/use-store";
 import { findBuild, setPriceSources, useBuilds, usePriceSources } from "@/app/lib/builds/store";
@@ -12,14 +12,15 @@ import { collectItemIds } from "@/app/lib/builds/tree";
 import { buildShoppingList, formatShoppingList } from "@/app/lib/builds/shopping";
 import { useAmmoItems, useGunItems, useGunList, usePurchaseContext } from "@/app/lib/cache/gunBuilderHooks";
 import { isDetailed } from "@/app/lib/builds/stats";
-import { effectivePrice } from "@/app/lib/builds/price";
+import { traderLabel } from "@/app/lib/builds/price";
 import { itemHref } from "@/app/lib/item-links";
 import { copyText } from "@/app/lib/browser/clipboard";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LocalMissing } from "@/components/local-missing";
 import { PriceSourcesControl } from "@/app/components/gun-builder/stats-panel";
-import { formatRub, formatTrader, modeLabel } from "@/app/components/gun-builder/format";
+import { formatRub, modeLabel, shownPrice, taskHint } from "@/app/components/gun-builder/format";
+import { PriceSource } from "@/app/components/gun-builder/price-source";
 import { useDocumentTitle } from "@/app/components/gun-builder/use-document-title";
 import { cn } from "@/lib/utils";
 
@@ -67,6 +68,7 @@ function ShoppingList({ build }: { build: GunBuild }) {
   const ammoIds = useMemo(() => (build.ammoId ? [build.ammoId] : []), [build.ammoId]);
   const { items: ammoItems } = useAmmoItems(ammoIds);
   const ammo = build.ammoId ? ammoItems.get(build.ammoId) : undefined;
+  const ammoPrice = ammo ? shownPrice(ammo, priceSources) : null;
   const [notice, setNotice] = useState<{ ok: boolean; text: string } | null>(null);
   useDocumentTitle(`Shopping list · ${build.name || "Untitled build"}`);
 
@@ -214,7 +216,7 @@ function ShoppingList({ build }: { build: GunBuild }) {
                               {row.withWeapon > 0 && <span>+{row.withWeapon} with weapon</span>}
                               <span className={cn(row.source === "trader" && "text-[#c8b384]")}>
                                 Trader {formatRub(row.traderPriceRUB)}
-                                {row.traderName ? ` · ${row.traderName}${row.traderLevel ? ` LL${row.traderLevel}` : ""}` : ""}
+                                {row.traderName ? ` · ${traderLabel(row.traderName, row.traderLevel)}` : ""}
                               </span>
                               <span className={cn(row.source === "flea" && "text-[#c8b384]")}>Flea {formatRub(row.fleaPriceRUB)}</span>
                             </span>
@@ -240,9 +242,9 @@ function ShoppingList({ build }: { build: GunBuild }) {
                       >
                         {formatRub(row.traderPriceRUB)}
                         {row.traderName && (
-                          <span className="block text-[10px] font-normal text-[#9a8866]">
-                            {row.traderName}
-                            {row.traderLevel ? ` LL${row.traderLevel}` : ""}
+                          <span className="flex items-center justify-end gap-1 text-[10px] font-normal text-[#9a8866]" title={taskHint(row.traderTask)}>
+                            {traderLabel(row.traderName, row.traderLevel)}
+                            {row.traderTask && <Lock aria-label={taskHint(row.traderTask)} className="h-2.5 w-2.5 shrink-0" />}
                           </span>
                         )}
                       </td>
@@ -288,8 +290,8 @@ function ShoppingList({ build }: { build: GunBuild }) {
           <Link href={itemHref(ammo)} prefetch={false} className="min-w-0 truncate font-semibold text-[#ddd] hover:text-[#e6d9b8] hover:underline">
             {ammo.name}
           </Link>
-          <span className="tabular-nums text-[#ccc]">{formatRub(effectivePrice(ammo, priceSources))} per round</span>
-          {formatTrader(ammo) && <span className="text-xs text-[#9a8866]">{formatTrader(ammo)}</span>}
+          <span className="tabular-nums text-[#ccc]">{formatRub(ammoPrice?.price ?? null)} per round</span>
+          {ammoPrice && <PriceSource shown={ammoPrice} className="text-xs" />}
           <span className="text-xs text-[#666]">Not included in the total</span>
         </p>
       )}

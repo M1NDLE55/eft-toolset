@@ -145,6 +145,52 @@ export function priceChoice(
   return choices.reduce<PriceChoice | null>((best, choice) => (!best || choice.priceRUB < best.priceRUB ? choice : best), null);
 }
 
+export function traderLabel(trader: string, level: number | null | undefined) {
+  return `${trader}${level ? ` LL${level}` : ""}`;
+}
+
 export function offerLabel(offer: { trader: string; level: number | null; preset?: string }) {
-  return `${offer.trader}${offer.level ? ` LL${offer.level}` : ""}${offer.preset ? " (default preset)" : ""}`;
+  return `${traderLabel(offer.trader, offer.level)}${offer.preset ? " (default preset)" : ""}`;
+}
+
+export interface TraderQuote {
+  priceRUB: number;
+  trader: string | null;
+  level: number | null;
+  task: string | null;
+  offer: TraderOffer | null;
+}
+
+// preset: false = bare weapon, true = default preset, undefined = either.
+export function traderQuote(item: Offered, limits: TraderLimits | null, preset?: boolean): TraderQuote | null {
+  if (item.traderOffers) {
+    const offers = preset === undefined ? item.traderOffers : item.traderOffers.filter((offer) => Boolean(offer.preset) === preset);
+    const offer = bestOffer(offers, limits);
+    const price = positive(offer?.priceRUB);
+    if (!offer || price === null) return null;
+    return { priceRUB: price, trader: offer.trader, level: offer.level, task: offer.taskUnlock?.name ?? null, offer };
+  }
+  // Items without offer lists only have a price for the item itself.
+  const price = preset ? null : positive(item.traderPriceRUB);
+  if (price === null) return null;
+  return { priceRUB: price, trader: item.traderName ?? null, level: item.traderLevel ?? null, task: item.traderTask ?? null, offer: null };
+}
+
+export interface SourceLabel {
+  label: string;
+  task: string | null;
+}
+
+export function sourceLabel(
+  choice: PriceChoice | null,
+  item: { traderName?: string | null; traderLevel?: number | null; traderTask?: string | null }
+): SourceLabel | null {
+  if (!choice) return null;
+  if (choice.source === "flea") return { label: "Flea", task: null };
+  if (choice.offer) {
+    const label = offerLabel(choice.offer);
+    return { label: choice.source === "barter" ? `${label} barter` : label, task: choice.offer.taskUnlock?.name ?? null };
+  }
+  if (choice.source === "barter") return { label: "Barter", task: null };
+  return item.traderName ? { label: traderLabel(item.traderName, item.traderLevel), task: item.traderTask ?? null } : null;
 }
