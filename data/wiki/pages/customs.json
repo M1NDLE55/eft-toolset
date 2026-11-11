@@ -1,0 +1,100 @@
+{
+  "title": "Customs",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Customs",
+  "revisionId": 355388,
+  "lastEdited": "2026-08-21T18:48:06Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [],
+  "infobox": {
+    "prev": "Interchange, Factory, Reserve, Woods",
+    "next": "Factory, Reserve, Interchange, Shoreline",
+    "enemies": "Scavs, Reshala, Partisan, Knight, Big Pipe, Birdeye, Cultists",
+    "players": "10-12",
+    "duration": "35 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Customs is a location in Escape from Tarkov. It is the second map that was added to the game."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A large area of industrial park land situated adjacent to the factory zone. The area houses a customs terminal, fuel storage facilities, offices, and dorms, as well as a variety of other infrastructure and buildings."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Customs is initially only accessible by transiting. Direct access from the location selection screen is unlocked upon progressing through the story chapter Tour."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": "- Stationary weapons in the form of AGS-30 30x29mm automatic grenade launchers and NSV Utyos 12.7x108 heavy machine guns.\n- Be aware of Border Snipers!"
+    },
+    {
+      "heading": "Usable Keys",
+      "level": 2,
+      "text": "| Key Name | Used in Quest |\n| Company director's room key | yes |\n| Dorm guard desk key | |\n| Dorm overseer key | yes |\n| Dorm room 103 key | |\n| Dorm room 104 key | |\n| Dorm room 105 key | |\n| Dorm room 108 key | |\n| Dorm room 110 key | yes |\n| Dorm room 114 key | yes |\n| Dorm room 118 key | |\n| Dorm room 203 key | yes |\n| Dorm room 204 key | |\n| Dorm room 206 key | yes |\n| Dorm room 214 key | |\n| Dorm room 218 key | |\n| Dorm room 220 key | yes |\n| Dorm room 303 key | yes |\n| Dorm room 306 key | |\n| Dorm room 308 key | |\n| Dorm room 314 marked key | yes |\n| Dorm room 315 key | |\n| Factory emergency exit key | |\n| Gas station office key | |\n| Gas station storage room key | |\n| Machinery key | yes |\n| Military checkpoint key | |\n| Portable bunkhouse key | |\n| Portable cabin key | |\n| Reshala's bunkhouse key | yes |\n| Tarcone Director's office key | yes |\n| Trailer park portable cabin key | |\n| Unknown key | yes |\n| USEC stash key | |"
+    },
+    {
+      "heading": "Bosses",
+      "level": 2,
+      "text": "| Name | Location | Notable equipment | Followers |\n| Reshala | At the dorms area; At the new gas station; At the Scav base (ZB-013 extraction) | Tokarev TT-33 7.62x25 TT pistol (Golden); Reshala's bunkhouse key | 4 heavily armed and armored guards |\n| Partisan | Has to be expected everywhere | Partisan's bag; AK skeletonized stock (Customized); Red Rebel ice pick | None |\n| Knight | At the Scav base (ZB-013 extraction) | Death Knight mask; Crye Precision CPC plate carrier (Goons Edition) | Big Pipe, Birdeye |\n| Big Pipe | At the Scav base (ZB-013 extraction) | Milkor M32A1 MSGL 40mm grenade launcher; Big Pipe's smoking pipe; Big Pipe's bandana; S&S Precision PlateFrame plate carrier (Goons Edition) | Knight, Birdeye |\n| Birdeye | At the Scav base (ZB-013 extraction) | Mystery Ranch NICE COMM 3 BVS frame system (Coyote); LBT-1961A Load Bearing Chest Rig (Goons Edition) | Knight, Big Pipe |"
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "To locate the extractions use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Administration Gate | Scav | yes | no | - | |\n| Boiler Room Basement (Co-op) | All | PMC: no; Scav: yes | no | Scav + PMC | In the basement of the boiler building with the 2 chimneys in the construction area. |\n| Crossroads | All | yes | no | - | |\n| Dorms V-Ex | PMC | no | yes | 5000 Roubles per player; Maximum of 4 players | The fee amount is influenced by your Scav karma. |\n| Factory Far Corner | Scav | yes | no | - | |\n| Factory Shacks | Scav | yes | no | - | Opposite the stacked portable cabins. |\n| Military Base CP | Scav | yes | no | - | |\n| Old Gas Station | PMC | no | no | Green flares = Open | In the basement. |\n| Old Gas Station Gate | Scav | no | no | - | |\n| Old Road Gate | Scav | yes | no | - | |\n| Passage Between Rocks | Scav | yes | no | - | |\n| Railroad Passage (Flare) | PMC | yes | no | Shoot a green flare into the sky while inside the signal flare area. If the flare doesn't reach a certain height, the extraction won't open.; Flares:; Handheld RSP-30 green flare; Signal pistol fired 26x75mm green flare; Only one person amongst a lobby-made group needs to shoot a flare to open the extraction for all members of the group. | Upon entering the signal flare area, a notification will pop up in the bottom right corner of the screen:; If the flare was fired correctly, a new notification pops up:; Signal flare area and extract zone map; Staying on the tracks is required to not get shot. |\n| Railroad to Military Base | Scav | yes | no | - | |\n| Railroad to Port | Scav | yes | no | - | |\n| Railroad to Tarkov | Scav | yes | no | - | |\n| RUAF Roadblock | All | yes | no | - | PvE only |\n| Scav Checkpoint | Scav | yes | no | - | |\n| Smugglers' Boat | All | yes | no | Note with code word Voron; Note with code word Voron | |\n| Smugglers' Bunker (ZB-1012) | All | yes | no | Note with code word Voron; Note with code word Voron | |\n| Sniper Roadblock | Scav | yes | no | - | |\n| Trailer Park | PMC | yes | no | - | In the trees. |\n| Trailer Park Workers' Shack | Scav | yes | no | - | |\n| Warehouse 4 | Scav | yes | no | - | |\n| Warehouse 17 | Scav | yes | no | - | |\n| ZB-013 | PMC | yes | no | Activate lever in warehouse #4 at the crane yard.; +; Factory emergency exit key; Used to open the door to the extraction | In the basement of the Scav base. |\n| ZB-1011 | PMC | yes | no | - | |"
+    },
+    {
+      "heading": "Transits",
+      "level": 2,
+      "text": "| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Transit to Factory | All | yes | no | Only available 1 min after raid start | Next to the Old Gas Station extraction |\n| Transit to Interchange | All | yes | no | Only available 1 min after raid start | Next to the Trailer Park extraction, inside the bus |\n| Transit to Reserve | All | yes | no | Only available 1 min after raid start | Next to the Military Base CP extraction |\n| Transit to Shoreline | All | yes | no | Only available 1 min after raid start | Behind the Sniper Roadblock extraction, inside the bus |"
+    },
+    {
+      "heading": "Maps",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Interactive Map",
+      "level": 3,
+      "text": "Click for fullscreen. Separate map page here."
+    },
+    {
+      "heading": "3D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "3D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Isometric Map Dorms",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ingame Map - North bottom",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The location was first slightly expanded with patch 0.6.0.861 on January 19, 2018.\n- The location was expanded for the second time with patch 0.11.0.2448 on December 25, 2018.\n- The location was expanded again with patch 0.12.7.8334 on July 20, 2020.\n- The location was completely reworked and expanded with patch 0.16.0.0.34447 on December 26, 2024."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Mag Drills",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mag_Drills",
+  "revisionId": 360757,
+  "lastEdited": "2026-09-19T12:22:38Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Mag Drills is a Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Skill aimed at magazine handling - loading and unloading of ammo, checking for remaining cartridges."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "After reaching level 10 in this skill, the check accuracy level for all magazines increases from 0 to 1. This means that instead of just showing \"Full\", \"Nearly full\", \"About half\", \"Fewer than half\", \"Almost empty\" and \"Empty\", the character gives a more accurate estimation, for example \"Approx. 15\". Check accuracy level 1 is also available on most translucent magazines and ones with an observation slot, like the PM 9x18PM 90-93 8-round magazine, no matter the skill progress.\n\nAfter reaching level 20 in this skill, the check accuracy level for all magazines increases from 1 to 2. This means that the character gives the exact amount of remaining rounds."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases ammo loading speed (0.6% per level → +30% at Elite Level)\n- Increases ammo unloading speed (0.6% per level → -30% at Elite Level)\n- Increases magazine check speed through the context menu (0.8% per level → -40% at Elite Level)\n- Increases magazine check accuracy through the context menu\n- Elite level: Magazine is checked instantly when moved to your inventory\n- Elite level: Magazine loading is performed faster with every loaded round"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Performing magazine checks in raid\n- Loading and unloading magazines in raid\n  - Including internal magazines like shotgun tubes\n- Completing the quest A Life Lesson\n- Completing the quest Never Too Late To Learn\n- Completing the quest Best Job in the World\n- Completing the quest Escort\n- Completing the quest Intimidator"
+    }
+  ]
+}

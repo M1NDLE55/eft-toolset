@@ -1,0 +1,44 @@
+{
+  "title": "Samples",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Samples",
+  "revisionId": 359628,
+  "lastEdited": "2026-09-13T20:19:26Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Peacekeeper",
+    "previous": "Anesthesia, Fishing Gear",
+    "leads to": "TerraGroup Employee",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Samples is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. Straight to the point. Yes. There is news about new stimulators. They make a person not feel any pain, give them strength. They are being sold somewhere on the shoreline, Sanitar, yes, that's the merchant's name. He sells medicine and stimulants to the local junkies... I mean residents. I need to get this medication. Developing new stimulants is expensive, especially difficult with testing on humans. But here, we can say that testing is already in progress and gives results. Many of my acquaintances will be interested in such results. Please bring me samples of these drugs. Make sure that they are sealed and untouched.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 1 M.U.L.E. stimulant injector in raid\n- Hand over 1 M.U.L.E. stimulant injector to Peacekeeper\n- Find 1 Obdolbos cocktail injector in raid\n- Hand over 1 Obdolbos cocktail injector to Peacekeeper\n- Find 1 Meldonin stimulant injector in raid\n- Hand over 1 Meldonin stimulant injector to Peacekeeper\n- Find 1 AHF1-M stimulant injector in raid\n- Hand over 1 AHF1-M stimulant injector to Peacekeeper\n- Find 1 P22 (Product 22) stimulant injector in raid\n- Hand over 1 P22 (Product 22) stimulant injector to Peacekeeper\n- Find 1 L1 (Norepinephrine) stimulant injector in raid\n- Hand over 1 L1 (Norepinephrine) stimulant injector to Peacekeeper\n- Find 1 3-(b-TG) stimulant injector in raid\n- Hand over 1 3-(b-TG) stimulant injector to Peacekeeper"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Peacekeeper Rep +1.5\n- Dollars\n  - Dollars with Intelligence Center Level 1\n  - 3,368 Dollars with Intelligence Center Level 2\n- 1× Ops-Core FAST MT Super High Cut helmet (Urban Tan)\n- 1× Ops-Core FAST MT Super High Cut helmet (Black)\n- Unlocks purchase of Ops-Core FAST MT Super High Cut helmet (Urban Tan) at Peacekeeper LL4\n- Unlocks purchase of Ops-Core FAST multi-hit ballistic face shield at Peacekeeper LL4\n\"Good job. I've already received quite a few interesting offers. Something tells me that these meds are somehow related to TerraGroup.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Quantity | Requirements | Find in raid | Notes |\n| 1 | Handover item | Yes | Can be crafted in the Hideout (Medstation lv. 2). After completing Therapist's task; Crisis |\n| 1 | Handover item | Yes | 1 can be obtained with a special sacrifice in the Hideout Cultist Circle |\n| 1 | Handover item | Yes | |\n| 1 | Handover item | Yes | Can be crafted in the Hideout (Medstation lv. 2). |\n| 1 | Handover item | Yes | |\n| 1 | Handover item | Yes | |\n| 1 | Handover item | Yes | |\nThe fastest way to acquire all these stimulants is using the Keycard with a blue marking in The Lab. Alternatively, you could kill Sanitar, although he is not guaranteed to have them.\nAlternatively, either the two chalets or the rogue base on Lighthouse have multiple stimulants spawn which require no key."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Can't Drink Away Skill",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can't_Drink_Away_Skill",
+  "revisionId": 359140,
+  "lastEdited": "2026-09-13T20:11:07Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ragman",
+    "previous": "Is This a Reference?",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Can't Drink Away Skill is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come on in, brother! I've got a new little business venture here, and I'm looking for someone who can help me out. I was recently contacted by someone from across the border. Turns out there's a demand over there for stuff taken out of Tarkov. I don't really get who'd be into that, but money's money. Especially when it comes to luxury goods with a bit of history from the city. Yeah, that's exactly how the guy put it. I've got the manpower and plenty of motivation to make some serious cash. But most importantly, I've got experience faking luxury goods. I'm thinking of setting up a workshop to put together some Louise Pitton accessories. Go collect some useful stuff around Tarkov from this list, and I'll make it worth your while.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 10 Golden neck chains in raid\n- Hand over the items\n- Find 5 Golden rooster figurines in raid\n- Hand over the items\n- Find 5 Golden 1GPhone smartphones in raid\n- Hand over the items\n- Find 10 Simple wallets in raid\n- Hand over the items\n- Find 5 WZ Wallets in raid\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 1× Loui Peeton deluxe wallet\n\"You helped me out big time, bro! There's already a queue back home for my goods with a \"history\". Here, take this, for your help.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Golden neck chain | 10 | Handover item | Yes |\n| Golden rooster figurine | 5 | Handover item | Yes |\n| Golden 1GPhone smartphone | 5 | Handover item | Yes |\n| Simple wallet | 10 | Handover item | Yes |\n| WZ Wallet | 5 | Handover item | Yes |"
+    }
+  ]
+}

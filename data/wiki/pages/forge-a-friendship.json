@@ -1,0 +1,80 @@
+{
+  "title": "Forge a Friendship",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Forge_a_Friendship",
+  "revisionId": 360848,
+  "lastEdited": "2026-09-20T12:28:48Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Prapor",
+    "previous": "Swift Retribution, Natural Exchange",
+    "leads to": "Half-Empty",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Forge a Friendship is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, warrior! You asked about the BTR driver, and in theory we could work together. I've already used the services of his BTR, but going against Skier is not cheap. That's why we need to solidify our intentions, so that no one slips up later! First, I need to get a package that came from outside the cordon. I'm told it's already here, somewhere in the Norvinsk port area.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain Prapor's cargo on Shoreline\n- Hand over the found cargo"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 1× Kalashnikov AK-12 5.45x39 assault rifle\n- 3× AK-74 5.45x39 6L26 45-round magazine\n- 2× 5.45x39mm BP gs ammo pack (120 pcs)\n\"Good work, soldier! I'll be in touch with you about working with the driver.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Cargo for Prapor | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find Prapor's cargo on Shoreline. It can be found in the office building at the pier. There are multiple spawns throughout the building."
+    },
+    {
+      "heading": "First floor",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "First spawn",
+      "level": 4,
+      "text": "In the left side room on the table."
+    },
+    {
+      "heading": "Second spawn",
+      "level": 4,
+      "text": "On the floor behind the counter."
+    },
+    {
+      "heading": "Third spawn",
+      "level": 4,
+      "text": "On a wooden crate in the storage room in the right side of the building."
+    },
+    {
+      "heading": "Second floor",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Fourth spawn",
+      "level": 4,
+      "text": "Behind the wardrobe in the left side of the building."
+    },
+    {
+      "heading": "Fifth spawn",
+      "level": 4,
+      "text": "Under one of the desks in the right side of the building."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Station 14-4 KORD Arshavin K. pass (Restored)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Station_14-4_KORD_Arshavin_K._pass_(Restored)",
+  "revisionId": 339320,
+  "lastEdited": "2026-03-27T23:58:19Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the ARRS station 14-4 KORD in the power station on Interchange.",
+    "storage_wallet": "No",
+    "storage_keytool": "No",
+    "storage_doccase": "No",
+    "storage_sicc": "No",
+    "storage_securecont": "No",
+    "node": "68cc09872bdcc15c010c2668",
+    "ID": "q_card_taah_card_arshavin_fixed_ver2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Station 14-4 KORD Arshavin K. pass (Restored) (14-4 rst.) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "This restored pass should now be able to unlock Station 14-4 KORD."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This item is not lootable from players and can only be placed in a special item slot."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the story chapter They Are Already Here"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the ARRS station 14-4 KORD in the basement of the power station on Interchange."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 5x PC block\n- 1x Safe (locked) can be opened by pulling the lever after turning on power with the keypad on the wall, only containing the Mysterious audio tape when the story chapter They Are Already Here is active\n- Loose loot (Electronics, Provisions)\n- Intelligence folder spawns"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| Station 14-4 KORD Arshavin K. pass (Damaged) x1; Station 14-4 KORD Arshavin K. pass (Damaged); +; Secure Flash drive x1; Secure Flash drive; +; Military flash drive x1; Military flash drive; +; VPX Flash Storage Module x1; VPX Flash Storage Module | → | Intelligence Center level 1; 3 h 30 minAfter progressing through; the story chapter They Are Already Here; required during the entire process | → | Station 14-4 KORD Arshavin K. pass (Restored) x1; Station 14-4 KORD Arshavin K. pass (Restored) |"
+    }
+  ]
+}

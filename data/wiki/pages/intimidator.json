@@ -1,0 +1,38 @@
+{
+  "title": "Intimidator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Intimidator",
+  "revisionId": 362191,
+  "lastEdited": "2026-09-25T21:37:35Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Prapor",
+    "LL requirement": "4",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Intimidator is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings. There's quite a noticeable increase in the number of Scavs, have you noticed? Noticeable so much that my couriers can't even get through the previously safe areas, all get clapped indiscriminately can't even make a deal with them. We need to teach those bastards a lesson so that they piss their pants with any sound of gunshots in a kilometer radius. Shoot as many of those idiots as you can, and so that they know what's going on, get them in a manner they'll realize everything clearly. The shots all have to be in the head, I'll send some info on my channels so that people know who exactly sends the message.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 40 Scavs with headshots"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 5× 7.62x39mm BP gzh ammo pack (20 pcs)\n- +2 Mag Drills skill levels\n- +4 Submachine Guns skill levels\n- Unlocks craft for 7.62x39mm BP gzh at Workbench level 3\n\n\"There you go, that's way better. Thank you, warrior. The guys are saying it's calmed down now, so looks like the morons understood your message.\""
+    }
+  ]
+}

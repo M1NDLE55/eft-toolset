@@ -1,0 +1,51 @@
+{
+  "title": "Financial institution office key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Financial_institution_office_key",
+  "revisionId": 231669,
+  "lastEdited": "2023-03-26T13:04:44Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks an office on the second floor of the financial institution on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39667c9b3aa4b61683e98",
+    "ID": "city_key1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Financial institution office key (Finance) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to an office room at the city's financial institution."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Office on the second floor of the financial institution building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 5x PC block\n- 1x Sport bag\n- Loose loot (Valuables, Provisions, Building materials, Household materials, Energy elements)"
+    }
+  ]
+}

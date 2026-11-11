@@ -1,0 +1,51 @@
+{
+  "title": "Store safe key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Store_safe_key",
+  "revisionId": 332301,
+  "lastEdited": "2026-01-14T01:39:06Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "This key does currently not open any safe.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0f075686f7745bcc42ee12",
+    "ID": "Сейф Побережье Магазин"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Store safe key (Safe) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the safe inside one of the village stores, located somewhere near the Azure Coast sanatorium."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "There is no locked safe on Shoreline that requires this key."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "None."
+    }
+  ]
+}

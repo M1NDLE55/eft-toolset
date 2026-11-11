@@ -1,0 +1,60 @@
+{
+  "title": "Quality Standard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Quality_Standard",
+  "revisionId": 361769,
+  "lastEdited": "2026-09-24T12:48:14Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Lab",
+    "given by": "Therapist",
+    "previous": "The Good Times - Part 1",
+    "leads to": "Airmail",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Quality Standard is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon. I've learned that comrade Prapor has become nostalgic lately. Although I can't find time for such things myself, your and Prapor's affairs have brought me to a good idea. When the locals found out about TerraGroup's underground laboratory, there was quite a stir! It was a breakthrough for my business, the lab is where I got my unique equipment from. Well, there may still be some original American leftover LEDX from back then. Can you get me one of those? It would really help our cause.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only available to buyers of the \"Edge of Darkness\" edition of the game."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the special version of the LEDX Skin Transilluminator in The Lab\n- Hand over the found item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 5× Propital regenerative stimulant injector\n- 5× eTG-change regenerative stimulant injector\n\"My thanks to you. I don't know what we'd do if the lab wasn't accessible to people like you.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| TerraGroup Labs access keycard | 1 | Allows access to The Lab location a single time. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| LEDX Skin Transilluminator (US Version) | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find the LEDX Skin Transilluminator (US Version) in The Lab. It is located on top of a blue barrel inside the orange dome in the main working area (O11) on the first level."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The quest item location is a memento to a former LEDX Skin Transilluminator spawn location in the exact same place."
+    }
+  ]
+}

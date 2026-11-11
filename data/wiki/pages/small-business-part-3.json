@@ -1,0 +1,54 @@
+{
+  "title": "Small Business - Part 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Small_Business_-_Part_3",
+  "revisionId": 359682,
+  "lastEdited": "2026-09-13T20:20:21Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline, Woods",
+    "given by": "Fence",
+    "previous": "Small Business - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Small Business - Part 3 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The \"entrepreneur\" was dealt with, but there are still people in town who bought my product bypassing me. Remember the toxin cultists? That's them. Leave the fanatics a message from me. Let them know there's only one Fence in this city. You do that, and I'll make sure you receive something special.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash a Cultist knife at the sunken village marked circle on Shoreline\n- Stash a Cultist knife at the Health Resort east wing marked circle on Shoreline\n- Stash a Cultist knife at the river village marked circle on Woods\n- Stash a Cultist knife at the sawmill marked circle on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- Fence Rep +0.03\n- 2,000 Euros (6,000 with Unheard)\n  - 2,100 Euros (6,300 with Unheard) with Intelligence Center Level 1\n  - 2,300 Euros (6,900 with Unheard) with Intelligence Center Level 2\n- 1× Mark of The Unheard Note: Only obtainable in the PvE game mode and not available to owners of the \"The Unheard\" edition of the game.\n\"You found all their circles? After a job like that, you've definitely proven you can be trusted. Here you go.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Cultist knife | 4 | Required | N/A | Must be stashed at the specified locations. |\nIn this quest you have to stash 4 Cultist knives at the specified locations on Shoreline and Woods.\n\nThe knives can be obtained by killing Cultists or purchasing them on the flea market."
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "The first stashing spot is located in the church at the swamp village.\n\nThe second stashing spot is located in the pig room (East wing room 321) on the third floor of the health resort. The room is easily identified by candles and numerous markings on the door."
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "The first stashing spot is located at the dilapidated village in the north. The circle itself is north of the church in the backyard of a house.\n\nThe second stashing spot is located in the woods west of the sawmill near the checkpoint. This spot can easily be located when you go to the checkpoint, stay at the barrier and line your view up with a big stone south of it. See pictures below."
+    }
+  ]
+}

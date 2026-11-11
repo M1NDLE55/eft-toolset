@@ -1,0 +1,44 @@
+{
+  "title": "Scope the Clearing",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Scope_the_Clearing",
+  "revisionId": 360429,
+  "lastEdited": "2026-09-15T21:22:34Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Skier",
+    "previous": "A Familiar Face...",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Scope the Clearing is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good thing you didn't disappear on me! I've got an idea how we can make sure we don't miss it when the smugglers start making a move on the lighthouse. You said yourself there's fuck-all going on there right now, but the train's still running, see? If the smugglers decide to build themselves a base at the treatment plant, or start moving fighters in there, they're gonna need the train. So all we need to do is hide some proper cameras there, and that's it. Then I won't miss anything important. You gonna set up surveillance. And put one by the road to the woods too, just in case. I heard some of your lot leaked that route to the smugglers.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Plant the first Wi-Fi Camera at the smuggler train platform on Lighthouse\n- Plant the second Wi-Fi Camera at the smuggler train platform on Lighthouse\n- Plant the third Wi-Fi Camera at the Woods transit on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +15,000 EXP\n- 1,800 Euros\n  - 1,890 Euros with Intelligence Center Level 1\n  - 2,070 Euros with Intelligence Center Level 2\n- 1× Custom Guns NL545 (GP) 5.45x39 assault rifle\n- 3× AK-74 5.45x39 Magpul PMAG 30 GEN M3 30-round magazine (FDE)\n- 1× 5.45x39mm 7N40 ammo pack (120 pcs)\n\"Good work, the feed's already coming through. I'll keep an eye on the clearing myself, so I don't need you for now. If there's more work, I'll give you a shout.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| WI-FI Camera | 3 | Required | N/A | Can be purchased from Mechanic LL1. |\nIn this quest you have to stash 3 WI-FI Cameras in the north of Lighthouse."
+    }
+  ]
+}

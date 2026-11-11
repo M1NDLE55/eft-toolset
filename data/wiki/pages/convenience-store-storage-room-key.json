@@ -1,0 +1,52 @@
+{
+  "title": "Convenience store storage room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Convenience_store_storage_room_key",
+  "revisionId": 316240,
+  "lastEdited": "2025-07-18T22:10:51Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "max uses": "100",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the convenience store storage room on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "61a64428a8c6aa1b795f0ba1",
+    "ID": "lighthouse_key1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Convenience store storage room key (Store) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key that opens a storage room inside the roadside convenience store."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The convenience store is located along the main road on Lighthouse. The storage room on the inside has a blue door."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Medcase\n- 1x Dead Scav\n- 1x Toolbox\n- Loose loot (Meds, Medical supplies, Valuables, Provisions)\n- MP-133 spawn on desk"
+    }
+  ]
+}

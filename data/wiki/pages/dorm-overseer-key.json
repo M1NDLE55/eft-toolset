@@ -1,0 +1,63 @@
+{
+  "title": "Dorm overseer key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_overseer_key",
+  "revisionId": 336276,
+  "lastEdited": "2026-02-20T13:19:02Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "Overseer"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the room between 209 and 211 on the second floor of the three-story dorms building on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "664d4b0103ef2c61246afb56",
+    "ID": "Arena_champ_key"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm overseer key (Overseer) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the three-story dormitory with a tag reading \"Overseer\" on it. Appears to be extremely fragile, one-two uses and the key will break apart."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Against the Conscience - Part 1\n- This is a required location for the quests Between Two Fires, Decisions, Decisions and Surprise Gift"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "In one of four locations at the smugglers' base. A single key is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the room between 209 and 211 on the second floor of the three-story dorms building on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (GP coins, Valuables, Provisions, Weapon mods)\n- 1x PMC body\n- Possible Lone Star TX-15 DML 5.56x45 carbine (variant D-WARRIOR)\n- Possible FN P90 5.7x28 submachine gun (variant DEVGRU)\n- Possible modified TDI KRISS Vector Gen.2 9x19 submachine gun\n- Possible modified FN SCAR-H 7.62x51 assault rifle\n- Possible modified Desert Tech MDR 5.56x45 assault rifle\n- Possible modified Kalashnikov AKMN 7.62x39 assault rifle\n- Possible modified AS VAL 9x39 special assault rifle\n- Possible MSA Sordin Supreme PRO-X/L headset\n- Possible Peltor ComTac II headset (OD Green)\n- Possible OPSMEN Earmor M32 headset\n- Possible MF-UNTAR body armor\n- Possible BNTI Zhuk body armor (EMR)\n- Possible LBT-6094A Slick Plate Carrier (Black)\n- Possible LBT-6094A Slick Plate Carrier (Olive Drab)\n- Possible LBT-6094A Slick Plate Carrier (Coyote Tan)\n- Possible BNTI Gzhel-K body armor\n- Possible 5.11 Tactical Hexgrid plate carrier"
+    }
+  ]
+}

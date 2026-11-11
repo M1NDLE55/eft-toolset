@@ -1,0 +1,61 @@
+{
+  "title": "Operating room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Operating_room_key",
+  "revisionId": 358461,
+  "lastEdited": "2026-09-10T21:29:33Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the operating room at the water treatment plant on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "62987da96188c076bc0d8c51",
+    "ID": "lighthouse_key12"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Operating room key (OR) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key that opens the operating room with broadcasting equipment, located somewhere at the water treatment plant."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Broadcast - Part 1"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- Building #1 at the water treatment plant, in the laboratories on the first floor.\n\n- Building #2 at the water treatment plant, on the desk in the western office.\n\n- Building #2 at the water treatment plant, on a desk in the left hand upstairs office."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "At the ground floor of office building #1, which is located at the water treatment plant area in the north of Lighthouse."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Electronics)\n- 1x Medbag\n- 1x Dead Scav"
+    }
+  ]
+}

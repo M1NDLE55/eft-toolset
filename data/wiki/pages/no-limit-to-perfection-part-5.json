@@ -1,0 +1,40 @@
+{
+  "title": "No Limit to Perfection - Part 5",
+  "url": "https://escapefromtarkov.fandom.com/wiki/No_Limit_to_Perfection_-_Part_5",
+  "revisionId": 359509,
+  "lastEdited": "2026-09-13T20:17:24Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "No Limit to Perfection - Part 4",
+    "leads to": "No Limit to Perfection - Part 6",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "No Limit to Perfection - Part 5 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"It's not enough to just shoot from a distance, you've got to anticipate your enemy's moves! A lot of my guys rush it, starting blasting the moment they spot someone. And of course they miss! The whole point is careful aiming and understanding how your opponent behaves. I think you could use some practice too. Get to the Arena!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 100 enemies while aiming down sights"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +27,000 EXP\n- +300 Attention skill points\n- 20 GP coins\n- 1× Valuables crate (Rare)"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": "The Survivalist Path - Zhivchik",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Zhivchik",
+  "revisionId": 359794,
+  "lastEdited": "2026-09-13T20:22:12Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The survivalist path - Zhivchik"
+  ],
+  "infobox": {
+    "given by": "Jaeger",
+    "previous": "The Survivalist Path - Thrifty",
+    "leads to": "The Survivalist Path - Wounded Beast",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Survivalist Path - Zhivchik is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello there, warrior! The hunt went as planned. You know, the water you prepared for me did really come in handy. By the way, how good are you at handling dehydration? Show me how long PMCs can stay without water.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Survive for 5 minutes while suffering from complete dehydration (Excluding Factory)\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +5,700 EXP\n- Jaeger Rep +0.02\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n- 2× Aquamari water bottle with filter\n- 2× Water filter\n\"No way you can survive for so long! Impressive. Here you go, drink this, regain your strength.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "You can consume certain items that decrease your hydration to quickly get into the dehydration state. For example, a Jar of DevilDog mayo gives -99 and a Can of condensed milk -65 hydration. You can also use the gym module in your hideout to drain energy and hydration before starting a raid.\n\nAlternatively, if you play with friends, you can ask them to shoot you in the stomach, which will get you into the dehydration state too. Keep in mind that this will also decrease your energy rapidly.\n\nDon't forget to bring enough Meds or a Propital regenerative stimulant injector to outheal the damage, and enough Drinks to continue the raid afterwards.\n\nIf you extract from the raid with the \"Run Through\" extraction status, the quest will not count as being completed. To avoid the \"Run Through\" status, gain at least 200 EXP in raid (by killing or looting) or be in raid for at least 7 minutes before extracting. If you happen to get a run through, you can survive and extract from another raid on any location to complete the quest."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Zhivchik (живчик) translates roughly to \"lively\" or \"peppy\"."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Dorm room 114 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_114_key",
+  "revisionId": 323892,
+  "lastEdited": "2025-11-20T23:43:52Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks dorm room 114 in the two-story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "59387a4986f77401cc236e62",
+    "ID": "mo 114 feld"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 114 key (Dorm 114) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the two-story dormitory with a tag reading \"114\" on it."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Pharmacist"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The first floor of the two-story dorms on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Medcase\n- 1x Safe\n- 1x PC block"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Bottle of hydrogen peroxide x1; Bottle of hydrogen peroxide; +; Bottle of saline solution x1; Bottle of saline solution; +; Pile of meds x1; Pile of meds | → | Therapist; Therapist LL2 | → | Dorm room 114 key; Dorm room 114 key |"
+    }
+  ]
+}

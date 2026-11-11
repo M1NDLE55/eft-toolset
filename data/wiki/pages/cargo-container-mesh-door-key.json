@@ -1,0 +1,51 @@
+{
+  "title": "Cargo container mesh door key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cargo_container_mesh_door_key",
+  "revisionId": 358673,
+  "lastEdited": "2026-09-10T22:55:55Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the closed section of a container behind the LexOs car dealership on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39fdf1e21260da44a0256",
+    "ID": "city_key20"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Cargo container mesh door key (Container) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the metal gate in one of the shipping containers."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Grate door inside a shipping container between the LexOs car dealership and the car workshop at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Grenade box\n- 1x Weapon box (6x6)\n- 1x Weapon box (6x2)\n- Loose loot (Weapon mods)"
+    }
+  ]
+}

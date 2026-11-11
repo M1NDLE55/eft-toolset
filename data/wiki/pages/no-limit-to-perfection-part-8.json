@@ -1,0 +1,40 @@
+{
+  "title": "No Limit to Perfection - Part 8",
+  "url": "https://escapefromtarkov.fandom.com/wiki/No_Limit_to_Perfection_-_Part_8",
+  "revisionId": 359512,
+  "lastEdited": "2026-09-13T20:17:27Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "No Limit to Perfection - Part 7",
+    "leads to": "No Limit to Perfection - Part 9",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "No Limit to Perfection - Part 8 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You've got to know how to fight with style! If you're packing a heavy caliber, then use it to the fullest. Light them up straight through cover! The crowd loves it when someone turns the place into a bloodbath without all the fancy tricks. Just go in and crush your opponents. Forget about careful aiming! Show everyone what you're capable of.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 50 enemies with point fire while using light machine guns"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +32,000 EXP\n- +300 Light Machine Guns skill points\n- 30 GP coins\n- 1× Valuables crate (Rare)"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "All for the Show - Major Sponsor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/All_for_the_Show_-_Major_Sponsor",
+  "revisionId": 360538,
+  "lastEdited": "2026-09-18T18:00:49Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "All for the Show - Supremacy",
+    "leads to": "Superhuman",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "All for the Show - Major Sponsor is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Lately, grenades haven't been flying well: newbies don't know how to use them and just ignore them. It frustrates me and the supplier of this stuff, and he's a major sponsor! We need to fix this, fast. Show the other fighters what advantage they're missing. Make those weaklings start training with grenades so they don't fall behind!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 enemies in one life 10 times\n- Eliminate 2 or more enemies with headshots within one round 10 times"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +20,000 EXP\n- Ref Rep +0.05\n- 250,000 Roubles\n- 100 GP coins\n- Unlocks Splinter Stripe Yellow weapon camouflage"
+    }
+  ]
+}

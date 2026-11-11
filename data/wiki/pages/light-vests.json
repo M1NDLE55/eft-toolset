@@ -1,0 +1,51 @@
+{
+  "title": "Light Vests",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Light_Vests",
+  "revisionId": 362566,
+  "lastEdited": "2026-09-29T19:28:35Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Light Vests is a Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Light body armor wearing skill improves mobility and reduces the amount of received penetration and melee damage to your health."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Armor materials represent their type of armor, making Aramid, Aluminum and UHMWPE light armor type. To see which type the armor is, hover over any insert part and read the material in its name."
+    },
+    {
+      "heading": "Enhancements",
+      "level": 2,
+      "text": "After reaching level 3 in this skill, you have a chance to add an armor enhancement (on each part individually) when repairing light armor. The enhancement stays on an armor part until it loses 25% of its max default durability or until it gets repaired once again. Items with enhancements get an orange icon background."
+    },
+    {
+      "heading": "Enhancement types",
+      "level": 3,
+      "text": "| Skill level | Amount | Type |\n| 3-8 | 3% | Reduces incoming damage (common) |\n| 9-14 | 4% |\n| 15-20 | 5% |\n| 21-26 | 6% |\n| 27-31 | 7% |\n| 32-37 | 8% |\n| 38-42 | 9% |\n| 43-47 | 10% |\n| 48-50 | 11% |\n| 51 | 11%; 20% | Reduces incoming damage (common); Reduces incoming damage (rare) |"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Reduces movement speed penalty while wearing light armor (0.6% per level → -30% at Elite Level)\n- Reduces melee damage to body parts covered by light armor (0.6% per level → -30% at Elite Level)\n- Reduces wear amount when using repair kits (0.8% per level → -40% at Elite Level)\n- Elite level: Body parts covered by light armor are immune to bleeding\n- Elite level: Chance to not apply wear during repair (50%)"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Repairing light armor type (Aramid, Aluminum, UHMWPE material) items with a Body armor repair kit\n  - Every 10 armor points repaired on light armor type items gives 0.4 skill points\n- Receiving (durability) damage on equipped light armor type items\n  - Every 1 armor durability point grants 0.02 skill points, the 129% bonus ends after receiving 1 skill point and the diminishing returns start at 2 skill points gained\n- Completing the quest Safety Guarantee\n- Completing the quest Profitable Venture"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Fair Price - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fair_Price_-_Part_1",
+  "revisionId": 362598,
+  "lastEdited": "2026-09-29T19:53:59Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "previous": "Accept Hobby Club",
+    "leads to": "Fair Price - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Fair Price - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello mate. People say you're looking for something, and that you and Mechanic desperately need this fuckin' piece of junk. What, thought I wouldn't find out? I've ran through your little project, so you two aren't gonna bullshit me with the price. If you really want it, you'll have to pay the proper price. Twenty... No, fifty grand! And no bargaining. Your little handguard is already locked up in a safe place, you won't find it on your own. So, ready to pay for your project or not?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 50,000 EUR"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n\"Fucking splendid! Mechanic's a fucking gun nut, I get it, but I sure didn't expect YOU to pay that kind of money for some bloody handguard. Whatever, I don't care. If you two want it, you can go play in your little workshop. This oversized rubbish won't even fit any AK! I'll tell my boys, they'll drop your part off at the transfer point.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Euros | 50,000 | Handover item | No |\n\nEuros can be purchased from Skier with Roubles."
+    }
+  ]
+}

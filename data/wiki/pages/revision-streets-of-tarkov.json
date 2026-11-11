@@ -1,0 +1,53 @@
+{
+  "title": "Revision - Streets of Tarkov",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Revision_-_Streets_of_Tarkov",
+  "revisionId": 359613,
+  "lastEdited": "2026-09-13T20:19:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Peacekeeper",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Revision - Streets of Tarkov is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good morning! You're doing a great job with finding valuable military vehicles. According to my sources, there were at least three Stryker type vehicles in the city. You know, it's not a good idea to leave that kind of equipment out in the open in these conditions. I need a lead on them. You know what to do.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be Loyalty Level 2 to start this quest"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark the first LAV III with an MS2000 Marker on Streets of Tarkov\n- Locate and mark the Stryker with an MS2000 Marker on Streets of Tarkov\n- Locate and mark the second LAV III with an MS2000 Marker on Streets of Tarkov"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Peacekeeper Rep +0.25\n- Dollars\n  - Dollars with Intelligence Center Level 1\n  - 1,347 Dollars with Intelligence Center Level 2\n\"You did an amazing job, mercenary! What's the condition of the vehicles? I'm sure we'll be able to fix it, and you'll see more Strykers on the streets of the city in the future... What? Of course, I hope it doesn't come to that!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 3 | Required | N/A | This item is placed on the vehicles. When placed, the item is removed from the players' inventory. |\nIn this quest you have to find and mark 3 vehicles with MS2000 markers on Streets of Tarkov."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

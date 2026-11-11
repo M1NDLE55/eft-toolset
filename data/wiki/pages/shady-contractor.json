@@ -1,0 +1,55 @@
+{
+  "title": "Shady Contractor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shady_Contractor",
+  "revisionId": 359657,
+  "lastEdited": "2026-09-13T20:19:56Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Ground Zero",
+    "given by": "Mechanic",
+    "previous": "Accept Saving the Mole",
+    "leads to": "Needle in a Haystack",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Shady Contractor is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey. You may be aware that TerraGroup's aggressive expansion in Tarkov has raised quite a few questions in its time, no doubt? Back then, they were buying out properties and companies left and right in the Norvinsk region, and some of the deals were clearly shady in nature... TerraGroup has had a particularly interesting contractor, a company called Knossos. Officially they build amusement parks, playgrounds, and other family entertainment venues. But tell me, what possible connection can TerraGroup's scientific research and playgrounds have? That's exactly why this smells fishy to me. Knossos could be hiding TerraGroup documents or equipment. Yet to know for certain, we'd have to examine their facilities. And to do that, we'd have to find some kind of record... Knossos definitely had managers overseeing the facilities. You should check out the vehicles in the city center and look for any internal records there.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 15 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the Knossos LLC senior manager's car on Ground Zero\n- Locate and obtain the manager's diary\n- Hand over the diary"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,600 EXP\n- Mechanic Rep +0.01\n- 52,000 Roubles\n  - 54,600 Roubles with Intelligence Center Level 1\n  - 59,800 Roubles with Intelligence Center Level 2\n- 3× Military corrugated tube\n\"A manager's diary, huh? Even though it's not official documentation, there might be something useful in there. I'll get back to you in a bit, right now I need to examine these records carefully.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Knossos senior manager's diary | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe manager's car can be found next to the car dealership on Ground Zero. There are multiple diary spawns throughout the car."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This quest was released together with the video \"The Λabyrinth\""
+    }
+  ]
+}

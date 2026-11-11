@@ -1,0 +1,49 @@
+{
+  "title": "Balancing - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balancing_-_Part_1",
+  "revisionId": 359100,
+  "lastEdited": "2026-09-13T20:10:27Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ref",
+    "previous": "Easy Money - Part 2",
+    "leads to": "Balancing - Part 2, Arena Business, Professional Fitness - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Balancing - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You did a great job on my assignments. I also ran you through my databases... Just a precaution. You don't hire just anybody, you know what I mean, brother? I'm promoting you to a tester! You're gonna be testing equipment for the Arena. I've just received a good batch of bullpups for a delicious price. Go ahead and try them out on some hobos. After that, I'll decide if these rifles will go to my cleanup guys or the gladiators.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 Scavs while using a Steyr AUG on any location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +5,100 EXP\n- Ref Rep +0.03\n- 45 GP coins\n  - 47 GP coins with Intelligence Center Level 1\n  - 52 GP coins with Intelligence Center Level 2\n- 1× Steyr AUG A1 5.56x45 assault rifle\n- 3× Steyr AUG 5.56x45 30-round magazine\n- 3× 5.56x45mm M856 ammo pack (50 pcs)\n- 1× Death Shadow mask\n- 1× Escape from Tarkov: Arena 3-day trial Note: Activates upon quest completion.\n\"Not a bad gun, eh? Truth be told, I have a soft spot for bullpups. The AUG is obviously difficult to maintain, it has a weird trigger mechanism, hard to get used to, plus it's easy to forget about the ejection port side. Certainly not an amateur's gun. But it feels so good though! I'd rather not give it to the cleanup crew. Anyway, here's your reward.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Steyr AUG A1 5.56x45 assault rifle | 2 | Used by the player to eliminate Scavs. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 5 Scavs on any location with a Steyr AUG assault rifle. Both the AUG A1 and the AUG A3 can be used."
+    }
+  ]
+}

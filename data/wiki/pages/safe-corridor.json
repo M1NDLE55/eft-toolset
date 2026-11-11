@@ -1,0 +1,46 @@
+{
+  "title": "Safe Corridor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Safe_Corridor",
+  "revisionId": 362260,
+  "lastEdited": "2026-09-26T16:19:03Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Safe corridor"
+  ],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Skier",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Safe Corridor is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Oh, there you are! Good timing, I could use your help. My lads tried to \"borrow\" a few supplies from the Reserve base, but things went to shit. Some serious bandits have dug in there. And I reckon we won't be able to search the place properly until someone gives them a proper scare. I couldn't care less about the whole base, but that underground storage? That's where my interest is. You fancy going over there and lending a hand? And if you can, bring me the keys to the underground section too.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 Scavs in the underground storage warehouse on Reserve\n- Hand over any 3 found in raid keys for the underground storage warehouse (RB-PSP and RB-PSV)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Skier Rep +0.75\n- 1,650 Euros\n  - 1,733 Euros with Intelligence Center Level 1\n  - 1,898 Euros with Intelligence Center Level 2\n\"Already picked clean, you say? Fuck's sake!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in Raid |\n| RB-PSP1 key; or; RB-PSP2 key; or; RB-PSV1 key; or; RB-PSV2 key | RB-PSP1 key; or; RB-PSP2 key; or; RB-PSV1 key; or; RB-PSV2 key | 3 | Handover item | Yes |\n\nIn this quest you have to kill 5 Scavs in the underground warehouse and the ramps leading down to it on Reserve. The wanted warehouse is located in the northwest and marked with \"Д\"."
+    }
+  ]
+}

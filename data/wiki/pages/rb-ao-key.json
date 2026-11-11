@@ -1,0 +1,57 @@
+{
+  "title": "RB-AO key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-AO_key",
+  "revisionId": 351938,
+  "lastEdited": "2026-08-06T23:33:38Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-AO"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80c66d86f774405611c7d6",
+    "ID": "rezbase_key_vohr_arsenal"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-AO key (RB-AO) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the Federal State Reserve Agency base guard barracks' armories."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In the bunker to the north of the health resort, on the bed."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Inside the Military Barracks in the North West of Reserve. (Highlighted in green)"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Weapon mods)\n- 5x Weapon racks (AK-74N, AKS-74U, AKS-74N, AKS-74UB, AKS-74UN)"
+    }
+  ]
+}

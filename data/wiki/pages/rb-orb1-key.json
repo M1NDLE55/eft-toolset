@@ -1,0 +1,65 @@
+{
+  "title": "RB-ORB1 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-ORB1_key",
+  "revisionId": 352661,
+  "lastEdited": "2026-08-09T20:29:48Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-ORB1"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽49,000",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80ccac86f77470841ff452",
+    "ID": "rezbase_key_right_weap4fl"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-ORB1 key (RB-ORB1) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the Federal State Reserve Agency base second barracks armories."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Required for the quest Reserve Expert from Ragman"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In bottom of tunnel in shower room on key case on wall next to the door"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "South barracks on Reserve. East end of the southern building, 4th floor. (Highlighted in green)"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 3 Weapon racks (AK-74N, AKS-74U, AKS-74N, AKS-74UB, AKS-74UN)\n- Loose loot (Weapon mods, Ammunition)\n- Two Drawers\n- Intelligence folder spawn on ground"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Weather station safe key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weather_station_safe_key",
+  "revisionId": 331609,
+  "lastEdited": "2026-01-07T12:24:50Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "This key currently has no use since the safe at the weather station is always unlocked.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0f006986f7741ffd2fe484",
+    "ID": "Сейф Побережье Метеостанция"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Weather station safe key (Safe) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the safe inside the weather station, located somewhere near the Azure Coast sanatorium."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This key currently has no use since the safe at the weather station is always unlocked."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Safe on the second floor of the weather station on Shoreline next to a desk."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Aim Drills",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aim_Drills",
+  "revisionId": 362184,
+  "lastEdited": "2026-09-25T21:31:39Z",
+  "kind": "skill",
+  "categories": [
+    "Combat skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Combat skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Aim Drills is a Combat skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Aim drills will increase your aiming speed and will allow to perform aiming quieter."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases aiming speed (1% per level → +50% at Elite Level)\n- Reduces aiming sound (1% per level → -50% at Elite Level)\n- Elite level: No hand shaking at any stamina value, first 2 seconds after aiming\n- Elite level: Reduced hands shaking during tremor and fracture, the first 2 seconds after aiming"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- 0.2 points for any hits landed on enemies while aiming down sights (ADS).\n- Completing the quest Profitable Venture\n- Completing the quest Consolation Prize\n- Completing the quest Safety Guarantee"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "No Limit to Perfection - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/No_Limit_to_Perfection_-_Part_1",
+  "revisionId": 359505,
+  "lastEdited": "2026-09-13T20:17:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Professional - Part 3",
+    "leads to": "No Limit to Perfection - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "No Limit to Perfection - Part 1 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Soft types don't last long in the Arena, so you better stay in shape! We've got a big iron here, try handling that beast if you've got the strength for it. And if you don't, drag your ass to the gym and keep at it until you do!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 enemies while using an RSh-12"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +15,000 EXP\n- +100 Strength skill points\n- 10 GP coins\n- 1× Valuables crate (Rare)"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Requirement | Notes |\n| RSh-12 12.7x55 revolver | Required | Has to be used for the kills |"
+    }
+  ]
+}

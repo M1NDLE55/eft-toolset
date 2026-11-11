@@ -1,0 +1,45 @@
+{
+  "title": "This Tape Sucks",
+  "url": "https://escapefromtarkov.fandom.com/wiki/This_Tape_Sucks",
+  "revisionId": 361823,
+  "lastEdited": "2026-09-24T13:37:04Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Labyrinth",
+    "given by": "Therapist",
+    "previous": "Offensive Reconnaissance",
+    "leads to": "Keeper's Word",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "This Tape Sucks is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello again. I received a patient who was recently wounded in the resort cellars and barely escaped from this monster in a bull mask... Obvious mental trauma, perhaps more than one. But besides the stories about this Minotaur, the patient also mentioned many confinement and even torture chambers. You surely recognize the unacceptable nature of such human confinement, even under wartime conditions, so I am counting on your cooperation. We must get to the bottom of what is or was going on in these cellars. Explore those jail rooms and try to uncover any information or evidence that will help us find out who is responsible for what happened. And most importantly, what was the purpose of all these \"experiments\".\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the torture room inside The Labyrinth\n- Locate and obtain any evidence of torture\n- Hand over the found information"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 2× SJ12 TGLabs combat stimulant injector\n- 2× Meldonin injector\n- 2× 3-(b-TG) stimulant injector\n- 1x Taurus poster\n\"A video tape... You haven't watched it yet, have you? Now I know what is happening. I was wrong before. The resort was one of the evacuation points when it all started, and its cellars could have been used for, uh, different purposes... The situation wasn't so severe yet at that time, and they tried to isolate the deceased bodies from crowded places. This tape is definitely not a cause for concern... However, I would refrain from visiting these cellars if I were you. Ventilation in bomb shelters has always been a weak point, and humidity only contributes to possible intoxication...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Slaughter videotape | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you first have to find the torture room inside The Labyrinth. Afterwards you have to obtain evidence of the torture in form of a videotape. There are multiple spawn locations near the room."
+    }
+  ]
+}

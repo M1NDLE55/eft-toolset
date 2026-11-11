@@ -1,0 +1,61 @@
+{
+  "title": "Reprogrammed RFID keycard with Mr. Kerman's hash codes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Reprogrammed_RFID_keycard_with_Mr._Kerman's_hash_codes",
+  "revisionId": 341212,
+  "lastEdited": "2026-04-24T19:21:32Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Allows access to the Terminal location a single time.",
+    "storage_wallet": "No",
+    "storage_keytool": "No",
+    "storage_doccase": "No",
+    "storage_sicc": "No",
+    "storage_securecont": "No",
+    "node": "67c033fd0610e91bea056998",
+    "ID": "q_card_fid_card_new"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Reprogrammed RFID keycard with Mr. Kerman's hash codes (RFID Mr.K) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "An RFID keycard reprogrammed using hash codes from Mr. Kerman. Grants access to the port Terminal. At least, it should."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market, be sold to traders or destroyed.\n- This item is not lootable from players and can only be placed in a special item slot."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player sided with Mr. Kerman."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Port garrison intercom on Shoreline."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- Terminal"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| RFID keycard encryption device x1; RFID keycard encryption device; +; Activated Kruglov's RFID keycard x1; Activated Kruglov's RFID keycard; +; Flash drive with Mr. Kerman's hash codes x1; Flash drive with Mr. Kerman's hash codes; +; Blank RFID keycard x1; Blank RFID keycard | → | Intelligence Center level 1; 5 h 30 minAfter progressing through; the story chapter The Ticket; required during the entire process | → | Reprogrammed RFID keycard with Mr. Kerman's hash codes x1; Reprogrammed RFID keycard with Mr. Kerman's hash codes |"
+    }
+  ]
+}

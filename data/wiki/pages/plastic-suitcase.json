@@ -1,0 +1,33 @@
+{
+  "title": "Plastic suitcase",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Plastic_suitcase",
+  "revisionId": 295867,
+  "lastEdited": "2024-11-05T23:57:47Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "5c052cea86f7746b2101e8d8",
+    "ID": "suitcase_plastic_lootable"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Plastic suitcase is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Plastic suitcases spawn some barter items and provisions in a 3x3 grid."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Type |\n| Household materials |\n| Medical supplies |\n| Household materials |\n| Drinks |\n| Others |\n| Drinks |\n| Electronics |\n| Flammable materials |\n| Energy elements |\n| Flammable materials |\n| Drinks |\n| Others |\n| Food |\n| Energy elements |\n| Drinks |\n| Energy elements |\n| Household materials |\n| Food |\n| Food |\n| Food |\n| Energy elements |\n| Drinks |\n| Food |\n| Food |\n| Food |\n| Food |\n| Food |\n| Food |\n| Food |\n| Others |\n| Food |\n| Food |\n| Drinks |\n| Food |\n| Facecovers |\n| Valuables |\n| Info items |\n| Drinks |\n| Headgear |\n| Others |\n| Drinks |\n| Food |\n| Medical supplies |\n| Info items |\n| Others |\n| Headgear |\n| Others |\n| Food |\n| Food |\n| Drinks |\n| Valuables |\n| Valuables |\n| Headgear |\n| Drinks |\n| Drinks |\n| Headgear |\n| Energy elements |\n| Headgear |\n| Drinks |\n| Info items |\n| Drinks |\n| Food |\n| Headgear |\n| Headgear |\n| Household materials |\n| Info items |\n| Valuables |\n| Drinks |\n| Facecovers |\n| Drinks |\n| Flammable materials |\n| Headgear |\n| Food |\n| Facecovers |\n| Facecovers |\n| Facecovers |\n| Drinks |\n| Facecovers |\n| Facecovers |\n| Facecovers |\n| Facecovers |\n| Headgear |\n| Facecovers |\n| Info items |\n| Household materials |\n| Facecovers |\n| Valuables |\n| Flammable materials |\n| Eyewear |\n| Valuables |\n| Facecovers |\n| Valuables |\n| Valuables |\n| Eyewear |\n| Valuables |\n| Valuables |\n| Facecovers |\n| Info items |\n| Valuables |\n| Facecovers |\n| Valuables |\n| Valuables |\n| Info items |\n| Eyewear |\n| Facecovers |\n| Valuables |\n| Facecovers |\n| Facecovers |\n| Facecovers |\n| Facecovers |\n| Facecovers |\n| Valuables |\n| Facecovers |\n| Headgear |\n| Valuables |\n| Facecovers |\n| Facecovers |\n| Facecovers |\n| Drinks |\n| Valuables |\n| Medical supplies |\n| Headgear |\n| Facecovers |\n| Facecovers |\n| Drinks |\n| Facecovers |\n| Valuables |\n| Facecovers |\n| Valuables |\n| Medical supplies |\n| Facecovers |"
+    }
+  ]
+}

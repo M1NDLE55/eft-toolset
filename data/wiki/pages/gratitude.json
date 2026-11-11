@@ -1,0 +1,53 @@
+{
+  "title": "Gratitude",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gratitude",
+  "revisionId": 359355,
+  "lastEdited": "2026-09-13T20:14:48Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Ragman",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gratitude is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Salam. Listen, I'd like to send a care package to one dude. Get him fitted with some stuff, just so he knows that Arshavir remembers. He's is not the military, just a regular dude, but he loves to dress up like he's in the Matrix sometimes. Or as that hairy-chested spy, Austin or whatever, the dude in glasses. Leave the package at the pier in the Woods, right on the wooden docks. He will pick it up, I'll let him know. Just hide it someplace between the barrels, so that nobody sees it. Here's the list of what to stash, come back when you're done. Oh, the shemagh must be green, by the way!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash a Shemagh (Green) at the sawmill docks on Woods\n- Stash RayBench Hipster Reserve sunglasses at the sawmill docks on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Ragman Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 3× Energy-saving lamp\n\"So, how's the weather on Woods? I let Den know everything's ready for pick up, thank you.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Shemagh (Green) | 1 | Stashed item |\n| RayBench Hipster Reserve sunglasses | 1 | Stashed item |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Shemagh (Green) | 1 | Required | N/A | Stashed item |\n| RayBench Hipster Reserve sunglasses | 1 | Required | N/A | Stashed item |\n\nIn this quest you have to stash the 2 specified items at the sawmill pier on Woods. The tan variant of the Shemagh can not be used."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- \"Or as that hairy-chested spy, Austin or whatever, the dude in glasses.\" from the dialogue is a reference to secret agent Austin Powers from the series \"Austin Powers\"."
+    }
+  ]
+}

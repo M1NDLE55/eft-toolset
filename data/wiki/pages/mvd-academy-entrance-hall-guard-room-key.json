@@ -1,0 +1,51 @@
+{
+  "title": "MVD academy entrance hall guard room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MVD_academy_entrance_hall_guard_room_key",
+  "revisionId": 332382,
+  "lastEdited": "2026-01-15T05:05:31Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the guard room in the ministry of the interior academy building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "6582dc4b6ba9e979af6b79f4",
+    "ID": "city14_key3"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "MVD academy entrance hall guard room key (MVD) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the guard room at the entrance hall inside the city MVD (Ministry of the Interior) academy."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the reception in the ministry of the interior academy building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, )\n- Dead Scav\n- Sports bag\n- ORSIS T-5000M spawn\n- PB pistol spawn"
+    }
+  ]
+}

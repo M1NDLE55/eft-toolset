@@ -1,0 +1,57 @@
+{
+  "title": "Wet Job - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wet_Job_-_Part_2",
+  "revisionId": 359882,
+  "lastEdited": "2026-09-13T20:23:41Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Wet Job. Part 2"
+  ],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "previous": "Wet Job - Part 1",
+    "leads to": "Wet Job - Part 3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Wet Job - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"It's good to see you, mercenary. Those very cameras that we've installed on the weather station filmed a lot of interesting things. For instance, among other things, they spotted a new group of Scavs. They looked like sailors or fishermen, dressed in tatters and waders mostly. Lately, however, they have stopped appearing. I am very interested in their activities as their turnaround seems rather impressive. Search the Shoreline for a place where they could possibly live and mark it with a beacon for my people.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 14 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the fishermen's dwelling on Shoreline\n- Mark the fishing table with an MS2000 Marker"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +9,700 EXP\n- Peacekeeper Rep +0.03\n- 1,300 Dollars\n  - 1,365 Dollars with Intelligence Center Level 1\n  - 1,495 Dollars with Intelligence Center Level 2\n- 1× Eberlestock F5 Switchblade backpack (Dry Earth)\n- Unlocks barter for AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine at Peacekeeper LL4\n- Unlocks purchase of MSA ACH TC-2001 MICH Series helmet (Olive Drab) at Peacekeeper LL2\n\"Good, we'll check out who exactly dwells there. Contact me later.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed on the island. When placed, the item is removed from the players' inventory. |\n\nIn this quest you have to find the fishermen's house on the Shoreline island and mark the fishing table with an MS2000 Marker."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

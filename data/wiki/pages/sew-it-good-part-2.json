@@ -1,0 +1,46 @@
+{
+  "title": "Sew it Good - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sew_it_Good_-_Part_2",
+  "revisionId": 359653,
+  "lastEdited": "2026-09-13T20:19:52Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Sew it good - Part 2"
+  ],
+  "infobox": {
+    "given by": "Ragman",
+    "previous": "Sew it Good - Part 1",
+    "leads to": "Textile - Part 1, Sew it Good - Part 3, Collector",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Sew it Good - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Well, looks like I’m through with armor, took a bit of an effort, though. If I need some more, you’ll help me out, right? Anyway, now I have to get my hands on tactical rigs, and some of them are pretty hard to come by, but you’ll pull through, right? I need grey BlackRocks and green TVs. Bring at least a couple of each, and it'll be fine. Look for them yourself though, no traders, okay?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 2 WARTECH TV-109 + TV-106 chest rigs in raid\n- Hand over the chest rigs\n- Find 2 BlackRock chest rigs in raid\n- Hand over the chest rigs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +18,500 EXP\n- Ragman Rep +0.03\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n- 1× ANA Tactical M2 plate carrier (OD Green)\n- 1× Oakley Mechanism heavy duty backpack (Black)\n- Unlocks craft for 5.11 Tactical TacTec plate carrier (Ranger Green) at Lavatory level 3\n\"Thank you heartily, bro! Put them somewhere in the corner, I'll take a look later. I'm done with garment manufacture for now, gotta deal with something else first.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| WARTECH TV-109 + TV-106 chest rig (A-TACS FG) | 2 | Handover item | Yes | |\n| BlackRock chest rig (Gray) | 2 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 2) |"
+    }
+  ]
+}

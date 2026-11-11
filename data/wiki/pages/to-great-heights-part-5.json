@@ -1,0 +1,40 @@
+{
+  "title": "To Great Heights! - Part 5",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_Great_Heights!_-_Part_5",
+  "revisionId": 359840,
+  "lastEdited": "2026-09-13T20:22:59Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "To Great Heights! - Part 4",
+    "leads to": "To Great Heights! - Part 6",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Seasonal change: this quest cannot be obtained.\n\nTo Great Heights! - Part 5 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I have good news! Excellent news, in fact! I hope you've already picked out a little apartment in Tarkov's elite neighborhood, because you'll have it soon with all this money! Kidding. All the houses in those neighborhoods are soon gonna collapse anyway. Anyway, some very powerful people from across the border are interested in you. Powerful and wealthy. I can't tell you their names, it's a business secret, and I'm not violating what I signed. So, these people are ready to take you under their wing and sponsor you heavily, but first they want guarantees. You need to become the champion. Fly high, soar above the rest. You're gonna have to spend more time in the Arena. I can see it in your eyes that you're ready.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win a match claiming at least 2nd place in the team in TeamFight, BlastGang, or CheckPoint mode in Arena"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +6,900 EXP\n- Ref Rep +0.04\n- 40 GP coins\n  - 42 GP coins with Intelligence Center Level 1\n  - 46 GP coins with Intelligence Center Level 2\n\"You're really good. A very famous French man — I won't tell you his name for privacy — is interested in you. Lispy as hell, but he's offering good money. I've already arranged for your sponsorship.\""
+    }
+  ]
+}

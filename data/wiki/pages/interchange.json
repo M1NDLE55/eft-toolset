@@ -1,0 +1,85 @@
+{
+  "title": "Interchange",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Interchange",
+  "revisionId": 360210,
+  "lastEdited": "2026-09-15T10:14:08Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [],
+  "infobox": {
+    "prev": "Streets of Tarkov, Customs",
+    "next": "Customs, Streets of Tarkov",
+    "enemies": "Scavs, Killa, Tagilla",
+    "players": "11-15",
+    "duration": "40 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Interchange is a location in Escape from Tarkov. It is the fifth map that was added to the game."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The South Interchange is a key transport location for the city. This strategic area connects the port and harbor with the industrial outskirts of Tarkov. Located in the center of the interchange is a huge ULTRA shopping mall which was used as the main base of operation for the EMERCOM evacuation."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": "- Stationary weapons in the form of NSV Utyos 12.7x108 heavy machine guns.\n- Be aware of Border Snipers and Minefields!\n- A fully linked illumination grid, able to be switched on at the power station.\n\n- Alarms around some stores and a triggerable alarm at the KIBA Arms store. The alarms can be switched off at designated terminals."
+    },
+    {
+      "heading": "Usable Keys",
+      "level": 2,
+      "text": "| Icon | Key Name | Used in Quest |\n| EMERCOM medical unit key | EMERCOM medical unit key | yes |\n| Goshan cash register key | Goshan cash register key | yes |\n| Grumpy's hideout key | Grumpy's hideout key | |\n| IDEA cash register key | IDEA cash register key | yes |\n| Kiba Arms inner grate door key | Kiba Arms inner grate door key | yes |\n| Kiba Arms outer door key | Kiba Arms outer door key | yes |\n| NecrusPharm pharmacy key | NecrusPharm pharmacy key | |\n| Object 11SR keycard | Object #11SR keycard | yes |\n| Object 21WS keycard | Object #21WS keycard | yes |\n| OLI administration office key | OLI administration office key | |\n| OLI cash register key | OLI cash register key | yes |\n| OLI logistics department office key | OLI logistics department office key | yes |\n| OLI outlet utility room key | OLI outlet utility room key | |\n| Power substation utility cabin key | Power substation utility cabin key | |\n| Station 14-4 KORD Arshavin K. pass (Restored) | Station 14-4 KORD Arshavin K. pass (Restored) | yes |\n| ULTRA medical storage key | ULTRA medical storage key | |"
+    },
+    {
+      "heading": "Boss",
+      "level": 2,
+      "text": "| Name | Location | Notable equipment | Followers |\n| Killa | In the IDEA, OLI and Goshan stores; Around the center stores on the first and second floor of the mall | RPK-16 5.45x39 light machine gun; Maska-1SCh bulletproof helmet (Killa Edition); Maska-1SCh face shield (Killa Edition); 6B13 M assault armor (Killa Edition); BlackHawk! Commando chest harness (Black) | None |\n| Tagilla | In the parking garage below the Goshan store | Superfors DB 2020 Dead Blow Hammer; Tagilla's welding mask \"UBEY\"; Tagilla's welding mask \"Gorilla\"; Crye Precision AVS plate carrier (Tagilla Edition) | None |"
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "To locate the extractions use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Emercom Checkpoint | All | yes | no | - | |\n| Path to River (Flare) | PMC | yes | no | Shoot a green flare into the sky while inside the signal flare area. If the flare doesn't reach a certain height, the extraction won't open.; Flares:; Handheld RSP-30 green flare; Signal pistol fired 26x75mm green flare; Only one person amongst a lobby-made group needs to shoot a flare to open the extraction for all members of the group. | Upon entering the signal flare area, a notification will pop up in the bottom right corner of the screen:; If the flare was fired correctly, a new notification pops up:; Signal flare area and extract zone map |\n| Power Station V-Ex | PMC | no | yes | 5000 Roubles per player; Maximum of 4 players | The fee amount is influenced by your Scav karma.; There are border snipers beyond the vehicle. |\n| Railway Exfil | All | yes | no | - | |\n| Saferoom Exfil | PMC | yes | yes | 1.Turn on power at the power station; 2.Flush urinal in the \"Burger Spot\" restaurant; 3.Swipe Object #11SR keycard at revealed keycard panel; 4.Lock the extraction door from inside with the button next to it | A lever to open the Object-14 container can be found inside the extraction. |\n| Scav Camp (Co-Op) | All | yes | no | Scav + PMC | |\n| Smugglers' Tunnel | All | yes | no | Interchange underground utility plan; Interchange underground utility plan | |"
+    },
+    {
+      "heading": "Transits",
+      "level": 2,
+      "text": "| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Transit to Customs | All | yes | no | Only available 1 min after raid start | At the southern end of the highway |\n| Transit to Streets of Tarkov | All | yes | no | Only available 1 min after raid start | At the northern end of the highway |"
+    },
+    {
+      "heading": "Maps",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Interactive Map",
+      "level": 3,
+      "text": "Click for fullscreen. Separate map page here."
+    },
+    {
+      "heading": "2D/3D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ingame Map - North bottom",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The location was expanded with patch 0.12.4.6254 on March 12, 2020.\n- The location was completely reworked and expanded with patch 1.0.0.0.41760 on November 15, 2025.\n- The three anchor stores are based off real stores:\n  - Idea is based off Ikea.\n  - Goshan is based off Auchan.\n  - OLI is based off OBI.\n- The mall is based off the MEGA group stores which can be found all over Russia.\n- The MEGA Parnassus Mall in Poroshkino most closely resembles the one that is portrayed in-game.\n\n- Link to the location on Google Maps"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Festive airdrop crate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Festive_airdrop_crate",
+  "revisionId": 330493,
+  "lastEdited": "2025-12-31T18:02:41Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [
+    "Festive airdrop supply crate"
+  ],
+  "infobox": {
+    "type": "Event Loot Container",
+    "node": "67614e3a6a90e4f10b0b140d",
+    "ID": "air_drop_event_new_year"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Festive airdrop crate is a Event Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A festive 10x12 grid crate."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "Can be called in by using a handheld RSP-30 firework flare on all locations aside from Ground Zero, Factory, The Lab and The Labyrinth."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "Random surprises."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "During Escape from Tarkov's 2024 Christmas event, this crate could also be found near crashed sleds."
+    }
+  ]
+}

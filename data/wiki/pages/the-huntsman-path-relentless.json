@@ -1,0 +1,52 @@
+{
+  "title": "The Huntsman Path - Relentless",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Relentless",
+  "revisionId": 359763,
+  "lastEdited": "2026-09-13T20:21:41Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Jaeger",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Relentless is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come on in, kid. Got anything interesting to tell? Eh, forget it, don't want to listen about your war. Got enough of it here. I don't have much to teach you anymore, you know how to stand up for yourself, and you know of justice well. Met the local bandit leaders too. But have you tried getting them all at once? The task in not an easy one, but the goal is worth it. The most important thing is what mark we leave behind us.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Obtain level 4 loyalty with Jaeger"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate Tagilla\n- Eliminate Killa\n- Eliminate Reshala\n- Eliminate Shturman\n- Eliminate Glukhar\n- Eliminate Sanitar"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Quest Rewards\n  - +65,000 EXP\n  - +1.5 Jaeger Rep\n  - 478,599 Roubles\n  - Unknown Reward\n  - Unknown Reward\n  - 1× Armasight Zeus-Pro 640 2-8x50 30Hz thermal scope (Unlocked for purchase)\n  - 1× Hog target (Hideout Customization)\n  - +4 Shotguns skill levels\n  - +4 Throwables skill levels"
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"Couldn't handle it, I figure? Don't worry, I don't blame you, boy, it's not an easy task. So go on, recuperate and come back.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill all described bosses in one \"life\". This means that you have to kill them all, and extract successfully to complete the quest. For the locations of the bosses check their respective pages."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Sniping",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sniping",
+  "revisionId": 319175,
+  "lastEdited": "2025-10-09T20:32:54Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Sniping is an upcoming Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Sniping skill reduces recoil when aiming, especially when prone, and allows to hold breath longer."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

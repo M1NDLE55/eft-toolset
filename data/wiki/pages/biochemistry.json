@@ -1,0 +1,44 @@
+{
+  "title": "Biochemistry",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Biochemistry",
+  "revisionId": 361826,
+  "lastEdited": "2026-09-24T13:39:52Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Icebreaker",
+    "given by": "Therapist",
+    "previous": "War Never Changes",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Biochemistry is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"This icebreaker you've found is a real discovery! If it is located that far out, there could still be medical equipment on board that survived the blast in the city center… We will not get a second opportunity like this. In conditions of isolation and the inability to provide full hospital care, we usually rely on specialized biochemical analyzers. They allow us to perform a wide range of tests quickly and with the necessary accuracy. However, most of the reserve units in Tarkov were taken by emergency services during the evacuation. But on the icebreaker there could still be analyzers in working condition. Especially if it is connected to TerraGroup. Search for them for me, preferably several. The ship likely had its own medical section where they could have been installed.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 3 Aceso Xpress semi-automatic biochemical analyzers in raid\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +32,000 EXP\n- 360,000 Roubles\n  - 378,000 Roubles with Intelligence Center Level 1\n  - 414,000 Roubles with Intelligence Center Level 2\n- Unlocks barter for Money case at Therapist LL1\n\"You found the Aceso? That is probably the best news of the day. Given the shortages in Tarkov, they will be a very valuable asset… But of course, I will only consider parting with them in cases of extreme necessity. For now, they will go straight into operation and greatly ease the workload of my staff and patients.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Aceso Xpress semi-automatic biochemical analyzer | 3 | Handover item | Yes |"
+    }
+  ]
+}

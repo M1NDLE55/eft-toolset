@@ -1,0 +1,55 @@
+{
+  "title": "Weapon malfunctions",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_malfunctions",
+  "revisionId": 332226,
+  "lastEdited": "2026-01-12T16:07:42Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Malfunction",
+    "Malfunctions",
+    "Misfire",
+    "Misfires",
+    "Overheating"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Weapon malfunctions can occur when the player's weapon is of poor condition, or operated without care."
+    },
+    {
+      "heading": "Identifying a malfunction",
+      "level": 2,
+      "text": "Once a malfunction occurs, the bottom right corner of the screen will flash to indicate a problem has occured. Pressing the \"Inspect weapon\" key (default: L) will inspect the weapon and provide additional information about the malfunction."
+    },
+    {
+      "heading": "Clearing a malfunction",
+      "level": 2,
+      "text": "After inspecting your weapon, you will be notified about which specific malfunction has happened, and how to clear it (default: Left Shift + T).\n\nThe Troubleshooting skill elite effect allows to clear malfunctions without prior inspection."
+    },
+    {
+      "heading": "Types of malfunctions",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Mechanical malfunctions",
+      "level": 3,
+      "text": "Mechanical malfunctions do not occur in weapons with a durability of greater than 93%.\n- Misfires - A misfire is experienced as the complete failure of a cartridge to fire when the trigger is pulled and the hammer or firing pin falls.\n- Failure to eject - after firing, the cartridge is jammed by the bolt and is partially visible in the ejection port. The source of this problem is, first of all, the technical condition of the weapon, and less often - the overheating of the weapon and the cartridge characteristics.\n- Failure to feed - after firing, there are issues with the new cartridge feed (round gets stuck in the mechanisms of the weapon, cartridge case, etc.). The main source of this problem is the weapon magazine, especially the high capacity and drum magazines. Other sources: cartridge characteristics, weapon overheating, and technical condition of the weapon.\n- Jammed bolt - after firing, the bolt gets jammed. Jamming can be of two types: normal and hard. The only difference is the duration of the troubleshooting. The cause of the jammed bolt can only be overheating of the weapon or its technical condition. Hard jamming occurs only at low values of the technical condition of the weapon (5% and below)."
+    },
+    {
+      "heading": "Overheating",
+      "level": 3,
+      "text": "Weapons heat up after each shot. The heating rate for each shot depends on the cartridge, barrel and other heating-related elements of the weapon (receivers, muzzle devices, handguards, etc.).\n\nIn contrast to heating, the weapon is constantly cooling down. The cooling rate also depends on the barrel and other cooling-related elements of the weapon (receivers, muzzle devices, handguards, etc.).\n\nThe degree of overheating can be monitored by the visual state of the barrel and muzzle devices. You can distinguish four stages of overheating in ascending order. Each stage of overheating adds new negative effects.\n- Slight overheating - the weapon is heated, but there is no reddening of the barrel and muzzle devices. Effects: heating of the barrel, muzzle devices, and handguard is visible in thermal scopes, possible mirage (heat haze) from the barrel and muzzle devices.\n- Medium overheating - the weapon is heated, reddening of the barrel and muzzle devices is visible. Effects: weapon’s accuracy decreases, malfunction chance increases, wear increases, and the weapon’s maximum durability is reduced during firing.\n- Severe overheating - the weapon is very hot, the barrel and muzzle devices are sizzling hot. Effects: weapon’s rate of fire changes, possible cooking-off chance.\n- Maximum overheating - when this level is reached, a malfunction occurs - the bolt gets jammed."
+    },
+    {
+      "heading": "Secondary weapon switch speed boost",
+      "level": 2,
+      "text": "If your primary weapon jams and you have a chambered secondary weapon equipped, you will get a 5 second weapon swap buff that lets you switch to it immediately to fire off rounds quickly.\n\nThe buff is indicated by the secondary weapon slot flashing blue when your primary weapon has jammed."
+    }
+  ]
+}

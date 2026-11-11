@@ -1,0 +1,44 @@
+{
+  "title": "Best Job in the World",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Best_Job_in_the_World",
+  "revisionId": 361756,
+  "lastEdited": "2026-09-24T12:33:00Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve, Lighthouse",
+    "given by": "Prapor",
+    "LL requirement": "4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Best Job in the World is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Alright, soldier! I've got a mission for you from the Motherland!Need you to wipe out a gang or two of looters. Think that'll be easy? Don't get cocky. Keep your head down and get the job done. And don't forget to report back when it's over. No report, no reward.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 30 enemies with AK-74 series weapons on Reserve or Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 1× Armband (BEAR)\n- 1× ASh-12 12.7x55 assault rifle\n- 10× 12.7x55mm PS12B (10 pcs)\n- Unlocks purchase of ASh-12 12.7x55 assault rifle at Prapor LL4\n- +4 Mag Drills skill levels\n\n\"Oh, you actually remembered to come back. Good man. Here's your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill any 30 hostiles with AK-74 series weapons. You can use any of the following:\n- AK-74\n- AK-74M\n- AK-74N\n- AKS-74\n- AKS-74N"
+    }
+  ]
+}

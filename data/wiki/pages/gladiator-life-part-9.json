@@ -1,0 +1,40 @@
+{
+  "title": "Gladiator Life - Part 9",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Life_-_Part_9",
+  "revisionId": 359347,
+  "lastEdited": "2026-09-13T20:14:39Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Life - Part 8",
+    "leads to": "Gladiator Life - Part 10",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Life - Part 9 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I'm easing you higher and higher, step by step. You better appreciate it, fighter! I pulled some strings with a few people, they're ready to take a look at you. Don't screw this up! All you have to do is stay alive in the fight as long as you can.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Claim at least 5th place in Last Hero mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +4,000 EXP\n- 55,000 Roubles\n- 10 GP coins\n- Unlocks Beret (Olive Drab) in the Armory\n- Unlocks German Flecktarn weapon camouflage"
+    }
+  ]
+}

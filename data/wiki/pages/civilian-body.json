@@ -1,0 +1,43 @@
+{
+  "title": "Civilian body",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Civilian_body",
+  "revisionId": 310210,
+  "lastEdited": "2025-04-13T12:53:08Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "658420d8085fea07e674cdb6",
+    "ID": "dead_civilian"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Civilian body is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Corpse of a deceased civilian. A 4x4 loot container that spawns Barter Items and Provisions."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Ground Zero",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Health Resort universal utility room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_universal_utility_room_key",
+  "revisionId": 332589,
+  "lastEdited": "2026-01-17T23:58:00Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks utility rooms in the health resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0ea79b86f7741d4a35298e",
+    "ID": "Санаторий подсобка"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort universal utility room key (San util.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A universal key to all Azure Coast health resort utility storerooms."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- Underneath a key locker in the janitors closet by the east wing admin (glass) staircase on second floor of shoreline. Below where the East 226 key spawns."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Two utility rooms in the health resort west wing on Shoreline:\n- 2nd floor, room next to room 227\n- 3rd floor, room next to room 327"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room next to West 227:\n  - Loose loot (Household materials, Building materials, Tools, Roubles)\n  - 1x Jacket\n\n- Room next to West 327:\n  - Loose loot (Household materials, Building materials, Tools)"
+    }
+  ]
+}

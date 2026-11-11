@@ -1,0 +1,44 @@
+{
+  "title": "Broadcast - Part 5",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Broadcast_-_Part_5",
+  "revisionId": 359131,
+  "lastEdited": "2026-09-13T20:10:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Jaeger",
+    "previous": "Broadcast - Part 4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Broadcast - Part 5 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"All right, it's time to take the next step. We now know the Hoods are involved in this case. You get them talking! Force them to reveal themselves, you gotta do something that lets them know we're not messing around. Kill one of them, maybe one of their higher-ups. Don't even try finding them in the city though, it's impossible. But we do need to hide the trophy there, so that they get the hint. I hear these nutcases have a new ritual point. Try there, kid.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate Priest\n- Locate the ritual spot on Chekannaya st. on Streets of Tarkov\n- Stash a Cultist knife at the ritual spot\n- Survive and extract from the location\nNote: The \"Locate\" and \"Stash\" objectives will appear after the \"Eliminate\" objective is completed."
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- 24,000 EXP\n- Jaeger Rep +0.03\n- 75,000 Roubles\n  - 78,750 Roubles with Intelligence Center Level 1\n  - 86,250 Roubles with Intelligence Center Level 2\n- 2× Molot Arms VPO-101 Vepr-Hunter 7.62x51 carbine\n- 2× 7.62x51mm M61 ammo pack (20 pcs)\n- Unlocks barter for Armasight Zeus-Pro 640 2-8x50 30Hz thermal scope at Jaeger LL4\n\"Yeah! You think they've got the hint? I think they did! Thank you, kid.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Mysterious room marked key | 1 | Required | N/A | Unlocks the marked room on the first floor of the Chekannaya 13 apartment building on Streets of Tarkov where the Cultist knife must be stashed. |\n| Cultist knife | 1 | Required | N/A | Must be stashed at the ritual spot |\nIn this quest you have to kill a Cultist priest on any location and obtain a Cultist knife to stash it in the ritual spot at Chekannaya st. 13 on Streets of Tarkov."
+    }
+  ]
+}

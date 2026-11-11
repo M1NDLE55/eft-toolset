@@ -1,0 +1,60 @@
+{
+  "title": "Snatch",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Snatch",
+  "revisionId": 360185,
+  "lastEdited": "2026-09-15T07:57:04Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse, Reserve",
+    "given by": "Lightkeeper",
+    "previous": "Missing Informant (+10hr)",
+    "leads to": "Return the Favor (+10hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Snatch is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You're here, good. Now listen carefully. My men went to the meeting place, their job was to replace the folder these snakes were so diligently preparing with the one I had arranged, but it's already been several hours since my group stopped responding. The last time they contacted me, they reported seeing a group of Rogues. Knight and his men are not aware of this operation, perhaps one of them interfered with the delivery. The first thing you must do is to check the Rogues' base and find the lost data, but don't go to them right away, or they'll figure out I'm involved and will start asking questions. Then you'll have to deliver it to the federal reserve base, a meeting place has been set up at the machinery and equipment repair center. Find that folder and leave at the base, and bring the real one to me. It's crucial to deliver this information to me. It's time to find out who these suicidal moles are.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 10 hours after completion of Missing Informant"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Extract from Lighthouse\n- Obtain the forged intelligence at the Rogue base on Lighthouse\n- Obtain the original intelligence in the repair station on Reserve\n- Stash the forged intelligence under the BMP-2 in place of the original\n- Bring the original intelligence to Lightkeeper"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.01\n- 3× VPX Flash Storage Module\n- 1× Lighthouse island stash key\n- Unlocks purchase of Atomic Defense CQCM ballistic mask (Black) at Ragman LL4\n- Unlocks craft for UHF RFID Reader at Intelligence Center level 2\n- Unlocks the Lightkeeper service \"Sacred Amulet\"\n\"Welcome back. Now, let's see what they're up to.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Forged Lightkeeper intelligence | 1 | Pickup* and placement item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Lightkeeper intelligence | 1 | Pickup and handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| RB-ST key | 1 | Required | N/A | Unlocks the RB-ST room on Reserve where the BMP-2 is located. |\n- This item will only appear in your next Lighthouse raid after accepting this quest.\n\nIn this quest you have to obtain the forged intelligence on Lighthouse and exchange it with the original intelligence on Reserve. Afterwards you have to bring the original intelligence to Lightkeeper."
+    },
+    {
+      "heading": "Forged intelligence locations on Lighthouse",
+      "level": 4,
+      "text": "The forged intelligence can be found in either a green or blue container near the western entrance of the water treatment plant."
+    },
+    {
+      "heading": "Original intelligence and exchange spot location on Reserve",
+      "level": 4,
+      "text": "The original intelligence can be found tucked in the right side tracks of a BMP-2 which is located in a locked room inside the bigger of the two garage buildings at the repair center (white knight) on Reserve. A RB-ST key is required to open the door. The forged intelligence has to be placed at the back of the BMP-2."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Interchange plan map",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Interchange_plan_map",
+  "revisionId": 324148,
+  "lastEdited": "2025-11-21T21:44:40Z",
+  "kind": "location",
+  "categories": [
+    "Maps"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Map",
+    "weight": "0.045 kg",
+    "grid": "1x1",
+    "price": "₽9,150",
+    "trader": "Therapist LL2",
+    "effect": "Adds map of local area Interchange",
+    "node": "5be4038986f774527d3fae60",
+    "id": "interchange plan"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Interchange plan map (Interchange) is a map in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Detailed plan map of the Interchange location, including the Ultra shopping mall."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The map is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Functionality",
+      "level": 2,
+      "text": "On the map you are able to place up to 100 icons and notes of 4 varieties."
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

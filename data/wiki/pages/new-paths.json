@@ -1,0 +1,59 @@
+{
+  "title": "New Paths",
+  "url": "https://escapefromtarkov.fandom.com/wiki/New_Paths",
+  "revisionId": 359500,
+  "lastEdited": "2026-09-13T20:17:14Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Ground Zero, Streets of Tarkov",
+    "given by": "Peacekeeper",
+    "previous": "Revision - Streets of Tarkov",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "New Paths is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, mercenary. My partners desperately need to transport something important through the center of the city. You know how isolated the neighborhoods are and how dangerous the main roads are. You'll need to scout the route from the TerraGroup headquarters to the Rodina movie theater. My men have recently seen the Scavs who found a shortcut between the neighborhoods. It appears to be an old route used by USEC units during the Contract Wars. It was used for most of the supply runs, the soldiers even called it the Suez Canal amongst each other. This path will allow you to visit several different locations in one raid. Find it and make sure it's safe.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be Loyalty Level 1 to start this quest"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Scout the intersection of Mira Ave and the overpass on Ground Zero (In one raid)\n- Locate the passage leading to Streets of Tarkov on Ground Zero (In one raid)\n- Use the transit from Ground Zero to Streets of Tarkov (In one raid)\n- Survive and extract from Streets of Tarkov (or transit to the next location)\n  - (Optional) Scout the area around the Rodina cinema on Streets of Tarkov (In one raid)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Peacekeeper Rep +0.1\n- Dollars\n  - Dollars with Intelligence Center Level 1\n  - 673 Dollars with Intelligence Center Level 2\n\"Amazing, you've found it! Hopefully it'll be just as safe by the time the convoy leaves. However, I don't understand how they were able to restore the road. The road was blocked by the collapsed Paradigm Shipping building, which is when supplies were cut off. Few people have the resources to clear such a wreck. Apparently, someone is very interested in organizing easy routes...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Ground Zero intersection",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ground Zero to Streets of Tarkov",
+      "level": 3,
+      "text": "Next to the Mira Ave extraction. Transits are only available 1 min after raid start."
+    }
+  ]
+}

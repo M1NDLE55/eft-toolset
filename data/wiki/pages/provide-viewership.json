@@ -1,0 +1,64 @@
+{
+  "title": "Provide Viewership",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Provide_Viewership",
+  "revisionId": 359591,
+  "lastEdited": "2026-09-13T20:18:47Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Ref",
+    "previous": "Accept Easy Money - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Provide Viewership is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, gladiator! Judging by the fact that you're still in one piece, you've developed a good skill set. That's exactly what I need. Arena fights are thriving, but you know the human nature. The audience gets used to everything and will always ask for more! So I've come up with something more interesting. I want to broadcast the fights in real Tarkov conditions for a group of special customers. You need to set up a camera and then show them what you're made of. You can put the camera on some building near the construction site at customs. I don't care who's in your crosshairs. You yourself are the centerpiece of this show! People will cheer for you and pay good money for it. Of course, I've taken your commitment into account, so expect a reward.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Install the first WI-FI Camera Inside the industrial plant on Customs\n- Install the second WI-FI Camera Inside the industrial plant on Customs\n- Install the third WI-FI Camera Inside the industrial plant on Customs\n- Install the fourth WI-FI Camera Inside the industrial plant on Customs\n- Eliminate any 15 targets inside the industrial plant on Customs\nNote: The \"Eliminate\" objective will appear after the \"Install\" objectives are completed."
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +32,000 EXP\n- Ref Rep +0.02\n- 45 GP coins\n  - 47 GP coins with Intelligence Center Level 1\n  - 52 GP coins with Intelligence Center Level 2\n- 1× Lone Star TX-15 DML 5.56x45 carbine\n- 3× AR-15 5.56x45 HK 30 STANAG polymer 30-round magazine\n- 3× 5.56x45mm M855A1 ammo pack (50 pcs)\n\"There he is, a true Tarkov warrior! The audience loved it, so if you don't plan to drop out anytime soon, drop by often. Your talents deserve attention. And attention is expensive these days. Oh, by the way, here's your paycheck.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| WI-FI Camera | 4 | This item is installed in the industrial plant. When placed, the item is removed from the players' inventory. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Notes |\n| WI-FI Camera | 4 | Required | Can be purchased from Mechanic LL1. |\n\nIn this quest you first have to install 4 WI-FI Cameras in the industrial plant on Customs. Afterwards you have to kill any 15 targets inside of it."
+    },
+    {
+      "heading": "Camera 4 and 2 - First floor garage and northern building",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Camera 1 - Third floor northern building",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Camera 3 - Second floor southern building",
+      "level": 3,
+      "text": ""
+    }
+  ]
+}

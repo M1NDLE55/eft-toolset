@@ -1,0 +1,66 @@
+{
+  "title": "Health Resort west wing room 306 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_west_wing_room_306_key",
+  "revisionId": 358401,
+  "lastEdited": "2026-09-09T22:03:21Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks room 306 of the West wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a13f46386f7741dd7384b04",
+    "ID": "Санаторий 306"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort west wing room 306 key (W306 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium west wing room 306."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the Quest Health Care Privacy - Part 2"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In the yard of the locked villa, on a stretcher next to the ambulance.\n\n- In the back of the ambulance that is parked in front of the health resort."
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- In a locker on the second floor of the office area."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The third floor, room 306 of the West Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Blue keycard spawn location\n- Loose loot (Currency, Meds)\n- One weapon Spawn (M4A1)\n- Two dead Scavs"
+    }
+  ]
+}

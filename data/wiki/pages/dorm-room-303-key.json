@@ -1,0 +1,67 @@
+{
+  "title": "Dorm room 303 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_303_key",
+  "revisionId": 355664,
+  "lastEdited": "2026-08-23T17:33:35Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽5,780",
+    "usage": "Unlocks door 303 in the three-story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "593aa4be86f77457f56379f8",
+    "ID": "Общага1 303"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 303 key (Dorm 303) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the three-story dormitory with a tag reading \"303\" on it."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Golden Swag\n- 1 needs to be found for the quest Aid Stations"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In a key cabinet at the dorm guard desk that is located at the two-story dorms\n\n- In the Tigr vehicle next to the military checkpoint (Scav Checkpoint extraction).\n\n- Warehouse #6 next to the fuel silos, in the northern part of the second floor in a hanging tool cabinet."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The third floor of the three-story dorms on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- One Wooden crate\n- Loose loot (Weapons)\n- Possible Rare weapon spawn (HK G28 7.62x51 marksman rifle or FN SCAR-H 7.62x51 assault rifle)"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| T-Shaped plug x7; T-Shaped plug; +; Insulating tape x3; Insulating tape | → | Therapist; Therapist LL1 | → | Dorm room 303 key; Dorm room 303 key |\n| Zibbo lighter x2; Zibbo lighter; +; D Size battery x2; D Size battery | → | Prapor; Prapor LL2 | → | Dorm room 303 key; Dorm room 303 key |"
+    }
+  ]
+}

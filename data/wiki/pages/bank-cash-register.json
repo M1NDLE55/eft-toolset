@@ -1,0 +1,38 @@
+{
+  "title": "Bank cash register",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bank_cash_register",
+  "revisionId": 346674,
+  "lastEdited": "2026-06-10T18:30:35Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "64d116f41a9c6143a956127d",
+    "ID": "CashRegisterBank"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Bank cash register is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Bigger than the standard Cash register, has a 3x3 grid that spawns stacks of Roubles, Dollars and Euros."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "In the Tarbank on Streets of Tarkov."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Icon | Type |\n| Roubles | Money |\n| Dollars | Money |\n| Euros | Money |\n| GP coin | Money |\n| TarCoin | Money |"
+    }
+  ]
+}

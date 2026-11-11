@@ -1,0 +1,40 @@
+{
+  "title": "All for the Show - Heroism",
+  "url": "https://escapefromtarkov.fandom.com/wiki/All_for_the_Show_-_Heroism",
+  "revisionId": 359068,
+  "lastEdited": "2026-09-13T20:09:54Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Jack of All Trades",
+    "leads to": "All for the Show - Death from Above",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "All for the Show - Heroism is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Every gladiator puts on a show. The crowd needs to feel it. Drama! Suffering! A surge of emotions! And what works better for that than fear for their favorite fighter? Nothing. So come on, learn to make yourself the hero. Take a few hits, then win.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 enemies while suffering from light or heavy bleeding"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Ref Rep +0.01\n- 60,000 Roubles\n- 25 GP coins"
+    }
+  ]
+}

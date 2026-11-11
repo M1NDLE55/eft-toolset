@@ -1,0 +1,43 @@
+{
+  "title": "The Huntsman Path - Liberation",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Liberation",
+  "revisionId": 359761,
+  "lastEdited": "2026-09-13T20:21:39Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Lab, Reserve",
+    "given by": "Jaeger",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Liberation is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The most shitty situations usually quickly make it clear on who is who. Some people stay the same, some people don't. And recently I've heard the rumors about the new forces in the area. They come out of nowhere, tear places apart, take whatever they want and vanish as if they never were there. They call themselves Raiders. People say that they are mostly ex-military and ex-PMCs. I've also heard that they have someone really powerful behind them, pulling the strings from abroad. Calm down those Raiders.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 6 Raiders"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +22,500 EXP\n- Jaeger Rep +0.02\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 1× FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope\n- Unlocks barter for MP-155 Ultima thermal camera at Jaeger LL4\n\"So they're operating near laboratories and military positions... Oh, I hope it won't start another war, on top of the one already going on. Well, fellow, it's not for us to resolve this, at least for now.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Find and kill 6 Scav Raiders in The Lab or on Reserve."
+    }
+  ]
+}

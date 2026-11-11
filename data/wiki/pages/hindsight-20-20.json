@@ -1,0 +1,50 @@
+{
+  "title": "Hindsight 20/20",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hindsight_20/20",
+  "revisionId": 362481,
+  "lastEdited": "2026-09-29T16:00:06Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Skier",
+    "previous": "Route Deviation (+6hr)",
+    "leads to": "Key Partner (+6hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hindsight 20/20 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"New assignment for ya. The driver still has someone helping him, and he knows too much to be left alone. If this shithead leaks my stashes, I'm gonna have to reorganize the whole fucking network! The lads are already looking for new spots for merchandise drop-offs and ammo storage. You need to check one of these points, it's supposedly somewhere under the large mountain in Priozersk. If the tip is accurate, you can leave the supplies there for my crew. We need Russian armor-piercing ammo specifically. Keep your NATO ammo and other junk to yourself.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 6 hours after completion of Route Deviation"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the bunker under the mountain on Woods\n- Stash the first Russian armor-piercing ammo pack inside the bunker\n- Stash the second Russian armor-piercing ammo pack inside the bunker\n- Stash the third Russian armor-piercing ammo pack inside the bunker"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 1,650 Euros\n  - 1,732 Euros with Intelligence Center Level 1\n  - 1,897 Euros with Intelligence Center Level 2\n- 2× Peltor ComTac VI headset (Coyote Brown)\n\"The bunker is open? These hooded pricks could be a problem, but they're not the focus at the moment. The plan can't be changed, but I will notify the group anyway.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Item | Amount | Requirement | Find in Raid | Notes |\n| Russian armor-piercing ammo pack | 3 | Required | N/A | This item is placed on the inside the bunker. When placed, the item is removed from the players' inventory. |\nIn this quest you have to locate the bunker under the mountain on Woods and stash 3 Russian armor-piercing ammo packs there.\n\n| Item name |\n| 5.45x39mm 7N40 ammo pack (120 pcs) |\n| 5.45x39mm 7N40 ammo pack (30 pcs) |\n| 5.45x39mm BP gs ammo pack (120 pcs) |\n| 5.45x39mm BP gs ammo pack (30 pcs) |\n| 5.45x39mm BS gs ammo pack (120 pcs) |\n| 5.45x39mm BS gs ammo pack (30 pcs) |\n| 5.45x39mm BT gs ammo pack (120 pcs) |\n| 5.45x39mm BT gs ammo pack (30 pcs) |\n| 5.45x39mm PP gs ammo pack (120 pcs) |\n| 5.45x39mm PP gs ammo pack (30 pcs) |\n| 5.45x39mm PPBS gs Igolnik ammo pack (120 pcs) |\n| 5.45x39mm PPBS gs Igolnik ammo pack (30 pcs) |\n| 7.62x39mm BP gzh ammo pack (20 pcs) |\n| 7.62x39mm PP gzh ammo pack (20 pcs) |\n| 7.62x54mm R BS ammo pack (20 pcs) |\n| 7.62x54mm R BT gzh ammo pack (20 pcs) |\n| 9x19mm PBP ammo pack (50 pcs) |\n| 9x21mm 7N42 ammo pack (30 pcs) |\n| 9x21mm 7U4 ammo pack (30 pcs) |\n| 9x21mm BT ammo pack (30 pcs) |\n| 9x39mm BP ammo pack (20 pcs) |\n| 9x39mm BP gs ammo pack (8 pcs) |\n| 9x39mm PAB-9 gs ammo pack (20 pcs) |\n| 9x39mm SP-6 gs ammo pack (20 pcs) |\n| 12.7x55mm PS12B (10 pcs) |"
+    }
+  ]
+}

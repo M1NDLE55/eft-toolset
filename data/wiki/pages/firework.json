@@ -1,0 +1,40 @@
+{
+  "title": "Firework",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Firework",
+  "revisionId": 362069,
+  "lastEdited": "2026-09-24T19:19:51Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "A New Classic",
+    "leads to": "Double Tap",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Firework is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You're looking suspiciously cheerful, man! Doesn't exactly look like you've been sweating and pushing yourself to the limit. Maybe you go to these revamped matches just to watch the fireworks from a safe distance instead of actually stepping into hell? Say what you want, but I need results. Don't avoid the fight or the device's blast zone. Get in close, fight hard, and win me a victory! But one won't be enough. I know you can do more. Come on, pull yourself together!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win 10 rounds in BlastGang mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +14,000 EXP\n- 500,000 Roubles\n- 50 GP coins\n- 1× Echo Belli crate\n- 2 Battle Points"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Create a Distraction - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Create_a_Distraction_-_Part_1",
+  "revisionId": 359205,
+  "lastEdited": "2026-09-13T20:12:13Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Ground Zero",
+    "given by": "Ref",
+    "previous": "Surprise",
+    "leads to": "Create a Distraction - Part 2, Against the Conscience - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Create a Distraction - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Look, you're starting to feel like family to me. Like a brother! I think I can hook you up with some serious work. I've got some co-founders in the Arena, Kaban and Kollontay, maybe you know them. Thought they were cool guys, but now they decided to play politics. They want to put their champion in the Arena, can you imagine? And a good champion brings in so much money, you'd know. It's gonna take a lot of time and money to rebuild the business. We need to put a scare into these guys so they realize they're crossing the line. Take some explosive bricks and plant them inside the cafe in the city center. Without detonators. We're not gonna blow anything up, but just make it look like a big deal. Let them run around with their asses on fire.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Plant 3 TP-200 TNT bricks on the second floor of the cafe on Ground Zero"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +5,000 EXP\n- Ref Rep +0.05\n- 28 GP coins\n  - 29 GP coins with Intelligence Center Level 1\n  - 32 GP coins with Intelligence Center Level 2\n- 3× AR-15 5.56x45 Magpul PMAG 20 GEN M3 STANAG 20-round magazine\n- 1× 5.56x45mm M856 ammo pack (100 pcs)\n- 1× Desert Tech MDR 5.56x45 assault rifle\n\n\"Ha, you should have seen the chaos when they found the bricks! What a show! It's a damn shame we didn't film the whole thing... You did a good job. Here's your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid |\n| TP-200 TNT brick | 3 | Required | N/A |\nIn this quest you have to plant 3 TP-200 TNT bricks on the second floor of the \"Olive\" restaurant on Ground Zero."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Weapon mastery",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_mastery",
+  "revisionId": 360549,
+  "lastEdited": "2026-09-18T18:34:40Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Mastering"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "In Escape from Tarkov, the handling of weapons can be trained through active use. In short, the more you use a certain weapon, the more skilled you become with it.\n\nDepending on the weapon, reaching mastery level 2 or level 3 will provide a new reload animation. Level 3 grants the ability to reload while aiming down sights for all weapons in that mastery category.\n\nWeapons that are based on the same platform share a mastery. 1 EXP is gained for every hit on entities in an online raid. For cartridges that fire multiple projectiles, each projectile hit gives EXP."
+    },
+    {
+      "heading": "Assault rifles",
+      "level": 3,
+      "text": "ADAR 2-15/M4A1/HK 416/TX-15:\nRequired EXP for level 2: 1600\n\nRequired EXP for level 3: 2000\n\nAK-74/AK-100/RPK-16/RD-704/SAG AK:\nRequired EXP for level 2: 2000\n\nRequired EXP for level 3: 2200\n\nAKM/VPO:\nRequired EXP for level 2: 500\n\nRequired EXP for level 3: 600\n\nAKS-74U:\nRequired EXP for level 2: 275\n\nRequired EXP for level 3: 350\n\nAS VAL:\nRequired EXP for level 2: 275\n\nRequired EXP for level 3: 500\n\nASh-12:\nRequired EXP for level 2: 175\n\nRequired EXP for level 3: 400\n\nAUG:\nRequired EXP for level 2: 350\n\nRequired EXP for level 3: 500\n\nMDR:\nRequired EXP for level 2: 450\n\nRequired EXP for level 3: 600\n\nHK G36:\nRequired EXP for level 2: 200\n\nRequired EXP for level 3: 250\n\nSA58:\nRequired EXP for level 2: 175\n\nRequired EXP for level 3: 300\n\nSCAR:\nRequired EXP for level 2: 350\n\nRequired EXP for level 3: 500\n\nMCX:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 200\n\nMCX-SPEAR:\nRequired EXP for level 2: 350\n\nRequired EXP for level 3: 500\n\nNL545/Mk47:\nRequired EXP for level 2: 600\n\nRequired EXP for level 3: 1300\n\nQBZ-191:\nRequired EXP for level 2: 200\n\nRequired EXP for level 3: 250\n\nType 20:\nRequired EXP for level 2: 350\n\nRequired EXP for level 3: 500"
+    },
+    {
+      "heading": "Assault carbines",
+      "level": 3,
+      "text": "AVT-40/SVT-40:\nRequired EXP for level 2: 200\n\nRequired EXP for level 3: 250\n\nRFB:\nRequired EXP for level 2: 250\n\nRequired EXP for level 3: 400\n\nSKS:\nRequired EXP for level 2: 200\n\nRequired EXP for level 3: 300\n\nSR-3M:\nRequired EXP for level 2: 275\n\nRequired EXP for level 3: 500\n\nVPO-101:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 150\n\nVSK-94/9A-91:\nRequired EXP for level 2: 275\n\nRequired EXP for level 3: 500"
+    },
+    {
+      "heading": "Light machine guns",
+      "level": 3,
+      "text": "M60:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 200\n\nPKM/PKP:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 200\n\nRPD:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 200"
+    },
+    {
+      "heading": "Submachine guns",
+      "level": 3,
+      "text": "KRISS Vector:\nRequired EXP for level 2: 300\n\nRequired EXP for level 3: 450\n\nMP5:\nRequired EXP for level 2: 200\n\nRequired EXP for level 3: 250\n\nMP7:\nRequired EXP for level 2: 550\n\nRequired EXP for level 3: 800\n\nMP9:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 175\n\nMPX:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 200\n\nP90:\nRequired EXP for level 2: 200\n\nRequired EXP for level 3: 350\n\nPP-19-01 Vityaz/Saiga-9:\nRequired EXP for level 2: 175\n\nRequired EXP for level 3: 350\n\nPP-91 Kedr/Klin:\nRequired EXP for level 2: 175\n\nRequired EXP for level 3: 200\n\nPPSh-41:\nRequired EXP for level 2: 175\n\nRequired EXP for level 3: 200\n\nSR-2M:\nRequired EXP for level 2: 200\n\nRequired EXP for level 3: 350\n\nSTM-9:\nRequired EXP for level 2: 100\n\nRequired EXP for level 3: 150\n\nUMP 45:\nRequired EXP for level 2: 375\n\nRequired EXP for level 3: 500\n\nUZI:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 175\n\nUZI PRO:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 175"
+    },
+    {
+      "heading": "Shotguns",
+      "level": 3,
+      "text": "AA-12:\nRequired EXP for level 2: 300\n\nRequired EXP for level 3: 650\n\nM3 Super 90:\nRequired EXP for level 2: 350\n\nRequired EXP for level 3: 450\n\nM590A1:\nRequired EXP for level 2: 100\n\nRequired EXP for level 3: 200\n\nM870:\nRequired EXP for level 2: 400\n\nRequired EXP for level 3: 800\n\nMP-133:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 200\n\nMP-153/155:\nRequired EXP for level 2: 1500\n\nRequired EXP for level 3: 2200\n\nMP-18:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nMP-43:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 250\n\nMTs-255-12:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 150\n\nSaiga-12K:\nRequired EXP for level 2: 300\n\nRequired EXP for level 3: 650\n\nTOZ-106:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nTOZ KS-23M:\nRequired EXP for level 2: 200\n\nRequired EXP for level 3: 350"
+    },
+    {
+      "heading": "Designated marksman rifles",
+      "level": 3,
+      "text": "AK-50:\nRequired EXP for level 2: 200\n\nRequired EXP for level 3: 300\n\nHK G28:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 200\n\nM1A:\nRequired EXP for level 2: 275\n\nRequired EXP for level 3: 400\n\nMk-18:\nRequired EXP for level 2: 100\n\nRequired EXP for level 3: 200\n\nRSASS:\nRequired EXP for level 2: 175\n\nRequired EXP for level 3: 300\n\nSR-25:\nRequired EXP for level 2: 350\n\nRequired EXP for level 3: 300\n\nSVDS:\nRequired EXP for level 2: 250\n\nRequired EXP for level 3: 300\n\nVSS Vintorez:\nRequired EXP for level 2: 275\n\nRequired EXP for level 3: 500"
+    },
+    {
+      "heading": "Bolt-action rifles",
+      "level": 3,
+      "text": "AXMC:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 200\n\nDVL-10:\nRequired EXP for level 2: 100\n\nRequired EXP for level 3: 175\n\nM700:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 200\n\nMosin:\nRequired EXP for level 2: 200\n\nRequired EXP for level 3: 250\n\nMXLR:\nRequired EXP for level 2: 100\n\nRequired EXP for level 3: 250\n\nSV-98:\nRequired EXP for level 2: 100\n\nRequired EXP for level 3: 175\n\nT-5000M:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 125\n\nTRG M10:\nRequired EXP for level 2: 150\n\nRequired EXP for level 3: 200\n\nVPO-215:\nRequired EXP for level 2: 125\n\nRequired EXP for level 3: 250"
+    },
+    {
+      "heading": "Pistols",
+      "level": 3,
+      "text": "APS/APB:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nDesert Eagle:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nFN 5-7:\nRequired EXP for level 2: 125\n\nRequired EXP for level 3: 225\n\nGlock:\nRequired EXP for level 2: 100\n\nRequired EXP for level 3: 125\n\nM1911A1/M45A1:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nM9A3:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nMP-443 Grach:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nP226R:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nPB pistol:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nPL-15:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nPM pistol:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nSR-1MP Gyurza:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 125\n\nTT pistol:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nUSP .45:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100"
+    },
+    {
+      "heading": "Revolvers",
+      "level": 3,
+      "text": "Chiappa Rhino:\nRequired EXP for level 2: 75\n\nRequired EXP for level 3: 100\n\nRSh-12:\nRequired EXP for level 2: 100\n\nRequired EXP for level 3: 125"
+    }
+  ]
+}

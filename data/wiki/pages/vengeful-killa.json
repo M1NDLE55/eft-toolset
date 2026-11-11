@@ -1,0 +1,53 @@
+{
+  "title": "Vengeful Killa",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vengeful_Killa",
+  "revisionId": 362456,
+  "lastEdited": "2026-09-29T15:28:35Z",
+  "kind": "character",
+  "categories": [
+    "Bosses"
+  ],
+  "redirects": [],
+  "infobox": {
+    "faction": "Scavs",
+    "full name": "Unknown",
+    "location": "The Labyrinth"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Vengeful Killa is a Scav Boss in Escape from Tarkov."
+    },
+    {
+      "heading": "Biography",
+      "level": 2,
+      "text": "Killa earned his reputation back in the days of the Contract Wars, when he and his crew took over the ULTRA shopping mall. For most locals, that mask with the three stripes means death. For a select few, it's a reminder of wild dubstep parties somewhere on the city's edge."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Vengeful Killa has different health values than PMCs and Scavs.\n| Stats |\n| Head: 80; Thorax: 260; Stomach: 180; Arms: 100 each; Legs: 120 each; Total: 960 |\n- Instead of the typical 4 single slot pockets, he has 5 double slot pockets, bringing their total space to 10 slots."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "Vengeful Killa can be found in The Labyrinth. He appears after the death of Shadow of Tagilla."
+    },
+    {
+      "heading": "Behavior",
+      "level": 2,
+      "text": "Vengeful Killa uses a light machine gun or other automatic weapon to suppress the enemy, while lurking from cover to cover, getting closer to his target for the final push."
+    },
+    {
+      "heading": "Strategy",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Equipment",
+      "level": 2,
+      "text": "Weapons:\n| Weapon | Ammunition |\n| RPK-16 5.45x39 light machine gun | 5.45x39mm BS gs, 5.45x39mm 7N40, 5.45x39mm PPBS gs Igolnik |\n| Kalashnikov AKMS 7.62x39 assault rifle | 7.62x39mm MAI AP, 7.62x39mm BP gzh |\n| Tokarev TT-33 7.62x25 TT pistol | 7.62x25mm TT P gl |\n| ER FULCRUM BAYONET |\n| F-1 hand grenade |\n| RGD-5 hand grenade |\n\nHeadwear:\n| Headwear | Mods | Armor Class |\n| Maska-1SCh bulletproof helmet (Killa Edition) | Maska-1SCh face shield (Killa Edition) | Helmet - 4; Faceshield - 6 |\n\nArmor:\n| Armor | Armor Class |\n| 6B13 M assault armor (Killa Edition) | 5 |\n\nChest rigs:\n| Chest rig |\n| BlackHawk! Commando chest harness (Black) |\n\nItems:\n| Item |\n| AFAK tactical individual first aid kit |\n| Morphine injector |\n| XTG-12 antidote injector |\n| Vaseline balm |\n| Can of TarCola soda |\n| Labrys research notes |\n| Ariadne symbol key |\n| Labrys access keycard |"
+    }
+  ]
+}

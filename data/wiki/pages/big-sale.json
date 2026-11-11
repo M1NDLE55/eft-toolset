@@ -1,0 +1,45 @@
+{
+  "title": "Big Sale",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Big_Sale",
+  "revisionId": 359115,
+  "lastEdited": "2026-09-13T20:10:42Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Big sale"
+  ],
+  "infobox": {
+    "location": "Interchange",
+    "given by": "Ragman",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Big Sale is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You know, brother, I'll tell you what, clothes will always be of value. War or no war, people still buy that stuff. Ultra had a bunch of brand outlets, the ones folks used to hype on, and I could use the things from there now. Do a quick sweep, check if there is anything left if they're not thrashed yet. Don't worry, I'm not asking you to loot any clothes, I just want you to check if there's anything left in the stores, we will figure everything out later. Just don't go about rummaging through trash, remember, brand stuff only.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the AVOKADO store on Interchange\n- Locate the KOSTIN store on Interchange\n- Locate the tRend store on Interchange\n- Locate the DINO CLOTHES store on Interchange\n- Locate the TOP BRAND store on Interchange\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,200 EXP\n- Ragman Rep +0.03\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n- 1× Oakley Mechanism heavy duty backpack (Black)\n\"Great, awesome, got some stuff to look into. Seems like you scared off those Scavs back then. I'll send my guys, gonna have a new supply.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Walk into each of the listed stores in the same raid and survive to complete the quest. All of the stores are on the first floor of the ULTRA shopping mall."
+    }
+  ]
+}

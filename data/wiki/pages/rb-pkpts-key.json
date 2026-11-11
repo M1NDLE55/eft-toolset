@@ -1,0 +1,56 @@
+{
+  "title": "RB-PKPTS key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-PKPTS_key",
+  "revisionId": 336483,
+  "lastEdited": "2026-02-22T22:03:15Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the technical storeroom in the command part of the underground bunker system on Reserve.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "68e9654d72488961110dbf69",
+    "ID": "item_key_quest_fall_scientist"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "RB-PKPTS key (RB-PKPTS) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A Federal State Reserve Agency base bunker technical storeroom key. Now all that remains is to find this storeroom."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the technical storeroom in the command part of the underground bunker system on Reserve."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Electronics, Provisions)\n- Intelligence folder spawn on the desk"
+    }
+  ]
+}

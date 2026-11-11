@@ -1,0 +1,51 @@
+{
+  "title": "Construction site bunkhouse key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Construction_site_bunkhouse_key",
+  "revisionId": 274358,
+  "lastEdited": "2024-03-21T20:36:17Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the second floor of the bunkhouse at the construction site on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39cb1c9b3aa4b61683ee2",
+    "ID": "city_key6"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Construction site bunkhouse key (Construct.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the locked bunkhouse at the city construction site."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door on the second floor of the bunkhouse which is located at the construction site at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Jacket\n- 1x Medcase\n- 1x Sport bag\n- Loose loot (Medical supplies)"
+    }
+  ]
+}

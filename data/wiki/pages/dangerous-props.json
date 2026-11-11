@@ -1,0 +1,49 @@
+{
+  "title": "Dangerous Props",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dangerous_Props",
+  "revisionId": 362453,
+  "lastEdited": "2026-09-29T15:09:26Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "LL requirement": "4",
+    "previous": "Irresistible",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dangerous Props is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You're just in time. My expectations were too high, I guess. Things are so brutal around here, and people still won't buy these shotguns. One guy even told me he would never buy this \"janky movie prop\". Unbelievable! We gotta show everybody that this gun is well worth the money. Let's put on a real show in Tarkov, so that everyone knows that my shotguns aren't just for movies!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 20 targets with an AA-12 shotgun"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- 130,000 Roubles\n  - 136,500 Roubles with Intelligence Center Level 1\n  - 149,500 Roubles with Intelligence Center Level 2\n- 1x MPS Auto Assault-12 Gen 2 12ga automatic shotgun\n- 2x 12/70 AP-20 ammo pack (25 pcs)\n- Unlocks barter for MPS Auto Assault-12 Gen 2 12ga automatic shotgun at Skier LL4\n\"Now we're talking... The orders are rolling in, so it's a total success! Here's your share, fair and square.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| MPS Auto Assault-12 Gen 1 12ga automatic shotgun | 1 | Used by the player to eliminate the targets. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| MPS Auto Assault-12 Gen 1 12ga automatic shotgun | As many as needed | Used by the player to eliminate the targets. |\n| MPS Auto Assault-12 Gen 2 12ga automatic shotgun | As many as needed | Used by the player to eliminate the targets. |"
+    }
+  ]
+}

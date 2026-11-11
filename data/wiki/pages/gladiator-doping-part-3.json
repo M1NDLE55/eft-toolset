@@ -1,0 +1,45 @@
+{
+  "title": "Gladiator Doping - Part 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Doping_-_Part_3",
+  "revisionId": 359335,
+  "lastEdited": "2026-09-13T20:14:27Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Doping - Part 2",
+    "leads to": "Gladiator Doping - Part 4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Doping - Part 3 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You know, you can actually avoid injuries altogether. Sounds like science fiction, I know, but at the very least we've got something that wont let blood loss finish you off. You've got access to that stimulant now, so go give it a try!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 30 enemies while under the effect of the Perfotoran stimulant"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +4,500 EXP\n- Ref Rep +0.01\n- 170,200 Roubles"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Requirement | Notes |\n| Perfotoran (Blue Blood) stimulant injector | Required | Hast to be active while making the kills |"
+    }
+  ]
+}

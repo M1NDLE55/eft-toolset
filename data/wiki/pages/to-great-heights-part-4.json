@@ -1,0 +1,50 @@
+{
+  "title": "To Great Heights! - Part 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_Great_Heights!_-_Part_4",
+  "revisionId": 359839,
+  "lastEdited": "2026-09-13T20:22:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "To Great Heights! - Part 3",
+    "leads to": "To Great Heights! - Part 5",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Seasonal change: this quest cannot be obtained.\n\nTo Great Heights! - Part 4 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"How's the mood? Battle-ready? Ready to shine in the Arena once more? Ready to shred some motherfuckers? The crowd is betting on you, so don't let the audience down! Speaking of that. You got some money? You gotta bet on yourself and then win a few times. You'll make tons of cash, and you'll be famous. Bring the money, I'll organize everything. Just be warned: if keep losing too often, you start again.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 1,000,000 Roubles\n- Win three out of six matches in TeamFight, BlastGang or CheckPoint mode in Arena\n  - Failure condition: Lose 4 matches"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +5,600 EXP\n- Ref Rep +0.05\n- 35 GP coins\n  - 37 GP coins with Intelligence Center Level 1\n  - 40 GP coins with Intelligence Center Level 2\n- 2,500,000 Roubles\n  - 2,625,000 Roubles with Intelligence Center Level 1\n  - 2,875,000 Roubles with Intelligence Center Level 2\n- 1× Supply crate (Rare)\n\"Here's your paycheck. I deducted all my services from it straight away: bribing opponents, fees, and all that. What, you thought I work for free?\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"Oh man, you almost did it. Try again, the audience still seems to favor you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Roubles | 1,000,000 | Handover item | No |\nThe 1,000,000 Roubles can be handed over from both the main game and the Arena stash. If 4 out of 6 matches are lost, the quest fails and the Roubles need to be handed over again for a new try."
+    }
+  ]
+}

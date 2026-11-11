@@ -1,0 +1,40 @@
+{
+  "title": "No Limit to Perfection - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/No_Limit_to_Perfection_-_Part_2",
+  "revisionId": 359506,
+  "lastEdited": "2026-09-13T20:17:20Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "No Limit to Perfection - Part 1",
+    "leads to": "No Limit to Perfection - Part 3",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "No Limit to Perfection - Part 2 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Your strength's just fine, but I can see your endurance needs work. If you're crawling around slow and stopping every few steps, you'll miss all the action. Show me in the Arena that you're not snoozing out there!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Get the first kill of the round 5 times in BlastGang or TeamFight mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +20,000 EXP\n- +200 Endurance skill points\n- 5 GP coins\n- 1× Valuables crate (Rare)"
+    }
+  ]
+}

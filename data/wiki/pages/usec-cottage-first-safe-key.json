@@ -1,0 +1,52 @@
+{
+  "title": "USEC cottage first safe key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_cottage_first_safe_key",
+  "revisionId": 336547,
+  "lastEdited": "2026-02-25T03:00:52Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "max uses": "100",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a safe in the blue chalet on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "61aa5b7db225ac1ead7957c1",
+    "ID": "lighthouse_key7"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "USEC cottage first safe key (USEC 1) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the safe that belonged to one of the USEC operatives stationed in the roadside cottage area."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "This key unlocks a safe that is located in the north-western bedroom on the second floor of the blue chalet on Lighthouse."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Valuables\n- Virtex programmable processor\n- VPX Flash Storage Module\n- Military COFDM Wireless Signal Transmitter\n- Silicon Optoelectronic Integrated Circuits textbook"
+    }
+  ]
+}

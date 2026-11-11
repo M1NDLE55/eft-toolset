@@ -1,0 +1,47 @@
+{
+  "title": "Hiking",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hiking",
+  "revisionId": 362299,
+  "lastEdited": "2026-09-27T00:41:17Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Peacekeeper"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hiking is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, my friend! Do you enjoy hiking? I do not, which is why I need your help. In the northwestern part of the Priozersk forest, scavengers are preventing my men from delivering humanitarian supplies. The area must be cleared. Got it?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 1 with Peacekeeper to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 Scavs at USEC camp, Scav camp, sawmill, or abandoned village on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Peacekeeper Rep +0.1\n- 550 Dollars\n  - 578 Dollars with Intelligence center Level 1\n  - 633 Dollars with Intelligence center Level 2\n- 3× CPU fan\n- Unlocks purchase of Galvion Caiman Hybrid helmet (Grey) at Peacekeeper LL2\n\"You did it! Great! Here is your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 10 Scavs at, and around the 4 mentioned locations on Woods."
+    }
+  ]
+}

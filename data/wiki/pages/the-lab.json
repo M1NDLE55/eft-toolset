@@ -1,0 +1,98 @@
+{
+  "title": "The Lab",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Lab",
+  "revisionId": 354844,
+  "lastEdited": "2026-08-16T20:28:45Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [
+    "Laboratory",
+    "Labs"
+  ],
+  "infobox": {
+    "prev": "Streets of Tarkov, Factory",
+    "next": "Streets of Tarkov",
+    "enemies": "Scav Raiders",
+    "players": "8-10",
+    "duration": "30 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Lab is a location in Escape from Tarkov. It is the sixth map that was added to the game."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Secret underground TerraGroup Labs facility hidden right under the center of Tarkov. Officially, this research center does not exist and, based on data scraps, is engaged in research and development as well as testing and simulation of projects in chemistry, physics, biology, and other high technology."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The Lab is initially only accessible by transiting. Direct access from the location selection screen is unlocked upon progressing through the story chapter Tour.\n- This location can only be entered with a TerraGroup Labs access keycard."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Insurance",
+      "level": 3,
+      "text": "All insured items left in a raid by players will not be returned. Upon death, insurance Traders will send the usual in-game mail about dispatching people to recover the items, but when the insurance timer runs out they will explain that their people don't go to the location, didn't find it or died in the process."
+    },
+    {
+      "heading": "Illumination",
+      "level": 3,
+      "text": "The illumination can be disabled by turning off the power in the basement."
+    },
+    {
+      "heading": "Announcer",
+      "level": 3,
+      "text": "Whenever an event of high importance happens, an announcement will be triggered. There is an announcement for every extraction activation besides \"Ventilation Shaft\" and \"Sewage Conduit\".\n\nThe announcement for the \"Parking Gate\" extraction can be disabled inside the alarm system control panel room. A Yellow keycard is needed to enter it."
+    },
+    {
+      "heading": "Usable Keys",
+      "level": 2,
+      "text": "| Key Name | Used in Quest |\n| Keycard with a blue marking | yes |\n| TerraGroup Labs arsenal storage room key | |\n| TerraGroup Labs keycard (Black) | yes |\n| TerraGroup Labs keycard (Blue) | |\n| TerraGroup Labs keycard (Green) | |\n| TerraGroup Labs keycard (Red) | |\n| TerraGroup Labs keycard (Violet) | |\n| TerraGroup Labs keycard (Yellow) | |\n| TerraGroup Labs manager's office room key | yes |\n| TerraGroup Labs residential unit keycard | |\n| TerraGroup Labs weapon testing area key | yes |"
+    },
+    {
+      "heading": "Bosses",
+      "level": 2,
+      "text": "Seasonal change: Scav Raiders are replaced by Black Division."
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "Note: Upon activating any of the extraction switches, there is a chance for Scav Raiders to spawn and roam towards the activation location.\nTo locate the extractions use the maps below the table.\n| Name | Always available | Single-Use | Requirements | Notes | Announcement |\n| Cargo Elevator | yes | yes | Restore power in the basement, room G1. | Second floor, opposite of room G21. | Sector G |\n| Hangar Gate | no | no | Open the gate in cabin B24, on the second floor of the hangar. | Sector B11. | Sector B11 |\n| Main Elevator | yes | no | Restore power in the basement, opposite of room R4. | In the basement, in the corridor between the rooms R6 and R8. | Sector R |\n| Medical Block Elevator | yes | no | Restore power in the basement, room G6. | In the basement between the rooms G3 and G4. | Sector O |\n| Parking Gate | no | no | Open the gate in room Y21 on the second floor, next to R22. | Sector Y11. | Sector Y11 |\n| Sewage Conduit | yes | no | Sink the water level. | Room B1 in the basement.; The switch to sink the water is on the left, the extraction on the right side of the room.; The water takes ~80 seconds to sink. | - |\n| Ventilation Shaft | yes | no | No backpack equipped. | In the basement, corridor between the rooms G1 and G8, next to G7. | - |"
+    },
+    {
+      "heading": "Transits",
+      "level": 2,
+      "text": "| Name | Always available | Single-Use | Requirements | Notes |\n| Transit to Streets of Tarkov | yes | no | Only available 1 min after raid start | Near the orange dome, next to the office with the billiard table |"
+    },
+    {
+      "heading": "Maps",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Interactive Map",
+      "level": 3,
+      "text": "Click for fullscreen. Separate map page here."
+    },
+    {
+      "heading": "Ingame Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

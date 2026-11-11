@@ -1,0 +1,68 @@
+{
+  "title": "Skier",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Skier",
+  "revisionId": 357236,
+  "lastEdited": "2026-08-31T08:47:47Z",
+  "kind": "trader",
+  "categories": [
+    "Traders"
+  ],
+  "redirects": [
+    "Alexander Fyodorovich Kiselyov"
+  ],
+  "infobox": {
+    "full name": "Alexander Fyodorovich Kiselyov",
+    "location": "Tarkov Customs District",
+    "origin": "Russian Federation",
+    "wares": "- Weapons - Magazines - Ammo - Mods - Storage containers - Euros",
+    "services": "Repairs",
+    "currencies": "Roubles (₽), Dollars ($), Euros (€)"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Alexander Fyodorovich Kiselyov, known by his alias \"Skier\", is a trader in Escape from Tarkov."
+    },
+    {
+      "heading": "Biography",
+      "level": 2,
+      "text": "A typical competent businessman, well versed in finance and commerce. He has a criminal past (spent some time behind bars).\n\nIn the past, he used to trade at the port, had connections with the customs service. Even before the conflict started, he was smuggling, trading in seized cargo and working out gray schemes not only inside the country, but also among Western partners. As a result, he has an assortment of foreign civilian weapons and military equipment. Cooperates with all Tarkov traders, but has a special interest in dealing with Peacekeeper."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Skier is initially locked, and can be unlocked upon progressing through the story chapter Tour."
+    },
+    {
+      "heading": "Wares",
+      "level": 2,
+      "text": "- Weapons\n- Magazines\n- Ammo\n- Mods\n- Storage containers\n- Euros"
+    },
+    {
+      "heading": "Loyalty Level Requirements",
+      "level": 2,
+      "text": "| Loyalty Lvl | Required Lvl | Required Rep |\n| Lvl 2 | 7 | 0.60 |\n| Lvl 3 | 22 | 2.10 |\n| Lvl 4 | 38 | 5.80 |"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- See the quests overview page"
+    },
+    {
+      "heading": "Barters",
+      "level": 2,
+      "text": "- See the barter trades page"
+    },
+    {
+      "heading": "Items for sale",
+      "level": 2,
+      "text": "LL1:\nLL1\n\nLL2:\nLL2\n\nLL3:\nLL3\n\nLL4:\nLL4"
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

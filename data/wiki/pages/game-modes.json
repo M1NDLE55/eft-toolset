@@ -1,0 +1,52 @@
+{
+  "title": "Game modes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Game_modes",
+  "revisionId": 355204,
+  "lastEdited": "2026-08-19T01:54:45Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov",
+    "Game modes"
+  ],
+  "redirects": [
+    "Gameplay modes"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Escape from Tarkov provides several gameplay options to the player to cater to different playstyles or objectives."
+    },
+    {
+      "heading": "PvP game mode",
+      "level": 2,
+      "text": "In the PvP mode, you play as your main character hired by a private military company (either USEC or BEAR). You start by selecting a location and time of day then enter the raid either solo or with teammates. You can bring in weapons, armor and gear from your own stash. As a PMC operator, you may engage and kill other PMCs, Bosses or Scavs. In order to survive the raid and escape with any items you are carrying, you must locate and move into an extraction zone, of which the list is available in-game by double-tapping the \"O\" key. If you die during the raid or do not extract in time, all items except your melee weapon, armband and items in your secure container are left behind.\n\nIn summary:\n- You have full control over your loadout, configurable in the stash\n- You may engage PMCs and Scavs\n- You must extract to keep any items you find\n- You may complete quests\n- Upon death or timeout, you will lose everything you brought into the raid except for your melee weapon, anything in your special item slots, your armband and the contents of your secure container\n- Insurance allows you to retrieve any items that have not been extracted from the raid, after a delay"
+    },
+    {
+      "heading": "Seasonal PvP game mode",
+      "level": 2,
+      "text": "Fundamentally the same as the PvP game mode, but on separate character and dedicated servers in a time-limited, modifier influenced gameplay cycle with exclusive content and rewards only obtainable in the respective season."
+    },
+    {
+      "heading": "PvE and PvE Co-op game mode",
+      "level": 2,
+      "text": "Featurewise the same as the PvP game mode, but on a separate character and with AI controlled PMCs instead of other players. This mode is only available to players that own the \"The Unheard\" or \"Edge of Darkness\" edition of the game, or have separately purchased the PvE mode expansion on the Escape from Tarkov website. In this game mode the game can be run locally or on online servers, unless playing on Streets of Tarkov, Icebreaker and Terminal or in a group where playing on servers is forced.\n\nTo play on online servers, the \"Play on BSG servers\" checkbox in the location selection screen has to be ticked."
+    },
+    {
+      "heading": "Practice and Practice Co-op game mode",
+      "level": 2,
+      "text": "When preparing to play as a PMC, you will be shown a screen that allows you to enable \"practice mode\". This game mode is intended for exploring locations, testing weapons and other activities. It offers the option to tweak different settings like AI amount/difficulty, toggling bosses, randomizing time/weather and more. Additionally, it is also possible to practice with, or play against other players in the \"Practice Co-op mode\". This mode comes with its own set of tweakable settings like spawning together or separated. The practice co-op mode is only available to players that own the \"The Unheard\" or \"Edge of Darkness\" edition of the game, or have separately purchased the discontinued Co-op expansion.\n\nWhen playing in practice or practice co-op mode, no progress is saved upon raid completion or termination. This means that you may disconnect from either with no penalty whatsoever."
+    },
+    {
+      "heading": "Scav game mode",
+      "level": 2,
+      "text": "See: Scav game mode"
+    },
+    {
+      "heading": "Arena game mode",
+      "level": 2,
+      "text": "See: Arena game mode"
+    }
+  ]
+}

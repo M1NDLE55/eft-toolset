@@ -1,0 +1,72 @@
+{
+  "title": "Dorm room 314 marked key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_314_marked_key",
+  "revisionId": 360052,
+  "lastEdited": "2026-09-14T01:26:04Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "Dorms marked key"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks room 314 (Marked room) in the three story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "node": "5780cf7f2459777de4559322",
+    "ID": "Общага1 мат"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 314 marked key (Dorm 314) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A dormitory room 314 key with strange symbols scratched onto it where the room label would normally be. The key has completely rusted through, making it very fragile."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Players who completed the Wild Wild Woods event quest have a barter option for this key on Jaeger LL4, requiring 25× Silver Badge."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here when you don't have any of the other marked keys\n- Used in the story chapter The Ticket"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In a key cabinet at the dorm guard desk that is located at the two-story dorms"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to room 314 (Marked room) on the third floor of the three-story dorms building on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (multiple very rare Valuables, Weapons, Containers, Currency, Keycards)"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Dorm room 314 marked key x1; Dorm room 314 marked key; +; Health Resort west wing office room 112 key x1; Health Resort west wing office room 112 key; +; Paracord x5; Paracord | → | Ragman; Ragman LL2; After completing his task; Scavenger | → | Crash Axe; Crash Axe |\n| RB-VO marked key x1; RB-VO marked key (used); +; RB-PKPM marked key x1; RB-PKPM marked key (used); +; RB-BK marked key x1; RB-BK marked key (used) | → | Jaeger; Jaeger LL3 | → | Dorm room 314 marked key; Dorm room 314 marked key |"
+    }
+  ]
+}

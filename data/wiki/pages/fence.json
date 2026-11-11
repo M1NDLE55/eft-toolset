@@ -1,0 +1,54 @@
+{
+  "title": "Fence",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fence",
+  "revisionId": 348960,
+  "lastEdited": "2026-08-03T07:12:35Z",
+  "kind": "trader",
+  "categories": [
+    "Traders"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "A network of trading outlets all over the Norvinsk region",
+    "origin": "Unknown",
+    "wares": "Anything sold to him",
+    "currencies": "Roubles (₽)"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Fence is a trader in Escape from Tarkov."
+    },
+    {
+      "heading": "Biography",
+      "level": 2,
+      "text": "The conflict had barely started when Fence began setting up anonymous outlets for buying and selling goods. Keeping incognito, he nevertheless managed to put together a well-organised smuggler network, operating all over the Norvinsk region."
+    },
+    {
+      "heading": "Wares",
+      "level": 2,
+      "text": "- Anything sold to him"
+    },
+    {
+      "heading": "Loyalty Level Requirements",
+      "level": 2,
+      "text": "| Loyalty Lvl | Required Lvl | Required Rep |\n| Lvl 4 | 1 | 6.00 |\n\nUnlike with other traders, Fence's reputation and loyalty level are raised by increasing your Scav karma. The higher your reputation, the better the payout for items sold to Fence will be. If you achieve Scav karma level 6, you will also get access to an additional sales tab that offers a 30% discount. Check the Scavs page for a full list of benefits.\n\nNote: According to the changelog of patch 0.12.11.0.13074, which introduced the Scav karma system, Fence's additional sales tab is supposed to also include \"uninsured items lost by other players\". Since no items that could undoubtedly be identified as \"player made\" have ever been seen, this feature seems to be either broken or disabled.\n\nExamples of the additional sales tab:"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- See the quests overview page\n- Similar to operational tasks for your PMC character, Fence offers daily tasks for your Scav character when you build the Hideout module \"Intelligence Center\". They can be completed to increase your Scav karma."
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The QR code in Fence's background leads to the YouTube video \"Rick Astley - Never Gonna Give You Up\""
+    }
+  ]
+}

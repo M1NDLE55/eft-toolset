@@ -1,0 +1,56 @@
+{
+  "title": "Health Resort west wing office room 104 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_west_wing_office_room_104_key",
+  "revisionId": 316190,
+  "lastEdited": "2025-07-18T21:28:22Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks room 104 of the Health Resort West wing on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0dc45586f7742f6b0b73e3",
+    "ID": "Санаторий 104"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort west wing office room 104 key (W104 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium west wing office room 104."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In a locker inside the smaller building at the power plant\n\n- Inside a house in the village. It spawns in a shoe box on a bed frame."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Room 104 on the first floor of the west wing in the health resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose Loot (Meds, Currency)\n- 1 x LEDX spawn\n- Blue keycard spawn location"
+    }
+  ]
+}

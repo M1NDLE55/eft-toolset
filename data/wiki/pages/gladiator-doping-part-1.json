@@ -1,0 +1,45 @@
+{
+  "title": "Gladiator Doping - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Doping_-_Part_1",
+  "revisionId": 359333,
+  "lastEdited": "2026-09-13T20:14:25Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Life - Final Exam",
+    "leads to": "Gladiator Doping - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Doping - Part 1 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Now you're a full-fledged warrior, which means the expectations are higher. You want to stay at the top of your game? Use doping! I mean what did you expect? Grab the syringes and get into the fight. Time won't wait!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 30 enemies while under the effect of a painkiller"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +4,500 EXP\n- Ref Rep +0.01\n- 155,000 Roubles"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 30 enemies in any game mode while having the effect applied."
+    }
+  ]
+}

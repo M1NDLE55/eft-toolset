@@ -1,0 +1,51 @@
+{
+  "title": "Informed Means Armed",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Informed_Means_Armed",
+  "revisionId": 362242,
+  "lastEdited": "2026-09-26T15:44:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Informed means armed"
+  ],
+  "infobox": {
+    "location": "Interchange, Woods",
+    "given by": "Skier",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Informed Means Armed is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Oh, Hey! Come here, lemme tell you something. Seems live I've settled into the region pretty well but I still can't shake this feeling you know? No confidence about what tomorrow's gonna bring. Ah forget it. Getting all gloomy for no reason... Anyway, I'd like to have a decent picture of what's going on around here. Makes things a lot safer. I've got a couple of sketchy spots in mind where we should stick some smart cameras. Need you to watch two locations: put one camera near the pier by the sawmill in the woods. Place it right on the boards along the slope. Then set up the second one across from the entrance to Kiba. That's the shop in Ultra. You can probably get the cameras from Mechanic, I heard he was dealing them.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Install a WI-FI Camera to watch the sawmill dock on Woods\n- Install a WI-FI Camera to watch the Kiba Arms store entrance on Interchange"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- 3,000 EXP\n- Skier Rep +0.1\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 517 Euros Intelligence Center Level 2\n\"All this tech shit is clearly not for me, the picture is hazed and the signal is shit, but I've already spotted some \"fat rats\" while you were setting the last cams up. Thanks, huge help!\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "Unlocks purchase of WI-FI Camera at Mechanic LL1."
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera | 2 | Required | N/A | Can be purchased from Mechanic LL1. |\nPlacing each camera requires you to be stationary for 20 seconds, so be sure to secure the area first.\n\nThe first camera needs to be placed on top of a box in the \"Brutal\" store on Interchange.\n\nThe second camera needs to be placed in a pile of wooden planks next to the sawmill pier on Woods."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Shortage",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shortage",
+  "revisionId": 361692,
+  "lastEdited": "2026-09-24T12:08:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Shortage is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, mercenary. Are you interested in a little part-time work? It's not a difficult task, but it's quite lucrative. Don't forget, you can get both food and drink from me, as well as expert medical care. But first, let's talk about the job. I require three emergency medical kits. They're called Salewa - the red western ones. I need you to obtain them yourself, not buy them off someone else. Just to prove that we're serious about this. We may know each other, but not enough for me to trust you yet. Are you up for the job?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 3 Salewa first aid kit in raid\n- Hand over the 3 first aid kits"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Therapist Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\n\"Thank you, young man. The first aid kits will be put to good use. I won't tell you any more than that, though.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "- Unlocks craft for Salewa first aid kit at Medstation level 1"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Salewa first aid kit | 3 | Handover item | Yes | Can be crafted in the Hideout (Medstation lv. 1).; This item can be in any condition and still handed in. |"
+    }
+  ]
+}

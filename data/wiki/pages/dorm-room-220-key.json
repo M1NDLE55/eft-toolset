@@ -1,0 +1,66 @@
+{
+  "title": "Dorm room 220 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_220_key",
+  "revisionId": 330402,
+  "lastEdited": "2025-12-31T01:53:21Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks dorm room 220 in the three story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5780cfa52459777dfb276eb1",
+    "ID": "Общага1 220"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 220 key (Dorm 220) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the three-story dormitory with a tag reading \"220\" on it."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- 1 needs to be found for the quest Chemical - Part 1\n- This is a required location for the quest Chemical - Part 2"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Drawers\n- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In a train car on the western side of the location\n\n- In the back of the not destroyed yellow truck next to warehouse #7.\n\n- On a wooden crate on the second floor of the warehouse directly next to the ZB-1011 bunker extraction.\n\n- On a tool trolley in the small building between the northern fuel silos next to the ZB-1011 bunker extraction."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor of the three-story dorms on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- ZB-014 key spawn location\n- Jacket\n- Sports bag\n- Loose loot (Roubles)"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Pack of Arseniy buckwheat x1; Pack of Arseniy buckwheat; +; Aquapeps water purification tablets x1; Aquapeps water purification tablets; +; Pile of meds x5; Pile of meds | → | Therapist; Therapist LL2 | → | Dorm room 220 key; Dorm room 220 key |"
+    }
+  ]
+}

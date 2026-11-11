@@ -1,0 +1,44 @@
+{
+  "title": "Building Foundations",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Building_Foundations",
+  "revisionId": 359133,
+  "lastEdited": "2026-09-13T20:11:00Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "BTR Driver",
+    "previous": "Swift Retribution, or, Inevitable Response",
+    "leads to": "Natural Exchange",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Building Foundations is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You know, you've been helping me out for a while now, and I haven't even brought you up to speed with this whole situation. So, I'm working with Skier now. I deliver his goods, and sometimes I'm involved in his operations. At first it was a nice lucrative gig, but now this asshole won't let me off the hook for even a second. He thinks I'm his personal fucking mule now! He seems to have found out somehow that I'm tired of all this, and now he's brought his punks to my base to teach me a lesson. I'm not gonna put up with this shit anymore. I'd leave him a long time ago, but I do need protection and guarantees, you know. And since you're in contact with other traders, you could put in a good word for me. Can you help a friend out?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Sell any 50 items to Ragman\n- Sell any 50 items to Prapor\n- Sell any 50 items to Peacekeeper"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +14,500 EXP\n- BTR Driver Rep +0.01\n- 126,000 Roubles\n- 1× Bottle of Fierce Hatchling moonshine\n\"Yeah, well, I was kinda expecting that. But the key is that we've made a start. Now I have a real chance of getting away from this shithead.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to sell any 50 items to Ragman, Prapor and Peacekeeper each, with the exception of ammunition and Balaclava (White).\n\nNote: Sometimes the sales count doesn't update right away. To force an update, you can ready up for a raid and immediately cancel it, or restart the game to refresh your profile."
+    }
+  ]
+}

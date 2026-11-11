@@ -1,0 +1,43 @@
+{
+  "title": "Aid Stations",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aid_Stations",
+  "revisionId": 361704,
+  "lastEdited": "2026-09-24T12:15:15Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "LL requirement": "2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Aid Stations is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon, young man. Tarkov has endured a humanitarian crisis for far too many years. I'm sure you understand that civilians need places where they can shelter from both Scavs and mercenaries. I've done everything I can to help them, but lately that has become increasingly difficult. Could you obtain the keys to several locations I have identified? My people will be able to establish safe havens there for those in need.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain 1 Dorm room 303 key\n- Obtain 1 ZB-014 key\n- Obtain 1 Military checkpoint key\n- Obtain 1 Gas station storage room key\n- Hand over 1 Dorm room 303 key\n- Hand over 1 ZB-014 key\n- Hand over 1 Customs military checkpoint key\n- Hand over 1 Gas station storage room key"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Therapist Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"Wonderful! Happy to work with you again, you have gained my trust once more.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Dorm room 303 key | 1 | Handover item | No |\n| ZB-014 key | 1 | Handover item | No |\n| Military checkpoint key | 1 | Handover item | No |\n| Gas station storage room key | 1 | Handover item | No |"
+    }
+  ]
+}

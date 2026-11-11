@@ -1,0 +1,55 @@
+{
+  "title": "RB-RLSA key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-RLSA_key",
+  "revisionId": 333387,
+  "lastEdited": "2026-02-02T15:14:24Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-RLSA",
+    "RB-RLSSA"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ede7b0c6d23e5473e6e8c66",
+    "ID": "rezbase_key_rls_stor1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-RLSA key (RB-RLSA) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base Radar Station document archives."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "White Queen building (dome) on Reserve. East end of the building on the 2nd floor."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Weapon mods, Ammunition)\n- Three Drawers\n- One Intelligence folder\n- Loose military tech items"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Unanswered Calls",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Unanswered_Calls",
+  "revisionId": 360512,
+  "lastEdited": "2026-09-17T22:04:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Ground Zero",
+    "given by": "Therapist",
+    "previous": "Accept Uninvited Guests - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Unanswered Calls is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Young man. I'm sure you have heard that a team of specialists from an unknown PMC has begun operating in Tarkov. According to my information, they aren't affiliated with any of the local factions, which makes them potentially useful. I would like to establish contact with them regarding a certain matter. I cannot disclose the details, and I won't ask you to negotiate. All I need is for you to deliver a letter containing my proposal. Leave the letter at the reception desk on the second floor of the TerraGroup headquarters. Try not to attract any attention. Under no circumstances should you use any signal flares or cross paths with Skier's driver! Your best option is to leave through the underground passage beneath the nearby high-rise or via the former Emercom checkpoint. And naturally, the contents of the letter are confidential. I will know if you try to open it.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash Therapist's letter at the reception desk on the second floor of the TerraGroup office on Ground Zero (in one raid)\n- Extract from the location through the Nakatani Basement Stairs or Emercom Checkpoint exfil (in one raid)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,000 EXP\n- 180,000 Roubles\n  - 189,000 Roubles with Intelligence Center Level 1\n  - 207,000 Roubles with Intelligence Center Level 2\n- 2× Grizzly medical kit\n- 2× CMS surgical kit\n\"You left the letter in the right place, correct? No one has contacted me yet... But that is no longer your concern. Here is your reward.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Therapist's message | 1 | Stashed item |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Therapist's message | 1 | Required | N/A | The letter is sent back through messages if you die with it. |\nIn this quest you first have to stash a letter behind the reception desk on the second floor of the TerraGroup main building on Ground Zero. Afterwards you have to extract through the \"Emercom Checkpoint\" or \"Nakatani Basement Stairs\" extraction. Both objectives have to be completed in the same raid."
+    }
+  ]
+}

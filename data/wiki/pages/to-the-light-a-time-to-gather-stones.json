@@ -1,0 +1,44 @@
+{
+  "title": "To the Light - A Time to Gather Stones",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_A_Time_to_Gather_Stones",
+  "revisionId": 360029,
+  "lastEdited": "2026-09-14T00:19:07Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "previous": "To the Light - A Time to Throw Stones",
+    "leads to": "To the Light - The Other Side",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "To the Light - A Time to Gather Stones is a Quest in Escape from Tarkov"
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I doubt Peacekeeper will ever dare go against Lightkeeper again after everything that's happened. But this isn't over yet. The operatives who kept information from Lightkeeper and secretly worked with Peacekeeper are still alive. And from what I understand, they don't even realize they've been compromised. For some reason, Lightkeeper doesn't want to hold a \"public execution\" to make an example of them and intimidate the rest of his operatives. Maybe he doesn't see the need, or maybe he's trying to avoid creating another conflict... Hard to say. But he's going to quietly eliminate the traitors he's already identified. He'll send them on a job where the fighters will supposedly die in the line of duty. The group will arrive at the Lab soon with a new assignment. You need to meet them there and deliver Lightkeeper's sentence to each of them. I'm not sure your skills and the element of surprise will be enough to take down an entire squad of fighters. So you'd better prepare seriously. And don't forget to bring their dogtags. I'll pass them on to Lightkeeper.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 3 found in raid PMC dogtags (Level 30 or higher)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +25,000 EXP\n- 3× Physical Bitcoin\n- 1× Weapon repair kit\n- 1× Body armor repair kit\n\"Excellent. I'll send the dogtags to Lightkeeper with the next shipment. I doubt this whole affair is doing much good for his plans, but it's a unique opportunity for us. And I'm already seeing the positive effects of the work we've done.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Dogtag | 3 | Handover item | Yes | Needs to be level 30 or higher |"
+    }
+  ]
+}

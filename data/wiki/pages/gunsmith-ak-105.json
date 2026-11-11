@@ -1,0 +1,59 @@
+{
+  "title": "Gunsmith - AK-105",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_AK-105",
+  "revisionId": 355240,
+  "lastEdited": "2026-08-19T17:13:17Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith AK-105"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith - AK-105 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I called her Lusya - the neural network, I mean. So, when I keep silent, it does well and even reminds me to get some sleep when necessary, but as soon as I start talking to myself, it attempts to distract me, putting on music or something like that. However, I trained it with movies and phrases from them. Apparently, such a reaction is presented to us in the movies as the most appropriate, but not for me. I'll have to think about what stimuli are the best to mimic real people, rather than society and its stereotypes. But I digress, assemble an AK-105 now, with a silencer and 60-round mag. As for parameters: sighting range over 800, ergonomics above 21, recoil sum less than 500, weight 4.8 kg or less. And compact, as always, 8 slots or so.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 20 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an AK-105 to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,400 EXP\n- Mechanic Rep +0.02\n- 5× Bundle of wires\n- 2× Metal spare parts\n- Unlocks purchase of Ammunition case at Mechanic LL2\n\"I think i figured how to train the network! Ah, yes, this AK will do, thank you. Leave it somewhere in the corner, I'll look into it later.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "AK-105 specifications:\n- 60 Durability\n- 500 or less recoil\n- 21 or more ergonomics\n- 800 or greater sighting range\n- 4.8 kg or less in weight\n- A silencer\n- AK-74 5.45x39 6L31 60-round magazine\nNote: Despite the quest specifying a 8 slot build, 10 slots are currently accepted."
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard AK-105 from Prapor LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AK-74 5.45x39 6L31 60-round magazine | PraporRef | LL2 (Barter) after completing The Punisher - Part 2; LL4LL3 |\n| SilencerCo Hybrid 46 Direct Thread Mount adapter | MechanicPeacekeeper | LL1 (Barter); LL2LL2 |\n| SilencerCo Hybrid 46 multi-caliber sound suppressor | PeacekeeperMechanic | LL2LL2 (Barter) |\n| AK AKademia Bastion dust cover | Skier | LL1 |\n| SIG Sauer ROMEO7 1x30 reflex sight (Prototype) | Skier | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

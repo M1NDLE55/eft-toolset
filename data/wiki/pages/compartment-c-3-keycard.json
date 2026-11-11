@@ -1,0 +1,56 @@
+{
+  "title": "Compartment C-3 keycard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Compartment_C-3_keycard",
+  "revisionId": 358455,
+  "lastEdited": "2026-09-10T21:28:58Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the laboratory on Icebreaker.",
+    "storage_wallet": "Yes",
+    "storage_keytool": "No",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "69bb3f7df94327bc0f0230c9",
+    "ID": "item_ice_card_lab"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Compartment C-3 keycard (C-3) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A Paradigm Shipping keycard marked Compartment-3. It likely opens one of the restricted compartments aboard the Boreas icebreaker."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the story chapter The Ticket"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "This keycard can only be obtained once while progressing through the story chapter Boreas."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the laboratory on level 1 of Icebreaker. Note: The door can't be opened when players without the required progress in the story chapter Boreas entered the raid."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- 1x Medbag\n- Loose loot (Medical supplies, Stimulants, Meds)\n- 4x LEDX Skin Transilluminator in the overseeing cabin\n- Boreas scientist audio tape in the overseeing cabin"
+    }
+  ]
+}

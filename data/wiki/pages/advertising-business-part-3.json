@@ -1,0 +1,45 @@
+{
+  "title": "Advertising Business - Part 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Advertising_Business_-_Part_3",
+  "revisionId": 359057,
+  "lastEdited": "2026-09-13T20:09:43Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "All for the Show - Soldier",
+    "leads to": "Advertising Business - Part 4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Advertising Business - Part 3 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Ragman still can't get enough of those sales after you've been running around the Arena in his gear. He even wanted to reach out to you directly, but that's not how business is done. That's between me and him anyway. Your part's simple: just wear the shit we tell you to wear. Show up in the winners' circle in a TV-110. That's all there is to it. Ragman will pay, don't worry.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win 6 matches while wearing a TV-110 plate carrier"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +7,500 EXP\n- Ref Rep +0.01\n- 63,000 Roubles\n- 28 GP coins"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Requirement | Notes |\n| WARTECH TV-110 plate carrier (Coyote) | Required | Has to be worn while winning |"
+    }
+  ]
+}

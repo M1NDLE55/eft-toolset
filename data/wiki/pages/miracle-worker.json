@@ -1,0 +1,38 @@
+{
+  "title": "Miracle Worker",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Miracle_Worker",
+  "revisionId": 362071,
+  "lastEdited": "2026-09-24T19:22:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Double Tap"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Miracle Worker is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come on over, you're right on time. I've got a little bet going with one of the regular spectators, and you're the subject. He says you should've been taken out ages ago, statistically speaking, you know what I mean? But in my experience, luck and skill can work some pretty serious miracles. This spectator of mine put a lot of money against you and got some of his friends in on it. But I believe in you, so I put down a little bet at some nice odds that you'd beat the statistics. Time to show these mathematicians how things really work in the real world. Don't let me down.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 25 enemies in BlastGang mode\n- Win 3 matches in BlastGang mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +20,000 EXP\n- 1,000,000 Roubles\n- 100 GP coins\n- 1× Panacea crate\n- 1× Morbus crate\n- 2 Battle Points"
+    }
+  ]
+}

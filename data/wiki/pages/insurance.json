@@ -1,0 +1,59 @@
+{
+  "title": "Insurance",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Insurance",
+  "revisionId": 353060,
+  "lastEdited": "2026-08-09T23:32:31Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Insurance allows you to retrieve any items that have not been extracted from a raid, with a delay.\n\nYou can only insure gear items (like weapons and armors). Items such as containers (a Key tool, a Documents case or an Item case) and intel items (paper maps) and consumable items (Food, Meds or Ammo) cannot be insured. However, there are exceptions to the insurance system which should not be ignored.\n\nSecure containers, the Compass, Melee weapons (Except the Cultist knife), and Armbands cannot be insured nor be looted from your body upon death as long as they are equipped in their appropriate slot, and do not need to be insured.\n\nInsured items have a thick yellow outline around the stash space they occupy."
+    },
+    {
+      "heading": "Insurers",
+      "level": 2,
+      "text": "Seasonal change: the insurance service is not offered by any trader.\n\nExcept for raids in The Lab, The Labyrinth and on Icebreaker, make sure to always insure the gear you go out with using the insurance screen, just before entering the lobby. You can click on the \"Insure All\" button to make sure that you select all of your belongings. To confirm, press the \"Insure\" button just above \"Ready\".\nYou can choose to insure with Prapor, Therapist, or Jaeger:\n- Prapor returns insured items after 12–20 hours. You have 7 days (168h) to collect the returned items.\n- Therapist returns insured items after 6–10 hours. You have 10 days (240h) to collect the returned items.\n- Jaeger returns insured items after 1–2 hours. You have 1 day (24h) to collect the returned items.\n\nHigher loyalty levels with the respective traders offer a discount on the fee.\n\nIt is also possible to insure items directly in your stash by simply right clicking on the item, and then selecting \"Insure\". You can then select which insurer to use. It should be noted that if you insure a container, everything inside that container will also be insured as well. This can be used as a quick method of insuring multiple weapons, mods, or other items all at once. Any items insured using this method will show up in the pre-raid insurance screen."
+    },
+    {
+      "heading": "Insurance modifiers",
+      "level": 3,
+      "text": "- Upgrading the Hideout module \"Intelligence Center\" to level 2 reduces the item return time by 20% (30% with elite Hideout Management skill)\n- Buyers of the \"Edge of Darkness\" edition of the game have a 30% reduced item return time\n- Owning the \"The Unheard\" edition of the game doubles the allowed time to collect the returned items"
+    },
+    {
+      "heading": "Strategy",
+      "level": 2,
+      "text": "Use the insurance system, even at a low level: There's always the chance that your killer won't loot you, or leave it behind as they find better gear. If an AI (Scavs, Scav Raiders or Bosses) kills you, there's a high chance you'll get everything back.\n\nYour insurer will contact you a few hours/days later to let you know what came back. You can then claim the items from the messenger tab. If you do not claim them in the available collect time, the insured items will be lost.\n\nA side-effect of insurance is the ability to differentiate your items from looted items. This can be useful when looting a body with the same magazines as yours, but different ammunition that you may not wish to use.\n\nDiscarding insured items into an obscure or hidden location can help prevent them from being taken. This makes it more difficult for other players to loot since they will be a lot harder to find if they're not on your corpse. It's good to do this when guns or magazines you have insured are out of ammo."
+    },
+    {
+      "heading": "Exceptions",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "MIA",
+      "level": 3,
+      "text": "Ending a raid with the Missing in Action status will not bring back insured equipped items.\nThe Missing in Action status can be achieved if:\n\n- You do not extract before the end of the raid\n- You die from dehydration\n\nIf you do not think you are going to make it to the extraction point in time, you should throw away your insured items."
+    },
+    {
+      "heading": "Non-insured items inside insured containers",
+      "level": 3,
+      "text": "- If you insure a magazine with ammunition inside, you will only get the magazine back. In the same fashion, an insured backpack or chest rig with medical items inside will not yield the meds back.\n- If an insured container is lost, and contains an uninsured item (for example, a backpack containing a weapon you looted), the uninsured item will not be brought back with the container."
+    },
+    {
+      "heading": "Locations",
+      "level": 3,
+      "text": "- Insurers will not bring back items lost in The Lab, The Labyrinth and on Icebreaker."
+    },
+    {
+      "heading": "Uninsurable Items",
+      "level": 3,
+      "text": "- Secure containers\n- Keys\n- Melee weapons\n- Armbands\n- Containers\n- Thermal vision devices\n- Thermal vision sights\n\n- Consumable items:\n  - Provisions\n  - Meds\n  - Ammunition\n  - Grenades"
+    }
+  ]
+}

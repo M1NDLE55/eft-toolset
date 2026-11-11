@@ -1,0 +1,53 @@
+{
+  "title": "RB-RH key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-RH_key",
+  "revisionId": 319116,
+  "lastEdited": "2025-10-08T20:16:53Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-RH"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks Airspace Control Center security room on Reserve.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5da5cdcd86f774529238fb9b",
+    "ID": "rezbase key rls ohr"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-RH key (RB-RH) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base Airspace Control Center security room."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The door is located in the White King building, third floor.\n\nPath 1: Run up the stairs after passing the grate door, once you reach the 3rd floor, u-turn right and head down the hallway. finally turn right.\n\nPath 2: Up the flight of metal stairs if entering from the White King server room."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Weapon rack spawn\n- Weapon spawn on table.\n- 2x Drawers"
+    }
+  ]
+}

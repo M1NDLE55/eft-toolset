@@ -1,0 +1,51 @@
+{
+  "title": "Heavy Vests",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Heavy_Vests",
+  "revisionId": 362567,
+  "lastEdited": "2026-09-29T19:29:07Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Heavy Vests is a Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Heavy body armor wearing skill reduces amount of received penetration health damage, explosive damage to health and armor and improves mobility."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Armor materials represent their type of armor, making Armor Steel, Ceramic, Combined Materials and Titan heavy armor type. To see which type the armor is, hover over any insert part and read the material in its name."
+    },
+    {
+      "heading": "Enhancements",
+      "level": 2,
+      "text": "After reaching level 3 in this skill, you have a chance to add an armor enhancement (on each part individually) when repairing heavy armor. The enhancement stays on an armor part until it loses 25% of its max default durability or until it gets repaired once again. Items with enhancements get an orange icon background."
+    },
+    {
+      "heading": "Enhancement types",
+      "level": 3,
+      "text": "| Skill level | Amount | Type |\n| 3-8 | 3% | Reduces incoming damage (common) |\n| 9-14 | 4% |\n| 15-20 | 5% |\n| 21-26 | 6% |\n| 27-31 | 7% |\n| 32-37 | 8% |\n| 38-42 | 9% |\n| 43-47 | 10% |\n| 48-50 | 11% |\n| 51 | 11%; 20% | Reduces incoming damage (common); Reduces incoming damage (rare) |"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Reduces movement speed penalty while wearing heavy armor (0.5% per level → -25% at Elite Level)\n- Reduces blunt damage to body parts covered by heavy armor (0.4% per level → -20% at Elite Level)\n- Reduces wear amount when using repair kits (1% per level → -50% at Elite Level)\n- Elite level: Chance to deflect a bullet from heavy armor\n- Elite level: Chance to not apply wear during repair (50%)"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Repairing heavy armor type (Armor Steel, Ceramic, Combined Materials and Titan material) items with a Body armor repair kit\n  - Every 10 armor points repaired on heavy armor type items gives 0.4 skill points\n- Receiving (durability) damage on equipped heavy armor type items\n  - Every 1 armor durability point grants 0.01 skill points, the 129% bonus ends after receiving 1 skill point and the diminishing returns start at 2 skill points gained\n- Completing the quest Safety Guarantee\n- Completing the quest Profitable Venture"
+    }
+  ]
+}

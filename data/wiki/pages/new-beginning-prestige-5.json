@@ -1,0 +1,60 @@
+{
+  "title": "New Beginning (Prestige 5)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/New_Beginning_(Prestige_5)",
+  "revisionId": 359498,
+  "lastEdited": "2026-09-13T20:17:12Z",
+  "kind": "quest",
+  "categories": [
+    "Quests",
+    "Table Progress Tracking"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Lab, Streets of Tarkov, Interchange, Customs",
+    "given by": "Ragman",
+    "related2": "New Beginning (Prestige 6)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "New Beginning (Prestige 5) is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Heya, brother! You probably already know what this is about. Yes, those same lists you really can't afford to drop out of. So what does that mean? That's right, we keep working and showing just how good we are. The tasks are the same, just with a few small changes. Yup, it gets harder each time, but isn't that how life always is? Alright, get to work.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 47 to start this quest.\n- Must have Prestige level 4"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 45 PMC operatives\n- Eliminate 100 Rogues\n- Eliminate any boss\n- Survive and extract from The Lab\n- Use the transit from Streets of Tarkov to Interchange\n- Use the transit from Interchange to Customs\n- Survive and extract from Customs\n- Hand over the found in raid item: BEAR operative figurine\n- Hand over the found in raid item: Politician Mutkevich figurine\n- Hand over the found in raid item: Killa figurine\n- Hand over the found in raid item: Reshala figurine\n- Hand over the found in raid item: Ryzhy figurine\n- Hand over the found in raid item: Scav figurine\n- Hand over the found in raid item: Tagilla figurine\n- Hand over the found in raid item: USEC operative figurine\n- Hand over the found in raid item: Cultist figurine\n- Hand over the found in raid item: Den figurine"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,000 EXP\n- Ragman Rep +0.1\n- 3,000,000 Roubles\n  - 3,150,000 Roubles with Intelligence Center Level 1\n  - 3,450,000 Roubles with Intelligence Center Level 2\n- 3× Physical Bitcoin\n\"I knew you'd handle it! No wonder you're not dragging along at the very bottom of those lists.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| BEAR operative figurine | 1 | Handover item | Yes |\n| Politician Mutkevich figurine | 1 | Handover item | Yes |\n| Killa figurine | 1 | Handover item | Yes |\n| Reshala figurine | 1 | Handover item | Yes |\n| Ryzhy figurine | 1 | Handover item | Yes |\n| Scav figurine | 1 | Handover item | Yes |\n| Tagilla figurine | 1 | Handover item | Yes |\n| USEC operative figurine | 1 | Handover item | Yes |\n| Cultist figurine | 1 | Handover item | Yes |\n| Den figurine | 1 | Handover item | Yes |"
+    },
+    {
+      "heading": "Streets of Tarkov to Interchange",
+      "level": 3,
+      "text": "Southwest of the Concordia apartment complex."
+    },
+    {
+      "heading": "Interchange to Customs",
+      "level": 3,
+      "text": "At the southern end of the highway."
+    }
+  ]
+}

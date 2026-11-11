@@ -1,0 +1,63 @@
+{
+  "title": "Weapon crate (Rare)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_crate_(Rare)",
+  "revisionId": 356088,
+  "lastEdited": "2026-08-25T16:21:28Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [
+    "Locked weapon crate (Rare)",
+    "Unlocked weapon crate (Rare)"
+  ],
+  "infobox": {
+    "type": "Reward Loot Container",
+    "weight": "10 kg",
+    "grid": "5x2",
+    "node": "66572b3f6a723f7f005a066c 665732e7ac60f009f270d1ef",
+    "ID": "Arena_weaponcrate_blue_closed Arena_weaponcrate_blue_open"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Weapon crate (Rare) (Weapons (Rare)) is a Reward Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Before Unlocking",
+      "level": 3,
+      "text": "A trophy for participating in Arena battles. Contains ammunition, weapon mods, or even weapons if you're lucky. Everything you need to make your enemies respect you. But first, you need to find a way to open this box."
+    },
+    {
+      "heading": "After Unlocking",
+      "level": 3,
+      "text": "A trophy for participating in Arena battles. Contains ammunition, weapon mods, or even weapons if you're lucky. Everything you need to make your enemies respect you. The lock has been crudely broken, which means there are no more obstacles between you and the contents of the box."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n  - Must be un-locked at the Workbench level 1 before it can be opened\n- Cannot be listed for sale on the flea market\n- Destroyed after unpacking (Right-click \"unpack\")\n- Only the locked version can be stashed in Lucky Scav Junk box"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Possible reward from Ref's daily and weekly quests for Arena"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| Hand drill x1; Hand drill; +; Weapon crate (Rare) x1; Locked Weapon crate (Rare) | → | Workbench level 1; 1 minute | → | Weapon crate (Rare) x1; Unlocked Weapon crate (Rare) |"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "The crate can contain various weapons, grenades, weapon mods, ammunition and night vision devices."
+    }
+  ]
+}

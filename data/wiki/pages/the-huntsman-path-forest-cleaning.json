@@ -1,0 +1,49 @@
+{
+  "title": "The Huntsman Path - Forest Cleaning",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Forest_Cleaning",
+  "revisionId": 359759,
+  "lastEdited": "2026-09-13T20:21:37Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The Huntsman Path - Woods Cleaning"
+  ],
+  "infobox": {
+    "given by": "Jaeger",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Forest Cleaning is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings. For years I've been hunting in these woods, and among other things, I've learned that animals are way more humane than humankind itself. When shit hit the fan, all that's left of those remains of humane in people just vanished. There are so many monsters out there, that I can't even imagine. Those are no longer people, nor they are animals, they are something way worse... We can't let them destroy our city, we have to sort this out. Deal with this, hunter.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Obtain level 3 loyalty with Jaeger"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 50 Scavs all over the Tarkov territory"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Jaeger Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Shustrilo sealing foam\n\"They made their choice when they stepped on the wrong path. You have done the right thing, hunter, thank you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Kill 50 Scavs on any map."
+    }
+  ]
+}

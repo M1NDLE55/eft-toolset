@@ -1,0 +1,55 @@
+{
+  "title": "Hot Wheels",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hot_Wheels",
+  "revisionId": 359390,
+  "lastEdited": "2026-09-13T20:15:21Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "BTR Driver",
+    "previous": "Shipping Delay - Part 1",
+    "leads to": "Swift Retribution, or, Upon failure:, Hot Wheels - Let's Try Again (+24hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hot Wheels is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So I went to the depot... Those assholes ruined the place and took my spare parts. I mean, I can understand tools or equipment. But why the fuck would someone take the fucking wheels? You're not gonna build a second BTR like that. Anyway, I need a spare wheel, and the sooner the better. You gotta find where the proper wheels could be laying around. I don't know where to look exactly, but you're not a moron, you'll figure it out. You can start with the customs area, but I haven't been there for ages, so I can't promise they'll be there.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark the spare BTR wheels with an MS2000 Marker\n  - (Optional) Complete the main objective as soon as possible"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +24,300 EXP\n- BTR Driver Rep +0.03\n- 116,000 Roubles\n- 1× Military power filter\n\"Awesome! These will do, and you also did it quick. I commend that! Changing the wheels will take some time though, it's not a Lada after all.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"This is a joke, right? These are fucking truck wheels, you idiot. I'm driving a BTR. B-T-R! Go mark fucking bicycle wheels next while you're at it.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed on the wheels. When placed, the item is removed from the players' inventory. |\nIn this quest you have to find BTR wheels and mark them with a MS2000 Marker. The wheels can be found in the bigger of the two garage buildings at the repair center (white knight) on Reserve. Marking any truck wheels on Customs will cause failure of this quest.\n\nDespite the objective suggesting it, there is no time limit for this quest."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

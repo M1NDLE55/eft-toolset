@@ -1,0 +1,45 @@
+{
+  "title": "Swift Retribution",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Swift_Retribution",
+  "revisionId": 360928,
+  "lastEdited": "2026-09-20T17:09:50Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "BTR Driver",
+    "previous": "Hot Wheels",
+    "leads to": "Building Foundations, The Higher They Fly, Simple Side Job",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Swift Retribution is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So? Feel how smooth it runs now? You did me a solid with the wheels. Now we can start thinking about the fuckers who robbed my base. They can't have gotten far, they're probably still in the nature reserve. Go and punish those fucks, will you?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 Scavs on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +16,000 EXP\n- BTR Driver Rep +0.03\n- 85,000 Roubles\n- 1× Old house room key\n- 1× Old house toilet key\n\"Nice work! Now the Scavs will think twice before messing with me.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to eliminate 10 Scavs on Woods."
+    }
+  ]
+}

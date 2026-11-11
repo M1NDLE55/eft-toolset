@@ -1,0 +1,51 @@
+{
+  "title": "Stair landing key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stair_landing_key",
+  "revisionId": 283886,
+  "lastEdited": "2024-07-29T16:16:21Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a door to the eastern staircase on the second floor of the Chekannaya 15 apartment building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39fd1c9b3aa4b61683efb",
+    "ID": "city_key19"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Stair landing key (Stairs) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the one of the stair landings of the Chekannaya Street 15 building."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the eastern staircase on the second floor of the Chekannaya 15 apartment building at Streets of Tarkov. Only accessible via the western staircase from the third floor through a hole in the floor of cell #5. The debris in the second floor hallway can only be passed by proning."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "No loot, but the ability to jump onto the stair landing that connects the second with the first floor, or straight down to the first floor."
+    }
+  ]
+}

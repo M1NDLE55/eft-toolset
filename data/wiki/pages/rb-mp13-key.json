@@ -1,0 +1,52 @@
+{
+  "title": "RB-MP13 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-MP13_key",
+  "revisionId": 316205,
+  "lastEdited": "2025-07-18T21:37:06Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-MP13"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80cbd886f77470855c26c2",
+    "ID": "rezbase_key_ptor2_craft3"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-MP13 key (RB-MP13) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the Federal State Reserve Agency base Service and Repair Center workshop rooms."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "First floor of the eastern repair point building on Reserve. The building is labeled with a white chess knight on it. (Highlighted in green)"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Tools)\n- One Drawer\n- Possible spawn for 6-STEN-140-M military battery\n- Intelligence folder spawn on the chair beside the desk"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "The Huntsman Path - Angry Watchman",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Angry_Watchman",
+  "revisionId": 359752,
+  "lastEdited": "2026-09-13T20:21:30Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Jaeger",
+    "previous": "The Huntsman Path - Forest Cleaning",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Angry Watchman is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon. I have a task for you. Before all this, customs and factory personnel lived in the dormitories on Customs, but now there are only looters, the Scavs are one thing, these fools have their brains completely beaten off. But the mercenaries often go there too, and this is not good at all. They just rob the place, I hate those damn looters! Whatever times are, you must always remain human. Clear the dorms area, let the place breathe in peace again.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 PMCs in the Dorms area on Customs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Jaeger Rep +0.02\n- 75,000 Roubles\n  - 78,750 Roubles with Intelligence Center Level 1\n  - 86,250 Roubles with Intelligence Center Level 2\n- 2× Intelligence folder\n- 1× Military flash drive\n\"I've heard what you did. Looks like it's calmer out there now, with way fewer looters. You have my gratitude.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

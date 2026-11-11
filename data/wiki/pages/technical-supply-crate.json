@@ -1,0 +1,38 @@
+{
+  "title": "Technical supply crate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Technical_supply_crate",
+  "revisionId": 358890,
+  "lastEdited": "2026-09-11T22:09:49Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "5d6fd45b86f774317075ed43",
+    "ID": "tools&other"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Technical supply crate is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "An 8x5 grid technical supply crate that contains Industrial and Electronic items."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The padlocked version of this crate is never empty. The lock can be shot off."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Type |\n| Building materials |\n| Building materials |\n| Building materials |\n| Building materials |\n| Flammable materials |\n| Building materials |\n| Energy elements |\n| Flammable materials |\n| Building materials |\n| Building materials |\n| Electronics |\n| Flammable materials |\n| Energy elements |\n| Electronics |\n| Flammable materials |\n| Electronics |\n| Building materials |\n| Building materials |\n| Electronics |\n| Electronics |\n| Building materials |\n| Building materials |\n| Flammable materials |\n| Electronics |\n| Energy elements |\n| Energy elements |\n| Electronics |\n| Electronics |\n| Electronics |\n| Tools |\n| Others |\n| Energy elements |\n| Building materials |\n| Electronics |\n| Flammable materials |\n| Flammable materials |\n| Tools |\n| Flammable materials |\n| Energy elements |\n| Others |\n| Electronics |\n| Electronics |\n| Electronics |\n| Building materials |\n| Flammable materials |\n| Others |\n| Others |\n| Others |\n| Electronics |\n| Others |\n| Tools |\n| Tools |\n| Building materials |\n| Flammable materials |\n| Tools |\n| Electronics |\n| Info items |\n| Electronics |\n| Others |\n| Energy elements |\n| Flammable materials |\n| Flammable materials |\n| Tools |\n| Electronics |\n| Tools |\n| Tools |\n| Building materials |\n| Flammable materials |\n| Tools |\n| Building materials |\n| Tools |\n| Building materials |\n| Tools |\n| Others |\n| Flammable materials |\n| Tools |\n| Electronics |\n| Energy elements |\n| Tools |\n| Flammable materials |\n| Tools |\n| Tools |\n| Tools |\n| Tools |\n| Tools |\n| Valuables |\n| Electronics |"
+    }
+  ]
+}

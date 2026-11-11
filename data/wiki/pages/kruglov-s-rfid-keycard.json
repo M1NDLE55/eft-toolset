@@ -1,0 +1,61 @@
+{
+  "title": "Kruglov's RFID keycard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kruglov's_RFID_keycard",
+  "revisionId": 345796,
+  "lastEdited": "2026-05-31T15:39:10Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "This keycard does not open any lock.",
+    "storage_wallet": "No",
+    "storage_keytool": "No",
+    "storage_doccase": "No",
+    "storage_sicc": "No",
+    "storage_securecont": "No",
+    "node": "67bdea8667098e658f064695",
+    "ID": "q_card_fid_krug"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Kruglov's RFID keycard (Kruglov) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A personalized RFID card with a strict design. Grants access to the TerraGroup evacuation point reserved for trusted personnel."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This item is not lootable from players and can only be placed in a special item slot."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- Acquired by unpacking the Armored case after progressing through the story chapter The Ticket."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "None."
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| RFID keycard encryption device x1; RFID keycard encryption device; +; TerraGroup Labs master keycard x1; TerraGroup Labs master keycard; +; Blank RFID keycard x1; Blank RFID keycard; +; Kruglov's RFID keycard x1; Kruglov's RFID keycard | → | Intelligence Center level 1; 23 h 30 minAfter progressing through; the story chapter The Ticket; required during the entire process | → | Activated Kruglov's RFID keycard x1; Activated Kruglov's RFID keycard |"
+    }
+  ]
+}

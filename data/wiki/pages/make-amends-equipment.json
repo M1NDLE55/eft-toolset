@@ -1,0 +1,44 @@
+{
+  "title": "Make Amends - Equipment",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Make_Amends_-_Equipment",
+  "revisionId": 359466,
+  "lastEdited": "2026-09-13T20:16:39Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "previous": "Make Amends - Buyout",
+    "leads to": "Make Amends",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Make Amends - Equipment is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. Listen, mercenary, I've made arrangements with Lightkeeper for a test delivery of the supplies he needs from the list. I think I might be able to get close to him. That's what I wanted to talk to you about. There's a rumor going around that you two have trust issues. So let's help each other. You find me the supplies I need, and I'll handle the transportation. I'll put in a good word for you. Okay, he needs... Whoa. He needs sniper rifles, and lots of them.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the 4 found in raid SVDS sniper rifles"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.01\n\"Are the weapons ready? Great, thanks for your help!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| SVDS 7.62x54R sniper rifle | 4 | Handover item | Yes | Functional state required |"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Weapon safe key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_safe_key",
+  "revisionId": 333756,
+  "lastEdited": "2026-02-06T22:19:06Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "WSafe"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "This key does not currently open any lock.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "59148f8286f7741b951ea113",
+    "id": "gunsafe"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Weapon safe key (WSafe) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to some weapon safe."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This key does currently not open any lock."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "None."
+    }
+  ]
+}

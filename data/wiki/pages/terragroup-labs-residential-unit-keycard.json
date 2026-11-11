@@ -1,0 +1,138 @@
+{
+  "title": "TerraGroup Labs residential unit keycard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_residential_unit_keycard",
+  "revisionId": 352512,
+  "lastEdited": "2026-08-09T17:11:20Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [
+    "Orange keycard"
+  ],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the residential unit no. 7 inside the containment block in The Lab.",
+    "storage_wallet": "Yes",
+    "storage_keytool": "No",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "6711039f9e648049e50b3307",
+    "ID": "item_keycard_opara_room_white"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "TerraGroup Labs residential unit keycard (Res. unit) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A keycard to the residential unit in the containment block of TerraGroup Labs."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In Kruglov's office (R22) and the safe inside of it\n- In different locations inside the containment block on the first level. A single keycard is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "First spawn",
+      "level": 5,
+      "text": "On the desk in the security room (labeled 1) to the right after entering the block."
+    },
+    {
+      "heading": "Second spawn",
+      "level": 5,
+      "text": "On a red chair opposite the residential unit no. 7."
+    },
+    {
+      "heading": "Third spawn",
+      "level": 5,
+      "text": "On the floor next to a hazmat suit in front of the locked laboratory area."
+    },
+    {
+      "heading": "Locked laboratory area",
+      "level": 3,
+      "text": "To access this area, you need to open the locked door by turning on the power with the button located in the electrical operation room next to it."
+    },
+    {
+      "heading": "Computer room",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Fourth spawn",
+      "level": 5,
+      "text": "In the cup on the desk to the left after entering."
+    },
+    {
+      "heading": "Fifth spawn",
+      "level": 5,
+      "text": "Between the desk calendar on the desk to the right after entering."
+    },
+    {
+      "heading": "Left side glass laboratory",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Sixth spawn",
+      "level": 5,
+      "text": "On the single desk to the right after entering."
+    },
+    {
+      "heading": "Seventh spawn",
+      "level": 5,
+      "text": "In a blue device on the middle desks."
+    },
+    {
+      "heading": "Eighth spawn",
+      "level": 5,
+      "text": "On the far mobile pedestal opposite the entrance, below the middle desks."
+    },
+    {
+      "heading": "Hallway",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Ninth spawn",
+      "level": 5,
+      "text": "On a cable box at the end of the hallway between the left and back glass laboratories."
+    },
+    {
+      "heading": "Back glass laboratory",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Tenth spawn",
+      "level": 5,
+      "text": "On the left side desks."
+    },
+    {
+      "heading": "Eleventh spawn",
+      "level": 5,
+      "text": "At the whiteboard in the far right corner, on the marker tray."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Residential unit no. 7 inside the containment block on the first level in The Lab."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables)\n- Weapon spawns under the bed on the left\n- Intelligence folder spawns\n- TerraGroup \"Blue Folders\" materials spawns"
+    }
+  ]
+}

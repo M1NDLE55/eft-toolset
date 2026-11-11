@@ -1,0 +1,51 @@
+{
+  "title": "Metabolism",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Metabolism",
+  "revisionId": 362573,
+  "lastEdited": "2026-09-29T19:33:11Z",
+  "kind": "skill",
+  "categories": [
+    "Physical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Physical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Metabolism is a Physical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Healthy metabolism improves and extends the effects of eating and drinking, and sustains the physical skills longer."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- At Elite level, stamina regeneration is still affected by low energy and hydration levels."
+    },
+    {
+      "heading": "Hideout",
+      "level": 2,
+      "text": "- Level 3 of this skill is needed for the nutrition unit level 3"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases food and drink positive effects (1% per level → +50% at Elite Level)\n- Reduces negative effect time of stimulants, food, water (1% per level → -50% at Elite Level)\n- Elite level: You don't receive damage from exhaustion and dehydration"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Replenishing energy and hydration through provisions.\n  - The amount of energy or hydration restored determines the number of skill points gained, not the act of consuming a provision.\n  - Points are only granted when consuming provisions in-raid. Instead of consuming provisions in your stash, consume them at the beginning of each raid.\n  - There is a display bug that shows points gain in stash.\n- Completing the quest Never Too Late To Learn\n- Completing the quest A Life Lesson"
+    },
+    {
+      "heading": "Leveling Guide",
+      "level": 2,
+      "text": "Following this guide will result in Max metabolism between 200-500 raids. It will likely be the first skill that you max out.\n- As mentioned earlier, always consume Provisions in raid.\n- Constantly apply energy or hydration-draining painkillers throughout a raid, then consume provisions before extracting.\n  - Ibuprofen painkillers and Golden Star balm are ideal for this because they have many uses. Additionally, if you have Medstation level 3 unlocked in the Hideout, you can craft these painkillers into Propital and sell the Propital on the Flea Market, effectively making this process free.\n  - This has the added side effect of allowing you to run if something shoots out your legs, increasing your survivability.\n- When you cannot loot provisions due to lack of space, consume them for the skill points. Remember to consume the food first because most food drains hydration points.\n- Eat a hydration-draining food like Can of condensed milk, then drink a water bottle at the start of each raid.\n  - This is only recommended for short raids. For longer raids, it is likely a waste of money if you employ the above methods."
+    }
+  ]
+}

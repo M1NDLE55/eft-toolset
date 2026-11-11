@@ -1,0 +1,66 @@
+{
+  "title": "Relaxation room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Relaxation_room_key",
+  "revisionId": 352247,
+  "lastEdited": "2026-08-07T21:03:05Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the \"Hive\" hookah lounge in the Malevicha street no. 5 building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "6582dbf0b8d7830efc45016f",
+    "ID": "city14_key2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Relaxation room key (Relax) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the relaxation room inside one of the city offices."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest The Secret to Productivity"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "In different locations inside the Zmeisky 6 building at Streets of Tarkov. A single key is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the \"Hive\" hookah lounge in the Malevicha street no. 5 building at Streets of Tarkov"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Drinks)\n- Multiple Sports bags\n- Possible LBT-6094A Slick Plate Carrier (Black) on the mannequin\n- Possible LBT-6094A Slick Plate Carrier (Olive Drab) on the mannequin\n- Possible LBT-6094A Slick Plate Carrier (Coyote Tan) on the mannequin\n- Possible HighCom Trooper TFO body armor (MultiCam) on the mannequin\n- Possible BNTI Zhuk body armor (EMR) on the mannequin\n- Possible Interceptor OTV body armor (UCP) on the mannequin"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| Relaxation room key x1; Relaxation room key | → | Cultist Circle; Unique Sacrifice; 1 h 6 min | → | Bottle of Fierce Hatchling moonshine x1; Bottle of Fierce Hatchling moonshine |"
+    }
+  ]
+}

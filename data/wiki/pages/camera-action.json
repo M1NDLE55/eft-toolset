@@ -1,0 +1,54 @@
+{
+  "title": "Camera, Action!",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Camera%2C_Action!",
+  "revisionId": 359139,
+  "lastEdited": "2026-09-13T20:11:06Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "previous": "Serious Allegations",
+    "leads to": "Proper Comeback",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Camera, Action! is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello there. I know some people, a documentary crew. They want to make a movie about Tarkov. They're risk-takers, but I can't change their minds. So I figured I'd better help them get it done quickly and stay alive. Equipment for them was also dropped from the airplane you called in, but the hardware is fragile and was partially damaged during the landing. Can you help me find replacement parts?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only available to buyers of the \"Edge of Darkness\" edition of the game."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the found in raid item: SSD drive\n- Hand over the found in raid item: USB Adapter\n- Hand over the found in raid item: Portable Powerbank\n- Hand over the found in raid item: Rechargeable battery\n- Hand over the found in raid item: PC CPU\n- Hand over the found in raid item: Electronic components\n- Hand over the found in raid item: Bundle of wires\n- Hand over the found in raid item: Capacitors\n- Hand over the found in raid item: NIXXOR lens\n- Hand over the found in raid item: RAM stick\n- Hand over the found in raid item: Working LCD\n- Hand over the found in raid item: Light bulb"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +32,000 EXP\n- Mechanic Rep +0.02\n- 205,000 Roubles\n  - 215,250 Roubles with Intelligence Center Level 1\n  - 235,750 Roubles with Intelligence Center Level 2\n- 3× TerraGroup Labs access keycard\n\"Great, thanks for your help! The cameramen said they've already come up with a title for the movie — \"Raid\". Sounds good, don't you think?\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| SSD drive | 1 | Handover item | Yes |\n| USB Adapter | 1 | Handover item | Yes |\n| Portable Powerbank | 1 | Handover item | Yes |\n| Rechargeable battery | 1 | Handover item | Yes |\n| PC CPU | 1 | Handover item | Yes |\n| Electronic components | 1 | Handover item | Yes |\n| Bundle of wires | 1 | Handover item | Yes |\n| Capacitors | 1 | Handover item | Yes |\n| NIXXOR lens | 1 | Handover item | Yes |\n| RAM stick | 1 | Handover item | Yes |\n| Working LCD | 1 | Handover item | Yes |\n| Light bulb | 1 | Handover item | Yes |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The quest dialogue is referencing the \"Raid\" movie, which was created by Battlestate Games and can be watched for free on YouTube."
+    }
+  ]
+}

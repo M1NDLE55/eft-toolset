@@ -1,0 +1,47 @@
+{
+  "title": "Compensation for Damage - Trust",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Compensation_for_Damage_-_Trust",
+  "revisionId": 359189,
+  "lastEdited": "2026-09-13T20:11:57Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Compensation for Damage - Trust is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello there, mercenary. You really messed up, huh? You know what people are saying about you? you are unrealiable and not to be trusted. Simply saying, you're an idiot who shoots without thinking at everything that moves. Well, we all can't be saints, right? I'm the man who can improve your reputation. You just have to show that you wouldn't mind helping Scavs. Eliminate several PMC groups and bring me their dogtags. After that, I'll start new rumors about you, something more interesting.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Scav karma of -1"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the 5 found in raid BEAR PMC dogtags\n- Hand over the 5 found in raid USEC PMC dogtags"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Fence Rep +1\n\"Welcome back, merc. Hand over the dogtags, I'll pass them to where they need to be.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| Dogtag | BEAR Dogtag | 5 | Handover item | Yes |\n| Dogtag | USEC Dogtag | 5 | Handover item | Yes |"
+    }
+  ]
+}

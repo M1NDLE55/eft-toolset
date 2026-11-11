@@ -1,0 +1,62 @@
+{
+  "title": "Health Resort west wing room 218 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_west_wing_room_218_key",
+  "revisionId": 358649,
+  "lastEdited": "2026-09-10T22:46:23Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽5,780",
+    "usage": "Unlocks room 218 of the West wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a13eebd86f7746fd639aa93",
+    "ID": "Санаторий 218"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort west wing room 218 key (W218 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium west wing room 218."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Connected to rooms 221 and 222 through the balconies."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- Spawns in a locker, in the toilet on the second floor of admin building in the resort"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor, room 218 of the West Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room 218:\n  - Red keycard spawn location\n  - 2× weapon cabinets\n  - 2× Wooden crate\n  - 1× weapon spawn in bathroom (RSASS)\n  - Loose loot (Currency, Provisions, )\n- Room 221:\n  - 1× Weapon box (6x4)\n  - 1× weapon spawn on the balcony (M4A1, M1A)\n  - Loose loot (Currency, Meds, Medical supplies)\n- Room 222:\n  - 3× Sports bag\n  - 2× Medbag\n  - 1× weapon spawn on the bed (AKM, SV-98)\n  - Loose loot (Roubles)"
+    }
+  ]
+}

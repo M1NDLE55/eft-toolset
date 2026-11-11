@@ -1,0 +1,49 @@
+{
+  "title": "Watching You",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Watching_You",
+  "revisionId": 359876,
+  "lastEdited": "2026-09-13T20:23:35Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Mechanic",
+    "previous": "Broadcast - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Watching You is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Friend, there is another task, an unusual one. One of my clients was living in the area of the hotel when the events began. And he had reason to believe he was being watched. He saw a couple of leaked photos from the hotel courtyard. We need to find the room where the rat is sitting. Most likely, you'll find something if you look for tech: cameras, bugs... Anything you find, give it to me. It'll come in handy.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 20 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the surveillance spot on Streets of Tarkov\n- Obtain the observation results\n- Hand over the data"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +18,500 EXP\n- Mechanic Rep +0.02\n- 94,000 Roubles\n  - 98,700 Roubles with Intelligence Center Level 1\n  - 108,100 Roubles with Intelligence Center Level 2\n- 2× Military cable\n\"Yeah, I don't usually do this kind of thing, but this customer orders lots of weapons from me, so I didn't want to lose him... Thanks, friend.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Pinewood hotel room 215 key | 1 | Required | N/A | Used to open the client's hotel room |\n| Flash drive with recordings | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find a surveillance spot and obtain a flash drive on Streets of Tarkov. It can be found in room 215 on the second floor of the northern Pinewood hotel building. A Pinewood hotel room 215 key is required to enter it. The flash drive has multiple spawns throughout the room."
+    }
+  ]
+}

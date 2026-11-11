@@ -1,0 +1,79 @@
+{
+  "title": "Population Census",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Population_Census",
+  "revisionId": 361717,
+  "lastEdited": "2026-09-24T12:22:55Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Therapist",
+    "LL requirement": "2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Population Census is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon, mercenary. You're just in time, I have an errand for you. I need to determine how many people have gone missing in the city. To do this, I need a list of all the residents of the city and subtract the already evacuated, the dead, and those who found shelter in the hospital. Your task is to find that list of residents. Bring me the journal from Primorsky District's Housing Department.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain the journal containing resident details on Streets of Tarkov\n- Hand over the journal"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Therapist Rep +0.25\n- 165,000 Roubles\n  - 36,750 Roubles with Intelligence Center Level 1\n  - 40,250 Roubles with Intelligence Center Level 2\n\n\"Mercenary, you know firsthand how many lives are lost in war. But you have no idea how many die not from a bullet or a knife, but by going missing. Some are buried in the concrete in their own home after the bombing. Someone died in their basement from exhaustion because they couldn't find food. Someone was swallowed by infection because they didn't have the necessary medicine and couldn't get to a hospital because of constant shelling... And there are at least fifteen percent of people like that in this journal.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Housing office journal | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find a journal in the housing department building on Streets of Tarkov. There are multiple spawns throughout the building."
+    },
+    {
+      "heading": "First floor",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "First spawn",
+      "level": 4,
+      "text": "Inside the second office to the right after entering, in the left bottom compartment of the shelf."
+    },
+    {
+      "heading": "Second spawn",
+      "level": 4,
+      "text": "Inside the third office to the right, on the desk with the lamp."
+    },
+    {
+      "heading": "Third spawn",
+      "level": 4,
+      "text": "At the reception next to the stairs, on a shelf behind the counter."
+    },
+    {
+      "heading": "Fourth spawn",
+      "level": 4,
+      "text": "Inside the last office on the left side of the hallway, on the right side desk."
+    },
+    {
+      "heading": "Second floor",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Fifth spawn",
+      "level": 4,
+      "text": "Inside the left unlocked office, underneath the desk with the fallen bookcase against it."
+    }
+  ]
+}

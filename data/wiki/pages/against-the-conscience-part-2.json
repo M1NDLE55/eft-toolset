@@ -1,0 +1,40 @@
+{
+  "title": "Against the Conscience - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Against_the_Conscience_-_Part_2",
+  "revisionId": 362362,
+  "lastEdited": "2026-09-29T10:04:27Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Against the Conscience - Part 1",
+    "leads to": "Between Two Fires, Decisions, Decisions, Surprise Gift",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Against the Conscience - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So you're saying you were in the last champion's apartment? All right then. I'll pretend like it never happened. Just remember, curiosity killed the cat. And the last champion, too. He was a good guy, I liked him, but he got soft, lost his touch. You should be practicing more, not wandering around the city. Otherwise, your ranking will start to drop.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 100 enemies in any game mode in Arena\nSeasonal change: Ref instead asks seasonal characters to eliminate 20 PMC operatives in Escape from Tarkov."
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +23,000 EXP\n- Ref Rep +0.04\n- 100 GP coins\n  - 105 GP coins with Intelligence Center Level 1\n  - 115 GP coins with Intelligence Center Level 2\n\"There you go! Time should be spent improving your skills. Who knows what happens if you don't?\""
+    }
+  ]
+}

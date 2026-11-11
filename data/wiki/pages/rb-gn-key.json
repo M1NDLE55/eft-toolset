@@ -1,0 +1,52 @@
+{
+  "title": "RB-GN key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-GN_key",
+  "revisionId": 338407,
+  "lastEdited": "2026-03-14T00:38:21Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-GN"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d8e3ecc86f774414c78d05e",
+    "ID": "rezbase_key_gen_room"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-GN key (RB-GN) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base Airspace Control Center bunker generator room."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Basement level of the Airspace Control Center (king) on Reserve. (Highlighted in green)"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Two Toolboxes\n- Possible spawn of FP-100 filter absorber\n- Possible spawn of 6-STEN-140-M military battery\n- Possible spawn of Old firesteel"
+    }
+  ]
+}

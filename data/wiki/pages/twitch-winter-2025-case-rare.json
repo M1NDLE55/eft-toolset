@@ -1,0 +1,38 @@
+{
+  "title": "Twitch Winter 2025 case (Rare)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Twitch_Winter_2025_case_(Rare)",
+  "revisionId": 329952,
+  "lastEdited": "2025-12-27T00:24:36Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Event Reward Loot Container",
+    "weight": "4 kg",
+    "grid": "2x2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Twitch Winter 2025 case (Rare) (Twitch 2025) is a Event Reward Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A case with some rare goodies."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n- Destroyed after unpacking (Right-click \"unpack\")"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "Random surprises."
+    }
+  ]
+}

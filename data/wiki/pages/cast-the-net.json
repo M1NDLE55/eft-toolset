@@ -1,0 +1,70 @@
+{
+  "title": "Cast the Net",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cast_the_Net",
+  "revisionId": 359146,
+  "lastEdited": "2026-09-13T20:11:13Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov, Shoreline, Ground Zero",
+    "given by": "Prapor",
+    "previous": "Uninvited Guests - Part 2",
+    "leads to": "Know Your Enemy",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Cast the Net is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Alright, time to gather some intel on these cocksuckers. You haven't run into them yourself out in the field, have you? Ah, never mind. You probably wouldn't have much to tell me anyway. What I do know is they aren't BEARs or USECs, and they're mainly interested in TerraGroup sites. But I need to verify all of it. Can you set up surveillance along the routes these guys are likely using? From what I've heard, they avoid open areas, so head into the city first. You've got a better chance of finding something there. And check the shore too. Those bastards managed to ambush my team there somehow...\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Plant a WI-FI Camera in the Ural truck near the hydroelectric power station on Shoreline\n- Plant a WI-FI Camera in the excavator at the stream near the smugglers' base on Shoreline\n- Plant a WI-FI Camera on the concrete mixer truck at the collapsed crane on Streets of Tarkov\n- Plant a WI-FI Camera on the bio toilet near the Rodina cinema on Streets of Tarkov\n- Plant a WI-FI Camera in the cargo truck cabin near Mira Ave on Ground Zero\n- Plant a WI-FI Camera inside the yellow bus in the underground tunnel on Ground Zero"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,000 EXP\n- 180,000 Roubles\n  - 189,000 Roubles with Intelligence Center Level 1\n  - 207,000 Roubles with Intelligence Center Level 2\n- 2× Bottle of Fierce Hatchling moonshine\n\"Picked good spots? Well, let's hope something bites. I've got another team from the city that just went dark, so I ordered everyone else to keep their heads down for now. All we can do now is wait and see what your cameras pick up.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| WI-FI Camera | 6 | This item at the specified locations. When placed, the item is removed from the players' inventory. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| WI-FI Camera | 6 | Required | N/A | Can be purchased from Mechanic LL1. |\nIn this quest you have to go on Shoreline, Streets of Tarkov and Ground Zero to place multiple WI-FI Camera at specific spots. They can be placed in any order."
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ground Zero",
+      "level": 3,
+      "text": ""
+    }
+  ]
+}

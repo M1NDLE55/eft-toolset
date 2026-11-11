@@ -1,0 +1,47 @@
+{
+  "title": "Setting Priorities",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Setting_Priorities",
+  "revisionId": 359650,
+  "lastEdited": "2026-09-13T20:19:49Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Setting Priorities is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. One of your people stopped by recently and tried to convince me that the most important part of a fighter's gear is armor, and that situational awareness doesn't matter nearly as much. Frankly, I don't share that view. Sure, you can't see or hear absolutely everything. But armor will never give you complete protection either, especially if you walk into an ambush. Personally, I'd take a good headset over heavy, reinforced armor any day. Fortunately, I don't have to make that choice myself. So what would you choose? You've got enough experience to test this properly in the field. Better yet, let's try this: you gather some real statistics using two different loadouts, and in return I'll arrange a supply of some unique items from Peacekeeper. He owes me a favor, you see. Try neutralizing PMC operatives while wearing a headset but no armor. Then do the opposite, say... using a tank crew helmet. That should put you at a serious information disadvantage.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 4 with Mechanic to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 PMC operatives while using an active headset without wearing any armor\n- Eliminate 10 PMC operatives while wearing the TSh-4M-L soft tank crew helmet without wearing any active headset"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,00 EXP\n- Mechanic Rep +1.5\n- ??? Euros\n  - ??? Euros with Intelligence Center Level 1\n  - 476,199 Roubles with Intelligence Center Level 2\n- +4 Intellect levels\n- 1× Ballistic plate case\n- Unlocks purchase of Ballistic plate case at Mechanic LL4\n\"So, how did it go? You're saying you need both gear and good hearing? Yes, that's exactly what I expected. Still, the research was useful, so you've earned your reward. Those headsets are usually custom-made, but Peacekeeper should be able to supply models that fit you properly.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Find in raid | Notes |\n| Any earpiece* | N/A | Worn by the player while eliminating PMCs for the first objective |\n| TSh-4M-L soft tank crew helmet | N/A | Worn by the player while eliminating PMCs for the second objective |\n- 'Bug: All earpieces from the Arena Season 2 BattlePass, the Factory Tactical Map and the Echo Belli crate do not currently work for this quest.\n\nFor the first objective you must not wear any armor vest, armored chest rig, armored headwear or armored face cover."
+    }
+  ]
+}

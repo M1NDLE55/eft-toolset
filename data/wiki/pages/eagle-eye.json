@@ -1,0 +1,44 @@
+{
+  "title": "Eagle Eye",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Eagle_Eye",
+  "revisionId": 362616,
+  "lastEdited": "2026-09-29T20:15:21Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Eagle Eye is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Okay, next job. NATO has carefully studied the conflict even before the Blue Helmets force surge and sent several drones to recon. But local air defense was apparently against democratic eyes. Two drones were shot down over the coast, now that getting to them has become possible, we can try to pull out the memory block from these. They should contain information about all movements at the beginning of the conflict. This information can make a good deal with my partners. Find their impact locations and bring me the memory disks. We have information about the estimated crash areas: the first one has to be somewhere near the local weather station near the port zone, the other one is near the bunker in the northwest.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the first UAV crash site on Shoreline\n- Obtain the SAS disk from the first crashed drone\n- Hand over the first SAS disk to Peacekeeper\n- Locate the second UAV crash site on Shoreline\n- Obtain the SAS disk from the second crashed drone\n- Hand over the second SAS disk to Peacekeeper"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Peacekeeper Rep +0.25\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n\"Your promptness is amazing, great job! Hand in both the disks, please. Marvelous, here's your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| UAV SAS disk 1 | UAV SAS disk #1 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| UAV SAS disk 2 | UAV SAS disk #2 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to obtain two disks from crashed UAV drones on Shoreline."
+    }
+  ]
+}

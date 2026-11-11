@@ -1,0 +1,54 @@
+{
+  "title": "Every Hunter Knows This",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Every_Hunter_Knows_This",
+  "revisionId": 359261,
+  "lastEdited": "2026-09-13T20:13:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Factory, Customs",
+    "given by": "Jaeger",
+    "previous": "Rough Tarkov",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Every Hunter Knows This is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come on in. So, how's your tripwire business going? No luck? Figures. This isn't like mindlessly shooting everyone. You've got to have a sense of intuition and know where the prey's gonna be. If you were a hunter, you'd understand. Try watching where the bandits hang out. Think about where your wire would catch the bastard off guard and how to conceal it. Take your time, use your best judgment. Only then will your hunt be fruitful. Come back when you find at least a couple good spots. I wouldn't be so quick to set these tripwires around, otherwise you'll kill some of your teammates by accident.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate a good tripwire installation spot on Factory\n- Locate a good tripwire installation spot on Customs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +5,800 EXP\n- Jaeger Rep +0.01\n- 32,000 Roubles\n  - 33,600 Roubles with Intelligence center Level 1\n  - 36,800 Roubles with Intelligence center Level 2\n- Unlocks purchase of Tripwire installation kit at Jaeger LL1\n\"Good job, you found some decent spots. Tripwires demand a specific approach, and now you're starting to get the hang of it. Come back if you need another tripwire kit. Be careful, though! You're not the only one who knows how to set a tripwire, which means every bush, every room, and every rock can kill you. Remember that well.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to locate tripwire installation spots on Factory and Customs. There are no Tripwire installation kits required."
+    },
+    {
+      "heading": "Factory tripwire spot",
+      "level": 3,
+      "text": "The spot is located in a room on the 3rd floor of the offices behind a door which must be breached."
+    },
+    {
+      "heading": "Customs tripwire spot",
+      "level": 3,
+      "text": "The spot is located in the three-story dorms, on the stairs from the 1st to the 2nd floor at the inner staircase."
+    }
+  ]
+}

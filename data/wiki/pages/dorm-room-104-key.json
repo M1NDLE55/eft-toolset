@@ -1,0 +1,56 @@
+{
+  "title": "Dorm room 104 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_104_key",
+  "revisionId": 340171,
+  "lastEdited": "2026-04-16T17:59:07Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks dorm room 104 in the two-story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "591383f186f7744a4c5edcf3",
+    "ID": "mo 104"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 104 key (Dorm 104) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the two-story dormitory with a tag reading \"104\" on it."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In a key cabinet at the dorm guard desk that is located at the two-story dorms"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The first floor of the two-story dorms on Customs in the fenced-off section that must be entered from outside the first floor north door."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Toolbox\n- 2x Jacket"
+    }
+  ]
+}

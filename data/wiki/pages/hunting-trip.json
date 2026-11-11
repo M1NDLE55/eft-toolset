@@ -1,0 +1,51 @@
+{
+  "title": "Hunting Trip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hunting_Trip",
+  "revisionId": 359396,
+  "lastEdited": "2026-09-13T20:15:27Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Hunting trip"
+  ],
+  "infobox": {
+    "given by": "Jaeger",
+    "previous": "The Huntsman Path - Woods Keeper",
+    "leads to": "Connections Up North (+18-24hr)",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hunting Trip is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come on in. Want some tea? Well, whatever. So listen, here's the deal. Soon I will be hosting a few friends of mine. I want to go hunting with them, but there's just no way I can take them hunting with these MP shotguns, right? I have a couple of nice western rifles here, but I need them to be zeroed properly first. And we have just the client for that, his name is Shturman. So, test my build (Remington M700 sniper rifle with a FullField TAC30 1-4x24 scope) on this scum. Find a long-range position and make a precise shot to the head, so that the bastard wouldn't even have a chance. Don't worry, I won't disappoint you with the reward, kid.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 33 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and neutralize Shturman with a headshot from over 40 meters away while using an M700 sniper rifle with the specified scope"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +15,000 EXP\n- Jaeger Rep +0.02\n- 100,000 Roubles\n  - 105,000 Roubles with Intelligence Center Level 1\n  - 115,000 Roubles with Intelligence Center Level 2\n- 1× VPX Flash Storage Module\n- 1× Iridium military thermal vision module\n- 1× Phased array element\n- Unlocks purchase of Accuracy International AXMC .338 LM bolt-action sniper rifle at Jaeger LL4\n\"Those are damn great rifles! Good work! You know, I think I might get into gunsmithing myself, I took quite a liking to this thing. So, about the reward: check out the little things I found, you might need them.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill Shturman from over 40 meters away with a headshot while using a Remington Model 700 7.62x51 bolt-action sniper rifle with a Burris FullField TAC30 1-4x24 30mm riflescope. To have the kill count for this quest, the Burris FullField TAC30 1-4x24 30mm riflescope just needs to be installed on the gun, and not necessarily be actively used. This means you can use a ring mount that supports backup sights, like the Recknagel Era-Tac 30mm ring scope mount, and use any compact reflex sight of your choice on top."
+    }
+  ]
+}

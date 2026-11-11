@@ -1,0 +1,35 @@
+{
+  "title": "Toolbox",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Toolbox",
+  "revisionId": 334005,
+  "lastEdited": "2026-02-09T12:24:32Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [
+    "Wooden Toolbox"
+  ],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "5909d50c86f774659e6aaebe",
+    "ID": "ToolBox"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "For the container, see Toolbox (Discord Version).\n\nToolbox is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A 4x3 grid toolbox that contains some barter items."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Type |\n| Building materials |\n| Building materials |\n| Building materials |\n| Flammable materials |\n| Building materials |\n| Building materials |\n| Building materials |\n| Electronics |\n| Electronics |\n| Energy elements |\n| Building materials |\n| Building materials |\n| Building materials |\n| Electronics |\n| Building materials |\n| Building materials |\n| Electronics |\n| Electronics |\n| Electronics |\n| Energy elements |\n| Tools |\n| Building materials |\n| Flammable materials |\n| Tools |\n| Electronics |\n| Energy elements |\n| Electronics |\n| Electronics |\n| Building materials |\n| Eyewear |\n| Headsets |\n| Tools |\n| Tools |\n| Building materials |\n| Tools |\n| Electronics |\n| Electronics |\n| Tools |\n| Tools |\n| Flammable materials |\n| Electronics |\n| Electronics |\n| Tools |\n| Tools |\n| Building materials |\n| Building materials |\n| Tools |\n| Building materials |\n| Others |\n| Tools |\n| Tools |\n| Energy elements |\n| Electronics |\n| Tools |\n| Tools |\n| Tools |\n| Tools |\n| Tools |\n| Tools |\n| Valuables |"
+    }
+  ]
+}

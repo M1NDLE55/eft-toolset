@@ -1,0 +1,60 @@
+{
+  "title": "Gunsmith Master - Part 12",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_12",
+  "revisionId": 356757,
+  "lastEdited": "2026-08-29T19:47:46Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith 12",
+    "Gunsmith Master 12"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith Master - Part 12 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. Do you ever find yourself crossing paths with a classmate decades after high school and hardly recognizing them? Although, I'd likely shock some of the folks from my class myself. Recently, a certain guy from my school days reached out to me. After school, he went into the army, wanting to join the special forces... It was clear even then that he had a peculiar, uh, aptitude for that job. Somehow he found me here and asked me for a favor. He wants to remember his early years in basic training. I'm not a big fan of that sort of hospitality, plus I've got heaps of work to do. But let me put it this way: he was, um, very insistent. I don't need any more trouble, so I agreed to his deal, hoping you'd help me sort it all out. People say this kind of equipment used to be somewhat standard issue at his job: ORSIS T-5000, Vityaz and a Glock 17. All with the special mods, of course. The rifle was equipped with an ATACR 7-35x56 34mm scope, Harris bipod, and a suppressor, I can't recall which exact one... Well, probably doesn't matter. Just get any suitable silencer, that'll work. For Vityaz I need the Micro T-1 red dot with a spacer, Zenit RK-6 front grip and RK-3 pistol grip, PT-3 Klassika buttstock... I also need a PEQ-15, Klesch-2P flashlight, and, as you probably guessed, a suppressor, the standard Vityaz one. Ergonomics no less than 49, recoil sum no more than 400, and at least a 30-round magazine. The Glock is simple. You need to replace the barrel with the Double Diamond with their thread protector, add a Pachmayr Grip Glove, Klesch-2P flashlight, and a 21-round extendo mag. I think that's everything.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 17 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify a PP-19-01 to comply with the given specifications\n- Modify a T-5000M to comply with the given specifications\n- Modify a Glock 17 to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +21,930 EXP\n- Mechanic Rep +0.04\n- 155,000 Roubles\n  - 162,750 Roubles with Intelligence center Level 1\n  - 178,250 Roubles with Intelligence center Level 2\n- Unlocks purchase of Ballistic plate case at Mechanic LL2\n\"Alright, let me check the attachment list... Okay, my friend will be very pleased. It's amazing that there's still room for some nostalgia in all of us, even if the conditions around us burn out all other emotions.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "PP-19-01 specifications:\n- 60 Durability\n- Over 49 ergonomics\n- 400 or less recoil\n- A magazine with a capacity of at least 30\n- Aimpoint Micro T-1 reflex sight\n- Aimpoint Micro Spacer High\n- Zenit RK-6 tactical foregrip\n- AK Zenit RK-3 pistol grip (Black)\n- AK Zenit PT-3 \"Klassika\" stock\n- L3Harris AN/PEQ-15 tactical device (Tan)\n- Zenit Klesch-2P flashlight with laser\n- PP-19-01 Vityaz 9x19 sound suppressor\n\nT-5000M specifications:\n- 60 Durability\n- Over 18 ergonomics\n- A magazine\n- A silencer\n- Nightforce ATACR 7-35x56 34mm riflescope\n- Harris S-BRM 6-9\" Bipod\n\nGlock 17 specifications:\n- 60 Durability\n- Glock 9x19 Double Diamond 114mm threaded barrel\n- Glock 9x19 Double Diamond thread protector\n- Glock Pachmayr Tactical Grip Glove\n- Zenit Klesch-2P flashlight with laser\n- Glock 9x19 Magpul PMAG GL9 21-round magazine"
+    },
+    {
+      "heading": "Builds",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Notes:",
+      "level": 3,
+      "text": "- These builds are based on a standard PP-19-01 from Prapor LL1, a standard T-5000M from Skier LL2 and a standard Glock 17 from Mechanic LL1.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nPP-19-01 Shop. List:\nPP-19-01 Shop. List\n| Icon | Attachment | Sold By | Loyalty Level |\n| PP-19-01 Vityaz-SN dust cover | PP-19-01 Vityaz-SN dust cover | Prapor | LL1 |\n| Aimpoint Micro Standard Mount | Aimpoint Micro Standard Mount | Peacekeeper | LL1 |\n| Aimpoint Micro Spacer High | Aimpoint Micro Spacer High | Peacekeeper | LL1 |\n| Aimpoint Micro T-1 reflex sight | Aimpoint Micro T-1 reflex sight | Peacekeeper | LL2 |\n| AK-74M/AK-100 Zenit PT Lock | AK-74M/AK-100 Zenit PT Lock | Skier | LL2 |\n| AK Zenit PT-3 \"Klassika\" stock | AK Zenit PT-3 \"Klassika\" stock | Skier | LL3 |\n| AK Zenit RK-3 pistol grip | AK Zenit RK-3 pistol grip (Black) | Skier | LL3 |\n| PP-19-01 Vityaz 9x19 sound suppressor | PP-19-01 Vityaz 9x19 sound suppressor | Mechanic | LL2 |\n| PP-19-01 Vityaz SAG MK1 M-LOK handguard with gas tube | PP-19-01 Vityaz SAG MK1 M-LOK handguard with gas tube | Mechanic | LL2 |\n| Magpul M-LOK 4.1 inch rail | Magpul M-LOK 4.1 inch rail | Mechanic | LL1 (Barter); LL1 |\n| Zenit RK-6 tactical foregrip | Zenit RK-6 tactical foregrip | Skier | LL3 |\n| L3Harris AN/PEQ-15 tactical device | L3Harris AN/PEQ-15 tactical device (Tan) | Peacekeeper | LL3 |\n| Magpul M-LOK 2.5 inch rail | Magpul M-LOK 2.5 inch rail | Mechanic | LL1 |\n| Zenit Klesch-2P flashlight with laser | Zenit Klesch-2P flashlight with laser | Skier | LL2 |\n\nPP-19-01 Insp. View:\nPP-19-01 Insp. View\n\nPP-19-01 Mod. Screen:\nPP-19-01 Mod. Screen\n\nT-5000M Shop. List:\nT-5000M Shop. List\n| Attachment | Sold By | Loyalty Level |\n| Harris S-BRM 6-9\" Bipod | Skier | LL2 |\n| IEA Mil-Optics KH/F 34mm one-piece magmount | MechanicJaeger | LL2 (Barter)LL3 |\n| Nightforce ATACR 7-35x56 34mm riflescope | Jaeger | LL2 (Barter); LL4 |\n| SilencerCo Hybrid 46 Direct Thread Mount adapter | MechanicPeacekeeper | LL1 (Barter); LL2LL2 |\n| SilencerCo Hybrid 46 multi-caliber sound suppressor | PeacekeeperMechanic | LL2LL2 (Barter) |\n\nT-5000M Insp. View:\nT-5000M Insp. View\n\nT-5000M Mod. Screen:\nT-5000M Mod. Screen\n\nGlock 17 Shop. List:\nGlock 17 Shop. List\n| Attachment | Sold By | Loyalty Level |\n| Glock 9x19 Double Diamond 114mm threaded barrel | Mechanic | LL2 |\n| Glock 9x19 Double Diamond thread protector | Mechanic | LL1 |\n| Glock Pachmayr Tactical Grip Glove | Mechanic | LL1 |\n| Glock 9x19 Magpul PMAG GL9 21-round magazine | Mechanic | LL1 |\n| Zenit Klesch-2P flashlight with laser | Skier | LL2 |\n\nGlock 17 Insp. View:\nGlock 17 Insp. View\n\nGlock 17 Mod. Screen:\nGlock 17 Mod. Screen"
+    }
+  ]
+}

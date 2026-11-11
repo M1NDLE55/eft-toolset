@@ -1,0 +1,64 @@
+{
+  "title": "Glory to CPSU",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glory_to_CPSU",
+  "revisionId": 361757,
+  "lastEdited": "2026-09-24T12:33:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Prapor",
+    "LL requirement": "2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Glory to CPSU is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, soldier! I've got an urgent job for you. Back before all this, I had an old friend, name was Oleg. We lost touch somewhere along the way, though I know he stayed in Tarkov. Then the other night... I had a bad feeling. Call it a dream, call it a gut instinct. I need you to look for him downtown. Check his apartment and the place where he worked. I can't remember the exact addresses anymore, but you should be able to figure it out. Just look for anything with a Soviet touch. Oleg was a true patriot.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the place of work of Prapor's friend on Streets of Tarkov\n  - (Optional) Locate the apartment of Prapor's friend on Streets of Tarkov\n- Obtain any information on the fate of Prapor's friend\n- Hand over the found data"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Prapor Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"Nothing at all? Not even a body, just this old book? Alright, I'll keep searching.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Journal | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find Prapor's friend's journal in the museum on Streets of Tarkov. There are multiple spawns in a room on the second floor."
+    },
+    {
+      "heading": "First spawn",
+      "level": 4,
+      "text": "In the open kitchen drawer."
+    },
+    {
+      "heading": "Second spawn",
+      "level": 4,
+      "text": "Behind the teddy bear on the chair."
+    },
+    {
+      "heading": "Third spawn",
+      "level": 4,
+      "text": "On the left in the bottom compartment of the glass cabinet."
+    },
+    {
+      "heading": "Fourth spawn",
+      "level": 4,
+      "text": "In the bottom compartment of the bookshelf, on top of books."
+    }
+  ]
+}

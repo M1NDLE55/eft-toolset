@@ -1,0 +1,84 @@
+{
+  "title": "Properties All Around",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Properties_All_Around",
+  "revisionId": 361760,
+  "lastEdited": "2026-09-24T12:33:46Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Prapor",
+    "LL requirement": "2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Properties All Around is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Heyo, soldier! I've got a little job for you, easy as always. You probably know that TerraGroup acted honorably at first: they filed official requests, compiled documents, paid taxes, all this crap. It's only later that they went off the motherfucking rails. I have a feeling that the city's real estate fund may have kept records of the facilities bought or leased by those fucks. If you poke around, you might find something interesting. I'll bet it'll uncover a lot of hidden assets. You up for it?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the real estate fund on Streets of Tarkov\n- Locate and obtain the Tarkov real estate transactions document\n- Hand over the obtained information"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Prapor Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"Did you find it? Nice work, now bring it here! And take your reward, you deserve it.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Real estate agency office room key | 1 | Required* | N/A | Unlocks the locked office on the second floor of the real estate agency building on Streets of Tarkov. |\n| Cadastral registry records | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n- Not all spawn locations for the quest item require this key. It is not entirely needed to complete the quest.\n\nIn this quest you have to find cadastral registry records in the real estate agency building on Streets of Tarkov. There are multiple spawns throughout the building. A Real estate agency office room key is required to access 2 of the 6 possible spawns in the locked office."
+    },
+    {
+      "heading": "First floor",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "First spawn",
+      "level": 4,
+      "text": "Inside the left side office, in the middle compartment of the shelf to the right after entering through the door."
+    },
+    {
+      "heading": "Second spawn",
+      "level": 4,
+      "text": "Inside the left side office, in the back right corner tucked under a red file folder on the floor."
+    },
+    {
+      "heading": "Second floor",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Third spawn",
+      "level": 4,
+      "text": "Inside the right side office, in the middle compartment of the second shelf to the right after entering."
+    },
+    {
+      "heading": "Fourth spawn",
+      "level": 4,
+      "text": "Inside the right side office, in the top compartment of the small shelf in the back right corner."
+    },
+    {
+      "heading": "Fifth spawn",
+      "level": 4,
+      "text": "Inside the left side locked office, in the middle compartment of the shelf to the right after entering."
+    },
+    {
+      "heading": "Sixth spawn",
+      "level": 4,
+      "text": "Inside the left side locked office, on the shelf in the back right corner."
+    }
+  ]
+}

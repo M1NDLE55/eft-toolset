@@ -1,0 +1,45 @@
+{
+  "title": "All for the Show - Soldier",
+  "url": "https://escapefromtarkov.fandom.com/wiki/All_for_the_Show_-_Soldier",
+  "revisionId": 359071,
+  "lastEdited": "2026-09-13T20:09:57Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Jack of All Trades - Pro",
+    "leads to": "Advertising Business - Part 3",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "All for the Show - Soldier is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Too many soft types running around in flashy gear lately. That's not how it should be. Let's bring some real soldier spirit back to the Arena! Being flashy is fine, but right now the crowd wants real fighters, men, soldiers! So pick something appropriate from your gear.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 50 enemies while wearing any beret in CheckPoint mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +7,500 EXP\n- Ref Rep +0.01\n- 60,000 Roubles\n- 50 GP coins\n- Unlocks MPS Auto Assault-12 Gen 2 12ga automatic shotgun in the Armory"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Requirement | Notes |\n| Beret (Black); or; Beret (Olive Drab); or; Beret (Blue) | Beret (Black); or; Beret (Olive Drab); or; Beret (Blue) | Required | Has to be worn while making the kills |"
+    }
+  ]
+}

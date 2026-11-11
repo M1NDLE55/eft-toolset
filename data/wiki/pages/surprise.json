@@ -1,0 +1,44 @@
+{
+  "title": "Surprise",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Surprise",
+  "revisionId": 359719,
+  "lastEdited": "2026-09-13T20:20:57Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ref",
+    "previous": "Balancing - Part 2",
+    "leads to": "Create a Distraction - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Surprise is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I came up with a great idea to make the Arena even better. And I need your help. I need to find some armor plates for a guy. He's a frequent performer, so it's time to give him an upgrade to get the crowd excited. That's the thing about shows, you don't add wood in time, the fire goes out. Well, now go get me some armor plates. The crowd's gonna squeal when they see him!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 3 found in raid class 4 or higher ballistic plates to Ref"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,600 EXP\n- Ref Rep +0.04\n- 55 GP coins\n  - 58 GP coins with Intelligence Center Level 1\n  - 63 GP coins with Intelligence Center Level 2\n- 1× Maska-1SCh bulletproof helmet (Killa Edition)\n\n\"Just what I needed! Not much more to go. Everyone will be thrilled when they see the results, I promise! Here's a helmet as a reward. His last owner has a better one now, ha!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Item name | Amount | Requirement | Find in raid |\n| Any class 4 or higher armor plate | 3 | Handover item | Yes |\n\nBug: The 6B13 custom ballistic plates (Back) do currently not work for this quest."
+    }
+  ]
+}

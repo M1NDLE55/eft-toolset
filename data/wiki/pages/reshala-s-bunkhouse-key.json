@@ -1,0 +1,56 @@
+{
+  "title": "Reshala's bunkhouse key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Reshala's_bunkhouse_key",
+  "revisionId": 349706,
+  "lastEdited": "2026-08-04T15:19:57Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "usage": "Unlocks Reshala's bunkhouse on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "68e95f4fa4a577e907015787",
+    "ID": "item_key_quest_reshala_vremyanka"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Reshala's bunkhouse key (Reshala) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "It's unclear which specific bunkhouse this key belongs to. But it should be somewhere on the Customs territory."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the story chapter Accidental Witness"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- On Reshala\n- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to Reshala's bunkhouse on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Jacket\n- Possible TOZ-106 20ga bolt-action shotgun\n- Possible PPSh-41 7.62x25 submachine gun\n- Possible AS VAL 9x39 special assault rifle\n- Possible VSS Vintorez 9x39 special sniper rifle\n- Possible Soyuz-TM STM-9 Gen.2 9x19 carbine\n- Possible UVSR Taiga-1 survival machete or SP-8 Survival Machete\n- Possible modified Saiga-12K 12ga automatic shotgun\n- Loose loot (Valuables, Stimulants)"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Playing the Market",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Playing_the_Market",
+  "revisionId": 359560,
+  "lastEdited": "2026-09-13T20:18:16Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Factory",
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Playing the Market is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Someone decided to crash the market recently. Dumped a massive batch of bitcoins, enough for TARGox to start filling orders at ten times below the usual market price. You could watch the order queue disappearing in real time. I barely managed to grab a couple hundred coins before it was over. And today the price is back where it was before. If the market is going to stay this heavily manipulated, we need to move fast while the opportunity is still there. There are control panels in the Polikhim factory, marked by red emergency lights. Take a couple of toolkits and repair the panels while I deal with the cooling system. Do that, and you'll get a share of the profits.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 2 with Mechanic to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Fix the first control board with a Toolset on Factory\n- Fix the second control board with a Toolset on Factory"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Mechanic Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 2× Metal spare parts\n- Unlocks purchase of Ammunition case at Mechanic LL2\n\"You're quicker than I expected. Nicely done. I'm almost finished with the cooling system on my end.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Toolset | 2 | Required | N/A | This item is used to repair the control boards. When used, the item is removed from the players' inventory. |\n\nIn this quest you have to repair 2 control boards with 2 Toolsets in Factory. They can be recognized by blinking red lights. It is recommended to repair them in separate raids, carrying the toolsets in your secure container. If you have a Secure container Epsilon or a Secure container Theta, you can safely place 2 per raid."
+    }
+  ]
+}

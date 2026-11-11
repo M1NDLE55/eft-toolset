@@ -1,0 +1,54 @@
+{
+  "title": "I Need More Power",
+  "url": "https://escapefromtarkov.fandom.com/wiki/I_Need_More_Power",
+  "revisionId": 362643,
+  "lastEdited": "2026-09-29T21:06:15Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "I Need More Power is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"What can you even expect when things have gotten this bad, kurwa! Our local generators have failed. My men are experiencing interruptions with electricity, and that is not acceptable. After all, time is money. But I am already working on it. Many people were conducting their operations in the Resort before us. Search for functional generators. Most likely, they are inside locked rooms on the second floor of both wings. Once you find them, simply report the room numbers to me. We also need fuel cans so the generators can keep running. That should be much easier.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the generators in the east wing of the Health Resort on Shoreline\n- Locate the generators in the west wing of the Health Resort on Shoreline\n- Hand over 3 found in raid Metal fuel tanks or Expeditionary fuel tanks"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- 10,000 EXP\n- Peacekeeper Rep +0.25\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n- 2× Military flash drive\n- Unlocks purchase of AR-15 Magpul PRS GEN3 stock (Black) at Peacekeeper LL3\n\"Good work, my friend. I will pass this information on to my men. Now, if only we could move those generators to our base without drawing attention...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in Raid | Notes |\n| Health Resort west wing room 219 key | Health Resort west wing room 219 key | 1 | Required* | N/A | Unlocks west wing room 219 in the health resort on Shoreline where the first set of generators is located. |\n| Health Resort west wing room 220 key | Health Resort west wing room 220 key | 1 | Required* | N/A | Unlocks west wing room 220 in the health resort on Shoreline through which the first set of generators can be located by looking into room 219 from the joint balcony. |\n| Metal fuel tank; or; Expeditionary fuel tank | Metal fuel tank; or; Expeditionary fuel tank | 3 | Handover item | Yes | Any durability |\n- Only one of the keys is required to complete the quest.\n\nIn this quest you have to locate generators in two rooms in the health resort on Shoreline."
+    },
+    {
+      "heading": "East wing generators location",
+      "level": 4,
+      "text": "The generators in the east wing are located in room 220 on the second floor. It is always unlocked."
+    },
+    {
+      "heading": "West wing generators location",
+      "level": 4,
+      "text": "The generators in the west wing are located in room 219 on the second floor. You can complete the objective by getting into the room, which requires a Health Resort west wing room 219 key, or by looking into it from the joint balcony in room 220 which requires a Health Resort west wing room 220 key."
+    }
+  ]
+}

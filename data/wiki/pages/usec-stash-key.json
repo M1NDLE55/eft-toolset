@@ -1,0 +1,51 @@
+{
+  "title": "USEC stash key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_stash_key",
+  "revisionId": 356811,
+  "lastEdited": "2026-08-29T20:37:33Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a storage room in warehouse #6 on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5da743f586f7744014504f72",
+    "ID": "bigmap_key_usec1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The USEC stash key (USEC) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the USEC stash, located somewhere in the Customs area."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Locations",
+      "level": 2,
+      "text": "Door to a storage room on the first floor of warehouse #6 on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Weapon box (4x4)\n- 2x Wooden crate\n- Metal fuel tank or Expeditionary fuel tank spawn\n- Loose loot (Weapon mods)\n- Possible weapon spawn (AUG A1, AUG A3, SR-25 (Taupe), Colt M16A2, Colt M16A1, M1A, G36, RFB, SCAR-L 5.56x45 and others)"
+    }
+  ]
+}

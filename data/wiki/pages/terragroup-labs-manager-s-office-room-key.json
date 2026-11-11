@@ -1,0 +1,66 @@
+{
+  "title": "TerraGroup Labs manager's office room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_manager's_office_room_key",
+  "revisionId": 358710,
+  "lastEdited": "2026-09-10T22:59:07Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the laboratory manager office (O21) in The Lab.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5c1e2a1e86f77431ea0ea84c",
+    "ID": "item_lab_glass_office"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "TerraGroup Labs manager's office room key (TGL MO) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the TerraGroup Labs manager office."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can unlock two separate doors leading to the same office.\n- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a possible location for the quest Following the Bread Crumbs"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Room O13 on a lit up desk, left of the glass door entrance\n\n- In room O22, in the conference room on the right side of the powered laptop\n\n- Y11 (the parking garage) sitting on the passenger side seat of the SUV that has the Weapon box (6x2) in the trunk"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Laboratory manager office (O21) on the second level in The Lab."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- Blue keycard spawn location\n- 2x PC block\n- 1x Drawer\n- 1x Safe\n- 1x Weapon box (6x4)\n- 4x Valuables spawns\n- Intelligence folder spawn on the desk"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "A Helping Hand",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A_Helping_Hand",
+  "revisionId": 359043,
+  "lastEdited": "2026-09-13T20:09:28Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Mechanic",
+    "previous": "Saving the Mole",
+    "leads to": "Shipping Delay - Part 1, Shipping Delay - Part 2, Hot Wheels",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "A Helping Hand is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I figure you've already seen the BTR that's been driving around Tarkov. The driver used to offer his services to PMCs like you, but lately he has started working with Skier as well. The driver came to me when he was restoring the BTR. It was an quite an interesting challenge, let me tell you. But that's beside the point. He hasn't been in touch for quite some time, and now he's suddenly asked for help. Apparently, something serious has happened. Can you check in with him and find out what's going on? There aren't many men of wit and ambition left in Tarkov. People like us should stick together.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 20 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain Prapor's package on Woods\n- Survive and extract from the location\n- Complete the task Shipping Delay - Part 1"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +14,000 EXP\n- Mechanic Rep +0.02\n- 70,000 Roubles\n  - 73,500 Roubles with Intelligence Center Level 1\n  - 80,500 Roubles with Intelligence Center Level 2\n- 1× \"The Eye\" mortar strike signaling device\n\"I told him it was dangerous to become part of Skier's gang... Granted, it does have its privileges, but you can hardly stay independent in such a big business. I wonder who could have turned against Skier? After all, the BTR should be under his protection...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Package for Prapor | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find Prapor's package on Woods. It can be found in 1 of 2 locations in the northwest building of the train depot. The depot can only be accessed via the BTR Driver's taxi service. After collecting the package, you have to hand it over to Prapor in his quest Shipping Delay - Part 1, afterwards you can complete this quest.\n\nIt is also possible to leave the depot through walking on top of the western train. When walking on top of the train it is important to stick to the center to not get hit by snipers or mines."
+    }
+  ]
+}

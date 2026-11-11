@@ -1,0 +1,42 @@
+{
+  "title": "Fall Ailment",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fall_Ailment",
+  "revisionId": 361827,
+  "lastEdited": "2026-09-24T13:44:28Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "LL requirement": "1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Fall Ailment is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon, young man. Last fall, Tarkov experienced a severe influenza outbreak. I caught it twice myself. This year, however, I managed to arrange for an influenza vaccine to be delivered through the UN peacekeepers' supply channels... Though that isn't why I asked you here. I'm planning to organize a vaccination campaign this fall, but before that, I need to vaccinate myself and everyone working at my clinic. Unfortunately, sterile syringes are in short supply. Could you obtain five for me? Please make sure their packaging remains intact!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 5 Disposable syringes in raid\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Therapist Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence center Level 1\n  - 92,000 Roubles with Intelligence center Level 2\n- 2× Pile of meds\n\"Were you able to find them? Excellent, I'll begin administering the vaccines tomorrow.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Disposable syringe | 5 | Handover item | Yes | Can be crafted in the Hideout (Medstation lv. 1). |"
+    }
+  ]
+}

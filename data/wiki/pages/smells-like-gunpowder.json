@@ -1,0 +1,39 @@
+{
+  "title": "Smells Like Gunpowder",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Smells_Like_Gunpowder",
+  "revisionId": 362067,
+  "lastEdited": "2026-09-24T19:18:01Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "leads to": "A New Classic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Smells Like Gunpowder is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey, warrior! Time to get yourself ready, because the Arena is evolving again. I arranged a shipment of explosive charges for a device you're already familiar with, and don't even ask what it cost me. If you've spent all this time thinking BlastGang would always be some harmless game of cat and mouse with no real risk, it's time to grow up. Consider all the previous matches training. The real work starts now. Go find out if you've got enough guts to work with equipment this dangerous.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Play a match in BlastGang mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 300,000 Roubles\n- 30 GP coins\n- 1× Lega Medal\n- 2 Battle Points"
+    }
+  ]
+}

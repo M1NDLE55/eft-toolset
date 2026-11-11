@@ -1,0 +1,70 @@
+{
+  "title": "Peacekeeper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Peacekeeper",
+  "revisionId": 361840,
+  "lastEdited": "2026-09-24T13:57:12Z",
+  "kind": "trader",
+  "categories": [
+    "Traders"
+  ],
+  "redirects": [
+    "Peace keeper",
+    "Peace maker",
+    "Peacemaker",
+    "Tadeusz Pilsudski"
+  ],
+  "infobox": {
+    "full name": "Tadeusz Pilsudski",
+    "location": "Tarkov Port District",
+    "origin": "Republic of Poland",
+    "wares": "- Western/NATO Weapons - Gear - Magazines - Ammo - Grenades - Mods - Containers - Dollars",
+    "currencies": "Dollars ($)"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Tadeusz Pilsudski, known by his alias \"Peacekeeper\", is a trader in Escape from Tarkov."
+    },
+    {
+      "heading": "Biography",
+      "level": 2,
+      "text": "UN Peacekeeping-force supply officer, based in one of the central checkpoints leading to the Tarkov port zone. The blue helmets have been seen poking their heads into small deals from the very beginning of the conflict, buying everything of value in exchange for western weapons, ammo, and all kinds of military equipment."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Peacekeeper is initially locked, and can be unlocked upon progressing through the story chapter Tour."
+    },
+    {
+      "heading": "Wares",
+      "level": 2,
+      "text": "- Western/NATO Weapons\n- Gear\n- Magazines\n- Ammo\n- Grenades\n- Mods\n- Containers\n- Dollars"
+    },
+    {
+      "heading": "Loyalty Level Requirements",
+      "level": 2,
+      "text": "| Loyalty Lvl | Required Lvl | Required Rep |\n| Lvl 2 | 8 | 0.50 |\n| Lvl 3 | 19 | 2.20 |\n| Lvl 4 | 37 | 6.00 |"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- See the quests overview page"
+    },
+    {
+      "heading": "Barters",
+      "level": 2,
+      "text": "- See the barter trades page"
+    },
+    {
+      "heading": "Items for sale",
+      "level": 2,
+      "text": "LL1:\nLL1\n\nLL2:\nLL2\n\nLL3:\nLL3\n\nLL4:\nLL4"
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

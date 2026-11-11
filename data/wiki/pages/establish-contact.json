@@ -1,0 +1,48 @@
+{
+  "title": "Establish Contact",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Establish_Contact",
+  "revisionId": 359260,
+  "lastEdited": "2026-09-13T20:13:10Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "leads to": "Friend Among Strangers",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Establish Contact is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, mercenary. You want to take our cooperation to the next level? You know the greater the responsibility, the more important the trust. Prove your dependability.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Scav karma of at least +4"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Reach 5.0 standing with Fence"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,800 EXP\n- Fence Rep +0.02\n- 600 Euros\n  - 630 Euros with Intelligence Center Level 1\n  - 690 Euros with Intelligence Center Level 2\n\"Well, now we can talk about your job.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "See the Scav karma section on how to increase standing with Fence."
+    }
+  ]
+}

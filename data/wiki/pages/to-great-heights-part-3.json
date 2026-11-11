@@ -1,0 +1,40 @@
+{
+  "title": "To Great Heights! - Part 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_Great_Heights!_-_Part_3",
+  "revisionId": 359838,
+  "lastEdited": "2026-09-13T20:22:57Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "To Great Heights! - Part 2",
+    "leads to": "To Great Heights! - Part 4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Seasonal change: this quest cannot be obtained.\n\nTo Great Heights! - Part 3 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You're doing great! But it's too early to stop. Shine your face more often, impress the audience. Stand out. Become the one they talk about, the one they come to see. Then the cash will come, and then other goodies: cars, girls... Although Tarkov is a little short on the latter. Anyway, the Arena is a great career opportunity right now, ha!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win 2 matches while claiming at least 3rd place in TeamFight, BlastGang, or CheckPoint mode in Arena"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +4,500 EXP\n- Ref Rep +0.03\n- 28 GP coins\n  - 29 GP coins with Intelligence Center Level 1\n  - 32 GP coins with Intelligence Center Level 2\n- 1× Valuables crate (Rare)\n- Unlocks the Arena item transfer service on Ref for main characters\n\"And now you're one step closer to the big leagues! Respect, brother.\""
+    }
+  ]
+}

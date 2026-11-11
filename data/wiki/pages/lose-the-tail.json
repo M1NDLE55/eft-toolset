@@ -1,0 +1,45 @@
+{
+  "title": "Lose the Tail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lose_the_Tail",
+  "revisionId": 362088,
+  "lastEdited": "2026-09-24T19:43:49Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Prapor",
+    "previous": "All-Inclusive Support",
+    "leads to": "Callsign Malachite",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Lose the Tail is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Things really have gotten worse now. My guys reported that Glukhar showed up at the treatment plant with his squad, probably looking for our deserter. And that means we're never gonna get that little document everyone's after. So I've got a new task for you. We need to neutralize the threat. You up for it? When you get back, I'll try to get that rat bastard to make a move right away, before he completely disappears off the radar.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 of Glukhar's guards on Lighthouse\n- Locate and neutralize Glukhar on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 450,000 Roubles\n  - 472,500 Roubles with Intelligence Center Level 1\n  - 517,500 Roubles with Intelligence Center Level 2\n- 1× AS VAL 9x39 special assault rifle\n- 3× VSS/VAL 9x39 6L25 20-round magazine (Plum)\n- 4× 9x39mm PAB-9 gs ammo pack (20 pcs)\n\"Honest work, soldier! Now get going. I need to get in touch with the deserter. Can't let this opportunity slip!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to eliminate Glukhar and 5 of his guards on Lighthouse. During the current event he can be found at the water treatment plant in the north."
+    }
+  ]
+}

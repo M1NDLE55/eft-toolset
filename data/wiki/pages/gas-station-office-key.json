@@ -1,0 +1,56 @@
+{
+  "title": "Gas station office key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gas_station_office_key",
+  "revisionId": 309361,
+  "lastEdited": "2025-04-04T06:53:58Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the gas station office door on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5780d0652459777df90dcb74",
+    "ID": "Дирик бенз"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gas station office key (Gas Office) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the director's office room inside one of the gas stations."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- It's much easier to see through the window from inside than it is from outside"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The last room on the right in the hallway inside the gas station on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Safe\n- 1x Pistols spawn on the desk\n- Gas station storage room key spawn, under the table\n- Loose loot (Currency, )\n- Possible Weapon box (4x4) in the corner"
+    }
+  ]
+}

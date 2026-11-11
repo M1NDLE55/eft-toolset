@@ -1,0 +1,48 @@
+{
+  "title": "Supervisor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Supervisor",
+  "revisionId": 359712,
+  "lastEdited": "2026-09-13T20:20:51Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Interchange",
+    "given by": "Ragman",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Supervisor is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day, brother! I've got a job for you. Have you seen how many cash registers at Ultra are locked up? You can't just break into them. I've got a feeling there's still something valuable left inside. If you can help me get the keys, I'll give you access to some better gear. And of course, I'll share the loot. Look for the keys somewhere near the cash registers, they might've been left behind there. My guys are too busy right now to dig around themselves. Leave those keys somewhere nearby, please.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 2 with Ragman to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash the Goshan cash register key at the BIZARRO store fitting rooms on Interchange\n  - (Optional) Obtain the Goshan cash register key\n- Stash the IDEA cash register key at Register #9 on Interchange\n  - (Optional) Obtain the IDEA cash register key\n- Stash the OLI cash register key at Register #7-8 on Interchange\n  - (Optional) Obtain the OLI cash register key"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Ragman Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 2× Phase control relay\n- 1× MSA Sordin Supreme PRO-X/L headset\n- 1× Walker's XCEL 500BT Digital headset\n\"Now that's what I'm talking about! Thanks, brother. Here's everything I promised.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Goshan cash register key | 1 | Required | N/A | Stashed item |\n| IDEA cash register key | 1 | Required | N/A | Stashed item |\n| OLI cash register key | 1 | Required | N/A | Stashed item |"
+    }
+  ]
+}

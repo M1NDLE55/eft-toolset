@@ -1,0 +1,33 @@
+{
+  "title": "Transits",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Transits",
+  "revisionId": 357992,
+  "lastEdited": "2026-09-08T16:27:42Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Transit",
+    "Transition",
+    "Transitions"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "In Escape from Tarkov, transits are used for map to map travel without leaving a raid.\n\nTransits are available 1 minute after the start of a raid and have a 20 second timer. Once a transit has been activated, extractions can no longer be used. All players of a lobby-made group need to be in the transit area for a transition to succeed, otherwise the timer restarts.\n\nThe available transits on each location can be found here:\n- Ground Zero\n- Streets of Tarkov\n- Interchange\n- Customs\n- Factory\n- Woods\n- Reserve\n- Lighthouse\n- Shoreline\n- The Lab"
+    },
+    {
+      "heading": "Item delivery",
+      "level": 2,
+      "text": "When using a transit as PMC, players can send items to their stash for a fee. Items will arrive after 1 hour via the mail system.\n\nThe size of the delivery inventory is influenced by your Scav karma.\n| Scav karma | Inventory size |\n| -0.99 - 0.99 | 3x4 |\n| 1 - 2.99 | 4x4 |\n| 3 - 4.99 | 4x5 |\n| 5+ | 5x5 |"
+    },
+    {
+      "heading": "EXP multiplier",
+      "level": 2,
+      "text": "When transits are used in the PvP game mode, a multiplier is applied to the EXP for each consecutive location. The below multipliers are not applied to the total raid EXP.\n\n| Transit location no. | EXP multiplier |\n| 1 | 1.16× |\n| 2 | 1.34× |\n| 3 | 1.56× |\n| 4 | 1.8× |\n| 5 | 2.09× |\n| 6 | 2.42× |\n| 7 | 2.81× |\n| 8 | 3.26× |\n| 9 | 3.77× |\n| 10 | 4.37× |\n| 11 | 5.07× |\n| 12 | 5.87× |\n| 13 | 6.81× |\n| 14 | 7.89× |\n| 15 | 9.15× |\n| 16 | 10.6× |"
+    }
+  ]
+}

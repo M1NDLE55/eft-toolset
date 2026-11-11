@@ -1,0 +1,44 @@
+{
+  "title": "District Patrol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/District_Patrol",
+  "revisionId": 361759,
+  "lastEdited": "2026-09-24T12:33:32Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Prapor",
+    "LL requirement": "2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "District Patrol is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Another job for you, warrior. Ever heard of the Cardinal residential complex? That's where you'll be headed. I want to send my boys in, but first we've gotta clear out all the local trash. Think of yourself as the neighborhood cop crashing a rowdy house party.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 20 any target using Assault rifles or Assault carbines on Streets of Tarkov"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Prapor Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"Already heard you got the job done. Good work, soldier!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill any 20 targets on Streets of Tarkov while using Assault rifles or Assault carbines."
+    }
+  ]
+}

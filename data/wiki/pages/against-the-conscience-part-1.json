@@ -1,0 +1,50 @@
+{
+  "title": "Against the Conscience - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Against_the_Conscience_-_Part_1",
+  "revisionId": 359062,
+  "lastEdited": "2026-09-13T20:09:48Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Fence",
+    "previous": "Hold the Lead, Create a Distraction - Part 1",
+    "leads to": "Against the Conscience - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Against the Conscience - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I hear you're working for Ref now. I've been keeping tabs on you for a while. I used to know a man who got tangled up just like you. He was Ref's previous champion for a while and then all of a sudden he disappeared. And I know for sure this had nothing to do with Kaban and Kollontay. If you don't want to vanish the same way this guy did, look for the last champion's apartment. I believe there's something of interest left there. The champion used to hang out with the smugglers in Dorms on Customs. Maybe you'll find some clues on how to get into the apartment.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "Seasonal change: this quest follows directly after Create a Distraction - Part 1 without completing Hold the Lead."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the old champion's room on Customs\n  - (Optional) Locate and obtain the key at the smugglers' base on Shoreline\n- Find out what happened to the champion\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,700 EXP\n- 50,000 Roubles\n  - 52,500 Roubles with Intelligence Center Level 1\n  - 57,500 Roubles with Intelligence Center Level 2\n- 1× CQC Osprey MK4A plate carrier (Assault, MTP)\n- 1× HK 416A5 5.56x45 assault rifle\n- 3× AR-15 5.56x45 HK Steel Maritime STANAG 30-round magazine\n- 3× 5.56x45mm MK 318 Mod 0 (SOST) ammo pack (50 pcs)\n- 1× Armband (ARENA)\n\"You want to ask Ref yourself? Well, it was nice knowing you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Dorm overseer key | 1 | Required | N/A | Unlocks the room between 209 and 211 in the three-story dorms on Customs. |\n\nThe champion's room is located on the second floor of the three-story dorms building on Customs, between the rooms 209 and 211. A Dorm overseer key is required to enter it. You must approach the puddle of blood on the floor next to the wardrobe to complete the objective."
+    }
+  ]
+}

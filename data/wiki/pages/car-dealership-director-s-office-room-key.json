@@ -1,0 +1,61 @@
+{
+  "title": "Car dealership director's office room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Car_dealership_director's_office_room_key",
+  "revisionId": 338366,
+  "lastEdited": "2026-03-12T22:43:18Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the director's office in the closed second floor section of the LexOs car dealership on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a399193901f439517cafb6",
+    "ID": "city_key3"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Car dealership director's office room key (LexOs) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the offices in the LexOs car dealership."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Your Car Needs a Service"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as initial equipment from Your Car Needs a Service"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Office in the closed second floor section of the LexOs car dealership at Streets of Tarkov. Requires a Car dealership closed section key to enter."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Drawer\n- 1x PC block\n- Loose loot (Valuables)"
+    }
+  ]
+}

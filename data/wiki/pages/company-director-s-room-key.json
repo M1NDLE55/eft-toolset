@@ -1,0 +1,61 @@
+{
+  "title": "Company director's room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Company_director's_room_key",
+  "revisionId": 358743,
+  "lastEdited": "2026-09-10T23:04:10Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the director's room on the second floor of the boiler building on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "6761a6f90575f25e020816a4",
+    "ID": "custom_key_prom_boss1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Company director's room key (Company) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "This key must have been used to lock one of the company offices located in the customs terminal area."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Shipment Tracking"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Drawers\n- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the floor next to trash bags opposite the staircase on the third floor of the three-story dorms building.\n\n- In the back of the white van left of the new gas station entrance.\n\n- On the ground next to the partial wall breakthrough from the crane yard to the new gas station."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the director's room on the second floor of the boiler building on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Weapon box (6x6)\n- 1x Sports bag\n- 2x Drawer\n- 2x Safe (locked)\n- 1× Intelligence folder spawn\n- 1x Poster spawn"
+    }
+  ]
+}

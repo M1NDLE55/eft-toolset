@@ -1,0 +1,40 @@
+{
+  "title": "I Am Speed - Part 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/I_Am_Speed_-_Part_3",
+  "revisionId": 359402,
+  "lastEdited": "2026-09-13T20:15:34Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "I Am Speed - Part 2",
+    "leads to": "All for the Show - Supremacy",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "I Am Speed - Part 3 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Admit it, there's nothing better than completely crushing an opponent, right? The easiest way to do it is by taking them out faster than they can even react. From what I've seen, you've learned to act fast, but let's make sure the result sticks.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 25 enemies within one match in CheckPoint, BlastGang, LastHero or TeamFight"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +40,000 EXP\n- Ref Rep +0.02\n- 99,100 Roubles\n- 50 GP coins\n- 1× Supply crate (Rare)"
+    }
+  ]
+}

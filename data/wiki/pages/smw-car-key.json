@@ -1,0 +1,56 @@
+{
+  "title": "SMW car key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SMW_car_key",
+  "revisionId": 306404,
+  "lastEdited": "2025-03-09T12:20:56Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the trunk of the blue car at the unlocked villa on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0eb38b86f774153b320eb0",
+    "ID": "BMW Shoreline"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "SMW car key (SMW) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "An SMW folding car key with locking buttons."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On a box at the construction site near the locked villa"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Trunk of the blue car at the unlocked villa on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Yellow keycard spawn location\n- Weapon spawn\n- Loose loot (Roubles, Provisions)"
+    }
+  ]
+}

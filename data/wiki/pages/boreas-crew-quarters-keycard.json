@@ -1,0 +1,81 @@
+{
+  "title": "Boreas crew quarters keycard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Boreas_crew_quarters_keycard",
+  "revisionId": 346980,
+  "lastEdited": "2026-06-16T14:24:35Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks crew rooms on Icebreaker.",
+    "storage_wallet": "Yes",
+    "storage_keytool": "No",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "69bb3ec9f609db77390b0e1a",
+    "ID": "item_ice_card_living1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Boreas crew quarters keycard (CQ) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A Paradigm Shipping keycard granting access to the crew cabins aboard the Boreas icebreaker."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the story chapter The Ticket"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "In one of five locations on level 3 of Icebreaker. A single keycard is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Canteen",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Gym",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Lock Locations",
+      "level": 2,
+      "text": "Doors to multiple crew rooms on Icebreaker."
+    },
+    {
+      "heading": "Level 3",
+      "level": 4,
+      "text": "Rooms no. 12, 15, and 16."
+    },
+    {
+      "heading": "Level 4",
+      "level": 4,
+      "text": "Rooms no. 18, 19, and 22."
+    },
+    {
+      "heading": "Level 5",
+      "level": 4,
+      "text": "Rooms no. 23 and 27."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- Room no. 12:\n  - Loose loot (Electronics, Medical supplies, Medical items, Provisions)\n\n- Room no. 15:\n  - Loose loot (Electronics, Provisions)\n  - 1x Sports bag\n\n- Room no. 16:\n  - Loose loot (Medical supplies, Stimulants, Provisions)\n\n- Room no. 18:\n  - Loose loot (Valuables, Provisions)\n  - 1x Sports bag\n\n- Room no. 19:\n  - Loose loot (Info items)\n\n- Room no. 22:\n  - Loose loot (Valuables, Provisions)\n  - 1x Sports bag\n\n- Room no. 23:\n  - Loose loot (Valuables, Electronics, Provisions)\n  - 1x Sports bag\n\n- Room no. 27:\n  - Loose loot (Provisions)"
+    }
+  ]
+}

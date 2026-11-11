@@ -1,0 +1,44 @@
+{
+  "title": "Calibration",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Calibration",
+  "revisionId": 359138,
+  "lastEdited": "2026-09-13T20:11:05Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "previous": "Chemistry Closet",
+    "leads to": "The Courier",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Calibration is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Ah, hey there, come on in. Listen, I want to ask you for something. You've already got accustomed to shooting at long-range distances, right? I need to calibrate some weapons, the zeroing is extremely important for every gun. I want you to grab your favorite rifle and shoot at enemies from at least 100 meters away. The shots have to be lethal and the targets have to be seriously trained. Write down all your results into a notebook, I'll process the data after. I'll be waiting for the results.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 47 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 20 PMC operatives from over 100 meters away"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- +4 Weapon Maintenance skill levels\n- +2 Intellect skill levels\n- 1× Armband (Kiba Arms)\n- 5× Can of thermite\n- 1x 5.45x39mm 7N40 ammo pack (120 pcs)\n- Unlocks purchase of 5.45x39mm 7N40 at Prapor LL4\n\"Great, that's all the results I needed, hand me the notebook. Thanks, mercenary.\""
+    }
+  ]
+}

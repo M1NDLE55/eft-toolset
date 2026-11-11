@@ -1,0 +1,63 @@
+{
+  "title": "Equipment crate (Rare)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Equipment_crate_(Rare)",
+  "revisionId": 356084,
+  "lastEdited": "2026-08-25T16:21:10Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [
+    "Locked equipment crate (Rare)",
+    "Unlocked equipment crate (Rare)"
+  ],
+  "infobox": {
+    "type": "Reward Loot Container",
+    "weight": "10 kg",
+    "grid": "4x4",
+    "node": "66571bf06a723f7f005a0619 665730fa4de4820934746c48",
+    "ID": "Arena_gearcrate_blue_closed Arena_gearcrate_blue_open"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Equipment crate (Rare) (Equipment (Rare)) is a Reward Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Before Unlocking",
+      "level": 3,
+      "text": "A trophy for participating in Arena battles. It contains various equipment to help you survive and kill in the harsh world of Tarkov. But first, you need to find a way to open this box."
+    },
+    {
+      "heading": "After Unlocking",
+      "level": 3,
+      "text": "A trophy for participating in Arena battles. It contains various equipment to help you survive and kill in the harsh world of Tarkov. The lock has been crudely broken, which means there are no more obstacles between you and the contents of the box."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n  - Must be un-locked at the Workbench level 1 before it can be opened\n- Cannot be listed for sale on the flea market\n- Destroyed after unpacking (Right-click \"unpack\")\n- Only the locked version can be stashed in Lucky Scav Junk box"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Possible reward from Ref's daily and weekly quests for Arena"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| Hand drill x1; Hand drill; +; Equipment crate (Rare) x1; Locked Equipment crate (Rare) | → | Workbench level 1; 1 minute | → | Equipment crate (Rare) x1; Unlocked Equipment crate (Rare) |"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "The crate can contain various chest rigs, armor vests, helmets, helmet attachments (like tactical flashlights and night vision devices), armor plates, earpieces, and masks."
+    }
+  ]
+}

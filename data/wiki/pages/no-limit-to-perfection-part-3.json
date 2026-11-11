@@ -1,0 +1,40 @@
+{
+  "title": "No Limit to Perfection - Part 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/No_Limit_to_Perfection_-_Part_3",
+  "revisionId": 359507,
+  "lastEdited": "2026-09-13T20:17:22Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "No Limit to Perfection - Part 2",
+    "leads to": "No Limit to Perfection - Part 4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "No Limit to Perfection - Part 3 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"When your conditioning's solid, it's time to start working on applied skills. For a good fighter, a rifle is an extension of his hands! Grab whichever one you like best and get out there to train.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 50 enemies while using assault rifles"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +25,000 EXP\n- +300 Assault Rifles skill points\n- 10 GP coins\n- 1× Valuables crate (Rare)"
+    }
+  ]
+}

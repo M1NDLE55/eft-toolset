@@ -1,0 +1,47 @@
+{
+  "title": "Surplus Goods",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Surplus_Goods",
+  "revisionId": 359718,
+  "lastEdited": "2026-09-13T20:20:56Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Surplus goods"
+  ],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Mechanic",
+    "previous": "Back Door",
+    "related": "-",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Surplus Goods is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I've decided to get involved with military electronics, it's quite a promising business, and I've got interested people for that. And the army, as you know, has the most secure communication: digital encryptions, GPS, GLONASS and all kinds of other things. So anyway, I've got info about some device on Reserve, usually seen in workshops, I think it's used in machinery, it's some kind of control and navigation block. I want you to find this block and bring it to me. Would be interesting to see what it has inside of it. I'll reward you of course.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain the MBT Integrated Navigation System on Reserve\n- Hand over the navigation system to Mechanic"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +7,500 EXP\n- Mechanic Rep +0.02\n- 40,000 Roubles\n  - 42,000 Roubles with Intelligence Center Level 1\n  - 46,000 Roubles with Intelligence Center Level 2\n- 2× Ultraviolet lamp\n- 2× Energy-saving lamp\n\"So that's how it looks! Great. Thank you, I'll study it more thoroughly later. Here's your reward, as promised.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| RB-ST key | 1 | Required | N/A | Unlocks room RB-ST where the MBT Integrated Navigation System is located. |\n| MBT Integrated Navigation System | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you need to pick up and extract with an MBT Integrated Navigation System. It can be found inside a locked room in the bigger of the two garage buildings at the repair center (white knight) on Reserve. A RB-ST key is required to open the door.\n\nThe item can be found inside a wooden crate in the back left of the room."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "title": "No Place for Renegades",
+  "url": "https://escapefromtarkov.fandom.com/wiki/No_Place_for_Renegades",
+  "revisionId": 361747,
+  "lastEdited": "2026-09-24T12:31:02Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "No place for renegades"
+  ],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Prapor",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "No Place for Renegades is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, warrior. I've got a new assignment for you, regarding that military base, the one you were checking out for me some time ago. In short, I'm not happy that my boys got killed in vain in that bunker. That's just not right. I'd like to let those Raiders know the consequences of their actions. An eye, for an eye, you know? Return to that bunker and fuck up some of them in that command offices area you found. Just so they know who they're messing with and that they better stop.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 Raiders in the command bunker on Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Good work out there. I hope they get what's going on now and that they can't just kill my people like that. Here's the reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 5 Scav Raiders in the underground bunker on Reserve. Scav Raiders have the chance to spawn there at the start of a raid, and additional ones may appear after the \"D-2\" extraction switch has been activated."
+    }
+  ]
+}

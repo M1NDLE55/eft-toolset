@@ -1,0 +1,60 @@
+{
+  "title": "Performance modifiers",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Performance_modifiers",
+  "revisionId": 355329,
+  "lastEdited": "2026-08-20T00:41:45Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Accuracy",
+    "Ergonomic",
+    "Ergonomics",
+    "Muzzle velocity",
+    "Recoil"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Performance modifiers are weapon and equipment stats that affect how your character interacts with their equipment and the world."
+    },
+    {
+      "heading": "Ergonomics",
+      "level": 2,
+      "text": "Ergonomics affects three different things:\n\n- The speed that the player aims down their sights.\n\n- The volume of the character aiming down their sights.\n\n- The speed that stamina drains at while aiming down sights."
+    },
+    {
+      "heading": "Weapon weight",
+      "level": 2,
+      "text": "The weapon weight affects two different things:\n- The speed that stamina drains at while aiming down sights.\n- The speed that the player aims down their sights."
+    },
+    {
+      "heading": "Recoil",
+      "level": 2,
+      "text": "Recoil affects the vertical and horizontal movement of your weapon when firing. Having higher recoil means your gun will move upwards and bounce side-to-side when shooting, usually making it more difficult to land shots on your target."
+    },
+    {
+      "heading": "Accuracy",
+      "level": 2,
+      "text": "Accuracy, displayed as \"MOA\", directly afffects bullet spread. The lower the MOA, the tigher the shot grouping.\n\n1 MOA represents approximately 1 inch (2,54 cm) of spread at 100 yards (91,44 m).\n\nNote: Currently, the in-game MOA stat expresses bullet spread as radius, instead of as diameter like in the real world. Meaning, the spread is twice as big as expected.\n\nTherefore, a weapon with 1 MOA has a shot grouping of 5,82 cm at 100 m."
+    },
+    {
+      "heading": "Muzzle Velocity",
+      "level": 2,
+      "text": "Muzzle velocity decreases the drop rate of your shots as well as increasing the speed at which your bullets travel."
+    },
+    {
+      "heading": "Turn Speed",
+      "level": 2,
+      "text": "Just like the name states, the lower your turn speed the slower your character will turn. This effectively lowers the mouse sensitivity of the player when not aiming down sights. The mouse sensitivity when aiming down sights is not affected by this statistic. This statistic is modified by most of the headwear, body armors and armored chest rigs."
+    },
+    {
+      "heading": "Movement Speed",
+      "level": 2,
+      "text": "Just like the name states the lower the movement speed, the slower the player will move."
+    }
+  ]
+}

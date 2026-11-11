@@ -1,0 +1,61 @@
+{
+  "title": "Kiba Arms inner grate door key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kiba_Arms_inner_grate_door_key",
+  "revisionId": 358753,
+  "lastEdited": "2026-09-10T23:04:55Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the inner grate door to the KIBA firearms store on Interchange.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5addaffe86f77470b455f900",
+    "ID": "Key_Shopping_Mall_KIBA_2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Kiba Arms inner grate door key (KIBA inner) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the inner gate door of the KIBA Arms International outlet at the ULTRA shopping mall."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This is the second of two keys required to enter the KIBA firearms store. The first one is the Kiba Arms outer door key."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Provocation"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Located on the first floor of the ULTRA shopping mall on Interchange, near the center of the mall."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Weapon mods, Armor plates, )\n- 2x Weapon box (4x4)\n- 1x Weapon box (6x6)\n- 2x Cash register (locked)\n- Possible in the cashier desk opposite the big gun wall:\n  - SIG MCX-SPEAR 6.8x51 assault rifle (variant CQB)\n- Possible on the gun rack:\n  - TDI KRISS Vector Gen.2 .45 ACP submachine gun\n- Possible in the weapon locker:\n  - Molot Arms VPO-136 Vepr-KM 7.62x39 carbine\n  - Saiga-12K ver.10 12ga semi-automatic shotgun\n  - Saiga-9 9x19 carbine\n- Possible on the gun walls:\n  - Modified SV-98 7.62x54R bolt-action sniper rifle\n  - Standard or Neptune Spear variant SIG MCX .300 Blackout assault rifle\n  - Standard or modified Colt M4A1 5.56x45 assault rifle\n  - Standard or modified Kalashnikov AK-12 5.45x39 assault rifle\n  - CMMG Mk47 Mutant 7.62x39 assault rifle\n  - Degtyarev RPD 7.62x39 machine gun\n  - Desert Tech MDR 5.56x45 assault rifle\n  - Desert Tech MDR 7.62x51 assault rifle\n  - DS Arms SA58 7.62x51 assault rifle\n  - FN SCAR-H 7.62x51 assault rifle (FDE)\n  - HK 416A5 5.56x45 assault rifle\n  - HK G28 7.62x51 marksman rifle\n  - HK MP5 9x19 submachine gun (Navy 3 Round Burst) (variant SD Spec)\n  - Knight's Armament Company SR-25 7.62x51 marksman rifle\n  - Lone Star TX-15 DML 5.56x45 carbine\n  - Mossberg 590A1 12ga pump-action shotgun\n  - Rifle Dynamics RD-704 7.62x39 assault rifle\n  - SIG MCX-SPEAR 6.8x51 assault rifle\n  - SIG MCX-SPEAR 6.8x51 assault rifle (variant CQB)\n  - SV-98 7.62x54R bolt-action sniper rifle (variant OV)\n  - Steyr AUG A1 5.56x45 assault rifle\n  - Steyr AUG A3 5.56x45 assault rifle\n  - Tokarev SVT-40 7.62x54R rifle\n  - Tokarev SVT-40 7.62x54R rifle (variant Sniper)\n- Possible on the mannequins:\n  - Diamond Age Bastion helmet (Black)\n  - HighCom Striker ACHHC IIIA helmet (Olive Drab)\n  - MSA ACH TC-2001 MICH Series helmet (Olive Drab)\n  - Maska-1SCh bulletproof helmet (Olive Drab)\n  - PSh-97 DJETA riot helmet\n  - SSSh-94 SFERA-S helmet\n  - ZSh-1-2M helmet (Black cover)\n  - BNTI Kirasa-N body armor\n  - BNTI Zhuk body armor (Press)\n  - DRD body armor\n  - 5.11 Tactical Hexgrid plate carrier\n  - HighCom Trooper TFO body armor (MultiCam)\n  - Interceptor OTV body armor (UCP)"
+    }
+  ]
+}

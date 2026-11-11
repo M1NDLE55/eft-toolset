@@ -1,0 +1,40 @@
+{
+  "title": "I Am Speed - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/I_Am_Speed_-_Part_1",
+  "revisionId": 359400,
+  "lastEdited": "2026-09-13T20:15:31Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Advertising Business - Part 6",
+    "leads to": "I Am Speed - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "I Am Speed - Part 1 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I hate it when fighters just sit in corners like scared little rats. Long pauses are a disgusting, exhausting sight for the audience. Show me a slaughter! Speed! Adrenaline! Only speed will flush those rats out of their holes!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 2 enemies within 10 seconds 10 times"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +32,000 EXP\n- Ref Rep +0.02\n- 88,200 Roubles\n- 40 GP coins\n- 1× Supply crate (Rare)"
+    }
+  ]
+}

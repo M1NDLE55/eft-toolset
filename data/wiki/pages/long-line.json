@@ -1,0 +1,43 @@
+{
+  "title": "Long Line",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Long_Line",
+  "revisionId": 359458,
+  "lastEdited": "2026-09-13T20:16:31Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Interchange",
+    "given by": "Ragman",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Long Line is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Barev, brother! I need your help, and I need it quick. I sent my guys to Ultra to pick up some gear, but a group of PMCs cornered them there. My bois had no choice but to pull out empty-handed. I've got a business to run here, deliveries to make, important people waiting! Brother, deal with those fuckers for me. I'll owe you one!\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Obtain level 1 loyalty with Ragman"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 4 PMCs on Interchange"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Skier Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 3× Energy-saving lamp\n\n\"Respect, brother, you helped me out big time! If you see any dangerous dudes in Ultra, you let me know. Might need you to deal with them again.\""
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Wet Job - Part 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wet_Job_-_Part_3",
+  "revisionId": 359883,
+  "lastEdited": "2026-09-13T20:23:42Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Wet Job. Part 3"
+  ],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "previous": "Wet Job - Part 2",
+    "leads to": "Wet Job - Part 4",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Wet Job - Part 3 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You hit the spot there, my friend. My partners are very interested in what this affair could bring us. The Helmets inspected the place you marked and found out that some fisherman lived there for a while. It seems, though, he is long dead, and people on cameras are his friends. However, we know that he was friends with a certain person called Artyom, who was often seen driving a yellow Daihyn. Their shared business was somehow linked to the Russian military, now you understand why it could prove interesting? Artyom’s car is most likely still on the Shoreline, I doubt he could've drove off on it after the conflict. Use the provided description to find it, write down the plate number, and we’ll use it to get the details on who that Artyom may be.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 14 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate Artyom's car on Shoreline\n- Mark Artyom's car with MS2000 Marker"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 2x .300 Blackout M62 Tracer ammo pack (50 pcs)\n- 1,900 Dollars\n  - 1,995 Dollars with Intelligence Center Level 1\n  - 2,185 Dollars with Intelligence Center Level 2\n- 1× NcSTAR ADO P4 Sniper 3-9x42 riflescope\n- Unlocks ability to craft .300 Blackout M62 Tracer in hideout\n\"So, the car was there, no damage? No signs of attack, yes? We’ll run it through the database, I feel we’re in for more fascinating discoveries.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to find Artyom's car on Shoreline. The car is yellow and located on the main road along the shore. It can be found next to a yellow bus and a police car."
+    }
+  ]
+}

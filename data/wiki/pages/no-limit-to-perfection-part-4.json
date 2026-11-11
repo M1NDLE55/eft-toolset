@@ -1,0 +1,40 @@
+{
+  "title": "No Limit to Perfection - Part 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/No_Limit_to_Perfection_-_Part_4",
+  "revisionId": 359508,
+  "lastEdited": "2026-09-13T20:17:23Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "No Limit to Perfection - Part 3",
+    "leads to": "No Limit to Perfection - Part 5",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "No Limit to Perfection - Part 4 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You know what a lot of fighters forget? How to fight at distance. Our Arenas aren't huge, sure, but there's still room to stretch things out. Don't waste that advantage. A talented fighter has to be good at everything!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 50 enemies while using marksman rifles"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +26,000 EXP\n- +300 DMRs skill points\n- 15 GP coins\n- 1× Valuables crate (Rare)"
+    }
+  ]
+}

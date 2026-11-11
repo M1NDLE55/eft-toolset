@@ -1,0 +1,60 @@
+{
+  "title": "RB-MP12 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-MP12_key",
+  "revisionId": 316207,
+  "lastEdited": "2025-07-18T21:37:35Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-MP12"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽88,000",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80c95986f77440351beef3",
+    "ID": "rezbase_key_ptor1_craft2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-MP12 key (RB-MP12) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the Federal State Reserve Agency base Service and Repair Center workshop rooms."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the warehouse at the sawmill. The key can be found next to the boxes in the blue locker."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Jacket\n- 1x Wooden crate\n- One Intelligence folder (on top of the table, left of the wooden crate)\n- One 6-STEN-140-M military battery spawn\n- Loose loot, ammo"
+    }
+  ]
+}

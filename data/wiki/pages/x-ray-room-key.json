@@ -1,0 +1,61 @@
+{
+  "title": "X-ray room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/X-ray_room_key",
+  "revisionId": 352326,
+  "lastEdited": "2026-08-07T21:37:59Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the x-ray control room on the second floor of the children's polyclinic no. 69 on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "64ccc246ff54fb38131acf29",
+    "ID": "city_key37"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "X-ray room key (X-ray) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The key to the control room in the radial diagnostics room of Children's Polyclinic No. 69."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Pets Won't Need It"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Drawers\n- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In different locations in the vet clinic.\n\n- In different locations in the polyclinic."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the x-ray control room on the second floor of the children's polyclinic no. 69 at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Drawer\n- Loose loot (Medical supplies)"
+    }
+  ]
+}

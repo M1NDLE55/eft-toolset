@@ -1,0 +1,61 @@
+{
+  "title": "Health Resort west wing room 220 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_west_wing_room_220_key",
+  "revisionId": 358723,
+  "lastEdited": "2026-09-10T23:00:04Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks room 220 of the West wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0ee34586f774023b6ee092",
+    "ID": "Санаторий 220"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort west wing room 220 key (W220 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium west wing room 220."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the Quest I Need More Power when you don't have a Health Resort west wing room 219 key"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In a key rack in the unlocked villa\n\n- In a shelf in the southern warehouse at the smuggler base.\n\n- In a key rack in west wing room 202 at the health resort.\n\n- On the floor below a key rack in the utility room next to west wing room 227 at the health resort.\n\n- In the key rack near the central stairs on the second floor of the east wing at the health resort.\n\n- On the floor below a key rack near the central stairs on the third floor of the east wing at the health resort."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor, room 220 of the West Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Weapon box (4x4)\n- 2x Weapon box (6x2)\n- 1x Wooden crate\n- Loose loot (Valuables, Meds, Medical supplies, Currency)"
+    }
+  ]
+}

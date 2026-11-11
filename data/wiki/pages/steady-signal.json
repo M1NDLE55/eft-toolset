@@ -1,0 +1,48 @@
+{
+  "title": "Steady Signal",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steady_Signal",
+  "revisionId": 359702,
+  "lastEdited": "2026-09-13T20:20:41Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Mechanic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Steady Signal is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hm, you'll be perfect for this. You know the weather stations in Woods? They monitor the atmosphere, and they have power supplies for their sensors inside. And I coincidentally have to power the transmitters. I doubt they've been disturbed since the start of the conflict. Which means there could be power supplies inside in operational condition. Find the weather stations and set up the trackers. Then I'll have my crew attach the transmitters to them.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Mark any of the weather stations with an MS2000 Marker on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +14,000 EXP\n- Mechanic Rep +0.02\n- 48,000 Roubles\n  - 50,400 Roubles with Intelligence Center Level 1\n  - 55,200 Roubles with Intelligence Center Level 2\n- 1× Military cable\n- 1× Military circuit board\n\"I'm receiving the signals, my men are on their way to Woods. Your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed on the weather stations. When placed, the item is removed from the players' inventory. |\nIn this quest you have to mark any weather station on Woods with an MS2000 Marker."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

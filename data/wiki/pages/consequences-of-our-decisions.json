@@ -1,0 +1,61 @@
+{
+  "title": "Consequences of Our Decisions",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Consequences_of_Our_Decisions",
+  "revisionId": 359196,
+  "lastEdited": "2026-09-13T20:12:04Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Mechanic",
+    "previous": "Accept Final Stretch",
+    "leads to": "Desperate Assault",
+    "related": "Final Stretch",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Consequences of Our Decisions is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I know you've been working with Fence lately. I'm not going to lecture you about the risks of dealing with him, but there is something I have to say. Somehow, he's managed to locate TerraGroup facilities that were never mentioned anywhere, and now he's hauling materials and equipment out of them. Think about what could be hidden in places like that, if even human experimentation and deadly viruses were easier to uncover than these secret sites. Fence stopped caring about the outside world a long time ago, and honestly, I don't really feel like I'm part of it anymore either. But that doesn't mean common sense goes out the window. Putting materials like these into the hands of someone who'd sell them to anyone willing to pay is an enormous risk. If you want, read these documents yourself first. I'll give you the keys to try and break the encryption. I hope you'll make the right choice and bring that laptop to me.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Decrypt the data from the secret facility laptop\n- Read the data recovered from Fence's laptop\n- Hand over the laptop"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +35,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 5× Electric drill\n- 3× Military COFDM Wireless Signal Transmitter\n- 5× Cyclon rechargeable battery\n- 5× Toolset\n- 1× Briefcase with documents\n- Unlocks achievement Profit Over Principles\n\"I'm glad you're on my side. For a while, I thought you were actually going to sell the data to Fence. Honestly, it wouldn't have surprised me, considering the direction this world is heading... But people like you give me hope that we might still be able to fix some of this without killing each other in the process.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"I don't believe you made that choice knowingly. Maybe you rushed it, or maybe you underestimated the consequences. All we can do now is hope that facility and the data it contained were classified for reasons other than how dangerous or important they are. Though, truth be told, I don't believe that myself...\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "Unlocks craft for Data from Fence's laptop at Intelligence Center level 1."
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Laptop from an unknown facility | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Data from Fence's laptop | 1 | Required | N/A | Has to be crafted in the Hideout (Intelligence center lv. 1). |\nIn this quest you first have to find the Laptop from an unknown facility. Then craft the Data from Fence's laptop at the Intelligence Center level 1 in the Hideout and read it from the off-raid quest inventory. Afterwards hand over the laptop to Mechanic.\n\nThe laptop is located at a ventilation shaft in an alley behind the diner on Nikitskaya Street at Streets of Tarkov."
+    }
+  ]
+}

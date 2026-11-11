@@ -1,0 +1,44 @@
+{
+  "title": "Operation Aquarius",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Operation_Aquarius",
+  "revisionId": 361694,
+  "lastEdited": "2026-09-24T12:09:24Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Therapist",
+    "LL requirement": "1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Operation Aquarius is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon, young man. You came at just the right time. I have a job with a very generous payout. Interested? I'm sure you are aware that our region has a serious drinking water problem. It was recently discovered that the aquifers have been contaminated. But do not worry, my team and I are already working on a solution. I need you for something else. Certain people have decided to profit from everyone else's misfortune. I know one gang has stockpiled all the clean water they could get their hands on in the Dorms area. I'm sure you know where that is. Now they are selling it behind my back while innocent people suffer! Bring me that water.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the water stockpile hidden inside one of the dorms rooms on Customs\n- Hand over 3 any found in raid drinking water items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Therapist Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"Excellent work! Share the profits with you..? Surely you don't think I'm going to sell the water. This is purely a humanitarian effort!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Dorm room 206 key | 1 | Required | N/A | Unlocks dorm room 206 in the two-story dorms on Customs where the hidden water is located. |\n| Bottle of water (0.6L) | 3 | Required | Yes | Hand over item. |\n| Aquamari water bottle with filter | 3 | Required | Yes | Hand over item. |\n| Canister with purified water | 3 | Required | Yes | Hand over item. |\n| Bottle of YMXC water | 3 | Required | Yes | Hand over item. |\n| Emergency Water Ration | 3 | Required | Yes | Hand over item. |\nIn this quest you have to find the hidden water on Customs. It can be found in room 206 on the second floor of the two-story dorms building. A Dorm room 206 key is required to enter it. You also need to hand over 3 water drinking items found in raid to Therapist."
+    }
+  ]
+}

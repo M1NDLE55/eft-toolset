@@ -1,0 +1,51 @@
+{
+  "title": "Underground parking utility room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Underground_parking_utility_room_key",
+  "revisionId": 358672,
+  "lastEdited": "2026-09-10T22:55:48Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the utility room at the underground parking garage on Ground Zero.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "658199972dc4e60f6d556a2f",
+    "ID": "sand_key2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Underground parking utility room key (Utility) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the utility room at the underground parking in the city center."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the utility room at the underground parking garage at Ground Zero."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Dead Scav\n- Wooden ammo box\n- Toolbox\n- Grenade box\n- Weapon box (4x4)\n- Weapon box (6x2)"
+    }
+  ]
+}

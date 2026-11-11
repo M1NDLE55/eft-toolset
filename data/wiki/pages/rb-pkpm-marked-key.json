@@ -1,0 +1,62 @@
+{
+  "title": "RB-PKPM marked key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-PKPM_marked_key",
+  "revisionId": 337125,
+  "lastEdited": "2026-03-04T02:27:01Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "max uses": "25",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the marked room next to the command office in the underground tunnel system on Reserve.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ede7a8229445733cb4c18e2",
+    "ID": "rezbase_key_mech_bunk1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-PKPM marked key (RB-PKPM) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A Federal State Reserve Agency base bunker command office room key with multiple strange symbols scratched onto it where the room label would usually be. The key is stained by blood and appears to have been misused a lot, making it fragile."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here when you don't have any of the other marked keys\n- Used in the story chapter The Ticket"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the marked room next to the command office in the underground tunnel system on Reserve."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (multiple very rare Valuables, Weapons, Containers, Currency, Keycards)\n- 3x Drawer"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| RB-VO marked key x1; RB-VO marked key (used); +; RB-PKPM marked key x1; RB-PKPM marked key (used); +; RB-BK marked key x1; RB-BK marked key (used) | → | Jaeger; Jaeger LL3 | → | Dorm room 314 marked key; Dorm room 314 marked key |"
+    }
+  ]
+}

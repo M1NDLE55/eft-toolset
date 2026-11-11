@@ -1,0 +1,45 @@
+{
+  "title": "Plastic gear crate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Plastic_gear_crate",
+  "revisionId": 357306,
+  "lastEdited": "2026-09-01T11:25:01Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reward Loot Container",
+    "weight": "15 kg",
+    "grid": "5x4",
+    "node": "6a39244f3f411d06e104675a",
+    "ID": "item_container_plastics_suitcase_raid_preset_for_begginers_1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Plastic gear crate (Gear) is a Reward Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A sturdy case containing all the necessary equipment to start a raid."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n- Cannot be listed for sale on the flea market\n- Destroyed after unpacking (Right-click \"unpack\")"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "Sent by Prapor via in-game mail to PMCs who are short on cash."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "Each crate contains a weapon with fitting weapon mods and ammunition as well as grenades, medical items, a helmet, an armor vest, two chest rigs and a backpack."
+    }
+  ]
+}

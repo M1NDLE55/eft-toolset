@@ -1,0 +1,98 @@
+{
+  "title": "Factory emergency exit key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Factory_emergency_exit_key",
+  "revisionId": 357244,
+  "lastEdited": "2026-08-31T18:52:21Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "Factory key"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "- Unlocks two additional extractions and a room on Factory - Unlocks an extraction on Customs - Unlocks the doors to the guard building of the crane yard on Customs",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5448ba0b4bdc2d02308b456c",
+    "ID": "exitkey"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Factory emergency exit key (Factory) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A somewhat fragile factory emergency exit door key."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in Therapist's quest Health Care Privacy - Part 6\n- Used in Fence's quest Is This a Reference?"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On a table next to the broken TV in the guard desk office located in the three-story dorms\n\n- In a blue locker inside warehouse #7."
+    },
+    {
+      "heading": "Lock Locations",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "Two additional extractions and a locked room next to the office:\n- Med Tent Gate extraction\n\n- Cellars extraction in the underground\n\n- Locked room on the 3rd floor of the office area"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Two doors to the guard building of the crane yard next to the new gas station\n\n- Door leading to the ZB-013 extraction in the basement of the Scav base"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- Med Tent Gate extraction\n- Cellars extraction in the underground\n- Locked room on the 3rd floor of the office area:\n  - Portable bunkhouse key spawn location\n  - 1x Jacket"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- ZB-013 extraction\n- Crane yard guard building:\n  - Loose loot (Weapon mods)\n  - TerraGroup Labs arsenal storage room key spawn location\n  - 1x Drawer\n  - 1x Wooden crate"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Factory emergency exit key x1; Factory emergency exit key (used); +; Iskra ration pack x3; Iskra ration pack; +; MRE ration pack x1; MRE ration pack | → | Jaeger; Jaeger LL2 | → | Factory emergency exit key; Factory emergency exit key |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The key also erroneously unlocks the always empty driver's cabs of various trucks in the game."
+    }
+  ]
+}

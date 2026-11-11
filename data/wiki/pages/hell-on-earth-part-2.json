@@ -1,0 +1,53 @@
+{
+  "title": "Hell on Earth - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hell_on_Earth_-_Part_2",
+  "revisionId": 360827,
+  "lastEdited": "2026-09-20T11:35:14Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Prapor",
+    "previous": "Hell on Earth - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hell on Earth - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Warrior! Remember the DB you were building? I couldn't deliver it past the border. That's a bummer, the shotty is gorgeous. Speaking of, we've got plenty of demons of our own in Tarkov. Can't even take a shit in the woods at night! Why don't you take this gun out for a spin and deal with those devils?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only available to buyers of the \"Edge of Darkness\" edition of the game."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 2 hooded men while using the double barrel shotgun"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 3× VOG-25 Khattabka improvised hand grenade\n- 3× RGN hand grenade\n- 3× RGO hand grenade\n\"How'd it go? We really should add something like that to the inventory... I think it's gonna be a big hit!\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount |\n| MP-43-1C 12ga double-barrel shotgun | 1 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement |\n| MP-43-1C 12ga double-barrel shotgun | As many as needed | Used by the player to eliminate Cultists. |\n| MP-43 12ga sawed-off double-barrel shotgun | As many as needed | Used by the player to eliminate Cultists. |\nIn this quest you have to kill 3 Cultists with a MP-43-1C 12ga double-barrel shotgun or MP-43 12ga sawed-off double-barrel shotgun. It can be in any configuration."
+    }
+  ]
+}

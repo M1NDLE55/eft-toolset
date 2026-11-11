@@ -1,0 +1,56 @@
+{
+  "title": "Black Division keycard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Black_Division_keycard",
+  "revisionId": 358669,
+  "lastEdited": "2026-09-10T22:55:34Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a passageway in the administration building (D3) on Terminal.",
+    "storage_wallet": "Yes",
+    "storage_keytool": "No",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "No",
+    "node": "6866ad3853330f9b83064cf9",
+    "ID": "item_keycard_terminal_bd"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Black Division keycard (BD) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "It seems the Black Division operatives have somehow prepared a working access keycard. It should also work on doors at the seaport."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be discarded."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "In a Weapon box (6x2) inside the seaport terminal building (MS) on Terminal. A single keycard is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to a passageway in the administration building (D3) on Terminal."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "Way to the pumping station building."
+    }
+  ]
+}

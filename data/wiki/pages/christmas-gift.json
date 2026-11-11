@@ -1,0 +1,45 @@
+{
+  "title": "Christmas gift",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Christmas_gift",
+  "revisionId": 329516,
+  "lastEdited": "2025-12-24T23:09:54Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pickupable Event Loot Container",
+    "weight": "3 kg",
+    "grid": "2x3",
+    "node": "63a898a328e385334e0640a5",
+    "ID": "new_year_gift_medium"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Christmas gift (Gift) is a pickupable Event Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A neatly wrapped Christmas gift. Looks like Santa is kind to you. Come on, open it up!"
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n- Cannot be listed for sale on the flea market\n- Destroyed after unpacking (Right-click \"unpack\")"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "Random surprises."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item was first added as part of Escape from Tarkov's 2023 Christmas celebration."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Green Corridor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Green_Corridor",
+  "revisionId": 361754,
+  "lastEdited": "2026-09-24T12:32:35Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Prapor",
+    "LL requirement": "2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Green Corridor is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Those bloody westerners! All they want to do is shoot everybody! It's already been negotiated, we even paid them to let us through! But no, they want to spill more of our blood! All right, soldier, come here and listen. A convoy was passing through town. With important cargo. Very important. Even I don't know what's in it. Somebody took money for the convoy's safe passage, and then the convoy went dark. Think about it, such bastards! Find out what's going on and if anything could be saved. And find out where the shooting came from...\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by BEAR PMCs."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the cargo convoy on Streets of Tarkov\n- Determine the ambush spot\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Prapor Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"The convoy was swept clean, huh? So it was all planned from the beginning... But the main vehicle wasn't breached, that's the main thing. The shooting started from the car dealership? So it was Kaban... Oh, sorry, I'm just thinking out loud, I'll have to think it over. Thank you. Come back later.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to find the cargo convoy and the ambush spot on Streets of Tarkov. The convoy is located between the LexOs car dealership and the Pinewood hotel. The ambush spot is an area that reaches from the green container with the AGS-30 grenade launcher behind the car dealership to the northeastern part of the car dealership.\n\nBe aware that the premises of the LexOs car dealership are riddled with Claymores."
+    },
+    {
+      "heading": "See also",
+      "level": 2,
+      "text": "- Road Closed - The USEC counterpart quest"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Found in raid",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Found_in_raid",
+  "revisionId": 313485,
+  "lastEdited": "2025-05-18T14:07:36Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Find in raid",
+    "Fir"
+  ],
+  "infobox": {
+    "title": "Found in raid mark",
+    "group4": "When needed for a quest"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Many of the quests in Escape from Tarkov require items to be found in raid.\n\nAn item is marked as \"Item found in raid\" if:\n- It was found in a raid and the raid was ended with the \"Survived\" extraction status.\n  - Items brought into a raid by PMC's automatically lose the found in raid condition.\n  - Items that were extracted from a raid which was ended with the \"Left the Action\", \"Killed in Action (KIA)\", \"Missing in Action (MIA)\" or \"Run Through\" extraction states do not have the found in raid condition.\n    - To avoid the \"Run Through\" extraction status, gain at least 200 EXP in raid by killing or looting, or be in the raid for at least 7 minutes before extracting.\n- It was crafted in the Hideout.\n- It was obtained as a quest reward.\n\nItems that were found in raid and get delivered to the stash via the BTR Driver's item extraction service or when using transits stay marked as such."
+    }
+  ]
+}

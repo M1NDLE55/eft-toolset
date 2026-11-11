@@ -1,0 +1,71 @@
+{
+  "title": "Blank RFID keycard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Blank_RFID_keycard",
+  "revisionId": 360251,
+  "lastEdited": "2026-09-15T11:53:39Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "This keycard does not open any lock.",
+    "storage_wallet": "Yes",
+    "storage_keytool": "No",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "67c031b79320f644db06f456",
+    "ID": "q_card_fid_clear"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Blank RFID keycard (Blank RFID) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A blank access keycard template. It doesn't open anything, at least not yet."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- Pockets and bags of Scavs\n- On Bosses"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- At the three-story dorms in the \"marked room\""
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In Kruglov's office (R22) and the safe inside of it"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "None."
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| RFID keycard encryption device x1; RFID keycard encryption device; +; TerraGroup Labs master keycard x1; TerraGroup Labs master keycard; +; Blank RFID keycard x1; Blank RFID keycard; +; Kruglov's RFID keycard x1; Kruglov's RFID keycard | → | Intelligence Center level 1; 23 h 30 minAfter progressing through; the story chapter The Ticket; required during the entire process | → | Activated Kruglov's RFID keycard x1; Activated Kruglov's RFID keycard |\n| RFID keycard encryption device x1; RFID keycard encryption device; +; Activated Kruglov's RFID keycard x1; Activated Kruglov's RFID keycard; +; Flash drive with Mr. Kerman's hash codes x1; Flash drive with Mr. Kerman's hash codes; +; Blank RFID keycard x1; Blank RFID keycard | → | Intelligence Center level 1; 5 h 30 minAfter progressing through; the story chapter The Ticket; required during the entire process | → | Reprogrammed RFID keycard with Mr. Kerman's hash codes x1; Reprogrammed RFID keycard with Mr. Kerman's hash codes |\n| Activated Kruglov's RFID keycard x1; Activated Kruglov's RFID keycard; +; Flash drive with Prapor's hash codes x1; Flash drive with Prapor's hash codes; +; Blank RFID keycard x1; Blank RFID keycard | → | Intelligence Center level 1; 5 h 30 minAfter progressing through; the story chapter The Ticket; required during the entire process | → | Reprogrammed RFID keycard with Prapor's hash codes x1; Reprogrammed RFID keycard with Prapor's hash codes |"
+    }
+  ]
+}

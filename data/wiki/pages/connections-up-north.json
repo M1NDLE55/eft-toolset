@@ -1,0 +1,43 @@
+{
+  "title": "Connections Up North",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Connections_Up_North",
+  "revisionId": 362465,
+  "lastEdited": "2026-09-29T15:35:28Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "LL requirement": "4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Connections Up North is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I've got some special supply channels. Hell, I can even get certain bits shipped in from Finland! My contact over there has set up a route for some seriously dangerous toys. This isn't some TOZ or VPO, you know. But I can't just sell stuff like that to anyone. I've learned that the hard way. A bunch of clumsy idiots can ruin the reputation of even the best product in the world. So I came up with a little scheme. I want to start a rumor first. Make people believe there's a bloke roaming Tarkov who's not just some fighter, but a proper master, yeah? Shoots with deadly accuracy, leaves nothing but piles of dead PMCs behind him. And nobody can even spot him because he's a professional, using bolt-action rifles with electronic scopes. Then, bam! The guy shows up with my gear in his hands. Everyone will understand that the best operators come to me for their kit. I reckon you're the right man for it. Make people afraid to even step outside at night, and I'll sort you out with these hot new imports. First batch is on me!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 20 PMC operatives with a bolt-action rifle with night or thermal scope"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Skier Rep +1.5\n- 2,400 Euros\n  - 2,520 Euros with Intelligence Center Level 1\n  - 2,760 Euros with Intelligence Center Level 2\n- 1× Sako TRG M10 .338 LM bolt-action sniper rifle\n- 2× Sako TRG M10 .338 LM 8-round magazine\n- 1× .338 Lapua Magnum FMJ ammo pack (20 pcs)\n- +4 Attention skill levels\n- +4 Covert Movement skill levels\n- Unlocks purchase of Sako TRG M10 .338 LM bolt-action sniper rifle at Skier LL4\n\"Even my contacts have started hearing the rumors! They reckon there's no countering a trick like that. With a rifle like this, you'll become a proper legend.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 20 PMCs while using a bolt-action rifle with a night or thermal vision sight. To have the kills count for this quest, the sight just needs to be installed on the gun, and not necessarily be actively used. This means you can use a sight that supports backup sights, like the Armasight Vulcan MG 3.5x Bravo night vision scope, and use any compact reflex sight of your choice on top."
+    }
+  ]
+}

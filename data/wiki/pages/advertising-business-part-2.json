@@ -1,0 +1,45 @@
+{
+  "title": "Advertising Business - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Advertising_Business_-_Part_2",
+  "revisionId": 359056,
+  "lastEdited": "2026-09-13T20:09:42Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "All for the Show - Pyrotechnics",
+    "leads to": "Jack of All Trades - Pro",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Advertising Business - Part 2 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"After his recent success in the Arena advertisement business, Ragman's saying he wants more. Real businessman! Knows this gig is profitable. This time, I need you to show some real class with his guns. Use the UZI PRO or the 7.62 MDR. Aim for the head, makes it a lot more spectacular!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 50 enemies with headshots while using an UZI PRO or MDR 7.62x51"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Ref Rep +0.01\n- 95,000 Roubles\n- 20 GP coins\n- Unlocks WARTECH TV-110 plate carrier (Coyote) in the Armory"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Requirement | Notes |\n| IWI UZI PRO Pistol 9x19 submachine gun; or; Desert Tech MDR 7.62x51 assault rifle | IWI UZI PRO Pistol 9x19 submachine gun; or; Desert Tech MDR 7.62x51 assault rifle | Required | Has to be used for the kills |"
+    }
+  ]
+}

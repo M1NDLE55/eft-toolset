@@ -1,0 +1,36 @@
+{
+  "title": "Troubleshooting",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Troubleshooting",
+  "revisionId": 362579,
+  "lastEdited": "2026-09-29T19:39:44Z",
+  "kind": "skill",
+  "categories": [
+    "Combat skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Combat skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Troubleshooting is a Combat skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Troubleshooting skill facilitates rectification of weapon malfunctions."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases troubleshooting speed (0.5% per level → +25% at Elite Level)\n- Elite level: Malfunction type identification doesn't require weapon examination.\n- Elite level: Reduces the chance of malfunctions from a magazine by 50% after fixing a malfunction caused by the same reason\n- Elite level: Reduces the chance of malfunctions based on the durability of weapons by 50% after fixing a malfunction caused by the same reason\n- Elite level: Reduces the chance of malfunctions from a cartridge by 50% after fixing a malfunction caused by the same reason"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Fixing Weapon malfunctions\n- Completing the quest Psycho Sniper\n- Completing the quest Profitable Venture\n- Completing the quest A Life Lesson\n- Completing the quest Safety Guarantee\n- Completing the quest Never Too Late To Learn\n- Completing the quest Goals and Means\n- Completing the quest Consolation Prize"
+    }
+  ]
+}

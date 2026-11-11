@@ -1,0 +1,77 @@
+{
+  "title": "BTR Driver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BTR_Driver",
+  "revisionId": 357761,
+  "lastEdited": "2026-09-08T08:31:37Z",
+  "kind": "trader",
+  "categories": [
+    "Traders"
+  ],
+  "redirects": [
+    "BTR"
+  ],
+  "infobox": {
+    "faction": "Scavs",
+    "location": "Lighthouse, Streets of Tarkov, Woods",
+    "wares": "Currently none",
+    "services": "- Taxi service - Covering fire - Item extraction",
+    "currencies": "Roubles (₽)"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The BTR Driver is an in-raid trader in Escape from Tarkov."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- You can't hand in quests if you don't have enough inventory space for the rewards.\n- With a very low Scav karma level (-5), the BTR Driver disallows entry and no longer offers his services.\n- Reputation with the BTR Driver currently has no use, besides 0.4 being required to complete the Savior ending route."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "The BTR can be found in most but not all raids on Lighthouse, Streets of Tarkov and Woods, traveling between set stops on multiple routes. It's neutral to all players, unless a player starts attacking it first, or someone has purchased the \"covering fire\" service recently. Traitor Scavs are considered hostiles.\n\nIt stays for 2 minutes at each stop while on patrol, and honks twice 10 seconds before departure."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "Note: To get access to the BTR Driver quests you need to accept the quest A Helping Hand from Mechanic.\n- See the quests overview page"
+    },
+    {
+      "heading": "Services",
+      "level": 2,
+      "text": "The driver offers various services to his up to 4 passengers. Service costs depend on faction, Scav karma, Charisma skill level and travel distance.\n| Service | Base price in ₽ |\n| USEC | BEAR | Scav |\n| Taxi service | 11,250 | 7,500 | 6,000 |\n| Covering fire | 75,000 | 50,000 | 40,000 |\n| Item extraction (per slot) | 750 + 7.5% of value | 500 + 5% of value | N/A |"
+    },
+    {
+      "heading": "Taxi service",
+      "level": 4,
+      "text": "Players can travel to any available point on a location in total safety."
+    },
+    {
+      "heading": "Covering fire",
+      "level": 4,
+      "text": "Players can order covering fire carried out by the BTR's coaxial machine gun, which provides the safest possible drop-off at a stop. Only available after purchasing the taxi service.\n\nIf someone purchases this service, the BTR becomes hostile. When the service ends, the BTR becomes neutral to all players again."
+    },
+    {
+      "heading": "Item extraction",
+      "level": 4,
+      "text": "PMCs can send items with the found in raid status to their stash when placing them in the BTR trunk. Items will arrive after 1 hour via the mail system.\n\nThe size of the BTR trunk is influenced by your Scav karma.\n| Scav karma | Trunk size |\n| -0.99 - 0.99 | 5x2 |\n| 1 - 1.99 | 6x2 |\n| 2 - 2.99 | 5x3 |\n| 3 - 3.99 | 6x3 |\n| 4 - 4.99 | 5x4 |\n| 5 - 5.99 | 6x4 |\n| 6+ | 7x4 |"
+    },
+    {
+      "heading": "Items for sale",
+      "level": 2,
+      "text": "Currently none."
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The model of the BTR in-game is the \"BTR-82A Armoured Personnel Carrier\"."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Jacket (Machinery key)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Jacket_(Machinery_key)",
+  "revisionId": 315487,
+  "lastEdited": "2025-07-12T20:54:15Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "5937ef2b86f77408a47244b3",
+    "ID": "jacket_yellow_quest"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Jacket (Machinery key) is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A 2x2 slot blue jacket that only spawns the Machinery key."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Can only be found in room 205 of the 3 story dorms."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Icon | Type |\n| Machinery key | Key |"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Blood in the Water",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Blood_in_the_Water",
+  "revisionId": 361695,
+  "lastEdited": "2026-09-24T12:09:54Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Therapist",
+    "LL requirement": "1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Blood in the Water is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"My people recently uncovered those responsible for manipulating the clean water supply at a time when the city needed it most. Under different circumstances, we would have settled this through the proper legal channels. Unfortunately, those are no longer available to us. The gang that profited from the water crisis operates out of the customs territory. They need to be reminded that the well-being of others should come before personal gain. Regrettably, force is the only language they're likely to understand. Teach them that lesson, so no one else comes to believe this is an acceptable way to do business in Tarkov.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 Scavs on Customs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Therapist Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"Was everything taken care of? Don't burden yourself with guilt. All you did was rid Tarkov of people who chose to prey on the vulnerable.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Enter the map Customs and search for and kill fifteen Scavs whom can be found throughout the map but the most concentrated source is the construction site, the dorms and at the old gas station."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Compensation for Damage - Wager",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Compensation_for_Damage_-_Wager",
+  "revisionId": 359190,
+  "lastEdited": "2026-09-13T20:11:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Compensation for Damage - Wager is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So, you want to improve your crappy rep around these parts? Two influential people made a bet on you: can you repeat your success of shooting at everything that moves, but with a specific weapon you are told to use? Lucky for you, the tossed coin didn't fall on a knife, but on a Kalashnikov rifle. A pity, honestly, I'd rather look at you running around with a knife and getting messed up every time. Would be a great redemption arc, wouldn't it? Well, since they've chosen an AK, I made a bet too: that you will handle it. Your targets are the unwanted mercs wandering around some places. So you better not screw up.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Scav karma of -1"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 7 PMC operatives while using any AK-series assault rifle"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Fence Rep +1\n\"You've pleased my friends. Congratulations on your success.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 7 PMCs with AK series assault rifles. You can use any of the following:\n- AK-101\n- AK-102\n- AK-103\n- AK-104\n- AK-105\n- AK-74\n- AK-74M\n- AK-74N\n- AKM\n- AKMN\n- AKMS\n- AKMSN\n- AKS-74\n- AKS-74N\n- AKS-74U\n- AKS-74UB\n- AKS-74UN"
+    }
+  ]
+}

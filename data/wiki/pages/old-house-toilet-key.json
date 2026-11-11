@@ -1,0 +1,66 @@
+{
+  "title": "Old house toilet key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Old_house_toilet_key",
+  "revisionId": 345734,
+  "lastEdited": "2026-05-31T00:27:08Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the bathroom in the old house at the train depot on Woods.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "6939948dc2ceb9acd7082eb2",
+    "ID": "wood_key_depo2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Old house toilet key (Depot T.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A worn-out key to the outhouse in an old house somewhere on the edge of the Priozersk nature reserve. It feels like it's been used many times. Why the outhouse was locked and what treasures it might hide is a mystery."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Swift Retribution"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the bathroom in the old house at the train depot on Woods. Note: The street in front of the house is partially in the reach of border snipers, therefore it is recommended to stay close to the house while entering and leaving."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Guaranteed 6-STEN-140-M military battery spawn\n- TerraGroup \"Blue Folders\" materials spawn in the sink\n- TarCoin spawn in the sink\n- Loose info items"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| 6-STEN-140-M military battery x1; 6-STEN-140-M military battery | → | Cultist Circle; Unique Sacrifice; 1 h 6 min | → | Old house toilet key x1; Old house toilet key |"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "RB-AM key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-AM_key",
+  "revisionId": 330712,
+  "lastEdited": "2026-01-02T17:04:45Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-AM"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the Educational Building workshop on Reserve.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80c88d86f77440556dbf07",
+    "ID": "rezbase_key_barrleft_craftrooom"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-AM key (RB-AM) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base Educational Building workshop."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Underground of Reserve, on the desk next to the toolbox in the big room before D-2 extraction"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "- The lock is located in the School building (Black Bishop), in front of the helicopter.\n- On the west side first floor of the building, at the bottom of the staircase"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Three Toolboxes\n- Loose loot (Building Materials, Tools, and Weapon mods)\n- Can spawn Intelligence folder\n\n- One Wooden Crate\n- One Jacket"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Cult victim's apartment key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cult_victim's_apartment_key",
+  "revisionId": 335787,
+  "lastEdited": "2026-02-15T20:31:50Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "usage": "Unlocks apartment 5 on the third floor of the old apartment building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "68e96180901b9b10270f1eed",
+    "ID": "item_key_quest_taah_victim"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Cult victim's apartment key (Cult victim) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to an apartment in an older building. It seems to have been taken during the victim’s torture to later access their apartment."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the story chapter They Are Already Here"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "In one of four locations in one of the houses in the village on the eastern island. A single key is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to apartment 5 on the third floor of the old apartment building behind the Klimov shopping mall at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Provisions)"
+    }
+  ]
+}

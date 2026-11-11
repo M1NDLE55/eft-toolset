@@ -1,0 +1,44 @@
+{
+  "title": "Seizing the Initiative",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Seizing_the_Initiative",
+  "revisionId": 359644,
+  "lastEdited": "2026-09-13T20:19:43Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs, Shoreline",
+    "given by": "Peacekeeper",
+    "previous": "Humanitarian Supplies",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Seizing the Initiative is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The operational situation in the city is ever-changing, meaning I always have to stay on top of what is happening. My people have reported that some operatives have started using the new path from the customs terminal to the gulf coast. Previously the passage was inaccessible there, but I've already had two targets evade my groups in that area. I have to see what is going on at that passage. If you accept this task, you will have to travel all the way from the customs terminal to the coast and extract from there. You can count on an appropriate reward!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Use the transit from Customs to Shoreline\n- Survive and extract from Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Peacekeeper Rep +0.1\n- Dollars\n  - 550 Dollars with Intelligence Center Level 1\n  - 673 Dollars with Intelligence Center Level 2\n\"This will help us cut off the escape routes of those who prevent us from conducting our business. Everyone needs resources to operate in Tarkov, and the Blue Helmets are no exception.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "The transit is located behind the \"Sniper Roadblock\" Scav extraction, inside the bus. Transits are only available 1 min after raid start."
+    }
+  ]
+}

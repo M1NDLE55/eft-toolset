@@ -1,0 +1,55 @@
+{
+  "title": "Gunsmith Master - Part 11",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_11",
+  "revisionId": 356764,
+  "lastEdited": "2026-08-29T19:55:24Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith 11",
+    "Gunsmith Master 11"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith Master - Part 11 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Got a new order for you. I need a KAC SR-25 rifle. CMMG Mk3 handguard, KAC PRS/QDC silencer, SE-5 grip, PRS GEN3 buttstock, HK Ergo PSG-1 style pistol grip, DBAL-PL tactical unit, FastFire 3 red dot on a 45 degree rail, 10 round magazine, and a FLIR thermal scope. Yeah, I know it's rare nowadays, but order is an order. Oh, also you need ergonomics no lower than 25 and weight no higher than 6 kg.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify a KAC SR-25 to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +31,250 EXP\n- Mechanic Rep +0.03\n- 1,500 Euros\n  - 1,575 Euros with Intelligence Center Level 1\n  - 1,725 Euros with Intelligence Center Level 2\n- 3× Pipe grip wrench\n- 2× FP-100 filter absorber\n\"I'd expect nothing less from you!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "KAC SR-25 specifications:\n- 60 Durability\n- 25 or more ergonomics\n- 6 kg or less in weight\n- KAC PRS/QDC 7.62x51 sound suppressor\n- Stark SE-5 Express Forward foregrip (Black)\n- AR-15 Magpul PRS GEN3 stock\n- AR-15 HK Ergo PSG-1 style pistol grip\n- Steiner DBAL-PL tactical device\n- Burris FastFire 3 reflex sight\n- NcSTAR MPR45 Backup mount\n- AR-10 7.62x51 KAC 10-round steel magazine\n- FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope\nNote: Despite the quest specifying a CMMG Mk3 handguard, any is currently accepted."
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard black SR-25 from Peacekeeper LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Icon | Attachment | Sold By | Loyalty Level |\n| AR-15 HK Ergo PSG-1 style pistol grip | AR-15 HK Ergo PSG-1 style pistol grip | Mechanic | LL4 |\n| AR-10 7.62x51 KAC 10-round steel magazine | AR-10 7.62x51 KAC 10-round steel magazine | Peacekeeper | LL2 |\n| AR-15 Magpul PRS GEN3 stock | AR-15 Magpul PRS GEN3 stock | Peacekeeper | LL3 |\n| FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope | FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope | JaegerMechanic | LL3 (Barter); LL4LL4 (Barter) |\n| KAC PRS/QDC 7.62x51 sound suppressor | KAC PRS/QDC 7.62x51 sound suppressor | Peacekeeper | LL3 (Barter) |\n| Magpul M-LOK 2.5 inch rail | Magpul M-LOK 2.5 inch rail | Mechanic | LL1 |\n| Steiner DBAL-PL tactical device | Steiner DBAL-PL tactical device | Peacekeeper | LL3 |\n| Magpul M-LOK 4.1 inch rail | Magpul M-LOK 4.1 inch rail | Mechanic | LL1 (Barter); LL1 |\n| Stark SE-5 Express Forward foregrip | Stark SE-5 Express Forward foregrip (Black) | MechanicRef | LL4LL3 |\n| NcSTAR MPR45 Backup mount | NcSTAR MPR45 Backup mount | Peacekeeper | LL2 |\n| Burris FastFire Weaver Base | Burris FastFire Weaver Base | PeacekeeperSkier | LL1LL2 |\n| Burris FastFire 3 reflex sight | Burris FastFire 3 reflex sight | PeacekeeperSkier | LL1LL2 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

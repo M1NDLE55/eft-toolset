@@ -1,0 +1,55 @@
+{
+  "title": "Gunsmith Master - Part 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_4",
+  "revisionId": 356782,
+  "lastEdited": "2026-08-29T20:15:17Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith 4",
+    "Gunsmith Master 4"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith Master - Part 4 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Quite long ago, I once met the owner of KIBA Arms, we even went to a sauna together then, though I'm not particularly into it. He even broke his leg trying to jump-dive from the pier that day. Jolly fellow dreamt of setting up an airsoft field all the time. It seems his wish came true in Tarkov, the best and largest airsoft field in the world, with an only minor difference: here, you die and lose everything from a single stray bullet. Put together an AK-102, with a Ferfrans CRD Concussion Reduction Device, Magpul AFG OD tactical grip, Zenit Klesch-2U flashlight, RPK-16 buffer tube, and the Circle 10 magazine. Ergonomics should be over 53, recoil sum less than 300, sighting range 800 or more. Make sure it doesn't take up more than 8 slots.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 31 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an AK-102 to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +21,400 EXP\n- Mechanic Rep +0.03\n- 35,000 Roubles\n  - 36,750 Roubles with Intelligence Center Level 1\n  - 40,250 Roubles with Intelligence Center Level 2\n- 4× Spark plug\n- 2× GreenBat lithium battery\n- Unlocks purchase of Magpul AFG tactical foregrip (Olive Drab) at Mechanic LL3\n- Unlocks purchase of AR-15 Hera Arms CQR pistol grip/buttstock at Mechanic LL4\n- Unlocks purchase of AK CNC Warrior 5.56x45 muzzle device adapter at Mechanic LL3\n- Unlocks purchase of AKM/AK-74 Hera Arms CQR47 pistol grip/buttstock at Mechanic LL4\n\"Just don't turn on the flashlight unless you want to get blinded for days! Anyway, well done, leave it on that crate.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "AK-102 specifications:\n- 60 Durability\n- 53 or more ergonomics\n- 300 or less recoil\n- 800 or greater sighting range\n- 8 or fewer cells\n- Ferfrans CRD 5.56x45 Concussion Reduction Device\n- Magpul AFG tactical foregrip (Olive Drab)\n- Zenit Klesch-2U tactical flashlight\n- RPK-16 buffer tube\n- SLR-106/AK 5.56x45 Circle 10 30-round magazine"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": "Notes:\n- This build is based on a standard AK-102 from Mechanic LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AK CNC Warrior 5.56x45 muzzle device adapter | Mechanic | LL3 |\n| AR-15 Ferfrans CQB 5.56x45 muzzle brake | Peacekeeper | LL3 (Barter); LL3 |\n| Ferfrans CRD 5.56x45 Concussion Reduction Device | Peacekeeper | LL3 (Barter); LL4 |\n| AK Zenit B-10 Handguard | Skier | LL2 |\n| Magpul AFG tactical foregrip (Olive Drab) | Mechanic | LL3 |\n| Zenit Klesch-2U tactical flashlight | Mechanic | LL3 |\n| AK AKademia Bastion dust cover | Skier | LL1 |\n| SIG Sauer ROMEO7 1x30 reflex sight (Prototype) | Skier | LL1 |\n| SLR-106/AK 5.56x45 Circle 10 30-round magazine | Peacekeeper | LL2 (Barter); LL3 |\n| RPK-16 buffer tube | Mechanic | LL3 |\n| AR-15 KRISS Defiance DS150 stock | Peacekeeper | LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

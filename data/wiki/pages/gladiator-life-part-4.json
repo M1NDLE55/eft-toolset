@@ -1,0 +1,40 @@
+{
+  "title": "Gladiator Life - Part 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Life_-_Part_4",
+  "revisionId": 359342,
+  "lastEdited": "2026-09-13T20:14:34Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Life - Part 3",
+    "leads to": "Gladiator Life - Part 5",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Life - Part 4 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Looks like you're picking up the basics just fine. Not like some... ah, forget about the others. Let's focus on you. What matters now is winning. So come on, grab your weapon and get out there. Time to take the Arena by storm!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win a match in CheckPoint mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +2,800 EXP\n- 37,500 Roubles\n- 10 GP coins\n- Unlocks SIG MPX 9x19 submachine gun in the Armory\n- Unlocks FDE weapon camouflage"
+    }
+  ]
+}

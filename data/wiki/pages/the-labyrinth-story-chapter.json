@@ -1,0 +1,106 @@
+{
+  "title": "The Labyrinth (story chapter)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Labyrinth_(story_chapter)",
+  "revisionId": 354665,
+  "lastEdited": "2026-08-15T18:26:47Z",
+  "kind": "quest",
+  "categories": [
+    "Story chapters"
+  ],
+  "redirects": [
+    "Labyrinth (story chapter)"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "For the location, see The Labyrinth.\n\nThe Labyrinth is a story chapter in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "\"Even before the raid on the TerraGroup office, I'd heard about their underground sites in Tarkov. They say that under the coastal Health Resort, a few months back, they found either a bomb shelter or another lab - \"The Labyrinth\"... I should definitely check that place, maybe I can learn more about what TerraGroup was up to.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Locate the The Labyrinth transit on Shoreline. The transit is located in the basement of the health resort west wing and requires the Knossos LLC facility key."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Ask the traders about the underground facility\n  - (Optional) Ask Therapist how to access the underground facility\n- Wait for Jaeger to gather the keycards\n- Figure out what happened to the BEAR squad\n  - (Optional) Locate the entrance to the underground facility beneath the Health Resort\n  - (Optional) Access the facility\n  - (Optional) Locate the traces of the BEAR squad in The Labyrinth\n  - (Optional) Investigate the BEAR squad regroup spot at Item 1156\n  - (Optional) Locate the squad leader\n  - (Optional) Gather more information about the squad\n  - (Optional) Investigate the 5 lab staff bodies\n  - (Optional) Access the locked office\n- Listen to the audio tape from the office\n- Hand over the audio tape to Jaeger\n- Read the Labyrinth facility research report\n  - (Optional) Locate and obtain the Labyrinth facility research report"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Speak to Jaeger",
+      "level": 3,
+      "text": "Visit Jaeger in the menu through the trader screen and ask him about the underground facility."
+    },
+    {
+      "heading": "Wait for Jaeger to gather the keycards",
+      "level": 3,
+      "text": "Wait 12-24 hours then visit Jaeger in the menu through the trader screen and ask him about the Labyrinth. After finishing the dialogue, Jaeger provides 2 Labrys access keycards via in-game mail and has a barter for more available."
+    },
+    {
+      "heading": "Access the underground facility",
+      "level": 3,
+      "text": "The Labyrinth can only be entered with a Labrys access keycard through transiting from Shoreline. The transit is located in the basement of the health resort west wing and requires the Knossos LLC facility key. Note: This location has some unique features that you should read up on before your first visit."
+    },
+    {
+      "heading": "Locate the traces of the BEAR squad",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Leshy's orders | 1 | Required | Yes |\nLeshy's orders need to be found to fulfill this objective. They can be found in a food container on the ground in front of spawn chamber 2."
+    },
+    {
+      "heading": "Investigate the BEAR squad regroup spot at Item 1156",
+      "level": 3,
+      "text": "The regroup spot is located at the prototype weapon area."
+    },
+    {
+      "heading": "Locate the squad leader/Gather more information about the squad",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Leshy's diary | 1 | Required | Yes |\nThe squad leader is located at the torture room. Leshy's diary can be found next to him."
+    },
+    {
+      "heading": "Investigate the 5 lab staff bodies",
+      "level": 3,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| Observation room key | Observation room key | 1 | Required | N/A |\n| Assistant's notes on Group 3 | Assistant's notes on Group #3 | 1 | Required | Yes |\n| Assistant's notes on Group 8 | Assistant's notes on Group #8 | 1 | Required | Yes |\n| Assistant's notes on Group 3 and Group 10 | Assistant's notes on Group #3 and Group #10 | 1 | Required | Yes |\n| Assistant's notes on Group 12 | Assistant's notes on Group #12 | 1 | Required | Yes |\n| Assistant's notes on TG-Vi-24 test subjects | Assistant's notes on TG-Vi-24 test subjects | 1 | Required | Yes |\nFor this objective you have to pick up 5 notes located next to lab scientist bodies. #4 requires the Observation room key."
+    },
+    {
+      "heading": "Access the locked office",
+      "level": 3,
+      "text": "The locked office is the observation room. The Observation room key is required to enter it."
+    },
+    {
+      "heading": "Listen to the audio tape from the office",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Deceased scientist's audio tape | 1 | Handover item | Yes |\nThe audio tape is located on the ground under the right hand of the scientist."
+    },
+    {
+      "heading": "Hand over the audio tape to Jaeger",
+      "level": 3,
+      "text": "Hand the Deceased scientist's audio tape over to Jaeger through the trader screen."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- 500,000 Roubles\n- 1× Accuracy International AXMC .338 LM bolt-action sniper rifle\n- 2× AI AXMC .338 LM 10-round magazine\n- 2× .338 Lapua Magnum FMJ ammo pack (20 pcs)"
+    },
+    {
+      "heading": "Obtain and read the Labyrinth facility research report",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Labyrinth facility research report | 1 | Required | Yes |\nThe report is located at the drain pipe next to the pier on Shoreline."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- +160,000 EXP\n- Unlocks achievement Theseus"
+    }
+  ]
+}

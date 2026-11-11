@@ -1,0 +1,55 @@
+{
+  "title": "Peacekeeping Mission",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Peacekeeping_Mission",
+  "revisionId": 361639,
+  "lastEdited": "2026-09-24T00:48:54Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Peacekeeping mission"
+  ],
+  "infobox": {
+    "location": "Woods, Reserve, Customs, Lighthouse, Shoreline, Streets of Tarkov, Ground Zero, Interchange",
+    "given by": "Peacekeeper",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Peacekeeping Mission is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Have you seen the news? Recently, media have been pushing the agenda that \"the Blue Helmets are not doing their job in Tarkov, do not follow the procedures\" and so forth... Those damn bastards, kurwa! I hate these journalist scumbags. We are one step away from losing financing, which, my friend, is the opposite of profitable for us. So, we need to convince the public that the helmets are actually doing what they promised to do. You must address the issue of eliminating the illegal bandit group activities but do so under the UN flag. I'll give you the initial set of equipment you'll need, but if you lose it, don't come asking for more.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 4 with Peacekeeper to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 12 Scavs while using UNTAR helmet and armor, and 5.56x45 UN weapons on Woods or Reserve\n- Eliminate 12 Scavs while using UNTAR helmet and armor, and 5.56x45 UN weapons on Customs or Lighthouse\n- Eliminate 12 Scavs while using UNTAR helmet and armor, and 5.56x45 UN weapons on Shoreline or Streets of Tarkov\n- Eliminate 12 Scavs while using UNTAR helmet and armor, and 5.56x45 UN weapons on Ground Zero or Interchange"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- +2 Aim Drills skill levels\n- Peacekeeper Rep +1.5\n- 2,750 Dollars\n  - 2,888 Dollars with Intelligence Center Level 1\n  - 3,163 Dollars with Intelligence Center Level 2\n- 1× Desert Tech MDR 7.62x51 assault rifle\n- 1× Armband (UNTAR)\n- Unlocks purchase of Desert Tech MDR 7.62x51 assault rifle at Peacekeeper LL4\n- Unlocks barter for Cult Locust ballistic plate at Skier LL4\n\"Ah, is that you? My superiors are pleased with the results! There are now fewer Scavs in the area, and attacks from the media died down a bit! Plus, we've made some nice photos for the newspapers. Good work, my friend!\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Icon | Item name | Amount | Notes |\n| UNTAR helmet | UNTAR helmet | 1 | Needs to be worn while making kills |\n| MF-UNTAR body armor | MF-UNTAR body armor | 1 | Needs to be worn while making kills |\n| Colt M4A1 5.56x45 assault rifle | Colt M4A1 5.56x45 assault rifle | 1 | |\n| AR-15 5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine | AR-15 5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine (Black) | 3 | |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| UNTAR helmet | As many as needed | Required | N/A | Worn by the player while eliminating Scavs |\n| MF-UNTAR body armor | As many as needed | Required | N/A | Worn by the player while eliminating Scavs |\n\nThe specified UNTAR helmet and armor need to be worn while making the Scav kills with any of the following weapons:\n- Colt M16A1 5.56x45 assault rifle\n- Colt M16A2 5.56x45 assault rifle\n- Colt M4A1 5.56x45 assault rifle\n- FN SCAR-L 5.56x45 assault rifle\n- HK 416A5 5.56x45 assault rifle\n- HK G36 5.56x45 assault rifle\n- Howa Type 20 5.56x45 assault rifle\n- Lone Star TX-15 DML 5.56x45 carbine\n- Radian Weapons Model 1 FA 5.56x45 assault rifle\n- Steyr AUG A1 5.56x45 assault rifle\n- Steyr AUG A3 5.56x45 assault rifle"
+    }
+  ]
+}

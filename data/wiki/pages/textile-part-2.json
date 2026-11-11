@@ -1,0 +1,75 @@
+{
+  "title": "Textile - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Textile_-_Part_2",
+  "revisionId": 359730,
+  "lastEdited": "2026-09-13T20:21:08Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Textile. Part 2"
+  ],
+  "infobox": {
+    "given by": "Ragman",
+    "previous": "Textile - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Textile - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Depending on the faction of the player there will be a different dialogue and reward."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "BEAR Exclusive",
+      "level": 4,
+      "text": "\"So, here's another list of the stuff I need. As soon as you have it - bring it here, and make sure it's in good condition. No traders and all, well, you know the deal. I'm thinking about some new outfits for you, something recognizable, warming the Russian heart. I have no idea what's the business between you and the yanks, but these days your life is as shitty as theirs. Shit happens. Anyway, good luck to you.\""
+    },
+    {
+      "heading": "USEC Exclusive",
+      "level": 4,
+      "text": "\"Come on in, I was just thinking about you. Alright, so listen, I need more of these items listed here, and they have to be brand new, no traders. Come on, don't make faces too early! I'll get you some cool news clothes for this, the Kansas spirit and all or whatever. Just imagine that, running and gunning here in a foreign country in clothes like from the ranch! Well anyway, I'm waiting for the listed items, the reward is generous.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 42 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 10 Fleece fabrics in raid\n- Hand over 10 Fleece fabrics to Ragman\n- Find 10 Cordura polyamide fabrics in raid\n- Hand over 10 Cordura polyamide fabrics to Ragman\n- Find 5 KEKTAPE duct tapes in raid\n- Hand over 5 KEKTAPE duct tapes to Ragman"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +34,300 EXP\n- 100,000 Roubles\n  - 105,000 Roubles with Intelligence Center Level 1\n  - 115,000 Roubles with Intelligence Center Level 2\n- 1× Mystery Ranch Blackjack 50 backpack (MultiCam)"
+    },
+    {
+      "heading": "BEAR Exclusive",
+      "level": 4,
+      "text": "- Unlocks purchase of BEAR TIGR upper clothing at Ragman LL3\n\"That's exactly what I need! Put it all over there. Lemme measure you... Well, it's gonna be a tough one. Don't worry, you'll love the result, bro.\""
+    },
+    {
+      "heading": "USEC Exclusive",
+      "level": 4,
+      "text": "- Unlocks purchase of USEC TIER2 upper clothing at Ragman LL3\n\"C'mon, so you have everything? Leave 'em somewhere in the corner and come here, I need to measure you. This stuff is quite a rarity in our current conditions, so don't get mad about the price. But at least the American spirit won't abandon you, he-he.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Fleece fabric | 10 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 2). |\n| Cordura polyamide fabric | 10 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 1). |\n| KEKTAPE duct tape | 5 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 2). |\nThe Cordura polyamide fabric and Fleece fabric can commonly be found in clothing stores on Interchange. They can also be found inside of Sport bags, Buried barrel caches, and Ground caches.\nKEKTAPE duct tape can be found anywhere construction supplies spawns, drawers, and inside of toolboxes."
+    }
+  ]
+}

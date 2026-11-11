@@ -1,0 +1,43 @@
+{
+  "title": "Jacket (114 key)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Jacket_(114_key)",
+  "revisionId": 316491,
+  "lastEdited": "2025-07-24T17:13:26Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "59387ac686f77401442ddd61",
+    "ID": "jacket_key114_feld"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Jacket (114 key) is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A 2x2 slot blue jacket that has a chance to spawn the Dorm room 114 key and medkits."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Can only be found in the trunk of a blue car at the military checkpoint."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Type |\n| Medkits |\n| Medkits |\n| Mechanical keys |\n| Medkits |\n| Medkits |\n| Medkits |\n| Medkits |"
+    }
+  ]
+}

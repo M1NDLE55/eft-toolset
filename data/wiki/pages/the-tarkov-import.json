@@ -1,0 +1,44 @@
+{
+  "title": "The Tarkov Import",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Import",
+  "revisionId": 361736,
+  "lastEdited": "2026-09-24T12:28:34Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse, Reserve",
+    "given by": "Prapor",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Tarkov Import is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, soldier! Here's the situation. I ordered a batch of imported rifles from Mechanic for some clients. Personally, I still prefer our own weapons. Homegrown gear's always been closer to an old soldier's heart, you know?Anyway, it's an SR-25 fitted with a Hybrid 46 suppressor and a Schmidt & Bender PM II 1-8x24 scope. I need it properly field-tested. And don't waste your time shooting Scavs. I want to know how it performs against fighters who can actually shoot back. I'll issue you one. Put it through its paces, then come back and tell me what you think.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate PMCs with SR-25 with Hybrid 46 suppressor and S&B PM II 1-8x24 scope on Lighthouse or Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Military power filter\n- Unlocks craft for 9x39mm PAB-9 gs at Workbench level 2\n\"Well, what's the verdict? Serious piece of kit, yeah? Good, that's all I needed to hear. Here's something for your trouble.\""
+    },
+    {
+      "heading": "Initial equipment",
+      "level": 2,
+      "text": "| Icon | Item name | Amount | Notes |\n| SR-25 | Knight's Armament Company SR-25 7.62x51 marksman rifle | 1 | Modded after task requirements |"
+    }
+  ]
+}

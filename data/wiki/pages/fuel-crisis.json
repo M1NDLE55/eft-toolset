@@ -1,0 +1,53 @@
+{
+  "title": "Fuel Crisis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fuel_Crisis",
+  "revisionId": 359319,
+  "lastEdited": "2026-09-13T20:14:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Interchange",
+    "given by": "Ragman",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Fuel Crisis is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, brother! Mechanic stopped by recently. Grumpy and quiet as always, but I've gotten used to it. He's asking for fuel, and wouldn't you know it, I'm completely out! But I always know where to find more. I heard there are some tanker trucks near Ultra with German flags on them. Find them and mark them with beacons so my guys don't waste time searching.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 1 with Ragman to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark any fuel tank near the power station with an MS2000 Marker on Interchange\n- Locate and mark any fuel tank in the northern territory with an MS2000 Marker on Interchange"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Ragman Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"Perfect, the signal's already coming through! Here, this is for your work.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 2 | Required | N/A | This item is placed on the fuel tanker trucks. When placed, the item is removed from the players' inventory. |\nIn this quest you have to find and mark one fuel tanker truck near the power station and one in the northern territory on Interchange with MS2000 Markers. There are 2 trucks available for each objective."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "title": "The Survivalist Path - Junkie",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Junkie",
+  "revisionId": 359788,
+  "lastEdited": "2026-09-13T20:22:06Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Junkie",
+    "The survivalist path - Junkie"
+  ],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Jaeger",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Survivalist Path - Junkie is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Times are harsh these days, you know it well. You have to survive by all means, even if those means are not the safest for your health. For example, those stimulants, folks started seeing them more frequently in the region. In reality, it's a narcotic of some sort, I feel that TerraGroup is involved here for sure. But anyway, want it or not, but you will have to learn how to use them in combat, these drugs do not only kill, but sometimes help you survive.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 Scavs while under any stimulant effect on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +5,900 EXP\n- +2 Metabolism skill levels\n- Jaeger Rep +0.02\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n- 6× 12/70 RIP ammo pack (5 pcs)\n- 4× 5.56x45mm Warmageddon ammo pack (20 pcs)\n- 1× 5.45x39mm BT gs ammo pack (120 pcs)\n\"So I see you've made it. How's your head? Dizzy? Feeling like you're going to throw up? That's the side effects of those drugs, you have to pay the price to stay alive, even pay with your health. But anyway, listen here, I have some tips on how to reduce those side effects, so next time you would feel a little better.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 15 Scavs on Woods while having any buff or debuff from stimulants or provisions active. The effect does not count."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "title": "The Punisher - Part 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Punisher_-_Part_3",
+  "revisionId": 361729,
+  "lastEdited": "2026-09-24T12:26:50Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The Punisher. Part 3."
+  ],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Prapor",
+    "LL requirement": "3",
+    "previous": "The Punisher - Part 2",
+    "leads to": "The Punisher - Part 4",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Punisher - Part 3 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, soldier. My pals are definitely up to something. Soon as you finished off those Scavs last time, they started blowing up my phone. And you know what? Sounds like they're putting on some kind of show over there. Taking bets, making money. Anyway, they want you to thin out the Scavs again, only this time you'll be working on the military base, and you'll have to use Russian-made weapons. Hell if I know what kind of spectacle they're cooking up, but they're offering good money. So, you in?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 12 Scavs with 9x39mm caliber weapons on Reserve\n- Find 7 Lower half-masks in raid\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 5× 7.62x39mm PS gzh ammo pack (20 pcs)\n- Unlocks purchase of 7.62x39mm PS gzh at Prapor LL3\n\"Nailed it, huh? Nice, grab your reward. I bet it's not the last job from my comrades, they really got interested in your Scav extermination.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount |\n| KBP VSK-94 9x39 rifle | 1 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Lower half-mask | 7 | Handover item | Yes |"
+    }
+  ]
+}

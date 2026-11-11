@@ -1,0 +1,40 @@
+{
+  "title": "Hold the Lead",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hold_the_Lead",
+  "revisionId": 359384,
+  "lastEdited": "2026-09-13T20:15:16Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "To Great Heights! - Part 6",
+    "leads to": "Against the Conscience - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Seasonal change: this quest cannot be obtained.\n\nHold the Lead is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Alright, you made yourself noticed again. I won't lie, it was impressive. You even got the attention of some big players. Not without a little help from me, of course: you should've heard how I was hyping you up! Now, if you want to earn more cash, you've got to hold your spot at the top. Show that you're ready to tear your opponents apart with your bare hands!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 75 enemies in Arena"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +9,100 EXP\n- Ref Rep +0.05\n- 75 GP coins\n  - 79 GP coins with Intelligence Center Level 1\n  - 86 GP coins with Intelligence Center Level 2\n\"Ha! You put on an amazing show! But those interested parties bailed. Who knows why. Maybe it was too bloody for their delicate eyes. Oh well, they're not the last. For now, here, this one's reserved just for you.\""
+    }
+  ]
+}

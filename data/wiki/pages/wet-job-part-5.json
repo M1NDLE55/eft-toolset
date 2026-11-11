@@ -1,0 +1,52 @@
+{
+  "title": "Wet Job - Part 5",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wet_Job_-_Part_5",
+  "revisionId": 359885,
+  "lastEdited": "2026-09-13T20:23:44Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Wet Job. Part 5"
+  ],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "previous": "Wet Job - Part 4",
+    "leads to": "Wet Job - Part 6, Worst Job in the World",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Wet Job - Part 5 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"A job well done gets well rewarded. From the documents we've learned that Artyom lived in room 328. I presume, he worked there as well. Find a way to get into his room and if there's anything left of his records, bring it to me. I'm waiting to hear from you, mercenary.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 14 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain information on Artyom's work on Shoreline\n- Hand over the information to Peacekeeper"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,400 EXP\n- Peacekeeper Rep +0.03\n- 1,700 Dollars\n  - 1,785 Dollars with Intelligence Center Level 1\n  - 1,955 Dollars with Intelligence Center Level 2\n- 1× HighCom Trooper TFO body armor (MultiCam)\n- Unlocks purchase of Remington R11 RSASS 7.62x51 marksman rifle at Peacekeeper LL4\n- Unlocks purchase of AFAK tactical individual first aid kit at Peacekeeper LL4\n\"A job well done is a job well paid, mercenary. I'll hand this hard drive to be checked immediately.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Health Resort east wing room 328 key | 1 | Required | N/A | Unlocks Health Resort east wing room 328 on Shoreline. |\n| Working hard drive | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player does not plant the item and fails to extract with it, they will lose it. |\nThe information in form of a hard drive can be found on top of a PC in east wing room 328 at the health resort on Shoreline. A Health Resort east wing room 328 key is required to unlock the room."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Acquaintance",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Acquaintance",
+  "revisionId": 359052,
+  "lastEdited": "2026-09-13T20:09:38Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Jaeger",
+    "previous": "Introduction",
+    "leads to": "Swift, First Aid, The Huntsman Path - Woods Keeper",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Acquaintance is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Well, hello there! I could use your help right now. We're still barely acquainted, so I won't ask you to handle anything too serious just yet.\nI'm a solitary man, as you've probably already noticed. I try to live by my own principles and keep Tarkov clean. That takes time and effort, and sometimes my supplies run out. Usually when I least expect it. Could you find me some provisions? I don't need anything special, anything will do. The only requirement is that it's edible.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over any 10 items from the Food Category"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Jaeger Rep +0.1\n- 80,000 Roubles\n  - 84,500 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"Thank you. Food in our time is a hard-to-get supply, it's hard to survive without it. Okay, we can talk about business then, when you have time. Come visit me from time to time, boy.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "The Provisions needed for this task don't require the found in raid tag. Food items can be commonly found in many maps such as Reserve, Interchange, and Shoreline."
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "Food can be most easily found in the kitchen wing of the black bishop building. In the locked caged rooms in the underground bunker are many loose food item spawns and Ration supply crates. These crates spawn a large amount of food. The number of supply crates in each room is written in red on the map below, as well as the location of the kitchen being circled."
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "Lots of food items can be found scattered throughout the admin/theatre building at the resort."
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "There is a grocery store called Goshan (red on the map) packed with food. Check all the shelving to find it. A flashlight will be helpful for all the dark corners."
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "Food can spawn at the USEC Camp frequently as well as the camp at the south-east of the lake."
+    }
+  ]
+}

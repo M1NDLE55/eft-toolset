@@ -1,0 +1,68 @@
+{
+  "title": "RUAF",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RUAF",
+  "revisionId": 348791,
+  "lastEdited": "2026-08-01T01:09:21Z",
+  "kind": "character",
+  "categories": [
+    "Factions"
+  ],
+  "redirects": [
+    "AF"
+  ],
+  "infobox": {
+    "location": "Shoreline, Terminal"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Russian Armed Forces (RUAF) are a faction in Escape from Tarkov."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Killing RUAF soldiers as a Scav does not carry any penalties towards your Scav karma.\n- RUAF soldiers have different health values than PMCs and Scavs.\n| Stats |\n| Head: 35; Thorax: 120; Stomach: 120; Arms: 100 each; Legs: 100 each; Total: 675 |"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Shoreline",
+      "level": 4,
+      "text": "Guarding the port Terminal."
+    },
+    {
+      "heading": "Terminal",
+      "level": 4,
+      "text": "Across the location."
+    },
+    {
+      "heading": "Behavior",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Shoreline",
+      "level": 4,
+      "text": "RUAF soldiers are neutral towards the player but will open fire when they get shot, and if a player gets too close to the Terminal without presenting an access item at the port garrison intercom."
+    },
+    {
+      "heading": "Terminal",
+      "level": 4,
+      "text": "RUAF soldiers are friendly towards the player, helping with fighting off Scavs and the Black Division, but will open fire when they or civilians get shot."
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- RUAF Soldiers' faction shows as \"AF\" in the kill list\n- RUAF Soldiers can have the following names:"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "General Wares",
+  "url": "https://escapefromtarkov.fandom.com/wiki/General_Wares",
+  "revisionId": 361699,
+  "lastEdited": "2026-09-24T12:12:22Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "General wares"
+  ],
+  "infobox": {
+    "given by": "Therapist",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "General Wares is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello again. I have a temporary shortage of lasting foods in the form of canned meat. Can you help? I need a reserve of 15 cans of beef. And I know a couple of places where we could get them. From our Scav friends, of course. They used to have a storeroom at the gas station near the Factory - maybe there's still something left. Another food storage was somewhere in the dormitories, with more than canned goods there. But now I’m only interested in them, so you’re free to take the rest for yourself. Deal? I know that these two gangs are allied, but to prevent theft from the warehouses by their own people, their leaders have exchanged keys from each other's warehouses. So it should be pretty easy for you, I think.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 15 item in raid: Can of beef stew (Small)\n- Hand over the 15 items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Therapist Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"Well, now we can add meat to our exquisite variety of meals. Thanks a lot, young man.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "- Unlocks craft for Can of beef stew (Small) at Nutrition unit level 1"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Can of beef stew (Small) | 15 | Handover item | Yes | Can be crafted in the Hideout (Nutrition unit lv. 1). |\n\n- A high amount of Tushonka can be found inside the shopping mall on Interchange. Particularly, the \"Goshan\" (written \"гошан\" on its signs) supermarket stores a very large amount on its shelves. However, this is a hot-spot for players as many wish to take the Tushonka or loot the registers, so it should be approached with care.\n- Tushonka is also commonly found in \"Ration supply crates\" near tanks on Reserve, however like Goshan, Reserve is a highly populated map, with many threats, so it should be approached with care.\n- Tushonka and other food items are also plentiful at the camp on woods next to scav bunker in a ration supply crate and as loose loot. Farther south, USEC camp is also a good spot to find food items\n\n- Tushonka can be crafted in the Hideout at the Nutrition unit Lvl 1."
+    }
+  ]
+}

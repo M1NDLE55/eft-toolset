@@ -1,0 +1,56 @@
+{
+  "title": "Surprise Gift",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Surprise_Gift",
+  "revisionId": 359720,
+  "lastEdited": "2026-09-13T20:20:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Lightkeeper",
+    "previous": "Against the Conscience - Part 2",
+    "leads to": "Postponed Reward",
+    "related": "Between Two Fires, Decisions, Decisions",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Surprise Gift is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I heard you got involved in this affair with Fence and Ref. So of course you decided to come to me. You want to mess with Ref? Hmm, that would be beneficial to me. Bring me the dirt on him, and I'll find a way to use it.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 35 to start this quest.\n- Must accept Fence's quest Between Two Fires to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Return to the old champion's hideout on Customs\n- Locate and obtain the compromising information on Ref\n- Hand over the found info"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +25,500 EXP\n- Lightkeeper Rep +0.01\n- 1,187 Dollars\n\"I'm glad you understand who it's more advantageous to be friends with.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"So why even come to me in the first place if you're just going to give the intel to one of those two?\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "By completing Between Two Fires or Decisions, Decisions, you will fail and lose access to this quest.\n| Item name | Amount | Requirement | Find in raid | Notes |\n| Dorm overseer key | 1 | Required | N/A | Unlocks the room between 209 and 211 in the three-story dorms on Customs. |\n| Ref dirt | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nThe champion's room is located on the second floor of the three-story dorms building on Customs, between the rooms 209 and 211. A Dorm overseer key is required to enter it.\n\nThe compromising information can be found on the floor in a puddle of blood next to the wardrobe."
+    }
+  ]
+}

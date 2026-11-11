@@ -1,0 +1,49 @@
+{
+  "title": "Balancing - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balancing_-_Part_2",
+  "revisionId": 359101,
+  "lastEdited": "2026-09-13T20:10:28Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ref",
+    "previous": "Balancing - Part 1",
+    "leads to": "Surprise",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Balancing - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Right, now it's time to test some body armor. This is for the cleanup crew only. Let's see how it holds up against real mercs. Try killing a few PMCs while wearing this PACA armor. After that, I'll see what else I can come up with.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 2 PMC operatives while wearing a PACA Soft Armor on any location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +7,000 EXP\n- Ref Rep +0.03\n- 45 GP coins\n  - 47 GP coins with Intelligence Center Level 1\n  - 52 GP coins with Intelligence Center Level 2\n- 2× Death Shadow mask\n\"Alive? Good! What, the armor's shit and doesn't hold against anything? Well shit, that's a shame. It'll be too weak for the cleanup crew, so I'll have to find a better model. Here's your reward. Let's finish with this balancing thing for now.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| PACA Soft Armor | 2 | Needs to be worn while killing the PMCs. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement |\n| PACA Soft Armor; or; PACA Soft Armor (Rivals Edition); or; DRD body armor | PACA Soft Armor; or; PACA Soft Armor (Rivals Edition); or; DRD body armor | As many as needed | Needs to be worn while killing the PMCs |"
+    }
+  ]
+}

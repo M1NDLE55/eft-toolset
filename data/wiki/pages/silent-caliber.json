@@ -1,0 +1,46 @@
+{
+  "title": "Silent Caliber",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Silent_Caliber",
+  "revisionId": 362257,
+  "lastEdited": "2026-09-26T16:09:46Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Silent caliber"
+  ],
+  "infobox": {
+    "location": "Reserve, Lighthouse, Ground Zero, The Lab",
+    "given by": "Skier",
+    "LL requirement": "4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Silent Caliber is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, how's life treating ya? You know, sometimes you have to come in and shoot the shit out of someone in CQC, and you have to do it quietly and efficiently. I prefer 12 gauge for example, and I got no clue why the hell BEARs and USECs don't appreciate it, it's a straight caliber, you know? You just gotta get as close as possible, and if you have silencer, man, you can drop people and the guy on other side of the wall wouldn't flinch. It hits silently and it hits hard. You gotta master this, while I figure out what fish we could pull out with your \"talent\".\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 30 any target with a suppressed 12 gauge shotgun on Reserve, Lighthouse, Ground Zero, or The Lab"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Skier Rep +1.5\n- 2,400 Euros\n  - 2,520 Euros with Intelligence Center Level 1\n  - 2,760 Euros with Intelligence Center Level 2\n- 1× MP-155 12ga semi-automatic shotgun (variant Ultima)\n- +4 Shotguns skill levels\n- +4 Attention skill levels\n- Unlocks barter for Miller Bros. Blades M-2 Tactical Sword at Skier LL4\n- Unlocks barter for Kiba Arms Titan ballistic plate at Skier LL3\n- Unlocks barter for AK Custom Arms AGS-74 PRO + Sniper Kit pistol grip at Skier LL4\n\"You did good, now you got my respect! I'll keep you in mind if I have something interesting.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "This quest can be done with any shotgun that uses 12/70 ammunition."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "The Huntsman Path - Factory Chief",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Factory_Chief",
+  "revisionId": 359758,
+  "lastEdited": "2026-09-13T20:21:36Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Factory, Interchange",
+    "given by": "Jaeger",
+    "previous": "Scout, The Huntsman Path - Forest Cleaning",
+    "leads to": "The Huntsman Path - Relentless",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Factory Chief is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day to you. There's a special task for you today. A new individual dug in the old chemical plant, the one TerraGroup used for their shady business, locals call this man Tagilla. Either breathed in some chemicals or got hit in the head - the fellow went completely off the rails. Murdering both his own people and the others. He uses a sledgehammer, and he's good with it, even a professional shooter would begrudge him. He's finished many people in that factory's corridors. Scavs respect him and don't get in his way. There's no place for such as him on this earth... You know what to do, hunter.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate Tagilla\n- Find 1 BOSS cap in raid\n- Hand over 1 BOSS cap to Jaeger"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +16,000 EXP\n- Jaeger Rep +0.02\n- 700,000 Roubles\n  - 735,000 Roubles with Intelligence Center Level 1\n  - 805,000 Roubles with Intelligence Center Level 2\n- 1× Factory emergency exit key\n\"That's good news. The world will only get cleaner. Hope the bastard didn't get you with his sledgehammer?\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| BOSS cap; or; Hat with antlers | BOSS cap; or; Hat with antlers | 1 | Handover item | Yes |\nIn this quest you have to kill Tagilla (Not Shadow of Tagilla) and find his cap in raid."
+    }
+  ]
+}

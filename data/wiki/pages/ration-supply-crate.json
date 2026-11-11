@@ -1,0 +1,38 @@
+{
+  "title": "Ration supply crate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ration_supply_crate",
+  "revisionId": 358891,
+  "lastEdited": "2026-09-11T22:09:51Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "5d6fd13186f77424ad2a8c69",
+    "ID": "Food&Stuff"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Ration supply crate is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "An 8x5 grid ration supply crate."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The padlocked version of this crate is never empty. The lock can be shot off."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Type |\n| Others |\n| Others |\n| Others |\n| Others |\n| Drinks |\n| Food |\n| Drinks |\n| Drinks |\n| Food |\n| Food |\n| Food |\n| Food |\n| Food |\n| Food |\n| Food |\n| Food |\n| Food |\n| Food |\n| Food |\n| Others |\n| Food |\n| Drinks |\n| Food |\n| Others |\n| Others |\n| Drinks |\n| Food |\n| Drinks |\n| Food |\n| Drinks |\n| Food |\n| Household materials |"
+    }
+  ]
+}

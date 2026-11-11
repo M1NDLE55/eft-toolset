@@ -1,0 +1,45 @@
+{
+  "title": "All for the Show - Pyrotechnics",
+  "url": "https://escapefromtarkov.fandom.com/wiki/All_for_the_Show_-_Pyrotechnics",
+  "revisionId": 361381,
+  "lastEdited": "2026-09-23T01:43:20Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Advertising Business - Part 1",
+    "leads to": "Advertising Business - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "All for the Show - Pyrotechnics is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Ever play baseball? You know how to blow the crowd away? With a good throw of a grenade! Not literally into the stands, of course. Try that and I'll have you feeding the fish. But when someone gets turned into mush by a grenade in the Arena, the crowd screams louder than the blast itself!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win a match on Fort\n- Win a match on Equator\n- Win a match on Bowl\n- Win a match on Chop Shop\n- Win a match on Bay 5"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +7,000 EXP\n- Ref Rep +0.01\n- 56,000 Roubles\n- 50 GP coins\n- 1× Lega Medal"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Kills that happen after the player's death do not count."
+    }
+  ]
+}

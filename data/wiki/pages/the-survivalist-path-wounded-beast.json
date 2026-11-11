@@ -1,0 +1,47 @@
+{
+  "title": "The Survivalist Path - Wounded Beast",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Wounded_Beast",
+  "revisionId": 359792,
+  "lastEdited": "2026-09-13T20:22:10Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The survivalist path - Wounded beast"
+  ],
+  "infobox": {
+    "location": "Any",
+    "given by": "Jaeger",
+    "previous": "The Survivalist Path - Zhivchik",
+    "leads to": "The Survivalist Path - Tough Guy, The Survivalist Path - Cold Blooded",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Survivalist Path - Wounded Beast is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello there. Has it ever happened to you that you got into trouble, but there is no time to take care of the wound as you have to save your skin? Self-control in the most difficult situations is the key to survival. This is a very important skill in these difficult days for our city. Show me how well you handle pain.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 3 Scavs while suffering from pain effect"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +5,800 EXP\n- +1 Stress resistance skill level\n- Jaeger Rep +0.02\n- 65,000 Roubles\n  - 68,250 Roubles with Intelligence Center Level 1\n  - 74,750 Roubles with Intelligence Center Level 2\n- Unlocks purchase of Benelli M3 Super 90 12ga dual-mode shotgun at Jaeger LL2\n- Unlocks Bear Hideout shooting range target style\n\"Handled it? Nicely done. Your training is almost done. If we keep it that way, we may start taking care of the order in the city earlier than planned.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "- Dehydration and broken bones cause pain. Easiest way to break your leg bones is to fall a few meters or to intentionally fail the Hideout gym training to break your arm.\n  - Using a Jar of DevilDog mayo is an easy way to achieve pain through dehydration, although it comes with the side effect of constant damage over time.\n- Using painkillers, morphine and/or similar medication will remove the status effect, and as such kills will not count towards the quest."
+    }
+  ]
+}

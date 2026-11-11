@@ -1,0 +1,95 @@
+{
+  "title": "Following the Bread Crumbs",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Following_the_Bread_Crumbs",
+  "revisionId": 360195,
+  "lastEdited": "2026-09-15T08:25:07Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Lab",
+    "given by": "Lightkeeper",
+    "previous": "Provocation (+10hr)",
+    "leads to": "Spotter (+10hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Following the Bread Crumbs is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The message found its recipient. Rats on a sinking ship began to scurry. The customers gave orders to destroy all evidence of ongoing developments. Your mission is to infiltrate TerraGroup's lab, find the data carrier containing the data we need, and deliver it to me. What are you waiting for, a candy for good luck? Hurry up!\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 10 hours after completion of Provocation"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 20 targets in The Lab\n- Search the weapon testing area in The Lab\n- Search the human experiment room in The Lab\n- Obtain the secured tape inside the manager's office in The Lab\n- Bring the tape to Lightkeeper\nNote: The \"Search\" objectives will appear after the \"Eliminate\" objective is completed."
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.04\n- 1× Far-forward GPS Signal Amplifier Unit\n- Unlocks barter for Far-forward GPS Signal Amplifier Unit at Mechanic LL4\n\"Do you have the recorder? Perfect, give it to me. It will take time to complete the decoding. I'll let you know when we're done.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| TerraGroup Labs weapon testing area key | 1 | Required | N/A | Unlocks the weapon testing area. |\n| TerraGroup Labs keycard (Black) | 1 | Required | N/A | Unlocks the human experiment room. |\n| TerraGroup Labs manager's office room key | 1 | Required* | N/A | Unlocks the manager's area of the conference room. |\n| Secured tape | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n- Not all spawn locations for the quest item require this key. It is not entirely needed to complete the quest.\n\nIn this quest you first have to kill any 20 targets in The Lab. Then you have to visit the weapon testing area and the human experiment room in The Lab. A TerraGroup Labs weapon testing area key and a TerraGroup Labs keycard (Black) are required to enter them. The last objective needs you to obtain a secured tape from the conference room in The Lab and bring it to Lightkeeper. A TerraGroup Labs manager's office room key is required to access 3 of the 8 possible spawns in the locked manager's area."
+    },
+    {
+      "heading": "Weapon testing area and experiment room location",
+      "level": 3,
+      "text": "The wanted locations are located on the first floor. You have to enter the glassed room inside the experiment area for the objective to complete."
+    },
+    {
+      "heading": "Conference room and secured tape location",
+      "level": 3,
+      "text": "The conference room is located on the second floor."
+    },
+    {
+      "heading": "First/Second spawn",
+      "level": 4,
+      "text": "Ontop of the reception desk, tucked into a red or blue folder."
+    },
+    {
+      "heading": "Third spawn",
+      "level": 4,
+      "text": "Ontop of the oval table, next to the blue folder."
+    },
+    {
+      "heading": "Fourth spawn",
+      "level": 4,
+      "text": "Ontop of the oval table, in the back left next to the laptop."
+    },
+    {
+      "heading": "Fifth spawn",
+      "level": 4,
+      "text": "On the floor under the back right of the table."
+    },
+    {
+      "heading": "Sixth spawn",
+      "level": 4,
+      "text": "In the locked manager's area, on one of the lounge chairs."
+    },
+    {
+      "heading": "Seventh spawn",
+      "level": 4,
+      "text": "In the locked manager's area, between the desktop and the drawers of the desk with one screen."
+    },
+    {
+      "heading": "Eighth spawn",
+      "level": 4,
+      "text": "In the locked manager's area, between the desktop and the drawers of the desk with the two screens."
+    }
+  ]
+}

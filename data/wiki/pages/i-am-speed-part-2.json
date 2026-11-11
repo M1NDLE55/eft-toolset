@@ -1,0 +1,40 @@
+{
+  "title": "I Am Speed - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/I_Am_Speed_-_Part_2",
+  "revisionId": 359401,
+  "lastEdited": "2026-09-13T20:15:32Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "I Am Speed - Part 1",
+    "leads to": "I Am Speed - Part 3",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "I Am Speed - Part 2 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"When the game's all about holding objectives, every second counts. We've had a lot of fresh meat show up lately. Show them how to actually storm the objectives!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Capture 12 objectives within one match in CheckPoint mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +36,000 EXP\n- Ref Rep +0.02\n- 91,000 Roubles\n- 48 GP coins\n- 1× Supply crate (Rare)"
+    }
+  ]
+}

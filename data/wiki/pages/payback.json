@@ -1,0 +1,50 @@
+{
+  "title": "Payback",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Payback",
+  "revisionId": 360188,
+  "lastEdited": "2026-09-15T08:10:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Lightkeeper",
+    "previous": "Return the Favor (+10hr)",
+    "leads to": "Provocation (+10hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Payback is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Well, the situation became plain enough. This group of hotshots is, as it turns out, run by Glukhar, an ex-marine who settled at the Reserve base with his crew. That's where he took the documents you planted. Who'd have thought he'd have the nerve to undermine me? Well, he signed his own sentence. Hunt them down and settle the matter. When it's done, give a signal with a flare rocket from high ground, and I'll send men to their lair to sort out their junk. We need to find out what else they've been digging up. As soon as you've fired the signal, you take the shortest possible route straight to me.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 10 hours after completion of Return the Favor"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and neutralize Glukhar or his guards for 4 kills total on Reserve (In one raid)\n  - (Optional) Bring a yellow signal flare into raid\n- Shoot a yellow signal flare at the radar station on Reserve (In one raid)\n- Survive and extract from Reserve through Cliff Descent (In one raid)\nNote: The \"Flare\" objective will appear after the \"Neutralize\" objective is completed."
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.03\n- 1× Microcontroller board\n- 3× LEDX Skin Transilluminator\n- 1× Substation marked key\n- Unlocks purchase of DevTac Ronin Respirator at Ragman LL4\n\"Saw the signal, great job. I advise you not to go to the base while my men are out there working.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| RSP-30 reactive signal cartridge (Yellow) | 1 | Required | N/A | Must be fired into the sky while being at the radar station. |\n| ZiD SP-81 26x75 signal pistol | 1 | Required | N/A | Used to fire the flare cartridge. |\n| 26x75mm flare cartridge (Yellow) | 1 | Required | N/A | Must be fired into the sky while being at the radar station. |\n\nIn this quest you first have to kill Glukhar or his guards for 4 kills total. Next, you have to shoot a yellow flare into the sky while being at the radar station area on Reserve. If the flare doesn't reach a certain height, the quest objective won't complete. You can use either the handheld RSP-30 yellow flare which can be bought at Prapor LL1 or a 26x75mm yellow flare cartridge which can be bought at Jaeger LL1, and is fired from a signal pistol. If you use the handheld RSP-30 yellow flare, make sure to aim it upwards, but not too much or it lands behind you. Finally, you have to extract via the \"Cliff Descent\" extraction. To use it, a Red Rebel ice pick and Paracord are required and you must not wear any Armor vest."
+    }
+  ]
+}

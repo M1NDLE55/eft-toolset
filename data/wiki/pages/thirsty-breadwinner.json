@@ -1,0 +1,44 @@
+{
+  "title": "Thirsty - Breadwinner",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Thirsty_-_Breadwinner",
+  "revisionId": 362437,
+  "lastEdited": "2026-09-29T14:36:07Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "previous": "Thirsty - Hounds",
+    "leads to": "Thirsty - Delivery",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Thirsty - Breadwinner is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The Thirsty dude? You too?! Why are you all bringing him up all of a sudden? Yeah, I worked with this guy. Сouldn't last five minutes without a drink. We made some good money with him back then. Always brought good loot, that guy. My respect to him. But he's been out of the game for a long time, at least in Tarkov. I can give you a tip on where he dumped his extra supplies, but not for free. I'm looking for two tanks of propane right now. Why don't you find it for me, and then we'll talk about your guy?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 2 Propane tanks (5L) in raid\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 1,000 Euros\n  - 1,050 Euros with Intelligence Center Level 1\n  - 1,150 Euros with Intelligence Center Level 2\n- 1× Expeditionary fuel tank\n\"You got it? That's a good start. Now we can talk about Thirsty.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Propane tank (5L) | 2 | Handover item | Yes |\nThe easiest way to complete this task is via utilizing your Scav character on Interchange to loot the OLI store, as propane tanks are commonly found on the shelving in the area."
+    }
+  ]
+}

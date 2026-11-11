@@ -1,0 +1,49 @@
+{
+  "title": "Know Your Enemy",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Know_Your_Enemy",
+  "revisionId": 359449,
+  "lastEdited": "2026-09-13T20:16:22Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Prapor",
+    "previous": "Cast the Net",
+    "leads to": "Reverse Gear (+0-2hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Know Your Enemy is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Finally some good fucking news! Those assholes showed up on a couple of cameras in the city. Whole squad dressed in black, gear's definitely not Russian, but it doesn't look like USEC equipment either. That means someone got them across the border, and they sure as hell didn't come here with friendly intentions. We need to push back before they cut off all our routes. Can you bring me some of their gear? I've got a buddy who knows his way around this kind of stuff. Maybe he'll be able to tell us who we're about to go to war with. I'll need their body armor or rigs.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 5 any Black Division plate carriers"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,000 EXP\n- 180,000 Roubles\n  - 189,000 Roubles with Intelligence Center Level 1\n  - 207,000 Roubles with Intelligence Center Level 2\n- 5× F-1 hand grenade\n- 5× RGD-5 hand grenade\n\"Excellent work. I don't think anyone but you could've taken down fighters like that right now. The sooner we find out where they train soldiers like these, and what bastard decided to send them into Tarkov, the better... Whoever's behind this has plenty of resources and even bigger ambitions.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| Ferro Concepts FCPC V5 Plate Carrier (Black Division); or; Spiritus Systems LV-119 Plate Carrier (Black Division V2); or; Spiritus Systems LV-119 Plate Carrier (MultiCam Black); or; Spiritus Systems LV-119 Plate Carrier (Black Division V1); or; First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division) | Ferro Concepts FCPC V5 Plate Carrier (Black Division); or; Spiritus Systems LV-119 Plate Carrier (Black Division V2); or; Spiritus Systems LV-119 Plate Carrier (MultiCam Black); or; Spiritus Systems LV-119 Plate Carrier (Black Division V1); or; First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division) | 5 | Handover item | No |"
+    }
+  ]
+}

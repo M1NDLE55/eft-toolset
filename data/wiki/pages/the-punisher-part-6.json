@@ -1,0 +1,45 @@
+{
+  "title": "The Punisher - Part 6",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Punisher_-_Part_6",
+  "revisionId": 359780,
+  "lastEdited": "2026-09-13T20:21:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The Punisher. Part 6."
+  ],
+  "infobox": {
+    "given by": "Prapor",
+    "previous": "The Punisher - Part 5",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Punisher - Part 6 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey, soldier. You know... I think I'm done with these jobs from the Masters. The PMCs have teamed up with the local bosses and started putting the squeeze on them. And they're not just trying to shut them down... They want to take over! Getting caught in the middle of that is way too risky. So this is my last job for them. After this, I'm done. This time they want us to thin out the PMCs across the whole region. Thirty kills should satisfy them. Use machine guns, 9x39 weapons, SVD, TKPD, AKS-74U series, or AKM series, so everyone who needs to gets the message. They also want proof this time. Bring me ten PMC dogtags, any faction, and I'll make sure they end up where they're supposed to.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 30 PMC operatives with the specified weapons on Lighthouse, Shoreline, Reserve, Ground Zero or The Lab\n- Hand over 10 BEAR or USEC Dogtags\n- Locate and neutralize any 5 Bosses"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 5x 9x39mm SP-6 gs ammo pack (20 pcs)\n- 1x SR-3M 9x39 compact assault rifle\n- 1× Secure container Epsilon\n- Unlocks purchase of SR-3M 9x39 compact assault rifle at Prapor LL4\n\"The money's tempting, but these jobs... They're getting getting out of hand. Ah, whatever. Here's your cut.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Dogtag | 10 | Handover item | No |\nPartisan and Zryachiy do not count for the boss kills.\n\nYou can use any of the following weapons for the PMC kills on Lighthouse, Shoreline, Reserve, Ground Zero or The Lab:\n- AS VAL 9x39 special assault rifle\n- AS VAL MOD.4 9x39 special assault rifle\n- Degtyarev RPD 7.62x39 machine gun\n- Degtyarev RPDN 7.62x39 machine gun\n- KBP 9A-91 9x39 compact assault rifle\n- KBP VSK-94 9x39 rifle\n- Kalashnikov AK-103 7.62x39 assault rifle\n- Kalashnikov AK-104 7.62x39 assault rifle\n- Kalashnikov AKM 7.62x39 assault rifle\n- Kalashnikov AKMN 7.62x39 assault rifle\n- Kalashnikov AKMS 7.62x39 assault rifle\n- Kalashnikov AKMSN 7.62x39 assault rifle\n- Kalashnikov AKS-74U 5.45x39 assault rifle\n- Kalashnikov AKS-74UB 5.45x39 assault rifle\n- Kalashnikov AKS-74UN 5.45x39 assault rifle\n- Kalashnikov PKM 7.62x54R machine gun\n- Kalashnikov PKP 7.62x54R infantry machine gun\n- Molot Arms VPO-136 Vepr-KM 7.62x39 carbine\n- RPK-16 5.45x39 light machine gun\n- SAG AK-545 5.45x39 carbine\n- SR-3M 9x39 compact assault rifle\n- TKPD 9.3x64 carbine\n- U.S. Ordnance M60E4 7.62x51 light machine gun\n- U.S. Ordnance M60E6 7.62x51 light machine gun\n- VSS Vintorez 9x39 special sniper rifle"
+    }
+  ]
+}

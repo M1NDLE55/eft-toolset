@@ -1,0 +1,60 @@
+{
+  "title": "Gunsmith Master - Part 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_3",
+  "revisionId": 356781,
+  "lastEdited": "2026-08-29T20:14:48Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith 3",
+    "Gunsmith Master 3"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith Master - Part 3 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I've said too much last time. It happens when I'm alone with my thoughts for a while. A lot of stuff comes to mind while I sit here calibrating the sights. That M4 turned out splendid, got taken off my hands in a moment. A BEAR dropped by recently, goes by the name of Sniper or something. He needs a Lobaev DVL sniper rifle, with a scope and multi-laser device. With recoil sum less than 450, ergonomics above 36, and weight below 6.7 kg. He said it needs to be a 2000m shot. The guy is serious, so do your best to make a solid build.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 30 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify a DVL-10 to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +20,400 EXP\n- Mechanic Rep +0.03\n- 200,000 Roubles\n  - 210,000 Roubles with Intelligence Center Level 1\n  - 230,000 Roubles with Intelligence Center Level 2\n- 2× Pack of screws\n- 1× Electric drill\n- 1× Metal fuel tank\n- Unlocks purchase of Lone Star TX-15 DML 5.56x45 carbine at Skier LL3\n\"Thank you, leave the rifle on the table, I'll hand it over to Di— ahem, Sniper.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "DVL-10 specifications:\n- 60 Durability\n- 36 or greater ergonomics\n- 450 or less recoil\n- 2,000 or greater sighting range\n- 6.7 kg or less in weight\n- Any tactical device (such as the NcSTAR Tactical Blue Laser)"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard DVL-10 from Skier LL3.\n- Besides the scope listed below, you can also use the Schmidt & Bender PM II 5-25x56 34mm riflescope which can be bought at Jaeger LL3. Note that it is not compatible with the IEA Mil-Optics KH/F 34mm one-piece magmount.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| NcSTAR Tactical Blue Laser | Skier | LL1 |\n| Nightforce ATACR 7-35x56 34mm riflescope | Jaeger | LL2 (Barter); LL4 |\n| IEA Mil-Optics KH/F 34mm one-piece magmount | MechanicJaeger | LL2 (Barter)LL3 |\n| Nightforce Magmount 34mm ring scope mount | Jaeger | LL2 (Barter); LL4 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

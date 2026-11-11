@@ -1,0 +1,55 @@
+{
+  "title": "Gunsmith Master - Part 10",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_10",
+  "revisionId": 356767,
+  "lastEdited": "2026-08-29T19:57:48Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith 10",
+    "Gunsmith Master 10"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith Master - Part 10 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"A very serious individual has placed an order for an AR on 7.62x39s. Needs an SWS N6 Split handguard, 409mm barrel, ATLAS-7 muzzle, Skeletonized Foregrip, GTL 21 flashlight, Vortex UH-1 sight, HK E1 buttstock, Skeletonized Style 2 pistol grip and a 73-round drum. Ergonomics no lower than 30, weight no higher than 5 kg.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify a CMMG Mk47 Mutant to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +29,500 EXP\n- Mechanic Rep +0.03\n- 1,300 Euros\n  - 1,365 Euros with Intelligence Center Level 1\n  - 1,495 Euros with Intelligence Center Level 2\n- 1× SIG Sauer ECHO1 1-2x30mm 30Hz thermal reflex scope\n\"Great, thank you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "CMMG Mk47 Mutant specifications:\n- 60 Durability\n- 30 or more ergonomics\n- 5 kg or less in weight\n- AR-10 Noveske SWS N6 Split handguard\n- Mk47 409mm barrel\n- AR-10 Odin Works ATLAS-7 7.62x51 muzzle brake\n- Tactical Dynamics Skeletonized Foregrip\n- Glock GTL 21 tactical flashlight with laser\n- Vortex Razor AMG UH-1 holographic sight\n- AR-15 HK E1 buttstock\n- AR-15 F1 Firearms Skeletonized Style 2 pistol grip\n- AK 7.62x39 ProMag AK-A-16 73-round drum magazine"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard CMMG Mk47 Mutant from Skier LL4. It can only be purchased after completing Bullshit.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AR-10 Noveske SWS N6 Split handguard | Mechanic | LL4 |\n| Mk47 409mm barrel | Mechanic | LL4 |\n| AR-10 Odin Works ATLAS-7 7.62x51 muzzle brake | Mechanic | LL4 |\n| Tactical Dynamics Skeletonized Foregrip | Skier | LL3 |\n| Glock GTL 21 tactical flashlight with laser | Mechanic | LL1 |\n| Vortex Razor AMG UH-1 holographic sight | SkierRef | LL4LL2 |\n| AR-15 HK E1 buttstock | Peacekeeper | LL3 |\n| AR-15 F1 Firearms Skeletonized Style 2 pistol grip | Skier | LL4 |\n| AK 7.62x39 ProMag AK-A-16 73-round drum magazine | MechanicPeacekeeper | LL2 (Barter)LL4 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

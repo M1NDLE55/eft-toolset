@@ -1,0 +1,45 @@
+{
+  "title": "Gladiator Doping - Part 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Doping_-_Part_4",
+  "revisionId": 359336,
+  "lastEdited": "2026-09-13T20:14:28Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Doping - Part 3",
+    "leads to": "Jack of All Trades, Professional - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Doping - Part 4 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Alright, we're almost done with the stimulants. Just a few left, but I've got work up to my ears. So just grab them and try them out yourself in the Arena. What did you expect? I've already spent plenty of time fussing over you!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 30 enemies while under the effect of the Zagustin stimulant\n- Eliminate 30 enemies while under the effect of the Propital stimulant\n- Eliminate 30 enemies while under the effect of the Meldonin stimulant"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +9,999 EXP\n- Ref Rep +0.01\n- 110,000 Roubles\n- 30 GP coins\n- Unlocks eTG-change regenerative stimulant injector in the Armory"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Requirement | Notes |\n| Zagustin hemostatic drug injector | Required | Has to be active while making the kills |\n| Propital regenerative stimulant injector | Required | Has to be active while making the kills |\n| Meldonin injector | Required | Has to be active while making the kills |"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "title": "Map of Tarkov",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Map_of_Tarkov",
+  "revisionId": 357897,
+  "lastEdited": "2026-09-08T14:48:31Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Border sniper",
+    "Border snipers",
+    "Claymore",
+    "Claymores",
+    "Landmine",
+    "Landmines",
+    "Location",
+    "Locations",
+    "Minefield",
+    "Minefields",
+    "Raid",
+    "Raids"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The map in Escape from Tarkov consists of 13 different locations. While they are separated from each other, it is possible to transit between them without leaving a round."
+    },
+    {
+      "heading": "Location selection",
+      "level": 2,
+      "text": "Most maps are initially locked in the location selection and get unlocked by progressing through the story chapter Tour. A red skull icon indicates the guaranteed presence of a boss at that location.\n\nFile:Map of Tarkov.png\nrect 57 103 229 126 Icebreaker\nrect 543 57 695 91 The Lab\nrect 593 112 786 139 Ground Zero\nrect 524 204 783 230 Streets of Tarkov\nrect 515 410 705 434 Interchange\nrect 429 331 566 356 Customs\nrect 365 291 497 316 Factory\nrect 356 172 474 197 Woods\nrect 278 370 412 396 Reserve\nrect 90 338 263 363 Lighthouse\nrect 167 460 325 482 Shoreline\nrect 396 460 188 435 The Labyrinth\nrect 216 566 361 608 Terminal"
+    },
+    {
+      "heading": "Location specific features",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Minefields",
+      "level": 3,
+      "text": "Minefields are usually marked by warning signs, but there are also a few unmarked ones (e.g. west of the USEC camp on Woods).\nThe mines are invisible, respawn after they detonate and can only be triggered by players. It is therefore impossible to detect a mine, let alone clear a minefield. When entering a minefield, triggering a mine is chance-based.\nWhile they are used to create artificial borders on Woods, Shoreline, Ground Zero, Interchange and Reserve, they can also be found along the harbor terminal wall on Shoreline."
+    },
+    {
+      "heading": "Border Snipers",
+      "level": 3,
+      "text": "Border Snipers are marked by various warning signs. They are invisible, non-killable and can shoot through any object. They should be avoided under all circumstances, not least because the player's health will be set to 1% after dying to them.\nIt is therefore essential for survival to retreat immediately when being targeted by one, as taking cover is pointless.\nThey are used to create artificial borders on Customs, Lighthouse, Reserve, Woods, Shoreline, Ground Zero, Interchange and Streets of Tarkov."
+    },
+    {
+      "heading": "Claymores",
+      "level": 3,
+      "text": "Claymores are directional anti-personnel mines. The mines have an activation range of 5-10m, are unaffected by gunfire and explosives and instantly kill players upon detonation, unless they are behind cover. Unlike the minefield, once blown up another doesn't respawn in its place, allowing claymores to be permanently cleared after detonation. Claymores can only be detonated by getting into their activation range.\n\nThey are used on the Lighthouse, Ground Zero and Streets of Tarkov locations:\n- On Lighthouse they are scattered on the bridge to the lighthouse at the peninsula territory. It is possible to safely pass them with an encoded Digital secure DSP radio transmitter.\n- On Ground Zero one is located inside the Tarbank, in customer desk booth no. 3.\n- On Streets of Tarkov they are scattered around the LexOs car dealership."
+    },
+    {
+      "heading": "Locations",
+      "level": 2,
+      "text": "| Name | Description | Duration | PMC players | Enemies |\n| Arena | Makeshift gladiator-style arenas in various parts of Tarkov where the remaining locals face each other, created by a mysterious group of arena masters. | | | |\n| Customs | A large area of industrial park land situated adjacent to the factory zone. The area houses a customs terminal, fuel storage facilities, offices, and dorms, as well as a variety of other infrastructure and buildings. | 35 min | 10-12 | ScavsReshalaPartisanKnightBig PipeBirdeyeCultists |\n| Factory | The industrial estate and facilities of Chemical Plant No. 16 were rented out illegally to the TerraGroup corporation. During the advent of the Contract Wars, the plant became the scene of numerous firefights between BEAR and USEC that ultimately determined control over the industrial district of Tarkov. Later on, in the wake of the chaos, the plant facilities became a shelter for the remaining civilians, Scavs, and military operatives, including the scattered remains of the BEAR and USEC contingents. | Day: 20 minNight: 25 min | Day: 7-8Night: 5-6 | Day:; ScavsTagilla; Night:; ScavsTagillaCultists |\n| Ground Zero | The business center of Tarkov. This is where TerraGroup was headquartered. This is where it all began. The area has yet again become a hot zone since the early days of the conflict. | 30 min | Lvl <21: 9-10Lvl 21+: 9-12 | Lvl <21:; Scavs; Lvl 21+:; ScavsCultists |\n| Icebreaker | In the Gulf of Finland, trapped within the blockade surrounding Tarkov, lies the nuclear-powered icebreaker \"Boreas\", owned by the logistics corporation Paradigm Shipping. The exact purpose of \"Boreas\" and the cargo it carries remain unknown. It appears that Paradigm Shipping and TerraGroup made special efforts to minimize any mention of the icebreaker in the press and keep its routes and assignments classified. | 50 min | 1-3 | RoguesBlack DivisionThe WedgeKnight |\n| Interchange | The South Interchange is a key transport location for the city. This strategic area connects the port and harbor with the industrial outskirts of Tarkov. Located in the center of the interchange is a huge ULTRA shopping mall which was used as the main base of operation for the EMERCOM evacuation. | 40 min | 11-15 | ScavsKillaTagilla |\n| Lighthouse | The lighthouse at Cape Dalniy was an important strategic object on the way to Tarkov. During Contract Wars, it was the main entry point for USEC units and served as their base of operations. After the conflict, Scavs took a fancy to this place, until the old owners returned, who decided to stay in Tarkov and establish their own order. | 40 min | 10-12 | ScavsRoguesPartisanKnightBig PipeBirdeyeZryachiy |\n| Reserve | The secret Federal State Reserve Agency base that, according to urban legends, contains enough supplies to last for years: food, medications, and other resources, enough to survive an all-out nuclear war. | 40 min | 9-11 | ScavsScav RaidersGlukhar |\n| Shoreline | The Shoreline area makes up a large part of the outskirts of Tarkov and is located next to the Port. The area houses a partially abandoned village, modern private housing, agricultural fields, long stretches of beach, a boating facility, gas station, weather station, and a cellular tower as well as other commercial facilities. Shoreline's main point of interest is the Azure Coast health resort which consists of several blocks, exclusively powered by a nearby hydroelectric power plant. The resort had previously been used as temporary accommodation for members of TerraGroup and the corporation's associated divisions in preparation for the evacuation of the Tarkov Port. | 45 min | 10-14 | ScavsSanitarPartisanKnightBig PipeBirdeyeCultistsRUAF |\n| Streets of Tarkov | Downtown Tarkov houses banks, malls, and hotels, as well as all the other amenities a thriving metropolis could have needed. | 40 min | 12-16 | ScavsKabanKollontay |\n| Terminal | The southern port Terminal has been under Russian Armed Forces control since the beginning of the Tarkov conflict. After the city was sealed off, the terminal was fortified and became the primary evacuation point, sought by both civilian refugees and PMC units. According to unconfirmed reports, TerraGroup personnel were also evacuated through this port. | 45 min | 1-5 | ScavsBlack DivisionGlukharKillaReshalaSanitarTagilla |\n| The Lab | Secret underground TerraGroup Labs facility hidden right under the center of Tarkov. Officially, this research center does not exist and, based on data scraps, is engaged in research and development as well as testing and simulation of projects in chemistry, physics, biology, and other high technology. | 30 min | 8-10 | Scav Raiders |\n| The Labyrinth | A facility of one of TerraGroup's contractors, Knossos LLC. According to public sources, they build amusement and theme parks. However, this place looks more like a heavily fortified bunker than a new theme park. | 30 min | 1-5 | ScavsShadow of TagillaVengeful Killa |\n| Woods | The Priozersk Nature Reserve recently became part of the state-protected wildlife reserves of the North-Western Federal District. | 35 min | 10-14 | ScavsShturmanPartisanKnightBig PipeBirdeyeCultists |"
+    },
+    {
+      "heading": "Upcoming Locations",
+      "level": 2,
+      "text": "| Banner | Name | Description |\n| End of Line | End of Line | |\n| Suburbs | Suburbs; (DLC) | The suburb and commuter areas of Tarkov containing all the infrastructure and creature comforts needed for a long and happy life. |\n| Town | Town; (DLC) | The Verkhneye urban settlement is a small town by the seaside, favoured by locals as an exceptional gardening and outdoor recreation spot. |"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Crafting",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crafting",
+  "revisionId": 362577,
+  "lastEdited": "2026-09-29T19:36:48Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "For a list of all craftable items, see Crafts.\n\nCrafting is a Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Improving the crafting skill reduces the production time of items, including those produced cyclically."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Reduces item crafting time (-0.75% per level → -37.5% at Elite Level)\n- Reduces all cyclic production time (except Bitcoin Farm) (-0.75% per level → -37.5% at Elite Level)\n- Elite level: Ability to craft up to two different items in a zone at once (Including Scav Case)"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Craft items in the Hideout\n  - 1.5 points per 8 hours of crafting\n  - 5 points per craft upon the end of production for alternating between 2 different crafting recipes in the same module.\n  - Crafting a single recipe repeatedly in the same module will give no points.\n- Completing the quest Get a Foothold\n- Completing the quest Never Too Late To Learn\n- Completing the quest Profit Retention\n- Completing the quest A Life Lesson"
+    }
+  ]
+}

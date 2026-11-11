@@ -1,0 +1,66 @@
+{
+  "title": "Machinery key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Machinery_key",
+  "revisionId": 335858,
+  "lastEdited": "2026-02-16T17:29:19Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the driver-side door of the orange tanker truck at the construction site on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5937ee6486f77408994ba448",
+    "ID": "naliv tech key"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Machinery key (Machinery) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to special machinery such as tank trucks, tractors, road-building machinery, etc."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the Quest Background Check"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Inside of the blue jackets in room 205 of the three-story dorms building. Guaranteed spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Used on the driver-side door of the fuel truck at the construction area on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "Nothing unless the quest Background Check is active."
+    }
+  ]
+}

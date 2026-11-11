@@ -1,0 +1,114 @@
+{
+  "title": "TerraGroup Labs keycard (Violet)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_keycard_(Violet)",
+  "revisionId": 360267,
+  "lastEdited": "2026-09-15T11:57:00Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [
+    "Purple keycard",
+    "Violet keycard"
+  ],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the laboratory security post (R23) in The Lab.",
+    "storage_wallet": "Yes",
+    "storage_keytool": "No",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5c1e495a86f7743109743dfb",
+    "ID": "item_lab_sec_room"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "TerraGroup Labs keycard (Violet) (Violet) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A United Security-issued TerraGroup Labs keycard for laboratory staff."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- On Cultists\n- On The Goons\n- In Rare valuables crates"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On Tagilla"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On Partisan\n- At the three-story dorms in the \"marked room\"\n- At the \"giving tree\" behind the \"Old Gas Station\""
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On Partisan\n- In Voron's hideout inside the hydroelectric power station, on the table"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On Killa\n- On Tagilla"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On Glukhar\n- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- On Kaban\n- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- On Partisan"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- On Shturman\n- On Partisan\n\n- On the passenger side footwell of the black SUV that is parked in front of the blue warehouse in the lumber camp\n\nThe SUV\n\nKeycard on the passenger side footwell\n\n- In a brick house north of the lumber camp on the edge of the desk right to the entrance, in front of the open book under the light emitted by the lamp\n\nHouse marked on map\n\nThe house\n\nKeycard on the desk\n\n- Inside the driver side door of the SUV at the checkpoint eastern of the lumber camp\n\nThe SUV\n\nKeycard on driver seat"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In Kruglov's office (R22) and the safe inside of it\n- Next to a sink behind the dome in the main working area (O11) on the first level\n\n- On a desk in the tented hallway between the quarantine zone (G11) and the experiment's area (G12) on the first level\n\n- On a chair in the glass conference room inside the administrative office (R22) on the second level"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Laboratory security post (R23) on the second level in The Lab."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- Possible UHF RFID Reader on the server rack\n- Weapon mods on the shelves in the corners\n- 2x Weapon box (6x6)\n- 1x Weapon box (4x4)\n- Currency on the desk\n- Possible MP5SD on the server rack\n- Possible modded M4A1 on the ground next to the server rack\n- Possible TerraGroup \"Blue Folders\" materials spawn on the shelve to the right of the entrance\n- Possible Intelligence folder spawn on the shelve to the right of the entrance\n- Multiple Valuables on the shelf next to the door as well as on the table on the far left of the room"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| UHF RFID Reader x1; UHF RFID Reader; +; TerraGroup Labs access keycard x10; TerraGroup Labs access keycard; +; TerraGroup Labs keycard (Yellow) x1; TerraGroup Labs keycard (Yellow); +; Intelligence folder x4; Intelligence folder; +; Secure magnetic tape cassette x1; Secure magnetic tape cassette | → | Intelligence Center level 3; 132 h 13 min 20 sec | → | TerraGroup Labs keycard (Violet) x1; TerraGroup Labs keycard (Violet) |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The card serial number is \"0010158226 641352571\"."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Medical supply crate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Medical_supply_crate",
+  "revisionId": 358889,
+  "lastEdited": "2026-09-11T22:09:48Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "5d6fe50986f77449d97f7463",
+    "ID": "meds&other"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Medical supply crate is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "An 8x5 grid medical supply crate."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The padlocked version of this crate is never empty. The lock can be shot off."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Type |\n| Household materials |\n| Household materials |\n| Medical supplies |\n| Injury treatment |\n| Injury treatment |\n| Injury treatment |\n| Medical supplies |\n| Household materials |\n| Household materials |\n| Medical supplies |\n| Household materials |\n| Pills |\n| Electronics |\n| Medkits |\n| Medical supplies |\n| Medkits |\n| Medical supplies |\n| Medical supplies |\n| Medkits |\n| Household materials |\n| Medical supplies |\n| Injectors |\n| Injectors |\n| Injectors |\n| Medical supplies |\n| Electronics |\n| Pills |\n| Injury treatment |\n| Injury treatment |\n| Pills |\n| Injury treatment |\n| Medical supplies |\n| Medical supplies |"
+    }
+  ]
+}

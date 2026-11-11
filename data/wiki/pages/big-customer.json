@@ -1,0 +1,61 @@
+{
+  "title": "Big Customer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Big_Customer",
+  "revisionId": 360699,
+  "lastEdited": "2026-09-19T10:10:26Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Big customer"
+  ],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Prapor",
+    "related": "Chemical - Part 4, or, Out of Curiosity",
+    "reqkappa": "No, but a subsequent quest Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Big Customer is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon! Our world is really small here - I found out that you’ve been teaming up with Skier lately. Let’s go straight to business - I need to know where to get that chemical of yours, a big customer wants to buy out all the crates for a good price. I don’t care why he needs it, I’m a bit tighter on funds now than I would like to be. So, are you in? I won't disappoint with the reward, of course.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must accept Skier's quest Chemical - Part 4 to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the transport with the chemicals on Customs\n- Mark the vehicle with an MS2000 Marker"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 1× Ammunition case\n- 1× Grenade case\n- 5× RGD-5 hand grenade\n- 5× Zarya stun grenade\n- 2× Gunpowder \"Kite\"\n\"Nicely done! My guys will show up right now and get this out in no time. Here's your reward, as promised.\""
+    },
+    {
+      "heading": "Failure Penalty",
+      "level": 2,
+      "text": "\"Well, damn. Well, why the hell are you courting this Skier so? Buffs you with cash? Promised you a share? But to hell with him, and you too. Get out of here, don't want to see your mug right now.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "By completing either Chemical - Part 4 or Out of Curiosity, you will fail and lose access to this quest.\n| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed in the chemical van. |\nYou can buy the MS2000 Marker from Prapor.\nAfter placing the marker, the player must stay alive for 30 seconds or they will have to place another beacon in the van. You do not need to be near the van after the marker has been placed. Find a nearby hiding spot and wait until the timer is complete."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy additional MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work."
+    }
+  ]
+}

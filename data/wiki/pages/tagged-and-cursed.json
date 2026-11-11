@@ -1,0 +1,32 @@
+{
+  "title": "Tagged and Cursed",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tagged_and_Cursed",
+  "revisionId": 353437,
+  "lastEdited": "2026-08-13T12:05:36Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Cursed",
+    "Tagged"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Tagged and Cursed is a hidden player state in Escape from Tarkov.\n\nIt automatically applies to PMCs that don't have at least a firearm and an armor vest or a chest rig or a backpack equipped upon entering a raid."
+    },
+    {
+      "heading": "Effect",
+      "level": 2,
+      "text": "When PMCs are tagged and cursed, Scavs will actively go after them, knowing their exact location in an approximately 150 meter radius. Equipping gear in a raid will remove the state."
+    },
+    {
+      "heading": "Practice mode",
+      "level": 2,
+      "text": "The practice mode offers the possibility to purposely activate the tagged and cursed state regardless of the equipped gear."
+    }
+  ]
+}

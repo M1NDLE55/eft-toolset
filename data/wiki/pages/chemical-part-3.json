@@ -1,0 +1,52 @@
+{
+  "title": "Chemical - Part 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chemical_-_Part_3",
+  "revisionId": 362234,
+  "lastEdited": "2026-09-26T15:24:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Chemical, p. 3"
+  ],
+  "infobox": {
+    "location": "Factory",
+    "given by": "Skier",
+    "previous": "Chemical - Part 2",
+    "leads to": "Collector, Chemical - Part 4",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Chemical - Part 3 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"That envelope from the dorm contained some chemical formula. And the flash drive described the reaction process. We found a guy here who’s good with the subject. So he said that they cooked up something like this at Polikhim, experimenting with some blue liquid shit, adding some other shit into it. Sorry, I wasn’t into chemistry at school! All these chemicals, valences, indecent bonds! Fuck that! Hehe. See, I even still remember some words. That was some teaching in schools back then! But whatever. It is necessary to confirm the experiment described there. And then this matter will shine upon us with new colors. This blue shit is abundantly scattered in barrels throughout the region, but nobody knows what it is. And nobody is too eager to figure that out either. But we will take our chance and find out. And make some profits with it. But this requires another stuff, It should be somewhere in the factory. There was a room filled with garbage - they had a laboratory there. Look for a bright yellow sort of syringe, looks like a pen, like a morphine syringe. Well, you get the idea.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 2 with Jaeger to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain the chemical-filled syringe hidden in Factory\n- Hand over the chemical-filled syringe to Skier"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 1,000 Euros\n  - 1,050 Euros with Intelligence Center Level 1\n  - 1,150 Euros with Intelligence Center Level 2\n- 1× ORSIS T-5000M 7.62x51 bolt-action sniper rifle\n- 1× 7.62x51mm M80 ammo pack (20 pcs)\n- Unlocks purchase for ORSIS T-5000M 7.62x51 bolt-action sniper rifle at Skier LL2\n\"Well, great. Now it’s time to get as far as possible while they do their experiments. We can have a look later.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Syringe with a chemical | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe wanted Syringe with a chemical is located in a room on the 3rd floor of the Factory offices behind a door which must be breached. There are multiple spawns throughout the room."
+    }
+  ]
+}

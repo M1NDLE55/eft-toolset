@@ -1,0 +1,46 @@
+{
+  "title": "The Tarkov Shooter - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Shooter_-_Part_2",
+  "revisionId": 359799,
+  "lastEdited": "2026-09-13T20:22:17Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The Tarkov shooter - Part 2"
+  ],
+  "infobox": {
+    "given by": "Jaeger",
+    "previous": "Accept The Tarkov Shooter - Part 1",
+    "leads to": "The Tarkov Shooter - Part 3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Tarkov Shooter - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"My friend, Shabelsky was his last name, used to write stories about the war. Even I had a fun time reading them sometimes. So recently he sold the rights to the entire series of books, and they made a movie after them in the West. But now he wants more money from the movie company, he hit the hard times, apparently. Even messaged me to look up some decent fighters here in Tarkov. It seems the whole world has forgotten about our city... They only remember us when they need a hired gun, and while things are going good they prefer to not notice our situation at all. Anyway, I digress. Are you ready for the second task from Sniper? You have to shoot at heads and legs from the same distance, 40 meters.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Shoot any target in the legs from over 40 meters away while using a bolt-action rifle 3 times\n- Shoot any target in the head from over 40 meters away while using a bolt-action rifle 2 times"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +12,400 EXP\n- Jaeger Rep +0.02\n- 65,000 Roubles\n  - 68,250 Roubles with Intelligence Center Level 1\n  - 74,750 Roubles with Intelligence Center Level 2\n\n- 1× Mosin Rifle AIM Sports MNG rail mount\n- 2× Umka M33-SET1 hunter vest (Olive Drab)\n- Unlocks purchase of Mosin Rifle AIM Sports MNG rail mount at Jaeger LL1\n\"Not bad, not bad. Even I wouldn't be so accurate with my shots, I'm way too old now. While you were shooting, Sniper has prepared the next test for you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to use a bolt-action rifle or MP-18 to land 3 hits on any entities legs, and 2 hits on any entities heads from over 40 meters away. The leg hits can all be done on the same target. Hits on group members don't count."
+    }
+  ]
+}

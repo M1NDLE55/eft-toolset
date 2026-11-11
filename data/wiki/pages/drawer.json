@@ -1,0 +1,35 @@
+{
+  "title": "Drawer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Drawer",
+  "revisionId": 327863,
+  "lastEdited": "2025-12-14T11:49:23Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [
+    "Filing cabinet"
+  ],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "578f87b7245977356274f2cd",
+    "ID": "Drawer"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Drawer is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Drawers are loot containers that are interacted with when searching filing cabinets. Most filing cabinets have 4 drawers, each of which can be searched individually. Each drawer is a 2x2 grid."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Item | Type |\n| | Keycard |\n| | Building materials |\n| | Building materials |\n| | Flammable materials |\n| | Flammable materials |\n| | Energy elements |\n| | Electronics |\n| | Electronics |\n| | Electronics |\n| | Electronics |\n| | Flammable materials |\n| | Electronics |\n| | Energy elements |\n| | Money |\n| | Energy elements |\n| | Electronics |\n| | Money |\n| | Electronics |\n| | Electronics |\n| | Electronics |\n| | Electronics |\n| | Info items |\n| | Tools |\n| | Household materials |\n| | Info items |\n| | Electronics |\n| | Info items |\n| | Info items |\n| | Energy elements |\n| | Building materials |\n| | Info items |\n| | Info items |\n| | Electronics |\n| | Info items |\n| | Info items |\n| | Info items |\n| | Info items |\n| | Info items |\n| | Info items |\n| | Electronics |\n| | Electronics |\n| | Energy elements |\n| | Electronics |\n| | Electronics |\n| | Electronics |\n| | Electronics |\n| Apollo Soyuz cigarettes | Others |\n| Malboro Cigarettes | Others |\n| Strike Cigarettes | Others |\n| Wilston cigarettes | Others |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Key |\n| | Building materials |\n| | Extraction intel |"
+    }
+  ]
+}

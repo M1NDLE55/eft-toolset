@@ -1,0 +1,84 @@
+{
+  "title": "Icebreaker",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Icebreaker",
+  "revisionId": 362363,
+  "lastEdited": "2026-09-29T10:31:45Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [],
+  "infobox": {
+    "prev": "Lighthouse, Shoreline",
+    "enemies": "Black Division, Rogues, The Wedge, Knight",
+    "players": "1-3 (only from own group)",
+    "duration": "50 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Icebreaker is a location in Escape from Tarkov. It is the thirteenth map that was added to the game."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "In the Gulf of Finland, trapped within the blockade surrounding Tarkov, lies the nuclear-powered icebreaker \"Boreas\", owned by the logistics corporation Paradigm Shipping. The exact purpose of \"Boreas\" and the cargo it carries remain unknown. It appears that Paradigm Shipping and TerraGroup made special efforts to minimize any mention of the icebreaker in the press and keep its routes and assignments classified."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This location can initially only be entered through transiting from Lighthouse or Shoreline after unlocking it in the story chapter Boreas. The transits are located at the piers and require a Sudak-Tudak marine repair kit.\n\n- Direct access from the location selection screen is unlocked upon completing the questline Stick to It. The requirement for a Sudak-Tudak marine repair kit still applies.\n- The number of encountered Black Division operatives and The Wedge's followers depends on the number of players in the raid. Detailed numbers can be found on the maps below."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Insurance",
+      "level": 3,
+      "text": "All insured items left in a raid by players will not be returned. Upon death, insurance Traders will send the usual in-game mail about dispatching people to recover the items, but when the insurance timer runs out they will explain that their people don't go to the location, didn't find it or died in the process."
+    },
+    {
+      "heading": "Key Items",
+      "level": 2,
+      "text": "| Icon | Name |\n| BBQ-S43 gas torch | BBQ-S43 gas torch |\n| Boreas crew quarters keycard | Boreas crew quarters keycard |\n| Boreas engine room keycard | Boreas engine room keycard |\n| Compartment C-1 keycard | Compartment C-1 keycard |\n| Compartment C-3 keycard | Compartment C-3 keycard |\n| SZ-1 explosive charge (Icebreaker) | SZ-1 explosive charge |"
+    },
+    {
+      "heading": "Bosses",
+      "level": 2,
+      "text": "| Name | Location | Notable equipment | Followers |\n| The Wedge | On level 3 in the gym | Spiritus Systems LV-119 Plate Carrier (MultiCam Black); TW EXFIL Peltor ComTac VI headset (Black); HK MP7 SureFire SF3P 4.6x30 flash hider; HK MP7 FAB Defense ARS stock adapter; FAB Defense FX-KPOS ARS stock | 3-6 heavily armed and armored guards |\n| Knight | On level 0 | Death Knight mask; Crye Precision CPC plate carrier (Goons Edition); Magnum Research Desert Eagle L6 .50 AE pistol (WTS) | 2 Rogue guards |"
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Helicopter | PMC | yes | no | Shoot a green flare into the sky while inside the signal flare area. If the flare doesn't reach a certain height, the helicopter won't come.; Flares:; Handheld RSP-30 green flare; Signal pistol fired 26x75mm green flare; Euros per player | Upon entering the signal flare area, a notification will pop up in the bottom right corner of the screen:; The helicopter will arrive after a short period of time. |"
+    },
+    {
+      "heading": "Maps",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Interactive Map",
+      "level": 3,
+      "text": "Click for fullscreen. Separate map page here."
+    },
+    {
+      "heading": "2D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This location is based on the Russian \"Арктика\" (Arktika) nuclear-powered icebreaker.\n- Initially, the icebreaker was called \"Северный ветер\" (North Wind) in concept art. In subsequent screenshots, the landing pad read \"Сибирь\" (Siberia). In the final trailer, the name was changed to \"Борей\" (Boreas). In ancient Greek mythology, Boreas is the personification of the stormy northern wind. Boreas was also considered the god of winter, descending from the cold mountains of Thrace, cooling the air with his icy breath.\n\n- During the \"Full Speed Ahead\" event, it becomes clear that the Rogues know about the icebreaker and where to find it, specifically somewhere off the coast of the Gulf of Finland, near Tarkov. This is revealed by Rogue intel maps, which can be found on Knight."
+    }
+  ]
+}

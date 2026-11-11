@@ -1,0 +1,96 @@
+{
+  "title": "Lighthouse",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lighthouse",
+  "revisionId": 360441,
+  "lastEdited": "2026-09-16T00:31:01Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [],
+  "infobox": {
+    "prev": "Reserve, Shoreline, Woods",
+    "next": "Icebreaker, Reserve, Shoreline, Woods",
+    "traders": "Lightkeeper, BTR Driver",
+    "enemies": "Scavs, Rogues, Partisan, Knight, Big Pipe, Birdeye, Zryachiy",
+    "players": "10-12",
+    "duration": "40 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Lighthouse is a location in Escape from Tarkov. It is the eighth map that was added to the game."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The lighthouse at Cape Dalniy was an important strategic object on the way to Tarkov. During Contract Wars, it was the main entry point for USEC units and served as their base of operations. After the conflict, Scavs took a fancy to this place, until the old owners returned, who decided to stay in Tarkov and establish their own order."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Lighthouse is initially only accessible by transiting. Direct access from the location selection screen is unlocked upon progressing through the story chapter Tour."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": "Be aware of Minefields, Claymores and Border Snipers!"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "The lighthouse at the peninsula territory is the home of Lightkeeper. The bridge that leads to the lighthouse is guarded by Zryachiy and full of Claymores. To safely pass the bridge, an encoded Digital secure DSP radio transmitter is required. It deactivates the claymores and has Zryachiy not shoot you. The questline to obtain one starts with To the Light - Trust but Verify. Harming Zryachiy, one of his followers, or a Lightkeeper acquainted PMC in the lighthouse premises will decode your Digital secure DSP radio transmitter if you have one. PMCs that are acquainted with Lightkeeper can kill unacquainted intruders without penalty."
+    },
+    {
+      "heading": "Usable Keys",
+      "level": 2,
+      "text": "| Key Name | Used in Quest |\n| Conference room key | |\n| Convenience store storage room key | |\n| Hillside house key | |\n| Leon's hideout key | |\n| Lighthouse island stash key | yes |\n| Merin car trunk key | |\n| Operating room key | yes |\n| Police truck cabin key | |\n| Radar station commandant room key | yes |\n| Rogue USEC barrack key | yes |\n| Rogue USEC stash key | |\n| Rogue USEC workshop key | |\n| Substation marked key | |\n| USEC cottage first safe key | |\n| USEC cottage room key | |\n| USEC cottage second safe key | |\n| Water treatment plant storage room key | yes |"
+    },
+    {
+      "heading": "Bosses",
+      "level": 2,
+      "text": "| Name | Location | Notable equipment | Followers |\n| Partisan | Has to be expected everywhere | Partisan's bag; AK skeletonized stock (Customized); Red Rebel ice pick | None |\n| Knight | At the water treatment plant in the north, and at the blue chalet. | Death Knight mask; Crye Precision CPC plate carrier (Goons Edition) | Big Pipe, Birdeye |\n| Big Pipe | At the water treatment plant in the north, and at the blue chalet. | Milkor M32A1 MSGL 40mm grenade launcher; Big Pipe's smoking pipe; Big Pipe's bandana; S&S Precision PlateFrame plate carrier (Goons Edition) | Knight, Birdeye |\n| Birdeye | At the water treatment plant in the north, and at the blue chalet. | Mystery Ranch NICE COMM 3 BVS frame system (Coyote); LBT-1961A Load Bearing Chest Rig (Goons Edition) | Knight, Big Pipe |\n| Zryachiy | At the peninsula territory. | TheAKGuy AK-50 .50 BMG anti-materiel rifle; Zryachiy's balaclava; Zryachiy's balaclava (folded); Azimut SS \"Khamelion\" chest harness (Olive) | 2 Cultist guards |"
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "To locate the extractions use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Armored Train | All | yes | no | - | /Arrives between 20 and 15 minutes left in the raid.; Honks twice on arrival.; Stays for 7 min.; Honks once 1 min before departure.; Honks twice on closing doors. |\n| Hideout Under the Landing Stage | Scav | yes | no | - | |\n| Industrial Zone Gates | Scav | yes | no | - | |\n| Mountain Pass | PMC | yes | no | Red Rebel ice pick; Paracord; No armor vest equipped | |\n| Northern Checkpoint | PMC | yes | no | - | |\n| Passage by the Lake | All | yes | no | Minefield map (Lighthouse); Minefield map (Lighthouse) | Item handover location |\n| Path to Shoreline | All | yes | no | - | |\n| Road to Military Base V-Ex | PMC | no | yes | 5000 Roubles per player; Maximum of 5 players | The fee amount is influenced by your Scav karma.; There are border snipers beyond the vehicle. |\n| Scav Hideout at the Grotto | Scav | yes | no | - | |\n| Side Tunnel (Co-Op) | All | yes | no | Scav + PMC | The extraction zone is inside a room to the left after entering the tunnel. |\n| Southern Road | PMC | yes | no | - | |\n| Southern Road Landslide | Scav | yes | no | - | |"
+    },
+    {
+      "heading": "Transits",
+      "level": 2,
+      "text": "| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Transit to Icebreaker | PMC | yes | no | Only available 1 min after raid start; Sudak-Tudak marine repair kit per player; Maximum of 3 players | At the pier next to the seaside houses; Has to be unlocked through the story chapter Boreas |\n| Transit to Reserve | All | yes | no | Only available 1 min after raid start | On the road leading to the Road to Military Base V-Ex extraction |\n| Transit to Shoreline | All | yes | no | Only available 1 min after raid start | Next to the Path to Shoreline extraction |\n| Transit to Woods | All | yes | no | Only available 1 min after raid start | On the road leading to the Road to Northern Checkpoint extraction |"
+    },
+    {
+      "heading": "Maps",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Interactive Map",
+      "level": 3,
+      "text": "Click for fullscreen. Separate map page here."
+    },
+    {
+      "heading": "3D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "2D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Lighthouse is a returning map from both of Escape from Tarkov's predecessors, Contract Wars and Hired Ops, where it had an identical function in the story as the original entry point of USEC into Tarkov. However in Escape from Tarkov, the map was drastically remade and has very little similarities to its older Contract Wars and Hired Ops iterations.\n- Lighthouse is referred to as \"Cape Dalniy\" in multiple quest dialogues. \"Dalny\" is also the nickname of the Kvantunskaya Oblast, a Russian territory in modern day China's Liaodong Peninsula.\n- The lighthouse is based on the Aniva lighthouse which is located at the southern coast of Sakhalin, Russia.\n\n- Link to the location on Google Maps"
+    }
+  ]
+}

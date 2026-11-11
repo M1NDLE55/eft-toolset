@@ -1,0 +1,44 @@
+{
+  "title": "The Bunker",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Bunker",
+  "revisionId": 361743,
+  "lastEdited": "2026-09-24T12:30:09Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Prapor",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Bunker is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, warrior. I'll get straight to the point. Word is they've uncovered an entrance to an underground bunker beneath our reserve military base. Where the hell it came from, I've got no idea, but the place ought to be interesting. I'm not sending my own boys into the unknown, they're more useful to me alive. So head over there and take a look around, search for entrances and exits as well. If it turns out this bunker wasn't built for grunts, but for the top brass, report back to me.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the underground bunker on Reserve\n- Locate the control room in the underground bunker on Reserve\n- Locate the hermetic door leading to the hospital (White Bishop) on Reserve\n- Locate one of the two hermetic doors leading to the academy building (Black Bishop) on Reserve\n- Locate one of the two hermetic doors leading to barracks #1 (Black Pawn) on Reserve\n- Locate one of the two hermetic doors leading to barracks #2 (White Pawn) on Reserve\n- Locate the hermetic door leading to the air control center building (King) on Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Alright don't be shy, mark those entrances right on this map. I'll get your reward in the meantime.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "The control room is located in the center of the Reserve underground bunker system. You can reach it by using any staircase of your choice.\n\nThe hermetic doors are the entry doors to the underground bunker system on Reserve."
+    }
+  ]
+}

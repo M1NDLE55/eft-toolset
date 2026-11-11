@@ -1,0 +1,46 @@
+{
+  "title": "Weapon Maintenance",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_Maintenance",
+  "revisionId": 362568,
+  "lastEdited": "2026-09-29T19:30:21Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Weapon Maintenance is a Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Weapon service and maintenance skills."
+    },
+    {
+      "heading": "Enhancements",
+      "level": 2,
+      "text": "After reaching level 3 in this skill, you have a chance to add a weapon enhancement when repairing a weapon. The enhancement only stays on the weapon until it loses 5% of the default max durability or until it gets repaired once again. It is possible to get two or more enhancements in a row when repairing the same gun in succession. Items with enhancements get an orange icon background."
+    },
+    {
+      "heading": "Enhancement types",
+      "level": 3,
+      "text": "| Skill level | Amount | Type |\n| 3-8; 3-6 | 3%; 5% | Reduces weapon spread (common); Reduces malfunction chance (common) |\n| 9-14; 7-10 | 4%; 6% | Reduces weapon spread (common); Reduces malfunction chance (common) |\n| 15-20; 11-14 | 5%; 7% | Reduces weapon spread (common); Reduces malfunction chance (common) |\n| 21-25; 15-18 | 6%; 8% | Reduces weapon spread (common); Reduces malfunction chance (common) |\n| 26-31; 19-22 | 7%; 9% | Reduces weapon spread (common); Reduces malfunction chance (common) |\n| 32-37; 23-26 | 8%; 10% | Reduces weapon spread (common); Reduces malfunction chance (common) |\n| 38-42; 27-30 | 9%; 11% | Reduces weapon spread (common); Reduces malfunction chance (common) |\n| 43-48; 31-34 | 10%; 12% | Reduces weapon spread (common); Reduces malfunction chance (common) |\n| 49-50; 35-38 | 11%; 13% | Reduces weapon spread (common); Reduces malfunction chance (common) |\n| 39-42 | 14% | Reduces malfunction chance (common) |\n| 43-46 | 15% | Reduces malfunction chance (common) |\n| 47-50 | 16% | Reduces malfunction chance (common) |\n| 51 | 11%; 16%; 20%; 30% | Reduces weapon spread (common); Reduces malfunction chance (common); Reduces weapon spread (rare); Reduces malfunction chance (rare) |"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Reduces gun wear while shooting (0.5% per level → -25% at Elite Level)\n- Reduces probability of wear during repair (1% per level → -50% at Elite Level)\n- Elite level: Reduces wear chance when using repair kits (-50%)"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Repairing weapons in the stash with the Weapon repair kit (Every ~5 points of weapon durability give 0.4 skill points)\n- Completing the quest Safety Guarantee\n- Completing the quest Consolation Prize\n- Completing the quest Profitable Venture\n- Completing the quest Goals and Means\n- Completing the quest Calibration"
+    }
+  ]
+}

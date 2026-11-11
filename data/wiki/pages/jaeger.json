@@ -1,0 +1,76 @@
+{
+  "title": "Jaeger",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Jaeger",
+  "revisionId": 352453,
+  "lastEdited": "2026-08-09T09:39:31Z",
+  "kind": "trader",
+  "categories": [
+    "Traders"
+  ],
+  "redirects": [
+    "Ivan Yegorovich Kharitonov",
+    "Jeager",
+    "Jäger",
+    "Kharitonov Ivan Egorovich"
+  ],
+  "infobox": {
+    "full name": "Ivan Yegorovich Kharitonov",
+    "location": "Priozersk Natural Reserve",
+    "origin": "Russian Federation",
+    "wares": "- Post-Soviet Bloc Weapons - Magazines - Ammo - Mods - Gear - Special equipment - Storage containers",
+    "services": "Insurance",
+    "currencies": "Roubles (₽),"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Ivan Yegorovich Kharitonov, known by his alias \"Jaeger\", is a trader in Escape from Tarkov."
+    },
+    {
+      "heading": "Biography",
+      "level": 2,
+      "text": "Before the conflict, he worked as a hunter in the Priozersk Natural Reserve under the State Hunting Service. A professional hunter and survival specialist. Even now, he still guards the reserve's hunting grounds from various aggressive individuals."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Jaeger is initially locked, and can be unlocked through Mechanic's quest Introduction."
+    },
+    {
+      "heading": "Wares",
+      "level": 2,
+      "text": "- Post-Soviet Bloc Weapons\n- Magazines\n- Ammo\n- Mods\n- Gear\n- Special equipment\n- Storage containers"
+    },
+    {
+      "heading": "Loyalty Level Requirements",
+      "level": 2,
+      "text": "| Loyalty Lvl | Required Lvl | Required Rep |\n| Lvl 2 | 9 | 0.60 |\n| Lvl 3 | 17 | 2.10 |\n| Lvl 4 | 33 | 7.30 |"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "Note: To get access to Jaeger you need to complete the quest Introduction from Mechanic.\n- See the quests overview page"
+    },
+    {
+      "heading": "Barters",
+      "level": 2,
+      "text": "- See the barter trades page"
+    },
+    {
+      "heading": "Items for sale",
+      "level": 2,
+      "text": "LL1:\nLL1\n\nLL2:\nLL2\n\nLL3:\nLL3\n\nLL4:\nLL4"
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- According to the quest The Huntsman Path - Secured Perimeter, Jaeger used to work at the Factory as the security chief.\n- According to the quest Introduction, Jaeger is an old friend of the Mechanic."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "title": "RB-TB key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-TB_key",
+  "revisionId": 316209,
+  "lastEdited": "2025-07-18T21:38:36Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-TB"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80c6fc86f774403a401e3c",
+    "ID": "rezbase_key_barrmid_shotrange"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-TB key (RB-TB) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base first barracks' underground shooting range."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On the train station lower roof, on the left side of the sleeping bag next to the sand bags."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "East barracks, In the basement of the east building marked with a black pawn near the parked helicopter on Reserve map. In the south section of the basement, the grated door is on the east side of the hallway. (Highlighted in green)"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 3 Weapon racks (AK-74N, AKS-74U, AKS-74N, AKS-74UB, AKS-74UN)\n- Loose loot (Weapon mods, Ammunition)"
+    }
+  ]
+}

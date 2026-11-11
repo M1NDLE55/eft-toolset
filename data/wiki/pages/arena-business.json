@@ -1,0 +1,39 @@
+{
+  "title": "Arena Business",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Arena_Business",
+  "revisionId": 359082,
+  "lastEdited": "2026-09-13T20:10:08Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Balancing - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Arena Business is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You really thought I'd just take you on after a few completed jobs? No, kid, I take this seriously, and that means you've still got some running to do. Help me out in the Arena, and you'll move up fast. Refuse, and… well, you get the idea. It's all in your hands.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Complete the task Professional Fitness - Part 2\n- Complete the task To Great Heights! - Part 6\n- Complete the task Hold the Lead"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +19,500 EXP\n- 250 GP coins\n  - 262 GP coins with Intelligence Center Level 1\n  - 288 GP coins with Intelligence Center Level 2\n- 1× Lega Medal\n- 1× Weapon crate (Rare)\n- 1× Supply crate (Rare)\n- 2× Valuables crate (Rare)\n\"At first, I thought you'd quit. Figured you were the type who wants to get everything as fast as possible. But you pleasantly surprised me.\""
+    }
+  ]
+}

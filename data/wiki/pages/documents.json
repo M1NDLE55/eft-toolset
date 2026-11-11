@@ -1,0 +1,44 @@
+{
+  "title": "Documents",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Documents",
+  "revisionId": 361746,
+  "lastEdited": "2026-09-24T12:30:53Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Prapor",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Documents is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, fighter. There's a new task, but you'll have to go to the same place you whacked those Raiders on the state reserve base. Your previous efforts weren't fruitful enough, apparently: the Raiders dug in deep in that bunker, not letting anyone near it. However, I still do have quite an interest in that place. There's a piece of information from trusted sources that there are some classified documents there, the info is encrypted, so Raiders don't really care about it. Find me those documents, I've got serious clients for them.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain the first folder with military on Reserve\n- Obtain the second folder with military on Reserve\n- Obtain the third folder with military on Reserve\n- Hand over the first documents to Prapor\n- Hand over the second documents to Prapor\n- Hand over the third documents to Prapor"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"You got them? Great job, warrior! Here's the reward, as agreed.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Military documents 1 | Military documents #1 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Military documents 2 | Military documents #2 | 1 | Handover item | Yes |\n| Military documents 3 | Military documents #3 | 1 | Handover item | Yes |\n\nIn this quest you have to find and extract three military documents. They are all located in the command part of the underground bunker system on Reserve.\n\nOne is located on a desk in the glassed-in command room that is accessible from the room that has the D-2 power lever.\n\nOne is located in the room that is connected to the glassed-in command room in the bottom compartment of a shelf in the corner of the room.\n\nOne is located in a wardrobe that can be found in the large central hallway."
+    }
+  ]
+}

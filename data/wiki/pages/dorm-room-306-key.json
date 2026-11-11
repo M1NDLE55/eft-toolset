@@ -1,0 +1,52 @@
+{
+  "title": "Dorm room 306 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_306_key",
+  "revisionId": 340175,
+  "lastEdited": "2026-04-16T18:48:04Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽5,780",
+    "usage": "Unlocks door 306 in the three-story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5780cda02459777b272ede61",
+    "ID": "Общага1 306"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 306 key (Dorm 306) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the three-story dormitory with a tag reading \"306\" on it."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The third floor of the three-story dorms on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Currency)\n- Poster (Posters)\n- Possible Rare weapon spawn (HK G28 7.62x51 marksman rifle or FN SCAR-H 7.62x51 assault rifle or Desert Tech MDR 7.62x51 assault rifle)"
+    }
+  ]
+}

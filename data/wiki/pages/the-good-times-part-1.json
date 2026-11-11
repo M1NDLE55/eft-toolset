@@ -1,0 +1,59 @@
+{
+  "title": "The Good Times - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Good_Times_-_Part_1",
+  "revisionId": 360832,
+  "lastEdited": "2026-09-20T12:05:00Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Factory",
+    "given by": "Prapor",
+    "leads to": "Hell on Earth - Part 1, Quality Standard",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Good Times - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello again! Remember the good old time when all the major fighting took place at Polikhim? People were buying tons of gear from me back then. There was a kit, the most popular among PMCs. I was wondering how it performs in the field nowadays. Check it out for me and tell me how it is, yea?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only available to buyers of the \"Edge of Darkness\" edition of the game.\n- Must reach Loyalty Level 2 with Prapor to obtain this quest.\n- Must reach Loyalty Level 2 with Mechanic to obtain this quest.\n- Must reach Loyalty Level 2 with Therapist to obtain this quest.\n- Must reach Loyalty Level 2 with Skier to obtain this quest.\n- Must reach Loyalty Level 2 with Ragman to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 PMC operatives while wearing 6B43 body armor and Kiver-M helmet on Factory"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Springfield Armory M1A 7.62x51 rifle (variant 2k18 NY)\n- 2× M1A 7.62x51 20-round magazine\n- 3× 7.62x51mm M62 Tracer ammo pack (20 pcs)\n\"Thanks for your help, soldier! Nowadays, there's battles all over the city, and everyone's got their own different equipment. It's an arms race, I'll tell you that!\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| FORT Kiver-M bulletproof helmet | 1 | Worn by the player while eliminating PMC operatives. |\n| 6B43 Zabralo-Sh body armor (EMR) | 1 | Worn by the player while eliminating PMC operatives. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 5 PMCs on Factory while wearing both the FORT Kiver-M bulletproof helmet and the 6B43 Zabralo-Sh body armor (EMR)."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This quest is a reference to the beginnings of the game. Back when the only helmet was the FORT Kiver-M bulletproof helmet and the only available armors were the PACA Soft Armor and the 6B43 Zabralo-Sh body armor (EMR). So running a Kiver-M helmet + 6B43 armor combo on Factory was the meta."
+    }
+  ]
+}

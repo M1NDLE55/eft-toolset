@@ -1,0 +1,46 @@
+{
+  "title": "Search",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Search",
+  "revisionId": 362582,
+  "lastEdited": "2026-09-29T19:44:09Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Search is a Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The search skill mastering allows you to search bodies and containers faster and more efficiently."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This skill currently offers no search speed improvements other than its Elite level perk, since search speed is dependant on the Attention skill.\n- The Elite level perk allows you to search two \"item containers\", like Chest rigs and Backpacks simultaneously."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Level 9 of this skill is needed for the quest Scavenger"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases search speed (1% per level → +50% at Elite Level)\n- Elite level: Search two containers at a time"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Searching Loot containers and corpses\n- Picking up loose loot\n- Completing the quest Bullshit\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention\n- Completing the quest Night Sweep"
+    }
+  ]
+}

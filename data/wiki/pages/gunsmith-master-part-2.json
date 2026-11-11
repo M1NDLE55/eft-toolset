@@ -1,0 +1,60 @@
+{
+  "title": "Gunsmith Master - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_2",
+  "revisionId": 354696,
+  "lastEdited": "2026-08-15T22:16:38Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith 2",
+    "Gunsmith Master 2"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith Master - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Are you good at hiding? Not good enough for Sniper not to find you, I think. I don't envy the guy, what’s his name, Brendan I think. Interesting, all those heroes of the past who we admired so much, where have they all gone? Why has everybody become so empty? Why now, with this chaos around, such folk as Sniper became heroes for us? Why have we been ignoring such war dogs, and now we’re looking forward to being friends with them? What do you think? I have another order, for an R11 RSASS. With a sighting range of 1500 or above. Weight 6.7 kg or less. Also needs a silencer, ergonomics more than 17, and recoil sum less than 300.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 25 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an R11 RSASS to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +13,600 EXP\n- Mechanic Rep +0.02\n- 500 Dollars\n  - 525 Dollars with Intelligence Center Level 1\n  - 575 Dollars with Intelligence Center Level 2\n- 2× Corrugated hose\n- 2× Pack of nails\n- Unlocks barter for KAC PRS/QDC 7.62x51 sound suppressor at Peacekeeper LL3\n\"Yeah, you can't hide from something like this. Love 7.62, a good caliber. Thanks for the work. Next order should be tomorrow.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "RSASS specifications:\n- 60 Durability\n- 17 or greater ergonomics\n- 300 or less recoil\n- 1,500 or greater sighting range\n- 6.7 kg or less in weight\n- A silencer"
+    },
+    {
+      "heading": "Builds",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard RSASS from Peacekeeper LL4. It can only be purchased after completing Wet Job - Part 5. It can also be obtained as a barter from Peacekeeper LL3.\n- The magazine needs to be removed.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| SilencerCo Hybrid 46 Direct Thread Mount adapter | MechanicPeacekeeper | LL1 (Barter); LL2LL2 |\n| SilencerCo Hybrid 46 multi-caliber sound suppressor | PeacekeeperMechanic | LL2LL2 (Barter) |\n| Remington RAHG 4 inch rail | Mechanic | LL2 |\n| Zenit RK-4 tactical foregrip | Skier | LL2 |\n| IEA Mil-Optics KH/F 34mm one-piece magmount | MechanicJaeger | LL2 (Barter)LL3 |\n| Nightforce ATACR 7-35x56 34mm riflescope | Jaeger | LL2 (Barter); LL4 |\n| AR-15 ADAR 2-15 buffer tube | Skier | LL1 |\n| AR-15 Magpul CTR Carbine stock | Peacekeeper | LL2 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

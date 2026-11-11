@@ -1,0 +1,44 @@
+{
+  "title": "Shipping Delay - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shipping_Delay_-_Part_2",
+  "revisionId": 359665,
+  "lastEdited": "2026-09-13T20:20:03Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "BTR Driver",
+    "previous": "Accept A Helping Hand",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Shipping Delay - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So Mechanic sent you, huh? Cool. So I used to have a base, with a hangar, spare parts, cargo shipments even. Then some assholes thought they could just clean the place out! I'm gonna find those bastards. But while I'm at it, all the deliveries are messing up! The most important one is a package for Prapor, he's really anxious for it, and the box is still at the depot near the sawmill in Priozersk. If you're down to help me, look for this package and deliver it to Prapor. I can give you a ride to the depot, but I ain't leaving the BTR. I don't like it outside, it's more comforting inside this armor.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and scout the warehouses at the depot on Woods\n- Locate and scout the office at the depot on Woods\n- Locate and scout the garages at the depot on Woods\n- Complete the task A Helping Hand"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,500 EXP\n- BTR Driver Rep +0.01\n- 84,000 Roubles\n- 1× RSP-30 reactive signal cartridge (Blue)\n- 1× Tetriz portable game console\n\"So, was Prapor pissed? Well shit, it's an emergency over here! But hey, thanks for helping me out. Now I might go and check out what's left of the base. You're a good guy, so stay in touch, yeah? When I find these shitheads, I'll need your help again.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to scout the 3 specified locations at the train depot on Woods. The depot can only be accessed via the BTR Driver's taxi service. After scouting, the quest A Helping Hand must also be completed to hand in this one.\n\nIt is also possible to leave the depot through walking on top of the western train. When walking on top of the train it is important to stick to the center to not get hit by snipers or mines."
+    }
+  ]
+}

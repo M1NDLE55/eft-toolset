@@ -1,0 +1,38 @@
+{
+  "title": "Twitch Drops Summer 2024 case (Common)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Twitch_Drops_Summer_2024_case_(Common)",
+  "revisionId": 328013,
+  "lastEdited": "2025-12-14T21:34:10Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Event Reward Loot Container",
+    "weight": "4 kg",
+    "grid": "2x2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Twitch Drops Summer 2024 case (Common) (Twitch) is a Event Reward Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n- Destroyed after unpacking (Right-click \"unpack\")"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "Random surprises."
+    }
+  ]
+}

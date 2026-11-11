@@ -1,0 +1,46 @@
+{
+  "title": "The Punisher - Part 5",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Punisher_-_Part_5",
+  "revisionId": 359779,
+  "lastEdited": "2026-09-13T20:21:57Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The Punisher. Part 5."
+  ],
+  "infobox": {
+    "given by": "Prapor",
+    "previous": "The Punisher - Part 4",
+    "leads to": "The Punisher - Part 6",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Punisher - Part 5 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The Masters — that's what my friends have started calling themselves — are moving on to the next stage. Now they need gear for this whole gladiator business. I'd help them myself, but I've got more important things to deal with. So you find what they need, and I'll make sure it gets to them in your name. Oh, one more thing: they wanted to see how good machine guns look in action... I'm sure you've already figured out what that means. Good luck out there, warrior!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find any Kalashnikov AK-74 assault rifle in raid\n- Hand over the AK-74\n- Find a Colt M4A1 assault rifle in raid\n- Hand over the M4A1\n- Find any 2 Makarov PM pistols in raid\n- Hand over the pistols\n- Eliminate 10 PMC operatives with Light machine guns\n- Eliminate 20 Scavs with Light machine guns"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 1× Kalashnikov AK-308 7.62x51 assault rifle\n- 1× AK-308 7.62x51 QD sound suppressor\n- 1x Documents case\n- Unlocks purchase of Kalashnikov AK-308 7.62x51 assault rifle at Prapor LL4\n- Unlocks purchase of AK-308 7.62x51 QD sound suppressor at Prapor LL4\n\"Got it all done? That's what I like to see! Here's your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| M4A1 | M4A1 | 1 | Handover item | Yes | Weapons from quest rewards can be used since they are found in raid |\n| PM pistol; or; PM (t) pistol | PM pistol; or; PM (t) pistol | 2 | Handover item | Yes | Used by Scavs |\n| AK-74; or; AK-74M; or; AK-74N; or; AKS-74; or; AKS-74N | AK-74; or; AK-74M; or; AK-74N; or; AKS-74; or; AKS-74N | 1 | Handover item | Yes | AK-74M and AK-74N can be crafted at the Workbench in the Hideout |\nTo hand over a weapon it must be in usable condition. If a weapon's icon is red, it is missing vital parts and can not be turned in."
+    }
+  ]
+}

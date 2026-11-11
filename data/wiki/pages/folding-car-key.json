@@ -1,0 +1,60 @@
+{
+  "title": "Folding car key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Folding_car_key",
+  "revisionId": 327796,
+  "lastEdited": "2025-12-13T19:09:21Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "max uses": "100",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽240",
+    "usage": "This key does currently not open any lock.",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "59136f6f86f774447a1ed173",
+    "ID": "kozlov logan"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Folding car key (Car) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A folding car key with locking buttons."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This key does currently not open any lock."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "None."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This key used to open the locked trunk of a car in the dormitory parking lot on Customs, which gives access to a Grenade box. This trunk is now unlocked by default, no longer requiring the key to be opened."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Health Resort east wing room 314 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_east_wing_room_314_key",
+  "revisionId": 358658,
+  "lastEdited": "2026-09-10T22:48:34Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks room 314 of the East wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0eed4386f77405112912aa",
+    "ID": "Санаторий 314"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort east wing room 314 key (E314 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium east wing room 314."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Connected to room 313 through the balcony."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- At the \"checkpoint\" on the eastern side of the map, in a cabin on a wooden stool."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The third floor, room 314 of the East Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room 314:\n  - 1× Weapon box (6x2)\n  - 1× Weapon Spawn\n  - Loose Loot (Meds, Medical supplies, Weapon mods, Currency)\n- Room 313:\n  - 1x LEDX spawn\n  - 1× Weapon box (6x4)\n  - 1× Medbag\n  - Loose Loot (Meds, Medical supplies, Weapon mods, Currency)"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Gunsmith - Vector 9x19",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_Vector_9x19",
+  "revisionId": 356506,
+  "lastEdited": "2026-08-26T02:18:39Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith Vector 9x19"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith - Vector 9x19 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Perfect timing, friend. If you have time, help me out with some gun customization. A major customer has placed an order for a KRISS Vector 9x19 submachine gun. He wants it to be equipped with an Mk.5 Modular Rail mount, Tactical Dynamics Skeletonized Foregrip, some iron sights or a scope with at least 300 meter sighting range, magazine with at least 33 rounds, and a silencer. Ergonomics over 48 and recoil under 240. Thanks!\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 22 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify a KRISS Vector 9x19 to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,600 EXP\n- Mechanic Rep +0.02\n- 500 Dollars\n  - 525 Dollars with Intelligence Center Level 1\n  - 575 Dollars with Intelligence Center Level 2\n- 1× SureFire SOCOM556-MINI MONSTER 5.56x45 sound suppressor\n- Unlocks purchase of Colt M4A1 5.56x45 assault rifle (variant SAI ) at Ref LL2\n\"You know, I prefer forty-five personally, but a Vector is a Vector! What a beautiful beast.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "KRISS Vector 9x19 specifications:\n- 60 Durability\n- 48 or more ergonomics\n- 240 or less recoil\n- 300 or greater sighting range\n- A silencer\n- KRISS Vector Mk.5 modular rail\n- Tactical Dynamics Skeletonized Foregrip\n- Glock 9x19 \"Big Stick\" 33-round magazine"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard KRISS Vector 9x19 from Skier LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| KRISS Vector Mk.5 modular rail | SkierMechanic | LL2 (Barter)LL3 |\n| Tactical Dynamics Skeletonized Foregrip | Skier | LL3 |\n| Glock 9x19 \"Big Stick\" 33-round magazine | SkierMechanic | LL3LL3 |\n| KRISS Vector 9x19 6 inch barrel | Skier | LL2 (Barter); LL3 |\n| SilencerCo Osprey 9 9x19 sound suppressor | MechanicPeacekeeper | LL1 (Barter); LL3LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

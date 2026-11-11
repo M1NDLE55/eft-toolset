@@ -1,0 +1,85 @@
+{
+  "title": "Factory",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Factory",
+  "revisionId": 355345,
+  "lastEdited": "2026-08-20T20:41:14Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [],
+  "infobox": {
+    "prev": "Customs, Woods",
+    "next": "Woods, Customs, The Lab",
+    "enemies": "Day: Scavs, Tagilla , Night: Scavs, Tagilla, Cultists",
+    "players": "Day: 7-8 , Night: 5-6",
+    "duration": "Day: 20 minutes, Night: 25 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Factory is a location in Escape from Tarkov. It is the first map that was added to the game."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The industrial estate and facilities of Chemical Plant No. 16 were rented out illegally to the TerraGroup corporation. During the advent of the Contract Wars, the plant became the scene of numerous firefights between BEAR and USEC that ultimately determined control over the industrial district of Tarkov. Later on, in the wake of the chaos, the plant facilities became a shelter for the remaining civilians, Scavs, and military operatives, including the scattered remains of the BEAR and USEC contingents."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Factory is initially only accessible by transiting. Direct access from the location selection screen is unlocked upon progressing through the story chapter Tour."
+    },
+    {
+      "heading": "Usable Keys",
+      "level": 2,
+      "text": "| Key Name | Used in Quest |\n| Factory emergency exit key | yes |\n| TerraGroup storage room keycard | yes |"
+    },
+    {
+      "heading": "Bosses",
+      "level": 2,
+      "text": "| Name | Location | Notable equipment | Followers |\n| Tagilla | Has to be expected everywhere | Superfors DB 2020 Dead Blow Hammer; Tagilla's welding mask \"UBEY\"; Tagilla's welding mask \"Gorilla\"; Crye Precision AVS plate carrier (Tagilla Edition) | None |"
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "To locate the extractions use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Camera Bunker Door | Scav | yes | no | - | |\n| Cellars | PMC | yes | no | Factory emergency exit key; Used to open the door to the extraction | |\n| Courtyard Gate | PMC | yes | no | - | Can also be accessed from the 2nd floor locker room. |\n| Gate 0 | PMC | yes | no | - | |\n| Gate 3 | All | yes | no | - | |\n| Med Tent Gate | PMC | yes | no | Factory emergency exit key; Used to open the door to the extraction | |\n| Office Window | Scav | yes | no | - | |\n| Smugglers' Passage | All | yes | no | Note with code word Ark; Note with code word Ark | |"
+    },
+    {
+      "heading": "Transits",
+      "level": 2,
+      "text": "| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Transit to Customs | All | yes | no | Only available 1 min after raid start | Med Tent Gate extraction side outdoor area |\n| Transit to The Lab | PMC | yes | no | Only available 1 min after raid start; TerraGroup Labs access keycard per player | In the sewer tunnel connected to the flooded area |\n| Transit to Woods | All | yes | no | Only available 1 min after raid start | At the Courtyard Gate extraction |"
+    },
+    {
+      "heading": "Maps",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Interactive Map",
+      "level": 3,
+      "text": "Click for fullscreen. Separate map page here."
+    },
+    {
+      "heading": "2D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ingame Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The night version of the location was added with patch patch 0.4.1.706 on November 22, 2017.\n- The location was first expanded with patch 0.12.11.0.13074 on June 30, 2021.\n- The location was completely reworked and expanded with patch 0.15.0.0.32128 on August 20, 2024."
+    }
+  ]
+}

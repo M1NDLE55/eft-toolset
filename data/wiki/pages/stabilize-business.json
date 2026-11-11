@@ -1,0 +1,45 @@
+{
+  "title": "Stabilize Business",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stabilize_Business",
+  "revisionId": 359696,
+  "lastEdited": "2026-09-13T20:20:35Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Ground Zero",
+    "given by": "Ragman",
+    "previous": "Ask for Directions",
+    "leads to": "Battery Change",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Stabilize Business is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I told you the driver knows the right paths! That's where I'll send the shipment, although I don't have time for that at present. First I have to deal with those who killed my couriers. I already found the culprits, so now it's for Ragman to send his regards. I can't do anything to help the driver until this matter is handled. That's why I suggest you take care of it. Quicker you start, quicker you finish.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 7 Scavs in one raid on Ground Zero\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +24,100 EXP\n- Ragman Rep +0.03\n- 124,000 Roubles\n  - 130,200 Roubles with Intelligence Center Level 1\n  - 142,600 Roubles with Intelligence Center Level 2\n- 1× IOTV Gen4 body armor (Assault Kit, MultiCam)\n\"That's great! Now there is nothing to interfere with my operations, and we can think about expansion. For now, I need to figure out how to prepare for the BTR coming under my roof. Just be patient for a little longer.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to eliminate 7 Scavs on Ground Zero in a single raid and survive."
+    }
+  ]
+}

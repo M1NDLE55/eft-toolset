@@ -1,0 +1,49 @@
+{
+  "title": "Safety Guarantee",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Safety_Guarantee",
+  "revisionId": 362556,
+  "lastEdited": "2026-09-29T19:03:40Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "LL requirement": "4",
+    "leads to": "A Life Lesson",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Safety Guarantee is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I've got an opportunity on the table right now, and it could be seriously profitable. But I need a reliable partner, and you could be just the bloke for it. I got talking with one commander, his squad is made up entirely of veterans. But the lads were abroad when all this kicked off. And they still want to work. They say they've got a lead on an abandoned USEC base somewhere in the region. The problem is, some bunch of nobodies have already taken over the place. To take the base back, the lads need proper protection. They won't risk it otherwise. Buying gear like that on the outside would attract way too much attention. If you're interested in growing our little enterprise, get me some Zhuk armor and Vulkan helmets. Luka also asked for something else... Says he needs a helmet just like Killa's. They need to take the base quickly before the military catches on. A bit of extra intimidation never hurts, and everyone in the criminal world has heard of Killa by now. If we convince them that Killa and his lads are operating in the region, they'll run for it straight away.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by BEAR PMCs.\n- Must be level 50 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 15 BNTI Zhuk body armors (EMR)\n- Hand over 12 Vulkan-5 LShZ-5 bulletproof helmets\n- Hand over 3 Maska-1SCh face shields (Killa Edition)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +1 Stress Resistance skill level\n- +1 Perception skill level\n- +1 Attention skill level\n- +1 Aim Drills skill level\n- +1 Light Vests skill level\n- +1 Heavy Vests skill level\n- +1 Weapon Maintenance skill level\n- +1 Troubleshooting skill level\n\"Good stuff. Getting a shipment like that across the border won't be easy, but I'll figure something out.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid |\n| BNTI Zhuk body armor (EMR) | 15 | Handover item | No |\n| Vulkan-5 LShZ-5 bulletproof helmet (Black) | 12 | Handover item | No |\n| Maska-1SCh face shield (Killa Edition) | 3 | Handover item | No |"
+    }
+  ]
+}

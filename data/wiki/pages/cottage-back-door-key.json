@@ -1,0 +1,67 @@
+{
+  "title": "Cottage back door key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cottage_back_door_key",
+  "revisionId": 352698,
+  "lastEdited": "2026-08-09T20:39:12Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the back door of the eastern cottage on Shoreline.",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0eb6ac86f7743124037a28",
+    "ID": "Коттедж Побережье"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Cottage back door key (Cottage) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the back door to one of the cottages, located somewhere near the Azure Coast sanatorium."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in Therapists quest Tarkov-Style Diplomacy"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In the yard of the locked villa, on top of the bundled barrels.\n\n- In a key rack in the unlocked villa.\n\n- In a key rack in the garage of house no. 5 located in the eastern part of the west village.\n\n- In a key rack in the barn of house no. 4 located in the eastern part of the west village."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Back door of the eastern cottage on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Yellow keycard spawn location\n- 1x PC block\n- 3x Sports bag\n- 2x Gun cabinet\n- 2x Safe (one locked)\n- 1x Jacket\n- Loose loot (Valuables, Provisions, Currency, Building materials, Others)\n- Kalashnikov AKS-74U 5.45x39 assault rifle spawn on the couch\n- Random Weapon spawn on a bed upstairs"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Golden rooster figurine x1; Golden rooster figurine; +; Chainlet x5; Chainlet | → | Ragman; Ragman LL3 | → | Cottage back door key; Cottage back door key |"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Equipment crate (BattlePass 0)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Equipment_crate_(BattlePass_0)",
+  "revisionId": 356087,
+  "lastEdited": "2026-08-25T16:21:22Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [
+    "Locked equipment crate (BattlePass 0)",
+    "Unlocked equipment crate (BattlePass 0)"
+  ],
+  "infobox": {
+    "type": "Reward Loot Container",
+    "weight": "10 kg",
+    "grid": "4x4",
+    "node": "67cad1ec19b006e9e50f44d6 67cad3226bf74131800752b7",
+    "ID": "Arena_gearcrate_BP_season0_closed Arena_gearcrate_BP_season0_open"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Equipment crate (BattlePass 0) (Equipment (BP 0)) is a Reward Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Before Unlocking",
+      "level": 3,
+      "text": "A reward for progress in BattlePass Season 0. It contains various equipment to help you survive and kill in the harsh world of Tarkov. But first, you need to find a way to open this box."
+    },
+    {
+      "heading": "After Unlocking",
+      "level": 3,
+      "text": "A reward for progress in Battle Pass Season 0. It contains various equipment to help you survive and kill in the harsh world of Tarkov. The lock has been crudely broken, which means there are no more obstacles between you and the contents of the box."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n  - Must be un-locked at the Workbench level 1 before it can be opened\n- Cannot be listed for sale on the flea market\n- Destroyed after unpacking (Right-click \"unpack\")\n- Only the locked version can be stashed in Lucky Scav Junk box"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Arena BattlePass Season 0"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| Hand drill x1; Hand drill; +; Equipment crate (BattlePass 0) x1; Locked Equipment crate (BattlePass 0) | → | Workbench level 1; 1 minute | → | Equipment crate (BattlePass 0) x1; Unlocked Equipment crate (BattlePass 0) |"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "The crate can contain various chest rigs, armor vests, helmets, helmet attachments (like tactical flashlights and night vision devices), armor plates, earpieces, masks, barter items and keys & keycards."
+    }
+  ]
+}

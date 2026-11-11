@@ -1,0 +1,47 @@
+{
+  "title": "The Punisher - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Punisher_-_Part_2",
+  "revisionId": 359776,
+  "lastEdited": "2026-09-13T20:21:53Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The Punisher. Part 2."
+  ],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Prapor",
+    "previous": "The Punisher - Part 1",
+    "leads to": "The Punisher - Part 3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Punisher - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"MHello soldier, I have a job for you. Well then, it's about time we make this world a better place. The shoreline is under increasingly frequent attacks by different bandit gangs, this seriously interfered with my friends' operations. Help them with their Scav problem and we'll send a handsome reward your way. But I have one condition: you have to sort this one out using an AKM series gun, my friends have to see who helped them.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 Scavs with AKM series weapons on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 1× RPK-16 5.45x39 light machine gun\n- 1× AK-74 5.45x39 6L31 60-round magazine\n- Unlocks barter for RPK-16 5.45x39 light machine gun at Prapor LL2\n- Unlocks barter for AK-74 5.45x39 6L31 60-round magazine at Prapor LL2\n\"My friends now know about you, great job. There is still plenty of uglies left, but we have only started. Here, the friends got you a little present.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 15 Scavs on Shoreline with AKM series weapons. You can use any of the following:\n- AKM\n- AKMN\n- AKMS\n- AKMSN\n- AK-103\n- AK-104\n- VPO-136"
+    }
+  ]
+}

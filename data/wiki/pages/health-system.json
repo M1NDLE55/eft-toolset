@@ -1,0 +1,64 @@
+{
+  "title": "Health system",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_system",
+  "revisionId": 355605,
+  "lastEdited": "2026-08-23T13:58:15Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Bleeding",
+    "Heavy bleeding",
+    "Light bleeding",
+    "Unknown toxin"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Escape from Tarkov includes a robust health and damage system as part of the Hazardous Environment Combat Simulator."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": "- Health and physical characteristics, including hydration, energy, blood loss, fractures, concussions, intoxication, exhaustion, tremors and so on.\n- A large variety of medical supplies and provisions to stay alive and focused."
+    },
+    {
+      "heading": "Part specific status effects",
+      "level": 2,
+      "text": "| Head/Thorax; Can't be fractured; Destroyed: Instant death. Note that bleeding into the destroyed state and health reduction from stimulants does not result in instant death, but any further damage will.; A destroyed head or thorax cannot be fixed with a surgical kit. |\n| Right arm; Fractured: Using items and searching containers is 50% slower than normal speed. Reloading, drawing, and aiming weapons takes 67% more time.; Destroyed: Same as above, but additional damage taken will be distributed over the entire body's health pool at 0.49× the damage dealt. |\n| Left arm; Fractured: Using items and searching containers is 67% slower than normal speed. Reloading and drawing weapons is 50% slower.; Destroyed: Same as above, but additional damage taken will be distributed over the entire body's health pool at 0.49× the damage dealt. |\n| Stomach; Can't be fractured; Destroyed: Massively increased dehydration and energy loss (5x the base loss, including Health skill effects), additional damage taken will be distributed over the entire body's health pool at 1.05× the damage dealt. |\n| Legs; Fractured: Each leg fractured reduces your speed by 45%. Decreased jump height. Disables sprinting unless under the painkiller effect. Sprinting causes further damage to the leg.; Destroyed: Same as above, but additional damage taken will be distributed over the entire body's health pool at 0.7× the damage dealt. |"
+    },
+    {
+      "heading": "Temporary status effects",
+      "level": 2,
+      "text": "| Status | Effect | Duration | Causes |\n| Light bleeding | 1.36 HP lost in each non-destroyed body part every 6 seconds until treated. Drains 5 energy per minute. Leads to death when total HP pool reaches 0 | Every 6 seconds until treated. | Getting struck by a bullet; Falling from great height; Melee attacks; Grenade shrapnel; Barbed wire |\n| Heavy bleeding | 1.53 HP lost in each non-destroyed body part every 4 seconds until treated. Drains 6 energy per minute. Leaves a trail of blood splatters. Becomes a Fresh Wound when treated. Leads to death when total HP pool reaches 0 | Every 4 seconds until treated. | Getting struck by a bullet |\n| Fresh wound | Replaces Heavy Bleed after being bandaged. However, it will revert into a Heavy Bleed if the affected body part takes major damage, such as a bullet. Also, sprinting and jumping may cause Light Bleed. | 480 seconds or until it starts bleeding again | Treating a Heavy Bleed |\n| Fracture | See part specific status effects above | Will remain until treated | Falling from great height; Getting struck by a bullet; Melee attacks; Failing the Gym quick time event |\n| Pain | Pulsating screen blurring progressively around the edges | Until the cause is treated | Caused by other status effects, such as Fractures |\n| Hands tremor | Hands shaking | Until cause of pain is treated | Caused by 45 seconds untreated pain; Side effect of certain Stimulants and Provisions |\n| Mild Muscle Pain | You gain 50% less skill points when using the Gym. | 24 hours | Caused by first Gym training session |\n| Severe Muscle Pain | You gain no skill points when using the Gym. | 24 hours | Caused by second Gym training session |\n| Concussion | Tinnitus and muffled audio | Depends on the cause | Explosions; Helmet ricochets |\n| Tunnel vision | Screen vignetting pulsing in and out | Depends on the cause | Side effect of certain Stimulants |\n| Dehydration | You lose 1 Health Point per functioning body part every 15 seconds. Damage from this status effect causes Pain. Leads to death on the next damage tick after reaching 0 HP on the head or thorax. Grants Hands tremor effect. | Until Hydration is replenished | Caused 50 seconds after your Hydration reaches 0 |\n| Fatigue (Energy) | You lose 1 Health Point per functioning body part every 5 seconds. Leads to death on the next damage tick after reaching 0 HP on the head or thorax. Causes Tunnel vision. | Until Energy is replenished | Caused 30 seconds after your Energy reaches 0 |\n| Overweight | You make more noise, jump height decreased, stamina drain increased, fall damage increased, movement speed decreased, walking drains stamina. | Until weight is reduced | Triggered when your PMC is over 33.77% of current total weight |\n| Critical overweight | Cannot sprint, maximum stance height decreased, prone movement drains stamina, standing stance blocks stamina regain. | Until weight is reduced | Triggered when your PMC is over the current total weight |\n| Fatigue | Energy drain is increased (-0.38/minute per stack) | 3 minutes, stacks infinitely | Caused by constant use of stamina during critical amount state (red bar) |\n| Stun | You are blinded, all weapon reloads are performed as quick reloads (magazine gets dropped) | Depends on the cause, starts to fade out after half of total duration | Caused by looking at the explosion of stun grenades and other flash weaponry |\n| Flash | Your vision is impaired | 90 seconds | Caused by looking at the explosion of stun grenades and other flash weaponry |\n| On painkillers | Black-and-white peripheral vision, ignores fractures, and ignores pain. | Varies per consumed item | Consuming items such as Analgin painkillers or Vaseline balm |\n| Buff | Varies per consumed item | Varies per consumed item | Caused by consuming items like Provisions or Stimulants |\n| Debuff | Varies per consumed item | Varies per consumed item | Caused by consuming items like Provisions or Stimulants |\n| Berserk mode | Increased FOV, painkiller, infinite stamina, PMC shouts an aggressive phrase when activated | 10 seconds | Stress Resistance elite effect, activates on low health |\n| Poisoning | Deals gradual damage over time (140 HP/minute) and causes Pain. | Will remain until treated with xTG-12 injector or Perfotoran injector | Getting struck by a Cultist knife; Touching barbed wire in The Labyrinth |\n| Panic attack | Causes your currently equipped weapon to forcefully jam. | As long as Kollontay is holding his PR-Taran police baton in hands | Being in Kollontay's proximity while he has his PR-Taran police baton equipped |"
+    },
+    {
+      "heading": "Destroyed parts healing",
+      "level": 2,
+      "text": "Destroyed body parts (except head and thorax) can be restored thanks to the CMS surgical kit or the Surv12 field surgical kit, surgical kits restore a destroyed part to 1 HP; so their use needs to be combined with medkits or regenerative stimulants to be effective. Destroyed parts that are restored with a surgical kit only have 25% to 45% (CMS) or 60 to 72% (Surv12) of their max HP for the duration of the raid unless surgery is performed again on that body part, lowering it further."
+    },
+    {
+      "heading": "Off-Raid Healing",
+      "level": 2,
+      "text": "When outside of a raid you will passively gain health, hydration, and energy. You can use Medical items to heal and Provisions to consume as if you were in a raid. To start you gain 456.6 HP/hour (7.61 HP/Min), 1 Energy/Min, and 1 Hydration/Min. Your passive gaining of stats can be increased through upgrading Hideout modules such as the Medstation and Rest Space to increase health regeneration, Nutrition Unit and Heating to increase energy regeneration, and Water Collector to increase Hydration recovery.\n\nTherapist also provides a after raid healing service for a fee. The fee depends on the amount and types of injuries. For players below level 11 with 30 or less raids this service is free. Higher loyalty levels offer a discount on the fee."
+    },
+    {
+      "heading": "Death",
+      "level": 2,
+      "text": "After dying in a raid or going MIA (Missing in Action) you will be brought back to the main menu and lose all of the items that were on your character with exception of equipped armband, melee weapon and the contents of your secure container and special slots. Your health will be set to 30% and it will passively be regained over time. If you die to suicide, exhaustion, group members, disconnecting, Minefields, Claymores, Border Snipers or without a firearm equipped, your health will be set to 1% on all body parts instead."
+    },
+    {
+      "heading": "Unimplemented Features",
+      "level": 2,
+      "text": "- Biohazard/Intoxication\n- Radiation exposure\n- Blood pressure\n- Drug addiction/Hallucination"
+    },
+    {
+      "heading": "See also",
+      "level": 2,
+      "text": "- Medical items"
+    }
+  ]
+}

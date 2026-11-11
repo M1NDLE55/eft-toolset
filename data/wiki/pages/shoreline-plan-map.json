@@ -1,0 +1,47 @@
+{
+  "title": "Shoreline plan map",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shoreline_plan_map",
+  "revisionId": 351705,
+  "lastEdited": "2026-08-06T14:45:41Z",
+  "kind": "location",
+  "categories": [
+    "Maps"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Map",
+    "weight": "0.045 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL1",
+    "effect": "Adds map of local area Shoreline",
+    "node": "5a8036fb86f77407252ddc02",
+    "id": "shoreline plan"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Shoreline plan map (Shoreline) is a map in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A detailed plan map of the Shoreline area."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The map is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Functionality",
+      "level": 2,
+      "text": "On the map you are able to place up to 100 icons and notes of 4 varieties."
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

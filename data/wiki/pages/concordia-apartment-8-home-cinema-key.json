@@ -1,0 +1,51 @@
+{
+  "title": "Concordia apartment 8 home cinema key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Concordia_apartment_8_home_cinema_key",
+  "revisionId": 331981,
+  "lastEdited": "2026-01-09T11:58:02Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the home cinema room in apartment 8 on the third floor of the Concordia building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "64ccc1ec1779ad6ba200a137",
+    "ID": "city_key32"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Concordia apartment 8 home cinema key (Cinema) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the home cinema in apartment 8 in the Concordia building."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Drawers\n- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Home cinema door in apartment 8 on the third floor of the Concordia building at Streets of Tarkov.\n\nIt is also possible to reach the room through a breakthrough from apartment 34."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Electronics)"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Beluga restaurant director key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Beluga_restaurant_director_key",
+  "revisionId": 352338,
+  "lastEdited": "2026-08-07T21:52:32Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the director's office on the third floor of the Beluga restaurant on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "64ccc1fe088064307e14a6f7",
+    "ID": "city_key34"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Beluga restaurant director key (Beluga) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the director’s office in the Beluga restaurant."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a possible location for the quest Beyond the Red Meat"
+    },
+    {
+      "heading": "Key location",
+      "level": 2,
+      "text": "- In Drawers\n- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Doors to the director's office on the third floor of the Beluga restaurant at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- 1x Locked Safe - There is currently no key for it in the game\n- 1x PC block\n- 1x Jacket\n- 2x Drawer\n- 1x Sports bag\n- Loose loot (Valuables, Household materials, Provisions, Other items)"
+    }
+  ]
+}

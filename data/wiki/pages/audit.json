@@ -1,0 +1,49 @@
+{
+  "title": "Audit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Audit",
+  "revisionId": 359092,
+  "lastEdited": "2026-09-13T20:10:18Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Ragman",
+    "leads to": "Ballet Lover",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Audit is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You know, you look like someone who'd help clean out a bank! Why are you so uptight, bro, that's not what I'm talking about, I'm an honest businessman! But sometimes you watch a heist movie and get so many ideas in your head... Anyway, to the point. I have information that a man from a financial institution that controls the banking sector of Tarkov kept a journal, you know, for when everything goes to shit... The data he kept was from classified official reports. So anyway, as you know, everything did go to shit, but he couldn't manage to pass the info on. Do you have any idea what kind of juice there might be in his doodles? Search the place, find me that journal.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 17 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain the financial records on Streets of Tarkov\n- Hand over the journal to Ragman"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,700 EXP\n- Ragman Rep +0.02\n- 200,000 Roubles\n  - 210,000 Roubles with Intelligence Center Level 1\n  - 230,000 Roubles with Intelligence Center Level 2\n- Unlocks purchase of 6B13 assault armor (Flora) at Ragman LL2\n\"Interesting doodles, encrypted too. The guy was smart, he knew that if he was dead, no one would understand whatever the hell he wrote in there.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Accountant's notes | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you have to obtain the accountant's notes in the \"ФИНАНС\" (\"FINANCE\") building on Streets of Tarkov. They can be found on the second floor, in the first office to the right. A diary with the notes is tucked in a red file folder on the floor."
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "title": "Audiophile",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Audiophile",
+  "revisionId": 359091,
+  "lastEdited": "2026-09-13T20:10:18Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Ragman",
+    "previous": "Minibus, Ballet Lover",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Audiophile is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I have another detective job for you. I have a client, a very good guy. A rocker. I used to sell their band all sorts of stuff when they were playing in our town! The guy was in Tarkov when it all started, rehearsing at someone's crib. And then the evacuation started and all that bullshit. So the guy lost his guitar pick... Yeah, man, you're gonna go looking for a plectrum. Why are you so surprised? He got that pick from either Hetfield or that hairy, what's-his-name... The hairy one, you should know! Too-doo-doo, too-doo-doo-doo-doo... Oh, man, they won't take you to Guess the Tune. Anyway, find the plectrum, it's got the AG initials on it, you won't mistake it. You have no idea how much a dude is willing to pay for that plastic shit. An address? If he could remember the address, I'd go to the address myself!\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 25 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the musician gathering spot on Streets of Tarkov\n- Obtain the engraved guitar pick\n- Hand over the guitar pick to Ragman"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +17,200 EXP\n- Ragman Rep +0.02\n- 87,000 Roubles\n  - 91,350 Roubles with Intelligence Center Level 1\n  - 100,050 Roubles with Intelligence Center Level 2\n- 1× Roler Submariner gold wrist watch\n- 1× Gold skull ring\n- Unlocks purchase of CQC Osprey MK4A plate carrier (Assault, MTP) at Ragman LL3\n\"How the fuck did you find one tiny guitar pick in a huge city?! Better than Sherlock, I swear. All right, give me the plectrum, because the client's all pissed off right now, can't find a muse or something. Tell me, do you have any idea why this plastic thing can cost so much?\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Primorsky 46-48 skybridge key | 1 | Required | N/A | Key to apartment no. 10 in the Primorsky 48 apartment building where the gathering spot is located |\n| AG guitar pick | 1 | Required | Yes | /This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find the musician gathering spot and a guitar pick on Streets of Tarkov. The gathering spot is the music room in apartment no. 10 on the fourth floor of the Primorsky 48 apartment building. A Primorsky 46-48 skybridge key is required to enter it via the skybridge from the adjoining Primorsky 46 staircase. The guitar pick has multiple spawns throughout the music room and the adjacent bedroom. It is highly recommended to bring a flashlight with you, since the item is small and the location dark. The apartment 10 entrance door can be breached from the inside to leave."
+    },
+    {
+      "heading": "Music room",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "First spawn",
+      "level": 4,
+      "text": "On a yellow book in the pile of books on the ground left after entering. Proning required."
+    },
+    {
+      "heading": "Second spawn",
+      "level": 4,
+      "text": "On the right speaker next to the drum set."
+    },
+    {
+      "heading": "Third spawn",
+      "level": 4,
+      "text": "In a blue cup on the ground in front of the drum set."
+    },
+    {
+      "heading": "Fourth spawn",
+      "level": 4,
+      "text": "Next to the radio ontop of the small metal shelf."
+    },
+    {
+      "heading": "Fifth spawn",
+      "level": 4,
+      "text": "On the desk next to the pencil."
+    },
+    {
+      "heading": "Sixth spawn",
+      "level": 4,
+      "text": "In the big shelf near the balcony next to a box."
+    },
+    {
+      "heading": "Bedroom",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Seventh spawn",
+      "level": 4,
+      "text": "On the ground between a package and the right hand wall after entering."
+    },
+    {
+      "heading": "Eighth spawn",
+      "level": 4,
+      "text": "On the right side shelf besides the wardrobe next to a flat iron."
+    },
+    {
+      "heading": "Ninth spawn",
+      "level": 4,
+      "text": "On the bottom compartment of the left nightstand next to the bed."
+    },
+    {
+      "heading": "Tenth spawn",
+      "level": 4,
+      "text": "On the dressing table next to the window."
+    }
+  ]
+}

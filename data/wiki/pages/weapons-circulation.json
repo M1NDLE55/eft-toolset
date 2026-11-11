@@ -1,0 +1,59 @@
+{
+  "title": "Weapons Circulation",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapons_Circulation",
+  "revisionId": 362638,
+  "lastEdited": "2026-09-29T20:54:22Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Shoreline",
+    "given by": "Peacekeeper",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Weapons Circulation is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Recently, my men came across some strange occult symbols. After conducting a small investigation, we discovered that this cult is sacrificing weapons to their own deities. You know, in Tarkov, weapons are almost as valuable as oil. My people are currently occupied with other assignments. Can you locate these cultist circles and mark them for us?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark the first ritual spot with an MS2000 Marker on Woods\n- Locate and mark the second ritual spot with an MS2000 Marker on Woods\n- Locate and mark the the ritual spot with an MS2000 Marker on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Peacekeeper Rep +0.25\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n- 2× Military flash drive\n- Unlocks purchase of HK 416A5 5.56x45 assault rifle at Peacekeeper LL3\n\"Great. Now we know more and will be able to better monitor the flow of weapons.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 3 | Required | N/A | Placed on the ritual spots. When placed, the item is removed from the players' inventory. Can be bought from Prapor. |"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- One can be found in the woods west of the sawmill near the checkpoint. This spot can easily be located when you go to the checkpoint, stay at the barrier and line your view up with a big stone south of it. See pictures below.\n\n- The other one is located at the dilapidated village in the north. The circle itself is north of the church in the backyard of a house."
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "Located in the pig room (East wing room 321) on the third floor of the health resort on Shoreline. Like on Customs, the room is easily identified by candles and numerous markings on the door. Inside the room are multiple slaughtered pigs and a Dead Scav with a pig's head. The spot to plant the MS2000 Marker surrounds the bathtub with the Dead Scav."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

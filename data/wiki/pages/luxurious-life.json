@@ -1,0 +1,64 @@
+{
+  "title": "Luxurious Life",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Luxurious_Life",
+  "revisionId": 361686,
+  "lastEdited": "2026-09-24T12:03:03Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Ground Zero",
+    "given by": "Prapor",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Luxurious Life is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey! You did well on the first job, but it's not enough to make me happy. You're gonna have to do a little more legwork, soldier. I need to find a bottle of wine. I myself am more of a hard drinker, but I know a man who collects wine. And not just any kind, but the rarest kind! I want to give him a bottle as a gesture of goodwill. Nowadays in Tarkov, any connections with reputable people are worth their weight in gold, you know? There was a liquor store in the city center. They used to sell booze three times the price, for the elite folks. I'm sure there's some left. Go there and search the place and get me a good bottle of some French wine! And don't even try to slip me some fake shit.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the liquor store on Ground Zero\n- Locate and obtain the wine bottle in the store\n- Hand over the wine bottle"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Prapor Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"O-ho, that's a beautiful bottle! The man is gonna love it. Here's your reward, well deserved.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Bottle of Le Jean wine | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find a wine bottle in the liquor store on Ground Zero. The wanted store is called \"ASAP winery\" and located across the street from the TerraGroup building complex. There are multiple spawns throughout the store."
+    },
+    {
+      "heading": "First spawn",
+      "level": 4,
+      "text": "On the corner shelf to the left of the big bar counter."
+    },
+    {
+      "heading": "Second spawn",
+      "level": 4,
+      "text": "On the shelf to the right of the big bar counter."
+    },
+    {
+      "heading": "Third spawn",
+      "level": 4,
+      "text": "On the shelf behind the big bar counter."
+    },
+    {
+      "heading": "Fourth/Fifth/Sixth spawn",
+      "level": 4,
+      "text": "On the shelves in the storage room in the back of the store behind the big bar counter."
+    }
+  ]
+}

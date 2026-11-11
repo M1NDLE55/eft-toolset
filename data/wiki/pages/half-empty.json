@@ -1,0 +1,51 @@
+{
+  "title": "Half-Empty",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Half-Empty",
+  "revisionId": 360851,
+  "lastEdited": "2026-09-20T12:36:46Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Half Empty"
+  ],
+  "infobox": {
+    "given by": "Prapor",
+    "previous": "Forge a Friendship",
+    "leads to": "Stick in the Wheel",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Half-Empty is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So, about that cargo from across the cordon. Turns out it was only part of the shipment. The other part's supposed to be airdropped. But I suspect they didn't include everything there either, those bastards. Look, you could help me with this. The package still needs to be picked up. And if we don't actually have everything, we'll have to look somewhere else. Obviously, I'm not gonna work with these suppliers anymore, but right now I need all these electronics from the shipment. I won't forget your commitment. Who knows, maybe I'll figure out how to help comrade driver quicker after you're done.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 5 found in raid military electronic items\n- Hand over 10 found in raid PC component items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 2× Altyn assault helmet (Olive Drab)\n- 2× Altyn helmet face shield\n\"You really helped me out! If the BTR driver is as reliable as you, we'll certainly get along. I just need to finish some other urgent things and prepare everything.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| RSP-30 reactive signal cartridge (Special Yellow) | 1 | Calls in a special airdrop containing PC components and military electronics |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "The RSP-30 reactive signal cartridge (Special Yellow) provided by Prapor via in-game mail can be used to call in a special airdrop containing a few of the required items.\n\nMilitary electronic items:\n- Iridium military thermal vision module\n- Military COFDM Wireless Signal Transmitter\n- Military cable\n- Military circuit board\n- Military gyrotachometer\n- Military power filter\n- Virtex programmable processor\n\nPC component items:\n- Bundle of wires\n- CPU fan\n- DVD drive\n- Damaged hard drive\n- Electronic components\n- Graphics card\n- PC CPU\n- Power cord\n- Power supply unit\n- Printed circuit board\n- RAM stick"
+    }
+  ]
+}

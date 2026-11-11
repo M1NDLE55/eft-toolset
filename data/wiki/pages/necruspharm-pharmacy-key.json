@@ -1,0 +1,56 @@
+{
+  "title": "NecrusPharm pharmacy key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NecrusPharm_pharmacy_key",
+  "revisionId": 348188,
+  "lastEdited": "2026-07-24T00:00:22Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the \"NecrusPharm\" pharmacy store in the shopping mall on Interchange.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ad5d64486f774079b080af8",
+    "ID": "Key_Shopping_Mall_pharmacy"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "NecrusPharm pharmacy key (Pharmacy) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the NecrusPharm pharmacy at the ULTRA shopping mall."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On the desk in west wing room 101 at the health resort."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the \"NecrusPharm\" pharmacy store in the shopping mall on Interchange."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Meds, Medical supplies, Stimulants)"
+    }
+  ]
+}

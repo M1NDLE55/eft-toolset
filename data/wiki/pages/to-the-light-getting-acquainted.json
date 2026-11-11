@@ -1,0 +1,67 @@
+{
+  "title": "To the Light - Getting Acquainted",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_Getting_Acquainted",
+  "revisionId": 360181,
+  "lastEdited": "2026-09-15T07:51:55Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Getting Acquainted"
+  ],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Mechanic",
+    "previous": "To the Light - The Other Side",
+    "leads to": "Information Source",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "To the Light - Getting Acquainted is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Congratulations. Lightkeeper is ready to let you onto the lighthouse and has provided instructions for your visit. The bridge to the lighthouse is heavily mined, and all approaches are monitored by Lightkeeper's personal guards. They won't let you inside unless you're carrying a transponder encoded in a specific way. I've already assembled the transmitter, and I got the access codes from the lighthouse as well. But in its current state, the transponder will transmit a weak and unstable signal with poor encryption. It's too risky. I know how to improve it, and you can do it yourself. You'll need a flash drive containing USEC encryption codes marked \"V3\". You should be able to find it around the upper chalet near the lighthouse. Be sure to search the house itself, but don't overlook the surrounding area. Keep an eye out for places with equipment, laptops, and radios. Once you've reprogrammed the transponder, everything should work perfectly. But before you head onto the bridge, inspect the transmitter and make sure the indicator light is green. And remember, Lightkeeper has only approved a personal meeting. You'll really have to prove yourself to build a reputation and earn his trust. Good luck.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain the V3 Flash drive on Lighthouse\n- Reflash the Radio transmitter using the V3 Flash drive\n- Hand over the flash drive\n- Visit the Lighthouse building"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +32,000 EXP\n\"You've already met him? How'd it go? So he's just as mysterious and shady in person... Well, I'm still glad we managed to pull this off. Now the important thing is not to make any mistakes when dealing with him, because no one has ever managed to regain his favor after a serious failure.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "Unlocks craft for Digital secure DSP radio transmitter at Intelligence Center level 2.\n| Item name | Amount |\n| Digital secure DSP radio transmitter | 1 |\n| Lighthouse island stash key | 1 |\n| Weapon case | 1 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Secure Flash drive V3 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThere are multiple spawns for the V3 flash drive at the black (southern) chalet on Lighthouse. After obtaining it, you have to reflash the transmitter at the Intelligence Center level 2 in the Hideout. Electricity is required during the entire process, otherwise it will be interrupted. After the reflashing is done, the transmitter is fully functional and can be used to bypass the Claymores and Zryachiy guarding the bridge to the lighthouse peninsula, allowing you to visit the lighthouse building and meet Lightkeeper.\n\nNote: If not all members of your lobby-made group have an encoded transmitter, it will have the \"blocked\" state and the bridge can't be passed."
+    },
+    {
+      "heading": "First/Second spawn on the first floor",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Third spawn in the basement",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Fourth spawn at the tennis court",
+      "level": 4,
+      "text": ""
+    }
+  ]
+}

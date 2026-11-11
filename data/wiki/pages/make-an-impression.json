@@ -1,0 +1,49 @@
+{
+  "title": "Make an Impression",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Make_an_Impression",
+  "revisionId": 360198,
+  "lastEdited": "2026-09-15T08:27:23Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Lightkeeper",
+    "previous": "Spotter (+10hr)",
+    "leads to": "Trouble in the Big City (+10hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Make an Impression is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"It seems that before my marksman decides to take risks at your prepared positions, he needs proof of your skill as an experienced spotter. Which makes sense. Time allows, thankfully. Let's just say there are snipers in and around the city who are operating out of their positions. Improve your counter-sniper skills, and then my man will trust you. Go on then, seven feet under the keel.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 10 hours after completion of Spotter"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Reach the required Bolt-action Rifles skill level of 10\n- Eliminate 10 Sniper Scavs from over 200 meters away"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.04\n- 2× Phased array element\n- Unlocks the Lightkeeper service \"Zryachiy support\"\n\"We've been watching you. My shooter gave the go-ahead. That's all for now. I'll let you know when the time comes.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 10 sniper Scavs from over 200 meters away, and reach level 10 in the bolt-action rifles skill. The Vortex Ranger 1500 rangefinder or the Wilcox RAPTAR ES Tactical Rangefinder can be used to determine the required distance."
+    }
+  ]
+}

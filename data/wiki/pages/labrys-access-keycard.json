@@ -1,0 +1,86 @@
+{
+  "title": "Labrys access keycard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Labrys_access_keycard",
+  "revisionId": 346809,
+  "lastEdited": "2026-06-14T18:35:48Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Allows access to The Labyrinth location a single time.",
+    "storage_wallet": "Yes",
+    "storage_keytool": "No",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "679b9819a2f2dd4da9023512",
+    "ID": "item_keycard_labyrinth_access"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Labrys access keycard (Labrys) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A keycard to one of Knossos facilities. The design references the Minotaur mythos, but it's somewhat strange there are no Minotaur theme parks in Tarkov."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Will be consumed upon entering The Labyrinth. Will not be consumed in the practice and practice co-op game modes.\n  - When playing in a group, all players need their own.\n- Cannot be listed for sale on the flea market.\n- Only 2 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as initial equipment during the story chapter The Labyrinth\n- 1 can be obtained as an initial equipment for Hypotheses Testing"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On Tagilla"
+    },
+    {
+      "heading": "The Labyrinth",
+      "level": 3,
+      "text": "- On Shadow of Tagilla\n- On Vengeful Killa"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "In the basement of the health resort west wing on Shoreline. Knossos LLC facility key required."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- The Labyrinth"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Salty Dog beef sausage x2; Salty Dog beef sausage; +; Bottle of Tarkovskaya vodka x2; Bottle of Tarkovskaya vodka; +; Bottle of Fierce Hatchling moonshine x1; Bottle of Fierce Hatchling moonshine | → | Jaeger; Jaeger LL1; After progressing through; the story chapter The Labyrinth | → | Labrys access keycard; Labrys access keycard |"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| Labrys research notes x1; Labrys research notes | → | Cultist Circle; Unique Sacrifice; 1 h 6 min | → | Labrys access keycard x1; Labrys access keycard |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The QR code on the backside of the card reads \"59.857850, 30.046943\". These numbers are coordinates that point to the abandoned sanatorium \"Strelna\" near St. Petersburg, which the health resort on Shoreline is based on."
+    }
+  ]
+}

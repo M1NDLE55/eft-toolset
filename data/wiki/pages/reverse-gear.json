@@ -1,0 +1,65 @@
+{
+  "title": "Reverse Gear",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Reverse_Gear",
+  "revisionId": 362381,
+  "lastEdited": "2026-09-29T13:02:41Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov, Shoreline, Ground Zero",
+    "given by": "Prapor",
+    "previous": "Know Your Enemy (+0-2hr)",
+    "leads to": "Key to Understanding, Riding the Wave",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Reverse Gear is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You haven't gone after any more of those guys in black, have you? We're in deep shit... As soon as I handed over their gear, I got a call. From the top brass. They told me to stay out of it, not to engage that unit, and to remove every observation point. And who's gonna answer for the men I lost, huh? You tell me, are those rear-echelon rats gonna step in and replace the dead? But there's nothing I can fucking do. If we keep digging, there'll be consequences. They made that crystal clear. They can wipe me out along with everything I've built, and they'll chew you up as an afterthought. Don't doubt that for a second. So the cameras have to come down. Can you handle it?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode.\n- Unlocks 0-2 hours after completion of Know Your Enemy"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the Wi-Fi Camera from the Ural truck near the hydroelectric power station on Shoreline\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from the excavator at the stream near the smugglers' base on Shoreline\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from the concrete mixer truck at the collapsed crane on Streets of Tarkov\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from the bio toilet near the Rodina cinema on Streets of Tarkov\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from the cargo truck cabin near Mira Ave on Ground Zero\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from yellow bus in the underground tunnel on Ground Zero\n- Hand over the camera"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,000 EXP\n- 180,000 Roubles\n  - 189,000 Roubles with Intelligence Center Level 1\n  - 207,000 Roubles with Intelligence Center Level 2\n- 2× 6B23-2 body armor (Mountain Flora)\n- 1× Briefcase with documents\n\"This turned into one hell of a mess, but it is what it is. Keep your head down and stay alive. Tarkov just became a whole lot more dangerous with these visitors around.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera (quest item) | WI-FI Camera | 6 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to go to Shoreline, Streets of Tarkov and Ground Zero to locate and obtain multiple WI-FI Cameras at specific spots and then hand them over to Prapor. Note: The special item WI-FI Camera cannot be used for this quest."
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ground Zero",
+      "level": 3,
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Voron's hideout key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Voron's_hideout_key",
+  "revisionId": 333937,
+  "lastEdited": "2026-02-07T23:59:37Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks Voron's hideout inside the hydroelectric power station on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "664d3ddfdda2e85aca370d75",
+    "ID": "Arena_shoreline_key3"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Voron's hideout key (Voron) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key that opens the room located somewhere near the Health Resort. Belonged to one of the Arena gladiators by the name \"Voron\"."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- Can only be bartered from Ref LL3"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Voron's hideout inside the hydroelectric power station on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Violet keycard spawn location\n- Loose loot (Valuables, Weapon mods, Armor plates, Stimulants)\n- 2x Sports bag\n- LEDX Skin Transilluminator spawns\n- Ophthalmoscope spawn\n- Graphics card spawn\n- Possible Lone Star TX-15 DML 5.56x45 carbine (variant D-WARRIOR)\n- Possible Kalashnikov AK-74N 5.45x39 assault rifle (variant Magpul)\n- Possible Saiga-12K ver.10 12ga semi-automatic shotgun (variant NERFGUN)\n- Possible FN P90 5.7x28 submachine gun (variant DEVGRU)\n- Possible modified Kalashnikov AKMN 7.62x39 assault rifle\n- Possible modified SIG MCX-SPEAR 6.8x51 assault rifle\n- Possible modified AS VAL 9x39 special assault rifle\n- Possible modified Kalashnikov AKS-74U 5.45x39 assault rifle\n- Possible modified Desert Tech MDR 5.56x45 assault rifle\n- Possible modified FN SCAR-H 7.62x51 assault rifle\n- Possible modified HK 416A5 5.56x45 assault rifle\n- Possible modified TDI KRISS Vector Gen.2 .45 ACP submachine gun\n- Possible modified TDI KRISS Vector Gen.2 9x19 submachine gun\n- Possible modified SIG MCX .300 Blackout assault rifle\n- Possible modified Colt M4A1 5.56x45 assault rifle\n- Possible Armasight N-15 night vision goggles\n- Possible Walker's XCEL 500BT Digital headset\n- Possible BNTI Gzhel-K body armor\n- Possible DRD body armor"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Lega Medal x1; Lega Medal; +; GP coin x100; GP coin | → | Ref; Ref LL3 | → | Voron's hideout key; Voron's hideout key |"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| Mastichin figurine x1; Mastichin figurine | → | Cultist Circle; Unique Sacrifice; 1 h 6 min | → | Voron's hideout key x1; Voron's hideout key; +; Note with code word Voron x1; Note with code word Voron; +; Raven figurine x1; Raven figurine |"
+    }
+  ]
+}

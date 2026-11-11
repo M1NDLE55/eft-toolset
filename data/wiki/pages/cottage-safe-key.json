@@ -1,0 +1,56 @@
+{
+  "title": "Cottage safe key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cottage_safe_key",
+  "revisionId": 306446,
+  "lastEdited": "2025-03-10T11:35:55Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the Safe in the locked Cottage within the \"Villas\" on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0f068686f7745b0d4ea242",
+    "ID": "Сейф Побережье Коттедж"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Cottage safe key (Safe) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the safe inside one of the cottages, located somewhere near the Azure Coast sanatorium."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In the white bus near tank in the western village. It spawns on a seat in the back right."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Unlocks the safe on the second floor in the locked Villa on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- One Safe"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "title": "Mechanic",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mechanic",
+  "revisionId": 349622,
+  "lastEdited": "2026-08-04T01:41:20Z",
+  "kind": "trader",
+  "categories": [
+    "Traders"
+  ],
+  "redirects": [
+    "Mechanik",
+    "Sergey Arsenyevich Samoylov"
+  ],
+  "infobox": {
+    "full name": "Sergey Arsenyevich Samoylov",
+    "location": "Chemical Plant Factory within the Customs District",
+    "origin": "Unknown",
+    "wares": "- Western/NATO Weapons - Magazines - Ammo - Mods - Keycards - Special equipment - Storage containers",
+    "services": "Repairs",
+    "currencies": "Euros (€), Roubles (₽)"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Sergey Arsenyevich Samoylov, known by his alias \"Mechanic\", is a trader in Escape from Tarkov."
+    },
+    {
+      "heading": "Biography",
+      "level": 2,
+      "text": "A former chemical plant foreman, who from the very beginning of the conflict took to weapon modification, repairs, and maintenance of complex equipment and technology. He prefers clandestine solo living and operates discreetly, while placing complicated and challenging tasks above all else.\n\nDespite the difficult situation in the region, he retained access to the \"mainland\" via the Internet and satellite communications. He has accounts in foreign banks, and, if desired, he could easily get out of Tarkov.\n\nEveryone in the city trusts him, even Scavs perceive him as a useful person who can help with establishing network communications in the conditions of complete destruction and blockade of the city. His main motivation for being in the region is his favorite craft."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Mechanic is initially locked, and can be unlocked upon progressing through the story chapter Tour."
+    },
+    {
+      "heading": "Wares",
+      "level": 2,
+      "text": "- Western/NATO Weapons\n- Magazines\n- Ammo\n- Mods\n- Keycards\n- Special equipment\n- Storage containers"
+    },
+    {
+      "heading": "Loyalty Level Requirements",
+      "level": 2,
+      "text": "| Loyalty Lvl | Required Lvl | Required Rep |\n| Lvl 2 | 12 | 0.60 |\n| Lvl 3 | 26 | 2.30 |\n| Lvl 4 | 40 | 7.6 |"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- See the quests overview page"
+    },
+    {
+      "heading": "Barters",
+      "level": 2,
+      "text": "- See the barter trades page"
+    },
+    {
+      "heading": "Items for sale",
+      "level": 2,
+      "text": "LL1:\nLL1\n\nLL2:\nLL2\n\nLL3:\nLL3\n\nLL4:\nLL4"
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- According to the quest Introduction, Jaeger is an old friend of the Mechanic.\n- Mechanic is the creator of the .366 TKM AP-M ammunition type."
+    }
+  ]
+}

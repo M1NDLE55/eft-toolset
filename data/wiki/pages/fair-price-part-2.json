@@ -1,0 +1,44 @@
+{
+  "title": "Fair Price - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fair_Price_-_Part_2",
+  "revisionId": 362600,
+  "lastEdited": "2026-09-29T19:54:49Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Skier",
+    "previous": "Fair Price - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Fair Price - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Don't regret your investment yet? Let me give you an advice, nerds like Mechanic are the ones who pull off the most rotten schemes! He'll get his profit, and you won't even realise you've been screwed. All right, quit bitching! I'm telling you the honest bloody truth. If you're still confident about this \"project\", you can collect the handguard at the abandoned sawmill near the village in the nature reserve, there's a UN post not far from there. The lads have already dropped it off. But I wouldn't stay there too long, who knows what other scum's there. If someone steals it before you, don't come to me with any claims!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Complete the task Hobby Club\n  - (Optional) Locate the stash spot\n  - (Optional) Locate and obtain the AK-50 handguard at the old sawmill on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n\"What, you got it already? Well done mate, you're a good little mule. When you get tired of playing gunsmith with Mechanic, you know who to go to. Oh, and, uh, if you can get the part back, that'd be sweet. Maybe we'll make some business with it, because I think I found really valuable info on this overseas AK...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| AK-50 handguard with gas block | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe handguard can be found inside a barn at the old sawmill in the east of Woods. There are multiple spawns throughout the barn. The handguard is required for the quest Hobby Club."
+    }
+  ]
+}

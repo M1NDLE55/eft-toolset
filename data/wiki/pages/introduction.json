@@ -1,0 +1,48 @@
+{
+  "title": "Introduction",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Introduction",
+  "revisionId": 359424,
+  "lastEdited": "2026-09-13T20:15:56Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Introduction is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Mercenary, come here, I've been waiting for you. Just a couple of hours ago, my old friend Jaeger got in touch with me and informed me that he had quite useful information for me. The package with the information I need is encrypted and is located in the Priozersk Natural Reserve area. Where exactly - Jaeger did not specify, but he left a clue: “Look where the hunter would wait for his prey. Where the iron bird has fallen”. Bring me this package and I'll introduce you to Jaeger, he'll definitely have work for you.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 2 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find Jaeger's camp at the specified spot on Woods\n- Obtain Jaeger's encrypted message\n- Hand over the message to Mechanic"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +4,500 EXP\n- Mechanic Rep +0.03\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n- Unlocks Jaeger as trader\n\"Do you have it? Good job. Well, I think you're worthy to get in contact with Jaeger. He might have plenty of work for you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Encrypted message | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find Jaeger's encrypted message on Woods. The message is located under a hunting stand which is located in the eastern part of the location, near the crashed plane. Once you have obtained the message, you must extract from the location and hand it over to Mechanic."
+    }
+  ]
+}

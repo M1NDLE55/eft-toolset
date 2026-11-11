@@ -1,0 +1,52 @@
+{
+  "title": "In the Name of Humanity...",
+  "url": "https://escapefromtarkov.fandom.com/wiki/In_the_Name_of_Humanity...",
+  "revisionId": 360300,
+  "lastEdited": "2026-09-15T13:10:12Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "In the Name of Humanity"
+  ],
+  "infobox": {
+    "location": "Interchange, Streets of Tarkov",
+    "given by": "Lightkeeper",
+    "previous": "Price for Information",
+    "leads to": "...for the Good of the Chosen",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "In the Name of Humanity... is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You want to see the whole picture, but you forget that you're still just a tool. To learn more, you'll have to rise above the situation and forget about the sides of the conflict you're familiar with. Are you sure you're ready for that? Then listen carefully to your next assignment. You must follow the instructions precisely. First, retrieve the object from Container 14 in the Ultra parking garage. To do that, restore power at the power station, then go up to Burger Spot and find the hidden panel in the restroom. Use the card marked #11SR on the panel, then go down to the TerraGroup safe room in the parking garage. It's next to the escalator from OLI and the breach in the parking garage wall. There's a lever inside that will open Container 14. The container itself is in the parking garage beneath IDEA, by the exit toward the power station. Look for the green container marked TerraGroup. Once you've retrieved the suitcase, head downtown. Make your way to the restaurant on the third floor of the Pinewood Hotel. Leave the suitcase on the balcony. After that, send a yellow signal flare near the tram that collapsed underground. And remember: there must be no witnesses. Conduct the operation at night and leave no one alive who could have seen you. When everything is done, return to me.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 3 targets during 20:00-08:00 on Interchange (In one raid)\n- Locate the hidden keycard panel in the Burger Spot bathroom on Interchange (In one raid)\n- Locate the hidden TerraGroup saferoom on Interchange (In one raid)\n- Locate and access Container 14 on Interchange (In one raid)\n- Obtain the carbon fiber case from Container 14 on Interchange (In one raid)\n- Use the transit from Interchange to Streets of Tarkov (In one raid)\n- Eliminate any 3 targets during 20:00-08:00 on Streets of Tarkov (In one raid)\n- Stash the carbon fiber case on the 3rd floor balcony of the Pinewood Hotel restaurant on Streets of Tarkov (In one raid)\n- Launch a yellow signal flare at the tram that collapsed into the sewers on Streets of Tarkov (In one raid)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +70,000 EXP\n\"If I had told you what was inside, you wouldn't have agreed to this job. But don't worry, there's neither a virus nor radiation inside. You were right about one thing. Black Division has assignments beyond clearing facilities. There are still samples in Tarkov that TerraGroup's closest competitors would need at least ten years to obtain. I won't tell you what they are or what they do. Some things are worth more than the entire city and everyone living in it. People may die, but the gifts must survive into the new world. After Black Division's operation in Tarkov, there will be nothing left to stand in the way of the plan.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Carbon fiber case | Carbon fiber case | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Object 11SR keycard | Object #11SR keycard | 1 | Required | N/A | Unlocks the \"Saferoom Exfil\" extraction on Interchange. |\n| Flare - You only need one of the below options |\n| RSP-30 reactive signal cartridge (Yellow) | RSP-30 reactive signal cartridge (Yellow) | 1 | Required | N/A | Must be fired into the sky while being nexto to the tram at the collpased sewers on Streets of Tarkov. |\n| OR |\n| ZiD SP-81 26x75 signal pistol | ZiD SP-81 26x75 signal pistol | 1 | Required | N/A | Used to fire the flare cartridge. |\n| 26x75mm flare cartridge (Yellow) | 26x75mm flare cartridge (Yellow) | 1 | Required | N/A | Must be fired into the sky while being nexto to the tram at the collpased sewers on Streets of Tarkov. |\nAll of the following has to be done in one raid, while also killing any 3 targets each on Interchange and Streets of Tarkov in the time period of 20:00-08:00.\n\nYou first have to obtain the carbon fiber case from the TerraGroup Object-14 container on Interchange. To access it, its power lever inside the \"Saferoom Exfil\" extraction in the parking garage section C has to be activated. To enter the extraction, power and Object #11SR keycard swipe in the \"Burger spot\" restaurant urinal are required. Note: Even when someone else has already opened the extraction, the urinal still has to be visited.\n\nThe Object-14 container is located on the opposite side of parking garage section A. The case can be found under a metal shelf.\n\nAfter obtaining the case you have to transit to Streets of Tarkov.\n\nNow the carbon fiber case has to be stashed at a balcony on the third floor of the Pinewood Hotel restaurant building on Streets of Tarkov.\n\nAs last step a yellow flare has to be fired into the sky while being next to the tram at the collpased sewers on Streets of Tarkov. You can use either the handheld RSP-30 yellow flare which can be bought at Prapor LL1 or a 26x75mm yellow flare cartridge which can be bought at Jaeger LL1, and is fired from a signal pistol. If you use the handheld RSP-30 yellow flare, make sure to aim it upwards, but not too much or it lands behind you."
+    }
+  ]
+}

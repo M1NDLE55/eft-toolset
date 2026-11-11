@@ -1,0 +1,44 @@
+{
+  "title": "The Cult",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Cult",
+  "revisionId": 362634,
+  "lastEdited": "2026-09-29T20:47:12Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Cult is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You know, I don't work only with you. I have one very useful and resourceful informant, but he has not checked in for quite some time. The last information I received from him mentioned a strange glow and mysterious voices near the old village. He said he would investigate what was happening, and then disappeared. Find him, or at least find out what may have happened to him.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the missing informant on Shoreline\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,00 EXP\n- Peacekeeper Rep +0.25\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n\"Kurwa! This is far too strange... I will continue looking into it myself. Thanks!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "The informant is located in a ruined house in the swamps of Shoreline. You can find it by locating the church and following a blood trail."
+    }
+  ]
+}

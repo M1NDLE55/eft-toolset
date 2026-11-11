@@ -1,0 +1,40 @@
+{
+  "title": "Information Source",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Information_Source",
+  "revisionId": 360184,
+  "lastEdited": "2026-09-15T07:55:42Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Customs, Interchange, Streets of Tarkov, Ground Zero, Lighthouse, Shoreline",
+    "given by": "Lightkeeper",
+    "previous": "To the Light - Getting Acquainted",
+    "leads to": "Missing Informant (+10hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Information Source is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Now, let's begin. I have heard rumors that a certain group of people have decided to stick their noses into my business. I, as you can imagine, am not satisfied with that kind of activity. Your job is to gather information from someone who's always hanging around mercenaries like you, and find out who these people are. You got to figure it out at all costs, okay? Talk to the car evac drivers, they certainly know about this kind of business. I'm sure they won't give you anything for just a hearty thanks, so you'll have to work hard. Understood? Go on, then.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Survive and extract from Woods through Bridge V-Ex\n- Survive and extract from Customs through Dorms V-Ex\n- Survive and extract from Interchange through Power Station V-Ex\n- Survive and extract from Streets of Tarkov through Primorsky Ave Taxi V-Ex\n- Survive and extract from Ground Zero through Police Cordon V-Ex\n- Survive and extract from Lighthouse through Road to Military Base V-Ex\n- Survive and extract from Shoreline through Road to North V-Ex"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.01\n- 1× Advanced Electronic Materials textbook\n- 1× Lighthouse island stash key\n\"I'm listening.\""
+    }
+  ]
+}

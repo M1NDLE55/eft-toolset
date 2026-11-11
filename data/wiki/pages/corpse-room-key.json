@@ -1,0 +1,66 @@
+{
+  "title": "Corpse room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Corpse_room_key",
+  "revisionId": 326195,
+  "lastEdited": "2025-11-30T21:57:00Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the corpse room in The Labyrinth.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "No",
+    "node": "679bab714e9ca6b3d80586b4",
+    "ID": "item_key_labyrinth_03_corpses_room"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Corpse room key (Corpses) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "An old key that has a strong odor of death. Probably opens a morgue or a room where bodies were kept."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Keeper's Word"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "The Labyrinth",
+      "level": 3,
+      "text": "- On Shadow of Tagilla\n- In one of six locations. Guaranteed spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the corpse room in The Labyrinth."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (multiple very rare Valuables, Containers)"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Keeper's Word",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Keeper's_Word",
+  "revisionId": 359434,
+  "lastEdited": "2026-09-13T20:16:07Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Labyrinth",
+    "given by": "Lightkeeper",
+    "previous": "Sensory Analysis - Part 2, Hypotheses Testing, Vacate the Premises, Confidential Info, Indisputable Authority, This Tape Sucks",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Keeper's Word is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I have a new job for you. Someone found a way into the cellars under the health resort. This is not a good set of circumstances for Tarkov. Excessive curiosity often ruins a man in peacetime, but in the present situation, the mistake of one will lead to the death of many. I know how to safeguard the bunker. You may not have yet met the wardens who watch the city at night. But they certainly have met you. And now I need you to leave a short message for them at the Knossos facility, with their instruments. However, just dropping these knives in the rubble won't be enough. You need places with meaning, so that the knife you stick in becomes a symbol of sorts. Which places should you choose? You'll figure it out on your own. And if you can't, why should I even work with you?\""
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "You can't hand in this quest if you don't have a free special slot for the reward."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash a Cultist knife in the first special place inside The Labyrinth\n- Stash a Cultist knife in the second special place inside The Labyrinth\n- Stash a Cultist knife in the third special place inside The Labyrinth"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +56,800 EXP\n- Lightkeeper Rep +0.03\n- 4,830 Dollars\n- 1× Virtex programmable processor\n- 1× S I C C organizational pouch\n- 1× Sacred Amulet\n\"Perhaps now you've saved Tarkov from a new calamity that could have wiped the city off the face of the earth... before its time. Your reward is here. Oh, and one more thing. If I were you, I'd stop enquiring about those dungeons if you want to survive these troubled times.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Corpse room key | 1 | Required | N/A | Unlocks the door to the corpse room. |\n| Cultist knife | 3 | Required | N/A | Must be stashed at the specified locations. |\nIn this quest you have to stash 3 Cultist knives in 3 specified locations inside The Labyrinth. One of the locations requires the Corpse room key."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "During The Labyrinth event, this quest unlocked the Dungeon Master achievement."
+    }
+  ]
+}

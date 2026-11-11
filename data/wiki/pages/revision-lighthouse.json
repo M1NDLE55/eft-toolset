@@ -1,0 +1,53 @@
+{
+  "title": "Revision - Lighthouse",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Revision_-_Lighthouse",
+  "revisionId": 360438,
+  "lastEdited": "2026-09-15T23:51:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Peacekeeper",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Revision - Lighthouse is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Ah, mercenary, just when I needed you. You've probably already seen all the military machinery in the USEC operational base area? My clients are willing to provide a reward for materials extracted from those vehicles. According to our information, part of the vehicles should be inside the base itself, while other vehicles have been seen somewhere along the main road. I want you to identify the exact location of this machinery and mark it for my subordinates. We need at least one Stryker and one BRDM car. Have fun, mercenary.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 3 with Peacekeeper to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark any of the BRDM cars with an MS2000 Marker on Lighthouse\n- Locate and mark any of the Stryker vehicles withan MS2000 Marker on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000EXP\n- Peacekeeper Rep +0.75\n- 1,900 Dollars\n  - 1,995 Dollars with Intelligence Center Level 1\n  - 2,185 Dollars with Intelligence Center Level 2\n\"Perfect, mercenary. We'll figure out the rest by ourselves, so your help in this matter will no longer be needed. See you later.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 2 | Required | N/A | This item is placed on the vehicles. When placed, the item is removed from the players' inventory. |\nIn this quest you have to find and mark a BRDM and a Stryker vehicle with MS2000 Markers on Lighthouse. There are 3 possible locations for each."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

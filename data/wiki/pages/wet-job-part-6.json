@@ -1,0 +1,46 @@
+{
+  "title": "Wet Job - Part 6",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wet_Job_-_Part_6",
+  "revisionId": 359886,
+  "lastEdited": "2026-09-13T20:23:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Wet Job. Part 6"
+  ],
+  "infobox": {
+    "given by": "Peacekeeper",
+    "previous": "Wet Job - Part 5",
+    "leads to": "Psycho Sniper, The Guide",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Wet Job - Part 6 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, my dear friend, it looks like we are really close to an interesting deal. On the drive we found part of the blueprints for a submarine engine from the Akula class, which supposedly is no longer being produced. There was also a detailed dossier on a sailor who served in the Baltic Fleet. He is currently somewhere in Tarkov and his connections to the naval command. According to the data, he occasionally trades with Scavs. We cannot approach him directly. We will have to operate covertly, from an ambush position. We only have one opportunity. It is important not to make a mistake and lose such a chance. You cannot imagine how important this is. You are an excellent fighter, but I want to be certain that you are equally capable in stealth operations. I need a sniper, and a sufficiently experienced one. Prove your skills\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 targets from over 50 meters away using a 7.62x51mm NATO DMRs on Shoreline or Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Dollars\n  - Dollars with Intelligence Center Level 1\n  - 3,368 Dollars with Intelligence Center Level 2\n- 1x FN40GL Mk2 40mm grenade launcher\n- 6x 40x46mm M386 (HE) grenade\n- 1× Lobaev Arms DVL-10 7.62x51 bolt-action sniper rifle (variant Saboteur)\n- 3× 7.62x51mm M61 ammo pack (20 pcs)\n- Unlocks barter for FN40GL Mk2 40mm grenade launcher at Peacekeeper LL4\n- Unlocks craft for 7.62x51mm M80A1 at Workbench level 3\n\"With all due respect, didn't believe that you’ll manage, mercenary. It seems you’re the \"sharpshooter\" for me now. I'll contact you when needed.\""
+    }
+  ]
+}

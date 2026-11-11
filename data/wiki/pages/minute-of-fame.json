@@ -1,0 +1,90 @@
+{
+  "title": "Minute of Fame",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Minute_of_Fame",
+  "revisionId": 362431,
+  "lastEdited": "2026-09-29T14:26:40Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Interchange",
+    "given by": "Skier",
+    "previous": "The Good Times - Part 2",
+    "leads to": "Viewer",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Minute of Fame is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Sup, bandit! How's life? A little birdie told me there's a special magazine in the Ultra mall at the Interchange. They wrote about our Russian video game, which is recognized all over the world! I guess the guys really came up with a great concept!\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only available to buyers of the \"Edge of Darkness\" edition of the game."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the special edition of the gaming magazine on Interchange\n- Hand over the found item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 1,600 Euros\n  - 1,680 Euros with Intelligence Center Level 1\n  - 1,840 Euros with Intelligence Center Level 2\n- 2× AWC Thor PSR XL multi-caliber sound suppressor\n- 2× AR-10 AWC PSR 7.62x51 muzzle brake\n- 2× SIG Sauer SRD762Ti 7.62x51 sound suppressor\n- Unlocks Dirty Hideout ceiling style\n\"Now this is a victory! The magazine hit the jackpot! Looks like real historical shit.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Gaming magazine | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe magazine can be found on the second floor of the ULTRA shopping mall on Interchange, in a book store called \"МУЗЕЙ ИСТОРИИ\" (\"Museum of History\"). There are multiple spawns throughout the store."
+    },
+    {
+      "heading": "First spawn",
+      "level": 4,
+      "text": "On one of the billard tables."
+    },
+    {
+      "heading": "Second spawn",
+      "level": 4,
+      "text": "In the trash can in the men's restroom."
+    },
+    {
+      "heading": "Third spawn",
+      "level": 4,
+      "text": "On the floor in the band room, second to last seating row."
+    },
+    {
+      "heading": "Fourth spawn",
+      "level": 4,
+      "text": "On the floor beneath the bookshelf next to the band room."
+    },
+    {
+      "heading": "Fifth spawn",
+      "level": 4,
+      "text": "On the round table next to the train."
+    },
+    {
+      "heading": "Sixth/Seventh spawn",
+      "level": 4,
+      "text": "On both sides of the center bookshelf closest to the arcade machines."
+    },
+    {
+      "heading": "Eighth/Ninth spawn",
+      "level": 4,
+      "text": "On both sides of the center bookshelf closest to the restroom."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The magazine referenced in this quest is issue #216 of the Russian computer games magazine \"Навигатор игрового мира\" (Game World Navigator)."
+    }
+  ]
+}

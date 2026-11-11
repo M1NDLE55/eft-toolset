@@ -1,0 +1,43 @@
+{
+  "title": "Scav body",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Scav_body",
+  "revisionId": 358857,
+  "lastEdited": "2026-09-11T20:38:56Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "6582e6bb0c3b9823fe6d1840",
+    "ID": "scavDead_flaregun"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Scav body is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Corpse of a deceased Scav. A 5x5 loot container that only spawns the RSP-30 reactive signal cartridge (Green)."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Ground Zero",
+      "level": 3,
+      "text": "Leaned against the yellow bus at the \"Mira Ave\" extraction."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Icon | Type |\n| RSP-30 reactive signal cartridge (Green) | Special weapon |"
+    }
+  ]
+}

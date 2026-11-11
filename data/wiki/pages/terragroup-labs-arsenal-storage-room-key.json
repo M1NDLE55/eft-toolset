@@ -1,0 +1,63 @@
+{
+  "title": "TerraGroup Labs arsenal storage room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_arsenal_storage_room_key",
+  "revisionId": 345900,
+  "lastEdited": "2026-05-31T22:52:52Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "TGL ASR"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the storage room door inside the laboratory security arsenal (R23) in The Lab.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5c1f79a086f7746ed066fb8f",
+    "ID": "item_lab_weap_store_room"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "TerraGroup Labs arsenal storage room key (TGL ASR) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Key to the TerraGroup Labs Security arsenal storage room."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Sitting on a chair within a shack on top of the hill with the transmission tower\n\nMap with location marked\n\nKey on the chair\n\n- Room 215 of the three-story dorms: Inside a night stand\n\nKey in the night stand\n\n- On the counter behind the cash registers in the new gas station\n\nKey on the counter\n\n- In the guard building of the crane yard next to the new gas station, in the right side shelf of the desk (Requires a Factory emergency exit key to access)."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the storage room inside the laboratory security arsenal (R23) on the second level in The Lab. A TerraGroup Labs keycard (Red) is required to access it."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Valuables\n- Weapon mods\n- Meds and Medical supplies\n- One Drawer"
+    }
+  ]
+}

@@ -18,7 +18,7 @@ export default function Page() {
       {
         heading: "Third-Party API Use",
         content:
-          "Our website utilizes a third-party API, TARKOV.DEV (https://tarkov.dev/), to fetch information and data related to Escape From Tarkov. While we strive to provide accurate and up-to-date information, we cannot guarantee the accuracy, completeness, or reliability of the data obtained from this API. Users should independently verify any information before relying on it. Our AI assistant (MCP) tools can also read the community Escape from Tarkov Wiki on Fandom (https://escapefromtarkov.fandom.com/), whose text is written by its contributors and licensed CC BY-NC-SA. We do not control or check that text, and results that quote it credit the wiki page it came from.",
+          "Our website utilizes a third-party API, TARKOV.DEV (https://tarkov.dev/), to fetch information and data related to Escape From Tarkov. While we strive to provide accurate and up-to-date information, we cannot guarantee the accuracy, completeness, or reliability of the data obtained from this API. Users should independently verify any information before relying on it. Our AI assistant (MCP) tools can also read a copy of the community Escape from Tarkov Wiki on Fandom (https://escapefromtarkov.fandom.com/), made from the database dump the wiki publishes, whose text is written by its contributors and licensed CC BY-NC-SA. We do not control or check that text, and results that quote it credit the wiki page it came from.",
       },
       {
         heading: "Credits",

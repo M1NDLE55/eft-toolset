@@ -1,0 +1,53 @@
+{
+  "title": "Unity Credit Bank cash register key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Unity_Credit_Bank_cash_register_key",
+  "revisionId": 348165,
+  "lastEdited": "2026-07-22T08:18:23Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "UC reg"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the customer desk booth no. 2 in the Tarbank on Ground Zero.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "6581998038c79576a2569e11",
+    "ID": "sand_key1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Unity Credit Bank cash register key (UC reg.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the cash register inside the city center Unity Credit bank branch."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the customer desk booth no. 2 in the Tarbank on at Ground Zero."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Currency)\n- 1x Safe (locked)\n- 1x Drawer"
+    }
+  ]
+}

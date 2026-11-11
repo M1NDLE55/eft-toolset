@@ -1,23 +1,37 @@
 import { z } from "zod";
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import {
-  fetchWikiPage,
+  findLeftOutPage,
+  findWikiPage,
   isPossibleTitle,
+  normalize,
   parseWikiLink,
   searchWiki,
-  WIKI_LICENCE,
-  WIKI_NAME,
-  WIKI_ORIGIN,
-  type WikiPage,
-} from "@/app/lib/wiki/fandom";
-import { INTRODUCTION, wikitextToSections, type WikiSection } from "@/app/lib/wiki/wikitext";
+  wikiSnapshotDate,
+  type WikiPageRecord,
+} from "@/app/lib/wiki/snapshot";
+import { WIKI_LICENCE, WIKI_NAME, WIKI_ORIGIN } from "@/app/lib/wiki/wiki-url";
+import { INTRODUCTION, type WikiSection } from "@/app/lib/wiki/wikitext";
 import type { ToolContext } from "./context";
 import { toolDefiner } from "./define-tool";
 import { getWikiPageOutput } from "./output-schemas";
 
 // Read longer pages by section.
 export const MAX_WIKI_CONTENT_CHARS = 12_000;
+// Pages up to this long come back whole; longer ones as their introduction and section list.
+export const WHOLE_PAGE_CHARS = 4_000;
 const MAX_SECTIONS = 20;
+
+/** What a left-out page is, and where to look instead. */
+const LEFT_OUT: Record<string, { page: string; instead?: string }> = {
+  weapon: {
+    page: "a weapon or weapon part page",
+    instead: "use get_weapon for a gun, or search_items and get_item for a part",
+  },
+  ammo: { page: "an ammunition page", instead: "use get_ammo_options, or search_items and get_item" },
+  item: { page: "an item page", instead: "use search_items and get_item" },
+  historical: { page: "about something removed from the game" },
+};
 
 export function registerWikiTools(server: McpServer, context: ToolContext) {
   const define = toolDefiner(server, context);
@@ -31,42 +45,48 @@ export function registerWikiTools(server: McpServer, context: ToolContext) {
           .array(z.string().trim().min(1).max(200))
           .max(MAX_SECTIONS)
           .optional()
-          .describe("Headings to return, with their subsections. Omit for the whole page."),
+          .describe("Headings to return, with their subsections. Omit for the summary."),
       },
     },
     async ({ page, sections }) => {
-      const { signal } = context;
       const link = parseWikiLink(page);
       const [title, fragment] = link ? [link.title, link.fragment] : splitFragment(page);
+      const date = (await wikiSnapshotDate()).slice(0, 10);
 
-      let wiki = isPossibleTitle(title) ? await fetchWikiPage(title, signal) : null;
-      let matchedBy: "title" | "search" = "title";
+      const wiki = isPossibleTitle(title) ? await findWikiPage(title) : null;
       if (!wiki) {
-        const candidates = await searchWiki(title || page, signal);
-        const exact = candidates.filter((candidate) => normalize(candidate.title) === normalize(title));
-        if (exact.length === 1) {
-          wiki = await fetchWikiPage(exact[0].title, signal);
-          matchedBy = "search";
+        const [candidates, leftOut] = await Promise.all([searchWiki(title || page), findLeftOutPage(title || page)]);
+        const about = leftOut ? LEFT_OUT[leftOut.kind] : undefined;
+        const exact = leftOut !== null && normalize(leftOut.title) === normalize(title);
+        let note: string;
+        if (leftOut && about && (exact || candidates.length === 0)) {
+          const subject = exact ? `"${leftOut.title}" is` : `"${title}" matches "${leftOut.title}",`;
+          note = `${subject} ${about.page}, which the wiki snapshot leaves out${about.instead ? `: ${about.instead}` : ""}.`;
+          if (candidates.length > 0) note += " Related wiki pages are in candidates.";
+        } else {
+          note =
+            candidates.length > 0
+              ? `No page is titled "${title}". Call again with one of the candidate titles.`
+              : `Nothing in the wiki snapshot matches "${title}". Try other words.`;
         }
-        if (!wiki) {
-          return {
-            found: false,
-            candidates,
-            note:
-              candidates.length > 0
-                ? `No page is titled "${title}". Call again with one of the candidate titles.`
-                : `Nothing on the wiki matches "${title}". Try other words.`,
-            credit: `Search results from the ${WIKI_NAME} (${WIKI_ORIGIN}), ${WIKI_LICENCE.name} (${WIKI_LICENCE.url}).`,
-          };
-        }
+        return {
+          found: false,
+          candidates,
+          note,
+          credit: `Titles from the ${WIKI_NAME} (${WIKI_ORIGIN}), ${WIKI_LICENCE.name} (${WIKI_LICENCE.url}), as of its ${date} database dump.`,
+        };
       }
 
-      const all = wikitextToSections(wiki.wikitext, wiki.title);
+      const all = pageSections(wiki.page);
       const wanted = sections ?? (fragment ? [fragment] : wiki.redirectFragment ? [wiki.redirectFragment] : undefined);
-      const { chosen, missing } = wanted ? selectSections(all, wanted) : { chosen: all.map((_, index) => index), missing: [] };
+      const whole = all.reduce((total, section) => total + section.text.length, 0) <= WHOLE_PAGE_CHARS;
+      const { chosen, missing } = wanted
+        ? selectSections(all, wanted)
+        : { chosen: whole ? all.map((_, index) => index) : summary(all), missing: [] };
       const { content, truncatedIn } = assemble(all, chosen);
       const notes: string[] = [];
       if (missing.length > 0) notes.push(`No section matches ${missing.map((name) => `"${name}"`).join(", ")}; see sections.`);
+      if (!wanted && !whole) notes.push("This is the start of the page. Ask for sections by heading for the rest.");
       if (truncatedIn !== null) {
         notes.push(
           `Content was cut at ${MAX_WIKI_CONTENT_CHARS.toLocaleString("en-US")} characters, in "${truncatedIn}". Ask for later sections by heading.`
@@ -74,25 +94,44 @@ export function registerWikiTools(server: McpServer, context: ToolContext) {
       }
       return {
         found: true,
-        title: wiki.title,
-        url: wiki.url,
-        lastEdited: wiki.lastEdited,
-        revisionId: wiki.revisionId,
+        title: wiki.page.title,
+        url: wiki.page.url,
+        lastEdited: wiki.page.lastEdited,
+        revisionId: wiki.page.revisionId,
         ...(wiki.redirectedFrom ? { redirectedFrom: wiki.redirectedFrom } : {}),
-        ...(matchedBy === "search" ? { matchedBy } : {}),
+        ...(wiki.matchedBy === "search" ? { matchedBy: wiki.matchedBy } : {}),
         sections: all.map((section) => ({ heading: section.heading, level: section.level, chars: section.text.length })),
         ...(missing.length > 0 ? { missingSections: missing } : {}),
         content,
         ...(truncatedIn !== null ? { truncated: true } : {}),
         ...(notes.length > 0 ? { note: notes.join(" ") } : {}),
-        credit: credit(wiki),
+        credit: credit(wiki.page, date),
       };
     }
   );
 }
 
-function credit(wiki: WikiPage) {
-  return `From "${wiki.title}" on the ${WIKI_NAME} (${wiki.url}) by its contributors (${wiki.url}?action=history), ${WIKI_LICENCE.name} (${WIKI_LICENCE.url}); converted to plain text. Non-commercial use only.`;
+/** The page's sections, with its infobox as the first lines of the introduction. */
+function pageSections(page: WikiPageRecord): WikiSection[] {
+  const fields = Object.entries(page.infobox).map(([key, value]) => `${key}: ${value}`).join("\n");
+  if (!fields) return page.sections;
+  const [first, ...rest] = page.sections;
+  if (first && isIntroduction(first)) return [{ ...first, text: first.text ? `${fields}\n\n${first.text}` : fields }, ...rest];
+  return [{ heading: INTRODUCTION, level: 1, text: fields }, ...page.sections];
+}
+
+/** The introduction, or the first section with text (and its subsections) when there is none. */
+function summary(all: WikiSection[]) {
+  const first = all.findIndex((section) => section.text);
+  if (first < 0) return [];
+  if (isIntroduction(all[first])) return [first];
+  const chosen = [first];
+  for (let index = first + 1; index < all.length && all[index].level > all[first].level; index += 1) chosen.push(index);
+  return chosen;
+}
+
+function credit(page: WikiPageRecord, date: string) {
+  return `From "${page.title}" on the ${WIKI_NAME} (${page.url}) by its contributors (${page.url}?action=history), ${WIKI_LICENCE.name} (${WIKI_LICENCE.url}). Adapted: converted to plain text from the wiki's ${date} database dump. Non-commercial use only.`;
 }
 
 function splitFragment(text: string): [string, string | undefined] {
@@ -103,10 +142,6 @@ function splitFragment(text: string): [string, string | undefined] {
 
 function isIntroduction(section: WikiSection) {
   return section.heading === INTRODUCTION && section.level === 1;
-}
-
-function normalize(text: string) {
-  return text.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, "");
 }
 
 function selectSections(all: WikiSection[], wanted: string[]) {

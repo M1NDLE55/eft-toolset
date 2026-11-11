@@ -1,0 +1,59 @@
+{
+  "title": "Invasive Therapy",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Invasive_Therapy",
+  "revisionId": 361829,
+  "lastEdited": "2026-09-24T13:45:26Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Therapist",
+    "LL requirement": "3",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Invasive Therapy is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I ask that you not discuss this assignment with anyone. You may also keep any questions you have to yourself. Recently, one of my shipments of injectors was intercepted by the Rogues. It seems that after the battle at the treatment plant, they have started carrying out bolder and more aggressive raids in search of equipment and medical supplies. I would be more than happy to help the wounded, but these people are trying to obtain what they need behind my back! I'm sorry... In any case, I cannot allow them to conduct business this way, and I have no choice but to respond. This needs to be handled in such a way that they never try to take my goods without my knowledge again. They keep the medications taken from my group in their chalets. Replace some of them with experimental drugs produced by Sanitar.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 5 found in raid P22 (Product 22) stimulant injectors\n  - (Optional) Find 5 P22 (Product 22) stimulant injectors in raid\n- Hand over 5 found in raid XTG-12 antidote injectors\n  - (Optional) Find 5 xTG-12 antidote injectors in raid\n- Stash any Obdolbos cocktail injector in the med bay at the upper Rogue chalet on Lighthouse\n- Stash any Obdolbos cocktail injector in the guest hall supplies at the upper Rogue chalet on Lighthouse\n- Stash any Obdolbos cocktail injector in the ammo stockpile at the lower Rogue chalet on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Therapist Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Ophthalmoscope\n\"I hope you haven't told anyone about our business. I think you understand how dangerous it is to show weakness in a place like Tarkov has become. After all, I pay you for your professionalism and impartiality in your work. Let's continue to uphold those standards.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| P22 (Product 22) stimulant injector | P22 (Product 22) stimulant injector | 5 | Handover item | Yes | |\n| xTG-12 antidote injector | xTG-12 antidote injector | 5 | Handover item | Yes | Can be crafted in the Hideout (Medstation lv. 2). |\n| Obdolbos cocktail injector; or; Obdolbos 2 cocktail injector | Obdolbos cocktail injector; or; Obdolbos 2 cocktail injector | 3 | Required | N/A | Stashed item |\nIn this quest you have to stash 3 Obdolbos injectors in the chalets on Lighthouse."
+    },
+    {
+      "heading": "Med bay in the upper chalet",
+      "level": 3,
+      "text": "In the basement."
+    },
+    {
+      "heading": "Guest hall supplies in the upper chalet",
+      "level": 3,
+      "text": "On the first floor next to the main entrance."
+    },
+    {
+      "heading": "Ammo stockpile in the lower chalet",
+      "level": 3,
+      "text": "On the first floor in the dining area opposite of the fireplace."
+    }
+  ]
+}

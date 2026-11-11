@@ -1,0 +1,63 @@
+{
+  "title": "Supply crate (Rare)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Supply_crate_(Rare)",
+  "revisionId": 356085,
+  "lastEdited": "2026-08-25T16:21:12Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [
+    "Locked supply crate (Rare)",
+    "Unlocked supply crate (Rare)"
+  ],
+  "infobox": {
+    "type": "Reward Loot Container",
+    "weight": "10 kg",
+    "grid": "4x4",
+    "node": "66572b88ac60f009f270d1dc 665732f4464c4b4ba4670fa9",
+    "ID": "Arena_junkcrate_blue_closed Arena_junkcrate_blue_open"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Supply crate (Rare) (Supplies (Rare)) is a Reward Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Before Unlocking",
+      "level": 3,
+      "text": "A trophy for participating in Arena battles. Outside the border, the contents of this box can hardly be considered valuable. However, Tarkov has its own notions of value. But first, you need to find a way to open this box."
+    },
+    {
+      "heading": "After Unlocking",
+      "level": 3,
+      "text": "A trophy for participating in Arena battles. Outside the border, the contents of this box can hardly be considered valuable. However, Tarkov has its own notions of value. The lock has been crudely broken, which means there are no more obstacles between you and the contents of the box."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n  - Must be un-locked at the Workbench level 1 before it can be opened\n- Cannot be listed for sale on the flea market\n- Destroyed after unpacking (Right-click \"unpack\")\n- Only the locked version can be stashed in Lucky Scav Junk box"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Possible reward from Ref's daily and weekly quests for Arena"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| Hand drill x1; Hand drill; +; Supply crate (Rare) x1; Locked Supply crate (Rare) | → | Workbench level 1; 1 minute | → | Supply crate (Rare) x1; Unlocked Supply crate (Rare) |"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "The crate can contain various barter items, as well as medical items, stimulants and provisions."
+    }
+  ]
+}

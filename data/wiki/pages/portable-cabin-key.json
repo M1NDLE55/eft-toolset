@@ -1,0 +1,51 @@
+{
+  "title": "Portable cabin key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Portable_cabin_key",
+  "revisionId": 316236,
+  "lastEdited": "2025-07-18T22:02:17Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a portable guard cabin next to the trailer park on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5780d07a2459777de4559324",
+    "ID": "Будка автоб пар"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Portable cabin key (Cabin key) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the portable on-site customs control guard cabins."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the portable guard cabin next to the trailer park on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Three Jackets\n- Loose loot"
+    }
+  ]
+}

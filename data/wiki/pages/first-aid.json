@@ -1,0 +1,53 @@
+{
+  "title": "First Aid",
+  "url": "https://escapefromtarkov.fandom.com/wiki/First_Aid",
+  "revisionId": 359287,
+  "lastEdited": "2026-09-13T20:13:38Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Jaeger",
+    "previous": "Acquaintance",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "First Aid is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings. Here's the thing: you can see for yourself how far out in the wilderness I live. Things happen out here. Sometimes I find a good person clinging to life, and there's nothing I can do to help. I've had people breathe their last right in my arms. I want to put together a small medical kit, something with the essentials always close at hand. Will you help me?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 4 items from the Medkits category Found In Raid\n- Hand over the items\n- Find 4 items from the Injury treatment category Found In Raid\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Jaeger Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"Got it? Great. Hopefully, I won't have to watch people die helplessly anymore.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Medical Category",
+      "level": 3,
+      "text": "For the Medical category you can hand over the following Found In Raid Items Salewa, Grizzly medical kit, AFAK tactical individual first aid kit, AI-2 medkit, IFAK individual first aid kit, Car first aid kit."
+    },
+    {
+      "heading": "Injury treatment",
+      "level": 3,
+      "text": "For the Injury category you can hand over the following Found In Raid Items Esmarch tourniquet, Immobilizing splint, Surv12 field surgical kit, CALOK-B hemostatic applicator, CMS surgical kit, Aseptic bandage, Golden Star balm, Vaseline balm, Army bandage, Tigzresq splint."
+    }
+  ]
+}

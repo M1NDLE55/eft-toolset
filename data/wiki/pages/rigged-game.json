@@ -1,0 +1,51 @@
+{
+  "title": "Rigged Game",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rigged_Game",
+  "revisionId": 362259,
+  "lastEdited": "2026-09-26T16:16:30Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Rigged game"
+  ],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Skier",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Rigged Game is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey you, tough guy! C'mere, I have a job for you. I've heard Prapor sent you to get a supply of drugs from some Sanitar dude. Don't make that face! I ain't got no interest in those drugs, let Prapor collect it and put it up his ass, you have already received profit from him anyway, haven't you? You just need to put these smart little things in containers that are in Sanitar's stashes. Prapor won't get wind of anything, it's a two-minute job, but the profit is good. Just gotta do it fast, before they move those containers.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Mark the medical container at the Health Resort with an MS2000 Marker on Shoreline\n- Mark the medical container by cottages with an MS2000 Marker on Shoreline\n- Mark the medical container at the river pier with an MS2000 Marker on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Skier Rep +0.75\n- 1,650 Roubles\n  - 1,732 Roubles with Intelligence Center Level 1\n  - 1,897 Roubles with Intelligence Center Level 2\n\"Good stuff, good stuff! Finally, Prapor will get his caches exposed, there are probably whole mountains of loot. Guns, ammo, food, dope. Out fucking standing! We'll do this one ourselves though, without you. No offense. Thanks.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 3 | Required | N/A | Stashed item |\nContrary to the quest objectives, in this quest you have to stash MS2000 Markers at 3 medical containers on Shoreline. They are located next to Sanitar's treatment locations from the quest Anesthesia. The markers can be stashed in any order over any number of raids."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

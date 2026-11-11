@@ -1,0 +1,68 @@
+{
+  "title": "Surveillance",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Surveillance",
+  "revisionId": 359721,
+  "lastEdited": "2026-09-13T20:20:59Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Mechanic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Surveillance is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, friend... You know, I wasn't always alone. Loneliness does not bother me, of course, especially since I have a neural net if I want to talk to someone really intelligent... Still, lately it's been weighing on me to think about my relatives. My brother and his wife and kids - will you look them up? The Samoylovs, they lived in Concordia. My brother drove a very recognizable car with a tiger aerography... It might be easier to find them through his car.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 25 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain the data on vehicle movement at the Concordia residential complex parking lot on Streets of Tarkov\n- Hand over the information"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +12,000 EXP\n- Mechanic Rep +0.02\n- 126,000 Roubles\n  - 132,300 Roubles with Intelligence Center Level 1\n  - 144,900 Roubles with Intelligence Center Level 2\n- 1× Military power filter\n\"So, this is a recording of the first hour after the events began... There, you see his car? And there's him. Okay, they're getting in the car, driving away... They should have left before the shelling started. What a relief!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Concordia security room key | 1 | Required | N/A | Used to open the security room |\n| Working hard drive | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find a hard drive on Streets of Tarkov. It can be found inside the Concordia security room which is located in the basement parking garage of the Concordia building. There are multiple spawns throughout the room."
+    },
+    {
+      "heading": "First spawn",
+      "level": 4,
+      "text": "On the computer under the left side of the corner desk."
+    },
+    {
+      "heading": "Second spawn",
+      "level": 4,
+      "text": "Between the desktop and the drawers on the right side of the corner desk."
+    },
+    {
+      "heading": "Third spawn",
+      "level": 4,
+      "text": "In the pizza box on the safe in the back left."
+    },
+    {
+      "heading": "Fourth spawn",
+      "level": 4,
+      "text": "In the compartment under the right side desk."
+    }
+  ]
+}

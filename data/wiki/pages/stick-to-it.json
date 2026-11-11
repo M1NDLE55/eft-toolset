@@ -1,0 +1,49 @@
+{
+  "title": "Stick to It",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stick_to_It",
+  "revisionId": 359705,
+  "lastEdited": "2026-09-13T20:20:44Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse, Icebreaker",
+    "given by": "BTR Driver",
+    "leads to": "Saving Private Roman",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Stick to It is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I already told you everything in the car. But if you really wanna get the smugglers to put in a more comfortable transport option to Icebreaker, you'll need to help them out with their fight against the Rogues first. Looks like things between them are pretty serious, and honestly I have no idea where it's going worst. So you can take initiative anywhere you want, just make sure there are fewer Rogue fighters left. Otherwise the smugglers won't even listen to you, they've got bigger problems right now.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "To gain access to this quest, you must first do the following on Icebreaker:\n- Talk to the scientist on level 1 via the intercom.\n\n- Reach the damaged door on level 3."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 30 Rogues"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +25,000 EXP\n- 100,000 Roubles\n- 3× Water filter\n\"Didn't think you'd do it this well. Good work, man.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 30 Rogues on any location."
+    }
+  ]
+}

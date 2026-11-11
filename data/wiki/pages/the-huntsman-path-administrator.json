@@ -1,0 +1,83 @@
+{
+  "title": "The Huntsman Path - Administrator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Administrator",
+  "revisionId": 359751,
+  "lastEdited": "2026-09-13T20:21:29Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "BEAR: Reserve, USEC: Lighthouse",
+    "given by": "Jaeger",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Administrator is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Depending on the faction of the player there are different dialogues and objectives."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "BEAR Exclusive",
+      "level": 4,
+      "text": "\"In our line of work, we can't afford to rest or slow down. Evil won't be defeated that way. So here's my next task for you. I've been told that something suspicious is happening at the Reserve base, around the loading area. Head there and deal with whatever filth has gathered there. And don't forget to fire the signal flare first, so I know you've begun your work. I'll take care of anyone who tries to run.\""
+    },
+    {
+      "heading": "USEC Exclusive",
+      "level": 4,
+      "text": "\"You're not one of us, of course, but I can tell there's something in you... something that understands. In our line of work, we can't afford to rest or slow down. Evil won't be crushed that way. So here's my next task for you. I've been told that something suspicious is happening at the water treatment plant, around the loading area. Head there and deal with whatever filth has gathered there. And don't forget to fire the signal flare first, so I know you've begun your work. I'll take care of anyone who tries to run.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 3 with Jaeger to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "BEAR Exclusive",
+      "level": 4,
+      "text": "- Launch a yellow signal flare at the train depot on Reserve\n- Eliminate any 6 targets at the train depot on Reserve\nNote: The \"Eliminate\" objective will appear after the \"Launch a yellow signal flare\" objective is completed."
+    },
+    {
+      "heading": "USEC Exclusive",
+      "level": 4,
+      "text": "- Eliminate any 6 targets at the train station territory on Lighthouse\n- Launch a yellow signal flare at the train station on Lighthouse\nNote: The \"Eliminate\" objective will appear after the \"Launch a yellow signal flare\" objective is completed."
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,600 EXP\n- Jaeger Rep +0.75\n- 275,000 Roubles\n  - 288,050 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2"
+    },
+    {
+      "heading": "BEAR Exclusive",
+      "level": 4,
+      "text": "\"You and I make a fine team.\""
+    },
+    {
+      "heading": "USEC Exclusive",
+      "level": 4,
+      "text": "\"Surprisingly, the two of us make a good team.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| RSP-30 reactive signal cartridge (Yellow) | 1 | Required | N/A | Must be fired into the sky while being in the train area. |\n| ZiD SP-81 26x75 signal pistol | 1 | Required | N/A | Used to fire the flare cartridge. |\n| 26x75mm flare cartridge (Yellow) | 1 | Required | N/A | Must be fired into the sky while being in the train area. |\n\nIn this quest you first have to shoot a yellow flare into the sky while being inside the train area on Reserve or Lighthouse, depending on your faction. If the flare doesn't reach a certain height, the quest objective won't complete. You can use either the handheld RSP-30 yellow flare which can be bought at Prapor LL1 or a 26x75mm yellow flare cartridge which can be bought at Jaeger LL1, and is fired from a signal pistol. If you use the handheld RSP-30 yellow flare, make sure to aim it upwards, but not too much or it lands behind you. Afterwards you have to kill any 6 targets in the area in the same raid."
+    }
+  ]
+}

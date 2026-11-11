@@ -1,0 +1,51 @@
+{
+  "title": "Primorsky 48 apartment key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Primorsky_48_apartment_key",
+  "revisionId": 253170,
+  "lastEdited": "2023-11-02T21:53:23Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the livingroom in apartment 6 on the second floor of the Primorsky 48 building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a71eb5b7f4570d3a29316b",
+    "ID": "city_key24"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Primorsky 48 apartment key (Prim 48) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the apartments at Primorsky Ave 48."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Living room door in apartment 6 on the second floor of the Primorsky 48 building at Streets of Tarkov. The entrance is on the backyard side."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Electronics)"
+    }
+  ]
+}

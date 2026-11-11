@@ -1,0 +1,53 @@
+{
+  "title": "A Difficult Choice",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A_Difficult_Choice",
+  "revisionId": 360914,
+  "lastEdited": "2026-09-20T15:37:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "related": "The Huntsman Path - Sadist",
+    "reqkappa": "No, but a subsequent quest Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "A Difficult Choice is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Young man, wait. I knew that Jaeger would ask you to kill Sanitar, but you don't have to do it. I understand Jaeger's point of view, that he's just some kind of monster in the flesh, but he is not. I'm sure Sanitar is just trying to help the locals. Given the current circumstances, he performs the most complex surgeries and it is not surprising that they often end badly. He is a doctor with the most valuable knowledge that can save many more lives. A doctor with access to a warehouse of medicines that are extremely important to us. And he has already entered into negotiations with me and will soon begin to cooperate. But for this, I need something that will interest him and I think I know what will: the Laboratory. Access keys and samples of military stimulants, I think they are the basis on which he conducts his experiments. Can you find them for me? You can get the access keycards however you want, but the stimulants must be sealed, so you need to find them yourself.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must accept Jaeger's quest The Huntsman Path - Sadist to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Do not kill Sanitar\n- Find 10 TerraGroup Labs access keycards in raid\n- Hand over the keycards\n- Find AHF1-M stimulant injector in raid\n- Hand over the injector\n- Find 3-(b-TG) stimulant injector in raid\n- Hand over the injector"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- 1× T H I C C item case\n\"Thank you. I knew you would understand how important Sanitar and his... medication are right now. He has already shown a great interest in keycards and stimulants and sent the first batch of goods. Here, this is your share.\""
+    },
+    {
+      "heading": "Failure Penalty",
+      "level": 2,
+      "text": "\"It is a pity that you listened to this Jaeger instead of the voice of reason. Sanitar with his knowledge and medicines could've helped us in many ways. He wasn't a saint, but surely everyone has a chance to atone for their sins, but you have took away that chance. I am very displeased with you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "By completing The Huntsman Path - Sadist, you fail and will lose access to this quest.\n| Related quest items |\n| Icon | Name | Quantity | Requirements | Find in raid | Notes |\n| /TerraGroup Labs access keycard | TerraGroup Labs access keycard | 10 | Handover item | Yes | Can be crafted in the Hideout (Intelligence Center lv. 2). |\n| AHF1-M stimulant injector | AHF1-M stimulant injector | 1 | Handover item | Yes | Can be crafted in the Hideout (Medstation lv. 2). |\n| 3-(b-TG) stimulant injector | 3-(b-TG) stimulant injector | 1 | Handover item | Yes | |"
+    }
+  ]
+}

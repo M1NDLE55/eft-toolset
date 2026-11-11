@@ -1,0 +1,134 @@
+{
+  "title": "Blue Fire",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Blue_Fire",
+  "revisionId": 354931,
+  "lastEdited": "2026-08-17T19:21:23Z",
+  "kind": "quest",
+  "categories": [
+    "Story chapters"
+  ],
+  "redirects": [],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Blue Fire is a story chapter in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "\"During the raid on the office, some kind of special weapon went off on one of the roofs... I remember a bright blue flash before I blacked out. After that, all the electronics failed. I've never encountered such a powerful EMP weapon before. I need to find out what technology hit the city, and who's behind it.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "Pick up and read EMERCOM leaflet or Note by Item #1156 from one of the following locations:\n- Inside a green shipping container at the Scav base/EMERCOM camp on Woods\n\n- On a tent west of the highway in the area near the \"Path to River\" extraction on Interchange\n\n- On a tent at the highway on Interchange\n\n- At the EMERCOM medical unit on the first floor of the ULTRA shopping mall on Interchange\n\n- On a table in the prototype weapon area inside The Labyrinth"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Talk to Mechanic about the EMP blast\n  - (Optional) Gain access to Mechanic\n- Locate and obtain the device fragment\n- Hand over the device fragment to Mechanic\n- Plant the hacking device in the server room in the Lab\n- Talk to Mechanic\n- Keep the fragment of Item 1156 for yourself or hand it over to Mechanic\n- Find a lead on Item 1156\n- Investigate the Rus Post office\n- Locate the Rus Post Car\n- Obtain the blueprint for Item 1156"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Talk to Mechanic about the EMP blast",
+      "level": 3,
+      "text": "Visit Mechanic in the menu through the trader screen and ask him about the EMP blast."
+    },
+    {
+      "heading": "Locate and obtain the device fragment",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Car dealership closed section key | 1 | Required* | N/A |\n| Mysterious room marked key | 1 | Required* | N/A |\n| Unknown device fragment | 1 | Handover item | Yes |\n- Only one of the keys is required to complete the objective.\n\nThe Unknown device fragment can either be obtained in the closed section on the second floor of the LexOs car dealership, or in the marked room located inside the Chekannaya 13 apartment building on Streets of Tarkov."
+    },
+    {
+      "heading": "LexOs car dealership",
+      "level": 4,
+      "text": "A Car dealership closed section key is required to enter the closed section. Be aware that the premises of the LexOs car dealership are riddled with Claymores."
+    },
+    {
+      "heading": "Chekannaya 13 apartment building marked room",
+      "level": 4,
+      "text": "A Mysterious room marked key is required to enter the room."
+    },
+    {
+      "heading": "Hand over the device fragment to Mechanic",
+      "level": 3,
+      "text": "Visit Mechanic in the menu through the trader screen and hand over the device."
+    },
+    {
+      "heading": "Plant the hacking device in the server room in the Lab",
+      "level": 3,
+      "text": "| If you have already planted the Local network hacking device in the Boreas story chapter, this objective auto-completes. |\n| Item name | Amount | Requirement | Find in raid | Notes |\n| Local network hacking device | 1 | Required | N/A | Stashed item |\nThe Local network hacking device has to be stashed in the server room on the first floor of The Lab. Mechanic provides one via in-game mail and has a barter for more available."
+    },
+    {
+      "heading": "Talk to Mechanic",
+      "level": 3,
+      "text": "Visit Mechanic in the menu through the trader screen."
+    },
+    {
+      "heading": "Keep the fragment of Item 1156 for yourself or hand it over to Mechanic",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Decision: Keep the fragment",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Rewards",
+      "level": 5,
+      "text": "- Unlocks achievement Better Served"
+    },
+    {
+      "heading": "Decision: Hand over the fragment to Mechanic",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Rewards",
+      "level": 5,
+      "text": "- 1,500,000 Roubles"
+    },
+    {
+      "heading": "Find a lead on Item 1156",
+      "level": 3,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| TerraGroup science office key | TerraGroup science office key | 1 | Required* | N/A |\n| Note mentioning Item 1156 | Note mentioning Item #1156 | 1 | Required | Yes |\n- Not all spawn locations for the item require this key. It is not entirely needed.\n\nThe Note mentioning Item #1156 to pick up and read can be obtained on Ground Zero (Level 21+), Lighthouse or in The Lab."
+    },
+    {
+      "heading": "Ground Zero (Level 21+)",
+      "level": 4,
+      "text": "In office no. 4 on the second floor of the TerraGroup main building. A TerraGroup science office key is required to enter."
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 4,
+      "text": "In the northern blue chalet, on the first floor in a bookshelf near the central stairs."
+    },
+    {
+      "heading": "The Lab",
+      "level": 4,
+      "text": "On the second floor, in office O22 on a desk."
+    },
+    {
+      "heading": "Investigate the Rus Post office",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Audio recorder | 1 | Required | N/A |\n| Rus Post audio tape 11.05 / 001 | 1 | Required | Yes |\n| Rus Post audio tape 11.05 / 002 | 1 | Required | Yes |\n| Rus Post audio tape 11.05 / 003 | 1 | Required | Yes |\nTo fulfill this objective, you have to pick up and listen to 3 audio tapes located in the post office on Streets of Tarkov."
+    },
+    {
+      "heading": "Locate the Rus Post Car/Obtain the blueprint for Item 1156",
+      "level": 3,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| Rus Post car key | Rus Post car key | 1 | Required | N/A |\n| Item 1156 specification | Item #1156 specification | 1 | Required | Yes |\nThe car is located in front of the post office. The Item #1156 specification to pick up and read can be found in the back of the car. To unlock it, a Rus Post car key is required. A single key is guaranteed to spawn every raid on the ground next to the back right wheel of the car."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- +112,000 EXP\n- Unlocks achievement Inferno"
+    }
+  ]
+}

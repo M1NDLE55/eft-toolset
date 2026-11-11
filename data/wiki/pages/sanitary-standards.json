@@ -1,0 +1,44 @@
+{
+  "title": "Sanitary Standards",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sanitary_Standards",
+  "revisionId": 361693,
+  "lastEdited": "2026-09-24T12:08:59Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Daytime Factory",
+    "given by": "Therapist",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Sanitary Standards is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon, young man. I'm glad you were the one who came. I have an urgent and extremely important task for you. It concerns everyone still living in Tarkov. You know where the chemical plant is, don't you? I have strong reason to believe that something hazardous from that facility is seeping into the groundwater. This is a critical issue for us, especially since humanitarian aid deliveries are constantly being disrupted. We all rely on that water. Do you understand? Even filtration is no longer enough. If this isn't addressed soon, it could cost all of us our lives. To determine exactly what's happening, I need readings from a gas analyzer. You can find one at the plant. Leave the device in the laboratory there, and my people will retrieve it afterward.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 2 Gas analyzers in raid\n- Hand over the 2 Gas analyzers to Therapist\n  - (Optional) Locate the room with the Gas analyzers on Factory\n- Stash a Gas analyzer in the med lab on Daytime Factory"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Therapist Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"About time. You did an important service to many, if not everyone.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Gas analyzer | 2 | Handover item | Yes | Can be crafted in the Hideout (Workbench lv. 1). |\n| Gas analyzer | 1 | Required | N/A | Stashed item |\nThe Gas analyzer has to be stashed on the second floor of the laboratory on Daytime Factory, specifically at the window of the second room."
+    }
+  ]
+}

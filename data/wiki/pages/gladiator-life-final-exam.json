@@ -1,0 +1,40 @@
+{
+  "title": "Gladiator Life - Final Exam",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Life_-_Final_Exam",
+  "revisionId": 359337,
+  "lastEdited": "2026-09-13T20:14:29Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Life - Part 10",
+    "leads to": "Gladiator Doping - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Life - Final Exam is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I didn't call you a gladiator just for the sound of it. You can fight, and you can do it with style. But that still might not be enough. If you knew how many fighters I've seen die at this stage... That's why I'm testing your resilience now. Show me what you're really made of.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win a round without dying in TeamFight, BlastGang or ShootOut mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +5,000 EXP\n- Ref Rep +0.01\n- 150,000 Roubles\n- 45 GP coins\n- Unlocks Shattered mask in the Armory\n- Unlocks Woodland Digital weapon camouflage\n- Unlocks achievement First Blood"
+    }
+  ]
+}

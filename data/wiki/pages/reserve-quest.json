@@ -1,0 +1,50 @@
+{
+  "title": "Reserve (quest)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Reserve_(quest)",
+  "revisionId": 359606,
+  "lastEdited": "2026-09-13T20:19:04Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Jaeger",
+    "previous": "The Delicious Sausage",
+    "leads to": "Pest Control",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "For the location, see Reserve.\n\nReserve is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Look who we've got here! Hello there! Listen, you know about the military base close to the health resort? Probably were there yourself. So, I've got some news. They say the old warehouses there still have a lot of food left in them, and that bandit groups began roaming there, not your regular Scavs, they are well-equipped. I want you to check out if there's anything left in those warehouses. But be careful, there really are a lot of dangerous people there.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 20 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the food storage location on Reserve\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,800 EXP\n- Jaeger Rep +0.02\n- 16,000 Roubles\n  - 16,800 Roubles with Intelligence Center Level 1\n  - 18,400 Roubles with Intelligence Center Level 2\n- 3× Pack of nails\n- 3× Pack of screws\n- 1× Silicone tube\n- 2× Broken LCDs\n\"Have they already started to take everything out? Got it, we have to act fast.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "On Reserve, enter the north-western located underground storage warehouse marked with \"Д\". After you head down one of the ramps, you need to get next to the right side food storage cages, recognizable by the wooden crates inside."
+    }
+  ]
+}

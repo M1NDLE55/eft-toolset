@@ -1,0 +1,50 @@
+{
+  "title": "The Delicious Sausage",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Delicious_Sausage",
+  "revisionId": 359742,
+  "lastEdited": "2026-09-13T20:21:20Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Jaeger",
+    "previous": "The Survivalist Path - Thrifty",
+    "leads to": "Cease Fire!, Reserve, Thirsty - Hounds",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Delicious Sausage is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Оh! Come on in, I've got a job for you! Listen, how long ago have you been in town? Well, I got a job for you. Run through the supermarkets, see if they've been looted. And do the old man a favor and look for the Salt Dog sausage or something like that. Mechanic kindly introduced it to me, and now I'm craving it. It's killing me!\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 5 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Scout the Shestyorochka store at Nikitskaya street\n- Scout the Sparja store at Primorsky ave\n- Scout the Sparja store in Pinewood hotel\n- Scout the Goshan store in Concordia\n- Hand over 1 found in raid Salty Dog beef sausage"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +2,600 EXP\n- Jaeger Rep +0.01\n- 10,000 Roubles\n  - 10,500 Roubles with Intelligence Center Level 1\n  - 11,500 Roubles with Intelligence Center Level 2\n- 2× Bolts\n- 2× Screw nuts\n- 1× Corrugated hose\n\"So, how's the situation out there? Nothing left? Bloody looters! But did you find the sausage? Haha, what a miracle! But what about the expiration date?\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid |\n| Salty Dog beef sausage | 1 | Handover item | Yes |\nIn this quest you have to visit the 4 the stores listed in the quest objective on Streets of Tarkov and hand over a found in raid Salty Dog beef sausage. The stores can be visited in different raids, and progress is saved upon death. For the store objectives to register, walk up to the center of them. The beef sausage can be found at any food spawn."
+    }
+  ]
+}

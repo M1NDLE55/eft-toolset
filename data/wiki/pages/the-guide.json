@@ -1,0 +1,56 @@
+{
+  "title": "The Guide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Guide",
+  "revisionId": 360514,
+  "lastEdited": "2026-09-17T22:07:42Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The guide"
+  ],
+  "infobox": {
+    "location": "Interchange, Shoreline, Factory, The Lab, Woods, Customs, Reserve, Lighthouse, Streets of Tarkov, Ground Zero",
+    "given by": "Peacekeeper",
+    "previous": "Wet Job - Part 6",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Guide is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come in, I have a high-paying assignment for you. Some important people from outside the region... require the services of a professional guide. Someone who can lead a group to their destination, provide cover, and not ask unnecessary questions. They are willing to pay very well for this. Do you think you are suitable for the job? Prove yourself, and I will vouch for you.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be Loyalty Level 4 to start this quest"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Survive and extract from Woods or Interchange with the \"Survived\" exit status\n- Survive and extract from Factory or Customs with the \"Survived\" exit status\n- Survive and extract from Shoreline or Reserve with the \"Survived\" exit status\n- Survive and extract from The Lab or Lighthouse with the \"Survived\" exit status\n- Survive and extract from Ground Zero or Streets of Tarkov with the \"Survived\" exit status\n- Eliminate 15 targets"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Peacekeeper Rep +1.5\n- Dollars\n  - Dollars with Intelligence Center Level 1\n  - 3,368 Dollars with Intelligence Center Level 2\n- 1× Velocity Systems SLAAP Plate (Tan)\n- Unlocks purchase of Velocity Systems SLAAP Plate (Tan) at Peacekeeper LL4\n- Unlocks craft for 4.6x30mm AP SX at Workbench level 3\n- +2 levels in Stress Resistance\n- +4 levels in DMRs\n\"Very good work, you will definitely be a good guide! You will be contacted for further instructions later when the clients are ready. For now, here's the prepayment.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"Bad luck... I know it's not that easy. That's why I need a competent person, do you understand?\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "You must survive a raid at each location consecutively without dying, disconnecting, or running out the timer. If you do any of these you will have to start again. If you extract from the raid with a \"Run Through\" status, you will not reset the quest, but that raid will not count as being completed. To avoid the \"Run Through\" status, gain at least 200 EXP in raid (by killing or looting) or be in raid for at least 7 minutes before extracting. You do not have to do the maps in any order, they can be done in any fashion as long as you survive.\n\nThis quest can also be completed in a single raid when using transits."
+    }
+  ]
+}

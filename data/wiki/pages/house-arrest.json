@@ -1,0 +1,59 @@
+{
+  "title": "House Arrest",
+  "url": "https://escapefromtarkov.fandom.com/wiki/House_Arrest",
+  "revisionId": 362405,
+  "lastEdited": "2026-09-29T13:30:08Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Skier",
+    "LL requirement": "2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "House Arrest is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Alright, my dear overseas employee. I've got a bit of a problem on my hands. Someone's been taking out my lads. Whole groups just disappearing. I started making some enquiries, and then I got a little note from Seva \"Shket\". Says he was being held in some kind of lockup, somewhere in the residential blocks. Back in the day, all sorts of businessmen used to stash their rivals there. Looks like someone else has taken over the place now. Shket was the only one from his group who managed to get out, but now he's keeping his head down and won't answer calls. Didn't even bother telling us where the rest of the boys are, the sniveling little rat. I took him in, gave him work, and the prick bailed the moment things got difficult. Find him and make him answer for everything he owes me. Oh, and find my lads while you're at it.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by USEC PMCs."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate where the missing group was held captive on Streets of Tarkov\n- Locate the debtor on Streets of Tarkov\n- Hand over the item: Chekannaya 15 apartment key"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Skier Rep +0.25\n- 1,000 Euros\n  - 1,050 Euros with Intelligence Center Level 1\n  - 1,150 Euros with Intelligence Center Level 2\n\"Fucking hell. Why would someone keep them there? I'd understand if they sent me a letter saying they'd kill my people if I didn't pay up and shit. A serial killer or something? Anyway, your reward.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Iron gate key | 1 | Key to the prison cell |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Iron gate key | 1 | Required | N/A | Used to open the prison cell |\n| Chekannaya 15 apartment key | 1 | Handover item | No | |\n\nIn this quest you first to find the place where the missing group was held captive. The wanted place is prison cell no. 1 on the third floor of the Chekannaya 15 apartment building on Streets of Tarkov. It can only be accessed via the western staircase. An Iron gate key is required to enter the cell.\n\nNext you have to find the debtor on Streets of Tarkov. He can be found in room 206 on the second floor of the northern Pinewood hotel building. The room does not require a key."
+    },
+    {
+      "heading": "See also",
+      "level": 2,
+      "text": "Debtor - The BEAR counterpart quest"
+    }
+  ]
+}

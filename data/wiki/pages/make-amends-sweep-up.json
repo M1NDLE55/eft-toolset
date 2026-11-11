@@ -1,0 +1,45 @@
+{
+  "title": "Make Amends - Sweep Up",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Make_Amends_-_Sweep_Up",
+  "revisionId": 359470,
+  "lastEdited": "2026-09-13T20:16:43Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Mechanic",
+    "previous": "Make Amends - Security",
+    "leads to": "Make Amends",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Make Amends - Sweep Up is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Friend, now is not the time to spoil relations with influential people. Lightkeeper told me about your conflicts. He offers a deal - you help his allies with their personal problems, and he forgets old grudges. We need to eliminate a group of Raiders encroaching on Rogue territory. You'll have to sweep their ranks at the federal reserve base. Can you do that?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 25 Raiders on Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.01\n\"Lightkeeper told me that you had completed the \"request\". Thank you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 25 Scav Raiders on Reserve."
+    }
+  ]
+}

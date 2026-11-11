@@ -1,0 +1,40 @@
+{
+  "title": "Professional - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Professional_-_Part_1",
+  "revisionId": 359575,
+  "lastEdited": "2026-09-13T20:18:31Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Doping - Part 4",
+    "leads to": "Professional - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Professional - Part 1 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Being a champion is cool, but \"warm-up champion\" sounds pretty sad, don’t you think? Time to go pro. And pros play for real money, in serious fights where the stakes are higher. Go on, get used to that level.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Plant or deactivate the device 3 times in BlastGang mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +7,500 EXP\n- 66,000 Roubles\n- 10 GP coins"
+    }
+  ]
+}

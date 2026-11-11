@@ -1,0 +1,58 @@
+{
+  "title": "VAZ car key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VAZ_car_key",
+  "revisionId": 337937,
+  "lastEdited": "2026-03-07T22:12:41Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "VAZ key"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "This key does currently not open any lock.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5913651986f774432f15d132",
+    "ID": "шоха в гаражах"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "VAZ car key (Shestyorka) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the VAZ cars commonly known as Shestyorka (\"the sixth one\")."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This key does not currently open any lock."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "None."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- VAZ, now AvtoVAZ is a automobile manufacturer. The company is best known for its flagship series of Lada vehicles\n- Sixpack is probably a bad translation of SHESTERKA, meaning LADA-2106 or VAZ model 6 (thus six-rka). A Word created similar to tushonka (stewed-nka) or ushanka (ears-nka meaning a hat with ears)"
+    }
+  ]
+}

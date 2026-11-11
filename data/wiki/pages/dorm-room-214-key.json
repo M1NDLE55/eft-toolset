@@ -1,0 +1,62 @@
+{
+  "title": "Dorm room 214 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_214_key",
+  "revisionId": 316221,
+  "lastEdited": "2025-07-18T21:45:10Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽3,000",
+    "usage": "Unlocks dorm room 214 in the three-story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5780cf942459777df90dcb72",
+    "ID": "Общага1 214"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 214 key (Dorm 214) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the three-story dormitory with a tag reading \"214\" on it."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- The key can be found between pallets in a garage with the number 88 on the eastern side of Customs."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Located on the second floor of the three-story dorms on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- One Safe\n- Loose loot (Ammunition)\n- Possible Dorm room 203 key in the red mug"
+    }
+  ]
+}

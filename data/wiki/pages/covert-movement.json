@@ -1,0 +1,36 @@
+{
+  "title": "Covert Movement",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Covert_Movement",
+  "revisionId": 362463,
+  "lastEdited": "2026-09-29T15:34:59Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Covert Movement is a Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Covert movement makes your steps quieter and reduces the sound radius when moving slow."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Reduces noise level of footsteps on common surfaces (1.2% per level → -60% at Elite Level)\n- Reduces noise level of footsteps on uncommon surfaces (0.6% per level → -30% at Elite Level)\n- Increases covert movement speed (1% per level → +50% at Elite Level)\n- Reduces noise level of weapons and equipment (1.2% per level → -60% at Elite Level)\n- Elite level: Covert movement becomes equally quiet on all surfaces (-60% total)"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Moving with less than 25% speed, the speaker icon needs to have no bar. The XP gain is calculated based on distance covered when the player stops moving.\n\n- Completing the quest Profitable Venture\n- Completing the quest Safety Guarantee\n- Completing the quest Connections Up North"
+    }
+  ]
+}

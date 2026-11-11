@@ -1,0 +1,55 @@
+{
+  "title": "Hypotheses Testing",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hypotheses_Testing",
+  "revisionId": 359399,
+  "lastEdited": "2026-09-13T20:15:30Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Labyrinth",
+    "given by": "Mechanic",
+    "previous": "Offensive Reconnaissance",
+    "leads to": "Keeper's Word",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hypotheses Testing is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I was able to decipher the signal. It's old and very faint, apparently the bunker completely blocked it until you opened the doors. For some reason, the message is on loop, but this doesn't mean anything, the equipment inside could have been damaged for a while. Besides, we still don't know what the TerraGroup team was doing in there. The message says that the facility still contains materials and data that fall under the first priority of evacuation. Moreover, it mentions reports of experiments conducted at the site. This is astonishing, we couldn't have found a better time to discover something as valuable as this! Knowing more and more people are finding out about these cellars every day, it means that soon the traders and other PMCs will want to explore the area we've discovered. Perhaps even Lightkeeper will be interested... I need those documents mentioned in the signal. Whatever you can find, please bring them to me as soon as you can.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the lab area with the prototype weapon inside The Labyrinth\n- Hand over 5 found in raid Labrys research notes"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +15,900 EXP\n- Mechanic Rep +0.02\n- 82,000 Roubles\n  - 86,100 Roubles with Intelligence Center Level 1\n  - 94,300 Roubles with Intelligence Center Level 2\n- 3× Electric drill\n- 3× Set of files \"Master\"\n- 3× Military power filter\n\"Well done. The data is fragmented, but still extremely useful. The health resort's basements have changed a lot since the disaster began, but at some point in time, they were definitely used as a testing ground for some kind of weapon... An experimental EW or hacking device, maybe. This remains to be determined. I can already see that some of the measurements and experiments will be very useful in their own right. So your labors were definitely not in vain. Thank you.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Labrys access keycard | 1 | Allows access to The Labyrinth location a single time. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Labrys research notes | 5 | Handover item | Yes |\nIn this quest you have to find the prototype weapon area inside The Labyrinth and hand over 5 found in raid Labrys research notes."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "During The Labyrinth event, this quest unlocked the In Search of an Exit achievement."
+    }
+  ]
+}

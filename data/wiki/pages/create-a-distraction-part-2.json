@@ -1,0 +1,49 @@
+{
+  "title": "Create a Distraction - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Create_a_Distraction_-_Part_2",
+  "revisionId": 359206,
+  "lastEdited": "2026-09-13T20:12:14Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Ref",
+    "previous": "Create a Distraction - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Create a Distraction - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Kaban and Kollontay shit themselves alright, but that wasn't good enough for me. I'd like to finish them off. You don't have to help me with that, of course, but... I already have a plan. You need to go down to their places and shoot their bodyguards or whatever they're called. Everyone in there is a trusted person for those two, so they're the perfect targets. BUT! Make sure Kaban and Kollontay themselves are unharmed!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 2 of Kaban's or Kollontay's guards on Streets of Tarkov\n- Do not harm Kaban or Kollontay"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Ref Rep +0.07\n- 1× Degtyarev RPDN 7.62x39 machine gun\n- 1× RPD 7.62x39 Buben 100-round box\n- 10× 7.62x39mm FMJ ammo pack (20 pcs)\n- 1× Lega Medal\n\"Good work! Kaban and Kollontay are already kicking up a storm. I think soon enough they'll come to me trying to leave this business. Here's your well deserved reward.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"Can't you see who you're shooting at?! I had such high hopes for you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 2 guards from Kaban or Kollontay without harming either of the main bosses. Harming them while the quest is active will cause it to fail.\n\nBe aware that the premises of the LexOs car dealership where Kaban is located are riddled with Claymores."
+    }
+  ]
+}

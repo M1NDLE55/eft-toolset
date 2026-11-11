@@ -1,0 +1,44 @@
+{
+  "title": "Colleagues",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Colleagues",
+  "revisionId": 361706,
+  "lastEdited": "2026-09-24T12:16:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Therapist",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Colleagues is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon. It is obvious that in the current difficult situation, everyone who has medical knowledge is worth gold, not to mention actual working doctors. And it looks like such a doctor has appeared. I was told that someone on the Shoreline is treating the locals and selling them medicine. I have hired several groups to go there. They had to find this doctor, enter into negotiations and offer the best terms. But today, none of the groups got in touch. We need these medications, I've got clients... ahem, people in need to worry about. Find my people and find out what happened.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the group that was sent to the Health Resort on Shoreline\n- Locate the group that was sent to the pier on Shoreline\n- Locate the group that was sent to the cottages on Shoreline\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Therapist Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"All three groups wiped out? I don't understand how this could happen. They were not supposed to attract attention and get involved in a fight. They were negotiators with a very lucrative trade offer. Looks like the negotiations went horribly wrong.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Locate the three bodies of the people Therapist hired on Shoreline. These corpses will be covered with white shrouds. All three corpses must be found in a single raid. If you leave the raid and have only found some of the corpses, the quest will reset. You must extract in the same raid in which you found all the corpses.\n\nThe three corpses can be found in the following locations:"
+    }
+  ]
+}

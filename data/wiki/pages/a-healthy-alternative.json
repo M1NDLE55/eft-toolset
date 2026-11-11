@@ -1,0 +1,49 @@
+{
+  "title": "A Healthy Alternative",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A_Healthy_Alternative",
+  "revisionId": 361791,
+  "lastEdited": "2026-09-24T13:10:08Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Factory",
+    "given by": "Therapist",
+    "related": "One Less Loose End",
+    "reqkappa": "No, but a subsequent quest Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "A Healthy Alternative is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I understand that you were tasked with finding the laboratory log from the polychemical plant. Apparently, TerraGroup is willing to pay handsomely for the extraction of their documents. I urge you to reconsider. If the corporation cares so much about this material, it must be hiding something valuable! Obviously, I mean valuable to the city and its citizens. Just leave the journal in my care.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the lab journal"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- 1× Lucky Scav Junk box\n\"You picked the right side! This journal will be very useful to my acquaintance in his experiments.... I mean, research! This way we can alleviate the suffering of the Tarkov citizens who are still in the city.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"You've decided to return the journal to the corp? You don't seem to care much for the people of this town. I'm disappointed in your choice.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "By completing One Less Loose End, you will lose access to this quest.\n| Item name | Amount | Requirement | Find in raid | Notes |\n| Lab journal | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe journal can be found in the laboratory on the second floor of Factory. There are multiple spawns throughout both rooms."
+    }
+  ]
+}

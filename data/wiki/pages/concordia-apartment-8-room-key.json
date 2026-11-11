@@ -1,0 +1,51 @@
+{
+  "title": "Concordia apartment 8 room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Concordia_apartment_8_room_key",
+  "revisionId": 310742,
+  "lastEdited": "2025-04-16T05:59:36Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the bedroom in apartment 8 on the third floor of the Concordia building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a71e781031ac76fe773c7d",
+    "ID": "city_key21"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Concordia apartment 8 room key (Conc 8) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the rooms in apartment 8 inside the Concordia building."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Bedroom door in apartment 8 on the third floor of the Concordia building at Streets of Tarkov.\n\nIt is also possible to reach the room through a breakthrough from apartment 34."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables)"
+    }
+  ]
+}

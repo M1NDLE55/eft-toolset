@@ -1,0 +1,40 @@
+{
+  "title": "A New Classic",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A_New_Classic",
+  "revisionId": 362068,
+  "lastEdited": "2026-09-24T19:18:54Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Smells Like Gunpowder",
+    "leads to": "Firework",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "A New Classic is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I'll tell you what, the spectators are seriously hooked on these revamped matches with explosives. Like it's exactly what we've been missing all along, a proper hit and a classic! One of my regulars even told me the whole thing gave him deja vu. But things have clearly changed for the fighters too. You can't afford to lose sight of your opponent anymore. What if he's carrying a charge and you're the only thing standing between him and the plant? So if you don't want your own sluggishness to send you sky-high, remember your sidearm. This training definitely won't hurt.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 enemies with a pistol in BlastGang mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +12,000 EXP\n- 400,000 Roubles\n- 40 GP coins\n- 1× Echo Belli crate\n- 2 Battle Points"
+    }
+  ]
+}

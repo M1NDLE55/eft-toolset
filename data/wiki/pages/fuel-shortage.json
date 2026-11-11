@@ -1,0 +1,43 @@
+{
+  "title": "Fuel Shortage",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fuel_Shortage",
+  "revisionId": 362640,
+  "lastEdited": "2026-09-29T21:01:36Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Peacekeeper",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Fuel Shortage is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Sometimes I think back to how the locals welcomed us when we first entered Tarkov. We thought the mission would be brief, but things did not go according to plan. We are currently facing shortages of supplies and fuel-related materials. Our deliveries have been disrupted, and the locals are no longer willing to assist us. We need your help, mercenary.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 5 items from the category with the Found in raid status\n- Hand over 5 items from the category with the Found in raid status"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Peacekeeper Rep +0.1\n- 550 Dollars\n  - 578 Dollars with Intelligence Center Level 1\n  - 632 Dollars with Intelligence Center Level 2\n\"Everything collected? Splendid! Dziękuję, mercenary.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Amount | Requirement | Find in raid |\n| 5 | Handover item | Yes |\n| 5 | Handover item | Yes |\n\nIf you want to find these items in raid, or search for them in raid while you're crafting them, these are some spawns for these items."
+    }
+  ]
+}

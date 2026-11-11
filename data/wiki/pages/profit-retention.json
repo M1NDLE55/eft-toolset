@@ -1,0 +1,49 @@
+{
+  "title": "Profit Retention",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Profit_Retention",
+  "revisionId": 362562,
+  "lastEdited": "2026-09-29T19:20:37Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "previous": "A Life Lesson",
+    "leads to": "Consolation Prize",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Profit Retention is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Luka and his boys repelled those thugs, he said it was a tough fight. And guess what, there's still no sign of the military, the thugs were definitely in on it with them. I guess you can find someone like our Prapor even beyond the cordon, huh? The only issues left are the good ones. They're ready to send a shipment from the other side, but it doesn't fit any of the old schemes. It's a wagonload of equipment! To get it all out, my mate demands a special fee, all in advance. The risks are too fucking high, so we have to pay. This bastard's got a bitcoin farm over there, I reckon.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by BEAR PMCs."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the item: 30 Graphics card\n- Hand over the item: 15 Physical Bitcoin"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +1 Crafting skill level\n- +1 Hideout Management skill level\n- +1 Perception skill level\n- +1 Attention skill level\n- +1 Search skill level\n- +1 Immunity skill level\n- +1 Health skill level\n- +1 Surgery skill level\n- +1 Vitality skill level\n- +1 Stress Resistance skill level\n\"All right, get your stash ready. Our money's on its way.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Graphics card | 30 | Handover item | No |\n| Physical Bitcoin | 15 | Handover item | No |"
+    }
+  ]
+}

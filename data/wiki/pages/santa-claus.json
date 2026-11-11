@@ -1,0 +1,45 @@
+{
+  "title": "Santa Claus",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Santa_Claus",
+  "revisionId": 341408,
+  "lastEdited": "2026-04-25T23:12:46Z",
+  "kind": "character",
+  "categories": [
+    "Bosses"
+  ],
+  "redirects": [
+    "Ded Moroz",
+    "Santa"
+  ],
+  "infobox": {
+    "faction": "Scavs",
+    "location": "Factory, Customs, Woods, Lighthouse, Shoreline, Reserve, Interchange, Streets of Tarkov, Ground Zero (Level 21+)"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Santa Claus, also known as Ded Moroz, is an Event Boss in Escape from Tarkov."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Santa Claus has different health values than PMCs and Scavs.\n- Santa Claus is cold blooded and can hardly be spotted with thermal vision devices.\n| Stats |\n| Head: 80; Thorax: 280; Stomach: 180; Arms: 120 each; Legs: 130 each; Total: 1,040 |"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "Santa Claus wanders on all locations except The Lab and The Labyrinth."
+    },
+    {
+      "heading": "Behavior",
+      "level": 2,
+      "text": "If he encounters a player, he will not be hostile unless fired upon. When approached, he will drop a random item, gesturing and looking at it until it is taken."
+    },
+    {
+      "heading": "Equipment",
+      "level": 2,
+      "text": "Weapons:\n| Weapon | Ammunition | Mods |\n| Molot Arms VPO-136 Vepr-KM 7.62x39 carbine | 7.62x39mm PS gzh | |\n| Kalashnikov AK-74M 5.45x39 assault rifle | 5.45x39mm PS gs | |\n| ADAR 2-15 5.56x45 carbine | 5.56x45mm M855A1, 5.56x45mm FMJ | VOMZ Pilad P1x42 Weaver reflex sight |\n| Kalashnikov AKMS 7.62x39 assault rifle | 7.62x39mm PS gzh | |\n| TOZ Simonov SKS 7.62x39 carbine | 7.62x39mm PS gzh | |\n| Saiga-12K ver.10 12ga semi-automatic shotgun | ? | |\n| PB 9x18PM silenced pistol | 9x18mm PM P gzh | |\n| SIG P226R 9x19 pistol | 9x19mm Pst gzh | Zenit Klesch-2P flashlight with laser |\n| Yarygin MP-443 Grach 9x19 pistol | 9x19mm Pst gzh, 9x19mm FMJ M882 | MP-443 Grach Zenit B-8 mountZenit Klesch-2P flashlight with laser |\n\nHeadwear:\n| Headwear |\n| Santa hat |\n| Ded Moroz hat |\n\nFace cover:\n| Face cover |\n| Fake white beard |\n\nEyewear:\n| Eyewear |\n| Round frame sunglasses |\n\nChest Rig:\n| Chest rig | Armor Class |\n| 6B5-15 Zh-86 Uley armored rig (Flora) | 4 |\n| Azimut SS Zhuk chest harness (Black) | - |\n| Azimut SS Zhuk chest harness (SURPAT) | - |\n| WARTECH TV-109 + TV-106 chest rig (A-TACS FG) | - |\n| Splav Tarzan M22 chest rig (Smog) | - |\n\nBody armor:\nBody armor\n| Name | Armor Class |\n| BNTI Gzhel-K body armor | 5 |\n| 6B13 assault armor (Flora) | 4 |\n| 6B13 assault armor (EMR) | 4 |\n| NFM THOR Concealable Reinforced Vest body armor | 4 |\n| BNTI Module-3M body armor | 2 |\n\nBackpack:\n| Backpack |\n| Santa's Bag |\n\nItems:\n| Item |\n| Christmas tree ornament (Silver) |\n| Christmas tree ornament (Red) |\n| Christmas tree ornament (Violet) |"
+    }
+  ]
+}

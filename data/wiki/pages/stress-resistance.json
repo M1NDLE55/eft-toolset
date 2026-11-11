@@ -1,0 +1,46 @@
+{
+  "title": "Stress Resistance",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stress_Resistance",
+  "revisionId": 362596,
+  "lastEdited": "2026-09-29T19:49:35Z",
+  "kind": "skill",
+  "categories": [
+    "Physical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Physical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Stress Resistance is a Physical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Stress resistance improves the chances of withstanding injury shock, shaking hands, and tremors."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Level 10 of this skill is needed for the story chapter Batya"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Reduces pain shock chance (1% per level → -50% at Elite Level)\n- Reduces tremor oscillation (1.2% per level → -60% at Elite Level)\n- Elite level: Berserk mode access"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- 0.033 points/sec for being low on health points\n- 0.33 points for each \"Pain\" debuff\n- Completing the quest Profitable Venture\n- Completing the quest Bullshit\n- Completing the quest Safety Guarantee\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention\n- Completing the quest The Guide\n- Completing the quest Night Sweep\n- Completing the quest TerraGroup Employee"
+    },
+    {
+      "heading": "Tips",
+      "level": 2,
+      "text": "Stress resistance can be power leveled by throwing grenades in enclosed objects like crates with an open top and staying nearby, to get consussed + the pain effect but not suffer lethal damage."
+    }
+  ]
+}

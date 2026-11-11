@@ -1,0 +1,396 @@
+{
+  "title": "Events",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Events",
+  "revisionId": 362365,
+  "lastEdited": "2026-09-29T11:00:43Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Tarkov Events"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "For the Arena, see Arena Events.\n\nEvents in Escape from Tarkov are limited time activities that give players new challenges, adjust gameplay & mechanics, and introduce new items that are being tested by the developers for a limited time. Some events are \"lore-oriented\" which give an insight or backstory to the Tarkov/Norvinsk region, while other events are seasonal holiday events that are done just for fun.\nThis is not a complete list, and there are many events missing."
+    },
+    {
+      "heading": "Shifting Balance (8 September 2026)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Glukhar has moved from Reserve to Lighthouse and appears in every raid in the water treatment plant. He always has 3 followers, one of each type.\n- Quest Fog of War has been added.\n- Quest Number Temporarily Unavailable has been added.\n- Quest All-Inclusive Support has been added.\n- Quest A Familiar Face... has been added.\n- Quest Scope the Clearing has been added.\n- Quest Lose the Tail has been added.\n- Quest Callsign Malachite has been added.\n- Quest Ease the Move has been added.\n- Quest Cut Down to the Root has been added.\n- Quest Preserve a Valuable Piece has been added.\n\n| This section describes past events. |"
+    },
+    {
+      "heading": "Lighthouse Airdrops (26 September 2026)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Vastly increased frequency of Airdrops with high value contents on Lighthouse."
+    },
+    {
+      "heading": "Preliminary Survey (1 September 2026)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Quest Preliminary Survey has been added."
+    },
+    {
+      "heading": "Permanent Boss Presence (29 July 2026)",
+      "level": 2,
+      "text": "\"Something big is clearly brewing in Tarkov, and the situation around the region has become increasingly unstable.\nScav Bosses armed themselves heavily and are now firmly entrenched in their territories. To prevent further escalation, trophies looted from them have been banned from the Flea Market. At the same time, rumors suggest that now might be the right time to start stockpiling that kind of gear.\nOn top of that, they say that night raids have become quite a lot riskier…\"\nGameplay Changes\n- All Bosses, except for Cultists and Partisan, have a 100% spawn chance.\n- Unique weapons and gear from Bosses cannot be sold on the flea market.\n- Scavs and Bosses carry special weapon loadouts featuring high-capacity drum magazines.\n- New barters for Dogtags and unique weapons and gear from Bosses.\n- Glukhar carries a Magnum Research Desert Eagle L6 .50 AE pistol (WTS) loaded with .50 AE FMJ Bull."
+    },
+    {
+      "heading": "Blackout (14 July 2026)",
+      "level": 2,
+      "text": "\"Skier has discovered a vulnerability in the Lab’s security system and plans to strip the facility clean. Information this valuable was never going to stay secret for long, and now all kinds of interested parties are converging on the underground complex - each with their own motives. However, someone else was already one step ahead: a team of unidentified operatives in black had infiltrated the Lab. What they're searching for remains unknown, but their presence poses a serious threat.\"\nGameplay Changes\n- The Lab has plunged into darkness and all lights are turned off.\n  - The Wedge and Black Division spawn on The Lab.\n    - The Wedge carries Admin's key in his pockets, his followers and Black Division have a chance to also carry it.\n  - The Parking Gate and Hangar Gate extractions are the only extractions available in every raid, but first require an activation in the system admin's office.\n  - The transit out of The Lab is not available, the transits into the map are.\n  - The raid time has been increased to 35 minutes in the PvE game mode.\n  - All keypad locks can be activated with a 4-digit code found within the system admin's office. The code changes in every raid.\n- Colored Lab keycards cannot be taken into a raid, except for the TerraGroup Labs keycard (Black).\n- TerraGroup Labs access keycard is available for purchase on Therapist LL2, LL3 and LL4, Ref LL3, and as a barter on Mechanic LL1 for 1× Weapon parts and at LL2 for 1× Bulbex cable cutter + 1× Pipe grip wrench.\n- Quest Wrench and Waterboarding has been added.\n- Quest Key to Every Door has been added.\n- Quest My Blood Type Mark is on the Sleeve has been added.\n- Quest Patch the Vulnerability has been added.\n- Quest If I Can't Have It has been added."
+    },
+    {
+      "heading": "Bonus EXP weekend (24 July 2026)",
+      "level": 2,
+      "text": "Gameplay Changes\n- EXP earned from raids is increased by 25%.\n- This is a fixed value for all players and is applied instead of the edition bonus.\n- Owners of the \"The Unheard\" edition provide a 25% bonus to all members of their party."
+    },
+    {
+      "heading": "Wild Wild Woods (25 June 2026)",
+      "level": 2,
+      "text": "\"A Scav mutiny has occurred: splinter gangs have stopped following Fence's orders and are now shooting at anyone they encounter. Armed with revolvers and lever-action rifles, they have clearly looted some hidden stash. Rumor has it that the rebels are hauling their loot into the nature reserve, where a ton of valuables can now be found.\"\nGameplay Changes\n- Quest Wild Wild Woods has been added.\n- New Barters for Silver Badges.\n- More and rare loot can be found on Woods.\n- Maximum number of PMCs reduced on Woods.\n- Shturman is in every raid on Woods and always carries a Silver Badge.\n- Scavs and Shturman carry Western-style weapons.\n- Cooldown between Scav raids is significantly reduced.\n- Player Scavs spawn earlier than usual.\n- No Scav karma penalty for killing Scavs as a player Scav.\n- New operational task for PMCs from Jaeger.\n- New operational tasks for Scavs from Fence."
+    },
+    {
+      "heading": "Bonus EXP weekend (12 June 2026)",
+      "level": 2,
+      "text": "Gameplay Changes\n- EXP earned from raids is increased by 25%.\n- This is a fixed value for all players and is applied instead of the edition bonus.\n- Owners of the \"The Unheard\" edition provide a 25% bonus to all members of their party."
+    },
+    {
+      "heading": "Tarkov Hospitality (5 June 2026)",
+      "level": 2,
+      "text": "\"Summer has arrived in Tarkov, and things are already heating up. Motivated by the success of the new Arena season, Ref is eager to secure new places to hold fights at. His men have been spotted on Shoreline, Customs, and even around the nature reserve. Jaeger refuses to stand by and watch this happen and is determined to fight back.\"\nGameplay Changes\n- Ref's Cleanup Crew spawns in every raid on Customs, Shoreline, and Woods. They are neutral to PMCs.\n\n- Reshala, Sanitar, and Shturman spawn in every raid on their respective maps.\n  - Besides his normal spawns at the pier and at the cottages, Sanitar can also spawn at the smuggler's base on Shoreline.\n- The Goons only spawn on Lighthouse in the PvP game mode, and not at all in the PvE game mode.\n- Quest Guardian of Nature has been added.\n- Quest Adaptive Diplomacy has been added.\n- Quest Distributed Strike has been added.\n- Quest Dish Served Cold has been added.\n- Quest Project of the Century (Finale) has been added.\n- Quest Project of the Century (Consequences) has been added.\n- Quest Wolf's Grip (Finale) has been added.\n- Quest Wolf's Grip (Consequences) has been added."
+    },
+    {
+      "heading": "Bonus EXP weekend (29 May 2026)",
+      "level": 2,
+      "text": "Gameplay Changes\n- EXP earned from raids is increased by 25%.\n- This is a fixed value for all players and is applied instead of the edition bonus.\n- Owners of the \"The Unheard\" edition provide a 25% bonus to all members of their party."
+    },
+    {
+      "heading": "Icebreaker (25 May 2026)",
+      "level": 2,
+      "text": "\"How did the Paradigm Shipping icebreaker end up trapped inside Tarkov’s blockade ring? What happened to its crew? Who is behind it all? You’ll uncover the answers by completing a new story chapter during an expedition focused on exploration and PvE gameplay. And if answers alone are not enough, the loot will make it worth your while.\"\nGameplay Changes\n- Icebreaker location has been added.\n- Story chapter Boreas has been added.\n- Sanitar only spawns at the port/pier area and near the cottages on Shoreline.\n- Quest Stick to It has been added.\n- Quest Saving Private Roman has been added.\n- Quest A Bitter Victory has been added.\n- Quest Hangover has been added.\n- Quest A Wedge Between Us has been added.\n- Quest Oil Change has been added.\n- Quest Peaceful Atom has been added.\n- Quest Wiring the Vessel has been added.\n- Quest War Never Changes has been added.\n- Quest Biochemistry has been added.\n- Quest Fresh Stock has been added."
+    },
+    {
+      "heading": "Full Speed Ahead (15 May 2026)",
+      "level": 2,
+      "text": "\"Unusual Rogue activity has been detected along the coastline. Previously, they rarely left their camp at the water treatment plant, but now they appear to be conducting a full-scale reconnaissance operation. Peacekeeper is concerned about this development and wants to find out what they are searching for.\"\nGameplay Changes\n- Rogues spawn on Shoreline, Reserve and in new locations on Lighthouse.\n\n- Glukhar spawns in every raid on Reserve.\n- The Goons spawn in every raid on Shoreline in the area from the gas station to the hydroelectric power station, and not at all on their other maps.\n- Quest No Smoke Without Fire has been added.\n- Quest Stealing the Stolen has been added.\n- Quest Alloy has been added.\n- Quest Mayday has been added."
+    },
+    {
+      "heading": "Reshala vs Glukhar (8 May 2026)",
+      "level": 2,
+      "text": "\"Reshala’s men stole supplies from the Reserve base, and Glukhar has no intention of letting it slide. His squad has arrived on Customs with a punitive raid, igniting a major gang conflict across the area. Regular Scavs are too afraid to get involved and are keeping out of sight until the situation calms down.\"\nGameplay Changes\n- Reshala spawns in every raid on Customs.\n- Glukhar moved from Reserve to Customs and now spawns in every raid on Customs.\n- Reshala and Glukhar followers spawn all around the map, fighting each other.\n- Regular Scavs do not spawn on Customs at all, Player Scavs are limited to 3 in every Customs raid."
+    },
+    {
+      "heading": "Arena Cleanup Crew on Factory (1 May 2026)",
+      "level": 2,
+      "text": "\"Ref needs Factory to hold Arena fights - and he intends to achieve this goal by any means necessary. A cleanup crew led by Killa and Tagilla is already on site to eliminate anyone who is disrupting the show.\"\nGameplay Changes\n- Tagilla is accompanied with Killa and spawns in every raid on Day Factory.\n- New enemy type \"Cleanup Crew\" has been added. They can be found in groups of 3-4 in every raid on Day Factory instead of regular Scavs.\n- Factory is not accessible in the Scav game mode.\n- Transits to Factory are disabled."
+    },
+    {
+      "heading": "Casus belli (9 April 2026)",
+      "level": 2,
+      "text": "Gameplay Changes\n- New enemy type \"Pillagers\" has been added. They can be found in groups of 3-4 on Customs, Interchange, Lighthouse, Shoreline and Woods.\n\n- Quest Casus belli has been added.\n- Quest Backup Plan has been added.\n- Quest Taking What's Mine has been added.\n- Quest Morituri te salutant has been added.\n- Quest Short on Hands has been added.\n- Quest Run Aground has been added.\n- Quest Habet, hoc habet! has been added."
+    },
+    {
+      "heading": "April Fools (1 April 2026)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Quest Bucket of Nothing has been added.\n- 20x1mm disk has damage increased to 25 and projectile speed increased to 200 m/s.\n- Reshala and his followers wield the 20x1mm toy gun.\n- Medical airdrop crates spawn full of 20x1mm toy guns."
+    },
+    {
+      "heading": "Airdrops (19 March 2026)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Airdrops appear in every raid on all locations except for Ground Zero, Factory, The Lab and The Labyrinth.\n- Medical airdrop crates spawn full of Vaseline balm, RShG-2 72.5mm rocket launchers, Toilet paper."
+    },
+    {
+      "heading": "Smugglers 2026 (12 March 2026)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Enemy type \"Smugglers\" has returned. They can be found in groups of 3-4 on Customs, Woods, Shoreline, Interchange, Lighthouse, Streets of Tarkov and Ground Zero (Level 21+).\n\n- Quest Bulldogs Under The Rug has been added.\n- Quest Accept Delivery has been added.\n- Quest Thirty Pieces of Silver has been added.\n- Quest Restocking Supplies has been added.\n- Quest Root of All Evil has been added.\n- Airdrops contain Sealed weapon cases and Locked cases.\n- All Scav Bosses are in every raid on Reserve."
+    },
+    {
+      "heading": "Duck Hunt - Escape from Duckov Collaboration (10 February 2026)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Quest Duck Hunt has been added.\n- Can of duck pate has been added.\n- Killa can spawn with a new helmet."
+    },
+    {
+      "heading": "Kolotun (24 December 2025)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Santa Claus can be found on all locations except The Lab and The Labyrinth, handing out items and carrying his Santa Bag.\n- Christmas Tree module in the Hideout.\n- Quest Missing in Action has been added.\n- Quest Clearing the Way has been added.\n- Quest Kolotun has been added.\n- Quest Cold Start has been added.\n- Quest Come by the Fire has been added.\n- Quest Knuckle Sandwich has been added.\n- Quest Self-Employed has been added.\n- Quest Stay Frosty has been added.\n- Quest Skiing with Skier has been added.\n- Quest A Small Celebration has been added."
+    },
+    {
+      "heading": "Frostbite",
+      "level": 3,
+      "text": "effect has been added. The effect occurs by being exposed to snow.\n\nDebuffs:\n- Causes Hands tremor effect\n- Decreases Endurance (-5)\n- Decreases energy recovery (-0.1/s)\n- Decreases hydration recovery (-0.1/s)\n- Decreases maximum stamina (-20)\n- Decreases stamina recovery rate (-1/s)\n- Lowers body temperature (-0.1 °C/s) (minimum 28 °C)\n- Deals damage over time to limbs and head till they reach 1 HP\n\nIt can be avoided in shelters, near firebarrels, by drinking moonshine or by wearing one of the following items:\n- Beanie\n- Bomber beanie\n- Ded Moroz hat\n- Domontovich ushanka hat\n- Extreme cold weather face mask\n- Jack Pyke Hunting LLCS boonie hat\n- Kotton beanie\n- New Year ushanka hat\n- Pompon hat\n- Santa hat\n- Ski hat with holes for eyes\n- SSh-68 steel helmet (Olive Drab)\n- Tactical fleece beanie (Tan)\n- Ushanka ear flap hat\n- UX PRO beanie"
+    },
+    {
+      "heading": "RAM Shortage (15 December 2025)",
+      "level": 2,
+      "text": "Gameplay Changes\n- RAM sticks have their value increased.\n- Several new barter trades for RAM sticks have been added to traders.\n- Bosses and Scavs can now also spawn with RAM sticks in their pockets."
+    },
+    {
+      "heading": "Permanent Boss Presence (13 November 2025)",
+      "level": 2,
+      "text": "Gameplay Changes\n- All Bosses, except for Cultists and Partisan, have a 100% spawn chance."
+    },
+    {
+      "heading": "Halloween 2025 (22 October 2025)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Trader portraits have been spookified\n- Hideout decorations and illumination option\n- Jack-o'-lantern tactical pumpkin helmets are worn by AI\n- Pumpkins with sweets can be found in the world\n- Tagilla is armed with a Scythe\n- Signal pistols can be found on Scavs\n- Acid green signal flares can be found on AI\n- Cultists have an increased spawn chance\n- Special Cultists Oni, Harbinger and Ghost have been added to Customs, Woods and Shoreline in the locations of the Goons"
+    },
+    {
+      "heading": "Softcore (8 October 2025)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Quest Staying Light has been added.\n- Entry to The Lab and The Labyrinth doesn't require access keycards.\n- Reduced the inertia dependency on carried weight - the inertia now has significantly less impact with the heavier loads.\n- Reduced the aim punch effect by 60%.\n- Increased the overweight status threshold by 50%.\n- Added new dogtag barters for various equipment at LL2 traders.\n- Increased the number of valuable item containers on all locations.\n- Increased the number of duffle bags and stashes on all locations.\n- Added various container spawns in marked rooms.\n- Increased the colored keycard spawn chances in The Lab.\n- Removed the listing restrictions on the Flea Market.\n- Added access to the Flea Market at player level 10 with the initial ability to list up to 5 items.\n- Increased the PMC skill leveling speed, adjusted individually.\n- Increased the successful raid experience multiplier.\n- Removed the ability to earn the limited Hardcore Wipe achievements."
+    },
+    {
+      "heading": "Targrad Tales (20 August 2025)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Quest Friend from Norvinsk - Part 1 has been added.\n- Quest Friend from Norvinsk - Part 2 has been added.\n- Quest Friend from Norvinsk - Part 3 has been added.\n- Quest Friend from Norvinsk - Part 4 has been added.\n- Quest Friend from Norvinsk - Alternative Solution has been added.\n- Quest Friend from Norvinsk - Part 5 has been added.\n- Quest External Interest has been added.\n- Quest Breathing Room has been added.\n- Quest Game Review - Part 1 has been added.\n- Quest Progression Difficulties - Part 1 has been added.\n- Quest Progression Difficulties - Part 2 has been added.\n- Quest Game Review - Part 2 has been added.\n- Quest Last Spurt - Pioneer has been added.\n- Quest Game Review - Part 3 has been added.\n- A disk slot has been added to the Rest Space level 3 in the Hideout, which can be used to play the text RPG \"Targrad Tales\" when inserting disks from the questline."
+    },
+    {
+      "heading": "Permanent Boss Presence (5 July 2025)",
+      "level": 2,
+      "text": "Gameplay Changes\n- All Bosses, except for Cultists and Partisan, can be found on their \"home locations\" with a 100% spawn chance. (The Goons are on Lighthouse.)"
+    },
+    {
+      "heading": "Art of Explosion (29 April 2025)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Quest Fight Back has been added.\n- Quest Secret Benefactor has been added.\n- Quest An Alternative has been added.\n- Quest Preemptive Strike has been added.\n- Quest Fearless Beast has been added.\n- Quest Staff Shortage has been added."
+    },
+    {
+      "heading": "The Labyrinth (27 March 2025)",
+      "level": 2,
+      "text": "- The Labyrinth location has been added.\n  - Roamed by Shadow of Tagilla carrying a Labrys and wearing a modified welding mask.\n\n- Quest Shady Contractor has been added.\n- Quest Needle in a Haystack has been added.\n- Quest Hidden Layer has been added.\n- Quest Sensory Analysis - Part 1 has been added.\n- Quest Sensory Analysis - Part 2 has been added.\n- Quest Hot Zone has been added.\n- Quest Competition Protection has been added.\n- Quest Forced Alliance has been added.\n- Quest The Tarkov Butcher has been added.\n- Quest Offensive Reconnaissance has been added.\n- Quest Hypotheses Testing has been added.\n- Quest Vacate the Premises has been added.\n- Quest Confidential Info has been added.\n- Quest Indisputable Authority has been added.\n- Quest This Tape Sucks has been added.\n- Quest Keeper's Word has been added.\n- Pointy guy figurine has been added.\n- Xenoalien figurine has been added.\n- Petya Crooker figurine has been added.\n- Nailhead figurine has been added.\n- Count Bloodsucker figurine has been added.\n- Tagilla's welding mask \"ZABEY\" (Replica) has been added."
+    },
+    {
+      "heading": "Bosses (23 March 2025)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- All Bosses, except for Cultists, can be found on their \"home locations\" with a 100% spawn chance. (The Goons are on Lighthouse, Kollontay is on Streets of Tarkov.)"
+    },
+    {
+      "heading": "Khorovod (26 December 2024)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Santa Claus can be found on all locations except The Lab, handing out items and carrying his Santa Bag.\n- Christmas Tree module in the Hideout.\n- Quest Chilly has been added.\n- Quest Illegal Logging has been added.\n- Quest Hide in Plain Sight has been added.\n- Quest Enough Drinks for That One has been added.\n- Quest Christmas Dinner has been added.\n- Quest Holiday Beyond the Means has been added.\n- Quest This Is My Party has been added.\n- Quest The Price of Celebration has been added.\n- Quest Cheer Up has been added.\n- Quest Khorovod has been added.\n- effect has been added. The effect occurs by being exposed to snowfall. It can be avoided in shelters, near firebarrels or with alchohol.\n  - Debuffs:\n    - Hands tremor effect\n    - Decreases Endurance (-5)\n    - Decreases energy recovery (-0.1/s)\n    - Decreases hydration recovery (-0.1/s)\n    - Decreases maximum stamina (-20)\n    - Decreases stamina recovery rate (-1/s)\n    - Lowers body temperature (-0.1 °C/s) (minimum 28 °C)"
+    },
+    {
+      "heading": "Unlocked Traders & Discounts (25 December 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- All Traders are unlocked with loyalty level 4 regardless of player progress\n- All items offered by Traders are heavily discounted"
+    },
+    {
+      "heading": "Thermal Scopes for Treats (24 December 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- Mechanic barters thermal scopes for chocolate and alcohol at LL1."
+    },
+    {
+      "heading": "Rising Tensions (23 December 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- Prapor and Peacekeeper sell underbarrel grenade launchers and ammunition for them with discounts at LL1."
+    },
+    {
+      "heading": "AA-12 Marketing Failure (22 December 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- Skier sells the AA-12 Gen 1 and AA-12 Gen 2 shotguns as well as rare ammunition for them with discounts at LL1.\n- Skier barters TerraGroup Labs access keycards for AI-2 medkits at LL1."
+    },
+    {
+      "heading": "Geared Scavs (21 December 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- Player Scavs spawn with high-end equipment."
+    },
+    {
+      "heading": "Scav Gang Conflict (20 December 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- Ragman sells class 5 armor and barters armor for melee weapons."
+    },
+    {
+      "heading": "Resurging Conflict (19 December 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- Prapor and Peacekeeper barter rare ammunition packs for Dogtags of their opposing factions."
+    },
+    {
+      "heading": "Cultist Pilgrimage (18 December 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- Cultists are in every raid on Customs, Woods and Shoreline.\n- Cultists carry marked keys.\n- Mechanic sells NVGs at a great discount.\n- Mechanic barters keycards for Cultist knives."
+    },
+    {
+      "heading": "Dark Times (16 December 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- Quest Dark Times has been added."
+    },
+    {
+      "heading": "Smugglers 2024 (6 December 2024)",
+      "level": 2,
+      "text": "Gameplay Changes\n- New enemy type \"Smugglers\" has been added. They can be found in groups of 3 on all locations except Ground Zero (Level <21) and The Lab.\n\n- Quest That’s a Great Plan, Walter has been added.\n- Quest Chop the Thieving Hand has been added.\n- Quest Shell Game has been added."
+    },
+    {
+      "heading": "The Hunt Begins (29 November 2024)",
+      "level": 2,
+      "text": "Gameplay Changes\n- All Bosses, except for Cultists, can be found on their \"home locations\" with a 100% spawn chance. (The Goons are on Lighthouse, Kollontay is on Streets of Tarkov.)"
+    },
+    {
+      "heading": "Halloween 2024 (31 October 2024)",
+      "level": 2,
+      "text": "Gameplay Changes\n- An unknown disease has spread from The Lab and contaminated the whole Tarkov region.\n  - The level to which each map is infected can be tracked on escapefromtarkov.com/halloween.\n- Infected civilians, lab technicians and PMCs are roaming around, attacking with their hands, knives and pistols.\n  - Tagilla is also infected and roams all maps, carrying a scythe.\n- Getting too close to them and getting hit grants the Virus effect, which removes hearing for a brief moment and reduces hydration.\n  - The effect is only removed upon extraction or death.\n\n- For the duration of the event, Scavs and Bosses are friendly towards players, unless provoked (including maps free from the infection).\n- Entry to The Lab doesn't require a TerraGroup Labs access keycard for the duration of the event.\n- New area added to the The Lab called \"containment block\", near the laboratory quarantine zone (G11).\n\n- Player Scavs can get on friendly terms with the infected through drinking 2 Bottles of Tarkovskaya vodka or 2 Bottles of Dan Jackiel whiskey or 2 Bottles of Fierce Hatchling moonshine.\n- Quest Don’t Believe Your Eyes has been added.\n- Quest Dirty Blood has been added.\n- Quest Burn It Down has been added.\n- Quest The Root Cause has been added.\n- Quest Matter of Technique has been added.\n- Quest Find the Source has been added.\n- Quest Gloves Off has been added.\n- Quest Sample IV - A New Hope has been added.\n- Quest Darkest Hour Is Just Before Dawn has been added.\n- Quest Contagious Beast has been added.\n- Quest Radical Treatment has been added.\n- Quest Forgotten Oaths has been added.\n- Quest Clear Conscience has been added.\n- Quest Global Threat has been added.\n- Quest Watch the Watcher has been added.\n- Quest Not a Step Back! has been added.\n- Quest Conservation Area has been added.\n- Quest Every Man for Himself has been added.\n- Quest Pressured by Circumstances has been added.\n- Quest Reduce the Distance has been added.\n- Quest Spread the Damage has been added.\n- Quest Foreign Support has been added.\n- Quest Forced Measure has been added.\n- Pumpkins with sweets can be found in the world.\n- Hideout decorations and illumination option."
+    },
+    {
+      "heading": "Night of The Cult (11 October 2024)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Cultists have an increased spawn chance and in addition to their usual locations they also roam Streets of Tarkov and Lighthouse.\n- Special Cultists Oni, Harbinger and Ghost have been added. They roam the same locations as the Goons.\n- Quest Night of The Cult has been added.\n- Quest The Graven Image has been added.\n- Quest Until Dawn has been added."
+    },
+    {
+      "heading": "Mortar Strike (26 September 2024)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Customs, Woods, Shoreline and Reserve can be targeted by mortar fire. At the beginning of the second barrage on a location, a special airdrop containing the quest item Radar station spare parts appears.\n\n- \"The Eye\" mortar strike signaling device has been added.\n- Quest Into the Inferno has been added.\n- Quest In and Out has been added.\n- Quest Ours by Right has been added.\n- Quest Provide Cover has been added.\n- Quest Cream of the Crop has been added.\n- Quest Before the Rain has been added."
+    },
+    {
+      "heading": "Marathon (20 August 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- Added the \"Marathon\" game mode in which it is possible to transit between locations in the following ways:\n  - Ground Zero → Streets of Tarkov (↔ The Lab) → Interchange → Customs → Factory → Woods → Reserve → Lighthouse → Shoreline\n- Quest Marathon - From Beginning To End has been added.\n- Quest Marathon - Sightseeing has been added."
+    },
+    {
+      "heading": "Unlocked Traders & Discounts (18 August 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- All Traders are unlocked with loyalty level 4 regardless of player progress\n- All items offered by Traders are heavily discounted"
+    },
+    {
+      "heading": "Shotgun Shells Event (16 August 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nItem Changes\n- 12/70 flechette plus has been added as a barter on Mechanic LL1.\n- 12/70 Elephant killer slug has been added as a barter on Mechanic LL1.\n- 12/70 \"explosive\" slug has been added as a barter on Mechanic LL1."
+    },
+    {
+      "heading": "Permanent Boss Presence & Geared up Scavs (14 August 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- All Bosses besides the Cultists have a 100% spawn chance on all of their locations.\n- Scavs wear high tier gear."
+    },
+    {
+      "heading": "Closed Flea Market (13 August 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- The Flea Market is inaccessible to players below level 99 (essentially meaning it's closed)."
+    },
+    {
+      "heading": "Instant Hideout Building & Quick Skills (12 August 2024)",
+      "level": 2,
+      "text": "Not available in the PvE game mode.\n\nGameplay Changes\n- The construction time for all Hideout modules and upgrades is instant and they only require Bottles of Pevko Light beer.\n- Character skills leveling speed is drastically increased.\n- All bosses have Beers in their pockets.\n- The crafting time for Bottle of Pevko Light beer is increased to 30 hours and results only in one bottle."
+    },
+    {
+      "heading": "Supply and Demand (2 August 2024)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Quest Gunsmith - Special Order has been added.\n- Quest Gun Connoisseur has been added.\n- Quest Customer Communication has been added.\n- Quest Supply and Demand has been added.\n- Mechanic's prices are raised."
+    },
+    {
+      "heading": "Bad Feeling (26 July 2024)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Entry to The Lab doesn't require a TerraGroup Labs access keycard for the duration of the event.\n- Quest Bad Feeling has been added."
+    },
+    {
+      "heading": "Arms Race (16 July 2024)",
+      "level": 2,
+      "text": "- Quest Import Control has been added.\n- Quest What’s Your Evidence? has been added.\n- Quest Caught Red-Handed has been added.\n- Quest Risks of Small Business has been added.\n- Quest Protection of Interests has been added.\n- Quest Western Quality Standards has been added.\n- Quest Time-Tested has been added.\n- Scavs have a chance to spawn with nearly destroyed western weapons, modded similarly to the Rogues."
+    },
+    {
+      "heading": "A Key to Salvation (24 June 2024)",
+      "level": 2,
+      "text": "- Quest A Key to Salvation has been added.\n- Colored keycards and equipment barters for 6-STEN-140-M military batteries have been added to Mechanic LL1.\n- 3 locations for 6-STEN-140-M military batteries with 100% spawn chance have been added to Customs:\n  - On the roof of the three-story dorms building\n  - Inside the new gas station\n  - On the second floor of the Scav base (ZB-013 extraction) building\n- Scav Raiders are defending the spawn locations."
+    },
+    {
+      "heading": "Hustle (31 May 2024)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Quest Hustle has been added.\n- All Scav bosses, the Goons and the Cultists can be found in every raid at the helicopter on Reserve. They can also still occasionally appear in their usual locations.\n- All bosses have GP coins in their pockets.\n- All bosses, excluding the Goons, are friendly to Scavs regardless of Scav karma.\n- Player Scav cooldown has been reduced regardless of Scav karma."
+    },
+    {
+      "heading": "The Tarkov Mystery (15 May 2024)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Peacekeeper's troops are on Shoreline.\n- Skier's troops are on Customs.\n- Quest The Tarkov Mystery has been added.\n- Quest Break Through has been added.\n- Quest Decryption Hurdles - Part 1 has been added.\n- Quest Decryption Hurdles - Part 2 has been added.\n- Quest Decryption Hurdles - Part 3 has been added.\n- Quest Take Two had been added.\n- Quest Photo Hunt had been added.\n- Quest U Turn has been added.\n- Quest Getting to the Core has been added.\n- Quest No Peeking! has been added.\n- Quest Forgotten Acquaintance has been added.\n- Quest Seeking Information has been added.\n- Quest Obstacle Course has been added.\n- Quest Obstruction Destruction has been added.\n- Quest Radio Club has been added.\n- Quest A New Hope has been added.\n- Quest Liaison has been added.\n- Quest Ceasefire - Information has been added.\n- Quest Ceasefire - Part 2 has been added.\n- Quest Trade Embargo has been added.\n- Quest Trade Embargo - Last Chance has been added.\n- Quest Atonement has been added.\n- Quest Redemption has been added.\n- Quest Ding-Ding-Ding has been added.\n- Encrypted flash drive has been added.\n- Mr Kerman's cat hologram has been added."
+    },
+    {
+      "heading": "Free Lab Access Event (12 May 2024)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Entry to The Lab doesn't require a TerraGroup Labs access keycard for the duration of the event."
+    },
+    {
+      "heading": "Permanent Boss & Cultists Presence (26 April 2024)",
+      "level": 2,
+      "text": "- All Bosses can only be found on their \"home locations\" (e.g. The Goons on Lighthouse) with a 100% spawn chance, Tagilla accompanies Killa, and the Cultists have a 100% chance to be on Customs, Woods, Shoreline and Ground Zero (Level 21+)."
+    },
+    {
+      "heading": "Brothers Reunited (17 April 2024)",
+      "level": 2,
+      "text": "- Tagilla accompanies Killa next to the Kiba Arms store on Interchange in every raid."
+    },
+    {
+      "heading": "Winter Tales (28 March 2024)",
+      "level": 2,
+      "text": "- New faction Followers of Morana on Ground Zero, Customs, Woods, Shoreline, Interchange, Reserve, Lighthouse and Streets of Tarkov.\n\n- Leshiy/Duh Vesny summoning bonfire ritual\n  - 3 bonfires per raid appear in different locations on Ground Zero, Customs, Woods, Shoreline, Interchange, Reserve, Lighthouse and Streets of Tarkov.\n    - To light a bonfire, it must be shot 4 times with tracer ammunition from maximum 20 meters away.\n    - Being near a lit bonfire gives the following buffs:\n      - +3 Endurance skill level\n      - +3 Strength skill level\n      - +3 Vitality skill level\n      - +3 Immunity skill level\n      - +300% Stamina recovery rate\n\n- When 3 bonfires are lit at the same time for 60 seconds, birdsong can be heard and a neutral, invincible Leshiy/Duh Vesny appears, handing out items. He will defend himself if harmed.\n\n- Quest Spring Never Changes has been added.\n- Quest Evil Spirits has been added.\n- Quest Granny's Tales has been added.\n- Quest Fishing With Shishiga has been added.\n- Quest Spring! has been added."
+    },
+    {
+      "heading": "Unlocked Traders & Discounts (26 December 2023)",
+      "level": 2,
+      "text": "Gameplay Changes\n- All Traders are unlocked with loyalty level 4 regardless of player progress\n- All items offered by Traders are heavily discounted\n- All item purchase limits are removed"
+    },
+    {
+      "heading": "Christmas Event 2023 (25 December 2023)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Christmas Tree module in the Hideout\n- Santa Claus can be found on all locations, handing out items and carrying his Santa Bag\n- Bosses and their followers are wearing Santa Hats"
+    },
+    {
+      "heading": "Dogtags Fire Sale (24 December 2023)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Traders are bartering various high end body armor, helmets, weapons and ammo for Dogtags"
+    },
+    {
+      "heading": "Instant Hideout Building (23 December 2023)",
+      "level": 2,
+      "text": "Gameplay Changes\n- The construction time for all Hideout modules and upgrades is instant and they only require a Bottle of Pevko Light beer"
+    },
+    {
+      "heading": "Flea Market Promotion (22 December 2023)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Flea market can be accessed by players at any level\n- Fees drastically reduced\n- Additional market offers"
+    },
+    {
+      "heading": "Laboratory Breach (21 December 2023)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Free entry to The Lab"
+    },
+    {
+      "heading": "Permanent Boss & Cultists Presence (20 December 2023)",
+      "level": 2,
+      "text": "Gameplay Changes\n- All Bosses can only be found on their \"home locations\" (e.g. The Goons on Lighthouse) with a 100% spawn chance, and the Cultists have a 100% chance to be on Woods and Shoreline."
+    },
+    {
+      "heading": "Unknown Toxin Poisoning (15 December 2023)",
+      "level": 2,
+      "text": "Translation\n\nAlarm!\n\nInfected spreads in the city with marks of toxic poisoning.\n\nAll of them were in Customs.\n\nDo not go there!\n\nI'm working for a solution.\n\nWill give an antidote later.\n\nDon't die before that like poisoned rats.\n\nGameplay Changes\n- Quest Poisoning has been added.\n- Quest Parasites has been added.\n- Quest Healer has been added.\n- Quest Remedy has been added.\n- Quest Straw has been added.\n- Quest Healing has been added.\n- Quest Virtue has been added.\n- Quest Pursuit of Power has been added.\n- Quest Key Component has been added.\n- Antitoxin has been added."
+    },
+    {
+      "heading": "Afterparty (8 December 2023)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Quest Afterparty has been added."
+    },
+    {
+      "heading": "Down the Rabbit Hole (2 December 2023)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Quest Down the Rabbit Hole - Part 1 has been added.\n- Quest Down the Rabbit Hole - Part 2 has been added.\n- Quest Down the Rabbit Hole - Part 3 has been added.\n- Quest Down the Rabbit Hole - Part 4 has been added.\n- Quest Down the Rabbit Hole - Part 5 has been added.\n- Quest Down the Rabbit Hole - Part 6 has been added.\n- SJ15 TGLabs combat stimulant injector has been added.\n- All Scav bosses grouped up at the LexOs car dealership on Streets of Tarkov."
+    },
+    {
+      "heading": "Ammo Shortage (25 November 2023)",
+      "level": 2,
+      "text": "Gameplay Changes\n- Quest The Punisher - Harvest has been added.\n- Ammunition can no longer be sold or bought on the flea market.\n- Armor-piercing and other high penetration ammunition is no longer available on traders.\n| Affected ammo types |\n| Pistol Rounds | PDW Rounds | Rifle Rounds | Shotgun Rounds |\n| 9x19mm PBP gzh; 9x21mm BT gzh; .45 ACP AP | 4.6x30mm FMJ SX; 5.7x28mm SS190 | 5.45x39mm BP gs; 5.45x39mm BT gs; 5.45x39mm PP gs; 5.56x45mm M855A1; 5.56x45mm M856A1; .300 Blackout CBJ; .300 Blackout M62 Tracer; 7.62x39mm BP gzh; 7.62x39mm PP gzh; 7.62x51mm M62 Tracer; 7.62x51mm M80; 7.62x54mm R BS gs; 7.62x54mm R BT gzh; 7.62x54mm R LPS gzh; 7.62x54mm R PS gzh; 7.62x54mm R T-46M gzh; .338 Lapua Magnum FMJ; 9x39mm SP-6 gs; 9x39mm SPP gs; .366 TKM AP-M | 12/70 AP-20 armor-piercing slug; 12/70 flechette; 23x75mm Barrikada slug; 23x75mm Shrapnel-10 buckshot; 23x75mm Shrapnel-25 buckshot; 23x75mm Zvezda flashbang round |"
+    },
+    {
+      "heading": "Halloween 2023 Part 2 (30 October 2023)",
+      "level": 2,
+      "text": "- Cultist ritual on all maps besides Factory and The Lab.\n  - Finding and killing the roaming Zryachiy will close all extractions but 1 with an increased extraction timer, turn the time to night and start a ritual that is performed by 6 Ritualnyy (Ritual) Cultist priests. The ritual takes 6 minutes and 30 seconds to complete.\n    - The place of the ritual is marked by a ritual circle and a blue light beam going into the sky. There are multiple possible locations.\n\n- Klling all Ritual Cultist priests will stop the ritual\n- Upon completion of the ritual, Mstyaschiy (Vengeful) Zryachiy appears with massively increased health and starts to hunt down players.\n\n  - \"Primal fear\" and \"Chilling horror\" status effects will be applied to players until the end of the raid, causing permanent misfires on weapons and reduced stamina."
+    },
+    {
+      "heading": "Notes",
+      "level": 4,
+      "text": "- Zryachiy drops Bottle of Tarkovskaya vodka and Bottle of Fierce Hatchling moonshine when approached by players\n- Killing Zryachiy or Vengeful Zryachiy will not decode your Digital secure DSP radio transmitter if you have one\n- The PPSh-41 submachine gun, the MTs-255-12 shotgun, revolvers, stationary weapons, underbarrel grenade launchers and fragmentation grenades can be used to kill Vengeful Zryachiy as they cannot jam."
+    },
+    {
+      "heading": "Zryachiy Equipment",
+      "level": 3,
+      "text": "Weapons:\n| Weapon | Ammunition |\n| Remington R11 RSASS 7.62x51 marksman rifle | 7.62x51mm M80 |\n| Kalashnikov AKS-74U 5.45x39 assault rifle | 5.45x39mm T gs |\n| Serdyukov SR-1MP Gyurza 9x21 pistol | 9x21mm P gzh |\n| Cultist knife |\n\nHeadwear:\n| Headwear | Notes |\n| Vengeful Zryachiy's balaclava (folded) | Only on Vengeful Zryachiy |\n\nFace cover:\n| Face cover | Notes |\n| Vengeful Zryachiy's balaclava | Only on Vengeful Zryachiy |\n\nChest rig:\n| Icon | Chest rig |\n| Azimut SS \"Khamelion\" chest harness (Olive) | Azimut SS \"Khamelion\" chest harness (Olive) |\n\nItems:\n| Icon | Item |\n| AFAK tactical individual first aid kit | AFAK tactical individual first aid kit |\n| IFAK individual first aid kit | IFAK individual first aid kit; ==Halloween 2023 Part 1 (26 October 2023)==; Gameplay Changes; Tagilla is on Factory and The Lab, armed with a Scythe; Pumpkins with sweets can be found in the world; Jack-o'-lantern tactical pumpkin helmets are worn by AI; Hideout decorations and illumination option; Acid green signal flare can be found on Scavs; ==Unlocked Traders & Discounts (8 August 2023)==; Gameplay Changes; All Traders are unlocked with loyalty level 4 regardless of player progress; All items offered by Traders are heavily discounted; All item purchase limits are removed; ==UNTAR Reconnaissance (7 August 2023)==; Reshala, Killa, Tagilla, Glukhar, Shturman to 100% on their original locations; Killa and Glukhar removed from Streets of Tarkov; Cultists to 100% on all their locations except Shoreline (Set to 50%); Bloodhounds to 20% on their 3 locations; ==Instant Hideout Building Event (6 August 2023)==; Gameplay Changes; The construction time for all Hideout modules and upgrades is instant; ==The TerraGroup Trail (28 July 2023)==; Gameplay Changes; The Goons left their other locations to guard Sanitar on Shoreline; \"Obdolbos N\" cocktail injector has been added.; Quest The TerraGroup Trail - Part 1 has been added.; Quest The TerraGroup Trail - Part 2 has been added.; Quest The TerraGroup Trail - Part 3 has been added.; Quest The TerraGroup Trail - Part 4 has been added.; Quest The TerraGroup Trail - Part 5 has been added.; Quest The TerraGroup Trail - Part 6 has been added.; Quest The TerraGroup Trail - Part 7 has been added.; Quest The TerraGroup Trail - Part 8 has been added.; Quest The TerraGroup Trail - Part 9 has been added.; Quest The TerraGroup Trail - Part 10 has been added.; Quest The TerraGroup Trail - Part 11 has been added.; Quest The TerraGroup Trail - Part 12 has been added.; Quest The TerraGroup Trail - Part 13 has been added.; Quest The TerraGroup Trail - Part 14 has been added.; Quest The TerraGroup Trail - Part 15 has been added.; Quest The TerraGroup Trail - Part 16 has been added.; Quest The TerraGroup Trail - Part 17 has been added.; Quest The TerraGroup Trail - Part 18 has been added.; Quest The TerraGroup Trail - Part 19 has been added.; ==Free Labs Event (24 July 2023)==; Gameplay Changes; Entry to The Lab is free for all PMC's and Scavs for the duration of the event.; ==Hardcore Mode (7 July 2023)==; Gameplay Changes; Quest Cocktail Tasting has been added.; Obdolbos cocktail injector effects have been changed:; Buffs:; 1s Delay; 1800s Duration:; Increases Endurance (+50); Increases Strength (+50); Debuffs:; 1s Delay; 1800s Duration:; Increases damage taken; (except the head) (+1000%); ==Bosses & Rogues Wander (3 July 2023)==; Gameplay Changes; Quest Tourists has been added.; Quest Hustle has been added.; Knight, Big Pipe and Birdeye can only be found in every raid on Day Factory; Reshala, Glukhar, Killa, Shturman, Sanitar and Tagilla are spawning on Customs, Woods, Shoreline, Interchange and Reserve at specific real world times which can be found in the newspaper that was released together with the event. | Boss Timetable /; / Timezones / Location /; / MSK / UTC / EDT / CEST / KST / BST /; / 8:00 - 12:00 / 5:00 - 9:00 / 1:00 - 5:00 / 7:00 - 11:00 / 14:00 - 18:00 / 6:00 - 10:00 / Reserve /; / 12:00 - 13:00 / 9:00 - 10:00 / 5:00 - 6:00 / 11:00 - 12:00 / 18:00 - 19:00 / 10:00 - 11:00 / None /; / 13:00 - 17:00 / 10:00 - 14:00 / 6:00 - 10:00 / 12:00 - 16:00 / 19:00 - 23:00 / 11:00 - 15:00 / Customs /; / 17:00 - 21:00 / 14:00 - 18:00 / 10:00 - 14:00 / 16:00 - 20:00 / 23:00 - 3:00 / 15:00 - 19:00 / Shoreline /; / 21:00 - 22:00 / 18:00 - 19:00 / 14:00 - 15:00 / 20:00 - 21:00 / 3:00 - 4:00 / 19:00 - 20:00 / None /; / 22:00 - 2:00 / 19:00 - 23:00 / 15:00 - 19:00 / 21:00 - 1:00 / 4:00 - 8:00 / 20:00 - 0:00 / Interchange /; / 2:00 - 8:00 / 23:00 - 5:00 / 19:00 - 1:00 / 1:00 - 7:00 / 8:00 - 14:00 / 0:00 - 6:00 / Woods /; ===Boss locations===; ====Customs====; Glukhar: At the Scav base (ZB-013 extraction) building with the numerous mounted weapons; Killa+Tagilla: At the old gas station; Sanitar: At the new gas station; Shturman: At the shipping yard premises; Reshala: At the dorms area; ====Woods====; Glukhar: At the village in the northeast; Killa+Tagilla: Near the fenced off cabin southwest of the sawmill area; Sanitar: At the antenna in the northwest (Scav Bunker extraction); Shturman: At the sawmill; Reshala: At the dilapidated village in the north; ====Shoreline====; Glukhar: At the port/pier area; Killa+Tagilla: In the west wing of the health resort; Sanitar: Near the cottages; Shturman: Weather station; Reshala: In the east wing of the health resort; ====Interchange====; Glukhar: Around the center stores on the first floor of the mall; Killa+Tagilla: Around the center stores on the second floor of the mall; Sanitar: In the Goshan store; Shturman: In the IDEA store; Reshala: In the OLI store; ====Reserve====; Glukhar: At the storage buildings marked with \"K\"; Killa+Tagilla: At the repair building marked with white knight; Sanitar: In the underground storage warehouse marked with \"Д\"; Shturman: At the repair building marked with black knight; Reshala: At the barracks marked with black bishop and black pawn; ==Cultist Hunting (26 June 2023)==; Gameplay Changes; Quest Failed Setup has been added.; Cultists were in every raid on Night Factory, Customs, Woods and Shoreline.; ==Weapon Case Airdrops (19 June 2023)==; Gameplay Changes; Planes dropped Airdrops with Sealed weapon cases; ==Bloodhounds Reveal (9 June 2023)==; Gameplay Changes; New faction Bloodhounds appeared on Customs, Woods and Shoreline.; Quest Bloodhounds has been added.; ==Bosses, take a Hint! (2 June 2023)==; Gameplay Changes; Quest Hint has been added.; All Bosses could only be found on their \"home locations\" (e.g. The Goons on Lighthouse) with a 100% spawn chance, and the Cultists had a 100% chance to be on Woods.; ==Scav Takeover Event (20 May 2023)==; Event Information; Fence announced in a video that all known roads, paths and passages, as well as the city have been blocked off by his people (Scavs), and that almost the entire territory of the Norvinsk region is under their control. Only particularly violent regions are allowed to be entered freely, but only until the number of victims reaches a critical point. To enter the blocked off regions, they demand pay, but not with money, but goods.; Gameplay Changes; Only one location can be entered freely without needing a specific item to enter. Players under level 16 are not affected by this.; After a certain amount of combined PMC and Scav kills (\"number of victims\") is reached, the location that is free switches to another one, and the required items for the blocked regions change. When The Lab became the free location, all other locations were free again too, as well as all Bosses could only be found on their \"home locations\" (e.g. The Goons on Lighthouse) with a 100% spawn chance, and the Cultists had 100% chance to be in the health resort on Shoreline till the final kill counter on The Lab was reached.; Free location order →; The kill counter and the next free location could be found on the game website.; Ingame Mail; When the amount of kills on the The Lab location was reached, Fence sent a in-game mail to all players and the event ended with everything returning back to normal.; Fence; \"Too much blood has been spilled. We don't want this to keep happening in Tarkov. We are reverting to old rules, and temporarily retreating into the shadows.\"; ==Bandages Event (7 April 2023)==; Event Information; This quest was released together with the Chronicles of Ryzhy [S2 Chpt. 1 short film], in which the character \"Ryzhy\" gets wounded. He is the \"important patient\" that is referred to in the dialogue.; This is the first community goal quest that was added to the game.; The initial goal was 1,000,000 bandages before it got changed to 10,000,000 shortly after the quest appearance; The goal was reached after 8 days on April 15, 2023 and lead to the release of the Chronicles of Ryzhy [S2 Chpt. 2 short film]; Gameplay Changes; Quest Important Patient is available to all players for the duration of the event.; ==Free Labs Event (26 December 2022)==; Gameplay Changes; Entry to The Lab doesn't require a TerraGroup Labs access keycard for the duration of the event.; ==Grenade Launcher Scavs Event (25 December 2022)==; Gameplay Changes; Scavs can now spawn with FN40GL Mk2 40mm grenade launcher & Milkor M32A1 MSGL 40mm grenade launcher.; ==Christmas Event 2022 (25 December 2022)==; Gameplay Changes; The Christmas Tree is back in the Hideout.; Santa Claus can be found on maps again, handing out Loot and carrying his Santa's Bag.; Bosses and their followers are wearing Santa Hats.; ==Green Flare Event (25 December 2022)==; Gameplay Changes; The Acid green signal flare is back, which turns all nearby Scavs and Bosses neutral.; ==Centralized Loot Event (24 December 2022)==; Gameplay Changes; Loot has been centralized to one location per map as follows:; Customs - Skeleton; Factory - Underground; Interchange - Kiba Escalator; Reserve - Near Helicopter; Shoreline - Administration Building; Lighthouse - Water Treatment Plant (Helicopter Area); Woods - USEC/Medical Camp; The Lab - Conference Room (Cats); ==Fleamarket Event (23 December 2022)==; Gameplay Changes; The fee to list an item on the Flea Market was significantly reduced.; Ingame Mail; Ragman; \"It's time for real trade, brother. There's a carload of goods and a passenger carload of entrepreneurs. The scavs be scavving, the cash be comin. Limited offer for members of our humble underground flea market! Only today! No transcation fees. Get into cash before the market goes to hell!\"; ==Shotgun Shells Event (22 December 2022)==; Item Changes; 20/70 \"Flechetta Plus\" has been added as a Level 1 Workbench Craft.; 20/70 Elephant killer slug has been added as a Level 1 Workbench Craft.; 20/70 \"explosive\" slug has been added as a Level 2 Workbench Craft.; ==Stim Event (21 December 2022)==; Item Changes; Obdolbos cocktail injector positive buffs have been all increased to +20.; SJ1 TGLabs combat stimulant injector, SJ6 TGLabs combat stimulant injector, Propital regenerative stimulant injector, Zagustin hemostatic drug injector, Adrenaline injector, 3-(b-TG) stimulant injector, AHF1-M stimulant injector, L1 (Norepinephrine) injector, M.U.L.E. stimulant injector, Meldonin injector and P22 (Product 22) stimulant injector have had their negative debuffs removed.; Ingame Mail; Therapist; \"Young man, greetings! I'm not sure if you know this, but your colleagues helped me establish contact with a specialist who used to live in the \"Lazurny Bereg\" health resort. Well, our joint work has borne fruit, which I would like to share with you. Pay attention to the renewed assortment of medicines. You will not regret it.\"; ==Melee Event (20 December 2022)==; Gameplay Changes; Quest Martial arts course has been added for the duration of the event which rewards players with Max Trader level, Red Rebel ice pick and a Miller Bros. Blades M-2 Tactical Sword.; Item Changes; Melee weapon damage has been buffed (50%-80%).; ==Dogtag Sales Event (19 December 2022)==; Item Changes; Dogtag sales price has been increased to ₽2,646 per level.; ==Beer Upgrades Event (18 December 2022)==; Gameplay Changes; Upgrades to the Hideout now use Bottle of Pevko Light beer.; ==Boosted Skill Leveling Event (17 December 2022)==; Gameplay Changes; Character skills are leveled at an incredibly quick rate.; ==Scav On Labs Event (4 December 2022)==; Gameplay Changes; Glukhar can be encountered on The Lab with 6 Guards, and has a 100% spawn chance.; Temporarily removed Glukhar from Reserve.; Entering The Lab with a Scav is now possible.; ==Double Damage Event (26-30 November 2022)==; Gameplay Changes; A Debuff of +100% damage taken except head is given. (-1% for each Immunity level with Max Immunity removing the debuff entirely); A Buff to Strength, Endurance, Perception and Max Stamina is given. (+20 Levels); A Buff to Stamina Recovery and Health Regeneration is given. (+2 Levels); A Buff to Weight limit is given. (+40% Extra); ==Sanitar Event (11 November 2022)==; Gameplay Changes; Sanitar can be encountered on Customs with 4-5 Guards, and has a 100% spawn chance.; Temporary Quest Letters can be started from Mechanic.; ==Halloween 2022 (27 October 2022)==; Gameplay Changes; Tagilla can be encountered on all locations, has an increased health pool of 1900 and is armed with a Scythe, wears a Spooky skull mask and has an increased spawn chance.; Cultists can be encountered on all locations besides The Lab and have an increased spawn chance.; A random negative status effect is given to your PMC at the start a raid.; Traders pictures have been \"spookified\". 👻; Unknown toxin is removed upon death for free.; Weapons will jam more frequently.; The Escape from Tarkov website halloween \"Dooomed\" counter will trigger some events when it hits 666,666 and lasts for 30 minutes before resetting.; Some Provisions no longer replenish hydration or energy.; Pumpkins with sweets can be found in the world.; ==June 2022 Pre-Wipe Event (20-27 June 2022)==; ===Airdrop Traffic (Day 1)===; Gameplay Changes; Significantly increased the chance and count of airdrops that spawn on outdoor maps.; ===Obdolbos Roulette (Day 2)===; Gameplay Changes; Huge Buff to the Obdolbos cocktail injector but gave it a 5% chance of killing your character.; ===Meeting of the Bosses (Day 3)===; Gameplay Changes; All Bosses are spawning on Customs.; ===Barter Only (Day 4)===; Gameplay Changes; Removed all cash-offers from the Traders (except for Fence) - you can only barter with them now.; New Barters for Dogtags were added to the traders.; ===Free Labs (Day 5)===; Gameplay Changes; Entry to The Lab doesn't require a TerraGroup Labs access keycard for the duration of the event.; ===Unlocked Traders & Discounts (Day 6)===; Gameplay Changes; Unlocked all Traders and heavily discounted their items.; ===Deadly Toxin (Day 7)===; Gameplay Changes; Players are given infinite Stamina.; All extracts except one are locked.; The Unknown toxin debuff is given to your PMC at the start of the raid, which gives you 8 minutes to live unless you find an antidote on Bosses or airdrops.; ==Christmas Event 2021 (25 December 2021)==; Gameplay Changes; A peaceful Santa Claus bot who gives out presents may spawn on every location, except for the Laboratory. He will not interfere with firefights, but will attack in response if you injure him. For killing Santa Claus with either PMC or Scav, the player will get a significant reputation penalty with Fence.; Christmas Tree module in the Hideout.; Quest Party Preparations has been added.; Quest Fairy Tale Showdown has been added.; Quest To the Tree! has been added.; Quest Disrupting the Party has been added.; Quest Bad Santa has been added.; Quest No Gifts for You has been added.; Quest Home Comfort has been added.; Quest A Kind Snow Maiden has been added.; Quest Stop the Fight! has been added.; ==Heatwave (29 July 2021)==; Gameplay Changes; Hydration consumption rate in raid is doubled; Hydration recovery rate out of raid is halved; Increased prices and reduced availability of drinks on traders; Reduced efficiency of the Hideout module \"Water collector\"; ==June 2021 Pre-Wipe Event (20 June 2021)==; Quest The Bosses gathering has been added.; All Bosses are spawning on Reserve. |"
+    }
+  ]
+}

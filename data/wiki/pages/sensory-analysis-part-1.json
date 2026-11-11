@@ -1,0 +1,55 @@
+{
+  "title": "Sensory Analysis - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sensory_Analysis_-_Part_1",
+  "revisionId": 359647,
+  "lastEdited": "2026-09-13T20:19:46Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Streets of Tarkov",
+    "given by": "Ragman",
+    "previous": "Hidden Layer (+30min)",
+    "leads to": "Sensory Analysis - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Sensory Analysis - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello my brother! Okay, okay, not so loud, I'm hung over as shit. Don't know how the BTR guy's still driving after last night. The engine is surely screeching louder than fucking generators! By the way, you came at a really good time, almost like you knew I'm gonna need help. So, about the meeting we had yesterday. I have a moonshine supplier, he makes legit good stuff! We've been working together for six months now, everything was fine. And now, customers started complaining that I was selling them fake stuff. So, I had to check the product quality, and no one in our region knows as much about liquor as the BTR driver. So I invited him over for... let's call it sampling, hehe. And there he was, saying that no one starts with hard hitters right off the bat, he needed a warm-up. Then another. Then another... So after all that, I checked the moonshine in the morning, and we didn't even open it! Long story short, the driver didn't finish the job. I'm not gonna live through this kind of sampling party a second time, so I'll let him taste everything by himself. Can you pass him this bottle? Don't lose it, alright?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 30 minutes after completion of Hidden Layer"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain the item: Bottle of Fierce Hatchling moonshine\n- Go to Woods or Streets of Tarkov\n- Hand over the Bottle of Fierce Hatchling moonshine to BTR Driver"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +20,300 EXP\n- Ragman Rep +0.02\n- 112,000 Roubles\n  - 117,800 Roubles with Intelligence Center Level 1\n  - 128,800 Roubles with Intelligence Center Level 2\n- 2× Safariland Liberator HP 2.0 Hearing Protection Headset (FDE)\n- 2× ECLiPSE RBAV-AF plate carrier (Ranger Green)\n\"So, did'ya deliver the bottle? Huh? Man, this driver guy's such a prick. I love him! Hey, easy there, man, I get it. Listen, some things just shouldn't be talked about right off the bat, the Labyrinth is one of them. I have to consider all the risks that come with this info, so sit tight for a little while.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Bottle of Fierce Hatchling moonshine | 1 | Handover item |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Bottle of Fierce Hatchling moonshine | 1 | Handover item | No |\nIn this quest you have to hand over a Bottle of Fierce Hatchling moonshine to the BTR Driver. Ragman provides one via in-game mail. To complete the second objective, you have to kill a Scav on Woods or Streets of Tarkov."
+    }
+  ]
+}

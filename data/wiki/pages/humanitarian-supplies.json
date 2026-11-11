@@ -1,0 +1,49 @@
+{
+  "title": "Humanitarian Supplies",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Humanitarian_Supplies",
+  "revisionId": 362633,
+  "lastEdited": "2026-09-29T20:44:44Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Humanitarian Supplies is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Our team always works for the good of the people, or at least we try to make it look so. The Blue Helmets peacefully deliver relief supplies to our region, but sometimes, attacks happen on us as well. That’s what happened to two Ural trucks that were carrying UN-marked crates. We wouldn't be upset if not for the delicacy of the cargo, this time crates contained a little help not only for the people but also for the USEC company. You understand that we cannot allow casting a shadow on the United Nations' reputation. Find and wear UN uniform (UNTAR helmet, MF-UNTAR body armor) and teach local scum a lesson. Also, locate the spot where trucks were attacked, mark them with beacons, and bring me several MRE ration packs so I could present them as evidence, just in case. From the intelligence, one of those trucks has to somewhere in the Health Resort area, but there is no info about the other one. I think it's best to look somewhere near the port area, possibly at the construction site.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark the first truck with an MS2000 Marker\n  - (Optional) Locate the first truck that was holding the lost UN cargo on Shoreline\n- Locate and mark the second truck with an MS2000 Marker\n  - (Optional) Locate the second truck that was holding the lost UN cargo on Shoreline\n- Obtain the item: 5 MRE ration packs\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Peacekeeper Rep +0.25\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n- 2× Weapon parts\n- Unlocks purchase of 5.56x45mm Warmageddon at Peacekeeper LL2\n- Unlocks purchase of AK-74 Hexagon 5.45x39 sound suppressor at Skier LL2\n\"I assume you don't need to be reminded that all this is only between us. If the Blue Helmets' reputation gets tarnished, you will have problems too, mercenary.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MRE ration pack | 5 | Handover item | No | Can be bought on the flea market. |\n| MS2000 Marker | 2 | Required | N/A | This item is placed on the UN trucks. When placed, the item is removed from the players' inventory. |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work."
+    }
+  ]
+}

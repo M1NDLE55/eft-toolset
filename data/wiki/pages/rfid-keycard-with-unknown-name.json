@@ -1,0 +1,57 @@
+{
+  "title": "RFID keycard with unknown name",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RFID_keycard_with_unknown_name",
+  "revisionId": 341214,
+  "lastEdited": "2026-04-24T19:21:46Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Lightkeeper after progressing through the story chapter The Ticket and siding with Lightkeeper for 1× TerraGroup \"Blue Folders\" materials",
+    "usage": "Allows access to the Terminal location a single time.",
+    "storage_wallet": "No",
+    "storage_keytool": "No",
+    "storage_doccase": "No",
+    "storage_sicc": "No",
+    "storage_securecont": "No",
+    "node": "67c04dac9320f644db06f45c",
+    "ID": "q_fid_card_dont_escape"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "RFID keycard with unknown name (RFID L.) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A personalized RFID card with a strict design. An exact copy of Kruglov's keycard, but the owner's name has been deliberately scrubbed off. Grants access to the TerraGroup evacuation point reserved for trusted personnel."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market, be sold to traders or destroyed.\n- This item is not lootable from players and can only be placed in a special item slot."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player sided with Lightkeeper."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Port garrison intercom on Shoreline."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- Terminal"
+    }
+  ]
+}

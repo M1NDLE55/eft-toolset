@@ -1,0 +1,61 @@
+{
+  "title": "Dorm room 110 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_110_key",
+  "revisionId": 333394,
+  "lastEdited": "2026-02-02T17:10:07Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks dorm room 110 in the two story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "59136e1e86f774432f15d133",
+    "ID": "mo 110"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 110 key (Dorm 110) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the two-story dormitory with a tag reading \"110\" on it."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the story chapter Accidental Witness"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In warehouse #17 in a locker located in the changing room on the first floor next to the staircase behind the wall paintings. A single key is guaranteed to spawn every raid.\n\n- In warehouse #6 in a locker"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The first floor of the two-story dorms on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- One Safe\n- Possible Fuel conditioner, Metal fuel tank, Secure Flash drive and Diary spawn (on the bed).\n- Possible Car battery on the bedside table.\n- Possible Intelligence folder spawn inside the bedside cabinet.\n- Possible loose Valuable at the bottom of the closet"
+    }
+  ]
+}

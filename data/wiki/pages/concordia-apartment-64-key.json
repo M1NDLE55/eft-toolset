@@ -1,0 +1,51 @@
+{
+  "title": "Concordia apartment 64 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Concordia_apartment_64_key",
+  "revisionId": 331344,
+  "lastEdited": "2026-01-06T14:00:18Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks apartment 64 on the second floor of the Concordia building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a71e922b25f7513905ca20",
+    "ID": "city_key23"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Concordia apartment 64 key (Conc 64) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the premium apartment inside the Concordia building."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to apartment 64 on the second floor of the Concordia building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Provisions, , Other items)\n- Concordia apartment 64 office room key lock location"
+    }
+  ]
+}

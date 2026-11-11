@@ -1,0 +1,56 @@
+{
+  "title": "Reprogrammed keycard for A.P.'s apartment lock (Blue)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Reprogrammed_keycard_for_A.P.'s_apartment_lock_(Blue)",
+  "revisionId": 335803,
+  "lastEdited": "2026-02-15T23:02:57Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "This keycard does not open any lock.",
+    "storage_wallet": "Yes",
+    "storage_keytool": "No",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "68e7d984308332889e0b5e71",
+    "ID": "q_card_unknown_card_apcabinet3"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Reprogrammed keycard for A.P.'s apartment lock (Blue) (A.P. Blue) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A blue TerraGroup Labs keycard reprogrammed using technical data from A.P.'s flash drive. In theory it might open a hidden room in A.P.'s apartment."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This keycard does not open any lock."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "None."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "None."
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| UHF RFID Reader x1; UHF RFID Reader; +; Decrypted Sliderkey flash drive marked with A.P. x1; Decrypted Sliderkey flash drive marked with A.P.; +; TerraGroup Labs keycard (Blue) x1; TerraGroup Labs keycard (Blue); +; TerraGroup \"Blue Folders\" materials x1; TerraGroup \"Blue Folders\" materials | → | Intelligence Center level 1; 4 h 30 minAfter progressing through; the story chapter The Unheard | → | Reprogrammed keycard for A.P.'s apartment lock (Blue) x1; Reprogrammed keycard for A.P.'s apartment lock (Blue) |"
+    }
+  ]
+}

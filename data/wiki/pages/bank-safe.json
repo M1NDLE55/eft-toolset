@@ -1,0 +1,38 @@
+{
+  "title": "Bank safe",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bank_safe",
+  "revisionId": 326958,
+  "lastEdited": "2025-12-06T15:18:13Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "64d11702dd0cd96ab82c3280",
+    "ID": "SafeBank"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Bank safe is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Bigger than the standard Safe, has a 4x4 grid that spawns stacks of Roubles, Dollars and Euros."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "In the Tarbank on Streets of Tarkov."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Icon | Type |\n| Roubles | Money |\n| Dollars | Money |\n| Euros | Money |\n| GP coin | Money |"
+    }
+  ]
+}

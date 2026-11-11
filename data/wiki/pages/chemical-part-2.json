@@ -1,0 +1,52 @@
+{
+  "title": "Chemical - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chemical_-_Part_2",
+  "revisionId": 362231,
+  "lastEdited": "2026-09-26T15:01:26Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Chemical, p. 2"
+  ],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Skier",
+    "previous": "Chemical - Part 1",
+    "leads to": "Chemical - Part 3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Chemical - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Got tired of waiting for you already. The documents that you got from the den of this tosspot weigh quite a bit. Pretty heavy they are. But this is a damn dangerous stuff. And there is no clarity who will be the best buyer for it. And it's not even so much about the profit, as it is about getting some enormous fuckin' problems if we choose the wrong address. So here's the key that you found there as well, and try to dig up further. My guys said it's from a dorm room. And judging from the documents, our deputy chief was seen on the second floor of the first building, the three-story one. Any info you could find in this room can come in very handy, and the prize will be impressive.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain any evidence on Customs that could help with the investigation\n- Hand over the evidence to Skier\n- Locate and obtain any information on Customs that could help with the investigation\n- Hand over the info to Skier"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 518 Euros with Intelligence Center Level 2\n- 2× AK-74 Hexagon 5.45x39 sound suppressor\n- 3× xTG-12 antidote injector\n- Unlocks purchase of AK-74 Hexagon 5.45x39 sound suppressor at Skier LL1\n- Unlocks craft for xTG-12 antidote injector at Medstation level 2\n\"It seems this problem is not solved, but only got more complicated. Well, whatever. Come what may.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Notes |\n| Dorm room 220 key | 1 | Required | Unlocks dorm room 220 in the three-story dorms on Customs where the Sliderkey Secure Flash drive and the Sealed letter with a TG logo are located. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Dorm room 220 key | 1 | Required | N/A | Unlocks dorm room 220 in the three-story dorms on Customs where the Sliderkey Secure Flash drive and the Sealed letter with a TG logo are located. |\n| Sealed letter with a TG logo | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Sliderkey Secure Flash drive | 1 | Handover item | Yes |\nIn this quest you have to find a flash drive and a letter on Customs. They can be found in room 220 on the second floor of the three-story dorms building. A Dorm room 220 key is required to enter it. You get one in the mail from Skier upon accepting this quest.\n\nThe flash drive can be found plugged into the laptop on the desk, and the letter is tucked between the binders on the metal shelf."
+    }
+  ]
+}

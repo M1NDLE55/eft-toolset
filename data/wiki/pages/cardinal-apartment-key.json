@@ -1,0 +1,61 @@
+{
+  "title": "Cardinal apartment key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cardinal_apartment_key",
+  "revisionId": 348044,
+  "lastEdited": "2026-07-19T12:18:21Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "- Unlocks apartment 2 on the second floor of the Cardinal apartment complex on Streets of Tarkov. - Unlocks the locked bedroom in apartment 2 on the second floor of the Cardinal apartment complex on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "68c165f1903341d88b092b2a",
+    "ID": "q_key_from_flat_krug"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Cardinal apartment key (Cardinal) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to an apartment in a luxury residential complex. These apartments once housed TerraGroup's senior executives."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "In the safe inside Kruglov's office. A single key is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Locations",
+      "level": 2,
+      "text": "Doors to apartment 2 and its locked bedroom on the second floor of the Cardinal apartment complex at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Sports bag\n- 1x PC block\n- 2x Toolbox\n- 2x Safe (locked)\n- 1x Weapon locker\n- Loose loot (Valuables, Medical items, , Provisions, Other items)\n- Locked bedroom:\n  - Loose loot (Valuables)\n  - 1x Sports bag\n  - 1x Safe (locked) requiring TerraGroup Labs keycard (Black) to be swiped at the keycard panel behind the painting, while no use gets consumed"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The painting in the bedroom depicts \"The Last Day of Pompeii\" from Karl Pavlovich Bryullov."
+    }
+  ]
+}

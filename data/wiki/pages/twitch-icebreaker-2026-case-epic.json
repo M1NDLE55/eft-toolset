@@ -1,0 +1,38 @@
+{
+  "title": "Twitch Icebreaker 2026 case (Epic)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Twitch_Icebreaker_2026_case_(Epic)",
+  "revisionId": 353551,
+  "lastEdited": "2026-08-14T07:32:21Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Event Reward Loot Container",
+    "weight": "4 kg",
+    "grid": "2x2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Twitch Icebreaker 2026 case (Epic) (Twitch Icebreaker 2026) is a Event Reward Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A case with some epic goodies."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n- Destroyed after unpacking (Right-click \"unpack\")"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "Random surprises."
+    }
+  ]
+}

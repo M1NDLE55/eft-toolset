@@ -1,0 +1,50 @@
+{
+  "title": "Hot Wheels - Let's Try Again",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hot_Wheels_-_Let's_Try_Again",
+  "revisionId": 359391,
+  "lastEdited": "2026-09-13T20:15:22Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "BTR Driver",
+    "previous": "Fail Hot Wheels (+24hr)",
+    "leads to": "Inevitable Response",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hot Wheels - Let's Try Again is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"We've already lost time, but if we wait any longer, the BTR's gonna stall. While you were screwing around, I did some digging and found out where we can get some proper wheels. Go to the reserve military base, the wheels we need are there. They come with rims attached, and they're a proper diameter for the BTR, too. Don't mess it up this time, the deadline's coming up.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark the spare BTR wheels with an MS2000 Marker on Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +13,500 EXP\n- BTR Driver Rep +0.02\n- 84,000 Roubles\n- 3× NIXXOR lens\n\"There you go. It's a pain in the ass to change the wheels, but at least we have spares now. Thanks for your help. And, uh, I'm sorry for being an asshole. I just really can't lose my baby while we're dealing with this emergency.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed on the wheels. When placed, the item is removed from the players' inventory. |\nIn this quest you have to find BTR wheels and mark them with a MS2000 Marker. The wheels can be found in the bigger of the two garage buildings at the repair center (white knight)."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

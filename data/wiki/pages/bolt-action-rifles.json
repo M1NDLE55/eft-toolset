@@ -1,0 +1,41 @@
+{
+  "title": "Bolt-action Rifles",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bolt-action_Rifles",
+  "revisionId": 352769,
+  "lastEdited": "2026-08-09T21:04:10Z",
+  "kind": "skill",
+  "categories": [
+    "Combat skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Combat skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Bolt-action Rifles is a Combat skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The Bolt-action rifles weapon skill is improved by firing and reloading the corresponding weapon type."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Level 7 of this skill is needed for the quest Wet Job - Part 6\n- Level 10 of this skill is needed for the quest Psycho Sniper\n- Level 10 of this skill is needed for the quest Make an Impression"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases reload speed (0.4% per level → +20% at Elite Level)\n- Increases weapon switching speed (0.8% per level → +40% at Elite Level)\n- Reduces weapon recoil (0.3% per level → -15% at Elite Level)\n- Improves weapon ergonomics (0.2% per level → +10% at Elite Level)\n- Elite level: Steady aim for the first 3 seconds with any stamina condition\n- Elite level: Doubles mastering gain"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Landing hits on enemies with bolt-action rifles\n- Reloading bolt-action rifles\n- Cycling the action/Unloading the chambers of bolt-action rifles\n- Completing the quest Shooter Born in Heaven\n- Completing the quest Psycho Sniper"
+    }
+  ]
+}

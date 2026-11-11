@@ -1,0 +1,44 @@
+{
+  "title": "Unique Experience",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Unique_Experience",
+  "revisionId": 361741,
+  "lastEdited": "2026-09-24T12:29:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse, The Lab",
+    "given by": "Prapor",
+    "LL requirement": "4",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Unique Experience is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Soldier! I've got a new job that's right up your alley.I've come across something interesting. A new piece of weaponry. Nobody in Tarkov has seen anything like it before! How'd I get it? Trade secret.But I'll tell you this: the weapon definitely has potential. Still, you know as well as I do that all those specs and proving-ground reports don't mean shit until the thing gets tested in the field.So if you're interested in getting your hands on a truly unique weapon, we can help each other out. We'll sort out the payment. I won't leave you hanging.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 30 targets with an Aklys Defense Velociraptor on Lighthouse or The Lab"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 1× Kalashnikov AK-12 5.45x39 assault rifle\n- Unlocks purchase for Kalashnikov AK-12 5.45x39 assault rifle at Prapor LL4\n- 1× 5.45x39mm BP gs ammo pack (120 pcs)\n- Unlocks craft for 5.45x39mm BP gs at Workbench level 3\n- +4 Light Machine Guns skill levels\n- +4 Heavy Machine Guns skill levels\n\n\"So, it's good, you say? Well then, maybe I can raise the price a little, what do you think?\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "Unlocks barter for .300 Blackout CBJ ammo pack (50 pcs) at Mechanic LL3.\n| Item name | Amount |\n| Aklys Defense Velociraptor .300 Blackout assault rifle | 1 |"
+    }
+  ]
+}

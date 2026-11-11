@@ -1,0 +1,60 @@
+{
+  "title": "Gunsmith Master - Part 7",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_7",
+  "revisionId": 352606,
+  "lastEdited": "2026-08-09T19:59:06Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith 7",
+    "Gunsmith Master 7"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith Master - Part 7 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"This one is for Sniper, it seems that he’s about to set out to the woods somewhere to hunt down villains for a week. Judging from the fact that he packed one hell of a backpack with an MRE, firesteel, batteries, and water. Left it at my place for now. He needs an M1A, fitted with an UltiMAK M8 Forward Optic mount, Nightforce ATACR 7-35x56 scope, Micro T-1 reflex sight, Holosun LS321 tactical device, and a 20-round mag. Ergonomics above 20, recoil sum below 400, and a total weight of 7.3 kg or less.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 37 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an M1A to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +26,600 EXP\n- Mechanic Rep +0.03\n- 500 Euros\n  - 525 Euros with Intelligence Center Level 1\n  - 575 Euros with Intelligence Center Level 2\n- 1× AR-15 Hera Arms CQR pistol grip/buttstock\n- 1× Hera Arms CQR tactical foregrip\n- Unlocks purchase of AR-10 KAC QDC 7.62x51 Muzzle Brake Kit at Mechanic LL3\n- Unlocks purchase of Magpul MOE Carbine rubber buttpad at Peacekeeper LL4\n\"The rifle is ready? Great. I guess you have already figured out that Sniper's real name is Dima, I let it slip a while ago. Not a word about him to anybody, I hope you understand.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "M1A specifications:\n- 60 Durability\n- 20 or more ergonomics\n- 400 or less recoil\n- 7.3 kg or less in weight\n- A magazine with a capacity of at least 20\n- M14 UltiMAK M8 Forward Optic mount\n- Nightforce ATACR 7-35x56 34mm riflescope\n- Aimpoint Micro T-1 reflex sight\n- Holosun LS321 Tactical device"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard M1A from Peacekeeper LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| M1A 7.62x51 20-round magazine | Peacekeeper | LL2 |\n| M1A ProMag Archangel chassis | Mechanic | LL2 (Barter); LL3 |\n| Holosun LS321 Tactical device | Skier | LL3 |\n| M14 UltiMAK M8 Forward Optic mount | Mechanic | LL2 (Barter) |\n| Aimpoint Micro Standard Mount | Peacekeeper | LL1 |\n| Aimpoint Micro T-1 reflex sight | Peacekeeper | LL2 |\n| M14 Leapers UTG 4-Point Locking Deluxe mount | MechanicPeacekeeper | LL2 (Barter); LL3LL2 (Barter) |\n| IEA Mil-Optics KH/F 34mm one-piece magmount | MechanicJaeger | LL2 (Barter)LL3 |\n| Nightforce ATACR 7-35x56 34mm riflescope | Jaeger | LL2 (Barter); LL4 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

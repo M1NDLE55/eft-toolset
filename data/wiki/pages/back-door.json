@@ -1,0 +1,52 @@
+{
+  "title": "Back Door",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Back_Door",
+  "revisionId": 359093,
+  "lastEdited": "2026-09-13T20:10:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Back door"
+  ],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Mechanic",
+    "previous": "Scout",
+    "leads to": "Surplus Goods",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Back Door is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, what do you think of complex technology? I, for example, was always fascinated by this stuff, when one part depends on another, and even works without human participation, well, almost without it. So, I've been told that somewhere on Reserve there is some underground exit, which is activated from somewhere else, but from where exactly - hell knows. Anyhow, It would be great if you sniffed that place out. The base is quite a hell hole as you know, and I am willing to pay generously for any information on how to get out of there safely. I want to send people there to gather military equipment, but I'm afraid they'll just get killed if they don't find that secret exit.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 14 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find the unpowered secret exit on Reserve\n- Survive and extract from the location through the secret exit"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,200 EXP\n- Mechanic Rep +0.02\n- 1,000 Euros\n  - 1,050 Euros with Intelligence Center Level 1\n  - 1,150 Euros with Intelligence Center Level 2\n- 1× SV-98 7.62x54R bolt-action sniper rifle\n\"So the exit works? Excellent. I'm still preparing your reward, so tell me more about the opening mechanism for that bunker door.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "This quest requires you to extract with the \"D-2\" extraction on Reserve.\n\nFirst, turn on the power with a lever in the command part of the underground bunker system. Be aware, activating the lever has the chance to spawn Scav Raiders in the command part of the bunker. Then, press the button on the wall next to the sliding door at the extraction. You need to exit the raid with the \"Survived\" status to get the quest completion. The \"Run Through\" status will not complete the quest. To avoid the \"Run Through\" status, gain at least 200 EXP in raid (by killing or looting) or be in raid for at least 7 minutes before extracting."
+    }
+  ]
+}

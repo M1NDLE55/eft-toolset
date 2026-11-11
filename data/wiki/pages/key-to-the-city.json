@@ -1,0 +1,64 @@
+{
+  "title": "Key to the City",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Key_to_the_City",
+  "revisionId": 359438,
+  "lastEdited": "2026-09-13T20:16:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Ragman",
+    "previous": "Proper Comeback",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Key to the City is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"How's it going, brother? I heard the city's stirring up, collecting souvenirs, reminiscing over old times. And I just got a lead on something like this. They keep these things in museums. In the old days, each city had its own key, which the governor received at the time of establishment. I even saw one on a tour when I was a kid! They don't do that anymore, but Tarkov does have its own key, apparently! When the city was laid out, they made one for historical reference. And I know where to find it! If you bring it back, we'll make a fortune.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only available to buyers of the \"Edge of Darkness\" edition of the game."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the souvenir key to the city on Streets of Tarkov\n- Hand over the found item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +55,000 EXP\n- Ragman Rep +0.02\n- 145,000 Roubles\n  - 152,250 Roubles with Intelligence center Level 1\n  - 166,750 Roubles with Intelligence center Level 2\n- 3× Bottle of Fierce Hatchling moonshine\n\"You got it? Nice! What do those numbers mean? Only the bright minds who know about Tarkov's history will understand that, probably.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Tarkov City souvenir key | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find the Tarkov City souvenir key in the museum on Streets of Tarkov. There are multiple spawns throughout the building."
+    },
+    {
+      "heading": "First floor",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Second floor",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The engraved date (5. August 2016) on the quest item's handle refers to the start of the Closed Alpha of the game."
+    }
+  ]
+}

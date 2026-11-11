@@ -1,0 +1,48 @@
+{
+  "title": "Stimulating Demand",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stimulating_Demand",
+  "revisionId": 360041,
+  "lastEdited": "2026-09-14T00:56:42Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Skier",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Stimulating Demand is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey. Got a little number for ya. One of Knight's lads got in touch with me recently, so I was already gearing up for a new supply line... Keeping the Rogues stocked with gear's only gonna do me good, specially if them smugglers are starting to get a bit too fucking big for their boots! But after the first order of basic supplies and ammo, the whole thing went quiet. Reckon the Rogues think they're all sorted now and have properly dug in at the chalets. So I'm thinking, why not give 'em a little nudge to start buying again, eh? Just make bloody sure none of 'em cottons on that I'm behind it, got me? Heard some important package turned up for them recently. That's what we're after. We need to make it look like Prapor's lot came calling, and we need to put on a proper show. So grab something unmistakably Russian and carry out a textbook raid on the chalets, then relieve 'em of their little box! Bring the box to me, mind. Never know when something like that might come in handy.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 3 with Skier to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 Rogues or The Goons with 7.62x54R caliber weapons on Lighthouse\n- Locate and obtain the cargo package at the Rogue chalets on Lighthouse\n- Hand over the package"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- 28,000 EXP\n- Skier Rep +0.75\n- 1,650 Euros\n  - 1,732 Euros with Intelligence Center Level 1\n  - 1,897 Euros with Intelligence Center Level 2\n- 2× Golden neck chain\n- 2× Glock .45 ACP KRISS G30 MagEx 30-round magazine\n- 2× .45 ACP RIP ammo pack (50 pcs)\n- Unlocks purchase of TDI KRISS Vector Gen.2 .45 ACP submachine gun at Skier LL3\n\"Fucking beautiful! So, you didn't look inside the box, did ya? Good lad, that's exactly what I wanted! Now hand it over. I'll have a look myself.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Box with supplies for Rogues | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nThe cargo package can be found in the black (southern) chalet on Lighthouse. It is located in the basement under a green metal table."
+    }
+  ]
+}

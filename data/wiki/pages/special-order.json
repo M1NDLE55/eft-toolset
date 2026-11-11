@@ -1,0 +1,43 @@
+{
+  "title": "Special Order",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Special_Order",
+  "revisionId": 361691,
+  "lastEdited": "2026-09-24T12:07:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Prapor",
+    "LL requirement": "4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Special Order is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, soldier! Got a job for you that I wouldn't trust to just anyone. Special order, you could say. I need an ice axe. Wipe that look off your face! And keep your mouth shut about this job, or we'll both catch hell. So don't go checking the Flea Market or asking the other traders. You need to find one yourself, quietly. No unnecessary witnesses. Got it? Word is Shturman was seen carrying the right kind of ice axe. The Cultists might've stashed one away in their hideouts, too... But that's unconfirmed. Either way, that's your problem now, not mine! Get this done, and I'll arrange access to a very special weapon, just for you. Ever since the Contract Wars, these things have become almost impossible to get. I'm giving you a one-of-a-kind opportunity here. Don't waste it.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 1 found in raid Red Rebel ice pick to Prapor"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 1× TKPD 9.3x64 carbine (variant Assault)\n- 2× 9.3x64mm FMJ ammo pack (20 pcs)\n- +2 Charisma skill level\n- Unlocks barter for TKPD 9.3x64 carbine (variant Assault) at Prapor LL4\n- Unlocks purchase of 9.3x64mm FMJ at Prapor LL4\n\n\"Good work. And not a word about this to anyone, understood? Better keep your head down for a while, too. If anyone gets too curious, keep them at arm's length. My little gift should help with that.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Red Rebel ice pick | 1 | Handover item | Yes |"
+    }
+  ]
+}

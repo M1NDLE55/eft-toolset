@@ -1,0 +1,48 @@
+{
+  "title": "Riding the Wave",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Riding_the_Wave",
+  "revisionId": 359614,
+  "lastEdited": "2026-09-13T20:19:12Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ragman",
+    "previous": "Reverse Gear",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Riding the Wave is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Heya, brother! I'm not even gonna ask if you've run into those black uniform \"visitors\". I figured you didn't come here by accident. You knew I'd have a job for you on this, didn't you? From every sample that's made its way to me, it's obvious these guys are the real deal. So it's no surprise I've been flooded with people asking for gear with the same features or at least the same camouflage... I'd be a fool to let an opportunity like this slip away. I need a complete inventory of everything they wear. Once I've got that, I can put together my own versions, or maybe even make an exact copy of their whole kit. And don't worry, you'll be the first one to get your hands on it! Just don't let me down, alright?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the found in raid item: First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division)\n- Hand over the found in raid item: Spiritus Systems LV-119 Plate Carrier (Black Division V2)\n- Hand over the found in raid item: Ferro Concepts FCPC V5 Plate Carrier (Black Division)\n- Hand over the found in raid item: Spiritus Systems LV-119 Plate Carrier (Black Division V1)\n- Hand over the found in raid item: Tasmanian Tiger Modular Pack 45 Plus (MultiCam Black)\n- Hand over the found in raid item: Mystery Ranch 2 Day Assault Pack (Black)\n- Hand over the found in raid item: Mystery Ranch NICE Frame Load Sling\n- Hand over the found in raid item: Avon M53A1 gas mask\n- Hand over the found in raid item: Gentex Ops-Core SOTR respirator\n- Hand over the found in raid item: Gatorz Specter MILSPEC ballistic glasses"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 1× NPP KlASS Bagariy plate carrier (EMR)\n- 3× Crye Precision AVS plate carrier (Ranger Green)\n\"Now that's what I'm talking about! Although it's a bit strange the armor plates are missing... but that's just a minor detail. The important thing is you brought me everything I needed. Thanks! Now it's my turn to get to work. Drop by again later, and I'll have something new for you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division) | 1 | Required | Yes | Can be found on Black Division |\n| Spiritus Systems LV-119 Plate Carrier (Black Division V2) | 1 | Required | Yes | Can be found on Black Division |\n| Ferro Concepts FCPC V5 Plate Carrier (Black Division) | 1 | Required | Yes | Can be found on Black Division |\n| Spiritus Systems LV-119 Plate Carrier (Black Division V1) | 1 | Required | Yes | Can be found on Black Division |\n| Tasmanian Tiger Modular Pack 45 Plus (MultiCam Black) | 1 | Required | Yes | Can be found on Black Division |\n| Mystery Ranch 2 Day Assault Pack (Black) | 1 | Required | Yes | Can be found on Black Division |\n| Mystery Ranch NICE Frame Load Sling | 1 | Required | Yes | Can be found on Black Division |\n| Avon M53A1 gas mask | 1 | Required | Yes | Can be found on Black Division |\n| Gentex Ops-Core SOTR respirator | 1 | Required | Yes | Can be found on Black Division |\n| Gatorz Specter MILSPEC ballistic glasses | 1 | Required | Yes | Can be found on Black Division |\n\nIn this quest you have to hand over one of each piece of gear Black Division is wearing to Ragman."
+    }
+  ]
+}

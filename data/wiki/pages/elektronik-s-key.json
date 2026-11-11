@@ -1,0 +1,66 @@
+{
+  "title": "Elektronik's key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Elektronik's_key",
+  "revisionId": 336895,
+  "lastEdited": "2026-03-01T18:51:06Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "usage": "Unlocks apartment 2 on the first floor of the Klimova 14A building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "68e95d71a3d110355b03e529",
+    "ID": "item_key_quest_room_card_programmer"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Elektronik's key (Elektronik) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A standard key, distinguished only by a Mechanic keychain. Seems Elektronik has a sense of humor. And a Tarko figurine supply channel."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as initial equipment during the story chapter The Ticket"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "None."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to apartment 2 on the first floor of the Klimova 14A building at Streets of Tarkov. The entrance is on the backyard side."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Provisions)\n- 1x Drawer"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Physical Bitcoin x1; Physical Bitcoin | → | Mechanic; Mechanic LL2; After progressing through; the story chapter The Ticket | → | Elektronik's key; Elektronik's key |"
+    }
+  ]
+}

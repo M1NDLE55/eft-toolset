@@ -1,0 +1,46 @@
+{
+  "title": "Shootout Picnic",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shootout_Picnic",
+  "revisionId": 361722,
+  "lastEdited": "2026-09-24T12:24:25Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Shootout picnic"
+  ],
+  "infobox": {
+    "location": "Woods, Ground Zero, Customs, Interchange",
+    "given by": "Prapor",
+    "LL requirement": "1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Shootout Picnic is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Still alive, soldier? Atta boy. Means you know a thing or two if you haven't gotten yourself killed yet. I've got another job for you. Some important people have business to take care of in certain parts of Tarkov. Trouble is, the local scum's getting in their way. Can you believe those bastards actually think they own the place? According to my intel, there are around a dozen of them, maybe more. Take care of enough, and the rest will scatter on their own. A seasoned soldier like you shouldn't have any trouble handling a job like this. Get to work.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 15 targets on Woods, Ground Zero, Customs, or Interchange"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Prapor Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence center Level 1\n  - 92,000 Roubles with Intelligence center Level 2\n\"How'd it go? Ah, don't bother, I already know it went well. You're standing here in one piece, aren't you? Those people I mentioned sent word that everything worked out on their end, too. So here's a double reward: one part from me and one from them.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill any 15 targets on Woods, Ground Zero, Customs or Interchange."
+    }
+  ]
+}

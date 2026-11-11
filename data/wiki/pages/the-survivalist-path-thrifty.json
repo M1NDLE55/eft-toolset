@@ -1,0 +1,57 @@
+{
+  "title": "The Survivalist Path - Thrifty",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Thrifty",
+  "revisionId": 359789,
+  "lastEdited": "2026-09-13T20:22:07Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The survivalist path - Thrifty"
+  ],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Jaeger",
+    "previous": "The Survivalist Path - Unprotected but Dangerous",
+    "leads to": "The Survivalist Path - Zhivchik, The Delicious Sausage",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Survivalist Path - Thrifty is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello there! You came right in time, I'm just packing up to go hunting. Do me a favor, not for service, but as a sign of friendship. Arrange a couple of rest spots for my way back: the trip is long, so I'll have to stop for a breather somewhere. The places should be safe, leave a Russian MRE and a bottle of water for each, agreed? At the same time, remember how to survive if you get caught with your pants down. I've got some stashes hidden here and there, for example, but you don't need to know about them yet.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash 1 Iskra ration pack in the ZB-016 bunker on Woods\n- Stash 1 Bottle of water in the ZB-016 bunker on Woods\n- Stash 1 Iskra ration pack in the ZB-014 bunker on Woods\n- Stash 1 Bottle of water in the ZB-014 bunker on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +4,700 EXP\n- Jaeger Rep +0.01\n- 22,000 Roubles\n  - 23,100 Roubles with Intelligence Center Level 1\n  - 25,300 Roubles with Intelligence Center Level 2\n- 2× Phase control relay\n- 1× Metal fuel tank\n- Unlocks purchase of Iskra ration pack at Jaeger LL2\n\"You did it? Thank you. I just got ready for the trip, so you're just in time. See you in a couple of days, fella.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Iskra ration pack | 2 | Required | N/A | Stashed item |\n| Bottle of water (0.6L) | 2 | Required | N/A | Stashed item |\n\nIn this quest you have to stash 1 Bottle of water (0.6L) and 1 Iskra ration pack each in the bunkers ZB-016 and ZB-014 on Woods."
+    },
+    {
+      "heading": "ZB-016",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "ZB-014",
+      "level": 4,
+      "text": ""
+    }
+  ]
+}

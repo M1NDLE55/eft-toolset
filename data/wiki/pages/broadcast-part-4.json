@@ -1,0 +1,50 @@
+{
+  "title": "Broadcast - Part 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Broadcast_-_Part_4",
+  "revisionId": 359130,
+  "lastEdited": "2026-09-13T20:10:57Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Jaeger",
+    "previous": "Broadcast - Part 3",
+    "leads to": "Broadcast - Part 5, Slaughterhouse",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Broadcast - Part 4 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"It's the same story again, a new recording, now with a strange symbol. What the hell is going on? People are being sacrificed. To whom? Why? So many questions, yet no answers. I keep thinking it's the worst we'll ever see, but every time I'm proven wrong. We've fought looters with only money on their minds. Murderers who just want to shoot innocents, too. But at least I understand the motivation there, the beast has defeated the human in their soul. But with what purpose do people become these... I cannot understand this. So, soldier, I'll look for them in the woods, you do the same in the city. Somewhere there must be their hideout. Look for the same symbol, I'm sure we'll see it again.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 27 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the cultist meeting spot on Streets of Tarkov\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +22,600 EXP\n- Jaeger Rep +0.03\n- 94,000 Roubles\n  - 98,700 Roubles with Intelligence Center Level 1\n  - 108,100 Roubles with Intelligence Center Level 2\n- 2× Expeditionary fuel tank\n- Unlocks purchase of .45 ACP RIP at Mechanic LL4\n\"Did you find it? Where? Was there anyone there? What does the symbol mean? Even more questions...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Abandoned factory marked key | 1 | Required | N/A | Used to open the marked room |\nIn this quest you have to find the location of the cultist meeting spot on Streets of Tarkov. The meeting spot is located on the third floor of the northern abandoned factory building in the marked room."
+    }
+  ]
+}

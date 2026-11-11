@@ -1,0 +1,44 @@
+{
+  "title": "Classified Technologies",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Classified_Technologies",
+  "revisionId": 362423,
+  "lastEdited": "2026-09-29T14:10:54Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Skier",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Classified Technologies is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Alright, mate! Picked up a little rumour that, before all this kicked off, some foreign lot tried to smuggle out something valuable through a rat. Didn't go too well, obviously. The thing got stuck somewhere at the Reserve base. Fancy taking a trip over there and having a look? Bring it back here and I'll make it worth your while.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain the package with T-90M Commander control panel on Reserve\n- Hand over the package"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Skier Rep +0.75\n- 1,650 Euros\n  - 1,733 Euros with Intelligence Center Level 1\n  - 1,898 Euros with Intelligence Center Level 2\n\"Knew you could handle it! Here, just like I promised.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| T-90M Commander Control Panel | 1 | Handover item | Yes | The quest item can only be found when this quest is active.; When picked up, it will be placed in the player's quest item inventory.; It will be lost upon death. |\nIn this quest you have to obtain the package with T-90M Commander control panel on Reserve. It is located behind the dismantled rusty pipe in the underground workshop that has to be passed through to reach the \"D2\" extraction."
+    }
+  ]
+}

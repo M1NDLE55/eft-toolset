@@ -1,0 +1,110 @@
+{
+  "title": "Shoreline",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shoreline",
+  "revisionId": 357755,
+  "lastEdited": "2026-09-08T08:13:19Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [],
+  "infobox": {
+    "prev": "Lighthouse, Customs",
+    "next": "Terminal, The Labyrinth, Icebreaker, Lighthouse",
+    "enemies": "Scavs, Sanitar, Partisan, Knight, Big Pipe, Birdeye, Cultists, RUAF",
+    "players": "10-14",
+    "duration": "45 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Shoreline is a location in Escape from Tarkov. It is the fourth map that was added to the game."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The Shoreline area makes up a large part of the outskirts of Tarkov and is located next to the Port. The area houses a partially abandoned village, modern private housing, agricultural fields, long stretches of beach, a boating facility, gas station, weather station, and a cellular tower as well as other commercial facilities. Shoreline's main point of interest is the Azure Coast health resort which consists of several blocks, exclusively powered by a nearby hydroelectric power plant. The resort had previously been used as temporary accommodation for members of TerraGroup and the corporation's associated divisions in preparation for the evacuation of the Tarkov Port."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Shoreline is initially only accessible by transiting. Direct access from the location selection screen is unlocked upon progressing through the story chapter Tour."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": "- Stationary weapons in the form of AGS-30 30x29mm automatic grenade launchers and NSV Utyos 12.7x108 heavy machine guns.\n- Be aware of Border Snipers and Minefields!"
+    },
+    {
+      "heading": "Port Terminal",
+      "level": 3,
+      "text": "The Terminal is guarded by RUAF soldiers and machine gunners. They are neutral towards the player but will open fire when they get shot, and if a player gets too close to the Terminal without presenting an access item at the port garrison intercom. Check our maps to keep a safe distance."
+    },
+    {
+      "heading": "Usable Keys",
+      "level": 2,
+      "text": "| Key Name | Used in Quest | Always unlocked | Balcony Access |\n| Cottage back door key | yes | | |\n| Cottage safe key | | | |\n| Gas station safe key | | yes | |\n| Health Resort east wing office room 107 key | | | |\n| Health Resort east wing office room 108 key | | yes | |\n| Health Resort east wing room 205 key | | | E206 |\n| Health Resort east wing room 206 key | | | E205 |\n| Health Resort east wing room 209 key | | yes | E213 |\n| Health Resort east wing room 213 key | | yes | E209 |\n| Health Resort east wing room 216 key | | yes | |\n| Health Resort east wing room 222 key | | | E226 |\n| Health Resort east wing room 226 key | | | E222 |\n| Health Resort east wing room 306 key | | | E308 |\n| Health Resort east wing room 308 key | | | E306 |\n| Health Resort east wing room 310 key | | | |\n| Health Resort east wing room 313 key | | | E314 |\n| Health Resort east wing room 314 key | | | E313 |\n| Health Resort east wing room 316 key | | | |\n| Health Resort east wing room 322 key | | yes | |\n| Health Resort east wing room 328 key | yes | | |\n| Health Resort management office safe key | | | |\n| Health Resort management warehouse safe key | | | |\n| Health Resort office key with a blue tape | yes | | |\n| Health Resort universal utility room key | | | |\n| Health Resort west wing office room 104 key | | | |\n| Health Resort west wing office room 112 key | yes | | |\n| Health Resort west wing room 203 key | | | W205 |\n| Health Resort west wing room 205 key | | | W203 |\n| Health Resort west wing room 207 key | | yes | |\n| Health Resort west wing room 216 key | | | |\n| Health Resort west wing room 218 key | | | W221/W222 |\n| Health Resort west wing room 219 key | yes | | |\n| Health Resort west wing room 220 key | yes | | |\n| Health Resort west wing room 221 key | | | W218/W222 |\n| Health Resort west wing room 222 key | | | W218/W221 |\n| Health Resort west wing room 301 key | | | W304 |\n| Health Resort west wing room 303 key | | yes | |\n| Health Resort west wing room 306 key | yes | | |\n| Health Resort west wing room 309 key | | yes | |\n| Health Resort west wing room 321 safe key | | | |\n| Health Resort west wing room 323 key | | yes | |\n| Health Resort west wing room 325 key | | yes | |\n| HEP station storage room key | | | |\n| Knossos LLC facility key | yes | | |\n| SMW car key | | | |\n| Voron's hideout key | | | |\n| Weather station safe key | | yes | |"
+    },
+    {
+      "heading": "Bosses",
+      "level": 2,
+      "text": "Seasonal change: Black Division can occasionally roam through the map. They do not have a fixed spawn location and have to be expected everywhere.\n| Name | Location | Notable equipment | Followers |\n| Sanitar | In the east and west wing of the health resort; At the port/pier area; Near the cottages | Keycard with a blue marking; Sanitar's bag | 3 heavily armed and armored guards |\n| Partisan | Has to be expected everywhere | Partisan's bag; AK skeletonized stock (Customized); Red Rebel ice pick | None |\n| Knight | At the weather station on the hill in the southeast. | Death Knight mask; Crye Precision CPC plate carrier (Goons Edition) | Big Pipe, Birdeye |\n| Big Pipe | At the weather station on the hill in the southeast. | Milkor M32A1 MSGL 40mm grenade launcher; Big Pipe's smoking pipe; Big Pipe's bandana; S&S Precision PlateFrame plate carrier (Goons Edition) | Knight, Birdeye |\n| Birdeye | At the weather station on the hill in the southeast. | Mystery Ranch NICE COMM 3 BVS frame system (Coyote); LBT-1961A Load Bearing Chest Rig (Goons Edition) | Knight, Big Pipe |"
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "To locate the extractions use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Admin Basement | Scav | yes | no | - | |\n| Climber's Trail | PMC | yes | no | Red Rebel ice pick; Paracord; No armor vest equipped | |\n| East Wing Gym Entrance | Scav | yes | no | - | |\n| Lighthouse | Scav | yes | no | - | |\n| Mountain Bunker | All | yes | no | Note with code word Heartbeat; Note with code word Heartbeat | |\n| Path to Lighthouse | PMC | yes | no | - | |\n| Pier Boat | PMC | no | no | Green flare = Open | |\n| Railway Bridge | PMC | yes | no | - | |\n| Road to Customs | All | yes | no | - | |\n| Road to North V-Ex | PMC | yes | yes | 5000 Roubles per player; Maximum of 5 players | The fee amount is influenced by your Scav karma.; There are border snipers beyond the vehicle. |\n| Ruined Road | Scav | yes | no | - | |\n| Smugglers' Path (Co-op) | All | yes | no | Scav + PMC | |\n| Tunnel | PMC | yes | no | - | |"
+    },
+    {
+      "heading": "Transits",
+      "level": 2,
+      "text": "| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Transit to Icebreaker | PMC | yes | no | Only available 1 min after raid start; Sudak-Tudak marine repair kit per player; Maximum of 3 players | At the pier; Has to be unlocked through the story chapter Boreas |\n| Transit to Labyrinth | PMC | yes | no | Only available 1 min after raid start; Labrys access keycard per player | In the basement of the health resort west wing; Knossos LLC facility key required |\n| Transit to Lighthouse | All | yes | no | Only available 1 min after raid start | In front of the Path to Lighthouse extraction |\n| Transit to Terminal | PMC | yes | no | Only available 1 min after raid start in the time period of 21:00-6:00; Reprogrammed RFID keycard with Mr. Kerman's hash codes + Secure container Alpha-1 with TerraGroup evidence; or; RFID keycard with unknown name; or; Reprogrammed RFID keycard with Prapor's hash codes; or; Prapor's letter for the port checkpoint; per player | Requires presenting the access item at the port garrison intercom to not get shot |"
+    },
+    {
+      "heading": "Maps",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Interactive Map",
+      "level": 3,
+      "text": "Click for fullscreen. Separate map page here."
+    },
+    {
+      "heading": "3D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "2D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "2D Map Health Resort",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ingame Map - North bottom",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ingame Map Health Resort - North bottom",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The location was first expanded with patch 0.5.0.811 on December 26, 2017.\n- The location was completely reworked and expanded with patch 0.14.0.0.28333 on December 27, 2023.\n- The health resort in-universe is called the \"Azure Coast\" resort, or alternatively the \"Côte d’Azur\" resort.\n- This location is based on the abandoned sanatorium \"Strelna\" which is located near St. Petersburg.\n\n- Link to the location on Google Maps"
+    }
+  ]
+}

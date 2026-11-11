@@ -1,0 +1,61 @@
+{
+  "title": "Dorm room 203 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_203_key",
+  "revisionId": 325271,
+  "lastEdited": "2025-11-24T21:16:47Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks dorm room 203 in the three-story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5938504186f7740991483f30",
+    "ID": "Общага1 203"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 203 key (Dorm 203) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the three-story dormitory with a tag reading \"203\" on it."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a mandatory key for Shaking Up the Teller"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Inside a red mug in dorm room 214.\n\n- Warehouse #4 at the crane yard, on a table in the northern part of the top floor.\n\n- Warehouse #5 at the crane yard, on the table with the lamp near a forklift.\n\n- Warehouse #6 next to the fuel silos, on a table in the workshop in the southern part of the second floor."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor of the three-story dorms on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Sports bag"
+    }
+  ]
+}

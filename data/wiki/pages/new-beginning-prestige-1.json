@@ -1,0 +1,50 @@
+{
+  "title": "New Beginning (Prestige 1)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/New_Beginning_(Prestige_1)",
+  "revisionId": 359494,
+  "lastEdited": "2026-09-13T20:17:08Z",
+  "kind": "quest",
+  "categories": [
+    "Quests",
+    "Table Progress Tracking"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Lab",
+    "given by": "Ragman",
+    "related2": "New Beginning (Prestige 2)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "New Beginning (Prestige 1) is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello my brother! So how's it hanging? Not bored yet? I know what'll rev you up. The effect is out of this world! Hey, don't get the wrong idea, it's nothing that was illegal in our past lives. Long story short, there are some special people making lists of the realest alphas in Tarkov. And I happen to know these special people. Rarely do I get to meet such influential figures in my life, that's for sure. With guys like that, you gotta do business in an exceptional fashion, not a single fuck-up. You mess up, you lose your chance to live a happy life ever after, if you catch my drift. Okay, so I can see you're clearly interested in finding out what this chad list is for. Tell you what, I have no fucking clue. I sure wish they'd tell me though! Anyway, you yourself can make it on this list. All you gotta do is prove you're worthy. They gave me a mission checklist, here ya go.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 25 to start this quest.\n- Must have no Prestige."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 50 Scavs\n- Survive and extract from The Lab\n- Hand over any PMC figurine\n- Hand over any Scav figurine\n- Hand over any Boss figurine\n- Hand over any Trader figurine"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Ragman Rep +0.01\n- 100,000 Roubles\n  - 105,000 Roubles with Intelligence Center Level 1\n  - 115,000 Roubles with Intelligence Center Level 2\n\"I'm telling you, you're one worthy motherfucker. They are already aware of your progress.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| BEAR operative figurine, Den figurine, Duck figurine, Walking Tank figurine, USEC operative figurine | Any PMC figurine | 1 | Handover item | No |\n| Hideout Cat figurine, Elvisvista figurine, Mastichin figurine, Politician Mutkevich figurine, Ryzhy figurine, Scav figurine | Any Scav figurine | 1 | Handover item | No |\n| Cultist figurine, Ded Moroz figurine, Killa figurine, Reshala figurine, Tagilla figurine | Any boss figurine | 1 | Handover item | No |\n| BTR figurine, Fence figurine, Jaeger figurine, Lightkeeper figurine, Mechanic figurine, Peacekeeper figurine; Prapor figurine, Ragman figurine, Ref figurine, Skier figurine, Therapist figurine | Any trader figurine | 1 | Handover item | No |"
+    }
+  ]
+}

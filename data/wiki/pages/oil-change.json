@@ -1,0 +1,49 @@
+{
+  "title": "Oil Change",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Oil_Change",
+  "revisionId": 359527,
+  "lastEdited": "2026-09-13T20:17:43Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Icebreaker",
+    "given by": "Prapor",
+    "leads to": "Peaceful Atom",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Oil Change is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Heya there, warrior! Since you already know about my little helicopter secret, I've got a job for you. If you want my bird to keep picking you up from the ship, it needs regular maintenance. Remember that special lubricant you brought me? You won't find that stuff in Tarkov, but there should still be some supplies left on the Icebreaker. Go take a look, check the helipad and storage areas. Anything you find in cans, bring it back to me. You've got your own interest in this too, so you won't be doing it for nothing. And if you manage to pull together a decent stock, I'll even pay extra.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Hand over the hard drives from compartment C-1 on Icebreaker to Mechanic in the Boreas story chapter."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 5 AMG-10 hydraulic fluid in raid\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +32,000 EXP\n- 330,000 Roubles\n  - 346,500 Roubles with Intelligence Center Level 1\n  - 379,500 Roubles with Intelligence Center Level 2\n- Unlocks barter for Kalashnikov AK-308 7.62x51 assault rifle at Prapor LL1\n\"Alright, you handled that job well. I'll give you that. Maybe things between us will keep going smooth, just don't forget your reputation and don't even think about screwing me over. You're dismissed for now, soldier.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| AMG-10 hydraulic fluid | 5 | Handover item | Yes |"
+    }
+  ]
+}

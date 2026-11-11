@@ -1,0 +1,49 @@
+{
+  "title": "Make Amends - Security",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Make_Amends_-_Security",
+  "revisionId": 359468,
+  "lastEdited": "2026-09-13T20:16:41Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Mechanic",
+    "leads to": "Make Amends - Sweep Up",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Make Amends - Security is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"These are difficult times we live in, indeed. I can help you regain Lightkeeper's trust. I don't see the point in having a conflict. So, he wants wireless cameras placed around the perimeter of the Rogue base, apparently, for security purposes. Try to stay away from the base itself - I don't think Rogues know that you're acquainted with their friend.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Getting the Digital secure DSP radio transmitter decoded the second time."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Place a WI-FI Camera at the yellow bus on the southern bridge approaching the water treatment plant on Lighthouse\n- Place a WI-FI Camera at the yellow bulldozer in the south-eastern part of the water treatment plant on Lighthouse\n- Place a WI-FI Camera at the police truck in the western part of the water treatment plant on Lighthouse\n- Place a WI-FI Camera at the army truck near the industrial zone in the northern part of the water treatment plant on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.01\n\"The cameras are set up, the signal is coming through. Lightkeeper is happy, which is great news.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera | 4 | Required | N/A | Can be purchased from Mechanic LL1. |\nIn this quest you have to place 4 WI-FI Cameras at different vehicles around the water treatment plant on Lighthouse."
+    }
+  ]
+}

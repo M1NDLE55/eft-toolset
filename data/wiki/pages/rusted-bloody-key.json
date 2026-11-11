@@ -1,0 +1,76 @@
+{
+  "title": "Rusted bloody key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rusted_bloody_key",
+  "revisionId": 355930,
+  "lastEdited": "2026-08-25T08:13:14Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a door on the fourth floor of the Klimova 16A building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "No",
+    "storage_doccase": "No",
+    "storage_sicc": "No",
+    "storage_securecont": "No",
+    "node": "64d4b23dc1b37504b41ac2b6",
+    "ID": "city_key42"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Rusted bloody key (Rusted) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A rusted bloody key, inscribed on it is: \"He who holds this key shall wander for eternity\"."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market\n- Cannot be put inside secure containers"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest The Door"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "Inside the Klimov shopping mall, on the first floor on a pegboard underneath the escalators. It can appear at both spawn locations in the same raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door on the fourth floor of the Klimova 16A building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Keys\n- Valuables\n- Medical supplies\n- Info items\n- Tools\n- Flammable materials\n- Medical items\n- Stimulants\n- Drinks\n\n- M9A3 spawn\n- M870 spawn\n- Mosin 7.62x54R bolt-action rifle (Sniper) spawn"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| Pointy guy figurine x1; Pointy guy figurine | → | Cultist Circle; Unique Sacrifice; 1 h 6 min | → | Rusted bloody key x1; Rusted bloody key |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This key is a direct reference to a key of the same name featured in the game Silent Hill 4: The Room."
+    }
+  ]
+}

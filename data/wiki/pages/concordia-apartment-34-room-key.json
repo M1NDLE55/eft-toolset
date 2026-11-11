@@ -1,0 +1,51 @@
+{
+  "title": "Concordia apartment 34 room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Concordia_apartment_34_room_key",
+  "revisionId": 273886,
+  "lastEdited": "2024-03-10T16:20:04Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the bedroom in apartment 34 on the third floor of the Concordia building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "64ccc1d4a0f13c24561edf27",
+    "ID": "city_key31"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Concordia apartment 34 room key (Conc 34) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the rooms in apartment 34 inside the Concordia building."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Drawers\n- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Bedroom door in apartment 34 on the third floor of the Concordia building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Electronics, Provisions, )"
+    }
+  ]
+}

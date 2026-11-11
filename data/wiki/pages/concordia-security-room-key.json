@@ -1,0 +1,56 @@
+{
+  "title": "Concordia security room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Concordia_security_room_key",
+  "revisionId": 313377,
+  "lastEdited": "2025-05-13T11:04:01Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the security room in the parking garage of the Concordia building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39c7964283b5e9c56b280",
+    "ID": "city_key5"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Concordia security room key (Conc sec.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the security room inside the Concordia building."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Surveillance"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door in the basement parking garage of the Concordia building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x PC block\n- 1x Safe\n- Loose loot (Weapons, Weapon mods)"
+    }
+  ]
+}

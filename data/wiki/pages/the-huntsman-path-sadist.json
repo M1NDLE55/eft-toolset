@@ -1,0 +1,49 @@
+{
+  "title": "The Huntsman Path - Sadist",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Sadist",
+  "revisionId": 359764,
+  "lastEdited": "2026-09-13T20:21:42Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Jaeger",
+    "related": "A Difficult Choice",
+    "reqkappa": "No, but a subsequent quest Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Sadist is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, kid. Something nostalgic came over me. I remembered how I walked along the coast, it was beautiful there, the waves roll in, the sun, the beach, and the sunsets there were outstanding, and now what? The smell of rot and desolation everywhere, can't even breathe properly in the city... And on top of all that, a new moron showed up. They call him Sanitar. This scum conducts experiments on people and perhaps does even more terrible things. You can't leave it like this, such people.. such abominations should not walk our ground. The world will only become cleaner. Deal with this.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate Sanitar"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +16,300 EXP\n- Jaeger Rep +0.02\n- 115,000 Roubles\n  - 120,750 Roubles with Intelligence Center Level 1\n  - 132,250 Roubles with Intelligence Center Level 2\n- 1× Trijicon REAP-IR thermal scope\n- 4× 12/70 AP-20 ammo pack (25 pcs)\n- 2× Surv12 field surgical kit\n\"You did the right thing. Even if others say that Sanitar did good deeds, he brought much more evil. Don't believe those people's lies. I've seen people like Sanitar before: once they go crazy, there's no turning back. You can only shoot them like rabid dogs.\""
+    },
+    {
+      "heading": "Failure Penalty",
+      "level": 2,
+      "text": "- Jaeger Rep -0.1\n\"So you believed that woman? You do realise that she's just deceiving you for her own benefit? Do you think that because Sanitar treats some people, he can't kill others? You've completely gone insane with that war or yours, can't distinguish black from white. Get out of my sight, I want to be alone.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "By completing A Difficult Choice, you will fail and lose access to this quest.\n\nIn this quest you have to kill Sanitar."
+    }
+  ]
+}

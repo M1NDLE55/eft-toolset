@@ -1,0 +1,55 @@
+{
+  "title": "RB-MP22 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-MP22_key",
+  "revisionId": 347137,
+  "lastEdited": "2026-06-18T16:25:44Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-MP22"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽69,000",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80cab086f77440535be201",
+    "ID": "rezbase_key_ptor2_craft2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-MP22 key (RB-MP22 key) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the Federal State Reserve Agency base Service and Repair Center workshop rooms."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Second floor of the Western Repair Point Building marked with a white knight on Reserve. (Highlighted in green)"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Two Weapon racks (AK-74N, AKS-74U, AKS-74N, AKS-74UB, AKS-74UN)\n- 1-3 Wooden Ammo Box\n- 1-3 Toolbox\n- Possible 6-STEN-140-M military battery\n- Loose loot (Tools, Weapon mods)"
+    }
+  ]
+}

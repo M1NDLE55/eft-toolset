@@ -1,0 +1,100 @@
+{
+  "title": "Ground Zero",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ground_Zero",
+  "revisionId": 358836,
+  "lastEdited": "2026-09-11T20:16:02Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [],
+  "infobox": {
+    "prev": "Streets of Tarkov",
+    "next": "Streets of Tarkov",
+    "enemies": "Level <21: Scavs, Level 21+: Scavs, Cultists",
+    "players": "Level <21: 9-10, Level 21+: 9-12",
+    "duration": "30 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Ground Zero is a location in Escape from Tarkov. It is the tenth map that was added to the game."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The business center of Tarkov. This is where TerraGroup was headquartered. This is where it all began. The area has yet again become a hot zone since the early days of the conflict."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Matchmaking on this location is divided into beginners (Level <21) and experienced players (Level 21+). For groups, matchmaking is based on the highest level player in the group.\n\nIn experienced matchmaking there are the following differences:\n- Chance to find rare loot\n- Increased Scavs difficulty\n- Cultists can appear"
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": "- Stationary weapons in the form of AGS-30 30x29mm automatic grenade launchers and NSV Utyos 12.7x108 heavy machine guns.\n- Be aware of Minefields, Claymores and Border Snipers!"
+    },
+    {
+      "heading": "Usable Keys",
+      "level": 2,
+      "text": "| Key Name | Used in Quest |\n| TerraGroup science office key | yes |\n| Underground parking utility room key | |\n| Unity Credit Bank cash register key | |"
+    },
+    {
+      "heading": "Bosses",
+      "level": 2,
+      "text": "Seasonal change: Black Division can occasionally roam through the level 21+ version of the location. They do not have a fixed spawn location and have to be expected everywhere."
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "To locate the extractions use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Emercom Checkpoint | All | yes | no | - | |\n| Mira Ave (Flare) | PMC | yes | no | Shoot a green flare into the sky while inside the signal flare area. If the flare doesn't reach a certain height, the extraction won't open.; Flares:; Handheld RSP-30 green flare; Signal pistol fired 26x75mm green flare; The Scav body leaned against the yellow bus at the extraction spawns one flare every raid.; Only one person amongst a lobby-made group needs to shoot a flare to open the extraction for all members of the group. | Upon entering the signal flare area, a notification will pop up in the bottom right corner of the screen:; If the flare was fired correctly, a new notification pops up:; Signal flare area and extract zone map |\n| Nakatani Basement Stairs | All | yes | no | - | In the basement of the Nakatani building. |\n| Police Cordon V-Ex | PMC | yes | yes | 5000 Roubles per player; Maximum of 4 players | The fee amount is influenced by your Scav karma.; There are border snipers beyond the vehicle. |\n| Scav Checkpoint (Co-op) | All | yes | no | Scav + PMC |\n| Tartowers Sales Office | All | yes | no | Note with code word Adaptation; Note with code word Adaptation | |"
+    },
+    {
+      "heading": "Transits",
+      "level": 2,
+      "text": "| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Transit to Streets of Tarkov | All | yes | no | Only available 1 min after raid start | Next to the Mira Ave extraction |"
+    },
+    {
+      "heading": "Maps",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Interactive Map",
+      "level": 3,
+      "text": "Click for fullscreen. Separate map page here."
+    },
+    {
+      "heading": "3D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "2D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ingame Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ingame Underground Map - North left",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- In cheater report reward messages, Ground Zero is called \"Sandbox\". This is a leftover from development."
+    }
+  ]
+}

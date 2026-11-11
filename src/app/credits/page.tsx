@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
+import wikiSnapshot from "../../../data/wiki/manifest.json";
 
 export const metadata: Metadata = {
   title: "Credits",
@@ -85,9 +86,11 @@ const sections: { heading: string; content: ReactNode }[] = [
           page it came from.
         </p>
         <p>
-          <code>get_wiki_page</code> reads one page at a time through the wiki&apos;s MediaWiki API, names EFT Toolset
-          in its requests, and keeps each page for an hour. It doesn&apos;t scrape the wiki&apos;s web pages. We plan
-          to read the wiki from its published XML dump instead, so pages come from a copy rather than live requests.
+          <code>get_wiki_page</code> reads a copy of the wiki built from the XML database dump that Fandom publishes
+          for download, currently the dump of {wikiSnapshot.snapshotDate.slice(0, 10)}. It makes no requests to the
+          wiki: the copy is updated by downloading a newer dump. It keeps the {wikiSnapshot.pages.toLocaleString("en-US")}{" "}
+          pages on quests, bosses, maps, keys, traders, skills, mechanics, and lore, and leaves out item, weapon, and
+          ammo pages, whose stats come from tarkov.dev.
         </p>
       </>
     ),

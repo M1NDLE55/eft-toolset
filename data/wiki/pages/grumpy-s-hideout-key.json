@@ -1,0 +1,61 @@
+{
+  "title": "Grumpy's hideout key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Grumpy's_hideout_key",
+  "revisionId": 360589,
+  "lastEdited": "2026-09-18T18:49:50Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks Grumpy's hideout inside the power station on Interchange.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "664d3dd590294949fe2d81b7",
+    "ID": "Arena_interchange_key2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Grumpy's hideout key (Grumpy) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key that unlocks the room located at the power station next to the ULTRA mall. Belonged to one of the Arena gladiators by the name \"Grumpy\"."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- Can only be bartered from Ref LL2"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Grumpy's hideout inside the power station on Interchange."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Green keycard spawn location\n- RB-MP21 key spawn location\n- Loose loot (Armor plates, )\n- 2x Jacket\n- 1x Sports bag\n- Possible CMMG Mk47 Mutant 7.62x39 assault rifle (variant Mace)\n- Possible Desert Tech MDR 7.62x51 assault rifle (variant Killtube)\n- Possible Lone Star TX-15 DML 5.56x45 carbine (variant D-WARRIOR)\n- Possible FN P90 5.7x28 submachine gun (variant DEVGRU)\n- Possible modified Kalashnikov AKS-74UN 5.45x39 assault rifle\n- Possible modified SIG MCX-SPEAR 6.8x51 assault rifle\n- Possible modified AS VAL 9x39 special assault rifle\n- Possible modified Kalashnikov AKMN 7.62x39 assault rifle\n- Possible modified SIG MCX .300 Blackout assault rifle\n- Possible modified Degtyarev RPDN 7.62x39 machine gun\n- Possible modified FN SCAR-H 7.62x51 assault rifle\n- Possible modified HK 416A5 5.56x45 assault rifle\n- Possible modified TDI KRISS Vector Gen.2 9x19 submachine gun\n- Possible modified FN P90 5.7x28 submachine gun\n- Possible Vulkan-5 LShZ-5 bulletproof helmet (Black)\n- Possible Rys-T assault helmet (Black)\n- Possible Altyn assault helmet (Olive Drab)\n- Possible Crye Precision AirFrame helmet (Tan)\n- Possible Ops-Core FAST MT Super High Cut helmet (Black)\n- Possible Ops-Core FAST MT Super High Cut helmet (Urban Tan)\n- Possible Peltor Tactical Sport headset\n- Possible Walker's XCEL 500BT Digital headset\n- Possible Peltor ComTac IV Hybrid headset (Coyote Brown)\n- Possible OPSMEN Earmor M32 headset\n- Possible 5.11 Tactical Hexgrid plate carrier\n- Possible LBT-6094A Slick Plate Carrier (Black)\n- Possible LBT-6094A Slick Plate Carrier (Olive Drab)\n- Possible LBT-6094A Slick Plate Carrier (Coyote Tan)\n- Possible HighCom Trooper TFO body armor (MultiCam)\n- Possible BNTI Zhuk body armor (EMR)\n- Possible BNTI Kirasa-N body armor\n- Possible BNTI Gzhel-K body armor\n- Possible MF-UNTAR body armor\n- Possible DRD body armor"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Lega Medal x1; Lega Medal; +; GP coin x100; GP coin | → | Ref; Ref LL2 | → | Grumpy's hideout key; Grumpy's hideout key |"
+    }
+  ]
+}

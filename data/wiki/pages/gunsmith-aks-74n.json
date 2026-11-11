@@ -1,0 +1,59 @@
+{
+  "title": "Gunsmith - AKS-74N",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_AKS-74N",
+  "revisionId": 356797,
+  "lastEdited": "2026-08-29T20:28:32Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith AKS-74N"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith - AKS-74N is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I have two neural networks, one scans the faces on the cameras and compares them with the database, and the other one monitors cryptocurrency trading and reacts to it. Today I've decided to create one more, which will monitor the temperature, humidity, pressure, and other parameters of my hideout, and among other things — respond to my mood. Let's see how it turns out when I'm done. There is an order for AKS-74N with Zenit parts. Ergonomics should be over 52, recoil sum less than 275, and the gun should be taking up no more than 10 slots. Now for the most important part — the kit itself. We need a B-30 handguard, RK-0 foregrip, B-33 dust cover, RK-3 pistol grip, PT-3 stock, Klesch-2IKS illuminator, DTK-1 brake, and the newer AK-12 magazine, basically Zenit all around. Perhaps this is a gift for a former Saint Petersburg resident.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 17 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an AKS-74N to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,600 EXP\n- Mechanic Rep +0.02\n- 75,000 Roubles\n  - 78,750 Roubles with Intelligence Center Level 1\n  - 86,250 Roubles with Intelligence Center Level 2\n- 2× AKS-74U CAA XRSU47SU tactical handguard\n- 2× AK-74 thread type JMac Customs RRD-4C multi-caliber muzzle brake\n- 2× 5.45x39mm BS gs ammo pack (30 pcs)\n\"So, is the Zenit AK ready? Great, leave it on that crate, thank you. You can come over for the next order tomorrow, if you want.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "AKS-74N specifications:\n- 60 Durability\n- 275 or less recoil\n- 52 or more ergonomics\n- 10 or fewer cells\n- AK Zenit B-30 handguard with B-31S upper handguard rail\n- Zenit RK-0 tactical foregrip\n- AK-12 5.45x39 30-round magazine\n- Zenit Klesch-2IKS IR illuminator with laser\n- AK Zenit DTK-1 7.62x39/5.45x39 muzzle brake\n- AK Zenit RK-3 pistol grip (Black)\n- AKS-74/AKS-74U Zenit PT Lock + AK Zenit PT-3 \"Klassika\" stock\n- AK Zenit B-33 dust cover"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard AKS-74N from Prapor LL2.\n- Make sure to use the correct AK-12 5.45x39 30-round magazine, not the AK-12 5.45x39 early model 30-round magazine.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Icon | Attachment | Sold By | Loyalty Level |\n| AKS-74/AKS-74U Zenit PT Lock | AKS-74/AKS-74U Zenit PT Lock | Skier | LL2 |\n| AK Zenit PT-3 \"Klassika\" stock | AK Zenit PT-3 \"Klassika\" stock | Skier | LL3 |\n| AK Zenit RK-3 pistol grip | AK Zenit RK-3 pistol grip (Black) | Skier | LL3 |\n| AK Zenit B-33 dust cover | AK Zenit B-33 dust cover | Skier | LL3 |\n| AK Zenit DTK-1 7.62x39/5.45x39 muzzle brake | AK Zenit DTK-1 7.62x39/5.45x39 muzzle brake | Skier | LL3 |\n| AK Zenit B-30 handguard with B-31S upper handguard rail | AK Zenit B-30 handguard with B-31S upper handguard rail | MechanicSkier | LL2 (Barter)LL4 |\n| Zenit Klesch-2IKS IR illuminator with laser | Zenit Klesch-2IKS IR illuminator with laser | Skier | LL2 |\n| Zenit RK-0 tactical foregrip | Zenit RK-0 tactical foregrip | Skier | LL3 |\n| AK-12 5.45x39 30-round magazine | AK-12 5.45x39 30-round magazine | Prapor | LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

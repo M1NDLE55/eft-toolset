@@ -1,0 +1,28 @@
+{
+  "title": "PMC body",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PMC_body",
+  "revisionId": 358612,
+  "lastEdited": "2026-09-10T22:25:34Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "6582e6d7b14c3f72eb071420",
+    "ID": "PMC_dead"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "PMC body is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Corpse of a deceased PMC. A 5x5 loot container that spawns weapons, weapon mods, gear, provisions and barter items."
+    }
+  ]
+}

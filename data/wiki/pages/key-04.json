@@ -1,0 +1,56 @@
+{
+  "title": "Key 04",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Key_04",
+  "revisionId": 314176,
+  "lastEdited": "2025-06-06T20:58:33Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a door in spawn chamber 4 in The Labyrinth.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "No",
+    "node": "679baa9091966fe40408f149",
+    "ID": "item_key_labyrinth_spawn_04"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Key 04 (Key 04) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The engraving on this key is barely readable: it's either the number 4 or the Russian letter Ч. Could be useful for surviving the Labyrinth."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "Different locations in spawn chamber 4 inside The Labyrinth."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Spawn chamber 4 inside The Labyrinth."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "Way to the lever that disables the shotgun trap."
+    }
+  ]
+}

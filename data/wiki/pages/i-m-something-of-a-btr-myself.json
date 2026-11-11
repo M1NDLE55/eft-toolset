@@ -1,0 +1,44 @@
+{
+  "title": "I'm Something of a BTR Myself",
+  "url": "https://escapefromtarkov.fandom.com/wiki/I'm_Something_of_a_BTR_Myself",
+  "revisionId": 362103,
+  "lastEdited": "2026-09-24T19:46:53Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "BTR Driver",
+    "previous": "Honest Review",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "I'm Something of a BTR Myself is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The Scavs at Lighthouse are getting a little too damn bold. They won't let me work in peace. They try to ambush my passengers at the stops, and they're even looting the stops themselves! Naturally, they do it when the BTR isn't around, so there's nobody there to teach them a lesson. Maybe you could help me out? We need to scare them off, or better yet, make it clear that the BTR is here on this stretch of coast for the long haul. I can't be here all the time myself. I've got business in Priozersk and in the city, but you could make it look like I'm still around! Just use the same caliber my coax gun does. Once you scare the shit out of them, they'll probably get used to how things work around here now.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 Scavs with any 7.62x54R caliber weapon on Lighthouse\n- Report back to the BTR Driver"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 2× VPX Flash Storage Module\n- 2× Virtex programmable processor\n- 2× Military flash drive\n\"Well shit, you saved my ass, dude! My passengers are already asking where I got a second BTR from, since I'm somehow in two places at once... Here, take this. I found it recently at my old depot base. Pulled it out of the basement there.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 15 Scavs on Lighthouse using a 7.62x54mmR weapon."
+    }
+  ]
+}

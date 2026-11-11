@@ -1,0 +1,60 @@
+{
+  "title": "Factions",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Factions",
+  "revisionId": 358437,
+  "lastEdited": "2026-09-10T18:27:04Z",
+  "kind": "character",
+  "categories": [
+    "Escape from Tarkov",
+    "Factions"
+  ],
+  "redirects": [],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Factions are organized groups active in the region. The most active forces in the Norvinsk region are two private military companies, hired by the sides of the initial conflict."
+    },
+    {
+      "heading": "BEAR",
+      "level": 2,
+      "text": "BEAR\nAllegedly created by a direct order of the Russian government, is employed by the Norvinsk region officials to uncover any evidence of the TerraGroup illicit activities."
+    },
+    {
+      "heading": "USEC",
+      "level": 2,
+      "text": "USEC\nEmployed by notorious TerraGroup international corporation, vigorously engages in armed clashes, hindering the investigation of TerraGroup activities, carried on by local authorities. Moreover, according to intelligence agencies, USEC provides armed cover to illegal work and research of the foreign company."
+    },
+    {
+      "heading": "Scavs",
+      "level": 2,
+      "text": "Scavs\nCivilians, gang members, and other miscreants who have taken up arms to carve out a niche for themselves in the war-torn Tarkov. Untrained, poorly equipped, they are nonetheless numerous and a significant threat to anyone who stands in their way."
+    },
+    {
+      "heading": "Scav Raiders",
+      "level": 2,
+      "text": "Scav RaidersShady group of armed people, according to rumors, consisting of former PMC operators, local residents and others with obvious combat and tactical training."
+    },
+    {
+      "heading": "Rogues",
+      "level": 2,
+      "text": "Rogues\nRogues are ex-USEC operatives, led and commanded by the Goons."
+    },
+    {
+      "heading": "Cultists",
+      "level": 2,
+      "text": "Cultists\nA cult of mysterious people who keep to tall grass and dark shadows, they try to sneak up behind the enemy and attack them with a poisoned sacrificial knife. Their motives are still unknown, but they believe in an upcoming cataclysm. They have several ritual spots across Tarkov, for example in Customs, Woods and Shoreline. They offer weapons in sacrifice."
+    },
+    {
+      "heading": "RUAF",
+      "level": 2,
+      "text": "RUAF\nThe Russian Armed Forces are stationed around the Norvinsk region, alongside UN peacekeepers, to enforce a blockade of the territory."
+    },
+    {
+      "heading": "Black Division",
+      "level": 2,
+      "text": "Black Division\nThe Black Division is TerraGroup's internal, highly trained special operations force."
+    }
+  ]
+}

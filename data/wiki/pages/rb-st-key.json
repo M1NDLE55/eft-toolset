@@ -1,0 +1,63 @@
+{
+  "title": "RB-ST key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-ST_key",
+  "revisionId": 358637,
+  "lastEdited": "2026-09-10T22:44:38Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-ST"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a door in the Repair Warehouses of the Repair Point Buildings on Reserve.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d9f1fa686f774726974a992",
+    "ID": "rezbase_key_vech_storage1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-ST key (RB-ST) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base military equipment care and attention service and repair centre."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the Quest Surplus Goods\n- Used in the Quest Revision - Reserve\n- Used in the Quest Snatch"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In different locations in the dining room on the third floor of the repair building marked with black knight."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "In the Repair Warehouses of the Repair Point Buildings on Reserve."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- One Weapon box (6x6)\n- One Weapon box (6x2)\n- One Weapon box (6x4)\n- Two Grenade boxes\n- Loose loot (Ammunition, Weapon mods and Electronics)\n- Two 6-STEN-140-M military battery spawns\n- Three OFZ 30x165mm shell spawns\n- Two Phased array element spawns\n- One Military gyrotachometer spawn\n- One Military cable spawn\n- One TP-200 TNT brick spawn"
+    }
+  ]
+}

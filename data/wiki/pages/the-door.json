@@ -1,0 +1,43 @@
+{
+  "title": "The Door",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Door",
+  "revisionId": 359743,
+  "lastEdited": "2026-09-13T20:21:21Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Mechanic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Door is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hi, I have a delicate matter. I'm a man of science and I'm used to always find an explanation for everything. As you know, I'm interested in all sorts of signals coming from the territory of our beautiful city. There is a strange place where all my scans are strangely muffled, as if there is nothing there, empty, which is impossible from a scientific point of view. The source itself is in the second or third floor of a certain building. Why don't you go check it out, see if there's some kind of equipment? Set up a couple cameras for me for surveillance. The reference point will be the house with the astronaut mural on the wall.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the cause of the signal interference on Streets of Tarkov\n- Install a WI-FI Camera to watch the door\n- Install a WI-FI Camera to watch the stairwell\nNote: The \"Install\" objectives will appear after the \"Locate\" objective is completed."
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Mechanic Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Oh, it's you. The signal went through, but it didn't clear up the situation - there are random looters and curious people wandering around, but still at some moments the signal goes blank, and the cameras go crazy. And then there's this weird door... I don't personally believe in the supernatural. I'll keep an eye out, stay in touch. Thanks for your work.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| WI-FI Camera | 2 | Required | N/A | Can be purchased from Mechanic LL1. |\n| Rusted bloody key | 1 | Required | N/A | Unlocks the door on the fourth floor of the Klimova 16A building. |\nIn this quest you have to place two WI-FI Cameras in the Klimova 16A building on Streets of Tarkov. A Rusted bloody key is required. One has to be placed in the staircase in front of the locked door on the fourth floor, and the other one has to be placed at the heater next to the chained door in the area behind the locked door."
+    }
+  ]
+}

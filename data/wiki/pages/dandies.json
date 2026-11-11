@@ -1,0 +1,50 @@
+{
+  "title": "Dandies",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dandies",
+  "revisionId": 359211,
+  "lastEdited": "2026-09-13T20:12:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Ragman",
+    "previous": "Ballet Lover",
+    "leads to": "Drip-Out - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dandies is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey, brother! What's up, how you doing? Good? Well I unfortunately have some guys messing with me. They've got a gang, they think they're the hippest guys in the neighborhood, and they're interfering with my business as well! We gotta show them where they belong. And it ain't in that fancy barbershop they're holed up in, that's for sure. No, no need to kick anyone out. We're gonna be subtle. Pretend to be one of them and shoot pretty much anyone you see. I need everyone in the city to start hating them. When you're done, drop the outfit off at their barbershop so people know who's the maniac shooting everything. Can you do that?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 33 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 15 enemies while wearing a Bomber beanie and RayBench Hipster Reserve sunglasses on Streets of Tarkov\n- Stash a Bomber beanie inside the barber shop on Streets of Tarkov\n- Stash RayBench Hipster Reserve sunglasses inside the barber shop on Streets of Tarkov\nNote: The \"Stash\" objectives will appear after the \"Eliminate\" objective is completed."
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000EXP\n- Ragman Rep +0.25\n- 350,000 Roubles\n  - 367,500 Roubles with Intelligence Center Level 1\n  - 402,500 Roubles with Intelligence Center Level 2\n\"Oh, yeah, I've already heard the rumors. People're gonna nail those punks to the wall soon. You did a great job. Here's your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Find in raid | Notes |\n| Bomber beanie | N/A | Needs to be worn to progress through the quest |\n| RayBench Hipster Reserve sunglasses | N/A | Need to be worn to progress through the quest |\nIn this quest you have to kill any 30 entities on Streets of Tarkov while wearing a Bomber beanie and RayBench Hipster Reserve sunglasses. Afterwards you have to stash the outfit in the barber shop at the Concordia building complex."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Dragnet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dragnet",
+  "revisionId": 359245,
+  "lastEdited": "2026-09-13T20:12:55Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Factory",
+    "given by": "Jaeger",
+    "previous": "One Less Loose End, or, A Healthy Alternative",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dragnet is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, soldier. Everyone seems to be flocking to Polikhim, running around looking for secrets... I found out something interesting, too. It turns out that the TerraGroup fucks had their own warehouse in the basement for extra important cargo, and there's a vial of some rare nasty stuff in there. You know what's gonna happen when people find out about this. One will ask to retrieve it, another will try to intercept it. Now imagine it falls into the wrong hands. It's best if you and I take this stuff before anyone else and keep it under wraps. The job's important. Will you help me?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the chemical container at the TerraGroup warehouse on Factory\n- Hand over the chemical container"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +17,300 EXP\n- Jaeger Rep +0.02\n- 92,000 Roubles\n  - 96,600 Roubles with Intelligence Center Level 1\n  - 105,800 Roubles with Intelligence Center Level 2\n- 1× Springfield Armory M1A 7.62x51 rifle\n- 3× M14 7.62x51 30-round magazine\n- 6× 7.62x51mm M62 Tracer ammo pack (20 pcs)\n\"You're a good kid. My comrade will find a good stash spot for this thingie where no one will ever find it.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| TerraGroup storage room keycard | 1 | Required | N/A | Unlocks the door to the TerraGroup storage room on Factory where the chemical container is located |\n| Chemical container | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe chemical container can be found in the TerraGroup storage room on Factory, which is located in the underground tunnels right next to the \"Camera Bunker Door\" Scav extraction. A TerraGroup storage room keycard is required to enter it. There are multiple spawns throughout the room."
+    }
+  ]
+}

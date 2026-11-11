@@ -1,0 +1,48 @@
+{
+  "title": "Scout",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Scout",
+  "revisionId": 360492,
+  "lastEdited": "2026-09-17T20:21:53Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Factory",
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Scout is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Someday we will get rid of the invisible hand, which used to brand us with employee badges and now has caused this mess, and I think it leads us to a great war. At least, all current event look like preconditions to it. I worked here for the chemical plant, as an ordinary foreman. It was a good time, everyone thought so, including me. Now it’s full of Scavs and swarming with brigands and outlaws. I want to make use of some of the factory premises, find out what exits can still be used. Go there and check it out.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 12 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the first Factory extraction\n- Locate the second Factory extraction\n- Locate the third Factory extraction\n- Locate the fourth Factory extraction\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +6,800 EXP\n- Mechanic Rep +0.02\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n\"Good old Factory has sure changed, but you've brought good news. The sealed doors are still there...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to visit the 4 listed Factory extractions. You need to visit all locations and extract in the same raid."
+    }
+  ]
+}

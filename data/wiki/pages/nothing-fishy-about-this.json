@@ -1,0 +1,44 @@
+{
+  "title": "Nothing Fishy About This",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nothing_Fishy_About_This",
+  "revisionId": 359522,
+  "lastEdited": "2026-09-13T20:17:37Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Ragman",
+    "previous": "Big Sale",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Nothing Fishy About This is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, brother. Kinda in a bad mood today, not gonna lie. I feel like I've been ripped off! I bought an apparently running SUV for 2,000 bucks. And everything seemed fine, they brought it to Shoreline, but the driver never contacted me back after that. It's not a lot of money, but still sucks. Can you go see if the car's actually there?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate Ragman's SUV on Shoreline\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +7,200 EXP\n- Ragman Rep +0.01\n- 25,000 Roubles\n  - 26,250 Roubles with Intelligence center Level 1\n  - 28,750 Roubles with Intelligence center Level 2\n- 1× Stich Profi Chest Rig MK2 (Recon, A-TACS FG)\n\"It's in the fucking swamp? That explains the fucking price. It would cost more to get it out from there and clean it up! All right, here, that's for helping me out.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to find Ragman's lost SUV on Shoreline. It is located in the east of the swamp village, driven into a pond."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Scavenger",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Scavenger",
+  "revisionId": 359634,
+  "lastEdited": "2026-09-13T20:19:33Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ragman",
+    "previous": "Hot Delivery",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Scavenger is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Listen brother, I've got a job for you. You know I'm pretty much the only guy who deals in all kinds of nylon. Well, I was. Lately, some competition has started popping up... I can't afford to lose my edge. And wouldn't you know it, one of my shipments is fucking delayed!\n\nCan you go around Tarkov and bring me some stuff to sell? I really need this, brother! Don't worry, I'll pay you for the goods. Here's the list of what I need.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 29 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over any Found in Raid items from the Facecovers category x15\n- Hand over any Found in Raid items from the Headgear category x15\n- Hand over any Found in Raid items from the Headests category x15\n- Hand over any Found in Raid items from the Eyewear category category x15\n- Hand over any Found in Raid items from the Body Armor category category x15"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Ragman Rep +0.75\n- ??? Roubles\n  - ??? Roubles with Intelligence Center Level 1\n  - 326,150 Roubles with Intelligence Center Level 2\n\"Unknown as of 1.1.0.0\""
+    }
+  ]
+}

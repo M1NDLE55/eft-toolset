@@ -1,0 +1,59 @@
+{
+  "title": "Gunsmith - AS VAL",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_AS_VAL",
+  "revisionId": 353694,
+  "lastEdited": "2026-08-14T21:40:49Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith AS VAL"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith - AS VAL is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"While I was busy with the network, I started to wonder how are we different from it, and when we can replace our short-lived brains with those kinds of systems. What do you think, will this time come someday? I think it will, very soon. We already don't know what processes occur inside neural networks, there is only an entry signal and the result of its actions, and how it has learned with its own internal rules, wiring up its own neural links inside itself. How is it different from us? Would you love living in a world where your actions get limited only by your mind and imagination? The truth is, I think, living in such a world would be no better than in our own if there is no goal. And where can a goal come from if you're immortal and omnipotent... This time we need an AS VAL. GL-SHOCK buttstock, AN/PEQ-15 tactical device, NSPU-M night scope, and a 30-round magazine. Ergonomics above 27 and recoil sum less than 220.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 29 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an AS VAL to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +19,400 EXP\n- Mechanic Rep +0.02\n- 1× Kiba Arms inner grate door key\n- 1× Pressure gauge\n- Unlocks purchase of VSS/VAL TOZ 6P29M mount at Jaeger LL3\n\"Finished with the rifle? Great, hand it to me. I've got an interesting key here, might come in handy to you. It opens the gun store in Ultra, the KIBA store. It's got some great weapon mods in there, could be useful for our future gunsmithing.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "AS VAL specifications:\n- 60 Durability\n- 27 or more ergonomics\n- 220 or less recoil\n- A magazine with a capacity of at least 30\n- AR-15 FAB Defense GL-SHOCK buttstock\n- L3Harris AN/PEQ-15 tactical device (Tan)\n- NSPU-M 3.5x dovetail night vision scope"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard AS VAL from Prapor LL4.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Icon | Attachment | Sold By | Loyalty Level |\n| NSPU-M 3.5x dovetail night vision scope | NSPU-M 3.5x dovetail night vision scope | Prapor | LL1 |\n| NSPU-M scope eyecup | NSPU-M scope eyecup | Prapor | LL2 |\n| L3Harris AN/PEQ-15 tactical device | L3Harris AN/PEQ-15 tactical device (Tan) | Peacekeeper | LL3 |\n| AR-15 FAB Defense GL-SHOCK buttstock | AR-15 FAB Defense GL-SHOCK buttstock | MechanicSkier | LL2 (Barter)LL4 |\n| AS VAL Rotor 43 pistol grip with buffer tube | AS VAL Rotor 43 pistol grip with buffer tube | Mechanic | LL2 (Barter) |\n| colspan:; \"4\" /Magazines - You only need one of the below |\n| VSS/VAL 9x39 SR3M.130 30-round magazine | VSS/VAL 9x39 SR3M.130 30-round magazine | Prapor | LL3 (Barter); LL4 |\n| colspan:; \"4\" /OR |\n| VSS/VAL 9x39 30-round magazine | VSS/VAL 9x39 30-round magazine | Prapor | LL4 |\n| colspan:; \"4\" /Tactical device mounts - You only need one of the below |\n| VSS/VAL Zenit B-3 ring mount | VSS/VAL Zenit B-3 ring mount | Skier | LL3 |\n| colspan:; \"4\" /OR |\n| VSS/VAL Zenit B-3 mount combo | VSS/VAL Zenit B-3 mount combo | Mechanic | LL3 |\n| colspan:; \"4\" /OR |\n| VSS/VAL TOZ 6P29M mount | VSS/VAL TOZ 6P29M mount | Jaeger | LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

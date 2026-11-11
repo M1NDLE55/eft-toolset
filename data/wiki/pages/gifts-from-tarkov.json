@@ -1,0 +1,59 @@
+{
+  "title": "Gifts from Tarkov",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gifts_from_Tarkov",
+  "revisionId": 359332,
+  "lastEdited": "2026-09-13T20:14:24Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Peacekeeper",
+    "leads to": "Your Car Needs a Service, Insomnia, Setting Priorities",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gifts from Tarkov is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"My men discovered a TerraGroup shipment hidden inside a secret wall at the Resort, but it does not fully match the manifests in our possession. We have theories about where this shipment was delivered to the Resort from, but for now, this information is completely classified. Your task in this operation is to find evidence of a TerraGroup shipment on Cape Dalniy, near the sandy shore. I believe it would be best to behind your search from the tunnel side. Also, clear the areas of Reserve and Lighthouse using our equipment. Keep in touch, my friend.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be Loyalty Level 3 to start this quest"
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "- Unlock purchase of M203 40mm underbarrel grenade launcher at Peacekeeper LL3 when you accept the quest\n- Unlock purchase of 40x46mm M386 (HE) grenade at Peacekeeper LL3 when you accept the quest"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark the TerraGroup cargo with an MS2000 Marker on Lighthouse\n- Eliminate 10 of any targets using M203 40mm underbarrel grenade launcher on Lighthouse or Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000EXP\n- Peacekeeper Rep +0.75\n- Dollars\n  - Dollars with Intelligence center Level 1\n  - 2327 Dollars with Intelligence center Level 2\n- 4x Power supply unit\n- Unlock barter for M203 40mm underbarrel grenade launcher at Peacekeeper LL3\n- Unlock purchase of 40x46mm M386 (HE) grenade at Peacekeeper LL3\n\"So you found the cargo on the shore, exactly in the place where the TerraGroup transports moored? Okay, so they were shipped straight from the bay... Thank you for your work, mercenary. We will contact you about the next stage of our operation when the time is right.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed on the cargo. When placed, the item is removed from the players' inventory. |\n\nThe wanted cargo is a wooden crate that is located next to a gray shipping container on the western shore of Lighthouse."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

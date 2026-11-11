@@ -1,0 +1,45 @@
+{
+  "title": "Hidden Layer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hidden_Layer",
+  "revisionId": 359374,
+  "lastEdited": "2026-09-13T20:15:07Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Mechanic",
+    "previous": "Needle in a Haystack",
+    "leads to": "Offensive Reconnaissance, Sensory Analysis - Part 1 (+30min)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hidden Layer is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You know, I've thought it over again and I'm definitely positive there's a hidden layer to TerraGroup's connection with Knossos. Granted, we don't know what they were hiding yet, but that just means we haven't searched hard enough. We need to double-check everything again. Try to examine the Knossos facilities from the list again, you can also check out the adjacent buildings. Although last time my advice didn't lead you to a proper result... This time, you'd better trust your skills and intuition. Maybe we'll get lucky this way.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate a good lead related to Knossos LLC\n- Find a way inside the Knossos LLC facility\n  - (Optional) Locate and obtain the Knossos LLC facility key"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,300 EXP\n- Mechanic Rep +0.02\n- 50,000 Roubles\n  - 52,750 Roubles with Intelligence Center Level 1\n  - 61,250 Roubles with Intelligence Center Level 2\n- 1× FN SCAR-H 7.62x51 assault rifle (FDE)\n- 3× FN SCAR-H 7.62x51 20-round magazine (FDE)\n- 4× 7.62x51mm M80 ammo pack (20 pcs)\n\"Why didn't I think of that before? Knossos didn't purchase the whole territory of Azure Coast, but only the basements under it! That's why I thought this playground was our target. A door like this is unlikely to be accessed with a regular TerraGroup keycard. Considering they, meaning TerraGroup specifically, disguised that place as a Knossos facility, the keycard to access it should probably also have a suitable design. I'll try to find out more about these keycards and secure access to them, but it will take a considerable amount of time. If you don't wanna wait, try to find some other useful information, or better yet, the keycards themselves.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Knossos LLC facility key | 1 | Required | N/A | Unlocks the door to the Knossos LLC facility. |\nIn this quest you have to locate, and open the door to the Knossos LLC facility, which means the transit to The Labyrinth. It is located in the basement of the health resort west wing on Shoreline. A Knossos LLC facility key is required to unlock the door. Transiting is not required."
+    }
+  ]
+}

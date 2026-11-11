@@ -1,0 +1,47 @@
+{
+  "title": "Compensation for Damage - Wergild",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Compensation_for_Damage_-_Wergild",
+  "revisionId": 359191,
+  "lastEdited": "2026-09-13T20:11:59Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Compensation for Damage - Wergild is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You know, doing errands all day is still not enough to improve your poor situation. I think there is and easier way. Bribe the right people and they'll sing praises about how amazing you are. For example, you can compensate the friends of those you killed due to your brain disorder. Something like a wergild for murder in the Middle Ages.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Scav karma of -3"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 1,000,000 RUB"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Fence Rep +1\n\"Outstanding. Part of the compensation will go where it needs to go, and the other part will stay with me. Let's say it's for maintaining our cooperation.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Roubles | 1,000,000 | Handover item | No |"
+    }
+  ]
+}

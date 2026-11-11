@@ -1,0 +1,33 @@
+{
+  "title": "Cash register",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cash_register",
+  "revisionId": 295851,
+  "lastEdited": "2024-11-05T23:53:57Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "578f879c24597735401e6bc6",
+    "ID": "CashRegister"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Cash register is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Cash registers are 2x1 slot loot containers that only contain stacks of Roubles."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Icon | Type |\n| Roubles | Money |"
+    }
+  ]
+}

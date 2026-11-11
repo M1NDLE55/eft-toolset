@@ -1,0 +1,48 @@
+{
+  "title": "Old Patterns",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Old_Patterns",
+  "revisionId": 359529,
+  "lastEdited": "2026-09-13T20:17:44Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ragman",
+    "previous": "Combat Proven",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Old Patterns is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"We did a great work together with the new gear line! Just like back in the old days when business was booming and cash was rolling in. By the way, I got an idea for a special cut to make pants pockets bigger. You want me to try it out on yours? Then you'll have to pay for them. The patterns are pretty old and expensive. You can't do that from memory!\""
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This quest is not available to owners of the \"The Unheard\" edition of the game."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 15 Physical Bitcoins"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Ragman Rep +0.01\n- +2 pocket slots\n\n\"Beautiful. Alright, pants off right now, time for an upgrade!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Physical Bitcoin | 15 | Handover item | No |"
+    }
+  ]
+}

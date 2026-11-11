@@ -1,0 +1,47 @@
+{
+  "title": "Booze",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Booze",
+  "revisionId": 359121,
+  "lastEdited": "2026-09-13T20:10:48Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ragman",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Booze is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Welcome, brother! Say, how do you feel about booze? I've got an order for a large batch of alcohol. Just imagine, there's war going around, but people still drink... Anyway, I need it to be fresh, so make sure you find only the good stuff. You've got golden hands, always find everything I need. So what do you think, can you find me some grog? We'll have a good drink to success after! Some vodka and whiskey would be great for a start. Oh, and get some water canisters too. For the eventual hangover, you know.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 50 to start this quest.\n- Obtain level 3 loyalty with Ragman"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 10 Bottles of Tarkovskaya vodka in raid\n- Find 10 Bottles of Dan Jackiel whiskey in raid\n- Find 3 Canister with purified water in raid\n- Find 20 Bottles of Pevko Light beer in raid\n- Hand over 10 Bottles of Tarkovskaya vodka to Ragman\n- Hand over 10 Bottles of Dan Jackiel whiskey to Ragman\n- Hand over 3 Canister with purified water to Ragman\n- Hand over 20 Bottles of Pevko Light beer to Ragman"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +20,000 EXP\n- Ragman Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- Unlocks Bottle Hideout shooting range target style\n\"Good stuff! Come on, brother, sit down, let's celebrate!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Bottle of Tarkovskaya vodka | 10 | Handover item | Yes | Can be crafted in the Hideout (Nutrition Unit lv. 3). |\n| Bottle of Dan Jackiel whiskey | 10 | Handover item | Yes | Can be crafted in the Hideout (Nutrition Unit lv. 3). |\n| Canister with purified water | 3 | Handover item | Yes | Can be crafted in the Hideout (Water Collector lv. 3). |\n| Bottle of Pevko Light beer | 20 | Handover item | Yes | Can be crafted in the Hideout (Nutrition Unit lv. 3). |"
+    }
+  ]
+}

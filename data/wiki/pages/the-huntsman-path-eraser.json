@@ -1,0 +1,43 @@
+{
+  "title": "The Huntsman Path - Eraser",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Eraser",
+  "revisionId": 359757,
+  "lastEdited": "2026-09-13T20:21:35Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Jaeger",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Eraser is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come on in, sit down, there is a special task for you. Do you know the military base south of customs? One character set up there, a former marine. Even before the trouble in Tarkov occurred, he found himself interested in the crime business. They got everything under control back then: the security, customs services, everything. Then most of the gang fled, but not him... He gathered the most loyal of his men, also former soldiers, and they dug in somewhere at the base. He fumbles with warehouse reserves and sells them abroad, that bastard. Doesn't like uninvited guests either. He must be stopped, but this one will not be an easy walk. His fighters are well-trained, so think with your head how to deal with them.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate Glukhar"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +18,300 EXP\n- Jaeger Rep +0.02\n- 200,000 Roubles\n  - 210,000 Roubles with Intelligence Center Level 1\n  - 230,000 Roubles with Intelligence Center Level 2\n- 5,000 Dollars\n  - 5,250 Dollars with Intelligence Center Level 1\n  - 5,750 Dollars with Intelligence Center Level 2\n- 1× Weapon case\n\n\"Welcome back, hunter. So you've dealt with the bandits? Can't even imagine how much of a hassle that was, you did a great job.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill Glukhar."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Armory key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armory_key",
+  "revisionId": 357945,
+  "lastEdited": "2026-09-08T15:19:37Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the armory on Terminal.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "No",
+    "node": "68a4b745b63e97cc5a056a07",
+    "ID": "key_terminal_arsenal"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Armory key (Armory) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to an administrative room located within the port area. Most likely unlocks a storage room containing confiscated equipment or RUAF weaponry."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be discarded."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "There are multiple possible locations for this key on Terminal, while only the one in the body of the dead RUAF soldier outside the armory building is guaranteed."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the armory inside the armory building on Terminal."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Confiscated player equipment in the equipment cabinets.\n- Secure container Alpha-1 with TerraGroup evidence on the desk under the window. Note: Only spawns if the player brought it into the raid."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Thirsty - Hounds",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Thirsty_-_Hounds",
+  "revisionId": 359828,
+  "lastEdited": "2026-09-13T20:22:46Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Jaeger",
+    "previous": "The Delicious Sausage",
+    "leads to": "Thirsty - Breadwinner",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Thirsty - Hounds is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"We need to talk. Sanitar's goons have been prowling the shore area at nights. Obviously looking for something. Can't let it go unchecked. Scare them off while I try to find out what they're up to.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 12 Scavs in the time period of 22:00-7:00 on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,500 EXP\n- Jaeger Rep +0.01\n- 3× 12/70 RIP ammo pack (5 pcs)\n\"You fought them off? Excellent! I found out they're looking for Thirsty's hideout. He was the guy who used to always bring a double supply of water with him. I haven't seen him in a while, right after he mixed up with Skier. I guess it led to a bad end for him.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Head to Shoreline between 22:00 and 7:00. It is recommended to go into the raid by at latest 5:00, so you have time to advance the quest before 7:00."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Between Two Fires",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Between_Two_Fires",
+  "revisionId": 359112,
+  "lastEdited": "2026-09-13T20:10:39Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Fence",
+    "previous": "Against the Conscience - Part 2",
+    "related": "Decisions, Decisions, Surprise Gift",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Between Two Fires is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So you saw a dead body. Did you search it? Did you check around it? I'm just pointing out that you're blind. The champion, as far as I know, kept a journal. Yeah, like some teenager, but that's actually working in your favor. Why don't you go over there again and take a closer look? There's got to be more information in the journal about Ref, some dirt on him. Do that if you want to stop being expendable in the Arena. And one more thing: if you bring me any info on Ref that'll be worthy of my time, I'll pay you well.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Return to the old champion's hideout on Customs\n- Locate and obtain the compromising information on Ref\n- Hand over the found info"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "Seasonal change: the quest awards a barter for the Secure container Theta at Ref LL3, instead of the container directly.\n- +18,500 EXP\n- Fence Rep +0.2\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 1× Secure container Theta\n\"Well done. Glad you took your fate by the balls. Make sure you speak nothing of this to Ref.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"You want to stay under Ref's skirt? You do you then.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "By completing Decisions, Decisions or Surprise Gift, you will fail and lose access to this quest.\n| Item name | Amount | Requirement | Find in raid | Notes |\n| Dorm overseer key | 1 | Required | N/A | Unlocks the room between 209 and 211 in the three-story dorms on Customs. |\n| Ref dirt | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nThe champion's room is located on the second floor of the three-story dorms building on Customs, between the rooms 209 and 211. A Dorm overseer key is required to enter it.\n\nThe compromising information can be found on the floor in a puddle of blood next to the wardrobe."
+    }
+  ]
+}

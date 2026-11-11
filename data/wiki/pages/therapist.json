@@ -1,0 +1,68 @@
+{
+  "title": "Therapist",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Therapist",
+  "revisionId": 349618,
+  "lastEdited": "2026-08-04T01:37:55Z",
+  "kind": "trader",
+  "categories": [
+    "Traders"
+  ],
+  "redirects": [
+    "Elvira Khabibullina"
+  ],
+  "infobox": {
+    "full name": "Elvira Khabibullina",
+    "location": "Tarkov City",
+    "origin": "Russian Federation",
+    "wares": "- Meds - Provisions - Keys - Storage containers - Maps",
+    "services": "Insurance, After raid healing",
+    "currencies": "Roubles (₽), Euros (€)"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Elvira Khabibullina, known by her alias \"Therapist\", is a trader in Escape from Tarkov."
+    },
+    {
+      "heading": "Biography",
+      "level": 2,
+      "text": "Head of the Trauma Care Department of the Tarkov Central City Hospital."
+    },
+    {
+      "heading": "Wares",
+      "level": 2,
+      "text": "- Meds\n- Provisions\n- Keys\n- Storage containers\n- Maps"
+    },
+    {
+      "heading": "Loyalty Level Requirements",
+      "level": 2,
+      "text": "| Loyalty Lvl | Required Lvl | Required Rep |\n| Lvl 2 | 5 | 0.60 |\n| Lvl 3 | 18 | 2.10 |\n| Lvl 4 | 37 | 5.80 |"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- See the quests overview page"
+    },
+    {
+      "heading": "Barters",
+      "level": 2,
+      "text": "- See the barter trades page"
+    },
+    {
+      "heading": "Items for sale",
+      "level": 2,
+      "text": "LL1:\nLL1\n\nLL2:\nLL2\n\nLL3:\nLL3\n\nLL4:\nLL4"
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: On the 1st of August 2020, the portrait of Therapist was briefly changed to an image of the Twitch streamer Pestily in a cosplay to celebrate reaching his goal of $1,000,000 AUS that he raised for the Starlight Children's Foundation."
+    }
+  ]
+}

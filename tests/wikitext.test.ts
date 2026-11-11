@@ -11,6 +11,16 @@ describe("wikitextToText", () => {
     ).toBe("Kill the boss on Interchanges near Hideout. See the site .");
   });
 
+  it("reads past an unclosed link or template instead of leaving the rest as markup", () => {
+    expect(wikitextToText("- 1× [[Armband (UNTAR)\n- Unlocks [[Desert Tech MDR]] at [[Peacekeeper]] {{Navbox", "Quest")).toBe(
+      "- 1× Armband (UNTAR)\n- Unlocks Desert Tech MDR at Peacekeeper Navbox"
+    );
+  });
+
+  it("reads a table that opens inside a list item", () => {
+    expect(wikitextToText(':{|class="wikitable"\n!Name!!Build\n|-\n|MP5||Stock\n|}', "Arena")).toBe("| Name | Build |\n| MP5 | Stock |");
+  });
+
   it("turns infoboxes into fields, expands the page name and quotes, and drops other templates", () => {
     const text = wikitextToText(
       [

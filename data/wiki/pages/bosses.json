@@ -1,0 +1,34 @@
+{
+  "title": "Bosses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bosses",
+  "revisionId": 355181,
+  "lastEdited": "2026-08-19T01:14:25Z",
+  "kind": "character",
+  "categories": [
+    "Bosses",
+    "Characters",
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Boss",
+    "Cultist Boss",
+    "Cultist Bosses",
+    "Rogue Boss",
+    "Rogue Bosses",
+    "Scav Boss",
+    "Scav Bosses"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Bosses are powerful enemies with unique gear, traits and behavior in Escape from Tarkov.\n\n| Name | Faction | Location | Followers | Notable equipment |\n| Big Pipe | Rogues | Customs; Woods; Shoreline; Lighthouse | Knight, Birdeye | Milkor M32A1 MSGL 40mm grenade launcher; Big Pipe's smoking pipe; Big Pipe's bandana; S&S Precision PlateFrame plate carrier (Goons Edition) |\n| Birdeye | Rogues | Customs; Woods; Shoreline; Lighthouse | Knight, Big Pipe | Mystery Ranch NICE COMM 3 BVS frame system (Coyote); LBT-1961A Load Bearing Chest Rig (Goons Edition) |\n| Glukhar | Scavs | Reserve; Terminal | 6 heavily armed and armored guards; 3 heavily armed and armored guards | ASh-12 12.7x55 assault rifle |\n| Kaban | Scavs | Streets of Tarkov | 2 personal bodyguards Gus and Basmach; 4 heavily armed and armored guards; 2-3 snipers | Kalashnikov PKM 7.62x54R machine gun; Kalashnikov PKP 7.62x54R infantry machine gun; RPK-16 5.45x39 light machine gun |\n| Killa | Scavs | Interchange; Terminal | None | RPK-16 5.45x39 light machine gun; Maska-1SCh bulletproof helmet (Killa Edition); Maska-1SCh face shield (Killa Edition); 6B13 M assault armor (Killa Edition); BlackHawk! Commando chest harness (Black) |\n| Knight | Rogues | Customs; Woods; Shoreline; Lighthouse; Icebreaker | Big Pipe, Birdeye; Big Pipe, Birdeye; Big Pipe, Birdeye; Big Pipe, Birdeye; 2 Rogue guards | Death Knight mask; Crye Precision CPC plate carrier (Goons Edition); Magnum Research Desert Eagle L6 .50 AE pistol (WTS) |\n| Kollontay | Scavs | Streets of Tarkov | 4 heavily armed and armored guards | PR-Taran police baton |\n| Partisan | None | Customs; Woods; Shoreline; Lighthouse | None | Partisan's bag; AK skeletonized stock (Customized); Red Rebel ice pick |\n| Reshala | Scavs | Customs; Terminal | 4 heavily armed and armored guards; 3 heavily armed and armored guards | Tokarev TT-33 7.62x25 TT pistol (Golden); Reshala's bunkhouse key |\n| Sanitar | Scavs | Shoreline; Terminal | 3 heavily armed and armored guards | Keycard with a blue marking; Sanitar's bag |\n| Shadow of Tagilla | Scavs | The Labyrinth | None | Chained Labrys; Tagilla's welding mask \"ZABEY\"; Crye Precision AVS plate carrier (Tagilla Edition); Labrys research notes |\n| Shturman | Scavs | Woods | 2-3 heavily armed and armored guards | Shturman's stash key; Red Rebel ice pick |\n| Tagilla | Scavs | Day Factory; Night Factory; Interchange; Terminal | None | Superfors DB 2020 Dead Blow Hammer; Tagilla's welding mask \"UBEY\"; Tagilla's welding mask \"Gorilla\"; Crye Precision AVS plate carrier (Tagilla Edition) |\n| The Wedge | Black Division | Icebreaker | 3-6 heavily armed and armored guards | Spiritus Systems LV-119 Plate Carrier (MultiCam Black); TW EXFIL Peltor ComTac VI headset (Black); HK MP7 SureFire SF3P 4.6x30 flash hider; HK MP7 FAB Defense ARS stock adapter; FAB Defense FX-KPOS ARS stock |\n| Vengeful Killa | Scavs | The Labyrinth | None | RPK-16 5.45x39 light machine gun; Maska-1SCh bulletproof helmet (Killa Edition); Maska-1SCh face shield (Killa Edition); 6B13 M assault armor (Killa Edition); BlackHawk! Commando chest harness (Black) |\n| Zryachiy | Cultists | Lighthouse | 2 Cultist guards | TheAKGuy AK-50 .50 BMG anti-materiel rifle; Zryachiy's balaclava; Zryachiy's balaclava (folded); Azimut SS \"Khamelion\" chest harness (Olive) |"
+    },
+    {
+      "heading": "Event bosses",
+      "level": 3,
+      "text": "| Event | Name | Faction | Location | Followers | Notable equipment |\n| Christmas | Santa Claus | Scavs | Factory; Customs; Woods; Lighthouse; Shoreline; Reserve; Interchange; Streets of Tarkov; Ground Zero (Level 21+) | None | Santa's Bag |"
+    }
+  ]
+}

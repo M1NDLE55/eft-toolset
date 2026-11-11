@@ -1,0 +1,40 @@
+{
+  "title": "No Limit to Perfection - Part 9",
+  "url": "https://escapefromtarkov.fandom.com/wiki/No_Limit_to_Perfection_-_Part_9",
+  "revisionId": 359513,
+  "lastEdited": "2026-09-13T20:17:28Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "No Limit to Perfection - Part 8",
+    "leads to": "All for the Show - Supremacy",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "No Limit to Perfection - Part 9 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"It's never precise enough — you've got to hit the head on the first shot, not the twentieth. Go train, fighter. You'll pick up some serious sniper skills along the way.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 enemies with headshots while using bolt-action rifles"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +35,000 EXP\n- +300 Bolt-action Rifles skill points\n- 30 GP coins\n- 1× Valuables crate (Rare)\n- Unlocks achievement The Time to Live and the Time to Die"
+    }
+  ]
+}

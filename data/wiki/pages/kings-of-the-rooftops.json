@@ -1,0 +1,44 @@
+{
+  "title": "Kings of the Rooftops",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kings_of_the_Rooftops",
+  "revisionId": 361755,
+  "lastEdited": "2026-09-24T12:32:44Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Prapor",
+    "LL requirement": "2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Kings of the Rooftops is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Oh, howdy. Help an old soldier out, will you? Those damn snipers are shooting my couriers like rabbits in an open field. Sitting on the rooftops and blasting non-stop. Take them out and I'll make it worth your while.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 8 snipers on the rooftops on Streets of Tarkov"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Prapor Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 1× Toolset\n- 1× SV-98 7.62x54R bolt-action sniper rifle\n- Unlocks purchase of SV-98 7.62x54R bolt-action sniper rifle at Prapor LL2\n\"Good shit, warrior, now that's some proper shooting!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 8 sniper Scavs on Streets of Tarkov."
+    }
+  ]
+}

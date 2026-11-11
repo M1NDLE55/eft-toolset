@@ -1,0 +1,64 @@
+{
+  "title": "Health Resort east wing room 308 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_east_wing_room_308_key",
+  "revisionId": 353192,
+  "lastEdited": "2026-08-11T17:55:11Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽5,780",
+    "usage": "Unlocks room 308 of the East wing in the Health Resort on Shoreline.",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a145d7b86f7744cbb6f4a13",
+    "ID": "Санаторий 308 восточное крыло"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort east wing room 308 key (E308 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium east wing room 308."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Connected to room 306 through the balcony."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In cabin no. 1 in the lumber camp on top of a nightstand. The nightstand is between two beds that are end-to-end. The cabin is the closest one to the Yotota truck."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The third floor, room 308 of the East Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room 306:\n  - 1× LEDX Skin Transilluminator spawn\n  - 1× DVL-10 spawn\n  - 1× Flyye MBSS backpack (UCP) spawn\n  - 4× PC blocks\n  - 1× Weapon box (4x4)\n  - Rare spawn\n  - Loose loot (Currency)\n- Room 308:\n  - 1× Weapon Rack\n  - 1× Weapon spawn\n  - 1× Medcase\n  - Loose loot (Currency)"
+    }
+  ]
+}

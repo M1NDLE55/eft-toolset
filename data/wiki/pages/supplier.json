@@ -1,0 +1,43 @@
+{
+  "title": "Supplier",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Supplier",
+  "revisionId": 362210,
+  "lastEdited": "2026-09-26T14:02:20Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Supplier is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"What'chu want, merc? A job? Ha! Looking for a good net salary and a full social package? Alright then, I'll give you a job. I still barely know you, so let's see what you can do. I'll give you this: find me a white body armor, the one that looks like paper, and one Toz shotty. Gonna gear up my guys a little. But make sure to get the fresh ones, got it? Don't need no haggler shit. So anyway, if you do fine, we can talk further about your employment, mister \"operator\".\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 1 item: BNTI Module-3M body armor\n- Hand over 1 item: TOZ-106 20ga bolt-action shotgun"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Skier Rep +0.1\n- 450 Euros\n  - 472 Euros Intelligence Center Level 1\n  - 517 Euros with Intelligence Center Level 2\n\"Good shit, gonna continue working together. Here's your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| BNTI Module-3M body armor | 1 | Handover item | No | Can be crafted in the Hideout (Lavatory lv. 1). |\n| TOZ-106 20ga bolt-action shotgun | 1 | Handover item | No | |"
+    }
+  ]
+}

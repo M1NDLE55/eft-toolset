@@ -1,0 +1,71 @@
+{
+  "title": "Tarcone Director's office key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tarcone_Director's_office_key",
+  "revisionId": 352985,
+  "lastEdited": "2026-08-09T22:18:23Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the Tarcone director's office in the red Paradigm warehouse on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5780d0532459777a5108b9a2",
+    "ID": "Офисы тамож"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Tarcone Director's office key (Director's) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to Tarcone director's administrative office, located in the customs control warehouse."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- The second room is a mandatory quest location for the quests Delivery From the Past and Farming"
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The door to the second room must be breached"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In a key cabinet at the dorm guard desk that is located at the two-story dorms\n\n- On a metal shelf in the storage room of the new gas station.\n\n- Warehouse #3 at the crane yard, on the ground next to the dead body.\n\n- Warehouse #5 at the crane yard, on the shelf with the water tanks next to the blue delivery van.\n\n- In a bunkhouse on the southern side of the courtyard of the \"Big Red\" warehouse, located in the cabinet under the plant"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "This key can be used at the top of the staircase in the eastern red Paradigm warehouse on the map Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Health Resort east wing room 306 key spawn location\n- 1× Sport bag\n- 3× PC blocks\n- 1× Safe\n- 1× Jacket\n- 1× Flyye MBSS backpack (UCP) spawn\n- 1× PACA Soft Armor spawn\n- 1× Intelligence folder spawn\n- Loose loot"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Can of Ice Green tea x1; Can of Ice Green tea; +; Army crackers x2; Army crackers; +; Can of squash spread x1; Can of squash spread | → | Therapist; Therapist LL1 | → | Tarcone Director's office key; Tarcone Director's office key |\n| Golden neck chain x4; Golden neck chain | → | Therapist; Therapist LL2 | → | Tarcone Director's office key; Tarcone Director's office key |"
+    }
+  ]
+}
