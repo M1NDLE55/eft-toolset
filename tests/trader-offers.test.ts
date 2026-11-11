@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { effectivePrice, offerAllowed, priceChoice, withTraderLimits } from "@/app/lib/builds/price";
+import { barterCost, effectivePrice, offerAllowed, priceChoice, withBarterPrices, withTraderLimits } from "@/app/lib/builds/price";
 import { expandCompleted, matchTasks, questChain, type TaskNode } from "@/app/lib/builds/quests";
 import { buildShoppingList } from "@/app/lib/builds/shopping";
 import type { BarterOffer, BuildItemData, TraderOffer } from "@/app/lib/types/gunBuilder";
@@ -75,9 +75,29 @@ describe("barters as a price source", () => {
     expect(effectivePrice(item, { traders: true, flea: true, barters: true })).toBe(90_000);
     expect(effectivePrice(item, { traders: false, flea: false, barters: true })).toBe(90_000);
     const lockedBarter = { ...barter, taskUnlock: chemical };
-    const limited = withTraderLimits(part({ barterOffers: [lockedBarter] }), { excludeQuestLocked: true });
+    const sources = { traders: false, flea: false, barters: true };
+    const limited = withBarterPrices(part({ barterOffers: [lockedBarter] }), sources, { excludeQuestLocked: true });
     expect(limited.barterPriceRUB).toBeNull();
-    expect(effectivePrice(limited, { traders: false, flea: false, barters: true })).toBeNull();
+    expect(effectivePrice(limited, sources)).toBeNull();
+  });
+
+  it("cost what their inputs cost the player, from the sources and offers they can use", () => {
+    const gunpowder = {
+      name: "Gunpowder",
+      count: 2,
+      traderOffers: [{ trader: "Mechanic", priceRUB: 20_000, level: 2 }],
+      fleaPriceRUB: 30_000,
+    };
+    const trade: BarterOffer = { ...barter, requiredItems: [gunpowder], count: 2 };
+    const all = { traders: true, flea: true, barters: true };
+    expect(barterCost(trade, all, null)).toBe(20_000);
+    expect(barterCost(trade, all, { maxLevel: 1 })).toBe(30_000);
+    expect(barterCost(trade, { traders: true, flea: false, barters: true }, { maxLevel: 1 })).toBeNull();
+    expect(barterCost({ ...trade, requiredItems: [{ name: "Gunpowder", count: 2 }] }, all, { maxLevel: 1 })).toBe(90_000);
+
+    const repriced = withBarterPrices(part({ barterOffers: [trade, barter] }), { traders: true, flea: false, barters: true }, { maxLevel: 1 });
+    expect(repriced.barterOffers?.map((offer) => offer.priceRUB)).toEqual([90_000, null]);
+    expect(repriced.barterPriceRUB).toBe(90_000);
   });
 
   it("say which source and offer a price comes from, preferring cash at equal prices", () => {

@@ -19,10 +19,7 @@ export function effectivePrice(item: Priced, sources: PriceSources): number | nu
   return prices.length ? Math.min(...prices) : null;
 }
 
-/**
- * What the player can buy: loyalty levels (one cap for every trader, and per-trader levels,
- * 0 = locked) and the tasks they have completed.
- */
+/** What the player can buy: loyalty levels (a trader level of 0 disables that trader) and completed tasks. */
 export interface TraderLimits {
   maxLevel?: number | null;
   /** Keyed by trader name in lower case. */
@@ -33,9 +30,9 @@ export interface TraderLimits {
   completedTasks?: ReadonlySet<string>;
 }
 
-/** An offer the limits can rule out: a trader offer or a barter. */
 interface LimitedOffer {
   trader: string;
+  priceRUB: number | null;
   level: number | null;
   taskUnlock?: TaskUnlock;
 }
@@ -59,7 +56,6 @@ export function allowedTraderLevel(trader: string, limits: TraderLimits): number
   return limits.levels?.[trader.toLowerCase()] ?? limits.maxLevel ?? null;
 }
 
-/** Whether the offer's task is still to do: it has one, and it isn't in completedTasks. */
 export function questLocked(offer: { taskUnlock?: TaskUnlock }, limits: TraderLimits | null | undefined) {
   return Boolean(offer.taskUnlock && !limits?.completedTasks?.has(offer.taskUnlock.id));
 }
@@ -73,36 +69,51 @@ export function offerAllowed(offer: LimitedOffer, limits: TraderLimits) {
   return levelAllowed(offer, limits) && !(limits.excludeQuestLocked && questLocked(offer, limits));
 }
 
-/** The cheapest offer the limits allow; offers are sorted cheapest first. */
+// Offers must be sorted cheapest first.
 export function bestOffer<T extends LimitedOffer>(offers: readonly T[] | undefined, limits: TraderLimits | null): T | null {
-  if (!offers) return null;
-  return (hasTraderLimits(limits) ? offers.find((offer) => offerAllowed(offer, limits)) : offers[0]) ?? null;
+  const limited = hasTraderLimits(limits);
+  return offers?.find((offer) => offer.priceRUB !== null && (!limited || offerAllowed(offer, limits))) ?? null;
 }
 
-/**
- * The item with its trader and barter prices taken from the cheapest offers the player's
- * limits allow. Items without offer details are returned unchanged.
- */
-export function withTraderLimits<T extends Offered>(item: T, limits: TraderLimits): T {
-  if (!item.traderOffers && !item.barterOffers) return item;
-  const best = item.traderOffers ? bestOffer(item.traderOffers, limits) : undefined;
-  const barter = item.barterOffers ? bestOffer(item.barterOffers, limits) : undefined;
-  const trader =
-    best === undefined
-      ? {}
-      : {
-          traderPriceRUB: best?.priceRUB ?? null,
-          traderName: best?.trader ?? null,
-          traderLevel: best?.level ?? null,
-          traderTask: best?.taskUnlock?.name ?? null,
-        };
-  const barterPrice = barter === undefined ? {} : { barterPriceRUB: barter?.priceRUB ?? null };
+// Null and missing fields count as equal.
+function update<T extends object>(item: T, fields: Record<string, unknown>): T {
   const current = item as Record<string, unknown>;
-  // null and a missing field mean the same, so an item already at these prices is kept as is.
-  const changed = Object.entries({ ...trader, ...barterPrice }).some(
-    ([key, value]) => current[key] !== value && (current[key] ?? null) !== value
-  );
-  return changed ? { ...item, ...trader, ...barterPrice } : item;
+  const changed = Object.entries(fields).some(([key, value]) => (current[key] ?? null) !== value);
+  return changed ? { ...item, ...fields } : item;
+}
+
+export function withTraderLimits<T extends Offered>(item: T, limits: TraderLimits): T {
+  if (!item.traderOffers) return item;
+  const best = bestOffer(item.traderOffers, limits);
+  return update(item, {
+    traderPriceRUB: best?.priceRUB ?? null,
+    traderName: best?.trader ?? null,
+    traderLevel: best?.level ?? null,
+    traderTask: best?.taskUnlock?.name ?? null,
+  });
+}
+
+// Barters without input offers keep their existing price.
+export function barterCost(barter: BarterOffer, sources: PriceSources, limits: TraderLimits | null) {
+  if (!barter.requiredItems.every((input) => input.traderOffers)) return barter.priceRUB;
+  let total = 0;
+  for (const input of barter.requiredItems) {
+    const unit = effectivePrice(
+      { traderPriceRUB: bestOffer(input.traderOffers, limits)?.priceRUB ?? null, fleaPriceRUB: input.fleaPriceRUB ?? null },
+      sources
+    );
+    if (unit === null) return null;
+    total += unit * input.count;
+  }
+  return Math.round(total / barter.count);
+}
+
+export function withBarterPrices<T extends Offered>(item: T, sources: PriceSources, limits: TraderLimits | null): T {
+  if (!item.barterOffers?.length) return item;
+  const barterOffers = item.barterOffers
+    .map((offer) => ({ ...offer, priceRUB: barterCost(offer, sources, limits) }))
+    .sort((a, b) => (a.priceRUB ?? Number.POSITIVE_INFINITY) - (b.priceRUB ?? Number.POSITIVE_INFINITY));
+  return { ...item, barterOffers, barterPriceRUB: bestOffer(barterOffers, limits)?.priceRUB ?? null };
 }
 
 export type PriceSource = "trader" | "flea" | "barter";
@@ -112,11 +123,7 @@ export type PriceChoice =
   | { source: "flea"; priceRUB: number }
   | { source: "barter"; priceRUB: number; offer: BarterOffer | null };
 
-/**
- * Where an item's price comes from: the cheapest enabled source, preferring a trader, then
- * the flea, then a barter at equal prices. It agrees with effectivePrice on an item limited
- * by the same limits.
- */
+// Equal prices prefer trader, then flea, then barter.
 export function priceChoice(
   item: Offered & { fleaPriceRUB: number | null },
   sources: PriceSources,
@@ -125,7 +132,7 @@ export function priceChoice(
   const choices: PriceChoice[] = [];
   const trader = sources.traders ? positive(item.traderPriceRUB) : null;
   if (trader !== null) {
-    const offer = item.traderOffers ? bestOffer(item.traderOffers, limits) : null;
+    const offer = bestOffer(item.traderOffers, limits);
     choices.push({ source: "trader", priceRUB: trader, offer: offer?.priceRUB === trader ? offer : null });
   }
   const flea = sources.flea ? positive(item.fleaPriceRUB) : null;
@@ -138,7 +145,6 @@ export function priceChoice(
   return choices.reduce<PriceChoice | null>((best, choice) => (!best || choice.priceRUB < best.priceRUB ? choice : best), null);
 }
 
-/** "Prapor LL2", with " (default preset)" when the offer is for the weapon's default preset. */
 export function offerLabel(offer: { trader: string; level: number | null; preset?: string }) {
   return `${offer.trader}${offer.level ? ` LL${offer.level}` : ""}${offer.preset ? " (default preset)" : ""}`;
 }

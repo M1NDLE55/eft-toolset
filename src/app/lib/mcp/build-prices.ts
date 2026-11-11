@@ -1,15 +1,12 @@
 import { getTaskIndex } from "@/app/lib/api/tarkov-server";
 import type { BuildSource, PartLookup } from "@/app/lib/builds/resolve";
-import { hasTraderLimits, withTraderLimits, type TraderLimits } from "@/app/lib/builds/price";
+import { hasTraderLimits, withBarterPrices, withTraderLimits, type TraderLimits } from "@/app/lib/builds/price";
 import { expandCompleted, matchTasks, type TaskIndex } from "@/app/lib/builds/quests";
 import type { CatalogItem } from "@/app/lib/cache/types";
 import { suggestNames } from "@/app/lib/search/filter-catalog";
 import type { PriceSources } from "@/app/lib/types/gunBuilder";
 import { InputError, type GameMode, type Read } from "./context";
 import { loadBuildSource } from "./sources";
-
-// Gun-builder price settings: which sources count, the trader loyalty levels the player has,
-// and the tasks they have completed.
 
 export interface PriceInput extends PriceSources {
   maxTraderLevel?: number;
@@ -74,7 +71,6 @@ function taskCatalog(tasks: TaskIndex) {
   return catalog;
 }
 
-/** The completed tasks' ids and the tasks they required. Unknown names are an error, never guessed. */
 function parseCompletedTasks(names: readonly string[], tasks: TaskIndex): Set<string> {
   const ids: string[] = [];
   const unknown: string[] = [];
@@ -96,28 +92,32 @@ function parseCompletedTasks(names: readonly string[], tasks: TaskIndex): Set<st
   return expandCompleted(tasks, ids);
 }
 
-/** The part lookup with trader and barter prices limited to the offers the player can use. */
-function limitLookup(lookup: PartLookup, limits: TraderLimits): PartLookup {
+function limitItem<T extends Parameters<typeof withTraderLimits>[0]>(item: T, limits: TraderLimits | null, sources: PriceSources) {
+  const limited = hasTraderLimits(limits) ? withTraderLimits(item, limits) : item;
+  return sources.barters ? withBarterPrices(limited, sources, limits) : limited;
+}
+
+function limitLookup(lookup: PartLookup, limits: TraderLimits | null, sources: PriceSources): PartLookup {
   let byKey = limitedLookups.get(lookup);
   if (!byKey) {
     byKey = new Map();
     limitedLookups.set(lookup, byKey);
   }
   const key = JSON.stringify([
-    limits.maxLevel,
-    Object.entries(limits.levels ?? {}).sort(),
+    limits?.maxLevel,
+    Object.entries(limits?.levels ?? {}).sort(),
     // Completed tasks only change prices when quest-locked offers are left out.
-    limits.excludeQuestLocked ? [...(limits.completedTasks ?? [])].sort() : null,
+    limits?.excludeQuestLocked ? [...(limits.completedTasks ?? [])].sort() : null,
+    sources.barters ? [sources.traders, sources.flea] : null,
   ]);
   const cached = byKey.get(key);
   if (cached) return cached;
-  const limited = new Map(Array.from(lookup, ([id, item]) => [id, withTraderLimits(item, limits)]));
+  const limited = new Map(Array.from(lookup, ([id, item]) => [id, limitItem(item, limits, sources)]));
   if (byKey.size >= MAX_LIMITED_LOOKUPS) byKey.delete(byKey.keys().next().value!);
   byKey.set(key, limited);
   return limited;
 }
 
-/** Loads the build data with prices from the chosen sources at the player's trader levels and tasks. */
 export async function loadBuildPricing(read: Read, gameMode: GameMode, input: PriceInput): Promise<BuildPricing> {
   const [source, tasks] = await Promise.all([
     loadBuildSource(read, gameMode),
@@ -132,15 +132,16 @@ export async function loadBuildPricing(read: Read, gameMode: GameMode, input: Pr
     excludeQuestLocked: input.excludeQuestLocked === true,
     completedTasks: completed,
   };
-  if (!hasTraderLimits(limits)) return { data: source, sources, limits: null, quests };
+  const limited = hasTraderLimits(limits) ? limits : null;
+  if (!limited && !sources.barters) return { data: source, sources, limits: null, quests };
   return {
     data: {
       ...source,
-      lookup: limitLookup(source.lookup, limits),
-      loadAmmo: async (ids) => (await source.loadAmmo(ids)).map((ammo) => withTraderLimits(ammo, limits)),
+      lookup: limitLookup(source.lookup, limited, sources),
+      loadAmmo: async (ids) => (await source.loadAmmo(ids)).map((ammo) => limitItem(ammo, limited, sources)),
     },
     sources,
-    limits,
+    limits: limited,
     quests,
   };
 }

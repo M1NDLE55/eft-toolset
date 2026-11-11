@@ -10,7 +10,6 @@ import type {
   CachedVendorPrice,
   CatalogEntry,
   ComposedItem,
-  ItemBarterOffer,
   ItemUses,
 } from "@/app/lib/cache/types";
 import type {
@@ -26,6 +25,7 @@ import type {
   TraderOffer,
 } from "@/app/lib/types/gunBuilder";
 import type { TaskIndex, TaskNode } from "@/app/lib/builds/quests";
+import { barterCost } from "@/app/lib/builds/price";
 import type {
   ExtractFaction,
   MapBoss,
@@ -347,18 +347,15 @@ interface HideoutContext {
 
 interface RelationsContext {
   bartersByItem: Map<string, RawBarter[]>;
-  /** Barters by the item they give. */
   bartersByReward: Map<string, RawBarter[]>;
   craftsByItem: Map<string, RawCraft[]>;
 }
 
-/** What projecting an item's offers needs: trader, preset, and task names, and barters when they are priced. */
 interface OfferContext {
   traderNames: Map<string, string>;
   itemById: Map<string, RawItem>;
   translations: TranslationDictionary;
   taskUnlock: (taskId: string | null | undefined) => TaskUnlock | null;
-  /** Set for lookups that price barters. */
   bartersByReward?: Map<string, RawBarter[]>;
 }
 
@@ -734,7 +731,7 @@ async function getBuildItems(gameMode: GameMode, ids: string[]): Promise<BuildIt
   });
 }
 
-// Include every weapon and compatible part in one lookup, with the barters that give them.
+// Include every weapon and compatible part in one lookup.
 export async function getGunPartLookup(gameMode: GameMode): Promise<ReadonlyMap<string, BuildItemData>> {
   const [context, offers] = await Promise.all([loadItems(gameMode), loadOfferContext(gameMode, true)]);
   return memo(`${gameMode}/gun-part-lookup`, [context, offers], () => {
@@ -765,7 +762,6 @@ async function getPickItems(gameMode: GameMode, ids: string[]): Promise<PickItem
   });
 }
 
-/** Ammo by id; with barters, each round also gets the priced barters that give it (for the MCP tools). */
 export async function getAmmoItems(
   gameMode: GameMode,
   ids: string[],
@@ -906,7 +902,7 @@ async function loadOfferContext(gameMode: GameMode, withBarters = false): Promis
   });
 }
 
-/** An offer's task lock. A task tarkov.dev doesn't list still locks the offer, so it keeps its id as its name. */
+// Unknown tasks keep their id as their name.
 function projectOfferUnlock(id: string, tasks: TasksContext, traderNames: Map<string, string>): TaskUnlock {
   const task = tasks.byId.get(id);
   return {
@@ -917,7 +913,6 @@ function projectOfferUnlock(id: string, tasks: TasksContext, traderNames: Map<st
   };
 }
 
-/** Every task with what it requires, for matching completed tasks and listing what a build still needs. */
 export async function getTaskIndex(gameMode: GameMode): Promise<TaskIndex> {
   const [tasks, traderNames] = await Promise.all([loadTasks(gameMode), loadTraderNames(gameMode)]);
   return memo(`${gameMode}/task-index`, [tasks, traderNames], () => {
@@ -1876,7 +1871,6 @@ function sightKind(item: RawItem, name: string): SightKind | null {
   return /\bflip-up sights\b/i.test(name) ? "iron" : null;
 }
 
-/** A weapon's default preset with its name; null for other items. */
 function defaultPresetOf(item: RawItem, context: OfferContext) {
   const id = item.types?.includes("gun") ? item.properties?.defaultPreset : null;
   const preset = id ? context.itemById.get(id) : undefined;
@@ -1899,11 +1893,7 @@ function ownTraderOffers(item: RawItem, context: OfferContext): TraderOffer[] {
   });
 }
 
-/**
- * Trader offers with their loyalty levels and task locks, cheapest first. Traders sell most
- * weapons only as their default preset, so a weapon also gets its default preset's offers,
- * marked with the preset: buying the preset is how a player gets the weapon.
- */
+// Traders often sell weapons only as their default preset.
 function traderOffersOf(item: RawItem, context: OfferContext): TraderOffer[] {
   const preset = defaultPresetOf(item, context);
   return [
@@ -1912,21 +1902,10 @@ function traderOffersOf(item: RawItem, context: OfferContext): TraderOffer[] {
   ].sort((a, b) => a.priceRUB - b.priceRUB);
 }
 
-/** What a player pays for an item at the cheapest trader or the flea 24-hour average, ignoring loyalty levels. */
-function buyValue(item: RawItem | undefined) {
-  if (!item) return null;
-  const prices = [
-    ...(item.buyFromTrader ?? []).map((offer) => positiveFiniteNumber(offer.priceRUB)),
-    positiveFiniteNumber(fleaAveragePrice(item)),
-  ].filter((price): price is number => price !== null);
-  return prices.length ? Math.min(...prices) : null;
-}
+const EVERY_SOURCE = { traders: true, flea: true };
 
-/**
- * Barters that give the item (or, for a weapon, its default preset), cheapest first. Each is
- * priced per item it gives at what its inputs cost to buy; null when an input has no price.
- */
-function barterOffersOf(item: RawItem, context: OfferContext): ItemBarterOffer[] {
+// Prices are per reward item; an unpriced input makes the price null.
+function barterOffersOf(item: RawItem, context: OfferContext, withInputs = false): BarterOffer[] {
   const index = context.bartersByReward;
   if (!index || !item.id) return [];
   const preset = defaultPresetOf(item, context);
@@ -1937,42 +1916,39 @@ function barterOffersOf(item: RawItem, context: OfferContext): ItemBarterOffer[]
   return barters
     .flatMap(({ barter, preset }) => {
       if (!barter.trader) return [];
-      const count = positiveFiniteNumber(barter.offeredItem?.count) ?? 1;
-      let total: number | null = 0;
       const requiredItems = (barter.requiredItems ?? []).flatMap((entry) => {
         if (!entry.item) return [];
         const required = context.itemById.get(entry.item);
-        const quantity = finiteNumber(entry.count) ?? 0;
-        const unit = buyValue(required);
-        total = total === null || unit === null ? null : total + unit * quantity;
-        return [{ name: (required && translate(required.name, context.translations)) || entry.item, count: quantity }];
+        return [
+          {
+            name: (required && translate(required.name, context.translations)) || entry.item,
+            count: finiteNumber(entry.count) ?? 0,
+            traderOffers: required ? ownTraderOffers(required, context).sort((a, b) => a.priceRUB - b.priceRUB) : [],
+            fleaPriceRUB: required ? fleaAveragePrice(required) : null,
+          },
+        ];
       });
       const taskUnlock = context.taskUnlock(barter.taskUnlock);
-      return [
-        {
-          trader: context.traderNames.get(barter.trader) ?? barter.trader,
-          priceRUB: total === null ? null : Math.round(total / count),
-          level: traderLoyaltyLevel(barter),
-          ...(taskUnlock ? { taskUnlock } : {}),
-          ...(preset ? { preset } : {}),
-          requiredItems,
-          count,
-        },
-      ];
+      const offer: BarterOffer = {
+        trader: context.traderNames.get(barter.trader) ?? barter.trader,
+        priceRUB: null,
+        level: traderLoyaltyLevel(barter),
+        ...(taskUnlock ? { taskUnlock } : {}),
+        ...(preset ? { preset } : {}),
+        requiredItems,
+        count: positiveFiniteNumber(barter.offeredItem?.count) ?? 1,
+      };
+      offer.priceRUB = barterCost(offer, EVERY_SOURCE, null);
+      if (!withInputs) offer.requiredItems = requiredItems.map(({ name, count }) => ({ name, count }));
+      return [offer];
     })
     .sort((a, b) => (a.priceRUB ?? Number.POSITIVE_INFINITY) - (b.priceRUB ?? Number.POSITIVE_INFINITY));
 }
 
-/**
- * Every trader offer and the flea ban, so the gun builder can price parts at a player's
- * loyalty levels and tasks, and for lookups that price barters, the priced barters.
- */
 function gunBuilderExtras(item: RawItem, context: OfferContext) {
   const extras = { traderOffers: traderOffersOf(item, context), fleaBanned: isFleaBanned(item) };
   if (!context.bartersByReward) return extras;
-  const barterOffers = barterOffersOf(item, context).filter(
-    (offer): offer is BarterOffer => offer.priceRUB !== null
-  );
+  const barterOffers = barterOffersOf(item, context, true);
   return { ...extras, barterOffers, barterPriceRUB: barterOffers[0]?.priceRUB ?? null };
 }
 

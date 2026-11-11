@@ -6,10 +6,9 @@ import type {
   CachedTask,
   CachedTaskObjective,
   ComposedItem,
-  ItemBarterOffer,
   ItemUses,
 } from "@/app/lib/cache/types";
-import type { TaskUnlock } from "@/app/lib/types/gunBuilder";
+import type { BarterOffer, TaskUnlock } from "@/app/lib/types/gunBuilder";
 import { FLEA_MARKET, LOOT_ONLY, NO_FLEA_PRICE, bestSell, fleaPrices } from "@/app/lib/item-price";
 import { summarizeNeeds, taskNeed } from "@/app/lib/item-needs";
 import { round, type ToolContext } from "./context";
@@ -200,7 +199,7 @@ export function priceSummary(item: CachedItem) {
 }
 
 /** A barter that gives the item, valued at what its inputs cost to buy. */
-function projectBarterFor(barter: ItemBarterOffer) {
+function projectBarterFor(barter: BarterOffer) {
   return {
     trader: barter.trader,
     ...(barter.level ? { loyaltyLevel: barter.level } : {}),

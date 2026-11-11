@@ -257,7 +257,6 @@ describe("Tarkov JSON adapter", () => {
       traderTask: "Test Task",
       traderOffers: [{ trader: "Tester", priceRUB: 60_000, level: 1, taskUnlock: unlock, preset: "Test Preset" }],
     });
-    // Web lookups don't carry barters; only the MCP lookup prices them.
     expect(weapon).not.toHaveProperty("barterOffers");
     await expect(
       executeTarkovOperation(TARKOV_OPERATIONS.pickItems, { gameMode: "regular", ids: ["mod"] })
@@ -272,7 +271,6 @@ describe("Tarkov JSON adapter", () => {
       { vendor: { name: "Flea Market" }, priceRUB: 55_000 },
     ]);
 
-    // A weapon a trader sells bare keeps that offer first when it is cheaper.
     items.weapon.buyFromTrader = [{ trader: "trader", priceRUB: 30_000, minTraderLevel: 2 }];
     clearTarkovResourceCache();
     const lookup = await getGunPartLookup("regular");
@@ -289,7 +287,6 @@ describe("Tarkov JSON adapter", () => {
         trader: "trader",
         minTraderLevel: 1,
         taskUnlock: "task",
-        // 2 mods at the 10,000 trader price (cheaper than the 12,000 flea price), 10 rounds at 150.
         requiredItems: [{ item: "mod", count: 2 }, { item: "ammo", count: 10 }],
         offeredItem: { item: "preset", count: 1 },
       },
@@ -306,9 +303,16 @@ describe("Tarkov JSON adapter", () => {
         taskUnlock: { id: "task", name: "Test Task", trader: "Tester", minPlayerLevel: 10 },
         preset: "Test Preset",
         requiredItems: [
-          { name: "Test Mod", count: 2 },
-          { name: "Test Ammo", count: 10 },
+          { name: "Test Mod", count: 2, traderOffers: [{ trader: "Tester", priceRUB: 10_000, level: null }], fleaPriceRUB: 12_000 },
+          { name: "Test Ammo", count: 10, traderOffers: [{ trader: "Tester", priceRUB: 150, level: 2 }], fleaPriceRUB: null },
         ],
+        count: 1,
+      },
+      {
+        trader: "Tester",
+        priceRUB: null,
+        level: 3,
+        requiredItems: [{ name: "Test Key", count: 1, traderOffers: [], fleaPriceRUB: null }],
         count: 1,
       },
     ]);
@@ -318,15 +322,15 @@ describe("Tarkov JSON adapter", () => {
     const [ammo] = await getAmmoItems("regular", ["ammo"], { barters: true });
     expect(ammo).toMatchObject({ barterPriceRUB: 100, barterOffers: [expect.objectContaining({ count: 100, level: 2 })] });
 
-    // The item page data lists every barter for the item, priced or not.
     const detail = (await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, {
       gameMode: "regular",
       name: "Test Rifle",
-    })) as { bartersFor: { priceRUB: number | null; level: number | null }[] };
+    })) as { bartersFor: { priceRUB: number | null; level: number | null; requiredItems: unknown[] }[] };
     expect(detail.bartersFor.map((barter) => [barter.priceRUB, barter.level])).toEqual([
       [21_500, 1],
       [null, 3],
     ]);
+    expect(detail.bartersFor[1].requiredItems).toEqual([{ name: "Test Key", count: 1 }]);
   });
 
   it("indexes each task's prerequisites and trader levels", async () => {

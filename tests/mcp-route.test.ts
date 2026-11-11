@@ -696,10 +696,8 @@ describe("MCP endpoint", () => {
     const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
     const translations = (fixtures.items_en as { data: Record<string, string> }).data;
     const tasks = (fixtures.tasks as { data: { tasks: Record<string, Record<string, unknown>> } }).data.tasks;
-    // Traders sell the rifle only as its default preset.
     items.weapon.buyFromTrader = [];
     items.preset.buyFromTrader = [{ trader: "trader", priceRUB: 60_000, minTraderLevel: 1 }];
-    // A better part, sold only after the second task, which needs the first and Tester LL2.
     items.mod2 = {
       id: "mod2",
       name: "mod2-name",
@@ -719,7 +717,6 @@ describe("MCP endpoint", () => {
       traderRequirements: [{ trader: "trader", requirementType: "level", compareMethod: ">=", value: 2 }],
     };
     (fixtures.tasks_en as { data: Record<string, string> }).data["task2-name"] = "Second Task";
-    // A barter for the locked part: 20 rounds at 150.
     (fixtures.barters as { data: Record<string, unknown>[] }).data.push({
       trader: "trader",
       minTraderLevel: 1,
@@ -743,7 +740,6 @@ describe("MCP endpoint", () => {
       expect.objectContaining({ name: "Locked Mod", source: "trader", taskUnlock: secondTask }),
     ]);
 
-    // Parts the preset comes with are already the player's: they are marked, and the note says what the build really costs.
     const factory = await call("evaluate_build", {
       build: { weapon: "Test Rifle", parts: [{ slotPath: ["Scope"], item: "Test Mod" }] },
       priceSources: tradersOnly,
@@ -755,7 +751,6 @@ describe("MCP endpoint", () => {
     );
     expect(evaluated.data.parts[0]).not.toHaveProperty("comesWithWeapon");
 
-    // Completed tasks, by any spelling, and the tasks they needed drop out of the chain.
     const partly = await call("evaluate_build", { build, priceSources: { ...tradersOnly, completedTasks: ["test task"] } });
     expect(partly.data.requiredTasks.map((task: { name: string }) => task.name)).toEqual(["Second Task"]);
     const done = await call("evaluate_build", { build, priceSources: { ...tradersOnly, completedTasks: ["second-task"] } });
@@ -764,7 +759,6 @@ describe("MCP endpoint", () => {
     expect(unknown.result.isError).toBe(true);
     expect(unknown.text).toMatch(/^completedTasks has unknown tasks: "Secnd Task" \(did you mean "Second Task"[^)]*\), "Nope"\./);
 
-    // Leaving out quest-locked offers unprices the part unless its task is done.
     const excluded = await call("evaluate_build", { build, priceSources: { ...tradersOnly, excludeQuestLocked: true } });
     expect(excluded.data.parts[0]).toMatchObject({
       priceRUB: null,
@@ -777,12 +771,18 @@ describe("MCP endpoint", () => {
     });
     expect(unlocked.data.parts[0]).toMatchObject({ priceRUB: 20_000, taskUnlock: secondTask });
 
-    // Barters are a price source when asked for, under the same limits.
-    const bartered = await call("evaluate_build", { build, priceSources: { ...tradersOnly, barters: true } });
+    const levelTwo = { flea: false, maxTraderLevel: 2, barters: true };
+    const bartered = await call("evaluate_build", { build, priceSources: levelTwo });
     expect(bartered.data.parts[0]).toMatchObject({ priceRUB: 3_000, source: "barter", trader: "Tester LL1", barter: ["20× Test Ammo"] });
     expect(bartered.data.parts[0]).not.toHaveProperty("taskUnlock");
     expect(bartered.data.stats.costRUB).toBe(63_000);
-    const options = await call("get_slot_options", { build, slotPath: ["Scope"], priceSources: { ...tradersOnly, barters: true } });
+    const levelOne = await call("evaluate_build", { build, priceSources: { ...tradersOnly, barters: true } });
+    expect(levelOne.data.parts[0]).toMatchObject({ priceRUB: 20_000, source: "trader" });
+    const barterOnly = await call("get_slot_options", { build, slotPath: ["Scope"], priceSources: { traders: false, flea: false, barters: true } });
+    expect(barterOnly.data.options.find((row: { id: string }) => row.id === "mod2").priceNote).toBe(
+      "Can't be bought: trader prices are turned off, flea prices are turned off, and the barters that give it take items the allowed sources and levels don't sell."
+    );
+    const options = await call("get_slot_options", { build, slotPath: ["Scope"], priceSources: levelTwo });
     expect(options.data.options.find((row: { id: string }) => row.id === "mod2")).toMatchObject({
       priceRUB: 3_000,
       traderPriceRUB: 20_000,
@@ -795,7 +795,6 @@ describe("MCP endpoint", () => {
       "Can't be bought: trader prices are turned off, flea prices are turned off, and only a barter from Tester LL1 gives it, above the allowed trader levels."
     );
 
-    // The optimiser only picks the locked part once its task is done, and says what is left to do.
     const optimize = (priceSources: Record<string, unknown>) =>
       call("optimize_build", { build: { weapon: "Test Rifle", parts: [{ slotPath: ["Scope"], item: "Test Mod" }] }, goal: "ergonomics", priceSources });
     const locked = await optimize({ flea: false, excludeQuestLocked: true });
@@ -807,7 +806,6 @@ describe("MCP endpoint", () => {
     expect(toDo.data.parts.map((part: { name: string }) => part.name)).toEqual(["Locked Mod"]);
     expect(toDo.data.requiredTasks).toEqual([expect.objectContaining({ name: "Second Task", unlocks: ["Locked Mod"] })]);
 
-    // get_item shows the preset a weapon is sold as, task locks, and barters that give the item.
     const rifle = await call("get_item", { item: "Test Rifle" });
     expect(rifle.data.buyFrom.find((offer: { vendor: string }) => offer.vendor === "Tester")).toEqual({
       vendor: "Tester",
@@ -822,6 +820,15 @@ describe("MCP endpoint", () => {
     ]);
     expect(lockedMod.data.buyByBarter).toEqual([{ trader: "Tester", loyaltyLevel: 1, priceRUB: 3_000, give: ["20× Test Ammo"] }]);
     expect(rifle.data).not.toHaveProperty("buyByBarter");
+
+    items.mod.buyFromTrader = [{ trader: "trader", priceRUB: 10_000, minTraderLevel: 1, taskUnlock: "task2" }];
+    clearTarkovResourceCache();
+    const included = await call("evaluate_build", {
+      build: { weapon: "Test Rifle", parts: [{ slotPath: ["Scope"], item: "Test Mod" }] },
+      priceSources: tradersOnly,
+    });
+    expect(included.data.parts[0]).toMatchObject({ comesWithWeapon: true, taskUnlock: secondTask });
+    expect(included.data).not.toHaveProperty("requiredTasks");
   });
 
   it("filters weapons by caliber before limiting name matches", async () => {

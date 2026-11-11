@@ -86,12 +86,11 @@ const taskUnlock = object({ id: text, name: text, trader: maybeText, minPlayerLe
 const priceSource = z.enum(["trader", "flea", "barter"]);
 const barterOffer = object({
   trader: text,
-  priceRUB: num.describe("What the barter takes, per item it gives, at the inputs' cheapest buy price."),
+  priceRUB: maybeNum.describe("What the barter's inputs cost from the allowed sources, per item it gives."),
   give: list(text),
   receive: num.optional(),
   taskUnlock,
 }).optional();
-/** How a build buys an item: the chosen source and, for a trader or barter, which offer and its task. */
 const purchase = {
   priceRUB: buildPrice,
   priceNote,
@@ -100,7 +99,6 @@ const purchase = {
   barter: list(text).optional().describe("What the barter takes."),
   taskUnlock,
 };
-/** The offer columns option lists show: trader, flea, and with barters on, the cheapest allowed barter. */
 const offerColumns = {
   traderPriceRUB: maybeNum,
   trader: maybeText,

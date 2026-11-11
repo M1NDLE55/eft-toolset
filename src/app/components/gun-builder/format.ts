@@ -35,7 +35,6 @@ export function formatTrader(item: { traderName?: string | null; traderLevel?: n
   return item.traderLevel ? `${item.traderName} LL${item.traderLevel}` : item.traderName;
 }
 
-/** "After the task Chemical - Part 2" when the trader price needs a task. */
 export function traderTaskHint(item: { traderTask?: string | null }) {
   return item.traderTask ? `After the task ${item.traderTask}` : undefined;
 }

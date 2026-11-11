@@ -27,17 +27,25 @@ export interface TraderOffer {
   preset?: string;
 }
 
-/** A trader barter that gives the item, priced at the rouble value of what it takes. */
+/** One item a barter takes; MCP lookups add its offers, to price it for a player. */
+export interface BarterInput {
+  name: string;
+  count: number;
+  traderOffers?: TraderOffer[];
+  fleaPriceRUB?: number | null;
+}
+
+/** A trader barter that gives the item, priced at what its inputs cost. */
 export interface BarterOffer {
   trader: string;
-  /** What the barter takes, per item it gives, at the inputs' cheapest buy price. */
-  priceRUB: number;
+  /** Per item it gives; null when an input can't be bought. */
+  priceRUB: number | null;
   level: number | null;
   taskUnlock?: TaskUnlock;
   /** Set when the barter gives the weapon as this preset. */
   preset?: string;
-  /** What the barter takes for one trade, and how many of the item that trade gives. */
-  requiredItems: { name: string; count: number }[];
+  /** What one trade takes, and how many of the item it gives. */
+  requiredItems: BarterInput[];
   count: number;
 }
 

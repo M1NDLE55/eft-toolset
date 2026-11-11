@@ -11,9 +11,6 @@ export interface CachedVendorPrice {
   preset?: string;
 }
 
-/** A barter that gives an item; priceRUB is null when one of its inputs has no price. */
-export type ItemBarterOffer = Omit<BarterOffer, "priceRUB"> & { priceRUB: number | null };
-
 export interface CachedContainedItem {
   item: { name: string; normalizedName?: string | null };
   quantity: number;
@@ -125,7 +122,7 @@ export interface ComposedItem extends Omit<CachedItem, "usedInTasks"> {
   hideoutSlots: CachedHideoutSlot[];
   bartersUsing: CachedBarter[];
   /** Barters that give the item, for the MCP tools; the item page doesn't list them yet. */
-  bartersFor?: ItemBarterOffer[];
+  bartersFor?: BarterOffer[];
   craftsUsing: CachedCraft[];
 }
 

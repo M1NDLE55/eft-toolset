@@ -108,7 +108,6 @@ interface OfferedItem {
   fleaBanned?: boolean;
 }
 
-/** Why offers the limits rule out can't be used: too high a loyalty level, or a task still to do. */
 function blockedOffers(offers: readonly (TraderOffer | BarterOffer)[], limits: TraderLimits | null) {
   const blocked = limits ? offers.filter((offer) => !offerAllowed(offer, limits)) : [];
   if (!blocked.length) return null;
@@ -126,7 +125,6 @@ function blockedOffers(offers: readonly (TraderOffer | BarterOffer)[], limits: T
     : { who: blocked.map((offer) => `${offerLabel(offer)} (${reason(offer)})`).join(" or "), why: "" };
 }
 
-/** Why an item has no price from the enabled sources, the player's trader levels, and their tasks. */
 export function priceNote(item: OfferedItem, sources: PriceSources, limits: TraderLimits | null) {
   const offers = item.traderOffers ?? [];
   let trader: string;
@@ -143,14 +141,20 @@ export function priceNote(item: OfferedItem, sources: PriceSources, limits: Trad
       : NO_FLEA_PRICE.noPrice;
   const reasons = [trader, flea];
   if (sources.barters) {
-    const blocked = blockedOffers(item.barterOffers ?? [], limits);
-    reasons.push(blocked ? `only a barter from ${blocked.who} gives it${blocked.why}` : "no barter gives it");
+    const barters = item.barterOffers ?? [];
+    const blocked = blockedOffers(barters, limits);
+    reasons.push(
+      blocked
+        ? `only a barter from ${blocked.who} gives it${blocked.why}`
+        : barters.length
+          ? "the barters that give it take items the allowed sources and levels don't sell"
+          : "no barter gives it"
+    );
   }
   const lootOnly = item.fleaBanned && offers.length === 0 && !item.barterOffers?.length ? ` ${LOOT_ONLY}` : "";
   return `Can't be bought: ${reasons.slice(0, -1).join(", ")}, and ${reasons.at(-1)}.${lootOnly}`;
 }
 
-/** A task lock as build results show it. */
 function unlockOf(offer: { taskUnlock?: TaskUnlock } | null | undefined) {
   return offer?.taskUnlock ? { taskUnlock: offer.taskUnlock } : {};
 }
@@ -165,7 +169,6 @@ function projectBarterOffer(barter: BarterOffer) {
   };
 }
 
-/** "Prapor LL1" for the trader offer an item's trader price comes from, with the offer when the item lists it. */
 function traderOffer(item: OfferedItem, limits: TraderLimits | null) {
   const offer = bestOffer(item.traderOffers, limits);
   if (offer && offer.priceRUB === item.traderPriceRUB) return { label: offerLabel(offer), offer };
@@ -173,10 +176,6 @@ function traderOffer(item: OfferedItem, limits: TraderLimits | null) {
   return { label, offer: null };
 }
 
-/**
- * The trader price, the flea average, and (with barters on) the cheapest allowed barter, with
- * the task the trader offer needs: the columns option lists show for every row.
- */
 function offerColumns(item: OfferedItem, sources: PriceSources, limits: TraderLimits | null) {
   const trader = traderOffer(item, limits);
   const barter = sources.barters ? bestOffer(item.barterOffers, limits) : null;
@@ -199,10 +198,6 @@ type Purchase = {
   taskUnlock?: TaskUnlock;
 };
 
-/**
- * How a build buys an item: the price, where it comes from, and for a trader offer or barter,
- * which one and the task it needs.
- */
 function purchase(item: OfferedItem, sources: PriceSources, limits: TraderLimits | null): Purchase {
   const choice = priceChoice(item, sources, limits);
   if (!choice) return { priceRUB: null, priceNote: priceNote(item, sources, limits) };
@@ -218,7 +213,6 @@ function purchase(item: OfferedItem, sources: PriceSources, limits: TraderLimits
   };
 }
 
-/** The task an item's chosen offer needs, unless the player has done it. */
 function pendingUnlock(item: OfferedItem | undefined, sources: PriceSources, limits: TraderLimits | null, quests: QuestProgress) {
   if (!item) return null;
   const choice = priceChoice(item, sources, limits);
@@ -228,10 +222,6 @@ function pendingUnlock(item: OfferedItem | undefined, sources: PriceSources, lim
   return unlock && !quests.completed.has(unlock.id) ? unlock : null;
 }
 
-/**
- * The tasks still to do before the build can be bought as priced: the tasks that unlock the
- * chosen offers and the tasks they need first, in an order they can be done.
- */
 function requiredTasks(
   items: readonly { name: string; item: OfferedItem | undefined }[],
   sources: PriceSources,
@@ -310,11 +300,7 @@ async function factoryTree(data: BuildSource, weaponId: string): Promise<BuildNo
   return contents ? reconstructPresetTree(weaponId, contents, data.lookup) : null;
 }
 
-/**
- * The build's parts that come with the weapon: a trader or barter that sells the weapon only
- * as its default preset sells the preset's parts with it, so the player already has those.
- * Null when the weapon isn't bought that way.
- */
+// Preset purchases include the preset's parts.
 function partsWithWeapon(
   root: BuildNode,
   lookup: BuildSource["lookup"],
@@ -430,6 +416,7 @@ export async function describeBuild(
     name: string;
     ergonomics: number;
     recoilModifierPercent: number | null;
+    comesWithWeapon?: true;
   } & Purchase)[] = [];
   const walk = (node: BuildNode, path: string[]) => {
     const item = lookup.get(node.itemId);
@@ -514,7 +501,8 @@ export async function describeBuild(
     ...requiredTasksField(
       [
         { name: weapon?.name ?? build.weaponId, item: weapon },
-        ...parts.map((part) => ({ name: part.name, item: lookup.get(part.itemId) })),
+        // Parts the weapon's preset includes needn't be bought, so their tasks don't count.
+        ...parts.filter((part) => !part.comesWithWeapon).map((part) => ({ name: part.name, item: lookup.get(part.itemId) })),
         ...(ammo ? [{ name: ammo.name, item: ammo }] : []),
       ],
       sources,
@@ -527,10 +515,7 @@ export async function describeBuild(
   };
 }
 
-/**
- * Says what the weapon's preset already includes, since costRUB prices every part: the build
- * really costs that much less when the player keeps the preset's parts.
- */
+// costRUB also counts the preset's parts, so report the adjusted total.
 function withPresetNote<T extends { problems: string[] }>(
   result: T,
   withWeapon: ReturnType<typeof partsWithWeapon>,
