@@ -431,6 +431,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
   define(
     "modify_build",
     {
+      cacheResults: true,
       outputSchema: modifyBuildOutput,
       inputSchema: {
         build: buildInputSchema,
@@ -517,6 +518,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
   define(
     "optimize_build",
     {
+      cacheResults: true,
       outputSchema: optimizeBuildOutput,
       inputSchema: {
         build: buildInputSchema,

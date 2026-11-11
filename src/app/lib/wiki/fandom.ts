@@ -1,3 +1,4 @@
+import { USER_AGENT } from "@/app/lib/api/user-agent";
 import { InputError } from "@/app/lib/input-error";
 
 // Use the API to avoid HTML challenges; cache locally because API responses forbid caching.
@@ -8,7 +9,6 @@ export const WIKI_NAME = "Escape from Tarkov Wiki";
 export const WIKI_LICENCE = { name: "CC BY-NC-SA", url: "https://www.fandom.com/licensing" };
 
 const API_URL = `${WIKI_ORIGIN}/api.php`;
-const USER_AGENT = "EFT-Toolset/1.0 (+https://github.com/M1NDLE55/eft-toolset)";
 const REQUEST_TIMEOUT_MS = 10_000;
 const MAX_RESPONSE_CHARS = 2_000_000;
 const CACHE_TTL_MS = 60 * 60 * 1000;

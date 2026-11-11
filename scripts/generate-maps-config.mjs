@@ -37,6 +37,8 @@ function floorId(name) {
 }
 
 const PROBE_CONCURRENCY = 8;
+const USER_AGENT = "EFT-Toolset/1.0 (+https://www.eft-toolset.com; https://github.com/M1NDLE55/eft-toolset/issues)";
+const RETRY_DELAY_MS = 1000;
 const tileStatusCache = new Map();
 
 async function tileExists(tilePath, z, x, y) {
@@ -47,7 +49,8 @@ async function tileExists(tilePath, z, x, y) {
       url,
       (async () => {
         for (let attempt = 0; attempt < 3; attempt += 1) {
-          const result = await fetch(url, { method: "HEAD" }).catch(() => null);
+          if (attempt > 0) await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY_MS * 2 ** (attempt - 1)));
+          const result = await fetch(url, { method: "HEAD", headers: { "User-Agent": USER_AGENT } }).catch(() => null);
           if (result && (result.status === 200 || result.status === 404 || result.status === 403)) {
             return result.status === 200;
           }
@@ -116,7 +119,7 @@ async function computeTileGrid(config) {
   return grid;
 }
 
-const response = await fetch(SOURCE_URL);
+const response = await fetch(SOURCE_URL, { headers: { "User-Agent": USER_AGENT } });
 if (!response.ok) {
   throw new Error(`Failed to fetch maps.json: ${response.status}`);
 }

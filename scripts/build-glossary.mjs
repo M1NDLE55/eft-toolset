@@ -9,6 +9,7 @@ const TERMS_PATH = join(ROOT, "src/app/lib/glossary/terms.json");
 const LABELS_PATH = join(ROOT, "src/app/lib/glossary/map-labels.json");
 const NOTES_PATH = join(ROOT, "src/app/lib/glossary/label-notes.json");
 const MAPS_URL = "https://raw.githubusercontent.com/the-hideout/tarkov-dev/main/src/data/maps.json";
+const USER_AGENT = "EFT-Toolset/1.0 (+https://www.eft-toolset.com; https://github.com/M1NDLE55/eft-toolset/issues)";
 const MCP_URL = process.env.EFT_MCP_URL ?? "https://www.eft-toolset.com/api/mcp";
 const CHECK = process.argv.includes("--check");
 
@@ -47,7 +48,7 @@ function labelHeight(bottom, top) {
 
 /** Map labels in game coordinates: [x, z], shown between heights bottom and top. */
 async function loadLabels() {
-  const response = await fetch(MAPS_URL);
+  const response = await fetch(MAPS_URL, { headers: { "User-Agent": USER_AGENT } });
   if (!response.ok) throw new Error(`maps.json: HTTP ${response.status}`);
   const groups = await response.json();
   const labels = {};
