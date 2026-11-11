@@ -80,6 +80,8 @@ Licensed under the GNU General Public License v3.0. See [LICENSE](LICENSE) for d
 
 The GPL covers this project's code only. Text that `get_wiki_page` returns comes from the [Escape from Tarkov Wiki](https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki) on Fandom, written by its contributors and licensed [CC BY-NC-SA](https://www.fandom.com/licensing). Every wiki result carries a credit line to keep with the text. The licence allows **non-commercial use only**, so monetising this service (ads, paid tiers, sponsorships) would mean removing or rethinking the wiki tool first.
 
+The raid planner's SVG maps (Streets of Tarkov, Interchange, Lighthouse, Shoreline, and Terminal) are by Shebuka, from [tarkov-dev-svg-maps](https://github.com/the-hideout/tarkov-dev-svg-maps/), and licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). They're loaded from tarkov.dev unmodified apart from floor visibility, and the planner credits them on the map. The same non-commercial limit applies to them.
+
 ## Contact
 
 For bugs, suggestions, or questions, please [open an issue](https://github.com/M1NDLE55/eft-toolset/issues).
