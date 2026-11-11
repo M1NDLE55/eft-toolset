@@ -1,0 +1,60 @@
+{
+  "title": "Gunsmith Master - Part 5",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_5",
+  "revisionId": 352605,
+  "lastEdited": "2026-08-09T19:59:01Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith 5",
+    "Gunsmith Master 5"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith Master - Part 5 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I want to try teaching Lusya to tell if someone's lying, if the result will be at least 90% accurate, it will be interesting to listen to all those politicians and TerraGroup whales, who've been expatiating upon their ideals and noble goals just yesterday, assured of the benefits of our economic zone and a bright future ahead. How much of this was a concentrated lie? I think, all of it. There's a request for a Magpul edition AKMN. I.e. the handguard, stock, and pistol grip have to be Magpul. All in black. Additionally, a Rotor 43 muzzle brake, black Magpul M-LOK AFG Tactical grip, and EOTech HHS-1 hybrid sight. Recoil sum lower than 380, ergonomics above 40, and weight of 5 kg or less with sighting range of 500.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 33 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an AKMN to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +23,100 EXP\n- Mechanic Rep +0.03\n- 50,000 Roubles\n  - 52,500 Roubles with Intelligence Center Level 1\n  - 57,500 Roubles with Intelligence Center Level 2\n- 1× EOTech Vudu 1-6x24 30mm riflescope\n- 1× AK-74 Hexagon Wafflemaker 5.45x39 sound suppressor\n- 1× AK Hexagon Reactor 5.45x39 muzzle brake\n- Unlocks purchase of Steiner LAS/TAC 2 tactical flashlight at Mechanic LL3\n- Unlocks purchase of AKM 7.62x39 Kiba Arms .308 muzzle device adapter at Mechanic LL3\n\"Thanks, leave them somewhere here. I’m a bit busy right now, catch you later.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "AKMN specifications:\n- 60 Durability\n- 380 or less recoil\n- 40 or more ergonomics\n- 5 kg or less in weight\n- AK Magpul MOE AKM handguard (Black)\n- AKM/AK-74 Magpul Zhukov-S stock\n- AK Magpul MOE pistol grip (Black)\n- AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine (Black)\n- Magpul M-LOK AFG tactical foregrip (Black)\n- Rotor 43 7.62x39 sound suppressor\n- EOTech HHS-1 hybrid sight (Black)"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Notes:",
+      "level": 3,
+      "text": "- This build is based on a standard AKMN from Prapor LL3.\n- Make sure to use all parts in black and not stealth grey.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Icon | Attachment | Sold By | Loyalty Level |\n| AK Magpul MOE AKM handguard (Black) | AK Magpul MOE AKM handguard (Black) | Skier | LL3 |\n| Magpul M-LOK AFG tactical foregrip (Black) | Magpul M-LOK AFG tactical foregrip (Black) | PeacekeeperSkier | LL3LL3 |\n| AKM/AK-74 Magpul Zhukov-S stock | AKM/AK-74 Magpul Zhukov-S stock | Peacekeeper | LL4 |\n| AK Magpul MOE pistol grip (Black) | AK Magpul MOE pistol grip (Black) | Mechanic | LL4 |\n| AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine | AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine (Black) | Peacekeeper | LL2 |\n| Rotor 43 7.62x39 sound suppressor | Rotor 43 7.62x39 sound suppressor | Mechanic | LL2 (Barter) |\n| EOTech HHS-1 hybrid sight | EOTech HHS-1 hybrid sight (Black) | Peacekeeper | LL4 |\n| AK AKademia Bastion dust cover | AK AKademia Bastion dust cover | Skier | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

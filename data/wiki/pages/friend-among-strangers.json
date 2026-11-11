@@ -1,0 +1,49 @@
+{
+  "title": "Friend Among Strangers",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Friend_Among_Strangers",
+  "revisionId": 359307,
+  "lastEdited": "2026-09-13T20:13:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "previous": "Establish Contact",
+    "leads to": "Immunity",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Friend Among Strangers is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You've made a name for yourself, and I may have an assignment for someone like you. But before I do, I want to make sure you can tell who's an asset and who's a threat. It's simple, shoot the PMCs, but don't hurt my people. Understood?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 7 PMC operatives without killing Scavs, Scav Raiders, Rogues or Bosses"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +25,600 EXP\n- Fence Rep +0.04\n- 1,200 Euros\n  - 1,260 Euros with Intelligence Center Level 1\n  - 1,380 Euros with Intelligence Center Level 2\n- 2× Military flash drive\n\"Here's your reward.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"Doesn't seem like you're trying to keep my people safe. Turns out you're more of a liability than a benefit. If you want to work with me, you have to prove your worth.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 7 PMCs without killing any Scavs, Scav Raiders, Rogues or Bosses.\n\nNote: Even after killing all PMCs, killing any of the above before you have left the raid and turned in the quest will result in a failure. You may die by any means and still complete the quest."
+    }
+  ]
+}

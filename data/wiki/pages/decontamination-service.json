@@ -1,0 +1,46 @@
+{
+  "title": "Decontamination Service",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Decontamination_Service",
+  "revisionId": 362149,
+  "lastEdited": "2026-09-24T20:47:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Decontamination service"
+  ],
+  "infobox": {
+    "location": "The Lab",
+    "given by": "Therapist",
+    "LL requirement": "4",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Decontamination Service is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I have a delicate matter for you. There is quite a commotion around the laboratories at the moment. My people continue to investigate these areas and recover anything that may be useful for civilians and others who need it. On top of that, these scum keep attacking groups associated with me. Almost as if they're doing it deliberately. I want you to teach them a lesson. Perhaps these misguided individuals can still find their way back to the right path. However, there is one condition: you must wear a chemical respirator or gas mask while doing so. They need to understand exactly who is eliminated their people, so make sure you deal with them at close range.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 40 any target from less than 60 meters away while wearing a gas mask or respirator on The Lab"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Therapist Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks craft for M.U.L.E. stimulant injector at Medstation level 2\n- +2 Vitality skill levels\n- +4 Immunity skill levels\n\"Thank you for your work, and don't concern yourself. Some people only understand when they're approached from a position of strength.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Find in raid | Notes |\n| Respirator | N/A | Needs to be worn to progress through the quest |\n| GP-5 gas mask | N/A | Needs to be worn to progress through the quest |\n| GP-7 gas mask | N/A | Needs to be worn to progress through the quest |\n| Gentex Ops-Core SOTR respirator | N/A | Needs to be worn to progress through the quest |\n| Avon M53A1 gas mask | N/A | Needs to be worn to progress through the quest |\nBug: The MSA Millennium Riot Control gas mask currently doesn't work for this quest.\n\nIn this quest you have to kill 40 any targets from less than 60 meters away on The Lab while wearing a Respirator, a GP-5 gas mask, a GP-7 gas mask, a Gentex Ops-Core SOTR respirator, or an Avon M53A1 gas mask."
+    }
+  ]
+}

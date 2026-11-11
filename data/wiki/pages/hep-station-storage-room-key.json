@@ -1,0 +1,58 @@
+{
+  "title": "HEP station storage room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HEP_station_storage_room_key",
+  "revisionId": 358638,
+  "lastEdited": "2026-09-10T22:44:49Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "HEPS"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the USEC stash inside the hydroelectric power station on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d8e15b686f774445103b190",
+    "ID": "shoreline_key_usec_place1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The HEP station storage room key (HEPS) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the USEC stash inside hydroelectric power station, located somewhere near the Azure Coast sanatorium."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be be obtained as a reward for completing the quest Nostalgia from Jaeger."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "On the second floor of the power station on Shoreline.\n- This location has 2 different doors that can be unlocked. Opening each door will use a point of durability on the key."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Weapon box (4x4)\n- 1x Weapon box (6x6)\n- 1x Weapon box (6x4)\n- 1x Toolbox\n- Loose loot (Weapon mods)\n- Intelligence folder spawn on the cabinet"
+    }
+  ]
+}

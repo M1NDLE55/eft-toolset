@@ -1,0 +1,59 @@
+{
+  "title": "Gunsmith - MPX",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_MPX",
+  "revisionId": 353681,
+  "lastEdited": "2026-08-14T21:36:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith MPX"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith - MPX is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Okay, we have an urgent order here, don't have much time. Some guy stopped by, said wants to sort it out with Reshala, who is operating somewhere around dorms together with folks from the factory. Build him an MPX, with the Tactical Dynamics Skeletonized pistol grip, Annihilator flash hider, and Steiner LAS/TAC 2 tactical flashlight. Aim for a sighting range of 300 or more, ergonomics above 47, weight less than 4 kg, the less than 225 recoil sum. And don't tell anyone why you need this gun. If Reshala hears about it, he won't be too happy, and his guys are quite a mean bunch, all served in the military before working at the factory.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 23 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify a SIG MPX to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +12,300 EXP\n- Mechanic Rep +0.02\n- 500 Dollars\n  - 525 Dollars with Intelligence Center Level 1\n  - 575 Dollars with Intelligence Center Level 2\n- 2× AR-15 Vendetta Precision VP-09 Interceptor 5.56x45 muzzle brake\n- 1× FN P90 Attenuator 5.7x28 sound suppressor\n- 1× AR-15 5.56x45 SureFire MAG5-100 STANAG 100-round magazine\n\"Come on, give it here, I need to hand it over to the client and fast. I hope you haven’t told anyone what this MPX is built for. Well, let's wish the guy luck.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "MPX specifications:\n- 60 Durability\n- 300 or greater sighting range\n- 47 or more ergonomics\n- 4 kg or less in weight\n- 225 or less recoil\n- AR-15 Tactical Dynamics Skeletonized pistol grip\n- Yankee Hill Annihilator multi-caliber flash hider\n- Steiner LAS/TAC 2 tactical flashlight"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard MPX from Peacekeeper LL2.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AR-15 Tactical Dynamics Skeletonized pistol grip | Skier | LL3 |\n| Yankee Hill Annihilator multi-caliber flash hider | Mechanic | LL2 |\n| Steiner LAS/TAC 2 tactical flashlight | MechanicRef | LL3LL2 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

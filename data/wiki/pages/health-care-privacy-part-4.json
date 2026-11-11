@@ -1,0 +1,46 @@
+{
+  "title": "Health Care Privacy - Part 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Care_Privacy_-_Part_4",
+  "revisionId": 359369,
+  "lastEdited": "2026-09-13T20:15:02Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Health Care Privacy. Part 4"
+  ],
+  "infobox": {
+    "given by": "Therapist",
+    "previous": "Health Care Privacy - Part 3",
+    "leads to": "Health Care Privacy - Part 5",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Care Privacy - Part 4 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day, young man. The degree of your deftness never ceases to leave me in admiration, but you shouldn't stop there. You understand that training must be continuous, don't you? Especially when surviving in Tarkov. Physical exertion has never harmed anyone. Try pushing yourself to the peak of your abilities. You may record your times and results for me, but that is entirely optional.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Gain the Fatigue status effect and maintain it for 8 minutes"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 3× Aluminum splint\n- Unlocks purchase of Aluminum splint at Therapist LL3\n\"Have you noticed that with each attempt, you are able to maintain peak performance for longer? Excellent.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to gain and maintain the effect for 8 minutes. The effect is caused by constant use of stamina during the critical amount state (red bar) and can be stacked infinitely. One stack only lasts for 3 minutes, so continual use of stamina in the the critical amount state is required to get the effect for 8 minutes. The duration can be checked on the thorax in the health tab."
+    }
+  ]
+}

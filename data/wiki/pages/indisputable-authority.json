@@ -1,0 +1,44 @@
+{
+  "title": "Indisputable Authority",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Indisputable_Authority",
+  "revisionId": 362483,
+  "lastEdited": "2026-09-29T16:08:46Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Labyrinth",
+    "given by": "Skier",
+    "previous": "Offensive Reconnaissance",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Indisputable Authority is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Oi, operator! There's a job for you, I don't want no tosser for this. Everyone's been checking out the dungeons under the resort, you ought to know about it by now. They say there's a bogeyman sitting there, safeguarding the whole territory, yelling like a madman and chasing everyone outta there. Nobody can put him down! Some partners of mine have started asking questions, trying to drive down prices because of this situation. But let me tell you this: the key to authority is not to fuck up the opportunity. We need to act now, and we need to do it in a way that every little prick knows his place. So we gotta take this fucker down. If you do it in my name, so to speak, everyone will understand. You've got the skills, so this \"Minotaur\" idiot won't be a problem for you. But still, better be careful, this bastard is no joke either.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and neutralize the \"Minotaur\" inside The Labyrinth\n- Eliminate 6 of \"Minotaur's\" guards inside The Labyrinth"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 1,650 Euros\n  - 1,733 Euros with Intelligence Center Level 1\n  - 1,898 Euros with Intelligence Center Level 2\n- 1× Tark Souls poster\n- 3× AK CSS knurled charging handle\n- 3× Zenit RK-1 tactical foregrip on B-25U mount\n- Unlocks purchase of AK CSS knurled charging handle at Skier LL3\n- Unlocks purchase of Zenit RK-1 tactical foregrip on B-25U mount at Skier LL4\n\"I knew I bet on the right guy! So, all safe and sound, ye? Good for you, good for you... Word's already out about your feat, no one's gonna blabber any bullshit to me anymore. Surely a lasting impression. You helped my business today, so I won't disappoint you either. Here, all yours.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you to have to kill Shadow of Tagilla and 6 Scavs inside The Labyrinth."
+    }
+  ]
+}

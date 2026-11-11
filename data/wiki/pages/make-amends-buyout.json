@@ -1,0 +1,48 @@
+{
+  "title": "Make Amends - Buyout",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Make_Amends_-_Buyout",
+  "revisionId": 359465,
+  "lastEdited": "2026-09-13T20:16:38Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "leads to": "Make Amends - Equipment",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Make Amends - Buyout is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I hear you've pissed off Lightkeeper. Friend, I won't get involved in your personal affairs, but be very careful, okay? Stay out of trouble. You've seen for yourself what this man is capable of. Well, we can still make up for it. Remember the situation with the ransom and the extortion of the traders? I remember it well. I think we can at least bribe Lightkeeper.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Getting the Digital secure DSP radio transmitter decoded the first time."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 1,000,000 RUB to Mechanic"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.01\n\"Okay, we're all set. I'll let you know how it goes.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Roubles | 1,000,000 | Handover item | No |"
+    }
+  ]
+}

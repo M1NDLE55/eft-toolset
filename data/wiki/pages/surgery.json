@@ -1,0 +1,41 @@
+{
+  "title": "Surgery",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Surgery",
+  "revisionId": 362588,
+  "lastEdited": "2026-09-29T19:47:11Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Surgery is a Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The ability to perform field surgery may save your life in critical situations. The better you learn this skill, the faster and better you will perform combat surgeries."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases surgery speed (0.4% per level → +20% at Elite Level)\n- Reduces surgery HP penalty (1% per level → -50% at Elite Level)\n- Elite level: Increases surgery speed (+20% → +40% total)\n- Elite level: Reduces surgery HP penalty (-50% → -100% total: Limbs are restored with full HP)"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- 1.1 points per use of a CMS surgical kit or Surv12 field surgical kit on a blacked out limb.\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention\n- Completing the quest Beneath The Streets\n- Completing the quest Crisis"
+    },
+    {
+      "heading": "Leveling Guide",
+      "level": 2,
+      "text": "- At the end of each raid, blackout both of your legs by jumping off a ledge or by having a friend shoot you. Then perform surgery on both legs.\n  - Performing 4 surgeries per raid will result in max-level surgery after 1400 raids.\n  - Having a friend shoot your limbs out is an effective way to gain surgery and Vitality simultaneously."
+    }
+  ]
+}

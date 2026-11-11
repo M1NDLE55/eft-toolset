@@ -1,0 +1,61 @@
+{
+  "title": "Leon's hideout key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Leon's_hideout_key",
+  "revisionId": 323253,
+  "lastEdited": "2025-11-19T20:14:13Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks Leon's hideout on the second floor of a house in the village on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "664d3de85f2355673b09aed5",
+    "ID": "Arena_lighthouse_key4"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Leon's hideout key (Leon) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the room in the big house next to the bridge that leads to the water treatment plant. Belonged to one of Arena gladiators by the name \"Leon\"."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- Can only be bartered from Ref LL4"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Leon's hideout on the second floor of a house in the village on Lighthouse."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Red keycard spawn location\n- Loose loot (Valuables, Electronics, Weapon mods, Armor plates, Stimulants)\n- 1x Sports bag\n- Graphics card spawn\n- Cyclon rechargeable battery spawn\n- Phased array element spawn\n- Possible Red Rebel ice pick\n- Possible UVSR Taiga-1 survival machete\n- Possible SP-8 Survival Machete\n- Possible Camper axe\n- Possible Springfield Armory M1A 7.62x51 rifle (variant 2k18 NY)\n- Possible HK G28 7.62x51 marksman rifle (variant Patrol)\n- Possible Remington Model 870 12ga pump-action shotgun (variant Breacher)\n- Possible modified Colt M4A1 5.56x45 assault rifle\n- Possible modified Springfield Armory M1A 7.62x51 rifle\n- Possible modified Mosin 7.62x54R bolt-action rifle (Sniper)\n- Possible standard HK G28 7.62x51 marksman rifle\n- Possible standard Remington R11 RSASS 7.62x51 marksman rifle\n- Possible L3Harris GPNVG-18 night vision goggles\n- Possible Walker's XCEL 500BT Digital headset\n- Possible Peltor ComTac IV Hybrid headset (Coyote Brown)\n- Possible BNTI Zhuk body armor (EMR)\n- Possible 5.11 Tactical Hexgrid plate carrier\n- Possible NPP KlASS Korund-VM body armor (Black)\n- Possible FORT Redut-M body armor\n- Possible LBT-6094A Slick Plate Carrier (Black)\n- Possible LBT-6094A Slick Plate Carrier (Olive Drab)\n- Possible LBT-6094A Slick Plate Carrier (Coyote Tan)\n- Possible DRD body armor\n- Possible NFM THOR Concealable Reinforced Vest body armor\n- Possible BNTI Gzhel-K body armor"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Lega Medal x1; Lega Medal; +; GP coin x100; GP coin | → | Ref; Ref LL4 | → | Leon's hideout key; Leon's hideout key |"
+    }
+  ]
+}

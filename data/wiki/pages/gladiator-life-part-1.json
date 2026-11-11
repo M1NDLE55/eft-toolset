@@ -1,0 +1,40 @@
+{
+  "title": "Gladiator Life - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Life_-_Part_1",
+  "revisionId": 359338,
+  "lastEdited": "2026-09-13T20:14:30Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "First Introduction",
+    "leads to": "Gladiator Life - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Life - Part 1 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You came here for the money, right? Don't even try to deny it! Like I'm in any position to judge that, ha. If you want real cash, you need a real name. Fighting as part of a team is fine, but the only way to make it to the top is on your own! In fights where it's every man for himself, that's where skill really shows.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 enemies in Last Hero mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +2,100 EXP\n- 22,000 Roubles\n- 9 GP coins\n- Unlocks Diamond Age NeoSteel High Cut helmet (Black) in the Armory\n- Unlocks Kalashnikov AKMSN 7.62x39 assault rifle in the Armory\n- Unlocks ANA Tactical M2 plate carrier (OD Green) in the Armory"
+    }
+  ]
+}

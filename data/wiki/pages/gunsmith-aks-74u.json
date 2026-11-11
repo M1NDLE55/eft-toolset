@@ -1,0 +1,64 @@
+{
+  "title": "Gunsmith - AKS-74U",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_AKS-74U",
+  "revisionId": 355239,
+  "lastEdited": "2026-08-19T17:12:28Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith AKS-74U"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith - AKS-74U is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You have not failed me with the shotgun, so you may know your way around tools. That didn’t save me much time though. All exchanges are on fire, hope it won’t start a panic. Nevertheless, I think it's not for long, so the plan remains the same. Okay, I need to work. And you, try to get hold of an AKS-74U. With a Zenit B-11 handguard, 60-round extended mag, and make it compact, 6 slots max. Ergonomics over 56, recoil sum less than 550, sighting range 100 or more. And, of course, as light as possible, 3.5 kg or less. Yes, indexes here have nothing to do with that. I hope you've remembered everything. See you soon.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 5 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an AKS-74U to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +2,000 EXP\n- Mechanic Rep +0.01\n- 15,000 Roubles\n  - 15,750 Roubles with Intelligence Center Level 1\n  - 17,250 Roubles with Intelligence Center Level 2\n- 2× Capacitors\n- 2× Bundle of wires\n- 2× Light bulb\n- Unlocks purchase of AK 100-series polymer handguard at Prapor LL1\n\"Well, in the capable hands this weapon can overthrow regimes and create revolutions. Leave it in the corner, I'll check it later.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Kalashnikov AKS-74U 5.45x39 assault rifle | 1 | Weapon that needs to be modded to fit the requirements. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "AKS-74U specifications:\n- 60 Durability\n- 56 or greater ergonomics\n- Less than 550 recoil\n- 100 or greater sighting range\n- A magazine with a capacity of at least 60\n- 3.5 kg or less in weight\n- 6 or fewer cells\n- AKS-74U Zenit B-11 handguard"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard AKS-74U. You get one in the mail from Mechanic upon accepting this quest.\n- The stock has to be folded.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AKS-74U Zenit B-11 handguard | MechanicSkier | LL1 (Barter)LL1 |\n| AK-74 5.45x39 6L31 60-round magazine | PraporRef | LL2 (Barter) after completing The Punisher - Part 2; LL4LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

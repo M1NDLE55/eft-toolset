@@ -1,0 +1,51 @@
+{
+  "title": "Conference room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Conference_room_key",
+  "revisionId": 332299,
+  "lastEdited": "2026-01-14T01:17:10Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the conference room at the peninsula territory on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "62987cb98081af308d7558c8",
+    "ID": "lighthouse_key11"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Conference room key (Conf.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key that opens the conference room, located somewhere on the Lighthouse peninsula territory."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The conference room can be found on the second floor of the guard building at the lighthouse peninsula territory on Lighthouse. Note: The bridge that leads to the peninsula is guarded by Zryachiy and full of Claymores. To safely pass the bridge, an encoded Digital secure DSP radio transmitter is required."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Locked Safe - There is currently no key for it in the game, same applies to the one in the adjoining building\n- 1x Drawer\n- 1x PC block\n- 1x Weapon box (4x4)\n- Loose loot (, Electronics, Provisions, Meds, Medical supplies)\n- Valuables and Currency on the desk at the back of the office"
+    }
+  ]
+}

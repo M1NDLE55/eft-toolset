@@ -1,0 +1,93 @@
+{
+  "title": "Ref",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ref",
+  "revisionId": 351221,
+  "lastEdited": "2026-08-05T19:20:37Z",
+  "kind": "trader",
+  "categories": [
+    "Traders"
+  ],
+  "redirects": [
+    "The Host"
+  ],
+  "infobox": {
+    "full name": "Unknown",
+    "location": "Tarkov airport",
+    "origin": "Unknown",
+    "wares": "- Well-modified weapons - Rare weapon mods - Rare armor, armor plates, helmets, and backpacks - Packs of rare ammunition - Containers - Barter items - Signal pistol and ammunition - Keys to rooms of fallen Arena gladiators",
+    "services": "Arena item and currency transfer",
+    "currencies": "GP coin"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Ref, also known as \"The Host\", is a trader in Escape from Tarkov and Escape from Tarkov: Arena."
+    },
+    {
+      "heading": "Biography",
+      "level": 2,
+      "text": "The Arena host who organizes pit fights across Tarkov."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Ref is initially locked in the main game, and can be unlocked through Skier's quest Easy Money - Part 1."
+    },
+    {
+      "heading": "Wares",
+      "level": 2,
+      "text": "- Well-modified weapons\n- Rare weapon mods\n- Rare armor, armor plates, helmets, and backpacks\n- Packs of rare ammunition\n- Containers\n- Barter items\n- Signal pistol and ammunition\n- Keys to rooms of fallen Arena gladiators"
+    },
+    {
+      "heading": "Loyalty Level Requirements",
+      "level": 2,
+      "text": "| Loyalty Lvl | Required Lvl | Required Rep |\n| Lvl 2 | 15 | 0.25 |\n| Lvl 3 | 25 | 0.50 |\n| Lvl 4 | 35 | 1.20 |"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "Note: To get access to Ref in the main game you need to complete the quest Easy Money - Part 1 from Skier.\n- See the quests overview page"
+    },
+    {
+      "heading": "Item transfer service",
+      "level": 2,
+      "text": "- After the completion of his quest To Great Heights! - Part 3, Ref offers item and currency transfers between the Arena and the main game for main characters.\n- After the completion of his quest Jack of All Trades, Ref offers item and currency transfers between the Arena and the main game for seasonal characters.\n\nThe following items can be transferred:\n- GP coins\n- Lega Medals\n- Roubles\n- Locked crates"
+    },
+    {
+      "heading": "Daily transfer limits",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Main character",
+      "level": 5,
+      "text": "- 350 GP coins\n- 5 Lega Medals\n- Roubles:\n  - ₽1,000,000 for \"Standard\" arena game edition\n  - ₽1,500,000 for \"Ryzhy\" arena game edition"
+    },
+    {
+      "heading": "Seasonal character",
+      "level": 5,
+      "text": "- 150 GP coins\n- 2 Lega Medals\n- 400,000 Roubles\n- 3 Equipment crate (Rare)\n- 3 Supply crate (Rare)\n- 3 Valuables crate (Rare)\n- 3 Weapon crate (Rare)"
+    },
+    {
+      "heading": "Transfer fees",
+      "level": 4,
+      "text": "- Roubles: 15% of the amount\n- Items: 5% of the value\nFees are reduced by the Charisma skill and loyalty level with Ref."
+    },
+    {
+      "heading": "Barters",
+      "level": 2,
+      "text": "- See the barter trades page"
+    },
+    {
+      "heading": "Items for sale",
+      "level": 2,
+      "text": "LL1:\nLL1\n\nLL2:\nLL2\n\nLL3:\nLL3\n\nLL4:\nLL4"
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

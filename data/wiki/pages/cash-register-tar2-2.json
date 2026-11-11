@@ -1,0 +1,33 @@
+{
+  "title": "Cash register TAR2-2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cash_register_TAR2-2",
+  "revisionId": 295852,
+  "lastEdited": "2024-11-05T23:54:03Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "5ad74cf586f774391278f6f0",
+    "ID": "CashRegisterBig"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Cash register TAR2-2 is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Bigger than the standard Cash register, has a 2x2 grid that only spawns stacks of Roubles."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Icon | Type |\n| Roubles | Money |"
+    }
+  ]
+}

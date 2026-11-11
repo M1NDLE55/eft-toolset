@@ -1,0 +1,56 @@
+{
+  "title": "Abandoned factory marked key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Abandoned_factory_marked_key",
+  "revisionId": 358674,
+  "lastEdited": "2026-09-10T22:55:59Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the marked room on the third floor of the abandoned factory on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a3a93f8a56922e82001f5d",
+    "ID": "city_sect1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Abandoned factory marked key (Aband.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A mysterious key to an unknown door at the abandoned city factory. There is a strange symbol scratched onto it."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Broadcast - Part 4\n- Used in the story chapter They Are Already Here when you don't have any of the other marked keys\n- Used in the story chapter The Ticket"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Marked room on the third floor of the northern abandoned factory building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Weapon box (6x2)\n- Loose loot (multiple very rare Valuables, Weapons, Containers, Currency, Keycards)"
+    }
+  ]
+}

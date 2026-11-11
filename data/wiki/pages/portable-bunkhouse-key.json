@@ -1,0 +1,63 @@
+{
+  "title": "Portable bunkhouse key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Portable_bunkhouse_key",
+  "revisionId": 358725,
+  "lastEdited": "2026-09-10T23:00:16Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "Bunk key"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the second story mobile trailer door across from the bus depot on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5938144586f77473c2087145",
+    "ID": "quest_vremyan"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Portable bunkhouse key (Bunkhouse) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the portable cabins that was being used as a bunkhouse, located somewhere in the Customs construction area."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On the ground under a jacket in the locked room next to the office on Factory. Factory emergency exit key needed. Due to it's low spawn chance, it's not the most reliable way to obtain this key."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Used on the second story portable cabin between the bus depot and the construction area on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1 or 2x Weapon box (6x2)\n- Loose loot ()"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Pack of Vita juice x1; Pack of Vita juice; +; Pack of milk x1; Pack of milk; +; Toilet paper x1; Toilet paper | → | Therapist; Therapist LL1 | → | Portable bunkhouse key; Portable bunkhouse key |"
+    }
+  ]
+}

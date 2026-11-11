@@ -1,0 +1,51 @@
+{
+  "title": "Bad Rep Evidence",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bad_Rep_Evidence",
+  "revisionId": 361725,
+  "lastEdited": "2026-09-24T12:25:31Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Bad rep evidence"
+  ],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Prapor",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Bad Rep Evidence is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day to you, warrior. Step inside. There’s a job to do if you’re interested. Need to find one piece of crap, and I’m at my wits’ end how. Briefly - one of the foremen who worked on that fucking Polikhim has just in time laid his hands on some pretty important documents. You know, of course, how hard is everyone still gunning for any evidence on TerraGroup and its associates? Exactly. But the folks who tried to get the info out of that foreman happened to be more edgy than smart. The dude’s ticker stopped ticking before his tongue started wagging. Can you imagine? What dimwits! How do you do business with the likes of them? Okay, back to the point. So he grabbed the docs and stashed them somewhere. Asked around a bit, those who worked with him before. In general, chances don’t look too good, but who knows how lucky you can get? In a word, that foreman worked in the chemo shop. The shitmost shit, see. And somewhere on the Customs premises he and his homies had their bunkhouses. Eating there, chilling, most certainly inviting girl over, well, you get it. I figure it’s holed up there somewhere, most likely. If it’s not there, then we won’t find crap at all. So, I want you to search the shacks on Customs and bring me these documents. I think it's best to search for the locked ones.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain Secure Folder 0031 in one of the bunkhouses on Customs\n  - (Optional) Gain access to the locked room in the office hallway on the third floor on Factory\n  - (Optional) Obtain the Portable bunkhouse key\n- Hand over the folder\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Prapor Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence center Level 1\n  - 92,000 Roubles with Intelligence center Level 2\n\"Some luck with you there, warrior! Such a treasure to get hold of. That’s worthy of a hefty reward. And a little extra for not leaking it on the side - and my goodwill, which is over any money.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount |\n| Portable bunkhouse key | 1 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Secure Folder 0031 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to obtain secure folder 0031 from a bunkhouse on Customs. Even though the bunkhouse is locked, the item can be grabbed through the window, not requiring its key."
+    }
+  ]
+}

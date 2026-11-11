@@ -1,0 +1,49 @@
+{
+  "title": "Never Too Late To Learn",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Never_Too_Late_To_Learn",
+  "revisionId": 362560,
+  "lastEdited": "2026-09-29T19:07:20Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "previous": "Profitable Venture",
+    "leads to": "Get a Foothold",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Never Too Late To Learn is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So, how's your training going? I didn't think you still had so much to learn about warfare. That old saying ain't bullshit, ye? Luka and his squad could use a lesson. He said they got burned on the far side, had to retreat. Now the buggers at the base know they got competition, and they've tightened their defenses. They won't be able to take the base by surprise. That's why Luka asked to throw them some proper weapons to kill the cunts for sure. Everything they need is on the list right here. The cache must be real tough if those pricks aren't scared of even the military. Perhaps they got protection watching over them from the big land. But that protection ain't gonna reach us.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by USEC PMCs."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the item: 15 HK 416A5 5.56x45 assault rifle\n- Hand over the item: 4,500 5.56x45mm MK 318 Mod 0 (SOST)\n- Hand over the item: 8 UVSR Taiga-1 survival machete"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +1 Troubleshooting skill level\n- +1 Mag Drills skill level\n- +1 Crafting skill level\n- +1 Endurance skill level\n- +1 Strength skill level\n- +1 Metabolism skill level\n- +1 Charisma skill level\n- +1 Intellect skill level\n\"Even got the knives, impressive. I've already found a trusty bloke on the cordon who's gonna handle our deliveries. He's not asking for anything yet, but he'll surely put a premium on it later. It's a hell of a lot of work to get supplies to the mainland, you know.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid |\n| HK 416A5 5.56x45 assault rifle | 15 | Handover item | No |\n| 5.56x45mm MK 318 Mod 0 (SOST) | 4,500 | Handover item | No |\n| UVSR Taiga-1 survival machete | 8 | Handover item | No |\nNote: The green brown variant of the HK 416A5 5.56x45 assault rifle can not be used."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "title": "OLI cash register key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OLI_cash_register_key",
+  "revisionId": 357705,
+  "lastEdited": "2026-09-06T18:18:41Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the cash registers of the OLI store on Interchange.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ad7217186f7746744498875",
+    "ID": "Key_cash_machine_OLI"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "OLI cash register key (OLI reg.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the OLI store outlet cash registers at the ULTRA shopping mall."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- 1 needs to be obtained for the quest Supervisor"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On a table in an office in the back of the OLI store"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Cash registers in the front of the OLI store on Interchange."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- The content of 18x Cash register TAR2-2"
+    }
+  ]
+}

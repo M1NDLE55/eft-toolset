@@ -1,0 +1,59 @@
+{
+  "title": "Simple Side Job",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Simple_Side_Job",
+  "revisionId": 359676,
+  "lastEdited": "2026-09-13T20:20:14Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve, Woods",
+    "given by": "Lightkeeper",
+    "previous": "Accept Swift Retribution",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Simple Side Job is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I am not interested in localized conflicts and I am not going to help either side. But since you are already here, I have a job for you. The task is simple: pick up one cargo from the roof of the military hospital at the reserve base and deliver it to the transfer point. Be careful with the cargo and do not open the crate. This shipment might be of interest to certain people, so I need a man with special skills. Someone like you.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain Lightkeeper's cargo crate on the roof of the military hospital on Reserve\n- Stash the cargo at the Scav house on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +56,700 EXP\n- Lightkeeper Rep +0.02\n- 4,000 Dollars\n- 1× Military COFDM Wireless Signal Transmitter\n- 1× UHF RFID Reader\n- 1× Virtex programmable processor\n\"Well done. The reward will not disappoint you.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"You shouldn't have taken so long to complete my task. I've already found another merc who works faster.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Completing the quest Protect the Sky from the BTR Driver automatically fails this quest.\n| Item name | Amount | Requirement | Find in raid | Notes |\n| Lightkeeper's case | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you first have to pick up Lightkeeper's case from the roof of the hospital building (White Bishop) on Reserve. There are multiple spawns. Afterwards you have to stash it in the Scav house on Woods. The house can be found near the \"Outskirts\" extraction in the southwest of the location."
+    },
+    {
+      "heading": "Reserve Case location",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Woods Stashing location",
+      "level": 4,
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "title": "RB-MP11 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-MP11_key",
+  "revisionId": 316208,
+  "lastEdited": "2025-07-18T21:37:48Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-MP11"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽76,000",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80c93086f7744036212b41",
+    "ID": "rezbase_key_ptor1_craft1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-MP11 key (RB-MP11) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the Federal State Reserve Agency base Service and Repair Center workshop rooms."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In the Common fund stash (Shturman's crate)\n- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In the shipping yard container building. On the desk with the papers."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Unlocks a door on the second story of black knight on Reserve"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- One Jacket\n- One Toolbox\n- Intelligence folder spawns on the desks"
+    }
+  ]
+}

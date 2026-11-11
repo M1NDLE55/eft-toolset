@@ -1,0 +1,56 @@
+{
+  "title": "Key 02",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Key_02",
+  "revisionId": 328631,
+  "lastEdited": "2025-12-22T23:46:47Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a door in spawn chamber 2 in The Labyrinth.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "No",
+    "node": "679baa4f59b8961f370dd683",
+    "ID": "item_key_labyrinth_spawn_02"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Key 02 (Key 02) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "This key probably opens some kind of an old lock. The number engraving has been practically scratched off. Could be useful for surviving the Labyrinth."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "Different locations in spawn chamber 2 inside The Labyrinth."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Spawn chamber 2 inside The Labyrinth."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "The 2nd floor where the Valve handwheel can be found."
+    }
+  ]
+}

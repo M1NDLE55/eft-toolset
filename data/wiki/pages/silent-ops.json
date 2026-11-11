@@ -1,0 +1,33 @@
+{
+  "title": "Silent Ops",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Silent_Ops",
+  "revisionId": 319185,
+  "lastEdited": "2025-10-09T20:41:17Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [
+    "Silent Operations"
+  ],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Silent Ops is an upcoming Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The skill of staying undetected in all aspects of the raid operation through improved melee speed and reduced volume of doors and looting sounds."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

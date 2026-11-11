@@ -1,0 +1,40 @@
+{
+  "title": "Professional Fitness - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Professional_Fitness_-_Part_1",
+  "revisionId": 359578,
+  "lastEdited": "2026-09-13T20:18:34Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Balancing - Part 1",
+    "leads to": "Professional Fitness - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Seasonal change: this quest cannot be obtained.\n\nProfessional Fitness - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So, you ready to prove your professional chops? I'm not going to go too hard on you, don't sweat it. For starters, just step onto the Arena. Yeah, that's all, no extra tasks. Just soak in the atmosphere!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Play a match in CheckPoint or Last Hero mode in Arena"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +1,800 EXP\n- Ref Rep +0.01\n- 10 GP coins\n  - 10 GP coins with Intelligence Center Level 1\n  - 12 GP coins with Intelligence Center Level 2\n\"Yeah, yeah, I saw you in action. You're not exactly grabbing the stars yet, but at least there's something to work with.\""
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Peaceful Atom",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Peaceful_Atom",
+  "revisionId": 359551,
+  "lastEdited": "2026-09-13T20:18:07Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Icebreaker",
+    "given by": "Peacekeeper",
+    "previous": "Oil Change",
+    "leads to": "Wiring the Vessel",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Peaceful Atom is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings. I have an urgent assignment for you. You are not yet aware of the situation, so I will need to provide some context. However, everything I am about to disclose is top secret, understood? There is a secured facility within the blockade perimeter that is of interest to my contacts in the nuclear energy sector. The issue is that it is an icebreaker ship, currently stranded in the bay. To access it, you will need to acquire suitable transport, and it is preferable to do so quietly. No one must know that the vessel is present in Tarkov's waters at all! Once you secure transport, you are to retrieve operational documentation from the ship. Search the engineering sections, there should be a logbook for the nuclear power unit control system. Do not, under any circumstances, disclose this task to anyone.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the nuclear power unit control log on Icebreaker\n- Hand over the found item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +24,000 EXP\n- 3,600 Dollars\n  - 3,780 Dollars with Intelligence Center Level 1\n  - 4,140 Dollars with Intelligence Center Level 2\n- 1× HK G28 7.62x51 marksman rifle\n- 5× 7.62x51mm M80A1 ammo pack (20 pcs)\n- 3× HK417/G28 7.62x51 20-round magazine\n\"You have the logbook? I trust you avoided drawing attention on your way back. I will arrange your reward through my associates. One more thing: I strongly advise against returning to the Icebreaker. According to my sources, it has already come under the control of some special unit. You would not survive an engagement with them.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Nuclear power unit control log | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you have to find the Nuclear power unit control log on Icebreaker. It can be found either in the central control station room, in the overseeing cabin in the engine room, or in the automation room under the engine room."
+    },
+    {
+      "heading": "Central control station room - Level 0",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Overseeing cabin in the engine room - Level -2",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Automation room under the engine room - Level -3",
+      "level": 4,
+      "text": "This room requires a code to be entered. The code can be found in a nearby overseeing cabin on a pinboard. The code changes every raid."
+    }
+  ]
+}

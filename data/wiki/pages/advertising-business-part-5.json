@@ -1,0 +1,45 @@
+{
+  "title": "Advertising Business - Part 5",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Advertising_Business_-_Part_5",
+  "revisionId": 359059,
+  "lastEdited": "2026-09-13T20:09:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Advertising Business - Part 4",
+    "leads to": "Advertising Business - Part 6",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Advertising Business - Part 5 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I've been thinking... Ragman's got a pretty nice thing going here. So I've got a little more work for you: I've got some guns that aren't exactly popular. They just keep piling up in storage, collecting dust. Show everyone a master class with one of them, make people want to get their hands on the same thing. I'll cut you in on the sales.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 30 enemies while using a T-5000M or RPDN in BlastGang or TeamFight mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,000 EXP\n- Ref Rep +0.02\n- 82,500 Roubles\n- 30 GP coins"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Requirement | Notes |\n| ORSIS T-5000M 7.62x51 bolt-action sniper rifle; or; Degtyarev RPDN 7.62x39 machine gun | ORSIS T-5000M 7.62x51 bolt-action sniper rifle; or; Degtyarev RPDN 7.62x39 machine gun | Required | Has to be used for the kills |"
+    }
+  ]
+}

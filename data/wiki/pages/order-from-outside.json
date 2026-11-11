@@ -1,0 +1,54 @@
+{
+  "title": "Order From Outside",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Order_From_Outside",
+  "revisionId": 359535,
+  "lastEdited": "2026-09-13T20:17:51Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve, Woods",
+    "given by": "Lightkeeper",
+    "previous": "Accept Inevitable Response",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Order From Outside is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Surely you don't think I would be interested in petty local conflicts? I have much more important matters to attend to, and I am not going to help either of the parties. Speaking of which. I need to move an item from point A to point B. It is hidden at the electromechanical warehouse in the airspace control center at the military base. It's to be delivered to the Priozersk nature reserve. The landmark will be a small cemetery. You'll recognize it by the stretchers and the bodies around it -- not everyone has been buried in time. Since my cargo is very specific, some people may have a particular interest in it. That is why I need someone who can guarantee the safety of the cargo during transportation.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the electronic jammer at the electromechanical warehouse on Reserve\n- Stash the device at the specified location on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +46,700 EXP\n- Lightkeeper Rep +0.02\n- 4,000 Dollars\n- 1× Military COFDM Wireless Signal Transmitter\n- 1× UHF RFID Reader\n- 1× Virtex programmable processor\n\"Perfect. I've already prepared the reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Completing the quest Battery Change from the BTR Driver automatically fails this quest.\n| Item name | Amount | Requirement | Find in raid | Notes |\n| KOSA UAV electronic jamming device | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you first have to find a KOSA UAV electronic jamming device in the airspace control center (White King) on Reserve. There are multiple spawns. Afterwards you have to stash it on Woods, at a gravesite south of the dilapidated village in the north."
+    },
+    {
+      "heading": "Reserve Pickup location",
+      "level": 4,
+      "text": "The device can be found in different spots in a storage room on the first floor of the airspace control center (White King)."
+    },
+    {
+      "heading": "Woods Stashing location",
+      "level": 4,
+      "text": ""
+    }
+  ]
+}

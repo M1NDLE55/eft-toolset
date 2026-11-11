@@ -1,0 +1,33 @@
+{
+  "title": "Night Ops",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Night_Ops",
+  "revisionId": 319184,
+  "lastEdited": "2025-10-09T20:41:08Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [
+    "Night Operations"
+  ],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Night Ops is an upcoming Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Operating at night makes movement easier, and experience grows faster than usual. And, of course, it reflects on the prices of night vision devices."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "title": "Woods plan map",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Woods_plan_map",
+  "revisionId": 351707,
+  "lastEdited": "2026-08-06T14:47:50Z",
+  "kind": "location",
+  "categories": [
+    "Maps"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Map",
+    "weight": "0.045 kg",
+    "grid": "1x1",
+    "effect": "Adds map of local area Woods",
+    "node": "5900b89686f7744e704a8747",
+    "id": "woods plan"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Woods plan map (Woods) is a map in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A paper plan map of Priozersk Natural Reserve."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The map is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Functionality",
+      "level": 2,
+      "text": "On the map you are able to place up to 100 icons and notes of 4 varieties."
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

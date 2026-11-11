@@ -1,0 +1,47 @@
+{
+  "title": "Car Repair",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Car_Repair",
+  "revisionId": 361700,
+  "lastEdited": "2026-09-24T12:12:51Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Car repair"
+  ],
+  "infobox": {
+    "given by": "Therapist",
+    "LL requirement": "3",
+    "time limit": "None",
+    "quest number": "10",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Car Repair is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon, young man. I need help for a good cause. As you have long guessed, I collect food, medicine, and other necessities in order to evacuate the people. I don't want to deceive you, this is true. And now they have enough reserves for the road. And most importantly, I’ve managed to negotiate through my channels that these people would be met and let through to the other side. Can you imagine? But only the civilian population, no men under 60. Therefore, the first wave will mostly be children with mothers and a few elderly people. Almost everything is ready, except for one little detail - we need transportation. We have several vehicles, just enough to carry everyone from the first wave, but they are not running. As I was told, they have been idle for too long and need batteries and spark plugs. Even fuel is not necessary. I will make a proper list of the items we need. Can you bring them?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 4 Car batteries in raid\n- Find 8 Spark plugs in raid\n- Hand over the 4 batteries to Therapist\n- Hand over the 8 spark plugs to Therapist"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Therapist Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\n\"You have no idea what exactly you’ve accomplished for these people.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Car battery | 4 | Handover item | Yes | Can be crafted in the Hideout (Workbench lv. 2). |\n| Spark plug | 8 | Handover item | Yes | Can be crafted in the Hideout (Workbench lv. 2). |\n\nInterchange is great place to go for this quest:\n- OLI (home improvement store) very commonly spawns car batteries and spark plugs on its shelves.\n- Goshan / гошан (grocery store) commonly spawns car batteries on the store shelves located south of the big fire.\n\nDrawers commonly spawn spark plugs. Reserve is a great place to loot these filing cabinets, with several in the Knight buildings, Queen building, and underground office area."
+    }
+  ]
+}

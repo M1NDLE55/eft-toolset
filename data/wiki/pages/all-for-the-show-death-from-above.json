@@ -1,0 +1,40 @@
+{
+  "title": "All for the Show - Death from Above",
+  "url": "https://escapefromtarkov.fandom.com/wiki/All_for_the_Show_-_Death_from_Above",
+  "revisionId": 359067,
+  "lastEdited": "2026-09-13T20:09:53Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "All for the Show - Heroism",
+    "leads to": "Advertising Business - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "All for the Show - Death from Above is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Let's continue your training. Overcoming any obstacle is great, but don't forget to show your superiority over others. Everyone needs to know you're above your opponent — literally, ha! Can you imagine the crowd screaming in the stands?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 3 enemies while mid-air"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +9,900 EXP\n- Ref Rep +0.01\n- 55,000 Roubles\n- 30 GP coins\n- Unlocks B&T MP9 9x19 submachine gun in the Armory"
+    }
+  ]
+}

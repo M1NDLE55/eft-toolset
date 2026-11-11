@@ -1,0 +1,58 @@
+{
+  "title": "Health Resort office key with a blue tape",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_office_key_with_a_blue_tape",
+  "revisionId": 316178,
+  "lastEdited": "2025-07-18T21:21:47Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "Tape key"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the room 110 of the East wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5eff09cd30a7dc22fd1ddfed",
+    "ID": "key_shoreline_sanitar_room"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Health Resort office key with a blue tape (E110 San Tape) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the Azure Coast sanatorium office rooms, marked with blue duct tape."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a location for the quest Chemistry Closet"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- On Sanitar\n- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "- The first floor, room 110 of the East Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x PC\n- 1x Plastic suitcase\n- Loose loot (Medical supplies, Valuables)\n- Multiple LEDX spawns in the bathroom\n- Possible GPU spawn on the left side of the desk"
+    }
+  ]
+}

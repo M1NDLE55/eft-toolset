@@ -1,0 +1,59 @@
+{
+  "title": "Health Resort east wing room 213 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_east_wing_room_213_key",
+  "revisionId": 358721,
+  "lastEdited": "2026-09-10T22:59:58Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽5,780",
+    "usage": "This key has no usage. Room 213 is always unlocked.",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0ee72c86f77436955d3435",
+    "ID": "Санаторий 213"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort east wing room 213 key (E213 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium east wing room 213."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The room is always open."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor, room 213 of the East Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room 213:\n  - One Weapon box (6x2)\n  - One Weapon box (6x6)\n  - One Medbag\n\n- Room 209\n  - One Rare Loot spawn"
+    }
+  ]
+}

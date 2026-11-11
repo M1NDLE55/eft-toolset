@@ -1,0 +1,49 @@
+{
+  "title": "Forbidden Knowledge",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Forbidden_Knowledge",
+  "revisionId": 359297,
+  "lastEdited": "2026-09-13T20:13:48Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "previous": "What's in the Bag?",
+    "leads to": "Sheep in Wolf's Clothing",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Forbidden Knowledge is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I liked the documents you brought me. But there'll be a lot more intel on digital storage devices, and those are definitely getting evacuated along with those little folders. They might even be tagged or sealed somehow. For now, I'm not willing to risk my own people, so this job's yours. I don't think you've got much chance of finding their camps, so the plan stays the same: intercept them in the areas you already know, and hope for a good haul. Bring me every hard drive you find with data on it. Any questions?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain 3 14-4 KORD SSDs\n- Hand over the found intel"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 3× Peltor TEP-300 tactical earplug (Coyote Brown)\n\"That'll do for now. Makes you wonder if there's anything left at those TerraGroup sites after these operators finish raiding them. With this much data, it's obvious they already had detailed information on every TerraGroup facility: locations, access codes, and everything else. Things even I don't have. And those rumors about unknown facilities out in the region? They're not bullshit after all.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| 14-4 KORD SSD | 3 | Required | No | Can be looted off Black Division |\nIn this quest you have to obtain and hand over three 14-4 KORD SSDs to Fence. The SSDs can be found on Black Division."
+    }
+  ]
+}

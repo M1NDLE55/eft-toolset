@@ -1,0 +1,48 @@
+{
+  "title": "Preliminary Survey",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Preliminary_Survey",
+  "revisionId": 362353,
+  "lastEdited": "2026-09-28T22:38:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ref",
+    "location": "The Lab",
+    "LL requirement": "1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Preliminary Survey is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You're familiar with the Lab, right? Me too... My guys just don't have much luck there. But that's a whole other story! There's a testing area in that lab, you know, the one with all the different fencing and that dome they put together. I need a blueprint of that area. Obviously, they didn't keep something like that on paper, so you'll have to look for a flash drive. Think you can get it? I've got something I want to pull off, but I can't tell you much just yet. Just get it done, and we'll work out the price, champion.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the testing area blueprint flash drive in The Lab\n- Obtain the testing area blueprint flash drive in The Lab"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +14,500 EXP\n- +1 Search skill level\n- 185 GP coins\n  - 195 GP coins with Intelligence Center Level 1\n  - 213 GP coins with Intelligence Center Level 2\n\"Got it done? Excellent! And I still can't tell you anything. You'll see for yourself soon enough!\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| TerraGroup Labs access keycard | 1 | Allows access to The Lab location a single time. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Testing area blueprint flash drive | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find the Testing area blueprint flash drive in The Lab. It can be found plugged into a laptop near the orange dome on the first level."
+    }
+  ]
+}

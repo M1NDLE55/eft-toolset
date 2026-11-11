@@ -1,0 +1,66 @@
+{
+  "title": "Reprogrammed keycard for A.P.'s apartment lock (Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Reprogrammed_keycard_for_A.P.'s_apartment_lock_(Green)",
+  "revisionId": 339311,
+  "lastEdited": "2026-03-27T23:54:10Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the hidden room in apartment 1 on the second floor of the Cardinal apartment complex on Streets of Tarkov.",
+    "storage_wallet": "Yes",
+    "storage_keytool": "No",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "68c14b734a7e0bada00f8fd4",
+    "ID": "q_card_unknown_card_apcabinet"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Reprogrammed keycard for A.P.'s apartment lock (Green) (A.P. Green) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A green TerraGroup Labs keycard reprogrammed using technical data from A.P.'s flash drive. In theory it might open a hidden room in A.P.'s apartment."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the story chapter The Unheard"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "None."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the hidden room in apartment 1 on the second floor of the Cardinal apartment complex on Streets of Tarkov. A TerraGroup corporate apartment key is required to acces it."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- 1x Weapon locker\n- Loose loot (Valuables)"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| UHF RFID Reader x1; UHF RFID Reader; +; Decrypted Sliderkey flash drive marked with A.P. x1; Decrypted Sliderkey flash drive marked with A.P.; +; TerraGroup Labs keycard (Green) x1; TerraGroup Labs keycard (Green); +; TerraGroup \"Blue Folders\" materials x1; TerraGroup \"Blue Folders\" materials | → | Intelligence Center level 1; 2 h 45 minAfter progressing through; the story chapter The Unheard | → | Reprogrammed keycard for A.P.'s apartment lock (Green) x1; Reprogrammed keycard for A.P.'s apartment lock (Green) |"
+    }
+  ]
+}

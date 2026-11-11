@@ -1,0 +1,46 @@
+{
+  "title": "Customs plan map",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Customs_plan_map",
+  "revisionId": 351704,
+  "lastEdited": "2026-08-06T14:39:52Z",
+  "kind": "location",
+  "categories": [
+    "Maps"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Map",
+    "weight": "0.045 kg",
+    "grid": "1x1",
+    "effect": "Adds map of local area Customs",
+    "node": "5798a2832459774b53341029",
+    "id": "customs plan"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Customs plan map (Customs) is a map in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A paper plan map of the vast Customs premises. Not the most up-to-date copy, but it's better than nothing."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The map is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Functionality",
+      "level": 2,
+      "text": "On the map you are able to place up to 100 icons and notes of 4 varieties."
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

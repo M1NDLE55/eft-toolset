@@ -1,0 +1,59 @@
+{
+  "title": "Pets Won't Need It",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pets_Won't_Need_It",
+  "revisionId": 361761,
+  "lastEdited": "2026-09-24T12:34:32Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Therapist",
+    "LL requirement": "2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Pets Won't Need It is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"In these difficult times, finding the necessary chemicals has become extremely challenging. For a long time now, I've been taking whatever I can find without being selective, but even with that approach, our options are becoming more and more limited. I recently sent my people into the city to check several locations where supplies might still remain, but they weren't able to reach them. You, however... I believe you're capable of handling this task. Head downtown and search several locations: pharmacies, the vet clinic, and the workplace of a radiologist. There may still be something left there. Bring whatever you find back to me, and I'll purchase it from you. And remember, by doing this, you're helping the civilians who have suffered so much.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and scout the vet clinic on Streets of Tarkov\n- Locate and scout the x-ray technician's room on Streets of Tarkov\n- Locate the first pharmacy on Primorsky Ave on Streets of Tarkov\n- Locate the second pharmacy on Primorsky Ave on Streets of Tarkov\n- Locate the third pharmacy at Cardinal apartment complex on Streets of Tarkov\n- Hand over any 5 found in raid medicine items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Therapist Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 2× Surv12 field surgical kit\n\"Thank you for your assistance, young man. This should be enough to sustain us for some time.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| X-ray room key | 1 | Required | N/A | Unlocks the x-ray technician's room in the polyclinic. |\n\nIn this quest you have to scout the vet clinic, the x-ray technician's room inside of the children's polyclinic and locate three pharmacies on Streets of Tarkov. You also have to hand over any 5 found in raid medical items."
+    },
+    {
+      "heading": "Vet clinic",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "X-ray technician's room",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Pharmacies",
+      "level": 4,
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Seasons",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Seasons",
+  "revisionId": 360522,
+  "lastEdited": "2026-09-18T09:30:40Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Season"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Seasons fundamentally work the same as the PvP game mode, but on separate character and dedicated servers in a time-limited, modifier influenced gameplay cycle with exclusive content and rewards only obtainable in the respective season."
+    },
+    {
+      "heading": "Season 1: KORD BREACH",
+      "level": 2,
+      "text": "Season 1 started on August 3, 2026 and ends on December 7, 2026."
+    },
+    {
+      "heading": "Differences from other game modes",
+      "level": 3,
+      "text": "- Special [KORD BREACH] questline is available starting with Prapor's quest Uninvited Guests - Part 1.\n- Insurance is not available.\n- Hideout zones do not require items to be found in raid.\n- Black Division soldiers can be rarely encountered roaming on Ground Zero (Level 21+), Shoreline, Streets of Tarkov, and Woods.\n- Raiders on The Lab have been substituted with Black Division.\n- The crafting time of all Hideout crafts is reduced by half.\n- EXP is gained 25% faster."
+    },
+    {
+      "heading": "Common Modifiers",
+      "level": 3,
+      "text": "| Name | Effect |\n| No Insurance | Cannot insure items before raid |\n| Handyman | Item crafting time is reduced by 50%; Crafting skill starts at level 51 |\n| Seasoned PMCs | Your character gains 25% more experience |\n| Armor Shortage | Traders across Tarkov are experiencing an armor shortage |\n| Black Division | Black Division operatives can be encountered on specific locations |\n| No FiR for Hideout | Hideout zones don't require the Found in Raid status |"
+    },
+    {
+      "heading": "Personal Positive Modifiers",
+      "level": 3,
+      "text": "| Name | Effect | Points | Notes |\n| Marathon Runner | Arm and leg stamina is consumed 20% slower | -3 | |\n| Bushborne | Walking in vegetation generates 75% less noise and movement slowdown | -5 | |\n| Juice Time | Consuming a juice drink grants the Painkiller effect for 60 seconds | -2 | The amount of drink resource consumed doesn't influence the length of the effect. |\n| Street Tax | Once per week, some Scavs pay you protection money | -1 | Every week, Fence sends 150,000 Roubles, 1,000 Dollars, and 1,000 Euros. |\n| The Tarkov Shooter | Bolt-action Rifles skill leveling speed is increased by 100%; Bolt-action Rifles skill starts at level 25 | -2 | |\n| Diet | All provisions consume 50% less resource | -2 | |\n| Thrombophilia | Bleeding chance is decreased by 25% | -2 | |\n| Hypodipsia | Hydration is consumed 20% slower | -2 | |\n| Polyphagia | Energy is consumed 20% slower | -2 | |\n| Sturdy Bones | Limb fracture chance is decreased by 25%; Falling from heights deals 20% less damage | -3 | |\n| Kappa Protocol | Immediately receive Secure container Kappa | -12 | |\n| Prodigy | Skill experience gain is increased by 30% | -5 | The increase applies to both in-raid experience, and to rewards from quests. |\n| Lucky | Audentes fortuna iuvat! | -1 | |\n| Safecracker | Mechanical keys have a 25% chance not to lose durability when used | -5 | |\n| Sailor's Nostalgia | Consuming canned fish grants the Health Regeneration (+2) effect for 30 seconds | -2 | |\n| Youth | Energy is consumed 20% slower; Arm and leg stamina is increased by 10 | -5 | |\n| Hercules | Strength and Endurance skills start at level 15 | -5 | |\n| Sprinter | Running speed is increased by 5% | -3 | |\n| Average | All character skills are set to level 25 but cannot be leveled further (Excluding Crafting skill) | -12 | |"
+    },
+    {
+      "heading": "Personal Negative Modifiers",
+      "level": 3,
+      "text": "| Name | Effect | Points | Notes |\n| Hemophilia | Bleeding chance is increased by 25% | +2 | |\n| Osteoporosis | Limb fracture chance is increased by 25%; Falling from heights deals 20% more damage | +3 | |\n| Well That Hurt! | All medkit uses consume 25% more resource | +2 | |\n| Incompetent | All character skills are leveled 25% slower (Excluding Bolt-action Rifles); All character skills can only be increased up to level 30 (Excluding Crafting) | +10 | |\n| Polydipsia | Hydration is consumed 15% faster | +2 | |\n| Chronic Fatigue Syndrome | Energy is consumed 20% faster | +2 | |\n| Personality Vacuum | Charisma skill cannot be increased; All trader items cost 20% more | +2 | The increased price applies to both direct purchases and barter trades. |\n| Dr. Jekyll | After gaining the Fresh Wound status, it cannot be removed until the end of the raid | +1 | |\n| Allergic | Become allergic to 3 random items from the Provisions or Medication category | +3 | The three items are determined on character creation and may be any , , drink, or food.; The effect can be tested in the practice mode.; Allergens can be consumed in the Hideout without any negative effects.; Random three of the following health effects get applied upon consuming an allergen:; for 30 seconds; for 20 seconds; for 20 seconds; Decreased health regeneration (-6/s) for 30 seconds; Decreased hydration recovery (-6/s) for 30 seconds; Decreased energy recovery (-6/s) for 30 seconds |\n| No Flea Market | Trading with players on the Flea Market is disabled | +10 | |\n| Third Leg | Movement speed is decreased by 1%; Buying items at Therapist is 5% cheaper | +1 | The discount applies to both direct purchases and barter trades. |\n| Unlucky | Your bad luck can sometimes have dire consequences | +1 | |\n| Exhaustion | Arm and leg stamina recovers 20% slower; Arm and leg stamina is reduced by 10 | +5 | |\n| Broken Secure Container | Secure container can only be filled with cash, keys, dogtags, special equipment, certain containers and Battle Pass documents | +6 | Secure containers can only hold:; Dogtags (including BD dogtag Ferrum, BD dogtag Green, BD dogtag Red); Special equipment; Dogtag case, Twitch rare dogtag case; Simple wallet, WZ Wallet, Loui Peeton deluxe wallet; Key tool, Gingy keychain, Keycard holder case; Keys & Keycards; Poster tube; Currency; Paper maps |\n| Underdog | You started the season later than everyone else, but it’s too early to count you out.; +4 additional Modifier Points. | +4 | |"
+    },
+    {
+      "heading": "BattlePass",
+      "level": 3,
+      "text": "- See the BattlePass overview page"
+    },
+    {
+      "heading": "Seasonal Rewards",
+      "level": 3,
+      "text": "Completing a specific seasonal quest is required to claim the corresponding reward. Some rewards also require the player to reach a certain character level.\n| Name | Type | Player level | Quest |\n| Gatorz Specter MILSPEC ballistic glasses | Barter trade | N/A | Reverse Gear |\n| Avon M53A1 gas mask | Barter trade | N/A | Forbidden Knowledge |\n| Mystery Ranch 2 Day Assault Pack (Black) | Barter trade | 25 | Sheep in Wolf's Clothing |\n| Spiritus Systems LV-119 Plate Carrier (Black Division V1) | Barter trade | 30 | Digital Puzzle |\n| First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division) | Barter trade | 30 | Historical Prospects |"
+    },
+    {
+      "heading": "Leagues",
+      "level": 3,
+      "text": "After the first raid, the player is placed into a group of 50 players of their rank. Each group has its own leaderboard. The player's position on the leaderboard is determined by the amount of experience they earned during the week. Experience earned from eliminating PMCs, Scavs, and Bosses, completing tasks, examining items, and so on counts toward your League progress. Experience earned in Arena doesn't count toward Leagues, but will still be awarded to your character.\n\nThe more experience the player earns, the higher they place on the leaderboard. At the end of each week, the top 25 players will rank up, 15 will remain at their current rank, and 10 will be demoted. The first time a player reaches a new rank, they receive its corresponding rewards. These rewards are permanent, even if the player's rank is later reduced.\n\nWhen a Seasonal character's progress is reset, the current Rank and all experience earned during the week will be reset."
+    },
+    {
+      "heading": "Season 1 Rewards",
+      "level": 4,
+      "text": "| Rank | Name |\n| RECRUIT I | Recruit Bas-Relief |\n| SURVIVOR II | Survivor Bas-Relief |\n| Going Dark poster |\n| VETERAN III | Veteran Bas-Relief |\n| RUTHLESS IV | Ruthless Bas-Relief |\n| REBORN V | Reborn Bas-Relief |\n| KA-BAR USMC Fighter knife |\n| ASCENDED VI | Ascended Bas-Relief |\n| Dogtag |\n| CONDUCTOR VII | Conductor Bas-Relief |\n| MC Black shirt |\n| Tactical shorts |"
+    }
+  ]
+}

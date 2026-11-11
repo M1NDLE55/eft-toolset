@@ -1,0 +1,49 @@
+{
+  "title": "Getting Some Air",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Getting_Some_Air",
+  "revisionId": 361739,
+  "lastEdited": "2026-09-24T12:29:08Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline, Lighthouse, Reserve",
+    "given by": "Prapor",
+    "LL requirement": "4",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Getting Some Air is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Howdy, soldier! I got a new toy in, been wondering where to try it out. And here you are, just in time for this. Take this RPD, go to some outdoorsy areas, and let it rip.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 40 targets with an RPDN with EKP-1S-03 sight on Shoreline, Lighthouse, or Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 1× Armband (RFARMY)\n- 2× AK 7.62x39 Molot Arms 75-round drum magazine\n- 6× 7.62x39mm BP gzh ammo pack (20 pcs)\n- +4 Light Machine Guns skill levels\n- +4 Heavy Machine Guns skill levels\n- Unlocks purchase for AK 7.62x39 Molot Arms 75-round drum magazine at Prapor LL3\n\"So how do you like it? Good, yeah? It's a real beauty in combat!\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Degtyarev RPDN 7.62x39 machine gun | 1 | Modded after task requirements |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "It's possible to use a compact reflex sight mounted on a canted rail when using the RPD DS Arms Railed Handguard instead of the EKP-1S-03 reflex sight to obtain the kills. The sight just needs to be installed to count towards the quest."
+    }
+  ]
+}

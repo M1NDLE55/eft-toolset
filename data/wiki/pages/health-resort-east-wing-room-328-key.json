@@ -1,0 +1,71 @@
+{
+  "title": "Health Resort east wing room 328 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_east_wing_room_328_key",
+  "revisionId": 327222,
+  "lastEdited": "2025-12-08T22:50:33Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door of room 328 in the East wing of the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0eee1486f77402aa773226",
+    "ID": "Санаторий 328"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort east wing room 328 key (E328 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium east wing room 328."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Connects to a utility room through the balcony."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the Quest Wet Job - Part 5"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On a table on the island, next to an outboard motor\n\n- On a desk inside the hydroelectric power station.\n\n- In a key rack in west wing room 202 at the health resort.\n\n- On the floor below a key rack in the utility room next to west wing room 227 at the health resort.\n\n- In the key rack near the central stairs on the second floor of the east wing at the health resort.\n\n- On the floor below a key rack near the central stairs on the third floor of the east wing at the health resort."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The third floor, room 328 of the East Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room 328:\n  - 1× LEDX spawn\n  - 1× Graphics card spawn\n  - 2× Electronic Spawns\n  - 1× Weapon Spawn\n  - 1× PC block\n  - 1× Sport bag\n  - Loose loot (Weapon mods, Currency)\n- Connected utility room:\n  - One table with Valuables and Roubles"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| CPU fan x2; CPU fan; +; Printed circuit board x2; Printed circuit board; +; AA Battery x4; AA Battery | → | Mechanic; Mechanic LL2 | → | Health Resort east wing room 328 key x1; Health Resort east wing room 328 key |"
+    }
+  ]
+}

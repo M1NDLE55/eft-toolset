@@ -1,0 +1,48 @@
+{
+  "title": "The Punisher - Part 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Punisher_-_Part_4",
+  "revisionId": 361730,
+  "lastEdited": "2026-09-24T12:27:15Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The Punisher. Part 4."
+  ],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Prapor",
+    "LL requirement": "4",
+    "previous": "The Punisher - Part 3",
+    "leads to": "The Punisher - Part 5",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Punisher - Part 4 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Oh yeah, your last Scav massacre was something else! People keep coming up to me asking what the hell's going on. Turns out my buddies struck a deal with the locals and are putting together some kind of staged fights. Gladiator-style, you could say. Anyway, you're basically their... what's the word... test guy. They come up with ideas, watch how you handle them, then tweak things based on what they see. And now they want to keep it going. This time the jobs are a bit tougher. Hunt down Scavs wearing chest rigs and take them out with an SVD or a TKPD. Bring me their knives as trophies, too. So, what do you say, soldier?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 Scavs while using an SVDS or TKPD on Lighthouse\n- Eliminate 10 Scavs while wearing a Scav Vest on Lighthouse\n- Find 5 Bars A-2607 95Kh18 knives in raid\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 3× 7.62x54mm R PS gzh ammo pack (20 pcs)\n- 3× 9x39mm SP-6 gs ammo pack (20 pcs)\n- Unlocks purchase of 7.62x54mm R PS gzh at Prapor LL4\n- Unlocks purchase of 9x39mm SP-6 gs at Prapor LL4\n\"Mighty wicked, warrior. Grab your reward. Come back later, my friends have got some more work for you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Bars A-2607 95Kh18 knife | Bars A-2607 95Kh18 knife | 5 | Handover item | Yes | Can be found on Scavs |\n| Scav Vest; or; Security vest | Scav Vest; or; Security vest | As many as needed | Required | N/A | Worn by the player while eliminating Scavs |\nEither the Scav Vest or the Security vest can be used for the Scav kills.\n\nThe Bars A-2607 95Kh18 knives are carried by Scavs. Make sure to not confuse them with the similar looking Bars A-2607 Damascus knives."
+    }
+  ]
+}

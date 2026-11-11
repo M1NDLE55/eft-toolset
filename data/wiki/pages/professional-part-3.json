@@ -1,0 +1,40 @@
+{
+  "title": "Professional - Part 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Professional_-_Part_3",
+  "revisionId": 359577,
+  "lastEdited": "2026-09-13T20:18:33Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Professional - Part 2",
+    "leads to": "No Limit to Perfection - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Professional - Part 3 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I might disappoint you, but people talk about a lot of gladiators, not just you. In this business, you have to stay in the spotlight, or no one will remember you a week later. For now, though, you just need to claw your way up... Make a name for yourself so there's something to build the muscles of your fame on. Damn, that sounded good, didn't it? I should write that down.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Earn a Round MVP in BlastGang or TeamFight mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +15,000 EXP\n- Ref Rep +0.01\n- 111,000 Roubles\n- 30 GP coins\n- Unlocks MultiCam weapon camouflage\n\ng"
+    }
+  ]
+}

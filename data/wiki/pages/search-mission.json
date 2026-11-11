@@ -1,0 +1,61 @@
+{
+  "title": "Search Mission",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Search_Mission",
+  "revisionId": 361745,
+  "lastEdited": "2026-09-24T12:30:43Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Search mission"
+  ],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Prapor",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Search Mission is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, warrior! One of my squads has been radio silent for a while now. When all this mess started, I sent them out near the Priozersk forest to move an important shipment. I'm afraid they got hit: last time we managed to get through, they reported USECs closing in on them from the hills. Go check it out, see if anyone's still alive. The convoy definitely had a BRDM car, a Bukhanka, and some truck, can't remember which one. Chances are the USECs have dug in somewhere nearby, so keep your head on a swivel. Oh, and so you don't get yourself lost among the scary square kilometer of trees, I'm issuing you a compass. Dismissed.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate Prapor's missing convoy on Woods\n- Locate the temporary USEC camp on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Prapor Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"So my boys never made it and the convoy's been picked clean... Plus the USECs have a position nearby, you say? Alright, you did your part. Here's your reward.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount |\n| EYE MK.2 professional hand-held compass | 1 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to locate Prapor's missing convoy and the USEC camp on Woods."
+    },
+    {
+      "heading": "Convoy location",
+      "level": 4,
+      "text": "The convoy is located in the north, on the road between the lakes that leads to the \"Scav Bunker\" extraction. Make sure to get close to the vehicles for the objective to trigger."
+    },
+    {
+      "heading": "USEC camp location",
+      "level": 4,
+      "text": "The USEC camp is located in the northwest. The west and north-west approaches to the camp are covered with landmines.\n\nMined areas to avoid"
+    }
+  ]
+}

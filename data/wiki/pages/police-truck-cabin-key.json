@@ -1,0 +1,52 @@
+{
+  "title": "Police truck cabin key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Police_truck_cabin_key",
+  "revisionId": 224319,
+  "lastEdited": "2023-01-15T01:17:29Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "max uses": "100",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the cabin of a police truck on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "61aa5aed32a4743c3453d319",
+    "ID": "lighthouse_key5"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Police truck cabin key (Police) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key that opens a cabin of the abandoned police transport truck."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The police truck is located on the road west of the water treatment plant on Lighthouse."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Intelligence folder spawn in front of the seat\n- Kalashnikov AK-103 7.62x39 assault rifle spawn on the seat"
+    }
+  ]
+}

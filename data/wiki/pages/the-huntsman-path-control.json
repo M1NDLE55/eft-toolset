@@ -1,0 +1,42 @@
+{
+  "title": "The Huntsman Path - Control",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Control",
+  "revisionId": 359754,
+  "lastEdited": "2026-09-13T20:21:32Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Lab",
+    "given by": "Jaeger"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Control is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello-hello. I've got a new job for you. There's been a lot of talk lately about those so-called laboratories. I don't like all this commotion, especially all the pillagers dragging whatever they can get their hands on out of those places. Head down there and thin their ranks. Make an example of them so others think twice before following in their footsteps. Do it quickly, or they won't get the message.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 4 with Jaeger to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 10 targets in The Lab (in one raid)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000EXP\n- +4 Throwables skill levels\n- Jaeger Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence center Level 1\n  - 460,000 Roubles with Intelligence center Level 2\n- Unlocks barter for Remington Model 700 7.62x51 bolt-action sniper rifle (variant MRS) at Jaeger LL4\n\"I've already heard rumors of what you did. Keep it up.\""
+    }
+  ]
+}

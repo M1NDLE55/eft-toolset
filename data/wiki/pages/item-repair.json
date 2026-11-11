@@ -1,0 +1,48 @@
+{
+  "title": "Item repair",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Item_repair",
+  "revisionId": 353438,
+  "lastEdited": "2026-08-13T12:13:58Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Repair",
+    "Repairing",
+    "Repairs"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Item repair is the process in which you can fix broken gear or weapons.\n\nThis can be done by opening the repair tab for the allowed items where you can select where you want to repair them and the desired points to be repaired."
+    },
+    {
+      "heading": "Armors",
+      "level": 2,
+      "text": "Any gear that has armor points can be repaired by Body armor repair kit, Prapor, Skier, Mechanic each having a certain quality and repair cost.\n\nAny armored gear has a material with different properties listed below.\n\nLeveling up the loyalty level for any trader will increase the repair cost. Armor repair kits can be used after building the Lavatory level 1 and are improved by upgrading the Lavatory module up to level 3 and increasing the Intellect, Light Vests and Heavy Vests skills, Hideout Management skill boosts the Lavatory module bonus as well.\n\nUsing armor repair kit can increase skill level of Light Vests or Heavy Vests depending on the armor type."
+    },
+    {
+      "heading": "Repair method",
+      "level": 3,
+      "text": "| Repair quality | Armor repair kit | Prapor | Skier | Mechanic |\n| UHMWPE/Armor steel | 1.33 | 0.83 | 1 | 1.43 |\n| Other material | 1.1 | 0.83 | 1 | 1.43 |\n\nMechanic is the trader with the best repair quality having high repair cost, the Armor repair kit has 2nd best quality but is the cheapest option for most gear. UHMWPE/Armor steel materials have almost the same repair quality with Armor repair kits as with Mechanic making them one of the best options for this material types considering the much cheaper cost.\n\n| Repair cost | Armor repair kit | Prapor | Skier | Mechanic |\n| - | ~0.4* | 0.83 | 1 | 1.23 |\n.* This value is true for most body armors/armored rigs, helmets and eyewear. Faceshields, additional armor and armored facecovers costs with armor repair kits are higher than with traders.\n\nDue to a bug regarding faceshields, additional armor, armored facecovers and eyewear which doesnt improve the repair quality when choosing any of the traders it is recommended to repair these items with Prapor to have the cheapest cost. Also because of this the specified items will appear not fully repaired and faceshields might still have their visual damage after repairing."
+    },
+    {
+      "heading": "Material",
+      "level": 3,
+      "text": "| Material quality | Armor repair kit | Traders | Destructibility | Explosive Destructibility |\n| Aramid | 1 | 1 | 0.1875 | 0.15 |\n| UHMWPE | 3 | 2.5 | 0.3375 | 0.3 |\n| Combined materials | 0.4 | 0.4 | 0.375 | 0.2 |\n| Titan | 0.63 | 0.63 | 0.4125 | 0.375 |\n| Aluminium | 0.63 | 0.63 | 0.45 | 0.45 |\n| Armor steel | 3 | 2.5 | 0.525 | 0.45 |\n| Ceramic | 0.26 | 0.26 | 0.6 | 0.525 |\n| Glass | 0.15 | 0.15 | 0.6 | 0.6 |\n\n| Material cost | Armor repair kit | Prapor | Skier | Mechanic |\n| Aramid | 0.49 | 0.9 | 1.08 | 1.33 |\n| UHMWPE | 0.82 | 2.04 | 2.45 | 3.01 |\n| Combined materials | 0.86 | 2.37 | 2.84 | 3.49 |\n| Titan | 0.89 | 2.66 | 3.19 | 3.93 |\n| Aluminium | 0.74 | 1.17 | 1.41 | 1.73 |\n| Armor steel | 1 | 1.51 | 1.81 | 2.22 |\n| Ceramic | 1.13 | 1.27 | 1.52 | 1.87 |\n| Glass | 0.78 | 0.73 | 0.87 | 1.07 |\n\nUHMWPE/Armor steel materials have the best repairing efficiency, being 3 times better than aramid which is the 2nd best. Ceramic has the worst repairing efficiency for any armor/helmet with Glass being worse than it used only for some faceshields and eyewear.\n\nUHMWPE materials are one of the cheapest materials to be repaired with the Armor repair kit while having good material quality.\n\nDestructibility and explosive destructibility are only one of the stats used to calculate damage done to that type of armor material so it doesnt mean they represent exactly how good/bad any material is respective to each other."
+    },
+    {
+      "heading": "Weapons",
+      "level": 2,
+      "text": "Weapons can be repaired with Weapon repair kits, Prapor, Skier, Mechanic.\n\nLeveling up the loyalty level for Skier and Mechanic will increase the repair cost while Prapor has no price difference on any loyalty levels. Weapon repair kits can be used after building the Workbench level 1 and are improved by upgrading the Workbench module up to level 3 and increasing the Intellect and Weapon Maintenance skills, while Hideout Management skill boosts the Workbench module bonus as well.\n\nUsing weapon repair kit can improve Weapon Maintenance skill."
+    },
+    {
+      "heading": "Repair method",
+      "level": 3,
+      "text": "| Repair quality | Weapon repair kit | Prapor | Skier | Mechanic |\n| - | 1.05 | 0.83 | 1 | 1.43 |\n\n| Repair cost | Weapon repair kit | Prapor | Skier | Mechanic |\n| - | ~0.5 | 0.83 | 1 | 1.23 |\n\nSince repair quality has no big impact in the repairing process like for armors choosing the cheapest price is the best choice so the Weapon repair kit is the best in almost all situations except when current durability wear of the gun is low Mechanic might be the best choice."
+    }
+  ]
+}

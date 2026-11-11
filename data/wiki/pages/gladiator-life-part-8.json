@@ -1,0 +1,40 @@
+{
+  "title": "Gladiator Life - Part 8",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Life_-_Part_8",
+  "revisionId": 359346,
+  "lastEdited": "2026-09-13T20:14:38Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Life - Part 7",
+    "leads to": "Gladiator Life - Part 9",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Life - Part 8 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Some of the right people have started taking an interest in you. Asking about forecasts, wondering how far you'll go. But words are just words! Time to head out there and prove how good you really are.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win 2 rounds in TeamFight, BlastGang or ShootOut mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,700 EXP\n- 52,000 Roubles\n- 10 GP coins\n- Unlocks SOG Voodoo Hawk tactical tomahawk in the Armory"
+    }
+  ]
+}

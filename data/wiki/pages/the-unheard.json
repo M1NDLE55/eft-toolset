@@ -1,0 +1,129 @@
+{
+  "title": "The Unheard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Unheard",
+  "revisionId": 354657,
+  "lastEdited": "2026-08-15T18:17:24Z",
+  "kind": "quest",
+  "categories": [
+    "Story chapters"
+  ],
+  "redirects": [],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Unheard is a story chapter in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "\"I came across a strange note on a TerraGroup sheet. It mentions the will of The Unheard and some fuel needed for \"purification\". TerraGroup's definitely involved in this, and I should gather more information about The Unheard.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "Pick up and read Note with ramblings about the Purification from one of the following locations:\n- In the surveillance room inside the TerraGroup security post building on Streets of Tarkov\n\n- In the TerraGroup office on Streets of Tarkov\n\n- In office no. 4 on the second floor of the TerraGroup main building on Ground Zero (Level 21+). TerraGroup science office key required."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Learn more about The Unheard\n- Learn more about TerraGroup's activities\n- Learn more about the \"fuel\" mentioned in the note\n- Find more information about the special catalyst shipment\n- Locate Rzhevsky's service vehicle and obtain his personal belongings\n- Retrieve the data from the hard drive in Rzhevsky's car\n- Read the transcript of Rzhevsky's conversation\n- Locate and obtain the documents on the Blue Ice fuel catalyst research\n- Find as much information as possible about the plans of The Unheard\n- Learn more about A.P.'s activities\n- Learn more about A.P.'s role\n- Search for any mention of A.P. in The Lab\n- Locate A.P.'s room in the Health Resort\n  - (Optional) Find out which room A.P. was assigned to\n- Obtain A.P.'s personal belongings\n- Obtain A.P.'s data storage device\n- Decrypt the flash drive from A.P.'s room\n- Ask Mechanic for help\n- Hand over 5,000,000 Roubles to Mechanic\n- Hand over the A.P. flash drive to Mechanic\n- Wait for the news from Elektronik\n- Integrate the tech files from A.P.'s flash drive into a TerraGroup keycard\n- Access A.P.'s corporate apartment\n- Investigate A.P.'s apartment\n- Access the hidden room in A.P.'s apartment\n- Study the TerraGroup documentation in A.P.'s office\n- Study the role of the Blue Ice catalyst in The Unheard's protocol\n- Learn more about The Unheard's protocol\n- Figure out how The Unheard are connected to Tarkov"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Learn more about The Unheard",
+      "level": 3,
+      "text": "See requirements."
+    },
+    {
+      "heading": "Learn more about TerraGroup's activities/Learn more about the \"fuel\" mentioned in the note",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Document on changes in enterprise interactions | 1 | Required | Yes |\n| Cargo transport fax | 1 | Required | Yes |\nTo fulfill these objectives, you have to pick up and read 2 notes from The Lab. The Document on changes in enterprise interactions can be found in the laboratory next to the dome on the first floor, and the Cargo transport fax can be found in office O23 on the second floor."
+    },
+    {
+      "heading": "Find more information about the special catalyst shipment",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Transport log with notes | 1 | Required | Yes |\nThe Transport log with notes to pick up and read can be found on Factory."
+    },
+    {
+      "heading": "Locate Rzhevsky's service vehicle and obtain his personal belongings",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Hard drive from Rzhevsky's car | 1 | Required | Yes |\nThe wanted car can be found near the LexOs car dealership on Streets of Tarkov. The Hard drive from Rzhevsky's car is located on the center console in the car."
+    },
+    {
+      "heading": "Retrieve the data from the hard drive in Rzhevsky's car/Read the transcript of Rzhevsky's conversation",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Hard drive printout | 1 | Required | N/A | Has to be crafted in the Hideout (Intelligence center lv. 1). |\nCraft the Hard drive printout at the Intelligence Center level 1 in the Hideout and read it from the off-raid quest inventory. Electricity is required during the entire process, otherwise it will be interrupted."
+    },
+    {
+      "heading": "Locate and obtain the documents on the Blue Ice fuel catalyst research/Find as much information as possible about the plans of The Unheard",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| TerraGroup storage room keycard | 1 | Required | N/A |\n| Fuel catalyst test report | 1 | Required | Yes |\n| Burnt document | 1 | Required | Yes |\nThe Fuel catalyst test report and the Burnt document to pick up and read can be found in the TerraGroup storage room on Factory, which is located in the underground tunnels right next to the \"Camera Bunker Door\" Scav extraction. A TerraGroup storage room keycard is required to enter it. Both have multiple spawns throughout the room."
+    },
+    {
+      "heading": "Search for any mention of A.P. in The Lab/Learn more about A.P.'s role and activities",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| A.P. meeting audio tape Part 1 | 1 | Required | Yes |\n| A.P. meeting audio tape Part 2 | 1 | Required | Yes |\nTo fulfill this objective, you have to locate 1 of 2 whiteboards and pick up and listen to 2 audio tapes located in The Lab."
+    },
+    {
+      "heading": "Locate A.P.'s room in the Health Resort/Obtain A.P.'s data storage device and his personal belongings",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Sliderkey flash drive marked with A.P. | 1 | Required | Yes |\n| TerraGroup corporate apartment key | 1 | Required | No |\n| Guard post note | 1 | Optional | Yes |\n| Fragment of an unknown document | 1 | Optional | Yes |\nA.P.'s room is east wing room 305 at the health resort on Shoreline. The Sliderkey flash drive marked with A.P. is stuck into the laptop on the table. A.P.'s belongings in the form of TerraGroup corporate apartment key can be found on the right nightstand. The optional Fragment of an unknown document can be found on the left nightstand.\n\nThe optional Guard post note to locate the room can be found on the first floor of the health resort west wing, on the desk next to the security room at the southern entrance."
+    },
+    {
+      "heading": "Decrypt the flash drive from A.P.'s room",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Decrypted Sliderkey flash drive marked with A.P. | 1 | Required | N/A | Has to be crafted in the Hideout (Intelligence center lv. 1). |\nCraft the Decrypted Sliderkey flash drive marked with A.P. at the Intelligence Center level 1 in the Hideout. Electricity is required during the entire process, otherwise it will be interrupted."
+    },
+    {
+      "heading": "Ask Mechanic for help",
+      "level": 3,
+      "text": "Visit Mechanic in the menu through the trader screen and ask him about the flash drive. He will say that he cannot help, but that Elektronik can if you hand over 5,000,000 Roubles."
+    },
+    {
+      "heading": "Hand over 5,000,000 Roubles and the A.P. flash drive to Mechanic",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Roubles | 5,000,000 | Handover item | No |\n| Decrypted Sliderkey flash drive marked with A.P. | 1 | Handover item | N/A |\nHand 5,000,000 Roubles and the Decrypted Sliderkey flash drive marked with A.P. over to Mechanic through the trader screen."
+    },
+    {
+      "heading": "Wait for the news from Elektronik",
+      "level": 3,
+      "text": "If you haven't had contact with Mr. Kerman before: Wait 6-12 hours then visit Mechanic in the menu through the trader screen.\n\nIf you had contact with Mr. Kerman before: Wait 1 and half a hour for Mr. Kerman to contact you and speak to him."
+    },
+    {
+      "heading": "Integrate the files from A.P.'s flash drive into a keycard and access the hidden room in his apartment",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| TerraGroup corporate apartment key | 1 | Required | N/A | Unlocks A.P.'s apartment in the Cardinal apartment complex on Streets of Tarkov. |\n| Reprogrammed keycard for A.P.'s apartment lock (Green) | 1 | Required | N/A | Unlocks the hidden room in A.P.'s apartment.; Has to be crafted in the Hideout (Intelligence center lv. 1). |\nYou first have to craft the Reprogrammed keycard for A.P.'s apartment lock (Green) at the Intelligence Center level 1 in the Hideout. The blue and red ones are false leads.\n\nA.P.'s apartment is apartment 1 on the second floor of the Cardinal apartment complex on Streets of Tarkov. A TerraGroup corporate apartment key is required to enter it. Once inside the apartment, you have to go down the hallway to find the hidden room opened with the crafted keycard. In the room are 4 notes to pick up and read."
+    },
+    {
+      "heading": "Study the TerraGroup documentation in A.P.'s office",
+      "level": 4,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Order from TerraGroup Worldwide headquarters | 1 | Required | Yes |"
+    },
+    {
+      "heading": "Study the role of the Blue Ice catalyst in The Unheard's protocol",
+      "level": 4,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Copy of report for TG Worldwide | 1 | Required | Yes |"
+    },
+    {
+      "heading": "Learn more about The Unheard's protocol",
+      "level": 4,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Document mentioning a protocol | 1 | Required | Yes |"
+    },
+    {
+      "heading": "Figure out how The Unheard are connected to Tarkov",
+      "level": 4,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Document mentioning the Warden | 1 | Required | Yes |"
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- +128,000 EXP\n- Unlocks achievement Trail of Breadcrumbs"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Gunsmith - M4A1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_M4A1",
+  "revisionId": 356790,
+  "lastEdited": "2026-08-29T20:19:41Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith M4A1"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith - M4A1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Sometimes I think it's good that I got stuck here in Tarkov. The whole world feels like it’s descending into an abyss, a gaping, cold abyss. Everything has lost its meaning. People, their values, their thoughts, and their goals. They don't know anymore why they should take joy, work, have children. Everyone is tired from the illusion of choice they were offered all this time, from having to work and buy either blue or red cigarettes. It’s happening everywhere, in every corner of the world. But here in Tarkov, we are honest with ourselves. We see it all in an already exaggerated way, without false values, when you don't just decide what laundry detergent is better at removing stains, but how to keep warm at night and where to find ammo to deal with the next lowlife who wants to kill you. Only in such an honest society, people show their true selves. What do you think? Okay, thanks for hearing me out. Some folks requested a fully packed M4. They need a silencer, 60-round extended mag, ergonomics above 37, and recoil sum less than 300. And mind the weight, no more than 3.8 kg, with a sighting range of 800 or beyond.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 15 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an M4A1 to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +6,300 EXP\n- Mechanic Rep +0.01\n- 500 Dollars\n  - 525 Dollars with Intelligence Center Level 1\n  - 575 Dollars with Intelligence Center Level 2\n- 1× Pliers Elite\n- 1× Electric drill\n- Unlocks purchase of AR-15 Daniel Defense MK12 Low Profile Gas Block at Mechanic LL2\n\"Hand it over, let's check out your build. Yeah, the weapon of democracy... Thank you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "M4A1 specifications:\n- 60 Durability\n- 37 or greater ergonomics\n- 300 or less recoil\n- 800 or greater sighting range\n- 3.8 kg or less in weight\n- A magazine with a capacity of at least 60\n- A silencer"
+    },
+    {
+      "heading": "Builds",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard M4A1 from Peacekeeper LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AR-15 5.56x45 SureFire MAG5-60 STANAG 60-round magazine | Peacekeeper | LL3 (Barter) |\n| AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine | PeacekeeperRef | LL4 (Barter)LL4 |\n| AR-15 5.56x45 SureFire MAG5-100 STANAG 100-round magazine | Mechanic | LL4 |\n| SIG Sauer ROMEO7 1x30 reflex sight (Prototype) | Skier | LL1 |\n| AR-15 5.56x45 10.3 inch barrel | PeacekeeperMechanic | LL2 (Barter); LL3LL2 (Barter) |\n| AR-15 Daniel Defense MK12 Low Profile Gas Block | PeacekeeperMechanic | LL2LL2 |\n| AR-15 SureFire WarComp 5.56x45 flash hider | Skier | LL2 |\n| SureFire SOCOM556-MINI MONSTER 5.56x45 sound suppressor | SkierMechanic | LL2 (Barter)LL3 |\n| AR-15 MFT BUS stock | Peacekeeper | LL2 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "No Swiping",
+  "url": "https://escapefromtarkov.fandom.com/wiki/No_Swiping",
+  "revisionId": 362422,
+  "lastEdited": "2026-09-29T14:07:38Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline, Interchange",
+    "given by": "Skier",
+    "LL requirement": "1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "No Swiping is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Let's skip the small talk and get straight to business. My mates have set up shop at the coast and Interchange, moving all sorts of contraband. Useful lads. A couple of days back they had to clear out of their base and leave everything behind. No idea what happened, and we're not exactly close enough to share every little detail with each other. Anyway, now some randoms have started poking around those bases, taking whatever they can get their hands on. Go over there and explain to these newcomers that they shouldn't stick their noses where they weren't invited. Just clean up the area around the bases. They'll get the message.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 any target at the smuggler bases on Shoreline or Interchange"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Skier Rep +0.1\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 517 Euros with Intelligence Center Level 2\n- 2x Pack of screws\n\"Yeah, yeah, I've heard all about those shits running away with tails between their legs. Here, your goodies.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill any 10 enemies in and around the smugglers base on Shoreline or Interchange."
+    }
+  ]
+}

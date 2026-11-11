@@ -1,0 +1,52 @@
+{
+  "title": "OLI outlet utility room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OLI_outlet_utility_room_key",
+  "revisionId": 291622,
+  "lastEdited": "2024-09-22T13:36:14Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽1,150",
+    "usage": "Unlocks the door to the utility room of the OLI outlet store on Interchange.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ad5d20586f77449be26d877",
+    "ID": "Key_Shopping_Mall_storeroom_OLI"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "OLI outlet utility room key (OLI util.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the OLI store outlet utility room at the ULTRA shopping mall."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot"
+    }
+  ]
+}

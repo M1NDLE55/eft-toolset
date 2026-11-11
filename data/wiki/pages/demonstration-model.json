@@ -1,0 +1,47 @@
+{
+  "title": "Demonstration Model",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Demonstration_Model",
+  "revisionId": 359225,
+  "lastEdited": "2026-09-13T20:12:33Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Peacekeeper"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Demonstration Model is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day, mercenary. You arrived just in time. Some of my partners would like us to test the weapons before purchasing them. They require a demonstration. Take 7.62x51 assault rifles and designated marksman rifles and head to Reserve. There has been some suspicious activity reported there recently... Let us combine business with pleasure.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 3 with Peacekeeper to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 15 targets with headshots with 7.62x51 assault rifles or DMRs on Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Peacekeeper Rep +0.75\n- 1,900 Dollars\n  - 1,995 Dollars with Intelligence Center Level 1\n  - 2,185 Dollars with Intelligence Center Level 2\n\"I have already been informed of how you performed. The order from my partners has been confirmed.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill any 15 enemies with headshots using a 7.62x51mm NATO assault rifle or designated marksman rifle. You can use any of the following:\n- DS Arms SA58 7.62x51 assault rifle\n- Desert Tech MDR 7.62x51 assault rifle\n- FN SCAR-H 7.62x51 assault rifle\n- FN SCAR-H X-17 7.62x51 assault rifle\n- HK G28 7.62x51 marksman rifle\n- Kalashnikov AK-308 7.62x51 assault rifle\n- Kel-Tec RFB 7.62x51 rifle\n- Knight's Armament Company SR-25 7.62x51 marksman rifle\n- Remington R11 RSASS 7.62x51 marksman rifle\n- Springfield Armory M1A 7.62x51 rifle"
+    }
+  ]
+}

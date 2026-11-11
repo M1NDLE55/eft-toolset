@@ -1,0 +1,61 @@
+{
+  "title": "ZB-014 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ZB-014_key",
+  "revisionId": 358746,
+  "lastEdited": "2026-09-10T23:04:27Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a room with an additional extraction in the ZB-014 bunker on Woods.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "591afe0186f77431bd616a11",
+    "ID": "bunker2 wood exit"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "ZB-014 key (ZB-014) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A rather unusual door key with some engravings reading \"ZB-014\"."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- 1 needs to be found for the quest Aid Stations"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Drawers\n- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "On the desk in dorm room 220 on the second floor of the three-story dorms."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Inside the ZB-014 bunker in the west of Woods."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Weapon box (6x6)\n- ZB-014 extraction (Green flare = Open)"
+    }
+  ]
+}

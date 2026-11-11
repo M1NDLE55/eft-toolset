@@ -1,0 +1,51 @@
+{
+  "title": "Zmeisky 5 apartment 20 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zmeisky_5_apartment_20_key",
+  "revisionId": 332781,
+  "lastEdited": "2026-01-20T16:06:50Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks apartment 20 on the fifth floor of the Zmeisky 5 building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39df18a56922e82001f25",
+    "ID": "city_key9"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Zmeisky 5 apartment 20 key (Zm apt. 20) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the apartments at Zmeisky Alley 5."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to apartment 20 on the fifth floor of the Zmeisky 5 building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Sport bag\n- Loose loot (Energy elements, Electronics, Provisions, Valuables)"
+    }
+  ]
+}

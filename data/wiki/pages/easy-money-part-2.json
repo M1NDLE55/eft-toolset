@@ -1,0 +1,44 @@
+{
+  "title": "Easy Money - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Easy_Money_-_Part_2",
+  "revisionId": 359255,
+  "lastEdited": "2026-09-13T20:13:04Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ref",
+    "previous": "Easy Money - Part 1",
+    "leads to": "Balancing - Part 1, Provide Viewership",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Easy Money - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, champion! A friend of mine gave you a little tryout assignment. Now I've decided to meet you in person. People call me Ref. Hosting the Arena and the big bucks, ha! Clearly you don't mind making money, and I'm in desperate need of new staff. Business is booming, and I'm short-handed. We're expanding! We got another fight planned soon. As they used to say in ancient Rome, \"the people demand bread and circuses.\" The latter is fine, but the bread is running late. A little supply disruption, don't worry about it. Just get me some food and booze for the audience.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 5 found in raid items from the Drinks category\n- Hand over 5 found in raid items from the Food category"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +2,900 EXP\n- Ref Rep +0.02\n- 52 GP coins\n  - 55 GP coins with Intelligence Center Level 1\n  - 60 GP coins with Intelligence Center Level 2\n\"Everything you brought has already been sent to the seats. Well done.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Item name | Amount | Requirement | Find in raid |\n| Any food item | 5 | Handover item | Yes |\n| Any drink item | 5 | Handover item | Yes |"
+    }
+  ]
+}

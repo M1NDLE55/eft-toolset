@@ -1,0 +1,48 @@
+{
+  "title": "Corporate Perks",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Corporate_Perks",
+  "revisionId": 359200,
+  "lastEdited": "2026-09-13T20:12:08Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Mechanic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Corporate Perks is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey, mercenary. Before all the chaos happened, there was an IT firm in the city. I don't recall the name, I just remember that they made the best software in their segment. I still use it now. The company was small, so I still don't understand how they did everything so well in such a short time. They definitely had some secret and it would do me good to know it. Will you help me satisfy my curiosity, find their office and take a look around?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 25 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the IT firm office on Streets of Tarkov\n- Unravel the secret of the firm's success\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +23,000 EXP\n- Mechanic Rep +0.02\n- 149,500 Roubles\n  - 156,975 Roubles with Intelligence Center Level 1\n  - 171,925 Roubles with Intelligence Center Level 2\n- 1× PC CPU\n- 1× CPU fan\n- 1× Pliers Elite\n- 1× Awl\n\"A torture chamber? It's very, uh, medieval, but it works. Okay, here's your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| \"Negotiation\" room key | 1 | Required | N/A | Unlocks the negotiation room inside the Zmeisky 6 building on Streets of Tarkov. |\nIn this quest you first have to find the IT firm office on Streets of Tarkov. The building is located in the Zmeisky alley, house no. 6. Afterwards you have to unravel the secret of the firm's success. To do that, you need to enter the locked \"negotiation room\" on the south end of the building. A \"Negotiation\" room key is required to access it."
+    }
+  ]
+}

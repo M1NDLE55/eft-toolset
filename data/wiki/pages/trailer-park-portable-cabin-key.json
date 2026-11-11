@@ -1,0 +1,51 @@
+{
+  "title": "Trailer park portable cabin key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trailer_park_portable_cabin_key",
+  "revisionId": 353431,
+  "lastEdited": "2026-08-13T05:52:32Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a portable guard cabin at the trailer park on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5913611c86f77479e0084092",
+    "ID": "будка трейлерный парк"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Trailer park portable cabin key (Cabin key) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the portable on-site guard cabins at the trailer park on Customs."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In a key cabinet at the dorm guard desk that is located at the two-story dorms"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the portable guard cabin at the trailer park on Customs."
+    }
+  ]
+}

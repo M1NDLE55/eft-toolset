@@ -1,0 +1,56 @@
+{
+  "title": "USEC cottage room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_cottage_room_key",
+  "revisionId": 305558,
+  "lastEdited": "2025-02-10T22:23:58Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a room on the second floor of the garage at the blue chalet on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "66265d7be65f224b2e17c6aa",
+    "ID": "key_arss"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "USEC cottage room key (USEC cott.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the rooms in the cottages of former USEC operatives."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The room can also be entered through the window by climbing on the canopy from any second floor window, not requiring this key."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "This key unlocks a room that is located on the second floor of the garage at the blue chalet on Lighthouse."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Currency)"
+    }
+  ]
+}

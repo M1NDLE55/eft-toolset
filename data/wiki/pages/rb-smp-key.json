@@ -1,0 +1,57 @@
+{
+  "title": "RB-SMP key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-SMP_key",
+  "revisionId": 315812,
+  "lastEdited": "2025-07-15T23:55:58Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-SMP"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d947d3886f774447b415893",
+    "ID": "rezbase_key_med_strorage"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-SMP key (RB-SMP) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base Military unit Headquarters' medical storage room."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a mandatory quest location for the quest Disease History."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In the Common fund stash (Shturman's crate)\n- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Second floor of the HQ (White Bishop) Building on Reserve. (Highlighted in green)"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Medical supplies, Medical items, Stimulants)"
+    }
+  ]
+}

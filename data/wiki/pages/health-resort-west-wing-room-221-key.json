@@ -1,0 +1,67 @@
+{
+  "title": "Health Resort west wing room 221 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_west_wing_room_221_key",
+  "revisionId": 358644,
+  "lastEdited": "2026-09-10T22:45:48Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽5,780",
+    "usage": "Unlocks room 221 of the West wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0ee37f86f774023657a86f",
+    "ID": "Санаторий 221"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort west wing room 221 key (W221 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium west wing room 221."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Connected to rooms 218 and 222 through the balconies."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On a deck-chair at the beach between the gas station and lighthouse."
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Pack of chlorine x8; Pack of chlorine | → | Therapist; Therapist LL2 | → | Health Resort west wing room 221 key; Health Resort west wing room 221 key |"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor, room 221 of the West Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room 221:\n  - 1× Weapon box (6x4)\n  - 1× weapon spawn on the balcony (M4A1, M1A)\n  - Loose loot (Currency, Meds, Medical supplies)\n- Room 222:\n  - 3× Sports bag\n  - 2× Medbag\n  - 1× weapon spawn on the bed (AKM, SV-98)\n  - Loose loot (Roubles)\n- Room 218:\n  - Red keycard spawn location\n  - 2× weapon cabinets\n  - 2× Wooden crate\n  - 1× weapon spawn in bathroom (RSASS)\n  - Loose loot (Currency, Provisions, )"
+    }
+  ]
+}

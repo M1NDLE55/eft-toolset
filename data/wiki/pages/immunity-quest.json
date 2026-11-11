@@ -1,0 +1,44 @@
+{
+  "title": "Immunity (quest)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Immunity_(quest)",
+  "revisionId": 359410,
+  "lastEdited": "2026-09-13T20:15:42Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "previous": "Friend Among Strangers",
+    "leads to": "Small Business - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "For the skill, see Immunity.\n\nImmunity is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Well, you've proven you won't shoot indiscriminately. Recently, one of my men was poisoned on a mission and didn't even make it to the extraction point. We couldn't figure out what toxin caused his death. The guy went on a scouting trip to the white chalk circles. I need a more fresh sample and a tough employee who can survive the poisoning and make it back from the raid.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Extract from the location with the \"Unknown toxin\" status effect"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Fence Rep +0.02\n- 1,150 Euros\n  - 1,208 Euros with Intelligence Center Level 1\n  - 1,323 Euros with Intelligence Center Level 2\n- 5× XTG-12 antidote injector\n\"You survived the poisoning? Now I'll try to get some information from your blood samples and get in touch with the right people. Either way, you've already earned your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to extract from a raid while suffering from the effect.\n\nThe effect is inflicted by being stabbed with a Cultist knife, by either a Cultist or another player. Barbed wire in The Labyrinth also has a chance to inflict the effect upon contact.\n\nWhile being afflicted with the status effect, your health points will drain at a rate of 140/min. You can use a Propital injector to partially counteract the health drain for 5 minutes, or an ETG injector to fully nullify the damage for 60 seconds. It is highly recommended to bring multiple medkits."
+    }
+  ]
+}

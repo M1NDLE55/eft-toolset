@@ -1,0 +1,48 @@
+{
+  "title": "Fresh Stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fresh_Stock",
+  "revisionId": 360588,
+  "lastEdited": "2026-09-18T18:49:44Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Icebreaker",
+    "given by": "Ragman",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Fresh Stock is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Howdy, ahper! I heard there's some serious commotion going on at some ship in the bay. Apparently some unknown group is operating there, definitely not one of your guys. You see where I'm going with this? If it's neither BEAR nor USEC, then their gear has to be something special. And special goods are the best goods, brother! If you can get to that ship and bring me back any captured armor or rigs, they'll fly off the shelves. And you'll get your cut too, you know me!\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Hand over the hard drives from compartment C-1 on Icebreaker to Mechanic in the Boreas story chapter."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 5 Black Division plate carriers in raid\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "Seasonal change: the quest awards 2× Rys-T assault helmet (Black) instead of the barter.\n- +25,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- Unlocks barter for Rys-T assault helmet (Black) at Ragman LL1\n\"Lemme take a look… With a bit of work, this could even pass as brand new! My guys have restored gear in worse condition than this. I never doubted you, brother, your share is already here. Come pick it up whenever it suits you, yeah?\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| Ferro Concepts FCPC V5 Plate Carrier (Black Division); or; Spiritus Systems LV-119 Plate Carrier (Black Division V2); or; Spiritus Systems LV-119 Plate Carrier (MultiCam Black) | Ferro Concepts FCPC V5 Plate Carrier (Black Division); or; Spiritus Systems LV-119 Plate Carrier (Black Division V2); or; Spiritus Systems LV-119 Plate Carrier (MultiCam Black) | 5 | Handover item | Yes |"
+    }
+  ]
+}

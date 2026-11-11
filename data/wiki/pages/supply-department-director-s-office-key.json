@@ -1,0 +1,56 @@
+{
+  "title": "Supply department director's office key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Supply_department_director's_office_key",
+  "revisionId": 333878,
+  "lastEdited": "2026-02-07T22:45:22Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the supply director's office on the second floor of the \"Aspect\" LLC building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39ce4cd6db0635c1975fa",
+    "ID": "city_key7"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Supply department director's office key (Supp.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the offices in the \"Aspect\" LLC building."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Office on the second floor of the \"Aspect\" LLC building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Drawer\n- 1x Safe\n- Loose loot (Provisions, Flammable materials)"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| Domontovich ushanka hat x1; Domontovich ushanka hat | → | Cultist Circle; Unique Sacrifice; 1 h 6 min | → | Supply department director's office key x1; Supply department director's office key; +; ZiD SP-81 26x75 signal pistol x1; ZiD SP-81 26x75 signal pistol; +; Bottle of Dan Jackiel whiskey x1; Bottle of Dan Jackiel whiskey |\n\nFr:Clé du bureau du directeur du département des approvisionnements"
+    }
+  ]
+}

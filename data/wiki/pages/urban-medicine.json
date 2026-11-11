@@ -1,0 +1,79 @@
+{
+  "title": "Urban Medicine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Urban_Medicine",
+  "revisionId": 361719,
+  "lastEdited": "2026-09-24T12:23:27Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Therapist",
+    "LL requirement": "2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Urban Medicine is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, mercenary. The hospital continues to receive more intoxicated patients. Each day there are more and more of them, and that worries me. It feels like if you destroy one drug den, two new ones appear. We should go another route, try to cure those who are already addicted. In order to do that, I need a sample of the drug for analysis.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the chemical laboratory on Streets of Tarkov\n- Obtain the container with drug samples\n- Hand over the container"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Therapist Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"Thank you for a job well done. Take your reward over there.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Chemical container with samples | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find the chemical laboratory and a sample container on Streets of Tarkov. The laboratory can be found inside a garage at the LexOs car workshop. There are multiple container spawns throughout the garage.\n\nBe aware that the premises of the LexOs car dealership are riddled with Claymores."
+    },
+    {
+      "heading": "First spawn",
+      "level": 4,
+      "text": "Under the first bed on the left."
+    },
+    {
+      "heading": "Second/Third/Fourth spawn",
+      "level": 4,
+      "text": "In the upper and lower compartments of the first shelf on the left, as well as next to it under the corpse."
+    },
+    {
+      "heading": "Fifth spawn",
+      "level": 4,
+      "text": "Next to the second shelf on the left."
+    },
+    {
+      "heading": "Sixth spawn",
+      "level": 4,
+      "text": "Under the trolley in the back."
+    },
+    {
+      "heading": "Seventh/Eighth spawn",
+      "level": 4,
+      "text": "Under the right side bed with the organ transport box."
+    },
+    {
+      "heading": "Ninth spawn",
+      "level": 4,
+      "text": "In the back right corner between the orange and black boxes."
+    },
+    {
+      "heading": "Tenth spawn",
+      "level": 4,
+      "text": "In the back right corner behind the boxes."
+    }
+  ]
+}

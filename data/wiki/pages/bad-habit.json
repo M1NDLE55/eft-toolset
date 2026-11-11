@@ -1,0 +1,51 @@
+{
+  "title": "Bad Habit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bad_Habit",
+  "revisionId": 359097,
+  "lastEdited": "2026-09-13T20:10:24Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Bad habit"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "time limit": "None",
+    "quest number": "20",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Bad Habit is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, come here a minute. I need to lay the wiring today, and plan for high power capacity, especially considering the continuous load on the grid. But that’s not the issue now, bring me some cigarettes. I want to work it hard until it’s done, and don't want to get distracted with searching. I know, smoking’s going to kill me. But is it really important enough? Well, anyway, I need around 20 packs, preferably different ones. Oh, and make sure you get the sealed ones, so look for them yourself, no traders. Was good seeing you.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 12 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 5 Malboro cigarettes in raid\n- Find 5 Strike cigarettes in raid\n- Find 5 Wilston cigarettes in raid\n- Hand over 5 Malboro cigarettes to Mechanic\n- Hand over 5 Strike cigarettes to Mechanic\n- Hand over 5 Wilston cigarettes to Mechanic"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +6,700 EXP\n- Mechanic Rep +0.02\n- 300 Euros\n  - 315 Euros with Intelligence Center Level 1\n  - 345 Euros with Intelligence Center Level 2\n- 1× Glock 18C 9x19 machine pistol\n- 6× 9x19mm Green Tracer ammo pack (50 pcs)\n- Unlocks barter for Bottle of OLOLO Multivitamins at Therapist LL1\n\"Great, now I've got something to smoke in my free time. Thank you, mercenary.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Note |\n| Malboro Cigarettes | 5 | Handover item | Yes | |\n| Strike Cigarettes | 5 | Handover item | Yes | |\n| Wilston cigarettes | 5 | Handover item | Yes | Can be crafted in the Hideout (Nutrition Unit lv. 2). |\nAll cigarettes can commonly be found inside of:\n- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Jackets\n- In Plastic suitcases\n- In Ration supply crates\n- In Sport bags"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Break the Chain",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Break_the_Chain",
+  "revisionId": 362283,
+  "lastEdited": "2026-09-26T21:36:21Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs, Woods",
+    "given by": "Mechanic",
+    "previous": "Desperate Assault",
+    "leads to": "Digital Puzzle",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Break the Chain is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Back to our operation. I've located the sources of the radio transmissions. Those signal points weren't there before, and their placement suggests someone has built an entire network of relay stations to provide full coverage across a large area. I haven't seen these relays with my own eyes, but I'm convinced they're part of Black Division's infrastructure. They use them to coordinate operations and maintain complete situational awareness across their squads. In Tarkov, that gives them a massive advantage, and it's one we can take away. Will you help? Check the high ground and pay special attention to the tallest structures: antennas, towers, smokestacks, anything like that. Somewhere up there, Black Division has mounted their relay stations. Bring a scope with you and keep an eye out for two radios mounted together as a single unit. Once you find them, take them out.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Destroy the transmitter on the factory chimney near the unfinished construction site on Customs\n- Destroy the transmitter on the power line tower on Customs\n- Destroy the transmitter on top of the mountain on Woods\n- Destroy the transmitter on the cell tower on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 1× FN SCAR-H 7.62x51 assault rifle (FDE)\n- 3× FN SCAR-H 7.62x51 20-round magazine\n- 5× 7.62x51mm M80 ammo pack (20 pcs)\n\"Great work, friend. Let's hope this slows them down, at least for a while.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to destroy 4 transmitters placed on high points on Customs and Woods by shooting them."
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": ""
+    }
+  ]
+}

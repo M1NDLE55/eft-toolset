@@ -1,0 +1,40 @@
+{
+  "title": "No Limit to Perfection - Part 6",
+  "url": "https://escapefromtarkov.fandom.com/wiki/No_Limit_to_Perfection_-_Part_6",
+  "revisionId": 359510,
+  "lastEdited": "2026-09-13T20:17:25Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "No Limit to Perfection - Part 5",
+    "leads to": "No Limit to Perfection - Part 7",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "No Limit to Perfection - Part 6 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"It's one thing to handle a weapon, but a whole other thing to understand its strengths and weaknesses. Submachine guns, for example, perform best in the hands of a mobile fighter at close range. Don't try to make a weapon do something it's not meant for — you wouldn't slice bread with a fork, would you? So get out there and practice!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 2 enemies within 15 seconds while using a submachine gun 20 times"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- +300 Submachine Guns skill points\n- 20 GP coins\n- 1× Valuables crate (Rare)"
+    }
+  ]
+}

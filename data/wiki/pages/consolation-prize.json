@@ -1,0 +1,39 @@
+{
+  "title": "Consolation Prize",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Consolation_Prize",
+  "revisionId": 362293,
+  "lastEdited": "2026-09-26T22:37:39Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Lab",
+    "given by": "Skier",
+    "previous": "Profit Retention, or, Get a Foothold",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Consolation Prize is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Luka hasn't been answering for over a week. Those motherfuckers screwed us both over like a pair of bloody idiots. I've looked into every option, and there's no way we're getting our hands on those pricks. We both sank a serious amount of money into this whole thing. Need to save what's left of our position, and this time without any of those useless idiots involved. Just you and me. I've got a lead on the lab. My lads spotted Raiders moving a bunch of gear around. Looks like they were evacuating one of their own stashes and hid it somewhere in the lab until they could find somewhere better. You'd never track down a hideout like that on your own, but I've got specialists who know exactly what to look for. The main thing is keeping them safe. Clear the lab out. My lads will need more than a day to search the whole place. Doubt you'll find anything useful for yourself in there, but I'll think of something to make it worth your while.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Survive and extract from The Lab 15 times\n- Eliminate any 100 targets in The Lab"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +1 Aim Drills skill level\n- +1 Assault Rifles skill level\n- +1 Sniping skill level\n- +1 Weapon Maintenance skill level\n- +1 Troubleshooting skill level\n- +1 DMRs skill level\n- +1 Heavy Machine Guns skill level\n- +1 Light Machine Guns skill level\n- +1 Melee skill level\n- +1 Pistols skill level\n- +1 Revolvers skill level\n- +1 Grenade Launchers skill level\n- +1 Shotguns skill level\n- +1 Submachine Guns skill level\n- +1 Throwables skill level\n- +1 Underbarrel Launchers skill level\n- Unlocks achievement All on Red\n- +1 weekly operational task with skill reward (level 61+)\n\"While you were running around the Lab, I sorted out your reward. You liked that whole extra education thing, didn't you? I've got a mate who used to work for Ref. Was a gunsmith there. Here's his contact. Tell him you're from me and have a chat. Won't make back the money you spent on this, but it might save your life one day. And that's worth more.\""
+    }
+  ]
+}

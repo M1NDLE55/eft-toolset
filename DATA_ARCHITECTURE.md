@@ -97,21 +97,37 @@ call logs one JSON line (`event: "mcp_tool_call"`) with a request id, the tool, 
 outcome, duration, whether the data was stale, and whether the result came from the cache. Unexpected failures return the request
 id as a reference.
 
-`get_wiki_page` is the one tool that doesn't read tarkov.dev. It reads the community Escape
-from Tarkov Wiki through Fandom's MediaWiki API (`src/app/lib/wiki/fandom.ts`): one request
-for a page's current wikitext, following redirects, and one search request when no page has
-the title. The API is the only part of the wiki that answers server requests, since its
-HTML pages sit behind a Cloudflare challenge. Fandom marks API responses uncacheable, so
-pages and searches are kept in memory for an hour (at most 200 entries per instance);
-failures aren't cached. Requests time out after 10 seconds, and a failure returns a tool
-error naming the wiki. `src/app/lib/wiki/wikitext.ts` turns wikitext into plain text:
-infoboxes as fields, tables as rows, links as their text, and no images, references,
-navigation boxes, comments, hidden elements, or invisible characters. Results are cut at
-12,000 characters, with the page's section list for asking by heading. Wiki text is
-written by anyone, so the tool description, the `content` field, and the server
-instructions all tell the model to treat it as reference rather than instructions. The
-wiki is licensed CC BY-NC-SA, so every result carries a credit line (see the README's
-Credits section).
+`get_wiki_page` is the one tool that doesn't read tarkov.dev. It reads a snapshot of the
+community Escape from Tarkov Wiki in `data/wiki`, built from the XML dump of current pages that
+Fandom publishes for download, and makes no requests to the wiki at runtime.
+`node scripts/build-wiki-snapshot.mjs` downloads the dump named in `data/wiki/manifest.json`
+(or `--url <url>`), or takes a downloaded `.7z` with `--file <path>` (add
+`--last-modified <HTTP date>` to record its date), unpacks it with `7z-wasm`, and writes a file
+per page; `--check` sends one HEAD request for the dump and prints whether it is newer than the
+one in the manifest, which records the dump's URL, size, SHA-256, Last-Modified date, and the
+time of its latest edit (the snapshot date). Output depends only on the dump, so rebuilding an
+unchanged dump changes nothing. `src/app/lib/wiki/wikitext.ts` turns each page's wikitext into
+its first infobox as fields and its sections as plain text: tables as rows, links as their
+text, and no images, references, navigation boxes, comments, hidden elements, or invisible
+characters.
+
+The snapshot keeps the pages tarkov.dev can't answer for: quests, bosses and other characters,
+maps, traders, keys and keycards, loot containers, skills, and mechanics and lore (pages in the
+wiki's "Escape from Tarkov", "Game modes", and "Story chapters" categories). Item, weapon, mod,
+and ammo pages are mostly the stats tarkov.dev already serves, and pages marked as historical
+describe removed content, so those are left out; `data/wiki/left-out.json` names them, so asking
+for one points the model to `search_items`, `get_item`, `get_weapon`, or `get_ammo_options`
+instead. `data/wiki/index.json` lists every kept page and redirect (with the section a redirect
+points at); it is read once per instance, and pages are read one file at a time as they are
+asked for, so a cold start loads about 150 KB. `next.config.mjs` traces `data/wiki` into the
+MCP function. Titles match exactly, through a redirect, or ignoring case and punctuation; a
+miss returns up to eight titles sharing the most words with the request. Without `sections`,
+pages up to 4,000 characters come back whole and longer ones as their introduction, with the
+section list for asking by heading; results are cut at 12,000 characters. Wiki text is written
+by anyone, so the tool description, the `content` field, and the server instructions all tell
+the model to treat it as reference rather than instructions. The wiki is licensed CC BY-NC-SA,
+so every result carries a credit line naming the page, its contributors, the licence, and that
+it was adapted from the dump of a given date (see the README's Credits section).
 
 `lookup_term` reads no service at all. It answers from a curated glossary of player jargon
 (`src/app/lib/glossary/terms.json`): map callouts, item and ammo nicknames, bosses, traders,
@@ -194,7 +210,7 @@ tarkov.dev asks only that clients use common sense, so the adapter keeps its req
 and identifiable:
 
 - Every request sends `User-Agent: EFT-Toolset/1.0 (+https://www.eft-toolset.com; …/issues)`
-  (`src/app/lib/api/user-agent.ts`), which the wiki client uses too.
+  (`src/app/lib/api/user-agent.ts`).
 - Each dataset has its own freshness in `RESOURCE_POLICIES`, set from how often tarkov.dev
   changes it: items (prices) 5 minutes, maps and tasks 30 minutes, everything else 2 hours.
 - Refreshes send the `ETag` and `Last-Modified` the dataset came with, so an unchanged

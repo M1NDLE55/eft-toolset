@@ -1,0 +1,53 @@
+{
+  "title": "The Courier",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Courier",
+  "revisionId": 359740,
+  "lastEdited": "2026-09-13T20:21:18Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Mechanic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Courier is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I have a client who urgently needs a new optic, but all my usual couriers are tied up with other jobs. If you can deliver the package to the designated location, I'll make it worth your while. Here, take the optic. Head to the newer gas station on the customs territory. You'll find a set of dumpsters there - leave it there. Once you're done, come back for your payment.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Obtain level 1 loyalty with Mechanic"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash a Trijicon REAP-IR scope behind the trash containers at the \"new\" gas station on Customs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Mechanic Rep +0.02\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 2× Bundle of wires\n- Unlocks barter for Ammunition case at Mechanic LL1\n\"Great, thank you very much, friend. The client already reported that they got the packages. I don't think it's the last order from them, so I'll count on you further.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Trijicon REAP-IR thermal scope | 1 | Stashed item |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Trijicon REAP-IR thermal scope | 1 | Required | N/A | Stashed item |\nIn this quest you have to place a Trijicon REAP-IR thermal scopes on Customs. The scope can't be placed in your secure container.\n\nThe scope has to be placed behind the \"new\" gas station at a pile of barrels."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "TerraGroup Employee",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Employee",
+  "revisionId": 359728,
+  "lastEdited": "2026-09-13T20:21:06Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "TerraGroup employee"
+  ],
+  "infobox": {
+    "location": "The Lab",
+    "given by": "Peacekeeper",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "TerraGroup Employee is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day to you, mercenary. Because the day is actually good. I was right, the new stimulants are connected to TerraGroup. Mechanic found information about Sanitar. Not too much, and it was very expensive for us, but it's better than nothing. Sanitar worked for TerraGroup, and not as an ordinary employee. Graduated in medicine, specialist in infectious diseases, divorced... Well, that's all the information we have on him. Give me more, my friend, I'm very interested in where he got access to such resources. Find his workplace and find out more.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be Loyalty Level 4 to start this quest"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find Sanitar's workplace in the Lab\n- Obtain information about Sanitar's work\n- Hand over the Flash drive marked with blue tape to Peacekeeper"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Peacekeeper Rep +1.5\n- Dollars\n  - Dollars with Intelligence Center Level 1\n  - 3,368 Dollars with Intelligence Center Level 2\n- 1x Mesa Tactical Crosshair Hydraulic buffer tube\n- 1x AR-15 Magpul ACS Carbine stock\n- 1x AR-15 Magpul ACS Carbine stock (FDE)\n- Unlocks purchase of Mesa Tactical Crosshair Hydraulic buffer tube at Peacekeeper LL4\n- Unlocks purchase of AR-15 Magpul ACS Carbine stock (FDE) at Peacekeeper LL4\n- Unlocks purchase of AR-15 Magpul ACS Carbine stock at Peacekeeper LL4\n- +4 levels in Submachine Guns\n- +2 levels in Stress Resistance\n\"We have decoded that flash drive. There's a lot of important information there, but I can't tell you everything. It's classified. I can tell you about Sanitar though, he's a scientist. He studied and developed drugs, and then tested them on people. Very... bold, or, as they sometimes say, unethical research.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Keycard with a blue marking | 1 | Required | N/A | Unlocks Sanitar's room where the flash drive is located. |\n| Flash drive marked with blue tape | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nThe Flash drive marked with blue tape can be found in Sanitar's room in The Lab. The room is located on the second floor, directly across from the laboratory block (G22) and requires a Keycard with a blue marking to enter.\n\nIn Sanitar's room, the Flash drive marked with blue tape is stuck into the laptop that is located on the left desk after you enter."
+    }
+  ]
+}

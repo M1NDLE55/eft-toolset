@@ -1,0 +1,49 @@
+{
+  "title": "Escape from Tarkov",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov",
+  "revisionId": 356597,
+  "lastEdited": "2026-08-26T17:17:22Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": "- A story-driven scenario-based walkthrough is one of the multiplayer game-modes. Complete raids on large-scale maps with your friends, or as a lone wolf.\n- Explore many of the unique and authentic locations of Tarkov city and its suburbs: citizen blocks, a chemical plant complex, a military base, the heart of Tarkov city, private living zone and other locations with real-time weather conditions and time of day changes.\n- Discover concealed locations - reserved facilities and stocks, sealed TerraGroup offices and underground warehouses.\n- Find useful information and items which will help to understand what is going on in the city.\n- Cooperate with ex-enemies, change priorities and adapt to the environment to deconstruct the mysteries, and escape from Tarkov alive."
+    },
+    {
+      "heading": "Combat",
+      "level": 3,
+      "text": "- The HECS (Hazardous Environment Combat Simulator) system module is what drives the experience behind Escape From Tarkov.\n- Become more attached to your character through detailed health and physical characteristics, including hydration, energy, blood pressure, blood loss, fractures, concussions, toxicity, exhaustion, tremors, etc.\n- Control your character freely with granular character speed controls and stance positions, including leaning, and proning.\n- In-depth realistic ballistic and projectile hit physics system.\n- Get ready to feel the weapon as it is in real life. Get used to the physical concepts of normal weapon operation, including jamming, overheating, wearout, reloading, aiming, charging and, of course, shooting.\n- Discover the most advanced weapon modding system ever. Change everything you want to adapt your weapon's tactical abilities to the situation at hand.\n- Interact with the environment to gain the situational advantage - switch on the lights, and perform tactical entries via the door interaction system."
+    },
+    {
+      "heading": "Character system and inventory",
+      "level": 3,
+      "text": "- If you die, you'll lose everything you have equipped. In order to ensure recovery of a limited subset of your inventory, use secured containers and insurance (only applies to items which haven't been taken and extracted after death by another player).\n- Treat yourself, your gear and weapons properly. Utilize a wide variety of medicines to stay alive and focused. Repair your armor, firearms and cold steel. Purify water, and sort out your food rations.\n- Manage your inventory in classic slot-based way. Organize and modify your chest rig like a real professional.\n- Utilize special equipment like night-vision goggles, radio headsets, ballistic vests, and helmets.\n- Loot fallen enemies and containers to get a vast variety of items to use and barter.\n- Get experienced - earn points and level up. Near 100 unique skills to train via repetitive actions principle.\n- Cooperate with strangers, or get stabbed (or shot) in the back by a friend - there are no rules in Tarkov."
+    },
+    {
+      "heading": "Beware of Scavs",
+      "level": 3,
+      "text": "- The louder your scream - the faster they come. Get your trigger finger ready.\n- Play against hostile AI-driven scavengers (or Scavs), or optionally play as a Scav with a random gear loadout, weapon(s) and health state.\n- No need to worry about dying - you will not lose anything from your main character's inventory while playing as a Scav.\n- If you get out alive while playing a Scav, the loot you have acquired will transfer to your main character's stash."
+    },
+    {
+      "heading": "Activities",
+      "level": 3,
+      "text": "- Experience a large amount of non-combat activities.\n- Communicate and trade with NPC merchants, gain their trust to get special goods and quests.\n- Adapt to an economy that changes in real time, affected by other players' operations and events, controlled by AI.\n- Sell your loot in the flea market, and in auctions.\n- Become a trader with your own store, runners and special deals.\n- Work with your stash, heal your character, repair and modify weapons, examine items, chat to learn news and gossip.\n- Establish your own combat group with unique abilities.\n- Upgrade your hideout"
+    },
+    {
+      "heading": "System requirements",
+      "level": 2,
+      "text": "| Component | Minimum | Recommended |\n| OS | Windows 10 64-bit | Windows 11 64-bit |\n| CPU | AMD Ryzen 5 3600 or similar | Intel Core i7-14700F or better |\n| GPU | NVIDIA GTX 1660 or similar | NVIDIA RTX 4070 or better |\n| RAM | 16 GB | 64 GB |\n| Disk space | 76 GB | 76 GB |\n| Network | Permanent Internet connection | Permanent Internet connection |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Escape from Tarkov is part of the \"Russia 2028 universe\", which is also shared by games such as \"Contract Wars\" and \"Hired Ops\". The game has a tie-in movie titled \"Raid\" and a tie-in series titled \"The Chronicles of Ryzhy\" as well as 3 tie-in books. The game takes place somewhere between the years 2015 and 2026 after an in-universe event called the \"Contract Wars\". Escape from Tarkov is a prequel to the game \"Russia 2028\" which was a conceptual prototype of a game that was deemed too ambitious. Russia 2028 is to be re-made from the ground up after the release of Escape from Tarkov."
+    }
+  ]
+}

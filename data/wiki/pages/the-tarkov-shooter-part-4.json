@@ -1,0 +1,41 @@
+{
+  "title": "The Tarkov Shooter - Part 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Shooter_-_Part_4",
+  "revisionId": 359801,
+  "lastEdited": "2026-09-13T20:22:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The Tarkov shooter - Part 4"
+  ],
+  "infobox": {
+    "given by": "Jaeger",
+    "previous": "The Tarkov Shooter - Part 3",
+    "leads to": "The Tarkov Shooter - Part 5, Collector",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Tarkov Shooter - Part 4 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"It's good that you're alive, tasks from Sniper are not easy. Let's wait for a little before the next test. There is going to be a lot more complicated sniper work from now on, so my advice is that you master your bolt-action rifle handling skills some more. Come back when you're ready.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 PMC operatives from over 80 meters away while using a bolt-action rifle"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,800 EXP\n- Jaeger Rep +0.02\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 1× Mosin Rifle AIM Sports Tri-Rail mount\n- 1× Mosin Rifle Tacfire pistol grip\n- Unlocks purchase of Mosin Rifle AIM Sports Tri-Rail mount at Jaeger LL2\n- Unlocks purchase of Mosin Rifle Tacfire pistol grip at Jaeger LL2\n\"Ready? Then let's get to work. Sniper took a big interest in you.\""
+    }
+  ]
+}

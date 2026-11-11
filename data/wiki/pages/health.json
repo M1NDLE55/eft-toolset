@@ -1,0 +1,51 @@
+{
+  "title": "Health",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health",
+  "revisionId": 362585,
+  "lastEdited": "2026-09-29T19:46:17Z",
+  "kind": "skill",
+  "categories": [
+    "Physical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Physical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health is a Physical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Good health speeds up the recovery from the damage sustained in the raids, decreases the probability of fractures and lowers the energy and dehydration rate."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- It is unknown what function the elite effect \"damage absorption\" is supposed to have. There is no indication or evidence of it reducing any incoming damage."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Level 4 of this skill is needed for the quest Health Care Privacy - Part 4"
+    },
+    {
+      "heading": "Hideout",
+      "level": 2,
+      "text": "- Level 2 of this skill is needed for the Medstation level 2"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Reduces limb fracture chance (1.2% per level → -60% at Elite Level)\n- Reduces energy consumption (0.6% per level → -30% at Elite Level)\n- Reduces dehydration rate (0.6% per level → -30% at Elite Level)\n- Elite level: Damage absorption"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Every time skill points are gained for Endurance, Strength or Vitality, 25% of the amount is gained for this skill.\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention\n- Completing the quest Beneath The Streets"
+    }
+  ]
+}

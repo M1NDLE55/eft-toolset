@@ -1,0 +1,40 @@
+{
+  "title": "Gladiator Life - Part 6",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Life_-_Part_6",
+  "revisionId": 359344,
+  "lastEdited": "2026-09-13T20:14:36Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Life - Part 5",
+    "leads to": "Gladiator Life - Part 7",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Life - Part 6 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So, ready to keep getting familiar with the classes? Like you really have a choice... Pick your gear, grab a weapon, and get back to the Arena to smash some opponents!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 enemies as Scout or Marksman"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- 10 GP coins\n- 44,000 Roubles\n- Unlocks MSA Sordin Supreme PRO-X/L headset in the Armory\n- Unlocks Solid Tan weapon camouflage"
+    }
+  ]
+}

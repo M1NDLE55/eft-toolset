@@ -1,0 +1,51 @@
+{
+  "title": "Health Resort management warehouse safe key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_management_warehouse_safe_key",
+  "revisionId": 306449,
+  "lastEdited": "2025-03-10T11:39:42Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Used to open a locked Safe in the Administration Building on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0f0f5886f7741c4e32a472",
+    "ID": "Сейф Побережье Кухня 1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort management warehouse safe key (Safe) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium warehouse safe, located in the Administration building."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "- On the 2nd floor of the north wing of the health resort on Shoreline"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- The content of the Safe."
+    }
+  ]
+}

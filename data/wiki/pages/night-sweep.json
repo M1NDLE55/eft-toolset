@@ -1,0 +1,43 @@
+{
+  "title": "Night Sweep",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Night_Sweep",
+  "revisionId": 362263,
+  "lastEdited": "2026-09-26T16:32:12Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "LL requirement": "4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Night Sweep is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Oi, come here, need to talk to you. Got a job for you, a dry one, if you ask me. My folks were looking for loot at night recently and ran into some hooded morons, and, well, shit went south. Naturally, my dudes managed to retreat in the end and even smoked some of those psychos, though we still lost around a dozen of ours. Eh, that's not the point. The guys found some kind of a dagger on one of those psychos, and apparently, some serious people are willing to pay a fortune for those. Anyway, I've got an order for those daggers. If you find any, bring'em here.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain 12 unusual knives\n- Hand over 12 knives to Skier\n- Eliminate 5 hooded men"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Skier Rep +1.5\n- 2,400 Euros\n  - 2,520 Euros with Intelligence Center Level 1\n  - 2,760 Euros with Intelligence Center Level 2\n- 1× CMMG Mk47 Mutant 7.62x39 assault rifle\n- 5× 7.62x39mm PP gzh ammo pack (20 pcs)\n- Unlocks purchase of CMMG Mk47 Mutant 7.62x39 assault rifle at Skier LL4\n- Unlocks purchase of Magpul MOE Carbine rubber buttpad at Skier LL4\n- +4 Search skill levels\n- +4 Stress Resistance skill levels\n\"Bloody hell... You got them all by yourself? You've got guts, that's for sure. Somethin' ain't right about those psychos, I'm tellin' you...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Cultist knife | 12 | Handover item | No |\nIn this quest you have to find 12 Cultist knives and hand them over to Skier. They are carried by the Cultist priest and sometimes by his followers. You also have to kill 5 Cultists."
+    }
+  ]
+}

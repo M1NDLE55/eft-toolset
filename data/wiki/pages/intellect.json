@@ -1,0 +1,41 @@
+{
+  "title": "Intellect",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Intellect",
+  "revisionId": 362575,
+  "lastEdited": "2026-09-29T19:35:12Z",
+  "kind": "skill",
+  "categories": [
+    "Mental skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mental skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Intellect is a Mental skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "High intellect boosts the speed of item examination, lock picking, and improves the quality of weapon repairs."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The elite effects of this skill do not work."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases item examination speed (2% per level → +100% at Elite Level)\n- Increases weapon repair effectiveness (2% per level → +100% at Elite Level)\n- Reduces repair kit durability consumption (0.5% per level → -25% at Elite Level)\n- Elite level: Ammo counter\n- Elite level: Guess container contents without searching\n- Elite level: You do not need a manual for item examination"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Craft items in the Hideout\n- Repairing Body armor using a Body armor repair kit\n  - Every ~10 durability points repaired grant 0.4 points of Intellect skill\n- Repairing Weapons using a Weapon repair kit\n  - Every ~10 durability points repaired grant 0.4 points of Intellect skill\n- Completing the quest Shooter Born in Heaven\n- Completing the quest A Life Lesson\n- Completing the quest Setting Priorities\n- Completing the quest Calibration\n- Completing the quest Never Too Late To Learn"
+    }
+  ]
+}

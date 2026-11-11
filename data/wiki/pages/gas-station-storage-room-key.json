@@ -1,0 +1,61 @@
+{
+  "title": "Gas station storage room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gas_station_storage_room_key",
+  "revisionId": 358510,
+  "lastEdited": "2026-09-10T21:38:15Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the gas station storage closet door on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5913877a86f774432f15d444",
+    "ID": "zapr sklad"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gas station storage room key (Gas Store) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the storage room inside one of the gas stations."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- 1 needs to be found for the quest Aid Stations"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Under the desk in the new gas station office."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The first room on the right in the hallway inside the new gas station on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Medbag\n- 1x Medcase"
+    }
+  ]
+}

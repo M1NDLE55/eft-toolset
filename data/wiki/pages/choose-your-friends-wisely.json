@@ -1,0 +1,65 @@
+{
+  "title": "Choose Your Friends Wisely",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Choose_Your_Friends_Wisely",
+  "revisionId": 362565,
+  "lastEdited": "2026-09-29T19:26:27Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs, Reserve, Woods, Lighthouse",
+    "given by": "Skier",
+    "previous": "Discombobulate, Killer Argument",
+    "related": "The Price of Independence",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Choose Your Friends Wisely is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The assault is called off. Someone tipped off the driver about the ammo crates, so this motherfucker booby-trapped them! My lads got nailed. Now we're out of both manpower and ammo. We'll have to look for shells again. The driver's gonna start his bullshit counterattack now, you need to stop him. If we let him build his route system now, he's gonna be a pain in the ass later. He's got some mercs around him again, but now they all know they're going against Skier! You need to do this quickly so that no one thinks they can oppose me and fucking survive. I got a route where you'll find all these shitheads.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Use the transit from Customs to Reserve\n- Use the transit from Reserve to Woods\n- Use the transit from Woods to Lighthouse\n- Survive and extract from Lighthouse\n- Eliminate 5 PMC operatives while completing the other objectives"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- 5,000 Euros\n  - 5,250 Euros with Intelligence Center Level 1\n  - 5,750 Euros with Intelligence Center Level 2\n- 1× T H I C C Weapon case\n- Unlocks achievement All-Wheel Drive\n\"Well, no one can help him after something like this. I'll take care of the little stuff, but without you, it could have gone south. You're a smooth guy, and you kept your word, unlike that driver fuck.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"So it was you who was helping him the whole time? No wonder you're backing off now. You know I can deal with him one way or the other, right? But you, you're gonna be cleaning up this shit for a very long while.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to transit from Customs to Reserve to Woods to Lighthouse in one raid, while eliminating 5 PMCs and extracting from Lighthouse. Transits are only available 1 min after raid start."
+    },
+    {
+      "heading": "Customs to Reserve",
+      "level": 3,
+      "text": "Next to the Military Base CP extraction."
+    },
+    {
+      "heading": "Reserve to Woods",
+      "level": 3,
+      "text": "At the map border northwest of the train yard."
+    },
+    {
+      "heading": "Woods to Lighthouse",
+      "level": 3,
+      "text": ""
+    }
+  ]
+}

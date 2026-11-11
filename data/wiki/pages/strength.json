@@ -1,0 +1,51 @@
+{
+  "title": "Strength",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Strength",
+  "revisionId": 362572,
+  "lastEdited": "2026-09-29T19:32:43Z",
+  "kind": "skill",
+  "categories": [
+    "Physical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Physical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Strength is a Physical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Increasing strength allows you to jump higher, sprint faster, hit harder, throw farther, and carry more weight."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Level 15 of this skill is needed for the story chapter Batya"
+    },
+    {
+      "heading": "Hideout",
+      "level": 2,
+      "text": "- Level 2 Strength is required for upgrading Vents to level 3."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases jump height (0.4% per level → +20% at Elite Level)\n- Increases carrying weight (0.6% per level → +30% at Elite Level: 100 kg)\n- Increases melee strike power (0.6% per level → +30% at Elite Level)\n- Increases movement and sprint speed (0.4% per level → +20% at Elite Level)\n- Increases throw distance (0.4% per level → +20% at Elite Level)\n- Reduces stamina drain while aiming (0.4% per level → +20% at Elite Level)\n- Elite level: Weapons equipped on sling and on back don't count towards total character weight\n- Elite level: Chance to deal critical melee damage (+50%)"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Using throwable weapons (3 skill points limit per raid)\n- Using Melee weapons (3 skill points limit per raid)\n- Walk or sprint while being overweight (showing a yellow number), with the following leveling speed modifiers:\n  - 129%: Before the first skill point, the leveling speed is at 129% (denoted by a blue arrow ).\n  - 100%: After the first skill point, the leveling speed is normal (or 100%, denoted by the lack of an arrow).\n  - < 100%: After the first 2 skill points, the leveling speed is calculated using the formula 0.6 ^ (Earned Points - 1) * 100, where earned points are rounded down to the nearest digit (denoted by a red arrow ).\n- Completing quick time events (QTE) in the Gym\n- Completing the quest A Life Lesson\n- Completing the quest Never Too Late To Learn"
+    },
+    {
+      "heading": "Tips",
+      "level": 2,
+      "text": "- Going into raids while reasonably geared up will cause most lower strength players to become overweight (about 22-25 kg). With most armor / armored rigs being 7-13 kg, and guns ranging from 4-8 kg, it is not difficult to simply bring more ammo, mags, and other gear to cause one to hit the necessary weight.\n  - That said, bringing just enough gear to still be underweight, allows the player to gain endurance xp before picking up a few barter items that bring the player to the overweight threshold\n- Carrying around stacks of shotgun shells, each stack of 20 weighs 1 kg\n- Augment the training speed by bringing cheap grenades, such as the M18 smoke grenade (Green), Zarya stun grenade, or RDG-2B smoke grenade. Though this would incur significant extra cost.\n- The game makes xp gain calculations when the player stops sprinting, being killed mid-sprint denies the player of what skill exp that they would have gotten on that stretch.\n- The game is measuring distance covered when it calculates xp gain. Therefore, the speed and stamina of the player can make a decent impact on actual gains. Taking a SJ6 stimulant to increase stamina will result in a longer distance covered. Taking stimulants that increase strength will also make the player faster and thus impact total distance. Finally, armor itself has movement penalties that the player can take into consideration.\n- It is possible to use one or more stimulants to reach elite strength temporarily if level 51 strength would be reached, this removes the weight of equipped weapons and may result in leveling endurance instead."
+    }
+  ]
+}

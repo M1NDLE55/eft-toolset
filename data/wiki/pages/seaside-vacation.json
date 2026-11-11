@@ -1,0 +1,44 @@
+{
+  "title": "Seaside Vacation",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Seaside_Vacation",
+  "revisionId": 361711,
+  "lastEdited": "2026-09-24T12:20:33Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Therapist",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Seaside Vacation is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon, young man, I have a special assignment for you. Unfortunately, I cannot entrust it to my workers. Knowing your previous feats in searching for data that interests me, you can easily be made into a private investigator! So, there was a person who I had been working closely with, he lived somewhere at the cape Dalniy territory. He always carried a briefcase with him containing his medical studies and research. The issue is that he hasn't been contacting me the last two weeks - I'm starting to worry. If his studies get into the wrong hands, I will have to pay a high price to silence the information spread. Please, mercenary, I am asking you to find my contact's briefcase. He used to drive a red merin sports coupe and was always telling me that he'd love to relax somewhere by the sea, farther away from all the city noise. Are you ready to take on this task, young man?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find the informant's briefcase on Lighthouse\n- Hand over the found package"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Therapist Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"This is brilliant, young man! The data from this laptop can play a high role in my business negotiations!.. Ahem, you can go now, mercenary.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Laptop with information | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe briefcase is located under a bed on the second floor of one of the western houses that is directly located at the shore."
+    }
+  ]
+}

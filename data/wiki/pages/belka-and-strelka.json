@@ -1,0 +1,54 @@
+{
+  "title": "Belka and Strelka",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Belka_and_Strelka",
+  "revisionId": 361690,
+  "lastEdited": "2026-09-24T12:06:06Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Prapor",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Belka and Strelka is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey, soldier! I've got a new reconnaissance mission for ya. I was able to arrange a deal with the fellas who control the railroad at the old customs gas station, but I haven't sent any of my couriers that way yet. We gotta check it out first. The plan is simple: you fire the green flare and extract. It's like a job Belka did... or was it Strelka? Ah, whatever, you know what I'm trying to say. I'll pay you for risking your skin, but make sure you don't get whacked before even getting to that place, and take your time on the exit itself. I've heard enough tales of mercs who shoot the flare and run to the exit immediately before the flare even lights up properly... On a completely unrelated note, may I interest you in a cheap new helmet with bullet hole vents?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Survive and extract from Customs through Railroad Passage (Flare)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Prapor Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"There, I told you it was a simple job! You can trust me, I'd never send an untrained soldier into harm's way.\""
+    },
+    {
+      "heading": "Initial equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| RSP-30 reactive signal cartridge (Green) | 1 | Must be fired into the sky. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to extract from Customs via the \"Railroad Passage\" extraction with the \"survived\" status. For the extraction to open, you have to shoot a green flare into the sky while being inside the signal flare area. Upon entering the signal flare area, a notifcation will pop up in the bottom right corner of the screen: If the flare doesn't reach a certain height, the extraction won't open. If the flare was fired correctly, a new notification pops up: You can use either the handheld RSP-30 green flare provided by Prapor via in-game mail or a 26x75mm green flare cartridge fired from a signal pistol. If you use the handheld RSP-30 green flare, make sure to aim it upwards, but not too much or it lands behind you. If you need additional flares you can buy them from Jaeger. To avoid the \"run through\" status, gain at least 200 EXP in raid (by killing or looting) or be in raid for at least 7 minutes before extracting. Staying on the tracks is required to not get shot."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Belka and Strelka are names of the first two dogs who went to the Earth's orbit and returned alive."
+    }
+  ]
+}

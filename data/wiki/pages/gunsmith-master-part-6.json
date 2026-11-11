@@ -1,0 +1,60 @@
+{
+  "title": "Gunsmith Master - Part 6",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_6",
+  "revisionId": 352849,
+  "lastEdited": "2026-08-09T21:40:55Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith 6",
+    "Gunsmith Master 6"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith Master - Part 6 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hi, I have a job for you. I need an SVDS in the following config: black Magpul UBR GEN2 buttstock, SAG MK1 chassis, black Magpul MOE pistol grip, March Tactical 3-24x42 FFP scope and a suppressor. Ergonomics should be at least 10 and the recoil sum no higher than 500.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 36 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an SVDS to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +25,500 EXP\n- Mechanic Rep +0.03\n- 75,000 Roubles\n  - 78,750 Roubles with Intelligence Center Level 1\n  - 86,250 Roubles with Intelligence Center Level 2\n- 1× Ratchet wrench\n- 1× Bulbex cable cutter\n- Unlocks purchase of AK Custom Arms AGS-74 PRO + Sniper Kit pistol grip at Skier LL4\n\"You're done? Excellent. Leave it on the table next to me, I'm a bit busy at the moment...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "SVDS specifications:\n- 60 Durability\n- 10 or more ergonomics\n- 500 or less recoil\n- A silencer\n- A magazine with a capacity of 10 or no magazine\n- AR-15 Magpul UBR GEN2 stock (Black)\n- SVD SAG MK1 chassis\n- AK Magpul MOE pistol grip (Black)\n- March Tactical 3-24x42 FFP 30mm riflescope"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Notes:",
+      "level": 3,
+      "text": "- This build is based on a standard SVDS from Prapor LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| SVDS Lynx Arms AK-series pistol grip adapter | PraporMechanic | LL3 (Barter)LL3 |\n| AK Magpul MOE pistol grip (Black) | Mechanic | LL4 |\n| SVD SAG MK1 chassis | PraporMechanic | LL3 (Barter)LL3 |\n| SVDS custom cut dust cover | PraporMechanic | LL3 (Barter)LL3 |\n| SVDS Lynx Arms Hinge buffer tube adapter | Jaeger | LL2 |\n| AR-15 Magpul UBR GEN2 stock (Black) | Peacekeeper | LL3 |\n| SVDS Rotor 43 thread adapter | Mechanic | LL3 |\n| Rotor 43 7.62x54R sound suppressor | Skier | LL3 |\n| Lobaev Arms 30mm scope mount | Jaeger | LL1 (Barter); LL2 |\n| March Tactical 3-24x42 FFP 30mm riflescope | Jaeger | LL4 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

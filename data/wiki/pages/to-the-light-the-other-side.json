@@ -1,0 +1,85 @@
+{
+  "title": "To the Light - The Other Side",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_The_Other_Side",
+  "revisionId": 360033,
+  "lastEdited": "2026-09-14T00:24:43Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve, Streets of Tarkov, Customs",
+    "given by": "Mechanic",
+    "previous": "To the Light - A Time to Gather Stones",
+    "leads to": "To the Light - Getting Acquainted",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "To the Light - The Other Side is a Quest in Escape from Tarkov"
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Looks like you and I are on the final stretch. Lightkeeper has said he's willing to consider meeting you in person. But keep in mind, you're still just one of dozens of operatives to him. The work you've done won't give you any special privileges at the lighthouse. Now Lightkeeper wants you to carry out the job the group of traitors was originally assigned. I don't know if I'd take such a shady job in your place, but that's up to you. You need to deliver classified TerraGroup data to those lunatics who gather at the marked rooms at night. And Lightkeeper wants you to personally deliver each folder to the ritual sites... I can't tell you where to find the folders or how to get into the marked rooms. So you'll have to rely on yourself for this one.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash the TerraGroup \"Blue Folders\" materials in any marked room on Reserve\n- Stash the TerraGroup \"Blue Folders\" materials in any marked room on Streets of Tarkov\n- Stash the TerraGroup \"Blue Folders\" materials in any marked room on Customs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Lightkeeper Rep +0.01\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 1× SWORD International Mk-18 .338 LM marksman rifle\n- 3× Mk-18 .338 LM 10-round magazine\n- 2× .338 Lapua Magnum FMJ ammo pack (20 pcs)\n\"You actually pulled it off? I wonder what kind of business Lightkeeper has with those \"witnesses\"... Though it's probably safer not to know. On one hand, you just handed important information to the cultists and strengthened their position. On the other, you've earned the right to meet one of the most influential people in Tarkov. Time will tell if it was worth it.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| TerraGroup \"Blue Folders\" materials | 3 | Required | N/A | Stashed item |\n| RB-BK marked key | 1 | Required* | N/A | Reserve marked room |\n| RB-PKPM marked key | 1 | Required* | N/A | Reserve marked room |\n| RB-VO marked key | 1 | Required* | N/A | Reserve marked room |\n| Abandoned factory marked key | 1 | Required* | N/A | Streets of Tarkov marked room |\n| Mysterious room marked key | 1 | Required* | N/A | Streets of Tarkov marked room |\n| Dorm room 314 marked key | 1 | Required | N/A | Customs marked room |\n- Only one key per location is required to complete the objectives.\n\nIn this quest you have to stash 3 TerraGroup \"Blue Folders\" materials in 3 marked rooms, 1 in each on Reserve, Streets of Tarkov and Customs."
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "The folders only have to be stashed in one of the below."
+    },
+    {
+      "heading": "RB-BK",
+      "level": 4,
+      "text": "Marked room on the first floor of the black pawn barrack building. A RB-BK marked key is required to enter it."
+    },
+    {
+      "heading": "RB-PKPM",
+      "level": 4,
+      "text": "Marked room next to the command office in the underground tunnel system. A RB-PKPM marked key is required to enter it."
+    },
+    {
+      "heading": "RB-VO",
+      "level": 4,
+      "text": "Marked room in the security barrack building on Reserve. A RB-VO marked key is required to enter it."
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "The folders only have to be stashed in one of the below."
+    },
+    {
+      "heading": "Abandoned factory",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Mysterious room",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": ""
+    }
+  ]
+}

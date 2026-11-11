@@ -1,0 +1,44 @@
+{
+  "title": "To the Light - Bite the Dust",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_Bite_the_Dust",
+  "revisionId": 360023,
+  "lastEdited": "2026-09-14T00:09:24Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Peacekeeper",
+    "previous": "To the Light - Fallen Bird",
+    "leads to": "To the Light - A Time to Throw Stones",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "To the Light - Bite the Dust is a Quest in Escape from Tarkov"
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Mercenary! You need to put all your other jobs on hold and conduct an investigation immediately! I wouldn't come to you if this weren't absolutely critical. Someone has gained access to internal documentation related to UN operations in Tarkov. As a result, several vital support shipments have been disrupted. This isn't just a blow to my business, it's an attempt to destroy it completely! I won't simply let this go. Right now, I can only trust reliable professionals. You must help me find the person who stole this data and punish them. Whoever did this managed to access classified data, which means it must be someone on the inside, or someone with exceptional skills in hacking and decryption. I can give you more leads later, but you can start looking right now. Don't waste any time!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the evidence implicating the person behind the disruptions"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 1,000 Dollars\n  - 1,050 Dollars with Intelligence Center Level 1\n  - 1,150 Dollars with Intelligence Center Level 2\n- 1× TerraGroup \"Blue Folders\" materials\n\"What the hell is this?! Who gave you this? I don't believe he allowed you anywhere near him... Kurwa... We'll discuss your involvement in this matter later. For now, leave, and you'd better forget about this job entirely.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Amulet from Lightkeeper | 1 | Required | N/A |\nHand over the Amulet from Lightkeeper obtained from Mechanic's quest To the Light - Dangerous Ambitions."
+    }
+  ]
+}

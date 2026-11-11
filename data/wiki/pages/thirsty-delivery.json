@@ -1,0 +1,60 @@
+{
+  "title": "Thirsty - Delivery",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Thirsty_-_Delivery",
+  "revisionId": 362438,
+  "lastEdited": "2026-09-29T14:38:40Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Customs",
+    "given by": "Skier",
+    "previous": "Thirsty - Breadwinner",
+    "leads to": "Thirsty - Echo",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Thirsty - Delivery is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So, I keep my word. Before you, Sanitar was sniffing around that guy, too. But his business proposition was shite, so I didn't tell him anything. I'll tell you, but a bit later. Here are some nice propane tanks for you. Yeah, the ones you brought. Now you have to stash them. One in the nature reserve, in the Scav bunker with the radio tower. The other at the Customs area, in the little store by the crossroads. Just make sure to not shoot the tanks, okay? If you finish the job, you'll get more info.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the specified stash spot on Woods\n- Locate the specified stash spot on Customs\n- Stash the first Propane tank (5L)\n- Stash the second Propane tank (5L)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 1× Weapon case\n\"You done? Very well. I'll give you a bonus for not bitching about the job. So, anyway, Thirsty used to hang around in the west wing of the Health Resort, in the basement. That was a long time ago, before the junkies got there. We cleaned that place out a long time ago, but maybe there's something left, I don't know. Check it out for yourself.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Propane tank (5L) | 2 | Stashed item |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Propane tank (5L) | 2 | Required | N/A | Stashed item |\nIn this quest you have to stash the 2 Propane tanks (5L) provided by Skier via in-game mail on Woods and Customs."
+    },
+    {
+      "heading": "Woods stashing location",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Customs stashing location",
+      "level": 3,
+      "text": ""
+    }
+  ]
+}

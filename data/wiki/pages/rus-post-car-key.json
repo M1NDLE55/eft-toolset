@@ -1,0 +1,61 @@
+{
+  "title": "Rus Post car key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rus_Post_car_key",
+  "revisionId": 338904,
+  "lastEdited": "2026-03-20T13:55:20Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the blue post service van in front of the post office on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "68e63b56ad8cba49190ea529",
+    "ID": "item_key_quest_postcourier_car"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Rus Post car key (Rus Post) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key for the Rus Post service vehicle. Most likely opens the trunk as well."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the story chapter Blue Fire"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "On the ground next to the back right wheel of the blue post service van in front of the post office. A single key is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The driver's door and the trunk of the blue post service van in front of the post office at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "Nothing unless the story chapter Blue Fire is active."
+    }
+  ]
+}

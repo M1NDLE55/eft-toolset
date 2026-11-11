@@ -1,0 +1,43 @@
+{
+  "title": "Crisis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crisis",
+  "revisionId": 361709,
+  "lastEdited": "2026-09-24T12:19:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "LL requirement": "4",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Crisis is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Young man, are you busy at the moment? An interested party from abroad, from behind the barricades, took an interest in a big batch of valuable medical equipment. I think they will find a better use if, instead of the scum here, you understand me. I would be extremely grateful if you could find the required tools for me. Here, take this. This is the list containing all the needed tools.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 3 Portable defibrillators in raid\n- Find 3 Ophthalmoscopes in raid\n- Find 2 LEDX Skin Transilluminators in raid\n- Find 20 Piles of meds in raid\n- Find 10 Bottles of OLOLO Multivitamins in raid\n- Hand over the 3 ophthalmoscopes\n- Hand over the 3 defibrillators\n- Hand over the 2 LEDX\n- Hand over the 20 Piles of meds\n- Hand over the 10 multivitamins"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Therapist Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- +4 Immunity skill level\n- +4 Surgery skill level\n- Unlocks Red paint Hideout wall style\n\"Brilliant, just remarkable. You have done a good deed for everyone in need.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Portable defibrillator | 3 | Handover item | Yes | Can be crafted in the Hideout (Medstation lv. 2). |\n| Ophthalmoscope | 3 | Handover item | Yes | |\n| LEDX Skin Transilluminator | 2 | Handover item | Yes | Can be crafted in the Hideout (Medstation lv. 3).* |\n| Pile of meds | 20 | Handover item | Yes | Can be crafted in the Hideout (Medstation lv. 2). |\n| Bottle of OLOLO Multivitamins | 10 | Handover item | Yes | |\nThere are multiple ways to get the items needed.\n\nLEDX Skin Transilluminator can be found on The Lab in the center area and within the locked rooms you can open with TerraGroup Labs keycard (Blue) and TerraGroup Labs keycard (Green).\nOn Shoreline they can spawn in the Resort and on Sanitars body after killing him.\nOn Interchange they also have multiple spawn locations, especially in the ULTRA medical store. You can also craft the LEDX Skin Transilluminator.*\n\nThe Portable defibrillator can be found on the Lab, Streets of Tarkov, and on Interchange. You can also Craft the Portable defibrillator\n\nFor Ophthalmoscope, Pile of meds and Bottle of OLOLO Multivitamins you don't need to look for specific locations since they spawn everywhere where you can find medical items. You can also craft the Pile of meds.\n\n- The LEDX craft requires a Silicon Optoelectronic Integrated Circuits textbook. This item cannot be purchased on flea. One can be obtained from Lightkeeper's task Return the Favor."
+    }
+  ]
+}

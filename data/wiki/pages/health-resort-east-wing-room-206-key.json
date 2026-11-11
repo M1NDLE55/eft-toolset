@@ -1,0 +1,64 @@
+{
+  "title": "Health Resort east wing room 206 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_east_wing_room_206_key",
+  "revisionId": 358720,
+  "lastEdited": "2026-09-10T22:59:47Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽5,780",
+    "usage": "Unlocks room 206 of the East wing in the Health Resort on Shoreline.",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0ee4b586f7743698200d22",
+    "ID": "Санаторий 206"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort east wing room 206 key (E206 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium east wing room 206."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Connected to room 205 through the balcony.\n- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In the back of an SUV between the gas station and marina"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor, room 206 of the East Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room 206:\n  - Red keycard spawn location\n  - 2× Weapon box (6x2)\n  - 2× Weapon box (4x4)\n  - 1× Weapon Spawn (AKM)\n  - 1× Weapon Spawn (AKS-74UB)\n  - Rare loose loot\n  - Loose loot (Meds, Medical supplies)\n- Room 205:\n  - 2× Medcase\n  - 1× Sports bag\n  - 1× Weapon cabinet\n  - Loose loot (Currency)"
+    }
+  ]
+}

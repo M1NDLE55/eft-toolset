@@ -1,0 +1,44 @@
+{
+  "title": "Honest Review",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Honest_Review",
+  "revisionId": 360008,
+  "lastEdited": "2026-09-13T23:40:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "BTR Driver",
+    "leads to": "I'm Something of a BTR Myself",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Honest Review is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You can really help me out with your professional opinion as a combat veteran. Overall, I picked some pretty secure spots for them, but there are still a couple I'm not completely sure about. If you could check them out and tell me what you think afterward, that'd be great. The stop I'm least confident about is the one at the water treatment plant, between the two buildings. It used to be completely inaccessible by vehicle... Also take a look at the stops at the crossroads in the village and at the UN checkpoint on the main road. They're both out in the open, so maybe you can at least tell me where my customers should expect to get hit from.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Scout the intersection at the village on Lighthouse\n- Scout the UN checkpoint at the main road on Lighthouse\n- Scout the parking between the two main buildings at the water treatment plant on Lighthouse\n- Share your feedback with the BTR Driver"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +15,000 EXP\n\"If you've already checked all the spots, come back and tell me what you think!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to scout the BTR stops \"UN Checkpoint\", \"Village Crossroads\" and \"WTP Building 2 Parking\" on Lighthouse."
+    }
+  ]
+}

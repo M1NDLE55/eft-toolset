@@ -1,0 +1,195 @@
+{
+  "title": "Arena",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Arena",
+  "revisionId": 361019,
+  "lastEdited": "2026-09-21T12:00:49Z",
+  "kind": "location",
+  "categories": [
+    "Game modes",
+    "Locations"
+  ],
+  "redirects": [
+    "Escape from Tarkov Arena",
+    "Escape from Tarkov: Arena",
+    "Escape from Tarkov:Arena",
+    "Weapon tasks"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Arena is a location in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The Arena location has to be purchased separately from Escape from Tarkov on the Escape from Tarkov: Arena website, and can be played as standalone. Owners of the \"The Unheard\" or \"Edge of Darkness\" edition of the main game have free access. A 3-day trial is available as reward from the main game quest Balancing - Part 1.\n\nCharacter level, skill and weapon mastery progression is shared between the main game and the Arena. In Arena matches, all players have the same skill levels and level 3 weapon mastering to keep an even playing field.\n\nWith the help of Ref, certain items and currency can be transferred after the completion of his quest To Great Heights! - Part 3."
+    },
+    {
+      "heading": "Game Modes",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Unranked",
+      "level": 3,
+      "text": "Unranked games include modes for which it is difficult to determine ranking."
+    },
+    {
+      "heading": "Blast Gang",
+      "level": 5,
+      "text": "2 teams of 5 players fight for victory with asymmetrical gameplay. The attacking side needs to plant a special device, and the defending side needs to prevent or deactivate the planted device. After 8 rounds sides are switched. The first team to score 9 round victories wins. Should both teams have 8 round victories (8:8), overtime starts. Overtime consists of 4 rounds, of which 3 need to be won to determine the winner. If there's no winner after 20 rounds, the match is a draw. Loadouts are put together from the gear shop at the start of each round with money earned during the match. The shop items can be customized in the menu through the preset editor."
+    },
+    {
+      "heading": "Teamfight: No one's left behind",
+      "level": 5,
+      "text": "2 teams of 5 players fight for victory. The first team to score 5 round victories wins. If no team was eliminated during the main round time, the overtime timer starts and activates an objective around the center of the map which needs to be captured. The team that captures the point or finishes off the opposing team wins the round. If the winner hasn't been decided in overtime, a cleanup crew consisting of Scav Raiders in the first wave, and Killa together with Tagilla in the second wave is released into the Arena, who will hunt the surviving contestants until one of the teams is fully eliminated. Additionally, poisonous gas is released 20 seconds after the cleanup crew enters the field, dealing 3 damage to all body parts every 3 seconds."
+    },
+    {
+      "heading": "Checkpoint",
+      "level": 5,
+      "text": "Team Deathmatch with 2 teams of 5 players fighting over the control of objective points on the map. The held objectives earn capture points for the controlling team. To win the match, a team must be the first to accumulate the required number of capture points. Team bases contain minefields to prevent spawn camping by the opposite team. Gear presets can be changed after each death, and equipment can be replenished through refill crates.\n\nWhile being in their team bases, players get a buff that reduces incoming damage by 50%, prevents bleeding and adds health generation. In secondary respawn zones, the buff lasts 3 seconds and is removed immediately by weapon usage."
+    },
+    {
+      "heading": "Last Hero: The strongest survives",
+      "level": 5,
+      "text": "Deathmatch between 6-10 players. The goal is to get the most kills in the allotted time. All gear presets are available for selection. Gear presets can be changed after each death, and equipment can be replenished through refill crates.\n\nAfter respawning, players get a 3 second buff that reduces incoming damage by 50%, prevents bleeding and adds health generation. The buff is removed immediately by weapon usage."
+    },
+    {
+      "heading": "Shootout: Tournament",
+      "level": 5,
+      "text": "6 teams of 2 players fight against each other in a round-robin style tournament. The two teams with the most victories meet in the final to determine the winner of the tournament. If multiple teams have the same amount of victories, the finalists are determined by the best overall performance. A final fight takes place in the format of 3 rounds - up to two victories. Victory in a round can be achieved in two ways: Eliminating the enemy team, or if the victory condition is not met in the main round time, the overtime timer starts and activates an objective which needs to be held for a certain time. If the objective is not taken before the overtime ends, the round is a draw."
+    },
+    {
+      "heading": "Ranked",
+      "level": 3,
+      "text": "Currently unavailable."
+    },
+    {
+      "heading": "Custom games",
+      "level": 3,
+      "text": "Create matches in the Blast Gang, Teamfight and Last Hero game modes according to your own rules. Progress made in this mode is not saved.\n\nConfigurable settings:\n- Room name\n- Room password\n- Server region\n- Team names\n- Arena location\n- Killcam\n- Character skills level\n- Gear presets duplicates\n- Match win condition\n- Overtime"
+    },
+    {
+      "heading": "Upcoming game modes",
+      "level": 3,
+      "text": "- Overrun - Cooperate or die: PvE missions for 5 players. The goal of the team is to clear the location from waves of enemies, complete the given objective and evacuate to a safe zone.\n- Duel"
+    },
+    {
+      "heading": "Rating",
+      "level": 2,
+      "text": "Players are rated by their ARP (Arena Reputation Points) rating. ARP are gained and lost through playing ranked game modes and used to match with players of equal skill, as well as to unlock new ranks. The ARP reward and loss after a match depends on the difference between the player's ARP and the average ARP of the opponent's team. The greater the difference, the more the player with a lower average ARP will receive in case of victory and the less he will lose in case of defeat, and vice versa.\n\n| Icon | Rank | Name | ARP Rating |\n| | | Marauder | 1-1000 |\n| | | Jackal | 900-2000 |\n| / | | Mercenary | 1900-3000 |\n| / | | Fighter | 2900-4000 |\n| / | | Warrior | 3900-5000 |\n| / | | Gladiator | 4900-6000 |\n| / | / | Veteran | 5900-7000 |\n| / | | Professional | 6900-8000 |\n| / | | Elite | 7900+ |\n| / | | Whisper of Death | Top 1000 |\n| / | | Flame Warrior | Top 100 |\n| / | | Big Boss | Top 10 |\n| / | | Legend of the Arena | Top 1 |"
+    },
+    {
+      "heading": "Gear preset system",
+      "level": 2,
+      "text": "You can customize the equipment available for each class, weapons and attachments, contents of chest rigs/plate carriers and pockets, and the character appearance through different uppers/lowers and masks/hats/eyeglasses. A total of 12 custom preset slots are be available to players, 3 for each class."
+    },
+    {
+      "heading": "Custom preset rules",
+      "level": 3,
+      "text": "- Each piece of equipment has its own metascore value, a universal unit for evaluating the item effectiveness\n- You can use and customize any equipment available to the class\n- The metascore bar displays the total potential preset power\n  - The bar has a lower and upper limit"
+    },
+    {
+      "heading": "Weapon progression system",
+      "level": 2,
+      "text": "By playing with a single weapon, you can unlock most of the best mods for it and related weapon systems.\n- Levels are earned for kills in a match. Experience is awarded for the weapon used to score the kill. It doesn't matter if you win the match or not:\n  - Double and triple kills are rewarded with an increased amount of experience\n  - Each class has a 100% experience bonus for the first win of the day, with no weapon limit. For example, you can use the same weapon in different classes and receive several first-day bonuses. Please note that you can only receive one class bonus per match\n  - When changing presets during a match, experience is distributed based on the number of kills on the weapon"
+    },
+    {
+      "heading": "Weapon tasks",
+      "level": 3,
+      "text": "Weapon tasks, also known as W-tasks or \"WT\" for short, are individual challenges for the most experienced players, rewarding unique customization options for selected weapons marked with . They become available after unlocking all mods for a weapon.\n\nThe first 1,000 players who complete a weapon task receive a unique number tag for that weapon. Part of the tag is a QR code that leads to https://tarkov.com/s/weapon_qr, which redirects to the game's purchase page."
+    },
+    {
+      "heading": "Armory",
+      "level": 2,
+      "text": "The armory acts as an equipment store and handbook. You can buy equipment for two main currencies: Roubles and GP coins.\n- To purchase some equipment, you will also need to meet certain conditions, such as: completing daily tasks or reaching a certain character level\n- Some equipment will become available when you unlock or purchase certain weapons, such as basic weapon attachments for this weapon\n- Some equipment is available immediately at the start of the game\n- Some equipment is faction specific such as the BEAR and USEC hats\n\nAll ammo types and armor plates are available immediately and do not require purchasing and unlocking."
+    },
+    {
+      "heading": "Arena Locations",
+      "level": 2,
+      "text": "Makeshift gladiator-style arenas in various parts of Tarkov where the remaining locals face each other, created by a mysterious group of arena masters."
+    },
+    {
+      "heading": "Air Pit",
+      "level": 4,
+      "text": "An abandoned terminal hangar, borrowed by locals to become one of the death arenas.\n\nGamemodes: Shootout"
+    },
+    {
+      "heading": "Base",
+      "level": 4,
+      "text": "An old cattle farm by the Gulf of Finland coast overrun by the smugglers. It seems Ref has managed to negotiate with the owners to temporarily rework the base to build a new Arena.\n\nGamemodes: Last Hero"
+    },
+    {
+      "heading": "Bay 5",
+      "level": 4,
+      "text": "A former TerraGroup Labs guarded cargo storage section in the harbor area.\n\nGamemodes: Last Hero, Checkpoint, Teamfight, Blast Gang"
+    },
+    {
+      "heading": "Block",
+      "level": 4,
+      "text": "A courtyard in one of residential neighborhoods, equipped by the Host for Arena fights.\n\nGamemodes: Shootout"
+    },
+    {
+      "heading": "Bowl",
+      "level": 4,
+      "text": "A bowl of the old sports arena with stands, converted for death-fighting.\n\nGamemodes: Checkpoint, Teamfight, Blast Gang"
+    },
+    {
+      "heading": "Chop Shop",
+      "level": 4,
+      "text": "A car chop shop on the outskirts of Tarkov. It used to be a place where stolen cars were dismantled for parts, but now it's used to host firefights.\n\nGamemodes: Last Hero, Teamfight"
+    },
+    {
+      "heading": "Dorms",
+      "level": 4,
+      "text": "Factory workers' dorms located near the customs terminal. Reshala has shared the control of both buildings to Ref for a series of Arena battles.\n\nGamemodes: Last Hero"
+    },
+    {
+      "heading": "EMERCOM",
+      "level": 4,
+      "text": "The EMERCOM temporary base in the Priozersk nature reserve has been abandoned soon after the mysterious explosion in the Tarkov city center.\n\nGamemodes: Last Hero"
+    },
+    {
+      "heading": "Equator",
+      "level": 4,
+      "text": "A makeshift Arena for gladiator fights, redesigned by remaining locals out of Equator-2 shopping mall.\n\nGamemodes: Last Hero, Shootout, Teamfight"
+    },
+    {
+      "heading": "Factory",
+      "level": 4,
+      "text": "The industrial estate and facilities of Chemical Plant No. 16 were rented out illegally to the TerraGroup corporation. During the advent of the Contract Wars, the plant became the scene of numerous firefights between BEAR and USEC that ultimately determined control over the industrial district of Tarkov. And now, this place is occasionally used for Arena gunfights.\n\nGamemodes: Shootout"
+    },
+    {
+      "heading": "Fort",
+      "level": 4,
+      "text": "A 19th century sea fort, which by fate became a prison at first and then after a century got turned into an arena for gladiatorial fights.\n\nGamemodes: Last Hero, Checkpoint, Blast Gang"
+    },
+    {
+      "heading": "Iceberg",
+      "level": 4,
+      "text": "An old soviet resort redesigned into a hotel. Once upon a time the elites were using it for vacation destination, now its a combat zone.\n\nGamemodes: Checkpoint, Blast Gang"
+    },
+    {
+      "heading": "Skybridge",
+      "level": 4,
+      "text": "A railway station which connected Tarkov with the rest of the cities of Norvinsk region. It was opened after reconstruction just before the conflict. Now used as a death arena.\n\nGamemodes: Blast Gang"
+    },
+    {
+      "heading": "Labs Replica",
+      "level": 4,
+      "text": "Gamemodes: Last Hero"
+    },
+    {
+      "heading": "Upcoming locations",
+      "level": 3,
+      "text": "- Gate\n- The box"
+    },
+    {
+      "heading": "Currently disabled for further development",
+      "level": 5,
+      "text": "- Sawmill: An old private sawmill between the city and the suburbs. It was rumored to be a TerraGroup Labs reserve cover command center with an autonomous control system."
+    }
+  ]
+}

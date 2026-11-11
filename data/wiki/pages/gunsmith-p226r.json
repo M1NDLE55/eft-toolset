@@ -1,0 +1,54 @@
+{
+  "title": "Gunsmith - P226R",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_P226R",
+  "revisionId": 353009,
+  "lastEdited": "2026-08-09T22:25:30Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith P226R"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith - P226R is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Oh, hey. There's an unusual matter that has come up. I don't often get orders for pistols, but this is a special occasion. We need a SIG P226R, Stainless Elite Wooden grip, Stainless Elite slide, extended magazine and a flashlight. Ergonomics not below 77, recoil sum not above 610. A weapon for true enthusiasts.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify a P226R to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +9,800 EXP\n- Mechanic Rep +0.02\n- 300 Euros\n  - 315 Euros with Intelligence Center Level 1\n  - 345 Euros Intelligence Center Level 2\n- 2× Gunpowder \"Hawk\"\n- Unlocks purchase of Colt M4A1 5.56x45 assault rifle (variant SOPMOD I) at Mechanic LL3\n- Unlocks purchase of 5.7x28mm R37.F at Mechanic LL3\n\"All set? Thanks for your help. Boy, I wish I had one of those in my collection...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "P226R specifications:\n- 60 Durability\n- 610 or less recoil\n- 77 or more ergonomics\n- P226 Stainless Elite pistol slide\n- P226 Stainless Elite Wooden pistol grip\n- P226 9x19 20-round extended magazine\n- Any tactical device (such as the NcSTAR Tactical Blue Laser)"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard P226R from Peacekeeper LL1.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| P226 Stainless Elite pistol slide | Mechanic | LL1 (Barter); LL2 |\n| P226 Stainless Elite Wooden pistol grip | Mechanic | LL1 (Barter); LL2 |\n| P226 9x19 20-round extended magazine | Peacekeeper | LL1 |\n| NcSTAR Tactical Blue Laser | Skier | LL1 |\n| P226 9x19 112mm threaded barrel | Peacekeeper | LL1 |\n| P226 TJ's Custom 9x19 compensator | Mechanic | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

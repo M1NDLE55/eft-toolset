@@ -1,0 +1,43 @@
+{
+  "title": "The Choice",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Choice",
+  "revisionId": 359738,
+  "lastEdited": "2026-09-13T20:21:16Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "previous": "The Punisher - Part 6",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Choice is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, mercenary. As I see, you are not wasting your time and have achieved a lot on your way. Sometimes in life, you know, we have to lose something to achieve something bigger in the end? Not everyone is ready for this. Many aren't willing to take risks in their entire life, they are afraid, they don't believe in themselves. What about you, are you ready for this yourself? Are you ready to sacrifice something of value to achieve a bigger goal?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 50 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Handover Secure container Epsilon"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +433,333 EXP\n- +2 Hideout Management skill levels\n- Fence Rep +1.1\n- 1,000,000 Roubles\n  - 1,050,000 Roubles with Intelligence Center Level 1\n  - 1,150,000 Roubles with Intelligence Center Level 2\n\n\"A brave decision, mercenary.\""
+    }
+  ]
+}

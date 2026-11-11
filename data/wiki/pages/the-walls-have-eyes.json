@@ -1,0 +1,49 @@
+{
+  "title": "The Walls Have Eyes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Walls_Have_Eyes",
+  "revisionId": 362441,
+  "lastEdited": "2026-09-29T14:45:38Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Factory",
+    "given by": "Skier",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Walls Have Eyes is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You got here just in time, man! I remember you helped me a hell of a lot with surveillance in the suburbs. And now there's all this commotion at the chemical plant, I bet you're well aware of it! Be a true pal, arrange some eyes for me there too, yea? I've seen some cranes there, they would be a perfect place for a camera. Alright, chop chop.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Install a WI-FI Camera in the first crane's cockpit on Factory\n- Install a WI-FI Camera in the second crane's cockpit on Factory\n- Install a WI-FI Camera in the third crane's cockpit on Factory"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Skier Rep +0.25\n- 1,000 Euros\n  - 1,050 Euros with Intelligence Center Level 1\n  - 1,150 Euros with Intelligence Center Level 2\n- 1× Xenomorph sealing foam\n- Unlocks barter for 12/70 RIP ammo pack (5 pcs) at Skier LL2\n\"Awesome, thanks for the help.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| WI-FI Camera | 3 | This item is placed in the crane cockpits. When placed, the item is removed from the players' inventory. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera | 3 | Required | N/A | Can be purchased from Mechanic LL1. |\nIn this quest you have to plant 3 WI-FI Cameras inside the crane cockpits on Factory. They can only be entered from the top via the rafters.\n\nPlacing each camera requires you to be stationary for 40 seconds, so be sure to secure the area first."
+    }
+  ]
+}

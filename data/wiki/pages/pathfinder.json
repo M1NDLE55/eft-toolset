@@ -1,0 +1,50 @@
+{
+  "title": "Pathfinder",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pathfinder",
+  "revisionId": 359548,
+  "lastEdited": "2026-09-13T20:18:04Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Interchange",
+    "given by": "Ragman",
+    "previous": "Gratitude",
+    "leads to": "SupervisorThe Huntsman Path - Sellout",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Pathfinder is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You scared off some Scavs at Ultra once, remember, brother? Now people say it’s getting worse. Word is it’s crawling with all sorts of scum. Got a task for you: check out the situation on Interchange, make sure it's clear to walk around at least. Find safe paths or something. I really need it to go smoothly, okay?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 30 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Visit the Railway Exfil exit\n- Visit the Emercom Checkpoint exit\n- Visit the Power Station V-Ex exit"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +17,500 EXP\n- Ragman Rep +0.03\n- 35,000 Roubles\n  - 36,750 Roubles with Intelligence Center Level 1\n  - 40,250 Roubles with Intelligence Center Level 2\n- 2× SSO Attack 2 raid backpack (Khaki)\n- Unlocks purchase of HighCom Striker ULACH IIIA helmet (Desert Tan) at Ragman LL4\n- Unlocks barter for Granit Br4 ballistic plate at Ragman LL4\n\"You're like some Invisible Man or a ghost or something. Hold on, lemme grab a map. So, the safest roads are here and here, right? Awesome, I'll let my guys know. Thank you, friend, really helped me out here.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Visit the 3 extract Interchange. Visiting all locations in a single raid isn't required."
+    }
+  ]
+}

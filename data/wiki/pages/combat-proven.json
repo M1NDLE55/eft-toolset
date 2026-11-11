@@ -1,0 +1,49 @@
+{
+  "title": "Combat Proven",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Combat_Proven",
+  "revisionId": 359183,
+  "lastEdited": "2026-09-13T20:11:51Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ragman",
+    "previous": "Special Offer",
+    "leads to": "Old Patterns",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Combat Proven is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Look what my guys made! The rigs look like a perfect match, but they still need to be tested. If you can beat the local hotshots with them, then it's a good product.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and neutralize any 5 Bosses (excluding The Goons, The Wedge and Partisan) while using any Goons Edition tactical rig"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +92,000 EXP\n- Ragman Rep +0.03\n- 340,000 Roubles\n  - 357,000 Roubles with Intelligence Center Level 1\n  - 391,000 Roubles with Intelligence Center Level 2\n- 3× NPP KlASS Bagariy plate carrier (EMR)\n- Unlocks Laminate Hideout floor style\n\"So, how was it? No stiffness, no tearing? Then maybe I can increase the price a bit... Oh, right, here's your reward, you're a life saver!\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| LBT-1961A Load Bearing Chest Rig (Goons Edition) | 1 | Needs to be worn while making kills |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid |\n| LBT-1961A Load Bearing Chest Rig (Goons Edition) | 1 | Needs to be worn while making kills | N/A |\n| S&S Precision PlateFrame plate carrier (Goons Edition) | 1 | Needs to be worn while making kills | N/A |\n| Crye Precision CPC plate carrier (Goons Edition) | 1 | Needs to be worn while making kills | N/A |\nIn this quest you have to kill any 5 Bosses besides The Goons, The Wedge, or Partisan while using any Goons edition tactical rig."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "What’s on the Flash Drive?",
+  "url": "https://escapefromtarkov.fandom.com/wiki/What%E2%80%99s_on_the_Flash_Drive%3F",
+  "revisionId": 362218,
+  "lastEdited": "2026-09-26T14:22:01Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "What's on the Flash Drive?"
+  ],
+  "infobox": {
+    "given by": "Skier",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "What’s on the Flash Drive? is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, mister operator, come here. I got a little something for you. I'm not saying it's a real sure bet, but it might be interesting. One drunken punk's been blabbing that back during the Contract Wars, he guided a few groups of some VIPs who didn't want to be caught by our soldiers or cops. And I agree with the latter. You can still make deals with war dogs as there are many decent people there, but cops are no damn good! Anyway, he guided several such groups. Oh and a fool as he is, he managed to steal everything he could during their camping breaks. Now that deadbeat swears on his mom's name that he snatched two thumb drives on his latest run. What was on them - if anything at all - he's got no clue. And he's been permanently shit-faced for so long that he can't remember anything at all - no location, no landmarks, nothing. Yet he says those VIP were some big enough to even bring security with them, so this might be worth a while. Check any campsite you find. I know that these paths have been beaten through and through since, but what if, you know?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 2 items in raid: Secure Flash drive\n- Hand over 2 items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Skier Rep +0.1\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 518 Euros with Intelligence Center Level 2\n\"And you said they weren't there! Although they might be empty. Need to check. In any case, here's your cut.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Secure Flash drive | 2 | Handover item | Yes | Can be crafted in the Hideout (Intelligence center lv. 1). |"
+    },
+    {
+      "heading": "Location",
+      "level": 3,
+      "text": "- In the pockets and bags of Scavs\n- In Dead Scavs\n- In Common fund stash\n- In Plastic suitcases\n- In Safes\n- In Drawers\n- In Ground caches\n- In Buried barrel caches\n- In Airdrops\n- In PC blocks\n- A tent near the lumber camp on Woods has a dedicated spawn for up to 2 possible flash drives at once\n\n- A campsite near the two-story dorms on Customs has a dedicated spawn for up to 2 possible flash drives at once\n\n- On the bed of dorm room 110 in the two-story dorms on Customs\n\n- Plugged into the front of PCs\n  - Interchange has many computers located in the OLI, IDEA and Goshan offices"
+    }
+  ]
+}

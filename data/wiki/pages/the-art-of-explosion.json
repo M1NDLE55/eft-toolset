@@ -1,0 +1,48 @@
+{
+  "title": "The Art of Explosion",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Art_of_Explosion",
+  "revisionId": 361735,
+  "lastEdited": "2026-09-24T12:28:15Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Prapor",
+    "LL requirement": "4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Art of Explosion is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, soldier! I recently worked out a deal to get my hands on a new kind of weapon. Same family as grenades, only a whole lot nastier. This isn't the sort of thing you hand out to just anyone. It takes discipline, good judgment. Plus the stock's limited.So if you want to buy this kind of serious hardware from me, prove you know how to put explosives on target. No shortcuts. I'd rather not have you blowing yourself up or turning one of your own into a casualty.Use whatever gets the job done. Underbarrel launchers, homemade grenades, doesn't matter to me. I only care about the results.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 20 PMC operatives with grenades or grenade launchers"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks purchase of RShG-2 72.5mm rocket launcher at Prapor LL4\n- Unlocks purchase of Granit 4 ballistic plate (Front) at Prapor LL4\n- 1× RShG-2 72.5mm rocket launcher\n- 1× Granit 4 ballistic plate (Front)\n- +4 Grenade Launchers skill levels\n- +4 Underbarrel Launchers skill levels\n\"Yup, I've already heard about your handiwork. In your hands, an RShG's more of an asset than a liability. Like I said, these things are hard to come by, but I'll set one aside for you whenever I get a shipment.When you use it, make sure you've got plenty of space around you and nobody standing behind you. Oh, and read the instructions printed on the launcher. Don't be an idiot.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 20 PMC Operatives with grenades, underbarrel grenade launchers, grenade launchers or rocket launchers. Kills with the stationary AGS-30 grenade launcher do not count.\n\nNote: The 40x46mm M576 (MP-APERS) grenade does not work for this quest, because it is a buckshot cartridge instead of an actual grenade."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This quest was released together with the video \"Art of Explosion\""
+    }
+  ]
+}

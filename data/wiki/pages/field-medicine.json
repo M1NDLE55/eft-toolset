@@ -1,0 +1,31 @@
+{
+  "title": "Field Medicine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Field_Medicine",
+  "revisionId": 319168,
+  "lastEdited": "2025-10-09T20:31:57Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Field Medicine is an upcoming Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Field surgery expertise facilitates application of splints and bandages and reduces the chance of repeated bleeding."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

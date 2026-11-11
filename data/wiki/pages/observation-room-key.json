@@ -1,0 +1,66 @@
+{
+  "title": "Observation room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Observation_room_key",
+  "revisionId": 348108,
+  "lastEdited": "2026-07-20T23:56:23Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the observation room in The Labyrinth.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "679baace4e9ca6b3d80586b2",
+    "ID": "item_key_labyrinth_01_surveillance_room"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Observation room key (Observe) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key that opens one of the personnel workstation rooms in the Labyrinth. That room may have something to do with the research that took place in the Labyrinth."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the story chapter The Labyrinth"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "The Labyrinth",
+      "level": 3,
+      "text": "- In the hand of one of five lab technicians. Guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the observation room in The Labyrinth."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Electronics, Tools, Stimulants, Meds)\n- Labrys research notes spawns"
+    }
+  ]
+}

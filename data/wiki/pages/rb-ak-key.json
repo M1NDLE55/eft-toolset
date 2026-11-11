@@ -1,0 +1,68 @@
+{
+  "title": "RB-AK key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-AK_key",
+  "revisionId": 315830,
+  "lastEdited": "2025-07-16T00:07:38Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-AK"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the Educational Building storage room on Reserve.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80c78786f774403a401e3e",
+    "ID": "rezbase_key_barrleft_computer"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-AK key (RB-AK) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base Educational Building storage room."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The room can also be entered without the key by jumping from the 3rd floor window on the door awning and entering from the window, not requiring this key."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On a filing cabinet in the unlocked guard shack on the path to the radar station"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "- The lock is located in the School building (Black Bishop), in front of the helicopter.\n- The door is at the 2nd floor, on the west side staircase of the building."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Two PC blocks\n- Loose tech loot\n- One Sport Bag\n- Virtex programmable processor spawns\n- Tetriz spawns\n- Phased array element spawns\n- Several ammo box spawns\n- Golden 1GPhone smartphone spawns"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Canister with purified water x2; Canister with purified water; +; Water filter x2; Water filter | → | Therapist; Therapist LL3 | → | RB-AK key; RB-AK key |"
+    }
+  ]
+}

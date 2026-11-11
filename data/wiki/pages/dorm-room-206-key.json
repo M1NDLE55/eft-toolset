@@ -1,0 +1,62 @@
+{
+  "title": "Dorm room 206 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_206_key",
+  "revisionId": 352466,
+  "lastEdited": "2026-08-09T10:44:36Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽1,000",
+    "usage": "Unlocks room 206 in the two-story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5938603e86f77435642354f4",
+    "ID": "mo 206 voda"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 206 key (Dorm 206) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the two-story dormitory with a tag reading \"206\" on it."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Operation Aquarius"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor of the two-story dorms on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Bottle of water (0.6L)\n- Aquamari water bottle with filter\n- Water filter\n- Canister with purified water\n- Bottle of YMXC water\n- Emergency Water Ration\n\nThese locations are found tucked between the boxes, inside and ontop of the wooden crates."
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Pile of meds x7; Pile of meds | → | Therapist; Therapist LL1 | → | Dorm room 206 key; Dorm room 206 key |"
+    }
+  ]
+}

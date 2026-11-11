@@ -1,0 +1,49 @@
+{
+  "title": "War Never Changes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/War_Never_Changes",
+  "revisionId": 359874,
+  "lastEdited": "2026-09-13T20:23:33Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Icebreaker",
+    "given by": "Therapist",
+    "leads to": "Biochemistry",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "War Never Changes is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, mercenary. In field conditions it is extremely important to anticipate any potential hazards in advance. Once a patient is already on the operating table, you can only work with whatever is available at hand. That is why I would like you to bring me high-dose potassium iodide tablets. Yes, these are used in cases of severe radiation exposure. And no, we have not recorded any leaks recently. I must ask you not to spread information about this order. You do not realize how severely panic among the population can complicate the work of my department. I am simply preparing for any incidents that may occur in the future. The issue is that in Tarkov itself we have never found this dosage. Such preparations are typically stored at nuclear facilities, as they are only relevant there. I hope your search proves more successful than that of my staff.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Hand over the hard drives from compartment C-1 on Icebreaker to Mechanic in the Boreas story chapter."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 10 Nooby Shield potassium iodide tablets in raid\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +27,000 EXP\n- 250,000 Roubles\n  - 262,500 Roubles with Intelligence Center Level 1\n  - 287,500 Roubles with Intelligence Center Level 2\n- 5× Trimadol stimulant injector\n- 2× Surv12 field surgical kit\n\"Where did you manage to obtain so many? I was not even expecting five packs… The Icebreaker? Such a find could be extremely important for supporting our work. I need to check something in the department, and then I will return to you with a new task. We cannot afford to miss an opportunity of this value.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Nooby Shield potassium iodide tablets | 10 | Handover item | Yes |\n\nTo complete this quest you need to gather 10 Nooby Shield potassium iodide tablets found in raid on Icebreaker. There are two guaranteed spawns on location on level 1 located in the middle of the infirmary. They can also be found in loose medical spawn locations or in Sports bags on the map."
+    }
+  ]
+}

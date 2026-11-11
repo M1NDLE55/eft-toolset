@@ -1,0 +1,51 @@
+{
+  "title": "Archive room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Archive_room_key",
+  "revisionId": 291094,
+  "lastEdited": "2024-09-12T19:28:21Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the archive room on the second floor of the Zmeisky 3a building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39e49cd6db0635c1975fc",
+    "ID": "city_key12"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Archive room key (Archives) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the archive room inside one of the buildings in the central part of the city."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Drawers\n- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the archive room on the second floor of the Zmeisky 3a building at Streets of Tarkov. The entrance to the building is on the backside."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Drawer\n- 1x Safe"
+    }
+  ]
+}

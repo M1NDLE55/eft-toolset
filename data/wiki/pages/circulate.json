@@ -1,0 +1,44 @@
+{
+  "title": "Circulate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Circulate",
+  "revisionId": 359173,
+  "lastEdited": "2026-09-13T20:11:40Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ragman",
+    "previous": "The Invisible Hand",
+    "leads to": "Special Offer",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Circulate is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You really gave me a hand with those mules back then. Now everything seems to be ready for retail, but there's not enough momentum to revitalize our economy. Let's show this town how to market!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Sell Ragman any 250 backpacks or tactical rigs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +32,000 EXP\n- Ragman Rep +0.01\n- 264,000 Roubles\n  - 277,200 Roubles with Intelligence Center Level 1\n  - 303,600 Roubles with Intelligence Center Level 2\n- 2× Bottle of Fierce Hatchling moonshine\n\"Now that's more like it! Thank you, brother.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to sell any 250 backpacks or tactical rigs to Ragman.\n\nThe sales amount display may not always update immediately. A game restart forces a refresh."
+    }
+  ]
+}

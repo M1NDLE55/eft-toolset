@@ -1,0 +1,76 @@
+{
+  "title": "Textile - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Textile_-_Part_1",
+  "revisionId": 359729,
+  "lastEdited": "2026-09-13T20:21:07Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Textile. Part 1"
+  ],
+  "infobox": {
+    "given by": "Ragman",
+    "previous": "Sew it Good - Part 4",
+    "leads to": "Textile - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Textile - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Depending on the faction of the player there will be a different dialogue and reward."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "BEAR Exclusive",
+      "level": 4,
+      "text": "\"Oh, brother, come in. Wanna get something cool? I have some new clothes in store for you, but it's rare and not cheap. Bring me these things, and make sure they're pristine, no traders. My supplies are completely out and I'm overwhelmed with orders. You can check Ultra, they used to sell those materials there back in the day, but the looters probably took it all over Tarkov. Let me make a list for you, I need a lot of stuff.\""
+    },
+    {
+      "heading": "USEC Exclusive",
+      "level": 4,
+      "text": "\"Come on in, no need to stand in the doorway. I have a job for you. I'm all busy with orders, and I'm almost out of materials. Can you find me some? I'll be able to offer you something new in return. It won't be cheap though. Made in.. well, you know where. And yeah, make sure that those materials are pristine, get them yourself, without traders' help. Anyway, bring them in as soon as you get them. Find them wherever you want, but I think there was a big supply of them in Ultra mall. Lemme make a list for you.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 4 with Ragman to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 5 Aramid fabrics in raid\n- Hand over 5 Aramid fabrics to Ragman\n- Find 10 Ripstop fabrics in raid\n- Hand over 10 Ripstop fabrics to Ragman\n- Find 3 Paracords in raid\n- Hand over 3 Paracords to Ragman"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +32,000 EXP\n- 100,000 Roubles\n  - 105,000 Roubles with Intelligence Center Level 1\n  - 115,000 Roubles with Intelligence Center Level 2\n- Unlocks purchase of IOTV Gen4 body armor (Assault Kit, MultiCam) at Ragman LL4"
+    },
+    {
+      "heading": "BEAR Exclusive",
+      "level": 4,
+      "text": "- Unlocks purchase of BEAR TIGR lower clothing at Ragman LL3\n\"You got it? Nice. Come back soon, I'll tell you what else I need. There will be something special for you. In the meantime, go on and try on the new clothes.\""
+    },
+    {
+      "heading": "USEC Exclusive",
+      "level": 4,
+      "text": "- Unlocks purchase of USEC Commando lower clothing at Ragman LL3\n\"You got it? Good work. Come back a bit later, I will have another task for you. You can try on the new clothes, by the way.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Aramid fiber fabric | 5 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 1). |\n| Ripstop fabric | 10 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 1). |\n| Paracord | 3 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 2). |\nAramid fiber fabric can commonly be found in clothing stores on Interchange. Ripstop fabric can be found in the same locations, though more rarely. They can also be found inside of Sport bags, Buried barrel caches, and Ground caches.\nParacord can be found in Sport bags. They can also be found spawning on the map Reserve. For more specific spawn locations visit the Paracord page."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Health Resort east wing room 205 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_east_wing_room_205_key",
+  "revisionId": 358719,
+  "lastEdited": "2026-09-10T22:59:43Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽5,780",
+    "usage": "Unlocks room 205 of the East wing in Health Resort on Shoreline",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a144bdb86f7741d374bbde0",
+    "ID": "Санаторий 205 восточное крыло"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort east wing room 205 key (E205 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium east wing room 205."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Connected to room 206 through the balcony."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- Spawns on a cardboard box, in the fenced off concrete area above the stream to the north of the resort"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor, room 205 of the East Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room 205:\n  - 2× Medcase\n  - 1× Sports bag\n  - 1× Weapon cabinet\n  - Loose loot (Currency)\n- Room 206:\n  - Red keycard spawn location\n  - 2× Weapon box (6x2)\n  - 2× Weapon box (4x4)\n  - 1× Weapon Spawn (AKM)\n  - 1× Weapon Spawn (AKS-74UB)\n  - Rare loose loot\n  - Loose loot (Meds, Medical supplies)"
+    }
+  ]
+}

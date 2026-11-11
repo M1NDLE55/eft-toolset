@@ -1,0 +1,100 @@
+{
+  "title": "Reserve",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Reserve",
+  "revisionId": 357731,
+  "lastEdited": "2026-09-06T19:44:51Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [],
+  "infobox": {
+    "prev": "Woods, Customs, Lighthouse",
+    "next": "Lighthouse, Customs, Woods",
+    "enemies": "Scavs, Scav Raiders, Glukhar",
+    "players": "9-11",
+    "duration": "40 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "For the quest, see Reserve (quest).\n\nReserve is a location in Escape from Tarkov. It is the seventh map that was added to the game."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The secret Federal State Reserve Agency base that, according to urban legends, contains enough supplies to last for years: food, medications, and other resources, enough to survive an all-out nuclear war."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Reserve is initially only accessible by transiting. Direct access from the location selection screen is unlocked upon progressing through the story chapter Tour."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": "- Stationary weapons in the form of AGS-30 30x29mm automatic grenade launchers and NSV Utyos 12.7x108 heavy machine guns.\n- Be aware of Border Snipers and Minefields!"
+    },
+    {
+      "heading": "Usable Keys",
+      "level": 2,
+      "text": "| Key Name | Used in Quest |\n| RB-AK key | |\n| RB-AM key | |\n| RB-AO key | |\n| RB-BK marked key | yes |\n| RB-GN key | |\n| RB-KORL key | |\n| RB-KPRL key | |\n| RB-KSM key | yes |\n| RB-MP11 key | |\n| RB-MP12 key | |\n| RB-MP13 key | |\n| RB-MP21 key | |\n| RB-MP22 key | |\n| RB-OB key | yes |\n| RB-OP key | |\n| RB-ORB1 key | yes |\n| RB-ORB2 key | yes |\n| RB-ORB3 key | yes |\n| RB-PKPM marked key | yes |\n| RB-PKPTS key | yes |\n| RB-PSP1 key | yes |\n| RB-PSP2 key | yes |\n| RB-PSV1 key | yes |\n| RB-PSV2 key | yes |\n| RB-RH key | |\n| RB-RLSA key | |\n| RB-RS key | |\n| RB-SMP key | yes |\n| RB-ST key | yes |\n| RB-TB key | |\n| RB-VO marked key | yes |"
+    },
+    {
+      "heading": "Boss",
+      "level": 2,
+      "text": "| Name | Location | Notable equipment | Followers |\n| Glukhar | At the storage buildings marked with \"K\"; At the repair building marked with white knight; At the barracks marked with black bishop and black pawn; In the underground storage warehouse marked with \"Д\" | ASh-12 12.7x55 assault rifle | 6 heavily armed and armored guards |"
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "To locate the extractions use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Armored Train | All | no | yes | - | Arrives between 16 and 12 minutes left in the raid.; Honks twice on arrival.; Stays for 7 min.; Honks once 1 min before departure.; Honks twice on closing doors.; Scav Raiders may spawn at the train yard around the time of arrival. |\n| Bunker Hermetic Door | All | yes | no | Activate the lever in the shack west of the white pawn barracks. | The activation lasts for 4 minutes and a siren wails for the duration.; Activating the lever has a chance to make some Scav Raiders spawn at the train yard. |\n| Checkpoint Fence | Scav | yes | no | - | |\n| Cliff Descent | PMC | yes | no | Red Rebel ice pick; Paracord; No armor vest equipped | |\n| D-2 | PMC | yes | no | 1.Turn on power with a lever in the command part of the underground bunker system; 2.Press the button on the wall next to the sliding door | Activating the lever has the chance to make some Scav Raiders spawn in the command part of the bunker. |\n| Depot Hermetic Door | Scav | yes | no | - | |\n| Exit to Woods | All | yes | no | Minefield map (Reserve); Minefield map (Reserve) | |\n| Heating Pipe | Scav | yes | no | - | |\n| Hole in the Wall by the Mountains | Scav | yes | no | - | |\n| Scav Lands (Co-Op) | All | yes | no | Scav + PMC | |\n| Sewer Manhole | All | yes | no | No backpack equipped | |"
+    },
+    {
+      "heading": "Transits",
+      "level": 2,
+      "text": "| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Transit to Customs | All | yes | no | Only available 1 min after raid start | North of the black bishop barracks, where the train track ends |\n| Transit to Lighthouse | All | yes | no | Only available 1 min after raid start | At the map border southwest of the train yard |\n| Transit to Woods | All | yes | no | Only available 1 min after raid start | At the map border northwest of the train yard |"
+    },
+    {
+      "heading": "Maps",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Interactive Map",
+      "level": 3,
+      "text": "Click for fullscreen. Separate map page here."
+    },
+    {
+      "heading": "3D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "2D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "2D Map Underground",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ingame Map Translated - North bottom",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The location was expanded with patch 0.12.6.7982 on June 29, 2020.\n- The underground bunker system is based on \"Бункер 703\" (Bunker 703) in Moscow, which was in use by the Russian ministry of Foreign Affairs."
+    }
+  ]
+}

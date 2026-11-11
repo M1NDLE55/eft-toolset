@@ -1,0 +1,61 @@
+{
+  "title": "Knossos LLC facility key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Knossos_LLC_facility_key",
+  "revisionId": 335465,
+  "lastEdited": "2026-02-14T03:06:59Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the The Labyrinth transit on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "679b9716597ba2ed120c3d3f",
+    "ID": "item_key_shoreline_labyrinth"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Knossos LLC facility key (Knossos) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A worn office door key marked \"Knossos LLC\". Probably used to open utility rooms or other premises belonging to Knossos."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the quest Offensive Reconnaissance\n- Used in the quest Hidden Layer"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "In different locations at the health resort on Shoreline. A single key is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "In the basement of the health resort west wing on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "Transit to The Labyrinth."
+    }
+  ]
+}

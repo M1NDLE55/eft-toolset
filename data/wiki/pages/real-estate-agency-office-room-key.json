@@ -1,0 +1,61 @@
+{
+  "title": "Real estate agency office room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Real_estate_agency_office_room_key",
+  "revisionId": 305968,
+  "lastEdited": "2025-02-25T12:41:17Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks an office on the second floor of the real estate agency on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "6582dc5740562727a654ebb1",
+    "ID": "city14_key4"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Real estate agency office room key (REA) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the office inside the city real estate agency."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a possible location for the quest Properties All Around"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "On the first floor of the real estate agency, in a key rack behind the reception desk."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Office on the second floor of the real estate agency at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Electronics, Energy elements)"
+    }
+  ]
+}

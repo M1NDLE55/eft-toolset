@@ -1,0 +1,44 @@
+{
+  "title": "Lost Contact",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lost_Contact",
+  "revisionId": 361712,
+  "lastEdited": "2026-09-24T12:21:10Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Therapist",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Lost Contact is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Young man, I require your assistance. The other day, I sent a group of workers to collect supplies in the Cape Dalniy area, to the former USEC base of operations in the cottage area. I think you are more than familiar with this place, given the nature of your work. This mission is vital to getting supplies out of this zone. Unfortunately, the group has ceased all communication since yesterday. We suspect someone found out about our operation. Please, mercenary, find my people and, most importantly, their cargo.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find the lost group in the chalet area on Lighthouse\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Therapist Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"So all the workers got executed... I figure the cargo wasn't anywhere near them, mercenary? This is unfortunate. Well, you have completed your task, which means that you are entitled to a reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "The lost group is located on a tennis court that is part of the chalet on the hill in the south-east of Lighthouse."
+    }
+  ]
+}

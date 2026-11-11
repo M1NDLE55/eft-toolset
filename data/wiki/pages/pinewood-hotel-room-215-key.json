@@ -1,0 +1,56 @@
+{
+  "title": "Pinewood hotel room 215 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pinewood_hotel_room_215_key",
+  "revisionId": 310641,
+  "lastEdited": "2025-04-15T20:13:40Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks Room 215 on the second floor of the Pinewood hotel on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39f08cd6db0635c197600",
+    "ID": "city_key15"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Pinewood hotel room 215 key (Pnwd 215) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the rooms inside the Pinewood hotel."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Watching You"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Room 215 on the second floor of the northern Pinewood hotel building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Plastic suitcase (locked)\n- Loose loot (Provisions, Electronics, Energy elements, Flammable materials)"
+    }
+  ]
+}

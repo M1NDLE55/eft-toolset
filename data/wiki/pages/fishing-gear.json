@@ -1,0 +1,49 @@
+{
+  "title": "Fishing Gear",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fishing_Gear",
+  "revisionId": 362609,
+  "lastEdited": "2026-09-29T20:05:10Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Fishing Gear is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day, mercenary. My name is Peacekeeper, and I was referred to you by Skier. Let us not waste time and get straight to business. I need to deliver certain equipment to certain people. I am going to provide you with everything required. Your task is to leave the goods in a designated location. On the coast, next to one of the... what is the Russian word?.. Ah! Breakwaters. There is a boat there. Leave everything inside.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the boat hidden next to the breakwater on Shoreline\n- Stash the MF-UNTAR body armor in the boat\n- Stash the multitool in the boat"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Peacekeeper Rep +0.25\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n\"My contacts received everything they needed. Good job, will be glad to work with you more, mercenary.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| MF-UNTAR body armor | 1 | Needs to be placed at the secret spot |\n| Leatherman Multitool | 1 | Needs to be placed at the secret spot |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to stash the 2 specified items in a rowboat at the beach near the gas station on Shoreline. After accepting the quest you will be sent a MF-UNTAR body armor and a Leatherman Multitool via in-game mail. The Leatherman Multitool is not lootable from players and persists upon death as long as it is placed in a special item slot. Each item takes 10 seconds to stash."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Iron gate key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Iron_gate_key",
+  "revisionId": 353480,
+  "lastEdited": "2026-08-13T19:25:57Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks prison cells on the third floor of the Chekannaya 15 apartment building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39f6e64283b5e9c56b289",
+    "ID": "city_key17"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Iron gate key (Iron gate) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to an unknown iron gate."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest House Arrest\n- 1 needs to be obtained for the quest Debtor"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Locations",
+      "level": 2,
+      "text": "Grate doors at the prison cells no. 1, 2 and 4 on the third floor of the Chekannaya 15 apartment building at Streets of Tarkov. Only accessible via the western staircase."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Dead Scav (both in Cell 1)\n- Loose loot (Valuables, Provisions, Stimulants, Electronics, , Other items)"
+    }
+  ]
+}

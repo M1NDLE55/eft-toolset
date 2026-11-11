@@ -1,0 +1,56 @@
+{
+  "title": "Health Resort east wing room 310 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_east_wing_room_310_key",
+  "revisionId": 316196,
+  "lastEdited": "2025-07-18T21:30:24Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks room 310 of the East wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0eec9686f77402ac5c39f2",
+    "ID": "Санаторий 310"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort east wing room 310 key (E310 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium east wing room 310."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On a seat inside the bus in the trailer park\n\n- In the front seat of the blue van at the crossroads extraction"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The third floor, room 310 of the East Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Sport Bags\n- Loose Loot (Valuables)"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "title": "RB-KORL key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-KORL_key",
+  "revisionId": 330711,
+  "lastEdited": "2026-01-02T17:01:58Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-KORL"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d8e0db586f7744450412a42",
+    "ID": "rezbase_key_rls_officer"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-KORL key (RB-KORL) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base Radar Station commander's office."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On a desk in the \"King\" building (west of helicopter), first floor"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "On the second floor of the Radar Station of Reserve; the first door on the left if you walk down the hallway after coming up the stairs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Two Drawers\n- Intelligence folder spawns on desk and on top of the two drawers."
+    }
+  ]
+}

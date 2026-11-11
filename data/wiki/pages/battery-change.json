@@ -1,0 +1,45 @@
+{
+  "title": "Battery Change",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Battery_Change",
+  "revisionId": 359104,
+  "lastEdited": "2026-09-13T20:10:31Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov, Woods",
+    "given by": "BTR Driver",
+    "previous": "Stick in the Wheel, or, Stabilize Business",
+    "leads to": "Protect the Sky",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Battery Change is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"How are the negotiations progressing? I mean, I understand that Prapor needs to mull it over first, but I'm running out of time! Gotta survive somehow while you're building bridges. No complaints against you, obviously. I don't even have any spare batteries now, and electronics can go to shit at any moment. I could even do with a tank battery right now, I might be able to make it work with my BTR. You think you can find one of those? Because without it, it's over for me.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find the item: 6-STEN-140-M military battery\n- Hand over the item: 6-STEN-140-M military battery"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +58,700 EXP\n- BTR Driver Rep +0.03\n- 284,000 Roubles\n- 1× Body armor repair kit\n\"That's a big one! I hope it wasn't too much of a hassle. Alright, just leave it right here. You're doing a lot of work for me, and I won't forget it. Thank you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "The quest Order From Outside from Lightkeeper will automatically fail if this quest is completed first.\n| Item name | Amount | Requirement | Find in Raid | Notes |\n| 6-STEN-140-M military battery | 1 | Required | No | Needs to be carried and handed over to the BTR Driver. |\n\nIf you want to hand over a 6-STEN-140-M military battery which was obtained before accepting the quest, you have to move it to a different inventory slot for the \"Find\" objective to trigger.\n\nBug: Accepting the quest and handing over a battery in the same raid does currently not work in local PvE game mode raids."
+    }
+  ]
+}

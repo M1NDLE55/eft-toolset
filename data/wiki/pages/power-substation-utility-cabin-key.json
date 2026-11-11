@@ -1,0 +1,57 @@
+{
+  "title": "Power substation utility cabin key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Power_substation_utility_cabin_key",
+  "revisionId": 306638,
+  "lastEdited": "2025-03-15T22:28:44Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽1,150",
+    "usage": "Unlocks the door to the power substation adjacent to the Ultra shopping mall on Interchange.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ad5d49886f77455f9731921",
+    "ID": "Key_Shopping_Mall_storeroom"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Power substation utility cabin key (Power) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the power substation utility cabin adjacent to the ULTRA shopping mall."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Wooden crate\n- 1x Weapon box (4x4)\n- 1x MP-153 spawn"
+    }
+  ]
+}

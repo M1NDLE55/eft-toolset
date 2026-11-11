@@ -1,0 +1,64 @@
+{
+  "title": "Trading",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trading",
+  "revisionId": 358399,
+  "lastEdited": "2026-09-09T21:46:43Z",
+  "kind": "trader",
+  "categories": [
+    "Characters",
+    "Escape from Tarkov",
+    "Traders"
+  ],
+  "redirects": [
+    "Dealer",
+    "Dealers",
+    "Flea market",
+    "Fleamarket",
+    "Ragfair",
+    "Trader",
+    "Traders"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Trading is a big part of the dynamic economy in Escape from Tarkov."
+    },
+    {
+      "heading": "Traders",
+      "level": 2,
+      "text": "- The pillars of commerce in the ruined, beleaguered Norvinsk. Each trader specializes in a particular category of goods, be they military gear, weapons, or meds. While their prices are typically steep, you get what you pay for - and more importantly, you can build reputation with each trader through Quests, to reduce the commission they receive (additional markup you pay on sales and purchases), receive better offers in general, and so on.\n- Traders also offer additional services, such as repairs and insurance (allowing you to recover your gear in case of death during a raid).\n| Name | Full name | Location | Origin | Wares | Buys | Services | Currencies |\n| Prapor | Pavel Yegorovich Romanenko | Verkhneye urban settlement | Russian Federation | Post-Soviet Bloc Weapons, Gear, Magazines, Ammo, Grenades, Mods | Body armor, Weapons, Grenades, Ammo, Mods, Meds, Provisions(Vodka, Moonshine), Mechanical keys, Barter items(Others, Building materials, Fuel cans, Tools) | Insurance; Repairs | Roubles (₽) |\n| Therapist | Elvira Khabibullina | Tarkov City | Russian Federation | Meds, Provisions, Keys, Storage containers, Maps | Meds, Provisions, Keys, Barter items, Storage containers, Maps | Insurance; After raid healing | Roubles (₽); Euros (€) |\n| Fence | | A network of trading outlets all over the Norvinsk region | Unknown | Anything sold to him | Everything | None | Roubles (₽) |\n| Skier | Alexander Fyodorovich Kiselyov | Tarkov Customs District | Russian Federation | Weapons, Magazines, Ammo, Mods, Storage containers, Euros | Gear, Weapons, Grenades, Ammo, Mods, Stimulants, Barter items(Others, Electronics, Valuables) | Repairs | Roubles (₽); Dollars ($); Euros (€) |\n| Peacekeeper | Tadeusz Pilsudski | Tarkov Port District | Republic of Poland | Western/NATO Weapons, Gear, Magazines, Ammo, Grenades, Mods, Containers, Dollars | Armored Gear, Weapons, Ammo, Mods, Keycards, Barter items(Electronics, Energy elements, Valuables), Info items, Special equipment | None | Dollars ($) |\n| Mechanic | Sergey Arsenyevich Samoylov | Chemical Plant Factory within the Customs District | Unknown | Western/NATO Weapons, Magazines, Ammo, Mods, Keycards, Special equipment, Storage containers | Weapons, Ammo, Mods, Keycards, Barter items(Electronics, Energy elements, Tools), Special equipment | Repairs | Roubles (₽); Euros (€) |\n| Ragman | Arshavir Sarkisovich Abramyan | Tarkov's central market | Republic of Armenia | Tactical Clothing, Gear (Armor, Tactical rigs, Headgear, Backpacks, Others) | Gear, Backpacks, Storage containers, (Cordura, Ripstop, Fleece) fabric, Paracord | Tactical clothing | Roubles (₽) |\n| Jaeger | Ivan Yegorovich Kharitonov | Priozersk Natural Reserve | Russian Federation | Post-Soviet Bloc Weapons, Magazines, Ammo, Mods, Gear, Special equipment, Storage containers | Tactical rigs, Backpacks, Weapons(Shotguns, Marksman Rifles, Sniper rifles, Melee weapons), Mods(Scopes, Mounts, Barrels, Stocks), Meds, Provisions, Barter items(Building materials, Energy elements, Flammable materials, Medical Supplies), Storage containers, Secure containers | Insurance | Roubles (₽) |\n| Ref | Unknown | Tarkov airport | Unknown | Well-modified weapons, rare weapon mods, rare armor, backpacks, rare ammunition, containers, barter items, signal pistol equipment, keys | Weapons, Ammo, Mods | Arena item and currency transfer | GP coin |\n| Lightkeeper | Farit Akhmadullovich Genatulin | Lighthouse at the peninsula territory on Lighthouse | Unknown | Currently none | Currently nothing | Sacred Amulet; Rogue support; Zryachiy support | Dollars ($); Euros (€) |\n| BTR Driver | Unknown | Streets of Tarkov; Woods; Lighthouse | Unknown | Currently none | Currently nothing | Taxi service; Covering fire; Item extraction | Roubles (₽) |"
+    },
+    {
+      "heading": "Bartering",
+      "level": 2,
+      "text": "All traders in Escape from Tarkov (with the exception of Fence) offer items for Barter as opposed to buying the items with money alone.\nThese trades often allow the player to obtain higher level gear at lower loyalty levels, or to trade a number of cheap items for a more valuable item to be used or sold at a profit.\nMost of these valuable trades are heavily limited per trader reset, so be sure to check in after reset for your favorite trades!\n\nEach available trade is listed on the individual items pages involved and all available trades are summarized on the barter trades page.\nan example trade in Tarkov would be:\n\n| Bars A-2607 95Kh18 knife x2; Bars A-2607 95Kh18 knife; +; ER FULCRUM BAYONET x1; ER FULCRUM BAYONET | → | Peacekeeper; Peacekeeper LL1 | → | HK MP5 9x19 submachine gun (Navy 3 Round Burst); HK MP5 9x19 submachine gun (Navy 3 Round Burst) |\n\nThis trade is with Peacekeeper at LL1. You may exchange 2 of your Bars A-2607 95Kh18 knives and 1 ER FULCRUM BAYONET for 1 MP5"
+    },
+    {
+      "heading": "Flea Market",
+      "level": 2,
+      "text": "The flea market is a complete collection of all player and AI traders offered exchange deals. The system works on an offer basis, allowing each merchant to set up complex deals for others to take part in."
+    },
+    {
+      "heading": "User Interface",
+      "level": 3,
+      "text": "The market is accessible in the \"Trading\" menu via a tab situated at the top of the screen. Upon entering the flea market, the player view described above, the \"Wish List\" screen (abbreviated \"W-List\") which shows all items the player wishes for (added with a right click to any item) and the \"My Offers\" screen which shows the players' current exchange deals.\n\nThe offer list can be filtered via the left-hand category list and search bar, each category also featuring subcategories (e.g., Weapons > SMGs). Each category inherits its child subcategories' items. All of the market's tabs can be filtered using this feature.\n\nAt the top right of the screen, the player can choose the appearance of the list (currently not available), view their balance and reputation, and there is a button which allows them to add an offer."
+    },
+    {
+      "heading": "Offers",
+      "level": 3,
+      "text": "Offers are exchange deals established by players or NPC merchants. These have one player switch items with another (or an NPC trader). The system doesn't limit the players much, few guidelines being set, thus:\n- All items can be offered, with the exception of secure containers; bitcoins; currency; loose ammunition; and some weapons, loot, armor, vests, backpacks, and helmets.\n  - Items will not lose the found found in raid status if they are put up for sale on the flea market and expire or are removed.\n- Usually unstackable items will stack within a single trade offer.\n\nAfter achieving PMC level 15, the player can start adding their own offers on the market, offering any non-restricted item they own in their stash, in exchange for an amount of currency (excluding GP coin). Before creating an offer, a player must consider the following:\n- Upon offer creation, a calculated tax in Roubles (see formula below) is deducted from the players' balance.\n- The \"Require for all items in offer\" checkbox can be checked to apply a total price for all stacked items instead of a per-item price.\n- The player can only create a limited amount of offers, affected by their merchant reputation.\n- If an item does not sell, the player's reputation is decreased.\n- The remaining time for an offer to be sold can be extended by clicking on the small up arrow next to the time remaining on the offer.\n\nAfter an offer has been fulfilled, all proceeds will be mailed to the player via the in-game merchant \"Ragman\". These proceeds will be available to be picked up for 7 days, after which they will expire and become unobtainable. (The Unheard Edition extends the expiration timer up to 14 days.)"
+    },
+    {
+      "heading": "Tax",
+      "level": 4,
+      "text": "The fee you'll have to pay to post an offer on flea market is calculated using the following formula:\n\nVO × Ti × 4PO × Q + VR × Tr × 4PR × Q\n\nWhere:\n\n- VO is the total value of the offer, calculated by multiplying the base price of the item times the amount (base price × total item count / Q). The Base Price is a predetermined value for each item.\n- VR is the total value of the requirements, calculated by adding the product of each requirement base price by their amount.\n- PO is a modifier calculated as log10(VO / VR).\n  - If VR is less than VO then PO is also raised to the power of 1.08.\n- PR is a modifier calculated as log10(VR / VO).\n  - If VR is greater or equal to VO then PR is also raised to the power of 1.08.\n- Q is the \"quantity\" factor which is either 1 when \"Require for all items in offer\" is checked or the amount of items being offered otherwise.\n- Ti and Tr are tax constants; currently set to Ti = 0.05 and Tr = 0.05\n\n30% of this commission will be deducted if the player has constructed the level 3 Intelligence Center. This can be increased up to 45% with the Hideout Management skill at level 50, each level giving 0.3% bonus.\n\nAfter this, round the number if it ends with a decimal point.\nThe base price of any item can be calculated by dividing the trader buyback price with the multiplier of that trader. Traders have a different multiplier. Durability of items or number of uses affects the base price, so in order to get the base price of full items, don't compare with damaged/used ones.\n\n| Trader | Multiplier |\n| Prapor | 0.4 |\n| Therapist | 0.51 |\n| Fence | 0.24 |\n| Skier | 0.39 |\n| Peacekeeper | 0.36 |\n| Mechanic | 0.45 |\n| Ragman | 0.50 |\n| Jaeger | 0.48 |\n| Ref | LL1 0.4; LL2 0.45; LL3 0.45; LL4 0.5 |"
+    },
+    {
+      "heading": "Reputation",
+      "level": 3,
+      "text": "Each player has a reputation value which affects their number of offers and the view other players have upon their offers.\n- Reputation is gained upon successfully selling a listed offer. Every ₽50,000 gained from sales, incrementally increases the player's reputation by 0.01\n- Reputation is lost whenever an offer is not fulfilled (e.g. offer time ran out), or manually removed by its creator.\n\nOffer slots are increased upon reaching a certain reputation value and decreased upon dropping below it. All offer slot increase thresholds can be seen in the following table:\n\n| Reputation | Number of offers | w/ Unheard Edition |\n| From | To |\n| -∞ | -10 | 1 | 1 |\n| -9.99 | -2 | 2 | 3 |\n| -1.99 | 0.19 | 3 | 4 |\n| 0.2 | 6.99 | 4 | 5 |\n| 7 | 29.99 | 5 | 6 |\n| 30 | 59.99 | 6 | 7 |\n| 60 | 149.99 | 7 | 8 |\n| 150 | 199.99 | 8 | 9 |\n| 200 | 249.99 | 9 | 10 |\n| 250 | 499.99 | 10 | 11 |\n| 500 | 749.99 | 11 | 12 |\n| 750 | 999.99 | 12 | 13 |\n| 1000 | +∞ | 15 | 16 |"
+    }
+  ]
+}

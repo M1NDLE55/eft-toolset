@@ -1,0 +1,53 @@
+{
+  "title": "RB-RS key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-RS_key",
+  "revisionId": 333386,
+  "lastEdited": "2026-02-02T15:14:22Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-RS"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the last door on the left in the hallway of Reserve's southern Radar Station.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5da46e3886f774653b7a83fe",
+    "ID": "rezbase_key_rls_serv1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-RS key (RB-RS) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base Radar Station server room."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In the Common fund stash (Shturman's crate)\n- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "On the middle floor of the Radar Station (Queen) of Reserve; through the last door in the hallway. (Highlighted in green)"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Between 0 and 5 Toolboxes.\n- Loose tech loot"
+    }
+  ]
+}

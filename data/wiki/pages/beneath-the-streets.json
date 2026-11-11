@@ -1,0 +1,74 @@
+{
+  "title": "Beneath The Streets",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Beneath_The_Streets",
+  "revisionId": 361836,
+  "lastEdited": "2026-09-24T13:50:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov, The Lab",
+    "given by": "Therapist",
+    "LL requirement": "4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Beneath The Streets is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon. I have received information that somewhere under the city there is an abandoned entrance to the Laboratory. Apparently, TerraGroup has converted one of the old bomb shelters into an emergency exit from their lab. This presents us with a unique opportunity to acquire all the precious equipment we need with minimal risk! However, I cannot send my people out without reconnaissance, it would be too dangerous. It's better to have someone experienced check this passage first and make sure the areas of interest are secure. Will you help us?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Use the transit from Streets of Tarkov to The Lab (In one raid)\n  - (Optional) Locate the passage leading to The Lab on Streets of Tarkov (In one raid)\n  - (Optional) Locate the passage leading to Streets of Tarkov in The Lab (In one raid)\n- Scout the server room in The Lab (In one raid)\n- Scout the hazard dome in The Lab (In one raid)\n- Scout the control room in The Lab (In one raid)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Therapist Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks craft for eTG-change regenerative stimulant injector at Medstation level 2\n- +2 Health skill levels\n- +4 Surgery skill levels\n\"So you have found it indeed. Excellent! How's the passage, is it safe? In a state of disrepair, you say? Well, it seems like this opportunity won't be with us for long. I'll send my men as soon as possible.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| TerraGroup Labs access keycard | 1 | Allows access to The Lab location a single time. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Streets of Tarkov to The Lab",
+      "level": 3,
+      "text": "Underground entrance in front of the Klimova 16A building with the Cosmonaut painting. TerraGroup Labs access keycard required. Transits are only available 1 min after raid start."
+    },
+    {
+      "heading": "Scout the control room",
+      "level": 3,
+      "text": "Near the the \"Hangar Gate\" extraction on the second level."
+    },
+    {
+      "heading": "Scout the server room",
+      "level": 3,
+      "text": "Adjacent to the control room on the first level."
+    },
+    {
+      "heading": "Scout the hazard dome",
+      "level": 3,
+      "text": "In the main working area on the first level."
+    },
+    {
+      "heading": "The Lab to Streets of Tarkov",
+      "level": 3,
+      "text": "Near the orange dome, next to the office with the billiard table. Transits are only available 1 min after raid start."
+    }
+  ]
+}

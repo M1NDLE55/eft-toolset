@@ -1,0 +1,55 @@
+{
+  "title": "To the Light - Trust but Verify",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_Trust_but_Verify",
+  "revisionId": 361192,
+  "lastEdited": "2026-09-22T12:42:08Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Lab",
+    "given by": "Mechanic",
+    "previous": "See requirements",
+    "leads to": "To the Light - False Call (+10-30min)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "To the Light - Trust but Verify is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I received a request from the lighthouse. The request itself is rather unusual, though. I still don't understand exactly what he's planning, but I remembered your interest and decided to involve you in carrying out the task. You wanted to get in touch with Lightkeeper, didn't you? He gave me a hard drive containing data that needed some... modifications. The drive now needs to be left at the Lab, in one of the server rooms in the testing area. But there are a couple of important conditions. First: the drive needs to be disguised so that whoever finds it believes it's been sitting in the Lab since the evacuation. Setting up a decoy like that will take longer than usual. And if the deception is discovered, we can't expect any future cooperation from Lightkeeper. Second: activating the Lab's internal systems would arouse suspicion from the group that's supposed to take Lightkeeper's bait. So you'll need a quiet way out, such as a ventilation shaft.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlock direct access to Lighthouse by progressing through the story chapter Tour\n- Ask Mechanic about the possibility of working with Lightkeeper\n- Reach Loyalty Level 3 with Prapor, Therapist, Skier, Peacekeeper, Mechanic, Ragman and Jaeger"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash the Hard drive with false data in the server room near the weapon testing area in The Lab (In one raid)\n  - (Optional) After that, extract through the Ventilation Shaft\n- Extract from The Lab through the Ventilation Shaft (In one raid)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +35,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 2× TerraGroup Labs access keycard\n\"Did you disguise the drive well enough? You're sure? Good. Then I'll inform Lightkeeper that everything is done. While you were gone, I had some time to think about this... I could understand if Lightkeeper wanted to plant disinformation on one of his enemies. But if I'm not mistaken, he's going to send his own people after the hard drive. So what was the point of all our work altering the data and disguising the drive? And why involve outsiders like us instead of using his own resources?\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Hard drive with false data | 1 | Stashed item |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Hard drive with false data | 1 | Required | N/A | Stashed item |\nIn this quest you first have to stash the hard drive provided in your off-raid quest inventory at the servers within the main working area (O11) on the first level of The Lab. It is not lost upon death. Afterwards you have to extract through the \"Ventilation Shaft\" extraction in the same raid. It can only be used without a backpack equipped."
+    }
+  ]
+}

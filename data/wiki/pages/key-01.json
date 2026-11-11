@@ -1,0 +1,56 @@
+{
+  "title": "Key 01",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Key_01",
+  "revisionId": 314174,
+  "lastEdited": "2025-06-06T20:58:23Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a door in spawn chamber 1 in The Labyrinth.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "No",
+    "node": "679baa2c61f588ae2b062a24",
+    "ID": "item_key_labyrinth_spawn_01"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Key 01 (Key 01) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "An old key, the markings are unreadable. Could be useful for surviving the Labyrinth."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "Different locations in spawn chamber 1 inside The Labyrinth."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Spawn chamber 1 inside The Labyrinth."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "Button to drain the toxic pool."
+    }
+  ]
+}

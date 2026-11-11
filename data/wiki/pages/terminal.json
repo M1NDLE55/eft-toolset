@@ -1,0 +1,85 @@
+{
+  "title": "Terminal",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Terminal",
+  "revisionId": 359900,
+  "lastEdited": "2026-09-13T20:25:46Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [],
+  "infobox": {
+    "prev": "Shoreline",
+    "enemies": "Scavs, Black Division, Glukhar, Killa, Reshala, Sanitar, Tagilla",
+    "friendlies": "RUAF, Civilians",
+    "players": "1-5",
+    "duration": "45 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "For the Terminal guide, see The Ticket.\n\nTerminal is a location in Escape from Tarkov. It is the twelfth map that was added to the game."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The southern port Terminal has been under Russian Armed Forces control since the beginning of the Tarkov conflict. After the city was sealed off, the terminal was fortified and became the primary evacuation point, sought by both civilian refugees and PMC units. According to unconfirmed reports, TerraGroup personnel were also evacuated through this port."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- When leaving this location by either dying or extracting, the state of the character is returned as it was before entering, besides the consumed access item.\n\n- This location can only be entered through transiting from Shoreline in the time period of 21:00-6:00 after presenting an access item at the port garrison intercom.\n| Icon | Item name |\n| Reprogrammed RFID keycard with Mr. Kerman's hash codes; +; Secure container Alpha-1 with TerraGroup evidence | Reprogrammed RFID keycard with Mr. Kerman's hash codes; +; Secure container Alpha-1 with TerraGroup evidence |\n| RFID keycard with unknown name | RFID keycard with unknown name |\n| Reprogrammed RFID keycard with Prapor's hash codes | Reprogrammed RFID keycard with Prapor's hash codes |\n| Prapor's letter for the port checkpoint | Prapor's letter for the port checkpoint |"
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": "Be aware of mortar fire barrages! The \"The Eye\" mortar strike signaling device can be equipped to get notified when one is very close."
+    },
+    {
+      "heading": "Key Items",
+      "level": 2,
+      "text": "| Icon | Name |\n| Armory key | Armory key |\n| Black Division keycard | Black Division keycard |\n| SZ-1 explosive charge (Terminal) | SZ-1 explosive charge |\n| Pier door key | Pier door key |"
+    },
+    {
+      "heading": "Bosses",
+      "level": 2,
+      "text": "Only one of the below spawns each raid in the medium container ship berths area.\n| Name | Notable equipment | Followers |\n| Glukhar | ASh-12 12.7x55 assault rifle | 3 heavily armed and armored guards |\n| Killa | RPK-16 5.45x39 light machine gun; Maska-1SCh bulletproof helmet (Killa Edition); Maska-1SCh face shield (Killa Edition); 6B13 M assault armor (Killa Edition); BlackHawk! Commando chest harness (Black) | None |\n| Reshala | Tokarev TT-33 7.62x25 TT pistol (Golden); Reshala's bunkhouse key | 3 heavily armed and armored guards |\n| Sanitar | Keycard with a blue marking; Sanitar's bag | 3 heavily armed and armored guards |\n| Tagilla | Superfors DB 2020 Dead Blow Hammer; Tagilla's welding mask \"UBEY\"; Tagilla's welding mask \"Gorilla\"; Crye Precision AVS plate carrier (Tagilla Edition) | None |"
+    },
+    {
+      "heading": "Extraction",
+      "level": 2,
+      "text": "To locate the extraction use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Zubr Boat | PMC | yes | yes | The available boat seats depend on the number of players that entered the raid:; 3 seats with 1-3 players; 3 to 4 seats with 4 players; 4 to 5 seats with 5 players; Players who brought in the Secure container Alpha-1 with TerraGroup evidence must have it on them. | Upon arriving at the pier, the 3 minute extraction timer begins. |"
+    },
+    {
+      "heading": "Maps",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Interactive Map - North right",
+      "level": 3,
+      "text": "Click for fullscreen. Separate map page here."
+    },
+    {
+      "heading": "2D Map - North right",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ingame Map Translated - North right",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Electrical Panel Map Translated - North right",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

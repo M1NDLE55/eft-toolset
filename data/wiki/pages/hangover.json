@@ -1,0 +1,44 @@
+{
+  "title": "Hangover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hangover",
+  "revisionId": 359362,
+  "lastEdited": "2026-09-13T20:14:55Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Streets of Tarkov",
+    "given by": "BTR Driver",
+    "previous": "A Bitter Victory",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hangover is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I went over to the guys, we had a real good talk... When you're ready, just come see me and I'll tell you everything, uh... In person!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Return to the BTR Driver and ask about the negotiations with the smugglers"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +60,000 EXP\n- Unlocks Icebreaker in the location selection\n\"The smugglers are ready to help you, but not for free. So if you're ready to pay, we can get you to Icebreaker straight from your little basement. Just give me a heads-up in advance, alright?\""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "During the dialogue one of the following items can be handed over to help with the BTR Driver's hangover. This is entirely optional and doesn't change the rewards.\n- Analgin painkillers\n- Aquamari water bottle with filter\n- Bottle of Pevko Light beer\n- Can of beef stew (Large)\n- Can of beef stew (Small)\n- Canister with purified water\n- Jar of pickles\n- Pack of Tarker dried meat"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Shatun's hideout key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shatun's_hideout_key",
+  "revisionId": 323246,
+  "lastEdited": "2025-11-19T20:13:09Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks Shatun's hideout inside a house in the eastern village on Woods.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "664d3db6db5dea2bad286955",
+    "ID": "Arena_woods_key1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Shatun's hideout key (Shatun) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key that unlocks a door to one of the village houses located somewhere in Priozersk natural reserve. Belonged to one of the Arena gladiators by the name \"Shatun\"."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- Can only be bartered from Ref LL1"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Shatun's hideout inside a house in the eastern village on Woods."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Yellow keycard spawn location\n- Loose loot (Valuables, Weapon mods, Electronics)\n- 1x Sports bag\n- Possible Springfield Armory M1A 7.62x51 rifle (variant 2k18 NY)\n- Possible modified Springfield Armory M1A 7.62x51 rifle\n- Possible standard or modified Remington R11 RSASS 7.62x51 marksman rifle\n- Possible Walker's XCEL 500BT Digital headset\n- Possible Peltor ComTac IV Hybrid headset (Coyote Brown)\n- Possible LBT-6094A Slick Plate Carrier (Black)\n- Possible LBT-6094A Slick Plate Carrier (Olive Drab)\n- Possible LBT-6094A Slick Plate Carrier (Coyote Tan)\n- Possible 5.11 Tactical Hexgrid plate carrier\n- Possible BNTI Gzhel-K body armor"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Lega Medal x1; Lega Medal; +; GP coin x100; GP coin | → | Ref; Ref LL1 | → | Shatun's hideout key; Shatun's hideout key |"
+    }
+  ]
+}

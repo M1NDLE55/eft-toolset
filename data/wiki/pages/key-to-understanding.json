@@ -1,0 +1,49 @@
+{
+  "title": "Key to Understanding",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Key_to_Understanding",
+  "revisionId": 360513,
+  "lastEdited": "2026-09-17T22:05:01Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "previous": "Reverse Gear",
+    "leads to": "What's in the Bag? (+1-2hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Key to Understanding is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I'm sure you've already heard about the new player in Tarkov's little conflict. I wouldn't offer this kind of job to just anyone, but this unit has my attention, and I want information straight from the source. That's where you come in. So far, my people haven't managed to intercept any of these fighters. It's as if they're always in the stronger position, and you can never catch them off guard... Which means the risks for you will be higher than usual. But I want to know more about their objectives and their plans, and unlike Prapor, there's no one who can tell me to back off. The first thing we need is to listen in on their communications. For that, I need fresh encryption keys the squad leaders carry on them. Think you can get them?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 20 to start this quest.\n- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the Black Division encryption keys\n- Hand over the found item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 2× TerraGroup Labs access keycard\n\"How long have you been carrying those? They'll go stale soon enough. Hand them over. I'll call for you once I've gathered more info.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Black Division encryption keys | 1 | Required | Yes | Can only be found on Black Division |\nIn this quest you have to find a document that only spawns on Black Division. They are not guaranteed to have one."
+    }
+  ]
+}

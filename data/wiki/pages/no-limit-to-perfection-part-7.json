@@ -1,0 +1,40 @@
+{
+  "title": "No Limit to Perfection - Part 7",
+  "url": "https://escapefromtarkov.fandom.com/wiki/No_Limit_to_Perfection_-_Part_7",
+  "revisionId": 359511,
+  "lastEdited": "2026-09-13T20:17:26Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "No Limit to Perfection - Part 6",
+    "leads to": "No Limit to Perfection - Part 8",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "No Limit to Perfection - Part 7 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You know what's the deadliest weapon up close in the Arena? A shotgun! One point-blank blast and your opponent's practically scraping off the walls. Learn to handle it properly, and nothing will be able to stop you. Guess what it takes to get there? Practice, of course. Lots and lots of practice.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 50 enemies while using shotguns"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- +300 Shotguns skill points\n- 25 GP coins\n- 1× Valuables crate (Rare)"
+    }
+  ]
+}

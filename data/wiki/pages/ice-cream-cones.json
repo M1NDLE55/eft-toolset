@@ -1,0 +1,51 @@
+{
+  "title": "Ice Cream Cones",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ice_Cream_Cones",
+  "revisionId": 361726,
+  "lastEdited": "2026-09-24T12:25:46Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Ice cream cones",
+    "Icecream cones"
+  ],
+  "infobox": {
+    "given by": "Prapor",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Ice Cream Cones is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, warrior. Still fighting? Good. There is this job, a cakewalk, really. Obviously, not of your caliber, it's gonna be a favor, so to say. I've received an order, they need some 60-rounders for 5.45 AKs. I know there definitely were some in bunkers near the sawmill, my guys stashed some goods there before. But they got driven out of there by those TerraGroup people, who then locked the bunkers with a key of some sort. Well, if you're going for the bunker, you'll need that key, I think it's hidden somewhere in dorms on Customs, people have seen some TerraGroup brass there a couple of times. Anyway, I don't care where you find them, but I need you to get them fresh and untouched by some traders. And hurry up, the order is urgent.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 3 AK-74 5.45x39 6L31 60-round magazines in raid\n  - (Optional) Obtain the key to the bunker in the TerraGroup employee's dorm room\n  - (Optional) Locate the locked bunker on Woods\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Prapor Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"Well, they say money can't buy friendship, but I still owe you.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "Unlocks craft for AK-74 5.45x39 6L31 60-round magazine at Lavatory level 1."
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| AK-74 5.45x39 6L31 60-round magazine | 3 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 1). |\n\nThe locked ZB-014 bunker on Woods mentioned by Prapor does not have a guaranteed or increased spawn chance for the wanted magazines.\n\nObtaining them from weapon boxes, green wooden crates or bosses and their guards, for example Sanitar is usually way more reliable."
+    }
+  ]
+}

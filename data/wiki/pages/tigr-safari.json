@@ -1,0 +1,59 @@
+{
+  "title": "Tigr Safari",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tigr_Safari",
+  "revisionId": 362610,
+  "lastEdited": "2026-09-29T20:07:42Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Peacekeeper",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Tigr Safari is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Okay, here's the next deal. Russia kindly supplied the UN peacekeeping mission with several Tigr vehicles. The mission has now been almost completely withdrawn, and those vehicles have been left sitting idle. I need you to find any one of them on Customs and mark it with a beacon. There are still plenty of valuable components left inside that can be removed and sold to American intelligence. I suggest searching along the main road. Unfortunately, I do not have any beacons available at the moment, so you will have to sort that out yourself.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by USEC PMCs."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark any UN Tigr vehicle with an MS2000 Marker on Customs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Peacekeeper Rep +0.1\n- 550 Dollars\n  - 578 Dollars with Intelligence Center Level 1\n  - 632 Dollars with Intelligence Center Level 2\n\"I trust you did not discuss this operation with the local authorities? Great. Here is your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed on the armored cars. When placed, you must stay alive until the timer finishes or it will need to be replaced. |\n\nMS2000 Markers can be bought from Prapor or Ragman."
+    },
+    {
+      "heading": "See Also",
+      "level": 2,
+      "text": "- Scrap Metal - The BEAR counterpart quest"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

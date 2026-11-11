@@ -1,0 +1,153 @@
+{
+  "title": "The Ticket",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Ticket",
+  "revisionId": 362558,
+  "lastEdited": "2026-09-29T19:04:25Z",
+  "kind": "quest",
+  "categories": [
+    "Story chapters",
+    "Table Progress Tracking"
+  ],
+  "redirects": [
+    "Major TerraGroup evidence list",
+    "Major evidence list",
+    "Minor TerraGroup evidence list",
+    "Minor evidence list",
+    "Terminal guide"
+  ],
+  "infobox": {
+    "previous": "Falling Skies"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Ticket is a story chapter in Escape from Tarkov."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain Intelligence Center level 1\n- Talk to Mr. Kerman\n- Wait for Mr. Kerman to reach out\n- Talk to Prapor\n- Talk to Mr. Kerman\nIf the Armored case was given to Prapor in Falling Skies\n- Locate the camp of Prapor's people on Lighthouse\n- Find any clues about Prapor's people's intentions\n- Talk to Mr. Kerman\n- Talk to Lightkeeper\n- Gain access to Lightkeeper\n- Stay on good terms with Lightkeeper\n- Obtain 3 TerraGroup \"Blue Folders\" materials\n- Bring the found items to Lightkeeper\n- Launch a yellow signal flare in front of ULTRA's main entrance on Interchange\n- Eliminate any 15 targets in one raid on Interchange\n- Talk to Lightkeeper\nOnce you have the case\n- Unlock the armored case\n- Obtain the \"Ticket\"\n- Ask Mechanic for help\n- Obtain the Experimental signal jammer\n  - (Optional) Gain access to The Lab\n  - (Optional) Obtain the TerraGroup Labs access keycard\n- Use the Experimental signal jammer to unlock the case\n- Read the instructions from the armored case\n- Contact Mr. Kerman"
+    },
+    {
+      "heading": "If you accept Mr. Kerman's offer",
+      "level": 3,
+      "text": "- Accept Mr. Kerman's offer\n- Activate the RFID card from the case\n  - (Optional) Obtain Solar Power level 1\n  - (Optional) Obtain a Blank RFID keycard\n- Obtain the Laboratory master pass\n- Use the Laboratory master pass to activate Kruglov's keycard\n  - (Optional) Gain access to The Lab\n- Obtain an RFID card encryption device\n- Talk to Mr. Kerman\n- Talk to Mechanic\n- Wait for a response from Mechanic\n- Hand over 40 Physical Bitcoins to Mechanic\n  - (Optional) Obtain Bitcoin Farm level 1\n  - (Optional) Obtain 40 Physical Bitcoins to pay for Elektronik's services\n- Collect the RFID card encryption device to activate Kruglov's keycard\n  - (Optional) Gain access to Streets of Tarkov\n  - (Optional) Access Kruglov's apartment on Streets of Tarkov\n- Arrive at the entrance pathway to the port Terminal\n- Swipe the keycard at the intercom reader"
+    },
+    {
+      "heading": "If you refuse Mr. Kerman's offer",
+      "level": 3,
+      "text": "- Arrive at the entrance pathway to the port Terminal\n- Swipe the keycard at the intercom reader\n- Talk to Prapor\nIf you gave the Armored case to Prapor in Falling Skies\n- Hand over the cash to Prapor\n  - (Optional) Collect the required amount in RUB: 300,000,000\nIf you kept the Armored case from Prapor in Falling Skies\n- Hand over the cash to Prapor\n  - (Optional) Collect the required amount in RUB: 500,000,000\n- Complete all Prapor's tasks in time\n  - Convert the evidence folders to digital format and save them to an SSD\n    - (Optional) Obtain the item: Folder with TerraGroup Labs evidence (Reports)\n    - (Optional) Obtain the item: Folder with TerraGroup evidence (Staff)\n    - (Optional) Obtain the item: Folder with TerraGroup Labs evidence (Developments)\n    - (Optional) Obtain the item: Folder with TerraGroup evidence (Finances)\n  - Eliminate any 50 targets on Streets of Tarkov\n  - Eliminate 4 PMC operatives in one raid\n- Report to Prapor\nOnly if you fail to complete Prapor's tasks in time\n- Hand over Secure container Kappa to Prapor"
+    },
+    {
+      "heading": "If you accept Mr. Kerman's offer and agree to find evidence on TerraGroup",
+      "level": 3,
+      "text": "- Talk to Mr. Kerman\n- Agree to find dirt on TerraGroup for Mr. Kerman\n- Obtain Intelligence Center level 3\nIf player failed to obtain the major evidence from They Are Already Here\n- Don't waste the second chance from Mr. Kerman\nIf player received the major evidence from They Are Already Here\n- Deliver the 8 major TerraGroup evidence to Mr. Kerman\n  - (Optional) Deliver the 36 minor TerraGroup evidence to Mr. Kerman\n- Negotiate with Mr. Kerman\n- Confirm with Mr. Kerman that all the evidence has been delivered\n- Wait for Mr. Kerman's trusted contact to get in touch\n- Talk to Fence\n- Reach 4.0 reputation with Fence\n- Complete Fence's assignments\n- Keep the standing with Fence above 4.0\n- Extract through the Friendship Bridge (Co-Op) on Woods\n- Note: The objective in the PvE mode is to eliminate 5 PMC operatives on Interchange in one raid without killing Scavs instead.\n- Extract through the Scav Lands (Co-Op) on Reserve\n- Note: The objective in the PvE mode is to eliminate 5 PMC operatives on Shoreline in one raid without killing Scavs instead.\n- Reach 0.4 standing with BTR Driver\n- Tell Fence that the assignment is complete\n- Obtain Solar Power level 1"
+    },
+    {
+      "heading": "If you accept Mr. Kerman's offer and agree to find evidence on TerraGroup, but refuse to hand in more than 2 major evidence",
+      "level": 3,
+      "text": "- Ask the traders how to leave Tarkov\n- Hand over the military flash drive with compiled data to Lightkeeper\n  - (Optional) Record the compiled data to a military flash drive\n  - (Optional) Obtain the topographic intel documents on Lighthouse\n  - (Optional) Obtain the topographic intel documents on Woods\n  - (Optional) Obtain the topographic intel documents on Customs\n  - (Optional) Obtain the topographic intel documents on Ground Zero\n  - (Optional) Obtain the topographic intel documents on Factory\n- Eliminate 30 PMCs on Woods\n- Hand over 100 PMC dogtags to Lightkeeper\n  - (Optional) Obtain 100 PMC dogtags\n- Stash the first amulet in the stash room on Lighthouse\n  - (Optional) Obtain the amulet from the marked room on Customs\n- Stash the second amulet in the stash room on Lighthouse\n  - (Optional) Obtain the amulet from the first marked room on Streets of Tarkov\n- Stash the third amulet in the stash room on Lighthouse\n  - (Optional) Obtain the amulet from the second marked room on Streets of Tarkov\n- Stash the fourth amulet in the stash room on Lighthouse\n  - (Optional) Obtain the amulet from the first marked room on Reserve\n- Stash the fifth amulet in the stash room on Lighthouse\n  - (Optional) Obtain the amulet from the second marked room on Reserve\n- Stash the sixth amulet in the stash room on Lighthouse\n  - (Optional) Obtain the amulet from the third marked room on Reserve\n- Report to Lightkeeper"
+    },
+    {
+      "heading": "If you accept Mr. Kerman's offer and refuse to find evidence on TerraGroup",
+      "level": 3,
+      "text": "- Talk to Mr. Kerman\n- Ask the traders how to leave Tarkov\nIf you kept the Armored case from Prapor in Falling Skies\n- Complete Prapor's tasks\n  - Hand over any military or advanced electronics to Prapor\n    - (Optional) Obtain any 50 military or advanced electronics\n  - Hand over Secure container Theta, Epsilon or Kappa to Prapor\n    - (Optional) Obtain Secure container Kappa\n    - (Optional) Obtain Secure container Epsilon\n    - (Optional) Obtain Secure container Theta\n  - Hand over 40 weapon and armor repair kits to Prapor\n    - (Optional) Obtain 40 weapon and armor repair kits with full durability\nAfter the completion of Prapor's tasks OR if you gave the Armored case to Prapor in Falling Skies\n- Hand over Case with dangerous cargo to Prapor\n  - (Optional) Locate and obtain the Case with dangerous cargo\n- Report to Prapor\n- Hand over 1,000,000 Dollars to Prapor\n  - (Optional) Collect the required amount in USD: 1,000,000\n- Wait for the info from Prapor\n- Collect the updated hash codes from Prapor\n- Obtain Solar Power level 1"
+    },
+    {
+      "heading": "Identical for all endings",
+      "level": 3,
+      "text": "- Arrive at the entrance pathway to the port Terminal\n  - (Optional) Bring the Reprogrammed RFID keycard with Mr. Kerman's hash codes\n  - (Optional) Bring the RFID keycard with unknown name\n  - (Optional) Bring the Prapor's letter for the port checkpoint\n  - (Optional) Bring the Reprogrammed RFID keycard with Prapor's hash codes\n- Swipe the keycard at the intercom reader\n- Access the port Terminal\n  - (Optional) Bring the Secure container Alpha-1 with TerraGroup evidence\n- Pass the security check\n- Escape from Tarkov\n  - (Optional) Locate the armory with the confiscated equipment\n  - (Optional) Retrieve the Secure container Alpha-1\n  - (Optional) Obtain the keycard to unlock the service passage\n  - (Optional) Locate the exit leading to the Terminal loading zone\n  - (Optional) Unlock the service passage inside the seaport building\n  - (Optional) Access the Terminal loading zone\n  - (Optional) Locate the way into the fuel depot\n  - (Optional) Figure out how to restore power to the pumping station\n  - (Optional) Obtain the diagram of the electrical panels\n  - (Optional) Drain the water in the pumping station\n  - (Optional) Obtain the key to the gate blocking the road to the pier\n  - (Optional) Locate the exit leading to the pier\n  - (Optional) Reach the evacuation area at the pier"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Use the buttons below to select the ending you want to pursue."
+    },
+    {
+      "heading": "Arrive at the entrance pathway to the port Terminal",
+      "level": 3,
+      "text": "| Item name | Amount | Notes |\n| Reprogrammed RFID keycard with Mr. Kerman's hash codes | 1 | Used only for the Savior ending. |\n| RFID keycard with unknown name | 1 | Used only for the Debtor ending. |\n| Prapor's letter for the port checkpoint | 1 | Used only for the Survivor ending. |\n| Reprogrammed RFID keycard with Prapor's hash codes | 1 | Used only for the Fallen ending. |\n\nYou will have to use the corresponding access item on the keycard swiping system, or the intercom call button for the Survivor ending on the intercom between the times 21:00 and 06:00. The corresponding access item will be accepted and the intercom will tell you to proceed to the gate. If you do not have a proper access item, or it is the wrong time of day, the guard will deny you entry via the intercom."
+    },
+    {
+      "heading": "Access the port Terminal",
+      "level": 3,
+      "text": "| Item name | Amount | Notes |\n| Secure container Alpha-1 with TerraGroup evidence | 1 | This item is only needed if you are doing the Savior ending. |\n\nIf you are authorized to approach, you will have to follow the left road to approach the transit area. Once you approach the transit area, your weapon will be automatically lowered. You won't be able to transit without having Secure container Alpha-1 with TerraGroup evidence in your task inventory if you are doing the Savior ending.\n\nA few actions can get you killed by the port garrison:\n- Going further than the first anti-tank barrier without presenting an access item.\n- Going outside of the road around the transit area.\n- Pulling out a weapon, or getting a weapon back in your hands after it has been lowered."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- If you die with the Secure container Alpha-1 with TerraGroup evidence, a new one will be sent to you via in-game mail.\n- The RFID keycard with unknown name can be purchased once per raid from Lightkeeper for 1× TerraGroup \"Blue Folders\" materials. Note: Free special slot required.\n- Prapor's letter for the port checkpoint can be purchased twice per trader reset from Prapor for 5,000,000 Roubles."
+    },
+    {
+      "heading": "Pass the security check",
+      "level": 3,
+      "text": "The security check consists of a cinematic of you entering the Terminal area."
+    },
+    {
+      "heading": "Locate the armory with your confiscated equipment",
+      "level": 3,
+      "text": "| Item name | Amount | Notes |\n| Armory key | 1 | Needed to open the armory door. |\n\nYou will need to find your way to the armory building, and enter the armory to retrieve your equipment. You will have to find the corresponding key on your way to the armory. Once you have retrieved your equipment and have exited the armory to the west, a squad of Black Division operatives will approach the armory building from the southwest. You will have to fight them in order to continue to the next objective"
+    },
+    {
+      "heading": "Obtain the keycard to unlock the service passage",
+      "level": 3,
+      "text": "| Item name | Amount | Notes |\n| Black Division keycard | 1 | Needed to open the service passage later in the raid. |\n\nYou will have to find the Black Division keycard located inside the seaport Terminal building (MS) west of the armory. The keycard is in a Weapon box (6x2) on a tipped over ATM. You will have to fight a squad of Black Division operatives guarding the inside of the building before getting the keycard."
+    },
+    {
+      "heading": "Access the Terminal loading zone",
+      "level": 3,
+      "text": "| Item name | Amount | Notes |\n| Black Division keycard | 1 | Needed to open the service passage in admin building (D3). |\n\nTo access the loading zone, you will have to get through the admin building. You will have to fight Scavs on the path to it and a team of Black Division operatives waiting at the entrance of the building. Once all Black Division operatives have been neutralized, you have to enter the building and swipe the Black Division keycard at the scanner next to the door. There are several resupply resources (Provisions, medical items) scattered about in the hallway immediately inside the door. Scavs spawning ahead will attempt to enter the hallway from the far end while you are inside."
+    },
+    {
+      "heading": "Locate the way into the fuel depot",
+      "level": 3,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Notes |\n| SZ-1 explosive charge (Terminal) | SZ-1 explosive charge | 1 | Only needed if:; You are alone.; Your Strength skill isn't at Elite level. |\n\nTo continue, you must get through the metal gate blocking your path. You can do this by either using a nearby found SZ-1 explosive charge to open the door, by pushing it open with Elite level Strength, or by pushing it open together with another player.\n\nYou will have to fight a squad of Black Division operatives around the various SZ-1 explosive charge spawns. It is recommend to clear them first before looking for the charge."
+    },
+    {
+      "heading": "Drain the water in the pumping station",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Toolset | 1 | Required* | N/A | This item is used for a guaranteed repair of electrical panels. When used, the item is not removed from the players' inventory. |\n- Electrical panels can be repaired with bare hands, but the chance to succeed is low. If you fail a repair, the panel will inflict damage to your arms.\n\nYou will need to find and repair one to five electrical panels scattered around Terminal in order to restore power to the pumping station. The amount of panels that are required to be repaired depends on the number of players in the raid:\n- Solo players will always have a single panel to repair (Either panel number 9 or 10).\n- With 2-5 players, at least 1, but up to 5 panels will need to be repaired across all panel locations.\n\nTwo Toolsets can be found on Terminal in static locations, both are guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Obtain the key to the gate blocking the road to the pier",
+      "level": 3,
+      "text": "| Item name | Amount | Notes |\n| Pier door key | 1 | Required to access the Pier where the Zubr Boat extraction is located. |\nThe key can be obtained from a safe inside the pumping station, only after draining the water."
+    },
+    {
+      "heading": "Locate the exit leading to the pier",
+      "level": 4,
+      "text": "| Item name | Amount | Notes |\n| Pier door key | 1 | Required to access the Pier where the Zubr Boat extraction is located. |\n\nYou now need to access the pier to reach the Zubr Boat extraction. You can reach the door to the pier in a few ways:\n- You can go through the container loading bay in the east, this avoids fighting the Scav Boss that can spawn, but requires backtracking, and is a longer path. (Green path)\n- You can go through the container loading bay in the center, but you might have to fight the Scav Boss that can spawn, in addition to the team of Black Division operatives nearby. (Blue path)\n- You can go through the container loading bay in the west, sticking close to the water, this may avoid fighting the Scav Boss that can spawn, but can end up in a long distance battle with a squad of Black Division operatives at the end of the loading bay. (Purple path)\n\nOn all possible paths, you will have to fight squads of Black Division operatives before reaching the pier door."
+    },
+    {
+      "heading": "Escape from Tarkov",
+      "level": 3,
+      "text": "Once the Pier door has been opened, all players in the raid will have 3 minutes to reach the Zubr Boat extraction at the end of the pier before the extraction becomes unavailable regardless of the current raid time left. You will have to fight a final team of Black Division operatives on the pier, before reaching the boat. The extraction timer coincides with the three minute timer, once the timer is up, any players in the extraction zone will escape and a cinematic related to the ending you chose will start.\n\nSuccessfully completing the raid will allow you to obtain one of the game's endings. Upon dying or extracting, the state of your character is returned to what it was before entering Terminal, besides the consumed access item."
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Savior ending",
+      "level": 3,
+      "text": "- Dogtag (Savior)\n- Armband (For Humanity)\n- \"Savior\" Achievement\n- For Humanity poster\n- Savior's ceiling Hideout ceiling style\n- Savior's walls Hideout wall style\n- Savior's floor Hideout floor style\n- \"Peaceful Sky\" main menu background\n\n- 200,000 Dollars (40,000 in PvE)\n- 1× Ballistic plate case\n- 1× Magazine case\n- 1× Medicine case\n- 1× Money case\n- 1× T H I C C Weapon case\n- 1× T H I C C item case\n- 2× Ammunition case\n- 1× Red Rebel ice pick\n- 1× UVSR Taiga-1 survival machete\n- 3× AS VAL MOD.4 9x39 special assault rifle\n- 3× Kalashnikov PKP 7.62x54R infantry machine gun\n- 3× Milkor M32A1 MSGL 40mm grenade launcher\n- 3× SWORD International Mk-18 .338 LM marksman rifle\n- 3× Saiga-12K 12ga automatic shotgun\n- 3× TKPD 9.3x64 carbine\n- 10× .338 Lapua Magnum AP ammo pack (20 pcs)\n- 10× 7.62x54mm R BS ammo pack (20 pcs)\n- 10× 9.3x64mm 7N33 ammo pack (20 pcs)\n- 10× 9x39mm BP ammo pack (20 pcs)\n- 18× 40x46mm M433 (HEDP) grenade\n- 18× 40x46mm M441 (HE) grenade\n- 4× 12/70 AP-20 ammo pack (25 pcs)"
+    },
+    {
+      "heading": "Debtor ending",
+      "level": 3,
+      "text": "- Dogtag (Debtor)\n- Armband (Lighthouse)\n- \"Debtor\" Achievement\n- Lighthouse poster\n- Mercenary's ceiling Hideout ceiling style\n- Mercenary's walls Hideout wall style\n- Mercenary's floor Hideout floor style\n- \"Storm Front\" main menu background\n\n- 120,000 Euros (30,000 in PvE)\n- 1× Ballistic plate case\n- 1× Magazine case\n- 1× Money case\n- 1× T H I C C Weapon case\n- 2× Ammunition case\n- 1× Red Rebel ice pick\n- 1× UVSR Taiga-1 survival machete\n- 3× Accuracy International AXMC .338 LM bolt-action sniper rifle\n- 3× MPS Auto Assault-12 Gen 2 12ga automatic shotgun\n- 3× RShG-2 72.5mm rocket launcher\n- 3× SIG MCX-SPEAR 6.8x51 assault rifle\n- 3× Sako TRG M10 .338 LM bolt-action sniper rifle\n- 3× U.S. Ordnance M60E6 7.62x51 light machine gun (FDE)\n- 10× .338 Lapua Magnum AP ammo pack (20 pcs)\n- 10× 6.8x51mm SIG Hybrid ammo pack (20 pcs)\n- 10× 7.62x51mm M993 ammo pack (20 pcs)\n- 4× 12/70 AP-20 ammo pack (25 pcs)"
+    },
+    {
+      "heading": "Survivor ending",
+      "level": 3,
+      "text": "- Dogtag (Survivor)\n- Armband (Survivor)\n- \"Survivor\" Achievement\n- Survivor poster\n- Survivor's ceiling Hideout ceiling style\n- Survivor's walls Hideout wall style\n- Survivor's floor Hideout floor style\n- \"Bleak Horizon\" main menu background"
+    },
+    {
+      "heading": "Fallen ending",
+      "level": 3,
+      "text": "- Dogtag (Fallen)\n- Armband (To Fall in the Darkness)\n- \"Fallen\" Achievement\n- To Fall in the Darkness poster\n- Fallen in the Darkness ceiling Hideout ceiling style\n- Fallen in the Darkness walls Hideout wall style\n- Fallen in the Darkness floor Hideout floor style\n- \"Dusk of Humanity\" main menu background\n\n- 10,000,000 Roubles (3,000,000 in PvE)\n- 1× Money case"
+    }
+  ]
+}

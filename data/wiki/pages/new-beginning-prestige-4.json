@@ -1,0 +1,55 @@
+{
+  "title": "New Beginning (Prestige 4)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/New_Beginning_(Prestige_4)",
+  "revisionId": 359497,
+  "lastEdited": "2026-09-13T20:17:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests",
+    "Table Progress Tracking"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Lab, Streets of Tarkov, Interchange",
+    "given by": "Ragman",
+    "related2": "New Beginning (Prestige 5)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "New Beginning (Prestige 4) is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Always good to see you on my doorstep! Not bored, are you? What, am I repeating myself again? Hey come on, it's just a little joke! Alright, down to business. The lists are constantly being updated, and you know our reputations are on the line. You know that you're not going anywhere in Tarkov without it. So we have to get this job done. I've just been handed the new list... What, you've already done some of these? Cool, easier for you. You gotta look on the bright side, brother! Otherwise, you're not gonna live long. Go ahead, show all those list makers how tough you are!\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 40 to start this quest.\n- Must have Prestige level 3"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 20 PMC operatives\n- Eliminate 30 Rogues\n- Survive and extract from The Lab\n- Use the transit from Streets of Tarkov to Interchange\n- Survive and extract from Interchange\n- Hand over 3 found in raid PMC figurines\n- Hand over 3 found in raid Scav figurines\n- Hand over 3 found in raid Boss figurines\n- Hand over 3 found in raid Trader figurines"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,000 EXP\n- Ragman Rep +0.1\n- 3,000,000 Roubles\n  - 3,150,000 Roubles with Intelligence Center Level 1\n  - 3,450,000 Roubles with Intelligence Center Level 2\n- 3× Physical Bitcoin\n\"Nice job, brother! Could have been quicker, but there was nothing in the task about time, so let's just ignore it.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| BEAR operative figurine, Den figurine, Duck figurine, PMC Origins figurine, Walking Tank figurine, USEC operative figurine | Any PMC figurine | 3 | Handover item | Yes |\n| Politician Mutkevich figurine, Ryzhy figurine, Mastichin figurine, Hideout Cat figurine, Elvisvista figurine, Scav figurine | Any Scav figurine | 3 | Handover item | Yes |\n| Cultist figurine, Ded Moroz figurine, Killa figurine, Reshala figurine, Tagilla figurine | Any boss figurine | 3 | Handover item | Yes |\n| BTR figurine, Fence figurine, Jaeger figurine, Lightkeeper figurine, Mechanic figurine, Peacekeeper figurine; Prapor figurine, Ragman figurine, Ref figurine, Skier figurine, Therapist figurine | Any trader figurine | 3 | Handover item | Yes |"
+    },
+    {
+      "heading": "Streets of Tarkov to Interchange",
+      "level": 3,
+      "text": "Southwest of the Concordia apartment complex."
+    }
+  ]
+}

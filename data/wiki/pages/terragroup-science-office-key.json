@@ -1,0 +1,66 @@
+{
+  "title": "TerraGroup science office key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_science_office_key",
+  "revisionId": 334996,
+  "lastEdited": "2026-02-12T12:18:39Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks office no. 4 on the second floor of the TerraGroup building complex on Ground Zero.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "658199aa38c79576a2569e13",
+    "ID": "sand_key4"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "TerraGroup science office key (Science) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the science office inside the TerraGroup main building in the city center."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The office can also be entered through the window from the adjacent office no. 3 by climbing on the window sill, not requiring this key."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Saving the Mole\n- Used in the story chapter Blue Fire"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Ground Zero",
+      "level": 3,
+      "text": "On the lab scientist in the TerraGroup main building. He can be found in a hallway behind the big TerraGroup sign in the entrance hall, buried under rubble. A single key is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to office no. 4 on the second floor of the TerraGroup main building at Ground Zero."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 3x PC block\n- 4x Drawer\n- Provisions"
+    }
+  ]
+}

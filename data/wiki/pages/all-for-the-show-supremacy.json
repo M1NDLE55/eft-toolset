@@ -1,0 +1,45 @@
+{
+  "title": "All for the Show - Supremacy",
+  "url": "https://escapefromtarkov.fandom.com/wiki/All_for_the_Show_-_Supremacy",
+  "revisionId": 359072,
+  "lastEdited": "2026-09-13T20:09:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "I Am Speed - Part 3, No Limit to Perfection - Part 9",
+    "leads to": "All for the Show - Major Sponsor",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "All for the Show - Supremacy is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Everything we do here is for the crowd. And they love the smell of gunpowder, blood, explosions, screams. They want a spectacle. But more than that, they need someone to root for. What's the point of watching a fight if you're not backing anyone? The crowd remembers trademarks best. A signature weapon. A signature fighting style. And I've already come up with one for you. Grab an AK-12 and go conquer the Arena!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Earn a Match MVP after eliminating 5 or more enemies with AK-12"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 100 GP coins\n- 1× Weapon crate (Rare)"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Requirement | Notes |\n| Kalashnikov AK-12 5.45x39 assault rifle | Required | Has to be used for the kills |"
+    }
+  ]
+}

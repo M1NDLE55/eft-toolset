@@ -1,0 +1,49 @@
+{
+  "title": "Slaughterhouse",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Slaughterhouse",
+  "revisionId": 359679,
+  "lastEdited": "2026-09-13T20:20:17Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Daytime Factory, Streets of Tarkov, Lighthouse, Woods, Shoreline, Interchange, Customs, Reserve, Ground Zero",
+    "given by": "Jaeger",
+    "previous": "The Huntsman Path - Administrator, Broadcast - Part 4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Slaughterhouse is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Well, hello there, mercenary. Come to see the old man? Sit down, would you like some tea? No? All right, then. Listen, a gang of looters showed up in the area again. We've got to get them away from this place for good, so that even those who come after them would have a heart attack. So I'm thinking, why don't you take an axe and chop them the fuck up, eh? Can you do that? I don't think any bastard's gonna dare get into that bloodbath afterwards.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 40 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 Scavs while using melee weapons on daytime Factory\n- Eliminate 10 Scavs while using melee weapons on Streets of Tarkov\n- Eliminate 10 Scavs while using melee weapons on Lighthouse\n- Eliminate 10 Scavs while using melee weapons on Woods\n- Eliminate 10 Scavs while using melee weapons on Shoreline\n- Eliminate 10 Scavs while using melee weapons on Interchange\n- Eliminate 10 Scavs while using melee weapons on Customs\n- Eliminate 10 Scavs while using melee weapons on Reserve\n- Eliminate 10 Scavs while using melee weapons on Ground Zero"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +34,700 EXP\n- Jaeger Rep +0.03\n- 100,000 Roubles\n  - 105,000 Roubles with Intelligence Center Level 1\n  - 115,000 Roubles with Intelligence Center Level 2\n- Unlocks barter for SOG Voodoo Hawk tactical tomahawk at Jaeger LL4\n\"Why the hell did you not clean yourself up before showing up in here? Here, take your reward and off you go. Jesus Christ, what's with the kids these days. Take your showers!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "To ease the killing process it is recommended to use stun grenades.\n\nBug: The Miller Bros. Blades M-2 Tactical Sword (Brown) and the NKVD Finka knife do not currently work for this quest."
+    }
+  ]
+}

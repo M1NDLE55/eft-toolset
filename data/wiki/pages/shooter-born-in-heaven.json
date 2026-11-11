@@ -1,0 +1,44 @@
+{
+  "title": "Shooter Born in Heaven",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shooter_Born_in_Heaven",
+  "revisionId": 361093,
+  "lastEdited": "2026-09-21T22:34:53Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Reserve, Shoreline, Customs, Lighthouse, Streets of Tarkov, Interchange, Ground Zero",
+    "given by": "Mechanic",
+    "leads to": "Collector",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Shooter Born in Heaven is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You know what separates a professional sniper from an amateur? The ability to approach a task from the right angle. Take eliminating several highly trained fighters in an unconventional situation, for example... It's not just about the choice of weapon and attachments, there are other factors to consider as well. My friend Dima thinks you could become a capable sniper. He just wants to make sure. If you're not afraid, complete his assignment.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 4 with Mechanic to obtain this quest.\n- Must complete 1 Loyalty Level 4 quest from Mechanic to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 PMC operatives with a headshot while using a bolt-action rifle on Customs or Lighthouse\n- Eliminate 5 PMC operatives with a headshot while using a bolt-action rifle on Streets of Tarkov or Shoreline\n- Eliminate 5 PMC operatives with a headshot while using a bolt-action rifle on Interchange or Ground Zero\n- Eliminate 5 PMC operatives with a headshot while using a bolt-action rifle on Woods or Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Mechanic Rep +1.5\n- 400,000 Roubles\n  - 422,200 Roubles with Intelligence Center Level 1\n  - 440,000 Roubles with Intelligence Center Level 2\n- +4 Bolt-action Rifles skill level\n- +4 Intellect skill level\n- 1× Weapon case\n- Unlocks purchase of T H I C C Weapon case at Mechanic LL4\n\"I admit I’m surprised. Although you seemed like a smart guy from the start, I'll give you that.\""
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Trophies",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trophies",
+  "revisionId": 362175,
+  "lastEdited": "2026-09-25T12:06:15Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Peacekeeper",
+    "LL requirement": "4"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Trophies is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Mercenary, come here for a minute. I have an order of elimination of several groups of PMCs, the highly experienced ones. Sending my soldiers to this would be a suicide mission, so that is why I suggest you to handle this matter. What do you say? As proof of the work done, you have to bring me dogtags from both of those groups.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find and hand over 10 BEAR PMC dogtags of level 20+ to Peacekeeper\n- Find and hand over 10 USEC PMC dogtags of level 20+ to Peacekeeper\n- Eliminate 12 PMC operatives"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- +4 Pistols skill levels\n- +4 Revolvers skill levels\n- Peacekeeper Rep +1.5\n- 2,750 Dollars\n  - 2,887 Dollars with Intelligence Center Level 1\n  - 3,162 Dollars with Intelligence Center Level 2\n- 1× Crye Precision AirFrame helmet (Tan)\n- Unlocks purchase of Crye Precision AirFrame helmet (Tan) at Peacekeeper LL4\n\"Great, great! The clients have already rewa– uh, thanked us for the successful mission. Good job, mercenary.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Dogtag | BEAR Dogtag | 10 | Handover item | No | Needs to be level 20 or higher |\n| Dogtag | USEC Dogtag | 10 | Handover item | No | Needs to be level 20 or higher |"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Profitable Venture",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Profitable_Venture",
+  "revisionId": 362555,
+  "lastEdited": "2026-09-29T19:02:26Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "LL requirement": "4",
+    "leads to": "Never Too Late To Learn",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Profitable Venture is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I've got an opportunity on the table right now, and it could be seriously profitable. But I need a reliable partner, and you could be just the bloke for it. I got talking with one commander, his squad is made up entirely of veterans. But the lads were abroad when all this shit kicked off. They still want to work though, and they say they've got a lead on an abandoned USEC base somewhere in the region. The problem is, some bunch of nobodies have already taken over the place. If we do this properly, Luka and his lads will be able to keep supplying us with gear and other hard-to-find stuff on a regular basis. They want to go in for reconnaissance at night, so we don't cause a stir. You know how it is, those are quiet areas and there's too much attention we don't need. But the lads don't have any thermal optics, so they asked me to get some from here, that way nobody can trace it back to them. If you want in on this business, now's the time!\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by USEC PMCs.\n- Must be level 50 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 15 Trijicon REAP-IR thermal scopes"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +1 Stress Resistance skill level\n- +1 Perception skill level\n- +1 Attention skill level\n- +1 Aim Drills skill level\n- +1 Light Vests skill level\n- +1 Heavy Vests skill level\n- +1 Weapon Maintenance skill level\n- +1 Troubleshooting skill level\n\"Not a cheap investment, but you'll make it back later! The lads gave me the contact of a local special forces instructor. The bloke's retired, but he knows things they never taught you in your overseas training! Consider it a little bonus from our partnership.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid |\n| Trijicon REAP-IR thermal scope | 15 | Handover item | No |"
+    }
+  ]
+}

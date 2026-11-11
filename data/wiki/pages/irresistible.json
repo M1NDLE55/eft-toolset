@@ -1,0 +1,45 @@
+{
+  "title": "Irresistible",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Irresistible",
+  "revisionId": 362448,
+  "lastEdited": "2026-09-29T14:58:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Interchange",
+    "given by": "Skier",
+    "LL requirement": "3",
+    "leads to": "Dangerous Props",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Irresistible is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I got word from my buddy that there's a special merchandise in town. You like movies? Then you'll certainly recognize this gun! There's only one little issue. The cargo went missing near the Ultra mall, I think somebody snatched it up. But man do I need these shotguns. It's a damn exclusive, you know what I'm saying? Anyway, why don't you take a little trip to Ultra and find this weapon crate there? If you get it, I'll pay you real good.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the lost weapon crate on Interchange\n- Hand over the retrieved cargo"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 1,650 Euros\n  - 1,732 Euros with Intelligence Center Level 1\n  - 1,897 Euros with Intelligence Center Level 2\n- 1x MPS Auto Assault-12 Gen 1 12ga automatic shotgun\n- 2x 12/70 flechette ammo pack (25 pcs)\n- Unlocks purchase of MPS Auto Assault-12 Gen 1 12ga automatic shotgun at Skier LL3\n\"Atta boy! It'll sell real good real quick, I'm telling you! Not many guns can boast such a flashy advertisement...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Object 21WS keycard | Object #21WS keycard | 1 | Required | N/A | Unlocks the secret container on Interchange. |\n| Stolen weapon case | Stolen weapon case | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe lost weapon crate can be found inside a red container at the container lot in the southwest of the mall on Interchange. Activated power station power and Object #21WS keycard required."
+    }
+  ]
+}

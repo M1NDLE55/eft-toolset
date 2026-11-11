@@ -1,0 +1,45 @@
+{
+  "title": "Number Temporarily Unavailable",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Number_Temporarily_Unavailable",
+  "revisionId": 360312,
+  "lastEdited": "2026-09-15T13:21:17Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Prapor",
+    "previous": "Fog of War",
+    "leads to": "All-Inclusive Support",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Number Temporarily Unavailable is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"We need you again. Looks like this rat's not crawling out of his hole with that package unless we give him a kick. So you need to get in touch with him ASAP, and my guys are short on equipment. Can you bring it? I'll give you the list. The main thing is finding our new camp. Use the mountain ridge directly across from the peninsula with the lighthouse as your landmark. Off to the side of both chalets, closer to the blown-up tunnel. Maybe this bastard won't be too scared to get on the radio this time! I don't even know anymore if that BEAR dossier is worth all this trouble. But the client knows best.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash 3 Electronic components at Prapor's new camp on Lighthouse\n- Stash a Military cable at Prapor's new camp on Lighthouse\n- Stash 3 Capacitors at Prapor's new camp on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +15,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 2× 6B45 armored rig (Medic, EMR)\n\"Whatcha think of our camp? Why the hell didn't we set up there sooner, huh... That's what you call a good position. I'll let my guys know all the electronics are in place. No point keeping my men on neutral ground now, so they'll move in once they get the signal. And don't disappear on me. We might need some more help after the broadcast with that Glukhar deserter.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Electronic components | 3 | Required | N/A | Stashed item |\n| Military cable | 1 | Required | N/A | Stashed item |\n| Capacitors | 3 | Required | N/A | Stashed item |"
+    }
+  ]
+}

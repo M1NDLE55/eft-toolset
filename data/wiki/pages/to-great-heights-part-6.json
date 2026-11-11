@@ -1,0 +1,40 @@
+{
+  "title": "To Great Heights! - Part 6",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_Great_Heights!_-_Part_6",
+  "revisionId": 359841,
+  "lastEdited": "2026-09-13T20:23:00Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "To Great Heights! - Part 5",
+    "leads to": "Hold the Lead",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Seasonal change: this quest cannot be obtained.\n\nTo Great Heights! - Part 6 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So, you thought that was it, that you'd reached the top? Think again. Yeah, people are betting on you, but you've got to make sure they don't forget about you. Otherwise they'll wave goodbye and start tossing money at someone else. And we don't want that. I've got a solution for you. People remember victories best — especially a streak of them. Set up a streak like that for yourself, and you can relax after.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win 2 matches in a row in TeamFight, BlastGang or CheckPoint mode in Arena"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +7,700 EXP\n- Ref Rep +0.04\n- 55 GP coins\n  - 58 GP coins with Intelligence Center Level 1\n  - 63 GP coins with Intelligence Center Level 2\n- Unlocks barter for APOK Tactical Wasteland Gladius at Ref LL2\n\"All done? Well, I hardly had any doubts. Here, take this, a nice little bonus for you.\""
+    }
+  ]
+}

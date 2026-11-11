@@ -1,0 +1,55 @@
+{
+  "title": "Cease Fire!",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cease_Fire!",
+  "revisionId": 359149,
+  "lastEdited": "2026-09-13T20:11:16Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Jaeger",
+    "previous": "The Delicious Sausage",
+    "leads to": "Paramedic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Cease Fire! is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I'm stumped today, warrior. There are good people who need to escape the city. The closest they can get is through the Avenue of Death, but there are snipers overlooking the whole area. One kid told me that if you shoot a signal flare there, the snipers should let you pass through, in that particular spot. But who knows if the kid was lying? Maybe he's trying to lead us to death. how do we find out if it's true that the snipers will stop firing after the signal... I got a couple flares lying around, why don't you go check it out, eh?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 10 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Survive and extract from Streets of Tarkov through Klimov Street"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +5,600 EXP\n- Jaeger Rep +0.02\n- 27,000 Roubles\n  - 28,350 Roubles with Intelligence Center Level 1\n  - 31,050 Roubles with Intelligence Center Level 2\n- 1× ZiD SP-81 26x75 signal pistol\n- 3× 26x75mm flare cartridge (Green)\n\"So he was correct, it is the cease fire condition, I'll keep that in mind. You really put your head on the line, didn't you? I respect that.\""
+    },
+    {
+      "heading": "Initial equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| RSP-30 reactive signal cartridge (Green) | 2 | Must be fired into the sky. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to extract from Streets of Tarkov via the \"Klimov Street\" extraction with the \"survived\" status. For the extraction to open, you have to shoot a green flare into the sky while being inside the signal flare area. Upon entering the signal flare area, a notifcation will pop up in the bottom right corner of the screen: If the flare doesn't reach a certain height, the extraction won't open. If the flare was fired correctly, a new notification pops up: You can use either the handheld RSP-30 green flare provided by Jaeger via in-game mail or a 26x75mm green flare cartridge fired from a signal pistol. If you use the handheld RSP-30 green flare, make sure to aim it upwards, but not too much or it lands behind you. If you need additional flares you can buy them from Jaeger. To avoid the \"run through\" status, gain at least 200 EXP in raid (by killing or looting) or be in raid for at least 7 minutes before extracting."
+    }
+  ]
+}

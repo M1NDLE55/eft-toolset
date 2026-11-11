@@ -1,0 +1,70 @@
+{
+  "title": "OLI logistics department office key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OLI_logistics_department_office_key",
+  "revisionId": 351217,
+  "lastEdited": "2026-08-05T19:13:49Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "Log Office",
+    "Log. Office"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽1,250",
+    "usage": "Unlocks the door to the OLI logistics department office on Interchange.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ad5cfbd86f7742c825d6104",
+    "ID": "Key_Shopping_Mall_office_2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "OLI logistics department office key (OLI Log.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the OLI logistics department office at the ULTRA shopping mall."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Required for the quest A Big Loss from Ragman"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Inside the trunk of the blue car, Right beside the shortcut between the Factory area of Customs and the new Gas Station."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x PC\n- Loose loot"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Hunting matches x4; Hunting matches; +; SurvL Survivor Lighter x2; SurvL Survivor Lighter; +; Dry fuel x1; Dry fuel | → | Jaeger; Jaeger LL3 | → | OLI logistics department office key; OLI logistics department office key |"
+    }
+  ]
+}

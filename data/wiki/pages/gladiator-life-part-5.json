@@ -1,0 +1,40 @@
+{
+  "title": "Gladiator Life - Part 5",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Life_-_Part_5",
+  "revisionId": 359343,
+  "lastEdited": "2026-09-13T20:14:35Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Life - Part 4",
+    "leads to": "Gladiator Life - Part 6",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Life - Part 5 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I hope you've already noticed that some fighters walk around in pretty serious armor. You are not punching through that so easily. But the Arena has a great equalizer, a bullet to the eye! And you need to master that as soon as possible.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 enemies with headshots"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- 40,000 Roubles\n- 10 GP coins\n- Unlocks Magnum Research Desert Eagle L6 .50 AE pistol in the Armory"
+    }
+  ]
+}

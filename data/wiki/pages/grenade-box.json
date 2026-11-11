@@ -1,0 +1,33 @@
+{
+  "title": "Grenade box",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Grenade_box",
+  "revisionId": 358618,
+  "lastEdited": "2026-09-10T22:33:32Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "5909d36d86f774660f0bb900",
+    "ID": "GrenadeBox"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Grenade box is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Grenade boxes are 3x2 loot containers that only spawn grenades, UZRGM grenade fuze and TP-200 TNT brick."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Type |\n| Flammable materials |\n| Others |\n| Rounds |\n| Throwables |\n| Throwables |\n| Throwables |\n| Throwables |\n| Throwables |\n| Throwables |\n| Throwables |\n| Throwables |\n| Throwables |\n| Throwables |\n| Throwables |\n| Throwables |\n| Throwables |"
+    }
+  ]
+}

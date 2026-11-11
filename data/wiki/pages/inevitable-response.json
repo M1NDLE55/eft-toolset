@@ -1,0 +1,50 @@
+{
+  "title": "Inevitable Response",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Inevitable_Response",
+  "revisionId": 359417,
+  "lastEdited": "2026-09-13T20:15:49Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Reserve",
+    "given by": "BTR Driver",
+    "previous": "Hot Wheels - Let's Try Again",
+    "leads to": "Building Foundations, The Higher They Fly, Order From Outside",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Inevitable Response is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Have you seen the new wheels? Actually, nevermind, before you fuck them up by looking at them or something. We've lost enough time, but there's a chance we can still find those half-assed engineers. I learned they came from the reserve base. If we don't hesitate, we can still catch up with them and punish them. Start in the forest and follow that path to the military base, we need to nail these assholes before they lay low.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 Scavs on Woods\n- Use the transit from Woods to Reserve\n- Eliminate 5 Scavs on Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +15,500 EXP\n- BTR Driver Rep +0.02\n- 82,000 Roubles\n\"You got them in time? Good. Let the others think twice before ransacking my place again.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Woods to Reserve",
+      "level": 3,
+      "text": "Transits are only available 1 min after raid start."
+    }
+  ]
+}

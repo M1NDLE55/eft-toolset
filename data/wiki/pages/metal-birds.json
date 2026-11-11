@@ -1,0 +1,44 @@
+{
+  "title": "Metal Birds",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Metal_Birds",
+  "revisionId": 362629,
+  "lastEdited": "2026-09-29T20:27:16Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Peacekeeper",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Metal Birds is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello again! Modern warfare is a really high-tech enterprise. My men have spotted drones operating in Tarkov. They were shot down, but we were unable to recover them. Search the Woods for them. If you find the controller or any other components, bring them to me. You will be well compensated.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the motor controller on Woods\n- Hand over the found item\n- Locate and obtain the single-axis fiber optic gyroscope on Woods\n- Hand over the found item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- 3,000 EXP\n- Peacekeeper Rep +0.1\n- 550 Dollars\n  - 578 Dollars with Intelligence Center Level 1\n  - 633 Dollars with Intelligence Center Level 2\n\"Wonderful, you found everything! Thank you for your work. Here is your share of the payment.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Motor Controller 1 | Motor Controller #1 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Single-axis Fiber Optic Gyroscope 1 | Single-axis Fiber Optic Gyroscope #1 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you have to pick up a motor controller and a single-axis fiber optic gyroscope on Woods.\n\nThe motor controller can be found on the center console of a black SUV at the USEC checkpoint west of the sawmill.\n\nThe single-axis fiber optic gyroscope can be found in an open weapon box located in the back of a blue pickup at the sawmill."
+    }
+  ]
+}

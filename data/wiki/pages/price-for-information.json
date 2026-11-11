@@ -1,0 +1,65 @@
+{
+  "title": "Price for Information",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Price_for_Information",
+  "revisionId": 360047,
+  "lastEdited": "2026-09-14T01:15:29Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline, Lighthouse, Reserve",
+    "given by": "Lightkeeper",
+    "previous": "Digital Puzzle",
+    "leads to": "In the Name of Humanity...",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Price for Information is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"They aren't ordinary mercenaries. They play an important role in what's happening now and what will happen later. But I'm not going to tell you more than you need to know. You've already crossed paths with them. Obviously, you want to influence something. But you won't change anything this way. You'll only become another one of their targets. I propose a different arrangement. Correct your mistakes with your own hands, and perhaps I'll share the information you're looking for. First, we need to clear one route. Follow the route from the coast to the woods through the military base and eliminate any potential threats along the way. But if you see Black Division, do not engage them under any circumstances.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Use the transit from Shoreline to Lighthouse (In one raid)\n- Use the transit from Lighthouse to Reserve (In one raid)\n- Use the transit from Reserve to Woods (In one raid)\n- Eliminate any 10 targets except Black Division while completing the other objectives"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- 1× RB-VO marked key\n\"Do you really still not understand, or do you simply refuse to believe what you're seeing? USEC were a tool for TerraGroup from the very beginning. And like any tool, they lost their value once they had served their purpose. But unlike them, Black Division answer directly to those who shape the course of events in the world. And I'm not talking about TerraGroup's managers. The corporation's facilities in Tarkov no longer need protection. The city requires a more precise instrument to surgically remove everything that has no place here. And I wouldn't advise you to interfere with the operation.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Shoreline to Lighthouse",
+      "level": 4,
+      "text": "In front of the Path to Lighthouse extraction."
+    },
+    {
+      "heading": "Lighthouse to Reserve",
+      "level": 4,
+      "text": "On the road leading to the Road to Military Base V-Ex extraction."
+    },
+    {
+      "heading": "Reserve to Woods transit",
+      "level": 3,
+      "text": "At the map border northwest of the train yard."
+    }
+  ]
+}

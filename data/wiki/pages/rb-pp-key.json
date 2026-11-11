@@ -1,0 +1,65 @@
+{
+  "title": "RB-PP key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-PP_key",
+  "revisionId": 253154,
+  "lastEdited": "2023-11-02T21:52:32Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-PP"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "This key does currently not open any lock.",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80cb8786f774405611c7d9",
+    "ID": "rezbase_key_substorge_pass"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-PP key (RB-PP) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Radar Station bomb shelter under the Federal State Reserve Agency base. Doesn't seem to be actually used for anything though, at least for now."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This key does currently not open any lock."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "None."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "N/A"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Can of RatCola soda x4; Can of RatCola soda; +; Pompon hat x8; Pompon hat; +; Ushanka ear flap hat x4; Ushanka ear flap hat | → | Jaeger; Jaeger LL4 | → | RB-PP key; RB-PP key |"
+    }
+  ]
+}

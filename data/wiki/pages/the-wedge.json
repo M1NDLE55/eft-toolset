@@ -1,0 +1,70 @@
+{
+  "title": "The Wedge",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Wedge",
+  "revisionId": 360941,
+  "lastEdited": "2026-09-20T18:31:38Z",
+  "kind": "character",
+  "categories": [
+    "Bosses"
+  ],
+  "redirects": [
+    "Wedge"
+  ],
+  "infobox": {
+    "faction": "Black Division",
+    "full name": "Thomas",
+    "location": "Icebreaker"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Wedge is a Black Division Boss in Escape from Tarkov."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The number of followers The Wedge has on Icebreaker depends on the number of players in the raid:\n  - 3 with 1 player\n  - 4 with 2 players\n  - 6 with 3 players\n- The Wedge and and his 3-6 followers have different health values than PMCs and Scavs.\n\nThe Wedge:\n| Stats |\n| Head: 70; Thorax: 170; Stomach: 140; Arms: 120 each; Legs: 130 each; Total: 880 |\n\nFollower:\n| Stats |\n| Head: 70; Thorax: 170; Stomach: 140; Arms: 120 each; Legs: 130 each; Total: 880 |\n\n- Instead of the typical 4 single slot pockets, he has 5 double slot pockets, bringing their total space to 10 slots."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- The Wedge's Spiritus Systems LV-119 Plate Carrier (MultiCam Black) needs to be obtained for the quest A Wedge Between Us.\n- 4 of The Wedge's guards need to be killed for the quest A Wedge Between Us."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "The Wedge can be found in the gym on level 3 of Icebreaker."
+    },
+    {
+      "heading": "Behavior",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Followers",
+      "level": 2,
+      "text": "Following The Wedge are 3-6 heavily armed and armored guards."
+    },
+    {
+      "heading": "Strategy",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Equipment",
+      "level": 2,
+      "text": "Weapons:\n| Weapon | Ammunition |\n| HK MP7A1 4.6x30 submachine gun | 4.6x30mm AP SX |\n| FN SCAR-H 7.62x51 assault rifle | 7.62x51mm M993, 7.62x51mm M62 Tracer |\n| FN SCAR-H X-17 7.62x51 assault rifle | 7.62x51mm M993, 7.62x51mm M62 Tracer |\n| DS Arms SA58 7.62x51 assault rifle | 7.62x51mm M993, 7.62x51mm M62 Tracer |\n| Desert Tech MDR 7.62x51 assault rifle | 7.62x51mm M993, 7.62x51mm M62 Tracer |\n| HK USP .45 ACP pistol | .45 ACP AP |\n| SOG Voodoo Hawk tactical tomahawk |\n| Model 8230 CS gas grenade |\n| Model 7290 Flash Bang grenade |\n\nHeadwear:\n| Headwear | Mods | Armor Class |\n| Team Wendy EXFIL Ballistic Helmet (Black) | Team Wendy EXFIL helmet cover (MultiCam Black); Wilcox L4G24 NVG Mount (Black); L3Harris PVS-31A night vision goggles; TW EXFIL Peltor ComTac VI headset (Black) | Helmet - 4 |\n\nFace cover:\n| Face cover |\n| Avon M53A1 gas mask |\n\nChest rigs:\n| Chest rig | Armor Class |\n| Spiritus Systems LV-119 Plate Carrier (MultiCam Black) | 5 |\n\nItems:\n| Icon | Item |\n| Keycard holder case | Keycard holder case |\n| Euros | up to 5000 Euros |\n| Dollars | up to 5000 Dollars |"
+    },
+    {
+      "heading": "Follower Equipment",
+      "level": 2,
+      "text": "The same gear used by Black Division soldiers."
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

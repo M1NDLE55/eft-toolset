@@ -1,0 +1,69 @@
+{
+  "title": "Hobby Club",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hobby_Club",
+  "revisionId": 360436,
+  "lastEdited": "2026-09-15T23:31:26Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve, Customs",
+    "given by": "Mechanic",
+    "leads to": "Fair Price - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hobby Club is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Excellent, I've been waiting for you. I have a friend in the States, a very skilled weapons professional. He's obsessed with Russian firearms, and for several years now he's been working on his own project, called the AK-50. I don't think you've ever seen an AK that fires a .50 cal... The NATO one, I mean. So the project is finally finished, and he sent me a test sample. Such a heavy and specialized rifle is too risky to be imported in one piece, so we broke the package into several parts. Well guess what, things in Tarkov didn't go according to plan. Shocker, I know. The main body comes as one part, and it was seized in Atlantic waters. However I have the blueprint, so I need you to use it to build a new one for me. It certainly won't be easy in our circumstances. But at least you'll still have a copy of the blueprint for later use. The handguard comes with the gas tube, and it was somehow intercepted by Skier's thugs. This part took two years to assemble, fit, and test, and the cost of development and prototypes has already gone over a couple million. The dust cover was intercepted at one of the checkpoints already in Tarkov. I don't know which one, you'll have to search through all of them. But the barrel is definitely at the military base. Glukhar's personally organized an ambush on my convoy, and apparently knew about this shipment. You'll have to fight for it, or hope for some divine intervention. When you've collected all the parts, drop them off at the transmission tower shack near the gas station at the customs district. I'll ask my crew to deliver them from there, and after that I'll be able to manufacture the parts myself. And, of course, I won't forget your help.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 45 to start this quest.\n- Must reach Loyalty Level 4 with Mechanic to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the AK-50 barrel on Reserve\n  - (Optional) Locate Glukhar's workshop on Reserve\n- Locate and obtain the AK-50 dust cover at one of Tarkov's security checkpoints\n  - (Optional) Locate the checkpoint with seized cargo\n- Stash the AK-50 body at the specified spot on Customs\n  - (Optional) Build the AK-50 body\n- Stash the AK-50 handguard at the specified spot on Customs\n- Stash the AK-50 barrel at the specified spot on Customs\n- Stash the AK-50 dust cover at the specified spot on Customs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +21,380 EXP\n- Mechanic Rep +0.05\n- 1× TheAKGuy AK-50 .50 BMG anti-materiel rifle\n- 2× M82A1 .50 BMG 10-round magazine\n- 50× .50 BMG M33\n- Unlocks barter for AK-50 .50 BMG muzzle brake at Mechanic LL4\n- Unlocks barter for AK-50 M-LOK handguard with gas tube at Mechanic LL4\n- Unlocks barter for AK-50 dust cover at Mechanic LL4\n- Unlocks barter for AK-50 .50 BMG 24 inch barrel at Mechanic LL4\n\"You got everything? This is definitely something to celebrate... There's no other rifle like it not just in Tarkov, but in the whole world! This is what happens when a man with skills takes his dream seriously. You already have the blueprint with the main rifle body, and you can get the missing parts from me in the future. And yes, drop by my place after you've tested this beast. I plan to send word to my friend and tell him what his creation can do in the field.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "Unlocks craft for stripped TheAKGuy AK-50 .50 BMG anti-materiel rifle at Workbench level 3."
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| TheAKGuy AK-50 .50 BMG anti-materiel rifle | TheAKGuy AK-50 .50 BMG anti-materiel rifle | 1 | Required | N/A | Has to be crafted in the Hideout (Workbench lv. 3). |\n| AK-50 handguard with gas block | AK-50 handguard with gas block | 1 | Required | Yes | Obtained in the quest Fair Price - Part 2 |\n| AK-50 barrel | AK-50 barrel | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| AK-50 dust cover (quest item) | AK-50 dust cover | 1 | Required | Yes |\nThe body has to be crafted at the Workbench level 3 in the Hideout, and the handguard has to be obtained via the questline Fair Price which is available upon accepting this quest."
+    },
+    {
+      "heading": "Reserve barrel location",
+      "level": 4,
+      "text": "In #6 or #4 of the storage buildings marked with \"K\"."
+    },
+    {
+      "heading": "Customs dust cover location",
+      "level": 4,
+      "text": "On an armchair on the second floor of the military checkpoint tower."
+    },
+    {
+      "heading": "Customs stashing location",
+      "level": 4,
+      "text": "The four items have to be stashed in a blue locker inside the cabin located on top of the hill southwest of the new gas station."
+    }
+  ]
+}

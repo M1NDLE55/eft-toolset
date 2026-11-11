@@ -1,0 +1,67 @@
+{
+  "title": "RB-ORB3 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-ORB3_key",
+  "revisionId": 352659,
+  "lastEdited": "2026-08-09T20:29:37Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-ORB3"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80cd1a86f77402aa362f42",
+    "ID": "rezbase key mid weap2fl"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-ORB3 key (RB-ORB3) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the Federal State Reserve Agency base first barracks armories."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Required for the quest Reserve Expert from Ragman"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Front passenger seat of the Tigr vehicle closest to the bridge."
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In different locations in the main room on the first floor of the barracks marked with white pawn."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "East barracks on Reserve. North end of the eastern building, 2nd floor. (Highlighted in green)"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 3 Weapon racks (AK-74N, AKS-74U, AKS-74N, AKS-74UB, AKS-74UN)\n- Loose loot (Weapon mods, Ammunition)\n- Two Drawers"
+    }
+  ]
+}

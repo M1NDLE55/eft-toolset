@@ -1,0 +1,55 @@
+{
+  "title": "Proper Comeback",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Proper_Comeback",
+  "revisionId": 362435,
+  "lastEdited": "2026-09-29T14:33:10Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Shoreline, Factory",
+    "given by": "Skier",
+    "previous": "Camera, Action!",
+    "leads to": "Key to the City",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Proper Comeback is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You're a good guy, I'll tell you that. I wouldn't trust another man to do this, but you're an experienced fellow, you understand what I'm saying. I heard that Prapor is now into modern technology, and he's got cameras everywhere, watching everything from his man cave. And recently he ruined one of my deals, started yelling like a damn rooster, something about the rules of trade and military order... We have to show him what a motherfucker he's become. Oops, sorry for the offensive language. Hope it doesn't disrespect your community guidelines.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only available to buyers of the \"Edge of Darkness\" edition of the game."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash a Golden rooster figurine at Prapor's WI-FI Camera on Woods\n- Stash a Golden rooster figurine at Prapor's WI-FI Camera on Shoreline\n- Stash a Golden rooster figurine at Prapor's WI-FI Camera on Factory"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- 2,400 Euros\n  - 2,520 Euros with Intelligence Center Level 1\n  - 2,760 Euros with Intelligence Center Level 2\n- 2× Golden egg\n- 2× Tetriz portable game console\n\"Well done! They say that even the outside world found out about our little move, haha!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Golden rooster figurine | 3 | Required | N/A |\nIn this quest you have to place 1 Golden rooster figurine each on Woods, Shoreline and Factory. The locations are the same as in the previous quest Viewer from Prapor.\n\n(These are 40 second plant times.)\n\nOn Woods it has to be placed next to a tree at a rock ledge on the mountain.\n\nOn Shoreline it has to be placed at the top of the lighthouse near the pier.\n\nOn Factory it has to be placed at the top of the office area stairs that are on the \"Gate 3\" extraction side, opposite the door to the catwalk. Note: Can not be completed at night at the current time."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The quest dialogue is a reference to a ban that was issued on the Battlestate Games Twitch channel after breaking the community guidelines by using \"offensive language\"."
+    }
+  ]
+}

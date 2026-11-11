@@ -1,0 +1,45 @@
+{
+  "title": "Black Division gear crate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Black_Division_gear_crate",
+  "revisionId": 357739,
+  "lastEdited": "2026-09-06T22:25:18Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reward Loot Container",
+    "weight": "2 kg",
+    "grid": "4x2",
+    "node": "6a3567f687d90a0deb066c1b",
+    "ID": "item_container_tarkov_battlepass"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Black Division gear crate (BD) is a Reward Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A heavy transport crate with no identifying markings. Inside is a random package of Black Division equipment: helmets, body armor, chest rigs, backpacks, or protective gear. Judging by its contents, this crate was prepared for a team expected to operate far from any safe zone."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n- Cannot be listed for sale on the flea market\n- Destroyed after unpacking (Right-click \"unpack\")"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- BattlePass Season 1\n- Can be exchanged for 10 aside from Classified documents"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "Each crate contains a random assortment of Black Division gear."
+    }
+  ]
+}

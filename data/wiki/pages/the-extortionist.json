@@ -1,0 +1,46 @@
+{
+  "title": "The Extortionist",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Extortionist",
+  "revisionId": 362214,
+  "lastEdited": "2026-09-26T14:08:43Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Extortionist"
+  ],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Skier",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Extortionist is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Kinda busy right now! Although... Hang on a sec. There is an urgent matter. There was a firefight about an hour ago in the garages across the river. Just where my errand boy was headed. To hell with him, he was a total moron anyway. But he had with him one particular key. A mighty complex key, I might add. To the door that can be freaking anywhere, you know? This clown was delivering one very valuable thing to me. The bastard hid it somewhere and locked it with this arsetormenting key and came to me to talk up the price. What a bitch! I even raised the pay a little for the smart move, but this wanker still hasn’t told me where it was and went to get it for himself. And I’m almost sure he’s got done in there. Find the key, and then find me that package even if you have to check all doors from the center to the port.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the hidden valuable cargo on Customs\n  - (Optional) Locate the messenger's body on Customs\n  - (Optional) Locate the place where the messenger hid the cargo on Customs\n- Hand over the valuable cargo"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Skier Rep +0.1\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 518 Euros with Intelligence Center Level 2\n\"You’re a damn Pinkerton! Helped me out big time! So, you found my idiot errand boy? Well, screw him. If you do something similar, you'll get smoked like him too. Go on, buzz off, I've got some stuff to do.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Unknown key | 1 | Required | N/A | Unlocks the cabin on Customs where the Secure Folder 0048 is located. |\n| Secure Folder 0048 | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to pick up a folder from a locked cabin on Customs. The required Unknown key can be found on a dead Scav that is also located on Customs. A single key is guaranteed to spawn every raid, regardless of whether or not a player in the raid has this quest active."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Dorm room 108 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_108_key",
+  "revisionId": 316228,
+  "lastEdited": "2025-07-18T21:53:32Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks dorm room 108 in the three story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5914578086f774123569ffa4",
+    "ID": "общ1 108"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 108 key (Dorm 108) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the three-story dormitory with a tag reading \"108\" on it."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In a key cabinet at the dorm guard desk that is located at the two-story dorms"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The first floor of the three-story dorms on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Drawers\n- 1x PC block\n- Loose loot (Currency, )"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Decisions, Decisions",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Decisions%2C_Decisions",
+  "revisionId": 359219,
+  "lastEdited": "2026-09-13T20:12:27Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Ref",
+    "previous": "Against the Conscience - Part 2",
+    "related": "Between Two Fires, Surprise Gift",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Decisions, Decisions is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I've been hearing rumors... Very unpleasant rumors. They say you're trying to dig my business up. Look, we've known each other for a while. You're like a brother to me! Don't do something you'll regret later. The less you know, the better you sleep, you hear that? Until I'm absolutely confident in you, I'm gonna have my men watching you. I don't want you pulling any stunts, champ. And if you find anything during your little date with the old champion, bring it to me. Then we can forget about this happy little accident.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must accept Fence's quest Between Two Fires to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Return to the old champion's hideout on Customs\n- Locate and obtain the compromising information on Ref\n- Hand over the found info"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "Seasonal change: the quest awards a barter for the Secure container Theta at Ref LL3, instead of the container directly.\n- +18,500 EXP\n- Ref Rep +0.15\n- Fence Rep -0.15\n- 72 GP coins\n  - 76 GP coins with Intelligence Center Level 1\n  - 83 GP coins with Intelligence Center Level 2\n- 1× Secure container Theta\n\"You made the right choice. Never doubted you, brother. All right, no more funny business from now on, you hear me?\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"They put a gun to your head and took everything, huh? Don't take me for an idiot! Where's the fucking diary now? Fucking hell. Whatever, I'll deal with it later.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "By completing Between Two Fires or Surprise Gift, you will fail and lose access to this quest.\n| Item name | Amount | Requirement | Find in raid | Notes |\n| Dorm overseer key | 1 | Required | N/A | Unlocks the room between 209 and 211 in the three-story dorms on Customs. |\n| Ref dirt | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nThe champion's room is located on the second floor of the three-story dorms building on Customs, between the rooms 209 and 211. A Dorm overseer key is required to enter it.\n\nThe compromising information can be found on the floor in a puddle of blood next to the wardrobe."
+    }
+  ]
+}

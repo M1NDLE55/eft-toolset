@@ -1,0 +1,48 @@
+{
+  "title": "Grenadier",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Grenadier",
+  "revisionId": 361734,
+  "lastEdited": "2026-09-24T12:28:07Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Prapor",
+    "LL requirement": "2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Grenadier is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, warrior. How's life on the front lines? I've heard plenty about your skill with firearms, and I've tested you myself more than once. But when it comes to grenades, that's a different story. You need intuition, and you need brains, unless you want to catch your own shrapnel by accident. So show me what you can do with grenades and underbarrel launchers. Go make some noise in Tarkov.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 of any target with grenades or grenade launchers"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Prapor Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"Good, limbs are still attached, and you certainly stirred things up. Looks like you'll be useful in this kind of work, soldier. Here's your reward, you've earned it.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount |\n| VOG-25 Khattabka improvised hand grenade | 3 |\n| VOG-17 Khattabka improvised hand grenade | 3 |\n| RGN hand grenade | 3 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 5 of any target with grenades.\n\nUnderbarrel grenade launchers, grenade launchers can be used, however rocket launchers can not be used."
+    }
+  ]
+}

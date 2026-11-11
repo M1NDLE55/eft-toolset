@@ -1,0 +1,50 @@
+{
+  "title": "Killer Argument",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Killer_Argument",
+  "revisionId": 362552,
+  "lastEdited": "2026-09-29T18:54:52Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Skier",
+    "previous": "Key Partner (+6hr)",
+    "leads to": "Choose Your Friends Wisely",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Killer Argument is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Have you already heard that the driver has poached some of the traders over to his side? This kid's gotten a little far from his nest, so it's time to end it. I've made a deal with a certain someone to share some RPG ammo, enough to penetrate his BTR's armor. Now I need someone to deliver the package from the Scav house in Priozersk. Nobody knows about the delivery yet, so it should go smoothly. You gotta work fast, so that the driver doesn't find out what I'm preparing for him.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 6 hours after completion of Key Partner"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the package with RPG ammo on Woods\n- Hand over the package"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 1,650 Euros\n  - 1,732 Euros with Intelligence Center Level 1\n  - 1,897 Euros with Intelligence Center Level 2\n- 1× SIG MCX-SPEAR 6.8x51 assault rifle\n- 80× 6.8x51mm SIG FMJ\n- 3× AR-10 7.62x51 Lancer L7AWM 20-round magazine\n\"Very good! Now the BTR armor won't save the driver. Stay in touch, you'll be useful during the assault.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Lightkeeper's case | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to pick up Lightkeeper's case from the Scav house on Woods. There are multiple spawns. The house can be found near the \"Outskirts\" extraction in the southwest of the location."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Sisyphus",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sisyphus",
+  "revisionId": 360501,
+  "lastEdited": "2026-09-17T20:48:51Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Reserve, Lighthouse",
+    "given by": "Ragman",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Sisyphus is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"How's your physical shape, ahper? I've got one deal that's still hanging over my head, and I could really use some help. But I'll tell you right now, you can throw your back out in no time doing this! So, I've made contact with the smugglers. Wouldn't exactly call it a partnership, but they've got a decent job for me. We need to deliver some armor plates to their boys. Everything's already packed up and waiting at the drop-off points, so all that's left is getting it to the recipients. You in? Both cases with the armor plates are in Priozersk right now. One's in the bunker, and the other's at the abandoned USEC checkpoint. One case needs to be hauled to the guardhouse at the military base. You want the one next to the trail leading to Woods. The second case is supposed to go in the railcar with the Ural truck at the train station near the water treatment plant. Once you've left both cases at the right spots, let the armored train engineer know.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 3 with Ragman to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the first smuggler case in the ZB-014 bunker on Woods\n- Stash the first case in the guard booth near the Woods transit on Reserve\n- Locate and obtain the second smuggler case behind the shack at the USEC checkpoint on Woods\n- Stash the second case in the railcar with the Ural truck at the train platform on Lighthouse\n- Extract from Lighthouse or Reserve through the Armored Train\nNote: The \"Extract\" objective will appear after the \"Stash\" objectives are completed."
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Ragman Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Ballistic plate case\n- 2× Power cord\n\"After a job like that, you oughta spend at least a couple days lying down, brother! You really bailed me out. I didn't have anyone else who could handle a job that damn monumental. I've got a special reward ready for you. Here, take it. It'll give you an excuse to hang around the hideout and put those plates in the case properly.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Case with goods for the smugglers 1 | Case with goods for the smugglers #1 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Case with goods for the smugglers 2 | Case with goods for the smugglers #2 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |"
+    },
+    {
+      "heading": "First case",
+      "level": 4,
+      "text": "The first case can be found in the ZB-014 bunker on Woods. It has to be stashed at wooden planks next to the guard booth west of the train depot on Reserve."
+    },
+    {
+      "heading": "Second case",
+      "level": 4,
+      "text": "The second case can be found next to the portable toilets at the USEC checkpoint on Woods. It has to be stashed in the railcar with the Ural truck at the train platform in the north of Lighthouse."
+    }
+  ]
+}

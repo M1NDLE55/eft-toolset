@@ -1,0 +1,45 @@
+{
+  "title": "Small Christmas gift",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Small_Christmas_gift",
+  "revisionId": 329515,
+  "lastEdited": "2025-12-24T23:09:04Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pickupable Event Loot Container",
+    "weight": "2 kg",
+    "grid": "2x2",
+    "node": "63a8970d7108f713591149f5",
+    "ID": "new_year_gift_small"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Small Christmas gift (Gift) is a pickupable Event Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A small neatly wrapped Christmas gift. Looks like Santa is kind to you. Come on, open it up!"
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n- Cannot be listed for sale on the flea market\n- Destroyed after unpacking (Right-click \"unpack\")"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "Random surprises."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item was first added as part of Escape from Tarkov's 2023 Christmas celebration."
+    }
+  ]
+}

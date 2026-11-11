@@ -1,0 +1,40 @@
+{
+  "title": "To Great Heights! - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_Great_Heights!_-_Part_2",
+  "revisionId": 359837,
+  "lastEdited": "2026-09-13T20:22:56Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "To Great Heights! - Part 1",
+    "leads to": "To Great Heights! - Part 3",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Seasonal change: this quest cannot be obtained.\n\nTo Great Heights! - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You're under my wing from now on, brother. I'll make sure you get progress good, but you're gonna have to get your ass in gear more often. Let's start with the basics. The Arena's in Tarkov, but the biggest sponsors are overseas. They watch every game, place bets, throw money at the favorites. And you need to get some of those big shots interested. Get their attention, show them you're worthy. Make a name for yourself. One win alone isn't enough to do it. Show them you can make a thrilling performance!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win a match in TeamFight, BlastGang, or CheckPoint mode in Arena"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,500 EXP\n- Ref Rep +0.02\n- 32 GP coins\n  - 34 GP coins with Intelligence Center Level 1\n  - 37 GP coins with Intelligence Center Level 2\n- 1× Weapon crate (Rare)\n\"I see the progress you're making! They're starting to talk about you overseas. People are interested. It's a sign that you're doing the right thing!\""
+    }
+  ]
+}

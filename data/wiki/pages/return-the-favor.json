@@ -1,0 +1,50 @@
+{
+  "title": "Return the Favor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Return_the_Favor",
+  "revisionId": 360186,
+  "lastEdited": "2026-09-15T07:58:05Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Lightkeeper",
+    "previous": "Snatch (+10hr)",
+    "leads to": "Payback (+10hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Return the Favor is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The whole thing is starting to become clearer. It seems that the customer is not from around here, as I initially assumed. The order came from the beyond the border. I have contacts who are willing to assist, but they will need a favor in return. They own a certain, shall we say, facility, located in the Priozersky Natural Reserve. You can see the facility from everywhere, but nobody has a clue what is hiding under the mountain. If you've been in those places, you must have seen the hill that towers over the entire forest. So, some curious tourists began to flock around that hill, and they are itching to open all the doors they see. As you know, curiosity killed the cat. Do the right thing and get rid of those cats. And while you're there, leave the documents for the USECs in their camp. Remember, these documents must not fall into the wrong hands.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 10 hours after completion of Snatch"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 PMC operatives on Woods\n- Hide the TerraGroup \"Blue Folders\" materials inside the black SUV in the USEC camp on Woods\n- Hide the TerraGroup \"Blue Folders\" materials in the crates near the satellite antenna in the USEC camp on Woods\nNote: The \"Hide\" objectives will appear after the \"Eliminate\" objective is completed."
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.03\n- 1× Silicon Optoelectronic Integrated Circuits textbook\n- 1× Lighthouse island stash key\n\"You've done well, mercenary. You will be a useful asset. Come back later, there's still some unfinished business to take care of.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| TerraGroup \"Blue Folders\" materials | 2 | Required | N/A | Stashed item |\nIn this quest you first have to kill 15 PMCs on Woods. Afterwards you have to hide 2 TerraGroup \"Blue Folders\" materials in the \"USEC camp\" which is located in the northwest. The west and north-west approaches to the camp are covered with landmines. One has to be stashed on the passenger side of a black SUV in the south of the camp, and the second one has to be stashed at the wooden crates next to the satellite antenna in the north of the camp.\n\nMined areas to avoid"
+    }
+  ]
+}

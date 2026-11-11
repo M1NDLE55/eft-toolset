@@ -1,0 +1,45 @@
+{
+  "title": "Protect the Sky",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Protect_the_Sky",
+  "revisionId": 359588,
+  "lastEdited": "2026-09-13T20:18:44Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "BTR Driver",
+    "previous": "Battery Change",
+    "leads to": "Discombobulate",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Protect the Sky is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You weren't being tailed, were you? Skier is definitely up to something. I'm even afraid to sleep in the BTR now! But I can't back down now. I've started setting up a new base, and this time I want to build a solid defense. Someone's willing to provide me with a decent electronic jamming system. We've already settled the payment, it's just a matter of delivering the package to me. They picked an unusual place for the transfer: a cemetery in the forest. It's not big, but you'll find it no problem. There's a stretcher and bodies lying around near it. Can you get the package from the stash? Oh, but don't go straight there from here. Go to your base, take a breather, and then go to the stash from there. Can't let anyone find out about my new purchase.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the package in the specified spot on Woods\n- Hand over the package"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +25,400 EXP\n- BTR Driver Rep +0.02\n- 96,000 Roubles\n- 4× .300 Blackout CBJ ammo pack (50 pcs)\n- Unlocks purchase of Aklys Defense Velociraptor .300 Blackout assault rifle at Mechanic LL4\n\"Thank you! At least now I have a place to sleep. Nothing will come down from above now. And on the ground, the landmines should stop them. I've covered everything. Let's see them looting my spare parts again!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "The quest Simple Side Job from Lightkeeper will automatically fail if this quest is completed first.\n| Item name | Amount | Requirement | Find in raid | Notes |\n| KOSA UAV electronic jamming device | 1 | Handover item* | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n- This item will only appear in your next Woods raid after accepting this quest.\n\nIn this quest you have to find a KOSA UAV electronic jamming device on Woods. There are multiple spawns at a gravesite south of the dilapidated village in the north."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Scrap Metal",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Scrap_Metal",
+  "revisionId": 362614,
+  "lastEdited": "2026-09-29T20:13:10Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Scrap Metal is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day! As you can understand, the conflict here was rather serious and there is some heavy machinery left on the Shoreline. There are at least three T-90 of which I am aware, and I am sure there are many military devices remaining on them, such as laser rangefinders for example. Those models are not for export, and equipped with optics for domestic use. My customers would be very interested in comparing it to the samples owned by them. From the recon data, one of the tanks was left left on the small land bridge between the weather station and the hydroelectric power station, the other one must be somewhere near the north-west bunker at the Health Resort, and the last tank should be in the village on the dirt road at the collapsed tunnel. Mark the tanks with beacons, and my people will do the rest.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by BEAR PMCs."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Mark the first T-90 tank with an MS2000 Marker on Shoreline\n- Mark the second T-90 tank with an MS2000 Marker on Shoreline\n- Mark the third T-90 tank with an MS2000 Marker on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Peacekeeper Rep +0.25\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n\"Good, my people are receiving the signal. I hope the tanks are still intact.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 3 | Required | N/A | Used to mark the tanks. When placed, the item is removed from the players' inventory. |\nNote that you do not have to plant all markers in the same raid. As with previous quests, once you have survived the required amount of time after each plant, you can die and do the remaining objectives and extract in subsequent raids."
+    },
+    {
+      "heading": "See Also",
+      "level": 2,
+      "text": "- Tigr Safari - The USEC counterpart quest"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

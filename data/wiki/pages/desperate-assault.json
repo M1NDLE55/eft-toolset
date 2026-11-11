@@ -1,0 +1,50 @@
+{
+  "title": "Desperate Assault",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desperate_Assault",
+  "revisionId": 359226,
+  "lastEdited": "2026-09-13T20:12:34Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Lab",
+    "given by": "Mechanic",
+    "previous": "Final Stretch, or, Consequences of Our Decisions",
+    "leads to": "Stay Clear of Blast Zone, Break the Chain",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Desperate Assault is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I can't ignore this anymore. We talked not long ago about the materials Black Division has been extracting from Tarkov. You already made your decision back then, but I'm asking for your help once again. According to my information, these operatives have driven every other force out of the TerraGroup laboratory, and now they return there on a regular basis. Maybe they're searching for something, or maybe they're stripping the place clean. Either way, it's nothing but a risk for us. What if the only reason the city hasn't been reduced to rubble yet is some plain gray folder with a chemical formula inside? I'd rather not test that theory firsthand. We have to clear the facility, or at least slow Black Division's operation down. I'll provide whatever resources I can, but I need you directly involved.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 Black Division operatives in The Lab"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 1× Weapon repair kit\n- 1× Body armor repair kit\n\"I don't know how much we've changed the overall balance of power. Either way, this isn't the time to let our guard down. I'll do my best to learn more about how their forces are coordinated. I'll let you know as soon as I find a promising lead.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to eliminate 15 Black Division members inside The Lab."
+    }
+  ]
+}

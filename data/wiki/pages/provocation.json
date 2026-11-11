@@ -1,0 +1,65 @@
+{
+  "title": "Provocation",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Provocation",
+  "revisionId": 361004,
+  "lastEdited": "2026-09-21T09:40:39Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Interchange",
+    "given by": "Lightkeeper",
+    "previous": "Payback (+10hr)",
+    "leads to": "Following the Bread Crumbs (+10hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Provocation is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Time is of the essence. My cleaner crew found evidence of Glukhar's connection to the arms development that took place under the aegis of TerraGroup. The next task for you is to provoke Glukhar's contacts into doing something foolish. They probably don't know yet that Glukhar is no longer available. Go to Ultra, TerraGroup has had a staging post there since the early days. Make a mess of it, make a show of it. Use the trophy you took from the bull's body. And for the particularly savvy, leave something humiliating in place to say hello, so to speak. The mutts must know their place.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 10 hours after completion of Payback"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 20 targets inside the ULTRA Mall with an ASH-12 assault rifle on Interchange\n- Stash a Salty Dog beef sausage inside the Kiba Arms store on Interchange\n- Stash a Bottle of Fierce Hatchling moonshine inside the Saferoom Exfil on Interchange\n- Stash a Toilet paper inside the secret container stash on Interchange"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.03\n- 2× Virtex programmable processor\n- 1× Lighthouse island stash key\n- Unlocks craft for FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope at Workbench level 3\n- Unlocks the Lightkeeper service \"Rogue support\"\n\"So, you left a message for our friends, now we'll wait for a reaction. For now, you can go.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| ASh-12 12.7x55 assault rifle | ASh-12 12.7x55 assault rifle | N/A | Required | N/A | Needs to be used for the kills |\n| Salty Dog beef sausage | Salty Dog beef sausage | 1 | Required | N/A | Placed item |\n| Bottle of Fierce Hatchling moonshine | Bottle of Fierce Hatchling moonshine | 1 | Required | N/A | Placed item |\n| Toilet paper | Toilet paper | 1 | Required | N/A | Placed item |\n| Kiba Arms outer door key | Kiba Arms outer door key | 1 | Required | N/A | Unlocks the outer Kiba Arms store door |\n| Kiba Arms inner grate door key | Kiba Arms inner grate door key | 1 | Required | N/A | Unlocks the inner Kiba Arms store door |\n| Object 11SR keycard | Object #11SR keycard | 1 | Required | N/A | Unlocks the secret secure hideout |\n| Object 21WS keycard | Object #21WS keycard | 1 | Required | N/A | Unlocks the secret container stash |\nIn this quest you first have kill any 20 targets with an ASh-12 12.7x55 assault rifle in the ULTRA shopping mall on Interchange.\n\nAfterwards you have to stash a Salty Dog beef sausage, a Bottle of Fierce Hatchling moonshine and Toilet paper in the designated locations."
+    },
+    {
+      "heading": "Sausage placement location",
+      "level": 4,
+      "text": "The Salty Dog beef sausage has to be placed at a wooden crate in the fenced off area inside the Kiba Arms store on the first floor of the mall. Power, Kiba Arms outer door key and Kiba Arms inner grate door key required."
+    },
+    {
+      "heading": "Moonshine placement location",
+      "level": 4,
+      "text": "The Bottle of Fierce Hatchling moonshine has to be placed on the couch inside the \"Saferoom Exfil\" extraction in the parking garage. Power and Object #11SR keycard swipe in the \"Burger spot\" restaurant urinal required."
+    },
+    {
+      "heading": "Toilet paper placement location",
+      "level": 4,
+      "text": "The Toilet paper has to be placed on wooden crates inside a red container at the container lot in the southwest of the mall. Activated power station power and Object #21WS keycard required."
+    }
+  ]
+}

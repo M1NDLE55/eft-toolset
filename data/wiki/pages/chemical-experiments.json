@@ -1,0 +1,44 @@
+{
+  "title": "Chemical Experiments",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chemical_Experiments",
+  "revisionId": 362656,
+  "lastEdited": "2026-09-29T21:17:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Peacekeeper",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Chemical Experiments is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello again, friend. There are many people in Tarkov who are in need of my assistance. For example, a local chemist recently asked me to provide him with a hose for his equipment. This is too easy of a task for my men, and they simply do not have the time. Could you help this local from customs?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash a Corrugated hose in the med lab on Customs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Peacekeeper Rep +0.1\n- 550 Dollars\n  - 578 Dollars with Intelligence Center Level 1\n  - 632 Dollars with Intelligence Center Level 2\n\"Excellent. The local has sent his gratitude.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Corrugated hose | 1 | Required | N/A | Stashed item |\nIn this quest you have to stash a Corrugated hose at any table in the experiments area on the second floor of the the laboratory building on Customs."
+    }
+  ]
+}

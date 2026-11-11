@@ -1,0 +1,44 @@
+{
+  "title": "Tarkov-Style Diplomacy",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tarkov-Style_Diplomacy",
+  "revisionId": 361707,
+  "lastEdited": "2026-09-24T12:16:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Therapist",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Tarkov-Style Diplomacy is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon, young man. Let's get straight to the point. I recently lost some of my people on the Shoreline. Naturally, that was unfortunate, but there is still a new source of medical supplies operating there. I've decided we need to approach this source from a different angle. No more attempts to take anything by force. I learned from one of the locals that this source is known as Sanitar. He is a doctor who performs surgeries out in the open and leaves his instruments nearby, inside buildings. Retrieve his medical tools for me. I believe he will be much more willing to discuss future supplies once he understands that we can reach him at any moment without him even noticing.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain Sanitar's surgery kit on Shoreline\n- Hand over Sanitar's surgery kit to Therapist\n- Locate and obtain Sanitar's ophthalmoscope on Shoreline\n- Hand over Sanitar's ophthalmoscope to Therapist"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,200 EXP\n- Therapist Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Thank you. I will handle things from here. I'll return his instruments along with a letter. This way, Sanitar will understand what we expect from him.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Cottage back door key | 1 | Required | N/A | Unlocks the back door of the villa where the Marked Ophthalmoscope is located. |\n| Marked Ophthalmoscope | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Surgery kit marked with a blue symbol | 1 | Handover item | Yes |\nIn this quest you have to find Sanitar's Surgery kit marked with a blue symbol and his Marked Ophthalmoscope on Shoreline.\n\nThe surgery kit can be found on the second floor of the office building at the pier, located on top of a wardrobe.\n\nThe ophthalmoscope can be found inside the locked villa in the western part of the map, near the swamp. You need a Cottage back door key to unlock the back door to enter the villa. The ophthalmoscope can be found in the left hand room on the second floor, inside a potted plant on the table."
+    }
+  ]
+}

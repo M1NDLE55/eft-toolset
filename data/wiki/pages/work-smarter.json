@@ -1,0 +1,44 @@
+{
+  "title": "Work Smarter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Work_Smarter",
+  "revisionId": 359894,
+  "lastEdited": "2026-09-13T20:23:53Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Jaeger",
+    "previous": "Acquaintance",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Work Smarter is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You know how heated it can be at the safe exits around here. Many die on the road back, not on the actual trip. That's why for a true hunter, it's important to always have something prepared, like a personal escape plan. Times are tough right now, so I don't advise taking unnecessary risks. Take customs for example. I heard that some of the exits are now under someone's control, and they're only letting in their own kind. Which means no more outsiders will be allowed in. You might want to find a way to secure those exits for yourself. It may take some finesse, but for a true warrior, such obstacles shouldn't be a problem.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the secret exfil on Customs\n  - (Optional) Obtain the special item to extract through the secret exfil"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +6,600 EXP\n- Jaeger Rep +0.01\n- 32,000 Roubles\n  - 33,600 Roubles with Intelligence Center Level 1\n  - 36,800 Roubles with Intelligence Center Level 2\n- 2× CMS surgical kit\n\"You've learned your lesson. Make sure you don't forget it. Always be prepared for your return path to be cut short. No matter which part of Tarkov you find yourself in. Your knowledge of the terrain, the paths between the areas and safe escape routes is your strength.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to visit either of the 2 hidden extractions on Customs. The hidden ones are \"Smugglers' Boat\" and \"Smugglers' Bunker (ZB-1012)\". Extracting through them is not required."
+    }
+  ]
+}

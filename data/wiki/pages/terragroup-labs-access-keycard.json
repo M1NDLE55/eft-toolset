@@ -1,0 +1,104 @@
+{
+  "title": "TerraGroup Labs access keycard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_access_keycard",
+  "revisionId": 362236,
+  "lastEdited": "2026-09-26T15:28:49Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [
+    "Labs access keycard"
+  ],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL3, Ref LL3",
+    "usage": "Allows access to The Lab location a single time.",
+    "storage_wallet": "Yes",
+    "storage_keytool": "No",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5c94bbff86f7747ee735c08f",
+    "ID": "item_keycard_lab_single_use"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "TerraGroup Labs access keycard (Access) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A single-use United Security-issued TerraGroup Labs access keycard."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Will be consumed upon entering The Lab. Will not be consumed in the practice and practice co-op game modes.\n  - When playing in a group, all players need their own.\n- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- 2 need to be found in raid for the quest Fishing Place"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as initial equipment from Beneath The Streets\n- 1 can be obtained as initial equipment from Quality Standard\n- 2 can be obtained as a quest reward from Chemical - Part 4\n- 3 can be obtained as a quest reward from Camera, Action!"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Drawers\n- In the Common fund stash\n- Pockets and bags of Scavs\n- On Bosses\n- In Rare valuables crates"
+    },
+    {
+      "heading": "Hideout Cultist Circle",
+      "level": 3,
+      "text": "- 1 can be obtained with a special sacrifice"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- At the three-story dorms in the \"marked room\""
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The Lab map selection screen."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- The Lab"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| TerraGroup Labs access keycard x1; TerraGroup Labs access keycard | → | Peacekeeper; Peacekeeper LL3 | → | HK G28 7.62x51 marksman rifle; HK G28 7.62x51 marksman rifle |\n| Bulbex cable cutter x1; Bulbex cable cutter; +; Pipe grip wrench x1; Pipe grip wrench | → | Mechanic; Mechanic LL3 | → | TerraGroup Labs access keycard; TerraGroup Labs access keycard |"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| UHF RFID Reader x1; UHF RFID Reader; +; Intelligence folder x1; Intelligence folder | → | Intelligence Center level 2; 40 minutes | → | TerraGroup Labs access keycard x3; TerraGroup Labs access keycard |\n| Advanced Electronic Materials textbook x1; Advanced Electronic Materials textbook; +; Secure Flash drive x1; Secure Flash drive; +; TerraGroup Labs access keycard x1; TerraGroup Labs access keycard; +; VPX Flash Storage Module x1; VPX Flash Storage Module | → | Intelligence Center level 2; 12 hoursAfter completing Lightkeeper's task; Snatch | → | UHF RFID Reader x1; UHF RFID Reader |\n| UHF RFID Reader x1; UHF RFID Reader; +; TerraGroup Labs access keycard x10; TerraGroup Labs access keycard; +; TerraGroup \"Blue Folders\" materials x5; TerraGroup \"Blue Folders\" materials; +; Intelligence folder x3; Intelligence folder; +; Military flash drive x5; Military flash drive; +; Virtex programmable processor x2; Virtex programmable processor | → | Intelligence Center level 3; 25 hours | → | TerraGroup Labs keycard (Green) x1; TerraGroup Labs keycard (Green) |\n| UHF RFID Reader x1; UHF RFID Reader; +; TerraGroup Labs access keycard x10; TerraGroup Labs access keycard; +; TerraGroup \"Blue Folders\" materials x5; TerraGroup \"Blue Folders\" materials; +; Intelligence folder x3; Intelligence folder; +; VPX Flash Storage Module x3; VPX Flash Storage Module; +; Virtex programmable processor x2; Virtex programmable processor; +; Secure magnetic tape cassette x4; Secure magnetic tape cassette | → | Intelligence Center level 3; 25 hours | → | TerraGroup Labs keycard (Red) x1; TerraGroup Labs keycard (Red) |\n| UHF RFID Reader x1; UHF RFID Reader; +; TerraGroup Labs access keycard x10; TerraGroup Labs access keycard; +; TerraGroup Labs keycard (Yellow) x1; TerraGroup Labs keycard (Yellow); +; Intelligence folder x4; Intelligence folder; +; Secure magnetic tape cassette x1; Secure magnetic tape cassette | → | Intelligence Center level 3; 132 h 13 min 20 sec | → | TerraGroup Labs keycard (Violet) x1; TerraGroup Labs keycard (Violet) |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The serial number on the card is \"0010101428 267241\"."
+    }
+  ]
+}

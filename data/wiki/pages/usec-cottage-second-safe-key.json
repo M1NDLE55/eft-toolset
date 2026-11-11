@@ -1,0 +1,57 @@
+{
+  "title": "USEC cottage second safe key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_cottage_second_safe_key",
+  "revisionId": 316747,
+  "lastEdited": "2025-08-04T09:21:12Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "max uses": "100",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a safe in the blue chalet on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "61aa5ba8018e9821b7368da9",
+    "ID": "lighthouse_key8"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "USEC cottage second safe key (USEC 2) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the safe that belonged to one of the USEC operatives stationed in the roadside cottage area."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "This key unlocks a safe that is located in the south-western bedroom on the second floor of the blue chalet on Lighthouse."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables)\n- Virtex programmable processor\n- VPX Flash Storage Module\n- Military COFDM Wireless Signal Transmitter\n- Silicon Optoelectronic Integrated Circuits textbook"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The key also unlocks 4 erroneously locked and always empty safes on Streets of Tarkov. 3 in the Pinewood hotel rooms 206, 208 and 218 and 1 in the music room inside the game developer office."
+    }
+  ]
+}

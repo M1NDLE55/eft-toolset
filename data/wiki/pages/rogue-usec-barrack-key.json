@@ -1,0 +1,56 @@
+{
+  "title": "Rogue USEC barrack key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rogue_USEC_barrack_key",
+  "revisionId": 358675,
+  "lastEdited": "2026-09-10T22:56:03Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a Rogue barrack at the water treatment plant on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "62a9cb937377a65d7b070cef",
+    "ID": "lighthouse_key15"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Rogue USEC barrack key (Barrack) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key that opens one of the Rogues' makeshift barracks."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a possible location for the quest To the Light - Getting Acquainted"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "On the first floor of office building #3, which is located at the water treatment plant area in the north of Lighthouse."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Weapon box (6x2)\n- Weapon box (4x4)\n- Toolbox\n- Wooden ammo box\n- Physical Bitcoin spawn on the chair\n- Loose weapon mods"
+    }
+  ]
+}

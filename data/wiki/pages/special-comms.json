@@ -1,0 +1,64 @@
+{
+  "title": "Special Comms",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Special_Comms",
+  "revisionId": 361689,
+  "lastEdited": "2026-09-24T12:05:33Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Reserve",
+    "given by": "Prapor",
+    "LL requirement": "3",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Special Comms is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Salutations! An important assignment has just come from the high-ups. Top priority and all that jazz. There's a path from Priozersk to the Reserve base, and our guys need communication in those parts urgently. The path? Ah well, I'll share it with you, but make sure nobody else knows about it! When the Contract Wars were in full swing, some artisan managed to lay a path parallel to our road. We tracked the guy down and started interrogating him on who he was working for, what kind of mission he was on, you know the drill. We thought we'd captured a spy! Yet he kept calling himself a mushroom picker and grinning like a moron. We wanted to send him to headquarters. But at night our mushroom picker disappeared, no one saw him again after that. So, with your help, we'll build a communication line along this path, and you'll be responsible for the equipment. You'll deliver a part of it to the place, go to the Reserve base, and leave the second part there.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash a Military cable at the boulder next to RUAF gate on Woods\n- Use the transit from Woods to Reserve\n- Stash a Bulbex cable cutter at the sandbags next to LAV III above the storage warehouse on Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Your country will be proud of you, soldier! But the fact that the Scavs started roaming around this path worries me a bit... Someone must be scouting for all the forgotten shortcut routes on Tarkov's map.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Bulbex cable cutter | 1 | Stashed item |\n| Military cable | 1 | Stashed item |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Bulbex cable cutter | 1 | Required | N/A | Needs to be stashed in the specified locations |\n| Military cable | 1 | Required | N/A | Needs to be stashed in the specified locations |"
+    },
+    {
+      "heading": "Woods Stashing location",
+      "level": 3,
+      "text": "At a rock next to the \"RUAF Gate\" extraction."
+    },
+    {
+      "heading": "Woods to Reserve",
+      "level": 3,
+      "text": "Transits are only available 1 min after raid start."
+    },
+    {
+      "heading": "Reserve Stashing Location",
+      "level": 3,
+      "text": "At the sandbag position on top of the eastern storage warehouse marked with \"Д\" (\"Bunker Hermetic Door\" extraction)."
+    }
+  ]
+}

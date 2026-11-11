@@ -1,0 +1,49 @@
+{
+  "title": "Power of Persuasion",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Power_of_Persuasion",
+  "revisionId": 361737,
+  "lastEdited": "2026-09-24T12:28:43Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Ground Zero, Interchange, Customs",
+    "given by": "Prapor",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Power of Persuasion is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"\"Greetings, soldier! Got a rather specific job for you. I need a close-quarters weapon put through a proper field test. True combat conditions only. I reckon you know exactly where to find those, eh?Some of my customers aren't convinced this little beauty can get the job done... Think you can persuade them?Oh, one more thing: if you lose the gun, you can get a new one from Mechanic.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 PMC operatives with an MP5SD on Woods, Ground Zero, Interchange or Customs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Prapor Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 1× Electric motor\n- Unlocks Duck Hideout shooting range target style\n\"Well done, mission accomplished. Looks like every last customer has been persuaded.\""
+    },
+    {
+      "heading": "Initial equipment",
+      "level": 2,
+      "text": "| Icon | Item name | Amount |\n| MP5 | HK MP5 9x19 submachine gun (Navy 3 Round Burst) | 1 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "The following parts are required to be on an MP5 for it to qualify for this quest:\n- HK MP5SD 9x19 upper receiver\n- HK MP5SD 9x19 sound suppressor\n- HK MP5SD polymer handguard"
+    }
+  ]
+}

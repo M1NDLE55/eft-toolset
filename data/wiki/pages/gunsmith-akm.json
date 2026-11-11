@@ -1,0 +1,54 @@
+{
+  "title": "Gunsmith - AKM",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_AKM",
+  "revisionId": 353691,
+  "lastEdited": "2026-08-14T21:39:16Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith AKM"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith - AKM is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"How do you think, is all the suffering that befell the inhabitants of our city the result of the actions of the society, or a controlled process, and this is just the beginning? I've been thinking about this all the time after that guy with the lightning tattoo. Although I decided for myself that even if it's someone's invisible hand, our society has deserved it. We have, by our actions, by buying sneakers or even beet salad, supported those who build laboratories and manufacturers, and then use them to plunge us into the abyss. Okay, I'm rambling again, back to business. Get me an AKM with a Fortis Shift grip, silencer, and 30-round Magpul mag. Ergonomics over 25, recoil sum less than 400, sighting range of 800 meters or more.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an AKM to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +5,800 EXP\n- Mechanic Rep +0.01\n- 50,000 Roubles\n  - 52,500 Roubles with Intelligence Center Level 1\n  - 57,500 Roubles with Intelligence Center Level 2\n- 2× Pack of screws\n- 2× Phase control relay\n- 3× 7.62x39mm BP gzh ammo pack (20 pcs)\n- Unlocks purchase of AK GP-25 accessory kit recoil pad at Prapor LL2\n\"A comfortable weapon, masterfully done, thank you. I'll let the client know the weapon is ready.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "AKM specifications:\n- 60 Durability\n- 400 or less recoil\n- 25 or more ergonomics\n- 800 or greater sighting range\n- A silencer\n- Fortis Shift tactical foregrip\n- AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine (Black)"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard AKM from Prapor LL2.\n- The Fortis Shift tactical foregrip can also be obtained through the MPX (MQB variant) barter at Mechanic LL1.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Icon | Attachment | Sold By | Loyalty Level |\n| AK 100-series polymer handguard | AK 100-series polymer handguard | Prapor | LL1 |\n| Fortis Shift tactical foregrip | Fortis Shift tactical foregrip | Peacekeeper | LL3 |\n| SilencerCo Hybrid 46 Direct Thread Mount adapter | SilencerCo Hybrid 46 Direct Thread Mount adapter | MechanicPeacekeeper | LL1 (Barter); LL2LL2 |\n| SilencerCo Hybrid 46 multi-caliber sound suppressor | SilencerCo Hybrid 46 multi-caliber sound suppressor | PeacekeeperMechanic | LL2LL2 (Barter) |\n| AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine | AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine (Black) | Peacekeeper | LL2 |\n| AK AKademia Bastion dust cover | AK AKademia Bastion dust cover | Skier | LL1 |\n| SIG Sauer ROMEO7 1x30 reflex sight (Prototype) | SIG Sauer ROMEO7 1x30 reflex sight (Prototype) | Skier | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

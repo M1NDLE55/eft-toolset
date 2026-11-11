@@ -1,0 +1,44 @@
+{
+  "title": "The Huntsman Path - Justice",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Justice",
+  "revisionId": 359760,
+  "lastEdited": "2026-09-13T20:21:38Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Jaeger",
+    "previous": "The Huntsman Path - Secured Perimeter",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Justice is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Ah, it's you? Glad to see you, friend. Ever tracked your prey on a hunt? When all this fuss started here in Tarkov, lots of things changed, brothers started fighting one another - it’s the usual thing now. And the same works for the authorities, those who had to protect the law before became unscrupulous creatures, some haven't even changed from uniform, can you imagine? I have a personal score with them. Well, if you send some Scavs to hell, it will be for the better, there has been nothing human left in these men for a long time anyway. Get rid of the remains of Reshala's gang, they're dressed in police uniform, can't miss them.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 3 Scavs dressed in police uniform (Reshala's bodyguards)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +12,300 EXP\n- Jaeger Rep +0.02\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\n- 3× Expeditionary fuel tank\n- 2× Propane tank (5L)\n- 1× WD-40 (400ml)\n\"Protected the honor of the uniform? That's great. Fuck them, there is nothing worse than giving the oath and then falling into crime.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 3 of Reshala's followers."
+    }
+  ]
+}

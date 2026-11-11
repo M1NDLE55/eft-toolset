@@ -1,0 +1,43 @@
+{
+  "title": "Postponed Reward",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Postponed_Reward",
+  "revisionId": 359567,
+  "lastEdited": "2026-09-13T20:18:23Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ref",
+    "previous": "Surprise Gift",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Postponed Reward is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Well, you fucked up with the evidence in a very embarrassing way, but sure, I'll keep my word. I'll get you your fucking container. But now I'm gonna ask you for something else, since things got so ugly.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over a Lega Medal to Ref"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Ref Rep +0.01\n- 1× Secure container Theta\n\"All right, you've earned your reward. But you better know I'm not gonna take any more of your bullshit. You start digging again, you'll end up like that old champion.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Lega Medal | 1 | Handover item | No |"
+    }
+  ]
+}

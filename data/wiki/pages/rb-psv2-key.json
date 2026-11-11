@@ -1,0 +1,58 @@
+{
+  "title": "RB-PSV2 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-PSV2_key",
+  "revisionId": 357729,
+  "lastEdited": "2026-09-06T19:44:18Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽50,000",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d95d6be86f77424444eb3a7",
+    "ID": "rezbase_key_substorge_water2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-PSV2 key (RB-PSV2) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the iron mesh doors in the Federal State Reserve Agency base underground supply warehouse."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- 3 of these, or 3 of the other RB-PSP and RB-PSV keys need to be found in raid for the quest Safe Corridor"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In the Common fund stash (Shturman's crate)\n- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "This key opens the north-east caged off storage area in the Underground Storage Bunkers on Reserve (Highlighted in green). There is one unlockable door at the north and south end of the closed caged room."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Three Medical supply crates\n- One Technical supply crate"
+    }
+  ]
+}

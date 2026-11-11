@@ -3,6 +3,8 @@ const nextConfig = {
   poweredByHeader: false,
   agentRules: false,
   reactCompiler: true,
+  // get_wiki_page reads the wiki snapshot from disk, a page at a time. See DATA_ARCHITECTURE.md.
+  outputFileTracingIncludes: { "/api/mcp": ["./data/wiki/**/*"] },
   async headers() {
     return [
       {

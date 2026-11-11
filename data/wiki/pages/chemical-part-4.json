@@ -1,0 +1,62 @@
+{
+  "title": "Chemical - Part 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chemical_-_Part_4",
+  "revisionId": 362237,
+  "lastEdited": "2026-09-26T15:30:06Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Chemical, p. 4"
+  ],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Skier",
+    "previous": "Chemical - Part 3",
+    "related": "Out of Curiosity, or, Big Customer",
+    "reqkappa": "No, but a subsequent quest Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Chemical - Part 4 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Here’s the thing. This whole chemical stuff worked like a charm, and it immediately became clear who do we push it to. And the receiving party is ready. Only one issue left to resolve. Find more of these yellow chemicals. The crux of the issue was partly resolved before us - someone has already tried. Don't know, intentionally or not, but if you believe the consignment notes from the same docs, the whole box of that stuff was already tried to be taken out from the factory. But this cargo was not logged on any of the checkpoints, so I figure it’s worth looking for somewhere in the warehouses on Customs. If they tried to transport it, then it's most likely still in the car, probably a van. And not just one lousy syringe, but a whole crate. Look out for some markings maybe, the crate has them. Got it? Ah, one more thing. My sweet friends Prapor and Therapist popped up, poking around. So come on, better not turncoat now. Just a bit more and we’ll be running this place. Good luck, bruv. I'll tell about you to Ragman - he'll get some good helmets for you to buy.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the transport with the chemicals on Customs\n- Mark the vehicle with an MS2000 Marker"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 1× Key case\n- 1× Magazine case\n- 2× TerraGroup Labs access keycard\n\"Now that is right on! Well, now we’re tied up good, bro. Awesome that you didn’t chicken out at the last moment. Now I can fill you in on some real serious business.\""
+    },
+    {
+      "heading": "Failure Penalty",
+      "level": 2,
+      "text": "\"Oh, you bloody bastard! Everything down the damn drain! So much fucking effort just wasted! The hell is wrong with you? Thought you were a sensible dude, not an airhead. Ah, to hell with you, spoiled such a jackpot! No way I’m letting you in on something major. You won't take part in any of my serious jobs, that's for sure. Gonna get smoked someday since you love ratting so much.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item Name | Amount | Notes |\n| MS2000 Marker | 1 | This item is placed on the transport van. When placed, the item is removed from the players' inventory. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "By completing either Out of Curiosity or Big Customer, you will fail and lose access to this quest.\n\n| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed in the chemical van. |\nIf you do not have one already, purchase a MS2000 Marker from Prapor.\nAfter placing the marker, the player must stay alive for 30 seconds or they will have to place another beacon in the van. You do not need to be near the van after the marker has been placed. Find a nearby hiding spot and wait until the timer is complete."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy additional MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

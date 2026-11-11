@@ -1,0 +1,71 @@
+{
+  "title": "Health Resort west wing office room 112 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_west_wing_office_room_112_key",
+  "revisionId": 356406,
+  "lastEdited": "2026-08-26T00:53:00Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks room 112 of the Health Resort West wing on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0dc95c86f77452440fc675",
+    "ID": "Санаторий 112"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort west wing office room 112 key (W112 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium west wing office room 112."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Needed for the Quest Vitamins"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On a seat in a bus at the bus depot\n\n- On a desk in west wing room 105 at the health resort.\n\n- In a key rack in west wing room 202 at the health resort.\n\n- On the floor below a key rack in the utility room next to west wing room 227 at the health resort.\n\n- On the floor in the hallway in front of east wing room 112 at the health resort.\n\n- In the key rack near the central stairs on the second floor of the east wing at the health resort.\n\n- On the floor below a key rack near the central stairs on the third floor of the east wing at the health resort."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The first floor of the west wing in the Health Resort on the map Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Yellow keycard spawn location\n- Blue keycard spawn location\n- Loose Loot (Provisions) on the table left of the door\n- Two Sport bags"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Pile of meds x4; Pile of meds | → | Therapist; Therapist LL3 | → | Health Resort west wing office room 112 key; Health Resort west wing office room 112 key |\n| Dorm room 314 marked key x1; Dorm room 314 marked key; +; Health Resort west wing office room 112 key x1; Health Resort west wing office room 112 key; +; Paracord x5; Paracord | → | Ragman; Ragman LL2; After completing his task; Scavenger | → | Crash Axe; Crash Axe |"
+    }
+  ]
+}

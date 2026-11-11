@@ -1,0 +1,59 @@
+{
+  "title": "Gunsmith - Model 870",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_Model_870",
+  "revisionId": 357642,
+  "lastEdited": "2026-09-04T22:10:05Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith Model 870"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith - Model 870 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Just when I finally sorted out the stable Internet connection and power supply for it, the Government stepped up the game and started blocking half the IP addresses that handled most of the data flow in Tarkov. All that because TerraGroup allegedly uses \"Ebambium\" ISP to further destabilize the situation in the city and wreak havoc. Sounds like some gibberish about the Ragnarok coming, don't you think? By the way about gibberish and weapons — some weirdo with a lightning symbol tattooed on his face asked for a Remington 870 shotgun. Equipped with a tactical device, Magpul MOE handguard, and a tactical foregrip. Ergonomics above 60 and recoil sum less than 500.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 10 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify a Remington Model 870 to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +4,100 EXP\n- Mechanic Rep +0.01\n- 300 Dollars\n  - 315 Dollars with Intelligence Center Level 1\n  - 345 Dollars Intelligence Center Level 2\n- 3× Weapon parts\n\"Great gun, a solid build.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "M870 specifications:\n- 60 Durability\n- 500 or less recoil\n- 60 or more ergonomics\n- Any tactical device (such as the NcSTAR Tactical Blue Laser)\n- Any foregrip\n- M870 Magpul MOE handguard"
+    },
+    {
+      "heading": "Builds",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard M870 from Skier LL1.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| ME Cylinder 12ga muzzle adapter | Jaeger | LL1 |\n| GK-02 12ga muzzle brake | Jaeger | LL2 |\n| M870 Magpul MOE handguard | Mechanic | LL1 (Barter); LL2 |\n| Magpul M-LOK 4.1 inch rail | Mechanic | LL1 (Barter); LL1 |\n| KAC vertical foregrip | Peacekeeper | LL1 |\n| Magpul M-LOK 2.5 inch rail | Mechanic | LL1 |\n| NcSTAR Tactical Blue Laser | Skier | LL1 |\n| M870 Magpul SGA polymer stock | Mechanic | LL1 (Barter); LL2 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Rogue USEC stash key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rogue_USEC_stash_key",
+  "revisionId": 358677,
+  "lastEdited": "2026-09-10T22:56:14Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "max uses": "100",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a cabin at the water treatment plant on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "61a64492ba05ef10d62adcc1",
+    "ID": "lighthouse_key4"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Rogue USEC stash key (Stash) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the stash, located somewhere at the Rogue USEC base."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "This key opens a cabin that is located in the west of the water treatment plant on Lighthouse"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Weapon box (6x2)\n- 1x Weapon box (4x4)\n- 1x Weapon box (6x6)\n- Weapon mods\n- Loose loot"
+    }
+  ]
+}

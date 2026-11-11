@@ -1,0 +1,42 @@
+{
+  "title": "Polikhim Hobo",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Polikhim_Hobo",
+  "revisionId": 362216,
+  "lastEdited": "2026-09-26T14:12:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Polikhim hobo",
+    "Polikim hobo"
+  ],
+  "infobox": {
+    "location": "Interchange, Ground Zero, Woods",
+    "given by": "Skier",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Polikhim Hobo is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The bum from Polikhim? What am I, the bloody king of every stray in Tarkov now?! Alright, I know who you're talking about, same as everyone else who's lived here. He wasn't a bad bloke, but he lost the plot when all this mess kicked off. You're looking for him, are you? I can help you out, but not out of the goodness of my heart. The Scavs have been getting under my feet lately, making things difficult. Go give them a proper scare, and then I'll tell you what I know. Here's the list of places that need clearing.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 25 Scavs on Interchange, Ground Zero or Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Skier Rep +0.1\n- 450 Euros\n  - 473 Euros with Intelligence Center Level 1\n  - 518 Euros with Intelligence Center Level 2\n\"Your bum was staying by the train tracks, in a wagon near the boiler building. There's a bunker nearby as well, right by the tracks. My lads used to see him in that carriage all the time.\""
+    }
+  ]
+}

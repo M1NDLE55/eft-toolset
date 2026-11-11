@@ -1,0 +1,77 @@
+{
+  "title": "Health Resort east wing room 306 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_east_wing_room_306_key",
+  "revisionId": 353191,
+  "lastEdited": "2026-08-11T17:55:09Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽5,780",
+    "usage": "Unlocks the room 306 of the East wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a145d4786f7744cbb6f4a12",
+    "ID": "Санаторий 306 восточное крыло"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort east wing room 306 key (E306 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium east wing room 306."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Connected to room 308 through the balcony."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In the Tarcone Director's Office on the desk in the breachable room"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- On the nightstand of the 2nd cabin with the safe"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On the desk with the computer on the second floor of the office building at the pier.\n\n- On the desk in the small office next to the entrance of the administration building at the health resort.\n\n- In a key rack in west wing room 202 at the health resort.\n\n- On the floor below the key rack in the utility room next to west wing room 227 at the health resort.\n\n- In the key rack near the central stairs on the second floor of the east wing at the health resort.\n\n- On the floor below the key rack near the central stairs on the third floor of the east wing at the health resort."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The third floor, room 306 of the East Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room 306:\n  - 1× LEDX Skin Transilluminator spawn\n  - 1× DVL-10 spawn\n  - 1× Flyye MBSS backpack (UCP) spawn\n  - 4× PC Blocks\n  - 1× Weapon box (4x4)\n  - Rare spawn\n  - Loose loot (Currency)\n- Room 308:\n  - 1× Weapon Rack\n  - 1× Weapon spawn\n  - 1× Medcase\n  - Loose loot (Currency)"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| SAS drive x1; SAS drive; +; Morphine injector x3; Morphine injector; +; Diary x1; Diary | → | Peacekeeper; Peacekeeper LL2 | → | Health Resort east wing room 306 key; Health Resort east wing room 306 key |"
+    }
+  ]
+}

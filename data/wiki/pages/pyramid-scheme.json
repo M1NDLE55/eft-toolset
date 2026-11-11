@@ -1,0 +1,44 @@
+{
+  "title": "Pyramid Scheme",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pyramid_Scheme",
+  "revisionId": 362426,
+  "lastEdited": "2026-09-29T14:13:30Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Skier",
+    "LL requirement": "3",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Pyramid Scheme is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Well-well, look who showed up. Right on time, like you knew I needed you! I've got a proper movie-style job for us. We're robbing banks! Well, ATMs, to be precise. There used to be loads of them scattered around the city. Most of them were on Klimov Street and in the Klimov Mall. Head over there and have a look around. Maybe not all of them have been cleaned out yet.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Mark any ATM on Klimov Street with an MS2000 Marker on Streets of Tarkov\n  - (Optional) Locate the first ATM inside Klimov Shopping Mall on Streets of Tarkov\n  - (Optional) Locate the second ATM inside Klimov Shopping Mall on Streets of Tarkov\n  - (Optional) Locate the third ATM inside Klimov Shopping Mall on Streets of Tarkov\n  - (Optional) Locate the first group of ATMs on Klimov Street on Streets of Tarkov\n  - (Optional) Locate the second group of ATMs inside Klimov Shopping Mall on Streets of Tarkov\n  - (Optional) Locate the third group of ATMs inside Klimov Shopping Mall on Streets of Tarkov\n  - (Optional) Locate the first group of ATMs on Klimov Street on Streets of Tarkov\n  - (Optional) Locate the first ATM on Klimov Street on Streets of Tarkov\n  - (Optional) Locate the second ATM on Klimov Street on Streets of Tarkov\n  - (Optional) Locate the third ATM on Klimov Street on Streets of Tarkov"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Skier Rep +0.75\n- 1,650 Euros\n  - 1,732 Euros with Intelligence center Level 1\n  - 1,897 Euros with Intelligence center Level 2\n- 2x Golden neck chain\n- 2x Glock .45 ACP KRISS G30 MagEx 30-round magazine\n- 2x .45 ACP RIP ammo pack (50 pcs)\n- Unlocks purchase of TDI KRISS Vector Gen.2 .45 ACP submachine gun at Skier LL3\n\"Still got some intact ones? Cool. We'll crack them open and see what they've got. Here's your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed at the ATM. When placed, the item is removed from the players' inventory. |\n\nIn this quest you have to mark an ATM inside the \"Unity Credit Bank\" branch of the Cardinal apartment complex on Streets of Tarkov with an MS2000 Marker."
+    }
+  ]
+}

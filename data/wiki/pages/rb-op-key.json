@@ -1,0 +1,57 @@
+{
+  "title": "RB-OP key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-OP_key",
+  "revisionId": 297500,
+  "lastEdited": "2024-12-03T19:25:45Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-OP"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80c8f586f77440373c4ed0",
+    "ID": "rezbase_key_sub_officer"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-OP key (RB-OP) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base Airspace Control Center bunker command office."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In a shelf in the \"Generic\" store"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Basement level of the Airspace Control Center (King) on Reserve."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables)\n- 1x Drawer\n- Intelligence folder spawn on the desk"
+    }
+  ]
+}

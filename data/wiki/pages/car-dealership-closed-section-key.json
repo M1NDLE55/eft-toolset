@@ -1,0 +1,61 @@
+{
+  "title": "Car dealership closed section key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Car_dealership_closed_section_key",
+  "revisionId": 358659,
+  "lastEdited": "2026-09-10T22:48:42Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the closed section on the second floor of the LexOs car dealership on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a397d3af870e651d58e65b",
+    "ID": "city_key2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Car dealership closed section key (LexOs sect.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the closed section on the second floor of the LexOs car dealership."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Your Car Needs a Service\n- Used in the story chapter Blue Fire when you don't have a Mysterious room marked key"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- On Kaban"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Grate door on the second floor of the LexOs car dealership at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Technical supply crate\n- 1x Wooden crate\n- 2x Weapon box (6x2)\n- 1x Weapon box (6x6)\n- 1x Weapon box (6x4)\n- 1x PC block\n- Loose loot (Weapon mods, Household materials, Other items)\n- Car dealership director's office room key lock location"
+    }
+  ]
+}

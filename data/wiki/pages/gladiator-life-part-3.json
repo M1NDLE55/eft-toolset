@@ -1,0 +1,40 @@
+{
+  "title": "Gladiator Life - Part 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Life_-_Part_3",
+  "revisionId": 359341,
+  "lastEdited": "2026-09-13T20:14:33Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Life - Part 2",
+    "leads to": "Gladiator Life - Part 4",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Life - Part 3 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Let's keep exploring the Arena, ha! Tell me, why do you think I split all the fighters into classes, like in some kind of video game? Because it makes things clearer! For you, and for the audience. If you want to get popular in the Arena, you need to know how to impress. For example, by proving you can perform well in every Arena class I've set up. If you want to get popular in the Arena, you need to know how to impress. For example, by proving you can perform well in every Arena class I've set up.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 enemies as Enforcer or Assault in CheckPoint mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +2,400 EXP\n- 33,500 Roubles\n- 10 GP coins\n- Unlocks SV-98 7.62x54R bolt-action sniper rifle in the Armory"
+    }
+  ]
+}

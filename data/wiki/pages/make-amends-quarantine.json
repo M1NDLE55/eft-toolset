@@ -1,0 +1,44 @@
+{
+  "title": "Make Amends - Quarantine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Make_Amends_-_Quarantine",
+  "revisionId": 359467,
+  "lastEdited": "2026-09-13T20:16:40Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "previous": "Make Amends - Software",
+    "leads to": "Make Amends",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Make Amends - Quarantine is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Mercenary, by spoiling relations with the Lightkeeper, you also obstruct me. It's one thing to feud with some looters, but you don't mess with Lightkeeper, believe me. I'll tell him you're willing to redeem yourself and do some work for him. For all I know, he's collecting data on movements inside the Lab right now. We'll set up a camera inside and send a signal to Lightkeeper. Deal?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Place a WI-FI Camera inside the quarantine zone in The Lab"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.01\n\"Picture's clear, that's good. Let's not make any jokes with Lightkeeper this time, shall we, friend?\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera | 1 | Required | N/A | Can be purchased from Mechanic LL1. |\n| TerraGroup Labs keycard (Black) | 1 | Required | N/A | Unlocks the human experiment's area. |\nDespite the quest objective suggesting to place a WI-FI Camera in the quarantine zone (Blue keycard), it actually has to be placed in the human experiment's area (Black keycard)."
+    }
+  ]
+}

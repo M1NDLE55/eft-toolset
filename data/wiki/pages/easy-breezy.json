@@ -1,0 +1,44 @@
+{
+  "title": "Easy-Breezy",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Easy-Breezy",
+  "revisionId": 361740,
+  "lastEdited": "2026-09-24T12:29:17Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve, Lighthouse",
+    "given by": "Prapor",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Easy-Breezy is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, soldier! I've got something for you.Just got a new rifle build in to sell. Lightweight, comfortable, a real pleasure to shoot. But you know how it is — I can't just throw it on the market without testing it first.Take it out around Tarkov. Run it on Lighthouse, Reserve... really put it through its paces. Then come back and tell me how it handled.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 30 targets while using an SR-2M with suppressor and KP-SR2 sight on Reserve or Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"How's it feel, easy to aim? Does the silencer get in the way? Perfect.\""
+    },
+    {
+      "heading": "Initial equipment",
+      "level": 2,
+      "text": "| Icon | Item name | Amount | Notes |\n| SR-2M | SR-2M Veresk 9x21 submachine gun | 1 | Modded after task requirements |"
+    }
+  ]
+}

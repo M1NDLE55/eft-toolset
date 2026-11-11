@@ -1,0 +1,59 @@
+{
+  "title": "Gunsmith - OP-SKS",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_OP-SKS",
+  "revisionId": 353696,
+  "lastEdited": "2026-08-14T21:43:14Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith OP-SKS"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith - OP-SKS is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Oh, hello there. Do you like hunting? Elk, deer... I've always been somewhat neutral about hunting, even though I love my gunsmithing craft. Well, anyway, that's what I'm getting at. There's a new order, and I wanted to ask you to help with it. I need an upgraded Simonov carbine, with a silencer and optic scope. 20-round or larger mag, ergonomics over 35, recoil sum no more than 350.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 9 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an OP-SKS to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,600 EXP\n- Mechanic Rep +0.01\n- 25,000 Roubles\n  - 26,250 Roubles with Intelligence Center Level 1\n  - 28,750 Roubles with Intelligence Center Level 2\n- 2× Gunpowder \"Kite\"\n- 1× Car battery\n- 1× Electric motor\n- Unlocks purchase of PP-19-01 Vityaz 9x19 submachine gun (variant Zenit) at Ref LL1\n\"Oh, you've done it rather quick. Thank you!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "OP-SKS specifications:\n- 60 Durability\n- 35 or greater ergonomics\n- 350 or less recoil\n- 600 or greater sighting range\n- 6 kg or less in weight\n- A magazine with a capacity of at least 20\n- A silencer"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard OP-SKS from Jaeger LL1.\n\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| SKS 7.62x39 TAPCO 6610 20-round magazine | PeacekeeperSkier | LL1LL1 (Barter) |\n| OP-SKS dovetail mount | Jaeger | LL1 |\n| NPZ USP-1 Tyulpan 4x scope | Prapor | LL1 |\n| NPZ USP-1 scope eyecup | Prapor | LL1 |\n| SKS TAPCO Intrafuse chassis | Mechanic | LL1 (Barter); LL1 |\n| SKS TAPCO Intrafuse buffer tube | Mechanic | LL1 |\n| AR-15 Magpul CTR Carbine stock | Peacekeeper | LL2 |\n| SKS TAPCO Intrafuse SAW-Style pistol grip | Mechanic | LL1 |\n| SKS TAPCO Intrafuse chassis lower rail | Mechanic | LL1 |\n| Zenit RK-6 tactical foregrip | Skier | LL3 |\n| SKS Hexagon 7.62x39 sound suppressor | Skier | LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

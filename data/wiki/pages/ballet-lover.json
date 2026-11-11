@@ -1,0 +1,50 @@
+{
+  "title": "Ballet Lover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ballet_Lover",
+  "revisionId": 359102,
+  "lastEdited": "2026-09-13T20:10:29Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Ragman",
+    "previous": "Audit",
+    "leads to": "Audiophile, Dandies",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Ballet Lover is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Listen, brother, can you help me find proper info on a guy? He's already left the city. Why can't I find him myself? Because his fucking name is Ivan Ivanov. Seriously, I'm not kidding. There are two hundred thousand of them all over the country with that name. If we could find his former address in Tarkov, we might be able to run him through the database. Let me see what I can find on him. I think he used to run a bar, right. I don't know the name of the bar though... Listen, I don't know how you're gonna know which bar is his. Oh, that reminds me, he was into ballet. No kidding. He went to the Mariinsky every season. Even tried to host something at our local theater, but people weren't really crazy about chicks in tutus. More specific? Brother, I'm already fucking specific! I believe in you, use your intuition.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 20 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the balletmeister's apartment on Streets of Tarkov\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,700 EXP\n- Ragman Rep +0.02\n- 66,000 Roubles\n  - 69,300 Roubles with Intelligence Center Level 1\n  - 75,900 Roubles with Intelligence Center Level 2\n- 1× Eagle Industries MMAC plate carrier (Ranger Green)\n- Unlocks purchase of 6B5-15 Zh-86 Uley armored rig (Flora) at Ragman LL2\n\"Found both the bar and the guy's address? Here, write it down for me. You're better than those psychics on TV finding missing people. Wanna be a detective when all this is over, bro? I'll fix you up with a Poirot hat, I promise.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Primorsky 46-48 skybridge key | 1 | Required | N/A | Used to open the balletmeister's apartment door |\nIn this quest, you have to find the balletmeister's apartment on Streets of Tarkov. The wanted apartment is apartment no. 10 on the fourth floor of the Primorsky 48 apartment building. A Primorsky 46-48 skybridge key is required to enter it via the skybridge from the adjoining Primorsky 46 staircase. The apartment 10 entrance door can be breached from the inside to leave."
+    }
+  ]
+}

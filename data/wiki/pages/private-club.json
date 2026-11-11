@@ -1,0 +1,44 @@
+{
+  "title": "Private Club",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Private_Club",
+  "revisionId": 362476,
+  "lastEdited": "2026-09-29T15:44:30Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Skier",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Private Club is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Opachki, would you look at this little character. You got any ibuprofen? My noggin's fucking killing me. What, something wrong, princess? Yes, I got hammered last night, so what? It was a major league game! They wouldn't let a twat like you anywhere near that table. Sometimes we get together to test our luck, but yesterday clearly wasn't my day. Not only did I lose a shitload of money, but also my fucking wallet. You're here for work, ye? Here, I'll give you a fucking job. Find my wallet. And don't even try any bullshit, I'd recognize mine with my eyes closed. We were at Warehouse 17 near the customs terminal, that's where I last seen it. Second floor, mate.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain Skier's wallet on Customs\n- Hand over the found item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Skier Rep +0.1\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 518 Euros with Intelligence Center Level 2\n\"Proper good fucking job mate! I knew it couldn't just vanish into thin air like that. We have some kind of connection, you and I. This little baby is like a lucky charm for me. When I bought this wallet, things went booming for me. I've gotten it lost a thousand times since then, but it always comes back to me.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Skier's wallet | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you have to find Skier's wallet on Customs. It can be found in a room on the second floor of Warehouse 17. There are multiple spawns throughout the room."
+    }
+  ]
+}

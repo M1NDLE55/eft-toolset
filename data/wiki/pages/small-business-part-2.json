@@ -1,0 +1,49 @@
+{
+  "title": "Small Business - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Small_Business_-_Part_2",
+  "revisionId": 359681,
+  "lastEdited": "2026-09-13T20:20:20Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "previous": "Small Business - Part 1",
+    "leads to": "Small Business - Part 3",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Small Business - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You remember my \"entrepreneur\"? I found him, he's one of the local gang bosses. Who? You don't need to know that. Your job is to go to each of them and remind them that my trade routes are mine alone. Don't touch the chiefs themselves, they're more useful alive. But their guards should be cut down for a clear show of force.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 10 Boss guards without killing the Bosses"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +36,800 EXP\n- Fence Rep +0.04\n- 2,200 Euros\n  - 2,310 Euros with Intelligence Center Level 1\n  - 2,530 Euros with Intelligence Center Level 2\n- 2× Physical Bitcoin\n\"Done? Good, now everyone will think twice before getting into my sales network.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"I told you not to touch the bosses themselves! I need to intimidate them, not take them out.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 10 boss guards without killing any bosses. Killing any boss will fail the quest.\n\nRefer to the respective boss pages for their behavior and strategy to eliminate their guards.\n\nA relatively risk-free way to complete this quest is, to kill Kaban's sniper guards on the roof of the LexOs car dealership on Streets of Tarkov from a distance."
+    }
+  ]
+}

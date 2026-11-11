@@ -1,0 +1,69 @@
+{
+  "title": "RB-ORB2 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-ORB2_key",
+  "revisionId": 358697,
+  "lastEdited": "2026-09-10T22:57:54Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-ORB2"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80ccdd86f77474f7575e02",
+    "ID": "rezbase_key_right_weap2fl"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-ORB2 key (RB-ORB2) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the Federal State Reserve Agency base southern barracks' armories."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Required for the quest Reserve Expert from Ragman"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In the Common fund stash (Shturman's crate)\n- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- Near the tank at the \"RUAF Gate\" extraction on a concrete wall piece that has a \"HELP\" inscription"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Inside a locker which is located in a dressing room inside the connection tunnel from the radar station to the white pawn barracks\n\n- In different locations in the main room on the second floor of the barracks marked with white pawn."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Eastern barracks area on Reserve. East end of the southern building (white pawn), 2nd floor. (Highlighted in green)"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Weapon mods, Ammunition)\n- One Drawer\n- One Weapon box (4x4)\n- One Weapon box (6x2)"
+    }
+  ]
+}

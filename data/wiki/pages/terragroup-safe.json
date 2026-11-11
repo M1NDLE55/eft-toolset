@@ -1,0 +1,33 @@
+{
+  "title": "TerraGroup safe",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_safe",
+  "revisionId": 314050,
+  "lastEdited": "2025-05-31T16:55:08Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "66acff0a1d8e1083b303f5af",
+    "ID": "SafeBank_terra"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "TerraGroup safe is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A 3x3 grid loot container that spawns weapons, grenades, paper ammo boxes, grenade launcher cartridges, medical supplies, medical items, tools, flammable materials, info items and TerraGroup Labs access keycards."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "In the TerraGroup storage room on Factory."
+    }
+  ]
+}

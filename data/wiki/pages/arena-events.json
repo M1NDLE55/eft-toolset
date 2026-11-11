@@ -1,0 +1,124 @@
+{
+  "title": "Arena Events",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Arena_Events",
+  "revisionId": 362006,
+  "lastEdited": "2026-09-24T18:14:42Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov: Arena"
+  ],
+  "redirects": [],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "For the main game, see Events.\n\nEvents in Escape from Tarkov: Arena are limited time activities that give players new challenges, adjust gameplay & mechanics, and introduce new items that are being tested by the developers for a limited time. Some events are \"lore-oriented\" which give an insight or backstory to the Tarkov/Norvinsk region, while other events are seasonal holiday events that are done just for fun."
+    },
+    {
+      "heading": "Free Weekend (24 September 2026)",
+      "level": 2,
+      "text": "- Quest Smells Like Gunpowder has been added.\n- Quest A New Classic has been added.\n- Quest Firework has been added.\n- Quest Double Tap has been added.\n- Quest Miracle Worker has been added.\n\n| This section describes past events. |"
+    },
+    {
+      "heading": "CheckChamber (31 July 2026)",
+      "level": 2,
+      "text": "\"Ref's supply operation has hit a snag: the magazines were lost in transit, and there are no replacements available just yet. But the show must go on.\"\n- Quest Musketeers has been added.\n- Quest Unsurpassed Skill has been added.\n- Quest No Man Is an Island has been added.\n- Quest The Old-Fashioned Way has been added.\n- Quest Magazines Are for the Weak has been added.\n- New game mode \"CheckChamber\" has been added.\n  - Matches in this mode provide double EXP.\n  - Weapons in this mode do not have a magazine attached and there are no spare magazines available in the gear presets.\n  - All weapons have to be reloaded through the chamber after each shot.\n  - One of the following weapons is randomly assigned each life:\n    - Springfield Armory M1A 7.62x51 rifle\n    - Knight's Armament Company SR-25 7.62x51 marksman rifle (Taupe)\n    - Desert Tech MDR 7.62x51 assault rifle\n    - Kalashnikov AK-308 7.62x51 assault rifle\n    - DS Arms SA58 7.62x51 assault rifle\n    - Magnum Research Desert Eagle L6 .50 AE pistol (WTS)\n    - SWORD International Mk-18 .338 LM marksman rifle\n    - SVDS 7.62x54R sniper rifle\n    - ASh-12 12.7x55 assault rifle\n    - TheAKGuy AK-50 .50 BMG anti-materiel rifle\n    - Tokarev SVT-40 7.62x54R rifle\n    - Sako TRG M10 .338 LM bolt-action sniper rifle\n    - Lobaev Arms DVL-10 7.62x51 bolt-action sniper rifle\n    - Saiga-12K 12ga automatic shotgun (Redline)"
+    },
+    {
+      "heading": "S.B.E.U. HERO (3 July 2026)",
+      "level": 2,
+      "text": "- Quest The Bad Batch has been added.\n- Quest SBEU Mimicry has been added.\n- Quest Safety First has been added.\n- Quest Munchkin has been added.\n- Quest Brain Matter Distribution has been added.\n- New game mode \"S.B.E.U. HERO\" has been added.\n  - Matches in this mode provide double EXP.\n  - Regardless of the selected preset, all players carry an Ushanka ear flap hat, GP-5 gas mask and no tactical rig, armor or an earpiece. Each player has 5 triple slot pockets instead of the typical 4 single slot pockets.\n  - One of the following weapons is randomly assigned each life:\n| Name |\n| HK MP5K 9x19 submachine gun |\n| SIG MPX 9x19 submachine gun |\n| TDI KRISS Vector Gen.2 9x19 submachine gun |\n| TOZ-106 20ga bolt-action shotgun |\n| Remington Model 700 7.62x51 bolt-action sniper rifle |\n| Molot Arms VPO-209 .366 TKM carbine |\n| Molot Arms VPO-215 Gornostay .366 TKM bolt-action rifle |\n| Colt M4A1 5.56x45 assault rifle |\n| Saiga-12K 12ga automatic shotgun (Redline) |"
+    },
+    {
+      "heading": "Last Hero: Revolvers (19 June 2026)",
+      "level": 2,
+      "text": "\"Heavy is good, heavy is reliable. If it doesn't work, you can always hit them with it.\"\n- Quest Spinning the drums has been added.\n- Quest Barrel warm-up has been added.\n- Quest Battle of the Duelists has been added.\n- Last Hero modes give 50% bonus to Arena BattlePass EXP.\n- New game mode \"Last Hero: Revolvers\" has been added. Matches in this mode provide double EXP.\n  - In this game mode one of the following weapons is randomly assigned each life:\n    - Chiappa Rhino 50DS .357 revolver\n    - MP-18 7.62x54R single-shot rifle\n    - MP-43 12ga sawed-off double-barrel shotgun\n    - MP-43-1C 12ga double-barrel shotgun\n    - MTs-255-12 12ga shotgun\n    - Marlin MXLR .308 ME lever-action rifle\n    - RSh-12 12.7x55 revolver"
+    },
+    {
+      "heading": "Knives Out (5 June 2026)",
+      "level": 2,
+      "text": "- Quest KnivesOut - Part 1 has been added.\n- Quest KnivesOut - Part 2 has been added.\n- Quest KnivesOut - Part 3 has been added.\n- Checkpoint modes give 50% bonus to Arena BattlePass EXP.\n- New game mode \"Checkpoint: Knives Out\" has been added.\n  - Firearms from presets are not available.\n  - On match start and upon each respawn, the player receives a random melee weapon.\n  - Some melee weapons have increased damage.\n| Name | Chop damage | Stab damage |\n| NKVD Finka knife | 150 | 150 |\n| United Cutlery M48 Tactical Kukri | 37 | 35 |\n| Camper axe | 36 | 35 |\n| Red Rebel ice pick | 35 | 35 |\n| Freeman crowbar | 35 | 34 |\n| MPL-50 entrenching tool | 34 | 43 |"
+    },
+    {
+      "heading": "TeamFight Playtest (7 May 2026)",
+      "level": 2,
+      "text": "- The Capture Point now appears 20–40 seconds after the gates open, depending on the Arena size.\n- The Cleanup Crew spawns 60 seconds after the Capture Point appears.\n- The Poison phase begins 20 seconds after the Cleanup Crew enters the field.\n- Total round duration (from gate opening to Poison activation) has been reduced from 155 seconds to 90 seconds.\n- TeamFight no longer has class restrictions within a team.\n- Capture time has been reduced to 7 seconds (except on the “Bowl” map).\n- Capture speed now scales with the number of players involved, similar to the CheckPoint mode.\n- During the event, all TeamFight rewards are increased by 50% (including Arena BattlePass XP)."
+    },
+    {
+      "heading": "Free Weekend (24 April 2026)",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Gate Map Playtest (13 March 2026)",
+      "level": 2,
+      "text": "- Quest Field Testing has been added.\n- The map \"Gate\" has been added.\n- \"Boarding area turned into an Arena. Among abandoned shops and shattered storefronts stretch passages to neighboring gates, forming a tangled network of cover and flanking routes.\" (\"Gate\" map description)"
+    },
+    {
+      "heading": "Lunar New Year 2026 (11 February 2026)",
+      "level": 2,
+      "text": "- Quest General Cleanup has been added.\n- Quest Debts has been added.\n- Quest More Red has been added."
+    },
+    {
+      "heading": "Dubak (26 December 2025)",
+      "level": 2,
+      "text": "- Quest Domain Expansion has been added.\n- Quest Blood on the Snow has been added.\n- Quest Not Below Zero has been added.\n- Quest Arena Masquerade has been added.\n- Quest Comfort Zone has been added.\n- Quest Only Victories has been added.\n- Quest Sharpest Shooter has been added.\n- Quest High Voltage has been added.\n- Quest First Blood has been added.\n- Quest Frost and Sun has been added.\n- Quest Weather the Blizzard has been added."
+    },
+    {
+      "heading": "Free Weekend (24 October 2025)",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Best Served Cold (19 July 2025)",
+      "level": 2,
+      "text": "- Quest Rigged has been added.\n- Quest Lay Low has been added.\n- Quest Rat Hunter has been added.\n- Quest Compromise has been added.\n- Quest Best Served Cold has been added."
+    },
+    {
+      "heading": "Free Weekend (18 July 2025)",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Arena Pantheon (12 July 2025)",
+      "level": 2,
+      "text": "- Quest Shoot First has been added.\n- Quest Stay on Top has been added.\n- Quest Arena Pantheon has been added."
+    },
+    {
+      "heading": "Free Weekend (30 May 2025)",
+      "level": 2,
+      "text": "- 2× Arena BattlePass EXP\n- Quest Pecunia Non Olet has been added.\n- Quest Weak Compromise has been added.\n- Quest Job That Kills has been added.\n- Quest Illusion of Mercy has been added.\n- Quest Berserker has been added."
+    },
+    {
+      "heading": "Examinatio (7 May 2025)",
+      "level": 2,
+      "text": "- Quest Examinatio - Part 1 has been added.\n- Quest Examinatio - Part 2 has been added.\n- Quest Examinatio - Part 3 has been added.\n- Quest Examinatio - Part 4 has been added.\n- Quest Examinatio - Part 5 has been added.\n- Quest Examinatio - Part 6 has been added.\n- Quest Examinatio - Part 7 has been added.\n- Quest Examinatio - Part 8 has been added."
+    },
+    {
+      "heading": "Arena Cup Series III (26 April 2025)",
+      "level": 2,
+      "text": "- Quest Clip Their Wings has been added."
+    },
+    {
+      "heading": "Twitch Rivals April 2025 (16 April 2025)",
+      "level": 2,
+      "text": "- Quest Tournament has been added."
+    },
+    {
+      "heading": "The Labyrinth (27 March 2025)",
+      "level": 2,
+      "text": "- Quest Creator Inspiration - Part 1 has been added.\n- Quest Creator Inspiration - Part 2 has been added.\n  - After completing the quest, Labrys access keycard becomes a possible reward for weekly and hard daily operational tasks from Ref."
+    },
+    {
+      "heading": "Christmas Time 2024 (26 December 2024)",
+      "level": 2,
+      "text": "- Quest Christmas Time - Part 1 has been added.\n- Quest Christmas Time - Part 2 has been added.\n- Quest Christmas Time - Part 3 has been added.\n- Quest Christmas Time - Part 4 has been added.\n- Quest Christmas Time - Part 5 has been added.\n- Quest Christmas Time - Part 6 has been added.\n- Quest Christmas Time - Finale has been added."
+    },
+    {
+      "heading": "Free Weekend (17 December 2024)",
+      "level": 2,
+      "text": "- Quest Teacher has been added.\n- Exclusive items Oakley SI Gascan White glasses and Winter halfmask were obtainable from Twitch Drops."
+    }
+  ]
+}

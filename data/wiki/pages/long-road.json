@@ -1,0 +1,44 @@
+{
+  "title": "Long Road",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Long_Road",
+  "revisionId": 362369,
+  "lastEdited": "2026-09-29T12:31:46Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse, Shoreline",
+    "given by": "Skier",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Long Road is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come here already. Alright, so along the entire coast of the cape, there is a road, you've probably seen it. My guys use this road to transport merchandise to and from me. Usually, they managed to avoid trouble or calm some particular morons down, but right now it's a damn rat nest there, probably found out about my convoys. They started attacking my guys with full power, can't get through them at all. Go there and lay those whack-jobs down, will you? I'll get something nice for you in return.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 7 Scavs along the shore and the main road on Lighthouse or Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Skier Rep +0.75\n- 1,650 Euros\n  - 1,732 Euros with Intelligence Center Level 1\n  - 1,897 Euros with Intelligence Center Level 2\n- Unlocks purchase of Lobaev Arms DVL-10 7.62x51 bolt-action sniper rifle (variant Urbana) at Skier LL3\n\"Good shit, you fucked those morons up properly. Alright, mate, see ya.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

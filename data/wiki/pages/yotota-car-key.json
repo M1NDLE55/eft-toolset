@@ -1,0 +1,58 @@
+{
+  "title": "Yotota car key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Yotota_car_key",
+  "revisionId": 324542,
+  "lastEdited": "2025-11-22T20:15:38Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "Yotota"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a pickup truck at the sawmill on Woods.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "591ae8f986f77406f854be45",
+    "ID": "lulkin toyota"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Yotota car key (Yotota) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A Yotota folding car key with locking buttons."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the blue Yotota pickup truck next to the wooden shacks on Woods. Bug: The door is currently bugged and can't be unlocked."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- ?"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References:\n- The name \"Yotota\" is a reference of Toyota the vehicle brand.\n- The vehicle key is modeled after the 2006-2010 Audi A6 key fob."
+    }
+  ]
+}

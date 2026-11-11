@@ -1,0 +1,68 @@
+{
+  "title": "Lightkeeper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lightkeeper",
+  "revisionId": 358124,
+  "lastEdited": "2026-09-08T20:48:36Z",
+  "kind": "trader",
+  "categories": [
+    "Traders"
+  ],
+  "redirects": [
+    "Farit Akhmadullovich Genatulin"
+  ],
+  "infobox": {
+    "full name": "Farit Akhmadullovich Genatulin",
+    "location": "Lighthouse at the peninsula territory on Lighthouse",
+    "origin": "Unknown",
+    "wares": "Currently none",
+    "services": "- Sacred Amulet - Rogue support - Zryachiy support",
+    "currencies": "Dollars ($), Euros (€)"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Farit Akhmadullovich Genatulin, known by his alias \"Lightkeeper\", is an in-raid trader in Escape from Tarkov."
+    },
+    {
+      "heading": "Biography",
+      "level": 2,
+      "text": "The current Tarkov Lighthouse warden, a specialist in radio and naval electronic devices."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- You can't hand in quests if you don't have enough inventory space for the rewards.\n- The visit time in Lightkeeper's area is limited to 10 minutes per raid. Lightkeeper will break conversation after 9 minutes, and if you don't leave in the minute after, you will go MIA.\n- If Zryachiy dies while you are in Lightkeeper's area, Lightkeeper will break conversation trying to contact him and you will be sent out.\n- Reputation with Lightkeeper currently has no use."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "Lightkeeper can be found at the Lighthouse location. He is located in a locked area on the 3rd floor of the lighthouse building at the peninsula territory. When a player is in the area, the light above the door turns red.\n\nThe bridge that leads to the lighthouse is guarded by Zryachiy and full of Claymores.\n\nTo safely pass the bridge and speak to Lightkeeper, an encoded Digital secure DSP radio transmitter is required. It deactivates the claymores and has Zryachiy not shoot you. The questline to obtain one starts with To the Light - Trust but Verify."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- See the quests overview page"
+    },
+    {
+      "heading": "Services",
+      "level": 2,
+      "text": "- Sacred Amulet - After the completion of the quest Snatch, can be purchased for 3× Intelligence folder and 1,000 Dollars. Note: Free special slot required.\n  - While a player is wearing the amulet, Cultists do not attack the player unless provoked. Zryachiy's guards are not affected by it. The amulet can be used for 7 raids before it gets destroyed. It can be unequipped to retain uses. Only 1 can be in your possession at one time. Buying a new one will destroy the previous.\n- Rogue support - After the completion of the quest Provocation, can be purchased for 2× Secure magnetic tape cassette and 2,500 Euros.\n  - When a player purchases this service, in that raid, Rogues will not attack the player, regardless of his faction. In addition, Rogues will provide fire support by attacking targets that the player who purchased this service has directed their attention to.\n- Zryachiy support - After the completion of the quest Make an Impression, can be purchased for 3× Military flash drive and 2,000 Dollars.\n  - When a player buys this service, in that raid, Zryachiy will support the player by firing at the targets the player is attacking.\n- RFID keycard with unknown name - After progressing through the story chapter The Ticket and siding with Lightkeeper, can be purchased once per raid for 1× TerraGroup \"Blue Folders\" materials. Note: Free special slot required.\n  - The keycard is an access item for Terminal."
+    },
+    {
+      "heading": "Items for sale",
+      "level": 2,
+      "text": "Currently none."
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The Icebreaker archive data reveals that Lightkeeper was an USEC agent during the operation \"Firefly\".\n- During the dialogue between Lightkeeper and Voevoda during story chapter Batya, Voevoda calls him \"Vitya\", which is different from his known name \"Farit\"."
+    }
+  ]
+}

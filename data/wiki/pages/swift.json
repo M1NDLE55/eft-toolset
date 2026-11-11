@@ -1,0 +1,48 @@
+{
+  "title": "Swift",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Swift",
+  "revisionId": 359722,
+  "lastEdited": "2026-09-13T20:21:00Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Jaeger",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Swift is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"We've come a long way together, you've learned a lot. Now prove to me that it doesn't matter how much armor you wear, what's important is experience, agility, and intellect, the hunter spirit. How can an enemy harm you if they don't even see you? They'll be tricked by a more experienced warrior. When you realize this truth, you'll be harder than steel.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 50 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 PMCs without using any armor or helmets on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +107,000 EXP\n- +1 Endurance skill level\n- +1 Stress Resistance skill level\n- 1× Armband (Train Hard)\n- 2× .338 Lapua Magnum AP ammo pack (20 pcs)\n- 5× 7.62x39mm MAI AP ammo pack (20 pcs)\n\"Here you are, swift one. You pleased the old man, and drew conclusions yourself, I hope. You yourself are the weapon and the monolith, not the amount of steel you wear.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "This quest takes place on Woods. You are required to kill 15 PMCs without wearing any armor vest, armored chest rig, armored headwear or armored face cover. Armored eyewear is allowed.\n\nBug: The ANA Tactical Alpha chest rig (MultiCam) is currently considered armored for this quest even when it's not.\n\nIf you want to protect yourself during this quest you can choose to still wear armor, but unequip it before killing a PMC."
+    }
+  ]
+}

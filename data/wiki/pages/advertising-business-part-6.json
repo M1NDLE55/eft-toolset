@@ -1,0 +1,45 @@
+{
+  "title": "Advertising Business - Part 6",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Advertising_Business_-_Part_6",
+  "revisionId": 359060,
+  "lastEdited": "2026-09-13T20:09:46Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Advertising Business - Part 5",
+    "leads to": "I Am Speed - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Advertising Business - Part 6 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I ran an inventory check recently. Not myself, I had my guys handle it. Turns out we still need to clear out a couple more crates. You know the drill: take the gun, make it look good on the battlefield, and I'll handle the sales. You get your percentage, same as always.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 40 enemies with headshots while using a Velociraptor, PKP or SR-2M"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,000 EXP\n- Ref Rep +0.02\n- 90,000 Roubles\n- 32 GP coins"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Requirement | Notes |\n| Aklys Defense Velociraptor .300 Blackout assault rifle; or; Kalashnikov PKP 7.62x54R infantry machine gun; or; SR-2M Veresk 9x21 submachine gun | Aklys Defense Velociraptor .300 Blackout assault rifle; or; Kalashnikov PKP 7.62x54R infantry machine gun; or; SR-2M Veresk 9x21 submachine gun | Required | Has to be used for the kills |"
+    }
+  ]
+}

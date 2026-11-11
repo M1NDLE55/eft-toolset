@@ -1,0 +1,50 @@
+{
+  "title": "Cut Down to the Root",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cut_Down_to_the_Root",
+  "revisionId": 362104,
+  "lastEdited": "2026-09-24T19:49:18Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Jaeger",
+    "previous": "Callsign Malachite",
+    "related": "Preserve a Valuable Piece",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Cut Down to the Root is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey, kid. The Rogues have badly overestimated their strength lately and lost a lot of men. Many are glad that it's now easier to move through the territory around the lighthouse. But we need to look at the consequences and act ahead of time. Given enough time under Knight's leadership, they'll certainly replenish their supplies and recruit new fighters. We can put an end to that right now, if we don't waste any time. I can't get to the coast myself right now, and Partisan could still be overwhelmed by their numbers. So your help would be most welcome. But keep in mind that their new positions are much easier to defend. Be careful.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 Rogues on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 450,000 Roubles\n  - 472,500 Roubles with Intelligence Center Level 1\n  - 517,500 Roubles with Intelligence Center Level 2\n- 1× S I C C organizational pouch\n- 2× Physical Bitcoin\n\"I'm glad you're on our side. I hear the men from the lighthouse island are helping the Rogues for some reason, and I'm no longer so sure we'll be able to finish them for good. But even if that's the case, we're doing important work.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"Never thought Lightkeeper could cloud your judgment. We could've gotten rid of a serious threat to Tarkov, but you chose to walk away so you could climb higher in some imaginary hierarchy. Leave me be, kid.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "By completing Preserve a Valuable Piece, you fail and will lose access to this quest."
+    }
+  ]
+}

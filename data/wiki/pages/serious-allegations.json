@@ -1,0 +1,95 @@
+{
+  "title": "Serious Allegations",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Serious_Allegations",
+  "revisionId": 362434,
+  "lastEdited": "2026-09-29T14:31:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Skier",
+    "previous": "Viewer",
+    "leads to": "Camera, Action!",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Serious Allegations is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey! Remember the client with the game magazine? I have a new order. I need a data disk, it's all related to the same game. Some scam artist said that the people who created the game had stolen user data from 2 million accounts! And as proof he showed a hard drive to everyone, allegedly with this leak. But the publishers are serious guys, they would not allow such bullshit. So the client is looking for the drive to clarify the situation. My guys said the drive should be in an old wooden house near the health resort, there is a toilet on the left and a rag above the entrance.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only available to buyers of the \"Edge of Darkness\" edition of the game."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the hard drive at the old house on Shoreline\n- Hand over the found item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 1,650 Euros\n  - 1,732 Euros with Intelligence Center Level 1\n  - 1,897 Euros with Intelligence Center Level 2\n- 1× L3Harris AN/PVS-14 night vision monocular\n- 1× AN/PVS-14 Norotos Dual Dovetail Mount\n- 1× Norotos Titanium Advanced Tactical Mount\n\"Lemme see. Ha, it's a blank! Yeah, the publishers turned out to be smooth guys, and trust me, this allegations kid will be forgotten by everyone.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Hard drive | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find a hard drive on Shoreline. This item has 13 spawn locations: 9 spawns across 5 houses in the north-western swamp village, 3 spawns in a house west of the cottages, and 1 spawn on a rock in the south-eastern part of the map."
+    },
+    {
+      "heading": "Swamp village houses",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "House #1 - 2 spawns",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "House #2 - 2 spawns",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "House #3 - 2 spawns",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "House #4 - 1 spawn",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "House #5 - 2 spawns",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "House #6 - 3 spawns",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "South-eastern rock",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The quest dialogue is referencing an incident that happened in 2018 between the content creator Eroktic and Battlestate Games. Eroktic uploaded a YouTube video in which he talked about an alleged user data leak from 1,900,000 game accounts, without providing any actual evidence. In response, Battlestate Games issued 47 DMCA strikes on his YouTube channel to stop the spread of misinformation, which were later removed. Battlestate Games commented on the allegations in a Facebook post."
+    }
+  ]
+}

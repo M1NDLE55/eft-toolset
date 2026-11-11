@@ -1,0 +1,40 @@
+{
+  "title": "Gladiator Life - Part 7",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Life_-_Part_7",
+  "revisionId": 359345,
+  "lastEdited": "2026-09-13T20:14:37Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Life - Part 6",
+    "leads to": "Gladiator Life - Part 8",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Life - Part 7 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Alright, time to move on to the most important part, the medicine. And stimulants. You've definitely used them already, otherwise you would not have survived this long in the Arena. Now I need to see how well you learned the lesson. Use stimulants to kill! And fine, if you patch yourself up and then take someone out, I will count that too.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 enemies while under the effect of any stimulant or painkiller"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,500 EXP\n- 48,000 Roubles\n- 10 GP coins\n- Unlocks AFAK tactical individual first aid kit in the Armory"
+    }
+  ]
+}

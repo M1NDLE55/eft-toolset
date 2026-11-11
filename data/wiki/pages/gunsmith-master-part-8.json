@@ -1,0 +1,60 @@
+{
+  "title": "Gunsmith Master - Part 8",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_8",
+  "revisionId": 356775,
+  "lastEdited": "2026-08-29T20:07:55Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith 8",
+    "Gunsmith Master 8"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith Master - Part 8 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I have an interesting order here. Not just one usual piece of art, but two in one order. I think you can do it. The first piece is a Remington Model 700 sniper rifle with a full AB Arms body kit, with powerful optic and a silencer. Ergonomics not less than 35, recoil sum - less than 500. And make it lightweight, with a small magazine. The second piece is a Colt M1911 pistol, with a Pachmayr grip, Anarchy Outdoors muzzle brake and a flashlight of any kind.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 38 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an M700 to comply with the given specifications\n- Modify an M1911 to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +27,700 EXP\n- Mechanic Rep +0.03\n- 1× Pistol case\n- 3× 7.62x51mm M993 ammo pack (20 pcs)\n- Unlocks purchase of AR-15 HK Ergo PSG-1 style pistol grip at Mechanic LL4\n- Unlocks purchase of AR-15 Strike Industries Advanced Receiver Extension (Black) at Mechanic LL4\n\"Okay, I see the bolty, and what about the handgun? There it is, my precious. Good work, friend. The next order is coming in tomorrow, so you can go do your own work until then.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "M700 specifications:\n- 60 Durability\n- 35 or more ergonomics\n- 500 or less recoil\n- 6 kg or less in weight\n- 1500 or greater sighting range\n- A silencer\n- A magazine with a capacity of 5 or no magazine\n- M700 AB Arms MOD*X GEN 3 chassis\n- M700 AB Arms MOD*X GEN 3 KeyMod handguard\n- M700 AB Arms MOD*X rail mount\n\nM1911 specifications:\n- 60 Durability\n- 75 or more ergonomics\n- 200 or greater sighting range\n- Any tactical device (such as the NcSTAR Tactical Blue Laser)\n- A magazine\n- M1911 Pachmayr American Legend Grip #423\n- M1911 Anarchy Outdoors .45 ACP muzzle brake"
+    },
+    {
+      "heading": "Builds",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Notes:",
+      "level": 3,
+      "text": "- These builds are based on a standard M700 from Peacekeeper LL2 and a standard Colt M1911A1 .45 ACP pistol from Peacekeeper LL1.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nM700 Shopping List:\nM700 Shopping List\n| Attachment | Sold By | Loyalty Level |\n| M700 AB Arms MOD*X GEN 3 chassis | Peacekeeper | LL4 |\n| AR-15 Magpul MIAD pistol grip (FDE) | Peacekeeper | LL2 |\n| M700 AB Arms MOD*X GEN 3 KeyMod handguard | Peacekeeper | LL4 |\n| Strike Industries KeyMod 6 inch rail | Mechanic | LL1 |\n| Zenit RK-6 tactical foregrip | Skier | LL3 |\n| AR-15 ADAR 2-15 buffer tube | Skier | LL1 |\n| AR-15 KRISS Defiance DS150 stock | Peacekeeper | LL3 |\n| AR-10 Daniel Defense WAVE 7.62x51 muzzle brake | Mechanic | LL3 |\n| Daniel Defense WAVE QD sound suppressor | Mechanic | LL3 |\n| M700 AB Arms MOD*X rail mount | Peacekeeper | LL4 |\n| Recknagel Era-Tac 34mm ring scope mount | Jaeger | LL3 |\n| Schmidt & Bender PM II 5-25x56 34mm riflescope | Jaeger | LL3 |\n| M700 7.62x51 Magpul PMAG AC 5-round magazine | Skier | LL2 |\n\nM700 Inspect View:\nM700 Inspect View\n\nM700 Modding Screen:\nM700 Modding Screen\n\nM1911 Shopping List:\nM1911 Shopping List\n| Icon | Attachment | Sold By | Loyalty Level |\n| M1911 Pachmayr American Legend Grip 423 | M1911 Pachmayr American Legend Grip #423 | Mechanic | LL1 |\n| M1911 Anarchy Outdoors .45 ACP muzzle brake | M1911 Anarchy Outdoors .45 ACP muzzle brake | Mechanic | LL1 |\n| M1911A1 NcSTAR trigger guard mount | M1911A1 NcSTAR trigger guard mount | Mechanic | LL1 |\n| NcSTAR Tactical Blue Laser | NcSTAR Tactical Blue Laser | Skier | LL1 |\n\nM1911 Inspect View:\nM1911 Inspect View\n\nM1911 Modding Screen:\nM1911 Modding Screen"
+    }
+  ]
+}

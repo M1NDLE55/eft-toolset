@@ -1,0 +1,48 @@
+{
+  "title": "To the Light - Dangerous Ambitions",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_Dangerous_Ambitions",
+  "revisionId": 360021,
+  "lastEdited": "2026-09-14T00:02:32Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "previous": "To the Light - Fallen Bird",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "To the Light - Dangerous Ambitions is a Quest in Escape from Tarkov"
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Lightkeeper's package made it to me. Though it's more of a symbolic message than an actual shipment... He clearly wants Peacekeeper to know who's behind the disruption of his deals. Peacekeeper will most likely start looking for whoever's responsible soon, and he may turn to you for help. All you need to do is deliver a message from Lightkeeper.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the Amulet from Lightkeeper to Peacekeeper"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 100,000 Roubles\n  - 105,000 Roubles with Intelligence Center Level 1\n  - 115,000 Roubles with Intelligence Center Level 2\n\"I'm not even gonna ask how Peacekeeper reacted to the package. You could almost feel sorry for him if he wasn't responsible for all of this himself. What was he thinking, going up against Lightkeeper...\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount |\n| Amulet from Lightkeeper | 1 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "The Amulet from Lightkeeper must be handed over to Peacekeeper for his quest To the Light - Bite the Dust for this quest to be completed."
+    }
+  ]
+}

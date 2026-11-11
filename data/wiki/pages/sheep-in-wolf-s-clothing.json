@@ -1,0 +1,50 @@
+{
+  "title": "Sheep in Wolf's Clothing",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sheep_in_Wolf's_Clothing",
+  "revisionId": 359661,
+  "lastEdited": "2026-09-13T20:19:59Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline, Streets of Tarkov, Ground Zero",
+    "given by": "Fence",
+    "previous": "Forbidden Knowledge",
+    "leads to": "Final Stretch",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Sheep in Wolf's Clothing is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Time for some serious work. I've managed to pinpoint the location of one of the sites nobody knows about except these operators. And if my calculations are right, they haven't been there themselves yet. I'm sending my own people to that site. You didn't really think I'd let you inside my operation, did you? Don't worry, I've still got a job for you. Take it, and you won't regret it. For my boys to get in and out cleanly, we need to keep those operators distracted and stir up some chaos. I figure you've collected a fair bit of their gear by now? Use it to throw their operation into disarray.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 4 Black Division operatives while wearing a Black Division plate carrier on Shoreline\n- Eliminate 4 Black Division operatives while wearing a Black Division plate carrier on Streets of Tarkov\n- Eliminate 4 Black Division operatives while wearing a Black Division plate carrier on Ground Zero"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- Unlocks purchase of Norinco QBZ-191 5.8x42 assault rifle at Skier LL3\n- 1x Money case\n- 1x Norinco QBZ-191 5.8x42 assault rifle\n\"That's exactly what I needed. My people are already on the move, but I set your share aside in advance, so go ahead and collect it. One more thing. My guys might need someone watching their backs, so you'd better stay in touch.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Requirement | Find in raid |\n| Ferro Concepts FCPC V5 Plate Carrier (Black Division); or; Spiritus Systems LV-119 Plate Carrier (Black Division V2); or; Spiritus Systems LV-119 Plate Carrier (MultiCam Black); or; Spiritus Systems LV-119 Plate Carrier (Black Division V1); or; First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division) | Ferro Concepts FCPC V5 Plate Carrier (Black Division); or; Spiritus Systems LV-119 Plate Carrier (Black Division V2); or; Spiritus Systems LV-119 Plate Carrier (MultiCam Black); or; Spiritus Systems LV-119 Plate Carrier (Black Division V1); or; First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division) | Needs to be worn to progress through the quest | N/A |\nIn this quest, you have to eliminate 4 Black Division operatives each on Shoreline, Streets of Tarkov and Ground Zero while wearing one of the Black Division plate carriers."
+    }
+  ]
+}

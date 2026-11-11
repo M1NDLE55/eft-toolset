@@ -1,0 +1,46 @@
+{
+  "title": "Assault Rifles",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Assault_Rifles",
+  "revisionId": 360751,
+  "lastEdited": "2026-09-19T12:13:57Z",
+  "kind": "skill",
+  "categories": [
+    "Combat skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Combat skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Assault Rifles is a Combat skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Assault rifles handling skill improves the overall handling, reduces recoil and reload time of Assault rifles."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Level 10 of this skill is needed for the story chapter Batya"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases reload speed (0.4% per level → +20% at Elite Level)\n- Increases weapon switching speed (0.8% per level → +40% at Elite Level)\n- Reduces weapon recoil (0.3% per level → -15% at Elite Level)\n- Improves weapon ergonomics (0.2% per level → +10% at Elite Level)\n- Elite level: Steady aim for the first 3 seconds with any stamina condition\n- Elite level: Doubles mastering gain"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Landing hits on enemies with Assault rifles and Assault carbines\n- Reloading Assault rifles and Assault carbines\n- Cycling the action/Unloading the chambers of Assault rifles and Assault carbines\n- Completing the quest The Cleaner\n- Completing the quest Consolation Prize"
+    },
+    {
+      "heading": "Tips",
+      "level": 2,
+      "text": "- For weapons which can be top reloaded, each round reloaded counts as a separate reload. It is possible to quickly gain points by repeatedly reloading an SKS so long as the raid was started without a round in the chamber.\n  - This will eject a round to the ground each time, so use cheap ammo or pick it up from the ground."
+    }
+  ]
+}

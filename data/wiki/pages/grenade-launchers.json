@@ -1,0 +1,36 @@
+{
+  "title": "Grenade Launchers",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Grenade_Launchers",
+  "revisionId": 360755,
+  "lastEdited": "2026-09-19T12:20:58Z",
+  "kind": "skill",
+  "categories": [
+    "Combat skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Combat skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Grenade Launchers is a Combat skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Launchers handling skill."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases reload speed (0.4% per level → +20% at Elite Level)\n- Increases weapon switching speed (0.8% per level → +40% at Elite Level)\n- Reduces weapon recoil (0.3% per level → -15% at Elite Level)\n- Improves weapon ergonomics (0.2% per level → +10% at Elite Level)\n- Elite level: Steady aim for the first 3 seconds with any stamina condition\n- Elite level: Doubles mastering gain"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Landing hits on enemies with Underbarrel grenade launchers\n- Completing the quest Consolation Prize\n- Completing the quest The Art of Explosion\n- Completing the quest Escort"
+    }
+  ]
+}

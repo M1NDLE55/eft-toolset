@@ -1,0 +1,36 @@
+{
+  "title": "Perception",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Perception",
+  "revisionId": 362580,
+  "lastEdited": "2026-09-29T19:40:54Z",
+  "kind": "skill",
+  "categories": [
+    "Mental skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mental skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Perception is a Mental skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Improves aiming concentration and makes detection of nearby loot easier."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases loot detection radius (2% per level → +100% at Elite Level)\n- Elite level: Loot proximity notification"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Picking up all kinds of loot\n- Completing the quest Profitable Venture\n- Completing the quest Safety Guarantee\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Counteraction",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Counteraction",
+  "revisionId": 359202,
+  "lastEdited": "2026-09-13T20:12:10Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Peacekeeper",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Counteraction is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Mercenary, are you ready for some serious work? The matter is quite significant and requires high preparation. So, listen: the BEAR PMC operatives have been radically interfering with operations on the coast near the Lighthouse lately. I think you have already encountered them there and may have noticed their increased activity. Your task is to help us to maintain the position of the UN in this city ... Are you well prepared? Eliminating BEAR is not the same as scaring off regular bandits.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by USEC PMCs.\n- Must reach Loyalty Level 4 with Peacekeeper to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 20 BEAR PMC operatives on Lighthouse, Ground Zero, Reserve, Shoreline, or Streets of Tarkov\n- Hand over 20 found in raid BEAR PMC dogtags"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000EXP\n- Peacekeeper Rep +1.5\n- 2,300 Dollars\n  - 2,415 Dollars with Intelligence center Level 1\n  - 3,368 Dollars with Intelligence center Level 2\n- 1x AFAK tactical individual first aid kit\n- Unlocks purchase of AFAK tactical individual first aid kit at Peacekeeper LL4\n- +2 levels in Aim Drills\n- +4 levels in Submachine Guns\n\"I hope you understand that such an assignment is not given to just anyone. But the reward is appropriate. Here's what you've earned.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| Dogtag | BEAR Dogtag | 20 | Handover item | Yes |"
+    },
+    {
+      "heading": "See Also",
+      "level": 2,
+      "text": "- Insomnia - The BEAR counterpart quest"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Reserve Expert",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Reserve_Expert",
+  "revisionId": 359607,
+  "lastEdited": "2026-09-13T20:19:05Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Ragman",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Reserve Expert is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come on in, brother! I've got a job for you. There's a couple soldier barracks at the Reserve base, and according to regulations, they should have armories and storage rooms inside. I need to know what's left in there, whether it's worth putting together a serious team or if someone's already cleaned the place out. Can you head over there and scout it out? And just so I'm not taking your word for nothing, bring me something from there. I'll take a look.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 3 with Ragman to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Check the first armory in the eastern barracks (Black Pawn) on Reserve\n- Check the duty room in the eastern barracks (Black Pawn) on Reserve\n- Check the second armory in the eastern barracks (Black Pawn) on Reserve\n- Check the first armory in the southern barracks (White Pawn) on Reserve\n- Check the second armory in the southern barracks (White Pawn) on Reserve\n- Hand over the gear found in the rooms\n  - (Optional) Locate and obtain any Russian gear in the armory rooms"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Ragman Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Hmm, not exactly perfect, but I can still sell something like this. Thanks, brother!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| RB-ORB3 key | RB-ORB3 key | 1 | Required | N/A | Unlocks room RB-ORB3 on the second floor of the eastern barracks (Black Pawn) building on Reserve where the second armory is located. |\n| RB-OB key | RB-OB key | 1 | Required | N/A | Unlocks room RB-OB on the third floor of the eastern barracks (Black Pawn) building on Reserve where the duty room is located. |\n| RB-ORB1 key | RB-ORB1 key | 1 | Required | N/A | Unlocks room RB-ORB1 on the fourth floor of the southern barracks (White Pawn) building on Reserve where the first armory is located. |\n| RB-ORB2 key | RB-ORB2 key | 1 | Required | N/A | Unlocks room RB-ORB2 on the second floor of the southern barracks (White Pawn) building on Reserve where the second armory is located. |\n| FORT Redut-M body armor; or; FORT Defender-2 body armor; or; 6B43 Zabralo-Sh body armor (EMR) | FORT Redut-M body armor; or; FORT Defender-2 body armor; or; 6B43 Zabralo-Sh body armor (EMR) | 3 | Handover item | Yes | |"
+    },
+    {
+      "heading": "Eastern Barracks - Black Pawn",
+      "level": 4,
+      "text": "- First Armory Room\n4th floor Black Pawn, grate door on side towards Black bishop (School). This door is always unlocked.\n- Duty Room\n3rd floor Black Pawn, locked door (RB-OB) on side towards Black bishop (School)\n- Second Armory Room\n2nd floor Black Pawn, locked grate door (RB-ORB3) on side towards Black bishop (School)"
+    },
+    {
+      "heading": "Southern Barracks - White Pawn",
+      "level": 4,
+      "text": "- First Armory Room\n4th floor White Pawn, locked grate door (RB-ORB1) on side towards black pawn\n- Second Armory Room\n2nd floor White Pawn, locked grate door (RB-ORB2) on side towards black pawn"
+    }
+  ]
+}

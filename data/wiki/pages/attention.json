@@ -1,0 +1,41 @@
+{
+  "title": "Attention",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Attention",
+  "revisionId": 362581,
+  "lastEdited": "2026-09-29T19:42:14Z",
+  "kind": "skill",
+  "categories": [
+    "Mental skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mental skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Attention is a Mental skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Attention increases the looting speed of various containers."
+    },
+    {
+      "heading": "Hideout",
+      "level": 2,
+      "text": "- Level 3 of this skill is needed for the Intelligence Center level 2\n- Level 3 of this skill is needed for the Water Collector level 2"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases looting speed (2% per level → +100% at Elite Level)\n- Increases item examination speed speed (2% per level → +100% at Elite Level)\n- Elite level: Doubles your looting EXP\n- Elite level: Chance to instantly find an item in a container (+50%)"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Picking up loose loot\n- Uncovering loot in Loot containers (0.08 skill points per item)\n- Completing the quest Profitable Venture\n- Completing the quest Safety Guarantee\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention"
+    }
+  ]
+}

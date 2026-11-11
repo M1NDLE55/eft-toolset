@@ -1,0 +1,156 @@
+{
+  "title": "Tour",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tour",
+  "revisionId": 358785,
+  "lastEdited": "2026-09-11T11:26:56Z",
+  "kind": "quest",
+  "categories": [
+    "Story chapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Ground Zero (Tutorial)"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Tour is a story chapter in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "\"During the assault on the TerraGroup office, a massive explosion erupted on top of one of the nearby high-rises. I got left on my own, with no contact with command. Looks like I'll have to handle the evacuation myself. But first things first, I have to get out of this Ground Zero.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "This chapter gets automatically added to the quest list upon starting the game."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Escape Ground Zero\n- Talk to Therapist\n- Ensure access to the Streets of Tarkov\n  - Hand over the cash to Therapist\n  - (Optional) Collect the required 250,000 Roubles\n- Talk to Ragman\n- Survive and extract from Interchange or visit Interchange 3 times\n- Tell Ragman what you found during the recon\n- Talk to Skier\n- Survive and extract from Customs or visit Customs 3 times\n- Hand over any 5 found in raid building materials items to Skier\n  - (Optional) Find any 5 items in raid from the building materials category\n- Talk to Mechanic\n- Survive and extract from Factory or visit Factory 3 times\n- Hand over any 2 found in raid weapons to Mechanic\n  - (Optional) Find any 2 weapons in raid\n- Talk to Skier\n- Eliminate any 3 targets on Woods\n- Survive and extract from Woods or visit Woods 3 times\n- Locate the entrance to the port Terminal\n- Find a way to contact the soldiers at the Terminal\n- Use the intercom to contact the port garrison\n- Learn how to escape Tarkov\n- Ensure access to Reserve\n  - Survive and extract from Shoreline or visit Shoreline 3 times\n  - Hand over 5 PMC dogtags to Prapor\n  - (Optional) Find 5 PMC dogtags in raid\n- Ensure access to Lighthouse\n  - Hand over 8,000 USD to Mechanic\n  - (Optional) Collect the required 8,000 USD\n- Ensure access to The Lab\n  - Access the secret TerraGroup facility\n  - (Optional) Obtain a keycard or access codes to enter the facility\n  - (Optional) Locate the entrance to the facility on Factory\n  - (Optional) Locate the entrance to the facility on Streets of Tarkov\n  - Search the top management offices in The Lab\n  - Search the server room in The Lab\n  - Locate the escape path through the drainage system in The Lab"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Escape Ground Zero",
+      "level": 3,
+      "text": "Finish the tutorial raid by extracting via the \"Klimov Street\" extraction which is located behind the \"Skyside\" business center. During the tutorial, numerous hints on controls and game mechanics are displayed, but none of them need to be followed in order to complete the raid."
+    },
+    {
+      "heading": "Talk to Therapist",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Roubles | 250,000 | Handover item | No |\n\nVisit Therapist in the menu through the trader screen and hand over 250,000 Roubles when the dialogue option appears."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- Unlocks Streets of Tarkov in the location selection"
+    },
+    {
+      "heading": "Ragman - Interchange",
+      "level": 3,
+      "text": "Extract from Interchange with either the \"Survived\" or \"Run-Through\" extraction status, or visit the location 3 times."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- Unlocks Skier as trader\n- Unlocks Customs in the location selection"
+    },
+    {
+      "heading": "Skier - Customs",
+      "level": 3,
+      "text": "| Related Quest Items |\n| Item name | Amount | Requirement | Find in raid | Notes |\n| Any building materials or tools | 5 | Handover item | Yes | Partial handover not possible |\nExtract from Customs with either the \"Survived\" or \"Run-Through\" extraction status, or visit the location 3 times."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- Unlocks Mechanic as trader\n- Unlocks Factory in the location selection"
+    },
+    {
+      "heading": "Mechanic - Factory",
+      "level": 3,
+      "text": "| Related Quest Items |\n| Item name | Amount | Requirement | Find in raid |\n| Any weapons | 2 | Handover item | Yes |\nExtract from Factory with either the \"Survived\" or \"Run-Through\" extraction status, or visit the location 3 times."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- Unlocks Prapor as trader\n- Unlocks Woods in the location selection"
+    },
+    {
+      "heading": "Skier - Woods",
+      "level": 3,
+      "text": "Kill any 3 targets on Woods and extract with either the \"Survived\" or \"Run-Through\" extraction status, or visit the location 3 times. The kills don't need to be performed in the same raid as the \"survive\" objective."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- Unlocks Peacekeeper as trader\n- Unlocks Shoreline in the location selection"
+    },
+    {
+      "heading": "Terminal",
+      "level": 3,
+      "text": "To complete the next few objectives you have to go to the south-east corner of Shoreline and interact with the intercom at the watchtower in front of the Terminal.\n\nBe careful not to get too close to the Terminal wall, as there are guards that will shoot at anyone. Do not try to kill them, they return fire with deadly precision. Interacting with the intercom too many times after being told to leave will also lead to your death by the guards."
+    },
+    {
+      "heading": "Prapor - Reserve",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Dogtag | 5 | Handover item | No |\nExtract from Shoreline with either the \"Survived\" or \"Run-Through\" extraction status, or visit the location 3 times. Afterwards visit Prapor in the menu through the trader screen and hand over 5 Dogtags when the dialogue option appears. The Dogtags can be obtained by taking them off dead PMCs (they do not have to be killed by your hand)."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- Unlocks Reserve in the location selection"
+    },
+    {
+      "heading": "Mechanic - Lighthouse",
+      "level": 3,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Dollars | 8,000 | Handover item | No |\nVisit Mechanic in the menu through the trader screen and hand over 8,000 Dollars when the dialogue option appears. Dollars can be purchased from Peacekeeper with Roubles."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- Unlocks Lighthouse in the location selection"
+    },
+    {
+      "heading": "Secret TerraGroup facility The Lab",
+      "level": 3,
+      "text": "| Item name | Amount | Notes |\n| TerraGroup Labs access keycard | 1 | Allows access to The Lab location a single time. |\n\nOne of the following two transits has to be used to access The Lab:"
+    },
+    {
+      "heading": "Streets of Tarkov to The Lab",
+      "level": 4,
+      "text": "Underground entrance in front of the Klimova 16A building with the Cosmonaut painting. TerraGroup Labs access keycard required. Transits are only available 1 min after raid start."
+    },
+    {
+      "heading": "Factory to The Lab",
+      "level": 4,
+      "text": "In the sewer tunnel connected to the flooded area in the underground. TerraGroup Labs access keycard required. Transits are only available 1 min after raid start."
+    },
+    {
+      "heading": "Search the top management offices",
+      "level": 4,
+      "text": "Laboratory manager's office (O21) on the second level."
+    },
+    {
+      "heading": "Search the server room",
+      "level": 4,
+      "text": "Next to the hangar on the first level."
+    },
+    {
+      "heading": "Locate the escape path through the drainage",
+      "level": 4,
+      "text": "In the basement at the \"Sewage Conduit\" extraction. The extraction does not need to be activated for this objective. You do not need to survive the raid."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- Unlocks The Lab in the location selection\n- Unlocks achievement Pathfinder"
+    }
+  ]
+}

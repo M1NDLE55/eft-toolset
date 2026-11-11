@@ -1,0 +1,44 @@
+{
+  "title": "To the Light - Someone Called?",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_Someone_Called%3F",
+  "revisionId": 359851,
+  "lastEdited": "2026-09-13T20:23:10Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Mechanic",
+    "previous": "To the Light - False Call",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "To the Light - Someone Called? is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Lightkeeper contacted me again. And for this task, he specifically requested the same person who handled the previous job. Meaning you. Our little trick worked, but that doesn't make the whole situation any clearer.I can only assume that, for some reason, Lightkeeper wants to keep all these jobs secret even from his own people. Could he be looking for a mole among them? Either way, this is our only chance to establish a working relationship, so all we can do is carry out the tasks and avoid asking unnecessary questions. Now, the instructions. Lightkeeper wants you to go to the intersection in the Customs area, discreetly install a camera in the little shop, and then send an RSP signal at the road crossing toward the coast. And yes, the entire area around it needs to be cleared of any potential observers beforehand. Once you've sent the signal, get out of there. Whoever comes to the rendezvous point mustn't see you.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Return to the Hideout"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 1× TDI KRISS Vector Gen.2 9x19 submachine gun\n- 3× Glock 9x19 17-round magazine\n- 2× 9x19mm AP 6.3 ammo pack (50 pcs)\n- 3× RSP-30 reactive signal cartridge (Red)\n\"So, did you notice anything suspicious? No? Alright. Let's sum up what we know. First, we planted a hard drive containing disinformation at the Lab. Then Lightkeeper sent his group after the drive, and now he's used you to call someone out for a meeting. Obviously, he wants to find out who's going to show up at the rendezvous point. And if he doesn't know that yet, then according to the original plan, someone else was supposed to show up for the meeting. Which means the information about how to arrange the meeting belonged to that person, and Lightkeeper stole it from them. Could it have been our potential mole, the one he identified with the help of that disinformation drive? I think the pieces are starting to fall into place.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Returning to the game menu completes the objective."
+    }
+  ]
+}

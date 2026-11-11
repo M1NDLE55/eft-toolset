@@ -1,0 +1,53 @@
+{
+  "title": "Revision - Reserve",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Revision_-_Reserve",
+  "revisionId": 359612,
+  "lastEdited": "2026-09-13T20:19:10Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Peacekeeper",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Revision - Reserve is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day. As you know, the blue helmets are here to lower the level of aggression in the region. That is why I want you to assess the danger levels. Infiltrate the military base and search it for anything that could present military danger. After all, the blue helmets are supposed to keep the peace. Some knowledgeable people have provided me with a list of military machinery located in the military base area, which also includes NATO units. I think they want to safely dispose of it, or something else, I don't know. Anyway, you have to find the machinery and mark it with beacons. The clients offer good money for this, so don't let me down, mercenary.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 3 with Peacekeeper to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and inspect the first BMP-2 on Reserve\n- Mark the first BMP-2 with an MS2000 Marker\n- Locate and inspect the second BMP-2 on Reserve\n- Mark the second BMP-2 with an MS2000 Marker\n- Locate and inspect the third BMP-2 on Reserve\n- Mark the third BMP-2 with an MS2000 Marker\n- Locate and inspect the fourth BMP-2 on Reserve\n- Mark the fourth BMP-2 with an MS2000 Marker"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Peacekeeper Rep +0.75\n- 1,900 Dollars\n  - 1,995 Dollars with Intelligence Center Level 1\n  - 2,185 Dollars with Intelligence Center Level 2\n\"Well done, mercenary! We have received the transmitted beacon signals. Good work, here is your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 4 | Required | N/A | This item is placed on the BMPs. When placed, the item is removed from the players' inventory. |\n| RB-ST key | 1 | Required | N/A | Unlocks the RB-ST room on Reserve where a BMP-2 is located. |\nIn this quest you have to find 4 \"BMP-2\" vehicles and mark them with MS2000 Markers. To access the location of one of the BMPs, a RB-ST key is required."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

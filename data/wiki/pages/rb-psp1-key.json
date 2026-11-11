@@ -1,0 +1,60 @@
+{
+  "title": "RB-PSP1 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-PSP1_key",
+  "revisionId": 357726,
+  "lastEdited": "2026-09-06T19:44:07Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-PSP1"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽55,000",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80cb3886f77440556dbf09",
+    "ID": "rezbase_key_substorge_food"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-PSP1 key (RB-PSP1) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the iron mesh doors in the Federal State Reserve Agency base underground supply warehouse."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- 3 of these, or 3 of the other RB-PSP and RB-PSV keys need to be found in raid for the quest Safe Corridor"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "This key opens the north-west caged off storage area in the Underground Storage Bunkers on Reserve (Highlighted in green). There is one unlockable door at the north and south end of the closed caged room."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Four Ration supply crates\n- One Medical supply crate\n- One Technical supply crate\n- One Toolbox\n- Loose loot (Food, Drinks, Fuel)"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Jack of All Trades",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Jack_of_All_Trades",
+  "revisionId": 359430,
+  "lastEdited": "2026-09-13T20:16:03Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Doping - Part 4",
+    "leads to": "All for the Show - Heroism",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Jack of All Trades is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"We've already gone through the classes on my Arena, and I realized I never actually tested you on that knowledge. Forgot, you see? So come on, show me what you've learned. And don't you think this is pointless. This isn't freshman philosophy class! Anyone who can't switch tactics quickly over a few fights when needed will die. Or even worse, lose money.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 20 enemies as Assault\n- Eliminate 20 enemies as Enforcer\n- Eliminate 20 enemies as Scout\n- Eliminate 20 enemies as Marksman"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +12,500 EXP\n- Ref Rep +0.01\n- 80,000 Roubles\n- 20 GP coins\n- Unlocks RSh-12 12.7x55 revolver in the Armory\n- Unlocks the Arena item transfer service on Ref for seasonal characters"
+    }
+  ]
+}

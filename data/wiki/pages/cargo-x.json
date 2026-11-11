@@ -1,0 +1,44 @@
+{
+  "title": "Cargo X",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cargo_X",
+  "revisionId": 362659,
+  "lastEdited": "2026-09-29T21:21:21Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Cargo X is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"We have established a solid presence in Tarkov. You have helped us tremendously, mercenary. The Blue Helmets are now working closely with the locals in all areas. But as you say, time for business. You've most likely already visited the collapsed tunnel on the shore. TerraGroup attempted to move a certain shipment through there. They failed, and it is currently being held in storage temporarily, but its location is unknown. The company's temporary operational coordination headquarters was moved to the Resort. There is no one there anymore. However, they definitely did not manage to remove everything. We may be able to recover valuable information. The computer coordination center was located somewhere on the third floor of the east wing of the Resort. Find any information you can.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain data in Health Resort east wing computer room on Shoreline\n- Hand over the retrieved data to Peacekeeper"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Peacekeeper Rep +0.75\n- 1,900 Dollars\n  - 1,995 Dollars with Intelligence Center Level 1\n  - 2,185 Dollars with Intelligence Center Level 2\n\"Well, show me what you managed to find. Hmm, an excellent laptop. How could they have left such important equipment behind? I'll send it for decryption.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Toughbook reinforced laptop | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Health Resort east wing room 306 key | 1 | Required* | N/A | Unlocks Health Resort East wing room 306 on Shoreline where the Toughbook reinforced laptop is located. |\n| Health Resort east wing room 308 key | 1 | Required* | N/A | Unlocks Health Resort East wing room 308 on Shoreline which allows access to Health Resort East wing room 306 via the joint balcony. |\n- Both keys give you access to east wing room 306, so only one of them is required.\n\nThe laptop can be found in east wing room 306 of the resort, located on a chair. Health Resort east wing room 306 key needed, alternatively Health Resort east wing room 308 key gives access to 306 via the balcony."
+    }
+  ]
+}

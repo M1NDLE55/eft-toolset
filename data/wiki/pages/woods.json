@@ -1,0 +1,96 @@
+{
+  "title": "Woods",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Woods",
+  "revisionId": 360411,
+  "lastEdited": "2026-09-15T20:25:47Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [],
+  "infobox": {
+    "prev": "Factory, Lighthouse, Reserve",
+    "next": "Reserve, Lighthouse, Factory, Customs",
+    "traders": "BTR Driver",
+    "enemies": "Scavs, Shturman, Partisan, Knight, Big Pipe, Birdeye, Cultists",
+    "players": "10-14",
+    "duration": "35 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Woods is a location in Escape from Tarkov. It is the third map that was added to the game."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The Priozersk Nature Reserve recently became part of the state-protected wildlife reserves of the North-Western Federal District."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Woods is initially only accessible by transiting. Direct access from the location selection screen is unlocked upon progressing through the story chapter Tour."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": "- Stationary weapons in the form of NSV Utyos 12.7x108 heavy machine guns.\n- Be aware of Border Snipers and Minefields!"
+    },
+    {
+      "heading": "Usable Keys",
+      "level": 2,
+      "text": "| Key Name | Used in Quest |\n| Old house room key | |\n| Old house toilet key | |\n| Shatun's hideout key | |\n| Shturman's stash key | yes |\n| Yotota car key | |\n| ZB-014 key | yes |"
+    },
+    {
+      "heading": "Bosses",
+      "level": 2,
+      "text": "Seasonal change: Black Division can occasionally roam through the map. They do not have a fixed spawn location and have to be expected everywhere.\n| Name | Location | Notable equipment | Followers |\n| Shturman | At the sawmill | Shturman's stash key; Red Rebel ice pick | 2-3 heavily armed and armored guards |\n| Partisan | Has to be expected everywhere | Partisan's bag; AK skeletonized stock (Customized); Red Rebel ice pick | None |\n| Knight | At the antenna in the northwest (Scav Bunker extraction). | Death Knight mask; Crye Precision CPC plate carrier (Goons Edition) | Big Pipe, Birdeye |\n| Big Pipe | At the antenna in the northwest (Scav Bunker extraction). | Milkor M32A1 MSGL 40mm grenade launcher; Big Pipe's smoking pipe; Big Pipe's bandana; S&S Precision PlateFrame plate carrier (Goons Edition) | Knight, Birdeye |\n| Birdeye | At the antenna in the northwest (Scav Bunker extraction). | Mystery Ranch NICE COMM 3 BVS frame system (Coyote); LBT-1961A Load Bearing Chest Rig (Goons Edition) | Knight, Big Pipe |"
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "To locate the extractions use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Boat | Scav | yes | no | - | |\n| Bridge V-Ex | PMC | no | yes | 5000 Roubles per player; Maximum of 4 players | The fee amount is influenced by your Scav karma.; There are border snipers beyond the vehicle. |\n| Dead Man's Place | Scav | yes | no | - | |\n| Eastern Rocks | Scav | yes | no | - | |\n| Friendship Bridge (Co-Op) | All | yes | no | Scav + PMC | On the right side. |\n| Mountain Stash | Scav | yes | no | - | |\n| Northern UN Roadblock | PMC | yes | no | - | There are border snipers beyond the gate. |\n| Old Railway Depot | Scav | yes | no | - | |\n| Outskirts | All | yes | no | - | |\n| Power Line Passage (Flare) | PMC | yes | no | Shoot a green flare into the sky while inside the signal flare area. If the flare doesn't reach a certain height, the extraction won't open.; Flares:; Handheld RSP-30 green flare; Signal pistol fired 26x75mm green flare; Only one person amongst a lobby-made group needs to shoot a flare to open the extraction for all members of the group. | Upon entering the signal flare area, a notification will pop up in the bottom right corner of the screen:; If the flare was fired correctly, a new notification pops up:; Signal flare area and extract zone map |\n| Railway Bridge to Tarkov | All | yes | no | Minefield map (Woods); Minefield map (Woods) | |\n| RUAF Gate | PMC | no | no | Green flare = Open | |\n| RUAF Roadblock | Scav | yes | no | - | |\n| Scav Bunker | Scav | yes | no | - | |\n| Scav House | Scav | yes | no | - | |\n| UN Roadblock | All | yes | no | - | There are border snipers beyond the shipping containers. |\n| ZB-014 | PMC | no | no | Green flares = Open; ZB-014 key | |\n| ZB-016 | PMC | no | no | Green flares = Open | |"
+    },
+    {
+      "heading": "Transits",
+      "level": 2,
+      "text": "| Name | Faction | Always available | Single-Use | Requirements |\n| Transit to Customs | All | yes | no | Only available 1 min after raid start |\n| Transit to Factory | All | yes | no | Only available 1 min after raid start |\n| Transit to Lighthouse | All | yes | no | Only available 1 min after raid start |\n| Transit to Reserve | All | yes | no | Only available 1 min after raid start |"
+    },
+    {
+      "heading": "Maps",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Interactive Map",
+      "level": 3,
+      "text": "Click for fullscreen. Separate map page here."
+    },
+    {
+      "heading": "3D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "2D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Ingame Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The location was first expanded with patch 0.6.0.861 on January 19, 2018.\n- The location was expanded for the second time with patch 0.12.9.10423 on December 24, 2020. Notably adding the Old Sawmill, which is a standalone map in Escape from Tarkov's predecessors, Contract Wars and Hired Ops, and was also later introduced to Arena.\n- The location was expanded again with patch 0.16.0.0.34447 on December 26, 2024."
+    }
+  ]
+}

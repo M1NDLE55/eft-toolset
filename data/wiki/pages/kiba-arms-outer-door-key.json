@@ -1,0 +1,71 @@
+{
+  "title": "Kiba Arms outer door key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kiba_Arms_outer_door_key",
+  "revisionId": 327770,
+  "lastEdited": "2025-12-13T11:51:36Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the outer door to the KIBA firearms store on Interchange.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ad5d7d286f77450166e0a89",
+    "ID": "Key_Shopping_Mall_KIBA"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Kiba Arms outer door key (KIBA outer) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the outer door of the KIBA Arms International outlet at the ULTRA shopping mall."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This is the first of two keys required to enter the KIBA firearms store. The second one is the Kiba Arms inner grate door key.\n- Requires the Interchange power station switch to be on in order to be used\n\n- 3 seconds after opening the door an alarm will start ringing in the store and across other stores. It can be switched off at a designated terminal.\n\n- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Provocation"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In the power station office, on a box in the metal shelf next to the cabinet\n\n- At the campsite in the Goshan store, behind the two tents\n\nThe Goshan store\n\nThe campsite\n\nKey location"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Located on the first floor of the ULTRA shopping mall on Interchange, near the center of the mall."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "A second locked grate door that requires the Kiba Arms inner grate door key to be opened. Visit the grate door key page for details of loot available in the store."
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Can of condensed milk x60; Can of condensed milk; +; Pack of oat flakes x10; Pack of oat flakes | → | Therapist; Therapist LL4 | → | Kiba Arms outer door key; Kiba Arms outer door key |"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Capturing Outposts",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Capturing_Outposts",
+  "revisionId": 361748,
+  "lastEdited": "2026-09-24T12:31:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs, Woods, Shoreline",
+    "given by": "Prapor",
+    "LL requirement": "2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Capturing Outposts is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, warrior. Listen, I have a mission for you. The other day I was informed that PMCs have captured several Scav bases in the region, and they say there are tons of goods there. Can you help the old soldier? Kill those PMCs so that my dogs could grab the loot without any issues. There are three bases in total: the big fortified construction site building on Customs, the former EMERCOM medical unit in Priozersky forest, and the Azure Coast health resort. Clear the places out and let me know when it's done.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 12 PMC operatives at the specified Scav base on Customs,Woods, or Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Prapor Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"All clear now? Good job, warrior. I'll send my guys to get the stuff then.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Only the enemy PMCs have to be in the marked areas for the kills to count towards the objective. Any kills outside of the marked areas do not count towards the objective."
+    }
+  ]
+}

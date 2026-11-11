@@ -1,0 +1,56 @@
+{
+  "title": "Old house room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Old_house_room_key",
+  "revisionId": 327260,
+  "lastEdited": "2025-12-09T08:27:37Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a room in the old house at the train depot on Woods.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "6761a6ccd9bbb27ad703c48a",
+    "ID": "wood_key_depo1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Old house room key (Depot) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the rooms in an old house somewhere on the edge of the Priozersk forest. It is said that a person nicknamed Ogryzok used to trade in these parts. He used to sell rare goods including even a steady supply of tank batteries. Yet nothing had long been heard of Ogryzok, and no one knows where he had disappeared to."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Swift Retribution"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to a room in the old house at the train depot on Woods. Note: The street in front of the house is partially in the reach of border snipers, therefore it is recommended to stay close to the house while entering and leaving."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Sports bag\n- 2x Weapon box (4x4)\n- 6-STEN-140-M military battery spawn\n- Loose loot (Valuables)\n- Loose Military power filter spawns"
+    }
+  ]
+}

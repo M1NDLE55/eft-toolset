@@ -1,0 +1,49 @@
+{
+  "title": "Afterparty",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Afterparty",
+  "revisionId": 359061,
+  "lastEdited": "2026-09-13T20:09:47Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs, Reserve, Interchange, Woods, Shoreline, Factory, Streets of Tarkov, Lighthouse",
+    "given by": "Prapor",
+    "previous": "Debut",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Afterparty is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings! Haven't forgotten the big gang gathering at the car dealership yet? I've been told that they retreated from there after your visit, but are now on constant alert in their own territories. Even the former USECs joined this mob! In the past you could pass through the occupied territories while the warlords were at ease, but now all my guys are being shot on the spot. I don't really appreciate that. Why don't you get out there and whack these assholes, huh? Make 'em realize they need to learn a little chill, haha!\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must accept Prapor's quest Debut to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and eliminate Reshala\n- Locate and eliminate Glukhar\n- Locate and eliminate Killa\n- Locate and eliminate Shturman\n- Locate and eliminate Sanitar\n- Locate and eliminate Tagilla\n- Locate and eliminate Kaban\n- Locate and eliminate Knight\n- Locate and eliminate Big Pipe\n- Locate and eliminate Birdeye"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +37,600 EXP\n- Prapor Rep +0.15\n- 170,000 Roubles\n  - 178,500 Roubles with Intelligence center Level 1\n  - 195,500 Roubles with Intelligence center Level 2\n- 3× Kalashnikov AK-12 5.45x39 assault rifle\n- 2× ASh-12 12.7x55 assault rifle\n- 2× SJ15 TGLabs combat stimulant injector\n- Unlocks barter for 5.45x39mm 7N40 ammo pack (30 pcs) at Prapor LL4\n- Unlocks purchase of 12.7x55mm PS12B at Prapor LL4\n\"Good fighting, warrior! My boys can stroll through Tarkov again without too big of a worry. Here's your reward, well deserved.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill all described bosses. For the locations of the bosses check their respective pages."
+    }
+  ]
+}

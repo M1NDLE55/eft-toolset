@@ -1,0 +1,51 @@
+{
+  "title": "Shaking Up the Teller",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shaking_Up_the_Teller",
+  "revisionId": 361728,
+  "lastEdited": "2026-09-24T12:26:10Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Shaking up the Teller"
+  ],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Prapor",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Shaking Up the Teller is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hail, the knave of axe and gun. Some curious info came up recently. Smells like solid profit without running around too much. Ready? Look. There was that wisecrack who ran the stores, lived in a dorm by the factory. And, as usual, sidelined some cash. He lived in room 214. But that's not the point. I don’t think you will find much there if anything at all. Though he swore there’s something. Something else has surfaced: In the same dorm, he owned one more room, 203, but wasn’t babbling about it and, as a matter of fact, used it for storage. Now that’s where he had something of value for sure, more than one of his errand runners perished there. Also, he had a garage. Don’t know the number, but it was certainly two-digit - I have a listing of owners starting with 100, and his name is not there.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by USEC PMCs."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the valuable item in dorm room 203 on Customs\n  - (Optional) Gain access to dorm room 214 on Customs\n- Hand over the valuable item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Prapor Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence center Level 1\n  - 92,000 Roubles with Intelligence center Level 2\n- 1× Electric motor\n- Unlocks purchase of 9x21mm BT gzh at Prapor LL3\n\"Impressive indeed! It's almost a nuclear suitcase! No surprise he spared no people trying to pull this out.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Dorm room 203 key | 1 | Required | N/A | Unlocks dorm room 203 in the three-story dorms on Customs where the Bank case is located. |\n| Bank case | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find a bank case on Customs. It can be found under the bed in room 203 on the second floor of the three-story dorms building. A Dorm room 203 key is required to enter it."
+    }
+  ]
+}

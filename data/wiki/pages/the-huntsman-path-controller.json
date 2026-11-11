@@ -1,0 +1,44 @@
+{
+  "title": "The Huntsman Path - Controller",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Controller",
+  "revisionId": 359755,
+  "lastEdited": "2026-09-13T20:21:33Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Any",
+    "given by": "Jaeger",
+    "previous": "The Huntsman Path - Forest Cleaning",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Controller is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come on in. As a hunter, I can tell you for sure that holding control over the target is really important. Sometimes if you manage to blind the animal, even the most dangerous one, it stops being dangerous to you. This works with humans as well. Who cares how pimped out their guns are if they're as blind as moles? I want you to show me if you're able to properly blind your enemy.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 2 PMCs while they are suffering from the stun effect"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +7,200 EXP\n- Jaeger Rep +0.02\n- 50,000 Roubles\n  - 52,500 Roubles with Intelligence Center Level 1\n  - 57,500 Roubles with Intelligence Center Level 2\n- 1× NcSTAR ADO P4 Sniper 3-9x42 riflescope\n\n\"Learned the lesson? Good. See, you can disarm an enemy in many ways.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "You can use the M7290 grenade, the Zarya grenade or a KS-23M with the Zvezda flashbang round to cause the stun effect for this quest. Factory is a recommended location for this quest, as there are ample opportunities to engage PMC's at close distance, thus reducing their chance to escape the stun effect."
+    }
+  ]
+}

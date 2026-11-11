@@ -1,0 +1,64 @@
+{
+  "title": "Health Resort east wing room 226 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_east_wing_room_226_key",
+  "revisionId": 358646,
+  "lastEdited": "2026-09-10T22:46:02Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽5,780",
+    "usage": "Unlocks room 226 of the Health Resort East wing on Shoreline.",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a13f35286f77413ef1436b0",
+    "ID": "Санаторий 226 восточное крыло"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort east wing room 226 key (E226 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium east wing room 226."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Connected to room 222 through the balcony."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- The second floor East wing of the resort, in a key rack near the central stairs.\n\n- In room East 218, in a knocked over shelf."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The Second floor, room 226 of the East Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room 226:\n  - 1× Weapon box (6x4)\n  - Multiple LEDX spawns\n  - 1× MP-153 spawn\n  - Loose loot (Currency, Provisions, Meds, Medical supplies)\n- Room 222:\n  - 1× Physical Bitcoin spawn (inside of the cardboard box)\n  - Three weapon spawns (one RSASS, one SV-98 and one MP5)\n  - 1× Weapon box (6x4)\n  - 1× Weapon Rack\n  - 1× Grenade box\n  - 1× Toolbox\n  - Loose loot Valuables\n- Shared balcony:\n  - 1x Weapon Locker"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "title": "Military checkpoint key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Military_checkpoint_key",
+  "revisionId": 362250,
+  "lastEdited": "2026-09-26T15:59:23Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the military checkpoint tower on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5913915886f774123603c392",
+    "ID": "milbase kpp"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Military checkpoint key (Checkpoint) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the military base checkpoint gatehouse."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- 1 needs to be found for the quest Aid Stations"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Sitting next to the Dead Scav on the couch in warehouse #7.\n\n- On a trash bag in the blue guard shack south of the red Paradigm warehouse.\n\n- On the ground next to the staircase at the construction site south of warehouse #17.\n\n- In the bloody tent at the campsite east of the three-story dorms building."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the military checkpoint tower on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Grenade box\n- 2x Wooden ammo box\n- 1x Weapon locker"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Military COFDM Wireless Signal Transmitter x2; Military COFDM Wireless Signal Transmitter; +; Military checkpoint key x1; Military checkpoint key; +; Chain with Prokill medallion x2; Chain with Prokill medallion; +; Phased array element x2; Phased array element | → | Skier; Skier LL4; After completing his task; Silent Caliber | → | Miller Bros. Blades M-2 Tactical Sword; Miller Bros. Blades M-2 Tactical Sword |\n| Tech manual x2; Tech manual; +; Bottle of Tarkovskaya vodka x4; Bottle of Tarkovskaya vodka; +; Can of beef stew (Small) x2; Can of beef stew (Small) | → | Jaeger; Jaeger LL2 | → | Military checkpoint key; Military checkpoint key |"
+    }
+  ]
+}

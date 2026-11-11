@@ -1,0 +1,43 @@
+{
+  "title": "PC block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PC_block",
+  "revisionId": 338906,
+  "lastEdited": "2026-03-21T00:14:03Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "59139c2186f77411564f8e42",
+    "ID": "PCblock"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "PC block is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A 4x4 grid computer case that can be searched to find PC components."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "In addition to the items from the inside, Secure Flash drives can occasionally be found plugged into PC blocks."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Type |\n| Electronics |\n| Electronics |\n| Electronics |\n| Electronics |\n| Electronics |\n| Electronics |\n| Electronics |\n| Electronics |\n| Electronics |\n| Electronics |\n| Electronics |\n| Info items |\n| Info items |\n| Electronics |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Red PC cases can usually not be looted, but there are 2 exceptions:\n- The one located in dorm room 213 of the two-story dorms building on Customs.\n- The one located in dorm room 212 of the three-story dorms building on Customs."
+    }
+  ]
+}

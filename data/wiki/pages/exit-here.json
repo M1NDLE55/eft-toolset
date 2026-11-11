@@ -1,0 +1,44 @@
+{
+  "title": "Exit Here",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Exit_Here",
+  "revisionId": 362445,
+  "lastEdited": "2026-09-29T14:52:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Factory",
+    "given by": "Skier",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Exit Here is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey, so I've noticed that more and more people are sneaking around at the chemical plant, it's getting a little crowded for my taste... That's why I need you to scout out a new exit route in case shit goes down, you know. If you do that, you can count on a magnificent reward, trust!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Survive and extract from Factory through the main exit"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Skier Rep +0.25\n- 1,000 Euros\n  - 1,050 Euros with Intelligence Center Level 1\n  - 1,150 Euros with Intelligence Center Level 2\n\n\"In the backyard, huh? A lot of people tried to go through there before, but they got blown up by tripwires too often. But you're telling me there's not a single old mine left? Well that's good! Just don't talk about our new hidey hole too much, okay? By the time the suckers find out about this exit, we'll have looted the factory clean!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to extract from Factory through the \"Courtyard Gate\" extraction with the \"Survived\" status. If you extract from the raid with the \"Run Through\" status, the quest will not count as being completed. To avoid the \"Run Through\" status, gain at least 200 EXP in raid (by killing or looting) or be in raid for at least 7 minutes before extracting."
+    }
+  ]
+}

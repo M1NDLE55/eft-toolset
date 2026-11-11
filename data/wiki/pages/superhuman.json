@@ -1,0 +1,44 @@
+{
+  "title": "Superhuman",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Superhuman",
+  "revisionId": 359711,
+  "lastEdited": "2026-09-13T20:20:50Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "All for the Show - Major Sponsor",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Superhuman is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey, fighter. I won't waste time, let's get straight to it. We've got a very, very important sponsor. The guy's a bit of a nut, but he pours in serious money. I take his requests extremely seriously, and I don't just hire anyone for these things. Recently, he pitched me an unusual idea, and, well you get the picture, it needs to happen. You're perfect for the job.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate an enemy with a melee weapon while wearing a Ghoul mask"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Ref Rep +0.05\n- 222,222 Roubles\n- 99 GP coins\n- 1× Lega Medal\n- Unlocks Crash Axe in the Armory\n- Unlocks achievement Legend of the Arena"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Requirement | Notes |\n| Ghoul mask | Required | Has to be worn while making the kill |"
+    }
+  ]
+}

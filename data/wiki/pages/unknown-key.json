@@ -1,0 +1,66 @@
+{
+  "title": "Unknown key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Unknown_key",
+  "revisionId": 315480,
+  "lastEdited": "2025-07-12T20:17:47Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Opens a cabin at the crane yard on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "593962ca86f774068014d9af",
+    "ID": "customs vremyan case"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Unknown key (Unknown) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key found on the dead messenger's body. The lock location is unknown."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the Quest The Extortionist"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Can be found on a dead Scav which is located in a bush behind garages. A single key is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Opens a cabin at the crane yard on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "Nothing unless the quest The Extortionist is active."
+    }
+  ]
+}

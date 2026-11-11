@@ -1,0 +1,53 @@
+{
+  "title": "Energy Crisis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Energy_Crisis",
+  "revisionId": 359257,
+  "lastEdited": "2026-09-13T20:13:06Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Energy Crisis is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey friend, I could use some help. It takes an incredible amount of energy to sustain my current activities, especially considering my farm, the one you helped me with resources for. I usually order fuel from other sources, but unfortunately, there is no way to contact the supplier at the moment. Do you think there are still unexhausted fuel tanks left somewhere? I think there should have been something left in the cape area. Can you check it out, mercenary?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 25 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find and mark the group of fuel tanks with an MS2000 Marker on Lighthouse\n- Find and mark the first tanker truck with an MS2000 Marker on Lighthouse\n- Find and mark the second tanker truck with an MS2000 Marker on Lighthouse\n- Find and mark the third tanker truck with an MS2000 Marker on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +13,000 EXP\n- Mechanic Rep +0.02\n- 75,000 Roubles\n  - 78,750 Roubles with Intelligence center Level 1\n  - 86,250 Roubles with Intelligence center Level 2\n- Unlocks purchase of FN SCAR-L 5.56x45 assault rifle (variant Contract Wars) at Ref LL3\n- Unlocks purchase of Tromix Monster Claw 12ga muzzle brake at Mechanic LL3\n- Unlocks purchase of Granit 4 ballistic plate (Front) at Prapor LL4\n\"Great, mercenary. This information opens up many possibilities for me. I'll gather people to collect the fuel. Thank you very much, friend.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 4 | Required | N/A | This item is placed on the trucks and tanks. When placed, the item is removed from the players' inventory. |\n\nFor this quest you have to find and mark a group of fuel tanks and three tanker trucks on Lighthouse."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

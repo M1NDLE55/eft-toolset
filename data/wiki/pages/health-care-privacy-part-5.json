@@ -1,0 +1,49 @@
+{
+  "title": "Health Care Privacy - Part 5",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Care_Privacy_-_Part_5",
+  "revisionId": 360901,
+  "lastEdited": "2026-09-20T14:55:35Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Health Care Privacy. Part 5"
+  ],
+  "infobox": {
+    "location": "Nighttime Factory",
+    "given by": "Therapist",
+    "time limit": "None",
+    "quest number": "14",
+    "previous": "Health Care Privacy - Part 4",
+    "leads to": "Health Care Privacy - Part 6",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Care Privacy - Part 5 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Blood is a good source of information. Not as good as proper paperwork of course, but still good enough. It’s been a while since I did my last research. I was assisting an intern virologist with his thesis. Feels like it was yesterday, and at the same time so long ago. When the Internet was invented, it made it much easier to exchange information, even with colleagues from other countries. I miss this opportunity now to sift through the Scopus database, I am pretty sure that it has the answers to my questions, emerged after that blood sample research. Where could one possibly find access to the web now, you ask? To address this issue, I was advised to contact the one going by the name of Mechanic. As it turned out, he has access to the Internet, and it’s even relatively fast. I’ve asked him to look up the necessary articles for me. He asked for a small fee for his services, in the form of gunpowder, for whatever reason. It looks like he’s supplying someone with ammunition or something like that, but I am not really interested in that. Most importantly, he will provide the information we need. Find what he asks for, and leave it at the specified spot in the Factory. The place is swarmed with Scavs in the daytime, so it’s best to do it at night.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the drop spot on night-time Factory\n- Obtain 3 packs of Gunpowder \"Kite\" and stash them in the designated spot"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,00 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 3× IFAK individual first aid kit\n- Unlocks purchase for IFAK individual first aid kit at Therapist LL3\n\"Nicely done, Mechanic has received the propellant. Thank you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid |\n| Gunpowder \"Kite\" | 3 | Required | N/A |\nThe required room is the \"Breach Room\" on Factory. Place 3x Gunpowder \"Kite\" while night time there.\nThe \"Breach Room\" is the room between the office and the locked room on the third floor. Each Gunpowder \"Kite\" takes 30 seconds to place, leading to a total placement time of 90 seconds. Closing the door to the breach room is recommended while placing them, as Scavs will wander down the hallway periodically. If you wish to complete this quest with little to no resistance it is recommended to bring a squad to defend you as you plant the items. You do not have to successfully extract to complete this quest."
+    }
+  ]
+}

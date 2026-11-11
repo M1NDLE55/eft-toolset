@@ -1,0 +1,82 @@
+{
+  "title": "Semiconductor Crisis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Semiconductor_Crisis",
+  "revisionId": 359646,
+  "lastEdited": "2026-09-13T20:19:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Semiconductor Crisis is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Yesterday, as I was installing a reflex sight onto an M4, I spotted some weird local on the monitor, he seemed to be praying. He painted different signs on the wall and on the floor, then walked into the middle of the circle these symbols formed, and started placing weapons there. To be honest, it didn’t even look strange, it made perfect sense to me. It’s natural for people to offer the most valuable things they have to their gods, and these days it’s weapons. Those are cultists, you might've already encountered them. I have enough power capacity for now. Look for some more graphics cards and coolers. And thanks for the package, by the way.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 14 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 3 Graphics cards in raid\n- Find 15 CPU fans in raid\n- Hand over 3 Graphics cards to Mechanic\n- Hand over 15 CPU fans to Mechanic"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,000 EXP\n- +3 Attention skill level\n- Mechanic Rep +0.02\n- 1× Pistol case\n- 2× Physical Bitcoin\n- 4× Tetriz portable game console\n- 1× Glock 17 9x19 pistol (variant Viper)\n\n\"Ah, you've returned. I'll try to assemble them till nightfall, thanks. I know, it's really hard to find such electronics during these hard times, but I didn't doubt you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Graphics card | 3 | Handover item | Yes | Can be crafted in the Hideout (Intelligence Center lv. 3). |\n| CPU fan | 15 | Handover item | Yes | |\n\n- CPU fans can be found inside of electronics stores, but are most commonly found inside of PC blocks.\n\n- Graphics cards can be found:\n  - In PC blocks\n  - In Sport bags\n  - Inside Buried barrel cache\n  - Inside Ground cache"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Under the PC desk in the Green Screen room\n- On the left grocery shelf in Gas Station\n- On the 1st floor sofa in 3-story dorms\n- On the table in the unlocked room in Gas Station\n- On the floor in the middle of the second room inside of Big Red\n- On ground in little garages between crossroads and trailer park."
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On shelves of electronics stores (Texho, Techlight, Rasmussen, Germany)\n- In the Emercom medical unit\n- In the Idea office\n- On the tech shelf in the back of Power Station"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In East wing room 222, East wing room 328, West wing room 216, West wing room 301 and East wing office 107\n- On second floor desks of Admin Building\n- On the second floor of the weather station, in front of the server bay\n- In the East wing storage room\n- On counter top in the south most house in village (Right in front of tank)"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- In the \"pumping station\"\n- In the bottom blue container outside Gate 3 (Two stacked blue containers)\n- On top of one of the yellow cart by pit\n- Office hallway shelf"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- Marked circle\n- As spawn next to dead scav at Dead Man`s Place camp\n- On floor of buildings in Village"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Can be found on server racks inside multiple buildings\n- In the shelves of RB-AK on second floor of the black bishop building, north of the helicopter\n- In Black Knight on a desk, 3rd room on the left from main entrance\n- Can be found on the floor of RB-BK in the basement of black pawn\n- Can be found on the floor of RB-VO"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Right side of orange dome, on white boxes next to a white shelf\n- Right side of orange dome, on the last white table before the stairs that go up to management office."
+    }
+  ]
+}

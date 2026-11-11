@@ -1,0 +1,45 @@
+{
+  "title": "Natural Exchange",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Natural_Exchange",
+  "revisionId": 359489,
+  "lastEdited": "2026-09-13T20:17:03Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "BTR Driver",
+    "previous": "Building Foundations",
+    "leads to": "Forge a Friendship, or, If failed Hot Wheels:, Another Shipping Delay",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Natural Exchange is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Your friends are still taking their time, and I'm already running low on supplies because of that depot attack. I'm gonna run out of fuel if I don't do something. I found a place to get fuel, but I need your help. You know the local smugglers? They got a base near the Azure Coast. That's where you gotta drop off some gas cans. They'll fill me some fuel in return. But I think we can handle that part without you. They'll send their own people. So, you in?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash the first metal fuel tank at the smugglers' base on Shoreline\n- Stash the second metal fuel tank at the smugglers' base on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +26,800 EXP\n- BTR Driver Rep +0.03\n- 96,000 Roubles\n- 1× Graphics card\n\"Perfect. At least now the baby won't die in the middle of a random field. Thank you, friend!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Notes |\n| Metal fuel tank | 2 | Stashed item | Any durability |\nIn this quest you have to stash 2 metal fuel tanks in the warehouses at the smuggler base on Shoreline."
+    }
+  ]
+}

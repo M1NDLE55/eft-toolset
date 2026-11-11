@@ -1,0 +1,50 @@
+{
+  "title": "Ask for Directions",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ask_for_Directions",
+  "revisionId": 359085,
+  "lastEdited": "2026-09-13T20:10:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "BTR Driver",
+    "previous": "Another Shipping Delay",
+    "leads to": "Stabilize Business",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Ask for Directions is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So Ragman's looking for new routes, you say? I'm thinking about that myself right now, since Skier won't let me go so easily. But there is one option that Ragman could use. I won't pass on my BTR through there, but when I was a puny pedestrian, I used to sneak around there often. You know the village by the cliffs where the cottages are? You can go up from one of the backyards, and then follow the crevice. Then, you reach those wealthy houses, you'll have to be on guard over there. There are no truly safe roads left, so I guess this one's better than nothing. Just make sure you come back to me when you've marked it, I'll double check it with my maps just to be sure.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark the first section of the cliff path with an MS2000 Marker on Lighthouse\n- Locate and mark the second section of the cliff path with an MS2000 Marker on Lighthouse\n- Locate and mark the third section of the cliff path with an MS2000 Marker on Lighthouse\n- Locate and mark the fourth section of the cliff path with an MS2000 Marker on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +13,200 EXP\n- BTR Driver Rep +0.02\n- 85,000 Roubles\n- 2× GreenBat lithium battery\n\"I think you got it all right. Honestly, I don't remember the details very well... But there was no other such path in the cliffs, so yeah, it's all good.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 4 | Required | N/A | This item is placed at the cliffs. When placed, the item is removed from the players' inventory. |\nIn this quest you have to mark 4 sections of the cliff path on Lighthouse. The path is located above the blue (northern) chalet."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

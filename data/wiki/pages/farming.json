@@ -1,0 +1,68 @@
+{
+  "title": "Farming",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Farming",
+  "revisionId": 359279,
+  "lastEdited": "2026-09-13T20:13:30Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Farming is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Before the conflict, I frequently ordered stuff online. Used to come regularly, I even put together a drone from parts once. The last order was 4 sets of computer components. Only 2 have made it to the city, and those are stuck somewhere in the Customs area. Now, as you can perceive, they would really come in handy. Try to search the seized goods warehouse at Customs, they could have made it through the confusion there.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 14 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the warehouse of seized goods on Customs\n- Obtain the package of graphics cards\n- Hand over the package of graphics cards to Mechanic"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +6,500 EXP\n- Mechanic Rep +0.02\n- 20,000 Roubles\n  - 21,000 Roubles with Intelligence Center Level 1\n  - 23,000 Roubles with Intelligence Center Level 2\n- 1× UHF RFID Reader\n\"Just as expected, in chaos, valuables could be right under the nose and people will still overlook it.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Tarcone Director's office key | 1 | Required | N/A | Unlocks the Tarcone Director's office in the red Paradigm warehouse on Customs where the Package of graphics cards is located. |\n| Package of graphics cards | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe package is located within the second room (the door must be breached) of the Tarcone Directors office in the red Paradigm warehouse on Customs. There are multiple spawn locations throughout the office. You must survive and extract with the package to complete the quest."
+    },
+    {
+      "heading": "First spawn",
+      "level": 4,
+      "text": "In the closet."
+    },
+    {
+      "heading": "Second spawn",
+      "level": 4,
+      "text": "Under the metal shelf."
+    },
+    {
+      "heading": "Third spawn",
+      "level": 4,
+      "text": "Behind the copier."
+    },
+    {
+      "heading": "Fourth spawn",
+      "level": 4,
+      "text": "Behind the desk."
+    }
+  ]
+}

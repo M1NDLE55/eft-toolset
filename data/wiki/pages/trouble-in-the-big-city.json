@@ -1,0 +1,54 @@
+{
+  "title": "Trouble in the Big City",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trouble_in_the_Big_City",
+  "revisionId": 360203,
+  "lastEdited": "2026-09-15T08:38:49Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Lightkeeper",
+    "previous": "Make an Impression (+10hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Trouble in the Big City is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So much for Primorsky Avenue. What other secrets does this city hold? It turns out that these wretches have decided to make an attempt on my humble person because I could get my hands on the cargo which was carried by this very convoy. The simple-minded snakes don't even realize that they're the ones who led me to this cargo with their own hands. Did they really think they could scare me with some cheap blackmail? Me?! All right, listen to me, your job is to secure the area around the intersection and mark the location of the cargo with a beacon. My men will do the rest.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 10 hours after completion of Make an Impression"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the armored convoy holding the cargo on Streets of Tarkov\n  - (Optional) Bring an MS2000 Marker Marker into raid\n  - (Optional) Bring a yellow signal flare into raid\n- Eliminate 10 PMC operatives on Streets of Tarkov\n- Locate and neutralize any Boss or their guards for 20 kills total on Streets of Tarkov\n- Mark the cargo area with an MS2000 Marker\n- Launch a yellow flare near the armored convoy"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.05\n- 1× Advanced current converter\n- 1× Substation marked key\n- Unlocks barter for Advanced current converter at Mechanic LL4\n- Unlocks purchase of SIG MCX-SPEAR 6.8x51 assault rifle at Peacekeeper LL4\n- Unlocks purchase of AR-10 7.62x51 Lancer L7AWM 25-round magazine at Peacekeeper LL4\n- Unlocks purchase of 6.8x51mm SIG Hybrid at Peacekeeper LL4\n\"The positions for Zryachy that you recently prepared have come in handy. He successfully eliminated several conspirators. Now, after you've cleaned up the area and marked the cargo, it's just a matter of opening the secured door and finding out what was it that they were transporting that was so valuable. Judging by the people involved in this conspiracy, there may be something in there that could blow the heads off not only of the corporation, but of some very high-ranking people as well. Looks like we're in for some great business, mercenary. Keep in touch.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed at the grate door inside the cargo truck trailer.; When placed, the item is removed from the players' inventory. |\n| RSP-30 reactive signal cartridge (Yellow) | 1 | Required | N/A | Must be fired into the sky while being in the convoy area. |\n| ZiD SP-81 26x75 signal pistol | 1 | Required | N/A | Used to fire the flare cartridge |\n| 26x75mm flare cartridge (Yellow) | 1 | Required | N/A | Must be fired into the sky while being in the convoy area. |\n\nIn this quest you first have to locate the armored convoy and kill 10 PMCs on Streets of Tarkov. Next you have to kill any bosses or their guards for 20 kills total on Streets of Tarkov. Afterwards you have to place a MS2000 Marker at the grate door inside the cargo truck trailer from the convoy. Finally you have to shoot a yellow flare into the sky while being in the convoy area. If the flare doesn't reach a certain height, the quest objective won't complete. You can use either the handheld RSP-30 yellow flare which can be bought at Prapor LL1 or a 26x75mm yellow flare cartridge which can be bought at Jaeger LL1, and is fired from a signal pistol. If you use the handheld RSP-30 yellow flare, make sure to aim it upwards, but not too much or it lands behind you."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Callsign Malachite",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Callsign_Malachite",
+  "revisionId": 362090,
+  "lastEdited": "2026-09-24T19:44:48Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Prapor",
+    "previous": "Lose the Tail",
+    "leads to": "Ease the Move, Cut Down to the Root, Preserve a Valuable Piece",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Callsign Malachite is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Finally! Our contact sent back a signal saying he's ready to hand over the goods. Can you get the folder to me? I need someone reliable, someone I can trust. And if you happen to take a peek inside along the way, I promise I won't tell anyone. Just make sure you get the contents to me in one piece! The folder was left in a stash in the cabin in the mountains by the lake. The place is apparently thrown together from all kinds of scrap, so the folder should be somewhere wedged between the different materials, or maybe tucked away in some corner.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the BEAR operative's personnel file on Lighthouse\n  - (Optional) Read S.I. Tretyakov's personnel file\n- Hand over the found intel"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +20,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 2× Maska-1SCh face shield (Olive Drab)\n- 2× Maska-1SCh bulletproof helmet (Olive Drab)\n\"I wonder what this Tretyakov guy did to piss everyone off so badly. Nobody would be chasing an ordinary BEAR dossier this hard. Then again, with this kind of preparation, the guy's probably no pushover. Maybe they're short on hands at the lighthouse and are thinking about recruiting someone? Either way, no complaints here. You handled it well. Without you, I'd still be trying to sort things out with Lightkeeper...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| S.I. Tretyakov's personnel file | 1 | Required | Yes |\nIn this quest you have to obtain a BEAR operative's personnel file on Lighthouse. It can be found in the abandoned mountain lake cabin at the \"Passage by the Lake\" extraction east of water treatment plant building #3."
+    }
+  ]
+}

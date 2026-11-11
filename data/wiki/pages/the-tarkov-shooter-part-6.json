@@ -1,0 +1,45 @@
+{
+  "title": "The Tarkov Shooter - Part 6",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Shooter_-_Part_6",
+  "revisionId": 359803,
+  "lastEdited": "2026-09-13T20:22:21Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The Tarkov shooter - Part 6"
+  ],
+  "infobox": {
+    "given by": "Jaeger",
+    "previous": "The Tarkov Shooter - Part 5",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Tarkov Shooter - Part 6 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Neutralizing your target is more effective without any noise, from a safe distance. The next test from Sniper is a practice in this kind of business. Get a suppressor and shoot experienced enemies from medium distances.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 PMCs while using a suppressed bolt-action rifle"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +13,300 EXP\n- Jaeger Rep +0.02\n- 85,000 Roubles\n  - 89,250 Roubles with Intelligence Center Level 1\n  - 97,750 Roubles with Intelligence Center Level 2\n\n- 1× Mosin Rifle Witt Machine 7.62x54R muzzle brake\n- 1× Mosin Rifle Bramit 7.62x54R sound suppressor\n- Unlocks purchase of Mosin Rifle Witt Machine 7.62x54R muzzle brake at Jaeger LL3\n- Unlocks craft for 7.62x54mm R BT gzh at Workbench level 3\n\"The enemy is absolutely helpless when they don't know where they get shot from. You did well, shooter.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Maps with a large number of open spaces where you can effectively engage at 45 m or further such as Woods and Shoreline are recommended for this quest."
+    }
+  ]
+}

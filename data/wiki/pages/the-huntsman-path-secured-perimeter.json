@@ -1,0 +1,43 @@
+{
+  "title": "The Huntsman Path - Secured Perimeter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Secured_Perimeter",
+  "revisionId": 359765,
+  "lastEdited": "2026-09-13T20:21:43Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Factory",
+    "given by": "Jaeger",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Secured Perimeter is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Well, fighter, it's time to start cleaning Tarkov from all this trash. You and I have come a long way and you still have a lot to learn. Well then, let's start with the area of the chemical plant? A lot of useful things were being produced there, I had been working there for half a year as the security chief until the TerraGroup arrived. Since then, weird shit started happening there, I'm telling you, they gave up on producing cleaners and went on for something different, something dark. And as the lawlessness began and they left, the marauders began tearing the factory apart. It's sad to see it like this, I still remember every nook and cranny there. Long story short, it's wrong. So go teach the bandits a lesson. If something useful still remains there, it would definitely be in the office area, you won't miss it. Make the looters forget the way there, at least for a while.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 6 PMСs in the office area (any floor) on Factory"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +9,800 EXP\n- Jaeger Rep +0.02\n- 37,000 Roubles\n  - 38,850 Roubles with Intelligence Center Level 1\n  - 42,550 Roubles with Intelligence Center Level 2\n- 2× Pliers Elite\n- 1× Toolset\n- 2× Nippers\n- 2× Corrugated hose\n\"Good job! Of course, there is enough scum in Tarkov, others will come for sure. But at least they will think twice before tearing the place apart.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 6 PMСs in and around the office area on Factory. Only the enemy PMCs have to be in the highlighted area for the kills to count towards this quest."
+    }
+  ]
+}

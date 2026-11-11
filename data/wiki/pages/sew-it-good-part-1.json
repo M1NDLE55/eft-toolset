@@ -1,0 +1,49 @@
+{
+  "title": "Sew it Good - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sew_it_Good_-_Part_1",
+  "revisionId": 359652,
+  "lastEdited": "2026-09-13T20:19:51Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Sew it good - Part 1"
+  ],
+  "infobox": {
+    "given by": "Ragman",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Sew it Good - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hi there homie, I have a solid business proposal for you. Don't you worry, I’m not bullshitting you, it's the real deal. Can’t say what it is right now, but if it starts off good, I’ll be sure to tell you. I need a big backpack, the purple \"Pilgrim\" one, and a ski hat, you know, with ninja-type slits. Look for them yourself though, no traders, brother. I need to keep this in secret, don't want anyone to find out about our little thing, you know?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 25 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 1 Ski hat with holes for eyes in raid\n- Hand over 1 Ski hat with holes for eyes to Ragman\n- Find 1 Pilgrim tourist backpack in raid\n- Hand over 1 Pilgrim tourist backpack to Ragman"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +12,300 EXP\n- Ragman Rep +0.02\n- 25,000 Roubles\n  - 26,250 Roubles with Intelligence Center Level 1\n  - 28,750 Roubles with Intelligence Center Level 2\n- 1× LBT-6094A Slick Plate Carrier (Black)\n- 1× Walker's XCEL 500BT Digital headset\n- Unlocks craft for 6B23-2 body armor (Mountain Flora) at Lavatory level 1\n\"Taken off dead Scavs, I presume? Whatever, that’ll do. Everything is going according to the plan, so come by for the next task later.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Ski hat with holes for eyes | 1 | Handover item | Yes | |\n| Pilgrim tourist backpack | 1 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 3). |\nThe Ski hat with holes for eyes only spawns on Scavs and in Dead Scavs. The Pilgrim tourist backpack also only spawns on Scavs."
+    }
+  ]
+}

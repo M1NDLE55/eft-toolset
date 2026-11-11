@@ -1,0 +1,52 @@
+{
+  "title": "Wet Job - Part 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wet_Job_-_Part_4",
+  "revisionId": 359884,
+  "lastEdited": "2026-09-13T20:23:43Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Wet Job. Part 4"
+  ],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "previous": "Wet Job - Part 3",
+    "leads to": "Wet Job - Part 5",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Wet Job - Part 4 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"We have run this Artyom through our database. It seems he lived in the health resort after the conflict and may have been connected to TerraGroup, but it is unconfirmed, no precise info yet. The nature of their joint operation with the fisherman is also not completely clear, but, considering how secretive their meetings were, I'm pretty sure it's some kind of military tech. We need to find where exactly Artyom’s quarters were, the info could be in the list of tenants, which has to be in the administration office, if it is still intact, of course. Find those documents and bring them to me.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 14 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain a list of the resort's tenants on Shoreline\n- Hand over the list of tenants to Peacekeeper"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,300 EXP\n- Peacekeeper Rep +0.03\n- 1,700 Dollars\n  - 1,785 Dollars with Intelligence Center Level 1\n  - 1,955 Dollars with Intelligence Center Level 2\n- 1× Shoreline Health Resort plan map\n- Unlocks purchase of Desert Tech MDR 7.62x51 assault rifle at Peacekeeper LL4\n\"The documents are intact? Good work, my friend. We will check the data for the information we need. Your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Sliderkey Flash drive | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe flash drive with the information can be found in the administration part (theatre wing) of the resort, on a desk in an office on the eastern side on the top floor."
+    }
+  ]
+}

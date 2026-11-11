@@ -1,0 +1,60 @@
+{
+  "title": "Spotter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Spotter",
+  "revisionId": 359692,
+  "lastEdited": "2026-09-13T20:20:31Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Lightkeeper",
+    "previous": "Following the Bread Crumbs (+10hr)",
+    "leads to": "Make an Impression (+10hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Spotter is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The situation takes an interesting turn. The data you delivered to me suggests that these moles were involved in the attack on the government convoy in the city, at the intersection of Nikitskaya Street and Primorsky Avenue, which means that from time to time they inhabit those parts. Your job is to scout the area, prepare and equip some good positions to monitor the area. Nothing more than that for now. I already have a marksman for the job. You will need a silencer for .338 from AI and a Trijicon thermal imager.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 10 hours after completion of Following the Bread Crumbs"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate a good sniping position in Concordia overlooking the construction site\n- Hide AI .338 LM Tactical Sound Moderator near the red table\n- Locate a good sniping position at Primorsky overlooking the movie theater\n- Hide Trijicon REAP-IR thermal scope under Makhors' bed\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.04\n- 1× Microcontroller board\n- Unlocks craft for Microcontroller board at Workbench level 3\n\"All the equipment is in place, over... Okay, mercenary, you're going to have to work hard for the next part.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| AI .338 LM Tactical Sound Moderator | 1 | Required | N/A | Concordia placed item |\n| Trijicon REAP-IR thermal scope | 1 | Required | N/A | Primorsky placed item |\n| Primorsky 46-48 skybridge key | 1 | Required | N/A | Key to apartment no. 10 in the Primorsky 48 apartment building where the sniping spot is located |\nIn this quest you have to find sniping positions at the Concordia building, as well as in the Primorsky street on Streets of Tarkov and place a AI .338 LM Tactical Sound Moderator and a Trijicon REAP-IR thermal scope at them."
+    },
+    {
+      "heading": "Concordia sniping location",
+      "level": 4,
+      "text": "The sniping location at Concordia is located at a red table in the kitchen of apartment no. 8 on the third floor."
+    },
+    {
+      "heading": "Primorsky sniping location",
+      "level": 4,
+      "text": "The sniping location at Primorsky is located at the bed in the bedroom of Primorsky 48 apartment no. 10 on the fourth floor of the Primorsky 48 apartment building. It can only be accessed via the skybridge which connects it with the Primorsky 46 staircase. A Primorsky 46-48 skybridge key is required to enter it via the skybridge from the adjoining Primorsky 46 staircase. The apartment 10 entrance door can be breached from the inside to leave."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Factory plan map",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Factory_plan_map",
+  "revisionId": 324144,
+  "lastEdited": "2025-11-21T21:44:30Z",
+  "kind": "location",
+  "categories": [
+    "Maps"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Map",
+    "weight": "0.045 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL1",
+    "effect": "Adds map of local area Factory",
+    "node": "574eb85c245977648157eec3",
+    "id": "factory plan"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Factory plan map (Factory) is a map in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A simplified and updated copy of the Chemical Plant No. 16 facility blueprint."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The map is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Hideout",
+      "level": 2,
+      "text": "- 1 needs to be obtained for the Intelligence center level 1"
+    },
+    {
+      "heading": "Functionality",
+      "level": 2,
+      "text": "On the map you are able to place up to 100 icons and notes of 4 varieties."
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Medbag",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Medbag",
+  "revisionId": 358440,
+  "lastEdited": "2026-09-10T20:58:18Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "5909d24f86f77466f56e6855",
+    "ID": "MedBag"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Medbag is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A 4x3 grid SMU06 Medical bag that only spawns medical loot."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Type |\n| Household materials |\n| Medical supplies |\n| Injury treatment |\n| Injury treatment |\n| Medical supplies |\n| Injury treatment |\n| Pills |\n| Medical supplies |\n| Medkits |\n| Medical supplies |\n| Injectors |\n| Medical supplies |\n| Medkits |\n| Medical supplies |\n| Injury treatment |\n| Injury treatment |\n| Medkits |\n| Injury treatment |\n| Injury treatment |\n| Medical supplies |\n| Medical supplies |\n| Medkits |\n| Injectors |\n| Medkits |\n| Injectors |\n| Injectors |\n| Injectors |\n| Injury treatment |\n| Pills |\n| Pills |\n| Medkits |\n| Injury treatment |\n| Injury treatment |\n| Injectors |\n| Injectors |\n| Injectors |\n| Medical supplies |\n| Injectors |\n| Medical supplies |\n| Injury treatment |\n| Injectors |\n| Injectors |\n| Injectors |\n| Injectors |\n| Injectors |\n| Injectors |"
+    }
+  ]
+}

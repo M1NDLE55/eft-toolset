@@ -1,0 +1,57 @@
+{
+  "title": "RB-KSM key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-KSM_key",
+  "revisionId": 315811,
+  "lastEdited": "2025-07-15T23:53:51Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-KSM"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d947d4e86f774447b415895",
+    "ID": "rezbase_key_med_officer"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-KSM key (RB-KSM) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base Military unit Headquarters' doctor's office."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a mandatory quest location for the quest Disease History."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Second floor of the HQ (White Bishop) building on Reserve. (Highlighted in green)"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Medical supplies)\n- One Sports bag"
+    }
+  ]
+}

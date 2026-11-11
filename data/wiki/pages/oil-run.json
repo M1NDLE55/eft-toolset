@@ -1,0 +1,59 @@
+{
+  "title": "Oil Run",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Oil_Run",
+  "revisionId": 361724,
+  "lastEdited": "2026-09-24T12:24:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Prapor",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Oil Run is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello there, drifter! Good timing. I've been scratching my head over a little problem. Word came in about a job: scout out an area where there might still be some fuel left. You know how valuable that stuff is. Not exactly something I'd trust just anyone with. Anyway, you've worked with strobe markers before, right? Couldn't be simpler. Stick it somewhere out of sight, press the button, and walk away. Got it? All that's left is to find one of the fuel tankers and mark it. Here, take a beacon. Think of it as a little bonus for working with me. Just don't lose it. If you need more, you'll be paying for them.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by BEAR PMCs."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark any of the fuel tank trucks with an MS2000 Marker on Customs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Prapor Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence center Level 1\n  - 92,000 Roubles with Intelligence center Level 2\n- 1× Electric motor\n- Unlocks purchase of 9x21mm BT gzh at Prapor LL3\n\"Good to see you again, Rambo! My boys are already on their way to the signal. Here's your cut.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| MS2000 Marker | 1 | This item is placed on the fuel tanker truck. When placed, the item is removed from the players' inventory. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed on the fuel tanker truck. When placed, the item is removed from the players' inventory. |\nIn this quest you have to mark 1 of 4 fuel tanker trucks with a MS2000 Marker on Customs.\nPrapor provides a MS2000 Marker via in-game mail."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy additional MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

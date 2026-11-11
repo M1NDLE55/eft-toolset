@@ -1,0 +1,55 @@
+{
+  "title": "Gunsmith Master - Part 13",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_13",
+  "revisionId": 360281,
+  "lastEdited": "2026-09-15T12:34:40Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith 13",
+    "Gunsmith Master 13"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith Master - Part 13 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"An unreal order for you. I don't know where you're going to get such a beauty, but you've never let me down before, so I trust you. I need a PKP machine gun with a Zenitco kit: handguard, buttstock and a muzzle brake. With USP-1 \"Tyulpan\" sight and any tactical device. Ergonomics no lower than 10, 100-round box, recoil no higher than 950.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify a PKP machine gun to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +35,000 EXP\n- Mechanic Rep +0.04\n- 5× Physical Bitcoin\n- 1× Weapon case\n- Unlocks barter for TerraGroup Labs keycard (Black) at Mechanic LL4\n- Unlocks barter for Kalashnikov PKM 7.62x54R machine gun at Mechanic LL4\n\"Now that's what I call a big boy. Deserves respect. Thanks, pal.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "PKP machine gun specifications:\n- 60 Durability\n- Over 10 ergonomics\n- 950 or less recoil\n- Any tactical device (such as the NcSTAR Tactical Blue Laser)\n- PK Zenit B-50 handguard\n- PK Zenit PT-2 \"Klassika\" stock\n- PK Zenit DTK-1P 7.62x54R muzzle brake\n- NPZ USP-1 Tyulpan 4x scope\n- PK 7.62x54R 100-round box"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- The PKP machine gun can only be obtained by killing Kaban on Streets of Tarkov.\n- The bipod has to be taken off\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| PK Zenit B-50 handguard | Skier | LL4 |\n| NcSTAR Tactical Blue Laser | Skier | LL1 |\n| PKM 7.62x54R 658mm barrel | Prapor | LL4 |\n| PK Zenit DTK-1P 7.62x54R muzzle brake | Skier | LL4 |\n| PK Zenit PT-2 \"Klassika\" stock | Skier | LL4 |\n| NPZ USP-1 Tyulpan 4x scope | Prapor | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

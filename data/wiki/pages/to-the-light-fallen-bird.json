@@ -1,0 +1,44 @@
+{
+  "title": "To the Light - Fallen Bird",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_Fallen_Bird",
+  "revisionId": 360011,
+  "lastEdited": "2026-09-13T23:48:42Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "previous": "To the Light - Clip Their Wings",
+    "leads to": "To the Light - Bite the Dust, To the Light - Dangerous Ambitions",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "To the Light - Fallen Bird is a Quest in Escape from Tarkov"
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"It's nice when you hypotheses are confirmed in practice! Half an hour after you sent the signal, UNTAR soldiers showed up at the rendezvous point. They quickly realized the call was a fake, but Lightkeeper had already learned everything he wanted to know. With this new task, everything falls into place. Something among Lightkeeper's people or his allies has been secretly working with Peacekeeper, and not Lightkeeper is ready to act. We need to plant several signal jammers. The only catch is the Lightkeeper wants everything done quickly, in a single run. Otherwise the effect will be too weak, and we wont get any more jobs from the lighthouse. Start at the weather station in the cliffs at the nature reserve. Install the second jammer in the guard shack at the sawmill. From there, head toward Customs and leave the jammer on the second floor of the construction site by the road, then make your way to the coast. The last jammer goes in the archives of the health resort's administrative building. As soon as you're done, come back to me. We can't keep Lightkeeper waiting.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Return to the Hideout"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 500,000 Roubles\n  - 525,000 Roubles with Intelligence Center Level 1\n  - 575,000 Roubles with Intelligence Center Level 2\n- 1× FN SCAR-H 7.62x51 assault rifle (FDE)\n- 3× FN SCAR-H 7.62x51 20-round magazine (FDE)\n- 4× 7.62x51mm M62 Tracer ammo pack (20 pcs)\n\"Lightkeeper's package made it to me. Though it's more of a symbolic message than an actual shipment ... He clearly wants Peacekeeper to know who's behind the disruption of his deals. Peacekeeper will most likely start looking for whoever's responsible soon, and he may turn to you for help. All you need to do is deliver a message from Lightkeeper.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "This task will automatically be accepted once the previous task To the Light - Clip Their Wings has been completed. All that needs to be done is complete the task once you leave the raid."
+    }
+  ]
+}

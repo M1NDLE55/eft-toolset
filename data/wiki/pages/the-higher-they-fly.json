@@ -1,0 +1,40 @@
+{
+  "title": "The Higher They Fly",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Higher_They_Fly",
+  "revisionId": 362477,
+  "lastEdited": "2026-09-29T15:46:32Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Skier",
+    "previous": "Swift Retribution, or, Inevitable Response",
+    "leads to": "Route Deviation (+6hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Higher They Fly is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello-hello. I've got a worker guy who's gotten a little carried away with his ambitions. Obviously, I'll handle it later. The problem right now is that some PMCs are getting involved. I don't know if they've been bribed, or maybe they're in cahoots with this mule of mine. Thing is, I don't need any extra faces in this matter, so these good little helpers need to be taken out of the picture. Last time they \"operated\" in the Priozersk area, so you're gonna start there.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 2 PMC operatives on Woods"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 1,000 Euros\n  - 1,050 Euros with Intelligence Center Level 1\n  - 1,150 Euros with Intelligence Center Level 2\n- 1× Ammunition case\n\"Nice one! If any of those idiots are still thinking about helping this poor lad, now they're aware of all the risks that come with it.\""
+    }
+  ]
+}

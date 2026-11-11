@@ -1,0 +1,57 @@
+{
+  "title": "Easy Money - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Easy_Money_-_Part_1",
+  "revisionId": 362429,
+  "lastEdited": "2026-09-29T14:21:41Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Easy Money. Part 1"
+  ],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Skier",
+    "LL requirement": "2",
+    "leads to": "Easy Money - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Easy Money - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Sup mate. Got a job for ya. An old pal of mine is looking for the right people for his business. I don't know the ins and outs, just the first stage of recruitment, so to speak. I see you're interested. You heard anything about the Arena yet? You gotta put up flyers around Tarkov. Like \"come and check it out\", shit like that, you know. Hey, serious people always start small! I've got a couple of posters ready for ya, but if you lose them, it's your own bloody problem, got it? Bring them to the Scav stronghold at the customs terminal. Off you go then.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 10 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Plant the Bison vs Undertaker poster in the living quarters at the Scav base on Customs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 517 Euros with Intelligence Center Level 2\n- Unlocks Ref as trader\n\"All done? I'll pass it on then. Here are some goodies in the meantime.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| Arena advertisement poster | 3 | 1 has to be stashed |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Arena advertisement poster | 1 | Item to stash | N/A | Can be purchased from Skier LL1. |\nIn this quest you have to stash an Arena advertisement poster in the living quarters of the Scav base (ZB-013 extraction) building with the numerous mounted weapons on Customs.\n\n3 posters are provided by Skier via in-game mail. While a poster can't be put directly in secure containers, it can be put into a Documents case or S I C C organizational pouch to prevent losing it upon death.\n\nThe poster has to be stashed at one of five beds on the first floor."
+    }
+  ]
+}

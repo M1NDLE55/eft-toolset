@@ -1,0 +1,49 @@
+{
+  "title": "Forester's Duty",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Forester's_Duty",
+  "revisionId": 359301,
+  "lastEdited": "2026-09-13T20:13:52Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse, Shoreline",
+    "given by": "Jaeger",
+    "previous": "Nostalgia",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Forester's Duty is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I used to walk many a footpath myself, but time has bested me. The looters have cleaned out all the popular places, and now they're heading into the forests. I saw some of those Scavs the other day. They were dragging something through the swamp near Azure Coast. Even before the war, people used to call this place a death trap. Only I and my mushroom picker friend knew how to cross it in one piece and survive. Would you scare those bandits away? Make them know the forests are not for them to ravage. Make sure you cross that path I mentioned too, clean it for good.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 Scavs on Lighthouse (In one raid)\n- Use the transit from Lighthouse to Shoreline (In one raid)\n- Eliminate 5 Scavs on Shoreline (In one raid)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +25,600 EXP\n- Jaeger Rep +0.03\n- 105,000 Roubles\n  - 110,250 Roubles with Intelligence Center Level 1\n  - 120,750 Roubles with Intelligence Center Level 2\n- 1× Magnum Research Desert Eagle L6 .50 AE pistol\n- 3× Desert Eagle .50 AE 7-round magazine\n- 30× .50 AE Hawk JSP\n\"The forest likes quiet, we can't let them destroy such places. I don't know how they could have found out about this trail... My friend has never shown his paths to bad people.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Lighthouse to Shoreline",
+      "level": 3,
+      "text": "At the Path to Shoreline extraction. Transits are only available 1 min after raid start."
+    }
+  ]
+}

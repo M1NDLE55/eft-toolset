@@ -1,0 +1,72 @@
+{
+  "title": "Debug Console",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Debug_Console",
+  "revisionId": 284630,
+  "lastEdited": "2024-08-18T09:25:06Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Commands",
+    "Console"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Debug Console can be used to execute various commands for debug and testing purposes."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "To open and close the console, press ~ / Ö / Ø or check your control options. ESC also closes it.\n\nIt features commands with and without arguments, basic auto-complete via the arrow and TAB keys, as well as command groups separated by a dot.\n\nSince there is no help command, you can make use of a trick in the auto-complete feature to show all commands. Simply type in a dot followed by any letter and all available commands will show up, except for command groups, in which case only the group name will be shown."
+    },
+    {
+      "heading": "Commands",
+      "level": 2,
+      "text": "Below, you can find a list of commands usable in the debug console. Text in square brackets, [], are parameters and need to replaced with numbers or words, depending on what fits. Keep in mind that numbers have to be full numbers without any decimal places and words can't have any spaces in them."
+    },
+    {
+      "heading": "fps [mode]",
+      "level": 3,
+      "text": "The fps command enables a performance and debug overlay in the top-right corner of the screen. The [mode] parameter is used to control the amount of information visible in the overlay:\n| Mode | Information |\n| 0 | Overlay disabled |\n| 1 | FPS Limit; Current FPS |\n| 2 | FPS Limit; Current FPS; RTT/Ping; Packet Loss; Player RTT |\n| 3 | FPS Limit; Current FPS; RTT/Ping; Packet Loss; Player RTT; Fixed Update measurements; Update Time in ms; Game Update Time in ms; Render Time in ms; Total Frame Time in ms; Hardware measurements |"
+    },
+    {
+      "heading": "performance.report",
+      "level": 3,
+      "text": "The performance.report command group is used for performance testing. It allows you to start and stop logging of various performance values at a fixed interval of 1 second. See below for the commands in the group:"
+    },
+    {
+      "heading": "performance.report.start [optional:filename]",
+      "level": 4,
+      "text": "The performance.report.start command is used to start a performance test, which also sets the performance overlay to mode 2. If a file name is provided, the output file can be found in the game folder, next to the games executable. If a file name is not provided, it can be found in the latest log folder in the game files, ending with \"FDebug_performancereport\"."
+    },
+    {
+      "heading": "performance.report.stop",
+      "level": 4,
+      "text": "The performance.report.stop command is used to stop a performance test."
+    },
+    {
+      "heading": "perftest [overall] [every] [label]",
+      "level": 3,
+      "text": "The perftest command is an alternative, older command used for performance testing. Similarly to the performance.report command group, it is used for performance testing. Using the command also sets the performance overlay to mode 3 and, for reasons unknown and possibly a bug, forces a new log folder to be created and used for any game logs of the current session.\n\nIt is not recommended to use this command over the the performance.report command group due to its limited flexibility and less amount of logged data, as well as potential bugs.\n\n| Parameter | Information |\n| overall | Total length of the performance test, in seconds. |\n| every | Interval in which performance values are logged, in seconds. |\n| label | Name of the perfomance test, so it can be found easily in the outfile file, since it can store multiple tests at the same time. |\n\nThe output file can be found in the latest log folder in the game files, ending with \"FDebug_perftest\"."
+    },
+    {
+      "heading": "quit",
+      "level": 3,
+      "text": "The quit command can be used to force-close the game without the need for system tools, like the task manager, or system key combinations, such as ALT+F4."
+    },
+    {
+      "heading": "quit_with_code [code]",
+      "level": 3,
+      "text": "The quit_with_code command is similar to the quit command in the sense that it can be used to force-close the game, however it takes an additional parameter, [code], which allows an exit/error code to be specified."
+    },
+    {
+      "heading": "wait [seconds]",
+      "level": 3,
+      "text": "The wait command currently has no known use, but takes a parameter [seconds]."
+    }
+  ]
+}

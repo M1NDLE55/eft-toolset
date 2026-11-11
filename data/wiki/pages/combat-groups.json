@@ -1,0 +1,25 @@
+{
+  "title": "Combat groups",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Combat_groups",
+  "revisionId": 350157,
+  "lastEdited": "2026-08-05T14:40:44Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Group",
+    "Grouping",
+    "Groups",
+    "Squad",
+    "Squads"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Combat groups or squads, allow players to team up with either 5 PMC or Scav characters to join a raid together at the same time of day on the same location.\n\nBesides the initial spawn location, no game mechanics unite a group. There are no HUD elements for identification, and group members can harm, as well as kill eachother.\n\nKilling group members does not award progress for elimination quest objectives, causes a Karma penalty and their Dogtags lose the found in raid status together with the value being set to ₽1.\n\nPlayers can group with people from their friends list via the grouping menu at the bottom of the game menu, or players who have the \"Looking for a group\" option in the \"Prepare to escape\" screen selected.\n\nAs a PMC, if your group members disconnect from the raid before the deployment countdown, their characters will not spawn until they reconnect to the raid.\n\nAs a Scav, in some cases, if you deploy earlier before your group member has finished loading, the incoming group member will deploy to the closest spawn point, centered around the group leader or the first deployed group member."
+    }
+  ]
+}

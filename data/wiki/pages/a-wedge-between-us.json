@@ -1,0 +1,48 @@
+{
+  "title": "A Wedge Between Us",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A_Wedge_Between_Us",
+  "revisionId": 359049,
+  "lastEdited": "2026-09-13T20:09:35Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Icebreaker",
+    "given by": "Jaeger",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "A Wedge Between Us is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Sit down kid, got something to talk about. Partisan spotted helicopters over the bay, no markings on them. They were heading straight for some ship out there, definitely not toward the city. Those were combat birds, not belonging to the UNTAR troops or any PMC, that's for certain. He said he's only seen something like that once before, and that wasn't even in Tarkov. If this is some kind of special unit, nothing good will come from it. Most likely they're pulling in veterans from elite forces, could be SAS, Mossad, or God knows who else these days. I asked Mechanic if he knows anything about them. He's been listening in on that frequency range, managed to catch the callsign of their leader, though barely. \"Wedge”... Listen, we can't let people like that dig in, not on the ship, and definitely not in the city. I'm counting on you here. Best meet fire with fire, like they say.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Hand over the hard drives from compartment C-1 on Icebreaker to Mechanic in the Boreas story chapter."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and neutralize 4 members of The Wedge's squad\n- Claim a trophy from The Wedge\n- Hand over the found item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +52,000 EXP\n- 450,000 Roubles\n  - 472,500 Roubles with Intelligence Center Level 1\n  - 517,500 Roubles with Intelligence Center Level 2\n- 1× Accuracy International AXMC .338 LM bolt-action sniper rifle\n- 3× .338 Lapua Magnum FMJ ammo pack (20 pcs)\n- 3× AI AXMC .338 LM 10-round magazine\n\"Good thing I trusted my instincts. We need to keep Tarkov safe from fighters like this. If they get a foothold, they'll take control of the whole city, and nobody will be able to stop them after that. If you see those black-clad soldiers again, don't let them slip away. Our survival might depend on it.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Spiritus Systems LV-119 Plate Carrier (MultiCam Black) | 1 | Handover item | No | Can be found on The Wedge |"
+    }
+  ]
+}

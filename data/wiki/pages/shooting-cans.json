@@ -1,0 +1,54 @@
+{
+  "title": "Shooting Cans",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shooting_Cans",
+  "revisionId": 361687,
+  "lastEdited": "2026-09-24T12:03:37Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Ground Zero",
+    "given by": "Prapor",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Shooting Cans is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings! I hear you're looking for a little extra cash. That's perfect, because I have a job for you... I know that the city center is where AGSs and KORDs were deployed during the hottest fights. Find me one of each and report back. Also, sweep the area around them, make sure no one gets to the firing positions before my guys do. I think five bodies will be enough. Scavs, PMCs, whatever. Less trespassers, less chance of an ambush, you know?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the Utyos machine gun on Ground Zero\n- Locate the AGS grenade launcher on Ground Zero\n- Eliminate any 5 targets on Ground Zero"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Prapor Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"You did it? Well done! Maybe you could really be useful.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to find the Utyos machine gun and the AGS grenade launcher on Ground Zero, as well as kill any 5 entities on the location."
+    },
+    {
+      "heading": "Utyos",
+      "level": 3,
+      "text": "The Utyos machine gun is located in an office on the third floor (labeled 5) of the Tarbank building."
+    },
+    {
+      "heading": "AGS",
+      "level": 3,
+      "text": "The AGS grenade launcher is located in the back office on the third floor of the Capital Insight building."
+    }
+  ]
+}

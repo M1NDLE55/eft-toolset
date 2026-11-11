@@ -1,0 +1,47 @@
+{
+  "title": "Import",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Import",
+  "revisionId": 359411,
+  "lastEdited": "2026-09-13T20:15:43Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Import is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I have recently stumbled upon some interesting devices... The first one appears to be some foreign storage device and the second one is apparently a reader of some sort. Extremely interesting pieces of tech, let me tell you. And most importantly, it’s the first time I’ve ever seen them. Maybe some kind of import broke through the blockade or somebody looted a secret warehouse. It's clearly not domestic production, so my money is on the latter. And hey, you'll need to find it yourself since it's high-quality equipment. You can't rely on resellers, they would fool you for sure. If you can bring them to me, I’ll make it worth your while.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 35 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 1 UHF RFID Fixed Reader in raid\n- Find 1 VPX Flash Storage Module in raid\n- Hand over 1 UHF RFID Fixed Reader to Mechanic\n- Hand over 1 VPX Flash Storage Module to Mechanic"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +29,000 EXP\n- Mechanic Rep +0.03\n- Jaeger Rep -0.01\n- 85,000 Roubles\n  - 89,250 Roubles with Intelligence Center Level 1\n  - 97,750 Roubles with Intelligence Center Level 2\n- 2× Physical Bitcoin\n- 1× Iridium military thermal vision module\n- 1× Trijicon REAP-IR thermal scope\n- Unlocks purchase of 4.6x30mm FMJ SX at Mechanic LL4\n\"You actually brought them! I'm pleased! Let me have a closer look at them.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| UHF RFID Reader | 1 | Handover item | Yes |\n| VPX Flash Storage Module | 1 | Handover item | Yes |"
+    }
+  ]
+}

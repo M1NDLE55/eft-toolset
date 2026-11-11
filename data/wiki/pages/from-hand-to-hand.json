@@ -1,0 +1,49 @@
+{
+  "title": "From Hand to Hand",
+  "url": "https://escapefromtarkov.fandom.com/wiki/From_Hand_to_Hand",
+  "revisionId": 362414,
+  "lastEdited": "2026-09-29T13:41:42Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Skier",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "From Hand to Hand is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I've got a little side job lined up, and your help would come in handy. Need you to gather a few bits and pieces and pass them on to someone who knows what they're doing. Not directly into his hands, obviously. Don't be daft. Just leave everything in the agreed spot.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Stash a Virtex programmable processor inside the makeshift lab on Lighthouse\n- Stash a Military COFDM Wireless Signal Transmitter inside the makeshift lab on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Peacekeeper Rep +0.75\n- 1,650 Euros\n  - 1,733 Euros with Intelligence Center Level 1\n  - 1,898 Euros with Intelligence Center Level 2\n- 1× TDI KRISS Vector Gen.2 9x19 submachine gun\n- 2× Glock 9x19 \"Big Stick\" 33-round magazine\n- 2× 9x19mm PBP ammo pack (50 pcs)\n- Unlocks purchase of TDI KRISS Vector Gen.2 9x19 submachine gun at Skier LL3\n\"The bloke already let me know he got it and he's happy. Here, this is your cut.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Virtex programmable processor | 1 | Required | N/A | Stashed item |\n| Military COFDM Wireless Signal Transmitter | 1 | Required | N/A | Stashed item |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to stash a Virtex programmable processor and a Military COFDM Wireless Signal Transmitter in the hidden drug lab on Lighthouse. It is located inside a group of stacked shipping containers in the container area of the train yard in the north."
+    }
+  ]
+}

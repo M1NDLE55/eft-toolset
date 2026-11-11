@@ -1,0 +1,41 @@
+{
+  "title": "Hideout Management",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hideout_Management",
+  "revisionId": 362576,
+  "lastEdited": "2026-09-29T19:36:09Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hideout Management is a Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Efficient hideout management allows you to use less fuel and filters in production, and increases bonuses from different Hideout zones."
+    },
+    {
+      "heading": "Hideout",
+      "level": 2,
+      "text": "- Level 5 of this skill is needed for the Library"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases all percentage bonuses from Hideout zones (1% per level → +50% at Elite Level)\n- Reduces fuel, air and water filters consumption rate (0.5% per level → -25% at Elite Level)\n- Elite level: +2 slots for fuel canisters\n- Elite level: +2 slots for water filters\n- Elite level: +2 slots for air filters\n- Elite level: +2 to the storage limit of coins in a bitcoin farm"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Crafting items in the Hideout\n  - 0.8 upon finishing a craft\n  - The point gain is not affected by the Library even though it's a Practical skill\n- Using Scav Case in the Hideout\n- Spending resources in the Hideout\n- Upgrading modules of the Hideout\n  - 12 points per upgrade\n- Completing the quest The Choice\n- Completing the quest Never Too Late To Learn\n- Completing the quest Profit Retention\n- Completing the quest A Life Lesson\n- Completing the quest Get a Foothold"
+    }
+  ]
+}

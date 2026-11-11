@@ -1,0 +1,80 @@
+{
+  "title": "The Price of Independence",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Price_of_Independence",
+  "revisionId": 352236,
+  "lastEdited": "2026-08-07T21:00:15Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs, Reserve, Woods, Lighthouse",
+    "given by": "BTR Driver",
+    "previous": "Discombobulate",
+    "related": "Choose Your Friends Wisely",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Price of Independence is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"We foiled Skier's plans, and I'll tell you this - we can't let this opportunity slip away. When he recovers, he will never let me out of his sight. That's why we need to think of a defensive plan now, because you and I are both going to get nailed! So listen, I've got a plan all worked out. Except I don't have anybody else I'd trust to do something this complex. I was able to dig up some background intel on Skier. The kind of information that could compromise him real bad if it fell into the right hands. It's all in this letter, and it's our guarantee. You need to pick it up at the customs area. The letter will be on the top floor of the building by the construction site. You know, the one near the railroad platform, you'll see it. Hopefully. From there, go straight to the reserve base and leave it in the headquarters on the third floor, at the fortified point with windows. The key is to make sure that Skier's men don't intercept the letter. That is why after stashing the letter, run to Priozersk and make some noise. After you kill a couple of Scavs, go to the lighthouse peninsula and shoot a flare. You need a yellow one, don't get it mixed up! The best place to do it is on the pier at the vacation houses and on the platform at the train station, it'll distract the guys from Skier's nearest base. After that, you run out of there! I've written all the instructions on a piece of paper to make sure you don't fuck it up. You gotta do it all at once, you understand?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the incriminating letter on Customs\n- Use the transit from Customs to Reserve\n- Stash the letter on the third floor of the military headquarters on Reserve\n- Use the transit from Reserve to Woods\n- Eliminate any 3 targets on Woods\n- Use the transit from Woods to Lighthouse\n- Launch a yellow signal flare at the train station warehouse on Lighthouse\n- Launch a yellow signal flare at the pier on Lighthouse\n- Survive and extract from Lighthouse\n- Eliminate 10 Scavs while completing the other objectives"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +85,400 EXP\n- BTR Driver Rep +0.5\n- 300,000 Roubles\n- Unlocks barter for RSP-30 reactive signal cartridge (Blue) at Mechanic LL2\n- Unlocks barter for Graphics card at Mechanic LL3\n- Unlocks achievement All-Wheel Drive\n\"Ho-ly shit! You did it! You're the only one to stick up for me. What's most important is that we've already prepared the stage. It won't be easy, but Prapor promised to help, and the letter ought to work too. I won't forget all the help you've given me. Drop by often, friend.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"It didn't work out, friend. Skier has intercepted the damn letter. We sure were close, weren't we? Nobody even knew about this! I guess I don't have any options to break away from Skier yet.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Incriminating letter | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| RSP-30 reactive signal cartridge (Yellow) | 2 | Required | N/A | Must be fired into the sky while being in the specified areas. |\n| ZiD SP-81 26x75 signal pistol | 1 | Required | N/A | Used to fire the flare cartridge |\n| 26x75mm flare cartridge (Yellow) | 2 | Required | N/A | Must be fired into the sky while being in the specified areas. |\nIn this quest you first have to find the Incriminating letter on the third floor in the northern building of the industrial plant on Customs. Afterwards you have to transit to Reserve and stash it on the third floor of the military headquarters (Black Bishop). Next you have to transit to Woods and kill any 3 targets there. Lastly you need to transit to Lighthouse and launch a yellow flare at the train station and the pier, and extract. While doing these objectives, 10 Scavs also need to be killed. Dying or extracting at any point before completing all objectives will reset fulfilled objectives besides collecting the Incriminating letter."
+    },
+    {
+      "heading": "Customs Letter location",
+      "level": 3,
+      "text": "The letter can be found in different spots in the office on the third floor of the northern building at the industrial plant."
+    },
+    {
+      "heading": "Customs to Reserve transit",
+      "level": 3,
+      "text": "Next to the Military Base CP extraction."
+    },
+    {
+      "heading": "Reserve Letter stashing location",
+      "level": 3,
+      "text": "On the third floor of the military headquarters (Black Bishop), at broken crates on the western side of the building."
+    },
+    {
+      "heading": "Reserve to Woods transit",
+      "level": 3,
+      "text": "At the map border northwest of the train yard."
+    },
+    {
+      "heading": "Woods to Lighthouse transit",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Lighthouse Yellow flare launch locations",
+      "level": 3,
+      "text": "Shoot a yellow flare into the sky while being in the specified areas. If the flare doesn't reach a certain height, the quest objective won't complete. If you use the handheld RSP-30 yellow flare, make sure to aim it upwards, but not too much or it lands behind you."
+    }
+  ]
+}

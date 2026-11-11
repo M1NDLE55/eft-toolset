@@ -1,0 +1,49 @@
+{
+  "title": "Easy Job",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Easy_Job",
+  "revisionId": 361751,
+  "lastEdited": "2026-09-24T12:31:55Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Prapor",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Easy Job is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, soldier. Got an assignment for you, and I'd advise against putting it off.You know the water treatment plant out on the coast? No, not the one by the resort. The one out on the cape. There's a military MI-8 sitting somewhere on the grounds. From what I've heard, it might even still be operational. If things ever go completely to hell in this city, you could probably try using it to get out of here. But that's not why I'm interested in it. According to my sources, there's enough valuable gear around that bird to make your head spin. Take this marker, tag the helicopter, then clear the area so my boys can move in safely.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the helicopter at the water treatment plant on Lighthouse\n- Mark the helicopter with an MS2000 Marker\n- Eliminate any 10 targets around the helicopter area"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2]\n\"So, you made it back alive? Good, good. Here's your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed on the helicopter. When placed, the item is removed from the players' inventory. |\n\nThe helicopter is located in one of the basins at the water treatment plant in the north.\n\nAdditionally, in this quest you have to kill 10 Rogues, Scavs, or PMC's in a specific area of the water treatment plant on Lighthouse. Any kills outside of the marked area do not count towards the objective."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

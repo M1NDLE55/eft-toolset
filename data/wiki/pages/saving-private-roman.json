@@ -1,0 +1,60 @@
+{
+  "title": "Saving Private Roman",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Saving_Private_Roman",
+  "revisionId": 359631,
+  "lastEdited": "2026-09-13T20:19:30Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Lighthouse",
+    "given by": "BTR Driver",
+    "previous": "Stick to It",
+    "leads to": "A Bitter Victory",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Saving Private Roman is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You did pretty well helping with the Rogues, and the smugglers actually came to me themselves. One of their commanders is being held by those bastards over at the water treatment plant, and the guys want to get their own man back. But for that, they need a reliable route from Priozersk to the Rogue base. If you help with that, maybe we can talk about your request too. You'll need to go along the path from the nature reserve to the lighthouse and mark the start and end of the route.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Mark the transit to Lighthouse with an MS2000 Marker on Woods\n- Use the transit from Woods to Lighthouse\n- Mark the transit to Woods with an MS2000 Marker on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +42,000 EXP\n\"Let's hope this smuggler operation goes smoothly.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 2 | Required | N/A | This item is placed on the transits. When placed, the item is removed from the players' inventory. |\nIn this quest you first have to mark the Lighthouse transit on Woods with a MS2000 Marker and then use it. Afterwards you have to mark the Woods transit on Lighthouse with a MS2000 Marker."
+    },
+    {
+      "heading": "Woods to Lighthouse transit",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Lighthouse to Woods transit",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Radar station commandant room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Radar_station_commandant_room_key",
+  "revisionId": 339133,
+  "lastEdited": "2026-03-26T00:14:20Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the radar station commandant's office at the peninsula territory on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "62987c658081af308d7558c6",
+    "ID": "lighthouse_key10"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Radar station commandant room key (Radar) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key that opens the radar station commandant office room, located somewhere on the Lighthouse peninsula territory."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the quest Top Secret"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The commandant's office can be found on the first floor of the radar station at the lighthouse peninsula territory on Lighthouse. Note: The bridge that leads to the peninsula is guarded by Zryachiy and full of Claymores. To safely pass the bridge, an encoded Digital secure DSP radio transmitter is required."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Weapon mods)\n- Jacket\n- Weapon box (4x4)\n- PC block"
+    }
+  ]
+}

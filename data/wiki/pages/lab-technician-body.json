@@ -1,0 +1,43 @@
+{
+  "title": "Lab technician body",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lab_technician_body",
+  "revisionId": 358901,
+  "lastEdited": "2026-09-12T07:22:36Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "6582e6c6edf14c4c6023adf2",
+    "ID": "scavDead_laborant"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Lab technician body is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Corpse of a deceased lab technician. A 4x4 loot container that only spawns the TerraGroup science office key."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Ground Zero",
+      "level": 3,
+      "text": "Inside the TerraGroup main building, in a hallway behind the big TerraGroup sign in the entrance hall, buried under rubble."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Icon | Type |\n| TerraGroup science office key | Key |"
+    }
+  ]
+}

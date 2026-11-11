@@ -1,0 +1,62 @@
+{
+  "title": "Dorm room 308 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_308_key",
+  "revisionId": 316216,
+  "lastEdited": "2025-07-18T21:43:00Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽600",
+    "usage": "Unlocks room 308 in the three-story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5780cf722459777a5108b9a1",
+    "ID": "Общага1 308"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 308 key (Dorm 308) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the three-story dormitory with a tag reading \"308\" on it."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In a key cabinet at the dorm guard desk that is located at the two-story dorms"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The third floor of the three-story dorms on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Roubles)"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| Set of files \"Master\" x1; Set of files \"Master\"; +; Metal cutting scissors x1; Metal cutting scissors; +; Dorm room 308 key x1; Dorm room 308 key; +; Gunpowder \"Kite\" x1; Gunpowder \"Kite\"; +; Metal spare parts x1; Metal spare parts | → | Workbench level 2; 2 h 46 min 40 sec | → | Can of thermite x1; Can of thermite |"
+    }
+  ]
+}

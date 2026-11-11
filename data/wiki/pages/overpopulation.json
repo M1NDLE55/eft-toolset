@@ -1,0 +1,48 @@
+{
+  "title": "Overpopulation",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Overpopulation",
+  "revisionId": 359540,
+  "lastEdited": "2026-09-13T20:17:56Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Peacekeeper",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Overpopulation is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Mercenary, there is work for you. According to our intelligence, after the initial conflict, the former base of your USEC comrades, in the cottage area at Cape Dalniy, was abandoned with a lot of valuable equipment and information that could sponsor the Blue Helmets operations. The only problem is that the entire territory is currently under the control of the Scavs, and I would like to get rid of them, or at least scare them out of this zone so that my people can extract all the necessary resources without combat. This is your task, my friend. Naturally, everything that you have just heard will remain strictly between us. I look forward to your report.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be Loyalty Level 3 to start this quest"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 targests around the chalet area on Lighthouse\n- Hand over 5 Topographic survey maps, Intelligence folder, or TerraGroup \"Blue Folders\" materials marked with the Found in raid status"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Peacekeeper Rep +0.75\n- Dollars\n  - Dollars with Intelligence center Level 1\n  - 2,327 Dollars with Intelligence center Level 2\n\"My recon group has already reported your success, mercenary. I think you have earned a generous reward. You're free to go.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "For this quest you have to kill 10 targets around and between the cottages on Lighthouse."
+    }
+  ]
+}

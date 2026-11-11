@@ -1,0 +1,46 @@
+{
+  "title": "Charisma",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Charisma",
+  "revisionId": 360740,
+  "lastEdited": "2026-09-19T11:54:28Z",
+  "kind": "skill",
+  "categories": [
+    "Mental skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mental skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Charisma is a Mental skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Mastering the art of charisma allows to receive discounts on various services."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The progress for this skill is shared between your PMC and Scav character."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Reduces operational task replacement cost (0.1% per level → -5% at Elite Level)\n- Reduces after-raid healing services prices (0.1% per level → -5% at Elite Level)\n- Reduces insurance services prices (0.1% per level → -5% at Elite Level)\n- Reduces paid exfil prices (0.1% per level → -5% at Elite Level)\n- Elite level: Adds a discount to Scav Case prices (10% Reduction)\n- Elite level: Reduces Fence standing penalty (50% Reduction, does apply at 6+ Scav karma)\n- Elite level: Adds one more daily operational task"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- 10% of points of EXP gained for Intellect will be added to Charisma skill progression\n- 20% of points of EXP gained for Attention or Perception will be added to Charisma skill progression\n- Using the Scav Case\n  - Grants 0.4 points every time you send Scavs to search for loot\n- Insuring your gear\n  - Grants 0.4 points for every 200,000 Roubles spent\n- Repairing Weapons or Body armor with Traders\n  - Grants 0.4 points for every 10,000 Roubles spent\n- Completing the quest Special Order\n- Completing the quest A Life Lesson\n- Completing the quest Antique Enthusiast\n- Completing the quest Regulated Materials\n- Completing the quest Never Too Late To Learn"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The skill icon is inspired by a picture of Tom Hardy."
+    }
+  ]
+}

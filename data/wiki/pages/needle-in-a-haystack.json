@@ -1,0 +1,65 @@
+{
+  "title": "Needle in a Haystack",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Needle_in_a_Haystack",
+  "revisionId": 359490,
+  "lastEdited": "2026-09-13T20:17:04Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Ground Zero, Interchange, Streets of Tarkov, Shoreline",
+    "given by": "Mechanic",
+    "previous": "Shady Contractor",
+    "leads to": "Hidden Layer",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Needle in a Haystack is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You're just in time! I have studied the manager's diary and prepared for you a list of facilities that appear most often in the records. You need to investigate all of these locations. So far, I can't tell what exactly to look for. Maybe you'll find equipment or other traces of TerraGroup around there. Focus on these locations and look around.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Investigate the courtyard park by TerraGroup HQ on Ground Zero\n- Investigate the kart track on Interchange\n- Investigate the indoor children's playground on Interchange\n- Investigate the children's playground by Concordia on Streets of Tarkov\n- Investigate the coast-side construction site on Shoreline\n- Investigate the children's playground by the Health Resort on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +9,800 EXP\n- Mechanic Rep +0.01\n- 47,000 Roubles\n  - 49,350 Roubles with Intelligence center Level 1\n  - 54,050 Roubles with Intelligence center Level 2\n- 5× Light bulb\n- 5× Energy-saving lamp\n\"Really, nothing at all? Perhaps it really is just a coincidence... I'll have to think about it and check my sources again.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Ground Zero",
+      "level": 3,
+      "text": "In front of the TerraGroup building."
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "In front of the shopping mall and inside in front of the IDEA store."
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "In the courtyard of the Concordia building."
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "Behind the health resort east wing and at the construction site along the southern main road."
+    }
+  ]
+}

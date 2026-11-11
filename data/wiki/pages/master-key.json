@@ -1,0 +1,44 @@
+{
+  "title": "Master Key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Master_Key",
+  "revisionId": 362650,
+  "lastEdited": "2026-09-29T21:11:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Master Key is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, how are you? I know, probably not exactly amazing. These are difficult times. My men have discovered several interesting rooms inside the Health Resort, but unfortunately they are locked. They used to be occupied by USEC soldiers. Their keys were kept at the checkpoint, inside the concrete bunker northwest of the Resort. They evacuated in a hurry, so they may have left something behind. Bring me the keys to those rooms.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the key to the closed premises of the Health Resort on Shoreline\n- Hand over the key to Peacekeeper"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Peacekeeper Rep +0.1\n- 550 Dollars\n  - 578 Dollars with Intelligence Center Level 1\n  - 632 Dollars with Intelligence Center Level 2\n- 3× CPU fan\n- Unlocks purchase of HK MP5 9x19 submachine gun (Navy 3 Round Burst) at Peacekeeper LL2\n\"Excellent, great work! So, a single key is used for all of the rooms...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Key to the closed premises of the Health Resort | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe Key to the closed premises of the Health Resort has to be picked up on Shoreline, laying on a chair in the bunker that is located north of the health resort. It only spawns while the quest is active. Once retrieved, you must extract and turn in the item to Peacekeeper. If you die after retrieving it and before turning it in, you will have to go and retrieve it again."
+    }
+  ]
+}

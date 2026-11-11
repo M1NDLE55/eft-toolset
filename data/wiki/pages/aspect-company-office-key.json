@@ -1,0 +1,61 @@
+{
+  "title": "Aspect company office key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aspect_company_office_key",
+  "revisionId": 325024,
+  "lastEdited": "2025-11-23T19:14:32Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the \"Aspect\" company building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "64ce572331dd890873175115",
+    "ID": "city_key41"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Aspect company office key (Aspect) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key from the entrance to the office of Aspect LLC on 56 Primorsky Ave."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This key is not necessary to get into the building since it has a hole in the wall on the backside, but it provides an alternative entrance, helping player avoid Kaban guards on the NSV and AGS emplacements."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- On Kaban"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the \"Aspect\" company building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "The \"Aspect\" company building."
+    }
+  ]
+}

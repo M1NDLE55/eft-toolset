@@ -22,6 +22,29 @@ const LANGUAGE_LINK = /^[a-z]{2,3}(-[a-z]+)?:/;
 const INFOBOX_FIELDS_TO_DROP = /image|icon|size|caption|width|height/i;
 const PAGE_NAME = /^(PAGENAME|PAGENAMEE|FULLPAGENAME|BASEPAGENAME|SUBPAGENAME)$/;
 
+export interface WikiPageText {
+  /** The page's infobox, as field name and plain-text value; empty when it has none. */
+  infobox: Record<string, string>;
+  sections: WikiSection[];
+}
+
+export function wikitextToPage(wikitext: string, title: string): WikiPageText {
+  const text = stripHidden(wikitext);
+  for (let index = text.indexOf("{{"); index >= 0; ) {
+    const end = matchingEnd(text, index, "{{", "}}");
+    if (end < 0) break;
+    const [name, ...args] = splitTopLevel(text.slice(index + 2, end - 2));
+    if (/^infobox\b/i.test(name.trim())) {
+      return {
+        infobox: Object.fromEntries(infoboxFields(args, title)),
+        sections: wikitextToSections(text.slice(0, index) + text.slice(end), title),
+      };
+    }
+    index = text.indexOf("{{", end);
+  }
+  return { infobox: {}, sections: wikitextToSections(text, title) };
+}
+
 export function wikitextToSections(wikitext: string, title: string): WikiSection[] {
   const sections: WikiSection[] = [];
   let current = { heading: INTRODUCTION, level: 1, lines: [] as string[] };
@@ -128,7 +151,11 @@ function expandTemplates(text: string, title: string): string {
     const start = text.indexOf("{{", index);
     if (start < 0) break;
     const end = matchingEnd(text, start, "{{", "}}");
-    if (end < 0) break;
+    if (end < 0) {
+      out += text.slice(index, start);
+      index = start + 2;
+      continue;
+    }
     out += text.slice(index, start) + expandTemplate(text.slice(start + 2, end - 2), title);
     index = end;
   }
@@ -141,16 +168,7 @@ function expandTemplate(body: string, title: string): string {
   const positional = args.filter((arg) => !/^\s*[\w ]+\s*=/.test(arg));
   if (PAGE_NAME.test(name)) return title;
   if (/^infobox\b/i.test(name)) {
-    const lines = args.flatMap((arg) => {
-      const split = arg.indexOf("=");
-      if (split < 0) return [];
-      const key = arg.slice(0, split).trim();
-      const value = expandTemplates(arg.slice(split + 1), title)
-        .replace(/<br\s*\/?>/gi, ", ")
-        .replace(/\s+/g, " ")
-        .trim();
-      return key && value && !INFOBOX_FIELDS_TO_DROP.test(key) ? [`${key}: ${value}`] : [];
-    });
+    const lines = infoboxFields(args, title).map(([key, value]) => `${key}: ${value}`);
     return lines.length > 0 ? `\n${lines.join("\n")}\n` : "";
   }
   if (/^quote$/i.test(name) && positional[0]) {
@@ -165,6 +183,16 @@ function expandTemplate(body: string, title: string): string {
   return "";
 }
 
+function infoboxFields(args: string[], title: string): [string, string][] {
+  return args.flatMap((arg) => {
+    const split = arg.indexOf("=");
+    if (split < 0) return [];
+    const key = arg.slice(0, split).trim();
+    const value = inlineText(arg.slice(split + 1).replace(/<br\s*\/?>/gi, ", "), title);
+    return key && value && !INFOBOX_FIELDS_TO_DROP.test(key) ? [[key, value]] : [];
+  });
+}
+
 function convertLinks(text: string): string {
   let out = "";
   let index = 0;
@@ -172,7 +200,12 @@ function convertLinks(text: string): string {
     const start = text.indexOf("[[", index);
     if (start < 0) break;
     const end = matchingEnd(text, start, "[[", "]]");
-    if (end < 0) break;
+    if (end < 0) {
+      // The wiki has some unclosed links; drop the brackets and read on.
+      out += text.slice(index, start);
+      index = start + 2;
+      continue;
+    }
     out += text.slice(index, start) + linkText(text.slice(start + 2, end - 2));
     index = end;
   }
@@ -187,7 +220,11 @@ function linkText(body: string) {
   if (FILE_LINK.test(target)) {
     // Item icons link to the item, and are often the only place a table names it.
     const link = labels.map((label) => /^\s*link\s*=(.*)$/i.exec(label)?.[1].trim()).find(Boolean);
-    return link && !/^(https?:)?\/\//i.test(link) ? `${ICON}${link.replace(/_/g, " ")}${ICON}` : "";
+    if (!link || /^(https?:)?\/\//i.test(link)) return "";
+    const name = link.replace(/_/g, " ");
+    // Amounts are drawn as icons too, such as "5000 Roubles.png" linking to Roubles.
+    const amount = /^\s*(?:file|image|media)\s*:\s*(\d[\d,.]*)\s+(.+?)\.\w+\s*$/i.exec(target);
+    return `${ICON}${amount && amount[2].toLowerCase() === name.toLowerCase() ? `${amount[1]} ${name}` : name}${ICON}`;
   }
   if (NAMESPACES_TO_DROP.test(target) || LANGUAGE_LINK.test(target.trim())) return "";
   // Labels may themselves hold links once templates are expanded.
@@ -202,7 +239,8 @@ function convertTables(text: string): string {
   const stack: string[][] = [];
   for (const line of lines) {
     const trimmed = line.trim();
-    if (trimmed.startsWith("{|")) {
+    // A table may open inside a list item, as ":{|".
+    if (/^[*#:;]*\s*\{\|/.test(trimmed)) {
       stack.push([]);
     } else if (trimmed.startsWith("|}") && stack.length > 0) {
       const rows = tableRows(stack.pop()!);

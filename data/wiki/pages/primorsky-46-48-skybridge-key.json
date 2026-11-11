@@ -1,0 +1,68 @@
+{
+  "title": "Primorsky 46-48 skybridge key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Primorsky_46-48_skybridge_key",
+  "revisionId": 330266,
+  "lastEdited": "2025-12-29T19:51:01Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "Primorsky 46 underpass key"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a door at the skybridge which connects the Primorsky 46 and 48 buildings on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39e1d234195315d4020bd",
+    "ID": "city_key11"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Primorsky 46-48 skybridge key (Skybridge) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the skybridge linking Primorsky 46-48, leads to the apartment of the ballet master."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quests Ballet Lover, Audiophile and Spotter"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "Inside the \"Brodion\" pub, on the shelf behind the bar counter. A single key is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the Primorsky 48 apartment no. 10 at the skybridge which connects it with the Primorsky 46 staircase at Streets of Tarkov. The apartment 10 entrance door can be breached from the inside to leave."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x PC block\n- Loose loot (Valuables, Electronics)"
+    }
+  ]
+}

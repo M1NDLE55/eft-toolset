@@ -1,0 +1,59 @@
+{
+  "title": "The Good Times - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Good_Times_-_Part_2",
+  "revisionId": 360831,
+  "lastEdited": "2026-09-20T12:03:21Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Prapor",
+    "previous": "Airmail",
+    "leads to": "Minute of Fame",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Good Times - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The factory run was amazing, your stories made my memory come flooding back! The gunfights are one thing, but when the bandits' leaders showed up, that's when it got real hot. Reshala was the first to show up, always bragging about his gold TT. Back then, everyone wanted one of these in their holster. But now, for some reason, the demand for TTs is going down. Can you remind everyone what kind of weapons real men fight with?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only available to buyers of the \"Edge of Darkness\" edition of the game."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 10 targets while using the golden TT-33 pistol"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 2× Ammunition case\n\"Older models always have a kind of personality to them. And this one, the gilding, the grip... Something about it just feels right, doesn't it?\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount |\n| Tokarev TT-33 7.62x25 TT pistol (Golden) | 1 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "The Tokarev TT-33 7.62x25 TT pistol (Golden) can be obtained by killing Reshala on Customs."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The quest dialogue is referencing the addition of bosses to the game, which started with Reshala in patch patch 0.9.0.1580 on July 19, 2018."
+    }
+  ]
+}

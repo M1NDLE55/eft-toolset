@@ -1,0 +1,60 @@
+{
+  "title": "Gunsmith Master - Part 9",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_9",
+  "revisionId": 353720,
+  "lastEdited": "2026-08-14T22:43:25Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith 9",
+    "Gunsmith Master 9"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith Master - Part 9 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"What do you think, how much does human life cost? Not much, I guess. But what's even more surprising for me, it's the contemporary art market. The value of art pieces by renowned artists grows every year. They are definitely talented, but the more you look at it, the more it seems that anything can be art. It can be a Rothko painting, a displaced urinal, or a bunch of garbage. However, in my opinion, the most amazing pieces of art are weapons, starting from the melee - which is already universally recognized as such and can be found in many museums - to an old AK or M4, which are beautiful as they are. But a weapon only transcends to true art when it becomes unique, one-of-a-kind, in the hands of someone who knows how to use it, who modifies it for his own needs, creating a masterpiece worthy of being displayed in the best of museums. Bring me one such masterpiece, an M4A1 with a KAC QDSS NT-4 (FDE) silencer, Alexander Arms MK10 rifle-length handguard, REAP-IR thermal scope, and a 60-round magazine. Ergonomics should be not less than 40, the recoil sum less than 280, and the weight of 5 kg or less.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 39 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an M4A1 to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,900 EXP\n- Mechanic Rep +0.03\n- 1,000 Euros\n  - 1,050 Euros with Intelligence Center Level 1\n  - 1,150 Euros with Intelligence Center Level 2\n- 1× Magazine case\n- 2× FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope\n- Unlocks barter for Trijicon REAP-IR thermal scope at Mechanic LL4\n- Unlocks barter for SilencerCo Saker ASR 556 5.56x45 sound suppressor at Peacekeeper LL4\n- Unlocks craft for Trijicon REAP-IR thermal scope at Workbench level 3\n\"Makes me want to put it on a showcase display. Masterful work, it truly did turn out to be a masterpiece.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "M4A1 specifications:\n- 60 Durability\n- 40 or more ergonomics\n- 280 or less recoil\n- 5 kg or less in weight\n- A magazine with a capacity of at least 60\n- KAC QDSS NT4 5.56x45 sound suppressor (FDE)\n- AR-15 Alexander Arms MK10 rifle length handguard\n- Trijicon REAP-IR thermal scope"
+    },
+    {
+      "heading": "Builds",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard M4A1 from Peacekeeper LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AR-15 5.56x45 SureFire MAG5-60 STANAG 60-round magazine | Peacekeeper | LL3 (Barter) |\n| AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine | PeacekeeperRef | LL4 (Barter)LL4 |\n| AR-15 5.56x45 SureFire MAG5-100 STANAG 100-round magazine | Mechanic | LL4 |\n| AR-15 Alexander Arms MK10 rifle length handguard | Mechanic | LL4 |\n| Alexander Arms 10 inch rail | Mechanic | LL4 |\n| Zenit RK-1 tactical foregrip | Skier | LL3 |\n| AR-15 Magpul MIAD pistol grip (FDE) | Peacekeeper | LL2 |\n| AR-15 5.56x45 10.3 inch barrel | PeacekeeperMechanic | LL2 (Barter); LL3LL2 (Barter) |\n| AR-15 KAC QDC 5.56x45 Flash Suppressor Kit | Peacekeeper | LL2 |\n| KAC QDSS NT4 5.56x45 sound suppressor (FDE) | Loot Only | |\n| AR-15 Ballistic Advantage Lo-Pro Gas Block | Mechanic | LL3 |\n| UNV DLOC-IRD sight mount | Jaeger | LL2 (Barter) |\n| Trijicon REAP-IR thermal scope | MechanicSkier | LL4 (Barter)LL4 (Barter) |\n| Trijicon REAP-IR scope eyecup | Jaeger | LL3 (Barter); LL3 |\n| AR-15 KRISS Defiance DS150 stock | Peacekeeper | LL3 |\n| AR-15 Magpul B.A.D. Lever bolt release | Mechanic | LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

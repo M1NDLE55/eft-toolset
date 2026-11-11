@@ -1,0 +1,58 @@
+{
+  "title": "Ironclad Proof",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ironclad_Proof",
+  "revisionId": 361733,
+  "lastEdited": "2026-09-24T12:27:55Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Prapor",
+    "LL requirement": "3",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Ironclad Proof is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, tourist. How's life in Tarkov treating you? I figured your kind would be softer than this. Ah, never mind, let's get to business.\n\nEverything's piling up on me at once. I'm out of grenades, and my clients are being a pain in the ass. I need your help. Show those idiots that the GP-25 underbarrel grenade launcher really gets the job done. And while you're at it, gather me some grenades. Our grenades, domestic Soviet ones.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by USEC PMCs."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 10 any in raid Russian grenades to Prapor\n- Eliminate any 10 targets with a GP-25 grenade launcher"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 1× Military power filter\n- Unlocks purchase of Korund-VM ballistic plates (Front) at Prapor LL3\n- Unlocks purchase of 23x75mm Zvezda flashbang round at Prapor LL3\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Hm... well, alright. Old offenses are forgotten, let's keep working. Just be careful around that Skier character, he's a shady dude.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "- Unlocks purchase of 40mm VOG-25 grenade at Prapor LL3\n- Unlocks barter of GP-25 Kostyor 40mm underbarrel grenade launcher at Prapor LL3"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| RGD-5 hand grenade | 10 | Handover item | Yes |\n| VOG-17 Khattabka improvised hand grenade | 10 | Handover item | Yes |\n| VOG-25 Khattabka improvised hand grenade | 10 | Handover item | Yes |\n| F-1 hand grenade | 10 | Handover item | Yes |\n| F-1 hand grenade (Reduced delay) | 10 | Handover item | Yes |\n| RGN hand grenade | 10 | Handover item | Yes |\n| RGO hand grenade | 10 | Handover item | Yes |\n| Zarya stun grenade | 10 | Handover item | Yes |\n| 40mm VOG-25 grenade | 10 | Handover item | Yes |"
+    },
+    {
+      "heading": "See Also",
+      "level": 2,
+      "text": "- Our Own Land - The BEAR counterpart quest"
+    }
+  ]
+}

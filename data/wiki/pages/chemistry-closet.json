@@ -1,0 +1,50 @@
+{
+  "title": "Chemistry Closet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chemistry_Closet",
+  "revisionId": 359160,
+  "lastEdited": "2026-09-13T20:11:27Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Chemistry closet"
+  ],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Chemistry Closet is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey, come on in. Have you heard about some new guy that appeared in the resort area? Calls himself Sanitar. Not a simple man either, definitely worked for TerraGroup when they settled in the health resort. Either a major scientist there or just close to guys who were, no info on that. I've heard he's selling some secret stimulants, this means he understands chemistry quite well. But long story short, he's got some sort of an office or stash in the health resort, and I want you to find that place. I'll send specialists, maybe they'll find some interesting devices there. Just be careful, this man is dangerous.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 22 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate Sanitar's office in the health resort on Shoreline\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +13,400 EXP\n- Mechanic Rep +0.05\n- 1,000 Euros\n  - 1,050 Euros with Intelligence Center Level 1\n  - 1,150 Euros with Intelligence Center Level 2\n- 2× SilencerCo Hybrid 46 multi-caliber sound suppressor\n- 1× Graphics card\n- Unlocks barter for T H I C C Weapon case at Mechanic LL4\n\"So that's how it is, it's right on the first floor? How many times have my people been there and found nothing. Did you get inside the room? Found anything interesting in there? Well, doesn't matter, I'll send my boys to check it out anyway. Here's your reward, you've earned it. Thank you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Notes |\n| Health Resort office key with a blue tape | 1 | Required | Unlocks room 110 of the East wing in the Health Resort on Shoreline. |\nIn this quest you have to find Sanitar's office, which is located in the health resort on Shoreline. The wanted office is room 110 on the first floor of the resort east wing. A Health Resort office key with a blue tape is required to unlock the room. After you unlocked the door, simply walk into the room to complete the objective. After you completed the objective, you have to extract from Shoreline."
+    }
+  ]
+}

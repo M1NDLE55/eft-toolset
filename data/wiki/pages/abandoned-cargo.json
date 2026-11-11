@@ -1,0 +1,69 @@
+{
+  "title": "Abandoned Cargo",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Abandoned_Cargo",
+  "revisionId": 361814,
+  "lastEdited": "2026-09-24T13:35:08Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Therapist",
+    "LL requirement": "1",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Abandoned Cargo is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon. I have recently received information regarding a suspicious TerraGroup shipment. Based on its description, it may still contain important records, and perhaps even biological samples.\\n\\nShipments of this nature were supposed to be evacuated as a matter of highest priority, yet for some reason this one was left behind near the customs terminal. We need to determine what is inside, but first we have to locate the cargo.\\n\\nCould I ask for your assistance? You'll recognize the correct shipment by the boxes bearing the TerraGroup logo.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Mark any of the special TerraGroup cargo boxes with an MS2000 Marker on Customs\n  - (Optional) Locate the first special TerraGroup cargo on Customs\n  - (Optional) Locate the second special TerraGroup cargo on Customs\n  - (Optional) Locate the third special TerraGroup cargo on Customs\n  - (Optional) Locate the fourth special TerraGroup cargo on Customs\n  - (Optional) Locate the fifth special TerraGroup cargo on Customs\n  - (Optional) Locate the sixth special TerraGroup cargo on Customs\n  - (Optional) Locate the seventh special TerraGroup cargo on Customs"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Therapist Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"Excellent! You didn't open any of the containers, did you? Good. It's best if they are examined by people properly qualified to do so.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| MS2000 Marker | 1 | This item is placed on the cargo. When placed, the item is removed from the players' inventory. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed on the cargo. When placed, the item is removed from the players' inventory. |\nIn this quest you have to mark 1 of 7 cargo pallets on Customs with a MS2000 Marker."
+    },
+    {
+      "heading": "Red customs control warehouse - Cargo 1",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Warehouse 17 - Cargo 3, 6, 7",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Boiler building - Cargo 2, 4, 5",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy additional MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

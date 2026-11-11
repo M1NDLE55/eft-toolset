@@ -1,0 +1,53 @@
+{
+  "title": "A Fuel Matter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A_Fuel_Matter",
+  "revisionId": 359041,
+  "lastEdited": "2026-09-13T20:09:26Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Reserve",
+    "given by": "Ragman",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "A Fuel Matter is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there! I'm gathering my guys to search the reserve base for fuel. They say there are stationary fuel tanks and tank cars, but I don't know where they are exactly, so I don't wanna send my guys to search for them while they're getting shot at by snipers and shit, so why not you go there yourself and quietly mark the fuel tanks with beacons? Look for the big groups of fuel cisterns.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 15 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Mark the first group of fuel tanks with an MS2000 Marker on Reserve\n- Mark the second group of fuel tanks with an MS2000 Marker on Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,200 EXP\n- Ragman Rep +0.03\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n- 2× Propane tank (5L)\n\"Big thanks. Now we know where they are so we don't have to take any chances. Here's the reward for a job well done, brother.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 2 | Required | N/A | This item is placed on the fuel tanks. When placed, the item is removed from the players' inventory. |\nIn this quest you have to find and mark 2 groups of fuel tanks on Reserve."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

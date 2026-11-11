@@ -1,0 +1,52 @@
+{
+  "title": "Courtesy Visit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Courtesy_Visit",
+  "revisionId": 359203,
+  "lastEdited": "2026-09-13T20:12:11Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Courtesy visit"
+  ],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Jaeger",
+    "previous": "The Survivalist Path - Tough Guy",
+    "leads to": "Nostalgia",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Courtesy Visit is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come in, I want to ask you for something. You know the health resort area, right? At first, the factory workers were convalescing there, and then the TerraGroup employees settled there their staff. I've been to those parts a long time ago, my classmates lived there. So, I want you to check on them, it's the old village with the church. The priest, his name is Pyotr. Misha, the fisherman. And Stepan, the local chairman. Check their houses, find out if any of them are still there.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 20 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the chairman's house in the abandoned village on Shoreline\n- Locate the fisherman's house in the abandoned village on Shoreline\n- Locate the priest's house in the abandoned village on Shoreline\n- Survive and extract from Shoreline with the \"Survived\" exit status"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,800 EXP\n- Jaeger Rep +0.03\n- 35,000 Roubles\n  - 36,750 Roubles with Intelligence Center Level 1\n  - 40,250 Roubles with Intelligence Center Level 2\n- 5× Emelya rye croutons\n- 5× Pack of milk\n\"So you say only the chairman's house is still intact, but you didn't see him himself? No? Oh, Stepan...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to locate three houses on Shoreline. All three houses must be found in a single raid. If you leave the raid and have only found some of the houses, the quest will reset. You must extract in the same raid in which you found all the houses."
+    }
+  ]
+}

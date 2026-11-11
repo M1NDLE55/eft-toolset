@@ -1,0 +1,56 @@
+{
+  "title": "Health Resort east wing office room 107 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_east_wing_office_room_107_key",
+  "revisionId": 358508,
+  "lastEdited": "2026-09-10T21:38:03Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks office 107 of the East wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0ea64786f7741707720468",
+    "ID": "Санаторий 107"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort east wing office room 107 key (E107 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium east wing office room 107."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- Second floor of the Admin building: In the band room on a chair in the first row"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "First floor of the East wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- One Medbag\n- One Medcase\n- One Sport bag\n- One LEDX spawn\n- One Graphics Card spawn\n- Loose loot (Money, Meds, Electronics)"
+    }
+  ]
+}

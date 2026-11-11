@@ -1,0 +1,45 @@
+{
+  "title": "Advertising Business - Part 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Advertising_Business_-_Part_4",
+  "revisionId": 359058,
+  "lastEdited": "2026-09-13T20:09:44Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Advertising Business - Part 3",
+    "leads to": "Advertising Business - Part 5",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Advertising Business - Part 4 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Alright, let's keep Ragman's advertisements going! Next up, the Banshee or the A18 Skanda plate carrier. Pick whichever you like more. Just don't forget to win. Nobody looks at losers.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win 10 matches while wearing a Banshee or A18 Skanda plate carrier"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +7,700 EXP\n- Ref Rep +0.01\n- 75,000 Roubles\n- 30 GP coins\n- 1× Lega Medal"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Requirement | Notes |\n| Shellback Tactical Banshee plate carrier (A-TACS AU); or; Ars Arma A18 Skanda plate carrier (MultiCam) | Shellback Tactical Banshee plate carrier (A-TACS AU); or; Ars Arma A18 Skanda plate carrier (MultiCam) | Required | Has to be worn while winning |"
+    }
+  ]
+}

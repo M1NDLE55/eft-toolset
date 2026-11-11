@@ -1,0 +1,56 @@
+{
+  "title": "Pier door key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pier_door_key",
+  "revisionId": 337082,
+  "lastEdited": "2026-03-03T22:01:48Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the pier door on Terminal.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "No",
+    "node": "6866adbe09b973bf45094339",
+    "ID": "key_terminal_gate_3"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Pier door key (Pier) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "This key should fit the door that blocks access to the pier leading to the evacuation zone."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be discarded."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "In a safe inside the pumping station building (PS) on Terminal. A single key is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the pier on Terminal."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "The \"Zubr Boat\" extraction. Entering the door starts the 3 minute extraction timer."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Substation marked key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Substation_marked_key",
+  "revisionId": 360271,
+  "lastEdited": "2026-09-15T11:59:12Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the marked electrical substation at the water treatment plant on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "62987dfc402c7f69bf010923",
+    "ID": "lighthouse_key13"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Substation marked key (Substation) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key with some strange symbols scratched onto it. Seems to be used for unlocking the electrical substation at the water treatment plant near the Lighthouse."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the the marked electrical substation at the water treatment plant on Lighthouse."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Weapon case, modified Weapons, Weapon mods, )"
+    }
+  ]
+}

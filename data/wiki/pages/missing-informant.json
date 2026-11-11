@@ -1,0 +1,60 @@
+{
+  "title": "Missing Informant",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Missing_Informant",
+  "revisionId": 359483,
+  "lastEdited": "2026-09-13T20:16:56Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Lightkeeper",
+    "previous": "Information Source (+10hr)",
+    "leads to": "Snatch (+10hr)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Missing Informant is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The informant set up a meeting near the car dealership, at a hidden spot? So why the hell are you still here? If he gets busted while you're still here, look for a hidden hideout, a spare key for it must be somewhere in there too. Find everything he's dug up. Don't let me down.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 10 hours after completion of Information Source"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the informant's hideout on Streets of Tarkov\n  - (Optional) Obtain the key to the second hideout\n- Locate the informant's backup hideout\n- Obtain the informant's journal\n- Bring the information to Lightkeeper"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.01\n- 1× Microcontroller board\n- Unlocks barter for Microcontroller board at Mechanic LL4\n\"It looks like the rumors have been confirmed after all. Someone really dared to start undermining me. These snakes are going to meet at the old federal reserve base, to transfer information. Come back later, while I figure out what to do about it.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Backup hideout key | 1 | Required | N/A | Used to open the second hideout |\n| Informant's journal | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to locate both of the informant's hideouts, and find his journal on Streets of Tarkov."
+    },
+    {
+      "heading": "First hideout",
+      "level": 4,
+      "text": "The first hideout is an electrical operation room behind the small cinema. Inside the room is a sports bag which has a guaranteed Backup hideout key spawn every raid."
+    },
+    {
+      "heading": "Second hideout and journal",
+      "level": 4,
+      "text": "The second hideout is located inside the stairs to the cinema. A Backup hideout key is required to enter it. The journal has multiple spawns throughout the hideout."
+    }
+  ]
+}

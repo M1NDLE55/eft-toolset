@@ -1,0 +1,40 @@
+{
+  "title": "Twitch Winter 2025 case (Epic) (Rivals)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Twitch_Winter_2025_case_(Epic)_(Rivals)",
+  "revisionId": 320692,
+  "lastEdited": "2025-11-08T04:56:45Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Event Reward Loot Container",
+    "weight": "4 kg",
+    "grid": "2x2",
+    "node": "6901f5ce06a00b37b0062c68 6901f99132d963c587064cd9 690203cc32d963c587064cdf 690205d381b54f523206d7c8 6902077a404807f6ee06abe9 690208cdcf19082e3a065844 69020bbc8157dd9abf0868d8 69020ccde624329042004edb",
+    "ID": "item_container_event_Twitch_Rivals_2025_1 item_container_event_Twitch_Rivals_2025_2 item_container_event_Twitch_Rivals_2025_3 item_container_event_Twitch_Rivals_2025_4 item_container_event_Twitch_Rivals_2025_5 item_container_event_Twitch_Rivals_2025_6 item_container_event_Twitch_Rivals_2025_7 item_container_event_Twitch_Rivals_2025_8"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Twitch Winter 2025 case (Epic) (Rivals) (Twitch 2025) is a Event Reward Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A case with some epic goodies."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n- Destroyed after unpacking (Right-click \"unpack\")"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "Each case contains various high-value loot and equipment including RShG-2 72.5mm rocket launcher, LEDX Skin Transilluminator, Physical Bitcoin, info items and keys & keycards."
+    }
+  ]
+}

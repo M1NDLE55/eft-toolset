@@ -1,0 +1,50 @@
+{
+  "title": "Sensory Analysis - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sensory_Analysis_-_Part_2",
+  "revisionId": 359648,
+  "lastEdited": "2026-09-13T20:19:47Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Streets of Tarkov",
+    "given by": "BTR Driver",
+    "previous": "Accept Sensory Analysis - Part 1",
+    "leads to": "Keeper's Word",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Sensory Analysis - Part 2 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I miscalculated my abilities yesterday at a friendly get-together. Don't worry, we've sailed in worse storms than this. One time I was so wasted I couldn't find the gearbox in this thing. So I tied my hand to the lever with a bandage! Inventiveness is the main principle for a machinist! Ragman needed to check some goods, and I'm a veteran in this field. Except I can't remember, for the life of me, whether we finally got to his test sample or not. Well, whatever. If it's so important, we can get together again. Such an evening is a sin not to do again, I know you'd like it too! But still, if you need to visit Ragman, ask him about the moonshine, I promised I'd help him. And now I don't even know if I did help him or not.\""
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This quest gets automatically added to the quest list upon accepting Sensory Analysis - Part 1."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find a Bottle of Fierce Hatchling moonshine\n- Hand over a Bottle of Fierce Hatchling moonshine"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +6,800 EXP\n- BTR Driver Rep +0.01\n- 32,000 Roubles\n\"Are you sure this is it? Okay, I can smell it, that's definitely the one! Ragman told me about the health resort's cellars yesterday, I even had to fucking get him wasted so we could finally change the subject. Anyway, there was a Soviet bomb shelter under the health resort, and Ref was going to organize a new arena there, for VIP audiences. I think it also involved Tagilla somehow... No, it was something else... Anyway, for this arena, Ref organized a big gear acquisition from Ragman, everything was almost ready. And then our host guy suddenly backed out. Why? Who the fuck knows. Ragman was really upset that the idea had fallen through. But he'd already delivered some of the gear, and he definitely used those keycards you're looking for. You better ask him yourself, I don't remember much from yesterday. Thanks for the drink, by the way.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Bottle of Fierce Hatchling moonshine | 1 | Handover item | No |\nIn this quest you have to hand over a Bottle of Fierce Hatchling moonshine to the BTR Driver and ask him about the facility under the health resort and the keycards to access it."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Airdrop crate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Airdrop_crate",
+  "revisionId": 347174,
+  "lastEdited": "2026-06-20T10:37:51Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [
+    "Airdrop",
+    "Airdrop common supply crate",
+    "Airdrop medical crate",
+    "Airdrop supply crate",
+    "Airdrop weapon crate",
+    "Airdrops"
+  ],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "6223349b3136504a544d1608 622334c873090231d904a9fc 622334fa3136504a544d160c 6223351bb5d97a7b2c635ca7",
+    "ID": "air_drop_common air_drop_medical air_drop_supply air_drop_weapon"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Airdrop crate is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A 10x12 grid crate that is air-dropped from a Russian Ilyushin Il-76MD-90A airlifter painted fully white with \"UN\" markings."
+    },
+    {
+      "heading": "Mechanic",
+      "level": 2,
+      "text": "A loud plane can be heard and seen flying over the location. It will fire off countermeasure flares in its flight path in even intervals, until it reaches the drop zone, where it fires off multiple flares at once and diverts from its original flight path after dropping a crate. The crate can be dropped at a set number of positions and will slowly fall to the ground via parachute. Once on the ground, the crate will emit red smoke.\n\nAirdrops can also be called in by using a signal pistol with a 26x75mm red flare cartridge or the handheld RSP-30 red flare.\n\nThere is a 15-17 minute cooldown period between airdrops which is indicated by a \"Wait for arrival! Airspace is congested\" notification in the bottom right corner of the screen when trying to call one too early after another. The airdrop will arrive after the cooldown is over."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "Airdrops are available on all locations aside from Ground Zero, Factory, The Lab, The Labyrinth, Terminal and Icebreaker."
+    },
+    {
+      "heading": "Types",
+      "level": 2,
+      "text": "There are 4 different crates that contain loot according to their type. All types also have a chance to come with backpacks."
+    },
+    {
+      "heading": "Common supply",
+      "level": 4,
+      "text": "Unmarked - Barter items, meds, weapons, ammunition and gear"
+    },
+    {
+      "heading": "Medical",
+      "level": 4,
+      "text": "Marked with a cross symbol - Meds, medical supplies and provisions"
+    },
+    {
+      "heading": "Supply",
+      "level": 4,
+      "text": "Marked with a crate symbol - Barter items"
+    },
+    {
+      "heading": "Weapon",
+      "level": 4,
+      "text": "Marked with a crosshair symbol - Weapons, weapon mods, ammunition and gunpowder"
+    }
+  ]
+}

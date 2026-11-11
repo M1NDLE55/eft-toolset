@@ -1,0 +1,42 @@
+{
+  "title": "The Survivalist Path - Unprotected but Dangerous",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Unprotected_but_Dangerous",
+  "revisionId": 362348,
+  "lastEdited": "2026-09-28T21:46:12Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Jaeger",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Survivalist Path - Unprotected but Dangerous is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello there, come in, take a seat. The path of ours is not easy, not easy at all. Fighting scum is dangerous and requires extraordinary skills. For example, being fast, quiet, agile and deadly. Flanking the enemy, outplaying them on their own field. Your buddies chained in their body armor will never be able to master these skills. Therefore, before embarking on serious tasks, hone this skill.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 PMC operatives without wearing any body armor or plate carriers"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- 1× Armband (Train Hard)\n- 1× Kalashnikov AKMSN 7.62x39 assault rifle\n- 10× 7.62x39mm FMJ ammo pack (20 pcs)\n- Unlocks barter for Surv12 field surgical kit at Jaeger LL2\n\"As one famous person used to say \"Float like a butterfly, sting like a bee\". A piece of good advice, you better remember it. So, do you feel how easy it is to move without all those plates on you? If you move fast, you don't even need body armor to deal with scum.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 5 PMCs without wearing any armor vest or armored chest rig. Armored headwear, face cover and eyewear is allowed. If you want to protect yourself during this quest you can still wear armor, but unequip it before killing a PMC."
+    }
+  ]
+}

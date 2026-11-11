@@ -1,23 +1,22 @@
 // @vitest-environment node
-import { beforeEach, expect, it, vi } from "vitest";
+import { beforeAll, beforeEach, expect, it, vi } from "vitest";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { AjvJsonSchemaValidator } from "@modelcontextprotocol/sdk/validation/ajv";
 import { POST } from "@/app/api/mcp/route";
 import { clearTarkovResourceCache } from "@/app/lib/api/tarkov-server";
 import { MCP_TOOL_NAMES } from "@/app/lib/mcp/catalog";
-import { clearWikiCache } from "@/app/lib/wiki/fandom";
+import { setWikiSnapshotDirectory } from "@/app/lib/wiki/snapshot";
 import { createTarkovFixtures } from "./fixtures/tarkov";
-import { wikiFixtureResponse } from "./fixtures/wiki";
+import { writeFixtureSnapshot } from "./fixtures/wiki";
+
+beforeAll(() => setWikiSnapshotDirectory(writeFixtureSnapshot()));
 
 beforeEach(() => {
   clearTarkovResourceCache();
-  clearWikiCache();
   vi.spyOn(console, "info").mockImplementation(() => undefined);
   const fixtures = createTarkovFixtures();
   vi.spyOn(globalThis, "fetch").mockImplementation(async (input) => {
-    const wiki = wikiFixtureResponse(String(input));
-    if (wiki) return wiki;
     const resource = new URL(String(input)).pathname.split("/").pop()!;
     const fixture = (fixtures as Record<string, unknown>)[resource];
     if (!fixture) return new Response("missing", { status: 404 });

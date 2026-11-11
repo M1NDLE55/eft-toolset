@@ -1,0 +1,57 @@
+{
+  "title": "Health Resort west wing room 222 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_west_wing_room_222_key",
+  "revisionId": 358650,
+  "lastEdited": "2026-09-10T22:46:28Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽5,780",
+    "usage": "Unlocks room 222 of the West wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a1452ee86f7746f33111763",
+    "ID": "Санаторий 222"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort west wing room 222 key (W222 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium west wing room 222."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Connected to rooms 218 and 221 through the balconies."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor, room 222 of the West wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room 222:\n  - 3× Sports bag\n  - 2× Medbag\n  - 1× weapon spawn on the bed (AKM, SV-98)\n  - Loose loot (Roubles)\n- Room 221:\n  - 1× Weapon box (6x4)\n  - 1× weapon spawn on the balcony (M4A1, M1A)\n  - Loose loot (Currency, Meds, Medical supplies)\n- Room 218:\n  - Red keycard spawn location\n  - 2× weapon cabinets\n  - 2× Wooden crate\n  - 1× weapon spawn in bathroom (RSASS)\n  - Loose loot (Currency, Provisions, )"
+    }
+  ]
+}

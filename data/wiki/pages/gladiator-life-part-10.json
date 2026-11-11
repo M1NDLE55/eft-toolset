@@ -1,0 +1,40 @@
+{
+  "title": "Gladiator Life - Part 10",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Life_-_Part_10",
+  "revisionId": 359339,
+  "lastEdited": "2026-09-13T20:14:31Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Life - Part 9",
+    "leads to": "Gladiator Life - Final Exam",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Life - Part 10 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You made a good impression on some serious people. Now they expect results, so don't let them down! And yeah, of course there will be bets. I'll cut you in on the profits, don't worry. Just focus on your job: kill, earn money... and most importantly, make it look good!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Earn 1,500 objective score in CheckPoint mode\n- Eliminate 20 enemies in CheckPoint mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +6,900 EXP\n- 59,000 Roubles\n- 20 GP coins\n- Unlocks Kalashnikov AK-101 5.56x45 assault rifle in the Armory"
+    }
+  ]
+}

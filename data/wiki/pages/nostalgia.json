@@ -1,0 +1,50 @@
+{
+  "title": "Nostalgia",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nostalgia",
+  "revisionId": 359519,
+  "lastEdited": "2026-09-13T20:17:34Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Jaeger",
+    "previous": "Courtesy Visit",
+    "leads to": "Fishing Place, Forester's Duty",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Nostalgia is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello there, come in. You know, at times, sitting by the campfire, I look back on how it all began. That time I've been on vacation in the health resort, it was in the evening, I remember that as if it was yesterday. I have just returned to the room after dinner, sat by the window to gaze at the bay. It looked marvelous. And then I hear trucks, not just a single one, a whole convoy. It was your colleagues, the USECs. They kicked everyone out of the resort, didn’t even let people pack their belongings. I don't care about my clothes as much as my photo album which remained there. Not as a service but as an act of friendship, please try to find it there. It is painfully dear to me as a memory of those calm days. My room was on the top floor of the health resort, in the west wing. The reward will be bountiful.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 28 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate Jaeger's Health Resort room with a view of the bay on Shoreline\n- Obtain Jaeger's Photo album\n- Hand over the Photo album to Jaeger"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +16,800 EXP\n- Jaeger Rep +0.02\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n- 1× Documents case\n- 1× HEP station storage room key\n\"There's no way you actually found it! Thank you so much! Wait. Here, take this. A few days ago I've picked up a badly wounded USEC in the forest. I bandaged him up, but the poor fella didn't make it. Before dying, he gave a key, looks like it is from one of their group stashes somewhere in the Health resort area. I don't need it, but you might find it useful.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Photo album | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you have to find Jaeger's photo album in the health resort on Shoreline. It can be found in west wing room 303 on the third floor, located in the bottom drawer of a nightstand. The room is always unlocked."
+    }
+  ]
+}

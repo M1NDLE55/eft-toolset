@@ -1,0 +1,56 @@
+{
+  "title": "Dorm guard desk key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_guard_desk_key",
+  "revisionId": 358653,
+  "lastEdited": "2026-09-10T22:46:49Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the guard desk room on the first floor of the two-story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "59136a4486f774447a1ed172",
+    "ID": "проходн малая общ"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm guard desk key (GDesk) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the two-story dormitory guard desk."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In the hand of the Dead Scav inside the shower on the first floor of the two-story dorms."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the guard desk room on the first floor of the two-story dorms on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Dorm room 314 marked key spawn location\n- Dorm room 104 key spawn location\n- Dorm room 105 key spawn location\n- Dorm room 108 key spawn location\n- Dorm room 118 key spawn location\n- Dorm room 204 key spawn location\n- Dorm room 218 key spawn location\n- Dorm room 303 key spawn location\n- Dorm room 308 key spawn location\n- Dorm room 315 key spawn location\n- Trailer park portable cabin key spawn location\n- Tarcone Director's office key spawn location\n- 1x Weapon rack\n- 1x Weapon box (6x4)\n- 2x Wooden ammo box\n- Loose loot (Weapon mods)"
+    }
+  ]
+}

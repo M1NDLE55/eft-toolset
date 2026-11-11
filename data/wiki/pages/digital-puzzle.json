@@ -1,0 +1,54 @@
+{
+  "title": "Digital Puzzle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Digital_Puzzle",
+  "revisionId": 359227,
+  "lastEdited": "2026-09-13T20:12:35Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "previous": "Break the Chain",
+    "leads to": "Price for Information",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Digital Puzzle is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I think I've figured out what they're looking for. The laptops Black Division has been collecting from TerraGroup facilities each contain fragments of some kind of access code... It could be a universal key, or maybe a command used to activate a special protocol. The pattern only becomes visible after an initial decryption pass, and even then, only on some of the laptops. I simply don't have time to process enough data on my own, so I can't do this without your help. If you want to find out what Black Division is really after, look for the laptops bearing their seal. I need you to perform the initial decryption, basically applying the first few \"\"keys,\"\" before I take over the main part of the hack. I'll give you the instructions. Once you're done, transfer the data to any suitable storage device and bring it to me. I'll pay you for your work, whether or not we end up finding all the answers.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the data from the Black Division rugged laptop"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +35,000 EXP\n- 150,000 Roubles\n  - 157,500 Roubles with Intelligence Center Level 1\n  - 172,500 Roubles with Intelligence Center Level 2\n- 1× T H I C C Weapon case\n- 1× T H I C C item case\n- 1× Briefcase with documents\n\"Thanks for bringing these drives. I've already analyzed the data from several of the laptops we've recovered and discussed it with Elektronik. I was wrong about it being a protocol. I think it's simply a distributed database. But unlike commercial systems from the IT world, this database is built very differently. TerraGroup clearly sacrificed performance and accessibility in favor of layered security and an extensive access control system. It almost seems like they'd rather lose the data forever than let it fall into someone else's hands. So I'm afraid I won't have anything interesting to tell you until I've had time to dig much deeper into these laptops.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "Unlocks craft for Data from Black Division laptop at Intelligence Center level 1."
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Black Division rugged laptop | 1 | Required | No | Can be found on Black Division |\n| Data from Black Division laptop | 1 | Required | N/A | Received from the crafting recipe at intelligence center lv. 1. |\nIn this quest you have to obtain the Data from Black Division laptop by decrypting a Black Division rugged laptop at the Intelligence Center level 1 in the Hideout and hand it over to Mechanic."
+    }
+  ]
+}

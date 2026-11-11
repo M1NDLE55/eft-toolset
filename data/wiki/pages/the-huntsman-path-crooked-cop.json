@@ -1,0 +1,48 @@
+{
+  "title": "The Huntsman Path - Crooked Cop",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Crooked_Cop",
+  "revisionId": 359756,
+  "lastEdited": "2026-09-13T20:21:34Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov",
+    "given by": "Jaeger",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Crooked Cop is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come in, sit by the fire. We need to talk. Tarkov needs to cleansed. Our next target is a former cop known as Kollontay. He was causing trouble even before everything fell apart, and now he's only gotten worse. Find him and deal with him. They say he's holed up in the MVD academy downtown.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Obtain level 2 loyalty with Jaeger"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and neutralize Kollontay\n- Hand over the found in raid Kollontay's police baton"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Jaeger Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"Is it done? That's good to hear. A little less filth in our city. Here's your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| PR-Taran police baton | 1 | Handover item | Yes |\nIn this quest you have to kill Kollontay as well as find his PR-Taran police baton in raid."
+    }
+  ]
+}

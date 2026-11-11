@@ -1,0 +1,52 @@
+{
+  "title": "RB-KPRL key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-KPRL_key",
+  "revisionId": 358696,
+  "lastEdited": "2026-09-10T22:57:51Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-KPRL"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d8e0e0e86f774321140eb56",
+    "ID": "rezbase_key_rls_kpp"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-KPRL key (RB-KPRL) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base Radar Station guardhouse."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Southern most small building at the radio tower on Reserve.Guard Building outside of the Radar Tower on Reserve."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- One Standing Weapon Safe\n- One Safe\n- One Weapon Cabinet\n- One Weapon box (6x2)\n- One small safe under desk\n- Two intelligence spawns, on the desk and on top of the safe"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Health Resort east wing office room 108 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_east_wing_office_room_108_key",
+  "revisionId": 333746,
+  "lastEdited": "2026-02-06T22:09:56Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "This key has no usage. Room 108 is always unlocked.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0ea69f86f7741cd5406619",
+    "ID": "Санаторий 108"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort east wing office room 108 key (E108 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium east wing office room 108."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The room is always open."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The first floor, room 108 of the East Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "N/A."
+    }
+  ]
+}

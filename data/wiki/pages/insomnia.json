@@ -1,0 +1,47 @@
+{
+  "title": "Insomnia",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Insomnia",
+  "revisionId": 359421,
+  "lastEdited": "2026-09-13T20:15:53Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Peacekeeper",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Insomnia is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day to you, mercenary. Very soon I will have a night-time meeting on a very important matter. Unfortunately, according to my intelligence in the region, the number of night sorties of your, uh, colleagues has noticeably increased. I feel that these are the same people who do not risk operating in the daytime. I want you to deal with them. These criminals cannot disrupt my work.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by BEAR PMCs.\n- Must reach Loyalty Level 4 with Peacekeeper to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 40 targets in the time period of 21:00-06:00 on Streets of Tarkov, Lighthouse, Reserve, Ground Zero or Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- Peacekeeper Rep +1.5\n- Dollars\n  - Dollars with Intelligence Center Level 1\n  - 3,368 Dollars with Intelligence Center Level 2\n- 1× CENS ProFlex DX5 tactical earplug\n- Unlocks purchase of CENS ProFlex DX5 tactical earplug at Peacekeeper LL4\n- Unlocks barter for SAPI level III+ ballistic plate at Peacekeeper LL4\n- +2 Levels for Aim Drills\n- +4 levels for Submachine Guns\n\"Good work, my friend! Everything went according to the plan.\""
+    },
+    {
+      "heading": "See Also",
+      "level": 2,
+      "text": "- Counteraction - The USEC counterpart quest"
+    }
+  ]
+}

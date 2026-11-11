@@ -1,0 +1,41 @@
+{
+  "title": "Immunity",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Immunity",
+  "revisionId": 362583,
+  "lastEdited": "2026-09-29T19:45:43Z",
+  "kind": "skill",
+  "categories": [
+    "Physical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Physical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "For the quest, see Immunity (quest).\n\nImmunity is a Physical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Immunity affects the susceptibility to illnesses and the effectiveness of their treatment."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Reduces all negative effects from stimulants, food, water (1% per level → +50% at Elite Level)\n- Reduces poison effect force (1% per level → +50% at Elite Level)\n- Increases painkiller action time (0.6% per level → +30% at Elite Level)\n- Elite level: Chance to gain immunity to negative effects from stimulants, food, water (+90%)\n- Elite level: Chance to gain immunity to poisons (+90%)"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Using and surviving the negative effects of Stimulants and Provisions\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention\n- Completing the quest Decontamination Service\n- Completing the quest Crisis"
+    },
+    {
+      "heading": "Leveling Guide",
+      "level": 2,
+      "text": "- Skill points are awarded at the end of a period, not during. It can get prolonged by consuming multiple items.\n  - The amount and types of negative effects do not influence the points gain. The points gain solely depends on the negative effect duration.\n  - Metabolism reduces the duration of negative effects, which makes long-lasting injectors and stimulants give less points but safer to use.\n  - Per 1 second of negative effect duration you gain ~0.0045 points.\n  - Extracting from a raid ends the period, giving points only for the duration of the effect up to that point.\n- Can of Max Energy energy drink has a minor 5-minute stress resistance debuff, so drinking one every 5 minutes is a cost-effective way to gain skill points.\n- 2A2-(b-TG) stimulant injector has a 15-minute hydration debuff, make sure to bring extra drinks.\n- Obdolbos 2 cocktail injector has multiple 30-minute debuffs, including a health points one, make sure to bring extra meds."
+    }
+  ]
+}

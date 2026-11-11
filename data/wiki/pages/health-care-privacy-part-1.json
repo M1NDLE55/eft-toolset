@@ -1,0 +1,52 @@
+{
+  "title": "Health Care Privacy - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Care_Privacy_-_Part_1",
+  "revisionId": 361701,
+  "lastEdited": "2026-09-24T12:13:22Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Health Care Privacy. Part 1"
+  ],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Therapist",
+    "LL requirement": "1",
+    "leads to": "Health Care Privacy - Part 2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Care Privacy - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day, young man. Many people have tried to escape the current predicament, and some of them behaved like they were not human beings anymore, but for us, medics, nothing has changed. Our job is to save lives, no matter what the circumstances could be. When the shoreline tunnel collapsed, quite several survivors were injured. The ambulances were immediately dispatched to a distress call, but, well, I assume you know what has broken out there. Long story short, that's where they stayed. I know that there were three or four vans, and the chances are high that most of the equipment and medicine is still inside... If you happen to find them, just mark them with beacons and my people will take care of the rest.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark the first ambulance with an MS2000 Marker on Shoreline\n- Locate and mark the second ambulance with an MS2000 Marker on Shoreline\n- Locate and mark the third ambulance with an MS2000 Marker on Shoreline\n- Locate and mark the fourth ambulance with an MS2000 Marker on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 2× Car first aid kit\n- Unlocks purchase of Car first aid kit at Therapist LL1\n- Unlocks barter for Bottle of OLOLO Multivitamins at Therapist LL1\n\"So you're telling me that one of the ambulances was parked next to the health resort, hmm... Something is not right here. Well, I will send my people there, they will take care of the cars.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid |\n| MS2000 Marker | 4 | Required | N/A |\nTwo of the wanted ambulances are located at the \"Tunnel\" extraction. The third one is located at the health resort near the helicopter. The fourth one is located next at the cottages."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

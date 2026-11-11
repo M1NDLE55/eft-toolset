@@ -1,0 +1,43 @@
+{
+  "title": "Safe",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Safe",
+  "revisionId": 333957,
+  "lastEdited": "2026-02-08T18:01:52Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "578f8782245977354405a1e3",
+    "ID": "Safe"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Safe is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A 3x3 grid loot container that spawns currency, valuables and info items. The small safes on top of blue weapon lockers share the same loot table as the big black ones."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The first USEC cottage safe and second USEC cottage safe on Lighthouse don't work like normal safes. Their loot distribution can differ from the list below."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Type |\n| Money |\n| Money |\n| Money |\n| Valuables |\n| Info items |\n| Valuables |\n| Info items |\n| Valuables |\n| Info items |\n| Info items |\n| Info items |\n| Valuables |\n| Info items |\n| Info items |\n| Valuables |\n| Info items |\n| Valuables |\n| Info items |\n| Valuables |\n| Valuables |\n| Valuables |\n| Valuables |\n| Valuables |\n| Valuables |\n| Valuables |\n| Valuables |\n| Valuables |\n| Valuables |\n| Valuables |\n| Valuables |\n| Info items |\n| Info items |\n| Info items |\n| Valuables |\n| Valuables |\n| Valuables |"
+    },
+    {
+      "heading": "See also",
+      "level": 2,
+      "text": "- Bank safe\n- TerraGroup safe"
+    }
+  ]
+}

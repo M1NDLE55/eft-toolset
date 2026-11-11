@@ -1,0 +1,56 @@
+{
+  "title": "Pinewood hotel room 206 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pinewood_hotel_room_206_key",
+  "revisionId": 316332,
+  "lastEdited": "2025-07-20T15:49:57Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "This key has no usage. Pinewood hotel room 206 on Streets of Tarkov is always unlocked.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39f18c2d53c2c6839c1d3",
+    "ID": "city_key16"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Pinewood hotel room 206 key (Pnwd 206) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the rooms inside the Pinewood hotel."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The room is always open."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Room 206 on the second floor of the northern Pinewood hotel building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Dead Scav\n- 1x Safe (Erroneously locked and containing no loot, can be unlocked with USEC cottage second safe key)\n- Loose loot (Provisions, Energy elements, Flammable materials)"
+    }
+  ]
+}

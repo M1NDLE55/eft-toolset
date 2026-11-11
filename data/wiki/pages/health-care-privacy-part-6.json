@@ -1,0 +1,45 @@
+{
+  "title": "Health Care Privacy - Part 6",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Care_Privacy_-_Part_6",
+  "revisionId": 361703,
+  "lastEdited": "2026-09-24T12:14:35Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Factory, The Lab",
+    "given by": "Therapist",
+    "LL requirement": "4",
+    "previous": "Health Care Privacy - Part 5",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Care Privacy - Part 6 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, young man. We have come a long way together following the trail of the residents who died under mysterious circumstances. I have received new information. The bodies of several workers were discovered at the factory. There were no signs of violent death. These could be our... patients, so to speak. We need to conduct an analysis of their blood samples. Also, please look for a LEDX device.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the dead worker and take their blood sample on Factory\n- Hand over the found in raid item: LEDX Skin Transilluminator\n- Stash the blood sample in Sanitar's office in The Lab"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 1× Medicine case\n- 3× Morphine injector\n- 3× Adrenaline injector\n- Unlocks purchase of Morphine injector at Therapist LL4\n- Unlocks purchase of Adrenaline injector at Therapist LL4\n\"Did you collect the samples? Excellent, bring them here. Hmm, the texture of the blood differs from what I expected. It seems TerraGroup may somehow be involved in all of this.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Factory emergency exit key | 1 | Required | N/A | Unlocks the door to the \"Med Tent Gate\" extraction on Factory where the dead worker is located. |\n| Blood sample | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Keycard with a blue marking | 1 | Required | N/A | Unlocks Sanitar's room in The Lab. |\n| LEDX Skin Transilluminator | 1 | Handover item | Yes | Can be crafted in the Hideout (Medstation lv. 3). |\nIn this quest you first have to take a blood sample from the dead worker on Factory, which is located inside the \"Med Tent Gate\" extraction. A Factory emergency exit key is required to enter it.\n\nThen you have to stash the sample in Sanitar's room in The Lab. The room is located on the second floor, directly across from the laboratory block (G22) and requires a Keycard with a blue marking to enter."
+    }
+  ]
+}

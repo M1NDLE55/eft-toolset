@@ -1,0 +1,68 @@
+{
+  "title": "EMERCOM medical unit key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/EMERCOM_medical_unit_key",
+  "revisionId": 358494,
+  "lastEdited": "2026-09-10T21:34:29Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "MES"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the EMERCOM medical care unit on Interchange.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ad5db3786f7743568421cce",
+    "ID": "Key_Shopping_Mall_mchs"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "EMERCOM medical unit key (EMC) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the EMERCOM medical care unit at the ULTRA shopping mall."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Needed for the Quest Vitamins"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Ambulance near the big gas station. You have to jump inside to grab the key off the seat."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Located on the first floor of the ULTRA shopping mall on Interchange. On the north side of the center mall.\n- This location has 3 different doors that can be unlocked. Opening each door will use a point of durability on the key."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- 2x Medbag\n- 1x Sports bag\n- 1x Jacket\n- Loose loot (Meds, Medical supplies, Valuables)\n- Portable defibrillator spawn\n- LEDX Skin Transilluminator spawn"
+    },
+    {
+      "heading": "Trading",
+      "level": 2,
+      "text": "| Disposable syringe x5; Disposable syringe; +; Iskra ration pack x3; Iskra ration pack; +; Ophthalmoscope x1; Ophthalmoscope | → | Therapist; Therapist LL3 | → | EMERCOM medical unit key; EMERCOM medical unit key |"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Health Resort west wing room 205 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_west_wing_room_205_key",
+  "revisionId": 358722,
+  "lastEdited": "2026-09-10T23:00:01Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽5,780",
+    "usage": "Unlocks room 205 of the West wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0ec6d286f7742c0b518fb5",
+    "ID": "Санаторий 205"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort west wing room 205 key (W205 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium west wing room 205."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Connected to room 203 through the balcony."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- Inside of the reception building at the boat launch. It sits on the ground at the base of the Drawers."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor, room 205 of the West Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Room 205:\n  - 1× LEDX spawn\n  - 1× Graphics Card spawn\n  - 1× Toolbox\n  - 1× Medcase\n  - Loose loot (Meds, Medical supplies, Provisions).\n- Room 203:\n  - Red keycard spawn location\n  - LEDX spawn\n  - 1× Weapon spawn (AR)\n  - 1× Medbag\n  - 1× Medcase\n  - 1× Weapon box (6x2)\n  - 1× Toolbox\n  - 1× Sport bag\n  - Loose loot (Meds, Medical supplies, Currency)"
+    }
+  ]
+}

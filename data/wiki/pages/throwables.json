@@ -1,0 +1,36 @@
+{
+  "title": "Throwables",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Throwables",
+  "revisionId": 355808,
+  "lastEdited": "2026-08-23T22:53:27Z",
+  "kind": "skill",
+  "categories": [
+    "Combat skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Combat skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Throwables is a Combat skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The throwing weapons handling skills allow you to throw grenades farther and with less energy consumption."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases throw strength (0.5% per level → +25% at Elite Level)\n- Reduces required throw energy (1% per level → -50% at Elite Level)\n- Increases throw speed\n- Elite level: Throwables don't require energy and fatigue does not affect their accuracy"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Using Throwable weapons\n- Completing the quest Consolation Prize\n- Completing the quest The Huntsman Path - Control"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Professional - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Professional_-_Part_2",
+  "revisionId": 359576,
+  "lastEdited": "2026-09-13T20:18:32Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Professional - Part 1",
+    "leads to": "Professional - Part 3",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Professional - Part 2 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Here's a little truth for you: serious money and a reputation don't come just from showing up to the top matches. No solid results, no solid cash. So come on, get moving.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win a match claiming at least 4th place in the team in BlastGang or TeamFight mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +7,500 EXP\n- 71,000 Roubles\n- 15 GP coins"
+    }
+  ]
+}

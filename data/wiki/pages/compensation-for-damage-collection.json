@@ -1,0 +1,52 @@
+{
+  "title": "Compensation for Damage - Collection",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Compensation_for_Damage_-_Collection",
+  "revisionId": 359188,
+  "lastEdited": "2026-09-13T20:11:56Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Compensation for Damage - Collection is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"What, came to bow again, tormented by guilt? You know, merc, I'm not your image-maker or a PR manager... Alright, I can help you. One of my contacts is a big shot who collects US weaponry. Yes, he could just order fresh ones from the factory. But he needs an already used weapon, the one that still smells of gunpowder. That's why his whole collection is guns from conflict zones. Afghanistan, Iraq,... Tarkov. I want to gift him some of the local M4s, but the guy is smart, so you'll need to find the guns yourself, not from some trader. Help me, and I'll help you in return. I'll make people forget the Scav blood on your hands.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Scav karma of -1"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the 2 found in raid Colt M4A1 assault rifles"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Fence Rep +1\n\"That's it then, your request for a new dust filter for the ProVacuum model 60 has been approved, hehe. Your new life as a clean man begins, so don't mess it up again.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Colt M4A1 5.56x45 assault rifle | 2 | Handover item | Yes |\nTo hand over a weapon it must be in usable condition. If a weapon's icon is red, it is missing vital parts and can not be turned in."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The reward completion text is a reference to the \"Disappearer's\" password in the TV series \"Breaking Bad\"."
+    }
+  ]
+}

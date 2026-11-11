@@ -1,0 +1,57 @@
+{
+  "title": "Mysterious room marked key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mysterious_room_marked_key",
+  "revisionId": 341866,
+  "lastEdited": "2026-04-27T18:32:47Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "max uses": "10",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the marked room on the first floor of the Chekannaya 13 apartment building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "64ccc25f95763a1ae376e447",
+    "ID": "city_key39"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Mysterious room marked key (Chek. 13) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A mysterious key from an unknown door located at house 13 Chekannaya Street. There is a strange symbol scratched on the key."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Broadcast - Part 5\n- Used in the story chapter Blue Fire when you don't have a Car dealership closed section key\n- Used in the story chapter The Ticket"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Drawers\n- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Marked room on the first floor of the Chekannaya 13 apartment building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (multiple very rare Valuables, Weapons, Containers, Currency, Keycards)"
+    }
+  ]
+}

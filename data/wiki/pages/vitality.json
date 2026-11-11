@@ -1,0 +1,46 @@
+{
+  "title": "Vitality",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vitality",
+  "revisionId": 362595,
+  "lastEdited": "2026-09-29T19:47:49Z",
+  "kind": "skill",
+  "categories": [
+    "Physical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Physical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Vitality is a Physical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Vitality improves your chances of surviving a wound by decreasing the possibility of bleeding and instant death through critical damage to a body part."
+    },
+    {
+      "heading": "Hideout",
+      "level": 2,
+      "text": "- Level 3 of this skill is needed for the Medstation level 3"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Reduces bleeding chance (1.2% per level → -60% at Elite Level)\n- Reduces chance of death from losing a limb (0.5% per level → -20% at Elite Level)\n- Elite level: Increases health regeneration in combat\n- Elite level: All bleedings stop on their own\nNote: This means that light bleedings will automatically stop after 20 seconds and heavy bleedings after 30 seconds without the use of medical items."
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- 0.01 points for every 5 points of damage taken\n- 0.3 points for getting bloodloss\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention\n- Completing the quest Decontamination Service"
+    },
+    {
+      "heading": "Tips",
+      "level": 2,
+      "text": "- Getting a heavy bleed and using a Propital regenerative stimulant injector to heal against it without stopping the bleed is a way to get constant damage.\n- Since skill points are gained by damage taken including self inflicted, dying to own grenades is an efficient way too. (Always use air filtering unit if you are trying to power level this skill.)"
+    }
+  ]
+}

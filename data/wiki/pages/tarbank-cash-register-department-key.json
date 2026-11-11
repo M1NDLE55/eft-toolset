@@ -1,0 +1,51 @@
+{
+  "title": "Tarbank cash register department key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tarbank_cash_register_department_key",
+  "revisionId": 333067,
+  "lastEdited": "2026-01-27T01:22:22Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks two cash register booths on the first floor of the Tarbank on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "64ccc2111779ad6ba200a139",
+    "ID": "city_key36"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Tarbank cash register department key (Tarbank) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "An access key to the cash registers of the regional branch of Tarbank."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Drawers\n- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Cash register booths on the first floor of the Tarbank on Streets of Tarkov"
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Bank cash register in each booth\n- 1x Bank safe in each booth"
+    }
+  ]
+}

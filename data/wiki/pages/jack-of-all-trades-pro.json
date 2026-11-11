@@ -1,0 +1,40 @@
+{
+  "title": "Jack of All Trades - Pro",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Jack_of_All_Trades_-_Pro",
+  "revisionId": 359431,
+  "lastEdited": "2026-09-13T20:16:04Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Advertising Business - Part 2",
+    "leads to": "All for the Show - Soldier",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Jack of All Trades - Pro is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"So, how are things going with the classes in the Arena? Yeah, I remember you already reported in, but the conditions back then were easier. Now I want to see how much you've grown since then. Put on a show on the main stage!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win a round as Assault in BlastGang or TeamFight mode\n- Win a round as Enforcer in BlastGang or TeamFight mode\n- Win a round as Scout in BlastGang or TeamFight mode\n- Win a round as Marksman in BlastGang or TeamFight mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +12,000 EXP\n- Ref Rep +0.01\n- 64,400 Roubles\n- 36 GP coins"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Make Amends - Software",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Make_Amends_-_Software",
+  "revisionId": 359469,
+  "lastEdited": "2026-09-13T20:16:42Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "leads to": "Make Amends - Quarantine",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "| If you get your DSPT decoded a fourth time after finishing this questline, there is no way to get it encoded again! |\n\nMake Amends - Software is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I understand if you and Lightkeeper have disagreements, but solving them with violence is not the answer. It taints our entire ecosystem. Okay, listen, I'm running out of software from the corporate flash drives that I use to flash transponders for Lightkeeper. Help me with these flash drives, and I'll try to change Lightkeeper's mind about you.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Getting the Digital secure DSP radio transmitter decoded the third time."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 15 found in raid Secure Flash drives"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Lightkeeper Rep +0.01\n\"Great, thank you. I'll take it from here.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Secure Flash drive | 15 | Handover item | Yes | Can be crafted in the Hideout (Intelligence center lv. 2). |"
+    }
+  ]
+}

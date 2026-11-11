@@ -1,0 +1,31 @@
+{
+  "title": "Advanced Modding",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Advanced_Modding",
+  "revisionId": 319164,
+  "lastEdited": "2025-10-09T20:30:58Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Advanced Modding is an upcoming Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Deft use of mutitool makes advanced modding quicker and less punishing for weapon mobility."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

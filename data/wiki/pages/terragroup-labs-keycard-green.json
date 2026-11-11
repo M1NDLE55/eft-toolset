@@ -1,0 +1,110 @@
+{
+  "title": "TerraGroup Labs keycard (Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_keycard_(Green)",
+  "revisionId": 360265,
+  "lastEdited": "2026-09-15T11:56:33Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [
+    "Green keycard"
+  ],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the laboratory block (G22) in The Lab.",
+    "loot xp": "60",
+    "exam xp": "10",
+    "storage_wallet": "Yes",
+    "storage_keytool": "No",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5c1d0dc586f7744baf2e7b79",
+    "ID": "item_keycard_lab_green"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "TerraGroup Labs keycard (Green) (Green) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A United Security-issued TerraGroup Labs keycard for administration staff in the Green sector."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- On Cultists\n- On The Goons\n- In Rare valuables crates"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On Tagilla"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On Partisan\n- At the three-story dorms in the \"marked room\"\n- At the \"giving tree\" behind the \"Old Gas Station\""
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- On Shturman\n- On Partisan"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On Partisan"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On Killa\n- On Tagilla\n- In Grumpy's hideout inside the power station, on the floor between the lockers"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On Glukhar\n- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- On Kaban\n- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- On Partisan"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In Kruglov's office (R22) and the safe inside of it\n- On a shelf between folders in the back part of the hallway that leads to the security arsenal (R23)\n\nShelf with the keycard\n\n- Next to a keyboard at the reception desk of the managers office (O21) on the second level\n\nThe Reception\n\nKey location\n\n- On a desk next to the quarantine zone room (G11)\n\nKeycard on the desk near quarantine"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Laboratory block (G22) on the second level in The Lab."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- 3x Medcase\n- Loose Medical supplies on shelves and tables\n- Black keycard spawn location on the table next to the computer\n- Possible LEDX Skin Transilluminator in the metal containers\n- Possible Intelligence folder and TerraGroup \"Blue Folders\" materials spawn near the laptop\n- Possible Intelligence folder and TerraGroup \"Blue Folders\" materials spawn on the shelf next to the door to the side room\n- 2x Weapon box (4x4)\n- Loose Weapon mods and Ammunition on the shelf\n- A possible Weapons spawn on the front desk"
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| UHF RFID Reader x1; UHF RFID Reader; +; Decrypted Sliderkey flash drive marked with A.P. x1; Decrypted Sliderkey flash drive marked with A.P.; +; TerraGroup Labs keycard (Green) x1; TerraGroup Labs keycard (Green); +; TerraGroup \"Blue Folders\" materials x1; TerraGroup \"Blue Folders\" materials | → | Intelligence Center level 1; 2 h 45 minAfter progressing through; the story chapter The Unheard | → | Reprogrammed keycard for A.P.'s apartment lock (Green) x1; Reprogrammed keycard for A.P.'s apartment lock (Green) |\n| UHF RFID Reader x1; UHF RFID Reader; +; TerraGroup Labs access keycard x10; TerraGroup Labs access keycard; +; TerraGroup \"Blue Folders\" materials x5; TerraGroup \"Blue Folders\" materials; +; Intelligence folder x3; Intelligence folder; +; Military flash drive x5; Military flash drive; +; Virtex programmable processor x2; Virtex programmable processor | → | Intelligence Center level 3; 25 hours | → | TerraGroup Labs keycard (Green) x1; TerraGroup Labs keycard (Green) |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The card serial number is \"0010153251 641748716\"."
+    }
+  ]
+}

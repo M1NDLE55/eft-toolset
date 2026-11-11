@@ -1,0 +1,64 @@
+{
+  "title": "Missam forklift key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Missam_forklift_key",
+  "revisionId": 253299,
+  "lastEdited": "2023-11-02T21:54:28Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "Danex",
+    "Missam"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "This key does currently not open any lock.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "62a09ec84f842e1bd12da3f2",
+    "ID": "item_key_danexert"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Missam forklift key (Danex) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A Missam forklift key. The name of the former owner is written on the ribbon."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This key does currently not open any lock. It's a quest item only."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- 1 needs to be found in raid for the quest Collector"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs\n- In Sport bags"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "None."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - \"Missam\" is a parody of Nissan.\n  - The item is a reference to the content creator DanExert."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "title": "To the Light - False Call",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_False_Call",
+  "revisionId": 362179,
+  "lastEdited": "2026-09-25T19:43:14Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Mechanic",
+    "previous": "To the Light - Trust but Verify (+10-30min)",
+    "leads to": "To the Light - Clip Their Wings (+10-15min), To the Light - Someone Called?",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "To the Light - False Call is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Lightkeeper contacted me again. And for this task, he specifically requested the same person who handled the previous job. Meaning you. Our little trick worked, but that doesn't make the whole situation any clearer. I can only assume that, for some reason, Lightkeeper wants to keep all these jobs secret even from his own people. Could he be looking for a mole among them? Either way, this is our only chance to establish a working relationship, so all we can do is carry out the tasks and avoid asking unnecessary questions. Now, the instructions. Lightkeeper wants you to go to the intersection in the Customs area, discreetly install a camera in the little shop, and then send an RSP signal at the road crossing toward the coast. And yes, the entire area around it needs to be cleared of any potential observers beforehand. Once you've sent the signal, get out of there. Whoever comes to the rendezvous point mustn't see you.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 10-30 minutes after completion of To the Light - Trust but Verify"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 5 Scavs during 21:00-06:00 on Customs (In one raid)\n- Eliminate 1 PMC operative during 21:00-06:00 on Customs (In one raid)\n- Hide a Wi-Fi camera at the AC unit at the convenience store near the bridge on Customs (In one raid)\n- Launch a yellow signal flare at the Shoreline transit on Customs (In one raid)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n\"So, did you notice anything suspicious? No? Alright. Let's sum up what we know. First, we planted a hard drive containing disinformation at the Lab. Then Lightkeeper sent his group after the drive, and now he's used you to call someone out for a meeting. Obviously, he wants to find out who's going to show up at the rendezvous point. And if he doesn't know that yet, then according to the original plan, someone else was supposed to show up for the meeting. Which means the information about how to arrange the meeting belonged to that person, and Lightkeeper stole it from them. Could it have been our potential mole, the one he identified with the help of that disinformation drive? I think the pieces are starting to fall into place.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera | 1 | Required | N/A | Can be purchased from Mechanic LL1. |\n| RSP-30 reactive signal cartridge (Yellow) | 1 | Required | N/A | Must be fired into the sky while being in the transit area. |\n| ZiD SP-81 26x75 signal pistol | 1 | Required | N/A | Used to fire the flare cartridge. |\n| 26x75mm flare cartridge (Yellow) | 1 | Required | N/A | Must be fired into the sky while being in the transit area. |\nIn this quest you have to do the following in one raid on Customs: Kill 1 PMC and 5 Scavs in the time period of 21:00-06:00, stash a WI-FI Camera at the kiosk near the main bridge and launch a yellow flare at the Shoreline transit."
+    },
+    {
+      "heading": "WI-FI Camera stashing",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Shoreline transit",
+      "level": 4,
+      "text": "The transit is located behind the \"Sniper Roadblock\" Scav extraction. Shoot a yellow flare into the sky while being near the bus. If the flare doesn't reach a certain height, the quest objective won't complete. You can use either the handheld RSP-30 yellow flare which can be bought at Prapor LL1 or a 26x75mm yellow flare cartridge which can be bought at Jaeger LL1, and is fired from a signal pistol. If you use the handheld RSP-30 yellow flare, make sure to aim it upwards, but not too much or it lands behind you."
+    }
+  ]
+}

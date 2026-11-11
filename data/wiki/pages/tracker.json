@@ -1,0 +1,48 @@
+{
+  "title": "Tracker",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tracker",
+  "revisionId": 359857,
+  "lastEdited": "2026-09-13T20:23:15Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Peacekeeper",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Tracker is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, my friend! I have a task for you. My men found some information about a TerraGroup shipment. According to the documents, it contains two parts. One is somewhere on the first floor of the east wing of the Health Resort, and the second is in the basement of the west wing. My men are currently occupied with other matters, so there is no one available to go there. So, go there and find both parts of the shipment.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 3 with Peacekeeper to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the room with reservoirs in the Health Resort on Shoreline\n- Obtain any information about the second part of the cargo shipment\n- Hand over the retrieved information\n- Locate the hidden TerraGroup cargo in the Health Resort on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Peacekeeper Rep +0.75\n- 1900 Dollars\n  - 1,995 Dollars with Intelligence Center Level 1\n  - 2,185 Dollars with Intelligence Center Level 2\n\"Tell me everything. A hole in the wall? Someone got to the second part before us... What a pity.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Secure Folder 0013 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nThe secure folder is located on top of blue barrels in room 108 of the health resort east wing on Shoreline.\n\nThe cargo is located near the pool in the basement of the health resort west wing on Shoreline."
+    }
+  ]
+}

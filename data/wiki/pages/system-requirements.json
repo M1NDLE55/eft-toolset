@@ -1,0 +1,24 @@
+{
+  "title": "System requirements",
+  "url": "https://escapefromtarkov.fandom.com/wiki/System_requirements",
+  "revisionId": 357615,
+  "lastEdited": "2026-09-01T21:58:12Z",
+  "kind": "game",
+  "categories": [
+    "Escape from Tarkov"
+  ],
+  "redirects": [],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "These are the preliminary system requirements to run Escape from Tarkov.\n\nThe listed hardware may be insufficient for some of the newer locations due to lack of optimization.\nDuring the testing phase the game will be optimized, so by the final release the system requirements may change.\nIf you have a system which is worse than the listed requirements, it doesn't mean that the game won't work.\n\n| Component | Minimum | Recommended |\n| OS | Windows 10 64-bit | Windows 11 64-bit |\n| CPU | AMD Ryzen 5 3600 or similar | Intel Core i7-14700F or better |\n| GPU | NVIDIA GTX 1660 or similar | NVIDIA RTX 4070 or better |\n| RAM | 16 GB | 64 GB |\n| Disk space | 78 GB | 78 GB |\n| Network | Permanent Internet connection | Permanent Internet connection |"
+    },
+    {
+      "heading": "References",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

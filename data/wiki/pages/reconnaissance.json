@@ -1,0 +1,44 @@
+{
+  "title": "Reconnaissance",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Reconnaissance",
+  "revisionId": 361753,
+  "lastEdited": "2026-09-24T12:32:16Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Prapor",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Reconnaissance is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Warrior, I've got an important job for you. Dangerous too, no point sugarcoating that. Not everyone would risk their neck that close to the Rogues. Heh, I can already see that look in your eyes! Yeah, I know, you've taken on worse than this before.I need to know what the Rogues' defenses look like. Head to the Water Treatment Plant, get up on at least one rooftop, and inspect their mounted weapons. Pay attention to everything, even the little things that don't seem important. You understand the mission?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Investigate the roof of any water treatment plant facility on Lighthouse\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Military power filter\n- Unlocks barter for Tokarev AVT-40 7.62x54R automatic rifle at Prapor LL3\n\"Now that's a real reconnaissance expert! Good job!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to find one the three office buildings on Lighthouse and get on its roofs. The office buildings are located at the water treatment plant area in the north. The roofs can be accessed via outside stairs. You need to get close to the outside ladders of one of the building while being on their roofs to get quest progress."
+    }
+  ]
+}

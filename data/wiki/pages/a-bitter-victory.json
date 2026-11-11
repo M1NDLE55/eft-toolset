@@ -1,0 +1,45 @@
+{
+  "title": "A Bitter Victory",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A_Bitter_Victory",
+  "revisionId": 359038,
+  "lastEdited": "2026-09-13T20:09:23Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Streets of Tarkov",
+    "given by": "BTR Driver",
+    "previous": "Saving Private Roman",
+    "leads to": "Hangover",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "A Bitter Victory is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Alright, well the smugglers managed to get their commander out, though not without losses. I'm heading over to talk things through and ask about you as well. But you get it, right now they need to both celebrate the win and properly remember the ones they lost. So I can't show up empty-handed. You gonna help set the table?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 2 Bottles of Fierce Hatchling moonshine to the BTR Driver\n  - (Optional) Obtain 2 Bottles of Fierce Hatchling moonshine\n- Hand over 4 Rye croutons to the BTR Driver\n  - (Optional) Obtain 4 Rye croutons\n- Hand over 4 Bottles of Tarkovskaya vodka to the BTR Driver\n  - (Optional) Obtain 4 Bottles of Tarkovskaya vodka\n- Hand over 2 Salty Dog beef sausages to the BTR Driver\n  - (Optional) Obtain 2 Salty Dog beef sausages\n- Talk to the BTR Driver\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n\"That's a decent haul of grub you brought. With stuff like this, the conversation will go a lot easier. By the next time we meet, I should have something for you about your request.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in Raid | Notes |\n| Bottle of Fierce Hatchling moonshine | Bottle of Fierce Hatchling moonshine | 2 | Handover item | No | Can be crafted in the Hideout (Booze generator lv. 1). |\n| Rye croutons; or; Emelya rye croutons | Rye croutons; or; Emelya rye croutons | 4 | Handover item | No | |\n| Bottle of Tarkovskaya vodka | Bottle of Tarkovskaya vodka | 4 | Handover item | No | Can be crafted in the Hideout (Nutrition Unit lv. 3). |\n| Salty Dog beef sausage | Salty Dog beef sausage | 2 | Handover item | No | Can be crafted in the Hideout (Nutrition Unit lv. 1). |\n\nAll items have to be collected and in your inventory before any can be handed over. If you want to hand over items obtained before accepting the quest, you have to move them to a different inventory slot for the game to register them."
+    }
+  ]
+}

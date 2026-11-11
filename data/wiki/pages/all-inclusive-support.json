@@ -1,0 +1,55 @@
+{
+  "title": "All-Inclusive Support",
+  "url": "https://escapefromtarkov.fandom.com/wiki/All-Inclusive_Support",
+  "revisionId": 360427,
+  "lastEdited": "2026-09-15T21:21:23Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Prapor",
+    "previous": "Number Temporarily Unavailable",
+    "leads to": "A Familiar Face..., Lose the Tail",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "All-Inclusive Support is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"No, you gotta hear this! That fucker's already squeezed me dry, and all for that damn piece of paper Lightkeeper's waiting for. I hope you haven't told anyone about our business, right? Because then I'll have to deal with you, too. Anyway, here's where we're at: the deserter's holed up somewhere in the mountains between the treatment plant and the military base, and he says he can't stick his head out without support. So we're gonna have to help him. First, we need to scare off the people at the treatment plant so our contact can make sure it's safe. We also need to check whether anyone's holed up along the road from the treatment plant to the military base. Then he asked us to drop off some supplies. I'm not gonna deal with his damn shopping list, so just call in an airdrop somewhere around there. Use the abandoned shack on the lake in the mountains, above the treatment plant, as your landmark. Our rat's somewhere in that area.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate any 15 targets on Lighthouse\n- Launch a red signal flare at the abandoned mountain lake cabin on Lighthouse\n- Use the transit from Lighthouse to Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +20,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 1× Grenade case\n\"All done? Good job, you're a great help. Hopefully our contact will be ready to come out now and hand over the damn dossier. As I understand it, this raider's hoping to trade it for Lightkeeper's support, or maybe even evacuation from Tarkov. Can you believe that? The fool thinks one piece of paper is enough to get him out of here!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| RSP-30 reactive signal cartridge (Red) | 1 | Required | N/A | Must be fired into the sky at the mountain lake cabin. |\n| ZiD SP-81 26x75 signal pistol | 1 | Required | N/A | Used to fire the flare cartridge. |\n| 26x75mm flare cartridge (Red) | 1 | Required | N/A | Must be fired into the sky at mountain lake cabin. |"
+    },
+    {
+      "heading": "Abandoned mountain lake cabin",
+      "level": 4,
+      "text": "At the \"Passage by the Lake\" extraction east of water treatment plant building #3."
+    },
+    {
+      "heading": "Lighthouse to Reserve",
+      "level": 4,
+      "text": "On the road leading to the Road to Military Base V-Ex extraction."
+    }
+  ]
+}

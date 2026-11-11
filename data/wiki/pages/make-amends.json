@@ -1,0 +1,59 @@
+{
+  "title": "Make Amends",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Make_Amends",
+  "revisionId": 359464,
+  "lastEdited": "2026-09-13T20:16:37Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Mechanic",
+    "previous": "Make Amends - Equipment, or, Make Amends - Sweep Up, or, Make Amends - Quarantine",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Make Amends is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Lightkeeper said he's ready to accept you in again. But the old flash drive doesn't work anymore, so you'll have to find a new one, reflash the transmitter, and give it to me. I'll update your transmitter properly.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain the V3 Flash drive on Lighthouse\n- Reflash the Radio transmitter\n- Hand over the flash drive to Mechanic\n- Visit the Lighthouse building"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Mechanic Rep +0.01\n\"Hope all this mess doesn't happen again.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "By killing Zryachiy you will fail and lose access to this quest.\n| Item name | Amount | Requirement | Find in raid | Notes |\n| Secure Flash drive V3 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThere are multiple spawns for the V3 flash drive at the black (southern) chalet on Lighthouse. After obtaining it, you have to reflash the transmitter at the Intelligence Center level 2 in the Hideout. Electricity is required during the entire process, otherwise it will be interrupted. After the reflashing is done, the transmitter is fully functional and can be used to bypass the Claymores and Zryachiy guarding the bridge to the lighthouse peninsula, allowing you to visit the lighthouse building and meet Lightkeeper.\n\nNote: If not all members of your lobby-made group have an encoded transmitter, it will have the \"blocked\" state and the bridge can't be passed."
+    },
+    {
+      "heading": "First/Second spawn on the first floor",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Third spawn in the basement",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Fourth spawn at the tennis court",
+      "level": 4,
+      "text": ""
+    }
+  ]
+}

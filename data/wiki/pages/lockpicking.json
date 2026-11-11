@@ -1,0 +1,31 @@
+{
+  "title": "Lockpicking",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lockpicking",
+  "revisionId": 319171,
+  "lastEdited": "2025-10-09T20:32:25Z",
+  "kind": "skill",
+  "categories": [
+    "Practical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Practical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Lockpicking is an upcoming Practical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Lock picking skill."
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": ""
+    }
+  ]
+}

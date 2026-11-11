@@ -1,0 +1,37 @@
+{
+  "title": "Goals and Means",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Goals_and_Means",
+  "revisionId": 359352,
+  "lastEdited": "2026-09-13T20:14:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Goals and Means is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I used to believe that staying inside clear boundaries and doing the job by the book was the highest form of professionalism. When you can pick the right tool for any task and never step out of the top league. Working only with the best equipment. But Tarkov showed me that being just a professional isn't enough. Here I learned that true mastery is forged under harsh conditions with limited resources, when the outcome can't be predicted. You start relying more on your own experience and intuition, and if you're good enough - you rise to the very top. Since the Contract Wars, I've held on to a small reserve of special weapons. But like in my line of work, they're only tools. An ordinary professional doesn't have the skills to unlock the full potential of such a piece. It takes a true master. And I'm starting to think you might be able to handle such a temperamental weapon. If you can prove that you can solve problems no matter what tools you're given - I'll open access to this special section of my arsenal.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 20 PMC operatives from over 50 meters away while using any 9x39 caliber weapon"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +12,500 EXP\n- Mechanic Rep +0.02\n- 1× AS VAL MOD.4 9x39 special assault rifle\n- 3× VSS/VAL 9x39 30-round magazine\n- 6× 9x39mm PAB-9 gs ammo pack (20 pcs)\n- Unlocks barter for AS VAL MOD.4 9x39 special assault rifle at Mechanic LL4\n\"Managed it? Honestly, I wasn't sure we'd ever come back to this conversation. But I'll keep my word. Back during the Contract Wars, everyone feared this weapon. BEAR operatives who carried it were unbeatable. And for USECs, getting their hands on one was considered an incredible stroke of luck. Not because the weapon makes you immortal. But because its owner is a true master - someone nobody wants to face.\""
+    }
+  ]
+}

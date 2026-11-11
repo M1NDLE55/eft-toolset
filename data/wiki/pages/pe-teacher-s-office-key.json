@@ -1,0 +1,51 @@
+{
+  "title": "PE teacher's office key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PE_teacher's_office_key",
+  "revisionId": 347791,
+  "lastEdited": "2026-07-14T08:41:00Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the physical education teacher's office in the sports hall on the first floor of the school no. 30 on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "64ccc268c41e91416064ebc7",
+    "ID": "city_key40"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "PE teacher's office key (PE) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the physical education teacher's office at School No. 30."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Drawers\n- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the physical education teacher's office in the sports hall on the first floor of the school no. 30 at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Provisions)"
+    }
+  ]
+}

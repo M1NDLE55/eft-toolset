@@ -1,0 +1,55 @@
+{
+  "title": "Rough Tarkov",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rough_Tarkov",
+  "revisionId": 359621,
+  "lastEdited": "2026-09-13T20:19:19Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Ground Zero",
+    "given by": "Jaeger",
+    "previous": "Acquaintance",
+    "leads to": "Every Hunter Knows This",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Rough Tarkov is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello there. I see you've become very confident in your survival skills. That's what gets people killed. Overconfidence weakens your senses, and Tarkov doesn't tolerate it. I was talking to an old comrade of mine, and let me tell you, tripwires are the ultimate test of alertness. Partisan has driven a great many bastards out of existence, and most of the time it was only a matter of catching the enemy inattentive. Yes, his methods are extreme, he's been like that since Afghanistan. Even if you're on my friend's good side, there are still plenty of \"gifts\" in Tarkov even without him. Not just in the woods, too. Sometimes even a random room can come with an explosive surprise. That's why I advise you to cut down on your eagerness and take a closer look at such places. You'll live longer if you learn to recognize mortal danger.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the heavily mined area on Woods\n- Locate the Claymore mine on Ground Zero"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +4,440 EXP\n- Jaeger Rep +0.01\n- 60,000 Roubles\n  - 63,000 Roubles with Intelligence Center Level 1\n  - 69,000 Roubles with Intelligence Center Level 2\n- 2× Tripwire installation kit\n\"Would you look at that, you're alive! While you were gone, I've prepped this little thingie for you, so you can learn the secrets of booby trapping on your own. Consider it a homework assignment, but just make sure to not blow yourself up.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to locate the heavily mined area on Woods and the claymore mine on Ground Zero."
+    },
+    {
+      "heading": "Woods heavily mined area",
+      "level": 3,
+      "text": "The heavily mined area refers to the west and north-west approaches to the \"USEC camp\" which is located in the northwest. The safest way to fulfill the objective is to get inside the camp from the north, east or south and walk up to the sandbags between the big rocks in the west of the camp that block off a path to the mines.\n\nMined areas to avoid"
+    },
+    {
+      "heading": "Ground Zero claymore mine",
+      "level": 3,
+      "text": "The claymore mine is located on the first floor of the Tarbank building, in the customer desk booth no. 3. To fulfill the objective you only have to get in front of the booth, there is no need to enter it."
+    }
+  ]
+}

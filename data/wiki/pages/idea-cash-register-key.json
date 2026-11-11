@@ -1,0 +1,61 @@
+{
+  "title": "IDEA cash register key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/IDEA_cash_register_key",
+  "revisionId": 357669,
+  "lastEdited": "2026-09-05T06:44:48Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "- Unlocks the cash registers of the IDEA store on Interchange - Unlocks the cash registers of the NecrusPharm pharmacy on Interchange",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ad7242b86f7740a6a3abd43",
+    "ID": "Key_cash_machine_IDEA"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "IDEA cash register key (IDEA reg.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the IDEA store outlet cash registers at the ULTRA shopping mall."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- 1 needs to be obtained for the quest Supervisor"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the seat of a white bus located outside of the IDEA store"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "- Cash registers in the front of the Idea store on Interchange.\n\n- Cash registers in the NecrusPharm pharmacy on Interchange."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- IDEA store:\n  - 20x Cash register TAR2-2\n- NecrusPharm pharmacy:\n  - 2x Cash register TAR2-2"
+    }
+  ]
+}

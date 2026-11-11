@@ -1,0 +1,73 @@
+{
+  "title": "Character skills",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Character_skills",
+  "revisionId": 361940,
+  "lastEdited": "2026-09-24T15:46:36Z",
+  "kind": "skill",
+  "categories": [
+    "Character skills",
+    "Escape from Tarkov"
+  ],
+  "redirects": [
+    "Abilities",
+    "Skills"
+  ],
+  "infobox": {},
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Escape from Tarkov currently features four skill categories trained through active use. In short, the more you use a skill, the better you get at it."
+    },
+    {
+      "heading": "Leveling",
+      "level": 2,
+      "text": "- A skills maximum level is 51 (Elite level). However, a skill can temporarily surpass this limit with status effects from certain Stimulants and Provisions.\n  - Most skills provide unique perks at the Elite level\n  - Temporary status effects can never bring a skill past level 60.\n- The number of skill points to reach level 1 is 10. Afterwards, it increases by 10 per level and is capped at 100 per skill level.\n- Some Quests award skill levels as a reward.\n  - Sometimes it is worthwhile to avoid completing a quest until a skill is at least level 9 to ensure the quest rewards the maximum number of points possible."
+    },
+    {
+      "heading": "Leveling speed",
+      "level": 3,
+      "text": "- Each skill has a leveling speed modifier depending on how many full skill points have been earned recently in the raid:\n  - 129%: Before the first skill point, the leveling speed is at 129% (denoted by a blue arrow ).\n  - 100%: After the first skill point, the leveling speed is normal or 100% (denoted by the lack of an arrow).\n  - < 100%: After the first 2 skill points, the leveling speed is calculated using the formula 0.6 ^ (Earned Points - 1) * 100, where earned points are rounded down to the nearest digit (e.g. 0.6 ^ (2 - 1) * 100 = 60%; denoted by a red arrow ).\n- After not earning any skill points for 200 seconds, the modifier is reset for that skill. Keep in mind that unlike at the start of the raid, the earned points counter is set to 1 in this case, which means you don't start with the 129% modifier but with the 100% modifier."
+    },
+    {
+      "heading": "Hideout modifiers",
+      "level": 3,
+      "text": "- Upgrading the Hideout module \"Shooting Range\" to level 3 grants a 10% leveling boost to the Combat skills group.\n- Building the Hideout module \"Library\" grants a 30% leveling boost to the Practical skills group.\n- Building the Hideout module \"Air Filtering Unit\" grants a 40% leveling boost to the Physical skills group.\n  - The boost is only provided with an inserted FP-100 filter absorber.\n- Building the Hideout module \"Hall of Fame\" grants a leveling boost to the Combat skills group.\n  - The boost value depends on the amount and levels of stored opposing faction Dogtags.\n- The levels 2-5 of the Hideout module \"Defective Wall\" each cause a 3% leveling penalty (12% total) to the Physical skills group.\n  - The penalty can be reduced by \"mopping the floor\" with a Fleece fabric, but in order to get rid of the penalty entirely, the module has to be upgraded to level 6."
+    },
+    {
+      "heading": "Physical",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Combat",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Practical",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Mental",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Upcoming Skills",
+      "level": 2,
+      "text": "Many of these skills are no longer visible in the game and possibly cut."
+    },
+    {
+      "heading": "Practical",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Special",
+      "level": 3,
+      "text": ""
+    }
+  ]
+}

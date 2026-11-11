@@ -1,0 +1,65 @@
+{
+  "title": "To the Light - Clip Their Wings",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_Clip_Their_Wings",
+  "revisionId": 360010,
+  "lastEdited": "2026-09-13T23:46:21Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods, Customs, Shoreline",
+    "given by": "Mechanic",
+    "previous": "To the Light - False Call (+10-15min)",
+    "leads to": "To the Light - Fallen Bird",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "To the Light - Clip Their Wings is a Quest in Escape from Tarkov"
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"It's nice when you hypotheses are confirmed in practice! Half an hour after you sent the signal, UNTAR soldiers showed up at the rendezvous point. They quickly realized the call was a fake, but Lightkeeper had already learned everything he wanted to know. With this new task, everything falls into place. Something among Lightkeeper's people or his allies has been secretly working with Peacekeeper, and not Lightkeeper is ready to act. We need to plant several signal jammers. The only catch is the Lightkeeper wants everything done quickly, in a single run. Otherwise the effect will be too weak, and we wont get any more jobs from the lighthouse. Start at the weather station in the cliffs at the nature reserve. Install the second jammer in the guard shack at the sawmill. From there, head toward Customs and leave the jammer on the second floor of the construction site by the road, then make your way to the coast. The last jammer goes in the archives of the health resort's administrative building. As soon as you're done, come back to me. We can't keep Lightkeeper waiting.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Unlocks 10-15 minutes after completion of To the Light - Trust but Verify"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Plant a Signal jammer at the weather station on the mountain on Woods (In one raid)\n- Plant a Signal jammer at the sawmill guardhouse on Woods (In one raid)\n- Use the transit from Woods to Customs (In one raid)\n- Plant a Signal jammer on the second floor of the roadside construction site on Customs (In one raid)\n- Use the transit from Customs to Shoreline (In one raid)\n- Plant a Signal jammer at the second floor archives in the Health Resort admin building on Shoreline (In one raid)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +45,000 EXP\n\"Truth be told, I can't even imagine how Lightkeeper got such detailed information about Peacekeeper's operations. But what you just did is enough to disrupt several major deals the UN officer had in the works. It'll take him a while to recover from a hit like that. As soon as I detected your jamming\nzones, I contacted Lightkeeper. Now I'm waiting for some kind of package from him. So don't disappear on me, alright?\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Signal Jammer | 4 | Required | N/A | Can be purchased from Mechanic LL1. |\nIn this quest you have to stash a Signal Jammer at the weather station on the mountain on Woods then place another one at the sawmill guardhouse, after placing them you need to transit from Woods to Customs, place a signal jammer on the second floor of the roadside construction site then transit from Customs to Shoreline and place a signal jammer at the second floor archives in the Health Resort admin building all in one raid. Extracting at any time before the last objective will require you to re-do everything from the beginning."
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": ""
+    }
+  ]
+}

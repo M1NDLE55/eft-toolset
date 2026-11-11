@@ -1,0 +1,56 @@
+{
+  "title": "Health Resort west wing room 321 safe key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_west_wing_room_321_safe_key",
+  "revisionId": 316182,
+  "lastEdited": "2025-07-18T21:24:24Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks a safe in room 321 of the West wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0eff2986f7741fd654e684",
+    "ID": "Сейф Побережье 321"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort west wing room 321 safe key (W321 safe) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium west wing room 321 safe."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "The key can be found in a locker in the weather station tower"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The third floor, room 321 of the West Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- The contents of the safe."
+    }
+  ]
+}

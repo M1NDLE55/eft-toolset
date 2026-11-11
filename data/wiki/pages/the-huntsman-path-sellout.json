@@ -1,0 +1,48 @@
+{
+  "title": "The Huntsman Path - Sellout",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Sellout",
+  "revisionId": 359766,
+  "lastEdited": "2026-09-13T20:21:44Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Interchange",
+    "given by": "Jaeger",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Huntsman Path - Sellout is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 32 to start this quest."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Be well, soldier. Do you like shopping? I used to love it too, we had a shopping center here. It was nice to spend time there, but as everything collapsed, there was no time for entertainment anymore, the stores quickly got looted, and what didn’t get looted got taken over by all kinds of scum as their mainstays. I heard that there was that one person - a former athlete, he's already been racketing before the war, and now as he has felt more power than ever, he's killing everyone indiscriminately. People call him Killa, and his helmet... you won’t miss it. Get rid of him, everybody will say thank you. And take his helmet with you, just in case.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate Killa\n- Find 1 Killa's Maska-1SCh bulletproof helmet in raid\n- Hand over 1 Killa's Maska-1SCh bulletproof helmet to Jaeger"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +20,000 EXP\n- Jaeger Rep +0.02\n- 150,000 Roubles\n  - 157,500 Roubles with Intelligence Center Level 1\n  - 172,500 Roubles with Intelligence Center Level 2\n- 3× Intelligence folder\n- 1× IDEA cash register key\n- 1× OLI cash register key\n- 1× Goshan cash register key\n- Unlocks barter for RPK-16 5.45x39 light machine gun at Prapor LL2\n\"Finally, he got what he deserved. I believe the day is near when there will be no such scum left in these parts. Thank you, fellow.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Maska-1SCh bulletproof helmet (Killa Edition); or; Maska-1SCh bulletproof helmet (Christmas Edition) | Maska-1SCh bulletproof helmet (Killa Edition); or; Maska-1SCh bulletproof helmet (Christmas Edition) | 1 | Handover item | Yes | Face shield not required |\nIn this quest you have to kill Killa (Not Vengeful Killa) and find a Maska-1SCh helmet in raid."
+    }
+  ]
+}

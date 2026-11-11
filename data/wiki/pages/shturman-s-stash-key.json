@@ -1,0 +1,61 @@
+{
+  "title": "Shturman's stash key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shturman's_stash_key",
+  "revisionId": 316955,
+  "lastEdited": "2025-08-16T21:01:14Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks Shturman's stash in the sawmill area on Woods.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d08d21286f774736e7c94c3",
+    "ID": "Key_boss_koj"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Shturman's stash key (SSK) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The Svetloozersk gang's common fund stash key, usually kept by Shturman. The key looks very flimsy, it could break from even a single use."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- 1 needs to be found in raid for the quest The Huntsman Path - Woods Keeper"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- On Shturman"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "In the sawmill area on Woods, on top of a tire next to a wood log pile."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- The contents of the Common fund stash."
+    }
+  ]
+}

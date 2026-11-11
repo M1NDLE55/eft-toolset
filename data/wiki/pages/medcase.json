@@ -1,0 +1,33 @@
+{
+  "title": "Medcase",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Medcase",
+  "revisionId": 358564,
+  "lastEdited": "2026-09-10T22:03:09Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot Container",
+    "node": "5909d4c186f7746ad34e805a",
+    "ID": "MedBox"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "For the container, see Medicine case.\n\nMedcase is a Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A 4x3 grid plastic medical case that only spawns medical items. Very similar to the Medbag, but cannot spawn medkits except for the AI-2 medkit."
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "| Type |\n| Medical supplies |\n| Injury treatment |\n| Injury treatment |\n| Injury treatment |\n| Medical supplies |\n| Pills |\n| Medical supplies |\n| Medical supplies |\n| Medkits |\n| Medical supplies |\n| Medical supplies |\n| Medical supplies |\n| Medical supplies |\n| Injectors |\n| Injury treatment |\n| Pills |\n| Medical supplies |\n| Injury treatment |\n| Medical supplies |\n| Injury treatment |"
+    }
+  ]
+}

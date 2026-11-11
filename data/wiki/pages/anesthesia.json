@@ -1,0 +1,49 @@
+{
+  "title": "Anesthesia",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Anesthesia",
+  "revisionId": 361744,
+  "lastEdited": "2026-09-24T12:30:20Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Prapor",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Anesthesia is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Oh, you're just in time. Maybe you have already heard that a new doctor has shown up? But this one is not some good-willed Aesculapius - he helps some people but cripples others. They say he sells medicine and does surgeries right on the street. They call him Sanitar, can you imagine? He settled on the Shoreline and interestingly enough, the local punks are very happy with him, and it's clear why: he patches them up, and even sells them drugs and first-aid kits of all sorts. This means that he has quite an inventory with him. Find out about this Sanitar, but quietly. For now, just find out where this scum hangs out. I think that he does both the selling and healing at the same spots. You interested?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Mark the first trading post with an MS2000 Marker on Shoreline\n- Mark the second trading post with an MS2000 Marker on Shoreline\n- Mark the third trading post with an MS2000 Marker on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Prapor Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\n\"So you're saying there's quite a lot of supplies? Guess he found himself a fresh unopened medical warehouse and is now selling everything out from it. If only I could find that warehouse... well, that's not your problem anyway. For now.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 3 | Required | N/A | This item is placed on the trading posts. When placed, the item is removed from the player's inventory. |\nIn this quest you have to mark Sanitar's 3 treatment locations (\"trading posts\") with MS2000 Marker on Shoreline. The markers can be placed in any order over any number of raids."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

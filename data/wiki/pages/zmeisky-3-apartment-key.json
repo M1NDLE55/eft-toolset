@@ -1,0 +1,56 @@
+{
+  "title": "Zmeisky 3 apartment key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zmeisky_3_apartment_key",
+  "revisionId": 333627,
+  "lastEdited": "2026-02-03T19:59:48Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "usage": "Unlocks apartment 7 on the first floor of the Zmeisky 3 building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "68e960db934bf7b02d005dab",
+    "ID": "item_key_quest_lyzhnik_friend"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Zmeisky 3 apartment key (Zm. 3) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to one of the apartments at Zmeisky Alley 3."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the story chapter Accidental Witness"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to apartment 7 on the first floor of the Zmeisky 3 building at Streets of Tarkov. The entrance is on the backyard side."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Household materials, Provisions)"
+    }
+  ]
+}

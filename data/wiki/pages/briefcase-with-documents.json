@@ -1,0 +1,60 @@
+{
+  "title": "Briefcase with documents",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Briefcase_with_documents",
+  "revisionId": 360416,
+  "lastEdited": "2026-09-15T20:30:45Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pickupable Loot Container",
+    "weight": "2 kg",
+    "grid": "2x2",
+    "node": "6a3563dacdaebb512e0a009c",
+    "ID": "item_container_briefcase"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Briefcase with documents (Briefcase) is a pickupable Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "An unremarkable, inexpensive briefcase containing documents clearly never meant for anyone else's eyes. It seems one TerraGroup employee decided to hide important papers in the most obvious place possible — where no one would ever think to look."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n- Cannot be listed for sale on the flea market\n- Destroyed after unpacking (Right-click \"unpack\")"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- 1 needs to be obtained for the quest What's in the Bag?"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Reverse Gear\n- 1 can be obtained as a quest reward from Digital Puzzle"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division in the Seasonal mode on Ground Zero (Level 21+), Shoreline, Streets of Tarkov and Woods."
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| BD dogtag Ferrum x5; BD dogtag Ferrum | → | Cultist Circle; Unique Sacrifice; 5 h 56 min | → | Briefcase with documents x1; Briefcase with documents |"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "Each briefcase contains 3 random ."
+    }
+  ]
+}

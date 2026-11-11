@@ -1,0 +1,39 @@
+{
+  "title": "Double Tap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Double_Tap",
+  "revisionId": 362070,
+  "lastEdited": "2026-09-24T19:21:28Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Firework",
+    "leads to": "Miracle Worker"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Double Tap is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Wanna head a cautionary tale? There was a real movie playing out in one of the matches. The defending team wiped all the attackers, game over, victory. Only problem was, the defenders got a little too confident. While I was announcing their victory, one of the attackers who wasn't quite dead yet crawled over to the plant site and planted the device, but without the timer. And that's it, no winners. The blast took everyone out. So don't forget the finishing shot. It was a dangerous mistake before, but now it's an even bigger trap. And you, try learning from other people's mistakes instead of your own, yeah?\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 enemies with headshots in BlastGang mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +16,000 EXP\n- 750,000 Roubles\n- 70 GP coins\n- 1× Ref's Drop I\n- 2 Battle Points"
+    }
+  ]
+}

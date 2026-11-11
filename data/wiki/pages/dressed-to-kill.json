@@ -1,0 +1,44 @@
+{
+  "title": "Dressed to Kill",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dressed_to_Kill",
+  "revisionId": 359246,
+  "lastEdited": "2026-09-13T20:12:55Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Dressed to kill"
+  ],
+  "infobox": {
+    "given by": "Ragman",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dressed to Kill is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day to you! Everybody’s so stylish nowadays, folks come by asking for things that weren’t much of a hit even back in peaceful times. Doesn’t matter if the thing is hit through by PM like paper, they’ll still take it as long as it makes them stand out. It turns out, people are still having a life, want to party or whatever. Look for different kinds of hats on mannequins or shelves, you know, those like in western movies, and grab our ushankas too.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find 2 Kinda Cowboy hats in raid\n- Find 2 Ushanka ear-flap caps in raid\n- Hand over 2 Ushanka ear-flap caps to Ragman\n- Hand over 2 Kinda Cowboy hats to Ragman"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,400 EXP\n- Ragman Rep +0.03\n- 21,000 Roubles\n  - 22,050 Roubles with Intelligence Center Level 1\n  - 24,150 Roubles with Intelligence Center Level 2\n- 1× BNTI Gzhel-K body armor\n- 1× Military power filter\n\"Beauty will save the world, as they say. Thank you, really helped me out, brother. The hats are gonna be sold in just one day, trust me. Here, take this as a reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Ushanka ear flap hat | 2 | Handover item | Yes |\n| Kinda cowboy hat | 2 | Handover item | Yes |"
+    }
+  ]
+}

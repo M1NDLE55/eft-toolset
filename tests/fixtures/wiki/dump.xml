@@ -1,0 +1,4642 @@
+<!-- Pages copied unchanged from the Escape from Tarkov Wiki dump of 2026-09-29 (escapefromtarkov_gamepedia_pages_current.xml.7z). Text CC BY-NC-SA, by the wiki's contributors. -->
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
+  <siteinfo>
+    <sitename>Escape from Tarkov Wiki</sitename>
+    <dbname>escapefromtarkov_gamepedia</dbname>
+    <base>http://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki</base>
+    <generator>MediaWiki 1.43.9</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Escape from Tarkov Wiki</namespace>
+      <namespace key="5" case="first-letter">Escape from Tarkov Wiki talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="110" case="first-letter">Forum</namespace>
+      <namespace key="111" case="first-letter">Forum talk</namespace>
+      <namespace key="202" case="first-letter">UserProfile</namespace>
+      <namespace key="420" case="first-letter">GeoJson</namespace>
+      <namespace key="421" case="first-letter">GeoJson talk</namespace>
+      <namespace key="500" case="first-letter">User blog</namespace>
+      <namespace key="501" case="first-letter">User blog comment</namespace>
+      <namespace key="502" case="first-letter">Blog</namespace>
+      <namespace key="503" case="first-letter">Blog talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+      <namespace key="1200" case="first-letter">Message Wall</namespace>
+      <namespace key="1201" case="first-letter">Thread</namespace>
+      <namespace key="1202" case="first-letter">Message Wall Greeting</namespace>
+      <namespace key="1203" case="first-letter">Message Wall Greeting Talk</namespace>
+      <namespace key="2900" case="first-letter">Map</namespace>
+      <namespace key="2901" case="first-letter">Map talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Tagilla</title>
+    <ns>0</ns>
+    <id>21179</id>
+    <revision>
+      <id>362388</id>
+      <parentid>358914</parentid>
+      <timestamp>2026-09-29T13:21:20Z</timestamp>
+      <contributor>
+        <username>Muhawi</username>
+        <id>37816397</id>
+      </contributor>
+      <comment>/* Equipment */</comment>
+      <origin>362388</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="10732" sha1="1vmnr4mpebun73rqtegm05dcu59mmqm" xml:space="preserve">{{Infobox character
+|image        =Kuvalda FactoryBoss Screenshot.png
+|image size   =
+|faction      =[[Scavs]]
+|full name    =Unknown
+|location     =[[Factory]], [[Interchange]], [[Terminal]]
+|origin       =
+|spawn chance =
+}}
+
+'''{{PAGENAME}}''' is a Scav [[Boss]] in ''[[Escape from Tarkov]]''.
+
+==Biography==
+People fear Tagilla far beyond the walls of Polikhim Plant #16. Some managed to flee the Factory after hearing his roar. But no one has ever survived his sledgehammer. Veterans still remember how Tagilla toyed with the PMC squads who dared to explore The Labyrinth beneath the health resort.
+
+==Notes==
+* Tagilla has different health values than PMCs and Scavs. 
+{|class="wikitable"
+!Tagilla's Health
+!Stats
+|-
+![[File:Health_Tagilla.png|460px]]
+|Head: 100
+
+Thorax: 320
+
+Stomach: 260
+
+Arms: 130 each
+
+Legs: 140 each
+
+'''Total: 1220'''
+|}
+* Instead of the typical 4 single slot pockets, he has 5 triple slot pockets, bringing their total space to 15 slots.
+
+==Quests==
+* Tagilla needs to be killed once each for the quests [[The Huntsman Path - Factory Chief]] and [[The Huntsman Path - Relentless]].
+
+==Location==
+Tagilla can be found on the following locations:
+
+====[[Factory]]====
+Has to be expected everywhere.
+
+====[[Interchange]]====
+In the parking garage below the Goshan store.
+&lt;li style="display: inline-block;"&gt;&lt;gallery widths="300" heights="169" mode="packed"&gt;
+File:TagillaInterchangeMap.jpg|Location marked on map
+&lt;/gallery&gt;&lt;/li&gt;
+
+====[[Terminal]]====
+In the medium container ship berths area. '''Note:''' Tagilla is only 1 of 5 possible bosses to spawn each raid.
+&lt;li style="display: inline-block;"&gt;&lt;gallery widths="300" heights="169" mode="packed"&gt;
+File:Terminal Bosses Map.jpg|Location marked on map
+&lt;/gallery&gt;&lt;/li&gt;
+
+==Behavior==
+He is batshit insane and will attempt to hammer you down. However, if you are in a position that he cannot path-find to, such as the rafters, he will use his secondary weapon (usually a shotgun) to kill you from a distance. He's active immediately at the start of raid. The boss can set ambushes, open suppressive fire, and breach if needed.
+
+==Strategy==
+If you are using high penetrating ammunition, aim for his head, not his thorax. If you have low pen or high flesh damage, aim for his stomach since his armor only covers the thorax. The best plan of action is to bait out his swing so he's standing still, then shoot him. If you shoot while he's running at you, he'll just charge through it and absolutely murder you, so wait until he swings to shoot.
+
+Tagillas welding masks do not protect his nape, therefore you can try to shoot him there. This strategy requires sneaking up behind him without you being detected, or a teammate that flanks him while he is fighting or chasing you. 
+==Equipment==
+Note that the primary weapons can have numerous mod variations and those shown below are examples. &lt;br/&gt;
+Tagilla's Dead Blow Hammer is unlootable.
+&lt;div style="display:table"&gt;&lt;tabber&gt;Weapons=
+{| class="wikitable" style="text-align: center;"
+!Icon
+!Weapon
+!Ammunition
+!Mods
+|-
+![[File:TagillaSaiga12FA.png|link=Saiga-12K 12ga automatic shotgun]]
+|[[Saiga-12K 12ga automatic shotgun]]
+![[File:127065ExpressMagnumIcon.png|link=12/70 8.5mm Magnum buckshot]] [[File:12-70 AP-20 icon.png|link=12/70 AP-20 armor-piercing slug]] [[File:12x70SLUG CSP-icon.png|link=12/70 Copper Sabot Premier HP slug]] [[File:12-70 HP SF icon.png|link=12/70 SuperFormance HP slug]]
+|
+|-
+![[File:TagillaAA12Gen1.png|link=MPS Auto Assault-12 Gen 1 12ga automatic shotgun]]
+|[[MPS Auto Assault-12 Gen 1 12ga automatic shotgun]]
+![[File:12x70SLUG CSP-icon.png|link=12/70 Copper Sabot Premier HP slug]] [[File:12-70 HP SF icon.png|link=12/70 SuperFormance HP slug]] [[File:127065ExpressMagnumIcon.png|link=12/70 8.5mm Magnum buckshot]] 
+|
+|-
+![[File:TagillaAA12Gen2.png|link=MPS Auto Assault-12 Gen 2 12ga automatic shotgun]]
+|[[MPS Auto Assault-12 Gen 2 12ga automatic shotgun]]
+![[File:12-70 HP SF icon.png|link=12/70 SuperFormance HP slug]]
+|
+|-
+![[File:Tagilla_S12.gif|link=Saiga-12K ver.10 12ga semi-automatic shotgun]]
+|[[Saiga-12K ver.10 12ga semi-automatic shotgun]]
+![[File:12-70 HP SF icon.png|link=12/70 SuperFormance HP slug]] [[File:12x70SLUG CSP-icon.png|link=12/70 Copper Sabot Premier HP slug]] [[File:12-70 AP-20 icon.png|link=12/70 AP-20 armor-piercing slug]] [[File:127065ExpressMagnumIcon.png|link=12/70 8.5mm Magnum buckshot]] 
+|[[SOK-12 12ga SAI-02 10-round magazine]] or [[SOK-12 12ga MaxRounds Powermag 20-round drum magazine]]&lt;br/&gt;
+[[SOK-12 Leapers UTG PRO MTU002 Short Top aluminum handguard]] or [[SOK-12 Custom Guns Type-340 handguard]]&lt;br/&gt;
+[[Axion Kobra EKP-8-18 reflex sight]]&lt;br/&gt;
+[[Zenit Klesch-2IKS IR illuminator with laser]]&lt;br/&gt;
+[[AK Zenit RK-3 pistol grip]]
+|-
+![[File:AKS-74UN Zenit.png|link=Kalashnikov AKS-74UN 5.45x39 assault rifle]]
+|[[Kalashnikov AKS-74UN 5.45x39 assault rifle]]
+![[File:74PPICON.png|link=5.45x39mm PP gs]] [[File:74BTICON.png|link=5.45x39mm BT gs]] [[File:74BSICON.png|link=5.45x39mm BS gs]] [[File:7n39icon.png|link=5.45x39mm PPBS gs Igolnik]]
+|{{59ecc28286f7746d7a68aa8c}}&lt;br/&gt;
+{{57dc334d245977597164366f}}&lt;br/&gt;
+{{59d36a0086f7747e673f3946}}&lt;br/&gt;
+{{57ffa9f4245977728561e844}}&lt;br/&gt;
+{{57ffaea724597779f52b3a4d}}&lt;br/&gt;
+{{57ffb0062459777a045af529}}&lt;br/&gt;
+{{584924ec24597768f12ae244}}&lt;br/&gt;
+{{57fd23e32459772d0805bcf1}}&lt;br/&gt;
+{{59fc48e086f77463b1118392}}&lt;br/&gt;
+{{5649ab884bdc2ded0b8b457f}}&lt;br/&gt;
+{{59ecc3dd86f7746dc827481c}}&lt;br/&gt;
+{{5649ae4a4bdc2d1b2b8b4588}}&lt;br/&gt;
+{{5648ac824bdc2ded0b8b457d}}&lt;br/&gt;
+|-
+![[File:Tagilla MP155 .png|link=MP-155 12ga semi-automatic shotgun]]
+|[[MP-155 12ga semi-automatic shotgun]]
+![[File:12-70 Flechette icon.png|link=12/70 flechette]] [[File:12x70ripicon.png|64px|link=12/70 RIP]] [[File:12-70 Dual Sabot icon.png|64px|link=12/70 Dual Sabot slug]]
+|[[MP-155 Ultima polymer stock]]&lt;br/&gt; [[MP-155 Ultima thermal camera]]
+|-
+![[File:RPK-16 icon.png|link=RPK-16 5.45x39 light machine gun]]
+|[[RPK-16 5.45x39 light machine gun]]
+![[File:7n39icon.png|link=5.45x39mm PPBS gs Igolnik]] [[File:74PSICON.png|link=5.45x39mm PS gs]] [[File:74BSICON.png|link=5.45x39mm BS gs]] [[File:74BTICON.png|link=5.45x39mm BT gs]]
+|[[RPK-16 5.45x39 95-round drum magazine]]&lt;br/&gt; [[RPK-16 5.45x39 22 inch barrel]]&lt;br/&gt; [[VOMZ Pilad P1x42 Weaver reflex sight]]&lt;br/&gt; [[AK-74 SRVV MBR Jet 5.45x39 muzzle brake]]
+|-
+![[File:Superfors.png|200px|link=Superfors DB 2020 Dead Blow Hammer]]
+|[[Superfors DB 2020 Dead Blow Hammer]]
+|-
+![[File:F-1 grenade icon.png|link=F-1 hand grenade]]
+|[[F-1 hand grenade]]
+|-
+![[File:Zarya stun grenade icon.png|link=Zarya stun grenade]]
+|[[Zarya stun grenade]]
+|}
+|-|Headwear=
+{| class="wikitable" style="text-align: center;"
+!Icon
+!Headwear
+!Armor Class
+|-
+![[File:Boss Cap Icon.png|link=BOSS cap]]
+|[[BOSS cap]]
+! -
+|-
+|}
+|-|Face cover=
+{| class="wikitable" style="text-align: center;"
+!Icon
+!Face cover
+!Armor Class
+|-
+![[File:Tagilla Mask Ubey Icon.png|link=Tagilla's welding mask "UBEY"]]
+|[[Tagilla's welding mask "UBEY"]]
+!5
+|-
+![[File:Tagilla Mask Gorilla Icon.png|link=Tagilla's welding mask "Gorilla"]]
+|[[Tagilla's welding mask "Gorilla"]]
+!5
+|-
+![[File:Atomic_Defense_CQCM_Icon.png|127px|link=Atomic Defense CQCM ballistic mask (Black)]]
+|[[Atomic Defense CQCM ballistic mask (Black)]]
+!3
+|}
+|-|Chest Rigs=
+{| class="wikitable" style="text-align: center;"
+!Icon
+!Chest Rig
+!Armor Class
+|-
+![[File:MBAV icon.png|link=Crye Precision AVS plate carrier (Tagilla Edition)]]
+|[[Crye Precision AVS plate carrier (Tagilla Edition)]]
+!6
+|-
+![[File:Strandhogg_Icon.png|link=First Spear Strandhogg plate carrier (Ranger Green)]]
+|[[First Spear Strandhogg plate carrier (Ranger Green)]]
+!4
+|-
+|}
+|-|Items=
+Tagilla can spawn with any key or keycard in his pockets. 
+{| class="wikitable" style="text-align: center;"
+!Icon
+!Item
+|-
+![[File:Bitcoin icon.png|link=Physical Bitcoin]]
+|[[Physical Bitcoin|Bitcoin]]
+|-
+![[File:EFT Salewa-First-Aid-Kit Icon 2.png|64x128px|link=Salewa first aid kit]]
+|[[Salewa first aid kit]]
+|-
+![[File:L1 (Norepinephrine) Icon.png|64x64px|link=L1 (Norepinephrine) injector]]
+|[[L1 (Norepinephrine) injector]]
+|}
+&lt;/tabber&gt;&lt;/div&gt;
+
+==Gallery==
+&lt;li style="display: inline-block;"&gt;&lt;gallery widths="300" heights="169" mode="packed"&gt;
+File:Tagilla.png|Tagilla with his [[AKS-74UN]]
+File:Tagilla Saiga-12K FA.png|Tagilla with his [[Saiga-12K FA]]
+File:Tagillaunmasked.png|Tagilla's face
+File:TagillaConceptArt.png|Tagilla concept art
+File:Happy birthday Tagilla.jpg|Tagilla together with [[Killa]] art
+File:Tagilla (Chronicles of Ryzhy ch.1).png|Tagilla in the [https://www.youtube.com/watch?v=YdFdSbAfXiQ Chronicles of Ryzhy &lt;nowiki&gt;[S1]&lt;/nowiki&gt; Chpt. 1 short film]
+File:TagillaS2CH1.png|Tagilla in the [https://www.youtube.com/watch?v=TrSN4OpCSsk Chronicles of Ryzhy &lt;nowiki&gt;[S2]&lt;/nowiki&gt; Chpt. 1 short film]
+File:InfectedTagilla.png|Infected Tagilla with [[Old hand scythe|scythe]] in the 2024 Halloween event
+File:Tagilla Wallpaper 1.png|Tagilla promotional art
+&lt;/gallery&gt;&lt;/li&gt;
+
+==Trivia==
+*Tagilla is the younger brother of [[Killa]], the boss on the [[Interchange]] location.
+*According to [[Jaeger]] in [[The Huntsman Path - Factory Chief]], Tagilla is a former employee of the Chemical Plant No. 16, which is the [[Factory]] location.
+*According to [[Jaeger]] in [[The Huntsman Path - Factory Chief]], Tagilla's custom welding masks are inspired by Killa's [[Maska-1SCh bulletproof helmet (Killa Edition)|custom Maska-1SCh helmet]].
+*Russia has the Tagil river and the city of Nizhny Tagil, which became famous thanks to the meme "Tagil rulit" in the Russian part of the internet. Briefly: The meme indicates indecent behavior while intoxicated. 
+**Given this, and Tagilla's status as a worker at the Factory where [[TerraGroup]] was producing chemicals for drug research, it is possible that Tagilla's aggressive behavior and extreme physical toughness is caused by him being exposed to or otherwise under the influence of experimental drugs.
+* Tagilla is voiced by Russian actor [https://kupigolos.ru/diktory/zharkov-ivan Ivan Zharkov]. The same actor voices Thor in the Marvel films. Tagilla, like Thor, uses a hammer.
+** Interestingly, in November 2025, Ivan Zharkov wrote "Buyanov won" in his Telegram channel and posted a photo of his Steam library. Ivan had purchased EFT and started downloading the game. However, a few days later, he wrote "Refund" and explained that he had issued a refund for the Steam version of the game. He allegedly couldn't access the game. However, Ivan still had the game he had purchased on the official BSG website.&lt;ref&gt;https://ixbt.games/news/2025/11/17/golos-tagilly-nasel-bystryi-sposob-sbezat-iz-tarkova-vernul-dengi-za-escape-from-tarkov-v-steam.html&lt;/ref&gt;
+
+{{Navbox bosses}}
+[[Category:Bosses]]
+
+[[cs:Tagilla]]
+[[ru:Тагилла]]
+[[fr:Tagilla]]</text>
+      <sha1>1vmnr4mpebun73rqtegm05dcu59mmqm</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Killa</title>
+    <ns>0</ns>
+    <id>11634</id>
+    <revision>
+      <id>362459</id>
+      <parentid>362394</parentid>
+      <timestamp>2026-09-29T15:33:26Z</timestamp>
+      <contributor>
+        <username>Muhawi</username>
+        <id>37816397</id>
+      </contributor>
+      <comment>/* Equipment */</comment>
+      <origin>362459</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="9504" sha1="2yi9ejv9ork9nnob0za8ala600ob1ky" xml:space="preserve">{{Infobox character
+|image        =KillaInfobox.png
+|image size   =
+|faction      =[[Scavs]]
+|full name    =Unknown
+|location     =[[Interchange]], [[Terminal]]
+|origin       =
+|spawn chance =
+}}
+
+'''{{PAGENAME}}''' is a Scav [[Boss]] in ''[[Escape from Tarkov]]''.
+
+==Biography==
+Killa earned his reputation back in the days of the Contract Wars, when he and his crew took over the ULTRA shopping mall. For most locals, that mask with the three stripes means death. For a select few, it's a reminder of wild dubstep parties somewhere on the city's edge.
+
+==Notes==
+*Killa has different health values than PMCs and Scavs. 
+{|class="wikitable"
+!Killa's Health
+!Stats
+|-
+![[File:KillaHealth.png|460px]]
+|Head: 70
+
+Thorax: 210
+
+Stomach: 170
+
+Arms: 100 each
+
+Legs: 120 each
+
+'''Total: 890'''
+|}
+*Instead of the typical 4 single slot pockets, he has 5 double slot pockets, bringing their total space to 10 slots.
+
+==Quests==
+*Killa needs to be killed once each for the quests [[The Huntsman Path - Sellout]] and [[The Huntsman Path - Relentless]].
+
+==Location==
+Killa can be found on the following locations:
+
+====[[Interchange]]====
+* In the IDEA, OLI and Goshan stores in the ULTRA shopping mall
+* Around the center stores on the first and second floor of the ULTRA shopping mall
+&lt;li style="display: inline-block;"&gt;&lt;gallery widths="300" heights="169" mode="packed"&gt;
+File:KillaSpawns.jpg|Locations marked on map
+&lt;/gallery&gt;&lt;/li&gt;
+
+====[[Terminal]]====
+In the medium container ship berths area. '''Note:''' Killa is only 1 of 5 possible bosses to spawn each raid.
+&lt;li style="display: inline-block;"&gt;&lt;gallery widths="300" heights="169" mode="packed"&gt;
+File:Terminal Bosses Map.jpg|Location marked on map
+&lt;/gallery&gt;&lt;/li&gt;
+
+==Behavior==
+Killa uses a light machine gun or other automatic weapon to suppress the enemy, while lurking from cover to cover, getting closer to his target for the final push. During the assault he moves in a zig-zag pattern, uses smoke and fragmentation grenades, and relentlessly suppresses enemies with automatic fire. He will follow his target large distances out of his patrol route, so be sure to run very far to get away from him if he has locked onto you.
+
+==Strategy==
+It is recommended to avoid being spotted by Killa. He has multiple grenades and is generally accurate with his bursts. If you are close to him he will continuously push the player and relentlessly hunt them until he ambushes and assaults them. It is best to attack him with high-penetration ammunition such as [[5.45x39mm BS gs|5.45 BS]], [[5.56x45mm M995|5.56 M995]], or [[7.62x51mm NATO|7.62x51]]. Without proper ammunition to kill him, shredding his [[6B13 M assault armor (Killa Edition)|6B13 M]] to low durability or firing solely at his legs are both appropriate, albeit more risky, strategies. Grenades generally won't work to kill him, as he is a highly mobile fighter and will rarely be pinned down long enough for a grenade to stop him. If fighting him with a teammate, attacking him from two different directions and peeking cover is a sound strategy, as he will continue to suppress one of his opponents while the other can safely return fire.
+
+It is extremely important to utilize cover and stay mobile when fighting him, and to always be mindful of one's ammo count—if he's armed with his [[RPK-16 5.45x39 light machine gun|RPK-16]], he will likely outgun the player with his [[RPK-16 5.45x39 95-round drum magazine|95-round drum mag]] and supplementary [[AK-74 5.45x39 6L31 60-round magazine]].
+
+==Equipment==
+Note that the primary weapons can have numerous mod variations and those shown below are examples.
+&lt;div style="display:table"&gt;&lt;tabber&gt;Weapons=
+{| class="wikitable" style="text-align: center;"
+!Icon
+!Weapon
+!Ammunition
+!Mods
+|-
+![[File:KillaRPK.gif|442x127px|link=RPK-16 5.45x39 light machine gun]] 
+|[[RPK-16 5.45x39 light machine gun]]
+![[File:7n39icon.png|64px|link=5.45x39mm PPBS gs Igolnik]] [[File:74BSICON.png|64px|link=5.45x39mm BS gs]] [[File:74BTICON.png|64px|link=5.45x39mm BT gs]] [[File:74PSICON.png|64px|link=5.45x39mm PS gs]]
+|[[RPK-16 5.45x39 95-round drum magazine]] or [[AK-74 5.45x39 6L31 60-round magazine]]&lt;br/&gt;[[Valday PK-120 (1P87) reflex sight]]
+|-
+![[File:Killa-AKMS.png|link=Kalashnikov AKMS 7.62x39 assault rifle]]
+|[[Kalashnikov AKMS 7.62x39 assault rifle]]
+![[File:7.62x39T45M.png|link=7.62x39mm T-45M1 gzh]] [[File:7.62x39BP.png|64px|link=7.62x39mm BP gzh]] [[File:762x39_pp_ghz-icon.png|64px|link=7.62x39mm PP gzh]]
+|[[AK TROY Full Length Rail handguard with gas tube]]&lt;br/&gt;[[EOTech XPS3-0 holographic sight]]&lt;br/&gt;[[Zenit Klesch-2IKS IR illuminator with laser]]
+|-
+![[File:Killa-Vityaz.gif|link=PP-19-01 Vityaz 9x19 submachine gun]]
+|[[PP-19-01 Vityaz 9x19 submachine gun]]
+![[File:9x19ap.png|link=9x19mm AP 6.3]] [[File:9x19cgi.png|link=9x19mm Luger CCI]]
+|[[AK Zenit RK-3 pistol grip]]&lt;br/&gt;[[AK Zenit PT-3 "Klassika" stock]]&lt;br/&gt;[[AK-74M/AK-100 Zenit PT Lock]]&lt;br/&gt;[[AK Zenit RP-1 charging handle]]&lt;br/&gt;[[PP-19-01 Vityaz 9x19 sound suppressor]]&lt;br/&gt;[[PP-19-01 Vityaz dust cover]]&lt;br/&gt;[[AK Magpul MOE AKM handguard]]&lt;br/&gt;[[TangoDown Stubby BGV-MK46K foregrip]] or [[Magpul M-LOK AFG tactical foregrip]]&lt;br/&gt;[[Magpul M-LOK 2.5 inch rail]]&lt;br/&gt;[[Steiner LAS/TAC 2 tactical flashlight]]
+|-
+![[File:TT-Brunner icon.png|link=Tokarev TT-33 7.62x25 TT pistol]]
+|[[Tokarev TT-33 7.62x25 TT pistol]]
+![[File:TTPGL.png|link=7.62x25mm TT P gl]]
+|[[TT 7.62x25 116mm barrel]]&lt;br/&gt;[[TT Razor Arms rubber grip]]&lt;br/&gt;[[TT PM-Laser DTK-TT muzzle brake]]&lt;br/&gt;[[TT DLP Tactical Precision Laser Sight]]
+|-
+![[File:Desert Eagle Mk XIX icon.png|link=Magnum Research Desert Eagle Mk XIX .50 AE pistol]]
+|[[Magnum Research Desert Eagle Mk XIX .50 AE pistol]]
+![[File:.50 AE FMJ icon.png|link=.50 AE FMJ]]
+|
+|-
+![[File:F-1 grenade icon.png|link=F-1 hand grenade]]
+|[[F-1 hand grenade]]
+|-
+![[File:RGD-5 grenade icon.png|link=RGD-5 hand grenade]]
+|[[RGD-5 hand grenade]]
+|-
+![[File:RDG-2B Smoke grenade icon.png|link=RDG-2B smoke grenade]]
+|[[RDG-2B smoke grenade]]
+|}
+|-|Earpieces=
+{| class="wikitable" style="text-align: center;"
+!Icon
+!Earpiece
+|-
+![[File:Peltor TEP-300 tactical earplug (Coyote Brown) icon.png|link=Peltor TEP-300 tactical earplug (Coyote Brown)]]
+|[[Peltor TEP-300 tactical earplug (Coyote Brown)]]
+|}
+|-|Headwear=
+{| class="wikitable" style="text-align: center;"
+!Icon
+!Headwear
+!Mods
+!Armor Class
+|-
+![[File:Killa-Maska.png|link=Maska-1SCh bulletproof helmet (Killa Edition)]]
+|[[Maska-1SCh bulletproof helmet (Killa Edition)]]
+|[[Maska-1SCh face shield (Killa Edition)]]
+!Helmet - 4&lt;br/&gt;Faceshield - 6
+|-
+![[File:Maska-1SCh bulletproof helmet (Vida Edition) icon.png|link=Maska-1SCh bulletproof helmet (Vida Edition)]]
+|[[Maska-1SCh bulletproof helmet (Vida Edition)]]
+|[[Maska-1SCh face shield (Vida Edition)]]
+!Helmet - 4&lt;br/&gt;Faceshield - 6
+|-
+|}
+|-|Armor=
+{| class="wikitable" style="text-align: center;"
+!Icon
+!Armor
+!Armor Class
+|-
+![[File:6B13 M icon.png|link=6B13 M assault armor (Killa Edition)]]
+|[[6B13 M assault armor (Killa Edition)]]
+!5
+|-
+|}
+|-|Chest rigs=
+{| class="wikitable" style="text-align: center;"
+!Icon
+!Chest rig
+|-
+![[File:Triton M43-A Chest Harness icon.png|link=Dynaforce Triton M43-A chest harness (Black)]]
+|[[Dynaforce Triton M43-A chest harness (Black)]]
+|-
+![[File:Blackhawk Commando black Icon.png|link=BlackHawk! Commando chest harness (Black)]]
+|[[BlackHawk! Commando chest harness (Black)]]
+|-
+|}
+|-|Items=
+Killa can spawn with any key or keycard in his pockets. 
+{| class="wikitable" style="text-align: center;"
+!Icon
+!Item
+|-
+![[File:EFT Morphine Icon.png|link=Morphine injector]]
+|[[Morphine injector]]
+|-
+![[File:EFT Vaseline Icon.png|link=Vaseline balm]]
+|[[Vaseline balm]]
+|-
+![[File:EFT Salewa-First-Aid-Kit Icon 2.png|link=Salewa first aid kit]]
+|[[Salewa first aid kit]]
+|-
+![[File:Tar Cola icon.png|link=Can of TarCola soda]]
+|[[Can of TarCola soda]]
+|}
+&lt;/tabber&gt;&lt;/div&gt;
+
+==Gallery==
+&lt;li style="display: inline-block;"&gt;&lt;gallery widths="300" heights="169" mode="packed"&gt;
+File:Killa In Game.png|Killa with his [[TT-33]]
+File:Killa In Game PP-19-01.png|Killa with his [[PP-19-01]]
+File:Killa Face.png|Killa's face
+File:Killa.jpg|Killa concept art
+File:HeavyKillaConceptArt.jpg|"Heavy Killa" concept art
+File:Happy birthday Tagilla.jpg|Killa together with [[Tagilla]] art
+File:Killa (Chronicles of Ryzhy ch1).png|Killa in the [https://www.youtube.com/watch?v=YdFdSbAfXiQ Chronicles of Ryzhy &lt;nowiki&gt;[S1]&lt;/nowiki&gt; Chpt. 1 short film]
+File:KillaS2CH1.png|Killa in the [https://www.youtube.com/watch?v=TrSN4OpCSsk Chronicles of Ryzhy &lt;nowiki&gt;[S2]&lt;/nowiki&gt; Chpt. 1 short film] armed with an RPK-74M
+File:FestiveKilla.png|Festive Killa in the 2024 Christmas event
+File:Killa Wallpaper 1.png|Killa promotional art
+&lt;/gallery&gt;&lt;/li&gt;
+
+==Trivia==
+*Killa's shirt is available for PMCs as [[Adik tracksuit]] upper-body clothing.
+*Killa is the older brother of [[Tagilla]], the boss on the [[Factory]] location.
+*According to [[Jaeger]] in [[The Huntsman Path - Sellout]], Killa was a former athlete.
+*A cosplay with a more Russian-focused theme of the character "Tachanka", a Spetsnaz operator from the game "Tom Clancy's Rainbow Six: Siege" that was posted on [https://www.reddit.com/r/Rainbow6/comments/7z8bue/i_made_a_tachanka_elite_uniform/ Reddit], inspired the developers to create Killa. Tachanka is known for his iconic [[Maska-1SCh bulletproof helmet (Olive Drab)|Maska-1SCh helmet]].
+:[[File:Killa inspiration.jpg|250px]]
+
+{{Navbox bosses}}
+[[Category:Bosses]]
+
+[[cs:Killa]]
+[[de:Killa]]
+[[fr:Killa]]
+[[ru:Килла]]</text>
+      <sha1>2yi9ejv9ork9nnob0za8ala600ob1ky</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Customs</title>
+    <ns>0</ns>
+    <id>4311</id>
+    <revision>
+      <id>355388</id>
+      <parentid>355183</parentid>
+      <timestamp>2026-08-21T18:48:06Z</timestamp>
+      <contributor>
+        <username>Muhawi</username>
+        <id>37816397</id>
+      </contributor>
+      <comment>/* Extractions */</comment>
+      <origin>355388</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="15511" sha1="5iz7ozmrkz2q9f237941yir3amsh962" xml:space="preserve">{{Infobox location
+|image              =Customs Banner.png
+|image size         =
+|icon               =
+|type               =
+|prev               =[[Interchange]]&lt;br/&gt;[[Factory]]&lt;br/&gt;[[Reserve]]&lt;br/&gt;[[Woods]]
+|next               =[[Factory]]&lt;br/&gt;[[Reserve]]&lt;br/&gt;[[Interchange]]&lt;br/&gt;[[Shoreline]]
+|chapter            =
+|enemies            =[[Scavs]], [[Reshala]], [[Partisan]], [[Knight]], [[Big Pipe]], [[Birdeye]], [[Cultists]]
+|players            =10-12
+|difficulty         =
+|duration           =35 minutes
+|notable loot       =
+}}
+
+'''{{PAGENAME}}''' is a [[Map of Tarkov|location]] in ''[[Escape from Tarkov]]''. It is the second map that was added to the game.
+
+==Description==
+A large area of industrial park land situated adjacent to the factory zone. The area houses a customs terminal, fuel storage facilities, offices, and dorms, as well as a variety of other infrastructure and buildings.
+
+==Notes==
+{{PAGENAME}} is initially only accessible by [[Transits|transiting]]. Direct access from the location selection screen is unlocked upon progressing through the story chapter [[Tour]].
+
+==Features==
+* Stationary weapons in the form of [[AGS-30 30x29mm automatic grenade launcher]]s and [[NSV Utyos 12.7x108 heavy machine gun]]s.
+* Be aware of [[Map of Tarkov#Border Snipers|Border Snipers]]!
+
+==Usable Keys==
+&lt;div class="mw-collapsible mw-collapsed leftcollapse" data-expandtext="Show keys" data-collapsetext="Hide keys"&gt;&lt;br/&gt;
+{| class="wikitable sortable"
+!Icon
+!Key Name
+!Used in Quest
+|-
+![[File:Company director's room key icon.png|link=Company director's room key]]
+|[[Company director's room key]]
+! style="color: green" |✔
+|-
+![[File:GDesk-Key-Icon.png|link=Dorm guard desk key]]
+|[[Dorm guard desk key]]
+!
+|-
+![[File:Dorm overseer key icon.png|link=Dorm overseer key]]
+|[[Dorm overseer key]]
+! style="color: green" |✔
+|-
+![[File:Dorm 103 icon.png|link=Dorm room 103 key]]
+|[[Dorm room 103 key]]
+!
+|-
+![[File:Key-104-Icon.png|link=Dorm room 104 key]]
+|[[Dorm room 104 key]]
+!
+|-
+![[File:Key-105-Icon.png|link=Dorm room 105 key]]
+|[[Dorm room 105 key]]
+!
+|-
+![[File:Key-108-Icon.png|link=Dorm room 108 key]]
+|[[Dorm room 108 key]]
+!
+|-
+![[File:Key-110-Icon.png|link=Dorm room 110 key]]
+|[[Dorm room 110 key]]
+! style="color: green" |✔
+|-
+![[File:Key-114-Icon.png|link=Dorm room 114 key]]
+|[[Dorm room 114 key]]
+! style="color: green" |✔
+|-
+![[File:Dorm 118 icon.png|link=Dorm room 118 key]]
+|[[Dorm room 118 key]]
+!
+|-
+![[File:Key-203-Icon.png|link=Dorm room 203 key]]
+|[[Dorm room 203 key]]
+! style="color: green" |✔
+|-
+![[File:Key-204-Icon.png|link=Dorm room 204 key]]
+|[[Dorm room 204 key]]
+!
+|-
+![[File:Key-206-Icon.png|link=Dorm room 206 key]]
+|[[Dorm room 206 key]]
+! style="color: green" |✔
+|-
+![[File:Key-214-Icon.png|link=Dorm room 214 key]]
+|[[Dorm room 214 key]]
+!
+|-
+![[File:Key-218-Icon.png|link=Dorm room 218 key]]
+|[[Dorm room 218 key]]
+!
+|-
+![[File:Key-220-Icon.png|link=Dorm room 220 key]]
+|[[Dorm room 220 key]]
+! style="color: green" |✔
+|-
+![[File:Key-303-Icon.png|link=Dorm room 303 key]]
+|[[Dorm room 303 key]]
+! style="color: green" |✔
+|-
+![[File:Key-306.png|link=Dorm room 306 key]]
+|[[Dorm room 306 key]]
+!
+|-
+![[File:Key-308-Icon.png|link=Dorm room 308 key]]
+|[[Dorm room 308 key]]
+!
+|-
+![[File:Marked-key-Icon.png|link=Dorm room 314 marked key]]
+|[[Dorm room 314 marked key]]
+! style="color: green" |✔
+|-
+![[File:Key-315-Icon.png|link=Dorm room 315 key]]
+|[[Dorm room 315 key]]
+!
+|-
+![[File:Factory key icon.png|link=Factory emergency exit key]]
+|[[Factory emergency exit key]]
+!
+|-
+![[File:Cabinet key Gas Station Icon.png|link=Gas station office key]]
+|[[Gas station office key]]
+!
+|-
+![[File:Storage-Key-Icon.png|link=Gas station storage room key]]
+|[[Gas station storage room key]]
+!
+|-
+![[File:Machinery-key-Icon.png|link=Machinery key]]
+|[[Machinery key]]
+! style="color: green" |✔
+|-
+![[File:Checkpoint Key icon.png|link=Military checkpoint key]]
+|[[Military checkpoint key]]
+!
+|-
+![[File:Cabinet-key-Icon.png|link=Portable bunkhouse key]]
+|[[Portable bunkhouse key]]
+!
+|-
+![[File:Portable-cabin-key-Icon.png|link=Portable cabin key]]
+|[[Portable cabin key]]
+!
+|-
+|[[File:Reshala's bunkhouse key icon.png|link=Reshala's bunkhouse key]]
+|[[Reshala's bunkhouse key]]
+!style="color: green" |✔
+|-
+![[File:Customs-office-key-Icon.png|link=Tarcone Director's office key]]
+|[[Tarcone Director's office key]]
+! style="color: green" |✔
+|-
+![[File:Portable-cabin-key-Icon.png|link=Trailer park portable cabin key]]
+|[[Trailer park portable cabin key]]
+!
+|-
+![[File:Unknown-key-Icon.png|link=Unknown key]]
+|[[Unknown key]]
+! style="color: green" |✔
+|-
+![[File:USECstashoncustomskeyicon.png|64px|link=USEC stash key]]
+|[[USEC stash key]]
+!
+|}
+&lt;/div&gt;
+{{clear}}
+
+==Bosses==
+{| class="wikitable sortable"
+!Name
+!Image
+!Location
+!Notable equipment
+!Followers
+|-
+|[[Reshala]]
+![[File:Dealmaker Portrait.png|frameless|140px|link=Reshala]]
+|At the dorms area&lt;br/&gt;At the new gas station&lt;br/&gt;At the Scav base (ZB-013 extraction)
+|[[Tokarev TT-33 7.62x25 TT pistol (Golden)]]&lt;br/&gt;[[Reshala's bunkhouse key]]
+|4 heavily armed and armored guards
+|-
+|[[Partisan]]
+![[File:Partisan Portrait.png|frameless|140px|link=Partisan]]
+|Has to be expected everywhere
+|[[Partisan's bag]]&lt;br /&gt;[[AK skeletonized stock (Customized)]]&lt;br /&gt;[[Red Rebel ice pick]]
+|None
+|-
+|[[Knight]]
+![[File:KnightPortrait.png|frameless|140px|link=Knight]]
+|At the Scav base (ZB-013 extraction)
+|[[Death Knight mask]]&lt;br/&gt;[[Crye Precision CPC plate carrier (Goons Edition)]]
+|[[Big Pipe]], [[Birdeye]]
+|-
+|[[Big Pipe]]
+![[File:BigPipePortrait.png|frameless|140px|link=Big Pipe]]
+|At the Scav base (ZB-013 extraction)
+|[[Milkor M32A1 MSGL 40mm grenade launcher]]&lt;br/&gt;[[Big Pipe's smoking pipe]]&lt;br/&gt;[[Big Pipe's bandana]]&lt;br/&gt;[[S&amp;S Precision PlateFrame plate carrier (Goons Edition)]]
+|[[Knight]], [[Birdeye]]
+|-
+|[[Birdeye]]
+![[File:BirdeyePortrait.png|frameless|140px|link=Birdeye]]
+|At the Scav base (ZB-013 extraction)
+|[[Mystery Ranch NICE COMM 3 BVS frame system (Coyote)]]&lt;br/&gt;[[LBT-1961A Load Bearing Chest Rig (Goons Edition)]]
+|[[Knight]], [[Big Pipe]]
+|}
+
+==Extractions==
+To locate the extractions use the [[Customs#Maps|maps]] below the table.
+{| class="wikitable sortable stickyheader" style="text-align: center;"
+!Extraction
+!Name
+!Faction
+!Always available
+!Single-Use
+!Requirements
+!Notes
+|-
+![[File:Administration Gate.png|250px]]
+! style="text-align: left;" |Administration Gate
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Boiler room basement.png|250px]]
+! style="text-align: left;" |Boiler Room Basement (Co-op)
+|All
+|PMC: &lt;font color="red"&gt;✘&lt;/font&gt;&lt;br/&gt;Scav: &lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|[[Scav]] + PMC
+|[[File:Boiler room basement2.png|250px]]&lt;br/&gt;In the basement of the boiler building with the 2 chimneys in the construction area.
+|-
+![[File:Crossroads.png|250px]]
+! style="text-align: left;" |Crossroads
+|All
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Dorms V-Ex.png|250px]]
+! style="text-align: left;" |Dorms V-Ex
+|PMC
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|[[File:5000 Roubles.png|link=Roubles]] per player
+'''Maximum of 4 players'''
+|The fee amount is influenced by your [[Scavs#Scav karma|Scav karma]].
+|-
+![[File:Factory Far Corner.png|250px]]
+! style="text-align: left;" |Factory Far Corner
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Factory Shacks.png|250px]]
+! style="text-align: left;" |Factory Shacks
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|[[File:Customs-Portable-cabin-portable.png|250px]]&lt;br/&gt;Opposite the stacked portable cabins.
+|-
+![[File:Military Base CP.png|250px]]
+! style="text-align: left;" |Military Base CP
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Old Gas Station Extraction.png|250px]]
+! style="text-align: left;" |Old Gas Station
+|PMC
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| Green flares = Open
+|In the basement.
+|-
+![[File:Old_Gas_Gate.png|250px]]
+! style="text-align: left;" |Old Gas Station Gate
+|Scav
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Old Road Gate.png|250px]]
+! style="text-align: left;" |Old Road Gate
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Passage between Rocks.png|250px]]
+! style="text-align: left;" |Passage Between Rocks
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Railroad Passage.png|250px]]
+! style="text-align: left;" |Railroad Passage (Flare)
+|PMC
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|Shoot a green flare '''into the sky''' while inside the signal flare area. If the flare doesn't reach a certain height, the extraction '''won't''' open.&lt;br/&gt;Flares:&lt;br/&gt;[[RSP-30 reactive signal cartridge (Green)|Handheld RSP-30 green flare]]&lt;br/&gt;[[26x75mm flare cartridge (Green)|Signal pistol fired 26x75mm green flare]]
+&lt;br/&gt;
+Only one person amongst a lobby-made group needs to shoot a flare to open the extraction for all members of the group.
+|Upon entering the signal flare area, a notification will pop up in the bottom right corner of the screen: [[File:KlimovStreetSignalAreaNote.png]]&lt;br/&gt;If the flare was fired correctly, a new notification pops up:&lt;br/&gt;[[File:FlareSuccessNote.png]]&lt;br/&gt;&lt;br/&gt;Signal flare area and extract zone map&lt;br/&gt;[[File:RailroadPassageCustomsSignalArea.png|300px]]&lt;br/&gt;Staying on the tracks is required to not get shot.
+|-
+![[File:Railroad To Military Base.png|250px]]
+! style="text-align: left;" |Railroad to Military Base
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Railroad to Port.png|250px]]
+! style="text-align: left;" |Railroad to Port
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Railroad To Tarkov.png|250px]]
+! style="text-align: left;" |Railroad to Tarkov
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:RUAF Roadblock Customs.png|250px]]
+! style="text-align: left;" |RUAF Roadblock
+|All
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|PvE only
+|-
+![[File:Scavs checkpoint.png|250px]]
+! style="text-align: left;" |Scav Checkpoint
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Smuggler's Boat.png|250px]]
+! style="text-align: left;" |Smugglers' Boat
+|All
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|[[File:Note with code word Voron icon.png|link=Note with code word Voron]]
+[[Note with code word Voron]]
+|
+|-
+![[File:ZB-1012.png|250px]]
+! style="text-align: left;" |Smugglers' Bunker (ZB-1012)
+|All
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|[[File:Note with code word Voron icon.png|link=Note with code word Voron]]
+[[Note with code word Voron]]
+|
+|-
+![[File:Sniper Roadblock.png|250px]]
+! style="text-align: left;" |Sniper Roadblock
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Trailer Park.png|250px]]
+! style="text-align: left;" |Trailer Park
+|PMC
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|In the trees.
+|-
+![[File:Trailer Park Workers' Shack.png|250px]]
+! style="text-align: left;" |Trailer Park Workers' Shack
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Warehouse 4.png|250px]]
+! style="text-align: left;" |Warehouse 4
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:Warehouse 17.png|250px]]
+! style="text-align: left;" |Warehouse 17
+|Scav
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|-
+![[File:ZB013 Grate.png|250px]]
+! style="text-align: left;" |ZB-013
+|PMC
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|[[File:ZB013 Switch.png|250px]]&lt;br/&gt;Activate lever in warehouse #4 at the crane yard.&lt;br/&gt;+&lt;br/&gt;
+[[File:Factory key icon.png|link=Factory emergency exit key]]&lt;br/&gt;Used to open the door to the extraction
+|[[File:ZB-013 Building.png|250px]]&lt;br/&gt;In the basement of the Scav base.
+|-
+![[File:ZB-1011.png|250px]]
+! style="text-align: left;" |ZB-1011
+|PMC
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+| -
+|
+|}
+
+==Transits==
+{| class="wikitable sortable stickyheader" style="text-align: center;"
+!Transit
+!Name
+!Faction
+!Always available
+!Single-Use
+!Requirements
+!Notes
+|-
+![[File:CustomsTransitToFactory.png|250px]]
+! style="text-align: left;" |Transit to Factory
+|All
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|Only available 1 min after raid start
+|Next to the Old Gas Station extraction
+|-
+![[File:CustomsTransitToInterchange.png|250px]]
+! style="text-align: left;" |Transit to Interchange
+|All
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|Only available 1 min after raid start
+|Next to the Trailer Park extraction, inside the bus
+|-
+![[File:CustomsTransitToReserve.png|250px]]
+! style="text-align: left;" |Transit to Reserve
+|All
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|Only available 1 min after raid start
+|Next to the Military Base CP extraction
+|-
+![[File:CustomsTransitToShoreline.png|250px]]
+! style="text-align: left;" |Transit to Shoreline
+|All
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|Only available 1 min after raid start
+|Behind the Sniper Roadblock extraction, inside the bus
+|}
+
+==Maps==
+===Interactive Map===
+Click [[File:FS.png|link=]] for fullscreen. Separate map page [[Map:Customs|here]].
+&lt;interactive-map name="Customs" width="800px"/&gt;
+
+===3D Map===
+[[File:CustomsMapRealNorthColour Reemr.png|800px|link={{filepath:CustomsMapRealNorthColour Reemr.png}}]]
+
+===3D Map===
+[[File:re3mrCustoms2.jpg|800px|link={{filepath:re3mrCustoms2.jpg}}]]
+
+===Isometric Map Dorms===
+[[File:CustomsDormsByre3mr.jpg|800px|link={{filepath:CustomsDormsByre3mr.jpg}}]]
+
+===Ingame Map - North bottom===
+[[File:Customs Map 0.5.4.823.jpg|800px|link={{filepath:Customs Map 0.5.4.823.jpg}}]]
+
+==Gallery==
+&lt;center&gt;
+&lt;li style="display: inline-block;"&gt;&lt;gallery mode="slideshow"&gt;
+File:Customs Showcase 1.png
+File:Customs Showcase 2.png
+File:Customs Showcase 3.png
+File:Customs Showcase 4.png
+File:Customs Showcase 5.png
+File:Customs Showcase 6.png
+File:Customs Showcase 7.png
+File:Customs Showcase 8.png
+File:Customs Showcase 9.png
+File:Customs Showcase 10.png
+File:Customs Showcase 11.png
+File:Customs Showcase 12.png
+File:Customs Showcase 13.png
+File:Customs Showcase 14.png
+File:Customs Showcase 15.png
+File:Customs Showcase 16.png
+File:Customs Showcase 17.png
+File:Customs Showcase 18.png
+File:Customs Showcase 19.png
+File:Customs Showcase 20.png
+File:Customs Showcase 21.png
+File:Customs Showcase 22.png
+File:Customs Showcase 23.png
+File:Customs Showcase 24.png
+File:Customs Showcase 25.png
+&lt;/gallery&gt;&lt;/li&gt;
+&lt;/center&gt;
+
+==Trivia==
+*The location was first slightly expanded with [[Changelog#v0.6.0.861_(19_Jan_2018)|patch 0.6.0.861]] on January 19, 2018.
+*The location was expanded for the second time with [[Changelog#v0.11.0.2448_(25_Dec_2018)|patch 0.11.0.2448]] on December 25, 2018.
+*The location was expanded again with [[Changelog#0.12.7.8334_(20_Jul_2020)|patch 0.12.7.8334]] on July 20, 2020.
+*The location was completely reworked and expanded with [[Changelog#0.16.0.0.34447_(26_December_2024)|patch 0.16.0.0.34447]] on December 26, 2024.
+
+{{Navbox locations}}
+[[Category:Locations]]
+
+[[ru:Таможня]]
+[[cs:Customs]]
+[[de:Zollgelände]]
+[[fr:Douanes]]</text>
+      <sha1>5iz7ozmrkz2q9f237941yir3amsh962</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Chemical - Part 2</title>
+    <ns>0</ns>
+    <id>6752</id>
+    <revision>
+      <id>362231</id>
+      <parentid>362230</parentid>
+      <timestamp>2026-09-26T15:01:26Z</timestamp>
+      <contributor>
+        <username>EreshFR</username>
+        <id>42132695</id>
+      </contributor>
+      <minor/>
+      <origin>362231</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="4244" sha1="9vu5avoban393wbpfkog38a06rgz4xg" xml:space="preserve">{{Infobox quest
+|icon            =
+|image           =Chemical - Part 2 Banner.png
+|location        =[[Customs]]
+|given by        =[[Skier]]
+|LL requirement  =
+|LL quests       =
+|previous        =[[Chemical - Part 1]]
+|leads to        =[[Chemical - Part 3]]
+|related         =
+|related2        =
+|reqkappa        =&lt;font color="red"&gt;Yes&lt;/font&gt;
+}}
+
+'''{{PAGENAME}}''' is a [[Quests|Quest]] in ''[[Escape from Tarkov]]''.
+
+==Dialogue==
+{{quote|Got tired of waiting for you already. The documents that you got from the den of this tosspot weigh quite a bit. Pretty heavy they are. But this is a damn dangerous stuff. And there is no clarity who will be the best buyer for it. And it's not even so much about the profit, as it is about getting some enormous fuckin' problems if we choose the wrong address. So here's the key that you found there as well, and try to dig up further. My guys said it's from a dorm room. And judging from the documents, our deputy chief was seen on the second floor of the first building, the three-story one. Any info you could find in this room can come in very handy, and the prize will be impressive.}}
+
+==Objectives==
+* Locate and obtain any [[Sliderkey Secure Flash drive|evidence]] on [[Customs]] that could help with the investigation
+* Hand over the [[Sliderkey Secure Flash drive|evidence]] to [[Skier]]
+* Locate and obtain any [[Sealed letter with a TG logo|information]] on [[Customs]] that could help with the investigation
+* Hand over the [[Sealed letter with a TG logo|info]] to [[Skier]]
+
+==Rewards==
+* +3,000 [[EXP]]
+* 450 Euros
+** 472 Euros with [[Hideout#Modules|Intelligence Center]] Level 1
+** 518 Euros with [[Hideout#Modules|Intelligence Center]] Level 2
+* 2× [[AK-74 Hexagon 5.45x39 sound suppressor]]
+* 3× [[xTG-12 antidote injector]]
+* Unlocks purchase of [[AK-74 Hexagon 5.45x39 sound suppressor]] at [[Skier]] LL1
+* Unlocks craft for [[xTG-12 antidote injector]] at [[Hideout#modules|Medstation level 2]]
+{{quote|It seems this problem is not solved, but only got more complicated. Well, whatever. Come what may.}}
+
+==Initial Equipment==
+{|class="wikitable"
+!Icon
+!Item name
+!Amount
+!Requirement
+!Notes
+|-
+|[[File:Key-220-Icon.png|link=Dorm room 220 key]]
+|[[Dorm room 220 key]]
+|1
+|Required
+|Unlocks dorm room 220 in the three-story dorms on [[Customs]] where the [[Sliderkey Secure Flash drive]] and the [[Sealed letter with a TG logo]] are located.
+|}
+
+==Guide==
+{| class="wikitable"
+! colspan="6" |Related Quest Items
+|-
+!Icon
+!Item name
+!Amount
+!Requirement
+!'''[[Found in raid|Find in raid]]'''
+!Notes
+|-
+|[[File:Key-220-Icon.png|link=Dorm room 220 key]]
+|[[Dorm room 220 key]]
+|1
+|Required
+!N/A
+|Unlocks dorm room 220 in the three-story dorms on [[Customs]] where the [[Sliderkey Secure Flash drive]] and the [[Sealed letter with a TG logo]] are located.
+|-
+|[[File:Sealed Letter icon.png|link=Sealed letter with a TG logo]]
+|[[Sealed letter with a TG logo]]
+|1
+|Handover item
+!&lt;font color="red"&gt;Yes&lt;/font&gt;
+| rowspan="2" |''This [[Quests#Quest items|quest item]] can only be found if the quest is active.''&lt;br&gt;''When picked up, this item is transferred to the player's quest item inventory.''&lt;br&gt;''If the player fails to extract with this item, they will lose it.''
+|-
+|[[File:Sliderkey icon.png|link=Sliderkey Secure Flash drive]]
+|[[Sliderkey Secure Flash drive]]
+|1
+|Handover item
+!&lt;font color="red"&gt;Yes&lt;/font&gt;
+|}
+In this quest you have to find a flash drive and a letter on [[Customs]]. They can be found in room 220 on the second floor of the three-story dorms building. A [[Dorm room 220 key]] is required to enter it. You get one in the mail from [[Skier]] upon accepting this quest.
+
+The flash drive can be found plugged into the laptop on the desk, and the letter is tucked between the binders on the metal shelf.
+&lt;li style="display: inline-block;"&gt;&lt;gallery widths="300" heights="169" mode="packed"&gt;
+File:Chemical2Map.png|3 story dorms and room 220 marked on map
+File:Sliderkey Location.png|The flash drive plugged into the laptop
+File:Sealed Letter Location.png|The letter tucked between the binders
+&lt;/gallery&gt;&lt;/li&gt;
+
+{{Navbox quests}}
+[[Category:Quests]]
+
+[[cs:Chemikálie - Část 2]]
+[[de:Chemikalie - Teil 2]]
+[[fr:Chimie - Partie 2]]
+[[ru:Реагент. Часть 2]]</text>
+      <sha1>9vu5avoban393wbpfkog38a06rgz4xg</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Insurance</title>
+    <ns>0</ns>
+    <id>14374</id>
+    <revision>
+      <id>353060</id>
+      <parentid>349827</parentid>
+      <timestamp>2026-08-09T23:32:31Z</timestamp>
+      <contributor>
+        <username>The3ncy</username>
+        <id>53694943</id>
+      </contributor>
+      <comment>seasonal differences</comment>
+      <origin>353060</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="5434" sha1="2b0h3x89ujmkmf2rorpt8pup7skv7ph" xml:space="preserve">[[File:TherapistInsuranceScreen.png|thumb|right|300px|The insurance selection screen]]
+'''{{PAGENAME}}''' allows you to retrieve any items that have not been extracted from a raid, with a delay.
+
+You can only insure gear items (like [[weapon]]s and [[Armor vests|armors]]). Items such as containers (a [[Key tool]], a [[Documents case]] or an [[Item case]]) and intel items ([[Keys &amp; Intel|paper maps]]) and consumable items ([[Food]], [[Medical|Meds]] or [[Ammo]]) cannot be insured. However, there are [[Insurance#Exceptions|exceptions]] to the insurance system which should not be ignored. 
+
+[[Secure containers]], the [[EYE MK.2 professional hand-held compass|Compass]], [[Weapons#Melee weapons|Melee weapons]] (Except the [[Cultist knife]]), and [[Armbands]] cannot be insured nor be looted from your body upon death as long as they are equipped in their appropriate slot, and do not need to be insured.
+
+Insured items have a thick yellow outline around the stash space they occupy.
+
+==Insurers==
+{{Seasonal change|the insurance service is not offered by any trader.}}
+[[File:InsureAll.png|thumb|right|300px|"Insure All" and "Insure" buttons]]
+Except for raids in [[The Lab]], [[The Labyrinth]] and on [[Icebreaker]], make sure to always insure the gear you go out with using the insurance screen, just before entering the lobby. You can click on the "Insure All" button to make sure that you select all of your belongings. To confirm, press the "Insure" button just above "Ready". 
+You can choose to insure with [[Prapor]], [[Therapist]], or [[Jaeger]]:
+* [[Prapor]] returns insured items after 12–20 hours. You have 7 days (168h) to collect the returned items.
+* [[Therapist]] returns insured items after 6–10 hours. You have 10 days (240h) to collect the returned items.
+* [[Jaeger]] returns insured items after 1–2 hours. You have 1 day (24h) to collect the returned items.
+
+Higher loyalty levels with the respective traders offer a discount on the fee.
+
+
+[[File:StashInsure.png|thumb|right|185px|The insurance screen while used in a player's stash]]
+It is also possible to insure items directly in your stash by simply right clicking on the item, and then selecting "Insure". You can then select which insurer to use. It should be noted that if you insure a container, everything inside that container will also be insured as well. This can be used as a quick method of insuring multiple weapons, mods, or other items all at once. Any items insured using this method will show up in the pre-raid insurance screen. 
+
+===Insurance modifiers===
+* Upgrading the [[Hideout]] module "Intelligence Center" to level 2 reduces the item return time by 20% (30% with elite [[Hideout Management|Hideout Management skill]])
+* Buyers of the "Edge of Darkness" edition of the game have a 30% reduced item return time
+* Owning the "The Unheard" edition of the game doubles the allowed time to collect the returned items
+
+==Strategy==
+Use the insurance system, even at a low level: There's always the chance that your killer won't loot you, or leave it behind as they find better gear. If an AI ([[Scav|Scavs]], [[Scav Raiders]] or [[Bosses]]) kills you, there's a high chance you'll get everything back.
+
+Your insurer will contact you a few hours/days later to let you know what came back. You can then claim the items from the messenger tab. If you do not claim them in the available collect time, the insured items will be lost.
+
+A side-effect of insurance is the ability to differentiate your items from looted items. This can be useful when looting a body with the same magazines as yours, but different ammunition that you may not wish to use.
+
+Discarding insured items into an obscure or hidden location can help prevent them from being taken. This makes it more difficult for other players to loot since they will be a lot harder to find if they're not on your corpse. It's good to do this when guns or magazines you have insured are out of ammo.
+
+==Exceptions==
+===MIA===
+Ending a raid with the Missing in Action status will not bring back insured equipped items.
+The Missing in Action status can be achieved if:
+
+* You do not extract before the end of the raid
+* You die from dehydration
+
+If you do not think you are going to make it to the extraction point in time, you should throw away your insured items.
+
+===Non-insured items inside insured containers===
+* If you insure a [[Weapon mods#Magazines|magazine]] with ammunition inside, you will only get the magazine back. In the same fashion, an insured [[Backpacks|backpack]] or [[Chest rigs|chest rig]] with [[Medical|medical items]] inside will not yield the [[Medical|meds]] back.
+* If an insured container is lost, and contains an uninsured item (for example, a [[Backpacks|backpack]] containing a weapon you looted), the uninsured item will not be brought back with the container.
+
+===Locations===
+* Insurers will not bring back items lost in [[The Lab]], [[The Labyrinth]] and on [[Icebreaker]].
+
+===Uninsurable Items===
+* [[Secure containers]]
+* [[Keys &amp; Intel|Keys]]
+* [[Weapons#Melee weapons|Melee weapons]]
+* [[Armbands]]
+* [[Containers]]
+* [[Helmet mods#Thermal_vision_devices|Thermal vision devices]]
+* [[Weapon mods#Sights .28Functional Mods.29|Thermal vision sights]]
+
+* Consumable items:
+** [[Provisions]]
+** [[Medical|Meds]] 
+** [[Ammunition]]
+** [[Grenades]]
+
+[[Category:Escape from Tarkov]]
+
+[[cs:Pojištění]]
+[[fr:Assurance]]
+[[ru:Страховка]]</text>
+      <sha1>2b0h3x89ujmkmf2rorpt8pup7skv7ph</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Hideout</title>
+    <ns>0</ns>
+    <id>14496</id>
+    <revision>
+      <id>362432</id>
+      <parentid>360918</parentid>
+      <timestamp>2026-09-29T14:28:20Z</timestamp>
+      <contributor>
+        <username>EreshFR</username>
+        <id>42132695</id>
+      </contributor>
+      <minor/>
+      <comment>Dirty ceiling unlock</comment>
+      <origin>362432</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="78428" sha1="mln2skhx4zv5y3gv3pi21l1ku5w8s5j" xml:space="preserve">{{Infobox location
+|image              =Banner hideout.png
+|image size         =
+|icon               =
+|type               =
+|prev               =
+|next               =
+|chapter            =
+|enemies            =
+|players            =
+|difficulty         =
+|duration           =
+|notable loot       =
+}}
+
+The '''{{PAGENAME}}''' in ''[[Escape from Tarkov]]'' is the players' home.
+
+==Description==
+The Hideout is initially found as an abandoned and cluttered bomb shelter without any means of sustaining life. The player can build and improve various modules to get access to extra features like crafting stations, additonal storage, a shooting range, a gym and character boosts.
+
+==Notes==
+*Right mouse button in first person view will turn on a flashlight.
+*The Defective wall penalties are additive and mopping will reduce them for the current level. After upgrading the last level, the Defective wall will change into Gym with no penalties applied.
+*The Generator must be active to begin crafting in the Hideout. After the crafting has begun power can be turned off. This will increase the crafting time by more than 14 times.
+**The Lavatory does not require the generator to be active to begin crafting, and it does not increase the crafting time.
+*A list of all the possible crafts is available here: [[Crafts]]
+*Every item crafted in the Hideout will have the [[found in raid]] status.
+*Crafting items improves your [[Crafting |Crafting skill]] which decreases crafting time.
+*Crafting items and upgrading hideout zones improves your [[Hideout Management|Hideout Management skill]] which in return improves bonuses, slot count, and consumption rates.
+*Every 1 fuel resource powers the Hideout for 12 minutes and 38 seconds (25 minutes and 16 seconds with the Solar Power module, also increased with the Hideout Management up to 33 minutes and 41 seconds).
+*The Generator must be running for the Illumination module levels 2 and 3 to work properly. Otherwise, the chosen lighting source will dim and flicker.
+
+==Image Guides==
+[[File:Hideout-Requirements-Items-to-Keep.png|Hideout items to keep|300px|link={{filepath:Hideout-Requirements-Items-to-Keep.png}}]] [[File:Hideout flowchart.png|Hideout flowchart|300px|link={{filepath:Hideout flowchart.png}}]]
+
+==Modules==
+{{Seasonal change|no items required for module upgrades need to be found in raid.}}
+&lt;div class="wds-tabber dealer-tabber"&gt;
+&lt;ul class="wds-tabs wds-tabs__wrapper"&gt;
+&lt;li class="wds-tabs__tab wds-is-current"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Air Filtering Unit Portrait.png|36x48px|link=]] Air Filtering Unit&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Bitcoin Farm Portrait.png|45x45px|link=]] Bitcoin Farm&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Booze Generator Portrait.png|40x50px|link=]] Booze Generator&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Cultist Circle Portrait.png|29x51px|link=]] Cultist Circle&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Defective Wall Portrait.png|46x45px|link=]] Defective Wall&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Gear Rack Portrait.png|46x45px|link=]] Gear Rack&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Generator Portrait.png|59x45px|link=]] Generator&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Gym Portrait.png|46x45px|link=]] Gym&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Hall of Fame Portrait.png|47x45px|link=]] Hall of Fame&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Heating Portrait.png|59x45px|link=]] Heating&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Illumination Portrait.png|50x44px|link=]] Illumination&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Intelligence Center Portrait.png|34x40px|link=]] Intelligence Center&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Lavatory Portrait.png|41x53px|link=]] Lavatory&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Library Portrait.png|52x42px|link=]] Library&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Medstation Portrait.png|38x40px|link=]] Medstation&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Nutrition Unit Portrait.png|44x41px|link=]] Nutrition Unit&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Rest Space Portrait.png|50x41px|link=]] Rest Space&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Scav Case Portrait.png|43x43px|link=]] Scav Case&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Security Portrait.png|38x47px|link=]] Security&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Shooting Range Portrait.png|44x45px|link=]] Shooting Range&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Solar Power Portrait.png|31x48px|link=]] Solar Power&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Stash Portrait.png|42x44px|link=]] Stash&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Vents Portrait.png|43x44px|link=]] Vents&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Water Collector Portrait.png|55x43px|link=]] Water Collector&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Weapon Rack Portrait.png|31x47px|link=]] Weapon Rack&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Workbench Portrait.png|44x44px|link=]] Workbench&lt;/div&gt;&lt;/li&gt;
+&lt;li class="wds-tabs__tab"&gt;&lt;div class="wds-tabs__tab-label"&gt;[[File:Christmas Tree Portrait.png|34x46px|link=]] Christmas Tree&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="wds-tab__content wds-is-current"&gt;
+{| class="wikitable"
+! colspan=4 | Air Filtering Unit&lt;br/&gt;&lt;font color="red"&gt;Note:&lt;/font&gt; This module needs an [[FP-100 filter absorber]] in order to run.
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 25,000 [[Dollars]]
+* 5 [[Gas mask air filter]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 5 [[Military power filter]]
+* 10 [[Military corrugated tube]]
+* Level 3 [[Hideout#Modules|Generator]]
+* Level 3 [[Hideout#Modules|Vents]]
+|
+* Additional [[FP-100 filter absorber]] slots &lt;font color="green"&gt;+3&lt;/font&gt;
+* Group of skills leveling boost: [[Character skills#Physical|Physical]] &lt;font color="green"&gt;+40%&lt;/font&gt;
+| 48 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Bitcoin Farm&lt;br/&gt;&lt;font color="red"&gt;Note:&lt;/font&gt; This module needs a [[Graphics card]] in order to run.
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 10 [[T-Shaped plug]]
+* 2 [[VPX Flash Storage Module]]
+* 15 [[Power cord]]
+* 10 [[Power supply unit]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 15 [[CPU fan]]
+* Level 2 [[Hideout#Modules|Intelligence Center]]
+|
+* Farm [[Physical Bitcoin]]
+* Additional [[Graphics card]] slots &lt;font color="green"&gt;+10&lt;/font&gt;
+| 34 hours
+|-
+!2
+|
+* 15 [[CPU fan]]
+* 10 [[Power supply unit]]
+* 15 [[Printed circuit board]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 10 [[Phase control relay]]
+* 5 [[Military power filter]]
+* Level 3 [[Hideout#Modules|Generator]]
+|
+* Farm [[Physical Bitcoin]]
+* Additional [[Graphics card]] slots &lt;font color="green"&gt;+15&lt;/font&gt; (25 in total)
+| 50 hours
+|-
+!3
+|
+* 25 [[CPU fan]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 15 [[Silicone tube]]
+* 10 [[Electric motor]]
+* 10 [[Pressure gauge]]
+* 2 [[6-STEN-140-M military battery]]
+* Level 1 [[Hideout#Modules|Solar Power]]
+* Level 3 [[Hideout#Modules|Water Collector]]
+|
+* Farm [[Physical Bitcoin]]
+* Additional [[Graphics card]] slots &lt;font color="green"&gt;+25&lt;/font&gt; (50 in total)
+| 106 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Booze Generator
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 5 [[Metal spare parts]]
+* 2 [[Pressure gauge]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 5 [[Radiator helix]]
+* 10 [[Silicone tube]]
+* 1 [[Pipe grip wrench]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 2 [[Analog thermometer]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 10 [[Corrugated hose]]
+* Level 3 [[Hideout#Modules|Water Collector]]
+* Level 3 [[Hideout#Modules|Nutrition Unit]]
+|
+* Craft [[Bottle of Fierce Hatchling moonshine]]
+| 48 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Cultist Circle
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* Owning "The Unheard" game edition
+Or
+* 1 [[PAID AntiRoach spray]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 5 [[Light bulb]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 3 [[Can of white salt]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[SurvL Survivor Lighter]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Construction measuring tape]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[WI-FI Camera]]
+* Level 1 [[Hideout#Modules|Security]]
+|
+* Ability to sacrifice up to 5 items in a 9x6 grid to receive gifts
+* Additional [[Sacred Amulet]] sacrifice slots &lt;font color="green"&gt;+1&lt;/font&gt;
+| 6 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Defective Wall
+|-
+!Level
+!Requirements: Current
+!Function: Additive
+!Construction Time
+|-
+!1
+|
+* Level 1 [[Hideout#Modules|Medstation]]
+* Level 1 [[Hideout#Modules|Water Collector]]
+* Wait ~30 minutes after construction
+| None
+| Instant
+|-
+!2
+|
+* Optional Task:
+* 1 [[Fleece fabric]]
+* Mop the floor for 2 mins to reduce penalties. Effects:
+** Fuel consumption &lt;font color="green"&gt;-2%&lt;/font&gt;
+** Energy regeneration rate &lt;font color="green"&gt;+1.2 EP/hr&lt;/font&gt;
+** Health regeneration rate &lt;font color="green"&gt;+9.1 HP/hr&lt;/font&gt;
+** Additional Raid EXP &lt;font color="green"&gt;+2%&lt;/font&gt;
+** Group of skills leveling boost: [[Character skills#Physical|Physical]] &lt;font color="green"&gt;+2%&lt;/font&gt;
+|
+* Fuel consumption &lt;font color="red"&gt;+5%&lt;/font&gt;
+* Energy regeneration rate &lt;font color="red"&gt;-3 EP/hr&lt;/font&gt;
+* Health regeneration rate &lt;font color="red"&gt;-22.8 HP/hr&lt;/font&gt;
+* Additional Raid EXP &lt;font color="red"&gt;-3%&lt;/font&gt;
+* Group of skills leveling boost: [[Character skills#Physical|Physical]] &lt;font color="red"&gt;-3%&lt;/font&gt;
+| 12 hours
+|-
+!3
+|
+* Optional Task:
+* 1 [[Fleece fabric]]
+* Mop the floor for 5 mins to reduce penalties. Effects:
+** Fuel consumption &lt;font color="green"&gt;-5%&lt;/font&gt;
+** Energy regeneration rate &lt;font color="green"&gt;+3 EP/hr&lt;/font&gt;
+** Health regeneration rate &lt;font color="green"&gt;+22.8 HP/hr&lt;/font&gt;
+** Additional Raid EXP &lt;font color="green"&gt;+3%&lt;/font&gt;
+** Group of skills leveling boost: [[Character skills#Physical|Physical]] &lt;font color="green"&gt;+3%&lt;/font&gt;
+|
+* Fuel consumption &lt;font color="red"&gt;+5%&lt;/font&gt;
+* Energy regeneration rate &lt;font color="red"&gt;-3 EP/hr&lt;/font&gt;
+* Health regeneration rate &lt;font color="red"&gt;-22.8 HP/hr&lt;/font&gt;
+* Additional Raid EXP &lt;font color="red"&gt;-3%&lt;/font&gt;
+* Group of skills leveling boost: [[Character skills#Physical|Physical]] &lt;font color="red"&gt;-3%&lt;/font&gt; 
+| 24 hours
+|-
+!4
+|
+* 1 [[Fierce Blow sledgehammer]]
+* Optional Task:
+* 1 [[Fleece fabric]]
+* Mop the floor for 5 mins to reduce penalties. Effects:
+** Fuel consumption &lt;font color="green"&gt;-8%&lt;/font&gt;
+** Energy regeneration rate &lt;font color="green"&gt;+4.8 EP/hr&lt;/font&gt;
+** Health regeneration rate &lt;font color="green"&gt;+35.6 HP/hr&lt;/font&gt;
+** Additional Raid EXP &lt;font color="green"&gt;+5%&lt;/font&gt;
+** Group of skills leveling boost: [[Character skills#Physical|Physical]] &lt;font color="green"&gt;+5%&lt;/font&gt;
+|
+* Fuel consumption &lt;font color="red"&gt;+5%&lt;/font&gt;
+* Energy regeneration rate &lt;font color="red"&gt;-3 EP/hr&lt;/font&gt;
+* Health regeneration rate &lt;font color="red"&gt;-22.8 HP/hr&lt;/font&gt;
+* Additional Raid EXP &lt;font color="red"&gt;-3%&lt;/font&gt;
+* Group of skills leveling boost: [[Character skills#Physical|Physical]] &lt;font color="red"&gt;-3%&lt;/font&gt;
+| 3 hours
+|-
+!5
+|
+* 1 [[Metal cutting scissors]]
+* 1 [[Toolset]]
+* Optional Task:
+* 1 [[Fleece fabric]]
+* Mop the floor for 5 mins to reduce penalties. Effects:
+** Fuel consumption &lt;font color="green"&gt;-10%&lt;/font&gt;
+** Energy regeneration rate &lt;font color="green"&gt;+6 EP/hr&lt;/font&gt;
+** Health regeneration rate &lt;font color="green"&gt;+45.7 HP/hr&lt;/font&gt;
+** Additional Raid EXP &lt;font color="green"&gt;+6%&lt;/font&gt;
+** Group of skills leveling boost: [[Character skills#Physical|Physical]] &lt;font color="green"&gt;+6%&lt;/font&gt;
+|
+* Fuel consumption &lt;font color="red"&gt;+5%&lt;/font&gt;
+* Energy regeneration rate &lt;font color="red"&gt;-3 EP/hr&lt;/font&gt;
+* Health regeneration rate &lt;font color="red"&gt;-22.8 HP/hr&lt;/font&gt;
+* Additional Raid EXP &lt;font color="red"&gt;-3%&lt;/font&gt;
+* Group of skills leveling boost: [[Character skills#Physical|Physical]] &lt;font color="red"&gt;-3%&lt;/font&gt;
+| 3 hours
+|-
+!6
+|
+* 2 [[Corrugated hose]]
+* 1 [[Duct tape]]
+* 1 [[Toolset]]
+* 1 [[Pliers Elite]]
+* 5 [[Metal spare parts]]
+* 1 [[Xenomorph sealing foam]]
+* 2 [[Bundle of wires]]
+* 2 [[Light bulb]]
+|
+* Fuel consumption &lt;font color="green"&gt;-20%&lt;/font&gt;
+* Energy regeneration rate &lt;font color="green"&gt;+12 EP/hr&lt;/font&gt;
+* Health regeneration rate &lt;font color="green"&gt;+91.4 HP/hr&lt;/font&gt;
+* Additional Raid EXP &lt;font color="green"&gt;+12%&lt;/font&gt;
+* Group of skills leveling boost: [[Character skills#Physical|Physical]] &lt;font color="green"&gt;+12%&lt;/font&gt;
+| 12 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Gear Rack
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 300,000 [[Roubles]]
+* 1 [[Electric drill]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Sewing kit]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Awl]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Leatherman Multitool]]
+* 15 [[Bolts]]
+* 10 [[Fleece fabric]]
+* 8 [[Energy-saving lamp]]
+* [[Ragman]] LL2
+* Level 6 [[Hideout#Modules|Defective Wall]]
+* Level 2 [[Hideout#Modules|Illumination]]
+|
+* Ability to display equipment on a mannequin
+| 6 hours
+|-
+!2
+|
+* 800,000 [[Roubles]]
+* 1 [[Electric drill]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 5 [[Duct tape]]
+* 5 [[Shustrilo sealing foam]]
+* 8 [[Pack of nails]]
+* 12 [[Energy-saving lamp]]
+* 10 [[Aramid fiber fabric]]
+* 1 [[Wrench]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* [[Ragman]] LL3
+* Level 1 [[Hideout#Modules|Hall of Fame]]
+|
+* Additional mannequin &lt;font color="green"&gt;+1&lt;/font&gt;
+| 12 hours
+|-
+!3
+|
+* 1,200,000 [[Roubles]]
+* 1 [[Body armor repair kit]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 10 [[Cordura polyamide fabric]]
+* 15 [[Metal spare parts]]
+* 10 [[KEKTAPE duct tape]]
+* 15 [[Energy-saving lamp]]
+* 1 [[Set of files "Master"]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Ratchet wrench]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* [[Ragman]] LL4
+* Level 2 [[Hideout#Modules|Hall of Fame]]
+|
+* Additional mannequin &lt;font color="green"&gt;+1&lt;/font&gt;
+| 24 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Generator
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 100,000 [[Roubles]]
+* 1 [[Spark plug]]
+* Level 1 [[Hideout#Modules|Security]]
+|
+* Additional fuel slots &lt;font color="green"&gt;+2&lt;/font&gt;
+| Instant
+|-
+!2
+|
+* 1 [[Bulbex cable cutter]]
+* 10 [[Phase control relay]]
+* 1 [[Electric motor]]
+* 15 [[Bundle of wires]]
+* Level 1 [[Hideout#Modules|Security]]
+* Level 1 [[Hideout#Modules|Vents]]
+|
+* Additional fuel slots &lt;font color="green"&gt;+2&lt;/font&gt; (4 in total)
+| 1 hour
+|-
+!3
+|
+* 5 [[Power supply unit]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 12 [[Phase control relay]]
+* 3 [[Electric motor]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 16 [[Spark plug]]
+* 10 [[Metal spare parts]]
+* Level 3 [[Hideout#Modules|Security]]
+* Level 3 [[Hideout#Modules|Vents]]
+|
+* Additional fuel slots &lt;font color="green"&gt;+2&lt;/font&gt; (6 in total)
+| 16 hours 
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Gym
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 5 [[Insulating tape]]
+* 1 [[Metal cutting scissors]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[WD-40 (100ml)]]
+* 1 [[Toolset]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 5 [[Screw nuts]]
+* 1 [[Electric drill]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 5 [[Bolts]]
+* Level 6 [[Hideout#Modules|Defective Wall]]
+* Level 2 [[Hideout#Modules|Illumination]]
+* Level 2 [[Hideout#Modules|Vents]]
+|
+* Unlocks training area to level up [[Strength]] and [[Endurance]] skills
+| 4 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Hall of Fame&lt;br/&gt;&lt;font color="red"&gt;Note:&lt;/font&gt; This module needs [[Dogtags]] of the opposing faction to run.
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 5 [[Insulating tape]]
+* 5 [[Pack of nails]]
+* 5 [[Light bulb]]
+* 1 [[Cat figurine]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 5 [[Fleece fabric]]
+* 1 [[Round pliers]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+|
+* Ability to store 3 [[Dogtags]] and 6 small + 6 large trophies of the following items:
+:*[[Loot#Valuables|Valuables]]
+:*Most items required for [[Collector]]
+:*Colored [[Keys_%26_Intel#The_Lab|keycards]]
+:*[[Tetriz portable game console]]
+:*[[Gas analyzer]]
+* Group of skills leveling boost: [[Character_skills#Combat|Combat]]
+* Ability to display up to 7 favorite items on player profile
+| 12 hours
+|-
+!2
+|
+* 1 [[Tech manual]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Pliers Elite]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Toolset]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Golden rooster figurine]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 10 [[Energy-saving lamp]]
+* 6 [[Pack of screws]]
+* 3 [[Duct tape]]
+* 5 [[Xenomorph sealing foam]]
+* 2 [[Tube of Poxeram cold welding]]
+|
+* Ability to store 6 [[Dogtags]] and 12 small + 12 large trophies of the following items:
+:*[[Loot#Valuables|Valuables]]
+:*Most items required for [[Collector]]
+:*Colored [[Keys_%26_Intel#The_Lab|keycards]]
+:*[[Tetriz portable game console]]
+:*[[Gas analyzer]]
+* Group of skills leveling boost: [[Character_skills#Combat|Combat]]
+* Ability to display up to 7 favorite items on player profile
+| 18 hours
+|-
+!3
+|
+* 1 [[Set of files "Master"]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Electric drill]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Bronze lion figurine]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 15 [[Energy-saving lamp]]
+* 3 [[KEKTAPE duct tape]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 6 [[T-Shaped plug]]
+* 15 [[Metal spare parts]]
+* 5 [[Power cord]]
+|
+* Ability to store 10 [[Dogtags]] and 24 small + 24 large trophies of the following items:
+:*[[Loot#Valuables|Valuables]]
+:*Most items required for [[Collector]]
+:*Colored [[Keys_%26_Intel#The_Lab|keycards]]
+:*[[Tetriz portable game console]]
+:*[[Gas analyzer]]
+* Group of skills leveling boost: [[Character_skills#Combat|Combat]]
+* Ability to display up to 7 favorite items on player profile
+| 24 hours 
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Heating
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 25,000 [[Roubles]]
+* 2 [[Classic matches]]
+|
+* Energy regeneration rate &lt;font color="green"&gt;+2.4 EP/hr&lt;/font&gt;
+| Instant
+|-
+!2
+|
+* 50,000 [[Roubles]]
+* 5 [[Dry fuel]]
+* 2 [[Hunting matches]]
+* 5 [[Crickent lighter]]
+* [[Endurance]] Level 1
+* Level 1 [[Hideout#Modules|Vents]]
+|
+* Energy regeneration rate &lt;font color="green"&gt;+4.8 EP/hr&lt;/font&gt; (7.2 in total)
+| 1 hour
+|-
+!3
+|
+* 2 [[Military corrugated tube]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 10 [[Radiator helix]]
+* 10 [[Bundle of wires]]
+* 4 [[Phase control relay]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* [[Ragman]] LL2
+* Level 2 [[Hideout#Modules|Generator]]
+* Level 2 [[Hideout#Modules|Workbench]]
+|
+* Energy regeneration rate &lt;font color="green"&gt;+7.2 EP/hr&lt;/font&gt; (14.4 in total)
+* Negative effects removal rate &lt;font color="green"&gt;-50%&lt;/font&gt;
+| 8 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Illumination
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 10,000 [[Roubles]]
+* 1 [[Crickent lighter]]
+|
+* Adds the candles illumination option
+| Instant
+|-
+!2
+|
+* 14 [[Light bulb]]
+* 10 [[Bundle of wires]]
+* Level 1 [[Hideout#Modules|Generator]]
+|
+* Adds the light bulbs illumination option
+| Instant
+|-
+!3
+|
+* 50,000 [[Roubles]]
+* 12 [[Energy-saving lamp]]
+* 7 [[Capacitors]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 12 [[Bundle of wires]]
+* Level 2 [[Hideout#Modules|Generator]]
+* Level 1 [[Hideout#Modules|Workbench]]
+|
+* Adds the gas lamps illumination option
+| 6 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Intelligence Center
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 1 [[Power cord]]
+* 1 [[Intelligence folder]]
+* 1 [[Topographic survey maps]]
+* 1 [[Factory plan map]]
+* 1 [[Working LCD]]
+* Level 1 [[Hideout#Modules|Security]]
+* Level 1 [[Hideout#Modules|Vents]]
+* Level 1 [[Hideout#Modules|Generator]]
+* Level 1 [[Hideout#Modules|Workbench]]
+|
+* Craft [[Activated Kruglov's RFID keycard]]
+* Craft [[Decrypted Sliderkey flash drive marked with A.P.]]
+* Craft [[Hard drive printout]]
+* Craft [[Reprogrammed RFID keycard with Mr. Kerman's hash codes]]
+* Craft [[Reprogrammed RFID keycard with Prapor's hash codes]]
+* Craft [[Reprogrammed keycard for A.P.'s apartment lock (Blue)]]
+* Craft [[Reprogrammed keycard for A.P.'s apartment lock (Green)]]
+* Craft [[Reprogrammed keycard for A.P.'s apartment lock (Red)]]
+* Craft [[SAS drive]]
+* Craft [[SSD with TerraGroup evidence]]
+* Craft [[Secure Flash drive]]
+* Craft [[Secure magnetic tape cassette]]
+* Craft [[Station 14-4 KORD Arshavin K. pass (Restored)]]
+* Craft [[Topographic survey maps]]
+* Scav cooldown timer &lt;font color="green"&gt;-15%&lt;/font&gt;
+* Quest money reward boost &lt;font color="green"&gt;+5%&lt;/font&gt;
+* Unlocks [[Scavs#Scav_tasks|Scav Tasks]] from [[Fence]]
+| Instant
+|-
+!2
+|
+* 3 [[Intelligence folder]]
+* 3 [[Secure Flash drive]]
+* 7 [[Power cord]]
+* 8 [[Damaged hard drive]]
+* [[Attention]] Level 3
+* Level 2 [[Hideout#Modules|Security]]
+* Level 2 [[Hideout#Modules|Medstation]]
+* Level 2 [[Hideout#Modules|Nutrition Unit]]
+|
+* Craft [[TerraGroup Labs access keycard]]
+* Craft [[Digital secure DSP radio transmitter]]
+* Craft [[TerraGroup "Blue Folders" materials]]
+* Craft [[UHF RFID Reader]]
+* Craft [[Virtex programmable processor]]
+* Craft [[Military COFDM Wireless Signal Transmitter]]
+* Craft [[VPX Flash Storage Module]]
+* Craft [[Object 11SR keycard]]
+* Quest money reward boost &lt;font color="green"&gt;+10%&lt;/font&gt; (+15% in total)
+* [[Insurance]] return time &lt;font color="green"&gt;-20%&lt;/font&gt;
+| 1 hour
+|-
+!3
+|
+* 8 [[Military cable]]
+* 2 [[Military COFDM Wireless Signal Transmitter]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Far-forward GPS Signal Amplifier Unit]]
+* 2 [[VPX Flash Storage Module]]
+* 8 [[Military flash drive]]
+* 2 [[Secure magnetic tape cassette]]
+* Level 3 [[Hideout#Modules|Workbench]]
+* Level 3 [[Hideout#Modules|Generator]]
+|
+* Craft [[Military flash drive]]
+* Craft [[Graphics card]]
+* Craft [[TerraGroup Labs keycard (Green)]]
+* Craft [[TerraGroup Labs keycard (Red)]]
+* Craft [[Intelligence folder]]
+* Craft [[TerraGroup Labs keycard (Violet)]]
+* Scav cooldown timer &lt;font color="green"&gt;-20%&lt;/font&gt; (-35% in total)
+* Flea market commission &lt;font color="green"&gt;-30%&lt;/font&gt;
+|24 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Lavatory
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 2,000 [[Roubles]]
+* 1 [[Toilet paper]]
+* 1 [[Toothpaste]]
+* 1 [[Soap]]
+* 1 [[Awl]]
+|
+* Craft [[AK-74 5.45x39 6L31 60-round magazine]]
+* Craft [[Gas mask air filter]]
+* Craft [[Army bandage]]
+* Craft [[6B47 Ratnik-BSh helmet (EMR cover)]]
+* Craft [[Scav backpack]]
+* Craft [[Toilet paper]]
+* Craft [[Aseptic bandage]]
+* Craft [[Aramid fiber fabric]]
+* Craft [[Schaman shampoo]]
+* Craft [[Ripstop fabric]]
+* Craft [[Cordura polyamide fabric]]
+* Craft [[Soap]]
+* Craft [[BNTI Module-3M body armor]]
+* Craft [[6B23-2 body armor (Mountain Flora)]]
+* Craft [[BNTI Zhuk body armor (Press)]]
+* Craft [[Corrugated hose]]
+* Craft [[RDG-2B smoke grenade]]
+* Unlocks armor repair via [[Body armor repair kit|repair kits]]
+| Instant
+|-
+!2
+|
+* 3 [[KEKTAPE duct tape]]
+* 6 [[Corrugated hose]]
+* 6 [[Pack of screws]]
+* 1 [[Electric drill]]
+* 2 [[Sewing kit]]
+* Level 1 [[Hideout#Modules|Water Collector]]
+* Level 1 [[Hideout#Modules|Vents]]
+|
+* Craft [[6B13 custom ballistic plates (Back)]]
+* Craft [[First Spear Strandhogg plate carrier (Ranger Green)]]
+* Craft [[Ox bleach]]
+* Craft [[Clin window cleaner]]
+* Craft [[Eberlestock F5 Switchblade backpack (Dry Earth)]]
+* Craft [[Fleece fabric]]
+* Craft [[BlackHawk! Commando chest harness (Black)]]
+* Craft [[BlackRock chest rig (Gray)]]
+* Craft [[Expeditionary fuel tank]]
+* Craft [[MSA ACH TC-2002 MICH Series helmet (Olive Drab)]]
+* Craft [[KEKTAPE duct tape]]
+* Craft [[Water filter]]
+* Craft [[WD-40 (100ml)]]
+* Craft [[Ars Arma A18 Skanda plate carrier (MultiCam)]]
+* Craft [[Magazine case]]
+* Craft [[Paracord]]
+* Craft [[Lucky Scav Junk box]]
+* Craft [[Grenade case]]
+* Reduces armor repair cost using repair kits &lt;font color="green"&gt;-3%&lt;/font&gt;
+| 1 hour
+|-
+!3
+|
+* 6 [[Xenomorph sealing foam]]
+* 10 [[Corrugated hose]]
+* 2 [[Pressure gauge]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Toolset]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* Level 2 [[Hideout#Modules|Vents]]
+* Level 2 [[Hideout#Modules|Water Collector]]
+|
+* Craft [[Pilgrim tourist backpack]]
+* Craft [[Rys-T assault helmet (Black)]]
+* Craft [[ANA Tactical M2 plate carrier (OD Green)]]
+* Craft [[NPP KlASS Bagariy plate carrier (EMR)]]
+* Craft [[FP-100 filter absorber]]
+* Craft [[5.11 Tactical TacTec plate carrier (Ranger Green)]]
+* Reduces armor repair cost using repair kits &lt;font color="green"&gt;-6%&lt;/font&gt; (-9% in total)
+| 7 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Library
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 400,000 [[Roubles]]
+* 1 [[BakeEzy cook book]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 5 [[Slim diary]]
+* 5 [[Diary]]
+* 8 [[Tech manual]]
+* 2 [[Chainlet]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Horse figurine]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* [[Hideout Management]] Level 5
+* Level 3 [[Hideout#Modules|Rest Space]]
+|
+* Additional raid experience &lt;font color="green"&gt;+15%&lt;/font&gt;
+* Group of skills leveling boost: [[Character skills#Practical|Practical]] &lt;font color="green"&gt;+30%&lt;/font&gt;
+| 54 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Medstation
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 50,000 [[Roubles]]
+* 1 [[Disposable syringe]]
+* 1 [[Pile of meds]]
+* 2 [[Aseptic bandage]]
+* 1 [[Bottle of OLOLO Multivitamins]]
+|
+* Craft [[AI-2 medkit]]
+* Craft [[CALOK-B hemostatic applicator]]
+* Craft [[Salewa first aid kit]]
+* Craft [[CMS surgical kit]]
+* Craft [[Disposable syringe]]
+* Health regeneration rate &lt;font color="green"&gt;+27.4 HP/hr&lt;/font&gt;
+| Instant
+|-
+!2
+|
+* 150,000 [[Roubles]]
+* 6 [[Bottle of saline solution]]
+* 3 [[Medical tools]]
+* 2 [[Medical bloodset]]
+* 10 [[Esmarch tourniquet]]
+* [[Health]] Level 2
+* Level 1 [[Hideout#Modules|Generator]]
+|
+* Craft [[Medical bloodset]]
+* Craft [[AHF1-M stimulant injector]]
+* Craft [[Pile of meds]]
+* Craft [[IFAK individual first aid kit]]
+* Craft [[Aluminum splint]]
+* Craft [[Vaseline balm]]
+* Craft [[PNB (Product 16) stimulant injector]]
+* Craft [[xTG-12 antidote injector]]
+* Craft [[Morphine]]
+* Craft [[2A2-(b-TG) stimulant injector]]
+* Craft [[ETG-change regenerative stimulant injector]]
+* Craft [[SJ1 TGLabs combat stimulant injector]]
+* Craft [[M.U.L.E. stimulant injector]]
+* Craft [[Portable defibrillator]]
+* Health regeneration rate &lt;font color="green"&gt;+54.8 HP/hr&lt;/font&gt; (82.2 HP/hr in total)
+| 1 hour
+|-
+!3
+|
+* 500,000 [[Roubles]]
+* 1 [[Ophthalmoscope]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 10 [[Bottle of saline solution]]
+* 1 [[LEDX Skin Transilluminator]]
+* [[Vitality]] Level 3
+* Level 2 [[Hideout#Modules|Generator]]
+* Level 2 [[Hideout#Modules|Lavatory]]
+|
+* Craft [[AFAK tactical individual first aid kit]]
+* Craft [[Perfotoran (Blue Blood) stimulant injector]]
+* Craft [[Grizzly medical kit]]
+* Craft [[Surv12 field surgical kit]]
+* Craft [[SJ6 TGLabs combat stimulant injector]]
+* Craft [[Zagustin hemostatic drug injector]]
+* Craft [[Propital regenerative stimulant injector]]
+* Craft [[LEDX Skin Transilluminator]]
+* Health regeneration rate &lt;font color="green"&gt;+91.3 HP/hr&lt;/font&gt; (173.5 HP/hr in total)
+| 12 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Nutrition Unit
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 25,000 [[Roubles]]
+* 1 [[Can of white salt]]
+* 1 [[Power cord]]
+* 2 [[Phase control relay]]
+* Level 1 [[Hideout#Modules|Generator]]
+|
+* Craft [[Salty Dog beef sausage]]
+* Craft [[MRE ration pack]]
+* Craft [[Iskra ration pack]]
+* Craft [[Bottle of Norvinsky Yadreniy premium kvass (0.6L)]]
+* Craft [[Emergency Water Ration]]
+* Craft [[Can of beef stew (Small)]]
+* Craft [[Can of Max Energy energy drink]]
+* Energy regeneration rate &lt;font color="green"&gt;+6 EP/hr&lt;/font&gt;
+| Instant
+|-
+!2
+|
+* 2 [[Alkaline cleaner for heat exchangers]]
+* 4 [[Wrench]]
+* 4 [[Corrugated hose]]
+* 3 [[Phase control relay]]
+* Level 2 [[Hideout#Modules|Lavatory]]
+|
+* Craft [[Slickers chocolate bar]]
+* Craft [[Can of Majaica coffee beans]]
+* Craft [[Can of beef stew (Large)]]
+* Craft [[Can of condensed milk]]
+* Craft [[Pack of sugar]]
+* Craft [[Wilston cigarettes]]
+* Craft [[Aquamari water bottle with filter]]
+* Energy regeneration rate &lt;font color="green"&gt;+12 EP/hr&lt;/font&gt; (18 EP/hr in total)
+* Health regeneration rate &lt;font color="green"&gt;+32 HP/hr&lt;/font&gt;
+| Instant
+|-
+!3
+|
+* 125,000 [[Roubles]]
+* 5 [[Can of Majaica coffee beans]]
+* 5 [[Pack of sodium bicarbonate]]
+* 2 [[Smoked Chimney drain cleaner]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* [[Metabolism]] Level 3
+* Level 2 [[Hideout#Modules|Generator]]
+* Level 2 [[Hideout#Modules|Lavatory]]
+* Level 2 [[Hideout#Modules|Stash]]
+|
+* Craft [[Bottle of Tarkovskaya vodka]]
+* Craft [[Bottle of Dan Jackiel whiskey]]
+* Craft [[Bottle of water (0.6L)]]
+* Craft [[Bottle of Pevko Light beer]]
+* Craft [[Can of Hot Rod energy drink]]
+* Energy regeneration rate &lt;font color="green"&gt;+18 EP/hr&lt;/font&gt; (36 EP/hr in total)
+* Hydration regeneration rate &lt;font color="green"&gt;+12 WP/hr&lt;/font&gt;
+| 14 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Rest Space
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 10,000 [[Roubles]]
+* 1 [[Classic matches]]
+* 1 [[Duct tape]]
+* Level 1 [[Hideout#Modules|Vents]]
+|
+* Negative effects removal rate &lt;font color="green"&gt;-10%&lt;/font&gt;
+| Instant
+|-
+!2
+|
+* 75,000 [[Roubles]]
+* 1 [[Magnet]]
+* 1 [[DVD drive]]
+* 5 [[Energy-saving lamp]]
+* Level 1 [[Hideout#Modules|Generator]]
+|
+* Energy regeneration rate &lt;font color="green"&gt;+3 EP/hr&lt;/font&gt;
+* Health regeneration rate &lt;font color="green"&gt;+22.8 HP/hr&lt;/font&gt;
+| 2 hours
+|-
+!3
+|
+* 4 [[GreenBat lithium battery]]
+* 10 [[Bundle of wires]]
+* 5 [[Capacitors]]
+* 5 [[Power cord]]
+|
+* Health regeneration rate &lt;font color="green"&gt;+45.7 HP/hr&lt;/font&gt; (68.5 HP/hr in total)
+* Maximum energy reserve &lt;font color="green"&gt;+10 points&lt;/font&gt;
+| 10 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Scav Case
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 1 [[Golden rooster figurine]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Lucky Scav Junk box]]
+* 3 [[Bottle of Fierce Hatchling moonshine]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 4 [[Roler Submariner gold wrist watch]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 8 [[Golden neck chain]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 6 [[Gold skull ring]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 3 [[Bronze lion figurine]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* Level 2 [[Hideout#Modules|Intelligence Center]]
+|
+* Scavs will try to find various items for you if you pay properly, of course.&lt;br/&gt;There are multiple Tier costs, each returning roughly the amount invested (results can vary drastically).&lt;br/&gt;Each case brings you items with [[found in raid]] status, with different rarities depending on the case selected.&lt;br/&gt;Your turnaround time is affected by your [[Fence]] reputation.
+* 2,500 Roubles - 41min 40sec turnaround - 1-3 Items
+* 15,000 Roubles - 2h 8min 20sec turnaround - 2-4 Items
+* 95,000 Roubles - 2h 15min turnaround - 2-5 Items
+* 1x [[Bottle of Fierce Hatchling moonshine]] - 4h 40min turnaround - 4-6 Items
+* 1x [[Intelligence folder]] - 5h 20min turnaround - 4-7 Items
+| 80 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Security
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 20,000 [[Roubles]]
+* 1 [[Construction measuring tape]]
+| None
+| Instant
+|-
+!2
+|
+* 45,000 [[Roubles]]
+* 2 [[WD-40 (100ml)]]
+* 1 [[Pliers Elite]]
+* 2 [[TP-200 TNT brick]]
+* [[Endurance]] Level 2
+* Level 1 [[Hideout#Modules|Illumination]]
+| None
+| 1 hour
+|-
+!3
+|
+* 8 [[NIXXOR lens]]
+* 2 [[Working LCD]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 10 [[Bundle of wires]]
+* 1 [[SSD drive]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* Level 3 [[Hideout#Modules|Illumination]]
+| None
+| 17 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Shooting Range
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 20,000 [[Roubles]]
+* 1 [[Metal spare parts]]
+* 1 [[Bolts]]
+* 1 [[Screw nuts]]
+* Level 1 [[Hideout#Modules|Illumination]]
+|
+* The ability to test out your firearms
+* Metal targets and paper targets
+| 1 Hour
+|-
+!2
+|
+* 3 [[Electric motor]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Construction measuring tape]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 3 [[Tube of Poxeram cold welding]]
+* 1 [[Toolset]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 3 [[Pack of screws]]
+* 1 [[Electric drill]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 8 [[Metal spare parts]]
+* 3 [[WI-FI Camera]]
+* 6 [[Bundle of wires]]
+* 6 [[Energy-saving lamp]]
+* Level 3 [[Hideout#Modules|Illumination]]
+* Level 2 [[Hideout#Modules|Workbench]]
+|
+* Ceiling targets with 3 speed levels
+| 24 hours
+|-
+!3
+|
+* 1 [[Set of files "Master"]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 5 [[Printed circuit board]]
+* 10 [[Bundle of wires]]
+* 5 [[Metal spare parts]]
+* 5 [[Capacitors]]
+* 5 [[Phase control relay]]
+* 5 [[Power cord]]
+* 1 [[Leatherman Multitool]]
+* 1 [[Tech manual]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+|
+* Group of skills leveling boost: [[Character_skills#Combat|Combat]] &lt;font color="green"&gt;+10%&lt;/font&gt;
+* Popper targets and training program activated from laptop
+| 24 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Solar Power
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 25,000 [[Euros]]
+* 6 [[Phased array element]]
+* 1 [[Advanced current converter]]
+* 3 [[Working LCD]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 10 [[Military cable]]
+* 10 [[Military power filter]]
+* Level 3 [[Hideout#Modules|Generator]]
+* Level 3 [[Hideout#Modules|Workbench]]
+|
+* Fuel consumption &lt;font color="green"&gt;-50%&lt;/font&gt;
+| 72 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Stash
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* Owning standard game edition
+|
+* Stash size &lt;font color="green"&gt;10x30&lt;/font&gt;
+| N/A
+|-
+!2
+|
+* Owning "Left Behind" game edition
+Or
+* 2,500,000 [[Roubles]]
+* 4 [[WD-40 (100ml)]]
+* 1 [[Hand drill]]
+* 5 [[Pack of nails]]
+* 10 [[Pack of screws]]
+* Level 1 [[Hideout#Modules|Vents]]
+|
+* Stash size &lt;font color="green"&gt;10x40&lt;/font&gt;
+| 1 hour
+|-
+!3
+|
+* Owning "Prepare for Escape" game edition
+Or
+* 8,500,000 [[Roubles]]
+* 2 [[Electric drill]]
+* 15 [[Pack of screws]]
+* 7 [[Pack of nails]]
+* Level 2 [[Hideout#Modules|Vents]]
+* Level 2 [[Hideout#Modules|Heating]]
+|
+* Stash size &lt;font color="green"&gt;10x50&lt;/font&gt;
+| 12 hours
+|-
+!4
+|
+* Owning "Edge of Darkness" or "The Unheard" game edition
+Or
+* 200,000 [[Euros]]
+* 10 [[Screw nuts]]
+* 10 [[Bolts]]
+* 8 [[Shustrilo sealing foam]]
+* 2 [[Ratchet wrench]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* Level 3 [[Hideout#Modules|Generator]]
+* Level 3 [[Hideout#Modules|Workbench]]
+* Level 3 [[Hideout#Modules|Heating]]
+* Level 2 [[Hideout#Modules|Intelligence Center]]
+|
+* Stash size &lt;font color="green"&gt;10x68&lt;/font&gt;
+:(Unheard &lt;font color="green"&gt;10x72&lt;/font&gt;)
+| 96 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Vents
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 25,000 [[Roubles]]
+| None
+| Instant
+|-
+!2
+|
+* 5 [[Metal spare parts]]
+* 5 [[CPU fan]]
+* 1 [[Car battery]]
+* 1 [[Electric motor]]
+| None
+| 1 hour
+|-
+!3
+|
+* 5 [[Printed circuit board]]
+* 4 [[Electric motor]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 10 [[Metal spare parts]]
+* 14 [[Bundle of wires]]
+* 4 [[Car battery]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* [[Strength]] Level 2
+* Level 1 [[Hideout#Modules|Generator]]
+| None
+| 10 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Water Collector&lt;br/&gt;&lt;font color="red"&gt;Note:&lt;/font&gt; This module needs a water filter at Level 3 in order to run.
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 3 [[Duct tape]]
+* 5 [[Screw nuts]]
+* 5 [[Bolts]]
+* 4 [[Corrugated hose]]
+|
+* Craft [[Bottle of water (0.6L)]]
+* Hydration regeneration rate &lt;font color="green"&gt;+6 WP/hr&lt;/font&gt;
+| Instant
+|-
+!2
+|
+* 2 [[Toolset]]
+* 6 [[Corrugated hose]]
+* 2 [[Electric motor]]
+* 5 [[KEKTAPE duct tape]]
+* [[Attention]] Level 3 
+* Level 1 [[Hideout#Modules|Workbench]]
+|
+* Craft [[Emergency Water Ration]]
+* Craft [[Aquamari water bottle with filter]]
+* Hydration regeneration rate &lt;font color="green"&gt;+12 WP/hr&lt;/font&gt; (+18 WP/hr in total)
+| 2 hours
+|-
+!3
+|
+* 20,000 [[Roubles]]
+* 1 [[Ratchet wrench]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 2 [[Pliers Elite]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 10 [[Shustrilo sealing foam]]
+* Level 3 [[Hideout#Modules|Generator]]
+* Level 2 [[Hideout#Modules|Heating]]
+|
+* Craft [[Canister with purified water]]
+* Additional [[Water filter]] slots &lt;font color="green"&gt;+1&lt;/font&gt;
+* Hydration regeneration rate &lt;font color="green"&gt;+18 WP/hr&lt;/font&gt; (+36 WP/hr in total)
+| 16 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Weapon Rack
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 5 [[Pack of nails]]
+* 5 [[Energy-saving lamp]]
+* 5 [[Insulating tape]]
+* 1 [[Hand drill]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 15 [[Bolts]]
+* 1 [[Metal cutting scissors]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 5 [[Xenomorph sealing foam]]
+* [[Mechanic]] LL2
+* Level 3 [[Hideout#Modules|Illumination]]
+* Level 2 [[Hideout#Modules|Stash]]
+| 
+* Ability to stash functional weapons on a new inventory space
+* Stash size &lt;font color="green"&gt;9x6&lt;/font&gt; x2
+* Ability to display up to 3 favorite weapons on player profile
+| 12 hours
+|-
+!2
+|
+* 10 [[Metal spare parts]]
+* 10 [[Pack of screws]]
+* 1 [[Electric drill]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 10 [[Bundle of wires]]
+* 1 [[Set of files "Master"]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 3 [[Tube of Poxeram cold welding]]
+* 10 [[Energy-saving lamp]]
+* 10 [[Duct tape]]
+* 5 [[Weapon parts]]
+* Level 2 [[Hideout#Modules|Shooting Range]]
+* Level 2 [[Hideout#Modules|Workbench]]
+* Level 3 [[Hideout#Modules|Stash]]
+|
+* Ability to stash functional weapons on a new inventory space
+* Stash size &lt;font color="green"&gt;11x6&lt;/font&gt; x2
+* Ability to display up to 3 favorite weapons on player profile
+| 18 hours
+|-
+!3
+|
+* 1 [[Electric drill]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 15 [[Energy-saving lamp]]
+* 10 [[Metal spare parts]]
+* 5 [[KEKTAPE duct tape]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 15 [[Bundle of wires]]
+* 5 [[Shustrilo sealing foam]]
+* 1 [[Tech manual]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[FireKlean gun lube|#FireKlean gun lube]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* Level 3 [[Hideout#Modules|Shooting Range]]
+* Level 3 [[Hideout#Modules|Workbench]]
+|
+* Ability to stash functional weapons on a new inventory space
+* Stash size &lt;font color="green"&gt;13x7&lt;/font&gt; x2
+* Ability to display up to 3 favorite weapons on player profile
+| 24 hours
+|-
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Workbench
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 2 [[Screw nuts]]
+* 2 [[Bolts]]
+* 1 [[Leatherman Multitool]]
+|
+* Craft [[.366 TKM AP-M]]
+* Craft [[12/70 Piranha]]
+* Craft [[12/70 flechette]]
+* Craft [[7.62x39mm FMJ]]
+* Craft [[9x18mm PM SP8 gzh]]
+* Craft [[9x18mm PMM PstM gzh]]
+* Craft [[9x21mm P gzh]]
+* Craft [[Broken GPhone smartphone]]
+* Craft [[Broken LCD]]
+* Craft [[Bundle of wires]]
+* Craft [[Capacitors]]
+* Craft [[Gas analyzer]]
+* Craft [[Gunpowder "Hawk"]]
+* Craft [[Gunpowder "Kite"]]
+* Craft [[Hand drill]]
+* Craft [[Kalashnikov AK-74N 5.45x39 assault rifle]]
+* Craft [[Kalashnikov AKM 7.62x39 assault rifle]]
+* Craft [[Light bulb]]
+* Craft [[Magnet]]
+* Craft [[Moreman's audio tape 1|Moreman's audio tape #1]]
+* Craft [[Moreman's audio tape 2|Moreman's audio tape #2]]
+* Craft [[PM 9x18PM 84-round makeshift drum magazine]]
+* Craft [[PP-9 Klin 9x18PMM submachine gun]]
+* Craft [[Piece of plexiglass]]
+* Craft [[Power cord]]
+* Craft [[Printed circuit board]]
+* Craft [[Printed circuit board]]
+* Craft [[RGD-5 hand grenade]]
+* Craft [[Radio repeater]]
+* Craft [[Round pliers]]
+* Craft [[Secure container Gamma]]
+* Craft [[Secure container Gamma|Secure container Gamma (Battle-worn)]]
+* Craft [[T-Shaped plug]]
+* Craft [[Toolset]]
+* Craft [[Unlocked equipment crate (BattlePass 0)]]
+* Craft [[Unlocked equipment crate (Rare)]]
+* Craft [[Unlocked supply crate (Rare)]]
+* Craft [[Unlocked valuables crate (Rare)]]
+* Craft [[Unlocked weapon crate (Rare)]]
+* Craft [[Weapon parts]]
+* Craft [[Weapon parts]]
+* Craft [[Zarya stun grenade]]
+* Unlocks weapon repair via [[Weapon repair kit|repair kits]]
+| Instant
+|-
+!2
+|
+* 10 [[Bolts]]
+* 3 [[Toolset]]
+* 1 [[Set of files "Master"]]
+* 2 [[Electric drill]]
+* 3 [[Weapon parts]]
+* Level 1 [[Hideout#Modules|Illumination]]
+|
+* Craft [[Working LCD]]
+* Craft [[5.7x28mm L191]]
+* Craft [[12/70 makeshift .50 BMG slug]]
+* Craft [[Rechargeable battery]]
+* Craft [[Electric motor]]
+* Craft [[VOG-17 Khattabka improvised hand grenade]]
+* Craft [[Kalashnikov AK-74M 5.45x39 assault rifle]]
+* Craft [[Geiger-Muller counter]]
+* Craft [[9x19mm Luger CCI]]
+* Craft [[Gunpowder "Eagle"]]
+* Craft [[7.62x51mm BCP FMJ]]
+* Craft [[VOG-25 Khattabka improvised hand grenade]]
+* Craft [[5.56x45mm MK 318 Mod 0 (SOST)]]
+* Craft [[Gunpowder "Hawk"]]
+* Craft [[Spark plug]]
+* Craft [[9x39mm PAB-9 gs]]
+* Craft [[Military circuit board]]
+* Craft [[5.45x39mm PP gs]]
+* Craft [[GreenBat lithium battery]]
+* Craft [[NIXXOR lens]]
+* Craft [[Car battery]]
+* Craft [[Can of thermite]]
+* Craft [[7.62x54mm R LPS gzh]]
+* Craft [[Bulbex cable cutter]]
+* Reduces weapon repair cost using repair kits &lt;font color="green"&gt;-3%&lt;/font&gt;
+| 1 hour
+|-
+!3
+|
+* 395,000 [[Roubles]]
+* 5 [[Can of thermite]]
+* 2 [[Pliers Elite]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[FireKlean gun lube|#FireKlean gun lube]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* Level 2 [[Hideout#Modules|Generator]]
+* Level 2 [[Hideout#Modules|Stash]]
+|
+* Craft [[Body armor repair kit]]
+* Craft [[Weapon repair kit]]
+* Craft [[9x19mm AP 6.3]]
+* Craft [[7.62x51mm M80A1]]
+* Craft [[12/70 AP-20 armor-piercing slug]]
+* Craft [[5.56x45mm M855A1]]
+* Craft [[5.7x28mm SS190]]
+* Craft [[7.62x39mm BP gzh]]
+* Craft [[7.62x54mm R BT gzh]]
+* Craft [[4.6x30mm AP SX]]
+* Craft [[.45 ACP AP]]
+* Craft [[.300 Blackout AP]]
+* Craft [[.338 Lapua Magnum FMJ]]
+* Craft [[23x75mm Zvezda flashbang round]]
+* Craft [[Trijicon REAP-IR thermal scope]]
+* Craft [[.300 Blackout M62 Tracer]]
+* Craft [[FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope]]
+* Craft [[5.45x39mm BP gs]]
+* Craft [[OFZ 30x165mm shell]]
+* Craft [[Microcontroller board]]
+* Craft [[TheAKGuy AK-50 .50 BMG anti-materiel rifle]]
+* Reduces weapon repair cost using repair kits &lt;font color="green"&gt;-6%&lt;/font&gt; (-9% in total)
+| 11 hours
+|}
+&lt;/div&gt;&lt;div class="wds-tab__content"&gt;
+{| class="wikitable"
+! colspan=4 | Christmas Tree&lt;br/&gt;&lt;font color="red"&gt;Note:&lt;/font&gt; This module only appears in the Hideout for a limited time during Christmas.
+|-
+!Level
+!Requirements
+!Function
+!Construction Time
+|-
+!1
+|
+* 1 [[Christmas tree ornament (Red)]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Christmas tree ornament (Silver)]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* 1 [[Christmas tree ornament (Violet)]] found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]]
+* Level 1 [[Hideout#Modules|Generator]]
+|
+* Adds the Christmas lights illumination option
+| 
+* Instant
+|}
+&lt;/div&gt;&lt;/div&gt;
+
+==Additional Modules Information==
+===Gym===
+To be able to start a training session you need to have at least 60 Energy and 60 Hydration. In a training session you can do up to 15 quick time events (QTE) where each successful one can randomly grant [[Strength]] or [[Endurance]] skill points based on your current skill level. For every successful QTE you lose 2 Energy and 2 Hydration, while failing a QTE you lose 4 Energy and 4 Hydration.
+* Between level 0-9 you get 2.4 [[Strength]] or [[Endurance]] skill points / successful QTE.
+* Between level 10-24 you get 2.0 [[Strength]] or [[Endurance]] skill points / successful QTE.
+* Between level 25-50 you get 1.6 [[Strength]] or [[Endurance]] skill points / successful QTE.
+
+In order to do a QTE, you need to left-click the mouse when the shrinking hexagon hits the border of the inner hexagon, so that the border turns green. Failing to do so will result in a red border. The size of inner hexagon varies each attempt.
+
+After the first training session you get the [[File:Mildmusclepain.png|46px|Mild Muscle Pain]] effect for 24h where you can gain only 50% [[Strength]] and [[Endurance]] skill points in the next training session.
+
+After the second training session you get the [[File:Severemusclepain.png|46px|Severe Muscle Pain]] effect where you gain 0 skill points for both skills.
+
+When failing a QTE, there is a 10% chance to get a [[File:Fracture.png|46px|Fracture]] and stop the session.
+
+===Hall of Fame===
+The Hall of Fame gives skill leveling bonuses based on the amount and levels of stored opposing faction dogtags.
+
+The dogtag bonus is equal to the sum of levels divided by 5 and multiplied by the 0.1% bonus, where the decimal number is rounded up in favor of the player starting from level 3 (levels 3-7 = 0.1% bonus, levels 8-12 = 0.2% bonus).
+
+===Bitcoin Farm===
+The Bitcoin Farm produces [[Physical Bitcoin]]s at a rate of &lt;code&gt;1/(300000/(1+(GC-1)*0.041225)/3600)&lt;/code&gt; items/hour, where GC is the number of installed [[Graphics card]]s. Production stops if there are no installed graphics cards, the power is off, or there are 3 Bitcoins awaiting collection. (5 with Elite [[Hideout Management|Hideout Management skill]]). The hour/Bitcoin rate of any given graphics card amount can be calculated with &lt;code&gt;300000/(1+(GC-1)*0.041225)/3600&lt;/code&gt;.
+
+===Cultist Circle===
+* You can sacrifice up to 5 items to the Cultist circle.
+* The base values (in ₽) of the sacrificed items are added up. 
+* The total value determines the possible value of items received as gift from the Cultists.
+** When the value of a sacrifice is ₽350,001 or more, there is an increased chance to receive rare and high value items. If the threshold is reached, the sacrifice will take 14 hours.
+** When the value of a sacrifice is ₽400,000 or more, there is a 25% chance to receive items needed for active quests and unfinished Hideout modules. If the chance is triggered, the sacrifice will take 6 hours. If not, it will be 14 hours.
+** The value of sacrificed items can be increased by 15% through placing a [[Sacred Amulet]] in the amulet slot (Each sacrifice consumes 1 use).
+*** The [[Hideout Management|Hideout Management skill]] further increases the amulet bonus.
+
+=====Unique Sacrifices=====
+Some items trigger a special ritual with a unique outcome when they are sacrificed. The vast majority of them can only be done '''once''', but there are few exceptions which can be [[Hideout#Repeatable Sacrifices|repeated indefinitely]].
+{| class="wikitable sortable"
+! colspan="2" |Sacrificed Item
+! Duration
+! colspan="2" |Outcome
+|-
+![[File:Secure container Gamma TUE Icon.png|link=Secure container Gamma]] x1&lt;br/&gt;[[Secure container Gamma|Secure container Gamma (The Unheard Edition)]]
+!&lt;big&gt;→&lt;/big&gt;
+!6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Secure container Gamma EOD Icon.png|link=Secure container Gamma]] x1&lt;br/&gt;[[Secure container Gamma|Secure container Gamma (Edge of Darkness Edition)]]
+|-
+![[File:Kappa icon.png|link=Secure container Kappa]] x1&lt;br/&gt;[[Secure container Kappa]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Desecrated Kappa icon.png|link=Secure container Kappa (Desecrated)]] x1&lt;br/&gt;[[Secure container Kappa (Desecrated)]]
+|-
+![[File:BEAR operative figurine icon.png|link=BEAR operative figurine]] x1&lt;br/&gt;[[BEAR operative figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:EFT Grizzly Icon.png|link=Grizzly medical kit]] x1&lt;br/&gt;[[Grizzly medical kit]]
+|-
+![[File:BTR figurine icon.png|link=BTR figurine]] x1&lt;br/&gt;[[BTR figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:30x160mmShellicon.png|link=OFZ 30x165mm shell]] x1&lt;br/&gt;[[OFZ 30x165mm shell]]
+|-
+![[File:Cultist figurine icon.png|link=Cultist figurine]] x1&lt;br/&gt;[[Cultist figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:SpookySkullMaskIcon.png|link=Spooky skull mask]] x1&lt;br/&gt;[[Spooky skull mask]]
+|-
+![[File:Ded Moroz Figurine icon.png|link=Ded Moroz figurine]] x1&lt;br/&gt;[[Ded Moroz figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Santas Bag Icon.png|link=Santa's Bag]] x1&lt;br/&gt;[[Santa's Bag]]
+|-
+![[File:Den figurine Icon.png|link=Den figurine]] x1&lt;br/&gt;[[Den figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Deadlyslobs beard oil icon.png|link=Deadlyslob's beard oil]]&lt;br/&gt;[[Deadlyslob's beard oil]]&lt;br/&gt;and/or&lt;br/&gt;[[File:Baddie icon.png|link=Baddie's red beard]]&lt;br/&gt;[[Baddie's red beard]]&lt;br/&gt;(2 items total)
+|-
+![[File:El icon.png|link=Elvisvista figurine]] x1&lt;br/&gt;[[Elvisvista figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Baseball cap icon.png|link=Baseball cap]] x1&lt;br/&gt;[[Baseball cap]]&lt;br/&gt;+&lt;br/&gt;[[File:El icon.png|link=Elvisvista figurine]] x1&lt;br/&gt;[[Elvisvista figurine]]
+|-
+![[File:Fence figurine icon.png|link=Fence figurine]] x1&lt;br/&gt;[[Fence figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Fence figurine icon.png|link=Fence figurine]] x3&lt;br/&gt;[[Fence figurine]]
+|-
+![[File:Hideout Cat figurine icon.png|link=Hideout Cat figurine]] x1&lt;br/&gt;[[Hideout Cat figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:caticon.png|link=Cat figurine]] x1&lt;br/&gt;[[Cat figurine]]
+|-
+![[File:Jaeger figurine icon.png|link=Jaeger figurine]] x1&lt;br/&gt;[[Jaeger figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:MTs-255-12 Icon.png|link=MTs-255-12 12ga shotgun]] x1&lt;br/&gt;[[MTs-255-12 12ga shotgun]]&lt;br/&gt;+&lt;br/&gt;[[File:Salty dog sausage icon.png|link=Salty Dog beef sausage]] x1&lt;br/&gt;[[Salty Dog beef sausage]]
+|-
+![[File:Killa figurine Icon.png|link=Killa figurine]] x1&lt;br/&gt;[[Killa figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:KillaHelmet with FS.png|link=Maska-1SCh bulletproof helmet (Killa Edition)]] x1&lt;br/&gt;[[Maska-1SCh bulletproof helmet (Killa Edition)|Maska-1SCh bulletproof helmet (Killa Edition) with face shield]]
+|-
+![[File:Lightkeeper figurine icon.png|link=Lightkeeper figurine]] x1&lt;br/&gt;[[Lightkeeper figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Sacred Amulet icon.png|link=Sacred Amulet]] x1&lt;br/&gt;[[Sacred Amulet]]
+|-
+![[File:Mastichin figurine icon.png|link=Mastichin figurine]] x1&lt;br/&gt;[[Mastichin figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Voron Icon.png|link=Voron's hideout key]] x1&lt;br/&gt;[[Voron's hideout key]]&lt;br/&gt;+&lt;br/&gt;[[File:Note with code word Voron icon.png|link=Note with code word Voron]] x1&lt;br/&gt;[[Note with code word Voron]]&lt;br/&gt;+&lt;br/&gt;[[File:Raven figurine icon.png|link=Raven figurine]] x1&lt;br/&gt;[[Raven figurine]]
+|-
+![[File:Mechanic figurine icon.png|link=Mechanic figurine]] x1&lt;br/&gt;[[Mechanic figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Screwnuticon.png|link=Screw nuts]] x2&lt;br/&gt;[[Screw nuts]]&lt;br/&gt;+&lt;br/&gt;[[File:Multitoolicon.png|link=Leatherman Multitool]] x1&lt;br/&gt;[[Leatherman Multitool]]
+|-
+![[File:MutkevichFigurineGrid.png|link=Politician Mutkevich figurine]] x1&lt;br/&gt;[[Politician Mutkevich figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:VodkaIcon.png|link=Bottle of Tarkovskaya vodka]] x3&lt;br/&gt;[[Bottle of Tarkovskaya vodka]]
+|-
+![[File:Peacekeeper figurine icon.png|link=Peacekeeper figurine]] x1&lt;br/&gt;[[Peacekeeper figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:UNTARArmorIcon.png|link=MF-UNTAR body armor]] x2&lt;br/&gt;[[MF-UNTAR body armor]]
+|-
+![[File:Prapor figurine icon.png|link=Prapor figurine]] x1&lt;br/&gt;[[Prapor figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:EnglishTeaIcon.png|link=42 Signature Blend English Tea]] x1&lt;br/&gt;[[42 Signature Blend English Tea]]
+|-
+![[File:Ragman figurine icon.png|link=Ragman figurine]] x1&lt;br/&gt;[[Ragman figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Shemagicon.png|link=Shemagh (Green)]]&lt;br/&gt;[[Shemagh (Green)]]&lt;br/&gt;and/or&lt;br/&gt;[[File:Round frame sunglasses icon.png|link=Round frame sunglasses]]&lt;br/&gt;[[Round frame sunglasses]]&lt;br/&gt;and/or&lt;br/&gt;[[File:RayBench Hipster Reserve Sunglasses icon.png|link=RayBench Hipster Reserve sunglasses]]&lt;br/&gt;[[RayBench Hipster Reserve sunglasses]]&lt;br/&gt;and/or&lt;br/&gt;[[File:GHOSTBalaclavaIcon.png|link=Ghost balaclava]]&lt;br/&gt;[[Ghost balaclava]]&lt;br/&gt;(4 items total)
+|-
+![[File:Reshala figurine Icon.png|link=Reshala figurine]] x1&lt;br/&gt;[[Reshala figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:GoldenTTIcon.png|link=Tokarev TT-33 7.62x25 TT pistol (Golden)]] x1&lt;br/&gt;[[Tokarev TT-33 7.62x25 TT pistol (Golden)]]
+|-
+![[File:Ryzhy icon.png|link=Ryzhy figurine]] x1&lt;br/&gt;[[Ryzhy figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Cocktail Obdolbos Icon.png|link=Obdolbos cocktail injector]] x1&lt;br/&gt;[[Obdolbos cocktail injector]]&lt;br/&gt;+&lt;br/&gt;[[File:Sugar icon.png|link=Pack of sugar]] x1&lt;br/&gt;[[Pack of sugar]]
+|-
+![[File:scavfigurineico.png|link=Scav figurine]] x1&lt;br/&gt;[[Scav figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:ScavBP Icon.png|link=Scav backpack]]&lt;br/&gt;[[Scav backpack]]&lt;br/&gt;and/or&lt;br/&gt;[[File:Scav Vest icon.png|link=Scav Vest]]&lt;br/&gt;[[Scav Vest]]&lt;br/&gt;(2 items total)
+|-
+![[File:Skier figurine icon.png|link=Skier figurine]] x1&lt;br/&gt;[[Skier figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Pompon hat icon.png|link=Pompon hat]] x1&lt;br/&gt;[[Pompon hat]]&lt;br/&gt;+&lt;br/&gt;[[File:Broken GPhone Icon.png|link=Broken GPhone smartphone]] x1&lt;br/&gt;[[Broken GPhone smartphone]]
+|-
+![[File:Tagilla figurine Icon.png|link=Tagilla figurine]] x1&lt;br/&gt;[[Tagilla figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Tagilla Mask Gorilla Icon.png|link=Tagilla's welding mask "Gorilla"]] x1&lt;br/&gt;[[Tagilla's welding mask "Gorilla"]]&lt;br/&gt;or&lt;br/&gt;[[File:Tagilla Mask Ubey Icon.png|link=Tagilla's welding mask "UBEY"]] x1&lt;br/&gt;[[Tagilla's welding mask "UBEY"]]
+|-
+![[File:Therapist figurine icon.png|link=Therapist figurine]] x1&lt;br/&gt;[[Therapist figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:EFT Salewa-First-Aid-Kit Icon 2.png|link=Salewa first aid kit]] x1&lt;br/&gt;[[Salewa first aid kit]]
+|-
+![[File:USEC-Figurine-Icon.png|link=USEC operative figurine]] x1&lt;br/&gt;[[USEC operative figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Highcom Trooper TFO armor (multicam) icon.png|link=HighCom Trooper TFO body armor (MultiCam)]] x1&lt;br/&gt;[[HighCom Trooper TFO body armor (MultiCam)]]
+|-
+![[File:Walking Tank figurine icon.png|link=Walking Tank figurine]] x1&lt;br/&gt;[[Walking Tank figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:3M icon.png|link=BNTI Module-3M body armor]] x2&lt;br/&gt;[[BNTI Module-3M body armor]]&lt;br/&gt;+&lt;br/&gt;[[File:AK-74 icon.png|link=Kalashnikov AK-74 5.45x39 assault rifle]] x2&lt;br/&gt;[[Kalashnikov AK-74 5.45x39 assault rifle]]
+|-
+![[File:Xenoalien figurine icon.png|link=Xenoalien figurine]] x1&lt;br/&gt;[[Xenoalien figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Xenoicon.png|link=Xenomorph sealing foam]] x1&lt;br/&gt;[[Xenomorph sealing foam]]
+|-
+![[File:Petya Crooker figurine icon.png|link=Petya Crooker figurine]] x1&lt;br/&gt;[[Petya Crooker figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Video cassette with the Cyborg Killer movie icon.png|link=Video cassette with the Cyborg Killer movie]] x1&lt;br/&gt;[[Video cassette with the Cyborg Killer movie]]
+|-
+![[File:Nailhead figurine icon.png|link=Nailhead figurine]] x1&lt;br/&gt;[[Nailhead figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Nailsicon.png|link=Pack of nails]] x1&lt;br/&gt;[[Pack of nails]]
+|-
+![[File:Count Bloodsucker figurine icon.png|link=Count Bloodsucker figurine]] x1&lt;br/&gt;[[Count Bloodsucker figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Medical Bloodset Icon.png|link=Medical bloodset]] x1&lt;br/&gt;[[Medical bloodset]]
+|-
+![[File:Count Bloodsucker figurine icon.png|link=Count Bloodsucker figurine]] x1&lt;br/&gt;[[Count Bloodsucker figurine]]&lt;br/&gt;+&lt;br/&gt;[[File:Nailhead figurine icon.png|link=Nailhead figurine]] x1&lt;br/&gt;[[Nailhead figurine]]&lt;br/&gt;+&lt;br/&gt;[[File:Petya Crooker figurine icon.png|link=Petya Crooker figurine]] x1&lt;br/&gt;[[Petya Crooker figurine]]&lt;br/&gt;+&lt;br/&gt;[[File:Pointy guy figurine icon.png|link=Pointy guy figurine]] x1&lt;br/&gt;[[Pointy guy figurine]]&lt;br/&gt;+&lt;br/&gt;[[File:Xenoalien figurine icon.png|link=Xenoalien figurine]] x1&lt;br/&gt;[[Xenoalien figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Tagilla's welding mask ZABEY (Replica) icon.png|link=Tagilla's welding mask "ZABEY" (Replica)]] x1&lt;br/&gt;[[Tagilla's welding mask "ZABEY" (Replica)]]
+|-
+![[File:Can of duck pate icon.png|link=Can of duck pate]] x5&lt;br/&gt;[[Can of duck pate]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Duck figurine icon.png|link=Duck figurine]] x1&lt;br/&gt;[[Duck figurine]]
+|-
+![[File:Domontovich ushanka hat icon.png|link=Domontovich ushanka hat]] x1&lt;br/&gt;[[Domontovich ushanka hat]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Supply department director's office key icon.png|link=Supply department director's office key]] x1&lt;br/&gt;[[Supply department director's office key]]&lt;br/&gt;+&lt;br/&gt;[[File:SP-81 Icon.png|link=ZiD SP-81 26x75 signal pistol]] x1&lt;br/&gt;[[ZiD SP-81 26x75 signal pistol]]&lt;br/&gt;+&lt;br/&gt;[[File:Whiskey icon.png|link=Bottle of Dan Jackiel whiskey]] x1&lt;br/&gt;[[Bottle of Dan Jackiel whiskey]]
+|-
+![[File:Labrys research notes icon.png|link=Labrys research notes]] x1&lt;br/&gt;[[Labrys research notes]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Labrys access keycard icon.png|link=Labrys access keycard]] x1&lt;br/&gt;[[Labrys access keycard]]
+|-
+![[File:Mil Batt icon.png|link=6-STEN-140-M military battery]] x1&lt;br/&gt;[[6-STEN-140-M military battery]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Old house toilet key icon.png|link=Old house toilet key]] x1&lt;br/&gt;[[Old house toilet key]]
+|-
+![[File:Tigzresq splint icon.png|link=Tigzresq splint]] x1&lt;br/&gt;[[Tigzresq splint]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Golden egg icon.png|link=Golden egg]] x1&lt;br/&gt;[[Golden egg]]
+|-
+![[File:Nut Sack balaclava icon.png|link=Nut Sack balaclava]] x1&lt;br/&gt;[[Nut Sack balaclava]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:SSH-68Icon.png|link=SSh-68 steel helmet (Olive Drab)]] x1&lt;br/&gt;[[SSh-68 steel helmet (Olive Drab)]]&lt;br/&gt;+&lt;br/&gt;[[File:Boss Cap Icon.png|link=BOSS cap]] x1&lt;br/&gt;[[BOSS cap]]&lt;br/&gt;+&lt;br/&gt;[[File:Ushanka icon.png|link=Ushanka ear flap hat]] x2&lt;br/&gt;[[Ushanka ear flap hat]]&lt;br/&gt;+&lt;br/&gt;[[File:BomberBeanie icon.png|link=Bomber beanie]] x1&lt;br/&gt;[[Bomber beanie]]
+|-
+![[File:Dundukk sport sunglasses icon.png|link=Dundukk sport sunglasses]] x1&lt;br/&gt;[[Dundukk sport sunglasses]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Axel parrot icon.png|link=Axel parrot figurine]] x1&lt;br/&gt;[[Axel parrot figurine]]
+|-
+![[File:RelatationRoomKeyIcon.png|link=Relaxation room key]] x1&lt;br/&gt;[[Relaxation room key]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Fiece hatchling moonshine icon.png|link=Bottle of Fierce Hatchling moonshine]] x1&lt;br/&gt;[[Bottle of Fierce Hatchling moonshine]]
+|-
+![[File:Soap icon.png|link=Soap]] x1&lt;br/&gt;[[Soap]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Awl icon.png|link=Awl]] x1&lt;br/&gt;[[Awl]]
+|-
+![[File:Zarya stun grenade icon.png|link=Zarya stun grenade]] x1&lt;br/&gt;[[Zarya stun grenade]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Bulb icon.png|link=Light bulb]] x2&lt;br/&gt;[[Light bulb]]
+|-
+![[File:Water icon.png|link=Bottle of water (0.6L)]] x1&lt;br/&gt;[[Bottle of water (0.6L)]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Fleece Icon.png|link=Fleece fabric]] x1&lt;br/&gt;[[Fleece fabric]]
+|-
+![[File:EFT Augmentin-antibiotic-pills Icon.png|link=Augmentin antibiotic pills]] x1&lt;br/&gt;[[Augmentin antibiotic pills]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:XTG-12icon.png|link=XTG-12 antidote injector]] x1&lt;br/&gt;[[XTG-12 antidote injector]]
+|-
+![[File:Wd-40400icon.png|link=WD-40 (400ml)]] x1&lt;br/&gt;[[WD-40 (400ml)]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:WD40 100ml Icon.png|link=WD-40 (100ml)]] x1&lt;br/&gt;[[WD-40 (100ml)]]
+|-
+![[File:PumpkinLootContainerIcon.png|link=Pumpkin with sweets]] x1&lt;br/&gt;[[Pumpkin with sweets]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:PumpkinHelmetIcon.png|link=Jack-o'-lantern tactical pumpkin helmet]] x1&lt;br/&gt;[[Jack-o'-lantern tactical pumpkin helmet]]
+|-
+![[File:Christmas ornament red icon.png|link=Christmas tree ornament (Red)]] x1&lt;br/&gt;[[Christmas tree ornament (Red)]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Christmas ornament silver icon.png|link=Christmas tree ornament (Silver)]] x1&lt;br/&gt;[[Christmas tree ornament (Silver)]]
+|-
+![[File:Christmas ornament silver icon.png|link=Christmas tree ornament (Silver)]] x1&lt;br/&gt;[[Christmas tree ornament (Silver)]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Christmas ornament violet icon.png|link=Christmas tree ornament (Violet)]] x1&lt;br/&gt;[[Christmas tree ornament (Violet)]]
+|-
+![[File:Christmas ornament violet icon.png|link=Christmas tree ornament (Violet)]] x1&lt;br/&gt;[[Christmas tree ornament (Violet)]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Christmas ornament red icon.png|link=Christmas tree ornament (Red)]] x1&lt;br/&gt;[[Christmas tree ornament (Red)]]
+|-
+![[File:Christmas ornament red icon.png|link=Christmas tree ornament (Red)]] x1&lt;br/&gt;[[Christmas tree ornament (Red)]]&lt;br/&gt;+&lt;br/&gt;[[File:Christmas ornament silver icon.png|link=Christmas tree ornament (Silver)]] x1&lt;br/&gt;[[Christmas tree ornament (Silver)]]&lt;br/&gt;+&lt;br/&gt;[[File:Christmas ornament violet icon.png|link=Christmas tree ornament (Violet)]] x1&lt;br/&gt;[[Christmas tree ornament (Violet)]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Ded Moroz Figurine icon.png|link=Ded Moroz figurine]] x2&lt;br/&gt;[[Ded Moroz figurine]]
+|-
+![[File:Mr Kerman's cat hologram Icon.png|link=Mr Kerman's cat hologram]] x1&lt;br/&gt;[[Mr Kerman's cat hologram]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Mr Kerman's cat hologram Icon.png|link=Mr Kerman's cat hologram]] x1&lt;br/&gt;[[Mr Kerman's cat hologram]]&lt;br/&gt;+&lt;br/&gt;[[File:Terragroup Labs access keycard icon.png|link=TerraGroup Labs access keycard]] x1&lt;br/&gt;[[TerraGroup Labs access keycard]]
+|-
+![[File:Pointy guy figurine icon.png|link=Pointy guy figurine]] x1&lt;br/&gt;[[Pointy guy figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:RustedIcon.png|link=Rusted bloody key]] x1&lt;br/&gt;[[Rusted bloody key]]
+|-
+![[File:Cultist figurine icon.png|link=Cultist figurine]] x5&lt;br/&gt;[[Cultist figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!11 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Cultist Knife icon.png|link=Cultist knife]] x1&lt;br/&gt;[[Cultist knife]]
+|-
+![[File:TransilluminatorIcon.png|link=LEDX Skin Transilluminator]] x1&lt;br/&gt;[[LEDX Skin Transilluminator]]
+!&lt;big&gt;→&lt;/big&gt;
+!11 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Blue Folders materials icon.png|link=TerraGroup "Blue Folders" materials]] x1&lt;br/&gt;[[TerraGroup "Blue Folders" materials]]
+|-
+![[File:Bitcoin icon.png|link=Physical Bitcoin]] x1&lt;br/&gt;[[Physical Bitcoin]]
+!&lt;big&gt;→&lt;/big&gt;
+!11 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:GreenBat Icon.png|link=GreenBat lithium battery]] x2&lt;br/&gt;[[GreenBat lithium battery]]&lt;br/&gt;+&lt;br/&gt;[[File:Tetriz icon.png|link=Tetriz portable game console]] x2&lt;br/&gt;[[Tetriz portable game console]]
+|-
+|}
+
+=====Repeatable Sacrifices=====
+{| class="wikitable sortable"
+! colspan="2" |Sacrificed Item
+! Duration
+! colspan="2" |Outcome
+|-
+![[File:Left half of a Physical Bitcoin icon.png|link=Left half of a Physical Bitcoin]] x1&lt;br/&gt;[[Left half of a Physical Bitcoin]]
+!&lt;big&gt;→&lt;/big&gt;
+!11 min 6 sec
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Right half of a Physical Bitcoin icon.png|link=Right half of a Physical Bitcoin]] x1&lt;br/&gt;[[Right half of a Physical Bitcoin]]
+|-
+![[File:Right half of a Physical Bitcoin icon.png|link=Right half of a Physical Bitcoin]] x1&lt;br/&gt;[[Right half of a Physical Bitcoin]]
+!&lt;big&gt;→&lt;/big&gt;
+!11 min 6 sec
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Left half of a Physical Bitcoin icon.png|link=Left half of a Physical Bitcoin]] x1&lt;br/&gt;[[Left half of a Physical Bitcoin]]
+|-
+![[File:Left half of a Physical Bitcoin icon.png|link=Left half of a Physical Bitcoin]] x1&lt;br/&gt;[[Left half of a Physical Bitcoin]]&lt;br/&gt;+&lt;br/&gt;[[File:Right half of a Physical Bitcoin icon.png|link=Right half of a Physical Bitcoin]] x1&lt;br/&gt;[[Right half of a Physical Bitcoin]]
+!&lt;big&gt;→&lt;/big&gt;
+!11 min 6 sec
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Bitcoin icon.png|link=Physical Bitcoin]] x1&lt;br/&gt;[[Physical Bitcoin]]
+|-
+![[File:Mazoni golden dumbbell icon.png|link=Mazoni golden dumbbell]] x1&lt;br/&gt;[[Mazoni golden dumbbell]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Mazoni golden dumbbell icon.png|link=Mazoni golden dumbbell]] x1&lt;br/&gt;[[Mazoni golden dumbbell]]
+|-
+![[File:Secure container Gamma (Loui Peeton) icon.png|link=Secure container Gamma (Loui Peeton)]] x1&lt;br/&gt;[[Secure container Gamma (Loui Peeton)]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Secure container Gamma (Loui Peeton) icon.png|link=Secure container Gamma (Loui Peeton)]] x1&lt;br/&gt;[[Secure container Gamma (Loui Peeton)]]
+|-
+![[File:PMC Origins figurine icon.png|link=PMC Origins figurine]] x1&lt;br/&gt;[[PMC Origins figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:PMC Origins figurine icon.png|link=PMC Origins figurine]] x1&lt;br/&gt;[[PMC Origins figurine]]
+|-
+![[File:Ref figurine icon.png|link=Ref figurine]] x5&lt;br/&gt;[[Ref figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!11 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+!Any 1 item from the Arena BattlePass&lt;br/&gt;[[Arena BattlePass#Season_0|Season 0]] or [[Arena BattlePass#Season_1|Season 1]],&lt;br/&gt;from the [[Customs Tactical Map]],&lt;br/&gt;or from [[Ref's Drop I]].
+|-
+|}
+
+==Customization==
+The Hideout can be customized with different ceilings, walls, floors and shooting range targets. It is also possible to install [[posters]] and trophies at the different modules.
+&lt;div style="display:table"&gt;&lt;tabber&gt;Ceilings=
+{| class="wikitable"
+|-
+!Image
+!Name
+!Requirement
+|-
+![[File:Bare ceiling image.png|200px]]
+|
+Bare ceiling
+|
+Default
+|-
+![[File:White ceiling image.png|200px]]
+|
+White ceiling
+|
+[[Antique Enthusiast]] quest
+|-
+![[File:Factory ceiling image.png|200px]]
+|
+Factory ceiling
+|
+What Not To Wear [[achievement]]
+|-
+![[File:Gray ceiling image.png|200px]]
+|
+Gray ceiling
+|
+PMC level 20
+|-
+![[File:Dirty ceiling image.png|200px]]
+|
+Dirty ceiling
+|
+[[Minute of Fame]] quest
+|-
+![[File:Whitewashed Ceiling image.png|200px]]
+|
+Whitewashed Ceiling
+|
+Firefly [[achievement]]
+|-
+![[File:Dropped ceiling image.png|200px]]
+|
+Dropped ceiling
+|
+[[Prestige]] level 3
+|-
+![[File:Gilded ceiling image.png|200px]]
+|
+Gilded ceiling
+|
+[[Prestige]] level 6
+|-
+![[File:Black wood ceiling image.png|200px]]
+|
+Black wood ceiling
+|
+[[BattlePass#Season_1_-_"KORD_BREACH"|BattlePass Season 1]] page 1
+5 Documents
+|-
+![[File:Savior's ceiling image.png|200px]]
+|
+Savior's ceiling
+|
+Escape from Tarkov with the "Savior" ending
+|-
+![[File:Survivor's ceiling image.png|200px]]
+|
+Survivor's ceiling
+|
+Escape from Tarkov with the "Survivor" ending
+|-
+![[File:Mercenary's ceiling image.png|200px]]
+|
+Mercenary's ceiling
+|
+Escape from Tarkov with the "Debtor" ending
+|-
+![[File:Fallen in the Darkness ceiling image.png|200px]]
+|
+Fallen in the Darkness ceiling
+|
+Escape from Tarkov with the "Fallen" ending
+|-
+![[File:Sunshine image.png|200px]]
+|
+Sunshine
+|
+Can only be obtained during [https://www.escapefromtarkov.com/news/id/325 special events]
+|-
+![[File:Rotten ceiling image.png|200px]]
+|
+Rotten ceiling
+|
+Can only be obtained during [https://www.escapefromtarkov.com/news/id/361 special events]
+|-
+![[File:Minotaur's Lair ceiling image.png|200px]]
+|
+Minotaur's Lair
+|
+Dungeon Master event [[Achievements#Event_achievements|achievement]]
+|-
+![[File:Echo Of Battle ceiling image.png|200px]]
+|
+Echo Of Battle
+|
+Preordered any game edition
+|-
+![[File:Forgotten ceiling image.png|200px]]
+|
+Forgotten
+|
+Preordered "The Unheard" or "Edge of Darkness" game edition
+|-
+![[File:Dark Ceiling image.png|200px]]
+|
+Dark Ceiling
+|
+Buying the related expansion in the Expansion Hub
+|-
+|}
+|-|Walls=
+{| class="wikitable"
+|-
+!Image
+!Name
+!Requirement
+|-
+![[File:Standard walls image.png|200px]]
+|
+Standard walls
+|
+Default
+|-
+![[File:Red paint image.png|200px]]
+|
+Red paint
+|
+[[Crisis]] quest 
+|-
+![[File:Blue paint image.png|200px]]
+|
+Blue paint
+|
+Ready for Anything [[achievement]]
+|-
+![[File:Bricks image.png|200px]]
+|
+Bricks
+|
+[[Antique Enthusiast]] quest
+|-
+![[File:Orange paint image.png|200px]]
+|
+Orange paint
+|
+PMC level 10
+|-
+![[File:Factory walls image.png|200px]]
+|
+Factory walls
+|
+Hammer and Scythe [[achievement]]
+|-
+![[File:Modest wallpaper image.png|200px]]
+|
+Modest wallpaper
+|
+All-Wheel Drive [[achievement]]
+|-
+![[File:Lighthouse Walls image.png|200px]]
+|
+Lighthouse Walls
+|
+Firefly [[achievement]]
+|-
+![[File:Quiet Luxury image.png|200px]]
+|
+Quiet Luxury
+|
+[[Prestige]] level 2
+|-
+![[File:White walls image.png|200px]]
+|
+White walls
+|
+[[Prestige]] level 5
+|-
+![[File:White accent walls image.png|200px]]
+|
+White accent walls
+|
+[[BattlePass#Season_1_-_"KORD_BREACH"|BattlePass Season 1]] page 8
+13 Documents
+|-
+![[File:Red accent walls image.png|200px]]
+|
+Red accent walls
+|
+"Ruthless" league rank in [[Seasons#Season_1:_KORD_BREACH|Season 1: KORD BREACH]]
+|-
+![[File:Savior's walls image.png|200px]]
+|
+Savior's walls
+|
+Escape from Tarkov with the "Savior" ending
+|-
+![[File:Survivor's walls image.png|200px]]
+|
+Survivor's walls
+|
+Escape from Tarkov with the "Survivor" ending
+|-
+![[File:Mercenary's walls image.png|200px]]
+|
+Mercenary's walls
+|
+Escape from Tarkov with the "Debtor" ending
+|-
+![[File:Fallen in the Darkness walls image.png|200px]]
+|
+Fallen in the Darkness walls
+|
+Escape from Tarkov with the "Fallen" ending
+|-
+![[File:Tranquility image.png|200px]]
+|
+Tranquility
+|
+Can only be obtained during [https://www.escapefromtarkov.com/news/id/325 special events]
+|-
+![[File:Concrete image.png|200px]]
+|
+Concrete
+|
+Can only be obtained during [https://www.escapefromtarkov.com/news/id/361 special events]
+|-
+![[File:Minotaur's Lair walls image.png|200px]]
+|
+Minotaur's Lair
+|
+Dungeon Master event [[Achievements#Event_achievements|achievement]]
+|-
+![[File:Echo Of Battle walls image.png|200px]]
+|
+Echo Of Battle
+|
+Preordered any game edition
+|-
+![[File:Forgotten walls image.png|200px]]
+|
+Forgotten
+|
+Preordered "The Unheard" or "Edge of Darkness" game edition
+|-
+![[File:Graffiti Walls image.png|200px]]
+|
+Graffiti Walls
+|
+Buying the related expansion in the Expansion Hub
+|-
+|}
+|-|Floors=
+{| class="wikitable"
+|-
+!Image
+!Name
+!Requirement
+|-
+![[File:Standard floor image.png|200px]]
+|
+Standard floor
+|
+Default
+|-
+![[File:Linoleum image.png|200px]]
+|
+Linoleum
+|
+PMC level 15
+|-
+![[File:Laminate image.png|200px]]
+|
+Laminate
+|
+[[Combat Proven]] quest
+|-
+![[File:Factory floor image.png|200px]]
+|
+Factory floor
+|
+Make a Notch [[achievement]]
+|-
+![[File:Small tiles image.png|200px]]
+|
+Small tiles
+|
+Jack of All Trades [[achievement]]
+|-
+![[File:English herringbone image.png|200px]]
+|
+English herringbone
+|
+[[Delivery From the Past]] quest
+|-
+![[File:Parquet image.png|200px]]
+|
+Parquet
+|
+[[To Great Heights! - Part 2]] quest
+|-
+![[File:Universal Linoleum image.png|200px]]
+|
+Universal Linoleum
+|
+Firefly [[achievement]]
+|-
+![[File:Luxury flooring image.png|200px]]
+|
+Luxury flooring
+|
+[[Prestige]] level 1
+|-
+![[File:Gray wood image.png|200px]]
+|
+Gray wood
+|
+[[Prestige]] level 4
+|-
+![[File:Black Herringbone image.png|200px]]
+|
+Black Herringbone
+|
+[[BattlePass#Season_1_-_"KORD_BREACH"|BattlePass Season 1]] page 1
+7 Documents
+|-
+![[File:Savior's floor image.png|200px]]
+|
+Savior's floor
+|
+Escape from Tarkov with the "Savior" ending
+|-
+![[File:Survivor's floor image.png|200px]]
+|
+Survivor's floor
+|
+Escape from Tarkov with the "Survivor" ending
+|-
+![[File:Mercenary's floor image.png|200px]]
+|
+Mercenary's floor
+|
+Escape from Tarkov with the "Debtor" ending
+|-
+![[File:Fallen in the Darkness floor image.png|200px]]
+|
+Fallen in the Darkness floor
+|
+Escape from Tarkov with the "Fallen" ending
+|-
+![[File:Synthetic grass image.png|200px]]
+|
+Synthetic grass
+|
+Can only be obtained during [https://www.escapefromtarkov.com/news/id/325 special events]
+|-
+![[File:Bare concrete image.png|200px]]
+|
+Bare concrete
+|
+Can only be obtained during [https://www.escapefromtarkov.com/news/id/361 special events]
+|-
+![[File:Minotaur's Lair floor image.png|200px]]
+|
+Minotaur's Lair
+|
+Dungeon Master event [[Achievements#Event_achievements|achievement]]
+|-
+![[File:Echo Of Battle floor image.png|200px]]
+|
+Echo Of Battle
+|
+Preordered any game edition
+|-
+![[File:Forgotten floor image.png|200px]]
+|
+Forgotten
+|
+Preordered "The Unheard" or "Edge of Darkness" game edition
+|-
+![[File:Neon Floor image.png|200px]]
+|
+Neon Floor
+|
+Buying the related expansion in the Expansion Hub
+|-
+|}
+|-|Targets=
+{| class="wikitable"
+|-
+!Image
+!Name
+!Requirement
+|-
+![[File:Standard target image.png|200px]]
+|
+Standard target
+|
+Default
+|-
+![[File:Bear target image.png|200px]]
+|
+Bear target
+|
+[[The Survivalist Path - Wounded Beast]] quest
+|-
+![[File:Hog target image.png|200px]]
+|
+Hog target
+|
+[[The Huntsman Path - Big Game]] quest
+|-
+![[File:Bottle target image.png|200px]]
+|
+Bottle target
+|
+[[Booze]] quest
+|-
+![[File:Colored target image.png|200px]]
+|
+Colored target
+|
+[[The Tarkov Shooter - Part 3]] quest
+|-
+![[File:Duck target image.png|200px]]
+|
+Duck target
+|
+[[Power of Persuasion]] quest
+|-
+![[File:Sports target image.png|200px]]
+|
+Sports target
+|
+Shooting Range level 3
+|-
+![[File:Crow target image.png|200px]]
+|
+Crow target
+|
+[[Prestige]] level 3
+|-
+![[File:Darts target image.png|200px]]
+|
+Darts target
+|
+[[Prestige]] level 4
+|-
+![[File:Rat target image.png|200px]]
+|
+Rat target
+|
+[[Prestige]] level 5
+|-
+![[File:Rooster target image.png|200px]]
+|
+Rooster target
+|
+[[Prestige]] level 6
+|-
+![[File:Scorpion target image.png|200px]]
+|
+Scorpion target
+|
+[[BattlePass#Season_1_-_"KORD_BREACH"|BattlePass Season 1]] page 2
+3 Documents
+|-
+![[File:Black Division target image.png|200px]]
+|
+Black Division target
+|
+[[BattlePass#Season_1_-_"KORD_BREACH"|BattlePass Season 1]] page 5
+5 Documents
+|-
+![[File:Wedge target image.png|200px]]
+|
+Wedge target
+|
+"Veteran" league rank in [[Seasons#Season_1:_KORD_BREACH|Season 1: KORD BREACH]]
+|-
+![[File:Scavenger target image.png|200px]]
+|
+Scavenger target
+|
+Duck Hunt event [[Achievements#Event_achievements|achievement]]
+|-
+![[File:Killa target image.png|200px]]
+|
+Killa target
+|
+Can only be obtained during special events
+|-
+![[File:Tagilla target image.png|200px]]
+|
+Tagilla target
+|
+Can only be obtained during special events
+|-
+![[File:Zryachiy target image.png|200px]]
+|
+Zryachiy target
+|
+Can only be obtained during special events
+|-
+![[File:Knight target image.png|200px]]
+|
+Knight target
+|
+Can only be obtained during special events
+|-
+![[File:Axeman target image.png|200px]]
+|
+Axeman target
+|
+Preordered any game edition
+|-
+![[File:Ace Of Spades target image.png|200px]]
+|
+Ace Of Spades target
+|
+Preordered "The Unheard" or "Edge of Darkness" game edition
+|}
+&lt;/tabber&gt;&lt;/div&gt;
+
+==Gallery==
+&lt;center&gt;
+&lt;li style="display: inline-block;"&gt;&lt;gallery mode="slideshow"&gt;
+File:Hideout Showcase 23.png
+File:Hideout Showcase 1.png
+File:Hideout Showcase 2.png
+File:Hideout Showcase 3.png
+File:Hideout Showcase 4.png
+File:Hideout Showcase 5.png
+File:Hideout Showcase 6.png
+File:Hideout Showcase 7.png
+File:Hideout Showcase 8.png
+File:Hideout Showcase 9.png
+File:Hideout Showcase 10.png
+File:Hideout Showcase 11.png
+File:Hideout Showcase 12.png
+File:Hideout Showcase 13.png
+File:Hideout Showcase 14.png
+File:Hideout Showcase 15.png
+File:Hideout Showcase 16.png
+File:Hideout Showcase 17.png
+File:Hideout Showcase 18.png
+File:Hideout Showcase 19.png
+File:Hideout Showcase 20.png
+File:Hideout Showcase 21.png
+File:Hideout Showcase 22.png
+&lt;/gallery&gt;&lt;/li&gt;
+&lt;/center&gt;
+
+==Trivia==
+&lt;li style="display: inline-block;"&gt;&lt;gallery widths="300" heights="169" mode="packed"&gt;
+File:AprilFools-Toothpaste.png|Comically large toothpaste added for the 2022 April fools event
+&lt;/gallery&gt;&lt;/li&gt;
+
+{{Navbox locations}}
+[[Category:Locations]]
+
+[[cs:Úkryt]]
+[[de:Hideout]]
+[[fr:Planque]]
+[[ru:Убежище]]</text>
+      <sha1>mln2skhx4zv5y3gv3pi21l1ku5w8s5j</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>The Lab</title>
+    <ns>0</ns>
+    <id>10590</id>
+    <revision>
+      <id>354844</id>
+      <parentid>353439</parentid>
+      <timestamp>2026-08-16T20:28:45Z</timestamp>
+      <contributor>
+        <username>Muhawi</username>
+        <id>37816397</id>
+      </contributor>
+      <comment>/* Explosive propane cylinders and fire extinguishers */</comment>
+      <origin>354844</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="8788" sha1="6b4xa14kgrs504qmolnu50gi159i0zv" xml:space="preserve">{{Infobox location
+|image              =TheLabBanner.png
+|image size         =
+|icon               =
+|type               =
+|prev               =[[Streets of Tarkov]]&lt;br/&gt;[[Factory]]
+|next               =[[Streets of Tarkov]]
+|chapter            =
+|enemies            =[[Scav Raiders]]
+|players            =8-10
+|difficulty         =
+|duration           =30 minutes
+|notable loot       =
+}}
+
+'''{{PAGENAME}}''' is a [[Map of Tarkov|location]] in ''[[Escape from Tarkov]]''. It is the sixth map that was added to the game. 
+
+==Description==
+Secret underground TerraGroup Labs facility hidden right under the center of Tarkov. Officially, this research center does not exist and, based on data scraps, is engaged in research and development as well as testing and simulation of projects in chemistry, physics, biology, and other high technology.
+
+==Notes==
+* {{PAGENAME}} is initially only accessible by [[Transits|transiting]]. Direct access from the location selection screen is unlocked upon progressing through the story chapter [[Tour]].
+* This location can only be entered with a [[TerraGroup Labs access keycard]].
+
+==Features==
+===Insurance===
+All insured items left in a raid by players will not be returned. Upon death, insurance [[Traders]] will send the usual in-game mail about dispatching people to recover the items, but when the insurance timer runs out they will explain that their people don't go to the location, didn't find it or died in the process.
+
+[[File:TheLab-Insurance-Messages-01.PNG]]
+
+===Illumination===
+The illumination can be disabled by turning off the power in the basement.
+&lt;li style="display: inline-block;"&gt;&lt;gallery widths="300" heights="169" mode="packed"&gt;
+File:LabsIlluminationPowerButtonMap.png|Power button location marked on basement map
+File:LabsIlluminationPowerButton.png|The power button
+&lt;/gallery&gt;&lt;/li&gt;
+
+===Announcer===
+Whenever an event of high importance happens, an announcement will be triggered. There is an announcement for every extraction activation besides "Ventilation Shaft" and "Sewage Conduit".
+
+The announcement for the "Parking Gate" extraction can be disabled inside the alarm system control panel room. A [[TerraGroup Labs keycard (Yellow)|Yellow keycard]] is needed to enter it.
+&lt;li style="display: inline-block;"&gt;&lt;gallery widths="300" heights="169" mode="packed"&gt;
+File:Lab Alarm Keyboard.png|Keyboard to deactivate the announcement
+&lt;/gallery&gt;&lt;/li&gt;
+
+==Usable Keys==
+&lt;div class="mw-collapsible mw-collapsed leftcollapse" data-expandtext="Show keys" data-collapsetext="Hide keys"&gt;&lt;br/&gt;
+{| class="wikitable sortable"
+!Icon
+!Key Name
+!Used in Quest
+|-
+![[File:DuctTapeKeycard Icon.png|64px|link=Keycard with a blue marking]]
+|[[Keycard with a blue marking]]
+! style="color: green" |✔
+|-
+![[File:Lab key Arsenal storage room icon.png|64px|link=TerraGroup Labs arsenal storage room key]]
+|[[TerraGroup Labs arsenal storage room key]]
+!
+|-
+![[File:LkEA Icon.png|64px|link=TerraGroup Labs keycard (Black)]]
+|[[TerraGroup Labs keycard (Black)]]
+! style="color: green" |✔
+|-
+![[File:Lab. key. The quarantine zone icon.png|64px|link=TerraGroup Labs keycard (Blue)]]
+|[[TerraGroup Labs keycard (Blue)]]
+!
+|-
+![[File:Lab Key Block2.png|64px|link=TerraGroup Labs keycard (Green)]]
+|[[TerraGroup Labs keycard (Green)]]
+!
+|-
+![[File:Lab. key. Security arsenal.png|64px|link=TerraGroup Labs keycard (Red)]]
+|[[TerraGroup Labs keycard (Red)]]
+!
+|-
+![[File:Lab. key. Security post icon.png|64px|link=TerraGroup Labs keycard (Violet)]]
+|[[TerraGroup Labs keycard (Violet)]]
+!
+|-
+![[File:Lab. key. Alarm system control panel icon.png|64px|link=TerraGroup Labs keycard (Yellow)]]
+|[[TerraGroup Labs keycard (Yellow) ]]
+!
+|-
+![[File:Lab. key. Manager office icon.png|64px|link=TerraGroup Labs manager's office room key]]
+|[[TerraGroup Labs manager's office room key]]
+! style="color: green" |✔
+|-
+![[File:TerraGroup Labs residential unit keycard icon.png|64px|link=TerraGroup Labs residential unit keycard]]
+|[[TerraGroup Labs residential unit keycard]]
+!
+|-
+![[File:Lab. key. Testing area (weap.) Icon.png|64px|link=TerraGroup Labs weapon testing area key]]
+|[[TerraGroup Labs weapon testing area key]]
+! style="color: green" |✔
+|-
+|}
+&lt;/div&gt;
+{{clear}}
+
+==Bosses==
+{{Seasonal change|[[Scav Raiders]] are replaced by [[Black Division]].}}
+
+==Extractions==
+'''Note:''' Upon activating any of the extraction switches, there is a chance for [[Scav Raiders]] to spawn and roam towards the activation location.
+To locate the extractions use the [[The Lab#Maps|maps]] below the table.
+{| class="wikitable sortable stickyheader" style="text-align: center;"
+!Extraction
+!Name
+!Always available
+!Single-Use
+!Requirements
+!Notes
+! style="width: 282px" | Announcement
+|-
+![[File:LabsCargoElevatorExtract.png|250px]]
+! style="text-align: left;" |Cargo Elevator
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+| [[File:LabsCargoElevatorExtractTrigger.png|250px]]&lt;br /&gt;Restore power in the basement, room G1.
+|Second floor, opposite of room G21.
+|Sector G&lt;br/&gt;[[File:GCargoElevatorAnnouncement.wav|282px]]
+|-
+![[File:LabsHangarGateExtract.png|250px]]
+! style="text-align: left;" |Hangar Gate
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|[[File:LabsHangarGateExtractTrigger.png|250px]]&lt;br/&gt;Open the gate in cabin B24, on the second floor of the hangar.
+|Sector B11.
+|Sector B11&lt;br/&gt;[[File:B11HangarAnnouncement.wav|282px]]
+|-
+![[File:LabsMainElevatorExtract.png|250px]]
+! style="text-align: left;" |Main Elevator
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|[[File:LabsMainElevatorExtractTrigger.png|250px]]&lt;br/&gt;Restore power in the basement, opposite of room R4.
+|In the basement, in the corridor between the rooms R6 and R8.
+|Sector R&lt;br/&gt;[[File:RMainElevatorAnnouncement.wav|282px]]
+|-
+![[File:LabsElevatorOfTheMedicaBlockExtract.png|250px]]
+! style="text-align: left;" |Medical Block Elevator
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|[[File:LabsElevatorOfTheMedicaBlockExtractTrigger.png|250px]]&lt;br/&gt;Restore power in the basement, room G6.
+|In the basement between the rooms G3 and G4.
+|Sector O&lt;br/&gt;[[File:OMedicalElevatorAnnouncement.wav|282px]]
+|-
+![[File:LabsParkingGateExtract.png|250px]]
+! style="text-align: left;" |Parking Gate
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|[[File:LabsParkingGateExtractTrigger.png|250px]]&lt;br /&gt;Open the gate in room Y21 on the second floor, next to R22.
+|Sector Y11.
+|Sector Y11&lt;br/&gt;[[File:Y11ParkingAnnouncement.wav|282px]]
+|-
+![[File:LabsSewageConduitExtract.png|250px]]
+! style="text-align: left;" |Sewage Conduit
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|[[File:LabsSewageConduitExtractTrigger.png|250px]]&lt;br /&gt;Sink the water level.
+|Room B1 in the basement.&lt;br /&gt;The switch to sink the water is on the left, the extraction on the right side of the room.&lt;br/&gt;The water takes ~80 seconds to sink.
+| -
+|-
+![[File:LabsVentilationShaftExtract.png|250px]]
+! style="text-align: left;" |Ventilation Shaft
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|No [[Backpacks|backpack]] equipped.
+|In the basement, corridor between the rooms G1 and G8, next to G7.
+| -
+|}
+
+==Transits==
+{| class="wikitable sortable stickyheader" style="text-align: center;"
+!Transit
+!Name
+!Always available
+!Single-Use
+!Requirements
+!Notes
+|-
+![[File:TheLabTranistToStreetsOfTarkov.png|250px]]
+! style="text-align: left;" |Transit to Streets of Tarkov
+|&lt;font color="green"&gt;✔&lt;/font&gt;
+|&lt;font color="red"&gt;✘&lt;/font&gt;
+|Only available 1 min after raid start
+|Near the orange dome, next to the office with the billiard table
+|}
+
+==Maps==
+===Interactive Map===
+Click [[File:FS.png|link=]] for fullscreen. Separate map page [[Map:The Lab|here]].
+&lt;interactive-map name="The Lab" width="800px"/&gt;
+
+===Ingame Map===
+[[File:TheLabMapFull.png|800px|link={{filepath:TheLabMapFull.png}}]]
+
+==Gallery==
+&lt;center&gt;
+&lt;li style="display: inline-block;"&gt;&lt;gallery mode="slideshow"&gt;
+File:The Lab Showcase 1.png
+File:The Lab Showcase 2.png
+File:The Lab Showcase 3.png
+File:The Lab Showcase 4.png
+File:The Lab Showcase 5.png
+File:The Lab Showcase 6.png
+File:The Lab Showcase 7.png
+File:The Lab Showcase 8.png
+File:The Lab Showcase 9.png
+File:The Lab Showcase 10.png
+File:The Lab Showcase 11.png
+File:The Lab Showcase 12.png
+File:The Lab Showcase 13.png
+File:The Lab Showcase 14.png
+File:The Lab Showcase 15.png
+File:The Lab Showcase 16.png
+File:The Lab Showcase 17.png
+File:The Lab Showcase 18.png
+File:The Lab Showcase 19.png
+File:The Lab Showcase 20.png
+File:The Lab Showcase 21.png
+File:The Lab Showcase 22.png
+File:The Lab Showcase 23.png
+File:The Lab Showcase 24.png
+File:The Lab Showcase 25.png
+&lt;/gallery&gt;&lt;/li&gt;
+&lt;/center&gt;
+
+{{Navbox locations}}
+[[Category:Locations]]
+
+[[cs:The Lab]]
+[[de:The Lab]]
+[[fr:Labo]]
+[[ru:Лаборатория]]</text>
+      <sha1>6b4xa14kgrs504qmolnu50gi159i0zv</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Labs</title>
+    <ns>0</ns>
+    <id>14293</id>
+    <redirect title="The Lab" />
+    <revision>
+      <id>67971</id>
+      <timestamp>2019-05-13T23:56:53Z</timestamp>
+      <contributor>
+        <username>Muhawi</username>
+        <id>37816397</id>
+      </contributor>
+      <comment>Redirected page to [[The Lab]]</comment>
+      <origin>67971</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="21" sha1="6cx3p8fln9cxlo5ptx9h4odhuyumimk" xml:space="preserve">#REDIRECT [[The Lab]]</text>
+      <sha1>6cx3p8fln9cxlo5ptx9h4odhuyumimk</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Tagila</title>
+    <ns>0</ns>
+    <id>27059</id>
+    <redirect title="Tagilla" />
+    <revision>
+      <id>215544</id>
+      <timestamp>2022-11-27T17:55:20Z</timestamp>
+      <contributor>
+        <username>Muhawi</username>
+        <id>37816397</id>
+      </contributor>
+      <comment>Redirected page to [[Tagilla]]</comment>
+      <origin>215544</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="21" sha1="3oi6dphkvwsl8vbazqp3u46lxpxdx8n" xml:space="preserve">#REDIRECT [[Tagilla]]</text>
+      <sha1>3oi6dphkvwsl8vbazqp3u46lxpxdx8n</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Air Filtering Unit</title>
+    <ns>0</ns>
+    <id>29149</id>
+    <redirect title="Hideout" />
+    <revision>
+      <id>236297</id>
+      <parentid>236279</parentid>
+      <timestamp>2023-06-05T23:27:28Z</timestamp>
+      <contributor>
+        <username>Muhawi</username>
+        <id>37816397</id>
+      </contributor>
+      <comment>Changed redirect target from [[Hideout]] to [[Hideout#Modules]]</comment>
+      <origin>236297</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="29" sha1="kvwmahkzfmupxqqa6grfxmtq0bcfi4h" xml:space="preserve">#REDIRECT [[Hideout#Modules]]</text>
+      <sha1>kvwmahkzfmupxqqa6grfxmtq0bcfi4h</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Salewa first aid kit</title>
+    <ns>0</ns>
+    <id>3969</id>
+    <revision>
+      <id>360862</id>
+      <parentid>358741</parentid>
+      <timestamp>2026-09-20T12:51:36Z</timestamp>
+      <contributor>
+        <username>EreshFR</username>
+        <id>42132695</id>
+      </contributor>
+      <minor/>
+      <comment>Salewa craft</comment>
+      <origin>360862</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="5439" sha1="49rvheqj69sev1cjab1bbfvx2dwtbsa" xml:space="preserve">{{Infobox item
+|image              =EFT Salewa-First-Aid-Kit.png
+|image size         =
+|icon               =EFT Salewa-First-Aid-Kit Icon 2.png
+|icon size          =64x127px
+|type               =Medkit
+|slot               =
+|weight             =0.6 kg
+|grid               =1x2
+|price              =
+|trader             =[[Therapist]] LL1, after completing her task [[Postman Pat - Part 2]]
+|effect             =Max heal per use: &lt;font color="green"&gt; 85 &lt;/font&gt;
+'''Buffs:'''&lt;br/&gt;
+Removes:[[File:Bleeding.png|46px|Light bleeding]][[File:HeavyBleeding.png|46px|Heavy bleeding]]&lt;br/&gt;Adds:[[File:Restores HP.png|46px|Restores HP]]&lt;br/&gt;
+'''Debuffs:'''&lt;br/&gt;
+Causes:[[File:Fresh Wound.png|46px|Fresh Wound]] only when treating heavy bleeding
+|use time           =3s
+|loot xp            =
+|exam xp            =
+|mods               =
+|node               =544fb45d4bdc2dee738b4568
+|id                 =salewa
+}}
+
+'''{{PAGENAME}}''' (Salewa) is a [[Medical]] item in ''[[Escape from Tarkov]]''.
+
+==Description==
+A first aid kit containing bivibag, various types of bandages, and dressing tools.
+
+==Notes==
+* Healing [[File:Bleeding.png|46px|Light bleeding]] removes 45 HP from the Salewa
+* Healing [[File:HeavyBleeding.png|46px|Heavy bleeding]] removes 175 HP from the Salewa
+
+==Quests==
+* 3 need to be found [[Found in raid|&lt;font color="red"&gt;in raid&lt;/font&gt;]] for the quest [[Shortage]]
+
+==Location==
+*[[Medbag]]
+*[[Jacket (114 key)]]
+*[[Sport bag]]
+*[[Wooden crate]]
+*[[Weapon box (6x2)]]
+*[[Ground cache]]
+*[[Buried barrel cache]]
+*[[Medical supply crate]]
+
+===[[Customs]]===
+* In the north-western part of the storage area, there is a car trunk that spawns medical items.
+* The ambulance in front of the gas station can spawn medical items (and the [[EMERCOM medical unit key]] as a bonus).
+* Behind the Old Gas Station, there is a concrete circle object with a [[Medbag]] inside of it.
+* Inside the Scavenger hideout within the Stronghold.
+
+===[[Interchange]]===
+* Mantis has several containers and loose spawns (shelves, tables and beds) that can spawn Salewas. Keep in mind that Mantis is one of the hottest areas on the whole map.
+* Emercom contains several spawns, but requires the [[EMERCOM medical unit key]] to unlock.
+* The upstairs pharmacy on the opposite side of Techlight as well as the locked storage room (requires power + [[ULTRA medical storage key]]). Same as Mantis: Danger zone!
+* There are four ambulances along the western side of the map, which can spawn Salewas in the back.
+*Salewas can spawn on some boxes in the underground car park.
+
+===[[Reserve]]===
+* The White Bishop building contains a medical room on the ground floor towards the train tracks.
+* The second floor of the Black Pawn building has a medical section with a [[Medbag]] and loose spawns.
+* The forklift near the helicopter in the courtyard has loaded a [[Medical supply crate]]. There is also a supply crate in the bunker in the map room.
+* In [[RB-PSV1 key|RB-PSV1]] and [[RB-PSV2 key|RB-PSV2]]
+
+===[[Shoreline]]===
+* The health resort, while being a high traffic area, contains a large amount of [[Medbag]]s and [[Medcase]]s.
+* There are two ambulances near the tunnel exfil and one directly outside of the resort.
+* The scav/treasure island (near tunnel exfil, past a beached barge) has a wooden shed that contains two [[Medbag]]s.
+* There is a Medbag in the ground floor of the main building weather station.
+
+=== [[Woods]] ===
+* The medical encampment on the RUAF Roadblock side of the logger's camp has numerous medbags, duffles and loose medical loot.
+* Various military resource boxes and duffles around the map.
+
+==Quest rewards==
+* 4 can be obtained as a quest reward from [[Health Care Privacy - Part 2]]
+
+==Trading==
+{|class="wikitable"
+|-
+![[File:EmergencyWaterRationIcon.png|frameless|link=Emergency Water Ration]] x1&lt;br/&gt;[[Emergency Water Ration]]
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Therapist 1 icon.png|frameless|link=Therapist]]&lt;br/&gt;[[Therapist|Therapist LL1]]
+!&lt;big&gt;→&lt;/big&gt;
+![[File:EFT Salewa-First-Aid-Kit Icon 2.png|frameless|link=Salewa first aid kit]]
+[[Salewa first aid kit]]
+|-
+![[File:paidicon.png|frameless|link=PAID AntiRoach spray]] x1&lt;br/&gt;[[PAID AntiRoach spray]]
+!&lt;big&gt;→&lt;/big&gt;
+![[File:Therapist 1 icon.png|frameless|link=Therapist]]&lt;br/&gt;[[Therapist|Therapist LL1]]
+!&lt;big&gt;→&lt;/big&gt;
+![[File:EFT Salewa-First-Aid-Kit Icon 2.png|frameless|link=Salewa first aid kit]]
+[[Salewa first aid kit]]
+|}
+
+==Crafting==
+{|class="wikitable"
+|-
+![[File:Therapist figurine icon.png|link=Therapist figurine]] x1&lt;br/&gt;[[Therapist figurine]]
+!&lt;big&gt;→&lt;/big&gt;
+!&lt;big&gt;[[Hideout#Modules|Cultist Circle]]&lt;/big&gt;&lt;br/&gt;[[Hideout#Unique_Sacrifices|Unique Sacrifice]]&lt;br/&gt;1 h 6 min
+!&lt;big&gt;→&lt;/big&gt;
+![[File:EFT Salewa-First-Aid-Kit Icon 2.png|link=Salewa first aid kit]] x1&lt;br/&gt;[[Salewa first aid kit]]
+|-
+![[File:TournIcon.png|frameless|link=Esmarch tourniquet]] x2&lt;br/&gt;[[Esmarch tourniquet]]&lt;br/&gt;+&lt;br/&gt;[[File:EFT Car-first-aid-kit Icon.png|frameless|link=Car first aid kit]] x2&lt;br/&gt;[[Car first aid kit]]
+!&lt;big&gt;→&lt;/big&gt;
+!&lt;big&gt;[[Hideout#Modules|Medstation level 1]]&lt;/big&gt;&lt;br/&gt;39 min 10 sec&lt;hr/&gt;After accepting [[Therapist]]'s task&lt;br/&gt;[[Shortage]]
+!&lt;big&gt;→&lt;/big&gt;
+![[File:EFT Salewa-First-Aid-Kit Icon 2.png|frameless|link=Salewa first aid kit]] x1&lt;br/&gt;[[Salewa first aid kit]]
+|}
+
+{{Navbox medical}}
+
+[[Category:Medkits]]
+
+[[cs:Lékárnička Salewa]]
+[[de:Salewa Erste-Hilfe-Kasten]]
+[[fr:Kit de premiers secours Salewa]]
+[[ru:Аптечка Salewa First Aid Kit]]</text>
+      <sha1>49rvheqj69sev1cjab1bbfvx2dwtbsa</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>A Key to Salvation</title>
+    <ns>0</ns>
+    <id>34221</id>
+    <revision>
+      <id>359044</id>
+      <parentid>353747</parentid>
+      <timestamp>2026-09-13T20:09:30Z</timestamp>
+      <contributor>
+        <username>Muhawi</username>
+        <id>37816397</id>
+      </contributor>
+      <minor/>
+      <comment>Changed protection settings for "[[A Key to Salvation]]" ([Edit=Allow only administrators] (expires 20:09, 28 October 2026 (UTC)) [Move=Allow only administrators] (expires 20:09, 28 October 2026 (UTC)))</comment>
+      <origin>281729</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3605" sha1="4tajcave9l6aj1krkcqcvw5wmykosb9" xml:space="preserve">{{Historical content}}
+{{Event content}}
+{{Infobox quest
+|icon         =
+|image        =A key to salvation banner.png
+|location     =
+|given by     =[[Therapist]]
+|reward       =
+|reputation   =
+|time limit   =
+|quest number =
+|previous     =
+|leads to     =
+|related      =
+|related2     =
+|reqkappa     =&lt;font color="green"&gt;No&lt;/font&gt;
+}}
+
+'''{{PAGENAME}}''' was a [[Quests|Quest]] in ''[[Escape from Tarkov]]''.
+
+==Dialogue==
+{{quote|Good afternoon. I desperately need the staff keycards from the TerraGroup laboratory, and you know full well how impossible it is to get even one of those. I heard that Mechanic is willing to trade the cards for some military equipment, but I lack the manpower to gather it currently. This is a matter of life and death. Will you help?}}
+
+==Objectives==
+*Hand over a [[TerraGroup Labs access keycard]]
+*Hand over a [[TerraGroup Labs keycard (Violet)]]
+*Hand over a [[TerraGroup Labs keycard (Yellow)]]
+*Hand over a [[TerraGroup Labs keycard (Red)]]
+*Hand over a [[TerraGroup Labs keycard (Green)]]
+*Hand over a [[TerraGroup Labs keycard (Blue)]]
+*Hand over a [[TerraGroup Labs keycard (Black)]]
+
+==Rewards==
+* [[Therapist]] Rep &lt;font color="green"&gt;'''+0.15'''&lt;/font&gt;
+* 5× [[26x75mm flare cartridge (Acid Green)]]
+* 5× [[M.U.L.E. stimulant injector]]
+* 5× [[eTG-change regenerative stimulant injector]]
+* 5× [[SJ1 TGLabs combat stimulant injector]]
+* 5× [[SJ6 TGLabs combat stimulant injector]]
+* Unlocks barter for [[26x75mm flare cartridge (Acid Green)]] at [[Therapist]] LL1
+* Unlocks achievement [[Achievements#Event_achievements|A Key to Salvation]]
+{{Quote|Thank you! I don't know how or where you got them, but now I can get the equipment that will surely delight my cust— Ahem, patients, of course. These cards are the key to salvation no less!}}
+
+==Guide==
+{| class="wikitable"
+! colspan="5" |Related Quest Items
+|-
+!Icon
+!Item name
+!Amount
+!Requirement
+!'''[[Found in raid|Find in Raid]]'''
+|-
+|[[File:Terragroup Labs access keycard icon.png|link=TerraGroup Labs access keycard]]
+|[[TerraGroup Labs access keycard]]
+|1
+|Handover item
+!&lt;font color="green"&gt;No&lt;/font&gt;
+|-
+|[[File:Lab. key. Security post icon.png|link=TerraGroup Labs keycard (Violet)]]
+|[[TerraGroup Labs keycard (Violet)]]
+|1
+|Handover item
+!&lt;font color="green"&gt;No&lt;/font&gt;
+|-
+|[[File:Lab. key. Alarm system control panel icon.png|link=TerraGroup Labs keycard (Yellow)]]
+|[[TerraGroup Labs keycard (Yellow)]]
+|1
+|Handover item
+!&lt;font color="green"&gt;No&lt;/font&gt;
+|-
+|[[File:Lab. key. Security arsenal.png|link=TerraGroup Labs keycard (Red)]]
+|[[TerraGroup Labs keycard (Red)]]
+|1
+|Handover item
+!&lt;font color="green"&gt;No&lt;/font&gt;
+|-
+|[[File:Lab Key Block2.png|link=TerraGroup Labs keycard (Green)]]
+|[[TerraGroup Labs keycard (Green)]]
+|1
+|Handover item
+!&lt;font color="green"&gt;No&lt;/font&gt;
+|-
+|[[File:Lab. key. The quarantine zone icon.png|link=TerraGroup Labs keycard (Blue)]]
+|[[TerraGroup Labs keycard (Blue)]]
+|1
+|Handover item
+!&lt;font color="green"&gt;No&lt;/font&gt;
+|-
+|[[File:LkEA Icon.png|link=TerraGroup Labs keycard (Black)]]
+|[[TerraGroup Labs keycard (Black)]]
+|1
+|Handover item
+!&lt;font color="green"&gt;No&lt;/font&gt;
+|}
+
+The [[Keys_%26_Intel#The_Lab|keycards]] can be bartered from [[Mechanic]] LL1 for a various number of [[6-STEN-140-M military battery|6-STEN-140-M military batteries]].
+
+The batteries have 3 guaranteed spawns on [[Customs]] each raid:
+*On the roof of the three-story dorms building
+*Inside the new gas station
+*On the second floor of the Scav base (ZB-013 extraction) building
+
+Each location is defended by [[Scav Raiders]].
+
+{{Navbox quests}}
+[[Category:Quests]]
+
+[[fr:Une clé du salut]]</text>
+      <sha1>4tajcave9l6aj1krkcqcvw5wmykosb9</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>.300 AP</title>
+    <ns>0</ns>
+    <id>26780</id>
+    <redirect title=".300 Blackout AP" />
+    <revision>
+      <id>212689</id>
+      <timestamp>2022-10-23T17:40:31Z</timestamp>
+      <contributor>
+        <username>Muhawi</username>
+        <id>37816397</id>
+      </contributor>
+      <comment>Redirected page to [[.300 Blackout AP]]</comment>
+      <origin>212689</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="30" sha1="gcqpg8kxqtm3wr0n8calwzdjps2u8dg" xml:space="preserve">#REDIRECT [[.300 Blackout AP]]</text>
+      <sha1>gcqpg8kxqtm3wr0n8calwzdjps2u8dg</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Colt M1911A1 .45 ACP pistol</title>
+    <ns>0</ns>
+    <id>18231</id>
+    <revision>
+      <id>352625</id>
+      <parentid>340921</parentid>
+      <timestamp>2026-08-09T20:02:18Z</timestamp>
+      <contributor>
+        <username>Muhawi</username>
+        <id>37816397</id>
+      </contributor>
+      <origin>352625</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="3399" sha1="adq0o5iu9tm9n914jqrtb1qh3k737qv" xml:space="preserve">{{Infobox weapon
+|image              =M1911A1 View.png
+|image size         =
+|M1911A1 Icon.png (Icon is hidden on purpose, placed here for accessibility)
+|type               =[[Weapons#Pistols|Pistol]]
+|slot               =Secondary
+|weight             =1.214 kg
+|grid               =2x1
+|price              =
+|trader             =[[Peacekeeper]] LL1
+|repair             =
+|fire modes         =Single
+|sightrange         =200
+|ergonomics         =80.5
+|velocity           =337 m/s
+|range              =50 m
+|MOA                =12.03
+|Weaprecoil         =Vertical: 444&lt;br/&gt;Horizontal: 350
+|rof                =30
+|caliber            =[[.45 ACP]]
+|def ammo           ={{5e81f423763d9f754677bf2e}}
+|ammo               ={{.45 ACP}}
+|def mag            ={{5e81c4ca763d9f754677befa}}
+|loot xp            =
+|exam xp            =
+|mods               =
+|node               =5e81c3cbac2bb513793cdc75
+|ID                 =weapon_colt_m1911a1_1143x23
+}}
+
+The '''{{PAGENAME}}''' (M1911A1) is a [[Weapons#Pistols|pistol]] in ''[[Escape from Tarkov]]''.
+
+==Description==
+Commonly known as just "1911", the M1911 is one of the most famous handguns on the planet. It went through both World Wars as the US Army's standard-issue, and despite being replaced in 1986, its further variations are still being used as the sidearm of different US Special Forces. The M1911A1 is the second generation of the original M1911 pistol. After World War I, the military's Model 1911 went through various changes including a shorter trigger with frame cuts, improved iron sights, an arched mainspring housing, and a redesigned grip safety.
+
+==Quests==
+* 1 needs to be found for the quest [[Gunsmith Master - Part 8]]
+
+==Mods==
+&lt;div style="display:table"&gt;&lt;tabber&gt;Barrel=
+&lt;div class="mobileonly"&gt;'''Barrel'''&lt;/div&gt;
+{{5e81c519cb2b95385c177551}}&lt;br/&gt;
+{{5f3e7801153b8571434a924c}}&lt;br/&gt;
+{{5f3e77f59103d430b93f94c1}}&lt;br/&gt;
+|-|Pistol grip=
+&lt;div class="mobileonly"&gt;'''Pistol grip'''&lt;/div&gt;
+{{5e81c6bf763d9f754677beff}}&lt;br/&gt;
+{{5ef366938cef260c0642acad}}&lt;br/&gt;
+{{626a9cb151cb5849f6002890}}&lt;br/&gt;
+|-|Receiver=
+&lt;div class="mobileonly"&gt;'''Receiver'''&lt;/div&gt;
+{{5e81edc13397a21db957f6a1}}&lt;br/&gt;
+{{5f3e7823ddc4f03b010e2045}}&lt;br/&gt;
+|-|Magazine=
+&lt;div class="mobileonly"&gt;'''Magazine'''&lt;/div&gt;
+{{5e81c4ca763d9f754677befa}}&lt;br/&gt;
+{{5f3e77b26cda304dcc634057}}&lt;br/&gt;
+{{5ef3448ab37dfd6af863525c}}&lt;br/&gt;
+|-|Trigger=
+&lt;div class="mobileonly"&gt;'''Trigger'''&lt;/div&gt;
+{{5ef32e4d1c1fd62aea6a150d}}&lt;br/&gt;
+{{5e81c6a2ac2bb513793cdc7f}}&lt;br/&gt;
+{{5f3e772a670e2a7b01739a52}}&lt;br/&gt;
+|-|Hammer=
+&lt;div class="mobileonly"&gt;'''Hammer'''&lt;/div&gt;
+{{5e81c550763d9f754677befd}}&lt;br/&gt;
+{{5f3e76d86cda304dcc634054}}&lt;br/&gt;
+{{5ef35f46382a846010715a96}}&lt;br/&gt;
+{{5ef35d2ac64c5d0dfc0571b0}}&lt;br/&gt;
+{{5ef35bc243cb350a955a7ccd}}&lt;br/&gt;
+|-|Slide catch=
+&lt;div class="mobileonly"&gt;'''Slide catch'''&lt;/div&gt;
+{{5e81c539cb2b95385c177553}}&lt;br/&gt;
+{{5f3e777688ca2d00ad199d25}}&lt;br/&gt;
+{{5ef3553c43cb350a955a7ccb}}&lt;br/&gt;
+|-|Mount=
+&lt;div class="mobileonly"&gt;'''Mount'''&lt;/div&gt;
+{{5ef5d994dfbc9f3c660ded95}}&lt;br/&gt;
+{{5ef369b08cef260c0642acaf}}&lt;br/&gt;
+&lt;/tabber&gt;&lt;/div&gt;
+
+==See also==
+* [[Weapons#Pistols|Pistols]]
+* [[Colt M45A1 .45 ACP pistol]]
+* [[wikipedia:M1911 pistol|M1911 pistol on Wikipedia]]
+
+{{Navbox weapons}}
+
+[[Category:Weapons]]
+[[Category:Pistols]]
+
+[[cs:Pistole Colt M1911A1 .45 ACP]]
+[[fr:Pistolet Colt M1911A1 .45 ACP]]
+[[ru:Пистолет Colt M1911A1 .45 ACP]]
+[[de:Colt M1911A1 .45 ACP Pistole]]
+[[zh:柯爾特 M1911A1 手槍]]</text>
+      <sha1>adq0o5iu9tm9n914jqrtb1qh3k737qv</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Infobox character</title>
+    <ns>10</ns>
+    <id>4332</id>
+    <revision>
+      <id>322415</id>
+      <parentid>254960</parentid>
+      <timestamp>2025-11-18T16:19:17Z</timestamp>
+      <contributor>
+        <username>Muhawi</username>
+        <id>37816397</id>
+      </contributor>
+      <comment>-Spawn chance</comment>
+      <origin>322415</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="1045" sha1="097g30l5mzyh8b4v1kr6eruvg7kmcdq" xml:space="preserve">{{Infobox
+|main image1        ={{{image|wiki.png}}}
+|main image1 size   ={{{image size|}}}
+|icon               ={{{icon|}}}
+|icon size          ={{{icon size|}}}
+|group1             =General data
+|label2-1           =Faction
+|content2-2         ={{{faction|}}}
+|label3-1           =Full name
+|content3-2         ={{{full name|}}}
+|label4-1           =Location
+|content4-2         ={{{location|}}}
+|label5-1           =Origin
+|content5-2         ={{{origin|}}}
+|group9             =Additional data
+|label10-1          =Wares
+|content10-2        ={{{wares|}}}
+|label11-1          =Services
+|content11-2        ={{{services|}}}
+|label12-1          =Currencies
+|content12-2        ={{{currencies|}}}
+}}&lt;noinclude&gt;
+==Documentation==
+Template for characters. 
+
+==Use==
+&lt;pre style="width:300px;"&gt;
+&lt;nowiki&gt;
+{{Infobox character
+|image        =
+|image size   =
+|role         =
+|faction      =
+|full name    =
+|location     = 
+|wares        =
+|services     = 
+|currencies   =
+|spawn chance =
+}}
+&lt;/nowiki&gt;
+&lt;/pre&gt;
+
+[[Category:Infobox templates]]
+&lt;/noinclude&gt;</text>
+      <sha1>097g30l5mzyh8b4v1kr6eruvg7kmcdq</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>.300 Blackout AP</title>
+    <ns>0</ns>
+    <id>19981</id>
+    <revision>
+      <id>349837</id>
+      <parentid>324978</parentid>
+      <timestamp>2026-08-04T21:26:05Z</timestamp>
+      <contributor>
+        <username>Muhawi</username>
+        <id>37816397</id>
+      </contributor>
+      <comment>/* Crafting */</comment>
+      <origin>349837</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="2670" sha1="iohdg5je9sgd991nd451i1nem8hk73u" xml:space="preserve">{{Infobox ammo
+|image              =BlackoutAP View.png
+|image size         =
+|icon               =BlackoutAP Icon .png
+|type               =Round
+|slot               =
+|weight             =0.014 kg
+|grid               =1x1
+|price              =
+|trader             =
+|repair             =
+|velocity           =635 m/s
+|damage             =51
+|accuracy           =
+|recoil             =&lt;font color="red"&gt;+3&lt;/font&gt;
+|distance           =
+|projectiles        =
+|penetration chance =
+|penetration        =48
+|armor damage       =65
+|ricochet           =30% 
+|l bleed chance     =&lt;font color="green"&gt;+15&lt;/font&gt;
+|h bleed chance     =&lt;font color="green"&gt;+15&lt;/font&gt;
+|durability burn    =&lt;font color="red"&gt;+50&lt;/font&gt;
+|heat               =&lt;font color="red"&gt;+99&lt;/font&gt;
+|feedfailure        =&lt;font color="yellow"&gt;Medium&lt;/font&gt;
+|misfire            =&lt;font color="yellow"&gt;Medium&lt;/font&gt;
+|effects            =
+|loot xp            =
+|exam xp            =
+|mods               =
+|node               =5fd20ff893a8961fc660a954
+|id                 =patron_762x35_blackout_ap
+}}
+
+'''{{PAGENAME}}''' (AP) is a [[.300 Blackout|.300 ammunition]] type in ''[[Escape from Tarkov]]''.
+
+==Description==
+A .300 Blackout (7.62x35mm) AP cartridge loaded with an 8.4 gram armor-piercing bullet from a 7.62x51mm NATO M80A1 cartridge, composed of a steel penetrator tip over a copper alloy core with a copper semi-jacket in a brass case. Despite the bullet's own characteristics when used in a full-power cartridge, these are affected when transferred to an intermediate cartridge, however, the bullet continues to have capabilities to pierce basic and intermediate body ballistic protections, in addition to being able to cause substantial adverse effects on the target after impact. Its design also allows it to be used in STANAG 5.56x45mm NATO magazines without any issues.
+
+== Notes ==
+* Cannot be listed for sale on the flea market.
+
+==Crafting==
+{|class="wikitable"
+|-
+![[File:Toolset tool.png|frameless|link=Toolset]] x1&lt;br/&gt;[[Toolset]]&lt;br/&gt;+&lt;br/&gt;[[File:BlackoutCBJ_Icon.png|frameless|link=.300 Blackout CBJ]] x90&lt;br/&gt;[[.300 Blackout CBJ]]&lt;br/&gt;+&lt;br/&gt;[[File:Gunpowder_eagle_icon.png|frameless|link=Gunpowder "Eagle"]] x1&lt;br/&gt;[[Gunpowder "Eagle"]]
+!&lt;big&gt;→&lt;/big&gt;
+!&lt;big&gt;[[Hideout#Modules|Workbench level 3]]&lt;/big&gt;&lt;br/&gt;3 h 36 min 40 sec&lt;hr/&gt;After completing [[Peacekeeper]]'s task&lt;br/&gt;[[Worst Job in the World]]
+!&lt;big&gt;→&lt;/big&gt;
+![[File:BlackoutAP Icon .png|frameless|link=.300 Blackout AP]] x50&lt;br/&gt;[[.300 Blackout AP]]
+|}
+
+{{Navbox rounds}}
+[[Category:.300 Blackout ammunition]]
+[[Category:Rounds]]
+
+[[fr:.300 AAC Blackout AP]]
+[[ru:.300 Blackout AP]]
+[[de:.300 AAC Blackout AP]]
+[[zh:.300 Blackout AP]]</text>
+      <sha1>iohdg5je9sgd991nd451i1nem8hk73u</sha1>
+    </revision>
+  </page>
+</mediawiki>

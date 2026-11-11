@@ -1,0 +1,44 @@
+{
+  "title": "Ease the Move",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ease_the_Move",
+  "revisionId": 362092,
+  "lastEdited": "2026-09-24T19:45:56Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Peacekeeper",
+    "previous": "Callsign Malachite",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Ease the Move is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day. You're certainly aware of what's happening around the lighthouse. The ex-USEC personnel had to abandon their old positions higher up in the mountains. According to my information, they left in quite a hurry. But they were stationed there for too long to move all their supplies to the chalets within a couple of days. This means there should be stashes somewhere between the treatment plant and the chalets, where the Rogues hid cargo they didn't have time to move to the chalets. If you can help us locate these stashes and mark them with beacons, you will be of great assistance to our mission.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark the first Rogue stash at the abandoned island village with an MS2000 Marker on Lighthouse\n- Locate and mark the second Rogue stash at the abandoned island village with an MS2000 Marker on Lighthouse\n- Locate and mark the Rogue stash at the grotto with an MS2000 Marker on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +20,000 EXP\n- 2,000 Dollars\n  - 2,100 Dollars with Intelligence Center Level 1\n  - 2,300 Dollars with Intelligence Center Level 2\n- 1× SIG MCX-SPEAR 6.8x51 assault rifle\n- 3× AR-10 7.62x51 Lancer L7AWM 20-round magazine\n- 3× 6.8x51mm SIG FMJ ammo pack (20 pcs)\n\"Well done! Now we'll be able to, ahem, evacuate quite a lot of valuable materials and electronics before the Rogues return to these stashes.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 3 | Required | N/A | This item is placed at the stashes. When placed, the item is removed from the players' inventory. |\nIn this quest you have to mark Rogue stashes with MS2000 Markers on Lighthouse. For the first objective there are 3, and for the second objective there are 2 possible locations."
+    }
+  ]
+}

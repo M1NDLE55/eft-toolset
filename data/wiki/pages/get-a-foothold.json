@@ -1,0 +1,48 @@
+{
+  "title": "Get a Foothold",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Get_a_Foothold",
+  "revisionId": 362561,
+  "lastEdited": "2026-09-29T19:10:27Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "previous": "Never Too Late To Learn",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Get a Foothold is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"We've got some good fucking news on our business. Luka says they took the base and even interrogated one of those pricks. They attacked during the mortar attack in Tarkov, it went quickly. They didn't seem to have blown their cover in front of the military. Our lads found out that this group belongs to some young professional criminal, and it seems that he's going to try to take the base back. I don't think he's afraid of the military at all, he's definitely well-connected. If we don't want to lose our boys, we need to give them some medicine. Luka didn't ask for anything in particular, but it's in our interest to stock them well. So bring everything you've got. They had casualties after the assault, and they can't search through the whole base right now.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by USEC PMCs."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the item: 30 SJ6 TGLabs combat stimulant injector\n- Hand over the item: 30 Obdolbos 2 cocktail injector\n- Hand over the item: 30 Propital regenerative stimulant injector\n- Hand over the item: 30 M.U.L.E. stimulant injector\n- Hand over the item: 30 ETG-change regenerative stimulant injector\n- Hand over the item: 30 SJ9 TGLabs combat stimulant injector\n- Hand over the item: 30 SJ12 TGLabs combat stimulant injector\n- Hand over the item: 30 Meldonin injector"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +1 Stress Resistance skill level\n- +1 Vitality skill level\n- +1 Surgery skill level\n- +1 Health skill level\n- +1 Immunity skill level\n- +1 Crafting skill level\n- +1 Hideout Management skill level\n- +1 Perception skill level\n- +1 Attention skill level\n- +1 Search skill level\n\n\"I don't know if I've ever seen such a pile of combat drugs before... Surely that's enough for Luka. I got you a little something. There's a bunch of medical books and manuals. My medics took a closer look, said the author of these scribblings is a real pro.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| SJ6 TGLabs combat stimulant injector | 30 | Handover item | No |\n| Obdolbos 2 cocktail injector | 30 | Handover item | No |\n| Propital regenerative stimulant injector | 30 | Handover item | No |\n| M.U.L.E. stimulant injector | 30 | Handover item | No |\n| ETG-change regenerative stimulant injector | 30 | Handover item | No |\n| SJ9 TGLabs combat stimulant injector | 30 | Handover item | No |\n| SJ12 TGLabs combat stimulant injector | 30 | Handover item | No |\n| Meldonin injector | 30 | Handover item | No |"
+    }
+  ]
+}

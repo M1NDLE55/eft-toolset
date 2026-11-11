@@ -1,0 +1,45 @@
+{
+  "title": "Offensive Reconnaissance",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Offensive_Reconnaissance",
+  "revisionId": 359526,
+  "lastEdited": "2026-09-13T20:17:41Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Mechanic",
+    "previous": "Hidden Layer",
+    "leads to": "Vacate the Premises, Hypotheses Testing, Confidential Info, Indisputable Authority, This Tape Sucks",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Offensive Reconnaissance is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"You got the keycard? Perfect. Judging by how much everyone's interested in these cellars, you and I are on a truly important trail. There could be a TerraGroup warehouse or another lab that's been sealed there ever since the evacuation! We don't have time to waste. First we need to search these premises and figure out what the purpose of the facility is. TerraGroup would not be so eager to hide it if what is going on inside corresponds to their company's public profile. Try to memorize everything you see: the structure of the premises, equipment, tools, markings or other symbols... Every detail counts. I'll wait for your return and set up my surveillance system to track any information about the health resort. If anyone finds more than we do, I'll see it.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find out what is behind the Health Resort bunker door on Shoreline\n  - (Optional) Obtain the Labrys access keycard"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +4,500 EXP\n\"An old bunker? Yes, there was one mentioned in the archives, an old Soviet shelter. Thing is, it was closed down about twenty years ago due to some kind of technical failure. Looks like Knossos restored it to working order. But why would TerraGroup need an abandoned bomb shelter? Um, hang on. I'm picking up a signal from my interception network. An encrypted message that seems to be coming straight from these cellars... Give me a minute.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Knossos LLC facility key | 1 | Required | N/A | Unlocks the door to the transit. |\nIn this quest you have to transit from Shoreline to The Labyrinth. The transit is located in the basement of the health resort west wing and requires a Labrys access keycard. The door to the transit is locked and requires the Knossos LLC facility key. Surviving the raid is not required."
+    }
+  ]
+}

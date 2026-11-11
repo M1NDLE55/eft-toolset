@@ -1,0 +1,54 @@
+{
+  "title": "Our Own Land",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Our_Own_Land",
+  "revisionId": 361752,
+  "lastEdited": "2026-09-24T12:32:05Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Prapor",
+    "LL requirement": "3",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Our Own Land is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, comrade. Come on in, come on in. And lock the door behind you. Gonna have a serious talk... It's time to show everyone whose land we're standing on and who's the boss around here. Because there are already more of these tourists than us - everything that's left in Tarkov has been plundered. They turned Norvink region into some garbage lot. You agree, right? It's not even about the money, it's about driving those fuckers out from our own land! Although I will make it worth your while anyway, as always. Start by clearing the area near the Lighthouse, and then we will throw them out of our other territories. So, are you in?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by BEAR PMCs."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 Rogues with a GP-25 grenade launcher"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 1× Military power filter\n- Unlocks purchase of Korund-VM ballistic plates (Front) at Prapor LL3\n- Unlocks purchase of 23x75mm Zvezda flashbang round at Prapor LL3\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Thank you, warrior. Our homeland won't forget this!\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "- Unlocks purchase of 40mm VOG-25 grenade at Prapor LL3\n- Unlocks barter of GP-25 Kostyor 40mm underbarrel grenade launcher at Prapor LL3"
+    },
+    {
+      "heading": "See Also",
+      "level": 2,
+      "text": "- Ironclad Proof - The USEC counterpart quest"
+    }
+  ]
+}

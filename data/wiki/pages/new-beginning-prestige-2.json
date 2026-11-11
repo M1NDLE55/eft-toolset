@@ -1,0 +1,50 @@
+{
+  "title": "New Beginning (Prestige 2)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/New_Beginning_(Prestige_2)",
+  "revisionId": 359495,
+  "lastEdited": "2026-09-13T20:17:09Z",
+  "kind": "quest",
+  "categories": [
+    "Quests",
+    "Table Progress Tracking"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Lab",
+    "given by": "Ragman",
+    "related2": "New Beginning (Prestige 3)",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "New Beginning (Prestige 2) is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello my brother! So how's it hanging? Not bored yet? I know what'll rev you up. The effect is out of this world! Huh? I already told you that? Come on man, don't bullshit me. Wait, what? How do you know about the list? Shit, guess I really did tell you about it already. Anyway, it seems like you already have an idea of what to do. Wait, so did I also already tell you about the influential people making these lists? Man, I guess I should get more sleep. I'm running around like a squirrel over here, negotiating things, solving problems. That's my life. In fact, I've been thinking... These guys are on to you for a reason. Something big is going down, I'm telling you. So do your missions perfectly and on time. All right, back to business. Here's the list. No, it's exactly the same as the “last time”, you're just confused. Maybe you need more sleep, too.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 30 to start this quest.\n- Must have Prestige level 1"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 PMC operatives\n- Survive and extract from The Lab\n- Hand over 2 found in raid PMC figurines\n- Hand over 2 found in raid Scav figurines\n- Hand over 2 found in raid Boss figurines\n- Hand over 2 found in raid Trader figurines"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +11,000 EXP\n- Ragman Rep +0.01\n- 200,000 Roubles\n  - 210,000 Roubles with Intelligence Center Level 1\n  - 230,000 Roubles with Intelligence Center Level 2\n\"Well done! Could've been quicker, but it'll do. The group knows you're done with the mission.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| BEAR operative figurine, Den figurine, Duck figurine, Walking Tank figurine, USEC operative figurine | Any PMC figurine | 2 | Handover item | Yes |\n| Hideout Cat figurine, Elvisvista figurine, Mastichin figurine, Politician Mutkevich figurine, Ryzhy figurine, Scav figurine | Any Scav figurine | 2 | Handover item | Yes |\n| Cultist figurine, Ded Moroz figurine, Killa figurine, Reshala figurine, Tagilla figurine | Any boss figurine | 2 | Handover item | Yes |\n| BTR figurine, Fence figurine, Jaeger figurine, Lightkeeper figurine, Mechanic figurine, Peacekeeper figurine; Prapor figurine, Ragman figurine, Ref figurine, Skier figurine, Therapist figurine | Any trader figurine | 2 | Handover item | Yes |"
+    }
+  ]
+}

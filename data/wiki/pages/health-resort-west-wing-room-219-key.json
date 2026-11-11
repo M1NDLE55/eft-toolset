@@ -1,0 +1,66 @@
+{
+  "title": "Health Resort west wing room 219 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_west_wing_room_219_key",
+  "revisionId": 358643,
+  "lastEdited": "2026-09-10T22:45:39Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks room 219 of the West wing in the Health Resort on Shoreline.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a13ef0686f7746e5a411744",
+    "ID": "=Санаторий 219"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Health Resort west wing room 219 key (W219 San) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Azure Coast sanatorium west wing room 219."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the Quest I Need More Power when you don't have a Health Resort west wing room 220 key"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In the lighthouse at the pier, on the second floor on top of a broken wooden box.\n\n- In a key rack in the utility room next to west wing room 227 at the health resort.\n\n- In the key rack near the central stairs on the second floor of the east wing at the health resort."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor, room 219 of the West Wing in the Health Resort on Shoreline."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Blue keycard spawn location\n- 1x Weapon cabinet\n- 1x Weapon box (6x4)\n- 1x BNTI Module-3M body armor spawn\n- 1x Weapon spawn (AK-74N)\n- Loose loot (Currency, , Meds, Medical supplies)"
+    }
+  ]
+}

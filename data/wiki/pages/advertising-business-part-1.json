@@ -1,0 +1,45 @@
+{
+  "title": "Advertising Business - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Advertising_Business_-_Part_1",
+  "revisionId": 359055,
+  "lastEdited": "2026-09-13T20:09:41Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "All for the Show - Death from Above",
+    "leads to": "All for the Show - Pyrotechnics",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Advertising Business - Part 1 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Recently, an interesting guy reached out to me, name Ragman. I'm sure you've heard of him. We worked out a little deal… he needs his product advertised. Sounds like something anyone could handle, but that's bullshit. Who's going to buy armor off some guy who got iced in the first gunfight? That's right, no one. That's why I need you, with your survivability. The task is boringly simple: use the Hexgrid.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Win 3 matches while wearing the Hexgrid armor in CheckPoint mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +12,000 EXP\n- Ref Rep +0.01\n- 93,300 Roubles\n- 15 GP coins\n- Unlocks BlackRock chest rig (Gray) in the Armory"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Requirement | Notes |\n| 5.11 Tactical Hexgrid plate carrier | Required | Has to be worn while winning |"
+    }
+  ]
+}

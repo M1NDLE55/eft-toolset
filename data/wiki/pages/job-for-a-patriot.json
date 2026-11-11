@@ -1,0 +1,49 @@
+{
+  "title": "Job for a Patriot",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Job_for_a_Patriot",
+  "revisionId": 361738,
+  "lastEdited": "2026-09-24T12:28:55Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Streets of Tarkov, Shoreline, Ground Zero",
+    "given by": "Prapor",
+    "LL requirement": "2",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Job for a Patriot is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"No shortage of patriots... I had a conversation with a group of BEARs the other day, we chatted about domestic weapons. Always nice to meet people who know their stuff!Just got a brand-new Kalashnikov in, and it needs a proper field test... Hmm, maybe somewhere with a mix of urban and open terrain? Yeah, that would be perfect. Here's the build. Go put it through its paces.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 10 PMCs with AK-12 with proprietary suppressor and PS-320 scope on Streets of Tarkov, Shoreline, or Ground Zero"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Prapor Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 1× Toolset\n- Unlocks craft for VOG-25 Khattabka improvised hand grenade at Workbench level 2\n- 3× VOG-25 Khattabka improvised hand grenade\n\"Never had a doubt! Here's your reward.\""
+    },
+    {
+      "heading": "Initial equipment",
+      "level": 2,
+      "text": "| Icon | Item name | Amount | Notes |\n| AK-12 | Kalashnikov AK-12 5.45x39 assault rifle | 1 | Modded after task requirements |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Only the AK-12 5.45x39 sound suppressor can be used. It's possible to use a compact reflex sight mounted on a canted rail instead of the Valday PS-320 1/6x scope to obtain the kills. The scope just needs to be installed to count towards the quest."
+    }
+  ]
+}

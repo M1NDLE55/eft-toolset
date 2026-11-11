@@ -1,0 +1,49 @@
+{
+  "title": "What's in the Bag?",
+  "url": "https://escapefromtarkov.fandom.com/wiki/What's_in_the_Bag%3F",
+  "revisionId": 362300,
+  "lastEdited": "2026-09-27T03:03:21Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "previous": "Key to Understanding (+1-2hr)",
+    "leads to": "Forbidden Knowledge",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "What's in the Bag? is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Your codes turned out to be useful, so you've earned yourself a little reward. Their radio operators picked up the unauthorized signal pretty quickly and went radio silent. Still, at least we've got something to work with now. That unit carries out several operations a day. Every one we intercepted involved extracting TerraGroup documents and materials. They also discussed destroying a couple of sites I didn't even know existed. Then again, maybe they'd already found the wiretap by then and were feeding us bullshit.Either way, now I need a sample of the materials they're trying to get out of the city. We need to figure out whether it's even worth spending resources over this data. Bring me something valuable, and you won't be disappointed with the reward.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode.\n- Unlocks 1-2 hours after completion of Key to Understanding"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the Briefcase with documents\n- Hand over the found item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 1× Intelligence folder\n- 1× Topographic survey maps\n\"So this is the kind of bag they're using to move classified documents? Looks like they're hauling out so much material that even secure containers aren't enough anymore. Or maybe they figure these bags give them a better chance of slipping some of the data across the border. Fuck if I know. Don't disappear. There'll be plenty more work for you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Briefcase with documents | 1 | Required | Yes | Can be looted off Black Division |\nIn this quest you have to find and hand over a Briefcase with documents to Fence. The briefcase can be found on Black Division outside of The Lab."
+    }
+  ]
+}

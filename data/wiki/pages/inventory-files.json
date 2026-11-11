@@ -1,0 +1,58 @@
+{
+  "title": "Inventory Files",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Inventory_Files",
+  "revisionId": 359426,
+  "lastEdited": "2026-09-13T20:15:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Interchange",
+    "given by": "Ragman",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Inventory Files is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Oh, hey there, brother, I’ve got a nice idea: just imagine how fucking awesome it would be to have info on Ultra’s cargos. What was being shipped, where, and in what amount, you know. I used to work with records like these myself. Don't think there are any manifests for the small shops, plus they most likely were run by slackers, but the larger stores and retail chains definitely kept their records. Check out Goshan and other supermarkets, like Oli and IDEA, the docs must be somewhere in the offices. it would be mighty cool if you found some.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain the Goshan cargo manifests on Interchange\n- Hand over the Goshan cargo manifests to Ragman\n- Obtain the OLI cargo manifests on Interchange\n- Hand over the OLI cargo manifests to Ragman\n- Obtain the IDEA cargo manifests on Interchange\n- Hand over the IDEA cargo manifests to Ragman"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +8,400 EXP\n- Ragman Rep +0.03\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n- 1× MSA Sordin Supreme PRO-X/L headset\n- 1× RayBench Aviator glasses\n- 2× Malboro Cigarettes\n- Unlocks barter for NFM THOR Concealable Reinforced Vest body armor at Ragman LL2\n\"Got all three? Big thanks for that, did a brother a service. These docs could help with so much, you can't even imagine.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Goshan cargo manifests | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| OLI cargo manifests | 1 | Handover item | Yes |\n| IDEA cargo manifests | 1 | Handover item | Yes |\nIf retrieving the manifests on different raids, make sure to turn them in before entering another raid, as death will empty your quest inventory."
+    },
+    {
+      "heading": "IDEA Manifest",
+      "level": 3,
+      "text": "Head to the entrance of the IDEA office, on the left immediately after the main entrance. Once in there, look for a document on one of the center desks, perpendicular to the wall."
+    },
+    {
+      "heading": "Goshan Manifest",
+      "level": 3,
+      "text": "Head to the small corridor north of Goshan (left, if entering the store from the front where the cash registers are). There, find the computer room and look for the manifest on the desk."
+    },
+    {
+      "heading": "OLI Manifest",
+      "level": 3,
+      "text": "Turn right after entering Oli via the main entrance. Go to the back of the store and look for a cube-shaped desk. The desk is marked by a sign over it, the manifest will be laying on the desk."
+    }
+  ]
+}

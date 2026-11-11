@@ -1,0 +1,65 @@
+{
+  "title": "RB-OB key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RB-OB_key",
+  "revisionId": 352662,
+  "lastEdited": "2026-08-09T20:29:52Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "RB-OB"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽50,000",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d80c6c586f77440351beef1",
+    "ID": "rezbase_key_barrmid_officers"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The RB-OB key (RB-OB) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Federal State Reserve Agency base first barracks' duty officer's room."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Required for the quest Reserve Expert from Ragman"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In different locations in the meeting room on the third floor of the airspace control center marked with white king."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "East barracks on Reserve. Northern end of the eastern building, 3rd floor."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- One Drawer\n- Intelligence folder on the desk\n- Multiple valuable loot spawns on the desk"
+    }
+  ]
+}

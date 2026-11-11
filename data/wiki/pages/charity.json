@@ -1,0 +1,43 @@
+{
+  "title": "Charity",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Charity",
+  "revisionId": 361696,
+  "lastEdited": "2026-09-24T12:10:46Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Charity is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Young man, I have a task for you. By now, you've likely realized that I continue to support the civilians who were unable to make it beyond the cordon. Unlike many of your colleagues who come to see me, you haven't lost your humanity yet. That is why I would like to ask for your help. I need adrenaline injectors, strictly for medical purposes. I have no intention of selling it to anyone. I took an oath, and I will continue helping people for as long as I live. I've been informed that a large number of syringes have been spotted in vehicles around the city, but my people haven't been able to reach them. Please obtain at least a few for me.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find the 5 item in raid: Adrenaline injector\n- Hand over the 5 items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Therapist Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"I thank you from the bottom of my heart. I won’t even explain how much and at the same time how little it is, in our conditions. Most people would keep it for themselves, but you shared it with those who needed it. Thank you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Adrenaline injector | 5 | Handover item | Yes | Can be crafted in the Hideout (Medstation lv. 2). |"
+    }
+  ]
+}

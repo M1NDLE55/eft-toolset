@@ -1,0 +1,43 @@
+{
+  "title": "A Big Loss",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A_Big_Loss",
+  "revisionId": 359037,
+  "lastEdited": "2026-09-13T20:09:22Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Interchange",
+    "given by": "Ragman",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "A Big Loss is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey, brother! I was looking through some of the Ultra shipment records recently and noticed that a major shipment went missing somewhere along the way. According to the manifest, it was carrying batteries. Pretty useful stuff in our situation, if you catch my drift. The logistics department usually handles this kind of thing. Can you head to their office, dig around for the shipment routes and its current status? I won't forget the favor! The office was probably locked up. No idea where the key ended up, but you're a smart guy. I believe in you.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain the OLI cargo route documents on Interchange\n- Hand over the documents to Ragman"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- Ragman Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"Got it? Good! Now let's see where that truck disappeared to.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| OLI logistics department office key | 1 | Required | N/A | Unlocks the OLI logistics department office where the OLI cargo route documents are located. |\n| OLI cargo route documents | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you have to obtain the OLI cargo route documents from the OLI logistics department office on the first floor of the ULTRA shopping mall on Interchange. A OLI logistics department office key is required to enter it."
+    }
+  ]
+}

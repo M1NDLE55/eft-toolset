@@ -1,0 +1,46 @@
+{
+  "title": "Endurance",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Endurance",
+  "revisionId": 362571,
+  "lastEdited": "2026-09-29T19:31:55Z",
+  "kind": "skill",
+  "categories": [
+    "Physical skills"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Physical skill"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Endurance is a Physical skill in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Endurance influences the amount of stamina and the rate of exhaustion while running or jumping, as well as holding and recovering breath."
+    },
+    {
+      "heading": "Hideout",
+      "level": 2,
+      "text": "- Level 1 of this skill is needed for the Heating level 2\n- Level 2 of this skill is needed for the Security level 2"
+    },
+    {
+      "heading": "Effects",
+      "level": 2,
+      "text": "- Increases stamina (1% per level → +50% at Elite Level)\n- Reduces jump stamina drain (0.6% per level → -30% at Elite Level)\n- Increases breath holding (2% per level → +100% at Elite Level)\n- Reduces breath recovery time (1% per level → -50% at Elite Level)\n- Elite level: Increases stamina (+20% → +70% total)\n- Elite level: Increased arm endurance\n- Elite level: Breathing is independent of energy"
+    },
+    {
+      "heading": "How to raise",
+      "level": 2,
+      "text": "- Sprinting while not being overweight (i.e yellow or red number)\n- Walking while not being overweight (i.e yellow or red number)\n- Completing quick time events (QTE) in the Gym\n- Completing the quest A Life Lesson\n- Completing the quest Never Too Late To Learn"
+    },
+    {
+      "heading": "Tips",
+      "level": 2,
+      "text": "- Using a stimulant to temporarily increase carrying capacity or strength at the start of a raid will generally put the player below overweight, allowing endurance to be leveled."
+    }
+  ]
+}

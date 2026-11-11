@@ -1,0 +1,54 @@
+{
+  "title": "Hell on Earth - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hell_on_Earth_-_Part_1",
+  "revisionId": 359372,
+  "lastEdited": "2026-09-13T20:15:05Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Prapor",
+    "previous": "Accept The Good Times - Part 1",
+    "leads to": "Hell on Earth - Part 2",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hell on Earth - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"What's up, warrior. I've been talking to my nephew about some video game where you shoot demons. I thought I'd give him a little present. Anyway, here's the task: get me a double-barrelled shotgun like in that game, and make it look real nasty! Oh, and make the barrel shorter.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only available to buyers of the \"Edge of Darkness\" edition of the game."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an MP-43-1C shotgun to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +3,000 EXP\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"It really is a beast! Even I'm now interested in seeing this game...\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Notes |\n| MP-43-1C 12ga double-barrel shotgun | 1 | Has to be modified and handed over | Can be purchased from Jaeger LL1. |\n| MP-43-1C 12ga 510mm barrel | 1 | Has to be installed on the shotgun | Can be purchased from Jaeger LL1. |\nIn this quest you must hand over an MP-43-1C 12ga double-barrel shotgun modified with the shorter MP-43-1C 12ga 510mm barrel to Prapor. Both items can be bought from Jaeger LL1."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This questline is a reference to the game \"Doom II: Hell on Earth\" which features the \"Super shotgun\", a sawed-off, double-barreled shotgun."
+    }
+  ]
+}

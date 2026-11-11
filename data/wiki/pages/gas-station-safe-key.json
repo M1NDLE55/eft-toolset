@@ -1,0 +1,51 @@
+{
+  "title": "Gas station safe key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gas_station_safe_key",
+  "revisionId": 333755,
+  "lastEdited": "2026-02-06T22:14:13Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "This key currently has no use since the safe at the gas station is always unlocked.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5a0f045e86f7745b0f0d0e42",
+    "ID": "Сейф Побережье Заправка"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gas station safe key (Gas safe) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the safe inside the gas station, located somewhere near the Azure Coast sanatorium."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This key currently has no use since the safe at the gas station is always unlocked"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Safe in the gas station on Shoreline."
+    }
+  ]
+}

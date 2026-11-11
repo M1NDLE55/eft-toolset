@@ -1,0 +1,43 @@
+{
+  "title": "Passion for Ergonomics",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Passion_for_Ergonomics",
+  "revisionId": 359546,
+  "lastEdited": "2026-09-13T20:18:02Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs",
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Passion for Ergonomics is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. Do you know the feeling when you change the layout of your instrument in a seemingly insignificant way and it fundamentally changes the working comfort? The Pareto principle, right. I had a friend who was the epitome of that concept. He was always tweaking something, filing, sanding a part to win a few millimeters.... His experience made me realize how important ergonomics is in any job. I have not heard from him in a while, but I know one of his outlets, it was either a sort of car service or a workshop, right in the garage complex. He always loved cars, especially the American ones. Can you come and check the place out? He probably moved somewhere else a long time ago, but his garage might still contain some of his tools or blueprints.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the customized tool set at the garage complex on Customs\n- Hand over the found item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +7,200 EXP\n- Mechanic Rep +0.02\n- 25,000 Roubles\n  - 26,250 Roubles with Intelligence center Level 1\n  - 28,750 Roubles with Intelligence center Level 2\n- 2× Electric motor\n\"Hmm... He would never let his car burn down willingly. Something must have happened there. A car mechanic's death would be just an imperceptible blip in the death toll on the Tarkov scale. But hopefully he was able to make it out and find safety. Maybe we'll see each other again.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Box with upgraded tools | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you have to find the customized tool set at the garage complex Customs. It can be found in garage #11. There are multiple spawns throughout the garage."
+    }
+  ]
+}

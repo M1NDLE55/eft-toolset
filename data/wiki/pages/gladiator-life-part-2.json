@@ -1,0 +1,40 @@
+{
+  "title": "Gladiator Life - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gladiator_Life_-_Part_2",
+  "revisionId": 359340,
+  "lastEdited": "2026-09-13T20:14:32Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "previous": "Gladiator Life - Part 1",
+    "leads to": "Gladiator Life - Part 3",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gladiator Life - Part 2 is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Keep this in mind: mowing down opponents like it's a shooting range is nice and all, but there are hundreds of shooters like that in Tarkov. If you want real money, you need to stick in the audience's memory. And for that, you'll have to show your skills in other disciplines, so to speak. My advice? Show everyone you know how to assault objectives just as well!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Capture the objective 5 times in CheckPoint mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +2,200 EXP\n- 29,000 Roubles\n- 5 GP coins\n- Unlocks RPK-16 5.45x39 light machine gun in the Armory"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Hillside house key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hillside_house_key",
+  "revisionId": 276858,
+  "lastEdited": "2024-05-05T07:53:56Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "max uses": "100",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the hillside house on Lighthouse.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "61a6444b8c141d68246e2d2f",
+    "ID": "lighthouse_key2"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Hillside house key (House) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key that opens one of the old village houses."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The hillside house is located on Lighthouse."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Jacket\n- 1x Sport bag\n- Loose loot (Provisions, Valuables)\n- Military Electronics spawn in the sink (Phased array element, Virtex, etc.)"
+    }
+  ]
+}

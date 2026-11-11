@@ -1,0 +1,55 @@
+{
+  "title": "Pumpkin with sweets",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pumpkin_with_sweets",
+  "revisionId": 333900,
+  "lastEdited": "2026-02-07T23:30:59Z",
+  "kind": "container",
+  "categories": [
+    "Loot Containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pickupable Event Loot Container",
+    "weight": "3 kg",
+    "grid": "2x2",
+    "node": "634959225289190e5e773b3b",
+    "ID": "pumpkin_rand_loot_container"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Pumpkin with sweets (Pumpkin) is a pickupable Event Loot Container in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "Looks like someone in Tarkov decided to have some fun and scattered these pumpkins all over the place. There could definitely be something inside them."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be opened outside of a raid\n- Cannot be listed for sale on the flea market\n- Destroyed after unpacking (Right-click \"unpack\")"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "All around Tarkov."
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| Pumpkin with sweets x1; Pumpkin with sweets | → | Cultist Circle; Unique Sacrifice; 1 h 6 min | → | Jack-o'-lantern tactical pumpkin helmet x1; Jack-o'-lantern tactical pumpkin helmet |"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "Random surprises."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item was first added as part of Escape from Tarkov's 2022 Halloween celebration."
+    }
+  ]
+}

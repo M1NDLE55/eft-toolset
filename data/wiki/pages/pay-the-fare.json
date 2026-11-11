@@ -1,0 +1,47 @@
+{
+  "title": "Pay the Fare!",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pay_the_Fare!",
+  "revisionId": 359549,
+  "lastEdited": "2026-09-13T20:18:05Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ragman",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Pay the Fare! is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Sup, brother! Heard you've started taking boat rides somewhere with the smugglers. You planning to get out of Tarkov by water or something? Hope you know about the naval blockade... And I hope you're not counting on the smugglers' boats being in perfect condition. If you really need to travel by water on their boats, you won't get far without the right tools. I'm telling you that straight, unlike those guys. But you're in luck, ahper! My guys recently cracked open one of the railcars headed either to the port or the Norvinsky pier, and what do you know, it was packed with special repair kits for watercraft! All kinds of patches, sealants, and other stuff. I think you know where I'm going with this, huh? Let's help each other out, and we'll both come out ahead. I could really use some of the tools that aren't included in those kits.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Tell Mechanic that you found transport to the icebreaker in the Boreas story chapter."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find the item in raid: Pipe grip wrench\n- Hand over the item\n- Find the item in raid: Ratchet wrench\n- Hand over the item\n- Find the item in raid: Electric drill\n- Hand over the item"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 5× Sudak-Tudak marine repair kit (10× in the PvE mode)\n- +1 daily operational task with Sudak-Tudak marine repair kit reward\n\"Now that's the kind of deal I like. As long as people have something to trade, guys like you and me will always come out on top! Here are your kits. And if you need more, you know who to come to.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Pipe grip wrench | 1 | Handover item | Yes |\n| Ratchet wrench | 1 | Handover item | Yes |\n| Electric drill | 1 | Handover item | Yes |"
+    }
+  ]
+}

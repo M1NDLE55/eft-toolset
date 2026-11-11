@@ -1,0 +1,44 @@
+{
+  "title": "Missing Cargo",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Missing_Cargo",
+  "revisionId": 362370,
+  "lastEdited": "2026-09-29T12:33:41Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Skier",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Missing Cargo is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey, tactical, come on in! Do you remember that civilian helicopter that was shot down somewhere by the Lighthouse, according to rumors? So, the headache is that on that helicopter was a certain man with an inconspicuous folder, but it, in fact, was very much conspicuous - a lot of money was paid for it. Well, a birdie said the helicopter got shot down somewhere on the way to our meeting point. So here's your task: confirm the helicopter's whereabouts and that the rumors are true. Then find that folder for me, it's extremely important. I've got no idea who could've shot it down, honestly. Who's got the resources for that?.. USECs? I did hear that they took a liking to those cottages near the mountains, so it might be worth checking that area out. Hope those stray westerners didn't nick my goodie.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the crashed helicopter on Lighthouse\n- Locate and obtain the informant's intelligence folder\n- Hand over the folder to Skier"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000 EXP\n- Skier Rep +0.75\n- 1,650 Euros\n  - 1,732 Euros with Intelligence Center Level 1\n  - 1,897 Euros with Intelligence Center Level 2\n\n\"Opa, here's my goodie! So, it indeed was in the USEC cottages, you're saying? And the damn chopper was there too? Looks like the rumors were true. I knew it couldn't have gone far. Otherwise, there would've been a big uproar! The USECs had no reason to spread the info through, they were probably waiting for orders from the command, but, well, you know what happened. Alrighty, here's your reward.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Stolen military documents | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player does not place the item and fails to extract with it, they will lose it. |\n\nThe crashed helicopter is located on a hill in the south-southeast of Lighthouse.\n\nThe documents can be found on the first floor of the chalet that is located on the hill in the south-east of Lighthouse."
+    }
+  ]
+}

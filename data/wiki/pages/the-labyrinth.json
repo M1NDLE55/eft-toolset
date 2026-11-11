@@ -1,0 +1,141 @@
+{
+  "title": "The Labyrinth",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Labyrinth",
+  "revisionId": 359378,
+  "lastEdited": "2026-09-13T20:15:11Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [
+    "Labyrinth"
+  ],
+  "infobox": {
+    "prev": "Shoreline",
+    "enemies": "Scavs, Shadow of Tagilla, Vengeful Killa",
+    "players": "1-5",
+    "duration": "30 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "For the story chapter, see The Labyrinth (story chapter).\n\nThe Labyrinth, also known as \"Labrys\", is a location in Escape from Tarkov. It is the eleventh map that was added to the game."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A facility of one of TerraGroup's contractors, Knossos LLC. According to public sources, they build amusement and theme parks. However, this place looks more like a heavily fortified bunker than a new theme park."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This location can only be entered with a Labrys access keycard through transiting from Shoreline. The transit is located in the basement of the health resort west wing and requires the Knossos LLC facility key."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Insurance",
+      "level": 3,
+      "text": "All insured items left in a raid by players will not be returned. Upon death, insurance Traders will send the usual in-game mail about dispatching people to recover the items, but when the insurance timer runs out they will explain that their people don't go to the location, didn't find it or died in the process."
+    },
+    {
+      "heading": "Spawn chambers",
+      "level": 3,
+      "text": "Each of the 5 spawns has its entry to the rest of the location blocked by a hazard/trap, which needs to be resolved to not die."
+    },
+    {
+      "heading": "Chamber 1 - Toxic pool",
+      "level": 5,
+      "text": "1. Find Key 01\n\n2. Unlock the door in the left side room\n\n3. Press the button on the wall"
+    },
+    {
+      "heading": "Chamber 2 - Steam hazard",
+      "level": 5,
+      "text": "1. Find Key 02\n\n2. Unlock the red door\n\n3. Find the Valve handwheel on the 2nd floor\n\n4. Apply the handwheel to the pipe next to the yellow door on the 1st floor"
+    },
+    {
+      "heading": "Chamber 3 - Fire hazard",
+      "level": 5,
+      "text": "1. Find Key 03\n\n2. Unlock the far door\n\n3. Find the BBQ-S43 gas torch\n\n4. Apply the gas torch to the door at the start\n\n5. Press the button at the electrical cabinet"
+    },
+    {
+      "heading": "Chamber 4 - Shotgun trap",
+      "level": 5,
+      "text": "1. Find Key 04\n\n2. Unlock the 2nd door\n\n3. Crawl into the connected room\n\n4. Pull the lever to the left of the door\n\n5. Breach the door"
+    },
+    {
+      "heading": "Chamber 5 - Toxic puddle",
+      "level": 5,
+      "text": "1. Find the BBQ-S43 gas torch\n\n2. Apply the gas torch to the round door in the left side room\n\n3. Pull the lever on the wall"
+    },
+    {
+      "heading": "Traps",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Tripwires",
+      "level": 5,
+      "text": "The tripwires placed by Shadow of Tagilla on raid start have set locations. They automatically disarm after 20 minutes and don't get set off by Shadow of Tagilla."
+    },
+    {
+      "heading": "Poisoned barbed wire",
+      "level": 5,
+      "text": "The barbed wire has set locations, but it is random in which it appears every raid. Upon contact, there is a chance to get inflicted with the effect, which deals gradual damage over time (140 HP/minute). It can be treated with an xTG-12 or Perfotoran injector."
+    },
+    {
+      "heading": "Spike pits",
+      "level": 5,
+      "text": "The pits are always present in set locations, but randomly open or closed every raid."
+    },
+    {
+      "heading": "Alarm",
+      "level": 3,
+      "text": "Whenever a player goes near the center of the labyrinth, an alarm sounds. It can be deactivated with multiple buttons spread across the location."
+    },
+    {
+      "heading": "Usable Keys",
+      "level": 2,
+      "text": "| Key Name | Used in Quest |\n| Corpse room key | yes |\n| Key 01 | |\n| Key 02 | |\n| Key 03 | |\n| Key 04 | |\n| Observation room key | yes |"
+    },
+    {
+      "heading": "Bosses",
+      "level": 2,
+      "text": "| Name | Location | Notable equipment | Followers |\n| Shadow of Tagilla | Has to be expected everywhere | Chained Labrys; Tagilla's welding mask \"ZABEY\"; Crye Precision AVS plate carrier (Tagilla Edition); Labrys research notes | None |\n| Vengeful Killa | Appears after the death of Shadow of Tagilla | RPK-16 5.45x39 light machine gun; Maska-1SCh bulletproof helmet (Killa Edition); Maska-1SCh face shield (Killa Edition); 6B13 M assault armor (Killa Edition); BlackHawk! Commando chest harness (Black) | None |"
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "To locate the extractions use the maps below the table.\n| Name | Always available | Single-Use | Requirements | Notes |\n| Ariadne's Path | yes | no | Ariadne symbol key; Ariadne symbol key | |\n| The Way Up | yes | no | Only available 15 min after raid start. | When the extraction becomes available, a door opening sound can be heard. |"
+    },
+    {
+      "heading": "Maps",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Interactive Map",
+      "level": 3,
+      "text": "Click for fullscreen. Separate map page here."
+    },
+    {
+      "heading": "2D Map",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This location was originally only planned to be a temporary addition for the Labyrinth event. After overwhelmingly positive player feedback, the devs decided to permanently keep it in the game.\n- Scavs in this location are better equipped than regular ones and sometimes carry xTG-12 injectors.\n- Scavs in this location have Greek mythology names such as Μορφέας (Morpheus) and Πύθων (Python). This follows the overall Greek theme of related entities (Knossos, Ariadne) and items (Labrys)."
+    }
+  ]
+}

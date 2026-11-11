@@ -1,0 +1,49 @@
+{
+  "title": "Stray Dogs",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stray_Dogs",
+  "revisionId": 359710,
+  "lastEdited": "2026-09-13T20:20:49Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs, Woods, Shoreline, Lighthouse",
+    "given by": "Jaeger",
+    "previous": "The Huntsman Path - Trophy, The Huntsman Path - Sellout, The Huntsman Path - Woods Keeper",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Stray Dogs is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good day to you, soldier. Though could I actually say it's good? As a wise person used to say, people are made to torment each other. When I first read it, I didn't honestly believe it. But now my heart bleeds every time I remember this quote. Some new renegades are terrorizing the city. I've sent a man to negotiate with them, maybe even guide them to the right path, but those savages decapitated him and sent his head back to me, with the letter I wrote for them... They're not locals, all came from USEC. Long renounced from their own people too. They must be hunted down. This is our land. No more peace talks.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 35 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and eliminate Knight\n- Locate and eliminate Big Pipe\n- Locate and eliminate Birdeye"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +35,000 EXP\n- Jaeger Rep +0.02\n- 230,000 Roubles\n  - 241,500 Roubles with Intelligence center Level 1\n  - 264,500 Roubles with Intelligence center Level 2\n- 1× S I C C organizational pouch\n- 1× SWORD International Mk-18 .338 LM marksman rifle\n- 2× Mk-18 .338 LM 10-round magazine\n- 1× .338 Lapua Magnum FMJ ammo pack (20 pcs)\n\"Don't think about your hands getting bloody again, soldier. Think that you have cleared this land of the wicked.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill Knight, Big Pipe and Birdeye."
+    }
+  ]
+}

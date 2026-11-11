@@ -1,0 +1,50 @@
+{
+  "title": "Uninvited Guests - Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Uninvited_Guests_-_Part_1",
+  "revisionId": 359864,
+  "lastEdited": "2026-09-13T20:23:22Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Prapor",
+    "previous": "Tour",
+    "leads to": "Uninvited Guests - Part 2, Unanswered Calls",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Uninvited Guests - Part 1 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Ah, it's you. Good to see you're still alive... Someone's been taking out my men, whole squads at a time, you get me? They just drop off the grid. And nobody's made any demands! I'll find the bastards responsible, no doubt about that. But right now I've got business that can't wait. Can you help me out? The most urgen thing is a piece of technical equipment I was supposed to get from the coast to a client up north. The plan was for my boys to pick it up from a contact at the port and hand it off to the BTR driver. But we've heard nothing from them! Can you look for my men, or at least the package? I figure they were hit somewhere along the shore, so that's where you should start looking.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 2 with Prapor to obtain this quest.\n- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the case with military equipment\n  - (Optional) Investigate the shack next to the sordi tower on Shoreline\n  - (Optional) Investigate the second floor of the weather station building on Shoreline\n  - (Optional) Investigate the hydroelectric power station on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +6,000 EXP\n- 18,000 Roubles\n  - 18,900 Roubles with Intelligence Center Level 1\n  - 20,700 Roubles with Intelligence Center Level 2\n- 1× RPK-16 5.45x39 light machine gun\n- 3× AK-74 5.45x39 6L23 30-round magazine\n- 1× 5.45x39mm PP gs ammo pack (120 pcs)\n\"Thanks for finishing the job. The client had been waiting on that equipment. Now we can move on to the second part of this mess and find whoever's hunting my boys.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Case with military equipment | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to obtain a case with military equipment on Shoreline\n\nThe case is located at one of the 3 locations.\n\nAfter picking up the case, it will be placed in your quest items inventory. You must successfully extract with the case to hand it in. If you die before reaching the BTR Driver, you will have to retrieve it again. Hand the case over to the BTR Driver in Uninvited Guests - Part 2 to complete the quest."
+    }
+  ]
+}

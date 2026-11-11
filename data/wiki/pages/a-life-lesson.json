@@ -1,0 +1,49 @@
+{
+  "title": "A Life Lesson",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A_Life_Lesson",
+  "revisionId": 362193,
+  "lastEdited": "2026-09-25T21:38:17Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "previous": "Safety Guarantee",
+    "leads to": "Profit Retention",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "A Life Lesson is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Wha-- Oh, it's you. Come in, don't just stand there... We've lost our dividends, it seems... Luka's not getting in touch, the fucking bastard! We can't even check what's going on outside the cordon... I don't have any eyes there. What if there was no USEC base in the first place? Maybe this fucker Luka doesn't even have a squad... And look at us, we didn't suspect a goddamn thing. And you, fucking eagle eye... Fuck's sake. Okay... There's no fucking way we're gonna get these cocksuckers from here. Until I'm pissed and then sober again, don't count on a new plan. What, you want to help? Bring some more booze, then...\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by BEAR PMCs."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the item: 12 Bottle of Tarkovskaya vodka\n- Hand over the item: 20 Bottle of Dan Jackiel whiskey\n- Hand over the item: 20 Bottle of Fierce Hatchling moonshine"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +1 Endurance skill level\n- +1 Strength skill level\n- +1 Metabolism skill level\n- +1 Charisma skill level\n- +1 Intellect skill level\n- +1 Hideout Management skill level\n- +1 Crafting skill level\n- +1 Mag Drills skill level\n- +1 Troubleshooting skill level\n\"This way... Fucking this way, you dumb fuck! Come sit by if you want to take a swig too. I'll tell you the shit I've been through in my life... Perhaps it'll save you from the same fucking miserable fate.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Bottle of Tarkovskaya vodka | 12 | Handover item | No |\n| Bottle of Dan Jackiel whiskey | 20 | Handover item | No |\n| Bottle of Fierce Hatchling moonshine | 20 | Handover item | No |"
+    }
+  ]
+}

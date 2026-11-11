@@ -1,0 +1,47 @@
+{
+  "title": "Compensation for Damage - Barkeep",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Compensation_for_Damage_-_Barkeep",
+  "revisionId": 359187,
+  "lastEdited": "2026-09-13T20:11:55Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Fence",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Compensation for Damage - Barkeep is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Do you want people to think the \"right\" things about you? What do you think of yourself, mercenary? Probably thinking you're a great guy? Thinking you're the future Tarkov Legend, maybe even a hero already? You came here to bow to me, which means that you are nothing more than just an errand boy... I'm serious, you're doing everything you get told to: for money, guns, reputation... What if I told you to wipe my people's asses, for the most pimped-out gun in the whole county? Listen, I'm in a good mood today, so I'll just ask you to bring me a Cuba Libre cocktail. I'll remind you of the ingredients, just in case you've been hit on the head too much to forget such basic things. You'll need rum, coke, lime, and ice. Although... Yeah, you'll be searching for lime the whole decade. I'll make it easier for you: bring me a Jack and Coke.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Scav karma of -1"
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the found in raid Bottle of Dan Jackiel whiskey\n- Hand over the 3 found in raid Can of TarCola soda"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- Fence Rep +1\n\"The best way to finish a day of hard work, wouldn't you say? Hurry up and open it then.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Bottle of Dan Jackiel whiskey | 1 | Handover item | Yes |\n| Can of TarCola soda | 3 | Handover item | Yes |"
+    }
+  ]
+}

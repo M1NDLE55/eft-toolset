@@ -1,0 +1,59 @@
+{
+  "title": "Gunsmith - HK MP5",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_HK_MP5",
+  "revisionId": 352572,
+  "lastEdited": "2026-08-09T19:49:33Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "Gunsmith HK MP5"
+  ],
+  "infobox": {
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Gunsmith - HK MP5 is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"When I was a child, people used to say that it is not the destination that matters, but the journey itself. But what if the destination is yourself, what you know, how good you use your reflexes, and how many rounds you have in the magazine? This feels particularly true when you're supposed to survive, clinging to this world with your teeth. Well, to the point: I need an MP5. With a 50-round extended mag, silencer, tactical flashlight, and sighting range of more than 200. Ergonomics above 45, recoil sum less than 240. Maximum weight of 4 kg. And decide for yourself what is more important to you, the journey or the destination.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be level 7 to start this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Modify an MP5 to comply with the given specifications"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +2,800 EXP\n- Mechanic Rep +0.01\n- 250 Dollars\n  - 263 Dollars with Intelligence Center Level 1\n  - 288 Dollars with Intelligence Center Level 2\n- 2× SwampFox Trihawk Prism Scope 3x30\n- 2× Magpul RVG foregrip (FDE)\n- Unlocks barter for Glock 17 9x19 pistol (variant Tac 3) at Mechanic LL1\n\"Handy for CQB and quiet... Good modification, the client will be satisfied.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "MP5 specifications:\n- 60 Durability\n- 45 or greater ergonomics\n- 240 or less recoil\n- 200 or greater sighting range\n- 4 kg or less in weight\n- Any tactical device (such as the NcSTAR Tactical Blue Laser)\n- A silencer\n- HK MP5 9x19 X Products X-5 50-round drum magazine"
+    },
+    {
+      "heading": "Build",
+      "level": 2,
+      "text": "This is one example of many possible configurations."
+    },
+    {
+      "heading": "Notes:",
+      "level": 4,
+      "text": "- This build is based on a standard MP5 from Peacekeeper LL1.\n- Don't forget to transfer the rear sight from the old receiver.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| HK MP5SD 9x19 upper receiver | Peacekeeper | LL2 |\n| HK MP5SD polymer handguard | Peacekeeper | LL2 |\n| HK MP5SD 9x19 sound suppressor | Peacekeeper | LL2 |\n| HK MP5 9x19 X Products X-5 50-round drum magazine | MechanicPeacekeeperRef | LL2 (Barter)LL2 (Barter)LL2 |\n| HK MP5SD B&T tri-rail ring mount | PeacekeeperMechanic | LL2LL2 (Barter) |\n| NcSTAR Tactical Blue Laser | Skier | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    }
+  ]
+}

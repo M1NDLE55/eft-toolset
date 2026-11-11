@@ -1,0 +1,51 @@
+{
+  "title": "Financial institution small office key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Financial_institution_small_office_key",
+  "revisionId": 231681,
+  "lastEdited": "2023-03-26T13:05:55Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks an office on the first floor of the financial institution on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a71ed21031ac76fe773c7f",
+    "ID": "city_key25"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Financial institution small office key (Finance s) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to a small office room at the city's financial institution."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Office on the first floor of the financial institution building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Jacket\n- 3x Drawer\n- 1x Safe\n- 2x PC block"
+    }
+  ]
+}

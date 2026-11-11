@@ -1,0 +1,55 @@
+{
+  "title": "Activated Kruglov's RFID keycard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Activated_Kruglov's_RFID_keycard",
+  "revisionId": 339362,
+  "lastEdited": "2026-03-28T00:08:45Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "storage_wallet": "No",
+    "storage_keytool": "No",
+    "storage_doccase": "No",
+    "storage_sicc": "No",
+    "storage_securecont": "No",
+    "node": "67bdf04d66ca1d79a2024637",
+    "ID": "q_card_fid_card_resaved"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Activated Kruglov's RFID keycard (RFID act.) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A personalized RFID card with a strict design. Now that it is activated, you can try to slip into the port."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This item is not lootable from players and can only be placed in a special item slot."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Port garrison intercom on Shoreline."
+    },
+    {
+      "heading": "Crafting",
+      "level": 2,
+      "text": "| RFID keycard encryption device x1; RFID keycard encryption device; +; TerraGroup Labs master keycard x1; TerraGroup Labs master keycard; +; Blank RFID keycard x1; Blank RFID keycard; +; Kruglov's RFID keycard x1; Kruglov's RFID keycard | → | Intelligence Center level 1; 23 h 30 minAfter progressing through; the story chapter The Ticket; required during the entire process | → | Activated Kruglov's RFID keycard x1; Activated Kruglov's RFID keycard |\n| RFID keycard encryption device x1; RFID keycard encryption device; +; Activated Kruglov's RFID keycard x1; Activated Kruglov's RFID keycard; +; Flash drive with Mr. Kerman's hash codes x1; Flash drive with Mr. Kerman's hash codes; +; Blank RFID keycard x1; Blank RFID keycard | → | Intelligence Center level 1; 5 h 30 minAfter progressing through; the story chapter The Ticket; required during the entire process | → | Reprogrammed RFID keycard with Mr. Kerman's hash codes x1; Reprogrammed RFID keycard with Mr. Kerman's hash codes |\n| Activated Kruglov's RFID keycard x1; Activated Kruglov's RFID keycard; +; Flash drive with Prapor's hash codes x1; Flash drive with Prapor's hash codes; +; Blank RFID keycard x1; Blank RFID keycard | → | Intelligence Center level 1; 5 h 30 minAfter progressing through; the story chapter The Ticket; required during the entire process | → | Reprogrammed RFID keycard with Prapor's hash codes x1; Reprogrammed RFID keycard with Prapor's hash codes |"
+    }
+  ]
+}

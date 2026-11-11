@@ -1,0 +1,66 @@
+{
+  "title": "Backup hideout key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Backup_hideout_key",
+  "revisionId": 280454,
+  "lastEdited": "2024-06-09T22:58:09Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the hideout below the cinema stairs on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "6398fd8ad3de3849057f5128",
+    "ID": "item_quest_keeper2_key"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Backup hideout key (Hideout) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the Informant's second hideout."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Missing Informant"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "In a sports bag which is located in an electrical operation room behind the small cinema. Guaranteed spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Hideout below the cinema stairs at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x Wooden crate\n- 1x Sport bag\n- 1x Toolbox\n- Loose loot (Electronics, Valuables)"
+    }
+  ]
+}

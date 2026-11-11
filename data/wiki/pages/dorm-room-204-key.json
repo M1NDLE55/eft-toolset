@@ -1,0 +1,56 @@
+{
+  "title": "Dorm room 204 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_204_key",
+  "revisionId": 333053,
+  "lastEdited": "2026-01-26T08:46:24Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks room 204 in the three-story dorms on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "59148c8a86f774197930e983",
+    "ID": "общ1 204"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Dorm room 204 key (Dorm 204) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the three-story dormitory with a tag reading \"204\" on it."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Warehouse #3 at the shipping yard: In the brown jacket that is located at the industrial shelf\n\n- In a key cabinet at the dorm guard desk that is located at the two-story dorms"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The second floor of the three-story dorms on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- One blue standing weapons locker/Safe combo\n- Loose loot"
+    }
+  ]
+}

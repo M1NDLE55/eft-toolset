@@ -1,0 +1,49 @@
+{
+  "title": "Drug Trafficking",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Drug_Trafficking",
+  "revisionId": 361715,
+  "lastEdited": "2026-09-24T12:22:21Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Therapist",
+    "LL requirement": "3",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Drug Trafficking is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come on in, mercenary. I have a high suspicion that someone opened a new drug distribution point or even a whole drug laboratory in Tarkov. How do I know this? First of all, I've treated many people with somewhat familiar symptoms recently. Dilated pupils, tremors, confusion, and so on. Now secondly, my people who were evacuating the refugees from the city, noticed suspicious people near the containers in the Lighthouse territory. One of my men wanted to investigate and almost got killed. They definitely guard that place. Can you find it and place a camera overlooking the place? I'm not asking to tear down the place or eliminate those so-called cooks. Do you understand me? Do not risk your life for nothing. For now, I only need the recordings from the cameras.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the hidden drug lab on Lighthouse\n- Stash a WI-FI Camera in the drug lab\nNote: The \"Stash\" objective will appear after the \"Locate\" objective is completed."
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,500 EXP\n- Therapist Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Ophthalmoscope\n\"You set it up? My thanks. Oh no, mercenary, I cannot tell you what I'll do with these tapes. So what button uploads the video, you say?..\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera | 1 | Required | N/A | Can be purchased from Mechanic LL1. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera | 1 | Required | N/A | Can be purchased from Mechanic LL1. |\n\nIn this quest you have to find the hidden drug lab on Lighthouse, and place a WI-FI Camera there. It is located inside a group of stacked shipping containers in the container area of the train yard in the north."
+    }
+  ]
+}

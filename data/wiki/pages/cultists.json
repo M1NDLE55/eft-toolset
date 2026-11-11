@@ -1,0 +1,109 @@
+{
+  "title": "Cultists",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cultists",
+  "revisionId": 357891,
+  "lastEdited": "2026-09-08T14:43:47Z",
+  "kind": "character",
+  "categories": [
+    "Factions"
+  ],
+  "redirects": [
+    "Cultist",
+    "Cultist priest",
+    "Priest",
+    "Sectant",
+    "Sectants",
+    "Sektant",
+    "Sektants"
+  ],
+  "infobox": {
+    "location": "Night Factory, Customs, Woods, Shoreline, Ground Zero (Level 21+)"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Cultists are a faction in Escape from Tarkov."
+    },
+    {
+      "heading": "Biography",
+      "level": 2,
+      "text": "Little is known about the Witnesses of the Arrival, the hooded figures conducting rituals and gathering in marked rooms at night. Their goals and beliefs remain a mystery even after years of activity in Tarkov."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cultist's footsteps have reduced volume.\n- Cultists have a body temperature of 28 °C, making them harder to detect with thermal vision sights than other entities.\n- Killing Cultists as a Scav does not carry any penalties towards your Scav karma.\n- The Cultist priest and his 2-4 followers have different health values than PMCs and Scavs.\n\nCultist priest:\n| Stats |\n| Head: 50; Thorax: 200; Stomach: 200; Arms: 100 each; Legs: 100 each; Total: 850 |\n\nCultist warrior:\n| Stats |\n| Head: 50; Thorax: 220; Stomach: 180; Arms: 100 each; Legs: 100 each; Total: 850 |\n\n- Instead of the typical 4 single slot pockets, the Cultist priest has 5 double slot pockets, bringing their total space to 10 slots."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- 1 Cultist priest needs to be killed for the quest Broadcast - Part 5.\n- 1 Cultist priest needs to be killed for the story chapter They Are Already Here.\n- 3 Cultists need to be killed for the quest Hell on Earth - Part 2.\n- 1 cultist knife needs to be obtained for the quest Broadcast - Part 5.\n- 4 cultist knives needs to be obtained for the quest Small Business - Part 3.\n- 12 cultist knives need to be obtained for the quest Night Sweep.\n- 5 Cultists need to be killed for the quest New Beginning (Prestige 6)."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "Cultists appear between 22:00 and 7:00. They can be found on the following locations:"
+    },
+    {
+      "heading": "Night Factory",
+      "level": 4,
+      "text": "Cultist priest with 2-3 warriors: Due to the small size of the location they have to be expected everywhere."
+    },
+    {
+      "heading": "Customs",
+      "level": 4,
+      "text": "Cultist priest with 4 warriors: In the construction area around the Scav base and the laboratory."
+    },
+    {
+      "heading": "Woods",
+      "level": 4,
+      "text": "Cultist priest with 4 warriors:\n- At the dilapidated village in the north\n- Near the checkpoint west of the sawmill"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 4,
+      "text": "Cultist priest with 3-4 warriors:\n- At the health resort\n- At the roadblock northeast of the swamp village"
+    },
+    {
+      "heading": "Ground Zero (Level 21+)",
+      "level": 4,
+      "text": "- Cultist priest with 3-4 warriors: Has to be expected everywhere"
+    },
+    {
+      "heading": "Behavior",
+      "level": 2,
+      "text": "Cultists will lay prone in groups of 3-5 (depending on the map) with knives out waiting to ambush the player. Once a player gets close enough to a cultist warrior, it will stand up and chase the player in an attempt to stab them with either normal knives, or a poisoned cultist knife if the possess it. After the cultist has stabbed the player, they may attempt to back off into the shadows to fire upon them. If fired upon, the cultist warriors will begin to return fire upon the player with their weapons and grenades.\n\nCultist warriors will ignore scavs, scav guards, bosses, and scav players until that have been harmed. Cultist priests will attempt to run to cover whenever a player comes too close to their current location if any warriors are still alive. In the case that all warriors are dead and a player gets too close, the priest will stand up from his position and drop a grenade at his feet. The priest will make no attempt to flee from this grenade, and his death will not count towards the player unless he is killed before it detonates. In the rare case that this attempt fails, he will open fire upon the player.\n\nCultist warriors prefer to ambush players and will stay extremely well hidden. It is highly important that players locate the cultists and regain control of the fight. Cultists have almost no thermal signature and are very difficult to spot due to a preference to lay prone in bushes and tall grass. The cultists almost always have suppressors and prefer to stick to cover once engaged.\n\nCultists spawn with a range of gear from little armor to class 6, as well as high penetration ammo. They are known to throw grenades in very rare cases. They only wear face protection in rare cases, so headshots are a preferred method to deal with them.\n\nIf stabbed by the Cultist knife, players will be inflicted with the Unknown toxin debuff, which deals gradual damage over time (140 HP/minute) and causes pain. The toxin can be cured by the xTG-12 or Perfotoran injectors. Otherwise, the player must extract from the raid or they will run out of medication and die.\n\nWhen it's time for them to disappear, they stand up from their ambush spots and despawn. Dead Cultists remain in their locations."
+    },
+    {
+      "heading": "Priest Equipment",
+      "level": 2,
+      "text": "Note that the primary weapons can have numerous mod variations and those shown below are examples.\n\nWeapons:\n| Icon | Weapon | Ammunition | Mods |\n| AS VAL MOD.4 9x39 special assault rifle | AS VAL MOD.4 9x39 special assault rifle | 9x39mm SP-6 gs, 9x39mm PAB-9 gs | |\n| SIG MPX 9x19 submachine gun | SIG MPX 9x19 submachine gun | 9x19mm QuakeMaker | 2x |\n| Aklys Defense Velociraptor .300 Blackout assault rifle | Aklys Defense Velociraptor .300 Blackout assault rifle | .300 Blackout AP | - |\n| Kalashnikov AKS-74UB 5.45x39 assault rifle | Kalashnikov AKS-74UB 5.45x39 assault rifle | 5.45x39mm PPBS gs Igolnik | - |\n| PP-91-01 Kedr-B 9x18PM submachine gun | PP-91-01 Kedr-B 9x18PM submachine gun | 9x18mm PM SP8 gzh | - |\n| CMMG Mk47 Mutant 7.62x39 assault rifle | CMMG Mk47 Mutant 7.62x39 assault rifle | 7.62x39mm BP gzh | AR-15 DLG Tactical DLG-123 pistol grip; AKMS 7.62x39 aluminium 30-round magazine; AR-15 DoubleStar ACE SOCOM Gen.4 stock; Gemtech ONE Direct Thread Mount adapter; Gemtech ONE multi-caliber sound suppressor |\n| HK MP5 9x19 submachine gun (Navy 3 Round Burst) | HK MP5 9x19 submachine gun | 9x19mm AP 6.3, 9x19mm PBP gzh | HK MP5 B&T TL-99 aluminum handguard; AAC Illusion 9 9x19 sound suppressor; HK MP5 Navy Style 3-lug suppressor adapter; HK MP5 9x19 X Products X-5 50-round drum magazine |\n| TDI KRISS Vector Gen.2 .45 ACP submachine gun | TDI KRISS Vector Gen.2 .45 ACP submachine gun | .45 ACP AP, .45 ACP Match FMJ | Glock .45 ACP KRISS G30 MagEx 30-round magazine; SilencerCo Omega 45k Direct Thread Mount adapter with SilencerCo Omega 45k .45 ACP sound suppressor; BCM GUNFIGHTER MOD 3 vertical foregrip; KRISS Vector non-folding stock adapter with KRISS Vector Pistol Sling adapter |\n| Serdyukov SR-1MP Gyurza 9x21 pistol | Serdyukov SR-1MP Gyurza 9x21 pistol | 9x21mm BT gzh | SR-1MP 9x21 sound suppressor; SR-1MP sound suppressor mount; SR-1MP quad rail mount |\n| Lebedev PL-15 9x19 pistol | Lebedev PL-15 9x19 pistol | 9x19mm AP 6.3 | PL-15 9x19 112mm threaded barrel; PL-15 9x19 sound suppressor |\n| Magnum Research Desert Eagle L5 .50 AE pistol | Magnum Research Desert Eagle L5 .50 AE pistol | .50 AE FMJ | |\n| Cultist knife | Cultist knife |\n| F-1 hand grenade | F-1 hand grenade |\n\nItems:\nThe Cultist priest can spawn with any key or keycard in his pockets.\n| Item |\n| Secure Flash drive |\n| SAS drive |"
+    },
+    {
+      "heading": "Warrior Equipment",
+      "level": 2,
+      "text": "Weapons=\n| Icon | Weapon | Ammunition | Mods |\n| AS VAL MOD.4 9x39 special assault rifle | AS VAL MOD.4 9x39 special assault rifle | 9x39mm SPP gs | |\n| Kalashnikov AKS-74UB 5.45x39 assault rifle | Kalashnikov AKS-74UB 5.45x39 assault rifle | 5.45x39mm BP gs, 5.45x39mm PP gs | - |\n| Kalashnikov AK-12 5.45x39 assault rifle | Kalashnikov AK-12 5.45x39 assault rifle | 5.45x39mm BT gs | - |\n| Aklys Defense Velociraptor .300 Blackout assault rifle | Aklys Defense Velociraptor .300 Blackout assault rifle | .300 Blackout CBJ, .300 Blackout BCP FMJ | - |\n| SAG AK-545 Short 5.45x39 carbine | SAG AK-545 Short 5.45x39 carbine | 5.45x39mm BT gs | AK-74 Hexagon 5.45x39 sound suppressor; AK-12 5.45x39 30-round magazine |\n| Soyuz-TM STM-9 Gen.2 9x19 carbine | Soyuz-TM STM-9 Gen.2 9x19 carbine | 9x19mm Pst gzh, 9x19mm QuakeMaker | Glock 9x19 Magpul PMAG GL9 21-round magazine; SIG Sauer SRD9 9x19 sound suppressor; May spawn with or without a Vortex Razor AMG UH-1 holographic sight |\n| AS VAL 9x39 special assault rifle | AS VAL 9x39 special assault rifle | 9x39mm SPP gs | Axion Kobra EKP-8-02 reflex sight (Dovetail) |\n| SVDS 7.62x54R sniper rifle | SVDS 7.62x54R sniper rifle | 7.62x54mm R SNB gzh | Rotor 43 7.62x54R sound suppressor; SVD modernization kit handguard; NSPU-M 3.5x dovetail night vision scope or Cyclone Shakhin 3.7x thermal scope |\n| Knight's Armament Company SR-25 7.62x51 marksman rifle | SR-25 | 7.62x51mm M62 Tracer | AR-15 Strike Industries Viper Mod 1 stock; AR-10 KAC URX 4 14.5 inch handguard; Armasight Vulcan MG 3.5x Bravo night vision scope; NcSTAR MPR45 Backup mount with a Leupold DeltaPoint Reflex Sight; AAC 762-SDN-6 multi-caliber sound suppressor; Insight AN/PEQ-2 tactical device; Fortis Shift tactical foregrip; AR-15 Tactical Dynamics Skeletonized pistol grip |\n| TOZ Simonov SKS 7.62x39 carbine | TOZ Simonov SKS 7.62x39 carbine | 7.62x39mm BP gzh | SKS TAPCO Intrafuse chassis; AR-15 High Standard M4SS Stock; SKS Hexagon 7.62x39 sound suppressor; SKS 7.62x39 ProMag AALVX 35-round magazine |\n| Kalashnikov AKM 7.62x39 assault rifle | Kalashnikov AKM 7.62x39 assault rifle | 7.62x39mm BP gzh | Rotor 43 7.62x39 sound suppressor; AK 7.62x39 Molot Arms 6P2.Sb-11 40-round magazine |\n| Kalashnikov AKMN 7.62x39 assault rifle | Kalashnikov AKMN 7.62x39 assault rifle | 7.62x39mm BP gzh | AKM PBS-1 7.62x39 sound suppressor; NSPU-M 3.5x dovetail night vision scope or Cyclone Shakhin 3.7x thermal scope |\n| Kalashnikov AK-105 5.45x39 assault rifle | Kalashnikov AK-105 5.45x39 assault rifle | 5.45x39mm BP gs, 5.45x39mm PPBS gs Igolnik | AK-74 Hexagon 5.45x39 sound suppressor |\n| RPK-16 5.45x39 light machine gun | RPK-16 5.45x39 light machine gun | 5.45x39mm T gs, 5.45x39mm BP gs, 5.45x39mm PPBS gs Igolnik | AK-74 TGP-A 5.45x39 sound suppressor; AK-74 5.45x39 6L31 60-round magazine |\n| PP-19-01 Vityaz 9x19 submachine gun | PP-19-01 Vityaz 9x19 submachine gun | 9x19mm PBP gzh, 9x19mm Luger CCI, 9x19mm AP 6.3, 9x19mm Pst gzh | PP-19-01 Vityaz 9x19 sound suppressor |\n| SIG MPX 9x19 submachine gun | SIG MPX 9x19 submachine gun | 9x19mm QuakeMaker, 9x19mm RIP | MPX-SD 9x19 integrated sound suppressor; MPX 9x19 TTI \"Base Pad +11\" 41-round magazine |\n| SR-2M Veresk 9x21 submachine gun | SR-2M Veresk 9x21 submachine gun | 9x21mm BT gzh | TAC Variant |\n| TDI KRISS Vector Gen.2 .45 ACP submachine gun | TDI KRISS Vector Gen.2 .45 ACP submachine gun | .45 ACP AP | BCM GUNFIGHTER MOD 3 vertical foregrip; KRISS Vector non-folding stock adapter; SilencerCo Omega 45k .45 ACP sound suppressor |\n| B&T MP9 9x19 submachine gun | B&T MP9 9x19 submachine gun | 9x19mm QuakeMaker | MP9 9x19 sound suppressor; MP9 9x19 sound suppressor mount; Zenit Klesch-2U tactical flashlight; LaRue LT101 QD Tactical Picatinny Riser mount with a NcSTAR ADO P4 Sniper 3-9x42 riflescope; TangoDown Stubby BGV-MK46K foregrip; L3Harris AN/PEQ-15 tactical device |\n| RGD-5 hand grenade | RGD-5 hand grenade |\n| Cultist knife | Cultist knife |\n| 6Kh5 Bayonet | 6Kh5 Bayonet |\n| Bars A-2607 Damascus knife | Bars A-2607 Damascus knife |\n| UVSR Taiga-1 survival machete | UVSR Taiga-1 survival machete |\n|-|Face cover="
+    },
+    {
+      "heading": "Armor",
+      "level": 4,
+      "text": "| Name | Armor Class |\n| Atomic Defense CQCM ballistic mask (Black) | 3 |\n| Death Shadow mask | 2 |\n| Shattered mask | 1 |"
+    },
+    {
+      "heading": "Vanity",
+      "level": 4,
+      "text": "| Name |\n| Slender mask |\n| Misha Mayorov mask |\n| Ghoul mask |\n| Pestily plague mask |\n| GP-5 gas mask |\n| GP-7 gas mask |\n| Respirator |\n| Lower half-mask |\n| Balaclava |\n| Cold Fear infrared balaclava |\n| Ghost balaclava |\n|-|Body armor=\n| Body armor | Armor Class |\n| NFM THOR Integrated Carrier body armor | 6 |\n| LBT-6094A Slick Plate Carrier (Black) | 6 |\n| LBT-6094A Slick Plate Carrier (Olive Drab) | 6 |\n| LBT-6094A Slick Plate Carrier (Coyote Tan) | 6 |\n| 5.11 Tactical Hexgrid plate carrier | 6 |\n| NPP KlASS Korund-VM body armor (Black) | 5 |\n| FORT Defender-2 body armor | 5 |\n| FORT Redut-M body armor | 5 |\n| 6B13 assault armor (Flora) | 4 |\n| 6B13 assault armor (EMR) | 4 |\n| BNTI Zhuk body armor (Press) | 3 |\n| MF-UNTAR body armor | 3 |\n| PACA Soft Armor | 2 |\n|-|Chest rigs=\n| Chest rig | Armor Class |\n| Tasmanian Tiger SK plate carrier (MultiCam Black) | 6 |\n| Eagle Industries MMAC plate carrier (Ranger Green) | 4 |\n| WARTECH MK3 TV-104 chest rig (MultiCam) | - |\n| Gear Craft GC-BSS-MK1 chest rig (A-TACS FG) | - |\n| Haley Strategic D3CRX Chest Harness (Ranger Green) | - |\n| LBT-1961A Load Bearing Chest Rig (MAS Grey) | - |\n| Dynaforce Triton M43-A chest harness (Black) | - |\n| BlackHawk! Commando chest harness (Black) | - |\n| Spiritus Systems Bank Robber chest rig (MultiCam Black) | - |\n| SOE Micro Rig (MultiCam) | - |\n|-|Backpacks=\n| Backpack |\n| Direct Action Dragon Egg Mark II backpack (Black) |\n| Gruppa 99 T30 backpack (Black) |\n| LBT-8005A Day Pack backpack (MultiCam Black) |\n| Oakley Mechanism heavy duty backpack (Black) |\n| VKBO army bag |\n| Transformer Bag |\n|-|Items=\nCultist warriors can spawn with any key or keycard in their pockets."
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The cultist priest's name is always Zhrets (| zhrɛts |) which, in Russian, denotes a priest that performs sacrifices and doesn't serve the Christian God.\n- Cultist warrior names are hidden, instead appearing as \"Sektant\", a loose translation of \"Cultist\" to Russian.\n  - Zryachiy's followers also show up as \"Sektant\" in the kill list, but are not the exact same AI type as regular Cultists, and therefore do not count for Cultist related quests or achievements."
+    }
+  ]
+}

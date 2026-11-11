@@ -1,0 +1,59 @@
+{
+  "title": "OLI administration office key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OLI_administration_office_key",
+  "revisionId": 306411,
+  "lastEdited": "2025-03-09T12:49:35Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽1,250",
+    "usage": "Unlocks the door to the OLI administrator office on Interchange.",
+    "loot xp": "20",
+    "exam xp": "10",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ad5ccd186f774446d5706e9",
+    "ID": "Key_Shopping_Mall_office_1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "OLI administration office key (OLI office) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the OLI administration office at the ULTRA shopping mall."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On a table in the health resort East wing, room 322."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "The OLI administrator office is across the restrooms, inside the OLI Hardware Store in the Ultra shopping mall on the map Interchange."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 1x PC\n- Loose loot"
+    }
+  ]
+}

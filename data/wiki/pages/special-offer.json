@@ -1,0 +1,44 @@
+{
+  "title": "Special Offer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Special_Offer",
+  "revisionId": 359689,
+  "lastEdited": "2026-09-13T20:20:28Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Ragman",
+    "previous": "Circulate",
+    "leads to": "Combat Proven",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Special Offer is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Got another job for you, brother! I see the demand for backpacks, can't lose profit now. I've only got basic backpacks, so I need to bring in some exclusive items. That'll bring in more customers. You know what I mean, right? If you get some really rare rigs and backpacks, I'll be in your debt!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Find Sanitar's bag in raid\n- Hand over the equipment\n- Find Crye Precision AVS plate carrier (Tagilla Edition) in raid\n- Hand over the equipment\n- Find LBT-1961A Load Bearing Chest Rig (Goons Edition) in raid\n- Hand over the equipment\n- Find Mystery Ranch NICE COMM 3 BVS frame system (Coyote) in raid\n- Hand over the equipment\n- Find Crye Precision CPC plate carrier (Goons Edition) in raid\n- Hand over the equipment"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +85,500 EXP\n- Ragman Rep +0.03\n- 328,000 Roubles\n  - 344,400 Roubles with Intelligence Center Level 1\n  - 377,200 Roubles with Intelligence Center Level 2\n- 2× Walker's XCEL 500BT Digital headset\n- 2× Diamond Age Bastion helmet (Black)\n\"You know what? These thingies are so good I'm gonna measure them and produce them myself. They're gonna sell out instantly!\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Sanitar's bag | 1 | Handover item | Yes | Can be found on Sanitar |\n| Crye Precision AVS plate carrier (Tagilla Edition) | 1 | Handover item | Yes | Can be found on Tagilla |\n| LBT-1961A Load Bearing Chest Rig (Goons Edition) | 1 | Handover item | Yes | Can be found on Birdeye |\n| Mystery Ranch NICE COMM 3 BVS frame system (Coyote) | 1 | Handover item | Yes | Can be found on Birdeye |\n| Crye Precision CPC plate carrier (Goons Edition) | 1 | Handover item | Yes | Can be found on Knight |\nThe required equipment can be obtained from their respective bosses or the Cultist Circle."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Preserve a Valuable Piece",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Preserve_a_Valuable_Piece",
+  "revisionId": 362111,
+  "lastEdited": "2026-09-24T19:51:53Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Lightkeeper",
+    "previous": "Callsign Malachite",
+    "related": "Cut Down to the Root",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Preserve a Valuable Piece is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The Rogues' retreat to the chalets was the only correct move given the situation they found themselves in. And I'm quite satisfied with the new balance of power on my territory. But I know some people want to destroy the Rogues completely, removing one of the factions from the conflict. That cannot be allowed. So, if you're interested in strengthening your position at the lighthouse, you may take part in their defense. You don't need to enter the chalets themselves. The Rogues will shoot at you as well. But I'm willing to pay for eliminating PMC operatives in this part of the coast. Just don't work against me.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 7 PMC operatives on Lighthouse"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +40,000 EXP\n- 1× Substation marked key\n\"It's good that you managed to avoid any surprises. Without your involvement, the Rogues would've had a much harder time surviving those first few weeks.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"It's surprising that you decided to come here after the choice you made. If your disobedience had led to serious consequences, Zryachiy would've intercepted you by now. But I never intended to rely heavily on a mercenary like you in the first place. You needn't come unless there's an urgent reason. I'll entrust serious work to others.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "By completing Cut Down to the Root, you fail and will lose access to this quest."
+    }
+  ]
+}

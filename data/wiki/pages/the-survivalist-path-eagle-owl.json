@@ -1,0 +1,45 @@
+{
+  "title": "The Survivalist Path - Eagle-Owl",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Eagle-Owl",
+  "revisionId": 359787,
+  "lastEdited": "2026-09-13T20:22:05Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "The survivalist path - Eagle-owl"
+  ],
+  "infobox": {
+    "given by": "Jaeger",
+    "previous": "The Survivalist Path - Tough Guy",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "The Survivalist Path - Eagle-Owl is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"As I've read in one article, the human eye can get used to the darkness. You know, I wanted to check, and I almost broke my leg in a deadfall. Guess I'm a little old for such a metamorphosis. But you, I think, are in the prime of life. A well-trained night eyesight can help us very much in our difficult tasks. So take care of this. You're a tough guy, you can take a punch. But what if you can't see anything at night and suddenly get ambushed by some scum? Those things happen quite often, not everyone can take NVG's into their raids. So, show me how you see in the dark, without any gadgets.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 6 Scavs in the time period of 21:00-04:00 without using any NVGs or thermal sights (Excluding Factory)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +5,900 EXP\n- +0.5 Perception skill level\n- Jaeger Rep +0.02\n- 40,000 Roubles\n  - 42,000 Roubles with Intelligence Center Level 1\n  - 46,000 Roubles with Intelligence Center Level 2\n- 3× Armasight Vulcan MG 3.5x Bravo night vision scope\n\"How many you say there were, six? And you got them all without the \"goggles\"? Indeed, you are a great night hunter, kid.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 6 Scavs on any map aside from Factory in the time period of 21:00-04:00 without using any night vision devices, thermal vision devices, night vision scopes or thermal vision sights. Equipped but switched off devices still prevent quest progress."
+    }
+  ]
+}

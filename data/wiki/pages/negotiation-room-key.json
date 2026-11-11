@@ -1,0 +1,63 @@
+{
+  "title": "\"Negotiation\" room key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/%22Negotiation%22_room_key",
+  "revisionId": 358459,
+  "lastEdited": "2026-09-10T21:29:20Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [
+    "Negotiation"
+  ],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the negotiation room inside the Zmeisky 6 building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "6582dbe43a2e5248357dbe9a",
+    "ID": "city14_key11"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "\"Negotiation\" room key (Negotiation) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the room for important meetings inside one of the city offices."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Corporate Perks"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "In the middle office inside the Zmeisky 6 building at Streets of Tarkov."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the negotiation room inside the Zmeisky 6 building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot (Valuables, Drinks, Building materials, Electronics)\n- Medbag\n- PC block\n- Relaxation room key spawn location on the metal table"
+    }
+  ]
+}

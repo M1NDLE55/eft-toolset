@@ -1,0 +1,56 @@
+{
+  "title": "Compartment C-1 keycard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Compartment_C-1_keycard",
+  "revisionId": 346978,
+  "lastEdited": "2026-06-16T14:09:18Z",
+  "kind": "key",
+  "categories": [
+    "Keycards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Keycard",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the server room on Icebreaker.",
+    "storage_wallet": "Yes",
+    "storage_keytool": "No",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "69bb3f278af9f360ee010a7a",
+    "ID": "item_ice_card_captain1"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Compartment C-1 keycard (C-1) is a Keycard in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A plain keycard belonging to the captain. Someone has handwritten \"C-1 Boreas\" on it with a marker."
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the story chapter Boreas"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "In the left hand of a body on level 9 of Icebreaker. A single keycard is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door to the server room on level 7 of Icebreaker."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- 2x PC block\n- Loose loot (Electronics)"
+    }
+  ]
+}

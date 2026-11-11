@@ -1,0 +1,45 @@
+{
+  "title": "Another Shipping Delay",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Another_Shipping_Delay",
+  "revisionId": 359080,
+  "lastEdited": "2026-09-13T20:10:06Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Ragman",
+    "previous": "Fail Hot Wheels, Natural Exchange",
+    "leads to": "Ask for Directions",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Another Shipping Delay is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey, brother! You say the BTR driver wants to leave Skier's gang? You know, that kind of transport would be good for my trade. But you do realize Skier won't appreciate such a move, and it's a risk to my business. Anyway, it's a lot to think about and weigh. Though, you can make the driver's offer more convincing. I got some urgent business to take care of. I lost contact with one of my crews. The guys were running a delivery and they were supposed to be back by now. Return to me if you find any sign of them.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the missing courier crew on Woods\n- Survive and extract from the location"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +12,800 EXP\n- Ragman Rep +0.02\n- 67,000 Roubles\n  - 70,350 Roubles with Intelligence Center Level 1\n  - 77,050 Roubles with Intelligence Center Level 2\n- 2× Peltor ComTac V headset (OD Green)\n\"Someone's iced the couriers, huh? This means I have to switch routes, I've got three more trips planned! Man, I can't stop the trade, I need new routes. Maybe your driver friend could give some tips? Go ask him where I can move the goods safely. Pretty please.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to locate Ragman's missing courier on Woods. He can be found next to his burnt-out car at the gate between the big junction and the sawmill. Walk through the gate to complete the objective."
+    }
+  ]
+}

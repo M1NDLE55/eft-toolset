@@ -1,0 +1,58 @@
+{
+  "title": "Black Swan",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Black_Swan",
+  "revisionId": 360499,
+  "lastEdited": "2026-09-17T20:32:03Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Factory",
+    "given by": "Mechanic",
+    "reqkappa": "Yes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Black Swan is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, mercenary. I've been asking myself the same question all day: why does no one notice the obvious patterns in platinum price fluctuations? A crisis is coming, and they keep calling me a pessimist... That's alright. We'll see how much they're willing to pay for platinum once the prices go through the roof. I need to prepare. There are old heat exchangers scattered across Tarkov, and they still contain Soviet-era corrugated tubing with platinum inserts. Would you help me replenish my reserves? Just mark the heat exchangers with strobes, and I'll pay you well.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 2 with Mechanic to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and mark any of the heat exchangers with an MS2000 Marker on Factory"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +10,000 EXP\n- Mechanic Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence center Level 1\n  - 189,750 Roubles with Intelligence center Level 2\n\"The marker is in place? Good. That'll make preparing for the crisis much easier.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount | Notes |\n| MS2000 Marker | 1 | This item is placed on the heat exchanger. When placed, the item is removed from the players' inventory. |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed on the heat exchanger. When placed, the item is removed from the players' inventory. |\nIn this quest you have to find and mark 1 of 3 possible heat exchangers in the underground tunnels on Factory with an MS2000 Marker."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- You can buy additional MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
+    }
+  ]
+}

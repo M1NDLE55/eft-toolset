@@ -1,0 +1,49 @@
+{
+  "title": "All This Filth...",
+  "url": "https://escapefromtarkov.fandom.com/wiki/All_This_Filth...",
+  "revisionId": 359074,
+  "lastEdited": "2026-09-13T20:10:00Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Woods",
+    "given by": "Jaeger",
+    "previous": "Accept The Huntsman Path - Woods Keeper",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "All This Filth... is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hey there, boy! Come on in. I've got a job for you, an important one. Remember when I asked you to rid the sawmill of scum? Well, it seems that they returned for good now. Shturman and his friends are once again bringing fear into people all around the area, however, I can't deal with them myself. Please, help me get rid of those bandits, and I won't disappoint with the reward. Mechanic introduced me to a new supplier, they're selling me some good and powerful western rifles, the .338 caliber ones. If you help me, you can get some of those for yourself, for shooting elephants, you know. A proper weapon for a good hunt! Well, boy, I'll be waiting for news from you.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must reach Loyalty Level 4 with Jaeger to obtain this quest."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate Shturman 20 times"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- 100,000 Roubles\n  - 105,000 Roubles with Intelligence Center Level 1\n  - 115,000 Roubles with Intelligence Center Level 2\n- 1× Weapon case\n- 1× Chain with Prokill medallion\n- Unlocks purchase of SWORD International Mk-18 .338 LM marksman rifle at Jaeger LL4\n\"The air in the whole Woods trembled from such furious firefight. The scum got what he deserved, and all thanks to you. Here, the appropriate reward for such a feat. Don't be shy, you can buy the new rifles too.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill Shturman 20 times."
+    }
+  ]
+}

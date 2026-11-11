@@ -1,0 +1,51 @@
+{
+  "title": "Store manager's key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Store_manager's_key",
+  "revisionId": 304661,
+  "lastEdited": "2025-01-26T10:14:41Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the manager's office on the second floor of the \"Sparja\" store on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "63a39c69af870e651d58e6aa",
+    "ID": "city_key4"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Store manager's key (Store) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to manager's office room inside one of the city stores."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Office on the second floor of the \"Sparja\" store at Streets of Tarkov. It can be accessed via the staircase in the eastern personnel tract."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- 2x Drawer\n- 1x PC block\n- 1x Safe\n- 1x Sport bag\n- Loose loot (Flammable materials, Household materials)"
+    }
+  ]
+}

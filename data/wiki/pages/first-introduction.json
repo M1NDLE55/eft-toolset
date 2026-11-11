@@ -1,0 +1,39 @@
+{
+  "title": "First Introduction",
+  "url": "https://escapefromtarkov.fandom.com/wiki/First_Introduction",
+  "revisionId": 359290,
+  "lastEdited": "2026-09-13T20:13:41Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Arena",
+    "given by": "Ref",
+    "leads to": "Gladiator Life - Part 1",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "First Introduction is a Quest in Escape from Tarkov Arena."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Well hello there, fighter! Welcome to the Arena. You want to make a name for yourself here? Not so fast! First, you need to learn how things work around here. And for now, get your ass into the arena. Let's see how you handle yourself in a real fight.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Play a match in Last Hero or CheckPoint mode"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +1,800 EXP\n- Ref Rep +0.01\n- 300,000 Roubles"
+    }
+  ]
+}

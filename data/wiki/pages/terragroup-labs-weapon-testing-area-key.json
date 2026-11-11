@@ -1,0 +1,66 @@
+{
+  "title": "TerraGroup Labs weapon testing area key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_weapon_testing_area_key",
+  "revisionId": 358755,
+  "lastEdited": "2026-09-10T23:05:01Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the door to the laboratory weapon testing area (O11) in The Lab.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5c1e2d1f86f77431e9280bee",
+    "ID": "item_lab_test_weapon"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "TerraGroup Labs weapon testing area key (TGL WT) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to the TerraGroup Labs Weapon testing area."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can unlock two separate doors leading to the same room.\n- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Quests",
+      "level": 2,
+      "text": "- This is a required location for the quest Following the Bread Crumbs"
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- On the first level in room R15 (Gym) on a stool\n\n- On the second level in room B21 (above the Server Room - B12) on the kitchen counter\n\n- On the bottom of a shelf left of the entrance to room R23"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Laboratory weapon testing area (O11) on the first level in The Lab."
+    },
+    {
+      "heading": "Behind The Lock",
+      "level": 2,
+      "text": "- One Weapon box (4x4)\n- One Weapon box (6x6)\n- Possible weapon spawns\n- Loose loot (Weapon mods and ammunition)"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "title": "A Familiar Face...",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A_Familiar_Face...",
+  "revisionId": 360072,
+  "lastEdited": "2026-09-14T09:15:56Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [
+    "A Familiar Face"
+  ],
+  "infobox": {
+    "location": "Lighthouse",
+    "given by": "Skier",
+    "previous": "All-Inclusive Support",
+    "leads to": "Scope the Clearing",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "A Familiar Face... is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Alright, mate! Heard yet that the smugglers kicked the Rogues out of their base at the treatment plant? If you ask me, that sounds pretty fucking bad. I've been at odds with those muppets ever since that whole thing with Peacekeeper, and I don't want to see them getting any stronger. This victory of theirs already says a fucking lot... Don't know yet how to put the squeeze on 'em effectively. But we still need to gather intel. Think you can get in good with them, find out what's what at the train station? Y'know, the place they launched their assault on the treatment plant from. Don't need to do anything fancy! Just throw on some basic gear and keep an eye on 'em.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Extract from Lighthouse through the Armored Train while wearing a Kirasa-N or NFM THOR CRV body armor"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +15,000 EXP\n- 1,800 Euros\n  - 1,890 Euros with Intelligence Center Level 1\n  - 2,070 Euros with Intelligence Center Level 2\n- 2× CENS ProFlex DX5 tactical earplug\n\"Judging by your intel, the smugglers spent a shitload themselves in that scrap with the Rogues. Well, at least there's that, eh. But we still can't let our guard down. They'll sure as hell try to dig in there. We need to keep tabs on 'em.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| BNTI Kirasa-N body armor; or; BNTI Kirasa-N body armor (Green); or; NFM THOR Concealable Reinforced Vest body armor; or; NFM THOR Concealable Reinforced Vest body armor (Head Eyes) | BNTI Kirasa-N body armor; or; BNTI Kirasa-N body armor (Green); or; NFM THOR Concealable Reinforced Vest body armor; or; NFM THOR Concealable Reinforced Vest body armor (Head Eyes) | As many as needed | Required | N/A | Worn by the player while using the extraction |"
+    }
+  ]
+}

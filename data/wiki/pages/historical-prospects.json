@@ -1,0 +1,64 @@
+{
+  "title": "Historical Prospects",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Historical_Prospects",
+  "revisionId": 360123,
+  "lastEdited": "2026-09-15T05:53:04Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Customs, Woods, Streets of Tarkov",
+    "given by": "Lightkeeper",
+    "previous": "...for the Good of the Chosen",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Historical Prospects is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"It's better to discuss that with the Witnesses. They're willing to do anything to see the new world. Most will never rise to prominence under the new rules. But even the smallest actions and events will become the foundation humanity will rely upon after the transition. You probably won't understand the essence of the process you've already become a part of simply by being in Tarkov. Black Division has a special role to play, but even they aren't destined for rebirth. They'll pave the way, a path that only a select few will be permitted to walk. If you resist the inevitable, Black Division will come for you as well. It would be wiser to accept reality. The Witnesses report that a PMC group is interfering with Black Division's night-time operations. Put an end to it, and bring the dogtags of those you kill to the ritual sites as proof.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 3 PMC operatives during 22:00-08:00 on Customs\n- Stash 3 PMC dogtags in the marked room on Customs\n- Eliminate 3 PMC operatives during 22:00-08:00 on Woods\n- Stash 3 PMC dogtags at the abandoned village marked circle on Woods\n- Eliminate 3 PMC operatives during 22:00-08:00 on Streets of Tarkov\n- Stash 3 PMC dogtags in the marked circle in Nikitskaya St. 8 second floor apartment on Streets of Tarkov"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +100,000 EXP\n- 1× RB-PKPM marked key\n- 1× Briefcase with documents\n- 2× Physical Bitcoin\n- 1× Substation marked key\n- Unlocks achievement Among Strangers\n\"You're trying to oversimplify the situation. I've never met Thomas personally, but I understand how he sees the world. Years of service in the SAS have done their work, and after the incident that got him removed from active duty... Nothing surprises me. In Black Division, he works on operations to clear facilities and eliminate targets, and he likely wouldn't find a better use for himself anywhere else. Wedge became, or rather made himself into, a tool perfectly suited for specific tasks, but no longer useful for anything else. Of course, he doesn't believe in rebirth or the new order that will come afterward. But history has never depended on the faith or opinions of the people caught in its millstones.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Dorm room 314 marked key | 1 | Required | N/A | Unlocks the marked room on Customs |\n| Dogtag | 9 | Required | No | Stashed item |"
+    },
+    {
+      "heading": "Customs marked room",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Woods marked circle at the abandoned village",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Streets of Tarkov marked circle in Nikitskaya St. 8 second floor apartment",
+      "level": 4,
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": "TerraGroup security armory key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_security_armory_key",
+  "revisionId": 358770,
+  "lastEdited": "2026-09-10T23:06:02Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the security armory on the first floor of the TerraGroup security post building on Streets of Tarkov.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "64ccc24de61ea448b507d34d",
+    "ID": "city_key38"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "TerraGroup security armory key (TG arm.) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key to TerraGroup's office security armory."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Drawers\n- In Jackets\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Security armory on the first floor of the TerraGroup security post building at Streets of Tarkov."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "- Loose loot ()\n- 1x Weapon box (6x6)\n- 1x Weapon box (4x4)\n- 1x PC block\n- 2x Wooden crate\n- 1x Grenade box\n- 1x Weapon locker\n- 2x Weapon rack (possible M4A1 Carbine variant spawn)"
+    }
+  ]
+}

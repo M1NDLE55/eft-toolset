@@ -1,0 +1,49 @@
+{
+  "title": "Stay Clear of Blast Zone",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stay_Clear_of_Blast_Zone",
+  "revisionId": 359698,
+  "lastEdited": "2026-09-13T20:20:37Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Shoreline",
+    "given by": "Jaeger",
+    "previous": "Accept Desperate Assault",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Stay Clear of Blast Zone is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Come on, have a seat, no point standing around... You didn't run into those black-clad soldiers on your way here, did you? Good. Partisan crossed paths with them while pulling back not long ago, barely made it out alive. Something has to be done about them, or this will end badly. And I'm not talking about pillaging like the Scavs do. This is a far more serious threat. Those fsoldiers are more dangerous than anyone else we've dealt with. Which is exactly why meeting them head-on would be a mistake. Hunters set traps instead of charging wolves with a knife for a reason. These soldiers keep searching around our local health resort. That's where we'll hit them. I need you to plant TNT charges at every entrance to the grounds. Partisan will take up a position in the nearby forest and finish off the group once the explosions have done their work.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Plant a TP-200 TNT brick at the Health Resort west side fence breach on Shoreline\n- Plant a TP-200 TNT brick at the Health Resort north side fence breach on Shoreline\n- Plant a TP-200 TNT brick at the Health Resort east side fence breach on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +30,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 1× HK G28 7.62x51 marksman rifle\n- 3× HK417/G28 7.62x51 10-round magazine\n- 2× 7.62x51mm M62 Tracer ammo pack (20 pcs)\n\"Think I heard a couple of those blasts myself. Sounds like Partisan settled the score with the ones who jumped him last time. You need to know your enemy, and you need to know your own limits. It worked this time, but this won't be the end of it. So watch yourself, and don't go looking for trouble.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| TP-200 TNT brick | 3 | Required | N/A | Stashed item |\nIn this quest you have to plant 3 TP-200 TNT bricks at the breaches of the health resort fence on Shoreline."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Confidential Info",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Confidential_Info",
+  "revisionId": 359194,
+  "lastEdited": "2026-09-13T20:12:02Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "The Labyrinth",
+    "given by": "Peacekeeper",
+    "previous": "Offensive Reconnaissance",
+    "leads to": "Keeper's Word",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Confidential Info is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Greetings, my friend. According to my information, you've gained access to one of TerraGroup's abandoned facilities. We've witnessed many times what happens when dangerous developments fall into the hands of unqualified people. Our partners are very concerned about what happened in Tarkov after that outbreak in the Laboratory. There's no way we're going to let this crisis happen again. That's why I have a high-priority assignment for you. I need to retrieve a storage device containing sensitive information from that facility. The details are highly classified. The client can trace an independent attempt to read the data and cancel the contract, so please do not even attempt it. In addition to the storage device, I was told that there is also a maintenance room on the site, the client has said that it should look like a workshop. It must be destroyed or at least damaged. But be careful with the explosives: we don't want you perishing with the storage device.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and obtain the special storage module inside The Labyrinth\n- Plant a hand grenade in the assembly workshop inside Labyrinth\n- Hand over the found information"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +28,000EXP\n- Dollars\n  - Dollars with Intelligence Center Level 1\n  - 2,327 Dollars with Intelligence Center Level 2\n- 1× AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine\n- 1× Final Moment poster\n- Unlock purchase of AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine at Peacekeeper LL4\n\"Great job, my friend! My partner especially appreciates your respect for privacy and requested a proper reward for you.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| | Any fragmentation grenade | 1 | Required | N/A | Stashed item |\n| VPX Flash Storage Module marked Group 3 | VPX Flash Storage Module marked Group #3 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you first have to find a special storage module in the prototype weapon area inside The Labyrinth. Afterwards you have to stash a fragmentation grenade in the prototype weapon. Note: The F-1 hand grenade (Reduced delay) can't be used."
+    }
+  ]
+}
