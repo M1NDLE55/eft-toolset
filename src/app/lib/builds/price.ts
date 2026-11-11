@@ -145,6 +145,65 @@ export function priceChoice(
   return choices.reduce<PriceChoice | null>((best, choice) => (!best || choice.priceRUB < best.priceRUB ? choice : best), null);
 }
 
+export function traderLabel(trader: string, level: number | null | undefined) {
+  return `${trader}${level ? ` LL${level}` : ""}`;
+}
+
 export function offerLabel(offer: { trader: string; level: number | null; preset?: string }) {
-  return `${offer.trader}${offer.level ? ` LL${offer.level}` : ""}${offer.preset ? " (default preset)" : ""}`;
+  return `${traderLabel(offer.trader, offer.level)}${offer.preset ? " (default preset)" : ""}`;
+}
+
+/** A trader price and the trader who charges it, kept together so a label never describes another offer. */
+export interface TraderQuote {
+  priceRUB: number;
+  trader: string | null;
+  level: number | null;
+  /** The task the offer needs first, if any. */
+  task: string | null;
+  /** The offer quoted, when the item lists its offers. */
+  offer: TraderOffer | null;
+}
+
+/**
+ * The cheapest allowed trader offer. `preset` narrows a weapon's offers to the bare weapon (false)
+ * or its default preset (true); left out, every offer counts.
+ */
+export function traderQuote(item: Offered, limits: TraderLimits | null, preset?: boolean): TraderQuote | null {
+  if (item.traderOffers) {
+    const offers = preset === undefined ? item.traderOffers : item.traderOffers.filter((offer) => Boolean(offer.preset) === preset);
+    const offer = bestOffer(offers, limits);
+    const price = positive(offer?.priceRUB);
+    if (!offer || price === null) return null;
+    return { priceRUB: price, trader: offer.trader, level: offer.level, task: offer.taskUnlock?.name ?? null, offer };
+  }
+  // Items without offer lists only have a price for the item itself.
+  const price = preset ? null : positive(item.traderPriceRUB);
+  if (price === null) return null;
+  return { priceRUB: price, trader: item.traderName ?? null, level: item.traderLevel ?? null, task: item.traderTask ?? null, offer: null };
+}
+
+/** Where a chosen price comes from, for showing under that price. */
+export interface SourceLabel {
+  label: string;
+  /** The task the offer needs first, if any. */
+  task: string | null;
+}
+
+/**
+ * Labels the source of a price choice. A flea price is labelled as the flea market, never with the
+ * trader who sells the item at another price.
+ */
+export function sourceLabel(
+  choice: PriceChoice | null,
+  item: { traderName?: string | null; traderLevel?: number | null; traderTask?: string | null }
+): SourceLabel | null {
+  if (!choice) return null;
+  if (choice.source === "flea") return { label: "Flea", task: null };
+  if (choice.offer) {
+    const label = offerLabel(choice.offer);
+    return { label: choice.source === "barter" ? `${label} barter` : label, task: choice.offer.taskUnlock?.name ?? null };
+  }
+  if (choice.source === "barter") return { label: "Barter", task: null };
+  // Without an offer list, the item's trader fields describe its trader price.
+  return item.traderName ? { label: traderLabel(item.traderName, item.traderLevel), task: item.traderTask ?? null } : null;
 }

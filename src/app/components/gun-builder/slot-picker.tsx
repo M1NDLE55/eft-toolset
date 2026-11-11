@@ -3,10 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { AlertTriangle, ArrowDown, ArrowUp, ArrowUpRight, Check, LoaderCircle, Lock, Search, Trash2 } from "lucide-react";
+import { AlertTriangle, ArrowDown, ArrowUp, ArrowUpRight, Check, LoaderCircle, Search, Trash2 } from "lucide-react";
 import type { BuildNode, GunItem, ModSlotDef, PriceSources } from "@/app/lib/types/gunBuilder";
 import type { ItemLookup } from "@/app/lib/builds/stats";
-import { effectivePrice } from "@/app/lib/builds/price";
 import { nodeAt } from "@/app/lib/builds/tree";
 import { conflictReason, installedOutside } from "@/app/lib/builds/conflicts";
 import { itemHref } from "@/app/lib/item-links";
@@ -21,7 +20,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-import { formatErgo, formatRecoilModifier, formatRub, formatTrader, formatWeight, traderTaskHint } from "./format";
+import { formatErgo, formatRecoilModifier, formatRub, formatWeight, shownPrice, type ShownPrice } from "./format";
+import { PriceSource } from "./price-source";
 
 export interface PickerTarget {
   parentPath: string[];
@@ -47,6 +47,7 @@ const EMPTY_IDS: string[] = [];
 interface Candidate {
   item: GunItem;
   price: number | null;
+  shown: ShownPrice;
   reason: string | null;
 }
 
@@ -148,11 +149,15 @@ function PickerBody({
         item.name.toLowerCase().includes(phrase) ||
         item.shortName.toLowerCase().includes(phrase)
     )
-    .map((item) => ({
-      item,
-      price: effectivePrice(item, priceSources),
-      reason: item.id === target.currentItemId ? null : conflictReason(item, target.slotId, installed, lookup),
-    }))
+    .map((item) => {
+      const shown = shownPrice(item, priceSources);
+      return {
+        item,
+        price: shown.price,
+        shown,
+        reason: item.id === target.currentItemId ? null : conflictReason(item, target.slotId, installed, lookup),
+      };
+    })
     .sort((a, b) => {
       if (Boolean(a.reason) !== Boolean(b.reason)) return a.reason ? 1 : -1;
       return compare(a, b, sort.key, sort.descending);
@@ -293,7 +298,7 @@ function PickerBody({
               <span className="h-4 flex-1 animate-shimmer" />
             </li>
           ))}
-        {candidates.map(({ item, price, reason }) => {
+        {candidates.map(({ item, price, shown, reason }) => {
           const current = item.id === target.currentItemId;
           return (
             <li key={item.id} className="border-t border-[#141414] first:border-t-0">
@@ -333,12 +338,7 @@ function PickerBody({
                       <span>{formatRecoilModifier(item.recoilModifier)}</span>
                       <span>{formatWeight(item.weight)}</span>
                       <span className="text-[#ccc]">{formatRub(price)}</span>
-                      {formatTrader(item) && (
-                        <span className="inline-flex items-center gap-1 text-[#9a8866]" title={traderTaskHint(item)}>
-                          {formatTrader(item)}
-                          {item.traderTask && <Lock aria-label={traderTaskHint(item)} className="h-3 w-3" />}
-                        </span>
-                      )}
+                      <PriceSource shown={shown} />
                     </span>
                   )}
                 </span>
@@ -352,12 +352,7 @@ function PickerBody({
                   <span className="w-16 text-right text-[#888]">{formatWeight(item.weight)}</span>
                   <span className="flex w-24 flex-col items-end">
                     <span className="text-[#ccc]">{formatRub(price)}</span>
-                    {formatTrader(item) && (
-                      <span className="flex max-w-24 items-center gap-1 text-[10px] text-[#9a8866]" title={traderTaskHint(item)}>
-                        <span className="truncate">{formatTrader(item)}</span>
-                        {item.traderTask && <Lock aria-label={traderTaskHint(item)} className="h-2.5 w-2.5 shrink-0" />}
-                      </span>
-                    )}
+                    <PriceSource shown={shown} className="flex max-w-24 text-[10px]" lockClassName="h-2.5 w-2.5" />
                   </span>
                 </span>
                 {applying === item.id ? (

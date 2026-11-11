@@ -1,4 +1,6 @@
 import { Rubles } from "@/app/lib/currency";
+import { priceChoice, sourceLabel, traderLabel, traderQuote, type SourceLabel } from "@/app/lib/builds/price";
+import type { PriceSources, TraderOffer } from "@/app/lib/types/gunBuilder";
 
 export function formatErgo(value: number) {
   const rounded = Math.round(value * 10) / 10;
@@ -30,11 +32,36 @@ export function formatWeight(value: number) {
   return `${value.toFixed(2)} kg`;
 }
 
-export function formatTrader(item: { traderName?: string | null; traderLevel?: number | null }) {
-  if (!item.traderName) return null;
-  return item.traderLevel ? `${item.traderName} LL${item.traderLevel}` : item.traderName;
+export function taskHint(task: string | null | undefined) {
+  return task ? `After the task ${task}` : undefined;
 }
 
-export function traderTaskHint(item: { traderTask?: string | null }) {
-  return item.traderTask ? `After the task ${item.traderTask}` : undefined;
+interface Sold {
+  traderPriceRUB: number | null;
+  fleaPriceRUB: number | null;
+  traderName?: string | null;
+  traderLevel?: number | null;
+  traderTask?: string | null;
+  traderOffers?: readonly TraderOffer[];
+}
+
+export interface ShownPrice {
+  price: number | null;
+  /** Where price comes from, to show under it. */
+  source: SourceLabel | null;
+  /** The trader offer passed over for a cheaper flea price, with its own price and task. */
+  traderNote: string | undefined;
+}
+
+/** An item's price from the selected sources, labelled with the source that charges it. */
+export function shownPrice(item: Sold, sources: PriceSources): ShownPrice {
+  const choice = priceChoice(item, sources, null);
+  const quote = choice?.source === "flea" && sources.traders ? traderQuote(item, null) : null;
+  return {
+    price: choice?.priceRUB ?? null,
+    source: sourceLabel(choice, item),
+    traderNote: quote
+      ? `${quote.trader ? traderLabel(quote.trader, quote.level) : "A trader"} sells it for ${formatRub(quote.priceRUB)}${quote.task ? ` after the task ${quote.task}` : ""}`
+      : undefined,
+  };
 }

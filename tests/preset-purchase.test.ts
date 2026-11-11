@@ -141,6 +141,64 @@ describe("buying a weapon as its default preset", () => {
   });
 });
 
+describe("the shopping list's trader column for a weapon bought as its preset", () => {
+  const BOTH: PriceSources = { traders: true, flea: true };
+  // Like the M4A1: a trader sells the bare receiver cheaply, only the flea market sells the preset.
+  const bareOnly = weapon([{ trader: "Mechanic", priceRUB: 22_997, level: 3 }], { fleaPriceRUB: 59_840 });
+  const data = (gun: BuildItemData) =>
+    new Map([gun, ...parts.map((part) => ({ ...part, traderPriceRUB: 40_000 }))].map((entry) => [entry.id, entry]));
+
+  it("shows no trader price when no trader sells the preset, not the bare weapon's offer", () => {
+    const list = buildShoppingList(factory, data(bareOnly), BOTH, true, { preset });
+    expect(list.rows[0]).toMatchObject({
+      itemId: "gun",
+      source: "flea",
+      unitPriceRUB: 59_840,
+      traderPriceRUB: null,
+      traderName: null,
+      traderLevel: null,
+    });
+    const weaponLine = formatShoppingList(list, { buildName: "M4", weaponName: "gun", modeLabel: "PVP" })
+      .split("\n")
+      .find((line) => line.startsWith("gun "));
+    expect(weaponLine).not.toMatch(/22,997|Mechanic/);
+    expect(weaponLine).toMatch(/59,840\*\s+Flea$/);
+  });
+
+  it("shows the trader's preset offer when one sells it, beside a cheaper flea price", () => {
+    const gun = weapon(
+      [
+        { trader: "Mechanic", priceRUB: 22_997, level: 3 },
+        { trader: "Prapor", priceRUB: 70_000, level: 2, preset: "Gun Default" },
+      ],
+      { fleaPriceRUB: 59_840 }
+    );
+    expect(buildShoppingList(factory, data(gun), BOTH, true, { preset }).rows[0]).toMatchObject({
+      source: "flea",
+      traderPriceRUB: 70_000,
+      traderName: "Prapor",
+      traderLevel: 2,
+    });
+  });
+
+  it("quotes the bare weapon's offer when the build buys the weapon bare", () => {
+    const gun = weapon(
+      [
+        { trader: "Mechanic", priceRUB: 22_997, level: 3 },
+        { trader: "Prapor", priceRUB: 20_000, level: 4, preset: "Gun Default" },
+      ],
+      { fleaPriceRUB: 59_840 }
+    );
+    const limits = { maxLevel: 3 };
+    expect(buildShoppingList(factory, lookup(gun), TRADERS, true, { preset, limits }).rows[0]).toMatchObject({
+      source: "trader",
+      unitPriceRUB: 22_997,
+      traderPriceRUB: 22_997,
+      traderName: "Mechanic",
+    });
+  });
+});
+
 describe("optimising a weapon sold as its default preset", () => {
   const optimize = (gun: BuildItemData, options: Partial<OptimizeOptions>) =>
     optimizeBuild(factory, lookup(gun), { goal: "cost", priceSources: TRADERS, preset, ...options }, { pause: async () => undefined });

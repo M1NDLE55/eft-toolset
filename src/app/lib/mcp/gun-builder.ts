@@ -10,7 +10,7 @@ import { conflictReason, installedOutside } from "@/app/lib/builds/conflicts";
 import { optimizeBuild, type OptimizeGoal, type OptimizeOptions } from "@/app/lib/builds/optimizer";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
 import { presetParts } from "@/app/lib/builds/purchase";
-import { effectivePrice, offerLabel } from "@/app/lib/builds/price";
+import { effectivePrice, offerLabel, traderLabel } from "@/app/lib/builds/price";
 import {
   asCatalog,
   collectPaths,
@@ -401,11 +401,15 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
                   source: row.source,
                   unitPriceRUB: row.unitPriceRUB,
                   subtotalRUB: row.subtotalRUB,
-                  trader: row.offer
-                    ? offerLabel(row.offer)
-                    : row.traderName
-                      ? `${row.traderName}${row.traderLevel ? ` LL${row.traderLevel}` : ""}`
-                      : null,
+                  // The seller of unitPriceRUB; a flea purchase has none.
+                  trader:
+                    row.source === "flea"
+                      ? null
+                      : row.offer
+                        ? offerLabel(row.offer)
+                        : row.source === "trader" && row.traderName
+                          ? traderLabel(row.traderName, row.traderLevel)
+                          : null,
                   ...(row.offer?.taskUnlock ? { taskUnlock: row.offer.taskUnlock } : {}),
                 })),
               },

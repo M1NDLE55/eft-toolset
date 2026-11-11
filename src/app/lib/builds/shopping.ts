@@ -1,6 +1,6 @@
 import { escapeDiscordText } from "@/app/lib/text-safety";
 import type { BarterOffer, BuildNode, PriceSources, TraderOffer } from "@/app/lib/types/gunBuilder";
-import { priceChoice, type PriceSource } from "./price";
+import { priceChoice, traderLabel, traderQuote, type PriceSource } from "./price";
 import { pathKey, planPurchase, type PurchaseContext } from "./purchase";
 import type { ItemLookup } from "./stats";
 
@@ -13,10 +13,14 @@ export interface ShoppingRow {
   /** How many come with the weapon's preset, so aren't bought. */
   withWeapon: number;
   isWeapon: boolean;
+  /** The trader column: the cheapest allowed trader offer, as a weapon is bought (bare or as its preset). */
   traderPriceRUB: number | null;
   fleaPriceRUB: number | null;
+  /** Who charges traderPriceRUB. */
   traderName: string | null;
   traderLevel: number | null;
+  /** The task the trader offer needs first, if any. */
+  traderTask: string | null;
   source: PriceSource | null;
   /** The trader offer or barter bought from, when the item lists its offers. */
   offer?: TraderOffer | BarterOffer | null;
@@ -42,7 +46,9 @@ export function buildShoppingList(
   includeWeapon = true,
   pricing: PurchaseContext = {}
 ): ShoppingList {
-  const purchase = planPurchase(root, lookup, sources, includeWeapon ? pricing : { ...pricing, preset: null });
+  const context = includeWeapon ? pricing : { ...pricing, preset: null };
+  const purchase = planPurchase(root, lookup, sources, context);
+  const limits = pricing.limits ?? null;
   const counts = new Map<string, number>();
   const withWeapon = new Map<string, number>();
   const order: string[] = [];
@@ -63,8 +69,10 @@ export function buildShoppingList(
     const item = lookup.get(itemId);
     const count = counts.get(itemId) ?? 0;
     const isWeapon = itemId === root.itemId && includeWeapon;
-    const choice = count === 0 ? null : isWeapon ? purchase.weapon : item ? priceChoice(item, sources, pricing.limits ?? null) : null;
-    const trader = choice?.source === "trader" ? choice.priceRUB : positive(item?.traderPriceRUB);
+    const choice = count === 0 ? null : isWeapon ? purchase.weapon : item ? priceChoice(item, sources, limits) : null;
+    // A weapon bought with its preset parts in view is quoted bare or as the preset, as it is bought.
+    const asPreset = isWeapon && context.preset ? purchase.asPreset : undefined;
+    const trader = item ? traderQuote(item, limits, asPreset) : null;
     const flea = positive(item?.fleaPriceRUB);
     const source = choice?.source ?? null;
     const unit = choice?.priceRUB ?? null;
@@ -81,10 +89,11 @@ export function buildShoppingList(
       count,
       withWeapon: fromWeapon,
       isWeapon,
-      traderPriceRUB: trader,
+      traderPriceRUB: trader?.priceRUB ?? null,
       fleaPriceRUB: flea,
-      traderName: offer?.trader ?? item?.traderName ?? null,
-      traderLevel: offer ? offer.level : (item?.traderLevel ?? null),
+      traderName: trader?.trader ?? null,
+      traderLevel: trader?.level ?? null,
+      traderTask: trader?.task ?? null,
       source,
       ...(offer === undefined ? {} : { offer }),
       unitPriceRUB: unit,
@@ -112,11 +121,25 @@ function rub(value: number | null) {
   return value === null ? "-" : Math.round(value).toLocaleString("en-US");
 }
 
+/** Who sells the starred price: the chosen offer's trader, or the flea market. */
+function vendorOf(row: ShoppingRow) {
+  if (row.count === 0 || row.unitPriceRUB === null) return "";
+  if (row.source === "flea") return "Flea";
+  const offer = row.offer;
+  const seller = offer
+    ? `${clean(traderLabel(offer.trader, offer.level))}${offer.preset ? " preset" : ""}`
+    : row.source === "trader" && row.traderName
+      ? clean(traderLabel(row.traderName, row.traderLevel))
+      : "";
+  return row.source === "barter" ? `${seller} barter ${rub(row.unitPriceRUB)}*`.trimStart() : seller;
+}
+
 export function formatShoppingList(
   list: ShoppingList,
   details: { buildName: string; weaponName: string | null; modeLabel: string }
 ): string {
-  const showVendor = list.rows.some((row) => row.traderName || row.withWeapon > 0);
+  const vendors = list.rows.map(vendorOf);
+  const showVendor = list.rows.some((row, index) => vendors[index] || row.withWeapon > 0);
   const title = [
     `**${escapeDiscordText(details.buildName) || "Untitled build"}**`,
     details.weaponName ? escapeDiscordText(details.weaponName) : null,
@@ -131,13 +154,11 @@ export function formatShoppingList(
     "Flea".padStart(10),
     ...(showVendor ? ["  Vendor"] : []),
   ].join(" ");
-  const lines = list.rows.map((row) => {
+  const lines = list.rows.map((row, index) => {
     const trader = `${rub(row.traderPriceRUB)}${row.source === "trader" ? "*" : " "}`;
     const flea = `${rub(row.fleaPriceRUB)}${row.source === "flea" ? "*" : " "}`;
     const vendor = [
-      row.traderName && row.count > 0
-        ? `${clean(row.traderName)}${row.traderLevel ? ` LL${row.traderLevel}` : ""}${row.offer?.preset ? " preset" : ""}${row.source === "barter" ? ` barter ${rub(row.unitPriceRUB)}*` : ""}`
-        : "",
+      vendors[index],
       row.withWeapon > 0 ? `+${row.withWeapon} with weapon` : "",
     ]
       .filter(Boolean)
