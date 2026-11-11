@@ -6,15 +6,9 @@ import { editDistance, nameWords, typoAllowance } from "@/app/lib/search/name-ma
 import labelData from "./map-labels.json";
 import termData from "./terms.json";
 
-// Escape from Tarkov jargon: what players call places, items, and mechanics, with links to
-// the real data. terms.json is curated by hand; scripts/build-glossary.mjs fills in each
-// landmark's position (from a tarkov.dev map label or a place in the map data) and each
-// item's id. map-labels.json is tarkov.dev's interactive-map labels, in game coordinates.
-
 export const GLOSSARY_CATEGORIES = ["landmark", "map", "boss", "trader", "item", "ammo", "mechanic", "slang"] as const;
 export type GlossaryCategory = (typeof GLOSSARY_CATEGORIES)[number];
 
-/** Where a landmark's position comes from: a tarkov.dev map label, or a place in the map data. */
 export const ANCHOR_KINDS = [
   "label",
   "extract",
@@ -40,7 +34,6 @@ export interface GlossaryEntry {
   map?: string;
   /** The place a landmark's position is taken from; null when nothing in the data marks it. */
   at?: { kind: AnchorKind; name: string } | null;
-  /** How sure the position is to be at the landmark. */
   confidence?: Confidence | null;
   /** Item names as tarkov.dev has them; build-glossary.mjs resolves them into itemRefs. */
   items?: string[];
@@ -69,10 +62,6 @@ function compactName(value: string) {
   return nameWords(value).join("");
 }
 
-/**
- * Labels on tarkov.dev's maps that no curated entry already covers, as landmarks: they name
- * places ("Sniper Hill", "Warehouse 17") that the map data has no other name for.
- */
 function labelEntries(): GlossaryEntry[] {
   const covered = new Set(
     GLOSSARY.flatMap((entry) =>
@@ -146,11 +135,9 @@ function distinctEntries(names: readonly IndexedName[], filter: LookupFilter) {
 
 export type LookupResult =
   | { match: "exact" | "typo"; entries: GlossaryEntry[] }
-  /** Known terms found inside a longer text, in the order they appear. */
   | { match: "mentions"; entries: GlossaryEntry[]; found: string[] }
   | { match: "none"; entries: []; suggestions: string[] };
 
-/** Words in a text scanned for terms, and terms found in one text. */
 const MAX_SCANNED_WORDS = 200;
 const MAX_MENTIONS = 15;
 /** Shorter names (such as "PS" or "LL") are only matched on their own, not inside a sentence. */
@@ -213,7 +200,6 @@ function describeName({ name, entry }: IndexedName) {
   return `${name} (${entry.category}${where})`;
 }
 
-/** Entries in a category or on a map, for listing. Landmarks are filtered by map; other entries by the map they belong to. */
 export function listTerms(filter: LookupFilter) {
   return ALL_ENTRIES.filter(
     (entry) => (!filter.category || entry.category === filter.category) && (!filter.map || entry.map === filter.map)
@@ -233,14 +219,12 @@ const ANCHOR_WORDS: Record<AnchorKind, string> = {
   stationaryWeapon: "stationary weapon",
 };
 
-/** Where a landmark's position comes from, as "the Tarcone Director's office key lock". */
 export function positionSource(entry: GlossaryEntry) {
   if (!entry.at) return null;
   if (entry.at.kind === "label") return `the "${entry.at.name}" label on tarkov.dev's map`;
   return `the ${entry.at.name} ${ANCHOR_WORDS[entry.at.kind]}`;
 }
 
-/** A landmark's position with its level, or null when the glossary has none. */
 export function landmarkPosition(entry: GlossaryEntry) {
   const config = mapConfigOf(entry.map);
   if (!entry.position || !config) return null;
@@ -263,7 +247,6 @@ function landmarkPlace(entry: GlossaryEntry): Place {
   };
 }
 
-/** Landmarks with a position on a map, as raid-planner places named by their main term. */
 export function landmarkPlaces(mapKey: string): Place[] {
   let places = landmarkLists.get(mapKey);
   if (!places) {
@@ -275,7 +258,6 @@ export function landmarkPlaces(mapKey: string): Place[] {
   return places;
 }
 
-/** A landmark on the map whose term or alias is exactly this name (ignoring case and punctuation). */
 export function findLandmark(mapKey: string, reference: string): Place | null {
   const entries = distinctEntries(BY_COMPACT.get(compactName(reference)) ?? [], { category: "landmark", map: mapKey });
   const located = entries.find((entry) => entry.position);

@@ -1,12 +1,4 @@
-// Resolves the glossary's links to live data: each landmark's position from the place it is
-// anchored to, and each named item's tarkov.dev id. Run after editing terms.json:
-//
-//   node scripts/build-glossary.mjs [--check]
-//
-// Positions come from tarkov.dev's interactive map labels (maps.json) or from places in this
-// app's get_map_details (an extract, a key lock, a spawn zone...), never from memory. Items are
-// resolved by exact name with search_items. Set EFT_MCP_URL to use another MCP server (such as
-// a local `next dev`). --check reports what would change without writing.
+// Run after editing terms.json: node scripts/build-glossary.mjs [--check]. See DATA_ARCHITECTURE.md.
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -63,7 +55,6 @@ async function loadLabels() {
   return labels;
 }
 
-/** Named places of one map, by the kinds terms.json anchors to. */
 async function loadPlaces(map) {
   const details = await callTool("get_map_details", {
     map,

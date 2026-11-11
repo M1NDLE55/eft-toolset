@@ -93,10 +93,7 @@ function isEmptyObject(value: unknown) {
   return !!value && typeof value === "object" && !Array.isArray(value) && Object.keys(value).length === 0;
 }
 
-/**
- * The annotations to publish: openWorldHint defaults to true in the MCP specification, so
- * it is only published when false. Clients read an omitted hint as its default.
- */
+// MCP defaults an omitted openWorldHint to true.
 export function publishedAnnotations(annotations: ToolAnnotations): ToolAnnotations {
   if (annotations.openWorldHint !== true) return annotations;
   const { openWorldHint, ...rest } = annotations;

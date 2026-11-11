@@ -39,7 +39,6 @@ describe("glossary data", () => {
       expect(seen.has(key), `duplicate ${label}`).toBe(false);
       seen.add(key);
       expect(new Set(entry.aliases).size, label).toBe(entry.aliases.length);
-      // Every listed item was found on tarkov.dev by build-glossary.mjs.
       expect(entry.itemRefs?.map((item) => item.name) ?? [], label).toEqual(entry.items ?? []);
     }
   });
@@ -52,7 +51,6 @@ describe("glossary data", () => {
       expect(entry.map, label).toBeDefined();
       expect(entry.at, label).not.toBeUndefined();
       if (entry.at === null) {
-        // Nothing in the data marks it, so it has no position to be sure of.
         expect(entry.position, label).toBeUndefined();
         expect(entry.confidence, label).toBeNull();
         continue;
@@ -159,7 +157,6 @@ describe("lookupTerm", () => {
     // The longest name wins: "dorms marked room" is the marked room, not the dorms.
     expect(result.found).toEqual(["big red", "dorm marked room", "reshala"]);
     expect(result.entries.map((entry) => entry.term)).toEqual(["Big Red", "Marked room", "Reshala"]);
-    // Short names such as "PS" or "LL" are only matched on their own.
     expect(lookupTerm("ps I love you").match).not.toBe("mentions");
   });
 
@@ -175,7 +172,6 @@ describe("map labels", () => {
   it("adds tarkov.dev's map labels that no curated entry covers", () => {
     const sniperHill = only("Sniper Hill", { map: "customs" }).entry;
     expect(sniperHill).toMatchObject({ category: "landmark", at: { kind: "label", name: "Sniper Hill" }, source: "https://tarkov.dev/map/customs" });
-    // A label a curated entry already uses is not listed twice.
     expect(ALL_ENTRIES.filter((entry) => entry.map === "customs" && entry.term === "Big Red")).toHaveLength(1);
     expect(listTerms({ map: "customs", category: "landmark" }).length).toBeGreaterThan(30);
   });
@@ -188,7 +184,6 @@ describe("landmark places", () => {
     expect(place.derived).toContain("Big Red");
     expect(findLandmark("customs", "big red warehouse")?.name).toBe("Big Red");
     expect(findLandmark("woods", "Big Red")).toBeNull();
-    // Landmarks without a position cannot be placed.
     const unplaced = GLOSSARY.find((entry) => entry.category === "landmark" && entry.at === null)!;
     expect(findLandmark(unplaced.map!, unplaced.term)).toBeNull();
   });

@@ -1187,7 +1187,9 @@ describe("MCP endpoint", () => {
     const read = await call("read_raid_plan", { link: plan.data.shareLink });
     expect(read.data.route[1].near).toBe("Glass hall (landmark, 0 m)");
 
-    // A landmark on another map is not a place here.
+    const misspelt = await call("create_raid_plan", { map: "factory", route: [{ place: "glass hsll" }] });
+    expect(misspelt.data.resolvedPlaces[0]).toMatchObject({ resolved: "Glass hall (landmark)", match: "typo" });
+
     const elsewhere = await call("create_raid_plan", { map: "factory", route: [{ place: "Big Red" }] });
     expect(elsewhere.result.isError).toBe(true);
   });
