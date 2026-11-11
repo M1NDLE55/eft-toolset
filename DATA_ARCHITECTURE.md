@@ -107,7 +107,7 @@ navigation boxes, comments, hidden elements, or invisible characters. Results ar
 written by anyone, so the tool description, the `content` field, and the server
 instructions all tell the model to treat it as reference rather than instructions. The
 wiki is licensed CC BY-NC-SA, so every result carries a credit line (see the README's
-License section).
+Credits section).
 
 `lookup_term` reads no service at all. It answers from a curated glossary of player jargon
 (`src/app/lib/glossary/terms.json`): map callouts, item and ammo nicknames, bosses, traders,

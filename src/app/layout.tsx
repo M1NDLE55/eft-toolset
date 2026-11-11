@@ -84,6 +84,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
               <Link href="/policies/disclaimer-and-use-policy" className="underline underline-offset-2 hover:text-[#ccc]">
                 Disclaimer and use policy
               </Link>
+              <Link href="/credits" className="underline underline-offset-2 hover:text-[#ccc]">
+                Credits
+              </Link>
               <p>
                 Data from{" "}
                 <a href="https://tarkov.dev" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-[#ccc]">

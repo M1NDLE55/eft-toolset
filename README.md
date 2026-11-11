@@ -74,13 +74,23 @@ All are optional.
 | `CLIENT_IP_HEADER` | The header your proxy sets with the real client IP, used for per-client API rate limiting. On Vercel, `X-Real-IP` is used automatically. Elsewhere, without it, only the global rate limit applies. |
 | `WARM_TARKOV_CACHE` | Set to `0` to skip preloading tarkov.dev data when the server starts |
 
+## Credits
+
+EFT Toolset is built on other people's work. The site's [`/credits`](https://www.eft-toolset.com/credits) page lists the same sources and how we use them.
+
+- **[tarkov.dev](https://tarkov.dev)** by [The Hideout](https://github.com/the-hideout): item, price, trader, quest, and map data from the free [tarkov.dev API](https://tarkov.dev/api/), and the raid planner's map setup from tarkov.dev's [`maps.json`](https://github.com/the-hideout/tarkov-dev/blob/main/src/data/maps.json). Item images, map tiles, and map SVGs load from `assets.tarkov.dev`. The server caches every dataset and the API is rate-limited (see [`DATA_ARCHITECTURE.md`](DATA_ARCHITECTURE.md)).
+- **SVG maps by Shebuka**: the raid planner's Streets of Tarkov, Interchange, Lighthouse, Shoreline, and Terminal maps come from [tarkov-dev-svg-maps](https://github.com/the-hideout/tarkov-dev-svg-maps), licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). They're shown unmodified apart from floor visibility, and the planner credits them on the map.
+- **Map tiles** from `assets.tarkov.dev`, credited on each map as tarkov.dev lists them: Shebuka (Ground Zero, Customs, Factory, Reserve, Woods), [TarkovBOT.eu](https://tarkovbot.eu/) (Icebreaker), and tarkov.dev (The Lab, The Labyrinth).
+- **[Escape from Tarkov Wiki](https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki)** on Fandom, written by its contributors and licensed [CC BY-NC-SA](https://www.fandom.com/licensing). `get_wiki_page` adapts pages to plain text and the glossary's meanings are mostly written from wiki pages; every wiki result carries a credit line to keep with the text, and every glossary entry links its source. The tool reads the wiki through its MediaWiki API, one page at a time.
+- **Other glossary sources**: a few entries cite [Tarkov Forge](https://tarkovforge.com/), Reddit threads, or [Game Rant](https://gamerant.com/).
+- **[Battlestate Games](https://www.battlestategames.com/)**: Escape from Tarkov, its names, images, and game data belong to Battlestate Games. This is an unofficial fan project.
+- **Software and fonts**: [Next.js](https://nextjs.org/) and [React](https://react.dev/) (MIT), [Leaflet](https://leafletjs.com/) (BSD-2-Clause), [Radix UI](https://www.radix-ui.com/) (MIT), [Lucide](https://lucide.dev/) icons (ISC), and the [Inter](https://rsms.me/inter/) font (SIL Open Font License).
+
 ## License
 
 Licensed under the GNU General Public License v3.0. See [LICENSE](LICENSE) for details.
 
-The GPL covers this project's code only. Text that `get_wiki_page` returns comes from the [Escape from Tarkov Wiki](https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki) on Fandom, written by its contributors and licensed [CC BY-NC-SA](https://www.fandom.com/licensing). Every wiki result carries a credit line to keep with the text. The licence allows **non-commercial use only**, so monetising this service (ads, paid tiers, sponsorships) would mean removing or rethinking the wiki tool first.
-
-The raid planner's SVG maps (Streets of Tarkov, Interchange, Lighthouse, Shoreline, and Terminal) are by Shebuka, from [tarkov-dev-svg-maps](https://github.com/the-hideout/tarkov-dev-svg-maps/), and licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). They're loaded from tarkov.dev unmodified apart from floor visibility, and the planner credits them on the map. The same non-commercial limit applies to them.
+The GPL covers this project's code only. The wiki text and the SVG maps listed under [Credits](#credits) are licensed CC BY-NC-SA, which allows **non-commercial use only**, so monetising this service (ads, paid tiers, sponsorships) would mean removing or rethinking the wiki tool and those maps first.
 
 ## Contact
 
