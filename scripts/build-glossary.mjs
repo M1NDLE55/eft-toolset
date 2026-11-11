@@ -37,7 +37,6 @@ const point = (entry) => ({
 // tarkov.dev leaves a label's height band open-ended with a bound of 100 m or more.
 const OPEN_HEIGHT = 100;
 
-/** A height on the level a label's band covers, or nothing when the band has no closed end. */
 function labelHeight(bottom, top) {
   const closed = (value) => typeof value === "number" && Math.abs(value) < OPEN_HEIGHT;
   if (closed(bottom) && closed(top)) return round((bottom + top) / 2);

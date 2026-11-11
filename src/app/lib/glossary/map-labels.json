@@ -421,7 +421,7 @@
       "y": 28,
       "bottom": 28,
       "top": 28,
-      "meaning": "In the east of Ground Zero, right by TerraGroup building. The nearest PMC extract, Police Cordon V-Ex, is about 65 m south.",
+      "meaning": "In the east of Ground Zero, right by TerraGroup building. The nearest PMC extract, Police Cordon V-Ex, is about 65 m south. Nearby: locked doors for the TerraGroup science office key; 3 PCs, a toolbox and a plastic suitcase within 30 m.",
       "source": "https://tarkov.dev/map/ground-zero"
     }
   ],
@@ -683,7 +683,7 @@
       "y": 4,
       "bottom": 3,
       "top": 5,
-      "meaning": "In the west of Factory, right by Locker room. The nearest Scav extract, Office Window, is right here. Nearby: 2 grenade boxes, 4 jackets and a toolbox within 30 m.",
+      "meaning": "In the west of Factory, right by Locker room. The nearest Scav extract, Office Window, is right here. Nearby: a safe, 3 weapon boxes, 2 grenade boxes and 6 jackets within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -693,7 +693,7 @@
       "y": 4,
       "bottom": 3,
       "top": 5,
-      "meaning": "In the west of Factory, right by the Office Window Scav extract. Nearby: a grenade box, 3 jackets and a toolbox within 30 m.",
+      "meaning": "In the west of Factory, right by the Office Window Scav extract. Nearby: a safe, 5 weapon boxes, a grenade box and 5 jackets within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -703,7 +703,7 @@
       "y": 4,
       "bottom": 3,
       "top": 5,
-      "meaning": "In the west of Factory, right by the Office Window Scav extract. Nearby: 2 grenade boxes, 4 jackets and a toolbox within 30 m.",
+      "meaning": "In the west of Factory, right by the Office Window Scav extract. Nearby: a safe, 5 weapon boxes, 2 grenade boxes and 6 jackets within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -723,7 +723,7 @@
       "y": 4,
       "bottom": 3,
       "top": 5,
-      "meaning": "In the south-west of Factory, right by the Camera Bunker Door Scav extract.",
+      "meaning": "In the south-west of Factory, right by the Camera Bunker Door Scav extract. Nearby: 3 weapon boxes within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -783,7 +783,7 @@
       "y": 0.5,
       "bottom": -1,
       "top": 2,
-      "meaning": "In the south of Factory, right by the Camera Bunker Door Scav extract. Nearby: locked doors for the TerraGroup storage room keycard; 3 weapon boxes, a jacket, 2 toolboxes and a dead Scav within 30 m.",
+      "meaning": "In the south of Factory, right by the Camera Bunker Door Scav extract. Nearby: locked doors for the TerraGroup storage room keycard; 2 bank safes, 3 weapon boxes, a jacket and 2 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -793,7 +793,7 @@
       "y": 0.5,
       "bottom": -1,
       "top": 2,
-      "meaning": "In the west of Factory, right by TerraGroup storage room. The nearest Scav extract, Camera Bunker Door, is right here. Nearby: locked doors for the TerraGroup storage room keycard; 2 weapon boxes, a jacket, 2 toolboxes and a dead Scav within 30 m.",
+      "meaning": "In the west of Factory, right by TerraGroup storage room. The nearest Scav extract, Camera Bunker Door, is right here. Nearby: locked doors for the TerraGroup storage room keycard; 2 bank safes, 2 weapon boxes, a jacket and 3 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -803,7 +803,7 @@
       "y": 0.5,
       "bottom": -1,
       "top": 2,
-      "meaning": "In the south-west of Factory, right by the Gate 0 PMC extract. Nearby: locked doors for the TerraGroup storage room keycard; a jacket and a toolbox within 30 m.",
+      "meaning": "In the south-west of Factory, right by the Gate 0 PMC extract. Nearby: locked doors for the TerraGroup storage room keycard; 2 bank safes, a jacket and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -813,7 +813,7 @@
       "y": 0.5,
       "bottom": -1,
       "top": 2,
-      "meaning": "In the north of Factory, right by the Cellars PMC extract. Nearby: locked doors for the Factory emergency exit key; 2 jackets and 3 toolboxes within 30 m.",
+      "meaning": "In the north of Factory, right by the Cellars PMC extract. Nearby: locked doors for the Factory emergency exit key; 2 jackets and 4 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -843,7 +843,7 @@
       "y": 0.5,
       "bottom": -1,
       "top": 2,
-      "meaning": "In the north-east of Factory, right by the Smugglers' Passage PMC extract. Nearby: locked doors for the Factory emergency exit key; 2 weapon boxes, 6 jackets and 7 toolboxes within 30 m.",
+      "meaning": "In the north-east of Factory, right by the Smugglers' Passage PMC extract. Nearby: locked doors for the Factory emergency exit key; 2 weapon boxes, 6 jackets and 8 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -2360,7 +2360,7 @@
       "y": -3,
       "bottom": -4,
       "top": -2,
-      "meaning": "In the north of Shoreline, about 60 m east of Labyrinth transit. The nearest Scav extract, East Wing Gym Entrance, is about 50 m north-east. Nearby: spawns for Cultist Priest; a weapon box within 30 m.",
+      "meaning": "In the north of Shoreline, about 60 m east of Labyrinth transit. The nearest Scav extract, East Wing Gym Entrance, is about 50 m north-east. Nearby: spawns for Cultist Priest; 4 weapon boxes, a medcase and a dead Scav within 30 m.",
       "source": "https://tarkov.dev/map/shoreline"
     },
     {

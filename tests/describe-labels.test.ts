@@ -120,6 +120,19 @@ describe("describeLabel", () => {
     expect(text).toBe("In the middle of Testmap. Nearby: locked doors for the Upstairs key.");
   });
 
+  it("treats a single-height band as one floor", () => {
+    const text = describeLabel(
+      map({
+        locks: [
+          { key: "TerraGroup science office key", x: 10, z: 5, y: 30.7 },
+          { key: "Roof key", x: 10, z: 5, y: 36 },
+        ],
+      }),
+      { name: "Science Office", x: 0, z: 0, y: 28, bottom: 28, top: 28 }
+    );
+    expect(text).toBe("In the middle of Testmap. Nearby: locked doors for the TerraGroup science office key.");
+  });
+
   it("calls street labels streets and never compares a label with itself", () => {
     const text = describeLabel(
       map({ landmarks: [{ name: "Main St.", x: 0, z: 0 }], exits: [{ name: "Main St.", kind: "extract", x: 0, z: 0 }] }),

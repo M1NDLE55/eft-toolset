@@ -5,8 +5,9 @@ const BY_RANGE = 20;
 const NEARBY_RANGE = 40;
 const LOOT_RANGE = 30;
 const BOSS_RANGE = 40;
-/** How far outside a label's height band a feature may be and still count as on its floor. */
 const FLOOR_MARGIN = 1;
+// Some bands are a single height; a floor is about this tall.
+const FLOOR_HEIGHT = 4;
 const MAX_KEYS = 3;
 const MAX_LOOT_KINDS = 4;
 // Containers worth naming, most valuable first; drawers and duffle bags are everywhere.
@@ -41,7 +42,10 @@ function distance(a, b) {
 
 function onLabelFloor(label, feature) {
   if (typeof feature.y !== "number") return true;
-  return feature.y >= (label.bottom ?? -Infinity) - FLOOR_MARGIN && feature.y <= (label.top ?? Infinity) + FLOOR_MARGIN;
+  let low = label.bottom ?? -Infinity;
+  let high = label.top ?? Infinity;
+  if (high - low < FLOOR_HEIGHT) [low, high] = [(low + high - FLOOR_HEIGHT) / 2, (low + high + FLOOR_HEIGHT) / 2];
+  return feature.y >= low - FLOOR_MARGIN && feature.y <= high + FLOOR_MARGIN;
 }
 
 export function direction(rotation, from, to) {
