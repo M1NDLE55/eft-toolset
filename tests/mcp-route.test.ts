@@ -1174,7 +1174,6 @@ describe("MCP endpoint", () => {
     const badMap = await call("lookup_term", { terms: ["Big Red"], map: "the moon" });
     expect(badMap.result.isError).toBe(true);
 
-    // Names in the map data still win; a community name places the point at its landmark.
     const plan = await call("create_raid_plan", { map: "factory", route: [{ place: "gate" }, { place: "glass hall" }] });
     expect(plan.result.isError).toBeFalsy();
     expect(plan.data.resolvedPlaces).toEqual([
@@ -1189,6 +1188,12 @@ describe("MCP endpoint", () => {
 
     const misspelt = await call("create_raid_plan", { map: "factory", route: [{ place: "glass hsll" }] });
     expect(misspelt.data.resolvedPlaces[0]).toMatchObject({ resolved: "Glass hall (landmark)", match: "typo" });
+
+    const alias = await call("create_raid_plan", { map: "factory", route: [{ place: "factroy key room" }] });
+    expect(alias.data.resolvedPlaces[0]).toMatchObject({ resolved: "Locked office room (landmark)", match: "typo" });
+    const prefix = await call("create_raid_plan", { map: "factory", route: [{ place: "gat" }] });
+    expect(prefix.text).toContain("matches several places");
+    expect(prefix.text).toContain("Gate 3 (landmark)");
 
     const elsewhere = await call("create_raid_plan", { map: "factory", route: [{ place: "Big Red" }] });
     expect(elsewhere.result.isError).toBe(true);

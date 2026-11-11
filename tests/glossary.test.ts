@@ -6,6 +6,7 @@ import {
   findLandmark,
   GLOSSARY,
   GLOSSARY_CATEGORIES,
+  landmarkNames,
   landmarkPlaces,
   landmarkPosition,
   listTerms,
@@ -13,6 +14,7 @@ import {
 } from "@/app/lib/glossary/glossary";
 import labels from "@/app/lib/glossary/map-labels.json";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
+import { matchPlace } from "@/app/lib/raid-planner/resolve";
 import { nameWords } from "@/app/lib/search/name-match";
 
 const MAP_KEYS = new Set(mapConfigs.map((config) => config.key));
@@ -154,7 +156,6 @@ describe("lookupTerm", () => {
     const result = lookupTerm("Going to loot Big Red then the dorms marked room, any tips vs Reshala?", { map: "customs" });
     expect(result.match).toBe("mentions");
     if (result.match !== "mentions") return;
-    // The longest name wins: "dorms marked room" is the marked room, not the dorms.
     expect(result.found).toEqual(["big red", "dorm marked room", "reshala"]);
     expect(result.entries.map((entry) => entry.term)).toEqual(["Big Red", "Marked room", "Reshala"]);
     expect(lookupTerm("ps I love you").match).not.toBe("mentions");
@@ -186,6 +187,14 @@ describe("landmark places", () => {
     expect(findLandmark("woods", "Big Red")).toBeNull();
     const unplaced = GLOSSARY.find((entry) => entry.category === "landmark" && entry.at === null)!;
     expect(findLandmark(unplaced.map!, unplaced.term)).toBeNull();
+  });
+
+  it("matches a landmark by any alias, reporting the landmark itself", () => {
+    const names = landmarkNames("customs");
+    expect(matchPlace(names, "Paradigm warehouse")).toMatchObject({ match: "exact", place: { name: "Big Red" } });
+    expect(matchPlace(names, "Paradigm warehuose")).toMatchObject({ match: "typo", place: { name: "Big Red" } });
+    // "Big Red" and its alias "Big Red warehouse" both start with "big re", but they are one place.
+    expect(matchPlace(names, "big re")).toMatchObject({ match: "partial", place: { name: "Big Red" } });
   });
 
   it("lists every placed landmark of a map", () => {

@@ -78,7 +78,6 @@ function labelEntries(): GlossaryEntry[] {
     if (!config) continue;
     for (const label of labels) {
       const key = `${map}|${compactName(label.name)}`;
-      // A name labelled more than once, such as a long street, keeps its first label.
       if (!compactName(label.name) || covered.has(key)) continue;
       covered.add(key);
       entries.push({
@@ -235,7 +234,7 @@ export function landmarkPosition(entry: GlossaryEntry) {
   };
 }
 
-const landmarkLists = new Map<string, Place[]>();
+const landmarkLists = new Map<string, { places: Place[]; names: Place[]; byEntry: Map<GlossaryEntry, Place> }>();
 
 function landmarkPlace(entry: GlossaryEntry): Place {
   const rough = entry.confidence && entry.confidence !== "high" ? ` (${entry.confidence} confidence)` : "";
@@ -247,19 +246,33 @@ function landmarkPlace(entry: GlossaryEntry): Place {
   };
 }
 
-export function landmarkPlaces(mapKey: string): Place[] {
-  let places = landmarkLists.get(mapKey);
-  if (!places) {
-    places = ALL_ENTRIES.filter((entry) => entry.category === "landmark" && entry.map === mapKey && entry.position).map(
-      landmarkPlace
-    );
-    landmarkLists.set(mapKey, places);
+function landmarksOf(mapKey: string) {
+  let lists = landmarkLists.get(mapKey);
+  if (!lists) {
+    lists = { places: [], names: [], byEntry: new Map() };
+    for (const entry of ALL_ENTRIES) {
+      if (entry.category !== "landmark" || entry.map !== mapKey || !entry.position) continue;
+      const place = landmarkPlace(entry);
+      lists.places.push(place);
+      lists.byEntry.set(entry, place);
+      lists.names.push(place, ...entry.aliases.map((alias) => ({ ...place, name: alias, aliasOf: place })));
+    }
+    landmarkLists.set(mapKey, lists);
   }
-  return places;
+  return lists;
+}
+
+export function landmarkPlaces(mapKey: string): Place[] {
+  return landmarksOf(mapKey).places;
+}
+
+/** Landmarks under their term and each alias, for matching names. */
+export function landmarkNames(mapKey: string): Place[] {
+  return landmarksOf(mapKey).names;
 }
 
 export function findLandmark(mapKey: string, reference: string): Place | null {
   const entries = distinctEntries(BY_COMPACT.get(compactName(reference)) ?? [], { category: "landmark", map: mapKey });
   const located = entries.find((entry) => entry.position);
-  return located ? landmarkPlace(located) : null;
+  return located ? landmarksOf(mapKey).byEntry.get(located)! : null;
 }

@@ -78,6 +78,16 @@ export interface Place {
   position: GamePoint;
   /** Set for places this app derives, such as an area around a group of key locks. */
   derived?: string;
+  /** Set when this is another name for that place: a match reports that place. */
+  aliasOf?: Place;
+}
+
+function canonical(place: Place) {
+  return place.aliasOf ?? place;
+}
+
+function distinctPlaces(groups: Place[][]) {
+  return groups.filter((group, index) => groups.findIndex((other) => canonical(other[0]) === canonical(group[0])) === index);
 }
 
 const EXTRACT_ORDER = { pmc: 0, shared: 1, scav: 2 } as const;
@@ -365,17 +375,22 @@ export function matchPlace(places: readonly Place[], reference: string, options:
   const compact = words.join("");
   if (!compact) return { error: `"${reference}" is not a place name.` };
   const index = indexPlaces(places);
-  const found = (group: Place[], match: "exact" | "partial" | "typo") => ({
-    place: group[0],
-    match,
-    others: group.slice(1).filter((other) => other.name !== group[0].name || other.kind !== group[0].kind),
-  });
+  const found = (group: Place[], match: "exact" | "partial" | "typo") => {
+    const place = canonical(group[0]);
+    return {
+      place,
+      match,
+      others: [...new Set(group.slice(1).map(canonical))].filter(
+        (other) => other.name !== place.name || other.kind !== place.kind
+      ),
+    };
+  };
 
   const exact = index.byCompact.get(compact);
   if (exact) return found(exact, "exact");
 
   // A reference longer than every name can't be part of one.
-  const partialGroups =
+  const partialGroups = distinctPlaces(
     compact.length > index.longestCompact
       ? []
       : index.groups
@@ -391,13 +406,14 @@ export function matchPlace(places: readonly Place[], reference: string, options:
             const starts = (group: IndexedPlace[]) => (group[0].compact.startsWith(compact) ? 0 : 1);
             return starts(a) - starts(b) || a[0].place.name.length - b[0].place.name.length;
           })
-          .map((group) => group.map((entry) => entry.place));
+          .map((group) => group.map((entry) => entry.place))
+  );
   if (partialGroups.length === 1) return found(partialGroups[0], "partial");
   if (partialGroups.length > 1) {
     return {
       error: `"${reference}" matches several places: ${partialGroups
         .slice(0, 10)
-        .map((group) => label(group[0]))
+        .map((group) => label(canonical(group[0])))
         .join("; ")}. Use the full name.`,
     };
   }
@@ -415,11 +431,14 @@ export function matchPlace(places: readonly Place[], reference: string, options:
     })
     .filter((entry) => entry.score <= limit)
     .toSorted((a, b) => a.score - b.score || a.whole - b.whole);
-  const [best, second] = scored;
+  const [best] = scored;
+  const second = best && scored.find((entry) => canonical(entry.group[0]) !== canonical(best.group[0]));
   if (best && best.whole <= typoAllowance(compact.length) && (!second || second.whole > best.whole)) {
     return found(best.group, "typo");
   }
-  const suggestions = scored.slice(0, 5).map((entry) => label(entry.group[0]));
+  const suggestions = distinctPlaces(scored.map((entry) => entry.group))
+    .slice(0, 5)
+    .map((group) => label(canonical(group[0])));
   return {
     error: `No place is named "${reference}".${suggestions.length ? ` Did you mean ${suggestions.join("; ")}?` : ""}`,
   };
