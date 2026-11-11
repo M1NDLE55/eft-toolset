@@ -115,6 +115,15 @@ data carry a `dataNotice` with the data's age. `getGunPartLookup` projects every
 every part any slot accepts once per upstream refresh, so builds are evaluated and optimised
 with the browser's own modules (`src/app/lib/builds/*`).
 
+Trader offers carry the task that unlocks them (`taskUnlock`), and a weapon also gets its
+default preset's offers, marked with the preset, since traders sell most weapons only as a
+preset. The MCP lookup also carries the barters that give each part, priced per item at what
+their inputs cost (the cheapest trader price or flea 24-hour average). `priceSources` limit
+offers by loyalty level and, with `excludeQuestLocked`, by `completedTasks`, which are matched
+by id, name, or slug and expanded to the tasks they required (`src/app/lib/builds/quests.ts`).
+Build results list `requiredTasks`: the tasks behind the offers the build is priced with, and
+their prerequisites, in an order they can be done (`getTaskIndex`).
+
 Results put the payload in `structuredContent` and as JSON text. Builds are passed between
 calls as a share link, or restated as a weapon, preset, and `parts` (each part's slot path
 and item, as build results list them). List tools take `offset` and return `nextOffset`

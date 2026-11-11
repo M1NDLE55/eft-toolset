@@ -3,6 +3,9 @@ import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import {
   clearTarkovResourceCache,
   executeTarkovOperation,
+  getAmmoItems,
+  getGunPartLookup,
+  getTaskIndex,
 } from "@/app/lib/api/tarkov-server";
 import { createTarkovFixtures } from "./fixtures/tarkov";
 import type { MapDetails } from "@/app/lib/types/raidPlanner";
@@ -234,6 +237,131 @@ describe("Tarkov JSON adapter", () => {
     ).resolves.toEqual([
       expect.objectContaining({ id: "ammo", damage: 54, penetrationPower: 31, projectileCount: 1, traderLevel: 2 }),
     ]);
+  });
+
+  it("gives weapons their default preset's trader offers and names the task an offer is locked behind", async () => {
+    const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
+    items.weapon.buyFromTrader = [];
+    items.preset.buyFromTrader = [{ trader: "trader", priceRUB: 60_000, minTraderLevel: 1, taskUnlock: "task" }];
+    items.mod.buyFromTrader = [{ trader: "trader", priceRUB: 10_000, minTraderLevel: 1, taskUnlock: "task" }];
+    const unlock = { id: "task", name: "Test Task", trader: "Tester", minPlayerLevel: 10 };
+
+    const [weapon] = (await executeTarkovOperation(TARKOV_OPERATIONS.buildItems, {
+      gameMode: "regular",
+      ids: ["weapon"],
+    })) as Record<string, unknown>[];
+    expect(weapon).toMatchObject({
+      traderPriceRUB: 60_000,
+      traderName: "Tester",
+      traderLevel: 1,
+      traderTask: "Test Task",
+      traderOffers: [{ trader: "Tester", priceRUB: 60_000, level: 1, taskUnlock: unlock, preset: "Test Preset" }],
+    });
+    // Web lookups don't carry barters; only the MCP lookup prices them.
+    expect(weapon).not.toHaveProperty("barterOffers");
+    await expect(
+      executeTarkovOperation(TARKOV_OPERATIONS.pickItems, { gameMode: "regular", ids: ["mod"] })
+    ).resolves.toEqual([expect.objectContaining({ traderPriceRUB: 10_000, traderTask: "Test Task" })]);
+
+    const detail = (await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, {
+      gameMode: "regular",
+      name: "Test Rifle",
+    })) as { buyFor: unknown[] };
+    expect(detail.buyFor).toEqual([
+      { vendor: { name: "Tester" }, priceRUB: 60_000, minTraderLevel: 1, taskUnlock: unlock, preset: "Test Preset" },
+      { vendor: { name: "Flea Market" }, priceRUB: 55_000 },
+    ]);
+
+    // A weapon a trader sells bare keeps that offer first when it is cheaper.
+    items.weapon.buyFromTrader = [{ trader: "trader", priceRUB: 30_000, minTraderLevel: 2 }];
+    clearTarkovResourceCache();
+    const lookup = await getGunPartLookup("regular");
+    expect(lookup.get("weapon")?.traderOffers).toEqual([
+      { trader: "Tester", priceRUB: 30_000, level: 2 },
+      { trader: "Tester", priceRUB: 60_000, level: 1, taskUnlock: unlock, preset: "Test Preset" },
+    ]);
+  });
+
+  it("prices barters that give an item at what their inputs cost to buy", async () => {
+    const barters = (fixtures.barters as { data: Record<string, unknown>[] }).data;
+    barters.push(
+      {
+        trader: "trader",
+        minTraderLevel: 1,
+        taskUnlock: "task",
+        // 2 mods at the 10,000 trader price (cheaper than the 12,000 flea price), 10 rounds at 150.
+        requiredItems: [{ item: "mod", count: 2 }, { item: "ammo", count: 10 }],
+        offeredItem: { item: "preset", count: 1 },
+      },
+      { trader: "trader", minTraderLevel: 3, requiredItems: [{ item: "key", count: 1 }], offeredItem: { item: "weapon", count: 1 } },
+      { trader: "trader", minTraderLevel: 2, requiredItems: [{ item: "mod", count: 1 }], offeredItem: { item: "ammo", count: 100 } }
+    );
+    const lookup = await getGunPartLookup("regular");
+    const weapon = lookup.get("weapon")!;
+    expect(weapon.barterOffers).toEqual([
+      {
+        trader: "Tester",
+        priceRUB: 21_500,
+        level: 1,
+        taskUnlock: { id: "task", name: "Test Task", trader: "Tester", minPlayerLevel: 10 },
+        preset: "Test Preset",
+        requiredItems: [
+          { name: "Test Mod", count: 2 },
+          { name: "Test Ammo", count: 10 },
+        ],
+        count: 1,
+      },
+    ]);
+    expect(weapon.barterPriceRUB).toBe(21_500);
+    expect(lookup.get("mod")).toMatchObject({ barterOffers: [], barterPriceRUB: null });
+
+    const [ammo] = await getAmmoItems("regular", ["ammo"], { barters: true });
+    expect(ammo).toMatchObject({ barterPriceRUB: 100, barterOffers: [expect.objectContaining({ count: 100, level: 2 })] });
+
+    // The item page data lists every barter for the item, priced or not.
+    const detail = (await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, {
+      gameMode: "regular",
+      name: "Test Rifle",
+    })) as { bartersFor: { priceRUB: number | null; level: number | null }[] };
+    expect(detail.bartersFor.map((barter) => [barter.priceRUB, barter.level])).toEqual([
+      [21_500, 1],
+      [null, 3],
+    ]);
+  });
+
+  it("indexes each task's prerequisites and trader levels", async () => {
+    const tasks = (fixtures.tasks as { data: { tasks: Record<string, Record<string, unknown>> } }).data.tasks;
+    tasks.later = {
+      id: "later",
+      name: "later-name",
+      normalizedName: "later-task",
+      trader: "trader",
+      factionName: "USEC",
+      taskRequirements: [{ task: "task", status: ["complete"] }, { task: "unknown" }],
+      traderRequirements: [
+        { trader: "trader", requirementType: "level", compareMethod: ">=", value: 2 },
+        { trader: "trader", requirementType: "reputation", compareMethod: ">=", value: 0.2 },
+      ],
+    };
+    (fixtures.tasks_en as { data: Record<string, string> }).data["later-name"] = "Later Task";
+    const index = await getTaskIndex("regular");
+    expect(index.get("later")).toEqual({
+      id: "later",
+      name: "Later Task",
+      normalizedName: "later-task",
+      trader: "Tester",
+      minPlayerLevel: 0,
+      faction: "USEC",
+      requires: [
+        { id: "task", status: ["complete"] },
+        { id: "unknown", status: [] },
+      ],
+      traderLevels: [{ trader: "Tester", level: 2 }],
+    });
+
+    tasks.later.taskRequirements = [{ task: "task", status: "complete" }];
+    clearTarkovResourceCache();
+    await expect(getTaskIndex("regular")).rejects.toThrow("invalid tasks data");
   });
 
   it("composes task, barter, craft, and trader relations", async () => {

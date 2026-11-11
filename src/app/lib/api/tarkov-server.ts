@@ -7,20 +7,25 @@ import type {
   CachedHideoutSlot,
   CachedItem,
   CachedTask,
+  CachedVendorPrice,
   CatalogEntry,
   ComposedItem,
+  ItemBarterOffer,
   ItemUses,
 } from "@/app/lib/cache/types";
 import type {
   AmmoItemData,
+  BarterOffer,
   BuildItemData,
   GunListItem,
   ModSlotDef,
   PickItemData,
   PresetContents,
   SightKind,
+  TaskUnlock,
   TraderOffer,
 } from "@/app/lib/types/gunBuilder";
+import type { TaskIndex, TaskNode } from "@/app/lib/builds/quests";
 import type {
   ExtractFaction,
   MapBoss,
@@ -78,6 +83,8 @@ interface RawTraderOffer {
   trader?: string;
   priceRUB?: number | null;
   minTraderLevel?: number | null;
+  /** Buy offers only: the task that unlocks the offer. */
+  taskUnlock?: string | null;
 }
 
 interface RawSlot {
@@ -169,6 +176,14 @@ interface RawTask {
   trader?: string | null;
   factionName?: string | null;
   objectives?: RawTaskObjective[] | null;
+  /** Tasks this one needs, and the statuses (complete, active, failed) that satisfy each. */
+  taskRequirements?: { task?: string | null; status?: string[] | null }[] | null;
+  traderRequirements?: {
+    trader?: string | null;
+    requirementType?: string | null;
+    compareMethod?: string | null;
+    value?: number | null;
+  }[] | null;
 }
 
 interface RawBarter {
@@ -332,7 +347,19 @@ interface HideoutContext {
 
 interface RelationsContext {
   bartersByItem: Map<string, RawBarter[]>;
+  /** Barters by the item they give. */
+  bartersByReward: Map<string, RawBarter[]>;
   craftsByItem: Map<string, RawCraft[]>;
+}
+
+/** What projecting an item's offers needs: trader, preset, and task names, and barters when they are priced. */
+interface OfferContext {
+  traderNames: Map<string, string>;
+  itemById: Map<string, RawItem>;
+  translations: TranslationDictionary;
+  taskUnlock: (taskId: string | null | undefined) => TaskUnlock | null;
+  /** Set for lookups that price barters. */
+  bartersByReward?: Map<string, RawBarter[]>;
 }
 
 interface MemoEntry {
@@ -546,12 +573,11 @@ export async function getItemFacets(gameMode: GameMode): Promise<ItemFacets> {
 
 export async function getGroupItems(gameMode: GameMode, names: string[]): Promise<CachedItem[]> {
   if (names.length === 0) return [];
-  const [itemContext, traderNames, taskContext] = await Promise.all([
+  const [itemContext, offers, taskContext] = await Promise.all([
     loadItems(gameMode),
-    loadTraderNames(gameMode),
+    loadOfferContext(gameMode),
     loadTasks(gameMode),
   ]);
-  const { translations, fleaMarket } = itemContext;
   throwIfRequestAborted();
   return names.flatMap((name) => {
     const item = itemContext.byName.get(name);
@@ -559,9 +585,7 @@ export async function getGroupItems(gameMode: GameMode, names: string[]): Promis
     const usedInTasks = (taskContext.byItem.get(item.id ?? "") ?? []).map(({ task }) => ({
       name: translate(task.name, taskContext.translations),
     }));
-    return [
-      projectCachedItem(item, name, translations, traderNames, usedInTasks, fleaMarket),
-    ];
+    return [projectCachedItem(item, name, offers, usedInTasks, itemContext.fleaMarket)];
   });
 }
 
@@ -581,13 +605,14 @@ export async function getItemDetail(
   gameMode: GameMode,
   reference: ItemReference
 ): Promise<ComposedItem | null> {
-  const [itemContext, traderNames, taskContext, relations, hideout] =
+  const [itemContext, traderNames, taskContext, relations, hideout, offers] =
     await Promise.all([
       loadItems(gameMode),
       loadTraderNames(gameMode),
       loadTasks(gameMode),
       loadRelations(gameMode),
       loadHideout(gameMode),
+      loadOfferContext(gameMode, true),
     ]);
   const stations = hideout.stationNames;
   throwIfRequestAborted();
@@ -600,7 +625,7 @@ export async function getItemDetail(
   const itemId = item.id;
   const details = memo(
     `${gameMode}/details`,
-    [itemContext, traderNames, taskContext, relations, hideout],
+    [itemContext, traderNames, taskContext, relations, hideout, offers],
     () => new Map<string, ComposedItem>()
   );
   const cached = details.get(itemId);
@@ -636,13 +661,13 @@ export async function getItemDetail(
     ...projectCachedItem(
       item,
       requestedName,
-      itemContext.translations,
-      traderNames,
+      offers,
       tasks.map(({ name }) => ({ name })),
       itemContext.fleaMarket
     ),
     ...uses,
     bartersUsing,
+    bartersFor: barterOffersOf(item, offers),
     craftsUsing,
   };
   details.set(itemId, detail);
@@ -701,21 +726,18 @@ export async function getGunList(gameMode: GameMode): Promise<GunListItem[]> {
 
 async function getBuildItems(gameMode: GameMode, ids: string[]): Promise<BuildItemData[]> {
   if (ids.length === 0) return [];
-  const [{ byId, translations }, traderNames] = await Promise.all([
-    loadItems(gameMode),
-    loadTraderNames(gameMode),
-  ]);
+  const context = await loadOfferContext(gameMode);
   throwIfRequestAborted();
   return ids.flatMap((id) => {
-    const item = byId.get(id);
-    return item ? [projectBuildItem(item, byId, translations, traderNames)] : [];
+    const item = context.itemById.get(id);
+    return item ? [projectBuildItem(item, context)] : [];
   });
 }
 
-// Include every weapon and compatible part in one lookup.
+// Include every weapon and compatible part in one lookup, with the barters that give them.
 export async function getGunPartLookup(gameMode: GameMode): Promise<ReadonlyMap<string, BuildItemData>> {
-  const [context, traderNames] = await Promise.all([loadItems(gameMode), loadTraderNames(gameMode)]);
-  return memo(`${gameMode}/gun-part-lookup`, [context, traderNames], () => {
+  const [context, offers] = await Promise.all([loadItems(gameMode), loadOfferContext(gameMode, true)]);
+  return memo(`${gameMode}/gun-part-lookup`, [context, offers], () => {
     const ids = new Set<string>();
     for (const item of context.items) {
       if (!item.id) continue;
@@ -727,7 +749,7 @@ export async function getGunPartLookup(gameMode: GameMode): Promise<ReadonlyMap<
     const lookup = new Map<string, BuildItemData>();
     for (const id of ids) {
       const item = context.byId.get(id);
-      if (item) lookup.set(id, projectBuildItem(item, context.byId, context.translations, traderNames));
+      if (item) lookup.set(id, projectBuildItem(item, offers));
     }
     return lookup;
   });
@@ -735,29 +757,26 @@ export async function getGunPartLookup(gameMode: GameMode): Promise<ReadonlyMap<
 
 async function getPickItems(gameMode: GameMode, ids: string[]): Promise<PickItemData[]> {
   if (ids.length === 0) return [];
-  const [{ byId, translations }, traderNames] = await Promise.all([
-    loadItems(gameMode),
-    loadTraderNames(gameMode),
-  ]);
+  const context = await loadOfferContext(gameMode);
   throwIfRequestAborted();
   return ids.flatMap((id) => {
-    const item = byId.get(id);
-    return item ? [projectPickItem(item, translations, traderNames)] : [];
+    const item = context.itemById.get(id);
+    return item ? [projectPickItem(item, context)] : [];
   });
 }
 
-export async function getAmmoItems(gameMode: GameMode, ids: string[]): Promise<AmmoItemData[]> {
+/** Ammo by id; with barters, each round also gets the priced barters that give it (for the MCP tools). */
+export async function getAmmoItems(
+  gameMode: GameMode,
+  ids: string[],
+  options: { barters?: boolean } = {}
+): Promise<AmmoItemData[]> {
   if (ids.length === 0) return [];
-  const [{ byId, translations }, traderNames] = await Promise.all([
-    loadItems(gameMode),
-    loadTraderNames(gameMode),
-  ]);
+  const context = await loadOfferContext(gameMode, options.barters === true);
   throwIfRequestAborted();
   return ids.flatMap((id) => {
-    const item = byId.get(id);
-    return item?.properties?.propertiesType === "ItemPropertiesAmmo"
-      ? [projectAmmoItem(item, translations, traderNames)]
-      : [];
+    const item = context.itemById.get(id);
+    return item?.properties?.propertiesType === "ItemPropertiesAmmo" ? [projectAmmoItem(item, context)] : [];
   });
 }
 
@@ -860,6 +879,74 @@ function loadTraderNames(gameMode: GameMode) {
   return loadNames(gameMode, "traders");
 }
 
+async function loadOfferContext(gameMode: GameMode, withBarters = false): Promise<OfferContext> {
+  const [items, traderNames, tasks, relations] = await Promise.all([
+    loadItems(gameMode),
+    loadTraderNames(gameMode),
+    loadTasks(gameMode),
+    withBarters ? loadRelations(gameMode) : null,
+  ]);
+  return memo(`${gameMode}/offer-context/${withBarters}`, [items, traderNames, tasks, relations], () => {
+    const unlocks = new Map<string, TaskUnlock>();
+    return {
+      traderNames,
+      itemById: items.byId,
+      translations: items.translations,
+      taskUnlock: (id) => {
+        if (!id) return null;
+        let unlock = unlocks.get(id);
+        if (!unlock) {
+          unlock = projectOfferUnlock(id, tasks, traderNames);
+          unlocks.set(id, unlock);
+        }
+        return unlock;
+      },
+      ...(relations ? { bartersByReward: relations.bartersByReward } : {}),
+    };
+  });
+}
+
+/** An offer's task lock. A task tarkov.dev doesn't list still locks the offer, so it keeps its id as its name. */
+function projectOfferUnlock(id: string, tasks: TasksContext, traderNames: Map<string, string>): TaskUnlock {
+  const task = tasks.byId.get(id);
+  return {
+    id,
+    name: (task && translate(task.name, tasks.translations)) || id,
+    trader: (task?.trader && (traderNames.get(task.trader) ?? task.trader)) || null,
+    minPlayerLevel: finiteNumber(task?.minPlayerLevel),
+  };
+}
+
+/** Every task with what it requires, for matching completed tasks and listing what a build still needs. */
+export async function getTaskIndex(gameMode: GameMode): Promise<TaskIndex> {
+  const [tasks, traderNames] = await Promise.all([loadTasks(gameMode), loadTraderNames(gameMode)]);
+  return memo(`${gameMode}/task-index`, [tasks, traderNames], () => {
+    const index = new Map<string, TaskNode>();
+    for (const task of tasks.tasks) {
+      if (!task.id) continue;
+      const name = translate(task.name, tasks.translations) || task.id;
+      index.set(task.id, {
+        id: task.id,
+        name,
+        normalizedName: task.normalizedName ?? null,
+        trader: (task.trader && (traderNames.get(task.trader) ?? task.trader)) || null,
+        minPlayerLevel: finiteNumber(task.minPlayerLevel) ?? 0,
+        faction: task.factionName && task.factionName !== "Any" ? task.factionName : null,
+        requires: (task.taskRequirements ?? []).flatMap((requirement) =>
+          requirement.task ? [{ id: requirement.task, status: requirement.status ?? [] }] : []
+        ),
+        traderLevels: (task.traderRequirements ?? []).flatMap((requirement) => {
+          const level = finiteNumber(requirement.value);
+          return requirement.trader && requirement.requirementType === "level" && level !== null
+            ? [{ trader: traderNames.get(requirement.trader) ?? requirement.trader, level }]
+            : [];
+        }),
+      });
+    }
+    return index;
+  });
+}
+
 function loadStationNames(gameMode: GameMode) {
   return loadNames(gameMode, "hideout");
 }
@@ -958,10 +1045,14 @@ async function loadRelations(gameMode: GameMode): Promise<RelationsContext> {
   ]);
   return memo(`${gameMode}/relations-context`, [bartersEnvelope, craftsEnvelope], () => {
     const bartersByItem = new Map<string, RawBarter[]>();
+    const bartersByReward = new Map<string, RawBarter[]>();
     const craftsByItem = new Map<string, RawCraft[]>();
-    for (const barter of bartersEnvelope.data) indexRelation(bartersByItem, barter.requiredItems, barter);
+    for (const barter of bartersEnvelope.data) {
+      indexRelation(bartersByItem, barter.requiredItems, barter);
+      indexRelation(bartersByReward, barter.offeredItem ? [barter.offeredItem] : [], barter);
+    }
     for (const craft of craftsEnvelope.data) indexRelation(craftsByItem, craft.requiredItems, craft);
-    return { bartersByItem, craftsByItem };
+    return { bartersByItem, bartersByReward, craftsByItem };
   });
 }
 
@@ -1174,7 +1265,8 @@ function isRawTraderOffer(value: unknown): value is RawTraderOffer {
     isRecord(value) &&
     optionalShortString(value.trader) &&
     optionalFiniteNumber(value.priceRUB) &&
-    optionalFiniteNumber(value.minTraderLevel)
+    optionalFiniteNumber(value.minTraderLevel) &&
+    optionalShortString(value.taskUnlock)
   );
 }
 
@@ -1194,7 +1286,15 @@ function isRawTask(value: unknown): value is RawTask {
       optionalShortString
     ) &&
     optionalFiniteNumber(value.minPlayerLevel) &&
-    optionalArray(value.objectives, isRawTaskObjective)
+    optionalArray(value.objectives, isRawTaskObjective) &&
+    optionalArray(value.taskRequirements, (requirement) =>
+      isRecord(requirement) && optionalShortString(requirement.task) && optionalStringArray(requirement.status)
+    ) &&
+    optionalArray(value.traderRequirements, (requirement) =>
+      isRecord(requirement) &&
+      [requirement.trader, requirement.requirementType, requirement.compareMethod].every(optionalShortString) &&
+      optionalFiniteNumber(requirement.value)
+    )
   );
 }
 
@@ -1485,15 +1585,23 @@ function catalogImage(id: string, link: string | null | undefined): string | nul
 function projectCachedItem(
   item: RawItem,
   name: string,
-  translations: TranslationDictionary,
-  traderNames: Map<string, string>,
+  context: OfferContext,
   usedInTasks: { name: string }[],
   fleaMarket?: ItemsData["fleaMarket"]
 ): CachedItem {
+  const { translations, traderNames } = context;
   const fleaBuyPrice = fleaAveragePrice(item);
   const fleaSellPrice = isFleaBanned(item) ? null : finiteNumber(item.lastLowPrice);
   const canUseFlea = fleaSellPrice !== null;
-  const buyFor = projectTraderPrices(item.buyFromTrader, traderNames, true);
+  const buyFor = traderOffersOf(item, context).map(
+    (offer): CachedVendorPrice => ({
+      vendor: { name: offer.trader },
+      priceRUB: offer.priceRUB,
+      ...(offer.level === null ? {} : { minTraderLevel: offer.level }),
+      ...(offer.taskUnlock ? { taskUnlock: offer.taskUnlock } : {}),
+      ...(offer.preset ? { preset: offer.preset } : {}),
+    })
+  );
   const sellFor = projectTraderPrices(item.sellToTrader, traderNames);
   if (canUseFlea && fleaBuyPrice !== null) {
     buyFor.push({ vendor: { name: "Flea Market" }, priceRUB: fleaBuyPrice });
@@ -1529,20 +1637,11 @@ function projectCachedItem(
   };
 }
 
-function projectTraderPrices(
-  offers: RawTraderOffer[] | null | undefined,
-  traderNames: Map<string, string>,
-  withLevel = false
-) {
+function projectTraderPrices(offers: RawTraderOffer[] | null | undefined, traderNames: Map<string, string>) {
   return (offers ?? []).flatMap((offer) => {
     const priceRUB = finiteNumber(offer.priceRUB);
     if (!offer.trader || priceRUB === null) return [];
-    const level = withLevel ? traderLoyaltyLevel(offer) : null;
-    return [{
-      vendor: { name: traderNames.get(offer.trader) ?? offer.trader },
-      priceRUB,
-      ...(level === null ? {} : { minTraderLevel: level }),
-    }];
+    return [{ vendor: { name: traderNames.get(offer.trader) ?? offer.trader }, priceRUB }];
   });
 }
 
@@ -1724,12 +1823,8 @@ function relatedBarters(index: Map<string, RawBarter[]>, requestedId: string) {
   return Array.from(result);
 }
 
-function projectBuildItem(
-  item: RawItem,
-  itemById: Map<string, RawItem>,
-  translations: TranslationDictionary,
-  traderNames: Map<string, string>
-): BuildItemData {
+function projectBuildItem(item: RawItem, context: OfferContext): BuildItemData {
+  const { itemById, translations } = context;
   const properties = item.properties;
   const isWeapon = properties?.propertiesType === "ItemPropertiesWeapon";
   return {
@@ -1738,7 +1833,7 @@ function projectBuildItem(
     shortName: translate(item.shortName, translations) || translate(item.name, translations),
     gridImageLink: safeAssetUrl(item.gridImageLink),
     weight: finiteNumber(item.weight) ?? 0,
-    ...traderDetails(item, traderNames),
+    ...traderDetails(item, context),
     fleaPriceRUB: fleaAveragePrice(item),
     ergonomics: finiteNumber(properties?.ergonomics) ?? 0,
     recoilModifier: isWeapon ? 0 : finiteNumber(properties?.recoilModifier) ?? 0,
@@ -1761,7 +1856,7 @@ function projectBuildItem(
     conflictingSlotIds: item.conflictingSlotIds ?? [],
     slots: projectSlots(properties?.slots, translations),
     allowedAmmoIds: (properties?.allowedAmmo ?? []).filter((id) => byIdHasAmmo(itemById, id)),
-    ...gunBuilderExtras(item, traderNames),
+    ...gunBuilderExtras(item, context),
     capacity:
       properties?.propertiesType === "ItemPropertiesMagazine" ? positiveFiniteNumber(properties.capacity) : null,
     sight: sightKind(item, translate(item.name, translations)),
@@ -1781,35 +1876,116 @@ function sightKind(item: RawItem, name: string): SightKind | null {
   return /\bflip-up sights\b/i.test(name) ? "iron" : null;
 }
 
-/** Rouble trader offers with their loyalty levels, cheapest first. */
-function traderOffersOf(item: RawItem, traderNames: Map<string, string>): TraderOffer[] {
-  return (item.buyFromTrader ?? [])
-    .flatMap((offer) => {
-      const priceRUB = finiteNumber(offer.priceRUB);
-      if (!offer.trader || priceRUB === null || priceRUB <= 0) return [];
-      return [{ trader: traderNames.get(offer.trader) ?? offer.trader, priceRUB, level: traderLoyaltyLevel(offer) }];
-    })
-    .sort((a, b) => a.priceRUB - b.priceRUB);
+/** A weapon's default preset with its name; null for other items. */
+function defaultPresetOf(item: RawItem, context: OfferContext) {
+  const id = item.types?.includes("gun") ? item.properties?.defaultPreset : null;
+  const preset = id ? context.itemById.get(id) : undefined;
+  return preset ? { item: preset, name: translate(preset.name, context.translations) || id! } : null;
 }
 
-/** Every trader offer and the flea ban, so the gun builder can price parts at a player's loyalty levels. */
-function gunBuilderExtras(item: RawItem, traderNames: Map<string, string>) {
-  return { traderOffers: traderOffersOf(item, traderNames), fleaBanned: isFleaBanned(item) };
+function ownTraderOffers(item: RawItem, context: OfferContext): TraderOffer[] {
+  return (item.buyFromTrader ?? []).flatMap((offer) => {
+    const priceRUB = finiteNumber(offer.priceRUB);
+    if (!offer.trader || priceRUB === null || priceRUB <= 0) return [];
+    const taskUnlock = context.taskUnlock(offer.taskUnlock);
+    return [
+      {
+        trader: context.traderNames.get(offer.trader) ?? offer.trader,
+        priceRUB,
+        level: traderLoyaltyLevel(offer),
+        ...(taskUnlock ? { taskUnlock } : {}),
+      },
+    ];
+  });
+}
+
+/**
+ * Trader offers with their loyalty levels and task locks, cheapest first. Traders sell most
+ * weapons only as their default preset, so a weapon also gets its default preset's offers,
+ * marked with the preset: buying the preset is how a player gets the weapon.
+ */
+function traderOffersOf(item: RawItem, context: OfferContext): TraderOffer[] {
+  const preset = defaultPresetOf(item, context);
+  return [
+    ...ownTraderOffers(item, context),
+    ...(preset ? ownTraderOffers(preset.item, context).map((offer) => ({ ...offer, preset: preset.name })) : []),
+  ].sort((a, b) => a.priceRUB - b.priceRUB);
+}
+
+/** What a player pays for an item at the cheapest trader or the flea 24-hour average, ignoring loyalty levels. */
+function buyValue(item: RawItem | undefined) {
+  if (!item) return null;
+  const prices = [
+    ...(item.buyFromTrader ?? []).map((offer) => positiveFiniteNumber(offer.priceRUB)),
+    positiveFiniteNumber(fleaAveragePrice(item)),
+  ].filter((price): price is number => price !== null);
+  return prices.length ? Math.min(...prices) : null;
+}
+
+/**
+ * Barters that give the item (or, for a weapon, its default preset), cheapest first. Each is
+ * priced per item it gives at what its inputs cost to buy; null when an input has no price.
+ */
+function barterOffersOf(item: RawItem, context: OfferContext): ItemBarterOffer[] {
+  const index = context.bartersByReward;
+  if (!index || !item.id) return [];
+  const preset = defaultPresetOf(item, context);
+  const barters = [
+    ...(index.get(item.id) ?? []).map((barter) => ({ barter, preset: undefined })),
+    ...(preset?.item.id ? (index.get(preset.item.id) ?? []).map((barter) => ({ barter, preset: preset.name })) : []),
+  ];
+  return barters
+    .flatMap(({ barter, preset }) => {
+      if (!barter.trader) return [];
+      const count = positiveFiniteNumber(barter.offeredItem?.count) ?? 1;
+      let total: number | null = 0;
+      const requiredItems = (barter.requiredItems ?? []).flatMap((entry) => {
+        if (!entry.item) return [];
+        const required = context.itemById.get(entry.item);
+        const quantity = finiteNumber(entry.count) ?? 0;
+        const unit = buyValue(required);
+        total = total === null || unit === null ? null : total + unit * quantity;
+        return [{ name: (required && translate(required.name, context.translations)) || entry.item, count: quantity }];
+      });
+      const taskUnlock = context.taskUnlock(barter.taskUnlock);
+      return [
+        {
+          trader: context.traderNames.get(barter.trader) ?? barter.trader,
+          priceRUB: total === null ? null : Math.round(total / count),
+          level: traderLoyaltyLevel(barter),
+          ...(taskUnlock ? { taskUnlock } : {}),
+          ...(preset ? { preset } : {}),
+          requiredItems,
+          count,
+        },
+      ];
+    })
+    .sort((a, b) => (a.priceRUB ?? Number.POSITIVE_INFINITY) - (b.priceRUB ?? Number.POSITIVE_INFINITY));
+}
+
+/**
+ * Every trader offer and the flea ban, so the gun builder can price parts at a player's
+ * loyalty levels and tasks, and for lookups that price barters, the priced barters.
+ */
+function gunBuilderExtras(item: RawItem, context: OfferContext) {
+  const extras = { traderOffers: traderOffersOf(item, context), fleaBanned: isFleaBanned(item) };
+  if (!context.bartersByReward) return extras;
+  const barterOffers = barterOffersOf(item, context).filter(
+    (offer): offer is BarterOffer => offer.priceRUB !== null
+  );
+  return { ...extras, barterOffers, barterPriceRUB: barterOffers[0]?.priceRUB ?? null };
 }
 
 function byIdHasAmmo(itemById: Map<string, RawItem>, id: string) {
   return itemById.get(id)?.properties?.propertiesType === "ItemPropertiesAmmo";
 }
 
-function projectAmmoItem(
-  item: RawItem,
-  translations: TranslationDictionary,
-  traderNames: Map<string, string>
-): AmmoItemData {
+function projectAmmoItem(item: RawItem, context: OfferContext): AmmoItemData {
+  const { translations } = context;
   const properties = item.properties;
   return {
     id: item.id ?? "",
-    ...traderDetails(item, traderNames),
+    ...traderDetails(item, context),
     normalizedName: item.normalizedName ?? "",
     name: translate(item.name, translations),
     shortName: translate(item.shortName, translations) || translate(item.name, translations),
@@ -1824,22 +2000,19 @@ function projectAmmoItem(
     recoilModifier: finiteNumber(properties?.recoilModifier) ?? 0,
     accuracyModifier: finiteNumber(properties?.accuracyModifier) ?? 0,
     fleaPriceRUB: fleaAveragePrice(item),
-    ...gunBuilderExtras(item, traderNames),
+    ...gunBuilderExtras(item, context),
   };
 }
 
-function projectPickItem(
-  item: RawItem,
-  translations: TranslationDictionary,
-  traderNames: Map<string, string>
-): PickItemData {
+function projectPickItem(item: RawItem, context: OfferContext): PickItemData {
+  const { translations } = context;
   return {
     id: item.id ?? "",
     name: translate(item.name, translations),
     shortName: translate(item.shortName, translations) || translate(item.name, translations),
     gridImageLink: safeAssetUrl(item.gridImageLink),
     weight: finiteNumber(item.weight) ?? 0,
-    ...traderDetails(item, traderNames),
+    ...traderDetails(item, context),
     fleaPriceRUB: fleaAveragePrice(item),
     ergonomics: finiteNumber(item.properties?.ergonomics) ?? 0,
     recoilModifier: finiteNumber(item.properties?.recoilModifier) ?? 0,
@@ -1866,13 +2039,14 @@ function projectSlots(
   });
 }
 
-function traderDetails(item: RawItem, traderNames: Map<string, string>) {
-  const [best] = traderOffersOf(item, traderNames);
+function traderDetails(item: RawItem, context: OfferContext) {
+  const [best] = traderOffersOf(item, context);
   return {
     normalizedName: item.normalizedName ?? "",
     traderPriceRUB: best?.priceRUB ?? null,
     traderName: best?.trader ?? null,
     traderLevel: best?.level ?? null,
+    ...(best?.taskUnlock ? { traderTask: best.taskUnlock.name } : {}),
   };
 }
 
@@ -1891,7 +2065,7 @@ function fleaAveragePrice(item: RawItem) {
 }
 
 /** A trader offer's loyalty level, 1 to 10, or null when tarkov.dev gives none or an odd value. */
-function traderLoyaltyLevel(offer: RawTraderOffer) {
+function traderLoyaltyLevel(offer: { minTraderLevel?: number | null }) {
   const level = finiteNumber(offer.minTraderLevel);
   return level !== null && Number.isInteger(level) && level >= 1 && level <= 10 ? level : null;
 }

@@ -1,5 +1,6 @@
 import { escapeDiscordText } from "@/app/lib/text-safety";
-import type { BuildNode, PriceSources } from "@/app/lib/types/gunBuilder";
+import type { BarterOffer, BuildNode, PriceSources, TraderOffer } from "@/app/lib/types/gunBuilder";
+import { priceChoice, type PriceSource, type TraderLimits } from "./price";
 import type { ItemLookup } from "./stats";
 
 export interface ShoppingRow {
@@ -13,7 +14,9 @@ export interface ShoppingRow {
   fleaPriceRUB: number | null;
   traderName: string | null;
   traderLevel: number | null;
-  source: "trader" | "flea" | null;
+  source: PriceSource | null;
+  /** The trader offer or barter bought from, when the item lists its offers. */
+  offer?: TraderOffer | BarterOffer | null;
   unitPriceRUB: number | null;
   subtotalRUB: number | null;
 }
@@ -33,7 +36,8 @@ export function buildShoppingList(
   root: BuildNode,
   lookup: ItemLookup,
   sources: PriceSources,
-  includeWeapon = true
+  includeWeapon = true,
+  limits: TraderLimits | null = null
 ): ShoppingList {
   const counts = new Map<string, number>();
   const order: string[] = [];
@@ -53,15 +57,10 @@ export function buildShoppingList(
     const count = counts.get(itemId) ?? 1;
     const trader = positive(item?.traderPriceRUB);
     const flea = positive(item?.fleaPriceRUB);
-    const usableTrader = sources.traders ? trader : null;
-    const usableFlea = sources.flea ? flea : null;
-    const source =
-      usableTrader !== null && (usableFlea === null || usableTrader <= usableFlea)
-        ? "trader"
-        : usableFlea !== null
-          ? "flea"
-          : null;
-    const unit = source === "trader" ? usableTrader : source === "flea" ? usableFlea : null;
+    const choice = item ? priceChoice(item, sources, limits) : null;
+    const source = choice?.source ?? null;
+    const unit = choice?.priceRUB ?? null;
+    const offer = choice && choice.source !== "flea" ? choice.offer : undefined;
     itemCount += count;
     if (unit === null) unpricedCount += count;
     else totalRUB += unit * count;
@@ -74,9 +73,10 @@ export function buildShoppingList(
       isWeapon: itemId === root.itemId,
       traderPriceRUB: trader,
       fleaPriceRUB: flea,
-      traderName: item?.traderName ?? null,
-      traderLevel: item?.traderLevel ?? null,
+      traderName: offer?.trader ?? item?.traderName ?? null,
+      traderLevel: offer ? offer.level : (item?.traderLevel ?? null),
       source,
+      ...(offer === undefined ? {} : { offer }),
       unitPriceRUB: unit,
       subtotalRUB: unit === null ? null : unit * count,
     };
@@ -125,7 +125,7 @@ export function formatShoppingList(
     const trader = `${rub(row.traderPriceRUB)}${row.source === "trader" ? "*" : " "}`;
     const flea = `${rub(row.fleaPriceRUB)}${row.source === "flea" ? "*" : " "}`;
     const vendor = row.traderName
-      ? `  ${clean(row.traderName)}${row.traderLevel ? ` LL${row.traderLevel}` : ""}`
+      ? `  ${clean(row.traderName)}${row.traderLevel ? ` LL${row.traderLevel}` : ""}${row.source === "barter" ? ` barter ${rub(row.unitPriceRUB)}*` : ""}`
       : "";
     return [
       fit(clean(row.name), NAME_WIDTH),

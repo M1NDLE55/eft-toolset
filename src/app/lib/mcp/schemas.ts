@@ -18,8 +18,13 @@ export const priceSourcesSchema = z
       .refine((levels) => Object.keys(levels).length <= 20, "At most 20 traders.")
       .optional()
       .describe('Overrides maxTraderLevel, e.g. {"Jaeger": 0} (0 = locked).'),
+    // The server instructions explain these three, once, rather than in every tool's schema.
+    barters: z.boolean().optional(),
+    excludeQuestLocked: z.boolean().optional(),
+    completedTasks: z.array(z.string().min(1).max(200)).max(500).optional(),
   })
-  .default({ traders: true, flea: true })
+  // An omitted priceSources is parsed as {}, so the defaults above apply and are published once.
+  .prefault({})
   .describe("Where parts can be bought; each costs its cheapest allowed offer.");
 
 const slotPathEntries = z.array(z.string().min(1).max(160)).min(1).max(MAX_BUILD_TREE_DEPTH);

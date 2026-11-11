@@ -2,7 +2,8 @@ import type { GameMode } from "@/components/game-mode/context";
 import { apiFetch } from "@/app/lib/api/transport";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import type { QueryDefinition } from "@/app/lib/api/queryClient";
-import type { CachedItem, CatalogEntry, CatalogItem, ComposedItem } from "./types";
+import type { CachedItem, CachedVendorPrice, CatalogEntry, CatalogItem, ComposedItem } from "./types";
+import { isTaskUnlock as isOfferUnlock } from "./gunBuilder";
 import { MAX_GROUP_ITEMS } from "@/app/lib/item-groups/limits";
 import { isItemSlug } from "@/app/lib/item-links";
 
@@ -68,7 +69,7 @@ function expandCatalogEntry([id, name, shortName, image, normalizedName]: Catalo
 
 export const groupItemsQuery: QueryDefinition<GroupVariables, CachedItem[]> = {
   id: "group-items",
-  version: 2,
+  version: 3,
   staleTime: 10 * MINUTE,
   maxAge: DAY,
   persist: true,
@@ -99,7 +100,7 @@ export const groupItemsQuery: QueryDefinition<GroupVariables, CachedItem[]> = {
 
 export const itemDetailQuery: QueryDefinition<DetailVariables, ComposedItem | null> = {
   id: "item-detail",
-  version: 4,
+  version: 5,
   staleTime: 5 * MINUTE,
   maxAge: DAY,
   persist: true,
@@ -233,13 +234,16 @@ function isStationLevel(value: unknown) {
 
 function isVendorPrice(value: unknown) {
   if (!value || typeof value !== "object") return false;
-  const price = value as { priceRUB?: unknown; vendor?: { name?: unknown } };
+  const price = value as Partial<Record<keyof CachedVendorPrice, unknown>> & { vendor?: { name?: unknown } };
   return (
     typeof price.priceRUB === "number" &&
     Number.isFinite(price.priceRUB) &&
     Boolean(price.vendor) &&
     typeof price.vendor?.name === "string" &&
-    price.vendor.name.length <= 500
+    price.vendor.name.length <= 500 &&
+    (price.minTraderLevel === undefined || (typeof price.minTraderLevel === "number" && Number.isFinite(price.minTraderLevel))) &&
+    (price.taskUnlock === undefined || isOfferUnlock(price.taskUnlock)) &&
+    (price.preset === undefined || (typeof price.preset === "string" && price.preset.length <= 500))
   );
 }
 

@@ -7,6 +7,8 @@ import type {
   GunListItem,
   PickItemData,
   PresetContents,
+  TaskUnlock,
+  TraderOffer,
 } from "@/app/lib/types/gunBuilder";
 import { cacheDeleteMany, cacheGetMany, cacheKeys, cacheSetMany } from "./store";
 import { apiFetch } from "@/app/lib/api/transport";
@@ -17,7 +19,7 @@ import { isDetailed } from "@/app/lib/builds/stats";
 
 // 5: build items and ammo carry magazine capacity, sight kinds, trader offers with loyalty levels,
 // and the flea ban (with no flea price when banned).
-const GUN_CACHE_VERSION = 5;
+const GUN_CACHE_VERSION = 6;
 const MINUTE = 60_000;
 const DAY = 24 * 60 * MINUTE;
 const FRESH_MS = 15 * MINUTE;
@@ -555,12 +557,46 @@ function isPickItem(value: unknown): value is PickItemData {
     validStringArray(item.conflictingSlotIds, 20_000) &&
     (item.normalizedName === undefined || validString(item.normalizedName, 200)) &&
     (item.traderName === undefined || validTraderName(item.traderName)) &&
-    (item.traderLevel === undefined || validTraderLevel(item.traderLevel))
+    (item.traderLevel === undefined || validTraderLevel(item.traderLevel)) &&
+    validOfferExtras(item)
   );
 }
 
 function validTraderName(value: unknown) {
   return value === null || validString(value, 100, true);
+}
+
+/** The trader offers and the cheapest offer's task, which only some items carry. */
+function validOfferExtras(item: { traderOffers?: unknown; traderTask?: unknown }) {
+  return (
+    (item.traderOffers === undefined ||
+      (Array.isArray(item.traderOffers) && item.traderOffers.length <= 100 && item.traderOffers.every(isTraderOffer))) &&
+    (item.traderTask === undefined || item.traderTask === null || validString(item.traderTask, 500, true))
+  );
+}
+
+function isTraderOffer(value: unknown): value is TraderOffer {
+  if (!value || typeof value !== "object") return false;
+  const offer = value as Partial<TraderOffer>;
+  return (
+    validTraderName(offer.trader) &&
+    offer.trader !== null &&
+    finite(offer.priceRUB) &&
+    validTraderLevel(offer.level) &&
+    (offer.preset === undefined || validString(offer.preset, 500, true)) &&
+    (offer.taskUnlock === undefined || isTaskUnlock(offer.taskUnlock))
+  );
+}
+
+export function isTaskUnlock(value: unknown): value is TaskUnlock {
+  if (!value || typeof value !== "object") return false;
+  const task = value as Partial<TaskUnlock>;
+  return (
+    validString(task.id, 160, true) &&
+    validString(task.name, 500, true) &&
+    (task.trader === null || validString(task.trader, 100, true)) &&
+    (task.minPlayerLevel === null || finite(task.minPlayerLevel))
+  );
 }
 
 function validTraderLevel(value: unknown) {
@@ -590,7 +626,8 @@ export function isAmmoItem(value: unknown): value is AmmoItemData {
     nullableFinite(ammo.traderPriceRUB) &&
     nullableFinite(ammo.fleaPriceRUB) &&
     validTraderName(ammo.traderName) &&
-    validTraderLevel(ammo.traderLevel)
+    validTraderLevel(ammo.traderLevel) &&
+    validOfferExtras(ammo)
   );
 }
 
