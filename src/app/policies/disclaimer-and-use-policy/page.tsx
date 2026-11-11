@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Disclaimer and use policy",
@@ -18,6 +19,18 @@ export default function Page() {
         heading: "Third-Party API Use",
         content:
           "Our website utilizes a third-party API, TARKOV.DEV (https://tarkov.dev/), to fetch information and data related to Escape From Tarkov. While we strive to provide accurate and up-to-date information, we cannot guarantee the accuracy, completeness, or reliability of the data obtained from this API. Users should independently verify any information before relying on it. Our AI assistant (MCP) tools can also read the community Escape from Tarkov Wiki on Fandom (https://escapefromtarkov.fandom.com/), whose text is written by its contributors and licensed CC BY-NC-SA. We do not control or check that text, and results that quote it credit the wiki page it came from.",
+      },
+      {
+        heading: "Credits",
+        content: (
+          <>
+            Every source we use, its licence, and how we use it are listed on our{" "}
+            <Link href="/credits" className="text-[#9a8866] underline underline-offset-2">
+              Credits
+            </Link>{" "}
+            page.
+          </>
+        ),
       },
       {
         heading: "No Affiliation with Battlestate Games",

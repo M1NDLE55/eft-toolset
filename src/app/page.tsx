@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Bot, ChevronRight, Crosshair, Layers, Map as MapIcon, ScanSearch } from "lucide-react";
+import { Bot, ChevronRight, Crosshair, Heart, Layers, Map as MapIcon, ScanSearch } from "lucide-react";
 import { appLinks } from "@/app/lib/links";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
@@ -57,6 +57,13 @@ export default function Home() {
       >
         <Bot className="h-4 w-4 text-[#9a8866]" />
         Use every tool from Claude and other AI assistants
+      </Link>
+      <Link
+        href="/credits"
+        className="mt-3 flex items-center gap-2 text-xs uppercase tracking-widest text-[#888] underline-offset-4 hover:text-[#c8b384] hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+      >
+        <Heart className="h-4 w-4 text-[#9a8866]" />
+        Check out the awesome tools powering EFT Toolset
       </Link>
     </main>
   );

@@ -10,7 +10,7 @@ export function MapAttribution({ config, className }: { config: MapConfig; class
   return (
     <p
       className={cn(
-        "pointer-events-auto absolute z-999 bg-[#090909]/80 px-2 py-1 text-[10px] uppercase tracking-widest text-[#888]",
+        "pointer-events-auto absolute z-999 max-w-[calc(100%-4rem)] bg-[#090909]/80 px-2 py-1 text-[10px] uppercase tracking-widest text-[#888]",
         className
       )}
     >
@@ -27,6 +27,20 @@ export function MapAttribution({ config, className }: { config: MapConfig; class
       ) : (
         config.author
       )}
+      {config.svgPath ? (
+        <>
+          {" · "}
+          <a
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            target="_blank"
+            rel="noopener noreferrer license"
+            className="text-[#9a8866] underline underline-offset-2"
+          >
+            CC BY-NC-SA 4.0
+          </a>
+          {" · "}Unmodified except floor visibility
+        </>
+      ) : null}
     </p>
   );
 }
