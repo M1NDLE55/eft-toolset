@@ -3,7 +3,6 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
-// Checks the committed snapshot in data/wiki, which get_wiki_page serves in production.
 const DIRECTORY = join(process.cwd(), "data", "wiki");
 const read = (path: string) => JSON.parse(readFileSync(join(DIRECTORY, path), "utf8"));
 

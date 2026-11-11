@@ -22,7 +22,6 @@ export const MAX_WIKI_CONTENT_CHARS = 12_000;
 export const WHOLE_PAGE_CHARS = 4_000;
 const MAX_SECTIONS = 20;
 
-/** What a left-out page is, and where to look instead. */
 const LEFT_OUT: Record<string, { page: string; instead?: string }> = {
   weapon: {
     page: "a weapon or weapon part page",
@@ -111,7 +110,6 @@ export function registerWikiTools(server: McpServer, context: ToolContext) {
   );
 }
 
-/** The page's sections, with its infobox as the first lines of the introduction. */
 function pageSections(page: WikiPageRecord): WikiSection[] {
   const fields = Object.entries(page.infobox).map(([key, value]) => `${key}: ${value}`).join("\n");
   if (!fields) return page.sections;
@@ -120,7 +118,6 @@ function pageSections(page: WikiPageRecord): WikiSection[] {
   return [{ heading: INTRODUCTION, level: 1, text: fields }, ...page.sections];
 }
 
-/** The introduction, or the first section with text (and its subsections) when there is none. */
 function summary(all: WikiSection[]) {
   const first = all.findIndex((section) => section.text);
   if (first < 0) return [];

@@ -4,19 +4,15 @@ import { InputError } from "@/app/lib/input-error";
 import { WIKI_ORIGIN, wikiPageUrl } from "./wiki-url";
 import type { WikiSection } from "./wikitext";
 
-// Reads the wiki snapshot in data/wiki, built by scripts/build-wiki-snapshot.mjs from the
-// wiki's published XML dump. Nothing here contacts the wiki.
+// Reads data/wiki; never contacts the wiki.
 
-/** One wiki page as plain text, as stored in data/wiki/pages. */
 export interface WikiPageRecord {
   title: string;
   url: string;
   revisionId: number;
-  /** ISO time of the revision in the dump. */
   lastEdited: string;
   kind: string;
   categories: string[];
-  /** Titles that redirect here. */
   redirects: string[];
   infobox: Record<string, string>;
   sections: WikiSection[];
@@ -44,9 +40,7 @@ interface LoadedIndex extends SnapshotIndex {
 export interface FoundPage {
   page: WikiPageRecord;
   matchedBy: "title" | "search";
-  /** The title asked for, when a redirect led here. */
   redirectedFrom?: string;
-  /** The section a redirect points at, if any. */
   redirectFragment?: string;
 }
 
@@ -103,12 +97,10 @@ function readPage(entry: IndexEntry) {
   return page;
 }
 
-/** The time of the latest edit in the dump the snapshot was built from. */
 export async function wikiSnapshotDate() {
   return (await loadIndex()).snapshotDate;
 }
 
-/** Ignores case, spaces, and punctuation, so "chemical part 2" finds "Chemical - Part 2". */
 export function normalize(text: string) {
   return text.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, "");
 }
@@ -119,15 +111,16 @@ function canonical(title: string) {
   return spaced.charAt(0).toUpperCase() + spaced.slice(1);
 }
 
-/** Finds a page by title, redirect, or a title differing only in case and punctuation. */
 export async function findWikiPage(title: string): Promise<FoundPage | null> {
   const loaded = await loadIndex();
   let wanted = canonical(title);
   let matchedBy: FoundPage["matchedBy"] = "title";
   if (!loaded.byTitle.has(wanted) && !loaded.redirects[wanted]) {
+    // A page and its redirects often share a key; that's still one match.
     const near = loaded.byNormalized.get(normalize(title)) ?? [];
-    if (near.length !== 1) return null;
-    wanted = near[0];
+    const destinations = new Set(near.map((name) => (loaded.byTitle.has(name) ? name : loaded.redirects[name])));
+    if (destinations.size !== 1) return null;
+    wanted = near.find((name) => loaded.byTitle.has(name)) ?? near[0];
     matchedBy = "search";
   }
   const entry = loaded.byTitle.get(wanted);
@@ -144,7 +137,6 @@ export async function findWikiPage(title: string): Promise<FoundPage | null> {
   };
 }
 
-/** Titles that share the most words with the text, best first. */
 export async function searchWiki(text: string): Promise<WikiSearchResult[]> {
   const loaded = await loadIndex();
   const query = normalize(text);
@@ -167,10 +159,7 @@ export async function searchWiki(text: string): Promise<WikiSearchResult[]> {
     .map(([title]) => ({ title, url: wikiPageUrl(title), lastEdited: loaded.byTitle.get(title)!.lastEdited }));
 }
 
-/**
- * A page the snapshot leaves out on purpose, with why (such as "item"): the page titled so, or
- * else the shortest left-out title containing the text, ignoring case and punctuation.
- */
+/** A left-out page titled so, else the shortest left-out title containing the text. */
 export async function findLeftOutPage(text: string): Promise<{ title: string; kind: string } | null> {
   if (!leftOut) {
     leftOut = readJson<Record<string, string>>("left-out.json").then((titles) =>

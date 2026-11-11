@@ -28,7 +28,6 @@ export interface WikiPageText {
   sections: WikiSection[];
 }
 
-/** Splits a page into its first infobox and its sections, both as plain text. */
 export function wikitextToPage(wikitext: string, title: string): WikiPageText {
   const text = stripHidden(wikitext);
   for (let index = text.indexOf("{{"); index >= 0; ) {
@@ -153,7 +152,6 @@ function expandTemplates(text: string, title: string): string {
     if (start < 0) break;
     const end = matchingEnd(text, start, "{{", "}}");
     if (end < 0) {
-      // An unclosed template: drop its braces and read on.
       out += text.slice(index, start);
       index = start + 2;
       continue;
@@ -203,7 +201,7 @@ function convertLinks(text: string): string {
     if (start < 0) break;
     const end = matchingEnd(text, start, "[[", "]]");
     if (end < 0) {
-      // An unclosed link, as the wiki sometimes has: drop its brackets and read on.
+      // The wiki has some unclosed links; drop the brackets and read on.
       out += text.slice(index, start);
       index = start + 2;
       continue;

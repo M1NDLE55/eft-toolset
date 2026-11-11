@@ -101,8 +101,9 @@ id as a reference.
 community Escape from Tarkov Wiki in `data/wiki`, built from the XML dump of current pages that
 Fandom publishes for download, and makes no requests to the wiki at runtime.
 `node scripts/build-wiki-snapshot.mjs` downloads the dump named in `data/wiki/manifest.json`
-(or takes a downloaded one with `--file`), unpacks it with `7z-wasm`, and writes a file per
-page; `--check` sends one HEAD request for the dump and prints whether it is newer than the
+(or `--url <url>`), or takes a downloaded `.7z` with `--file <path>` (add
+`--last-modified <HTTP date>` to record its date), unpacks it with `7z-wasm`, and writes a file
+per page; `--check` sends one HEAD request for the dump and prints whether it is newer than the
 one in the manifest, which records the dump's URL, size, SHA-256, Last-Modified date, and the
 time of its latest edit (the snapshot date). Output depends only on the dump, so rebuilding an
 unchanged dump changes nothing. `src/app/lib/wiki/wikitext.ts` turns each page's wikitext into

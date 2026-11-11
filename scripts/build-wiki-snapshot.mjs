@@ -1,10 +1,4 @@
-// Builds data/wiki from the Escape from Tarkov Wiki's published XML dump. See DATA_ARCHITECTURE.md.
-//   node scripts/build-wiki-snapshot.mjs                 download the dump in data/wiki/manifest.json and rebuild
-//   node scripts/build-wiki-snapshot.mjs --file <path> [--last-modified <HTTP date>]
-//                                                         rebuild from a downloaded .7z (or unpacked .xml)
-//   node scripts/build-wiki-snapshot.mjs --url <url>     rebuild from another dump URL
-//   node scripts/build-wiki-snapshot.mjs --check         only report whether the published dump is newer
-// Only the dump file is downloaded; nothing else on the wiki is requested.
+// Rebuilds data/wiki from the wiki's published dump; options in DATA_ARCHITECTURE.md.
 import { createHash } from "node:crypto";
 import { mkdir, mkdtemp, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
@@ -16,7 +10,6 @@ import { buildSnapshot, isNewer } from "./wiki-snapshot.mjs";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "data", "wiki");
 const DEFAULT_URL = "https://s3.amazonaws.com/wikia_xml_dumps/e/es/escapefromtarkov_gamepedia_pages_current.xml.7z";
-// As src/app/lib/api/user-agent.ts sends.
 const USER_AGENT = "EFT-Toolset/1.0 (+https://www.eft-toolset.com; https://github.com/M1NDLE55/eft-toolset/issues)";
 
 function option(name) {
@@ -69,6 +62,7 @@ async function main() {
   const work = await mkdtemp(join(tmpdir(), "wiki-dump-"));
   try {
     let input = option("--file");
+    if (input && !input.endsWith(".7z")) throw new Error("--file takes the dump as published, a .7z file.");
     let lastModified = null;
     if (input) {
       // Keep the archive's own folder untouched: unpack a copy.
@@ -81,7 +75,7 @@ async function main() {
     const bytes = await readFile(input);
     const sha256 = createHash("sha256").update(bytes).digest("hex");
     lastModified ??= option("--last-modified") ?? (manifest?.source?.sha256 === sha256 ? manifest.source.lastModified : null);
-    const xmlPath = input.endsWith(".7z") ? await unpack(input, work) : input;
+    const xmlPath = await unpack(input, work);
     const source = { url, file: basename(new URL(url).pathname), bytes: bytes.length, sha256, ...(lastModified ? { lastModified } : {}) };
     const { files, manifest: built } = buildSnapshot(await readFile(xmlPath, "utf8"), source);
     await rm(join(OUT, "pages"), { recursive: true, force: true });

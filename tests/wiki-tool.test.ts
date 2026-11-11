@@ -1,10 +1,10 @@
 // @vitest-environment node
-import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { POST } from "@/app/api/mcp/route";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
 import { MAX_WIKI_CONTENT_CHARS } from "@/app/lib/mcp/wiki";
 import { setWikiSnapshotDirectory } from "@/app/lib/wiki/snapshot";
-import { writeFixtureSnapshot } from "./fixtures/wiki";
+import { dumpOf, writeFixtureSnapshot } from "./fixtures/wiki";
 
 interface WikiResult {
   found: boolean;
@@ -182,5 +182,31 @@ describe("get_wiki_page", () => {
     const { isError, text } = await readWiki({ page: "https://example.com/wiki/Tagilla" });
     expect(isError).toBe(true);
     expect(text).toBe("Only https://escapefromtarkov.fandom.com/wiki/ pages can be read. Pass a page title or search text instead.");
+  });
+});
+
+describe("get_wiki_page title matching", () => {
+  beforeAll(() =>
+    setWikiSnapshotDirectory(
+      writeFixtureSnapshot(
+        dumpOf([
+          ["Peacekeeper", "A trader.\n== Services ==\nSells US gear.\n[[Category:Traders]]"],
+          ["PeaceKeeper", "#REDIRECT [[Peacekeeper]]", "Peacekeeper"],
+          // MediaWiki ignores the case of a title's first letter, so this targets Peacekeeper.
+          ["UN trader", "#REDIRECT [[peacekeeper#Services]]", "Peacekeeper"],
+        ])
+      )
+    )
+  );
+  afterAll(() => setWikiSnapshotDirectory(writeFixtureSnapshot()));
+
+  it("treats a page and its redirect that differ only in case as one match", async () => {
+    expect((await readWiki({ page: "PEACEKEEPER" })).data).toMatchObject({ found: true, title: "Peacekeeper", matchedBy: "search" });
+  });
+
+  it("follows a redirect written with a lowercase target to its section", async () => {
+    const { data } = await readWiki({ page: "UN trader" });
+    expect(data).toMatchObject({ found: true, title: "Peacekeeper", redirectedFrom: "UN trader" });
+    expect(data.content).toBe("## Services\nSells US gear.");
   });
 });

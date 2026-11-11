@@ -1,27 +1,19 @@
-// Turns a MediaWiki XML dump of the Escape from Tarkov Wiki into the snapshot get_wiki_page reads.
-// Pure functions only; scripts/build-wiki-snapshot.mjs downloads, unpacks, and writes the files.
 import { createHash } from "node:crypto";
 import { wikiPageUrl } from "../src/app/lib/wiki/wiki-url.ts";
 import { wikitextToPage } from "../src/app/lib/wiki/wikitext.ts";
 
 export const SNAPSHOT_FORMAT = 1;
 
-/**
- * Pages kept: what tarkov.dev can't answer (guides, behaviour, rules, lore). Catalogue pages
- * (weapons, mods, ammo, items) are mostly the stats tarkov.dev already serves, so they are
- * left out and a miss on one points to the tool that has it. First match wins.
- */
+// First match wins; catalogue pages tarkov.dev serves are left out (see DATA_ARCHITECTURE.md).
 const KEPT = [
   ["quest", (page) => page.infobox === "infobox quest" || page.categories.some((name) => /quests$/i.test(name))],
   // Traders are also characters, so they come first.
   ["trader", (page) => hasCategory(page, "Traders")],
   ["character", (page) => page.infobox === "infobox character" || hasCategory(page, "Bosses", "Factions", "Characters")],
   ["location", (page) => page.infobox === "infobox location" || hasCategory(page, "Locations", "Maps")],
-  // Where the lock is and what is behind it.
   ["key", (page) => page.infobox === "infobox key" || hasCategory(page, "Keys", "Keycards")],
   ["container", (page) => hasCategory(page, "Loot Containers")],
   ["skill", (page) => page.infobox === "infobox skill" || page.categories.some((name) => /skills$/i.test(name))],
-  // Mechanics, game modes, and lore.
   [
     "game",
     (page) => hasCategory(page, "Escape from Tarkov", "Escape from Tarkov: Arena", "Game modes", "Story chapters"),
@@ -61,7 +53,6 @@ function field(xml, pattern) {
   return match ? decodeXml(match[1]) : undefined;
 }
 
-/** Main-namespace pages of a MediaWiki export, current revision only. */
 export function readDumpPages(xml) {
   const pages = [];
   for (const [, body] of xml.matchAll(/<page>([\s\S]*?)<\/page>/g)) {
@@ -70,10 +61,12 @@ export function readDumpPages(xml) {
     const wikitext = field(revision, /<text\b[^>]*>([\s\S]*?)<\/text>/) ?? "";
     const redirect = field(body, /<redirect title="([^"]*)"\s*\/>/);
     // The redirect element drops the section a redirect points at; its wikitext keeps it.
-    const link = /^\s*#REDIRECT\s*:?\s*\[\[([^\]|]+)/i.exec(wikitext)?.[1].replace(/_/g, " ").trim();
+    const link = /^\s*#REDIRECT\s*:?\s*\[\[([^\]|]+)/i.exec(wikitext)?.[1] ?? "";
+    const [linkTitle, fragment] = link.replace(/_/g, " ").split("#");
+    const sameTarget = redirect && fragment?.trim() && linkTitle.trim().toLowerCase() === redirect.toLowerCase();
     pages.push({
       title: field(body, /<title>([\s\S]*?)<\/title>/),
-      redirect: redirect && link?.split("#")[0].toLowerCase() === redirect.toLowerCase() ? link : redirect,
+      redirect: sameTarget ? `${redirect}#${fragment.trim()}` : redirect,
       revisionId: Number(field(revision, /<id>(\d+)<\/id>/)),
       lastEdited: field(revision, /<timestamp>([^<]+)<\/timestamp>/),
       wikitext,
@@ -95,10 +88,8 @@ function describe(page) {
   };
 }
 
-/** "kept" pages go in the snapshot; "left out" ones are remembered so a miss can say why. */
 export function classify(page) {
   const described = describe(page);
-  // Removed from the game, whatever it was.
   if (described.templates.includes("historical content")) return { kept: false, kind: "historical" };
   for (const [kind, test] of KEPT) if (test(described)) return { kept: true, kind, categories: described.categories };
   for (const [kind, test] of LEFT_OUT) if (test(described)) return { kept: false, kind };
@@ -121,16 +112,12 @@ function shortHash(text) {
   return createHash("sha256").update(text).digest("hex").slice(0, 8);
 }
 
-/** Splits "Customs#Extractions" into its title and section. */
 function splitTarget(target) {
   const at = target.indexOf("#");
   return at < 0 ? { title: target } : { title: target.slice(0, at), fragment: target.slice(at + 1) || undefined };
 }
 
-/**
- * Builds the snapshot from dump XML: a file per kept page, an index for lookups, the titles left
- * out, and a manifest. Output depends only on the dump, so rebuilding an unchanged dump is a no-op.
- */
+/** Output depends only on the dump, so an unchanged dump rebuilds identically. */
 export function buildSnapshot(xml, source) {
   const pages = readDumpPages(xml);
   const content = pages.filter((page) => !page.redirect);
