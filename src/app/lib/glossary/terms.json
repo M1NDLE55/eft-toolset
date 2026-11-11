@@ -6004,22 +6004,22 @@
     "term": "Big Pipe",
     "aliases": [],
     "category": "boss",
-    "meaning": "Goon squad member who moves with Knight and Birdeye between maps such as Woods and Shoreline; the group's location changes every 3.5 to 5 hours.",
+    "meaning": "Goon squad member who spawns with Knight and Birdeye; see The Goons for per-map spawn chances. The wiki says the squad changes maps every 3.5 to 5 hours, but that is disputed, and trackers only show player reports, often hours or days old.",
     "source": "https://escapefromtarkov.fandom.com/wiki/Big_Pipe"
   },
   {
     "term": "Birdeye",
     "aliases": [],
     "category": "boss",
-    "meaning": "Goon squad member who provides overwatch and spots targets for Knight and Big Pipe; moves on the same rotation.",
+    "meaning": "Goon squad member who provides overwatch and spots targets for Knight and Big Pipe; see The Goons for per-map spawn chances. Whether the squad rotates between maps is disputed, and trackers only show player reports, often hours or days old.",
     "source": "https://escapefromtarkov.fandom.com/wiki/Birdeye"
   },
   {
     "term": "Knight",
     "aliases": [],
     "category": "boss",
-    "meaning": "Commander of the Goon squad, a rogue USEC unit; spawns with Rogue guards on Icebreaker and wanders other maps.",
-    "source": "https://escapefromtarkov.fandom.com/wiki/Knight"
+    "meaning": "Commander of the Goon squad, a rogue USEC unit. tarkov.dev gives a separate spawn chance per map: 20% on Customs, Woods, Shoreline and Lighthouse in PvP, 25-30% in PvE, 100% on Icebreaker. Whether the squad rotates between maps is disputed, and trackers only show player reports, often hours or days old.",
+    "source": "https://tarkov.dev/boss/knight"
   },
   {
     "term": "Partisan",
@@ -6035,8 +6035,8 @@
       "Goons"
     ],
     "category": "boss",
-    "meaning": "Collective name for Knight, Big Pipe and Birdeye, a rogue USEC squad that wanders between maps.",
-    "source": "https://escapefromtarkov.fandom.com/wiki/Knight"
+    "meaning": "Knight, Big Pipe and Birdeye, a rogue USEC squad. tarkov.dev gives a separate spawn chance per map: 20% on Customs, Woods, Shoreline and Lighthouse in PvP, 25-30% in PvE, 100% on Icebreaker. Whether they rotate between maps is disputed. Trackers only show player reports, often hours or days old, so no tool knows where they are now.",
+    "source": "https://tarkov.dev/boss/knight"
   },
   {
     "term": "Reshala",
