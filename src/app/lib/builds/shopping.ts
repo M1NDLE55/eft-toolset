@@ -1,6 +1,7 @@
 import { escapeDiscordText } from "@/app/lib/text-safety";
 import type { BarterOffer, BuildNode, PriceSources, TraderOffer } from "@/app/lib/types/gunBuilder";
-import { priceChoice, type PriceSource, type TraderLimits } from "./price";
+import { priceChoice, type PriceSource } from "./price";
+import { pathKey, planPurchase, type PurchaseContext } from "./purchase";
 import type { ItemLookup } from "./stats";
 
 export interface ShoppingRow {
@@ -9,6 +10,8 @@ export interface ShoppingRow {
   shortName: string;
   normalizedName: string | null;
   count: number;
+  /** How many come with the weapon's preset, so aren't bought. */
+  withWeapon: number;
   isWeapon: boolean;
   traderPriceRUB: number | null;
   fleaPriceRUB: number | null;
@@ -37,40 +40,47 @@ export function buildShoppingList(
   lookup: ItemLookup,
   sources: PriceSources,
   includeWeapon = true,
-  limits: TraderLimits | null = null
+  pricing: PurchaseContext = {}
 ): ShoppingList {
+  const purchase = planPurchase(root, lookup, sources, includeWeapon ? pricing : { ...pricing, preset: null });
   const counts = new Map<string, number>();
+  const withWeapon = new Map<string, number>();
   const order: string[] = [];
-  const stack = [root];
+  const stack: { node: BuildNode; path: string[] }[] = [{ node: root, path: [] }];
   while (stack.length > 0) {
-    const node = stack.shift()!;
-    stack.unshift(...Object.values(node.slots));
+    const { node, path } = stack.shift()!;
+    stack.unshift(...Object.entries(node.slots).map(([slotId, child]) => ({ node: child, path: [...path, slotId] })));
     if (node === root && !includeWeapon) continue;
     if (!counts.has(node.itemId)) order.push(node.itemId);
-    counts.set(node.itemId, (counts.get(node.itemId) ?? 0) + 1);
+    const tally = purchase.owned.has(pathKey(path)) ? withWeapon : counts;
+    tally.set(node.itemId, (tally.get(node.itemId) ?? 0) + 1);
+    if (!counts.has(node.itemId)) counts.set(node.itemId, 0);
   }
   let totalRUB = 0;
   let itemCount = 0;
   let unpricedCount = 0;
   const rows = order.map<ShoppingRow>((itemId) => {
     const item = lookup.get(itemId);
-    const count = counts.get(itemId) ?? 1;
-    const trader = positive(item?.traderPriceRUB);
+    const count = counts.get(itemId) ?? 0;
+    const isWeapon = itemId === root.itemId && includeWeapon;
+    const choice = count === 0 ? null : isWeapon ? purchase.weapon : item ? priceChoice(item, sources, pricing.limits ?? null) : null;
+    const trader = choice?.source === "trader" ? choice.priceRUB : positive(item?.traderPriceRUB);
     const flea = positive(item?.fleaPriceRUB);
-    const choice = item ? priceChoice(item, sources, limits) : null;
     const source = choice?.source ?? null;
     const unit = choice?.priceRUB ?? null;
     const offer = choice && choice.source !== "flea" ? choice.offer : undefined;
     itemCount += count;
     if (unit === null) unpricedCount += count;
     else totalRUB += unit * count;
+    const fromWeapon = withWeapon.get(itemId) ?? 0;
     return {
       itemId,
       name: item?.name ?? `Unknown item (${itemId})`,
       shortName: item?.shortName ?? itemId,
       normalizedName: item?.normalizedName ?? null,
       count,
-      isWeapon: itemId === root.itemId,
+      withWeapon: fromWeapon,
+      isWeapon,
       traderPriceRUB: trader,
       fleaPriceRUB: flea,
       traderName: offer?.trader ?? item?.traderName ?? null,
@@ -78,7 +88,7 @@ export function buildShoppingList(
       source,
       ...(offer === undefined ? {} : { offer }),
       unitPriceRUB: unit,
-      subtotalRUB: unit === null ? null : unit * count,
+      subtotalRUB: count === 0 ? 0 : unit === null ? null : unit * count,
     };
   });
   return { rows, totalRUB, itemCount, unpricedCount };
@@ -106,7 +116,7 @@ export function formatShoppingList(
   list: ShoppingList,
   details: { buildName: string; weaponName: string | null; modeLabel: string }
 ): string {
-  const showVendor = list.rows.some((row) => row.traderName);
+  const showVendor = list.rows.some((row) => row.traderName || row.withWeapon > 0);
   const title = [
     `**${escapeDiscordText(details.buildName) || "Untitled build"}**`,
     details.weaponName ? escapeDiscordText(details.weaponName) : null,
@@ -124,15 +134,20 @@ export function formatShoppingList(
   const lines = list.rows.map((row) => {
     const trader = `${rub(row.traderPriceRUB)}${row.source === "trader" ? "*" : " "}`;
     const flea = `${rub(row.fleaPriceRUB)}${row.source === "flea" ? "*" : " "}`;
-    const vendor = row.traderName
-      ? `  ${clean(row.traderName)}${row.traderLevel ? ` LL${row.traderLevel}` : ""}${row.source === "barter" ? ` barter ${rub(row.unitPriceRUB)}*` : ""}`
-      : "";
+    const vendor = [
+      row.traderName && row.count > 0
+        ? `${clean(row.traderName)}${row.traderLevel ? ` LL${row.traderLevel}` : ""}${row.offer?.preset ? " preset" : ""}${row.source === "barter" ? ` barter ${rub(row.unitPriceRUB)}*` : ""}`
+        : "",
+      row.withWeapon > 0 ? `+${row.withWeapon} with weapon` : "",
+    ]
+      .filter(Boolean)
+      .join(", ");
     return [
       fit(clean(row.name), NAME_WIDTH),
       String(row.count).padStart(3),
       trader.padStart(10),
       flea.padStart(10),
-      ...(showVendor ? [vendor] : []),
+      ...(showVendor ? [vendor ? `  ${vendor}` : ""] : []),
     ]
       .join(" ")
       .trimEnd();

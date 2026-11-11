@@ -1,6 +1,7 @@
 import type { BuildNode, GunItem, ModSlotDef, PriceSources } from "@/app/lib/types/gunBuilder";
 import { MAX_BUILD_TREE_DEPTH, MAX_BUILD_TREE_NODES } from "./limits";
-import { effectivePrice } from "./price";
+import { effectivePrice, type TraderLimits } from "./price";
+import { pathKey, placementKey, planPurchase, weaponChoices, type PresetParts } from "./purchase";
 import { isDetailed, type ItemLookup } from "./stats";
 import { childAt, collectItemIds } from "./tree";
 import { findConflicts, type BuildConflict } from "./conflicts";
@@ -31,6 +32,9 @@ export interface OptimizeOptions {
   minMagazineCapacity?: number | null;
   /** A slot that held a sight keeps a sight of the same kind (optic, rear, or front). Default true. */
   keepSights?: boolean;
+  limits?: TraderLimits | null;
+  /** Default preset parts, free in the slots the preset installs them in. */
+  preset?: PresetParts | null;
 }
 
 export interface OptimizeControl {
@@ -73,9 +77,15 @@ interface Restrictions {
   slots: ReadonlySet<string>;
 }
 
+interface PriceMode {
+  weaponPrice: number | null;
+  owned: PresetParts | null;
+}
+
 interface Pass {
   lookup: ItemLookup;
-  options: Required<Omit<OptimizeOptions, "target" | "budget" | "ammoId" | "minMagazineCapacity">> & {
+  mode: PriceMode;
+  options: Required<Omit<OptimizeOptions, "target" | "budget" | "ammoId" | "minMagazineCapacity" | "limits" | "preset">> & {
     target: OptimizeTarget | null;
     ammoId: string | null;
     minMagazineCapacity: number | null;
@@ -89,6 +99,7 @@ interface Pass {
 
 interface Evaluation {
   solved: Solved;
+  lambda: number;
   fixed: Set<BuildNode>;
   conflicts: BuildConflict[];
   restrictions: Restrictions;
@@ -104,13 +115,22 @@ function timeSlicedPause(sliceMs = 12) {
   };
 }
 
+function priceScore(price: number | null, goal: OptimizeGoal) {
+  const cost = (price ?? 0) / 1000;
+  return goal === "cost" ? -cost : -cost * 1e-6;
+}
+
 function itemScore(item: GunItem, price: number | null, goal: OptimizeGoal) {
   const ergo = item.ergonomics;
   const recoil = -item.recoilModifier * 100;
-  const cost = (price ?? 0) / 1000;
-  if (goal === "ergonomics") return ergo + recoil * 1e-3 - cost * 1e-6;
-  if (goal === "recoil") return recoil + ergo * 1e-3 - cost * 1e-6;
-  return -cost + (ergo + recoil) * 1e-6;
+  if (goal === "ergonomics") return ergo + recoil * 1e-3 + priceScore(price, goal);
+  if (goal === "recoil") return recoil + ergo * 1e-3 + priceScore(price, goal);
+  return (ergo + recoil) * 1e-6 + priceScore(price, goal);
+}
+
+// Free only where the preset installs it, so one included part isn't used for every slot it fits.
+function isFree(path: readonly string[], itemId: string, pass: Pass) {
+  return Boolean(pass.mode.owned?.placements.has(placementKey(path, itemId)));
 }
 
 function samePath(a: string[], b: string[]) {
@@ -169,7 +189,7 @@ function slotAdjustment(slot: ModSlotDef, itemId: string, oldRole: string | null
   return value;
 }
 
-function chooseForSlot(slot: ModSlotDef, old: BuildNode | undefined, pass: Pass): Solved | null {
+function chooseForSlot(slot: ModSlotDef, path: string[], old: BuildNode | undefined, pass: Pass): Solved | null {
   const emptyValue = -emptyPenalty(slot, Boolean(old), pass);
   if (pass.restrictions.slots.has(slot.id)) return { node: { itemId: "", slots: {} }, value: emptyValue, cost: 0 };
   const oldRole = pass.options.keepSights && old ? sightRole(pass.lookup.get(old.itemId), slot.nameId) : null;
@@ -178,35 +198,38 @@ function chooseForSlot(slot: ModSlotDef, old: BuildNode | undefined, pass: Pass)
   for (const id of slot.allowedItemIds) {
     if (tried.has(id) || pass.restrictions.items.has(id)) continue;
     tried.add(id);
-    const free = solveFree(id, old, pass);
-    if (!free) continue;
+    const unfixed = solveFree(id, path, old, isFree(path, id, pass), pass);
+    if (!unfixed) continue;
     const adjustment = slotAdjustment(slot, id, oldRole, pass);
-    const solved = adjustment ? { ...free, value: free.value + adjustment } : free;
+    const solved = adjustment ? { ...unfixed, value: unfixed.value + adjustment } : unfixed;
     if (!best || solved.value > best.value) best = solved;
   }
   if (!best || best.value <= emptyValue) return { node: { itemId: "", slots: {} }, value: emptyValue, cost: 0 };
   return best;
 }
 
-function solveFree(itemId: string, old: BuildNode | undefined, pass: Pass): Solved | null {
+function solveFree(itemId: string, path: string[], old: BuildNode | undefined, owned: boolean, pass: Pass): Solved | null {
   const context = old ?? null;
   let cache = pass.memo.get(context);
   if (!cache) {
     cache = new Map();
     pass.memo.set(context, cache);
   }
-  if (cache.has(itemId)) return cache.get(itemId)!;
+  // Only paths with preset parts below them price their subtree differently.
+  const branch = pass.mode.owned?.branches.has(pathKey(path)) ? pathKey(path) : "";
+  const key = `${itemId}|${owned ? "owned" : ""}|${branch}`;
+  if (cache.has(key)) return cache.get(key)!;
   if (pass.stack.has(itemId) || pass.stack.size >= MAX_BUILD_TREE_DEPTH) return null;
   const item = pass.lookup.get(itemId);
   if (!item) {
-    cache.set(itemId, null);
+    cache.set(key, null);
     return null;
   }
-  const { goal, priceSources, allowUnpriced } = pass.options;
-  const price = effectivePrice(item, priceSources);
+  const { goal, allowUnpriced, priceSources } = pass.options;
+  const price = owned ? 0 : effectivePrice(item, priceSources);
   const current = old?.itemId === itemId;
   if (price === null && !current && !(allowUnpriced && goal !== "cost")) {
-    cache.set(itemId, null);
+    cache.set(key, null);
     return null;
   }
   pass.stack.add(itemId);
@@ -217,7 +240,7 @@ function solveFree(itemId: string, old: BuildNode | undefined, pass: Pass): Solv
   const defs = isDetailed(item) ? item.slots : [];
   const matched = counterparts(defs, old, current, pass.lookup);
   for (const slot of defs) {
-    const choice = chooseForSlot(slot, matched.get(slot.id), pass);
+    const choice = chooseForSlot(slot, [...path, slot.id], matched.get(slot.id), pass);
     if (!choice) continue;
     value += choice.value;
     cost += choice.cost;
@@ -225,7 +248,7 @@ function solveFree(itemId: string, old: BuildNode | undefined, pass: Pass): Solv
   }
   pass.stack.delete(itemId);
   const solved = { node: { itemId, slots }, value, cost };
-  cache.set(itemId, solved);
+  cache.set(key, solved);
   return solved;
 }
 
@@ -241,9 +264,17 @@ function slotMode(path: string[], occupied: boolean, pass: Pass): "keep" | "opti
 
 function solveFixed(node: BuildNode, path: string[], pass: Pass): Solved {
   const item = pass.lookup.get(node.itemId);
-  const price = item ? effectivePrice(item, pass.options.priceSources) : null;
+  const root = path.length === 0;
+  const price = root
+    ? pass.mode.weaponPrice
+    : isFree(path, node.itemId, pass)
+      ? 0
+      : item
+        ? effectivePrice(item, pass.options.priceSources)
+        : null;
+  // The weapon's stats are the same in every build, but its price differs between price modes.
   let value =
-    (path.length > 0 && item ? itemScore(item, price, pass.options.goal) : 0) -
+    (root ? priceScore(price, pass.options.goal) : item ? itemScore(item, price, pass.options.goal) : 0) -
     (pass.lambda * (price ?? 0)) / 1000;
   let cost = price ?? 0;
   const slots: Record<string, BuildNode> = {};
@@ -261,7 +292,7 @@ function solveFixed(node: BuildNode, path: string[], pass: Pass): Solved {
     const childPath = [...path, slot.id];
     const mode = slotMode(childPath, Boolean(old), pass);
     if (mode === "skip") continue;
-    const choice = mode === "keep" && old ? solveFixed(old, childPath, pass) : chooseForSlot(slot, old, pass);
+    const choice = mode === "keep" && old ? solveFixed(old, childPath, pass) : chooseForSlot(slot, childPath, old, pass);
     if (!choice) continue;
     value += choice.value;
     cost += choice.cost;
@@ -315,10 +346,11 @@ export async function optimizeBuild(
   const pause = control.pause ?? timeSlicedPause();
   let evaluations = 0;
 
-  async function evaluate(lambda: number, restrictions: Restrictions): Promise<Evaluation> {
+  async function evaluate(mode: PriceMode, lambda: number, restrictions: Restrictions): Promise<Evaluation> {
     control.signal?.throwIfAborted();
     const pass: Pass = {
       lookup,
+      mode,
       options: settings,
       lambda,
       restrictions,
@@ -335,6 +367,7 @@ export async function optimizeBuild(
     await pause();
     return {
       solved,
+      lambda,
       fixed: pass.fixed,
       conflicts,
       restrictions,
@@ -342,8 +375,8 @@ export async function optimizeBuild(
     };
   }
 
-  async function solveAt(lambda: number): Promise<Evaluation> {
-    const start = await evaluate(lambda, { items: new Set(), slots: new Set() });
+  async function solveAt(mode: PriceMode, lambda: number): Promise<Evaluation> {
+    const start = await evaluate(mode, lambda, { items: new Set(), slots: new Set() });
     let best = start;
     let beam = [start];
     const seen = new Set([signature(start.restrictions)]);
@@ -360,7 +393,7 @@ export async function optimizeBuild(
           const key = signature(restrictions);
           if (seen.has(key)) continue;
           seen.add(key);
-          next.push(await evaluate(lambda, restrictions));
+          next.push(await evaluate(mode, lambda, restrictions));
         }
       }
       if (next.length === 0) break;
@@ -372,56 +405,79 @@ export async function optimizeBuild(
     return best;
   }
 
-  const objective = (evaluation: Evaluation, lambda: number) =>
-    evaluation.solved.value + (lambda * evaluation.solved.cost) / 1000 - evaluation.conflicts.length * CONFLICT_PENALTY;
+  // The goal's value without the budget's price penalty, comparable across lambdas and price modes.
+  const objective = (evaluation: Evaluation) =>
+    evaluation.solved.value +
+    (evaluation.lambda * evaluation.solved.cost) / 1000 -
+    evaluation.conflicts.length * CONFLICT_PENALTY;
 
-  let chosen = await solveAt(0);
-  let withinBudget = budget === null || chosen.solved.cost <= budget;
-  if (!withinBudget && budget !== null) {
+  async function solveMode(mode: PriceMode) {
+    let chosen = await solveAt(mode, 0);
+    if (budget === null || chosen.solved.cost <= budget) return { evaluation: chosen, withinBudget: true };
     let low = 0;
     let high = 1e-3;
-    let feasible: { evaluation: Evaluation; lambda: number } | null = null;
+    let feasible: Evaluation | null = null;
     let cheapest = chosen;
     while (high <= MAX_LAMBDA) {
-      const attempt = await solveAt(high);
+      const attempt = await solveAt(mode, high);
       if (attempt.solved.cost < cheapest.solved.cost) cheapest = attempt;
       if (attempt.solved.cost <= budget) {
-        feasible = { evaluation: attempt, lambda: high };
+        feasible = attempt;
         break;
       }
       low = high;
       high *= 4;
     }
-    if (feasible) {
-      for (let step = 0; step < BUDGET_STEPS; step += 1) {
-        const middle = (low + high) / 2;
-        const attempt = await solveAt(middle);
-        if (attempt.solved.cost <= budget) {
-          high = middle;
-          if (objective(attempt, middle) > objective(feasible.evaluation, feasible.lambda)) {
-            feasible = { evaluation: attempt, lambda: middle };
-          }
-        } else {
-          low = middle;
-        }
+    if (!feasible) return { evaluation: cheapest, withinBudget: false };
+    for (let step = 0; step < BUDGET_STEPS; step += 1) {
+      const middle = (low + high) / 2;
+      const attempt = await solveAt(mode, middle);
+      if (attempt.solved.cost <= budget) {
+        high = middle;
+        if (objective(attempt) > objective(feasible)) feasible = attempt;
+      } else {
+        low = middle;
       }
-      chosen = feasible.evaluation;
-      withinBudget = true;
-    } else {
-      chosen = cheapest;
     }
+    chosen = feasible;
+    return { evaluation: chosen, withinBudget: true };
   }
+
+  let best: Awaited<ReturnType<typeof solveMode>> | null = null;
+  for (const mode of priceModes(weapon, options)) {
+    const solved = await solveMode(mode);
+    const better =
+      !best ||
+      (solved.withinBudget !== best.withinBudget
+        ? solved.withinBudget
+        : solved.withinBudget
+          ? objective(solved.evaluation) > objective(best.evaluation)
+          : solved.evaluation.solved.cost < best.evaluation.solved.cost);
+    if (better) best = solved;
+  }
+  const chosen = best!.evaluation;
 
   const result = chosen.solved.node;
   if (collectItemIds(result).length > MAX_BUILD_TREE_NODES) {
     throw new Error("The optimised build is larger than the supported size.");
   }
+  // Priced as the build is bought, which can't cost more than the mode it was solved in.
+  const costRUB = planPurchase(result, lookup, options.priceSources, options).costRUB;
   return {
     root: result,
-    costRUB: chosen.solved.cost,
-    withinBudget,
+    costRUB,
+    withinBudget: budget === null || costRUB <= budget,
     changed: !treesEqual(root, result),
     conflicts: chosen.conflicts.length,
     evaluations,
   };
+}
+
+function priceModes(weapon: GunItem, options: OptimizeOptions): PriceMode[] {
+  if (!options.preset) return [{ weaponPrice: effectivePrice(weapon, options.priceSources), owned: null }];
+  const { bare, preset } = weaponChoices(weapon, options.priceSources, options.limits ?? null);
+  const modes: PriceMode[] = [];
+  if (bare || !preset) modes.push({ weaponPrice: bare?.priceRUB ?? null, owned: null });
+  if (preset) modes.push({ weaponPrice: preset.priceRUB, owned: options.preset });
+  return modes;
 }

@@ -106,6 +106,13 @@ export function PriceSourcesControl({
   );
 }
 
+function presetNote(stats: BuildStats) {
+  const included = stats.purchase.asPreset ? stats.purchase.owned.size : 0;
+  return included > 0
+    ? `, buying the weapon as its default preset, which comes with ${included} of these part${included === 1 ? "" : "s"}`
+    : "";
+}
+
 export function StatsPanel({
   stats,
   loading,
@@ -182,7 +189,7 @@ export function StatsPanel({
             ? "Select a price source to see the build cost."
             : stats.costMissingCount > 0
               ? `*${stats.costMissingCount} part${stats.costMissingCount === 1 ? " has" : "s have"} no price from the selected source${priceSources.traders && priceSources.flea ? "s" : ""}.`
-              : "Cheapest of the selected sources. Recoil is an estimate."}
+              : `Cheapest of the selected sources${presetNote(stats)}. Recoil is an estimate.`}
         </p>
       </div>
 

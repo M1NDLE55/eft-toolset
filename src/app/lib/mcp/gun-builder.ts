@@ -9,6 +9,7 @@ import { diffBuildTrees, statDeltas } from "@/app/lib/builds/compare";
 import { conflictReason, installedOutside } from "@/app/lib/builds/conflicts";
 import { optimizeBuild, type OptimizeGoal, type OptimizeOptions } from "@/app/lib/builds/optimizer";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
+import { presetParts } from "@/app/lib/builds/purchase";
 import { effectivePrice, offerLabel } from "@/app/lib/builds/price";
 import {
   asCatalog,
@@ -34,7 +35,7 @@ import {
   projectAmmo,
   projectStats,
 } from "./build-projection";
-import { loadBuildPricing } from "./build-prices";
+import { loadBuildPricing, purchaseContext } from "./build-prices";
 import { InputError, round, type ToolContext } from "./context";
 import {
   compareBuildsOutput,
@@ -205,7 +206,9 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
           defaultPreset = {
             id: weapon.defaultPresetId,
             name: weapon.presets?.find((preset) => preset.id === weapon.defaultPresetId)?.name ?? null,
-            stats: projectStats(computeStats(root, data.lookup, priceSources)),
+            stats: projectStats(
+              computeStats(root, data.lookup, priceSources, null, { limits, preset: presetParts(weapon.id, contents, data.lookup) })
+            ),
           };
         }
       }
@@ -380,7 +383,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       const description = await describeBuild(context, pricing, build);
       const list =
         includeShoppingList || includeDiscordText
-          ? buildShoppingList(build.root, data.lookup, priceSources, true, limits)
+          ? buildShoppingList(build.root, data.lookup, priceSources, true, await purchaseContext(pricing, build.weaponId))
           : null;
       return {
         gameMode,
@@ -394,6 +397,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
                 rows: list.rows.map((row) => ({
                   name: row.name,
                   count: row.count,
+                  ...(row.withWeapon ? { withWeapon: row.withWeapon } : {}),
                   source: row.source,
                   unitPriceRUB: row.unitPriceRUB,
                   subtotalRUB: row.subtotalRUB,
@@ -440,6 +444,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       const pricing = await loadBuildPricing(read, gameMode, prices);
       const { data, sources: priceSources } = pricing;
       const build = await resolveBuild(data, input);
+      const bought = await purchaseContext(pricing, build.weaponId);
       const applied: string[] = [];
       let root = build.root;
       let ammoId = build.ammoId;
@@ -469,6 +474,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
             {
               goal: "cost",
               priceSources,
+              ...bought,
               replaceExisting: false,
               target: target ? { parentPath: target.parentPath, slotId: target.slot.id } : null,
               ammoId,
@@ -553,12 +559,14 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       const { data, sources: priceSources } = pricing;
       const build = await resolveBuild(data, input);
       const target = slotPath ? resolveSlotPath(build.root, data.lookup, slotPath) : null;
+      const bought = await purchaseContext(pricing, build.weaponId);
       const result = await runOptimizer(
         build.root,
         data.lookup,
         {
           goal: goal as OptimizeGoal,
           priceSources,
+          ...bought,
           budget: budgetRUB ?? null,
           replaceExisting: !keepInstalledParts,
           allowUnpriced,
@@ -571,8 +579,8 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         context
       );
       const ammo = build.ammoId ? (await data.loadAmmo([build.ammoId]))[0] ?? null : null;
-      const before = computeStats(build.root, data.lookup, priceSources, ammo);
-      const after = computeStats(result.root, data.lookup, priceSources, ammo);
+      const before = computeStats(build.root, data.lookup, priceSources, ammo, bought);
+      const after = computeStats(result.root, data.lookup, priceSources, ammo, bought);
       // Optimising an optimised build replaces the goal in its name instead of stacking another.
       const name = input.name?.trim() || `${build.name.replace(/ \((?:ergonomics|recoil|cost)\)$/, "")} (${goal})`;
       const description = await describeBuild(context, pricing, { ...build, root: result.root, name });
@@ -626,17 +634,22 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       },
     },
     async ({ left: leftInput, right: rightInput, includeUnchangedSlots, gameMode, priceSources: prices }, { read }) => {
-      const { data, sources: priceSources } = await loadBuildPricing(read, gameMode, prices);
+      const pricing = await loadBuildPricing(read, gameMode, prices);
+      const { data, sources: priceSources } = pricing;
       const [left, right] = await Promise.all([
         resolveBuild(data, leftInput),
         resolveBuild(data, rightInput),
+      ]);
+      const [leftBought, rightBought] = await Promise.all([
+        purchaseContext(pricing, left.weaponId),
+        purchaseContext(pricing, right.weaponId),
       ]);
       const ammoIds = [left.ammoId, right.ammoId].filter((id): id is string => Boolean(id));
       const ammo = new Map(
         (ammoIds.length ? await data.loadAmmo(ammoIds) : []).map((entry) => [entry.id, entry])
       );
-      const leftStats = computeStats(left.root, data.lookup, priceSources, ammo.get(left.ammoId ?? "") ?? null);
-      const rightStats = computeStats(right.root, data.lookup, priceSources, ammo.get(right.ammoId ?? "") ?? null);
+      const leftStats = computeStats(left.root, data.lookup, priceSources, ammo.get(left.ammoId ?? "") ?? null, leftBought);
+      const rightStats = computeStats(right.root, data.lookup, priceSources, ammo.get(right.ammoId ?? "") ?? null, rightBought);
       return {
         gameMode,
         left: { name: left.name, weapon: itemName(data.lookup, left.weaponId), ammo: ammo.get(left.ammoId ?? "")?.name ?? null },

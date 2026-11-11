@@ -1,4 +1,4 @@
-import type { BuildItemData, BuildNode, PresetContents } from "@/app/lib/types/gunBuilder";
+import type { BuildNode, GunItem, PresetContents } from "@/app/lib/types/gunBuilder";
 
 interface Candidate {
   owner: number;
@@ -8,7 +8,7 @@ interface Candidate {
 export function reconstructPresetTree(
   weaponId: string,
   preset: PresetContents,
-  data: ReadonlyMap<string, BuildItemData>
+  data: ReadonlyMap<string, GunItem>
 ): BuildNode {
   const entries = [weaponId, ...withoutFirst(preset.itemIds, weaponId)];
   const candidates = entries.map((itemId, index) => {
@@ -16,7 +16,8 @@ export function reconstructPresetTree(
     const options: { candidate: Candidate; distance: number }[] = [];
     entries.forEach((ownerId, owner) => {
       if (owner === index) return;
-      for (const slot of data.get(ownerId)?.slots ?? []) {
+      const ownerItem = data.get(ownerId);
+      for (const slot of ownerItem && "slots" in ownerItem ? ownerItem.slots : []) {
         if (!slot.allowedItemIds.includes(itemId)) continue;
         const distance = owner < index ? index - owner : entries.length + owner - index;
         options.push({ candidate: { owner, slotId: slot.id }, distance });

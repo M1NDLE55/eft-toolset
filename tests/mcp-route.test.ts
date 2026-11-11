@@ -728,7 +728,13 @@ describe("MCP endpoint", () => {
     const tradersOnly = { flea: false, maxTraderLevel: 1 };
 
     const evaluated = await call("evaluate_build", { build, includeShoppingList: true, priceSources: tradersOnly });
-    expect(evaluated.data.weapon).toMatchObject({ priceRUB: 60_000, source: "trader", trader: "Tester LL1 (default preset)" });
+    expect(evaluated.data.weapon).toMatchObject({
+      priceRUB: 60_000,
+      source: "trader",
+      trader: "Tester LL1 (default preset)",
+      boughtAsPreset: true,
+      sparePresetParts: ["2× Test Mod"],
+    });
     expect(evaluated.data.parts[0]).toMatchObject({ priceRUB: 20_000, source: "trader", trader: "Tester LL1", taskUnlock: secondTask });
     expect(evaluated.data.stats.costRUB).toBe(80_000);
     expect(evaluated.data.requiredTasks).toEqual([
@@ -742,14 +748,19 @@ describe("MCP endpoint", () => {
 
     const factory = await call("evaluate_build", {
       build: { weapon: "Test Rifle", parts: [{ slotPath: ["Scope"], item: "Test Mod" }] },
+      includeShoppingList: true,
       priceSources: tradersOnly,
     });
-    expect(factory.data.parts[0]).toMatchObject({ name: "Test Mod", priceRUB: 10_000, comesWithWeapon: true });
-    expect(factory.data.stats.costRUB).toBe(70_000);
-    expect(factory.data.problems).toContain(
-      "The weapon is sold as its default preset (Tester LL1, 60,000 RUB), which comes with 1 of these parts (parts[].comesWithWeapon); costRUB counts 10,000 RUB of them again, so buying the preset and keeping them costs 60,000 RUB."
-    );
+    expect(factory.data.parts[0]).toEqual(expect.objectContaining({ name: "Test Mod", priceRUB: 0, comesWithWeapon: true }));
+    expect(factory.data.parts[0]).not.toHaveProperty("source");
+    expect(factory.data.stats.costRUB).toBe(60_000);
+    expect(factory.data.weapon).toMatchObject({ boughtAsPreset: true, sparePresetParts: ["Test Mod"] });
+    expect(factory.data.problems).toEqual([]);
+    expect(factory.data.shoppingList).toMatchObject({ totalRUB: 60_000, itemCount: 1, unpricedCount: 0 });
+    expect(factory.data.shoppingList.rows[1]).toMatchObject({ name: "Test Mod", count: 0, withWeapon: 1, subtotalRUB: 0 });
     expect(evaluated.data.parts[0]).not.toHaveProperty("comesWithWeapon");
+    const presetCost = await call("get_weapon", { weapon: "Test Rifle", priceSources: tradersOnly });
+    expect(presetCost.data.defaultPreset.stats.costRUB).toBe(60_000);
 
     const partly = await call("evaluate_build", { build, priceSources: { ...tradersOnly, completedTasks: ["test task"] } });
     expect(partly.data.requiredTasks.map((task: { name: string }) => task.name)).toEqual(["Second Task"]);
@@ -827,7 +838,8 @@ describe("MCP endpoint", () => {
       build: { weapon: "Test Rifle", parts: [{ slotPath: ["Scope"], item: "Test Mod" }] },
       priceSources: tradersOnly,
     });
-    expect(included.data.parts[0]).toMatchObject({ comesWithWeapon: true, taskUnlock: secondTask });
+    expect(included.data.parts[0]).toMatchObject({ comesWithWeapon: true, priceRUB: 0 });
+    expect(included.data.parts[0]).not.toHaveProperty("taskUnlock");
     expect(included.data).not.toHaveProperty("requiredTasks");
   });
 
