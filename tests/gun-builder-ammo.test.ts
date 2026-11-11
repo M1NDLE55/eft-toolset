@@ -196,6 +196,16 @@ describe("ammo data loading", () => {
     expect(cache.isAmmoItem(ammo("ok", { traderLevel: 11 }))).toBe(false);
     expect(cache.isAmmoItem(ammo("ok", { damage: Number.POSITIVE_INFINITY }))).toBe(false);
     expect(cache.isAmmoItem(ammo("ok", { normalizedName: "" }))).toBe(true);
+    // Offers carry the task that unlocks them and the preset they are for, and are checked too.
+    const unlock = { id: "chem2", name: "Chemical - Part 2", trader: "Skier", minPlayerLevel: null };
+    const offer = { trader: "Skier", priceRUB: 100, level: 1, taskUnlock: unlock, preset: "Default" };
+    expect(cache.isAmmoItem(ammo("ok", { traderOffers: [offer], traderTask: "Chemical - Part 2" }))).toBe(true);
+    expect(cache.isAmmoItem(ammo("ok", { traderOffers: [{ ...offer, taskUnlock: { ...unlock, id: "" } }] }))).toBe(false);
+    // Malformed cache entries, cast past the types the way stored JSON is.
+    const malformed = (extra: Record<string, unknown>) => ammo("ok", extra as Partial<AmmoItemData>);
+    expect(cache.isAmmoItem(malformed({ traderOffers: [{ ...offer, priceRUB: "100" }] }))).toBe(false);
+    expect(cache.isAmmoItem(ammo("ok", { traderOffers: [{ ...offer, level: 0 }] }))).toBe(false);
+    expect(cache.isAmmoItem(malformed({ traderTask: 5 }))).toBe(false);
     vi.doUnmock("@/app/lib/api/transport");
     vi.doUnmock("@/app/lib/cache/store");
   });

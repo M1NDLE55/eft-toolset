@@ -405,7 +405,7 @@ describe("MCP endpoint", () => {
     expect(item.data).toMatchObject({ size: "1x1", slots: 1, defaultBuildSize: "5x2" });
     expect(item.data.bestSell.perSlotRUB).toBeNull();
     expect(item.data.sizeNote).toBe(
-      "Weapon: 1x1 is the stripped weapon (default build 5x2; real size depends on attachments), so no per-slot value. Flea prices are for the default build, trader prices for the stripped weapon."
+      "Weapon: 1x1 is the stripped weapon (default build 5x2; real size depends on attachments), so no per-slot value. Flea prices are for the default build; trader prices are for the stripped weapon, or for the preset an offer names."
     );
 
     const mod = await call("get_item", { item: "Test Mod" });
@@ -690,6 +690,145 @@ describe("MCP endpoint", () => {
     });
     const noAmmo = await call("modify_build", { build: full, changes: [{ action: "set_ammo" }] });
     expect(noAmmo.text).toContain("set_ammo needs item");
+  });
+
+  it("prices weapons by their default preset, flags quest-locked offers, prices barters, and lists the tasks a build needs", async () => {
+    const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
+    const translations = (fixtures.items_en as { data: Record<string, string> }).data;
+    const tasks = (fixtures.tasks as { data: { tasks: Record<string, Record<string, unknown>> } }).data.tasks;
+    items.weapon.buyFromTrader = [];
+    items.preset.buyFromTrader = [{ trader: "trader", priceRUB: 60_000, minTraderLevel: 1 }];
+    items.mod2 = {
+      id: "mod2",
+      name: "mod2-name",
+      normalizedName: "locked-mod",
+      buyFromTrader: [{ trader: "trader", priceRUB: 20_000, minTraderLevel: 1, taskUnlock: "task2" }],
+      properties: { propertiesType: "ItemPropertiesWeaponMod", ergonomics: 5, recoilModifier: -0.1 },
+    };
+    translations["mod2-name"] = "Locked Mod";
+    ((items.weapon.properties as { slots: { filters: { allowedItems: string[] } }[] }).slots[0].filters.allowedItems).push("mod2");
+    tasks.task2 = {
+      id: "task2",
+      name: "task2-name",
+      normalizedName: "second-task",
+      trader: "trader",
+      minPlayerLevel: 15,
+      taskRequirements: [{ task: "task", status: ["complete"] }],
+      traderRequirements: [{ trader: "trader", requirementType: "level", compareMethod: ">=", value: 2 }],
+    };
+    (fixtures.tasks_en as { data: Record<string, string> }).data["task2-name"] = "Second Task";
+    (fixtures.barters as { data: Record<string, unknown>[] }).data.push({
+      trader: "trader",
+      minTraderLevel: 1,
+      requiredItems: [{ item: "ammo", count: 20 }],
+      offeredItem: { item: "mod2", count: 1 },
+    });
+    const secondTask = { id: "task2", name: "Second Task", trader: "Tester", minPlayerLevel: 15 };
+    const build = { weapon: "Test Rifle", parts: [{ slotPath: ["Scope"], item: "Locked Mod" }] };
+    const tradersOnly = { flea: false, maxTraderLevel: 1 };
+
+    const evaluated = await call("evaluate_build", { build, includeShoppingList: true, priceSources: tradersOnly });
+    expect(evaluated.data.weapon).toMatchObject({ priceRUB: 60_000, source: "trader", trader: "Tester LL1 (default preset)" });
+    expect(evaluated.data.parts[0]).toMatchObject({ priceRUB: 20_000, source: "trader", trader: "Tester LL1", taskUnlock: secondTask });
+    expect(evaluated.data.stats.costRUB).toBe(80_000);
+    expect(evaluated.data.requiredTasks).toEqual([
+      { id: "task", name: "Test Task", trader: "Tester", minPlayerLevel: 10 },
+      { id: "task2", name: "Second Task", trader: "Tester", minPlayerLevel: 15, traderLevels: ["Tester LL2"], unlocks: ["Locked Mod"] },
+    ]);
+    expect(evaluated.data.shoppingList.rows).toEqual([
+      expect.objectContaining({ name: "Test Rifle", source: "trader", trader: "Tester LL1 (default preset)" }),
+      expect.objectContaining({ name: "Locked Mod", source: "trader", taskUnlock: secondTask }),
+    ]);
+
+    const factory = await call("evaluate_build", {
+      build: { weapon: "Test Rifle", parts: [{ slotPath: ["Scope"], item: "Test Mod" }] },
+      priceSources: tradersOnly,
+    });
+    expect(factory.data.parts[0]).toMatchObject({ name: "Test Mod", priceRUB: 10_000, comesWithWeapon: true });
+    expect(factory.data.stats.costRUB).toBe(70_000);
+    expect(factory.data.problems).toContain(
+      "The weapon is sold as its default preset (Tester LL1, 60,000 RUB), which comes with 1 of these parts (parts[].comesWithWeapon); costRUB counts 10,000 RUB of them again, so buying the preset and keeping them costs 60,000 RUB."
+    );
+    expect(evaluated.data.parts[0]).not.toHaveProperty("comesWithWeapon");
+
+    const partly = await call("evaluate_build", { build, priceSources: { ...tradersOnly, completedTasks: ["test task"] } });
+    expect(partly.data.requiredTasks.map((task: { name: string }) => task.name)).toEqual(["Second Task"]);
+    const done = await call("evaluate_build", { build, priceSources: { ...tradersOnly, completedTasks: ["second-task"] } });
+    expect(done.data).not.toHaveProperty("requiredTasks");
+    const unknown = await call("evaluate_build", { build, priceSources: { completedTasks: ["Secnd Task", "Nope"] } });
+    expect(unknown.result.isError).toBe(true);
+    expect(unknown.text).toMatch(/^completedTasks has unknown tasks: "Secnd Task" \(did you mean "Second Task"[^)]*\), "Nope"\./);
+
+    const excluded = await call("evaluate_build", { build, priceSources: { ...tradersOnly, excludeQuestLocked: true } });
+    expect(excluded.data.parts[0]).toMatchObject({
+      priceRUB: null,
+      priceNote: "Can't be bought: only Tester LL1 sells it, after the task Second Task, not in completedTasks, and flea prices are turned off.",
+    });
+    expect(excluded.data).not.toHaveProperty("requiredTasks");
+    const unlocked = await call("evaluate_build", {
+      build,
+      priceSources: { ...tradersOnly, excludeQuestLocked: true, completedTasks: ["Second Task"] },
+    });
+    expect(unlocked.data.parts[0]).toMatchObject({ priceRUB: 20_000, taskUnlock: secondTask });
+
+    const levelTwo = { flea: false, maxTraderLevel: 2, barters: true };
+    const bartered = await call("evaluate_build", { build, priceSources: levelTwo });
+    expect(bartered.data.parts[0]).toMatchObject({ priceRUB: 3_000, source: "barter", trader: "Tester LL1", barter: ["20× Test Ammo"] });
+    expect(bartered.data.parts[0]).not.toHaveProperty("taskUnlock");
+    expect(bartered.data.stats.costRUB).toBe(63_000);
+    const levelOne = await call("evaluate_build", { build, priceSources: { ...tradersOnly, barters: true } });
+    expect(levelOne.data.parts[0]).toMatchObject({ priceRUB: 20_000, source: "trader" });
+    const barterOnly = await call("get_slot_options", { build, slotPath: ["Scope"], priceSources: { traders: false, flea: false, barters: true } });
+    expect(barterOnly.data.options.find((row: { id: string }) => row.id === "mod2").priceNote).toBe(
+      "Can't be bought: trader prices are turned off, flea prices are turned off, and the barters that give it take items the allowed sources and levels don't sell."
+    );
+    const options = await call("get_slot_options", { build, slotPath: ["Scope"], priceSources: levelTwo });
+    expect(options.data.options.find((row: { id: string }) => row.id === "mod2")).toMatchObject({
+      priceRUB: 3_000,
+      traderPriceRUB: 20_000,
+      trader: "Tester LL1",
+      taskUnlock: secondTask,
+      barter: { trader: "Tester LL1", priceRUB: 3_000, give: ["20× Test Ammo"] },
+    });
+    const lowLevel = await call("get_slot_options", { build, slotPath: ["Scope"], priceSources: { traders: false, flea: false, barters: true, traderLevels: { Tester: 0 } } });
+    expect(lowLevel.data.options.find((row: { id: string }) => row.id === "mod2").priceNote).toBe(
+      "Can't be bought: trader prices are turned off, flea prices are turned off, and only a barter from Tester LL1 gives it, above the allowed trader levels."
+    );
+
+    const optimize = (priceSources: Record<string, unknown>) =>
+      call("optimize_build", { build: { weapon: "Test Rifle", parts: [{ slotPath: ["Scope"], item: "Test Mod" }] }, goal: "ergonomics", priceSources });
+    const locked = await optimize({ flea: false, excludeQuestLocked: true });
+    expect(locked.data.parts.map((part: { name: string }) => part.name)).toEqual(["Test Mod"]);
+    const free = await optimize({ flea: false, excludeQuestLocked: true, completedTasks: ["Second Task"] });
+    expect(free.data.parts.map((part: { name: string }) => part.name)).toEqual(["Locked Mod"]);
+    expect(free.data).not.toHaveProperty("requiredTasks");
+    const toDo = await optimize({ flea: false, completedTasks: ["Test Task"] });
+    expect(toDo.data.parts.map((part: { name: string }) => part.name)).toEqual(["Locked Mod"]);
+    expect(toDo.data.requiredTasks).toEqual([expect.objectContaining({ name: "Second Task", unlocks: ["Locked Mod"] })]);
+
+    const rifle = await call("get_item", { item: "Test Rifle" });
+    expect(rifle.data.buyFrom.find((offer: { vendor: string }) => offer.vendor === "Tester")).toEqual({
+      vendor: "Tester",
+      priceRUB: 60_000,
+      basis: "trader",
+      loyaltyLevel: 1,
+      preset: "Test Preset",
+    });
+    const lockedMod = await call("get_item", { item: "Locked Mod" });
+    expect(lockedMod.data.buyFrom).toEqual([
+      { vendor: "Tester", priceRUB: 20_000, basis: "trader", loyaltyLevel: 1, taskUnlock: secondTask },
+    ]);
+    expect(lockedMod.data.buyByBarter).toEqual([{ trader: "Tester", loyaltyLevel: 1, priceRUB: 3_000, give: ["20× Test Ammo"] }]);
+    expect(rifle.data).not.toHaveProperty("buyByBarter");
+
+    items.mod.buyFromTrader = [{ trader: "trader", priceRUB: 10_000, minTraderLevel: 1, taskUnlock: "task2" }];
+    clearTarkovResourceCache();
+    const included = await call("evaluate_build", {
+      build: { weapon: "Test Rifle", parts: [{ slotPath: ["Scope"], item: "Test Mod" }] },
+      priceSources: tradersOnly,
+    });
+    expect(included.data.parts[0]).toMatchObject({ comesWithWeapon: true, taskUnlock: secondTask });
+    expect(included.data).not.toHaveProperty("requiredTasks");
   });
 
   it("filters weapons by caliber before limiting name matches", async () => {

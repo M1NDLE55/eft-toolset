@@ -1,14 +1,34 @@
-import type { AmmoItemData, BuildItemData, BuildNode, PriceSources, TraderOffer } from "@/app/lib/types/gunBuilder";
+import type {
+  AmmoItemData,
+  BarterOffer,
+  BuildItemData,
+  BuildNode,
+  PriceSources,
+  TaskUnlock,
+  TraderOffer,
+} from "@/app/lib/types/gunBuilder";
 import { ammoFits, ammoOptions } from "@/app/lib/builds/ammo";
 import { findConflicts } from "@/app/lib/builds/conflicts";
 import { MAX_BUILD_NAME_LENGTH } from "@/app/lib/builds/limits";
-import { effectivePrice, offerAllowed, type TraderLimits } from "@/app/lib/builds/price";
+import {
+  bestOffer,
+  effectivePrice,
+  levelAllowed,
+  offerAllowed,
+  offerLabel,
+  priceChoice,
+  questLocked,
+  type PriceSource,
+  type TraderLimits,
+} from "@/app/lib/builds/price";
+import { questChain } from "@/app/lib/builds/quests";
 import { checkSights, isMagazineSlot, type SightRole } from "@/app/lib/builds/sights";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
 import { itemName, slotLabel, type BuildSource, type ResolvedBuild } from "@/app/lib/builds/resolve";
 import { encodeBuildSharePayload, slugifyBuildName } from "@/app/lib/builds/share";
 import { computeStats, type BuildStats } from "@/app/lib/builds/stats";
 import { childAt } from "@/app/lib/builds/tree";
+import type { BuildPricing, QuestProgress } from "./build-prices";
 import { round, type ToolContext } from "./context";
 import { itemUrl } from "./sources";
 import { LOOT_ONLY, NO_FLEA_PRICE } from "@/app/lib/item-price";
@@ -77,29 +97,157 @@ export function formatCaliber(caliber: string | null | undefined) {
   return `${diameter}x${length}mm${suffix ? ` ${suffix}` : ""}`;
 }
 
-/** Why an item has no price from the enabled sources and the player's trader levels. */
-export function priceNote(
-  item: { traderOffers?: readonly TraderOffer[]; fleaBanned?: boolean; fleaPriceRUB: number | null },
-  sources: PriceSources,
-  limits: TraderLimits | null
-) {
+interface OfferedItem {
+  traderPriceRUB: number | null;
+  fleaPriceRUB: number | null;
+  barterPriceRUB?: number | null;
+  traderName?: string | null;
+  traderLevel?: number | null;
+  traderOffers?: readonly TraderOffer[];
+  barterOffers?: readonly BarterOffer[];
+  fleaBanned?: boolean;
+}
+
+function blockedOffers(offers: readonly (TraderOffer | BarterOffer)[], limits: TraderLimits | null) {
+  const blocked = limits ? offers.filter((offer) => !offerAllowed(offer, limits)) : [];
+  if (!blocked.length) return null;
+  const reason = (offer: TraderOffer | BarterOffer) =>
+    [
+      !levelAllowed(offer, limits!) && "above the allowed trader levels",
+      limits!.excludeQuestLocked && questLocked(offer, limits) && `after the task ${offer.taskUnlock!.name}, not in completedTasks`,
+    ]
+      .filter(Boolean)
+      .join(" and ");
+  const reasons = new Set(blocked.map(reason));
+  // One shared reason reads best once, after the offers.
+  return reasons.size === 1
+    ? { who: blocked.map(offerLabel).join(" or "), why: `, ${[...reasons][0]}` }
+    : { who: blocked.map((offer) => `${offerLabel(offer)} (${reason(offer)})`).join(" or "), why: "" };
+}
+
+export function priceNote(item: OfferedItem, sources: PriceSources, limits: TraderLimits | null) {
   const offers = item.traderOffers ?? [];
   let trader: string;
   if (!sources.traders) trader = "trader prices are turned off";
   else if (offers.length === 0) trader = "no trader sells it";
   else {
-    const locked = limits ? offers.filter((offer) => !offerAllowed(offer, limits)) : [];
-    trader = locked.length
-      ? `only ${locked.map((offer) => `${offer.trader}${offer.level ? ` LL${offer.level}` : ""}`).join(" or ")} sells it, above the allowed trader levels`
-      : "it has no trader price";
+    const blocked = blockedOffers(offers, limits);
+    trader = blocked ? `only ${blocked.who} sells it${blocked.why}` : "it has no trader price";
   }
   const flea = item.fleaBanned
     ? NO_FLEA_PRICE.banned
     : !sources.flea
       ? NO_FLEA_PRICE.turnedOff
       : NO_FLEA_PRICE.noPrice;
-  const lootOnly = item.fleaBanned && offers.length === 0 ? ` ${LOOT_ONLY}` : "";
-  return `Can't be bought: ${trader}, and ${flea}.${lootOnly}`;
+  const reasons = [trader, flea];
+  if (sources.barters) {
+    const barters = item.barterOffers ?? [];
+    const blocked = blockedOffers(barters, limits);
+    reasons.push(
+      blocked
+        ? `only a barter from ${blocked.who} gives it${blocked.why}`
+        : barters.length
+          ? "the barters that give it take items the allowed sources and levels don't sell"
+          : "no barter gives it"
+    );
+  }
+  const lootOnly = item.fleaBanned && offers.length === 0 && !item.barterOffers?.length ? ` ${LOOT_ONLY}` : "";
+  return `Can't be bought: ${reasons.slice(0, -1).join(", ")}, and ${reasons.at(-1)}.${lootOnly}`;
+}
+
+function unlockOf(offer: { taskUnlock?: TaskUnlock } | null | undefined) {
+  return offer?.taskUnlock ? { taskUnlock: offer.taskUnlock } : {};
+}
+
+function projectBarterOffer(barter: BarterOffer) {
+  return {
+    trader: offerLabel(barter),
+    priceRUB: barter.priceRUB,
+    give: barter.requiredItems.map((entry) => `${entry.count}× ${entry.name}`),
+    ...(barter.count > 1 ? { receive: barter.count } : {}),
+    ...unlockOf(barter),
+  };
+}
+
+function traderOffer(item: OfferedItem, limits: TraderLimits | null) {
+  const offer = bestOffer(item.traderOffers, limits);
+  if (offer && offer.priceRUB === item.traderPriceRUB) return { label: offerLabel(offer), offer };
+  const label = item.traderName ? `${item.traderName}${item.traderLevel ? ` LL${item.traderLevel}` : ""}` : null;
+  return { label, offer: null };
+}
+
+function offerColumns(item: OfferedItem, sources: PriceSources, limits: TraderLimits | null) {
+  const trader = traderOffer(item, limits);
+  const barter = sources.barters ? bestOffer(item.barterOffers, limits) : null;
+  return {
+    traderPriceRUB: item.traderPriceRUB,
+    trader: trader.label,
+    ...unlockOf(trader.offer),
+    fleaPriceRUB: item.fleaPriceRUB,
+    ...(barter ? { barter: projectBarterOffer(barter) } : {}),
+  };
+}
+
+type Purchase = {
+  priceRUB: number | null;
+  priceNote?: string;
+  source?: PriceSource;
+  trader?: string | null;
+  /** What the barter takes. */
+  barter?: string[];
+  taskUnlock?: TaskUnlock;
+};
+
+function purchase(item: OfferedItem, sources: PriceSources, limits: TraderLimits | null): Purchase {
+  const choice = priceChoice(item, sources, limits);
+  if (!choice) return { priceRUB: null, priceNote: priceNote(item, sources, limits) };
+  if (choice.source === "flea") return { priceRUB: choice.priceRUB, source: choice.source };
+  if (choice.source === "trader") {
+    const trader = traderOffer(item, limits);
+    return { priceRUB: choice.priceRUB, source: choice.source, trader: trader.label, ...unlockOf(trader.offer) };
+  }
+  return {
+    priceRUB: choice.priceRUB,
+    source: choice.source,
+    ...(choice.offer ? { trader: offerLabel(choice.offer), barter: projectBarterOffer(choice.offer).give, ...unlockOf(choice.offer) } : {}),
+  };
+}
+
+function pendingUnlock(item: OfferedItem | undefined, sources: PriceSources, limits: TraderLimits | null, quests: QuestProgress) {
+  if (!item) return null;
+  const choice = priceChoice(item, sources, limits);
+  const offer =
+    choice?.source === "trader" ? traderOffer(item, limits).offer : choice?.source === "barter" ? choice.offer : null;
+  const unlock = offer?.taskUnlock;
+  return unlock && !quests.completed.has(unlock.id) ? unlock : null;
+}
+
+function requiredTasks(
+  items: readonly { name: string; item: OfferedItem | undefined }[],
+  sources: PriceSources,
+  limits: TraderLimits | null,
+  quests: QuestProgress
+) {
+  const unlocks = new Map<string, string[]>();
+  for (const { name, item } of items) {
+    const unlock = pendingUnlock(item, sources, limits, quests);
+    if (!unlock) continue;
+    const names = unlocks.get(unlock.id) ?? [];
+    if (!names.includes(name)) names.push(name);
+    unlocks.set(unlock.id, names);
+  }
+  return questChain(quests.tasks, unlocks, quests.completed).map(({ task, startOnly, unlocks }) => ({
+    id: task.id,
+    name: task.name,
+    trader: task.trader,
+    minPlayerLevel: task.minPlayerLevel,
+    ...(task.faction ? { faction: task.faction } : {}),
+    ...(task.traderLevels.length
+      ? { traderLevels: task.traderLevels.map((entry) => `${entry.trader} LL${entry.level}`) }
+      : {}),
+    ...(startOnly ? { startOnly: true as const } : {}),
+    ...(unlocks.length ? { unlocks } : {}),
+  }));
 }
 
 function percent(value: number) {
@@ -123,9 +271,7 @@ export function projectAmmo(ammo: AmmoItemData, sources: PriceSources, limits: T
     recoilModifierPercent: percent(ammo.recoilModifier),
     accuracyModifierPercent: percent(ammo.accuracyModifier),
     priceRUB: price,
-    traderPriceRUB: ammo.traderPriceRUB,
-    trader: ammo.traderName ? `${ammo.traderName}${ammo.traderLevel ? ` LL${ammo.traderLevel}` : ""}` : null,
-    fleaPriceRUB: ammo.fleaPriceRUB,
+    ...offerColumns(ammo, sources, limits),
     ...(price === null ? { priceNote: priceNote(ammo, sources, limits) } : {}),
   };
 }
@@ -154,12 +300,48 @@ async function factoryTree(data: BuildSource, weaponId: string): Promise<BuildNo
   return contents ? reconstructPresetTree(weaponId, contents, data.lookup) : null;
 }
 
+// Preset purchases include the preset's parts.
+function partsWithWeapon(
+  root: BuildNode,
+  lookup: BuildSource["lookup"],
+  sources: PriceSources,
+  limits: TraderLimits | null,
+  factory: BuildNode | null
+) {
+  const weapon = lookup.get(root.itemId);
+  const choice = weapon ? priceChoice(weapon, sources, limits) : null;
+  const offer = choice && choice.source !== "flea" ? choice.offer : null;
+  if (!factory || !offer?.preset) return null;
+  const remaining = new Map<string, number>();
+  const count = (node: BuildNode) => {
+    for (const child of Object.values(node.slots)) {
+      remaining.set(child.itemId, (remaining.get(child.itemId) ?? 0) + 1);
+      count(child);
+    }
+  };
+  count(factory);
+  const nodes = new Set<BuildNode>();
+  const take = (node: BuildNode) => {
+    for (const child of Object.values(node.slots)) {
+      const left = remaining.get(child.itemId) ?? 0;
+      if (left > 0) {
+        remaining.set(child.itemId, left - 1);
+        nodes.add(child);
+      }
+      take(child);
+    }
+  };
+  take(root);
+  return { nodes, label: offerLabel({ ...offer, preset: undefined }), priceRUB: choice!.priceRUB };
+}
+
 function usability(
   build: Omit<ResolvedBuild, "warnings">,
   lookup: BuildSource["lookup"],
   sources: PriceSources,
   limits: TraderLimits | null,
-  factory: BuildNode | null
+  factory: BuildNode | null,
+  withWeapon: ReadonlySet<BuildNode>
 ) {
   const { root } = build;
   let magazine: { name: string; capacity: number | null; slotPath: string[] } | null = null;
@@ -167,7 +349,7 @@ function usability(
   const unpriced: string[] = [];
   const walk = (node: BuildNode, path: string[]) => {
     const item = lookup.get(node.itemId);
-    if (item && effectivePrice(item, sources) === null) unpriced.push(item.name);
+    if (item && effectivePrice(item, sources) === null && !withWeapon.has(node)) unpriced.push(item.name);
     for (const slot of item?.slots ?? []) {
       const child = childAt(node, slot.id);
       const childPath = [...path, slot.id];
@@ -219,24 +401,23 @@ function usability(
 
 export async function describeBuild(
   context: ToolContext,
-  data: BuildSource,
-  build: Omit<ResolvedBuild, "warnings">,
-  sources: PriceSources,
-  limits: TraderLimits | null = null
+  { data, sources, limits, quests }: BuildPricing,
+  build: Omit<ResolvedBuild, "warnings">
 ) {
   const { lookup } = data;
   const ammo = build.ammoId ? (await data.loadAmmo([build.ammoId]))[0] ?? null : null;
   const stats = computeStats(build.root, lookup, sources, ammo);
-  const parts: {
+  const factory = await factoryTree(data, build.root.itemId);
+  const withWeapon = partsWithWeapon(build.root, lookup, sources, limits, factory);
+  const parts: ({
     slotPath: string[];
     slot: string;
     itemId: string;
     name: string;
     ergonomics: number;
     recoilModifierPercent: number | null;
-    priceRUB: number | null;
-    priceNote?: string;
-  }[] = [];
+    comesWithWeapon?: true;
+  } & Purchase)[] = [];
   const walk = (node: BuildNode, path: string[]) => {
     const item = lookup.get(node.itemId);
     const order = [
@@ -248,7 +429,6 @@ export async function describeBuild(
       if (!child) continue;
       const childPath = [...path, slotId];
       const part = lookup.get(child.itemId);
-      const price = part ? effectivePrice(part, sources) : null;
       parts.push({
         slotPath: childPath,
         slot: slotLabel(build.root, lookup, childPath),
@@ -256,8 +436,8 @@ export async function describeBuild(
         name: part?.name ?? `Unknown item (${child.itemId})`,
         ergonomics: part?.ergonomics ?? 0,
         recoilModifierPercent: part ? percent(part.recoilModifier) : null,
-        priceRUB: price,
-        ...(part && price === null ? { priceNote: priceNote(part, sources, limits) } : {}),
+        ...(part ? purchase(part, sources, limits) : { priceRUB: null }),
+        ...(withWeapon?.nodes.has(child) ? { comesWithWeapon: true as const } : {}),
       });
       walk(child, childPath);
     }
@@ -284,6 +464,7 @@ export async function describeBuild(
           caliberId: caliberId(weapon.caliber),
           fireRate: weapon.fireRate ?? null,
           url: itemUrl(context, weapon),
+          ...purchase(weapon, sources, limits),
         }
       : { id: build.weaponId, name: `Unknown weapon (${build.weaponId})` },
     stats: projectStats(stats),
@@ -294,7 +475,15 @@ export async function describeBuild(
           compatibleCount: options.ids.length,
           note: "No ammo loaded, so recoil leaves out the ammo's modifier. List rounds with get_ammo_options and load one with build.ammo or set_ammo.",
         },
-    ...usability(build, lookup, sources, limits, await factoryTree(data, build.root.itemId)),
+    ...withPresetNote(
+      usability(build, lookup, sources, limits, factory, withWeapon?.nodes ?? new Set()),
+      withWeapon,
+      stats.costRUB,
+      (node) => {
+        const item = lookup.get(node.itemId);
+        return item ? effectivePrice(item, sources) : null;
+      }
+    ),
     missingRequiredSlots: stats.missingRequired.map((missing) => ({
       slot: missing.label,
       slotPath: [...missing.parentPath, missing.slot.id],
@@ -309,10 +498,49 @@ export async function describeBuild(
           : `the occupied ${slotLabel(build.root, lookup, conflict.other.path)} slot`,
     })),
     parts,
+    ...requiredTasksField(
+      [
+        { name: weapon?.name ?? build.weaponId, item: weapon },
+        // Parts the weapon's preset includes needn't be bought, so their tasks don't count.
+        ...parts.filter((part) => !part.comesWithWeapon).map((part) => ({ name: part.name, item: lookup.get(part.itemId) })),
+        ...(ammo ? [{ name: ammo.name, item: ammo }] : []),
+      ],
+      sources,
+      limits,
+      quests
+    ),
     shareLink,
     ...(shareError ? { shareError } : {}),
     ammoId: build.ammoId,
   };
+}
+
+// costRUB also counts the preset's parts, so report the adjusted total.
+function withPresetNote<T extends { problems: string[] }>(
+  result: T,
+  withWeapon: ReturnType<typeof partsWithWeapon>,
+  costRUB: number | null,
+  priceOf: (node: BuildNode) => number | null
+): T {
+  if (!withWeapon?.nodes.size) return result;
+  const counted = [...withWeapon.nodes].reduce((total, node) => total + (priceOf(node) ?? 0), 0);
+  const parts = withWeapon.nodes.size === 1 ? "1 of these parts" : `${withWeapon.nodes.size} of these parts`;
+  const saving =
+    counted > 0 && costRUB !== null
+      ? `; costRUB counts ${Math.round(counted).toLocaleString("en-US")} RUB of them again, so buying the preset and keeping them costs ${Math.round(costRUB - counted).toLocaleString("en-US")} RUB`
+      : "";
+  return {
+    ...result,
+    problems: [
+      ...result.problems,
+      `The weapon is sold as its default preset (${withWeapon.label}, ${Math.round(withWeapon.priceRUB).toLocaleString("en-US")} RUB), which comes with ${parts} (parts[].comesWithWeapon)${saving}.`,
+    ],
+  };
+}
+
+function requiredTasksField(...args: Parameters<typeof requiredTasks>) {
+  const tasks = requiredTasks(...args);
+  return tasks.length ? { requiredTasks: tasks } : {};
 }
 
 export function itemRow(item: BuildItemData, sources: PriceSources, limits: TraderLimits | null = null) {
@@ -325,9 +553,7 @@ export function itemRow(item: BuildItemData, sources: PriceSources, limits: Trad
     recoilModifierPercent: percent(item.recoilModifier),
     weightKg: round(item.weight, 3),
     priceRUB: price,
-    traderPriceRUB: item.traderPriceRUB,
-    trader: item.traderName ? `${item.traderName}${item.traderLevel ? ` LL${item.traderLevel}` : ""}` : null,
-    fleaPriceRUB: item.fleaPriceRUB,
+    ...offerColumns(item, sources, limits),
     ...(price === null ? { priceNote: priceNote(item, sources, limits) } : {}),
     ...(typeof item.capacity === "number" ? { capacity: item.capacity } : {}),
     ...(item.sight ? { sight: item.sight } : {}),

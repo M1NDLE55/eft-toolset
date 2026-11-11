@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Lock } from "lucide-react";
 import Share from "./share";
 import { Rubles } from "@/app/lib/currency";
 import type { CachedVendorPrice, ComposedItem } from "@/app/lib/cache/types";
@@ -38,18 +38,33 @@ function PriceList({
     <section aria-label={title} className="flex flex-col gap-2">
       <h2 className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">{title}</h2>
       <ul className="flex-1 border border-[#1a1a1a] bg-[#0c0c0c] py-1">
-        {offers.map((offer) => (
+        {offers.map((offer, index) => (
           <li
-            key={offer.vendor.name}
+            // A trader can sell an item at several levels, or as a preset.
+            key={`${offer.vendor.name}-${index}`}
             className={cn(
               "flex items-center justify-between gap-3 px-3 py-1.5 text-sm",
               offer === best ? "text-[#e6d9b8]" : "text-[#aaa]"
             )}
           >
-            <span className="truncate">
-              {offer.vendor.name}
-              {fleaNote && offer.vendor.name === FLEA_MARKET && <span className="ml-2 text-xs text-[#777]">{fleaNote}</span>}
-              {offer === best && <span className="ml-2 text-[10px] uppercase tracking-widest text-[#9a8866]">Best</span>}
+            <span className="min-w-0">
+              <span className="block truncate">
+                {offer.vendor.name}
+                {offer.minTraderLevel && <span className="ml-1.5 text-xs text-[#777]">LL{offer.minTraderLevel}</span>}
+                {fleaNote && offer.vendor.name === FLEA_MARKET && <span className="ml-2 text-xs text-[#777]">{fleaNote}</span>}
+                {offer === best && <span className="ml-2 text-[10px] uppercase tracking-widest text-[#9a8866]">Best</span>}
+              </span>
+              {offer.preset && (
+                <span className="block truncate text-xs text-[#777]" title={offer.preset}>
+                  As the default preset
+                </span>
+              )}
+              {offer.taskUnlock && (
+                <span className="flex items-center gap-1 truncate text-xs text-amber-300/80">
+                  <Lock aria-hidden className="h-3 w-3 shrink-0" />
+                  After {offer.taskUnlock.name}
+                </span>
+              )}
             </span>
             <span className="shrink-0 tabular-nums">{Rubles.format(offer.priceRUB)}</span>
           </li>

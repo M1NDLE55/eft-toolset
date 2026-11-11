@@ -50,6 +50,11 @@ const offer = object({
   avg24hRUB: maybeNum
     .optional()
     .describe("Flea offers only: the 24-hour average flea price the item page shows; null when there is none or it equals the lowest listing."),
+  loyaltyLevel: num.optional(),
+  taskUnlock: object({ id: text, name: text, trader: maybeText, minPlayerLevel: maybeNum })
+    .optional()
+    .describe("The task that unlocks the offer."),
+  preset: text.optional().describe("The trader sells the weapon only as this preset, which priceRUB is for."),
 });
 const cheapestBuy = offer
   .nullable()
@@ -75,6 +80,32 @@ const stats = object({
 const caliber = maybeText;
 const caliberId = maybeText.optional();
 const priceNote = text.optional().describe("Why priceRUB is null.");
+const taskUnlock = object({ id: text, name: text, trader: maybeText, minPlayerLevel: maybeNum })
+  .optional()
+  .describe("The task that unlocks the trader offer or barter.");
+const priceSource = z.enum(["trader", "flea", "barter"]);
+const barterOffer = object({
+  trader: text,
+  priceRUB: maybeNum.describe("What the barter's inputs cost from the allowed sources, per item it gives."),
+  give: list(text),
+  receive: num.optional(),
+  taskUnlock,
+}).optional();
+const purchase = {
+  priceRUB: buildPrice,
+  priceNote,
+  source: priceSource.optional(),
+  trader: maybeText.optional().describe('"Prapor LL1"; "(default preset)" when the trader sells the weapon only as its default preset.'),
+  barter: list(text).optional().describe("What the barter takes."),
+  taskUnlock,
+};
+const offerColumns = {
+  traderPriceRUB: maybeNum,
+  trader: maybeText,
+  taskUnlock,
+  fleaPriceRUB: fleaAverage,
+  barter: barterOffer,
+};
 
 const ammoRow = object({
   id: text,
@@ -91,9 +122,7 @@ const ammoRow = object({
   recoilModifierPercent: maybeNum,
   accuracyModifierPercent: maybeNum,
   priceRUB: buildPrice,
-  traderPriceRUB: maybeNum,
-  trader: maybeText,
-  fleaPriceRUB: fleaAverage,
+  ...offerColumns,
   priceNote,
 });
 
@@ -103,7 +132,7 @@ const slotDiff = object({ slot: text, status: text });
 const build = {
   gameMode,
   name: text,
-  weapon: object({ id: text, name: text, caliber: caliber.optional(), caliberId, url: text.optional() }),
+  weapon: object({ id: text, name: text, caliber: caliber.optional(), caliberId, url: text.optional(), ...purchase, priceRUB: buildPrice.optional() }),
   stats,
   ammo: z.union([
     ammoRow.extend({ fits: bool }),
@@ -111,7 +140,7 @@ const build = {
   ]),
   magazine: object({ name: text, capacity: maybeNum, slotPath: list(text) }).nullable().optional(),
   sights: list(object({ kind: text, name: text, slotPath: list(text) })).optional(),
-  problems: list(text).optional().describe("No magazine, no usable sights, or unpriced parts."),
+  problems: list(text).optional().describe("No magazine, no usable sights, unpriced parts, or parts the weapon's preset includes."),
   missingRequiredSlots: list(object({ slot: text, slotPath: list(text), optionCount: num })),
   conflicts: list(object({ kind: text, part: text, with: text })),
   parts: list(
@@ -122,10 +151,24 @@ const build = {
       name: text,
       ergonomics: num,
       recoilModifierPercent: maybeNum,
-      priceRUB: buildPrice,
-      priceNote,
+      ...purchase,
+      comesWithWeapon: z.literal(true).optional().describe("The weapon's preset includes it, so it needn't be bought."),
     })
   ),
+  requiredTasks: list(
+    object({
+      id: text,
+      name: text,
+      trader: maybeText,
+      minPlayerLevel: num,
+      faction: text.optional(),
+      traderLevels: list(text).optional(),
+      startOnly: z.literal(true).optional(),
+      unlocks: list(text).optional(),
+    })
+  )
+    .optional()
+    .describe("Tasks still to do to buy the build as priced, prerequisites first."),
   shareLink: maybeText,
   shareError: text.optional(),
   ammoId: maybeText,
@@ -168,6 +211,19 @@ export const getItemOutput = result({
   fleaListingFeeRUB: maybeNum,
   change48hPercent: maybeNum,
   buyFrom: list(offer).describe("Trader prices and the lowest current flea listing, cheapest first."),
+  buyByBarter: list(
+    object({
+      trader: text,
+      loyaltyLevel: num.optional(),
+      priceRUB: maybeNum.describe("What the barter takes, per item, at the inputs' cheapest buy price."),
+      give: list(text),
+      receive: num.optional(),
+      preset: text.optional(),
+      taskUnlock: object({ id: text, name: text }).optional(),
+    })
+  )
+    .optional()
+    .describe("Barters that give it."),
   sellTo: list(offer).describe("Trader prices and the lowest current flea listing (before the listing fee), highest first."),
   needed,
   usedInTasks: list(
@@ -270,6 +326,7 @@ export const getSlotOptionsOutput = result({
       ergonomics: num,
       recoilModifierPercent: maybeNum,
       priceRUB: buildPrice,
+      ...offerColumns,
       fleaPriceRUB: fleaAverage.optional(),
       priceNote,
       capacity: num.optional(),
@@ -302,7 +359,7 @@ export const evaluateBuildOutput = result({
       object({
         name: text,
         count: num,
-        source: z.enum(["trader", "flea"]).nullable().optional(),
+        source: priceSource.nullable().optional(),
         unitPriceRUB: maybeNum
           .optional()
           .describe("For flea rows, the 24-hour average; the lowest current listing can be lower."),

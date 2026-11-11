@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { AlertTriangle, ArrowDown, ArrowUp, ArrowUpRight, Check, LoaderCircle, Search, Trash2 } from "lucide-react";
+import { AlertTriangle, ArrowDown, ArrowUp, ArrowUpRight, Check, LoaderCircle, Lock, Search, Trash2 } from "lucide-react";
 import type { BuildNode, GunItem, ModSlotDef, PriceSources } from "@/app/lib/types/gunBuilder";
 import type { ItemLookup } from "@/app/lib/builds/stats";
 import { effectivePrice } from "@/app/lib/builds/price";
@@ -21,7 +21,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-import { formatErgo, formatRecoilModifier, formatRub, formatTrader, formatWeight } from "./format";
+import { formatErgo, formatRecoilModifier, formatRub, formatTrader, formatWeight, traderTaskHint } from "./format";
 
 export interface PickerTarget {
   parentPath: string[];
@@ -333,7 +333,12 @@ function PickerBody({
                       <span>{formatRecoilModifier(item.recoilModifier)}</span>
                       <span>{formatWeight(item.weight)}</span>
                       <span className="text-[#ccc]">{formatRub(price)}</span>
-                      {formatTrader(item) && <span className="text-[#9a8866]">{formatTrader(item)}</span>}
+                      {formatTrader(item) && (
+                        <span className="inline-flex items-center gap-1 text-[#9a8866]" title={traderTaskHint(item)}>
+                          {formatTrader(item)}
+                          {item.traderTask && <Lock aria-label={traderTaskHint(item)} className="h-3 w-3" />}
+                        </span>
+                      )}
                     </span>
                   )}
                 </span>
@@ -348,7 +353,10 @@ function PickerBody({
                   <span className="flex w-24 flex-col items-end">
                     <span className="text-[#ccc]">{formatRub(price)}</span>
                     {formatTrader(item) && (
-                      <span className="max-w-24 truncate text-[10px] text-[#9a8866]">{formatTrader(item)}</span>
+                      <span className="flex max-w-24 items-center gap-1 text-[10px] text-[#9a8866]" title={traderTaskHint(item)}>
+                        <span className="truncate">{formatTrader(item)}</span>
+                        {item.traderTask && <Lock aria-label={traderTaskHint(item)} className="h-2.5 w-2.5 shrink-0" />}
+                      </span>
                     )}
                   </span>
                 </span>

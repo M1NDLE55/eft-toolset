@@ -9,7 +9,7 @@ import { diffBuildTrees, statDeltas } from "@/app/lib/builds/compare";
 import { conflictReason, installedOutside } from "@/app/lib/builds/conflicts";
 import { optimizeBuild, type OptimizeGoal, type OptimizeOptions } from "@/app/lib/builds/optimizer";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
-import { effectivePrice } from "@/app/lib/builds/price";
+import { effectivePrice, offerLabel } from "@/app/lib/builds/price";
 import {
   asCatalog,
   collectPaths,
@@ -374,11 +374,14 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       },
     },
     async ({ build: input, includeShoppingList, includeDiscordText, gameMode, priceSources: prices }, { read }) => {
-      const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
+      const pricing = await loadBuildPricing(read, gameMode, prices);
+      const { data, sources: priceSources, limits } = pricing;
       const build = await resolveBuild(data, input);
-      const description = await describeBuild(context, data, build, priceSources, limits);
+      const description = await describeBuild(context, pricing, build);
       const list =
-        includeShoppingList || includeDiscordText ? buildShoppingList(build.root, data.lookup, priceSources) : null;
+        includeShoppingList || includeDiscordText
+          ? buildShoppingList(build.root, data.lookup, priceSources, true, limits)
+          : null;
       return {
         gameMode,
         ...description,
@@ -394,7 +397,12 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
                   source: row.source,
                   unitPriceRUB: row.unitPriceRUB,
                   subtotalRUB: row.subtotalRUB,
-                  trader: row.traderName ? `${row.traderName}${row.traderLevel ? ` LL${row.traderLevel}` : ""}` : null,
+                  trader: row.offer
+                    ? offerLabel(row.offer)
+                    : row.traderName
+                      ? `${row.traderName}${row.traderLevel ? ` LL${row.traderLevel}` : ""}`
+                      : null,
+                  ...(row.offer?.taskUnlock ? { taskUnlock: row.offer.taskUnlock } : {}),
                 })),
               },
             }
@@ -429,7 +437,8 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       },
     },
     async ({ build: input, changes, gameMode, priceSources: prices }, { read }) => {
-      const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
+      const pricing = await loadBuildPricing(read, gameMode, prices);
+      const { data, sources: priceSources } = pricing;
       const build = await resolveBuild(data, input);
       const applied: string[] = [];
       let root = build.root;
@@ -486,7 +495,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
           applied.push("Cleared the ammo.");
         }
       }
-      const description = await describeBuild(context, data, { ...build, root, ammoId }, priceSources, limits);
+      const description = await describeBuild(context, pricing, { ...build, root, ammoId });
       return {
         gameMode,
         applied,
@@ -540,7 +549,8 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       },
       { read }
     ) => {
-      const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
+      const pricing = await loadBuildPricing(read, gameMode, prices);
+      const { data, sources: priceSources } = pricing;
       const build = await resolveBuild(data, input);
       const target = slotPath ? resolveSlotPath(build.root, data.lookup, slotPath) : null;
       const result = await runOptimizer(
@@ -565,7 +575,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
       const after = computeStats(result.root, data.lookup, priceSources, ammo);
       // Optimising an optimised build replaces the goal in its name instead of stacking another.
       const name = input.name?.trim() || `${build.name.replace(/ \((?:ergonomics|recoil|cost)\)$/, "")} (${goal})`;
-      const description = await describeBuild(context, data, { ...build, root: result.root, name }, priceSources, limits);
+      const description = await describeBuild(context, pricing, { ...build, root: result.root, name });
       const overBudget = budgetRUB !== undefined && !result.withinBudget;
       const weapon = data.lookup.get(build.weaponId);
       const weaponPrice = weapon ? effectivePrice(weapon, priceSources) : null;

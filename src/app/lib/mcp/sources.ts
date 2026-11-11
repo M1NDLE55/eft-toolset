@@ -32,7 +32,7 @@ export async function loadBuildSource(read: Read, gameMode: GameMode): Promise<B
     lookup,
     guns,
     loadPreset: (id) => read(() => getPreset(gameMode, id)),
-    loadAmmo: (ids) => read(() => getAmmoItems(gameMode, [...ids])),
+    loadAmmo: (ids) => read(() => getAmmoItems(gameMode, [...ids], { barters: true })),
     budget: fuzzyBudget(),
   };
 }

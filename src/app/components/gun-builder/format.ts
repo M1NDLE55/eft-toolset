@@ -34,3 +34,7 @@ export function formatTrader(item: { traderName?: string | null; traderLevel?: n
   if (!item.traderName) return null;
   return item.traderLevel ? `${item.traderName} LL${item.traderLevel}` : item.traderName;
 }
+
+export function traderTaskHint(item: { traderTask?: string | null }) {
+  return item.traderTask ? `After the task ${item.traderTask}` : undefined;
+}

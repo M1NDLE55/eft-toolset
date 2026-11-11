@@ -8,6 +8,7 @@ import type {
   ComposedItem,
   ItemUses,
 } from "@/app/lib/cache/types";
+import type { BarterOffer, TaskUnlock } from "@/app/lib/types/gunBuilder";
 import { FLEA_MARKET, LOOT_ONLY, NO_FLEA_PRICE, bestSell, fleaPrices } from "@/app/lib/item-price";
 import { summarizeNeeds, taskNeed } from "@/app/lib/item-needs";
 import { round, type ToolContext } from "./context";
@@ -106,6 +107,8 @@ type ProjectedOffer = {
   priceRUB: number;
   basis: PriceBasis;
   loyaltyLevel?: number;
+  taskUnlock?: TaskUnlock;
+  preset?: string;
   avg24hRUB?: number | null;
 };
 
@@ -122,6 +125,8 @@ function buyOffers(item: CachedItem): ProjectedOffer[] {
         priceRUB: Math.round(offer.priceRUB),
         basis: PRICE_BASIS.trader,
         ...(offer.minTraderLevel ? { loyaltyLevel: offer.minTraderLevel } : {}),
+        ...(offer.taskUnlock ? { taskUnlock: offer.taskUnlock } : {}),
+        ...(offer.preset ? { preset: offer.preset } : {}),
       };
     }
     if (!flea) {
@@ -159,7 +164,7 @@ function weaponNote(item: CachedItem) {
   if (!item.weapon) return undefined;
   const { defaultWidth, defaultHeight } = item.weapon;
   const build = defaultWidth && defaultHeight ? `default build ${defaultWidth}x${defaultHeight}; ` : "";
-  return `Weapon: ${item.width}x${item.height} is the stripped weapon (${build}real size depends on attachments), so no per-slot value. Flea prices are for the default build, trader prices for the stripped weapon.`;
+  return `Weapon: ${item.width}x${item.height} is the stripped weapon (${build}real size depends on attachments), so no per-slot value. Flea prices are for the default build; trader prices are for the stripped weapon, or for the preset an offer names.`;
 }
 
 export function priceSummary(item: CachedItem) {
@@ -193,6 +198,19 @@ export function priceSummary(item: CachedItem) {
   };
 }
 
+/** A barter that gives the item, valued at what its inputs cost to buy. */
+function projectBarterFor(barter: BarterOffer) {
+  return {
+    trader: barter.trader,
+    ...(barter.level ? { loyaltyLevel: barter.level } : {}),
+    priceRUB: barter.priceRUB,
+    give: barter.requiredItems.map((entry) => `${entry.count}× ${entry.name}`),
+    ...(barter.count > 1 ? { receive: barter.count } : {}),
+    ...(barter.preset ? { preset: barter.preset } : {}),
+    ...(barter.taskUnlock ? { taskUnlock: barter.taskUnlock } : {}),
+  };
+}
+
 export function projectDetail(item: ComposedItem, context: ToolContext, include: Set<string>) {
   return {
     id: item.id,
@@ -207,6 +225,7 @@ export function projectDetail(item: ComposedItem, context: ToolContext, include:
       : {}),
     ...priceSummary(item),
     buyFrom: buyOffers(item).toSorted((a, b) => a.priceRUB - b.priceRUB),
+    ...(item.bartersFor?.length ? { buyByBarter: item.bartersFor.map(projectBarterFor) } : {}),
     sellTo: sellOffers(item).toSorted((a, b) => b.priceRUB - a.priceRUB),
     needed: neededSummary(item, true),
     ...(include.has("tasks")

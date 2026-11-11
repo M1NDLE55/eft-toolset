@@ -1,8 +1,14 @@
+import type { BarterOffer, TaskUnlock } from "@/app/lib/types/gunBuilder";
+
 export interface CachedVendorPrice {
   vendor: { name: string };
   priceRUB: number;
   /** Trader buy offers: the loyalty level the offer needs. */
   minTraderLevel?: number;
+  /** Trader buy offers: the task that unlocks the offer. */
+  taskUnlock?: TaskUnlock;
+  /** Weapon buy offers: the preset the trader sells, which the price is for. */
+  preset?: string;
 }
 
 export interface CachedContainedItem {
@@ -115,6 +121,8 @@ export interface ComposedItem extends Omit<CachedItem, "usedInTasks"> {
   hideoutRequirements: CachedHideoutRequirement[];
   hideoutSlots: CachedHideoutSlot[];
   bartersUsing: CachedBarter[];
+  /** Barters that give the item, for the MCP tools; the item page doesn't list them yet. */
+  bartersFor?: BarterOffer[];
   craftsUsing: CachedCraft[];
 }
 
