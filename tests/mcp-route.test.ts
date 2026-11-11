@@ -746,7 +746,6 @@ describe("MCP endpoint", () => {
       expect.objectContaining({ name: "Locked Mod", source: "trader", taskUnlock: secondTask }),
     ]);
 
-    // The preset comes with its parts: the build costs the preset's price, and swapping a part costs only the new one.
     const factory = await call("evaluate_build", {
       build: { weapon: "Test Rifle", parts: [{ slotPath: ["Scope"], item: "Test Mod" }] },
       includeShoppingList: true,

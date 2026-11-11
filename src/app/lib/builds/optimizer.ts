@@ -1,7 +1,7 @@
 import type { BuildNode, GunItem, ModSlotDef, PriceSources } from "@/app/lib/types/gunBuilder";
 import { MAX_BUILD_TREE_DEPTH, MAX_BUILD_TREE_NODES } from "./limits";
 import { effectivePrice, type TraderLimits } from "./price";
-import { planPurchase, weaponChoices, type PresetParts } from "./purchase";
+import { placementKey, planPurchase, weaponChoices, type PresetParts } from "./purchase";
 import { isDetailed, type ItemLookup } from "./stats";
 import { childAt, collectItemIds } from "./tree";
 import { findConflicts, type BuildConflict } from "./conflicts";
@@ -33,10 +33,7 @@ export interface OptimizeOptions {
   /** A slot that held a sight keeps a sight of the same kind (optic, rear, or front). Default true. */
   keepSights?: boolean;
   limits?: TraderLimits | null;
-  /**
-   * The weapon's default preset parts. The optimiser then also prices the build as the preset
-   * plus the parts it lacks, with the preset's parts free, and keeps whichever is better.
-   */
+  /** Default preset parts, free in the slots the preset installs them in. */
   preset?: PresetParts | null;
 }
 
@@ -80,7 +77,6 @@ interface Restrictions {
   slots: ReadonlySet<string>;
 }
 
-/** One way to buy the weapon: its price, and the parts that come with it. */
 interface PriceMode {
   weaponPrice: number | null;
   owned: PresetParts | null;
@@ -132,9 +128,9 @@ function itemScore(item: GunItem, price: number | null, goal: OptimizeGoal) {
   return (ergo + recoil) * 1e-6 + priceScore(price, goal);
 }
 
-/** A part's price under the pass's way of buying the weapon: parts it comes with are free. */
-function partPrice(itemId: string, item: GunItem, pass: Pass) {
-  return pass.mode.owned?.has(itemId) ? 0 : effectivePrice(item, pass.options.priceSources);
+// Free only where the preset installs it, so one included part isn't used for every slot it fits.
+function isFree(slotId: string, itemId: string, pass: Pass) {
+  return Boolean(pass.mode.owned?.placements.has(placementKey(slotId, itemId)));
 }
 
 function samePath(a: string[], b: string[]) {
@@ -202,35 +198,36 @@ function chooseForSlot(slot: ModSlotDef, old: BuildNode | undefined, pass: Pass)
   for (const id of slot.allowedItemIds) {
     if (tried.has(id) || pass.restrictions.items.has(id)) continue;
     tried.add(id);
-    const free = solveFree(id, old, pass);
-    if (!free) continue;
+    const unfixed = solveFree(id, old, isFree(slot.id, id, pass), pass);
+    if (!unfixed) continue;
     const adjustment = slotAdjustment(slot, id, oldRole, pass);
-    const solved = adjustment ? { ...free, value: free.value + adjustment } : free;
+    const solved = adjustment ? { ...unfixed, value: unfixed.value + adjustment } : unfixed;
     if (!best || solved.value > best.value) best = solved;
   }
   if (!best || best.value <= emptyValue) return { node: { itemId: "", slots: {} }, value: emptyValue, cost: 0 };
   return best;
 }
 
-function solveFree(itemId: string, old: BuildNode | undefined, pass: Pass): Solved | null {
+function solveFree(itemId: string, old: BuildNode | undefined, owned: boolean, pass: Pass): Solved | null {
   const context = old ?? null;
   let cache = pass.memo.get(context);
   if (!cache) {
     cache = new Map();
     pass.memo.set(context, cache);
   }
-  if (cache.has(itemId)) return cache.get(itemId)!;
+  const key = owned ? `${itemId}/owned` : itemId;
+  if (cache.has(key)) return cache.get(key)!;
   if (pass.stack.has(itemId) || pass.stack.size >= MAX_BUILD_TREE_DEPTH) return null;
   const item = pass.lookup.get(itemId);
   if (!item) {
-    cache.set(itemId, null);
+    cache.set(key, null);
     return null;
   }
-  const { goal, allowUnpriced } = pass.options;
-  const price = partPrice(itemId, item, pass);
+  const { goal, allowUnpriced, priceSources } = pass.options;
+  const price = owned ? 0 : effectivePrice(item, priceSources);
   const current = old?.itemId === itemId;
   if (price === null && !current && !(allowUnpriced && goal !== "cost")) {
-    cache.set(itemId, null);
+    cache.set(key, null);
     return null;
   }
   pass.stack.add(itemId);
@@ -249,7 +246,7 @@ function solveFree(itemId: string, old: BuildNode | undefined, pass: Pass): Solv
   }
   pass.stack.delete(itemId);
   const solved = { node: { itemId, slots }, value, cost };
-  cache.set(itemId, solved);
+  cache.set(key, solved);
   return solved;
 }
 
@@ -266,7 +263,13 @@ function slotMode(path: string[], occupied: boolean, pass: Pass): "keep" | "opti
 function solveFixed(node: BuildNode, path: string[], pass: Pass): Solved {
   const item = pass.lookup.get(node.itemId);
   const root = path.length === 0;
-  const price = root ? pass.mode.weaponPrice : item ? partPrice(node.itemId, item, pass) : null;
+  const price = root
+    ? pass.mode.weaponPrice
+    : isFree(path.at(-1)!, node.itemId, pass)
+      ? 0
+      : item
+        ? effectivePrice(item, pass.options.priceSources)
+        : null;
   // The weapon's stats are the same in every build, but its price differs between price modes.
   let value =
     (root ? priceScore(price, pass.options.goal) : item ? itemScore(item, price, pass.options.goal) : 0) -
@@ -468,10 +471,6 @@ export async function optimizeBuild(
   };
 }
 
-/**
- * The ways to buy the weapon worth solving for: bare, and as its default preset with the
- * preset's parts free. Without the preset's contents, the weapon's cheapest price alone.
- */
 function priceModes(weapon: GunItem, options: OptimizeOptions): PriceMode[] {
   if (!options.preset) return [{ weaponPrice: effectivePrice(weapon, options.priceSources), owned: null }];
   const { bare, preset } = weaponChoices(weapon, options.priceSources, options.limits ?? null);

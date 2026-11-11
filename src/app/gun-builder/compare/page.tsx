@@ -172,8 +172,8 @@ function Comparison({
     const weapon = items.get(weaponId);
     return (isDetailed(weapon) ? weapon.defaultPresetId : null) ?? byId.get(weaponId)?.defaultPresetId;
   };
-  const leftPricing = usePurchaseContext(left.weaponId, presetOf(left.weaponId));
-  const rightPricing = usePurchaseContext(right.weaponId, presetOf(right.weaponId));
+  const leftPricing = usePurchaseContext(left.weaponId, presetOf(left.weaponId), items);
+  const rightPricing = usePurchaseContext(right.weaponId, presetOf(right.weaponId), items);
   const leftStats = computeStats(left.root, items, priceSources, ammoFor(left), leftPricing);
   const rightStats = computeStats(right.root, items, priceSources, ammoFor(right), rightPricing);
   const deltas = statDeltas(leftStats, rightStats);

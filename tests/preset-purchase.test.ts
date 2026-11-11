@@ -5,9 +5,6 @@ import { planPurchase, presetParts } from "@/app/lib/builds/purchase";
 import { buildShoppingList, formatShoppingList } from "@/app/lib/builds/shopping";
 import { computeStats } from "@/app/lib/builds/stats";
 
-// A weapon bought as its default preset comes with the preset's parts, so a build pays for the
-// preset and only the parts it lacks.
-
 const TRADERS: PriceSources = { traders: true, flea: false };
 const FLEA: PriceSources = { traders: false, flea: true };
 
@@ -36,7 +33,6 @@ function item(id: string, extra: Partial<BuildItemData> = {}): BuildItemData {
   };
 }
 
-/** A weapon sold by traders as offers, cheapest first; traderPriceRUB is the cheapest, as the adapter sets it. */
 function weapon(offers: TraderOffer[], extra: Partial<BuildItemData> = {}) {
   const sorted = offers.toSorted((a, b) => a.priceRUB - b.priceRUB);
   return item("gun", {
@@ -65,12 +61,13 @@ function lookup(gun: BuildItemData) {
   return new Map([gun, ...parts].map((entry) => [entry.id, entry]));
 }
 
-const preset = presetParts("gun", { baseItemId: "gun", itemIds: ["gun", "factory-stock", "brake"] });
+const presetOnly = weapon([{ trader: "Prapor", priceRUB: 35_000, level: 1, preset: "Gun Default" }]);
+const contents = { baseItemId: "gun", itemIds: ["gun", "factory-stock", "brake"] };
+const preset = presetParts("gun", contents, lookup(presetOnly));
 const factory: BuildNode = {
   itemId: "gun",
   slots: { stock: { itemId: "factory-stock", slots: {} }, muzzle: { itemId: "brake", slots: {} } },
 };
-const presetOnly = weapon([{ trader: "Prapor", priceRUB: 35_000, level: 1, preset: "Gun Default" }]);
 
 describe("buying a weapon as its default preset", () => {
   it("prices the default preset at the preset's price, not the preset plus its parts again", () => {
@@ -97,7 +94,6 @@ describe("buying a weapon as its default preset", () => {
     const plan = planPurchase(cheap, lookup(gun), TRADERS, { preset });
     expect(plan).toMatchObject({ asPreset: false, costRUB: 16_000, weapon: { priceRUB: 15_000 } });
     expect(plan.owned.size).toBe(0);
-    // The factory build is cheaper as the preset (35,000) than bare (15,000 + 20,000 + 4,000).
     expect(planPurchase(factory, lookup(gun), TRADERS, { preset })).toMatchObject({ asPreset: true, costRUB: 35_000 });
   });
 
@@ -141,7 +137,6 @@ describe("buying a weapon as its default preset", () => {
     expect(text).toMatch(/Prapor LL1 preset/);
     expect(text).toMatch(/brake.*\+1 with weapon/);
     expect(text).toContain("Total: 43,000 RUB for 2 items");
-    // Without the weapon, nothing comes with it.
     expect(buildShoppingList(swapped, lookup(presetOnly), TRADERS, false, { preset }).totalRUB).toBe(12_000);
   });
 });
@@ -161,20 +156,17 @@ describe("optimising a weapon sold as its default preset", () => {
       { trader: "Prapor", priceRUB: 35_000, level: 1, preset: "Gun Default" },
       { trader: "Peacekeeper", priceRUB: 40_000, level: 1 },
     ]);
-    // Bare: 40,000 + 1,000 cheapest stock. As the preset: 35,000 with its own stock.
     expect(await optimize(gun, {})).toMatchObject({ costRUB: 35_000, root: factory });
     const cheapBare = weapon([
       { trader: "Prapor", priceRUB: 35_000, level: 1, preset: "Gun Default" },
       { trader: "Peacekeeper", priceRUB: 20_000, level: 1 },
     ]);
-    // Bare: 20,000 + 1,000 cheapest stock + 4,000 for the brake it keeps, under the preset's 35,000.
     const result = await optimize(cheapBare, {});
     expect(result.root.slots.stock.itemId).toBe("cheap-stock");
     expect(result.costRUB).toBe(25_000);
   });
 
   it("spends a budget on what the preset lacks, with its parts free", async () => {
-    // As the preset, the better stock costs 8,000 on top; bare, it would cost 40,000 + 8,000.
     const gun = weapon([
       { trader: "Prapor", priceRUB: 35_000, level: 1, preset: "Gun Default" },
       { trader: "Peacekeeper", priceRUB: 40_000, level: 1 },
@@ -183,5 +175,36 @@ describe("optimising a weapon sold as its default preset", () => {
     expect(result.root.slots.stock.itemId).toBe("good-stock");
     expect(result.root.slots.muzzle?.itemId).toBe("brake");
     expect(result).toMatchObject({ costRUB: 43_000, withinBudget: true });
+  });
+
+  it("makes a preset part free only once, though it fits several slots", async () => {
+    const gun = weapon([{ trader: "Prapor", priceRUB: 35_000, level: 1, preset: "Gun Default" }], {
+      slots: [
+        slot("stock", ["factory-stock", "cheap-stock"], { required: true }),
+        slot("spare-stock", ["factory-stock", "cheap-stock"], { required: true }),
+      ],
+    });
+    const data = lookup(gun);
+    const owned = presetParts("gun", { baseItemId: "gun", itemIds: ["gun", "factory-stock"] }, data);
+    const root: BuildNode = { itemId: "gun", slots: { stock: { itemId: "factory-stock", slots: {} } } };
+    const result = await optimizeBuild(
+      root,
+      data,
+      { goal: "cost", priceSources: TRADERS, preset: owned, budget: 36_000 },
+      { pause: async () => undefined }
+    );
+    expect(result.root.slots).toEqual({
+      stock: { itemId: "factory-stock", slots: {} },
+      "spare-stock": { itemId: "cheap-stock", slots: {} },
+    });
+    expect(result).toMatchObject({ costRUB: 36_000, withinBudget: true });
+
+    // One part object in two slots is still two parts, and only one comes with the weapon.
+    const shared = { itemId: "factory-stock", slots: {} };
+    const twice: BuildNode = { itemId: "gun", slots: { stock: shared, "spare-stock": shared } };
+    expect(planPurchase(twice, data, TRADERS, { preset: owned })).toMatchObject({ costRUB: 55_000 });
+    const list = buildShoppingList(twice, data, TRADERS, true, { preset: owned });
+    expect(list.totalRUB).toBe(55_000);
+    expect(list.rows[1]).toMatchObject({ itemId: "factory-stock", count: 1, withWeapon: 1 });
   });
 });

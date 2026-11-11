@@ -22,7 +22,7 @@ import {
   type PriceSource,
   type TraderLimits,
 } from "@/app/lib/builds/price";
-import { presetParts, type BuildPurchase } from "@/app/lib/builds/purchase";
+import { pathKey, presetParts, type BuildPurchase } from "@/app/lib/builds/purchase";
 import { questChain } from "@/app/lib/builds/quests";
 import { checkSights, isMagazineSlot, type SightRole } from "@/app/lib/builds/sights";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
@@ -322,7 +322,7 @@ function usability(
   const unpriced: string[] = [];
   const walk = (node: BuildNode, path: string[]) => {
     const item = lookup.get(node.itemId);
-    if (item && node !== root && !bought.owned.has(node) && effectivePrice(item, sources) === null) unpriced.push(item.name);
+    if (item && node !== root && !bought.owned.has(pathKey(path)) && effectivePrice(item, sources) === null) unpriced.push(item.name);
     for (const slot of item?.slots ?? []) {
       const child = childAt(node, slot.id);
       const childPath = [...path, slot.id];
@@ -382,7 +382,7 @@ export async function describeBuild(
   const factory = contents ? reconstructPresetTree(build.root.itemId, contents, lookup) : null;
   const stats = computeStats(build.root, lookup, sources, ammo, {
     limits,
-    preset: presetParts(build.root.itemId, contents),
+    preset: presetParts(build.root.itemId, contents, lookup),
   });
   const bought = stats.purchase;
   const parts: ({
@@ -412,7 +412,7 @@ export async function describeBuild(
         name: part?.name ?? `Unknown item (${child.itemId})`,
         ergonomics: part?.ergonomics ?? 0,
         recoilModifierPercent: part ? percent(part.recoilModifier) : null,
-        ...(bought.owned.has(child)
+        ...(bought.owned.has(pathKey(childPath))
           ? { priceRUB: 0, comesWithWeapon: true as const }
           : part
             ? purchase(part, sources, limits)
@@ -487,7 +487,6 @@ export async function describeBuild(
   };
 }
 
-/** A weapon bought as its default preset: what of the preset the build leaves unused. */
 function presetPurchase(bought: BuildPurchase, lookup: BuildSource["lookup"]) {
   const spare = [...bought.spare].map(([id, count]) => `${count > 1 ? `${count}× ` : ""}${itemName(lookup, id) ?? id}`);
   return { boughtAsPreset: true as const, ...(spare.length ? { sparePresetParts: spare } : {}) };

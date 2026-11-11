@@ -207,7 +207,7 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
             id: weapon.defaultPresetId,
             name: weapon.presets?.find((preset) => preset.id === weapon.defaultPresetId)?.name ?? null,
             stats: projectStats(
-              computeStats(root, data.lookup, priceSources, null, { limits, preset: presetParts(weapon.id, contents) })
+              computeStats(root, data.lookup, priceSources, null, { limits, preset: presetParts(weapon.id, contents, data.lookup) })
             ),
           };
         }

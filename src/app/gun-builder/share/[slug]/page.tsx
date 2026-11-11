@@ -102,7 +102,7 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
   const ammoIds = useMemo(() => (build.ammoId ? [build.ammoId] : []), [build.ammoId]);
   const { items: ammoItems } = useAmmoItems(ammoIds);
   const ammo = build.ammoId ? ammoItems.get(build.ammoId) : undefined;
-  const pricing = usePurchaseContext(build.weaponId, isDetailed(weapon) ? weapon.defaultPresetId : null);
+  const pricing = usePurchaseContext(build.weaponId, isDetailed(weapon) ? weapon.defaultPresetId : null, items);
   const stats = computeStats(
     build.root,
     items,

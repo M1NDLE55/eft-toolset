@@ -134,13 +134,16 @@ export function useAmmoItems(ids: readonly string[], enabled = true): {
   };
 }
 
-/** How a build of this weapon is priced: with the parts its default preset comes with, once they load. */
-export function usePurchaseContext(weaponId: string, presetId: string | null | undefined): PurchaseContext {
+export function usePurchaseContext(
+  weaponId: string,
+  presetId: string | null | undefined,
+  items: ItemLookup
+): PurchaseContext {
   const { gameMode, hydrated } = useGameMode();
   const variables = useMemo(() => ({ gameMode, id: presetId ?? "" }), [gameMode, presetId]);
   const query = useDataQuery(presetQuery, variables, { enabled: hydrated && Boolean(presetId) });
   return useMemo(
-    () => ({ preset: presetId ? presetParts(weaponId, query.data) : null }),
-    [presetId, weaponId, query.data]
+    () => ({ preset: presetId ? presetParts(weaponId, query.data, items) : null }),
+    [presetId, weaponId, query.data, items]
   );
 }

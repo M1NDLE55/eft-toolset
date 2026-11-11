@@ -482,13 +482,14 @@ export async function loadPresetTree(
   return reconstructPresetTree(weaponId, preset, detailedItems(gameMode));
 }
 
-/** How a build of this weapon is priced: with the parts its default preset comes with, when they load. */
 export async function loadPurchaseContext(weaponId: string, gameMode: GameMode): Promise<PurchaseContext> {
   const weapon = getGunItemState(gameMode).items.get(weaponId);
   const presetId = isDetailed(weapon) ? weapon.defaultPresetId : null;
   if (!presetId) return { preset: null };
   try {
-    return { preset: presetParts(weaponId, await ensureQuery(presetQuery, { gameMode, id: presetId })) };
+    const contents = await ensureQuery(presetQuery, { gameMode, id: presetId });
+    if (contents) await ensureGunItems([weaponId, ...contents.itemIds], gameMode, "full");
+    return { preset: presetParts(weaponId, contents, detailedItems(gameMode)) };
   } catch {
     return { preset: null };
   }

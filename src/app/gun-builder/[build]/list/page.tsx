@@ -73,7 +73,8 @@ function ShoppingList({ build }: { build: GunBuild }) {
   const weapon = items.get(build.weaponId);
   const pricing = usePurchaseContext(
     build.weaponId,
-    (isDetailed(weapon) ? weapon.defaultPresetId : null) ?? byId.get(build.weaponId)?.defaultPresetId
+    (isDetailed(weapon) ? weapon.defaultPresetId : null) ?? byId.get(build.weaponId)?.defaultPresetId,
+    items
   );
   const list = buildShoppingList(build.root, items, priceSources, includeWeapon, pricing);
   const weaponName = items.get(build.weaponId)?.name ?? byId.get(build.weaponId)?.name ?? null;

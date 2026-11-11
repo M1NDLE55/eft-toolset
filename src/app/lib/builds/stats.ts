@@ -38,7 +38,6 @@ export interface BuildStats {
   unknownCount: number;
   missingRequired: MissingSlot[];
   base: BaseStats | null;
-  /** How the build is bought, which costRUB totals. */
   purchase: BuildPurchase;
 }
 

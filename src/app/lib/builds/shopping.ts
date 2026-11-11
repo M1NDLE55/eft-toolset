@@ -1,7 +1,7 @@
 import { escapeDiscordText } from "@/app/lib/text-safety";
 import type { BarterOffer, BuildNode, PriceSources, TraderOffer } from "@/app/lib/types/gunBuilder";
 import { priceChoice, type PriceSource } from "./price";
-import { planPurchase, type PurchaseContext } from "./purchase";
+import { pathKey, planPurchase, type PurchaseContext } from "./purchase";
 import type { ItemLookup } from "./stats";
 
 export interface ShoppingRow {
@@ -9,7 +9,6 @@ export interface ShoppingRow {
   name: string;
   shortName: string;
   normalizedName: string | null;
-  /** How many to buy. */
   count: number;
   /** How many come with the weapon's preset, so aren't bought. */
   withWeapon: number;
@@ -43,18 +42,17 @@ export function buildShoppingList(
   includeWeapon = true,
   pricing: PurchaseContext = {}
 ): ShoppingList {
-  // Without the weapon, nothing comes with it.
   const purchase = planPurchase(root, lookup, sources, includeWeapon ? pricing : { ...pricing, preset: null });
   const counts = new Map<string, number>();
   const withWeapon = new Map<string, number>();
   const order: string[] = [];
-  const stack = [root];
+  const stack: { node: BuildNode; path: string[] }[] = [{ node: root, path: [] }];
   while (stack.length > 0) {
-    const node = stack.shift()!;
-    stack.unshift(...Object.values(node.slots));
+    const { node, path } = stack.shift()!;
+    stack.unshift(...Object.entries(node.slots).map(([slotId, child]) => ({ node: child, path: [...path, slotId] })));
     if (node === root && !includeWeapon) continue;
     if (!counts.has(node.itemId)) order.push(node.itemId);
-    const tally = purchase.owned.has(node) ? withWeapon : counts;
+    const tally = purchase.owned.has(pathKey(path)) ? withWeapon : counts;
     tally.set(node.itemId, (tally.get(node.itemId) ?? 0) + 1);
     if (!counts.has(node.itemId)) counts.set(node.itemId, 0);
   }
@@ -66,7 +64,6 @@ export function buildShoppingList(
     const count = counts.get(itemId) ?? 0;
     const isWeapon = itemId === root.itemId && includeWeapon;
     const choice = count === 0 ? null : isWeapon ? purchase.weapon : item ? priceChoice(item, sources, pricing.limits ?? null) : null;
-    // The weapon's trader column shows the offer bought, which can be bare or the preset.
     const trader = choice?.source === "trader" ? choice.priceRUB : positive(item?.traderPriceRUB);
     const flea = positive(item?.fleaPriceRUB);
     const source = choice?.source ?? null;

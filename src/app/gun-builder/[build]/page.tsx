@@ -121,7 +121,7 @@ function BuildEditor({ build }: { build: GunBuild }) {
   const ammoChoice = ammoOptions(build.root, items);
   const ammoData = build.ammoId ? ammoItems.get(build.ammoId) : undefined;
   const activeAmmo = ammoData && ammoFits(build.ammoId, ammoChoice) ? ammoData : null;
-  const pricing = usePurchaseContext(build.weaponId, weapon?.defaultPresetId ?? gun?.defaultPresetId);
+  const pricing = usePurchaseContext(build.weaponId, weapon?.defaultPresetId ?? gun?.defaultPresetId, items);
   const stats = computeStats(build.root, items, priceSources, activeAmmo, pricing);
   const flow = useMemo(() => layoutBuild(build.root, items, hideEmpty), [build.root, items, hideEmpty]);
   const parts = countParts(build.root);
