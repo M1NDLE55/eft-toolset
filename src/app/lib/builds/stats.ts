@@ -6,7 +6,7 @@ import type {
   PriceSources,
 } from "@/app/lib/types/gunBuilder";
 import { childAt } from "./tree";
-import { effectivePrice } from "./price";
+import { planPurchase, type BuildPurchase, type PurchaseContext } from "./purchase";
 
 export type ItemLookup = ReadonlyMap<string, GunItem>;
 
@@ -38,6 +38,8 @@ export interface BuildStats {
   unknownCount: number;
   missingRequired: MissingSlot[];
   base: BaseStats | null;
+  /** How the build is bought, which costRUB totals. */
+  purchase: BuildPurchase;
 }
 
 function findMissing(
@@ -61,15 +63,13 @@ export function computeStats(
   root: BuildNode,
   lookup: ItemLookup,
   sources: PriceSources,
-  ammo: { recoilModifier: number } | null = null
+  ammo: { recoilModifier: number } | null = null,
+  pricing: PurchaseContext = {}
 ): BuildStats {
   const weapon = lookup.get(root.itemId);
   let ergonomics = weapon?.ergonomics ?? 0;
   let recoilModifier = ammo && Number.isFinite(ammo.recoilModifier) ? ammo.recoilModifier : 0;
   let weight = 0;
-  let cost = 0;
-  let priced = 0;
-  let costMissingCount = 0;
   let partCount = 0;
   let unknownCount = 0;
 
@@ -84,18 +84,13 @@ export function computeStats(
       continue;
     }
     weight += item.weight;
-    const price = effectivePrice(item, sources);
-    if (price === null) costMissingCount += 1;
-    else {
-      cost += price;
-      priced += 1;
-    }
     if (node !== root) {
       ergonomics += item.ergonomics;
       recoilModifier += item.recoilModifier;
     }
   }
 
+  const purchase = planPurchase(root, lookup, sources, pricing);
   const missingRequired: MissingSlot[] = [];
   findMissing(root, lookup, [], "", missingRequired);
   const detailed = isDetailed(weapon) ? weapon : null;
@@ -107,8 +102,8 @@ export function computeStats(
     recoilVertical: scale(detailed?.recoilVertical),
     recoilHorizontal: scale(detailed?.recoilHorizontal),
     weight,
-    costRUB: priced > 0 ? cost : null,
-    costMissingCount,
+    costRUB: purchase.pricedCount > 0 ? purchase.costRUB : null,
+    costMissingCount: purchase.missingCount,
     partCount,
     unknownCount,
     missingRequired,
@@ -120,5 +115,6 @@ export function computeStats(
           weight: detailed.weight,
         }
       : null,
+    purchase,
   };
 }

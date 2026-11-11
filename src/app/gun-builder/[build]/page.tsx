@@ -40,9 +40,10 @@ import {
   getGunItemState,
   loadCompatibilityGraph,
   loadPresetTree,
+  loadPurchaseContext,
   prefetchSlotItems,
 } from "@/app/lib/cache/gunBuilder";
-import { useAmmoItems, useGunItems, useGunList } from "@/app/lib/cache/gunBuilderHooks";
+import { useAmmoItems, useGunItems, useGunList, usePurchaseContext } from "@/app/lib/cache/gunBuilderHooks";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { NameDialog } from "@/components/name-dialog";
@@ -120,7 +121,8 @@ function BuildEditor({ build }: { build: GunBuild }) {
   const ammoChoice = ammoOptions(build.root, items);
   const ammoData = build.ammoId ? ammoItems.get(build.ammoId) : undefined;
   const activeAmmo = ammoData && ammoFits(build.ammoId, ammoChoice) ? ammoData : null;
-  const stats = computeStats(build.root, items, priceSources, activeAmmo);
+  const pricing = usePurchaseContext(build.weaponId, weapon?.defaultPresetId ?? gun?.defaultPresetId);
+  const stats = computeStats(build.root, items, priceSources, activeAmmo, pricing);
   const flow = useMemo(() => layoutBuild(build.root, items, hideEmpty), [build.root, items, hideEmpty]);
   const parts = countParts(build.root);
   const image = weaponData?.gridImageLink ?? gun?.gridImageLink ?? null;
@@ -234,9 +236,11 @@ function BuildEditor({ build }: { build: GunBuild }) {
         gameMode,
         { requiredOnly: true }
       );
+      const purchase = await loadPurchaseContext(build.weaponId, gameMode);
       const result = await optimizeBuild(base, getGunItemState(gameMode).items, {
         goal: "cost",
         priceSources,
+        ...purchase,
         replaceExisting: false,
         target: missing ? { parentPath: missing.parentPath, slotId: missing.slot.id } : null,
         ammoId: build.ammoId ?? null,

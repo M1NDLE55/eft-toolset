@@ -3,12 +3,14 @@ import { useGameMode, type GameMode } from "@/components/game-mode/context";
 import { useDataQuery } from "@/app/lib/api/useDataQuery";
 import type { AmmoItemData, GunItem, GunListItem } from "@/app/lib/types/gunBuilder";
 import type { ItemLookup } from "@/app/lib/builds/stats";
+import { presetParts, type PurchaseContext } from "@/app/lib/builds/purchase";
 import {
   ensureAmmoItems,
   ensureGunItems,
   getAmmoState,
   getGunItemState,
   gunListQuery,
+  presetQuery,
   subscribeGunItems,
   unresolvedGunItems,
   type GunItemState,
@@ -130,4 +132,15 @@ export function useAmmoItems(ids: readonly string[], enabled = true): {
     error: unresolved.length > 0 ? state.error : null,
     retry: () => void ensureAmmoItems(ids, gameMode).catch(() => undefined),
   };
+}
+
+/** How a build of this weapon is priced: with the parts its default preset comes with, once they load. */
+export function usePurchaseContext(weaponId: string, presetId: string | null | undefined): PurchaseContext {
+  const { gameMode, hydrated } = useGameMode();
+  const variables = useMemo(() => ({ gameMode, id: presetId ?? "" }), [gameMode, presetId]);
+  const query = useDataQuery(presetQuery, variables, { enabled: hydrated && Boolean(presetId) });
+  return useMemo(
+    () => ({ preset: presetId ? presetParts(weaponId, query.data) : null }),
+    [presetId, weaponId, query.data]
+  );
 }

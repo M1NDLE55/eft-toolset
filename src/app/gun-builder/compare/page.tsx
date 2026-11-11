@@ -9,9 +9,9 @@ import type { GunBuild } from "@/app/lib/types/gunBuilder";
 import { useHydrated } from "@/app/lib/storage/use-store";
 import { findBuild, sortBuilds, useBuilds, usePriceSources, setPriceSources } from "@/app/lib/builds/store";
 import { collectItemIds, countParts } from "@/app/lib/builds/tree";
-import { computeStats } from "@/app/lib/builds/stats";
+import { computeStats, isDetailed } from "@/app/lib/builds/stats";
 import { diffBuildTrees, statDeltas } from "@/app/lib/builds/compare";
-import { useAmmoItems, useGunItems, useGunList } from "@/app/lib/cache/gunBuilderHooks";
+import { useAmmoItems, useGunItems, useGunList, usePurchaseContext } from "@/app/lib/cache/gunBuilderHooks";
 import { ammoFits, ammoOptions } from "@/app/lib/builds/ammo";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -168,8 +168,14 @@ function Comparison({
     const ammo = build.ammoId ? ammoItems.get(build.ammoId) : undefined;
     return ammo && ammoFits(ammo.id, ammoOptions(build.root, items)) ? ammo : null;
   };
-  const leftStats = computeStats(left.root, items, priceSources, ammoFor(left));
-  const rightStats = computeStats(right.root, items, priceSources, ammoFor(right));
+  const presetOf = (weaponId: string) => {
+    const weapon = items.get(weaponId);
+    return (isDetailed(weapon) ? weapon.defaultPresetId : null) ?? byId.get(weaponId)?.defaultPresetId;
+  };
+  const leftPricing = usePurchaseContext(left.weaponId, presetOf(left.weaponId));
+  const rightPricing = usePurchaseContext(right.weaponId, presetOf(right.weaponId));
+  const leftStats = computeStats(left.root, items, priceSources, ammoFor(left), leftPricing);
+  const rightStats = computeStats(right.root, items, priceSources, ammoFor(right), rightPricing);
   const deltas = statDeltas(leftStats, rightStats);
   const rows = diffBuildTrees(left.root, right.root, items);
   const changed = rows.filter((row) => row.status !== "same");

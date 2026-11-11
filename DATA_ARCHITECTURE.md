@@ -124,6 +124,13 @@ by id, name, or slug and expanded to the tasks they required (`src/app/lib/build
 Build results list `requiredTasks`: the tasks behind the offers the build is priced with, and
 their prerequisites, in an order they can be done (`getTaskIndex`).
 
+A weapon bought as its default preset (a trader's preset offer, a preset barter, or the flea
+market, whose weapon prices are for the default preset) comes with the preset's parts.
+`planPurchase` (`src/app/lib/builds/purchase.ts`) prices a build both ways, the bare weapon and
+every part or the preset and only the parts it lacks, and keeps the cheaper; the build cost, the
+shopping list, and the optimiser (which solves both ways) all use it, in the app and the MCP
+tools. Without the preset's contents, every part is priced.
+
 Results put the payload in `structuredContent` and as JSON text. Builds are passed between
 calls as a share link, or restated as a weapon, preset, and `parts` (each part's slot path
 and item, as build results list them). List tools take `offset` and return `nextOffset`

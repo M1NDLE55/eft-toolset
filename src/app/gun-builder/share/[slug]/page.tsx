@@ -10,9 +10,9 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { createBuild, usePriceSources } from "@/app/lib/builds/store";
 import { decodeBuildSharePayload, type DecodedSharedBuild } from "@/app/lib/builds/share";
 import { collectItemIds, countParts } from "@/app/lib/builds/tree";
-import { computeStats } from "@/app/lib/builds/stats";
+import { computeStats, isDetailed } from "@/app/lib/builds/stats";
 import { layoutBuild } from "@/app/lib/builds/tree-layout";
-import { useAmmoItems, useGunItems } from "@/app/lib/cache/gunBuilderHooks";
+import { useAmmoItems, useGunItems, usePurchaseContext } from "@/app/lib/cache/gunBuilderHooks";
 import { ammoFits, ammoOptions } from "@/app/lib/builds/ammo";
 import { formatDamage } from "@/app/components/gun-builder/ammo-picker";
 import { formatRub } from "@/app/components/gun-builder/format";
@@ -102,11 +102,13 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
   const ammoIds = useMemo(() => (build.ammoId ? [build.ammoId] : []), [build.ammoId]);
   const { items: ammoItems } = useAmmoItems(ammoIds);
   const ammo = build.ammoId ? ammoItems.get(build.ammoId) : undefined;
+  const pricing = usePurchaseContext(build.weaponId, isDetailed(weapon) ? weapon.defaultPresetId : null);
   const stats = computeStats(
     build.root,
     items,
     priceSources,
-    ammo && ammoFits(ammo.id, ammoOptions(build.root, items)) ? ammo : null
+    ammo && ammoFits(ammo.id, ammoOptions(build.root, items)) ? ammo : null,
+    pricing
   );
   const parts = countParts(build.root);
   const rows = layoutBuild(build.root, items).nodes.filter((node) => node.kind === "item");

@@ -15,6 +15,7 @@ import { apiFetch } from "@/app/lib/api/transport";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import { ensureQuery, type QueryDefinition } from "@/app/lib/api/queryClient";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
+import { presetParts, type PurchaseContext } from "@/app/lib/builds/purchase";
 import { isDetailed } from "@/app/lib/builds/stats";
 
 // 5: build items and ammo carry magazine capacity, sight kinds, trader offers with loyalty levels,
@@ -479,6 +480,18 @@ export async function loadPresetTree(
   if (!preset || (preset.baseItemId !== null && preset.baseItemId !== weaponId)) return null;
   await ensureGunItems([weaponId, ...preset.itemIds], gameMode, "full");
   return reconstructPresetTree(weaponId, preset, detailedItems(gameMode));
+}
+
+/** How a build of this weapon is priced: with the parts its default preset comes with, when they load. */
+export async function loadPurchaseContext(weaponId: string, gameMode: GameMode): Promise<PurchaseContext> {
+  const weapon = getGunItemState(gameMode).items.get(weaponId);
+  const presetId = isDetailed(weapon) ? weapon.defaultPresetId : null;
+  if (!presetId) return { preset: null };
+  try {
+    return { preset: presetParts(weaponId, await ensureQuery(presetQuery, { gameMode, id: presetId })) };
+  } catch {
+    return { preset: null };
+  }
 }
 
 export function prefetchGunList(gameMode: GameMode) {

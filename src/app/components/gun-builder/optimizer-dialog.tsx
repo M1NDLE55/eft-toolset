@@ -9,7 +9,7 @@ import { computeStats, type ItemLookup } from "@/app/lib/builds/stats";
 import { diffBuildTrees, statDeltas, type SlotDiffRow, type StatDelta } from "@/app/lib/builds/compare";
 import { collectItemIds } from "@/app/lib/builds/tree";
 import { ammoFits, ammoOptions } from "@/app/lib/builds/ammo";
-import { getGunItemState, loadCompatibilityGraph } from "@/app/lib/cache/gunBuilder";
+import { getGunItemState, loadCompatibilityGraph, loadPurchaseContext } from "@/app/lib/cache/gunBuilder";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -154,12 +154,14 @@ export function OptimizerDialog({
       });
       setPhase({ status: "solving", step: 0 });
       const lookup = getGunItemState(gameMode).items;
+      const purchase = await loadPurchaseContext(build.weaponId, gameMode);
       const result = await optimizeBuild(
         base,
         lookup,
         {
           goal,
           priceSources,
+          ...purchase,
           budget: goal === "cost" ? null : budget,
           replaceExisting,
           allowUnpriced,
@@ -175,8 +177,8 @@ export function OptimizerDialog({
       if (active.signal.aborted) return;
       const ammoFor = (root: BuildNode) =>
         ammo && ammoFits(ammo.id, ammoOptions(root, lookup)) ? ammo : null;
-      const before = computeStats(base, lookup, priceSources, ammoFor(base));
-      const after = computeStats(result.root, lookup, priceSources, ammoFor(result.root));
+      const before = computeStats(base, lookup, priceSources, ammoFor(base), purchase);
+      const after = computeStats(result.root, lookup, priceSources, ammoFor(result.root), purchase);
       setPhase({
         status: "done",
         base,

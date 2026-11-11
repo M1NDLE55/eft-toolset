@@ -18,9 +18,11 @@ import {
   offerLabel,
   priceChoice,
   questLocked,
+  type PriceChoice,
   type PriceSource,
   type TraderLimits,
 } from "@/app/lib/builds/price";
+import { presetParts, type BuildPurchase } from "@/app/lib/builds/purchase";
 import { questChain } from "@/app/lib/builds/quests";
 import { checkSights, isMagazineSlot, type SightRole } from "@/app/lib/builds/sights";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
@@ -28,7 +30,7 @@ import { itemName, slotLabel, type BuildSource, type ResolvedBuild } from "@/app
 import { encodeBuildSharePayload, slugifyBuildName } from "@/app/lib/builds/share";
 import { computeStats, type BuildStats } from "@/app/lib/builds/stats";
 import { childAt } from "@/app/lib/builds/tree";
-import type { BuildPricing, QuestProgress } from "./build-prices";
+import { defaultPreset, type BuildPricing, type QuestProgress } from "./build-prices";
 import { round, type ToolContext } from "./context";
 import { itemUrl } from "./sources";
 import { LOOT_ONLY, NO_FLEA_PRICE } from "@/app/lib/item-price";
@@ -198,13 +200,22 @@ type Purchase = {
   taskUnlock?: TaskUnlock;
 };
 
-function purchase(item: OfferedItem, sources: PriceSources, limits: TraderLimits | null): Purchase {
-  const choice = priceChoice(item, sources, limits);
+function chosenOffer(item: OfferedItem, choice: PriceChoice | null, limits: TraderLimits | null) {
+  if (choice?.source === "trader") return choice.offer ?? traderOffer(item, limits).offer;
+  return choice?.source === "barter" ? choice.offer : null;
+}
+
+function purchase(
+  item: OfferedItem,
+  sources: PriceSources,
+  limits: TraderLimits | null,
+  choice = priceChoice(item, sources, limits)
+): Purchase {
   if (!choice) return { priceRUB: null, priceNote: priceNote(item, sources, limits) };
   if (choice.source === "flea") return { priceRUB: choice.priceRUB, source: choice.source };
   if (choice.source === "trader") {
-    const trader = traderOffer(item, limits);
-    return { priceRUB: choice.priceRUB, source: choice.source, trader: trader.label, ...unlockOf(trader.offer) };
+    const label = choice.offer ? offerLabel(choice.offer) : traderOffer(item, limits).label;
+    return { priceRUB: choice.priceRUB, source: choice.source, trader: label, ...unlockOf(chosenOffer(item, choice, limits)) };
   }
   return {
     priceRUB: choice.priceRUB,
@@ -213,24 +224,29 @@ function purchase(item: OfferedItem, sources: PriceSources, limits: TraderLimits
   };
 }
 
-function pendingUnlock(item: OfferedItem | undefined, sources: PriceSources, limits: TraderLimits | null, quests: QuestProgress) {
+interface Bought {
+  name: string;
+  item: OfferedItem | undefined;
+  /** How it's bought, when not its cheapest price. */
+  choice?: PriceChoice | null;
+}
+
+function pendingUnlock({ item, choice }: Bought, sources: PriceSources, limits: TraderLimits | null, quests: QuestProgress) {
   if (!item) return null;
-  const choice = priceChoice(item, sources, limits);
-  const offer =
-    choice?.source === "trader" ? traderOffer(item, limits).offer : choice?.source === "barter" ? choice.offer : null;
-  const unlock = offer?.taskUnlock;
+  const unlock = chosenOffer(item, choice === undefined ? priceChoice(item, sources, limits) : choice, limits)?.taskUnlock;
   return unlock && !quests.completed.has(unlock.id) ? unlock : null;
 }
 
 function requiredTasks(
-  items: readonly { name: string; item: OfferedItem | undefined }[],
+  items: readonly Bought[],
   sources: PriceSources,
   limits: TraderLimits | null,
   quests: QuestProgress
 ) {
   const unlocks = new Map<string, string[]>();
-  for (const { name, item } of items) {
-    const unlock = pendingUnlock(item, sources, limits, quests);
+  for (const bought of items) {
+    const { name } = bought;
+    const unlock = pendingUnlock(bought, sources, limits, quests);
     if (!unlock) continue;
     const names = unlocks.get(unlock.id) ?? [];
     if (!names.includes(name)) names.push(name);
@@ -292,56 +308,13 @@ export function projectStats(stats: BuildStats) {
 const SIGHT_LABELS = { optic: "optic", rear: "rear sight", front: "front sight" } as const satisfies Record<SightRole, string>;
 
 /** The magazine, the sights, and anything that makes the build unusable or its cost incomplete. */
-/** The weapon's default preset as a tree, or null when it has none or it can't be loaded. */
-async function factoryTree(data: BuildSource, weaponId: string): Promise<BuildNode | null> {
-  const presetId = data.lookup.get(weaponId)?.defaultPresetId;
-  if (!presetId) return null;
-  const contents = await data.loadPreset(presetId);
-  return contents ? reconstructPresetTree(weaponId, contents, data.lookup) : null;
-}
-
-// Preset purchases include the preset's parts.
-function partsWithWeapon(
-  root: BuildNode,
-  lookup: BuildSource["lookup"],
-  sources: PriceSources,
-  limits: TraderLimits | null,
-  factory: BuildNode | null
-) {
-  const weapon = lookup.get(root.itemId);
-  const choice = weapon ? priceChoice(weapon, sources, limits) : null;
-  const offer = choice && choice.source !== "flea" ? choice.offer : null;
-  if (!factory || !offer?.preset) return null;
-  const remaining = new Map<string, number>();
-  const count = (node: BuildNode) => {
-    for (const child of Object.values(node.slots)) {
-      remaining.set(child.itemId, (remaining.get(child.itemId) ?? 0) + 1);
-      count(child);
-    }
-  };
-  count(factory);
-  const nodes = new Set<BuildNode>();
-  const take = (node: BuildNode) => {
-    for (const child of Object.values(node.slots)) {
-      const left = remaining.get(child.itemId) ?? 0;
-      if (left > 0) {
-        remaining.set(child.itemId, left - 1);
-        nodes.add(child);
-      }
-      take(child);
-    }
-  };
-  take(root);
-  return { nodes, label: offerLabel({ ...offer, preset: undefined }), priceRUB: choice!.priceRUB };
-}
-
 function usability(
   build: Omit<ResolvedBuild, "warnings">,
   lookup: BuildSource["lookup"],
   sources: PriceSources,
   limits: TraderLimits | null,
   factory: BuildNode | null,
-  withWeapon: ReadonlySet<BuildNode>
+  bought: BuildPurchase
 ) {
   const { root } = build;
   let magazine: { name: string; capacity: number | null; slotPath: string[] } | null = null;
@@ -349,7 +322,7 @@ function usability(
   const unpriced: string[] = [];
   const walk = (node: BuildNode, path: string[]) => {
     const item = lookup.get(node.itemId);
-    if (item && effectivePrice(item, sources) === null && !withWeapon.has(node)) unpriced.push(item.name);
+    if (item && node !== root && !bought.owned.has(node) && effectivePrice(item, sources) === null) unpriced.push(item.name);
     for (const slot of item?.slots ?? []) {
       const child = childAt(node, slot.id);
       const childPath = [...path, slot.id];
@@ -379,9 +352,8 @@ function usability(
     );
   }
   const weapon = lookup.get(root.itemId);
-  if (weapon && effectivePrice(weapon, sources) === null) {
+  if (weapon && !bought.weapon) {
     problems.push(`The weapon has no price: ${priceNote(weapon, sources, limits)} costRUB leaves it out.`);
-    unpriced.shift();
   }
   if (unpriced.length > 0) {
     problems.push(
@@ -406,9 +378,13 @@ export async function describeBuild(
 ) {
   const { lookup } = data;
   const ammo = build.ammoId ? (await data.loadAmmo([build.ammoId]))[0] ?? null : null;
-  const stats = computeStats(build.root, lookup, sources, ammo);
-  const factory = await factoryTree(data, build.root.itemId);
-  const withWeapon = partsWithWeapon(build.root, lookup, sources, limits, factory);
+  const contents = await defaultPreset(data, build.root.itemId);
+  const factory = contents ? reconstructPresetTree(build.root.itemId, contents, lookup) : null;
+  const stats = computeStats(build.root, lookup, sources, ammo, {
+    limits,
+    preset: presetParts(build.root.itemId, contents),
+  });
+  const bought = stats.purchase;
   const parts: ({
     slotPath: string[];
     slot: string;
@@ -436,8 +412,11 @@ export async function describeBuild(
         name: part?.name ?? `Unknown item (${child.itemId})`,
         ergonomics: part?.ergonomics ?? 0,
         recoilModifierPercent: part ? percent(part.recoilModifier) : null,
-        ...(part ? purchase(part, sources, limits) : { priceRUB: null }),
-        ...(withWeapon?.nodes.has(child) ? { comesWithWeapon: true as const } : {}),
+        ...(bought.owned.has(child)
+          ? { priceRUB: 0, comesWithWeapon: true as const }
+          : part
+            ? purchase(part, sources, limits)
+            : { priceRUB: null }),
       });
       walk(child, childPath);
     }
@@ -464,7 +443,8 @@ export async function describeBuild(
           caliberId: caliberId(weapon.caliber),
           fireRate: weapon.fireRate ?? null,
           url: itemUrl(context, weapon),
-          ...purchase(weapon, sources, limits),
+          ...purchase(weapon, sources, limits, bought.weapon),
+          ...(bought.asPreset ? presetPurchase(bought, lookup) : {}),
         }
       : { id: build.weaponId, name: `Unknown weapon (${build.weaponId})` },
     stats: projectStats(stats),
@@ -475,15 +455,7 @@ export async function describeBuild(
           compatibleCount: options.ids.length,
           note: "No ammo loaded, so recoil leaves out the ammo's modifier. List rounds with get_ammo_options and load one with build.ammo or set_ammo.",
         },
-    ...withPresetNote(
-      usability(build, lookup, sources, limits, factory, withWeapon?.nodes ?? new Set()),
-      withWeapon,
-      stats.costRUB,
-      (node) => {
-        const item = lookup.get(node.itemId);
-        return item ? effectivePrice(item, sources) : null;
-      }
-    ),
+    ...usability(build, lookup, sources, limits, factory, bought),
     missingRequiredSlots: stats.missingRequired.map((missing) => ({
       slot: missing.label,
       slotPath: [...missing.parentPath, missing.slot.id],
@@ -500,7 +472,7 @@ export async function describeBuild(
     parts,
     ...requiredTasksField(
       [
-        { name: weapon?.name ?? build.weaponId, item: weapon },
+        { name: weapon?.name ?? build.weaponId, item: weapon, choice: bought.weapon },
         // Parts the weapon's preset includes needn't be bought, so their tasks don't count.
         ...parts.filter((part) => !part.comesWithWeapon).map((part) => ({ name: part.name, item: lookup.get(part.itemId) })),
         ...(ammo ? [{ name: ammo.name, item: ammo }] : []),
@@ -515,27 +487,10 @@ export async function describeBuild(
   };
 }
 
-// costRUB also counts the preset's parts, so report the adjusted total.
-function withPresetNote<T extends { problems: string[] }>(
-  result: T,
-  withWeapon: ReturnType<typeof partsWithWeapon>,
-  costRUB: number | null,
-  priceOf: (node: BuildNode) => number | null
-): T {
-  if (!withWeapon?.nodes.size) return result;
-  const counted = [...withWeapon.nodes].reduce((total, node) => total + (priceOf(node) ?? 0), 0);
-  const parts = withWeapon.nodes.size === 1 ? "1 of these parts" : `${withWeapon.nodes.size} of these parts`;
-  const saving =
-    counted > 0 && costRUB !== null
-      ? `; costRUB counts ${Math.round(counted).toLocaleString("en-US")} RUB of them again, so buying the preset and keeping them costs ${Math.round(costRUB - counted).toLocaleString("en-US")} RUB`
-      : "";
-  return {
-    ...result,
-    problems: [
-      ...result.problems,
-      `The weapon is sold as its default preset (${withWeapon.label}, ${Math.round(withWeapon.priceRUB).toLocaleString("en-US")} RUB), which comes with ${parts} (parts[].comesWithWeapon)${saving}.`,
-    ],
-  };
+/** A weapon bought as its default preset: what of the preset the build leaves unused. */
+function presetPurchase(bought: BuildPurchase, lookup: BuildSource["lookup"]) {
+  const spare = [...bought.spare].map(([id, count]) => `${count > 1 ? `${count}× ` : ""}${itemName(lookup, id) ?? id}`);
+  return { boughtAsPreset: true as const, ...(spare.length ? { sparePresetParts: spare } : {}) };
 }
 
 function requiredTasksField(...args: Parameters<typeof requiredTasks>) {

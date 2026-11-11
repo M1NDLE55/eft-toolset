@@ -1,10 +1,11 @@
 import { getTaskIndex } from "@/app/lib/api/tarkov-server";
 import type { BuildSource, PartLookup } from "@/app/lib/builds/resolve";
 import { hasTraderLimits, withBarterPrices, withTraderLimits, type TraderLimits } from "@/app/lib/builds/price";
+import { presetParts, type PurchaseContext } from "@/app/lib/builds/purchase";
 import { expandCompleted, matchTasks, type TaskIndex } from "@/app/lib/builds/quests";
 import type { CatalogItem } from "@/app/lib/cache/types";
 import { suggestNames } from "@/app/lib/search/filter-catalog";
-import type { PriceSources } from "@/app/lib/types/gunBuilder";
+import type { PresetContents, PriceSources } from "@/app/lib/types/gunBuilder";
 import { InputError, type GameMode, type Read } from "./context";
 import { loadBuildSource } from "./sources";
 
@@ -144,4 +145,15 @@ export async function loadBuildPricing(read: Read, gameMode: GameMode, input: Pr
     limits: limited,
     quests,
   };
+}
+
+/** The weapon's default preset contents, or null when it has none or they can't be loaded. */
+export async function defaultPreset(data: BuildSource, weaponId: string): Promise<PresetContents | null> {
+  const presetId = data.lookup.get(weaponId)?.defaultPresetId;
+  return presetId ? data.loadPreset(presetId) : null;
+}
+
+/** How a build of this weapon is priced: the trader limits, and the parts its default preset comes with. */
+export async function purchaseContext({ data, limits }: BuildPricing, weaponId: string): Promise<PurchaseContext> {
+  return { limits, preset: presetParts(weaponId, await defaultPreset(data, weaponId)) };
 }

@@ -10,7 +10,8 @@ import { useHydrated } from "@/app/lib/storage/use-store";
 import { findBuild, setPriceSources, useBuilds, usePriceSources } from "@/app/lib/builds/store";
 import { collectItemIds } from "@/app/lib/builds/tree";
 import { buildShoppingList, formatShoppingList } from "@/app/lib/builds/shopping";
-import { useAmmoItems, useGunItems, useGunList } from "@/app/lib/cache/gunBuilderHooks";
+import { useAmmoItems, useGunItems, useGunList, usePurchaseContext } from "@/app/lib/cache/gunBuilderHooks";
+import { isDetailed } from "@/app/lib/builds/stats";
 import { effectivePrice } from "@/app/lib/builds/price";
 import { itemHref } from "@/app/lib/item-links";
 import { copyText } from "@/app/lib/browser/clipboard";
@@ -69,7 +70,12 @@ function ShoppingList({ build }: { build: GunBuild }) {
   const [notice, setNotice] = useState<{ ok: boolean; text: string } | null>(null);
   useDocumentTitle(`Shopping list · ${build.name || "Untitled build"}`);
 
-  const list = buildShoppingList(build.root, items, priceSources, includeWeapon);
+  const weapon = items.get(build.weaponId);
+  const pricing = usePurchaseContext(
+    build.weaponId,
+    (isDetailed(weapon) ? weapon.defaultPresetId : null) ?? byId.get(build.weaponId)?.defaultPresetId
+  );
+  const list = buildShoppingList(build.root, items, priceSources, includeWeapon, pricing);
   const weaponName = items.get(build.weaponId)?.name ?? byId.get(build.weaponId)?.name ?? null;
   const noSources = !priceSources.traders && !priceSources.flea;
 
@@ -204,6 +210,7 @@ function ShoppingList({ build }: { build: GunBuild }) {
                             )}
                             <span className="flex flex-wrap gap-x-3 text-[11px] tabular-nums text-[#777] sm:hidden">
                               {row.count > 1 && <span>×{row.count}</span>}
+                              {row.withWeapon > 0 && <span>+{row.withWeapon} with weapon</span>}
                               <span className={cn(row.source === "trader" && "text-[#c8b384]")}>
                                 Trader {formatRub(row.traderPriceRUB)}
                                 {row.traderName ? ` · ${row.traderName}${row.traderLevel ? ` LL${row.traderLevel}` : ""}` : ""}
@@ -211,7 +218,14 @@ function ShoppingList({ build }: { build: GunBuild }) {
                               <span className={cn(row.source === "flea" && "text-[#c8b384]")}>Flea {formatRub(row.fleaPriceRUB)}</span>
                             </span>
                             {row.isWeapon && (
-                              <span className="hidden text-[10px] font-bold uppercase tracking-widest text-[#9a8866] sm:block">Weapon</span>
+                              <span className="hidden text-[10px] font-bold uppercase tracking-widest text-[#9a8866] sm:block">
+                                {row.offer?.preset || (row.source === "flea" && pricing.preset) ? "Weapon · default preset" : "Weapon"}
+                              </span>
+                            )}
+                            {row.withWeapon > 0 && (
+                              <span className="hidden text-[10px] font-bold uppercase tracking-widest text-[#9a8866] sm:block">
+                                {row.count > 0 ? `${row.withWeapon} comes with the weapon` : "Comes with the weapon"}
+                              </span>
                             )}
                           </span>
                         </span>
@@ -242,7 +256,7 @@ function ShoppingList({ build }: { build: GunBuild }) {
                       <td className="px-3 py-2 text-right tabular-nums">
                         <span className="block font-black text-[#e6d9b8]">{formatRub(row.subtotalRUB)}</span>
                         <span className="block text-[10px] uppercase tracking-widest text-[#666]">
-                          {row.source ?? (noSources ? "no source" : "no price")}
+                          {row.source ?? (row.count === 0 ? "with weapon" : noSources ? "no source" : "no price")}
                         </span>
                       </td>
                     </tr>
