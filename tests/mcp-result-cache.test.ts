@@ -52,13 +52,25 @@ it("answers a repeated optimiser call from the cache while the data is unchanged
   const second = await call("optimize_build", optimize);
   expect(first.isError).toBeFalsy();
   expect(second.structuredContent).toEqual(first.structuredContent);
-  // Different arguments are a different result.
   await call("optimize_build", { ...optimize, goal: "ergonomics" });
   expect(logged()).toEqual([
     { tool: "optimize_build", outcome: "ok", cached: false },
     { tool: "optimize_build", outcome: "ok", cached: true },
     { tool: "optimize_build", outcome: "ok", cached: false },
   ]);
+});
+
+it("refreshes due data on a cache hit and recomputes once it has changed", async () => {
+  vi.useFakeTimers({ toFake: ["Date"] });
+  await call("optimize_build", optimize);
+  vi.setSystemTime(Date.now() + 6 * 60_000);
+  const itemRequests = () =>
+    vi.mocked(globalThis.fetch).mock.calls.filter(([input]) => String(input).endsWith("/items")).length;
+  const before = itemRequests();
+  await call("optimize_build", optimize);
+  await vi.waitFor(() => expect(itemRequests()).toBe(before + 1));
+  await call("optimize_build", optimize);
+  expect(logged().map((entry) => entry.cached)).toEqual([false, true, false]);
 });
 
 it("runs the optimiser again once tarkov.dev data changes", async () => {
@@ -72,7 +84,6 @@ it("runs the optimiser again once tarkov.dev data changes", async () => {
 
 it("doesn't keep results built from stale data", async () => {
   vi.useFakeTimers({ toFake: ["Date"] });
-  // Load every dataset the optimiser reads, then let prices fall due while tarkov.dev is down.
   await call("optimize_build", { ...optimize, goal: "ergonomics" });
   vi.setSystemTime(Date.now() + 31 * 60_000);
   vi.mocked(globalThis.fetch).mockImplementation(async () => new Response("down", { status: 503 }));

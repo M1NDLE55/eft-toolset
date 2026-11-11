@@ -41,20 +41,17 @@ import { AsyncLocalStorage } from "node:async_hooks";
 const UPSTREAM_BASE_URL = "https://json.tarkov.dev";
 const UPSTREAM_TIMEOUT_MS = 20_000;
 const UPSTREAM_MAX_BYTES = 32 * 1024 * 1024;
-/** tarkov.dev requests in flight at once per instance; the rest wait their turn. */
 const MAX_UPSTREAM_REQUESTS = 4;
-/** After a failed refresh, wait this long before the next try, doubling up to the maximum. */
 const RETRY_BASE_MS = 30_000;
 const RETRY_MAX_MS = 10 * 60_000;
-/** The longest Retry-After from tarkov.dev that is honoured. */
 const RETRY_AFTER_MAX_MS = 60 * 60_000;
 export const RESOURCE_MAX_STALE_MS = 6 * 60 * 60_000;
 const MINUTE_MS = 60_000;
 const HOUR_MS = 60 * MINUTE_MS;
-/** Bodies larger than this aren't shared: Runtime Cache items are capped at 2 MB. */
+// Runtime Cache items are capped at 2 MB.
 const SHARED_MAX_CHARS = 1_000_000;
 const SHARED_KEY_VERSION = 1;
-/** A shared body is kept while its record points at it, which a 304 renews without rewriting the body. */
+// A 304 renews the shared record, not the body.
 const SHARED_BODY_TTL_SECONDS = 24 * 60 * 60;
 const MAX_RESOURCE_RECORDS = 100_000;
 const MAX_NESTED_ENTRIES = 20_000;
@@ -81,34 +78,27 @@ type Resource =
   | "maps_en";
 
 interface ResourcePolicy {
-  /** Served without asking tarkov.dev for this long after it was last checked. */
   freshMs: number;
-  /** Until this age a stale copy is served while it refreshes in the background; after it, callers wait. */
+  /** Until this age a stale copy is served while it refreshes; after it, callers wait. */
   revalidateMs: number;
-  /** Kept in the regional shared cache, so other instances reuse it instead of asking tarkov.dev. */
   shared: boolean;
 }
 
-// How long each dataset is trusted, set from how often tarkov.dev changes it. Refreshes are
-// conditional, so an unchanged dataset costs tarkov.dev a 304 and no body. Only small datasets
-// that rarely change are shared: the large ones exceed Runtime Cache's 2 MB item limit, and the
-// Hobby plan's write allowance is shared by the whole team.
 const RESOURCE_POLICIES: Record<Resource, ResourcePolicy> = {
-  // Flea and trader prices: tarkov.dev updates them every 5 to 10 minutes. 17 MB.
+  // Prices change every 5 to 10 minutes. 17 MB.
   items: { freshMs: 5 * MINUTE_MS, revalidateMs: 30 * MINUTE_MS, shared: false },
-  // Map reports and task changes land with game-data updates. 9 MB and 2 MB.
+  // 9 MB and 2 MB.
   maps: { freshMs: 30 * MINUTE_MS, revalidateMs: 2 * HOUR_MS, shared: false },
   tasks: { freshMs: 30 * MINUTE_MS, revalidateMs: 2 * HOUR_MS, shared: false },
-  // Item names change with game patches. 1.7 MB, too close to the shared limit.
+  // 1.7 MB: too close to the shared limit.
   items_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: false },
-  // Trader assortments (barters) update every two hours; the rest change with patches. All under 300 KB.
+  // Under 300 KB each; barters change every two hours, the rest with patches.
   barters: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
   crafts: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
   hideout: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
   hideout_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
   maps_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
   tasks_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
-  // Only trader names are read from here.
   traders: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
   traders_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
 };
@@ -357,20 +347,17 @@ interface MapsData {
 }
 
 interface ResourceCacheEntry {
-  /** When the value was last confirmed current with tarkov.dev, here or by another instance. */
+  /** Last confirmed with tarkov.dev, here or by another instance. */
   fetchedAt: number;
   value?: UpstreamEnvelope<unknown>;
-  /** The value's validators, sent back so an unchanged dataset is answered with a 304. */
   etag?: string;
   lastModified?: string;
   inFlight?: Promise<UpstreamEnvelope<unknown>>;
   failedAt?: number;
-  /** Failed refreshes in a row, and when the next one may start. */
   failures?: number;
   retryAt?: number;
 }
 
-/** What a refresh learned: the current value and when tarkov.dev last vouched for it. */
 interface Refreshed {
   value: UpstreamEnvelope<unknown>;
   etag?: string;
@@ -378,7 +365,6 @@ interface Refreshed {
   checkedAt: number;
 }
 
-/** A shared dataset's validators and when an instance last confirmed them with tarkov.dev. */
 interface SharedMeta {
   etag?: string;
   lastModified?: string;
@@ -437,7 +423,6 @@ export class TarkovUpstreamError extends Error {
   constructor(
     message: string,
     readonly status?: number,
-    /** How long tarkov.dev asked us to wait (Retry-After), if it did. */
     readonly retryAfterMs?: number
   ) {
     super(message);
@@ -461,8 +446,11 @@ const resourceCache = sharedCache[CACHE_KEY].resources;
 const memoCache = sharedCache[CACHE_KEY].memos;
 const operationContext = new AsyncLocalStorage<{
   resources: Set<ResourceCacheEntry>;
+  used: Map<string, { entry: ResourceCacheEntry; value: unknown }>;
   signal?: AbortSignal;
 }>();
+/** Stands in for a dataset a read saw two different copies of, so its snapshot never matches. */
+const MIXED_COPIES = Symbol("mixed copies");
 
 const MAX_CONCURRENT_OPERATIONS = 16;
 let activeOperations = 0;
@@ -493,22 +481,32 @@ export interface TarkovReadOptions {
   signal?: AbortSignal;
   onStale?: () => void;
   onDataAge?: (ageMs: number) => void;
-  /** Receives the datasets the read used, so a result built from them can be reused while they last. */
   onSnapshot?: (snapshot: DataSnapshot) => void;
 }
 
-/** The datasets a read used, as they were then. Opaque outside this module. */
 export type DataSnapshot = ReadonlyArray<readonly [key: string, entry: object, value: unknown]>;
 
-/** Whether every dataset in the snapshot is still the copy the read used. */
-export function isSnapshotCurrent(snapshot: DataSnapshot) {
-  return (
-    snapshot.length > 0 &&
-    snapshot.every(([key, entry, value]) => {
-      const current = resourceCache.get(key);
-      return current === entry && current.value === value;
-    })
-  );
+/** Whether a result built from these copies can stand in for a fresh read. Due datasets start refreshing, as in a read. */
+export function canReuseSnapshot(snapshot: DataSnapshot) {
+  if (snapshot.length === 0) return false;
+  const now = Date.now();
+  const due: [string, ResourceCacheEntry][] = [];
+  for (const [key, entry, value] of snapshot) {
+    const current = resourceCache.get(key);
+    if (current !== entry || current.value !== value || current.failedAt !== undefined) return false;
+    const policy = RESOURCE_POLICIES[resourceOf(key)];
+    if (now - current.fetchedAt >= policy.revalidateMs) return false;
+    if (now - current.fetchedAt >= policy.freshMs) due.push([key, current]);
+  }
+  for (const [key, entry] of due) {
+    const [gameMode] = key.split("/") as [GameMode];
+    void refreshResource(gameMode, resourceOf(key), entry).catch(() => undefined);
+  }
+  return true;
+}
+
+function resourceOf(key: string) {
+  return key.slice(key.indexOf("/") + 1) as Resource;
 }
 
 // Track cancellation and freshness for server-side reads.
@@ -516,7 +514,7 @@ export async function runTarkovRead<T>(
   work: () => Promise<T>,
   options: TarkovReadOptions = {}
 ): Promise<T> {
-  const context = { resources: new Set<ResourceCacheEntry>(), signal: options.signal };
+  const context = { resources: new Set<ResourceCacheEntry>(), used: new Map(), signal: options.signal };
   return operationContext.run(context, async () => {
     options.signal?.throwIfAborted();
     const data = await waitForCaller(work(), options.signal);
@@ -524,11 +522,7 @@ export async function runTarkovRead<T>(
     if (entries.some((entry) => entry.failedAt !== undefined)) options.onStale?.();
     const oldest = Math.min(...entries.map((entry) => entry.fetchedAt));
     if (Number.isFinite(oldest)) options.onDataAge?.(Math.max(0, Date.now() - oldest));
-    options.onSnapshot?.(
-      Array.from(resourceCache).flatMap(([key, entry]) =>
-        context.resources.has(entry) ? [[key, entry, entry.value] as const] : []
-      )
-    );
+    options.onSnapshot?.(Array.from(context.used, ([key, { entry, value }]) => [key, entry, value] as const));
     return data;
   });
 }
@@ -1097,18 +1091,22 @@ async function loadResource<T>(
 
   const policy = RESOURCE_POLICIES[resource];
   const age = Date.now() - entry.fetchedAt;
-  if (entry.value && age < policy.freshMs) return entry.value as UpstreamEnvelope<T>;
+  if (entry.value && age < policy.freshMs) return recordUse(cacheKey, entry, entry.value) as UpstreamEnvelope<T>;
   if (entry.value && age < policy.revalidateMs) {
     void refreshResource(gameMode, resource, entry).catch(() => undefined);
-    return entry.value as UpstreamEnvelope<T>;
+    return recordUse(cacheKey, entry, entry.value) as UpstreamEnvelope<T>;
   }
-  return refreshResource(gameMode, resource, entry) as Promise<UpstreamEnvelope<T>>;
+  const value = await refreshResource(gameMode, resource, entry);
+  return recordUse(cacheKey, entry, value) as UpstreamEnvelope<T>;
 }
 
-/**
- * Refreshes one dataset. Callers share a refresh in progress, and after a failure no refresh
- * starts until the backoff ends; meanwhile a copy up to RESOURCE_MAX_STALE_MS old is served.
- */
+function recordUse(key: string, entry: ResourceCacheEntry, value: UpstreamEnvelope<unknown>) {
+  const used = operationContext.getStore()?.used;
+  const seen = used?.get(key);
+  used?.set(key, { entry, value: !seen || seen.value === value ? value : MIXED_COPIES });
+  return value;
+}
+
 function refreshResource(gameMode: GameMode, resource: Resource, entry: ResourceCacheEntry) {
   if (entry.inFlight) return entry.inFlight;
   if (entry.retryAt !== undefined && Date.now() < entry.retryAt) {
@@ -1149,7 +1147,6 @@ function usableStaleValue(entry: ResourceCacheEntry) {
   return entry.value && Date.now() - entry.fetchedAt < RESOURCE_MAX_STALE_MS ? entry.value : undefined;
 }
 
-/** Exponential backoff with jitter, or longer if tarkov.dev asked for it with Retry-After. */
 function retryDelay(failures: number, error: unknown) {
   const backoff = Math.min(RETRY_MAX_MS, RETRY_BASE_MS * 2 ** Math.min(failures - 1, 10));
   const jittered = backoff * (0.8 + Math.random() * 0.4);
@@ -1157,10 +1154,6 @@ function retryDelay(failures: number, error: unknown) {
   return Math.max(jittered, Math.min(requested, RETRY_AFTER_MAX_MS));
 }
 
-/**
- * The dataset as it is now: the shared copy when another instance checked it recently enough,
- * otherwise from tarkov.dev, sending the validators we hold so an unchanged dataset is a 304.
- */
 async function loadCurrent(
   gameMode: GameMode,
   resource: Resource,
@@ -1199,7 +1192,7 @@ async function readShared(
   const cache = regionalCache();
   const meta = readSharedMeta(await cache.get(`${key}:meta`));
   const now = Date.now();
-  // Another instance's clock may run a little ahead; a time far in the future is not trusted.
+  // Allow for another instance's clock running slightly ahead.
   if (!meta || now - meta.checkedAt >= policy.freshMs || meta.checkedAt - now > MINUTE_MS) return null;
   const checkedAt = Math.min(meta.checkedAt, now);
   const version = meta.etag ?? meta.lastModified;
@@ -1223,11 +1216,7 @@ function readSharedMeta(value: unknown): SharedMeta | null {
   return etag || lastModified ? { etag, lastModified, checkedAt: value.checkedAt } : null;
 }
 
-/**
- * Shares a dataset with the region's other instances: the body, under its version, only when it
- * changed, then the record of when it was last checked. Without validators nothing is shared,
- * since other instances couldn't tell which copy they hold.
- */
+// Share only versioned bodies; update metadata separately to avoid rewriting unchanged data.
 async function writeShared(key: string, refreshed: Refreshed, policy: ResourcePolicy, withBody: boolean) {
   const version = refreshed.etag ?? refreshed.lastModified;
   if (!version) return;
@@ -1240,14 +1229,12 @@ async function writeShared(key: string, refreshed: Refreshed, policy: ResourcePo
 let activeUpstreamRequests = 0;
 const upstreamQueue: Array<() => void> = [];
 
-/** Runs a tarkov.dev request once fewer than MAX_UPSTREAM_REQUESTS are in flight on this instance. */
 async function withUpstreamSlot<T>(work: () => Promise<T>): Promise<T> {
   if (activeUpstreamRequests < MAX_UPSTREAM_REQUESTS) activeUpstreamRequests += 1;
   else await new Promise<void>((resolve) => upstreamQueue.push(resolve));
   try {
     return await work();
   } finally {
-    // Hand the slot straight to the next waiter, or free it.
     const next = upstreamQueue.shift();
     if (next) next();
     else activeUpstreamRequests -= 1;
@@ -1291,7 +1278,6 @@ type Fetched =
       value: UpstreamEnvelope<unknown>;
       etag?: string;
       lastModified?: string;
-      /** The body's length in characters. */
       chars: number;
     };
 
@@ -1313,7 +1299,7 @@ async function fetchResource(
       cache: "no-store",
     });
     if (response.status === 304 && conditional) {
-      // Release the connection without waiting: a cancel can wait on a reader that never comes.
+      // Not awaited: a cancel can wait on a reader that never comes.
       void response.body?.cancel().catch(() => undefined);
       return { notModified: true };
     }
@@ -1355,7 +1341,6 @@ async function fetchResource(
   }
 }
 
-/** Retry-After in milliseconds, from either delay-seconds or an HTTP date. */
 function parseRetryAfter(value: string | null): number | undefined {
   if (!value) return undefined;
   const trimmed = value.trim();

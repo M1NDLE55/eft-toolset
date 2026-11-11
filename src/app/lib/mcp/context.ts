@@ -62,7 +62,6 @@ export async function runTool(
     }
     const result = await body(read);
     const payload: Record<string, unknown> = stale ? { ...result, dataNotice: staleNotice(dataAgeMs) } : { ...result };
-    // A result built from stale data is not kept, so it isn't served once tarkov.dev is back.
     if (call.cacheKey && !stale) storeToolResult(call.cacheKey, payload, snapshots.flat());
     return toolResult(payload);
   } catch (error) {

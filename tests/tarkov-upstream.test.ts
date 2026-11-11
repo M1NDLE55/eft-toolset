@@ -1,11 +1,13 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import { setRegionalCacheForTests, type SharedCache } from "@/app/lib/api/shared-cache";
-import { clearTarkovResourceCache, executeTarkovOperation } from "@/app/lib/api/tarkov-server";
+import {
+  canReuseSnapshot,
+  clearTarkovResourceCache,
+  executeTarkovOperation,
+  type DataSnapshot,
+} from "@/app/lib/api/tarkov-server";
 import { createTarkovFixtures } from "./fixtures/tarkov";
-
-// How the adapter treats tarkov.dev: one request per dataset however many callers arrive,
-// conditional refreshes, backoff after failures, and a regional cache for small datasets.
 
 let fixtures: Record<string, unknown>;
 let versions: Record<string, number>;
@@ -28,7 +30,6 @@ function requestsFor(resource: string) {
   return requests().filter((request) => request.resource === resource);
 }
 
-/** A Map-backed stand-in for Vercel's Runtime Cache, shared by "instances" in a test. */
 function memoryCache() {
   const store = new Map<string, unknown>();
   const cache: SharedCache = {
@@ -102,9 +103,7 @@ describe("tarkov.dev requests", () => {
     const refresh = requestsFor("items")[1];
     expect(refresh.headers["If-None-Match"]).toBe('"items-1"');
     expect(refresh.headers["If-Modified-Since"]).toBe("Wed, 11 Nov 2026 12:00:00 GMT");
-    // The projection is memoised on the dataset's identity, so a 304 reuses it as it is.
     expect(after).toBe(before);
-    // The 304 renewed the copy, so it is fresh again.
     await catalog();
     expect(requestsFor("items")).toHaveLength(2);
   });
@@ -149,6 +148,23 @@ describe("tarkov.dev requests", () => {
     expect(requestsFor("items")).toHaveLength(3);
   });
 
+  it("snapshot the copy a read used, not one a background refresh replaced it with", async () => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    await catalog();
+    vi.setSystemTime(Date.now() + 6 * 60_000);
+    versions.items = 2;
+    let snapshot: DataSnapshot = [];
+    // Unloaded datasets keep the read open while items refresh.
+    await executeTarkovOperation(
+      TARKOV_OPERATIONS.itemDetail,
+      { gameMode: "regular", name: "Test Rifle" },
+      { onSnapshot: (taken) => (snapshot = taken) }
+    );
+    await vi.waitFor(() => expect(requestsFor("items")).toHaveLength(2));
+    expect(snapshot.length).toBeGreaterThan(0);
+    expect(canReuseSnapshot(snapshot)).toBe(false);
+  });
+
   it("fail fast without a request while backing off with nothing cached", async () => {
     failure = new Response("down", { status: 500 });
     await expect(catalog()).rejects.toMatchObject({ name: "TarkovUpstreamError" });
@@ -164,11 +180,9 @@ describe("the regional cache", () => {
     setRegionalCacheForTests(cache);
     await detail();
     expect(requestsFor("crafts")).toHaveLength(1);
-    // Large datasets stay out of the shared cache.
     expect([...store.keys()].some((key) => key.includes("/items"))).toBe(false);
     expect([...store.keys()].some((key) => key.includes("/crafts:body:"))).toBe(true);
 
-    // A second instance starts with an empty local cache.
     clearTarkovResourceCache();
     const second = (await detail()) as { name: string };
     expect(second.name).toBe("Test Rifle");
