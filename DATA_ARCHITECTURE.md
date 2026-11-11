@@ -120,8 +120,12 @@ resolves those anchors and every named item against live data (tarkov.dev's `map
 writes the positions and item ids back into `terms.json`, plus the map labels into
 `map-labels.json`. Run it after editing the glossary or after a map update; it exits non-zero
 when an anchor or item no longer exists. Map labels that no curated entry covers are served as
-landmarks too, and `create_raid_plan` accepts any landmark's name or alias as a place on its
-map when the map data has no place of exactly that name.
+landmarks too. The script describes each label from the map data around it
+(`scripts/describe-labels.mjs`: the part of the map, the nearest landmark and extract with
+distance and direction on tarkov.dev's north-up map, and nearby locks, boss spawns, and
+containers), after a wiki description from `label-notes.json` where the wiki has one.
+`create_raid_plan` accepts any landmark's name or alias as a place on its map when the map
+data has no place of exactly that name.
 
 The layers are kept apart:
 

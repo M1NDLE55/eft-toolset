@@ -1,0 +1,418 @@
+{
+  "customs": {
+    "Bus Station": {
+      "meaning": "Called the bus depot on the wiki. A Compact disc spawns in a bus there every raid, and the Portable bunkhouse key opens a nearby two-storey cabin.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Compact_disc#Location"
+    },
+    "Main Bridge": {
+      "meaning": "The main bridge over the river. The quest To the Light - False Call has you stash a Wi-Fi camera at a kiosk next to it.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_False_Call#Guide"
+    },
+    "Old Construction": {
+      "meaning": "The construction area. The co-op Boiler Room Basement extract is under its two-chimney boiler building, and the Machinery key opens the orange fuel truck parked here.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Customs#Extractions"
+    },
+    "Powerline Tower": {
+      "meaning": "An electrical tower. The quest Break the Chain has you shoot a transmitter mounted on top of it.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Break_the_Chain#Customs"
+    },
+    "Streamer House": {
+      "meaning": "Warehouse #6, which the wiki also calls the USEC stash building. Its locked first-floor USEC stash room holds weapon boxes, crates and a possible weapon spawn.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/USEC_stash_key#Lock_Location"
+    },
+    "Warehouse 17": {
+      "meaning": "A warehouse where the quest Private Club places Skier's wallet in a second-floor room. A Dorm room 110 key spawns in a locker in its changing room every raid.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Private_Club#Guide"
+    },
+    "Warehouse 3": {
+      "meaning": "A crane yard warehouse. Its industrial shelf can hold item cases and a Dorm room 204 key in a jacket, and a Tarcone Director's office key can lie by the dead body.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Dorm_room_204_key#Customs"
+    },
+    "Warehouse 7": {
+      "meaning": "A warehouse with key spawns: a Factory emergency exit key in a blue locker, and a Military checkpoint key by the dead Scav on the couch.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Factory_emergency_exit_key#Customs"
+    }
+  },
+  "factory": {
+    "Breach Room": {
+      "meaning": "A room on the third office floor whose door must be breached. It is a quest spot for Chemical - Part 3, Every Hunter Knows This and Health Care Privacy - Part 5.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Health_Care_Privacy_-_Part_5#Guide"
+    },
+    "Heli Crash": {
+      "meaning": "A crashed helicopter under the factory roof. The quest Possessor has you take a logbook from below the pilot seat in its cockpit.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Possessor#Guide"
+    },
+    "Locked Office": {
+      "meaning": "A locked room on the third floor of the office area, opened with the Factory emergency exit key. That key also opens the Med Tent Gate and Cellars extracts.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Factory_emergency_exit_key#Lock_Locations"
+    },
+    "Office Building": {
+      "meaning": "The factory's three-storey office block. It has the Office Window Scav extract, and its third floor holds the locked room and the breach room used by quests.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Factory#Extractions"
+    },
+    "Rafters": {
+      "meaning": "Roof-level beams over the factory floor. The quest The Walls Have Eyes says the crane cockpits can only be entered from the rafters.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/The_Walls_Have_Eyes#Guide"
+    }
+  },
+  "ground-zero": {
+    "ASAP Winery": {
+      "meaning": "\"ASAP winery\" liquor store where the wine bottle for Prapor's Luxurious Life can spawn.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Luxurious_Life#Guide"
+    },
+    "Capital Insight": {
+      "meaning": "Capital Insight building; the AGS grenade launcher for Prapor's Shooting Cans sits in its 3rd-floor back office.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Shooting_Cans#AGS"
+    },
+    "Fusion": {
+      "meaning": "Fusion building; houses the Kyshperski office with the programmer-joke computer from Fence's Is This a Reference?.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Is_This_a_Reference%3F#Ground_Zero"
+    },
+    "Oasis": {
+      "meaning": "Oasis building; Medical documents can spawn on a 2nd-floor table here.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Medical_documents#Ground_Zero"
+    },
+    "Skyside": {
+      "meaning": "Skyside business center; the Tour tutorial raid ends at the Klimov Street extraction by this building.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Tour#Escape_Ground_Zero"
+    },
+    "TerraGroup": {
+      "meaning": "TerraGroup building complex; the dead lab scientist carrying the TerraGroup science office key for Mechanic's Saving the Mole is in its main building.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Saving_the_Mole#Guide"
+    }
+  },
+  "interchange": {
+    "ADIK": {
+      "meaning": "Adik store, a parody of Adidas.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
+    },
+    "Avokado": {
+      "meaning": "Avokado store; Ragman's Hot Delivery has you stash a ComTac II headset and 6B47 helmet in its garbage pile.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Hot_Delivery#Guide"
+    },
+    "Bizarro": {
+      "meaning": "BIZARRO store; Ragman's Supervisor has you stash the Goshan cash register key in its fitting rooms.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Supervisor#Guide"
+    },
+    "Book Store": {
+      "meaning": "Book store holding Part 2 of the clothes design handbook for Ragman's The Key to Success.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/The_Key_to_Success#Guide"
+    },
+    "Brutal": {
+      "meaning": "Brutal store facing the Kiba Arms entrance; Skier's Informed Means Armed has you place a camera on a box here.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Informed_Means_Armed#Guide"
+    },
+    "Dino Clothes": {
+      "meaning": "Dino Clothes store, one of five shops Ragman's Big Sale asks you to locate.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Big_Sale#Guide"
+    },
+    "Eastland": {
+      "meaning": "Eastland store, a parody of Westland.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
+    },
+    "FCK": {
+      "meaning": "FCK restaurant, a parody of KFC.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
+    },
+    "Garage C": {
+      "meaning": "Parking garage section C contains the Saferoom Exfil extraction, which needs power and the Object #11SR keycard.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Object_11SR_keycard#Lock_Location"
+    },
+    "German": {
+      "meaning": "Electronics store listed as a graphics card spawn spot.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Graphics_card#Interchange"
+    },
+    "Go Kart": {
+      "meaning": "Kart track that Mechanic's Needle in a Haystack asks you to investigate.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Needle_in_a_Haystack#Interchange"
+    },
+    "Intourist": {
+      "meaning": "Intourist store; Deadlyslob's beard oil can spawn on a desk on its top floor.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Deadlyslob's_beard_oil#Interchange"
+    },
+    "Jacob & Jacob": {
+      "meaning": "Jacob and Jacob store, a parody of Jack and Jones.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
+    },
+    "Kostin": {
+      "meaning": "Kostin store, one of five shops for Ragman's Big Sale.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Big_Sale#Guide"
+    },
+    "McDaniels": {
+      "meaning": "McDaniels restaurant, a parody of McDonald's.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
+    },
+    "Revis": {
+      "meaning": "Mall store whose name parodies Levi's (\"Revi's\").",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
+    },
+    "SARA": {
+      "meaning": "Sara clothing store, a parody of Zara.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
+    },
+    "Shiccos": {
+      "meaning": "Shiccos store, a parody of Chiccos.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
+    },
+    "Spiel": {
+      "meaning": "SPIEL store; a listed spawn spot for Blueprints and technical documentation.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Blueprints_and_technical_documentation#Interchange"
+    },
+    "TRend": {
+      "meaning": "tRend clothing store, one of five shops Ragman's Big Sale asks you to locate.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Big_Sale#Guide"
+    },
+    "TTS": {
+      "meaning": "TTS medical store; graphics cards can spawn on its tables.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Graphics_card#Interchange"
+    },
+    "Tarducks": {
+      "meaning": "Tarducks coffee shop, a parody of Starbucks.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
+    },
+    "Texho": {
+      "meaning": "Texho electronics store; graphics cards can spawn on its shelves.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Graphics_card#Interchange"
+    },
+    "The National": {
+      "meaning": "The National store; Metal fuel tanks can spawn on its green and white shelf.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Metal_fuel_tank#Interchange"
+    },
+    "Top Brand": {
+      "meaning": "Top Brand store, one of five shops Ragman's Big Sale asks you to locate.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Big_Sale#Guide"
+    },
+    "Underway": {
+      "meaning": "Underway restaurant, a parody of Subway.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
+    },
+    "Urban Clothes": {
+      "meaning": "Urban Clothes store, a parody of Urban District.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
+    },
+    "АПТЕКА": {
+      "meaning": "Sign means \"pharmacy\": the NecrusPharm pharmacy in the ULTRA mall, locked behind the NecrusPharm pharmacy key.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/NecrusPharm_pharmacy_key#Lock_Location"
+    },
+    "МУЗЕЙ ИСТОРИИ": {
+      "meaning": "\"Museum of History\" book store where the gaming magazine for Skier's Minute of Fame can spawn.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Minute_of_Fame#Guide"
+    }
+  },
+  "lighthouse": {
+    "Drug Lab": {
+      "meaning": "A hidden drug lab built inside stacked shipping containers in the train yard. Therapist's quest Drug Trafficking has you find it and plant a Wi-Fi camera inside.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Drug_Trafficking#Guide"
+    },
+    "Grand Chalet": {
+      "meaning": "A chalet on the hill. The quest Lost Contact places the missing group on the tennis court that belongs to this chalet.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Lost_Contact#Guide"
+    },
+    "Hillside": {
+      "meaning": "The hillside house, an old village house opened with the Hillside house key. Military electronics can spawn in its sink.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Hillside_house_key#Behind_the_Lock"
+    },
+    "Pikes Peak Resort": {
+      "meaning": "The chalet area with the former USEC operatives' cottages. The USEC cottage room key opens a room above the blue chalet's garage, the hideout from Forgotten Acquaintance.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/USEC_cottage_room_key#Lock_Location"
+    },
+    "Plant 1": {
+      "meaning": "Office building #1 of the water treatment plant. The Operating room key opens its ground-floor studio, which the quest Broadcast - Part 1 has you find.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Operating_room_key#Lock_Location"
+    },
+    "Plant 2": {
+      "meaning": "Office building #2 of the water treatment plant. Its first-floor storage room needs the Water treatment plant storage room key and holds a technical supply crate.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Water_treatment_plant_storage_room_key#Lock_Location"
+    },
+    "Plant 3": {
+      "meaning": "Office building #3 of the water treatment plant. Its first floor has a Rogue barracks room, opened with the Rogue USEC barrack key, holding weapon boxes.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Rogue_USEC_barrack_key#Lock_Location"
+    },
+    "Red Brick": {
+      "meaning": "A house in the village with Leon's hideout on its second floor. The room is opened by a key bartered from Ref and can hold a red keycard.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Leon's_hideout_key#Lock_Location"
+    },
+    "Tennis Court": {
+      "meaning": "The chalet's tennis court. Lost Contact has you find the lost group here, and Bullshit has you stash items in the trash bags on the court.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Bullshit#Guide"
+    }
+  },
+  "reserve": {
+    "Barracks": {
+      "meaning": "The soldier barracks. They hold armories: the RB-AO key opens one with racks of AK-74 rifles, and the quest Reserve Expert has you check them.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/RB-AO_key#Lock_Location"
+    },
+    "K1": {
+      "meaning": "One of the base's storage buildings marked 'K'. The wiki lists them among Glukhar's spawn areas.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Reserve#Boss"
+    },
+    "K2": {
+      "meaning": "One of the base's storage buildings marked 'K'. The wiki lists them among Glukhar's spawn areas.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Reserve#Boss"
+    },
+    "K3": {
+      "meaning": "Storage building 'K' #3. The quest The TerraGroup Trail - Part 9 has you stash GPNVG-18 night vision goggles in it, and Glukhar can spawn among the K buildings.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/The_TerraGroup_Trail_-_Part_9#Reserve"
+    },
+    "K4": {
+      "meaning": "Storage building 'K' #4. The AK-50 barrel for the quest Hobby Club is in K #4 or K #6, and Glukhar can spawn among the K buildings.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Hobby_Club#Reserve_barrel_location"
+    },
+    "K5": {
+      "meaning": "One of the base's storage buildings marked 'K'. The wiki lists them among Glukhar's spawn areas.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Reserve#Boss"
+    },
+    "K6": {
+      "meaning": "Storage building 'K' #6. The AK-50 barrel for the quest Hobby Club is in K #4 or K #6, and Glukhar can spawn among the K buildings.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Hobby_Club#Reserve_barrel_location"
+    },
+    "Train Station": {
+      "meaning": "The train yard, where the Armored Train extract arrives late in the raid and stays for 7 minutes. Scav Raiders may spawn here when it arrives.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Reserve#Extractions"
+    },
+    "д - Warehouse Bunkers": {
+      "meaning": "The underground storage warehouse marked 'Д', with caged storage areas opened by RB-PSP/PSV keys. Glukhar can spawn here, and quests like Safe Corridor take place here.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Safe_Corridor#Guide"
+    }
+  },
+  "shoreline": {
+    "Bunker": {
+      "meaning": "The bunker by the health resort. The quest Master Key has you take a key from a chair in it, and an RB-AO key can spawn on its bed.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Master_Key#Guide"
+    },
+    "Swamp": {
+      "meaning": "The swamp village. Most spawns for the hard drive in the quest Serious Allegations are spread across its houses.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Serious_Allegations#Swamp_village_houses"
+    }
+  },
+  "streets-of-tarkov": {
+    "Abandon Factory": {
+      "meaning": "Abandoned factory whose northern building has a marked room on the 3rd floor, opened by the Abandoned factory marked key.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Abandoned_factory_marked_key#Lock_Location"
+    },
+    "Chekannaya St.": {
+      "meaning": "Its house no. 13 has a marked room on the first floor, opened by the Mysterious room marked key.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Mysterious_room_marked_key#Lock_Location"
+    },
+    "Diner": {
+      "meaning": "Diner that you pass through to reach the alley with the laptop for Fence's Final Stretch.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Final_Stretch#Guide"
+    },
+    "Kamchatskaya St.": {
+      "meaning": "The Scav extraction \"Near Kamchatskaya Arch\" takes its name from this street.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Streets_of_Tarkov#Extractions"
+    },
+    "Kilmov Shopping Mall": {
+      "meaning": "Klimov Shopping Mall, one of Kollontay's spawn sites; he and his guards spread over the 2nd floor, especially the food court.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Kollontay#Klimov_Shopping_Mall"
+    },
+    "Kilmov St.": {
+      "meaning": "Klimov Street gives its name to a PMC extraction that only opens after a green flare is fired into the sky inside its signal area.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Streets_of_Tarkov#Extractions"
+    },
+    "LERM Expo": {
+      "meaning": "LERM expo hall, the former contemporary-art expo; one of the paintings for Ragman's Out of Time is found here.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Out_of_Time#Painting_1"
+    },
+    "Malevecha St.": {
+      "meaning": "Malevicha Street: its no. 5 building holds the \"Hive\" hookah lounge opened by the Relaxation room key.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Relaxation_room_key#Lock_Location"
+    },
+    "Nikitskaya St.": {
+      "meaning": "Its no. 8 building has a second-floor apartment with the marked circle where Lightkeeper's Historical Prospects has you stash PMC dogtags.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Historical_Prospects#Streets_of_Tarkov_marked_circle_in_Nikitskaya_St._8_second_floor_apartment"
+    },
+    "Pharmacy 1": {
+      "meaning": "One of the three pharmacies Therapist asks you to locate in Pets Won't Need It (and Part 2); all three must be found in one raid for Part 2.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Pets_Won't_Need_It_-_Part_2#Guide"
+    },
+    "Pharmacy 2": {
+      "meaning": "One of the three pharmacies Therapist asks you to locate in Pets Won't Need It (and Part 2); all three must be found in one raid for Part 2.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Pets_Won't_Need_It_-_Part_2#Guide"
+    },
+    "Pharmacy 3": {
+      "meaning": "One of the three pharmacies Therapist asks you to locate in Pets Won't Need It (and Part 2); all three must be found in one raid for Part 2.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Pets_Won't_Need_It_-_Part_2#Guide"
+    },
+    "Primorskij 49": {
+      "meaning": "Primorsky 49 building; one of the Route Deviation checkpoints (Skier) is at the traffic light by its corner.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Route_Deviation#Guide"
+    },
+    "Primorsky Ave.": {
+      "meaning": "Main avenue where Therapist's Pets Won't Need It quests send you to locate two of the three pharmacies (the third is by the Cardinal apartment complex).",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Pets_Won't_Need_It_-_Part_2#Guide"
+    },
+    "Shestyorochka": {
+      "meaning": "Supermarket that Jaeger's The Delicious Sausage asks you to scout.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/The_Delicious_Sausage#Guide"
+    },
+    "Sparja Express": {
+      "meaning": "One of the Sparja stores Jaeger's The Delicious Sausage asks you to scout.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/The_Delicious_Sausage#Guide"
+    },
+    "Sparja Grocery": {
+      "meaning": "One of the Sparja stores Jaeger's The Delicious Sausage asks you to scout.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/The_Delicious_Sausage#Guide"
+    },
+    "Vet Clinic": {
+      "meaning": "Veterinary clinic that Therapist's Pets Won't Need It asks you to scout.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Pets_Won't_Need_It#Vet_clinic"
+    },
+    "Zmejskij Alley": {
+      "meaning": "Zmeisky alley; house no. 6 is the IT firm office from Mechanic's Corporate Perks, with a locked negotiation room.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Corporate_Perks#Guide"
+    }
+  },
+  "the-lab": {
+    "Administrative Office": {
+      "meaning": "Administrative office (R22); a Violet keycard can spawn on a chair in its glass conference room.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_keycard_(Violet)#The_Lab"
+    },
+    "Cafeteria": {
+      "meaning": "Cafeteria (R24); a Yellow keycard can spawn on its center table.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_keycard_(Yellow)#The_Lab"
+    },
+    "Control Room": {
+      "meaning": "Control room that Therapist's Beneath The Streets asks you to scout.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Beneath_The_Streets#Scout_the_control_room"
+    },
+    "Gym": {
+      "meaning": "Gym (room R15); the weapon testing area key can spawn on a stool here.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_weapon_testing_area_key#The_Lab"
+    },
+    "Infirmary Lvl 2": {
+      "meaning": "Second-floor infirmary (G21); Medical documents can spawn by a medical bed and in a consultation room.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Medical_documents#The_Lab"
+    },
+    "Lecture Hall": {
+      "meaning": "Lecture hall where the two A.P. meeting audio tapes for The Unheard story chapter are found.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/The_Unheard#Search_for_any_mention_of_A.P._in_The_Lab/Learn_more_about_A.P.'s_role_and_activities"
+    },
+    "Main Working Area": {
+      "meaning": "Main working area (O11); Mechanic's Trust but Verify has you stash a hard drive at its servers.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_Trust_but_Verify#Guide"
+    },
+    "Reception": {
+      "meaning": "First-level reception; one of the spots where Scourge (target of Therapist's Side Hustle) can be found.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Side_Hustle#Guide"
+    },
+    "Recreation Area": {
+      "meaning": "Recreation area (R11); the TerraGroup employee's suitcase for Therapist's Side Hustle spawns here.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Side_Hustle#TerraGroup_employee's_suitcase_location"
+    }
+  },
+  "woods": {
+    "Cabins": {
+      "meaning": "The wooden cabins in the lumber yard. Quests use them: Supply Plans for documents in cabin #3, and Chumming for cabin #2.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Chumming#Guide"
+    },
+    "Lumber": {
+      "meaning": "The lumber camp. The quest Supply Plans has you find documents under a bed in its wooden cabin #3.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Supply_Plans#Guide"
+    },
+    "Old Sawmill": {
+      "meaning": "The Old Sawmill was added to Woods in patch 0.12.9. It was a standalone map in Contract Wars and Hired Ops, and was later added to Arena.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/Woods#Trivia"
+    }
+  }
+}
