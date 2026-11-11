@@ -1143,6 +1143,62 @@ describe("MCP endpoint", () => {
     expect(read.data.route[0].near).toBe("Gate (pmc extract, 0 m)");
   });
 
+  it("explains jargon and places landmarks by their community names", async () => {
+    const looked = await call("lookup_term", { terms: ["Big Red", "loot big red then the dorms", "qqqq zzzz", "LEDX"] });
+    expect(looked.result.isError).toBeFalsy();
+    const [bigRed, message, unknown, ledx] = looked.data.results;
+    expect(bigRed).toMatchObject({ input: "Big Red", match: "exact" });
+    expect(bigRed.entries[0]).toMatchObject({
+      term: "Big Red",
+      category: "landmark",
+      map: "customs",
+      mapName: "Customs",
+      place: { x: expect.any(Number), z: expect.any(Number), level: expect.any(String), confidence: "high" },
+    });
+    expect(bigRed.entries[0].place.from).toContain("Big Red");
+    expect(message).toMatchObject({ match: "mentions", found: ["big red", "dorm"] });
+    expect(unknown).toMatchObject({ match: "none", entries: [] });
+    expect(ledx.entries[0].items[0]).toMatchObject({
+      name: "LEDX Skin Transilluminator",
+      url: "http://localhost/item/ledx-skin-transilluminator",
+    });
+
+    const bosses = await call("lookup_term", { category: "boss" });
+    expect(bosses.data.entries.length).toBe(bosses.data.total);
+    expect(bosses.data.nextOffset).toBeNull();
+    const customs = await call("lookup_term", { map: "customs", category: "landmark" });
+    expect(customs.data.total).toBeGreaterThan(40);
+    expect(customs.data.entries).toHaveLength(40);
+    const next = await call("lookup_term", { map: "customs", category: "landmark", offset: customs.data.nextOffset });
+    expect(next.data.entries[0].term).not.toBe(customs.data.entries[0].term);
+    const badMap = await call("lookup_term", { terms: ["Big Red"], map: "the moon" });
+    expect(badMap.result.isError).toBe(true);
+
+    const plan = await call("create_raid_plan", { map: "factory", route: [{ place: "gate" }, { place: "glass hall" }] });
+    expect(plan.result.isError).toBeFalsy();
+    expect(plan.data.resolvedPlaces).toEqual([
+      expect.objectContaining({ input: "gate", resolved: "Gate (pmc extract)", match: "exact" }),
+      expect.objectContaining({ input: "glass hall", resolved: "Glass hall (landmark)", match: "exact", approximate: true }),
+    ]);
+    expect(plan.data.warnings.join(" ")).toContain('"glass hall" was placed at Glass hall (landmark)');
+    const decoded = await decodePlanSharePayload(new URLSearchParams(plan.data.shareLink.split("#")[1]).get("p")!);
+    expect(decoded.route[1].position).toEqual({ x: 68.3, z: -20 });
+    const read = await call("read_raid_plan", { link: plan.data.shareLink });
+    expect(read.data.route[1].near).toBe("Glass hall (landmark, 0 m)");
+
+    const misspelt = await call("create_raid_plan", { map: "factory", route: [{ place: "glass hsll" }] });
+    expect(misspelt.data.resolvedPlaces[0]).toMatchObject({ resolved: "Glass hall (landmark)", match: "typo" });
+
+    const alias = await call("create_raid_plan", { map: "factory", route: [{ place: "factroy key room" }] });
+    expect(alias.data.resolvedPlaces[0]).toMatchObject({ resolved: "Locked office room (landmark)", match: "typo" });
+    const prefix = await call("create_raid_plan", { map: "factory", route: [{ place: "gat" }] });
+    expect(prefix.text).toContain("matches several places");
+    expect(prefix.text).toContain("Gate 3 (landmark)");
+
+    const elsewhere = await call("create_raid_plan", { map: "factory", route: [{ place: "Big Red" }] });
+    expect(elsewhere.result.isError).toBe(true);
+  });
+
   it("bundles groups, builds, and plans into an import link the app's restore accepts", async () => {
     const plan = await call("create_raid_plan", { map: "factory", name: "Plan", route: [{ place: "Gate" }] });
     const { data } = await call("create_import_link", {

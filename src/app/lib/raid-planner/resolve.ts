@@ -2,6 +2,7 @@ import type { MapDetails } from "@/app/lib/types/raidPlanner";
 import { createId } from "@/app/lib/id";
 import { InputError } from "@/app/lib/input-error";
 import { normalizeText } from "@/app/lib/search/normalize-text";
+import { editDistance, nameWords, typoAllowance } from "@/app/lib/search/name-match";
 import { floorAt, floorName } from "./floors";
 import { mapConfigs } from "./maps-config";
 import { decodePlanSharePayload, type DecodedSharedPlan } from "./share";
@@ -77,6 +78,16 @@ export interface Place {
   position: GamePoint;
   /** Set for places this app derives, such as an area around a group of key locks. */
   derived?: string;
+  /** Set when this is another name for that place: a match reports that place. */
+  aliasOf?: Place;
+}
+
+function canonical(place: Place) {
+  return place.aliasOf ?? place;
+}
+
+function distinctPlaces(groups: Place[][]) {
+  return groups.filter((group, index) => groups.findIndex((other) => canonical(other[0]) === canonical(group[0])) === index);
 }
 
 const EXTRACT_ORDER = { pmc: 0, shared: 1, scav: 2 } as const;
@@ -289,47 +300,7 @@ function centre(points: GamePoint[]): GamePoint {
   return { x: x / points.length, y: y / points.length, z: z / points.length };
 }
 
-// Place names are compared the way players type them: case, accents, apostrophes, hyphens,
-// spacing, and plural "s" are ignored, and small typos are tolerated.
-
-function placeWords(value: string) {
-  return normalizeText(value)
-    .replace(/['’‘`´]/g, "")
-    .replace(/[^\p{L}\p{N}]+/gu, " ")
-    .trim()
-    .split(" ")
-    .filter(Boolean)
-    .map((word) => (word.length > 3 && word.endsWith("s") && !word.endsWith("ss") ? word.slice(0, -1) : word));
-}
-
 const FILLER_WORDS = new Set(["the", "extract", "extraction", "exfil", "exit"]);
-
-/** Edit distance with adjacent transpositions, giving up above `limit`. */
-function editDistance(a: string, b: string, limit: number) {
-  if (Math.abs(a.length - b.length) > limit) return limit + 1;
-  let previousRow: number[] = [];
-  let row = Array.from({ length: b.length + 1 }, (_, index) => index);
-  for (let i = 1; i <= a.length; i += 1) {
-    const next = [i];
-    let best = i;
-    for (let j = 1; j <= b.length; j += 1) {
-      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      let value = Math.min(row[j] + 1, next[j - 1] + 1, row[j - 1] + cost);
-      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) value = Math.min(value, previousRow[j - 2] + 1);
-      next.push(value);
-      best = Math.min(best, value);
-    }
-    if (best > limit) return limit + 1;
-    previousRow = row;
-    row = next;
-  }
-  return row[b.length];
-}
-
-/** How many typos a name of this length can have and still match on its own. */
-function typoAllowance(length: number) {
-  return length <= 3 ? 0 : length <= 8 ? 1 : 2;
-}
 
 export type PlaceMatch =
   | {
@@ -362,7 +333,7 @@ function indexPlaces(places: readonly Place[]): PlaceIndex {
   let index = placeIndexes.get(places);
   if (!index) {
     const entries = places.map((place) => {
-      const words = placeWords(place.name);
+      const words = nameWords(place.name);
       return { place, words, compact: words.join("") };
     });
     const groupOf = new Map<string, IndexedPlace[]>();
@@ -397,24 +368,29 @@ export interface PlaceMatchOptions {
 
 /** Matches a place name, from exact to a close spelling; never throws. */
 export function matchPlace(places: readonly Place[], reference: string, options: PlaceMatchOptions = {}): PlaceMatch {
-  const given = placeWords(reference);
+  const given = nameWords(reference);
   // "the Smugglers' Boat extract" means Smugglers' Boat.
   const meaningful = given.filter((word) => !FILLER_WORDS.has(word));
   const words = meaningful.length ? meaningful : given;
   const compact = words.join("");
   if (!compact) return { error: `"${reference}" is not a place name.` };
   const index = indexPlaces(places);
-  const found = (group: Place[], match: "exact" | "partial" | "typo") => ({
-    place: group[0],
-    match,
-    others: group.slice(1).filter((other) => other.name !== group[0].name || other.kind !== group[0].kind),
-  });
+  const found = (group: Place[], match: "exact" | "partial" | "typo") => {
+    const place = canonical(group[0]);
+    return {
+      place,
+      match,
+      others: [...new Set(group.slice(1).map(canonical))].filter(
+        (other) => other.name !== place.name || other.kind !== place.kind
+      ),
+    };
+  };
 
   const exact = index.byCompact.get(compact);
   if (exact) return found(exact, "exact");
 
   // A reference longer than every name can't be part of one.
-  const partialGroups =
+  const partialGroups = distinctPlaces(
     compact.length > index.longestCompact
       ? []
       : index.groups
@@ -430,13 +406,14 @@ export function matchPlace(places: readonly Place[], reference: string, options:
             const starts = (group: IndexedPlace[]) => (group[0].compact.startsWith(compact) ? 0 : 1);
             return starts(a) - starts(b) || a[0].place.name.length - b[0].place.name.length;
           })
-          .map((group) => group.map((entry) => entry.place));
+          .map((group) => group.map((entry) => entry.place))
+  );
   if (partialGroups.length === 1) return found(partialGroups[0], "partial");
   if (partialGroups.length > 1) {
     return {
       error: `"${reference}" matches several places: ${partialGroups
         .slice(0, 10)
-        .map((group) => label(group[0]))
+        .map((group) => label(canonical(group[0])))
         .join("; ")}. Use the full name.`,
     };
   }
@@ -454,18 +431,21 @@ export function matchPlace(places: readonly Place[], reference: string, options:
     })
     .filter((entry) => entry.score <= limit)
     .toSorted((a, b) => a.score - b.score || a.whole - b.whole);
-  const [best, second] = scored;
+  const [best] = scored;
+  const second = best && scored.find((entry) => canonical(entry.group[0]) !== canonical(best.group[0]));
   if (best && best.whole <= typoAllowance(compact.length) && (!second || second.whole > best.whole)) {
     return found(best.group, "typo");
   }
-  const suggestions = scored.slice(0, 5).map((entry) => label(entry.group[0]));
+  const suggestions = distinctPlaces(scored.map((entry) => entry.group))
+    .slice(0, 5)
+    .map((group) => label(canonical(group[0])));
   return {
     error: `No place is named "${reference}".${suggestions.length ? ` Did you mean ${suggestions.join("; ")}?` : ""}`,
   };
 }
 
 export const PLACE_HELP =
-  "Places are extracts, transits, areas, spawn zones, switches, hazards, stationary weapons, and key locks (by key name). Use get_map_details to list them, or give x and z coordinates.";
+  "Places are extracts, transits, areas, spawn zones, switches, hazards, stationary weapons, key locks (by key name), and landmarks such as Big Red (lookup_term lists a map's). Use get_map_details to list the rest, or give x and z coordinates.";
 
 export function findPlace(places: readonly Place[], reference: string): Place {
   const result = matchPlace(places, reference);

@@ -1,0 +1,1695 @@
+{
+  "streets-of-tarkov": [
+    {
+      "name": "Primorsky Ave.",
+      "x": 9,
+      "z": 308
+    },
+    {
+      "name": "Primorsky Ave.",
+      "x": 9,
+      "z": 104
+    },
+    {
+      "name": "Primorsky Ave.",
+      "x": 9,
+      "z": -80
+    },
+    {
+      "name": "Kilmov St.",
+      "x": 125,
+      "z": 10
+    },
+    {
+      "name": "Kilmov St.",
+      "x": -104,
+      "z": 28
+    },
+    {
+      "name": "Nikitskaya St.",
+      "x": -125,
+      "z": 210
+    },
+    {
+      "name": "Verhnyaya St.",
+      "x": -112,
+      "z": 361
+    },
+    {
+      "name": "Malevecha St.",
+      "x": -200,
+      "z": 290
+    },
+    {
+      "name": "Chekannaya St.",
+      "x": 111,
+      "z": 251
+    },
+    {
+      "name": "Nizhnyaya St.",
+      "x": -101,
+      "z": 441
+    },
+    {
+      "name": "Razvedchikov St.",
+      "x": 174,
+      "z": 430
+    },
+    {
+      "name": "Zmejskij Alley",
+      "x": 140,
+      "z": 150
+    },
+    {
+      "name": "Kamchatskaya St.",
+      "x": 232,
+      "z": 100
+    },
+    {
+      "name": "Kilmov Shopping Mall",
+      "x": -128,
+      "z": -35
+    },
+    {
+      "name": "Beluga",
+      "x": -45,
+      "z": -52
+    },
+    {
+      "name": "Cardinal Apartments",
+      "x": 99,
+      "z": -71
+    },
+    {
+      "name": "Construction",
+      "x": 230,
+      "z": 295
+    },
+    {
+      "name": "Lexos",
+      "x": 66,
+      "z": 305
+    },
+    {
+      "name": "Sparja Grocery",
+      "x": 140,
+      "z": 300
+    },
+    {
+      "name": "Cinema",
+      "x": -175,
+      "z": 400
+    },
+    {
+      "name": "Shestyorochka",
+      "x": -218,
+      "z": 135
+    },
+    {
+      "name": "Pinewood Hotel",
+      "x": -35,
+      "z": 64
+    },
+    {
+      "name": "Teppakot / Koener",
+      "x": 65,
+      "z": 398
+    },
+    {
+      "name": "Concordia",
+      "x": 140,
+      "z": 362
+    },
+    {
+      "name": "Cardinal Bank",
+      "x": 89,
+      "z": -20
+    },
+    {
+      "name": "LERM Expo",
+      "x": 239,
+      "z": -60
+    },
+    {
+      "name": "Sparja Express",
+      "x": -64,
+      "z": 166
+    },
+    {
+      "name": "Burger Spot",
+      "x": -30,
+      "z": 138
+    },
+    {
+      "name": "Post Office",
+      "x": 42,
+      "z": 97
+    },
+    {
+      "name": "Pharmacy 1",
+      "x": 42,
+      "z": 160
+    },
+    {
+      "name": "Office",
+      "x": -173,
+      "z": 226
+    },
+    {
+      "name": "Corner Restaurant",
+      "x": -197,
+      "z": 340
+    },
+    {
+      "name": "Pharmacy 2",
+      "x": -43,
+      "z": 335
+    },
+    {
+      "name": "Pharmacy 3",
+      "x": 90,
+      "z": -277
+    },
+    {
+      "name": "Tarbank",
+      "x": 67,
+      "z": 230
+    },
+    {
+      "name": "School",
+      "x": 211,
+      "z": 129
+    },
+    {
+      "name": "Vet Clinic",
+      "x": 222,
+      "z": 173
+    },
+    {
+      "name": "Hive",
+      "x": -212,
+      "z": 300
+    },
+    {
+      "name": "Family Market",
+      "x": -223,
+      "z": 279
+    },
+    {
+      "name": "Marked Hotel",
+      "x": -200,
+      "z": 248
+    },
+    {
+      "name": "South Hotel",
+      "x": -175,
+      "z": 297
+    },
+    {
+      "name": "Abandon Factory",
+      "x": -119,
+      "z": 287
+    },
+    {
+      "name": "Diner",
+      "x": -80,
+      "z": 235
+    },
+    {
+      "name": "Primorskij 49",
+      "x": -13,
+      "z": 244
+    },
+    {
+      "name": "Prestigio Cafe",
+      "x": 39,
+      "z": 230
+    },
+    {
+      "name": "Bilbo Coffee",
+      "x": -70,
+      "z": 343
+    }
+  ],
+  "ground-zero": [
+    {
+      "name": "TerraGroup",
+      "x": -50,
+      "z": 0
+    },
+    {
+      "name": "Skyside",
+      "x": 150,
+      "z": 1
+    },
+    {
+      "name": "Fusion",
+      "x": 141,
+      "z": 142
+    },
+    {
+      "name": "Empire",
+      "x": 14,
+      "z": 201
+    },
+    {
+      "name": "Capital Insight",
+      "x": 115,
+      "z": 285
+    },
+    {
+      "name": "Nakatani",
+      "x": 2,
+      "z": 324
+    },
+    {
+      "name": "Elemental Global",
+      "x": 80,
+      "z": -118
+    },
+    {
+      "name": "Oasis",
+      "x": 115,
+      "z": 104,
+      "y": 26
+    },
+    {
+      "name": "ASAP Winery",
+      "x": 115,
+      "z": 30,
+      "y": 24.5
+    },
+    {
+      "name": "Tarbank",
+      "x": 43,
+      "z": 150
+    },
+    {
+      "name": "GAGRIN Hotel",
+      "x": 58,
+      "z": 234
+    },
+    {
+      "name": "M Showroom",
+      "x": 97,
+      "z": 223
+    },
+    {
+      "name": "Science Office",
+      "x": -13,
+      "z": 48,
+      "y": 28
+    }
+  ],
+  "customs": [
+    {
+      "name": "Big Red",
+      "x": -215,
+      "z": -119
+    },
+    {
+      "name": "Dorms",
+      "x": 200,
+      "z": 150
+    },
+    {
+      "name": "New Gas",
+      "x": 404,
+      "z": 31
+    },
+    {
+      "name": "Old Gas",
+      "x": 331,
+      "z": -173
+    },
+    {
+      "name": "Fortress",
+      "x": 201,
+      "z": -127
+    },
+    {
+      "name": "Crackhouse",
+      "x": 83,
+      "z": -153
+    },
+    {
+      "name": "Streamer House",
+      "x": 567,
+      "z": -67
+    },
+    {
+      "name": "Main Bridge",
+      "x": -69,
+      "z": 9
+    },
+    {
+      "name": "Sniper Hill",
+      "x": 110,
+      "z": 85
+    },
+    {
+      "name": "Storage",
+      "x": -288,
+      "z": -134
+    },
+    {
+      "name": "Trailer Park",
+      "x": -211,
+      "z": -219
+    },
+    {
+      "name": "Junk Bridge",
+      "x": -66,
+      "z": 46
+    },
+    {
+      "name": "Repair Shop",
+      "x": 106,
+      "z": -90
+    },
+    {
+      "name": "Sniper Ridge",
+      "x": 491,
+      "z": 63
+    },
+    {
+      "name": "Old Construction",
+      "x": 75,
+      "z": -9
+    },
+    {
+      "name": "Skeleton",
+      "x": 200,
+      "z": -13
+    },
+    {
+      "name": "Warehouse 3",
+      "x": 390,
+      "z": -94
+    },
+    {
+      "name": "Depot",
+      "x": 472,
+      "z": -67
+    },
+    {
+      "name": "Warehouse 7",
+      "x": 555,
+      "z": -118
+    },
+    {
+      "name": "Military Checkpoint",
+      "x": 572,
+      "z": 0
+    },
+    {
+      "name": "Bus Station",
+      "x": 238,
+      "z": 53
+    },
+    {
+      "name": "Warehouse 4",
+      "x": 333,
+      "z": -67
+    },
+    {
+      "name": "Powerline Tower",
+      "x": 497,
+      "z": 110
+    },
+    {
+      "name": "Warehouse 17",
+      "x": 46,
+      "z": -59
+    }
+  ],
+  "factory": [
+    {
+      "name": "Office Building",
+      "x": 21,
+      "z": 39,
+      "y": 4999.5
+    },
+    {
+      "name": "Main Office",
+      "x": 15.5,
+      "z": 39,
+      "y": 5003
+    },
+    {
+      "name": "Breach Room",
+      "x": 24.5,
+      "z": 39,
+      "y": 5003
+    },
+    {
+      "name": "Locked Office",
+      "x": 30.5,
+      "z": 39,
+      "y": 5003
+    },
+    {
+      "name": "North Stairs",
+      "x": 35,
+      "z": 39,
+      "y": 4999.5
+    },
+    {
+      "name": "South Stairs",
+      "x": 9,
+      "z": 39,
+      "y": 4999.5
+    },
+    {
+      "name": "Sky Bridge",
+      "x": 34,
+      "z": 26,
+      "y": 5003
+    },
+    {
+      "name": "Connector",
+      "x": 29.5,
+      "z": 17,
+      "y": 4999.5
+    },
+    {
+      "name": "Locker Rooms",
+      "x": 29,
+      "z": 41,
+      "y": 4
+    },
+    {
+      "name": "Sinks",
+      "x": 15,
+      "z": 41,
+      "y": 4
+    },
+    {
+      "name": "Hole",
+      "x": 20,
+      "z": 42,
+      "y": 4
+    },
+    {
+      "name": "Platform",
+      "x": -3,
+      "z": 37,
+      "y": 2
+    },
+    {
+      "name": "Servers",
+      "x": -21,
+      "z": 27,
+      "y": 4
+    },
+    {
+      "name": "Med Tent",
+      "x": -18,
+      "z": -29,
+      "y": 0.5
+    },
+    {
+      "name": "Silos",
+      "x": 4.5,
+      "z": 10.5,
+      "y": 0.5
+    },
+    {
+      "name": "Heli Crash",
+      "x": 30,
+      "z": -8.5,
+      "y": 4999.5
+    },
+    {
+      "name": "Pit",
+      "x": -1,
+      "z": 16,
+      "y": -5001
+    },
+    {
+      "name": "Underground Stash",
+      "x": -2,
+      "z": -24.5,
+      "y": -5001
+    },
+    {
+      "name": "Scav Bunker",
+      "x": -20.5,
+      "z": 23,
+      "y": 0.5
+    },
+    {
+      "name": "Blue Containers",
+      "x": -18,
+      "z": 50,
+      "y": 0.5
+    },
+    {
+      "name": "Wood Room",
+      "x": -45.5,
+      "z": 61,
+      "y": 0.5
+    },
+    {
+      "name": "Glass Hall",
+      "x": 68.25,
+      "z": -20,
+      "y": 0.5
+    },
+    {
+      "name": "Boilers",
+      "x": 56,
+      "z": 5,
+      "y": 2
+    },
+    {
+      "name": "Pumping Station",
+      "x": 41,
+      "z": -11,
+      "y": 2
+    },
+    {
+      "name": "East Halls",
+      "x": 44,
+      "z": -36,
+      "y": 0.5
+    },
+    {
+      "name": "Forklifts",
+      "x": 66,
+      "z": -42,
+      "y": 0.5
+    },
+    {
+      "name": "Rafters",
+      "x": 18,
+      "z": 4,
+      "y": 5003
+    }
+  ],
+  "interchange": [
+    {
+      "name": "Power Station",
+      "x": -186.4,
+      "z": -318.7,
+      "y": 4.5
+    },
+    {
+      "name": "Go Kart",
+      "x": 155,
+      "z": -253,
+      "y": 4.5
+    },
+    {
+      "name": "Four Camp",
+      "x": 158,
+      "z": -78.5,
+      "y": 4.5
+    },
+    {
+      "name": "Cargo Containers",
+      "x": 68.2,
+      "z": 312.9,
+      "y": 4.5
+    },
+    {
+      "name": "Wall Break",
+      "x": -260.2,
+      "z": 123.8,
+      "y": 4.5
+    },
+    {
+      "name": "Ramps",
+      "x": -175.5,
+      "z": 145.1,
+      "y": 4.5
+    },
+    {
+      "name": "Oli Tower",
+      "x": 202.3,
+      "z": 219.4,
+      "y": 4.5
+    },
+    {
+      "name": "Idea Tower",
+      "x": 46.5,
+      "z": -358.5,
+      "y": 4.5
+    },
+    {
+      "name": "Scav Camp",
+      "x": 263.2,
+      "z": -11.1,
+      "y": 4.5
+    },
+    {
+      "name": "Highway Construction",
+      "x": 373.5,
+      "z": -391.2,
+      "y": 4.5
+    },
+    {
+      "name": "Garage A",
+      "x": 33,
+      "z": -222,
+      "y": -488
+    },
+    {
+      "name": "Garage B",
+      "x": 47,
+      "z": -112,
+      "y": -488
+    },
+    {
+      "name": "Garage C",
+      "x": 0,
+      "z": 47,
+      "y": -488
+    },
+    {
+      "name": "Garage D",
+      "x": 20,
+      "z": 138,
+      "y": -488
+    },
+    {
+      "name": "IDEA",
+      "x": -34,
+      "z": -235,
+      "y": 29
+    },
+    {
+      "name": "Goshan",
+      "x": -115,
+      "z": -45,
+      "y": 29
+    },
+    {
+      "name": "OLI",
+      "x": -28,
+      "z": 140,
+      "y": 29
+    },
+    {
+      "name": "Nortex",
+      "x": 87,
+      "z": -165,
+      "y": 29
+    },
+    {
+      "name": "TRend",
+      "x": 60,
+      "z": -152,
+      "y": 29
+    },
+    {
+      "name": "Mode7",
+      "x": 69.5,
+      "z": -134,
+      "y": 29
+    },
+    {
+      "name": "TTS",
+      "x": 19,
+      "z": -129,
+      "y": 29
+    },
+    {
+      "name": "Book Store",
+      "x": -38,
+      "z": -129,
+      "y": 29
+    },
+    {
+      "name": "Dino Clothes",
+      "x": 91,
+      "z": -119,
+      "y": 29
+    },
+    {
+      "name": "EMERCOM",
+      "x": 18,
+      "z": -103,
+      "y": 29
+    },
+    {
+      "name": "Kostin",
+      "x": -28,
+      "z": -103,
+      "y": 29
+    },
+    {
+      "name": "Bizarro",
+      "x": -65,
+      "z": -103,
+      "y": 29
+    },
+    {
+      "name": "Spiel",
+      "x": 92,
+      "z": -87,
+      "y": 29
+    },
+    {
+      "name": "Voyage",
+      "x": -18,
+      "z": -87,
+      "y": 29
+    },
+    {
+      "name": "Viking",
+      "x": 57,
+      "z": -66,
+      "y": 29
+    },
+    {
+      "name": "Mantis",
+      "x": 13,
+      "z": -66,
+      "y": 29
+    },
+    {
+      "name": "German",
+      "x": -18,
+      "z": -72,
+      "y": 29
+    },
+    {
+      "name": "The National",
+      "x": 57,
+      "z": -32,
+      "y": 29
+    },
+    {
+      "name": "Brutal",
+      "x": 13,
+      "z": -32,
+      "y": 29
+    },
+    {
+      "name": "Kiba",
+      "x": -18,
+      "z": -25,
+      "y": 29
+    },
+    {
+      "name": "Pretty Lights",
+      "x": -34,
+      "z": -20,
+      "y": 29
+    },
+    {
+      "name": "Telespot",
+      "x": 92,
+      "z": -18,
+      "y": 29
+    },
+    {
+      "name": "Revis",
+      "x": 62,
+      "z": -12,
+      "y": 29
+    },
+    {
+      "name": "ADIK",
+      "x": 19,
+      "z": -6,
+      "y": 29
+    },
+    {
+      "name": "Generic",
+      "x": -28,
+      "z": 0.5,
+      "y": 29
+    },
+    {
+      "name": "Top Brand",
+      "x": 92,
+      "z": 15,
+      "y": 29
+    },
+    {
+      "name": "Sports",
+      "x": 61,
+      "z": 15,
+      "y": 29
+    },
+    {
+      "name": "Yushka",
+      "x": 70,
+      "z": 32,
+      "y": 29
+    },
+    {
+      "name": "Rasmussen",
+      "x": 19.5,
+      "z": 26,
+      "y": 29
+    },
+    {
+      "name": "Avokado",
+      "x": -37,
+      "z": 26,
+      "y": 29
+    },
+    {
+      "name": "Boots 4 Life",
+      "x": 91,
+      "z": 55,
+      "y": 29
+    },
+    {
+      "name": "Texho",
+      "x": 61,
+      "z": 50,
+      "y": 29
+    },
+    {
+      "name": "Dom",
+      "x": 6,
+      "z": 49,
+      "y": 29
+    },
+    {
+      "name": "Father & Sons",
+      "x": 38,
+      "z": -170,
+      "y": 516.5
+    },
+    {
+      "name": "Tarkovstar",
+      "x": 69,
+      "z": -150,
+      "y": 516.5
+    },
+    {
+      "name": "Eastland",
+      "x": 26,
+      "z": -149,
+      "y": 516.5
+    },
+    {
+      "name": "Arena",
+      "x": 71,
+      "z": -130,
+      "y": 516.5
+    },
+    {
+      "name": "ТАРЗДРАВ",
+      "x": 54,
+      "z": -128,
+      "y": 516.5
+    },
+    {
+      "name": "МЕБЕЛЬ МК",
+      "x": 20,
+      "z": -128,
+      "y": 516.5
+    },
+    {
+      "name": "Intourist",
+      "x": 69,
+      "z": -116,
+      "y": 516.5
+    },
+    {
+      "name": "Burger Spot",
+      "x": -27,
+      "z": -103,
+      "y": 516.5
+    },
+    {
+      "name": "FCK",
+      "x": 70,
+      "z": -94,
+      "y": 516.5
+    },
+    {
+      "name": "McDaniels",
+      "x": 70,
+      "z": -87,
+      "y": 516.5
+    },
+    {
+      "name": "Tarducks",
+      "x": 64,
+      "z": -69,
+      "y": 516.5
+    },
+    {
+      "name": "Coffee Joy",
+      "x": 43,
+      "z": -69,
+      "y": 516.5
+    },
+    {
+      "name": "Jacob & Jacob",
+      "x": 15,
+      "z": -74,
+      "y": 516.5
+    },
+    {
+      "name": "ПУШКИН",
+      "x": -34,
+      "z": -79,
+      "y": 516.5
+    },
+    {
+      "name": "Sushi Huyushi",
+      "x": 64,
+      "z": -34,
+      "y": 516.5
+    },
+    {
+      "name": "Underway",
+      "x": -17,
+      "z": -32,
+      "y": 516.5
+    },
+    {
+      "name": "Burger House",
+      "x": 67,
+      "z": -23.5,
+      "y": 516.5
+    },
+    {
+      "name": "Philly Cute",
+      "x": -34,
+      "z": -24,
+      "y": 516.5
+    },
+    {
+      "name": "Shiccos",
+      "x": 67,
+      "z": -16,
+      "y": 516.5
+    },
+    {
+      "name": "МУЗЕЙ ИСТОРИИ",
+      "x": 17,
+      "z": 0,
+      "y": 516.5
+    },
+    {
+      "name": "Papillon",
+      "x": 92,
+      "z": 17,
+      "y": 516.5
+    },
+    {
+      "name": "ЗАКРЫТО НА РЕМОНТ",
+      "x": 58,
+      "z": 13,
+      "y": 516.5
+    },
+    {
+      "name": "НА-СВЯЗИ",
+      "x": 70,
+      "z": 27,
+      "y": 516.5
+    },
+    {
+      "name": "СКОРО ОТКРЫТИЕ",
+      "x": 54,
+      "z": 24,
+      "y": 516.5
+    },
+    {
+      "name": "Figaro",
+      "x": 19,
+      "z": 26,
+      "y": 516.5
+    },
+    {
+      "name": "АПТЕКА",
+      "x": 71,
+      "z": 47,
+      "y": 516.5
+    },
+    {
+      "name": "SARA",
+      "x": 53,
+      "z": 47,
+      "y": 516.5
+    },
+    {
+      "name": "Urban Clothes",
+      "x": 26,
+      "z": 46,
+      "y": 516.5
+    },
+    {
+      "name": "TECHLIGHT",
+      "x": 91,
+      "z": 54,
+      "y": 516.5
+    },
+    {
+      "name": "Fashion Store",
+      "x": 39,
+      "z": 67,
+      "y": 516.5
+    }
+  ],
+  "the-lab": [
+    {
+      "name": "Parking",
+      "x": -230,
+      "z": -400,
+      "y": 0.6
+    },
+    {
+      "name": "Vestibules #1",
+      "x": -246,
+      "z": -379,
+      "y": 0.6
+    },
+    {
+      "name": "Vestibules #2",
+      "x": -216,
+      "z": -379,
+      "y": 0.6
+    },
+    {
+      "name": "Main Working Area",
+      "x": -172,
+      "z": -342,
+      "y": 0.6
+    },
+    {
+      "name": "Negotiation Room",
+      "x": -148,
+      "z": -398,
+      "y": 0.6
+    },
+    {
+      "name": "Infirmary Lvl 1",
+      "x": -130,
+      "z": -398,
+      "y": 0.6
+    },
+    {
+      "name": "Test Room",
+      "x": -130,
+      "z": -356,
+      "y": 0.6
+    },
+    {
+      "name": "Server Room",
+      "x": -125,
+      "z": -308,
+      "y": 0.6
+    },
+    {
+      "name": "Warehouse Tunnels",
+      "x": -116,
+      "z": -266,
+      "y": 0.6
+    },
+    {
+      "name": "Warehouse",
+      "x": -163,
+      "z": -269,
+      "y": 0.6
+    },
+    {
+      "name": "Warehouse Gate",
+      "x": -170,
+      "z": -248,
+      "y": 0.6
+    },
+    {
+      "name": "Lecture Hall",
+      "x": -207,
+      "z": -305,
+      "y": 0.6
+    },
+    {
+      "name": "Recreation Area",
+      "x": -221,
+      "z": -343,
+      "y": 0.6
+    },
+    {
+      "name": "Gym",
+      "x": -236,
+      "z": -302,
+      "y": 0.6
+    },
+    {
+      "name": "Men's Locker Room",
+      "x": -241,
+      "z": -280,
+      "y": 0.6
+    },
+    {
+      "name": "Women's Locker Room",
+      "x": -232,
+      "z": -280,
+      "y": 0.6
+    },
+    {
+      "name": "Boiler Room",
+      "x": -259,
+      "z": -366,
+      "y": -499
+    },
+    {
+      "name": "Security Barracks",
+      "x": -260,
+      "z": -319,
+      "y": 0.6
+    },
+    {
+      "name": "Reception",
+      "x": -260,
+      "z": -342,
+      "y": 0.6
+    },
+    {
+      "name": "Administrative Office",
+      "x": -260,
+      "z": -364,
+      "y": 501.5
+    },
+    {
+      "name": "Security Office",
+      "x": -254,
+      "z": -320,
+      "y": 501.5
+    },
+    {
+      "name": "Security #1",
+      "x": -244,
+      "z": -378,
+      "y": 501.5
+    },
+    {
+      "name": "Security #2",
+      "x": -215,
+      "z": -379,
+      "y": 501.5
+    },
+    {
+      "name": "Conference Room",
+      "x": -229,
+      "z": -343,
+      "y": 501.5
+    },
+    {
+      "name": "Cafeteria",
+      "x": -219,
+      "z": -302,
+      "y": 501.5
+    },
+    {
+      "name": "Offices #1",
+      "x": -189,
+      "z": -401,
+      "y": 501.5
+    },
+    {
+      "name": "Offices #2",
+      "x": -149,
+      "z": -401,
+      "y": 501.5
+    },
+    {
+      "name": "Infirmary Lvl 2",
+      "x": -130,
+      "z": -401,
+      "y": 501.5
+    },
+    {
+      "name": "Sterile Laboratory",
+      "x": -130,
+      "z": -361,
+      "y": 501.5
+    },
+    {
+      "name": "Control Room",
+      "x": -169,
+      "z": -288,
+      "y": 501.5
+    },
+    {
+      "name": "Corridor To Building #2",
+      "x": -250,
+      "z": -281,
+      "y": 501.5
+    }
+  ],
+  "lighthouse": [
+    {
+      "name": "Train Yard",
+      "x": -30,
+      "z": -882
+    },
+    {
+      "name": "Drug Lab",
+      "x": -120,
+      "z": -841
+    },
+    {
+      "name": "Water Treatment",
+      "x": -65,
+      "z": -600
+    },
+    {
+      "name": "Plant 1",
+      "x": 40,
+      "z": -618
+    },
+    {
+      "name": "Plant 2",
+      "x": -97,
+      "z": -737
+    },
+    {
+      "name": "Plant 3",
+      "x": -189,
+      "z": -665
+    },
+    {
+      "name": "Pipes",
+      "x": -182,
+      "z": -552
+    },
+    {
+      "name": "Gunner Nest",
+      "x": 18,
+      "z": -453
+    },
+    {
+      "name": "Island",
+      "x": -177,
+      "z": -356
+    },
+    {
+      "name": "Cabins",
+      "x": -278,
+      "z": -323
+    },
+    {
+      "name": "Cottages",
+      "x": -162,
+      "z": -225
+    },
+    {
+      "name": "Convenience",
+      "x": -55,
+      "z": -288
+    },
+    {
+      "name": "Red Brick",
+      "x": -75,
+      "z": -284
+    },
+    {
+      "name": "Hillside",
+      "x": -151,
+      "z": -243
+    },
+    {
+      "name": "Boathouses",
+      "x": 125,
+      "z": -153
+    },
+    {
+      "name": "Dead Tree",
+      "x": 62,
+      "z": -60
+    },
+    {
+      "name": "Construction",
+      "x": 0,
+      "z": -188
+    },
+    {
+      "name": "Pikes Peak Resort",
+      "x": -107,
+      "z": -53
+    },
+    {
+      "name": "Grand Chalet",
+      "x": -133,
+      "z": 100
+    },
+    {
+      "name": "Tennis Court",
+      "x": -70,
+      "z": 129
+    },
+    {
+      "name": "Lightkeeper Island",
+      "x": 382,
+      "z": 496
+    },
+    {
+      "name": "Crash Site",
+      "x": -125,
+      "z": 296
+    }
+  ],
+  "reserve": [
+    {
+      "name": "K Buildings",
+      "x": 28,
+      "z": -102
+    },
+    {
+      "name": "White Queen",
+      "x": -25,
+      "z": 180
+    },
+    {
+      "name": "White Pawn",
+      "x": -104,
+      "z": 93
+    },
+    {
+      "name": "Black Bishop",
+      "x": -140,
+      "z": -14.5
+    },
+    {
+      "name": "White Bishop",
+      "x": -67,
+      "z": -30
+    },
+    {
+      "name": "White King",
+      "x": -49.5,
+      "z": 15.5
+    },
+    {
+      "name": "Black Knight",
+      "x": 14.5,
+      "z": -10.8
+    },
+    {
+      "name": "White Knight",
+      "x": 82.2,
+      "z": -30.2
+    },
+    {
+      "name": "White Rook",
+      "x": 149,
+      "z": -124
+    },
+    {
+      "name": "Train Station",
+      "x": 161,
+      "z": -149
+    },
+    {
+      "name": "Black Pawn",
+      "x": -165,
+      "z": 57
+    },
+    {
+      "name": "Barracks",
+      "x": 167,
+      "z": -222
+    },
+    {
+      "name": "E1 Bunkers",
+      "x": -220,
+      "z": -13
+    },
+    {
+      "name": "E2 Bunkers",
+      "x": 173,
+      "z": -3
+    },
+    {
+      "name": "д - Warehouse Bunkers",
+      "x": 80,
+      "z": -167
+    },
+    {
+      "name": "Garage",
+      "x": 96,
+      "z": 30
+    },
+    {
+      "name": "Mechanic",
+      "x": 55.5,
+      "z": 60.6
+    },
+    {
+      "name": "Gas Station",
+      "x": 29.7,
+      "z": 29.5
+    },
+    {
+      "name": "Shipping Yard",
+      "x": -31,
+      "z": -150
+    },
+    {
+      "name": "K1",
+      "x": -1,
+      "z": -71
+    },
+    {
+      "name": "K2",
+      "x": 66,
+      "z": -90
+    },
+    {
+      "name": "K3",
+      "x": -5.5,
+      "z": -94
+    },
+    {
+      "name": "K4",
+      "x": 60,
+      "z": -112
+    },
+    {
+      "name": "K5",
+      "x": -10.5,
+      "z": -115
+    },
+    {
+      "name": "K6",
+      "x": 54,
+      "z": -132
+    },
+    {
+      "name": "Dome",
+      "x": -8.5,
+      "z": 175
+    },
+    {
+      "name": "Tarmac",
+      "x": -120,
+      "z": 37
+    }
+  ],
+  "shoreline": [
+    {
+      "name": "Resort",
+      "x": -258.2,
+      "z": -71.2,
+      "y": -3
+    },
+    {
+      "name": "Power Station",
+      "x": -215.8,
+      "z": 178.4,
+      "y": -3
+    },
+    {
+      "name": "Gas Station",
+      "x": -189.3,
+      "z": 420,
+      "y": -3
+    },
+    {
+      "name": "Weather Station",
+      "x": -496,
+      "z": 257,
+      "y": -3
+    },
+    {
+      "name": "Radio Tower",
+      "x": -708.9,
+      "z": 93.91,
+      "y": -3
+    },
+    {
+      "name": "Swamp",
+      "x": 326,
+      "z": -118.5,
+      "y": -3
+    },
+    {
+      "name": "Village",
+      "x": 418.4,
+      "z": 118,
+      "y": -3
+    },
+    {
+      "name": "Cabins",
+      "x": 288,
+      "z": 144,
+      "y": -3
+    },
+    {
+      "name": "Cottages",
+      "x": 128,
+      "z": 93,
+      "y": -3
+    },
+    {
+      "name": "Tank Bridge",
+      "x": -355,
+      "z": 188,
+      "y": -3
+    },
+    {
+      "name": "Pier",
+      "x": -338.6,
+      "z": 525,
+      "y": -3
+    },
+    {
+      "name": "Scav Island",
+      "x": 216,
+      "z": 424,
+      "y": -3
+    },
+    {
+      "name": "Bus Stop",
+      "x": -96,
+      "z": -6,
+      "y": -3
+    },
+    {
+      "name": "Construction",
+      "x": 52,
+      "z": 134,
+      "y": -3
+    },
+    {
+      "name": "Bunker",
+      "x": -153,
+      "z": -290,
+      "y": -3
+    },
+    {
+      "name": "Crane",
+      "x": -625,
+      "z": 484,
+      "y": -3
+    },
+    {
+      "name": "Scav Farm",
+      "x": -622,
+      "z": -202,
+      "y": -3
+    },
+    {
+      "name": "West Wing",
+      "x": -171,
+      "z": -83,
+      "y": 0
+    },
+    {
+      "name": "East Wing",
+      "x": -329,
+      "z": -83,
+      "y": 0
+    },
+    {
+      "name": "Admin",
+      "x": -252,
+      "z": -146,
+      "y": 0
+    }
+  ],
+  "woods": [
+    {
+      "name": "Sawmill",
+      "x": 10,
+      "z": -3
+    },
+    {
+      "name": "Scav Town",
+      "x": -485,
+      "z": -390
+    },
+    {
+      "name": "Old Sawmill",
+      "x": -517,
+      "z": -210
+    },
+    {
+      "name": "Cultist Village",
+      "x": -80,
+      "z": -680
+    },
+    {
+      "name": "USEC Camp",
+      "x": 290,
+      "z": -475
+    },
+    {
+      "name": "Military Camp",
+      "x": -188,
+      "z": 235
+    },
+    {
+      "name": "Ponds",
+      "x": -5,
+      "z": -515
+    },
+    {
+      "name": "Crash Site",
+      "x": -252,
+      "z": -37
+    },
+    {
+      "name": "Checkpoint",
+      "x": 239,
+      "z": -65
+    },
+    {
+      "name": "Shack",
+      "x": 244,
+      "z": 125
+    },
+    {
+      "name": "Lumber",
+      "x": -16,
+      "z": -122
+    },
+    {
+      "name": "Cabins",
+      "x": -3,
+      "z": -74
+    },
+    {
+      "name": "Bus Stop",
+      "x": -234,
+      "z": 357
+    },
+    {
+      "name": "Jaeger's Camp",
+      "x": -327,
+      "z": 19
+    },
+    {
+      "name": "Sniper Rock",
+      "x": 85,
+      "z": -147
+    },
+    {
+      "name": "Convoy",
+      "x": 200,
+      "z": -606
+    }
+  ]
+}

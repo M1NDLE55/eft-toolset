@@ -109,6 +109,20 @@ instructions all tell the model to treat it as reference rather than instruction
 wiki is licensed CC BY-NC-SA, so every result carries a credit line (see the README's
 License section).
 
+`lookup_term` reads no service at all. It answers from a curated glossary of player jargon
+(`src/app/lib/glossary/terms.json`): map callouts, item and ammo nicknames, bosses, traders,
+mechanics, and slang, each with a meaning written for the glossary and the URL of a source
+(mostly wiki pages; Reddit threads or community glossaries for pure slang). Each landmark
+names the place its position comes from: a label on tarkov.dev's interactive map, or an
+extract, key lock, spawn zone, or other place in the map data. `node scripts/build-glossary.mjs`
+resolves those anchors and every named item against live data (tarkov.dev's `maps.json`, and
+`get_map_details` and `search_items` on the production MCP endpoint, or `EFT_MCP_URL`) and
+writes the positions and item ids back into `terms.json`, plus the map labels into
+`map-labels.json`. Run it after editing the glossary or after a map update; it exits non-zero
+when an anchor or item no longer exists. Map labels that no curated entry covers are served as
+landmarks too, and `create_raid_plan` accepts any landmark's name or alias as a place on its
+map when the map data has no place of exactly that name.
+
 The layers are kept apart:
 
 - `src/app/lib/mcp/` holds only schemas, registration, and result shaping. `catalog.ts`

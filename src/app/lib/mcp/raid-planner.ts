@@ -15,6 +15,7 @@ import {
   matchPlace,
   nearestPlace,
   PLACE_HELP,
+  type PlaceMatch,
   placesOf,
   planArea,
   resolveMap,
@@ -37,6 +38,8 @@ import {
 import { PLAN_COLORS, type GamePoint, type RaidPlan } from "@/app/lib/raid-planner/types";
 import type { MapDetails } from "@/app/lib/types/raidPlanner";
 import { createId } from "@/app/lib/id";
+import { findLandmark, landmarkNames, landmarkPlaces } from "@/app/lib/glossary/glossary";
+import type { MapConfig } from "@/app/lib/raid-planner/types";
 import { betweenItems, InputError, round, type ToolContext } from "./context";
 import { createRaidPlanOutput, getMapDetailsOutput, listMapsOutput, readRaidPlanOutput } from "./output-schemas";
 import { toolDefiner } from "./define-tool";
@@ -82,6 +85,17 @@ function defaultPlanName(mapName: string, route: PointInput[], resolvedPlaces: R
   const to = route.length > 1 ? nameOf(route[route.length - 1]) : null;
   const name = from && to ? `${mapName}: ${from} to ${to}` : `${mapName} raid plan`;
   return name.slice(0, MAX_PLAN_NAME_LENGTH);
+}
+
+const placesAndLandmarks = new WeakMap<MapDetails, Place[]>();
+
+function withLandmarks(details: MapDetails, config: MapConfig) {
+  let places = placesAndLandmarks.get(details);
+  if (!places) {
+    places = [...placesOf(details), ...landmarkNames(config.key)];
+    placesAndLandmarks.set(details, places);
+  }
+  return places;
 }
 
 /** Problems listed in one error; the rest are counted. */
@@ -220,8 +234,16 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
         }
         const known = resolved.get(entry.place);
         if (known !== undefined) return known ?? { x: 0, z: 0 };
-        const result = matchPlace(places, entry.place, { typos: typoBudget > 0 });
-        if ("error" in result || result.match === "typo") typoBudget -= 1;
+        let result: PlaceMatch = matchPlace(places, entry.place, { typos: false });
+        if ("error" in result || result.match !== "exact") {
+          const landmark = details ? findLandmark(config.key, entry.place) : null;
+          if (landmark) {
+            result = { place: landmark, match: "exact", others: [] };
+          } else {
+            result = matchPlace(details ? withLandmarks(details, config) : places, entry.place, { typos: typoBudget > 0 });
+            if ("error" in result || result.match === "typo") typoBudget -= 1;
+          }
+        }
         if ("error" in result) {
           if (typoBudget < 0) typosSkipped = true;
           problems.push(`${where}: ${result.error}`);
@@ -364,7 +386,7 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
           if (!(error instanceof TarkovUpstreamError || error instanceof InputError)) throw error;
         }
       }
-      const places: Place[] = details ? placesOf(details) : [];
+      const places: Place[] = details && config ? [...placesOf(details), ...landmarkPlaces(config.key)] : [];
       const near = (point: GamePoint) => nearestPlace(places, point, config);
       const area = config ? planArea(config, details) : null;
       const points = [

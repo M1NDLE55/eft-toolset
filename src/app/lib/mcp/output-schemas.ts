@@ -58,7 +58,7 @@ const offer = object({
 });
 const cheapestBuy = offer
   .nullable()
-  .describe("The cheapest buy offer: the lowest trader price or the lowest current flea listing, whichever is lower.");
+  .describe("The lowest trader price or current flea listing.");
 const fleaAverage = maybeNum.describe(
   "Flea 24-hour average (the lowest listing when there is no average), not the lowest current listing, which can be lower."
 );
@@ -194,8 +194,8 @@ export const searchItemsOutput = result({
 
 export const getItemOutput = result({
   gameMode,
-  matchedBy: matchedBy.optional().describe("Set when the match was not exact."),
-  note: text.optional().describe("What was assumed when the match was not exact."),
+  matchedBy: matchedBy.optional().describe("Set when the match was not exact; note says what was assumed."),
+  note: text.optional(),
   otherMatches: list(text).optional(),
   id: text,
   name: text,
@@ -210,7 +210,7 @@ export const getItemOutput = result({
   ...priceReasons,
   fleaListingFeeRUB: maybeNum,
   change48hPercent: maybeNum,
-  buyFrom: list(offer).describe("Trader prices and the lowest current flea listing, cheapest first."),
+  buyFrom: list(offer).describe("Traders and the lowest flea listing, cheapest first."),
   buyByBarter: list(
     object({
       trader: text,
@@ -224,7 +224,7 @@ export const getItemOutput = result({
   )
     .optional()
     .describe("Barters that give it."),
-  sellTo: list(offer).describe("Trader prices and the lowest current flea listing (before the listing fee), highest first."),
+  sellTo: list(offer).describe("Traders and the lowest flea listing (before its fee), highest first."),
   needed,
   usedInTasks: list(
     object({
@@ -499,4 +499,35 @@ export const getWikiPageOutput = result({
   candidates: list(object({ title: text, url: text, lastEdited: maybeText })).optional(),
   note: text.optional(),
   credit: text.describe("Attribution to include when quoting the content."),
+});
+
+const glossaryEntry = object({
+  term: text,
+  category: text,
+  meaning: text,
+  aliases: list(text).optional(),
+  map: text.optional(),
+  mapName: text.optional(),
+  place: object({ x: num, z: num, level: text, confidence: text, from: text })
+    .nullable()
+    .optional()
+    .describe("Landmarks only: where it is, or null when no map data marks it."),
+  items: list(object({ id: text, name: text, url: text })).optional(),
+  source: text,
+});
+
+// The glossary ships with the app, so its results never come from a cache.
+export const lookupTermOutput = object({
+  results: list(
+    object({
+      input: text,
+      match: z.enum(["exact", "typo", "mentions", "none"]),
+      entries: list(glossaryEntry),
+      found: list(text).optional(),
+      suggestions: list(text).optional(),
+    })
+  ).optional(),
+  total: num.optional(),
+  entries: list(glossaryEntry).optional(),
+  nextOffset: maybeNum.optional(),
 });
