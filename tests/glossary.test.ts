@@ -186,7 +186,6 @@ describe("map labels", () => {
       expect(entry.meaning, entry.term).toContain(`of ${mapName}`);
       expect(entry.source, entry.term).toMatch(/^https:\/\/(escapefromtarkov\.fandom\.com\/wiki\/|tarkov\.dev\/map\/)/);
     }
-    // Every note names a label on its map.
     for (const [map, names] of Object.entries(notes as Record<string, Record<string, unknown>>)) {
       for (const name of Object.keys(names)) expect(labels[map as keyof typeof labels].map((label) => label.name), map).toContain(name);
     }

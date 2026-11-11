@@ -2,7 +2,6 @@
 import { describe, expect, it } from "vitest";
 import { aboutMetres, describeLabel, direction, region } from "../scripts/describe-labels.mjs";
 
-// A 200 m square map drawn without rotation: +x is east and +z is north.
 function map(overrides = {}) {
   return {
     name: "Testmap",
@@ -101,11 +100,24 @@ describe("describeLabel", () => {
           { type: "Weapon box", x: 3, z: 1, y: 12 },
         ],
       }),
-      { name: "Office", x: 0, z: 0, y: 1 }
+      { name: "Office", x: 0, z: 0, y: 0.5, bottom: -1, top: 2 }
     );
     expect(text).toBe(
       "In the middle of Testmap. Nearby: locked doors for the Office key; spawns for Reshala and Raiders; a safe, 2 toolboxes and a dead Scav within 30 m."
     );
+  });
+
+  it("keeps features on an open-ended band's floors", () => {
+    const text = describeLabel(
+      map({
+        locks: [
+          { key: "Upstairs key", x: 2, z: 0, y: 9.1 },
+          { key: "Ground key", x: 2, z: 0, y: 1 },
+        ],
+      }),
+      { name: "Locked Office", x: 0, z: 0, y: 7, bottom: 6, top: 10000 }
+    );
+    expect(text).toBe("In the middle of Testmap. Nearby: locked doors for the Upstairs key.");
   });
 
   it("calls street labels streets and never compares a label with itself", () => {

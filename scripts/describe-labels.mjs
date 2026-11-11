@@ -1,5 +1,3 @@
-// Describes where a tarkov.dev map label sits, from the map data around it.
-
 const DIRECTIONS = ["east", "north-east", "north", "north-west", "west", "south-west", "south", "south-east"];
 const FACTIONS = { pmc: "PMC", scav: "Scav", shared: "PMC and Scav" };
 const LANDMARK_RANGE = 400;
@@ -7,8 +5,8 @@ const BY_RANGE = 20;
 const NEARBY_RANGE = 40;
 const LOOT_RANGE = 30;
 const BOSS_RANGE = 40;
-/** Points further apart in height than this are on different floors. */
-const SAME_FLOOR = 4;
+/** How far outside a label's height band a feature may be and still count as on its floor. */
+const FLOOR_MARGIN = 1;
 const MAX_KEYS = 3;
 const MAX_LOOT_KINDS = 4;
 // Containers worth naming, most valuable first; drawers and duffle bags are everywhere.
@@ -41,8 +39,9 @@ function distance(a, b) {
   return Math.hypot(a.x - b.x, a.z - b.z);
 }
 
-function sameFloor(a, b) {
-  return typeof a.y !== "number" || typeof b.y !== "number" || Math.abs(a.y - b.y) <= SAME_FLOOR;
+function onLabelFloor(label, feature) {
+  if (typeof feature.y !== "number") return true;
+  return feature.y >= (label.bottom ?? -Infinity) - FLOOR_MARGIN && feature.y <= (label.top ?? Infinity) + FLOOR_MARGIN;
 }
 
 export function direction(rotation, from, to) {
@@ -57,7 +56,6 @@ export function aboutMetres(metres) {
   return `about ${rounded} m`;
 }
 
-/** "the north-west", "the middle" or "the south": the third of the map a point is in. */
 export function region(rotation, bounds, point) {
   const corners = [
     { x: bounds[0][0], z: bounds[0][1] },
@@ -106,13 +104,6 @@ function relation(map, label, target, noun) {
   return `${aboutMetres(target.metres)} ${direction(map.rotation, target.point, label)} of ${noun}`;
 }
 
-/**
- * One or two sentences on where a label is: the part of the map, the nearest named landmark
- * and exit, and the locks, boss spawns, and loot containers around it.
- *
- * map: { name, rotation, bounds, landmarks: [{name, exit?, x, z}], exits: [{name, kind, faction?, x, z}],
- *        locks: [{key, x, z, y?}], bosses: [{name, x, z}], loot: [{type, x, z, y?}] }
- */
 export function describeLabel(map, label) {
   const same = (name) => name.toLowerCase() === label.name.toLowerCase();
   const sentences = [];
@@ -121,7 +112,6 @@ export function describeLabel(map, label) {
   const landmark = nearest(map.landmarks, label, LANDMARK_RANGE, (point) => !same(point.name));
   const exit = nearest(map.exits, label, Infinity, (point) => !same(point.name));
   const exitName = exit && exitNoun(exit.point);
-  // A landmark that is the nearest extract is named once, as the extract.
   if (exit && landmark?.point.exit === exit.point.name) {
     sentences.push(`${where}, ${relation(map, label, exit, exitName)}.`);
   } else {
@@ -135,7 +125,7 @@ export function describeLabel(map, label) {
   const nearby = [];
   const keys = [
     ...new Set(
-      map.locks.filter((lock) => distance(lock, label) <= NEARBY_RANGE && sameFloor(lock, label)).map((lock) => lock.key)
+      map.locks.filter((lock) => distance(lock, label) <= NEARBY_RANGE && onLabelFloor(label, lock)).map((lock) => lock.key)
     ),
   ];
   if (keys.length) {
@@ -154,7 +144,7 @@ export function describeLabel(map, label) {
   if (bosses.length) nearby.push(`spawns for ${list(bosses.map((name) => GROUPS[name] ?? name))}`);
   const counts = new Map();
   for (const container of map.loot) {
-    if (distance(container, label) <= LOOT_RANGE && sameFloor(container, label) && LOOT_ORDER.includes(container.type)) {
+    if (distance(container, label) <= LOOT_RANGE && onLabelFloor(label, container) && LOOT_ORDER.includes(container.type)) {
       counts.set(container.type, (counts.get(container.type) ?? 0) + 1);
     }
   }

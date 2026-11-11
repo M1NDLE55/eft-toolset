@@ -34,6 +34,18 @@ const point = (entry) => ({
   ...(typeof entry.y === "number" ? { y: round(entry.y) } : {}),
 });
 
+// tarkov.dev leaves a label's height band open-ended with a bound of 100 m or more.
+const OPEN_HEIGHT = 100;
+
+/** A height on the level a label's band covers, or nothing when the band has no closed end. */
+function labelHeight(bottom, top) {
+  const closed = (value) => typeof value === "number" && Math.abs(value) < OPEN_HEIGHT;
+  if (closed(bottom) && closed(top)) return round((bottom + top) / 2);
+  if (closed(bottom)) return bottom + 1;
+  if (closed(top)) return top - 1;
+  return undefined;
+}
+
 /** Map labels in game coordinates: [x, z], shown between heights bottom and top. */
 async function loadLabels() {
   const response = await fetch(MAPS_URL);
@@ -49,10 +61,9 @@ async function loadLabels() {
         name: label.text,
         x: label.position[0],
         z: label.position[1],
-        // A label drawn for a height band sits on the level in its middle.
-        ...(typeof label.top === "number" && typeof label.bottom === "number"
-          ? { y: round((label.top + label.bottom) / 2) }
-          : {}),
+        ...(labelHeight(label.bottom, label.top) !== undefined ? { y: labelHeight(label.bottom, label.top) } : {}),
+        ...(typeof label.bottom === "number" ? { bottom: label.bottom } : {}),
+        ...(typeof label.top === "number" ? { top: label.top } : {}),
       }));
     }
   }
@@ -69,7 +80,6 @@ async function pages(map, section, offsetKey, nextKey) {
   return rows;
 }
 
-/** A map's named places, by the kinds terms.json anchors to, and what label descriptions use. */
 async function loadMap(map) {
   const details = await callTool("get_map_details", {
     map,

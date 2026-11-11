@@ -378,6 +378,8 @@
       "x": 115,
       "z": 104,
       "y": 26,
+      "bottom": 22,
+      "top": 30,
       "meaning": "Oasis building; Medical documents can spawn on a 2nd-floor table here. In the middle of Ground Zero, about 55 m south of Underground parking. The nearest PMC extract, Tartowers Sales Office, is about 80 m west. Nearby: 3 weapon boxes, 3 PCs, 5 toolboxes and a dead Scav within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Medical_documents#Ground_Zero"
     },
@@ -386,6 +388,8 @@
       "x": 115,
       "z": 30,
       "y": 24.5,
+      "bottom": 22,
+      "top": 27,
       "meaning": "\"ASAP winery\" liquor store where the wine bottle for Prapor's Luxurious Life can spawn. In the north of Ground Zero, about 20 m north of Underground parking. The nearest transit, Transit to Streets of Tarkov, is about 120 m west. Nearby: 6 toolboxes within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Luxurious_Life#Guide"
     },
@@ -415,7 +419,9 @@
       "x": -13,
       "z": 48,
       "y": 28,
-      "meaning": "In the east of Ground Zero, right by TerraGroup building. The nearest PMC extract, Police Cordon V-Ex, is about 65 m south. Nearby: locked doors for the TerraGroup science office key; 3 PCs, a toolbox and 4 plastic suitcases within 30 m.",
+      "bottom": 28,
+      "top": 28,
+      "meaning": "In the east of Ground Zero, right by TerraGroup building. The nearest PMC extract, Police Cordon V-Ex, is about 65 m south.",
       "source": "https://tarkov.dev/map/ground-zero"
     }
   ],
@@ -594,64 +600,80 @@
       "name": "Office Building",
       "x": 21,
       "z": 39,
-      "y": 4999.5,
-      "meaning": "The factory's three-storey office block. It has the Office Window Scav extract, and its third floor holds the locked room and the breach room used by quests. In the west of Factory, right by the Office Window Scav extract.",
+      "y": 0,
+      "bottom": -1,
+      "top": 10000,
+      "meaning": "The factory's three-storey office block. It has the Office Window Scav extract, and its third floor holds the locked room and the breach room used by quests. In the west of Factory, right by the Office Window Scav extract. Nearby: locked doors for the Factory emergency exit key; 2 safes, 6 weapon boxes, 3 grenade boxes and 9 jackets within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Factory#Extractions"
     },
     {
       "name": "Main Office",
       "x": 15.5,
       "z": 39,
-      "y": 5003,
-      "meaning": "In the west of Factory, right by the Office Window Scav extract.",
+      "y": 7,
+      "bottom": 6,
+      "top": 10000,
+      "meaning": "In the west of Factory, right by the Office Window Scav extract. Nearby: locked doors for the Factory emergency exit key; a safe, a weapon box, 2 grenade boxes and 4 jackets within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
       "name": "Breach Room",
       "x": 24.5,
       "z": 39,
-      "y": 5003,
-      "meaning": "A room on the third office floor whose door must be breached. It is a quest spot for Chemical - Part 3, Every Hunter Knows This and Health Care Privacy - Part 5. In the west of Factory, right by Locker room. The nearest Scav extract, Office Window, is right here.",
+      "y": 7,
+      "bottom": 6,
+      "top": 10000,
+      "meaning": "A room on the third office floor whose door must be breached. It is a quest spot for Chemical - Part 3, Every Hunter Knows This and Health Care Privacy - Part 5. In the west of Factory, right by Locker room. The nearest Scav extract, Office Window, is right here. Nearby: locked doors for the Factory emergency exit key; a safe, a weapon box, 2 grenade boxes and 4 jackets within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Health_Care_Privacy_-_Part_5#Guide"
     },
     {
       "name": "Locked Office",
       "x": 30.5,
       "z": 39,
-      "y": 5003,
-      "meaning": "A locked room on the third floor of the office area, opened with the Factory emergency exit key. That key also opens the Med Tent Gate and Cellars extracts. In the north-west of Factory, right by Locker room. The nearest Scav extract, Office Window, is right here.",
+      "y": 7,
+      "bottom": 6,
+      "top": 10000,
+      "meaning": "A locked room on the third floor of the office area, opened with the Factory emergency exit key. That key also opens the Med Tent Gate and Cellars extracts. In the north-west of Factory, right by Locker room. The nearest Scav extract, Office Window, is right here. Nearby: locked doors for the Factory emergency exit key; a safe, a weapon box, 2 grenade boxes and 4 jackets within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Factory_emergency_exit_key#Lock_Locations"
     },
     {
       "name": "North Stairs",
       "x": 35,
       "z": 39,
-      "y": 4999.5,
-      "meaning": "In the north-west of Factory, right by Locker room. The nearest Scav extract, Office Window, is right here.",
+      "y": 0,
+      "bottom": -1,
+      "top": 10000,
+      "meaning": "In the north-west of Factory, right by Locker room. The nearest Scav extract, Office Window, is right here. Nearby: locked doors for the Factory emergency exit key; 2 safes, 3 weapon boxes, 3 grenade boxes and 9 jackets within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
       "name": "South Stairs",
       "x": 9,
       "z": 39,
-      "y": 4999.5,
-      "meaning": "In the west of Factory, right by the Office Window Scav extract.",
+      "y": 0,
+      "bottom": -1,
+      "top": 10000,
+      "meaning": "In the west of Factory, right by the Office Window Scav extract. Nearby: locked doors for the Factory emergency exit key and TerraGroup storage room keycard; 2 safes, 6 weapon boxes, a grenade box and 9 jackets within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
       "name": "Sky Bridge",
       "x": 34,
       "z": 26,
-      "y": 5003,
-      "meaning": "In the north-west of Factory, right by Locker room. The nearest Scav extract, Office Window, is about 20 m south-west.",
+      "y": 7,
+      "bottom": 6,
+      "top": 10000,
+      "meaning": "In the north-west of Factory, right by Locker room. The nearest Scav extract, Office Window, is about 20 m south-west. Nearby: locked doors for the Factory emergency exit key; a safe, a weapon box, 2 grenade boxes and 4 jackets within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
       "name": "Connector",
       "x": 29.5,
       "z": 17,
-      "y": 4999.5,
-      "meaning": "In the middle of Factory, about 25 m east of Locker room. The nearest Scav extract, Office Window, is about 25 m south-west.",
+      "y": 0,
+      "bottom": -1,
+      "top": 10000,
+      "meaning": "In the middle of Factory, about 25 m east of Locker room. The nearest Scav extract, Office Window, is about 25 m south-west. Nearby: locked doors for the Factory emergency exit key; 2 safes, 4 weapon boxes, 3 grenade boxes and 9 jackets within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -659,7 +681,9 @@
       "x": 29,
       "z": 41,
       "y": 4,
-      "meaning": "In the west of Factory, right by Locker room. The nearest Scav extract, Office Window, is right here. Nearby: a safe, 4 weapon boxes, 2 grenade boxes and 6 jackets within 30 m.",
+      "bottom": 3,
+      "top": 5,
+      "meaning": "In the west of Factory, right by Locker room. The nearest Scav extract, Office Window, is right here. Nearby: 2 grenade boxes, 4 jackets and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -667,7 +691,9 @@
       "x": 15,
       "z": 41,
       "y": 4,
-      "meaning": "In the west of Factory, right by the Office Window Scav extract. Nearby: a safe, 6 weapon boxes, a grenade box and 5 jackets within 30 m.",
+      "bottom": 3,
+      "top": 5,
+      "meaning": "In the west of Factory, right by the Office Window Scav extract. Nearby: a grenade box, 3 jackets and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -675,7 +701,9 @@
       "x": 20,
       "z": 42,
       "y": 4,
-      "meaning": "In the west of Factory, right by the Office Window Scav extract. Nearby: a safe, 6 weapon boxes, 2 grenade boxes and 6 jackets within 30 m.",
+      "bottom": 3,
+      "top": 5,
+      "meaning": "In the west of Factory, right by the Office Window Scav extract. Nearby: 2 grenade boxes, 4 jackets and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -683,6 +711,8 @@
       "x": -3,
       "z": 37,
       "y": 2,
+      "bottom": -1,
+      "top": 5,
       "meaning": "In the west of Factory, right by the Camera Bunker Door Scav extract. Nearby: locked doors for the TerraGroup storage room keycard; a safe, 5 weapon boxes, 2 jackets and 5 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
@@ -691,7 +721,9 @@
       "x": -21,
       "z": 27,
       "y": 4,
-      "meaning": "In the south-west of Factory, right by the Camera Bunker Door Scav extract. Nearby: 3 weapon boxes, a toolbox and a dead Scav within 30 m.",
+      "bottom": 3,
+      "top": 5,
+      "meaning": "In the south-west of Factory, right by the Camera Bunker Door Scav extract.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -699,7 +731,9 @@
       "x": -18,
       "z": -29,
       "y": 0.5,
-      "meaning": "In the east of Factory, right by Locked office room. The nearest transit, Transit to The Lab, is right here. Nearby: locked doors for the Factory emergency exit key; 2 weapon boxes, 2 technical supply crates, 4 grenade boxes and 2 toolboxes within 30 m.",
+      "bottom": -1,
+      "top": 2,
+      "meaning": "In the east of Factory, right by Locked office room. The nearest transit, Transit to The Lab, is right here. Nearby: locked doors for the Factory emergency exit key; 2 weapon boxes, a technical supply crate and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -707,31 +741,39 @@
       "x": 4.5,
       "z": 10.5,
       "y": 0.5,
-      "meaning": "In the middle of Factory, about 30 m south-east of the Office Window Scav extract. Nearby: a safe, 5 weapon boxes, 2 grenade boxes and 3 jackets within 30 m.",
+      "bottom": -1,
+      "top": 2,
+      "meaning": "In the middle of Factory, about 30 m south-east of the Office Window Scav extract. Nearby: a safe, 5 weapon boxes, 3 jackets and 3 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
       "name": "Heli Crash",
       "x": 30,
       "z": -8.5,
-      "y": 4999.5,
-      "meaning": "A crashed helicopter under the factory roof. The quest Possessor has you take a logbook from below the pilot seat in its cockpit. In the north of Factory, right by Pumping station. The nearest PMC extract, Smugglers' Passage, is about 25 m north-east.",
+      "y": 0,
+      "bottom": -1,
+      "top": 10000,
+      "meaning": "A crashed helicopter under the factory roof. The quest Possessor has you take a logbook from below the pilot seat in its cockpit. In the north of Factory, right by Pumping station. The nearest PMC extract, Smugglers' Passage, is about 25 m north-east. Nearby: 3 weapon boxes, 3 grenade boxes, 3 jackets and 7 toolboxes within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Possessor#Guide"
     },
     {
       "name": "Pit",
       "x": -1,
       "z": 16,
-      "y": -5001,
-      "meaning": "In the middle of Factory, about 30 m north-east of the Camera Bunker Door Scav extract.",
+      "y": -3,
+      "bottom": -10000,
+      "top": -2,
+      "meaning": "In the middle of Factory, about 30 m north-east of the Camera Bunker Door Scav extract. Nearby: locked doors for the TerraGroup storage room keycard; a grenade box, a toolbox and 2 dead Scavs within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
       "name": "Underground Stash",
       "x": -2,
       "z": -24.5,
-      "y": -5001,
-      "meaning": "In the east of Factory, about 30 m north-west of Locked office room. The nearest transit, Transit to The Lab, is about 30 m south-east.",
+      "y": -3,
+      "bottom": -10000,
+      "top": -2,
+      "meaning": "In the east of Factory, about 30 m north-west of Locked office room. The nearest transit, Transit to The Lab, is about 30 m south-east. Nearby: a technical supply crate, 4 grenade boxes and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -739,7 +781,9 @@
       "x": -20.5,
       "z": 23,
       "y": 0.5,
-      "meaning": "In the south of Factory, right by the Camera Bunker Door Scav extract. Nearby: locked doors for the TerraGroup storage room keycard; 2 bank safes, 3 weapon boxes, a jacket and 2 toolboxes within 30 m.",
+      "bottom": -1,
+      "top": 2,
+      "meaning": "In the south of Factory, right by the Camera Bunker Door Scav extract. Nearby: locked doors for the TerraGroup storage room keycard; 3 weapon boxes, a jacket, 2 toolboxes and a dead Scav within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -747,7 +791,9 @@
       "x": -18,
       "z": 50,
       "y": 0.5,
-      "meaning": "In the west of Factory, right by TerraGroup storage room. The nearest Scav extract, Camera Bunker Door, is right here. Nearby: locked doors for the TerraGroup storage room keycard; 2 bank safes, 2 weapon boxes, a jacket and 3 toolboxes within 30 m.",
+      "bottom": -1,
+      "top": 2,
+      "meaning": "In the west of Factory, right by TerraGroup storage room. The nearest Scav extract, Camera Bunker Door, is right here. Nearby: locked doors for the TerraGroup storage room keycard; 2 weapon boxes, a jacket, 2 toolboxes and a dead Scav within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -755,7 +801,9 @@
       "x": -45.5,
       "z": 61,
       "y": 0.5,
-      "meaning": "In the south-west of Factory, right by the Gate 0 PMC extract. Nearby: locked doors for the TerraGroup storage room keycard; 2 bank safes, a jacket and a toolbox within 30 m.",
+      "bottom": -1,
+      "top": 2,
+      "meaning": "In the south-west of Factory, right by the Gate 0 PMC extract. Nearby: locked doors for the TerraGroup storage room keycard; a jacket and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -763,7 +811,9 @@
       "x": 68.25,
       "z": -20,
       "y": 0.5,
-      "meaning": "In the north of Factory, right by the Cellars PMC extract. Nearby: locked doors for the Factory emergency exit key; 2 jackets and 4 toolboxes within 30 m.",
+      "bottom": -1,
+      "top": 2,
+      "meaning": "In the north of Factory, right by the Cellars PMC extract. Nearby: locked doors for the Factory emergency exit key; 2 jackets and 3 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -771,6 +821,8 @@
       "x": 56,
       "z": 5,
       "y": 2,
+      "bottom": -1,
+      "top": 5,
       "meaning": "In the north of Factory, about 20 m north-west of Pumping station. The nearest PMC extract, Smugglers' Passage, is about 35 m east. Nearby: locked doors for the Factory emergency exit key; a grenade box and 7 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
@@ -779,6 +831,8 @@
       "x": 41,
       "z": -11,
       "y": 2,
+      "bottom": -1,
+      "top": 5,
       "meaning": "In the north of Factory, right by the Smugglers' Passage PMC extract. Nearby: locked doors for the Factory emergency exit key; a weapon box, a grenade box, a jacket and 8 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
@@ -787,7 +841,9 @@
       "x": 44,
       "z": -36,
       "y": 0.5,
-      "meaning": "In the north-east of Factory, right by the Smugglers' Passage PMC extract. Nearby: locked doors for the Factory emergency exit key; 2 weapon boxes, a grenade box, 6 jackets and 8 toolboxes within 30 m.",
+      "bottom": -1,
+      "top": 2,
+      "meaning": "In the north-east of Factory, right by the Smugglers' Passage PMC extract. Nearby: locked doors for the Factory emergency exit key; 2 weapon boxes, 6 jackets and 7 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
     {
@@ -795,6 +851,8 @@
       "x": 66,
       "z": -42,
       "y": 0.5,
+      "bottom": -1,
+      "top": 2,
       "meaning": "In the north-east of Factory, right by the Cellars PMC extract. Nearby: locked doors for the Factory emergency exit key; 2 jackets and 3 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/factory"
     },
@@ -802,8 +860,10 @@
       "name": "Rafters",
       "x": 18,
       "z": 4,
-      "y": 5003,
-      "meaning": "Roof-level beams over the factory floor. The quest The Walls Have Eyes says the crane cockpits can only be entered from the rafters. In the middle of Factory, about 25 m south-west of Pumping station. The nearest Scav extract, Office Window, is about 35 m west.",
+      "y": 7,
+      "bottom": 6,
+      "top": 10000,
+      "meaning": "Roof-level beams over the factory floor. The quest The Walls Have Eyes says the crane cockpits can only be entered from the rafters. In the middle of Factory, about 25 m south-west of Pumping station. The nearest Scav extract, Office Window, is about 35 m west. Nearby: locked doors for the Factory emergency exit key; a weapon box and a grenade box within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/The_Walls_Have_Eyes#Guide"
     }
   ],
@@ -813,6 +873,8 @@
       "x": -186.4,
       "z": -318.7,
       "y": 4.5,
+      "bottom": -1,
+      "top": 10,
       "meaning": "In the north-east of Interchange, about 170 m north-east of IDEA. The nearest PMC extract, Power Station V-Ex, is about 130 m north-east.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -821,6 +883,8 @@
       "x": 155,
       "z": -253,
       "y": 4.5,
+      "bottom": -1,
+      "top": 10,
       "meaning": "Kart track that Mechanic's Needle in a Haystack asks you to investigate. In the north of Interchange, about 85 m west of NecrusPharm. The nearest transit, Transit to Streets of Tarkov, is about 230 m north-west.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Needle_in_a_Haystack#Interchange"
     },
@@ -829,6 +893,8 @@
       "x": 158,
       "z": -78.5,
       "y": 4.5,
+      "bottom": -1,
+      "top": 10,
       "meaning": "In the middle of Interchange, about 140 m west of Emercom medical unit. The nearest PMC extract, Saferoom Exfil, is about 240 m south-east.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -837,6 +903,8 @@
       "x": 68.2,
       "z": 312.9,
       "y": 4.5,
+      "bottom": -1,
+      "top": 10,
       "meaning": "In the south of Interchange, about 85 m south-east of 21WS container. The nearest transit, Transit to Customs, is about 240 m south-west.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -845,6 +913,8 @@
       "x": -260.2,
       "z": 123.8,
       "y": 4.5,
+      "bottom": -1,
+      "top": 10,
       "meaning": "In the east of Interchange, about 160 m north-west of the Emercom Checkpoint PMC extract.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -853,6 +923,8 @@
       "x": -175.5,
       "z": 145.1,
       "y": 4.5,
+      "bottom": -1,
+      "top": 10,
       "meaning": "In the south-east of Interchange, about 150 m east of OLI. The nearest PMC extract, Saferoom Exfil, is about 160 m north-west.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -861,6 +933,8 @@
       "x": 202.3,
       "z": 219.4,
       "y": 4.5,
+      "bottom": -1,
+      "top": 10,
       "meaning": "In the south of Interchange, about 75 m north-west of 21WS container. The nearest transit, Transit to Customs, is about 230 m south.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -869,6 +943,8 @@
       "x": 46.5,
       "z": -358.5,
       "y": 4.5,
+      "bottom": -1,
+      "top": 10,
       "meaning": "In the north of Interchange, about 110 m north of NecrusPharm. The nearest transit, Transit to Streets of Tarkov, is about 240 m north-west.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -877,6 +953,8 @@
       "x": 263.2,
       "z": -11.1,
       "y": 4.5,
+      "bottom": -1,
+      "top": 10,
       "meaning": "In the west of Interchange, about 180 m west of Techlight. The nearest PMC extract, Saferoom Exfil, is about 320 m east.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -885,6 +963,8 @@
       "x": 373.5,
       "z": -391.2,
       "y": 4.5,
+      "bottom": -1,
+      "top": 10,
       "meaning": "In the north-west of Interchange, about 110 m south-east of the Railway Exfil Scav extract.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -892,7 +972,9 @@
       "name": "Garage A",
       "x": 33,
       "z": -222,
-      "y": -488,
+      "y": 23,
+      "bottom": -1000,
+      "top": 24,
       "meaning": "In the north of Interchange, about 50 m south-east of NecrusPharm. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 200 m south-east.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -900,24 +982,30 @@
       "name": "Garage B",
       "x": 47,
       "z": -112,
-      "y": -488,
-      "meaning": "In the middle of Interchange, about 30 m west of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 150 m east.",
+      "y": 23,
+      "bottom": -1000,
+      "top": 24,
+      "meaning": "In the middle of Interchange, about 30 m west of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 150 m east. Nearby: 3 weapon boxes and 2 grenade boxes within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "Garage C",
       "x": 0,
       "z": 47,
-      "y": -488,
-      "meaning": "Parking garage section C contains the Saferoom Exfil extraction, which needs power and the Object #11SR keycard. In the middle of Interchange, about 30 m south-east of Rasmussen. The nearest PMC extract, Saferoom Exfil, is about 50 m east.",
+      "y": 23,
+      "bottom": -1000,
+      "top": 24,
+      "meaning": "Parking garage section C contains the Saferoom Exfil extraction, which needs power and the Object #11SR keycard. In the middle of Interchange, about 30 m south-east of Rasmussen. The nearest PMC extract, Saferoom Exfil, is about 50 m east. Nearby: 3 weapon boxes and a grenade box within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Object_11SR_keycard#Lock_Location"
     },
     {
       "name": "Garage D",
       "x": 20,
       "z": 138,
-      "y": -488,
-      "meaning": "In the south of Interchange, about 50 m west of OLI. The nearest PMC extract, Saferoom Exfil, is about 120 m north-east.",
+      "y": 23,
+      "bottom": -1000,
+      "top": 24,
+      "meaning": "In the south of Interchange, about 50 m west of OLI. The nearest PMC extract, Saferoom Exfil, is about 120 m north-east. Nearby: a weapon box and a dead Scav within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
@@ -925,6 +1013,8 @@
       "x": -34,
       "z": -235,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the north of Interchange, about 100 m east of NecrusPharm. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 170 m south.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -933,6 +1023,8 @@
       "x": -115,
       "z": -45,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the east of Interchange, about 35 m south-east of the Scav Camp (Co-Op) PMC and Scav extract. Nearby: a weapon box and a cash register within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -941,6 +1033,8 @@
       "x": -28,
       "z": 140,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the south of Interchange, about 100 m south of the Saferoom Exfil PMC extract. Nearby: a weapon box, 2 PCs, a grenade box and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -949,6 +1043,8 @@
       "x": 87,
       "z": -165,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the north of Interchange, about 80 m north-west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 210 m south-east. Nearby: 2 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -957,6 +1053,8 @@
       "x": 60,
       "z": -152,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "tRend clothing store, one of five shops Ragman's Big Sale asks you to locate. In the middle of Interchange, about 50 m north-west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 180 m south-east. Nearby: 2 cash registers and a dead Scav within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Big_Sale#Guide"
     },
@@ -965,6 +1063,8 @@
       "x": 69.5,
       "z": -134,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, about 55 m west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 180 m east. Nearby: a toolbox and 3 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -973,7 +1073,9 @@
       "x": 19,
       "z": -129,
       "y": 29,
-      "meaning": "TTS medical store; graphics cards can spawn on its tables. In the middle of Interchange, right by Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 130 m south-east. Nearby: locked doors for the EMERCOM medical unit key; 3 jackets and 3 toolboxes within 30 m.",
+      "bottom": 25,
+      "top": 33,
+      "meaning": "TTS medical store; graphics cards can spawn on its tables. In the middle of Interchange, right by Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 130 m south-east. Nearby: locked doors for the EMERCOM medical unit key; a weapon box, 3 jackets and 3 toolboxes within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Graphics_card#Interchange"
     },
     {
@@ -981,6 +1083,8 @@
       "x": -38,
       "z": -129,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "Book store holding Part 2 of the clothes design handbook for Ragman's The Key to Success. In the middle of Interchange, about 30 m north-east of Burger Spot. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 80 m south-east. Nearby: a weapon box and a cash register within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/The_Key_to_Success#Guide"
     },
@@ -989,6 +1093,8 @@
       "x": 91,
       "z": -119,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "Dino Clothes store, one of five shops Ragman's Big Sale asks you to locate. In the middle of Interchange, about 75 m west of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 190 m east. Nearby: 2 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Big_Sale#Guide"
     },
@@ -997,6 +1103,8 @@
       "x": 18,
       "z": -103,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, right by Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 120 m east. Nearby: locked doors for the EMERCOM medical unit key; a medcase, 4 jackets and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1005,6 +1113,8 @@
       "x": -28,
       "z": -103,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "Kostin store, one of five shops for Ragman's Big Sale. In the middle of Interchange, right by Burger Spot. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 75 m south-east. Nearby: locked doors for the EMERCOM medical unit key; 2 weapon boxes, 2 jackets and 3 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Big_Sale#Guide"
     },
@@ -1013,6 +1123,8 @@
       "x": -65,
       "z": -103,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "BIZARRO store; Ragman's Supervisor has you stash the Goshan cash register key in its fitting rooms. In the middle of Interchange, about 40 m east of Burger Spot. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 45 m south-east. Nearby: a weapon box and 10 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Supervisor#Guide"
     },
@@ -1021,6 +1133,8 @@
       "x": 92,
       "z": -87,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "SPIEL store; a listed spawn spot for Blueprints and technical documentation. In the middle of Interchange, about 75 m west of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 190 m east. Nearby: 2 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Blueprints_and_technical_documentation#Interchange"
     },
@@ -1029,6 +1143,8 @@
       "x": -18,
       "z": -87,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, right by Burger Spot. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 80 m east. Nearby: locked doors for the EMERCOM medical unit key; a weapon box, a medcase, 2 jackets and 2 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1037,6 +1153,8 @@
       "x": 57,
       "z": -66,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, about 45 m west of Mantis. The nearest PMC extract, Saferoom Exfil, is about 150 m south-east. Nearby: a weapon box, a toolbox and 4 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1045,6 +1163,8 @@
       "x": 13,
       "z": -66,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, about 35 m south of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 110 m east. Nearby: locked doors for the Kiba Arms outer door key and Kiba Arms inner grate door key; 2 medcases, 2 jackets, 2 toolboxes and 3 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1053,6 +1173,8 @@
       "x": -18,
       "z": -72,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "Electronics store listed as a graphics card spawn spot. In the middle of Interchange, about 30 m east of Mantis. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 80 m east. Nearby: locked doors for the Kiba Arms outer door key and Kiba Arms inner grate door key; a weapon box, 2 medcases, 2 jackets and a toolbox within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Graphics_card#Interchange"
     },
@@ -1061,6 +1183,8 @@
       "x": 57,
       "z": -32,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "The National store; Metal fuel tanks can spawn on its green and white shelf. In the middle of Interchange, about 55 m south-west of Mantis. The nearest PMC extract, Saferoom Exfil, is about 130 m south-east. Nearby: 3 jackets, 2 toolboxes and 2 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Metal_fuel_tank#Interchange"
     },
@@ -1069,6 +1193,8 @@
       "x": 13,
       "z": -32,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "Brutal store facing the Kiba Arms entrance; Skier's Informed Means Armed has you place a camera on a box here. In the middle of Interchange, about 30 m west of Kiba. The nearest PMC extract, Saferoom Exfil, is about 95 m south-east. Nearby: locked doors for the Kiba Arms outer door key and Kiba Arms inner grate door key; 2 jackets and 2 toolboxes within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Informed_Means_Armed#Guide"
     },
@@ -1077,6 +1203,8 @@
       "x": -18,
       "z": -25,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, about 25 m north of Generic. The nearest PMC extract, Saferoom Exfil, is about 75 m south-east. Nearby: locked doors for the Kiba Arms outer door key and Kiba Arms inner grate door key; spawns for Killa; 9 weapon boxes, a jacket, a toolbox and 2 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1085,6 +1213,8 @@
       "x": -34,
       "z": -20,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, right by Kiba. The nearest PMC extract, Saferoom Exfil, is about 65 m south. Nearby: locked doors for the Kiba Arms outer door key and Kiba Arms inner grate door key; spawns for Killa; 11 weapon boxes, a jacket and 2 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1093,6 +1223,8 @@
       "x": 92,
       "z": -18,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, about 65 m north-west of Ultra. The nearest PMC extract, Saferoom Exfil, is about 150 m south-east.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1101,6 +1233,8 @@
       "x": 62,
       "z": -12,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "Mall store whose name parodies Levi's (\"Revi's\"). In the middle of Interchange, about 55 m north of Ultra. The nearest PMC extract, Saferoom Exfil, is about 120 m south-east. Nearby: 2 weapon boxes, 3 jackets and 5 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
     },
@@ -1109,6 +1243,8 @@
       "x": 19,
       "z": -6,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "Adik store, a parody of Adidas. In the middle of Interchange, about 30 m north of Rasmussen. The nearest PMC extract, Saferoom Exfil, is about 85 m south-east. Nearby: locked doors for the Kiba Arms outer door key; a weapon box, 5 jackets and a toolbox within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
     },
@@ -1117,6 +1253,8 @@
       "x": -28,
       "z": 0.5,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, about 25 m south of Kiba. The nearest PMC extract, Saferoom Exfil, is about 50 m south-east. Nearby: locked doors for the Kiba Arms outer door key and Kiba Arms inner grate door key; spawns for Killa; 9 weapon boxes, a jacket and 2 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1125,6 +1263,8 @@
       "x": 92,
       "z": 15,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "Top Brand store, one of five shops Ragman's Big Sale asks you to locate. In the middle of Interchange, about 35 m north-west of Ultra. The nearest PMC extract, Saferoom Exfil, is about 140 m east. Nearby: a weapon box and 3 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Big_Sale#Guide"
     },
@@ -1133,6 +1273,8 @@
       "x": 61,
       "z": 15,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, about 25 m north of Ultra. The nearest PMC extract, Saferoom Exfil, is about 110 m east. Nearby: a weapon box and 6 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1141,6 +1283,8 @@
       "x": 70,
       "z": 32,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, right by Ultra. The nearest PMC extract, Saferoom Exfil, is about 120 m east. Nearby: a weapon box and 5 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1149,6 +1293,8 @@
       "x": 19.5,
       "z": 26,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, about 50 m east of Ultra. The nearest PMC extract, Saferoom Exfil, is about 70 m east. Nearby: 3 weapon boxes, 3 jackets and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1157,6 +1303,8 @@
       "x": -37,
       "z": 26,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "Avokado store; Ragman's Hot Delivery has you stash a ComTac II headset and 6B47 helmet in its garbage pile. In the middle of Interchange, about 20 m north-west of the Saferoom Exfil PMC extract. Nearby: spawns for Killa.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Hot_Delivery#Guide"
     },
@@ -1165,6 +1313,8 @@
       "x": 91,
       "z": 55,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, right by Techlight. The nearest PMC extract, Saferoom Exfil, is about 140 m east. Nearby: a toolbox and 2 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1173,6 +1323,8 @@
       "x": 61,
       "z": 50,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "Texho electronics store; graphics cards can spawn on its shelves. In the middle of Interchange, right by Ultra. The nearest PMC extract, Saferoom Exfil, is about 110 m east. Nearby: a toolbox and 2 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Graphics_card#Interchange"
     },
@@ -1181,6 +1333,8 @@
       "x": 6,
       "z": 49,
       "y": 29,
+      "bottom": 25,
+      "top": 33,
       "meaning": "In the middle of Interchange, about 25 m south-east of Rasmussen. The nearest PMC extract, Saferoom Exfil, is about 55 m east. Nearby: 2 weapon boxes within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1188,95 +1342,119 @@
       "name": "Father & Sons",
       "x": 38,
       "z": -170,
-      "y": 516.5,
-      "meaning": "In the north of Interchange, about 45 m north-west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 170 m south-east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the north of Interchange, about 45 m north-west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 170 m south-east. Nearby: a weapon box, a toolbox and a cash register within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "Tarkovstar",
       "x": 69,
       "z": -150,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, about 55 m west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 180 m south-east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, about 55 m west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 180 m south-east. Nearby: 2 medcases, a PC and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "Eastland",
       "x": 26,
       "z": -149,
-      "y": 516.5,
-      "meaning": "Eastland store, a parody of Westland. In the middle of Interchange, about 20 m north-west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 140 m south-east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "Eastland store, a parody of Westland. In the middle of Interchange, about 20 m north-west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 140 m south-east. Nearby: 2 weapon boxes, 2 toolboxes and a cash register within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
     },
     {
       "name": "Arena",
       "x": 71,
       "z": -130,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, about 55 m west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 180 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, about 55 m west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 180 m east. Nearby: a weapon box, 2 medcases, a PC and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "ТАРЗДРАВ",
       "x": 54,
       "z": -128,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, about 40 m west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 160 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, about 40 m west of Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 160 m east. Nearby: 2 medcases, a PC and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "МЕБЕЛЬ МК",
       "x": 20,
       "z": -128,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, right by Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 130 m south-east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, right by Underground parking. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 130 m south-east. Nearby: a weapon box, 2 toolboxes and a cash register within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "Intourist",
       "x": 69,
       "z": -116,
-      "y": 516.5,
-      "meaning": "Intourist store; Deadlyslob's beard oil can spawn on a desk on its top floor. In the middle of Interchange, about 55 m west of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 170 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "Intourist store; Deadlyslob's beard oil can spawn on a desk on its top floor. In the middle of Interchange, about 55 m west of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 170 m east. Nearby: a weapon box, 2 medcases and 6 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Deadlyslob's_beard_oil#Interchange"
     },
     {
       "name": "Burger Spot",
       "x": -27,
       "z": -103,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, about 45 m east of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 75 m south-east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, about 45 m east of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 75 m south-east. Nearby: a weapon box, a toolbox and 6 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "FCK",
       "x": 70,
       "z": -94,
-      "y": 516.5,
-      "meaning": "FCK restaurant, a parody of KFC. In the middle of Interchange, about 55 m west of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 170 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "FCK restaurant, a parody of KFC. In the middle of Interchange, about 55 m west of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 170 m east. Nearby: a weapon box and 9 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
     },
     {
       "name": "McDaniels",
       "x": 70,
       "z": -87,
-      "y": 516.5,
-      "meaning": "McDaniels restaurant, a parody of McDonald's. In the middle of Interchange, about 55 m west of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 170 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "McDaniels restaurant, a parody of McDonald's. In the middle of Interchange, about 55 m west of Emercom medical unit. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 170 m east. Nearby: a weapon box and 9 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
     },
     {
       "name": "Tarducks",
       "x": 64,
       "z": -69,
-      "y": 516.5,
-      "meaning": "Tarducks coffee shop, a parody of Starbucks. In the middle of Interchange, about 50 m west of Mantis. The nearest PMC extract, Saferoom Exfil, is about 160 m south-east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "Tarducks coffee shop, a parody of Starbucks. In the middle of Interchange, about 50 m west of Mantis. The nearest PMC extract, Saferoom Exfil, is about 160 m south-east. Nearby: 8 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
     },
     {
       "name": "Coffee Joy",
       "x": 43,
       "z": -69,
-      "y": 516.5,
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
       "meaning": "In the middle of Interchange, about 30 m west of Mantis. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 140 m east.",
       "source": "https://tarkov.dev/map/interchange"
     },
@@ -1284,144 +1462,180 @@
       "name": "Jacob & Jacob",
       "x": 15,
       "z": -74,
-      "y": 516.5,
-      "meaning": "Jacob and Jacob store, a parody of Jack and Jones. In the middle of Interchange, right by Mantis. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 110 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "Jacob and Jacob store, a parody of Jack and Jones. In the middle of Interchange, right by Mantis. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 110 m east. Nearby: a toolbox within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
     },
     {
       "name": "ПУШКИН",
       "x": -34,
       "z": -79,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, about 25 m south of Burger Spot. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 65 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, about 25 m south of Burger Spot. The nearest PMC and Scav extract, Scav Camp (Co-Op), is about 65 m east. Nearby: a weapon box, 2 toolboxes, 6 cash registers and a dead Scav within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "Sushi Huyushi",
       "x": 64,
       "z": -34,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, about 60 m south-west of Mantis. The nearest PMC extract, Saferoom Exfil, is about 140 m south-east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, about 60 m south-west of Mantis. The nearest PMC extract, Saferoom Exfil, is about 140 m south-east. Nearby: a weapon box and 9 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "Underway",
       "x": -17,
       "z": -32,
-      "y": 516.5,
-      "meaning": "Underway restaurant, a parody of Subway. In the middle of Interchange, right by Kiba. The nearest PMC extract, Saferoom Exfil, is about 80 m south. Nearby: spawns for Killa.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "Underway restaurant, a parody of Subway. In the middle of Interchange, right by Kiba. The nearest PMC extract, Saferoom Exfil, is about 80 m south. Nearby: spawns for Killa; a toolbox and 3 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
     },
     {
       "name": "Burger House",
       "x": 67,
       "z": -23.5,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, about 65 m north of Ultra. The nearest PMC extract, Saferoom Exfil, is about 130 m south-east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, about 65 m north of Ultra. The nearest PMC extract, Saferoom Exfil, is about 130 m south-east. Nearby: a weapon box and 9 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "Philly Cute",
       "x": -34,
       "z": -24,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, right by Kiba. The nearest PMC extract, Saferoom Exfil, is about 70 m south. Nearby: spawns for Killa.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, right by Kiba. The nearest PMC extract, Saferoom Exfil, is about 70 m south. Nearby: spawns for Killa; 3 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "Shiccos",
       "x": 67,
       "z": -16,
-      "y": 516.5,
-      "meaning": "Shiccos store, a parody of Chiccos. In the middle of Interchange, about 55 m north of Ultra. The nearest PMC extract, Saferoom Exfil, is about 130 m south-east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "Shiccos store, a parody of Chiccos. In the middle of Interchange, about 55 m north of Ultra. The nearest PMC extract, Saferoom Exfil, is about 130 m south-east. Nearby: a weapon box and 9 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
     },
     {
       "name": "МУЗЕЙ ИСТОРИИ",
       "x": 17,
       "z": 0,
-      "y": 516.5,
-      "meaning": "\"Museum of History\" book store where the gaming magazine for Skier's Minute of Fame can spawn. In the middle of Interchange, about 25 m north of Rasmussen. The nearest PMC extract, Saferoom Exfil, is about 80 m south-east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "\"Museum of History\" book store where the gaming magazine for Skier's Minute of Fame can spawn. In the middle of Interchange, about 25 m north of Rasmussen. The nearest PMC extract, Saferoom Exfil, is about 80 m south-east. Nearby: 2 weapon boxes and a toolbox within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Minute_of_Fame#Guide"
     },
     {
       "name": "Papillon",
       "x": 92,
       "z": 17,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, about 35 m north-west of Ultra. The nearest PMC extract, Saferoom Exfil, is about 140 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, about 35 m north-west of Ultra. The nearest PMC extract, Saferoom Exfil, is about 140 m east. Nearby: locked doors for the ULTRA medical storage key; a weapon box, a jacket and 4 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "ЗАКРЫТО НА РЕМОНТ",
       "x": 58,
       "z": 13,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, about 30 m north of Ultra. The nearest PMC extract, Saferoom Exfil, is about 110 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, about 30 m north of Ultra. The nearest PMC extract, Saferoom Exfil, is about 110 m east. Nearby: locked doors for the ULTRA medical storage key; 4 weapon boxes and 2 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "НА-СВЯЗИ",
       "x": 70,
       "z": 27,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, right by Ultra. The nearest PMC extract, Saferoom Exfil, is about 120 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, right by Ultra. The nearest PMC extract, Saferoom Exfil, is about 120 m east. Nearby: locked doors for the ULTRA medical storage key; 4 weapon boxes and 4 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "СКОРО ОТКРЫТИЕ",
       "x": 54,
       "z": 24,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, about 20 m north-east of Ultra. The nearest PMC extract, Saferoom Exfil, is about 100 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, about 20 m north-east of Ultra. The nearest PMC extract, Saferoom Exfil, is about 100 m east. Nearby: locked doors for the ULTRA medical storage key; 4 weapon boxes within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "Figaro",
       "x": 19,
       "z": 26,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, right by Rasmussen. The nearest PMC extract, Saferoom Exfil, is about 70 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, right by Rasmussen. The nearest PMC extract, Saferoom Exfil, is about 70 m east. Nearby: 2 weapon boxes within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "АПТЕКА",
       "x": 71,
       "z": 47,
-      "y": 516.5,
-      "meaning": "Sign means \"pharmacy\": the NecrusPharm pharmacy in the ULTRA mall, locked behind the NecrusPharm pharmacy key. In the middle of Interchange, right by Ultra. The nearest PMC extract, Saferoom Exfil, is about 120 m east.",
-      "source": "https://escapefromtarkov.fandom.com/wiki/NecrusPharm_pharmacy_key#Lock_Location"
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "Sign means \"pharmacy\": the second-floor mall pharmacy whose storage room opens with the ULTRA medical storage key and holds medical loot and valuables. In the middle of Interchange, right by Ultra. The nearest PMC extract, Saferoom Exfil, is about 120 m east. Nearby: locked doors for the ULTRA medical storage key; 2 weapon boxes and 2 cash registers within 30 m.",
+      "source": "https://escapefromtarkov.fandom.com/wiki/ULTRA_medical_storage_key#Lock_Location"
     },
     {
       "name": "SARA",
       "x": 53,
       "z": 47,
-      "y": 516.5,
-      "meaning": "Sara clothing store, a parody of Zara. In the middle of Interchange, right by Ultra. The nearest PMC extract, Saferoom Exfil, is about 100 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "Sara clothing store, a parody of Zara. In the middle of Interchange, right by Ultra. The nearest PMC extract, Saferoom Exfil, is about 100 m east. Nearby: locked doors for the ULTRA medical storage key; 2 weapon boxes within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
     },
     {
       "name": "Urban Clothes",
       "x": 26,
       "z": 46,
-      "y": 516.5,
-      "meaning": "Urban Clothes store, a parody of Urban District. In the middle of Interchange, about 20 m south of Rasmussen. The nearest PMC extract, Saferoom Exfil, is about 75 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "Urban Clothes store, a parody of Urban District. In the middle of Interchange, about 20 m south of Rasmussen. The nearest PMC extract, Saferoom Exfil, is about 75 m east. Nearby: a weapon box within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Easter_eggs_and_References#Interchange"
     },
     {
       "name": "TECHLIGHT",
       "x": 91,
       "z": 54,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, about 25 m south-west of Ultra. The nearest PMC extract, Saferoom Exfil, is about 140 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, about 25 m south-west of Ultra. The nearest PMC extract, Saferoom Exfil, is about 140 m east. Nearby: locked doors for the ULTRA medical storage key; 2 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/interchange"
     },
     {
       "name": "Fashion Store",
       "x": 39,
       "z": 67,
-      "y": 516.5,
-      "meaning": "In the middle of Interchange, about 40 m south-east of Ultra. The nearest PMC extract, Saferoom Exfil, is about 90 m east.",
+      "y": 35,
+      "bottom": 34,
+      "top": 999,
+      "meaning": "In the middle of Interchange, about 40 m south-east of Ultra. The nearest PMC extract, Saferoom Exfil, is about 90 m east. Nearby: locked doors for the ULTRA medical storage key.",
       "source": "https://tarkov.dev/map/interchange"
     }
   ],
@@ -1431,7 +1645,9 @@
       "x": -230,
       "z": -400,
       "y": 0.6,
-      "meaning": "In the north-west of The Lab, about 30 m north-west of Yellow room. The nearest PMC extract, Parking Gate, is about 60 m west. Nearby: spawns for Raiders; 5 weapon boxes, 2 PCs and a toolbox within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "In the north-west of The Lab, about 30 m north-west of Yellow room. The nearest PMC extract, Parking Gate, is about 60 m west. Nearby: spawns for Raiders; 3 weapon boxes and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
@@ -1439,7 +1655,9 @@
       "x": -246,
       "z": -379,
       "y": 0.6,
-      "meaning": "In the north of The Lab, right by Basement. The nearest PMC and Scav extract, Main Elevator, is about 60 m north-east. Nearby: spawns for Raiders; 3 weapon boxes, 7 PCs, a grenade box and 2 toolboxes within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "In the north of The Lab, right by Basement. The nearest PMC and Scav extract, Main Elevator, is about 60 m north-east. Nearby: spawns for Raiders; 2 weapon boxes, a grenade box, 2 toolboxes and a plastic suitcase within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
@@ -1447,7 +1665,9 @@
       "x": -216,
       "z": -379,
       "y": 0.6,
-      "meaning": "In the middle of The Lab, right by Yellow room. The nearest transit, Transit to Streets of Tarkov, is about 60 m south-west. Nearby: spawns for Raiders; 6 weapon boxes, 4 PCs and a plastic suitcase within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "In the middle of The Lab, right by Yellow room. The nearest transit, Transit to Streets of Tarkov, is about 60 m south-west. Nearby: spawns for Raiders; 3 weapon boxes and a plastic suitcase within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
@@ -1455,7 +1675,9 @@
       "x": -172,
       "z": -342,
       "y": 0.6,
-      "meaning": "Main working area (O11); Mechanic's Trust but Verify has you stash a hard drive at its servers. In the middle of The Lab, right by Manager office. The nearest PMC and Scav extract, Medical Block Elevator, is about 60 m south. Nearby: locked doors for the TerraGroup Labs weapon testing area key, Admin's key and TerraGroup Labs keycard (Black); spawns for Raiders; a safe, 7 weapon boxes, 9 PCs and 5 toolboxes within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "Main working area (O11); Mechanic's Trust but Verify has you stash a hard drive at its servers. In the middle of The Lab, right by Manager office. The nearest PMC and Scav extract, Medical Block Elevator, is about 60 m south. Nearby: locked doors for the TerraGroup Labs weapon testing area key, Admin's key and TerraGroup Labs keycard (Black); spawns for Raiders; 5 weapon boxes, 7 PCs and 4 toolboxes within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_Trust_but_Verify#Guide"
     },
     {
@@ -1463,7 +1685,9 @@
       "x": -148,
       "z": -398,
       "y": 0.6,
-      "meaning": "In the south-west of The Lab, right by the Ventilation Shaft PMC extract. Nearby: locked doors for the TerraGroup Labs keycard (Blue); spawns for Raiders; a safe, 2 weapon boxes, 2 medcases and 14 PCs within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "In the south-west of The Lab, right by the Ventilation Shaft PMC extract. Nearby: locked doors for the TerraGroup Labs keycard (Blue); spawns for Raiders; 2 weapon boxes, 2 medcases, 6 PCs and 2 grenade boxes within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
@@ -1471,7 +1695,9 @@
       "x": -130,
       "z": -398,
       "y": 0.6,
-      "meaning": "In the south-west of The Lab, right by Blue room. The nearest PMC extract, Ventilation Shaft, is right here. Nearby: locked doors for the TerraGroup Labs keycard (Blue); a safe, 3 weapon boxes, 3 medcases and 14 PCs within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "In the south-west of The Lab, right by Blue room. The nearest PMC extract, Ventilation Shaft, is right here. Nearby: locked doors for the TerraGroup Labs keycard (Blue); 3 weapon boxes, 2 medcases, 6 PCs and a grenade box within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
@@ -1479,7 +1705,9 @@
       "x": -130,
       "z": -356,
       "y": 0.6,
-      "meaning": "In the south of The Lab, right by Green room. The nearest PMC and Scav extract, Medical Block Elevator, is about 20 m south-east. Nearby: locked doors for the Admin's key and TerraGroup Labs keycard (Black); 2 weapon boxes, 2 medcases and a toolbox within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "In the south of The Lab, right by Green room. The nearest PMC and Scav extract, Medical Block Elevator, is about 20 m south-east. Nearby: locked doors for the Admin's key and TerraGroup Labs keycard (Black); a weapon box and a medcase within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
@@ -1487,7 +1715,9 @@
       "x": -125,
       "z": -308,
       "y": 0.6,
-      "meaning": "In the south of The Lab, about 30 m east of Sanitar's room. The nearest PMC and Scav extract, Medical Block Elevator, is about 40 m west. Nearby: locked doors for the Admin's key; 4 weapon boxes, 3 PCs and 2 toolboxes within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "In the south of The Lab, about 30 m east of Sanitar's room. The nearest PMC and Scav extract, Medical Block Elevator, is about 40 m west. Nearby: locked doors for the Admin's key; 3 weapon boxes and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
@@ -1495,7 +1725,9 @@
       "x": -116,
       "z": -266,
       "y": 0.6,
-      "meaning": "In the south-east of The Lab, right by the Sewage Conduit PMC extract. Nearby: 2 weapon boxes and 3 PCs within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "In the south-east of The Lab, right by the Sewage Conduit PMC extract. Nearby: a weapon box within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
@@ -1503,7 +1735,9 @@
       "x": -163,
       "z": -269,
       "y": 0.6,
-      "meaning": "In the east of The Lab, about 40 m north of the Sewage Conduit PMC extract. Nearby: spawns for Raiders; 2 weapon boxes, a PC, a grenade box and 4 toolboxes within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "In the east of The Lab, about 40 m north of the Sewage Conduit PMC extract. Nearby: spawns for Raiders; 2 weapon boxes, a grenade box and 4 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
@@ -1511,6 +1745,8 @@
       "x": -170,
       "z": -248,
       "y": 0.6,
+      "bottom": -0.8,
+      "top": 2,
       "meaning": "In the east of The Lab, about 30 m west of the Hangar Gate PMC extract. Nearby: spawns for Raiders; 2 weapon boxes, a grenade box and 3 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
@@ -1519,7 +1755,9 @@
       "x": -207,
       "z": -305,
       "y": 0.6,
-      "meaning": "Lecture hall where the two A.P. meeting audio tapes for The Unheard story chapter are found. In the middle of The Lab, about 30 m north of Weapon testing area. The nearest PMC and Scav extract, Main Elevator, is about 80 m north. Nearby: locked doors for the TerraGroup Labs weapon testing area key; spawns for Raiders; 5 weapon boxes, a PC and 4 toolboxes within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "Lecture hall where the two A.P. meeting audio tapes for The Unheard story chapter are found. In the middle of The Lab, about 30 m north of Weapon testing area. The nearest PMC and Scav extract, Main Elevator, is about 80 m north. Nearby: locked doors for the TerraGroup Labs weapon testing area key; spawns for Raiders; 4 weapon boxes, a PC and a toolbox within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/The_Unheard#Search_for_any_mention_of_A.P._in_The_Lab/Learn_more_about_A.P.'s_role_and_activities"
     },
     {
@@ -1527,7 +1765,9 @@
       "x": -221,
       "z": -343,
       "y": 0.6,
-      "meaning": "Recreation area (R11); the TerraGroup employee's suitcase for Therapist's Side Hustle spawns here. In the north of The Lab, about 35 m east of Yellow room. The nearest PMC and Scav extract, Main Elevator, is about 60 m north. Nearby: spawns for Raiders; 5 weapon boxes and 2 plastic suitcases within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "Recreation area (R11); the TerraGroup employee's suitcase for Therapist's Side Hustle spawns here. In the north of The Lab, about 35 m east of Yellow room. The nearest PMC and Scav extract, Main Elevator, is about 60 m north. Nearby: spawns for Raiders; 2 weapon boxes and 2 plastic suitcases within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Side_Hustle#TerraGroup_employee's_suitcase_location"
     },
     {
@@ -1535,6 +1775,8 @@
       "x": -236,
       "z": -302,
       "y": 0.6,
+      "bottom": -0.8,
+      "top": 2,
       "meaning": "Gym (room R15); the weapon testing area key can spawn on a stool here. In the north of The Lab, about 30 m south-east of Arsenal. The nearest PMC and Scav extract, Main Elevator, is about 55 m north-west. Nearby: spawns for Raiders; a safe, 3 weapon boxes, 2 jackets and a plastic suitcase within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_weapon_testing_area_key#The_Lab"
     },
@@ -1543,6 +1785,8 @@
       "x": -241,
       "z": -280,
       "y": 0.6,
+      "bottom": -0.8,
+      "top": 2,
       "meaning": "In the north-east of The Lab, about 45 m south-east of Security post. The nearest PMC and Scav extract, Main Elevator, is about 70 m north-west. Nearby: 4 weapon boxes and a jacket within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
@@ -1551,6 +1795,8 @@
       "x": -232,
       "z": -280,
       "y": 0.6,
+      "bottom": -0.8,
+      "top": 2,
       "meaning": "In the north-east of The Lab, about 50 m south-east of Security post. The nearest PMC and Scav extract, Main Elevator, is about 75 m north-west. Nearby: spawns for Raiders; 4 weapon boxes and a jacket within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
@@ -1558,8 +1804,10 @@
       "name": "Boiler Room",
       "x": -259,
       "z": -366,
-      "y": -499,
-      "meaning": "In the north of The Lab, right by Kruglov's office. The nearest PMC and Scav extract, Main Elevator, is about 40 m north-east. Nearby: spawns for Raiders.",
+      "y": 1,
+      "bottom": -1000,
+      "top": 2,
+      "meaning": "In the north of The Lab, right by Kruglov's office. The nearest PMC and Scav extract, Main Elevator, is about 40 m north-east. Nearby: spawns for Raiders; 4 weapon boxes, a grenade box, 2 toolboxes and a plastic suitcase within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
@@ -1567,7 +1815,9 @@
       "x": -260,
       "z": -319,
       "y": 0.6,
-      "meaning": "In the north of The Lab, right by Security post. The nearest PMC and Scav extract, Main Elevator, is about 30 m north-west. Nearby: a safe, 6 weapon boxes, 4 PCs and a grenade box within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "In the north of The Lab, right by Security post. The nearest PMC and Scav extract, Main Elevator, is about 30 m north-west. Nearby: a safe, 3 weapon boxes, a grenade box and a jacket within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
@@ -1575,103 +1825,129 @@
       "x": -260,
       "z": -342,
       "y": 0.6,
-      "meaning": "First-level reception; one of the spots where Scourge (target of Therapist's Side Hustle) can be found. In the north of The Lab, right by Arsenal. The nearest PMC and Scav extract, Main Elevator, is about 25 m north. Nearby: spawns for Raiders; a safe, 4 weapon boxes, 9 PCs and a grenade box within 30 m.",
+      "bottom": -0.8,
+      "top": 2,
+      "meaning": "First-level reception; one of the spots where Scourge (target of Therapist's Side Hustle) can be found. In the north of The Lab, right by Arsenal. The nearest PMC and Scav extract, Main Elevator, is about 25 m north. Nearby: spawns for Raiders; a safe, a grenade box, a jacket and a toolbox within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Side_Hustle#Guide"
     },
     {
       "name": "Administrative Office",
       "x": -260,
       "z": -364,
-      "y": 501.5,
-      "meaning": "Administrative office (R22); a Violet keycard can spawn on a chair in its glass conference room. In the north of The Lab, right by Kruglov's office. The nearest PMC and Scav extract, Main Elevator, is about 35 m north-east. Nearby: spawns for Raiders.",
+      "y": 4,
+      "bottom": 3,
+      "top": 1000,
+      "meaning": "Administrative office (R22); a Violet keycard can spawn on a chair in its glass conference room. In the north of The Lab, right by Kruglov's office. The nearest PMC and Scav extract, Main Elevator, is about 35 m north-east. Nearby: locked doors for the TerraGroup Labs arsenal storage room key and TerraGroup Labs keycard (Black); spawns for Raiders; 6 PCs, a jacket and 2 plastic suitcases within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_keycard_(Violet)#The_Lab"
     },
     {
       "name": "Security Office",
       "x": -254,
       "z": -320,
-      "y": 501.5,
-      "meaning": "In the north of The Lab, right by Arsenal. The nearest PMC and Scav extract, Main Elevator, is about 30 m north-west.",
+      "y": 4,
+      "bottom": 3,
+      "top": 1000,
+      "meaning": "In the north of The Lab, right by Arsenal. The nearest PMC and Scav extract, Main Elevator, is about 30 m north-west. Nearby: locked doors for the TerraGroup Labs arsenal storage room key, TerraGroup Labs keycard (Red) and TerraGroup Labs keycard (Violet); 8 weapon boxes, 4 PCs and a cash register within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
       "name": "Security #1",
       "x": -244,
       "z": -378,
-      "y": 501.5,
-      "meaning": "In the north of The Lab, right by Basement. The nearest PMC and Scav extract, Main Elevator, is about 60 m north-east. Nearby: spawns for Raiders.",
+      "y": 4,
+      "bottom": 3,
+      "top": 1000,
+      "meaning": "In the north of The Lab, right by Basement. The nearest PMC and Scav extract, Main Elevator, is about 60 m north-east. Nearby: locked doors for the TerraGroup Labs keycard (Black) and TerraGroup Labs keycard (Yellow); spawns for Raiders; 7 PCs, a jacket and 2 plastic suitcases within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
       "name": "Security #2",
       "x": -215,
       "z": -379,
-      "y": 501.5,
-      "meaning": "In the middle of The Lab, right by Yellow room. The nearest transit, Transit to Streets of Tarkov, is about 60 m south-west. Nearby: spawns for Raiders.",
+      "y": 4,
+      "bottom": 3,
+      "top": 1000,
+      "meaning": "In the middle of The Lab, right by Yellow room. The nearest transit, Transit to Streets of Tarkov, is about 60 m south-west. Nearby: locked doors for the TerraGroup Labs keycard (Yellow); spawns for Raiders; a weapon box and 4 PCs within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
       "name": "Conference Room",
       "x": -229,
       "z": -343,
-      "y": 501.5,
-      "meaning": "In the north of The Lab, about 35 m south-west of Arsenal. The nearest PMC and Scav extract, Main Elevator, is about 55 m north.",
+      "y": 4,
+      "bottom": 3,
+      "top": 1000,
+      "meaning": "In the north of The Lab, about 35 m south-west of Arsenal. The nearest PMC and Scav extract, Main Elevator, is about 55 m north. Nearby: locked doors for the TerraGroup Labs arsenal storage room key, TerraGroup Labs keycard (Red) and TerraGroup Labs keycard (Yellow); 2 weapon boxes, a jacket and a plastic suitcase within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
       "name": "Cafeteria",
       "x": -219,
       "z": -302,
-      "y": 501.5,
-      "meaning": "Cafeteria (R24); a Yellow keycard can spawn on its center table. In the north of The Lab, about 40 m north of Weapon testing area. The nearest PMC and Scav extract, Main Elevator, is about 70 m north-west. Nearby: spawns for Raiders.",
+      "y": 4,
+      "bottom": 3,
+      "top": 1000,
+      "meaning": "Cafeteria (R24); a Yellow keycard can spawn on its center table. In the north of The Lab, about 40 m north of Weapon testing area. The nearest PMC and Scav extract, Main Elevator, is about 70 m north-west. Nearby: spawns for Raiders; a weapon box, 2 toolboxes and 2 cash registers within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_keycard_(Yellow)#The_Lab"
     },
     {
       "name": "Offices #1",
       "x": -189,
       "z": -401,
-      "y": 501.5,
-      "meaning": "In the west of The Lab, about 35 m south-west of Yellow room. The nearest transit, Transit to Streets of Tarkov, is about 25 m south-west. Nearby: spawns for Raiders.",
+      "y": 4,
+      "bottom": 3,
+      "top": 1000,
+      "meaning": "In the west of The Lab, about 35 m south-west of Yellow room. The nearest transit, Transit to Streets of Tarkov, is about 25 m south-west. Nearby: locked doors for the TerraGroup Labs keycard (Yellow); spawns for Raiders; a safe, 2 weapon boxes, 5 PCs and a jacket within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
       "name": "Offices #2",
       "x": -149,
       "z": -401,
-      "y": 501.5,
-      "meaning": "In the west of The Lab, right by the Ventilation Shaft PMC extract. Nearby: spawns for Raiders.",
+      "y": 4,
+      "bottom": 3,
+      "top": 1000,
+      "meaning": "In the west of The Lab, right by the Ventilation Shaft PMC extract. Nearby: spawns for Raiders; a safe, 2 weapon boxes, 3 medcases and 8 PCs within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
       "name": "Infirmary Lvl 2",
       "x": -130,
       "z": -401,
-      "y": 501.5,
-      "meaning": "Second-floor infirmary (G21); Medical documents can spawn by a medical bed and in a consultation room. In the south-west of The Lab, right by Blue room. The nearest PMC extract, Ventilation Shaft, is right here.",
+      "y": 4,
+      "bottom": 3,
+      "top": 1000,
+      "meaning": "Second-floor infirmary (G21); Medical documents can spawn by a medical bed and in a consultation room. In the south-west of The Lab, right by Blue room. The nearest PMC extract, Ventilation Shaft, is right here. Nearby: a safe, 2 weapon boxes, 6 medcases and 8 PCs within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Medical_documents#The_Lab"
     },
     {
       "name": "Sterile Laboratory",
       "x": -130,
       "z": -361,
-      "y": 501.5,
-      "meaning": "In the south of The Lab, right by Green room. The nearest PMC and Scav extract, Medical Block Elevator, is about 25 m south-east.",
+      "y": 4,
+      "bottom": 3,
+      "top": 1000,
+      "meaning": "In the south of The Lab, right by Green room. The nearest PMC and Scav extract, Medical Block Elevator, is about 25 m south-east. Nearby: locked doors for the TerraGroup Labs manager's office room key, Keycard with a blue marking and TerraGroup Labs keycard (Green); 2 weapon boxes, 3 medcases and a jacket within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     },
     {
       "name": "Control Room",
       "x": -169,
       "z": -288,
-      "y": 501.5,
-      "meaning": "Control room that Therapist's Beneath The Streets asks you to scout. In the middle of The Lab, about 25 m south-east of Weapon testing area. The nearest PMC extract, Sewage Conduit, is about 55 m south-east. Nearby: spawns for Raiders.",
+      "y": 4,
+      "bottom": 3,
+      "top": 1000,
+      "meaning": "Control room that Therapist's Beneath The Streets asks you to scout. In the middle of The Lab, about 25 m south-east of Weapon testing area. The nearest PMC extract, Sewage Conduit, is about 55 m south-east. Nearby: spawns for Raiders; a PC, a grenade box and a toolbox within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Beneath_The_Streets#Scout_the_control_room"
     },
     {
       "name": "Corridor To Building #2",
       "x": -250,
       "z": -281,
-      "y": 501.5,
-      "meaning": "In the north-east of The Lab, about 40 m east of Security post. The nearest PMC and Scav extract, Main Elevator, is about 65 m north-west.",
+      "y": 4,
+      "bottom": 3,
+      "top": 1000,
+      "meaning": "In the north-east of The Lab, about 40 m east of Security post. The nearest PMC and Scav extract, Main Elevator, is about 65 m north-west. Nearby: locked doors for the TerraGroup Labs keycard (Violet); a toolbox and 2 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/the-lab"
     }
   ],
@@ -1836,13 +2112,17 @@
       "name": "K Buildings",
       "x": 28,
       "z": -102,
-      "meaning": "In the middle of Reserve, about 55 m south-east of Underground storage bunker. The nearest Scav extract, Depot Hermetic Door, is about 95 m west. Nearby: locked doors for the RB-PSV2 key and RB-PSV1 key; 7 weapon boxes, a technical supply crate, a jacket and a toolbox within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "In the middle of Reserve, about 55 m south-east of Underground storage bunker. The nearest Scav extract, Depot Hermetic Door, is about 95 m west. Nearby: 7 weapon boxes, a jacket and a toolbox within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
     {
       "name": "White Queen",
       "x": -25,
       "z": 180,
+      "y": -5,
+      "bottom": -6,
       "meaning": "In the south of Reserve, right by Dome. The nearest PMC extract, Cliff Descent, is about 30 m south-west. Nearby: locked doors for the RB-KPRL key, RB-KORL key, RB-RLSA key and 1 more; 3 safes, 6 weapon boxes, a PC and 9 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
@@ -1850,34 +2130,44 @@
       "name": "White Pawn",
       "x": -104,
       "z": 93,
-      "meaning": "In the south of Reserve, about 60 m west of RB-BK marked room. The nearest PMC extract, D-2, is about 80 m south. Nearby: locked doors for the RB-ORB1 key and RB-ORB2 key; 12 weapon boxes, 5 grenade boxes, 3 jackets and a dead Scav within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "In the south of Reserve, about 60 m west of RB-BK marked room. The nearest PMC extract, D-2, is about 80 m south. Nearby: locked doors for the RB-ORB1 key and RB-ORB2 key; 9 weapon boxes, 5 grenade boxes, 3 jackets and a dead Scav within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
     {
       "name": "Black Bishop",
       "x": -140,
       "z": -14.5,
-      "meaning": "In the east of Reserve, about 45 m north-east of RB-PKPM marked room. The nearest transit, Transit to Customs, is about 120 m north-east. Nearby: locked doors for the RB-AM key and RB-AK key; 8 weapon boxes, 5 PCs, 4 ration supply crates and 7 grenade boxes within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "In the east of Reserve, about 45 m north-east of RB-PKPM marked room. The nearest transit, Transit to Customs, is about 120 m north-east. Nearby: locked doors for the RB-AM key and RB-AK key; 2 weapon boxes, 5 PCs, 7 grenade boxes and 4 jackets within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
     {
       "name": "White Bishop",
       "x": -67,
       "z": -30,
-      "meaning": "In the middle of Reserve, about 50 m north of White King. The nearest PMC and Scav extract, Scav Lands (Co-Op), is about 130 m north-east. Nearby: locked doors for the RB-KSM key and RB-SMP key; 7 weapon boxes and 4 medcases within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "In the middle of Reserve, about 50 m north of White King. The nearest PMC and Scav extract, Scav Lands (Co-Op), is about 130 m north-east. Nearby: locked doors for the RB-KSM key and RB-SMP key; 7 weapon boxes within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
     {
       "name": "White King",
       "x": -49.5,
       "z": 15.5,
-      "meaning": "In the middle of Reserve, about 50 m south of White Bishop. The nearest PMC and Scav extract, Sewer Manhole, is about 110 m south-west. Nearby: locked doors for the RB-GN key, RB-OP key and RB-RH key; 3 weapon boxes and 5 toolboxes within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "In the middle of Reserve, about 50 m south of White Bishop. The nearest PMC and Scav extract, Sewer Manhole, is about 110 m south-west. Nearby: locked doors for the RB-RH key; 3 weapon boxes and 3 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
     {
       "name": "Black Knight",
       "x": 14.5,
       "z": -10.8,
+      "y": -5,
+      "bottom": -6,
       "meaning": "In the middle of Reserve, about 70 m west of White King. The nearest PMC and Scav extract, Sewer Manhole, is about 90 m south. Nearby: locked doors for the RB-MP12 key, RB-MP21 key and RB-MP11 key; 3 weapon boxes, 4 PCs, a grenade box and 9 jackets within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
@@ -1885,13 +2175,17 @@
       "name": "White Knight",
       "x": 82.2,
       "z": -30.2,
-      "meaning": "In the middle of Reserve, about 70 m west of Black Knight. The nearest Scav extract, Depot Hermetic Door, is about 100 m north-west. Nearby: locked doors for the RB-MP22 key and RB-MP13 key; spawns for Glukhar; 7 weapon boxes, a PC, 3 grenade boxes and 3 jackets within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "In the middle of Reserve, about 70 m west of Black Knight. The nearest Scav extract, Depot Hermetic Door, is about 100 m north-west. Nearby: locked doors for the RB-MP22 key and RB-MP13 key; spawns for Glukhar; 4 weapon boxes, a PC, 3 grenade boxes and 3 jackets within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
     {
       "name": "White Rook",
       "x": 149,
       "z": -124,
+      "y": -5,
+      "bottom": -6,
       "meaning": "In the north-west of Reserve, about 25 m south of the Armored Train PMC and Scav extract. Nearby: 4 weapon boxes and 2 grenade boxes within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
@@ -1899,6 +2193,8 @@
       "name": "Train Station",
       "x": 161,
       "z": -149,
+      "y": -5,
+      "bottom": -6,
       "meaning": "The train yard, where the Armored Train extract arrives late in the raid and stays for 7 minutes. Scav Raiders may spawn here when it arrives. In the north-west of Reserve, about 20 m west of the Armored Train PMC and Scav extract. Nearby: 11 weapon boxes, 6 grenade boxes, a jacket and 3 toolboxes within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Reserve#Extractions"
     },
@@ -1906,13 +2202,17 @@
       "name": "Black Pawn",
       "x": -165,
       "z": 57,
-      "meaning": "In the east of Reserve, right by RB-BK marked room. The nearest Scav extract, Hole in the Wall by the Mountains, is about 95 m east. Nearby: locked doors for the RB-BK marked key, RB-TB key, RB-ORB3 key and 1 more; 10 weapon boxes, 7 grenade boxes and 3 toolboxes within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "In the east of Reserve, right by RB-BK marked room. The nearest Scav extract, Hole in the Wall by the Mountains, is about 95 m east. Nearby: locked doors for the RB-ORB3 key and RB-OB key; 10 weapon boxes and 7 grenade boxes within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
     {
       "name": "Barracks",
       "x": 167,
       "z": -222,
+      "y": -5,
+      "bottom": -6,
       "meaning": "The soldier barracks. They hold armories: the RB-AO key opens one with racks of AK-74 rifles, and the quest Reserve Expert has you check them. In the north-west of Reserve, about 25 m east of RB-VO marked room. The nearest transit, Transit to Woods, is about 55 m west. Nearby: locked doors for the RB-AO key and RB-VO marked key; 2 weapon boxes and 3 grenade boxes within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/RB-AO_key#Lock_Location"
     },
@@ -1920,6 +2220,8 @@
       "name": "E1 Bunkers",
       "x": -220,
       "z": -13,
+      "y": -5,
+      "bottom": -6,
       "meaning": "In the east of Reserve, about 80 m east of Black Bishop. The nearest Scav extract, Hole in the Wall by the Mountains, is about 75 m south-east.",
       "source": "https://tarkov.dev/map/reserve"
     },
@@ -1927,6 +2229,8 @@
       "name": "E2 Bunkers",
       "x": 173,
       "z": -3,
+      "y": -5,
+      "bottom": -6,
       "meaning": "In the west of Reserve, about 85 m north-west of Garages. The nearest Scav extract, Depot Hermetic Door, is about 130 m north-east. Nearby: a weapon box within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
@@ -1934,13 +2238,17 @@
       "name": "д - Warehouse Bunkers",
       "x": 80,
       "z": -167,
-      "meaning": "The underground storage warehouse marked 'Д', with caged storage areas opened by RB-PSP/PSV keys. Glukhar can spawn here, and quests like Safe Corridor take place here. In the north of Reserve, about 30 m south-west of the Bunker Hermetic Door PMC and Scav extract. Nearby: locked doors for the RB-PSP1 key; spawns for Glukhar; 3 weapon boxes, 5 ration supply crates and 2 toolboxes within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "The underground storage warehouse marked 'Д', with caged storage areas opened by RB-PSP/PSV keys. Glukhar can spawn here, and quests like Safe Corridor take place here. In the north of Reserve, about 30 m south-west of the Bunker Hermetic Door PMC and Scav extract. Nearby: spawns for Glukhar; 3 weapon boxes and 3 ration supply crates within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Safe_Corridor#Guide"
     },
     {
       "name": "Garage",
       "x": 96,
       "z": 30,
+      "y": -5,
+      "bottom": -6,
       "meaning": "In the west of Reserve, right by Garages. The nearest PMC and Scav extract, Sewer Manhole, is about 75 m south-east. Nearby: locked doors for the RB-ST key; 7 weapon boxes, 3 grenade boxes and 3 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
@@ -1948,13 +2256,17 @@
       "name": "Mechanic",
       "x": 55.5,
       "z": 60.6,
-      "meaning": "In the middle of Reserve, about 20 m north-west of the Sewer Manhole PMC and Scav extract. Nearby: 4 grenade boxes, 2 jackets and 3 toolboxes within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "In the middle of Reserve, about 20 m north-west of the Sewer Manhole PMC and Scav extract. Nearby: 4 grenade boxes, 2 jackets and 2 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
     {
       "name": "Gas Station",
       "x": 29.7,
       "z": 29.5,
+      "y": -5,
+      "bottom": -6,
       "meaning": "In the middle of Reserve, about 45 m south of Black Knight. The nearest PMC and Scav extract, Sewer Manhole, is about 50 m south. Nearby: a weapon box and a PC within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
@@ -1962,6 +2274,8 @@
       "name": "Shipping Yard",
       "x": -31,
       "z": -150,
+      "y": -5,
+      "bottom": -6,
       "meaning": "In the north of Reserve, about 75 m north-east of K Buildings. The nearest Scav extract, Heating Pipe, is about 30 m north. Nearby: 3 weapon boxes and a grenade box within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
@@ -1969,6 +2283,8 @@
       "name": "K1",
       "x": -1,
       "z": -71,
+      "y": -5,
+      "bottom": -6,
       "meaning": "One of the base's storage buildings marked 'K'. The wiki lists them among Glukhar's spawn areas. In the middle of Reserve, about 40 m south-east of K Buildings. The nearest Scav extract, Heating Pipe, is about 110 m north. Nearby: 2 weapon boxes and a jacket within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Reserve#Boss"
     },
@@ -1976,13 +2292,17 @@
       "name": "K2",
       "x": 66,
       "z": -90,
-      "meaning": "One of the base's storage buildings marked 'K'. The wiki lists them among Glukhar's spawn areas. In the middle of Reserve, about 35 m south-east of Underground storage bunker. The nearest Scav extract, Depot Hermetic Door, is about 65 m north-west. Nearby: locked doors for the RB-PSV2 key, RB-PSV1 key, RB-PSP1 key and 1 more; 4 technical supply crates and 6 ration supply crates within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "One of the base's storage buildings marked 'K'. The wiki lists them among Glukhar's spawn areas. In the middle of Reserve, about 35 m south-east of Underground storage bunker. The nearest Scav extract, Depot Hermetic Door, is about 65 m north-west. Nearby: a technical supply crate within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Reserve#Boss"
     },
     {
       "name": "K3",
       "x": -5.5,
       "z": -94,
+      "y": -5,
+      "bottom": -6,
       "meaning": "Storage building 'K' #3. The quest The TerraGroup Trail - Part 9 has you stash GPNVG-18 night vision goggles in it, and Glukhar can spawn among the K buildings. In the middle of Reserve, about 35 m east of K Buildings. The nearest Scav extract, Heating Pipe, is about 90 m north. Nearby: 4 weapon boxes and a jacket within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/The_TerraGroup_Trail_-_Part_9#Reserve"
     },
@@ -1990,13 +2310,17 @@
       "name": "K4",
       "x": 60,
       "z": -112,
-      "meaning": "Storage building 'K' #4. The AK-50 barrel for the quest Hobby Club is in K #4 or K #6, and Glukhar can spawn among the K buildings. In the middle of Reserve, about 25 m south-east of Underground storage bunker. The nearest Scav extract, Depot Hermetic Door, is about 60 m west. Nearby: locked doors for the RB-PSV2 key, RB-PSV1 key, RB-PSP1 key and 1 more; 3 weapon boxes, 3 technical supply crates, 4 ration supply crates and a toolbox within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "Storage building 'K' #4. The AK-50 barrel for the quest Hobby Club is in K #4 or K #6, and Glukhar can spawn among the K buildings. In the middle of Reserve, about 25 m south-east of Underground storage bunker. The nearest Scav extract, Depot Hermetic Door, is about 60 m west. Nearby: 3 weapon boxes, a technical supply crate and a ration supply crate within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Hobby_Club#Reserve_barrel_location"
     },
     {
       "name": "K5",
       "x": -10.5,
       "z": -115,
+      "y": -5,
+      "bottom": -6,
       "meaning": "One of the base's storage buildings marked 'K'. The wiki lists them among Glukhar's spawn areas. In the north of Reserve, about 40 m east of K Buildings. The nearest Scav extract, Heating Pipe, is about 70 m north. Nearby: 3 weapon boxes within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Reserve#Boss"
     },
@@ -2004,13 +2328,17 @@
       "name": "K6",
       "x": 54,
       "z": -132,
-      "meaning": "Storage building 'K' #6. The AK-50 barrel for the quest Hobby Club is in K #4 or K #6, and Glukhar can spawn among the K buildings. In the north of Reserve, about 30 m east of Underground storage bunker. The nearest PMC and Scav extract, Bunker Hermetic Door, is about 60 m north. Nearby: locked doors for the RB-PSV2 key and RB-PSP1 key; spawns for Glukhar; 4 weapon boxes, 3 technical supply crates, 9 ration supply crates and 6 toolboxes within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "Storage building 'K' #6. The AK-50 barrel for the quest Hobby Club is in K #4 or K #6, and Glukhar can spawn among the K buildings. In the north of Reserve, about 30 m east of Underground storage bunker. The nearest PMC and Scav extract, Bunker Hermetic Door, is about 60 m north. Nearby: spawns for Glukhar; 4 weapon boxes, a technical supply crate, 3 ration supply crates and 3 toolboxes within 30 m.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Hobby_Club#Reserve_barrel_location"
     },
     {
       "name": "Dome",
       "x": -8.5,
       "z": 175,
+      "y": -5,
+      "bottom": -6,
       "meaning": "In the south of Reserve, about 35 m north of the Cliff Descent PMC extract. Nearby: locked doors for the RB-KPRL key, RB-KORL key, RB-RLSA key and 1 more; 3 weapon boxes and 8 toolboxes within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     },
@@ -2018,7 +2346,9 @@
       "name": "Tarmac",
       "x": -120,
       "z": 37,
-      "meaning": "In the east of Reserve, right by RB-PKPM marked room. The nearest PMC extract, D-2, is about 140 m south. Nearby: locked doors for the RB-PKPM marked key and RB-PKPTS key; spawns for Raiders; 23 weapon boxes, 2 technical supply crates, 5 ration supply crates and 8 grenade boxes within 30 m.",
+      "y": -5,
+      "bottom": -6,
+      "meaning": "In the east of Reserve, right by RB-PKPM marked room. The nearest PMC extract, D-2, is about 140 m south. Nearby: spawns for Raiders; 6 weapon boxes, a technical supply crate, 3 ration supply crates and a jacket within 30 m.",
       "source": "https://tarkov.dev/map/reserve"
     }
   ],
@@ -2028,7 +2358,9 @@
       "x": -258.2,
       "z": -71.2,
       "y": -3,
-      "meaning": "In the north of Shoreline, about 60 m east of Labyrinth transit. The nearest Scav extract, East Wing Gym Entrance, is about 50 m north-east. Nearby: locked doors for the Health Resort west wing room 203 key, Health Resort east wing room 206 key and Health Resort east wing room 205 key; spawns for Cultist Priest; 4 weapon boxes, 2 medcases and a dead Scav within 30 m.",
+      "bottom": -4,
+      "top": -2,
+      "meaning": "In the north of Shoreline, about 60 m east of Labyrinth transit. The nearest Scav extract, East Wing Gym Entrance, is about 50 m north-east. Nearby: spawns for Cultist Priest; a weapon box within 30 m.",
       "source": "https://tarkov.dev/map/shoreline"
     },
     {
@@ -2036,6 +2368,8 @@
       "x": -215.8,
       "z": 178.4,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the middle of Shoreline, about 220 m south-east of Bus Stop. The nearest transit, Transit to Labyrinth?, is about 260 m north.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2044,6 +2378,8 @@
       "x": -189.3,
       "z": 420,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the south of Shoreline, about 180 m north-west of Pier. The nearest transit, Transit to Icebreaker, is about 160 m south-east.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2052,6 +2388,8 @@
       "x": -496,
       "z": 257,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the middle of Shoreline, about 270 m south-west of Radio Tower. The nearest Scav extract, Lighthouse, is about 310 m south.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2060,6 +2398,8 @@
       "x": -708.9,
       "z": 93.91,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the east of Shoreline, about 270 m north-east of Weather Station. The nearest Scav extract, Road to Customs, is about 180 m north-east.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2068,6 +2408,8 @@
       "x": 326,
       "z": -118.5,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "The swamp village. Most spawns for the hard drive in the quest Serious Allegations are spread across its houses. In the north-west of Shoreline, about 250 m north of Abandoned village. The nearest transit, Transit to Lighthouse, is about 130 m north-west.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Serious_Allegations#Swamp_village_houses"
     },
@@ -2076,6 +2418,8 @@
       "x": 418.4,
       "z": 118,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the west of Shoreline, right by Abandoned village. The nearest Scav extract, Svetliy Dead End, is about 45 m west.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2084,6 +2428,8 @@
       "x": 288,
       "z": 144,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the west of Shoreline, about 130 m east of Abandoned village. The nearest Scav extract, Svetliy Dead End, is about 170 m west.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2092,6 +2438,8 @@
       "x": 128,
       "z": 93,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the west of Shoreline, about 240 m south-west of Bus Stop. The nearest Scav extract, Svetliy Dead End, is about 330 m west.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2100,6 +2448,8 @@
       "x": -355,
       "z": 188,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the middle of Shoreline, about 140 m east of Power Station. The nearest Scav extract, East Wing Gym Entrance, is about 290 m north.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2108,6 +2458,8 @@
       "x": -338.6,
       "z": 525,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the south of Shoreline, about 180 m south-east of Gas Station. The nearest transit, Transit to Icebreaker, is about 25 m west.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2116,6 +2468,8 @@
       "x": 216,
       "z": 424,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the south-west of Shoreline, about 190 m south-east of Tunnel. The nearest Scav extract, Ruined Road, is about 180 m north-west.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2124,6 +2478,8 @@
       "x": -96,
       "z": -6,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the middle of Shoreline, about 110 m south-west of West Wing. The nearest transit, Transit to Labyrinth?, is about 130 m north-east. Nearby: spawns for Sanitar.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2132,6 +2488,8 @@
       "x": 52,
       "z": 134,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the west of Shoreline, about 85 m south-east of Cottages. The nearest transit, Transit to Labyrinth?, is about 330 m north-east.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2140,6 +2498,8 @@
       "x": -153,
       "z": -290,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "The bunker by the health resort. The quest Master Key has you take a key from a chair in it, and an RB-AO key can spawn on its bed. In the north of Shoreline, about 170 m north-west of Admin. The nearest PMC extract, Cliff Descent, is about 80 m north-east.",
       "source": "https://escapefromtarkov.fandom.com/wiki/Master_Key#Guide"
     },
@@ -2148,6 +2508,8 @@
       "x": -625,
       "z": 484,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the south-east of Shoreline, about 260 m south-east of Weather Station. The nearest Scav extract, Lighthouse, is about 190 m south-west.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2156,6 +2518,8 @@
       "x": -622,
       "z": -202,
       "y": -3,
+      "bottom": -4,
+      "top": -2,
       "meaning": "In the north-east of Shoreline, about 310 m north of Radio Tower. The nearest PMC and Scav extract, Smugglers' Path (Co-op), is about 120 m north-east.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2163,15 +2527,17 @@
       "name": "West Wing",
       "x": -171,
       "z": -83,
-      "y": 0,
-      "meaning": "In the north of Shoreline, about 25 m west of Labyrinth transit. The nearest transit, Transit to Labyrinth?, is about 25 m east. Nearby: locked doors for the Health Resort west wing office room 112 key, Health Resort west wing office room 104 key, Health Resort universal utility room key and 6 more; spawns for Cultist Priest; a safe, 12 weapon boxes, 4 grenade boxes and a jacket within 30 m.",
+      "bottom": -100,
+      "top": 100,
+      "meaning": "In the north of Shoreline, about 25 m west of Labyrinth transit. The nearest transit, Transit to Labyrinth?, is about 25 m east. Nearby: locked doors for the Health Resort west wing office room 112 key, Health Resort west wing office room 104 key, Health Resort universal utility room key and 7 more; spawns for Cultist Priest; a safe, 14 weapon boxes, 4 grenade boxes and a jacket within 30 m.",
       "source": "https://tarkov.dev/map/shoreline"
     },
     {
       "name": "East Wing",
       "x": -329,
       "z": -83,
-      "y": 0,
+      "bottom": -100,
+      "top": 100,
       "meaning": "In the north of Shoreline, about 70 m east of Resort. The nearest Scav extract, East Wing Gym Entrance, is about 35 m north-west. Nearby: locked doors for the Health Resort office key with a blue tape, Health Resort east wing office room 107 key, Health Resort east wing room 310 key and 7 more; 16 weapon boxes, 2 medcases, a PC and 2 grenade boxes within 30 m.",
       "source": "https://tarkov.dev/map/shoreline"
     },
@@ -2179,7 +2545,8 @@
       "name": "Admin",
       "x": -252,
       "z": -146,
-      "y": 0,
+      "bottom": -100,
+      "top": 100,
       "meaning": "In the north of Shoreline, about 75 m north of Resort. The nearest Scav extract, Admin Basement, is right here. Nearby: 2 safes, 4 weapon boxes, 9 PCs and 3 cash registers within 30 m.",
       "source": "https://tarkov.dev/map/shoreline"
     }
