@@ -1682,7 +1682,7 @@
     "position": {
       "x": -27,
       "z": -103,
-      "y": 516.5
+      "y": 35
     },
     "itemRefs": [
       {
@@ -2116,7 +2116,7 @@
     "position": {
       "x": 91,
       "z": 54,
-      "y": 516.5
+      "y": 35
     }
   },
   {
@@ -2569,7 +2569,8 @@
     "source": "https://escapefromtarkov.fandom.com/wiki/RB-AK_key",
     "position": {
       "x": -140,
-      "z": -14.5
+      "z": -14.5,
+      "y": -5
     },
     "itemRefs": [
       {
@@ -2606,7 +2607,8 @@
     "source": "https://escapefromtarkov.fandom.com/wiki/RB-MP21_key",
     "position": {
       "x": 14.5,
-      "z": -10.8
+      "z": -10.8,
+      "y": -5
     },
     "itemRefs": [
       {
@@ -2649,7 +2651,8 @@
     "source": "https://escapefromtarkov.fandom.com/wiki/RB-BK_marked_key",
     "position": {
       "x": -165,
-      "z": 57
+      "z": 57,
+      "y": -5
     },
     "itemRefs": [
       {
@@ -2797,7 +2800,8 @@
     "source": "https://escapefromtarkov.fandom.com/wiki/RB-RLSA_key",
     "position": {
       "x": -25,
-      "z": 180
+      "z": 180,
+      "y": -5
     },
     "itemRefs": [
       {
@@ -2878,7 +2882,8 @@
     "source": "https://escapefromtarkov.fandom.com/wiki/Reserve",
     "position": {
       "x": 28,
-      "z": -102
+      "z": -102,
+      "y": -5
     }
   },
   {
@@ -3074,7 +3079,8 @@
     "source": "https://escapefromtarkov.fandom.com/wiki/RB-KSM_key",
     "position": {
       "x": -67,
-      "z": -30
+      "z": -30,
+      "y": -5
     },
     "itemRefs": [
       {
@@ -3112,7 +3118,8 @@
     "source": "https://escapefromtarkov.fandom.com/wiki/RB-RH_key",
     "position": {
       "x": -49.5,
-      "z": 15.5
+      "z": 15.5,
+      "y": -5
     },
     "itemRefs": [
       {
@@ -3153,7 +3160,8 @@
     "source": "https://escapefromtarkov.fandom.com/wiki/RB-MP13_key",
     "position": {
       "x": 82.2,
-      "z": -30.2
+      "z": -30.2,
+      "y": -5
     },
     "itemRefs": [
       {
@@ -3189,7 +3197,8 @@
     "source": "https://escapefromtarkov.fandom.com/wiki/RB-ORB1_key",
     "position": {
       "x": -104,
-      "z": 93
+      "z": 93,
+      "y": -5
     },
     "itemRefs": [
       {
@@ -3245,8 +3254,7 @@
     "source": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_management_office_safe_key",
     "position": {
       "x": -252,
-      "z": -146,
-      "y": 0
+      "z": -146
     },
     "itemRefs": [
       {
@@ -3332,8 +3340,7 @@
     "source": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_office_key_with_a_blue_tape",
     "position": {
       "x": -329,
-      "z": -83,
-      "y": 0
+      "z": -83
     },
     "itemRefs": [
       {
@@ -3614,8 +3621,7 @@
     "source": "https://escapefromtarkov.fandom.com/wiki/Health_Resort_west_wing_office_room_112_key",
     "position": {
       "x": -171,
-      "z": -83,
-      "y": 0
+      "z": -83
     },
     "itemRefs": [
       {

@@ -47,6 +47,8 @@ interface MapLabel {
   x: number;
   z: number;
   y?: number;
+  meaning: string;
+  source: string;
 }
 
 export const GLOSSARY: readonly GlossaryEntry[] = termData as GlossaryEntry[];
@@ -84,11 +86,11 @@ function labelEntries(): GlossaryEntry[] {
         term: label.name,
         aliases: [],
         category: "landmark",
-        meaning: `A place labelled on tarkov.dev's ${config.name} map.`,
+        meaning: label.meaning,
         map,
         at: { kind: "label", name: label.name },
         confidence: "high",
-        source: `https://tarkov.dev/map/${map}`,
+        source: label.source,
         position: { x: label.x, z: label.z, ...(label.y !== undefined ? { y: label.y } : {}) },
       });
     }

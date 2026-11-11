@@ -13,6 +13,7 @@ import {
   lookupTerm,
 } from "@/app/lib/glossary/glossary";
 import labels from "@/app/lib/glossary/map-labels.json";
+import notes from "@/app/lib/glossary/label-notes.json";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
 import { matchPlace } from "@/app/lib/raid-planner/resolve";
 import { nameWords } from "@/app/lib/search/name-match";
@@ -175,6 +176,23 @@ describe("map labels", () => {
     expect(sniperHill).toMatchObject({ category: "landmark", at: { kind: "label", name: "Sniper Hill" }, source: "https://tarkov.dev/map/customs" });
     expect(ALL_ENTRIES.filter((entry) => entry.map === "customs" && entry.term === "Big Red")).toHaveLength(1);
     expect(listTerms({ map: "customs", category: "landmark" }).length).toBeGreaterThan(30);
+  });
+
+  it("describes every label from the map data, and from the wiki where it has a description", () => {
+    const fromLabels = ALL_ENTRIES.slice(GLOSSARY.length);
+    expect(fromLabels.length).toBeGreaterThan(200);
+    for (const entry of fromLabels) {
+      const mapName = mapConfigs.find((config) => config.key === entry.map)!.name;
+      expect(entry.meaning, entry.term).toContain(`of ${mapName}`);
+      expect(entry.source, entry.term).toMatch(/^https:\/\/(escapefromtarkov\.fandom\.com\/wiki\/|tarkov\.dev\/map\/)/);
+    }
+    for (const [map, names] of Object.entries(notes as Record<string, Record<string, unknown>>)) {
+      for (const name of Object.keys(names)) expect(labels[map as keyof typeof labels].map((label) => label.name), map).toContain(name);
+    }
+
+    const streamerHouse = only("Streamer House", { map: "customs" }).entry;
+    expect(streamerHouse.source).toBe("https://escapefromtarkov.fandom.com/wiki/USEC_stash_key#Lock_Location");
+    expect(streamerHouse.meaning).toMatch(/^Warehouse #6.*In the west of Customs, right by USEC stash\./);
   });
 });
 
