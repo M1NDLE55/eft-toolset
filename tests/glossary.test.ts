@@ -193,7 +193,6 @@ describe("landmark places", () => {
     const names = landmarkNames("customs");
     expect(matchPlace(names, "Paradigm warehouse")).toMatchObject({ match: "exact", place: { name: "Big Red" } });
     expect(matchPlace(names, "Paradigm warehuose")).toMatchObject({ match: "typo", place: { name: "Big Red" } });
-    // "Big Red" and its alias "Big Red warehouse" both start with "big re", but they are one place.
     expect(matchPlace(names, "big re")).toMatchObject({ match: "partial", place: { name: "Big Red" } });
   });
 

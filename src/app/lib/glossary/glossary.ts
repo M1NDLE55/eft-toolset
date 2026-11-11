@@ -266,7 +266,6 @@ export function landmarkPlaces(mapKey: string): Place[] {
   return landmarksOf(mapKey).places;
 }
 
-/** Landmarks under their term and each alias, for matching names. */
 export function landmarkNames(mapKey: string): Place[] {
   return landmarksOf(mapKey).names;
 }
