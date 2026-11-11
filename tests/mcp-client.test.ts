@@ -6,13 +6,18 @@ import { AjvJsonSchemaValidator } from "@modelcontextprotocol/sdk/validation/ajv
 import { POST } from "@/app/api/mcp/route";
 import { clearTarkovResourceCache } from "@/app/lib/api/tarkov-server";
 import { MCP_TOOL_NAMES } from "@/app/lib/mcp/catalog";
+import { clearWikiCache } from "@/app/lib/wiki/fandom";
 import { createTarkovFixtures } from "./fixtures/tarkov";
+import { wikiFixtureResponse } from "./fixtures/wiki";
 
 beforeEach(() => {
   clearTarkovResourceCache();
+  clearWikiCache();
   vi.spyOn(console, "info").mockImplementation(() => undefined);
   const fixtures = createTarkovFixtures();
   vi.spyOn(globalThis, "fetch").mockImplementation(async (input) => {
+    const wiki = wikiFixtureResponse(String(input));
+    if (wiki) return wiki;
     const resource = new URL(String(input)).pathname.split("/").pop()!;
     const fixture = (fixtures as Record<string, unknown>)[resource];
     if (!fixture) return new Response("missing", { status: 404 });
@@ -45,6 +50,7 @@ it("serves every tool to the SDK client, whose output validation accepts each re
     ["get_map_details", { map: "factory" }],
     ["create_raid_plan", { map: "factory", name: "x", route: [{ place: "Gate" }] }],
     ["create_import_link", { itemGroups: [{ name: "a", items: ["Test Rifle"] }] }],
+    ["get_wiki_page", { page: "Tagilla" }],
     // Optional output branches.
     ["get_item", { item: "Test Rifle", include: ["tasks", "barters", "crafts"] }],
     ["get_item", { item: "rifle", include: [] }],
@@ -57,6 +63,10 @@ it("serves every tool to the SDK client, whose output validation accepts each re
     ["optimize_build", { build: { weapon: "weapon" }, goal: "ergonomics", budgetRUB: 1 }],
     ["modify_build", { build: { weapon: "weapon" }, changes: [{ action: "set_ammo", item: "Test Ammo" }, { action: "clear_ammo" }] }],
     ["get_ammo_options", { build: { weapon: "weapon", preset: "default" }, sortBy: "price", limit: 1 }],
+    ["get_wiki_page", { page: "customs extracts" }],
+    ["get_wiki_page", { page: "Chemical Part 2", sections: ["Guide", "nope"] }],
+    ["get_wiki_page", { page: "Labs" }],
+    ["get_wiki_page", { page: "Hideout" }],
     ["create_raid_plan", { map: "factory", name: "y", layers: ["extracts:pmc", "nope"], notes: [{ at: { x: 1, z: 2 }, title: "n" }] }],
   ];
   // tools/list publishes compact schemas while the server validates with the full ones, so

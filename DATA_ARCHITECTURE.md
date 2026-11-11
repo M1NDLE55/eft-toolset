@@ -93,6 +93,22 @@ call logs one JSON line (`event: "mcp_tool_call"`) with a request id, the tool, 
 outcome, duration, and whether the data was stale. Unexpected failures return the request
 id as a reference.
 
+`get_wiki_page` is the one tool that doesn't read tarkov.dev. It reads the community Escape
+from Tarkov Wiki through Fandom's MediaWiki API (`src/app/lib/wiki/fandom.ts`): one request
+for a page's current wikitext, following redirects, and one search request when no page has
+the title. The API is the only part of the wiki that answers server requests, since its
+HTML pages sit behind a Cloudflare challenge. Fandom marks API responses uncacheable, so
+pages and searches are kept in memory for an hour (at most 200 entries per instance);
+failures aren't cached. Requests time out after 10 seconds, and a failure returns a tool
+error naming the wiki. `src/app/lib/wiki/wikitext.ts` turns wikitext into plain text:
+infoboxes as fields, tables as rows, links as their text, and no images, references,
+navigation boxes, comments, hidden elements, or invisible characters. Results are cut at
+12,000 characters, with the page's section list for asking by heading. Wiki text is
+written by anyone, so the tool description, the `content` field, and the server
+instructions all tell the model to treat it as reference rather than instructions. The
+wiki is licensed CC BY-NC-SA, so every result carries a credit line (see the README's
+License section).
+
 The layers are kept apart:
 
 - `src/app/lib/mcp/` holds only schemas, registration, and result shaping. `catalog.ts`

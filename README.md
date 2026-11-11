@@ -22,7 +22,7 @@ Assemble weapons part by part with compatible slots, factory presets, and live e
 Plan raids on interactive maps, including Icebreaker and its decks. Draw routes, arrows, waypoints, and notes on each level, measure distances, and toggle extracts, transits, spawns, locks, hazards, and loot layers. Plans support undo and redo, show their total route distance, and can be shared by link or exported to a file.
 
 ### AI assistants (MCP)
-Every tool is also available to Claude and other AI assistants through a public [Model Context Protocol](https://modelcontextprotocol.io) server at `https://www.eft-toolset.com/api/mcp`. Assistants get the same live data and calculations as the app: item lookups and loot pricing, weapon builds that they can modify part by part, optimise, and compare, and raid plans drawn from named extracts and spawns. Builds and plans come back as share links that open in the app, and `create_import_link` bundles item groups, builds, and plans into one import link that opens `/data` ready to merge. Connection steps for each client are on the [`/mcp`](https://www.eft-toolset.com/mcp) page; for Claude Code:
+Every tool is also available to Claude and other AI assistants through a public [Model Context Protocol](https://modelcontextprotocol.io) server at `https://www.eft-toolset.com/api/mcp`. Assistants get the same live data and calculations as the app: item lookups and loot pricing, weapon builds that they can modify part by part, optimise, and compare, and raid plans drawn from named extracts and spawns. `get_wiki_page` reads the community [Escape from Tarkov Wiki](https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki) for what tarkov.dev doesn't cover, such as boss behaviour, extract conditions, and quest guides. Builds and plans come back as share links that open in the app, and `create_import_link` bundles item groups, builds, and plans into one import link that opens `/data` ready to merge. Connection steps for each client are on the [`/mcp`](https://www.eft-toolset.com/mcp) page; for Claude Code:
 
 ```bash
 claude mcp add --transport http eft-toolset https://www.eft-toolset.com/api/mcp
@@ -76,6 +76,8 @@ All are optional.
 ## License
 
 Licensed under the GNU General Public License v3.0. See [LICENSE](LICENSE) for details.
+
+The GPL covers this project's code only. Text that `get_wiki_page` returns comes from the [Escape from Tarkov Wiki](https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki) on Fandom, written by its contributors and licensed [CC BY-NC-SA](https://www.fandom.com/licensing). Every wiki result carries a credit line to keep with the text. The licence allows **non-commercial use only**, so monetising this service (ads, paid tiers, sponsorships) would mean removing or rethinking the wiki tool first.
 
 ## Contact
 
