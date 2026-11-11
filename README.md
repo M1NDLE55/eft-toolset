@@ -22,7 +22,7 @@ Assemble weapons part by part with compatible slots, factory presets, and live e
 Plan raids on interactive maps, including Icebreaker and its decks. Draw routes, arrows, waypoints, and notes on each level, measure distances, and toggle extracts, transits, spawns, locks, hazards, and loot layers. Plans support undo and redo, show their total route distance, and can be shared by link or exported to a file.
 
 ### AI assistants (MCP)
-Every tool is also available to Claude and other AI assistants through a public [Model Context Protocol](https://modelcontextprotocol.io) server at `https://www.eft-toolset.com/api/mcp`. Assistants get the same live data and calculations as the app: item lookups and loot pricing, weapon builds that they can modify part by part, optimise, and compare, and raid plans drawn from named extracts and spawns. `get_wiki_page` reads the community [Escape from Tarkov Wiki](https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki) for what tarkov.dev doesn't cover, such as boss behaviour, extract conditions, and quest guides. Builds and plans come back as share links that open in the app, and `create_import_link` bundles item groups, builds, and plans into one import link that opens `/data` ready to merge. Connection steps for each client are on the [`/mcp`](https://www.eft-toolset.com/mcp) page; for Claude Code:
+Every tool is also available to Claude and other AI assistants through a public [Model Context Protocol](https://modelcontextprotocol.io) server at `https://www.eft-toolset.com/api/mcp`. Assistants get the same live data and calculations as the app: item lookups and loot pricing, weapon builds that they can modify part by part, optimise, and compare, and raid plans drawn from named extracts and spawns. `lookup_term` explains player jargon (callouts like Big Red, nicknames like LEDX or M995, slang like FIR) and links it to the real items and map positions, and `get_wiki_page` reads the community [Escape from Tarkov Wiki](https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki) for what tarkov.dev doesn't cover, such as boss behaviour, extract conditions, and quest guides. Builds and plans come back as share links that open in the app, and `create_import_link` bundles item groups, builds, and plans into one import link that opens `/data` ready to merge. Connection steps for each client are on the [`/mcp`](https://www.eft-toolset.com/mcp) page; for Claude Code:
 
 ```bash
 claude mcp add --transport http eft-toolset https://www.eft-toolset.com/api/mcp
@@ -62,6 +62,7 @@ npm run dev
 | `npm run lint` | Run ESLint, including the React Compiler rules |
 | `npm test` | Run the Vitest suite |
 | `node scripts/generate-maps-config.mjs` | Regenerate the raid planner's map configuration from tarkov.dev after a game update |
+| `node scripts/build-glossary.mjs` | Resolve the glossary's landmark positions and item ids against live data after editing `src/app/lib/glossary/terms.json` |
 
 ### Environment variables
 

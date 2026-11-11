@@ -2,6 +2,7 @@ import type { MapDetails } from "@/app/lib/types/raidPlanner";
 import { createId } from "@/app/lib/id";
 import { InputError } from "@/app/lib/input-error";
 import { normalizeText } from "@/app/lib/search/normalize-text";
+import { editDistance, nameWords, typoAllowance } from "@/app/lib/search/name-match";
 import { floorAt, floorName } from "./floors";
 import { mapConfigs } from "./maps-config";
 import { decodePlanSharePayload, type DecodedSharedPlan } from "./share";
@@ -289,47 +290,7 @@ function centre(points: GamePoint[]): GamePoint {
   return { x: x / points.length, y: y / points.length, z: z / points.length };
 }
 
-// Place names are compared the way players type them: case, accents, apostrophes, hyphens,
-// spacing, and plural "s" are ignored, and small typos are tolerated.
-
-function placeWords(value: string) {
-  return normalizeText(value)
-    .replace(/['’‘`´]/g, "")
-    .replace(/[^\p{L}\p{N}]+/gu, " ")
-    .trim()
-    .split(" ")
-    .filter(Boolean)
-    .map((word) => (word.length > 3 && word.endsWith("s") && !word.endsWith("ss") ? word.slice(0, -1) : word));
-}
-
 const FILLER_WORDS = new Set(["the", "extract", "extraction", "exfil", "exit"]);
-
-/** Edit distance with adjacent transpositions, giving up above `limit`. */
-function editDistance(a: string, b: string, limit: number) {
-  if (Math.abs(a.length - b.length) > limit) return limit + 1;
-  let previousRow: number[] = [];
-  let row = Array.from({ length: b.length + 1 }, (_, index) => index);
-  for (let i = 1; i <= a.length; i += 1) {
-    const next = [i];
-    let best = i;
-    for (let j = 1; j <= b.length; j += 1) {
-      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      let value = Math.min(row[j] + 1, next[j - 1] + 1, row[j - 1] + cost);
-      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) value = Math.min(value, previousRow[j - 2] + 1);
-      next.push(value);
-      best = Math.min(best, value);
-    }
-    if (best > limit) return limit + 1;
-    previousRow = row;
-    row = next;
-  }
-  return row[b.length];
-}
-
-/** How many typos a name of this length can have and still match on its own. */
-function typoAllowance(length: number) {
-  return length <= 3 ? 0 : length <= 8 ? 1 : 2;
-}
 
 export type PlaceMatch =
   | {
@@ -362,7 +323,7 @@ function indexPlaces(places: readonly Place[]): PlaceIndex {
   let index = placeIndexes.get(places);
   if (!index) {
     const entries = places.map((place) => {
-      const words = placeWords(place.name);
+      const words = nameWords(place.name);
       return { place, words, compact: words.join("") };
     });
     const groupOf = new Map<string, IndexedPlace[]>();
@@ -397,7 +358,7 @@ export interface PlaceMatchOptions {
 
 /** Matches a place name, from exact to a close spelling; never throws. */
 export function matchPlace(places: readonly Place[], reference: string, options: PlaceMatchOptions = {}): PlaceMatch {
-  const given = placeWords(reference);
+  const given = nameWords(reference);
   // "the Smugglers' Boat extract" means Smugglers' Boat.
   const meaningful = given.filter((word) => !FILLER_WORDS.has(word));
   const words = meaningful.length ? meaningful : given;
@@ -465,7 +426,7 @@ export function matchPlace(places: readonly Place[], reference: string, options:
 }
 
 export const PLACE_HELP =
-  "Places are extracts, transits, areas, spawn zones, switches, hazards, stationary weapons, and key locks (by key name). Use get_map_details to list them, or give x and z coordinates.";
+  "Places are extracts, transits, areas, spawn zones, switches, hazards, stationary weapons, key locks (by key name), and landmarks such as Big Red (lookup_term lists a map's). Use get_map_details to list the rest, or give x and z coordinates.";
 
 export function findPlace(places: readonly Place[], reference: string): Place {
   const result = matchPlace(places, reference);

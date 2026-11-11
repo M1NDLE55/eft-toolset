@@ -93,6 +93,16 @@ function isEmptyObject(value: unknown) {
   return !!value && typeof value === "object" && !Array.isArray(value) && Object.keys(value).length === 0;
 }
 
+/**
+ * The annotations to publish: openWorldHint defaults to true in the MCP specification, so
+ * it is only published when false. Clients read an omitted hint as its default.
+ */
+export function publishedAnnotations(annotations: ToolAnnotations): ToolAnnotations {
+  if (annotations.openWorldHint !== true) return annotations;
+  const { openWorldHint, ...rest } = annotations;
+  return rest;
+}
+
 const listings = new WeakMap<McpServer, ListedTool[]>();
 const published = new Map<string, Tool>();
 
@@ -113,7 +123,7 @@ function publish(tool: ListedTool): Tool {
       description: tool.description,
       inputSchema: publishedInputSchema(tool.inputSchema) as Tool["inputSchema"],
       outputSchema: publishedOutputSchema(tool.outputSchema) as Tool["outputSchema"],
-      annotations: tool.annotations,
+      annotations: publishedAnnotations(tool.annotations),
     };
     published.set(tool.name, entry);
   }

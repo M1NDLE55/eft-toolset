@@ -131,14 +131,14 @@ export const MCP_TOOL_GROUPS = [
         title: "Get map details",
         summary: "Extracts, bosses, spawns, areas, locks, hazards, and loot with coordinates and levels.",
         description:
-          "Map data with game coordinates (metres) and levels: player count and raid time, extracts (with any item they take), transits, bosses (chance, locations, escorts), areas named after key-lock groups, spawn zones with counts, hazards, switches, and stationary weapons. Spawn points, key locks, and loot containers are listed on request, filtered and paged. Also the layer ids create_raid_plan accepts. tarkov.dev has no landmark names (such as Big Red) or extract conditions, so use coordinates, areas, or locks.",
+          "Map data with game coordinates (metres) and levels: player count and raid time, extracts (with any item they take), transits, bosses (chance, locations, escorts), areas named after key-lock groups, spawn zones with counts, hazards, switches, and stationary weapons. Spawn points, key locks, and loot containers are listed on request, filtered and paged. Also the layer ids create_raid_plan accepts.",
       },
       {
         name: "create_raid_plan",
         title: "Create raid plan",
         summary: "Draw routes, arrows, and notes, using named places, and get a share link.",
         description:
-          "Draws a plan on a map (a route of waypoints, pen and arrow drawings, note pins, and the layers to show) and returns a shareLink that opens it in the app to view, edit, and save. Points are coordinates or names from get_map_details: extracts, transits, areas, spawn zones, switches, hazards, stationary weapons, or a key (for its lock); names ignore case and punctuation and allow small typos. resolvedPlaces shows what each name became; when approximate, call the place by its resolved name. Every problem is reported at once; unknown colours and layers only warn. Route distance is straight-line.",
+          "Draws a plan on a map (a route of waypoints, pen and arrow drawings, note pins, and the layers to show) and returns a shareLink that opens it in the app to view, edit, and save. Points are coordinates or place names: extracts, transits, areas, spawn zones, switches, hazards, stationary weapons, keys (for their locks), or landmarks like Big Red; case, punctuation, and small typos are ignored. resolvedPlaces shows what each name became; when approximate, call the place by its resolved name. Every problem is reported at once; unknown colours and layers only warn.",
       },
       {
         name: "read_raid_plan",
@@ -150,9 +150,16 @@ export const MCP_TOOL_GROUPS = [
     ],
   },
   {
-    tool: "Wiki",
+    tool: "Wiki and glossary",
     href: "https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki",
     tools: [
+      {
+        name: "lookup_term",
+        title: "Look up Tarkov jargon",
+        summary: "Explain player slang, callouts, and nicknames, linked to the real map place, item, or key.",
+        description:
+          "Explains Tarkov jargon (callouts like Big Red, nicknames like LEDX or M995, bosses, slang like FIR) with item ids and landmark positions. Takes a whole message. Landmarks work as create_raid_plan places. Omit terms to list.",
+      },
       {
         name: "get_wiki_page",
         title: "Read wiki page",
