@@ -56,6 +56,7 @@ const EXAMPLES = [
   "Compare that build with the default M4A1 preset.",
   "Plan a Customs raid from Crossroads to Dorms and out at Smugglers' Boat, with notes.",
   "Make an item group of every injector and give me a link to import it.",
+  "How do I beat Tagilla, and what does he carry?",
 ];
 
 export default function McpPage() {

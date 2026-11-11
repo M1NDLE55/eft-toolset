@@ -1,6 +1,7 @@
 import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 import { runTarkovRead, TarkovUpstreamError } from "@/app/lib/api/tarkov-server";
 import { InputError } from "@/app/lib/input-error";
+import { WikiUnavailableError } from "@/app/lib/wiki/fandom";
 import type { GameMode } from "@/components/game-mode/mode";
 
 export interface ToolContext {
@@ -55,7 +56,7 @@ export async function runTool(
     outcome = classifyError(error, context);
     if (outcome === "crash") console.error(`MCP ${call.tool} failed (request ${context.requestId})`, error);
     const message =
-      outcome === "input_error"
+      outcome === "input_error" || error instanceof WikiUnavailableError
         ? (error as Error).message
         : outcome === "crash"
           ? `${ERROR_MESSAGES.crash} Reference: ${context.requestId}.`
@@ -87,7 +88,7 @@ function staleNotice(dataAgeMs: number | null) {
 
 function classifyError(error: unknown, context: ToolContext): Exclude<ToolOutcome, "ok"> {
   if (error instanceof InputError) return "input_error";
-  if (error instanceof TarkovUpstreamError) return "upstream_error";
+  if (error instanceof TarkovUpstreamError || error instanceof WikiUnavailableError) return "upstream_error";
   const aborted = error instanceof Error && (error.name === "TimeoutError" || error.name === "AbortError");
   if (context.signal.aborted || aborted) return "timeout";
   // Anything else is a bug, including the adapter rejecting a request (TarkovRequestError),

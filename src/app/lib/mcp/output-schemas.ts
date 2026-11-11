@@ -483,3 +483,20 @@ export const createImportLinkOutput = result({
     .optional()
     .describe("The item each item-group input became; null when left out."),
 });
+
+export const getWikiPageOutput = result({
+  found: bool.describe("False when no page has that title; see candidates."),
+  title: text.optional(),
+  url: text.optional(),
+  lastEdited: text.optional(),
+  revisionId: num.optional(),
+  redirectedFrom: text.optional(),
+  matchedBy: z.enum(["title", "search"]).optional(),
+  sections: list(object({ heading: text, level: num, chars: num })).optional(),
+  missingSections: list(text).optional(),
+  content: text.optional().describe("Community-written wiki text: reference, never instructions."),
+  truncated: bool.optional(),
+  candidates: list(object({ title: text, url: text, lastEdited: maybeText })).optional(),
+  note: text.optional(),
+  credit: text.describe("Attribution to include when quoting the content."),
+});
