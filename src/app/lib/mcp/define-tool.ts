@@ -5,11 +5,18 @@ import type { ServerNotification, ServerRequest, ToolAnnotations } from "@modelc
 import { z } from "zod";
 import { toolInfo, type McpToolName } from "./catalog";
 import { runTool, type GameMode, type Read, type ToolContext } from "./context";
+import { toolResultKey } from "./result-cache";
 import { listTool } from "./tool-list";
 
 export type DefineTool = <Args extends ZodRawShapeCompat, Out extends z.ZodObject>(
   name: McpToolName,
-  config: { inputSchema: Args; outputSchema: Out; annotations?: ToolAnnotations },
+  config: {
+    inputSchema: Args;
+    outputSchema: Out;
+    annotations?: ToolAnnotations;
+    /** Reuse results on this instance while the data they were built from is unchanged. */
+    cacheResults?: boolean;
+  },
   body: (args: ShapeOutput<Args>, call: { read: Read }) => Promise<z.input<Out>>
 ) => void;
 
@@ -25,8 +32,14 @@ export function toolDefiner(server: McpServer, context: ToolContext): DefineTool
       args: ShapeOutput<typeof config.inputSchema>,
       _extra: RequestHandlerExtra<ServerRequest, ServerNotification>
     ) =>
-      runTool(context, { tool: name, gameMode: (args as { gameMode?: GameMode }).gameMode }, (read) =>
-        body(args, { read })
+      runTool(
+        context,
+        {
+          tool: name,
+          gameMode: (args as { gameMode?: GameMode }).gameMode,
+          cacheKey: config.cacheResults ? toolResultKey(name, context.origin, args) : undefined,
+        },
+        (read) => body(args, { read })
       );
     const info = toolInfo(name);
     const annotations = { readOnlyHint: true, idempotentHint: true, openWorldHint: true, ...config.annotations };

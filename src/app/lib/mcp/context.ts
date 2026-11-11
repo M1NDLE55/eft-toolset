@@ -1,8 +1,9 @@
 import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
-import { runTarkovRead, TarkovUpstreamError } from "@/app/lib/api/tarkov-server";
+import { runTarkovRead, TarkovUpstreamError, type DataSnapshot } from "@/app/lib/api/tarkov-server";
 import { InputError } from "@/app/lib/input-error";
 import { WikiUnavailableError } from "@/app/lib/wiki/fandom";
 import type { GameMode } from "@/components/game-mode/mode";
+import { readToolResult, storeToolResult } from "./result-cache";
 
 export interface ToolContext {
   /** Origin used for links back into the app. */
@@ -31,12 +32,14 @@ const ERROR_MESSAGES: Record<Exclude<ToolOutcome, "ok" | "input_error">, string>
  */
 export async function runTool(
   context: ToolContext,
-  call: { tool: string; gameMode?: GameMode },
+  call: { tool: string; gameMode?: GameMode; cacheKey?: string },
   body: (read: Read) => Promise<object>
 ): Promise<CallToolResult> {
   const startedAt = performance.now();
   let stale = false;
+  let cached = false;
   let dataAgeMs: number | null = null;
+  const snapshots: DataSnapshot[] = [];
   const read: Read = (work) =>
     runTarkovRead(work, {
       signal: context.signal,
@@ -46,12 +49,22 @@ export async function runTool(
       onDataAge: (ageMs) => {
         dataAgeMs = Math.max(dataAgeMs ?? 0, ageMs);
       },
+      onSnapshot: (snapshot) => {
+        snapshots.push(snapshot);
+      },
     });
   let outcome: ToolOutcome = "ok";
   try {
+    const hit = call.cacheKey ? readToolResult(call.cacheKey) : undefined;
+    if (hit) {
+      cached = true;
+      return toolResult(hit);
+    }
     const result = await body(read);
     const payload: Record<string, unknown> = stale ? { ...result, dataNotice: staleNotice(dataAgeMs) } : { ...result };
-    return { content: [{ type: "text", text: JSON.stringify(payload) }], structuredContent: payload };
+    // A result built from stale data is not kept, so it isn't served once tarkov.dev is back.
+    if (call.cacheKey && !stale) storeToolResult(call.cacheKey, payload, snapshots.flat());
+    return toolResult(payload);
   } catch (error) {
     outcome = classifyError(error, context);
     if (outcome === "crash") console.error(`MCP ${call.tool} failed (request ${context.requestId})`, error);
@@ -72,9 +85,14 @@ export async function runTool(
         outcome,
         durationMs: Math.round(performance.now() - startedAt),
         stale,
+        cached,
       })
     );
   }
+}
+
+function toolResult(payload: Record<string, unknown>): CallToolResult {
+  return { content: [{ type: "text", text: JSON.stringify(payload) }], structuredContent: payload };
 }
 
 function staleNotice(dataAgeMs: number | null) {

@@ -34,14 +34,28 @@ import type {
   SpawnKind,
 } from "@/app/lib/types/raidPlanner";
 import { TARKOV_OPERATIONS, type TarkovOperation } from "./operations";
+import { regionalCache } from "./shared-cache";
+import { USER_AGENT } from "./user-agent";
 import { AsyncLocalStorage } from "node:async_hooks";
 
 const UPSTREAM_BASE_URL = "https://json.tarkov.dev";
 const UPSTREAM_TIMEOUT_MS = 20_000;
 const UPSTREAM_MAX_BYTES = 32 * 1024 * 1024;
-const RESOURCE_TTL_MS = 5 * 60_000;
-const RESOURCE_REVALIDATE_MS = 30 * 60_000;
+/** tarkov.dev requests in flight at once per instance; the rest wait their turn. */
+const MAX_UPSTREAM_REQUESTS = 4;
+/** After a failed refresh, wait this long before the next try, doubling up to the maximum. */
+const RETRY_BASE_MS = 30_000;
+const RETRY_MAX_MS = 10 * 60_000;
+/** The longest Retry-After from tarkov.dev that is honoured. */
+const RETRY_AFTER_MAX_MS = 60 * 60_000;
 export const RESOURCE_MAX_STALE_MS = 6 * 60 * 60_000;
+const MINUTE_MS = 60_000;
+const HOUR_MS = 60 * MINUTE_MS;
+/** Bodies larger than this aren't shared: Runtime Cache items are capped at 2 MB. */
+const SHARED_MAX_CHARS = 1_000_000;
+const SHARED_KEY_VERSION = 1;
+/** A shared body is kept while its record points at it, which a 304 renews without rewriting the body. */
+const SHARED_BODY_TTL_SECONDS = 24 * 60 * 60;
 const MAX_RESOURCE_RECORDS = 100_000;
 const MAX_NESTED_ENTRIES = 20_000;
 const MAX_STRING_LENGTH = 10_000;
@@ -65,6 +79,39 @@ type Resource =
   | "hideout_en"
   | "maps"
   | "maps_en";
+
+interface ResourcePolicy {
+  /** Served without asking tarkov.dev for this long after it was last checked. */
+  freshMs: number;
+  /** Until this age a stale copy is served while it refreshes in the background; after it, callers wait. */
+  revalidateMs: number;
+  /** Kept in the regional shared cache, so other instances reuse it instead of asking tarkov.dev. */
+  shared: boolean;
+}
+
+// How long each dataset is trusted, set from how often tarkov.dev changes it. Refreshes are
+// conditional, so an unchanged dataset costs tarkov.dev a 304 and no body. Only small datasets
+// that rarely change are shared: the large ones exceed Runtime Cache's 2 MB item limit, and the
+// Hobby plan's write allowance is shared by the whole team.
+const RESOURCE_POLICIES: Record<Resource, ResourcePolicy> = {
+  // Flea and trader prices: tarkov.dev updates them every 5 to 10 minutes. 17 MB.
+  items: { freshMs: 5 * MINUTE_MS, revalidateMs: 30 * MINUTE_MS, shared: false },
+  // Map reports and task changes land with game-data updates. 9 MB and 2 MB.
+  maps: { freshMs: 30 * MINUTE_MS, revalidateMs: 2 * HOUR_MS, shared: false },
+  tasks: { freshMs: 30 * MINUTE_MS, revalidateMs: 2 * HOUR_MS, shared: false },
+  // Item names change with game patches. 1.7 MB, too close to the shared limit.
+  items_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: false },
+  // Trader assortments (barters) update every two hours; the rest change with patches. All under 300 KB.
+  barters: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
+  crafts: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
+  hideout: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
+  hideout_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
+  maps_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
+  tasks_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
+  // Only trader names are read from here.
+  traders: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
+  traders_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
+};
 
 type Dictionary<T> = Record<string, T>;
 type TranslationDictionary = Dictionary<string>;
@@ -310,10 +357,32 @@ interface MapsData {
 }
 
 interface ResourceCacheEntry {
+  /** When the value was last confirmed current with tarkov.dev, here or by another instance. */
   fetchedAt: number;
   value?: UpstreamEnvelope<unknown>;
+  /** The value's validators, sent back so an unchanged dataset is answered with a 304. */
+  etag?: string;
+  lastModified?: string;
   inFlight?: Promise<UpstreamEnvelope<unknown>>;
   failedAt?: number;
+  /** Failed refreshes in a row, and when the next one may start. */
+  failures?: number;
+  retryAt?: number;
+}
+
+/** What a refresh learned: the current value and when tarkov.dev last vouched for it. */
+interface Refreshed {
+  value: UpstreamEnvelope<unknown>;
+  etag?: string;
+  lastModified?: string;
+  checkedAt: number;
+}
+
+/** A shared dataset's validators and when an instance last confirmed them with tarkov.dev. */
+interface SharedMeta {
+  etag?: string;
+  lastModified?: string;
+  checkedAt: number;
 }
 
 interface ItemsContext {
@@ -365,7 +434,12 @@ interface MemoEntry {
 }
 
 export class TarkovUpstreamError extends Error {
-  constructor(message: string, readonly status?: number) {
+  constructor(
+    message: string,
+    readonly status?: number,
+    /** How long tarkov.dev asked us to wait (Retry-After), if it did. */
+    readonly retryAfterMs?: number
+  ) {
     super(message);
     this.name = "TarkovUpstreamError";
   }
@@ -419,6 +493,22 @@ export interface TarkovReadOptions {
   signal?: AbortSignal;
   onStale?: () => void;
   onDataAge?: (ageMs: number) => void;
+  /** Receives the datasets the read used, so a result built from them can be reused while they last. */
+  onSnapshot?: (snapshot: DataSnapshot) => void;
+}
+
+/** The datasets a read used, as they were then. Opaque outside this module. */
+export type DataSnapshot = ReadonlyArray<readonly [key: string, entry: object, value: unknown]>;
+
+/** Whether every dataset in the snapshot is still the copy the read used. */
+export function isSnapshotCurrent(snapshot: DataSnapshot) {
+  return (
+    snapshot.length > 0 &&
+    snapshot.every(([key, entry, value]) => {
+      const current = resourceCache.get(key);
+      return current === entry && current.value === value;
+    })
+  );
 }
 
 // Track cancellation and freshness for server-side reads.
@@ -434,6 +524,11 @@ export async function runTarkovRead<T>(
     if (entries.some((entry) => entry.failedAt !== undefined)) options.onStale?.();
     const oldest = Math.min(...entries.map((entry) => entry.fetchedAt));
     if (Number.isFinite(oldest)) options.onDataAge?.(Math.max(0, Date.now() - oldest));
+    options.onSnapshot?.(
+      Array.from(resourceCache).flatMap(([key, entry]) =>
+        context.resources.has(entry) ? [[key, entry, entry.value] as const] : []
+      )
+    );
     return data;
   });
 }
@@ -1000,37 +1095,163 @@ async function loadResource<T>(
   }
   operationContext.getStore()?.resources.add(entry);
 
+  const policy = RESOURCE_POLICIES[resource];
   const age = Date.now() - entry.fetchedAt;
-  if (entry.value && age < RESOURCE_TTL_MS) return entry.value as UpstreamEnvelope<T>;
-  if (entry.value && age < RESOURCE_REVALIDATE_MS) {
+  if (entry.value && age < policy.freshMs) return entry.value as UpstreamEnvelope<T>;
+  if (entry.value && age < policy.revalidateMs) {
     void refreshResource(gameMode, resource, entry).catch(() => undefined);
     return entry.value as UpstreamEnvelope<T>;
   }
   return refreshResource(gameMode, resource, entry) as Promise<UpstreamEnvelope<T>>;
 }
 
+/**
+ * Refreshes one dataset. Callers share a refresh in progress, and after a failure no refresh
+ * starts until the backoff ends; meanwhile a copy up to RESOURCE_MAX_STALE_MS old is served.
+ */
 function refreshResource(gameMode: GameMode, resource: Resource, entry: ResourceCacheEntry) {
   if (entry.inFlight) return entry.inFlight;
-  const inFlight = fetchResource<unknown>(gameMode, resource)
+  if (entry.retryAt !== undefined && Date.now() < entry.retryAt) {
+    const stale = usableStaleValue(entry);
+    return stale
+      ? Promise.resolve(stale)
+      : Promise.reject(new TarkovUpstreamError(`Tarkov.dev is unavailable; ${resource} will be retried shortly.`));
+  }
+  const inFlight = loadCurrent(gameMode, resource, entry)
     .then((result) => {
-      entry.value = result;
-      entry.fetchedAt = Date.now();
+      entry.value = result.value;
+      entry.etag = result.etag;
+      entry.lastModified = result.lastModified;
+      entry.fetchedAt = result.checkedAt;
       entry.failedAt = undefined;
-      return result;
+      entry.failures = 0;
+      entry.retryAt = undefined;
+      return result.value;
     })
     .catch((error: unknown) => {
-      entry.failedAt = Date.now();
-      if (entry.value && Date.now() - entry.fetchedAt < RESOURCE_MAX_STALE_MS) {
-        console.warn(`Serving stale Tarkov ${resource} data after refresh failed.`);
-        return entry.value;
-      }
-      throw error;
+      const now = Date.now();
+      entry.failedAt = now;
+      entry.failures = (entry.failures ?? 0) + 1;
+      entry.retryAt = now + retryDelay(entry.failures, error);
+      const stale = usableStaleValue(entry);
+      if (!stale) throw error;
+      console.warn(`Serving stale Tarkov ${resource} data after refresh failed.`);
+      return stale;
     })
     .finally(() => {
       entry.inFlight = undefined;
     });
   entry.inFlight = inFlight;
   return inFlight;
+}
+
+function usableStaleValue(entry: ResourceCacheEntry) {
+  return entry.value && Date.now() - entry.fetchedAt < RESOURCE_MAX_STALE_MS ? entry.value : undefined;
+}
+
+/** Exponential backoff with jitter, or longer if tarkov.dev asked for it with Retry-After. */
+function retryDelay(failures: number, error: unknown) {
+  const backoff = Math.min(RETRY_MAX_MS, RETRY_BASE_MS * 2 ** Math.min(failures - 1, 10));
+  const jittered = backoff * (0.8 + Math.random() * 0.4);
+  const requested = error instanceof TarkovUpstreamError ? (error.retryAfterMs ?? 0) : 0;
+  return Math.max(jittered, Math.min(requested, RETRY_AFTER_MAX_MS));
+}
+
+/**
+ * The dataset as it is now: the shared copy when another instance checked it recently enough,
+ * otherwise from tarkov.dev, sending the validators we hold so an unchanged dataset is a 304.
+ */
+async function loadCurrent(
+  gameMode: GameMode,
+  resource: Resource,
+  entry: ResourceCacheEntry
+): Promise<Refreshed> {
+  const policy = RESOURCE_POLICIES[resource];
+  const sharedKey = `tarkov:${SHARED_KEY_VERSION}:${gameMode}/${resource}`;
+  if (policy.shared) {
+    const shared = await readShared(sharedKey, resource, entry, policy);
+    if (shared) return shared;
+  }
+  const previous = entry.value
+    ? { value: entry.value, etag: entry.etag, lastModified: entry.lastModified }
+    : undefined;
+  const fetched = await withUpstreamSlot(() => fetchResource(gameMode, resource, previous));
+  const checkedAt = Date.now();
+  if (fetched.notModified) {
+    // fetchResource only accepts a 304 when it sent validators, which needs a previous copy.
+    const refreshed = { ...previous!, checkedAt };
+    if (policy.shared) await writeShared(sharedKey, refreshed, policy, false);
+    return refreshed;
+  }
+  const refreshed = { value: fetched.value, etag: fetched.etag, lastModified: fetched.lastModified, checkedAt };
+  if (policy.shared && fetched.chars <= SHARED_MAX_CHARS) {
+    await writeShared(sharedKey, refreshed, policy, true);
+  }
+  return refreshed;
+}
+
+async function readShared(
+  key: string,
+  resource: Resource,
+  entry: ResourceCacheEntry,
+  policy: ResourcePolicy
+): Promise<Refreshed | null> {
+  const cache = regionalCache();
+  const meta = readSharedMeta(await cache.get(`${key}:meta`));
+  const now = Date.now();
+  // Another instance's clock may run a little ahead; a time far in the future is not trusted.
+  if (!meta || now - meta.checkedAt >= policy.freshMs || meta.checkedAt - now > MINUTE_MS) return null;
+  const checkedAt = Math.min(meta.checkedAt, now);
+  const version = meta.etag ?? meta.lastModified;
+  if (entry.value && version === (entry.etag ?? entry.lastModified)) {
+    return { value: entry.value, etag: entry.etag, lastModified: entry.lastModified, checkedAt };
+  }
+  const body = await cache.get(`${key}:body:${version}`);
+  if (!isRecord(body) || !("data" in body) || !validateResourceData(resource, body.data)) return null;
+  return {
+    value: body as unknown as UpstreamEnvelope<unknown>,
+    etag: meta.etag,
+    lastModified: meta.lastModified,
+    checkedAt,
+  };
+}
+
+function readSharedMeta(value: unknown): SharedMeta | null {
+  if (!isRecord(value) || typeof value.checkedAt !== "number" || !Number.isFinite(value.checkedAt)) return null;
+  const etag = typeof value.etag === "string" ? value.etag : undefined;
+  const lastModified = typeof value.lastModified === "string" ? value.lastModified : undefined;
+  return etag || lastModified ? { etag, lastModified, checkedAt: value.checkedAt } : null;
+}
+
+/**
+ * Shares a dataset with the region's other instances: the body, under its version, only when it
+ * changed, then the record of when it was last checked. Without validators nothing is shared,
+ * since other instances couldn't tell which copy they hold.
+ */
+async function writeShared(key: string, refreshed: Refreshed, policy: ResourcePolicy, withBody: boolean) {
+  const version = refreshed.etag ?? refreshed.lastModified;
+  if (!version) return;
+  const cache = regionalCache();
+  if (withBody) await cache.set(`${key}:body:${version}`, refreshed.value, SHARED_BODY_TTL_SECONDS);
+  const meta: SharedMeta = { etag: refreshed.etag, lastModified: refreshed.lastModified, checkedAt: refreshed.checkedAt };
+  await cache.set(`${key}:meta`, meta, Math.ceil(policy.revalidateMs / 1000));
+}
+
+let activeUpstreamRequests = 0;
+const upstreamQueue: Array<() => void> = [];
+
+/** Runs a tarkov.dev request once fewer than MAX_UPSTREAM_REQUESTS are in flight on this instance. */
+async function withUpstreamSlot<T>(work: () => Promise<T>): Promise<T> {
+  if (activeUpstreamRequests < MAX_UPSTREAM_REQUESTS) activeUpstreamRequests += 1;
+  else await new Promise<void>((resolve) => upstreamQueue.push(resolve));
+  try {
+    return await work();
+  } finally {
+    // Hand the slot straight to the next waiter, or free it.
+    const next = upstreamQueue.shift();
+    if (next) next();
+    else activeUpstreamRequests -= 1;
+  }
 }
 
 async function loadRelations(gameMode: GameMode): Promise<RelationsContext> {
@@ -1063,30 +1284,62 @@ function indexRelation<T>(
   }
 }
 
-async function fetchResource<T>(gameMode: GameMode, resource: Resource) {
+type Fetched =
+  | { notModified: true }
+  | {
+      notModified: false;
+      value: UpstreamEnvelope<unknown>;
+      etag?: string;
+      lastModified?: string;
+      /** The body's length in characters. */
+      chars: number;
+    };
+
+async function fetchResource(
+  gameMode: GameMode,
+  resource: Resource,
+  validators?: { etag?: string; lastModified?: string }
+): Promise<Fetched> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), UPSTREAM_TIMEOUT_MS);
+  const headers: Record<string, string> = { Accept: "application/json", "User-Agent": USER_AGENT };
+  if (validators?.etag) headers["If-None-Match"] = validators.etag;
+  if (validators?.lastModified) headers["If-Modified-Since"] = validators.lastModified;
+  const conditional = "If-None-Match" in headers || "If-Modified-Since" in headers;
   try {
     const response = await fetch(`${UPSTREAM_BASE_URL}/${gameMode}/${resource}`, {
-      headers: { Accept: "application/json" },
+      headers,
       signal: controller.signal,
       cache: "no-store",
     });
+    if (response.status === 304 && conditional) {
+      // Release the connection without waiting: a cancel can wait on a reader that never comes.
+      void response.body?.cancel().catch(() => undefined);
+      return { notModified: true };
+    }
     if (!response.ok) {
+      void response.body?.cancel().catch(() => undefined);
       throw new TarkovUpstreamError(
         `Tarkov.dev returned ${response.status} for ${resource}.`,
-        response.status
+        response.status,
+        parseRetryAfter(response.headers.get("retry-after"))
       );
     }
     const contentLength = Number(response.headers.get("content-length"));
     if (Number.isFinite(contentLength) && contentLength > UPSTREAM_MAX_BYTES) {
       throw new TarkovUpstreamError(`Tarkov.dev returned an oversized ${resource} payload.`);
     }
-    const body = await readJsonWithLimit(response, resource);
-    if (!isRecord(body) || !("data" in body) || !validateResourceData(resource, body.data)) {
+    const { json, chars } = await readJsonWithLimit(response, resource);
+    if (!isRecord(json) || !("data" in json) || !validateResourceData(resource, json.data)) {
       throw new TarkovUpstreamError(`Tarkov.dev returned invalid ${resource} data.`);
     }
-    return body as unknown as UpstreamEnvelope<T>;
+    return {
+      notModified: false,
+      value: json as unknown as UpstreamEnvelope<unknown>,
+      etag: response.headers.get("etag") ?? undefined,
+      lastModified: response.headers.get("last-modified") ?? undefined,
+      chars,
+    };
   } catch (error) {
     if (error instanceof TarkovUpstreamError) throw error;
     if (controller.signal.aborted) {
@@ -1102,7 +1355,19 @@ async function fetchResource<T>(gameMode: GameMode, resource: Resource) {
   }
 }
 
-async function readJsonWithLimit(response: Response, resource: Resource): Promise<unknown> {
+/** Retry-After in milliseconds, from either delay-seconds or an HTTP date. */
+function parseRetryAfter(value: string | null): number | undefined {
+  if (!value) return undefined;
+  const trimmed = value.trim();
+  if (/^\d+$/.test(trimmed)) return Number(trimmed) * 1000;
+  const date = Date.parse(trimmed);
+  return Number.isFinite(date) ? Math.max(0, date - Date.now()) : undefined;
+}
+
+async function readJsonWithLimit(
+  response: Response,
+  resource: Resource
+): Promise<{ json: unknown; chars: number }> {
   if (!response.body) {
     throw new TarkovUpstreamError(`Tarkov.dev returned an empty ${resource} payload.`);
   }
@@ -1124,7 +1389,8 @@ async function readJsonWithLimit(response: Response, resource: Resource): Promis
       chunks.push(decoder.decode(value, { stream: true }));
     }
     chunks.push(decoder.decode());
-    return JSON.parse(chunks.join("")) as unknown;
+    const text = chunks.join("");
+    return { json: JSON.parse(text) as unknown, chars: text.length };
   } catch (error) {
     if (error instanceof TarkovUpstreamError) throw error;
     throw new TarkovUpstreamError(`Tarkov.dev returned invalid ${resource} JSON.`);

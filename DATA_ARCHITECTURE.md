@@ -84,13 +84,17 @@ Limits:
   (`src/app/lib/api/request-body.ts`).
 - Tools stop at 40 seconds and return a tool error. The optimiser, which is CPU-bound, gets
   one 20-second limit per tool call and at most 2 runs at once per instance.
+- `optimize_build` and `modify_build`, the tools that run the optimiser, keep their last 64
+  results per instance (`src/app/lib/mcp/result-cache.ts`). A repeated call with the same
+  arguments is answered from there while every tarkov.dev dataset it was built from is still
+  the same copy, for up to 30 minutes. Results built from stale data aren't kept.
 
 Requests with no `Origin` header (most clients), from this site, or from localhost (such as
 the MCP Inspector) are accepted, and CORS headers echo the allowed origin; other browser
 origins get 403, including on preflight. Responses are `no-store`. Links in results point
 to the canonical site in production and to the request's origin in development. Each tool
 call logs one JSON line (`event: "mcp_tool_call"`) with a request id, the tool, game mode,
-outcome, duration, and whether the data was stale. Unexpected failures return the request
+outcome, duration, whether the data was stale, and whether the result came from the cache. Unexpected failures return the request
 id as a reference.
 
 `get_wiki_page` is the one tool that doesn't read tarkov.dev. It reads the community Escape
@@ -182,16 +186,49 @@ keys in `src/app/lib/storage/store-keys.ts`.
 - Hideout station names: `/{gameMode}/hideout` and `_en`.
 - Raid-planner data: `/{gameMode}/maps` and `_en`.
 
-External requests have a 45-second timeout, a 32 MiB response-size guard, status and
+External requests have a 20-second timeout, a 32 MiB response-size guard, status and
 shape validation, and a bounded resource allowlist. Upstream failures are translated to
 a stable `UPSTREAM_UNAVAILABLE` response without exposing internals.
 
+tarkov.dev asks only that clients use common sense, so the adapter keeps its requests few
+and identifiable:
+
+- Every request sends `User-Agent: EFT-Toolset/1.0 (+https://www.eft-toolset.com; …/issues)`
+  (`src/app/lib/api/user-agent.ts`), which the wiki client uses too.
+- Each dataset has its own freshness in `RESOURCE_POLICIES`, set from how often tarkov.dev
+  changes it: items (prices) 5 minutes, maps and tasks 30 minutes, everything else 2 hours.
+- Refreshes send the `ETag` and `Last-Modified` the dataset came with, so an unchanged
+  dataset is answered with a 304 and no body.
+- Callers share a refresh in progress, and an instance has at most 4 tarkov.dev requests in
+  flight; the rest queue. A burst of tool calls or page loads therefore costs at most one
+  request per dataset.
+- After a failed refresh, that dataset isn't requested again for 30 seconds, doubling to
+  10 minutes, with jitter, or for as long as a `Retry-After` asks (up to an hour). Meanwhile
+  callers get the stale copy, or fail at once when there is none.
+
+Worst case for one instance, with every dataset in use in both game modes: items 24, maps
+and tasks 8, `items_en` 1 request an hour, 33 an hour, most of them 304s. The shared
+datasets add about 8 an hour per region, however many instances run. A new instance makes
+at most 8 full downloads (the four unshared datasets in each mode); after a failure, at most
+one request per dataset per backoff interval.
+
 ## Cache ownership
 
-- The server resource cache amortizes large upstream downloads and JSON parsing. Resources
-  are fresh for five minutes, revalidated in the background without blocking requests for
-  up to 30 minutes, and served stale (flagged with `X-EFT-Data-Stale`) for up to six hours
-  when tarkov.dev is down.
+- The server resource cache amortizes large upstream downloads and JSON parsing. Each
+  resource is fresh for its policy's time, then revalidated in the background without
+  blocking requests (items for up to 30 minutes, maps and tasks 2 hours, the rest 4 hours),
+  and served stale (flagged with `X-EFT-Data-Stale`) for up to six hours when tarkov.dev is
+  down.
+- Small datasets that rarely change (barters, crafts, hideout, traders, and the task, map,
+  hideout, and trader translations) are also kept in Vercel's Runtime Cache
+  (`src/app/lib/api/shared-cache.ts`), which every instance in a region shares. A body is
+  written only when it changes, under its version, and a small record says when an instance
+  last checked it with tarkov.dev; another instance reuses the shared copy while that check
+  is within the dataset's freshness. Items (17 MB), maps (9 MB), tasks (2 MB), and item
+  names (1.7 MB) stay per instance: they exceed or approach Runtime Cache's 2 MB item limit,
+  and the Hobby plan's write allowance (200K 8 KB units a month) is shared by the whole
+  team. The shared cache is best effort: failures and timeouts read as misses, and it is
+  off outside Vercel.
 - Projections and indexes are memoized on the identity of their source resources, so they
   are rebuilt only when upstream data changes.
 - `src/instrumentation.ts` warms the item catalog for both game modes at boot. Set
