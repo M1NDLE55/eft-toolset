@@ -6,7 +6,6 @@ import type { BuildItemData, PickItemData, PriceSources } from "@/app/lib/types/
 
 vi.mock("next/image", () => ({ default: () => null }));
 
-// The Hexagon AK-74 suppressor: cheap on the flea, dear at Skier after Chemical - Part 2.
 const suppressor: PickItemData = {
   id: "hexagon",
   name: "AK-74 Hexagon 5.45x39 sound suppressor",

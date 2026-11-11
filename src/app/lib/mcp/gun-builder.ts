@@ -401,7 +401,6 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
                   source: row.source,
                   unitPriceRUB: row.unitPriceRUB,
                   subtotalRUB: row.subtotalRUB,
-                  // The seller of unitPriceRUB; a flea purchase has none.
                   trader:
                     row.source === "flea"
                       ? null

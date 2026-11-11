@@ -2,7 +2,6 @@ import { Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { taskHint, type ShownPrice } from "./format";
 
-/** The label under a price: who charges it, with a lock when a task comes first. */
 export function PriceSource({ shown, className, lockClassName = "h-3 w-3" }: { shown: ShownPrice; className?: string; lockClassName?: string }) {
   const { source, traderNote } = shown;
   if (!source) return null;

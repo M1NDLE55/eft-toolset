@@ -13,13 +13,11 @@ export interface ShoppingRow {
   /** How many come with the weapon's preset, so aren't bought. */
   withWeapon: number;
   isWeapon: boolean;
-  /** The trader column: the cheapest allowed trader offer, as a weapon is bought (bare or as its preset). */
+  /** Cash offer matching the weapon's purchased form. */
   traderPriceRUB: number | null;
   fleaPriceRUB: number | null;
-  /** Who charges traderPriceRUB. */
   traderName: string | null;
   traderLevel: number | null;
-  /** The task the trader offer needs first, if any. */
   traderTask: string | null;
   source: PriceSource | null;
   /** The trader offer or barter bought from, when the item lists its offers. */
@@ -70,7 +68,6 @@ export function buildShoppingList(
     const count = counts.get(itemId) ?? 0;
     const isWeapon = itemId === root.itemId && includeWeapon;
     const choice = count === 0 ? null : isWeapon ? purchase.weapon : item ? priceChoice(item, sources, limits) : null;
-    // A weapon bought with its preset parts in view is quoted bare or as the preset, as it is bought.
     const asPreset = isWeapon && context.preset ? purchase.asPreset : undefined;
     const trader = item ? traderQuote(item, limits, asPreset) : null;
     const flea = positive(item?.fleaPriceRUB);
@@ -121,7 +118,6 @@ function rub(value: number | null) {
   return value === null ? "-" : Math.round(value).toLocaleString("en-US");
 }
 
-/** Who sells the starred price: the chosen offer's trader, or the flea market. */
 function vendorOf(row: ShoppingRow) {
   if (row.count === 0 || row.unitPriceRUB === null) return "";
   if (row.source === "flea") return "Flea";

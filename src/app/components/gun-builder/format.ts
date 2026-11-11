@@ -47,13 +47,10 @@ interface Sold {
 
 export interface ShownPrice {
   price: number | null;
-  /** Where price comes from, to show under it. */
   source: SourceLabel | null;
-  /** The trader offer passed over for a cheaper flea price, with its own price and task. */
   traderNote: string | undefined;
 }
 
-/** An item's price from the selected sources, labelled with the source that charges it. */
 export function shownPrice(item: Sold, sources: PriceSources): ShownPrice {
   const choice = priceChoice(item, sources, null);
   const quote = choice?.source === "flea" && sources.traders ? traderQuote(item, null) : null;
