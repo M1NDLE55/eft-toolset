@@ -6,18 +6,19 @@ import type { ItemLookup } from "./stats";
 export interface PresetParts {
   /** Item id → count. */
   counts: ReadonlyMap<string, number>;
-  /** Where the preset installs each part, as placementKey(slotId, itemId). */
+  /** Where the preset installs each part, as placementKey(slot path, itemId). */
   placements: ReadonlySet<string>;
+  /** Slot paths (pathKey) of preset items that have parts attached. */
+  branches: ReadonlySet<string>;
 }
 
 export interface PurchaseContext {
   limits?: TraderLimits | null;
-  /** Without it, every part is priced. */
   preset?: PresetParts | null;
 }
 
-export function placementKey(slotId: string, itemId: string) {
-  return `${slotId}/${itemId}`;
+export function placementKey(path: readonly string[], itemId: string) {
+  return `${pathKey(path)}:${itemId}`;
 }
 
 export function pathKey(path: readonly string[]) {
@@ -40,14 +41,16 @@ export function presetParts(
     counts.set(id, (counts.get(id) ?? 0) + 1);
   }
   const placements = new Set<string>();
-  const place = (node: BuildNode) => {
+  const branches = new Set<string>();
+  const place = (node: BuildNode, path: string[]) => {
     for (const [slotId, child] of Object.entries(node.slots)) {
-      placements.add(placementKey(slotId, child.itemId));
-      place(child);
+      branches.add(pathKey(path));
+      placements.add(placementKey([...path, slotId], child.itemId));
+      place(child, [...path, slotId]);
     }
   };
-  place(reconstructPresetTree(weaponId, contents, lookup));
-  return { counts, placements };
+  place(reconstructPresetTree(weaponId, contents, lookup), []);
+  return { counts, placements, branches };
 }
 
 /** The cheapest allowed way to buy the weapon bare, and as its default preset. */
@@ -145,7 +148,7 @@ function priceWith(
   return { weapon, asPreset: preset !== null, owned, spare, costRUB, pricedCount, missingCount };
 }
 
-/** The cheaper of the bare weapon with every part and the preset with the parts it lacks: fewer unpriced items, then lower cost. */
+/** Prefer fewer unpriced items, then lower cost. */
 export function planPurchase(
   root: BuildNode,
   lookup: ItemLookup,

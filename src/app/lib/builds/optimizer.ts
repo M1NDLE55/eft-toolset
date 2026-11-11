@@ -1,7 +1,7 @@
 import type { BuildNode, GunItem, ModSlotDef, PriceSources } from "@/app/lib/types/gunBuilder";
 import { MAX_BUILD_TREE_DEPTH, MAX_BUILD_TREE_NODES } from "./limits";
 import { effectivePrice, type TraderLimits } from "./price";
-import { placementKey, planPurchase, weaponChoices, type PresetParts } from "./purchase";
+import { pathKey, placementKey, planPurchase, weaponChoices, type PresetParts } from "./purchase";
 import { isDetailed, type ItemLookup } from "./stats";
 import { childAt, collectItemIds } from "./tree";
 import { findConflicts, type BuildConflict } from "./conflicts";
@@ -129,8 +129,8 @@ function itemScore(item: GunItem, price: number | null, goal: OptimizeGoal) {
 }
 
 // Free only where the preset installs it, so one included part isn't used for every slot it fits.
-function isFree(slotId: string, itemId: string, pass: Pass) {
-  return Boolean(pass.mode.owned?.placements.has(placementKey(slotId, itemId)));
+function isFree(path: readonly string[], itemId: string, pass: Pass) {
+  return Boolean(pass.mode.owned?.placements.has(placementKey(path, itemId)));
 }
 
 function samePath(a: string[], b: string[]) {
@@ -189,7 +189,7 @@ function slotAdjustment(slot: ModSlotDef, itemId: string, oldRole: string | null
   return value;
 }
 
-function chooseForSlot(slot: ModSlotDef, old: BuildNode | undefined, pass: Pass): Solved | null {
+function chooseForSlot(slot: ModSlotDef, path: string[], old: BuildNode | undefined, pass: Pass): Solved | null {
   const emptyValue = -emptyPenalty(slot, Boolean(old), pass);
   if (pass.restrictions.slots.has(slot.id)) return { node: { itemId: "", slots: {} }, value: emptyValue, cost: 0 };
   const oldRole = pass.options.keepSights && old ? sightRole(pass.lookup.get(old.itemId), slot.nameId) : null;
@@ -198,7 +198,7 @@ function chooseForSlot(slot: ModSlotDef, old: BuildNode | undefined, pass: Pass)
   for (const id of slot.allowedItemIds) {
     if (tried.has(id) || pass.restrictions.items.has(id)) continue;
     tried.add(id);
-    const unfixed = solveFree(id, old, isFree(slot.id, id, pass), pass);
+    const unfixed = solveFree(id, path, old, isFree(path, id, pass), pass);
     if (!unfixed) continue;
     const adjustment = slotAdjustment(slot, id, oldRole, pass);
     const solved = adjustment ? { ...unfixed, value: unfixed.value + adjustment } : unfixed;
@@ -208,14 +208,16 @@ function chooseForSlot(slot: ModSlotDef, old: BuildNode | undefined, pass: Pass)
   return best;
 }
 
-function solveFree(itemId: string, old: BuildNode | undefined, owned: boolean, pass: Pass): Solved | null {
+function solveFree(itemId: string, path: string[], old: BuildNode | undefined, owned: boolean, pass: Pass): Solved | null {
   const context = old ?? null;
   let cache = pass.memo.get(context);
   if (!cache) {
     cache = new Map();
     pass.memo.set(context, cache);
   }
-  const key = owned ? `${itemId}/owned` : itemId;
+  // Only paths with preset parts below them price their subtree differently.
+  const branch = pass.mode.owned?.branches.has(pathKey(path)) ? pathKey(path) : "";
+  const key = `${itemId}|${owned ? "owned" : ""}|${branch}`;
   if (cache.has(key)) return cache.get(key)!;
   if (pass.stack.has(itemId) || pass.stack.size >= MAX_BUILD_TREE_DEPTH) return null;
   const item = pass.lookup.get(itemId);
@@ -238,7 +240,7 @@ function solveFree(itemId: string, old: BuildNode | undefined, owned: boolean, p
   const defs = isDetailed(item) ? item.slots : [];
   const matched = counterparts(defs, old, current, pass.lookup);
   for (const slot of defs) {
-    const choice = chooseForSlot(slot, matched.get(slot.id), pass);
+    const choice = chooseForSlot(slot, [...path, slot.id], matched.get(slot.id), pass);
     if (!choice) continue;
     value += choice.value;
     cost += choice.cost;
@@ -265,7 +267,7 @@ function solveFixed(node: BuildNode, path: string[], pass: Pass): Solved {
   const root = path.length === 0;
   const price = root
     ? pass.mode.weaponPrice
-    : isFree(path.at(-1)!, node.itemId, pass)
+    : isFree(path, node.itemId, pass)
       ? 0
       : item
         ? effectivePrice(item, pass.options.priceSources)
@@ -290,7 +292,7 @@ function solveFixed(node: BuildNode, path: string[], pass: Pass): Solved {
     const childPath = [...path, slot.id];
     const mode = slotMode(childPath, Boolean(old), pass);
     if (mode === "skip") continue;
-    const choice = mode === "keep" && old ? solveFixed(old, childPath, pass) : chooseForSlot(slot, old, pass);
+    const choice = mode === "keep" && old ? solveFixed(old, childPath, pass) : chooseForSlot(slot, childPath, old, pass);
     if (!choice) continue;
     value += choice.value;
     cost += choice.cost;

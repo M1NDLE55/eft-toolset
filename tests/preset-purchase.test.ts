@@ -207,4 +207,33 @@ describe("optimising a weapon sold as its default preset", () => {
     expect(list.totalRUB).toBe(55_000);
     expect(list.rows[1]).toMatchObject({ itemId: "factory-stock", count: 1, withWeapon: 1 });
   });
+
+  it("makes a preset part free only at its own place when its parent is installed twice", async () => {
+    const gun = weapon([{ trader: "Prapor", priceRUB: 35_000, level: 1, preset: "Gun Default" }], {
+      slots: [slot("mount-a", ["mount"], { required: true }), slot("mount-b", ["mount"], { required: true })],
+    });
+    const data = new Map(
+      [
+        gun,
+        item("mount", { traderPriceRUB: 1_000, slots: [slot("sight", ["scope", "cheap-scope"], { required: true })] }),
+        item("scope", { traderPriceRUB: 20_000 }),
+        item("cheap-scope", { traderPriceRUB: 1_000 }),
+      ].map((entry) => [entry.id, entry])
+    );
+    const owned = presetParts("gun", { baseItemId: "gun", itemIds: ["gun", "mount", "scope"] }, data);
+    const root: BuildNode = {
+      itemId: "gun",
+      slots: { "mount-a": { itemId: "mount", slots: { sight: { itemId: "scope", slots: {} } } } },
+    };
+    const result = await optimizeBuild(
+      root,
+      data,
+      { goal: "cost", priceSources: TRADERS, preset: owned, budget: 37_000 },
+      { pause: async () => undefined }
+    );
+    expect(result.root.slots["mount-a"].slots.sight.itemId).toBe("scope");
+    expect(result.root.slots["mount-b"].slots.sight.itemId).toBe("cheap-scope");
+    expect(result).toMatchObject({ costRUB: 37_000, withinBudget: true });
+  });
 });
+
