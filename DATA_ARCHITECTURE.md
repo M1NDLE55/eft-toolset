@@ -73,11 +73,18 @@ which MCP dropped in 2025-06-18, return 400.
 
 Limits:
 
-- Each request is charged from the client's MCP budget and the global MCP budget
-  (`src/app/lib/api/rate-limit.ts`), both kept apart from the website's, so assistants can't
-  starve the site. Tool calls cost 1 token, `modify_build` 2, and `optimize_build` 3;
-  everything else costs 0.25. That base cost is charged before the body is read, and a tool
-  call pays the rest once the body is parsed, or gets the base cost back if it can't.
+- Each request is charged from its payer's MCP budget and the instance's global MCP budget
+  (`src/app/lib/mcp/budget.ts`), both kept apart from the website's, so assistants can't
+  starve the site. The payer is the client's IP, or the user when the request carries a valid
+  access token (see [MCP sign-in](#mcp-sign-in)). Tool calls cost 1 token, `modify_build` 2,
+  and `optimize_build` 3; everything else costs 0.25. That base cost is charged before the
+  body is read, and a tool call pays the rest once the body is parsed, or gets the base cost
+  back in the same step if it can't.
+- Payer budgets live in Upstash Redis when `UPSTASH_REDIS_REST_URL` and
+  `UPSTASH_REDIS_REST_TOKEN` are set (`src/app/lib/api/rate-limit-store.ts`): one atomic Lua
+  token bucket per payer, under a hashed key, so IPs and user ids never reach Redis. Each
+  request costs one Redis command, and a tool call two. Without Upstash, or when it can't be
+  reached within a second, each instance counts in memory as before.
 - A tool call takes a slot from the shared operation pool, and at most 6 run at once per
   instance. Handshakes and lists don't wait for slots.
 - Bodies may be up to 1 MiB, and at most 16 are read at once, apart from the website's 32
@@ -193,6 +200,49 @@ while more results remain. Raid plans use the planner's share codec and validati
 which the Backup & restore page decodes and shows for review before Merge; it uses the store
 keys in `src/app/lib/storage/store-keys.ts`.
 
+### MCP sign-in
+
+Sign-in is optional and off unless `MCP_AUTHKIT_DOMAIN` is set; without it the endpoint
+advertises no auth and ignores `Authorization` headers. With it, WorkOS AuthKit is the
+authorization server (`src/app/lib/mcp/auth.ts`):
+
+- `/.well-known/oauth-protected-resource` and `/.well-known/oauth-protected-resource/api/mcp`
+  serve the protected resource metadata (RFC 9728), naming the AuthKit issuer. AuthKit runs
+  the OAuth flow, with PKCE, client registration (CIMD or DCR), and consent.
+- A request with `Authorization: Bearer <token>` is checked against AuthKit's JWKS: an
+  asymmetric signature, the AuthKit issuer, the MCP URL (`MCP_RESOURCE_URL`) as audience, and
+  expiry, with 30 seconds of clock tolerance. Agent tokens (`sub_profile: ai_agent`) are
+  refused. A valid token charges the user's own budget, keyed on `sub`. A bad token is always
+  challenged (below), whatever the IP's budget, since the challenge is what makes clients
+  refresh; if the keys can't be fetched the request gets 503.
+- Anonymous callers keep the per-IP budget. When an IP runs out, the endpoint asks the
+  client to sign in rather than wait. Clients disagree on how they want to be asked, so the
+  challenge depends on the client:
+  - Claude (claude.ai, Desktop, Claude Code), Cursor, and any client not recognised get 401
+    with `WWW-Authenticate: Bearer resource_metadata="…"` on every request, tool calls
+    included. That is what the MCP spec asks for, and Claude shows its Connect card from it
+    mid-conversation, then retries the call. Claude ignores a 200 tool error for sign-in
+    ([lazy authentication](https://claude.com/docs/connectors/building/lazy-authentication)).
+  - ChatGPT's tool calls get a tool error (status 200) whose `_meta["mcp/www_authenticate"]`
+    carries the challenge, which is the only thing that starts ChatGPT's sign-in during a
+    tool call ([Apps SDK auth](https://developers.openai.com/apps-sdk/build/auth)). It also
+    needs every tool in `tools/list` to declare `securitySchemes` of `noauth` or `oauth2`
+    (top-level and mirrored in `_meta`). ChatGPT is recognised by the `openai/*` keys it puts
+    in every tool call's `_meta` ([reference](https://developers.openai.com/apps-sdk/reference))
+    or by its `openai-mcp/` User-Agent. Its other requests get the 401.
+  - Bad tokens get the same split with `error="invalid_token"`, which is what makes clients
+    refresh them or sign in again.
+
+  Detection reads the request itself, not `initialize`, because the endpoint is stateless and
+  2026-07-28 clients may skip `initialize`. A client that fakes the markers only changes the
+  shape of its own challenge.
+- Signed-in users over their budget get 429, as everyone did before. So does anyone when
+  the instance's global budget runs out, since signing in can't help there.
+
+Reading the body to shape a challenge is the one read that a client over its budget, or one
+with a bad token, can trigger; reads stay capped by size, time, and the MCP pool's
+concurrency limit.
+
 ## Upstream resources
 
 - Items, weapon structures, prices, presets: `/{gameMode}/items` and `_en`.
@@ -258,7 +308,8 @@ one request per dataset per backoff interval.
 ## Rate limiting
 
 The route keeps an in-process token bucket per client and a global bucket, and server-
-rendered pages share the API's concurrency cap. On Vercel the client is identified by
+rendered pages share the API's concurrency cap. (The MCP endpoint's own budgets, which can
+live in Redis, are described under [MCP endpoint](#mcp-endpoint).) On Vercel the client is identified by
 `X-Real-IP`, which Vercel sets itself. Elsewhere set `CLIENT_IP_HEADER` to the single header
 your proxy sets authoritatively and block direct origin access. Without it, forwarding
 headers could be forged to dodge the per-client limit, so clients aren't told apart and only

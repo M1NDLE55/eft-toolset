@@ -132,7 +132,9 @@ function publish(tool: ListedTool): Tool {
  * Call it after registering every tool: the SDK installs its own handler on the first
  * registration, and this replaces it.
  */
-export function serveCompactToolList(server: McpServer) {
-  const tools = (listings.get(server) ?? []).map(publish);
+export function serveCompactToolList(server: McpServer, securitySchemes?: readonly object[]) {
+  const tools = (listings.get(server) ?? [])
+    .map(publish)
+    .map((tool) => (securitySchemes ? { ...tool, securitySchemes, _meta: { ...tool._meta, securitySchemes } } : tool));
   server.server.setRequestHandler(ListToolsRequestSchema, () => ({ tools }));
 }

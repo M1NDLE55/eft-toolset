@@ -67,13 +67,18 @@ npm run dev
 
 ### Environment variables
 
-All are optional.
+All are optional; [`.env.example`](.env.example) lists them.
 
 | Variable | Purpose |
 | --- | --- |
 | `CLOUDFLARE_WEB_ANALYTICS_TOKEN` | Enables Cloudflare Web Analytics |
 | `CLIENT_IP_HEADER` | The header your proxy sets with the real client IP, used for per-client API rate limiting. On Vercel, `X-Real-IP` is used automatically. Elsewhere, without it, only the global rate limit applies. |
 | `WARM_TARKOV_CACHE` | Set to `0` to skip preloading tarkov.dev data when the server starts |
+| `MCP_AUTHKIT_DOMAIN` | Turns on optional sign-in for the MCP endpoint with this WorkOS AuthKit domain. See [MCP sign-in](DATA_ARCHITECTURE.md#mcp-sign-in). |
+| `MCP_RESOURCE_URL` | The MCP endpoint's public URL that access tokens must be issued for. Defaults to `https://www.eft-toolset.com/api/mcp`. |
+| `MCP_ANON_RATE_BURST`, `MCP_ANON_RATE_PER_SECOND` | Each IP's anonymous MCP budget (default 120 tokens, refilling 2 per second) |
+| `MCP_USER_RATE_BURST`, `MCP_USER_RATE_PER_SECOND` | Each signed-in user's MCP budget (default 160 tokens, refilling 3 per second) |
+| `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` | Keeps MCP rate limits in Upstash Redis, shared by every instance (`KV_REST_API_URL` and `KV_REST_API_TOKEN` also work). Without them each instance counts in memory. |
 
 ## Credits
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CopySnippet } from "@/app/components/mcp/copy-snippet";
+import { mcpAuthConfig } from "@/app/lib/mcp/auth";
 import { MCP_TOOL_GROUPS } from "@/app/lib/mcp/catalog";
 
 export const metadata: Metadata = {
@@ -84,7 +85,11 @@ export default function McpPage() {
             Server URL
           </h2>
           <CopySnippet template="{endpoint}" label="server URL" />
-          <p className="text-xs text-[#888]">Streamable HTTP. No sign-in or API key.</p>
+          <p className="text-xs text-[#888]">
+            {mcpAuthConfig()
+              ? "Streamable HTTP. No API key. Signing in is optional and gives you a higher rate limit of your own; your assistant asks when it's worth it."
+              : "Streamable HTTP. No sign-in or API key."}
+          </p>
         </section>
 
         <section aria-labelledby="connect" className="flex flex-col gap-4">
