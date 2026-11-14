@@ -93,10 +93,8 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
     return jsonRpcError(cors, 429, -32000, "Too many requests.", { "Retry-After": String(budget.retryAfterSeconds) });
   };
 
-  // Every request pays the base cost before its body is read, so a client over its budget
-  // can't keep body reads busy (except the read that shapes a sign-in challenge). Tool calls pay the rest once the body shows which tool it is,
-  // and get the base cost back if they can't, so parallel calls near the limit don't spend
-  // the budget on calls that never run.
+  // Charge the base cost before reading the body so over-budget clients can't keep reads busy
+  // (sign-in challenges excepted); a tool call that can't pay the rest gets the base cost back.
   const base = await chargeMcpBudget(payer, BASE_COST);
   if (!base.allowed) return limited(base, null);
   const message = await readMessage(request, limits, cors);
