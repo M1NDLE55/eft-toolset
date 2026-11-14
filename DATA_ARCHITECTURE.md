@@ -216,20 +216,32 @@ authorization server (`src/app/lib/mcp/auth.ts`):
   challenged (below), whatever the IP's budget, since the challenge is what makes clients
   refresh; if the keys can't be fetched the request gets 503.
 - Anonymous callers keep the per-IP budget. When an IP runs out, the endpoint asks the
-  client to sign in rather than wait. A tool call gets a tool error (status 200) whose
-  `_meta["mcp/www_authenticate"]` carries the challenge, which is how ChatGPT starts sign-in;
-  every tool in `tools/list` declares `securitySchemes` of `noauth` or `oauth2` (top-level and
-  mirrored in `_meta`), which ChatGPT needs before it offers sign-in for a tool. Any other
-  request gets 401 with `WWW-Authenticate: Bearer resource_metadata="…"`, which Claude and
-  other clients that follow the MCP spec act on. Clients drop a 401's body, so one response
-  can't carry both: a spec client that runs out mid-conversation is asked on its next
-  `initialize` or `tools/list`. Bad tokens always get 401 with `error="invalid_token"`, which
-  is what makes clients refresh them.
+  client to sign in rather than wait. Clients disagree on how they want to be asked, so the
+  challenge depends on the client:
+  - Claude (claude.ai, Desktop, Claude Code), Cursor, and any client not recognised get 401
+    with `WWW-Authenticate: Bearer resource_metadata="…"` on every request, tool calls
+    included. That is what the MCP spec asks for, and Claude shows its Connect card from it
+    mid-conversation, then retries the call. Claude ignores a 200 tool error for sign-in
+    ([lazy authentication](https://claude.com/docs/connectors/building/lazy-authentication)).
+  - ChatGPT's tool calls get a tool error (status 200) whose `_meta["mcp/www_authenticate"]`
+    carries the challenge, which is the only thing that starts ChatGPT's sign-in during a
+    tool call ([Apps SDK auth](https://developers.openai.com/apps-sdk/build/auth)). It also
+    needs every tool in `tools/list` to declare `securitySchemes` of `noauth` or `oauth2`
+    (top-level and mirrored in `_meta`). ChatGPT is recognised by the `openai/*` keys it puts
+    in every tool call's `_meta` ([reference](https://developers.openai.com/apps-sdk/reference))
+    or by its `openai-mcp/` User-Agent. Its other requests get the 401.
+  - Bad tokens get the same split with `error="invalid_token"`, which is what makes clients
+    refresh them or sign in again.
+
+  Detection reads the request itself, not `initialize`, because the endpoint is stateless and
+  2026-07-28 clients may skip `initialize`. A client that fakes the markers only changes the
+  shape of its own challenge.
 - Signed-in users over their budget get 429, as everyone did before. So does anyone when
   the instance's global budget runs out, since signing in can't help there.
 
-Reading the body to answer a tool call's challenge is the one read a client over its budget
-can trigger; reads stay capped by size, time, and the MCP pool's concurrency limit.
+Reading the body to shape a challenge is the one read that a client over its budget, or one
+with a bad token, can trigger; reads stay capped by size, time, and the MCP pool's
+concurrency limit.
 
 ## Upstream resources
 

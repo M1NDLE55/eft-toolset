@@ -3,6 +3,7 @@ import { exportJWK, generateKeyPair, SignJWT, type CryptoKey, type JWK } from "j
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
+import { UnauthorizedError, type OAuthClientProvider } from "@modelcontextprotocol/sdk/client/auth.js";
 import { POST, OPTIONS } from "@/app/api/mcp/route";
 import { GET as metadataGet } from "@/app/.well-known/oauth-protected-resource/[[...path]]/route";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
@@ -142,29 +143,58 @@ describe("MCP endpoint with sign-in on", () => {
     }
   });
 
-  it("asks an anonymous caller over its budget to sign in, with a header and a ChatGPT tool challenge", async () => {
+  it("asks an anonymous caller over its budget to sign in with a 401 that names the metadata", async () => {
     vi.stubEnv("MCP_ANON_RATE_BURST", "1");
     vi.stubEnv("MCP_ANON_RATE_PER_SECOND", "0.001");
     expect((await mcp("tools/call", {}, lookupTerm)).status).toBe(200);
 
-    const listed = await mcp("tools/list");
-    expect(listed.status).toBe(401);
-    expect(listed.headers.get("www-authenticate")).toBe(`Bearer resource_metadata="${METADATA_URL}"`);
-    expect(listed.headers.get("access-control-expose-headers")).toContain("WWW-Authenticate");
-    expect((await listed.json()).error.message).toMatch(/sign in/i);
-
-    const called = await mcp("tools/call", {}, lookupTerm);
-    expect(called.status).toBe(200);
-    const body = await called.json();
-    expect(body.id).toBe(requestId);
-    expect(body.result.isError).toBe(true);
-    expect(body.result._meta["mcp/www_authenticate"]).toEqual([
-      expect.stringMatching(
-        new RegExp(`^Bearer resource_metadata="${METADATA_URL}", error="insufficient_scope", error_description="[^"]+"$`)
-      ),
-    ]);
+    for (const [method, params, headers] of [
+      ["tools/list", undefined, {}],
+      ["tools/call", lookupTerm, {}],
+      ["tools/call", lookupTerm, { "User-Agent": "claude-code/2.1.0" }],
+      ["tools/call", lookupTerm, { "User-Agent": "Claude-User" }],
+      ["tools/call", lookupTerm, { "User-Agent": "Cursor/2.4.28 (darwin arm64)" }],
+    ] as const) {
+      const response = await mcp(method, headers, params);
+      expect(response.status).toBe(401);
+      expect(response.headers.get("www-authenticate")).toBe(`Bearer resource_metadata="${METADATA_URL}"`);
+      expect(response.headers.get("access-control-expose-headers")).toContain("WWW-Authenticate");
+      const body = await response.json();
+      expect(body.error.message).toMatch(/sign in/i);
+      expect(body.id).toBe(requestId);
+    }
 
     expect((await mcp("tools/call", await bearer(), lookupTerm)).status).toBe(200);
+  });
+
+  it("asks ChatGPT to sign in with a tool result challenge, recognised by its _meta or User-Agent", async () => {
+    vi.stubEnv("MCP_ANON_RATE_BURST", "1");
+    vi.stubEnv("MCP_ANON_RATE_PER_SECOND", "0.001");
+    expect((await mcp("tools/call", {}, lookupTerm)).status).toBe(200);
+
+    const fromMeta = { ...lookupTerm, _meta: { "openai/subject": "v1/abc", "openai/session": "s1" } };
+    for (const [params, headers] of [
+      [fromMeta, {}],
+      [lookupTerm, { "User-Agent": "openai-mcp/1.0.0" }],
+    ] as const) {
+      const called = await mcp("tools/call", headers, params);
+      expect(called.status).toBe(200);
+      expect(called.headers.get("www-authenticate")).toBeNull();
+      const body = await called.json();
+      expect(body.id).toBe(requestId);
+      expect(body.result.isError).toBe(true);
+      expect(body.result.content[0].text).toMatch(/sign in/i);
+      expect(body.result._meta["mcp/www_authenticate"]).toEqual([
+        expect.stringMatching(
+          new RegExp(`^Bearer resource_metadata="${METADATA_URL}", error="insufficient_scope", error_description="[^"]+"$`)
+        ),
+      ]);
+    }
+
+    // Handshakes and lists carry no tool result, so ChatGPT gets the spec's 401 for those.
+    const listed = await mcp("tools/list", { "User-Agent": "openai-mcp/1.0.0" });
+    expect(listed.status).toBe(401);
+    expect(listed.headers.get("www-authenticate")).toBe(`Bearer resource_metadata="${METADATA_URL}"`);
   });
 
   it("answers bad tokens with invalid_token challenges, never as anonymous, even when the IP is out of budget", async () => {
@@ -186,6 +216,23 @@ describe("MCP endpoint with sign-in on", () => {
     expect((await mcp("tools/list", { Authorization: "Basic dXNlcjpwYXNz", "CF-Connecting-IP": "192.0.2.20" })).status).toBe(200);
   });
 
+  it("asks ChatGPT to sign in again from a tool result when its token is bad", async () => {
+    const expired = await token({}, { expiresIn: Math.floor(Date.now() / 1000) - 120 });
+    const called = await mcp(
+      "tools/call",
+      { Authorization: `Bearer ${expired}` },
+      { ...lookupTerm, _meta: { "openai/subject": "v1/abc" } }
+    );
+    expect(called.status).toBe(200);
+    const body = await called.json();
+    expect(body.result.isError).toBe(true);
+    expect(body.result._meta["mcp/www_authenticate"]).toEqual([
+      expect.stringMatching(new RegExp(`^Bearer resource_metadata="${METADATA_URL}", error="invalid_token", error_description="[^"]+"$`)),
+    ]);
+    const listed = await mcp("tools/list", { Authorization: `Bearer ${expired}`, "User-Agent": "openai-mcp/1.0.0" });
+    expect(listed.status).toBe(401);
+  });
+
   it("keys signed-in budgets on the token's subject, apart from IPs and other users", async () => {
     vi.stubEnv("MCP_USER_RATE_BURST", "1");
     vi.stubEnv("MCP_USER_RATE_PER_SECOND", "0.001");
@@ -200,7 +247,51 @@ describe("MCP endpoint with sign-in on", () => {
     expect((await mcp("tools/call", { "CF-Connecting-IP": "198.51.100.1" }, lookupTerm)).status).toBe(200);
   });
 
-  it("delivers the tool challenge to an SDK client as a tool result", async () => {
+  it("starts an MCP SDK client's sign-in when its tool call runs out of budget", async () => {
+    const redirects: URL[] = [];
+    const provider: OAuthClientProvider = {
+      redirectUrl: "http://localhost:9876/callback",
+      clientMetadata: { client_name: "t", redirect_uris: ["http://localhost:9876/callback"] },
+      clientInformation: () => ({ client_id: "client_test" }),
+      tokens: () => undefined,
+      saveTokens: () => undefined,
+      saveCodeVerifier: () => undefined,
+      codeVerifier: () => "verifier",
+      redirectToAuthorization: (url) => {
+        redirects.push(url);
+      },
+    };
+    const route = async (url: string | URL, init?: RequestInit) => {
+      const href = String(url);
+      if (href === RESOURCE) return POST(new Request(url, init));
+      if (href.startsWith("https://www.eft-toolset.com/.well-known/oauth-protected-resource")) return metadataGet(new Request(url, init));
+      if (href.startsWith(`${ISSUER}/.well-known/`)) {
+        return Response.json({
+          issuer: ISSUER,
+          authorization_endpoint: `${ISSUER}/oauth2/authorize`,
+          token_endpoint: `${ISSUER}/oauth2/token`,
+          response_types_supported: ["code"],
+          code_challenge_methods_supported: ["S256"],
+        });
+      }
+      return new Response("not found", { status: 404 });
+    };
+    const transport = new StreamableHTTPClientTransport(new URL(RESOURCE), {
+      authProvider: provider,
+      fetch: route as typeof fetch,
+    });
+    const client = new Client({ name: "t", version: "1" });
+    await client.connect(transport);
+    vi.stubEnv("MCP_ANON_RATE_BURST", "0.5");
+    vi.stubEnv("MCP_ANON_RATE_PER_SECOND", "0.001");
+    await expect(client.callTool(lookupTerm)).rejects.toThrow(UnauthorizedError);
+    expect(redirects).toHaveLength(1);
+    expect(redirects[0].origin + redirects[0].pathname).toBe(`${ISSUER}/oauth2/authorize`);
+    expect(redirects[0].searchParams.get("resource")).toBe(RESOURCE);
+    await client.close();
+  });
+
+  it("delivers the tool challenge to an MCP SDK client that sends ChatGPT's _meta, as a tool result", async () => {
     const transport = new StreamableHTTPClientTransport(new URL("http://localhost/api/mcp"), {
       fetch: (async (url: string | URL, init?: RequestInit) => POST(new Request(url, init))) as typeof fetch,
     });
@@ -208,7 +299,7 @@ describe("MCP endpoint with sign-in on", () => {
     await client.connect(transport);
     vi.stubEnv("MCP_ANON_RATE_BURST", "0.5");
     vi.stubEnv("MCP_ANON_RATE_PER_SECOND", "0.001");
-    const result = await client.callTool(lookupTerm);
+    const result = await client.callTool({ ...lookupTerm, _meta: { "openai/session": "s1" } });
     expect(result.isError).toBe(true);
     expect(result._meta?.["mcp/www_authenticate"]).toEqual([expect.stringContaining('error="insufficient_scope"')]);
     await client.close();

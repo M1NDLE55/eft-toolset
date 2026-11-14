@@ -126,15 +126,31 @@ export function wwwAuthenticate(config: McpAuthConfig, reason: ChallengeReason) 
   return `${metadata}, error="invalid_token", error_description="${CHALLENGE_DESCRIPTIONS.invalid_token}"`;
 }
 
+/**
+ * Whether a request comes from ChatGPT, which starts sign-in from a tool result's
+ * _meta["mcp/www_authenticate"] rather than from a 401
+ * (https://developers.openai.com/apps-sdk/build/auth). ChatGPT puts openai/* keys
+ * (openai/subject, openai/session, openai/locale) in every tool call's _meta
+ * (https://developers.openai.com/apps-sdk/reference), and its connector sends a User-Agent
+ * of openai-mcp/<version>. Either is enough. Both can be spoofed, but a spoofer only changes
+ * how its own challenge is shaped.
+ */
+export function isChatGptRequest(request: Request, params: unknown) {
+  const meta = params && typeof params === "object" ? (params as { _meta?: unknown })._meta : undefined;
+  if (meta && typeof meta === "object" && Object.keys(meta).some((key) => key.startsWith("openai/"))) return true;
+  return /^openai-mcp\//i.test(request.headers.get("user-agent")?.trim() ?? "");
+}
+
 /** ChatGPT starts OAuth from this, and needs error and error_description in it. */
-export function signInToolResult(config: McpAuthConfig) {
-  const description = CHALLENGE_DESCRIPTIONS.sign_in;
+export function signInToolResult(config: McpAuthConfig, reason: ChallengeReason) {
+  const description = CHALLENGE_DESCRIPTIONS[reason];
+  const error = reason === "sign_in" ? "insufficient_scope" : "invalid_token";
   return {
     isError: true,
     content: [{ type: "text" as const, text: description }],
     _meta: {
       "mcp/www_authenticate": [
-        `Bearer resource_metadata="${config.resourceMetadataUrl}", error="insufficient_scope", error_description="${description}"`,
+        `Bearer resource_metadata="${config.resourceMetadataUrl}", error="${error}", error_description="${description}"`,
       ],
     },
   };

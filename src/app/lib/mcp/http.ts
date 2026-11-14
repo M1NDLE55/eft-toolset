@@ -9,6 +9,7 @@ import { releaseOperationSlot, tryAcquireOperationSlot } from "@/app/lib/api/tar
 import { SITE_ORIGIN } from "@/app/lib/site";
 import {
   identifyCaller,
+  isChatGptRequest,
   mcpAuthConfig,
   OPTIONAL_OAUTH_SECURITY_SCHEMES,
   signInToolResult,
@@ -68,7 +69,7 @@ const AUTH_CORS_HEADERS: Record<string, string> = {
 interface JsonRpcMessage {
   method?: unknown;
   id?: unknown;
-  params?: { name?: unknown };
+  params?: { name?: unknown; _meta?: unknown };
 }
 
 export async function handleMcpPost(request: Request, limits: McpHttpLimits = DEFAULT_MCP_LIMITS) {
@@ -80,12 +81,15 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
   if (caller.kind === "unverifiable") {
     return jsonRpcError(cors, 503, -32000, "Sign-in can't be checked right now. Try again shortly.", { "Retry-After": "5" });
   }
-  // Never rate limited: a 401 is what makes clients refresh, and the body isn't read.
-  if (caller.kind === "invalid" && auth) return authChallenge(auth, cors, "invalid_token", null);
+  // Never rate limited: the challenge is what makes clients refresh. The body is read only to
+  // tell a ChatGPT tool call, which needs its challenge in a tool result, from the rest.
+  if (caller.kind === "invalid" && auth) {
+    return authChallenge(request, auth, cors, "invalid_token", await readMessageIfPossible(request, limits, cors));
+  }
   const payer: Payer = caller.kind === "user" ? caller : { kind: "anonymous", ip: clientIp(request) };
   const limited = async (budget: McpBudget, message: JsonRpcMessage | null) => {
     if (auth && payer.kind === "anonymous" && budget.limitedBy === "payer") {
-      return authChallenge(auth, cors, "sign_in", message ?? (await readMessageIfPossible(request, limits, cors)));
+      return authChallenge(request, auth, cors, "sign_in", message ?? (await readMessageIfPossible(request, limits, cors)));
     }
     return jsonRpcError(cors, 429, -32000, "Too many requests.", { "Retry-After": String(budget.retryAfterSeconds) });
   };
@@ -141,17 +145,25 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
   }
 }
 
-// Clients drop a 401's body, so anonymous tool challenges use HTTP 200 to deliver their _meta.
+/**
+ * Asks the client to sign in, in the shape it acts on. ChatGPT documents a tool result
+ * carrying _meta["mcp/www_authenticate"] (HTTP 200) as what starts sign-in during a tool call,
+ * and OpenAI advises against relying on a 401 there. Claude starts sign-in from a 401 with
+ * WWW-Authenticate on any request and passes a 200 tool error to the model as text, as do the
+ * MCP SDK clients that Cursor and others follow. So ChatGPT's tool calls get the tool result
+ * and everything else, including unknown clients, gets the spec's 401.
+ */
 function authChallenge(
+  request: Request,
   auth: McpAuthConfig,
   cors: Record<string, string>,
   reason: ChallengeReason,
   message: JsonRpcMessage | null
 ) {
   const id = typeof message?.id === "string" || typeof message?.id === "number" ? message.id : null;
-  if (reason === "sign_in" && message?.method === "tools/call" && id !== null) {
+  if (message?.method === "tools/call" && id !== null && isChatGptRequest(request, message.params)) {
     return Response.json(
-      { jsonrpc: "2.0", id, result: signInToolResult(auth) },
+      { jsonrpc: "2.0", id, result: signInToolResult(auth, reason) },
       { headers: { ...BASE_HEADERS, ...cors } }
     );
   }
