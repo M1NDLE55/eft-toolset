@@ -1,5 +1,5 @@
 import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
-import { consumeRequestBudget, refundRequestBudget } from "@/app/lib/api/rate-limit";
+import { clientIp } from "@/app/lib/api/rate-limit";
 import {
   RequestBodyBusyError,
   RequestBodyTooLargeError,
@@ -7,6 +7,16 @@ import {
 } from "@/app/lib/api/request-body";
 import { releaseOperationSlot, tryAcquireOperationSlot } from "@/app/lib/api/tarkov-server";
 import { SITE_ORIGIN } from "@/app/lib/site";
+import {
+  identifyCaller,
+  mcpAuthConfig,
+  OPTIONAL_OAUTH_SECURITY_SCHEMES,
+  signInToolResult,
+  wwwAuthenticate,
+  type ChallengeReason,
+  type McpAuthConfig,
+} from "./auth";
+import { chargeMcpBudget, type McpBudget, type Payer } from "./budget";
 import { createEftMcpServer } from "./server";
 
 export interface McpHttpLimits {
@@ -49,41 +59,50 @@ const CORS_HEADERS: Record<string, string> = {
   "Access-Control-Max-Age": "86400",
 };
 
+const AUTH_CORS_HEADERS: Record<string, string> = {
+  ...CORS_HEADERS,
+  "Access-Control-Allow-Headers": "Content-Type, Accept, Mcp-Protocol-Version, Authorization",
+  "Access-Control-Expose-Headers": "Mcp-Protocol-Version, WWW-Authenticate",
+};
+
 interface JsonRpcMessage {
   method?: unknown;
   id?: unknown;
   params?: { name?: unknown };
 }
 
-/**
- * Handles one stateless MCP POST: origin check, rate limit, body limit, a concurrency slot
- * for tool calls, then a fresh server and transport that answer with JSON.
- */
 export async function handleMcpPost(request: Request, limits: McpHttpLimits = DEFAULT_MCP_LIMITS) {
-  const cors = corsHeaders(request);
+  const auth = mcpAuthConfig();
+  const cors = corsHeaders(request, auth);
   if (!cors) return jsonRpcError(null, 403, -32000, "Requests from this origin are not allowed.");
 
-  const charge = (cost: number) => {
-    const budget = consumeRequestBudget(request, cost, "mcp");
-    if (budget.allowed) return null;
+  const caller = await identifyCaller(request, auth);
+  if (caller.kind === "unverifiable") {
+    return jsonRpcError(cors, 503, -32000, "Sign-in can't be checked right now. Try again shortly.", { "Retry-After": "5" });
+  }
+  // Never rate limited: a 401 is what makes clients refresh, and the body isn't read.
+  if (caller.kind === "invalid" && auth) return authChallenge(auth, cors, "invalid_token", null);
+  const payer: Payer = caller.kind === "user" ? caller : { kind: "anonymous", ip: clientIp(request) };
+  const limited = async (budget: McpBudget, message: JsonRpcMessage | null) => {
+    if (auth && payer.kind === "anonymous" && budget.limitedBy === "payer") {
+      return authChallenge(auth, cors, "sign_in", message ?? (await readMessageIfPossible(request, limits, cors)));
+    }
     return jsonRpcError(cors, 429, -32000, "Too many requests.", { "Retry-After": String(budget.retryAfterSeconds) });
   };
+
   // Every request pays the base cost before its body is read, so a client over its budget
   // can't keep body reads busy. Tool calls pay the rest once the body shows which tool it is,
   // and get the base cost back if they can't, so parallel calls near the limit don't spend
   // the budget on calls that never run.
-  const limited = charge(BASE_COST);
-  if (limited) return limited;
+  const base = await chargeMcpBudget(payer, BASE_COST);
+  if (!base.allowed) return limited(base, null);
   const message = await readMessage(request, limits, cors);
   if (message instanceof Response) return message;
   const isToolCall = message.method === "tools/call";
   if (isToolCall) {
     const toolName = typeof message.params?.name === "string" ? message.params.name : "";
-    const limitedTool = charge((TOOL_COSTS[toolName] ?? TOOL_CALL_COST) - BASE_COST);
-    if (limitedTool) {
-      refundRequestBudget(request, BASE_COST, "mcp");
-      return limitedTool;
-    }
+    const tool = await chargeMcpBudget(payer, (TOOL_COSTS[toolName] ?? TOOL_CALL_COST) - BASE_COST, BASE_COST);
+    if (!tool.allowed) return limited(tool, message);
   }
 
   // A stateless server has nothing to do with a notification.
@@ -93,11 +112,15 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
   if (isToolCall && !acquireSlot(limits)) return busy(cors);
 
   const requestId = crypto.randomUUID().slice(0, 8);
-  const server = createEftMcpServer({
-    origin: linkOrigin(request),
-    signal: AbortSignal.any([request.signal, AbortSignal.timeout(limits.toolDeadlineMs)]),
-    requestId,
-  });
+  const server = createEftMcpServer(
+    {
+      origin: linkOrigin(request),
+      signal: AbortSignal.any([request.signal, AbortSignal.timeout(limits.toolDeadlineMs)]),
+      requestId,
+      signedIn: payer.kind === "user",
+    },
+    { securitySchemes: auth ? OPTIONAL_OAUTH_SECURITY_SCHEMES : undefined }
+  );
   try {
     const transport = new WebStandardStreamableHTTPServerTransport({
       sessionIdGenerator: undefined,
@@ -116,6 +139,30 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
     if (isToolCall) releaseSlot();
     void server.close().catch(() => undefined);
   }
+}
+
+// Clients drop a 401's body, so anonymous tool challenges use HTTP 200 to deliver their _meta.
+function authChallenge(
+  auth: McpAuthConfig,
+  cors: Record<string, string>,
+  reason: ChallengeReason,
+  message: JsonRpcMessage | null
+) {
+  const id = typeof message?.id === "string" || typeof message?.id === "number" ? message.id : null;
+  if (reason === "sign_in" && message?.method === "tools/call" && id !== null) {
+    return Response.json(
+      { jsonrpc: "2.0", id, result: signInToolResult(auth) },
+      { headers: { ...BASE_HEADERS, ...cors } }
+    );
+  }
+  const headers = { ...BASE_HEADERS, ...cors, "WWW-Authenticate": wwwAuthenticate(auth, reason) };
+  const text = reason === "sign_in" ? "Sign in to keep using EFT Toolset." : "The access token is expired or invalid.";
+  return Response.json({ jsonrpc: "2.0", error: { code: -32000, message: text }, id }, { status: 401, headers });
+}
+
+async function readMessageIfPossible(request: Request, limits: McpHttpLimits, cors: Record<string, string>) {
+  const message = await readMessage(request, limits, cors);
+  return message instanceof Response ? null : message;
 }
 
 /** The request's single JSON-RPC message, or the response that explains why it can't be read. */
@@ -149,13 +196,13 @@ async function readMessage(
 }
 
 export function mcpMethodNotAllowed(request: Request) {
-  return jsonRpcError(corsHeaders(request) ?? {}, 405, -32000, "This MCP server is stateless. Send JSON-RPC messages with POST.", {
+  return jsonRpcError(corsHeaders(request, mcpAuthConfig()) ?? {}, 405, -32000, "This MCP server is stateless. Send JSON-RPC messages with POST.", {
     Allow: "POST, OPTIONS",
   });
 }
 
 export function mcpPreflight(request: Request) {
-  const cors = corsHeaders(request);
+  const cors = corsHeaders(request, mcpAuthConfig());
   return new Response(null, { status: cors ? 204 : 403, headers: { ...BASE_HEADERS, ...cors } });
 }
 
@@ -193,10 +240,11 @@ function releaseSlot() {
  * Origin; other clients usually don't. Allowed: no Origin, this site, and local development
  * tools such as the MCP Inspector.
  */
-function corsHeaders(request: Request): Record<string, string> | null {
+function corsHeaders(request: Request, auth: McpAuthConfig | null): Record<string, string> | null {
+  const base = auth ? AUTH_CORS_HEADERS : CORS_HEADERS;
   const origin = request.headers.get("origin");
-  if (!origin) return CORS_HEADERS;
-  return isAllowedOrigin(origin) ? { ...CORS_HEADERS, "Access-Control-Allow-Origin": origin } : null;
+  if (!origin) return base;
+  return isAllowedOrigin(origin) ? { ...base, "Access-Control-Allow-Origin": origin } : null;
 }
 
 function isAllowedOrigin(origin: string) {

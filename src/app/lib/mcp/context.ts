@@ -11,6 +11,8 @@ export interface ToolContext {
   signal: AbortSignal;
   /** Identifies the HTTP request in logs and in crash messages. */
   requestId: string;
+  /** Logged only. */
+  signedIn?: boolean;
 }
 
 /** Reads tarkov.dev data with the tool's cancellation and freshness tracking. */
@@ -79,6 +81,7 @@ export async function runTool(
         event: "mcp_tool_call",
         requestId: context.requestId,
         tool: call.tool,
+        signedIn: context.signedIn ?? false,
         gameMode: call.gameMode ?? null,
         outcome,
         durationMs: Math.round(performance.now() - startedAt),

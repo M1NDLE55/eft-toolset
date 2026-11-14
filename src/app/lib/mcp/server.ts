@@ -33,7 +33,11 @@ ${TOOL_LIST}
 - List results with a nextOffset have more: pass it as offset to get the next page.
 - If a result has a dataNotice, tarkov.dev was unreachable and the data is cached; mention it when quoting prices.`;
 
-export function createEftMcpServer(context: ToolContext) {
+export interface McpServerOptions {
+  securitySchemes?: readonly object[];
+}
+
+export function createEftMcpServer(context: ToolContext, options: McpServerOptions = {}) {
   const server = new McpServer(
     {
       name: "eft-toolset",
@@ -49,7 +53,7 @@ export function createEftMcpServer(context: ToolContext) {
   registerGlossaryTools(server, context);
   registerWikiTools(server, context);
   registerImportLinkTools(server, context);
-  serveCompactToolList(server);
+  serveCompactToolList(server, options.securitySchemes);
   registerPrompts(server);
   return server;
 }
