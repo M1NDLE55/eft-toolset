@@ -126,15 +126,7 @@ export function wwwAuthenticate(config: McpAuthConfig, reason: ChallengeReason) 
   return `${metadata}, error="invalid_token", error_description="${CHALLENGE_DESCRIPTIONS.invalid_token}"`;
 }
 
-/**
- * Whether a request comes from ChatGPT, which starts sign-in from a tool result's
- * _meta["mcp/www_authenticate"] rather than from a 401
- * (https://developers.openai.com/apps-sdk/build/auth). ChatGPT puts openai/* keys
- * (openai/subject, openai/session, openai/locale) in every tool call's _meta
- * (https://developers.openai.com/apps-sdk/reference), and its connector sends a User-Agent
- * of openai-mcp/<version>. Either is enough. Both can be spoofed, but a spoofer only changes
- * how its own challenge is shaped.
- */
+/** ChatGPT wants its challenge in a tool result; spoofing only changes the spoofer's own challenge. */
 export function isChatGptRequest(request: Request, params: unknown) {
   const meta = params && typeof params === "object" ? (params as { _meta?: unknown })._meta : undefined;
   if (meta && typeof meta === "object" && Object.keys(meta).some((key) => key.startsWith("openai/"))) return true;

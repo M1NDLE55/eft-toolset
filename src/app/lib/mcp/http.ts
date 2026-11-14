@@ -81,8 +81,7 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
   if (caller.kind === "unverifiable") {
     return jsonRpcError(cors, 503, -32000, "Sign-in can't be checked right now. Try again shortly.", { "Retry-After": "5" });
   }
-  // Never rate limited: the challenge is what makes clients refresh. The body is read only to
-  // tell a ChatGPT tool call, which needs its challenge in a tool result, from the rest.
+  // Not rate limited: the challenge is what makes clients refresh.
   if (caller.kind === "invalid" && auth) {
     return authChallenge(request, auth, cors, "invalid_token", await readMessageIfPossible(request, limits, cors));
   }
@@ -95,7 +94,7 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
   };
 
   // Every request pays the base cost before its body is read, so a client over its budget
-  // can't keep body reads busy. Tool calls pay the rest once the body shows which tool it is,
+  // can't keep body reads busy (except the read that shapes a sign-in challenge). Tool calls pay the rest once the body shows which tool it is,
   // and get the base cost back if they can't, so parallel calls near the limit don't spend
   // the budget on calls that never run.
   const base = await chargeMcpBudget(payer, BASE_COST);
@@ -145,14 +144,7 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
   }
 }
 
-/**
- * Asks the client to sign in, in the shape it acts on. ChatGPT documents a tool result
- * carrying _meta["mcp/www_authenticate"] (HTTP 200) as what starts sign-in during a tool call,
- * and OpenAI advises against relying on a 401 there. Claude starts sign-in from a 401 with
- * WWW-Authenticate on any request and passes a 200 tool error to the model as text, as do the
- * MCP SDK clients that Cursor and others follow. So ChatGPT's tool calls get the tool result
- * and everything else, including unknown clients, gets the spec's 401.
- */
+/** ChatGPT tool calls get a tool result with mcp/www_authenticate; everyone else gets the spec 401. */
 function authChallenge(
   request: Request,
   auth: McpAuthConfig,

@@ -130,7 +130,7 @@ function publish(tool: ListedTool): Tool {
 /**
  * Answers tools/list with the compact schemas above instead of the SDK's full conversion.
  * Call it after registering every tool: the SDK installs its own handler on the first
- * registration, and this replaces it. Mirrors securitySchemes in _meta for older clients.
+ * registration, and this replaces it.
  */
 export function serveCompactToolList(server: McpServer, securitySchemes?: readonly object[]) {
   const tools = (listings.get(server) ?? [])
