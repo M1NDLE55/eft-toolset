@@ -2,14 +2,16 @@ import type { BuildNode, GunItem, ModSlotDef } from "@/app/lib/types/gunBuilder"
 import { isDetailed, type ItemLookup } from "./stats";
 import { childAt } from "./tree";
 
-// Turns a build tree into simple 3D shapes for the 3D view.
+// Lays a build tree out in 3D for the 3D view.
 //
 // There are no licensed 3D models of Tarkov items (tarkov.dev serves images only, and the game's
-// models belong to Battlestate Games), and the data has no attachment points. So each part becomes
-// a box or cylinder sized from its kind, its inventory size, and any length in its name, placed by
-// the kind of slot it sits in: barrels and muzzles run forward along the bore, stocks run back,
-// magazines and grips hang below, optics and sights sit on top, lights go on the side. It is a
-// schematic of the build, not a model of the gun.
+// models belong to Battlestate Games), and the data has no attachment points. So each part gets a
+// box sized from its kind, its inventory size, and any length in its name, placed by the kind of
+// slot it sits in: barrels and muzzles run forward along the bore, stocks run back, magazines and
+// grips hang below, optics and sights sit on top, lights go on the side. Each part also names one
+// of our own generic models (partVariant), which the viewer fits into that box; the box itself is
+// drawn while the models load or when there is no model. It is a schematic of the build, not a
+// model of the real gun.
 //
 // Units are roughly centimetres. The bore runs along +x (the muzzle end), y is up, and +z is the
 // gun's right side.
@@ -59,7 +61,13 @@ export interface ScenePart {
   tilt: number;
   /** The side of its parent the part sits on. */
   face: Face;
+  /** Which generic model in public/models/gun-parts.glb draws it (see partVariant). */
+  variant: string;
+  /** A colour the item's name asks for, such as wood or FDE; null keeps the part kind's colour. */
+  finish: Finish | null;
 }
+
+export type Finish = "wood" | "tan" | "olive" | "grey" | "black";
 
 export interface BuildScene {
   parts: ScenePart[];
@@ -67,7 +75,7 @@ export interface BuildScene {
   max: Vec3;
 }
 
-type WeaponClass = "pistol" | "smg" | "rifle" | "sniper" | "lmg" | "shotgun";
+export type WeaponClass = "pistol" | "smg" | "rifle" | "sniper" | "lmg" | "shotgun";
 
 const BODY: Record<WeaponClass, Vec3> = {
   pistol: [18, 3.2, 2.8],
@@ -424,6 +432,8 @@ function makePart(
     size,
     tilt,
     face,
+    variant: "generic",
+    finish: null,
   };
   return { part, box: boxOf(center, size) };
 }
@@ -688,6 +698,8 @@ export function buildScene(root: BuildNode, lookup: ItemLookup, options: BuildSc
     size: bodySize,
     tilt: 0,
     face: "top",
+    variant: "generic",
+    finish: null,
   };
   const body: Placed = { part: bodyPart, box: boxOf(bodyCenter, bodySize) };
   const parts: ScenePart[] = [bodyPart];
@@ -725,11 +737,111 @@ export function buildScene(root: BuildNode, lookup: ItemLookup, options: BuildSc
     barrelFront: builtinBarrel ? builtinBarrel.box.max[0] : null,
   };
   placeChildren(root, body, [], context);
-  return { parts, ...sceneBounds(parts) };
+  const byId = new Map(parts.map((part) => [part.id, part]));
+  const finished = parts.map((part) => {
+    const item = part.itemId ? lookup.get(part.itemId) : undefined;
+    const parent = part.role === "builtin" ? bodyPart : byId.get(part.parentPath.length ? part.parentPath.join("/") : "root");
+    return {
+      ...part,
+      variant: partVariant(part, item, { cls, layout, parentKind: part.id === "root" ? null : parent?.kind ?? null }),
+      finish: item ? finishFromName(item.name) : null,
+    };
+  });
+  return { parts: finished, ...sceneBounds(finished) };
 }
 
 function hasGripInstalled(root: BuildNode, weapon: GunItem | undefined) {
   return isDetailed(weapon) && weapon.slots.some((slot) => slotKind(slot.nameId) === "grip" && childAt(root, slot.id));
+}
+
+// Matches inside words too, as in "beechwood".
+const WOOD = /wood|walnut|beech|birch|bakelite|plum/i;
+
+export interface VariantContext {
+  cls: WeaponClass;
+  layout: WeaponLayout;
+  parentKind: PartKind | null;
+}
+
+/**
+ * Picks the generic model that draws a part, from its kind and what its name says. The names
+ * are listed in src/app/lib/builds/gun-parts-model.json, which scripts/models builds.
+ */
+export function partVariant(part: Pick<ScenePart, "kind" | "id" | "slot" | "role">, item: GunItem | undefined, context: VariantContext): string {
+  const name = item?.name ?? "";
+  const { cls, layout, parentKind } = context;
+  const cellsX = (isDetailed(item) && item.gridWidth) || 1;
+  switch (part.kind) {
+    case "body":
+      if (layout.bullpup) return "body_bullpup";
+      if (cls === "pistol") return "body_pistol";
+      return cls === "shotgun" ? "body_plain" : "body_rifle";
+    case "receiver":
+      if (cls === "pistol" && parentKind === "body" && !layout.bullpup) return "slide";
+      return /\b(dust cover|cover)\b/i.test(name) ? "dust_cover" : "receiver_upper";
+    case "barrel":
+      return "barrel";
+    case "muzzle":
+      if (isSuppressor(name)) return "suppressor";
+      if (/\b(brake|compensator|comp)\b/i.test(name)) return "muzzle_brake";
+      if (/\b(adapter|protector|thread|cap)\b/i.test(name)) return "muzzle_adapter";
+      return "muzzle_flash_hider";
+    case "gasBlock":
+      return parentKind === "barrel" ? "gas_block" : "gas_tube";
+    case "handguard":
+      if (parentKind === "handguard" || WOOD.test(name)) return "handguard_classic";
+      if (/\b(quad|ris|ras|railed)\b|rail system/i.test(name)) return "handguard_rail";
+      if (/m-lok|mlok|keymod|key mod|keyslot/i.test(name)) return "handguard_mlok";
+      return /\b(carbine|polymer|lower|upper|standard)\b/i.test(name) ? "handguard_classic" : "handguard_mlok";
+    case "stock":
+      if (layout.bullpup) return parentKind === "stock" ? "buttpad" : "stock_shell";
+      if (/\b(buffer tube|tube|adapter)\b/i.test(name)) return "buffer_tube";
+      if (/\b(butt ?pad|recoil pad|pad)\b/i.test(name)) return "buttpad";
+      if (WOOD.test(name)) return "stock_fixed";
+      if (/\b(fold|folding|skeleton|skeletonized|wire)\b/i.test(name)) return "stock_skeleton";
+      return parentKind === "stock" ? "stock_adjustable" : "stock_fixed";
+    case "grip":
+      return "grip";
+    case "magazine": {
+      if (cls === "shotgun" && /\b(shell|tube)\b/i.test(name)) return "mag_tube";
+      if (layout.topFeed) return "mag_top";
+      if (cellsX > 1 || /\bdrum\b/i.test(name)) return "mag_drum";
+      const capacity = item?.capacity ?? null;
+      const straight = cls === "pistol" || cls === "smg" || (capacity !== null && capacity <= 10);
+      return straight ? "mag_straight" : "mag_curved";
+    }
+    case "optic":
+      if (cellsX >= 2) return "optic_scope";
+      return /\b(holo|holographic|exps\d*|xps\d*|hhs)\b/i.test(name) ? "optic_holo" : "optic_reddot";
+    case "ironSight":
+      return /front/i.test(part.slot?.nameId ?? name) ? "sight_front" : "sight_rear";
+    case "mount":
+      return "rail";
+    case "tactical":
+      return /\b(laser|peq\S*|dbal\S*|lam|ngal|la-5\S*|klesch\S*|perst\S*|illuminator)\b/i.test(name)
+        ? "tactical_laser"
+        : "tactical_light";
+    case "foregrip":
+      return /\b(angled|afg|stop|handstop|stubby)\b/i.test(name) ? "foregrip_angled" : "foregrip_vertical";
+    case "charge":
+      return "charge";
+    case "launcher":
+      return "launcher";
+    case "bipod":
+      return "bipod";
+    default:
+      return "generic";
+  }
+}
+
+/** The colour an item's name asks for. */
+export function finishFromName(name: string): Finish | null {
+  if (WOOD.test(name)) return "wood";
+  if (/\b(fde|tan|desert|sand|coyote|khaki)\b|flat dark earth/i.test(name)) return "tan";
+  if (/\b(olive|od|green|foliage)\b/i.test(name)) return "olive";
+  if (/\b(grey|gray|tungsten|silver|stainless)\b/i.test(name)) return "grey";
+  if (/\bblack\b/i.test(name)) return "black";
+  return null;
 }
 
 export function sceneBounds(parts: readonly ScenePart[]): { min: Vec3; max: Vec3 } {

@@ -125,7 +125,10 @@ const sections: { heading: string; content: ReactNode }[] = [
         <External href="https://www.radix-ui.com/">Radix UI</External> (MIT), and{" "}
         <External href="https://lucide.dev/">Lucide</External> icons (ISC), set in{" "}
         <External href="https://rsms.me/inter/">Inter</External> (SIL Open Font License). Our own code is{" "}
-        <External href="https://github.com/M1NDLE55/eft-toolset">open source</External> under the GPL-3.0.
+        <External href="https://github.com/M1NDLE55/eft-toolset">open source</External> under the GPL-3.0. That
+        includes the gun builder&apos;s 3D part models, which we make ourselves with scripts in{" "}
+        <External href="https://www.blender.org/">Blender</External>. They are generic shapes, not taken from the
+        game or modelled on any real product.
       </p>
     ),
   },

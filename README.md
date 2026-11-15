@@ -17,7 +17,7 @@ Assemble weapons part by part with compatible slots, factory presets, and live e
 - one-click cheapest parts for empty required slots;
 - side-by-side build comparison and a printable or copyable shopping list;
 - undo, keyboard navigation, and share links that others can import by pasting;
-- a 3D view that draws the build as it changes. You can rotate it and pick a part in it to swap. tarkov.dev has no 3D models and the game's models aren't licensed for reuse, so each part is a simple shape placed by its slot, not a model of the real item.
+- a 3D view that draws the build as it changes. You can rotate it and pick a part in it to swap. tarkov.dev has no 3D models and the game's models aren't licensed for reuse, so each part is drawn with one of our own generic low-poly models, placed by its slot, not a model of the real item. Bullpups (AUG, MDR, RFB, ASh-12, P90) are laid out with the magazine behind the grip, and the P90's magazine lies on top.
 
 ### Raid Planner
 Plan raids on interactive maps, including Icebreaker and its decks. Draw routes, arrows, waypoints, and notes on each level, measure distances, and toggle extracts, transits, spawns, locks, hazards, and loot layers. Plans support undo and redo, show their total route distance, and can be shared by link or exported to a file.
@@ -64,6 +64,7 @@ npm run dev
 | `npm test` | Run the Vitest suite |
 | `node scripts/generate-maps-config.mjs` | Regenerate the raid planner's map configuration from tarkov.dev after a game update |
 | `node scripts/build-glossary.mjs` | Resolve the glossary's landmark positions and item ids against live data after editing `src/app/lib/glossary/terms.json` |
+| `BLENDER=<path> npm run models` | Rebuild the 3D view's part models (`public/models/gun-parts.glb`) in headless Blender; see [`scripts/models/README.md`](scripts/models/README.md) |
 | `node scripts/build-wiki-snapshot.mjs` | Rebuild `data/wiki` from the wiki's published XML dump (`--check` only reports whether a newer dump is out; `--file` uses a downloaded one) |
 
 ### Environment variables

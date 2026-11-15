@@ -227,8 +227,8 @@ function PartDetails({
   if (!part) {
     return (
       <p className="border-t border-[#1a1a1a] px-3 py-2 text-xs text-[#888]">
-        Drag to rotate, scroll or pinch to zoom. Select a part to see it or swap it. Parts are drawn as simple
-        shapes placed by slot, not true-to-life models; outlines mark empty required slots.
+        Drag to rotate, scroll or pinch to zoom. Select a part to see it or swap it. Each part is drawn with a
+        generic model for its kind of slot, not a model of the real item; outlines mark empty required slots.
       </p>
     );
   }

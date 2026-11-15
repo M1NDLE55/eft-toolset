@@ -3,11 +3,28 @@
 // The WebGL part of the 3D view. It pulls in three.js, so it is only loaded through
 // build-3d-panel's dynamic import, when someone opens the 3D view.
 
-import { useEffect, useMemo, useRef } from "react";
-import { Canvas, useThree, type ThreeEvent } from "@react-three/fiber";
-import { BoxGeometry, CylinderGeometry, EdgesGeometry, Vector3, type PerspectiveCamera } from "three";
+import { Component, Suspense, useEffect, useMemo, useRef, type ReactNode } from "react";
+import { Canvas, useLoader, useThree, type ThreeEvent } from "@react-three/fiber";
+import {
+  Box3,
+  BoxGeometry,
+  BufferAttribute,
+  BufferGeometry,
+  Color,
+  CylinderGeometry,
+  EdgesGeometry,
+  Mesh,
+  Vector3,
+  type Material,
+  type Matrix4,
+  type Object3D,
+  type PerspectiveCamera,
+} from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import type { BuildScene, PartKind, ScenePart, Vec3 } from "@/app/lib/builds/build-scene";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import type { BuildScene, Finish, PartKind, ScenePart, Vec3 } from "@/app/lib/builds/build-scene";
+import { modelTransform, VARIANT_SPECS, type ModelShape } from "@/app/lib/builds/part-models";
+import gunPartsModel from "@/app/lib/builds/gun-parts-model.json";
 
 const COLORS: Record<PartKind, string> = {
   body: "#76746c",
@@ -29,6 +46,14 @@ const COLORS: Record<PartKind, string> = {
   bipod: "#7b7b75",
   other: "#8d8980",
 };
+const FINISHES: Record<Finish, string> = {
+  wood: "#7a5434",
+  tan: "#a48d66",
+  olive: "#5f6648",
+  grey: "#8f9091",
+  black: "#3a3a3a",
+};
+const LENS = "#23465c";
 const ACCENT = "#9a8866";
 const SELECTED = "#e6d9b8";
 const BACKGROUND = "#070707";
@@ -79,16 +104,12 @@ export default function Build3DViewer({
       <directionalLight position={[60, 120, 90]} intensity={3} />
       <directionalLight position={[-80, 30, -60]} intensity={1.1} />
       <Ground min={scene.min} max={scene.max} />
-      {scene.parts.map((part) => (
-        <PartMesh
-          key={part.id}
-          part={part}
-          selected={part.id === selectedId}
-          hovered={part.id === hoveredId}
-          onHover={onHover}
-          onSelect={onSelect}
-        />
-      ))}
+      {/* Boxes stand in while the models load, and stay if they can't. */}
+      <ModelBoundary fallback={<PartBoxes parts={scene.parts} selectedId={selectedId} hoveredId={hoveredId} onHover={onHover} onSelect={onSelect} />}>
+        <Suspense fallback={<PartBoxes parts={scene.parts} selectedId={selectedId} hoveredId={hoveredId} onHover={onHover} onSelect={onSelect} />}>
+          <PartModels parts={scene.parts} selectedId={selectedId} hoveredId={hoveredId} onHover={onHover} onSelect={onSelect} />
+        </Suspense>
+      </ModelBoundary>
       <CameraRig min={scene.min} max={scene.max} resetKey={resetKey} />
     </Canvas>
   );
@@ -96,6 +117,187 @@ export default function Build3DViewer({
 
 function interactive(part: ScenePart) {
   return part.role !== "builtin";
+}
+
+interface PartsProps {
+  parts: ScenePart[];
+  selectedId: string | null;
+  hoveredId: string | null;
+  onHover: (id: string | null) => void;
+  onSelect: (id: string | null) => void;
+}
+
+class ModelBoundary extends Component<{ fallback: ReactNode; children: ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+
+  render() {
+    return this.state.failed ? this.props.fallback : this.props.children;
+  }
+}
+
+function PartBoxes({ parts, selectedId, hoveredId, onHover, onSelect }: PartsProps) {
+  return parts.map((part) => (
+    <PartMesh
+      key={part.id}
+      part={part}
+      selected={part.id === selectedId}
+      hovered={part.id === hoveredId}
+      onHover={onHover}
+      onSelect={onSelect}
+    />
+  ));
+}
+
+type MaterialSlot = "body" | "accent" | "lens";
+
+interface PartModel extends ModelShape {
+  pieces: { geometry: BufferGeometry; slot: MaterialSlot }[];
+}
+
+/** Copies a mesh's geometry into plain floats in the file's frame, undoing quantization. */
+function bakeGeometry(source: BufferGeometry, matrix: Matrix4) {
+  const geometry = new BufferGeometry();
+  for (const key of ["position", "normal"]) {
+    const attribute = source.getAttribute(key);
+    if (!attribute) continue;
+    const values = new Float32Array(attribute.count * 3);
+    for (let index = 0; index < attribute.count; index += 1) {
+      values[index * 3] = attribute.getX(index);
+      values[index * 3 + 1] = attribute.getY(index);
+      values[index * 3 + 2] = attribute.getZ(index);
+    }
+    geometry.setAttribute(key, new BufferAttribute(values, 3));
+  }
+  if (source.index) geometry.setIndex(source.index.clone());
+  geometry.applyMatrix4(matrix);
+  return geometry;
+}
+
+function materialSlot(material: Material | Material[]): MaterialSlot {
+  const name = Array.isArray(material) ? material[0]?.name : material.name;
+  return name === "accent" || name === "lens" ? name : "body";
+}
+
+function buildLibrary(root: Object3D) {
+  root.updateMatrixWorld(true);
+  const library = new Map<string, PartModel>();
+  for (const variant of gunPartsModel.variants) {
+    const node = root.getObjectByName(variant);
+    const mount = root.getObjectByName(`${variant}__mount`);
+    if (!node || !mount) continue;
+    const pieces: PartModel["pieces"] = [];
+    const bounds = new Box3();
+    node.traverse((object) => {
+      if (!(object instanceof Mesh)) return;
+      const geometry = bakeGeometry(object.geometry, object.matrixWorld);
+      geometry.computeBoundingBox();
+      if (geometry.boundingBox) bounds.union(geometry.boundingBox);
+      pieces.push({ geometry, slot: materialSlot(object.material) });
+    });
+    if (pieces.length === 0 || bounds.isEmpty()) continue;
+    const point = mount.getWorldPosition(new Vector3());
+    library.set(variant, {
+      pieces,
+      min: bounds.min.toArray(),
+      max: bounds.max.toArray(),
+      mount: point.toArray(),
+    });
+  }
+  return library;
+}
+
+function PartModels({ parts, selectedId, hoveredId, onHover, onSelect }: PartsProps) {
+  const gltf = useLoader(GLTFLoader, gunPartsModel.url);
+  const library = useMemo(() => buildLibrary(gltf.scene), [gltf]);
+  useEffect(
+    () => () => {
+      for (const model of library.values()) for (const piece of model.pieces) piece.geometry.dispose();
+    },
+    [library]
+  );
+  return parts.map((part) => {
+    const model = library.get(part.variant);
+    const spec = VARIANT_SPECS[part.variant];
+    const common = {
+      part,
+      selected: part.id === selectedId,
+      hovered: part.id === hoveredId,
+      onHover,
+      onSelect,
+    };
+    // Empty slots stay outlined boxes; anything without a model falls back to its box.
+    if (part.role === "empty" || !model || !spec) return <PartMesh key={part.id} {...common} />;
+    return <ModelMesh key={part.id} {...common} model={model} spec={spec} />;
+  });
+}
+
+// Parts whose model is metal whatever kind of slot holds them.
+const VARIANT_COLORS: Partial<Record<string, string>> = { mag_tube: COLORS.barrel, gas_tube: COLORS.barrel };
+
+function partColor(part: ScenePart) {
+  return part.finish ? FINISHES[part.finish] : VARIANT_COLORS[part.variant] ?? COLORS[part.kind];
+}
+
+function ModelMesh({
+  part,
+  model,
+  spec,
+  selected,
+  hovered,
+  onHover,
+  onSelect,
+}: {
+  part: ScenePart;
+  model: PartModel;
+  spec: (typeof VARIANT_SPECS)[string];
+  selected: boolean;
+  hovered: boolean;
+  onHover: (id: string | null) => void;
+  onSelect: (id: string | null) => void;
+}) {
+  const transform = modelTransform(part, spec, model);
+  const body = selected ? SELECTED : partColor(part);
+  // Wood furniture keeps dark metal fittings; otherwise accents are a darker shade of the part.
+  const accent = part.finish === "wood" ? "#2c2c2c" : `#${new Color(body).multiplyScalar(0.42).getHexString()}`;
+  const glow = hovered && !selected;
+
+  function handleOver(event: ThreeEvent<PointerEvent>) {
+    event.stopPropagation();
+    if (interactive(part)) onHover(part.id);
+  }
+
+  function handleClick(event: ThreeEvent<MouseEvent>) {
+    event.stopPropagation();
+    if (event.delta > 6) return;
+    onSelect(interactive(part) ? part.id : null);
+  }
+
+  return (
+    <group
+      position={transform.position}
+      quaternion={transform.quaternion}
+      scale={transform.scale}
+      onPointerOver={handleOver}
+      onPointerOut={() => onHover(null)}
+      onClick={handleClick}
+    >
+      {model.pieces.map((piece, index) => (
+        <mesh key={index} geometry={piece.geometry} position={transform.offset}>
+          <meshStandardMaterial
+            color={piece.slot === "lens" ? LENS : piece.slot === "accent" ? accent : body}
+            roughness={piece.slot === "lens" ? 0.15 : part.finish === "wood" && piece.slot === "body" ? 0.8 : 0.58}
+            metalness={piece.slot === "lens" ? 0.6 : part.finish === "wood" && piece.slot === "body" ? 0.05 : 0.4}
+            emissive={glow ? ACCENT : "#000000"}
+            emissiveIntensity={glow ? 0.35 : 0}
+          />
+        </mesh>
+      ))}
+    </group>
+  );
 }
 
 function PartMesh({
