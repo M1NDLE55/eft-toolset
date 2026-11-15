@@ -111,6 +111,42 @@ export function weaponClass(name: string): WeaponClass {
   return "rifle";
 }
 
+/**
+ * How a weapon is laid out. A bullpup has its action and magazine behind the grip, inside the
+ * stock, so it has no stock out the back. The P90 also feeds from a magazine lying on top.
+ * tarkov.dev doesn't say which guns are bullpups, so this goes by name.
+ */
+export interface WeaponLayout {
+  bullpup: boolean;
+  topFeed: boolean;
+}
+
+const BULLPUP_NAMES = /\b(AUG|MDR|RFB|ASh-12|P90)\b/i;
+const TOP_FEED_NAMES = /\bP90\b/i;
+
+export function weaponLayout(name: string): WeaponLayout {
+  return { bullpup: BULLPUP_NAMES.test(name), topFeed: TOP_FEED_NAMES.test(name) };
+}
+
+/** A bullpup's body runs from the butt to the barrel, so it is longer than a conventional receiver. */
+function bodySizeFor(cls: WeaponClass, layout: WeaponLayout): Vec3 {
+  if (!layout.bullpup) return BODY[cls];
+  return cls === "smg" || cls === "pistol" ? [34, 7, 5] : [44, 7, 4.4];
+}
+
+/** How high a top-feed magazine stands above the body; the receiver sits on it. */
+const TOP_MAGAZINE_HEIGHT = 3;
+
+/** Where along the body (0 at the butt) the grip and magazine sit. */
+function gripAt(cls: WeaponClass, layout: WeaponLayout) {
+  if (layout.bullpup) return 0.6;
+  return cls === "pistol" ? 0.3 : 0.28;
+}
+
+function magazineAt(layout: WeaponLayout) {
+  return layout.bullpup ? 0.3 : 0.62;
+}
+
 /** A slot's kind of part, from its name id such as `mod_pistol_grip` or `mod_mount_001`. */
 export function slotKind(nameId: string): PartKind {
   const id = nameId.toLowerCase();
@@ -163,10 +199,13 @@ interface Placed {
 interface Context {
   lookup: ItemLookup;
   cls: WeaponClass;
+  layout: WeaponLayout;
   body: Placed;
   builtinBarrel: Placed | null;
   includeEmpty: boolean;
   parts: ScenePart[];
+  /** The front of the furthest barrel placed so far; handguards stop short of it. */
+  barrelFront: number | null;
 }
 
 function boxOf(center: Vec3, size: Vec3): Box {
@@ -399,7 +438,7 @@ function placeStructural(
   path: string[],
   context: Context
 ): Placed | null {
-  const { cls, body } = context;
+  const { cls, layout, body } = context;
   const name = item?.name ?? "";
   const cellsX = (isDetailed(item) && item.gridWidth) || 0;
   const cellsY = (isDetailed(item) && item.gridHeight) || 0;
@@ -419,19 +458,24 @@ function placeStructural(
           ? [hostLength * 0.92, hostHeight, hostWidth + 0.3]
           : [pistol ? hostLength + 1 : hostLength * 0.96, pistol ? 2.8 : 2.4, hostWidth * 0.95];
       const front = host.box.max[0] + (pistol ? 0.5 : 0);
+      const lift = layout.topFeed && host.part.kind === "body" ? TOP_MAGAZINE_HEIGHT : 0;
       const y =
         host.part.kind === "receiver"
           ? (host.box.min[1] + host.box.max[1]) / 2 + 0.3
-          : host.box.max[1] + size[1] / 2 - 0.1;
+          : host.box.max[1] + size[1] / 2 - 0.1 + lift;
       return makePart(spec, parent, path, kind, "box", [front - size[0] / 2, y, 0], size, "top");
     }
     case "barrel": {
       const barrel = lengthFromName(name) ?? (cellsX ? cellsX * 10 : DEFAULT_BARREL_CM[cls]);
       const exit = receiverFront(chain, context);
-      const inside = cls === "pistol" ? barrel * 0.85 : Math.min(10, barrel * 0.25);
       const diameter = BARREL_DIAMETER[cls];
-      const start = exit - inside;
+      // A bullpup's chamber sits by its magazine, well back inside the stock.
+      const chamber = bodyBox.min[0] + bodyLength * magazineAt(layout);
+      const start = layout.bullpup
+        ? Math.max(chamber, exit - barrel * 0.9)
+        : exit - (cls === "pistol" ? barrel * 0.85 : Math.min(10, barrel * 0.25));
       const placed = makePart(spec, parent, path, kind, "cylinder", [start + barrel / 2, 0, 0], [barrel, diameter, diameter], "top");
+      context.barrelFront = Math.max(context.barrelFront ?? -Infinity, placed.box.max[0]);
       return { ...placed, exitX: exit };
     }
     case "muzzle": {
@@ -459,15 +503,29 @@ function placeStructural(
     case "handguard": {
       const stacked = parent.part.kind === "handguard";
       const start = stacked ? parent.box.min[0] : receiverFront(chain, context);
-      const guard = stacked
+      const wanted = stacked
         ? length(parent.box)
         : lengthFromName(name) ?? (cellsX ? Math.max(cellsX * 8, 12) : 20);
+      // A handguard can't reach past the barrel, or it would swallow the muzzle device.
+      const limit = context.barrelFront === null || stacked ? Infinity : context.barrelFront - 1 - start;
+      const guard = Math.max(Math.min(wanted, limit), 6);
       const size: Vec3 = stacked ? [guard, 2.6, 4.6] : [guard, 4.6, 4.2];
       const y = stacked ? parent.box.min[1] + 0.9 : 0;
       return makePart(spec, parent, path, kind, "box", [start + guard / 2, y, 0], size, "top");
     }
     case "stock": {
       const fromStock = parent.part.kind === "stock";
+      if (layout.bullpup) {
+        // A bullpup's stock is the shell around the action; a buttpad or cheek rest caps its rear.
+        if (fromStock) {
+          const pad = 2.5;
+          const size: Vec3 = [pad, parent.box.max[1] - parent.box.min[1], parent.box.max[2] - parent.box.min[2]];
+          return makePart(spec, parent, path, kind, "box", [parent.box.min[0] - pad / 2, (parent.box.min[1] + parent.box.max[1]) / 2, 0], size, "top");
+        }
+        const size: Vec3 = [bodyLength * 0.7, bodyBox.max[1] - bodyBox.min[1] + 1.2, bodyBox.max[2] - bodyBox.min[2] + 0.8];
+        const center: Vec3 = [bodyBox.min[0] + size[0] / 2 - 0.4, (bodyBox.min[1] + bodyBox.max[1]) / 2 - 0.4, 0];
+        return makePart(spec, parent, path, kind, "box", center, size, "top");
+      }
       const tube = /\b(buffer tube|tube|adapter)\b/i.test(name);
       const stockLength = tube ? Math.max(cellsX, 2) * 8 : cellsX ? Math.min(cellsX * 9 + 4, 34) : 22;
       const rear = fromStock ? parent.box.min[0] + (parent.part.shape === "cylinder" ? length(parent.box) * 0.55 : 0.5) : bodyBox.min[0] + 0.5;
@@ -479,7 +537,7 @@ function placeStructural(
     }
     case "grip": {
       const size: Vec3 = cls === "pistol" ? PISTOL_GRIP : [3.2, 9, 2.8];
-      const x = bodyBox.min[0] + bodyLength * (cls === "pistol" ? 0.3 : 0.28);
+      const x = bodyBox.min[0] + bodyLength * gripAt(cls, layout);
       return makePart(spec, parent, path, kind, "box", [x, bodyBox.min[1] - size[1] / 2 + 1, 0], size, "bottom", -0.3);
     }
     case "magazine": {
@@ -489,7 +547,14 @@ function placeStructural(
         const start = bodyBox.max[0] - 4;
         return makePart(spec, parent, path, kind, "cylinder", [start + tubeLength / 2, -2.6, 0], [tubeLength, 2.4, 2.4], "bottom");
       }
-      if (cls === "pistol") {
+      if (layout.topFeed) {
+        // Lying along the top of the gun, under the receiver.
+        const magazineLength = Math.min(Math.max((capacity ?? 30) * 0.45, 12), bodyLength * 0.8);
+        const size: Vec3 = [magazineLength, TOP_MAGAZINE_HEIGHT, (bodyBox.max[2] - bodyBox.min[2]) * 0.9];
+        const x = bodyBox.min[0] + bodyLength * 0.2 + magazineLength / 2;
+        return makePart(spec, parent, path, kind, "box", [x, bodyBox.max[1] + size[1] / 2, 0], size, "top");
+      }
+      if (cls === "pistol" && !layout.bullpup) {
         const x = bodyBox.min[0] + bodyLength * 0.3;
         const size: Vec3 = [3, 11, 2.2];
         return makePart(spec, parent, path, kind, "box", [x - 0.6, bodyBox.min[1] - size[1] / 2 + 0.5, 0], size, "bottom", -0.3);
@@ -497,7 +562,7 @@ function placeStructural(
       const height = cellsY ? cellsY * 7 : capacity ? Math.min(Math.max(6 + capacity * 0.35, 6), 28) : 14;
       const wide = cellsX > 1;
       const size: Vec3 = [wide ? 8 : 4, height, wide ? 7 : 2.6];
-      const x = bodyBox.min[0] + bodyLength * 0.62;
+      const x = bodyBox.min[0] + bodyLength * magazineAt(layout);
       return makePart(spec, parent, path, kind, "box", [x, bodyBox.min[1] - size[1] / 2 + 1, 0], size, "bottom", wide ? 0 : 0.12);
     }
     default:
@@ -521,7 +586,9 @@ function placeChildren(node: BuildNode, placed: Placed, chain: Placed[], context
   let mountIndex = 0;
   const nextChain = [...chain, placed];
 
-  for (const spec of specs) {
+  // Barrels first, so handguards placed beside them know where the barrel ends.
+  const isBarrel = (spec: ChildSpec) => (spec.slot ? slotKind(spec.slot.nameId) === "barrel" : false);
+  for (const spec of [...specs.filter(isBarrel), ...specs.filter((spec) => !isBarrel(spec))]) {
     const childItem = spec.child ? context.lookup.get(spec.child.itemId) : undefined;
     const kind = partKind(spec.slot, childItem);
     const path = [...placed.part.path, spec.slotId];
@@ -550,12 +617,14 @@ function placeChildren(node: BuildNode, placed: Placed, chain: Placed[], context
   for (const face of ["top", "bottom", "right", "left"] as const) {
     const group = faceEntries.filter((entry) => entry.face === face);
     if (group.length === 0) continue;
+    // The stretched host only matters above and below; side parts sit on the part itself.
+    const base = face === "top" || face === "bottom" ? host : placed;
     const centers = packAlongFace(
-      host,
+      base,
       group.map((entry) => ({ at: entry.at, length: entry.size[0] }))
     );
     group.forEach((entry, index) => {
-      const { center, size } = onFace(host, face, centers[index], entry.size);
+      const { center, size } = onFace(base, face, centers[index], entry.size);
       const path = [...placed.part.path, entry.spec.slotId];
       faced.push({
         spec: entry.spec,
@@ -599,7 +668,8 @@ export interface BuildSceneOptions {
 export function buildScene(root: BuildNode, lookup: ItemLookup, options: BuildSceneOptions = {}): BuildScene {
   const weapon = lookup.get(root.itemId);
   const cls = weaponClass(weapon?.name ?? "");
-  const bodySize = BODY[cls];
+  const layout = weaponLayout(weapon?.name ?? "");
+  const bodySize = bodySizeFor(cls, layout);
   // The bore (y = 0) runs through a long gun's body, and through a pistol's slide above its frame.
   const bodyTop = cls === "pistol" ? -1.3 : 1.6;
   const bodyCenter: Vec3 = [0, bodyTop - bodySize[1] / 2, 0];
@@ -634,20 +704,25 @@ export function buildScene(root: BuildNode, lookup: ItemLookup, options: BuildSc
     };
     parts.push(builtinBarrel.part);
   }
-  if (cls === "pistol" && !hasGripInstalled(root, weapon)) {
-    // A pistol's frame is its grip.
-    const size = PISTOL_GRIP;
-    const center: Vec3 = [body.box.min[0] + length(body.box) * 0.3, body.box.min[1] - size[1] / 2 + 1, 0];
+  // A pistol's frame is its grip, and bullpups such as the AUG and P90 mould the grip into the stock.
+  const frameGrip =
+    (cls === "pistol" && !layout.bullpup && !hasGripInstalled(root, weapon)) ||
+    (layout.bullpup && isDetailed(weapon) && !weapon.slots.some((slot) => slotKind(slot.nameId) === "grip"));
+  if (frameGrip) {
+    const size: Vec3 = cls === "pistol" && !layout.bullpup ? PISTOL_GRIP : [3.6, 9, 3];
+    const center: Vec3 = [body.box.min[0] + length(body.box) * gripAt(cls, layout), body.box.min[1] - size[1] / 2 + 1, 0];
     parts.push({ ...bodyPart, id: "builtin:grip", kind: "grip", itemId: null, role: "builtin", center, size, tilt: -0.3, face: "bottom" });
   }
 
   const context: Context = {
     lookup,
     cls,
+    layout,
     body,
     builtinBarrel,
     includeEmpty: options.includeEmptyRequired ?? true,
     parts,
+    barrelFront: builtinBarrel ? builtinBarrel.box.max[0] : null,
   };
   placeChildren(root, body, [], context);
   return { parts, ...sceneBounds(parts) };

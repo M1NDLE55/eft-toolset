@@ -5,6 +5,7 @@ import {
   lengthFromName,
   slotKind,
   weaponClass,
+  weaponLayout,
   type ScenePart,
 } from "@/app/lib/builds/build-scene";
 import { attachMod } from "@/app/lib/builds/tree";
@@ -203,6 +204,25 @@ describe("3D scene: placement", () => {
     expect(find(parts, "m4-upper/upper-guard/guard-light").face).toBe("right");
   });
 
+  it("stops a handguard short of the barrel's end so the muzzle device stays visible", () => {
+    const upper = ar.get("upper")!;
+    const shortBarrel = lookup(
+      ...[...ar.values()].filter((entry) => entry.id !== "guard" && entry.id !== "upper"),
+      item("upper", upper.name, [
+        { ...upper.slots[0], allowedItemIds: [...upper.slots[0].allowedItemIds, "barrel-short"] },
+        ...upper.slots.slice(1),
+      ]),
+      item("guard", "AR-15 15 inch handguard", ar.get("guard")!.slots),
+      item("barrel-short", "AR-15 10.5 inch barrel", [slot("barrel-muzzle", "mod_muzzle", ["brake"])])
+    );
+    const build = attachMod(arBuild, ["m4-upper"], "upper-barrel", node("barrel-short", { "barrel-muzzle": node("brake") }));
+    const { parts } = buildScene(build, shortBarrel);
+    const guard = find(parts, "m4-upper/upper-guard");
+    const barrel = find(parts, "m4-upper/upper-barrel");
+    expect(guard.size[0]).toBeLessThan(15 * 2.54);
+    expect(front(guard)).toBeLessThan(front(barrel));
+  });
+
   it("reports bounds that contain every part", () => {
     for (const part of parts) {
       for (let axis = 0; axis < 3; axis += 1) {
@@ -296,6 +316,115 @@ describe("3D scene: empty, built-in, and unknown parts", () => {
     const unknownWeapon = buildScene(node("missing", { a: node("b") }), new Map());
     expect(unknownWeapon.parts.map((part) => part.id)).toEqual(["root", "a"]);
     expect(unknownWeapon.parts.every((part) => part.size.every((value) => value > 0))).toBe(true);
+  });
+});
+
+describe("3D scene: bullpups", () => {
+  it("knows the bullpups by name, and that only the P90 feeds from the top", () => {
+    for (const name of [
+      "Steyr AUG A3 5.56x45 assault rifle",
+      "Desert Tech MDR 7.62x51 assault rifle",
+      "Kel-Tec RFB 7.62x51 rifle",
+      "ASh-12 12.7x55 assault rifle",
+    ]) {
+      expect(weaponLayout(name)).toEqual({ bullpup: true, topFeed: false });
+    }
+    expect(weaponLayout("FN P90 5.7x28 submachine gun (Scourge)")).toEqual({ bullpup: true, topFeed: true });
+    expect(weaponLayout("Colt M4A1 5.56x45 assault rifle")).toEqual({ bullpup: false, topFeed: false });
+    expect(weaponLayout("TKPD 9.3x64 carbine")).toEqual({ bullpup: false, topFeed: false });
+  });
+
+  const aug = lookup(
+    item("aug", "Steyr AUG A3 5.56x45 assault rifle", [
+      slot("aug-mag", "mod_magazine", ["aug-mag"], { required: true }),
+      slot("aug-receiver", "mod_reciever", ["aug-receiver"], { required: true }),
+    ], { isWeapon: true }),
+    item("aug-mag", "Steyr AUG 30-round magazine", [], { capacity: 30, gridWidth: 1, gridHeight: 2 }),
+    item("aug-receiver", "Steyr AUG A3 receiver", [slot("aug-barrel", "mod_barrel", ["aug-barrel"], { required: true })]),
+    item("aug-barrel", "Steyr AUG 20 inch barrel")
+  );
+  const augBuild = node("aug", {
+    "aug-mag": node("aug-mag"),
+    "aug-receiver": node("aug-receiver", { "aug-barrel": node("aug-barrel") }),
+  });
+
+  it("puts a bullpup's magazine behind its grip, with the grip moulded in when it has no grip slot", () => {
+    const { parts } = buildScene(augBuild, aug);
+    const grip = find(parts, "builtin:grip");
+    const magazine = find(parts, "aug-mag");
+    expect(grip.role).toBe("builtin");
+    expect(magazine.face).toBe("bottom");
+    expect(magazine.center[0]).toBeLessThan(grip.center[0]);
+    expect(magazine.center[1]).toBeLessThan(bottom(find(parts, "root")));
+    // The barrel starts back at the chamber, by the magazine.
+    expect(rear(find(parts, "aug-receiver/aug-barrel"))).toBeCloseTo(magazine.center[0]);
+
+    // A conventional rifle keeps the magazine ahead of the grip.
+    const m4 = buildScene(arBuild, ar).parts;
+    expect(find(m4, "m4-mag").center[0]).toBeGreaterThan(find(m4, "m4-grip").center[0]);
+  });
+
+  it("wraps a bullpup's stock around the action instead of running it out the back", () => {
+    const mdr = lookup(
+      item("mdr", "Desert Tech MDR 5.56x45 assault rifle", [
+        slot("mdr-grip", "mod_pistol_grip", ["mdr-grip"]),
+        slot("mdr-mag", "mod_magazine", ["aug-mag"]),
+        slot("mdr-stock", "mod_stock", ["shell"]),
+      ], { isWeapon: true }),
+      item("mdr-grip", "MDR pistol grip"),
+      item("aug-mag", "Test 30-round magazine", [], { capacity: 30 }),
+      item("shell", "Test bullpup stock", [slot("shell-pad", "mod_stock_000", ["pad"])], { gridWidth: 3 }),
+      item("pad", "Test buttpad")
+    );
+    const { parts } = buildScene(
+      node("mdr", { "mdr-grip": node("mdr-grip"), "mdr-mag": node("aug-mag"), "mdr-stock": node("shell", { "shell-pad": node("pad") }) }),
+      mdr
+    );
+    const body = find(parts, "root");
+    const shell = find(parts, "mdr-stock");
+    const pad = find(parts, "mdr-stock/shell-pad");
+    expect(rear(shell)).toBeGreaterThan(rear(body) - 1);
+    expect(front(shell)).toBeLessThan(front(body));
+    expect(front(pad)).toBeCloseTo(rear(shell));
+    expect(pad.size[0]).toBeLessThan(5);
+    // It has a grip slot, so no moulded grip is added, and the magazine still sits behind the grip.
+    expect(parts.some((part) => part.id === "builtin:grip")).toBe(false);
+    expect(find(parts, "mdr-mag").center[0]).toBeLessThan(find(parts, "mdr-grip").center[0]);
+  });
+
+  it("lays the P90's magazine along the top, under the receiver and its sight", () => {
+    const p90 = lookup(
+      item("p90", "FN P90 5.7x28 submachine gun", [
+        slot("p90-mag", "mod_magazine", ["p90-mag"], { required: true }),
+        slot("p90-receiver", "mod_reciever", ["p90-receiver"], { required: true }),
+      ], { isWeapon: true }),
+      item("p90-mag", "FN P90 5.7x28 50-round magazine", [], { capacity: 50 }),
+      item("p90-receiver", "FN P90 upper receiver", [
+        slot("p90-sight", "mod_mount_000", ["ring"]),
+        slot("p90-rail", "mod_mount_001", ["side-rail"]),
+      ]),
+      item("ring", "FN P90 Ring Sight reflex sight", [], { sight: "optic" }),
+      item("side-rail", "FN P90 upper receiver side rail")
+    );
+    const { parts } = buildScene(
+      node("p90", {
+        "p90-mag": node("p90-mag"),
+        "p90-receiver": node("p90-receiver", { "p90-sight": node("ring"), "p90-rail": node("side-rail") }),
+      }),
+      p90
+    );
+    const body = find(parts, "root");
+    const magazine = find(parts, "p90-mag");
+    const receiver = find(parts, "p90-receiver");
+    expect(magazine.face).toBe("top");
+    expect(bottom(magazine)).toBeCloseTo(top(body));
+    expect(magazine.size[0]).toBeGreaterThan(magazine.size[1] * 4);
+    expect(bottom(receiver)).toBeGreaterThan(top(magazine) - 0.5);
+    expect(bottom(find(parts, "p90-receiver/p90-sight"))).toBeCloseTo(top(receiver));
+    // The side rail sits on the receiver's side, at the receiver's height.
+    const rail = find(parts, "p90-receiver/p90-rail");
+    expect(["left", "right"]).toContain(rail.face);
+    expect(rail.center[1]).toBeCloseTo(receiver.center[1]);
   });
 });
 
