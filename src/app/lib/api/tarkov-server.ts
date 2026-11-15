@@ -2106,6 +2106,8 @@ function projectBuildItem(item: RawItem, context: OfferContext): BuildItemData {
     capacity:
       properties?.propertiesType === "ItemPropertiesMagazine" ? positiveFiniteNumber(properties.capacity) : null,
     sight: sightKind(item, translate(item.name, translations)),
+    gridWidth: gridCells(item.width),
+    gridHeight: gridCells(item.height),
   };
 }
 
@@ -2515,6 +2517,11 @@ function translateNullable(
 
 function finiteNumber(value: unknown): number | null {
   return typeof value === "number" && Number.isFinite(value) ? value : null;
+}
+
+/** An inventory size in cells, kept within what the client cache accepts. */
+function gridCells(value: unknown) {
+  return Math.min(Math.round(positiveFiniteNumber(value) ?? 1), 100) || 1;
 }
 
 function positiveFiniteNumber(value: unknown): number | null {

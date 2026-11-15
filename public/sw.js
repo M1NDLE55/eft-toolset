@@ -27,7 +27,8 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
-  if (url.pathname.startsWith("/_next/static/")) {
+  // The 3D view's models are loaded by a versioned URL, so they can be cached like build output.
+  if (url.pathname.startsWith("/_next/static/") || (url.pathname.startsWith("/models/") && url.searchParams.has("v"))) {
     event.respondWith(cacheFirst(request));
   } else if (url.pathname === "/api/tarkov") {
     event.respondWith(networkFirst(request, DATA_CACHE));
