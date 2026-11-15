@@ -120,7 +120,9 @@ const sections: { heading: string; content: ReactNode }[] = [
       <p>
         Built with <External href="https://nextjs.org/">Next.js</External> and{" "}
         <External href="https://react.dev/">React</External> (MIT), <External href="https://leafletjs.com/">Leaflet</External>{" "}
-        (BSD-2-Clause), <External href="https://www.radix-ui.com/">Radix UI</External> (MIT), and{" "}
+        (BSD-2-Clause), <External href="https://threejs.org/">three.js</External> and{" "}
+        <External href="https://r3f.docs.pmnd.rs/">React Three Fiber</External> (MIT),{" "}
+        <External href="https://www.radix-ui.com/">Radix UI</External> (MIT), and{" "}
         <External href="https://lucide.dev/">Lucide</External> icons (ISC), set in{" "}
         <External href="https://rsms.me/inter/">Inter</External> (SIL Open Font License). Our own code is{" "}
         <External href="https://github.com/M1NDLE55/eft-toolset">open source</External> under the GPL-3.0.

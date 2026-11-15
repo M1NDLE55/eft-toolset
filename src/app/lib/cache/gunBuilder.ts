@@ -544,6 +544,8 @@ function isBuildItem(value: unknown): value is BuildItemData {
     (item.allowedAmmoIds === undefined || validStringArray(item.allowedAmmoIds, 2_000)) &&
     (item.capacity === undefined || item.capacity === null || finite(item.capacity)) &&
     (item.sight === undefined || item.sight === null || ["optic", "iron", "front"].includes(item.sight)) &&
+    (item.gridWidth === undefined || gridCells(item.gridWidth)) &&
+    (item.gridHeight === undefined || gridCells(item.gridHeight)) &&
     Array.isArray(item.slots) && item.slots.length <= 64 && item.slots.every((slot) =>
       validString(slot?.id, 160, true) &&
       validString(slot?.name, 500, true) &&
@@ -665,6 +667,10 @@ function validStringArray(value: unknown, max: number): value is string[] {
 
 function finite(value: unknown): value is number {
   return typeof value === "number" && Number.isFinite(value);
+}
+
+function gridCells(value: unknown): value is number {
+  return finite(value) && value > 0 && value <= 100;
 }
 
 function nullableFinite(value: unknown): value is number | null {

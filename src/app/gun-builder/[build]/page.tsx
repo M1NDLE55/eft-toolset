@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { AlertTriangle, ArrowLeft, Copy, GitCompareArrows, ListChecks, LoaderCircle, Pencil, Trash2 } from "lucide-react";
+import { AlertTriangle, ArrowLeft, Box, Copy, GitCompareArrows, ListChecks, LoaderCircle, Pencil, Trash2 } from "lucide-react";
 import type { BuildNode, GunBuild } from "@/app/lib/types/gunBuilder";
 import { useHydrated } from "@/app/lib/storage/use-store";
 import {
@@ -15,6 +15,7 @@ import {
   setBuildAmmo,
   setHideEmptySlots,
   setPriceSources,
+  setShow3d,
   updateBuildTree,
   useBuilderView,
   useBuilds,
@@ -59,6 +60,8 @@ import { ShareBuild } from "@/app/components/gun-builder/share-build";
 import { PresetDialog } from "@/app/components/gun-builder/preset-dialog";
 import { SlotPicker, type PickerTarget } from "@/app/components/gun-builder/slot-picker";
 import { modeLabel } from "@/app/components/gun-builder/format";
+import { Build3DPanel } from "@/app/components/gun-builder/build-3d-panel";
+import type { ScenePart } from "@/app/lib/builds/build-scene";
 import { cn } from "@/lib/utils";
 
 const UNDO_MS = 8_000;
@@ -103,7 +106,7 @@ function BuildEditor({ build }: { build: GunBuild }) {
   const ids = useMemo(() => collectItemIds(build.root), [build.root]);
   const { items, loading, refreshing, unavailable, error, retry, gameMode } = useGunItems(ids, "full");
   const priceSources = usePriceSources();
-  const { hideEmpty } = useBuilderView();
+  const { hideEmpty, show3d = false } = useBuilderView();
   const { byId } = useGunList();
   const [target, setTarget] = useState<PickerTarget | null>(null);
   const [actionError, setActionError] = useState("");
@@ -160,6 +163,18 @@ function BuildEditor({ build }: { build: GunBuild }) {
       slot: node.slot,
       currentItemId: node.itemId,
       parentItemId: node.parentItemId,
+      container: fullscreenContainer(),
+    });
+  }
+
+  function openScenePart(part: ScenePart) {
+    if (!part.slot || part.slotId === null) return;
+    setTarget({
+      parentPath: part.parentPath,
+      slotId: part.slotId,
+      slot: part.slot,
+      currentItemId: part.itemId,
+      parentItemId: part.parentItemId,
       container: fullscreenContainer(),
     });
   }
@@ -442,26 +457,49 @@ function BuildEditor({ build }: { build: GunBuild }) {
         }}
       />
 
-      <div className="-mb-2 flex items-center justify-between gap-3">
+      <div className="-mb-2 flex flex-wrap items-center justify-between gap-x-3">
         <h2 className="text-[11px] font-bold uppercase tracking-widest text-[#888]">Parts</h2>
-        <button
-          type="button"
-          aria-pressed={hideEmpty}
-          onClick={() => run(() => setHideEmptySlots(!hideEmpty))}
-          className="flex h-9 items-center gap-2 px-1 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
-        >
-          <span
-            aria-hidden
+        <div className="flex flex-wrap items-center gap-x-3">
+          <button
+            type="button"
+            aria-pressed={show3d}
+            onClick={() => run(() => setShow3d(!show3d))}
             className={cn(
-              "flex h-4 w-7 items-center border p-0.5 transition-colors",
-              hideEmpty ? "justify-end border-[#9a8866] bg-[#9a8866]/20" : "justify-start border-[#3a3a3a]"
+              "flex h-9 items-center gap-1.5 px-1 text-[11px] font-bold uppercase tracking-widest hover:text-[#ccc] focus-visible:outline-2 focus-visible:outline-[#9a8866]",
+              show3d ? "text-[#e6d9b8]" : "text-[#888]"
             )}
           >
-            <span className={cn("h-2.5 w-2.5", hideEmpty ? "bg-[#e6d9b8]" : "bg-[#555]")} />
-          </span>
-          Hide optional empty slots
-        </button>
+            <Box className="h-3.5 w-3.5" aria-hidden />
+            3D view
+          </button>
+          <button
+            type="button"
+            aria-pressed={hideEmpty}
+            onClick={() => run(() => setHideEmptySlots(!hideEmpty))}
+            className="flex h-9 items-center gap-2 px-1 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+          >
+            <span
+              aria-hidden
+              className={cn(
+                "flex h-4 w-7 items-center border p-0.5 transition-colors",
+                hideEmpty ? "justify-end border-[#9a8866] bg-[#9a8866]/20" : "justify-start border-[#3a3a3a]"
+              )}
+            >
+              <span className={cn("h-2.5 w-2.5", hideEmpty ? "bg-[#e6d9b8]" : "bg-[#555]")} />
+            </span>
+            Hide optional empty slots
+          </button>
+        </div>
       </div>
+
+      {show3d && (
+        <Build3DPanel
+          root={build.root}
+          items={items}
+          weaponFallback={gun ? { name: gun.name, gridImageLink: gun.gridImageLink } : undefined}
+          onOpenPart={openScenePart}
+        />
+      )}
 
       <BuildCanvas
         flow={flow}

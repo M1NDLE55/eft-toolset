@@ -188,6 +188,8 @@ describe("Tarkov JSON adapter", () => {
           defaultAmmoName: "Test Ammo",
           defaultPresetId: "preset",
           slots: [expect.objectContaining({ name: "Scope", allowedItemIds: ["mod"] })],
+          gridWidth: 2,
+          gridHeight: 1,
         }),
         expect.objectContaining({
           id: "mod",

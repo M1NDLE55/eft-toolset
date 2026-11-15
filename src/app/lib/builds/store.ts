@@ -29,14 +29,21 @@ export const PRICE_SOURCE_STORE: StoreDefinition<PriceSources> = {
     typeof (value as PriceSources).flea === "boolean",
 };
 
-export const VIEW_STORE: StoreDefinition<{ hideEmpty: boolean }> = {
+export interface BuilderView {
+  hideEmpty: boolean;
+  /** Whether the 3D view is open. Missing in views saved before it existed. */
+  show3d?: boolean;
+}
+
+export const VIEW_STORE: StoreDefinition<BuilderView> = {
   key: "eft-toolset:gun-builder:view",
   version: 1,
   defaultValue: () => ({ hideEmpty: false }),
-  validate: (value): value is { hideEmpty: boolean } =>
+  validate: (value): value is BuilderView =>
     Boolean(value) &&
     typeof value === "object" &&
-    typeof (value as { hideEmpty: unknown }).hideEmpty === "boolean",
+    typeof (value as { hideEmpty: unknown }).hideEmpty === "boolean" &&
+    ["undefined", "boolean"].includes(typeof (value as { show3d?: unknown }).show3d),
 };
 
 export function useBuilderView() {
@@ -44,7 +51,11 @@ export function useBuilderView() {
 }
 
 export function setHideEmptySlots(hideEmpty: boolean) {
-  writeStore(VIEW_STORE, { hideEmpty });
+  writeStore(VIEW_STORE, { ...readStore(VIEW_STORE), hideEmpty });
+}
+
+export function setShow3d(show3d: boolean) {
+  writeStore(VIEW_STORE, { ...readStore(VIEW_STORE), show3d });
 }
 
 export function useBuilds() {

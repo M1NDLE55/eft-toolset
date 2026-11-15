@@ -92,6 +92,9 @@ export interface BuildItemData extends ItemExtras {
   conflictingSlotIds: string[];
   slots: ModSlotDef[];
   allowedAmmoIds?: string[];
+  /** Inventory size in grid cells; the 3D view uses it to size parts. Absent in older cached data. */
+  gridWidth?: number;
+  gridHeight?: number;
 }
 
 export interface AmmoItemData {

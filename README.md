@@ -16,7 +16,8 @@ Assemble weapons part by part with compatible slots, factory presets, and live e
 - an ammo picker that adds the ammo's recoil to the build's stats;
 - one-click cheapest parts for empty required slots;
 - side-by-side build comparison and a printable or copyable shopping list;
-- undo, keyboard navigation, and share links that others can import by pasting.
+- undo, keyboard navigation, and share links that others can import by pasting;
+- a 3D view that draws the build as it changes. You can rotate it and pick a part in it to swap. tarkov.dev has no 3D models and the game's models aren't licensed for reuse, so each part is a simple shape placed by its slot, not a model of the real item.
 
 ### Raid Planner
 Plan raids on interactive maps, including Icebreaker and its decks. Draw routes, arrows, waypoints, and notes on each level, measure distances, and toggle extracts, transits, spawns, locks, hazards, and loot layers. Plans support undo and redo, show their total route distance, and can be shared by link or exported to a file.
@@ -41,7 +42,7 @@ The app uses tarkov.dev's JSON API through a server-side adapter that accepts on
 
 The MCP endpoint reuses the same adapter and the app's own gun-builder and raid-planner logic, so assistants and the app always agree.
 
-Built with Next.js 16 (App Router), React 19 with the React Compiler, Tailwind CSS 4, Leaflet, the MCP TypeScript SDK, and Vitest.
+Built with Next.js 16 (App Router), React 19 with the React Compiler, Tailwind CSS 4, Leaflet, three.js with React Three Fiber (loaded only when the 3D view opens), the MCP TypeScript SDK, and Vitest.
 
 ## Development
 
