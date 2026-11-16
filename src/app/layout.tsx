@@ -76,6 +76,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
                   M1NDLE55
                 </a>
               </p>
+              <Link href="/settings" className="underline underline-offset-2 hover:text-[#ccc]">
+                Settings
+              </Link>
               <Link href="/data" className="underline underline-offset-2 hover:text-[#ccc]">
                 Backup &amp; restore
               </Link>

@@ -48,6 +48,26 @@ export interface CachedItem {
   weapon?: { defaultWidth: number | null; defaultHeight: number | null };
 }
 
+/** One row of the home screen's market board. */
+export interface MarketRow {
+  name: string;
+  shortName: string | null;
+  normalizedName: string | null;
+  gridImageLink: string | null;
+  /** Lowest flea listing for movers; best sell price for the per-slot list. */
+  price: number;
+  /** Where that price is from: "Flea" or a trader's name. */
+  vendor: string;
+  perSlot: number;
+  changeLast48hPercent: number | null;
+}
+
+export interface MarketBoard {
+  risers: MarketRow[];
+  fallers: MarketRow[];
+  perSlot: MarketRow[];
+}
+
 export interface CatalogItem {
   id: string;
   normalizedName: string | null;

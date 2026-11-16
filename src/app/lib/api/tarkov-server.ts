@@ -10,6 +10,8 @@ import type {
   CachedVendorPrice,
   CatalogEntry,
   ComposedItem,
+  MarketBoard,
+  MarketRow,
   ItemUses,
 } from "@/app/lib/cache/types";
 import type {
@@ -26,7 +28,7 @@ import type {
 } from "@/app/lib/types/gunBuilder";
 import type { TaskIndex, TaskNode } from "@/app/lib/builds/quests";
 import { barterCost } from "@/app/lib/builds/price";
-import { bestSell } from "@/app/lib/item-price";
+import { bestSell, FLEA_MARKET } from "@/app/lib/item-price";
 import type {
   ExtractFaction,
   MapBoss,
@@ -486,6 +488,7 @@ const OPERATION_VARIABLES: Record<TarkovOperation, readonly string[]> = {
   [TARKOV_OPERATIONS.preset]: ["gameMode", "id"],
   [TARKOV_OPERATIONS.ammoItems]: ["gameMode", "ids"],
   [TARKOV_OPERATIONS.mapDetails]: ["gameMode", "mapKey"],
+  [TARKOV_OPERATIONS.marketBoard]: ["gameMode"],
 };
 
 export interface TarkovReadOptions {
@@ -570,6 +573,8 @@ export async function executeTarkovOperation(
         return getPreset(gameMode, readString(input.id, "id", 80));
       case TARKOV_OPERATIONS.mapDetails:
         return getMapDetails(gameMode, readString(input.mapKey, "mapKey", 80));
+      case TARKOV_OPERATIONS.marketBoard:
+        return getMarketBoard(gameMode);
     }
   }, options);
 }
@@ -748,6 +753,62 @@ export async function getPriceHighlights(gameMode: GameMode, limit = 30): Promis
     byPrice: top(all, (row) => row.price),
     keys: top(all.filter((row) => row.key), (row) => row.price),
   };
+}
+
+const MARKET_ROWS = 8;
+/** Movers below this flea price are left out: cheap items swing by large percentages on a few listings. */
+const MARKET_MIN_PRICE = 10_000;
+/** Larger 48-hour swings are nearly always a thinly traded item with one odd listing, so they are left out. */
+const MARKET_MAX_MOVE_PERCENT = 60;
+/**
+ * Movers are limited to loot that trades in volume. Weapon parts, keys and ammo packs have so few
+ * listings that their 48-hour change mostly reflects one seller.
+ */
+const MARKET_MOVER_TYPES = new Set(["barter", "provisions", "meds", "injectors", "container"]);
+
+/** The biggest 48-hour flea movers and the best sell value per slot, across every item. */
+export async function getMarketBoard(gameMode: GameMode): Promise<MarketBoard> {
+  const [itemContext, offers] = await Promise.all([loadItems(gameMode), loadOfferContext(gameMode)]);
+  return memo(`${gameMode}/market-board`, [itemContext, offers], () => {
+    const movers: MarketRow[] = [];
+    const sellers: MarketRow[] = [];
+    for (const item of itemContext.items) {
+      if (!item.id || item.types?.includes("preset")) continue;
+      const name = itemContext.nameById.get(item.id);
+      if (!name) continue;
+      const cached = projectCachedItem(item, name, offers, [], itemContext.fleaMarket);
+      const best = bestSell(cached);
+      if (!best) continue;
+      const slots = cached.width * cached.height;
+      const row: MarketRow = {
+        name,
+        shortName: cached.shortName,
+        normalizedName: cached.normalizedName || null,
+        gridImageLink: cached.gridImageLink,
+        price: best.price,
+        vendor: best.flea ? "Flea" : best.vendor,
+        perSlot: Math.round(best.price / slots),
+        changeLast48hPercent: cached.changeLast48hPercent,
+      };
+      // A weapon's flea price is for its default build, which is larger than the stripped size.
+      if (!cached.weapon) sellers.push(row);
+      const listing = cached.sellFor.find((offer) => offer.vendor.name === FLEA_MARKET)?.priceRUB;
+      const average = finiteNumber(item.avg24hPrice);
+      // A lone listing far from the day's average is one seller's asking price, not a market move.
+      const traded = listing !== undefined && average !== null && listing >= average * 0.5 && listing <= average * 2;
+      const move = Math.abs(row.changeLast48hPercent ?? 0);
+      const liquid = item.types?.some((type) => MARKET_MOVER_TYPES.has(type)) ?? false;
+      if (liquid && traded && listing >= MARKET_MIN_PRICE && move > 0 && move <= MARKET_MAX_MOVE_PERCENT) {
+        movers.push({ ...row, price: listing, vendor: "Flea" });
+      }
+    }
+    const change = (row: MarketRow) => row.changeLast48hPercent ?? 0;
+    return {
+      risers: movers.filter((row) => change(row) > 0).sort((a, b) => change(b) - change(a)).slice(0, MARKET_ROWS),
+      fallers: movers.filter((row) => change(row) < 0).sort((a, b) => change(a) - change(b)).slice(0, MARKET_ROWS),
+      perSlot: sellers.sort((a, b) => b.perSlot - a.perSlot).slice(0, MARKET_ROWS),
+    };
+  });
 }
 
 export type ItemReference = { name: string } | { slug: string };

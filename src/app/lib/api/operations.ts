@@ -8,6 +8,7 @@ export const TARKOV_OPERATIONS = {
   preset: "gun.preset",
   ammoItems: "gun.ammo-items",
   mapDetails: "map.details",
+  marketBoard: "market.board",
 } as const;
 
 export type TarkovOperation =
@@ -21,6 +22,7 @@ export const CACHEABLE_OPERATIONS: ReadonlySet<TarkovOperation> = new Set([
   TARKOV_OPERATIONS.gunList,
   TARKOV_OPERATIONS.preset,
   TARKOV_OPERATIONS.mapDetails,
+  TARKOV_OPERATIONS.marketBoard,
 ]);
 
 export const MAX_GET_VARIABLES_LENGTH = 1_024;

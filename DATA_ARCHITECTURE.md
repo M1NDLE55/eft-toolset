@@ -36,13 +36,14 @@ server-side, cached in-process, and never forwarded wholesale to a browser.
 | `gun.preset` | `gameMode`, preset ID | Base item and contained IDs |
 | `gun.ammo-items` | `gameMode`, up to 100 IDs | Ammo ballistics, prices, and trader details |
 | `map.details` | `gameMode`, normalized map key | One joined map projection |
+| `market.board` | `gameMode` | Top 48-hour flea movers and best sell value per slot |
 
 Operation names live in `src/app/lib/api/operations.ts`. The route rejects unknown
 operations, undeclared variables, invalid game modes, oversized batches, request bodies
 over 64 KiB, slow bodies, and URLs over 2 KiB. It does not accept an upstream URL,
 resource name, field selection, or arbitrary query.
 
-`item.catalog`, `item.detail`, `gun.list`, `gun.preset`, and `map.details` are also served
+`item.catalog`, `item.detail`, `gun.list`, `gun.preset`, `map.details`, and `market.board` are also served
 over GET. The variables must be canonical JSON (sorted keys, no extra query parameters),
 so each logical request has exactly one URL. Successful GETs are sent with
 `Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=<n>`, where the

@@ -33,6 +33,7 @@ claude mcp add --transport http eft-toolset https://www.eft-toolset.com/api/mcp
 ## Also included
 
 - **PVP and PVE:** one switch in the header changes every price and data set.
+- **Settings:** choose the home screen you want at `/settings`: a dashboard of your own items, builds, plans and watchlists (the default), a search-first page, a flea market board, or a maps-first page.
 - **Backup and restore:** export all your groups, builds, plans, and settings to one file from `/data`, then restore them by merging or replacing.
 - **Offline use:** pages and data you have visited keep working without a connection.
 - **Phone friendly:** every tool is designed for both desktop and mobile.

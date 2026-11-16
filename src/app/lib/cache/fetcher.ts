@@ -2,7 +2,7 @@ import type { GameMode } from "@/components/game-mode/context";
 import { apiFetch } from "@/app/lib/api/transport";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import type { QueryDefinition } from "@/app/lib/api/queryClient";
-import type { CachedItem, CachedVendorPrice, CatalogEntry, CatalogItem, ComposedItem } from "./types";
+import type { CachedItem, CachedVendorPrice, CatalogEntry, CatalogItem, ComposedItem, MarketBoard, MarketRow } from "./types";
 import { isTaskUnlock as isOfferUnlock } from "./gunBuilder";
 import { MAX_GROUP_ITEMS } from "@/app/lib/item-groups/limits";
 import { isItemSlug } from "@/app/lib/item-links";
@@ -112,6 +112,45 @@ export const itemDetailQuery: QueryDefinition<DetailVariables, ComposedItem | nu
       { signal }
     ),
 };
+
+export const marketBoardQuery: QueryDefinition<ModeVariables, MarketBoard> = {
+  id: "market-board",
+  version: 1,
+  staleTime: 10 * MINUTE,
+  maxAge: DAY,
+  persist: true,
+  validate: isMarketBoard,
+  fetch: async ({ gameMode }, signal) =>
+    apiFetch<MarketBoard>(TARKOV_OPERATIONS.marketBoard, { gameMode }, { signal }),
+};
+
+function isMarketBoard(value: unknown): value is MarketBoard {
+  if (!value || typeof value !== "object") return false;
+  const board = value as Partial<MarketBoard>;
+  return [board.risers, board.fallers, board.perSlot].every(
+    (rows) => Array.isArray(rows) && rows.length <= 50 && rows.every(isMarketRow)
+  );
+}
+
+function isMarketRow(value: unknown): value is MarketRow {
+  if (!value || typeof value !== "object") return false;
+  const row = value as Partial<MarketRow>;
+  return (
+    typeof row.name === "string" &&
+    row.name.length <= 500 &&
+    (row.shortName === null || (typeof row.shortName === "string" && row.shortName.length <= 500)) &&
+    (row.normalizedName === null || (typeof row.normalizedName === "string" && isItemSlug(row.normalizedName))) &&
+    (row.gridImageLink === null || isSafeAssetUrl(row.gridImageLink)) &&
+    typeof row.price === "number" &&
+    Number.isFinite(row.price) &&
+    typeof row.vendor === "string" &&
+    row.vendor.length <= 100 &&
+    typeof row.perSlot === "number" &&
+    Number.isFinite(row.perSlot) &&
+    (row.changeLast48hPercent === null ||
+      (typeof row.changeLast48hPercent === "number" && Number.isFinite(row.changeLast48hPercent)))
+  );
+}
 
 function chunk<T>(values: T[], size: number) {
   const result: T[][] = [];
