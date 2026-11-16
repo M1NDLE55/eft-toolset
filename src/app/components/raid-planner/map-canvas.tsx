@@ -12,14 +12,12 @@ import {
   getActiveExtents,
   type LayerEntry,
 } from "@/app/lib/raid-planner/layers";
-import { fillMapSvg } from "@/app/lib/raid-planner/map-svg";
+import { applySvgFloor, fillMapSvg } from "@/app/lib/raid-planner/map-svg";
 import { createMapTileLayer } from "@/app/lib/raid-planner/tiles";
 import { cn } from "@/lib/utils";
 
 const SVG_NS = "http://www.w3.org/2000/svg";
 const BASE_SVG_CLASS = "rp-base-svg";
-const HIDDEN_GROUP_CLASS = "rp-hidden";
-const DIMMED_GROUP_CLASS = "rp-dimmed";
 const OFF_LEVEL_CLASS = "rp-off-level";
 
 interface MapCanvasProps {
@@ -225,27 +223,4 @@ function watchTiles(layer: L.TileLayer, onReady: () => void, onFail: () => void)
 
 function errorMessage(reason: unknown) {
   return reason instanceof Error ? reason.message : "The map image could not be loaded.";
-}
-
-function applySvgFloor(svgElement: SVGSVGElement, config: MapConfig, activeFloor: string | null) {
-  const inner = svgElement.children[0];
-  if (!inner) return;
-  const activeGroupId = config.floors.find((floor) => floor.id === activeFloor)?.svgLayer;
-
-  for (const child of Array.from(inner.children)) {
-    if (child.nodeName !== "g" || !child.id) continue;
-    const isBase =
-      child.id === config.svgLayer ||
-      (child as SVGGElement).dataset["keepWithGroup"] === config.svgLayer;
-
-    if (isBase) {
-      child.classList.remove(HIDDEN_GROUP_CLASS);
-      child.classList.toggle(DIMMED_GROUP_CLASS, Boolean(activeGroupId));
-    } else if (activeGroupId && child.id === activeGroupId) {
-      child.classList.remove(HIDDEN_GROUP_CLASS, DIMMED_GROUP_CLASS);
-    } else {
-      child.classList.add(HIDDEN_GROUP_CLASS);
-      child.classList.remove(DIMMED_GROUP_CLASS);
-    }
-  }
 }
