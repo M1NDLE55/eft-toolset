@@ -190,7 +190,11 @@ export function MapGuide({
               <p className="mt-1 text-xs text-[#888]">
                 {plural(guide.keys.length, "key")} open locks on {name}
                 {guide.powerLocks > 0 && `, and ${plural(guide.powerLocks, "lock")} also ${guide.powerLocks === 1 ? "needs" : "need"} power`}
-                . Open a key for its price and the tasks that need it.
+                . Open a key for its price and the tasks that need it, or{" "}
+                <Link href={`/keys/${config.key}`} className="text-[#c8b384] underline underline-offset-2">
+                  compare every {name} key&apos;s price
+                </Link>
+                .
               </p>
             </div>
             <ul className="grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-3">

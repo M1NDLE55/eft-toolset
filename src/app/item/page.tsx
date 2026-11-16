@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { RecentItems } from "@/app/components/item/scouted-items";
 import { PriceHighlightTables } from "@/app/components/item/price-highlights";
 import { JsonLd, breadcrumbList, faqPage } from "@/app/components/seo/json-ld";
@@ -58,7 +59,11 @@ export default async function Page() {
           Live flea market and trader prices for every Escape from Tarkov item, in PVP and PVE. Search any item to see
           what it sells for, the best place to sell it after the flea fee, its value per slot, and every task, hideout
           upgrade, barter and craft that needs it. Press <kbd className="border border-[#2a2a2a] px-1 text-[11px]">/</kbd>{" "}
-          anywhere to search.
+          anywhere to search. Playing PVE? See the{" "}
+          <Link href="/flea-market/pve" className="text-[#c8b384] underline underline-offset-2">
+            PVE flea market prices
+          </Link>
+          .
         </p>
       </div>
       <RecentItems />

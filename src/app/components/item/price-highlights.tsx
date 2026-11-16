@@ -78,12 +78,24 @@ function HighlightTable({
 /** Server-rendered price tables for the cookie's game mode, refreshed when the visitor switches mode. */
 export function PriceHighlightTables({ gameMode, highlights }: { gameMode: GameMode; highlights: PriceHighlights }) {
   const { switching, current } = useServerModeSync(gameMode);
-
   return (
-    <div className={cn("flex flex-col gap-6 transition-opacity", switching && "opacity-50")} aria-busy={switching}>
-      <p className="text-xs text-[#888]">
-        {switching ? `Loading ${MODE_LABEL[current]} prices…` : `Showing ${MODE_LABEL[gameMode]} prices. Switch mode in the header.`}
-      </p>
+    <Tables
+      highlights={highlights}
+      busy={switching}
+      note={switching ? `Loading ${MODE_LABEL[current]} prices…` : `Showing ${MODE_LABEL[gameMode]} prices. Switch mode in the header.`}
+    />
+  );
+}
+
+/** Price tables for one game mode, whatever mode the visitor has selected. */
+export function FixedModePriceTables({ gameMode, highlights }: { gameMode: GameMode; highlights: PriceHighlights }) {
+  return <Tables highlights={highlights} busy={false} note={`Showing ${MODE_LABEL[gameMode]} prices.`} />;
+}
+
+function Tables({ highlights, busy, note }: { highlights: PriceHighlights; busy: boolean; note: string }) {
+  return (
+    <div className={cn("flex flex-col gap-6 transition-opacity", busy && "opacity-50")} aria-busy={busy}>
+      <p className="text-xs text-[#888]">{note}</p>
       <HighlightTable
         id="best-per-slot"
         title="Most valuable loot per slot"
