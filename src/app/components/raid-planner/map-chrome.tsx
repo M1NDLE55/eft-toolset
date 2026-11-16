@@ -7,6 +7,8 @@ export const MAP_STAGE_CLASS = "relative isolate h-[calc(100dvh-65px)] min-h-[22
 
 export const SVG_MAP_SOURCE = "https://github.com/the-hideout/tarkov-dev-svg-maps";
 export const CC_BY_NC_SA_4 = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
+/** How we change the SVG artwork: only the active floor shows, and globals.css recolours it. */
+export const SVG_MAP_CHANGES = "floor visibility, recoloured";
 
 const linkClass =
   "inline-block py-1 text-[#b8a77e] underline underline-offset-2 hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:outline-[#9a8866] sm:py-0.5";
@@ -17,15 +19,13 @@ interface MapAttributionProps {
   className?: string;
   /** "overlay" floats over the map; "inline" sits in normal page flow. */
   placement?: "overlay" | "inline";
-  /** True when the SVG artwork is shown with our own colours. */
-  restyled?: boolean;
 }
 
 /**
  * Credits the base map. The SVG maps are CC BY-NC-SA 4.0, so their credit names the
  * author, links the source and the licence, and says what we change (section 3(a)).
  */
-export function MapAttribution({ config, className, placement = "overlay", restyled = false }: MapAttributionProps) {
+export function MapAttribution({ config, className, placement = "overlay" }: MapAttributionProps) {
   if (!config.author) return null;
   const boxClass = cn(
     "text-[10px] leading-4 text-[#999]",
@@ -71,7 +71,7 @@ export function MapAttribution({ config, className, placement = "overlay", resty
       </span>
       <span className="max-sm:block">
         <span className="max-sm:hidden">{separator}</span>
-        Modified: {restyled ? "floor visibility, recoloured" : "floor visibility"}
+        Modified: {SVG_MAP_CHANGES}
       </span>
     </p>
   );

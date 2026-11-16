@@ -14,7 +14,6 @@ import {
 } from "@/app/lib/raid-planner/layers";
 import { applySvgFloor, fillMapSvg } from "@/app/lib/raid-planner/map-svg";
 import { createMapTileLayer } from "@/app/lib/raid-planner/tiles";
-import { svgMapStyleClass, type SvgMapStyle } from "@/app/lib/raid-planner/map-style";
 import { cn } from "@/lib/utils";
 
 const SVG_NS = "http://www.w3.org/2000/svg";
@@ -26,8 +25,6 @@ interface MapCanvasProps {
   activeFloor: string | null;
   details: MapDetails | null;
   enabledLayers: string[];
-  /** Experimental recolouring of SVG maps; null shows the original colours. */
-  svgStyle?: SvgMapStyle | null;
   className?: string;
   children?: (map: L.Map) => ReactNode;
 }
@@ -50,7 +47,6 @@ export function MapCanvas({
   activeFloor,
   details,
   enabledLayers,
-  svgStyle = null,
   className,
   children,
 }: MapCanvasProps) {
@@ -131,14 +127,6 @@ export function MapCanvas({
       baseContainer?.classList.remove(OFF_LEVEL_CLASS);
     };
   }, [base, baseReady, config, activeFloor, retryCount]);
-
-  useEffect(() => {
-    const svg = base?.svg;
-    if (!svg || !svgStyle) return;
-    const styleClass = svgMapStyleClass(svgStyle);
-    svg.classList.add(styleClass);
-    return () => svg.classList.remove(styleClass);
-  }, [base, svgStyle]);
 
   useEffect(() => {
     if (!base) return;

@@ -59,9 +59,10 @@ const sections: { heading: string; content: ReactNode }[] = [
           The SVG maps of {mapNames((map) => map.strategy === "svg")} are by Shebuka, from{" "}
           <External href={SVG_MAP_SOURCE}>tarkov-dev-svg-maps</External>, licensed{" "}
           <External href={CC_BY_NC_SA_4}>CC BY-NC-SA 4.0</External>. Each map credits them the same way. We modify
-          them in one way, noted on each map as &ldquo;Modified: floor visibility&rdquo;: the planner shows only the
-          floor you pick and fades or hides the others. We don&apos;t redraw the artwork, and your plan&apos;s
-          markings, place names and map layers are drawn on separate layers on top.
+          them in two ways, noted on each map as &ldquo;Modified: floor visibility, recoloured&rdquo;: the planner
+          shows only the floor you pick and fades or hides the others, and it draws the artwork in our own colour
+          scheme (for example green land, grey rock and outlined buildings). We don&apos;t redraw the shapes, and
+          your plan&apos;s markings, place names and map layers are drawn on separate layers on top.
         </p>
         <p>
           The other maps are image tiles from assets.tarkov.dev, credited on each map as tarkov.dev lists them: Shebuka

@@ -9,7 +9,6 @@ import { createPlan } from "@/app/lib/raid-planner/store";
 import { getDefaultLayers, getLayerGroups } from "@/app/lib/raid-planner/layer-options";
 import { useStoredLayers, writeStoredLayers } from "@/app/lib/raid-planner/layer-store";
 import { MAX_LAYERS } from "@/app/lib/raid-planner/limits";
-import { useSvgMapStyle } from "@/app/lib/raid-planner/map-style";
 import { useMapDetails } from "@/app/lib/cache/raidPlanner";
 import { cn } from "@/lib/utils";
 import { defaultFloor, FloorSwitcher } from "./floor-switcher";
@@ -23,8 +22,6 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
   const router = useRouter();
   const [activeFloor, setActiveFloor] = useState(() => defaultFloor(config));
   const [actionError, setActionError] = useState("");
-  const svgStyle = useSvgMapStyle();
-  const restyled = Boolean(svgStyle && config.svgPath);
   const { details, loading, error, retry } = useMapDetails(config.key);
   const storedLayers = useStoredLayers(config.key);
   const enabledLayers = useMemo(
@@ -68,7 +65,6 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
         activeFloor={activeFloor}
         details={details}
         enabledLayers={enabledLayers}
-        svgStyle={svgStyle}
       />
 
       <div className="pointer-events-none absolute inset-x-0 top-0 z-1000 flex items-start gap-2 p-2 sm:p-3">
@@ -134,7 +130,6 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
 
       <MapAttribution
         config={config}
-        restyled={restyled}
         className={cn(
           "bottom-2 left-2 sm:bottom-3 sm:left-3",
           config.floors.length > 0 && "max-sm:bottom-14"
