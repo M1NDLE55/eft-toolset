@@ -175,6 +175,17 @@ for (const entry of source) {
 
   const heightRange = interactive.heightRange ?? interactive._heightRange;
 
+  const labels = (interactive.labels ?? [])
+    .filter((label) => typeof label.text === "string" && label.text.trim() && Array.isArray(label.position))
+    .map((label) => ({
+      text: label.text.trim(),
+      position: [label.position[0], label.position[1]],
+      ...(typeof label.size === "number" ? { size: label.size } : {}),
+      ...(typeof label.rotation === "number" && label.rotation !== 0 ? { rotation: label.rotation } : {}),
+      ...(typeof label.top === "number" ? { top: label.top } : {}),
+      ...(typeof label.bottom === "number" ? { bottom: label.bottom } : {}),
+    }));
+
   configs.push({
     key: interactive.key,
     name,
@@ -197,6 +208,7 @@ for (const entry of source) {
       ? { baseFloorName: BASE_FLOOR_NAMES[interactive.key] ?? baseLayer.name }
       : {}),
     floors,
+    ...(labels.length ? { labels } : {}),
     ...(interactive.author ? { author: interactive.author } : {}),
     ...(interactive.authorLink ? { authorLink: interactive.authorLink } : {}),
   });
