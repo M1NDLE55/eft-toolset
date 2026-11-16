@@ -1,0 +1,32 @@
+{
+  "title": "Bottle of YMXC water",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bottle_of_YMXC_water",
+  "revisionId": 356048,
+  "lastEdited": "2026-08-25T15:16:58Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "0.75 kg",
+    "grid": "1x2",
+    "effect": "Energy: +100, Hydration: +30",
+    "use time": "3s",
+    "node": "6a3557f841667bc4bb00fea4",
+    "ID": "item_drink_water_skeleton"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Sport bags\n- In Dead Scavs\n- In Plastic suitcases\n- In Ground caches\n- In Buried barrel caches\n- In Ration supply crates"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator YMXC."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Ops-Core FAST RAC Headset",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ops-Core_FAST_RAC_Headset",
+  "revisionId": 320878,
+  "lastEdited": "2025-11-11T20:44:55Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces",
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet headset",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "BlocksHeadset": "Yes",
+    "node": "5a16b9fffcdbcb0176308b34",
+    "id": "helmet_ops_core_rac_headset"
+  },
+  "sections": []
+}

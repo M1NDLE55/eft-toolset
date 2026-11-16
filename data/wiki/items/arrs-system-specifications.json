@@ -1,0 +1,26 @@
+{
+  "title": "ARRS system specifications",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ARRS_system_specifications",
+  "revisionId": 348041,
+  "lastEdited": "2026-07-19T12:14:57Z",
+  "kind": "item",
+  "categories": [
+    "Major TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "node": "689b53ef987b304021088e95",
+    "ID": "item_info_note_arrs_specification"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here\n- This is one of the major evidence used in The Ticket"
+    }
+  ]
+}

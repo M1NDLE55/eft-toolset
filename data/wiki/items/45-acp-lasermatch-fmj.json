@@ -1,0 +1,38 @@
+{
+  "title": ".45 ACP Lasermatch FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.45_ACP_Lasermatch_FMJ",
+  "revisionId": 324901,
+  "lastEdited": "2025-11-23T17:53:47Z",
+  "kind": "ammo",
+  "categories": [
+    ".45 ACP ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "velocity": "290 m/s",
+    "damage": "76",
+    "accuracy": "+10",
+    "penetration": "19",
+    "armor damage": "37",
+    "ricochet": "6.5%",
+    "durability burn": "+20",
+    "heat": "+10.7",
+    "feedfailure": "Very low",
+    "misfire": "Very low",
+    "effects": "Subsonic, Tracer (red)",
+    "node": "5efb0d4f4bc50b58e81710f3",
+    "id": "patron_1143x23_acp_lasermatch_fmj"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

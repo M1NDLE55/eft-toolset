@@ -1,0 +1,25 @@
+{
+  "title": "Chronicles of Ryzhy poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chronicles_of_Ryzhy_poster",
+  "revisionId": 355951,
+  "lastEdited": "2026-08-25T12:26:58Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "68f0f8f1a1e799f1c3027c71",
+    "id": "item_barter_flyers_prestige_6"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

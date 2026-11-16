@@ -1,0 +1,21 @@
+{
+  "title": "NL545 charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NL545_charging_handle",
+  "revisionId": 354942,
+  "lastEdited": "2026-08-17T21:17:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.035 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+1",
+    "node": "68c16f15efac701f800dfd36",
+    "ID": "charge_nl545_cgnl_nl545_std"
+  },
+  "sections": []
+}

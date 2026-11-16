@@ -1,0 +1,28 @@
+{
+  "title": "AR-15 Strike Industries Checkmate 5.56x45 compensator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Strike_Industries_Checkmate_5.56x45_compensator",
+  "revisionId": 362133,
+  "lastEdited": "2026-09-24T20:28:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.086 kg",
+    "grid": "1x1",
+    "ergonomics": "+1",
+    "recoil": "-8.5",
+    "Dura Burn": "-2",
+    "node": "6a6880680934ae00be0d5f9a",
+    "ID": "muzzle_ar15_strike_industries_checkmate_comp_556x45"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

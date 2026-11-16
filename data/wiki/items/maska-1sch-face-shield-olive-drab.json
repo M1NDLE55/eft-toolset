@@ -1,0 +1,32 @@
+{
+  "title": "Maska-1SCh face shield (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Maska-1SCh_face_shield_(Olive_Drab)",
+  "revisionId": 352914,
+  "lastEdited": "2026-08-09T21:59:53Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1.1 kg",
+    "grid": "2x1",
+    "material": "Armor steel",
+    "armor": "6",
+    "armor coverage": "Face, Eyes, Jaws",
+    "durability": "50",
+    "blindness protect": "35%",
+    "penalties": "+0% turn speed, -13% Ergonomics",
+    "BlocksEyewear": "No",
+    "node": "5c0919b50db834001b7ce3b9",
+    "id": "item_equipment_helmet_maska_1sh_shield"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- While it may seem like it, it's not possible to shoot through the eye-slit"
+    }
+  ]
+}

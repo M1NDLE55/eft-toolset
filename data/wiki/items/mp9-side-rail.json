@@ -1,0 +1,21 @@
+{
+  "title": "MP9 side rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP9_side_rail",
+  "revisionId": 322408,
+  "lastEdited": "2025-11-18T16:12:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-0.15",
+    "node": "5de8fc0b205ddc616a6bc51b",
+    "ID": "mount_mp9_bt_mp9_side_rail"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "ORSIS T-5000M handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ORSIS_T-5000M_handguard",
+  "revisionId": 342076,
+  "lastEdited": "2026-04-28T01:33:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.46 kg",
+    "grid": "2x1",
+    "ergonomics": "+20",
+    "recoil": "+0",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5df25d3bfd6b4e6e2276dc9a",
+    "ID": "handguard_t5000_orsis_t5000m_std"
+  },
+  "sections": []
+}

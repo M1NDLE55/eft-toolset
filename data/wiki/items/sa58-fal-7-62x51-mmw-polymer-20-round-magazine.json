@@ -1,0 +1,27 @@
+{
+  "title": "SA58/FAL 7.62x51 MMW polymer 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58/FAL_7.62x51_MMW_polymer_20-round_magazine",
+  "revisionId": 339052,
+  "lastEdited": "2026-03-24T15:58:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.29 kg",
+    "grid": "1x2",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-2",
+    "checkaccuracy": "No",
+    "checkmodifier": "-10",
+    "loadmodifier": "-5",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "7.62x51mm NATO",
+    "node": "5b7c2d1d5acfc43d1028532a",
+    "ID": "mag_fal_mmw_fal_sa58_762x51_20"
+  },
+  "sections": []
+}

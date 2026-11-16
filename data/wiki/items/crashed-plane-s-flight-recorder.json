@@ -1,0 +1,25 @@
+{
+  "title": "Crashed plane's flight recorder",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crashed_plane's_flight_recorder",
+  "revisionId": 332717,
+  "lastEdited": "2026-01-19T16:54:07Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "4.7 kg",
+    "grid": "3x2",
+    "node": "67bde22566ca1d79a202462f",
+    "id": "q_skyf2_blackbox"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Falling Skies"
+    }
+  ]
+}

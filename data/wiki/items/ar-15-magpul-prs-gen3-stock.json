@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 Magpul PRS GEN3 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Magpul_PRS_GEN3_stock",
+  "revisionId": 356710,
+  "lastEdited": "2026-08-28T21:30:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.78 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3: Black, after completing his task I Need More Power, Peacekeeper LL4: Grey",
+    "ergonomics": "+1",
+    "accuracy": "+5",
+    "recoil": "-24",
+    "node": "5d44069ca4b9361ebd26fc37 5d4406a8a4b9361e4f6eb8b7",
+    "ID": "stock_ar15_magpul_prs_gen3 stock_ar15_magpul_prs_gen3_gry"
+  },
+  "sections": []
+}

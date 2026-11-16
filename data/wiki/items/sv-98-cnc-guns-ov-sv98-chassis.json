@@ -1,0 +1,23 @@
+{
+  "title": "SV-98 CNC Guns OV-SV98 chassis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SV-98_CNC_Guns_OV-SV98_chassis",
+  "revisionId": 273797,
+  "lastEdited": "2024-03-10T13:22:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chassis",
+    "weight": "0.55 kg",
+    "grid": "3x1",
+    "ergonomics": "+10",
+    "recoil": "-4",
+    "Heat": "+5.2",
+    "Cooling": "-4.7",
+    "node": "623b2e9d11c3296b440d1638",
+    "ID": "stock_sv-98_cnc_guns_ov_sv98"
+  },
+  "sections": []
+}

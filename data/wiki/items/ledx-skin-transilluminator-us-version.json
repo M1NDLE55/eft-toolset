@@ -1,0 +1,25 @@
+{
+  "title": "LEDX Skin Transilluminator (US Version)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LEDX_Skin_Transilluminator_(US_Version)",
+  "revisionId": 298456,
+  "lastEdited": "2024-12-22T10:51:12Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.083 kg",
+    "grid": "1x1",
+    "node": "666879d498b97e3a8f09f1ae",
+    "id": "Item_barter_medical_transilluminator_quest"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Quality Standard from Therapist"
+    }
+  ]
+}

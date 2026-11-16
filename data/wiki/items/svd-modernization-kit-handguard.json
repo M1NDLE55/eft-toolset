@@ -1,0 +1,24 @@
+{
+  "title": "SVD modernization kit handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVD_modernization_kit_handguard",
+  "revisionId": 342086,
+  "lastEdited": "2026-04-28T03:39:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.48 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+22",
+    "recoil": "+0",
+    "Heat": "-1.4",
+    "Cooling": "+5.8",
+    "node": "5e56991336989c75ab4f03f6",
+    "ID": "handguard_svd_izhmash_svd_modernized_kit"
+  },
+  "sections": []
+}

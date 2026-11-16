@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 RTM ATP buffer tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_RTM_ATP_buffer_tube",
+  "revisionId": 343514,
+  "lastEdited": "2026-05-07T22:28:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.115 kg",
+    "grid": "2x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-1.5",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "node": "638de3603a1a4031d8260b8c",
+    "ID": "stock_ar15_rtm_atp_buffer_tube"
+  },
+  "sections": []
+}

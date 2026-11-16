@@ -1,0 +1,28 @@
+{
+  "title": "Rotor 43 9x19 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rotor_43_9x19_sound_suppressor",
+  "revisionId": 337498,
+  "lastEdited": "2026-03-05T23:26:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.49 kg",
+    "grid": "2x1",
+    "price": "₽26,000",
+    "ergonomics": "-11",
+    "velocity": "+0.6",
+    "recoil": "-2",
+    "Dura Burn": "+65",
+    "Heat": "+14",
+    "Cooling": "+2",
+    "loot xp": "30",
+    "exam xp": "4",
+    "node": "5a9fb739a2750c003215717f",
+    "ID": "silencer_all_rotor_43_v1_9x19"
+  },
+  "sections": []
+}

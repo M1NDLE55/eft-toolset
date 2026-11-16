@@ -1,0 +1,24 @@
+{
+  "title": "RPK-16 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPK-16_rear_sight",
+  "revisionId": 323678,
+  "lastEdited": "2025-11-20T05:38:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "price": "₽800",
+    "trader": "Prapor LL3",
+    "ergonomics": "+0",
+    "sightrange": "600",
+    "accuracy": "+0",
+    "node": "5bf3f59f0db834001a6fa060",
+    "ID": "sight_rear_ak_izhmash_rpk16_rear_sight_std"
+  },
+  "sections": []
+}

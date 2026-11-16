@@ -1,0 +1,33 @@
+{
+  "title": "Wiley X SPEAR ballistic goggles (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wiley_X_SPEAR_ballistic_goggles_(Black)",
+  "revisionId": 344712,
+  "lastEdited": "2026-05-25T16:43:33Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.12 kg",
+    "grid": "2x1",
+    "trader": "Ref LL2, after unlocking it in Echo Belli crate",
+    "material": "Glass",
+    "armor": "1",
+    "armor coverage": "Eyes",
+    "durability": "25",
+    "blindness protect": "15%",
+    "penalties": "-2% Ergonomics",
+    "node": "69cfe083ce0df53f230f29b0",
+    "id": "item_equipment_glasses_wiley_spear_black_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

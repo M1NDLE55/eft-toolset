@@ -1,0 +1,26 @@
+{
+  "title": "P226 Meprolight TRU-DOT Night rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Meprolight_TRU-DOT_Night_rear_sight",
+  "revisionId": 253233,
+  "lastEdited": "2023-11-02T21:53:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽1,400",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+0",
+    "sightrange": "300",
+    "accuracy": "+0",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5c07b3850db834002330045b",
+    "ID": "sight_rear_p226_meprolight_tru_dot_night_sight"
+  },
+  "sections": []
+}

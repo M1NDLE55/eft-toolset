@@ -1,0 +1,21 @@
+{
+  "title": "KS-23M wire stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KS-23M_wire_stock",
+  "revisionId": 270162,
+  "lastEdited": "2024-02-08T20:02:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.26 kg",
+    "grid": "2x1",
+    "ergonomics": "+11",
+    "recoil": "-18",
+    "node": "5e848dc4e4dbc5266a4ec63d",
+    "ID": "stock_ks23_toz_ks23_std_metal"
+  },
+  "sections": []
+}

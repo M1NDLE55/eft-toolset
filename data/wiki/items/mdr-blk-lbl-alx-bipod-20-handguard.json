@@ -1,0 +1,24 @@
+{
+  "title": "MDR BLK LBL ALX Bipod 20 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MDR_BLK_LBL_ALX_Bipod_20_handguard",
+  "revisionId": 342793,
+  "lastEdited": "2026-04-30T21:22:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.307 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL3: FDE , Mechanic LL4: Black",
+    "ergonomics": "+15",
+    "recoil": "+0",
+    "Heat": "+2.5",
+    "Cooling": "-2.5",
+    "node": "680f55788692125dc00a3354 680f47b20407db2e550c4311",
+    "ID": "handguard_mdr_blk_lbl_alx_20_inch_bipod_mlok_blk handguard_mdr_blk_lbl_alx_20_inch_bipod_mlok"
+  },
+  "sections": []
+}

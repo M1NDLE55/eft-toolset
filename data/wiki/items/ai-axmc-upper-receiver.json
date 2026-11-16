@@ -1,0 +1,24 @@
+{
+  "title": "AI AXMC upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_upper_receiver",
+  "revisionId": 284284,
+  "lastEdited": "2024-08-08T22:53:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.38 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "+3",
+    "recoil": "-2",
+    "Heat": "-1.1",
+    "Cooling": "+1",
+    "node": "62811fbf09427b40ab14e767",
+    "ID": "reciever_ax_accuracy_international_axmc_upper_pb"
+  },
+  "sections": []
+}

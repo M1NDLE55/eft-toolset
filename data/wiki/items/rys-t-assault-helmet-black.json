@@ -1,0 +1,39 @@
+{
+  "title": "Rys-T assault helmet (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rys-T_assault_helmet_(Black)",
+  "revisionId": 361461,
+  "lastEdited": "2026-09-23T18:40:56Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "2.5 kg",
+    "grid": "2x2",
+    "material": "Titan",
+    "armor": "5",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "90",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -2% turn speed, -3% Ergonomics, High sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5f60c74e3b85f6263c145586",
+    "id": "item_equipment_helmet_rys_t"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Long Line\n- 1 can be obtained as a quest reward from Escort\nSeasonal change: 2 can be obtained as a quest reward from Fresh Stock."
+    }
+  ]
+}

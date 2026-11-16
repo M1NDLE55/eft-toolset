@@ -1,0 +1,28 @@
+{
+  "title": "M870 12ga 7-shell magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_12ga_7-shell_magazine",
+  "revisionId": 337486,
+  "lastEdited": "2026-03-05T23:19:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "price": "₽1,650",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "7",
+    "caliber": "12/70",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5a78830bc5856700137e4c90",
+    "ID": "mag_870_remington_magazie_extension_12g_7"
+  },
+  "sections": []
+}

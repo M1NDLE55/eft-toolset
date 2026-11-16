@@ -1,0 +1,28 @@
+{
+  "title": "Pliers Elite",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pliers_Elite",
+  "revisionId": 358093,
+  "lastEdited": "2026-09-08T20:30:23Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5af04b6486f774195a3ebb49",
+    "id": "item_barter_tools_pliers_elite"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

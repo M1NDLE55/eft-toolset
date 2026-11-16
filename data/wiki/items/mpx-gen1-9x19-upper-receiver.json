@@ -1,0 +1,26 @@
+{
+  "title": "MPX GEN1 9x19 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_GEN1_9x19_upper_receiver",
+  "revisionId": 340713,
+  "lastEdited": "2026-04-22T06:37:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.488 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-4.9",
+    "Cooling": "+5.3",
+    "node": "5894a5b586f77426d2590767",
+    "ID": "reciever_mpx_sig_mpx_gen1"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "BEAR Standard lower",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_Standard_lower",
+  "revisionId": 313860,
+  "lastEdited": "2025-05-27T18:47:29Z",
+  "kind": "item",
+  "categories": [
+    "BEAR lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5cd946231388ce000d572fe3",
+    "ID": "DefaultBearLowerSuite"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This is the default BEAR lower-clothing"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The pants are modeled on the SRVV REITER, the pistol holster is modeled on the ANA Tactical Universal MOLLE Holster, and the knife and sheath are modeled on the Kizlyar Supreme Feldjaeger."
+    }
+  ]
+}

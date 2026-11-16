@@ -1,0 +1,23 @@
+{
+  "title": "Hazard 4 Takedown sling backpack (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hazard_4_Takedown_sling_backpack_(MultiCam)",
+  "revisionId": 357618,
+  "lastEdited": "2026-09-02T05:43:03Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.58 kg",
+    "grid": "3x7",
+    "trader": "Ragman LL2 after completing his task Sew it Good - Part 1, Ref LL2",
+    "penalties": "-3% movement speed, -1% turn speed, -3% Ergonomics",
+    "slots": "3x8 grid (24 slots)",
+    "node": "6038d614d10cbf667352dd44",
+    "id": "item_equipment_backpack_Takedown_sling_multicam"
+  },
+  "sections": []
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Spooky skull mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Spooky_skull_mask",
+  "revisionId": 344288,
+  "lastEdited": "2026-05-24T21:39:14Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.2 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "635267ab3c89e2112001f826",
+    "id": "item_equipment_facecover_halloween_skull"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Zryachiy's guards"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This mask was added as part of Escape from Tarkov's 2022 Halloween Celebration and worn by Tagilla and Cultists during the event."
+    }
+  ]
+}

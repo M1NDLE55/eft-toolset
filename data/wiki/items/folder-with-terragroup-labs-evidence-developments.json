@@ -1,0 +1,25 @@
+{
+  "title": "Folder with TerraGroup Labs evidence (Developments)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Folder_with_TerraGroup_Labs_evidence_(Developments)",
+  "revisionId": 356111,
+  "lastEdited": "2026-08-25T17:07:00Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.33 kg",
+    "grid": "1x2",
+    "node": "67c035140610e91bea05699a",
+    "id": "q_blue_docs2"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "DVL-10 7.62x51 muzzle device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DVL-10_7.62x51_muzzle_device",
+  "revisionId": 263392,
+  "lastEdited": "2024-01-07T20:00:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.105 kg",
+    "grid": "1x1",
+    "price": "₽5,200",
+    "trader": "Skier LL4",
+    "ergonomics": "-3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-8",
+    "Dura Burn": "-3",
+    "node": "58889c7324597754281f9439",
+    "ID": "muzzle_dvl-10_lobaev_dvl-10_std_308"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Glock rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_rear_sight",
+  "revisionId": 356361,
+  "lastEdited": "2026-08-26T00:27:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5a6f5d528dc32e00094b97d9",
+    "ID": "sight_rear_glock_glock_std"
+  },
+  "sections": []
+}

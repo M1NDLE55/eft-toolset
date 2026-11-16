@@ -1,0 +1,33 @@
+{
+  "title": "6Sh118 raid backpack (EMR)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6Sh118_raid_backpack_(EMR)",
+  "revisionId": 353181,
+  "lastEdited": "2026-08-11T17:07:21Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "3.5 kg",
+    "grid": "6x7",
+    "penalties": "-5% movement speed, -3% turn speed, -7% Ergonomics",
+    "slots": "6x8 grid (48 slots)",
+    "node": "5df8a4d786f77412672a1e3b",
+    "ID": "backpack_Raid_6SH118"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only 1 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Long Line"
+    }
+  ]
+}

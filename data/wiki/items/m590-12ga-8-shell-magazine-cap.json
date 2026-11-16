@@ -1,0 +1,26 @@
+{
+  "title": "M590 12ga 8-shell magazine cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M590_12ga_8-shell_magazine_cap",
+  "revisionId": 337720,
+  "lastEdited": "2026-03-06T01:44:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "8",
+    "caliber": "12/70",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5e87080c81c4ed43e83cefda",
+    "ID": "mag_590_mossberg_magazie_cap_12g_8"
+  },
+  "sections": []
+}

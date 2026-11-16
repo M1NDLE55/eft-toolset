@@ -1,0 +1,26 @@
+{
+  "title": "Icebreaker model",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Icebreaker_model",
+  "revisionId": 367819,
+  "lastEdited": "2026-11-10T13:45:32Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "1 kg",
+    "grid": "3x2",
+    "effect": "Generic loot item",
+    "node": "6a4ff1e23e95f68a650fcb13",
+    "id": "Item_barter_icebreaker_statue"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be placed in the Hall of Fame."
+    }
+  ]
+}

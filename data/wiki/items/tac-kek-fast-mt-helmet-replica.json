@@ -1,0 +1,34 @@
+{
+  "title": "Tac-Kek FAST MT helmet (Replica)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tac-Kek_FAST_MT_helmet_(Replica)",
+  "revisionId": 346749,
+  "lastEdited": "2026-06-13T12:53:27Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.45 kg",
+    "grid": "2x2",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "1",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, +0% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5ea05cf85ad9772e6624305d",
+    "id": "item_equipment_helmet_hops_core_fast"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Tac-Kek is a play on \"TacTec\", a line of tactical gear by the brand \"5.11\".\n- \"Kek\" is the shortened form of \"kekeke\", a transliteration of an onomatopoetic Korean phrase used online to represent laughter. It's the equivalent to \"hahaha\"."
+    }
+  ]
+}

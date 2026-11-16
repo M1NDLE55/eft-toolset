@@ -1,0 +1,31 @@
+{
+  "title": "Steyr AUG A1 5.56x45 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_A1_5.56x45_assault_rifle",
+  "revisionId": 357007,
+  "lastEdited": "2026-08-30T17:28:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.826 kg",
+    "grid": "5x2",
+    "trader": "Peacekeeper LL1",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "600",
+    "ergonomics": "72",
+    "velocity": "957 m/s",
+    "range": "500 m",
+    "MOA": "1.24",
+    "Weaprecoil": "Vertical: 75, Horizontal: 222",
+    "rof": "715",
+    "caliber": "5.56x45mm NATO",
+    "node": "62e7c4fba689e8c9c50dfc38",
+    "ID": "weapon_steyr_aug_a1_556x45"
+  },
+  "sections": []
+}

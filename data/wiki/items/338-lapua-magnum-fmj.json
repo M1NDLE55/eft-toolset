@@ -1,0 +1,38 @@
+{
+  "title": ".338 Lapua Magnum FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.338_Lapua_Magnum_FMJ",
+  "revisionId": 364449,
+  "lastEdited": "2026-10-13T23:41:11Z",
+  "kind": "ammo",
+  "categories": [
+    ".338 Lapua Magnum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.047 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL4, Ref LL4",
+    "velocity": "900 m/s",
+    "damage": "122",
+    "penetration": "47",
+    "armor damage": "83",
+    "ricochet": "40%",
+    "l bleed chance": "+35",
+    "h bleed chance": "+50",
+    "durability burn": "+80",
+    "heat": "+209.7",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "5fc275cf85fd526b824a571a",
+    "id": "patron_86x70_lapua_magnum"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

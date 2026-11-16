@@ -1,0 +1,26 @@
+{
+  "title": "Ox bleach",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ox_bleach",
+  "revisionId": 364808,
+  "lastEdited": "2026-10-20T15:36:17Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "1.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "59e3556c86f7741776641ac2",
+    "id": "item_barter_household_bleach"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

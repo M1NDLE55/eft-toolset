@@ -1,0 +1,24 @@
+{
+  "title": "FAB Defense protection cap for AGR-870",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FAB_Defense_protection_cap_for_AGR-870",
+  "revisionId": 214147,
+  "lastEdited": "2022-11-12T09:50:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "price": "₽258",
+    "trader": "Skier LL2",
+    "ergonomics": "+2",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5bfe86bd0db83400232fe959",
+    "ID": "tactical_870_fab_defence_agr_870_cap"
+  },
+  "sections": []
+}

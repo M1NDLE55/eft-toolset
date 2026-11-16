@@ -1,0 +1,31 @@
+{
+  "title": "Armband (Evasion)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Evasion)",
+  "revisionId": 364908,
+  "lastEdited": "2026-10-25T13:20:00Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "60b0f988c4449e4cb624c1da",
+    "id": "armband_sigma"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Airdrops\n- Buried barrel cache\n- Common fund stash\n- Dead Scav\n- Ground cache\n- Jacket\n- Plastic suitcase\n- Sport bag\n- Weapon box (4x4)\n- Weapon box (6x4)\n- Weapon box (6x6)"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: This armband is a reference to the tournament organization Evasion."
+    }
+  ]
+}

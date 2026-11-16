@@ -1,0 +1,25 @@
+{
+  "title": "D'ya Like Dags poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/D'ya_Like_Dags_poster",
+  "revisionId": 363688,
+  "lastEdited": "2026-10-07T22:13:43Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6aa2d75c667ebebca605d8fe",
+    "id": "item_barter_flyers_prestige_06_pve"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

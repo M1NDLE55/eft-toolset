@@ -1,0 +1,46 @@
+{
+  "title": "Crye Precision CPC plate carrier (Goons Edition)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_CPC_plate_carrier_(Goons_Edition)",
+  "revisionId": 346883,
+  "lastEdited": "2026-06-14T21:34:28Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "3.7 kg",
+    "grid": "4x3",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Thorax, Back, Sides",
+    "default plates": "2x , 2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate, Sides",
+    "durability": "90",
+    "penalties": "+0% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "18 Slots",
+    "node": "628b9c7d45122232a872358f",
+    "ID": "item_equipment_rig_boss_blackknight"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Knight"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- A mirrored iPhone 7 Plus in a Magpul MAG849-ORG field case is visible in a pouch instead of a magazine."
+    }
+  ]
+}

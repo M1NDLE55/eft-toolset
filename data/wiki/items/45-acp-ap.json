@@ -1,0 +1,40 @@
+{
+  "title": ".45 ACP AP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.45_ACP_AP",
+  "revisionId": 343611,
+  "lastEdited": "2026-05-08T18:18:58Z",
+  "kind": "ammo",
+  "categories": [
+    ".45 ACP ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "price": "₽145",
+    "trader": "Peacekeeper LL4, Ref LL4",
+    "velocity": "299 m/s",
+    "damage": "66",
+    "accuracy": "-5",
+    "recoil": "+7",
+    "penetration": "38",
+    "armor damage": "48",
+    "ricochet": "10%",
+    "durability burn": "+70",
+    "heat": "+23",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "effects": "Subsonic",
+    "node": "5efb0cabfb3e451d70735af5",
+    "id": "patron_1143x23_acp_ap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

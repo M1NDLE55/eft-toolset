@@ -1,0 +1,38 @@
+{
+  "title": "FN P90 5.7x28 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_5.7x28_submachine_gun",
+  "revisionId": 361342,
+  "lastEdited": "2026-09-22T17:15:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "2.974 kg",
+    "grid": "3x2",
+    "trader": "Ref LL2: CWDG variant, Peacekeeper LL3: Standard",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "200",
+    "ergonomics": "78.3",
+    "velocity": "603 m/s",
+    "range": "200 m",
+    "MOA": "3.75",
+    "Weaprecoil": "Vertical: 45, Horizontal: 203",
+    "rof": "900",
+    "caliber": "5.7x28mm FN",
+    "def mag": "FN P90 5.7x28 50-round magazine",
+    "node": "5cc82d76e24e8d00134b4b83",
+    "ID": "weapon_fn_p90_57x28"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant | Attachments |\n| P90 DEVGRU | 2x |\n| P90 CWDG | 2x |\n| P90 SBR | 2x |\n| P90 SBRT | |"
+    }
+  ]
+}

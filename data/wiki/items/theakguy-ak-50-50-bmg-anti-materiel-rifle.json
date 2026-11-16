@@ -1,0 +1,46 @@
+{
+  "title": "TheAKGuy AK-50 .50 BMG anti-materiel rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TheAKGuy_AK-50_.50_BMG_anti-materiel_rifle",
+  "revisionId": 341000,
+  "lastEdited": "2026-04-22T23:20:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Designated marksman rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Designated marksman rifle",
+    "slot": "Primary",
+    "weight": "12.853 kg",
+    "grid": "7x2",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "24",
+    "velocity": "880 m/s",
+    "range": "1000 m",
+    "MOA": "0.34",
+    "Weaprecoil": "Vertical: 443, Horizontal: 826",
+    "rof": "30",
+    "caliber": ".50 BMG",
+    "node": "67d0576f29f580ebc10efd08",
+    "ID": "weapon_theakguy_ak50_127x99"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Zryachiy"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Hobby Club"
+    }
+  ]
+}

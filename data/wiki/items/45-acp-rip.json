@@ -1,0 +1,40 @@
+{
+  "title": ".45 ACP RIP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.45_ACP_RIP",
+  "revisionId": 357668,
+  "lastEdited": "2026-09-05T06:43:16Z",
+  "kind": "ammo",
+  "categories": [
+    ".45 ACP ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.019 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4, after completing his task Gunsmith Master - Part 6",
+    "velocity": "293 m/s",
+    "damage": "130",
+    "accuracy": "-5",
+    "penetration": "3",
+    "armor damage": "12",
+    "ricochet": "0.2%",
+    "l bleed chance": "+30",
+    "h bleed chance": "+20",
+    "durability burn": "+50",
+    "heat": "+16.8",
+    "feedfailure": "Very high",
+    "misfire": "Medium",
+    "effects": "Subsonic",
+    "node": "5ea2a8e200685063ec28c05a",
+    "id": "patron_1143x23_rip"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

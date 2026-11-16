@@ -1,0 +1,35 @@
+{
+  "title": "Immobilizing splint",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Immobilizing_splint",
+  "revisionId": 358735,
+  "lastEdited": "2026-09-10T23:00:59Z",
+  "kind": "item",
+  "categories": [
+    "Injury treatment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injury treatment",
+    "weight": "0.17 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL1",
+    "effect": "Removes:",
+    "use time": "5s",
+    "loot xp": "40",
+    "exam xp": "2",
+    "node": "544fb3364bdc2d34748b456a",
+    "id": "splint"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "When applying the splint to your leg you will be unable to move for the duration of the application. You are able to move while it is applied to an arm."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Dead Scav\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    }
+  ]
+}

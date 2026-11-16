@@ -1,0 +1,21 @@
+{
+  "title": "Glock TangoDown AAM-01 ACRO mount base",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_TangoDown_AAM-01_ACRO_mount_base",
+  "revisionId": 270671,
+  "lastEdited": "2024-02-11T16:38:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+0",
+    "node": "615d8da4d3a39d50044c10e8",
+    "ID": "mount_glock_tango_down_aam_01_acro_mount"
+  },
+  "sections": []
+}

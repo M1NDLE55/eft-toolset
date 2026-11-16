@@ -1,0 +1,21 @@
+{
+  "title": "MXLR hammer spur extension",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MXLR_hammer_spur_extension",
+  "revisionId": 343357,
+  "lastEdited": "2026-05-05T19:51:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+1",
+    "node": "67c5414ed0538d12ec036c0c",
+    "ID": "tactical_m1895_marlin_mxlr_hammer_spur_extension"
+  },
+  "sections": []
+}

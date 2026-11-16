@@ -1,0 +1,20 @@
+{
+  "title": "AI AXMC AT X Top Rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_AT_X_Top_Rail",
+  "revisionId": 284291,
+  "lastEdited": "2024-08-08T22:57:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "3x1",
+    "trader": "Jaeger LL4",
+    "node": "628120c21d5df4475f46a337",
+    "ID": "mount_keyslot_accuracy_international_at_x_forend_rail_pb"
+  },
+  "sections": []
+}

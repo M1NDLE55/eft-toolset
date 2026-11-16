@@ -1,0 +1,25 @@
+{
+  "title": "AR-15 ADAR 2-15 wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_ADAR_2-15_wooden_stock",
+  "revisionId": 337598,
+  "lastEdited": "2026-03-06T00:19:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.695 kg",
+    "grid": "2x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+13",
+    "recoil": "-20",
+    "Dura Burn": "-2",
+    "loot xp": "10",
+    "exam xp": "4",
+    "node": "5c0e2ff6d174af02a1659d4a",
+    "ID": "stock_ar15_adar_wood_v1"
+  },
+  "sections": []
+}

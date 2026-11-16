@@ -1,0 +1,47 @@
+{
+  "title": "ANA Tactical M2 plate carrier (MultiCam Alpine)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ANA_Tactical_M2_plate_carrier_(MultiCam_Alpine)",
+  "revisionId": 367640,
+  "lastEdited": "2026-11-08T12:44:50Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.25 kg",
+    "grid": "4x4",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 1",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Thorax, Stomach, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "96",
+    "penalties": "-2% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "18 Slots",
+    "node": "69412e5573dcf473e50be464",
+    "id": "item_equipment_rig_M2_winter"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Despite being an Arena BattlePass Season 1 exclusive, this item can currently spawn in loot containers."
+    }
+  ]
+}

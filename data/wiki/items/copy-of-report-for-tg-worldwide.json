@@ -1,0 +1,26 @@
+{
+  "title": "Copy of report for TG Worldwide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Copy_of_report_for_TG_Worldwide",
+  "revisionId": 348070,
+  "lastEdited": "2026-07-19T12:25:18Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "689b52892c175da5bf083ba1",
+    "id": "item_info_note_copy_report_TG_headoffice"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

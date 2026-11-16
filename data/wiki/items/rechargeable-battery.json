@@ -1,0 +1,26 @@
+{
+  "title": "Rechargeable battery",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rechargeable_battery",
+  "revisionId": 356950,
+  "lastEdited": "2026-08-30T09:37:37Z",
+  "kind": "item",
+  "categories": [
+    "Energy elements"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Energy element",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "590a358486f77429692b2790",
+    "id": "item_energy_accum"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": ".366 TKM AP-M ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.366_TKM_AP-M_ammo_pack_(20_pcs)",
+  "revisionId": 367095,
+  "lastEdited": "2026-11-02T23:06:43Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657023f81419851aef03e6f1",
+    "ID": "item_ammo_box_366_20_custom_ap"
+  },
+  "sections": []
+}

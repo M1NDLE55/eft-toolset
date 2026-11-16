@@ -1,0 +1,36 @@
+{
+  "title": "Everclear two-stage water filter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Everclear_two-stage_water_filter",
+  "revisionId": 364454,
+  "lastEdited": "2026-10-14T05:58:03Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "4.5 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "node": "6a9980872a87c16fef04789f",
+    "id": "item_barter_other_waterfilter_pentaqua"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Used to run the water collector\n- Can be removed once installed to not be used if module doesn't need to be active.\n- The filter lasts for 32 hours, 49 minutes, and 40 seconds.\n  - The equation to convert water filter durability into minutes is 4.92 × durability."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The filter is modeled on the Pentair Everpure Insurice 7SI."
+    }
+  ]
+}

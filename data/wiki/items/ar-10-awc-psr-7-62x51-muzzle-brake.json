@@ -1,0 +1,24 @@
+{
+  "title": "AR-10 AWC PSR 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_AWC_PSR_7.62x51_muzzle_brake",
+  "revisionId": 337781,
+  "lastEdited": "2026-03-06T02:12:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.165 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-3",
+    "accuracy": "+1",
+    "recoil": "-8.5",
+    "Heat": "-1.3",
+    "node": "612e0d3767085e45ef14057f",
+    "ID": "muzzle_all_awc_psr_muzzle_brake_762x51"
+  },
+  "sections": []
+}

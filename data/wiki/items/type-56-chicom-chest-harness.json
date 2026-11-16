@@ -1,0 +1,23 @@
+{
+  "title": "Type 56 Chicom chest harness",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Type_56_Chicom_chest_harness",
+  "revisionId": 255428,
+  "lastEdited": "2023-11-14T22:18:01Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.65 kg",
+    "grid": "3x3",
+    "trader": "Ragman LL1",
+    "BlocksArmor": "No",
+    "slots": "10 Slots",
+    "node": "64be7110bf597ba84a0a41ea",
+    "id": "item_equipment_rig_chicom"
+  },
+  "sections": []
+}

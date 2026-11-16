@@ -1,0 +1,21 @@
+{
+  "title": "HK G36 hand stop",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_hand_stop",
+  "revisionId": 253553,
+  "lastEdited": "2023-11-02T21:56:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+1",
+    "node": "622f16a1a5958f63c67f1737",
+    "ID": "tactical_g36_hk_complete_hand_stop"
+  },
+  "sections": []
+}

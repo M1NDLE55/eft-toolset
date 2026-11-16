@@ -1,0 +1,26 @@
+{
+  "title": "AR-10 Lantac Dragon 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Lantac_Dragon_7.62x51_muzzle_brake",
+  "revisionId": 356481,
+  "lastEdited": "2026-08-26T02:06:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-5",
+    "accuracy": "+0",
+    "recoil": "-10.5",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "Cooling": "+0.6",
+    "node": "5c878e9d2e2216000f201903",
+    "ID": "muzzle_ar10_lantac_dgn762b_muzzle_brake_762x51"
+  },
+  "sections": []
+}

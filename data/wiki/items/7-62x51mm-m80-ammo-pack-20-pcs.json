@@ -1,0 +1,25 @@
+{
+  "title": "7.62x51mm M80 ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_M80_ammo_pack_(20_pcs)",
+  "revisionId": 367231,
+  "lastEdited": "2026-11-02T23:13:54Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3",
+    "node": "65702558cfc010a0f5006a25",
+    "ID": "item_ammo_box_762x51_20_m80"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 4 can be obtained as a quest reward from TerraGroup Employee"
+    }
+  ]
+}

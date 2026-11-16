@@ -1,0 +1,27 @@
+{
+  "title": "PPSh-41 7.62x25 35-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PPSh-41_7.62x25_35-round_magazine",
+  "revisionId": 337721,
+  "lastEdited": "2026-03-06T01:45:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.380 kg",
+    "grid": "1x2",
+    "trader": "Prapor LL1",
+    "ergonomics": "-2",
+    "checkaccuracy": "No",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "35",
+    "caliber": "7.62x25mm Tokarev",
+    "node": "5ea034eb5aad6446a939737b",
+    "ID": "mag_ppsh_zis_std_762x25_35"
+  },
+  "sections": []
+}

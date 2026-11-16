@@ -1,0 +1,20 @@
+{
+  "title": "FN SCAR PMM M-LOK lower rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_PMM_M-LOK_lower_rail",
+  "revisionId": 317698,
+  "lastEdited": "2025-08-26T21:46:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.045 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3: Black, FDE",
+    "node": "66ffc72082d36dec82030c1f 66ffc903fe9b382596065304",
+    "ID": "mount_mk16_pmm_bottom_rail_m_lok mount_mk16_pmm_bottom_rail_m_lok_fde"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Bandana",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bandana",
+  "revisionId": 304956,
+  "lastEdited": "2025-01-31T14:52:53Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bandana",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL1",
+    "node": "5b43271c5acfc432ff4dce65",
+    "id": "item_equipment_head_bandana"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "AR-15 5.56x45 18 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_18_inch_barrel",
+  "revisionId": 356489,
+  "lastEdited": "2026-08-26T02:11:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.78 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-26",
+    "velocity": "+3",
+    "MOA": "1.41",
+    "recoil": "-9.1",
+    "Heat": "-4",
+    "Cooling": "-4",
+    "node": "5d440b93a4b9364276578d4b",
+    "ID": "barrel_ar15_457mm"
+  },
+  "sections": []
+}

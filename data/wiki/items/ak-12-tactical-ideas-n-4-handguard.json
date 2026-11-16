@@ -1,0 +1,26 @@
+{
+  "title": "AK-12 Tactical Ideas N-4 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_Tactical_Ideas_N-4_handguard",
+  "revisionId": 342846,
+  "lastEdited": "2026-04-30T21:45:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.4 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+18.5",
+    "recoil": "+0",
+    "Heat": "+2.8",
+    "Cooling": "-2.7",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "682315bdf8d8f8681e0744b5",
+    "ID": "handguard_ak12_tactical_ideas_n4_ak12_mlok"
+  },
+  "sections": []
+}

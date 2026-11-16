@@ -1,0 +1,29 @@
+{
+  "title": "MCX-SPEAR SLX68-MG-QD 6.8x51 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX-SPEAR_SLX68-MG-QD_6.8x51_sound_suppressor",
+  "revisionId": 337835,
+  "lastEdited": "2026-03-06T18:18:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.59 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-10",
+    "velocity": "+0.7",
+    "accuracy": "+0",
+    "recoil": "-5",
+    "Dura Burn": "+68",
+    "Heat": "+15",
+    "Cooling": "+6",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "652911e650dc782999054b9d",
+    "ID": "silencer_clutchlok_sig_slx68_mg_qd_suppressor_68x51"
+  },
+  "sections": []
+}

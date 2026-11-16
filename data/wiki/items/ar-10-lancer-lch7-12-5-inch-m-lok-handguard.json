@@ -1,0 +1,26 @@
+{
+  "title": "AR-10 Lancer LCH7 12.5 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Lancer_LCH7_12.5_inch_M-LOK_handguard",
+  "revisionId": 342104,
+  "lastEdited": "2026-04-28T03:48:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.36 kg",
+    "grid": "3x1",
+    "price": "₽21,200",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "+1.8",
+    "loot xp": "20",
+    "exam xp": "3",
+    "node": "5f6336bbda967c74a42e9932",
+    "ID": "handguard_ar10_lancer_lch7_12_5_inch_carbon"
+  },
+  "sections": []
+}

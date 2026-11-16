@@ -1,0 +1,29 @@
+{
+  "title": "Peltor ComTac VI headset (Coyote Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Peltor_ComTac_VI_headset_(Coyote_Brown)",
+  "revisionId": 320884,
+  "lastEdited": "2025-11-11T20:45:23Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.379 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "66b5f6985891c84aab75ca76",
+    "id": "item_equipment_headset_comtac_vi"
+  },
+  "sections": [
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Hindsight 20/20"
+    }
+  ]
+}

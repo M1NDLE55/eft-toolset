@@ -1,0 +1,28 @@
+{
+  "title": "BlackHawk! Commando chest harness (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BlackHawk!_Commando_chest_harness_(Black)",
+  "revisionId": 346938,
+  "lastEdited": "2026-06-15T19:44:50Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.35 kg",
+    "grid": "4x3",
+    "BlocksArmor": "No",
+    "slots": "16 Slots",
+    "node": "5c0e9f2c86f77432297fe0a3",
+    "id": "item_equipment_rig_commando_black"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Killa\n- Vengeful Killa\n- Cultists"
+    }
+  ]
+}

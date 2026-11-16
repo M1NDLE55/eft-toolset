@@ -1,0 +1,29 @@
+{
+  "title": "Kasatka push dagger",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kasatka_push_dagger",
+  "revisionId": 363652,
+  "lastEdited": "2026-10-07T21:22:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.155 kg",
+    "grid": "1x1",
+    "fire modes": "Chop 24 Damage, Stab 39 Damage",
+    "range": "Chop 0.4m, Stab 0.5m",
+    "node": "6aa948d1a7cdc313b50cdd11",
+    "ID": "weapon_semin_push_dagger"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Kasatka is the Russian word for orca."
+    }
+  ]
+}

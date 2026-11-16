@@ -1,0 +1,32 @@
+{
+  "title": "Cult victim audio tape 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cult_victim_audio_tape_1",
+  "revisionId": 348815,
+  "lastEdited": "2026-08-01T14:43:13Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes",
+    "Minor TerraGroup evidence"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "2:12",
+    "node": "6811e9119b009e592c07a59e",
+    "ID": "item_info_recorder_tape_igor_01"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here\n- This is one of the minor evidence used in The Ticket"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Cult Victim: Tape #1. Time is… time is 14:09. My name's Igor. I feel like some secret agent doing this. I even had to switch to analog recordings. You know, with a tape recorder. At least that way any of those freaks can't hack it.\n\nCult Victim: Yesterday someone slipped a book under my door. Creepy as hell, covered in those same symbols that started showing up around the city… At first I thought it was some prank. Like, you know, that old TV show, Naked and Funny. Damn, that one sure is an oldie…\n\nCult Victim: Anyway, the book! I read it. Spent the whole evening on it. And it's full of… of some serious weirdness. Not nonsense, no. More like… I don't know, like someone knows things they really shouldn't know.\n\nCult Victim: Well, our Cobalt is connected to TerraGroup, and over the years I've learned a few things. So these… these \"Gifts\" mentioned in the book sound an awful lot like some of TerraGroup's projects. The secret type.\n\nCult Victim: I'm sure they tried to recruit me. Like, into some cult. Only these guys are way more sophisticated than your average Peoples Temple types. They think I have access to some \"Eye of the World\". That's why they need me. And they're not gonna stop at just sending a book.\n\nCult Victim: I have to run. Yes… yes, I need to disappear. Lay low, maybe even in Bruges.\n\nCult Victim: They've been watching me. This whole time. And I thought it was just paranoia. Even talked about it with my therapist, for fuck's sake! I should've trusted my gut. Maybe I wouldn't have to drop everything and run now. I…"
+    }
+  ]
+}

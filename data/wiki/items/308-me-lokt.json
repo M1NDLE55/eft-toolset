@@ -1,0 +1,39 @@
+{
+  "title": ".308 ME LOKT",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.308_ME_LOKT",
+  "revisionId": 326758,
+  "lastEdited": "2025-12-05T20:01:24Z",
+  "kind": "ammo",
+  "categories": [
+    ".308 Merlin Express ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.024 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "velocity": "838 m/s",
+    "damage": "96",
+    "accuracy": "-2",
+    "recoil": "-3",
+    "penetration": "24",
+    "armor damage": "55",
+    "l bleed chance": "+45",
+    "h bleed chance": "+22",
+    "durability burn": "+5",
+    "heat": "+5",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "67c540cfb032bbdb530201b8",
+    "id": "patron_784x49_lokt"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

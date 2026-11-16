@@ -1,0 +1,21 @@
+{
+  "title": "Hartman Lenok 70mm rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hartman_Lenok_70mm_rail",
+  "revisionId": 305474,
+  "lastEdited": "2025-02-08T22:01:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.019 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+0",
+    "node": "65434a4e4e3a01736a6c9706",
+    "ID": "mount_lenok_hartman_lenok_weaver_70mm"
+  },
+  "sections": []
+}

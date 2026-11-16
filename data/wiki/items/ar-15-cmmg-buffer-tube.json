@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 CMMG buffer tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_CMMG_buffer_tube",
+  "revisionId": 340397,
+  "lastEdited": "2026-04-20T14:52:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.132 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-1",
+    "recoil": "-1",
+    "Dura Burn": "-0.5",
+    "node": "606587e18900dc2d9a55b65f",
+    "ID": "stock_ar15_cmmg_mil_spec_tube"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "VPO-209 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-209_rear_sight",
+  "revisionId": 294724,
+  "lastEdited": "2024-10-31T19:29:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "price": "₽470",
+    "trader": "Jaeger LL1",
+    "sightrange": "300",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "59e8977386f77415a553c453",
+    "ID": "sight_rear_ak_molot_vpo_209"
+  },
+  "sections": []
+}

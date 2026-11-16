@@ -1,0 +1,26 @@
+{
+  "title": "Mosin Rifle sawed-off sniper stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_sawed-off_sniper_stock",
+  "revisionId": 270180,
+  "lastEdited": "2024-02-08T20:09:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.85 kg",
+    "grid": "2x1",
+    "price": "₽1,750",
+    "ergonomics": "+16",
+    "recoil": "-3",
+    "Heat": "+7.9",
+    "Cooling": "-8.2",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5bfd36290db834001966869a",
+    "ID": "stock_mosin_izhmash_mosin_sniper_sawn_off_wood"
+  },
+  "sections": []
+}

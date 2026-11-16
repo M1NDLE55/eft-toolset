@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Colt M16A2 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Colt_M16A2_handguard",
+  "revisionId": 343365,
+  "lastEdited": "2026-05-05T20:02:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.193 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+10",
+    "recoil": "+0",
+    "Heat": "+2.2",
+    "Cooling": "-0.2",
+    "node": "68a63cc0c92ee33ffa01bf5c",
+    "ID": "handguard_ar15_colt_m16a2_std"
+  },
+  "sections": []
+}

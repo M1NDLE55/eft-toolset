@@ -1,0 +1,24 @@
+{
+  "title": "Peltor ComTac II headset (OD Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Peltor_ComTac_II_headset_(OD_Green)",
+  "revisionId": 357595,
+  "lastEdited": "2026-09-01T21:08:37Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.7 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL2",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "5645bcc04bdc2d363b8b4572",
+    "id": "headphones"
+  },
+  "sections": []
+}

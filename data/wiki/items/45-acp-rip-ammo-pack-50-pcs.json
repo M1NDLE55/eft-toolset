@@ -1,0 +1,18 @@
+{
+  "title": ".45 ACP RIP ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.45_ACP_RIP_ammo_pack_(50_pcs)",
+  "revisionId": 367103,
+  "lastEdited": "2026-11-02T23:07:08Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702414c5d7d4cb4d078555",
+    "ID": "item_ammo_box_1143x23_50_rip"
+  },
+  "sections": []
+}

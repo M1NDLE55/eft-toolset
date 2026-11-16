@@ -1,0 +1,24 @@
+{
+  "title": "HK 416 Midwest Industries 13.5 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416_Midwest_Industries_13.5_inch_M-LOK_handguard",
+  "revisionId": 349203,
+  "lastEdited": "2026-08-03T22:09:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.37 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+17",
+    "recoil": "+0",
+    "Heat": "-3.1",
+    "Cooling": "+10.3",
+    "node": "5c6d11072e2216000e69d2e4",
+    "ID": "handguard_416_midwest_m_lok_13,5_inch"
+  },
+  "sections": []
+}

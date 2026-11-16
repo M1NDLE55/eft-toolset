@@ -1,0 +1,26 @@
+{
+  "title": "Wrestling Legend mustache",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wrestling_Legend_mustache",
+  "revisionId": 348414,
+  "lastEdited": "2026-07-30T20:09:41Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "slot": "Face cover",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in the Customs Tactical Map",
+    "node": "68bedfa56b0736bebc012ad9",
+    "id": "item_equipment_mustache_horseshoe_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

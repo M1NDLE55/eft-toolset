@@ -1,0 +1,33 @@
+{
+  "title": "Galvion Caiman Hybrid Ballistic Mandible Guard (Mutualist)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Galvion_Caiman_Hybrid_Ballistic_Mandible_Guard_(Mutualist)",
+  "revisionId": 353474,
+  "lastEdited": "2026-08-13T19:10:08Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.1 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in the Customs Tactical Map",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Jaws",
+    "durability": "20",
+    "penalties": "+0% turn speed, -2% Ergonomics",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "68a9b73bd3a061d8b6058348",
+    "id": "item_equipment_helmet_galvion_mandible_venom_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

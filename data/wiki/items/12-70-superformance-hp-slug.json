@@ -1,0 +1,40 @@
+{
+  "title": "12/70 SuperFormance HP slug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_SuperFormance_HP_slug",
+  "revisionId": 322845,
+  "lastEdited": "2025-11-18T21:27:44Z",
+  "kind": "ammo",
+  "categories": [
+    "12/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.034 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "velocity": "594 m/s",
+    "damage": "220",
+    "accuracy": "+170",
+    "recoil": "-15",
+    "penetration": "5",
+    "armor damage": "12",
+    "ricochet": "10%",
+    "l bleed chance": "+30",
+    "h bleed chance": "+40",
+    "durability burn": "+20",
+    "heat": "+104.6",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "node": "5d6e68d1a4b93622fe60e845",
+    "id": "patron_12x70_slug_superformance"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

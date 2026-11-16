@@ -1,0 +1,24 @@
+{
+  "title": "M700 AB Arms MOD*X GEN 3 chassis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_AB_Arms_MOD*X_GEN_3_chassis",
+  "revisionId": 352621,
+  "lastEdited": "2026-08-09T20:01:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chassis",
+    "weight": "0.9 kg",
+    "grid": "2x1",
+    "price": "₽14,972",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+13",
+    "recoil": "-6",
+    "loot xp": "10",
+    "node": "5cde739cd7f00c0010373bd3",
+    "ID": "stock_m700_abarms_mrs_mod_x_gen_3"
+  },
+  "sections": []
+}

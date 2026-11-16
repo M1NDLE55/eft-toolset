@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Precision Reflex GEN III Delta Carbon handguard (FDE)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Precision_Reflex_GEN_III_Delta_Carbon_handguard_(FDE)",
+  "revisionId": 342357,
+  "lastEdited": "2026-04-29T00:39:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.425 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "+3",
+    "Cooling": "+25",
+    "node": "63888bbd28e5cc32cc09d2b6",
+    "ID": "handguard_ar15_precision_reflex_carbon_fiber_delta_gen_3"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "FN Five-seveN 5.7x28 Pro-Mag 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_Five-seveN_5.7x28_Pro-Mag_30-round_magazine",
+  "revisionId": 354913,
+  "lastEdited": "2026-08-17T18:47:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.088 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.7x28mm FN",
+    "node": "6889f1c4f7a5d7de7b089550",
+    "ID": "mag_57_promag_five_seven_57x28_30"
+  },
+  "sections": []
+}

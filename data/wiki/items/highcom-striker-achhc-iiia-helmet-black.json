@@ -1,0 +1,29 @@
+{
+  "title": "HighCom Striker ACHHC IIIA helmet (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HighCom_Striker_ACHHC_IIIA_helmet_(Black)",
+  "revisionId": 344393,
+  "lastEdited": "2026-05-24T22:14:00Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL3",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "36",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5b40e3f35acfc40016388218",
+    "id": "item_equipment_helmet_ACHHC_black"
+  },
+  "sections": []
+}

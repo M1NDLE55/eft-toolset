@@ -1,0 +1,21 @@
+{
+  "title": "Benelli M3 Super 90 upper receiver top rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Benelli_M3_Super_90_upper_receiver_top_rail",
+  "revisionId": 253866,
+  "lastEdited": "2023-11-02T23:30:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-1",
+    "node": "625ed7c64d9b6612df732146",
+    "ID": "mount_m3_benelli_sport_top_rail"
+  },
+  "sections": []
+}

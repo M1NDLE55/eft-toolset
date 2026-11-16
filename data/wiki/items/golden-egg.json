@@ -1,0 +1,36 @@
+{
+  "title": "Golden egg",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Golden_egg",
+  "revisionId": 364991,
+  "lastEdited": "2026-10-25T22:05:31Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "62a09cfe4f842e1bd12da3e4",
+    "id": "item_barter_valuable_egg"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On a box infront of Gate 2 behind the pillar with the number 9. An egg is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator MeYeR."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "QBZ-191 buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/QBZ-191_buttstock",
+  "revisionId": 357275,
+  "lastEdited": "2026-09-01T09:54:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.315 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+5",
+    "recoil": "-21.5",
+    "node": "69f9f0b58676a3db2a096808",
+    "ID": "stock_qbz191_norinco_191_stock_std"
+  },
+  "sections": []
+}

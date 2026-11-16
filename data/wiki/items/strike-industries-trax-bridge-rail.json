@@ -1,0 +1,27 @@
+{
+  "title": "Strike Industries TRAX bridge rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Strike_Industries_TRAX_bridge_rail",
+  "revisionId": 291631,
+  "lastEdited": "2024-09-22T18:17:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.075 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+0",
+    "node": "5a9d6d21a2750c00137fa649",
+    "ID": "mount_keymod_strike_industries_bridge_rail_section"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Manufacturer's page for the item\n- Sold as a part of TRAX 2 in real life."
+    }
+  ]
+}

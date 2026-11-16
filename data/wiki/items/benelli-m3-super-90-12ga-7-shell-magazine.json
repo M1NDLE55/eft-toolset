@@ -1,0 +1,27 @@
+{
+  "title": "Benelli M3 Super 90 12ga 7-shell magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Benelli_M3_Super_90_12ga_7-shell_magazine",
+  "revisionId": 337868,
+  "lastEdited": "2026-03-07T06:37:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.227 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "7",
+    "caliber": "12/70",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "6259bdcabd28e4721447a2aa",
+    "ID": "mag_m3_benelli_std_12g_7"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "KRISS Vector .45 ACP 6 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KRISS_Vector_.45_ACP_6_inch_barrel",
+  "revisionId": 342112,
+  "lastEdited": "2026-04-28T03:52:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.21 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-2",
+    "velocity": "+0",
+    "MOA": "6.53",
+    "recoil": "-2",
+    "Heat": "+4",
+    "Cooling": "+7",
+    "node": "5fb653962b1b027b1f50bd03",
+    "ID": "barrel_vector_170mm_1143x23"
+  },
+  "sections": []
+}

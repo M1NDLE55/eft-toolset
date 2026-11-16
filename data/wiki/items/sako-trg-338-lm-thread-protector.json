@@ -1,0 +1,22 @@
+{
+  "title": "Sako TRG .338 LM thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_.338_LM_thread_protector",
+  "revisionId": 338002,
+  "lastEdited": "2026-03-08T00:35:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+2",
+    "Dura Burn": "-2",
+    "node": "673f3f5eef7545280c00f026",
+    "ID": "muzzle_trg_sako_m10_thread_protector_86x70"
+  },
+  "sections": []
+}

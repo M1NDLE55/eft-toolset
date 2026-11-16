@@ -1,0 +1,35 @@
+{
+  "title": "Kiba Arms Steel ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kiba_Arms_Steel_ballistic_plate",
+  "revisionId": 361899,
+  "lastEdited": "2026-09-24T15:04:43Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "5.1 kg",
+    "grid": "2x2",
+    "material": "Armor Steel",
+    "armor": "6",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "50",
+    "penalties": "-3% movement speed, -1.5% turn speed, -1.5% Ergonomics",
+    "node": "656fa76500d62bcd2e024080",
+    "id": "item_equipment_plate_SAPI_KibaArms_Steel_6class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

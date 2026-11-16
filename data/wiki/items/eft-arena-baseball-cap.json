@@ -1,0 +1,27 @@
+{
+  "title": "EFT: ARENA baseball cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/EFT:_ARENA_baseball_cap",
+  "revisionId": 348623,
+  "lastEdited": "2026-07-30T22:17:20Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 1",
+    "node": "68daab6d1e0a6a3f2f0db279",
+    "id": "item_equipment_head_arena_coyote"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

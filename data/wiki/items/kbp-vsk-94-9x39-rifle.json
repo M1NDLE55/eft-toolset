@@ -1,0 +1,37 @@
+{
+  "title": "KBP VSK-94 9x39 rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KBP_VSK-94_9x39_rifle",
+  "revisionId": 341023,
+  "lastEdited": "2026-04-22T23:38:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault carbines",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault carbine",
+    "slot": "Primary",
+    "weight": "2.992 kg",
+    "grid": "5x2",
+    "trader": "Prapor LL2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "54.5",
+    "velocity": "293 m/s",
+    "range": "400 m",
+    "MOA": "4.37",
+    "Weaprecoil": "Vertical: 60, Horizontal: 154",
+    "rof": "700",
+    "caliber": "9x39mm",
+    "node": "645e0c6b3b381ede770e1cc9",
+    "ID": "weapon_kbp_vsk94_9x39"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| VSK-94 Tactical |"
+    }
+  ]
+}

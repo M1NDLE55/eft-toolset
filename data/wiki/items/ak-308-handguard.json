@@ -1,0 +1,24 @@
+{
+  "title": "AK-308 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-308_handguard",
+  "revisionId": 349219,
+  "lastEdited": "2026-08-03T22:17:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.134 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "+15",
+    "recoil": "+0",
+    "Heat": "+2.2",
+    "Cooling": "-2.2",
+    "node": "689166debd91cc17c109c753",
+    "ID": "handguard_ak308_izhmash_ak308_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Assistant's notes on Group 12",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Assistant's_notes_on_Group_12",
+  "revisionId": 348061,
+  "lastEdited": "2026-07-19T12:24:32Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "68d2fa3abe7c1493b90cd3f9",
+    "id": "item_info_note_laborant_labyrinth_01"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Labyrinth\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

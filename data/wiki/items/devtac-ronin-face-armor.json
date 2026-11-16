@@ -1,0 +1,25 @@
+{
+  "title": "DevTac Ronin Face Armor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Ronin_Face_Armor",
+  "revisionId": 361986,
+  "lastEdited": "2026-09-24T17:46:02Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.553 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Face, Ears, Jaws",
+    "durability": "21",
+    "penalties": "+0% movement speed, +0% turn speed, -1% Ergonomics",
+    "node": "6a8433de350b8a45fd0ec800",
+    "ID": "item_equipment_facecover_devtac_face_armor"
+  },
+  "sections": []
+}

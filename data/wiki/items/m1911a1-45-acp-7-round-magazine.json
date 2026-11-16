@@ -1,0 +1,27 @@
+{
+  "title": "M1911A1 .45 ACP 7-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_.45_ACP_7-round_magazine",
+  "revisionId": 337717,
+  "lastEdited": "2026-03-06T01:43:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.160 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "1",
+    "checkmodifier": "-10",
+    "loadmodifier": "-10",
+    "feedfailure": "Very low",
+    "capacity": "7",
+    "caliber": ".45 ACP",
+    "node": "5e81c4ca763d9f754677befa",
+    "ID": "mag_m1911_colt_m1911a1_std_1143x23_7"
+  },
+  "sections": []
+}

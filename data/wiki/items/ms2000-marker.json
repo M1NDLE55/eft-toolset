@@ -1,0 +1,31 @@
+{
+  "title": "MS2000 Marker",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MS2000_Marker",
+  "revisionId": 366650,
+  "lastEdited": "2026-10-31T12:16:56Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1, Ragman LL1, Therapist LL1",
+    "node": "5991b51486f77447b112d44f",
+    "id": "item_quest_ms2000"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The marker is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This marker is modeled after the MS-2000 (M2) Strobe Marker Light made by ACR."
+    }
+  ]
+}

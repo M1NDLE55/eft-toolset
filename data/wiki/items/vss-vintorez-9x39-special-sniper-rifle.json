@@ -1,0 +1,36 @@
+{
+  "title": "VSS Vintorez 9x39 special sniper rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSS_Vintorez_9x39_special_sniper_rifle",
+  "revisionId": 340981,
+  "lastEdited": "2026-04-22T22:29:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Designated marksman rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Designated marksman rifle",
+    "slot": "Primary",
+    "weight": "2.6 kg",
+    "grid": "5x2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "420",
+    "ergonomics": "60",
+    "velocity": "293 m/s",
+    "range": "400 m",
+    "MOA": "3.27",
+    "Weaprecoil": "Vertical: 51, Horizontal: 173",
+    "rof": "900",
+    "caliber": "9x39mm",
+    "node": "57838ad32459774a17445cd2",
+    "ID": "weapon_tochmash_vss_9x39"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

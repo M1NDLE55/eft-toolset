@@ -1,0 +1,25 @@
+{
+  "title": "PB 9x18PM sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PB_9x18PM_sound_suppressor",
+  "revisionId": 318916,
+  "lastEdited": "2025-10-03T10:47:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.131 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "-21",
+    "velocity": "+1",
+    "recoil": "-8",
+    "Dura Burn": "+65",
+    "Heat": "+13",
+    "node": "56e05b06d2720bb2668b4586",
+    "ID": "silencer_pb_tochmash_std_9x18pm"
+  },
+  "sections": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Unusual leather rig poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Unusual_leather_rig_poster",
+  "revisionId": 331652,
+  "lastEdited": "2026-01-07T19:46:08Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "67f924b1b07831a6ef0ce317",
+    "id": "item_barter_flyers_girl_streamer_3"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This poster shows the content creator Voroshka."
+    }
+  ]
+}

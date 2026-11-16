@@ -1,0 +1,29 @@
+{
+  "title": "PNV-10T night vision goggles",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PNV-10T_night_vision_goggles",
+  "revisionId": 337091,
+  "lastEdited": "2026-03-03T22:29:39Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods",
+    "Night vision devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Night vision device",
+    "weight": "0.8 kg",
+    "grid": "2x1",
+    "trader": "Skier LL2",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5c0696830db834001d23f5da",
+    "ID": "nvg_alfa_pnv-10t"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    }
+  ]
+}

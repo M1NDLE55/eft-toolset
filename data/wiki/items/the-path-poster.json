@@ -1,0 +1,25 @@
+{
+  "title": "The Path poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Path_poster",
+  "revisionId": 363683,
+  "lastEdited": "2026-10-07T22:13:34Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6aa2d63bcff7211b380d9f77",
+    "id": "item_barter_flyers_prestige_01_pve"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

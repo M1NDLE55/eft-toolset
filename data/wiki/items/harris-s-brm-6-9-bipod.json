@@ -1,0 +1,22 @@
+{
+  "title": "Harris S-BRM 6-9\" Bipod",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Harris_S-BRM_6-9%22_Bipod",
+  "revisionId": 351991,
+  "lastEdited": "2026-08-06T23:59:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Bipods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bipod",
+    "weight": "0.277 kg",
+    "grid": "2x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-5",
+    "recoil": "When mounted: -75",
+    "node": "5888961624597754281f93f3",
+    "ID": "bipod_all_harris_hbr"
+  },
+  "sections": []
+}

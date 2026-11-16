@@ -1,0 +1,27 @@
+{
+  "title": "M60E3 7.62x51 584mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M60E3_7.62x51_584mm_barrel",
+  "revisionId": 342700,
+  "lastEdited": "2026-04-30T20:48:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "2.28 kg",
+    "grid": "5x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-44",
+    "velocity": "+1",
+    "accuracy": "+10",
+    "recoil": "-14.6",
+    "Dura Burn": "+0",
+    "Heat": "-17.2",
+    "Cooling": "-9.2",
+    "node": "6601279cc752a02bbe05e692",
+    "ID": "barrel_m60_usord_e3_long_584mm_762x51"
+  },
+  "sections": []
+}

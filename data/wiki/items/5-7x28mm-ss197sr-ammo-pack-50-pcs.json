@@ -1,0 +1,19 @@
+{
+  "title": "5.7x28mm SS197SR ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.7x28mm_SS197SR_ammo_pack_(50_pcs)",
+  "revisionId": 367201,
+  "lastEdited": "2026-11-02T23:12:17Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2",
+    "node": "657025281419851aef03e71b",
+    "ID": "item_ammo_box_57x28_50_ss197sr"
+  },
+  "sections": []
+}

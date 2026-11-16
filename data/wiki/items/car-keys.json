@@ -1,0 +1,31 @@
+{
+  "title": "Car keys",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Car_keys",
+  "revisionId": 366935,
+  "lastEdited": "2026-11-01T14:23:31Z",
+  "kind": "item",
+  "categories": [
+    "Extraction intel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Extraction intel",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Activates the \"Parking\" extraction in the Infected Lab.",
+    "node": "6ad5f141e8c146f24d0ea9b6",
+    "id": "item_secret_extraction_halloween_2026_parking"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Activates the \"Parking\" extraction in the Infected Lab.\n- Cannot be taken out of a raid"
+    },
+    {
+      "heading": "Infected Lab",
+      "level": 3,
+      "text": "- On and around the round table with the cat statues in the recreational area (R21) on the second level.\n\n- In the mouth of an infected head on top of a water dispenser in office O23 on the second level."
+    }
+  ]
+}

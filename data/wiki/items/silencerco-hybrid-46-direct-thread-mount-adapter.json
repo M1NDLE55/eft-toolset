@@ -1,0 +1,22 @@
+{
+  "title": "SilencerCo Hybrid 46 Direct Thread Mount adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SilencerCo_Hybrid_46_Direct_Thread_Mount_adapter",
+  "revisionId": 333404,
+  "lastEdited": "2026-02-02T17:40:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.14 kg",
+    "grid": "1x1",
+    "price": "₽3,700",
+    "trader": "Peacekeeper LL2, Mechanic LL2",
+    "ergonomics": "+0",
+    "node": "59bffc1f86f77435b128b872",
+    "ID": "muzzle_all_silencerco_hybrid_46_direct_thread_multi"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "KAC MWS Bipod Adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KAC_MWS_Bipod_Adapter",
+  "revisionId": 314496,
+  "lastEdited": "2025-06-23T22:08:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-1",
+    "node": "676175bb48fa5c377e06fc36",
+    "ID": "mount_all_kac_mws_bipod_adapter"
+  },
+  "sections": []
+}

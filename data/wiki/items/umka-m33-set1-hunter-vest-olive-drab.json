@@ -1,0 +1,31 @@
+{
+  "title": "Umka M33-SET1 hunter vest (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Umka_M33-SET1_hunter_vest_(Olive_Drab)",
+  "revisionId": 348344,
+  "lastEdited": "2026-07-29T10:57:36Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.2 kg",
+    "grid": "3x4",
+    "trader": "Jaeger LL1",
+    "BlocksArmor": "No",
+    "slots": "16 Slots",
+    "loot xp": "10",
+    "exam xp": "20",
+    "node": "6034cf5fffd42c541047f72e",
+    "id": "item_equipment_rig_umka_m33"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This is the tactical rig that the trader Jaeger wears in the showcase image."
+    }
+  ]
+}

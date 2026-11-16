@@ -1,0 +1,28 @@
+{
+  "title": "New Year ushanka hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/New_Year_ushanka_hat",
+  "revisionId": 347528,
+  "lastEdited": "2026-07-01T11:54:13Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.35 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6937efd50543dcc2560a2c81",
+    "id": "item_equipment_head_ushanka_white"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Players who completed the Kolotun event quest line have a purchase option for this hat on Ragman LL1.\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

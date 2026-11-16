@@ -1,0 +1,37 @@
+{
+  "title": ".50 BMG HP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_BMG_HP",
+  "revisionId": 331806,
+  "lastEdited": "2026-01-08T18:57:54Z",
+  "kind": "ammo",
+  "categories": [
+    ".50 BMG ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.114 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "velocity": "880 m/s",
+    "damage": "260",
+    "accuracy": "+15",
+    "recoil": "+15",
+    "penetration": "34",
+    "armor damage": "22",
+    "ricochet": "2%",
+    "l bleed chance": "+70",
+    "h bleed chance": "+40",
+    "heat": "+193.4",
+    "node": "67d41936f378a36c4706eeb9",
+    "id": "patron_127x99_hp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

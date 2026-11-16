@@ -1,0 +1,29 @@
+{
+  "title": "TSh-4M-L soft tank crew helmet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TSh-4M-L_soft_tank_crew_helmet",
+  "revisionId": 344318,
+  "lastEdited": "2026-05-24T21:57:37Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.9 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL1",
+    "material": "Aramid",
+    "armor": "1",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "105",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, +0% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5df8a58286f77412631087ed",
+    "id": "helmet_crew"
+  },
+  "sections": []
+}

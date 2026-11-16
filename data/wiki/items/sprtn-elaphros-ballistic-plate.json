@@ -1,0 +1,36 @@
+{
+  "title": "SPRTN Elaphros ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SPRTN_Elaphros_ballistic_plate",
+  "revisionId": 361905,
+  "lastEdited": "2026-09-24T15:05:21Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "1.6 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL3",
+    "material": "Ceramic",
+    "armor": "4",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "45",
+    "penalties": "-1% movement speed, +0% turn speed, -1.5% Ergonomics",
+    "node": "656fb0bd7c2d57afe200c0dc",
+    "id": "item_equipment_plate_SAPI_SPRTN_Elaphros_4class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This Armor is based on the Spartan Armor Systems Elaphros, a NIJ III plate of UHMWPE."
+    }
+  ]
+}

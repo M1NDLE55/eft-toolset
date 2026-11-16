@@ -1,0 +1,23 @@
+{
+  "title": "9A-91 TTS System handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9A-91_TTS_System_handguard",
+  "revisionId": 343187,
+  "lastEdited": "2026-05-03T20:49:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.19 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+4.5",
+    "Heat": "+4.7",
+    "Cooling": "-4.3",
+    "node": "688b79b5eb234c75d900e050",
+    "ID": "handguard_9a91_tts_tactical_handguard"
+  },
+  "sections": []
+}

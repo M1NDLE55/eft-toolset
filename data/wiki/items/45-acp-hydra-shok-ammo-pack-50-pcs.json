@@ -1,0 +1,18 @@
+{
+  "title": ".45 ACP Hydra-Shok ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.45_ACP_Hydra-Shok_ammo_pack_(50_pcs)",
+  "revisionId": 367100,
+  "lastEdited": "2026-11-02T23:06:59Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702406bfc87b3a34093216",
+    "ID": "item_ammo_box_1143x23_50_hydra_shok"
+  },
+  "sections": []
+}

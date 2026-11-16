@@ -1,0 +1,25 @@
+{
+  "title": "M1911A1 STI HEX hammer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_STI_HEX_hammer",
+  "revisionId": 238570,
+  "lastEdited": "2023-07-12T20:06:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.018 kg",
+    "grid": "1x1",
+    "price": "₽4,000",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+3",
+    "Dura Burn": "-7",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5ef35f46382a846010715a96",
+    "ID": "hammer_m1911_sti_hex"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Gear Craft GC-BSS-MK1 chest rig (A-TACS FG)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gear_Craft_GC-BSS-MK1_chest_rig_(A-TACS_FG)",
+  "revisionId": 269466,
+  "lastEdited": "2024-02-06T00:34:23Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.0 kg",
+    "grid": "3x3",
+    "price": "₽40,020",
+    "trader": "Ragman LL2",
+    "BlocksArmor": "No",
+    "slots": "16 Slots",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5fd4c60f875c30179f5d04c2",
+    "id": "item_equipment_rig_bssmk1"
+  },
+  "sections": []
+}

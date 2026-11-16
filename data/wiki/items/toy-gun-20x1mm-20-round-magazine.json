@@ -1,0 +1,26 @@
+{
+  "title": "Toy gun 20x1mm 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Toy_gun_20x1mm_20-round_magazine",
+  "revisionId": 339043,
+  "lastEdited": "2026-03-24T15:34:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "checkaccuracy": "1",
+    "checkmodifier": "-20%",
+    "loadmodifier": "-20%",
+    "feedfailure": "None",
+    "capacity": "20",
+    "caliber": "20x1mm",
+    "node": "66015dc4aaad2f54cb04c56a",
+    "ID": "mag_pd_ussr_toygun_std_20x1mm_18"
+  },
+  "sections": []
+}

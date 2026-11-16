@@ -1,0 +1,35 @@
+{
+  "title": "5.7x28mm SS198LF",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.7x28mm_SS198LF",
+  "revisionId": 324948,
+  "lastEdited": "2025-11-23T18:19:39Z",
+  "kind": "ammo",
+  "categories": [
+    "5.7x28mm FN Ammuntion",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.006 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "velocity": "792 m/s",
+    "damage": "70",
+    "penetration": "17",
+    "armor damage": "19",
+    "ricochet": "20%",
+    "heat": "-0.6",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "5cc80f79e4a949033c7343b2",
+    "id": "patron_57x28_ss198lf"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

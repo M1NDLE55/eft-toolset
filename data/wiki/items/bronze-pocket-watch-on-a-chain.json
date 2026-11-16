@@ -1,0 +1,25 @@
+{
+  "title": "Bronze pocket watch on a chain",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bronze_pocket_watch_on_a_chain",
+  "revisionId": 305386,
+  "lastEdited": "2025-02-07T07:44:57Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "node": "5937fd0086f7742bf33fc198",
+    "id": "item_quest_barter_valuable_watch_bronze"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Background Check from Prapor"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Tac-Kek Heavy Trooper mask for Ops-Core-type helmets",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tac-Kek_Heavy_Trooper_mask_for_Ops-Core-type_helmets",
+  "revisionId": 346750,
+  "lastEdited": "2026-06-13T12:53:42Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "0.4 kg",
+    "grid": "2x2",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Face, Head top, Eyes, Jaws, Throat",
+    "durability": "45",
+    "blindness protect": "20%",
+    "penalties": "-2% turn speed, -5% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "node": "5ea058e01dbce517f324b3e2",
+    "id": "item_equipment_helmet_tk_heavy_trooper"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This mask is based on the heavy gunner helmet from the brand \"GALAC-TAC\", replicating helmets worn by Mandalorians in the \"Star Wars\" movie series.\n- Tac-Kek is a play on \"TacTec\", a line of tactical gear by the brand \"5.11\".\n- \"Kek\" is the shortened form of \"kekeke\", a transliteration of an onomatopoetic Korean phrase used online to represent laughter. It's the equivalent to \"hahaha\"."
+    }
+  ]
+}

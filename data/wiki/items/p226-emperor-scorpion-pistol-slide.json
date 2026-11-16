@@ -1,0 +1,27 @@
+{
+  "title": "P226 Emperor Scorpion pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Emperor_Scorpion_pistol_slide",
+  "revisionId": 320620,
+  "lastEdited": "2025-10-30T20:25:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.22 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-3",
+    "Dura Burn": "-2",
+    "Heat": "-4.6",
+    "Cooling": "+6.5",
+    "node": "5c010a700db834001d23ef5d",
+    "ID": "reciever_p226_sig_emperor_scorpion"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "MPX Lancer OEM 14 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_Lancer_OEM_14_inch_M-LOK_handguard",
+  "revisionId": 341999,
+  "lastEdited": "2026-04-27T23:55:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.144 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+19",
+    "recoil": "+0",
+    "Heat": "+2.5",
+    "node": "5c59529a2e221602b177d160",
+    "ID": "handguard_mpx_lancer_oem_14_inch"
+  },
+  "sections": []
+}

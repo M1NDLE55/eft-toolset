@@ -1,0 +1,25 @@
+{
+  "title": "EMERCOM leaflet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/EMERCOM_leaflet",
+  "revisionId": 334891,
+  "lastEdited": "2026-02-11T21:08:19Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "68e63d4794fb983cb7098d2d",
+    "ID": "item_info_note_bluefire_mchs"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Picking up and reading this note starts the story chapter Blue Fire."
+    }
+  ]
+}

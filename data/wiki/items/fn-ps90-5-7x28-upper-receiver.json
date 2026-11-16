@@ -1,0 +1,28 @@
+{
+  "title": "FN PS90 5.7x28 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_PS90_5.7x28_upper_receiver",
+  "revisionId": 215795,
+  "lastEdited": "2022-12-04T10:18:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.31 kg",
+    "grid": "2x1",
+    "price": "₽2,200",
+    "trader": "Skier LL3",
+    "ergonomics": "-5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-4.9",
+    "Cooling": "+5.2",
+    "loot xp": "5",
+    "node": "5cf7acfcd7f00c1084477cf2",
+    "ID": "reciever_p90_fn_ps90_std"
+  },
+  "sections": []
+}

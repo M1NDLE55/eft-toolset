@@ -1,0 +1,24 @@
+{
+  "title": "Vortex Razor AMG UH-1 holographic sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vortex_Razor_AMG_UH-1_holographic_sight",
+  "revisionId": 352320,
+  "lastEdited": "2026-08-07T21:35:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.334 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, Skier LL4",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "300",
+    "ergonomics": "-4",
+    "modes": "1",
+    "node": "59f9d81586f7744c7506ee62",
+    "ID": "scope_all_vortex_razor_amg_uh-1"
+  },
+  "sections": []
+}

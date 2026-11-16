@@ -1,0 +1,27 @@
+{
+  "title": "Cold Fear infrared balaclava (Typhon)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cold_Fear_infrared_balaclava_(Typhon)",
+  "revisionId": 348418,
+  "lastEdited": "2026-07-30T20:10:40Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in the Customs Tactical Map",
+    "node": "68beef6ca3433485d30d5ae3",
+    "id": "item_equipment_facecover_coldgear_skull_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

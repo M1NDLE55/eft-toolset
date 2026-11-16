@@ -1,0 +1,26 @@
+{
+  "title": "PP-19-01 Vityaz 9x19 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-19-01_Vityaz_9x19_sound_suppressor",
+  "revisionId": 351994,
+  "lastEdited": "2026-08-07T00:00:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.53 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-10",
+    "velocity": "+0.4",
+    "accuracy": "-3",
+    "recoil": "-3",
+    "Dura Burn": "+58",
+    "Heat": "+14",
+    "node": "59bfc5c886f7743bf6794e62",
+    "ID": "silencer_pp-19-01_izhmash_vityaz_std_9x19"
+  },
+  "sections": []
+}

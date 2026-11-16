@@ -1,0 +1,23 @@
+{
+  "title": "KAC URX 3/3.1 stopper panel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KAC_URX_3/3.1_stopper_panel",
+  "revisionId": 340402,
+  "lastEdited": "2026-04-20T14:54:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3: Black, FDE",
+    "ergonomics": "+10",
+    "recoil": "-1",
+    "Heat": "-1",
+    "node": "5d123b7dd7ad1a004f01b262 5d124c1ad7ad1a12227c53a7",
+    "ID": "tactical_urx_kac_panel_hand_stop tactical_urx_kac_panel_hand_stop_fde"
+  },
+  "sections": []
+}

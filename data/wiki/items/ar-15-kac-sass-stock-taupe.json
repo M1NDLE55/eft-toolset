@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 KAC SASS stock (Taupe)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_KAC_SASS_stock_(Taupe)",
+  "revisionId": 357364,
+  "lastEdited": "2026-09-01T13:22:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.58 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+2",
+    "recoil": "-23",
+    "node": "6932ac8fbccfa5c5a00b5a76",
+    "ID": "stock_ar15_kac_m110_sass_tau"
+  },
+  "sections": []
+}

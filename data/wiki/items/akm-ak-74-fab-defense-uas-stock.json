@@ -1,0 +1,23 @@
+{
+  "title": "AKM/AK-74 FAB Defense UAS stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM/AK-74_FAB_Defense_UAS_stock",
+  "revisionId": 337526,
+  "lastEdited": "2026-03-05T23:39:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "price": "₽13,750",
+    "trader": "Skier LL4",
+    "ergonomics": "+18",
+    "recoil": "-20",
+    "node": "5b04473a5acfc40018632f70",
+    "ID": "stock_ak_fab_defense_uas_ak_p"
+  },
+  "sections": []
+}

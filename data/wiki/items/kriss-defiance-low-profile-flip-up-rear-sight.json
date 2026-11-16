@@ -1,0 +1,23 @@
+{
+  "title": "KRISS Defiance low profile flip-up rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KRISS_Defiance_low_profile_flip-up_rear_sight",
+  "revisionId": 322420,
+  "lastEdited": "2025-11-18T16:25:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "sightrange": "300",
+    "ergonomics": "+0.5",
+    "accuracy": "+0",
+    "node": "5fb6564947ce63734e3fa1da",
+    "ID": "sight_rear_all_kriss_defiance_low_profile_flip_up"
+  },
+  "sections": []
+}

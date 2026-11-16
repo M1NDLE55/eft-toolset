@@ -1,0 +1,31 @@
+{
+  "title": "Desert Eagle .50 AE 7-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Eagle_.50_AE_7-round_magazine",
+  "revisionId": 338843,
+  "lastEdited": "2026-03-18T08:12:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3, Mechanic LL3",
+    "ergonomics": "-1",
+    "checkaccuracy": "1",
+    "feedfailure": "Very low",
+    "capacity": "7",
+    "caliber": ".50 Action Express",
+    "node": "668fe5c5f35310705d02b696",
+    "ID": "mag_deagle_magnum_research_std_127x33_7"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from Forester's Duty"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Newspaper clipping from the cultists' house",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Newspaper_clipping_from_the_cultists'_house",
+  "revisionId": 348873,
+  "lastEdited": "2026-08-02T02:13:47Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "689b53b7127673bbd40706d3",
+    "ID": "item_info_note_newspaper_cobalt"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here"
+    }
+  ]
+}

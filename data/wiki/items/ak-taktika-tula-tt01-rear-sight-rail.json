@@ -1,0 +1,23 @@
+{
+  "title": "AK Taktika Tula TT01 rear sight rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Taktika_Tula_TT01_rear_sight_rail",
+  "revisionId": 340622,
+  "lastEdited": "2026-04-21T09:08:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.085 kg",
+    "grid": "1x1",
+    "price": "₽2,550",
+    "trader": "Prapor LL2",
+    "sightrange": "500",
+    "ergonomics": "-0.1",
+    "node": "5649d9a14bdc2d79388b4580",
+    "ID": "sight_rear_ak_tactica_tula_tt01"
+  },
+  "sections": []
+}

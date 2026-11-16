@@ -1,0 +1,33 @@
+{
+  "title": "Slickers chocolate bar",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Slickers_chocolate_bar",
+  "revisionId": 334237,
+  "lastEdited": "2026-02-10T13:51:21Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.048 kg",
+    "grid": "1x1",
+    "price": "₽250",
+    "effect": "Energy: +30, Hydration: -15, , Buffs:, 1s Delay; 60s Duration: - Increases Intellect (+1) - Increases Attention (+1) - Increases Stress Resistance (+1)",
+    "use time": "2s",
+    "node": "544fb6cc4bdc2d34748b456e",
+    "id": "slippers"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Jackets\n- In Sport bags\n- In Plastic suitcases"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The Slickers bar is a trademark-friendly version of the real life Snickers bar.\n- Easter eggs and References: Humorous writing within the ingredients list."
+    }
+  ]
+}

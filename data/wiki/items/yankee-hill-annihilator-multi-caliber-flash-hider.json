@@ -1,0 +1,24 @@
+{
+  "title": "Yankee Hill Annihilator multi-caliber flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Yankee_Hill_Annihilator_multi-caliber_flash_hider",
+  "revisionId": 357447,
+  "lastEdited": "2026-09-01T18:55:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.128 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-0.5",
+    "recoil": "-7",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "node": "5b3a16655acfc40016387a2a",
+    "ID": "muzzle_all_yankee_hill_anihilator_flash_hider_multi"
+  },
+  "sections": []
+}

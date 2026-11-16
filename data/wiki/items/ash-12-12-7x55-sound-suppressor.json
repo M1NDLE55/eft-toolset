@@ -1,0 +1,29 @@
+{
+  "title": "ASh-12 12.7x55 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ASh-12_12.7x55_sound_suppressor",
+  "revisionId": 342034,
+  "lastEdited": "2026-04-28T00:18:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.7 kg",
+    "grid": "2x1",
+    "price": "₽35889",
+    "trader": "Prapor LL4",
+    "ergonomics": "-17",
+    "velocity": "+0.7",
+    "recoil": "-10",
+    "Dura Burn": "+45",
+    "Heat": "+16",
+    "Cooling": "+12",
+    "loot xp": "30",
+    "exam xp": "4",
+    "node": "5caf187cae92157c28402e43",
+    "ID": "silencer_ash12_ckib_ash12_std_127x55"
+  },
+  "sections": []
+}

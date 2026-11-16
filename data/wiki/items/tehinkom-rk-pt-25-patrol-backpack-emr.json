@@ -1,0 +1,23 @@
+{
+  "title": "Tehinkom RK-PT-25 patrol backpack (EMR)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tehinkom_RK-PT-25_patrol_backpack_(EMR)",
+  "revisionId": 348321,
+  "lastEdited": "2026-07-28T14:09:14Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.1 kg",
+    "grid": "5x5",
+    "trader": "Ragman LL2",
+    "penalties": "-1% movement speed, -1% turn speed, -2% Ergonomics",
+    "slots": "25 slots , 2x 1x2 grid , 2x 1x3 grid , 1x 3x2 grid , 1x 3x3 grid",
+    "node": "656ddcf0f02d7bcea90bf395",
+    "id": "item_equipment_backpack_tehinkom_patrol"
+  },
+  "sections": []
+}

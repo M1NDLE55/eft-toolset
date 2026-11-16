@@ -1,0 +1,24 @@
+{
+  "title": "OP-SKS wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OP-SKS_wooden_stock",
+  "revisionId": 340653,
+  "lastEdited": "2026-04-21T09:31:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.703 kg",
+    "grid": "4x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+17",
+    "recoil": "-28",
+    "Heat": "+4.1",
+    "Cooling": "-3.9",
+    "node": "587e0531245977466077a0f7",
+    "ID": "stock_sks_molot_op_sks_std"
+  },
+  "sections": []
+}

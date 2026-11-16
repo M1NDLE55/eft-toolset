@@ -1,0 +1,24 @@
+{
+  "title": "AR paint set (Stripes Gold)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR_paint_set_(Stripes_Gold)",
+  "revisionId": 319392,
+  "lastEdited": "2025-10-19T20:29:38Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "686fdbb4550c5de1950e7087",
+    "id": "item_camo_stripes_05_gold"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be applied to assault rifles."
+    }
+  ]
+}

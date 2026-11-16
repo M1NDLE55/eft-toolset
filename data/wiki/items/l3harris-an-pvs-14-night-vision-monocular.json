@@ -1,0 +1,30 @@
+{
+  "title": "L3Harris AN/PVS-14 night vision monocular",
+  "url": "https://escapefromtarkov.fandom.com/wiki/L3Harris_AN/PVS-14_night_vision_monocular",
+  "revisionId": 337089,
+  "lastEdited": "2026-03-03T22:29:34Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods",
+    "Night vision devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Night vision device",
+    "weight": "0.65 kg",
+    "grid": "1x1",
+    "price": "₽91,951",
+    "trader": "Skier LL3",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "57235b6f24597759bf5a30f1",
+    "id": "nvg_pvs_14"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    }
+  ]
+}

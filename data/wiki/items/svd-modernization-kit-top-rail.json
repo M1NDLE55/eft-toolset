@@ -1,0 +1,22 @@
+{
+  "title": "SVD modernization kit top rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVD_modernization_kit_top_rail",
+  "revisionId": 294919,
+  "lastEdited": "2024-11-01T06:59:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.24 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-1",
+    "recoil": "-2",
+    "node": "5e569a0156edd02abe09f27d",
+    "ID": "mount_svd_izhmash_svd_modernized_kit_rail"
+  },
+  "sections": []
+}

@@ -1,0 +1,38 @@
+{
+  "title": "FN SCAR-L 5.56x45 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR-L_5.56x45_assault_rifle",
+  "revisionId": 364313,
+  "lastEdited": "2026-10-13T13:46:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.289 kg",
+    "grid": "5x2",
+    "trader": "Peacekeeper LL3: LB variant, Peacekeeper LL3: FDE variant, Mechanic LL2: Stripped FDE variant, Peacekeeper LL2: FDE CQC variant, after completing his task Wet Job - Part 2, Ref LL3: Contract Wars variant",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "43",
+    "velocity": "957 m/s",
+    "range": "500 m",
+    "MOA": "1.97",
+    "Weaprecoil": "Vertical: 54, Horizontal: 168",
+    "rof": "650",
+    "caliber": "5.56x45mm NATO",
+    "def ammo": "Black: , FDE:",
+    "node": "6184055050224f204c1da540 618428466ef05c2ce828f218",
+    "ID": "weapon_fn_mk16_556x45 weapon_fn_mk16_556x45_fde"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| Mk 16 Contract Wars |\n| Mk 16 LB |\n| Mk 16 CQC |"
+    }
+  ]
+}

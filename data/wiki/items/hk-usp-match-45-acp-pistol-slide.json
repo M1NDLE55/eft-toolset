@@ -1,0 +1,27 @@
+{
+  "title": "HK USP Match .45 ACP pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_Match_.45_ACP_pistol_slide",
+  "revisionId": 356373,
+  "lastEdited": "2026-08-26T00:32:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-2",
+    "Heat": "-4.2",
+    "Cooling": "+6",
+    "node": "6194f5a318a3974e5e7421eb",
+    "ID": "reciever_usp_hk_match"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "HK USP Tactical rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_Tactical_rear_sight",
+  "revisionId": 356370,
+  "lastEdited": "2026-08-26T00:32:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.008 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "6194f2df645b5d229654ad77",
+    "ID": "sight_rear_usp_hk_usp_tactical"
+  },
+  "sections": []
+}

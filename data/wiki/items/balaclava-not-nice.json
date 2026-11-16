@@ -1,0 +1,27 @@
+{
+  "title": "Balaclava (Not Nice)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balaclava_(Not_Nice)",
+  "revisionId": 348561,
+  "lastEdited": "2026-07-30T22:01:51Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a9cd381fb22063280728a6",
+    "id": "item_equipment_facecover_balaclava_arena_bp_05"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "AR-15 5.56x45 HK 30 STANAG polymer 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_HK_30_STANAG_polymer_30-round_magazine",
+  "revisionId": 341761,
+  "lastEdited": "2026-04-26T21:25:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.17 kg",
+    "grid": "1x2",
+    "price": "₽4,005",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "1",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c6d42cb2e2216000e69d7d1",
+    "ID": "mag_stanag_hk_polymer_mag_556x45_30"
+  },
+  "sections": []
+}

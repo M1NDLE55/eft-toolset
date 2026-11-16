@@ -1,0 +1,33 @@
+{
+  "title": "VOG-25 Khattabka improvised hand grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VOG-25_Khattabka_improvised_hand_grenade",
+  "revisionId": 360725,
+  "lastEdited": "2026-09-19T11:26:13Z",
+  "kind": "item",
+  "categories": [
+    "Fragmentation grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Fragmentation grenade",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "fragments count": "35x",
+    "explosion delay": "2s",
+    "explosion distance": "2-7 meters",
+    "concussion distance": "7 meters",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "5e340dcdcb6d5863cc5e5efb",
+    "ID": "weapon_grenade_chattabka_vog25"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Grenade box\n- Weapon box (6x2)\n- Buried barrel cache\n- Ground cache"
+    }
+  ]
+}

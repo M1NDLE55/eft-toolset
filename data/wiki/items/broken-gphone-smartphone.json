@@ -1,0 +1,36 @@
+{
+  "title": "Broken GPhone smartphone",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Broken_GPhone_smartphone",
+  "revisionId": 358088,
+  "lastEdited": "2026-09-08T20:30:01Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "56742c324bdc2d150f8b456d",
+    "id": "phone"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Dead Scav\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In the electronics stores at the Ultra Shopping Mall"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The GPhone is a parody of the Apple iPhone 4."
+    }
+  ]
+}

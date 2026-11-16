@@ -1,0 +1,33 @@
+{
+  "title": "Avon M53A1 gas mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Avon_M53A1_gas_mask",
+  "revisionId": 362364,
+  "lastEdited": "2026-09-29T10:52:36Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas mask",
+    "slot": "Face cover",
+    "weight": "0.73 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "No",
+    "node": "689b880fff8b4adc420f5b56",
+    "id": "item_equipment_facecover_gasmask_avon_m53a1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Protects against all effects of the Model 8230 CS gas grenade."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division\n- The Wedge"
+    }
+  ]
+}

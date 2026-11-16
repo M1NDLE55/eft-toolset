@@ -1,0 +1,38 @@
+{
+  "title": "Colt M16A1 5.56x45 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Colt_M16A1_5.56x45_assault_rifle",
+  "revisionId": 362925,
+  "lastEdited": "2026-10-03T11:00:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.443 kg",
+    "grid": "6x2",
+    "trader": "Peacekeeper LL1, Peacekeeper LL2",
+    "fire modes": "Single, Full auto",
+    "sightrange": "100",
+    "ergonomics": "35.5",
+    "velocity": "968 m/s",
+    "range": "500 m",
+    "MOA": "1.24",
+    "Weaprecoil": "Vertical: 74, Horizontal: 212",
+    "rof": "800",
+    "caliber": "5.56x45mm NATO",
+    "def mag": "AR-15 5.56x45 Colt STANAG 20-round magazine",
+    "node": "68a639748e1fe612970728e9",
+    "ID": "weapon_colt_m16a1_556x45"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant | Attachments |\n| M16A1 M16A1E1 | |\n| M16A1 M727 | |\n| M16A1 M723 | |\n| M16A1 Mk.12 mod.0 | A.R.M.S. #22 30mm ring scope mount; A.R.M.S. #22 ring cap; A.R.M.S. #40 Flip-Up Rear Sight |\n| M16A1 Mk.12 mod.1 | A.R.M.S. #22 30mm ring scope mount; A.R.M.S. #22 ring cap |"
+    }
+  ]
+}

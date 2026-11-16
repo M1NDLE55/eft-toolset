@@ -1,0 +1,25 @@
+{
+  "title": "Paramedic's GPhone X",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Paramedic's_GPhone_X",
+  "revisionId": 352545,
+  "lastEdited": "2026-08-09T19:42:07Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest Item",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "node": "64f09c02b63b74469b6c149f",
+    "id": "item_barter_quest_gphonex"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Paramedic from Therapist"
+    }
+  ]
+}

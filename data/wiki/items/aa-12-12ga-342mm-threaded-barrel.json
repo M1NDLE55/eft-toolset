@@ -1,0 +1,27 @@
+{
+  "title": "AA-12 12ga 342mm threaded barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AA-12_12ga_342mm_threaded_barrel",
+  "revisionId": 305634,
+  "lastEdited": "2025-02-12T21:37:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.97 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-1",
+    "velocity": "+2.97",
+    "MOA": "22",
+    "recoil": "-3",
+    "Dura Burn": "+2",
+    "Heat": "-3",
+    "Cooling": "-3",
+    "node": "670fd03dc424cf758f006946",
+    "ID": "barrel_aa12_mps_threaded_342mm_12g"
+  },
+  "sections": []
+}

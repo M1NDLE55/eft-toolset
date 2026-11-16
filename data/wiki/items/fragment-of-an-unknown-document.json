@@ -1,0 +1,25 @@
+{
+  "title": "Fragment of an unknown document",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fragment_of_an_unknown_document",
+  "revisionId": 356737,
+  "lastEdited": "2026-08-29T10:31:47Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "68ea979d5e6784cb2f0b4e74",
+    "id": "item_info_note_unheard"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- This item is related to the story chapter The Unheard"
+    }
+  ]
+}

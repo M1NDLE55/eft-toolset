@@ -1,0 +1,42 @@
+{
+  "title": "Degtyarev RPD 7.62x39 machine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Degtyarev_RPD_7.62x39_machine_gun",
+  "revisionId": 340972,
+  "lastEdited": "2026-04-22T22:25:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Light machine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light machine gun",
+    "slot": "Primary",
+    "weight": "7.4 kg",
+    "grid": "6x3",
+    "trader": "Prapor LL3",
+    "fire modes": "Full Auto",
+    "sightrange": "1000",
+    "ergonomics": "24",
+    "velocity": "730 m/s",
+    "range": "800",
+    "MOA": "1.31",
+    "Weaprecoil": "Vertical: 73, Horizontal: 344",
+    "rof": "700",
+    "caliber": "7.62x39mm",
+    "node": "6513ef33e06849f06c0957ca",
+    "ID": "weapon_zid_rpd_762x39"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This weapon will never malfunction."
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| RPD Short |"
+    }
+  ]
+}

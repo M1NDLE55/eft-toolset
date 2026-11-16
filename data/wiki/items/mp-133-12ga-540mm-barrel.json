@@ -1,0 +1,28 @@
+{
+  "title": "MP-133 12ga 540mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-133_12ga_540mm_barrel",
+  "revisionId": 266836,
+  "lastEdited": "2024-01-17T01:02:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.8 kg",
+    "grid": "3x1",
+    "price": "₽3,900",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-6",
+    "velocity": "+8.1",
+    "MOA": "20.63",
+    "recoil": "-3.5",
+    "Dura Burn": "-3",
+    "Heat": "-10",
+    "Cooling": "-6",
+    "node": "560836484bdc2d20478b456e",
+    "ID": "barrel_mr133_540mm"
+  },
+  "sections": []
+}

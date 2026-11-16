@@ -1,0 +1,36 @@
+{
+  "title": "Vengeful Zryachiy's balaclava",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vengeful_Zryachiy's_balaclava",
+  "revisionId": 313675,
+  "lastEdited": "2025-05-21T07:41:44Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6530e8587cbfc1e309011e37",
+    "id": "item_equipment_facecover_BOSS_zryachi_balaclava_closed_HALLOWEEN"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Glows in the dark"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Vengeful Zryachiy"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item was first added as part of Escape from Tarkov's 2023 Halloween celebration."
+    }
+  ]
+}

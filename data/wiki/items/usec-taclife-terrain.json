@@ -1,0 +1,22 @@
+{
+  "title": "USEC Taclife Terrain",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_Taclife_Terrain",
+  "revisionId": 248093,
+  "lastEdited": "2023-09-22T17:58:30Z",
+  "kind": "item",
+  "categories": [
+    "USEC lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f58ed86f7744bcb0acd1c",
+    "ID": "usec_lower_taclifeterrain"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The pants are modeled on the Blackhawk Tac Life Pant, and the boots are modeled on the Ariat Terrain Boot."
+    }
+  ]
+}

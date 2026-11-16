@@ -1,0 +1,26 @@
+{
+  "title": "DVD drive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DVD_drive",
+  "revisionId": 352010,
+  "lastEdited": "2026-08-07T00:04:10Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "node": "5734781f24597737e04bf32a",
+    "id": "dvd_drive"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- PC block\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "VSS/VAL 9x39 6L24 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSS/VAL_9x39_6L24_10-round_magazine",
+  "revisionId": 337385,
+  "lastEdited": "2026-03-05T22:21:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.181 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "+4",
+    "checkaccuracy": "No",
+    "checkmodifier": "-40",
+    "loadmodifier": "-25",
+    "feedfailure": "Low",
+    "capacity": "10",
+    "caliber": "9x39mm",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "57838f0b2459774a256959b2",
+    "ID": "mag_vss_tochmash_6L24_9x39_10"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Pack of chlorine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pack_of_chlorine",
+  "revisionId": 344972,
+  "lastEdited": "2026-05-26T13:07:56Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.35 kg",
+    "grid": "2x1",
+    "loot xp": "25",
+    "exam xp": "10",
+    "node": "5e2af02c86f7746d420957d4",
+    "ID": "item_barter_household_chlorine"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

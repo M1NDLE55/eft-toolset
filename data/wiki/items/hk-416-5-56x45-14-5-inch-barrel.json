@@ -1,0 +1,26 @@
+{
+  "title": "HK 416 5.56x45 14.5 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416_5.56x45_14.5_inch_barrel",
+  "revisionId": 357353,
+  "lastEdited": "2026-09-01T12:49:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.85 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-12",
+    "MOA": "1.89",
+    "recoil": "-7.4",
+    "Dura Burn": "-6",
+    "Heat": "+2",
+    "Cooling": "+3",
+    "node": "6a15b1fdbf497aade1003af2",
+    "ID": "barrel_416_hk_368mm_no_sight_556x45"
+  },
+  "sections": []
+}

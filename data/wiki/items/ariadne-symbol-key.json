@@ -1,0 +1,36 @@
+{
+  "title": "Ariadne symbol key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ariadne_symbol_key",
+  "revisionId": 357944,
+  "lastEdited": "2026-09-08T15:19:32Z",
+  "kind": "item",
+  "categories": [
+    "Extraction intel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Extraction intel",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "effect": "Activates the \"Ariadne's Path\" extraction in The Labyrinth.",
+    "node": "67e183377c6c2011970f3149",
+    "id": "item_key_labyrinth_secret_extraction"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Activates the \"Ariadne's Path\" extraction in The Labyrinth.\n- Cannot be taken out of a raid"
+    },
+    {
+      "heading": "The Labyrinth",
+      "level": 3,
+      "text": "- On Shadow of Tagilla\n- On Vengeful Killa\n- On Scavs"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The key references the Greek mythological character Ariadne, who gave Theseus a sword to defeat the Minotaur with, as well as a ball of thread to retrace his way out of the labyrinth."
+    }
+  ]
+}

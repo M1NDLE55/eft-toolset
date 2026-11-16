@@ -1,0 +1,18 @@
+{
+  "title": "12/70 8.5mm Magnum buckshot ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_8.5mm_Magnum_buckshot_ammo_pack_(25_pcs)",
+  "revisionId": 367118,
+  "lastEdited": "2026-11-02T23:07:52Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570243bbfc87b3a3409321f",
+    "ID": "item_ammo_box_12g_25_buckshot_85"
+  },
+  "sections": []
+}

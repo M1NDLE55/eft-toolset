@@ -1,0 +1,37 @@
+{
+  "title": "ANA Tactical M2 plate carrier (OD Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ANA_Tactical_M2_plate_carrier_(OD_Green)",
+  "revisionId": 346887,
+  "lastEdited": "2026-06-14T21:39:47Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.25 kg",
+    "grid": "4x4",
+    "trader": "Ref LL2",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Thorax, Stomach, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "96",
+    "penalties": "-2% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "18 Slots",
+    "node": "5ab8dced86f774646209ec87",
+    "id": "ana_tactical_m2"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

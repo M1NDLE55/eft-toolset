@@ -1,0 +1,25 @@
+{
+  "title": "Note mentioning Item 1156",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_mentioning_Item_1156",
+  "revisionId": 353597,
+  "lastEdited": "2026-08-14T19:10:44Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "6877c2dcda2a05d0cb04f983",
+    "id": "item_info_note_quest_product1156"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Blue Fire"
+    }
+  ]
+}

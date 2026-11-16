@@ -1,0 +1,25 @@
+{
+  "title": "MP-153 12ga 7-shell magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-153_12ga_7-shell_magazine",
+  "revisionId": 339058,
+  "lastEdited": "2026-03-24T16:15:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.156 kg",
+    "grid": "3x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-2",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "7",
+    "caliber": "12/70",
+    "node": "5882163224597757561aa920",
+    "ID": "mag_mr153_izhmeh_12g_7"
+  },
+  "sections": []
+}

@@ -1,0 +1,43 @@
+{
+  "title": "S I C C organizational pouch",
+  "url": "https://escapefromtarkov.fandom.com/wiki/S_I_C_C_organizational_pouch",
+  "revisionId": 351840,
+  "lastEdited": "2026-08-06T21:15:17Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "0.187 kg",
+    "grid": "2x1",
+    "effect": "Provides 25 inventory slots while only taking up 2",
+    "loot xp": "30",
+    "exam xp": "10",
+    "node": "5d235bb686f77443f4331278",
+    "ID": "item_container_lopouch"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The S I C C organizational pouch is a container with the purpose of saving space within the player's inventory. It provides 25 inventory slots in a 5x5 grid and only takes up 2 inventory slots itself. It can only store:\n- Currency\n- Keys & Keycards\n- Posters\n- Dogtags\n- Physical Bitcoin\n- Veritas guitar pick\n- Secure Flash drive\n- Chain with Prokill medallion\n- Gold skull ring"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Stray Dogs\n- 1 can be obtained as a quest reward from Keeper's Word"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The S I C C organizational pouch is modeled on the VERTX large organizational pouch.\n\nThe name \"S I C C\" is a reference to the slang term \"sick\", and its stylization is inspired by the T H I C C item case."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Trijicon REAP-IR thermal scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trijicon_REAP-IR_thermal_scope",
+  "revisionId": 367791,
+  "lastEdited": "2026-11-10T13:06:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Thermal vision sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Thermal vision sight",
+    "weight": "0.58 kg",
+    "grid": "2x1",
+    "refresh rate": "35 Hz",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "500",
+    "ergonomics": "-13",
+    "modes": "2",
+    "node": "5a1eaa87fcdbcb001865f75e",
+    "ID": "scope_base_trijicon_reap-ir"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market\n- Cannot be insured.\n- Cannot be put in secure containers\n- Only 5 can be held in a raid inventory at the same time\n- The thermal detection range is ~230 m at 0° angle, it goes up to ~250 m aiming uphill or downhill"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Huntsman Path - Sadist\n- 1 can be obtained as a quest reward from Gunsmith Master - Part 11"
+    }
+  ]
+}

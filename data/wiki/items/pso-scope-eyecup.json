@@ -1,0 +1,24 @@
+{
+  "title": "PSO scope eyecup",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PSO_scope_eyecup",
+  "revisionId": 255626,
+  "lastEdited": "2023-11-23T14:55:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "price": "₽258",
+    "trader": "Prapor LL3",
+    "ergonomics": "+5",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "57f3a5ae2459772b0e0bf19e",
+    "ID": "tactical_pso_belomo_eyecup"
+  },
+  "sections": []
+}

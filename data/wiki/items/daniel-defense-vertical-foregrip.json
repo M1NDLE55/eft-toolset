@@ -1,0 +1,22 @@
+{
+  "title": "Daniel Defense Vertical Foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Daniel_Defense_Vertical_Foregrip",
+  "revisionId": 357268,
+  "lastEdited": "2026-09-01T09:27:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.048 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3: Black, Cerakote",
+    "ergonomics": "+6",
+    "recoil": "-2",
+    "node": "6a16f3711c209e26040a5410 6a16f3811c209e26040a5413",
+    "ID": "foregrip_all_dd_vfg foregrip_all_dd_vfg_mspc"
+  },
+  "sections": []
+}

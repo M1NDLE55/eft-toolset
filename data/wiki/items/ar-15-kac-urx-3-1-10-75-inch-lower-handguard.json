@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 KAC URX 3.1 10.75 inch lower handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_KAC_URX_3.1_10.75_inch_lower_handguard",
+  "revisionId": 342352,
+  "lastEdited": "2026-04-29T00:37:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.096 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+2",
+    "recoil": "+0",
+    "Heat": "-2",
+    "Cooling": "+2.9",
+    "node": "637f57c532b66e7e320a6676",
+    "ID": "handguard_ar15_kac_urx_31_10,75_inch_lower"
+  },
+  "sections": []
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Bottle of water (0.6L)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bottle_of_water_(0.6L)",
+  "revisionId": 333895,
+  "lastEdited": "2026-02-07T23:26:40Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "0.65 kg",
+    "grid": "1x2",
+    "price": "₽1,020",
+    "trader": "Therapist LL1",
+    "effect": "Hydration: +60",
+    "use time": "3s",
+    "node": "5448fee04bdc2dbc018b4567",
+    "id": "Бутылка воды 0.6"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Ration supply crates\n- In Sport bags"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Bottle of water (0.6L) is based off Aqua Minerale (Аква минерал)."
+    }
+  ]
+}

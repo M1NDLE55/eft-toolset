@@ -1,0 +1,26 @@
+{
+  "title": "SureFire SOCOM556-MONSTER 5.56x45 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SureFire_SOCOM556-MONSTER_5.56x45_sound_suppressor",
+  "revisionId": 340606,
+  "lastEdited": "2026-04-21T08:53:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.496 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-14",
+    "velocity": "+0.7",
+    "recoil": "-2",
+    "Dura Burn": "+63",
+    "Heat": "+14",
+    "Cooling": "+3",
+    "node": "55d614004bdc2d86028b4568",
+    "ID": "silencer_socom_surefire_socom556_monster_556x45"
+  },
+  "sections": []
+}

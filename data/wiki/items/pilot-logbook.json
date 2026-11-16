@@ -1,0 +1,25 @@
+{
+  "title": "Pilot logbook",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pilot_logbook",
+  "revisionId": 298484,
+  "lastEdited": "2024-12-22T13:11:44Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.23 kg",
+    "grid": "1x2",
+    "node": "66c0b90c8398582e4b0c2e27",
+    "ID": "item_quest_factoryflight_journal"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Possessor from Prapor"
+    }
+  ]
+}

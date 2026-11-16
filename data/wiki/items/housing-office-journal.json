@@ -1,0 +1,25 @@
+{
+  "title": "Housing office journal",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Housing_office_journal",
+  "revisionId": 289556,
+  "lastEdited": "2024-09-01T12:17:56Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "node": "638e0057ab150a5f56238960",
+    "id": "item_quest_c10_jek"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Population Census from Therapist"
+    }
+  ]
+}

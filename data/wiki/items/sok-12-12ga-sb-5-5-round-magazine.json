@@ -1,0 +1,30 @@
+{
+  "title": "SOK-12 12ga Sb.5 5-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_12ga_Sb.5_5-round_magazine",
+  "revisionId": 337380,
+  "lastEdited": "2026-03-05T22:19:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.19 kg",
+    "grid": "1x2",
+    "price": "₽1,500",
+    "trader": "Skier LL1, Jaeger LL1",
+    "ergonomics": "+5",
+    "checkaccuracy": "No",
+    "checkmodifier": "-50",
+    "loadmodifier": "-25",
+    "feedfailure": "Very low",
+    "capacity": "5",
+    "caliber": "12/70",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "57616a9e2459773c7a400234",
+    "ID": "mag_saiga12_izhmash_Sb5_12x76_5"
+  },
+  "sections": []
+}

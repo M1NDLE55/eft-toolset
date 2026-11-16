@@ -1,0 +1,24 @@
+{
+  "title": "AK-74 wooden handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_wooden_handguard",
+  "revisionId": 340612,
+  "lastEdited": "2026-04-21T08:58:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.26 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+11",
+    "recoil": "+0",
+    "Heat": "+5.4",
+    "Cooling": "-5",
+    "node": "5648b0744bdc2d363b8b4578",
+    "ID": "handguard_ak_izhmash_ak74_std_wood"
+  },
+  "sections": []
+}

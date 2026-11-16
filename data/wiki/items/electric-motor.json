@@ -1,0 +1,32 @@
+{
+  "title": "Electric motor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Electric_motor",
+  "revisionId": 360719,
+  "lastEdited": "2026-09-19T11:15:23Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "1.4 kg",
+    "grid": "2x2",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5d1b2fa286f77425227d1674",
+    "ID": "item_barter_electr_engine"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Power of Persuasion\n- 1 can be obtained as a quest reward from Oil Run\n- 1 can be obtained as a quest reward from Shaking Up the Teller"
+    }
+  ]
+}

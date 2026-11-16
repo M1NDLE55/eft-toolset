@@ -1,0 +1,21 @@
+{
+  "title": "Magpul M-LOK Cantilever Mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magpul_M-LOK_Cantilever_Mount",
+  "revisionId": 322433,
+  "lastEdited": "2025-11-18T16:43:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-0.1",
+    "node": "6269220d70b6c02e665f2635",
+    "ID": "mount_m_lok_magpul_cantilever_rail_light_mount"
+  },
+  "sections": []
+}

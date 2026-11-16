@@ -1,0 +1,25 @@
+{
+  "title": "Aimpoint Micro T-1 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aimpoint_Micro_T-1_reflex_sight",
+  "revisionId": 352851,
+  "lastEdited": "2026-08-09T21:42:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Compact reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Compact reflex sight",
+    "weight": "0.084 kg",
+    "grid": "1x1",
+    "price": "₽16,570",
+    "trader": "Peacekeeper LL2",
+    "zeroing": "25, 50, 100",
+    "sightrange": "150",
+    "ergonomics": "+0",
+    "modes": "1",
+    "node": "58d399e486f77442e0016fe7",
+    "ID": "scope_base_aimpoint_micro_t1"
+  },
+  "sections": []
+}

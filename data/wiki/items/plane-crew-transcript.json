@@ -1,0 +1,26 @@
+{
+  "title": "Plane crew transcript",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Plane_crew_transcript",
+  "revisionId": 356627,
+  "lastEdited": "2026-08-27T09:49:23Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.095 kg",
+    "grid": "1x1",
+    "node": "689b4d39987b304021088e8d",
+    "id": "item_info_note_quest_crew_transcript"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Falling Skies\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

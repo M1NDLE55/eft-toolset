@@ -1,0 +1,42 @@
+{
+  "title": "FORT Gladiator-S plate carrier (Lightweight, MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FORT_Gladiator-S_plate_carrier_(Lightweight%2C_MultiCam)",
+  "revisionId": 347393,
+  "lastEdited": "2026-06-26T22:26:18Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.77 kg",
+    "grid": "3x4",
+    "trader": "Ref LL4, after unlocking it in Echo Belli crate",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "160",
+    "penalties": "-0.5% movement speed, -0.5% turn speed, -0.5% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "16 Slots",
+    "node": "69d27ebeb855150a70092ba3",
+    "ID": "item_equipment_armor_gladiator_s_light_mltcm"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

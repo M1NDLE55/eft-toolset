@@ -1,0 +1,37 @@
+{
+  "title": "MP-43 12ga sawed-off double-barrel shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-43_12ga_sawed-off_double-barrel_shotgun",
+  "revisionId": 305789,
+  "lastEdited": "2025-02-18T04:10:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Secondary",
+    "weight": "2.1 kg",
+    "grid": "3x1",
+    "trader": "Jaeger LL2",
+    "fire modes": "Single, Double",
+    "sightrange": "100",
+    "ergonomics": "53",
+    "velocity": "427 m/s",
+    "range": "100 m",
+    "MOA": "23.38",
+    "Weaprecoil": "Vertical: 279, Horizontal: 413",
+    "rof": "900",
+    "caliber": "12/70",
+    "node": "64748cb8de82c85eaf0a273a",
+    "ID": "weapon_izhmeh_mr43_sawed_off_12g"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This version of the MP-43 double-barrel shotgun is directly related to the Chronicles of Ryzhy Chpt. 1 short film, in which Ryzhy states that he got a double barrel shotgun from his father, from which he has sawn off the stock and cut down the barrel to approximately 300 millimetres for compactness."
+    }
+  ]
+}

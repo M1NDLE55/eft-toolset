@@ -1,0 +1,32 @@
+{
+  "title": "AR-15 5.56x45 Beta C-Mag 100-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_Beta_C-Mag_100-round_drum_magazine",
+  "revisionId": 352966,
+  "lastEdited": "2026-08-09T22:10:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "1.056 kg",
+    "grid": "2x2",
+    "ergonomics": "-18",
+    "checkaccuracy": "No",
+    "checkmodifier": "+30",
+    "loadmodifier": "+20",
+    "feedfailure": "Very high",
+    "capacity": "100",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "node": "6761765f1f08ed5e8800b7a6",
+    "ID": "mag_stanag_beta_c_mag_556x45_100"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

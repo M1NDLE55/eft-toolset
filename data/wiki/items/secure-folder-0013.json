@@ -1,0 +1,25 @@
+{
+  "title": "Secure Folder 0013",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_Folder_0013",
+  "revisionId": 351973,
+  "lastEdited": "2026-08-06T23:54:35Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.8 kg",
+    "grid": "1x2",
+    "node": "5939e5a786f77461f11c0098",
+    "id": "case_0013"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "Used in the quests:\n- Chemical - Part 1 from Skier\n- Tracker from Peacekeeper"
+    }
+  ]
+}

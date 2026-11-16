@@ -1,0 +1,32 @@
+{
+  "title": "AR-10 7.62x51 Lancer L7AWM 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_7.62x51_Lancer_L7AWM_20-round_magazine",
+  "revisionId": 337966,
+  "lastEdited": "2026-03-08T00:20:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.35 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "checkmodifier": "-5",
+    "feedfailure": "Very Low",
+    "capacity": "20",
+    "caliber": "7.62x51mm NATO, 6.8x51mm",
+    "node": "65293c38fc460e50a509cb25",
+    "ID": "mag_ar10_lancer_l7_awm_762x51_20"
+  },
+  "sections": [
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from Killer Argument"
+    }
+  ]
+}

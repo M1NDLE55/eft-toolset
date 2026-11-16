@@ -1,0 +1,39 @@
+{
+  "title": "Jack-o'-lantern tactical pumpkin helmet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Jack-o'-lantern_tactical_pumpkin_helmet",
+  "revisionId": 344322,
+  "lastEdited": "2026-05-24T21:58:28Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "2",
+    "armor coverage": "Face, Head top, Nape, Ears, Eyes, Jaws, Throat, Back neck",
+    "durability": "40",
+    "RicochetChance": "Low",
+    "penalties": "+0% movement speed, -1% turn speed, +0% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "59ef13ca86f77445fd0e2483",
+    "id": "jack_o_lantern"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Glows in the dark and projects a carved Jack-o'-lantern pattern"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item was first added as part of Escape from Tarkov's 2017 Halloween celebration."
+    }
+  ]
+}

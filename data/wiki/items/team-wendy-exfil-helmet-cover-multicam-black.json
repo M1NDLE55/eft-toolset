@@ -1,0 +1,35 @@
+{
+  "title": "Team Wendy EXFIL helmet cover (MultiCam Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Team_Wendy_EXFIL_helmet_cover_(MultiCam_Black)",
+  "revisionId": 358621,
+  "lastEdited": "2026-09-10T22:40:32Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Vanity helmet mod",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "69e24f4f9e6ca1b32508bfbc",
+    "ID": "item_equipment_helmet_wedge_boss_cover"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item does not provide any additional armor"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On The Wedge\n- Wooden crate\n- Weapon box (6x2)\n- Weapon box (4x4)\n- Weapon box (6x4)\n- Weapon box (6x6)"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This helmet cover is modeled after the A&A Tactical Team Wendy EXFIL Ballistic Hybrid Helmet cover."
+    }
+  ]
+}

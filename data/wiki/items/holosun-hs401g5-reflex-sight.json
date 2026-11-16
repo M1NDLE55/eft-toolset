@@ -1,0 +1,30 @@
+{
+  "title": "Holosun HS401G5 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Holosun_HS401G5_reflex_sight",
+  "revisionId": 343247,
+  "lastEdited": "2026-05-03T22:44:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.36 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "300",
+    "ergonomics": "-4",
+    "modes": "2",
+    "node": "5b30b0dc5acfc400153b7124",
+    "ID": "scope_all_holosun_hs401g5"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This sight has only one reticle mode, but Left Alt + Right Mouse Button will turn the built-in green laser on and off.\n  - Unlike tactical combo devices, the built-in green laser on this sight does not provide a point fire accuracy bonus."
+    }
+  ]
+}

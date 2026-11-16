@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Magpul MIAD pistol grip (FDE)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Magpul_MIAD_pistol_grip_(FDE)",
+  "revisionId": 360622,
+  "lastEdited": "2026-09-18T18:57:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+6",
+    "recoil": "-1.2",
+    "node": "5a339805c4a2826c6e06d73d",
+    "ID": "pistolgrip_ar15_magpul_miad_gen_1_fde"
+  },
+  "sections": []
+}

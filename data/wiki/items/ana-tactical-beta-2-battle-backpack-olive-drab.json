@@ -1,0 +1,29 @@
+{
+  "title": "ANA Tactical Beta 2 Battle backpack (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ANA_Tactical_Beta_2_Battle_backpack_(Olive_Drab)",
+  "revisionId": 304485,
+  "lastEdited": "2025-01-22T09:40:13Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2 kg",
+    "grid": "5x5",
+    "trader": "Ragman LL3",
+    "penalties": "-2% movement speed, -3% turn speed, -6% Ergonomics",
+    "slots": "5x6 grid (30 slots)",
+    "node": "5b44c6ae86f7742d1627baea",
+    "id": "item_equipment_backpack_betav2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 1 can be held in a raid inventory at the same time"
+    }
+  ]
+}

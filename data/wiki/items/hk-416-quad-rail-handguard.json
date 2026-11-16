@@ -1,0 +1,24 @@
+{
+  "title": "HK 416 Quad Rail handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416_Quad_Rail_handguard",
+  "revisionId": 357042,
+  "lastEdited": "2026-08-30T18:33:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.399 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2: Black, Peacekeeper LL3: Green brown",
+    "ergonomics": "+15",
+    "recoil": "+0",
+    "Heat": "-2.4",
+    "Cooling": "+1",
+    "node": "5bb20de5d4351e0035629e59 6a15b13db507e45a68038de8",
+    "ID": "handguard_416_hk_quad_rail handguard_416_hk_quad_rail_ral8k"
+  },
+  "sections": []
+}

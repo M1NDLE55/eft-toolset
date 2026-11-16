@@ -1,0 +1,27 @@
+{
+  "title": "AKM Zenit DTK-4M 7.62x39 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM_Zenit_DTK-4M_7.62x39_sound_suppressor",
+  "revisionId": 340751,
+  "lastEdited": "2026-04-22T07:15:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.354 kg",
+    "grid": "2x1",
+    "price": "₽51,000",
+    "trader": "Skier LL3",
+    "ergonomics": "-18",
+    "velocity": "+0.7",
+    "recoil": "-7",
+    "Dura Burn": "+65",
+    "Heat": "+14",
+    "Cooling": "+9",
+    "node": "59fb257e86f7742981561852",
+    "ID": "silencer_akm_zenit_dtk-4m_762x39"
+  },
+  "sections": []
+}

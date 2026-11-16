@@ -1,0 +1,28 @@
+{
+  "title": "DVL-10 M2 7.62x51 660mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DVL-10_M2_7.62x51_660mm_barrel",
+  "revisionId": 356559,
+  "lastEdited": "2026-08-26T02:56:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "2.88 kg",
+    "grid": "4x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-35",
+    "velocity": "+11",
+    "accuracy": "+10",
+    "MOA": "0.45",
+    "recoil": "-16.5",
+    "Dura Burn": "+5",
+    "Heat": "-18",
+    "Cooling": "-14",
+    "node": "5888956924597752983e182d",
+    "ID": "barrel_dvl-10_m2_660mm"
+  },
+  "sections": []
+}

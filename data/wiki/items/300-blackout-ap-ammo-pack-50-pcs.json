@@ -1,0 +1,24 @@
+{
+  "title": ".300 Blackout AP ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.300_Blackout_AP_ammo_pack_(50_pcs)",
+  "revisionId": 367079,
+  "lastEdited": "2026-11-02T23:06:10Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "648985c074a806211e4fb682",
+    "ID": "item_ammo_box_blackout_50_ap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

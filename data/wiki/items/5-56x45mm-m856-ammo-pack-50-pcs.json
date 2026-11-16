@@ -1,0 +1,18 @@
+{
+  "title": "5.56x45mm M856 ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_M856_ammo_pack_(50_pcs)",
+  "revisionId": 367184,
+  "lastEdited": "2026-11-02T23:11:29Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657024e8cfc010a0f5006a0d",
+    "ID": "item_ammo_box_556x45_50_856"
+  },
+  "sections": []
+}

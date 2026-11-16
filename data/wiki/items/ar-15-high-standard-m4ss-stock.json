@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 High Standard M4SS Stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_High_Standard_M4SS_Stock",
+  "revisionId": 352126,
+  "lastEdited": "2026-08-07T19:41:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.24 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+6",
+    "recoil": "-20.5",
+    "node": "55d4ae6c4bdc2d8b2f8b456e",
+    "ID": "stock_ar15_high_standart_m4ss"
+  },
+  "sections": []
+}

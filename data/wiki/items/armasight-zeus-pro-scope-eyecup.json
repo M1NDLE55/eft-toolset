@@ -1,0 +1,23 @@
+{
+  "title": "Armasight Zeus-Pro scope eyecup",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armasight_Zeus-Pro_scope_eyecup",
+  "revisionId": 255139,
+  "lastEdited": "2023-11-10T19:19:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "+5",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "63fc4533b10b17385349b565",
+    "ID": "tactical_zeus_armasight_eyecup"
+  },
+  "sections": []
+}

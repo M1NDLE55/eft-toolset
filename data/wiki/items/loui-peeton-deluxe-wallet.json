@@ -1,0 +1,41 @@
+{
+  "title": "Loui Peeton deluxe wallet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Loui_Peeton_deluxe_wallet",
+  "revisionId": 363058,
+  "lastEdited": "2026-10-03T18:48:29Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "effect": "Provides 9 inventory slots while only taking up 1",
+    "node": "6937eccbfd921faceb0dfecd",
+    "id": "item_container_wallet_loui_peeton"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Loui Peeton deluxe wallet is a container with the purpose of saving space within the player's inventory. It provides 9 inventory slots in a 3x3 grid and only takes up 1 inventory slot itself. It can only store:\n- Currency\n- Keycards\n- Physical Bitcoin\n- Extraction intel (Besides Ariadne symbol key and Interchange underground utility plan)"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Can't Drink Away Skill"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This item was first introduced as a reward for a promotional event on Twitch in August 2026."
+    }
+  ]
+}

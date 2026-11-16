@@ -1,0 +1,22 @@
+{
+  "title": "MCX flip-up rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX_flip-up_rear_sight",
+  "revisionId": 322422,
+  "lastEdited": "2025-11-18T16:26:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.013 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "sightrange": "300",
+    "ergonomics": "+0",
+    "node": "5fc0fa957283c4046c58147e",
+    "ID": "sight_rear_all_sig_flip_up"
+  },
+  "sections": []
+}

@@ -1,0 +1,31 @@
+{
+  "title": "BD dogtag Ferrum",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BD_dogtag_Ferrum",
+  "revisionId": 363297,
+  "lastEdited": "2026-10-05T23:59:30Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "6a461aed7391ab085a093760",
+    "ID": "item_barter_dogtags_blackdivision_ferrum"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Tiger Stripe Desert)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Tiger_Stripe_Desert)",
+  "revisionId": 348510,
+  "lastEdited": "2026-07-30T21:23:35Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67ea970ad4cf7eac36009cf8",
+    "id": "item_camo_tigerstripe_yellow"
+  },
+  "sections": []
+}

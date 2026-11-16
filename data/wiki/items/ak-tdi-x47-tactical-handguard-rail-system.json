@@ -1,0 +1,26 @@
+{
+  "title": "AK TDI X47 tactical handguard rail system",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_TDI_X47_tactical_handguard_rail_system",
+  "revisionId": 342103,
+  "lastEdited": "2026-04-28T03:47:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.42 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "-4",
+    "Cooling": "+2.2",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5f6331e097199b7db2128dc2",
+    "ID": "handguard_ak_tdi_x47"
+  },
+  "sections": []
+}

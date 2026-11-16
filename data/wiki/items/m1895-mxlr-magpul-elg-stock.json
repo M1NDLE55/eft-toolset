@@ -1,0 +1,22 @@
+{
+  "title": "M1895/MXLR Magpul ELG stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1895/MXLR_Magpul_ELG_stock",
+  "revisionId": 338827,
+  "lastEdited": "2026-03-17T20:27:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.5 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+4",
+    "recoil": "-26",
+    "node": "67c541d45b84f7f36c03e557 67ff2c16c593c7b94a095e56",
+    "ID": "stock_m1895_magpul_elg_m_lok stock_m1895_magpul_elg_m_lok_fde"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "M1895/MXLR XS Marlin Ghost Ring rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1895/MXLR_XS_Marlin_Ghost_Ring_rear_sight",
+  "revisionId": 343393,
+  "lastEdited": "2026-05-05T20:53:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "67c5422726265106dd0697a2",
+    "ID": "sight_rear_m1895_xs_marlin_ghost_ring"
+  },
+  "sections": []
+}

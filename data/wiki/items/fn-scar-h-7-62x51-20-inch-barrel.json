@@ -1,0 +1,27 @@
+{
+  "title": "FN SCAR-H 7.62x51 20 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR-H_7.62x51_20_inch_barrel",
+  "revisionId": 342214,
+  "lastEdited": "2026-04-28T21:31:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.26 kg",
+    "grid": "4x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-31",
+    "velocity": "+0",
+    "MOA": "1.24",
+    "recoil": "-15.2",
+    "Dura Burn": "+5",
+    "Heat": "-10",
+    "Cooling": "-8",
+    "node": "6183b084a112697a4b3a6e6c",
+    "ID": "barrel_mk17_fn_508mm_762x51"
+  },
+  "sections": []
+}

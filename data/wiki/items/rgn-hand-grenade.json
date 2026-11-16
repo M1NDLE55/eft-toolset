@@ -1,0 +1,36 @@
+{
+  "title": "RGN hand grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RGN_hand_grenade",
+  "revisionId": 358679,
+  "lastEdited": "2026-09-10T22:56:29Z",
+  "kind": "item",
+  "categories": [
+    "Fragmentation grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Impact fragmentation grenade",
+    "weight": "0.31 kg",
+    "grid": "1x1",
+    "fragments count": "75x RGD-5 Shrapnel",
+    "explosion delay": "0.3s on impact (3.5s if impact fuze not triggered)",
+    "explosion distance": "2-5 meters",
+    "concussion distance": "13 meters",
+    "node": "617fd91e5539a84ec44ce155",
+    "ID": "weapon_grenade_rgn"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Grenade box\n- Weapon box (6x2)\n- Buried barrel cache\n- Ground cache\n- Common fund stash"
+    }
+  ]
+}

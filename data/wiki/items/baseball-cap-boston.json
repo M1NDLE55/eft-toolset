@@ -1,0 +1,27 @@
+{
+  "title": "Baseball cap (Boston)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Baseball_cap_(Boston)",
+  "revisionId": 353556,
+  "lastEdited": "2026-08-14T07:49:42Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Echo Belli crate",
+    "node": "69ceab1a8562e71bbe063511",
+    "id": "item_equipment_head_inverted_cap_boston_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

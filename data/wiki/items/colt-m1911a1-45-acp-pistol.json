@@ -1,0 +1,31 @@
+{
+  "title": "Colt M1911A1 .45 ACP pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Colt_M1911A1_.45_ACP_pistol",
+  "revisionId": 352625,
+  "lastEdited": "2026-08-09T20:02:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "1.214 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "80.5",
+    "velocity": "337 m/s",
+    "range": "50 m",
+    "MOA": "12.03",
+    "Weaprecoil": "Vertical: 444, Horizontal: 350",
+    "rof": "30",
+    "caliber": ".45 ACP",
+    "node": "5e81c3cbac2bb513793cdc75",
+    "ID": "weapon_colt_m1911a1_1143x23"
+  },
+  "sections": []
+}

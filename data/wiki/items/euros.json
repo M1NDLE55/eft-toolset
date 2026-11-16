@@ -1,0 +1,30 @@
+{
+  "title": "Euros",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Euros",
+  "revisionId": 351430,
+  "lastEdited": "2026-08-05T22:27:54Z",
+  "kind": "item",
+  "categories": [
+    "Currency"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Currency",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "node": "569668774bdc2da2298b4568",
+    "id": "Euro"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Stacks to 50,000\n- Only 15,000 can be brought into a raid\n- Only 25,000 can be held in a raid inventory at the same time\n- Spawns in stacks of 35-90"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawers\n- Safes\n- Common fund stash\n- Buried barrel caches"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Geissele Super Precision top ring cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Geissele_Super_Precision_top_ring_cap",
+  "revisionId": 268508,
+  "lastEdited": "2024-02-04T14:22:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4: Black, DDC",
+    "ergonomics": "+0.5",
+    "node": "618b9671d14d6d5ab879c5ea 618ba91477b82356f91ae0e8",
+    "ID": "mount_geissele_geissele_super_precision_top_ring_cap_30mm mount_geissele_geissele_super_precision_top_ring_cap_30mm_ddc"
+  },
+  "sections": []
+}

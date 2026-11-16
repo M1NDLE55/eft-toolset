@@ -1,0 +1,28 @@
+{
+  "title": "M870 12ga 10-shell magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_12ga_10-shell_magazine",
+  "revisionId": 337487,
+  "lastEdited": "2026-03-05T23:20:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.4 kg",
+    "grid": "3x1",
+    "price": "₽2,200",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-3",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "12/70",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5a78832ec5856700155a6ca3",
+    "ID": "mag_870_remington_magazie_extension_12g_10"
+  },
+  "sections": []
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Moreman's audio tape 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Moreman's_audio_tape_2",
+  "revisionId": 348824,
+  "lastEdited": "2026-08-01T15:21:48Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "0:53",
+    "node": "68889737562720383f0f8548",
+    "ID": "item_info_recorder_tape_moreman_02"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Moreman: …He's like a mother duck!\n\nTaran: Explain.\n\nMoreman: You don't get it, Taran? Like a fucking mother duck! Remember how… how Voevoda got us out of the line of fire last time. Made us all walk outta there in a straight line like some ducklings. Fucking… heh…\n\nTaran: Yeah, I remember. No one got hurt, at least. And the job was done.\n\nMoreman: Well I'm not saying it's a bad thing! Who do you take me for? Our commander is like a real batya to me.\n\nVoevoda: What are we up to here, pups?\n\nMoreman: Comrade commander, everything here is strictly by the book! Come join us!\n\nVoevoda: No thanks. Alright, get ready, we're heading out soon.\n\nMoreman: Aye, commander!"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "SVD 7.62x54R 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVD_7.62x54R_20-round_magazine",
+  "revisionId": 337637,
+  "lastEdited": "2026-03-06T00:35:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.112 kg",
+    "grid": "1x2",
+    "price": "₽9,880",
+    "trader": "Prapor LL4",
+    "ergonomics": "-3",
+    "checkaccuracy": "No",
+    "feedfailure": "Low",
+    "capacity": "20",
+    "caliber": "7.62x54mmR",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c88f24b2e22160bc12c69a6",
+    "ID": "mag_svd_izhmash_svd_std_762x54_20"
+  },
+  "sections": []
+}

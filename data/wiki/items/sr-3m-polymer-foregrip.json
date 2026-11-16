@@ -1,0 +1,22 @@
+{
+  "title": "SR-3M polymer foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-3M_polymer_foregrip",
+  "revisionId": 356703,
+  "lastEdited": "2026-08-28T19:24:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4: Black, Plum",
+    "ergonomics": "+2",
+    "recoil": "-1",
+    "node": "65329ebcc0d50d0c9204ace1 (Black) 6565c0c2ff7eb7070409084c (Plum)",
+    "ID": "foregrip_sr3m_tochmash_sr3m_std foregrip_sr3m_tochmash_sr3m_std_plum"
+  },
+  "sections": []
+}

@@ -1,0 +1,38 @@
+{
+  "title": "40x46mm M381 (HE) grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/40x46mm_M381_(HE)_grenade",
+  "revisionId": 353112,
+  "lastEdited": "2026-08-10T16:58:49Z",
+  "kind": "ammo",
+  "categories": [
+    "40x46mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Grenade launcher cartridge",
+    "weight": "0.35 kg",
+    "grid": "1x1",
+    "velocity": "76 m/s",
+    "damage": "199",
+    "penetration": "1",
+    "armor damage": "95",
+    "ricochet": "0",
+    "fragmentation": "0",
+    "misfire": "Low",
+    "fuze time": "0.04s",
+    "explosion radius": "1-7 m",
+    "explosion strength": "70",
+    "fragments count": "10x",
+    "effects": "Subsonic, Explosive",
+    "node": "5ede474b0c226a66f5402622",
+    "id": "patron_40x46_m381"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

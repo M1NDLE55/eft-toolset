@@ -1,0 +1,23 @@
+{
+  "title": "MP-155 walnut forestock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_walnut_forestock",
+  "revisionId": 342193,
+  "lastEdited": "2026-04-28T21:22:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.8 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+8",
+    "Heat": "+4.1",
+    "Cooling": "-0.8",
+    "node": "607d5aa50494a626335e12ed",
+    "ID": "handguard_mp155_izhmeh_monte_carlo_walnut"
+  },
+  "sections": []
+}

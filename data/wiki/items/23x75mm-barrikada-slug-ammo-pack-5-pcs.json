@@ -1,0 +1,18 @@
+{
+  "title": "23x75mm Barrikada slug ammo pack (5 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/23x75mm_Barrikada_slug_ammo_pack_(5_pcs)",
+  "revisionId": 367143,
+  "lastEdited": "2026-11-02T23:09:15Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "2x1",
+    "node": "657024b8bfc87b3a34093232",
+    "ID": "item_ammo_box_23x75_5_barricade"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "AK-308 M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-308_M-LOK_handguard",
+  "revisionId": 357408,
+  "lastEdited": "2026-09-01T18:00:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "+16",
+    "Heat": "+2.2",
+    "Cooling": "-2.2",
+    "node": "6a1708253dfad1cb790c91ed",
+    "ID": "handguard_ak308_izhmash_ak308_mlok"
+  },
+  "sections": []
+}

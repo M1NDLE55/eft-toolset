@@ -1,0 +1,37 @@
+{
+  "title": "MPS Auto Assault-12 Gen 1 12ga automatic shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPS_Auto_Assault-12_Gen_1_12ga_automatic_shotgun",
+  "revisionId": 362446,
+  "lastEdited": "2026-09-29T14:55:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "5.09 kg",
+    "grid": "5x2",
+    "trader": "Skier LL3 after completing his task Irresistible",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "42",
+    "velocity": "437 m/s",
+    "range": "70 m",
+    "MOA": "22.35",
+    "Weaprecoil": "Vertical: 172, Horizontal: 230",
+    "rof": "330",
+    "caliber": "12/70",
+    "node": "66ffa9b66e19cc902401c5e8",
+    "ID": "weapon_mps_aa_12_gen_1_12g"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This weapon will never malfunction."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "BTR figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BTR_figurine",
+  "revisionId": 343718,
+  "lastEdited": "2026-05-10T11:35:56Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "68f2608301fb9de974058be6",
+    "id": "Item_barter_tarko_btr"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This figurine was first obtainable during Release Twitch Drops (October 2025)."
+    }
+  ]
+}

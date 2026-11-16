@@ -1,0 +1,22 @@
+{
+  "title": "BCM GUNFIGHTER MOD 3 vertical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BCM_GUNFIGHTER_MOD_3_vertical_foregrip",
+  "revisionId": 355407,
+  "lastEdited": "2026-08-21T22:16:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.053 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-2",
+    "recoil": "-3.5",
+    "node": "5c7fc87d2e221644f31c0298",
+    "ID": "foregrip_all_bcm_mod_3"
+  },
+  "sections": []
+}

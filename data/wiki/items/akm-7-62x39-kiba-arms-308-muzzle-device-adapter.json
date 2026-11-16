@@ -1,0 +1,24 @@
+{
+  "title": "AKM 7.62x39 Kiba Arms .308 muzzle device adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM_7.62x39_Kiba_Arms_.308_muzzle_device_adapter",
+  "revisionId": 362913,
+  "lastEdited": "2026-10-03T10:55:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-1",
+    "node": "615d8e9867085e45ef1409c6",
+    "ID": "muzzle_ak_kiba_thread_adapter_762x51"
+  },
+  "sections": []
+}

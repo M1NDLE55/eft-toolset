@@ -1,0 +1,52 @@
+{
+  "title": "SIG MCX-SPEAR 6.8x51 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_MCX-SPEAR_6.8x51_assault_rifle",
+  "revisionId": 340658,
+  "lastEdited": "2026-04-21T18:10:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "4.209 kg",
+    "grid": "6x2",
+    "trader": "Peacekeeper LL4: Standard after completing Lightkeeper's task Trouble in the Big City, Ref LL4",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "1500",
+    "ergonomics": "46.5",
+    "velocity": "878 m/s",
+    "range": "500 m",
+    "MOA": "1.43",
+    "Weaprecoil": "Vertical: 77, Horizontal: 230",
+    "rof": "800",
+    "caliber": "6.8x51mm",
+    "node": "65290f395ae2ae97b80fdf2d",
+    "ID": "weapon_sig_mcx_spear_68x51"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Killer Argument"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On Rogues\n- On the gun walls inside the KIBA Arms store in the ULTRA shopping mall on Interchange\n- On the gun rack inside the security room (labeled 1) within the containment block in The Lab"
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| MCX SPEAR CQB |"
+    }
+  ]
+}

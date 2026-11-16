@@ -1,0 +1,25 @@
+{
+  "title": "TG-y sample from the laboratory block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TG-y_sample_from_the_laboratory_block",
+  "revisionId": 347949,
+  "lastEdited": "2026-07-17T07:28:04Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6a446e195839ffe2430a4de5",
+    "id": "q_dark_lab_tg_proba2"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest My Blood Type Mark is on the Sleeve from Therapist"
+    }
+  ]
+}

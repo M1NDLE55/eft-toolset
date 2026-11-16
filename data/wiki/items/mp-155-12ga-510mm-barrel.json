@@ -1,0 +1,27 @@
+{
+  "title": "MP-155 12ga 510mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_12ga_510mm_barrel",
+  "revisionId": 229343,
+  "lastEdited": "2023-02-23T21:33:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.8 kg",
+    "grid": "3x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-5",
+    "velocity": "+5.4",
+    "MOA": "21.31",
+    "recoil": "-3",
+    "Dura Burn": "-5",
+    "Heat": "-8",
+    "Cooling": "-4",
+    "node": "6076c1b9f2cb2e02a42acedc",
+    "ID": "barrel_mp155_510mm_12g"
+  },
+  "sections": []
+}

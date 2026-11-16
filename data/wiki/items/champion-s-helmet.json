@@ -1,0 +1,35 @@
+{
+  "title": "Champion's helmet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Champion's_helmet",
+  "revisionId": 348630,
+  "lastEdited": "2026-07-30T22:18:12Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.9 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 1",
+    "material": "Ultra high molecular weight polyethylene, Combined materials",
+    "armor": "Head top, Nape: 4 , Eyes, Jaws, Face: 3",
+    "armor coverage": "Head top, Nape, Eyes, Jaws, Face",
+    "durability": "100",
+    "RicochetChance": "Medium",
+    "penalties": "+0% movement speed, -2% turn speed, -1% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "68bee28f79c8186398098e6f",
+    "id": "item_equipment_helmet_champion_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

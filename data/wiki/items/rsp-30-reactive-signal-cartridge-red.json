@@ -1,0 +1,37 @@
+{
+  "title": "RSP-30 reactive signal cartridge (Red)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RSP-30_reactive_signal_cartridge_(Red)",
+  "revisionId": 358622,
+  "lastEdited": "2026-09-10T22:40:53Z",
+  "kind": "ammo",
+  "categories": [
+    "Handheld flares",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handheld flare",
+    "weight": "0.19 kg",
+    "grid": "1x2",
+    "sightrange": "100",
+    "ergonomics": "51",
+    "velocity": "80 m/s",
+    "damage": "40",
+    "penetration": "0",
+    "armor damage": "60",
+    "node": "62178c4d4ecf221597654e3d",
+    "id": "weapon_rsp30_red"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Firing this flare into the sky will call in an airdrop and illuminate the surrounding area for 20 seconds after ignition\n- (Unavailable on Ground Zero, Factory, The Lab, The Labyrinth, Terminal, Icebreaker)\n\n- The flare is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Ground cache\n- Weapon box (6x2)\n- Weapon box (4x4)\n- Weapon box (6x4)\n- Weapon box (6x6)"
+    }
+  ]
+}

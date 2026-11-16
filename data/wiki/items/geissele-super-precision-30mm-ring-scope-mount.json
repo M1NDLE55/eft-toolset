@@ -1,0 +1,27 @@
+{
+  "title": "Geissele Super Precision 30mm ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Geissele_Super_Precision_30mm_ring_scope_mount",
+  "revisionId": 338480,
+  "lastEdited": "2026-03-15T14:38:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.194 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4: Black, DDC",
+    "ergonomics": "+0.5",
+    "node": "618b9643526131765025ab35 618bab21526131765025ab3f",
+    "ID": "mount_all_geissele_super_precision_30mm mount_all_geissele_super_precision_30mm_ddc"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This scope mount is inoperable without the or installed in the \"Mount\" slot."
+    }
+  ]
+}

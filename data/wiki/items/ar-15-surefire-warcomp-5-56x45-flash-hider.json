@@ -1,0 +1,25 @@
+{
+  "title": "AR-15 SureFire WarComp 5.56x45 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_SureFire_WarComp_5.56x45_flash_hider",
+  "revisionId": 349992,
+  "lastEdited": "2026-08-05T02:29:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-1",
+    "accuracy": "+2",
+    "recoil": "-5",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "5c6d710d2e22165df16b81e7",
+    "ID": "muzzle_ar15_surefire_warcomp_556_556x45"
+  },
+  "sections": []
+}

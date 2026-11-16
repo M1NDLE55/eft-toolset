@@ -1,0 +1,20 @@
+{
+  "title": "AR-15 Phase5 Hexone buffer tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Phase5_Hexone_buffer_tube",
+  "revisionId": 354980,
+  "lastEdited": "2026-08-18T02:00:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.18 kg",
+    "grid": "2x1",
+    "ergonomics": "+2",
+    "node": "698b337c49b46ae2d0092e7f",
+    "ID": "stock_ar15_phase5_hexone_buffer_tube"
+  },
+  "sections": []
+}

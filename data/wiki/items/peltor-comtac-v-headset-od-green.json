@@ -1,0 +1,29 @@
+{
+  "title": "Peltor ComTac V headset (OD Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Peltor_ComTac_V_headset_(OD_Green)",
+  "revisionId": 320882,
+  "lastEdited": "2025-11-11T20:45:14Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.335 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "66b5f693acff495a294927e3",
+    "id": "item_equipment_headset_comtac_v"
+  },
+  "sections": [
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Another Shipping Delay"
+    }
+  ]
+}

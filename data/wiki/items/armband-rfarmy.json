@@ -1,0 +1,31 @@
+{
+  "title": "Armband (RFARMY)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(RFARMY)",
+  "revisionId": 363154,
+  "lastEdited": "2026-10-04T23:03:53Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "619bdeb986e01e16f839a99e",
+    "id": "item_equipment_armband_russia"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Getting Some Air"
+    }
+  ]
+}

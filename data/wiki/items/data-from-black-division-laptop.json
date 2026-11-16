@@ -1,0 +1,19 @@
+{
+  "title": "Data from Black Division laptop",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Data_from_Black_Division_laptop",
+  "revisionId": 356023,
+  "lastEdited": "2026-08-25T14:28:38Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "node": "6a6692d4beccfa243d0bb575",
+    "id": "q_kord_decripted_data"
+  },
+  "sections": []
+}

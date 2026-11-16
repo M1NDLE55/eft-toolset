@@ -1,0 +1,22 @@
+{
+  "title": "HK G36 IDZ Concave Buttpad",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_IDZ_Concave_Buttpad",
+  "revisionId": 342738,
+  "lastEdited": "2026-04-30T21:07:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+2",
+    "recoil": "-1",
+    "node": "67110d6fa71d1f123d021cd3",
+    "ID": "stock_g36_hk_idz_concave_buttpad"
+  },
+  "sections": []
+}

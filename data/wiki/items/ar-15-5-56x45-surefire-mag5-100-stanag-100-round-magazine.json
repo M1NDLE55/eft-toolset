@@ -1,0 +1,29 @@
+{
+  "title": "AR-15 5.56x45 SureFire MAG5-100 STANAG 100-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_SureFire_MAG5-100_STANAG_100-round_magazine",
+  "revisionId": 352965,
+  "lastEdited": "2026-08-09T22:10:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.27 kg",
+    "grid": "1x3",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-20",
+    "checkaccuracy": "No",
+    "checkmodifier": "+25",
+    "loadmodifier": "+15",
+    "feedfailure": "Very high",
+    "capacity": "100",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "5c6592372e221600133e47d7",
+    "ID": "mag_stanag_surefire_mag5_556x45_100"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Aimpoint PRO reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aimpoint_PRO_reflex_sight",
+  "revisionId": 332996,
+  "lastEdited": "2026-01-23T21:40:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.27 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "0",
+    "ergonomics": "-2",
+    "modes": "1",
+    "node": "61659f79d92c473c770213ee",
+    "ID": "scope_base_aimpoint_pro"
+  },
+  "sections": []
+}

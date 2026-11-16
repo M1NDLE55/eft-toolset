@@ -1,0 +1,21 @@
+{
+  "title": "M1895/MXLR Ranger Point Precision trigger",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1895/MXLR_Ranger_Point_Precision_trigger",
+  "revisionId": 354984,
+  "lastEdited": "2026-08-18T02:11:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+1.5",
+    "node": "67c5411f26265106dd06979a 67ff1e209d1f778973073376 67ff1e2b3e43c3abb701c7c6",
+    "ID": "trigger_m1895_ranger_point_precision_trigger_x trigger_m1895_ranger_point_precision_trigger_x_blk trigger_m1895_ranger_point_precision_trigger_x_gld"
+  },
+  "sections": []
+}

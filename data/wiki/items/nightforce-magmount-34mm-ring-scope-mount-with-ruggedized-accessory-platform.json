@@ -1,0 +1,21 @@
+{
+  "title": "Nightforce Magmount 34mm ring scope mount with Ruggedized Accessory Platform",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nightforce_Magmount_34mm_ring_scope_mount_with_Ruggedized_Accessory_Platform",
+  "revisionId": 240032,
+  "lastEdited": "2023-07-29T20:22:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "-1",
+    "node": "5aa66c72e5b5b00016327c93",
+    "ID": "mount_all_nightforce_x_treme_duty_ultralite_one_piece_magmount_multimount_34mm"
+  },
+  "sections": []
+}

@@ -1,0 +1,20 @@
+{
+  "title": "AS VAL Rotor 43 pistol grip with buffer tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_Rotor_43_pistol_grip_with_buffer_tube",
+  "revisionId": 353027,
+  "lastEdited": "2026-08-09T22:30:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.065 kg",
+    "grid": "2x1",
+    "ergonomics": "-0.5",
+    "node": "5a69a2ed8dc32e000d46d1f1",
+    "ID": "pistolgrip_val_rotor_43_tube_adapter"
+  },
+  "sections": []
+}

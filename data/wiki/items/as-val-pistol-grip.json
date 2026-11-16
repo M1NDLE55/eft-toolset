@@ -1,0 +1,21 @@
+{
+  "title": "AS VAL pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_pistol_grip",
+  "revisionId": 340635,
+  "lastEdited": "2026-04-21T09:15:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.146 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "+3",
+    "node": "6565b91666492762f5029c0b 57c44fa82459772d2d75e415",
+    "ID": "pistolgrip_val_tochmash_val_std_blk pistolgrip_val_tochmash_val_std"
+  },
+  "sections": []
+}

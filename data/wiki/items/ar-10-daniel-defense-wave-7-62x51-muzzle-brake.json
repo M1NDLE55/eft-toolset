@@ -1,0 +1,28 @@
+{
+  "title": "AR-10 Daniel Defense WAVE 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Daniel_Defense_WAVE_7.62x51_muzzle_brake",
+  "revisionId": 337684,
+  "lastEdited": "2026-03-06T01:21:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.109 kg",
+    "grid": "1x1",
+    "price": "₽8,938",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2.5",
+    "accuracy": "+1",
+    "recoil": "-8",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "loot xp": "20",
+    "exam xp": "5",
+    "node": "5d1f819086f7744b355c219b",
+    "ID": "muzzle_ar10_dd_wave_muzzle_brake_762x51"
+  },
+  "sections": []
+}

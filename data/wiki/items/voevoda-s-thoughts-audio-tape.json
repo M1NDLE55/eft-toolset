@@ -1,0 +1,31 @@
+{
+  "title": "Voevoda's thoughts audio tape",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Voevoda's_thoughts_audio_tape",
+  "revisionId": 348011,
+  "lastEdited": "2026-07-19T00:16:39Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "2:03",
+    "node": "6888965ac122cae7a20765fa",
+    "ID": "item_info_recorder_tape_voevoda_02"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Voevoda: Ahem… I never kept a diary. Thought it was a stupid idea. But now I feel like I should share my thoughts with someone.\n\nVoevoda: The Bogatyrs got into a bad mess. Some of my boys are dead, others wounded. Maybe that is why I keep thinking this is not an accident.\n\nVoevoda: This is not only happening here. Tarkov, conflicts in the Middle East, hunger, poverty, global warming…\n\nVoevoda: People seem to be going mad! But strangely, it's very sudden. A decent family man turns and shoots his little girls. It's the same here. Tarkov used to be a prosperous city. People came here on purpose. Then… the sore burst and it spilled out…\n\nVoevoda: What if it's the Earth itself trying to rid itself of the filth, this humanity virus? People only harm this planet. Maybe this is the end for all of us?\n\nVoevoda: I do not know. But those thoughts just keep coming. End transmission."
+    }
+  ]
+}

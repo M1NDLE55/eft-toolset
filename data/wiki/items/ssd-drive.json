@@ -1,0 +1,32 @@
+{
+  "title": "SSD drive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SSD_drive",
+  "revisionId": 358749,
+  "lastEdited": "2026-09-10T23:04:39Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "loot xp": "40",
+    "exam xp": "10",
+    "node": "590c392f86f77444754deb29",
+    "id": "item_barter_electr_ssd"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- PC block\n- Safe\n- Sport bag\n- Dead Scav\n- Weapon box (6x6)\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: It is modeled after a SSD Samsung EVO 840 250 GB SSD"
+    }
+  ]
+}

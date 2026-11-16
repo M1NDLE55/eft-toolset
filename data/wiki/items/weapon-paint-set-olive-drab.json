@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Olive_Drab)",
+  "revisionId": 348501,
+  "lastEdited": "2026-07-30T21:22:50Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67d7f22f189edf02c4073bb0",
+    "id": "item_camo_solid_color_olive"
+  },
+  "sections": []
+}

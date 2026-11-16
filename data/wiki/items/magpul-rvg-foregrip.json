@@ -1,0 +1,22 @@
+{
+  "title": "Magpul RVG foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magpul_RVG_foregrip",
+  "revisionId": 356480,
+  "lastEdited": "2026-08-26T02:05:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.082 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2: Black, FDE",
+    "ergonomics": "+4",
+    "recoil": "-1",
+    "node": "59fc48e086f77463b1118392 5fce0cf655375d18a253eff0",
+    "ID": "foregrip_all_magpul_rvg_blk foregrip_all_magpul_rvg_fde"
+  },
+  "sections": []
+}

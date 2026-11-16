@@ -1,0 +1,35 @@
+{
+  "title": "7.62x54mm R FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_FMJ",
+  "revisionId": 324995,
+  "lastEdited": "2025-11-23T18:40:53Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x54mmR ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.024 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "velocity": "760 m/s",
+    "damage": "84",
+    "penetration": "36",
+    "armor damage": "63",
+    "ricochet": "16%",
+    "heat": "+53.4",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "64b8f7968532cf95ee0a0dbf",
+    "id": "patron_762x54r_fmj"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

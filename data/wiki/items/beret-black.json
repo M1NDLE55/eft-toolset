@@ -1,0 +1,21 @@
+{
+  "title": "Beret (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Beret_(Black)",
+  "revisionId": 310163,
+  "lastEdited": "2025-04-13T10:17:15Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL3",
+    "node": "5f60e6403b85f6263c14558c",
+    "id": "item_equipment_head_beret_blk"
+  },
+  "sections": []
+}

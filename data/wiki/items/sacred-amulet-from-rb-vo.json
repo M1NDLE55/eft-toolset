@@ -1,0 +1,25 @@
+{
+  "title": "Sacred Amulet from RB-VO",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sacred_Amulet_from_RB-VO",
+  "revisionId": 348809,
+  "lastEdited": "2026-08-01T14:25:07Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6908ef28e594d0dd30029936",
+    "id": "quest_cultist_amulet4"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player sided with Lightkeeper."
+    }
+  ]
+}

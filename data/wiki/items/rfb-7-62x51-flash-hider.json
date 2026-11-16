@@ -1,0 +1,24 @@
+{
+  "title": "RFB 7.62x51 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RFB_7.62x51_flash_hider",
+  "revisionId": 337731,
+  "lastEdited": "2026-03-06T01:49:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "ergonomics": "-1",
+    "accuracy": "+0",
+    "recoil": "-6",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5f2aa4559b44de6b1b4e68d1",
+    "ID": "muzzle_all_kel_tec_rfb_std_762x51"
+  },
+  "sections": []
+}

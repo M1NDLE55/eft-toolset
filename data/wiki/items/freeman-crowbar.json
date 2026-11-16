@@ -1,0 +1,36 @@
+{
+  "title": "Freeman crowbar",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Freeman_crowbar",
+  "revisionId": 356590,
+  "lastEdited": "2026-08-26T11:21:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "1.9 kg",
+    "grid": "1x3",
+    "fire modes": "Chop 25 Damage, Stab 34 Damage",
+    "range": "Chop 0.5m, Stab 0.6m",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5c07df7f0db834001b73588a",
+    "ID": "weapon_gf_crowbar"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Scavs\n- Kaban"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: This is a reference to the crowbar wielded by \"Gordon Freeman\", protagonist of the \"Half-Life\" video game franchise."
+    }
+  ]
+}

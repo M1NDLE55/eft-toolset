@@ -1,0 +1,40 @@
+{
+  "title": "7.62x54mm R PS gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_PS_gzh",
+  "revisionId": 366572,
+  "lastEdited": "2026-10-31T04:24:17Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x54mmR ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.024 kg",
+    "grid": "1x1",
+    "price": "₽238",
+    "trader": "Prapor LL4, after completing his task The Punisher - Part 4",
+    "velocity": "875 m/s",
+    "damage": "84",
+    "accuracy": "+10",
+    "recoil": "+10",
+    "penetration": "45",
+    "armor damage": "84",
+    "ricochet": "28.5%",
+    "fragmentation": "8.3%",
+    "durability burn": "+15",
+    "heat": "+118.5",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "59e77a2386f7742ee578960a",
+    "id": "patron_762х54R_7N1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

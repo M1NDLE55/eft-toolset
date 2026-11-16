@@ -1,0 +1,27 @@
+{
+  "title": "VPO-215-02 .366TKM 600mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-215-02_.366TKM_600mm_barrel",
+  "revisionId": 342073,
+  "lastEdited": "2026-04-28T01:31:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.2 kg",
+    "grid": "3x1",
+    "price": "₽5,100",
+    "ergonomics": "-30",
+    "velocity": "+6",
+    "accuracy": "+5",
+    "MOA": "1.41",
+    "recoil": "-7",
+    "Heat": "-17",
+    "Cooling": "-12",
+    "node": "5de65547883dde217541644b",
+    "ID": "barrel_vpo215_600mm_366tkm"
+  },
+  "sections": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Revision ShadowStrike tactical glasses (Tan)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Revision_ShadowStrike_tactical_glasses_(Tan)",
+  "revisionId": 348847,
+  "lastEdited": "2026-08-01T19:38:34Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.03 kg",
+    "grid": "2x1",
+    "trader": "Ref LL1, after unlocking it in the Factory Tactical Map",
+    "blindness protect": "30%",
+    "node": "69cfc7699aed3ea997094cce",
+    "ID": "item_equipment_glasses_revision_shadowstrike_tan_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen\n- Contrary to the description, this item doesn't provide any ballistic protection\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

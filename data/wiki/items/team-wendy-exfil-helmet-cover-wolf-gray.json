@@ -1,0 +1,26 @@
+{
+  "title": "Team Wendy EXFIL helmet cover (Wolf Gray)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Team_Wendy_EXFIL_helmet_cover_(Wolf_Gray)",
+  "revisionId": 361547,
+  "lastEdited": "2026-09-23T20:56:28Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Vanity helmet mod",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in the The Lab Tactical Map",
+    "node": "6a835600c0378ed820059151",
+    "ID": "item_equipment_helmet_exfil_cover_grey_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item does not provide any additional armor.\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

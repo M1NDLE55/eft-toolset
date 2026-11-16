@@ -1,0 +1,28 @@
+{
+  "title": "AR-10 2A Armanent X3 7.62x51 compensator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_2A_Armanent_X3_7.62x51_compensator",
+  "revisionId": 337555,
+  "lastEdited": "2026-03-05T23:52:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "price": "₽7,800",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-2.5",
+    "accuracy": "+4",
+    "recoil": "-9",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5b7d693d5acfc43bca706a3d",
+    "ID": "muzzle_ar10_2a_x3_titanium_compensator_762x51"
+  },
+  "sections": []
+}

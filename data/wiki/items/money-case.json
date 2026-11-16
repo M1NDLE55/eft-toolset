@@ -1,0 +1,26 @@
+{
+  "title": "Money case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Money_case",
+  "revisionId": 345385,
+  "lastEdited": "2026-05-28T19:23:17Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "5 kg",
+    "grid": "3x2",
+    "effect": "Provides 49 inventory slots while only taking up 6",
+    "node": "59fb016586f7746d0d4b423a",
+    "id": "item_container_money"
+  },
+  "sections": [
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Money case is a container with the purpose of saving space within the player's inventory. It provides 49 inventory slots in a 7x7 grid and only takes up 6 inventory slots itself. It can only store:\n- Currency\n- Physical Bitcoin\n- Lega Medal"
+    }
+  ]
+}

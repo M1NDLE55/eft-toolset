@@ -1,0 +1,31 @@
+{
+  "title": "Korund-VM ballistic plate (Side)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Korund-VM_ballistic_plate_(Side)",
+  "revisionId": 320538,
+  "lastEdited": "2025-10-28T13:50:50Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "1.1 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "material": "Armor Steel",
+    "armor": "5",
+    "armor coverage": "Left Plate , Right Plate",
+    "durability": "25",
+    "penalties": "-0.5% movement speed, +0% turn speed, +0% Ergonomics",
+    "node": "654a4f8bc721968a4404ef18",
+    "id": "item_equipment_plate_korund_5class_side"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Left Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

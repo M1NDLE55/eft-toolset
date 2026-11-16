@@ -1,0 +1,30 @@
+{
+  "title": "ASh-12 12.7x55 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ASh-12_12.7x55_10-round_magazine",
+  "revisionId": 341757,
+  "lastEdited": "2026-04-26T21:25:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.35 kg",
+    "grid": "1x2",
+    "price": "₽6,600",
+    "trader": "Prapor LL3",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "checkmodifier": "-15",
+    "loadmodifier": "-10",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "12.7x55mm",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5caf1041ae92157c28402e3f",
+    "ID": "mag_ash12_ckib_ash12_std_127x55_10"
+  },
+  "sections": []
+}

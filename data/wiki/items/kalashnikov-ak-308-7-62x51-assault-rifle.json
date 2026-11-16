@@ -1,0 +1,31 @@
+{
+  "title": "Kalashnikov AK-308 7.62x51 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kalashnikov_AK-308_7.62x51_assault_rifle",
+  "revisionId": 357136,
+  "lastEdited": "2026-08-30T22:32:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.889 kg",
+    "grid": "5x2",
+    "trader": "Prapor LL4, after completing The Punisher - Part 5",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "600",
+    "ergonomics": "60.4",
+    "velocity": "835 m/s",
+    "range": "800 m",
+    "MOA": "1.79",
+    "Weaprecoil": "Vertical: 103, Horizontal: 221",
+    "rof": "700",
+    "caliber": "7.62x51mm NATO",
+    "node": "689166b6c2d6fa42e7044756",
+    "ID": "weapon_izhmash_ak308_762x51"
+  },
+  "sections": []
+}

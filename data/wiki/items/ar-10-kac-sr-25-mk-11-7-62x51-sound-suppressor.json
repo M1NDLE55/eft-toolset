@@ -1,0 +1,26 @@
+{
+  "title": "AR-10 KAC SR-25/Mk.11 7.62x51 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_KAC_SR-25/Mk.11_7.62x51_sound_suppressor",
+  "revisionId": 342897,
+  "lastEdited": "2026-04-30T22:14:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.848 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-18",
+    "velocity": "+0.8",
+    "recoil": "-9",
+    "Dura Burn": "+88",
+    "Heat": "+15",
+    "Cooling": "+5",
+    "node": "6932af22cccd2b808a04385e 6936be064737190b66053bb4",
+    "ID": "silencer_base_kac_sr25_mk11_suppressor_762x51 silencer_base_kac_sr25_mk11_suppressor_762x51_tau"
+  },
+  "sections": []
+}

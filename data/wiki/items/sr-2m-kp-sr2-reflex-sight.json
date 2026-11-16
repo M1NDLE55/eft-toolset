@@ -1,0 +1,24 @@
+{
+  "title": "SR-2M KP-SR2 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-2M_KP-SR2_reflex_sight",
+  "revisionId": 352233,
+  "lastEdited": "2026-08-07T20:58:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.27 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-3",
+    "modes": "1",
+    "node": "62ff9920fe938a24c90c10d2",
+    "ID": "scope_sr2m_tochmash_kp_sr2"
+  },
+  "sections": []
+}

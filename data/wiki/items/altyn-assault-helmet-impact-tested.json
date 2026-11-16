@@ -1,0 +1,35 @@
+{
+  "title": "Altyn assault helmet (Impact Tested)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Altyn_assault_helmet_(Impact_Tested)",
+  "revisionId": 361476,
+  "lastEdited": "2026-09-23T19:10:25Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "2.5 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in Panacea crate",
+    "material": "Armor steel",
+    "armor": "5",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "81",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, -4% turn speed, -3% Ergonomics, High sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6a82d9800e3db08b8b0af0eb",
+    "id": "item_equipment_helmet_altyn_damaged_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

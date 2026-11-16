@@ -1,0 +1,27 @@
+{
+  "title": "HK417 7.62x51 16.5 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK417_7.62x51_16.5_inch_barrel",
+  "revisionId": 351685,
+  "lastEdited": "2026-08-06T04:49:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.2 kg",
+    "grid": "4x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "-23",
+    "velocity": "-1.2",
+    "MOA": "1.13",
+    "recoil": "-10.5",
+    "Dura Burn": "-18",
+    "Heat": "-7",
+    "Cooling": "-2",
+    "node": "61702be9faa1272e431522c3",
+    "ID": "barrel_417_hk_421mm_762x51"
+  },
+  "sections": []
+}

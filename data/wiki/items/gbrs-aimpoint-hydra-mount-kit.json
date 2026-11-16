@@ -1,0 +1,21 @@
+{
+  "title": "GBRS Aimpoint Hydra Mount Kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/GBRS_Aimpoint_Hydra_Mount_Kit",
+  "revisionId": 305475,
+  "lastEdited": "2025-02-08T22:01:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.141 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3: Black, FDE",
+    "ergonomics": "-2",
+    "node": "65392f611406374f82152ba5 653931da5db71d30ab1d6296",
+    "ID": "mount_all_gbrs_hydra_micro_kit mount_all_gbrs_hydra_micro_kit_fde"
+  },
+  "sections": []
+}

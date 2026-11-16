@@ -1,0 +1,26 @@
+{
+  "title": "Armband (For Humanity)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(For_Humanity)",
+  "revisionId": 347519,
+  "lastEdited": "2026-06-30T22:53:51Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "68d41fde2937f3f17c04864d",
+    "id": "Item_equipment_armband_story_04_for_humanity"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only obtainable by escaping from Tarkov with the \"Savior\" ending"
+    }
+  ]
+}

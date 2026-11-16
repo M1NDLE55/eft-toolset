@@ -1,0 +1,24 @@
+{
+  "title": "KMZ 1P59 3-10x riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KMZ_1P59_3-10x_riflescope",
+  "revisionId": 321737,
+  "lastEdited": "2025-11-16T19:13:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.94 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "zeroing": "50, 100, 150, 200, 250, 300, 350, 400, 450",
+    "sightrange": "800",
+    "ergonomics": "-8",
+    "modes": "2",
+    "node": "5d0a3a58d7ad1a669c15ca14",
+    "ID": "scope_base_kmz_1p59_3_10x"
+  },
+  "sections": []
+}

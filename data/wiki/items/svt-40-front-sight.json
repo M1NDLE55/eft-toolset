@@ -1,0 +1,21 @@
+{
+  "title": "SVT-40 front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVT-40_front_sight",
+  "revisionId": 318879,
+  "lastEdited": "2025-10-02T22:15:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "sightrange": "300",
+    "node": "64119d672c6d6f921a0929fb",
+    "ID": "sight_front_svt40_toz_std"
+  },
+  "sections": []
+}

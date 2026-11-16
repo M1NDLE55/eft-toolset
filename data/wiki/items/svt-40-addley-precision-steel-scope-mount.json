@@ -1,0 +1,21 @@
+{
+  "title": "SVT-40 Addley Precision Steel Scope Mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVT-40_Addley_Precision_Steel_Scope_Mount",
+  "revisionId": 343173,
+  "lastEdited": "2026-05-03T20:25:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-1.5",
+    "node": "68889c930b29b8032504f369",
+    "ID": "mount_svt40_addley_precision_steel_scope_mount"
+  },
+  "sections": []
+}

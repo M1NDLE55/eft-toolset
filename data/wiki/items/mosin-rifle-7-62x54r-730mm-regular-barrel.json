@@ -1,0 +1,28 @@
+{
+  "title": "Mosin Rifle 7.62x54R 730mm regular barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_7.62x54R_730mm_regular_barrel",
+  "revisionId": 355398,
+  "lastEdited": "2026-08-21T19:51:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.7 kg",
+    "grid": "4x1",
+    "price": "₽4,285",
+    "trader": "Prapor LL1",
+    "ergonomics": "-35",
+    "velocity": "+0",
+    "accuracy": "+5",
+    "MOA": "1.31",
+    "recoil": "-18.3",
+    "Heat": "-19",
+    "Cooling": "-15",
+    "node": "5ae09bff5acfc4001562219d",
+    "ID": "barrel_mosin_izhmash_mosin_std_730mm"
+  },
+  "sections": []
+}

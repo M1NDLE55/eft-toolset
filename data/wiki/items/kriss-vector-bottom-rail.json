@@ -1,0 +1,21 @@
+{
+  "title": "KRISS Vector bottom rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KRISS_Vector_bottom_rail",
+  "revisionId": 226812,
+  "lastEdited": "2023-01-29T09:30:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+0",
+    "node": "5fbb976df9986c4cff3fe5f2",
+    "ID": "mount_vector_kriss_bottom_rail"
+  },
+  "sections": []
+}

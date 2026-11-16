@@ -1,0 +1,23 @@
+{
+  "title": "M14 SA Enlarged Military Aperture rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_SA_Enlarged_Military_Aperture_rear_sight",
+  "revisionId": 211068,
+  "lastEdited": "2022-09-20T10:58:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "price": "₽470",
+    "sightrange": "500",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5abcbb20d8ce87001773e258",
+    "ID": "sight_rear_m14_springfield_armory_enlarged_military_aperture_135"
+  },
+  "sections": []
+}

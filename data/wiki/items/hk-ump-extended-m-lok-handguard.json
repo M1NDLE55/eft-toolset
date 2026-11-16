@@ -1,0 +1,23 @@
+{
+  "title": "HK UMP Extended M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_UMP_Extended_M-LOK_handguard",
+  "revisionId": 357403,
+  "lastEdited": "2026-09-01T17:57:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.209 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+5",
+    "Heat": "-10",
+    "Cooling": "+5",
+    "node": "6a146c81f77fa1814701c172",
+    "ID": "handguard_ump_hk_extended_handguard_mlok"
+  },
+  "sections": []
+}

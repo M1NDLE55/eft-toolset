@@ -1,0 +1,38 @@
+{
+  "title": "23x75mm Zvezda flashbang round",
+  "url": "https://escapefromtarkov.fandom.com/wiki/23x75mm_Zvezda_flashbang_round",
+  "revisionId": 363184,
+  "lastEdited": "2026-10-04T23:58:03Z",
+  "kind": "ammo",
+  "categories": [
+    "23x75mmR ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flashbang round",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3, after completing his task Our Own Land/Ironclad Proof",
+    "velocity": "80 m/s",
+    "damage": "0",
+    "recoil": "+20",
+    "penetration": "0",
+    "armor damage": "0",
+    "ricochet": "40%",
+    "durability burn": "+300",
+    "heat": "+250",
+    "feedfailure": "Very low",
+    "misfire": "Very high",
+    "effects": "Stun and flash",
+    "node": "5e85a9f4add9fe03027d9bf1",
+    "id": "patron_23x75_star"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- When fired, is added to the shooter for 7 seconds, causing tinnitus and muffled audio\n- When fired, shooter-facing entities in a 160° cone in front of the barrel receive for 20 seconds, causing a blinding effect that starts to fade out after 10 seconds, as well as a visual impairment which lasts 90 seconds\n- Within a 10m radius around the shooter, is added to entities for 15 seconds, causing tinnitus and muffled audio"
+    }
+  ]
+}

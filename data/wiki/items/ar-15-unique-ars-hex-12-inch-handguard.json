@@ -1,0 +1,29 @@
+{
+  "title": "AR-15 Unique-ARs HEX 12 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Unique-ARs_HEX_12_inch_handguard",
+  "revisionId": 362073,
+  "lastEdited": "2026-09-24T19:30:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.245 kg",
+    "grid": "2x1",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 3",
+    "ergonomics": "+17",
+    "Heat": "-5.5",
+    "Cooling": "+8.8",
+    "node": "6a6759a5ca1e7d40a007a56f",
+    "ID": "handguard_ar15_unique_ars_hex_12_inch"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

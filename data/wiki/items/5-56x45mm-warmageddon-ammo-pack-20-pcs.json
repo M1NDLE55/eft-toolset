@@ -1,0 +1,29 @@
+{
+  "title": "5.56x45mm Warmageddon ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_Warmageddon_ammo_pack_(20_pcs)",
+  "revisionId": 367195,
+  "lastEdited": "2026-11-02T23:11:58Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "5c11279ad174af029d64592b",
+    "ID": "item_ammo_box_556x45_20_warmageddon"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 4 can be obtained as a quest reward from The Survivalist Path - Junkie."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter egg and References: 5.56x45 Warmageddon 20 pack is based off \"Nosler's Varmageddon Varmint 223 Rem 55gr FB Tipped ammunition\"."
+    }
+  ]
+}

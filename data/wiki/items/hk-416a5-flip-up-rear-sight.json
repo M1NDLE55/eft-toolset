@@ -1,0 +1,25 @@
+{
+  "title": "HK 416A5 flip-up rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416A5_flip-up_rear_sight",
+  "revisionId": 210871,
+  "lastEdited": "2022-09-20T10:49:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.14 kg",
+    "grid": "1x1",
+    "price": "₽800",
+    "trader": "Peacekeeper LL2",
+    "sightrange": "300",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "loot xp": "20",
+    "node": "5bb20e49d4351e3bac1212de",
+    "ID": "sight_rear_all_hk_416_flip_up"
+  },
+  "sections": []
+}

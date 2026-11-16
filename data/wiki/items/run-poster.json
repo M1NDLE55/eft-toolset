@@ -1,0 +1,30 @@
+{
+  "title": "RUN poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RUN_poster",
+  "revisionId": 331632,
+  "lastEdited": "2026-01-07T19:33:51Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a1e502eac6c76e104ea1e",
+    "id": "item_barter_flyers_run"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

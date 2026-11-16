@@ -1,0 +1,21 @@
+{
+  "title": "SVDS Lynx Arms AK-series pistol grip adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVDS_Lynx_Arms_AK-series_pistol_grip_adapter",
+  "revisionId": 342389,
+  "lastEdited": "2026-04-29T01:00:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.033 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-0.5",
+    "node": "6516b129609aaf354b34b3a8",
+    "ID": "pistolgrip_svd_s_lynxarms_svd_s_to_ak_adapter"
+  },
+  "sections": []
+}

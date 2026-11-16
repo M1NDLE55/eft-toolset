@@ -1,0 +1,35 @@
+{
+  "title": "NPP KlASS Tor-2 helmet (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NPP_KlASS_Tor-2_helmet_(Olive_Drab)",
+  "revisionId": 344329,
+  "lastEdited": "2026-05-24T22:00:44Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "2.4 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL3",
+    "material": "Combined materials",
+    "armor": "3",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "81",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, +0% turn speed, -3% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "65719f0775149d62ce0a670b",
+    "ID": "item_equipment_helmet_tor_2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

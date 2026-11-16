@@ -1,0 +1,28 @@
+{
+  "title": "AKM PBS-1 7.62x39 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM_PBS-1_7.62x39_sound_suppressor",
+  "revisionId": 340757,
+  "lastEdited": "2026-04-22T07:18:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.435 kg",
+    "grid": "2x1",
+    "price": "₽41,930",
+    "trader": "Prapor LL3",
+    "ergonomics": "-13",
+    "velocity": "+0.4",
+    "accuracy": "-3",
+    "recoil": "-5",
+    "Dura Burn": "+80",
+    "Heat": "+14",
+    "Cooling": "+5",
+    "node": "5a0d63621526d8dba31fe3bf",
+    "ID": "silencer_akm_tochmash_pbs-1_762x39"
+  },
+  "sections": []
+}

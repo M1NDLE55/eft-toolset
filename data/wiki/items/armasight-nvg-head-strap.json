@@ -1,0 +1,23 @@
+{
+  "title": "Armasight NVG head strap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armasight_NVG_head_strap",
+  "revisionId": 344305,
+  "lastEdited": "2026-05-24T21:47:51Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Head Mount",
+    "slot": "Headwear",
+    "weight": "0.4 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL3",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5c066ef40db834001966a595",
+    "ID": "helmet_armasight_nvg_googles_mask"
+  },
+  "sections": []
+}

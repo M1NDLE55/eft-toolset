@@ -1,0 +1,22 @@
+{
+  "title": "AK-545 buffer tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-545_buffer_tube",
+  "revisionId": 337887,
+  "lastEdited": "2026-03-07T06:45:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.175 kg",
+    "grid": "2x1",
+    "ergonomics": "-1",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "node": "628b9a40717774443b15e9f2",
+    "ID": "stock_ak_sag_ak_stock_tube"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "M700 30mm integral ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_30mm_integral_ring_scope_mount",
+  "revisionId": 344118,
+  "lastEdited": "2026-05-20T13:07:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.246 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-1.5",
+    "node": "5bfebc5e0db834001a6694e5",
+    "ID": "mount_m700_remington_integral_scope_mount"
+  },
+  "sections": []
+}

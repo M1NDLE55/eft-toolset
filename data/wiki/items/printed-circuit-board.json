@@ -1,0 +1,28 @@
+{
+  "title": "Printed circuit board",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Printed_circuit_board",
+  "revisionId": 356951,
+  "lastEdited": "2026-08-30T09:37:52Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "35",
+    "exam xp": "5",
+    "node": "590a3b0486f7743954552bdb",
+    "id": "item_barter_electr_modem"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- PC block\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

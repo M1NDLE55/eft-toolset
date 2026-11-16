@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Windham Weaponry Rail Gas Block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Windham_Weaponry_Rail_Gas_Block",
+  "revisionId": 362918,
+  "lastEdited": "2026-10-03T10:58:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "recoil": "-2",
+    "Dura Burn": "-2",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "node": "56ea8d2fd2720b7c698b4570",
+    "ID": "gas_block_ar15_windham_weaponry_rail_gas_block"
+  },
+  "sections": []
+}

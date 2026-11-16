@@ -1,0 +1,26 @@
+{
+  "title": "AR-10 CMMG SV Brake 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_CMMG_SV_Brake_7.62x51_muzzle_brake",
+  "revisionId": 337769,
+  "lastEdited": "2026-03-06T02:07:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-2",
+    "accuracy": "+3",
+    "recoil": "-8",
+    "Heat": "-1.1",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "6065c6e7132d4d12c81fd8e1",
+    "ID": "muzzle_ar10_cmmg_sv_brake_compensator_762x51"
+  },
+  "sections": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "MP9 9x19 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP9_9x19_sound_suppressor",
+  "revisionId": 337706,
+  "lastEdited": "2026-03-06T01:37:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.29 kg",
+    "grid": "2x1",
+    "price": "₽25,400",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-10",
+    "velocity": "+0.8",
+    "recoil": "-2",
+    "Dura Burn": "+72",
+    "Heat": "+13",
+    "loot xp": "30",
+    "exam xp": "4",
+    "node": "5de8f2d5b74cd90030650c72",
+    "ID": "silencer_mp9_bt_supressor_9x19"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "9A-91 9x39 barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9A-91_9x39_barrel",
+  "revisionId": 342369,
+  "lastEdited": "2026-04-29T00:51:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.409 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+0",
+    "velocity": "+0",
+    "MOA": "4.37",
+    "recoil": "-3",
+    "Dura Burn": "+0",
+    "Heat": "+8.4",
+    "Cooling": "+12.5",
+    "node": "645122f6d4928d46d30be3ff",
+    "ID": "barrel_9a91_kbp_9a91_180mm_9x39"
+  },
+  "sections": []
+}

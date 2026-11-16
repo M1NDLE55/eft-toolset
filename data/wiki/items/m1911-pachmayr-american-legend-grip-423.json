@@ -1,0 +1,21 @@
+{
+  "title": "M1911 Pachmayr American Legend Grip 423",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911_Pachmayr_American_Legend_Grip_423",
+  "revisionId": 352626,
+  "lastEdited": "2026-08-09T20:02:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+5",
+    "node": "5ef366938cef260c0642acad",
+    "ID": "pistolgrip_m1911_pachmayr_american_legend_grip_423"
+  },
+  "sections": []
+}

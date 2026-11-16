@@ -1,0 +1,28 @@
+{
+  "title": "Glock Lone Wolf AlphaWolf Custom pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_Lone_Wolf_AlphaWolf_Custom_pistol_slide",
+  "revisionId": 314124,
+  "lastEdited": "2025-06-03T22:10:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.3 kg",
+    "grid": "2x1",
+    "price": "₽12,600",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+4",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-1",
+    "Dura Burn": "-2",
+    "Heat": "-5.2",
+    "Cooling": "+6",
+    "node": "5a7033908dc32e000a311392",
+    "ID": "reciever_glock_lone_wolf_alphawolf_custom_pat_5"
+  },
+  "sections": []
+}

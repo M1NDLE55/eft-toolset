@@ -1,0 +1,22 @@
+{
+  "title": "Fortis Shift tactical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fortis_Shift_tactical_foregrip",
+  "revisionId": 353692,
+  "lastEdited": "2026-08-14T21:39:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+12",
+    "recoil": "+0",
+    "node": "59f8a37386f7747af3328f06",
+    "ID": "foregrip_all_fortis_shift"
+  },
+  "sections": []
+}

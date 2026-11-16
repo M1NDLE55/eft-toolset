@@ -1,0 +1,51 @@
+{
+  "title": "Silver Badge",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Silver_Badge",
+  "revisionId": 364343,
+  "lastEdited": "2026-10-13T14:37:30Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5bc9bdb8d4351e003562b8a1",
+    "id": "item_barter_valuable_elibadge"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In Manager office\n- In Arsenal storage room"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In Ultra Medical Storage\n- In Saferoom EXFIL room"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In locked room East 205 - Accessible via East 206 balcony\n- In locked room East 222 (inside box) - Accessible via East 226 balcony\n- In locked room East 310\n- In locked room West 220"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator SheriffEli."
+    }
+  ]
+}

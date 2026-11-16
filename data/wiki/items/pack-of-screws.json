@@ -1,0 +1,26 @@
+{
+  "title": "Pack of screws",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pack_of_screws",
+  "revisionId": 323571,
+  "lastEdited": "2025-11-20T02:45:30Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "59e35ef086f7741777737012",
+    "id": "item_barter_building_screw"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    }
+  ]
+}

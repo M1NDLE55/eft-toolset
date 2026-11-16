@@ -1,0 +1,24 @@
+{
+  "title": "ELCAN SpecterDR 1x/4x scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ELCAN_SpecterDR_1x/4x_scope",
+  "revisionId": 363997,
+  "lastEdited": "2026-10-12T15:54:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.64 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3: Black, Peacekeeper LL4: FDE",
+    "zeroing": "Scope: 50, 100, 150, 200, Iron sight: 25",
+    "sightrange": "800",
+    "ergonomics": "-4",
+    "modes": "3",
+    "node": "57ac965c24597706be5f975c 57aca93d2459771f2c7e26db",
+    "ID": "scope_all_elcan_specter_dr_1-4 scope_all_elcan_specter_dr_1-4_fde"
+  },
+  "sections": []
+}

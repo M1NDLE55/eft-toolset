@@ -1,0 +1,28 @@
+{
+  "title": "AR-15 5.56x45 HK PM Gen.2 STANAG 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_HK_PM_Gen.2_STANAG_30-round_magazine",
+  "revisionId": 338854,
+  "lastEdited": "2026-03-18T08:46:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.16 kg",
+    "grid": "1x2",
+    "price": "₽3,425",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-3",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c6d450c2e221600114c997d",
+    "ID": "mag_stanag_hk_gen_2_pm_556x45_30"
+  },
+  "sections": []
+}

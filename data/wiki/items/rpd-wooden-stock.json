@@ -1,0 +1,22 @@
+{
+  "title": "RPD wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_wooden_stock",
+  "revisionId": 306475,
+  "lastEdited": "2025-03-12T02:18:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.12 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+16",
+    "recoil": "-22",
+    "node": "6513f1798cb24472490ee331",
+    "ID": "stock_rpd_zid_rpd_wood_std"
+  },
+  "sections": []
+}

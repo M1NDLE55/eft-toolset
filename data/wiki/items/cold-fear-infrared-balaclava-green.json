@@ -1,0 +1,27 @@
+{
+  "title": "Cold Fear infrared balaclava (Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cold_Fear_infrared_balaclava_(Green)",
+  "revisionId": 348534,
+  "lastEdited": "2026-07-30T21:57:23Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a9dc769de6826a650ee066",
+    "id": "item_equipment_facecover_coldgear_arena_bp_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

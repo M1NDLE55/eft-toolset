@@ -1,0 +1,26 @@
+{
+  "title": "Cargo transport fax",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cargo_transport_fax",
+  "revisionId": 348069,
+  "lastEdited": "2026-07-19T12:25:13Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "689b5108304455f61a0bc298",
+    "id": "item_info_note_fax_blueIce"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

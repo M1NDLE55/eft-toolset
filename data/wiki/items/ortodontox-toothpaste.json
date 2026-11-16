@@ -1,0 +1,27 @@
+{
+  "title": "Ortodontox toothpaste",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ortodontox_toothpaste",
+  "revisionId": 329636,
+  "lastEdited": "2025-12-25T17:19:14Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5d4041f086f7743cac3f22a7",
+    "ID": "item_barter_household_toothpaste2"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    }
+  ]
+}

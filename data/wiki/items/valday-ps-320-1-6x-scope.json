@@ -1,0 +1,23 @@
+{
+  "title": "Valday PS-320 1/6x scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Valday_PS-320_1/6x_scope",
+  "revisionId": 352537,
+  "lastEdited": "2026-08-09T19:38:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.57 kg",
+    "grid": "2x1",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "1000",
+    "ergonomics": "-5",
+    "modes": "2",
+    "node": "5c0517910db83400232ffee5",
+    "ID": "scope_all_valday_ps320"
+  },
+  "sections": []
+}

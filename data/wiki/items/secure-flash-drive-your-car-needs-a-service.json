@@ -1,0 +1,25 @@
+{
+  "title": "Secure Flash drive (Your car Needs a Service)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_Flash_drive_(Your_car_Needs_a_Service)",
+  "revisionId": 289557,
+  "lastEdited": "2024-09-01T12:18:00Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "node": "638cbb3ba63f1b49be6a300e",
+    "id": "item_quest_c3_teh_flash"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Your Car Needs a Service from Peacekeeper"
+    }
+  ]
+}

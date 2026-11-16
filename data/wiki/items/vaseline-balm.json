@@ -1,0 +1,32 @@
+{
+  "title": "Vaseline balm",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vaseline_balm",
+  "revisionId": 358738,
+  "lastEdited": "2026-09-10T23:01:25Z",
+  "kind": "item",
+  "categories": [
+    "Drugs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Balm",
+    "weight": "0.016 kg",
+    "grid": "1x1",
+    "effect": "Buffs:, Removes: for 350 seconds, Adds: for 350 seconds Debuffs:, Adds: - Energy (-9) - Hydration (-9)",
+    "use time": "6s",
+    "node": "5755383e24597772cb798966",
+    "id": "vaseline"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Vaseline is based off \"Fito kosmetic's Norka Cosmetic Vaseline with mink fat (Норка косметический вазелин с норковым жиром)\"."
+    }
+  ]
+}

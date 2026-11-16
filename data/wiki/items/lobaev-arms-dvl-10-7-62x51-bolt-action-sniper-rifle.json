@@ -1,0 +1,43 @@
+{
+  "title": "Lobaev Arms DVL-10 7.62x51 bolt-action sniper rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lobaev_Arms_DVL-10_7.62x51_bolt-action_sniper_rifle",
+  "revisionId": 362265,
+  "lastEdited": "2026-09-26T16:58:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Bolt-action rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bolt-action rifle",
+    "slot": "Primary",
+    "weight": "5.068 kg",
+    "grid": "5x2",
+    "trader": "Skier LL3: Urbana variant after completing his task Long Road",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "49.5",
+    "velocity": "958 m/s",
+    "range": "1000 m",
+    "MOA": "0.45",
+    "Weaprecoil": "Vertical: 55, Horizontal: 290",
+    "rof": "30",
+    "caliber": "7.62x51mm NATO",
+    "def mag": "DVL-10 7.62x51 10-round magazine",
+    "node": "588892092459774ac91d4b11",
+    "ID": "weapon_lobaev_dvl-10_308"
+  },
+  "sections": [
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Punisher - Part 1 (Urbana variant)\n- 1 can be obtained as a quest reward from Wet Job - Part 6 (Saboteur variant)"
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| DVL-10 Urbana |\n| DVL-10 Saboteur |"
+    }
+  ]
+}

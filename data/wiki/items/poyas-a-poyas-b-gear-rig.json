@@ -1,0 +1,24 @@
+{
+  "title": "Poyas-A + Poyas-B gear rig",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Poyas-A_%2B_Poyas-B_gear_rig",
+  "revisionId": 333260,
+  "lastEdited": "2026-01-30T03:53:05Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.7 kg",
+    "grid": "4x4",
+    "BlocksArmor": "No",
+    "slots": "25 Slots",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5c0e6a1586f77404597b4965",
+    "ID": "item_equipment_rig_beltab"
+  },
+  "sections": []
+}

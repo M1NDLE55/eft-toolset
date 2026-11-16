@@ -1,0 +1,25 @@
+{
+  "title": "Mk-18 .338 LM 24 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mk-18_.338_LM_24_inch_barrel",
+  "revisionId": 342124,
+  "lastEdited": "2026-04-28T04:00:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.5 kg",
+    "grid": "4x1",
+    "ergonomics": "-40",
+    "velocity": "-2",
+    "MOA": "0.58",
+    "recoil": "-15.3",
+    "Heat": "-15",
+    "Cooling": "-10",
+    "node": "5fc23678ab884124df0cd590",
+    "ID": "barrel_mk18_610mm_86x70"
+  },
+  "sections": []
+}

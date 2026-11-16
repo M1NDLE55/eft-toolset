@@ -1,0 +1,26 @@
+{
+  "title": "Team Wendy EXFIL helmet cover (Pencott WildWood)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Team_Wendy_EXFIL_helmet_cover_(Pencott_WildWood)",
+  "revisionId": 361548,
+  "lastEdited": "2026-09-23T20:56:30Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Vanity helmet mod",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in the The Lab Tactical Map",
+    "node": "6a8355e36a6ba231700536f6",
+    "ID": "item_equipment_helmet_exfil_cover_pencott_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item does not provide any additional armor.\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

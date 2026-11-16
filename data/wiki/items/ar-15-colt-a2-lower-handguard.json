@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Colt A2 lower handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Colt_A2_lower_handguard",
+  "revisionId": 343364,
+  "lastEdited": "2026-05-05T20:00:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.05 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+3",
+    "recoil": "+0",
+    "Heat": "+2.0",
+    "Cooling": "-1.0",
+    "node": "68a6413b54ef229c4d089238",
+    "ID": "handguard_ar15_colt_m16a2_std_lower"
+  },
+  "sections": []
+}

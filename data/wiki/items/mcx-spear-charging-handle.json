@@ -1,0 +1,21 @@
+{
+  "title": "MCX-SPEAR charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX-SPEAR_charging_handle",
+  "revisionId": 305180,
+  "lastEdited": "2025-02-03T23:30:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.035 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+0",
+    "node": "6529109524cbe3c74a05e5b7",
+    "ID": "charge_spear_sig_spear_std"
+  },
+  "sections": []
+}

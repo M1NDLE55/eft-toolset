@@ -1,0 +1,27 @@
+{
+  "title": "Allen Engineering AEM-5 5.56x45 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Allen_Engineering_AEM-5_5.56x45_sound_suppressor",
+  "revisionId": 343374,
+  "lastEdited": "2026-05-05T20:50:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.59 kg",
+    "grid": "2x1",
+    "price": "₽31,000",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-16.5",
+    "velocity": "+0.7",
+    "recoil": "-0.5",
+    "Dura Burn": "+75",
+    "Heat": "+13",
+    "Cooling": "+4",
+    "node": "68caad12269e10396503acfe",
+    "ID": "silencer_ae_allen_engineering_aem_5_556x45"
+  },
+  "sections": []
+}

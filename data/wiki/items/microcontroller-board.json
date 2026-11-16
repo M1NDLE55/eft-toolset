@@ -1,0 +1,46 @@
+{
+  "title": "Microcontroller board",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Microcontroller_board",
+  "revisionId": 355228,
+  "lastEdited": "2026-08-19T12:13:47Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "6389c7750ef44505c87f5996",
+    "id": "Item_barter_electr_adv_controller"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Cannot be put inside secure containers."
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Electronics spawns"
+    },
+    {
+      "heading": "The Labyrinth",
+      "level": 3,
+      "text": "- In the prototype weapon area\n- Inside the observation room"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Missing Informant\n- 1 can be obtained as a quest reward from Spotter\n- 1 can be obtained as a quest reward from Payback"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: It is modelled after the ESP-Prog board"
+    }
+  ]
+}

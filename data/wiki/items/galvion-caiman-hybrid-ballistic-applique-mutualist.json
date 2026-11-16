@@ -1,0 +1,31 @@
+{
+  "title": "Galvion Caiman Hybrid Ballistic Applique (Mutualist)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Galvion_Caiman_Hybrid_Ballistic_Applique_(Mutualist)",
+  "revisionId": 353524,
+  "lastEdited": "2026-08-13T20:50:34Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.68 kg",
+    "grid": "2x1",
+    "trader": "Ref LL4, after unlocking it in the Customs Tactical Map",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "40",
+    "penalties": "-6% turn speed, -6% Ergonomics",
+    "node": "68a9b669fa39b6976e07de96",
+    "ID": "item_equipment_helmet_galvion_applique_venom_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

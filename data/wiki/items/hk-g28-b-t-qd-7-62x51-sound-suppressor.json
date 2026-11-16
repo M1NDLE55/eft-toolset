@@ -1,0 +1,26 @@
+{
+  "title": "HK G28 B&T QD 7.62x51 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G28_B%26T_QD_7.62x51_sound_suppressor",
+  "revisionId": 342211,
+  "lastEdited": "2026-04-28T21:29:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.46 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-17",
+    "velocity": "+1.2",
+    "recoil": "-4.5",
+    "Dura Burn": "+62",
+    "Heat": "+14",
+    "Cooling": "+6",
+    "node": "6171367e1cb55961fa0fdb36",
+    "ID": "silencer_bt_b&t_g28_sd_762x51"
+  },
+  "sections": []
+}

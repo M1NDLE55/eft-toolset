@@ -1,0 +1,22 @@
+{
+  "title": "Type 20 flip-up front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Type_20_flip-up_front_sight",
+  "revisionId": 357282,
+  "lastEdited": "2026-09-01T10:29:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.34 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "sightrange": "300",
+    "ergonomics": "+0.5",
+    "node": "6a3ceadb6280cb85bc03f99a",
+    "ID": "sight_front_all_howa_type20_std"
+  },
+  "sections": []
+}

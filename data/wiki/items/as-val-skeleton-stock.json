@@ -1,0 +1,22 @@
+{
+  "title": "AS VAL skeleton stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_skeleton_stock",
+  "revisionId": 328203,
+  "lastEdited": "2025-12-17T16:14:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.29 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+10",
+    "recoil": "-18",
+    "node": "57c450252459772d28133253",
+    "ID": "stock_val_tochmash_val_std"
+  },
+  "sections": []
+}

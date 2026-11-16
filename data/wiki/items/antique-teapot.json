@@ -1,0 +1,38 @@
+{
+  "title": "Antique teapot",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Antique_teapot",
+  "revisionId": 362797,
+  "lastEdited": "2026-10-01T21:33:04Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "1.1 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "loot xp": "200",
+    "exam xp": "50",
+    "node": "590de71386f774347051a052",
+    "id": "item_quest_barter_valuable_teapot"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In Arsenal storage room\n- In Manager office"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In Health Resort east wing room 226"
+    }
+  ]
+}

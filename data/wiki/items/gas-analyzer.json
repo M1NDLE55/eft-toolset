@@ -1,0 +1,49 @@
+{
+  "title": "Gas analyzer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gas_analyzer",
+  "revisionId": 358089,
+  "lastEdited": "2026-09-08T20:30:05Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.4 kg",
+    "grid": "1x2",
+    "price": "₽17,500",
+    "effect": "Generic loot item",
+    "loot xp": "50",
+    "exam xp": "10",
+    "node": "590a3efd86f77437d351a25b",
+    "id": "item_electr_gasanalyzer"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Medical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In the OLI store at the Ultra Shopping Mall\n- In the Techlight store at the Ultra Shopping Mall\n- In the Techno store at the Ultra Shopping Mall\n- In the office warehouse area at IDEA\n- In Power Plant"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In shelves outside of the Tarcone Director's office\n- In the trailer near Administration Gate extract\n- In the toolbox on 2nd floor of the Scav base\n- In the three-story dorms in the \"marked room\""
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On the table in the pumping station"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO\n- In RB-AK"
+    }
+  ]
+}

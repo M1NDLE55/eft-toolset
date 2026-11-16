@@ -1,0 +1,35 @@
+{
+  "title": "Crye Precision AirFrame M-LOK helmet (Bull)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_M-LOK_helmet_(Bull)",
+  "revisionId": 348467,
+  "lastEdited": "2026-07-30T20:27:04Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.88 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in the Factory Tactical Map",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69ce47ca49b447e32200cbe9",
+    "id": "item_equipment_helmet_crye_airframe_mlok_coyote_sof_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

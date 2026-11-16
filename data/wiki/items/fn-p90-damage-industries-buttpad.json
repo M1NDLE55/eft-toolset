@@ -1,0 +1,22 @@
+{
+  "title": "FN P90 Damage Industries buttpad",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_Damage_Industries_buttpad",
+  "revisionId": 360628,
+  "lastEdited": "2026-09-18T19:01:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+1.5",
+    "recoil": "-3",
+    "node": "5cc700d4e4a949000f0f0f28",
+    "ID": "stock_p90_damage industries_butt_pad"
+  },
+  "sections": []
+}

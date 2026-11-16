@@ -1,0 +1,25 @@
+{
+  "title": "Altyn helmet cover (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Altyn_helmet_cover_(Olive_Drab)",
+  "revisionId": 361464,
+  "lastEdited": "2026-09-23T18:41:26Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Vanity helmet mod",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6a82dcf00e3db08b8b0af104",
+    "ID": "item_equipment_helme_altyn_style_cover_od_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item does not provide any additional armor"
+    }
+  ]
+}

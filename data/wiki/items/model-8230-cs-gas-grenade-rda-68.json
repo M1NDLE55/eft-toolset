@@ -1,0 +1,29 @@
+{
+  "title": "Model 8230 CS gas grenade (RDA-68)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Model_8230_CS_gas_grenade_(RDA-68)",
+  "revisionId": 366957,
+  "lastEdited": "2026-11-01T15:31:24Z",
+  "kind": "item",
+  "categories": [
+    "Gas grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas grenade",
+    "weight": "0.19 kg",
+    "grid": "1x1",
+    "explosion delay": "5s",
+    "emission time": "30s",
+    "node": "6a9854e0788619fe8502a6b7",
+    "ID": "weapon_grenade_rde68_yellow_hell26"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only 12 can be held in the raid inventory at the same time, while only 3 can be brought into a raid.\n- Within the gas cloud and the tear gas asphyxiation effect is added, preventing the use of medical items, draining stamina, causing eye irritations and coughing as well as damage to the thorax (2 HP/second).\n  - Wearing a Respirator or Gentex Ops-Core SOTR respirator protects against the thorax damage and coughing, while wearing a GP-5 gas mask, GP-7 gas mask, Avon M53A1 gas mask or MSA Millennium Riot Control gas mask protects against everything."
+    }
+  ]
+}

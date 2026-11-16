@@ -1,0 +1,31 @@
+{
+  "title": "BD dogtag Red",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BD_dogtag_Red",
+  "revisionId": 356261,
+  "lastEdited": "2026-08-25T21:15:28Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "6a461c41ec88c6b9a509fb17",
+    "ID": "item_barter_dogtags_blackdivision_red"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division"
+    }
+  ]
+}

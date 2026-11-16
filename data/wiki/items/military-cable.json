@@ -1,0 +1,37 @@
+{
+  "title": "Military cable",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Military_cable",
+  "revisionId": 364325,
+  "lastEdited": "2026-10-13T14:04:58Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.65 kg",
+    "grid": "2x1",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5d0375ff86f774186372f685",
+    "ID": "item_barter_electr_cablemilitary"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Wooden crate\n- Dead Scav\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- Scattered around the warehouses at the water treatment plant, including on the floor.\n- Inside the Merin sports car.\n- Inside the Hillside house.\n- In numerous different spots of the chalet that is located on the hill in the south-east of the Lighthouse."
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On the tables inside RB-ST."
+    }
+  ]
+}

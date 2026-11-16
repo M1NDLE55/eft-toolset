@@ -1,0 +1,36 @@
+{
+  "title": "DesmondPilak CD",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DesmondPilak_CD",
+  "revisionId": 347395,
+  "lastEdited": "2026-06-27T06:06:29Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuables",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "69f9d547b98cc4120608692a",
+    "id": "item_barter_valuable_cdcase"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator DesmondPilak."
+    }
+  ]
+}

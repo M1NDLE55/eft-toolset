@@ -1,0 +1,26 @@
+{
+  "title": "FN P90 Strike Industries SMC-90 cheek rest",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_Strike_Industries_SMC-90_cheek_rest",
+  "revisionId": 362118,
+  "lastEdited": "2026-09-24T20:06:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.062 kg",
+    "grid": "1x1",
+    "ergonomics": "+2",
+    "node": "6a69d239d038171e800696b0",
+    "ID": "stock_p90_strike_industries_smc_90_cheeck"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

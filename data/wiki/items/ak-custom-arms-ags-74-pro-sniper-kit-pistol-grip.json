@@ -1,0 +1,28 @@
+{
+  "title": "AK Custom Arms AGS-74 PRO + Sniper Kit pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Custom_Arms_AGS-74_PRO_%2B_Sniper_Kit_pistol_grip",
+  "revisionId": 362256,
+  "lastEdited": "2026-09-26T16:08:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4 after completing his task Silent Caliber",
+    "ergonomics": "+5",
+    "recoil": "-1.5",
+    "node": "6087e663132d4d12c81fd96b",
+    "ID": "pistolgrip_ak_custom_arms_ags74_pro_stage_2"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The hole used to adjust the palm shelf is missing."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "SJ6 TGLabs combat stimulant injector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SJ6_TGLabs_combat_stimulant_injector",
+  "revisionId": 358708,
+  "lastEdited": "2026-09-10T22:58:54Z",
+  "kind": "item",
+  "categories": [
+    "Stimulants"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injector",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "effect": "Buffs:, 1s Delay; 240s Duration: - Increases maximum stamina (+30) - Increases stamina recovery rate (+2/s) Debuffs:, 200s Delay; 40s Duration:, Causes",
+    "use time": "2s",
+    "loot xp": "20",
+    "exam xp": "8",
+    "node": "5c0e531d86f7747fa23f4d42",
+    "ID": "SJ6_TGLabs"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Laboratory experiment's area (G12) on the first level (Requires TerraGroup Labs keycard (Black))\n- Sanitar's room in the Laboratory block (G22) on the second level (Requires Keycard with a blue marking)\n- On the floor of the \"Med Hut\" on the main floor, first Level (O11)\n- On the left hand table in the Laboratory quarantine zone (G11) (Requires TerraGroup Labs keycard (Blue))\n- In the laboratories inside the containment block"
+    }
+  ]
+}

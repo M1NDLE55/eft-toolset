@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Hexagon Grid Winter)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Hexagon_Grid_Winter)",
+  "revisionId": 348432,
+  "lastEdited": "2026-07-30T20:16:32Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "69369c97e4ef94aab7070a37",
+    "id": "item_camo_hexagon_grid_01_winter"
+  },
+  "sections": []
+}

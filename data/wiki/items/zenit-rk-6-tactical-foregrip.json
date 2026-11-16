@@ -1,0 +1,21 @@
+{
+  "title": "Zenit RK-6 tactical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zenit_RK-6_tactical_foregrip",
+  "revisionId": 353697,
+  "lastEdited": "2026-08-14T21:43:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+12",
+    "node": "5c1bc7752e221602b1779b34",
+    "ID": "foregrip_all_zenit_rk_6"
+  },
+  "sections": []
+}

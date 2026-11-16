@@ -1,0 +1,35 @@
+{
+  "title": "Galvion Caiman Hybrid helmet (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Galvion_Caiman_Hybrid_helmet_(MultiCam)",
+  "revisionId": 348636,
+  "lastEdited": "2026-07-30T22:20:25Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.12 kg",
+    "grid": "2x2",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 1",
+    "material": "Combined materials",
+    "armor": "3",
+    "armor coverage": "Head top, Nape",
+    "durability": "60",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -2% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "68a9b3ca0a9c4f9398032c46",
+    "id": "item_equipment_helmet_galvion_caiman_multicam_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

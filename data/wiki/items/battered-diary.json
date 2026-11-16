@@ -1,0 +1,25 @@
+{
+  "title": "Battered diary",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Battered_diary",
+  "revisionId": 298490,
+  "lastEdited": "2024-12-22T22:58:03Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "666073159916667083033cb9",
+    "id": "Item_quest_tattered_diary"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Thirsty - Echo from Therapist"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "CGS Hekate DT .338 LM sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/CGS_Hekate_DT_.338_LM_sound_suppressor",
+  "revisionId": 338001,
+  "lastEdited": "2026-03-08T00:35:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.507 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-17",
+    "velocity": "+0.8",
+    "recoil": "-9",
+    "Dura Burn": "+40",
+    "Heat": "+22",
+    "Cooling": "+5",
+    "node": "673f0b36536d64240f01acd6",
+    "ID": "silencer_all_cgs_hekate_dt_338_86x70"
+  },
+  "sections": []
+}

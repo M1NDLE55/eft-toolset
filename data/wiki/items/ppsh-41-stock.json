@@ -1,0 +1,21 @@
+{
+  "title": "PPSh-41 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PPSh-41_stock",
+  "revisionId": 270205,
+  "lastEdited": "2024-02-08T20:17:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.050 kg",
+    "grid": "2x1",
+    "ergonomics": "+28",
+    "recoil": "-20",
+    "node": "5ea03e9400685063ec28bfa4",
+    "ID": "stock_ppsh_zis_ppsh41_std_wood"
+  },
+  "sections": []
+}

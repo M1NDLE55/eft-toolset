@@ -1,0 +1,22 @@
+{
+  "title": "MP-133/153 plastic pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-133/153_plastic_pistol_grip",
+  "revisionId": 261599,
+  "lastEdited": "2024-01-01T23:28:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+11",
+    "recoil": "-6",
+    "node": "56083a334bdc2dc8488b4571",
+    "ID": "stock_mr133_pistol_plastic"
+  },
+  "sections": []
+}

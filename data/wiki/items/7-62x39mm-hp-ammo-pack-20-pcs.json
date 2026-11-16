@@ -1,0 +1,24 @@
+{
+  "title": "7.62x39mm HP ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_HP_ammo_pack_(20_pcs)",
+  "revisionId": 367221,
+  "lastEdited": "2026-11-02T23:13:22Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "64acea2c03378853630da53e",
+    "ID": "item_ammo_box_762x39_20_hp"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The ammo package's design is based on that used by БПЗ (BPZ, Barnaul'skiy Patronnyy Zavod = \"Barnaul Cartridge Factory\"). The image shows the ammo packed loose in the pasteboard carton, but BPZ packs their ammo in a folded and stapled kraftpaper packet rather than a tray.\n- The Russian Cyrillic text reads: Massa puli 9g (\"Bullet Mass: 9 grams\"), Pulya obolochechnaya (\"Jacketed Bullet\"), Kapsul (\"Primer\"), Gil'za Stal'naya (\"Cartridge Case, [Lacquered] Steel\"). The text uses 20 Patronov (\"20 Cartridges\") instead of 20 Shtuk (\"20 pieces\")."
+    }
+  ]
+}

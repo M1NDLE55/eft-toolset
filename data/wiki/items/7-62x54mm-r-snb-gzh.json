@@ -1,0 +1,36 @@
+{
+  "title": "7.62x54mm R SNB gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_SNB_gzh",
+  "revisionId": 306479,
+  "lastEdited": "2025-03-12T04:47:51Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x54mmR ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.024 kg",
+    "grid": "1x1",
+    "velocity": "875 m/s",
+    "damage": "75",
+    "recoil": "+10",
+    "penetration": "62",
+    "armor damage": "87",
+    "ricochet": "28.5%",
+    "durability burn": "+20",
+    "heat": "+133.9",
+    "feedfailure": "High",
+    "misfire": "Low",
+    "node": "560d61e84bdc2da74d8b4571",
+    "id": "patron_762х54R_SNB"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Water filter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Water_filter",
+  "revisionId": 362660,
+  "lastEdited": "2026-09-29T21:21:31Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.4 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5d1b385e86f774252167b98a",
+    "id": "item_barter_other_waterfilter"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Used to run the Water Collector\n- Can be removed once installed to not be used if module doesn't need to be active.\n- The filter lasts for 8 hours, 12 minutes and 25 seconds.\n  - The equation to convert water filter durability into minutes is 4.92 × durability."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the K Buildings\n- In the underground, primarily in the area underneath of School and the long metal hallway leading up to the D-2 extract\n- Inside the third floor of Queen"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In ZB-014\n- In ZB-016"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In OLI on shelves"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In the Dorm room 206\n- In the backroom of green screen room in the Repair Shop\n- In the workshop room upstairs in the Repair Shop\n- In the warehouse next to ZB-1012 (warehouse 5) inside a shipping container on a wooden pallet"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On the shelf in the West Wing to the Health Resort broken wall entrance\n- On the shelf in the bus depot in the back corner"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from The Survivalist Path - Zhivchik."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The Model seems to be a SimPure DB10P Big Blue 10 Inch Whole House Water Filter Housing"
+    }
+  ]
+}

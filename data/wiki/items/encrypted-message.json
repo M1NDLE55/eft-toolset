@@ -1,0 +1,25 @@
+{
+  "title": "Encrypted message",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Encrypted_message",
+  "revisionId": 338355,
+  "lastEdited": "2026-03-12T22:22:33Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.23 kg",
+    "grid": "2x1",
+    "node": "5d3ec50586f774183a607442",
+    "ID": "quest_hunt_message"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Introduction from Mechanic"
+    }
+  ]
+}

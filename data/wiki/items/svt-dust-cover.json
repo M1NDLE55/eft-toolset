@@ -1,0 +1,22 @@
+{
+  "title": "SVT dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVT_dust_cover",
+  "revisionId": 276638,
+  "lastEdited": "2024-04-28T22:33:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.088 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+5",
+    "Dura Burn": "-3",
+    "node": "64119cdbdcf48d656f0aa272",
+    "ID": "reciever_svt40_toz_svt40_std"
+  },
+  "sections": []
+}

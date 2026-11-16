@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Allen Engineering SPR Collar suppressor mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Allen_Engineering_SPR_Collar_suppressor_mount",
+  "revisionId": 343459,
+  "lastEdited": "2026-05-07T21:35:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-0.5",
+    "Heat": "+0.5",
+    "node": "68caac96933990601c07f476",
+    "ID": "mount_ar15_allen_engineering_spr_colar"
+  },
+  "sections": []
+}

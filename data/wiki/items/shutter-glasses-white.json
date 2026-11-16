@@ -1,0 +1,29 @@
+{
+  "title": "Shutter glasses (White)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shutter_glasses_(White)",
+  "revisionId": 348437,
+  "lastEdited": "2026-07-30T20:17:08Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.027 kg",
+    "grid": "2x1",
+    "trader": "Ref LL1, after unlocking it in the Customs Tactical Map",
+    "blindness protect": "25%",
+    "penalties": "-1% Ergonomics",
+    "node": "68bede355f1439bc3c0bf814",
+    "id": "item_equipment_glasses_perforated_bp2_wht"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

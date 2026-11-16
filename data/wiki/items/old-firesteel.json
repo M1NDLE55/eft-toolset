@@ -1,0 +1,66 @@
+{
+  "title": "Old firesteel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Old_firesteel",
+  "revisionId": 345121,
+  "lastEdited": "2026-05-26T18:33:58Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5bc9c377d4351e3bac12251b",
+    "id": "item_barter_valuable_kresalo"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In Marked room.\n- In Gas station manager's office.\n- In Storage building on the shelves."
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- Marked circle\n- On the blue shelves inside main/grey warehouse in sawmill.\n- On the stack of green crates in the old sawmill two story barn's first floor.\n- On the tool chest behind the UN Tigr truck inside the Emercom Camp."
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In locked West wing room 301.\n- On the shelves inside the shop closest to swamps in the village next to tunnel extraction.\n- On the desk next to the safe in the weather station.\n- On the mattress or shelf inside the Chairmans house, on the west side of the swamp.\n- On the shelves near the hole in Admin, 2nd floor."
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the shelves lining the shipment loading areas of all 3 anchor stores.\n- Possible spawn on the oil barrels at the Hole in Fence extraction."
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Caged robot arms area between the server room and the weapons testing area."
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In locked rooms RB-AM and RB-GN."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - Engraved on it is \"dayzru 1703\", which is a reference to the content creator dayzru."
+    }
+  ]
+}

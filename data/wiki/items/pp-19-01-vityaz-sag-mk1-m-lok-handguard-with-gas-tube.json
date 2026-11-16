@@ -1,0 +1,24 @@
+{
+  "title": "PP-19-01 Vityaz SAG MK1 M-LOK handguard with gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-19-01_Vityaz_SAG_MK1_M-LOK_handguard_with_gas_tube",
+  "revisionId": 342782,
+  "lastEdited": "2026-04-30T21:18:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.295 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+13",
+    "recoil": "-1",
+    "Heat": "-1.3",
+    "Cooling": "+5.8",
+    "node": "676177df1f08ed5e8800b7ae",
+    "ID": "gas_block_pp19_01_sag_mk1_3_m_lok"
+  },
+  "sections": []
+}

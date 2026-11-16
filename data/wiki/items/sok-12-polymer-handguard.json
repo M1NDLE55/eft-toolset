@@ -1,0 +1,24 @@
+{
+  "title": "SOK-12 polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_polymer_handguard",
+  "revisionId": 340631,
+  "lastEdited": "2026-04-21T09:14:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "price": "₽1,400",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+13",
+    "Heat": "+2.5",
+    "Cooling": "-2.2",
+    "node": "576169e62459773c69055191",
+    "ID": "handguard_saiga12_izhmash_saiga12k_10_std"
+  },
+  "sections": []
+}

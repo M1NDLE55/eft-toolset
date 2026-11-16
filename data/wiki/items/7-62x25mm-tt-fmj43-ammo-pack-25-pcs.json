@@ -1,0 +1,24 @@
+{
+  "title": "7.62x25mm TT FMJ43 ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x25mm_TT_FMJ43_ammo_pack_(25_pcs)",
+  "revisionId": 367210,
+  "lastEdited": "2026-11-02T23:12:46Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702532cfc010a0f5006a19",
+    "ID": "item_ammo_box_762x25_25_fmj43"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The box's text reads ПАТРОНЫ / ДΛЯ ГРАЖДАНСКОГО ОРУЖИЯ / С НАРЕЗНЫМ СТВОΛОМ / КАΛИБРА 7,62×25MM ТОКАREV / 25 ШТУК (Patrony / Dlya Grazhdanskogo Oruzhiya / S Nareznym Stvolom / Kalibra 7.62mm Tokarev / 25 Shtuk = \"Cartridges / for civilian firearms / with a rifled barrel / Caliber: 7.62mm Tokarev / 25 pieces\").\n  - The Greek letter Λ (lambda) is used instead of the Cyrillic letter Л (Latin: \"L\").\n  - Tokarev is spelled in Latin text rather than Cyrillic (Токарева > Tokareva)."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "title": "5.8x42mm DVX12",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.8x42mm_DVX12",
+  "revisionId": 356199,
+  "lastEdited": "2026-08-25T19:24:55Z",
+  "kind": "ammo",
+  "categories": [
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.013 kg",
+    "grid": "1x1",
+    "velocity": "850 m/s",
+    "damage": "48",
+    "accuracy": "-8",
+    "recoil": "+9",
+    "penetration": "47",
+    "armor damage": "54",
+    "ricochet": "40%",
+    "durability burn": "+50",
+    "heat": "+100",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "effects": "Tracer (green)",
+    "node": "6a426637ddc63098d100ae67",
+    "ID": "patron_58x42_dvx12"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

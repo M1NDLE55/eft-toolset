@@ -1,0 +1,28 @@
+{
+  "title": "Gemtech SFN-57 5.7x28 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gemtech_SFN-57_5.7x28_sound_suppressor",
+  "revisionId": 337695,
+  "lastEdited": "2026-03-06T01:26:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.15 kg",
+    "grid": "2x1",
+    "price": "₽37,940",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-10",
+    "velocity": "+0.6",
+    "recoil": "-1.5",
+    "Dura Burn": "+52",
+    "Heat": "+13",
+    "loot xp": "30",
+    "exam xp": "4",
+    "node": "5d3ef698a4b9361182109872",
+    "ID": "silencer_57_gemtech_sfn_57_57x28"
+  },
+  "sections": []
+}

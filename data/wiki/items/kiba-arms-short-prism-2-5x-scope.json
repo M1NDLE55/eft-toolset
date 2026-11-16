@@ -1,0 +1,32 @@
+{
+  "title": "Kiba Arms Short Prism 2.5x scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kiba_Arms_Short_Prism_2.5x_scope",
+  "revisionId": 291546,
+  "lastEdited": "2024-09-20T14:48:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.322 kg",
+    "grid": "2x1",
+    "trader": "Skier LL2",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "800",
+    "ergonomics": "-3",
+    "modes": "1",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "5c1cdd512e22161b267d91ae",
+    "ID": "scope_base_kiba_compact_prism_scope_2,5x"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This item was previously called and is inspired by the Primary Arms Compact Prism scope 2.5x."
+    }
+  ]
+}

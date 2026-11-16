@@ -1,0 +1,31 @@
+{
+  "title": "Weapon case (EXFIL Brothers)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_case_(EXFIL_Brothers)",
+  "revisionId": 363582,
+  "lastEdited": "2026-10-07T16:13:39Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "9 kg",
+    "grid": "5x2",
+    "effect": "Provides 50 inventory slots while only taking up 10",
+    "node": "6a997c6e21aaf68dc6045d88",
+    "id": "item_container_weaponcase_candidate"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only obtainable as an Operator reward from the \"EXFIL Brothers\" program."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Weapon case is a container with the purpose of saving space within the player's inventory. It provides 50 inventory slots in a 5x10 grid and only takes up 10 inventory slots itself. It can only store:\n- Weapons (Besides melee)\n- Ammunition\n- Weapon mods"
+    }
+  ]
+}

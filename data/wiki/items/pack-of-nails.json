@@ -1,0 +1,31 @@
+{
+  "title": "Pack of nails",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pack_of_nails",
+  "revisionId": 367795,
+  "lastEdited": "2026-11-10T13:12:10Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.6 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "590c31c586f774245e3141b2",
+    "id": "item_barter_building_nails"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Pack of Nails are based off Stanely Bostitch \"FLN 150 1 1/2\" (38mm) Hardwood Flooring Nails 1000 Qty pack\"."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "L3Harris LA-5B/PEQ tactical device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/L3Harris_LA-5B/PEQ_tactical_device",
+  "revisionId": 352599,
+  "lastEdited": "2026-08-09T19:57:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.21 kg",
+    "grid": "1x1",
+    "price": "₽16,258",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-2",
+    "modes": "4",
+    "loot xp": "30",
+    "exam xp": "10",
+    "node": "5c06595c0db834001a66af6c",
+    "ID": "tactical_all_insight_la5"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is red"
+    }
+  ]
+}

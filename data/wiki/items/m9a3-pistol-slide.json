@@ -1,0 +1,28 @@
+{
+  "title": "M9A3 pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M9A3_pistol_slide",
+  "revisionId": 276736,
+  "lastEdited": "2024-05-03T00:17:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.19 kg",
+    "grid": "2x1",
+    "price": "₽2,350",
+    "ergonomics": "+1",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-2",
+    "Cooling": "+8.1",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5cadc55cae921500103bb3be",
+    "ID": "reciever_m9_beretta_m9a3_std"
+  },
+  "sections": []
+}

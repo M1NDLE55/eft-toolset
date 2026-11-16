@@ -1,0 +1,23 @@
+{
+  "title": "HK MP5 Drum rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_Drum_rear_sight",
+  "revisionId": 329245,
+  "lastEdited": "2025-12-24T16:29:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5926d2be86f774134d668e4e",
+    "ID": "sight_rear_mp5_hk_drum"
+  },
+  "sections": []
+}

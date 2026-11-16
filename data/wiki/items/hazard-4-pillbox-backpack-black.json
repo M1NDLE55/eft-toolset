@@ -1,0 +1,22 @@
+{
+  "title": "Hazard 4 Pillbox backpack (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hazard_4_Pillbox_backpack_(Black)",
+  "revisionId": 304496,
+  "lastEdited": "2025-01-22T10:41:44Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2.338 kg",
+    "grid": "4x4",
+    "penalties": "-3% movement speed, -1% turn speed, -4% Ergonomics",
+    "slots": "4x5 grid (20 slots)",
+    "node": "60a2828e8689911a226117f9",
+    "id": "item_equipment_backpack_pillbox"
+  },
+  "sections": []
+}

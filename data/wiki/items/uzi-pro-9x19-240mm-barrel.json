@@ -1,0 +1,27 @@
+{
+  "title": "UZI PRO 9x19 240mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_PRO_9x19_240mm_barrel",
+  "revisionId": 343215,
+  "lastEdited": "2026-05-03T21:20:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.288 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-4",
+    "velocity": "-1",
+    "MOA": "4.64",
+    "recoil": "-6",
+    "Dura Burn": "+6",
+    "Heat": "-1.2",
+    "Cooling": "+3.7",
+    "node": "668670432b934a68630a7fe8",
+    "ID": "barrel_uzi_pro_iwi_smg_240mm_9x19"
+  },
+  "sections": []
+}

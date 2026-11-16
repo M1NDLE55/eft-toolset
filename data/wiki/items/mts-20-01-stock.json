@@ -1,0 +1,24 @@
+{
+  "title": "MTs 20-01 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MTs_20-01_stock",
+  "revisionId": 270198,
+  "lastEdited": "2024-02-08T20:15:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.25 kg",
+    "grid": "4x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+7",
+    "recoil": "-27",
+    "Heat": "+3.2",
+    "Cooling": "-3.4",
+    "node": "5adf23995acfc400185c2aeb",
+    "ID": "stock_toz-106_toz_full_std"
+  },
+  "sections": []
+}

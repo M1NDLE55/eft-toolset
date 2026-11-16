@@ -1,0 +1,43 @@
+{
+  "title": "TP-200 TNT brick",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TP-200_TNT_brick",
+  "revisionId": 362443,
+  "lastEdited": "2026-09-29T14:50:43Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable materials",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "10",
+    "exam xp": "20",
+    "node": "60391b0fb847c71012789415",
+    "id": "Item_barter_flammable_trotil"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Grenade box\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In the shelves at the entrance of west resort with hole in wall next to fence"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the RB-ST"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the shelves at the back warehouse of the Goshan store"
+    }
+  ]
+}

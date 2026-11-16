@@ -1,0 +1,29 @@
+{
+  "title": "AR-15 ADAR 2-15 5.56x45 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_ADAR_2-15_5.56x45_upper_receiver",
+  "revisionId": 343500,
+  "lastEdited": "2026-05-07T22:22:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+4",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "+1",
+    "Heat": "-0.9",
+    "Cooling": "+0.8",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c0e2f26d174af02a9625114",
+    "ID": "reciever_ar15_adar_2-15_std"
+  },
+  "sections": []
+}

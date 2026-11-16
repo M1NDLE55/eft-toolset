@@ -1,0 +1,21 @@
+{
+  "title": "P226 Hogue Rubberized pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Hogue_Rubberized_pistol_grip",
+  "revisionId": 340838,
+  "lastEdited": "2026-04-22T08:23:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+5",
+    "node": "5b39ffbd5acfc47a8773fb06",
+    "ID": "pistolgrip_p226_hogue_p226_rubber_w_grooves"
+  },
+  "sections": []
+}

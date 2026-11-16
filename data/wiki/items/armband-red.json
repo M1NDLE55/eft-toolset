@@ -1,0 +1,22 @@
+{
+  "title": "Armband (Red)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Red)",
+  "revisionId": 320821,
+  "lastEdited": "2025-11-11T20:24:47Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "price": "₽550",
+    "trader": "Ragman LL1",
+    "node": "5b3f3ade86f7746b6b790d8e",
+    "id": "armband_red"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Colt USGI A1 3-prong 5.56x45 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Colt_USGI_A1_3-prong_5.56x45_flash_hider",
+  "revisionId": 343359,
+  "lastEdited": "2026-05-05T19:55:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-0.5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-4",
+    "node": "68a63b03e1fb670852024656",
+    "ID": "muzzle_ar15_colt_usgi_a1_3_prong_flash_hider_556x45"
+  },
+  "sections": []
+}

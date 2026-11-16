@@ -1,0 +1,26 @@
+{
+  "title": "Armband (Candidate)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Candidate)",
+  "revisionId": 363574,
+  "lastEdited": "2026-10-07T16:10:26Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "6a993e33ee0b5adf01028e1e",
+    "id": "item_equipment_armband_candidate"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This armband is only available as a Candidate reward from the \"EXFIL Brothers\" program.\n- Glows in the dark"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "F-1 hand grenade (Reduced delay)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/F-1_hand_grenade_(Reduced_delay)",
+  "revisionId": 314964,
+  "lastEdited": "2025-07-09T18:50:46Z",
+  "kind": "item",
+  "categories": [
+    "Fragmentation grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Fragmentation grenade",
+    "weight": "0.6 kg",
+    "grid": "1x1",
+    "explosion delay": "1.5s",
+    "explosion distance": "3-7 meters",
+    "concussion distance": "12 meters",
+    "fragments count": "90x",
+    "node": "67b49e7335dec48e3e05e057",
+    "ID": "weapon_grenade_f1_event"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Partisan\n- Grenade box"
+    }
+  ]
+}

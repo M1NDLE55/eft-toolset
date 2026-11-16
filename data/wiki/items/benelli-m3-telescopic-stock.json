@@ -1,0 +1,22 @@
+{
+  "title": "Benelli M3 telescopic stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Benelli_M3_telescopic_stock",
+  "revisionId": 270137,
+  "lastEdited": "2024-02-08T19:49:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.772 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "+10",
+    "recoil": "-21",
+    "node": "6259c3387d6aab70bc23a18d",
+    "ID": "stock_m3_benelli_5_position_telescoping_stock"
+  },
+  "sections": []
+}

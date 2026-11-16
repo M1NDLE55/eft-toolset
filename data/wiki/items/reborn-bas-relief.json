@@ -1,0 +1,25 @@
+{
+  "title": "Reborn Bas-Relief",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Reborn_Bas-Relief",
+  "revisionId": 360387,
+  "lastEdited": "2026-09-15T15:56:26Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "1 kg",
+    "grid": "2x2",
+    "node": "6a91b5d5ca420f299d08e325",
+    "id": "item_barter_flyers_leagues_rank_5"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

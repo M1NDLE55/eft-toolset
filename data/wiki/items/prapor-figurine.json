@@ -1,0 +1,31 @@
+{
+  "title": "Prapor figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Prapor_figurine",
+  "revisionId": 343724,
+  "lastEdited": "2026-05-10T11:36:43Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "68f25c64b2b53abd200b954f",
+    "id": "Item_barter_tarko_prapor"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This figurine was first obtainable during Release Twitch Drops (October 2025)."
+    }
+  ]
+}

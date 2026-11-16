@@ -1,0 +1,35 @@
+{
+  "title": "Diamond Age NovaSteel helmet (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Diamond_Age_NovaSteel_helmet_(Olive_Drab)",
+  "revisionId": 361511,
+  "lastEdited": "2026-09-23T20:05:59Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.18 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL4",
+    "material": "Armor steel",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "72",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6a83392e992762b7bf08ffb8",
+    "id": "item_equipment_helmet_neosteel_gen2_od_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

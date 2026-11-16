@@ -1,0 +1,24 @@
+{
+  "title": "Valday PK-120 (1P87) reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Valday_PK-120_(1P87)_reflex_sight",
+  "revisionId": 314464,
+  "lastEdited": "2025-06-23T15:32:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.297 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "zeroing": "50, 100, 150, 200",
+    "ergonomics": "-4",
+    "sightrange": "200",
+    "modes": "1",
+    "node": "5c0505e00db834001b735073",
+    "ID": "scope_all_valday_1p87"
+  },
+  "sections": []
+}

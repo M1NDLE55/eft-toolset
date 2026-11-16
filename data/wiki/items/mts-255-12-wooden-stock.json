@@ -1,0 +1,21 @@
+{
+  "title": "MTs-255-12 wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MTs-255-12_wooden_stock",
+  "revisionId": 270199,
+  "lastEdited": "2024-02-08T20:15:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "ergonomics": "+3",
+    "recoil": "-23",
+    "node": "612781056f3d944a17348d60",
+    "ID": "stock_mc255_ckib_255_std_wood"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "AI AXMC padded handguard grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_padded_handguard_grip",
+  "revisionId": 342243,
+  "lastEdited": "2026-04-28T21:47:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "+5",
+    "recoil": "-0.5",
+    "node": "6281212a09427b40ab14e770",
+    "ID": "foregrip_ax_accuracy_international_ax_base_pad_pb"
+  },
+  "sections": []
+}

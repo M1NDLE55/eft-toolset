@@ -1,0 +1,29 @@
+{
+  "title": "LBT-1961A Load Bearing Chest Rig (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LBT-1961A_Load_Bearing_Chest_Rig_(MultiCam)",
+  "revisionId": 348698,
+  "lastEdited": "2026-07-30T22:33:18Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.36 kg",
+    "grid": "3x3",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 2",
+    "BlocksArmor": "No",
+    "slots": "18 Slots",
+    "node": "69cfc2d7a9102bdca0080070",
+    "id": "item_equipment_rig_bearing_multicam_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

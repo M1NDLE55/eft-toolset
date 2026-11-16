@@ -1,0 +1,21 @@
+{
+  "title": "AKS-74 Armacon Monolit 5 buffer tube adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74_Armacon_Monolit_5_buffer_tube_adapter",
+  "revisionId": 357405,
+  "lastEdited": "2026-09-01T17:58:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-1.5",
+    "node": "6a158e29e5267ba21c07f927",
+    "ID": "stock_ak_armacon_monolit_5"
+  },
+  "sections": []
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Pestily plague mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pestily_plague_mask",
+  "revisionId": 358636,
+  "lastEdited": "2026-09-10T22:44:13Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.18 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "No",
+    "node": "5e54f79686f7744022011103",
+    "ID": "item_equipment_facecover_pestily"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On Scavs\n- On Dead Scav\n- In Jackets\n- In Weapon box (4x4)\n- In Weapon box (6x4)\n- In Ground cache\n- In Sport bag\n- On Cultists"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- Sanitar's Followers"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - The plague mask is a reference to the content creator Pestily whose logo is a pestilence \"plague doctor\" mask."
+    }
+  ]
+}

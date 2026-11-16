@@ -1,0 +1,40 @@
+{
+  "title": "ESAPI level IV ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ESAPI_level_IV_ballistic_plate",
+  "revisionId": 361910,
+  "lastEdited": "2026-09-24T15:05:53Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "3.2 kg",
+    "grid": "2x2",
+    "material": "Ceramic",
+    "armor": "6",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "55",
+    "penalties": "-1.5% movement speed, -0.5% turn speed, -1.5% Ergonomics",
+    "node": "64afdcb83efdfea28601d041",
+    "id": "item_equipment_plate_sapi_6_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Modeled after the ESAPI Level 4+ plates which are standard issue plates to U.S. Military forces. While there are multiple revisions of the ESAPI plate, it's unknown what revision these are modeled after."
+    }
+  ]
+}

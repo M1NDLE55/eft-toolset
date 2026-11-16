@@ -1,0 +1,26 @@
+{
+  "title": "Armband of The Unheard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_of_The_Unheard",
+  "revisionId": 320805,
+  "lastEdited": "2025-11-11T20:22:27Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "660312cc4d6cdfa6f500c703",
+    "id": "item_equipment_armband_unheard"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This armband is only available to players who own the \"The Unheard\" edition of the game."
+    }
+  ]
+}

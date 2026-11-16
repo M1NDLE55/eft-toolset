@@ -1,0 +1,25 @@
+{
+  "title": "M32A1 40mm cylinder",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M32A1_40mm_cylinder",
+  "revisionId": 253364,
+  "lastEdited": "2023-11-02T21:55:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.8 kg",
+    "grid": "2x2",
+    "ergonomics": "-10",
+    "recoil": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "None",
+    "capacity": "6",
+    "caliber": "40x46mm",
+    "node": "627bce33f21bc425b06ab967",
+    "ID": "mag_msgl_milkor_cylinder_mag_std_40x46_6"
+  },
+  "sections": []
+}

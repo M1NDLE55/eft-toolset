@@ -1,0 +1,21 @@
+{
+  "title": "AK-545 railed dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-545_railed_dust_cover",
+  "revisionId": 293246,
+  "lastEdited": "2024-09-29T22:25:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.088 kg",
+    "grid": "1x1",
+    "ergonomics": "+3",
+    "Dura Burn": "-1",
+    "node": "628b9be6cff66b70c002b14c",
+    "ID": "reciever_ak_sag_ak545_std"
+  },
+  "sections": []
+}

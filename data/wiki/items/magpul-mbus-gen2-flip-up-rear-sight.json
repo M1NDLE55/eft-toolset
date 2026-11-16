@@ -1,0 +1,22 @@
+{
+  "title": "Magpul MBUS Gen2 flip-up rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magpul_MBUS_Gen2_flip-up_rear_sight",
+  "revisionId": 322117,
+  "lastEdited": "2025-11-17T01:49:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.036 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2: Black, FDE",
+    "sightrange": "300",
+    "ergonomics": "+0.5",
+    "node": "5bc09a18d4351e003562b68e 5c18b9192e2216398b5a8104",
+    "ID": "sight_rear_all_magpul_mbus_gen2 sight_rear_all_magpul_mbus_gen2_fde"
+  },
+  "sections": []
+}

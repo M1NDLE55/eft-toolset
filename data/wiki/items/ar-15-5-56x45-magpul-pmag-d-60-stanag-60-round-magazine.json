@@ -1,0 +1,33 @@
+{
+  "title": "AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_Magpul_PMAG_D-60_STANAG_60-round_magazine",
+  "revisionId": 356771,
+  "lastEdited": "2026-08-29T20:00:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.58 kg",
+    "grid": "1x2",
+    "trader": "Ref LL4",
+    "ergonomics": "-7",
+    "checkaccuracy": "No",
+    "checkmodifier": "+13",
+    "loadmodifier": "+8",
+    "feedfailure": "Medium",
+    "capacity": "60",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "node": "59c1383d86f774290a37e0ca",
+    "ID": "mag_stanag_magpul_pmag_d-60_556x45_60"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Zenit 2D flashlight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zenit_2D_flashlight",
+  "revisionId": 284053,
+  "lastEdited": "2024-08-03T18:19:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Flashlights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flashlight",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-2",
+    "modes": "1",
+    "node": "646f62fee779812413011ab7",
+    "ID": "flashlight_base_zenit_2ds"
+  },
+  "sections": []
+}

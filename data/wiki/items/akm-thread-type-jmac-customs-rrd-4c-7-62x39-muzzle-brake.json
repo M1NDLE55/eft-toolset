@@ -1,0 +1,27 @@
+{
+  "title": "AKM thread type JMac Customs RRD-4C 7.62x39 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM_thread_type_JMac_Customs_RRD-4C_7.62x39_muzzle_brake",
+  "revisionId": 337736,
+  "lastEdited": "2026-03-06T01:50:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽13,100",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-4.5",
+    "recoil": "-13",
+    "Dura Burn": "-4",
+    "Heat": "-1.6",
+    "loot xp": "34",
+    "exam xp": "5",
+    "node": "5f633f68f5750b524b45f112",
+    "ID": "muzzle_ak_jmac_rrd_4c_762x39"
+  },
+  "sections": []
+}

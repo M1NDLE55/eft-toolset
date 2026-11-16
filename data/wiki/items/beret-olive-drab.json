@@ -1,0 +1,21 @@
+{
+  "title": "Beret (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Beret_(Olive_Drab)",
+  "revisionId": 310164,
+  "lastEdited": "2025-04-13T10:20:38Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL2",
+    "node": "5f60e784f2bcbb675b00dac7",
+    "id": "item_equipment_head_beret_od"
+  },
+  "sections": []
+}

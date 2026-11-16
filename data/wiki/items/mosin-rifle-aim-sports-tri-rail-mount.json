@@ -1,0 +1,22 @@
+{
+  "title": "Mosin Rifle AIM Sports Tri-Rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_AIM_Sports_Tri-Rail_mount",
+  "revisionId": 366563,
+  "lastEdited": "2026-10-31T04:18:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.18 kg",
+    "grid": "2x1",
+    "price": "₽2,400",
+    "trader": "Jaeger LL2 after completing his task The Tarkov Shooter - Part 2",
+    "ergonomics": "-2",
+    "node": "5bbdb811d4351e45020113c7",
+    "ID": "mount_mosin_aim_sports_tri_rail"
+  },
+  "sections": []
+}

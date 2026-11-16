@@ -1,0 +1,18 @@
+{
+  "title": "7.62x54mm R LPS gzh ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_LPS_gzh_ammo_pack_(20_pcs)",
+  "revisionId": 367240,
+  "lastEdited": "2026-11-02T23:14:23Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702577cfc010a0f5006a2c",
+    "ID": "item_ammo_box_762x54r_20_lps"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Mystery Ranch Terraframe backpack (Christmas Edition)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mystery_Ranch_Terraframe_backpack_(Christmas_Edition)",
+  "revisionId": 348322,
+  "lastEdited": "2026-07-28T14:11:41Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2.2 kg",
+    "grid": "5x6",
+    "penalties": "-3% movement speed, -2% turn speed, -5% Ergonomics",
+    "slots": "30 slots, 1x 4x5 grid, 1x 2x5 grid",
+    "node": "674da9cf0cb4bcde7103c07b",
+    "id": "item_equipment_backpack_mystery_ranch_terraframe_xmass"
+  },
+  "sections": []
+}

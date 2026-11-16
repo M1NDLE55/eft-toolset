@@ -1,0 +1,39 @@
+{
+  "title": "20/70 Dangerous Game Slug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20/70_Dangerous_Game_Slug",
+  "revisionId": 322824,
+  "lastEdited": "2025-11-18T21:26:14Z",
+  "kind": "ammo",
+  "categories": [
+    "20/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.038 kg",
+    "grid": "1x1",
+    "velocity": "476 m/s",
+    "damage": "143",
+    "accuracy": "+60",
+    "recoil": "+40",
+    "penetration": "25",
+    "armor damage": "47",
+    "ricochet": "15%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+30",
+    "durability burn": "+104",
+    "heat": "+134",
+    "feedfailure": "Very low",
+    "misfire": "Medium",
+    "node": "660137ef76c1b56143052be8",
+    "id": "patron_20x70_slug_dg"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

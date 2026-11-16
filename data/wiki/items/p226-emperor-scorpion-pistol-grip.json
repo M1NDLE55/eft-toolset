@@ -1,0 +1,21 @@
+{
+  "title": "P226 Emperor Scorpion pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Emperor_Scorpion_pistol_grip",
+  "revisionId": 340892,
+  "lastEdited": "2026-04-22T09:00:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+3",
+    "node": "5c0006470db834001a6697fe",
+    "ID": "pistolgrip_p226_sig_emperor_scorpion"
+  },
+  "sections": []
+}

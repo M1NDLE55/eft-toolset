@@ -1,0 +1,25 @@
+{
+  "title": "MXLR .308 ME 5-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MXLR_.308_ME_5-round_magazine",
+  "revisionId": 343530,
+  "lastEdited": "2026-05-07T23:30:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.3 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+0",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "5",
+    "caliber": ".308 Marlin Express",
+    "node": "67c5424826265106dd0697a4",
+    "ID": "mag_m1895_marlin_mxlr_784x49_5"
+  },
+  "sections": []
+}

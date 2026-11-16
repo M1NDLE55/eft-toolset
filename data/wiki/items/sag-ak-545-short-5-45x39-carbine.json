@@ -1,0 +1,31 @@
+{
+  "title": "SAG AK-545 Short 5.45x39 carbine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SAG_AK-545_Short_5.45x39_carbine",
+  "revisionId": 341016,
+  "lastEdited": "2026-04-22T23:35:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault carbines",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault carbine",
+    "slot": "Primary",
+    "weight": "3.923",
+    "grid": "4x2",
+    "trader": "Skier LL2",
+    "fire modes": "Single",
+    "sightrange": "500",
+    "ergonomics": "80.5",
+    "velocity": "900 m/s",
+    "range": "650 m",
+    "MOA": "1.62",
+    "Weaprecoil": "Vertical: 62, Horizontal: 181",
+    "rof": "650",
+    "caliber": "5.45x39mm",
+    "node": "628b9c37a733087d0d7fe84b",
+    "ID": "weapon_sag_ak545_short_545x39"
+  },
+  "sections": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "HighCom Striker ACHHC IIIA helmet (Coyote Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HighCom_Striker_ACHHC_IIIA_helmet_(Coyote_Brown)",
+  "revisionId": 348461,
+  "lastEdited": "2026-07-30T20:26:20Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in the Factory Tactical Map",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "36",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69c26fa8add25b3623091e89",
+    "id": "item_equipment_helmet_ACHHC_coyote_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

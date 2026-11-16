@@ -1,0 +1,25 @@
+{
+  "title": "SIG Sauer Vertical Foregrip KeyMod (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_Vertical_Foregrip_KeyMod_(Black)",
+  "revisionId": 342122,
+  "lastEdited": "2026-04-28T03:59:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.055 kg",
+    "grid": "1x1",
+    "price": "₽6,600",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-2",
+    "recoil": "-3.5",
+    "loot xp": "30",
+    "exam xp": "6",
+    "node": "5fc0f9cbd6fa9c00c571bb90",
+    "ID": "foregrip_keymod_sig_vertical_grip"
+  },
+  "sections": []
+}

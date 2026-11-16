@@ -1,0 +1,26 @@
+{
+  "title": "Benelli M3 Super 90 12ga 5-shell magazine cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Benelli_M3_Super_90_12ga_5-shell_magazine_cap",
+  "revisionId": 338848,
+  "lastEdited": "2026-03-18T08:31:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.085 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "5",
+    "caliber": "12/70",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "625ff2ccb8c587128c1a01dd",
+    "ID": "mag_m3_benelli_magazine_cap_12g_5"
+  },
+  "sections": []
+}

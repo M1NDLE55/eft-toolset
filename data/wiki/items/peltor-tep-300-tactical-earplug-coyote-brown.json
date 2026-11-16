@@ -1,0 +1,30 @@
+{
+  "title": "Peltor TEP-300 tactical earplug (Coyote Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Peltor_TEP-300_tactical_earplug_(Coyote_Brown)",
+  "revisionId": 348594,
+  "lastEdited": "2026-07-30T22:14:03Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "In-ear headset",
+    "slot": "Earpiece",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 1",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "68bf405779c8186398099017",
+    "id": "item_equipment_headset_peltor_tep_300"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Big Pipe\n- Glukhar\n- Killa"
+    }
+  ]
+}

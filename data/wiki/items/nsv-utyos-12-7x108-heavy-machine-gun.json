@@ -1,0 +1,59 @@
+{
+  "title": "NSV Utyos 12.7x108 heavy machine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NSV_Utyos_12.7x108_heavy_machine_gun",
+  "revisionId": 358185,
+  "lastEdited": "2026-09-08T23:32:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Heavy machine guns",
+    "Stationary weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stationary heavy machine gun",
+    "fire modes": "Full Auto",
+    "rof": "650",
+    "caliber": "12.7x108mm",
+    "def mag": "Belt",
+    "node": "5cdeb229d7f00c000e7ce174",
+    "ID": "weapon_ckib_nsv_utes_127x108"
+  },
+  "sections": [
+    {
+      "heading": "Customs",
+      "level": 4,
+      "text": "Check the interactive map."
+    },
+    {
+      "heading": "Ground Zero",
+      "level": 4,
+      "text": "Check the interactive map."
+    },
+    {
+      "heading": "Reserve",
+      "level": 4,
+      "text": "Check the interactive map."
+    },
+    {
+      "heading": "Shoreline",
+      "level": 4,
+      "text": "Check the interactive map."
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 4,
+      "text": "Check the interactive map."
+    },
+    {
+      "heading": "Woods",
+      "level": 4,
+      "text": "Check the interactive map."
+    },
+    {
+      "heading": "Interchange",
+      "level": 4,
+      "text": "Check the interactive map."
+    }
+  ]
+}

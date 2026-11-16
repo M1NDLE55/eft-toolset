@@ -1,0 +1,27 @@
+{
+  "title": "Sealed letter with a TG logo",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sealed_letter_with_a_TG_logo",
+  "revisionId": 253025,
+  "lastEdited": "2023-11-02T21:51:28Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5939e9b286f77462a709572c",
+    "id": "letter_terragroup"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Chemical - Part 2 from Skier"
+    }
+  ]
+}

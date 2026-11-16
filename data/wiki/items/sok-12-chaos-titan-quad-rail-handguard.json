@@ -1,0 +1,23 @@
+{
+  "title": "SOK-12 Chaos Titan Quad Rail handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_Chaos_Titan_Quad_Rail_handguard",
+  "revisionId": 342751,
+  "lastEdited": "2026-04-30T21:13:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.408 kg",
+    "grid": "2x1",
+    "ergonomics": "+14",
+    "recoil": "+0",
+    "Heat": "+1.7",
+    "Cooling": "+0.8",
+    "node": "674fe57721a9aa6be6045b96",
+    "ID": "handguard_saiga12_chaos_titan_quad_rail"
+  },
+  "sections": []
+}

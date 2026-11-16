@@ -1,0 +1,22 @@
+{
+  "title": "FN P90 Strike Industries SMC-90 Long M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_Strike_Industries_SMC-90_Long_M-LOK_handguard",
+  "revisionId": 361369,
+  "lastEdited": "2026-09-22T17:32:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.338 kg",
+    "grid": "2x1",
+    "ergonomics": "+17",
+    "Heat": "+1.5",
+    "Cooling": "-0.5",
+    "node": "6a687e38e1ad1bac01015418",
+    "ID": "handguard_p90_strike_industries_smc_90_long"
+  },
+  "sections": []
+}

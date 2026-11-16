@@ -1,0 +1,22 @@
+{
+  "title": "Mosin Rifle Weapon Tuning 7.62x39 thread adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_Weapon_Tuning_7.62x39_thread_adapter",
+  "revisionId": 255728,
+  "lastEdited": "2023-11-25T13:29:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "price": "₽1,900",
+    "trader": "Jaeger LL2",
+    "loot xp": "10",
+    "node": "5cf67a1bd7f00c06585fb6f3",
+    "ID": "muzzle_mosin_weapon_tuning_wt1052_multi"
+  },
+  "sections": []
+}

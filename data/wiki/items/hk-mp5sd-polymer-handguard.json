@@ -1,0 +1,24 @@
+{
+  "title": "HK MP5SD polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5SD_polymer_handguard",
+  "revisionId": 340721,
+  "lastEdited": "2026-04-22T06:43:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.13 kg",
+    "grid": "2x1",
+    "price": "₽4,280",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+11",
+    "Heat": "+3.8",
+    "Cooling": "-2.2",
+    "node": "5926f34786f77469195bfe92",
+    "ID": "handguard_mp5_hk_sd"
+  },
+  "sections": []
+}

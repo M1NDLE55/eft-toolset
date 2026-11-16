@@ -1,0 +1,23 @@
+{
+  "title": "SIG Sauer TANGO6T 1-6x24 30mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_TANGO6T_1-6x24_30mm_riflescope",
+  "revisionId": 338485,
+  "lastEdited": "2026-03-15T14:44:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.626 kg",
+    "grid": "2x1",
+    "zeroing": "50, 100, 150, 200, 250, 300",
+    "sightrange": "1500",
+    "ergonomics": "-4",
+    "modes": "1",
+    "node": "6567e7681265c8a131069b0f",
+    "ID": "scope_30mm_sig_tango6t_1_6x24"
+  },
+  "sections": []
+}

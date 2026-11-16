@@ -1,0 +1,38 @@
+{
+  "title": "IFAK individual first aid kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/IFAK_individual_first_aid_kit",
+  "revisionId": 358730,
+  "lastEdited": "2026-09-10T23:00:36Z",
+  "kind": "item",
+  "categories": [
+    "Medkits"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medkit",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL3, after completing her task Health Care Privacy - Part 5",
+    "effect": "Max heal per use: 50 Buffs:, Removes:, Radiation Exposure, Adds:, Debuffs:, Causes: only when treating heavy bleeding",
+    "use time": "3s",
+    "node": "590c678286f77426c9660122",
+    "id": "item_meds_medkit_ifak"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Healing removes 30 HP from the IFAK\n- Healing removes 210 HP from the IFAK"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Jacket (114 key)\n- Sport bag\n- Wooden crate\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from Health Care Privacy - Part 5"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Death Shadow mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Death_Shadow_mask",
+  "revisionId": 357996,
+  "lastEdited": "2026-09-08T16:39:54Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.25 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL4",
+    "blindness protect": "25%",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "No",
+    "node": "6570aead4d84f81fd002a033",
+    "id": "item_equipment_facecover_strikeball_mask"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

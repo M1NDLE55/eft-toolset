@@ -1,0 +1,27 @@
+{
+  "title": "AR-10 Fortis RED Brake 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Fortis_RED_Brake_7.62x51_muzzle_brake",
+  "revisionId": 340403,
+  "lastEdited": "2026-04-20T14:55:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.108 kg",
+    "grid": "1x1",
+    "price": "₽14,300",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-6",
+    "accuracy": "+0",
+    "recoil": "-12.5",
+    "Heat": "-1.7",
+    "Cooling": "+1.1",
+    "loot xp": "40",
+    "node": "5d026791d7ad1a04a067ea63",
+    "ID": "muzzle_ar10_fortis_red_brake_762x51"
+  },
+  "sections": []
+}

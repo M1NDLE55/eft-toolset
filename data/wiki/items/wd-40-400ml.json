@@ -1,0 +1,31 @@
+{
+  "title": "WD-40 (400ml)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/WD-40_(400ml)",
+  "revisionId": 366596,
+  "lastEdited": "2026-10-31T04:54:20Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable material",
+    "weight": "0.6 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "590c5c9f86f77477c91c36e7",
+    "id": "item_barter_household_wd40_400ml"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Dead Scav\n- Ground cache\n- Jacket\n- Sport bag\n- Technical supply crate\n- Toolbox"
+    },
+    {
+      "heading": "Quest Reward",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from completing The Huntsman Path - Justice"
+    }
+  ]
+}

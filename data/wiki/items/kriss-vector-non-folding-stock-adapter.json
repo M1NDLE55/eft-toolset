@@ -1,0 +1,21 @@
+{
+  "title": "KRISS Vector non-folding stock adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KRISS_Vector_non-folding_stock_adapter",
+  "revisionId": 321674,
+  "lastEdited": "2025-11-16T18:54:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.28 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-2",
+    "node": "5fb655b748c711690e3a8d5a",
+    "ID": "stock_vector_kriss_non_folding_adapter"
+  },
+  "sections": []
+}

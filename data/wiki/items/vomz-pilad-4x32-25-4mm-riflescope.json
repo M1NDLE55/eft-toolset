@@ -1,0 +1,27 @@
+{
+  "title": "VOMZ Pilad 4x32 25.4mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VOMZ_Pilad_4x32_25.4mm_riflescope",
+  "revisionId": 266031,
+  "lastEdited": "2024-01-15T16:15:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.31 kg",
+    "grid": "2x1",
+    "price": "₽14,468",
+    "trader": "Jaeger LL1",
+    "zeroing": "50, 100, 150, 200, 250, 300",
+    "sightrange": "800",
+    "ergonomics": "-4",
+    "modes": "1",
+    "loot xp": "40",
+    "exam xp": "8",
+    "node": "5dff772da3651922b360bf91",
+    "ID": "scope_25_4mm_vomz_pilad_4x32m"
+  },
+  "sections": []
+}

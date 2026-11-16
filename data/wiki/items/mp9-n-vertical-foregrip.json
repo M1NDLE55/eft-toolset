@@ -1,0 +1,24 @@
+{
+  "title": "MP9-N vertical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP9-N_vertical_foregrip",
+  "revisionId": 342074,
+  "lastEdited": "2026-04-28T01:32:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽2,650",
+    "ergonomics": "+4",
+    "recoil": "-1",
+    "loot xp": "30",
+    "exam xp": "6",
+    "node": "5de8fbad2fbe23140d3ee9c4",
+    "ID": "foregrip_mp9_bt_mp9_std"
+  },
+  "sections": []
+}

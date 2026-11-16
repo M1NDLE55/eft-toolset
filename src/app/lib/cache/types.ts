@@ -136,14 +136,37 @@ export interface CachedCraft {
   rewardItems: CachedContainedItem[];
 }
 
+/** Item page facts beyond prices and uses. */
+export interface CachedItemInfo {
+  description: string | null;
+  /** Kilograms. */
+  weight: number | null;
+  /** The handbook price traders' prices are based on. */
+  basePrice: number | null;
+  avg24hPrice: number | null;
+  low24hPrice: number | null;
+  high24hPrice: number | null;
+  /** Lowest flea listing at the last scan, before any fee. */
+  lastLowPrice: number | null;
+  /** Flea listings at the last scan. */
+  lastOfferCount: number | null;
+  stackMaxSize: number | null;
+  /** Item categories, most specific first. */
+  categories: string[];
+}
+
 export interface ComposedItem extends Omit<CachedItem, "usedInTasks"> {
   usedInTasks: CachedTask[];
   hideoutRequirements: CachedHideoutRequirement[];
   hideoutSlots: CachedHideoutSlot[];
   bartersUsing: CachedBarter[];
-  /** Barters that give the item, for the MCP tools; the item page doesn't list them yet. */
+  /** Barters that give the item, with input prices, for the MCP tools. */
   bartersFor?: BarterOffer[];
   craftsUsing: CachedCraft[];
+  /** Barters and crafts that give the item, for the item page. */
+  bartersGiving?: CachedBarter[];
+  craftsGiving?: CachedCraft[];
+  info?: CachedItemInfo;
 }
 
 /** What an item is needed for, without prices: the input to the needs summary. */

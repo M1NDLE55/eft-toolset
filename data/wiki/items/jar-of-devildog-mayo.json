@@ -1,0 +1,43 @@
+{
+  "title": "Jar of DevilDog mayo",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Jar_of_DevilDog_mayo",
+  "revisionId": 345116,
+  "lastEdited": "2026-05-26T18:26:07Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.85 kg",
+    "grid": "1x1",
+    "effect": "Energy: +100, Hydration: -99, , Debuffs:, 1s Delay; 300s Duration: - Decreases Metabolism (-3)",
+    "use time": "4s",
+    "loot xp": "10",
+    "node": "5bc9b156d4351e00367fbce9",
+    "id": "item_food_mayo"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Sport bags\n- In Dead Scavs\n- In Plastic suitcases\n- In Ground caches\n- In Buried barrel caches\n- In Ration supply crates"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- Next to the grenade box located near the balcony of West wing room 216.\n- On the dinner tray beyond the broken brick wall in basement of admin at Health Resort."
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the shelves in the #11SR Saferoom.\n- On the shelves on the north wall of Goshan."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator TheDevildogGamer who welcomes his new subscribers with \"Give him the white and sticky\", which refers to Mayonnaise.\n  - The look of the mayo jar is based off of the popular brand \"Hellmann's\"."
+    }
+  ]
+}

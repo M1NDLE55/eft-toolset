@@ -1,0 +1,33 @@
+{
+  "title": "OFZ 30x165mm shell",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OFZ_30x165mm_shell",
+  "revisionId": 358702,
+  "lastEdited": "2026-09-10T22:58:30Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.839 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "loot xp": "45",
+    "exam xp": "10",
+    "node": "5d0379a886f77420407aa271",
+    "ID": "item_barter_other_30mmround"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Weapon box (6x2)\n- Weapon box (4x4)\n- Weapon box (6x6)\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Can be found in the air-raid shelters\n- Around armoured vehicles\n- Service bay in repair center\n- Can spawn in the RB-ST room, on a table and on a pile of pallets next to two grenade boxes."
+    }
+  ]
+}

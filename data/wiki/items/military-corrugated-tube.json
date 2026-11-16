@@ -1,0 +1,36 @@
+{
+  "title": "Military corrugated tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Military_corrugated_tube",
+  "revisionId": 357614,
+  "lastEdited": "2026-09-01T21:54:59Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.4 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "619cbf476b8a1b37a54eebf8",
+    "id": "item_barter_other_hosemilitary"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- Loose loot spawns inside the construction area next to the main road\n- Loose loot spawns inside the pumping stations of the Water Treatment Plant\n- Loose loot spawns inside the buildings near the \"Southern Road\" extract\n- Loose loot spawns inside the buildings near the \"Armored Train\" extract\n- On the two trucks with flatbeds near the \"South Road Landslide\" extract"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On the shelves in the top hallway of the office area"
+    }
+  ]
+}

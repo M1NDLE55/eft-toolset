@@ -1,0 +1,21 @@
+{
+  "title": "Steyr AUG A3 charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_A3_charging_handle",
+  "revisionId": 295500,
+  "lastEdited": "2024-11-03T17:58:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.011 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+3",
+    "node": "62ebbc53e3c1e1ec7c02c44f",
+    "ID": "charge_aug_steyr_a3_handle"
+  },
+  "sections": []
+}

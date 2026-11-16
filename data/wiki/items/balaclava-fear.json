@@ -1,0 +1,27 @@
+{
+  "title": "Balaclava (Fear)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balaclava_(Fear)",
+  "revisionId": 348552,
+  "lastEdited": "2026-07-30T22:00:13Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a9ea004fb4a4a8a00d2828",
+    "id": "item_equipment_facecover_balaclavaSkull_arena_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Nooby Shield potassium iodide tablets",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nooby_Shield_potassium_iodide_tablets",
+  "revisionId": 347764,
+  "lastEdited": "2026-07-10T12:05:26Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "69bb43df99f3fda8f1072483",
+    "id": "item_ice_pils_potassium"
+  },
+  "sections": [
+    {
+      "heading": "Icebreaker",
+      "level": 3,
+      "text": "- On the desk next to the computer screen in the examination room on level 1\n\n- On the table inside the dentist room on level 1\n\n- On shelves inside the Laboratory\n- On shelves inside the Laboratory office\n- Under a desk at the staircase on level 4\n\n- On the bed inside room 32 on level 6\n\n- On the desk inside room 16 on level 3\n\n- On top of boxes inside the room 01 on level 1\n\n- Inside the conference room on level 5\n\n- Found in Sports bag on location"
+    }
+  ]
+}

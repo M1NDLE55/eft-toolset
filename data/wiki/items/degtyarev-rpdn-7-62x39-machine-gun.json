@@ -1,0 +1,36 @@
+{
+  "title": "Degtyarev RPDN 7.62x39 machine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Degtyarev_RPDN_7.62x39_machine_gun",
+  "revisionId": 352234,
+  "lastEdited": "2026-08-07T20:59:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Light machine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light machine gun",
+    "slot": "Primary",
+    "weight": "7.46 kg",
+    "grid": "6x3",
+    "fire modes": "Full Auto",
+    "sightrange": "1000",
+    "ergonomics": "24",
+    "velocity": "730 m/s",
+    "range": "800",
+    "MOA": "1.31",
+    "Weaprecoil": "Vertical: 73, Horizontal: 344",
+    "rof": "700",
+    "caliber": "7.62x39mm",
+    "node": "65268d8ecb944ff1e90ea385",
+    "ID": "weapon_zid_rpdn_762x39"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This weapon will never malfunction."
+    }
+  ]
+}

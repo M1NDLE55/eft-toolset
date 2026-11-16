@@ -1,0 +1,30 @@
+{
+  "title": "MP-155 Ultima thermal camera",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_Ultima_thermal_camera",
+  "revisionId": 362822,
+  "lastEdited": "2026-10-01T22:04:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Thermal vision sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Thermal vision sight",
+    "weight": "0.21 kg",
+    "grid": "1x1",
+    "refresh rate": "15 Hz",
+    "zeroing": "50, 100",
+    "sightrange": "300",
+    "ergonomics": "-3",
+    "modes": "1",
+    "node": "606f2696f2cb2e02a42aceb1",
+    "ID": "tactical_mp155_kalashnikov_ultima_camera"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be insured.\n- Cannot be put in secure containers\n- Only 5 can be held in a raid inventory at the same time\n- The sight can be used while point firing"
+    }
+  ]
+}

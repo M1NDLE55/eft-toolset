@@ -1,0 +1,26 @@
+{
+  "title": "KS-23 23x75 510mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KS-23_23x75_510mm_barrel",
+  "revisionId": 215584,
+  "lastEdited": "2022-12-02T15:30:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.91 kg",
+    "grid": "3x1",
+    "ergonomics": "-4",
+    "velocity": "+1.4",
+    "MOA": "25.78",
+    "recoil": "-4",
+    "Dura Burn": "-9",
+    "Heat": "-12",
+    "Cooling": "-8",
+    "node": "5e848d1c264f7c180b5e35a9",
+    "ID": "barrel_ks23_510mm_23x75"
+  },
+  "sections": []
+}

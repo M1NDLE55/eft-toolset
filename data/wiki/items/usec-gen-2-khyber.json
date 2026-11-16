@@ -1,0 +1,22 @@
+{
+  "title": "USEC Gen.2 Khyber",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_Gen.2_Khyber",
+  "revisionId": 261724,
+  "lastEdited": "2024-01-02T02:45:10Z",
+  "kind": "item",
+  "categories": [
+    "USEC lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f591186f7744bcc048755",
+    "ID": "usec_lower_gen2khyber"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The pants are modeled on the Kitanica Gen2 Pants, and the boots are modeled on the Khyber Lightweight Tactical Boot."
+    }
+  ]
+}

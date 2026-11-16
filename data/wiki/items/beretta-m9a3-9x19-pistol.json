@@ -1,0 +1,32 @@
+{
+  "title": "Beretta M9A3 9x19 pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Beretta_M9A3_9x19_pistol",
+  "revisionId": 340923,
+  "lastEdited": "2026-04-22T21:51:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.818 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "70.5",
+    "velocity": "376 m/s",
+    "range": "50 m",
+    "MOA": "9.97",
+    "Weaprecoil": "Vertical: 392, Horizontal: 272",
+    "rof": "30",
+    "caliber": "9x19mm Parabellum",
+    "def mag": "M9A3 9x19 17-round magazine",
+    "node": "5cadc190ae921500103bb3b6",
+    "ID": "weapon_beretta_m9a3_9x19"
+  },
+  "sections": []
+}

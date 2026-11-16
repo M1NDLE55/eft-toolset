@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Griffin Armament Gate-LOK Hammer 5.56x45 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Griffin_Armament_Gate-LOK_Hammer_5.56x45_flash_hider",
+  "revisionId": 268574,
+  "lastEdited": "2024-02-04T16:51:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.068 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-1",
+    "accuracy": "+0",
+    "recoil": "-6",
+    "Heat": "+5",
+    "node": "6386120cd6baa055ad1e201c",
+    "ID": "muzzle_ar15_griffin_gatelok_hammer_comp_556x45"
+  },
+  "sections": []
+}

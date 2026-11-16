@@ -1,0 +1,37 @@
+{
+  "title": "HK G36 5.56x45 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_5.56x45_assault_rifle",
+  "revisionId": 357004,
+  "lastEdited": "2026-08-30T17:27:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.029 kg",
+    "grid": "6x2",
+    "trader": "Peacekeeper LL2: C variantPeacekeeper LL3: StandardPeacekeeper LL3: E variantPeacekeeper LL3: E2 variantPeacekeeper LL4: KV2 variant",
+    "fire modes": "Single, 2-round Burst, Full Auto",
+    "sightrange": "800",
+    "ergonomics": "52.5",
+    "velocity": "922 m/s",
+    "range": "500 m",
+    "MOA": "1.73",
+    "Weaprecoil": "Vertical: 69, Horizontal: 195",
+    "rof": "750",
+    "caliber": "5.56x45mm NATO",
+    "node": "623063e994fc3f7b302a9696",
+    "ID": "weapon_hk_g36_556x45"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| G36 C |\n| G36 E |\n| G36 E2 |\n| G36 K |\n| G36 KV1 |\n| G36 KV2 |"
+    }
+  ]
+}

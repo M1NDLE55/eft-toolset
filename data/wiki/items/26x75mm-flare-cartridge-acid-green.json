@@ -1,0 +1,55 @@
+{
+  "title": "26x75mm flare cartridge (Acid Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/26x75mm_flare_cartridge_(Acid_Green)",
+  "revisionId": 364890,
+  "lastEdited": "2026-10-24T09:45:23Z",
+  "kind": "ammo",
+  "categories": [
+    "26x75mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flare cartridge",
+    "weight": "0.043 kg",
+    "grid": "1x1",
+    "velocity": "80 m/s",
+    "damage": "37",
+    "penetration": "0",
+    "armor damage": "60",
+    "node": "635267f063651329f75a4ee8",
+    "id": "patron_26x75_acidgreen"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be taken into a raid.\n- Cannot be listed for sale on the flea market.\n- Unlike the Red Flare Cartridge, this one does not call in an airdrop.\n- Firing this flare into the sky will make Scavs, as well as Bosses from the Rogues and Scavs faction in the area friendly until you shoot them. Leaving the area will allow you to be targeted again.\n- Firing this flare will illuminate the surrounding area for 20 seconds after ignition"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Cultists\n- Dead Scav\n- Weapon box (4x4)\n- Wooden ammo box\n- Wooden crate"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- At the three-story dorms in the \"marked room\""
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This flare was first added as part of Escape from Tarkov's 2022 Halloween celebration"
+    }
+  ]
+}

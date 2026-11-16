@@ -1,0 +1,24 @@
+{
+  "title": "Weapon paint set (Cat Watcher)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Cat_Watcher)",
+  "revisionId": 320600,
+  "lastEdited": "2025-10-29T20:55:38Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "68d15077480cf829c207b814",
+    "id": "item_camo_catwatcher"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This camo is based on the TGRFUEL (Tigerfuel) pattern from both of Escape from Tarkov's predecessor games \"Contract Wars\" and \"Hired Ops\"."
+    }
+  ]
+}

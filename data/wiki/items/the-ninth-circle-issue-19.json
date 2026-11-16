@@ -1,0 +1,25 @@
+{
+  "title": "The Ninth Circle Issue 19",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Ninth_Circle_Issue_19",
+  "revisionId": 336361,
+  "lastEdited": "2026-02-21T17:52:20Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "68d2f44df63f06b7590ce30e",
+    "id": "item_info_note_newspaper_9th_krug_19_circle"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Accidental Witness"
+    }
+  ]
+}

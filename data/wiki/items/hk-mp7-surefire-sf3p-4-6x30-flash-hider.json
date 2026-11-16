@@ -1,0 +1,30 @@
+{
+  "title": "HK MP7 SureFire SF3P 4.6x30 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP7_SureFire_SF3P_4.6x30_flash_hider",
+  "revisionId": 362359,
+  "lastEdited": "2026-09-29T09:42:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.072 kg",
+    "grid": "1x1",
+    "ergonomics": "-1",
+    "accuracy": "+3",
+    "recoil": "-6",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "69985fa69f79621e1d0f58f5",
+    "ID": "muzzle_mp7_surefire_sf3p_556_mp7_flash_hider_46x30"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- The Wedge"
+    }
+  ]
+}

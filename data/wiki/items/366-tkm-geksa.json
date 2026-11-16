@@ -1,0 +1,40 @@
+{
+  "title": ".366 TKM Geksa",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.366_TKM_Geksa",
+  "revisionId": 322785,
+  "lastEdited": "2025-11-18T21:19:54Z",
+  "kind": "ammo",
+  "categories": [
+    ".366 TKM ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.016 kg",
+    "grid": "1x1",
+    "price": "₽57",
+    "trader": "Jaeger LL1",
+    "velocity": "550 m/s",
+    "damage": "110",
+    "penetration": "14",
+    "armor damage": "38",
+    "ricochet": "5%",
+    "fragmentation": "45%",
+    "l bleed chance": "+30",
+    "h bleed chance": "+10",
+    "durability burn": "+35",
+    "heat": "+104.3",
+    "feedfailure": "Very low",
+    "misfire": "Medium",
+    "node": "59e6658b86f77411d949b250",
+    "id": "patron_366_TKM_Geksa"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

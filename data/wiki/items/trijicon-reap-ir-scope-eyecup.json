@@ -1,0 +1,23 @@
+{
+  "title": "Trijicon REAP-IR scope eyecup",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trijicon_REAP-IR_scope_eyecup",
+  "revisionId": 311415,
+  "lastEdited": "2025-04-18T11:55:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "+6",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5a1eacb3fcdbcb09800872be",
+    "ID": "tactical_reap-ir_trijicon_eyecup"
+  },
+  "sections": []
+}

@@ -1,0 +1,38 @@
+{
+  "title": ".50 AE FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_AE_FMJ",
+  "revisionId": 322732,
+  "lastEdited": "2025-11-18T21:12:54Z",
+  "kind": "ammo",
+  "categories": [
+    ".50 Action Express ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.028 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "velocity": "440 m/s",
+    "damage": "85",
+    "recoil": "+10",
+    "penetration": "40",
+    "armor damage": "50",
+    "ricochet": "8%",
+    "h bleed chance": "+10",
+    "durability burn": "+70",
+    "heat": "+138",
+    "feedfailure": "Low",
+    "misfire": "Very low",
+    "node": "668fe62ac62660a5d8071446",
+    "id": "patron_127x33_fmj"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

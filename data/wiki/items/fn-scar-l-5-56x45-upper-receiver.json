@@ -1,0 +1,23 @@
+{
+  "title": "FN SCAR-L 5.56x45 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR-L_5.56x45_upper_receiver",
+  "revisionId": 317705,
+  "lastEdited": "2025-08-26T21:51:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.2 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL2: FDE, Peacekeeper LL3: Black",
+    "ergonomics": "+2",
+    "Heat": "-1.6",
+    "Cooling": "+1.7",
+    "node": "618405198004cc50514c3594 618426d96c780c1e710c9b9f",
+    "ID": "reciever_mk16_fn_scar_l_std reciever_mk16_fn_scar_l_std_fde"
+  },
+  "sections": []
+}

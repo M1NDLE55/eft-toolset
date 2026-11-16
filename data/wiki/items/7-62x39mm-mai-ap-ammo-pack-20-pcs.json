@@ -1,0 +1,24 @@
+{
+  "title": "7.62x39mm MAI AP ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_MAI_AP_ammo_pack_(20_pcs)",
+  "revisionId": 367222,
+  "lastEdited": "2026-11-02T23:13:25Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6489851fc827d4637f01791b",
+    "ID": "item_ammo_box_762x39_20_mai_ap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Crye Precision AirFrame helmet (Old School)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_helmet_(Old_School)",
+  "revisionId": 362085,
+  "lastEdited": "2026-09-24T19:42:36Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.88 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 2",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69ce47f01bb66daf5b0d62fd",
+    "ID": "item_equipment_helmet_crye_airframe_oldschool_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

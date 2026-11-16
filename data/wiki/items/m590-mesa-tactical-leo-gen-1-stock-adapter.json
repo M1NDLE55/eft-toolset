@@ -1,0 +1,25 @@
+{
+  "title": "M590 Mesa Tactical LEO gen.1 stock adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M590_Mesa_Tactical_LEO_gen.1_stock_adapter",
+  "revisionId": 337725,
+  "lastEdited": "2026-03-06T01:47:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.35 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-2",
+    "recoil": "-0",
+    "Dura Burn": "-2",
+    "loot xp": "10",
+    "exam xp": "1",
+    "node": "5ef1b9f0c64c5d0dfc0571a1",
+    "ID": "stock_590_mesa_leo_stock_adapter_gen1"
+  },
+  "sections": []
+}

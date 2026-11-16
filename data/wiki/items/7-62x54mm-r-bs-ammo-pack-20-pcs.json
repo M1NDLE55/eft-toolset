@@ -1,0 +1,24 @@
+{
+  "title": "7.62x54mm R BS ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_BS_ammo_pack_(20_pcs)",
+  "revisionId": 367236,
+  "lastEdited": "2026-11-02T23:14:10Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "648984b8d5b4df6140000a1a",
+    "ID": "item_ammo_box_762x54r_20_bs"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

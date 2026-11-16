@@ -1,0 +1,31 @@
+{
+  "title": "BakeEzy cook book",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BakeEzy_cook_book",
+  "revisionId": 357747,
+  "lastEdited": "2026-09-07T17:57:19Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.25 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "62a09e73af34e73a266d932a",
+    "id": "item_info_book_bakeezy"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Safe\n- Dead Scav\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket\n- Sports bag"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a reference to the content creator BakeeZy. The QR code on the backside leads to his YouTube channel."
+    }
+  ]
+}

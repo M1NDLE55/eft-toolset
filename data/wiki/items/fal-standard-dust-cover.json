@@ -1,0 +1,26 @@
+{
+  "title": "FAL standard dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FAL_standard_dust_cover",
+  "revisionId": 211776,
+  "lastEdited": "2022-09-21T14:59:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.175 kg",
+    "grid": "2x1",
+    "price": "₽2,500",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "node": "5b7d6c105acfc40015109a5f",
+    "ID": "reciever_fal_fn_fal_dust_cover_std"
+  },
+  "sections": []
+}

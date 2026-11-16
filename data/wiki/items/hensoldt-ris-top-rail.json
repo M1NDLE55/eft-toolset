@@ -1,0 +1,21 @@
+{
+  "title": "Hensoldt RIS top rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hensoldt_RIS_top_rail",
+  "revisionId": 253494,
+  "lastEdited": "2023-11-02T21:56:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+0",
+    "node": "622efdf8ec80d870d349b4e5",
+    "ID": "mount_base_hensoldt_top_rail"
+  },
+  "sections": []
+}

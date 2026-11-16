@@ -1,0 +1,25 @@
+{
+  "title": "HK MP5 B&T TL-99 aluminum handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_B%26T_TL-99_aluminum_handguard",
+  "revisionId": 340787,
+  "lastEdited": "2026-04-22T07:35:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.278 kg",
+    "grid": "2x1",
+    "price": "₽12,200",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+13",
+    "recoil": "+0",
+    "Heat": "+2",
+    "Cooling": "-0.6",
+    "node": "5a9548c9159bd400133e97b3",
+    "ID": "handguard_mp5_bt_tl_99_3x_nar"
+  },
+  "sections": []
+}

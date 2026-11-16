@@ -1,0 +1,25 @@
+{
+  "title": "SVD 7.62x54R 565mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVD_7.62x54R_565mm_barrel",
+  "revisionId": 341995,
+  "lastEdited": "2026-04-27T23:52:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.12 kg",
+    "grid": "4x1",
+    "ergonomics": "-22",
+    "velocity": "+0",
+    "MOA": "1.13",
+    "recoil": "-14.1",
+    "Heat": "-13",
+    "Cooling": "-8",
+    "node": "5c471cb32e221602b177afaa",
+    "ID": "barrel_svd_izhmash_565mm_762x54"
+  },
+  "sections": []
+}

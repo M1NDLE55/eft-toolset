@@ -1,0 +1,25 @@
+{
+  "title": "Syringe with a chemical",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Syringe_with_a_chemical",
+  "revisionId": 252894,
+  "lastEdited": "2023-11-02T21:50:22Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "593a87af86f774122f54a951",
+    "id": "quest_reagent"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Chemical - Part 3 from Skier"
+    }
+  ]
+}

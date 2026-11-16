@@ -1,0 +1,27 @@
+{
+  "title": "PL-15 9x19 16-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PL-15_9x19_16-round_magazine",
+  "revisionId": 337761,
+  "lastEdited": "2026-03-06T02:03:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.096 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "-1",
+    "checkaccuracy": "1",
+    "checkmodifier": "-15",
+    "loadmodifier": "-15",
+    "feedfailure": "Very low",
+    "capacity": "16",
+    "caliber": "9x19mm Parabellum",
+    "node": "602286df23506e50807090c6",
+    "ID": "mag_pl15_izhmash_pl15_std_9x19_16"
+  },
+  "sections": []
+}

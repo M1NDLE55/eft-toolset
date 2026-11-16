@@ -1,0 +1,27 @@
+{
+  "title": "OP-SKS 7.62x39 520mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OP-SKS_7.62x39_520mm_barrel",
+  "revisionId": 342256,
+  "lastEdited": "2026-04-28T21:53:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.5 kg",
+    "grid": "3x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-30",
+    "velocity": "+2",
+    "MOA": "1.72",
+    "recoil": "-9.4",
+    "Dura Burn": "+0",
+    "Heat": "-10",
+    "Cooling": "-8",
+    "node": "634eff66517ccc8a960fc735",
+    "ID": "barrel_sks_molot_520mm_762x39"
+  },
+  "sections": []
+}

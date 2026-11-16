@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Urban Flecktarn)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Urban_Flecktarn)",
+  "revisionId": 348500,
+  "lastEdited": "2026-07-30T21:22:46Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67d7f1ca61978c41f30a7038",
+    "id": "item_camo_flecktarn_urban"
+  },
+  "sections": []
+}

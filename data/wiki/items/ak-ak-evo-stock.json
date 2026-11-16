@@ -1,0 +1,21 @@
+{
+  "title": "AK AK-EVO stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_AK-EVO_stock",
+  "revisionId": 338014,
+  "lastEdited": "2026-03-08T00:43:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.397 kg",
+    "grid": "2x1",
+    "ergonomics": "+15",
+    "recoil": "-24",
+    "node": "6761779c48fa5c377e06fc3f",
+    "ID": "stock_ak_izhmash_ak_evo"
+  },
+  "sections": []
+}

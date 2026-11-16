@@ -1,0 +1,24 @@
+{
+  "title": "SKS TAPCO Intrafuse chassis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_TAPCO_Intrafuse_chassis",
+  "revisionId": 340824,
+  "lastEdited": "2026-04-22T08:15:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chassis",
+    "weight": "0.75 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+10",
+    "recoil": "-15",
+    "Heat": "+3.4",
+    "Cooling": "-3.1",
+    "node": "5afd7ded5acfc40017541f5e",
+    "ID": "stock_sks_tapco_intrafuse_sks_railed"
+  },
+  "sections": []
+}

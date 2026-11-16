@@ -1,0 +1,29 @@
+{
+  "title": "Roubles",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Roubles",
+  "revisionId": 363966,
+  "lastEdited": "2026-10-12T11:17:55Z",
+  "kind": "item",
+  "categories": [
+    "Currency"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Currency",
+    "grid": "1x1",
+    "node": "5449016a4bdc2d6f028b456f",
+    "id": "Rubles"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Stacks to 1,000,000\n- Only 1,000,000 can be brought into a raid\n- Only 1,500,000 can be held in a raid inventory at the same time\n- Spawns in stacks of 5,500-13,500\n- Can be purchased in the PvE mode through the Expansion Hub"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Cash registers\n- Safes\n- Dead Scavs\n- Cash register TAR2-2\n- Buried barrel caches\n- Jackets"
+    }
+  ]
+}

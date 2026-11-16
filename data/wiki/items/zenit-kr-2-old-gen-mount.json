@@ -1,0 +1,21 @@
+{
+  "title": "Zenit KR-2 old gen mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zenit_KR-2_old_gen_mount",
+  "revisionId": 322448,
+  "lastEdited": "2025-11-18T17:11:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.036 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-0.1",
+    "node": "646f6322f43d0c5d62063715",
+    "ID": "mount_all_zenit_kr2_gen_1"
+  },
+  "sections": []
+}

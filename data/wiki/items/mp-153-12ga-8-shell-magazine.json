@@ -1,0 +1,28 @@
+{
+  "title": "MP-153 12ga 8-shell magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-153_12ga_8-shell_magazine",
+  "revisionId": 337369,
+  "lastEdited": "2026-03-05T22:13:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.3 kg",
+    "grid": "3x1",
+    "price": "₽2,000",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-3",
+    "checkaccuracy": "No",
+    "feedfailure": "Low",
+    "capacity": "8",
+    "caliber": "12/70",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "56deeefcd2720bc8328b4568",
+    "ID": "mag_mr153_izhmeh_12g_8"
+  },
+  "sections": []
+}

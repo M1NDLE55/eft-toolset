@@ -1,0 +1,25 @@
+{
+  "title": "Note in the pumping station",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_in_the_pumping_station",
+  "revisionId": 347492,
+  "lastEdited": "2026-06-29T21:34:53Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "68ea992027da8dde060ebfef",
+    "id": "item_info_note_terminal_pumpstation"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- This item is related to the story chapter The Ticket"
+    }
+  ]
+}

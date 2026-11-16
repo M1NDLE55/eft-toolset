@@ -1,0 +1,26 @@
+{
+  "title": "Order from TerraGroup Worldwide headquarters",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Order_from_TerraGroup_Worldwide_headquarters",
+  "revisionId": 348074,
+  "lastEdited": "2026-07-19T12:25:40Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "6877c866ae5d3a06a30d7f3f",
+    "id": "item_info_note_order_stopactivities"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

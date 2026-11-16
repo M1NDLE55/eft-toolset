@@ -1,0 +1,42 @@
+{
+  "title": "Military power filter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Military_power_filter",
+  "revisionId": 360700,
+  "lastEdited": "2026-09-19T10:14:56Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5d0378d486f77420421a5ff4",
+    "ID": "item_bater_electr_powerfilter"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Weapon box (6x2)\n- Wooden crate"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the RB-ST warehouse"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- At the train depot as loose loot (access via BTR)\n- Multiple loose spawns in the Bunker under the Mountain (Hindsight 20/20)\n- Multiple loose spawns behind crashed plane\n- Multiple loose spawns in the Old house room key"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Tarkov Import\n- 1 can be obtained as a quest reward from Ironclad Proof\n- 1 can be obtained as a quest reward from Reconnaissance\n- 1 can be obtained as a quest reward from Hot Wheels"
+    }
+  ]
+}

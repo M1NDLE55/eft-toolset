@@ -1,0 +1,33 @@
+{
+  "title": "Crye Precision AirFrame Ears (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_Ears_(Black)",
+  "revisionId": 362100,
+  "lastEdited": "2026-09-24T19:46:40Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 2",
+    "armor": "3",
+    "armor coverage": "Ears",
+    "durability": "27",
+    "material": "Aluminium",
+    "penalties": "+0% turn speed, +0% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69caa229512d14715e0fccdf",
+    "ID": "item_equipment_helmet_crye_airframe_ears_black_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

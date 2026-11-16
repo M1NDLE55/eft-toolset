@@ -1,0 +1,25 @@
+{
+  "title": "Cultist priest's note",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cultist_priest's_note",
+  "revisionId": 353592,
+  "lastEdited": "2026-08-14T19:08:04Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "68ea9b43b8469178710c158e",
+    "ID": "item_info_note_sectantPriest_eye"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here"
+    }
+  ]
+}

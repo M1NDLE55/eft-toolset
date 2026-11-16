@@ -1,0 +1,27 @@
+{
+  "title": "Pack of Tarker dried meat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pack_of_Tarker_dried_meat",
+  "revisionId": 309728,
+  "lastEdited": "2025-04-09T20:33:07Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.28 kg",
+    "grid": "1x1",
+    "effect": "Energy: +55, Hydration: -5",
+    "use time": "4s",
+    "node": "65815f0e647e3d7246384e14",
+    "id": "item_food_snacker_beef"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Ration supply crates\n- In Sport bags"
+    }
+  ]
+}

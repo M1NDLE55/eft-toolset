@@ -1,0 +1,27 @@
+{
+  "title": "M1911 Anarchy Outdoors .45 ACP muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911_Anarchy_Outdoors_.45_ACP_muzzle_brake",
+  "revisionId": 352624,
+  "lastEdited": "2026-08-09T20:02:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-2",
+    "accuracy": "+0",
+    "recoil": "-10",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "loot xp": "20",
+    "exam xp": "5",
+    "node": "5ef61964ec7f42238c31e0c1",
+    "ID": "muzzle_m1911_anarchy_outdoors_1911_muzzle_brake_1143x23"
+  },
+  "sections": []
+}

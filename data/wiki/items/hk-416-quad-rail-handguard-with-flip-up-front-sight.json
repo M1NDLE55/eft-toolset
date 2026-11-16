@@ -1,0 +1,24 @@
+{
+  "title": "HK 416 Quad Rail handguard with flip-up front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416_Quad_Rail_handguard_with_flip-up_front_sight",
+  "revisionId": 341692,
+  "lastEdited": "2026-04-26T20:57:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.43 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+14.5",
+    "recoil": "+0",
+    "Heat": "-2.4",
+    "Cooling": "+1",
+    "node": "5bb20df1d4351e00347787d5",
+    "ID": "handguard_416_hk_quad_rail_w_sight"
+  },
+  "sections": []
+}

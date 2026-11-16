@@ -1,0 +1,39 @@
+{
+  "title": "4.6x30mm Subsonic SX",
+  "url": "https://escapefromtarkov.fandom.com/wiki/4.6x30mm_Subsonic_SX",
+  "revisionId": 322816,
+  "lastEdited": "2025-11-18T21:23:25Z",
+  "kind": "ammo",
+  "categories": [
+    "4.6x30mm HK ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "velocity": "290 m/s",
+    "damage": "52",
+    "accuracy": "+10",
+    "recoil": "-22",
+    "penetration": "23",
+    "armor damage": "33",
+    "ricochet": "50%",
+    "durability burn": "-30",
+    "heat": "-12",
+    "feedfailure": "Very low",
+    "misfire": "Very low",
+    "effects": "Subsonic",
+    "node": "5ba26844d4351e00334c9475",
+    "id": "patron_46x30_subsonic_sx"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

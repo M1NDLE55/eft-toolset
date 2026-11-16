@@ -1,0 +1,30 @@
+{
+  "title": "Fake mustache",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fake_mustache",
+  "revisionId": 339584,
+  "lastEdited": "2026-04-02T16:09:30Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "slot": "Face cover",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "node": "5bd073a586f7747e6f135799",
+    "id": "item_equipment_mustache"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On Dead Scav\n- On Scav Raiders\n- In Buried barrel cache\n- In Ground cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator Sequisha."
+    }
+  ]
+}

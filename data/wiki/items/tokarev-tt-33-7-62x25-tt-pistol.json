@@ -1,0 +1,37 @@
+{
+  "title": "Tokarev TT-33 7.62x25 TT pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tokarev_TT-33_7.62x25_TT_pistol",
+  "revisionId": 340913,
+  "lastEdited": "2026-04-22T21:46:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.874 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL1",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "67",
+    "velocity": "420 m/s",
+    "range": "50 m",
+    "MOA": "12.03",
+    "Weaprecoil": "Vertical: 536, Horizontal: 315",
+    "rof": "30",
+    "caliber": "7.62x25mm Tokarev",
+    "node": "571a12c42459771f627b58a0",
+    "ID": "weapon_toz_tt_762x25tt"
+  },
+  "sections": [
+    {
+      "heading": "Weapon Variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| TT Brunner |"
+    }
+  ]
+}

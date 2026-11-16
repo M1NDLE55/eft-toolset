@@ -1,0 +1,25 @@
+{
+  "title": "G-Wagon flash drive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/G-Wagon_flash_drive",
+  "revisionId": 332716,
+  "lastEdited": "2026-01-19T16:53:39Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "67bde1dc5678472f2a0e6167",
+    "id": "q_skyf1_flash"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Falling Skies"
+    }
+  ]
+}

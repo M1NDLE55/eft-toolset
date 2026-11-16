@@ -1,0 +1,28 @@
+{
+  "title": "AK Lantac Drakon 7.62x39 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Lantac_Drakon_7.62x39_muzzle_brake",
+  "revisionId": 337635,
+  "lastEdited": "2026-03-06T00:34:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "price": "₽11,800",
+    "trader": "Skier LL4",
+    "ergonomics": "-4",
+    "accuracy": "+0",
+    "recoil": "-11",
+    "Dura Burn": "-4",
+    "Heat": "-1.5",
+    "loot xp": "34",
+    "exam xp": "5",
+    "node": "5c878ebb2e2216001219d48a",
+    "ID": "muzzle_ak_lantac_dgnak47b_muzzle_brake_762x39"
+  },
+  "sections": []
+}

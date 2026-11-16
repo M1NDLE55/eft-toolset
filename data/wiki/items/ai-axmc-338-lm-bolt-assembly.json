@@ -1,0 +1,22 @@
+{
+  "title": "AI AXMC .338 LM bolt assembly",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_.338_LM_bolt_assembly",
+  "revisionId": 284293,
+  "lastEdited": "2024-08-08T22:57:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.45 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "-3",
+    "recoil": "-1",
+    "node": "62811cd7308cb521f87a8f99",
+    "ID": "charge_ax_accuracy_internation_axmc_86x70_pb"
+  },
+  "sections": []
+}

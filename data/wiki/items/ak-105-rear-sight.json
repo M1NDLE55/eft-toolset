@@ -1,0 +1,22 @@
+{
+  "title": "AK-105 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-105_rear_sight",
+  "revisionId": 323675,
+  "lastEdited": "2025-11-20T05:38:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "sightrange": "500",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5ac733a45acfc400192630e2",
+    "ID": "sight_rear_ak_izhmash_ak105_std"
+  },
+  "sections": []
+}

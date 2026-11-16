@@ -1,0 +1,42 @@
+{
+  "title": "Crye Precision AVS plate carrier (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AVS_plate_carrier_(MultiCam)",
+  "revisionId": 348521,
+  "lastEdited": "2026-07-30T21:52:02Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.88 kg",
+    "grid": "3x4",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 0",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Groin",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "112",
+    "penalties": "-2% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "23 Slots",
+    "node": "67ab49aab9c7a1e18c095686",
+    "id": "item_equipment_rig_cryeAVS_arena_bp_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Recruit Bas-Relief",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Recruit_Bas-Relief",
+  "revisionId": 360383,
+  "lastEdited": "2026-09-15T15:56:17Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "1 kg",
+    "grid": "2x2",
+    "node": "6a91b07d0265fb6a1f061a8a",
+    "id": "item_barter_flyers_leagues_rank_1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

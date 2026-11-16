@@ -1,0 +1,40 @@
+{
+  "title": "9.3x64mm SP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9.3x64mm_SP",
+  "revisionId": 325490,
+  "lastEdited": "2025-11-25T16:50:16Z",
+  "kind": "ammo",
+  "categories": [
+    "9.3x64mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.039 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "velocity": "697 m/s",
+    "damage": "129",
+    "recoil": "-20",
+    "penetration": "37",
+    "armor damage": "55",
+    "ricochet": "40%",
+    "fragmentation": "5%",
+    "l bleed chance": "+80",
+    "h bleed chance": "+50",
+    "durability burn": "+40",
+    "heat": "+193.4",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "68aeed8a8906b00bc800fdd6",
+    "id": "patron_93x64_sp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

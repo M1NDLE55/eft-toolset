@@ -1,0 +1,31 @@
+{
+  "title": "Leatherman Multitool",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Leatherman_Multitool",
+  "revisionId": 364957,
+  "lastEdited": "2026-10-25T21:42:51Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.142 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "node": "544fb5454bdc2df8738b456a",
+    "id": "mtool"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The multitool is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- When carried in a raid, it can be used to disarm Tripwires rapidly, reducing the disarm time from 11 seconds to 3 seconds."
+    }
+  ]
+}

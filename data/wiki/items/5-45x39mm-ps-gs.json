@@ -1,0 +1,36 @@
+{
+  "title": "5.45x39mm PS gs",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_PS_gs",
+  "revisionId": 356452,
+  "lastEdited": "2026-08-26T01:28:28Z",
+  "kind": "ammo",
+  "categories": [
+    "5.45x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "velocity": "890 m/s",
+    "damage": "56",
+    "penetration": "28",
+    "armor damage": "40",
+    "ricochet": "40%",
+    "durability burn": "+10",
+    "heat": "+48.7",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "node": "56dff3afd2720bba668b4567",
+    "id": "patron_545x39_PS"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Note from USEC's corpse",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_from_USEC's_corpse",
+  "revisionId": 348850,
+  "lastEdited": "2026-08-02T00:26:22Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "6891bb203bbad2a6230f9be8",
+    "id": "item_info_note_usec_weapon_malfunctions"
+  },
+  "sections": []
+}

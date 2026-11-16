@@ -1,0 +1,28 @@
+{
+  "title": "SureFire X400 Ultra tactical flashlight with laser",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SureFire_X400_Ultra_tactical_flashlight_with_laser",
+  "revisionId": 356667,
+  "lastEdited": "2026-08-27T21:23:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.138 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "modes": "3",
+    "node": "56def37dd2720bec348b456a",
+    "ID": "tactical_all_surefire_x400_vis_laser"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is red"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "AK FAB Defense PDC dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_FAB_Defense_PDC_dust_cover",
+  "revisionId": 322398,
+  "lastEdited": "2025-11-18T16:06:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.202 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+1.5",
+    "accuracy": "+0",
+    "recoil": "-0.6",
+    "Dura Burn": "-3",
+    "node": "5d2c770c48f0354b4a07c100",
+    "ID": "reciever_ak_fab_defence_pdc"
+  },
+  "sections": []
+}

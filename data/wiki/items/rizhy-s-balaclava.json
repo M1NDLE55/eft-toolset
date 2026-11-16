@@ -1,0 +1,26 @@
+{
+  "title": "Rizhy's balaclava",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rizhy's_balaclava",
+  "revisionId": 320862,
+  "lastEdited": "2025-11-11T20:40:48Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6532841a0e1cf7803b0812dd",
+    "id": "item_equipment_facecover_ryzhy_balaclava"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item is exclusive to owners of the \"Ryzhy\" edition of the game."
+    }
+  ]
+}

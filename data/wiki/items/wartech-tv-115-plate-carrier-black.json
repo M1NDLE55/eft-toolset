@@ -1,0 +1,42 @@
+{
+  "title": "WARTECH TV-115 plate carrier (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/WARTECH_TV-115_plate_carrier_(Black)",
+  "revisionId": 348720,
+  "lastEdited": "2026-07-30T22:35:58Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "1.88 kg",
+    "grid": "3x3",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 2",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Thorax, Back",
+    "default plates": "2x",
+    "default plates armor class": "3",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "52",
+    "penalties": "-1% movement speed, -1% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "13 Slots",
+    "node": "69b10ebfde4dda4a140bddb8",
+    "ID": "item_equipment_rig_tv115_black_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

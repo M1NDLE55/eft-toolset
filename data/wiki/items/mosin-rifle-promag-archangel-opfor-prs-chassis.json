@@ -1,0 +1,25 @@
+{
+  "title": "Mosin Rifle ProMag Archangel OPFOR PRS chassis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_ProMag_Archangel_OPFOR_PRS_chassis",
+  "revisionId": 366578,
+  "lastEdited": "2026-10-31T04:28:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "2 kg",
+    "grid": "4x1",
+    "trader": "Jaeger LL4 after completing his task The Tarkov Shooter - Part 5",
+    "ergonomics": "+40",
+    "accuracy": "+3",
+    "recoil": "-27",
+    "Heat": "-5.9",
+    "Cooling": "+6.3",
+    "node": "5bae13bad4351e00320204af",
+    "ID": "stock_mosin_promag_archangel_opfor_prs"
+  },
+  "sections": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Raid poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Raid_poster",
+  "revisionId": 356286,
+  "lastEdited": "2026-08-25T22:04:37Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "68f25b27abc35769c505f959",
+    "id": "item_barter_flyers_art_05"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The poster was first obtainable during Release Twitch Drops (October 2025)."
+    }
+  ]
+}

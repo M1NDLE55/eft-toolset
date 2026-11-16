@@ -1,0 +1,23 @@
+{
+  "title": "PPSh-41 dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PPSh-41_dust_cover",
+  "revisionId": 216293,
+  "lastEdited": "2022-12-09T17:22:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "1.100 kg",
+    "grid": "2x1",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-2",
+    "node": "5ea03e5009aa976f2e7a514b",
+    "ID": "reciever_ppsh_zis_ppsh41_std"
+  },
+  "sections": []
+}

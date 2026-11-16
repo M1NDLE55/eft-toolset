@@ -1,0 +1,26 @@
+{
+  "title": "WI-FI Camera",
+  "url": "https://escapefromtarkov.fandom.com/wiki/WI-FI_Camera",
+  "revisionId": 366652,
+  "lastEdited": "2026-10-31T12:17:34Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1, after accepting Skier's task Informed Means Armed",
+    "node": "5b4391a586f7745321235ab2",
+    "id": "item_spec_ipcamera"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The camera is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    }
+  ]
+}

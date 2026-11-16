@@ -1,0 +1,22 @@
+{
+  "title": "AS VAL Zenit RK-3 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_Zenit_RK-3_pistol_grip",
+  "revisionId": 342852,
+  "lastEdited": "2026-04-30T21:48:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.212 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+5",
+    "recoil": "-1",
+    "node": "6878cc5bd0c26d57bf0aa37a",
+    "ID": "pistolgrip_val_nb_custom_rk3"
+  },
+  "sections": []
+}

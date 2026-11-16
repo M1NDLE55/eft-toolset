@@ -1,0 +1,41 @@
+{
+  "title": "7.62x25mm TT LRN",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x25mm_TT_LRN",
+  "revisionId": 322762,
+  "lastEdited": "2025-11-18T21:15:45Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x25mm Tokarev ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽49",
+    "trader": "Jaeger LL1",
+    "velocity": "375 m/s",
+    "damage": "64",
+    "accuracy": "+5",
+    "recoil": "-5",
+    "penetration": "8",
+    "armor damage": "28",
+    "ricochet": "5%",
+    "l bleed chance": "+15",
+    "h bleed chance": "+10",
+    "durability burn": "+15",
+    "heat": "+6.2",
+    "feedfailure": "Low",
+    "misfire": "Very low",
+    "node": "573601b42459776410737435",
+    "id": "patron_762x25tt_LRN"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

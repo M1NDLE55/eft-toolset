@@ -1,0 +1,24 @@
+{
+  "title": "HK 416A5 5.56x45 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416A5_5.56x45_upper_receiver",
+  "revisionId": 357292,
+  "lastEdited": "2026-09-01T11:09:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3: Black, Green brown",
+    "ergonomics": "+6",
+    "recoil": "-1",
+    "Heat": "-1.4",
+    "Cooling": "+1.4",
+    "node": "5bb20d53d4351e4502010a69 =6a15ae3e81a4baf60b09bc33",
+    "ID": "reciever_ar15_hk_hk416a5_std reciever_ar15_hk_hk416a5_std_ral8k"
+  },
+  "sections": []
+}

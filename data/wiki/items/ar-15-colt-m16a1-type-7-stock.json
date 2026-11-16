@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Colt M16A1 Type 7 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Colt_M16A1_Type_7_stock",
+  "revisionId": 352131,
+  "lastEdited": "2026-08-07T19:43:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.48 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+3",
+    "recoil": "-22",
+    "node": "68a63bc422b1e0bd360afe61",
+    "ID": "stock_ar15_colt_m16a1_type_7"
+  },
+  "sections": []
+}

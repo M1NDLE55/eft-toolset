@@ -1,0 +1,26 @@
+{
+  "title": "AR-15 Magpul MOE SL carbine length M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Magpul_MOE_SL_carbine_length_M-LOK_handguard",
+  "revisionId": 342025,
+  "lastEdited": "2026-04-28T00:10:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.19 kg",
+    "grid": "2x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+15",
+    "recoil": "+0",
+    "Heat": "+5",
+    "Cooling": "+0.4",
+    "loot xp": "20",
+    "exam xp": "3",
+    "node": "5c78f2792e221600106f4683",
+    "ID": "handguard_ar15_magpul_moe_sl_carabine_length"
+  },
+  "sections": []
+}

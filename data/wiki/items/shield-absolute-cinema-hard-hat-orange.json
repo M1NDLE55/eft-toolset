@@ -1,0 +1,26 @@
+{
+  "title": "SHIELD Absolute Cinema hard hat (Orange)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SHIELD_Absolute_Cinema_hard_hat_(Orange)",
+  "revisionId": 353547,
+  "lastEdited": "2026-08-14T06:54:15Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hard hat",
+    "slot": "Headwear",
+    "weight": "0.45 kg",
+    "grid": "2x2",
+    "node": "68a6d95addf0111c2f04c9c3",
+    "id": "Item_equipment_construction_helmet_orange"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This item is worn by civilians on Terminal and not obtainable."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "KAC QDC 5.56x45 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KAC_QDC_5.56x45_sound_suppressor",
+  "revisionId": 342240,
+  "lastEdited": "2026-04-28T21:46:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.453 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-16",
+    "velocity": "+0.6",
+    "recoil": "-1.5",
+    "Dura Burn": "+53",
+    "Heat": "+5",
+    "Cooling": "+15",
+    "node": "626673016f1edc06f30cf6d5",
+    "ID": "silencer_qdc_kac_qdc_suppressor_556x45"
+  },
+  "sections": []
+}

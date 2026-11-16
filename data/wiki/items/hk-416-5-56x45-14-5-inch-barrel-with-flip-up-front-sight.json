@@ -1,0 +1,26 @@
+{
+  "title": "HK 416 5.56x45 14.5 inch barrel with flip-up front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416_5.56x45_14.5_inch_barrel_with_flip-up_front_sight",
+  "revisionId": 340862,
+  "lastEdited": "2026-04-22T08:38:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.985 kg",
+    "grid": "3x1",
+    "ergonomics": "-12",
+    "velocity": "+0",
+    "MOA": "1.89",
+    "recoil": "-7.4",
+    "Dura Burn": "-6",
+    "Heat": "+2",
+    "Cooling": "+3",
+    "node": "5bb20d9cd4351e00334c9d8a",
+    "ID": "barrel_416_hk_368mm_556x45"
+  },
+  "sections": []
+}

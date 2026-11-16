@@ -1,0 +1,29 @@
+{
+  "title": "M1911A1 .45 ACP Mec-Gar 11-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_.45_ACP_Mec-Gar_11-round_magazine",
+  "revisionId": 337729,
+  "lastEdited": "2026-03-06T01:48:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.24 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-2",
+    "checkaccuracy": "1",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "11",
+    "caliber": ".45 ACP",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5ef3448ab37dfd6af863525c",
+    "ID": "mag_m1911_mec_gar_extended_1143x23_11"
+  },
+  "sections": []
+}

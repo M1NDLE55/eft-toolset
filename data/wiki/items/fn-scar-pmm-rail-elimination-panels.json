@@ -1,0 +1,22 @@
+{
+  "title": "FN SCAR PMM Rail Elimination Panels",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_PMM_Rail_Elimination_Panels",
+  "revisionId": 317706,
+  "lastEdited": "2025-08-26T21:52:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.006 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2: Black, FDE",
+    "ergonomics": "+2",
+    "Heat": "-2",
+    "node": "66ffe66a20771d839f0fb4a9 66ffe6916f11538c7d0581e1",
+    "ID": "mount_mk16_pmm_rail_elimination_panel mount_mk16_pmm_rail_elimination_panel_fde"
+  },
+  "sections": []
+}

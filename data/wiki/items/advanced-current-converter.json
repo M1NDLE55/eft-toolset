@@ -1,0 +1,38 @@
+{
+  "title": "Advanced current converter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Advanced_current_converter",
+  "revisionId": 321221,
+  "lastEdited": "2025-11-14T21:27:32Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "5 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "loot xp": "25",
+    "exam xp": "5",
+    "node": "6389c85357baa773a825b356",
+    "id": "Item_barter_electr_adv_converter"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Cannot be put inside secure containers."
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Electronics spawns"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Trouble in the Big City."
+    }
+  ]
+}

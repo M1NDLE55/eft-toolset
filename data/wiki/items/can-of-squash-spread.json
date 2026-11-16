@@ -1,0 +1,27 @@
+{
+  "title": "Can of squash spread",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_squash_spread",
+  "revisionId": 360883,
+  "lastEdited": "2026-09-20T13:50:44Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.43 kg",
+    "grid": "1x1",
+    "effect": "Energy: +40",
+    "use time": "5s",
+    "node": "57347d8724597744596b4e76",
+    "id": "squashspread"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Ration supply crates\n- In Sport bags\n- In Plastic suitcases"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "UZI PRO dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_PRO_dust_cover",
+  "revisionId": 306732,
+  "lastEdited": "2025-03-17T04:33:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+4",
+    "Heat": "+4.2",
+    "Cooling": "-3.7",
+    "node": "6680326874b8f2050c0b9178",
+    "ID": "reciever_uzi_pro_iwi_upper_std"
+  },
+  "sections": []
+}

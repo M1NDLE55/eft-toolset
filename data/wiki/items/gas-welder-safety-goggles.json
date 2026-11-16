@@ -1,0 +1,28 @@
+{
+  "title": "Gas welder safety goggles",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gas_welder_safety_goggles",
+  "revisionId": 362442,
+  "lastEdited": "2026-09-29T14:48:58Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "blindness protect": "35%",
+    "penalties": "-2% Ergonomics",
+    "node": "61c18d83b00456371a66814b",
+    "id": "item_equipment_welder_goggles"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen."
+    }
+  ]
+}

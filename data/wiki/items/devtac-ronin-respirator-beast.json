@@ -1,0 +1,35 @@
+{
+  "title": "DevTac Ronin Respirator (Beast)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Ronin_Respirator_(Beast)",
+  "revisionId": 360643,
+  "lastEdited": "2026-09-18T19:24:35Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "2.65 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 1",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Eyes, Jaws, Face, Ears",
+    "durability": "180",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, -2% turn speed, -1% Ergonomics, High sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksFaceCover": "Yes",
+    "node": "68a9a85c3e1ee5a70504c12e",
+    "id": "item_equipment_facecover_devtac_gen2_venom_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Contrary to its name, this item doesn't provide any protection against gas grenades.\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

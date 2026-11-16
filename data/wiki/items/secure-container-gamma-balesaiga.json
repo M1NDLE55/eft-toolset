@@ -1,0 +1,27 @@
+{
+  "title": "Secure container Gamma (Balesaiga)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_container_Gamma_(Balesaiga)",
+  "revisionId": 363670,
+  "lastEdited": "2026-10-07T21:42:02Z",
+  "kind": "item",
+  "categories": [
+    "Secure containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Secure container",
+    "slot": "Pouch",
+    "weight": "1.2 kg",
+    "grid": "3x3",
+    "slots": "3x3 grid (9 slots)",
+    "node": "6aa2cdbc667ebebca605d8df",
+    "id": "item_container_gamma_balesaiga"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only obtainable by reaching Prestige level 6 in the PvE game mode.\n- Can only fit:\n  - Document case\n  - Dogtag case\n  - Gingy keychain\n  - Injector case\n  - Key tool\n  - Keycard holder case\n  - S I C C organizational pouch\n  - Simple wallet\n  - WZ Wallet\n  - Loot\n  - Provisions\n  - Meds\n  - Keys, Keycards & Maps\n  - Weapon mods (Besides magazines, special scopes and some mounts)\n  - Armor plates\n  - Currency\n  - Armbands\n  - Earpieces\n  - Vanity Face cover\n  - Vanity Headwear\n  - Vanity Eyewear\n  - Melee weapons\n  - Special equipment (Besides repair kits)"
+    }
+  ]
+}

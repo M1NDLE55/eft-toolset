@@ -1,0 +1,40 @@
+{
+  "title": "9x19mm Green Tracer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_Green_Tracer",
+  "revisionId": 322755,
+  "lastEdited": "2025-11-18T21:14:26Z",
+  "kind": "ammo",
+  "categories": [
+    "9x19mm Parabellum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.006 kg",
+    "grid": "1x1",
+    "price": "₽52",
+    "trader": "Mechanic LL1",
+    "velocity": "365 m/s",
+    "damage": "58",
+    "accuracy": "-5",
+    "recoil": "-6",
+    "penetration": "14",
+    "armor damage": "33",
+    "ricochet": "5%",
+    "durability burn": "+15",
+    "heat": "+13.1",
+    "feedfailure": "Very low",
+    "misfire": "Very low",
+    "effects": "Tracer (green)",
+    "node": "5c3df7d588a4501f290594e5",
+    "id": "patron_9x19_GT"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

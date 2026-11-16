@@ -1,0 +1,25 @@
+{
+  "title": "Lighthouse poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lighthouse_poster",
+  "revisionId": 355959,
+  "lastEdited": "2026-08-25T12:27:34Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "68df977e972cf1e1ec072568",
+    "id": "item_barter_flyers_story_03_didnt_escape_from_yourself"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

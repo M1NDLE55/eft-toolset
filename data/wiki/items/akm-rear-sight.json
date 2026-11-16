@@ -1,0 +1,24 @@
+{
+  "title": "AKM rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM_rear_sight",
+  "revisionId": 293008,
+  "lastEdited": "2024-09-29T19:34:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "price": "₽470",
+    "trader": "Prapor LL1",
+    "sightrange": "500",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "59d650cf86f7741b846413a4",
+    "ID": "sight_rear_ak_izhmash_akm_std"
+  },
+  "sections": []
+}

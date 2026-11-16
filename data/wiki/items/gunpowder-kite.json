@@ -1,0 +1,28 @@
+{
+  "title": "Gunpowder \"Kite\"",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gunpowder_%22Kite%22",
+  "revisionId": 358656,
+  "lastEdited": "2026-09-10T22:47:42Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable materials",
+    "weight": "0.6 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "loot xp": "45",
+    "exam xp": "10",
+    "node": "590c5a7286f7747884343aea",
+    "id": "item_other_powder"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Weapon box (6x2)\n- Weapon box (6x4)\n- Weapon box (4x4)\n- Weapon box (6x6)\n- Ground cache\n- Buried barrel cache\n- Wooden crate"
+    }
+  ]
+}

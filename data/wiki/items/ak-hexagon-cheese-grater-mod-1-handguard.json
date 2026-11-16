@@ -1,0 +1,44 @@
+{
+  "title": "AK Hexagon Cheese Grater mod.1 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Hexagon_Cheese_Grater_mod.1_handguard",
+  "revisionId": 361804,
+  "lastEdited": "2026-09-24T13:29:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.18 kg",
+    "grid": "2x1",
+    "trader": "Ref LL3: Grey, after unlocking it in Arena BattlePass Season 3, Ref LL3: Yellow, after unlocking it in the The Lab Tactical Map, Ref LL3: Red, after unlocking it in Panacea crate",
+    "ergonomics": "+19",
+    "Heat": "+4.4",
+    "Cooling": "+9.5",
+    "node": "6a6720479d7f57e84800faed 6a6720592ff856278106eb3e 6a671d320578b5a41000c298",
+    "ID": "handguard_ak_hexagon_terka_1_gry handguard_ak_hexagon_terka_1_ylw handguard_ak_hexagon_terka_1_red"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Grey variant",
+      "level": 4,
+      "text": "- Arena BattlePass Season 3 level 54\n- 7 Battle Points"
+    },
+    {
+      "heading": "Yellow variant",
+      "level": 4,
+      "text": "- The Lab Tactical Map"
+    },
+    {
+      "heading": "Red variant",
+      "level": 4,
+      "text": "- Panacea crate"
+    }
+  ]
+}

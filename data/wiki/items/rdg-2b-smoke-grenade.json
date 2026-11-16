@@ -1,0 +1,30 @@
+{
+  "title": "RDG-2B smoke grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RDG-2B_smoke_grenade",
+  "revisionId": 358716,
+  "lastEdited": "2026-09-10T22:59:28Z",
+  "kind": "item",
+  "categories": [
+    "Smoke grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Smoke grenade",
+    "weight": "0.6 kg",
+    "grid": "1x2",
+    "trader": "Prapor LL1",
+    "explosion delay": "3s",
+    "emission time": "120s",
+    "node": "5a2a57cfc4a2826c6e06d44a",
+    "ID": "weapon_grenade_rdg2"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Grenade box\n- Wooden crate\n- Weapon box (6x2)\n- Buried barrel cache\n- Ground cache"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Diamond Age NeoSteel High Cut helmet (Aces)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Diamond_Age_NeoSteel_High_Cut_helmet_(Aces)",
+  "revisionId": 361500,
+  "lastEdited": "2026-09-23T19:54:16Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in the Customs Tactical Map",
+    "material": "Armor steel",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "72",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "68a9beecbba00932ed0bc256",
+    "id": "item_equipment_helmet_neosteel_aces_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

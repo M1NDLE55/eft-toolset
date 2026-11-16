@@ -1,0 +1,25 @@
+{
+  "title": "QBZ-191 gas block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/QBZ-191_gas_block",
+  "revisionId": 357287,
+  "lastEdited": "2026-09-01T10:47:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.16 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-1",
+    "recoil": "-1",
+    "Dura Burn": "-1",
+    "Heat": "-1.5",
+    "Cooling": "+0.8",
+    "node": "69f9ec0cddaf0c377d0eb748",
+    "ID": "gas_block_qbz191_norinco_191_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "5.45x39mm FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_FMJ",
+  "revisionId": 362898,
+  "lastEdited": "2026-10-03T10:48:17Z",
+  "kind": "ammo",
+  "categories": [
+    "5.45x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "velocity": "884 m/s",
+    "damage": "55",
+    "penetration": "24",
+    "armor damage": "38",
+    "ricochet": "26%",
+    "heat": "+43.4",
+    "feedfailure": "Low",
+    "misfire": "Very low",
+    "node": "56dff0bed2720bb0668b4567",
+    "id": "patron_545x39_FMJ"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

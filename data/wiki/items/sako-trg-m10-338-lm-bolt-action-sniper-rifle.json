@@ -1,0 +1,42 @@
+{
+  "title": "Sako TRG M10 .338 LM bolt-action sniper rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_M10_.338_LM_bolt-action_sniper_rifle",
+  "revisionId": 340996,
+  "lastEdited": "2026-04-22T22:56:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Bolt-action rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bolt-action rifle",
+    "slot": "Primary",
+    "weight": "6.796 kg",
+    "grid": "6x2",
+    "trader": "Skier LL4 after completing his task Connections Up North",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "18",
+    "velocity": "967 m/s",
+    "range": "1000 m",
+    "MOA": "0.44",
+    "Weaprecoil": "Vertical: 304, Horizontal: 657",
+    "rof": "30",
+    "caliber": ".338 Lapua Magnum",
+    "node": "673cab3e03c6a20581028bc1",
+    "ID": "weapon_sako_trg_m10_86x70"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Connections Up North"
+    }
+  ]
+}

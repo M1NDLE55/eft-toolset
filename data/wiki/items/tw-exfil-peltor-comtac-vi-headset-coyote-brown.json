@@ -1,0 +1,22 @@
+{
+  "title": "TW EXFIL Peltor ComTac VI headset (Coyote Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TW_EXFIL_Peltor_ComTac_VI_headset_(Coyote_Brown)",
+  "revisionId": 342834,
+  "lastEdited": "2026-04-30T21:41:53Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces",
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet headset",
+    "weight": "0.439 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "BlocksHeadset": "Yes",
+    "node": "66b5f6a28ca68c6461709ed8",
+    "id": "helmet_team_wendy_comtac_vi_headset"
+  },
+  "sections": []
+}

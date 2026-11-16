@@ -1,0 +1,22 @@
+{
+  "title": "M60 bipod",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M60_bipod",
+  "revisionId": 314167,
+  "lastEdited": "2025-06-05T23:22:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Bipods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bipod",
+    "weight": "0.537 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-8",
+    "recoil": "When mounted: -80",
+    "node": "66012d9a3dff5074ed002e33",
+    "ID": "bipod_m60_usord_m60e4_std"
+  },
+  "sections": []
+}

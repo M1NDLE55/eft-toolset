@@ -1,0 +1,25 @@
+{
+  "title": "To Fall in the Darkness poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/To_Fall_in_the_Darkness_poster",
+  "revisionId": 355957,
+  "lastEdited": "2026-08-25T12:27:25Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "68df97792e6cd294e908d1e9",
+    "id": "item_barter_flyers_story_02_in_the_darkness"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

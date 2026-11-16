@@ -1,0 +1,31 @@
+{
+  "title": "HK UMP .45 ACP submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_UMP_.45_ACP_submachine_gun",
+  "revisionId": 357134,
+  "lastEdited": "2026-08-30T22:28:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "2.219 kg",
+    "grid": "3x2",
+    "trader": "Peacekeeper LL2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "59",
+    "velocity": "333 m/s",
+    "range": "200 m",
+    "MOA": "5.5",
+    "Weaprecoil": "Vertical: 53, Horizontal: 177",
+    "rof": "600",
+    "caliber": ".45 ACP",
+    "node": "5fc3e272f8b6a877a729eac5",
+    "ID": "weapon_hk_ump_1143x23"
+  },
+  "sections": []
+}

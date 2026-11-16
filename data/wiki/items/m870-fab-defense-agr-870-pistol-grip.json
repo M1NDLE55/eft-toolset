@@ -1,0 +1,24 @@
+{
+  "title": "M870 FAB Defense AGR-870 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_FAB_Defense_AGR-870_pistol_grip",
+  "revisionId": 340885,
+  "lastEdited": "2026-04-22T08:55:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.13 kg",
+    "grid": "1x1",
+    "price": "₽2,608",
+    "trader": "Skier LL2",
+    "ergonomics": "+3",
+    "loot xp": "5",
+    "exam xp": "2",
+    "node": "5bfe86a20db834001d23e8f7",
+    "ID": "pistolgrip_870_fab_defense_agr_870_grip"
+  },
+  "sections": []
+}

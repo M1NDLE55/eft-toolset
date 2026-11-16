@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (M90 Desert)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(M90_Desert)",
+  "revisionId": 348505,
+  "lastEdited": "2026-07-30T21:23:08Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67e6a353ae1610b21706fc62",
+    "id": "item_camo_geometrical_m90_desert"
+  },
+  "sections": []
+}

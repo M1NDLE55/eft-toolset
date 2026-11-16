@@ -1,0 +1,29 @@
+{
+  "title": "Gruppa 99 T30 backpack (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gruppa_99_T30_backpack_(Black)",
+  "revisionId": 342962,
+  "lastEdited": "2026-05-01T08:28:48Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.4 kg",
+    "grid": "5x6",
+    "trader": "Ref LL3",
+    "penalties": "-2% movement speed, -1% turn speed, -2% Ergonomics",
+    "slots": "5x6 grid (30 slots)",
+    "node": "628e1ffc83ec92260c0f437f",
+    "id": "item_equipment_backpack_gr99_t30"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 1 can be held in a raid inventory at the same time"
+    }
+  ]
+}

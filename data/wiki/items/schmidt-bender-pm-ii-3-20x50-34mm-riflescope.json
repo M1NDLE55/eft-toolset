@@ -1,0 +1,24 @@
+{
+  "title": "Schmidt & Bender PM II 3-20x50 34mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Schmidt_%26_Bender_PM_II_3-20x50_34mm_riflescope",
+  "revisionId": 332381,
+  "lastEdited": "2026-01-15T01:19:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.9 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL4",
+    "zeroing": "50, 100, 150, 200, 250, 300, 350, 400, 450",
+    "sightrange": "1500",
+    "ergonomics": "-6",
+    "modes": "1",
+    "node": "61714eec290d254f5e6b2ffc",
+    "ID": "scope_34mm_s&b_pm_ii_3_12x50"
+  },
+  "sections": []
+}

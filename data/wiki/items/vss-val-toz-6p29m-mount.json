@@ -1,0 +1,21 @@
+{
+  "title": "VSS/VAL TOZ 6P29M mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSS/VAL_TOZ_6P29M_mount",
+  "revisionId": 355712,
+  "lastEdited": "2026-08-23T18:36:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.095 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3 after completing his task The Survivalist Path - Eagle-Owl",
+    "ergonomics": "-1",
+    "node": "59eb7ebe86f7740b373438ce",
+    "ID": "mount_vss_toz_6p29m"
+  },
+  "sections": []
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Project documentation",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Project_documentation",
+  "revisionId": 359031,
+  "lastEdited": "2026-09-13T20:07:43Z",
+  "kind": "item",
+  "categories": [
+    "BattlePass documents"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "BattlePass documents",
+    "weight": "0.43 kg",
+    "grid": "1x2",
+    "node": "6a3181f178450ec91c0ea1aa",
+    "ID": "Item_barter_info_project"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used to unlock rewards from the Season 1: KORD BREACH BattlePass."
+    }
+  ]
+}

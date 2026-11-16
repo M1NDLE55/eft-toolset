@@ -1,0 +1,36 @@
+{
+  "title": "5.8x42mm DVC12",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.8x42mm_DVC12",
+  "revisionId": 356198,
+  "lastEdited": "2026-08-25T19:24:52Z",
+  "kind": "ammo",
+  "categories": [
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.013 kg",
+    "grid": "1x1",
+    "velocity": "872 m/s",
+    "damage": "46",
+    "accuracy": "-5",
+    "recoil": "+12",
+    "penetration": "52",
+    "armor damage": "60",
+    "ricochet": "40%",
+    "durability burn": "+60",
+    "heat": "+100",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "node": "6a42662fcb506840dd053827",
+    "ID": "patron_58x42_dvc12"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

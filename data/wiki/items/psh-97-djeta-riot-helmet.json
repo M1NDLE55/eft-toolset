@@ -1,0 +1,30 @@
+{
+  "title": "PSh-97 DJETA riot helmet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PSh-97_DJETA_riot_helmet",
+  "revisionId": 344321,
+  "lastEdited": "2026-05-24T21:57:55Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.3 kg",
+    "grid": "2x2",
+    "trader": "Skier LL1",
+    "material": "Aramid , Glass",
+    "armor": "Head top, Nape, Ears: 2 , Face, Eyes: 1",
+    "armor coverage": "Head top, Nape, Ears, Face, Eyes",
+    "durability": "156",
+    "blindness protect": "15%",
+    "RicochetChance": "Low",
+    "penalties": "+0% movement speed, -3% turn speed, -3% Ergonomics, High sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksFaceCover": "No",
+    "node": "5c0d2727d174af02a012cf58",
+    "ID": "item_equipment_helmet_psh97_jeta"
+  },
+  "sections": []
+}

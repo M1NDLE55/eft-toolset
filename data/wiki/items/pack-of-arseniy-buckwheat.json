@@ -1,0 +1,28 @@
+{
+  "title": "Pack of Arseniy buckwheat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pack_of_Arseniy_buckwheat",
+  "revisionId": 362964,
+  "lastEdited": "2026-10-03T11:31:24Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.8 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "6389c6463485cf0eeb260715",
+    "ID": "item_barter_other_grechka"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Ration supply crate"
+    }
+  ]
+}

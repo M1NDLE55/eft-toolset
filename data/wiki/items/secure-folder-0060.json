@@ -1,0 +1,29 @@
+{
+  "title": "Secure Folder 0060",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_Folder_0060",
+  "revisionId": 305395,
+  "lastEdited": "2025-02-07T07:52:32Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.8 kg",
+    "node": "5a6860d886f77411cd3a9e47",
+    "id": "case_0060"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Health Care Privacy - Part 2 from Therapist"
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Currently Docs 0060 has the same model and texture as Docs 0052."
+    }
+  ]
+}

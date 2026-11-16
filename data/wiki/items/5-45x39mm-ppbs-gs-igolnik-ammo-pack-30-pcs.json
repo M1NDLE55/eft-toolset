@@ -1,0 +1,24 @@
+{
+  "title": "5.45x39mm PPBS gs Igolnik ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_PPBS_gs_Igolnik_ammo_pack_(30_pcs)",
+  "revisionId": 367165,
+  "lastEdited": "2026-11-02T23:10:26Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "node": "5c1262a286f7743f8a69aab2",
+    "ID": "item_ammo_box_545x39_30_igolnik"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

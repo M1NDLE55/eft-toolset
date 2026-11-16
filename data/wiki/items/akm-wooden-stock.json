@@ -1,0 +1,21 @@
+{
+  "title": "AKM wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM_wooden_stock",
+  "revisionId": 304946,
+  "lastEdited": "2025-01-31T14:52:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "ergonomics": "+3",
+    "recoil": "-22",
+    "node": "59d6514b86f774171a068a08",
+    "ID": "stock_ak_izhmash_akm_std_wood"
+  },
+  "sections": []
+}

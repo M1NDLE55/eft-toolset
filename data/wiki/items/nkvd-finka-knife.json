@@ -1,0 +1,23 @@
+{
+  "title": "NKVD Finka knife",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NKVD_Finka_knife",
+  "revisionId": 367826,
+  "lastEdited": "2026-11-10T14:55:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.223 kg",
+    "grid": "2x1",
+    "fire modes": "Chop 24 Damage, Stab 31 Damage",
+    "range": "Chop 0.4m, Stab 0.5m",
+    "node": "68f244ae22c8979ee308f4d8 6aa94a3ca7cdc313b50cdd15",
+    "ID": "weapon_finka_nkvd weapon_finka_nkvd_ivory"
+  },
+  "sections": []
+}

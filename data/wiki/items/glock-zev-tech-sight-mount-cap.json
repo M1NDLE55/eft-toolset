@@ -1,0 +1,21 @@
+{
+  "title": "Glock ZEV Tech sight mount cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_ZEV_Tech_sight_mount_cap",
+  "revisionId": 272392,
+  "lastEdited": "2024-02-27T08:40:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+2",
+    "node": "5a71e1868dc32e00094b97f3",
+    "ID": "tactical_glock_zev_tech_rmr_adapter_plate"
+  },
+  "sections": []
+}

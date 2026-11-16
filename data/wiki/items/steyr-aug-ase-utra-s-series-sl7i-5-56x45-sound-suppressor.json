@@ -1,0 +1,26 @@
+{
+  "title": "Steyr AUG Ase Utra S Series SL7i 5.56x45 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_Ase_Utra_S_Series_SL7i_5.56x45_sound_suppressor",
+  "revisionId": 337902,
+  "lastEdited": "2026-03-07T09:11:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.494 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-10",
+    "velocity": "+0.6",
+    "recoil": "-5",
+    "Dura Burn": "+82",
+    "Heat": "+34",
+    "Cooling": "+1",
+    "node": "634eba08f69c710e0108d386",
+    "ID": "silencer_aug_aseutra_sl7i_556x45"
+  },
+  "sections": []
+}

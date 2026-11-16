@@ -1,0 +1,21 @@
+{
+  "title": "AK Molot bakelite pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Molot_bakelite_pistol_grip",
+  "revisionId": 340743,
+  "lastEdited": "2026-04-22T07:11:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+2",
+    "node": "59e6318286f77444dd62c4cc",
+    "ID": "pistolgrip_ak_molot_bakelit"
+  },
+  "sections": []
+}

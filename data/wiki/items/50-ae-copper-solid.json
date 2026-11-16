@@ -1,0 +1,39 @@
+{
+  "title": ".50 AE Copper Solid",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_AE_Copper_Solid",
+  "revisionId": 322733,
+  "lastEdited": "2025-11-18T21:12:58Z",
+  "kind": "ammo",
+  "categories": [
+    ".50 Action Express ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.029 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "velocity": "460 m/s",
+    "damage": "94",
+    "accuracy": "+5",
+    "recoil": "+8",
+    "penetration": "33",
+    "armor damage": "56",
+    "ricochet": "6%",
+    "h bleed chance": "+10",
+    "durability burn": "+40",
+    "heat": "+115",
+    "feedfailure": "High",
+    "misfire": "Very low",
+    "node": "66a0d1e0ed648d72fe064d06",
+    "id": "patron_127x33_cooper"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

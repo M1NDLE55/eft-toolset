@@ -1,0 +1,20 @@
+{
+  "title": "MXLR trigger",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MXLR_trigger",
+  "revisionId": 354983,
+  "lastEdited": "2026-08-18T02:09:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.014 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "node": "67c54114d0538d12ec036c0a",
+    "ID": "trigger_m1895_marlin_mxlr_std"
+  },
+  "sections": []
+}

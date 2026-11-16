@@ -1,0 +1,26 @@
+{
+  "title": "M870 12ga 508mm barrel with a fixed sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_12ga_508mm_barrel_with_a_fixed_sight",
+  "revisionId": 329266,
+  "lastEdited": "2025-12-24T16:36:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.455 kg",
+    "grid": "3x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-7",
+    "velocity": "+5.4",
+    "MOA": "18.91",
+    "recoil": "-6",
+    "Heat": "-8",
+    "Cooling": "-4",
+    "node": "5a787ebcc5856700142fdd98",
+    "ID": "barrel_870_express_rifle_sights_fixed_improved_cylinder_508mm"
+  },
+  "sections": []
+}

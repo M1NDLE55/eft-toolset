@@ -1,0 +1,23 @@
+{
+  "title": "AK TAPCO SAW-Style pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_TAPCO_SAW-Style_pistol_grip",
+  "revisionId": 340726,
+  "lastEdited": "2026-04-22T07:00:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.13 kg",
+    "grid": "1x1",
+    "price": "₽2,608",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+3",
+    "recoil": "-1",
+    "node": "5947f92f86f77427344a76b1 5947fa2486f77425b47c1a9b",
+    "ID": "pistolgrip_ak_tapco_saw_blk pistolgrip_ak_tapco_saw_fde"
+  },
+  "sections": []
+}

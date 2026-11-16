@@ -1,0 +1,21 @@
+{
+  "title": "HK G36 sight mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_sight_mount",
+  "revisionId": 256899,
+  "lastEdited": "2023-12-07T10:47:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.312 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "node": "622b3c081b89c677a33bcda6",
+    "ID": "mount_g36_hk_std"
+  },
+  "sections": []
+}

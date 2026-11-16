@@ -1,0 +1,23 @@
+{
+  "title": "Glock ZEV Tech rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_ZEV_Tech_rear_sight",
+  "revisionId": 318886,
+  "lastEdited": "2025-10-02T22:16:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.008 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5a71e0fb8dc32e00094b97f2",
+    "ID": "sight_rear_glock_zev_tech"
+  },
+  "sections": []
+}

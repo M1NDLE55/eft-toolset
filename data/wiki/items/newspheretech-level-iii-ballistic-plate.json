@@ -1,0 +1,31 @@
+{
+  "title": "NewSphereTech level III ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NewSphereTech_level_III_ballistic_plate",
+  "revisionId": 364934,
+  "lastEdited": "2026-10-25T21:23:28Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light Armor plate",
+    "weight": "2.15 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL3",
+    "material": "Aluminium",
+    "armor": "4",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "45",
+    "penalties": "-1% movement speed, -0.5% turn speed, -1% Ergonomics",
+    "node": "656fb21fa0dce000a2020f7c",
+    "id": "item_equipment_plate_SAPI_NewSphereTech_4class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

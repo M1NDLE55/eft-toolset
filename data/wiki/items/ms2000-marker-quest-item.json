@@ -1,0 +1,25 @@
+{
+  "title": "MS2000 Marker (quest item)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MS2000_Marker_(quest_item)",
+  "revisionId": 340015,
+  "lastEdited": "2026-04-12T00:57:21Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "node": "69d0547c7abd8495220354fb",
+    "id": "item_quest_item_quest_Event_BP_threat_ms2000"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Morituri te salutant from Ref"
+    }
+  ]
+}

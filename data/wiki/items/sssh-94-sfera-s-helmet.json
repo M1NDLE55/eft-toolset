@@ -1,0 +1,29 @@
+{
+  "title": "SSSh-94 SFERA-S helmet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SSSh-94_SFERA-S_helmet",
+  "revisionId": 362961,
+  "lastEdited": "2026-10-03T11:27:17Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "3.5 kg",
+    "grid": "2x2",
+    "trader": "Prapor LL1",
+    "material": "Armor steel",
+    "armor": "3",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "135",
+    "RicochetChance": "Medium",
+    "penalties": "+0% movement speed, -2% turn speed, -2% Ergonomics, High sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5aa7d193e5b5b000171d063f",
+    "id": "helmet_sphera-C"
+  },
+  "sections": []
+}

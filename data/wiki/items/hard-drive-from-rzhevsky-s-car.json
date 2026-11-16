@@ -1,0 +1,25 @@
+{
+  "title": "Hard drive from Rzhevsky's car",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hard_drive_from_Rzhevsky's_car",
+  "revisionId": 339332,
+  "lastEdited": "2026-03-28T00:00:43Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "node": "68e7d35483bb1cc4ac02d8c7",
+    "id": "q_unk_hdd_ap"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard"
+    }
+  ]
+}

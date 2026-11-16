@@ -1,0 +1,63 @@
+{
+  "title": "Golden 1GPhone smartphone",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Golden_1GPhone_smartphone",
+  "revisionId": 358130,
+  "lastEdited": "2026-09-08T20:49:11Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "30",
+    "exam xp": "5",
+    "node": "5bc9b720d4351e450201234b",
+    "id": "item_barter_valuable_1gphone"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Jackets\n- Dead Scav\n- Common fund stash\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- Pinewood hotel room 215 on the desk"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Inside the rooms RB-BK, RB-PKPM and RB-VO\n- Loose Tech-spawns on the shelves inside RB-AK"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In Marked room"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In the power plant's computer room\n- In ULTRA mall's electronic stores: Rasmussen, Techlight, Techno\n- In the furniture store opposite OLI\n- In Emercom, on one of the tray carts in the middle back of the room\n- In Idea’s computer room, on the desks inside that room"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- East wing first floor offices desks\n- West wing room 301 on the desk"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - The GPhone is a parody of the Apple iPhone. This version is a reference to the content creator summit1g who has \"1G\" as his recognizing symbol."
+    }
+  ]
+}

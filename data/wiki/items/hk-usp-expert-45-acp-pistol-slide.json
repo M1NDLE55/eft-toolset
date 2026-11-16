@@ -1,0 +1,26 @@
+{
+  "title": "HK USP Expert .45 ACP pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_Expert_.45_ACP_pistol_slide",
+  "revisionId": 356374,
+  "lastEdited": "2026-08-26T00:32:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.44 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-2",
+    "Heat": "-4.2",
+    "Cooling": "+6",
+    "node": "6194f5722d2c397d6600348f",
+    "ID": "reciever_usp_hk_expert"
+  },
+  "sections": []
+}

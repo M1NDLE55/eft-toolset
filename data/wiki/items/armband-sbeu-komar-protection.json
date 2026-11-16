@@ -1,0 +1,31 @@
+{
+  "title": "Armband (SBEU KOMAR Protection)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(SBEU_KOMAR_Protection)",
+  "revisionId": 367075,
+  "lastEdited": "2026-11-02T22:31:01Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "68f8ccf06a6869fe97026c3b",
+    "id": "item_equipment_armband_sbeukomar"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This armband is only available to players who preordered the \"The Unheard\" edition of the game."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The abbreviation \"SBEU\" is based on a direct translation from the Russian \"СБЭУ\", which stands for \"Симуляция Боя в Экстремальных Условиях\" and translates to \"Hazardous Environment Combat Simulator\", or short HECS. This term was used for a long time by the developers to promote the \"extensive and realistic\" systems in the game. In the Russian part of the community it is often used to make fun of the unrealistic aspects of the game.\n\n\"KOMAR\" is a direct translation from the Russian \"Комар\", which means mosquito. This is direct reference to a YouTube video titled \"Инцидент 0293: Тарковский Комар\", in English \"Incident 0293: Tarkovsky Mosquito\". The original source of the clip is this Twitter post."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Accuracy International AXMC .338 LM bolt-action sniper rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Accuracy_International_AXMC_.338_LM_bolt-action_sniper_rifle",
+  "revisionId": 354799,
+  "lastEdited": "2026-08-16T11:01:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Bolt-action rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bolt-action rifle",
+    "slot": "Primary",
+    "weight": "5.79 kg",
+    "grid": "5x2",
+    "trader": "Jaeger LL4 after completing his task Hunting Trip",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "11.5",
+    "velocity": "961 m/s",
+    "range": "1000 m",
+    "MOA": "0.34",
+    "Weaprecoil": "Vertical: 240, Horizontal: 499",
+    "rof": "30",
+    "caliber": ".338 Lapua Magnum",
+    "node": "627e14b21713922ded6f2c15",
+    "ID": "weapon_accuracy_inernational_axmc_86x70"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from A Wedge Between Us"
+    }
+  ]
+}

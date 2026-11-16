@@ -1,0 +1,26 @@
+{
+  "title": "Minefield map (Reserve)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Minefield_map_(Reserve)",
+  "revisionId": 304258,
+  "lastEdited": "2025-01-20T14:47:58Z",
+  "kind": "item",
+  "categories": [
+    "Extraction intel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Extraction intel",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Activates the \"Exit to Woods\" extraction on Reserve.",
+    "node": "675aaa003107dac10006332f",
+    "id": "item_info_secret_extraction_minefield_reserve"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Activates the \"Exit to Woods\" extraction on Reserve.\n- Cannot be taken out of a raid"
+    }
+  ]
+}

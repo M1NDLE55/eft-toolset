@@ -1,0 +1,28 @@
+{
+  "title": "Zenit Klesch-2IKS IR illuminator with laser",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zenit_Klesch-2IKS_IR_illuminator_with_laser",
+  "revisionId": 353014,
+  "lastEdited": "2026-08-09T22:25:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.17 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-1",
+    "modes": "3",
+    "node": "5a5f1ce64f39f90b401987bc",
+    "ID": "tactical_all_zenit_2irs_kleh_lam"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- IR laser and IR searchlight only, no functionality in the visible spectrum"
+    }
+  ]
+}

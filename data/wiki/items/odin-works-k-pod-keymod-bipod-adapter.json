@@ -1,0 +1,20 @@
+{
+  "title": "Odin Works K-Pod KeyMod bipod adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Odin_Works_K-Pod_KeyMod_bipod_adapter",
+  "revisionId": 314494,
+  "lastEdited": "2025-06-23T22:05:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.021 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1 Jaeger LL1",
+    "node": "67112695fe5c8bf33f02476d",
+    "ID": "mount_keymod_odin_works_bipod_adapter"
+  },
+  "sections": []
+}

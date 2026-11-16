@@ -1,0 +1,38 @@
+{
+  "title": ".366 TKM AP-M",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.366_TKM_AP-M",
+  "revisionId": 324484,
+  "lastEdited": "2025-11-22T18:31:19Z",
+  "kind": "ammo",
+  "categories": [
+    ".366 TKM ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.019 kg",
+    "grid": "1x1",
+    "velocity": "602 m/s",
+    "damage": "90",
+    "accuracy": "-22",
+    "recoil": "+35",
+    "penetration": "42",
+    "armor damage": "60",
+    "ricochet": "6.5%",
+    "h bleed chance": "+10",
+    "durability burn": "+90",
+    "heat": "+127",
+    "feedfailure": "High",
+    "misfire": "Medium",
+    "node": "5f0596629e22f464da6bbdd9",
+    "id": "patron_366_custom_ap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

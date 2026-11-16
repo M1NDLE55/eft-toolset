@@ -1,0 +1,31 @@
+{
+  "title": "Note with code word Voron",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_with_code_word_Voron",
+  "revisionId": 333839,
+  "lastEdited": "2026-02-07T22:09:59Z",
+  "kind": "item",
+  "categories": [
+    "Extraction intel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Extraction intel",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Activates the \"Smuggler's Boat\" and \"Smuggler's Bunker (ZB-1012)\" extractions on Customs.",
+    "node": "675aaab74bca0b001d02f356",
+    "id": "item_info_secret_extraction_codeword_voron"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Activates the \"Smugglers' Boat\" and \"Smugglers' Bunker (ZB-1012)\" extractions on Customs.\n- Cannot be taken out of a raid"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The word \"voron\" stands for \"raven\" in Russian, which is possibly a codename for a smuggler."
+    }
+  ]
+}

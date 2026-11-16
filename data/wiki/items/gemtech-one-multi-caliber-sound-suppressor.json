@@ -1,0 +1,29 @@
+{
+  "title": "Gemtech ONE multi-caliber sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gemtech_ONE_multi-caliber_sound_suppressor",
+  "revisionId": 342026,
+  "lastEdited": "2026-04-28T00:11:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.46 kg",
+    "grid": "2x1",
+    "price": "₽51,520",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-10",
+    "velocity": "+0.7",
+    "accuracy": "+2",
+    "recoil": "-5",
+    "Dura Burn": "+60",
+    "Heat": "+14",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "5c7955c22e221644f31bfd5e",
+    "ID": "silencer_base_gemtech_one_multi"
+  },
+  "sections": []
+}

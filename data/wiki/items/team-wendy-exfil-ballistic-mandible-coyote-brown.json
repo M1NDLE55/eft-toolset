@@ -1,0 +1,33 @@
+{
+  "title": "Team Wendy EXFIL Ballistic Mandible (Coyote Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Team_Wendy_EXFIL_Ballistic_Mandible_(Coyote_Brown)",
+  "revisionId": 361568,
+  "lastEdited": "2026-09-23T21:39:22Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.59 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 3",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "3",
+    "armor coverage": "Face, Ears, Jaws, Throat",
+    "durability": "36",
+    "penalties": "-1% movement speed, +0% turn speed, -2% Ergonomics",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6a834d286cfa76129a0923b8",
+    "id": "item_equipment_helmet_exfil_mandible_coyote_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Roler Submariner gold wrist watch",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Roler_Submariner_gold_wrist_watch",
+  "revisionId": 364995,
+  "lastEdited": "2026-10-25T22:12:35Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "100",
+    "exam xp": "10",
+    "node": "59faf7ca86f7740dbe19f6c2",
+    "id": "item_barter_valuable_rolex"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the wrist of the mannequin in the second-floor bathroom in the Repair Building."
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the table inside the Shipping Container opened by the #21WS keycard\n- On or around the sofa inside the saferoom extraction opened by the #11SR keycard"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- East wing room 310\n- West wing room 220"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In Arsenal storage room\n- In Manager office"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a parody to the Rolex Submariner watch."
+    }
+  ]
+}

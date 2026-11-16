@@ -1,0 +1,24 @@
+{
+  "title": "Splav Tarzan M22 chest rig (Smog)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Splav_Tarzan_M22_chest_rig_(Smog)",
+  "revisionId": 333200,
+  "lastEdited": "2026-01-29T16:55:00Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.45 kg",
+    "grid": "4x3",
+    "BlocksArmor": "No",
+    "slots": "14 Slots",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5e4abfed86f77406a2713cf7",
+    "ID": "item_equipment_rig_tarzan"
+  },
+  "sections": []
+}

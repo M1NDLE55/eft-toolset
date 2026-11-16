@@ -1,0 +1,29 @@
+{
+  "title": "KA-BAR USMC Fighter knife",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KA-BAR_USMC_Fighter_knife",
+  "revisionId": 360321,
+  "lastEdited": "2026-09-15T13:59:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.32 kg",
+    "grid": "2x1",
+    "fire modes": "Chop 34 Damage, Stab 35 Damage",
+    "range": "Chop 0.4m, Stab 0.5m",
+    "node": "6a3935772db31ca1c800fe26",
+    "ID": "weapon_kabar_usmc_fighter"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

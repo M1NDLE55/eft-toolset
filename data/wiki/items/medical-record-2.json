@@ -1,0 +1,25 @@
+{
+  "title": "Medical record 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Medical_record_2",
+  "revisionId": 253318,
+  "lastEdited": "2023-11-02T21:54:37Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "node": "60a3b5b05f84d429b732e934",
+    "id": "quest_med_journal_2"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Disease History from Therapist"
+    }
+  ]
+}

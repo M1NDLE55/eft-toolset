@@ -1,0 +1,31 @@
+{
+  "title": "Malboro Cigarettes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Malboro_Cigarettes",
+  "revisionId": 363231,
+  "lastEdited": "2026-10-05T15:57:34Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "573476d324597737da2adc13",
+    "id": "cigarettes_malboro"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Ration supply crate\n- Jacket\n- Drawer"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a parody of the trademark \"Marlboro\"."
+    }
+  ]
+}

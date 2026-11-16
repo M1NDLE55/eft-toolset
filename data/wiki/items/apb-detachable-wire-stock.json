@@ -1,0 +1,23 @@
+{
+  "title": "APB detachable wire stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/APB_detachable_wire_stock",
+  "revisionId": 261831,
+  "lastEdited": "2024-01-02T16:04:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "price": "₽6,500",
+    "trader": "Prapor LL2",
+    "ergonomics": "+0",
+    "recoil": "-27",
+    "node": "5a17fb9dfcdbcbcae6687291",
+    "ID": "stock_aps_toz_apb_wire"
+  },
+  "sections": []
+}

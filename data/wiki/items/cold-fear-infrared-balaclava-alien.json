@@ -1,0 +1,27 @@
+{
+  "title": "Cold Fear infrared balaclava (Alien)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cold_Fear_infrared_balaclava_(Alien)",
+  "revisionId": 348624,
+  "lastEdited": "2026-07-30T22:17:27Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 1",
+    "node": "68beef31a3433485d30d5ae1",
+    "id": "item_equipment_facecover_coldgear_alien_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

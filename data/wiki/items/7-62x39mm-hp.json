@@ -1,0 +1,39 @@
+{
+  "title": "7.62x39mm HP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_HP",
+  "revisionId": 322801,
+  "lastEdited": "2025-11-18T21:21:22Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "velocity": "754 m/s",
+    "damage": "80",
+    "accuracy": "-5",
+    "recoil": "+5",
+    "penetration": "15",
+    "armor damage": "20",
+    "ricochet": "17.5%",
+    "l bleed chance": "+15",
+    "h bleed chance": "+15",
+    "heat": "-7.5",
+    "feedfailure": "Low",
+    "misfire": "Very low",
+    "node": "59e4d3d286f774176a36250a",
+    "id": "patron_762x39_HP"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

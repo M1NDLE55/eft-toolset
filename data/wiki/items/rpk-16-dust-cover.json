@@ -1,0 +1,29 @@
+{
+  "title": "RPK-16 dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPK-16_dust_cover",
+  "revisionId": 322123,
+  "lastEdited": "2025-11-17T01:52:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.215 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+2",
+    "recoil": "-0.3",
+    "Dura Burn": "-3",
+    "node": "5beec91a0db834001961942d",
+    "ID": "reciever_rpk16_izhmash_rpk16_std"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The underside of the dust cover says \"чё тут ищешь?\" This translates to \"What are you looking for in here?\""
+    }
+  ]
+}

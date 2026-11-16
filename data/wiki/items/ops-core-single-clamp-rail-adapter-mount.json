@@ -1,0 +1,21 @@
+{
+  "title": "Ops-Core Single Clamp Rail Adapter mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ops-Core_Single_Clamp_Rail_Adapter_mount",
+  "revisionId": 344232,
+  "lastEdited": "2026-05-24T21:23:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Helmet mods",
+    "Helmet mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet mount",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "node": "5a398ab9c4a282000c5a9842",
+    "ID": "helmet_ops_core_single_clamp_rail_adapter"
+  },
+  "sections": []
+}

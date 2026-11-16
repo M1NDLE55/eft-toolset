@@ -1,0 +1,22 @@
+{
+  "title": "M1911A1 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_rear_sight",
+  "revisionId": 235368,
+  "lastEdited": "2023-05-16T15:40:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.004 kg",
+    "grid": "1x1",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5e81ee4dcb2b95385c177582",
+    "ID": "sight_rear_m1911_colt_m1911a1_std"
+  },
+  "sections": []
+}

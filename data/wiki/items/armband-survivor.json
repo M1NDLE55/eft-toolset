@@ -1,0 +1,26 @@
+{
+  "title": "Armband (Survivor)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Survivor)",
+  "revisionId": 347546,
+  "lastEdited": "2026-07-01T18:57:20Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "68d41e65a706eba9a204ed27",
+    "id": "Item_equipment_armband_story_01_and_survived"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only obtainable by escaping from Tarkov with the \"Survivor\" ending"
+    }
+  ]
+}

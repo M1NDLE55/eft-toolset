@@ -1,0 +1,43 @@
+{
+  "title": "T H I C C item case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/T_H_I_C_C_item_case",
+  "revisionId": 363057,
+  "lastEdited": "2026-10-03T17:34:52Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "23 kg",
+    "grid": "5x3",
+    "effect": "Provides 196 inventory slots while only taking up 15",
+    "loot xp": "30",
+    "exam xp": "10",
+    "node": "5c0a840b86f7742ffa4f2482",
+    "ID": "item_container_items_thicc"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Cannot be stored in a backpack."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The T H I C C item case is a container with the purpose of saving space within the player's inventory. It provides 196 inventory slots in a 14x14 grid and only takes up 15 inventory slots itself. It can store everything except:\n- Item case\n- T H I C C item case\n- Weapon case\n- T H I C C Weapon case\n- Lucky Scav Junk box\n- Some special equipment"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from A Difficult Choice"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- \"T H I C C\" is a reference to the slang term thicc. The implication is that the case is wider than the normal case.\n- Easter eggs and References: The is modeled after the 1780 Protector Transport Case by Pelican."
+    }
+  ]
+}

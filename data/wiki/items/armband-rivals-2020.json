@@ -1,0 +1,26 @@
+{
+  "title": "Armband (Rivals 2020)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Rivals_2020)",
+  "revisionId": 358632,
+  "lastEdited": "2026-09-10T22:42:51Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "5f9949d869e2777a0e779ba5",
+    "id": "item_equipment_armband_r2"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Airdrops\n- Buried barrel cache\n- Ground cache\n- Jacket\n- Weapon box (4x4)\n- Weapon box (6x4)\n- Weapon box (6x6)\n- Shturman's Stash"
+    }
+  ]
+}

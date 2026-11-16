@@ -1,0 +1,24 @@
+{
+  "title": "HK G36 KAC Front Flip Up Sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_KAC_Front_Flip_Up_Sight",
+  "revisionId": 354914,
+  "lastEdited": "2026-08-17T18:50:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.067 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "sightrange": "300",
+    "ergonomics": "-0.1",
+    "loot xp": "5",
+    "exam xp": "2",
+    "node": "680b87fc9402a78e7504a057",
+    "ID": "sight_front_g36_kac_folding_sight"
+  },
+  "sections": []
+}

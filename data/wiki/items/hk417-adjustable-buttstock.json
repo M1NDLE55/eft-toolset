@@ -1,0 +1,24 @@
+{
+  "title": "HK417 Adjustable Buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK417_Adjustable_Buttstock",
+  "revisionId": 270151,
+  "lastEdited": "2024-02-08T19:58:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.907 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "+6",
+    "recoil": "-23",
+    "loot xp": "10",
+    "exam xp": "4",
+    "node": "617155ee50224f204c1da3cd",
+    "ID": "stock_417_hk_417_adjustable_buttstock"
+  },
+  "sections": []
+}

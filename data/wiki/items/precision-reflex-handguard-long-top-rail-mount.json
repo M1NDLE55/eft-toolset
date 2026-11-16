@@ -1,0 +1,21 @@
+{
+  "title": "Precision Reflex handguard long top rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Precision_Reflex_handguard_long_top_rail_mount",
+  "revisionId": 274243,
+  "lastEdited": "2024-03-16T10:39:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.16 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "+0",
+    "node": "6388c5d19c00405f4717c0f0",
+    "ID": "mount_pri_precision_reflex_long_rail_section_gen3"
+  },
+  "sections": []
+}

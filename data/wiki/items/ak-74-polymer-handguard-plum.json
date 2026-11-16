@@ -1,0 +1,24 @@
+{
+  "title": "AK-74 polymer handguard (Plum)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_polymer_handguard_(Plum)",
+  "revisionId": 342036,
+  "lastEdited": "2026-04-28T00:19:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "+12",
+    "recoil": "+0",
+    "Heat": "+4.5",
+    "Cooling": "-3.8",
+    "node": "5cbda9f4ae9215000e5b9bfc",
+    "ID": "handguard_ak_izhmash_ak74_std_plum"
+  },
+  "sections": []
+}

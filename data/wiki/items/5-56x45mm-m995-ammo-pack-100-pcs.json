@@ -1,0 +1,24 @@
+{
+  "title": "5.56x45mm M995 ammo pack (100 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_M995_ammo_pack_(100_pcs)",
+  "revisionId": 367187,
+  "lastEdited": "2026-11-02T23:11:35Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570265f1419851aef03e739",
+    "ID": "item_ammo_box_556x45_100_995"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

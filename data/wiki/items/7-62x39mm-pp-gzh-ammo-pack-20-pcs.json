@@ -1,0 +1,18 @@
+{
+  "title": "7.62x39mm PP gzh ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_PP_gzh_ammo_pack_(20_pcs)",
+  "revisionId": 367223,
+  "lastEdited": "2026-11-02T23:13:28Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "node": "64ace9f9c4eda9354b0226aa",
+    "ID": "item_ammo_box_762x39_20_pp"
+  },
+  "sections": []
+}

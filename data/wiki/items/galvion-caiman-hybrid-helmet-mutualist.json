@@ -1,0 +1,35 @@
+{
+  "title": "Galvion Caiman Hybrid helmet (Mutualist)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Galvion_Caiman_Hybrid_helmet_(Mutualist)",
+  "revisionId": 348425,
+  "lastEdited": "2026-07-30T20:13:25Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.12 kg",
+    "grid": "2x2",
+    "trader": "Ref LL2, after unlocking it in the Customs Tactical Map",
+    "material": "Combined materials",
+    "armor": "3",
+    "armor coverage": "Head top, Nape",
+    "durability": "60",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -2% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "68a9b5a5863d2a71fa0494a6",
+    "id": "item_equipment_helmet_galvion_caiman_venom_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

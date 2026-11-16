@@ -1,0 +1,27 @@
+{
+  "title": "Disposable syringe",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Disposable_syringe",
+  "revisionId": 358478,
+  "lastEdited": "2026-09-10T21:31:53Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5d1b3f2d86f774253763b735",
+    "ID": "item_barter_medical_syringe"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    }
+  ]
+}

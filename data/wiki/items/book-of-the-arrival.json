@@ -1,0 +1,26 @@
+{
+  "title": "Book of the Arrival",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Book_of_the_Arrival",
+  "revisionId": 348844,
+  "lastEdited": "2026-08-01T19:23:18Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.8 kg",
+    "grid": "2x2",
+    "node": "689b53222c175da5bf083ba3",
+    "ID": "item_info_note_quest_book_of_coming"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

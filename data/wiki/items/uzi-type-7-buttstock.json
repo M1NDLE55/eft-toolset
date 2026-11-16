@@ -1,0 +1,22 @@
+{
+  "title": "UZI Type 7 buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_Type_7_buttstock",
+  "revisionId": 306740,
+  "lastEdited": "2025-03-17T04:43:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.41 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+3",
+    "recoil": "-23",
+    "node": "6698c9e07356874dfe0a0b88",
+    "ID": "stock_uzi_iwi_type_7"
+  },
+  "sections": []
+}

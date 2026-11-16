@@ -1,0 +1,25 @@
+{
+  "title": "AR-10 Keeno Arms SHREWD 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Keeno_Arms_SHREWD_7.62x51_muzzle_brake",
+  "revisionId": 337656,
+  "lastEdited": "2026-03-06T00:47:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-3",
+    "accuracy": "+2",
+    "recoil": "-10",
+    "Dura Burn": "-4",
+    "Heat": "-1.3",
+    "node": "5cdd7685d7f00c000f260ed2",
+    "ID": "muzzle_ar10_keeno_arms_shrewd_muzzle_brake_762x51"
+  },
+  "sections": []
+}

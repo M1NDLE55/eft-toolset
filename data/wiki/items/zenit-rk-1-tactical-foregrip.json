@@ -1,0 +1,25 @@
+{
+  "title": "Zenit RK-1 tactical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zenit_RK-1_tactical_foregrip",
+  "revisionId": 343302,
+  "lastEdited": "2026-05-05T18:04:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.170 kg",
+    "grid": "1x1",
+    "price": "₽4,380",
+    "trader": "Skier LL3",
+    "ergonomics": "-1",
+    "recoil": "-2.5",
+    "loot xp": "30",
+    "exam xp": "6",
+    "node": "5c1bc5612e221602b5429350",
+    "ID": "foregrip_all_zenit_rk_1"
+  },
+  "sections": []
+}

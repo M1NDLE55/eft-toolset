@@ -1,0 +1,27 @@
+{
+  "title": "AR-15 5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_Magpul_PMAG_30_GEN_M3_STANAG_30-round_magazine",
+  "revisionId": 341677,
+  "lastEdited": "2026-04-26T20:55:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.138 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL3: Black, FDE",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "-10",
+    "loadmodifier": "-5",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "node": "5aaa5dfee5b5b000140293d3 5d1340b3d7ad1a0b52682ed7",
+    "ID": "mag_stanag_magpul_pmag_gen_m3_556x45_30 mag_stanag_magpul_pmag_gen_m3_556x45_30_fde"
+  },
+  "sections": []
+}

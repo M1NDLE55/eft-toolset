@@ -1,0 +1,25 @@
+{
+  "title": "AR-10 KAC QDC 7.62x51 Muzzle Brake Kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_KAC_QDC_7.62x51_Muzzle_Brake_Kit",
+  "revisionId": 362915,
+  "lastEdited": "2026-10-03T10:55:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.145 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-3",
+    "accuracy": "+3",
+    "recoil": "-7.5",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "node": "6130c43c67085e45ef1405a1",
+    "ID": "muzzle_ar10_kac_qdc_muzzle_brake_kit_762x51"
+  },
+  "sections": []
+}

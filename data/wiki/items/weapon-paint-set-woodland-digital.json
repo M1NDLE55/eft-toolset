@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Woodland Digital)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Woodland_Digital)",
+  "revisionId": 342966,
+  "lastEdited": "2026-05-01T14:39:35Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67e6a2846ac2cb5280008df3",
+    "id": "item_camo_digital_woodland"
+  },
+  "sections": []
+}

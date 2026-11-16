@@ -1,0 +1,25 @@
+{
+  "title": "M700 Magpul Pro 700 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_Magpul_Pro_700_pistol_grip",
+  "revisionId": 342041,
+  "lastEdited": "2026-04-28T00:22:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽1,800",
+    "trader": "Skier LL3",
+    "ergonomics": "+5",
+    "recoil": "-1",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5cdeac5cd7f00c000f261694",
+    "ID": "pistolgrip_m700_magpul_pro_700_grip"
+  },
+  "sections": []
+}

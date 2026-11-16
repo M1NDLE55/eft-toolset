@@ -1,0 +1,26 @@
+{
+  "title": "SVD CAA XRS-DRG handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVD_CAA_XRS-DRG_handguard",
+  "revisionId": 342087,
+  "lastEdited": "2026-04-28T03:40:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.65 kg",
+    "grid": "2x1",
+    "price": "₽9600",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+20",
+    "recoil": "+0",
+    "Heat": "+1",
+    "Cooling": "+10.7",
+    "loot xp": "20",
+    "node": "5e5699df2161e06ac158df6f",
+    "ID": "handguard_svd_caa_xrs_drg"
+  },
+  "sections": []
+}

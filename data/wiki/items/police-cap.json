@@ -1,0 +1,21 @@
+{
+  "title": "Police cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Police_cap",
+  "revisionId": 304902,
+  "lastEdited": "2025-01-31T14:12:26Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽1,500",
+    "node": "5aa2b8d7e5b5b00014028f4a",
+    "id": "cap_police"
+  },
+  "sections": []
+}

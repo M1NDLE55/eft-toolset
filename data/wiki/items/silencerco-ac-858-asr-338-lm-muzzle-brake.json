@@ -1,0 +1,27 @@
+{
+  "title": "SilencerCo AC-858 ASR .338 LM muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SilencerCo_AC-858_ASR_.338_LM_muzzle_brake",
+  "revisionId": 337757,
+  "lastEdited": "2026-03-06T02:01:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "price": "₽8,120",
+    "trader": "Jaeger LL4",
+    "ergonomics": "-1",
+    "accuracy": "+1",
+    "recoil": "-18",
+    "Heat": "-1.1",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5fc23636016cce60e8341b05",
+    "ID": "muzzle_all_silencerco_ac858_asr_muzzle_brake_86x70"
+  },
+  "sections": []
+}

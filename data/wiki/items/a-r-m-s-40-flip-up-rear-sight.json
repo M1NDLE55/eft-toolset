@@ -1,0 +1,23 @@
+{
+  "title": "A.R.M.S. 40 Flip-Up Rear Sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A.R.M.S._40_Flip-Up_Rear_Sight",
+  "revisionId": 343407,
+  "lastEdited": "2026-05-06T01:40:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "sightrange": "300",
+    "ergonomics": "+0.5",
+    "accuracy": "+0",
+    "node": "68caad70269e10396503ad00",
+    "ID": "sight_rear_all_arms_40_flip_up_sight"
+  },
+  "sections": []
+}

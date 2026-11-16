@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Daniel Defense RIS II 9.5 lower handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Daniel_Defense_RIS_II_9.5_lower_handguard",
+  "revisionId": 342359,
+  "lastEdited": "2026-04-29T00:40:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.12 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1: Black, Coyote Brown",
+    "ergonomics": "+7.5",
+    "recoil": "+0",
+    "Heat": "-0.8",
+    "Cooling": "+1.2",
+    "node": "6396aaa9a52ace83df0840ab 638f1ff84822287cad04be9d",
+    "ID": "handguard_ar15_dd_ris_ii_9,5_lower_blk handguard_ar15_dd_ris_ii_9,5_lower"
+  },
+  "sections": []
+}

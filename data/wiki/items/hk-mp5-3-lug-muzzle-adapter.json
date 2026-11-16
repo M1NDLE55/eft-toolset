@@ -1,0 +1,22 @@
+{
+  "title": "HK MP5 3-lug muzzle adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_3-lug_muzzle_adapter",
+  "revisionId": 337418,
+  "lastEdited": "2026-03-05T22:43:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+2",
+    "Dura Burn": "-2",
+    "node": "5926e16e86f7742f5a0f7ecb",
+    "ID": "muzzle_mp5_hk_lug_adapter_9x19"
+  },
+  "sections": []
+}

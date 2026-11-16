@@ -1,0 +1,22 @@
+{
+  "title": "UX PRO beanie",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UX_PRO_beanie",
+  "revisionId": 310168,
+  "lastEdited": "2025-04-13T10:22:58Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Beanie",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽1,900",
+    "trader": "Ragman LL2",
+    "node": "5aa2ba46e5b5b000137b758d",
+    "id": "hats_UF_PRO"
+  },
+  "sections": []
+}

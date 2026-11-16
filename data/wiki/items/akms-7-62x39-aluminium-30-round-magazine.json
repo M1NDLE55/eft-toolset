@@ -1,0 +1,30 @@
+{
+  "title": "AKMS 7.62x39 aluminium 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKMS_7.62x39_aluminium_30-round_magazine",
+  "revisionId": 337453,
+  "lastEdited": "2026-03-05T23:00:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.17 kg",
+    "grid": "1x2",
+    "price": "₽3,300",
+    "trader": "Prapor LL3",
+    "ergonomics": "-2",
+    "checkaccuracy": "No",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "7.62x39mm, .366 TKM",
+    "loot xp": "10",
+    "exam xp": "Examined by default",
+    "node": "5a0060fc86f7745793204432",
+    "ID": "mag_ak_izhmash_akms_aluminium_762x39_30"
+  },
+  "sections": []
+}

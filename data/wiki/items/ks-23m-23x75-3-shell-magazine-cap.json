@@ -1,0 +1,24 @@
+{
+  "title": "KS-23M 23x75 3-shell magazine cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KS-23M_23x75_3-shell_magazine_cap",
+  "revisionId": 337741,
+  "lastEdited": "2026-03-06T01:53:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "ergonomics": "+0",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "3",
+    "caliber": "23x75mmR",
+    "node": "5f647d9f8499b57dc40ddb93",
+    "ID": "mag_ks23_toz_ks23_std_23x75_3"
+  },
+  "sections": []
+}

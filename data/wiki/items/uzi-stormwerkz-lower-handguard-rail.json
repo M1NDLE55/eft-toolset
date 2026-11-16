@@ -1,0 +1,21 @@
+{
+  "title": "UZI StormWerkz lower handguard rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_StormWerkz_lower_handguard_rail",
+  "revisionId": 305465,
+  "lastEdited": "2025-02-08T21:57:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+0",
+    "node": "66992f7d9950f5f4cd0602a8",
+    "ID": "mount_uzi_stormwerkz_lower_handguard_rail"
+  },
+  "sections": []
+}

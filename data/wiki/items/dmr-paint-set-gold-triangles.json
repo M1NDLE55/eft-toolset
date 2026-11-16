@@ -1,0 +1,24 @@
+{
+  "title": "DMR paint set (Gold Triangles)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DMR_paint_set_(Gold_Triangles)",
+  "revisionId": 319394,
+  "lastEdited": "2025-10-19T20:29:45Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "686fd9f340a485f54a04db89",
+    "id": "item_camo_geometric_triangles_gold"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be applied to designated marksman rifles."
+    }
+  ]
+}

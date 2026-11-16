@@ -1,0 +1,27 @@
+{
+  "title": "MDR 7.62x51 16 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MDR_7.62x51_16_inch_barrel",
+  "revisionId": 342072,
+  "lastEdited": "2026-04-28T01:30:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.62 kg",
+    "grid": "3x1",
+    "ergonomics": "-20",
+    "velocity": "-2",
+    "MOA": "1.38",
+    "recoil": "-10.2",
+    "Heat": "-6",
+    "Cooling": "-6",
+    "loot xp": "20",
+    "exam xp": "6",
+    "node": "5dcbe9431e1f4616d354987e",
+    "ID": "barrel_mdr_dt_406mm_762x51"
+  },
+  "sections": []
+}

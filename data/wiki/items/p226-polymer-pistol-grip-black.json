@@ -1,0 +1,20 @@
+{
+  "title": "P226 polymer pistol grip (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_polymer_pistol_grip_(Black)",
+  "revisionId": 340625,
+  "lastEdited": "2026-04-21T09:09:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "ergonomics": "+3",
+    "node": "56d5a2bbd2720bb8418b456a",
+    "ID": "pistolgrip_p226_sig_p226_std"
+  },
+  "sections": []
+}

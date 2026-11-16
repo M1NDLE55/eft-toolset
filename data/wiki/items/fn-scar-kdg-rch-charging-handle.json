@@ -1,0 +1,21 @@
+{
+  "title": "FN SCAR KDG RCH charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_KDG_RCH_charging_handle",
+  "revisionId": 357271,
+  "lastEdited": "2026-09-01T09:36:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+2",
+    "node": "6a3e92eb64b1d1fcc50ebbfb",
+    "ID": "charge_mk16_kinetic_rch"
+  },
+  "sections": []
+}

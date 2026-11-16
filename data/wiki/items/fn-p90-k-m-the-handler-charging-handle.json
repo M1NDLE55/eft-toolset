@@ -1,0 +1,24 @@
+{
+  "title": "FN P90 K&M The Handler charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_K%26M_The_Handler_charging_handle",
+  "revisionId": 210772,
+  "lastEdited": "2022-09-20T10:44:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.019 kg",
+    "grid": "1x1",
+    "price": "₽2,663",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+1",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5cc6ea85e4a949000e1ea3c3",
+    "ID": "charge_p90_km_the_handler"
+  },
+  "sections": []
+}

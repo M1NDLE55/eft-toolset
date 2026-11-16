@@ -1,0 +1,19 @@
+{
+  "title": "6.8x51mm SIG FMJ ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6.8x51mm_SIG_FMJ_ammo_pack_(20_pcs)",
+  "revisionId": 367207,
+  "lastEdited": "2026-11-02T23:12:37Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Ref LL4",
+    "node": "67600a42b32eb5d23e0eb459",
+    "ID": "item_ammo_box_68x51_20_fmj"
+  },
+  "sections": []
+}

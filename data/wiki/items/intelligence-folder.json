@@ -1,0 +1,57 @@
+{
+  "title": "Intelligence folder",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Intelligence_folder",
+  "revisionId": 358758,
+  "lastEdited": "2026-09-10T23:05:13Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.23 kg",
+    "grid": "2x1",
+    "loot xp": "30",
+    "exam xp": "10",
+    "node": "5c12613b86f7743bbe2c3f76",
+    "ID": "item_info_intelligence"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be used as payment for the \"Scav case\" module in the Hideout"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Safe\n- Dead Scav\n- Weapon box (4x4)\n- Weapon box (6x6)\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket\n- Wooden crate"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "In addition also:\n- Inside of RB-PKPTS on the desk"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- On the 2nd level of the shelves in Kruglov's office (R22)\n- Inside of the safe in Kruglov's office (R22)\n- Inside of TerraGroup Labs keycard (Red) on the shelves in the back\n- Inside of TerraGroup Labs keycard (Violet) on the shelves to the right after entering\n- Inside of the Manager's Office found on both desks\n- Inside of Residential Unit No 7 found on the shelves directly to the left\n- Inside of the Administrative Office on the second desk to the left after entering"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the radio in a tent in the BEAR camp\n- Inside Station 14-4 KORD\n\n- In cardboard boxes in the parking garage where Tagilla resides below the Goshan store"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- In the upper chalet, on the seats in the cinema room\n- Next to the upper chalet, in the small villa, under the TV unit.\n- On the table in the tent on tennis field\n\n- On the second floor of the blue chalet garage in the back left room\n\n- On a desk in the hidden drug lab\n\n- On a chair in the back office of the guard station at the radar station"
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Huntsman Path - Crooked Cop\n- 1 can be obtained as a quest reward from Counteraction\n- 2 can be obtained as a quest reward from Key Partner"
+    }
+  ]
+}

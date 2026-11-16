@@ -1,0 +1,20 @@
+{
+  "title": "PL-15 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PL-15_rear_sight",
+  "revisionId": 306858,
+  "lastEdited": "2025-03-18T13:48:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "sightrange": "200",
+    "node": "60229948cacb6b0506369e27",
+    "ID": "sight_rear_pl15_izhmash_pl15_std"
+  },
+  "sections": []
+}

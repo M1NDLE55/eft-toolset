@@ -1,0 +1,18 @@
+{
+  "title": "9.3x64mm SP ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9.3x64mm_SP_ammo_pack_(20_pcs)",
+  "revisionId": 367247,
+  "lastEdited": "2026-11-02T23:14:46Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "68ee0125fdf770156c0da329",
+    "ID": "item_ammo_box_93x64_20_sp"
+  },
+  "sections": []
+}

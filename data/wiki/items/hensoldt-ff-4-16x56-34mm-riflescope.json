@@ -1,0 +1,25 @@
+{
+  "title": "Hensoldt FF 4-16x56 34mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hensoldt_FF_4-16x56_34mm_riflescope",
+  "revisionId": 314366,
+  "lastEdited": "2025-06-19T03:39:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.9 kg",
+    "grid": "2x1",
+    "price": "₽51,805",
+    "trader": "Skier LL4",
+    "zeroing": "50, 100, 150, 200, 250, 300, 350, 400, 450",
+    "sightrange": "1500",
+    "ergonomics": "-6",
+    "modes": "1",
+    "node": "56ea70acd2720b844b8b4594",
+    "ID": "scope_34mm_hensoldt_zf_4_16x56_ff"
+  },
+  "sections": []
+}

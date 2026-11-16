@@ -1,0 +1,31 @@
+{
+  "title": "Nut can",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nut_can",
+  "revisionId": 330623,
+  "lastEdited": "2026-01-02T01:42:50Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "effect": "Provides 9 inventory slots while only taking up 1",
+    "node": "693bfb50d5c25889e701d444",
+    "id": "item_container_coffee_can"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Nut can is a container with the purpose of saving space within the player's inventory. It provides 9 inventory slots in a 3x3 grid and only takes up 1 inventory slot itself.It can only store:\n- Screw nuts\n- Bolts\n- Pack of nails\n- Pack of screws"
+    }
+  ]
+}

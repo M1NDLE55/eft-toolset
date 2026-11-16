@@ -1,0 +1,25 @@
+{
+  "title": "Light bulb",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Light_bulb",
+  "revisionId": 364347,
+  "lastEdited": "2026-10-13T14:45:46Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "node": "5d1b392c86f77425243e98fe",
+    "ID": "item_barter_electr_bulb"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

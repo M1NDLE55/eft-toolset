@@ -1,0 +1,40 @@
+{
+  "title": "Lega Medal",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lega_Medal",
+  "revisionId": 366970,
+  "lastEdited": "2026-11-01T20:58:58Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6656560053eaaa7a23349c86",
+    "id": "item_barter_valuable_legendarykill"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Create a Distraction - Part 2"
+    },
+    {
+      "heading": "Arena",
+      "level": 3,
+      "text": "- 1 can be obtained as a quest reward from Arena Business\n- 1 can be obtained as a quest reward from Professional Fitness - Part 2\n- 1 can be obtained as a quest reward from All for the Show - Big Tour\n- 1 can be obtained as a quest reward from Advertising Business - Part 4\n- 1 can be obtained as a quest reward from Superhuman\n- Possible reward for daily and weekly operational tasks from Ref"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The \"Legendary Kill\" is a killstreak award given in the prequel games \"Contract Wars\" and \"Hired Ops\", attributed by getting 40 consecutive kills, both games were developed by Battlestate Games' sister company, AbsolutSoft."
+    }
+  ]
+}

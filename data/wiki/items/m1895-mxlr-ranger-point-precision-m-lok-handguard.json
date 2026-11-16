@@ -1,0 +1,24 @@
+{
+  "title": "M1895/MXLR Ranger Point Precision M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1895/MXLR_Ranger_Point_Precision_M-LOK_handguard",
+  "revisionId": 342783,
+  "lastEdited": "2026-04-30T21:19:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.213 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+12",
+    "recoil": "+0",
+    "Heat": "-1.5",
+    "Cooling": "+10.4",
+    "node": "67c5429fac40c364490664f8 67ff24b9079850d544096ea6 67ff24c0abb53266190dfc66",
+    "ID": "handguard_m1895_ranger_point_precision_m_lok_ handguard_m1895_ranger_point_precision_m_lok_fde handguard_m1895_ranger_point_precision_m_lok_grn"
+  },
+  "sections": []
+}

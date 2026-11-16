@@ -1,0 +1,21 @@
+{
+  "title": "AR-15 Geissele ACH charging handle (DDC)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Geissele_ACH_charging_handle_(DDC)",
+  "revisionId": 356493,
+  "lastEdited": "2026-08-26T02:14:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+2",
+    "node": "5ea16d4d5aad6446a939753d",
+    "ID": "charge_ar15_geissele_ach"
+  },
+  "sections": []
+}

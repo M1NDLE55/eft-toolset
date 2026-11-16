@@ -1,0 +1,28 @@
+{
+  "title": "ZSh-1-2M face shield",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ZSh-1-2M_face_shield",
+  "revisionId": 333267,
+  "lastEdited": "2026-01-30T04:40:47Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1 kg",
+    "grid": "2x1",
+    "price": "₽12,500",
+    "trader": "Ragman LL3",
+    "material": "Glass",
+    "armor": "3",
+    "armor coverage": "Face, Eyes, Jaws",
+    "durability": "50",
+    "blindness protect": "10%",
+    "penalties": "+0% turn speed, -4% Ergonomics",
+    "BlocksEyewear": "No",
+    "node": "5aa7e3abe5b5b000171d064d",
+    "id": "helmet_zsh_1-2m_v1_face_shield"
+  },
+  "sections": []
+}

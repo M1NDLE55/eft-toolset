@@ -1,0 +1,26 @@
+{
+  "title": "Assistant's notes on TG-Vi-24 test subjects",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Assistant's_notes_on_TG-Vi-24_test_subjects",
+  "revisionId": 353594,
+  "lastEdited": "2026-08-14T19:09:08Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "68d2faf191c2fa84e2044a0b",
+    "id": "item_info_note_laborant_labyrinth_05"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Labyrinth\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

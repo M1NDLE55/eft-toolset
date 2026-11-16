@@ -1,0 +1,26 @@
+{
+  "title": "Document mentioning a protocol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Document_mentioning_a_protocol",
+  "revisionId": 348071,
+  "lastEdited": "2026-07-19T12:25:22Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "689b5256147eeab4410ecd14",
+    "id": "item_info_note_mention_plan_obelisk"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

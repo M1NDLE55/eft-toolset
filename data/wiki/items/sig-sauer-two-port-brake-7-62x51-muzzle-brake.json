@@ -1,0 +1,27 @@
+{
+  "title": "SIG Sauer Two Port Brake 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_Two_Port_Brake_7.62x51_muzzle_brake",
+  "revisionId": 337750,
+  "lastEdited": "2026-03-06T01:57:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.095 kg",
+    "grid": "1x1",
+    "price": "₽5,800",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-4",
+    "recoil": "-8.5",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5fbcbd10ab884124df0cd563",
+    "ID": "muzzle_base_sig_two_port_brake_762x51"
+  },
+  "sections": []
+}

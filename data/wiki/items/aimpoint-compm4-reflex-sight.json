@@ -1,0 +1,26 @@
+{
+  "title": "Aimpoint CompM4 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aimpoint_CompM4_reflex_sight",
+  "revisionId": 318923,
+  "lastEdited": "2025-10-03T11:47:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.37 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "0",
+    "ergonomics": "-2",
+    "modes": "1",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "5c7d55de2e221644f31bff68",
+    "ID": "scope_base_aimpooint_comp_m4"
+  },
+  "sections": []
+}

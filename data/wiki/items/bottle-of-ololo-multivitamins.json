@@ -1,0 +1,31 @@
+{
+  "title": "Bottle of OLOLO Multivitamins",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bottle_of_OLOLO_Multivitamins",
+  "revisionId": 360896,
+  "lastEdited": "2026-09-20T14:42:24Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "62a0a043cf4a99369e2624a5",
+    "id": "item_barter_medical_vitamins"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Bottle of OLOLO Multivitamins is based off \"Centrum multivitamin\"."
+    }
+  ]
+}

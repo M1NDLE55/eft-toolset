@@ -1,0 +1,34 @@
+{
+  "title": "VOG-17 Khattabka improvised hand grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VOG-17_Khattabka_improvised_hand_grenade",
+  "revisionId": 358694,
+  "lastEdited": "2026-09-10T22:57:37Z",
+  "kind": "item",
+  "categories": [
+    "Fragmentation grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Fragmentation grenade",
+    "weight": "0.28 kg",
+    "grid": "1x1",
+    "price": "₽5,935",
+    "fragments count": "100x RGD-5 Shrapnel",
+    "explosion delay": "3s",
+    "explosion distance": "2-6 meters",
+    "concussion distance": "9 meters",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "5e32f56fcb6d5863cc5e5ee4",
+    "ID": "weapon_grenade_chattabka_vog17"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Grenade box\n- Weapon box (6x2)\n- Buried barrel cache\n- Ground cache"
+    }
+  ]
+}

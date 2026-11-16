@@ -1,0 +1,22 @@
+{
+  "title": "SIG Sauer Thin Side-Folding Stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_Thin_Side-Folding_Stock",
+  "revisionId": 341735,
+  "lastEdited": "2026-04-26T21:23:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+17",
+    "recoil": "-19.5",
+    "node": "5fbcc437d724d907e2077d5c",
+    "ID": "stock_all_sig_thin_folding_stock"
+  },
+  "sections": []
+}

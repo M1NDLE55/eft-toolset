@@ -1,0 +1,24 @@
+{
+  "title": "HK G36 2-vent handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_2-vent_handguard",
+  "revisionId": 253570,
+  "lastEdited": "2023-11-02T21:56:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.23 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+12",
+    "recoil": "+0",
+    "Heat": "+7",
+    "Cooling": "+0",
+    "node": "62386b2adf47d66e835094b2",
+    "ID": "handguard_g36_hk_c"
+  },
+  "sections": []
+}

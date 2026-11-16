@@ -1,0 +1,21 @@
+{
+  "title": "TOZ-106 FAB Defense GPCP cheek rest",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TOZ-106_FAB_Defense_GPCP_cheek_rest",
+  "revisionId": 252887,
+  "lastEdited": "2023-11-02T21:50:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.155 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+5",
+    "node": "626a8ae89e664a2e2a75f409",
+    "ID": "106_fab_defense_gpcp_custom_stock_cheek"
+  },
+  "sections": []
+}

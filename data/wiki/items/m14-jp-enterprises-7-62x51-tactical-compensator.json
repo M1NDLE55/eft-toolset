@@ -1,0 +1,26 @@
+{
+  "title": "M14 JP Enterprises 7.62x51 Tactical Compensator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_JP_Enterprises_7.62x51_Tactical_Compensator",
+  "revisionId": 337515,
+  "lastEdited": "2026-03-05T23:34:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.13 kg",
+    "grid": "1x1",
+    "price": "₽8,000",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-5",
+    "accuracy": "+0",
+    "recoil": "-13",
+    "Dura Burn": "-4",
+    "Heat": "-1.3",
+    "node": "5addbb825acfc408fb139400",
+    "ID": "muzzle_m14_jp_enterprises_tactical_compensator_762x51"
+  },
+  "sections": []
+}

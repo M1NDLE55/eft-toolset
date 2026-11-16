@@ -1,0 +1,24 @@
+{
+  "title": "SKS TAPCO railed gas tube cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_TAPCO_railed_gas_tube_cover",
+  "revisionId": 293107,
+  "lastEdited": "2024-09-29T20:12:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.22 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+4",
+    "recoil": "+0",
+    "Heat": "+0.6",
+    "Cooling": "-1",
+    "node": "653ecd065a1690d9d90491e6",
+    "ID": "handguard_sks_tapco_gas_cover"
+  },
+  "sections": []
+}

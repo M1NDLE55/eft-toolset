@@ -1,0 +1,26 @@
+{
+  "title": "Secure magnetic tape cassette",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_magnetic_tape_cassette",
+  "revisionId": 364414,
+  "lastEdited": "2026-10-13T19:28:34Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "61bf7c024770ee6f9c6b8b53",
+    "id": "item_barter_info_securedtape"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Common fund stash\n- Dead Scav\n- Drawer\n- Ground cache\n- Jacket\n- Plastic suitcase\n- Safe\n- Sport bag\n- Weapon box (6x6)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "AK-74 polymer stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_polymer_stock",
+  "revisionId": 337358,
+  "lastEdited": "2026-03-05T21:45:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.35 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "+5",
+    "recoil": "-21",
+    "node": "5649b0fc4bdc2d17108b4588 (Black) 5cbdb1b0ae9215000d50e105 (Plum)",
+    "ID": "stock_ak74_izhmash_ak74_std_plastic (Black) stock_ak74_izhmash_ak74_std_plum (Plum)"
+  },
+  "sections": []
+}

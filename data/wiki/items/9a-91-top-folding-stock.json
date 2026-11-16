@@ -1,0 +1,22 @@
+{
+  "title": "9A-91 top-folding stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9A-91_top-folding_stock",
+  "revisionId": 318904,
+  "lastEdited": "2025-10-02T22:26:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.5 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+16",
+    "recoil": "-20",
+    "node": "6451167ad4928d46d30be3fd",
+    "ID": "stock_9a91_kbp_9a91_stock"
+  },
+  "sections": []
+}

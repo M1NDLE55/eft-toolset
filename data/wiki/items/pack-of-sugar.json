@@ -1,0 +1,33 @@
+{
+  "title": "Pack of sugar",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pack_of_sugar",
+  "revisionId": 333862,
+  "lastEdited": "2026-02-07T22:29:36Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "price": "₽1,625",
+    "effect": "Energy: +70, Hydration: -45, , Buffs:, 1s Delay; 300s Duration: - Increases Intellect (+1)",
+    "use time": "9s",
+    "node": "59e3577886f774176a362503",
+    "id": "item_food_sugar"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Ration supply crates\n- In Sport bags\n- In Plastic suitcases"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The real life version is Gorodeya Sugar Refinery Belarusian 1000G Sugar Cubes"
+    }
+  ]
+}

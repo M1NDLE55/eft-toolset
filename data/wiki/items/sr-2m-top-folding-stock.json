@@ -1,0 +1,22 @@
+{
+  "title": "SR-2M top-folding stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-2M_top-folding_stock",
+  "revisionId": 270213,
+  "lastEdited": "2024-02-08T20:22:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.21 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+7",
+    "recoil": "-19",
+    "node": "62e292e7b6c0ee2f230cee00",
+    "ID": "stock_sr2m_tochmash_sr2m_stock"
+  },
+  "sections": []
+}

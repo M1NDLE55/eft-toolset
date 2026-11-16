@@ -1,0 +1,18 @@
+{
+  "title": "9x21mm 7N42 ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x21mm_7N42_ammo_pack_(30_pcs)",
+  "revisionId": 367286,
+  "lastEdited": "2026-11-02T23:16:50Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6579847c5a0e5879d12f2873",
+    "ID": "item_ammo_box_9x21_30_7n42"
+  },
+  "sections": []
+}

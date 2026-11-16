@@ -1,0 +1,21 @@
+{
+  "title": "RFB thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RFB_thread_protector",
+  "revisionId": 306883,
+  "lastEdited": "2025-03-18T13:53:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "ergonomics": "+1",
+    "Dura Burn": "-2",
+    "node": "5f2aa4464b50c14bcf07acdb",
+    "ID": "muzzle_all_kel_tec_thread_protector_762x51"
+  },
+  "sections": []
+}

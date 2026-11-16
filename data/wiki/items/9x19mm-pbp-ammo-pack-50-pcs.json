@@ -1,0 +1,18 @@
+{
+  "title": "9x19mm PBP ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_PBP_ammo_pack_(50_pcs)",
+  "revisionId": 367280,
+  "lastEdited": "2026-11-02T23:16:34Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "648987d673c462723909a151",
+    "ID": "item_ammo_box_9x19_50_pbp"
+  },
+  "sections": []
+}

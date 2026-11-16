@@ -1,0 +1,33 @@
+{
+  "title": "Yarygin MP-443 Grach 9x19 pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Yarygin_MP-443_Grach_9x19_pistol",
+  "revisionId": 340920,
+  "lastEdited": "2026-04-22T21:50:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.95 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL1",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "77",
+    "velocity": "449 m/s",
+    "range": "50 m",
+    "MOA": "12.03",
+    "Weaprecoil": "Vertical: 425, Horizontal: 310",
+    "rof": "30",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "576a581d2459771e7b1bc4f1",
+    "ID": "weapon_izhmeh_mp443_9x19"
+  },
+  "sections": []
+}

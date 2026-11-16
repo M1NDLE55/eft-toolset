@@ -1,0 +1,28 @@
+{
+  "title": "Glorious E mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glorious_E_mask",
+  "revisionId": 357894,
+  "lastEdited": "2026-09-08T14:45:16Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.28 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "62a09e08de7ac81993580532",
+    "id": "item_equipment_facecover_glorious"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a reference to the content creator Glorious E."
+    }
+  ]
+}

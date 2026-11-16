@@ -1,0 +1,33 @@
+{
+  "title": "20x1mm disk",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20x1mm_disk",
+  "revisionId": 353415,
+  "lastEdited": "2026-08-13T00:35:48Z",
+  "kind": "ammo",
+  "categories": [
+    "20x1mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.001 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "velocity": "20 m/s",
+    "damage": "1",
+    "recoil": "+1",
+    "penetration": "0",
+    "armor damage": "0",
+    "ricochet": "0%",
+    "node": "6601546f86889319850bd566",
+    "id": "patron_20x1mm"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

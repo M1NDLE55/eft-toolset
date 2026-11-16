@@ -1,0 +1,21 @@
+{
+  "title": "VPO-102 Arbalet mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-102_Arbalet_mount",
+  "revisionId": 284220,
+  "lastEdited": "2024-08-07T22:24:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-2",
+    "node": "609a4b4fe2ff132951242d04",
+    "ID": "mount_dovetail_arbalet_vpo_102"
+  },
+  "sections": []
+}

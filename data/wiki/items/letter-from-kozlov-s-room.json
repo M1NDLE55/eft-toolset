@@ -1,0 +1,26 @@
+{
+  "title": "Letter from Kozlov's room",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Letter_from_Kozlov's_room",
+  "revisionId": 348046,
+  "lastEdited": "2026-07-19T12:22:41Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "68d2fd018c12620073059934",
+    "id": "item_info_note_letter_from_kozlov_02"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Accidental Witness\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Zibbo lighter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zibbo_lighter",
+  "revisionId": 355657,
+  "lastEdited": "2026-08-23T16:53:12Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable material",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "56742c2e4bdc2d95058b456d",
+    "id": "zibbo"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The Zibbo Lighter is a parody of the Zippo Lighter."
+    }
+  ]
+}

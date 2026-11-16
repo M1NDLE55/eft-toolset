@@ -1,0 +1,35 @@
+{
+  "title": "Bomber beanie",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bomber_beanie",
+  "revisionId": 363089,
+  "lastEdited": "2026-10-04T11:59:36Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL2, after accepting his task Dandies",
+    "material": "Aramid",
+    "armor": "1",
+    "armor coverage": "Nape",
+    "durability": "150",
+    "RicochetChance": "Low",
+    "penalties": "+0% movement speed, +0% turn speed, +0% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "60bf74184a63fc79b60c57f6",
+    "id": "item_equipment_head_bomber"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: This is a reference to the beanie worn by Edd in the cartoon show Ed, Edd n Eddy."
+    }
+  ]
+}

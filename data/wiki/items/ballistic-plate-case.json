@@ -1,0 +1,37 @@
+{
+  "title": "Ballistic plate case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ballistic_plate_case",
+  "revisionId": 364357,
+  "lastEdited": "2026-10-13T14:59:56Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "13 kg",
+    "grid": "4x2",
+    "trader": "Mechanic LL2, after completing his task Setting Priorities, Ref LL2",
+    "effect": "Provides 96 inventory slots while only taking up 8",
+    "node": "67600929bd0a0549d70993f6",
+    "ID": "item_container_plates_case"
+  },
+  "sections": [
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Ballistic plate case is a container with the purpose of saving space within the player's inventory. It provides 96 inventory slots in a 8x12 grid and only takes up 8 inventory slots itself. Only armor plates can be stored in it."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Sisyphus\n- 1 can be obtained as a quest reward from Setting Priorities\n- 1 can be obtained as a quest reward from Hypotheses Testing"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The Ballistic plate case is modeled after the BX135 Cargo Case by Pelican."
+    }
+  ]
+}

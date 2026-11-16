@@ -1,0 +1,20 @@
+{
+  "title": "AI AXMC KeySlot Harris bipod mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_KeySlot_Harris_bipod_mount",
+  "revisionId": 314495,
+  "lastEdited": "2025-06-23T22:07:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "node": "671126a210d67adb5b08e925",
+    "ID": "mount_keyslot_accuracy_international_harris_bipod_stud"
+  },
+  "sections": []
+}

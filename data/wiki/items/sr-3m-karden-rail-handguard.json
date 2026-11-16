@@ -1,0 +1,24 @@
+{
+  "title": "SR-3M Karden rail handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-3M_Karden_rail_handguard",
+  "revisionId": 343413,
+  "lastEdited": "2026-05-06T06:16:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+9",
+    "recoil": "+0",
+    "Heat": "+4.2",
+    "Cooling": "-3.8",
+    "node": "688c86420e99e554a90c0fd6",
+    "ID": "handguard_sr3m_karden_railed_handguard"
+  },
+  "sections": []
+}

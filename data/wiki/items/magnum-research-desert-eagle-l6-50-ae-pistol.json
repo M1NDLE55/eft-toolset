@@ -1,0 +1,42 @@
+{
+  "title": "Magnum Research Desert Eagle L6 .50 AE pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magnum_Research_Desert_Eagle_L6_.50_AE_pistol",
+  "revisionId": 344045,
+  "lastEdited": "2026-05-17T16:45:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "1.755 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "69",
+    "velocity": "440 m/s",
+    "range": "50 m",
+    "MOA": "6.88",
+    "Weaprecoil": "Vertical: 449, Horizontal: 318",
+    "rof": "30",
+    "caliber": ".50 Action Express",
+    "node": "669fa39b48fc9f8db6035a0c",
+    "ID": "weapon_magnum_research_desert_eagle_l6_127x33"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Forester's Duty"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- With weapon mastery level 3, having a round in the chamber and exactly one round in the magazine triggers a special drawing animation from the game \"Counter-Strike: Source\"."
+    }
+  ]
+}

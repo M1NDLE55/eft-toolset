@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Daniel Defense MK12 Low Profile Gas Block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Daniel_Defense_MK12_Low_Profile_Gas_Block",
+  "revisionId": 362916,
+  "lastEdited": "2026-10-03T10:57:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.053 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2, Mechanic LL2",
+    "ergonomics": "+1",
+    "recoil": "-2",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "node": "56eabcd4d2720b66698b4574",
+    "ID": "gas_block_ar15_dd_mk12_low_profile"
+  },
+  "sections": []
+}

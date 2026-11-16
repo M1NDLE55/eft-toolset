@@ -1,0 +1,23 @@
+{
+  "title": "AK-12 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_rear_sight",
+  "revisionId": 323679,
+  "lastEdited": "2025-11-20T05:39:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "sightrange": "600",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "649ec2cec93611967b03495e",
+    "ID": "sight_rear_ak_izhmash_ak12_rear_sight_std"
+  },
+  "sections": []
+}

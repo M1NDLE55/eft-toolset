@@ -1,0 +1,23 @@
+{
+  "title": "LBT-8005A Day Pack backpack (MultiCam Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LBT-8005A_Day_Pack_backpack_(MultiCam_Black)",
+  "revisionId": 331306,
+  "lastEdited": "2026-01-05T13:09:33Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "0.57 kg",
+    "grid": "4x5",
+    "trader": "Peacekeeper LL2",
+    "penalties": "-1% movement speed, -1% turn speed, -2% Ergonomics",
+    "slots": "4x5 grid (20 slots)",
+    "node": "5e9dcf5986f7746c417435b3",
+    "id": "item_equipment_backpack_daypack14"
+  },
+  "sections": []
+}

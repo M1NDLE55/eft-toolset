@@ -1,0 +1,18 @@
+{
+  "title": ".338 Lapua Magnum UCW ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.338_Lapua_Magnum_UCW_ammo_pack_(20_pcs)",
+  "revisionId": 367090,
+  "lastEdited": "2026-11-02T23:06:33Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "2x1",
+    "node": "657023dabfc87b3a3409320d",
+    "ID": "item_ammo_box_338_20_upz"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "9x39mm SPP gs ammo pack (8 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x39mm_SPP_gs_ammo_pack_(8_pcs)",
+  "revisionId": 367299,
+  "lastEdited": "2026-11-02T23:17:18Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "node": "5c12619186f7743f871c8a32",
+    "ID": "item_ammo_box_9x39_8_spp"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The Russian inscription on the package is actually for the SP-6 gs cartridge."
+    }
+  ]
+}

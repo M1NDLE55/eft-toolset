@@ -1,0 +1,19 @@
+{
+  "title": "SOK-12 Chaos Titan Quad Rail handguard top cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_Chaos_Titan_Quad_Rail_handguard_top_cover",
+  "revisionId": 314492,
+  "lastEdited": "2025-06-23T21:58:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "2x1",
+    "node": "674fe89a4472d471fb0f07d8",
+    "ID": "mount_saiga12_chaos_titan_quad_rail_cover"
+  },
+  "sections": []
+}

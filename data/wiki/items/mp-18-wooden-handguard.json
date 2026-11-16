@@ -1,0 +1,23 @@
+{
+  "title": "MP-18 wooden handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-18_wooden_handguard",
+  "revisionId": 293216,
+  "lastEdited": "2024-09-29T21:13:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.116 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+5",
+    "Heat": "+7.5",
+    "Cooling": "-7.6",
+    "node": "61f7b85367ddd414173fdb36",
+    "ID": "handguard_mp18_izhmash_wood"
+  },
+  "sections": []
+}

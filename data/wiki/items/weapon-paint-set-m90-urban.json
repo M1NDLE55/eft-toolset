@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (M90 Urban)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(M90_Urban)",
+  "revisionId": 348506,
+  "lastEdited": "2026-07-30T21:23:13Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67e6a37be1a0cca93f0ce8c6",
+    "id": "item_camo_geometrical_m90_urban"
+  },
+  "sections": []
+}

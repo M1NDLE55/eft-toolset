@@ -1,0 +1,27 @@
+{
+  "title": "AR-10 KAC Low Profile Gas Block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_KAC_Low_Profile_Gas_Block",
+  "revisionId": 214386,
+  "lastEdited": "2022-11-16T17:29:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.049 kg",
+    "grid": "1x1",
+    "price": "₽5,050",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-1",
+    "recoil": "-2",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "loot xp": "30",
+    "exam xp": "10",
+    "node": "5dfa3d45dfc58d14537c20b0",
+    "ID": "gas_block_ar10_kac_low_profile"
+  },
+  "sections": []
+}

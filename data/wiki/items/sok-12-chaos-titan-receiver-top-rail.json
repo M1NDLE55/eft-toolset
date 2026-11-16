@@ -1,0 +1,20 @@
+{
+  "title": "SOK-12 Chaos Titan receiver top rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_Chaos_Titan_receiver_top_rail",
+  "revisionId": 342752,
+  "lastEdited": "2026-04-30T21:13:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.09 kg",
+    "grid": "2x1",
+    "ergonomics": "+3",
+    "node": "674fe8b9362ea1f88b0e278d",
+    "ID": "mount_saiga12_chaos_titan_top_cover"
+  },
+  "sections": []
+}

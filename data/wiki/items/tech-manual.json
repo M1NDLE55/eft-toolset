@@ -1,0 +1,32 @@
+{
+  "title": "Tech manual",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tech_manual",
+  "revisionId": 365041,
+  "lastEdited": "2026-10-26T00:08:54Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "590c639286f774151567fa95",
+    "id": "item_manual_lada"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Safe\n- Sport bag\n- Dead Scav\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The cover of the book is that of the Third Rome VAZ (Lada) Kalina 2 since 2013. Book, repair and maintenance manual."
+    }
+  ]
+}

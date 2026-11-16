@@ -1,0 +1,21 @@
+{
+  "title": "OP-SKS dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OP-SKS_dust_cover",
+  "revisionId": 293064,
+  "lastEdited": "2024-09-29T19:59:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+2",
+    "node": "634f06262e5def262d0b30ca",
+    "ID": "reciever_sks_molot_sks_std"
+  },
+  "sections": []
+}

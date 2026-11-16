@@ -1,0 +1,24 @@
+{
+  "title": "7.62x54mm R SNB gzh ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_SNB_gzh_ammo_pack_(20_pcs)",
+  "revisionId": 367242,
+  "lastEdited": "2026-11-02T23:14:30Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "node": "560d75f54bdc2da74d8b4573",
+    "id": "item_ammo_box_762x54r_20_snb"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

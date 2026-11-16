@@ -1,0 +1,23 @@
+{
+  "title": "AK AKademia Bastion dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_AKademia_Bastion_dust_cover",
+  "revisionId": 322364,
+  "lastEdited": "2025-11-18T14:40:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.237 kg",
+    "grid": "2x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+1",
+    "recoil": "-0.5",
+    "Dura Burn": "-3",
+    "node": "5d2c76ed48f03532f2136169",
+    "ID": "reciever_ak_akademia_bastion"
+  },
+  "sections": []
+}

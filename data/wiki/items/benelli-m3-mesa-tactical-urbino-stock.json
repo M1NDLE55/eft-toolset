@@ -1,0 +1,22 @@
+{
+  "title": "Benelli M3 Mesa Tactical Urbino stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Benelli_M3_Mesa_Tactical_Urbino_stock",
+  "revisionId": 270136,
+  "lastEdited": "2024-02-08T19:49:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.043 kg",
+    "grid": "2x2",
+    "trader": "Jaeger LL3",
+    "ergonomics": "+6",
+    "recoil": "-25",
+    "node": "625eb0faa6e3a82193267ad9",
+    "ID": "stock_m3_benelli_pistol_grip_synthetic_stock"
+  },
+  "sections": []
+}

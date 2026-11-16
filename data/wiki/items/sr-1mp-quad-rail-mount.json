@@ -1,0 +1,22 @@
+{
+  "title": "SR-1MP quad rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-1MP_quad_rail_mount",
+  "revisionId": 211495,
+  "lastEdited": "2022-09-20T11:17:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.4 kg",
+    "grid": "1x1",
+    "price": "₽8,687",
+    "trader": "Prapor LL3",
+    "ergonomics": "-1",
+    "node": "5a27bad7c4a282000b15184b",
+    "ID": "mount_sr1mp_tochmash_std_4_rail"
+  },
+  "sections": []
+}

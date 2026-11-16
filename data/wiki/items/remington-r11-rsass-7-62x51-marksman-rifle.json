@@ -1,0 +1,38 @@
+{
+  "title": "Remington R11 RSASS 7.62x51 marksman rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Remington_R11_RSASS_7.62x51_marksman_rifle",
+  "revisionId": 363003,
+  "lastEdited": "2026-10-03T12:53:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Designated marksman rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Designated marksman rifle",
+    "slot": "Primary",
+    "weight": "4.922 kg",
+    "grid": "5x2",
+    "trader": "Peacekeeper LL4: Standard after completing his task Wet Job - Part 5, Ref LL3",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "34",
+    "velocity": "845 m/s",
+    "range": "900 m",
+    "MOA": "0.82",
+    "Weaprecoil": "Vertical: 74, Horizontal: 166",
+    "rof": "700",
+    "caliber": "7.62x51mm NATO",
+    "def mag": "AR-10 7.62x51 Magpul PMAG 20 SR-LR GEN M3 20-round magazine",
+    "node": "5a367e5dc4a282000e49738f",
+    "ID": "weapon_remington_r11_rsass_762x51"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| RSASS Kiowa |"
+    }
+  ]
+}

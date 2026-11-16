@@ -1,0 +1,26 @@
+{
+  "title": "ASh-12 folding front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ASh-12_folding_front_sight",
+  "revisionId": 210661,
+  "lastEdited": "2022-09-20T10:38:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "price": "₽2,233",
+    "trader": "Prapor LL4",
+    "sightrange": "300 m",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5caf16a2ae92152ac412efbc",
+    "ID": "sight_front_all_ckib_ash12_std"
+  },
+  "sections": []
+}

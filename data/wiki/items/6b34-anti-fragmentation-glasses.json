@@ -1,0 +1,33 @@
+{
+  "title": "6B34 anti-fragmentation glasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B34_anti-fragmentation_glasses",
+  "revisionId": 348360,
+  "lastEdited": "2026-07-29T15:31:25Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.12 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "material": "Glass",
+    "armor": "1",
+    "armor coverage": "Eyes",
+    "durability": "25",
+    "blindness protect": "10%",
+    "penalties": "-2% Ergonomics",
+    "node": "5b432be65acfc433000ed01f",
+    "id": "item_equipment_glasses_6B34"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen"
+    }
+  ]
+}

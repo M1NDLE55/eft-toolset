@@ -1,0 +1,22 @@
+{
+  "title": "Delta-Tek Sprut mount for pump-action shotguns",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Delta-Tek_Sprut_mount_for_pump-action_shotguns",
+  "revisionId": 210002,
+  "lastEdited": "2022-09-12T22:07:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.096 kg",
+    "grid": "1x1",
+    "price": "₽2,254",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-1",
+    "node": "55d48ebc4bdc2d8c2f8b456c",
+    "ID": "mount_mr133_deltatech_sprut"
+  },
+  "sections": []
+}

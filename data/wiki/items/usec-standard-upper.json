@@ -1,0 +1,27 @@
+{
+  "title": "USEC Standard upper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_Standard_upper",
+  "revisionId": 313862,
+  "lastEdited": "2025-05-27T18:47:35Z",
+  "kind": "item",
+  "categories": [
+    "USEC upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5cde95d97d6c8b647a3769b0",
+    "ID": "DefaultUsecBody"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This is the default USEC upper-clothing."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Before the clothing model update in version 0.12.12.30 (28 Jun 2022), the USEC base upper had the shoulder pockets' velcro panels as two vertical segments on each side, which is a feature of Crye Precision G3 Combat Shirt, while also inaccurately having holes for elbow pads which is a feature of the older AC Combat Shirt. After the update, the velcro panels are changed to whole pieces and now consistent with the AC Combat Shirt appearance.\n- Easter eggs and References: The shirt is modeled on the Crye AC Combat Shirt and gloves are modeled on the Oakley Factory Pilot Gloves. The watch, which is shared between all USEC uppers, is modeled on an old Garmin tactix®."
+    }
+  ]
+}

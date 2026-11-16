@@ -1,0 +1,28 @@
+{
+  "title": "Fit Viper glasses (Exec)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fit_Viper_glasses_(Exec)",
+  "revisionId": 361445,
+  "lastEdited": "2026-09-23T18:20:00Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.033 kg",
+    "grid": "2x1",
+    "trader": "Ref LL1, after unlocking it in Morbus crate",
+    "blindness protect": "10%",
+    "node": "6a83172b6a6ba231700536d1",
+    "ID": "item_equipment_glasses_fit_viper_exec"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen\n- Contrary to the description, this item doesn't provide any ballistic protection\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

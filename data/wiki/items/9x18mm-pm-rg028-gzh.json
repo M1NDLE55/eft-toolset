@@ -1,0 +1,39 @@
+{
+  "title": "9x18mm PM RG028 gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_RG028_gzh",
+  "revisionId": 332627,
+  "lastEdited": "2026-01-18T17:46:06Z",
+  "kind": "ammo",
+  "categories": [
+    "9x18mm Makarov ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.011 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "velocity": "330 m/s",
+    "damage": "65",
+    "penetration": "13",
+    "armor damage": "26",
+    "ricochet": "5%",
+    "fragmentation": "2%",
+    "heat": "-7.7",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "effects": "Subsonic",
+    "loot xp": "0",
+    "exam xp": "10",
+    "node": "573720e02459776143012541",
+    "id": "patron_9x18pm_RG028_gzh"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

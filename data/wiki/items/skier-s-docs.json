@@ -1,0 +1,25 @@
+{
+  "title": "Skier's docs",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Skier's_docs",
+  "revisionId": 362427,
+  "lastEdited": "2026-09-29T14:14:12Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.82 kg",
+    "grid": "1x2",
+    "node": "699f0b4c10d277852b0177e9",
+    "id": "item_ice_quest_tablet"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Boreas"
+    }
+  ]
+}

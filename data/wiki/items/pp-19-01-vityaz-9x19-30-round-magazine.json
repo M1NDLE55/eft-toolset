@@ -1,0 +1,28 @@
+{
+  "title": "PP-19-01 Vityaz 9x19 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-19-01_Vityaz_9x19_30-round_magazine",
+  "revisionId": 337431,
+  "lastEdited": "2026-03-05T22:49:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.17 kg",
+    "grid": "1x2",
+    "price": "₽2,300",
+    "trader": "Prapor LL1",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Low",
+    "capacity": "30",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "10",
+    "exam xp": "Examined by default",
+    "node": "599860ac86f77436b225ed1a",
+    "ID": "mag_pp-19-01_izhmash_vityaz_std_9x19_30"
+  },
+  "sections": []
+}

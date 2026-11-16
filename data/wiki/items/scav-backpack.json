@@ -1,0 +1,29 @@
+{
+  "title": "Scav backpack",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Scav_backpack",
+  "revisionId": 333865,
+  "lastEdited": "2026-02-07T22:32:13Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2.214 kg",
+    "grid": "4x5",
+    "price": "₽12,800",
+    "penalties": "-2% movement speed, +0% turn speed, -3% Ergonomics",
+    "slots": "4x5 grid (20 slots)",
+    "node": "56e335e4d2720b6c058b456d",
+    "id": "backpack_wild"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The Scav Backpack appears to simply be a Flyye MBSS Backpack in an olive drab color and customized with various accessories attached to the pack, including a compression sack, foldable sleeping pad, what appears to be a first aid kit, a water bottle, and some carabiners."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Working hard drive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Working_hard_drive",
+  "revisionId": 289565,
+  "lastEdited": "2024-09-01T12:18:57Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "node": "5a29276886f77435ed1b117c 628393620d8524273e7eb028 638dfc803083a019d447768e",
+    "id": "item_barter_electr_hdd_quest item_barter_electr_hdd_barahol_quest item_quest_c13_nabl"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "Used in the quests:\n- Wet Job - Part 5 from Peacekeeper\n- Top Secret from Skier\n- Surveillance from Mechanic"
+    }
+  ]
+}

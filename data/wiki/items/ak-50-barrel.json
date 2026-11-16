@@ -1,0 +1,25 @@
+{
+  "title": "AK-50 barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-50_barrel",
+  "revisionId": 357361,
+  "lastEdited": "2026-09-01T13:15:54Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "1.62 kg",
+    "grid": "4x1",
+    "node": "683ed6aed885538c4102d8c8",
+    "id": "item_quest_ak50_barrel"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Hobby Club from Mechanic"
+    }
+  ]
+}

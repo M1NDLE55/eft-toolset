@@ -1,0 +1,36 @@
+{
+  "title": "U.S. Ordnance M60E4 7.62x51 light machine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/U.S._Ordnance_M60E4_7.62x51_light_machine_gun",
+  "revisionId": 357587,
+  "lastEdited": "2026-09-01T20:45:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Light machine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light machine gun",
+    "slot": "Primary",
+    "weight": "10.073 kg",
+    "grid": "5x2",
+    "fire modes": "Full Auto",
+    "sightrange": "1100 m",
+    "ergonomics": "20",
+    "velocity": "835 m/s",
+    "range": "800 m",
+    "MOA": "1.34",
+    "Weaprecoil": "Vertical: 88, Horizontal: 414",
+    "rof": "550",
+    "caliber": "7.62x51mm NATO",
+    "node": "65fb023261d5829b2d090755",
+    "ID": "weapon_usord_m60e4_762x51"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This weapon will never malfunction."
+    }
+  ]
+}

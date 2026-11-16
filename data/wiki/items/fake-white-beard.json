@@ -1,0 +1,29 @@
+{
+  "title": "Fake white beard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fake_white_beard",
+  "revisionId": 313671,
+  "lastEdited": "2025-05-21T07:06:07Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x2",
+    "trader": "Ragman LL1",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5c1a1e3f2e221602b66cc4c2",
+    "ID": "item_beard"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This item refers to the Santa Claus or Saint Nicholas. They are a legendary figure, originating in Western Christian culture, who is said to bring gifts to the homes of well-behaved children on Christmas Eve.\n- This face cover first appeared during Escape from Tarkov's 2018 Christmas Celebration."
+    }
+  ]
+}

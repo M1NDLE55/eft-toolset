@@ -1,0 +1,24 @@
+{
+  "title": "Viking Tactics UVG tactical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Viking_Tactics_UVG_tactical_foregrip",
+  "revisionId": 340718,
+  "lastEdited": "2026-04-22T06:40:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.107 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3, Peacekeeper LL3",
+    "ergonomics": "+4",
+    "recoil": "-1",
+    "loot xp": "30",
+    "exam xp": "6",
+    "node": "591af28e86f77414a27a9e1d",
+    "ID": "foregrip_all_vtac_uvg"
+  },
+  "sections": []
+}

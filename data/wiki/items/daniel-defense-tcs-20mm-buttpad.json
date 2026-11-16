@@ -1,0 +1,22 @@
+{
+  "title": "Daniel Defense TCS 20mm Buttpad",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Daniel_Defense_TCS_20mm_Buttpad",
+  "revisionId": 337960,
+  "lastEdited": "2026-03-08T00:06:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.063 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+0.5",
+    "recoil": "-0.5",
+    "node": "6516e9d7e239bd0c487e3766",
+    "ID": "stock_base_dd_thicker_convex_shape_buttpad_20mm"
+  },
+  "sections": []
+}

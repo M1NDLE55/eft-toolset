@@ -1,0 +1,37 @@
+{
+  "title": "5.56x45mm M995",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_M995",
+  "revisionId": 306270,
+  "lastEdited": "2025-03-08T09:18:03Z",
+  "kind": "ammo",
+  "categories": [
+    "5.56x45mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "velocity": "1013 m/s",
+    "damage": "42",
+    "accuracy": "-7",
+    "recoil": "+8",
+    "penetration": "53",
+    "armor damage": "52",
+    "ricochet": "36%",
+    "durability burn": "+70",
+    "heat": "+80.5",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "59e690b686f7746c9f75e848",
+    "id": "patron_556x45_M995"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

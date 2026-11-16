@@ -1,0 +1,27 @@
+{
+  "title": "FN P90 5.7x28 16 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_5.7x28_16_inch_barrel",
+  "revisionId": 360630,
+  "lastEdited": "2026-09-18T19:02:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.8 kg",
+    "grid": "3x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-16.5",
+    "velocity": "+9",
+    "MOA": "1.31",
+    "recoil": "-17.1",
+    "Dura Burn": "+10",
+    "Heat": "-8",
+    "Cooling": "-4",
+    "node": "5cc701d7e4a94900100ac4e7",
+    "ID": "barrel_p90_407mm_57x28"
+  },
+  "sections": []
+}

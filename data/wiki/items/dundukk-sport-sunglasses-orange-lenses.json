@@ -1,0 +1,28 @@
+{
+  "title": "Dundukk sport sunglasses (Orange lenses)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dundukk_sport_sunglasses_(Orange_lenses)",
+  "revisionId": 348530,
+  "lastEdited": "2026-07-30T21:54:01Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.05 kg",
+    "grid": "2x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 0",
+    "blindness protect": "15%",
+    "node": "67af41dd1eb308667602db4a",
+    "id": "item_equipment_glasses_sport_arena_bp_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen.\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

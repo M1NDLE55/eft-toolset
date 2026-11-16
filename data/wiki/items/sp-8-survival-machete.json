@@ -1,0 +1,41 @@
+{
+  "title": "SP-8 Survival Machete",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SP-8_Survival_Machete",
+  "revisionId": 365057,
+  "lastEdited": "2026-10-26T21:47:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.635 kg",
+    "grid": "1x3",
+    "fire modes": "Chop 30 Damage, Stab 40 Damage",
+    "range": "Chop 0.5m, Stab 0.6m",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5c010e350db83400232feec7",
+    "ID": "weapon_sp-8"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Weapon box (6x6)\n- Scav Raiders"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- In Leon's hideout"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The SP-8 Survival Machete is based off of the Ontario Spec Plus SP-8."
+    }
+  ]
+}

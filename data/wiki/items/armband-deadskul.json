@@ -1,0 +1,31 @@
+{
+  "title": "Armband (DEADSKUL)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(DEADSKUL)",
+  "revisionId": 363159,
+  "lastEdited": "2026-10-04T23:06:26Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "619bddc6c9546643a67df6ee",
+    "id": "item_equipment_armband_dead"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Collector"
+    }
+  ]
+}

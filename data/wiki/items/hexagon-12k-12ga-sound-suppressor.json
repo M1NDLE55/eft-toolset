@@ -1,0 +1,26 @@
+{
+  "title": "Hexagon 12K 12ga sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hexagon_12K_12ga_sound_suppressor",
+  "revisionId": 362935,
+  "lastEdited": "2026-10-03T11:16:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.493 kg",
+    "grid": "2x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-15",
+    "velocity": "+0.9",
+    "recoil": "-5",
+    "Dura Burn": "+75",
+    "Heat": "+18",
+    "Cooling": "+10",
+    "node": "59c0ec5b86f77435b128bfca",
+    "ID": "silencer_12g_hexagon_12k"
+  },
+  "sections": []
+}

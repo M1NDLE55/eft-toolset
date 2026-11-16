@@ -1,0 +1,41 @@
+{
+  "title": "Crye Precision AVS plate carrier (Tagilla Edition)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AVS_plate_carrier_(Tagilla_Edition)",
+  "revisionId": 348955,
+  "lastEdited": "2026-08-03T03:51:08Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "1.98 kg",
+    "grid": "3x3",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Thorax, Back",
+    "default plates": "1x (Front) , 1x (Back)",
+    "default plates armor class": "Front: 6, Back: 4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "60",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "12 Slots",
+    "node": "609e860ebd219504d8507525",
+    "id": "item_equipment_rig_tagilla"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Tagilla\n- Shadow of Tagilla"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

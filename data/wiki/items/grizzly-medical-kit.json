@@ -1,0 +1,42 @@
+{
+  "title": "Grizzly medical kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Grizzly_medical_kit",
+  "revisionId": 358726,
+  "lastEdited": "2026-09-10T23:00:19Z",
+  "kind": "item",
+  "categories": [
+    "Medkits"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medkit",
+    "weight": "1.6 kg",
+    "grid": "2x2",
+    "trader": "Therapist LL4",
+    "effect": "Max heal per use: 175 , Buffs:, Removes:, Radiation exposure, Adds: Debuffs:, Causes: only when treating heavy bleeding",
+    "use time": "5s",
+    "node": "590c657e86f77412b013051d id =AMK_Grizzly"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Healing removes 130 HP from the Grizzly\n- Healing removes 50 HP from the Grizzly\n- Healing removes 40 HP from the Grizzly"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Jacket (114 key)\n- Sport bag\n- Wooden crate\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Health Care Privacy - Part 3"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Grizzly First Aid Kit is based off Adventure Medical Kits Sportsman Series Medical Kit Grizzly."
+    }
+  ]
+}

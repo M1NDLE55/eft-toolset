@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 DoubleStar ACE ARFX Skeleton Stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_DoubleStar_ACE_ARFX_Skeleton_Stock",
+  "revisionId": 342781,
+  "lastEdited": "2026-04-30T21:18:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.317 kg",
+    "grid": "2x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+15",
+    "recoil": "-20.5",
+    "node": "6761777a1f08ed5e8800b7ac",
+    "ID": "stock_ar15_double_star_ace_arfx_skeleton_stock"
+  },
+  "sections": []
+}

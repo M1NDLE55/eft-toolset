@@ -1,0 +1,23 @@
+{
+  "title": "Mystery Ranch SATL Bridger Assault Pack (Foliage)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mystery_Ranch_SATL_Bridger_Assault_Pack_(Foliage)",
+  "revisionId": 304478,
+  "lastEdited": "2025-01-22T09:37:32Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2.95 kg",
+    "grid": "5x7",
+    "trader": "Ragman LL4",
+    "penalties": "-5% movement speed, -3% turn speed, -6% Ergonomics",
+    "slots": "36 slots, 1x 6x2 grid, 2x 3x4 grid ,",
+    "node": "656e0436d44a1bb4220303a0",
+    "id": "item_equipment_backpack_mystery_ranch_satl"
+  },
+  "sections": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": "BNTI LShZ-2DTM helmet (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BNTI_LShZ-2DTM_helmet_(Black)",
+  "revisionId": 344381,
+  "lastEdited": "2026-05-24T22:12:57Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "3.4 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL4",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "99",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -3% turn speed, -3% Ergonomics, High sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5d6d3716a4b9361bc8618872",
+    "ID": "item_equipment_helmet_lshz2dtm"
+  },
+  "sections": []
+}

@@ -1,0 +1,18 @@
+{
+  "title": "4.6x30mm JSP SX ammo pack (40 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/4.6x30mm_JSP_SX_ammo_pack_(40_pcs)",
+  "revisionId": 367150,
+  "lastEdited": "2026-11-02T23:09:38Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "64aceaecc4eda9354b0226b6",
+    "ID": "item_ammo_box_46x30_40_jsp"
+  },
+  "sections": []
+}

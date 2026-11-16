@@ -1,0 +1,24 @@
+{
+  "title": "AK Magpul Zhukov-U handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Magpul_Zhukov-U_handguard",
+  "revisionId": 342029,
+  "lastEdited": "2026-04-28T00:15:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.31 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4: Black, FDE, Plum",
+    "ergonomics": "+18.5",
+    "recoil": "+0",
+    "Heat": "+7.2",
+    "Cooling": "+2.7",
+    "node": "5c9a07572e221644f31c4b32 5c9a1c3a2e2216000e69fb6a 5c9a1c422e221600106f69f0",
+    "ID": "handguard_ak_magpul_zhukov_u_blk handguard_ak_magpul_zhukov_u_fde handguard_ak_magpul_zhukov_u_plm"
+  },
+  "sections": []
+}

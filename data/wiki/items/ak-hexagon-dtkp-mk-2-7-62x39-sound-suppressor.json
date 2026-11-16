@@ -1,0 +1,29 @@
+{
+  "title": "AK Hexagon DTKP MK.2 7.62x39 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Hexagon_DTKP_MK.2_7.62x39_sound_suppressor",
+  "revisionId": 342085,
+  "lastEdited": "2026-04-28T03:38:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.412 kg",
+    "grid": "2x1",
+    "price": "₽51714",
+    "trader": "Skier LL4",
+    "ergonomics": "-6",
+    "velocity": "+0.7",
+    "recoil": "-3.5",
+    "Dura Burn": "+69",
+    "Heat": "+14",
+    "Cooling": "+6",
+    "loot xp": "30",
+    "exam xp": "4",
+    "node": "5e208b9842457a4a7a33d074",
+    "ID": "silencer_ak_hexagon_dtkp_762x39"
+  },
+  "sections": []
+}

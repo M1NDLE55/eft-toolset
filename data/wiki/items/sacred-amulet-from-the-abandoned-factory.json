@@ -1,0 +1,25 @@
+{
+  "title": "Sacred Amulet from the abandoned factory",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sacred_Amulet_from_the_abandoned_factory",
+  "revisionId": 348810,
+  "lastEdited": "2026-08-01T14:26:21Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6908ef2267e0b25ac409e8a9",
+    "id": "quest_cultist_amulet3"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player sided with Lightkeeper."
+    }
+  ]
+}

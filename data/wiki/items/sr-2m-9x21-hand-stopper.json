@@ -1,0 +1,21 @@
+{
+  "title": "SR-2M 9x21 hand stopper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-2M_9x21_hand_stopper",
+  "revisionId": 337888,
+  "lastEdited": "2026-03-07T06:46:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.087 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+5",
+    "node": "62e2a754b6c0ee2f230cee0f",
+    "ID": "muzzle_sr2m_tochmash_hand_stop_9x21"
+  },
+  "sections": []
+}

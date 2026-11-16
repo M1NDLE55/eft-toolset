@@ -1,0 +1,25 @@
+{
+  "title": "AR-10 TAA ZK-38 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_TAA_ZK-38_7.62x51_muzzle_brake",
+  "revisionId": 337782,
+  "lastEdited": "2026-03-06T02:12:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.035 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-3.5",
+    "accuracy": "+0",
+    "recoil": "-9.5",
+    "Dura Burn": "-2",
+    "Heat": "-1.1",
+    "node": "612e0e3c290d254f5e6b291d",
+    "ID": "muzzle_ar10_taa_zk_38_muzzle_brake_762x51"
+  },
+  "sections": []
+}

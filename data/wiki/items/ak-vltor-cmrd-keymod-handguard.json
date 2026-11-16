@@ -1,0 +1,26 @@
+{
+  "title": "AK Vltor CMRD KeyMod handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Vltor_CMRD_KeyMod_handguard",
+  "revisionId": 341983,
+  "lastEdited": "2026-04-27T23:42:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.397 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "-7",
+    "Cooling": "+2",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5c17664f2e2216398b5a7e3c",
+    "ID": "handguard_ak_vltor_cmrd"
+  },
+  "sections": []
+}

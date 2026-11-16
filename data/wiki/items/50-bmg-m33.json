@@ -1,0 +1,36 @@
+{
+  "title": ".50 BMG M33",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_BMG_M33",
+  "revisionId": 331608,
+  "lastEdited": "2026-01-07T12:24:45Z",
+  "kind": "ammo",
+  "categories": [
+    ".50 BMG ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.107 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "velocity": "887 m/s",
+    "damage": "190",
+    "accuracy": "-5",
+    "recoil": "+25",
+    "penetration": "56",
+    "armor damage": "85",
+    "ricochet": "35%",
+    "l bleed chance": "+40",
+    "h bleed chance": "+20",
+    "node": "67dc255ee3028a8b120efc48",
+    "id": "patron_127x99_m33"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

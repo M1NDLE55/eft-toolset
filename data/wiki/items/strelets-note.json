@@ -1,0 +1,25 @@
+{
+  "title": "Strelets' note",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Strelets'_note",
+  "revisionId": 348857,
+  "lastEdited": "2026-08-02T01:19:24Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "68d2f85af63f06b7590ce310",
+    "ID": "item_info_note_toDen_from_strelets"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    }
+  ]
+}

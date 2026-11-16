@@ -1,0 +1,23 @@
+{
+  "title": "SV-98 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SV-98_rear_sight",
+  "revisionId": 213326,
+  "lastEdited": "2022-10-30T16:45:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "price": "₽1,000",
+    "sightrange": "500",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "56083e1b4bdc2dc8488b4572",
+    "ID": "sight_rear_sv-98_izhmash_std"
+  },
+  "sections": []
+}

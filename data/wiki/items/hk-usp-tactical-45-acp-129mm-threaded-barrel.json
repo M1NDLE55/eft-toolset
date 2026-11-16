@@ -1,0 +1,26 @@
+{
+  "title": "HK USP Tactical .45 ACP 129mm threaded barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_Tactical_.45_ACP_129mm_threaded_barrel",
+  "revisionId": 342220,
+  "lastEdited": "2026-04-28T21:34:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.122 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "velocity": "-2",
+    "MOA": "9.28",
+    "recoil": "-1.5",
+    "Heat": "+10",
+    "Cooling": "+15",
+    "node": "6194efe07c6c7b169525f11b",
+    "ID": "barrel_hk_usp_129mm_1143x23_tactical"
+  },
+  "sections": []
+}

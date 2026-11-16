@@ -1,0 +1,51 @@
+{
+  "title": "First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/First_Spear_Siege-R_Optimized_M.A.S.S._Plate_Carrier_(Black_Division)",
+  "revisionId": 366867,
+  "lastEdited": "2026-11-01T12:32:30Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "10.8 kg",
+    "grid": "4x4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Shoulders, Groin",
+    "default plates": "2x , 2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate, Sides",
+    "durability": "220",
+    "penalties": "-6% movement speed, -3% turn speed, -5% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "25 Slots",
+    "node": "68947a4be4bf255d1b0ca746",
+    "ID": "item_equipment_rig_BD4_firstspear"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division (Not on Icebreaker)"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The vest is modeled after a FirstSpear Siege-R Optimized Vest equipped with the company's Modular Armor Scalable System (M.A.S.S.) accessories. The configuration shown in-game incorporates several commercially available FirstSpear components, including:\n- FirstSpear Siege-R Optimized Vest base\n- FirstSpear M.A.S.S. Shoulder Straps with FirstSpear M.A.S.S. Shoulder Pads\n- FirstSpear M.A.S.S. Biceps\n- FirstSpear M.A.S.S. Throat Guard and FirstSpear Collar Protector\n  - Both are notably inscribed with the word \"LegenD\".\n\n- Three FirstSpear Ragnar MultiMag Rapid Adjust Pockets, containing two double-stacked Glock 9x19 17-round magazines and two AR-15 5.56x45 Magpul PMAG 30 GEN M3 W STANAG 30-round magazines\n- FirstSpear Handcuff Pouch in Ranger Green\n- FirstSpear Groin Protector.\n\nMounted to the carrier are an Imminent Threat Solutions (ITS) Fatboy Trauma Pouch, Crye Precision GP Pouch 11×6×4, MPU5 networking radio in a Juggernaut Case Radio Holster, Thyrm CellVault-5M, S&S Precision V-Lite, North American Rescue (NAR) CAT TQ pouch, and a pair of Patrol Incident Gear (PIG) FDT gloves retained by an S-biner.\n\nThis Russian poem can be found on the groin protector:\n\"В пучине водной, сквозь тонкий лёд,\nОн, задыхаясь, шёл на дно.\nВ предсмертной судороге безмолвной\nСпасал он друга всё равно.\"\n\nIt translates to:\n\"In the depths of the water, through the thin ice,\nHe sank to the bottom, gasping for breath.\nIn a silent death throe,\nHe still managed to save his friend.\""
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "AS VAL NB MOD.4 Kit top cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_NB_MOD.4_Kit_top_cover",
+  "revisionId": 343389,
+  "lastEdited": "2026-05-05T20:52:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.116 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-1",
+    "node": "68712bd4251b8d4c6c04ec19",
+    "ID": "mount_val_mod4_nb_top_cover"
+  },
+  "sections": []
+}

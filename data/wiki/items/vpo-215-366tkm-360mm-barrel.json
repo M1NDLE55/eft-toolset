@@ -1,0 +1,26 @@
+{
+  "title": "VPO-215 .366TKM 360mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-215_.366TKM_360mm_barrel",
+  "revisionId": 354938,
+  "lastEdited": "2026-08-17T21:06:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.2 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-2",
+    "velocity": "-10.8",
+    "MOA": "2.06",
+    "recoil": "-3",
+    "Dura Burn": "+6",
+    "Heat": "+4.5",
+    "node": "68b98415032fa71d2a000dab",
+    "ID": "barrel_vpo215_360mm_366tkm"
+  },
+  "sections": []
+}

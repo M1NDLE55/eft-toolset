@@ -1,0 +1,27 @@
+{
+  "title": "QBZ-191 5.8x42 266mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/QBZ-191_5.8x42_266mm_barrel",
+  "revisionId": 356917,
+  "lastEdited": "2026-08-29T21:53:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.55 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-3.5",
+    "velocity": "-11",
+    "MOA": "2.41",
+    "recoil": "-5.1",
+    "Dura Burn": "-17",
+    "Heat": "+5",
+    "Cooling": "+9",
+    "node": "69f9ebf07596e93e340c0a16",
+    "ID": "barrel_qbz191_norinco_266mm_58x42"
+  },
+  "sections": []
+}

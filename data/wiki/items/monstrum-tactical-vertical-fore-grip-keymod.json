@@ -1,0 +1,22 @@
+{
+  "title": "Monstrum Tactical Vertical Fore Grip KeyMod",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Monstrum_Tactical_Vertical_Fore_Grip_KeyMod",
+  "revisionId": 356359,
+  "lastEdited": "2026-08-26T00:25:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.028 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "recoil": "-3.5",
+    "node": "615d8fd3290d254f5e6b2edc",
+    "ID": "foregrip_keymod_monstrum_vertical_fore_grip"
+  },
+  "sections": []
+}

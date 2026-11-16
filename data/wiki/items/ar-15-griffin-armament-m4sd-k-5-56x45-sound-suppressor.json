@@ -1,0 +1,26 @@
+{
+  "title": "AR-15 Griffin Armament M4SD-K 5.56x45 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Griffin_Armament_M4SD-K_5.56x45_sound_suppressor",
+  "revisionId": 342355,
+  "lastEdited": "2026-04-29T00:38:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.397 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-15",
+    "velocity": "+0.6",
+    "recoil": "-1.5",
+    "Dura Burn": "+54",
+    "Heat": "+6",
+    "Cooling": "+20",
+    "node": "638612b607dfed1ccb7206ba",
+    "ID": "silencer_sdqd_griffin_m4sd_k_silencer_556x45"
+  },
+  "sections": []
+}

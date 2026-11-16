@@ -1,0 +1,24 @@
+{
+  "title": "Mosin Rifle front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_front_sight",
+  "revisionId": 211309,
+  "lastEdited": "2022-09-20T11:08:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽470",
+    "trader": "Prapor LL1",
+    "sightrange": "500",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5ae099875acfc4001714e593",
+    "ID": "sight_front_mosin_izhmash_mosin_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,18 @@
+{
+  "title": "9x18mm PM RG028 gzh ammo pack (16 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_RG028_gzh_ammo_pack_(16_pcs)",
+  "revisionId": 367268,
+  "lastEdited": "2026-11-02T23:15:55Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "node": "5737287724597765e1625ae2",
+    "id": "item_ammo_box_9x18_16_rg028"
+  },
+  "sections": []
+}

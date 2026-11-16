@@ -1,0 +1,29 @@
+{
+  "title": "7.62x51mm M62 Tracer ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_M62_Tracer_ammo_pack_(20_pcs)",
+  "revisionId": 367230,
+  "lastEdited": "2026-11-02T23:13:51Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702554bfc87b3a34093247",
+    "ID": "item_ammo_box_762x51_20_m62"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from The Good Times - Part 1\n- 6 can be obtained as a quest reward from Dragnet\n- 4 can be obtained as a quest reward from To the Light - Fallen Bird"
+    }
+  ]
+}

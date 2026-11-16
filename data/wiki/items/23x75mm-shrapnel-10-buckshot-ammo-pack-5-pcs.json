@@ -1,0 +1,24 @@
+{
+  "title": "23x75mm Shrapnel-10 buckshot ammo pack (5 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/23x75mm_Shrapnel-10_buckshot_ammo_pack_(5_pcs)",
+  "revisionId": 367144,
+  "lastEdited": "2026-11-02T23:09:18Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "2x1",
+    "node": "657024aebfc87b3a3409322f",
+    "ID": "item_ammo_box_23x75_5_shrapnel_10"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

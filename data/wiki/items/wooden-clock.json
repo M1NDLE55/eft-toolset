@@ -1,0 +1,28 @@
+{
+  "title": "Wooden clock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wooden_clock",
+  "revisionId": 357648,
+  "lastEdited": "2026-09-04T22:25:21Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "3 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "loot xp": "80",
+    "exam xp": "5",
+    "node": "59e3647686f774176a362507",
+    "id": "item_barter_valuable_woodclock"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

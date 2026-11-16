@@ -1,0 +1,30 @@
+{
+  "title": "Vasily poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vasily_poster",
+  "revisionId": 331633,
+  "lastEdited": "2026-01-07T19:34:36Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a1c129422e1708e0e9baa",
+    "id": "item_barter_flyers_movie_vasiliy"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

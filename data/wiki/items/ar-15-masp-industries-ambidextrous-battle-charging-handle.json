@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 MASP Industries Ambidextrous Battle Charging Handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_MASP_Industries_Ambidextrous_Battle_Charging_Handle",
+  "revisionId": 237400,
+  "lastEdited": "2023-06-28T00:02:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.035 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+1",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "6033749e88382f4fab3fd2c5",
+    "ID": "charge_ar15_masp_ambi_battle_charging_handle"
+  },
+  "sections": []
+}

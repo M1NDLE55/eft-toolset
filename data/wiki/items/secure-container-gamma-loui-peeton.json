@@ -1,0 +1,27 @@
+{
+  "title": "Secure container Gamma (Loui Peeton)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_container_Gamma_(Loui_Peeton)",
+  "revisionId": 363462,
+  "lastEdited": "2026-10-06T22:20:48Z",
+  "kind": "item",
+  "categories": [
+    "Secure containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Secure container",
+    "slot": "Pouch",
+    "weight": "1.2 kg",
+    "grid": "3x3",
+    "slots": "3x3 grid (9 slots)",
+    "node": "68f117b8121d878a2303eee0",
+    "id": "item_container_gamma_louise_pitton"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only obtainable by reaching Prestige level 6 in the PvP game mode.\n- Can only fit:\n  - Document case\n  - Dogtag case\n  - Gingy keychain\n  - Injector case\n  - Key tool\n  - Keycard holder case\n  - S I C C organizational pouch\n  - Simple wallet\n  - WZ Wallet\n  - Loot\n  - Provisions\n  - Meds\n  - Keys, Keycards & Maps\n  - Weapon mods (Besides magazines, special scopes and some mounts)\n  - Armor plates\n  - Currency\n  - Armbands\n  - Earpieces\n  - Vanity Face cover\n  - Vanity Headwear\n  - Vanity Eyewear\n  - Melee weapons\n  - Special equipment (Besides repair kits)"
+    }
+  ]
+}

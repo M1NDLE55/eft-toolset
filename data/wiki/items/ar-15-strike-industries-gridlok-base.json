@@ -1,0 +1,43 @@
+{
+  "title": "AR-15 Strike Industries GRIDLOK base",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Strike_Industries_GRIDLOK_base",
+  "revisionId": 353564,
+  "lastEdited": "2026-08-14T08:18:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.126 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3: Black, after unlocking it in the Factory Tactical Map, Ref LL3: Yellow, after unlocking it in Arena BattlePass Season 2, Ref LL3: Red, after unlocking it in Echo Belli crate",
+    "Heat": "-1.5",
+    "Cooling": "-0.8",
+    "node": "68a5dc0c2cd64a8b58023b87 68a6fff085a17dc1cb008066 68a7000d7708ac5120060527",
+    "ID": "handguard_ar15_strike_industries_gridlok_base_blk handguard_ar15_strike_industries_gridlok_base_yellow handguard_ar15_strike_industries_gridlok_base_red"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Black variant",
+      "level": 4,
+      "text": "- Factory Tactical Map"
+    },
+    {
+      "heading": "Yellow variant",
+      "level": 4,
+      "text": "- Arena BattlePass Season 2 level 26\n- 5 Battle Points"
+    },
+    {
+      "heading": "Red variant",
+      "level": 4,
+      "text": "- Echo Belli crate"
+    }
+  ]
+}

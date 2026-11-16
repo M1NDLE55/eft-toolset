@@ -1,0 +1,24 @@
+{
+  "title": "Nightforce ATACR 7-35x56 34mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nightforce_ATACR_7-35x56_34mm_riflescope",
+  "revisionId": 352951,
+  "lastEdited": "2026-08-09T22:07:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "1.113 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL4",
+    "zeroing": "50, 100, 150, 200, 250, 300, 350, 400, 450",
+    "sightrange": "2000",
+    "ergonomics": "-8",
+    "modes": "1",
+    "node": "5aa66be6e5b5b0214e506e97",
+    "ID": "scope_34mm_nightforce_atacr_7_35x56"
+  },
+  "sections": []
+}

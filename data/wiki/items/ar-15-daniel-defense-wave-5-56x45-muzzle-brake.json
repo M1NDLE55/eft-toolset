@@ -1,0 +1,28 @@
+{
+  "title": "AR-15 Daniel Defense WAVE 5.56x45 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Daniel_Defense_WAVE_5.56x45_muzzle_brake",
+  "revisionId": 337673,
+  "lastEdited": "2026-03-06T00:54:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.109 kg",
+    "grid": "1x1",
+    "price": "₽7,980",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2.5",
+    "accuracy": "+1",
+    "recoil": "-8",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "loot xp": "20",
+    "exam xp": "5",
+    "node": "5cff9e5ed7ad1a09407397d4",
+    "ID": "muzzle_ar15_dd_wave_muzzle_brake_556x45"
+  },
+  "sections": []
+}

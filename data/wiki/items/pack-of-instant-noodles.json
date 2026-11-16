@@ -1,0 +1,27 @@
+{
+  "title": "Pack of instant noodles",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pack_of_instant_noodles",
+  "revisionId": 366113,
+  "lastEdited": "2026-10-28T22:01:15Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "effect": "Energy: +25, Hydration: -10",
+    "use time": "3s",
+    "node": "656df4fec921ad01000481a2",
+    "id": "item_food_ranton"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Ration supply crates\n- In Sport bags"
+    }
+  ]
+}

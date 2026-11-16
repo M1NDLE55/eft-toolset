@@ -1,0 +1,25 @@
+{
+  "title": "M590 Ghost Ring rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M590_Ghost_Ring_rear_sight",
+  "revisionId": 321746,
+  "lastEdited": "2025-11-16T19:17:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.022 kg",
+    "grid": "1x1",
+    "price": "₽800",
+    "sightrange": "200 m",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5e87114fe2db31558c75a120",
+    "ID": "sight_rear_590_mossberg_ghost_ring_sight_kit"
+  },
+  "sections": []
+}

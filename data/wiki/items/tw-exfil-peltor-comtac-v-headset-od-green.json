@@ -1,0 +1,22 @@
+{
+  "title": "TW EXFIL Peltor ComTac V headset (OD Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TW_EXFIL_Peltor_ComTac_V_headset_(OD_Green)",
+  "revisionId": 342835,
+  "lastEdited": "2026-04-30T21:41:55Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces",
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet headset",
+    "weight": "0.395 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "BlocksHeadset": "Yes",
+    "node": "66b5f69ea7f72d197e70bcdb",
+    "id": "helmet_team_wendy_comtac_v_headset"
+  },
+  "sections": []
+}

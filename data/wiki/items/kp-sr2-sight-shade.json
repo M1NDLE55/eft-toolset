@@ -1,0 +1,21 @@
+{
+  "title": "KP-SR2 sight shade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KP-SR2_sight_shade",
+  "revisionId": 253435,
+  "lastEdited": "2023-11-02T21:55:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "+2",
+    "node": "62ff9faffe938a24c90c10df",
+    "ID": "tactical_sr2_killflash"
+  },
+  "sections": []
+}

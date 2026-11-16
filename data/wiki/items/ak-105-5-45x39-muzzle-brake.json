@@ -1,0 +1,22 @@
+{
+  "title": "AK-105 5.45x39 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-105_5.45x39_muzzle_brake",
+  "revisionId": 337512,
+  "lastEdited": "2026-03-05T23:32:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "ergonomics": "-1",
+    "accuracy": "+0",
+    "recoil": "-5.5",
+    "node": "5ac72e945acfc43f3b691116",
+    "ID": "muzzle_ak74_izhmash_ak105_std_545x39"
+  },
+  "sections": []
+}

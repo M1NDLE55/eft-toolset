@@ -1,0 +1,21 @@
+{
+  "title": "Shemagh (Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shemagh_(Green)",
+  "revisionId": 356964,
+  "lastEdited": "2026-08-30T10:19:28Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL3",
+    "node": "5ab8f85d86f7745cd93a1cf5",
+    "id": "shemagh"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "ASh-12 vertical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ASh-12_vertical_foregrip",
+  "revisionId": 342040,
+  "lastEdited": "2026-04-28T00:21:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽2,150",
+    "trader": "Prapor LL4",
+    "ergonomics": "+0",
+    "recoil": "-1.5",
+    "loot xp": "30",
+    "node": "5cda9bcfd7f00c0c0b53e900",
+    "ID": "foregrip_all_ckib_ash12_std"
+  },
+  "sections": []
+}

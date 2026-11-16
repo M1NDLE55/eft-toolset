@@ -1,0 +1,35 @@
+{
+  "title": "Ritual poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ritual_poster",
+  "revisionId": 356284,
+  "lastEdited": "2026-08-25T22:03:21Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "68f25a8acacd763bbc0e2bf9",
+    "id": "item_barter_flyers_art_02"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The poster was first obtainable during Release Twitch Drops (October 2025)."
+    }
+  ]
+}

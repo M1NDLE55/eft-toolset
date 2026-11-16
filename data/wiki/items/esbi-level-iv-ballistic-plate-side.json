@@ -1,0 +1,30 @@
+{
+  "title": "ESBI level IV ballistic plate (Side)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ESBI_level_IV_ballistic_plate_(Side)",
+  "revisionId": 361890,
+  "lastEdited": "2026-09-24T15:02:37Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "1.15 kg",
+    "grid": "1x1",
+    "material": "Ceramic",
+    "armor": "6",
+    "armor coverage": "Left Plate , Right Plate",
+    "durability": "18",
+    "penalties": "-0.5% movement speed, -0.5% turn speed, +0% Ergonomics",
+    "node": "64afdb577bb3bfe8fe03fd1d",
+    "id": "item_equipment_plate_SSAPI_ESBI_6_side"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Left Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

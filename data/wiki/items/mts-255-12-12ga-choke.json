@@ -1,0 +1,23 @@
+{
+  "title": "MTs-255-12 12ga choke",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MTs-255-12_12ga_choke",
+  "revisionId": 337857,
+  "lastEdited": "2026-03-07T06:32:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "accuracy": "+3",
+    "recoil": "-3",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "619d36da53b4d42ee724fae4",
+    "ID": "muzzle_mc255_ckib_choke_12g"
+  },
+  "sections": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "MP-43-1C 12ga 725mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-43-1C_12ga_725mm_barrel",
+  "revisionId": 243585,
+  "lastEdited": "2023-08-14T12:23:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.6 kg",
+    "grid": "5x1",
+    "price": "₽670",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-9",
+    "velocity": "+15.21",
+    "MOA": "13.06",
+    "recoil": "-12",
+    "Dura Burn": "-2",
+    "Heat": "-20.2",
+    "Cooling": "-16.4",
+    "node": "55d447bb4bdc2d892f8b456f",
+    "ID": "barrel_mr43e-1c_725mm"
+  },
+  "sections": []
+}

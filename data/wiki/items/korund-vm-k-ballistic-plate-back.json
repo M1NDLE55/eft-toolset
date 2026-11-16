@@ -1,0 +1,35 @@
+{
+  "title": "Korund-VM-K ballistic plate (Back)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Korund-VM-K_ballistic_plate_(Back)",
+  "revisionId": 320541,
+  "lastEdited": "2025-10-28T13:51:11Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "2.7 kg",
+    "grid": "2x2",
+    "material": "Ceramic",
+    "armor": "6",
+    "armor coverage": "Back Plate",
+    "durability": "45",
+    "penalties": "-1.5% movement speed, -1% turn speed, -1% Ergonomics",
+    "node": "657b28d25f444d6dff0c6c77",
+    "id": "item_equipment_plate_korund_vm_k_6class_back"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Back Plate:\nBack Plate"
+    }
+  ]
+}

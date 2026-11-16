@@ -1,0 +1,27 @@
+{
+  "title": "MPX-SD 9x19 6.5 inch ported barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX-SD_9x19_6.5_inch_ported_barrel",
+  "revisionId": 340715,
+  "lastEdited": "2026-04-22T06:39:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-3",
+    "velocity": "-4",
+    "MOA": "6.19",
+    "recoil": "-4.1",
+    "Dura Burn": "-6",
+    "Heat": "+4",
+    "Cooling": "+7",
+    "node": "58aeaaa886f7744fc1560f81",
+    "ID": "barrel_mpx_165mm_ported"
+  },
+  "sections": []
+}

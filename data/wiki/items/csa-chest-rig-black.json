@@ -1,0 +1,25 @@
+{
+  "title": "CSA chest rig (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/CSA_chest_rig_(Black)",
+  "revisionId": 348341,
+  "lastEdited": "2026-07-29T10:28:20Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.75 kg",
+    "grid": "2x3",
+    "trader": "Ragman LL1",
+    "BlocksArmor": "No",
+    "slots": "10 Slots",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "6034d0230ca681766b6a0fb5",
+    "id": "item_equipment_rig_cs_assault"
+  },
+  "sections": []
+}

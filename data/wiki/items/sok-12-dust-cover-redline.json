@@ -1,0 +1,27 @@
+{
+  "title": "SOK-12 dust cover (Redline)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_dust_cover_(Redline)",
+  "revisionId": 344127,
+  "lastEdited": "2026-05-21T10:01:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.12 kg",
+    "grid": "2x1",
+    "ergonomics": "+2",
+    "Dura Burn": "-3",
+    "node": "6981f9c5f819a41431029304",
+    "ID": "reciever_saiga12_izhmash_champ"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

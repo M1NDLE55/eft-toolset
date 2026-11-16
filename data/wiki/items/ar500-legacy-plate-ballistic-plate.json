@@ -1,0 +1,31 @@
+{
+  "title": "AR500 Legacy Plate ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR500_Legacy_Plate_ballistic_plate",
+  "revisionId": 361893,
+  "lastEdited": "2026-09-24T15:03:56Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "3.85 kg",
+    "grid": "2x2",
+    "trader": "Skier LL2",
+    "material": "Combined Materials",
+    "armor": "3",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "45",
+    "penalties": "-2% movement speed, -1% turn speed, -1% Ergonomics",
+    "node": "656f9d5900d62bcd2e02407c",
+    "id": "item_equipment_plate_SAPI_AR500_legacy_3class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

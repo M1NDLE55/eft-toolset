@@ -1,0 +1,23 @@
+{
+  "title": "Glock 19X front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_19X_front_sight",
+  "revisionId": 356365,
+  "lastEdited": "2026-08-26T00:28:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "630765777d50ff5e8a1ea718",
+    "ID": "sight_front_glock_glock_19x"
+  },
+  "sections": []
+}

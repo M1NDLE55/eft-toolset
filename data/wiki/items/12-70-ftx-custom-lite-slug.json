@@ -1,0 +1,39 @@
+{
+  "title": "12/70 FTX Custom Lite slug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_FTX_Custom_Lite_slug",
+  "revisionId": 322841,
+  "lastEdited": "2025-11-18T21:27:33Z",
+  "kind": "ammo",
+  "categories": [
+    "12/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.026 kg",
+    "grid": "1x1",
+    "price": "₽71",
+    "trader": "Jaeger LL2",
+    "velocity": "480 m/s",
+    "damage": "183",
+    "accuracy": "+135",
+    "recoil": "-25",
+    "penetration": "20",
+    "armor damage": "50",
+    "ricochet": "10%",
+    "durability burn": "+50",
+    "heat": "+118.4",
+    "feedfailure": "Very low",
+    "misfire": "Very low",
+    "node": "5d6e68e6a4b9361c140bcfe0",
+    "id": "patron_12x70_slug_ftx_custom_lite"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

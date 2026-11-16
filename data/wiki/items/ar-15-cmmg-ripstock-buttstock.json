@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 CMMG RipStock buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_CMMG_RipStock_buttstock",
+  "revisionId": 341734,
+  "lastEdited": "2026-04-26T21:23:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.28 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+15",
+    "recoil": "-19",
+    "node": "606587d11246154cad35d635",
+    "ID": "stock_ar15_cmmg_ripstock_micro"
+  },
+  "sections": []
+}

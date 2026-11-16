@@ -1,0 +1,26 @@
+{
+  "title": "Baseball cap (EFT Patch)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Baseball_cap_(EFT_Patch)",
+  "revisionId": 351209,
+  "lastEdited": "2026-08-05T19:09:05Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "68f263f099d2172e150d7ff8",
+    "id": "Item_equipment_head_cap_eft_coyote"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only obtainable from paid Twitch Drops.\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

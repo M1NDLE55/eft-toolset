@@ -1,0 +1,33 @@
+{
+  "title": "ASh-12 12.7x55 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ASh-12_12.7x55_assault_rifle",
+  "revisionId": 362988,
+  "lastEdited": "2026-10-03T12:32:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "6.17 kg",
+    "grid": "4x2",
+    "trader": "Ref LL4",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "600",
+    "ergonomics": "59",
+    "velocity": "303 m/s",
+    "range": "650 m",
+    "MOA": "1.63",
+    "Weaprecoil": "Vertical: 100, Horizontal: 334",
+    "rof": "650",
+    "caliber": "12.7x55mm",
+    "loot xp": "30",
+    "exam xp": "10",
+    "node": "5cadfbf7ae92152ac412eeef",
+    "ID": "weapon_ckib_ash_12_127x55"
+  },
+  "sections": []
+}

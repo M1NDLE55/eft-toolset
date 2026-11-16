@@ -1,0 +1,29 @@
+{
+  "title": "ZSh-1-2M helmet (Black cover)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ZSh-1-2M_helmet_(Black_cover)",
+  "revisionId": 344390,
+  "lastEdited": "2026-05-24T22:13:48Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "3.7 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL3",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "63",
+    "RicochetChance": "Medium",
+    "penalties": "+0% movement speed, -2% turn speed, +0% Ergonomics, High sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5aa7e4a4e5b5b000137b76f2",
+    "id": "helmet_zsh_1-2m_v2"
+  },
+  "sections": []
+}

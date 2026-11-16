@@ -1,0 +1,25 @@
+{
+  "title": "TerraGroup scientist's hard drive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_scientist's_hard_drive",
+  "revisionId": 289537,
+  "lastEdited": "2024-09-01T12:16:07Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "node": "6575a6ca8778e96ded05a802",
+    "id": "item_barter_electr_hdd_meh_quest"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Saving the Mole from Mechanic"
+    }
+  ]
+}

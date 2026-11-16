@@ -1,0 +1,23 @@
+{
+  "title": "AKM wooden handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM_wooden_handguard",
+  "revisionId": 340736,
+  "lastEdited": "2026-04-22T07:08:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.26 kg",
+    "grid": "1x1",
+    "ergonomics": "+10",
+    "recoil": "+0",
+    "Heat": "+5.4",
+    "Cooling": "-5",
+    "node": "59d64f2f86f77417193ef8b3",
+    "ID": "handguard_ak_izhmash_akm_std_wood"
+  },
+  "sections": []
+}

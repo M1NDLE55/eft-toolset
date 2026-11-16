@@ -1,0 +1,35 @@
+{
+  "title": "7.62x54mm R BS gs",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_BS_gs",
+  "revisionId": 306476,
+  "lastEdited": "2025-03-12T04:26:10Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x54mmR ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "velocity": "785 m/s",
+    "damage": "72",
+    "penetration": "70",
+    "armor damage": "88",
+    "ricochet": "34%",
+    "durability burn": "+70",
+    "heat": "+157",
+    "feedfailure": "Medium",
+    "misfire": "Medium",
+    "node": "5e023d48186a883be655e551",
+    "id": "patron_762x54r_7n37"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

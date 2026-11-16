@@ -1,0 +1,26 @@
+{
+  "title": "Monstrum Tactical Compact Prism Scope 2x32",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Monstrum_Tactical_Compact_Prism_Scope_2x32",
+  "revisionId": 253290,
+  "lastEdited": "2023-11-02T21:54:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.425 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "500",
+    "ergonomics": "-3",
+    "modes": "2",
+    "loot xp": "20",
+    "exam xp": "8",
+    "node": "5d2dc3e548f035404a1a4798",
+    "ID": "scope_all_monstrum_compact_prism_scope_2x32"
+  },
+  "sections": []
+}

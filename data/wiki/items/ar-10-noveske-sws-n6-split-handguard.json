@@ -1,0 +1,26 @@
+{
+  "title": "AR-10 Noveske SWS N6 Split handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Noveske_SWS_N6_Split_handguard",
+  "revisionId": 352316,
+  "lastEdited": "2026-08-07T21:34:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.502 kg",
+    "grid": "2x1",
+    "price": "₽19,200",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "-6",
+    "Cooling": "+4.6",
+    "loot xp": "20",
+    "node": "5d00ef6dd7ad1a0940739b16",
+    "ID": "handguard_ar10_noveske_sws_n6_quadrail_split"
+  },
+  "sections": []
+}

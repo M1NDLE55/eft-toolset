@@ -1,0 +1,31 @@
+{
+  "title": "Rus Post audio tape 11.05 / 001",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rus_Post_audio_tape_11.05_/_001",
+  "revisionId": 348821,
+  "lastEdited": "2026-08-01T15:04:12Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "0:22",
+    "node": "68889451ad1e91bfa40db8fd",
+    "ID": "item_info_recorder_tape_courier_01"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Blue Fire"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Answering Machine: Hello, you have reached the Rus Post courier service. All operators are busy right now. Please leave a message after the tone.\n\nCourier: This is Courier Odintsov. Personal number 22909. I was supposed to deliver urgent mail to Norvinsk, but the roads are fu- busy, so I'm going to be delayed."
+    }
+  ]
+}

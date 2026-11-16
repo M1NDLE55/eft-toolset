@@ -1,0 +1,21 @@
+{
+  "title": "MPX GEN 2 ambidextrous charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_GEN_2_ambidextrous_charging_handle",
+  "revisionId": 314597,
+  "lastEdited": "2025-06-25T20:57:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.029 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+1.5",
+    "node": "6761492dc53ebe8c0f0a5efe",
+    "ID": "charge_mpx_sig_mpx_double_latch_gen2"
+  },
+  "sections": []
+}

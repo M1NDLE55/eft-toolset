@@ -1,0 +1,22 @@
+{
+  "title": "PP-19-01 Vityaz metal skeleton stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-19-01_Vityaz_metal_skeleton_stock",
+  "revisionId": 288299,
+  "lastEdited": "2024-08-26T00:04:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.218 kg",
+    "grid": "2x1",
+    "price": "₽1,510",
+    "ergonomics": "+6",
+    "recoil": "-24",
+    "node": "599851db86f77467372f0a18",
+    "ID": "stock_pp-19-01_izhmash_vityaz_std"
+  },
+  "sections": []
+}

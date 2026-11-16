@@ -1,0 +1,38 @@
+{
+  "title": "7.62x25mm TT Pst gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x25mm_TT_Pst_gzh",
+  "revisionId": 322766,
+  "lastEdited": "2025-11-18T21:15:54Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x25mm Tokarev ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽70",
+    "trader": "Prapor LL2",
+    "repair": "0.01 kg",
+    "velocity": "430 m/s",
+    "damage": "50",
+    "penetration": "25",
+    "armor damage": "36",
+    "ricochet": "10%",
+    "durability burn": "+40",
+    "heat": "+7.4",
+    "feedfailure": "Medium",
+    "misfire": "Very low",
+    "node": "573603562459776430731618",
+    "id": "patron_762x25tt_Pst_gzh"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

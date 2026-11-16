@@ -1,0 +1,27 @@
+{
+  "title": "AK 5.45 Design Aggressor handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_5.45_Design_Aggressor_handguard",
+  "revisionId": 342042,
+  "lastEdited": "2026-04-28T00:22:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.26 kg",
+    "grid": "1x1",
+    "price": "₽19,400",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+19",
+    "recoil": "+0",
+    "Heat": "-8",
+    "Cooling": "+8.6",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5cf4e3f3d7f00c06595bc7f0",
+    "ID": "handguard_ak_545_design_red_heat_agressor"
+  },
+  "sections": []
+}

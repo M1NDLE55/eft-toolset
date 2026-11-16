@@ -1,0 +1,30 @@
+{
+  "title": "SVD CAA XD RGL receiver mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVD_CAA_XD_RGL_receiver_mount",
+  "revisionId": 216051,
+  "lastEdited": "2022-12-06T16:17:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.225 kg",
+    "grid": "1x1",
+    "price": "₽6400",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-2",
+    "recoil": "+0",
+    "loot xp": "10",
+    "node": "5e569a2e56edd02abe09f280",
+    "ID": "mount_dovetail_caa_xd_rgl"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Manufacturer's page for the item"
+    }
+  ]
+}

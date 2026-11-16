@@ -1,0 +1,29 @@
+{
+  "title": "LBT-1961A Load Bearing Chest Rig (AOR1)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LBT-1961A_Load_Bearing_Chest_Rig_(AOR1)",
+  "revisionId": 348412,
+  "lastEdited": "2026-07-30T20:09:14Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.36 kg",
+    "grid": "3x3",
+    "trader": "Ref LL4, after unlocking it in the Customs Tactical Map",
+    "BlocksArmor": "No",
+    "slots": "18 Slots",
+    "node": "68bee2b431902bb4d90c3a2a",
+    "id": "item_equipment_rig_bearing_aor1_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

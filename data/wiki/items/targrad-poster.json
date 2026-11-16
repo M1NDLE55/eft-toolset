@@ -1,0 +1,25 @@
+{
+  "title": "Targrad poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Targrad_poster",
+  "revisionId": 366886,
+  "lastEdited": "2026-11-01T13:02:28Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "689b5f0f986634d56b0e099f",
+    "id": "item_barter_flyers_targrad"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

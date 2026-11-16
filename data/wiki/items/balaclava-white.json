@@ -1,0 +1,21 @@
+{
+  "title": "Balaclava (White)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balaclava_(White)",
+  "revisionId": 313589,
+  "lastEdited": "2025-05-20T11:58:18Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL1",
+    "node": "675ac888803644528007b3f6",
+    "id": "item_equipment_facecover_balaclava_white"
+  },
+  "sections": []
+}

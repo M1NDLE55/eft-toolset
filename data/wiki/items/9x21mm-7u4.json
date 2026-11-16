@@ -1,0 +1,37 @@
+{
+  "title": "9x21mm 7U4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x21mm_7U4",
+  "revisionId": 322748,
+  "lastEdited": "2025-11-18T21:13:51Z",
+  "kind": "ammo",
+  "categories": [
+    "9x21mm Gyurza ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "velocity": "300 m/s",
+    "damage": "53",
+    "penetration": "27",
+    "armor damage": "44",
+    "ricochet": "30%",
+    "durability burn": "-10",
+    "heat": "-2.5",
+    "feedfailure": "High",
+    "misfire": "Very low",
+    "effects": "Subsonic",
+    "node": "6576f93989f0062e741ba952",
+    "id": "patron_9x21_7u4"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

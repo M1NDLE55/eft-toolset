@@ -1,0 +1,25 @@
+{
+  "title": "RFID card manual",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RFID_card_manual",
+  "revisionId": 348147,
+  "lastEdited": "2026-07-21T17:53:07Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "689b4f338dbf3fd40f0bc778",
+    "ID": "item_info_note_rfid_instruction"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket"
+    }
+  ]
+}

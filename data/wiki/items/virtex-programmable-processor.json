@@ -1,0 +1,63 @@
+{
+  "title": "Virtex programmable processor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Virtex_programmable_processor",
+  "revisionId": 363210,
+  "lastEdited": "2026-10-05T15:19:52Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5c05308086f7746b2101e90b",
+    "ID": "Item_barter_electr_virtexprocessor"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Weapon box (6x6)\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "Can be found in The Lab in the Main Working Area (O11), sitting on small pedestals in the assembly line (cage with an orange robotic arm) ."
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In RB-AK\n- In RB-BK\n- In RB-PKPTS\n- In RB-VO\n- In the White King building as random loot on top of the servers.\n- In the White King building on top of the wooden crates (2nd floor, with servers in the same room)\n- In the D2 tunnel, on top of the wooden crates, racks, and blades on the ground (room where the White Queen and Bunker tunnels meet)"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- In the Merin car trunk.\n- In a crate next to a crashed bus and blue car on the main road north-east of the Lighthouse.\n- In the Usec Cottage Garage on the workbench under the fabric.\n- In the hidden drug lab on the armchair with a book.\n- In a broken crate on the south center end of the train yard next to a semi-truck carrying a white shipping container.\n- In the hillside house, on the floor under the TV and in the sink"
+    },
+    {
+      "heading": "Stone Chalet",
+      "level": 5,
+      "text": "- On a flattened cardboard box in garage.\n- On the kitchen table and chairs.\n- On a body bag in an indoor pool on the bottom floor.\n- On a wooden crate next to the outside stairs on the northwest side.\n- On a wooden box in the attic"
+    },
+    {
+      "heading": "Water Treatment Plant",
+      "level": 5,
+      "text": "- In a small wooden crate on the southwest tower below a mounted grenade launcher.\n- On a white workbench under the first green tent in the southwest part of the camp.\n- In a broken wooden crate with a fallen work light near the first green tent and a medical table.\n- On the ground next to a tank in the second green tent in the southwest part of the camp.\n- In a small wooden crate near the center of a water silo east of the second green tent.\n- In a small wooden crate inside a container next to the third green tent in the southwest part of the camp.\n- On a table on the roof of the large building in the south center of the camp.\n- In a broken wooden crate near the fourth green tent and an armored truck in the southwest part of the camp.\n- In a broken crate next to some shipping containers south of Building 1 (West Building).\n- In a broken crate next to a black car south of Building 1 (West Building).\n- On some pallets in the southwest corner of Building 1 (West Building).\n- In three spots inside the Operating Room in Building 1 (West Building).\n- On a table in the middle medical room in the northwest corner of Building 1 (West Building).\n- In a broken crate next to a forklift north of Building 1 (West Building).\n- On a some boxes next to a white van north of Building 1 (West Building).\n- In a broken crate in the center of Building 2 (North Building).\n- On some medical boxes on the east side of Building 2 (North Building).\n- In three spots inside the Water Treatment Plant Storage Room in Building 2 (North Building).\n- Between two laptops in a room on the northeast side of Building 2 (North Building).\n- A a table with injector props in a room on the northeast side of Building 2 (North Building).\n- In Water Treatment Plant Building 3 in the broken crate on the walkway (East Building)\n- In Water Treatment Plant Building 3 (East Building) as random loot by a projector"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Simple Side Job / Order From Outside\n- 2 can be obtained as a quest reward from I'm Something of a BTR Myself\n- 2 can be obtained as a quest reward from Provocation\n- 3 can be obtained as a quest reward from Small Business - Part 1"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter Eggs and References: Virtex is a family of field programmable gate arrays by Xilinx."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Desert Eagle L6 .50 AE 152mm barrel (WTS)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Eagle_L6_.50_AE_152mm_barrel_(WTS)",
+  "revisionId": 312138,
+  "lastEdited": "2025-04-25T11:37:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.436 kg",
+    "grid": "1x1",
+    "ergonomics": "-3",
+    "MOA": "6.88",
+    "recoil": "-3.5",
+    "Dura Burn": "-3",
+    "Heat": "+5.6",
+    "Cooling": "+10.3",
+    "node": "669fa48fa0bab4e8510d952a",
+    "ID": "barrel_deagle_magnum_research_l6_tiger_152mm_127x33"
+  },
+  "sections": []
+}

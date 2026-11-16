@@ -1,0 +1,22 @@
+{
+  "title": "M14 Amega Mini Scout Mount system",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_Amega_Mini_Scout_Mount_system",
+  "revisionId": 340815,
+  "lastEdited": "2026-04-22T08:00:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.18 kg",
+    "grid": "2x1",
+    "price": "₽7,200",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "node": "5addbfd15acfc40015621bde",
+    "ID": "mount_m14_amega_mounts_mini_scout_mount"
+  },
+  "sections": []
+}

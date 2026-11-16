@@ -1,0 +1,24 @@
+{
+  "title": "DVL-10 M2 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DVL-10_M2_handguard",
+  "revisionId": 356558,
+  "lastEdited": "2026-08-26T02:56:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.223 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+15",
+    "recoil": "+0",
+    "Heat": "-0.8",
+    "Cooling": "+4.1",
+    "node": "5888976c24597754281f93f5",
+    "ID": "handguard_dvl-10_lobaev_dvl-10_m2_std"
+  },
+  "sections": []
+}

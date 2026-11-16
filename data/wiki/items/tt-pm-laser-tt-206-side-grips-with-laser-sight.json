@@ -1,0 +1,30 @@
+{
+  "title": "TT PM-Laser TT-206 side grips with laser sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TT_PM-Laser_TT-206_side_grips_with_laser_sight",
+  "revisionId": 340889,
+  "lastEdited": "2026-04-22T08:59:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "price": "₽3,490",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+3",
+    "loot xp": "5",
+    "exam xp": "2",
+    "node": "5bffcf7a0db83400232fea79",
+    "ID": "pistolgrip_tt_pm_laser_tt_206"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The laser cannot be turned off."
+    }
+  ]
+}

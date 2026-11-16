@@ -1,0 +1,35 @@
+{
+  "title": "4.6x30mm Action SX",
+  "url": "https://escapefromtarkov.fandom.com/wiki/4.6x30mm_Action_SX",
+  "revisionId": 322815,
+  "lastEdited": "2025-11-18T21:23:18Z",
+  "kind": "ammo",
+  "categories": [
+    "4.6x30mm HK ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "velocity": "690 m/s",
+    "damage": "65",
+    "penetration": "18",
+    "armor damage": "28",
+    "ricochet": "30%",
+    "heat": "-1",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "5ba26812d4351e003201fef1",
+    "id": "patron_46x30_action_sx"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

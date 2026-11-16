@@ -1,0 +1,18 @@
+{
+  "title": ".338 Lapua Magnum TAC-X ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.338_Lapua_Magnum_TAC-X_ammo_pack_(20_pcs)",
+  "revisionId": 367089,
+  "lastEdited": "2026-11-02T23:06:31Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "2x1",
+    "node": "657023d6cfc010a0f50069e9",
+    "ID": "item_ammo_box_338_20_tac_x"
+  },
+  "sections": []
+}

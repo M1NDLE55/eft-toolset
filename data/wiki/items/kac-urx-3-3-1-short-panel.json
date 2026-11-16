@@ -1,0 +1,22 @@
+{
+  "title": "KAC URX 3/3.1 short panel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KAC_URX_3/3.1_short_panel",
+  "revisionId": 317700,
+  "lastEdited": "2025-08-26T21:46:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3: Black, FDE",
+    "ergonomics": "+2",
+    "Heat": "-1",
+    "node": "5d123a3cd7ad1a004e476058 5d124c01d7ad1a115c7d59fb",
+    "ID": "tactical_urx_kac_panel_short tactical_urx_kac_panel_short_fde"
+  },
+  "sections": []
+}

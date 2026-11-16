@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 F1 Firearms Skeletonized Style 2 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_F1_Firearms_Skeletonized_Style_2_pistol_grip",
+  "revisionId": 355656,
+  "lastEdited": "2026-08-23T16:28:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+5",
+    "recoil": "-1.5",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "6113cce3d92c473c770200c7",
+    "ID": "pistolgrip_ar15_f1_firearms_st2_skeletonized"
+  },
+  "sections": []
+}

@@ -1,0 +1,40 @@
+{
+  "title": "BNTI Kirasa-N body armor (Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BNTI_Kirasa-N_body_armor_(Green)",
+  "revisionId": 348519,
+  "lastEdited": "2026-07-30T21:51:48Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "3 kg",
+    "grid": "3x3",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 0",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck",
+    "default plates": "2x",
+    "default plates armor class": "3",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "150",
+    "penalties": "+0% movement speed, +0% turn speed, -1% Ergonomics",
+    "node": "67ab2f28dafe3b22670c9116",
+    "id": "item_equipment_armor_Kirasa_arena_bp_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

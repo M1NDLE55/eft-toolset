@@ -1,0 +1,28 @@
+{
+  "title": "FN P90 EFFEN 90 5.7x28 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_EFFEN_90_5.7x28_upper_receiver",
+  "revisionId": 215794,
+  "lastEdited": "2022-12-04T10:17:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "price": "₽3,800",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-4",
+    "Cooling": "+4.8",
+    "loot xp": "5",
+    "node": "5cc700ede4a949033c734315",
+    "ID": "reciever_p90_fn_effen_90"
+  },
+  "sections": []
+}

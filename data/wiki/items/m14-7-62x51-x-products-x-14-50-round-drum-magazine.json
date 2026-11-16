@@ -1,0 +1,26 @@
+{
+  "title": "M14 7.62x51 X Products X-14 50-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_7.62x51_X_Products_X-14_50-round_drum_magazine",
+  "revisionId": 337521,
+  "lastEdited": "2026-03-05T23:37:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.7 kg",
+    "grid": "1x2",
+    "ergonomics": "-8",
+    "checkaccuracy": "No",
+    "checkmodifier": "+20",
+    "loadmodifier": "+20",
+    "feedfailure": "Medium",
+    "capacity": "50",
+    "caliber": "7.62x51mm NATO",
+    "node": "5addccf45acfc400185c2989",
+    "ID": "mag_m14_x_products_drum_magazine_m14_762x51_50"
+  },
+  "sections": []
+}

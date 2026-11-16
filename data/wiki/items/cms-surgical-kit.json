@@ -1,0 +1,40 @@
+{
+  "title": "CMS surgical kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/CMS_surgical_kit",
+  "revisionId": 358701,
+  "lastEdited": "2026-09-10T22:58:24Z",
+  "kind": "item",
+  "categories": [
+    "Injury treatment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injury treatment",
+    "weight": "0.4 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "use time": "16s",
+    "effect": "Removes: (1) destroyed body part per use.",
+    "storage_medcase": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d02778e86f774203e7dedbe",
+    "id": "core_medical_surgical_kit"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The CMS kit restores a destroyed (\"blacked-out\") body part to 1 HP. The player can use medkits afterwards, to heal the body part further.\n- Destroyed parts that are restored with a CMS kit will only have 25% - 45% of their maximum HP for the remainder of the raid. If the body part is destroyed a subsequent time, performing surgery again will lower the maximum HP of that body part further.\n- Neither the head nor the thorax can be repaired after being destroyed.\n- The kit is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Supply Plans\n- 1 can be obtained as a quest reward from The Survivalist Path - Tough Guy"
+    }
+  ]
+}

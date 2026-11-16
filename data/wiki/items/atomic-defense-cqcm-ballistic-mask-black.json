@@ -1,0 +1,36 @@
+{
+  "title": "Atomic Defense CQCM ballistic mask (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Atomic_Defense_CQCM_ballistic_mask_(Black)",
+  "revisionId": 344267,
+  "lastEdited": "2026-05-24T21:29:21Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light Armored mask",
+    "slot": "Face cover",
+    "weight": "2.1 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL4, after completing Lightkeeper's task Snatch",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "3",
+    "armor coverage": "Face, Jaws, Eyes, Head top",
+    "durability": "35",
+    "blindness protect": "0%",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, -3% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "657089638db3adca1009f4ca",
+    "id": "item_equipment_facecover_ballistic_mask"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

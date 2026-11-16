@@ -1,0 +1,27 @@
+{
+  "title": "PM PM-Laser grip with laser sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PM_PM-Laser_grip_with_laser_sight",
+  "revisionId": 342707,
+  "lastEdited": "2026-04-30T20:52:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+5",
+    "node": "661f8995c341ea101e0d33e8",
+    "ID": "pistolgrip_pm_pm_laser_grip"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is red\n- The laser cannot be turned off"
+    }
+  ]
+}

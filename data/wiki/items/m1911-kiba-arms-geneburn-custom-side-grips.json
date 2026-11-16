@@ -1,0 +1,28 @@
+{
+  "title": "M1911 Kiba Arms Geneburn custom side grips",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911_Kiba_Arms_Geneburn_custom_side_grips",
+  "revisionId": 349174,
+  "lastEdited": "2026-08-03T21:39:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+3",
+    "recoil": "-1",
+    "node": "626a9cb151cb5849f6002890",
+    "ID": "pistolgrip_m1911_kiba_geneburn_custom_pad"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Geneburn is the online handle of Nikita Buyanov, Head of Battlestate Games. The Geneburn logo is etched on the side grips, and can be seen when launching the game during the Title Screen."
+    }
+  ]
+}

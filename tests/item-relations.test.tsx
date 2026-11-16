@@ -2,7 +2,8 @@ import { act } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { HideoutUses, UsedInTasks } from "@/app/components/item/item-relations";
-import GenericDetails from "@/app/components/item/generic-details";
+import { ItemHeader } from "@/app/components/item/item-header";
+import { CARD_DEFINITIONS } from "@/app/components/item/cards";
 import type { ComposedItem } from "@/app/lib/cache/types";
 
 vi.mock("next/image", () => ({ default: () => null }));
@@ -81,7 +82,15 @@ describe("item page relations", () => {
   });
 
   it("gives weapons no per-slot value and shows their default build size", () => {
-    act(() => root.render(<GenericDetails item={rifle} />));
+    const context = { item: rifle, wiki: null, needs: null, history: [], livePrice: null, now: 0 };
+    act(() =>
+      root.render(
+        <>
+          <ItemHeader item={rifle} />
+          {CARD_DEFINITIONS["per-slot"].render(context)}
+        </>
+      )
+    );
     expect(host.textContent).toContain("1×1 stripped");
     expect(host.textContent).toContain("5×2 default build");
     expect(host.textContent).toContain("Depends on attachments");

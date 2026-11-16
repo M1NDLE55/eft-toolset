@@ -1,0 +1,22 @@
+{
+  "title": "HK MP7 flip-up front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP7_flip-up_front_sight",
+  "revisionId": 327055,
+  "lastEdited": "2025-12-07T05:30:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.13 kg",
+    "grid": "1x1",
+    "sightrange": "300",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5ba26b01d4351e0085325a51",
+    "ID": "sight_front_all_hk_mp7_std"
+  },
+  "sections": []
+}

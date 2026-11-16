@@ -1,0 +1,22 @@
+{
+  "title": "USEC Woodland Infiltrator upper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_Woodland_Infiltrator_upper",
+  "revisionId": 320942,
+  "lastEdited": "2025-11-13T13:30:10Z",
+  "kind": "item",
+  "categories": [
+    "USEC upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f56f186f7744bcb0acd1a",
+    "ID": "usec_upper_infiltrator"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The shirt is modeled on the TRU-SPEC T.R.U. 1/4 Zip Combat Shirt, and gloves are modeled on the Mechanix The Original gloves, these have been since modified by Mechanix and the two-tone is now inversed Mechanix The Original Work Gloves."
+    }
+  ]
+}

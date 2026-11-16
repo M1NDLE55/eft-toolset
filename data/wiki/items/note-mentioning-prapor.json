@@ -1,0 +1,25 @@
+{
+  "title": "Note mentioning Prapor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_mentioning_Prapor",
+  "revisionId": 348860,
+  "lastEdited": "2026-08-02T01:23:32Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "68d2f96e0c834c20c00a81d8",
+    "id": "item_info_note_bogatir_mention_prapor"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    }
+  ]
+}

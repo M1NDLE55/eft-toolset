@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 KAC Free Float Rifle RAS 12 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_KAC_Free_Float_Rifle_RAS_12_inch_handguard",
+  "revisionId": 342891,
+  "lastEdited": "2026-04-30T22:11:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.462 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+17",
+    "recoil": "+0",
+    "Heat": "-1.5",
+    "Cooling": "+1",
+    "node": "68caac360bfe742288085e16",
+    "ID": "handguard_ar15_kac_rifle_lenght_free_float_ras_12_inch"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "SVDS rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVDS_rear_sight",
+  "revisionId": 211536,
+  "lastEdited": "2022-09-20T11:18:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "price": "₽878",
+    "trader": "Prapor LL3",
+    "sightrange": "600",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5c471b7e2e2216152006e46c",
+    "ID": "sight_rear_svd_izhmash_svd_s_std"
+  },
+  "sections": []
+}

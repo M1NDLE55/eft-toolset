@@ -1,0 +1,25 @@
+{
+  "title": "AK-101 5.56x45 6L29 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-101_5.56x45_6L29_30-round_magazine",
+  "revisionId": 356356,
+  "lastEdited": "2026-08-26T00:23:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.215 kg",
+    "grid": "1x2",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-1.5",
+    "checkaccuracy": "No",
+    "feedfailure": "Low",
+    "capacity": "30",
+    "caliber": "5.56x45mm NATO",
+    "node": "5ac66c5d5acfc4001718d314",
+    "ID": "mag_ak_izhmash_6L29_556x45_30"
+  },
+  "sections": []
+}

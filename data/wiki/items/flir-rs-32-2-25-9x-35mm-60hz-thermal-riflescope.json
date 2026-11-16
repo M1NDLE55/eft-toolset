@@ -1,0 +1,31 @@
+{
+  "title": "FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FLIR_RS-32_2.25-9x_35mm_60Hz_thermal_riflescope",
+  "revisionId": 352714,
+  "lastEdited": "2026-08-09T20:45:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Thermal vision sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Thermal vision sight",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL4",
+    "refresh rate": "21 Hz",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "500",
+    "ergonomics": "-11",
+    "modes": "2",
+    "node": "5d1b5e94d7ad1a2b865a96b0",
+    "ID": "scope_all_flir_rs32_225_9x_35_60hz"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market\n- Cannot be insured.\n- Cannot be put in secure containers\n- Only 5 can be held in a raid inventory at the same time\n- The thermal detection range is ~230 m at 0° angle, it goes up to ~250 m aiming uphill or downhill"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Army cap (CADPAT)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Army_cap_(CADPAT)",
+  "revisionId": 310238,
+  "lastEdited": "2025-04-13T14:03:34Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6040de02647ad86262233012",
+    "id": "item_equipment_head_military2_cadpat"
+  },
+  "sections": []
+}

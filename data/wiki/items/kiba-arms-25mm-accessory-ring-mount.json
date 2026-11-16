@@ -1,0 +1,22 @@
+{
+  "title": "Kiba Arms 25mm accessory ring mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kiba_Arms_25mm_accessory_ring_mount",
+  "revisionId": 211828,
+  "lastEdited": "2022-09-22T15:58:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.085 kg",
+    "grid": "1x1",
+    "price": "₽1,480",
+    "trader": "Skier LL1, Peacekeeper LL1, Mechanic LL1",
+    "ergonomics": "-1",
+    "node": "57d17e212459775a1179a0f5",
+    "ID": "mount_all_noname_25mm_ring"
+  },
+  "sections": []
+}

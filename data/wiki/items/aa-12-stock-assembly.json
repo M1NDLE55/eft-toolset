@@ -1,0 +1,22 @@
+{
+  "title": "AA-12 stock assembly",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AA-12_stock_assembly",
+  "revisionId": 305639,
+  "lastEdited": "2025-02-12T22:27:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chassis",
+    "weight": "0.9 kg",
+    "grid": "4x2",
+    "trader": "Skier LL4: Black, FDE",
+    "Heat": "+3.4",
+    "Cooling": "-3.5",
+    "node": "66ffac9e316b08f6840a73e6 670fd23798663bc4b10e911a 6719023b612cc94b9008e78c",
+    "ID": "stock_aa12_mps_aa12_stock_std stock_aa12_mps_aa12_stock_std_fde stock_aa12_mps_aa12_stock_std_labs"
+  },
+  "sections": []
+}

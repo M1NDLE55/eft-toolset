@@ -1,0 +1,56 @@
+{
+  "title": "Alkaline cleaner for heat exchangers",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Alkaline_cleaner_for_heat_exchangers",
+  "revisionId": 352009,
+  "lastEdited": "2026-08-07T00:02:58Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "1 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "59faf98186f774067b6be103",
+    "id": "item_barter_household_alkali"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- Inside of OLI"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Inside queen building"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the floor in front of the cash register desk at New Gas Station"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On/Around Desk on bottom floor of office building\n- On shelves on bottom floor of office building"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In the admin part of the health resort on a desk in the office with an open safe\n- In the smuggler's base\n- On the desk in East wing office room 107"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from No Swiping"
+    }
+  ]
+}

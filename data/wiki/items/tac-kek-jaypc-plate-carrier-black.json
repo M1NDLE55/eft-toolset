@@ -1,0 +1,33 @@
+{
+  "title": "Tac-Kek JayPC plate carrier (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tac-Kek_JayPC_plate_carrier_(Black)",
+  "revisionId": 364900,
+  "lastEdited": "2026-10-25T09:42:55Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "1.1 kg",
+    "grid": "3x3",
+    "armor": "0 (No integrated inserts)",
+    "default plates": "2x",
+    "default plates armor class": "1",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "penalties": "+0% movement speed, +0% turn speed, -0.5% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "13 Slots",
+    "node": "693fd1200ec97e98040bd3f9",
+    "ID": "item_equipment_rig_jpc_wild_1"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

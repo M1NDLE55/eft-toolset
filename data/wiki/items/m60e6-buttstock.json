@@ -1,0 +1,22 @@
+{
+  "title": "M60E6 buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M60E6_buttstock",
+  "revisionId": 312202,
+  "lastEdited": "2025-04-26T12:37:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.239 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4: Black",
+    "ergonomics": "+6",
+    "recoil": "+0",
+    "node": "6615202b96461aa8360271eb (Black) 661520fb6f8e1a96340afaa6 (FDE)",
+    "ID": "stock_m60_usord_m60e6_std stock_m60_usord_m60e6_std_fde"
+  },
+  "sections": []
+}

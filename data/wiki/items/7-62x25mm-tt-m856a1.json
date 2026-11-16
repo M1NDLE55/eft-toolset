@@ -1,0 +1,36 @@
+{
+  "title": "7.62x25mm TT M856A1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x25mm_TT_M856A1",
+  "revisionId": 356353,
+  "lastEdited": "2026-08-26T00:22:04Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x25mm Tokarev ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.013 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "velocity": "900 m/s",
+    "damage": "36",
+    "penetration": "27",
+    "armor damage": "31",
+    "l bleed chance": "+26",
+    "h bleed chance": "+7",
+    "durability burn": "+6",
+    "heat": "+80",
+    "effects": "Tracer (red)",
+    "node": "68c15b4bb30038a118088bd6",
+    "id": "patron_762x25tt_timbs_856a1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AR-15 5.56x45 TROY BattleMag STANAG 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_TROY_BattleMag_STANAG_30-round_magazine",
+  "revisionId": 338851,
+  "lastEdited": "2026-03-18T08:39:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.138 kg",
+    "grid": "1x2",
+    "price": "₽4,680",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c6d46132e221601da357d56",
+    "ID": "mag_stanag_troy_battlemag_556x45_30"
+  },
+  "sections": []
+}

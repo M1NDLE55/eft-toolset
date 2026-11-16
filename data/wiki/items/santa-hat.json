@@ -1,0 +1,27 @@
+{
+  "title": "Santa hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Santa_hat",
+  "revisionId": 310161,
+  "lastEdited": "2025-04-13T10:15:52Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL1",
+    "node": "5a43957686f7742a2c2f11b0",
+    "id": "cap_santa"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This item refers to the Santa Claus or Saint Nicholas. Originating in Western Christian culture, this is a legendary figure who is said to bring gifts to the homes of well-behaved children on Christmas Eve.\n- This hat first appeared during Escape from Tarkov's 2017 Christmas Celebration."
+    }
+  ]
+}

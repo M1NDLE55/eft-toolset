@@ -1,0 +1,36 @@
+{
+  "title": "4.6x30mm AP SX",
+  "url": "https://escapefromtarkov.fandom.com/wiki/4.6x30mm_AP_SX",
+  "revisionId": 324937,
+  "lastEdited": "2025-11-23T18:17:08Z",
+  "kind": "ammo",
+  "categories": [
+    "4.6x30mm HK ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "velocity": "680 m/s",
+    "damage": "35",
+    "recoil": "+10",
+    "penetration": "53",
+    "armor damage": "46",
+    "ricochet": "60%",
+    "durability burn": "+50",
+    "heat": "+10",
+    "feedfailure": "Medium",
+    "misfire": "Medium",
+    "node": "5ba26835d4351e0035628ff5",
+    "id": "patron_46x30_ap_sx"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

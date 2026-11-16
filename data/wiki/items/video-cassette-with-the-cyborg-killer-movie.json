@@ -1,0 +1,31 @@
+{
+  "title": "Video cassette with the Cyborg Killer movie",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Video_cassette_with_the_Cyborg_Killer_movie",
+  "revisionId": 333913,
+  "lastEdited": "2026-02-07T23:43:28Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.15 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "node": "62a09e974f842e1bd12da3f0",
+    "ID": "item_info_videocassette_cyborg"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Common fund stash\n- Dead Scav\n- Drawer\n- Ground cache\n- Jacket\n- Safe"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References:\n- The term \"killer cyborg from the future\" is a reference to the The Terminator movies, which is translated into \"Cyborg Killer\" in Russia.\n- The logo on the casette cover refers to the content creator cyborgkiller."
+    }
+  ]
+}

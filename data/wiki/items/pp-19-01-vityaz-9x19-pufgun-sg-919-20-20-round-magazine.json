@@ -1,0 +1,30 @@
+{
+  "title": "PP-19-01 Vityaz 9x19 PUFGUN SG-919 20 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-19-01_Vityaz_9x19_PUFGUN_SG-919_20_20-round_magazine",
+  "revisionId": 339076,
+  "lastEdited": "2026-03-24T16:27:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.085 kg",
+    "grid": "1x2",
+    "price": "₽1,998",
+    "trader": "Skier LL1",
+    "ergonomics": "+5",
+    "checkaccuracy": "No",
+    "checkmodifier": "-20",
+    "loadmodifier": "-15",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c0673fb0db8340023300271",
+    "ID": "mag_pp-19-01_pufgun_mag_sg-919_20_9x19_20"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Ase Utra SL7i-BL BoreLock .338 LM sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ase_Utra_SL7i-BL_BoreLock_.338_LM_sound_suppressor",
+  "revisionId": 337999,
+  "lastEdited": "2026-03-08T00:35:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.64 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-13",
+    "velocity": "+0.6",
+    "recoil": "-7",
+    "Dura Burn": "+82",
+    "Heat": "+34",
+    "Cooling": "+1",
+    "node": "673f0a38259f5945d70e43a6",
+    "ID": "silencer_borelock_aseutra_sl7i_bl_86x70"
+  },
+  "sections": []
+}

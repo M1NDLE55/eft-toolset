@@ -1,0 +1,22 @@
+{
+  "title": "USEC Mission",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_Mission",
+  "revisionId": 275011,
+  "lastEdited": "2024-03-28T20:25:14Z",
+  "kind": "item",
+  "categories": [
+    "USEC upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "63a8a3f5dd384f7e8d716f9b",
+    "ID": "usec_kit_upper_carinthia_softshell"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The jacket is modeled after the Carinthia Softshell Jacket Special Forces. The gloves are modeled after the Summer Weight glove in the light beige and brown color scheme"
+    }
+  ]
+}

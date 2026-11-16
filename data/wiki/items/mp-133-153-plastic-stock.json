@@ -1,0 +1,21 @@
+{
+  "title": "MP-133/153 plastic stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-133/153_plastic_stock",
+  "revisionId": 263343,
+  "lastEdited": "2024-01-07T19:14:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.46 kg",
+    "grid": "2x1",
+    "ergonomics": "+6",
+    "recoil": "-24",
+    "node": "56083be64bdc2d20478b456f",
+    "ID": "stock_mr133_plastic_long"
+  },
+  "sections": []
+}

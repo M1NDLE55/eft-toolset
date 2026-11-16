@@ -1,0 +1,19 @@
+{
+  "title": "9x21mm BT ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x21mm_BT_ammo_pack_(30_pcs)",
+  "revisionId": 367288,
+  "lastEdited": "2026-11-02T23:16:54Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3",
+    "node": "6489875745f9ca4ba51c4808",
+    "ID": "item_ammo_box_9x21_30_bt"
+  },
+  "sections": []
+}

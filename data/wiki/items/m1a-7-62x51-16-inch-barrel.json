@@ -1,0 +1,26 @@
+{
+  "title": "M1A 7.62x51 16 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1A_7.62x51_16_inch_barrel",
+  "revisionId": 340798,
+  "lastEdited": "2026-04-22T07:46:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.04 kg",
+    "grid": "4x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-17",
+    "velocity": "-1",
+    "MOA": "1.34",
+    "recoil": "-10.3",
+    "Heat": "-7",
+    "Cooling": "-2",
+    "node": "5aaf9d53e5b5b00015042a52",
+    "ID": "barrel_m1a_springfield_armory_6_groove_carbon_410mm"
+  },
+  "sections": []
+}

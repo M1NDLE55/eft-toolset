@@ -1,0 +1,20 @@
+{
+  "title": "FN SCAR folding polymer stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_folding_polymer_stock",
+  "revisionId": 337799,
+  "lastEdited": "2026-03-06T02:19:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.350 kg",
+    "grid": "2x1",
+    "recoil": "+0",
+    "node": "61816734d8e3106d9806c1f3 61825d06d92c473c770215de",
+    "ID": "stock_mk16_fn_scar_folding_stock stock_mk16_fn_scar_folding_stock_fde"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "AK-12 5.45x39 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_5.45x39_muzzle_brake",
+  "revisionId": 337944,
+  "lastEdited": "2026-03-07T23:59:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-1",
+    "recoil": "-6",
+    "node": "649ec2af961514b22506b10f",
+    "ID": "muzzle_ak12_izhmash_ak12_muzzle_brake_std_545x39"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Classic matches",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Classic_matches",
+  "revisionId": 336558,
+  "lastEdited": "2026-02-26T00:20:07Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable material",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "57347b8b24597737dd42e192",
+    "id": "matches"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    }
+  ]
+}

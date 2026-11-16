@@ -1,0 +1,26 @@
+{
+  "title": "FN SCAR-H 7.62x51 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR-H_7.62x51_upper_receiver",
+  "revisionId": 344959,
+  "lastEdited": "2026-05-26T12:55:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.2 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL2: Black, FDE",
+    "ergonomics": "+2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-1",
+    "Heat": "-1.6",
+    "Cooling": "+1.7",
+    "node": "6165adcdd3a39d50044c120f 6165aeedfaa1272e431521e3",
+    "ID": "reciever_mk17_fn_scar_h_std reciever_mk17_fn_scar_h_std_fde"
+  },
+  "sections": []
+}

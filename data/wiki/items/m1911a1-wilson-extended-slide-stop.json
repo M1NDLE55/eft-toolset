@@ -1,0 +1,25 @@
+{
+  "title": "M1911A1 Wilson Extended slide stop",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_Wilson_Extended_slide_stop",
+  "revisionId": 255634,
+  "lastEdited": "2023-11-23T15:24:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽1,800",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+3",
+    "Dura Burn": "-1",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5ef3553c43cb350a955a7ccb",
+    "ID": "catch_m1911_wilson_extended_slide_stop"
+  },
+  "sections": []
+}

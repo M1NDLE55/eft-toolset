@@ -1,0 +1,29 @@
+{
+  "title": "AK 7.62x39 Molot Arms 6P2.Sb-11 40-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_7.62x39_Molot_Arms_6P2.Sb-11_40-round_magazine",
+  "revisionId": 337439,
+  "lastEdited": "2026-03-05T22:55:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.46 kg",
+    "grid": "1x3",
+    "trader": "Skier LL3",
+    "ergonomics": "-4.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "+10",
+    "loadmodifier": "+10",
+    "feedfailure": "Medium",
+    "capacity": "40",
+    "caliber": "7.62x39mm, .366 TKM",
+    "loot xp": "10",
+    "exam xp": "Examined by default",
+    "node": "59e5f5a486f7746c530b3ce2",
+    "ID": "mag_ak_izhmash_rpk_std_61_sector_762x39_40"
+  },
+  "sections": []
+}

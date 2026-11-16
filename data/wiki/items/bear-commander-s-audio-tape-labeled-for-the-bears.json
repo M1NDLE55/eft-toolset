@@ -1,0 +1,26 @@
+{
+  "title": "BEAR commander's audio tape labeled \"For the BEARs\"",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_commander's_audio_tape_labeled_%22For_the_BEARs%22",
+  "revisionId": 348009,
+  "lastEdited": "2026-07-19T00:14:53Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "0:27",
+    "node": "68889a2f94cca0a80b070af1",
+    "ID": "item_info_recorder_tape_startmission_forbears"
+  },
+  "sections": [
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Squad Leader: To all BEAR survivors! The explosion knocked out all our electronics, I repeat, our comms are out! Operation is canceled! Fall back to the evacuation points on your own! Move with caution. Code phrase - \"water is wet\"!"
+    }
+  ]
+}

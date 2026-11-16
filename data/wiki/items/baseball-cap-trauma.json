@@ -1,0 +1,32 @@
+{
+  "title": "Baseball cap (Trauma)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Baseball_cap_(Trauma)",
+  "revisionId": 367641,
+  "lastEdited": "2026-11-08T12:44:56Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Panacea crate",
+    "node": "6a8316e7608278aaac018b5b",
+    "id": "item_equipment_head_inverted_cap_trauma"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Despite being an Panacea crate exclusive, this item can currently spawn in loot containers."
+    }
+  ]
+}

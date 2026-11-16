@@ -1,0 +1,32 @@
+{
+  "title": "Baseball cap (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Baseball_cap_(MultiCam)",
+  "revisionId": 361710,
+  "lastEdited": "2026-09-24T12:20:28Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 3",
+    "node": "6a8316cb0ccd0eb28d02f264",
+    "id": "item_equipment_head_inverted_cap_multicam"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The description is a reference to the show SEAL team, the name Obi-Blonde-Kenobi is a nickname given to the character Clay Spenser."
+    }
+  ]
+}

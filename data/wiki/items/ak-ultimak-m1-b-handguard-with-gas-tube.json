@@ -1,0 +1,27 @@
+{
+  "title": "AK UltiMAK M1-B handguard with gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_UltiMAK_M1-B_handguard_with_gas_tube",
+  "revisionId": 340734,
+  "lastEdited": "2026-04-22T07:06:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+13",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "Heat": "+3",
+    "Cooling": "-1.6",
+    "loot xp": "50",
+    "exam xp": "10",
+    "node": "59ccfdba86f7747f2109a587",
+    "ID": "gas_block_ak_ultimak_m1b"
+  },
+  "sections": []
+}

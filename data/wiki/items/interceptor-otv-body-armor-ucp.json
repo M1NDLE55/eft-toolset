@@ -1,0 +1,40 @@
+{
+  "title": "Interceptor OTV body armor (UCP)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Interceptor_OTV_body_armor_(UCP)",
+  "revisionId": 362936,
+  "lastEdited": "2026-10-03T11:19:54Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "3.8 kg",
+    "grid": "3x3",
+    "trader": "Ref LL2",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "132",
+    "penalties": "-2% movement speed, -1% turn speed, +0% Ergonomics",
+    "node": "64abd93857958b4249003418",
+    "ID": "item_equipment_armor_otv_ucp"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The OTV is part of the Interceptor Body Armor series, used by the United States Armed Forces.\n- Early generations of the OTV were equipped with the SAPI, or Small Arms Protective Insert, ceramic composite armor. It was capable of defeating at least three hits of 7,62x51mm M80 FMJ in conjunction with the soft armor backer.\n  - This was succeeded by the ESAPI, or Enhanced Small Arms Protective Insert, which added the armor piercing threat of 30.06 M2AP, or 7,62x63mm steel core armor piercing ammunition.\n- The ingame variant is in UCP, or Universal Camouflage Pattern."
+    }
+  ]
+}

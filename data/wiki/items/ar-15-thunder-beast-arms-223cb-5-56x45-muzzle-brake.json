@@ -1,0 +1,27 @@
+{
+  "title": "AR-15 Thunder Beast Arms 223CB 5.56x45 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Thunder_Beast_Arms_223CB_5.56x45_muzzle_brake",
+  "revisionId": 337696,
+  "lastEdited": "2026-03-06T01:27:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.109 kg",
+    "grid": "1x1",
+    "price": "₽7,180",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-4",
+    "accuracy": "+1",
+    "recoil": "-7",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "loot xp": "20",
+    "node": "5d440625a4b9361eec4ae6c5",
+    "ID": "muzzle_ar15_thunder_beast_223cb_muzzle_brake_556x45"
+  },
+  "sections": []
+}

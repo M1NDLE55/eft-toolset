@@ -1,0 +1,27 @@
+{
+  "title": "HK 416 5.56x45 10.6 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416_5.56x45_10.6_inch_barrel",
+  "revisionId": 346065,
+  "lastEdited": "2026-06-03T20:11:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.572 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-3",
+    "velocity": "-9",
+    "MOA": "2.51",
+    "recoil": "-5.3",
+    "Dura Burn": "-18",
+    "Heat": "+6",
+    "Cooling": "+9",
+    "node": "5c6d85e02e22165df16b81f4",
+    "ID": "barrel_416_hk_264mm_556x45"
+  },
+  "sections": []
+}

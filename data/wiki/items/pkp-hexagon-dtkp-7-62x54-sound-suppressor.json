@@ -1,0 +1,26 @@
+{
+  "title": "PKP Hexagon DTKP 7.62x54 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PKP_Hexagon_DTKP_7.62x54_sound_suppressor",
+  "revisionId": 357279,
+  "lastEdited": "2026-09-01T10:25:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.99 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-19",
+    "velocity": "+1.1",
+    "recoil": "-7",
+    "Dura Burn": "+80",
+    "Heat": "+15",
+    "Cooling": "+6.5",
+    "node": "6a182c6008074115230957e9",
+    "ID": "silencer_pkp_hexagon_dtkp_pkp_qd_762x54"
+  },
+  "sections": []
+}

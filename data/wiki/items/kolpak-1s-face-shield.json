@@ -1,0 +1,29 @@
+{
+  "title": "Kolpak-1S face shield",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kolpak-1S_face_shield",
+  "revisionId": 324932,
+  "lastEdited": "2025-11-23T18:12:55Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1 kg",
+    "grid": "2x1",
+    "trader": "Ragman LL1",
+    "material": "Glass",
+    "armor": "2",
+    "armor coverage": "Face, Eyes, Jaws",
+    "durability": "30",
+    "blindness protect": "15%",
+    "penalties": "+0% turn speed, -3% Ergonomics",
+    "BlocksEyewear": "No",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5ac4c50d5acfc40019262e87",
+    "id": "item_equipment_helmet_k1c_shield"
+  },
+  "sections": []
+}

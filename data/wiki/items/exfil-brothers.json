@@ -1,0 +1,25 @@
+{
+  "title": "EXFIL Brothers",
+  "url": "https://escapefromtarkov.fandom.com/wiki/EXFIL_Brothers",
+  "revisionId": 363581,
+  "lastEdited": "2026-10-07T16:13:30Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "6a86e48f7fa69db5960f020b",
+    "id": "item_barter_flyers_referral_killa_tagilla"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

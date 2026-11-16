@@ -1,0 +1,23 @@
+{
+  "title": "MP-155 Ultima polymer forestock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_Ultima_polymer_forestock",
+  "revisionId": 342191,
+  "lastEdited": "2026-04-28T21:21:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.310 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+12",
+    "Heat": "+2.6",
+    "Cooling": "-2.3",
+    "node": "606ee5c81246154cad35d65e",
+    "ID": "handguard_mp155_kalashnikov_ultima_handguard"
+  },
+  "sections": []
+}

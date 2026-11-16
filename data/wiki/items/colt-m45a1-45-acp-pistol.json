@@ -1,0 +1,37 @@
+{
+  "title": "Colt M45A1 .45 ACP pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Colt_M45A1_.45_ACP_pistol",
+  "revisionId": 358371,
+  "lastEdited": "2026-09-09T21:05:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "1.188 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "89",
+    "velocity": "337 m/s",
+    "range": "50 m",
+    "MOA": "10.31",
+    "Weaprecoil": "Vertical: 431, Horizontal: 320",
+    "rof": "30",
+    "caliber": ".45 ACP",
+    "node": "5f36a0e5fbf956000b716b65",
+    "ID": "weapon_colt_m45a1_1143x23"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Variant Name |\n| M45A1 Mew-mew |"
+    }
+  ]
+}

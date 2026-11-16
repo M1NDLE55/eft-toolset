@@ -1,0 +1,38 @@
+{
+  "title": "AK-74 5.45x39 6L31 60-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_5.45x39_6L31_60-round_magazine",
+  "revisionId": 364745,
+  "lastEdited": "2026-10-20T11:04:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "trader": "Ref LL3, Prapor LL4",
+    "ergonomics": "-10",
+    "checkaccuracy": "No",
+    "checkmodifier": "+20",
+    "loadmodifier": "+15",
+    "feedfailure": "Medium",
+    "capacity": "60",
+    "caliber": "5.45x39mm",
+    "node": "55d482194bdc2d1d4e8b456b",
+    "ID": "mag_ak74_izhmash_6L31_545x39_60"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Wooden crates\n- In Weapon box (4x4)\n- In Weapon box (6x6)\n- In Weapon box (6x2)\n- In Weapon box (6x4)"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the locked section of the ZB-014 bunker"
+    }
+  ]
+}

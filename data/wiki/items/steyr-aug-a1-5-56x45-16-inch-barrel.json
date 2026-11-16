@@ -1,0 +1,27 @@
+{
+  "title": "Steyr AUG A1 5.56x45 16 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_A1_5.56x45_16_inch_barrel",
+  "revisionId": 342253,
+  "lastEdited": "2026-04-28T21:52:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.535 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-14",
+    "velocity": "-5",
+    "MOA": "1.65",
+    "recoil": "-8.3",
+    "Dura Burn": "+4",
+    "Heat": "-2",
+    "Cooling": "-2",
+    "node": "6333f05d1bc0e6217a0e9d34",
+    "ID": "barrel_aug_steyr_a1_417mm_556x45"
+  },
+  "sections": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Saiga-12 Custom Guns Hedon S handguard (Redline)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Saiga-12_Custom_Guns_Hedon_S_handguard_(Redline)",
+  "revisionId": 354979,
+  "lastEdited": "2026-08-18T01:59:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "ergonomics": "+22",
+    "Heat": "-7",
+    "Cooling": "+2",
+    "node": "6981f97f1d2e2070560b7277",
+    "ID": "handguard_saiga12_custom_guns_hedon_s_saiga12_champ"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

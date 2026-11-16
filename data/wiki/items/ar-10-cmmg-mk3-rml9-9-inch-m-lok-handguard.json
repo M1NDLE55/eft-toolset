@@ -1,0 +1,24 @@
+{
+  "title": "AR-10 CMMG MK3 RML9 9 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_CMMG_MK3_RML9_9_inch_M-LOK_handguard",
+  "revisionId": 342189,
+  "lastEdited": "2026-04-28T21:20:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.155 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+15",
+    "recoil": "+0",
+    "Heat": "-2.6",
+    "Cooling": "+8",
+    "node": "6065880c132d4d12c81fd8da",
+    "ID": "handguard_ar10_cmmg_mk3_rml9_m_lok"
+  },
+  "sections": []
+}

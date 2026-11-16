@@ -1,0 +1,38 @@
+{
+  "title": "Glock 17 9x19 pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_17_9x19_pistol",
+  "revisionId": 356347,
+  "lastEdited": "2026-08-26T00:17:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.877 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL1: Standard, Mechanic LL1: Stripped variant",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "91",
+    "velocity": "377 m/s",
+    "range": "50 m",
+    "MOA": "11.69",
+    "Weaprecoil": "Vertical: 302, Horizontal: 252",
+    "rof": "30",
+    "caliber": "9x19mm Parabellum",
+    "def mag": "Glock 9x19 17-round magazine",
+    "node": "5a7ae0c351dfba0017554310",
+    "ID": "weapon_glock_glock_17_gen3_9x19"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| Glock 17 Alpha Wolf |\n| Glock 17 Fischer |\n| Glock 17 Viper |\n| Glock 17 Spartan |\n| Glock 17 Hex |\n| Glock 17 Tac 2 |\n| Glock 17 HC |\n| Glock 17 Jackie |"
+    }
+  ]
+}

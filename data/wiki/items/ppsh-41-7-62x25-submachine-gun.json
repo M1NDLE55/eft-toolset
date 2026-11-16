@@ -1,0 +1,42 @@
+{
+  "title": "PPSh-41 7.62x25 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PPSh-41_7.62x25_submachine_gun",
+  "revisionId": 338669,
+  "lastEdited": "2026-03-16T22:11:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "4.05 kg",
+    "grid": "4x2",
+    "trader": "Prapor LL1",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "40",
+    "velocity": "342 m/s",
+    "range": "200 m",
+    "MOA": "7.22",
+    "Weaprecoil": "Vertical: 67, Horizontal: 220",
+    "rof": "1000",
+    "caliber": "7.62x25mm Tokarev",
+    "node": "5ea03f7400685063ec28bfa8",
+    "ID": "weapon_zis_ppsh41_762x25"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This weapon will never malfunction."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "A common nickname is \"papasha\" (Russian: папаша), meaning \"daddy\"."
+    }
+  ]
+}

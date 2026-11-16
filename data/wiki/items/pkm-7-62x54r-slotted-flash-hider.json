@@ -1,0 +1,22 @@
+{
+  "title": "PKM 7.62x54R slotted flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PKM_7.62x54R_slotted_flash_hider",
+  "revisionId": 337940,
+  "lastEdited": "2026-03-07T23:55:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.057 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "+0",
+    "recoil": "-5",
+    "node": "6492efb8cfcf7c89e701abf3",
+    "ID": "muzzle_pk_zid_pkm_long_762x54r"
+  },
+  "sections": []
+}

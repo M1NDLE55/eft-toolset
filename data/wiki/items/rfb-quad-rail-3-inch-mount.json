@@ -1,0 +1,21 @@
+{
+  "title": "RFB Quad Rail 3 inch mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RFB_Quad_Rail_3_inch_mount",
+  "revisionId": 314490,
+  "lastEdited": "2025-06-23T21:55:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-1",
+    "node": "676177591f08ed5e8800b7a9",
+    "ID": "mount_rfb_kel_tec_rfb_3_quad_rail"
+  },
+  "sections": []
+}

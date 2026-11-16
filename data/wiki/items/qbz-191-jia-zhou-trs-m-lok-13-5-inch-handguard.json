@@ -1,0 +1,23 @@
+{
+  "title": "QBZ-191 Jia Zhou TRS M-LOK 13.5 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/QBZ-191_Jia_Zhou_TRS_M-LOK_13.5_inch_handguard",
+  "revisionId": 356933,
+  "lastEdited": "2026-08-30T00:11:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.45 kg",
+    "grid": "3x1",
+    "trader": "Skier LL4 after unlocking QBZ-191 in BattlePass Season 1",
+    "ergonomics": "+17.5",
+    "Heat": "-3",
+    "Cooling": "+9.5",
+    "node": "69f9f1356b45e1d5210c6961",
+    "ID": "handguard_qbz191_jia_zhou_trs_135_inch_mlok"
+  },
+  "sections": []
+}

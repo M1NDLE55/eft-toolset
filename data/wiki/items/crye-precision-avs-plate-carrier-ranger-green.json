@@ -1,0 +1,37 @@
+{
+  "title": "Crye Precision AVS plate carrier (Ranger Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AVS_plate_carrier_(Ranger_Green)",
+  "revisionId": 346855,
+  "lastEdited": "2026-06-14T21:00:20Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.88 kg",
+    "grid": "3x4",
+    "trader": "Ragman LL4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Groin",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "112",
+    "penalties": "-2% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "23 Slots",
+    "node": "544a5caa4bdc2d1a388b4568",
+    "id": "standartRig"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

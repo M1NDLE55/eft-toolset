@@ -1,0 +1,31 @@
+{
+  "title": "Korund-VM ballistic plates (Front)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Korund-VM_ballistic_plates_(Front)",
+  "revisionId": 364992,
+  "lastEdited": "2026-10-25T22:05:37Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "3.4 kg",
+    "grid": "2x3",
+    "trader": "Prapor LL4",
+    "material": "Armor Steel",
+    "armor": "5",
+    "armor coverage": "Front Plate",
+    "durability": "60",
+    "penalties": "-2% movement speed, -1% turn speed, -1% Ergonomics",
+    "node": "656f664200d62bcd2e024077",
+    "id": "item_equipment_plate_korund_5class_front"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate"
+    }
+  ]
+}

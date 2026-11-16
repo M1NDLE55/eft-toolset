@@ -1,0 +1,21 @@
+{
+  "title": "Beret (Blue)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Beret_(Blue)",
+  "revisionId": 310162,
+  "lastEdited": "2025-04-13T10:17:00Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL3",
+    "node": "5f60e7788adaa7100c3adb49",
+    "id": "item_equipment_head_beret_blue"
+  },
+  "sections": []
+}

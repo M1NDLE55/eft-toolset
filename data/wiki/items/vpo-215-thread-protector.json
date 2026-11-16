@@ -1,0 +1,21 @@
+{
+  "title": "VPO-215 thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-215_thread_protector",
+  "revisionId": 343221,
+  "lastEdited": "2026-05-03T21:24:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "ergonomics": "+0.5",
+    "Dura Burn": "-5",
+    "node": "5de6556a205ddc616a6bc4f7",
+    "ID": "muzzle_vpo215_molot_vpo_215_thread_protector_std_366tkm"
+  },
+  "sections": []
+}

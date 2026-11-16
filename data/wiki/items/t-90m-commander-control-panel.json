@@ -1,0 +1,25 @@
+{
+  "title": "T-90M Commander Control Panel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/T-90M_Commander_Control_Panel",
+  "revisionId": 357656,
+  "lastEdited": "2026-09-04T22:39:45Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "2 kg",
+    "grid": "2x1",
+    "node": "609267a2bb3f46069c3e6c7d",
+    "id": "quest_commander_control_panel_t90"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Classified Technologies from Skier"
+    }
+  ]
+}

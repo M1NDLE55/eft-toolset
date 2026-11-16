@@ -1,0 +1,28 @@
+{
+  "title": "MP-153 12ga 5-shell magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-153_12ga_5-shell_magazine",
+  "revisionId": 337405,
+  "lastEdited": "2026-03-05T22:35:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.93 kg",
+    "grid": "1x1",
+    "price": "₽900",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "5",
+    "caliber": "12/70",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5882163e24597758206fee8c",
+    "ID": "mag_mr153_izhmeh_12g_5"
+  },
+  "sections": []
+}

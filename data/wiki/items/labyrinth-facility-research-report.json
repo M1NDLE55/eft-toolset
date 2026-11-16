@@ -1,0 +1,26 @@
+{
+  "title": "Labyrinth facility research report",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Labyrinth_facility_research_report",
+  "revisionId": 348039,
+  "lastEdited": "2026-07-19T12:14:31Z",
+  "kind": "item",
+  "categories": [
+    "Major TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.043 kg",
+    "grid": "1x1",
+    "node": "68d2fdbbf8817df4690db3d5",
+    "id": "item_info_note_research_labyrinth"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Labyrinth\n- This is one of the major evidence used in The Ticket"
+    }
+  ]
+}

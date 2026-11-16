@@ -1,0 +1,21 @@
+{
+  "title": "M60E6 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M60E6_pistol_grip",
+  "revisionId": 342703,
+  "lastEdited": "2026-04-30T20:50:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.042 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4: Black",
+    "ergonomics": "+2",
+    "node": "66152060a031cbb5570e3466 (Black) 6615211ca031cbb5570e346d (FDE)",
+    "ID": "pistolgrip_m60_usord_m60e6_std pistolgrip_m60_usord_m60e6_std_fde"
+  },
+  "sections": []
+}

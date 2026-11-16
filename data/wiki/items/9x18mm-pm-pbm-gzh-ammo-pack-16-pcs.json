@@ -1,0 +1,18 @@
+{
+  "title": "9x18mm PM PBM gzh ammo pack (16 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_PBM_gzh_ammo_pack_(16_pcs)",
+  "revisionId": 367252,
+  "lastEdited": "2026-11-02T23:15:02Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "node": "5737250c2459776125652acc",
+    "id": "item_ammo_box_9x18_16_pbm"
+  },
+  "sections": []
+}

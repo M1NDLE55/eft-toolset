@@ -1,0 +1,27 @@
+{
+  "title": "Military circuit board",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Military_circuit_board",
+  "revisionId": 364326,
+  "lastEdited": "2026-10-13T14:05:10Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.52 kg",
+    "grid": "1x1",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5d0376a486f7747d8050965c",
+    "ID": "item_barter_electr_militaryboard"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Wooden crate\n- Dead Scav\n- Weapon box (6x2)\n- Technical supply crate"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "UZI Type 5 buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_Type_5_buttstock",
+  "revisionId": 306742,
+  "lastEdited": "2025-03-17T04:44:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.65 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+5",
+    "recoil": "-21",
+    "node": "6699249f3c4fda6471005cba",
+    "ID": "stock_uzi_iwi_type_5"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "SR-2M polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-2M_polymer_handguard",
+  "revisionId": 342248,
+  "lastEdited": "2026-04-28T21:50:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+8",
+    "Heat": "+2.2",
+    "Cooling": "-1.9",
+    "node": "62e15547db1a5c41971c1b5e 637ba19df7ca6372bf2613d7",
+    "ID": "handguard_sr2m_tochmash_std handguard_sr2m_tochmash_std_blk"
+  },
+  "sections": []
+}

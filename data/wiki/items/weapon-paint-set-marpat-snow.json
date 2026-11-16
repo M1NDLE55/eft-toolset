@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (MARPAT Snow)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(MARPAT_Snow)",
+  "revisionId": 348660,
+  "lastEdited": "2026-07-30T22:26:14Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "6936979302edf8edc606d217",
+    "id": "item_camo_usmc_winter"
+  },
+  "sections": []
+}

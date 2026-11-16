@@ -1,0 +1,24 @@
+{
+  "title": "SKS gas tube cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_gas_tube_cover",
+  "revisionId": 293104,
+  "lastEdited": "2024-09-29T20:11:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+4",
+    "recoil": "+0",
+    "Heat": "+0.8",
+    "Cooling": "-1.2",
+    "node": "634f08a21f9f536910079b5a",
+    "ID": "handguard_sks_toz_sks_std_wood"
+  },
+  "sections": []
+}

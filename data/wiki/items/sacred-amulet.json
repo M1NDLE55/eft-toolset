@@ -1,0 +1,31 @@
+{
+  "title": "Sacred Amulet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sacred_Amulet",
+  "revisionId": 339416,
+  "lastEdited": "2026-03-28T14:41:09Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Lightkeeper after completing his task Snatch for 3× Intelligence folder and 1,000 Dollars",
+    "node": "64d0b40fbe2eed70e254e2d4",
+    "id": "item_spec_cultist_amulet"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 1 can be in your possession at one time. Buying a new one will destroy the previous.\n- Cannot be listed for sale on the flea market, be sold to traders or destroyed.\n- While a player is wearing the amulet, Cultists do not attack the player unless provoked. Getting very close to them is considered a provocation.\n  - Killing a Cultist while wearing the amulet will destroy it and they become hostile towards the player again.\n  - Zryachiy's guards are not affected by it.\n- The amulet can also be used to increase the value of sacrificed items in the Hideout Cultist Circle.\n- The amulet can be used for 7 raids or sacrifices before it gets destroyed. It can be unequipped to retain uses.\n- This item is not lootable from players and can only be placed in a special item slot. Therefore, a free special slot is required to buy it."
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Keeper's Word"
+    }
+  ]
+}

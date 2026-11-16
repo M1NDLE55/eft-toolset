@@ -1,0 +1,26 @@
+{
+  "title": "FSB report",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FSB_report",
+  "revisionId": 348045,
+  "lastEdited": "2026-07-19T12:22:36Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "node": "68d301e75f98276b7503c332",
+    "id": "item_info_note_report_fsb_chepyga"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Accidental Witness\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

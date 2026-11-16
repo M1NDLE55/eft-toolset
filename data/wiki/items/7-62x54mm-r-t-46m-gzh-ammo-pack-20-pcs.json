@@ -1,0 +1,18 @@
+{
+  "title": "7.62x54mm R T-46M gzh ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_T-46M_gzh_ammo_pack_(20_pcs)",
+  "revisionId": 367244,
+  "lastEdited": "2026-11-02T23:14:36Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702584cfc010a0f5006a2f",
+    "ID": "item_ammo_box_762x54r_20_t46m"
+  },
+  "sections": []
+}

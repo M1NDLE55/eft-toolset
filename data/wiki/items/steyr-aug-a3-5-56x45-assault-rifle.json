@@ -1,0 +1,37 @@
+{
+  "title": "Steyr AUG A3 5.56x45 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_A3_5.56x45_assault_rifle",
+  "revisionId": 357006,
+  "lastEdited": "2026-08-30T17:27:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "4.043 kg",
+    "grid": "5x2",
+    "trader": "Peacekeeper LL3: Black, FDE",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "600",
+    "ergonomics": "73",
+    "velocity": "957 m/s",
+    "range": "500 m",
+    "MOA": "1.24",
+    "Weaprecoil": "Vertical: 73, Horizontal: 208",
+    "rof": "715",
+    "caliber": "5.56x45mm NATO",
+    "node": "6718817435e3cfd9550d2c27 63171672192e68c5460cebc5",
+    "ID": "weapon_steyr_aug_a3_m1_556x45_blk weapon_steyr_aug_a3_m1_556x45"
+  },
+  "sections": [
+    {
+      "heading": "Weapon Variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| AUG A3 CIV |\n| AUG A3 CQB |"
+    }
+  ]
+}

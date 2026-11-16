@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Soyuz-TM buffer tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Soyuz-TM_buffer_tube",
+  "revisionId": 343517,
+  "lastEdited": "2026-05-07T22:33:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.162 kg",
+    "grid": "2x1",
+    "ergonomics": "-1.5",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "node": "602e3f1254072b51b239f713",
+    "ID": "stock_ar15_stm_com_spec_std"
+  },
+  "sections": []
+}

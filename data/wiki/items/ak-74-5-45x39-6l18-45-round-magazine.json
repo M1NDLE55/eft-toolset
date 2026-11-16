@@ -1,0 +1,29 @@
+{
+  "title": "AK-74 5.45x39 6L18 45-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_5.45x39_6L18_45-round_magazine",
+  "revisionId": 339057,
+  "lastEdited": "2026-03-24T16:12:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.3 kg",
+    "grid": "1x3",
+    "price": "₽3,500",
+    "ergonomics": "-4.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "+10",
+    "loadmodifier": "+10",
+    "feedfailure": "Low",
+    "capacity": "45",
+    "caliber": "5.45x39mm",
+    "loot xp": "30",
+    "exam xp": "Examined by default",
+    "node": "564ca9df4bdc2d35148b4569",
+    "ID": "mag_ak74_izhmash_6L18_545x39_45"
+  },
+  "sections": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Morphine injector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Morphine_injector",
+  "revisionId": 358737,
+  "lastEdited": "2026-09-10T23:01:14Z",
+  "kind": "item",
+  "categories": [
+    "Drugs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injector",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL4, after completing her task Health Care Privacy - Part 6",
+    "use time": "2s",
+    "effect": "Buffs:, Removes:, for 305 seconds, Adds: for 305 seconds Debuffs:, Adds: - Energy (-10) - Hydration (-15)",
+    "storage_medcase": "Yes",
+    "storage_securecont": "Yes",
+    "node": "544fb3f34bdc2d03748b456a",
+    "id": "morphine"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Weapon box (6x2)\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Health Care Privacy - Part 3\n- 3 can be obtained as a quest reward from Decontamination Service"
+    }
+  ]
+}

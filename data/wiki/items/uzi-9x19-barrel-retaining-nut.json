@@ -1,0 +1,22 @@
+{
+  "title": "UZI 9x19 barrel retaining nut",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_9x19_barrel_retaining_nut",
+  "revisionId": 314181,
+  "lastEdited": "2025-06-07T14:03:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.085 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+1",
+    "Dura Burn": "-2",
+    "node": "6698c9aa36ba38d29101770f",
+    "ID": "muzzle_uzi_iwi_retaining_nut_9x19"
+  },
+  "sections": []
+}

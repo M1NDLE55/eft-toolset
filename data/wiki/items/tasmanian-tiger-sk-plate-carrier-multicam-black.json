@@ -1,0 +1,33 @@
+{
+  "title": "Tasmanian Tiger SK plate carrier (MultiCam Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tasmanian_Tiger_SK_plate_carrier_(MultiCam_Black)",
+  "revisionId": 329751,
+  "lastEdited": "2025-12-25T21:42:57Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "1.5 kg",
+    "grid": "3x3",
+    "armor": "0 (No integrated inserts)",
+    "default plates": "2x",
+    "default plates armor class": "6",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "penalties": "-1% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "8 Slots",
+    "node": "628cd624459354321c4b7fa2",
+    "ID": "item_equipment_rig_tt_plate_carrier"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

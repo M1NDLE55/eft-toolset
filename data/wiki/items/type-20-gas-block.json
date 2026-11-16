@@ -1,0 +1,25 @@
+{
+  "title": "Type 20 gas block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Type_20_gas_block",
+  "revisionId": 357288,
+  "lastEdited": "2026-09-01T10:47:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-1",
+    "recoil": "-1",
+    "Dura Burn": "-1",
+    "Heat": "-1",
+    "Cooling": "+0.8",
+    "node": "6a3cea5e94a96a17e00c4b6f",
+    "ID": "gas_block_type20_howa_type20_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "HK417 E2 buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK417_E2_buttstock",
+  "revisionId": 270159,
+  "lastEdited": "2024-02-08T20:02:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.39 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "+4",
+    "recoil": "-23",
+    "loot xp": "10",
+    "exam xp": "4",
+    "node": "617154aa1cb55961fa0fdb3b",
+    "ID": "stock_417_hk_417_concave_e2"
+  },
+  "sections": []
+}

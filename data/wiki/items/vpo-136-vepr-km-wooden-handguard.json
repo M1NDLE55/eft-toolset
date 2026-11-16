@@ -1,0 +1,25 @@
+{
+  "title": "VPO-136 Vepr-KM wooden handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-136_Vepr-KM_wooden_handguard",
+  "revisionId": 340741,
+  "lastEdited": "2026-04-22T07:10:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.26 kg",
+    "grid": "1x1",
+    "price": "₽800",
+    "trader": "Skier LL1",
+    "ergonomics": "+10",
+    "recoil": "+0",
+    "Heat": "+5.4",
+    "Cooling": "-5",
+    "node": "59e6284f86f77440d569536f",
+    "ID": "handguard_ak_molot_vepr_km_vpo_136"
+  },
+  "sections": []
+}

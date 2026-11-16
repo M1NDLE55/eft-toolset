@@ -1,0 +1,26 @@
+{
+  "title": "AK 7.62x39 FAB Defense Ultimag 30R 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_7.62x39_FAB_Defense_Ultimag_30R_30-round_magazine",
+  "revisionId": 337880,
+  "lastEdited": "2026-03-07T06:41:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.156 kg",
+    "grid": "1x2",
+    "trader": "Skier LL3",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "1",
+    "checkmodifier": "-10",
+    "feedfailure": "Low",
+    "capacity": "30",
+    "caliber": "7.62x39mm, .366 TKM",
+    "node": "6272874a6c47bd74f92e2087",
+    "ID": "mag_ak_fab_defense_ultimag_ak_30r_762x39_30"
+  },
+  "sections": []
+}

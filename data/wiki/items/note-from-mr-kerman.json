@@ -1,0 +1,25 @@
+{
+  "title": "Note from Mr. Kerman",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_from_Mr._Kerman",
+  "revisionId": 339680,
+  "lastEdited": "2026-04-04T21:40:30Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "689b4ed2987b304021088e8f",
+    "ID": "item_info_note_default_user"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Falling Skies"
+    }
+  ]
+}

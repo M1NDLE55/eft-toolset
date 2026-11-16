@@ -1,0 +1,70 @@
+{
+  "title": "SZ-1 explosive charge (Terminal)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SZ-1_explosive_charge_(Terminal)",
+  "revisionId": 346994,
+  "lastEdited": "2026-06-16T16:32:42Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "1.4 kg",
+    "grid": "2x2",
+    "node": "6819f8df28294ec0730db6b4",
+    "id": "item_spec_sz_1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The charge is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "Used to open the door of the metal gate on Terminal."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "In different locations on Terminal. A single charge is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "First spawn",
+      "level": 5,
+      "text": "In an open crate to the right before the end of the road the gate is on."
+    },
+    {
+      "heading": "Second spawn",
+      "level": 5,
+      "text": "Inside the tent to the right before the end of the road the gate is on on a desk."
+    },
+    {
+      "heading": "Third spawn",
+      "level": 5,
+      "text": "On some barrels in the far corner to the right before the end of the road the gate is on."
+    },
+    {
+      "heading": "Fourth spawn",
+      "level": 5,
+      "text": "On a desk under a canopy in front of a container entrance further down the short road."
+    },
+    {
+      "heading": "Fifth spawn",
+      "level": 5,
+      "text": "On the crates to the right past the end of the road the gate is on."
+    },
+    {
+      "heading": "Sixth spawn",
+      "level": 5,
+      "text": "On a desk under a canopy at the end of the road the gate is on."
+    },
+    {
+      "heading": "Seventh spawn",
+      "level": 5,
+      "text": "On the corner of the trailer to the left past the end of the road the gate is on."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Radiator helix",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Radiator_helix",
+  "revisionId": 364960,
+  "lastEdited": "2026-10-25T21:43:00Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.42 kg",
+    "grid": "1x1",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5d1c774f86f7746d6620f8db",
+    "ID": "item_barter_electr_helix"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

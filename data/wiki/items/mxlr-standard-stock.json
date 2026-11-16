@@ -1,0 +1,22 @@
+{
+  "title": "MXLR standard stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MXLR_standard_stock",
+  "revisionId": 343419,
+  "lastEdited": "2026-05-06T07:46:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.5 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+1",
+    "recoil": "-24",
+    "node": "67c541ba5b84f7f36c03e555",
+    "ID": "stock_m1895_marlin_mxlr_std"
+  },
+  "sections": []
+}

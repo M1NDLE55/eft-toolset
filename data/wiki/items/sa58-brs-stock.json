@@ -1,0 +1,23 @@
+{
+  "title": "SA58 BRS stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_BRS_stock",
+  "revisionId": 337551,
+  "lastEdited": "2026-03-05T23:50:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.81 kg",
+    "grid": "2x1",
+    "price": "₽16,440",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+9",
+    "recoil": "-23.5",
+    "node": "5b7d64555acfc4001876c8e2",
+    "ID": "stock_sa58_ds_arms_para_brs"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Hare mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hare_mask",
+  "revisionId": 329230,
+  "lastEdited": "2025-12-24T16:22:33Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "67602a23c8e72a73250de737",
+    "ID": "item_equipment_facecover_xmass_mask_rabbit"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This face cover first appeared during Escape from Tarkov's 2024 Christmas Celebration."
+    }
+  ]
+}

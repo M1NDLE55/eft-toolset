@@ -1,0 +1,24 @@
+{
+  "title": "STM-9 9x19 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/STM-9_9x19_muzzle_brake",
+  "revisionId": 337766,
+  "lastEdited": "2026-03-06T02:06:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.084 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-0.5",
+    "recoil": "-6",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "60337f5dce399e10262255d1",
+    "ID": "muzzle_all_stmarms_stm9_muzzle_brake_9x19"
+  },
+  "sections": []
+}

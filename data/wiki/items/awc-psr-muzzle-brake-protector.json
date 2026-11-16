@@ -1,0 +1,23 @@
+{
+  "title": "AWC PSR muzzle brake protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AWC_PSR_muzzle_brake_protector",
+  "revisionId": 253965,
+  "lastEdited": "2023-11-02T23:30:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.001 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+2",
+    "velocity": "+0",
+    "Dura Burn": "-5",
+    "node": "612e0e04568c120fdd294258",
+    "ID": "muzzle_psr_awc_thread_protector_std_multi"
+  },
+  "sections": []
+}

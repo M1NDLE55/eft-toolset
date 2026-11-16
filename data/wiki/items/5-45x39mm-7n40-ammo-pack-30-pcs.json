@@ -1,0 +1,24 @@
+{
+  "title": "5.45x39mm 7N40 ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_7N40_ammo_pack_(30_pcs)",
+  "revisionId": 367153,
+  "lastEdited": "2026-11-02T23:09:48Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "64898602f09d032aa9399d56",
+    "ID": "item_ammo_box_545x39_30_7n40"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from Shipping Delay - Part 1"
+    }
+  ]
+}

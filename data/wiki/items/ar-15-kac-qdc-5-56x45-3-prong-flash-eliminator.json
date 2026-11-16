@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 KAC QDC 5.56x45 3-Prong Flash Eliminator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_KAC_QDC_5.56x45_3-Prong_Flash_Eliminator",
+  "revisionId": 346064,
+  "lastEdited": "2026-06-03T20:08:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-1.5",
+    "recoil": "-6",
+    "Heat": "-1.1",
+    "node": "626667e87379c44d557b7550",
+    "ID": "muzzle_ar15_kac_qdc_3_prong_flash_eliminator_556x45"
+  },
+  "sections": []
+}

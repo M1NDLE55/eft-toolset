@@ -1,0 +1,26 @@
+{
+  "title": "AR-10 Noveske SWS N6 10.5 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Noveske_SWS_N6_10.5_inch_handguard",
+  "revisionId": 342048,
+  "lastEdited": "2026-04-28T00:28:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.502 kg",
+    "grid": "2x1",
+    "price": "₽19,200",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+17",
+    "recoil": "+0",
+    "Heat": "-4.5",
+    "Cooling": "+5",
+    "loot xp": "20",
+    "node": "5d00ede1d7ad1a0940739a76",
+    "ID": "handguard_ar10_noveske_sws_n6_quadrail_10,5_inch"
+  },
+  "sections": []
+}

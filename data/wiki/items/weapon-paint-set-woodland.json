@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Woodland)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Woodland)",
+  "revisionId": 320983,
+  "lastEdited": "2025-11-14T16:07:18Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67c6c1b4faae9ae7250590b9",
+    "id": "item_camo_woodland_classic"
+  },
+  "sections": []
+}

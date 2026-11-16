@@ -1,0 +1,24 @@
+{
+  "title": "DevTac Ronin Reinforced Crown Plate (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Ronin_Reinforced_Crown_Plate_(Olive_Drab)",
+  "revisionId": 361918,
+  "lastEdited": "2026-09-24T15:17:35Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.65 kg",
+    "grid": "1x1",
+    "material": "Aramid",
+    "armor": "4",
+    "armor coverage": "Head top",
+    "durability": "14",
+    "penalties": "-1% movement speed, +0% turn speed, +0% Ergonomics",
+    "node": "6a845e00eaa1d4d30d038f71",
+    "ID": "item_equipment_facecover_devtac_head_armor_02_olive_drab"
+  },
+  "sections": []
+}

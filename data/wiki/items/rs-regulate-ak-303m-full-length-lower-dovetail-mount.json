@@ -1,0 +1,21 @@
+{
+  "title": "RS Regulate AK-303M Full Length Lower dovetail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RS_Regulate_AK-303M_Full_Length_Lower_dovetail_mount",
+  "revisionId": 314486,
+  "lastEdited": "2025-06-23T21:39:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.099 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+2",
+    "node": "65f1b1176dbd6c5ba2082eed",
+    "ID": "mount_dovetail_rsr_akr_1913_railed_mount"
+  },
+  "sections": []
+}

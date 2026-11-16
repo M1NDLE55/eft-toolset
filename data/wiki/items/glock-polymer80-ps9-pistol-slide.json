@@ -1,0 +1,28 @@
+{
+  "title": "Glock Polymer80 PS9 pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_Polymer80_PS9_pistol_slide",
+  "revisionId": 231548,
+  "lastEdited": "2023-03-23T10:12:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.355 kg",
+    "grid": "2x1",
+    "price": "₽14,000",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-2",
+    "Dura Burn": "-3",
+    "Heat": "+4.8",
+    "Cooling": "-1.4",
+    "node": "5a7afa25e899ef00135e31b0",
+    "ID": "reciever_glock_polymer80_ps9"
+  },
+  "sections": []
+}

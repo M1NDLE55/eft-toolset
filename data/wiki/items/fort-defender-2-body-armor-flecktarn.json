@@ -1,0 +1,40 @@
+{
+  "title": "FORT Defender-2 body armor (Flecktarn)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FORT_Defender-2_body_armor_(Flecktarn)",
+  "revisionId": 354682,
+  "lastEdited": "2026-08-15T20:52:02Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "5.7 kg",
+    "grid": "3x4",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 2",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Groin",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "210",
+    "penalties": "-1% movement speed, -4% turn speed, -1% Ergonomics",
+    "node": "69b11935f3783ec37c03a105",
+    "id": "item_equipment_armor_defender2_flecktarn_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "MBT Integrated Navigation System",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MBT_Integrated_Navigation_System",
+  "revisionId": 247846,
+  "lastEdited": "2023-09-18T09:33:26Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "2 kg",
+    "grid": "2x1",
+    "node": "60c080eb991ac167ad1c3ad4",
+    "id": "quest_gals_d3"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Surplus Goods from Mechanic"
+    }
+  ]
+}

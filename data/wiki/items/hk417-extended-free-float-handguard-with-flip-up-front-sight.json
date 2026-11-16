@@ -1,0 +1,24 @@
+{
+  "title": "HK417 Extended Free Float handguard with flip-up front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK417_Extended_Free_Float_handguard_with_flip-up_front_sight",
+  "revisionId": 342207,
+  "lastEdited": "2026-04-28T21:28:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.55 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+19",
+    "recoil": "+0",
+    "Heat": "+4.1",
+    "Cooling": "+3.3",
+    "node": "61703001d92c473c77021497",
+    "ID": "handguard_417_hk_417_extended_free_float"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "AK US Palm pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_US_Palm_pistol_grip",
+  "revisionId": 342008,
+  "lastEdited": "2026-04-28T00:02:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+5",
+    "recoil": "-1.5",
+    "node": "5c6bf4aa2e2216001219b0ae",
+    "ID": "pistolgrip_ak_us_palm_ak_palm"
+  },
+  "sections": []
+}

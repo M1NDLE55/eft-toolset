@@ -1,0 +1,24 @@
+{
+  "title": "HK 416 Geissele SMR HK 14.5 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416_Geissele_SMR_HK_14.5_inch_handguard",
+  "revisionId": 358326,
+  "lastEdited": "2026-09-09T20:07:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.462 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL4: Black, Desert dirt",
+    "ergonomics": "+18.5",
+    "recoil": "+0",
+    "Heat": "-6",
+    "Cooling": "+7.5",
+    "node": "6a157f5d8d059ca69c0a7864 6a157fa8af9c1c57b700778f",
+    "ID": "handguard_416_geissele_smr_hk_145_inch handguard_416_geissele_smr_hk_145_inch_ddc"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Ops-Core FAST Gunsight Mandible",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ops-Core_FAST_Gunsight_Mandible",
+  "revisionId": 344245,
+  "lastEdited": "2026-05-24T21:27:07Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL3",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Jaws, Throat",
+    "durability": "20",
+    "penalties": "+0% turn speed, -3% Ergonomics",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5a16ba61fcdbcb098008728a",
+    "id": "helmet_ops_core_fast_gunsight_mandible"
+  },
+  "sections": []
+}

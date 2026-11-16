@@ -1,0 +1,37 @@
+{
+  "title": "SIG P226R 9x19 pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_P226R_9x19_pistol",
+  "revisionId": 352586,
+  "lastEdited": "2026-08-09T19:52:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.802 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1: Standard, Mechanic LL1: Stripped variant",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "83.5",
+    "velocity": "377 m/s",
+    "range": "50 m",
+    "MOA": "10.31",
+    "Weaprecoil": "Vertical: 372, Horizontal: 267",
+    "rof": "30",
+    "caliber": "9x19mm Parabellum",
+    "node": "56d59856d2720bd8418b456a",
+    "ID": "weapon_sig_p226r_9x19"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| P226R Tactical |"
+    }
+  ]
+}

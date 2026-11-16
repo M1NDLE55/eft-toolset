@@ -1,0 +1,50 @@
+{
+  "title": "6B43 Zabralo-Sh body armor (EMR)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B43_Zabralo-Sh_body_armor_(EMR)",
+  "revisionId": 367560,
+  "lastEdited": "2026-11-04T16:45:11Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "10.8 kg",
+    "grid": "4x4",
+    "trader": "Ref LL4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Shoulders, Groin",
+    "default plates": "2x , 2x",
+    "default plates armor class": "6",
+    "default plates armor coverage": "Front Plate, Back Plate, Sides",
+    "durability": "350",
+    "penalties": "-9% movement speed, -5.5% turn speed, -7% Ergonomics",
+    "node": "545cdb794bdc2d3a198b456a",
+    "id": "heavy"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained by completing the quest Escort"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Dead Scavs\n- In Ground caches\n- In Weapon box (4x4)\n- In Weapon box (6x6)\n- On Glukhar's followers\n- On Kaban's followers\n- On Kollontay's followers\n- On Sanitar's followers\n- On Shturman's followers"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

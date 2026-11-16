@@ -1,0 +1,21 @@
+{
+  "title": "DVL-10 Lobaev Arms stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DVL-10_Lobaev_Arms_stock",
+  "revisionId": 268901,
+  "lastEdited": "2024-02-05T20:33:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.167 kg",
+    "grid": "2x1",
+    "ergonomics": "+12",
+    "recoil": "-25",
+    "node": "58889d0c2459775bc215d981",
+    "ID": "stock_dvl-10_lobaev_dvl-10_std"
+  },
+  "sections": []
+}

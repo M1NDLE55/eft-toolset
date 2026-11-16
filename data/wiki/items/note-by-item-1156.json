@@ -1,0 +1,25 @@
+{
+  "title": "Note by Item 1156",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_by_Item_1156",
+  "revisionId": 353531,
+  "lastEdited": "2026-08-13T21:06:29Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "68e63d4794fb983cb7098d2d",
+    "ID": "item_info_note_bluefire_mchs"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Picking up and reading this note starts the story chapter Blue Fire."
+    }
+  ]
+}

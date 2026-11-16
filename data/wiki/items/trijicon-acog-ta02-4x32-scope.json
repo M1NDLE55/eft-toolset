@@ -1,0 +1,26 @@
+{
+  "title": "Trijicon ACOG TA02 4x32 scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trijicon_ACOG_TA02_4x32_scope",
+  "revisionId": 356581,
+  "lastEdited": "2026-08-26T08:17:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.455 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "800",
+    "ergonomics": "-2",
+    "modes": "1",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "6a19487a4afae114f106ba39",
+    "ID": "scope_base_trijicon_acog_ta02_4x32"
+  },
+  "sections": []
+}

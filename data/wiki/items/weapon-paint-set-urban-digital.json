@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Urban Digital)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Urban_Digital)",
+  "revisionId": 348498,
+  "lastEdited": "2026-07-30T21:22:36Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67d7f04506f67cc02706317d",
+    "id": "item_camo_digital_urban"
+  },
+  "sections": []
+}

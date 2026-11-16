@@ -1,0 +1,27 @@
+{
+  "title": "Cold Fear infrared balaclava (Oak)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cold_Fear_infrared_balaclava_(Oak)",
+  "revisionId": 348536,
+  "lastEdited": "2026-07-30T21:57:52Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a9dca99de6826a650ee068",
+    "id": "item_equipment_facecover_coldgear_arena_bp_03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

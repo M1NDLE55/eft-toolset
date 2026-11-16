@@ -1,0 +1,27 @@
+{
+  "title": "Cold Fear infrared balaclava (MultiCam Tropic)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cold_Fear_infrared_balaclava_(MultiCam_Tropic)",
+  "revisionId": 348539,
+  "lastEdited": "2026-07-30T21:58:13Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a9dce47faa4210bb0807c8",
+    "id": "item_equipment_facecover_coldgear_arena_bp_06"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

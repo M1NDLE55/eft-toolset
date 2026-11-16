@@ -1,0 +1,22 @@
+{
+  "title": "Lantac BMD Blast Mitigation Device A3 direct thread adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lantac_BMD_Blast_Mitigation_Device_A3_direct_thread_adapter",
+  "revisionId": 356483,
+  "lastEdited": "2026-08-26T02:06:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+4",
+    "recoil": "-1",
+    "node": "5cf78496d7f00c065703d6ca",
+    "ID": "muzzle_ar10_lantac_bmd_adapter_a3_762x51"
+  },
+  "sections": []
+}

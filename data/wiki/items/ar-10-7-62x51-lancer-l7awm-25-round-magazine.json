@@ -1,0 +1,27 @@
+{
+  "title": "AR-10 7.62x51 Lancer L7AWM 25-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_7.62x51_Lancer_L7AWM_25-round_magazine",
+  "revisionId": 337965,
+  "lastEdited": "2026-03-08T00:20:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.35 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL4 after completing Lightkeeper's task Trouble in the Big City",
+    "ergonomics": "-3",
+    "checkaccuracy": "No",
+    "checkmodifier": "+5",
+    "loadmodifier": "+5",
+    "feedfailure": "Very Low",
+    "capacity": "25",
+    "caliber": "7.62x51mm NATO, 6.8x51mm",
+    "node": "65293c7a17e14363030ad308",
+    "ID": "mag_ar10_lancer_l7_awm_762x51_25"
+  },
+  "sections": []
+}

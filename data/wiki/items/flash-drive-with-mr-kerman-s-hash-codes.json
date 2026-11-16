@@ -1,0 +1,25 @@
+{
+  "title": "Flash drive with Mr. Kerman's hash codes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Flash_drive_with_Mr._Kerman's_hash_codes",
+  "revisionId": 339356,
+  "lastEdited": "2026-03-28T00:06:31Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "67c0345b354fca26a0008036",
+    "id": "q_flash_hesh_other"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

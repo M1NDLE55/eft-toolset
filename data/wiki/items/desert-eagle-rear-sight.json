@@ -1,0 +1,23 @@
+{
+  "title": "Desert Eagle rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Eagle_rear_sight",
+  "revisionId": 314644,
+  "lastEdited": "2025-06-27T23:09:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.006 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "668fe5e1800f0244f9036e46",
+    "ID": "sight_rear_deagle_magnum_research_std"
+  },
+  "sections": []
+}

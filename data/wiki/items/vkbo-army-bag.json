@@ -1,0 +1,23 @@
+{
+  "title": "VKBO army bag",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VKBO_army_bag",
+  "revisionId": 347942,
+  "lastEdited": "2026-07-16T16:33:31Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bag",
+    "slot": "Backpack",
+    "weight": "0.96 kg",
+    "grid": "3x4",
+    "trader": "Prapor LL1, Jaeger LL1",
+    "penalties": "-1% movement speed, +0% turn speed, -1% Ergonomics",
+    "slots": "4x2 grid (8 slots)",
+    "node": "5ab8ee7786f7742d8f33f0b9",
+    "id": "backpack_vkboarmy"
+  },
+  "sections": []
+}

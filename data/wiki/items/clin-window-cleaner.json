@@ -1,0 +1,36 @@
+{
+  "title": "Clin window cleaner",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Clin_window_cleaner",
+  "revisionId": 355026,
+  "lastEdited": "2026-08-18T14:26:22Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.5 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "59e358a886f7741776641ac3",
+    "id": "item_barter_household_wiper"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In the \"Crack House\" (lab building close to the warehouse 17) in the library on the second floor."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References : This is reference to a real-life Clin, a cleaning product made by a German company called Henkel."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "P226 Combat pistol grip (FDE)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Combat_pistol_grip_(FDE)",
+  "revisionId": 340636,
+  "lastEdited": "2026-04-21T09:16:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+3",
+    "node": "57c9a89124597704ee6faec1",
+    "ID": "pistolgrip_p226_sig_p226_std_fde"
+  },
+  "sections": []
+}

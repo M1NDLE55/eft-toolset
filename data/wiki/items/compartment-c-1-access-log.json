@@ -1,0 +1,31 @@
+{
+  "title": "Compartment C-1 access log",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Compartment_C-1_access_log",
+  "revisionId": 348862,
+  "lastEdited": "2026-08-02T01:35:15Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "69bb44cbd6c67f6265004ac1",
+    "id": "item_info_note_ice_vip"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- This is one of the minor evidence used in The Ticket"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "On the wall next to the Compartment C-1 door on level 7 of Icebreaker."
+    }
+  ]
+}

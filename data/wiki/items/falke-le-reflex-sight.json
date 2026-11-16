@@ -1,0 +1,24 @@
+{
+  "title": "FALKE LE reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FALKE_LE_reflex_sight",
+  "revisionId": 348593,
+  "lastEdited": "2026-07-30T22:13:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.349 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 1",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-2",
+    "modes": "1",
+    "node": "68a5ab09c44fa287ba0a97b5",
+    "ID": "scope_all_falke_falke_le"
+  },
+  "sections": []
+}

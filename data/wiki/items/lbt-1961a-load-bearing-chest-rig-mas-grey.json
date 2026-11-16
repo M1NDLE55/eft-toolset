@@ -1,0 +1,29 @@
+{
+  "title": "LBT-1961A Load Bearing Chest Rig (MAS Grey)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LBT-1961A_Load_Bearing_Chest_Rig_(MAS_Grey)",
+  "revisionId": 348345,
+  "lastEdited": "2026-07-29T10:58:26Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.36 kg",
+    "grid": "3x3",
+    "price": "₽51,000",
+    "BlocksArmor": "No",
+    "slots": "18 Slots",
+    "node": "5e9db13186f7742f845ee9d3",
+    "id": "item_equipment_rig_bearing"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 2 can be held in a raid inventory at the same time"
+    }
+  ]
+}

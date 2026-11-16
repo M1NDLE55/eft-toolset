@@ -1,0 +1,20 @@
+{
+  "title": "A.R.M.S. 22 ring cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A.R.M.S._22_ring_cap",
+  "revisionId": 343040,
+  "lastEdited": "2026-05-03T14:38:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "node": "68caace5f42a4476cf0be2b4",
+    "ID": "mount_base_arms_22_ring_cap"
+  },
+  "sections": []
+}

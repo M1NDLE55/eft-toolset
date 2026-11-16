@@ -1,0 +1,31 @@
+{
+  "title": "SSAPI level III+ ballistic plate (Side)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SSAPI_level_III%2B_ballistic_plate_(Side)",
+  "revisionId": 361891,
+  "lastEdited": "2026-09-24T15:02:41Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "1 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "material": "Ceramic",
+    "armor": "5",
+    "armor coverage": "Left Plate , Right Plate",
+    "durability": "15",
+    "penalties": "-0.5% movement speed, -0.5% turn speed, +0% Ergonomics",
+    "node": "6557458f83942d705f0c4962",
+    "id": "item_equipment_plate_SSAPI_5_side"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Left Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

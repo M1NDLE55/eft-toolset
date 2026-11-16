@@ -1,0 +1,22 @@
+{
+  "title": "M1895/MXLR Ranger Point Precision aluminum stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1895/MXLR_Ranger_Point_Precision_aluminum_stock",
+  "revisionId": 357276,
+  "lastEdited": "2026-09-01T09:56:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.595 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+6",
+    "recoil": "-18",
+    "node": "67c541ca26265106dd0697a0 67ff1f9f32abb9a4280b5178 67ff1fa88e8db1dcb80ccada",
+    "ID": "stock_m1895_ranger_point_precision_m_lok_aluminum_stock stock_m1895_ranger_point_precision_m_lok_aluminum_stock_fde stock_m1895_ranger_point_precision_m_lok_aluminum_stock_grn"
+  },
+  "sections": []
+}

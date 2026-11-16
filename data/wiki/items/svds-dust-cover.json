@@ -1,0 +1,23 @@
+{
+  "title": "SVDS dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVDS_dust_cover",
+  "revisionId": 215885,
+  "lastEdited": "2022-12-05T15:05:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.088 kg",
+    "grid": "2x1",
+    "price": "₽1,009",
+    "ergonomics": "+2",
+    "loot xp": "5",
+    "exam xp": "2",
+    "node": "5c471bd12e221602b4129c3a",
+    "ID": "reciever_svd_izhmash_svd_s_std"
+  },
+  "sections": []
+}

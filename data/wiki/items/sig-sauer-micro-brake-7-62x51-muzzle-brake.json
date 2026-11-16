@@ -1,0 +1,28 @@
+{
+  "title": "SIG Sauer Micro Brake 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_Micro_Brake_7.62x51_muzzle_brake",
+  "revisionId": 337749,
+  "lastEdited": "2026-03-06T01:57:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "price": "₽2,340",
+    "trader": "Skier LL3",
+    "ergonomics": "-3",
+    "accuracy": "+0",
+    "recoil": "-8",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5fbcbd02900b1d5091531dd3",
+    "ID": "muzzle_base_sig_micro_brake_762x51"
+  },
+  "sections": []
+}

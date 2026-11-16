@@ -1,0 +1,33 @@
+{
+  "title": "LBT-1961A Load Bearing Chest Rig (Goons Edition)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LBT-1961A_Load_Bearing_Chest_Rig_(Goons_Edition)",
+  "revisionId": 304900,
+  "lastEdited": "2025-01-31T14:08:38Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.36 kg",
+    "grid": "3x3",
+    "BlocksArmor": "No",
+    "slots": "18 Slots",
+    "node": "628baf0b967de16aab5a4f36",
+    "id": "item_equipment_rig_boss_birdeye"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 2 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Birdeye"
+    }
+  ]
+}

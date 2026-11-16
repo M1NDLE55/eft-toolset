@@ -1,0 +1,30 @@
+{
+  "title": "M700 7.62x51 AI AICS 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_7.62x51_AI_AICS_10-round_magazine",
+  "revisionId": 337686,
+  "lastEdited": "2026-03-06T01:22:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.5 kg",
+    "grid": "1x2",
+    "price": "₽3,900",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "checkaccuracy": "No",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "7.62x51mm NATO",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "5d25a6538abbc306c62e630d",
+    "ID": "mag_m700_ai_aics_762x51_10"
+  },
+  "sections": []
+}

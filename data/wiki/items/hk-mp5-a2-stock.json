@@ -1,0 +1,22 @@
+{
+  "title": "HK MP5 A2 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_A2_stock",
+  "revisionId": 329254,
+  "lastEdited": "2025-12-24T16:33:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.37 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+6",
+    "recoil": "-24",
+    "node": "5926d3c686f77410de68ebc8",
+    "ID": "stock_mp5_hk_a2_std"
+  },
+  "sections": []
+}

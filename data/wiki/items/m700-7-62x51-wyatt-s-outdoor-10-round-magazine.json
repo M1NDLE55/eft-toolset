@@ -1,0 +1,28 @@
+{
+  "title": "M700 7.62x51 Wyatt's Outdoor 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_7.62x51_Wyatt's_Outdoor_10-round_magazine",
+  "revisionId": 351411,
+  "lastEdited": "2026-08-05T22:22:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.5 kg",
+    "grid": "1x2",
+    "price": "₽3,900",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-1.5",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "7.62x51mm NATO",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "5bfeaa0f0db834001b734927",
+    "ID": "mag_m700_wyatt_762x51_10"
+  },
+  "sections": []
+}

@@ -1,0 +1,31 @@
+{
+  "title": "GreenBat lithium battery",
+  "url": "https://escapefromtarkov.fandom.com/wiki/GreenBat_lithium_battery",
+  "revisionId": 352812,
+  "lastEdited": "2026-08-09T21:32:42Z",
+  "kind": "item",
+  "categories": [
+    "Energy elements"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Energy element",
+    "weight": "0.043 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5e2aedd986f7746d404f3aa4",
+    "ID": "item_barter_energy_greenbat"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Ask for Directions\n- 2 can be obtained as a quest reward from Gunsmith Master - Part 4"
+    }
+  ]
+}

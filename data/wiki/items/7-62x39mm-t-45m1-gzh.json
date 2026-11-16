@@ -1,0 +1,39 @@
+{
+  "title": "7.62x39mm T-45M1 gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_T-45M1_gzh",
+  "revisionId": 356456,
+  "lastEdited": "2026-08-26T01:29:45Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.016 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "velocity": "720 m/s",
+    "damage": "65",
+    "accuracy": "-4",
+    "recoil": "-6",
+    "penetration": "30",
+    "armor damage": "46",
+    "ricochet": "35%",
+    "durability burn": "+20",
+    "heat": "+20",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "effects": "Tracer (red)",
+    "node": "59e4cf5286f7741778269d8a",
+    "id": "patron_762x39_T45M"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

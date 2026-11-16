@@ -1,0 +1,37 @@
+{
+  "title": "Kalashnikov AKS-74U 5.45x39 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kalashnikov_AKS-74U_5.45x39_assault_rifle",
+  "revisionId": 357239,
+  "lastEdited": "2026-08-31T17:36:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "2.694 kg",
+    "grid": "4x2",
+    "trader": "Prapor LL1: Standard, Mechanic LL1: Stripped variant",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "500",
+    "ergonomics": "66.5",
+    "velocity": "731 m/s",
+    "range": "300 m",
+    "MOA": "3.44",
+    "Weaprecoil": "Vertical: 80, Horizontal: 201",
+    "rof": "650",
+    "caliber": "5.45x39mm",
+    "node": "57dc2fa62459775949412633",
+    "ID": "weapon_izhmash_aks74u_545x39"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as initial equipment from Gunsmith - AKS-74U\n- 1 can be obtained as a quest reward from Shootout Picnic."
+    }
+  ]
+}

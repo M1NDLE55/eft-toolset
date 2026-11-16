@@ -1,0 +1,36 @@
+{
+  "title": "Antique axe",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Antique_axe",
+  "revisionId": 362425,
+  "lastEdited": "2026-09-29T14:13:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "1.1 kg",
+    "grid": "1x2",
+    "fire modes": "Chop 28 Damage, Stab 49 Damage",
+    "range": "Chop 0.45m, Stab 0.5m",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5bc9c1e2d4351e00367fbcf0",
+    "id": "weapon_valuable_wyccaxe"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Common fund stash\n- Weapon box (6x6)\n- Scavs\n- Scav Raiders"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Before patch 0.11.7 it wasn't usable as a melee weapon.\n- Easter eggs and References:\n  - This is a reference to the content creator Wycc220.\n  - \"Hatchlings\" refers to players only armed with a hatchet.\n- The real life trademark is Ågelsjön Mini Hatchet"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "SIG Sauer ROMEO4 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_ROMEO4_reflex_sight",
+  "revisionId": 362959,
+  "lastEdited": "2026-10-03T11:26:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Compact reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Compact reflex sight",
+    "weight": "0.089 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "zeroing": "25, 50, 100",
+    "sightrange": "150",
+    "ergonomics": "+0",
+    "modes": "1",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5b3116595acfc40019476364",
+    "ID": "scope_base_sig_romeo_4"
+  },
+  "sections": []
+}

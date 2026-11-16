@@ -1,0 +1,40 @@
+{
+  "title": "Cult Termite ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cult_Termite_ballistic_plate",
+  "revisionId": 361894,
+  "lastEdited": "2026-09-24T15:04:03Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "3.85 kg",
+    "grid": "2x2",
+    "material": "Titan",
+    "armor": "6",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "65",
+    "penalties": "-2% movement speed, -1.5% turn speed, -1% Ergonomics",
+    "node": "656fa99800d62bcd2e024088",
+    "id": "item_equipment_plate_SAPI_Cult_Termite_6class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Tagilla"
+    },
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

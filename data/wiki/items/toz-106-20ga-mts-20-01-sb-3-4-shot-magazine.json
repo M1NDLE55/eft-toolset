@@ -1,0 +1,30 @@
+{
+  "title": "TOZ-106 20ga MTs 20-01 Sb.3 4-shot magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TOZ-106_20ga_MTs_20-01_Sb.3_4-shot_magazine",
+  "revisionId": 337470,
+  "lastEdited": "2026-03-05T23:12:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "price": "₽1,000",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "4",
+    "caliber": "20/70",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "5a38ed75c4a28232996e40c6",
+    "ID": "mag_toz-106_mc_20-01_sb3_20x70_4"
+  },
+  "sections": []
+}

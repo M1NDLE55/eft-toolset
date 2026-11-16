@@ -1,0 +1,23 @@
+{
+  "title": "Wilcox Skull Lock head mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wilcox_Skull_Lock_head_mount",
+  "revisionId": 344306,
+  "lastEdited": "2026-05-24T21:47:55Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Head Mount",
+    "slot": "Headwear",
+    "weight": "0.5 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL2: Standard, Ref LL1: AN/PVS-14 variant, Peacekeeper LL2: AN/PVS-14 variant",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5a16bb52fcdbcb001a3b00dc",
+    "id": "helmet_wilcox_skull_lock"
+  },
+  "sections": []
+}

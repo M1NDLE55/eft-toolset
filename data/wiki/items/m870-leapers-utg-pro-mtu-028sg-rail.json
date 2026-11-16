@@ -1,0 +1,21 @@
+{
+  "title": "M870 Leapers UTG PRO MTU-028SG rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_Leapers_UTG_PRO_MTU-028SG_rail",
+  "revisionId": 340781,
+  "lastEdited": "2026-04-22T07:32:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "slot": "2x1",
+    "weight": "0.044 kg",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1",
+    "node": "5a7893c1c585673f2b5c374d",
+    "ID": "mount_870_utg_mtu028sg"
+  },
+  "sections": []
+}

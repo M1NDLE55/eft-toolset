@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Amoeba Urban)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Amoeba_Urban)",
+  "revisionId": 319405,
+  "lastEdited": "2025-10-19T20:31:45Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "6819d1d53c76870bf10fd809",
+    "id": "item_camo_amoeba_urban"
+  },
+  "sections": []
+}

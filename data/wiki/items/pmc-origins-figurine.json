@@ -1,0 +1,26 @@
+{
+  "title": "PMC Origins figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PMC_Origins_figurine",
+  "revisionId": 363711,
+  "lastEdited": "2026-10-07T22:39:46Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "6841b6b674a3c16f5e03d653",
+    "id": "Item_barter_tarko_prestige_03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only obtainable by reaching Prestige level 3 in the PvP game mode."
+    }
+  ]
+}

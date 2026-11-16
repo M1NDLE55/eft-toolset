@@ -1,0 +1,25 @@
+{
+  "title": "Experimental signal jammer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Experimental_signal_jammer",
+  "revisionId": 346787,
+  "lastEdited": "2026-06-14T12:30:00Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "node": "67bdea3ecf0cc29475092196",
+    "ID": "q_jammer_meh"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket."
+    }
+  ]
+}

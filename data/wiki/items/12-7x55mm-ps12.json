@@ -1,0 +1,40 @@
+{
+  "title": "12.7x55mm PS12",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12.7x55mm_PS12",
+  "revisionId": 322784,
+  "lastEdited": "2025-11-18T21:19:51Z",
+  "kind": "ammo",
+  "categories": [
+    "12.7x55mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2, Ref LL2",
+    "velocity": "300 m/s",
+    "damage": "115",
+    "accuracy": "+10",
+    "penetration": "28",
+    "armor damage": "60",
+    "ricochet": "40%",
+    "l bleed chance": "+30",
+    "h bleed chance": "+20",
+    "durability burn": "+40",
+    "heat": "+138.5",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "effects": "Subsonic",
+    "node": "5cadf6ddae9215051e1c23b2",
+    "id": "patron_127x55_ps12"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

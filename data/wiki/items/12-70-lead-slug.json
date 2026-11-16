@@ -1,0 +1,40 @@
+{
+  "title": "12/70 lead slug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_lead_slug",
+  "revisionId": 322847,
+  "lastEdited": "2025-11-18T21:29:02Z",
+  "kind": "ammo",
+  "categories": [
+    "12/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "price": "₽68",
+    "trader": "Skier LL1, Peacekeeper LL1, Jaeger LL1",
+    "velocity": "370 m/s",
+    "damage": "167",
+    "accuracy": "+120",
+    "penetration": "15",
+    "armor damage": "55",
+    "ricochet": "10%",
+    "l bleed chance": "+10",
+    "h bleed chance": "+15",
+    "durability burn": "+50",
+    "heat": "+110.8",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "node": "58820d1224597753c90aeb13",
+    "id": "patron_12x70_slug"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

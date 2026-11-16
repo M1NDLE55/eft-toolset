@@ -1,0 +1,40 @@
+{
+  "title": "Maska-1SCh bulletproof helmet (Christmas Edition)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Maska-1SCh_bulletproof_helmet_(Christmas_Edition)",
+  "revisionId": 346840,
+  "lastEdited": "2026-06-14T20:26:24Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "2.7 kg",
+    "grid": "2x2",
+    "material": "Armor steel",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "108",
+    "RicochetChance": "Medium",
+    "penalties": "-0% movement speed, -1% turn speed, -4% Ergonomics, High sound reduction",
+    "BlocksHeadset": "Yes",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6759af0f9c8a538dd70bfae6",
+    "id": "item_equipment_helmet_maska_1sh_killa_xmass"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Killa\n- Vengeful Killa"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This helmet first appeared during Escape from Tarkov's 2024 Christmas Celebration."
+    }
+  ]
+}

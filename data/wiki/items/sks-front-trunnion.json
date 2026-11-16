@@ -1,0 +1,21 @@
+{
+  "title": "SKS front trunnion",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_front_trunnion",
+  "revisionId": 321772,
+  "lastEdited": "2025-11-16T19:29:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "-1",
+    "node": "634f04d82e5def262d0b30c6",
+    "ID": "mount_sks_toz_sks_rear_sight_block"
+  },
+  "sections": []
+}

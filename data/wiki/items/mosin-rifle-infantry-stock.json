@@ -1,0 +1,27 @@
+{
+  "title": "Mosin Rifle Infantry stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_Infantry_stock",
+  "revisionId": 355397,
+  "lastEdited": "2026-08-21T19:49:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.8 kg",
+    "grid": "4x1",
+    "price": "₽2,160",
+    "trader": "Prapor LL1",
+    "ergonomics": "+9",
+    "recoil": "-20",
+    "Heat": "+9.9",
+    "Cooling": "-9.2",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5bfd35380db83400232fe5cc",
+    "ID": "stock_mosin_izhmash_mosin_infantry_wood"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Mosin Rifle standard stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_standard_stock",
+  "revisionId": 270183,
+  "lastEdited": "2024-02-08T20:10:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.75 kg",
+    "grid": "4x1",
+    "price": "₽2,460",
+    "ergonomics": "+10",
+    "recoil": "-20",
+    "Heat": "+9.9",
+    "Cooling": "-9.2",
+    "node": "5ae096d95acfc400185c2c81",
+    "ID": "stock_mosin_izhmash_mosin_std_wood"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "TangoDown Stubby BGV-MK46K foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TangoDown_Stubby_BGV-MK46K_foregrip",
+  "revisionId": 340422,
+  "lastEdited": "2026-04-20T15:07:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.072 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2: Black, Peacekeeper LL2: FDE, SG",
+    "recoil": "-1.5",
+    "node": "558032614bdc2de7118b4585 58c157be86f77403c74b2bb6 58c157c886f774032749fb06",
+    "ID": "foregrip_all_tango_down_stubby_bgv_mk46k_blk foregrip_all_tango_down_stubby_bgv_mk46k_fde foregrip_all_tango_down_stubby_bgv_mk46k_fg"
+  },
+  "sections": []
+}

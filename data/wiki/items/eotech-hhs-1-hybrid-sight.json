@@ -1,0 +1,25 @@
+{
+  "title": "EOTech HHS-1 hybrid sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/EOTech_HHS-1_hybrid_sight",
+  "revisionId": 362931,
+  "lastEdited": "2026-10-03T11:05:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.635 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3: Tan, Peacekeeper LL4: Black",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "600",
+    "ergonomics": "-3",
+    "modes": "2",
+    "recoil": "+0",
+    "node": "5c07dd120db834001c39092d 5c0a2cec0db834001b7ce47d",
+    "ID": "scope_all_eotech_hhs_1 scope_all_eotech_hhs_1_tan"
+  },
+  "sections": []
+}

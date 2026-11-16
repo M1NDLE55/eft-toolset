@@ -1,0 +1,36 @@
+{
+  "title": "FORT Defender-2 body armor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FORT_Defender-2_body_armor",
+  "revisionId": 354681,
+  "lastEdited": "2026-08-15T20:51:47Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "5.7 kg",
+    "grid": "3x4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Groin",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "210",
+    "penalties": "-1% movement speed, -4% turn speed, -1% Ergonomics",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5e9dacf986f774054d6b89f4",
+    "id": "item_equipment_armor_defender2"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

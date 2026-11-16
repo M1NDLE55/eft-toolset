@@ -1,0 +1,18 @@
+{
+  "title": ".300 Blackout BCP FMJ ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.300_Blackout_BCP_FMJ_ammo_pack_(50_pcs)",
+  "revisionId": 367080,
+  "lastEdited": "2026-11-02T23:06:12Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657023bebfc87b3a34093207",
+    "ID": "item_ammo_box_blackout_50_fmj"
+  },
+  "sections": []
+}

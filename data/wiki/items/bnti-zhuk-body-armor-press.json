@@ -1,0 +1,37 @@
+{
+  "title": "BNTI Zhuk body armor (Press)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BNTI_Zhuk_body_armor_(Press)",
+  "revisionId": 346947,
+  "lastEdited": "2026-06-15T23:55:20Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "2.37 kg",
+    "grid": "3x3",
+    "trader": "Ref LL1",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Back neck, Throat",
+    "default plates": "1x , 1x (Back)",
+    "default plates armor class": "3",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "110",
+    "penalties": "-1.5% movement speed, +0% turn speed, +0% Ergonomics",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5c0e5edb86f77461f55ed1f7",
+    "ID": "item_equipment_armor_zhuk3"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

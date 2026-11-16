@@ -1,0 +1,25 @@
+{
+  "title": "Stolen weapon case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stolen_weapon_case",
+  "revisionId": 298483,
+  "lastEdited": "2024-12-22T13:07:02Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "1.2 kg",
+    "grid": "5x2",
+    "node": "671a406a6d315b526708f103",
+    "id": "quest_missing_weaponcase"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Irresistible from Skier"
+    }
+  ]
+}

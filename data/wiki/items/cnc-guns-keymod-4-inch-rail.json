@@ -1,0 +1,21 @@
+{
+  "title": "CNC Guns KeyMod 4 inch rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/CNC_Guns_KeyMod_4_inch_rail",
+  "revisionId": 322430,
+  "lastEdited": "2025-11-18T16:41:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-0.2",
+    "node": "623c2f4242aee3103f1c44b7",
+    "ID": "mount_keymod_cnc_guns_medium_rail_section"
+  },
+  "sections": []
+}

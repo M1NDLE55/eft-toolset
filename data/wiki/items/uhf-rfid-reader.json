@@ -1,0 +1,58 @@
+{
+  "title": "UHF RFID Reader",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UHF_RFID_Reader",
+  "revisionId": 364413,
+  "lastEdited": "2026-10-13T19:28:19Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "45",
+    "exam xp": "5",
+    "node": "5c052fb986f7746b2101e909",
+    "ID": "Item_barter_electr_rfidreader"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Weapon box (6x6)\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the Concordia apartment 64 office room on the desk"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- On top of PC under the table against the toxic waste storage dome in the Main Working Area (O11)\n- On top of the tables next to a keyboard in the Console Room (B22)\n- In the conference room next to the gym, on top of the podium next to the laptop.\n- On the server rack in the laboratory security post"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In the Rasmussen store\n- In Techlight store"
+    },
+    {
+      "heading": "The Labyrinth",
+      "level": 3,
+      "text": "- The UHF RFID Reader can be expected everywhere as floor loot throughout the map."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Simple Side Job / Order From Outside"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "RFID is the acronym for \"Radio-frequency identification\" and UHF stands for \"Ultra high frequency\"."
+    }
+  ]
+}

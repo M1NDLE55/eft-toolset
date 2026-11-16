@@ -1,0 +1,25 @@
+{
+  "title": "Therapist's infection progression data",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Therapist's_infection_progression_data",
+  "revisionId": 366930,
+  "lastEdited": "2026-11-01T14:19:50Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "node": "6acc4f1e7587fb38c508c5fd",
+    "id": "item_hall_flash_hazard_data"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Halloween: For the Greater Good - An Agreement"
+    }
+  ]
+}

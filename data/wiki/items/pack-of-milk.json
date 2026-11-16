@@ -1,0 +1,27 @@
+{
+  "title": "Pack of milk",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pack_of_milk",
+  "revisionId": 321779,
+  "lastEdited": "2025-11-16T19:35:34Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "1 kg",
+    "grid": "1x2",
+    "effect": "Energy: +20, Hydration: +30, , Buffs:, 1s Delay; 300s Duration: - Increases Immunity (+1)",
+    "use time": "3s",
+    "node": "575146b724597720a27126d5",
+    "id": "drink_milk"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Ration supply crates\n- In Sport bags"
+    }
+  ]
+}

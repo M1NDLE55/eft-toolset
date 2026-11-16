@@ -1,0 +1,24 @@
+{
+  "title": "SilencerCo Salvo 12 thread adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SilencerCo_Salvo_12_thread_adapter",
+  "revisionId": 339183,
+  "lastEdited": "2026-03-27T20:09:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+0.5",
+    "accuracy": "+1",
+    "recoil": "+0",
+    "Heat": "-1.3",
+    "node": "5b363e1b5acfc4771e1c5e80",
+    "ID": "muzzle_saiga12_silencerco_salvo_adaper_12g"
+  },
+  "sections": []
+}

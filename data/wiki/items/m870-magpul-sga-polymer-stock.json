@@ -1,0 +1,22 @@
+{
+  "title": "M870 Magpul SGA polymer stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_Magpul_SGA_polymer_stock",
+  "revisionId": 333400,
+  "lastEdited": "2026-02-02T17:34:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.68 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+10",
+    "recoil": "-29",
+    "node": "5a78813bc5856700186c4abe",
+    "ID": "stock_870_magpul_sga"
+  },
+  "sections": []
+}

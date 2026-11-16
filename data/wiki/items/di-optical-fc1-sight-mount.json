@@ -1,0 +1,26 @@
+{
+  "title": "DI Optical FC1 sight mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DI_Optical_FC1_sight_mount",
+  "revisionId": 356656,
+  "lastEdited": "2026-08-27T20:40:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, after unlocking DI Optical FC1 reflex sight in Arena BattlePass Season 2",
+    "node": "6985bed26be2752c150e6898",
+    "ID": "mount_all_di_optical_fc1_mount"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

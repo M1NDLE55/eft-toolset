@@ -1,0 +1,22 @@
+{
+  "title": "AKS-74/AKS-74U Zenit PT Lock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74/AKS-74U_Zenit_PT_Lock",
+  "revisionId": 353015,
+  "lastEdited": "2026-08-09T22:25:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+0",
+    "recoil": "+0",
+    "node": "59ecc28286f7746d7a68aa8c",
+    "ID": "stock_ak_zenit_pt-3_lock"
+  },
+  "sections": []
+}

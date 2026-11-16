@@ -1,0 +1,47 @@
+{
+  "title": "12/70 Copper Sabot Premier HP slug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_Copper_Sabot_Premier_HP_slug",
+  "revisionId": 306525,
+  "lastEdited": "2025-03-13T07:41:57Z",
+  "kind": "ammo",
+  "categories": [
+    "12/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.043 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "velocity": "442 m/s",
+    "damage": "206",
+    "accuracy": "+150",
+    "recoil": "+10",
+    "penetration": "14",
+    "armor damage": "46",
+    "ricochet": "10%",
+    "l bleed chance": "+35",
+    "h bleed chance": "+25",
+    "durability burn": "+50",
+    "heat": "+105.8",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "loot xp": "0",
+    "exam xp": "10",
+    "node": "5d6e68b3a4b9361bca7e50b5",
+    "id": "patron_12x70_slug_hp_copper"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Eastereggs and References: 12/70 Copper Sabot Premier HP slug is based off \"Remington's Premier Series CopperSolidTM Hollow Point Magnum Sabot Slug\" Ammunition"
+    }
+  ]
+}

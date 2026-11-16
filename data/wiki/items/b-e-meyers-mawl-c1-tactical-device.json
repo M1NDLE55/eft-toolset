@@ -1,0 +1,28 @@
+{
+  "title": "B.E. Meyers MAWL-C1+ tactical device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/B.E._Meyers_MAWL-C1%2B_tactical_device",
+  "revisionId": 357186,
+  "lastEdited": "2026-08-30T23:25:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.286 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-1.5",
+    "modes": "6",
+    "node": "644a3df63b0b6f03e101e065",
+    "ID": "tactical_all_bemeyers_mawl_c1_plus"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is green"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Ballistic Advantage Lo-Pro Gas Block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Ballistic_Advantage_Lo-Pro_Gas_Block",
+  "revisionId": 356387,
+  "lastEdited": "2026-08-26T00:38:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.053 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+1",
+    "recoil": "-3",
+    "Heat": "-2",
+    "Cooling": "+1",
+    "node": "63d3ce281fe77d0f2801859e",
+    "ID": "gas_block_ar15_ba_lo_pro"
+  },
+  "sections": []
+}

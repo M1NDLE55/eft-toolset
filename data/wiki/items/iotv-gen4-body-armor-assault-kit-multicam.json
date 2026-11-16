@@ -1,0 +1,40 @@
+{
+  "title": "IOTV Gen4 body armor (Assault Kit, MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/IOTV_Gen4_body_armor_(Assault_Kit%2C_MultiCam)",
+  "revisionId": 365034,
+  "lastEdited": "2026-10-26T00:00:31Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "8.18 kg",
+    "grid": "4x3",
+    "trader": "Ragman LL4, after completing his task Textile - Part 1 (USEC only)",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Shoulders",
+    "default plates": "2x , 2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate, Sides",
+    "durability": "212",
+    "penalties": "-5% movement speed, -4% turn speed, -5% Ergonomics",
+    "node": "5b44cf1486f77431723e3d05",
+    "id": "item_equipment_armor_iotv_1"
+  },
+  "sections": [
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Stabilize Business"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

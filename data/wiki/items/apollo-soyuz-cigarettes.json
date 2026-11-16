@@ -1,0 +1,31 @@
+{
+  "title": "Apollo Soyuz cigarettes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Apollo_Soyuz_cigarettes",
+  "revisionId": 363224,
+  "lastEdited": "2026-10-05T15:48:44Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "573475fb24597737fb1379e1",
+    "id": "cigarettes_soyuz_apollo"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Ration supply crate\n- Jacket\n- Drawer"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a parody of the \"Apollo-Soyuz\" Cigarettes."
+    }
+  ]
+}

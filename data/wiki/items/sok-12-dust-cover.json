@@ -1,0 +1,26 @@
+{
+  "title": "SOK-12 dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_dust_cover",
+  "revisionId": 344125,
+  "lastEdited": "2026-05-21T10:01:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.12 kg",
+    "grid": "2x1",
+    "price": "₽1,200",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "node": "57616c112459773cce774d66",
+    "ID": "reciever_saiga12_izhmash_saiga12k_10_std"
+  },
+  "sections": []
+}

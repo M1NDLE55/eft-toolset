@@ -1,0 +1,20 @@
+{
+  "title": "AI AXMC GTAC AR-type pistol grip adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_GTAC_AR-type_pistol_grip_adapter",
+  "revisionId": 297044,
+  "lastEdited": "2024-11-24T12:48:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "ergonomics": "-1",
+    "node": "62811e335631d45211793c95",
+    "ID": "pistolgrip_ax_gtac_ax_pistol_grip_adapter_pb"
+  },
+  "sections": []
+}

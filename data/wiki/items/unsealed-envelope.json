@@ -1,0 +1,25 @@
+{
+  "title": "Unsealed envelope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Unsealed_envelope",
+  "revisionId": 336535,
+  "lastEdited": "2026-02-24T15:18:28Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "68d2f4aff8817df4690db3d1",
+    "id": "item_info_note_envelope_opened"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Accidental Witness"
+    }
+  ]
+}

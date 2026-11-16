@@ -1,0 +1,21 @@
+{
+  "title": "UM Tactical UM3 pistol sight mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UM_Tactical_UM3_pistol_sight_mount",
+  "revisionId": 256902,
+  "lastEdited": "2023-12-07T16:48:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1",
+    "node": "5a7b4900e899ef197b331a2a",
+    "ID": "mount_glock_um_tactical_um3_sight_mount"
+  },
+  "sections": []
+}

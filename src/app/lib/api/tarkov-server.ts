@@ -13,6 +13,7 @@ import type {
   MarketBoard,
   MarketRow,
   ItemUses,
+  CachedItemInfo,
 } from "@/app/lib/cache/types";
 import type {
   AmmoItemData,
@@ -181,6 +182,12 @@ interface RawItem {
   basePrice?: number | null;
   lastLowPrice?: number | null;
   avg24hPrice?: number | null;
+  low24hPrice?: number | null;
+  high24hPrice?: number | null;
+  lastOfferCount?: number | null;
+  stackMaxSize?: number | null;
+  /** A translation key, like name. */
+  description?: string | null;
   changeLast48hPercent?: number | null;
   types?: string[] | null;
   categories?: string[] | null;
@@ -392,6 +399,8 @@ interface ItemsContext {
   nameById: Map<string, string>;
   translations: TranslationDictionary;
   fleaMarket?: ItemsData["fleaMarket"];
+  /** Item category id to its English name. */
+  categoryNames: Map<string, string>;
 }
 
 interface TasksContext {
@@ -417,6 +426,7 @@ interface RelationsContext {
   bartersByItem: Map<string, RawBarter[]>;
   bartersByReward: Map<string, RawBarter[]>;
   craftsByItem: Map<string, RawCraft[]>;
+  craftsByReward: Map<string, RawCraft[]>;
 }
 
 interface OfferContext {
@@ -878,6 +888,30 @@ export async function getItemDetail(
       )
     )
     .filter((craft) => craft.rewardItems.length > 0);
+  const bartersGiving = relatedBarters(relations.bartersByReward, itemId)
+    .map((barter) =>
+      projectBarter(
+        barter,
+        itemContext.byId,
+        itemContext.translations,
+        traderNames,
+        taskContext.byId,
+        taskContext.translations
+      )
+    )
+    .filter((barter) => barter.requiredItems.length > 0);
+  const craftsGiving = (relations.craftsByReward.get(itemId) ?? [])
+    .map((craft) =>
+      projectCraft(
+        craft,
+        itemContext.byId,
+        itemContext.translations,
+        stations,
+        taskContext.byId,
+        taskContext.translations
+      )
+    )
+    .filter((craft) => craft.requiredItems.length > 0);
 
   const detail: ComposedItem = {
     ...projectCachedItem(
@@ -891,9 +925,34 @@ export async function getItemDetail(
     bartersUsing,
     bartersFor: barterOffersOf(item, offers),
     craftsUsing,
+    bartersGiving,
+    craftsGiving,
+    info: projectItemInfo(item, itemContext),
   };
   details.set(itemId, detail);
   return detail;
+}
+
+function projectItemInfo(item: RawItem, context: ItemsContext): CachedItemInfo {
+  const description = translateNullable(item.description, context.translations);
+  return {
+    description: description && description !== item.description ? description.slice(0, 4_000) : null,
+    weight: finiteNumber(item.weight),
+    basePrice: finiteNumber(item.basePrice),
+    avg24hPrice: finiteNumber(item.avg24hPrice),
+    low24hPrice: finiteNumber(item.low24hPrice),
+    high24hPrice: finiteNumber(item.high24hPrice),
+    lastLowPrice: finiteNumber(item.lastLowPrice),
+    lastOfferCount: finiteNumber(item.lastOfferCount),
+    stackMaxSize: positiveFiniteNumber(item.stackMaxSize),
+    // Most specific first, without the catch-all root.
+    categories: (item.categories ?? [])
+      .flatMap((id) => {
+        const name = context.categoryNames.get(id);
+        return name && name !== "Item" && name !== "Compound item" ? [name] : [];
+      })
+      .slice(0, 4),
+  };
 }
 
 function itemUses(
@@ -1074,7 +1133,21 @@ async function loadItems(gameMode: GameMode): Promise<ItemsContext> {
         nameById.set(item.id, name);
       }
     }
-    return { items, byId, byName, bySlug, nameById, translations, fleaMarket: itemsEnvelope.data.fleaMarket };
+    const categoryNames = new Map<string, string>();
+    for (const [id, category] of Object.entries(itemsEnvelope.data.itemCategories ?? {})) {
+      const categoryName = translate(category.name, translations);
+      if (categoryName) categoryNames.set(id, categoryName);
+    }
+    return {
+      items,
+      byId,
+      byName,
+      bySlug,
+      nameById,
+      translations,
+      fleaMarket: itemsEnvelope.data.fleaMarket,
+      categoryNames,
+    };
   });
 }
 
@@ -1501,12 +1574,16 @@ async function loadRelations(gameMode: GameMode): Promise<RelationsContext> {
     const bartersByItem = new Map<string, RawBarter[]>();
     const bartersByReward = new Map<string, RawBarter[]>();
     const craftsByItem = new Map<string, RawCraft[]>();
+    const craftsByReward = new Map<string, RawCraft[]>();
     for (const barter of bartersEnvelope.data) {
       indexRelation(bartersByItem, barter.requiredItems, barter);
       indexRelation(bartersByReward, barter.offeredItem ? [barter.offeredItem] : [], barter);
     }
-    for (const craft of craftsEnvelope.data) indexRelation(craftsByItem, craft.requiredItems, craft);
-    return { bartersByItem, bartersByReward, craftsByItem };
+    for (const craft of craftsEnvelope.data) {
+      indexRelation(craftsByItem, craft.requiredItems, craft);
+      indexRelation(craftsByReward, craft.productItem ? [craft.productItem] : [], craft);
+    }
+    return { bartersByItem, bartersByReward, craftsByItem, craftsByReward };
   });
 }
 
@@ -1685,6 +1762,7 @@ function isRawItem(value: unknown): value is RawItem {
     value.shortName,
     value.gridImageLink,
     value.wikiLink,
+    value.description,
   ];
   const numberFields = [
     value.fleaMarketFee,
@@ -1695,6 +1773,10 @@ function isRawItem(value: unknown): value is RawItem {
     value.basePrice,
     value.lastLowPrice,
     value.avg24hPrice,
+    value.low24hPrice,
+    value.high24hPrice,
+    value.lastOfferCount,
+    value.stackMaxSize,
     value.changeLast48hPercent,
   ];
   return (

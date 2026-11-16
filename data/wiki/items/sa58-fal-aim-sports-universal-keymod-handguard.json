@@ -1,0 +1,23 @@
+{
+  "title": "SA58/FAL AIM Sports Universal KeyMod handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58/FAL_AIM_Sports_Universal_KeyMod_handguard",
+  "revisionId": 340849,
+  "lastEdited": "2026-04-22T08:31:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.211 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+20",
+    "Heat": "+2",
+    "Cooling": "+3.2",
+    "node": "5b7be2345acfc400196d524a",
+    "ID": "handguard_fal_aim_sport_universal_keymod"
+  },
+  "sections": []
+}

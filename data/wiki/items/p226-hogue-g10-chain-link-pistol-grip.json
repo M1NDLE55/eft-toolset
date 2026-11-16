@@ -1,0 +1,21 @@
+{
+  "title": "P226 Hogue G10 Chain Link pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Hogue_G10_Chain_Link_pistol_grip",
+  "revisionId": 340891,
+  "lastEdited": "2026-04-22T08:59:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+4",
+    "node": "5bffef760db8340019668fe4",
+    "ID": "pistolgrip_p226_hogue_chain_link_g10_g_mascus"
+  },
+  "sections": []
+}

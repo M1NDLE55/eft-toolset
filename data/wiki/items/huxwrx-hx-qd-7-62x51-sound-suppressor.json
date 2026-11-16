@@ -1,0 +1,25 @@
+{
+  "title": "HUXWRX HX-QD 7.62x51 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HUXWRX_HX-QD_7.62x51_sound_suppressor",
+  "revisionId": 357290,
+  "lastEdited": "2026-09-01T10:51:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.55 kg",
+    "grid": "2x1",
+    "ergonomics": "-14.5",
+    "velocity": "+1.5",
+    "recoil": "-4.5",
+    "Dura Burn": "+35",
+    "Heat": "+13.5",
+    "Cooling": "+3",
+    "node": "6a158e4abf497aade10030e0 6a1eb32c6cd328ea90037455",
+    "ID": "silencer_base_huxwrx_hxqd_762_762x51 silencer_base_huxwrx_hxqd_762_762x51_tan"
+  },
+  "sections": []
+}

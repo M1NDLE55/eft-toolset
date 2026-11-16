@@ -1,0 +1,24 @@
+{
+  "title": "SIG Sauer ROMEO7 1x30 reflex sight (Prototype)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_ROMEO7_1x30_reflex_sight_(Prototype)",
+  "revisionId": 293333,
+  "lastEdited": "2024-09-30T09:55:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.354 kg",
+    "grid": "2x1",
+    "trader": "Skier LL1",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "800",
+    "ergonomics": "-3",
+    "modes": "1",
+    "node": "6477772ea8a38bb2050ed4db",
+    "ID": "scope_all_sig_sauer_romeo7_1x30"
+  },
+  "sections": []
+}

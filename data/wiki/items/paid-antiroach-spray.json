@@ -1,0 +1,32 @@
+{
+  "title": "PAID AntiRoach spray",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PAID_AntiRoach_spray",
+  "revisionId": 366475,
+  "lastEdited": "2026-10-30T21:33:19Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.5 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "loot xp": "12",
+    "node": "59e3596386f774176c10a2a2",
+    "id": "item_barter_household_antiinsect"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Medical supply crate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: This is a parody of the insecticide brand, Raid."
+    }
+  ]
+}

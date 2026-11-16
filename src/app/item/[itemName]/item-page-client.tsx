@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 import LoadingSkeleton from "@/app/components/item/loading-skeleton";
-import GenericDetails from "@/app/components/item/generic-details";
-import { BartersUsing, CraftsUsing, HideoutUses, UsedInTasks } from "@/app/components/item/item-relations";
 import SimpleError from "@/app/components/global/error/simple-error";
 import { primeItem, useItem } from "@/app/lib/cache/hooks";
 import type { ItemReference } from "@/app/lib/cache/fetcher";
@@ -11,21 +9,26 @@ import type { ComposedItem } from "@/app/lib/cache/types";
 import type { GameMode } from "@/components/game-mode/mode";
 import { addScoutedItem } from "@/app/lib/scouted-items/store";
 import { Button } from "@/components/ui/button";
-import { PriceTrend } from "@/app/components/item/price-trend";
 import { bestSell } from "@/app/lib/item-price";
 import { summarizeNeeds } from "@/app/lib/item-needs";
 import { recordPrices, usePriceHistories } from "@/app/lib/price-history";
 import { useGameMode } from "@/components/game-mode/context";
-import { ItemBreadcrumb } from "@/app/components/item/item-faq";
-import { FaqSection } from "@/app/components/seo/faq-section";
-import { itemFaq } from "@/app/lib/seo/item";
+import type { ItemWiki } from "@/app/lib/wiki/item-wiki";
+import type { ActiveLayout } from "@/app/lib/item-views/views";
+import { ItemPageView } from "@/app/components/item/item-view";
 
 export function ItemPageClient({
   reference,
   initial,
+  wiki,
+  layout,
 }: {
   reference: ItemReference;
   initial: { gameMode: GameMode; item: ComposedItem; renderedAt: number } | null;
+  /** The item's wiki page, the same in every game mode; null without one. */
+  wiki: ItemWiki | null;
+  /** The view the server rendered, from the visitor's cookie. */
+  layout: ActiveLayout;
 }) {
   useState(() => {
     if (initial && typeof window !== "undefined") primeItem(reference, initial.gameMode, initial.item, initial.renderedAt);
@@ -70,28 +73,26 @@ export function ItemPageClient({
   if (!item) {
     return <SimpleError>No item named &ldquo;{itemName}&rdquo; was found.</SimpleError>;
   }
-  const needs = summarizeNeeds(item);
 
   return (
-    <article className="flex flex-col gap-5">
+    <article className="flex flex-col gap-3">
       {stale && (
         <p role="status" className="border border-amber-700/60 bg-amber-950/30 px-3 py-2 text-xs text-amber-200">
           Showing saved data while fresh prices load.
         </p>
       )}
-      <ItemBreadcrumb name={item.name} />
-      <GenericDetails item={item} />
-      {liveItem && livePrice !== null && <PriceTrend points={history(liveItem.name)} price={livePrice} now={now} />}
-      {needs && (
-        <p role="note" className="border border-[#3a3326] bg-[#1a1610] px-3 py-2 text-sm text-[#c8b384]">
-          {needs.summary}
-        </p>
-      )}
-      <UsedInTasks tasks={item.usedInTasks} />
-      <HideoutUses requirements={item.hideoutRequirements} slots={item.hideoutSlots} />
-      <BartersUsing barters={item.bartersUsing} />
-      <CraftsUsing crafts={item.craftsUsing} />
-      <FaqSection id="item-faq" title={`${item.name}: price questions`} entries={itemFaq(item)} />
+      <ItemPageView
+        serverLayout={layout}
+        context={{
+          item,
+          // A wiki page belongs to one item; ignore it if the page now shows another.
+          wiki: wiki && initial?.item.id === item.id ? wiki : null,
+          needs: summarizeNeeds(item),
+          history: liveItem ? history(liveItem.name) : [],
+          livePrice,
+          now,
+        }}
+      />
     </article>
   );
 }

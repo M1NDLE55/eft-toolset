@@ -1,0 +1,28 @@
+{
+  "title": "Figley sunglasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Figley_sunglasses",
+  "revisionId": 344685,
+  "lastEdited": "2026-05-25T16:33:24Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.027 kg",
+    "grid": "2x1",
+    "trader": "Ref LL1, after unlocking it in Ref's Drop I",
+    "blindness protect": "25%",
+    "node": "68beded9233f2c935b0eda04",
+    "id": "item_equipment_glasses_oakley_x_bp2_blk"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

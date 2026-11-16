@@ -1,0 +1,39 @@
+{
+  "title": "7.62x51mm Ball 11 Long Range",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_Ball_11_Long_Range",
+  "revisionId": 341119,
+  "lastEdited": "2026-04-23T18:09:43Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x51mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "velocity": "805 m/s",
+    "damage": "95",
+    "accuracy": "+15",
+    "recoil": "+15",
+    "penetration": "63",
+    "armor damage": "88",
+    "ricochet": "43.5%",
+    "l bleed chance": "+10",
+    "h bleed chance": "+10",
+    "durability burn": "+70",
+    "heat": "+102",
+    "feedfailure": "High",
+    "misfire": "Medium",
+    "node": "67dd38986205be431305a0f7",
+    "id": "patron_762x51_ball_11_long_range"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This cartridge can only be used by bolt-action rifles."
+    }
+  ]
+}

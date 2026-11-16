@@ -1,0 +1,26 @@
+{
+  "title": "KRISS Vector 9x19 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KRISS_Vector_9x19_flash_hider",
+  "revisionId": 337745,
+  "lastEdited": "2026-03-06T01:55:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "price": "₽1,340",
+    "trader": "Skier LL3",
+    "ergonomics": "-0.5",
+    "accuracy": "+0",
+    "recoil": "-7",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5fbbc3324e8a554c40648348",
+    "ID": "muzzle_vector_kriss_flash_hider_std_9x19"
+  },
+  "sections": []
+}

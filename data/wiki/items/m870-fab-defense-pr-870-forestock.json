@@ -1,0 +1,23 @@
+{
+  "title": "M870 FAB Defense PR-870 forestock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_FAB_Defense_PR-870_forestock",
+  "revisionId": 340778,
+  "lastEdited": "2026-04-22T07:30:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.22 kg",
+    "grid": "2x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+5",
+    "Heat": "+2.2",
+    "Cooling": "-1.1",
+    "node": "5a788031c585673f2b5c1c79",
+    "ID": "handguard_870_fab_defence_pr870"
+  },
+  "sections": []
+}

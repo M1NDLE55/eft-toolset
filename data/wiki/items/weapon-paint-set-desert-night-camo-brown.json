@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Desert Night Camo Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Desert_Night_Camo_Brown)",
+  "revisionId": 356795,
+  "lastEdited": "2026-08-29T20:26:24Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67e6a41f20782e757702b364",
+    "id": "item_camo_dnc_brown"
+  },
+  "sections": []
+}

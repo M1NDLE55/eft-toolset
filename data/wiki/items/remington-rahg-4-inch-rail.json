@@ -1,0 +1,21 @@
+{
+  "title": "Remington RAHG 4 inch rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Remington_RAHG_4_inch_rail",
+  "revisionId": 322129,
+  "lastEdited": "2025-11-17T01:55:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-0.2",
+    "node": "5c0102b20db834001d23eebc",
+    "ID": "mount_rahg_remington_4_inch_rahg_rail_section"
+  },
+  "sections": []
+}

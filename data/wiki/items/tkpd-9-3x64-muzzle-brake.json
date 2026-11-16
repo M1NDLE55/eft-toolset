@@ -1,0 +1,24 @@
+{
+  "title": "TKPD 9.3x64 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TKPD_9.3x64_muzzle_brake",
+  "revisionId": 343323,
+  "lastEdited": "2026-05-05T19:07:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.29 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-3",
+    "accuracy": "+2",
+    "recoil": "-9",
+    "Heat": "-1",
+    "node": "68aeeb3e9df2c1144f0aaa4b",
+    "ID": "muzzle_tkpd_sniperarms_dynamics_tkpd_std_93x64"
+  },
+  "sections": []
+}

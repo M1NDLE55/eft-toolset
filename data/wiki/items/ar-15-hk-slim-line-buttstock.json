@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 HK Slim Line buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_HK_Slim_Line_buttstock",
+  "revisionId": 357365,
+  "lastEdited": "2026-09-01T13:23:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.695 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3: Black, green brown",
+    "ergonomics": "+10",
+    "recoil": "-21.5",
+    "node": "5bb20e70d4351e0035629f8f 6a15aef607619a15b1023c51",
+    "ID": "stock_ar15_hk_slim_line stock_ar15_hk_slim_line_ral8k"
+  },
+  "sections": []
+}

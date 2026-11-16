@@ -1,0 +1,39 @@
+{
+  "title": "SJ9 TGLabs combat stimulant injector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SJ9_TGLabs_combat_stimulant_injector",
+  "revisionId": 358106,
+  "lastEdited": "2026-09-08T20:36:25Z",
+  "kind": "item",
+  "categories": [
+    "Stimulants"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injector",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "effect": "Buffs:, 6s Delay; 300s Duration: - Lowers body temperature (-7 °C) Debuffs:, 6s Delay; 300s Duration: - Decreases Metabolism (-20) 6s Delay; 420s Duration: - Decreases health regeneration (-0.1/s) - Causes 300s Delay; 120s Duration:, Causes",
+    "use time": "2s",
+    "loot xp": "20",
+    "exam xp": "8",
+    "node": "5fca13ca637ee0341a484f46",
+    "ID": "SJ9_TGLabs"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Using this stimulant will lower the body Temperature by 7 °C, making the user harder to be seen by thermal scopes and the T-7 thermal goggles."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On Cultists\n- In Airdrops"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Laboratory experiment's area (G12) on the first level (Requires TerraGroup Labs keycard (Black))\n- Sanitar's room in the Laboratory block (G22) on the second level (Requires Keycard with a blue marking)\n- Laboratory block (G22) on the second level in The Lab. (Requires TerraGroup Labs keycard (Green))\n- On the floor of the \"Med Hut\" on the main floor, first Level (O11)\n- On the left hand table in the Laboratory quarantine zone (G11) (Requires TerraGroup Labs keycard (Blue))\n- On the shelf in front of the Laboratory quarantine zone (G11)\n- In the rooms above Laboratory quarantine zone (G11)\n- In the laboratories inside the containment block"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "AK 100-series metal skeletonized stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_100-series_metal_skeletonized_stock",
+  "revisionId": 323688,
+  "lastEdited": "2025-11-20T05:44:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.264 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+10",
+    "recoil": "-21",
+    "node": "6386300124a1dc425c00577a",
+    "ID": "stock_ak_izhmash_ak100_triangle_stock"
+  },
+  "sections": []
+}

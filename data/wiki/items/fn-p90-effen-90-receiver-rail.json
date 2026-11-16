@@ -1,0 +1,24 @@
+{
+  "title": "FN P90 EFFEN 90 receiver rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_EFFEN_90_receiver_rail",
+  "revisionId": 212541,
+  "lastEdited": "2022-10-19T15:22:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "price": "₽1,000",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5cc7012ae4a949001252b43e",
+    "ID": "mount_p90_fn_effen_90_side_rail"
+  },
+  "sections": []
+}

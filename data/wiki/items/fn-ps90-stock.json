@@ -1,0 +1,24 @@
+{
+  "title": "FN PS90 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_PS90_stock",
+  "revisionId": 360632,
+  "lastEdited": "2026-09-18T19:03:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.4 kg",
+    "grid": "3x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+26.5",
+    "recoil": "-5",
+    "Heat": "+4.2",
+    "Cooling": "-3.9",
+    "node": "5cebec10d7f00c065703d185",
+    "ID": "stock_p90_fn_ps90_std"
+  },
+  "sections": []
+}

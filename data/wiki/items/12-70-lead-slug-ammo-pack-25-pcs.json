@@ -1,0 +1,18 @@
+{
+  "title": "12/70 lead slug ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_lead_slug_ammo_pack_(25_pcs)",
+  "revisionId": 367130,
+  "lastEdited": "2026-11-02T23:08:33Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570246fcfc010a0f5006a01",
+    "ID": "item_ammo_box_12g_25_slug"
+  },
+  "sections": []
+}

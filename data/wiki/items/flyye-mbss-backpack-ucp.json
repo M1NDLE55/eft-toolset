@@ -1,0 +1,24 @@
+{
+  "title": "Flyye MBSS backpack (UCP)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Flyye_MBSS_backpack_(UCP)",
+  "revisionId": 304504,
+  "lastEdited": "2025-01-22T12:21:32Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.1 kg",
+    "grid": "4x4",
+    "price": "₽10,000",
+    "trader": "Ragman LL2",
+    "penalties": "-1% movement speed, +0% turn speed, -1% Ergonomics",
+    "slots": "4x4 grid (16 slots)",
+    "node": "544a5cde4bdc2d39388b456b",
+    "id": "standartBackpack"
+  },
+  "sections": []
+}

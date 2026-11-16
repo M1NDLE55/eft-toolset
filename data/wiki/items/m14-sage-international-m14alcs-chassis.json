@@ -1,0 +1,25 @@
+{
+  "title": "M14 SAGE International M14ALCS chassis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_SAGE_International_M14ALCS_chassis",
+  "revisionId": 340819,
+  "lastEdited": "2026-04-22T08:13:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chassis",
+    "weight": "1.9 kg",
+    "grid": "3x1",
+    "price": "₽21,000",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+26",
+    "recoil": "-18",
+    "Heat": "-9",
+    "Cooling": "+10.5",
+    "node": "5addc7005acfc4001669f275",
+    "ID": "stock_m14_sage_ebr_m14alcs"
+  },
+  "sections": []
+}

@@ -1,0 +1,36 @@
+{
+  "title": "5.11 Tactical TacTec plate carrier (Ranger Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.11_Tactical_TacTec_plate_carrier_(Ranger_Green)",
+  "revisionId": 355213,
+  "lastEdited": "2026-08-19T09:06:21Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.35 kg",
+    "grid": "4x4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Thorax, Back",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "80",
+    "penalties": "-1% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "18 Slots",
+    "node": "5b44cad286f77402a54ae7e5",
+    "id": "item_equipment_rig_carrierTactec"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "MP-133/153 wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-133/153_wooden_stock",
+  "revisionId": 261601,
+  "lastEdited": "2024-01-01T23:29:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.64 kg",
+    "grid": "2x1",
+    "price": "₽1,484",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+6",
+    "recoil": "-24",
+    "node": "56083cba4bdc2de22e8b456f",
+    "ID": "stock_mr133_std_long"
+  },
+  "sections": []
+}

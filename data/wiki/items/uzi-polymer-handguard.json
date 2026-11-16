@@ -1,0 +1,23 @@
+{
+  "title": "UZI polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_polymer_handguard",
+  "revisionId": 342727,
+  "lastEdited": "2026-04-30T21:01:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+7",
+    "Heat": "+4.4",
+    "Cooling": "-4.2",
+    "node": "6698c8c736ba38d29101770b",
+    "ID": "handguard_uzi_iwi_plastic_std"
+  },
+  "sections": []
+}

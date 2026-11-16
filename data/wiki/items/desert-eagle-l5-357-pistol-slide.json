@@ -1,0 +1,26 @@
+{
+  "title": "Desert Eagle L5 .357 pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Eagle_L5_.357_pistol_slide",
+  "revisionId": 312208,
+  "lastEdited": "2025-04-26T13:02:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.31 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-4",
+    "Cooling": "+5.2",
+    "node": "669fa5127a09bc295603b499",
+    "ID": "reciever_deagle_magnum_research_l5_std_9x33r"
+  },
+  "sections": []
+}

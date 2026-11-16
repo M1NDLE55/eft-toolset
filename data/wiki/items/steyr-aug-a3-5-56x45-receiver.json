@@ -1,0 +1,23 @@
+{
+  "title": "Steyr AUG A3 5.56x45 receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_A3_5.56x45_receiver",
+  "revisionId": 295502,
+  "lastEdited": "2024-11-03T17:58:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.794 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-1",
+    "Heat": "-4",
+    "Cooling": "+4.8",
+    "node": "62e7c72df68e7a0676050c77",
+    "ID": "reciever_aug_steyr_aug_a3"
+  },
+  "sections": []
+}

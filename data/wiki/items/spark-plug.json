@@ -1,0 +1,33 @@
+{
+  "title": "Spark plug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Spark_plug",
+  "revisionId": 352820,
+  "lastEdited": "2026-08-09T21:33:32Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "590a3c0a86f774385a33c450",
+    "id": "item_barter_electr_sparkplug"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Interchange",
+      "level": 2,
+      "text": "- In the OLI store on the shelves near the cash registers, also in the southwest racks."
+    }
+  ]
+}

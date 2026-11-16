@@ -1,0 +1,25 @@
+{
+  "title": "Laptop with information",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Laptop_with_information",
+  "revisionId": 253394,
+  "lastEdited": "2023-11-02T21:55:15Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "1 kg",
+    "grid": "3x2",
+    "node": "619252352be33f26043400a7",
+    "id": "item_qlight4_l1_redcar"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Seaside Vacation from Therapist"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Azimut SS Zhuk chest harness (SURPAT)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Azimut_SS_Zhuk_chest_harness_(SURPAT)",
+  "revisionId": 328275,
+  "lastEdited": "2025-12-19T17:56:17Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.6 kg",
+    "grid": "4x3",
+    "BlocksArmor": "No",
+    "slots": "20 Slots",
+    "node": "6040dd4ddcf9592f401632d2",
+    "id": "item_equipment_rig_azimut_surpat"
+  },
+  "sections": []
+}

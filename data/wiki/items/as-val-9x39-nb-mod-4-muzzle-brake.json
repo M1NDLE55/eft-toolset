@@ -1,0 +1,26 @@
+{
+  "title": "AS VAL 9x39 NB MOD.4 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_9x39_NB_MOD.4_muzzle_brake",
+  "revisionId": 343099,
+  "lastEdited": "2026-05-03T14:58:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.086 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-8",
+    "accuracy": "+0",
+    "recoil": "-6",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "Cooling": "+0",
+    "node": "6878c143254146e6fd043756",
+    "ID": "muzzle_val_mod4_nb_std_9x39"
+  },
+  "sections": []
+}

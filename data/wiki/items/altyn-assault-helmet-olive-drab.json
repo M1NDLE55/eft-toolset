@@ -1,0 +1,40 @@
+{
+  "title": "Altyn assault helmet (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Altyn_assault_helmet_(Olive_Drab)",
+  "revisionId": 361421,
+  "lastEdited": "2026-09-23T15:42:51Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "2.5 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4",
+    "material": "Armor steel",
+    "armor": "5",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "81",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, -4% turn speed, -3% Ergonomics, High sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5aa7e276e5b5b000171d0647",
+    "id": "helmet_altyn"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Half-Empty"
+    }
+  ]
+}

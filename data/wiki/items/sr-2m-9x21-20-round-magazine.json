@@ -1,0 +1,27 @@
+{
+  "title": "SR-2M 9x21 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-2M_9x21_20-round_magazine",
+  "revisionId": 356458,
+  "lastEdited": "2026-08-26T01:40:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.13 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+3",
+    "checkaccuracy": "No",
+    "checkmodifier": "-15",
+    "loadmodifier": "-15",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "9x21mm Gyurza",
+    "node": "633a98eab8b0506e48497c1a",
+    "ID": "mag_sr2m_tochmash_9x21_20"
+  },
+  "sections": []
+}

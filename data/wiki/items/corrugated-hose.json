@@ -1,0 +1,34 @@
+{
+  "title": "Corrugated hose",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Corrugated_hose",
+  "revisionId": 362652,
+  "lastEdited": "2026-09-29T21:16:23Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "price": "₽3,200",
+    "effect": "Generic loot item",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "59e35cbb86f7741778269d83",
+    "id": "item_barter_building_hose"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Delicious Sausage\n- 2 can be obtained as a quest reward from The Huntsman Path - Secured Perimeter"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "SR-3MP side rails",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-3MP_side_rails",
+  "revisionId": 317696,
+  "lastEdited": "2025-08-26T21:44:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4: Black, Plum",
+    "node": "67069cf1af4890b09f0006e8 67069d02ad91f3a63c0bc2b0",
+    "ID": "mount_sr3m_tochmash_sr3mp_rail mount_sr3m_tochmash_sr3mp_rail_plum"
+  },
+  "sections": []
+}

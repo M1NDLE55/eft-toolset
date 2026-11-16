@@ -1,0 +1,32 @@
+{
+  "title": "Rifle Dynamics RD-704 7.62x39 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rifle_Dynamics_RD-704_7.62x39_assault_rifle",
+  "revisionId": 341058,
+  "lastEdited": "2026-04-22T23:58:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.835 kg",
+    "grid": "5x2",
+    "trader": "Ref LL2, Mechanic LL4",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "500",
+    "ergonomics": "68.6",
+    "velocity": "789 m/s",
+    "range": "650 m",
+    "MOA": "2.03",
+    "Weaprecoil": "Vertical: 87, Horizontal: 203",
+    "rof": "600",
+    "caliber": "7.62x39mm",
+    "def mag": "AK 7.62x39 30-round magazine (issued '55 or later)",
+    "node": "628a60ae6b1d481ff772e9c8",
+    "ID": "weapon_rifle_dynamics_704_762x39"
+  },
+  "sections": []
+}

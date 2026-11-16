@@ -1,0 +1,24 @@
+{
+  "title": "AK-50 .50 BMG 24 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-50_.50_BMG_24_inch_barrel",
+  "revisionId": 342789,
+  "lastEdited": "2026-04-30T21:21:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.62 kg",
+    "grid": "4x1",
+    "ergonomics": "-40",
+    "MOA": "0.4",
+    "recoil": "-15",
+    "Heat": "-22",
+    "Cooling": "-7.4",
+    "node": "67d4178bffb910d21f04720a",
+    "ID": "barrel_ak50_theakguy_std_612mm_127x99"
+  },
+  "sections": []
+}

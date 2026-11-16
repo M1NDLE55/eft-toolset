@@ -1,0 +1,27 @@
+{
+  "title": "AK 7.62x39 30-round magazine (issued '55 or later)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_7.62x39_30-round_magazine_(issued_'55_or_later)",
+  "revisionId": 254032,
+  "lastEdited": "2023-11-02T23:31:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.37 kg",
+    "grid": "1x2",
+    "price": "₽1,620",
+    "trader": "Prapor LL2",
+    "ergonomics": "-4",
+    "checkaccuracy": "No",
+    "feedfailure": "Low",
+    "capacity": "30",
+    "caliber": "7.62x39mm, .366 TKM",
+    "loot xp": "10",
+    "node": "59d625f086f774661516605d",
+    "ID": "mag_ak_izhmash_ak_std_55_762x39_30"
+  },
+  "sections": []
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Eagle Allied Industries MBSS plate carrier (Coyote Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Eagle_Allied_Industries_MBSS_plate_carrier_(Coyote_Brown)",
+  "revisionId": 346859,
+  "lastEdited": "2026-06-14T21:08:15Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "1.33 kg",
+    "grid": "3x3",
+    "armor": "0 (No integrated inserts)",
+    "default plates": "2x",
+    "default plates armor class": "3",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "12 Slots",
+    "node": "64a5366719bab53bd203bf33",
+    "ID": "item_equipment_rig_MBSS"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

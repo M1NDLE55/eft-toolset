@@ -1,0 +1,24 @@
+{
+  "title": "AS VAL NB MOD.4 Kit handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_NB_MOD.4_Kit_handguard",
+  "revisionId": 343390,
+  "lastEdited": "2026-05-05T20:52:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.238 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+10",
+    "recoil": "+0",
+    "Heat": "-8.9",
+    "Cooling": "+7.5",
+    "node": "687128c4505fed5f370b1625",
+    "ID": "handguard_val_mod4_nb_std"
+  },
+  "sections": []
+}

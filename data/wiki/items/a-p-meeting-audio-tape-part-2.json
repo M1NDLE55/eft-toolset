@@ -1,0 +1,32 @@
+{
+  "title": "A.P. meeting audio tape Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A.P._meeting_audio_tape_Part_2",
+  "revisionId": 348068,
+  "lastEdited": "2026-07-19T12:25:09Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes",
+    "Minor TerraGroup evidence"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "1:53",
+    "node": "68889263ea36baf84d085540",
+    "ID": "item_info_recorder_tape_tgmeeting_02"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard\n- This is one of the minor evidence used in The Ticket"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "A.P.: I understand your concerns! I don't have all the information myself, but I'm confident that our new partners will be just as reliable as USEC personnel. TerraGroup has always prioritized security and will entrust our evacuation only to true professionals.\n\nA.P.: Speaking of the evacuation… In 13 hours and 47 minutes, all TerraGroup facilities must be vacated. Yes, this is the first time we're working under such a rush, but there's no other way.\n\nA.P.: I've received the codes, \"Braun\" and \"Chernigov\" included… Also from Lisbon. So by the time the timer runs out, no one should be left here! I'll be evacuating last. Well, not just me. Korneev, are you here?\n\nKorneev: Yes.\n\nA.P.: Good. Once everything is sealed, we'll head to the Health Resort.\n\nA.P.: I understand, colleagues. It's hard to realize that all production must be shut down. We won't be able to take microbiology at all, just the data and parameters…\n\nShout from the audience: How are we supposed to leave all this? We spent a year setting up the lab!\n\nA.P.: Galina Petrovna, calm down! Everything will be fine at the new location.\n\nA.P.: Alright, one more thing, this is important! Ahem, excuse me, I have to take this…\n\nA.P.: Hello? Yes, \"Schliss 14\"… Already… Yes… Wait, right now? Understood… Give me two minutes, I'll find a spot.\n\nA.P.: Friends! It's an extremely urgent call, I need to step away. My apologies. I'll be back soon."
+    }
+  ]
+}

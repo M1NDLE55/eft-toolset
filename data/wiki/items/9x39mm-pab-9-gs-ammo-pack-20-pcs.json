@@ -1,0 +1,24 @@
+{
+  "title": "9x39mm PAB-9 gs ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x39mm_PAB-9_gs_ammo_pack_(20_pcs)",
+  "revisionId": 367295,
+  "lastEdited": "2026-11-02T23:17:08Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657025cfbfc87b3a34093253",
+    "ID": "item_ammo_box_9x39_20_pab9"
+  },
+  "sections": [
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 4 can be obtained as a quest reward from Stick in the Wheel"
+    }
+  ]
+}

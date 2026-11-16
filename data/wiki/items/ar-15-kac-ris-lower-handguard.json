@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 KAC RIS lower handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_KAC_RIS_lower_handguard",
+  "revisionId": 342351,
+  "lastEdited": "2026-04-29T00:36:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.097 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+7.5",
+    "recoil": "+0",
+    "Heat": "+1.3",
+    "Cooling": "+0.2",
+    "node": "637f57b78d137b27f70c496a",
+    "ID": "handguard_ar15_kac_ris_lower"
+  },
+  "sections": []
+}

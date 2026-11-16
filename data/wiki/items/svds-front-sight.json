@@ -1,0 +1,24 @@
+{
+  "title": "SVDS front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVDS_front_sight",
+  "revisionId": 211531,
+  "lastEdited": "2022-09-20T11:18:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽524",
+    "trader": "Prapor LL3",
+    "sightrange": "500",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5c471ba12e221602b3137d76",
+    "ID": "sight_front_svd_izhmash_svd_s_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Diamond Age NovaSteel Flip Ballistic Mandible (Custos Mortis)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Diamond_Age_NovaSteel_Flip_Ballistic_Mandible_(Custos_Mortis)",
+  "revisionId": 361513,
+  "lastEdited": "2026-09-23T20:11:44Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.358 kg",
+    "grid": "2x2",
+    "material": "Armor steel",
+    "armor": "3",
+    "armor coverage": "Face, Jaws, Throat",
+    "durability": "20",
+    "penalties": "-1% movement speed, -2% Ergonomics",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6a8338b4350dd848e70feefd",
+    "id": "item_equipment_helmet_neosteel_gen2_mandible_skull_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

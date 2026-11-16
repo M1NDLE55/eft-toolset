@@ -1,0 +1,27 @@
+{
+  "title": "SKS 7.62x39 KCI 75-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_7.62x39_KCI_75-round_drum_magazine",
+  "revisionId": 346847,
+  "lastEdited": "2026-06-14T20:43:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "1.043 kg",
+    "grid": "2x2",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-11",
+    "checkaccuracy": "No",
+    "checkmodifier": "+25",
+    "loadmodifier": "+15",
+    "feedfailure": "Medium",
+    "capacity": "75",
+    "caliber": "7.62x39mm",
+    "node": "61695095d92c473c7702147a",
+    "ID": "mag_sks_kci_drum_762x39_75"
+  },
+  "sections": []
+}

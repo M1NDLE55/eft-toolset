@@ -1,0 +1,37 @@
+{
+  "title": "Saiga-12K 12ga automatic shotgun (Redline)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Saiga-12K_12ga_automatic_shotgun_(Redline)",
+  "revisionId": 348670,
+  "lastEdited": "2026-07-30T22:29:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "4.301 kg",
+    "grid": "5x3",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "150",
+    "ergonomics": "70",
+    "velocity": "426 m/s",
+    "range": "70 m",
+    "MOA": "20.63",
+    "Weaprecoil": "Vertical: 189, Horizontal:334",
+    "rof": "450",
+    "caliber": "12/70",
+    "node": "6981d72ed009ad83920da43a",
+    "ID": "weapon_kiba_saiga12k_10_champ_12g"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

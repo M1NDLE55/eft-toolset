@@ -1,0 +1,37 @@
+{
+  "title": ".300 Blackout CBJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.300_Blackout_CBJ",
+  "revisionId": 352220,
+  "lastEdited": "2026-08-07T20:53:33Z",
+  "kind": "ammo",
+  "categories": [
+    ".300 Blackout ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3, Peacekeeper LL4",
+    "velocity": "725 m/s",
+    "damage": "58",
+    "recoil": "+5",
+    "penetration": "43",
+    "armor damage": "57",
+    "ricochet": "20%",
+    "durability burn": "+34",
+    "heat": "+86",
+    "feedfailure": "Low",
+    "misfire": "Medium",
+    "node": "64b8725c4b75259c590fa899",
+    "id": "patron_762x35_cbj"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

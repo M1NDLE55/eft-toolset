@@ -1,0 +1,33 @@
+{
+  "title": "Molot Arms VPO-215 Gornostay .366 TKM bolt-action rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Molot_Arms_VPO-215_Gornostay_.366_TKM_bolt-action_rifle",
+  "revisionId": 357621,
+  "lastEdited": "2026-09-02T11:39:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Bolt-action rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bolt-action rifle",
+    "slot": "Primary",
+    "weight": "3.3 kg",
+    "grid": "5x1",
+    "trader": "Jaeger LL1",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "28.5",
+    "velocity": "865 m/s",
+    "range": "1000 m",
+    "MOA": "1.47",
+    "Weaprecoil": "Vertical: 130, Horizontal: 316",
+    "rof": "30",
+    "caliber": ".366 TKM",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5de652c31b7e3716273428be",
+    "ID": "weapon_molot_vpo_215_366tkm"
+  },
+  "sections": []
+}

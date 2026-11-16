@@ -1,0 +1,28 @@
+{
+  "title": "PM 9x18PM 84-round makeshift drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PM_9x18PM_84-round_makeshift_drum_magazine",
+  "revisionId": 349522,
+  "lastEdited": "2026-08-03T23:54:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.364 kg",
+    "grid": "2x2",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-10",
+    "recoil": "+0",
+    "checkaccuracy": "No",
+    "checkmodifier": "+15",
+    "loadmodifier": "+10",
+    "feedfailure": "Medium",
+    "capacity": "84",
+    "caliber": "9x18mm Makarov",
+    "node": "55d485be4bdc2d962f8b456f",
+    "ID": "mag_pm_custom_9x18pm_84"
+  },
+  "sections": []
+}

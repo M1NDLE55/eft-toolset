@@ -1,0 +1,35 @@
+{
+  "title": "Geneburn concert advertisement",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Geneburn_concert_advertisement",
+  "revisionId": 335167,
+  "lastEdited": "2026-02-13T10:38:57Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a0b8d4ff23436160d8031",
+    "id": "item_barter_flyers_arrs2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This poster is a reference to the 5th season of Escape from Tarkov ARG. Players had to find it in Germany at 49.896700, 8.519230 (49°53'48.1\"N 8°31'09.2\"E) and use the information from it to progress the ARG further.\n\nThe QR code leads to a Google Drive named \"Schiller\" published by \"kermen@tarkov.com\". The text below the QR code lists the address of the same Google Drive. The Drive contains a single file \"Tree stump\" with the coordinates 51.4694559, 7.2249327. Those point to a park in Bochum, Germany, where players found further information for ARG."
+    }
+  ]
+}

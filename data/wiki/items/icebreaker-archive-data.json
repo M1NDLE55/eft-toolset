@@ -1,0 +1,26 @@
+{
+  "title": "Icebreaker archive data",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Icebreaker_archive_data",
+  "revisionId": 362436,
+  "lastEdited": "2026-09-29T14:34:16Z",
+  "kind": "item",
+  "categories": [
+    "Major TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "69bb45b89c92ecd910059159",
+    "ID": "item_info_note_ice_archive"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Boreas\n- This is one of the major evidence used in The Ticket"
+    }
+  ]
+}

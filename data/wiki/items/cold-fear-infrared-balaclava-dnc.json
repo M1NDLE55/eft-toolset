@@ -1,0 +1,27 @@
+{
+  "title": "Cold Fear infrared balaclava (DNC)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cold_Fear_infrared_balaclava_(DNC)",
+  "revisionId": 353494,
+  "lastEdited": "2026-08-13T19:45:43Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 2",
+    "node": "69c12d74e0921a7ebc0f0a58",
+    "id": "item_equipment_facecover_coldgear_dnc_green_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Type 20 M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Type_20_M-LOK_handguard",
+  "revisionId": 356934,
+  "lastEdited": "2026-08-30T00:12:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.32 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+14.5",
+    "Heat": "-5",
+    "node": "6a3cea2b9768ff15af06d5e9",
+    "ID": "handguard_type20_howa_type20_mlok_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Sako TRG M10 11 inch handguard assembly",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_M10_11_inch_handguard_assembly",
+  "revisionId": 342748,
+  "lastEdited": "2026-04-30T21:10:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.64 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+16",
+    "Heat": "-1",
+    "Cooling": "+3.3",
+    "node": "67405ef125beb509e8070276",
+    "ID": "handguard_trg_sako_m10_forend_11_inch"
+  },
+  "sections": []
+}

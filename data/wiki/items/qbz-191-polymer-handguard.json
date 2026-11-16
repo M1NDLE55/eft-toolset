@@ -1,0 +1,23 @@
+{
+  "title": "QBZ-191 polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/QBZ-191_polymer_handguard",
+  "revisionId": 356937,
+  "lastEdited": "2026-08-30T00:32:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.26 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+14.5",
+    "Heat": "+3.4",
+    "Cooling": "-1.1",
+    "node": "69f9f111df2c2358a904186f",
+    "ID": "handguard_qbz191_norinco_191_polymer_std"
+  },
+  "sections": []
+}

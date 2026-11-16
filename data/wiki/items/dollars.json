@@ -1,0 +1,30 @@
+{
+  "title": "Dollars",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dollars",
+  "revisionId": 358786,
+  "lastEdited": "2026-09-11T11:27:23Z",
+  "kind": "item",
+  "categories": [
+    "Currency"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Currency",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "node": "5696686a4bdc2da3298b456a",
+    "id": "Dollars"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Stacks to 50,000\n- Only 15,000 can be brought into a raid\n- Only 25,000 can be held in a raid inventory at the same time\n- Spawns in stacks of 45-100"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawers\n- Safes\n- Common fund stash\n- Buried barrel caches"
+    }
+  ]
+}

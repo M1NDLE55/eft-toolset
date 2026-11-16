@@ -1,0 +1,39 @@
+{
+  "title": "Bottle of Tarkovskaya vodka",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bottle_of_Tarkovskaya_vodka",
+  "revisionId": 362989,
+  "lastEdited": "2026-10-03T12:32:09Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "1 kg",
+    "grid": "1x2",
+    "effect": "Hydration: -50, , Buffs:, Removes: for 250 seconds,, Radiation Exposure, Adds: for 250 seconds, 1s Delay; 250s Duration: - Increases Stress Resistance (+5), Debuffs:, 1s Delay; 250s Duration: - Decreases Health (-5) 255s Delay; 120s Duration:, Causes",
+    "use time": "5s",
+    "loot xp": "10",
+    "exam xp": "10",
+    "node": "5d40407c86f774318526545a 614451b71e5874611e2c7ae5",
+    "ID": "item_food_vodka item_food_vodka_BAD"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 5 can be obtained as a quest reward from Viewer"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In the Common fund stash\n- In Plastic suitcases\n- In Ration supply crates\n- In Sport bags"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The bottle and label are based on Stolichnaya vodka."
+    }
+  ]
+}

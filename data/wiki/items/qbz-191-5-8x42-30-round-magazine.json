@@ -1,0 +1,25 @@
+{
+  "title": "QBZ-191 5.8x42 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/QBZ-191_5.8x42_30-round_magazine",
+  "revisionId": 356339,
+  "lastEdited": "2026-08-25T22:54:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.25 kg",
+    "grid": "1x2",
+    "trader": "Skier LL3",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.8x42mm",
+    "node": "69f9ec5a7596e93e340c0a1e",
+    "ID": "mag_qbz191_norinco_58x42_30"
+  },
+  "sections": []
+}

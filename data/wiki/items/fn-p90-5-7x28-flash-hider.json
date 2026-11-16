@@ -1,0 +1,26 @@
+{
+  "title": "FN P90 5.7x28 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_5.7x28_flash_hider",
+  "revisionId": 337651,
+  "lastEdited": "2026-03-06T00:44:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽1,600",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-0.5",
+    "accuracy": "+0",
+    "recoil": "-5",
+    "Heat": "-1",
+    "loot xp": "10",
+    "node": "5cc82796e24e8d000f5859a8",
+    "ID": "muzzle_p90_fn_p90_std_57x28"
+  },
+  "sections": []
+}

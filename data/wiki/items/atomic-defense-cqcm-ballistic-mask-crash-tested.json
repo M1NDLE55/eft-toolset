@@ -1,0 +1,36 @@
+{
+  "title": "Atomic Defense CQCM ballistic mask (Crash Tested)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Atomic_Defense_CQCM_ballistic_mask_(Crash_Tested)",
+  "revisionId": 353479,
+  "lastEdited": "2026-08-13T19:25:35Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light Armored mask",
+    "slot": "Face cover",
+    "weight": "2.1 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in the Customs Tactical Map",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "3",
+    "armor coverage": "Face, Jaws, Eyes, Head top",
+    "durability": "35",
+    "blindness protect": "0%",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, -3% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "68a9a1223e1ee5a70504c126",
+    "id": "item_equipment_facecover_strikeball_mask_maneken_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

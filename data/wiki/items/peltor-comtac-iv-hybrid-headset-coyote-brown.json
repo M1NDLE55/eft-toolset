@@ -1,0 +1,23 @@
+{
+  "title": "Peltor ComTac IV Hybrid headset (Coyote Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Peltor_ComTac_IV_Hybrid_headset_(Coyote_Brown)",
+  "revisionId": 320879,
+  "lastEdited": "2025-11-11T20:45:00Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.6 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "628e4e576d783146b124c64d",
+    "id": "item_equipment_headset_comtac_IV"
+  },
+  "sections": []
+}

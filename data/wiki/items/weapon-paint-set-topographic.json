@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Topographic)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Topographic)",
+  "revisionId": 356812,
+  "lastEdited": "2026-08-29T20:38:56Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "69ce84ac2e94c30d040f560b",
+    "id": "item_camo_topographic"
+  },
+  "sections": []
+}

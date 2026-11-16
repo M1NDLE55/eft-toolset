@@ -1,0 +1,31 @@
+{
+  "title": "Geiger-Muller counter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Geiger-Muller_counter",
+  "revisionId": 355139,
+  "lastEdited": "2026-08-18T23:58:33Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.4 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "5672cb724bdc2dc2088b456b",
+    "id": "item_geiger_counter"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Medical supply crate"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On shelves & counters in the Techlight, Texho and Rasmussen stores\n- In the Emercom medical unit\n- On the window sill in the power station office"
+    }
+  ]
+}

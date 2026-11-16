@@ -1,0 +1,27 @@
+{
+  "title": "PPSh-41 7.62x25 71-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PPSh-41_7.62x25_71-round_drum_magazine",
+  "revisionId": 337722,
+  "lastEdited": "2026-03-06T01:45:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.9 kg",
+    "grid": "2x2",
+    "trader": "Prapor LL1",
+    "ergonomics": "-8",
+    "checkaccuracy": "No",
+    "checkmodifier": "+15",
+    "loadmodifier": "+10",
+    "feedfailure": "Medium",
+    "capacity": "71",
+    "caliber": "7.62x25mm Tokarev",
+    "node": "5ea034f65aad6446a939737e",
+    "ID": "mag_ppsh_zis_std_762x25_71"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "SA58/FAL 7.62x51 X Products X-FAL 50-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58/FAL_7.62x51_X_Products_X-FAL_50-round_drum_magazine",
+  "revisionId": 337545,
+  "lastEdited": "2026-03-05T23:48:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.7 kg",
+    "grid": "1x2",
+    "ergonomics": "-7",
+    "checkaccuracy": "No",
+    "checkmodifier": "+20",
+    "loadmodifier": "+20",
+    "feedfailure": "Medium",
+    "capacity": "50",
+    "caliber": "7.62x51mm NATO",
+    "node": "5b7bef9c5acfc43d102852ec",
+    "ID": "mag_fal_x_products_x_fal_762x51_50"
+  },
+  "sections": []
+}

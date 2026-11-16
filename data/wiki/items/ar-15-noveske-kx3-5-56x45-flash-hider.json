@@ -1,0 +1,27 @@
+{
+  "title": "AR-15 Noveske KX3 5.56x45 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Noveske_KX3_5.56x45_flash_hider",
+  "revisionId": 337373,
+  "lastEdited": "2026-03-05T22:16:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.204 kg",
+    "grid": "1x1",
+    "price": "₽7,200",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "velocity": "+0",
+    "accuracy": "+3",
+    "recoil": "-9",
+    "Dura Burn": "-6",
+    "Heat": "-0.9",
+    "node": "56ea6fafd2720b844b8b4593",
+    "ID": "muzzle_ar15_noveske_kx3_556x45"
+  },
+  "sections": []
+}

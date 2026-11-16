@@ -1,0 +1,24 @@
+{
+  "title": "Trijicon ACOG TA11D 3.5x35 scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trijicon_ACOG_TA11D_3.5x35_scope",
+  "revisionId": 343837,
+  "lastEdited": "2026-05-13T20:47:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.396 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "800",
+    "ergonomics": "-2",
+    "modes": "1",
+    "node": "59db7e1086f77448be30ddf3",
+    "ID": "scope_base_trijicon_acog_ta11_3,5x35"
+  },
+  "sections": []
+}

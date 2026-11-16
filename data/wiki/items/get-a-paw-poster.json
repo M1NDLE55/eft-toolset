@@ -1,0 +1,25 @@
+{
+  "title": "Get a Paw poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Get_a_Paw_poster",
+  "revisionId": 355953,
+  "lastEdited": "2026-08-25T12:27:06Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6841b1ff51bf8645f7067bca",
+    "id": "item_barter_flyers_prestige_4"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

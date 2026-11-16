@@ -1,0 +1,25 @@
+{
+  "title": "9A-91 9x39 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9A-91_9x39_20-round_magazine",
+  "revisionId": 337917,
+  "lastEdited": "2026-03-07T09:22:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "trader": "Prapor LL1",
+    "ergonomics": "-1.5",
+    "checkaccuracy": "No",
+    "feedfailure": "Medium",
+    "capacity": "20",
+    "caliber": "9x39mm",
+    "node": "6450ec2e7da7133e5a09ca96",
+    "ID": "mag_9a91_kbp_9a91_std_9x39_20"
+  },
+  "sections": []
+}

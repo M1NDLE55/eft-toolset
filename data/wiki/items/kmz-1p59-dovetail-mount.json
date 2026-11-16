@@ -1,0 +1,23 @@
+{
+  "title": "KMZ 1P59 dovetail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KMZ_1P59_dovetail_mount",
+  "revisionId": 304968,
+  "lastEdited": "2025-01-31T14:56:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.41 kg",
+    "grid": "1x1",
+    "price": "₽1,750",
+    "trader": "Prapor LL2",
+    "ergonomics": "-1",
+    "loot xp": "10",
+    "node": "5d0a29ead7ad1a0026013f27",
+    "ID": "mount_dovetail_kmz_1p59_mount"
+  },
+  "sections": []
+}

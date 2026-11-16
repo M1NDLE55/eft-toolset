@@ -1,0 +1,31 @@
+{
+  "title": "Twitch rare dogtag case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Twitch_rare_dogtag_case",
+  "revisionId": 356678,
+  "lastEdited": "2026-08-28T00:46:48Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "effect": "Provides 25 inventory slots while only taking up 1",
+    "node": "6937ecc3dbdccab44605fcf0",
+    "ID": "item_container_dogtagcase_twitch"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only obtainable from paid Twitch Drops.\n- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Twitch rare dogtag case is a container with the purpose of saving space within the player's inventory. It provides 25 inventory slots in a 5x5 grid and only takes up 1 inventory slot itself. Only Dogtags besides default ones can be stored in it."
+    }
+  ]
+}

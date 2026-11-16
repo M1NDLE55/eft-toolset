@@ -1,0 +1,23 @@
+{
+  "title": "AK Magpul MOE pistol grip (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Magpul_MOE_pistol_grip_(Black)",
+  "revisionId": 352844,
+  "lastEdited": "2026-08-09T21:40:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽6,300",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+5",
+    "recoil": "-1.5",
+    "node": "5b30ac585acfc433000eb79c",
+    "ID": "pistolgrip_ak_magpul_moe_ak"
+  },
+  "sections": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "UZRGM grenade fuze",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZRGM_grenade_fuze",
+  "revisionId": 360821,
+  "lastEdited": "2026-09-20T11:25:43Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.055 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5e2af51086f7746d3f3c3402",
+    "ID": "Item_barter_other_uzrgm_fuse"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Grenade box\n- Sport bag\n- Dead Scav\n- Weapon box (6x2)\n- Weapon box (6x4)\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    }
+  ]
+}

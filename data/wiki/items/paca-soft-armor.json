@@ -1,0 +1,47 @@
+{
+  "title": "PACA Soft Armor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PACA_Soft_Armor",
+  "revisionId": 346772,
+  "lastEdited": "2026-06-13T21:21:15Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "3.5 kg",
+    "grid": "3x3",
+    "trader": "Ragman LL1",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides",
+    "durability": "100",
+    "penalties": "-1% movement speed, +0% turn speed, -1% Ergonomics",
+    "node": "5648a7494bdc2d9d488b4583",
+    "id": "notHeavy"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On Dead Scavs\n- On Scavs\n- On Scav Raiders\n- In Weapon Boxes (4x4)"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the chair closest to the window in the first room in the red paradigm warehouse office\n- On Reshala's Followers"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On Glukhar and his followers"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- PACA is the name of the company \"Protective Apparel Corporation of America\", now a subsidiary of Point Blank Enterprises."
+    }
+  ]
+}

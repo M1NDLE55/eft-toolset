@@ -1,0 +1,23 @@
+{
+  "title": "P226 Sight Mount 220-239 rear sight bearing",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Sight_Mount_220-239_rear_sight_bearing",
+  "revisionId": 322016,
+  "lastEdited": "2025-11-17T00:31:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.028 kg",
+    "grid": "1x1",
+    "price": "₽3,800",
+    "trader": "Peacekeeper LL1",
+    "sightrange": "200",
+    "ergonomics": "-0.5",
+    "node": "56ea7293d2720b8d4b8b45ba",
+    "ID": "sight_rear_p226_sight_mount_220-239"
+  },
+  "sections": []
+}

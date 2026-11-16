@@ -1,0 +1,28 @@
+{
+  "title": "SV-98 7.62x54R sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SV-98_7.62x54R_sound_suppressor",
+  "revisionId": 268826,
+  "lastEdited": "2024-02-05T18:00:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "price": "₽36,742",
+    "trader": "Prapor LL3",
+    "ergonomics": "-22",
+    "velocity": "+1.1",
+    "recoil": "-8",
+    "Dura Burn": "+82",
+    "Heat": "+14",
+    "loot xp": "30",
+    "exam xp": "4",
+    "node": "5c4eecc32e221602b412b440",
+    "ID": "silencer_sv98_izhmash_silencer_std_762x54"
+  },
+  "sections": []
+}

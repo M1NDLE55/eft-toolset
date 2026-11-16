@@ -1,0 +1,26 @@
+{
+  "title": "MP-43 12ga 750mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-43_12ga_750mm_barrel",
+  "revisionId": 243584,
+  "lastEdited": "2023-08-14T12:22:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.65 kg",
+    "grid": "5x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-11",
+    "velocity": "+17",
+    "MOA": "10.66",
+    "recoil": "-14",
+    "Heat": "-22.1",
+    "Cooling": "-18.3",
+    "node": "611a30addbdd8440277441dc",
+    "ID": "barrel_mr43e-1c_750mm"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "AK-74 Hexagon Wafflemaker 5.45x39 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_Hexagon_Wafflemaker_5.45x39_sound_suppressor",
+  "revisionId": 337790,
+  "lastEdited": "2026-03-06T02:15:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.29 kg",
+    "grid": "2x1",
+    "trader": "Ref LL4",
+    "ergonomics": "-22",
+    "velocity": "+0.8",
+    "recoil": "-5",
+    "Dura Burn": "+75",
+    "Heat": "+14",
+    "Cooling": "+11",
+    "node": "615d8f8567085e45ef1409ca",
+    "ID": "silencer_hex_hexagon_wafflemaker_suppressor_545x39"
+  },
+  "sections": []
+}

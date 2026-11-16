@@ -1,0 +1,21 @@
+{
+  "title": "Ghost half-mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ghost_half-mask",
+  "revisionId": 313661,
+  "lastEdited": "2025-05-21T06:33:13Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL3",
+    "node": "6571bde39837cc51b800c212",
+    "id": "item_equipment_facecover_skull_half_mask"
+  },
+  "sections": []
+}

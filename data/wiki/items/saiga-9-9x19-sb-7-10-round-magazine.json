@@ -1,0 +1,30 @@
+{
+  "title": "Saiga-9 9x19 sb.7 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Saiga-9_9x19_sb.7_10-round_magazine",
+  "revisionId": 337429,
+  "lastEdited": "2026-03-05T22:48:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.17 kg",
+    "grid": "1x2",
+    "price": "₽1,500",
+    "trader": "Skier LL1",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "checkmodifier": "-30",
+    "loadmodifier": "-30",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "10",
+    "exam xp": "Examined by default",
+    "node": "5998529a86f774647f44f421",
+    "ID": "mag_pp-19-01_izhmash_izh-9x19_sb7_9x19_10"
+  },
+  "sections": []
+}

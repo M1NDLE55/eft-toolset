@@ -1,0 +1,21 @@
+{
+  "title": "KRISS Vector 9x19 thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KRISS_Vector_9x19_thread_protector",
+  "revisionId": 337747,
+  "lastEdited": "2026-03-06T01:55:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "ergonomics": "+2",
+    "Dura Burn": "-4",
+    "node": "5fbbc34106bde7524f03cbe9",
+    "ID": "muzzle_vector_kriss_thread_protector_std_9x19"
+  },
+  "sections": []
+}

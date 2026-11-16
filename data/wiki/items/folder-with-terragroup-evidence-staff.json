@@ -1,0 +1,25 @@
+{
+  "title": "Folder with TerraGroup evidence (Staff)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Folder_with_TerraGroup_evidence_(Staff)",
+  "revisionId": 356108,
+  "lastEdited": "2026-08-25T17:06:50Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.33 kg",
+    "grid": "1x2",
+    "node": "67c0351e354fca26a0008038",
+    "id": "q_blue_docs3"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket"
+    }
+  ]
+}

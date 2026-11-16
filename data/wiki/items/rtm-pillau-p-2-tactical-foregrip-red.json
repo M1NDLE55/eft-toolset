@@ -1,0 +1,22 @@
+{
+  "title": "RTM Pillau P-2 tactical foregrip (Red)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RTM_Pillau_P-2_tactical_foregrip_(Red)",
+  "revisionId": 356569,
+  "lastEdited": "2026-08-26T03:01:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.067 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+4",
+    "recoil": "-1",
+    "node": "65169d5b30425317755f8e25",
+    "ID": "foregrip_all_rtm_pillau_p2_red"
+  },
+  "sections": []
+}

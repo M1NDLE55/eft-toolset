@@ -1,0 +1,33 @@
+{
+  "title": "Diamond Age NeoSteel helmet ballistic mandible (Aces)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Diamond_Age_NeoSteel_helmet_ballistic_mandible_(Aces)",
+  "revisionId": 361509,
+  "lastEdited": "2026-09-23T20:03:22Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in the Customs Tactical Map",
+    "material": "Armor steel",
+    "armor": "3",
+    "armor coverage": "Face, Ears, Jaws, Throat",
+    "durability": "25",
+    "penalties": "-1% movement speed, -2% Ergonomics",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "68a9c0ed6d47c49b700faaf9",
+    "id": "item_equipment_helmet_neosteel_mandible_aces_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "AKMB system rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKMB_system_rear_sight",
+  "revisionId": 210528,
+  "lastEdited": "2022-09-20T10:33:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.035 kg",
+    "grid": "1x1",
+    "price": "₽470",
+    "trader": "Prapor LL3",
+    "sightrange": "500",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5a0eb980fcdbcb001a3b00a6",
+    "ID": "sight_rear_ak_izhmash_akmb"
+  },
+  "sections": []
+}

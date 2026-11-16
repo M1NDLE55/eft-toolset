@@ -1,0 +1,22 @@
+{
+  "title": "Hera Arms CQR tactical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hera_Arms_CQR_tactical_foregrip",
+  "revisionId": 363483,
+  "lastEdited": "2026-10-07T00:54:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.167 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+3",
+    "recoil": "-1.5",
+    "node": "5a7dbfc1159bd40016548fde",
+    "ID": "foregrip_all_hera_arms_cqr_grip"
+  },
+  "sections": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": "ShPM Firefighter helmet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ShPM_Firefighter_helmet",
+  "revisionId": 344320,
+  "lastEdited": "2026-05-24T21:57:52Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.5 kg",
+    "grid": "2x2",
+    "material": "Aramid , Glass",
+    "armor": "Head top, Nape, Ears: 2 , Face, Eyes, Jaws, Throat: 1",
+    "armor coverage": "Head top, Nape, Ears, Face, Eyes, Jaws, Throat",
+    "durability": "96",
+    "blindness protect": "15%",
+    "RicochetChance": "Low",
+    "penalties": "+0% movement speed, -3% turn speed, -2% Ergonomics, High sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksFaceCover": "No",
+    "node": "5c08f87c0db8340019124324",
+    "ID": "item_equipment_helmet_shpm"
+  },
+  "sections": []
+}

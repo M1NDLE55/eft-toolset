@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Arctic Brushstroke)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Arctic_Brushstroke)",
+  "revisionId": 348433,
+  "lastEdited": "2026-07-30T20:16:37Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "69369b6ced0eadc55608b447",
+    "id": "item_camo_brushstroke_arctic"
+  },
+  "sections": []
+}

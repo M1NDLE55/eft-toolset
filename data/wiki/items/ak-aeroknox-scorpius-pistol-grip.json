@@ -1,0 +1,25 @@
+{
+  "title": "AK Aeroknox Scorpius pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Aeroknox_Scorpius_pistol_grip",
+  "revisionId": 342106,
+  "lastEdited": "2026-04-28T03:49:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.14 kg",
+    "grid": "1x1",
+    "price": "₽5,800",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+5",
+    "recoil": "-1.5",
+    "loot xp": "5",
+    "exam xp": "2",
+    "node": "5f6341043ada5942720e2dc5",
+    "ID": "pistolgrip_ak_aeroknox_scorpius"
+  },
+  "sections": []
+}

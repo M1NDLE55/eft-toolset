@@ -1,0 +1,31 @@
+{
+  "title": "Mossberg 590A1 12ga pump-action shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mossberg_590A1_12ga_pump-action_shotgun",
+  "revisionId": 343194,
+  "lastEdited": "2026-05-03T20:59:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "3.962 kg",
+    "grid": "5x1",
+    "trader": "Peacekeeper LL1",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "56",
+    "velocity": "437 m/s",
+    "range": "70 m",
+    "MOA": "16.98",
+    "Weaprecoil": "Vertical: 299, Horizontal: 351",
+    "rof": "30",
+    "caliber": "12/70",
+    "node": "5e870397991fd70db46995c8",
+    "ID": "weapon_mossberg_590a1_12g"
+  },
+  "sections": []
+}

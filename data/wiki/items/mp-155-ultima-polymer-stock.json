@@ -1,0 +1,22 @@
+{
+  "title": "MP-155 Ultima polymer stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_Ultima_polymer_stock",
+  "revisionId": 270192,
+  "lastEdited": "2024-02-08T20:12:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.31 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+9",
+    "recoil": "-25",
+    "node": "606eef756d0bd7580617baf8",
+    "ID": "stock_mp155_kalshnikov_ultima_stock"
+  },
+  "sections": []
+}

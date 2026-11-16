@@ -1,0 +1,27 @@
+{
+  "title": "PL-15 9x19 112mm threaded barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PL-15_9x19_112mm_threaded_barrel",
+  "revisionId": 342128,
+  "lastEdited": "2026-04-28T04:02:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "price": "₽2,794",
+    "trader": "Prapor LL1",
+    "ergonomics": "-2",
+    "velocity": "-2",
+    "MOA": "11",
+    "recoil": "-2.8",
+    "Heat": "+14",
+    "Cooling": "+21",
+    "node": "602a95fe4e02ce1eaa358729",
+    "ID": "barrel_pl15_izhmash_112mm_threaded_9x19"
+  },
+  "sections": []
+}

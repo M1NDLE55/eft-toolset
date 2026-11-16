@@ -1,0 +1,25 @@
+{
+  "title": "SOK-12 12ga SAI-02 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_12ga_SAI-02_10-round_magazine",
+  "revisionId": 362960,
+  "lastEdited": "2026-10-03T11:27:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.21 kg",
+    "grid": "1x3",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-3.5",
+    "checkaccuracy": "No",
+    "feedfailure": "Low",
+    "capacity": "10",
+    "caliber": "12/70",
+    "node": "5a966f51a2750c00156aacf6",
+    "ID": "mag_saiga12_pro_mag_sai_02_12x76_10"
+  },
+  "sections": []
+}

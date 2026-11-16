@@ -1,0 +1,37 @@
+{
+  "title": "9x18mm PM PS gs PPO",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_PS_gs_PPO",
+  "revisionId": 322774,
+  "lastEdited": "2025-11-18T21:16:18Z",
+  "kind": "ammo",
+  "categories": [
+    "9x18mm Makarov ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "velocity": "330 m/s",
+    "damage": "55",
+    "penetration": "6",
+    "armor damage": "16",
+    "ricochet": "3%",
+    "l bleed chance": "+15",
+    "heat": "-8.2",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "effects": "Subsonic",
+    "node": "57371f2b24597761224311f1",
+    "id": "patron_9x18pm_PS_gs_PPO"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

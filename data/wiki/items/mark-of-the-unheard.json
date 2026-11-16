@@ -1,0 +1,35 @@
+{
+  "title": "Mark of The Unheard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mark_of_The_Unheard",
+  "revisionId": 304658,
+  "lastEdited": "2025-01-26T08:50:44Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.35 kg",
+    "grid": "1x1",
+    "node": "65ddcc9cfa85b9f17d0dfb07",
+    "id": "mark_of_unknown"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- If you own the \"The Unheard\" edition of the game you will start with this item.\n- Cannot be listed for sale on the flea market, be sold to traders or destroyed.\n- While a player is wearing the radio in the PvE and PvE co-op game modes:\n  - In-raid cash services (e.g. car extractions) have a 50% discount\n  - Insurance returns are 30% faster\n  - Killing Scavs without being shot first results in a -0.05 Scav karma penalty - The penalty can be negated by killing a PMC\n  - Scav kill experience is reduced by 50%\n  - With 6+ Scav karma, Scavs don't shoot on sight if 60+ meters away, unless provoked\n- This item is not lootable from players and can only be placed in a special item slot."
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Small Business - Part 3\n- Note: The reward is only obtainable in the PvE game mode and not available to owners of the \"The Unheard\" edition of the game."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The item is modeled after the \"H4855 Personal Role Radio\", although it is unusable as a radio in-game."
+    }
+  ]
+}

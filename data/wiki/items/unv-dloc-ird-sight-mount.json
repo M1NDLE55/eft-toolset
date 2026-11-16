@@ -1,0 +1,21 @@
+{
+  "title": "UNV DLOC-IRD sight mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UNV_DLOC-IRD_sight_mount",
+  "revisionId": 333204,
+  "lastEdited": "2026-01-29T17:01:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.113 kg",
+    "grid": "1x1",
+    "price": "₽5,680",
+    "ergonomics": "-1",
+    "node": "5a1ead28fcdbcb001912fa9f",
+    "ID": "mount_all_unv_dloc_ird"
+  },
+  "sections": []
+}

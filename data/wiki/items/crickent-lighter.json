@@ -1,0 +1,32 @@
+{
+  "title": "Crickent lighter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crickent_lighter",
+  "revisionId": 352923,
+  "lastEdited": "2026-08-09T22:01:57Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable material",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "10",
+    "node": "56742c284bdc2d98058b456d",
+    "id": "crickent"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This item is a parody of the Cricket lighter."
+    }
+  ]
+}

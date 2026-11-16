@@ -1,0 +1,51 @@
+{
+  "title": "Battered antique book",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Battered_antique_book",
+  "revisionId": 365040,
+  "lastEdited": "2026-10-26T00:08:51Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.4 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "5bc9c049d4351e44f824d360",
+    "id": "item_barter_other_dobby"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Drawer"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the marked circle"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- Can be found on Table in Safe Room\n- Сan be found in a closet in the hallway, near offices"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In Dorm room 105\n- In Dorm room 203\n- In Customs office"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On the small safe in RB-KPRL"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator DobbyKillStreak who uses \"Dobby\" from \"Harry Potter\" as his avatar.\n  - In the movie \"Harry Potter and the Chamber of Secrets\", \"Harry Potter\" gives \"Lucius Malfoy\" a book with a sock hidden inside which will lead to set the house elf \"Dobby\" free after the book is given to him from his master, therefore the inscription \"is free\" on the cover."
+    }
+  ]
+}

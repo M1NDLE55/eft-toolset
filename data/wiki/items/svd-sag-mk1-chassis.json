@@ -1,0 +1,27 @@
+{
+  "title": "SVD SAG MK1 chassis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVD_SAG_MK1_chassis",
+  "revisionId": 352610,
+  "lastEdited": "2026-08-09T19:59:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.89 kg",
+    "grid": "3x1",
+    "price": "₽15,900",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+15",
+    "recoil": "-2",
+    "Heat": "-5.1",
+    "Cooling": "+7.2",
+    "loot xp": "20",
+    "exam xp": "3",
+    "node": "5dfcd0e547101c39625f66f9",
+    "ID": "handguard_svd_sag_chassis_mk_1"
+  },
+  "sections": []
+}

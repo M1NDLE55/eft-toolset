@@ -1,0 +1,22 @@
+{
+  "title": "USEC TIER2 lower",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_TIER2_lower",
+  "revisionId": 274195,
+  "lastEdited": "2024-03-14T23:10:24Z",
+  "kind": "item",
+  "categories": [
+    "USEC lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5df8a08886f7740bfe6df775",
+    "ID": "usec_lower_tier_2"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The pants are modeled on the ORC Industries PCU Level 5 pants, and the knee pads are modeled on the Damascus Imperial neoprene knee pads."
+    }
+  ]
+}

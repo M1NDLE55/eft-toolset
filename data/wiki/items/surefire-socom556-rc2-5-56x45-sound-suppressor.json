@@ -1,0 +1,25 @@
+{
+  "title": "SureFire SOCOM556-RC2 5.56x45 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SureFire_SOCOM556-RC2_5.56x45_sound_suppressor",
+  "revisionId": 356526,
+  "lastEdited": "2026-08-26T02:30:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.482 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-12",
+    "velocity": "+0.6",
+    "recoil": "-1.5",
+    "Dura Burn": "+62",
+    "Heat": "+11",
+    "node": "5ea17bbc09aa976f2e7a51cd",
+    "ID": "silencer_socom_surefire_socom556_rc2_556x45"
+  },
+  "sections": []
+}

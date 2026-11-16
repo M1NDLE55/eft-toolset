@@ -1,0 +1,27 @@
+{
+  "title": "AK-74M Armacon Monolit 3 Gen.2 buffer tube adapter (Redline)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74M_Armacon_Monolit_3_Gen.2_buffer_tube_adapter_(Redline)",
+  "revisionId": 356578,
+  "lastEdited": "2026-08-26T08:10:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.158 kg",
+    "grid": "1x1",
+    "ergonomics": "-1",
+    "recoil": "-0.5",
+    "node": "6981ee9cf819a414310292fb",
+    "ID": "stock_ak_armacon_monolit_3_gen2_champ"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

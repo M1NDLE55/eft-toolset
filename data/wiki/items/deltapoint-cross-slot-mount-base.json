@@ -1,0 +1,21 @@
+{
+  "title": "DeltaPoint Cross Slot Mount base",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DeltaPoint_Cross_Slot_Mount_base",
+  "revisionId": 341862,
+  "lastEdited": "2026-04-27T17:05:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.045 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+0",
+    "node": "58d2664f86f7747fec5834f6",
+    "ID": "mount_all_leupold_deltapoint_weaver"
+  },
+  "sections": []
+}

@@ -1,0 +1,41 @@
+{
+  "title": "T H I C C Weapon case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/T_H_I_C_C_Weapon_case",
+  "revisionId": 366103,
+  "lastEdited": "2026-10-28T20:12:11Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "18 kg",
+    "grid": "5x2",
+    "effect": "Provides 90 inventory slots while only taking up 10",
+    "node": "5b6d9ce188a4501afc1b2b25",
+    "id": "item_container_weaponcase_THICC"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Cannot be stored in a backpack."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The T H I C C Weapon case is a container with the purpose of saving space within the player's inventory. It provides 90 inventory slots in a 6x15 grid and only takes up 10 inventory slots itself. It can only store:\n- Weapons (Besides melee)\n- Ammunition\n- Weapon mods"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Choose Your Friends Wisely"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- \"T H I C C\" is a reference to the word \"thicc\", which is a meme. The implication is that the case is very large.\n- Easter eggs and References : The is modeled after the V700 by Pelican."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Cyclone Shakhin mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cyclone_Shakhin_mount",
+  "revisionId": 339814,
+  "lastEdited": "2026-04-08T23:31:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.014 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-1",
+    "node": "67641a851b2899700609901a",
+    "ID": "mount_all_ciklon_shakhin_std"
+  },
+  "sections": []
+}

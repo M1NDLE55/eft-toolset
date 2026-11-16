@@ -1,0 +1,26 @@
+{
+  "title": "ANA Tactical Alpha chest rig (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ANA_Tactical_Alpha_chest_rig_(Olive_Drab)",
+  "revisionId": 333264,
+  "lastEdited": "2026-01-30T04:32:52Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.7 kg",
+    "grid": "4x4",
+    "price": "₽51,000",
+    "trader": "Ragman LL3",
+    "BlocksArmor": "No",
+    "slots": "20 Slots",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "592c2d1a86f7746dbe2af32a",
+    "id": "ana_tactical"
+  },
+  "sections": []
+}

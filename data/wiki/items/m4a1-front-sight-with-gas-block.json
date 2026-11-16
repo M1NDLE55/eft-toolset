@@ -1,0 +1,23 @@
+{
+  "title": "M4A1 front sight with gas block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M4A1_front_sight_with_gas_block",
+  "revisionId": 341678,
+  "lastEdited": "2026-04-26T20:56:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-1",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "node": "5ae30e795acfc408fb139a0b",
+    "ID": "gas_block_ar15_colt_m4_front_sight_gas_block_std"
+  },
+  "sections": []
+}

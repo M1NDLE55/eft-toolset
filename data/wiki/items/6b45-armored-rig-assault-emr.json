@@ -1,0 +1,37 @@
+{
+  "title": "6B45 armored rig (Assault, EMR)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B45_armored_rig_(Assault%2C_EMR)",
+  "revisionId": 343588,
+  "lastEdited": "2026-05-08T18:15:39Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "4.3 kg",
+    "grid": "3x4",
+    "trader": "Prapor LL4 (Without plates)",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Thorax, Stomach, Back, Sides, Throat, Back neck",
+    "default plates": "2x , 2x",
+    "default plates armor class": "6",
+    "default plates armor coverage": "Front Plate, Back Plate, Sides",
+    "durability": "254",
+    "penalties": "-5% movement speed, -3% turn speed, -3% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "19 Slots",
+    "node": "68948b118c57a8a52301d7ae",
+    "id": "item_equipment_rig_6B45_03"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

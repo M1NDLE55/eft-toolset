@@ -1,0 +1,22 @@
+{
+  "title": "M870 SPS polymer stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_SPS_polymer_stock",
+  "revisionId": 262947,
+  "lastEdited": "2024-01-05T23:41:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "slot": "2x1",
+    "weight": "0.64 kg",
+    "price": "₽1,484",
+    "ergonomics": "+6",
+    "recoil": "-24",
+    "node": "5a7880d0c5856700142fdd9d",
+    "ID": "stock_870_remington_sps_12g"
+  },
+  "sections": []
+}

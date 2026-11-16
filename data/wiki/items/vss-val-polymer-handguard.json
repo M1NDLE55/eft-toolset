@@ -1,0 +1,23 @@
+{
+  "title": "VSS/VAL polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSS/VAL_polymer_handguard",
+  "revisionId": 342383,
+  "lastEdited": "2026-04-29T00:57:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4: Black, Plum",
+    "ergonomics": "+8",
+    "Heat": "+4.5",
+    "Cooling": "-3.8",
+    "node": "6565bb7eb4b12a56eb04b084 651178336cad06c37c049eb4",
+    "ID": "handguard_vss_tochmash_std_blk handguard_vss_tochmash_std"
+  },
+  "sections": []
+}

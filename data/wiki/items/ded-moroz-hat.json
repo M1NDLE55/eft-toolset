@@ -1,0 +1,27 @@
+{
+  "title": "Ded Moroz hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ded_Moroz_hat",
+  "revisionId": 347210,
+  "lastEdited": "2026-06-21T11:15:54Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL1",
+    "node": "5a43943586f77416ad2f06e2",
+    "id": "cap_dedmoroz"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This item refers to a fictional character by the same name who brings presents to well-mannered children.\n- This hat first appeared during Escape from Tarkov's 2017 Christmas Celebration."
+    }
+  ]
+}

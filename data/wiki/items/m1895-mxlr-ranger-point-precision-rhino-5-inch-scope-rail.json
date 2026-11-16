@@ -1,0 +1,21 @@
+{
+  "title": "M1895/MXLR Ranger Point Precision RHINO 5 inch scope rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1895/MXLR_Ranger_Point_Precision_RHINO_5_inch_scope_rail",
+  "revisionId": 339113,
+  "lastEdited": "2026-03-25T21:14:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.09 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-0.5",
+    "node": "67c541fcb032bbdb530201be",
+    "ID": "mount_m1895_ranger_point_precision_rhino_5_scope_rail"
+  },
+  "sections": []
+}

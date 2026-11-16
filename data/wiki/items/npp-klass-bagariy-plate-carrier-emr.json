@@ -1,0 +1,37 @@
+{
+  "title": "NPP KlASS Bagariy plate carrier (EMR)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NPP_KlASS_Bagariy_plate_carrier_(EMR)",
+  "revisionId": 367799,
+  "lastEdited": "2026-11-10T13:13:36Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "5.1 kg",
+    "grid": "4x4",
+    "trader": "Ragman LL4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides",
+    "default plates": "1x , 1x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "132",
+    "penalties": "-6% movement speed, -1.5% turn speed, -2% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "25 Slots",
+    "node": "628d0618d1ba6e4fa07ce5a4",
+    "ID": "item_equipment_rig_bagarii"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

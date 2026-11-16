@@ -1,0 +1,25 @@
+{
+  "title": "Lightkeeper intelligence",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lightkeeper_intelligence",
+  "revisionId": 289559,
+  "lastEdited": "2024-09-01T12:18:05Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.23 kg",
+    "grid": "2x1",
+    "node": "6398a072e301557ae24cec92",
+    "id": "item_quest_keeper2_kompr_true"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Snatch from Lightkeeper"
+    }
+  ]
+}

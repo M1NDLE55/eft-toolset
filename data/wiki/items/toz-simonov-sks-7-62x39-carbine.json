@@ -1,0 +1,38 @@
+{
+  "title": "TOZ Simonov SKS 7.62x39 carbine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TOZ_Simonov_SKS_7.62x39_carbine",
+  "revisionId": 342983,
+  "lastEdited": "2026-05-01T16:32:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault carbines",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault carbine",
+    "slot": "Primary",
+    "weight": "3.793 kg",
+    "grid": "5x1",
+    "trader": "Prapor LL1",
+    "fire modes": "Single",
+    "sightrange": "500",
+    "ergonomics": "37",
+    "velocity": "731 m/s",
+    "range": "400 m",
+    "MOA": "1.72",
+    "Weaprecoil": "Vertical: 97, Horizontal: 225",
+    "rof": "40",
+    "caliber": "7.62x39mm",
+    "def mag": "SKS 7.62x39 10-round internal box magazine",
+    "node": "574d967124597745970e7c94",
+    "ID": "weapon_toz_sks_762x39"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| SKS Tactical |"
+    }
+  ]
+}

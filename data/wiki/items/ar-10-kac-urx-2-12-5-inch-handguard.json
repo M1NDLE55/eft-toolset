@@ -1,0 +1,24 @@
+{
+  "title": "AR-10 KAC URX 2 12.5 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_KAC_URX_2_12.5_inch_handguard",
+  "revisionId": 354937,
+  "lastEdited": "2026-08-17T20:20:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.431 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "-1.6",
+    "Cooling": "+2",
+    "node": "6932aec6cccd2b808a043856 6936bd64b2b5b688e50cde36",
+    "ID": "handguard_ar10_kac_sr25_urx_2_125_inch handguard_ar10_kac_sr25_urx_2_125_inch_tau"
+  },
+  "sections": []
+}

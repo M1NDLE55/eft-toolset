@@ -1,0 +1,37 @@
+{
+  "title": "KBP 9A-91 9x39 compact assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KBP_9A-91_9x39_compact_assault_rifle",
+  "revisionId": 356593,
+  "lastEdited": "2026-08-26T12:29:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault carbines",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault carbine",
+    "slot": "Primary",
+    "weight": "2.452 kg",
+    "grid": "4x2",
+    "trader": "Prapor LL1",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "75.5",
+    "velocity": "290 m/s",
+    "range": "400 m",
+    "MOA": "4.37",
+    "Weaprecoil": "Vertical: 85, Horizontal: 216",
+    "rof": "700",
+    "caliber": "9x39mm",
+    "node": "644674a13d52156624001fbc",
+    "ID": "weapon_kbp_9a91_9x39"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| 9A-91 Tactical |"
+    }
+  ]
+}

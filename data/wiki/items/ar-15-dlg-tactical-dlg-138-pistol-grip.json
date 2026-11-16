@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 DLG Tactical DLG-138 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_DLG_Tactical_DLG-138_pistol_grip",
+  "revisionId": 357312,
+  "lastEdited": "2026-09-01T11:29:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+3",
+    "recoil": "-1",
+    "node": "68c16fcffc90c174e50de1ae 68c16fe183e2d814b0093f7c",
+    "ID": "pistolgrip_ar15_dlg_138 pistolgrip_ar15_dlg_138_fde"
+  },
+  "sections": []
+}

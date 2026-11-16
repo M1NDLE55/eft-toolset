@@ -1,0 +1,21 @@
+{
+  "title": "PB bakelite side grips",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PB_bakelite_side_grips",
+  "revisionId": 340627,
+  "lastEdited": "2026-04-21T09:11:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.102 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+2",
+    "node": "56e05a6ed2720bd0748b4567",
+    "ID": "pistolgrip_pb_tochmash_pb_std"
+  },
+  "sections": []
+}

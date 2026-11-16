@@ -1,0 +1,22 @@
+{
+  "title": "M1A SOCOM 16 upper part",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1A_SOCOM_16_upper_part",
+  "revisionId": 340799,
+  "lastEdited": "2026-04-22T07:47:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.096 kg",
+    "grid": "2x1",
+    "price": "₽4,150",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "node": "5ab24ef9e5b5b00fe93c9209",
+    "ID": "mount_m1a_springfield_armory_socom_16_upper"
+  },
+  "sections": []
+}

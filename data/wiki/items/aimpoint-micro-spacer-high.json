@@ -1,0 +1,21 @@
+{
+  "title": "Aimpoint Micro Spacer High",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aimpoint_Micro_Spacer_High",
+  "revisionId": 351997,
+  "lastEdited": "2026-08-07T00:00:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-0.1",
+    "node": "58d39b0386f77443380bf13c",
+    "ID": "mount_base_aimpoint_h1_t1_spacer"
+  },
+  "sections": []
+}

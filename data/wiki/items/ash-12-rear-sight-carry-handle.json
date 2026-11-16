@@ -1,0 +1,23 @@
+{
+  "title": "ASh-12 rear sight carry handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ASh-12_rear_sight_carry_handle",
+  "revisionId": 322360,
+  "lastEdited": "2025-11-18T14:36:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "sightrange": "600",
+    "ergonomics": "-1",
+    "modes": "1",
+    "node": "5caf1691ae92152ac412efb9",
+    "ID": "sight_rear_all_ckib_ash12_std"
+  },
+  "sections": []
+}

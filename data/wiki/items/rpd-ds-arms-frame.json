@@ -1,0 +1,22 @@
+{
+  "title": "RPD DS Arms frame",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_DS_Arms_frame",
+  "revisionId": 366341,
+  "lastEdited": "2026-10-29T21:42:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.799 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+0",
+    "recoil": "+0",
+    "node": "683060403b1bb49282023611",
+    "ID": "stock_rpd_ds_arms_rpd_lower_frame"
+  },
+  "sections": []
+}

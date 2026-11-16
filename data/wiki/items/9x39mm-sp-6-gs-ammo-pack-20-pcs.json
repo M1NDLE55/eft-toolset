@@ -1,0 +1,25 @@
+{
+  "title": "9x39mm SP-6 gs ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x39mm_SP-6_gs_ammo_pack_(20_pcs)",
+  "revisionId": 367297,
+  "lastEdited": "2026-11-02T23:17:13Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Ref LL4",
+    "node": "657025dabfc87b3a34093256",
+    "ID": "item_ammo_box_9x39_20_sp6"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

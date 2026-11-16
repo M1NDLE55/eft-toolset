@@ -1,0 +1,23 @@
+{
+  "title": "AK-12 gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_gas_tube",
+  "revisionId": 323699,
+  "lastEdited": "2025-11-20T05:51:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "recoil": "-1",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "node": "649ec107961514b22506b10c",
+    "ID": "gas_block_ak12_izhmash_ak12_std"
+  },
+  "sections": []
+}

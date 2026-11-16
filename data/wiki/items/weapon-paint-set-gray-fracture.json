@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Gray Fracture)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Gray_Fracture)",
+  "revisionId": 361045,
+  "lastEdited": "2026-09-21T21:09:39Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "6a84786ed7d03ad49609a67b",
+    "id": "item_camo_fracture_white_grey"
+  },
+  "sections": []
+}

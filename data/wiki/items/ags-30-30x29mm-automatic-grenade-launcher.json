@@ -1,0 +1,49 @@
+{
+  "title": "AGS-30 30x29mm automatic grenade launcher",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AGS-30_30x29mm_automatic_grenade_launcher",
+  "revisionId": 358186,
+  "lastEdited": "2026-09-08T23:32:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Grenade launchers",
+    "Stationary weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stationary automatic grenade launcher",
+    "fire modes": "Full Auto",
+    "rof": "425",
+    "caliber": "30x29mm",
+    "def mag": "Belt drum",
+    "node": "5d52cc5ba4b9367408500062",
+    "ID": "weapon_zid_ags30_30x29"
+  },
+  "sections": [
+    {
+      "heading": "Customs",
+      "level": 4,
+      "text": "Check the interactive map."
+    },
+    {
+      "heading": "Ground Zero",
+      "level": 4,
+      "text": "Check the interactive map."
+    },
+    {
+      "heading": "Reserve",
+      "level": 4,
+      "text": "Check the interactive map."
+    },
+    {
+      "heading": "Shoreline",
+      "level": 4,
+      "text": "Check the interactive map."
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 4,
+      "text": "Check the interactive map."
+    }
+  ]
+}

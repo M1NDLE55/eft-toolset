@@ -1,0 +1,43 @@
+{
+  "title": "AR-15 Lead Star Arms Ravage stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Lead_Star_Arms_Ravage_stock",
+  "revisionId": 361782,
+  "lastEdited": "2026-09-24T13:03:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.17 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3: Black, after unlocking it in Arena BattlePass Season 3, Ref LL3: Yellow, after unlocking it in the The Lab Tactical Map, Ref LL3: Red, after unlocking it in Panacea crate",
+    "ergonomics": "+20",
+    "recoil": "-17",
+    "node": "6984b82c5aab442620032fe8 6985eca7de77dd8dd50025ba 6985ec9fc848f05f4600f6b9",
+    "ID": "stock_ar15_lead_star_arms_ravage stock_ar15_lead_star_arms_ravage_ylw stock_ar15_lead_star_arms_ravage_red"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Black variant",
+      "level": 4,
+      "text": "- Arena BattlePass Season 3 level 11\n- 6 Battle Points"
+    },
+    {
+      "heading": "Yellow variant",
+      "level": 4,
+      "text": "- The Lab Tactical Map"
+    },
+    {
+      "heading": "Red variant",
+      "level": 4,
+      "text": "- Panacea crate"
+    }
+  ]
+}

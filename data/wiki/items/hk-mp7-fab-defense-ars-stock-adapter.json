@@ -1,0 +1,25 @@
+{
+  "title": "HK MP7 FAB Defense ARS stock adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP7_FAB_Defense_ARS_stock_adapter",
+  "revisionId": 362360,
+  "lastEdited": "2026-09-29T09:43:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.27 kg",
+    "grid": "1x1",
+    "node": "69985e9146e48aa39d06a685",
+    "ID": "stock_mp7_fab_defense_ars_adapter"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- The Wedge"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Army cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Army_cap",
+  "revisionId": 310081,
+  "lastEdited": "2025-04-12T20:41:08Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "59e770f986f7742cbe3164ef",
+    "id": "army_cap"
+  },
+  "sections": []
+}

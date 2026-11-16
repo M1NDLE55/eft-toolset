@@ -1,0 +1,28 @@
+{
+  "title": "ESS Crossbow tactical glasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ESS_Crossbow_tactical_glasses",
+  "revisionId": 348883,
+  "lastEdited": "2026-08-02T13:52:00Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.03 kg",
+    "grid": "2x1",
+    "trader": "Ragman LL2",
+    "blindness protect": "30%",
+    "node": "5d5fca1ea4b93635fd598c07",
+    "ID": "item_equipment_glasses_ess"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen\n- Contrary to the description, this item doesn't provide any ballistic protection"
+    }
+  ]
+}

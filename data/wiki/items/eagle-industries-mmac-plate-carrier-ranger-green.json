@@ -1,0 +1,42 @@
+{
+  "title": "Eagle Industries MMAC plate carrier (Ranger Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Eagle_Industries_MMAC_plate_carrier_(Ranger_Green)",
+  "revisionId": 346869,
+  "lastEdited": "2026-06-14T21:19:10Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.83 kg",
+    "grid": "3x3",
+    "trader": "Peacekeeper LL3",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Thorax, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "64",
+    "penalties": "-1% movement speed, -1% turn speed, -1% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "14 Slots",
+    "node": "61bc85697113f767765c7fe7",
+    "id": "item_equipment_rig_mmac"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The pouches used on the chest rig are an SVD MOLLE Mag Pouch, two HSGI Polymer TACOs, two Direct Action Speed Reload Pistol Pouches, and the radio is a Midland EX37VP Walkie Talkie."
+    }
+  ]
+}

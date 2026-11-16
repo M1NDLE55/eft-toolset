@@ -1,0 +1,28 @@
+{
+  "title": "Fierce Blow sledgehammer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fierce_Blow_sledgehammer",
+  "revisionId": 367800,
+  "lastEdited": "2026-11-10T13:13:40Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "5.5 kg",
+    "grid": "2x5",
+    "effect": "Generic loot item",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "63a0b208f444d32d6f03ea1e",
+    "id": "item_barter_hultafors_db5000"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Technical supply crate\n- Tools spawns"
+    }
+  ]
+}

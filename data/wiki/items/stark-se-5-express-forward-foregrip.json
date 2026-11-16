@@ -1,0 +1,22 @@
+{
+  "title": "Stark SE-5 Express Forward foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stark_SE-5_Express_Forward_foregrip",
+  "revisionId": 364394,
+  "lastEdited": "2026-10-13T18:54:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3: Black, FDE, Mechanic LL4: Black, FDE after completing his task Gunsmith Master - Part 3",
+    "ergonomics": "+6",
+    "recoil": "-2",
+    "node": "5b057b4f5acfc4771e1bd3e9 655df24fdf80b12750626d0a",
+    "ID": "foregrip_all_stark_se_5_express_grip foregrip_all_stark_se_5_express_grip_fde"
+  },
+  "sections": []
+}

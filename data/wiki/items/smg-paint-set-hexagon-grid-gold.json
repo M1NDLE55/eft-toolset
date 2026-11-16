@@ -1,0 +1,24 @@
+{
+  "title": "SMG paint set (Hexagon Grid Gold)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SMG_paint_set_(Hexagon_Grid_Gold)",
+  "revisionId": 319393,
+  "lastEdited": "2025-10-19T20:29:42Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "686fd13744884e450601b88a",
+    "id": "item_camo_hexagon_grid_01_gold"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be applied to submachine guns."
+    }
+  ]
+}

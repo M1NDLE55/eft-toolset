@@ -1,0 +1,27 @@
+{
+  "title": "Crye Precision AirFrame Chops",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_Chops",
+  "revisionId": 362095,
+  "lastEdited": "2026-09-24T19:46:22Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.45 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL4",
+    "armor": "3",
+    "armor coverage": "Ears, Jaws",
+    "durability": "30",
+    "material": "Aluminium",
+    "penalties": "-1% turn speed, -1% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5c178a942e22164bef5ceca3",
+    "ID": "item_equipment_helmet_crye_airframe_chops"
+  },
+  "sections": []
+}

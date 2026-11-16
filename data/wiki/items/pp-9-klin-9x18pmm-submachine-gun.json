@@ -1,0 +1,37 @@
+{
+  "title": "PP-9 Klin 9x18PMM submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-9_Klin_9x18PMM_submachine_gun",
+  "revisionId": 362957,
+  "lastEdited": "2026-10-03T11:26:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "1.529 kg",
+    "grid": "3x2",
+    "trader": "Prapor LL1",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "67",
+    "velocity": "284 m/s",
+    "range": "100 m",
+    "MOA": "8.59",
+    "Weaprecoil": "Vertical: 50, Horizontal: 211",
+    "rof": "1000",
+    "caliber": "9x18mm Makarov",
+    "node": "57f4c844245977379d5c14d1",
+    "ID": "weapon_zmz_pp-9_9x18pmm"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The PP-9 Klin 9x18PMM submachine gun can fire 9x18mm PMM PstM gzh ammunition while the PP-91 Kedr and PP-91-01 Kedr-B can not.\n- Folding the stock will not affect the recoil of this weapon."
+    }
+  ]
+}

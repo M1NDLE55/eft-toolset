@@ -1,0 +1,26 @@
+{
+  "title": "VPO-101 wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-101_wooden_stock",
+  "revisionId": 293134,
+  "lastEdited": "2024-09-29T20:29:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.25 kg",
+    "grid": "4x1",
+    "price": "₽2,853",
+    "ergonomics": "+18",
+    "recoil": "-22",
+    "Heat": "+5.2",
+    "Cooling": "-4.9",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5c503af12e221602b177ca02",
+    "ID": "stock_vepr_molot_vpo-101_std_wood"
+  },
+  "sections": []
+}

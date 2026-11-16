@@ -1,0 +1,26 @@
+{
+  "title": "Zryachiy's balaclava (folded)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zryachiy's_balaclava_(folded)",
+  "revisionId": 305011,
+  "lastEdited": "2025-01-31T15:33:22Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "636270263f2495c26f00b007",
+    "id": "item_equipment_head_BOSS_zryachi_balaclava_open"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Zryachiy"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Tournament secured container",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tournament_secured_container",
+  "revisionId": 363467,
+  "lastEdited": "2026-10-06T22:21:09Z",
+  "kind": "item",
+  "categories": [
+    "Secure containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Secure container",
+    "slot": "Pouch",
+    "weight": "1.2 kg",
+    "grid": "3x3",
+    "slots": "3x3 grid (9 slots)",
+    "node": "64f6f4c5911bcdfe8b03b0dc",
+    "id": "item_container_secured_tournament"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Given to the special accounts participating in the 2023 Streamer Challenge.\n- All items attributed to content creators which are required for the quest Collector cannot be put into the container, with the exception of Gingy keychain.\n- Otherwise, can fit:\n  - Document case\n  - Dogtag case\n  - Injector case\n  - Key tool\n  - Keycard holder case\n  - S I C C organizational pouch\n  - Simple wallet\n  - Loot\n  - Provisions\n  - Meds\n  - Keys, Keycards & Maps\n  - Weapon mods (Besides magazines, special scopes and some mounts)\n  - Ammo & paper ammo boxes\n  - Currency\n  - Armbands\n  - Earpieces\n  - Vanity Face cover\n  - Vanity Headwear\n  - Vanity Eyewear\n  - Melee weapons\n  - Special equipment (Besides repair kits)"
+    }
+  ]
+}

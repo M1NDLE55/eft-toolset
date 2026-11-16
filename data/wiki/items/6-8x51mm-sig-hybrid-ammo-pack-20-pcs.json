@@ -1,0 +1,24 @@
+{
+  "title": "6.8x51mm SIG Hybrid ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6.8x51mm_SIG_Hybrid_ammo_pack_(20_pcs)",
+  "revisionId": 367208,
+  "lastEdited": "2026-11-02T23:12:40Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "67600a516f01341c9106ab4c",
+    "ID": "item_ammo_box_68x51_20_hybrid"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

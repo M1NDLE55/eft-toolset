@@ -1,0 +1,24 @@
+{
+  "title": "GSSh-01 active headset",
+  "url": "https://escapefromtarkov.fandom.com/wiki/GSSh-01_active_headset",
+  "revisionId": 341108,
+  "lastEdited": "2026-04-23T00:58:59Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.5 kg",
+    "grid": "2x2",
+    "trader": "Prapor LL1",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "5b432b965acfc47a8774094e",
+    "id": "item_equipment_headset_gsh01"
+  },
+  "sections": []
+}

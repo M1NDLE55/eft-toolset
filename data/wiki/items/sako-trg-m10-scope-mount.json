@@ -1,0 +1,21 @@
+{
+  "title": "Sako TRG M10 scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_M10_scope_mount",
+  "revisionId": 314342,
+  "lastEdited": "2025-06-17T22:17:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.273 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-1",
+    "node": "673cb51e093e0ea7fd0b8746",
+    "ID": "mount_trg_sako_m10_scope_mount"
+  },
+  "sections": []
+}

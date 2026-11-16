@@ -1,0 +1,38 @@
+{
+  "title": "Ars Arma A18 Skanda plate carrier (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ars_Arma_A18_Skanda_plate_carrier_(MultiCam)",
+  "revisionId": 362791,
+  "lastEdited": "2026-10-01T21:13:26Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.45 kg",
+    "grid": "4x3",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Thorax, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "86",
+    "penalties": "-1% movement speed, +0% turn speed, -3% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "25 Slots",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5d5d87f786f77427997cfaef",
+    "ID": "item_equipment_armor_a18"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "9x21mm PS gzh ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x21mm_PS_gzh_ammo_pack_(30_pcs)",
+  "revisionId": 367291,
+  "lastEdited": "2026-11-02T23:17:00Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657025c4c5d7d4cb4d078582",
+    "ID": "item_ammo_box_9x21_30_ps"
+  },
+  "sections": []
+}

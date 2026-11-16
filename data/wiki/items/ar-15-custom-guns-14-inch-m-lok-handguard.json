@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Custom Guns 14 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Custom_Guns_14_inch_M-LOK_handguard",
+  "revisionId": 343381,
+  "lastEdited": "2026-05-05T20:51:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.48 kg",
+    "grid": "3x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "-2.5",
+    "Cooling": "+4",
+    "node": "68c170e383e2d814b0093f87",
+    "ID": "handguard_ar15_cgnl_ar15_14_inch"
+  },
+  "sections": []
+}

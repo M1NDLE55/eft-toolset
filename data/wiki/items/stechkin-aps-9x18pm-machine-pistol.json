@@ -1,0 +1,33 @@
+{
+  "title": "Stechkin APS 9x18PM machine pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stechkin_APS_9x18PM_machine_pistol",
+  "revisionId": 340933,
+  "lastEdited": "2026-04-22T21:57:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "1.021 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "200",
+    "ergonomics": "73",
+    "velocity": "288 m/s",
+    "range": "50 m",
+    "MOA": "10.31",
+    "Weaprecoil": "Vertical: 328, Horizontal: 260",
+    "rof": "750",
+    "caliber": "9x18mm Makarov",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5a17f98cfcdbcb0980087290",
+    "ID": "weapon_molot_aps_9x18pm"
+  },
+  "sections": []
+}

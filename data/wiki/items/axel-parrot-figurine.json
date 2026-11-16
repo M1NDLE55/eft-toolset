@@ -1,0 +1,31 @@
+{
+  "title": "Axel parrot figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Axel_parrot_figurine",
+  "revisionId": 367808,
+  "lastEdited": "2026-11-10T13:15:16Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.33 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "62a091170b9d3c46de5b6cf2",
+    "ID": "item_barter_valuable_parrot"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a reference to the content creator Axel_tv."
+    }
+  ]
+}

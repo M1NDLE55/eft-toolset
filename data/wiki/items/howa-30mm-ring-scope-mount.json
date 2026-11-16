@@ -1,0 +1,21 @@
+{
+  "title": "Howa 30mm ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Howa_30mm_ring_scope_mount",
+  "revisionId": 356847,
+  "lastEdited": "2026-08-29T21:30:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-1",
+    "node": "6a3ceaf01ac10a22850e295a",
+    "ID": "mount_all_howa_30mm_scope_mount_ring"
+  },
+  "sections": []
+}

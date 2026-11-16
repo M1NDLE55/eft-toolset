@@ -1,0 +1,23 @@
+{
+  "title": "SKS Weapon Tuning 7.62x39 thread adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_Weapon_Tuning_7.62x39_thread_adapter",
+  "revisionId": 271742,
+  "lastEdited": "2024-02-17T00:30:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.055 kg",
+    "grid": "1x1",
+    "price": "₽1,850",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "node": "5cf67cadd7f00c065a5abab7",
+    "ID": "muzzle_sks_weapon_tuning_wt0032_1_762x39"
+  },
+  "sections": []
+}

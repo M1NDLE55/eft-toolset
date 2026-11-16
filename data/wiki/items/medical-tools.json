@@ -1,0 +1,26 @@
+{
+  "title": "Medical tools",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Medical_tools",
+  "revisionId": 358463,
+  "lastEdited": "2026-09-10T21:29:48Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "619cc01e0a7c3a1a2731940c",
+    "id": "item_barter_meds_tools"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    }
+  ]
+}

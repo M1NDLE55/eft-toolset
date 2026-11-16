@@ -1,0 +1,23 @@
+{
+  "title": "Mk-18 gas block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mk-18_gas_block",
+  "revisionId": 216271,
+  "lastEdited": "2022-12-09T15:59:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "ergonomics": "+0",
+    "recoil": "+0",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "node": "5fc2360f900b1d5091531e19",
+    "ID": "gas_block_mk18_sword_mjolnir_std"
+  },
+  "sections": []
+}

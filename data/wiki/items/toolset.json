@@ -1,0 +1,26 @@
+{
+  "title": "Toolset",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Toolset",
+  "revisionId": 366105,
+  "lastEdited": "2026-10-28T21:35:59Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "0.9 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "node": "590c2e1186f77425357b6124",
+    "id": "item_tools_toolset"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    }
+  ]
+}

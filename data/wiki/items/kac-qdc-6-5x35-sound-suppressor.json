@@ -1,0 +1,31 @@
+{
+  "title": "KAC QDC 6.5x35 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KAC_QDC_6.5x35_sound_suppressor",
+  "revisionId": 348116,
+  "lastEdited": "2026-07-21T06:20:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.51 kg",
+    "grid": "2x1",
+    "ergonomics": "-2",
+    "velocity": "+0.75",
+    "accuracy": "-1",
+    "recoil": "-1",
+    "Dura Burn": "+70",
+    "Heat": "+14",
+    "node": "55d617094bdc2d89028b4568",
+    "ID": "silencer_kac_qdc_65x35"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The KAC QDC 6.5x35 sound suppressor is an unfinished and unobtainable item in the game that is only visible in the handbook of accounts with access to all items in the game, for example special tournament accounts."
+    }
+  ]
+}

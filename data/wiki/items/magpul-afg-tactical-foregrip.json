@@ -1,0 +1,22 @@
+{
+  "title": "Magpul AFG tactical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magpul_AFG_tactical_foregrip",
+  "revisionId": 362950,
+  "lastEdited": "2026-10-03T11:22:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.082 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3: Black, Peacekeeper LL3: Black, FDE, FG, OD, Mechanic LL3: OD",
+    "ergonomics": "+8",
+    "recoil": "+0",
+    "node": "588226d124597767ad33f787 (black) 588226dd24597767ad33f789 (FDE) 588226e62459776e3e094af7 (FG) 588226ef24597767af46e39c (OD)",
+    "ID": "foregrip_all_magpul_afg_blk foregrip_all_magpul_afg_fde foregrip_all_magpul_afg_fg foregrip_all_magpul_afg_od"
+  },
+  "sections": []
+}

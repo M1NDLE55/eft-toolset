@@ -1,0 +1,23 @@
+{
+  "title": "RFB handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RFB_handguard",
+  "revisionId": 342098,
+  "lastEdited": "2026-04-28T03:45:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.221 kg",
+    "grid": "2x1",
+    "ergonomics": "+16",
+    "recoil": "+0",
+    "Heat": "+1.8",
+    "Cooling": "+5.3",
+    "node": "5f2aa47a200e2c0ee46efa71",
+    "ID": "handguard_rfb_kel_tec_rfb_std"
+  },
+  "sections": []
+}

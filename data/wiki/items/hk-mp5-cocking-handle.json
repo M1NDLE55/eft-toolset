@@ -1,0 +1,23 @@
+{
+  "title": "HK MP5 cocking handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_cocking_handle",
+  "revisionId": 214087,
+  "lastEdited": "2022-11-10T22:24:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.126 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5926c32286f774616e42de99",
+    "ID": "charge_mp5_hk_mp5_std"
+  },
+  "sections": []
+}

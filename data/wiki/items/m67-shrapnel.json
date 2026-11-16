@@ -1,0 +1,24 @@
+{
+  "title": "M67 Shrapnel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M67_Shrapnel",
+  "revisionId": 307610,
+  "lastEdited": "2025-03-27T23:57:02Z",
+  "kind": "ammo",
+  "categories": [
+    "Shrapnel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shrapnel",
+    "velocity": "100 m/s",
+    "damage": "45",
+    "penetration": "12",
+    "armor damage": "32",
+    "ricochet": "20%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+20",
+    "node": "5996f6fc86f7745e585b4de3",
+    "id": "shrapnel_M67"
+  },
+  "sections": []
+}

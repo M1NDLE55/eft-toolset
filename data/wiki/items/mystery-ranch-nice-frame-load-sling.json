@@ -1,0 +1,38 @@
+{
+  "title": "Mystery Ranch NICE Frame Load Sling",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mystery_Ranch_NICE_Frame_Load_Sling",
+  "revisionId": 361591,
+  "lastEdited": "2026-09-23T22:10:14Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "7.035 kg",
+    "grid": "5x6",
+    "penalties": "-4% movement speed, -2% turn speed, -6% Ergonomics",
+    "slots": "5x7 grid (35 slots)",
+    "node": "68947ad3e4bf255d1b0ca75c",
+    "ID": "item_equipment_backpack_bd_mystery_ranch_nice_load"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division (Not on Icebreaker)"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The backpack is modeled after the Mystery Ranch NICE Frame fitted with the company's Load Sling system, carrying a Pelican 1510 Protector Carry-On Case in OD Green.\n- The webbing attached to the load sling is outfitted with several commercially available accessories, including:\n  - Three THYRM CellVault Battery Storage containers in orange.\n  - Three CobraCuffs Foldable Cobra Cuffs in black.\n  - One CobraCuffs Foldable Cobra Cuff in tan."
+    }
+  ]
+}

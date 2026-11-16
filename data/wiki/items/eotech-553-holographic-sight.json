@@ -1,0 +1,24 @@
+{
+  "title": "EOTech 553 holographic sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/EOTech_553_holographic_sight",
+  "revisionId": 267708,
+  "lastEdited": "2024-01-23T14:23:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.349 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-2.5",
+    "modes": "1",
+    "node": "570fd6c2d2720bc6458b457f",
+    "ID": "scope_all_eotech_553"
+  },
+  "sections": []
+}

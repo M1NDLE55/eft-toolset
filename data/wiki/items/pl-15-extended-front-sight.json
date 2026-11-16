@@ -1,0 +1,21 @@
+{
+  "title": "PL-15 extended front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PL-15_extended_front_sight",
+  "revisionId": 306860,
+  "lastEdited": "2025-03-18T13:48:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "sightrange": "200",
+    "node": "60228a850ddce744014caf69",
+    "ID": "sight_front_pl15_izhmash_pl15_supressor_sight"
+  },
+  "sections": []
+}

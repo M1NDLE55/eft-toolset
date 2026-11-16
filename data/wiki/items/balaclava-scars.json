@@ -1,0 +1,27 @@
+{
+  "title": "Balaclava (Scars)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balaclava_(Scars)",
+  "revisionId": 348558,
+  "lastEdited": "2026-07-30T22:01:28Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a9ccfff05be177170bcd78",
+    "id": "item_equipment_facecover_balaclava_arena_bp_02"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

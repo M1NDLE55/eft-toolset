@@ -1,0 +1,25 @@
+{
+  "title": "Second piece of code note",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Second_piece_of_code_note",
+  "revisionId": 348008,
+  "lastEdited": "2026-07-19T00:13:00Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "68d2f6dbf8817df4690db3d3",
+    "ID": "item_info_note_radiocode_bogatir_02"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    }
+  ]
+}

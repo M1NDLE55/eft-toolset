@@ -1,0 +1,31 @@
+{
+  "title": "BEAR Buddy plush toy",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_Buddy_plush_toy",
+  "revisionId": 289866,
+  "lastEdited": "2024-09-01T20:45:02Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.38 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "node": "62a08f4c4f842e1bd12d9d62",
+    "ID": "item_barter_other_teddyb"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator AnneMunition."
+    }
+  ]
+}

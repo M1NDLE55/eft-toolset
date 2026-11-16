@@ -1,0 +1,45 @@
+{
+  "title": "TerraGroup \"Blue Folders\" materials",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_%22Blue_Folders%22_materials",
+  "revisionId": 358967,
+  "lastEdited": "2026-09-13T12:34:32Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.33 kg",
+    "grid": "1x2",
+    "node": "6389c8c5dbfd5e4b95197e6b",
+    "ID": "item_barter_info_tgdocs"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- In Safes\n- In Plastic suitcases\n- On Rogues"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- On a desk in the trainyard warehouse\n- Building 2 of the Water Treatment Plant"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In a stack of pallets, in the USEC camp\n\n- On a shelf inside the train depot offices\n\n- In a sink inside the toilet of the old house with semi-circle windows in the train depot\n\n- Inside the mountain bunker found on the desk in the second side room"
+    },
+    {
+      "heading": "Ground Zero (Level 21+)",
+      "level": 3,
+      "text": "- Inside a file organizer in office no. 3 on the second floor of the TerraGroup main building\n\n- Inside a drawer on the floor in office no. 4 on the second floor of the TerraGroup main building"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- On top of the oval table next to the laboratory manager office (O21).\n- On top of the desk with one screen in the laboratory manager office (O21).\n- On top of a desk in the laboratory block (G22).\n- On the 2nd level of the shelve in Kruglov's office(R22)\n- Inside of the safe in Kruglov's office(R22)\n- Inside of Security(R23) on the shelve in the back in multiple locations\n- Inside of Security(R23) on the shelve to the right after entering\n- On the table next to the blue binders at the entrance in as well as the far back right side on top of the files on the table as well as to the left of the entrance in the 2nd white shelve TerraGroup Labs keycard (Green)\n- In the bookcase on the left after unlocking and entering the residential unit no. 7."
+    }
+  ]
+}

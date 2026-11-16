@@ -1,0 +1,25 @@
+{
+  "title": "Working LCD",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Working_LCD",
+  "revisionId": 358767,
+  "lastEdited": "2026-09-10T23:05:52Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.05 kg",
+    "grid": "1x2",
+    "node": "5d1b304286f774253763a528",
+    "ID": "item_barter_electr_lcd_Clean"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Dead Scav\n- Weapon box (6x6)\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

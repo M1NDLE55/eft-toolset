@@ -1,0 +1,21 @@
+{
+  "title": "MCX pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX_pistol_grip",
+  "revisionId": 355557,
+  "lastEdited": "2026-08-23T08:11:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1, Skier LL3",
+    "ergonomics": "+3",
+    "node": "5fbcbd6c187fea44d52eda14",
+    "ID": "pistolgrip_ar15_sig_mcx_std"
+  },
+  "sections": []
+}

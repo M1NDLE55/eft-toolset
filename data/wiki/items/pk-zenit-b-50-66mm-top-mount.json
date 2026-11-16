@@ -1,0 +1,21 @@
+{
+  "title": "PK Zenit B-50 66mm top mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PK_Zenit_B-50_66mm_top_mount",
+  "revisionId": 255186,
+  "lastEdited": "2023-11-11T20:17:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.135 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-1",
+    "node": "6492c8bba6e68e06fb0bae87",
+    "ID": "mount_pk_zenit_b50_rack_66mm"
+  },
+  "sections": []
+}

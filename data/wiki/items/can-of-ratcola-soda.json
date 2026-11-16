@@ -1,0 +1,32 @@
+{
+  "title": "Can of RatCola soda",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_RatCola_soda",
+  "revisionId": 331786,
+  "lastEdited": "2026-01-08T11:52:14Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "0.36 kg",
+    "grid": "1x1",
+    "effect": "Energy: +20, Hydration: +20, , Buffs:, 1s Delay; 60s Duration: - Increases energy recovery (+0.1/s)",
+    "use time": "4s",
+    "node": "60b0f93284c20f0feb453da7",
+    "ID": "item_drink_ratcola"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Sport bags\n- In Supply airdrops"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator General Sam.\n  - The artwork depicted on the can is also a reference to the content creator fairTX which can be seen at the beginning of his video \"The Third Type of Tarkov Players\""
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "SJ12 TGLabs combat stimulant injector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SJ12_TGLabs_combat_stimulant_injector",
+  "revisionId": 317733,
+  "lastEdited": "2025-08-27T00:34:13Z",
+  "kind": "item",
+  "categories": [
+    "Stimulants"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injector",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "effect": "Buffs:, 1s Delay; 600s Duration: - Increases Perception (+30) - Lowers body temperature (-4 °C) - Increases energy recovery (+0.05/s) - Increases hydration recovery (+0.05/s) Debuffs:, 606s Delay; 300s Duration: - Raises body temperature (+6 °C)",
+    "use time": "2s",
+    "loot xp": "20",
+    "exam xp": "8",
+    "node": "637b612fb7afa97bfc3d7005",
+    "ID": "SJ12_TGLabs"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Using this stimulant will lower the body Temperature by 4 °C, making the user harder to be seen by thermal scopes and the T-7 thermal goggles."
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Laboratory experiment's area (G12) on the first level (Requires TerraGroup Labs keycard (Black))\n- Sanitar's room in the Laboratory block (G22) on the second level (Requires Keycard with a blue marking)\n- On the floor of the \"Med Hut\" on the main floor, first Level (O11)\n- On the left hand table in the Laboratory quarantine zone (G11) (Requires TerraGroup Labs keycard (Blue))\n- In the laboratories inside the containment block"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from This Tape Sucks"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The QR code on the label reads \"средство для разогрева ягодиц 3000\", which translates to \"buttocks warming agent 3000\"."
+    }
+  ]
+}

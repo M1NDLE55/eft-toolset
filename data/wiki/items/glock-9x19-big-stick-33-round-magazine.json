@@ -1,0 +1,30 @@
+{
+  "title": "Glock 9x19 \"Big Stick\" 33-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_%22Big_Stick%22_33-round_magazine",
+  "revisionId": 352593,
+  "lastEdited": "2026-08-09T19:54:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.15 kg",
+    "grid": "1x2",
+    "trader": "Skier LL3, Mechanic LL3",
+    "ergonomics": "-3.5",
+    "checkaccuracy": "1",
+    "checkmodifier": "+0",
+    "loadmodifier": "+5",
+    "feedfailure": "Medium",
+    "capacity": "33",
+    "caliber": "9x19mm Parabellum",
+    "spawn chance": "10%",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5a7ad2e851dfba0016153692",
+    "ID": "mag_glock_glock_big_stick_9x19_33"
+  },
+  "sections": []
+}

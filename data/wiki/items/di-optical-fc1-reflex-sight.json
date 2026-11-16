@@ -1,0 +1,29 @@
+{
+  "title": "DI Optical FC1 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DI_Optical_FC1_reflex_sight",
+  "revisionId": 353560,
+  "lastEdited": "2026-08-14T07:58:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Compact reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Compact reflex sight",
+    "weight": "0.13 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 2",
+    "zeroing": "25, 50, 100",
+    "sightrange": "150",
+    "modes": "1",
+    "node": "6985bebd812f88c79b0eed3b",
+    "ID": "scope_base_di_optical_fc1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

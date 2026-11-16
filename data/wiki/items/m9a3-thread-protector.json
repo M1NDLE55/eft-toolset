@@ -1,0 +1,21 @@
+{
+  "title": "M9A3 thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M9A3_thread_protector",
+  "revisionId": 337640,
+  "lastEdited": "2026-03-06T00:36:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "ergonomics": "+2",
+    "Dura Burn": "-2",
+    "node": "5cadc390ae921500126a77f1",
+    "ID": "muzzle_m9_beretta_m9a3_protector_std_9x19"
+  },
+  "sections": []
+}

@@ -40,32 +40,8 @@ function useOpenSet() {
   return { open, toggle };
 }
 
-function Section({
-  id,
-  title,
-  count,
-  empty,
-  children,
-}: {
-  id: string;
-  title: string;
-  count: number;
-  empty: string;
-  children: ReactNode;
-}) {
-  return (
-    <section id={id} aria-labelledby={`${id}-title`} className="flex flex-col gap-2 scroll-mt-24">
-      <h2 id={`${id}-title`} className="flex items-baseline gap-2 text-xs font-bold uppercase tracking-widest text-[#9a8866]">
-        {title}
-        <span className="text-[#666]">{count}</span>
-      </h2>
-      {count === 0 ? (
-        <p className="border border-[#1a1a1a] bg-[#0c0c0c] px-3 py-3 text-sm text-[#888]">{empty}</p>
-      ) : (
-        <div className="border border-[#1a1a1a] bg-[#0c0c0c] px-3">{children}</div>
-      )}
-    </section>
-  );
+function List({ children }: { children: ReactNode }) {
+  return <div className="-my-1">{children}</div>;
 }
 
 function Badge({ children }: { children: ReactNode }) {
@@ -126,7 +102,7 @@ function Unlock({ unlock }: { unlock: CachedTaskUnlock | null }) {
 export function UsedInTasks({ tasks }: { tasks: CachedTask[] }) {
   const { open, toggle } = useOpenSet();
   return (
-    <Section id="tasks" title="Used in tasks" count={tasks.length} empty="Not needed for any task.">
+    <List>
       {tasks.map((task, index) => (
         <Accordion
           key={`${task.name}-${index}`}
@@ -162,7 +138,7 @@ export function UsedInTasks({ tasks }: { tasks: CachedTask[] }) {
           )}
         </Accordion>
       ))}
-    </Section>
+    </List>
   );
 }
 
@@ -184,7 +160,7 @@ export function HideoutUses({
     })),
   ];
   return (
-    <Section id="hideout" title="Hideout" count={rows.length} empty="Not needed for any hideout upgrade.">
+    <List>
       <ul>
         {rows.map((row, index) => (
           <li key={index} className="flex items-center gap-2 border-b border-[#1a1a1a] py-2 text-sm last:border-b-0">
@@ -195,24 +171,29 @@ export function HideoutUses({
           </li>
         ))}
       </ul>
-    </Section>
+    </List>
   );
 }
 
-function RecipeList({
-  id,
-  title,
-  empty,
-  recipes,
-}: {
-  id: string;
-  title: string;
-  empty: string;
-  recipes: { source: string; level: number; taskUnlock: CachedTaskUnlock | null; requiredItems: CachedContainedItem[]; rewardItems: CachedContainedItem[] }[];
-}) {
+interface Recipe {
+  source: string;
+  level: number;
+  taskUnlock: CachedTaskUnlock | null;
+  requiredItems: CachedContainedItem[];
+  rewardItems: CachedContainedItem[];
+}
+
+/** "2× Rechargeable battery + 1 more": what a recipe takes, for recipes that give the item. */
+function inputsLabel(recipe: Recipe) {
+  const [first, ...rest] = recipe.requiredItems.filter((entry) => !entry.tool);
+  if (!first) return "Unknown inputs";
+  return `${first.quantity}× ${first.item.name}${rest.length > 0 ? ` + ${rest.length} more` : ""}`;
+}
+
+function RecipeList({ recipes, label = "reward" }: { recipes: Recipe[]; label?: "reward" | "inputs" }) {
   const { open, toggle } = useOpenSet();
   return (
-    <Section id={id} title={title} count={recipes.length} empty={empty}>
+    <List>
       {recipes.map((recipe, index) => (
         <Accordion
           key={`${recipe.source}-${recipe.rewardItems[0]?.item.name}-${index}`}
@@ -224,9 +205,11 @@ function RecipeList({
                 {recipe.source} {RomanLiteral(recipe.level) ?? recipe.level}
               </Badge>
               <span className={open.has(index) ? "min-w-0" : "min-w-0 truncate"}>
-                {recipe.rewardItems[0]?.item.name ?? "Unknown reward"}
+                {label === "inputs" ? inputsLabel(recipe) : (recipe.rewardItems[0]?.item.name ?? "Unknown reward")}
               </span>
-              <span className="ml-auto shrink-0 text-xs text-[#777]">{recipe.requiredItems.length} in</span>
+              {label === "reward" && (
+                <span className="ml-auto shrink-0 text-xs text-[#777]">{recipe.requiredItems.length} in</span>
+              )}
             </>
           }
         >
@@ -243,28 +226,27 @@ function RecipeList({
           </div>
         </Accordion>
       ))}
-    </Section>
+    </List>
   );
 }
 
 export function BartersUsing({ barters }: { barters: CachedBarter[] }) {
-  return (
-    <RecipeList
-      id="barters"
-      title="Barters using"
-      empty="No barters use this item."
-      recipes={barters.map((barter) => ({ ...barter, source: barter.trader.name }))}
-    />
-  );
+  return <RecipeList recipes={barters.map((barter) => ({ ...barter, source: barter.trader.name }))} />;
 }
 
 export function CraftsUsing({ crafts }: { crafts: CachedCraft[] }) {
+  return <RecipeList recipes={crafts.map((craft) => ({ ...craft, source: craft.station.name }))} />;
+}
+
+/** Barters and crafts that give the item, labelled by what they take. */
+export function WaysToGet({ barters, crafts }: { barters: CachedBarter[]; crafts: CachedCraft[] }) {
   return (
     <RecipeList
-      id="crafts"
-      title="Crafts using"
-      empty="No crafts use this item."
-      recipes={crafts.map((craft) => ({ ...craft, source: craft.station.name }))}
+      label="inputs"
+      recipes={[
+        ...barters.map((barter) => ({ ...barter, source: barter.trader.name })),
+        ...crafts.map((craft) => ({ ...craft, source: craft.station.name })),
+      ]}
     />
   );
 }

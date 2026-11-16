@@ -1,0 +1,30 @@
+{
+  "title": "APS 9x18PM 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/APS_9x18PM_20-round_magazine",
+  "revisionId": 337460,
+  "lastEdited": "2026-03-05T23:06:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.044 kg",
+    "grid": "1x1",
+    "price": "₽700",
+    "trader": "Prapor LL1",
+    "ergonomics": "+0",
+    "checkaccuracy": "1",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Low",
+    "capacity": "20",
+    "caliber": "9x18mm Makarov",
+    "loot xp": "10",
+    "exam xp": "Examined by default",
+    "node": "5a17fb03fcdbcbcae668728f",
+    "ID": "mag_aps_molot_aps_apb_std_9x18pm_20"
+  },
+  "sections": []
+}

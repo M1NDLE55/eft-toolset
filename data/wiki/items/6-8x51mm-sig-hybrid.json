@@ -1,0 +1,38 @@
+{
+  "title": "6.8x51mm SIG Hybrid",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6.8x51mm_SIG_Hybrid",
+  "revisionId": 306393,
+  "lastEdited": "2025-03-09T03:52:25Z",
+  "kind": "ammo",
+  "categories": [
+    "6.8x51mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.024 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4 after completing Lightkeeper's task Trouble in the Big City",
+    "velocity": "914 m/s",
+    "damage": "72",
+    "accuracy": "+3",
+    "recoil": "+10",
+    "penetration": "47",
+    "armor damage": "58",
+    "ricochet": "30%",
+    "durability burn": "+50",
+    "heat": "+153",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "6529243824cbe3c74a05e5c1",
+    "id": "patron_68x51"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

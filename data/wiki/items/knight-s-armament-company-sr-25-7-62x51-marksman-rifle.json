@@ -1,0 +1,42 @@
+{
+  "title": "Knight's Armament Company SR-25 7.62x51 marksman rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Knight's_Armament_Company_SR-25_7.62x51_marksman_rifle",
+  "revisionId": 364462,
+  "lastEdited": "2026-10-14T19:41:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Designated marksman rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Designated marksman rifle",
+    "slot": "Primary",
+    "weight": "3.86 kg",
+    "grid": "5x2",
+    "trader": "Ref LL2, Peacekeeper LL3: Black, Taupe",
+    "fire modes": "Single",
+    "sightrange": "300",
+    "ergonomics": "59.5",
+    "velocity": "823 m/s",
+    "range": "900 m",
+    "MOA": "1.49",
+    "Weaprecoil": "Vertical: 94, Horizontal: 216",
+    "rof": "700",
+    "caliber": "7.62x51mm NATO",
+    "node": "5df8ce05b11454561e39243b 6932abeb5403890d0c09c926",
+    "ID": "weapon_kac_sr25_762x51 weapon_kac_sr25_762x51_tau"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| SR-25 Ba-cho |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The taupe color attachments added with patch 1.0.1.0.42625 were described as addition of the \"M110 SASS marksman rifle\", while there was no new lower receiver or named variant added. The M110 SASS is based on the SR-25, but not exactly the same weapon and basically an SR-25 with a military-spec attachment package and small enhancements."
+    }
+  ]
+}

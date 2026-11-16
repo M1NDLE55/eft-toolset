@@ -1,0 +1,21 @@
+{
+  "title": "Nightforce Magmount 30mm ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nightforce_Magmount_30mm_ring_scope_mount",
+  "revisionId": 338475,
+  "lastEdited": "2026-03-15T14:37:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.19 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-1",
+    "node": "5b3b99265acfc4704b4a1afb",
+    "ID": "mount_all_nightforce_x_treme_duty_ultralite_30mm"
+  },
+  "sections": []
+}

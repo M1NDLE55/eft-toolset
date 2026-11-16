@@ -1,0 +1,37 @@
+{
+  "title": "ECLiPSE RBAV-AF plate carrier (Ranger Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ECLiPSE_RBAV-AF_plate_carrier_(Ranger_Green)",
+  "revisionId": 346877,
+  "lastEdited": "2026-06-14T21:30:08Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.65 kg",
+    "grid": "3x4",
+    "trader": "Ragman LL3",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "108",
+    "penalties": "-2% movement speed, +0% turn speed, -1% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "19 Slots",
+    "node": "628dc750b910320f4c27a732",
+    "ID": "item_equipment_rig_bae_rbav_af"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

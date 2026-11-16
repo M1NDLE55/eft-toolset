@@ -1,0 +1,22 @@
+{
+  "title": "Trijicon RMR high profile mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trijicon_RMR_high_profile_mount",
+  "revisionId": 338501,
+  "lastEdited": "2026-03-15T15:06:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "price": "₽1,580",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "node": "5a33b652c4a28232996e407c",
+    "ID": "mount_all_trijicon_ac32062"
+  },
+  "sections": []
+}

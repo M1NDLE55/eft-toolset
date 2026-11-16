@@ -1,0 +1,24 @@
+{
+  "title": "AK Magpul MOE AKM handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Magpul_MOE_AKM_handguard",
+  "revisionId": 352837,
+  "lastEdited": "2026-08-09T21:38:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.221 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2: FDE, Peacekeeper LL3: SG, Skier LL3: FDE, SG, OD, Black, Plum",
+    "ergonomics": "+17",
+    "recoil": "+0",
+    "Heat": "+5.3",
+    "Cooling": "+1.8",
+    "node": "57cff947245977638e6f2a19 57cffd8224597763b03fc609 57cffddc24597763133760c6 57cffe0024597763b03fc60b 57cffe20245977632f391a9d",
+    "ID": "handguard_ak_magpul_moe_ak_blk handguard_ak_magpul_moe_ak_fde handguard_ak_magpul_moe_ak_od handguard_ak_magpul_moe_ak_plm handguard_ak_magpul_moe_ak_sg"
+  },
+  "sections": []
+}

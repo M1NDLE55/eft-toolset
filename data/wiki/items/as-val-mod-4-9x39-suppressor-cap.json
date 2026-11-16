@@ -1,0 +1,26 @@
+{
+  "title": "AS VAL MOD.4 9x39 suppressor cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_MOD.4_9x39_suppressor_cap",
+  "revisionId": 347775,
+  "lastEdited": "2026-07-12T06:54:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+2",
+    "accuracy": "+0",
+    "recoil": "-2",
+    "Dura Burn": "-3",
+    "Heat": "-0.5",
+    "Cooling": "+0.3",
+    "node": "68712cafa1be89347f0d817c",
+    "ID": "muzzle_val_mod4_nb_silencer_cap_9x39"
+  },
+  "sections": []
+}

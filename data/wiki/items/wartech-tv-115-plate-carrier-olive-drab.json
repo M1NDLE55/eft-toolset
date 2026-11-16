@@ -1,0 +1,36 @@
+{
+  "title": "WARTECH TV-115 plate carrier (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/WARTECH_TV-115_plate_carrier_(Olive_Drab)",
+  "revisionId": 346866,
+  "lastEdited": "2026-06-14T21:15:54Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "1.88 kg",
+    "grid": "3x3",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Thorax, Back",
+    "default plates": "2x",
+    "default plates armor class": "3",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "52",
+    "penalties": "-1% movement speed, -1% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "13 Slots",
+    "node": "64a536392d2c4e6e970f4121",
+    "ID": "item_equipment_rig_tv115"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

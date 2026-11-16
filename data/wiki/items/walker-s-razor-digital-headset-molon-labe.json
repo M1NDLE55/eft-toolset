@@ -1,0 +1,30 @@
+{
+  "title": "Walker's Razor Digital headset (Molon Labe)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Walker's_Razor_Digital_headset_(Molon_Labe)",
+  "revisionId": 348446,
+  "lastEdited": "2026-07-30T20:23:44Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.43 kg",
+    "grid": "2x2",
+    "trader": "Ref LL2, after unlocking it in the Factory Tactical Map",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "69d3c156cdeff2f448010e2e",
+    "ID": "item_equipment_headset_walkers_razor_molon_labe_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

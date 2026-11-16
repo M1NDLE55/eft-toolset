@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Delta-Tek DTK-M16 5.56x45 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Delta-Tek_DTK-M16_5.56x45_muzzle_brake",
+  "revisionId": 314157,
+  "lastEdited": "2025-06-05T17:10:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.125 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-2",
+    "recoil": "-8",
+    "Heat": "-1.7",
+    "Cooling": "+1.1",
+    "node": "664301213dd83ddae20dda18",
+    "ID": "muzzle_ar15_deltatech_dtk_ar15_556x45"
+  },
+  "sections": []
+}

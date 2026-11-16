@@ -1,0 +1,25 @@
+{
+  "title": "5.45x39mm PRS gs ammo pack (120 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_PRS_gs_ammo_pack_(120_pcs)",
+  "revisionId": 367166,
+  "lastEdited": "2026-11-02T23:10:30Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.1 kg",
+    "grid": "2x1",
+    "price": "₽",
+    "node": "57372deb245977685d4159b3 57372e1924597768553071c1",
+    "id": "item_ammo_box_545x39_120_prs item_ammo_box_545x39_120_prs_damaged"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- There is also a \"damaged\" variant of this item that has a slightly different image but also always contains 120 rounds."
+    }
+  ]
+}

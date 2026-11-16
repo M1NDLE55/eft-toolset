@@ -1,0 +1,23 @@
+{
+  "title": "Magpul MBUS Gen2 flip-up front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magpul_MBUS_Gen2_flip-up_front_sight",
+  "revisionId": 327060,
+  "lastEdited": "2025-12-07T05:31:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.034 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2: Black, FDE",
+    "sightrange": "300",
+    "ergonomics": "+0.5",
+    "accuracy": "+0",
+    "node": "5bc09a30d4351e00367fb7c8 5c18b90d2e2216152142466b",
+    "ID": "sight_front_all_magpul_mbus_gen2 sight_front_all_magpul_mbus_gen2_fde"
+  },
+  "sections": []
+}

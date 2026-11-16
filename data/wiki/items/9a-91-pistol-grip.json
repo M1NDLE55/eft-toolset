@@ -1,0 +1,21 @@
+{
+  "title": "9A-91 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9A-91_pistol_grip",
+  "revisionId": 355401,
+  "lastEdited": "2026-08-21T19:56:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.146 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+3",
+    "node": "6450f21a3d52156624001fcf",
+    "ID": "pistolgrip_9a91_kbp_9a91_std"
+  },
+  "sections": []
+}

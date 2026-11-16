@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 KAC M5 RAS handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_KAC_M5_RAS_handguard",
+  "revisionId": 343319,
+  "lastEdited": "2026-05-05T19:06:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.25 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+10",
+    "recoil": "+0",
+    "Heat": "-0.5",
+    "Cooling": "+2.6",
+    "node": "68a63cdac92ee33ffa01bf5f",
+    "ID": "handguard_ar15_kac_m5_ras"
+  },
+  "sections": []
+}

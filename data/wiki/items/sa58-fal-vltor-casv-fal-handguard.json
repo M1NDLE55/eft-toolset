@@ -1,0 +1,24 @@
+{
+  "title": "SA58/FAL Vltor CASV-FAL handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58/FAL_Vltor_CASV-FAL_handguard",
+  "revisionId": 340854,
+  "lastEdited": "2026-04-22T08:34:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.224 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+20",
+    "recoil": "+0",
+    "Heat": "-0.6",
+    "Cooling": "+2",
+    "node": "5b7bedd75acfc43d825283f9",
+    "ID": "handguard_fal_vltor_casv_fal"
+  },
+  "sections": []
+}

@@ -1,0 +1,31 @@
+{
+  "title": "SPRTN Omega ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SPRTN_Omega_ballistic_plate",
+  "revisionId": 362785,
+  "lastEdited": "2026-10-01T21:12:59Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "4.39 kg",
+    "grid": "2x2",
+    "trader": "Skier LL3",
+    "material": "Combined Materials",
+    "armor": "4",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "50",
+    "penalties": "-1.5% movement speed, -0.5% turn speed, -0.5% Ergonomics",
+    "node": "656f9fa0498d1b7e3e071d98",
+    "id": "item_equipment_plate_SAPI_SPRTN_Omega_4class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

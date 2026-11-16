@@ -1,0 +1,22 @@
+{
+  "title": "Magpul UCS buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magpul_UCS_buttstock",
+  "revisionId": 356263,
+  "lastEdited": "2026-08-25T21:29:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.467 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+10",
+    "recoil": "-22",
+    "node": "68badb6458dbe419740b1520 68d566f3f3d7cd248f0a06db",
+    "ID": "stock_all_magpul_ucs stock_all_magpul_ucs_fde"
+  },
+  "sections": []
+}

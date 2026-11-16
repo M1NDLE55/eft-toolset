@@ -1,0 +1,24 @@
+{
+  "title": "SA58/FAL AIM Sports Universal M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58/FAL_AIM_Sports_Universal_M-LOK_handguard",
+  "revisionId": 340852,
+  "lastEdited": "2026-04-22T08:32:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.269 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+20",
+    "recoil": "+0",
+    "Heat": "+2.8",
+    "Cooling": "+2.4",
+    "node": "5b7bebc85acfc43bca706666",
+    "ID": "handguard_fal_aim_sport_universal_m_lok"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Mosin Rifle 7.62x54R 5-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_7.62x54R_5-round_magazine",
+  "revisionId": 215632,
+  "lastEdited": "2022-12-02T16:27:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.4 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "5",
+    "caliber": "7.62x54mmR",
+    "node": "5ae0973a5acfc4001562206c",
+    "ID": "mag_mosin_izhmash_mosin_std_762x54_4"
+  },
+  "sections": []
+}

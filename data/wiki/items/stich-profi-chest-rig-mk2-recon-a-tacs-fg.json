@@ -1,0 +1,29 @@
+{
+  "title": "Stich Profi Chest Rig MK2 (Recon, A-TACS FG)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stich_Profi_Chest_Rig_MK2_(Recon%2C_A-TACS_FG)",
+  "revisionId": 276456,
+  "lastEdited": "2024-04-24T16:41:50Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.4 kg",
+    "grid": "3x4",
+    "trader": "Ragman LL2",
+    "BlocksArmor": "No",
+    "slots": "18 Slots",
+    "node": "60a6220e953894617404b00a",
+    "ID": "item_equipment_rig_sprofi_mk2_smg"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Nothing Fishy About This"
+    }
+  ]
+}

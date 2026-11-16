@@ -1,0 +1,23 @@
+{
+  "title": "HK 416 TROY M-LOK 13 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416_TROY_M-LOK_13_inch_handguard",
+  "revisionId": 342009,
+  "lastEdited": "2026-04-28T00:02:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.25 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+19",
+    "recoil": "+0",
+    "Heat": "+1.7",
+    "node": "5c6c2c9c2e2216000f2002e4",
+    "ID": "handguard_416_troy_m_lok_13_inch_carbon_fiber"
+  },
+  "sections": []
+}

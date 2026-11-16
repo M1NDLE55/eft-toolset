@@ -1,0 +1,26 @@
+{
+  "title": "PMC Hardened figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PMC_Hardened_figurine",
+  "revisionId": 363677,
+  "lastEdited": "2026-10-07T21:59:04Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "6aa2d17e3fe081d16109ab7d",
+    "id": "Item_barter_tarko_prestige_06_pve"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only obtainable by reaching Prestige level 6 in the PvE game mode."
+    }
+  ]
+}

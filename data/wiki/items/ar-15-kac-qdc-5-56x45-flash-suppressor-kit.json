@@ -1,0 +1,26 @@
+{
+  "title": "AR-15 KAC QDC 5.56x45 Flash Suppressor Kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_KAC_QDC_5.56x45_Flash_Suppressor_Kit",
+  "revisionId": 337375,
+  "lastEdited": "2026-03-05T22:16:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.063 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-0.5",
+    "velocity": "+0",
+    "accuracy": "+3",
+    "recoil": "-5",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "56ea8180d2720bf2698b456a",
+    "ID": "muzzle_ar15_kac_qd_compensator_556x45"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Sako TRG M10 rear hook",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_M10_rear_hook",
+  "revisionId": 314180,
+  "lastEdited": "2025-06-07T13:57:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+2",
+    "recoil": "-1",
+    "node": "673ddbb567c759b3c90e5f76",
+    "ID": "tactical_all_sako_m10_rear_hook"
+  },
+  "sections": []
+}

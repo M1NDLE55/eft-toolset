@@ -1,0 +1,22 @@
+{
+  "title": "HK G36 polymer stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_polymer_stock",
+  "revisionId": 270154,
+  "lastEdited": "2024-02-08T19:59:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.454 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+7",
+    "recoil": "-19",
+    "node": "622f140da5958f63c67f1735",
+    "ID": "stock_g36_hk_buttstock_std"
+  },
+  "sections": []
+}

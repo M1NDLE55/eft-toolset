@@ -1,0 +1,22 @@
+{
+  "title": "AKM/AK-74 Hexagon \"Kocherga\" stock (Anodized Red)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM/AK-74_Hexagon_%22Kocherga%22_stock_(Anodized_Red)",
+  "revisionId": 356553,
+  "lastEdited": "2026-08-26T02:54:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.18 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+24",
+    "recoil": "-18",
+    "node": "5e217ba4c1434648c13568cd",
+    "ID": "stock_ak_hexagon_kocherga_red"
+  },
+  "sections": []
+}

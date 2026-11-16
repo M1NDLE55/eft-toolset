@@ -1,0 +1,23 @@
+{
+  "title": "KAC Folding Micro rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KAC_Folding_Micro_rear_sight",
+  "revisionId": 322410,
+  "lastEdited": "2025-11-18T16:14:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+0.5",
+    "sightrange": "300",
+    "accuracy": "+0",
+    "node": "5dfa3d7ac41b2312ea33362a",
+    "ID": "sight_rear_all_kac_folding_micro_sight"
+  },
+  "sections": []
+}

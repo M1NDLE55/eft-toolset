@@ -1,0 +1,24 @@
+{
+  "title": "AR-10 CMMG MK3 RML15 15 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_CMMG_MK3_RML15_15_inch_M-LOK_handguard",
+  "revisionId": 342190,
+  "lastEdited": "2026-04-28T21:20:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.22 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+19",
+    "recoil": "+0",
+    "Heat": "-3.8",
+    "Cooling": "+10.8",
+    "node": "6065881d1246154cad35d637",
+    "ID": "handguard_ar10_cmmg_mk3_rml15_m_lok"
+  },
+  "sections": []
+}

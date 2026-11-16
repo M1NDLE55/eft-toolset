@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Magpul MOE pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Magpul_MOE_pistol_grip",
+  "revisionId": 356485,
+  "lastEdited": "2026-08-26T02:08:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4: Black, FDE",
+    "ergonomics": "+5",
+    "recoil": "-1.5",
+    "node": "55802f5d4bdc2dac148b458f 5d15cf3bd7ad1a67e71518b2",
+    "ID": "pistolgrip_ar15_magpul_moe pistolgrip_ar15_magpul_moe_fde"
+  },
+  "sections": []
+}

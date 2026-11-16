@@ -1,0 +1,22 @@
+{
+  "title": "FSB Fast Response",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FSB_Fast_Response",
+  "revisionId": 261753,
+  "lastEdited": "2024-01-02T03:59:05Z",
+  "kind": "item",
+  "categories": [
+    "BEAR upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f568486f7744bca3f0b98",
+    "ID": "bear_upper_fsbfastresponse"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The shirt is modeled on the 5.11 72429 flannel shirt in \"Volcanic\" pattern."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Pack of Vita juice",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pack_of_Vita_juice",
+  "revisionId": 265364,
+  "lastEdited": "2024-01-14T07:26:16Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "1 kg",
+    "grid": "1x2",
+    "price": "₽400",
+    "effect": "Energy: +8, Hydration: +28",
+    "use time": "4s",
+    "node": "57513fcc24597720a31c09a6",
+    "id": "drink_juice_vita"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Sport bags"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "USEC Adaptive Combat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_Adaptive_Combat",
+  "revisionId": 254411,
+  "lastEdited": "2023-11-06T13:46:39Z",
+  "kind": "item",
+  "categories": [
+    "USEC upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5fd3e978e504291efd0040b3",
+    "ID": "USEC Adaptive Combat"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The jacket is based on the former combat uniform of the United States Army, the Army Combat Uniform. The UCP variant seen in-game has since been discontinued. The gloves are based off the Mechanix The-Original Tactical Gloves."
+    }
+  ]
+}

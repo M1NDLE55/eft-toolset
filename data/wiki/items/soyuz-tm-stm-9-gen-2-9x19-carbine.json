@@ -1,0 +1,33 @@
+{
+  "title": "Soyuz-TM STM-9 Gen.2 9x19 carbine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Soyuz-TM_STM-9_Gen.2_9x19_carbine",
+  "revisionId": 340942,
+  "lastEdited": "2026-04-22T22:01:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "1.986 kg",
+    "grid": "4x2",
+    "trader": "Skier LL2",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "76",
+    "velocity": "457 m/s",
+    "range": "500 m",
+    "MOA": "3.78",
+    "Weaprecoil": "Vertical: 30, Horizontal: 149",
+    "rof": "800",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "30",
+    "exam xp": "8",
+    "node": "60339954d62c9b14ed777c06",
+    "ID": "weapon_stmarms_stm_9_9x19"
+  },
+  "sections": []
+}

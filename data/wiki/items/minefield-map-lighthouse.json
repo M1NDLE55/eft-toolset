@@ -1,0 +1,26 @@
+{
+  "title": "Minefield map (Lighthouse)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Minefield_map_(Lighthouse)",
+  "revisionId": 304259,
+  "lastEdited": "2025-01-20T14:51:39Z",
+  "kind": "item",
+  "categories": [
+    "Extraction intel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Extraction intel",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Activates the \"Passage by the Lake\" extraction on Lighthouse.",
+    "node": "675aaa8f7f3c962069072b27",
+    "id": "item_info_secret_extraction_minefield_lighhouse"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Activates the \"Passage by the Lake\" extraction on Lighthouse.\n- Cannot be taken out of a raid"
+    }
+  ]
+}

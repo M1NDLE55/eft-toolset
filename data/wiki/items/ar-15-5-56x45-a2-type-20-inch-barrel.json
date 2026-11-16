@@ -1,0 +1,27 @@
+{
+  "title": "AR-15 5.56x45 A2 type 20 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_A2_type_20_inch_barrel",
+  "revisionId": 343477,
+  "lastEdited": "2026-05-07T22:19:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.96 kg",
+    "grid": "4x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-32",
+    "velocity": "+5",
+    "MOA": "1.24",
+    "recoil": "-10.2",
+    "Dura Burn": "+9",
+    "Heat": "-5",
+    "Cooling": "-5",
+    "node": "68a63ac58e1fe612970728f2",
+    "ID": "barrel_ar15_colt_m16_std_508mm"
+  },
+  "sections": []
+}

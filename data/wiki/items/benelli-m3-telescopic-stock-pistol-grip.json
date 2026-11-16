@@ -1,0 +1,21 @@
+{
+  "title": "Benelli M3 telescopic stock pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Benelli_M3_telescopic_stock_pistol_grip",
+  "revisionId": 342239,
+  "lastEdited": "2026-04-28T21:45:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.135 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "+4",
+    "node": "6259c3d8012d6678ec38eeb8",
+    "ID": "pistolgrip_m3_benelli_telescopic_stock_handle"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "IDEA cargo manifests",
+  "url": "https://escapefromtarkov.fandom.com/wiki/IDEA_cargo_manifests",
+  "revisionId": 352932,
+  "lastEdited": "2026-08-09T22:02:40Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "node": "5ae9a1b886f77404c8537c62",
+    "id": "statements_IDEA"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Inventory Files from Ragman"
+    }
+  ]
+}

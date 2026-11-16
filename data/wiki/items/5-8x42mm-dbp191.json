@@ -1,0 +1,36 @@
+{
+  "title": "5.8x42mm DBP191",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.8x42mm_DBP191",
+  "revisionId": 356196,
+  "lastEdited": "2026-08-25T19:24:44Z",
+  "kind": "ammo",
+  "categories": [
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "velocity": "840 m/s",
+    "damage": "53",
+    "recoil": "-3",
+    "penetration": "39",
+    "armor damage": "43",
+    "ricochet": "40%",
+    "durability burn": "+9",
+    "heat": "+61.5",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "node": "6a07208057b2695f9d001e63",
+    "ID": "patron_58x42_dbp191"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

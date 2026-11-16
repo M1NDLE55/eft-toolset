@@ -1,0 +1,35 @@
+{
+  "title": "Augmentin antibiotic pills",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Augmentin_antibiotic_pills",
+  "revisionId": 358729,
+  "lastEdited": "2026-09-10T23:00:33Z",
+  "kind": "item",
+  "categories": [
+    "Drugs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pills",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL4",
+    "effect": "Buffs:, Removes: for 155 seconds, Adds: for 155 seconds, , - Energy (+5) 1s Delay; 300s Duration: - Increases Immunity (+1) Debuffs:, Adds: - Hydration (-5),",
+    "use time": "5s",
+    "loot xp": "50",
+    "exam xp": "25",
+    "node": "590c695186f7741e566b64a2",
+    "id": "augmentin"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The Augmentin antibiotic pills is based off GlaxoSmithKline's \"Augmentin ES 642.9mg/5 ml strawberry cream flavoured pills\"."
+    }
+  ]
+}

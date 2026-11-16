@@ -1,0 +1,39 @@
+{
+  "title": ".338 Lapua Magnum UCW",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.338_Lapua_Magnum_UCW",
+  "revisionId": 324957,
+  "lastEdited": "2025-11-23T18:21:28Z",
+  "kind": "ammo",
+  "categories": [
+    ".338 Lapua Magnum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.045 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "velocity": "849 m/s",
+    "damage": "142",
+    "accuracy": "-5",
+    "penetration": "32",
+    "armor damage": "70",
+    "ricochet": "40%",
+    "l bleed chance": "+50",
+    "h bleed chance": "+40",
+    "heat": "+160.8",
+    "feedfailure": "High",
+    "misfire": "Medium",
+    "exam xp": "10",
+    "node": "5fc382c1016cce60e8341b20",
+    "id": "patron_86x70_lapua_magnum_upz"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

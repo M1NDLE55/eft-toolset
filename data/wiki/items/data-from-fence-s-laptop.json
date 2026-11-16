@@ -1,0 +1,25 @@
+{
+  "title": "Data from Fence's laptop",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Data_from_Fence's_laptop",
+  "revisionId": 356008,
+  "lastEdited": "2026-08-25T13:59:59Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "node": "6a55f339fe4be93a04090acc",
+    "id": "item_info_note_report_AP_errand_s1_01"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Consequences of Our Decisions"
+    }
+  ]
+}

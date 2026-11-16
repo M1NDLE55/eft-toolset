@@ -1,0 +1,30 @@
+{
+  "title": "6B5-16 Zh-86 Uley armored rig (Khaki)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B5-16_Zh-86_Uley_armored_rig_(Khaki)",
+  "revisionId": 362905,
+  "lastEdited": "2026-10-03T10:49:52Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "7.1 kg",
+    "grid": "3x4",
+    "trader": "Prapor LL2",
+    "material": "Titan, Aramid",
+    "armor": "Stomach, Thorax: 3 , Back, Throat, Back neck, Groin: 2",
+    "armor coverage": "Stomach, Thorax, Back, Throat, Neck, Groin",
+    "durability": "160",
+    "penalties": "-4% movement speed, -1% turn speed, -6% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "10 Slots",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5c0e3eb886f7742015526062",
+    "id": "item_equipment_rig_6b5_flora"
+  },
+  "sections": []
+}

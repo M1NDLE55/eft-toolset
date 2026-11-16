@@ -1,0 +1,26 @@
+{
+  "title": "MPX 9x19 Ronin Arms 12 inch SD Suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_9x19_Ronin_Arms_12_inch_SD_Suppressor",
+  "revisionId": 338007,
+  "lastEdited": "2026-03-08T00:37:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.427 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-6",
+    "velocity": "+0.8",
+    "recoil": "-10",
+    "Dura Burn": "+39",
+    "Heat": "+10",
+    "Cooling": "+5",
+    "node": "676149d8e889e1972605d6be",
+    "ID": "silencer_mpx_ronin_12_inch_supressor_9x19"
+  },
+  "sections": []
+}

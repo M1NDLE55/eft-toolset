@@ -1,0 +1,23 @@
+{
+  "title": "MIL-TEC boonie hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MIL-TEC_boonie_hat",
+  "revisionId": 356961,
+  "lastEdited": "2026-08-30T10:10:42Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL1",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5b4327aa5acfc400175496e0",
+    "id": "item_equipment_head_panama"
+  },
+  "sections": []
+}

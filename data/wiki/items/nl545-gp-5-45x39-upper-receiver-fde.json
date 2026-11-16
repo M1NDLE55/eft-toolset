@@ -1,0 +1,25 @@
+{
+  "title": "NL545 (GP) 5.45x39 upper receiver (FDE)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NL545_(GP)_5.45x39_upper_receiver_(FDE)",
+  "revisionId": 353507,
+  "lastEdited": "2026-08-13T20:16:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+5",
+    "recoil": "-2",
+    "Dura Burn": "-3",
+    "Heat": "-2.5",
+    "Cooling": "+1.4",
+    "node": "68c294360f5ebd68290d6c16",
+    "ID": "reciever_nl545_cgnl_nl545_fde"
+  },
+  "sections": []
+}

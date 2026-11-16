@@ -1,0 +1,28 @@
+{
+  "title": "LShZ-2DTM cover (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LShZ-2DTM_cover_(Black)",
+  "revisionId": 297013,
+  "lastEdited": "2024-11-22T21:43:34Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Vanity helmet mod",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL3",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "5d6d3943a4b9360dbc46d0cc",
+    "ID": "item_equipment_helmet_lshz2dtm_damper"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item does not provide any additional armor"
+    }
+  ]
+}

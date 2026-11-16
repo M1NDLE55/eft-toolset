@@ -1,0 +1,22 @@
+{
+  "title": "M700 thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_thread_protector",
+  "revisionId": 306898,
+  "lastEdited": "2025-03-18T14:02:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+1",
+    "Dura Burn": "-3",
+    "node": "5d270b3c8abbc3105335cfb8",
+    "ID": "muzzle_m700_remington_thread_protector_762x51"
+  },
+  "sections": []
+}

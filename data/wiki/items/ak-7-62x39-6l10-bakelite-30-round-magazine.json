@@ -1,0 +1,28 @@
+{
+  "title": "AK 7.62x39 6L10 bakelite 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_7.62x39_6L10_bakelite_30-round_magazine",
+  "revisionId": 337455,
+  "lastEdited": "2026-03-05T23:01:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.37 kg",
+    "grid": "1x2",
+    "price": "₽1,923",
+    "trader": "Prapor LL2",
+    "ergonomics": "-2",
+    "checkaccuracy": "No",
+    "feedfailure": "Low",
+    "capacity": "30",
+    "caliber": "7.62x39mm, .366 TKM",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5a01c29586f77474660c694c",
+    "ID": "mag_ak_izhmash_6L10_762x39_30"
+  },
+  "sections": []
+}

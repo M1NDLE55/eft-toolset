@@ -1,0 +1,21 @@
+{
+  "title": "Leupold Mark IMS 35mm ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Leupold_Mark_IMS_35mm_ring_scope_mount",
+  "revisionId": 314341,
+  "lastEdited": "2025-06-17T22:10:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.17 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "-1",
+    "node": "6761759e7ee06333f108bf86",
+    "ID": "mount_all_leupold_ims_35mm"
+  },
+  "sections": []
+}

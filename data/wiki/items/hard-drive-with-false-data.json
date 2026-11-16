@@ -1,0 +1,25 @@
+{
+  "title": "Hard drive with false data",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hard_drive_with_false_data",
+  "revisionId": 359983,
+  "lastEdited": "2026-09-13T23:06:03Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "node": "6a8993cab2713c27d90e9bb7",
+    "ID": "t3_ssd_disc_deza"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest To the Light - Trust but Verify"
+    }
+  ]
+}

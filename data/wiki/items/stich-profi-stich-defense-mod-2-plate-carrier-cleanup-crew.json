@@ -1,0 +1,40 @@
+{
+  "title": "Stich Profi Stich Defense mod.2 plate carrier (Cleanup Crew)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stich_Profi_Stich_Defense_mod.2_plate_carrier_(Cleanup_Crew)",
+  "revisionId": 362061,
+  "lastEdited": "2026-09-24T19:12:26Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "3.66 kg",
+    "grid": "4x3",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 3",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Groin",
+    "default plates": "None",
+    "durability": "155",
+    "penalties": "-3% movement speed, -2% turn speed, -1% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "24 Slots",
+    "node": "6a7c8531bcddc78fbd0f04c1",
+    "ID": "item_equipment_rig_stich_defence_mod2_od"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

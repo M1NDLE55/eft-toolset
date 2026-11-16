@@ -1,0 +1,26 @@
+{
+  "title": "Cipollino mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cipollino_mask",
+  "revisionId": 329229,
+  "lastEdited": "2025-12-24T16:22:28Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "676029ca2749de558a0b7e67",
+    "ID": "item_equipment_facecover_xmass_mask_chipolino"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This face cover first appeared during Escape from Tarkov's 2024 Christmas Celebration.\n- Cipollino is a fictional character from the book \"Tale of Cipollino\", written by Gianni Rodari."
+    }
+  ]
+}

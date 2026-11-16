@@ -1,0 +1,26 @@
+{
+  "title": "AS VAL dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_dust_cover",
+  "revisionId": 328202,
+  "lastEdited": "2025-12-17T16:13:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.2 kg",
+    "grid": "2x1",
+    "price": "₽1,500",
+    "trader": "Prapor LL4",
+    "ergonomics": "+2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "node": "57c44f4f2459772d2c627113",
+    "ID": "reciever_val_tochmash_val_std"
+  },
+  "sections": []
+}

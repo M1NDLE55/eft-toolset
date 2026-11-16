@@ -1,0 +1,40 @@
+{
+  "title": "Digital secure DSP radio transmitter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Digital_secure_DSP_radio_transmitter",
+  "revisionId": 358121,
+  "lastEdited": "2026-09-08T20:45:57Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.17 kg",
+    "grid": "1x1",
+    "node": "62e910aaf957f2915e0a5e36",
+    "id": "item_spec_radiotransmitter"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market, be sold to traders or destroyed.\n- This item is required to be equipped to cross the bridge to the lighthouse peninsula on Lighthouse. It deactivates the Claymores and has Zryachiy not shoot you when its in the encoded state.\n- This item is required to speak to Lightkeeper.\n- This item is not lootable from players and can only be placed in a special item slot."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- Can be obtained as initial equipment from the quest To the Light - Getting Acquainted. The related questline starts with To the Light - Trust but Verify."
+    },
+    {
+      "heading": "States",
+      "level": 2,
+      "text": "| Status | Meaning |\n| Decoded | You harmed Zryachiy, one of his followers, or a Lightkeeper acquainted PMC in the lighthouse premises while having the item equipped. It requires to be encoded again at the Intelligence Center level 2.; Attention: Unequipping the item does not prevent getting this status in local PvE game mode raids. |\n| Blocked | Not all members of your lobby-made group have an encoded transmitter. |\n| On any map that isn't Lighthouse. |\n| Encoded | The DSPT is ready to use, and you may cross the bridge without being blown up by Claymores or being shot at by Zryachiy and his followers. |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: This item is based on the McMurdo Smartfind S5A AIS SART."
+    }
+  ]
+}

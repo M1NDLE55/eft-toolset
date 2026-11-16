@@ -1,0 +1,26 @@
+{
+  "title": "Cat figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cat_figurine",
+  "revisionId": 363448,
+  "lastEdited": "2026-10-06T22:01:21Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "3.1 kg",
+    "grid": "1x3",
+    "effect": "Generic loot item",
+    "node": "59e3658a86f7741776641ac4",
+    "id": "item_barter_valuable_cat"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

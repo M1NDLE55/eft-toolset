@@ -1,0 +1,27 @@
+{
+  "title": "Neoprene mask (Say Nothing)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Neoprene_mask_(Say_Nothing)",
+  "revisionId": 348568,
+  "lastEdited": "2026-07-30T22:02:53Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 0",
+    "node": "67aaf863de7fb0f19e077db9",
+    "id": "item_equipment_facecover_redflame_arena_bp_05"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

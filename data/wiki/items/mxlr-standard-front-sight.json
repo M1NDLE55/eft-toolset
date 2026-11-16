@@ -1,0 +1,23 @@
+{
+  "title": "MXLR standard front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MXLR_standard_front_sight",
+  "revisionId": 343294,
+  "lastEdited": "2026-05-05T17:40:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "sightrange": "200",
+    "ergonomics": "-1",
+    "accuracy": "+0",
+    "node": "67c54270b032bbdb530201c2",
+    "ID": "sight_front_m1895_marlin_mxlr_std"
+  },
+  "sections": []
+}

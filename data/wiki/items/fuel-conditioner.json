@@ -1,0 +1,66 @@
+{
+  "title": "Fuel conditioner",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fuel_conditioner",
+  "revisionId": 358852,
+  "lastEdited": "2026-09-11T20:36:26Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable material",
+    "weight": "1.8 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "5b43575a86f77424f443fe62",
+    "id": "item_quest_fuelconditioner"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On the green boxes beside the pillbox that has the Dead Scav inside\n- In the pumping room on the floor\n- On the desk above the safe"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the bed in room 110 of 2-story dorms\n- Storage building on the shelves"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the Marked Circle\n- Near the generator at Scav Bunker"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- The Techlight store\n- The power substation\n- Sitting on the ground next to the various generators scattered throughout the map\n- The back storage area of the Goshan grocery store"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- Sitting on the tables on the island\n- In the shed on the southwest part of the island, in the small boat\n- Inside the smugglers compound to the far northwest corner, south of the Vehicle exfil, next to the blue machinery inside the wall."
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In a caged room containing robotic arms on the table"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Fuel conditioner (FCond) is based off \"Kleen-Flo Diesel Fuel Conditioner\"."
+    }
+  ]
+}

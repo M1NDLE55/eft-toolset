@@ -1,0 +1,26 @@
+{
+  "title": "SV-98 sound suppressor heat shield",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SV-98_sound_suppressor_heat_shield",
+  "revisionId": 215594,
+  "lastEdited": "2022-12-02T15:46:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "price": "₽400",
+    "trader": "Prapor LL3",
+    "ergonomics": "+2",
+    "Heat": "-2",
+    "Cooling": "+6",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5c4eecde2e221602b3140418",
+    "ID": "tactical_sv98_izhmash_silencer_heat_shield_std"
+  },
+  "sections": []
+}

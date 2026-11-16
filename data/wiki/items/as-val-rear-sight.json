@@ -1,0 +1,24 @@
+{
+  "title": "AS VAL rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_rear_sight",
+  "revisionId": 209965,
+  "lastEdited": "2022-09-12T21:53:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "price": "₽1,000",
+    "trader": "Prapor LL4",
+    "sightrange": "420",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "57c44e7b2459772d28133248",
+    "ID": "sight_rear_val_tochmash_val_std"
+  },
+  "sections": []
+}

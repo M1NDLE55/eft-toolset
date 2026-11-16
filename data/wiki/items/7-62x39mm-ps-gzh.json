@@ -1,0 +1,36 @@
+{
+  "title": "7.62x39mm PS gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_PS_gzh",
+  "revisionId": 349895,
+  "lastEdited": "2026-08-04T22:45:04Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.016 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3, after completing his task The Punisher - Part 3",
+    "velocity": "717 m/s",
+    "damage": "61",
+    "penetration": "35",
+    "armor damage": "52",
+    "ricochet": "35%",
+    "durability burn": "+20",
+    "heat": "+12.5",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "5656d7c34bdc2d9d198b4587",
+    "id": "patron_762x39_PS"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

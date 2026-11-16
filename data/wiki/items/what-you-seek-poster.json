@@ -1,0 +1,25 @@
+{
+  "title": "What You Seek poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/What_You_Seek_poster",
+  "revisionId": 355956,
+  "lastEdited": "2026-08-25T12:27:20Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6759bb94b8913ff13e049669",
+    "id": "item_barter_flyers_prestige_1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

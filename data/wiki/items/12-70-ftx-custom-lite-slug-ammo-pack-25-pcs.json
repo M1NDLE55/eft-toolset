@@ -1,0 +1,18 @@
+{
+  "title": "12/70 FTX Custom Lite slug ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_FTX_Custom_Lite_slug_ammo_pack_(25_pcs)",
+  "revisionId": 367122,
+  "lastEdited": "2026-11-02T23:08:06Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702449bfc87b3a34093223",
+    "ID": "item_ammo_box_12g_25_slug_ftx_custom_lite"
+  },
+  "sections": []
+}

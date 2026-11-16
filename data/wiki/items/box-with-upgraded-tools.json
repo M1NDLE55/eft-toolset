@@ -1,0 +1,25 @@
+{
+  "title": "Box with upgraded tools",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Box_with_upgraded_tools",
+  "revisionId": 304627,
+  "lastEdited": "2025-01-25T09:04:24Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "1.2 kg",
+    "grid": "1x2",
+    "node": "675f80d4fe1b59cf490d3527",
+    "id": "item_quest_cust_exp_accurate_tool"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Passion for Ergonomics from Mechanic"
+    }
+  ]
+}

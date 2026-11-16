@@ -1,0 +1,26 @@
+{
+  "title": "Metal spare parts",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Metal_spare_parts",
+  "revisionId": 331942,
+  "lastEdited": "2026-01-09T00:15:22Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.45 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "61bf7b6302b3924be92fa8c3",
+    "id": "item_barter_building_metalparts"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    }
+  ]
+}

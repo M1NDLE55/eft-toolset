@@ -1,0 +1,30 @@
+{
+  "title": "Golden Zibbo lighter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Golden_Zibbo_lighter",
+  "revisionId": 315469,
+  "lastEdited": "2025-07-12T19:47:38Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "5939a00786f7742fe8132936",
+    "id": "quest_zibbo_gold"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Golden Swag from Skier"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The Zibbo Lighter is a parody of the Zippo Lighter."
+    }
+  ]
+}

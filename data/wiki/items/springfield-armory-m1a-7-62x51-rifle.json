@@ -1,0 +1,39 @@
+{
+  "title": "Springfield Armory M1A 7.62x51 rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Springfield_Armory_M1A_7.62x51_rifle",
+  "revisionId": 362979,
+  "lastEdited": "2026-10-03T11:41:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Designated marksman rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Designated marksman rifle",
+    "slot": "Primary",
+    "weight": "3.923 kg",
+    "grid": "4x2",
+    "trader": "Peacekeeper LL3: Standard, Mechanic LL3: Stripped variant, Peacekeeper LL4: EBR variant, Mechanic LL4: SASS variant",
+    "fire modes": "Single",
+    "sightrange": "500",
+    "ergonomics": "41",
+    "velocity": "812 m/s",
+    "range": "700 m",
+    "MOA": "1.52",
+    "Weaprecoil": "Vertical: 121, Horizontal: 230",
+    "rof": "700",
+    "caliber": "7.62x51mm NATO",
+    "loot xp": "8",
+    "exam xp": "30",
+    "node": "5aafa857e5b5b00018480968",
+    "ID": "weapon_springfield_m1a_762x51"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| M1A EBR |\n| M1A SASS |\n| M1A 2k18 NY |"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "MP-155 walnut stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_walnut_stock",
+  "revisionId": 270194,
+  "lastEdited": "2024-02-08T20:13:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.64 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+6",
+    "recoil": "-24",
+    "node": "607d5a891246154cad35d6aa",
+    "ID": "stock_mp155_izhmeh_monte_carlo_walnut"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Strike Industries Viper PDW stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Strike_Industries_Viper_PDW_stock",
+  "revisionId": 337879,
+  "lastEdited": "2026-03-07T06:41:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.573 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+22",
+    "recoil": "-18",
+    "node": "627254cc9c563e6e442c398f",
+    "ID": "stock_ar15_strike_industries_viper_pdw_stock"
+  },
+  "sections": []
+}

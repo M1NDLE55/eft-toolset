@@ -1,0 +1,35 @@
+{
+  "title": "Valkyrie poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Valkyrie_poster",
+  "revisionId": 367677,
+  "lastEdited": "2026-11-08T14:56:57Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6ad9cdece1f879d17605ca4c",
+    "id": "item_barter_flyers_honeyxxo"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This poster is based on a picture of the content creator HONEYxxo."
+    }
+  ]
+}

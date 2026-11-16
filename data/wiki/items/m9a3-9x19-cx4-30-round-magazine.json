@@ -1,0 +1,27 @@
+{
+  "title": "M9A3 9x19 CX4 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M9A3_9x19_CX4_30-round_magazine",
+  "revisionId": 338011,
+  "lastEdited": "2026-03-08T00:42:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.091 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-3",
+    "checkaccuracy": "1",
+    "checkmodifier": "+5",
+    "loadmodifier": "+5",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "9x19mm Parabellum",
+    "node": "676176b762e0497044079f49",
+    "ID": "mag_m9_beretta_92_cx4_9x19_30"
+  },
+  "sections": []
+}

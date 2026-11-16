@@ -1,0 +1,30 @@
+{
+  "title": "M700 7.62x51 26 inch stainless steel barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_7.62x51_26_inch_stainless_steel_barrel",
+  "revisionId": 342062,
+  "lastEdited": "2026-04-28T01:08:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.45 kg",
+    "grid": "4x1",
+    "price": "₽25,900",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-40",
+    "velocity": "+11",
+    "accuracy": "+5",
+    "MOA": "0.55",
+    "recoil": "-19.8",
+    "Dura Burn": "-14",
+    "Heat": "-18",
+    "Cooling": "-14",
+    "loot xp": "20",
+    "node": "5d2702e88abbc31ed91efc44",
+    "ID": "barrel_m700_shilen_stainless_660mm"
+  },
+  "sections": []
+}

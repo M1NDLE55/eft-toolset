@@ -1,0 +1,25 @@
+{
+  "title": "Bank case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bank_case",
+  "revisionId": 305385,
+  "lastEdited": "2025-02-07T07:44:07Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "7 kg",
+    "grid": "4x4",
+    "node": "590dde5786f77405e71908b2",
+    "id": "item_quest_container_case_bank"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Shaking Up the Teller from Prapor"
+    }
+  ]
+}

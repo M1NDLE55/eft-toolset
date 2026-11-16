@@ -1,0 +1,27 @@
+{
+  "title": "AK-74 TGP-A 5.45x39 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_TGP-A_5.45x39_sound_suppressor",
+  "revisionId": 340623,
+  "lastEdited": "2026-04-21T09:08:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.7 kg",
+    "grid": "2x1",
+    "price": "₽40,930",
+    "trader": "Prapor LL3",
+    "ergonomics": "-18",
+    "velocity": "+0.8",
+    "accuracy": "+0",
+    "recoil": "-7",
+    "Dura Burn": "+71",
+    "Heat": "+14",
+    "node": "564caa3d4bdc2d17108b458e",
+    "ID": "silencer_ak74_spectehnika_tgpa_545x39"
+  },
+  "sections": []
+}

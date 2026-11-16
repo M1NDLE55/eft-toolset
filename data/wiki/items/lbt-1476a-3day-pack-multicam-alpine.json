@@ -1,0 +1,22 @@
+{
+  "title": "LBT-1476A 3Day Pack (MultiCam Alpine)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LBT-1476A_3Day_Pack_(MultiCam_Alpine)",
+  "revisionId": 333262,
+  "lastEdited": "2026-01-30T04:24:20Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.133 kg",
+    "grid": "4x5",
+    "penalties": "-1% movement speed, +0% turn speed, -2% Ergonomics",
+    "slots": "5x5 grid (25 slots)",
+    "node": "67458794e21e5d724e066976",
+    "id": "item_equipment_backpack_lbt1476a_slick_winter"
+  },
+  "sections": []
+}

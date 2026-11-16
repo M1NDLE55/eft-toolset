@@ -1,0 +1,24 @@
+{
+  "title": "7.62x54mm R HP BT ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_HP_BT_ammo_pack_(20_pcs)",
+  "revisionId": 367239,
+  "lastEdited": "2026-11-02T23:14:20Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "64acee6903378853630da544",
+    "ID": "item_ammo_box_762x54r_20_hpbt"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Horny Ammunition is a play on Hornady Ammunition.\n- The design of the box is from Hornady Ammuniton's Vintage Match ammunition boxes."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Armband (To Fall in the Darkness)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(To_Fall_in_the_Darkness)",
+  "revisionId": 347547,
+  "lastEdited": "2026-07-01T18:59:44Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "68d41f017cb8c03da8079004",
+    "id": "Item_equipment_armband_story_02_in_the_darkness"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only obtainable by escaping from Tarkov with the \"Fallen\" ending"
+    }
+  ]
+}

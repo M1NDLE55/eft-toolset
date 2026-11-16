@@ -1,0 +1,25 @@
+{
+  "title": "Tarkov Herald newspaper with article by A. Mikhailova",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tarkov_Herald_newspaper_with_article_by_A._Mikhailova",
+  "revisionId": 336532,
+  "lastEdited": "2026-02-24T15:09:05Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "node": "68d2f6352ca1a737d107b84b",
+    "id": "item_info_note_newspaper_investigation"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Accidental Witness"
+    }
+  ]
+}

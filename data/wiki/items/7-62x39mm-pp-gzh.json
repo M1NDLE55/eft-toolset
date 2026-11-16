@@ -1,0 +1,38 @@
+{
+  "title": "7.62x39mm PP gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_PP_gzh",
+  "revisionId": 324986,
+  "lastEdited": "2025-11-23T18:39:11Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.016 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "velocity": "732 m/s",
+    "damage": "59",
+    "accuracy": "-1",
+    "recoil": "+5",
+    "penetration": "41",
+    "armor damage": "57",
+    "ricochet": "33%",
+    "durability burn": "+35",
+    "heat": "+72.5",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "64b7af434b75259c590fa893",
+    "id": "patron_762x39_pp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

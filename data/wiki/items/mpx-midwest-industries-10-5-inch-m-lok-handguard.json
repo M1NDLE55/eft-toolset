@@ -1,0 +1,24 @@
+{
+  "title": "MPX Midwest Industries 10.5 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_Midwest_Industries_10.5_inch_M-LOK_handguard",
+  "revisionId": 342006,
+  "lastEdited": "2026-04-28T00:00:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.226 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+16",
+    "recoil": "+0",
+    "Heat": "-3.6",
+    "Cooling": "+4.4",
+    "node": "5c5db6302e2216000e5e47f0",
+    "ID": "handguard_mpx_midwest_10,5_inch_m_lok"
+  },
+  "sections": []
+}

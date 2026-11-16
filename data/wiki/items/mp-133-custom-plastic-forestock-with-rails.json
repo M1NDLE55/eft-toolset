@@ -1,0 +1,24 @@
+{
+  "title": "MP-133 custom plastic forestock with rails",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-133_custom_plastic_forestock_with_rails",
+  "revisionId": 352887,
+  "lastEdited": "2026-08-09T21:50:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.5 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+10",
+    "recoil": "+0",
+    "Heat": "+2.7",
+    "Cooling": "-3",
+    "node": "55d45f484bdc2d972f8b456d",
+    "ID": "handguard_mr133_custom_rail"
+  },
+  "sections": []
+}

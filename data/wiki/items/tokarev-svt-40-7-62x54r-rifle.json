@@ -1,0 +1,37 @@
+{
+  "title": "Tokarev SVT-40 7.62x54R rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tokarev_SVT-40_7.62x54R_rifle",
+  "revisionId": 342855,
+  "lastEdited": "2026-04-30T21:52:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault carbines",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault carbine",
+    "slot": "Primary",
+    "weight": "4.155 kg",
+    "grid": "6x1",
+    "trader": "Prapor LL3",
+    "fire modes": "Single",
+    "sightrange": "500",
+    "ergonomics": "26",
+    "velocity": "865 m/s",
+    "range": "400 m",
+    "MOA": "1.37",
+    "Weaprecoil": "Vertical: 104, Horizontal: 401",
+    "rof": "50",
+    "caliber": "7.62x54mmR",
+    "node": "643ea5b23db6f9f57107d9fd",
+    "ID": "weapon_toz_svt_40_762x54r"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Variant Name |\n| SVT-40 Sniper |"
+    }
+  ]
+}

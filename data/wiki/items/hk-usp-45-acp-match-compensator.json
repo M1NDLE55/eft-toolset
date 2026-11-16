@@ -1,0 +1,23 @@
+{
+  "title": "HK USP .45 ACP Match compensator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_.45_ACP_Match_compensator",
+  "revisionId": 318908,
+  "lastEdited": "2025-10-02T22:27:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.34 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-12",
+    "velocity": "+0",
+    "recoil": "-15",
+    "node": "619624b26db0f2477964e6b0",
+    "ID": "mount_usp_hk_match_compensator"
+  },
+  "sections": []
+}

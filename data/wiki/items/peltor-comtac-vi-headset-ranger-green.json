@@ -1,0 +1,30 @@
+{
+  "title": "Peltor ComTac VI headset (Ranger Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Peltor_ComTac_VI_headset_(Ranger_Green)",
+  "revisionId": 348447,
+  "lastEdited": "2026-07-30T20:23:57Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.379 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in the Factory Tactical Map",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "69c163b17c7040819b086502",
+    "id": "item_equipment_headset_comtac_6_green_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

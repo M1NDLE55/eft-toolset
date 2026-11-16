@@ -1,0 +1,23 @@
+{
+  "title": "SKS ATI Monte Carlo gas tube cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_ATI_Monte_Carlo_gas_tube_cover",
+  "revisionId": 343249,
+  "lastEdited": "2026-05-03T22:57:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+6",
+    "Heat": "+0.7",
+    "Cooling": "-1.2",
+    "node": "653ecc425a1690d9d90491e4",
+    "ID": "handguard_sks_ati_monte_carlo_cover"
+  },
+  "sections": []
+}

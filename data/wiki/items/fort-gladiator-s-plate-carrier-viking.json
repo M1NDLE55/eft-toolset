@@ -1,0 +1,42 @@
+{
+  "title": "FORT Gladiator-S plate carrier (Viking)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FORT_Gladiator-S_plate_carrier_(Viking)",
+  "revisionId": 348463,
+  "lastEdited": "2026-07-30T20:26:34Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "3.05 kg",
+    "grid": "3x4",
+    "trader": "Ref LL4, after unlocking it in the Factory Tactical Map",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Groin",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "172",
+    "penalties": "-1% movement speed, -0.5% turn speed, -0.5% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "20 Slots",
+    "node": "69d27591df93e6952a031c84",
+    "ID": "item_equipment_armor_gladiator_s_light_blk"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

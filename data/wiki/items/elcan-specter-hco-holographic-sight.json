@@ -1,0 +1,24 @@
+{
+  "title": "ELCAN Specter HCO holographic sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ELCAN_Specter_HCO_holographic_sight",
+  "revisionId": 341719,
+  "lastEdited": "2026-04-26T21:22:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.433 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-2",
+    "modes": "1",
+    "node": "64785e7c19d732620e045e15",
+    "ID": "scope_all_elcan_specter_hco"
+  },
+  "sections": []
+}

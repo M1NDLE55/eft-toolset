@@ -1,0 +1,27 @@
+{
+  "title": "AR-15 Magpul B.A.D. Lever bolt release",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Magpul_B.A.D._Lever_bolt_release",
+  "revisionId": 364381,
+  "lastEdited": "2026-10-13T15:43:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+2",
+    "node": "675307301f7c19a9780f2668",
+    "ID": "charge_ar15_magpul_bad_lever"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- When this item is installed, reloading with an empty chamber is ~12% faster."
+    }
+  ]
+}

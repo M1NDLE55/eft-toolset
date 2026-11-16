@@ -1,0 +1,26 @@
+{
+  "title": "Elvisvista figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Elvisvista_figurine",
+  "revisionId": 344112,
+  "lastEdited": "2026-05-19T19:29:03Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "690c70a2a1461a01d605a1bd",
+    "id": "item_barter_tarko_elvisvista"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Chiappa Rhino .357 6-round cylinder",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chiappa_Rhino_.357_6-round_cylinder",
+  "revisionId": 337860,
+  "lastEdited": "2026-03-07T06:34:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "None",
+    "capacity": "6",
+    "caliber": ".357 Magnum",
+    "node": "619f54a1d25cbd424731fb99",
+    "ID": "mag_rhino_chiappa_rhino_cylinder_9x33r_6"
+  },
+  "sections": []
+}

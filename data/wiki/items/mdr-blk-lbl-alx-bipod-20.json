@@ -1,0 +1,22 @@
+{
+  "title": "MDR BLK LBL ALX Bipod 20",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MDR_BLK_LBL_ALX_Bipod_20",
+  "revisionId": 354944,
+  "lastEdited": "2026-08-17T21:23:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Bipods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bipod",
+    "weight": "0.28 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+3",
+    "recoil": "When mounted: -65",
+    "node": "680f7e4aeee716732708e84e",
+    "ID": "bipod_alx_blk_lbl_alx_bipod_20_inch"
+  },
+  "sections": []
+}

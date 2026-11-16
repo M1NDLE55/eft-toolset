@@ -1,0 +1,18 @@
+{
+  "title": "5.8x42mm DBP191 ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.8x42mm_DBP191_ammo_pack_(30_pcs)",
+  "revisionId": 367203,
+  "lastEdited": "2026-11-02T23:12:24Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6a99617d17c4dda0010df334",
+    "ID": "item_ammo_box_58x42_30_dbp191"
+  },
+  "sections": []
+}

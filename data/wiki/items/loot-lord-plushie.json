@@ -1,0 +1,31 @@
+{
+  "title": "Loot Lord plushie",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Loot_Lord_plushie",
+  "revisionId": 312990,
+  "lastEdited": "2025-05-02T10:39:02Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.3 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "node": "60b0f7057897d47c5b04ab94",
+    "id": "item_barter_aquafps"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Plastic suitcase"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator AquaFPS."
+    }
+  ]
+}

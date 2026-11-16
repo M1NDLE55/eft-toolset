@@ -1,0 +1,24 @@
+{
+  "title": "BelOMO PK-06 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BelOMO_PK-06_reflex_sight",
+  "revisionId": 318094,
+  "lastEdited": "2025-09-07T19:26:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Compact reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Compact reflex sight",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "zeroing": "25, 50, 100",
+    "sightrange": "100",
+    "ergonomics": "+0",
+    "modes": "3",
+    "node": "57ae0171245977343c27bfcf",
+    "ID": "scope_all_belomo_pk_06"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "HK HKey 3 inch rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_HKey_3_inch_rail",
+  "revisionId": 322659,
+  "lastEdited": "2025-11-18T18:57:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-0.15",
+    "node": "67069d3bb29a2cd338033390",
+    "ID": "mount_hkey_hk_rail_3_inch_rail_section"
+  },
+  "sections": []
+}

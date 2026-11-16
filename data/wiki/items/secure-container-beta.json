@@ -1,0 +1,27 @@
+{
+  "title": "Secure container Beta",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_container_Beta",
+  "revisionId": 363475,
+  "lastEdited": "2026-10-06T22:21:35Z",
+  "kind": "item",
+  "categories": [
+    "Secure containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Secure container",
+    "slot": "Pouch",
+    "weight": "0.8 kg",
+    "grid": "3x2",
+    "slots": "3x2 grid (6 slots)",
+    "node": "5857a8b324597729ab0a0e7d",
+    "id": "Beta container"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Players with the \"Prepare for Escape\" game edition start with this container.\n  - If the container is left in the pouch slot upon upgrading to a game version that comes with a bigger one, it will be removed and replaced.\n- Can only fit:\n  - Document case\n  - Dogtag case\n  - Gingy keychain\n  - Injector case\n  - Key tool\n  - Keycard holder case\n  - S I C C organizational pouch\n  - Simple wallet\n  - WZ Wallet\n  - Loot\n  - Provisions\n  - Meds\n  - Keys, Keycards & Maps\n  - Weapon mods (Besides magazines, special scopes and some mounts)\n  - Armor plates\n  - Currency\n  - Armbands\n  - Earpieces\n  - Vanity Face cover\n  - Vanity Headwear\n  - Vanity Eyewear\n  - Melee weapons\n  - Special equipment (Besides repair kits)"
+    }
+  ]
+}

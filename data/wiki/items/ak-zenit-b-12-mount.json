@@ -1,0 +1,22 @@
+{
+  "title": "AK Zenit B-12 Mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Zenit_B-12_Mount",
+  "revisionId": 340645,
+  "lastEdited": "2026-04-21T09:23:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.087 kg",
+    "grid": "1x1",
+    "price": "₽3,180",
+    "trader": "Skier LL2",
+    "ergonomics": "-1",
+    "node": "57ffaea724597779f52b3a4d",
+    "ID": "mount_all_zenit_b12"
+  },
+  "sections": []
+}

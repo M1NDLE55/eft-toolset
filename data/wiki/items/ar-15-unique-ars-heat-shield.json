@@ -1,0 +1,44 @@
+{
+  "title": "AR-15 Unique-ARs Heat Shield",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Unique-ARs_Heat_Shield",
+  "revisionId": 361783,
+  "lastEdited": "2026-09-24T13:05:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.08 kg",
+    "grid": "2x1",
+    "trader": "Ref LL2: Grey, after unlocking it in Arena BattlePass Season 3, Ref LL2: Yellow, after unlocking it in the The Lab Tactical Map, Ref LL2: Red, after unlocking it in Morbus crate",
+    "ergonomics": "+1.75",
+    "Heat": "+7.6",
+    "Cooling": "-5",
+    "node": "6a675d8f2ff856278106eb69 6a675d75fd8364ead7039dd8 6a675d00358304130d098d4f",
+    "ID": "tactical_uars_unique_ars_hex_12_inch_short_shield_gry tactical_uars_unique_ars_hex_12_inch_short_shield_ylw tactical_uars_unique_ars_hex_12_inch_short_shield_red"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Grey variant",
+      "level": 4,
+      "text": "- Arena BattlePass Season 3 level 35\n- 8 Battle Points"
+    },
+    {
+      "heading": "Yellow variant",
+      "level": 4,
+      "text": "- The Lab Tactical Map"
+    },
+    {
+      "heading": "Red variant",
+      "level": 4,
+      "text": "- Morbus crate"
+    }
+  ]
+}

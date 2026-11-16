@@ -1,0 +1,25 @@
+{
+  "title": "Laptop from an unknown facility",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Laptop_from_an_unknown_facility",
+  "revisionId": 356002,
+  "lastEdited": "2026-08-25T13:52:01Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.5 kg",
+    "grid": "3x2",
+    "node": "6a5f9becfc12d937d50ae095",
+    "id": "q_kord_toghbook_dirty"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Final Stretch"
+    }
+  ]
+}

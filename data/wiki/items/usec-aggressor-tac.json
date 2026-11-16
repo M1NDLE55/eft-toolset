@@ -1,0 +1,22 @@
+{
+  "title": "USEC Aggressor TAC",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_Aggressor_TAC",
+  "revisionId": 252766,
+  "lastEdited": "2023-11-02T21:49:18Z",
+  "kind": "item",
+  "categories": [
+    "USEC upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f56c686f7744bcd13459c",
+    "ID": "usec_upper_aggressor"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The jacket is modeled after the Aggressor Parka™ and the gloves after the TAC K9 and Rope Handler Glove both made by 5.11 Tactical."
+    }
+  ]
+}

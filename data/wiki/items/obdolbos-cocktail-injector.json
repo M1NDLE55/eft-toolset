@@ -1,0 +1,38 @@
+{
+  "title": "Obdolbos cocktail injector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Obdolbos_cocktail_injector",
+  "revisionId": 363947,
+  "lastEdited": "2026-10-11T20:55:11Z",
+  "kind": "item",
+  "categories": [
+    "Stimulants"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injector",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "effect": "Buffs:, 1s Delay; 600s Duration: - 25% Chance: Increases Endurance (+10) - 25% Chance: Increases Strength (+10) - 25% Chance: Increases Intellect (+10) - 25% Chance: Increases Attention (+10) - 25% Chance: Increases Stress Resistance (+10) - 25% Chance: Increases Charisma (+10) - 25% Chance: Increases maximum stamina (+20) - 25% Chance: Increases health regeneration (+1/s) - 25% Chance: Increases stamina recovery rate (+1/s) - 25% Chance: Increases weight limit (+0.1 kg) Debuffs:, 1s Delay; 600s Duration: - 33% Chance: Decreases health regeneration (-600/s) - 25% Chance: Increases damage taken , (except the head) (+20%) - 25% Chance: Causes - 25% Chance: Decreases hydration recovery (-1/s) - 25% Chance: Decreases energy recovery (-1/s)",
+    "use time": "2s",
+    "exam xp": "8",
+    "node": "5ed5166ad380ab312177c100",
+    "ID": "Obdolbos"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The 33% chance -600 health regeneration/s debuff means instant death."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Sanitar"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Laboratory experiment's area (G12) on the first level (Requires TerraGroup Labs keycard (Black))\n- Sanitar's room in the Laboratory block (G22) on the second level (Requires Keycard with a blue marking)\n- On the floor of the \"Med Hut\" on the main floor, first Level (O11)\n- On the left hand table in the Laboratory quarantine zone (G11) (Requires TerraGroup Labs keycard (Blue))\n- In the laboratories inside the containment block"
+    }
+  ]
+}

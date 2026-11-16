@@ -1,0 +1,41 @@
+{
+  "title": "L1 (Norepinephrine) injector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/L1_(Norepinephrine)_injector",
+  "revisionId": 358687,
+  "lastEdited": "2026-09-10T22:57:01Z",
+  "kind": "item",
+  "categories": [
+    "Stimulants"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injector",
+    "max uses": "1",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "use time": "2s",
+    "effect": "Buffs:, Removes: for 120 seconds, Adds: for 120 seconds, 1s Delay; 120s Duration: - Increases Endurance (+10) - Increases Strength (+20) - Increases maximum stamina (+30) Debuffs:, 1s Delay; 60s Duration: - Decreases energy recovery (-0.45/s) - Decreases hydration recovery (-0.45/s)",
+    "exam xp": "8",
+    "storage_medcase": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ed515e03a40a50460332579",
+    "id": "L1"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Tagilla\n- Sanitar and his guards"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Laboratory experiment's area (G12) on the first level (Requires TerraGroup Labs keycard (Black))\n- Sanitar's room in the Laboratory block (G22) on the second level (Requires Keycard with a blue marking)\n- On the floor of the \"Med Hut\" on the main floor, first Level (O11)\n- On the left hand table in the Laboratory quarantine zone (G11) (Requires TerraGroup Labs keycard (Blue))\n- In the laboratories inside the containment block"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- Multiple Spawns in the hidden drug lab in the north on the shelves, desks and on the ground."
+    }
+  ]
+}

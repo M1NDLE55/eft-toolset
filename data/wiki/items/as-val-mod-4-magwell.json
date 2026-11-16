@@ -1,0 +1,23 @@
+{
+  "title": "AS VAL MOD.4 magwell",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_MOD.4_magwell",
+  "revisionId": 343307,
+  "lastEdited": "2026-05-05T19:00:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.034 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+4",
+    "loot xp": "5",
+    "exam xp": "5",
+    "node": "68712a7d505fed5f370b1633",
+    "ID": "mount_val_mod4_nb_magwell"
+  },
+  "sections": []
+}

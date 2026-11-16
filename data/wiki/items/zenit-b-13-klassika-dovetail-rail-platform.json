@@ -1,0 +1,24 @@
+{
+  "title": "Zenit B-13 \"Klassika\" dovetail rail platform",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zenit_B-13_%22Klassika%22_dovetail_rail_platform",
+  "revisionId": 304971,
+  "lastEdited": "2025-01-31T14:56:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.175 kg",
+    "grid": "1x1",
+    "price": "₽7,800",
+    "trader": "Skier LL2",
+    "ergonomics": "-2",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5c61a40d2e2216001403158d",
+    "ID": "mount_dovetail_zenit_b13"
+  },
+  "sections": []
+}

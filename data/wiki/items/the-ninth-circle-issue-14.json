@@ -1,0 +1,25 @@
+{
+  "title": "The Ninth Circle Issue 14",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Ninth_Circle_Issue_14",
+  "revisionId": 336360,
+  "lastEdited": "2026-02-21T17:51:10Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "68d2f400be7c1493b90cd3f7",
+    "id": "item_info_note_newspaper_9th_krug_14_circle"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Accidental Witness"
+    }
+  ]
+}

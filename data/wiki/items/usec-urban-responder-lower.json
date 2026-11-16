@@ -1,0 +1,22 @@
+{
+  "title": "USEC Urban Responder lower",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_Urban_Responder_lower",
+  "revisionId": 276057,
+  "lastEdited": "2024-04-15T21:40:38Z",
+  "kind": "item",
+  "categories": [
+    "USEC lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5f5e40a06760b4138443b341",
+    "ID": "usec_lower_UrbanResponder"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The boots on the Urban Responder lower are modeled after the Under Armor Valsetz boot."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Lebedev PL-15 9x19 pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lebedev_PL-15_9x19_pistol",
+  "revisionId": 362948,
+  "lastEdited": "2026-10-03T11:22:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.94 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL1",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "94",
+    "velocity": "448 m/s",
+    "range": "50 m",
+    "MOA": "11",
+    "Weaprecoil": "Vertical: 281, Horizontal: 228",
+    "rof": "30",
+    "caliber": "9x19mm Parabellum",
+    "node": "602a9740da11d6478d5a06dc",
+    "ID": "weapon_izhmash_pl15_9x19"
+  },
+  "sections": []
+}

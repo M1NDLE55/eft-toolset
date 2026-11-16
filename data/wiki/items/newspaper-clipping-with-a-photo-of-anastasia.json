@@ -1,0 +1,30 @@
+{
+  "title": "Newspaper clipping with a photo of Anastasia",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Newspaper_clipping_with_a_photo_of_Anastasia",
+  "revisionId": 339520,
+  "lastEdited": "2026-03-31T23:27:08Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "68d2f56eb350a6169f04beab",
+    "id": "item_info_note_newspaper_photo_anastasia"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- This item is related to the story chapter Accidental Witness"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "On the back of the photo is a drawing of a flower bed, which is a hint for the location of the Audio tape with incriminating evidence."
+    }
+  ]
+}

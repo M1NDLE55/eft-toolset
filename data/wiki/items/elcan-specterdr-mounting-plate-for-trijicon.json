@@ -1,0 +1,21 @@
+{
+  "title": "Elcan SpecterDR Mounting Plate for Trijicon",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Elcan_SpecterDR_Mounting_Plate_for_Trijicon",
+  "revisionId": 338496,
+  "lastEdited": "2026-03-15T15:05:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.0155 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-0.1",
+    "node": "688b54a11cef2a61d005273b",
+    "ID": "mount_base_specter_trijicon_mounting_plate"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "AR-10 KAC charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_KAC_charging_handle",
+  "revisionId": 354985,
+  "lastEdited": "2026-08-18T02:18:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.041 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3: Taupe",
+    "ergonomics": "+0",
+    "node": "5df8e053bb49d91fb446d6a6 6932ac762e27c68c800bd836",
+    "ID": "charge_ar10_kac_charging_handle_std charge_ar10_kac_charging_handle_std_tau"
+  },
+  "sections": []
+}

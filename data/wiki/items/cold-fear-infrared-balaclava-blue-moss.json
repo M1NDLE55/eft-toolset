@@ -1,0 +1,27 @@
+{
+  "title": "Cold Fear infrared balaclava (Blue Moss)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cold_Fear_infrared_balaclava_(Blue_Moss)",
+  "revisionId": 353548,
+  "lastEdited": "2026-08-14T07:01:41Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Echo Belli crate",
+    "node": "69c129fe5929f7d94804fe30",
+    "id": "item_equipment_facecover_coldgear_blue_moss_bp_03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

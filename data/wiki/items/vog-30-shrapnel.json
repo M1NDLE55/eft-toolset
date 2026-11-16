@@ -1,0 +1,24 @@
+{
+  "title": "VOG-30 Shrapnel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VOG-30_Shrapnel",
+  "revisionId": 308532,
+  "lastEdited": "2025-03-29T13:59:52Z",
+  "kind": "ammo",
+  "categories": [
+    "Shrapnel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shrapnel",
+    "velocity": "90 m/s",
+    "damage": "40",
+    "penetration": "15",
+    "armor damage": "38",
+    "ricochet": "30%",
+    "l bleed chance": "+10",
+    "h bleed chance": "+25",
+    "node": "67ade494d748873e5f0161df",
+    "id": "shrapnel_vog30"
+  },
+  "sections": []
+}

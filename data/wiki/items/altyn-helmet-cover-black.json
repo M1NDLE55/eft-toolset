@@ -1,0 +1,25 @@
+{
+  "title": "Altyn helmet cover (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Altyn_helmet_cover_(Black)",
+  "revisionId": 361465,
+  "lastEdited": "2026-09-23T18:41:31Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Vanity helmet mod",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6a82dce8385a6cfafe0d4fa9",
+    "ID": "item_equipment_helmet_altyn_style_cover_black_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item does not provide any additional armor"
+    }
+  ]
+}

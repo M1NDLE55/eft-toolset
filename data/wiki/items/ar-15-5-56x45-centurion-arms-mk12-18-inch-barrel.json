@@ -1,0 +1,27 @@
+{
+  "title": "AR-15 5.56x45 Centurion Arms Mk12 18 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_Centurion_Arms_Mk12_18_inch_barrel",
+  "revisionId": 343511,
+  "lastEdited": "2026-05-07T22:26:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.1 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-28",
+    "velocity": "+3",
+    "MOA": "0.89",
+    "recoil": "-9.1",
+    "Dura Burn": "+4",
+    "Heat": "-6",
+    "Cooling": "-6",
+    "node": "68caaa93269e10396503acf6",
+    "ID": "barrel_ar15_centurion_arms_mk12_457mm"
+  },
+  "sections": []
+}

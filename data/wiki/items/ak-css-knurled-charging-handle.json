@@ -1,0 +1,21 @@
+{
+  "title": "AK CSS knurled charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_CSS_knurled_charging_handle",
+  "revisionId": 355255,
+  "lastEdited": "2026-08-19T20:39:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3 after completing his task Indisputable Authority",
+    "ergonomics": "+3",
+    "node": "6130ca3fd92c473c77020dbd",
+    "ID": "charge_ak_css_knurled_charging_handle"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Ski hat with holes for eyes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ski_hat_with_holes_for_eyes",
+  "revisionId": 352779,
+  "lastEdited": "2026-08-09T21:17:16Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "Yes",
+    "node": "5ab8f20c86f7745cdb629fb2",
+    "id": "hats_skihat"
+  },
+  "sections": []
+}

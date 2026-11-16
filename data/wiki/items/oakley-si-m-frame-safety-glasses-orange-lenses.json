@@ -1,0 +1,28 @@
+{
+  "title": "Oakley SI M Frame safety glasses (Orange lenses)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Oakley_SI_M_Frame_safety_glasses_(Orange_lenses)",
+  "revisionId": 348533,
+  "lastEdited": "2026-07-30T21:54:43Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.032 kg",
+    "grid": "2x1",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 0",
+    "blindness protect": "15%",
+    "node": "67af42942676ade5750b50e8",
+    "ID": "item_equipment_glasses_m_frame_arena_bp_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen\n- Contrary to the description, this item doesn't provide any ballistic protection\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "5.56x45mm MK 318 Mod 0 (SOST)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_MK_318_Mod_0_(SOST)",
+  "revisionId": 333094,
+  "lastEdited": "2026-01-27T14:36:32Z",
+  "kind": "ammo",
+  "categories": [
+    "5.56x45mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2",
+    "velocity": "902 m/s",
+    "damage": "53",
+    "accuracy": "+2",
+    "recoil": "+3",
+    "penetration": "33",
+    "armor damage": "39",
+    "ricochet": "35%",
+    "l bleed chance": "+15",
+    "h bleed chance": "+10",
+    "durability burn": "+15",
+    "heat": "+52",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "node": "60194943740c5d77f6705eea",
+    "id": "patron_556x45_mk_318_mod_0"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "AR-10 KAC QDC 7.62x51 Flash Suppressor Kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_KAC_QDC_7.62x51_Flash_Suppressor_Kit",
+  "revisionId": 337713,
+  "lastEdited": "2026-03-06T01:41:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1.5",
+    "accuracy": "+3",
+    "recoil": "-5.5",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "node": "5dfa3cd1b33c0951220c079b",
+    "ID": "muzzle_ar10_kac_qdc_flash_supressor_kit_762x51"
+  },
+  "sections": []
+}

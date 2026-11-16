@@ -1,0 +1,32 @@
+{
+  "title": "Viibiin sneaker",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Viibiin_sneaker",
+  "revisionId": 302006,
+  "lastEdited": "2025-01-05T19:37:13Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.42 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "exam xp": "100",
+    "node": "66b37eb4acff495a29492407",
+    "id": "item_barter_valuable_sneaker"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a reference to the content creator Viibiin.\n- Easter eggs and References: The Viibiin sneaker is modeled after the Nike Hyperdunk X Miami Nights"
+    }
+  ]
+}

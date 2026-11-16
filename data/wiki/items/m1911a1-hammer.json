@@ -1,0 +1,20 @@
+{
+  "title": "M1911A1 hammer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_hammer",
+  "revisionId": 255632,
+  "lastEdited": "2023-11-23T15:20:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.018 kg",
+    "grid": "1x1",
+    "ergonomics": "+0",
+    "node": "5e81c550763d9f754677befd",
+    "ID": "hammer_m1911_colt_m1911a1_std"
+  },
+  "sections": []
+}

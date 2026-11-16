@@ -1,0 +1,35 @@
+{
+  "title": ".50 BMG M903 SLAP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_BMG_M903_SLAP",
+  "revisionId": 316352,
+  "lastEdited": "2025-07-21T00:51:56Z",
+  "kind": "ammo",
+  "categories": [
+    ".50 BMG ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.103 kg",
+    "grid": "1x1",
+    "velocity": "1220 m/s",
+    "damage": "160",
+    "accuracy": "-10",
+    "recoil": "+28",
+    "penetration": "115",
+    "armor damage": "90",
+    "ricochet": "45%",
+    "l bleed chance": "+30",
+    "h bleed chance": "+15",
+    "node": "67dc2648ba5b79876906a166",
+    "id": "patron_127x99_m903"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

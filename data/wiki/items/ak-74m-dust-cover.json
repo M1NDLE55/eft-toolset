@@ -1,0 +1,23 @@
+{
+  "title": "AK-74M dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74M_dust_cover",
+  "revisionId": 322085,
+  "lastEdited": "2025-11-17T01:33:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.088 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "+3.1",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "node": "5ac50da15acfc4001718d287",
+    "ID": "reciever_ak74_izhmash_ak74m_std"
+  },
+  "sections": []
+}

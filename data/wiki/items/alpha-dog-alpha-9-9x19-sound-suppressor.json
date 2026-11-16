@@ -1,0 +1,25 @@
+{
+  "title": "Alpha Dog Alpha 9 9x19 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Alpha_Dog_Alpha_9_9x19_sound_suppressor",
+  "revisionId": 356700,
+  "lastEdited": "2026-08-28T17:20:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.29 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-10",
+    "velocity": "+0.7",
+    "recoil": "-2",
+    "Dura Burn": "+60",
+    "Heat": "+13",
+    "node": "5a33a8ebc4a282000c5a950d",
+    "ID": "silencer_all_alpha_dog_alpha_9_9x19"
+  },
+  "sections": []
+}

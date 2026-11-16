@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { ComposedItem } from "@/app/lib/cache/types";
 import type { MapDetails } from "@/app/lib/types/raidPlanner";
-import { itemFaq, itemLabel, itemPageDescription, itemPageTitle } from "@/app/lib/seo/item";
+import { itemLabel, itemPageDescription, itemPageTitle } from "@/app/lib/seo/item";
 import { buildMapGuide, mapDescription, mapFaq, mapIntro } from "@/app/lib/seo/map";
 import { formatRoubles, plural } from "@/app/lib/seo/format";
 
@@ -52,30 +52,6 @@ describe("item SEO copy", () => {
   it("describes trader-only items without mentioning the flea market", () => {
     const banned = item({ fleaMarketFee: null, fleaBanned: true, sellFor: [{ vendor: { name: "Therapist" }, priceRUB: 9_000 }] });
     expect(itemPageDescription(banned)).toMatch(/^Graphics card sells for 9,000 ₽ to Therapist in Tarkov\./);
-    expect(itemFaq(banned)[0].answer).toContain("can't be sold on the flea market");
-  });
-
-  it("answers worth, where to sell, keep or sell, and where to buy from the data", () => {
-    const faq = itemFaq(
-      item({
-        hideoutRequirements: [{ station: { name: "Bitcoin farm" }, level: 2, count: 3, foundInRaid: false }],
-      })
-    );
-    expect(faq.map((entry) => entry.question)).toEqual([
-      "How much is Graphics card worth in Tarkov?",
-      "Where should I sell Graphics card?",
-      "Should I keep or sell Graphics card?",
-      "Where can I buy Graphics card?",
-    ]);
-    expect(faq[0].answer).toContain("380,000 ₽ on the flea market");
-    expect(faq[0].answer).toContain("190,000 ₽ per slot");
-    expect(faq[1].answer).toContain("The best trader is Mechanic at 250,000 ₽");
-    expect(faq[2].answer).toContain("3 are needed in total (3 for 1 hideout upgrade)");
-    expect(faq[3].answer).toBe("Buy it on the flea market for about 420,000 ₽.");
-  });
-
-  it("says an unused item is safe to sell", () => {
-    expect(itemFaq(item())[2].answer).toBe("No task, hideout upgrade, barter or craft uses it, so it's safe to sell.");
   });
 });
 

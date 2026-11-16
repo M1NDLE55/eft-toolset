@@ -1,0 +1,26 @@
+{
+  "title": "AAC 762-SDN-6 multi-caliber sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AAC_762-SDN-6_multi-caliber_sound_suppressor",
+  "revisionId": 340767,
+  "lastEdited": "2026-04-22T07:24:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.567 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4, Ref LL4",
+    "ergonomics": "-24",
+    "velocity": "+0.8",
+    "recoil": "-5",
+    "Dura Burn": "+88",
+    "Heat": "+15",
+    "Cooling": "+5",
+    "node": "5a34fe59c4a282000b1521a2",
+    "ID": "silencer_ar10_aac_762_sdn_6_762x51"
+  },
+  "sections": []
+}

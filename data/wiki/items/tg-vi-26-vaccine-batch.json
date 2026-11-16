@@ -1,0 +1,25 @@
+{
+  "title": "TG-VI-26 vaccine batch",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TG-VI-26_vaccine_batch",
+  "revisionId": 366939,
+  "lastEdited": "2026-11-01T14:29:32Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "node": "6acc4ab371e6deed2d0e5afa",
+    "id": "item_hall_vakcine_case"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "Used in the quests:\n- Halloween: Unexpected Help\n- Halloween: Initial Examination"
+    }
+  ]
+}

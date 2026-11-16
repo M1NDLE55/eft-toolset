@@ -1,0 +1,22 @@
+{
+  "title": "MDR BLK LBL ALX Bipod 16",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MDR_BLK_LBL_ALX_Bipod_16",
+  "revisionId": 343352,
+  "lastEdited": "2026-05-05T19:47:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Bipods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bipod",
+    "weight": "0.243 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+2",
+    "recoil": "When mounted: -65",
+    "node": "680f6d9a4d7624d36e06527b",
+    "ID": "bipod_alx_blk_lbl_alx_bipod_16_inch"
+  },
+  "sections": []
+}

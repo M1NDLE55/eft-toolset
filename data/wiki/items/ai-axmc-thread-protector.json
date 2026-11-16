@@ -1,0 +1,22 @@
+{
+  "title": "AI AXMC thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_thread_protector",
+  "revisionId": 306901,
+  "lastEdited": "2025-03-18T14:05:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "+1",
+    "Dura Burn": "-2",
+    "node": "628120621d5df4475f46a335",
+    "ID": "muzzle_ai_accuracy_international_thread_protector_86x70"
+  },
+  "sections": []
+}

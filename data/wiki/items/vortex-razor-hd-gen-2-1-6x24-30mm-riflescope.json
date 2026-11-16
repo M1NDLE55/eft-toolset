@@ -1,0 +1,26 @@
+{
+  "title": "Vortex Razor HD Gen.2 1-6x24 30mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vortex_Razor_HD_Gen.2_1-6x24_30mm_riflescope",
+  "revisionId": 355727,
+  "lastEdited": "2026-08-23T19:32:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.57 kg",
+    "grid": "2x1",
+    "trader": "Ref LL3",
+    "zeroing": "50, 100, 150, 200, 250, 300",
+    "sightrange": "1500",
+    "ergonomics": "-4",
+    "modes": "1",
+    "loot xp": "40",
+    "exam xp": "8",
+    "node": "618ba27d9008e4636a67f61d",
+    "ID": "scope_30mm_razor_hd_gen_2_1_6x24"
+  },
+  "sections": []
+}

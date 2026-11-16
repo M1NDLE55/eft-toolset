@@ -1,0 +1,29 @@
+{
+  "title": "Stich Profi Chest Rig MK2 (Recon, EMR)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stich_Profi_Chest_Rig_MK2_(Recon%2C_EMR)",
+  "revisionId": 348702,
+  "lastEdited": "2026-07-30T22:33:44Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.4 kg",
+    "grid": "3x4",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 2",
+    "BlocksArmor": "No",
+    "slots": "18 Slots",
+    "node": "69cfbf627eaa38bd240704ad",
+    "ID": "item_equipment_rig_sprofi_mk2_smg_emr_bp03_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

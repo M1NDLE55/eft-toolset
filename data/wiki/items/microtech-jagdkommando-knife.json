@@ -1,0 +1,29 @@
+{
+  "title": "Microtech Jagdkommando knife",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Microtech_Jagdkommando_knife",
+  "revisionId": 356587,
+  "lastEdited": "2026-08-26T08:29:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.58 kg",
+    "grid": "3x1",
+    "fire modes": "Chop 24 Damage, Stab 31 Damage",
+    "range": "Chop 0.4m, Stab 0.5m",
+    "node": "6a39358c658f5889ba050ef3",
+    "ID": "weapon_microtech_jagdkommando"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "AK Strike Industries TRAX 1 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Strike_Industries_TRAX_1_handguard",
+  "revisionId": 340790,
+  "lastEdited": "2026-04-22T07:38:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.26 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+16",
+    "recoil": "+0",
+    "Heat": "-3.4",
+    "Cooling": "+2",
+    "node": "5a9d56c8a2750c0032157146",
+    "ID": "handguard_ak_strike_industries_trax_1"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Manufacturer's page for the item\n- Only black color is available in game, with no FDE and Urban Grey versions."
+    }
+  ]
+}

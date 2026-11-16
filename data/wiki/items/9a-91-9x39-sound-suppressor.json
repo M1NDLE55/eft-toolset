@@ -1,0 +1,26 @@
+{
+  "title": "9A-91 9x39 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9A-91_9x39_sound_suppressor",
+  "revisionId": 318900,
+  "lastEdited": "2025-10-02T22:24:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.496 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "-4",
+    "velocity": "+1.1",
+    "recoil": "-14",
+    "Dura Burn": "+20",
+    "Heat": "+14",
+    "Cooling": "+6",
+    "node": "64527a3a7da7133e5a09ca99",
+    "ID": "silencer_9a91_kbp_9a91_silencer_9x39"
+  },
+  "sections": []
+}

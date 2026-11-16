@@ -1,0 +1,20 @@
+{
+  "title": "M45A1 Mil-Tac GVT G10 side grips",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M45A1_Mil-Tac_GVT_G10_side_grips",
+  "revisionId": 342099,
+  "lastEdited": "2026-04-28T03:45:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.22 kg",
+    "grid": "1x1",
+    "ergonomics": "+2",
+    "node": "5f3e778efcd9b651187d7201",
+    "ID": "pistolgrip_m1911_colt_m45a1_std"
+  },
+  "sections": []
+}

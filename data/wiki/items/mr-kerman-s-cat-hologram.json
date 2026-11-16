@@ -1,0 +1,26 @@
+{
+  "title": "Mr Kerman's cat hologram",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mr_Kerman's_cat_hologram",
+  "revisionId": 357776,
+  "lastEdited": "2026-09-08T11:48:48Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "6638a5474e92f038531e210e",
+    "id": "Item_barter_mr_kerman"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item is available as a permanent reward to players who have completed the event questline The Tarkov Mystery.\n- Can be placed in the Hall of Fame."
+    }
+  ]
+}

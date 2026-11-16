@@ -1,0 +1,31 @@
+{
+  "title": "Armband (Train Hard)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Train_Hard)",
+  "revisionId": 363153,
+  "lastEdited": "2026-10-04T23:03:16Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "619bddffc9546643a67df6f0",
+    "id": "item_equipment_armband_helmet"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Survivalist Path - Unprotected but Dangerous"
+    }
+  ]
+}

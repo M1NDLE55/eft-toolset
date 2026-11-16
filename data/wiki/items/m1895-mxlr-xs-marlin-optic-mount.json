@@ -1,0 +1,21 @@
+{
+  "title": "M1895/MXLR XS Marlin Optic Mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1895/MXLR_XS_Marlin_Optic_Mount",
+  "revisionId": 343354,
+  "lastEdited": "2026-05-05T19:49:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.163 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-0.5",
+    "node": "67c54210d0538d12ec036c0e",
+    "ID": "mount_m1895_xs_marlin_optic_mount"
+  },
+  "sections": []
+}

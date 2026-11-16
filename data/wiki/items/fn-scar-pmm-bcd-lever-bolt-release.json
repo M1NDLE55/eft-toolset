@@ -1,0 +1,21 @@
+{
+  "title": "FN SCAR PMM BCD Lever bolt release",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_PMM_BCD_Lever_bolt_release",
+  "revisionId": 357269,
+  "lastEdited": "2026-09-01T09:35:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+2",
+    "node": "6a3e936964b1d1fcc50ebbff",
+    "ID": "charge_mk16_pmm_bcd"
+  },
+  "sections": []
+}

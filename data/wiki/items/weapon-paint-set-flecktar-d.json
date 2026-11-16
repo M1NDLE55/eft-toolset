@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Flecktar-D)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Flecktar-D)",
+  "revisionId": 356786,
+  "lastEdited": "2026-08-29T20:17:24Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67d7f09d07860567890b5e2c",
+    "id": "item_camo_flecktar_d"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "FN P90 Ring Sight reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_Ring_Sight_reflex_sight",
+  "revisionId": 230773,
+  "lastEdited": "2023-03-12T14:20:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.297 kg",
+    "grid": "1x1",
+    "price": "₽15,500",
+    "trader": "Mechanic LL3",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-1",
+    "modes": "1",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "5cebec38d7f00c00110a652a",
+    "ID": "scope_p90_fn_ring_sight_std"
+  },
+  "sections": []
+}

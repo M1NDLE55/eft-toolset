@@ -1,0 +1,18 @@
+{
+  "title": "9x18mm PM SP7 gzh ammo pack (16 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_SP7_gzh_ammo_pack_(16_pcs)",
+  "revisionId": 367270,
+  "lastEdited": "2026-11-02T23:16:01Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "node": "573728cc24597765cc785b5d",
+    "id": "item_ammo_box_9x18_16_sp7"
+  },
+  "sections": []
+}

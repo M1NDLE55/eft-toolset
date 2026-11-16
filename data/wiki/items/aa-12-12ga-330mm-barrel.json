@@ -1,0 +1,25 @@
+{
+  "title": "AA-12 12ga 330mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AA-12_12ga_330mm_barrel",
+  "revisionId": 305636,
+  "lastEdited": "2025-02-12T21:39:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.8 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "velocity": "+2.57",
+    "MOA": "22.35",
+    "recoil": "-2",
+    "Heat": "-2",
+    "Cooling": "-2",
+    "node": "66ffac601f7492c901027bbb",
+    "ID": "barrel_aa12_mps_330mm_12g"
+  },
+  "sections": []
+}

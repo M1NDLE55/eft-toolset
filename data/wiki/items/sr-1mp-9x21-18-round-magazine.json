@@ -1,0 +1,30 @@
+{
+  "title": "SR-1MP 9x21 18-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-1MP_9x21_18-round_magazine",
+  "revisionId": 337448,
+  "lastEdited": "2026-03-05T22:58:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.105 kg",
+    "grid": "1x1",
+    "price": "₽1,500",
+    "trader": "Prapor LL2",
+    "ergonomics": "-1",
+    "checkaccuracy": "1",
+    "checkmodifier": "-5",
+    "loadmodifier": "-5",
+    "feedfailure": "Very low",
+    "capacity": "18",
+    "caliber": "9x21mm Gyurza",
+    "loot xp": "15",
+    "exam xp": "Examined by default",
+    "node": "59f99a7d86f7745b134aa97b",
+    "ID": "mag_sr1mp_tochmash_std_9x21_18"
+  },
+  "sections": []
+}

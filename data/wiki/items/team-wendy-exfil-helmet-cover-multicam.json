@@ -1,0 +1,26 @@
+{
+  "title": "Team Wendy EXFIL helmet cover (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Team_Wendy_EXFIL_helmet_cover_(MultiCam)",
+  "revisionId": 361546,
+  "lastEdited": "2026-09-23T20:56:25Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Vanity helmet mod",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 3",
+    "node": "6a8355f08ce81861440b6ec1",
+    "ID": "item_equipment_helmet_exfil_cover_multicam_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item does not provide any additional armor.\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

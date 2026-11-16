@@ -1,0 +1,25 @@
+{
+  "title": "AK-74M CAA AKTS AK74 buffer tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74M_CAA_AKTS_AK74_buffer_tube",
+  "revisionId": 340405,
+  "lastEdited": "2026-04-20T14:55:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "price": "₽6,200",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "loot xp": "10",
+    "node": "5cf50fc5d7f00c056c53f83c",
+    "ID": "stock_ak_caa_akts_ak74"
+  },
+  "sections": []
+}

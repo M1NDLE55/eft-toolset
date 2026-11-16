@@ -1,0 +1,35 @@
+{
+  "title": "BNTI Kirasa-N body armor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BNTI_Kirasa-N_body_armor",
+  "revisionId": 348092,
+  "lastEdited": "2026-07-20T13:28:03Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "3 kg",
+    "grid": "3x3",
+    "trader": "Ragman LL2",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck",
+    "default plates": "2x",
+    "default plates armor class": "3",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "150",
+    "penalties": "+0% movement speed, +0% turn speed, -1% Ergonomics",
+    "node": "5b44d22286f774172b0c9de8",
+    "id": "item_equipment_armor_kirasa"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

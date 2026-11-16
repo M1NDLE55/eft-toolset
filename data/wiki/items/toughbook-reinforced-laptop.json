@@ -1,0 +1,32 @@
+{
+  "title": "Toughbook reinforced laptop",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Toughbook_reinforced_laptop",
+  "revisionId": 351963,
+  "lastEdited": "2026-08-06T23:49:57Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "1 kg",
+    "grid": "3x2",
+    "loot xp": "30",
+    "exam xp": "5",
+    "node": "5a29284f86f77463ef3db363 64b91627dd13d43b9d01d6d1",
+    "id": "item_barter_electr_toughbook_quest toughbook_quest_stash"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Cargo X from Peacekeeper"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: It looks very similar to the \"ToughBook\". The producer \"Megasonic\" is actually \"Panasonic\"."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "For Humanity poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/For_Humanity_poster",
+  "revisionId": 355960,
+  "lastEdited": "2026-08-25T12:27:37Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "68df9785beba86572e097ce8",
+    "id": "item_barter_flyers_story_04_for_humanity"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

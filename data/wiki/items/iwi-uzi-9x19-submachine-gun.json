@@ -1,0 +1,37 @@
+{
+  "title": "IWI UZI 9x19 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/IWI_UZI_9x19_submachine_gun",
+  "revisionId": 356400,
+  "lastEdited": "2026-08-26T00:45:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "3.753 kg",
+    "grid": "3x2",
+    "trader": "Peacekeeper LL1, Mechanic LL1",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "77",
+    "velocity": "439 m/s",
+    "range": "200 m",
+    "MOA": "4.4",
+    "Weaprecoil": "Vertical: 39, Horizontal: 184",
+    "rof": "600",
+    "caliber": "9x19mm Parabellum",
+    "node": "66992b349950f5f4cd06029f",
+    "ID": "weapon_iwi_uzi_9x19"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This weapon will never malfunction."
+    }
+  ]
+}

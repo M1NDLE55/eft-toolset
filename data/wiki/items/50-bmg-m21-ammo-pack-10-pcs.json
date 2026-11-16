@@ -1,0 +1,24 @@
+{
+  "title": ".50 BMG M21 ammo pack (10 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_BMG_M21_ammo_pack_(10_pcs)",
+  "revisionId": 367109,
+  "lastEdited": "2026-11-02T23:07:26Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "68e915b76ccca06412020902",
+    "ID": "item_ammo_box_127x99_10_m21"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The QR code contains the text \"I luv pixel art\"."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Solid Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Solid_Green)",
+  "revisionId": 348604,
+  "lastEdited": "2026-07-30T22:15:12Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67d7f24b032b0662d1079cfa",
+    "id": "item_camo_solid_color_green"
+  },
+  "sections": []
+}

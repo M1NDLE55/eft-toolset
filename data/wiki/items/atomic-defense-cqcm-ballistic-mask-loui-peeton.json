@@ -1,0 +1,36 @@
+{
+  "title": "Atomic Defense CQCM ballistic mask (Loui Peeton)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Atomic_Defense_CQCM_ballistic_mask_(Loui_Peeton)",
+  "revisionId": 353488,
+  "lastEdited": "2026-08-13T19:30:13Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light Armored mask",
+    "slot": "Face cover",
+    "weight": "2.1 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in Ref's Drop I",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "3",
+    "armor coverage": "Face, Jaws, Eyes, Head top",
+    "durability": "35",
+    "blindness protect": "0%",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, -3% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "68a9a04373d52d47830759c7",
+    "id": "item_equipment_facecover_strikeball_mask_lp_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

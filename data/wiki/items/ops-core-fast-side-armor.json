@@ -1,0 +1,27 @@
+{
+  "title": "Ops-Core FAST Side Armor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ops-Core_FAST_Side_Armor",
+  "revisionId": 344246,
+  "lastEdited": "2026-05-24T21:27:10Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL3",
+    "material": "Aluminium",
+    "armor": "3",
+    "armor coverage": "Ears",
+    "durability": "25",
+    "penalties": "+0% turn speed, +0% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5a16badafcdbcb001865f72d",
+    "id": "helmet_ops_core_fast_side_armor"
+  },
+  "sections": []
+}

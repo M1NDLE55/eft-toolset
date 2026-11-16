@@ -1,0 +1,27 @@
+{
+  "title": "MPX 9x19 F5 MFG 50-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_9x19_F5_MFG_50-round_drum_magazine",
+  "revisionId": 347483,
+  "lastEdited": "2026-06-29T00:41:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.65 kg",
+    "grid": "1x2",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-10",
+    "checkaccuracy": "No",
+    "checkmodifier": "+10",
+    "loadmodifier": "+10",
+    "feedfailure": "Medium",
+    "capacity": "50",
+    "caliber": "9x19mm Parabellum",
+    "node": "5c5db6742e2216000f1b2852",
+    "ID": "mag_mpx_f5_mpx_drum_9x19_50"
+  },
+  "sections": []
+}

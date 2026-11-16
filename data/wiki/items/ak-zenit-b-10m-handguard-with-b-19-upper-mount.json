@@ -1,0 +1,25 @@
+{
+  "title": "AK Zenit B-10M handguard with B-19 upper mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Zenit_B-10M_handguard_with_B-19_upper_mount",
+  "revisionId": 340614,
+  "lastEdited": "2026-04-21T09:00:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.26 kg",
+    "grid": "1x1",
+    "price": "₽10,200",
+    "trader": "Skier LL3",
+    "ergonomics": "+14.5",
+    "recoil": "+0",
+    "Heat": "-3.2",
+    "Cooling": "+5.1",
+    "node": "5648b4534bdc2d3d1c8b4580",
+    "ID": "handguard_ak_zenit_b10m_b19"
+  },
+  "sections": []
+}

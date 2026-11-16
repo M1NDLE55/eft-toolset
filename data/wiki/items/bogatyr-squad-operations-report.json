@@ -1,0 +1,26 @@
+{
+  "title": "Bogatyr squad operations report",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bogatyr_squad_operations_report",
+  "revisionId": 348050,
+  "lastEdited": "2026-07-19T12:23:07Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.105 kg",
+    "grid": "1x1",
+    "node": "68d302814aae290cf704e375",
+    "ID": "item_info_note_report_bogatir"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "title": "9x19mm RIP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_RIP",
+  "revisionId": 322751,
+  "lastEdited": "2025-11-18T21:14:01Z",
+  "kind": "ammo",
+  "categories": [
+    "9x19mm Parabellum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.013 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "velocity": "381 m/s",
+    "damage": "102",
+    "recoil": "+5",
+    "penetration": "2",
+    "armor damage": "11",
+    "ricochet": "0.2%",
+    "l bleed chance": "+30",
+    "h bleed chance": "+10",
+    "durability burn": "+20",
+    "heat": "+8.3",
+    "feedfailure": "Very high",
+    "misfire": "Medium",
+    "node": "5c0d56a986f774449d5de529",
+    "id": "patron_9x19_rip"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

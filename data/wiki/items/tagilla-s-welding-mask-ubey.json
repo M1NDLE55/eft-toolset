@@ -1,0 +1,40 @@
+{
+  "title": "Tagilla's welding mask \"UBEY\"",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tagilla's_welding_mask_%22UBEY%22",
+  "revisionId": 344281,
+  "lastEdited": "2026-05-24T21:30:18Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armored mask",
+    "slot": "Face cover",
+    "weight": "1.5 kg",
+    "grid": "2x2",
+    "material": "Armor steel",
+    "armor": "5",
+    "armor coverage": "Face, Head top, Ears, Eyes, Jaws",
+    "durability": "40",
+    "blindness protect": "50%",
+    "RicochetChance": "High",
+    "penalties": "-2% movement speed, -10% turn speed, -15% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "60a7ad2a2198820d95707a2e",
+    "id": "item_equipment_facecover_welding_kill"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Tagilla"
+    }
+  ]
+}

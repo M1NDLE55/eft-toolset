@@ -1,0 +1,53 @@
+{
+  "title": "Car battery",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Car_battery",
+  "revisionId": 364458,
+  "lastEdited": "2026-10-14T19:30:21Z",
+  "kind": "item",
+  "categories": [
+    "Energy elements"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Energy element",
+    "weight": "12 kg",
+    "grid": "3x2",
+    "effect": "Generic loot item",
+    "loot xp": "25",
+    "exam xp": "10",
+    "node": "5733279d245977289b77ec24",
+    "id": "car_battery"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In the Goshan store on the shelves in the back\n- In the OLI store on the shelves near the cash registers, also in the southwest racks between bath section and back warehouse"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In the shelves at the entrance of west resort with hole in wall next to fence\n- Inside the bus near the Gas station\n- Inside the \"Chairman's House\" in the swamp area\n- In the white shelf in the room next to the back entrance of west resort\n- On the ground east of the northern warehouse in the Smugglers Base"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On top of unsearchable crates in container near Gate 3 exit\n- Near the unsearchable crates in blue containers near Gate 0 exit\n- On the seat of the forklift behind the 3 silos\n- On the shelves in the hallway next to the office window extraction\n- In the locker on the second floor of the office"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- Ritual spot\n- On the shelves in the workshop at the lumber mill\n- In the front seat of the car at Checkpoint\n- In the trail of debris behind the crashed plane\n- On the bed in the Guardhouse at Sawmill"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the shelves in the Storage Building\n- On the shelves, or floor, in the Gas Station\n- Behind the desk in the Customs Office\n- On a bed in two-story Dormitory\n- On the table in the USEC Stash"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "title": "9x18mm PMM PstM gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PMM_PstM_gzh",
+  "revisionId": 356451,
+  "lastEdited": "2026-08-26T01:28:11Z",
+  "kind": "ammo",
+  "categories": [
+    "9x18mm Makarov ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.009 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "velocity": "420 m/s",
+    "damage": "58",
+    "recoil": "+5",
+    "penetration": "24",
+    "armor damage": "33",
+    "ricochet": "7.5%",
+    "fragmentation": "17%",
+    "durability burn": "+60",
+    "heat": "+8.3",
+    "feedfailure": "Medium",
+    "misfire": "Medium",
+    "node": "57371aab2459775a77142f22",
+    "id": "patron_9x18pm_PMM"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Because of its increased powder charge, this round can't be fired from the PP-91 Kedr and PP-91-01 Kedr-B submachine guns. The PP-9 Klin can fire it."
+    }
+  ]
+}

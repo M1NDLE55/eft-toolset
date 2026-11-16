@@ -1,0 +1,25 @@
+{
+  "title": "Slaughter videotape",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Slaughter_videotape",
+  "revisionId": 313981,
+  "lastEdited": "2025-05-30T18:42:34Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.15 kg",
+    "grid": "2x1",
+    "node": "679b998180a165f7a40b4c2c",
+    "id": "item_quest_event_labyrinth_videocassette"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest This Tape Sucks from Therapist"
+    }
+  ]
+}

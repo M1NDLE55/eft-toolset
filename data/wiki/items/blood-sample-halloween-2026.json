@@ -1,0 +1,26 @@
+{
+  "title": "Blood sample (Halloween 2026)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Blood_sample_(Halloween_2026)",
+  "revisionId": 367588,
+  "lastEdited": "2026-11-05T23:42:37Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "6acc4988059559342f0830d8",
+    "id": "item_hall_quest_blood"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be put inside secure containers"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "SOK-12 12ga MaxRounds Powermag 20-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_12ga_MaxRounds_Powermag_20-round_drum_magazine",
+  "revisionId": 346850,
+  "lastEdited": "2026-06-14T20:47:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.66 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4",
+    "ergonomics": "-15",
+    "checkaccuracy": "1",
+    "checkmodifier": "-30",
+    "loadmodifier": "+20",
+    "feedfailure": "Medium",
+    "capacity": "20",
+    "caliber": "12/70",
+    "loot xp": "10",
+    "node": "5cf8f3b0d7f00c00217872ef",
+    "ID": "mag_saiga12_maxrounds_powermag_20_12x76_20"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "AK-12 railed dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_railed_dust_cover",
+  "revisionId": 341722,
+  "lastEdited": "2026-04-26T21:22:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.215 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+2",
+    "recoil": "-0.3",
+    "Dura Burn": "-4",
+    "loot xp": "10",
+    "node": "649ec2f3961514b22506b111",
+    "ID": "reciever_ak12_izhmash_ak12_std"
+  },
+  "sections": []
+}

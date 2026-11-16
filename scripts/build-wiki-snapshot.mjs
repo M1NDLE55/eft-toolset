@@ -79,12 +79,13 @@ async function main() {
     const source = { url, file: basename(new URL(url).pathname), bytes: bytes.length, sha256, ...(lastModified ? { lastModified } : {}) };
     const { files, manifest: built } = buildSnapshot(await readFile(xmlPath, "utf8"), source);
     await rm(join(OUT, "pages"), { recursive: true, force: true });
+    await rm(join(OUT, "items"), { recursive: true, force: true });
     for (const [path, json] of files) {
       await mkdir(dirname(join(OUT, path)), { recursive: true });
       await writeFile(join(OUT, path), json);
     }
     console.log(
-      `Wrote ${built.pages} pages (${built.pageBytes.toLocaleString("en-US")} bytes), ${built.redirects} redirects, ${built.leftOut} left-out titles; snapshot of ${built.snapshotDate}.`
+      `Wrote ${built.pages} pages (${built.pageBytes.toLocaleString("en-US")} bytes), ${built.itemPages} item pages (${built.itemPageBytes.toLocaleString("en-US")} bytes), ${built.redirects} redirects, ${built.leftOut} left-out titles; snapshot of ${built.snapshotDate}.`
     );
   } finally {
     await rm(work, { recursive: true, force: true });

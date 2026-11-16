@@ -1,0 +1,23 @@
+{
+  "title": "P226 front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_front_sight",
+  "revisionId": 356362,
+  "lastEdited": "2026-08-26T00:27:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "56d5a661d2720bd8418b456b",
+    "ID": "sight_front_p226_sig_p226r_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Piece of plexiglass",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Piece_of_plexiglass",
+  "revisionId": 358112,
+  "lastEdited": "2026-09-08T20:40:09Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.7 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "59e366c186f7741778269d85",
+    "id": "item_barter_building_plexiglass"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

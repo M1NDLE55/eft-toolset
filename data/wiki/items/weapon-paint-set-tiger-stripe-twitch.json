@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Tiger Stripe Twitch)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Tiger_Stripe_Twitch)",
+  "revisionId": 319408,
+  "lastEdited": "2025-10-19T20:31:54Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67ea97273debf9f75f08d006",
+    "id": "item_camo_tigerstripe_twitch"
+  },
+  "sections": []
+}

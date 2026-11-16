@@ -1,0 +1,24 @@
+{
+  "title": "M14 TROY S.A.S.S. Chassis stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_TROY_S.A.S.S._Chassis_stock",
+  "revisionId": 340802,
+  "lastEdited": "2026-04-22T07:50:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chassis",
+    "weight": "2.1 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+30",
+    "recoil": "-13",
+    "Heat": "-11",
+    "Cooling": "+13",
+    "node": "5ab372a310e891001717f0d8",
+    "ID": "stock_m14_troy_sass_chassis"
+  },
+  "sections": []
+}

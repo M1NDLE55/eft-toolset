@@ -1,0 +1,34 @@
+{
+  "title": "4.6x30mm FMJ SX",
+  "url": "https://escapefromtarkov.fandom.com/wiki/4.6x30mm_FMJ_SX",
+  "revisionId": 349129,
+  "lastEdited": "2026-08-03T21:20:35Z",
+  "kind": "ammo",
+  "categories": [
+    "4.6x30mm HK ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4 after completing his task Psycho Sniper",
+    "velocity": "620 m/s",
+    "damage": "43",
+    "penetration": "40",
+    "armor damage": "41",
+    "ricochet": "40%",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "5ba2678ad4351e44f824b344",
+    "id": "patron_46x30_fmj_sx"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

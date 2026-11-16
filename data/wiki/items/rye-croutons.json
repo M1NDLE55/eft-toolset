@@ -1,0 +1,27 @@
+{
+  "title": "Rye croutons",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rye_croutons",
+  "revisionId": 360884,
+  "lastEdited": "2026-09-20T13:50:45Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "effect": "Energy: +20, Hydration: -10, , Debuffs:, 1s Delay; 60s Duration: - Decreases hydration recovery (-0.2/s)",
+    "use time": "4s",
+    "node": "57347d3d245977448f7b7f61",
+    "id": "borodinskiye"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Jackets\n- In Sport bags\n- In Ration supply crates\n- In Plastic suitcases"
+    }
+  ]
+}

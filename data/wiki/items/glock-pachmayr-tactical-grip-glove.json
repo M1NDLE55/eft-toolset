@@ -1,0 +1,22 @@
+{
+  "title": "Glock Pachmayr Tactical Grip Glove",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_Pachmayr_Tactical_Grip_Glove",
+  "revisionId": 351999,
+  "lastEdited": "2026-08-07T00:00:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽952",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+3",
+    "node": "5a7b4960e899ef197b331a2d",
+    "ID": "pistolgrip_glock_pachmayr_tactical_rubber_grip"
+  },
+  "sections": []
+}

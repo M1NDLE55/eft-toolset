@@ -1,0 +1,23 @@
+{
+  "title": "STM-9 9x19 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/STM-9_9x19_upper_receiver",
+  "revisionId": 343502,
+  "lastEdited": "2026-05-07T22:22:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.27 kg",
+    "ergonomics": "+4",
+    "Heat": "-4.6",
+    "Cooling": "+5.2",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "602e63fb6335467b0c5ac94d",
+    "ID": "reciever_stm9_stmarms_stm9_machined_std_9x19"
+  },
+  "sections": []
+}

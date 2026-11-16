@@ -1,0 +1,26 @@
+{
+  "title": "Icebreaker model kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Icebreaker_model_kit",
+  "revisionId": 367818,
+  "lastEdited": "2026-11-10T13:45:18Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.9 kg",
+    "grid": "3x2",
+    "effect": "Generic loot item",
+    "node": "6a3d38063357ef2b260d1891",
+    "id": "Item_barter_icebreaker_box"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This item is available as a permanent reward to players who have obtained the \"Part of the Ship, Part of the Crew\" achievement."
+    }
+  ]
+}

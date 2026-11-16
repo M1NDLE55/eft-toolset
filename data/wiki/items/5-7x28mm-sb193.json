@@ -1,0 +1,42 @@
+{
+  "title": "5.7x28mm SB193",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.7x28mm_SB193",
+  "revisionId": 356475,
+  "lastEdited": "2026-08-26T02:04:39Z",
+  "kind": "ammo",
+  "categories": [
+    "5.7x28mm FN Ammuntion",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "price": "₽143",
+    "trader": "Peacekeeper LL2",
+    "velocity": "299 m/s",
+    "damage": "59",
+    "accuracy": "+5",
+    "recoil": "-15",
+    "penetration": "27",
+    "armor damage": "37",
+    "ricochet": "30%",
+    "durability burn": "-25",
+    "heat": "-6.4",
+    "feedfailure": "Medium",
+    "misfire": "Very low",
+    "effects": "Subsonic",
+    "loot xp": "0",
+    "exam xp": "10",
+    "node": "5cc80f67e4a949035e43bbba",
+    "id": "patron_57x28_sb193"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

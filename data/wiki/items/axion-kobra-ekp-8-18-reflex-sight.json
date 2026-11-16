@@ -1,0 +1,24 @@
+{
+  "title": "Axion Kobra EKP-8-18 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Axion_Kobra_EKP-8-18_reflex_sight",
+  "revisionId": 230759,
+  "lastEdited": "2023-03-12T14:16:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.273 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1, Prapor LL2",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-2",
+    "modes": "4",
+    "node": "591c4efa86f7741030027726",
+    "ID": "scope_all_aksion_ekp_8_18"
+  },
+  "sections": []
+}

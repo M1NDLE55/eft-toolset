@@ -1,0 +1,28 @@
+{
+  "title": "AR-15 5.56x45 Ballistic Advantage Hanson Carbine Pro 13.7 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_Ballistic_Advantage_Hanson_Carbine_Pro_13.7_inch_barrel",
+  "revisionId": 343512,
+  "lastEdited": "2026-05-07T22:26:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.509 kg",
+    "grid": "3x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-8",
+    "velocity": "-2",
+    "accuracy": "+5",
+    "MOA": "1.55",
+    "recoil": "-7",
+    "Dura Burn": "-4",
+    "Heat": "+2",
+    "Cooling": "+3",
+    "node": "63d3ce0446bd475bcb50f55f",
+    "ID": "barrel_ar15_ba_hanson_carbine_pro_348mm"
+  },
+  "sections": []
+}

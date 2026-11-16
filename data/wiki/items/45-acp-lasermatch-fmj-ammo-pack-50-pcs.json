@@ -1,0 +1,18 @@
+{
+  "title": ".45 ACP Lasermatch FMJ ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.45_ACP_Lasermatch_FMJ_ammo_pack_(50_pcs)",
+  "revisionId": 367101,
+  "lastEdited": "2026-11-02T23:07:02Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570240a1419851aef03e6f7",
+    "ID": "item_ammo_box_1143x23_50_lasermatch_fmj"
+  },
+  "sections": []
+}

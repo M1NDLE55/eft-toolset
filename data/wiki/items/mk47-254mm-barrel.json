@@ -1,0 +1,27 @@
+{
+  "title": "Mk47 254mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mk47_254mm_barrel",
+  "revisionId": 342187,
+  "lastEdited": "2026-04-28T21:18:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.47 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-5",
+    "velocity": "-17",
+    "MOA": "2.61",
+    "recoil": "-4.6",
+    "Dura Burn": "-13",
+    "Heat": "+2",
+    "Cooling": "+9",
+    "node": "60658776f2cb2e02a42ace2b",
+    "ID": "barrel_mk47_cmmg_254mm_762x39"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "VPO-101 Rotor 43 7.62x51 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-101_Rotor_43_7.62x51_sound_suppressor",
+  "revisionId": 337738,
+  "lastEdited": "2026-03-06T01:51:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.90 kg",
+    "grid": "2x1",
+    "ergonomics": "-20",
+    "velocity": "+0.7",
+    "recoil": "-5",
+    "Dura Burn": "+68",
+    "Heat": "+14",
+    "Cooling": "+4",
+    "node": "5f63407e1b231926f2329f15",
+    "ID": "silencer_vepr_rotor43_762x51"
+  },
+  "sections": []
+}

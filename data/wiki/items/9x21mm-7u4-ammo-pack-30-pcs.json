@@ -1,0 +1,18 @@
+{
+  "title": "9x21mm 7U4 ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x21mm_7U4_ammo_pack_(30_pcs)",
+  "revisionId": 367287,
+  "lastEdited": "2026-11-02T23:16:52Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6579846c1ec1943afb14c15a",
+    "ID": "item_ammo_box_9x21_30_7u4"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Registered letter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Registered_letter",
+  "revisionId": 289561,
+  "lastEdited": "2024-09-01T12:18:14Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.2 kg",
+    "grid": "2x1",
+    "node": "638cbc68a63f1b49be6a3010",
+    "id": "item_quest_letter_c4_pos"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest You've Got Mail from Prapor"
+    }
+  ]
+}

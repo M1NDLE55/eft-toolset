@@ -1,0 +1,27 @@
+{
+  "title": "Fanny pack (Loui Peeton)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fanny_pack_(Loui_Peeton)",
+  "revisionId": 363463,
+  "lastEdited": "2026-10-06T22:20:52Z",
+  "kind": "item",
+  "categories": [
+    "Secure containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Secure container",
+    "slot": "Pouch",
+    "weight": "0.4 kg",
+    "grid": "2x2",
+    "slots": "3x2 grid (6 slots)",
+    "node": "68d55968ca9935b3f10607a9",
+    "id": "item_container_lp_beltbag"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only obtainable from paid Twitch Drops\n- Can only fit:\n  - Document case\n  - Dogtag case\n  - Gingy keychain\n  - Injector case\n  - Key tool\n  - Keycard holder case\n  - S I C C organizational pouch\n  - Simple wallet\n  - WZ Wallet\n  - Loot\n  - Provisions\n  - Meds\n  - Keys, Keycards & Maps\n  - Weapon mods (Besides magazines, special scopes and some mounts)\n  - Armor plates\n  - Currency\n  - Armbands\n  - Earpieces\n  - Vanity Face cover\n  - Vanity Headwear\n  - Vanity Eyewear\n  - Melee weapons\n  - Special equipment"
+    }
+  ]
+}

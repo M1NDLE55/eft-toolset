@@ -1,0 +1,24 @@
+{
+  "title": "MCX GEN1 KeyMod 8 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX_GEN1_KeyMod_8_inch_handguard",
+  "revisionId": 342116,
+  "lastEdited": "2026-04-28T03:57:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.39 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+14",
+    "recoil": "+0",
+    "Heat": "-2.7",
+    "Cooling": "+2.2",
+    "node": "5fbc226eca32ed67276c155d",
+    "ID": "handguard_mcx_sig_gen1_8_inch_keymod"
+  },
+  "sections": []
+}

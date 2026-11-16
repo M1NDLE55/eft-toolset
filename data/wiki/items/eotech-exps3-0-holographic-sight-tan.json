@@ -1,0 +1,24 @@
+{
+  "title": "EOTech EXPS3-0 holographic sight (Tan)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/EOTech_EXPS3-0_holographic_sight_(Tan)",
+  "revisionId": 352603,
+  "lastEdited": "2026-08-09T19:57:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.317 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3, Mechanic LL4",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-2",
+    "modes": "1",
+    "node": "558022b54bdc2dac148b458d",
+    "ID": "scope_all_eotech_exps3"
+  },
+  "sections": []
+}

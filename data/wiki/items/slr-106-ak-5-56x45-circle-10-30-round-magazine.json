@@ -1,0 +1,34 @@
+{
+  "title": "SLR-106/AK 5.56x45 Circle 10 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SLR-106/AK_5.56x45_Circle_10_30-round_magazine",
+  "revisionId": 352814,
+  "lastEdited": "2026-08-09T21:32:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.45 kg",
+    "grid": "1x2",
+    "price": "₽2,400",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "1",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.56x45mm NATO",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c0548ae0db834001966a3c2",
+    "ID": "mag_ak_arsenal_cwp_mag_556x45_30"
+  },
+  "sections": [
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from Protect the Sky"
+    }
+  ]
+}

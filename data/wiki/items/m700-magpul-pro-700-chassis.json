@@ -1,0 +1,25 @@
+{
+  "title": "M700 Magpul Pro 700 chassis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_Magpul_Pro_700_chassis",
+  "revisionId": 296248,
+  "lastEdited": "2024-11-09T22:24:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chassis",
+    "weight": "1.72 kg",
+    "grid": "3x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+22",
+    "recoil": "-5",
+    "Heat": "-4.3",
+    "Cooling": "+3.9",
+    "loot xp": "10",
+    "node": "5cdeac22d7f00c000f26168f",
+    "ID": "stock_m700_magpul_pro_700_chasiss"
+  },
+  "sections": []
+}

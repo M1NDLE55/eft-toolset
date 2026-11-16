@@ -1,0 +1,21 @@
+{
+  "title": "SilencerCo Omega 45k Direct Thread Mount adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SilencerCo_Omega_45k_Direct_Thread_Mount_adapter",
+  "revisionId": 255736,
+  "lastEdited": "2023-11-25T14:03:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.135 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+0",
+    "node": "5fc4b992187fea44d52edaa9",
+    "ID": "muzzle_all_silencerco_omega_45k_direct_thread_adapter_1143x23"
+  },
+  "sections": []
+}

@@ -1,0 +1,44 @@
+{
+  "title": ".50 AE Hawk JSP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_AE_Hawk_JSP",
+  "revisionId": 322731,
+  "lastEdited": "2025-11-18T21:12:44Z",
+  "kind": "ammo",
+  "categories": [
+    ".50 Action Express ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.038 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "velocity": "465 m/s",
+    "damage": "122",
+    "accuracy": "-5",
+    "recoil": "+2",
+    "penetration": "26",
+    "armor damage": "28",
+    "ricochet": "0.4%",
+    "l bleed chance": "+25",
+    "h bleed chance": "+30",
+    "heat": "+127",
+    "feedfailure": "Medium",
+    "misfire": "Very low",
+    "node": "66a0d1f88486c69fce00fdf6",
+    "id": "patron_127x33_jsp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 30 can be obtained as a quest reward from Forester's Duty"
+    }
+  ]
+}

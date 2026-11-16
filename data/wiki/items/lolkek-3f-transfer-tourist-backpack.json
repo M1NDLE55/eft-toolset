@@ -1,0 +1,24 @@
+{
+  "title": "LolKek 3F Transfer tourist backpack",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LolKek_3F_Transfer_tourist_backpack",
+  "revisionId": 324241,
+  "lastEdited": "2025-11-21T22:51:05Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "0.984 kg",
+    "grid": "3x4",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics",
+    "slots": "3x4 grid (12 slots)",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5f5e45cc5021ce62144be7aa",
+    "id": "item_equipment_backpack_redfox"
+  },
+  "sections": []
+}

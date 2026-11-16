@@ -1,0 +1,25 @@
+{
+  "title": "Sako TRG Coretac CoreBrake .338 LM muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_Coretac_CoreBrake_.338_LM_muzzle_brake",
+  "revisionId": 314161,
+  "lastEdited": "2025-06-05T17:55:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.295 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-1",
+    "accuracy": "+1",
+    "recoil": "-6",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "673f3f9840aeca974e0b5c68",
+    "ID": "muzzle_trg_coretac_corebrake_muzzle_brake_86x70"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Hunting matches",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hunting_matches",
+  "revisionId": 351908,
+  "lastEdited": "2026-08-06T23:20:37Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable material",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5e2af2bc86f7746d3f3c33fc",
+    "ID": "item_barter_flammable_huntermatches"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket\n- Drawer"
+    }
+  ]
+}

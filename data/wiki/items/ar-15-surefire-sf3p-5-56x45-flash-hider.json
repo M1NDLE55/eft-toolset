@@ -1,0 +1,28 @@
+{
+  "title": "AR-15 SureFire SF3P 5.56x45 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_SureFire_SF3P_5.56x45_flash_hider",
+  "revisionId": 344544,
+  "lastEdited": "2026-05-25T13:50:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "price": "₽6,420",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+0",
+    "accuracy": "+3",
+    "recoil": "-4",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5c7fb51d2e2216001219ce11",
+    "ID": "muzzle_ar15_surefire_sf3p_flash_hider_556x45"
+  },
+  "sections": []
+}

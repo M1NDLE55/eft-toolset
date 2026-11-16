@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Turquoise Fracture)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Turquoise_Fracture)",
+  "revisionId": 361046,
+  "lastEdited": "2026-09-21T21:09:45Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "6a8477f9d5f05c812e01ce4b",
+    "id": "item_camo_fracture_black_turqoise"
+  },
+  "sections": []
+}

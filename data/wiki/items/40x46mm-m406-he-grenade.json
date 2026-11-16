@@ -1,0 +1,43 @@
+{
+  "title": "40x46mm M406 (HE) grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/40x46mm_M406_(HE)_grenade",
+  "revisionId": 353114,
+  "lastEdited": "2026-08-10T17:06:29Z",
+  "kind": "ammo",
+  "categories": [
+    "40x46mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Grenade launcher cartridge",
+    "weight": "0.23 kg",
+    "grid": "1x1",
+    "price": "₽7700",
+    "velocity": "76 m/s",
+    "damage": "199",
+    "accuracy": "+15",
+    "recoil": "-10",
+    "penetration": "1",
+    "armor damage": "95",
+    "ricochet": "0",
+    "fragmentation": "0",
+    "misfire": "Low",
+    "fuze time": "0.26s",
+    "explosion radius": "1-7 m",
+    "explosion strength": "70",
+    "fragments count": "10x",
+    "effects": "Subsonic, Explosive",
+    "loot xp": "0",
+    "exam xp": "10",
+    "node": "5ede4739e0350d05467f73e8",
+    "id": "patron_40x46_m406"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Glock 18C pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_18C_pistol_slide",
+  "revisionId": 269138,
+  "lastEdited": "2024-02-05T23:07:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.32 kg",
+    "grid": "2x1",
+    "price": "₽6,200",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "+2.2",
+    "Cooling": "+2.4",
+    "node": "5b1faa0f5acfc40dc528aeb5",
+    "ID": "reciever_glock_glock_18c_std"
+  },
+  "sections": []
+}

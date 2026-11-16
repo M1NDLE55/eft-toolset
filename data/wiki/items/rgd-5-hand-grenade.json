@@ -1,0 +1,32 @@
+{
+  "title": "RGD-5 hand grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RGD-5_hand_grenade",
+  "revisionId": 358728,
+  "lastEdited": "2026-09-10T23:00:29Z",
+  "kind": "item",
+  "categories": [
+    "Fragmentation grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Fragmentation grenade",
+    "weight": "0.31 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "fragments count": "70x RGD-5 Shrapnel",
+    "explosion delay": "3.5s",
+    "explosion distance": "3-7 meters",
+    "concussion distance": "10 meters",
+    "node": "5448be9a4bdc2dfd2f8b456a",
+    "ID": "РГД-5"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Grenade box\n- Wooden crate\n- Weapon box (6x2)\n- Buried barrel cache\n- Ground cache\n- Common fund stash"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "BEAR Zaslon upper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_Zaslon_upper",
+  "revisionId": 364614,
+  "lastEdited": "2026-10-17T01:29:28Z",
+  "kind": "item",
+  "categories": [
+    "BEAR upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5df89f1f86f77412631087ea",
+    "ID": "bear_upper_zaslon"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The shirt is modeled on the SSO RAID summer suit, and gloves are modeled on the Blackhawk F.U.R.Y. Utilitarian gloves.\n\n\"Zaslon\" is a Spetsnaz unit of the Russian Foreign Intelligence Service (SVR) known for using solid green uniforms."
+    }
+  ]
+}

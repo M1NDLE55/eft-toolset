@@ -1,0 +1,33 @@
+{
+  "title": "5.11 Tactical Hexgrid plate carrier",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.11_Tactical_Hexgrid_plate_carrier",
+  "revisionId": 362338,
+  "lastEdited": "2026-09-27T15:05:47Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "1.02 kg",
+    "grid": "3x3",
+    "armor": "0 (No integrated inserts)",
+    "default plates": "2x",
+    "default plates armor class": "6",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "penalties": "-1% movement speed, -1% turn speed, -1% Ergonomics",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5fd4c474dd870108a754b241",
+    "ID": "item_equipment_armor_custom_hexgrid"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

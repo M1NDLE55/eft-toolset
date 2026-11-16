@@ -1,0 +1,21 @@
+{
+  "title": "AR-15 ProMag Delta Style scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_ProMag_Delta_Style_scope_mount",
+  "revisionId": 343371,
+  "lastEdited": "2026-05-05T20:46:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-0.2",
+    "node": "68a63d1522b1e0bd360afe67",
+    "ID": "mount_ar15_promag_delta_style"
+  },
+  "sections": []
+}

@@ -1,0 +1,37 @@
+{
+  "title": "MP-43-1C 12ga double-barrel shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-43-1C_12ga_double-barrel_shotgun",
+  "revisionId": 305704,
+  "lastEdited": "2025-02-15T03:35:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "3.6 kg",
+    "grid": "6x1",
+    "trader": "Jaeger LL1",
+    "fire modes": "Single, Double",
+    "sightrange": "100",
+    "ergonomics": "39",
+    "velocity": "478 m/s",
+    "range": "100 m",
+    "MOA": "13.06",
+    "Weaprecoil": "Vertical: 240, Horizontal: 355",
+    "rof": "900",
+    "caliber": "12/70",
+    "node": "5580223e4bdc2d1c128b457f",
+    "ID": "weapon_izhmeh_mr43e-1c_12g"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The sawed-off variant of this shotgun is directly related to the Chronicles of Ryzhy Chpt. 1 short film, in which Ryzhy states that he got a double barrel shotgun from his father, from which he has sawn off the stock and cut down the barrel to approximately 300 millimetres for compactness."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Dynaforce Triton M43-A chest harness (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dynaforce_Triton_M43-A_chest_harness_(Black)",
+  "revisionId": 362535,
+  "lastEdited": "2026-09-29T16:37:08Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.3 kg",
+    "grid": "4x3",
+    "trader": "Ragman LL2",
+    "BlocksArmor": "No",
+    "slots": "16 Slots",
+    "node": "5ca20abf86f77418567a43f2",
+    "ID": "item_equipment_rig_triton"
+  },
+  "sections": []
+}

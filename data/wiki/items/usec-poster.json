@@ -1,0 +1,30 @@
+{
+  "title": "USEC poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_poster",
+  "revisionId": 331626,
+  "lastEdited": "2026-01-07T19:31:22Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a213ff905bde03d0f8255",
+    "id": "item_barter_flyers_usec1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

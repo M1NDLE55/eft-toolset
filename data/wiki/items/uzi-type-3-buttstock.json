@@ -1,0 +1,22 @@
+{
+  "title": "UZI Type 3 buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_Type_3_buttstock",
+  "revisionId": 306741,
+  "lastEdited": "2025-03-17T04:43:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+1",
+    "recoil": "-23",
+    "node": "6698c9ed36ba38d291017713",
+    "ID": "stock_uzi_iwi_type_3"
+  },
+  "sections": []
+}

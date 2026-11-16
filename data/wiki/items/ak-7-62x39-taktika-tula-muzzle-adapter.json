@@ -1,0 +1,22 @@
+{
+  "title": "AK 7.62x39 Taktika Tula muzzle adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_7.62x39_Taktika_Tula_muzzle_adapter",
+  "revisionId": 255718,
+  "lastEdited": "2023-11-25T12:15:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽600",
+    "trader": "Skier LL1",
+    "ergonomics": "+0",
+    "node": "5a0abb6e1526d8000a025282",
+    "ID": "muzzle_ak_tactica_tula_ak_adapter_762x39"
+  },
+  "sections": []
+}

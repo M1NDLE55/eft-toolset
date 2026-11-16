@@ -1,0 +1,25 @@
+{
+  "title": "Ferfrans CRD 5.56x45 Concussion Reduction Device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ferfrans_CRD_5.56x45_Concussion_Reduction_Device",
+  "revisionId": 364909,
+  "lastEdited": "2026-10-25T14:02:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.14 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-8",
+    "accuracy": "+0",
+    "recoil": "-3.5",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "5f6339d53ada5942720e2dc3",
+    "ID": "muzzle_ferfrans_ferfrans_crd_556x45"
+  },
+  "sections": []
+}

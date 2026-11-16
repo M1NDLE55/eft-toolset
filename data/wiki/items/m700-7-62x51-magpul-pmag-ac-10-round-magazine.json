@@ -1,0 +1,29 @@
+{
+  "title": "M700 7.62x51 Magpul PMAG AC 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_7.62x51_Magpul_PMAG_AC_10-round_magazine",
+  "revisionId": 337689,
+  "lastEdited": "2026-03-06T01:22:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.6 kg",
+    "grid": "1x2",
+    "price": "₽5,600",
+    "trader": "Skier LL3",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "7.62x51mm NATO",
+    "loot xp": "30",
+    "node": "5d25a7b88abbc3054f3e60bc",
+    "ID": "mag_m700_magpul_pmag_762_ac_762x51_10"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "MCX GEN1 10.5 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX_GEN1_10.5_inch_handguard",
+  "revisionId": 342827,
+  "lastEdited": "2026-04-30T21:41:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.397 kg",
+    "grid": "3x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+16",
+    "recoil": "+0",
+    "Heat": "-3.3",
+    "Cooling": "+3.6",
+    "loot xp": "15",
+    "exam xp": "3",
+    "node": "6811f4854922782caa087440",
+    "ID": "handguard_mcx_sig_mcx_gen1_105_inch"
+  },
+  "sections": []
+}

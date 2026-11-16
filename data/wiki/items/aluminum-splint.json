@@ -1,0 +1,34 @@
+{
+  "title": "Aluminum splint",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aluminum_splint",
+  "revisionId": 358713,
+  "lastEdited": "2026-09-10T22:59:18Z",
+  "kind": "item",
+  "categories": [
+    "Injury treatment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injury treatment",
+    "weight": "0.22 kg",
+    "grid": "1x1",
+    "price": "₽5980",
+    "trader": "Therapist LL3, after completing her task Health Care Privacy - Part 4",
+    "effect": "Removes:",
+    "use time": "3s",
+    "node": "5af0454c86f7746bf20992e8",
+    "id": "item_meds_alusplint"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "When applying the splint to your leg you will be unable to move for the duration of the application. You are able to move while it is applied to an arm."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Ground cache\n- Medbag\n- Sport bag\n- Weapon box (6x2)"
+    }
+  ]
+}

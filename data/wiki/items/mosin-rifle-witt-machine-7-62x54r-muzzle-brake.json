@@ -1,0 +1,26 @@
+{
+  "title": "Mosin Rifle Witt Machine 7.62x54R muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_Witt_Machine_7.62x54R_muzzle_brake",
+  "revisionId": 362955,
+  "lastEdited": "2026-10-03T11:26:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.17 kg",
+    "grid": "1x1",
+    "price": "₽",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-5",
+    "accuracy": "-1",
+    "recoil": "-20",
+    "Dura Burn": "-3",
+    "Heat": "-1.3",
+    "node": "5bc5a35cd4351e450201232f",
+    "ID": "muzzle_mosin_witt_machine_custom_clamp_on_muzzle_brake_762x54r"
+  },
+  "sections": []
+}

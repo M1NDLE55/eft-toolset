@@ -1,0 +1,28 @@
+{
+  "title": "SOK-12 AK-style stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_AK-style_stock",
+  "revisionId": 302195,
+  "lastEdited": "2025-01-05T23:32:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.35 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+6",
+    "recoil": "-24",
+    "node": "57616ca52459773c69055192",
+    "ID": "stock_saiga12_izhmash_saiga12_fold_ak_type"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item and AK-74M polymer stock are in fact the same stock, using the same model but with different recoil and ergonomics values, slightly different texture and are they are **not** interchangeable between each other, which probably is a bug and was not intended, as both items were added at different patches."
+    }
+  ]
+}

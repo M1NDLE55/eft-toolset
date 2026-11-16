@@ -1,0 +1,25 @@
+{
+  "title": "AMG-10 hydraulic fluid (quest item)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AMG-10_hydraulic_fluid_(quest_item)",
+  "revisionId": 346741,
+  "lastEdited": "2026-06-12T22:38:38Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "1.8 kg",
+    "grid": "1x2",
+    "node": "699f09767852da66a7003061",
+    "id": "item_ice_amg10_quest"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Boreas"
+    }
+  ]
+}

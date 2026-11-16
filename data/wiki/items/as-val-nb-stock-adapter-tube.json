@@ -1,0 +1,23 @@
+{
+  "title": "AS VAL NB stock adapter tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_NB_stock_adapter_tube",
+  "revisionId": 343388,
+  "lastEdited": "2026-05-05T20:52:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.161 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-2",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "node": "6878ccf4181ac8a5b5077236",
+    "ID": "stock_val_nb_adapter_tube"
+  },
+  "sections": []
+}

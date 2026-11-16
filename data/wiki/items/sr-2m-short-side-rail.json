@@ -1,0 +1,21 @@
+{
+  "title": "SR-2M short side rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-2M_short_side_rail",
+  "revisionId": 274240,
+  "lastEdited": "2024-03-16T10:37:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+0",
+    "node": "62ed189fb3608410ef5a2bfc",
+    "ID": "mount_sr2m_tochmash_short_rail"
+  },
+  "sections": []
+}

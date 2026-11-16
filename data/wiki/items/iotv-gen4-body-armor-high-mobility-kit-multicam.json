@@ -1,0 +1,40 @@
+{
+  "title": "IOTV Gen4 body armor (High Mobility Kit, MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/IOTV_Gen4_body_armor_(High_Mobility_Kit%2C_MultiCam)",
+  "revisionId": 365038,
+  "lastEdited": "2026-10-26T00:06:18Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "7.88 kg",
+    "grid": "3x4",
+    "trader": "Ref LL4, after completing Ragman's task Drip-Out - Part 2 (USEC only)",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Groin, Buttocks",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "200",
+    "penalties": "-2% movement speed, -4% turn speed, -4% Ergonomics",
+    "node": "5b44d0de86f774503d30cba8",
+    "id": "item_equipment_armor_iotv_2"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Break the Deal"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

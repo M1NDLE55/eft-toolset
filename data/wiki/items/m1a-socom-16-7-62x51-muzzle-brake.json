@@ -1,0 +1,24 @@
+{
+  "title": "M1A SOCOM 16 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1A_SOCOM_16_7.62x51_muzzle_brake",
+  "revisionId": 337506,
+  "lastEdited": "2026-03-05T23:29:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.14 kg",
+    "grid": "1x1",
+    "price": "₽7,300",
+    "ergonomics": "-1",
+    "accuracy": "+0",
+    "recoil": "-7",
+    "Heat": "-1",
+    "node": "5aafa1c2e5b5b00015042a56",
+    "ID": "muzzle_m1a_springfield_armory_socom_16_762x51"
+  },
+  "sections": []
+}

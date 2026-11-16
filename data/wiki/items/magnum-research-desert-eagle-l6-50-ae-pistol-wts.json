@@ -1,0 +1,41 @@
+{
+  "title": "Magnum Research Desert Eagle L6 .50 AE pistol (WTS)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magnum_Research_Desert_Eagle_L6_.50_AE_pistol_(WTS)",
+  "revisionId": 340929,
+  "lastEdited": "2026-04-22T21:55:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "1.755 kg",
+    "grid": "2x1",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "69",
+    "velocity": "440 m/s",
+    "range": "50 m",
+    "MOA": "6.88",
+    "Weaprecoil": "Vertical: 449, Horizontal: 318",
+    "rof": "30",
+    "caliber": ".50 Action Express",
+    "node": "669fa3d876116c89840b1217",
+    "ID": "weapon_magnum_research_desert_eagle_l6_tiger_127x33"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Knight"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- With weapon mastery level 3, having a round in the chamber and exactly one round in the magazine triggers a special drawing animation from the game \"Counter-Strike: Source\"."
+    }
+  ]
+}

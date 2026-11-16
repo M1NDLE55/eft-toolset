@@ -1,0 +1,26 @@
+{
+  "title": "Mosin Rifle Bramit 7.62x54R sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_Bramit_7.62x54R_sound_suppressor",
+  "revisionId": 276464,
+  "lastEdited": "2024-04-24T23:14:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "1.1 kg",
+    "grid": "2x1",
+    "price": "₽29,000",
+    "ergonomics": "-20",
+    "velocity": "+0.3",
+    "accuracy": "-5",
+    "recoil": "-7",
+    "Dura Burn": "+50",
+    "Heat": "+14",
+    "node": "5b86a0e586f7745b600ccb23",
+    "ID": "silencer_mosin_bramit_std_762x54r"
+  },
+  "sections": []
+}

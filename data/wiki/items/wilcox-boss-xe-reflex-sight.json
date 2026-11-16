@@ -1,0 +1,30 @@
+{
+  "title": "Wilcox BOSS Xe reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wilcox_BOSS_Xe_reflex_sight",
+  "revisionId": 343248,
+  "lastEdited": "2026-05-03T22:44:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "500",
+    "ergonomics": "-2",
+    "modes": "5",
+    "node": "655f13e0a246670fb0373245",
+    "ID": "scope_all_wilcox_boss_xe_hp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The built-in green laser is tied to reticle no. 2\n  - Unlike tactical combo devices, the built-in green laser on this sight does not provide a point fire accuracy bonus."
+    }
+  ]
+}

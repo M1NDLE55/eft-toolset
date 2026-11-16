@@ -1,0 +1,26 @@
+{
+  "title": "Note with code word Onyx",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_with_code_word_Onyx",
+  "revisionId": 303456,
+  "lastEdited": "2025-01-15T19:56:12Z",
+  "kind": "item",
+  "categories": [
+    "Extraction intel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Extraction intel",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Activates the \"Smuggler's Basement\" extraction on Streets of Tarkov.",
+    "node": "675aaae1dcf102478202c537",
+    "id": "item_info_secret_extraction_codeword_onyx"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Activates the \"Smugglers' Basement\" extraction on Streets of Tarkov.\n- Cannot be taken out of a raid"
+    }
+  ]
+}

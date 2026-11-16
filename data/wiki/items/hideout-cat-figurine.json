@@ -1,0 +1,31 @@
+{
+  "title": "Hideout Cat figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hideout_Cat_figurine",
+  "revisionId": 344114,
+  "lastEdited": "2026-05-19T20:16:48Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "68f260d7b84c6e1f8a09cffd",
+    "id": "Item_barter_tarko_cat"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This figurine was first obtainable during Release Twitch Drops (October 2025).\n- This figurine was visible before its addition to the game. It was located in the Hideout, in the Gear Rack Level 3 module."
+    }
+  ]
+}

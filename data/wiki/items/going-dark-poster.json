@@ -1,0 +1,25 @@
+{
+  "title": "Going Dark poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Going_Dark_poster",
+  "revisionId": 360316,
+  "lastEdited": "2026-09-15T13:49:50Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6a42642fef6f4bbe8c0ccd4f",
+    "id": "item_barter_flyers_tbattlepass_s1_dark"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

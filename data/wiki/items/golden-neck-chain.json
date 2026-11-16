@@ -1,0 +1,31 @@
+{
+  "title": "Golden neck chain",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Golden_neck_chain",
+  "revisionId": 362386,
+  "lastEdited": "2026-09-29T13:18:46Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5734758f24597738025ee253",
+    "id": "chain_gold"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Pyramid Scheme\n- 2 can be obtained as a quest reward from Top Secret\n- 2 can be obtained as a quest reward from Stimulating Demand"
+    }
+  ]
+}

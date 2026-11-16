@@ -1,0 +1,26 @@
+{
+  "title": "Mosin Rifle carbine rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_carbine_rear_sight",
+  "revisionId": 211307,
+  "lastEdited": "2022-09-20T11:08:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "price": "₽800",
+    "trader": "Prapor LL1, Jaeger LL1",
+    "ergonomics": "+0",
+    "sightrange": "600",
+    "accuracy": "+0",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5bfd4c980db834001b73449d",
+    "ID": "sight_rear_mosin_izhmash_mosin_carabine"
+  },
+  "sections": []
+}

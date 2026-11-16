@@ -1,0 +1,29 @@
+{
+  "title": "Akula push dagger",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Akula_push_dagger",
+  "revisionId": 356065,
+  "lastEdited": "2026-08-25T15:37:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.155 kg",
+    "grid": "1x1",
+    "fire modes": "Chop 24 Damage, Stab 39 Damage",
+    "range": "Chop 0.4m, Stab 0.5m",
+    "node": "674d90b55704568fe60bc8f5",
+    "ID": "weapon_semin_push_dagger"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Akula is the Russian word for shark."
+    }
+  ]
+}

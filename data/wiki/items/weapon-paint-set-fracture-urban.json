@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Fracture Urban)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Fracture_Urban)",
+  "revisionId": 356804,
+  "lastEdited": "2026-08-29T20:33:13Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "69ce836ff66ad4b05b0bc781",
+    "id": "item_camo_fracture_urban"
+  },
+  "sections": []
+}

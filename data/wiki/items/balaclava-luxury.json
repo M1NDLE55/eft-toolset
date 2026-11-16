@@ -1,0 +1,27 @@
+{
+  "title": "Balaclava (Luxury)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balaclava_(Luxury)",
+  "revisionId": 348563,
+  "lastEdited": "2026-07-30T22:02:06Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a9cd6ecade15e0f00123b8",
+    "id": "item_equipment_facecover_balaclava_arena_bp_07"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

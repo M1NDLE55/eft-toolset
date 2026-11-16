@@ -1,0 +1,30 @@
+{
+  "title": "14-4 KORD SSD",
+  "url": "https://escapefromtarkov.fandom.com/wiki/14-4_KORD_SSD",
+  "revisionId": 360417,
+  "lastEdited": "2026-09-15T20:32:27Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "node": "6a5f9c49b8281c31a1062aea",
+    "id": "q_kord_ssd1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division in the Seasonal mode on Ground Zero (Level 21+), Shoreline, Streets of Tarkov, Woods and The Lab."
+    }
+  ]
+}

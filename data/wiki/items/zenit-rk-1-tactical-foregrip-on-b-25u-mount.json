@@ -1,0 +1,22 @@
+{
+  "title": "Zenit RK-1 tactical foregrip on B-25U mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zenit_RK-1_tactical_foregrip_on_B-25U_mount",
+  "revisionId": 354831,
+  "lastEdited": "2026-08-16T18:05:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4 after completing his task Indisputable Authority",
+    "ergonomics": "-2",
+    "recoil": "-2.5",
+    "node": "5c1cd46f2e22164bef5cfedb",
+    "ID": "foregrip_all_zenit_b25u_rk_1"
+  },
+  "sections": []
+}

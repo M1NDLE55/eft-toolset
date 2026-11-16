@@ -1,0 +1,24 @@
+{
+  "title": "DEON March-F 1-8x24 Shorty 30mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DEON_March-F_1-8x24_Shorty_30mm_riflescope",
+  "revisionId": 356603,
+  "lastEdited": "2026-08-26T19:20:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.46 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "zeroing": "50, 100, 150, 200, 250, 300, 350, 400, 450",
+    "sightrange": "1500",
+    "ergonomics": "-3",
+    "modes": "1",
+    "node": "6a3ceaff7047a606b90f5321",
+    "ID": "scope_30mm_march_f_shorty_1_8x24"
+  },
+  "sections": []
+}

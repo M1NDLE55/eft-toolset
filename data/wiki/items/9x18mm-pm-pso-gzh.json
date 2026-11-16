@@ -1,0 +1,38 @@
+{
+  "title": "9x18mm PM PSO gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_PSO_gzh",
+  "revisionId": 322773,
+  "lastEdited": "2025-11-18T21:16:15Z",
+  "kind": "ammo",
+  "categories": [
+    "9x18mm Makarov ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.008 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "velocity": "315 m/s",
+    "damage": "54",
+    "accuracy": "+10",
+    "penetration": "5",
+    "armor damage": "13",
+    "ricochet": "6.5%",
+    "l bleed chance": "+15",
+    "heat": "-9.4",
+    "feedfailure": "Low",
+    "misfire": "High",
+    "effects": "Subsonic",
+    "node": "57371f8d24597761006c6a81",
+    "id": "patron_9x18pm_PSO_gzh"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

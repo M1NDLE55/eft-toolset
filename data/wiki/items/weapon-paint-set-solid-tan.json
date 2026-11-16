@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Solid Tan)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Solid_Tan)",
+  "revisionId": 342287,
+  "lastEdited": "2026-04-28T22:25:45Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67e6a2febb1c56733b0511c8",
+    "id": "item_camo_solid_color_desert_tan"
+  },
+  "sections": []
+}

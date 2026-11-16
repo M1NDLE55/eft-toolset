@@ -1,0 +1,31 @@
+{
+  "title": "Moreman's audio tape 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Moreman's_audio_tape_1",
+  "revisionId": 348822,
+  "lastEdited": "2026-08-01T15:09:18Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "0:47",
+    "node": "688896b3ea36baf84d085544",
+    "ID": "item_info_recorder_tape_moreman_01"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Moreman: I hope this comes through. I don't know if we'll make it, so I'm leaving this recording.\n\nMoreman: When we were getting to the fallback point, Yastreb totally fucking snapped and started shooting at us! We put him down fast, but we walked into an ambush: shitheads came at us from every direction. Fuck. Guess the shooting… the shooting was… was a signal, damn it. Fuck. Motherfucking traitor…\n\nMoreman: We're still operational, but we got hit hard. Requesting help. Listen guys, I don't hold it against-"
+    }
+  ]
+}

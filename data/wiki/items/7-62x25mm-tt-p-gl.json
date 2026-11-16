@@ -1,0 +1,36 @@
+{
+  "title": "7.62x25mm TT P gl",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x25mm_TT_P_gl",
+  "revisionId": 322765,
+  "lastEdited": "2025-11-18T21:15:51Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x25mm Tokarev ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽52",
+    "trader": "Prapor LL2",
+    "velocity": "430 m/s",
+    "damage": "58",
+    "penetration": "14",
+    "armor damage": "32",
+    "ricochet": "6.5%",
+    "heat": "-4.4",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "5736026a245977644601dc61",
+    "id": "patron_762x25tt_P_Gl"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Sewing kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sewing_kit",
+  "revisionId": 367804,
+  "lastEdited": "2026-11-10T13:14:00Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "0.36 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "61bf83814088ec1a363d7097",
+    "id": "item_barter_tools_sewing"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

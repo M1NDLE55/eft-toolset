@@ -1,0 +1,24 @@
+{
+  "title": "HK 416 Strike Industries CRUX 15 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416_Strike_Industries_CRUX_15_inch_M-LOK_handguard",
+  "revisionId": 349206,
+  "lastEdited": "2026-08-03T22:09:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.44 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+19",
+    "recoil": "+0",
+    "Heat": "-4.2",
+    "Cooling": "+2.5",
+    "node": "5c6d11152e2216000f2003e7",
+    "ID": "handguard_416_strike_industries_crux_m_lok_15_inch"
+  },
+  "sections": []
+}

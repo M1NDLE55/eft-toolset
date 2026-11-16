@@ -1,0 +1,18 @@
+{
+  "title": ".357 Magnum HP ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.357_Magnum_HP_ammo_pack_(25_pcs)",
+  "revisionId": 367092,
+  "lastEdited": "2026-11-02T23:06:37Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657023e31419851aef03e6ee",
+    "ID": "item_ammo_box_357_25_hp"
+  },
+  "sections": []
+}

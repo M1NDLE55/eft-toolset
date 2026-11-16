@@ -1,0 +1,21 @@
+{
+  "title": "FN P90 upper receiver top rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_upper_receiver_top_rail",
+  "revisionId": 319077,
+  "lastEdited": "2025-10-07T18:29:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.27 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1",
+    "node": "5cc7015ae4a949001152b4c6",
+    "ID": "mount_p90_fn_receiver_top_rail_std"
+  },
+  "sections": []
+}

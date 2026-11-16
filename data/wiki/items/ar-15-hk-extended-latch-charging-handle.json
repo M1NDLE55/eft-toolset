@@ -1,0 +1,21 @@
+{
+  "title": "AR-15 HK Extended Latch charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_HK_Extended_Latch_charging_handle",
+  "revisionId": 357273,
+  "lastEdited": "2026-09-01T09:40:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2: Black, Peacekeeper LL3: Green brown",
+    "ergonomics": "+1",
+    "node": "5bb20dbcd4351e44f824c04e =6a1d4dae46b486ac34084778",
+    "ID": "charge_ar15_hk_extended_latch_charging_handle charge_ar15_hk_extended_latch_charging_handle_ral8k"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Precision Reflex handguard bottom rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Precision_Reflex_handguard_bottom_rail_mount",
+  "revisionId": 289893,
+  "lastEdited": "2024-09-02T04:25:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.075 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "+0",
+    "node": "6388c4ac8d895f557a0c6515",
+    "ID": "mount_pri_precision_reflex_bottom_rail_section_gen3"
+  },
+  "sections": []
+}

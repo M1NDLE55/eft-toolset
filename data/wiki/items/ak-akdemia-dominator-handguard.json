@@ -1,0 +1,24 @@
+{
+  "title": "AK AKdemia Dominator handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_AKdemia_Dominator_handguard",
+  "revisionId": 342375,
+  "lastEdited": "2026-04-29T00:53:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.315 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+16.5",
+    "recoil": "+0",
+    "Heat": "-2.9",
+    "Cooling": "+1",
+    "node": "647dba3142c479dde701b654",
+    "ID": "handguard_ak_akademia_dominator"
+  },
+  "sections": []
+}

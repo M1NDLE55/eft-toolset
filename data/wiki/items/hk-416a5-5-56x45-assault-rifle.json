@@ -1,0 +1,32 @@
+{
+  "title": "HK 416A5 5.56x45 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416A5_5.56x45_assault_rifle",
+  "revisionId": 357609,
+  "lastEdited": "2026-09-01T21:26:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.819 kg",
+    "grid": "5x2",
+    "trader": "Peacekeeper LL3: Black, after completing his task Weapons Circulation, Peacekeeper LL4: Green brown, Mechanic LL4: Stripped black variant",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "70.5",
+    "velocity": "874 m/s",
+    "range": "500 m",
+    "MOA": "1.93",
+    "Weaprecoil": "Vertical: 80, Horizontal: 228",
+    "rof": "850",
+    "caliber": "5.56x45mm NATO",
+    "def mag": "AR-15 5.56x45 HK Steel Maritime STANAG 30-round magazine",
+    "node": "5bb2475ed4351e00853264e3 6a15ae2ae5267ba21c07f98f",
+    "ID": "weapon_hk_416a5_556x45 weapon_hk_416a5_556x45_ral8k"
+  },
+  "sections": []
+}

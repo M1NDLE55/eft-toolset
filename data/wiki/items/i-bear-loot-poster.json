@@ -1,0 +1,25 @@
+{
+  "title": "I Bear Loot poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/I_Bear_Loot_poster",
+  "revisionId": 355955,
+  "lastEdited": "2026-08-25T12:27:14Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6759e07e4ff23436160d7fed",
+    "id": "item_barter_flyers_prestige_2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Note from the repair shop",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_from_the_repair_shop",
+  "revisionId": 353593,
+  "lastEdited": "2026-08-14T19:08:48Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "68d2f1318c12620073059930",
+    "id": "item_info_note_kozlov_rembox"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Accidental Witness"
+    }
+  ]
+}

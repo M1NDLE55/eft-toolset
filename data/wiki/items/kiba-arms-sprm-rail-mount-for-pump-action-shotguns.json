@@ -1,0 +1,22 @@
+{
+  "title": "Kiba Arms SPRM rail mount for pump-action shotguns",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kiba_Arms_SPRM_rail_mount_for_pump-action_shotguns",
+  "revisionId": 340604,
+  "lastEdited": "2026-04-21T08:53:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "price": "₽2,630",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-1",
+    "node": "55d48a634bdc2d8b2f8b456a",
+    "ID": "mount_all_custom_top_rail_13"
+  },
+  "sections": []
+}

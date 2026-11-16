@@ -1,0 +1,24 @@
+{
+  "title": "Sako TRG M10 chassis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_M10_chassis",
+  "revisionId": 314271,
+  "lastEdited": "2025-06-12T21:21:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chassis",
+    "weight": "1.267 kg",
+    "grid": "3x2",
+    "trader": "Skier LL4",
+    "ergonomics": "+10",
+    "recoil": "-4",
+    "Heat": "+5.2",
+    "Cooling": "-4.7",
+    "node": "673cb212e695740be0047a46",
+    "ID": "stock_trg_sako_trg_m10_chassis_std"
+  },
+  "sections": []
+}

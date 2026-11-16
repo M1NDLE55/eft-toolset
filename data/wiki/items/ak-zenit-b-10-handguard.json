@@ -1,0 +1,23 @@
+{
+  "title": "AK Zenit B-10 Handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Zenit_B-10_Handguard",
+  "revisionId": 340546,
+  "lastEdited": "2026-04-20T22:38:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+14",
+    "Heat": "+2.3",
+    "Cooling": "+0.6",
+    "node": "5c617a5f2e2216000f1e81b3",
+    "ID": "handguard_ak_zenit_b10"
+  },
+  "sections": []
+}

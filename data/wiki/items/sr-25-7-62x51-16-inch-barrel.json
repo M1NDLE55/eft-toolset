@@ -1,0 +1,26 @@
+{
+  "title": "SR-25 7.62x51 16 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-25_7.62x51_16_inch_barrel",
+  "revisionId": 342082,
+  "lastEdited": "2026-04-28T03:36:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.02 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-17",
+    "velocity": "-2",
+    "MOA": "1.55",
+    "recoil": "-10.2",
+    "Heat": "-7",
+    "Cooling": "-2",
+    "node": "5df917564a9f347bc92edca3",
+    "ID": "barrel_ar10_kac_406mm_762x51"
+  },
+  "sections": []
+}

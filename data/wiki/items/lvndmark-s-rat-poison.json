@@ -1,0 +1,31 @@
+{
+  "title": "LVNDMARK's rat poison",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LVNDMARK's_rat_poison",
+  "revisionId": 316824,
+  "lastEdited": "2025-08-11T09:49:27Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.4 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "60b0f561c4449e4cb624c1d7",
+    "id": "item_barter_ratkiller"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Drawer"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator Lvndmark.\n  - In the context of Escape From Tarkov, a “chad” is a high-level player, characterized by their equally high-level loadouts and preference for head-on fights. A “rat”, on the other hand, denotes a more timid and poorly-geared player that often avoids direct conflicts and resorts to scavenging and ambushes/“camping” for loot. “Factory rodents” refer to rats that primarily roam Factory, perhaps in hopes of coming across more dead players due to the confined spaces of said map."
+    }
+  ]
+}

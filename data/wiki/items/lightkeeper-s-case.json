@@ -1,0 +1,25 @@
+{
+  "title": "Lightkeeper's case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lightkeeper's_case",
+  "revisionId": 313516,
+  "lastEdited": "2025-05-18T22:06:16Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "1.2 kg",
+    "grid": "5x2",
+    "node": "67499b3eeca8acb2d2061636 67499d2c69a58fceba104a43",
+    "id": "item_quest_btr_rpg_ammo item_quest_btr_rpg_ammo_other"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Killer Argument from Skier\n- Used in the quest Simple Side Job from Lightkeeper"
+    }
+  ]
+}

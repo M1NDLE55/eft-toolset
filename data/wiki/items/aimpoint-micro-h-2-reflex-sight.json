@@ -1,0 +1,24 @@
+{
+  "title": "Aimpoint Micro H-2 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aimpoint_Micro_H-2_reflex_sight",
+  "revisionId": 273618,
+  "lastEdited": "2024-03-08T19:44:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Compact reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Compact reflex sight",
+    "weight": "0.094 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "zeroing": "25, 50, 100",
+    "sightrange": "150",
+    "ergonomics": "+0",
+    "modes": "1",
+    "node": "61657230d92c473c770213d7",
+    "ID": "scope_base_aimpoint_micro_h2"
+  },
+  "sections": []
+}

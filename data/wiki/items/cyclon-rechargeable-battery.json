@@ -1,0 +1,38 @@
+{
+  "title": "Cyclon rechargeable battery",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cyclon_rechargeable_battery",
+  "revisionId": 364412,
+  "lastEdited": "2026-10-13T19:28:05Z",
+  "kind": "item",
+  "categories": [
+    "Energy elements"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Energy element",
+    "weight": "1.7 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5e2aee0a86f774755a234b62",
+    "ID": "item_barter_energy_cyclon"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Eastereggs and References: Cyclon rechargeable battery is based off \"EnerSys Cyclon Series rechargeable batteries\"."
+    }
+  ]
+}

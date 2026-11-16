@@ -1,0 +1,21 @@
+{
+  "title": "VPO-215 scope rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-215_scope_rail_mount",
+  "revisionId": 297078,
+  "lastEdited": "2024-11-24T22:47:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.09 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-1",
+    "node": "5de6558e9f98ac2bc65950fc",
+    "ID": "mount_vpo215_molot_vpo_215_top_rail_std"
+  },
+  "sections": []
+}

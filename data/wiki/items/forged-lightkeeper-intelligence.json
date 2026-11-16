@@ -1,0 +1,25 @@
+{
+  "title": "Forged Lightkeeper intelligence",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Forged_Lightkeeper_intelligence",
+  "revisionId": 289558,
+  "lastEdited": "2024-09-01T12:18:03Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.23 kg",
+    "grid": "2x1",
+    "node": "6398a0861c712b1e1d4dadf1",
+    "id": "item_quest_keeper2_kompr_fake"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Snatch from Lightkeeper"
+    }
+  ]
+}

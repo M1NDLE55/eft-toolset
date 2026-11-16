@@ -1,0 +1,22 @@
+{
+  "title": "RD-704 dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RD-704_dust_cover",
+  "revisionId": 322436,
+  "lastEdited": "2025-11-18T16:44:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.088 kg",
+    "grid": "2x1",
+    "ergonomics": "+3",
+    "Dura Burn": "-3",
+    "Heat": "-0.2",
+    "node": "628a665a86cbd9750d2ff5e5",
+    "ID": "reciever_ak_rifle_dynamics_rd_704_std"
+  },
+  "sections": []
+}

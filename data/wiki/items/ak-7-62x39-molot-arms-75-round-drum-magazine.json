@@ -1,0 +1,27 @@
+{
+  "title": "AK 7.62x39 Molot Arms 75-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_7.62x39_Molot_Arms_75-round_drum_magazine",
+  "revisionId": 357645,
+  "lastEdited": "2026-09-04T22:19:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.9 kg",
+    "grid": "2x2",
+    "trader": "Prapor LL3 after completing his task Getting Some Air",
+    "ergonomics": "-10",
+    "checkaccuracy": "No",
+    "checkmodifier": "+20",
+    "loadmodifier": "+5",
+    "feedfailure": "High",
+    "capacity": "75",
+    "caliber": "7.62x39mm, .366 TKM",
+    "node": "5cbdc23eae9215001136a407",
+    "ID": "mag_ak_molot_rpk_drum_762x39_75"
+  },
+  "sections": []
+}

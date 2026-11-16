@@ -1,0 +1,53 @@
+{
+  "title": "Veritas guitar pick",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Veritas_guitar_pick",
+  "revisionId": 333258,
+  "lastEdited": "2026-01-30T02:35:40Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuables",
+    "weight": "0.001 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "100",
+    "exam xp": "10",
+    "node": "5f745ee30acaeb0d490d8c5b",
+    "id": "item_barter_valuable_mediator"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In East wing room 310\n- In West wing room 220"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In the manager office\n- In the arsenal storage room"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In Saferoom Extract"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On the shelf between office doors."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator Veritas."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Pyramex Proximity safety glasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pyramex_Proximity_safety_glasses",
+  "revisionId": 348880,
+  "lastEdited": "2026-08-02T12:53:36Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.026 kg",
+    "grid": "2x1",
+    "trader": "Ragman LL3",
+    "blindness protect": "15%",
+    "node": "5c0d32fcd174af02a1659c75",
+    "ID": "item_equipment_glasses_proximity"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen\n- Contrary to the description, this item doesn't provide any ballistic protection"
+    }
+  ]
+}

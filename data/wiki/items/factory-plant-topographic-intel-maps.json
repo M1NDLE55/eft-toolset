@@ -1,0 +1,25 @@
+{
+  "title": "Factory plant topographic intel maps",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Factory_plant_topographic_intel_maps",
+  "revisionId": 336966,
+  "lastEdited": "2026-03-03T02:45:06Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "node": "67c04b062669b12ac6034866",
+    "id": "q_data_map1"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player sided with Lightkeeper."
+    }
+  ]
+}

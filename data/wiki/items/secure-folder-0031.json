@@ -1,0 +1,30 @@
+{
+  "title": "Secure Folder 0031",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_Folder_0031",
+  "revisionId": 300276,
+  "lastEdited": "2024-12-30T14:30:10Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.8 kg",
+    "grid": "1x2",
+    "node": "5938188786f77474f723e87f",
+    "id": "case_0031"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Bad Rep Evidence from Prapor"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The logo on the folder is the one of \"Dharma Initiative\", a fictitious project in the TV series \"Lost\"."
+    }
+  ]
+}

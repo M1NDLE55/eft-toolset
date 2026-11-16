@@ -1,0 +1,26 @@
+{
+  "title": "AA-12 thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AA-12_thread_protector",
+  "revisionId": 337995,
+  "lastEdited": "2026-03-08T00:33:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-2",
+    "Heat": "+0",
+    "node": "670fd0eed8d4eae4790c818a",
+    "ID": "muzzle_12g_mps_thread_protector_12g"
+  },
+  "sections": []
+}

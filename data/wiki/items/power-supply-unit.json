@@ -1,0 +1,31 @@
+{
+  "title": "Power supply unit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Power_supply_unit",
+  "revisionId": 353179,
+  "lastEdited": "2026-08-11T16:56:26Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "1.5 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "node": "57347c2e24597744902c94a1",
+    "id": "power_supply_unit"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- PC block\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 4 can be obtained as a reward for completing Peacekeeper's quest Gifts from Tarkov"
+    }
+  ]
+}

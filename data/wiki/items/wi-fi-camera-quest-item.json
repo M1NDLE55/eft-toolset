@@ -1,0 +1,25 @@
+{
+  "title": "WI-FI Camera (quest item)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/WI-FI_Camera_(quest_item)",
+  "revisionId": 362379,
+  "lastEdited": "2026-09-29T12:55:16Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "node": "6a5f857dd29aef042a02380e 6a5f85ae7270df443807f9fb 6a5f85c12f90b1312600ada4 6a5f85d4add9519187071c13 6a5f86176f882e6f720651c9 6a5f862a7d87cb689d010883",
+    "id": "q_camera_a1 q_camera_b1 q_camera_a2 q_camera_b2 q_camera_a3 q_camera_b3"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Reverse Gear from Prapor"
+    }
+  ]
+}

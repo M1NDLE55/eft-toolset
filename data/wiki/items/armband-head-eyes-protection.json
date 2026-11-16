@@ -1,0 +1,26 @@
+{
+  "title": "Armband (HEAD, EYES Protection)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(HEAD%2C_EYES_Protection)",
+  "revisionId": 348867,
+  "lastEdited": "2026-08-02T01:59:20Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "68f8ccb11cc53ada67036e27",
+    "id": "item_equipment_armband_headeyes"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This armband is only available to players who preordered the game."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Atomic Defense CQCM ballistic mask (Loui Peeton White)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Atomic_Defense_CQCM_ballistic_mask_(Loui_Peeton_White)",
+  "revisionId": 339916,
+  "lastEdited": "2026-04-09T22:35:53Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light Armored mask",
+    "slot": "Face cover",
+    "weight": "2.1 kg",
+    "grid": "2x2",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "3",
+    "armor coverage": "Face, Jaws, Eyes, Head top",
+    "durability": "35",
+    "blindness protect": "0%",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, -3% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksHeadset": "No",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "68d54d0525ac8590a8075ac3",
+    "id": "item_equipment_facecover_ballistic_mask_white_lp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The mask was obtainable during Release Twitch Drops (October 2025)."
+    }
+  ]
+}

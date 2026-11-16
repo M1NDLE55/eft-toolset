@@ -1,0 +1,21 @@
+{
+  "title": "Lower half-mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lower_half-mask",
+  "revisionId": 355162,
+  "lastEdited": "2026-08-19T00:44:39Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽200",
+    "node": "572b7fa524597762b747ce82",
+    "id": "mask"
+  },
+  "sections": []
+}

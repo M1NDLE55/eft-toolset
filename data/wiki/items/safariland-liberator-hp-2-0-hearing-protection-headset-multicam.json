@@ -1,0 +1,30 @@
+{
+  "title": "Safariland Liberator HP 2.0 Hearing Protection Headset (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Safariland_Liberator_HP_2.0_Hearing_Protection_Headset_(MultiCam)",
+  "revisionId": 348458,
+  "lastEdited": "2026-07-30T20:25:09Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.34 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in the Factory Tactical Map",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "69c139c022093da1c50a8808",
+    "id": "item_equipment_headset_liberator_multicam_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Chef's diary",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chef's_diary",
+  "revisionId": 352336,
+  "lastEdited": "2026-08-07T21:52:23Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "node": "64f69b4267e11a7c6206e010",
+    "id": "item_quest_cook_diary"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Beyond the Red Meat from Skier"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Desert Tech MDR 5.56x45 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Tech_MDR_5.56x45_assault_rifle",
+  "revisionId": 357005,
+  "lastEdited": "2026-08-30T17:27:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.996 kg",
+    "grid": "4x2",
+    "trader": "Peacekeeper LL3",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "70.5",
+    "velocity": "919 m/s",
+    "range": "500 m",
+    "MOA": "1.43",
+    "Weaprecoil": "Vertical: 68, Horizontal: 223",
+    "rof": "650",
+    "caliber": "5.56x45mm NATO",
+    "def mag": "AR-15 5.56x45 Magpul PMAG 30 GEN M3 W STANAG 30-round magazine",
+    "node": "5c488a752e221602b412af63",
+    "ID": "weapon_dt_mdr_556x45"
+  },
+  "sections": [
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Route Deviation"
+    }
+  ]
+}

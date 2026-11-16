@@ -1,0 +1,36 @@
+{
+  "title": "AK-74 5.45x39 6L26 45-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_5.45x39_6L26_45-round_magazine",
+  "revisionId": 341653,
+  "lastEdited": "2026-04-26T20:53:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.3 kg",
+    "grid": "1x3",
+    "price": "₽3,700",
+    "trader": "Prapor LL3",
+    "ergonomics": "-4",
+    "checkaccuracy": "No",
+    "checkmodifier": "+10",
+    "loadmodifier": "+10",
+    "feedfailure": "Low",
+    "capacity": "45",
+    "caliber": "5.45x39mm",
+    "loot xp": "40",
+    "exam xp": "Examined by default",
+    "node": "55d481904bdc2d8c2f8b456a",
+    "ID": "mag_ak74_izhmash_6L26_545x39_45"
+  },
+  "sections": [
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from Forge a Friendship"
+    }
+  ]
+}

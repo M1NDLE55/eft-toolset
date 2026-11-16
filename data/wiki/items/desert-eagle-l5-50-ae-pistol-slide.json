@@ -1,0 +1,26 @@
+{
+  "title": "Desert Eagle L5 .50 AE pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Eagle_L5_.50_AE_pistol_slide",
+  "revisionId": 298317,
+  "lastEdited": "2024-12-18T07:36:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.31 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-4.8",
+    "Cooling": "+5.5",
+    "node": "669fa5019aa2a422600442f6",
+    "ID": "reciever_deagle_magnum_research_l5_std_127x33"
+  },
+  "sections": []
+}

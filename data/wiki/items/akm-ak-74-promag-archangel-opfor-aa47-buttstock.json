@@ -1,0 +1,23 @@
+{
+  "title": "AKM/AK-74 ProMag Archangel OPFOR AA47 buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM/AK-74_ProMag_Archangel_OPFOR_AA47_buttstock",
+  "revisionId": 337773,
+  "lastEdited": "2026-03-06T02:08:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.39 kg",
+    "grid": "2x1",
+    "price": "₽",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+13",
+    "recoil": "-22.5",
+    "node": "6087e2a5232e5a31c233d552",
+    "ID": "stock_ak_promag_archangel_opfor_aa47"
+  },
+  "sections": []
+}

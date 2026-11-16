@@ -1,0 +1,21 @@
+{
+  "title": "Daniel Defense 25mm accessory ring mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Daniel_Defense_25mm_accessory_ring_mount",
+  "revisionId": 253724,
+  "lastEdited": "2023-11-02T23:28:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-1",
+    "node": "6267c6396b642f77f56f5c1c",
+    "ID": "mount_all_dd_offset_flashlight_mount_25mm"
+  },
+  "sections": []
+}

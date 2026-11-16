@@ -1,0 +1,26 @@
+{
+  "title": "FN SCAR-L 5.56x45 18 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR-L_5.56x45_18_inch_barrel",
+  "revisionId": 342217,
+  "lastEdited": "2026-04-28T21:33:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.05 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-26",
+    "velocity": "+5",
+    "MOA": "1.55",
+    "recoil": "-9.1",
+    "Heat": "-4",
+    "Cooling": "+4",
+    "node": "6183fd9e8004cc50514c358f",
+    "ID": "barrel_mk16_fn_457mm_556x45"
+  },
+  "sections": []
+}

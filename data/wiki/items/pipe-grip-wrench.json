@@ -1,0 +1,51 @@
+{
+  "title": "Pipe grip wrench",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pipe_grip_wrench",
+  "revisionId": 362671,
+  "lastEdited": "2026-09-29T22:16:04Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "1.5 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "619cbfccbedcde2f5b3f7bdd",
+    "id": "item_barter_tools_advwrench"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the Shelves of the Warehouse"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the Shelves of the Goshan Stockroom"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On the bookshelves outside of the Office"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the Bunker under the mountain in the first room on the right on the floor"
+    }
+  ]
+}

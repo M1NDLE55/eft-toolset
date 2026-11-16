@@ -1,0 +1,28 @@
+{
+  "title": "IRBIS-GUN 45AL Foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/IRBIS-GUN_45AL_Foregrip",
+  "revisionId": 354935,
+  "lastEdited": "2026-08-17T20:14:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.158 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 2",
+    "ergonomics": "+6",
+    "recoil": "-2",
+    "node": "6984b74a5aab442620032fe6",
+    "ID": "foregrip_all_irbis_gun_45al"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

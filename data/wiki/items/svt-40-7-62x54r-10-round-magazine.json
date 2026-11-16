@@ -1,0 +1,25 @@
+{
+  "title": "SVT-40 7.62x54R 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVT-40_7.62x54R_10-round_magazine",
+  "revisionId": 338844,
+  "lastEdited": "2026-03-18T08:13:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.28 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "-2",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "7.62x54mmR",
+    "node": "6422e1ea3c0f06190302161a",
+    "ID": "mag_svt40_toz_svt40_std_762x54r_10"
+  },
+  "sections": []
+}

@@ -1,0 +1,18 @@
+{
+  "title": ".357 Magnum FMJ ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.357_Magnum_FMJ_ammo_pack_(25_pcs)",
+  "revisionId": 367091,
+  "lastEdited": "2026-11-02T23:06:35Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657023decfc010a0f50069ec",
+    "ID": "item_ammo_box_357_25_fmj"
+  },
+  "sections": []
+}

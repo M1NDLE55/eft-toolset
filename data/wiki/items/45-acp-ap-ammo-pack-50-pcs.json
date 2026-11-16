@@ -1,0 +1,19 @@
+{
+  "title": ".45 ACP AP ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.45_ACP_AP_ammo_pack_(50_pcs)",
+  "revisionId": 367099,
+  "lastEdited": "2026-11-02T23:06:55Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Ref LL4",
+    "node": "6489879db5a2df1c815a04ef",
+    "ID": "item_ammo_box_1143x23_50_ap"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Hussar mustache",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hussar_mustache",
+  "revisionId": 348620,
+  "lastEdited": "2026-07-30T22:16:59Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "slot": "Face cover",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 1",
+    "node": "68bedfdd233f2c935b0eda06",
+    "id": "item_equipment_mustache_curled_handlebar_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

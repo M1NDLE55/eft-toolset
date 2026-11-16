@@ -1,0 +1,32 @@
+{
+  "title": "MRE ration pack",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MRE_ration_pack",
+  "revisionId": 330035,
+  "lastEdited": "2025-12-27T23:54:29Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.74 kg",
+    "grid": "1x2",
+    "effect": "Energy: +70, , Buffs:, 1s Delay; 300s Duration: - Increases energy recovery (+0.1/s)",
+    "use time": "5s",
+    "node": "590c5f0d86f77413997acfab",
+    "id": "item_food_mre"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Sport bags\n- In Plastic suitcases"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The MRE ration pack is based on the US Army MRE menu #18 of 2008.\n  - The using animation shows the character pulling small crackers from the bag and eating them. However, the actual MRE does not contain crackers."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "9x18mm PM PSV ammo pack (16 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_PSV_ammo_pack_(16_pcs)",
+  "revisionId": 367264,
+  "lastEdited": "2026-11-02T23:15:42Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "node": "5737280e24597765cc785b5c",
+    "id": "item_ammo_box_9x18_16_psv"
+  },
+  "sections": []
+}

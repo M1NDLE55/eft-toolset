@@ -1,0 +1,25 @@
+{
+  "title": "AR-15 War Sport LVOA-S handguard (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_War_Sport_LVOA-S_handguard_(Black)",
+  "revisionId": 340727,
+  "lastEdited": "2026-04-22T07:00:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.5 kg",
+    "grid": "2x1",
+    "price": "₽12,600",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "-5",
+    "Cooling": "+2",
+    "node": "595cf16b86f77427440c32e2",
+    "ID": "handguard_ar15_war_sport_lvoa_s_blk"
+  },
+  "sections": []
+}

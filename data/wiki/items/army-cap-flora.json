@@ -1,0 +1,20 @@
+{
+  "title": "Army cap (Flora)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Army_cap_(Flora)",
+  "revisionId": 310230,
+  "lastEdited": "2025-04-13T13:55:04Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "60361a7497633951dc245eb4",
+    "id": "item_equipment_head_military2_flora"
+  },
+  "sections": []
+}

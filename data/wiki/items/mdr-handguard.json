@@ -1,0 +1,26 @@
+{
+  "title": "MDR handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MDR_handguard",
+  "revisionId": 356393,
+  "lastEdited": "2026-08-26T00:41:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.269 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3: FDE, Mechanic LL4: Black",
+    "ergonomics": "+14",
+    "recoil": "+0",
+    "Heat": "+3.8",
+    "Cooling": "-3.2",
+    "loot xp": "20",
+    "exam xp": "3",
+    "node": "5c48a14f2e2216152006edd7 (fde) 5dcbd6b46ec07c0c4347a564 (black)",
+    "ID": "handguard_mdr_dt_mdr_std handguard_mdr_dt_mdr_std_blk"
+  },
+  "sections": []
+}

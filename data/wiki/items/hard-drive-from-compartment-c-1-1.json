@@ -1,0 +1,25 @@
+{
+  "title": "Hard drive from compartment C-1 (1)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hard_drive_from_compartment_C-1_(1)",
+  "revisionId": 362451,
+  "lastEdited": "2026-09-29T15:02:54Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "node": "69bb3ffcc1379d828003271b",
+    "id": "item_ice_disk_quest_decripted1"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Boreas"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Boreas scientist audio tape",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Boreas_scientist_audio_tape",
+  "revisionId": 348814,
+  "lastEdited": "2026-08-01T14:35:11Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes",
+    "Minor TerraGroup evidence"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "node": "69bb4673d6c67f6265004aca",
+    "ID": "item_info_ice_recorder_tape_scientist1"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- This is one of the minor evidence used in The Ticket"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "On a desk in the laboratory on level 1 of Icebreaker. A Compartment C-3 keycard is required to access it."
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Survivor: So… if I can't control this, then I must at least continue observation.\n\nSurvivor: I am Grigory Altman, supervisor responsible for sample storage aboard the icebreaker \"Boreas\". The vessel was…\n\nGrigory Altman: …was attacked by mercenaries in Tarkov waters. During the assault, sample containers connected to projects TG-Ci and TG-y were damaged.\n\nGrigory Altman: In accordance with containment protocol, the laboratory was isolated from adjacent compartments.\n\nGrigory Altman: I remained inside and administered protective compounds as a precaution against possible contamination.\n\nGrigory Altman: On the fourth day I recorded elevated cortisol levels, coughing, and mild itching. Increased dosage of the injected medication, observing improvement.\n\nGrigory Altman: It is impossible to fully stop the leak or replace the damaged sample containers. I continue daily measurements and it seems…\n\nGrigory Altman: …It seems I managed to arrange evacuation to a secure location where I can isolate the samples and continue observation.\n\nGrigory Altman: It's critical to complete this before I enter the paranoia stage…"
+    }
+  ]
+}

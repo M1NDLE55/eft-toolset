@@ -1,0 +1,30 @@
+{
+  "title": "Sharpshooter poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sharpshooter_poster",
+  "revisionId": 331630,
+  "lastEdited": "2026-01-07T19:33:10Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a1f5c1474133a0d0bb218",
+    "id": "item_barter_flyers_sharpshooter"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

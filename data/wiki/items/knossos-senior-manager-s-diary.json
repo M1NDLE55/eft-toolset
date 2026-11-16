@@ -1,0 +1,25 @@
+{
+  "title": "Knossos senior manager's diary",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Knossos_senior_manager's_diary",
+  "revisionId": 313987,
+  "lastEdited": "2025-05-30T18:50:32Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "node": "679b9a1a4e4ed4b3b40ae5c2",
+    "id": "item_quest_event_labyrinth_diary"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Shady Contractor from Mechanic"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Glock 9x19 Strike Industries G4 SlideComp compensator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_Strike_Industries_G4_SlideComp_compensator",
+  "revisionId": 337492,
+  "lastEdited": "2026-03-05T23:24:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.105 kg",
+    "grid": "1x1",
+    "price": "₽8,480",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "accuracy": "+3",
+    "recoil": "-10",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "5a7b32a2e899ef00135e345a",
+    "ID": "muzzle_glock_strike_industries_g4_slide_compensator_9x19"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "AI AXMC AX KeySlot 16 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_AX_KeySlot_16_inch_handguard",
+  "revisionId": 342242,
+  "lastEdited": "2026-04-28T21:46:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.43 kg",
+    "grid": "3x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "+19",
+    "recoil": "+0",
+    "Heat": "-8",
+    "Cooling": "+7.7",
+    "node": "6281209662cba23f6c4d7a19",
+    "ID": "handguard_ax_accuracy_international_axmc_handguard_16_inch_keyslot_pb"
+  },
+  "sections": []
+}

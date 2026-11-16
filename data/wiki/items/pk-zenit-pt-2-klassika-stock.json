@@ -1,0 +1,22 @@
+{
+  "title": "PK Zenit PT-2 \"Klassika\" stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PK_Zenit_PT-2_%22Klassika%22_stock",
+  "revisionId": 352281,
+  "lastEdited": "2026-08-07T21:21:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.643 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-3",
+    "recoil": "-21",
+    "node": "6492d7847363b8a52206bc52",
+    "ID": "stock_pk_zenit_pt2_classic"
+  },
+  "sections": []
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Can of condensed milk",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_condensed_milk",
+  "revisionId": 363930,
+  "lastEdited": "2026-10-11T18:05:35Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.44 kg",
+    "grid": "1x1",
+    "effect": "Energy: +75, Hydration: -65, , Buffs:, 1s Delay; 300s Duration: - Increases Intellect (+3) - Increases Attention (+3) - Increases Stress Resistance (+3)",
+    "use time": "4s",
+    "node": "5734773724597737fd047c14",
+    "id": "condensed_milk"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Ration supply crates\n- In Sport bags\n- In Plastic suitcases"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The brand displayed on this item is \"Rēzeknes Piena Konservu Kombināts\" (Rēzekne Dairy Canning Combine), the now liquidated Latvian dairy company that originally produced this high-quality sweetened condensed milk."
+    }
+  ]
+}

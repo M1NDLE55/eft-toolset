@@ -1,0 +1,26 @@
+{
+  "title": "Mk47 409mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mk47_409mm_barrel",
+  "revisionId": 362952,
+  "lastEdited": "2026-10-03T11:25:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.13 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-13",
+    "velocity": "+0",
+    "MOA": "1.72",
+    "recoil": "-7.4",
+    "Heat": "-6",
+    "Cooling": "-1",
+    "node": "6065878ac9cf8012264142fd",
+    "ID": "barrel_mk47_cmmg_409mm_762x39"
+  },
+  "sections": []
+}

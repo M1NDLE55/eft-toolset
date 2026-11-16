@@ -1,0 +1,33 @@
+{
+  "title": "Old hand scythe",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Old_hand_scythe",
+  "revisionId": 308761,
+  "lastEdited": "2025-03-30T01:59:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "1.4 kg",
+    "fire modes": "Chop 293 Damage, Stab 415 Damage",
+    "range": "Chop 1.2m, Stab 1.2m",
+    "node": "63495c500c297e20065a08b1",
+    "ID": "weapon_scythe"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- When getting struck, is added for 20 seconds, causing tinnitus and muffled audio\n- When getting struck, is added for 20 seconds\n- When getting struck, is added"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Used by Tagilla as part of Escape from Tarkov's Halloween Celebration\n  - Not lootable"
+    }
+  ]
+}

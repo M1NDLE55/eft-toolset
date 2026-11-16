@@ -1,0 +1,26 @@
+{
+  "title": "SIG Sauer 7.62x51 3-prong flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_7.62x51_3-prong_flash_hider",
+  "revisionId": 337748,
+  "lastEdited": "2026-03-06T01:56:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.07 kg",
+    "price": "₽1,840",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "recoil": "-4",
+    "Heat": "-1",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5fbcbcf593164a5b6278efb2",
+    "ID": "muzzle_base_sig_flash_hider_762x51"
+  },
+  "sections": []
+}

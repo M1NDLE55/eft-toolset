@@ -1,0 +1,40 @@
+{
+  "title": ".338 Lapua Magnum TAC-X",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.338_Lapua_Magnum_TAC-X",
+  "revisionId": 322851,
+  "lastEdited": "2025-11-18T21:29:13Z",
+  "kind": "ammo",
+  "categories": [
+    ".338 Lapua Magnum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.044 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "velocity": "880 m/s",
+    "damage": "196",
+    "accuracy": "+10",
+    "recoil": "-5",
+    "penetration": "18",
+    "armor damage": "55",
+    "ricochet": "40%",
+    "l bleed chance": "+80",
+    "h bleed chance": "+50",
+    "durability burn": "+40",
+    "heat": "+193.4",
+    "feedfailure": "Medium",
+    "misfire": "Medium",
+    "node": "5fc382b6d6fa9c00c571bbc3",
+    "id": "patron_86x70_lapua_tac_x"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

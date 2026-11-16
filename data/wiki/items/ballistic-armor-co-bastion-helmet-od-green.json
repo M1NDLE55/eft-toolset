@@ -1,0 +1,28 @@
+{
+  "title": "Ballistic Armor Co. Bastion helmet (OD Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ballistic_Armor_Co._Bastion_helmet_(OD_Green)",
+  "revisionId": 344374,
+  "lastEdited": "2026-05-24T22:12:28Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.44 kg",
+    "grid": "2x2",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "50",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "66b5f661af44ca0014063c05",
+    "id": "item_equipment_helmet_ballisticarmorco_bastion_olive"
+  },
+  "sections": []
+}

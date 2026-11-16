@@ -1,0 +1,39 @@
+{
+  "title": "Maska-1SCh bulletproof helmet (Vida Edition)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Maska-1SCh_bulletproof_helmet_(Vida_Edition)",
+  "revisionId": 344378,
+  "lastEdited": "2026-05-24T22:12:39Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "2.7 kg",
+    "grid": "2x2",
+    "material": "Armor steel",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "108",
+    "RicochetChance": "Medium",
+    "penalties": "-0% movement speed, -1% turn speed, -4% Ergonomics, High sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "697c79b1daf4828686033fcb",
+    "id": "item_equipment_helmet_maska_1sh_vida"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Killa"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item first appeared during Escape from Tarkov's 2026 Escape from Duckov Collaboration and is a direct reference to the boss Vida."
+    }
+  ]
+}

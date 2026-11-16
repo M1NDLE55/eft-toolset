@@ -1,0 +1,35 @@
+{
+  "title": "Team Wendy EXFIL Ballistic Helmet (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Team_Wendy_EXFIL_Ballistic_Helmet_(Black)",
+  "revisionId": 361423,
+  "lastEdited": "2026-09-23T16:06:44Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.18 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL4 after completing his task Worst Job in the World",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "54",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5e00c1ad86f774747333222c",
+    "ID": "item_equipment_helmet_team_wendy_exfil"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

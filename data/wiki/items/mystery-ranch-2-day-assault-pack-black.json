@@ -1,0 +1,38 @@
+{
+  "title": "Mystery Ranch 2 Day Assault Pack (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mystery_Ranch_2_Day_Assault_Pack_(Black)",
+  "revisionId": 357245,
+  "lastEdited": "2026-08-31T18:53:01Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.485 kg",
+    "grid": "5x6",
+    "penalties": "-4% movement speed, -2% turn speed, -6% Ergonomics",
+    "slots": "5x6 grid (30 slots)",
+    "node": "68947ab5a733b1602007e2fe",
+    "ID": "item_equipment_backpack_bd_mystery_ranch_2day"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division (Not on Icebreaker)"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Multiple accessories from various manufacturers are attached to the bag, including:\n- Two Thyrm CellVault CR123 & AAA in the \"Rescue\" color variant\n- A HydroFlask Wide Mouth 32oz Bottle in Tonal Black\n- A Caranthia Expedition Cover Gore in Olive\n- An Imminent Threat Solutions (ITS) Tallboy Trauma Pouch in Black\n- Trauma Shears.\n\nA patch at the top says \"Mystery Brunch\" rather than the Mystery Ranch brand\n\nThe Hydro Flask 32-ounce water bottle to the side of the backpack has a \"Spiritus\" sticker"
+    }
+  ]
+}

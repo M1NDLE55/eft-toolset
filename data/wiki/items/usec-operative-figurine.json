@@ -1,0 +1,26 @@
+{
+  "title": "USEC operative figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_operative_figurine",
+  "revisionId": 343704,
+  "lastEdited": "2026-05-10T10:53:59Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "655c663a6689c676ce57af85",
+    "id": "Item_barter_tarko_usec"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "7.62x25mm TT FMJ43",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x25mm_TT_FMJ43",
+  "revisionId": 322761,
+  "lastEdited": "2025-11-18T21:15:42Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x25mm Tokarev ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽50",
+    "trader": "Prapor LL1",
+    "velocity": "427 m/s",
+    "damage": "60",
+    "penetration": "11",
+    "armor damage": "29",
+    "ricochet": "6.5%",
+    "heat": "-2.6",
+    "feedfailure": "Very high",
+    "misfire": "Low",
+    "node": "5735ff5c245977640e39ba7e",
+    "id": "patron_762x25tt_FMJ43"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

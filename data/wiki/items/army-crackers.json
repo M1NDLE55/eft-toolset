@@ -1,0 +1,28 @@
+{
+  "title": "Army crackers",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Army_crackers",
+  "revisionId": 339746,
+  "lastEdited": "2026-04-06T12:08:53Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL1",
+    "effect": "Energy: +10, Hydration: -5",
+    "use time": "4s",
+    "node": "5448ff904bdc2d6f028b456e",
+    "id": "хлебцы армейские"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Ration supply crates\n- In Sport bags\n- In Wooden crates"
+    }
+  ]
+}

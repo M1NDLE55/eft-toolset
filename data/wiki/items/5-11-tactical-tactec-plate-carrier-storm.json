@@ -1,0 +1,42 @@
+{
+  "title": "5.11 Tactical TacTec plate carrier (Storm)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.11_Tactical_TacTec_plate_carrier_(Storm)",
+  "revisionId": 348522,
+  "lastEdited": "2026-07-30T21:52:10Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.35 kg",
+    "grid": "4x4",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 0",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Thorax, Back",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "80",
+    "penalties": "-1% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "18 Slots",
+    "node": "67ab4b2d6f7ae4aa550bbcf6",
+    "id": "item_equipment_rig_carrierTactec_arena_bp_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

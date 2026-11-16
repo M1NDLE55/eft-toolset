@@ -1,0 +1,23 @@
+{
+  "title": "APB rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/APB_rear_sight",
+  "revisionId": 210546,
+  "lastEdited": "2022-09-20T10:34:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.008 kg",
+    "grid": "1x1",
+    "price": "₽600",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5aba639ed8ce8700182ece67",
+    "ID": "sight_rear_aps_molot_apb_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Team Wendy EXFIL Ballistic Helmet (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Team_Wendy_EXFIL_Ballistic_Helmet_(MultiCam)",
+  "revisionId": 361425,
+  "lastEdited": "2026-09-23T16:07:22Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.18 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in the Factory Tactical Map",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "54",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69c26722bf4ff19f50057643",
+    "ID": "item_equipment_helmet_team_wendy_exfil_multicam_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

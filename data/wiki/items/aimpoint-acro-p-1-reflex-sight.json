@@ -1,0 +1,24 @@
+{
+  "title": "Aimpoint ACRO P-1 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aimpoint_ACRO_P-1_reflex_sight",
+  "revisionId": 318874,
+  "lastEdited": "2025-10-02T21:00:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Compact reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Compact reflex sight",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "zeroing": "25, 50, 100",
+    "sightrange": "150",
+    "ergonomics": "+0",
+    "modes": "1",
+    "node": "616442e4faa1272e43152193",
+    "ID": "scope_base_aimpoint_acro_p1"
+  },
+  "sections": []
+}

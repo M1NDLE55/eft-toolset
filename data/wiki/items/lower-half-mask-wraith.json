@@ -1,0 +1,27 @@
+{
+  "title": "Lower half-mask (Wraith)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lower_half-mask_(Wraith)",
+  "revisionId": 348545,
+  "lastEdited": "2026-07-30T21:59:18Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a5f9a193f7b62b6b0f6576",
+    "id": "item_equipment_facecover_skull_half_mask_arena_bp_05"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

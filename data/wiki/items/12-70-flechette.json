@@ -1,0 +1,44 @@
+{
+  "title": "12/70 flechette",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_flechette",
+  "revisionId": 367794,
+  "lastEdited": "2026-11-10T13:12:03Z",
+  "kind": "ammo",
+  "categories": [
+    "12/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Buckshot",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "price": "₽75",
+    "trader": "Jaeger LL3",
+    "velocity": "320 m/s",
+    "damage": "25",
+    "accuracy": "-10",
+    "projectiles": "8",
+    "penetration": "31",
+    "armor damage": "26",
+    "ricochet": "0%",
+    "l bleed chance": "+25",
+    "h bleed chance": "+25",
+    "durability burn": "+60",
+    "heat": "+115.9",
+    "feedfailure": "Very low",
+    "misfire": "Medium",
+    "effects": "Subsonic",
+    "loot xp": "0",
+    "exam xp": "10",
+    "node": "5d6e6911a4b9361bd5780d52",
+    "id": "patron_12x70_flechette"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

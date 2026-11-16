@@ -1,0 +1,28 @@
+{
+  "title": "Glock 9x19 Double Diamond 114mm threaded barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_Double_Diamond_114mm_threaded_barrel",
+  "revisionId": 352001,
+  "lastEdited": "2026-08-07T00:00:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "price": "₽5,960",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1",
+    "velocity": "-2",
+    "MOA": "11.34",
+    "recoil": "-2.9",
+    "Dura Burn": "-14",
+    "Heat": "+14",
+    "Cooling": "+21",
+    "node": "5a6b5e468dc32e001207faf5",
+    "ID": "barrel_glock_double_diamond_114mm_threaded_9x19"
+  },
+  "sections": []
+}

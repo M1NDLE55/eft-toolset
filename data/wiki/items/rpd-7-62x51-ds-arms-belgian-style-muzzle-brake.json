@@ -1,0 +1,25 @@
+{
+  "title": "RPD 7.62x51 DS Arms Belgian Style Muzzle Brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_7.62x51_DS_Arms_Belgian_Style_Muzzle_Brake",
+  "revisionId": 343305,
+  "lastEdited": "2026-05-05T19:00:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2.5",
+    "accuracy": "+3",
+    "recoil": "-12",
+    "Heat": "-1",
+    "Cooling": "+1.5",
+    "node": "6830606e84a12bb973021fd0",
+    "ID": "muzzle_rpd_ds_arms_belgian_style_muzzle_brake_762x51"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "BEAR Black Lynx",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_Black_Lynx",
+  "revisionId": 248084,
+  "lastEdited": "2023-09-22T17:56:19Z",
+  "kind": "item",
+  "categories": [
+    "BEAR upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f566d86f7744bcd13459a",
+    "ID": "bear_upper_blacklynx"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The jacket is modeled on the SSO Lynx fleece jacket, and gloves are modeled on the Oakley Factory Lite Tactical gloves."
+    }
+  ]
+}

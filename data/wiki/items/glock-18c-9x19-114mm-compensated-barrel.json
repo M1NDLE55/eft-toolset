@@ -1,0 +1,26 @@
+{
+  "title": "Glock 18C 9x19 114mm compensated barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_18C_9x19_114mm_compensated_barrel",
+  "revisionId": 340833,
+  "lastEdited": "2026-04-22T08:21:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "ergonomics": "-2",
+    "velocity": "-4",
+    "MOA": "12.03",
+    "recoil": "-2.9",
+    "Dura Burn": "-6",
+    "Heat": "+14",
+    "Cooling": "+21",
+    "node": "5b1fa9ea5acfc40018633c0a",
+    "ID": "barrel_glock_glock_18c_114mm_9x19_std"
+  },
+  "sections": []
+}

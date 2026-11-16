@@ -1,0 +1,41 @@
+{
+  "title": "7.62x51mm Ultra Nosler",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_Ultra_Nosler",
+  "revisionId": 326424,
+  "lastEdited": "2025-12-01T23:08:50Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x51mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.021 kg",
+    "grid": "1x1",
+    "price": "₽327",
+    "trader": "Jaeger LL1",
+    "velocity": "800 m/s",
+    "damage": "105",
+    "accuracy": "+35",
+    "recoil": "-5",
+    "penetration": "15",
+    "armor damage": "40",
+    "ricochet": "20%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+20",
+    "durability burn": "-5",
+    "heat": "-10",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "node": "5e023e88277cce2b522ff2b1",
+    "id": "patron_762x51_Ultra_Nosler"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

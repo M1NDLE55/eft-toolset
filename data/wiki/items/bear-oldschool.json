@@ -1,0 +1,22 @@
+{
+  "title": "BEAR Oldschool",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_Oldschool",
+  "revisionId": 276065,
+  "lastEdited": "2024-04-15T21:41:13Z",
+  "kind": "item",
+  "categories": [
+    "BEAR lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5df89f8f86f77412672a1e38",
+    "ID": "bear_lower_oldschool"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The pants are modeled on the Spetsnaz Mabuta cut trousers that were first used in Afghanistan with the Russian VSR-93 pattern seeing usage during the Second Chechen War. The specific version which the pants were modeled after is a 100% cotton canvas version in VSR-98 camouflage pattern (more commonly referred to as the flora pattern.) The in-game pants have minor differences to its real life counterparts but in-general are a very accurate representation of the Mabuta pants. The belt used on the pants is also Russian military surplus, it is the standard army belt first introduced during the war in Afghanistan. The shoes appear to be modeled on VKBO army sneakers. During the Soviet-Afghan war, it was common practice among VDV and Spetsnaz forces to wear civilian sneakers in place of their military issued boots to better traverse the mountains of Afghanistan."
+    }
+  ]
+}

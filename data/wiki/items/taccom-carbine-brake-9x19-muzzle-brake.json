@@ -1,0 +1,27 @@
+{
+  "title": "TACCOM Carbine Brake 9x19 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TACCOM_Carbine_Brake_9x19_muzzle_brake",
+  "revisionId": 291071,
+  "lastEdited": "2024-09-11T21:04:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.079 kg",
+    "grid": "1x1",
+    "price": "₽5,850",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-1",
+    "accuracy": "+2",
+    "recoil": "-8",
+    "Dura Burn": "-2",
+    "Heat": "-1.3",
+    "loot xp": "40",
+    "node": "5cf6935bd7f00c06585fb791",
+    "ID": "muzzle_all_taccom_carbine_brake_multi"
+  },
+  "sections": []
+}

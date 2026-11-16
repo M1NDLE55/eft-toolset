@@ -1,0 +1,23 @@
+{
+  "title": "Hazard 4 Takedown sling backpack (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hazard_4_Takedown_sling_backpack_(Black)",
+  "revisionId": 348317,
+  "lastEdited": "2026-07-28T13:54:43Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.58 kg",
+    "grid": "3x7",
+    "trader": "Ragman LL3",
+    "penalties": "-3% movement speed, -1% turn speed, -3% Ergonomics",
+    "slots": "3x8 grid (24 slots)",
+    "node": "6034d103ca006d2dca39b3f0",
+    "id": "item_equipment_backpack_takedown_sling"
+  },
+  "sections": []
+}

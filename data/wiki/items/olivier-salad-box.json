@@ -1,0 +1,27 @@
+{
+  "title": "Olivier salad box",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Olivier_salad_box",
+  "revisionId": 356973,
+  "lastEdited": "2026-08-30T14:58:18Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "effect": "Energy: +100, Hydration: -10",
+    "use time": "5s",
+    "node": "67586b7e49c2fa592e0d8ed9",
+    "id": "item_food_saladbox"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The item first appeared during the Khorovod (26 December 2024) event. It was unusable. Subsequently, the item was classified as Food and became edible."
+    }
+  ]
+}

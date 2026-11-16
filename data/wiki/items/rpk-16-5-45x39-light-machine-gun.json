@@ -1,0 +1,38 @@
+{
+  "title": "RPK-16 5.45x39 light machine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPK-16_5.45x39_light_machine_gun",
+  "revisionId": 360690,
+  "lastEdited": "2026-09-19T09:37:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Light machine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light machine gun",
+    "slot": "Primary",
+    "weight": "3.697 kg",
+    "grid": "5x2",
+    "trader": "Prapor LL4",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "600",
+    "ergonomics": "45.8",
+    "velocity": "835 m/s",
+    "range": "650 m",
+    "MOA": "1.65",
+    "Weaprecoil": "Vertical: 68, Horizontal: 202",
+    "rof": "650",
+    "caliber": "5.45x39mm",
+    "def mag": "RPK-16 5.45x39 95-round drum magazine",
+    "node": "5beed0f50db834001c062b12",
+    "ID": "weapon_izhmash_rpk16_545x39"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Punisher - Part 2"
+    }
+  ]
+}

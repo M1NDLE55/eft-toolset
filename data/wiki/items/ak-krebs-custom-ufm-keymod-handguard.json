@@ -1,0 +1,24 @@
+{
+  "title": "AK Krebs Custom UFM KeyMod handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Krebs_Custom_UFM_KeyMod_handguard",
+  "revisionId": 340752,
+  "lastEdited": "2026-04-22T07:16:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.26 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "-5.7",
+    "Cooling": "+4",
+    "node": "59fb375986f7741b681b81a6",
+    "ID": "handguard_ak_krebs_ufm_akm_long"
+  },
+  "sections": []
+}

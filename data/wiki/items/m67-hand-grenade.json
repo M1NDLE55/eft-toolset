@@ -1,0 +1,32 @@
+{
+  "title": "M67 hand grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M67_hand_grenade",
+  "revisionId": 358727,
+  "lastEdited": "2026-09-10T23:00:24Z",
+  "kind": "item",
+  "categories": [
+    "Fragmentation grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Fragmentation grenade",
+    "weight": "0.396 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3, after completing his task Your Car Needs a Service",
+    "explosion delay": "5s",
+    "explosion distance": "4-8 meters",
+    "concussion distance": "11 meters",
+    "fragments count": "75x M67 Shrapnel",
+    "node": "58d3db5386f77426186285a0",
+    "ID": "weapon_grenade_m67"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Grenade box\n- Weapon box (6x2)\n- Weapon box (4x4)\n- Weapon box (6x6)\n- Buried barrel cache\n- Ground cache\n- Common fund stash"
+    }
+  ]
+}

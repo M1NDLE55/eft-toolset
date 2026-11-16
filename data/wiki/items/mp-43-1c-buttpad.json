@@ -1,0 +1,22 @@
+{
+  "title": "MP-43-1C buttpad",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-43-1C_buttpad",
+  "revisionId": 270189,
+  "lastEdited": "2024-02-08T20:12:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+4",
+    "recoil": "-2",
+    "node": "611a31ce5b7ffe001b4649d1",
+    "ID": "stock_mr43_izhmeh_mr43_buttpad"
+  },
+  "sections": []
+}

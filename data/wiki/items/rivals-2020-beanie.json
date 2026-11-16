@@ -1,0 +1,20 @@
+{
+  "title": "Rivals 2020 beanie",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rivals_2020_beanie",
+  "revisionId": 305001,
+  "lastEdited": "2025-01-31T15:20:15Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "5f994730c91ed922dd355de3",
+    "id": "item_equipment_head_r2"
+  },
+  "sections": []
+}

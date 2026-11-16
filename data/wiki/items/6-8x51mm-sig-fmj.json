@@ -1,0 +1,40 @@
+{
+  "title": "6.8x51mm SIG FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6.8x51mm_SIG_FMJ",
+  "revisionId": 322859,
+  "lastEdited": "2025-11-18T21:29:39Z",
+  "kind": "ammo",
+  "categories": [
+    "6.8x51mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.024 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3, Ref LL4",
+    "velocity": "899 m/s",
+    "damage": "80",
+    "penetration": "36",
+    "armor damage": "49",
+    "ricochet": "27%",
+    "heat": "+136",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "6529302b8c26af6326029fb7",
+    "id": "patron_68x51_fmj"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 80 can be obtained as a quest reward from Killer Argument"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Topographic Forest)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Topographic_Forest)",
+  "revisionId": 356813,
+  "lastEdited": "2026-08-29T20:39:13Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "69ce912d0071ff516a085bbf",
+    "id": "item_camo_topographic_woods"
+  },
+  "sections": []
+}

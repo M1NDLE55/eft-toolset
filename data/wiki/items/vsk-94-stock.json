@@ -1,0 +1,22 @@
+{
+  "title": "VSK-94 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSK-94_stock",
+  "revisionId": 318901,
+  "lastEdited": "2025-10-02T22:25:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.7 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "+5",
+    "recoil": "-28",
+    "node": "6452519e3d52156624001fd5",
+    "ID": "stock_vsk94_kbp_vsk94_std"
+  },
+  "sections": []
+}

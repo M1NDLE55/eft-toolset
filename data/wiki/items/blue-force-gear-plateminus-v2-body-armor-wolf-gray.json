@@ -1,0 +1,37 @@
+{
+  "title": "Blue Force Gear PLATEminus V2 body armor (Wolf Gray)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Blue_Force_Gear_PLATEminus_V2_body_armor_(Wolf_Gray)",
+  "revisionId": 361888,
+  "lastEdited": "2026-09-24T15:02:00Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "1.37 kg",
+    "grid": "3x3",
+    "trader": "Ref LL3, after unlocking it in the The Lab Tactical Map",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Thorax, Back, Sides",
+    "durability": "68",
+    "penalties": "+0% movement speed, +0% turn speed, +0% Ergonomics",
+    "node": "6a7d8987b8903961a50d4f70",
+    "id": "item_equipment_armor_bfg_plateminus_gry_bp04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

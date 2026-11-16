@@ -1,0 +1,21 @@
+{
+  "title": "Leather cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Leather_cap",
+  "revisionId": 304998,
+  "lastEdited": "2025-01-31T15:14:12Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.15 kg",
+    "grid": "2x1",
+    "price": "₽",
+    "node": "61c18db6dfd64163ea78fbb4",
+    "id": "item_equipment_head_leather_cap"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Dorm Snake poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dorm_Snake_poster",
+  "revisionId": 363687,
+  "lastEdited": "2026-10-07T22:13:42Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6aa2d73de7613174f409815b",
+    "id": "item_barter_flyers_prestige_05_pve"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Note with code word Ark",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_with_code_word_Ark",
+  "revisionId": 303462,
+  "lastEdited": "2025-01-15T20:02:05Z",
+  "kind": "item",
+  "categories": [
+    "Extraction intel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Extraction intel",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Activates the \"Smuggler's Passage\" extraction on Factory.",
+    "node": "675aaaf674a7619a5304c233",
+    "id": "item_info_secret_extraction_codeword_ark"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Activates the \"Smugglers' Passage\" extraction on Factory.\n- Cannot be taken out of a raid"
+    }
+  ]
+}

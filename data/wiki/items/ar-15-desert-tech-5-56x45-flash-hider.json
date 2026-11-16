@@ -1,0 +1,28 @@
+{
+  "title": "AR-15 Desert Tech 5.56x45 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Desert_Tech_5.56x45_flash_hider",
+  "revisionId": 355536,
+  "lastEdited": "2026-08-23T00:23:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "price": "₽4,230",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-1",
+    "accuracy": "+1",
+    "recoil": "-6",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5c48a2a42e221602b66d1e07",
+    "ID": "muzzle_ar15_dt_mdr_std_556x45"
+  },
+  "sections": []
+}

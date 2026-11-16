@@ -1,0 +1,26 @@
+{
+  "title": "M1A 7.62x51 22 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1A_7.62x51_22_inch_barrel",
+  "revisionId": 340812,
+  "lastEdited": "2026-04-22T07:58:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.11 kg",
+    "grid": "5x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-38",
+    "velocity": "+2",
+    "MOA": "1.1",
+    "recoil": "-14",
+    "Heat": "-13",
+    "Cooling": "-8",
+    "node": "5addbac75acfc400194dbc56",
+    "ID": "barrel_m1a_springfield_armory_6_groove_national_match_558mm"
+  },
+  "sections": []
+}

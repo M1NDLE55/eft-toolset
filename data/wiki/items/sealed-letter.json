@@ -1,0 +1,28 @@
+{
+  "title": "Sealed letter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sealed_letter",
+  "revisionId": 304192,
+  "lastEdited": "2025-01-19T21:58:23Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "price": "₽0",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "591093bb86f7747caa7bb2ee",
+    "id": "item_quest_letter"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "Used in the quests:\n- Postman Pat - Part 1 from Prapor\n- Postman Pat - Part 2 from Therapist"
+    }
+  ]
+}

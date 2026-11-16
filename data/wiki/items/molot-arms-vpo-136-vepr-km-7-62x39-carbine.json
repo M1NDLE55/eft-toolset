@@ -1,0 +1,32 @@
+{
+  "title": "Molot Arms VPO-136 Vepr-KM 7.62x39 carbine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Molot_Arms_VPO-136_Vepr-KM_7.62x39_carbine",
+  "revisionId": 366152,
+  "lastEdited": "2026-10-29T08:28:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault carbines",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault carbine",
+    "slot": "Primary",
+    "weight": "3.245 kg",
+    "grid": "5x2",
+    "trader": "Skier LL1",
+    "fire modes": "Single",
+    "sightrange": "500",
+    "ergonomics": "52",
+    "velocity": "789 m/s",
+    "range": "400 m",
+    "MOA": "2.33",
+    "Weaprecoil": "Vertical: 112, Horizontal: 284",
+    "rof": "600",
+    "caliber": "7.62x39mm",
+    "loot xp": "30",
+    "node": "59e6152586f77473dc057aa1",
+    "ID": "weapon_molot_vepr_km_vpo_136_762x39"
+  },
+  "sections": []
+}

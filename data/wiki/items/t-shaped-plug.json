@@ -1,0 +1,27 @@
+{
+  "title": "T-Shaped plug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/T-Shaped_plug",
+  "revisionId": 362806,
+  "lastEdited": "2026-10-01T21:47:41Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.13 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "4",
+    "node": "57347cd0245977445a2d6ff1",
+    "id": "tplug"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "20/70 TSS Armor Piercing Slug ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20/70_TSS_Armor_Piercing_Slug_ammo_pack_(25_pcs)",
+  "revisionId": 367142,
+  "lastEdited": "2026-11-02T23:09:11Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "67657764c832f8c59c016d45",
+    "ID": "item_ammo_box_20g_25_slug_ap"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Moreman's phone",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Moreman's_phone",
+  "revisionId": 348823,
+  "lastEdited": "2026-08-01T15:18:55Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "node": "68d271fc17de6a40270d5657",
+    "id": "q_father_phone"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    }
+  ]
+}

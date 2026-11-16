@@ -1,0 +1,31 @@
+{
+  "title": "TG-Vi-24 vaccine prototype (B.1.2 strain)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TG-Vi-24_vaccine_prototype_(B.1.2_strain)",
+  "revisionId": 367553,
+  "lastEdited": "2026-11-03T22:41:48Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.035 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "6acc4c757587fb38c508c5fa",
+    "id": "item_hall_quest_rd68"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be put inside secure containers\n- 3 can be dropped per raid"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Halloween: Enemy of My Enemy - An Agreement\n- 2 can be obtained as a quest reward from Halloween: High-Risk, High-Reward\n- 2 can be obtained as a quest reward from Halloween: The Final Push"
+    }
+  ]
+}

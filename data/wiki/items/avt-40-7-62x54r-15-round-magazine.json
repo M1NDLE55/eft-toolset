@@ -1,0 +1,27 @@
+{
+  "title": "AVT-40 7.62x54R 15-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AVT-40_7.62x54R_15-round_magazine",
+  "revisionId": 337915,
+  "lastEdited": "2026-03-07T09:19:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.35 kg",
+    "grid": "1x2",
+    "trader": "Prapor LL4",
+    "ergonomics": "-4",
+    "checkaccuracy": "No",
+    "checkmodifier": "+10",
+    "loadmodifier": "+2.5",
+    "feedfailure": "Very low",
+    "capacity": "15",
+    "caliber": "7.62x54mmR",
+    "node": "641074a07fd350b98c0b3f96",
+    "ID": "mag_svt40_toz_svt40_std_762x54r_15"
+  },
+  "sections": []
+}

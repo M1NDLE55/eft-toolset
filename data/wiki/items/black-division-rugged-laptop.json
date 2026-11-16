@@ -1,0 +1,30 @@
+{
+  "title": "Black Division rugged laptop",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Black_Division_rugged_laptop",
+  "revisionId": 360413,
+  "lastEdited": "2026-09-15T20:30:40Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "2.5 kg",
+    "grid": "3x2",
+    "node": "6a5f9c25e8c84d8b0602f22a",
+    "id": "q_kord_toghbook_bd"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division in the Seasonal mode on Ground Zero (Level 21+), Shoreline, Streets of Tarkov, Woods and The Lab."
+    }
+  ]
+}

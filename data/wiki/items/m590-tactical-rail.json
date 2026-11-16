@@ -1,0 +1,24 @@
+{
+  "title": "M590 Tactical rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M590_Tactical_rail",
+  "revisionId": 321742,
+  "lastEdited": "2025-11-16T19:17:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.45 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-2",
+    "recoil": "-2",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5eeb2ff5ea4f8b73c827350b",
+    "ID": "mount_590_bat_rb7m"
+  },
+  "sections": []
+}

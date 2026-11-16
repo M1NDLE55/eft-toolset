@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Precision Reflex Mk12 Gen.1 Flip-Up Front Sight Gas Block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Precision_Reflex_Mk12_Gen.1_Flip-Up_Front_Sight_Gas_Block",
+  "revisionId": 343331,
+  "lastEdited": "2026-05-05T19:11:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.14 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+0.5",
+    "recoil": "-1.5",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "node": "68caac02269e10396503acfa",
+    "ID": "gas_block_ar15_precision_reflex_mk12_gen_1"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PK bipod",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PK_bipod",
+  "revisionId": 298897,
+  "lastEdited": "2024-12-26T21:08:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Bipods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bipod",
+    "weight": "0.47 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-8",
+    "recoil": "When mounted: -80",
+    "node": "6464d870bb2c580352070cc4",
+    "ID": "bipod_pkm_zid_pk_std"
+  },
+  "sections": []
+}

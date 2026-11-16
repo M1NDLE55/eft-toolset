@@ -1,0 +1,26 @@
+{
+  "title": "SKS FAB Defense UAS chassis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_FAB_Defense_UAS_chassis",
+  "revisionId": 342051,
+  "lastEdited": "2026-04-28T00:30:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chassis",
+    "weight": "1.034 kg",
+    "grid": "3x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+12",
+    "recoil": "-17",
+    "Heat": "+1.6",
+    "Cooling": "-1.5",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5d0236dad7ad1a0940739d29",
+    "ID": "stock_sks_fab_defence_uas_sks"
+  },
+  "sections": []
+}

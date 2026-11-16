@@ -1,0 +1,28 @@
+{
+  "title": "AR-15 AAC Blackout 51T 5.56x45 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_AAC_Blackout_51T_5.56x45_flash_hider",
+  "revisionId": 337630,
+  "lastEdited": "2026-03-06T00:32:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.122 kg",
+    "grid": "1x1",
+    "price": "₽6,549",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-1",
+    "accuracy": "+3",
+    "recoil": "-5",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "loot xp": "20",
+    "exam xp": "5",
+    "node": "5c7e5f112e221600106f4ede",
+    "ID": "muzzle_ar15_aac_blackout_51t_flash_hider_556x45"
+  },
+  "sections": []
+}

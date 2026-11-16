@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (A-TACS Ghost)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(A-TACS_Ghost)",
+  "revisionId": 348504,
+  "lastEdited": "2026-07-30T21:23:03Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67e6a2e080bad22c8e0d4bc4",
+    "id": "item_camo_a-tacs_ghost"
+  },
+  "sections": []
+}

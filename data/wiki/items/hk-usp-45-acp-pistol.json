@@ -1,0 +1,37 @@
+{
+  "title": "HK USP .45 ACP pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_.45_ACP_pistol",
+  "revisionId": 362934,
+  "lastEdited": "2026-10-03T11:15:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.888 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2: Standard, Peacekeeper LL2: Tactical variant, Mechanic LL2: Expert variant, Mechanic LL2: Elite variant, Mechanic LL3: Match variant",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "90.5",
+    "velocity": "333 m/s",
+    "range": "50 m",
+    "MOA": "9.63",
+    "Weaprecoil": "Vertical: 405, Horizontal: 291",
+    "rof": "30",
+    "caliber": ".45 ACP",
+    "node": "6193a720f8ee7e52e42109ed",
+    "ID": "weapon_hk_usp_45"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| USP.45 Match |\n| USP.45 Expert |\n| USP.45 Elite |\n| USP.45 Tactical |"
+    }
+  ]
+}

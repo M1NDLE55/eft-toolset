@@ -1,0 +1,27 @@
+{
+  "title": "Crye Precision AirFrame Ears",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_Ears",
+  "revisionId": 362096,
+  "lastEdited": "2026-09-24T19:46:26Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL4",
+    "armor": "3",
+    "armor coverage": "Ears",
+    "durability": "27",
+    "material": "Aluminium",
+    "penalties": "+0% turn speed, +0% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5c1793902e221602b21d3de2",
+    "ID": "item_equipment_helmet_crye_airframe_ears"
+  },
+  "sections": []
+}

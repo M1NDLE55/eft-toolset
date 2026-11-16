@@ -1,0 +1,27 @@
+{
+  "title": "P226 Legion full size pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Legion_full_size_pistol_slide",
+  "revisionId": 320621,
+  "lastEdited": "2025-10-30T20:25:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.2 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-1",
+    "Dura Burn": "-1",
+    "Heat": "-4",
+    "Cooling": "+6.2",
+    "node": "5c0125fc0db834001a669aa3",
+    "ID": "reciever_p226_sig_legion_full_size"
+  },
+  "sections": []
+}

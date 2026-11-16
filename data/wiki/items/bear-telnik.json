@@ -1,0 +1,22 @@
+{
+  "title": "BEAR Telnik",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_Telnik",
+  "revisionId": 276061,
+  "lastEdited": "2024-04-15T21:40:56Z",
+  "kind": "item",
+  "categories": [
+    "BEAR upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5e4bb31586f7740695730568",
+    "ID": "bear_upper_telnik"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The shirt is based on a Telnyashka (sometimes referred to as Telniashka), an iconic garment of Russian military. Especially, the dark blue stripes version used by the Russian Marines."
+    }
+  ]
+}

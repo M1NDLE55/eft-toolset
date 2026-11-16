@@ -1,0 +1,21 @@
+{
+  "title": "SR-2M pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-2M_pistol_grip",
+  "revisionId": 342350,
+  "lastEdited": "2026-04-29T00:35:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+3",
+    "node": "637b9c37b7e3bc41b21ce71a 637ba29bf7ca6372bf2613db",
+    "ID": "pistolgrip_sr2m_tochmash_std pistolgrip_sr2m_tochmash_std_blk"
+  },
+  "sections": []
+}

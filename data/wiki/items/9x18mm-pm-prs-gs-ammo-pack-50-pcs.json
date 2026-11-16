@@ -1,0 +1,18 @@
+{
+  "title": "9x18mm PM PRS gs ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_PRS_gs_ammo_pack_(50_pcs)",
+  "revisionId": 367259,
+  "lastEdited": "2026-11-02T23:15:25Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570261dc5d7d4cb4d07858e",
+    "ID": "item_ammo_box_9x18_50_prs"
+  },
+  "sections": []
+}

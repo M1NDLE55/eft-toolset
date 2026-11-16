@@ -1,0 +1,39 @@
+{
+  "title": ".308 ME",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.308_ME",
+  "revisionId": 326757,
+  "lastEdited": "2025-12-05T20:01:10Z",
+  "kind": "ammo",
+  "categories": [
+    ".308 Merlin Express ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.024 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "velocity": "838 m/s",
+    "damage": "80",
+    "accuracy": "-2",
+    "recoil": "+3",
+    "penetration": "42",
+    "armor damage": "78",
+    "l bleed chance": "+35",
+    "h bleed chance": "+17",
+    "durability burn": "+12",
+    "heat": "+10",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "67c540c3d0538d12ec036c08",
+    "id": "patron_784x49"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

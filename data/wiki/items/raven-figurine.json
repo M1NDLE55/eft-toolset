@@ -1,0 +1,41 @@
+{
+  "title": "Raven figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Raven_figurine",
+  "revisionId": 355705,
+  "lastEdited": "2026-08-23T18:21:57Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.42 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "5e54f62086f774219b0f1937",
+    "ID": "item_barter_valuable_raven"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On a shelf in the storage room next to the IDEA office"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- On a wood stove in the wooden cabin in the village"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator Markstrom whose logo is a raven."
+    }
+  ]
+}

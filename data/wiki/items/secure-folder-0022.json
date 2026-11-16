@@ -1,0 +1,25 @@
+{
+  "title": "Secure Folder 0022",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_Folder_0022",
+  "revisionId": 305392,
+  "lastEdited": "2025-02-07T07:51:31Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.8 kg",
+    "grid": "1x2",
+    "node": "591092ef86f7747bb8703422",
+    "id": "item_quest_container_case_folder"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Delivery From the Past from Prapor"
+    }
+  ]
+}

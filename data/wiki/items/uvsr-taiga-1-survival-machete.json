@@ -1,0 +1,59 @@
+{
+  "title": "UVSR Taiga-1 survival machete",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UVSR_Taiga-1_survival_machete",
+  "revisionId": 360259,
+  "lastEdited": "2026-09-15T11:55:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.64 kg",
+    "grid": "1x3",
+    "fire modes": "Chop 33 Damage, Stab 55 Damage",
+    "range": "Chop 0.55m, Stab 0.65m",
+    "node": "601948682627df266209af05",
+    "ID": "weapon_usvr_taiga"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Weapon box (6x6)\n- Common fund stash\n- On Cultists"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In Reshala's bunkhouse\n- At the three-story dorms in the \"marked room\"\n- At the \"giving tree\" behind the \"Old Gas Station\""
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- On Shturman"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On Sanitar"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- On Kaban and his bodyguards Basmach and Gus\n- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- In Leon's hideout"
+    }
+  ]
+}

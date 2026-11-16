@@ -1,0 +1,36 @@
+{
+  "title": "EYE MK.2 professional hand-held compass",
+  "url": "https://escapefromtarkov.fandom.com/wiki/EYE_MK.2_professional_hand-held_compass",
+  "revisionId": 330617,
+  "lastEdited": "2026-01-02T00:02:15Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.106 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "node": "5f4f9eb969cdc30ff33f09db",
+    "id": "item_spec_compass"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The compass is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "The compass must be placed in any inventory slot and assigned to a hotkey to be used."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Search Mission"
+    }
+  ]
+}

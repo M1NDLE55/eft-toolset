@@ -1,0 +1,30 @@
+{
+  "title": "20x1mm toy gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20x1mm_toy_gun",
+  "revisionId": 305774,
+  "lastEdited": "2025-02-17T09:06:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.09 kg",
+    "grid": "2x1",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "100",
+    "velocity": "20 m/s",
+    "range": "50 m",
+    "MOA": "13.41",
+    "Weaprecoil": "Vertical: 380, Horizontal: 265",
+    "rof": "30",
+    "caliber": "20x1mm",
+    "node": "66015072e9f84d5680039678",
+    "ID": "weapon_ussr_pd_20x1mm"
+  },
+  "sections": []
+}

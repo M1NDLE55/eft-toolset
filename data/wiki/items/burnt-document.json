@@ -1,0 +1,25 @@
+{
+  "title": "Burnt document",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Burnt_document",
+  "revisionId": 336661,
+  "lastEdited": "2026-02-27T22:55:50Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "689b51de2c175da5bf083b9f",
+    "id": "item_info_note_delegation_authority"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard"
+    }
+  ]
+}

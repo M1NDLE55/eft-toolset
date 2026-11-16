@@ -1,0 +1,21 @@
+{
+  "title": "HK UMP bottom handguard rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_UMP_bottom_handguard_rail",
+  "revisionId": 240116,
+  "lastEdited": "2023-07-29T23:03:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+0",
+    "node": "5fc53954f8b6a877a729eaeb",
+    "ID": "mount_ump_hk_bottom_rail_std"
+  },
+  "sections": []
+}

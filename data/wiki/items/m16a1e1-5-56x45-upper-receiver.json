@@ -1,0 +1,25 @@
+{
+  "title": "M16A1E1 5.56x45 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M16A1E1_5.56x45_upper_receiver",
+  "revisionId": 356329,
+  "lastEdited": "2026-08-25T22:40:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.37 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+4",
+    "recoil": "-1.5",
+    "Dura Burn": "+1.7",
+    "Heat": "-0.6",
+    "Cooling": "+0.9",
+    "node": "68a63b90e1fb670852024659",
+    "ID": "reciever_ar15_colt_m16a1e1_std"
+  },
+  "sections": []
+}

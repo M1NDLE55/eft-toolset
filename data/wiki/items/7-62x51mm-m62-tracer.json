@@ -1,0 +1,40 @@
+{
+  "title": "7.62x51mm M62 Tracer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_M62_Tracer",
+  "revisionId": 326410,
+  "lastEdited": "2025-12-01T23:01:58Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x51mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.023 kg",
+    "grid": "1x1",
+    "velocity": "820 m/s",
+    "damage": "82",
+    "accuracy": "-10",
+    "recoil": "+1",
+    "penetration": "42",
+    "armor damage": "65",
+    "ricochet": "38%",
+    "l bleed chance": "+10",
+    "h bleed chance": "+10",
+    "durability burn": "+15",
+    "heat": "+25",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "effects": "Tracer (green)",
+    "node": "5a608bf24f39f98ffc77720e",
+    "id": "patron_762x51_M62"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

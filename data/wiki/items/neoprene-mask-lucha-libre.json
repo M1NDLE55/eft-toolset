@@ -1,0 +1,27 @@
+{
+  "title": "Neoprene mask (Lucha Libre)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Neoprene_mask_(Lucha_Libre)",
+  "revisionId": 348566,
+  "lastEdited": "2026-07-30T22:02:28Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 0",
+    "node": "67aaf84104dca1c82c071cf6",
+    "id": "item_equipment_facecover_redflame_arena_bp_03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

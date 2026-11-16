@@ -1,0 +1,21 @@
+{
+  "title": "Aimpoint Standard Spacer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aimpoint_Standard_Spacer",
+  "revisionId": 322355,
+  "lastEdited": "2025-11-18T14:31:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-0.1",
+    "node": "5c7d560b2e22160bc12c6139",
+    "ID": "mount_base_aimpoint_standart_spacer"
+  },
+  "sections": []
+}

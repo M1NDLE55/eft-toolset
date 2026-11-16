@@ -1,0 +1,21 @@
+{
+  "title": "Steyr AUG RAT Worx 5.56x45 muzzle device adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_RAT_Worx_5.56x45_muzzle_device_adapter",
+  "revisionId": 252926,
+  "lastEdited": "2023-11-02T21:50:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1",
+    "node": "630f27f04f3f6281050b94d7",
+    "ID": "muzzle_aug_ratworx_suppressor_adapter_556x45"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Armband (Operator)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Operator)",
+  "revisionId": 363571,
+  "lastEdited": "2026-10-07T16:10:13Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "6a99397cf38b37ce5208abdd",
+    "id": "item_equipment_armband_operator"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This armband is only available as an Operator reward from the \"EXFIL Brothers\" program.\n- Glows in the dark"
+    }
+  ]
+}

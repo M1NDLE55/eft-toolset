@@ -1,0 +1,30 @@
+{
+  "title": "Secure Folder 0052",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_Folder_0052",
+  "revisionId": 351537,
+  "lastEdited": "2026-08-05T23:10:17Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.8 kg",
+    "grid": "1x2",
+    "node": "5938878586f7741b797c562f",
+    "id": "case_0052"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Supply Plans from Therapist."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The logo on the folder is the same as \"Aperture Science\", a fictional organisation in the videogame series \"Portal\"."
+    }
+  ]
+}

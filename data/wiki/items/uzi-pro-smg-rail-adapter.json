@@ -1,0 +1,24 @@
+{
+  "title": "UZI PRO SMG rail adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_PRO_SMG_rail_adapter",
+  "revisionId": 305468,
+  "lastEdited": "2025-02-08T21:58:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "recoil": "+0",
+    "Heat": "+3.2",
+    "Cooling": "-2.3",
+    "node": "668ea3f68117e4968b0cff4a",
+    "ID": "mount_uzi_pro_iwi_rail_adapter"
+  },
+  "sections": []
+}

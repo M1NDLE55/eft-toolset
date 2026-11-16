@@ -1,0 +1,22 @@
+{
+  "title": "FN SCAR JMac Customs RSA-SCAR 1913 Adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_JMac_Customs_RSA-SCAR_1913_Adapter",
+  "revisionId": 314260,
+  "lastEdited": "2025-06-12T15:36:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.076 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+0",
+    "recoil": "+0",
+    "node": "66ffc246a81a4f85e70d4d06",
+    "ID": "stock_mk16_jmac_rsa_1913_adapter"
+  },
+  "sections": []
+}

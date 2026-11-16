@@ -1,0 +1,30 @@
+{
+  "title": "AK Hexagon tubular handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Hexagon_tubular_handguard",
+  "revisionId": 356566,
+  "lastEdited": "2026-08-26T02:59:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.167 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4: Black, Skier LL4: Anodized red",
+    "ergonomics": "+19",
+    "recoil": "+0",
+    "Heat": "-4.8",
+    "Cooling": "+9.2",
+    "node": "5b800e9286f7747a8b04f3ff 5b80242286f77429445e0b47",
+    "ID": "handguard_ak_hexagon_ak handguard_ak_hexagon_ak_red"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The anodized red version has the note \"DA RED GOEZ FASTA!\", which is a reference to the \"Warhammer 40,000\" lore."
+    }
+  ]
+}

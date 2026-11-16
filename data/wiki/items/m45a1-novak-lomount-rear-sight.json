@@ -1,0 +1,23 @@
+{
+  "title": "M45A1 Novak Lomount rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M45A1_Novak_Lomount_rear_sight",
+  "revisionId": 211112,
+  "lastEdited": "2022-09-20T11:00:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "price": "₽750",
+    "sightrange": "200 m",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5f3e7897ddc4f03b010e204a",
+    "ID": "sight_rear_m1911_novak_lomount_rear_sight"
+  },
+  "sections": []
+}

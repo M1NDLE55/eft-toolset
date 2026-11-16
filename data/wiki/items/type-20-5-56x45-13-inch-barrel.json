@@ -1,0 +1,27 @@
+{
+  "title": "Type 20 5.56x45 13 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Type_20_5.56x45_13_inch_barrel",
+  "revisionId": 357357,
+  "lastEdited": "2026-09-01T12:52:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.88 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-8",
+    "velocity": "-3.68",
+    "MOA": "2.1",
+    "recoil": "-6.6",
+    "Dura Burn": "-5",
+    "Heat": "+2.2",
+    "Cooling": "+3",
+    "node": "6a3cea4494a96a17e00c4b69",
+    "ID": "barrel_type20_howa_330mm_556x45"
+  },
+  "sections": []
+}

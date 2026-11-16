@@ -1,0 +1,53 @@
+{
+  "title": "RSP-30 reactive signal cartridge (Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RSP-30_reactive_signal_cartridge_(Green)",
+  "revisionId": 358837,
+  "lastEdited": "2026-09-11T20:16:38Z",
+  "kind": "ammo",
+  "categories": [
+    "Handheld flares",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handheld flare",
+    "weight": "0.19 kg",
+    "grid": "1x2",
+    "trader": "Jaeger LL1",
+    "sightrange": "100",
+    "ergonomics": "51",
+    "velocity": "80 m/s",
+    "damage": "40",
+    "penetration": "0",
+    "armor damage": "60",
+    "node": "6217726288ed9f0845317459",
+    "id": "weapon_rsp30_green"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Unlike the Red Signal Cartridge, this one does not call in an airdrop.\n- Required for the \"Klimov Street\" extraction on Streets of Tarkov.\n- Required for the \"Mira Ave\" extraction on Ground Zero.\n- Required for the \"Power Line Passage\" extraction on Woods.\n- Required for the \"Railroad Passage\" extraction on Customs.\n- Required for the \"Path to River\" extraction on Interchange.\n- Required for the \"Helicopter\" extraction on Icebreaker.\n- Firing this flare will illuminate the surrounding area for 20 seconds after ignition\n\n- The flare is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "To open a flare extraction, shoot the flare into the sky while being inside the respective signal flare area. Make sure to aim it upwards, but not too much or it lands behind you. If the flare doesn't reach a certain height, the extraction won't open. Only one person amongst a lobby-made group needs to shoot a flare to open the extraction for all members of the group.\n\nUpon entering a signal flare area, a notification pops up in the bottom right corner of the screen: .\n\nIf the flare was fired correctly, a new notification pops up: ."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Ground cache\n- Weapon box (6x2)\n- Weapon box (4x4)\n- Weapon box (6x4)\n- Weapon box (6x6)"
+    },
+    {
+      "heading": "Ground Zero",
+      "level": 3,
+      "text": "- In the Scav body leaned against the yellow bus at the \"Mira Ave\" extraction. A single flare is guaranteed to spawn every raid."
+    },
+    {
+      "heading": "Icebreaker",
+      "level": 3,
+      "text": "- At the beginning of the location, in a small deck superstructure, there is always one of these flare."
+    }
+  ]
+}

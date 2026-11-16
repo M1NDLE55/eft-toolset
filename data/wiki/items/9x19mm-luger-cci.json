@@ -1,0 +1,38 @@
+{
+  "title": "9x19mm Luger CCI",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_Luger_CCI",
+  "revisionId": 356354,
+  "lastEdited": "2026-08-26T00:22:28Z",
+  "kind": "ammo",
+  "categories": [
+    "9x19mm Parabellum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "velocity": "420 m/s",
+    "damage": "70",
+    "penetration": "10",
+    "armor damage": "38",
+    "ricochet": "6.5%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+20",
+    "durability burn": "+10",
+    "heat": "-4.8",
+    "feedfailure": "Very low",
+    "misfire": "Very low",
+    "node": "5a3c16fe86f77452b62de32a",
+    "id": "patron_9x19_luger_cci"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

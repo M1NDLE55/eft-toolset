@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (T-Block Urban)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(T-Block_Urban)",
+  "revisionId": 320984,
+  "lastEdited": "2025-11-14T16:10:06Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "68d14f2b74c1cc6e9603a875",
+    "id": "item_camo_usmc_tblock_urban"
+  },
+  "sections": []
+}

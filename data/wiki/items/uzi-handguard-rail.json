@@ -1,0 +1,21 @@
+{
+  "title": "UZI handguard rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_handguard_rail",
+  "revisionId": 305467,
+  "lastEdited": "2025-02-08T21:58:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1",
+    "node": "6698c8f4710a4525fe0e9e57",
+    "ID": "mount_all_iwi_universal_rail"
+  },
+  "sections": []
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Altyn helmet face shield (Impact Tested)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Altyn_helmet_face_shield_(Impact_Tested)",
+  "revisionId": 361481,
+  "lastEdited": "2026-09-23T19:15:15Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1.4 kg",
+    "grid": "2x1",
+    "material": "Combined materials",
+    "armor": "5",
+    "armor coverage": "Head",
+    "armor segments": "Face, Eyes, Jaws",
+    "durability": "50",
+    "blindness protect": "25%",
+    "penalties": "-8% turn speed, -8% Ergonomics",
+    "BlocksEyewear": "No",
+    "node": "6a82dbbf0ccd0eb28d02f240",
+    "id": "item_equipment_helmet_altyn_shield_damaged_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

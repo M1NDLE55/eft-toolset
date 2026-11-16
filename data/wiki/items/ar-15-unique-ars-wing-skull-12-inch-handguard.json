@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 Unique-ARs Wing & Skull 12 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Unique-ARs_Wing_%26_Skull_12_inch_handguard",
+  "revisionId": 361785,
+  "lastEdited": "2026-09-24T13:06:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+17",
+    "Heat": "-3.6",
+    "Cooling": "+4.6",
+    "node": "6087e0336d0bd7580617bb7a",
+    "ID": "handguard_ar15_unique_ars_wing_and_skull_12_inch"
+  },
+  "sections": []
+}

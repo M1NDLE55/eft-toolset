@@ -1,0 +1,25 @@
+{
+  "title": "Stolen military documents",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stolen_military_documents",
+  "revisionId": 289570,
+  "lastEdited": "2024-09-01T12:19:19Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "node": "61a00bcb177fb945751bbe6a",
+    "id": "quest_military_data"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Missing Cargo from Skier"
+    }
+  ]
+}

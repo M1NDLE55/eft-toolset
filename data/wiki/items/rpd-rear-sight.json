@@ -1,0 +1,23 @@
+{
+  "title": "RPD rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_rear_sight",
+  "revisionId": 276663,
+  "lastEdited": "2024-04-30T08:54:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "sightrange": "1000",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "6513f153e63f29908d0ffaba",
+    "ID": "sight_rear_rpd_zid_rpd_std"
+  },
+  "sections": []
+}

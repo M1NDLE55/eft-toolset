@@ -1,0 +1,37 @@
+{
+  "title": "SIG MCX .300 Blackout assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_MCX_.300_Blackout_assault_rifle",
+  "revisionId": 341639,
+  "lastEdited": "2026-04-26T20:50:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "2.718 kg",
+    "grid": "5x2",
+    "trader": "Ref LL2, Skier LL3: Standard, Skier LL3: Stripped variant, Mechanic LL4: T.O 2k24 variant",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "71.5",
+    "velocity": "605 m/s",
+    "range": "500 m",
+    "MOA": "2.75",
+    "Weaprecoil": "Vertical: 82, Horizontal: 228",
+    "rof": "800",
+    "caliber": ".300 Blackout",
+    "node": "5fbcc1d9016cce60e8341ab3",
+    "ID": "weapon_sig_mcx_gen1_762x35"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| MCX Neptune Spear |\n| MCX T.O 2k24 |"
+    }
+  ]
+}

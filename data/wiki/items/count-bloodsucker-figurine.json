@@ -1,0 +1,36 @@
+{
+  "title": "Count Bloodsucker figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Count_Bloodsucker_figurine",
+  "revisionId": 333918,
+  "lastEdited": "2026-02-07T23:47:54Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "679b9d4b3374fb14f40efe6d",
+    "id": "Item_barter_tarko_blood_lord"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "The Labyrinth",
+      "level": 3,
+      "text": "- On Shadow of Tagilla\n- In different locations in spawn chamber 4."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This figurine is a reference to Count Dracula, the title character of Bram Stoker's 1897 gothic horror novel Dracula ."
+    }
+  ]
+}

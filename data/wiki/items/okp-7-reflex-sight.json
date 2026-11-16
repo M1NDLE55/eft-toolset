@@ -1,0 +1,24 @@
+{
+  "title": "OKP-7 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OKP-7_reflex_sight",
+  "revisionId": 236464,
+  "lastEdited": "2023-06-10T20:56:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.255 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "250",
+    "ergonomics": "-4",
+    "modes": "1",
+    "node": "570fd79bd2720bc7458b4583",
+    "ID": "scope_all_ekb_okp7"
+  },
+  "sections": []
+}

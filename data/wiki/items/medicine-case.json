@@ -1,0 +1,57 @@
+{
+  "title": "Medicine case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Medicine_case",
+  "revisionId": 360905,
+  "lastEdited": "2026-09-20T15:02:11Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "6.35 kg",
+    "grid": "3x3",
+    "trader": "Ref LL2, Therapist LL3",
+    "effect": "Provides 64 inventory slots while only taking up 9",
+    "node": "5aafbcd986f7745e590fff23",
+    "id": "item_container_meds"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Cannot be stored in a backpack and Secure containers."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Medicine case is a container with the purpose of saving space within the player's inventory. It provides 64 inventory slots in a 8x8 grid and only takes up 9 inventory slots itself. It can only store:\n- Meds\n- Medical supplies"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Health Care Privacy - Part 6\n- 1 can be obtained as a quest reward from Out of Curiosity"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- At the three-story dorms in the \"marked room\"\n- On a industrial shelf in warehouse 3 at the shipping yard\n\n- \"Old Gas Station\":\n  - On the desk inside\n  - At the \"giving tree\" behind it"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The Medicine case is modeled after the 472-MEDCHEST1 Medical Chest by Pelican."
+    }
+  ]
+}

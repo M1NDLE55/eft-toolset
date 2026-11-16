@@ -1,0 +1,28 @@
+{
+  "title": "VSS/VAL 9x39 SR3M.130 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSS/VAL_9x39_SR3M.130_30-round_magazine",
+  "revisionId": 353026,
+  "lastEdited": "2026-08-09T22:30:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.397 kg",
+    "grid": "1x2",
+    "trader": "Prapor LL4",
+    "ergonomics": "-4",
+    "checkaccuracy": "No",
+    "checkmodifier": "+5",
+    "feedfailure": "Medium",
+    "capacity": "30",
+    "caliber": "9x39mm",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "5a9e81fba2750c00164f6b11",
+    "ID": "mag_vss_tochmash_sr3m130_9x39_30"
+  },
+  "sections": []
+}

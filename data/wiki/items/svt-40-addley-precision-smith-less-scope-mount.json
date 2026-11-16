@@ -1,0 +1,21 @@
+{
+  "title": "SVT-40 Addley Precision Smith-less Scope Mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVT-40_Addley_Precision_Smith-less_Scope_Mount",
+  "revisionId": 354908,
+  "lastEdited": "2026-08-17T18:08:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.310 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-2",
+    "node": "6888954ba66a069e0405a9aa",
+    "ID": "mount_svt40_addley_precision_smithless_scope_mount"
+  },
+  "sections": []
+}

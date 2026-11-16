@@ -1,0 +1,18 @@
+{
+  "title": ".50 AE Hawk JSP ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_AE_Hawk_JSP_ammo_pack_(20_pcs)",
+  "revisionId": 367106,
+  "lastEdited": "2026-11-02T23:07:16Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "67600a0e84e242067d0dc4cd",
+    "ID": "item_ammo_box_127x33_20_jsp"
+  },
+  "sections": []
+}

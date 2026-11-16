@@ -1,0 +1,21 @@
+{
+  "title": "Cyclone Shakhin scope eyecup",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cyclone_Shakhin_scope_eyecup",
+  "revisionId": 314178,
+  "lastEdited": "2025-06-07T13:51:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+2",
+    "node": "67641bec4ad898aa100c1079",
+    "ID": "tactical_shakhin_ciklon_shakhin_eyecup"
+  },
+  "sections": []
+}

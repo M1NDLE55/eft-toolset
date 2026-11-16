@@ -1,0 +1,35 @@
+{
+  "title": "Diamond Age NeoSteel High Cut helmet (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Diamond_Age_NeoSteel_High_Cut_helmet_(Black)",
+  "revisionId": 361422,
+  "lastEdited": "2026-09-23T16:03:08Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL3",
+    "material": "Armor steel",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "72",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "65709d2d21b9f815e208ff95",
+    "id": "item_equipment_helmet_neosteel"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

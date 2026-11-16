@@ -1,0 +1,32 @@
+{
+  "title": "Cold Fear infrared balaclava (SBEU)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cold_Fear_infrared_balaclava_(SBEU)",
+  "revisionId": 348535,
+  "lastEdited": "2026-07-30T21:57:31Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a9dc997faa4210bb0807c6",
+    "id": "item_equipment_facecover_coldgear_arena_bp_02"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The abbreviation \"SBEU\" is based on a direct translation from the Russian \"СБЭУ\", which stands for \"Симуляция Боя в Экстремальных Условиях\" and translates to \"Hazardous Environment Combat Simulator\", or short HECS. This term was used for a long time by the developers to promote the \"extensive and realistic\" systems in the game. In the Russian part of the community it is often used to make fun of the unrealistic aspects of the game."
+    }
+  ]
+}

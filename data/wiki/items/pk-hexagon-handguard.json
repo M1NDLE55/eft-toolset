@@ -1,0 +1,22 @@
+{
+  "title": "PK Hexagon handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PK_Hexagon_handguard",
+  "revisionId": 356925,
+  "lastEdited": "2026-08-29T23:38:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.225 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+8",
+    "Cooling": "+4.5",
+    "node": "6a182c0fae175e037a0be40c",
+    "ID": "handguard_pk_hexagon_pk"
+  },
+  "sections": []
+}

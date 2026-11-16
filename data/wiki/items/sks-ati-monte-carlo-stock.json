@@ -1,0 +1,24 @@
+{
+  "title": "SKS ATI Monte Carlo stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_ATI_Monte_Carlo_stock",
+  "revisionId": 342398,
+  "lastEdited": "2026-04-29T01:11:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.1 kg",
+    "grid": "4x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+22",
+    "recoil": "-35",
+    "Heat": "+3.6",
+    "Cooling": "-3.5",
+    "node": "653ecef836fae5a82f02b869",
+    "ID": "stock_sks_ati_monte_carlo"
+  },
+  "sections": []
+}

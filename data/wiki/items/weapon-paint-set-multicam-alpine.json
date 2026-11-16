@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (MultiCam Alpine)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(MultiCam_Alpine)",
+  "revisionId": 348658,
+  "lastEdited": "2026-07-30T22:26:06Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67d7ef970db515f61109d47e",
+    "id": "item_camo_multicam_alpine"
+  },
+  "sections": []
+}

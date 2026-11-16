@@ -1,0 +1,28 @@
+{
+  "title": "Weapon parts",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_parts",
+  "revisionId": 358703,
+  "lastEdited": "2026-09-10T22:58:35Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.56 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5d1c819a86f774771b0acd6c",
+    "ID": "item_barter_other_weaponparts"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Wooden crate\n- Dead Scav\n- Weapon box (6x2)\n- Weapon box (4x4)\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

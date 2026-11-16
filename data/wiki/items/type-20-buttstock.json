@@ -1,0 +1,22 @@
+{
+  "title": "Type 20 buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Type_20_buttstock",
+  "revisionId": 357274,
+  "lastEdited": "2026-09-01T09:53:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.29 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+5",
+    "recoil": "-23",
+    "node": "6a3ce9e9123fa14cd00631e8",
+    "ID": "stock_type20_howa_type20_std"
+  },
+  "sections": []
+}

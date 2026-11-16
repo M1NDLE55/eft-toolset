@@ -1,0 +1,24 @@
+{
+  "title": "Mesa Tactical Crosshair Hydraulic buffer tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mesa_Tactical_Crosshair_Hydraulic_buffer_tube",
+  "revisionId": 340399,
+  "lastEdited": "2026-04-20T14:53:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.19 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4, after completing his task TerraGroup Employee",
+    "ergonomics": "-1.5",
+    "recoil": "-0.5",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5ef1ba28c64c5d0dfc0571a5",
+    "ID": "stock_ar15_mesa_crosshair_hydraulic_buffer_tube"
+  },
+  "sections": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Last Breath poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Last_Breath_poster",
+  "revisionId": 357775,
+  "lastEdited": "2026-09-08T11:47:39Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "679b944d597ba2ed120c3d3c",
+    "id": "item_barter_flyers_event_labyrinth_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Vacate the Premises"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item is available as a permanent reward to players who have obtained the \"In Search of an Exit\" event achievement."
+    }
+  ]
+}

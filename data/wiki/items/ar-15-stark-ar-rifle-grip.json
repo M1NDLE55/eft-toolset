@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Stark AR Rifle Grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Stark_AR_Rifle_Grip",
+  "revisionId": 360620,
+  "lastEdited": "2026-09-18T18:56:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4: Black, FDE",
+    "ergonomics": "+6",
+    "recoil": "-1.2",
+    "node": "59db3acc86f7742a2c4ab912 59db3b0886f77429d72fb895",
+    "ID": "pistolgrip_ar15_stark_ar_rifle_grip_blk pistolgrip_ar15_stark_ar_rifle_grip_fde"
+  },
+  "sections": []
+}

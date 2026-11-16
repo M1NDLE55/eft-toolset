@@ -1,0 +1,25 @@
+{
+  "title": "HK MP5 Wide Tropical polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_Wide_Tropical_polymer_handguard",
+  "revisionId": 329270,
+  "lastEdited": "2025-12-24T16:37:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.17 kg",
+    "grid": "2x1",
+    "price": "₽3,080",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+10",
+    "recoil": "+0",
+    "Heat": "+3",
+    "Cooling": "-1.8",
+    "node": "5926c36d86f77467a92a8629",
+    "ID": "handguard_mp5_hk_wide_tropical"
+  },
+  "sections": []
+}

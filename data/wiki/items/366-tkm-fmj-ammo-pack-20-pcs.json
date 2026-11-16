@@ -1,0 +1,18 @@
+{
+  "title": ".366 TKM FMJ ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.366_TKM_FMJ_ammo_pack_(20_pcs)",
+  "revisionId": 367097,
+  "lastEdited": "2026-11-02T23:06:49Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657023f1bfc87b3a34093210",
+    "ID": "item_ammo_box_366_20_fmj"
+  },
+  "sections": []
+}

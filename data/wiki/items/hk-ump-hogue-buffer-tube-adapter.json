@@ -1,0 +1,21 @@
+{
+  "title": "HK UMP Hogue buffer tube adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_UMP_Hogue_buffer_tube_adapter",
+  "revisionId": 357402,
+  "lastEdited": "2026-09-01T17:57:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.185 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-2",
+    "node": "6a146aad698504bec30e56b5",
+    "ID": "stock_ump_hogue_ar15_stock_adapter"
+  },
+  "sections": []
+}

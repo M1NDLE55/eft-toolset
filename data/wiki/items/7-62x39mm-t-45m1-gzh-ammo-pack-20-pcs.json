@@ -1,0 +1,18 @@
+{
+  "title": "7.62x39mm T-45M1 gzh ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_T-45M1_gzh_ammo_pack_(20_pcs)",
+  "revisionId": 367226,
+  "lastEdited": "2026-11-02T23:13:38Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "node": "64acea09c4eda9354b0226ad",
+    "ID": "item_ammo_box_762x39_20_t"
+  },
+  "sections": []
+}

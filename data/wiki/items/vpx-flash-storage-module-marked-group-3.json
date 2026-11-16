@@ -1,0 +1,25 @@
+{
+  "title": "VPX Flash Storage Module marked Group 3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPX_Flash_Storage_Module_marked_Group_3",
+  "revisionId": 313988,
+  "lastEdited": "2025-05-30T18:54:12Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.8 kg",
+    "grid": "1x1",
+    "node": "679b9aa490622daf9708da73",
+    "id": "item_quest_event_labyrinth_flashstorage"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Confidential Info from Peacekeeper"
+    }
+  ]
+}

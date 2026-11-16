@@ -1,0 +1,23 @@
+{
+  "title": "FN SCAR Vltor RE-SCAR Stock Adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_Vltor_RE-SCAR_Stock_Adapter",
+  "revisionId": 340387,
+  "lastEdited": "2026-04-20T14:44:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.29 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4: Black, Patriot Brown",
+    "ergonomics": "-2",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "node": "66ffbfb1a73a7bce3d0b45a8 66ffc20ba73a7bce3d0b45ab",
+    "ID": "stock_mk16_vltor_stock_adapter stock_mk16_vltor_stock_adapter_fde"
+  },
+  "sections": []
+}

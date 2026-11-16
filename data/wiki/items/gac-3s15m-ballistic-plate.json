@@ -1,0 +1,40 @@
+{
+  "title": "GAC 3s15m ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/GAC_3s15m_ballistic_plate",
+  "revisionId": 361895,
+  "lastEdited": "2026-09-24T15:04:10Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light Armor plate",
+    "weight": "0.97 kg",
+    "grid": "2x2",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "5",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "45",
+    "penalties": "-1% movement speed, +0% turn speed, -1% Ergonomics",
+    "node": "656fae5f7c2d57afe200c0d7",
+    "id": "item_equipment_plate_SAPI_GAC_3s15m_5class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Based on the Highcom Guardian 3s15m."
+    }
+  ]
+}

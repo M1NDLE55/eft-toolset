@@ -1,0 +1,27 @@
+{
+  "title": "Ibuprofen painkillers",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ibuprofen_painkillers",
+  "revisionId": 358714,
+  "lastEdited": "2026-09-10T22:59:21Z",
+  "kind": "item",
+  "categories": [
+    "Drugs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pills",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "effect": "Buffs:, Removes:, for 290 seconds, Adds: for 290 seconds Debuffs:, Adds:Hydration (-17)",
+    "use time": "5s",
+    "node": "5af0548586f7743a532b7e99",
+    "id": "item_barter_medical_ibuprofen"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Weapon box (6x2)\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    }
+  ]
+}

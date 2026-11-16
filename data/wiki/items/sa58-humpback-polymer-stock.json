@@ -1,0 +1,23 @@
+{
+  "title": "SA58 humpback polymer stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_humpback_polymer_stock",
+  "revisionId": 300389,
+  "lastEdited": "2024-12-30T15:03:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.8 kg",
+    "grid": "2x1",
+    "price": "₽3,400",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-4",
+    "recoil": "-22",
+    "node": "5b7d645e5acfc400170e2f90",
+    "ID": "stock_sa58_ds_arms_humpback_stock"
+  },
+  "sections": []
+}

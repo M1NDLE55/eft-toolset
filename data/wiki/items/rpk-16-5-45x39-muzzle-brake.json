@@ -1,0 +1,25 @@
+{
+  "title": "RPK-16 5.45x39 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPK-16_5.45x39_muzzle_brake",
+  "revisionId": 321708,
+  "lastEdited": "2025-11-16T19:05:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "price": "₽950",
+    "ergonomics": "-1",
+    "accuracy": "+0",
+    "recoil": "-6",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5beec3420db834001b095429",
+    "ID": "muzzle_rpk16_izhmash_rpk16_std_545x39"
+  },
+  "sections": []
+}

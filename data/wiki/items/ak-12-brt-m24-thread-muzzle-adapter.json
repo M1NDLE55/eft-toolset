@@ -1,0 +1,28 @@
+{
+  "title": "AK-12 BRT M24 thread muzzle adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_BRT_M24_thread_muzzle_adapter",
+  "revisionId": 343801,
+  "lastEdited": "2026-05-13T19:15:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-0.5",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "+0",
+    "Heat": "+0",
+    "Cooling": "+0",
+    "loot xp": "5",
+    "exam xp": "5",
+    "node": "68235b0b7d3ccc3ca20f4d01",
+    "ID": "muzzle_ak12_brt_m24_thread_adapter"
+  },
+  "sections": []
+}

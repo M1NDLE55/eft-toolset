@@ -1,0 +1,37 @@
+{
+  "title": "TDI KRISS Vector Gen.2 9x19 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TDI_KRISS_Vector_Gen.2_9x19_submachine_gun",
+  "revisionId": 362413,
+  "lastEdited": "2026-09-29T13:41:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "2.576 kg",
+    "grid": "3x2",
+    "trader": "Skier LL3 after completing his task From Hand to Hand",
+    "fire modes": "Single, 2-round Burst, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "75",
+    "velocity": "427 m/s",
+    "range": "200 m",
+    "MOA": "6.53",
+    "Weaprecoil": "Vertical: 37, Horizontal: 243",
+    "rof": "950",
+    "caliber": "9x19mm Parabellum",
+    "node": "5fc3f2d5900b1d5091531e57",
+    "ID": "weapon_tdi_kriss_vector_gen_2_9x19"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from To the Light - False Call\n- 1 can be obtained as a quest reward from From Hand to Hand"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "title": "RSP-30 reactive signal cartridge (Yellow)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RSP-30_reactive_signal_cartridge_(Yellow)",
+  "revisionId": 358808,
+  "lastEdited": "2026-09-11T17:34:36Z",
+  "kind": "ammo",
+  "categories": [
+    "Handheld flares",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handheld flare",
+    "weight": "0.19 kg",
+    "grid": "1x2",
+    "trader": "Prapor LL1",
+    "sightrange": "100",
+    "ergonomics": "51",
+    "velocity": "80 m/s",
+    "damage": "40",
+    "penetration": "0",
+    "armor damage": "60",
+    "node": "624c0b3340357b5f566e8766",
+    "id": "weapon_rsp30_yellow"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Unlike the Red Signal Cartridge, this one does not call in an airdrop.\n- Firing this flare will illuminate the surrounding area for 20 seconds after ignition\n\n- The flare is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Ground cache\n- Weapon box (6x2)\n- Weapon box (4x4)\n- Weapon box (6x4)\n- Weapon box (6x6)"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "FN SCAR Sure Cycle Frag Angled charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_Sure_Cycle_Frag_Angled_charging_handle",
+  "revisionId": 357270,
+  "lastEdited": "2026-09-01T09:35:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+2.5",
+    "node": "6a3e92fdb0de53ae72082abb",
+    "ID": "charge_mk16_sure_cycle_rifle_frag_angled"
+  },
+  "sections": []
+}

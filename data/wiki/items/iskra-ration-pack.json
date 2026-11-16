@@ -1,0 +1,33 @@
+{
+  "title": "Iskra ration pack",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Iskra_ration_pack",
+  "revisionId": 366112,
+  "lastEdited": "2026-10-28T22:01:01Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "1.75 kg",
+    "grid": "1x2",
+    "trader": "Jaeger LL2, after completing his task The Survivalist Path - Thrifty",
+    "effect": "Energy: +80",
+    "use time": "5s",
+    "node": "590c5d4b86f774784e1b9c45",
+    "id": "item_food_ration"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Sport bags\n- In Wooden crates\n- In Dead Scavs\n- In Weapon Boxes (4x4)\n- In Plastic suitcases\n- In Ground caches\n- In Buried barrel caches"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This item is based on the Russian \"IRP-P\" 24-hour food ration."
+    }
+  ]
+}

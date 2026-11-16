@@ -1,0 +1,24 @@
+{
+  "title": "SR-3M polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-3M_polymer_handguard",
+  "revisionId": 342386,
+  "lastEdited": "2026-04-29T00:59:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4: Black, Plum",
+    "ergonomics": "+8",
+    "recoil": "+0",
+    "Heat": "+4.4",
+    "Cooling": "-3.5",
+    "node": "65144f546ddb773afa0e35e1 (Black) 6565c3ab977bcc2dbb01c2e7 (Plum)",
+    "ID": "handguard_sr3m_tochmash_std handguard_sr2m_tochmash_std_plum"
+  },
+  "sections": []
+}

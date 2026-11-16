@@ -1,0 +1,28 @@
+{
+  "title": "Faceless mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Faceless_mask",
+  "revisionId": 344304,
+  "lastEdited": "2026-05-24T21:47:01Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.2 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "6176a48d732a664031271438",
+    "id": "item_equipment_facecover_halloween_kaonasi"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Based on the character \"No-Face\" from the iconic animated film Spirited Away.\n- This mask is part of Escape from Tarkov's 2021 Halloween Celebration."
+    }
+  ]
+}

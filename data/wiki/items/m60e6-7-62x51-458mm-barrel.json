@@ -1,0 +1,26 @@
+{
+  "title": "M60E6 7.62x51 458mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M60E6_7.62x51_458mm_barrel",
+  "revisionId": 342708,
+  "lastEdited": "2026-04-30T20:52:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "2 kg",
+    "grid": "4x1",
+    "ergonomics": "-33",
+    "velocity": "+0",
+    "MOA": "1.24",
+    "recoil": "-11.5",
+    "Dura Burn": "-4",
+    "Heat": "-12.9",
+    "Cooling": "-6.1",
+    "node": "66225d88a1c7e3b81600c76f",
+    "ID": "barrel_m60_usord_e6_short_458mm_762x51"
+  },
+  "sections": []
+}

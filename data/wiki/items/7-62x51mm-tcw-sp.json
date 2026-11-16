@@ -1,0 +1,40 @@
+{
+  "title": "7.62x51mm TCW SP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_TCW_SP",
+  "revisionId": 326420,
+  "lastEdited": "2025-12-01T23:07:50Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x51mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.023 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2, Ref LL2",
+    "velocity": "800 m/s",
+    "damage": "85",
+    "accuracy": "+20",
+    "recoil": "-3",
+    "penetration": "30",
+    "armor damage": "25",
+    "ricochet": "40%",
+    "l bleed chance": "+15",
+    "h bleed chance": "+15",
+    "durability burn": "-2",
+    "heat": "-15",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "5e023e6e34d52a55c3304f71",
+    "id": "patron_762x51_tpz_sp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

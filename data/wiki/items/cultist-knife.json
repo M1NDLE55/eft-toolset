@@ -1,0 +1,34 @@
+{
+  "title": "Cultist knife",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cultist_knife",
+  "revisionId": 356421,
+  "lastEdited": "2026-08-26T01:05:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.28 kg",
+    "grid": "2x1",
+    "fire modes": "Chop 25 Damage, Stab 32 Damage",
+    "range": "Chop 0.35m, Stab 0.45m",
+    "node": "5fc64ea372b0dd78d51159dc",
+    "ID": "weapon_cultist_damask"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Unlike other melee weapons, the knife is lost upon death and lootable by other players, even if it's equipped in the sheath (melee) slot\n- When an enemy is struck by the knife, it inflicts the effect, dealing gradual damage over time (140 HP/minute). Immunity lowers the amount of damage at 1% per level. It can be treated with xTG-12 injector or Perfotoran injector.\n- The knife has 2 uses. This means that only the first two hits inflict the effect."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Cultists"
+    }
+  ]
+}

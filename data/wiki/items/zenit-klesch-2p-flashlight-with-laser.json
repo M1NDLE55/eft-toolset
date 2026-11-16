@@ -1,0 +1,28 @@
+{
+  "title": "Zenit Klesch-2P flashlight with laser",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zenit_Klesch-2P_flashlight_with_laser",
+  "revisionId": 351990,
+  "lastEdited": "2026-08-06T23:59:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.17 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-1",
+    "modes": "3",
+    "node": "560d657b4bdc2da74d8b4572",
+    "ID": "tactical_all_zenit_2p_kleh_vis_laser"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is red"
+    }
+  ]
+}

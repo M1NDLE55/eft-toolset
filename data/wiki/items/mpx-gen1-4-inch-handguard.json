@@ -1,0 +1,23 @@
+{
+  "title": "MPX GEN1 4 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_GEN1_4_inch_handguard",
+  "revisionId": 342776,
+  "lastEdited": "2026-04-30T21:16:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.278 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+11.5",
+    "Heat": "-0.9",
+    "Cooling": "+0.4",
+    "node": "676149fbe2cf1419500357ee",
+    "ID": "handguard_mpx_sig_mpx_gen1_4_inch"
+  },
+  "sections": []
+}

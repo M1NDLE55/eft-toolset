@@ -1,0 +1,26 @@
+{
+  "title": "AR-15 CAR-15 Skinny handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_CAR-15_Skinny_handguard",
+  "revisionId": 343386,
+  "lastEdited": "2026-05-05T20:51:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.15 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+3",
+    "recoil": "+0",
+    "Heat": "+3.4",
+    "Cooling": "-1.1",
+    "loot xp": "20",
+    "exam xp": "5",
+    "node": "68a63ccc8a85019a82087956",
+    "ID": "handguard_ar15_colt_car15_skinny"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "HK USP rail adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_rail_adapter",
+  "revisionId": 215922,
+  "lastEdited": "2022-12-05T15:50:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽1,520",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "node": "6196255558ef8c428c287d1c",
+    "ID": "mount_usp_hk_usp_rail_adapter"
+  },
+  "sections": []
+}

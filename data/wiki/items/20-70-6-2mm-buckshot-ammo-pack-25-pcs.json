@@ -1,0 +1,18 @@
+{
+  "title": "20/70 6.2mm buckshot ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20/70_6.2mm_buckshot_ammo_pack_(25_pcs)",
+  "revisionId": 367133,
+  "lastEdited": "2026-11-02T23:08:43Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570248dcfc010a0f5006a04",
+    "ID": "item_ammo_box_20g_25_buckshot_62"
+  },
+  "sections": []
+}

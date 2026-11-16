@@ -1,0 +1,25 @@
+{
+  "title": "M60E3 7.62x51 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M60E3_7.62x51_flash_hider",
+  "revisionId": 309472,
+  "lastEdited": "2025-04-08T06:59:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.114 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-1",
+    "accuracy": "+4",
+    "recoil": "-6",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "node": "6601281fc752a02bbe05e696",
+    "ID": "muzzle_m60_usord_e3_std_762x51"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "KAC Folding front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KAC_Folding_front_sight",
+  "revisionId": 327057,
+  "lastEdited": "2025-12-07T05:30:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+0.5",
+    "sightrange": "300",
+    "accuracy": "+0",
+    "node": "5c17804b2e2216152006c02f",
+    "ID": "sight_front_all_kac_folding_sight"
+  },
+  "sections": []
+}

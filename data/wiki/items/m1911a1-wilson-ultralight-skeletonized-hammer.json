@@ -1,0 +1,25 @@
+{
+  "title": "M1911A1 Wilson Ultralight skeletonized hammer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_Wilson_Ultralight_skeletonized_hammer",
+  "revisionId": 238551,
+  "lastEdited": "2023-07-12T19:05:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽4,900",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+4",
+    "Dura Burn": "-5",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5ef35bc243cb350a955a7ccd",
+    "ID": "hammer_m1911_wilson_ultralight_skeletonized"
+  },
+  "sections": []
+}

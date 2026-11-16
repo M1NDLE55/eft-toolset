@@ -1,0 +1,21 @@
+{
+  "title": "AKM/AK-74 RD AK to M4 buffer tube adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM/AK-74_RD_AK_to_M4_buffer_tube_adapter",
+  "revisionId": 321679,
+  "lastEdited": "2025-11-16T18:54:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.198 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1",
+    "node": "628a6678ccaab13006640e49",
+    "ID": "stock_ak_rifle_dynamics_ak_to_m4_stock_adapter_gen_2"
+  },
+  "sections": []
+}

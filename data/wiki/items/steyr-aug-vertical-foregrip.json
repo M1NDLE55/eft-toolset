@@ -1,0 +1,24 @@
+{
+  "title": "Steyr AUG vertical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_vertical_foregrip",
+  "revisionId": 342255,
+  "lastEdited": "2026-04-28T21:53:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1: FDE, Peacekeeper LL3: Black",
+    "ergonomics": "+5",
+    "recoil": "-1",
+    "loot xp": "30",
+    "exam xp": "6",
+    "node": "671883292e2eeb98d406f3b8 634e61b0767cb15c4601a877",
+    "ID": "foregrip_aug_steyr_a1_foregrip_blk foregrip_aug_steyr_a1_foregrip"
+  },
+  "sections": []
+}

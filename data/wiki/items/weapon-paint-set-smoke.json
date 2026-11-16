@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Smoke)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Smoke)",
+  "revisionId": 361041,
+  "lastEdited": "2026-09-21T21:08:58Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "6a847704c882b2dce20862bd",
+    "id": "item_camo_stripes_monster_flames_white"
+  },
+  "sections": []
+}

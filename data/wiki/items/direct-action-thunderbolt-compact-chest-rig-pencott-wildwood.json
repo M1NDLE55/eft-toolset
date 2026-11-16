@@ -1,0 +1,29 @@
+{
+  "title": "Direct Action Thunderbolt compact chest rig (PenCott WildWood)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Direct_Action_Thunderbolt_compact_chest_rig_(PenCott_WildWood)",
+  "revisionId": 361584,
+  "lastEdited": "2026-09-23T22:02:00Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.62 kg",
+    "grid": "3x3",
+    "trader": "Ref LL2, after unlocking it in the The Lab Tactical Map",
+    "BlocksArmor": "No",
+    "slots": "16 Slots",
+    "node": "6a565b5f9ec10bc6e30cdf46",
+    "id": "item_equipment_rig_thunderbolt_pencott_wildwood_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

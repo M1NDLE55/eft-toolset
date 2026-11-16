@@ -1,0 +1,32 @@
+{
+  "title": "AR-10 7.62x51 X Products X-25 50-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_7.62x51_X_Products_X-25_50-round_drum_magazine",
+  "revisionId": 338012,
+  "lastEdited": "2026-03-08T00:42:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.69 kg",
+    "grid": "1x2",
+    "ergonomics": "-12",
+    "checkaccuracy": "No",
+    "checkmodifier": "+25",
+    "loadmodifier": "+25",
+    "feedfailure": "Medium",
+    "capacity": "50",
+    "caliber": "7.62x51mm NATO, 6.8x51mm",
+    "node": "6761770e48fa5c377e06fc3c",
+    "ID": "mag_ar10_x_products_x_25_drum_762x51_50"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

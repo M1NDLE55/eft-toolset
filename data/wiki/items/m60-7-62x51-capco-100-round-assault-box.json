@@ -1,0 +1,27 @@
+{
+  "title": "M60 7.62x51 Capco 100-round Assault Box",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M60_7.62x51_Capco_100-round_Assault_Box",
+  "revisionId": 337969,
+  "lastEdited": "2026-03-08T00:22:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.423 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-6",
+    "checkaccuracy": "No",
+    "checkmodifier": "+20",
+    "loadmodifier": "+20",
+    "feedfailure": "Very low",
+    "capacity": "100",
+    "caliber": "7.62x51mm NATO",
+    "node": "660ea4453786cc0af808a1be",
+    "ID": "mag_m60_capco_m60e3_assault_box_762x51_100"
+  },
+  "sections": []
+}

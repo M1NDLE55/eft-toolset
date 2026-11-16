@@ -1,0 +1,44 @@
+{
+  "title": "AR-15 Strike Industries GRIDLOK Extension",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Strike_Industries_GRIDLOK_Extension",
+  "revisionId": 353562,
+  "lastEdited": "2026-08-14T08:05:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.102 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3: Black, after unlocking it in the Factory Tactical Map, Ref LL3: Yellow, after unlocking it in Arena BattlePass Season 2, Ref LL3: Red, after unlocking it in Echo Belli crate",
+    "ergonomics": "+2",
+    "Heat": "-0.6",
+    "Cooling": "-0.3",
+    "node": "68a6e8fd4ac5b037cb0e9b86 68a6ff732885e0bbd30bb6f9 68a6ff952885e0bbd30bb6fd",
+    "ID": "mount_ar15_strike_industries_gridlok_extention_blk mount_ar15_strike_industries_gridlok_extention_yellow mount_ar15_strike_industries_gridlok_extention_red"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Black variant",
+      "level": 4,
+      "text": "- Factory Tactical Map"
+    },
+    {
+      "heading": "Yellow variant",
+      "level": 4,
+      "text": "- Arena BattlePass Season 2 level 26\n- 5 Battle Points"
+    },
+    {
+      "heading": "Red variant",
+      "level": 4,
+      "text": "- Echo Belli crate"
+    }
+  ]
+}

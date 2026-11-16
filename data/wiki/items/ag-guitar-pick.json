@@ -1,0 +1,25 @@
+{
+  "title": "AG guitar pick",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AG_guitar_pick",
+  "revisionId": 289567,
+  "lastEdited": "2024-09-01T12:19:07Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "638df4cc7b560b03794a18d2",
+    "id": "item_quest_c7_mel"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Audiophile from Ragman"
+    }
+  ]
+}

@@ -461,3 +461,109 @@
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
+/*
+ * Item page cards (src/app/components/item/card-grid.tsx). Columns follow the grid's own width:
+ * two on phones (where only figures sit side by side), then two, three and four. A card spans its
+ * width in columns, capped at the columns there are. Once card-grid.tsx has measured the cards it
+ * sets data-packed and places each card itself, on 4px rows with no gap.
+ */
+.item-grid-host {
+  container-type: inline-size;
+}
+
+.item-grid {
+  --cols: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  gap: 12px;
+}
+
+.item-grid > [data-card] {
+  grid-column: span 2;
+}
+
+.item-grid > [data-card][data-stat] {
+  grid-column: span 1;
+}
+
+.item-grid[data-packed] {
+  grid-auto-rows: 4px;
+  row-gap: 0;
+}
+
+.item-grid[data-packed] > [data-card] {
+  padding-bottom: 12px;
+}
+
+@container (min-width: 520px) {
+  .item-grid > [data-card][data-w="1"] {
+    grid-column: span 1;
+  }
+}
+
+@container (min-width: 760px) {
+  .item-grid {
+    --cols: 3;
+  }
+  .item-grid > [data-card][data-w="1"] {
+    grid-column: span 1;
+  }
+  .item-grid > [data-card][data-w="2"] {
+    grid-column: span 2;
+  }
+  .item-grid > [data-card][data-w="3"],
+  .item-grid > [data-card][data-w="4"] {
+    grid-column: span 3;
+  }
+}
+
+@container (min-width: 1060px) {
+  .item-grid {
+    --cols: 4;
+  }
+  .item-grid > [data-card][data-w="3"] {
+    grid-column: span 3;
+  }
+  .item-grid > [data-card][data-w="4"] {
+    grid-column: span 4;
+  }
+}
+
+/* Where a dragged card will land (card-grid.tsx): a bar in the gap beside or above the card. */
+.item-grid > [data-drop]::after {
+  content: "";
+  position: absolute;
+  background: #c8b384;
+  pointer-events: none;
+}
+
+.item-grid > [data-drop="left"]::after,
+.item-grid > [data-drop="right"]::after {
+  top: 0;
+  bottom: 12px;
+  width: 3px;
+}
+
+.item-grid > [data-drop="left"]::after {
+  left: -8px;
+}
+
+.item-grid > [data-drop="right"]::after {
+  right: -8px;
+}
+
+.item-grid > [data-drop="top"]::after,
+.item-grid > [data-drop="bottom"]::after {
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.item-grid > [data-drop="top"]::after {
+  top: -8px;
+}
+
+.item-grid > [data-drop="bottom"]::after {
+  bottom: 4px;
+}

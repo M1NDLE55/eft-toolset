@@ -1,0 +1,21 @@
+{
+  "title": "M60E6 trigger group",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M60E6_trigger_group",
+  "revisionId": 337971,
+  "lastEdited": "2026-03-08T00:23:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.098 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1: Black",
+    "ergonomics": "+0",
+    "node": "6615208aa031cbb5570e346a (Black) 66152153a031cbb5570e346f (FDE)",
+    "ID": "pistolgrip_m60_usord_m60e6_trigger_group pistolgrip_m60_usord_m60e6_trigger_group_fde"
+  },
+  "sections": []
+}

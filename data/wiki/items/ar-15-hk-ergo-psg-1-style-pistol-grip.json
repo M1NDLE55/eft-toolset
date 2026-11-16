@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 HK Ergo PSG-1 style pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_HK_Ergo_PSG-1_style_pistol_grip",
+  "revisionId": 356761,
+  "lastEdited": "2026-08-29T19:51:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4 after completing his task Gunsmith Master - Part 1",
+    "ergonomics": "+5",
+    "recoil": "-1.5",
+    "node": "5d025cc1d7ad1a53845279ef",
+    "ID": "pistolgrip_ar15_hk_ergo_psg1_style_grip"
+  },
+  "sections": []
+}

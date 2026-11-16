@@ -1,0 +1,25 @@
+{
+  "title": "Station 14-4 KORD Arshavin K. pass (Damaged)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Station_14-4_KORD_Arshavin_K._pass_(Damaged)",
+  "revisionId": 339321,
+  "lastEdited": "2026-03-27T23:58:26Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "68c721ef980898142c0b3c5a",
+    "id": "q_card_taah_card_arshavin_broken"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "title": "5.45x39mm US gs",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_US_gs",
+  "revisionId": 322803,
+  "lastEdited": "2025-11-18T21:21:29Z",
+  "kind": "ammo",
+  "categories": [
+    "5.45x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽79",
+    "trader": "Prapor LL1",
+    "velocity": "303 m/s",
+    "damage": "65",
+    "recoil": "-15",
+    "penetration": "17",
+    "armor damage": "33",
+    "ricochet": "40%",
+    "durability burn": "-20",
+    "heat": "+32.8",
+    "feedfailure": "Very low",
+    "misfire": "Very low",
+    "effects": "Subsonic",
+    "node": "56dff4ecd2720b5f5a8b4568",
+    "id": "patron_545x39_US"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

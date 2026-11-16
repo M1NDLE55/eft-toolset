@@ -1,0 +1,21 @@
+{
+  "title": "AK-12 handguard type rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_handguard_type_rail",
+  "revisionId": 323274,
+  "lastEdited": "2025-11-19T20:29:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.045 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-0.1",
+    "node": "5beecbb80db834001d2c465e",
+    "ID": "mount_rpk16_izhmash_rpk16_side_rail"
+  },
+  "sections": []
+}

@@ -1,0 +1,32 @@
+{
+  "title": "F-1 hand grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/F-1_hand_grenade",
+  "revisionId": 358732,
+  "lastEdited": "2026-09-10T23:00:50Z",
+  "kind": "item",
+  "categories": [
+    "Fragmentation grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Fragmentation grenade",
+    "weight": "0.6 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "explosion delay": "3.5s",
+    "explosion distance": "3-7 meters",
+    "concussion distance": "12 meters",
+    "fragments count": "90x",
+    "node": "5710c24ad2720bc3458b45a3",
+    "ID": "weapon_grenade_f1"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Grenade box\n- Wooden crate\n- Weapon box (6x2)\n- Buried barrel cache\n- Ground cache\n- Common fund stash"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Basmach leather cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Basmach_leather_cap",
+  "revisionId": 318675,
+  "lastEdited": "2025-09-27T01:31:34Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "65749ccf33fdc9c0cf06d3ca",
+    "id": "item_equipment_head_wild_security_leathercap"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Kaban's bodyguard Basmach"
+    }
+  ]
+}

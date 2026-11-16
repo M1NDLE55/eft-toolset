@@ -1,0 +1,29 @@
+{
+  "title": "NFM HJELM helmet (Hellhound Grey)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NFM_HJELM_helmet_(Hellhound_Grey)",
+  "revisionId": 344330,
+  "lastEdited": "2026-05-24T22:00:49Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.8 kg",
+    "grid": "2x2",
+    "trader": "Ref LL1",
+    "material": "Combined materials",
+    "armor": "3",
+    "armor coverage": "Head top, Nape",
+    "durability": "78",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "61bca7cda0eae612383adf57",
+    "id": "item_equipment_helmet_nfm_hjelm"
+  },
+  "sections": []
+}

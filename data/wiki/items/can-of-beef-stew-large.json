@@ -1,0 +1,28 @@
+{
+  "title": "Can of beef stew (Large)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_beef_stew_(Large)",
+  "revisionId": 366114,
+  "lastEdited": "2026-10-28T22:01:29Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.378 kg",
+    "grid": "1x1",
+    "price": "₽1,150",
+    "effect": "Energy: +50, Hydration: -5",
+    "use time": "5s",
+    "node": "57347da92459774491567cf5",
+    "id": "beefstew"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Ration supply crates\n- In Sport bags"
+    }
+  ]
+}

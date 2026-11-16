@@ -1,0 +1,31 @@
+{
+  "title": "DRD body armor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DRD_body_armor",
+  "revisionId": 346771,
+  "lastEdited": "2026-06-13T21:20:57Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "4 kg",
+    "grid": "3x3",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back Sides",
+    "durability": "120",
+    "penalties": "-1% movement speed, -1% turn speed, -1% Ergonomics",
+    "node": "62a09d79de7ac81993580530",
+    "id": "item_equipment_armor_drd"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The item is a reference to the content creator Dr. Disrespect."
+    }
+  ]
+}

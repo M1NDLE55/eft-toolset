@@ -1,0 +1,38 @@
+{
+  "title": "5.56x45mm HP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_HP",
+  "revisionId": 322866,
+  "lastEdited": "2025-11-18T21:30:01Z",
+  "kind": "ammo",
+  "categories": [
+    "5.56x45mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "price": "₽58",
+    "trader": "Jaeger LL1",
+    "velocity": "947 m/s",
+    "damage": "79",
+    "penetration": "7",
+    "armor damage": "22",
+    "ricochet": "20%",
+    "l bleed chance": "+15",
+    "h bleed chance": "+15",
+    "heat": "+55.8",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "59e6927d86f77411da468256",
+    "id": "patron_556x45_55_HP"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Highway poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Highway_poster",
+  "revisionId": 331643,
+  "lastEdited": "2026-01-07T19:39:15Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a0fbbb98bf391510bafcd",
+    "id": "item_barter_flyers_forest1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

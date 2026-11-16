@@ -1,0 +1,30 @@
+{
+  "title": "IWI UZI PRO SMG 9x19 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/IWI_UZI_PRO_SMG_9x19_submachine_gun",
+  "revisionId": 340938,
+  "lastEdited": "2026-04-22T21:59:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "1.908 kg",
+    "grid": "3x1",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "83",
+    "velocity": "431 m/s",
+    "range": "100 m",
+    "MOA": "6.26",
+    "Weaprecoil": "Vertical: 54, Horizontal: 189",
+    "rof": "1075",
+    "caliber": "9x19mm Parabellum",
+    "node": "668e71a8dadf42204c032ce1",
+    "ID": "weapon_iwi_uzi_pro_smg_9x19"
+  },
+  "sections": []
+}

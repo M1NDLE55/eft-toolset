@@ -1,0 +1,27 @@
+{
+  "title": "AR-15 KAC URX 3 8 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_KAC_URX_3_8_inch_handguard",
+  "revisionId": 342056,
+  "lastEdited": "2026-04-28T00:41:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.168 kg",
+    "grid": "2x1",
+    "price": "₽16,700",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+7",
+    "recoil": "+0",
+    "Heat": "+1.8",
+    "Cooling": "+4.3",
+    "loot xp": "20",
+    "exam xp": "3",
+    "node": "5d123102d7ad1a004e475fe5",
+    "ID": "handguard_ar15_kac_urx_3_8_inch"
+  },
+  "sections": []
+}

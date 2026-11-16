@@ -1,0 +1,29 @@
+{
+  "title": "RPK-16 5.45x39 15 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPK-16_5.45x39_15_inch_barrel",
+  "revisionId": 340878,
+  "lastEdited": "2026-04-22T08:50:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.540 kg",
+    "grid": "2x1",
+    "price": "₽12,200",
+    "trader": "Prapor LL4",
+    "ergonomics": "-16",
+    "velocity": "-8",
+    "MOA": "1.65",
+    "recoil": "-7.4",
+    "Heat": "+2",
+    "Cooling": "+3",
+    "loot xp": "20",
+    "exam xp": "6",
+    "node": "5beec1bd0db834001e6006f3",
+    "ID": "barrel_rpk16_izhmash_370mm"
+  },
+  "sections": []
+}

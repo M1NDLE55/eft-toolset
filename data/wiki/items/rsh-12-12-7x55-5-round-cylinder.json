@@ -1,0 +1,25 @@
+{
+  "title": "RSh-12 12.7x55 5-round cylinder",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RSh-12_12.7x55_5-round_cylinder",
+  "revisionId": 337900,
+  "lastEdited": "2026-03-07T09:08:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.23 kg",
+    "grid": "1x1",
+    "ergonomics": "-1",
+    "recoil": "-2",
+    "checkaccuracy": "No",
+    "feedfailure": "None",
+    "capacity": "5",
+    "caliber": "12.7x55mm",
+    "node": "633ec6ee025b096d320a3b15",
+    "ID": "mag_rsh12_kbp_rsh12_cylinder_127x55_5"
+  },
+  "sections": []
+}

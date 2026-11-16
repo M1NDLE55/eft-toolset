@@ -1,0 +1,47 @@
+{
+  "title": "Phased array element",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Phased_array_element",
+  "revisionId": 364447,
+  "lastEdited": "2026-10-13T23:32:45Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "1.7 kg",
+    "grid": "2x2",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5d03775b86f774203e7e0c4b",
+    "ID": "item_barter_electr_phaseantenna"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the air-raid/bomb shelters' table\n- West side near APC inside fridge and on tables around tanks\n- West side on the APC closer to the RB-ST room\n- White Knight/west motor pool building 3rd floor on chair at end of hallway after stairs\n- In Black Knight/east motor pool building on first floor, 3rd room on the left from main entrance\n- Behind the RB-AK key on the shelves\n- White King/HQ building, first floor electronics room with ladder\n- In the RB-ST room on a stack of green crates in Reserve\n- In the marked rooms (RB-BK and RB-VO)\n- In the underground room outside D-2 on the server racks"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- In the USEC Villa, rightside room with washer and dryer.\n- In the USEC Villa, in the garge.\n- In the USEC VIlla, in the basement pool.\n- In the 3rd WTP-Building inside a broken box next to the upper office.\n- In the operating room, west building of water treatment plant, as loose loot on the table with the laptop immediately on the left after entering the room, requires Operating room key.\n- In the water treatment plant as loose loot: lower left side of the plant near the gun emplacement there's a tent with an APC, beside it there's a table with a white battery charger, the array can spawn beside it."
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Make an Impression"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The shortname \"AESA\" is short for \"Active Electronically Scanned Array\""
+    }
+  ]
+}

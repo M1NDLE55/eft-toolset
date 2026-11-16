@@ -1,0 +1,38 @@
+{
+  "title": "SIG MPX 9x19 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_MPX_9x19_submachine_gun",
+  "revisionId": 363050,
+  "lastEdited": "2026-10-03T16:39:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "2.882 kg",
+    "grid": "4x2",
+    "trader": "Ref LL1, Peacekeeper LL2: Standard, Peacekeeper LL2: Silenced variant, after completing his task One Less Loose End, Mechanic LL3: Illusion 9 suppressor variant",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "78.15",
+    "velocity": "335 m/s",
+    "range": "500 m",
+    "MOA": "5",
+    "Weaprecoil": "Vertical: 37, Horizontal: 193",
+    "rof": "850",
+    "caliber": "9x19mm Parabellum",
+    "def mag": "MPX 9x19 30-round magazine",
+    "node": "58948c8e86f77409493f7266",
+    "ID": "weapon_sig_mpx_9x19"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant | Attachments |\n| MPX MQB | |\n| MPX Silenced | 2x |"
+    }
+  ]
+}

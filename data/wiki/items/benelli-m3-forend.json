@@ -1,0 +1,23 @@
+{
+  "title": "Benelli M3 forend",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Benelli_M3_forend",
+  "revisionId": 253865,
+  "lastEdited": "2023-11-02T23:29:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.136 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "+8",
+    "Heat": "+2",
+    "Cooling": "-1",
+    "node": "6259c4347d6aab70bc23a190",
+    "ID": "handguard_m3_benelli_forend_std"
+  },
+  "sections": []
+}

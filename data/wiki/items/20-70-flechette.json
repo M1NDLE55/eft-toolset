@@ -1,0 +1,37 @@
+{
+  "title": "20/70 flechette",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20/70_flechette",
+  "revisionId": 322825,
+  "lastEdited": "2025-11-18T21:26:17Z",
+  "kind": "ammo",
+  "categories": [
+    "20/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Buckshot",
+    "weight": "0.035 kg",
+    "grid": "1x1",
+    "velocity": "400 m/s",
+    "damage": "20",
+    "accuracy": "-10",
+    "projectiles": "8",
+    "penetration": "24",
+    "armor damage": "24",
+    "ricochet": "0%",
+    "durability burn": "+55",
+    "heat": "+113",
+    "feedfailure": "Very low",
+    "misfire": "High",
+    "node": "6601380580e77cfd080e3418",
+    "id": "patron_20x70_flechette"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

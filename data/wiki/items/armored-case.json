@@ -1,0 +1,35 @@
+{
+  "title": "Armored case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armored_case",
+  "revisionId": 339380,
+  "lastEdited": "2026-03-28T00:11:42Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "7 kg",
+    "grid": "4x4",
+    "node": "67bde59edb4b617a6c0d69f8 68fa8e253666e2fd5b00a626 68dfc07da7cfeed3e60204e7",
+    "id": "q_skyf5_armoredcase q_skyf51_keeper_hard_v2 q_meh_armored_case_openable"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Destroyed after unpacking (Right-click \"unpack\")"
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Falling Skies"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "The case always contains the Kruglov's RFID keycard, a colored keycard, two TerraGroup Labs access keycards, a random amount of Euros and any two of the following items: Golden egg, Golden neck chain, Gold skull ring, Roler Submariner gold wrist watch."
+    }
+  ]
+}

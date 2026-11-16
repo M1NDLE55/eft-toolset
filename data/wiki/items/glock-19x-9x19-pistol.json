@@ -1,0 +1,31 @@
+{
+  "title": "Glock 19X 9x19 pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_19X_9x19_pistol",
+  "revisionId": 340924,
+  "lastEdited": "2026-04-22T21:52:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.698 kg",
+    "grid": "2x1",
+    "trader": "Skier LL2",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "96.5",
+    "velocity": "377 m/s",
+    "range": "50 m",
+    "MOA": "10.31",
+    "Weaprecoil": "Vertical: 294, Horizontal: 244",
+    "rof": "30",
+    "caliber": "9x19mm Parabellum",
+    "node": "63088377b5cd696784087147",
+    "ID": "weapon_glock_glock_19x_9x19"
+  },
+  "sections": []
+}

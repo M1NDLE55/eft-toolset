@@ -1,0 +1,24 @@
+{
+  "title": "AK Kiba Arms VDM CS gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Kiba_Arms_VDM_CS_gas_tube",
+  "revisionId": 273853,
+  "lastEdited": "2024-03-10T14:48:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+0",
+    "recoil": "+0",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "node": "5a01ad4786f77450561fda02",
+    "ID": "gas_block_ak_custom_ak_cut"
+  },
+  "sections": []
+}

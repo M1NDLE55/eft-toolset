@@ -1,0 +1,56 @@
+{
+  "title": "Golden rooster figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Golden_rooster_figurine",
+  "revisionId": 362939,
+  "lastEdited": "2026-10-03T11:20:43Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "3.8 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "node": "5bc9bc53d4351e00367fbcee",
+    "id": "item_barter_valuable_chicken"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On shelves in the repair shop"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In saferoom exfil (#11SR)"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In Manager office\n- In Arsenal storage room"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the abandoned village (flooded church)"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In East wing room 310\n- In West wing room 220"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - The description and the rooster graphic are a reference to the content creator ChickenPrism."
+    }
+  ]
+}

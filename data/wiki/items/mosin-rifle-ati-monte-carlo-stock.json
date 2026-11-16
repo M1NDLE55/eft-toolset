@@ -1,0 +1,24 @@
+{
+  "title": "Mosin Rifle ATI Monte Carlo stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_ATI_Monte_Carlo_stock",
+  "revisionId": 366568,
+  "lastEdited": "2026-10-31T04:23:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.2 kg",
+    "grid": "4x1",
+    "trader": "Jaeger LL3 after completing his task The Tarkov Shooter - Part 4",
+    "ergonomics": "+22",
+    "recoil": "-24",
+    "Heat": "-3.9",
+    "Cooling": "+4.3",
+    "node": "5bbdb870d4351e00367fb67d",
+    "ID": "stock_mosin_ati_monte_carlo"
+  },
+  "sections": []
+}

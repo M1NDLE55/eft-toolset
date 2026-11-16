@@ -1,0 +1,35 @@
+{
+  "title": "GP coin",
+  "url": "https://escapefromtarkov.fandom.com/wiki/GP_coin",
+  "revisionId": 366971,
+  "lastEdited": "2026-11-01T20:59:09Z",
+  "kind": "item",
+  "categories": [
+    "Currency"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Currency",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "5d235b4d86f7742e017bc88a",
+    "id": "item_barter_valuable_gp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Stacks to 100\n- Only 10 can be brought into a raid\n- Only 10 can be held in a raid inventory at the same time\n- Spawns in stacks of 8-22"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Chumming\n- 5 can be obtained as a quest reward from The Huntsman Path - Crooked Cop\n- 20 can be obtained as a quest reward from The Huntsman Path - Relentless\n- All quests from Ref provide varying amounts based on the player's Intelligence center level"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: GP is a reference to one of Battlestate Games' previous games \"Contract Wars\" in which GP (Gold Points) was the premium currency."
+    }
+  ]
+}

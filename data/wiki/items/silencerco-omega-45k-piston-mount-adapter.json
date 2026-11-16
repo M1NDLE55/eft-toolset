@@ -1,0 +1,21 @@
+{
+  "title": "SilencerCo Omega 45k Piston Mount adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SilencerCo_Omega_45k_Piston_Mount_adapter",
+  "revisionId": 246656,
+  "lastEdited": "2023-09-10T04:38:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.141 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+0",
+    "node": "5fc4b97bab884124df0cd5e3",
+    "ID": "muzzle_all_silencerco_omega_45k_piston_adapter_1143x23"
+  },
+  "sections": []
+}

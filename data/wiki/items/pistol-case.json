@@ -1,0 +1,26 @@
+{
+  "title": "Pistol case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pistol_case",
+  "revisionId": 355171,
+  "lastEdited": "2026-08-19T00:54:45Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "0.5 kg",
+    "grid": "2x2",
+    "effect": "Provides 12 inventory slots while only taking up 4",
+    "node": "567143bf4bdc2d1a0f8b4567",
+    "id": "Чемодан"
+  },
+  "sections": [
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Pistol case is a container with the purpose of saving space within the player's inventory. It provides 12 inventory slots in a 4x3 grid and only takes up 4 inventory slots itself. It can only store:\n- Pistols\n- Revolvers\n- Signal pistols\n- Magazines\n- Ammunition"
+    }
+  ]
+}

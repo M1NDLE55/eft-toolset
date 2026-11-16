@@ -1,0 +1,25 @@
+{
+  "title": "Electrical panel layout",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Electrical_panel_layout",
+  "revisionId": 346914,
+  "lastEdited": "2026-06-14T23:55:43Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "68ea998f01b9ce77ac07081c",
+    "id": "item_info_note_terminal_pumpstation_scheme"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket"
+    }
+  ]
+}

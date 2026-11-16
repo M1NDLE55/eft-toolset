@@ -1,0 +1,30 @@
+{
+  "title": "ORSIS T-5000M 7.62x51 5-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ORSIS_T-5000M_7.62x51_5-round_magazine",
+  "revisionId": 337708,
+  "lastEdited": "2026-03-06T01:38:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.35 kg",
+    "grid": "1x1",
+    "price": "₽1,950",
+    "trader": "Skier LL3",
+    "ergonomics": "+0.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "-15",
+    "loadmodifier": "-25",
+    "feedfailure": "Very low",
+    "capacity": "5",
+    "caliber": "7.62x51mm NATO",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "5df25b6c0b92095fd441e4cf",
+    "ID": "mag_t5000_orsis_t5000_std_5_762x51"
+  },
+  "sections": []
+}

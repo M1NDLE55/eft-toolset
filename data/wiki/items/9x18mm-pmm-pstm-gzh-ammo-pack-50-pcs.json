@@ -1,0 +1,18 @@
+{
+  "title": "9x18mm PMM PstM gzh ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PMM_PstM_gzh_ammo_pack_(50_pcs)",
+  "revisionId": 367275,
+  "lastEdited": "2026-11-02T23:16:18Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702640cfc010a0f5006a4d",
+    "ID": "item_ammo_box_9x18_50_pstm"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "SilencerCo Omega 45k .45 ACP sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SilencerCo_Omega_45k_.45_ACP_sound_suppressor",
+  "revisionId": 337760,
+  "lastEdited": "2026-03-06T02:02:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.270 kg",
+    "grid": "2x1",
+    "price": "₽42,272",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-10",
+    "velocity": "+0.6",
+    "recoil": "-3",
+    "Dura Burn": "+70",
+    "Heat": "+13",
+    "node": "5fc4b9b17283c4046c5814d7",
+    "ID": "silencer_base_silencerco_omega_45k_1143x23"
+  },
+  "sections": []
+}

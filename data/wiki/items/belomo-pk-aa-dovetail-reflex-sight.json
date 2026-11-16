@@ -1,0 +1,26 @@
+{
+  "title": "BelOMO PK-AA dovetail reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BelOMO_PK-AA_dovetail_reflex_sight",
+  "revisionId": 304964,
+  "lastEdited": "2025-01-31T14:55:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.45 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "0",
+    "ergonomics": "-4",
+    "modes": "1",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "6113d6c3290d254f5e6b27db",
+    "ID": "scope_dovetail_belomo_pk_aa"
+  },
+  "sections": []
+}

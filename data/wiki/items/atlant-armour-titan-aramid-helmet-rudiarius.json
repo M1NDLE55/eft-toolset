@@ -1,0 +1,35 @@
+{
+  "title": "Atlant Armour Titan Aramid helmet (Rudiarius)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Atlant_Armour_Titan_Aramid_helmet_(Rudiarius)",
+  "revisionId": 348689,
+  "lastEdited": "2026-07-30T22:31:35Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "3.42 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 2",
+    "material": "Combined materials",
+    "armor": "Head top, Nape: 4 , Ears, Jaws, Face: 3",
+    "armor coverage": "Head top, Nape, Ears, Jaws, Face",
+    "durability": "78",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -3% Ergonomics, No sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksFaceCover": "No",
+    "node": "69ce70ff49b447e32200cc1c",
+    "id": "item_equipment_helmet_atlant_armor_titan_champion_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "title": "6B13 assault armor (Flora)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B13_assault_armor_(Flora)",
+  "revisionId": 357620,
+  "lastEdited": "2026-09-02T05:44:55Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "2.8 kg",
+    "grid": "3x4",
+    "trader": "Ragman LL2 after completing his task Sew it Good - Part 1",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Groin",
+    "default plates": "1x , 1x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "108",
+    "penalties": "-1% movement speed, +0% turn speed, -1% Ergonomics",
+    "node": "5c0e51be86f774598e797894",
+    "ID": "item_equipment_armor_6b13_flora"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

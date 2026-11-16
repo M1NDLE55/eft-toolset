@@ -1,0 +1,21 @@
+{
+  "title": "MeproLight Mepro red dot mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MeproLight_Mepro_red_dot_mount",
+  "revisionId": 338504,
+  "lastEdited": "2026-03-15T15:09:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.132 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-0.2",
+    "node": "688a0bf28cdd409ce60911ce",
+    "ID": "mount_all_meprolight_mepro_m21_mount"
+  },
+  "sections": []
+}

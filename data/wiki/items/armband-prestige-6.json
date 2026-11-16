@@ -1,0 +1,26 @@
+{
+  "title": "Armband (Prestige 6)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Prestige_6)",
+  "revisionId": 363596,
+  "lastEdited": "2026-10-07T19:10:19Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "68d65766916a108d7a023c98",
+    "id": "item_equipment_armband_prestige_6"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only obtainable by reaching Prestige level 6."
+    }
+  ]
+}

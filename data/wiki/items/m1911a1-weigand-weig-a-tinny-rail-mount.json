@@ -1,0 +1,23 @@
+{
+  "title": "M1911A1 Weigand Weig-a-tinny rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_Weigand_Weig-a-tinny_rail_mount",
+  "revisionId": 282480,
+  "lastEdited": "2024-07-06T20:57:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-1",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5ef5d994dfbc9f3c660ded95",
+    "ID": "mount_m1911_weigand_weig_a_tinny_1911_scope_mount"
+  },
+  "sections": []
+}

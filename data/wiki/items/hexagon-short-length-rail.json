@@ -1,0 +1,21 @@
+{
+  "title": "Hexagon short length rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hexagon_short_length_rail",
+  "revisionId": 361807,
+  "lastEdited": "2026-09-24T13:31:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4: Black, Skier LL4: Anodized red",
+    "ergonomics": "-0.15",
+    "node": "5b800ed086f7747baf6e2f9e 5b84038986f774774913b0c1",
+    "ID": "mount_hex_hexagon_short mount_hex_hexagon_short_red"
+  },
+  "sections": []
+}

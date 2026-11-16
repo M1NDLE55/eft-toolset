@@ -1,0 +1,24 @@
+{
+  "title": "Shotgun paint set (M/98) Gold",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shotgun_paint_set_(M/98)_Gold",
+  "revisionId": 356788,
+  "lastEdited": "2026-08-29T20:18:35Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "69cd2fc183430e0a1c09754a",
+    "id": "item_camo_norway_gold"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be applied to shotguns."
+    }
+  ]
+}

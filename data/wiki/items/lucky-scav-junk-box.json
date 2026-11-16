@@ -1,0 +1,42 @@
+{
+  "title": "Lucky Scav Junk box",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lucky_Scav_Junk_box",
+  "revisionId": 356691,
+  "lastEdited": "2026-08-28T01:34:22Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "15 kg",
+    "grid": "4x4",
+    "trader": "Therapist LL1",
+    "effect": "Provides 196 inventory slots while only taking up 16",
+    "node": "5b7c710788a4506dec015957",
+    "id": "item_container_junkbox"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Cannot be stored in a backpack."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Lucky Scav Junk box is a container with the purpose of saving space within the player's inventory. It provides 196 inventory slots in a 14x14 grid and only takes up 16 inventory slots itself. It can only store:\n- barter items\n- Posters"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from A Healthy Alternative"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The Lucky Scav Junk box is modeled after the 0500 Protector Transport Case."
+    }
+  ]
+}

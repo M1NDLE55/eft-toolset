@@ -1,0 +1,29 @@
+{
+  "title": "Mosin Carbine 7.62x54R 514mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Carbine_7.62x54R_514mm_barrel",
+  "revisionId": 340882,
+  "lastEdited": "2026-04-22T08:53:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.5 kg",
+    "grid": "3x1",
+    "price": "₽3,920",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-17",
+    "velocity": "-19",
+    "MOA": "2.41",
+    "recoil": "-12.9",
+    "Heat": "-15",
+    "Cooling": "-10",
+    "loot xp": "110",
+    "exam xp": "6",
+    "node": "5bfd4cbe0db834001b73449f",
+    "ID": "barrel_mosin_izhmash_mosin_carabine_514mm"
+  },
+  "sections": []
+}

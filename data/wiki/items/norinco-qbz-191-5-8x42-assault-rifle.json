@@ -1,0 +1,52 @@
+{
+  "title": "Norinco QBZ-191 5.8x42 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Norinco_QBZ-191_5.8x42_assault_rifle",
+  "revisionId": 367580,
+  "lastEdited": "2026-11-05T12:49:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "2.9 kg",
+    "grid": "4x2",
+    "trader": "Skier LL3 after completing Fence's task Sheep in Wolf's Clothing, Skier LL4 after unlocking it in BattlePass Season 1",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "72",
+    "velocity": "748 m/s",
+    "range": "500 m",
+    "MOA": "2.41",
+    "Weaprecoil": "Vertical: 71, Horizontal: 204",
+    "rof": "750",
+    "caliber": "5.8x42mm",
+    "node": "69f9ebbcaae020b0db02f65d",
+    "ID": "weapon_norinco_qbz191_58x42"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "BattlePass Requirements",
+      "level": 2,
+      "text": "- BattlePass Season 1 page 12\n- 29 Documents"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division"
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| QBZ-191 QBZ-192 |"
+    }
+  ]
+}

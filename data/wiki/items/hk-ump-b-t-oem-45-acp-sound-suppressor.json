@@ -1,0 +1,26 @@
+{
+  "title": "HK UMP B&T OEM .45 ACP sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_UMP_B%26T_OEM_.45_ACP_sound_suppressor",
+  "revisionId": 268812,
+  "lastEdited": "2024-02-05T17:50:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.453 kg",
+    "grid": "2x1",
+    "price": "$405",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-16",
+    "velocity": "+0.8",
+    "recoil": "-8",
+    "Dura Burn": "+70",
+    "Heat": "+13",
+    "node": "6130c4d51cb55961fa0fd49f",
+    "ID": "silencer_ump_b&t_ump_45_1143x23"
+  },
+  "sections": []
+}

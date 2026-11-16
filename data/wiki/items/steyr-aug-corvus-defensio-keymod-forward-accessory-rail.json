@@ -1,0 +1,21 @@
+{
+  "title": "Steyr AUG Corvus Defensio KeyMod Forward Accessory Rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_Corvus_Defensio_KeyMod_Forward_Accessory_Rail",
+  "revisionId": 314380,
+  "lastEdited": "2025-06-19T22:40:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.057 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-1",
+    "node": "6711107e1ad01bb88705347e",
+    "ID": "mount_aug_corvus_defencio_forward_accessory_rail_keymod"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "AKMS folding stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKMS_folding_stock",
+  "revisionId": 340420,
+  "lastEdited": "2026-04-20T15:06:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "ergonomics": "+13",
+    "recoil": "-19.5",
+    "node": "59ff3b6a86f77477562ff5ed",
+    "ID": "stock_akms_izhmash_akms_std"
+  },
+  "sections": []
+}

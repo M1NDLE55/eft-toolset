@@ -1,0 +1,23 @@
+{
+  "title": "M14 SAGE International M14ALCS (MOD-0) stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_SAGE_International_M14ALCS_(MOD-0)_stock",
+  "revisionId": 340820,
+  "lastEdited": "2026-04-22T08:13:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.004 kg",
+    "grid": "2x1",
+    "price": "₽18,000",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+20",
+    "recoil": "-19",
+    "node": "5addc7ac5acfc400194dbd90",
+    "ID": "stock_m14_sage_ebr_m14alcs_buttstock"
+  },
+  "sections": []
+}

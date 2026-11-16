@@ -1,0 +1,24 @@
+{
+  "title": "Glock TruGlo TFX front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_TruGlo_TFX_front_sight",
+  "revisionId": 276069,
+  "lastEdited": "2024-04-15T21:53:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "price": "₽1,000",
+    "trader": "Mechanic LL1",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5a7d9104159bd400134c8c21",
+    "ID": "sight_front_glock_truglo_tfx_glock_sight"
+  },
+  "sections": []
+}

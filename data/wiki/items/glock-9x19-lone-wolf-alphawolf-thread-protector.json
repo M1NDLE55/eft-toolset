@@ -1,0 +1,22 @@
+{
+  "title": "Glock 9x19 Lone Wolf AlphaWolf thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_Lone_Wolf_AlphaWolf_thread_protector",
+  "revisionId": 337474,
+  "lastEdited": "2026-03-05T23:13:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+2",
+    "Dura Burn": "-2",
+    "node": "5a6b585a8dc32e5a9c28b4f1",
+    "ID": "muzzle_glock_alpha_wolf_thread_protector_9x19"
+  },
+  "sections": []
+}

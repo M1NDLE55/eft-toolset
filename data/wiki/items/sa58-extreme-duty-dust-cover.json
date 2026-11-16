@@ -1,0 +1,26 @@
+{
+  "title": "SA58 Extreme Duty dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_Extreme_Duty_dust_cover",
+  "revisionId": 340832,
+  "lastEdited": "2026-04-22T08:20:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.215 kg",
+    "grid": "2x1",
+    "price": "₽11,100",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+4",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "node": "5b099bb25acfc400186331e8",
+    "ID": "reciever_sa58_ds_arms_extreme_duty_scope_mount_extended"
+  },
+  "sections": []
+}

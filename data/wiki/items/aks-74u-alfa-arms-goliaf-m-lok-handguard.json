@@ -1,0 +1,25 @@
+{
+  "title": "AKS-74U Alfa Arms Goliaf M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74U_Alfa_Arms_Goliaf_M-LOK_handguard",
+  "revisionId": 342374,
+  "lastEdited": "2026-04-29T00:53:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+15",
+    "recoil": "+0",
+    "Heat": "+1",
+    "Cooling": "+8.1",
+    "loot xp": "10",
+    "node": "647db1eca8d3399c380d195c",
+    "ID": "handguard_aks74u_alfa_arms_goliaf_m_lok"
+  },
+  "sections": []
+}

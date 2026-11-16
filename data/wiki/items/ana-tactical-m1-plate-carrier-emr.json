@@ -1,0 +1,42 @@
+{
+  "title": "ANA Tactical M1 plate carrier (EMR)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ANA_Tactical_M1_plate_carrier_(EMR)",
+  "revisionId": 362049,
+  "lastEdited": "2026-09-24T18:52:17Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.95 kg",
+    "grid": "4x4",
+    "trader": "Ref LL2, after unlocking it in the The Lab Tactical Map",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "104",
+    "penalties": "-2% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "20 Slots",
+    "node": "6a576f2105af50743903b74c",
+    "ID": "item_equipment_rig_m1_emr_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

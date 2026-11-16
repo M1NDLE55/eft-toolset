@@ -1,0 +1,23 @@
+{
+  "title": "Deadly Skull mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Deadly_Skull_mask",
+  "revisionId": 344299,
+  "lastEdited": "2026-05-24T21:41:34Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.2 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL4",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "5b432b6c5acfc4001a599bf0",
+    "id": "item_equipment_facecover_skullmask"
+  },
+  "sections": []
+}

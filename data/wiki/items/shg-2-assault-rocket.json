@@ -1,0 +1,23 @@
+{
+  "title": "ShG-2 assault rocket",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ShG-2_assault_rocket",
+  "revisionId": 364277,
+  "lastEdited": "2026-10-13T01:17:24Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammunition"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Thermobaric warhead",
+    "weight": "0.23 kg",
+    "grid": "2x1",
+    "velocity": "144 m/s",
+    "damage": "560",
+    "penetration": "100",
+    "armor damage": "400",
+    "node": "67446fdd752be02c220f27b3",
+    "id": "patron_725"
+  },
+  "sections": []
+}

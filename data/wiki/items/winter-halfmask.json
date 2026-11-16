@@ -1,0 +1,26 @@
+{
+  "title": "Winter halfmask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Winter_halfmask",
+  "revisionId": 320864,
+  "lastEdited": "2025-11-11T20:40:56Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "675ffd9e82487feccd08c4da",
+    "ID": "item_equipment_facecover_shroud_winter"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This mask was added during Escape from Tarkov: Arena's 2024 Christmas Celebration and could be obtained via Twitch Drops."
+    }
+  ]
+}

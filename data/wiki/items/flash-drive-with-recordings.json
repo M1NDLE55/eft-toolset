@@ -1,0 +1,25 @@
+{
+  "title": "Flash drive with recordings",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Flash_drive_with_recordings",
+  "revisionId": 289560,
+  "lastEdited": "2024-09-01T12:18:11Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "node": "638e9d5536b3b72c944e2fc7",
+    "id": "item_quest_c21_look"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Watching You from Mechanic"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "title": "40x46mm M441 (HE) grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/40x46mm_M441_(HE)_grenade",
+  "revisionId": 353115,
+  "lastEdited": "2026-08-10T17:09:31Z",
+  "kind": "ammo",
+  "categories": [
+    "40x46mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Grenade launcher cartridge",
+    "weight": "0.35 kg",
+    "grid": "1x1",
+    "velocity": "76 m/s",
+    "damage": "199",
+    "penetration": "1",
+    "armor damage": "95",
+    "ricochet": "0",
+    "fragmentation": "0",
+    "misfire": "Low",
+    "fuze time": "0.04s",
+    "explosion radius": "1-8 m",
+    "explosion strength": "80",
+    "fragments count": "10x",
+    "effects": "Subsonic, Explosive",
+    "node": "5ede47405b097655935d7d16",
+    "id": "patron_40x46_m441"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "RPK-16 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPK-16_handguard",
+  "revisionId": 340880,
+  "lastEdited": "2026-04-22T08:52:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.167 kg",
+    "grid": "2x1",
+    "price": "₽7,750",
+    "ergonomics": "+13",
+    "recoil": "+0",
+    "Heat": "+3.8",
+    "Cooling": "-3.7",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5beec3e30db8340019619424",
+    "ID": "handguard_rpk16_izhmash_rpk16_std"
+  },
+  "sections": []
+}

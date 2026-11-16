@@ -1,0 +1,41 @@
+{
+  "title": "20/70 7.3mm buckshot",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20/70_7.3mm_buckshot",
+  "revisionId": 322827,
+  "lastEdited": "2025-11-18T21:26:23Z",
+  "kind": "ammo",
+  "categories": [
+    "20/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Buckshot",
+    "weight": "0.032 kg",
+    "grid": "1x1",
+    "price": "₽38",
+    "trader": "Jaeger LL2",
+    "velocity": "475 m/s",
+    "damage": "23",
+    "recoil": "+15",
+    "projectiles": "9",
+    "penetration": "3",
+    "armor damage": "13",
+    "ricochet": "0%",
+    "durability burn": "+30",
+    "heat": "+95.2",
+    "feedfailure": "Very low",
+    "misfire": "Medium",
+    "loot xp": "0",
+    "exam xp": "10",
+    "node": "5d6e69c7a4b9360b6c0d54e4",
+    "id": "patron_20x70_buckshot_73"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

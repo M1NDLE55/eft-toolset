@@ -1,0 +1,30 @@
+{
+  "title": "VPO-101 7.62x51 5-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-101_7.62x51_5-round_magazine",
+  "revisionId": 337606,
+  "lastEdited": "2026-03-06T00:22:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "price": "₽1,100",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+1",
+    "checkaccuracy": "No",
+    "checkmodifier": "-25",
+    "loadmodifier": "-15",
+    "feedfailure": "Very low",
+    "capacity": "5",
+    "caliber": "7.62x51mm NATO",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c503ac82e221602b21d6e9a",
+    "ID": "mag_vepr_molot_308_win_std_762x51_5"
+  },
+  "sections": []
+}

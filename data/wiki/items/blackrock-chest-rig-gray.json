@@ -1,0 +1,34 @@
+{
+  "title": "BlackRock chest rig (Gray)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BlackRock_chest_rig_(Gray)",
+  "revisionId": 352475,
+  "lastEdited": "2026-08-09T12:29:44Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.8 kg",
+    "grid": "3x4",
+    "trader": "Ragman LL3",
+    "BlocksArmor": "No",
+    "slots": "20 Slots",
+    "node": "5648a69d4bdc2ded0b8b457b",
+    "id": "bearRig"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Commonly found on Reshala followers"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Based off of the \"Blackhawk S.T.R.I.K.E. Commando Recon Chest Harness\"."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "SA58 7.62x51 16 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_7.62x51_16_inch_barrel",
+  "revisionId": 340846,
+  "lastEdited": "2026-04-22T08:29:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.609 kg",
+    "grid": "3x1",
+    "price": "₽27,400",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-18",
+    "velocity": "-2",
+    "accuracy": "+0",
+    "MOA": "1.58",
+    "recoil": "-12.2",
+    "Heat": "-6",
+    "Cooling": "-6",
+    "node": "5b7be1125acfc4001876c0e5",
+    "ID": "barrel_sa58_ds_arms_medium_contour_406mm"
+  },
+  "sections": []
+}

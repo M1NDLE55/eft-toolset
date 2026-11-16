@@ -1,0 +1,35 @@
+{
+  "title": "7.62x25mm TT M855A1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x25mm_TT_M855A1",
+  "revisionId": 356351,
+  "lastEdited": "2026-08-26T00:21:34Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x25mm Tokarev ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.013 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "velocity": "900 m/s",
+    "damage": "34",
+    "penetration": "31",
+    "armor damage": "33",
+    "l bleed chance": "+17",
+    "h bleed chance": "+6",
+    "durability burn": "+70",
+    "heat": "+8",
+    "node": "68c15a033173b556890b5959",
+    "id": "patron_762x25tt_timbs_855a1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Analog thermometer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Analog_thermometer",
+  "revisionId": 355154,
+  "lastEdited": "2026-08-19T00:40:36Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5d1b32c186f774252167a530",
+    "ID": "item_barter_building_thermometer"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

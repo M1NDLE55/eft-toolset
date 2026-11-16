@@ -1,0 +1,21 @@
+{
+  "title": "AK Custom Guns CG101 AR-type pistol grip adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Custom_Guns_CG101_AR-type_pistol_grip_adapter",
+  "revisionId": 337938,
+  "lastEdited": "2026-03-07T23:54:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.045 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-0.5",
+    "node": "648ae3e356c6310a830fc291",
+    "ID": "pistolgrip_ak_custom_guns_ak_to_ar15_cg101_adapter"
+  },
+  "sections": []
+}

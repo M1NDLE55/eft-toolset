@@ -1,0 +1,31 @@
+{
+  "title": "Deceased scientist's audio tape",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Deceased_scientist's_audio_tape",
+  "revisionId": 348817,
+  "lastEdited": "2026-08-01T14:50:49Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "1:04",
+    "node": "688897992f6b5b76380e6af9",
+    "ID": "item_info_recorder_tape_labyrinth"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Labyrinth"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "TerraGroup Scientist: This is Nikolay Voronenko speaking. The Labyrinth is the worst technically equipped TerraGroup facility, we have already lost contact with headquarters. Perhaps one of the test subjects cut the cable…\n\nTerraGroup Scientist: The facility was stormed by BEAR mercenaries. To defend the Labyrinth I had to release the test subjects from groups 3 and 12. Judging by the sounds, only the test subjects are left outside now, I can't hear any of the BEARs.\n\nTerraGroup Scientist: The experiments carried out in the Labyrinth are too important and too dangerous to lose the results. So I gathered all the facility documentation into a folder and sent it to the stock.\n\nTerraGroup Scientist: I don't know if I'll make it to the evacuation point… but during the chase I managed to grab a pistol from one of the BEARs. It will be a last resort."
+    }
+  ]
+}

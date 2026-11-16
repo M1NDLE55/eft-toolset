@@ -1,0 +1,37 @@
+{
+  "title": "20/70 6.2mm buckshot",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20/70_6.2mm_buckshot",
+  "revisionId": 322828,
+  "lastEdited": "2025-11-18T21:26:23Z",
+  "kind": "ammo",
+  "categories": [
+    "20/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Buckshot",
+    "weight": "0.032 kg",
+    "grid": "1x1",
+    "price": "₽30",
+    "trader": "Jaeger LL2",
+    "velocity": "410 m/s",
+    "damage": "22",
+    "projectiles": "8",
+    "penetration": "2",
+    "armor damage": "13",
+    "ricochet": "0%",
+    "heat": "+83.9",
+    "feedfailure": "Very low",
+    "misfire": "High",
+    "node": "5d6e69b9a4b9361bc8618958",
+    "id": "patron_20x70_buckshot_62"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

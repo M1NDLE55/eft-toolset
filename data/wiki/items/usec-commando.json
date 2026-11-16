@@ -1,0 +1,22 @@
+{
+  "title": "USEC Commando",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_Commando",
+  "revisionId": 248114,
+  "lastEdited": "2023-09-22T18:01:50Z",
+  "kind": "item",
+  "categories": [
+    "USEC upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d4da0cb86f77450fe0a6629",
+    "ID": "usec_upper_commando"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The sweater is modeled on the British Army Commando Pullover, and the gloves are modeled on the First Tactical Pro Knuckle Glove."
+    }
+  ]
+}

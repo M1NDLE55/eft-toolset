@@ -1,0 +1,25 @@
+{
+  "title": "UZI 9x19 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_9x19_sound_suppressor",
+  "revisionId": 337986,
+  "lastEdited": "2026-03-08T00:30:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.68 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-10",
+    "velocity": "+0.8",
+    "recoil": "-5",
+    "Dura Burn": "+71",
+    "Heat": "+12.5",
+    "node": "66993733f74fef4dfd0b04ff",
+    "ID": "silencer_uzi_iwi_silencer_std_9x19"
+  },
+  "sections": []
+}

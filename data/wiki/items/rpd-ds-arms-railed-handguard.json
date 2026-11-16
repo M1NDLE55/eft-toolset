@@ -1,0 +1,24 @@
+{
+  "title": "RPD DS Arms Railed Handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_DS_Arms_Railed_Handguard",
+  "revisionId": 343412,
+  "lastEdited": "2026-05-06T06:12:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+5",
+    "recoil": "+0",
+    "Heat": "+6",
+    "Cooling": "-4",
+    "node": "68305fdc84a12bb973021fc0",
+    "ID": "handguard_rpd_ds_arms_railed_handguard"
+  },
+  "sections": []
+}

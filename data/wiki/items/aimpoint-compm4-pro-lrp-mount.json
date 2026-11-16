@@ -1,0 +1,21 @@
+{
+  "title": "Aimpoint CompM4/PRO LRP mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aimpoint_CompM4/PRO_LRP_mount",
+  "revisionId": 318925,
+  "lastEdited": "2025-10-03T11:49:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.075 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+0",
+    "node": "5c7d55f52e221644f31bff6a",
+    "ID": "mount_all_aimpoint_lrp_mount"
+  },
+  "sections": []
+}

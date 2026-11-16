@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 CAA SBS stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_CAA_SBS_stock",
+  "revisionId": 357363,
+  "lastEdited": "2026-09-01T13:19:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.276 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2: Black, Khaki tropen",
+    "ergonomics": "+10",
+    "recoil": "-20.5",
+    "node": "6a15bf94e5267ba21c07f9b1 6a15bfa58d059ca69c0a78c0",
+    "ID": "stock_ar15_caa_sbs stock_ar15_caa_sbs_kt"
+  },
+  "sections": []
+}

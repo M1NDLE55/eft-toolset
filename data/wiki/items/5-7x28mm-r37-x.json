@@ -1,0 +1,39 @@
+{
+  "title": "5.7x28mm R37.X",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.7x28mm_R37.X",
+  "revisionId": 322819,
+  "lastEdited": "2025-11-18T21:23:34Z",
+  "kind": "ammo",
+  "categories": [
+    "5.7x28mm FN Ammuntion",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.006 kg",
+    "grid": "1x1",
+    "price": "₽186",
+    "trader": "Mechanic LL2",
+    "velocity": "724 m/s",
+    "damage": "81",
+    "accuracy": "-5",
+    "penetration": "11",
+    "armor damage": "9",
+    "ricochet": "10%",
+    "l bleed chance": "+10",
+    "h bleed chance": "+10",
+    "heat": "-1.7",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "node": "5cc86840d7f00c002412c56c",
+    "id": "patron_57x28_r37x"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

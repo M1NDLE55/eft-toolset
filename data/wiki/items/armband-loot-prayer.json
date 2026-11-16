@@ -1,0 +1,26 @@
+{
+  "title": "Armband (LOOT Prayer)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(LOOT_Prayer)",
+  "revisionId": 348868,
+  "lastEdited": "2026-08-02T02:00:08Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "68f8ccbc4c78615ba6079b20",
+    "id": "item_equipment_armband_loot"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This armband is only available to players who preordered the \"The Unheard\" or \"Edge of Darkness\" edition of the game."
+    }
+  ]
+}

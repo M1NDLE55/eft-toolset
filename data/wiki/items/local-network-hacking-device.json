@@ -1,0 +1,30 @@
+{
+  "title": "Local network hacking device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Local_network_hacking_device",
+  "revisionId": 362433,
+  "lastEdited": "2026-09-29T14:30:19Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "node": "68e63a53371639e1e4004b6e",
+    "id": "item_quest_hacktool_mechanic"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- The device is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as initial equipment during the story chapter Blue Fire\n- 1 can be obtained as initial equipment during the story chapter Boreas"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Wilcox L4G24 NVG Mount (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wilcox_L4G24_NVG_Mount_(Black)",
+  "revisionId": 345404,
+  "lastEdited": "2026-05-28T20:13:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Helmet mods",
+    "Helmet mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet mount",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "689dbded6c7e684817080c29",
+    "ID": "nvg_wilcox_l4g24_mount"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division\n- The Wedge"
+    }
+  ]
+}

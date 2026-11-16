@@ -1,0 +1,25 @@
+{
+  "title": "MSA Sordin Supreme PRO-X/L headset",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MSA_Sordin_Supreme_PRO-X/L_headset",
+  "revisionId": 352927,
+  "lastEdited": "2026-08-09T22:02:16Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.65 kg",
+    "grid": "2x2",
+    "price": "₽18,570",
+    "trader": "Ragman LL3",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "5aa2ba71e5b5b000137b758f",
+    "id": "headphones_MSA"
+  },
+  "sections": []
+}

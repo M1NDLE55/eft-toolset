@@ -1,0 +1,25 @@
+{
+  "title": "AR-15 SLR Rifleworks Sentry 7 gas block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_SLR_Rifleworks_Sentry_7_gas_block",
+  "revisionId": 343102,
+  "lastEdited": "2026-05-03T14:59:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-0.5",
+    "recoil": "-1",
+    "Dura Burn": "-2",
+    "Heat": "-2",
+    "Cooling": "+1.2",
+    "node": "68c16f6883e2d814b0093f7a",
+    "ID": "gas_block_ar15_slr_sentry_7_adjustable"
+  },
+  "sections": []
+}

@@ -1,0 +1,20 @@
+{
+  "title": "AR-15 Radian Weapons Raptor-SD charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Radian_Weapons_Raptor-SD_charging_handle",
+  "revisionId": 341668,
+  "lastEdited": "2026-04-26T20:54:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "ergonomics": "+3.5",
+    "node": "6895bf08e2d16810ba0bf43e",
+    "ID": "charge_ar15_radian_raptor_sd_ambidextrous_charging_handle"
+  },
+  "sections": []
+}

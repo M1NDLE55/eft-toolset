@@ -1,0 +1,26 @@
+{
+  "title": "MP-18 7.62x54R 600mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-18_7.62x54R_600mm_barrel",
+  "revisionId": 342231,
+  "lastEdited": "2026-04-28T21:39:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.35 kg",
+    "grid": "4x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-30",
+    "velocity": "+0",
+    "MOA": "3.09",
+    "recoil": "-15",
+    "Heat": "-10",
+    "Cooling": "-6",
+    "node": "61f4012adfc9f01a816adda1",
+    "ID": "barrel_mp18_600mm_762x54r"
+  },
+  "sections": []
+}

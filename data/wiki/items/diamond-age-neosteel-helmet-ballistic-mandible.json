@@ -1,0 +1,26 @@
+{
+  "title": "Diamond Age NeoSteel helmet ballistic mandible",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Diamond_Age_NeoSteel_helmet_ballistic_mandible",
+  "revisionId": 361508,
+  "lastEdited": "2026-09-23T20:03:19Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "material": "Armor steel",
+    "armor": "3",
+    "armor coverage": "Face, Ears, Jaws, Throat",
+    "durability": "25",
+    "penalties": "-1% movement speed, -2% Ergonomics",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6570a88c8f221f3b210353b7",
+    "id": "item_equipment_helmet_neosteel_mandible"
+  },
+  "sections": []
+}

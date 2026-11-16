@@ -1,0 +1,27 @@
+{
+  "title": "Can of pacific saury",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_pacific_saury",
+  "revisionId": 360880,
+  "lastEdited": "2026-09-20T13:42:58Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.28 kg",
+    "grid": "1x1",
+    "effect": "Energy: +48, Hydration: -2",
+    "use time": "5s",
+    "node": "5673de654bdc2d180f8b456d",
+    "id": "item_food_konserva_fish"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Ration supply crates\n- In Sport bags\n- In Plastic suitcases"
+    }
+  ]
+}

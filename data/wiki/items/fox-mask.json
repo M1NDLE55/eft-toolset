@@ -1,0 +1,26 @@
+{
+  "title": "Fox mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fox_mask",
+  "revisionId": 329232,
+  "lastEdited": "2025-12-24T16:22:44Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "676029f997f19b78f00a0197",
+    "ID": "item_equipment_facecover_xmass_mask_fox"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This face cover first appeared during Escape from Tarkov's 2024 Christmas Celebration."
+    }
+  ]
+}

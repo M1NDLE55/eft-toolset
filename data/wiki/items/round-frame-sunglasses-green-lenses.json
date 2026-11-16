@@ -1,0 +1,28 @@
+{
+  "title": "Round frame sunglasses (Green lenses)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Round_frame_sunglasses_(Green_lenses)",
+  "revisionId": 348532,
+  "lastEdited": "2026-07-30T21:54:25Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.04 kg",
+    "grid": "2x1",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 0",
+    "blindness protect": "20%",
+    "node": "67af42b38d9ef5c57e0d5126",
+    "id": "item_equipment_glasses_round_arena_bp_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

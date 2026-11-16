@@ -1,0 +1,23 @@
+{
+  "title": "Hogue OverMolded Rubber Grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hogue_OverMolded_Rubber_Grip",
+  "revisionId": 340634,
+  "lastEdited": "2026-04-21T09:15:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽3,600",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+5",
+    "recoil": "-1",
+    "node": "57c55efc2459772d2c6271e7 57c55f092459772d291a8463 57c55f112459772d28133310 57c55f172459772d27602381 57af48872459771f0b2ebf11",
+    "ID": "pistolgrip_ar15_hogue_overmolded_blk pistolgrip_ar15_hogue_overmolded_ge pistolgrip_ar15_hogue_overmolded_gg pistolgrip_ar15_hogue_overmolded_od pistolgrip_ar15_hogue_overmolded_fde"
+  },
+  "sections": []
+}

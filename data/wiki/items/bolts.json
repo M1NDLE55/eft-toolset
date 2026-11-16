@@ -1,0 +1,26 @@
+{
+  "title": "Bolts",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bolts",
+  "revisionId": 331941,
+  "lastEdited": "2026-01-09T00:15:19Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.4 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "57347c5b245977448d35f6e1",
+    "id": "screw_bolts"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Dead Scav\n- Ground cache\n- Jacket\n- Sport bag\n- Technical supply crate\n- Toolbox"
+    }
+  ]
+}

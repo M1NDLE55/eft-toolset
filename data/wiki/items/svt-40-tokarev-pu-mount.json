@@ -1,0 +1,21 @@
+{
+  "title": "SVT-40 Tokarev PU mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVT-40_Tokarev_PU_mount",
+  "revisionId": 262820,
+  "lastEdited": "2024-01-05T12:59:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-1",
+    "node": "641dc35e19604f20c800be18",
+    "ID": "mount_svt40_toz_tokarev_pu_base"
+  },
+  "sections": []
+}
