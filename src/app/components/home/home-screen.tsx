@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Bot, Heart, Settings } from "lucide-react";
+import { Settings } from "lucide-react";
 import { ItemSearch } from "@/app/components/global/search/item-search";
 import { itemHref } from "@/app/lib/item-links";
 import { useHydrated } from "@/app/lib/storage/use-store";
@@ -18,9 +18,6 @@ import {
   RecentItemsPanel,
   ToolLinks,
 } from "./panels";
-
-const footLink =
-  "flex items-center gap-2 text-xs uppercase tracking-widest text-[#888] underline-offset-4 hover:text-[#c8b384] hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]";
 
 function HomeSearch({ autoFocus = false, placeholder = "Search any item" }: { autoFocus?: boolean; placeholder?: string }) {
   const router = useRouter();
@@ -130,8 +127,7 @@ const LAYOUTS: Record<HomeLayout, () => React.JSX.Element> = {
   maps: MapsFirst,
 };
 
-/** children: server-rendered content shown under every layout. */
-export function HomeScreen({ children }: { children?: React.ReactNode }) {
+export function HomeScreen() {
   const hydrated = useHydrated();
   const stored = useHomeLayout();
   const Layout = LAYOUTS[hydrated ? stored : DEFAULT_HOME_LAYOUT];
@@ -140,19 +136,13 @@ export function HomeScreen({ children }: { children?: React.ReactNode }) {
     <main className="flex flex-1 flex-col items-center px-4 pb-12">
       <h1 className="sr-only">EFT Toolset: Escape from Tarkov flea market prices, interactive maps and gun builder</h1>
       <Layout />
-      {children}
-      <div className="mt-8 flex flex-col items-center gap-3">
-        <Link href="/mcp" className={footLink}>
-          <Bot className="h-4 w-4 text-[#9a8866]" />
-          Use every tool from Claude and other AI assistants
-        </Link>
-        <Link href="/credits" className={footLink}>
-          <Heart className="h-4 w-4 text-[#9a8866]" />
-          Check out the awesome tools powering EFT Toolset
-        </Link>
-        <Link href="/settings" className={footLink}>
-          <Settings className="h-4 w-4 text-[#9a8866]" />
-          Change this home screen
+      <div className="mt-4 flex w-full max-w-5xl justify-end">
+        <Link
+          href="/settings"
+          className="flex items-center gap-1.5 text-xs text-[#666] transition-colors hover:text-[#c8b384] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+        >
+          <Settings className="h-3.5 w-3.5" aria-hidden />
+          Customise home
         </Link>
       </div>
     </main>
