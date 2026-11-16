@@ -47,7 +47,7 @@ export default async function Page({ params }: PageProps) {
     if (await isCrawlerRequest()) throw new AmmoUnavailableError();
     return <p className="text-sm text-[#888]">Ammo data is temporarily unavailable. Try again in a moment.</p>;
   }
-  const { caliber, calibers, gameMode } = found;
+  const { caliber, gameMode } = found;
   if (!caliber) notFound();
   const faq = caliberFaq(caliber);
   const weapons = ((await readForRender("Ammo weapons", () => listBestBuildWeapons("regular"))) ?? [])
@@ -109,23 +109,6 @@ export default async function Page({ params }: PageProps) {
           </ul>
         </nav>
       )}
-      <nav aria-label="Other calibres" className="flex flex-col gap-2">
-        <h2 className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">Other calibres</h2>
-        <ul className="flex flex-wrap gap-2">
-          {calibers
-            .filter((entry) => entry.id !== caliber.id)
-            .map((entry) => (
-              <li key={entry.id}>
-                <Link
-                  href={`/ammo/${entry.slug}`}
-                  className="inline-block border border-[#2a2a2a] px-2.5 py-1.5 text-xs text-[#aaa] hover:border-[#9a8866] hover:text-[#e6d9b8]"
-                >
-                  {entry.name}
-                </Link>
-              </li>
-            ))}
-        </ul>
-      </nav>
     </div>
   );
 }
