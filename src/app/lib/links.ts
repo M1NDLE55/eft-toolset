@@ -1,28 +1,35 @@
 export type AppLink = {
+  /** Short label for the header navigation. */
   text: string;
+  /** Longer label for the home page cards. */
+  title: string;
   href: string;
   description: string;
 };
 
 export const appLinks: AppLink[] = [
   {
-    text: "Item scanner",
+    text: "Item prices",
+    title: "Flea market prices",
     href: "/item",
-    description: "Prices, slot value, and every task, barter, and craft for any item.",
+    description: "Live flea and trader prices, the best place to sell, value per slot, and every task, barter and craft for any item.",
   },
   {
-    text: "Item groups",
-    href: "/item-groups",
-    description: "Watchlists of loot with live best-sell prices and totals.",
+    text: "Maps",
+    title: "Interactive maps & raid planner",
+    href: "/raid-planner",
+    description: "Every map with extracts, spawns, bosses and keys. Draw routes and notes and share them with your squad.",
   },
   {
     text: "Gun builder",
+    title: "Gun builder",
     href: "/gun-builder",
-    description: "Assemble weapons part by part and compare stats and cost.",
+    description: "Mod weapons part by part with live recoil, ergonomics and cost, and find the lowest recoil build.",
   },
   {
-    text: "Raid planner",
-    href: "/raid-planner",
-    description: "Draw routes and notes on interactive maps and share them.",
+    text: "Item groups",
+    title: "Item groups",
+    href: "/item-groups",
+    description: "Watchlists of loot with live best-sell prices and totals.",
   },
 ];

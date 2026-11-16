@@ -60,7 +60,15 @@ adapter's data for the visitor's game mode, read from the `eft-game-mode` cookie
 client keeps in sync with its stored setting. The client query cache is seeded with the
 same data. Older name-based links redirect permanently, unknown slugs return 404, and if
 the adapter takes longer than 2.5 seconds the page renders and loads data in the browser
-instead. Every item slug is listed in the sitemap.
+instead. Crawlers (Next's `userAgent().isBot`) get 9 seconds, and if the item still isn't
+available they get a 500 so they retry later, rather than indexing an empty page. Item
+pages are never marked `noindex` for a temporary failure. Every item slug is listed in the
+sitemap.
+
+The item prices page (`/item`) and each map page render more of the adapter's data the
+same way, through `readForRender` in `src/app/lib/api/server-render.ts`: the most valuable
+items per slot, overall and among keys, and a written guide under each map (extracts,
+transits, bosses and keys). Without the data in time, they render without those sections.
 
 ## MCP endpoint
 

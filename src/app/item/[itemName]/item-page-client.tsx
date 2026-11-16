@@ -16,6 +16,8 @@ import { bestSell } from "@/app/lib/item-price";
 import { summarizeNeeds } from "@/app/lib/item-needs";
 import { recordPrices, usePriceHistories } from "@/app/lib/price-history";
 import { useGameMode } from "@/components/game-mode/context";
+import { ItemBreadcrumb, ItemFaq } from "@/app/components/item/item-faq";
+import { itemFaq } from "@/app/lib/seo/item";
 
 export function ItemPageClient({
   reference,
@@ -76,6 +78,7 @@ export function ItemPageClient({
           Showing saved data while fresh prices load.
         </p>
       )}
+      <ItemBreadcrumb name={item.name} />
       <GenericDetails item={item} />
       {liveItem && livePrice !== null && <PriceTrend points={history(liveItem.name)} price={livePrice} now={now} />}
       {needs && (
@@ -87,6 +90,7 @@ export function ItemPageClient({
       <HideoutUses requirements={item.hideoutRequirements} slots={item.hideoutSlots} />
       <BartersUsing barters={item.bartersUsing} />
       <CraftsUsing crafts={item.craftsUsing} />
+      <ItemFaq name={item.name} entries={itemFaq(item)} />
     </article>
   );
 }
