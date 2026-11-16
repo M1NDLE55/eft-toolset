@@ -160,6 +160,8 @@ interface RawItemProperties {
   projectileCount?: number | null;
   initialSpeed?: number | null;
   accuracyModifier?: number | null;
+  /** Sights and weapons: how far the sight can be zeroed, in metres. */
+  sightingRange?: number | null;
 }
 
 interface RawItem {
@@ -203,6 +205,10 @@ interface RawTaskObjective {
   wearing?: unknown;
   usingWeapon?: unknown;
   usingWeaponMods?: unknown;
+  /** buildWeapon objectives: item categories the build must contain one of each. */
+  containsCategory?: unknown;
+  /** buildWeapon objectives: stat requirements, such as {ergonomics: {compareMethod: ">=", value: 40}}. */
+  buildAttributes?: unknown;
 }
 
 interface RawTask {
@@ -1098,6 +1104,108 @@ export async function getTaskIndex(gameMode: GameMode): Promise<TaskIndex> {
     }
     return index;
   });
+}
+
+export interface WeaponBuildRequirement {
+  name: string;
+  compareMethod: ">=" | "<=" | "=";
+  value: number;
+}
+
+export interface WeaponBuildObjective {
+  weaponId: string;
+  /** Parts the build must contain, by id. */
+  containsAll: string[];
+  /** Item categories the build must contain a part of, by tarkov.dev category id. */
+  containsCategory: string[];
+  /** Only the requirements that constrain: tarkov.dev lists unused ones as ">= 0". */
+  requirements: WeaponBuildRequirement[];
+}
+
+export interface WeaponBuildTask {
+  id: string;
+  name: string;
+  normalizedName: string;
+  trader: string | null;
+  minPlayerLevel: number;
+  faction: string | null;
+  wikiLink: string | null;
+  objectives: WeaponBuildObjective[];
+}
+
+function stringIds(value: unknown): string[] {
+  return Array.isArray(value)
+    ? value.flatMap((entry) => {
+        const id = typeof entry === "string" ? entry : isRecord(entry) && typeof entry.id === "string" ? entry.id : null;
+        return id ? [id] : [];
+      })
+    : [];
+}
+
+function buildRequirements(value: unknown): WeaponBuildRequirement[] {
+  if (!isRecord(value)) return [];
+  return Object.entries(value).flatMap(([name, rule]): WeaponBuildRequirement[] => {
+    if (!isRecord(rule)) return [];
+    const compareMethod = rule.compareMethod;
+    const amount = finiteNumber(rule.value as number | null | undefined);
+    if (amount === null || (compareMethod !== ">=" && compareMethod !== "<=" && compareMethod !== "=")) return [];
+    if (compareMethod === ">=" && amount <= 0) return [];
+    return [{ name, compareMethod, value: amount }];
+  });
+}
+
+/** Tasks that ask for a weapon built to a spec: the Gunsmith chain and a few others. */
+export async function getWeaponBuildTasks(gameMode: GameMode): Promise<WeaponBuildTask[]> {
+  const [tasks, traderNames] = await Promise.all([loadTasks(gameMode), loadTraderNames(gameMode)]);
+  return memo(`${gameMode}/weapon-build-tasks`, [tasks, traderNames], () =>
+    tasks.tasks.flatMap((task): WeaponBuildTask[] => {
+      if (!task.id || !task.normalizedName) return [];
+      const objectives = (task.objectives ?? []).flatMap((objective): WeaponBuildObjective[] =>
+        objective.type === "buildWeapon" && objective.item && !objective.optional
+          ? [
+              {
+                weaponId: objective.item,
+                containsAll: stringIds(objective.containsAll),
+                containsCategory: stringIds(objective.containsCategory),
+                requirements: buildRequirements(objective.buildAttributes),
+              },
+            ]
+          : []
+      );
+      if (objectives.length === 0) return [];
+      return [
+        {
+          id: task.id,
+          name: translate(task.name, tasks.translations) || task.normalizedName,
+          normalizedName: task.normalizedName,
+          trader: (task.trader && (traderNames.get(task.trader) ?? task.trader)) || null,
+          minPlayerLevel: finiteNumber(task.minPlayerLevel) ?? 0,
+          faction: task.factionName && task.factionName !== "Any" ? task.factionName : null,
+          wikiLink: safeHttpsUrl(task.wikiLink),
+          objectives,
+        },
+      ];
+    })
+  );
+}
+
+/** tarkov.dev item categories by id, with their English names and slugs. */
+export async function getItemCategories(gameMode: GameMode): Promise<ReadonlyMap<string, { name: string; normalizedName: string }>> {
+  const [itemsEnvelope, translationsEnvelope] = await Promise.all([
+    loadResource<ItemsData>(gameMode, "items"),
+    loadResource<TranslationDictionary>(gameMode, "items_en"),
+  ]);
+  return memo(`${gameMode}/item-categories`, [itemsEnvelope, translationsEnvelope], () =>
+    new Map(
+      Object.entries(itemsEnvelope.data.itemCategories ?? {}).map(([id, category]) => [
+        id,
+        {
+          name: translate(category.name, translationsEnvelope.data) || category.normalizedName || id,
+          normalizedName: category.normalizedName ?? id,
+        },
+      ])
+    )
+  );
 }
 
 function loadStationNames(gameMode: GameMode) {
@@ -2178,7 +2286,13 @@ function projectBuildItem(item: RawItem, context: OfferContext): BuildItemData {
     capacity:
       properties?.propertiesType === "ItemPropertiesMagazine" ? positiveFiniteNumber(properties.capacity) : null,
     sight: sightKind(item, translate(item.name, translations)),
+    ...sightingRangeOf(properties),
   };
+}
+
+function sightingRangeOf(properties: RawItemProperties | null | undefined): { sightingRange?: number } {
+  const range = positiveFiniteNumber(properties?.sightingRange);
+  return range === null ? {} : { sightingRange: range };
 }
 
 // tarkov.dev item category for iron sights; other items with scope properties are optics.

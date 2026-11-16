@@ -67,6 +67,8 @@ export interface ItemExtras {
   /** Magazines only: how many rounds it holds. */
   capacity?: number | null;
   sight?: SightKind | null;
+  /** Sights and weapons: how far the sight can be zeroed, in metres. */
+  sightingRange?: number;
 }
 
 export interface BuildItemData extends ItemExtras {

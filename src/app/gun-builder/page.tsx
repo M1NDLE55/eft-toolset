@@ -79,18 +79,32 @@ export default function Page() {
         features={FEATURES}
         faq={FAQ}
       >
-        <Link
-          href="/gun-builder/best"
-          className="group flex items-center justify-between gap-3 border border-[#3a3326] bg-[#1a1610] p-3 hover:border-[#9a8866]"
-        >
-          <span className="flex flex-col gap-0.5">
-            <span className="text-sm font-semibold text-[#e6d9b8]">Best builds for every weapon</span>
-            <span className="text-sm text-[#a99a78]">
-              The lowest recoil and max ergonomics build for every gun, with every part and live prices.
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <Link
+            href="/gun-builder/best"
+            className="group flex items-center justify-between gap-3 border border-[#3a3326] bg-[#1a1610] p-3 hover:border-[#9a8866]"
+          >
+            <span className="flex flex-col gap-0.5">
+              <span className="text-sm font-semibold text-[#e6d9b8]">Best builds for every weapon</span>
+              <span className="text-sm text-[#a99a78]">
+                The lowest recoil and max ergonomics build for every gun, with every part and live prices.
+              </span>
             </span>
-          </span>
-          <ChevronRight className="h-4 w-4 shrink-0 text-[#9a8866] transition-transform group-hover:translate-x-0.5" />
-        </Link>
+            <ChevronRight className="h-4 w-4 shrink-0 text-[#9a8866] transition-transform group-hover:translate-x-0.5" />
+          </Link>
+          <Link
+            href="/gun-builder/gunsmith"
+            className="group flex items-center justify-between gap-3 border border-[#3a3326] bg-[#1a1610] p-3 hover:border-[#9a8866]"
+          >
+            <span className="flex flex-col gap-0.5">
+              <span className="text-sm font-semibold text-[#e6d9b8]">Gunsmith builds</span>
+              <span className="text-sm text-[#a99a78]">
+                A ready build for every Gunsmith task, checked against its requirements.
+              </span>
+            </span>
+            <ChevronRight className="h-4 w-4 shrink-0 text-[#9a8866] transition-transform group-hover:translate-x-0.5" />
+          </Link>
+        </div>
       </ToolAbout>
     </div>
   );

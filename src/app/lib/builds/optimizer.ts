@@ -35,6 +35,18 @@ export interface OptimizeOptions {
   limits?: TraderLimits | null;
   /** Default preset parts, free in the slots the preset installs them in. */
   preset?: PresetParts | null;
+  /**
+   * Scores parts by a mix of stats instead of the goal's: points of ergonomics, percent of
+   * recoil reduction, and kilograms of weight (subtracted). The goal still decides how price
+   * counts. Used to search for builds that must meet several limits at once.
+   */
+  blend?: ScoreBlend | null;
+}
+
+export interface ScoreBlend {
+  ergonomics: number;
+  recoil: number;
+  weight: number;
 }
 
 export interface OptimizeControl {
@@ -85,7 +97,8 @@ interface PriceMode {
 interface Pass {
   lookup: ItemLookup;
   mode: PriceMode;
-  options: Required<Omit<OptimizeOptions, "target" | "budget" | "ammoId" | "minMagazineCapacity" | "limits" | "preset">> & {
+  options: Required<Omit<OptimizeOptions, "target" | "budget" | "ammoId" | "minMagazineCapacity" | "limits" | "preset" | "blend">> & {
+    blend: ScoreBlend | null;
     target: OptimizeTarget | null;
     ammoId: string | null;
     minMagazineCapacity: number | null;
@@ -120,9 +133,13 @@ function priceScore(price: number | null, goal: OptimizeGoal) {
   return goal === "cost" ? -cost : -cost * 1e-6;
 }
 
-function itemScore(item: GunItem, price: number | null, goal: OptimizeGoal) {
+function itemScore(item: GunItem, price: number | null, goal: OptimizeGoal, blend: ScoreBlend | null = null) {
   const ergo = item.ergonomics;
   const recoil = -item.recoilModifier * 100;
+  if (blend) {
+    const weight = "weight" in item && typeof item.weight === "number" ? item.weight : 0;
+    return ergo * blend.ergonomics + recoil * blend.recoil - weight * blend.weight + priceScore(price, goal);
+  }
   if (goal === "ergonomics") return ergo + recoil * 1e-3 + priceScore(price, goal);
   if (goal === "recoil") return recoil + ergo * 1e-3 + priceScore(price, goal);
   return (ergo + recoil) * 1e-6 + priceScore(price, goal);
@@ -233,7 +250,7 @@ function solveFree(itemId: string, path: string[], old: BuildNode | undefined, o
     return null;
   }
   pass.stack.add(itemId);
-  let value = itemScore(item, price, goal) - (pass.lambda * (price ?? 0)) / 1000;
+  let value = itemScore(item, price, goal, pass.options.blend) - (pass.lambda * (price ?? 0)) / 1000;
   if (!ammoFitsItem(item, pass.options.ammoId)) value -= AMMO_PENALTY;
   let cost = price ?? 0;
   const slots: Record<string, BuildNode> = {};
@@ -274,7 +291,7 @@ function solveFixed(node: BuildNode, path: string[], pass: Pass): Solved {
         : null;
   // The weapon's stats are the same in every build, but its price differs between price modes.
   let value =
-    (root ? priceScore(price, pass.options.goal) : item ? itemScore(item, price, pass.options.goal) : 0) -
+    (root ? priceScore(price, pass.options.goal) : item ? itemScore(item, price, pass.options.goal, pass.options.blend) : 0) -
     (pass.lambda * (price ?? 0)) / 1000;
   let cost = price ?? 0;
   const slots: Record<string, BuildNode> = {};
@@ -334,6 +351,7 @@ export async function optimizeBuild(
     ammoId: options.ammoId ?? null,
     requireMagazine: options.requireMagazine ?? true,
     keepSights: options.keepSights ?? true,
+    blend: options.blend ?? null,
     minMagazineCapacity:
       options.minMagazineCapacity === undefined
         ? installedMagazineCapacity(root, lookup)
