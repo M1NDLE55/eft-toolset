@@ -4,13 +4,14 @@ import type { MetadataRoute } from "next";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
 import { listItemSlugs, releaseOperationSlot, tryAcquireOperationSlot } from "@/app/lib/api/tarkov-server";
 import { SITE_ORIGIN as ORIGIN } from "@/app/lib/site";
+import { listBestBuildWeapons } from "@/app/lib/builds/best-builds";
 
-async function loadItemSlugs(): Promise<string[]> {
+async function loadSlugs(list: () => Promise<string[]>): Promise<string[]> {
   if (!tryAcquireOperationSlot()) return [];
   let timer: ReturnType<typeof setTimeout> | undefined;
   try {
     return await Promise.race([
-      listItemSlugs(),
+      list(),
       new Promise<string[]>((resolve) => {
         timer = setTimeout(() => resolve([]), 5_000);
       }),
@@ -24,12 +25,16 @@ async function loadItemSlugs(): Promise<string[]> {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const itemSlugs = await loadItemSlugs();
+  const [itemSlugs, weaponSlugs] = await Promise.all([
+    loadSlugs(() => listItemSlugs()),
+    loadSlugs(async () => (await listBestBuildWeapons("regular")).map((weapon) => weapon.slug)),
+  ]);
   const routes = [
     { path: "/", priority: 1, changeFrequency: "monthly" as const },
     { path: "/item", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "/item-groups", priority: 0.4, changeFrequency: "monthly" as const },
     { path: "/gun-builder", priority: 0.8, changeFrequency: "weekly" as const },
+    { path: "/gun-builder/best", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/raid-planner", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/mcp", priority: 0.5, changeFrequency: "monthly" as const },
     { path: "/credits", priority: 0.2, changeFrequency: "yearly" as const },
@@ -49,6 +54,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${ORIGIN}${route.path}`,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
+    })),
+    ...weaponSlugs.map((slug) => ({
+      url: `${ORIGIN}/gun-builder/best/${slug}`,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
     })),
     ...itemSlugs.map((slug) => ({
       url: `${ORIGIN}/item/${slug}`,

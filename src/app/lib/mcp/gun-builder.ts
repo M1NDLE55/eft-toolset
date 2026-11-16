@@ -8,6 +8,7 @@ import { ammoOptions } from "@/app/lib/builds/ammo";
 import { diffBuildTrees, statDeltas } from "@/app/lib/builds/compare";
 import { conflictReason, installedOutside } from "@/app/lib/builds/conflicts";
 import { optimizeBuild, type OptimizeGoal, type OptimizeOptions } from "@/app/lib/builds/optimizer";
+import { releaseOptimizerSlot, tryAcquireOptimizerSlot } from "@/app/lib/builds/optimizer-slots";
 import { reconstructPresetTree } from "@/app/lib/builds/presets";
 import { presetParts } from "@/app/lib/builds/purchase";
 import { effectivePrice, offerLabel, traderLabel } from "@/app/lib/builds/price";
@@ -52,8 +53,6 @@ import { buildInputSchema, gameModeSchema, offsetSchema, page, priceSourcesSchem
 import { itemUrl, loadBuildSource } from "./sources";
 
 const OPTIMIZE_TIMEOUT_MS = 20_000;
-const MAX_CONCURRENT_OPTIMIZERS = 2;
-let runningOptimizers = 0;
 
 /** One optimiser time limit per tool call, shared by every optimiser run in that call. */
 function optimizerDeadline(context: ToolContext) {
@@ -68,11 +67,9 @@ async function runOptimizer(
   deadline: AbortSignal,
   context: ToolContext
 ) {
-  // The optimiser is CPU-bound, so only a few runs share an instance with the website.
-  if (runningOptimizers >= MAX_CONCURRENT_OPTIMIZERS) {
+  if (!tryAcquireOptimizerSlot()) {
     throw new InputError("The optimiser is busy with other builds. Try again in a few seconds.");
   }
-  runningOptimizers += 1;
   try {
     return await optimizeBuild(root, lookup, options, { signal: deadline });
   } catch (error) {
@@ -83,7 +80,7 @@ async function runOptimizer(
     }
     throw error;
   } finally {
-    runningOptimizers -= 1;
+    releaseOptimizerSlot();
   }
 }
 
