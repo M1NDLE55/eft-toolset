@@ -102,10 +102,15 @@ export function buildLayer(
 
   if (id.startsWith("extracts:")) {
     const faction = id.slice("extracts:".length);
-    return buildExtracts(
-      details.extracts.filter((e) => e.faction === faction),
-      COLORS[faction as keyof typeof COLORS] ?? COLORS.shared,
-      EXTRACT_FACTION_LABELS[faction] ?? "Extract"
+    const factionLabel = EXTRACT_FACTION_LABELS[faction] ?? "Extract";
+    return buildExits(
+      details.extracts
+        .filter((e) => e.faction === faction)
+        .map((extract) => ({
+          ...extract,
+          description: extractDescription(extract, factionLabel),
+        })),
+      COLORS[faction as keyof typeof COLORS] ?? COLORS.shared
     );
   }
 
@@ -131,12 +136,18 @@ export function buildLayer(
 
   switch (id) {
     case "transits":
-      return buildGlyphs(
-        details.transits.map((t) => ({
-          position: t.position,
-          tooltip: t.description,
+      return buildExits(
+        details.transits.map((transit) => ({
+          name: transit.description,
+          position: transit.position,
+          outline: transit.outline ?? [],
+          top: transit.top ?? null,
+          bottom: transit.bottom ?? null,
+          description: transit.conditions
+            ? `${transit.description}, ${transit.conditions}`
+            : transit.description,
         })),
-        { shape: "diamond", color: COLORS.transit }
+        COLORS.transit
       );
     case "locks":
       return buildLocks(detailContext);
@@ -282,8 +293,8 @@ const VISIBLE_OBSTACLE_SELECTOR = ".rp-extract:not(.rp-extract--crowded)";
 const EXIT_ICON =
   '<svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 2.5h-4v11h4"/><path d="M7 8h7M11 5l3 3-3 3"/></svg>';
 
-/** A pill naming the extract, so it reads as an exit without hovering it. */
-function extractIcon(name: string, color: string) {
+/** A pill naming the extract or transit, so it reads as an exit without hovering it. */
+function exitIcon(name: string, color: string) {
   const chip = document.createElement("span");
   chip.className = "rp-extract";
   chip.style.setProperty("--glyph", color);
@@ -305,15 +316,26 @@ function extractDescription(extract: MapExtract, factionLabel: string) {
   return parts.join(", ");
 }
 
-function buildExtracts(extracts: MapExtract[], color: string, factionLabel: string): LayerEntry {
+/** An extract or transit: a named pill, with its zone shown only while the pill is hovered. */
+interface ExitSpec {
+  name: string;
+  position: Required<GamePoint>;
+  outline: GamePoint[];
+  top: number | null;
+  bottom: number | null;
+  /** The full description screen readers get, as the pill has no tooltip. */
+  description: string;
+}
+
+function buildExits(exits: ExitSpec[], color: string): LayerEntry {
   const group = L.layerGroup();
   const dimmables: Dimmable[] = [];
-  // Zones stay hidden to keep the map clean; hovering an extract's pill shows its zone.
+  // Zones stay hidden to keep the map clean; hovering a pill shows its zone.
   const hiddenStyle = { opacity: 0, fillOpacity: 0, weight: 2 };
   const shownStyle = { opacity: 1, fillOpacity: 0.3, weight: 2 };
   const dimmedStyle = { opacity: 0.25, fillOpacity: 0.08, weight: 2 };
 
-  for (const extract of extracts) {
+  for (const exit of exits) {
     let polygon: L.Polygon | null = null;
     let dimmed = false;
     let hovered = false;
@@ -324,16 +346,16 @@ function buildExtracts(extracts: MapExtract[], color: string, factionLabel: stri
       restyle();
     };
 
-    if (extract.outline.length >= 3) {
+    if (exit.outline.length >= 3) {
       polygon = L.polygon(
-        extract.outline.map((p) => gameToLatLng(p)),
+        exit.outline.map((p) => gameToLatLng(p)),
         { color, interactive: false, ...hiddenStyle }
       );
       polygon.addTo(group);
       dimmables.push({
-        top: extract.top ?? extract.position.y,
-        bottom: extract.bottom ?? extract.position.y,
-        position: extract.position,
+        top: exit.top ?? exit.position.y,
+        bottom: exit.bottom ?? exit.position.y,
+        position: exit.position,
         setDimmed: (next) => {
           dimmed = next;
           restyle();
@@ -342,8 +364,8 @@ function buildExtracts(extracts: MapExtract[], color: string, factionLabel: stri
     }
 
     // Hovering the pill fades it (see globals.css) and shows the zone under it.
-    const marker = L.marker(gameToLatLng(extract.position), {
-      icon: extractIcon(extract.name, color),
+    const marker = L.marker(gameToLatLng(exit.position), {
+      icon: exitIcon(exit.name, color),
       riseOnHover: true,
     });
     marker.on("mouseover", () => setHovered(true));
@@ -353,11 +375,11 @@ function buildExtracts(extracts: MapExtract[], color: string, factionLabel: stri
       element?.addEventListener("focus", () => setHovered(true));
       element?.addEventListener("blur", () => setHovered(false));
     });
-    // The pill already names the extract, so it has no tooltip; screen readers get the full description.
-    makeLayerAccessible(marker, extractDescription(extract, factionLabel));
+    // The pill already names the exit, so it has no tooltip; screen readers get the full description.
+    makeLayerAccessible(marker, exit.description);
     marker.addTo(group);
     dimmables.push(
-      markerDimmable(marker, extract.position, extract.top, extract.bottom)
+      markerDimmable(marker, exit.position, exit.top, exit.bottom)
     );
   }
 

@@ -559,6 +559,38 @@ describe("Tarkov JSON adapter", () => {
     );
   });
 
+  it("keeps transit zones, floor heights and conditions", async () => {
+    const map = (await executeTarkovOperation(TARKOV_OPERATIONS.mapDetails, {
+      gameMode: "regular",
+      mapKey: "factory",
+    })) as MapDetails;
+    expect(map.transits).toEqual([
+      {
+        id: "12",
+        description: "Transit to Woods",
+        conditions: "Keycard required",
+        position: { x: 24, y: 1, z: 60 },
+        outline: [
+          { x: 20, z: 57 },
+          { x: 28, z: 57 },
+          { x: 28, z: 63 },
+          { x: 20, z: 63 },
+        ],
+        top: 3.7,
+        bottom: 0.78,
+      },
+      {
+        id: "13",
+        description: "FAC_TRANSIT_13_DESC",
+        conditions: null,
+        position: { x: 10, y: 0, z: -50 },
+        outline: [],
+        top: null,
+        bottom: null,
+      },
+    ]);
+  });
+
   it("names spawn zones and bosses from the map translations, skipping malformed bosses", async () => {
     const map = (await executeTarkovOperation(TARKOV_OPERATIONS.mapDetails, {
       gameMode: "regular",
