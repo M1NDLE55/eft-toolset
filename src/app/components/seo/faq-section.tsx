@@ -1,6 +1,6 @@
 import type { FaqEntry } from "@/app/lib/seo/item";
 
-/** Visible questions under a tool, matching the page's FAQ structured data. */
+/** A page's visible questions and answers, matching its FAQ structured data. */
 export function FaqSection({ id, title, entries }: { id: string; title: string; entries: FaqEntry[] }) {
   return (
     <section aria-labelledby={id} className="flex flex-col gap-2">

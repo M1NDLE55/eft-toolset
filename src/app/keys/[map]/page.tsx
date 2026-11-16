@@ -11,6 +11,7 @@ import { getKeyCounts, getMapKeys, type MapKeys } from "@/app/lib/reference/keys
 import { Rubles } from "@/app/lib/currency";
 import { formatRoubles, plural } from "@/app/lib/seo/format";
 import type { FaqEntry } from "@/app/lib/seo/item";
+import { FaqSection } from "@/app/components/seo/faq-section";
 
 interface PageProps {
   params: Promise<{ map: string }>;
@@ -150,19 +151,7 @@ export default async function Page({ params }: PageProps) {
           </tbody>
         </table>
       </div>
-      <section aria-labelledby="keys-faq" className="flex flex-col gap-2">
-        <h2 id="keys-faq" className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">
-          {config.name} key questions
-        </h2>
-        <dl className="flex flex-col divide-y divide-[#1a1a1a] border border-[#1a1a1a] bg-[#0c0c0c]">
-          {faq.map((entry) => (
-            <div key={entry.question} className="flex flex-col gap-1 px-3 py-2.5">
-              <dt className="text-sm font-semibold text-[#ddd]">{entry.question}</dt>
-              <dd className="text-sm text-[#999]">{entry.answer}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <FaqSection id="keys-faq" title={`${config.name} key questions`} entries={faq} />
       <nav aria-label="Keys on other maps" className="flex flex-col gap-2">
         <h2 className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">Keys on other maps</h2>
         <ul className="flex flex-wrap gap-2">

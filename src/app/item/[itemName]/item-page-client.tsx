@@ -16,7 +16,8 @@ import { bestSell } from "@/app/lib/item-price";
 import { summarizeNeeds } from "@/app/lib/item-needs";
 import { recordPrices, usePriceHistories } from "@/app/lib/price-history";
 import { useGameMode } from "@/components/game-mode/context";
-import { ItemBreadcrumb, ItemFaq } from "@/app/components/item/item-faq";
+import { ItemBreadcrumb } from "@/app/components/item/item-faq";
+import { FaqSection } from "@/app/components/seo/faq-section";
 import { itemFaq } from "@/app/lib/seo/item";
 
 export function ItemPageClient({
@@ -90,7 +91,7 @@ export function ItemPageClient({
       <HideoutUses requirements={item.hideoutRequirements} slots={item.hideoutSlots} />
       <BartersUsing barters={item.bartersUsing} />
       <CraftsUsing crafts={item.craftsUsing} />
-      <ItemFaq name={item.name} entries={itemFaq(item)} />
+      <FaqSection id="item-faq" title={`${item.name}: price questions`} entries={itemFaq(item)} />
     </article>
   );
 }
