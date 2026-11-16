@@ -281,7 +281,11 @@ interface RawMap {
   transits?: {
     id?: string;
     description?: string | null;
+    conditions?: string | null;
     position?: RawPosition | null;
+    outline?: { x: number; z: number }[] | null;
+    top?: number | null;
+    bottom?: number | null;
   }[];
   spawns?: {
     zoneName?: string | null;
@@ -1638,8 +1642,11 @@ function isRawMap(value: unknown): value is RawMap {
     ) &&
     optionalArray(value.transits, (entry) =>
       isRecord(entry) &&
-      [entry.id, entry.description].every(optionalShortString) &&
-      optional(entry.position, isPosition)
+      [entry.id, entry.description, entry.conditions].every(optionalShortString) &&
+      optional(entry.position, isPosition) &&
+      optionalArray(entry.outline, isOutlinePoint) &&
+      optionalFiniteNumber(entry.top) &&
+      optionalFiniteNumber(entry.bottom)
     ) &&
     optionalArray(value.spawns, (entry) =>
       isRecord(entry) &&
@@ -2351,6 +2358,10 @@ function projectMap(
           id: transit.id,
           description: translate(transit.description, translations) || "Transit",
           position: transit.position,
+          outline: transit.outline ?? [],
+          top: finiteNumber(transit.top),
+          bottom: finiteNumber(transit.bottom),
+          conditions: translate(transit.conditions, translations) || null,
         },
       ];
     }),

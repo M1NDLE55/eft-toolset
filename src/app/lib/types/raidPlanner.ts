@@ -20,6 +20,12 @@ export interface MapTransit {
   id: string;
   description: string;
   position: Required<GamePoint>;
+  /** The transit zone, when tarkov.dev has one. */
+  outline?: GamePoint[];
+  top?: number | null;
+  bottom?: number | null;
+  /** What using the transit needs, such as a keycard or a time window. */
+  conditions?: string | null;
 }
 
 export interface MapSpawn {

@@ -183,6 +183,23 @@ export function createTarkovFixtures(): Record<string, unknown> {
                 transferItem: { item: "weapon", count: 1 },
               },
             ],
+            transits: [
+              {
+                id: "12",
+                description: "FAC_TRANSIT_12_DESC",
+                conditions: "FAC_TRANSIT_12_COND",
+                position: { x: 24, y: 1, z: 60 },
+                outline: [
+                  { x: 20, z: 57 },
+                  { x: 28, z: 57 },
+                  { x: 28, z: 63 },
+                  { x: 20, z: 63 },
+                ],
+                top: 3.7,
+                bottom: 0.78,
+              },
+              { id: "13", description: "FAC_TRANSIT_13_DESC", position: { x: 10, y: 0, z: -50 } },
+            ],
             spawns: [
               { zoneName: "ZoneScavBase", sides: ["scav"], categories: ["player", "bot"], position: { x: -40, y: 1, z: 40 } },
               { zoneName: "ZoneScavBase", sides: ["scav"], categories: ["bot", "boss"], position: { x: -44, y: 1, z: 44 } },
@@ -234,6 +251,8 @@ export function createTarkovFixtures(): Record<string, unknown> {
       data: {
         "extract-name": "Gate",
         "car-name": "Car V-Ex",
+        FAC_TRANSIT_12_DESC: "Transit to Woods",
+        FAC_TRANSIT_12_COND: "Keycard required",
         ZoneScavBase: "Stronghold",
         ZoneDormitory: "Dorms",
         bossBully: "Reshala",

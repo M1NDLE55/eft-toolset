@@ -986,7 +986,7 @@ describe("MCP endpoint", () => {
       route: [{ x: 1, z: 13 }, { place: "gate" }],
       notes: [{ at: { place: "Test Key" }, title: "Locked door", color: "blue" }],
     });
-    expect(created.data).toMatchObject({ routeDistanceMeters: 10, layers: ["extracts:pmc"] });
+    expect(created.data).toMatchObject({ routeDistanceMeters: 10, layers: ["extracts:pmc", "transits"] });
     const payload = new URLSearchParams(created.data.shareLink.split("#")[1]).get("p")!;
     const plan = await decodePlanSharePayload(payload);
     expect(plan).toMatchObject({ name: "Gate run", mapKey: "factory" });
