@@ -5,7 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSyncExternalStore } from "react";
 import { Menu, Settings } from "lucide-react";
-import { appLinks } from "@/app/lib/links";
+import { navLinks } from "@/app/lib/links";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -38,7 +38,7 @@ export function Header() {
             <Image src="/black-logo.svg" alt="" height={37} width={100} priority className="invert" />
           </Link>
           <nav aria-label="Tools" className="hidden items-center md:flex">
-            {appLinks.map((link) => {
+            {navLinks.map((link) => {
               const active = isActive(pathname, link.href);
               return (
                 <Link
@@ -88,7 +88,7 @@ export function Header() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="min-w-48">
-                {appLinks.map((link) => (
+                {navLinks.map((link) => (
                   <DropdownMenuItem key={link.href} asChild className="py-3">
                     <Link
                       href={link.href}
