@@ -34,6 +34,9 @@ export const appLinks: AppLink[] = [
   },
 ];
 
+/** Header navigation: the tools, then the AI assistants (MCP) page. */
+export const navLinks: { text: string; href: string }[] = [...appLinks, { text: "AI", href: "/mcp" }];
+
 /** Reference pages listed in the site footer next to the main tools. */
 export const guideLinks: { text: string; href: string }[] = [
   { text: "PVE flea prices", href: "/flea-market/pve" },

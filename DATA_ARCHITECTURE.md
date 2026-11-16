@@ -124,8 +124,8 @@ other pages: crawlers get a 500 to retry, and visitors a short notice.
 
 ## MCP endpoint
 
-`/api/mcp` is a public, read-only [Model Context Protocol](https://modelcontextprotocol.io)
-server using the Streamable HTTP transport in stateless mode. The route is a thin wrapper
+`/api/mcp` is a read-only [Model Context Protocol](https://modelcontextprotocol.io) server for
+signed-in users (see [MCP sign-in](#mcp-sign-in)), using the Streamable HTTP transport in stateless mode. The route is a thin wrapper
 around `handleMcpPost` in `src/app/lib/mcp/http.ts`. Each POST carries one JSON-RPC message
 and builds a fresh server, so no session state lives between requests and any instance can
 serve any request. Responses are JSON; GET and DELETE return 405, and JSON-RPC batches,
@@ -135,8 +135,8 @@ Limits:
 
 - Each request is charged from its payer's MCP budget and the instance's global MCP budget
   (`src/app/lib/mcp/budget.ts`), both kept apart from the website's, so assistants can't
-  starve the site. The payer is the client's IP, or the user when the request carries a valid
-  access token (see [MCP sign-in](#mcp-sign-in)). Tool calls cost 1 token, `modify_build` 2,
+  starve the site. The payer is the signed-in user, or the client's IP in development without
+  sign-in. Tool calls cost 1 token, `modify_build` 2,
   and `optimize_build` 3; everything else costs 0.25. That base cost is charged before the
   body is read, and a tool call pays the rest once the body is parsed, or gets the base cost
   back in the same step if it can't.
@@ -262,46 +262,88 @@ keys in `src/app/lib/storage/store-keys.ts`.
 
 ### MCP sign-in
 
-Sign-in is optional and off unless `MCP_AUTHKIT_DOMAIN` is set; without it the endpoint
-advertises no auth and ignores `Authorization` headers. With it, WorkOS AuthKit is the
-authorization server (`src/app/lib/mcp/auth.ts`):
+The website needs no account; the MCP endpoint does. WorkOS AuthKit is the authorization
+server, set by `MCP_AUTHKIT_DOMAIN` (`src/app/lib/mcp/auth.ts`). Production never serves the
+endpoint without it: if the setting is missing there, every MCP request gets 503 and the error
+is logged once per instance. In development an empty setting serves the endpoint without
+sign-in, charging each IP's budget, so local tools and tests work without WorkOS.
 
 - `/.well-known/oauth-protected-resource` and `/.well-known/oauth-protected-resource/api/mcp`
   serve the protected resource metadata (RFC 9728), naming the AuthKit issuer. AuthKit runs
-  the OAuth flow, with PKCE, client registration (CIMD or DCR), and consent.
-- A request with `Authorization: Bearer <token>` is checked against AuthKit's JWKS: an
-  asymmetric signature, the AuthKit issuer, the MCP URL (`MCP_RESOURCE_URL`) as audience, and
-  expiry, with 30 seconds of clock tolerance. Agent tokens (`sub_profile: ai_agent`) are
-  refused. A valid token charges the user's own budget, keyed on `sub`. A bad token is always
-  challenged (below), whatever the IP's budget, since the challenge is what makes clients
-  refresh; if the keys can't be fetched the request gets 503.
-- Anonymous callers keep the per-IP budget. When an IP runs out, the endpoint asks the
-  client to sign in rather than wait. Clients disagree on how they want to be asked, so the
-  challenge depends on the client:
-  - Claude (claude.ai, Desktop, Claude Code), Cursor, and any client not recognised get 401
-    with `WWW-Authenticate: Bearer resource_metadata="…"` on every request, tool calls
-    included. That is what the MCP spec asks for, and Claude shows its Connect card from it
-    mid-conversation, then retries the call. Claude ignores a 200 tool error for sign-in
-    ([lazy authentication](https://claude.com/docs/connectors/building/lazy-authentication)).
+  the OAuth flow on its hosted pages, with PKCE, client registration (CIMD or DCR), sign-up,
+  sign-in, and consent. The app has no login page, callback, or session of its own.
+- Every request needs `Authorization: Bearer <token>`. The token is checked against
+  AuthKit's JWKS: an asymmetric signature, the AuthKit issuer, the MCP URL
+  (`MCP_RESOURCE_URL`) as audience, and expiry, with 30 seconds of clock tolerance. Agent
+  tokens (`sub_profile: ai_agent`) are refused. If the keys can't be fetched the request gets
+  503.
+- A valid token's `sub`, the WorkOS user id, is the payer for rate limits and reaches tools
+  as `ToolContext.userId`, the key for any per-user data. Tool results cached by arguments
+  (`result-cache.ts`) are shared between users, so a tool that reads per-user data must not
+  pass a `cacheKey`.
+- Every tool in `tools/list` declares `securitySchemes` of `oauth2` (top-level and mirrored
+  in `_meta`), which ChatGPT reads to know sign-in is required.
+- Requests without a token, or with a bad one, are challenged rather than served, and
+  challenges aren't rate limited, since they are what makes clients sign in or refresh.
+  Clients disagree on how they want to be asked, so the challenge depends on the client:
+  - Claude (claude.ai, Desktop, Claude Code), Cursor, VS Code, and any client not recognised
+    get 401 with `WWW-Authenticate: Bearer resource_metadata="…"`, as the MCP spec asks. That
+    starts the client's OAuth flow, usually when the server is added.
   - ChatGPT's tool calls get a tool error (status 200) whose `_meta["mcp/www_authenticate"]`
     carries the challenge, which is the only thing that starts ChatGPT's sign-in during a
-    tool call ([Apps SDK auth](https://developers.openai.com/apps-sdk/build/auth)). It also
-    needs every tool in `tools/list` to declare `securitySchemes` of `noauth` or `oauth2`
-    (top-level and mirrored in `_meta`). ChatGPT is recognised by the `openai/*` keys it puts
-    in every tool call's `_meta` ([reference](https://developers.openai.com/apps-sdk/reference))
-    or by its `openai-mcp/` User-Agent. Its other requests get the 401.
+    tool call ([Apps SDK auth](https://developers.openai.com/apps-sdk/build/auth)). ChatGPT is
+    recognised by the `openai/*` keys it puts in every tool call's `_meta`
+    ([reference](https://developers.openai.com/apps-sdk/reference)) or by its `openai-mcp/`
+    User-Agent. Its other requests get the 401.
   - Bad tokens get the same split with `error="invalid_token"`, which is what makes clients
     refresh them or sign in again.
 
   Detection reads the request itself, not `initialize`, because the endpoint is stateless and
   2026-07-28 clients may skip `initialize`. A client that fakes the markers only changes the
   shape of its own challenge.
-- Signed-in users over their budget get 429, as everyone did before. So does anyone when
-  the instance's global budget runs out, since signing in can't help there.
+- Signed-in users over their budget get 429, and so does anyone when the instance's global
+  budget runs out.
 
-Reading the body to shape a challenge is the one read that a client over its budget, or one
-with a bad token, can trigger; reads stay capped by size, time, and the MCP pool's
-concurrency limit.
+Reading the body to shape a challenge is the one read a request without a valid token can
+trigger; reads stay capped by size, time, and the MCP pool's concurrency limit.
+
+### Website accounts
+
+The website itself needs no account, but people need somewhere to see, sign out of, and
+delete the account their AI assistants sign in with. The Settings page's Account section does
+this with WorkOS's Node SDK (`src/app/lib/account/server.ts`), using the same WorkOS
+environment as the MCP endpoint, so a person has the same user id in both. It's on when
+`WORKOS_API_KEY`, `WORKOS_CLIENT_ID`, and `WORKOS_COOKIE_PASSWORD` are set.
+
+Only these routes touch sessions, so every other page stays static and never reads cookies:
+
+- `GET /auth/sign-in` (`?screen=sign-up` for the sign-up screen) stores a random state in an
+  httpOnly cookie scoped to the callback and redirects to AuthKit's hosted sign-in.
+- `GET /auth/callback` checks the state, exchanges the code for a session sealed with the
+  cookie password, and sets it as the httpOnly `eft_session` cookie (30 days, SameSite=Lax).
+- `GET /api/account` returns the user's email, name, and sign-up date, refreshing an expired
+  access token once and rewriting the cookie. A session that can't be read or refreshed
+  clears the cookies.
+- `POST /api/account/sign-out` clears the cookies and returns AuthKit's logout URL, which
+  ends the WorkOS session too. It answers with JSON for the page to follow, because the
+  `form-action 'self'` policy blocks a form that redirects to another origin.
+- `DELETE /api/account` deletes the user in WorkOS. Their assistants' tokens stop working
+  once they expire, since refreshing needs the user.
+
+Requests that change the account must come from the site's own pages (`Sec-Fetch-Site:
+same-origin`, or a matching `Origin` where browsers don't send it). Account routes share the
+website's per-client rate limit. Next to the session, a readable `eft_signed_in=1` cookie,
+which holds nothing secret, lets the header show a signed-in account icon on static pages
+without a request; the account API clears it whenever it finds no session.
+
+Sign-in returns to the canonical site on the production deployment (`VERCEL_ENV=production`,
+or a production build outside Vercel) and to the request's own origin on preview
+deployments and in development, so each preview hostname completes its own sign-in.
+
+In WorkOS, the environment needs `<site>/auth/callback` as a redirect URI (and
+`http://localhost:3000/auth/callback` for development, plus a wildcard for preview hostnames
+if previews should sign in), `<site>/settings` allowed as a sign-out redirect, and sign-up
+enabled in AuthKit.
 
 ## Upstream resources
 

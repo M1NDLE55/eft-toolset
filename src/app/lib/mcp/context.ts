@@ -11,8 +11,11 @@ export interface ToolContext {
   signal: AbortSignal;
   /** Identifies the HTTP request in logs and in crash messages. */
   requestId: string;
-  /** Logged only. */
-  signedIn?: boolean;
+  /**
+   * The signed-in user's WorkOS user id (the access token's sub), for per-user data. Absent
+   * only when sign-in is off, which production doesn't allow.
+   */
+  userId?: string;
 }
 
 /** Reads tarkov.dev data with the tool's cancellation and freshness tracking. */
@@ -81,7 +84,7 @@ export async function runTool(
         event: "mcp_tool_call",
         requestId: context.requestId,
         tool: call.tool,
-        signedIn: context.signedIn ?? false,
+        signedIn: context.userId !== undefined,
         gameMode: call.gameMode ?? null,
         outcome,
         durationMs: Math.round(performance.now() - startedAt),
