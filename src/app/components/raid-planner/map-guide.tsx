@@ -6,6 +6,7 @@ import { isItemSlug } from "@/app/lib/item-links";
 import { formatChance, isNamedBoss, mapIntro, type MapGuide as Guide } from "@/app/lib/seo/map";
 import type { FaqEntry } from "@/app/lib/seo/item";
 import { formatRoubles, plural } from "@/app/lib/seo/format";
+import { FaqSection } from "@/app/components/seo/faq-section";
 
 export const MAP_GUIDE_ID = "map-guide";
 /** Height of the strip under the map that links down to the guide. */
@@ -189,19 +190,7 @@ export function MapGuide({
         )}
 
         {faq.length > 0 && (
-          <section aria-labelledby="map-faq" className="flex flex-col gap-3">
-            <h2 id="map-faq" className={heading}>
-              {name} questions
-            </h2>
-            <dl className={`${panel} flex flex-col divide-y divide-[#1a1a1a]`}>
-              {faq.map((entry) => (
-                <div key={entry.question} className="flex flex-col gap-1 px-3 py-2.5">
-                  <dt className="text-sm font-semibold text-[#ddd]">{entry.question}</dt>
-                  <dd className="text-sm text-[#999]">{entry.answer}</dd>
-                </div>
-              ))}
-            </dl>
-          </section>
+          <FaqSection id="map-faq" title={`${name} questions`} entries={faq} />
         )}
       </div>
     </section>

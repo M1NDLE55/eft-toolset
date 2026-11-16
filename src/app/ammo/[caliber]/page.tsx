@@ -8,6 +8,7 @@ import { isCrawlerRequest, readForRender } from "@/app/lib/api/server-render";
 import { listBestBuildWeapons } from "@/app/lib/builds/best-builds";
 import { caliberDescription, caliberFaq, caliberTitle } from "@/app/lib/seo/ammo";
 import { loadCalibers } from "../load";
+import { FaqSection } from "@/app/components/seo/faq-section";
 
 interface PageProps {
   params: Promise<{ caliber: string }>;
@@ -77,19 +78,7 @@ export default async function Page({ params }: PageProps) {
         </p>
       </header>
       <AmmoTable caliber={caliber} />
-      <section aria-labelledby="caliber-faq" className="flex flex-col gap-2">
-        <h2 id="caliber-faq" className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">
-          {caliber.name} ammo questions
-        </h2>
-        <dl className="flex flex-col divide-y divide-[#1a1a1a] border border-[#1a1a1a] bg-[#0c0c0c]">
-          {faq.map((entry) => (
-            <div key={entry.question} className="flex flex-col gap-1 px-3 py-2.5">
-              <dt className="text-sm font-semibold text-[#ddd]">{entry.question}</dt>
-              <dd className="text-sm text-[#999]">{entry.answer}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <FaqSection id="caliber-faq" title={`${caliber.name} ammo questions`} entries={faq} />
       {weapons.length > 0 && (
         <nav aria-labelledby="caliber-weapons" className="flex flex-col gap-2">
           <h2 id="caliber-weapons" className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">
