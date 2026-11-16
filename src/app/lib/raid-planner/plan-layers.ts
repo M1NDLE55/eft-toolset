@@ -5,6 +5,18 @@ import { gameToLatLng, latLngToGame } from "./coords";
 import { makeLayerAccessible } from "./leaflet-accessibility";
 
 const ROUTE_COLOR = PLAN_COLORS[0];
+const CASING_COLOR = "#050505";
+
+/** A dark outline under a plan line, so light colours stay visible on light roads. */
+function addCasing(latLngs: L.LatLngExpression[], weight: number, group: L.LayerGroup) {
+  L.polyline(latLngs, {
+    color: CASING_COLOR,
+    weight: weight + 3,
+    opacity: 0.6,
+    interactive: false,
+    className: "rp-plan-casing",
+  }).addTo(group);
+}
 
 export interface PlanLayerHandlers {
   editable: boolean;
@@ -23,10 +35,9 @@ export function buildPlanLayers(
   const group = L.layerGroup();
 
   if (plan.route.length > 1) {
-    L.polyline(
-      plan.route.map((waypoint) => gameToLatLng(waypoint.position)),
-      { color: ROUTE_COLOR, weight: 2, opacity: 0.9, dashArray: "6 4" }
-    ).addTo(group);
+    const routeLatLngs = plan.route.map((waypoint) => gameToLatLng(waypoint.position));
+    addCasing(routeLatLngs, 2, group);
+    L.polyline(routeLatLngs, { color: ROUTE_COLOR, weight: 2, opacity: 0.95, dashArray: "6 4" }).addTo(group);
   }
 
   plan.route.forEach((waypoint, index) => {
@@ -52,6 +63,7 @@ export function buildPlanLayers(
   for (const drawing of plan.drawings) {
     const displayColor = getPlanDisplayColor(drawing.color);
     const latLngs = drawing.points.map((point) => gameToLatLng(point));
+    if (drawing.kind !== "arrow") addCasing(latLngs, 3, group);
     const layer =
       drawing.kind === "arrow"
         ? buildArrow(map, drawing, displayColor, group)
@@ -123,6 +135,7 @@ function buildArrow(
   const from = gameToLatLng(drawing.points[0]);
   const to = gameToLatLng(drawing.points[drawing.points.length - 1]);
 
+  addCasing([from, to], 3, group);
   const line = L.polyline([from, to], {
     color: displayColor,
     weight: 3,
