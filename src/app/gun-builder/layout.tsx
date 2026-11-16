@@ -1,20 +1,21 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
+import { GUN_BUILDER_TITLE, GUN_BUILDER_DESCRIPTION } from "@/app/lib/seo/site-copy";
 
 export const metadata: Metadata = {
   title: "Gun builder",
-  description: "Build Escape from Tarkov weapons and compare stats and prices.",
+  description: GUN_BUILDER_DESCRIPTION,
   alternates: { canonical: "/gun-builder" },
   openGraph: {
-    title: "Gun builder | EFT Toolset",
-    description: "Build Escape from Tarkov weapons and compare stats and prices.",
+    title: `${GUN_BUILDER_TITLE} | EFT Toolset`,
+    description: GUN_BUILDER_DESCRIPTION,
     url: "/gun-builder",
     images: [{ url: "/home-og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gun builder | EFT Toolset",
-    description: "Build Escape from Tarkov weapons and compare stats and prices.",
+    title: `${GUN_BUILDER_TITLE} | EFT Toolset`,
+    description: GUN_BUILDER_DESCRIPTION,
     images: ["/home-og-image.png"],
   },
 };

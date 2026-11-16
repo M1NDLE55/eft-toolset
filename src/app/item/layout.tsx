@@ -2,20 +2,21 @@ import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import ScoutedSidebar from "@/app/components/item/scouted-items";
 import { ItemScannerSearch } from "@/app/components/item/item-scanner-search";
+import { ITEM_HUB_DESCRIPTION, ITEM_HUB_TITLE } from "@/app/lib/seo/site-copy";
 
 export const metadata: Metadata = {
-  title: "Item database",
-  description: "Find Escape from Tarkov item prices, trader offers, tasks, barters, and crafts.",
+  title: ITEM_HUB_TITLE,
+  description: ITEM_HUB_DESCRIPTION,
   openGraph: {
-    title: "Item database | EFT Toolset",
-    description: "Find Escape from Tarkov item prices, trader offers, tasks, barters, and crafts.",
+    title: `${ITEM_HUB_TITLE} | EFT Toolset`,
+    description: ITEM_HUB_DESCRIPTION,
     url: "/item",
     images: [{ url: "/item-scanner-og.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Item database | EFT Toolset",
-    description: "Find Escape from Tarkov item prices, trader offers, tasks, barters, and crafts.",
+    title: `${ITEM_HUB_TITLE} | EFT Toolset`,
+    description: ITEM_HUB_DESCRIPTION,
     images: ["/item-scanner-og.png"],
   },
 };

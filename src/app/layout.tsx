@@ -11,14 +11,15 @@ import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytic
 import { Header } from "@/app/components/global/header";
 import { ServiceWorker } from "@/app/components/global/service-worker";
 import { SITE_ORIGIN } from "@/app/lib/site";
+import { HOME_DESCRIPTION, SITE_NAME } from "@/app/lib/seo/site-copy";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
-const description = "Become a Tarkov Chad with this awesome set of tools";
+const description = HOME_DESCRIPTION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
-  title: { default: "EFT Toolset", template: "%s | EFT Toolset" },
+  title: { default: SITE_NAME, template: `%s | ${SITE_NAME}` },
   description,
   applicationName: "EFT Toolset",
   openGraph: {

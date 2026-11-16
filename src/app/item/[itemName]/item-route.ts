@@ -1,30 +1,43 @@
-import { cookies } from "next/headers";
+import { unstable_rethrow } from "next/navigation";
 import { cache } from "react";
 import { customDecodeURI } from "@/app/lib/URIEncoding";
 import { isItemSlug } from "@/app/lib/item-links";
 import { executeTarkovOperation, releaseOperationSlot, tryAcquireOperationSlot } from "@/app/lib/api/tarkov-server";
+import { renderTimeoutMs, requestGameMode } from "@/app/lib/api/server-render";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
-import { GAME_MODE_COOKIE, isGameMode, type GameMode } from "@/components/game-mode/mode";
+import type { GameMode } from "@/components/game-mode/mode";
 import type { ComposedItem } from "@/app/lib/cache/types";
 
-const SERVER_RENDER_TIMEOUT_MS = 2_500;
+export { isCrawlerRequest, requestGameMode } from "@/app/lib/api/server-render";
 
-export async function requestGameMode(): Promise<GameMode> {
-  const value = (await cookies()).get(GAME_MODE_COOKIE)?.value;
-  return isGameMode(value) ? value : "regular";
+/**
+ * Thrown for a crawler when the item couldn't be loaded in time, so the page answers with a
+ * server error and the crawler retries later, instead of indexing an empty page or dropping it.
+ */
+export class ItemTemporarilyUnavailableError extends Error {
+  constructor() {
+    super("Item data is temporarily unavailable.");
+    this.name = "ItemTemporarilyUnavailableError";
+  }
 }
 
 export const loadItem = cache(async (segment: string, gameMode: GameMode): Promise<ComposedItem | null | undefined> => {
   const reference = isItemSlug(segment) ? { slug: segment } : { name: customDecodeURI(segment) };
   if ("name" in reference && !reference.name) return null;
-  if (!tryAcquireOperationSlot()) return undefined;
+  const timeout = await renderTimeoutMs();
+  if (!tryAcquireOperationSlot()) {
+    console.warn("Item page rendered without its item: the server is busy.");
+    return undefined;
+  }
   try {
     return (await executeTarkovOperation(
       TARKOV_OPERATIONS.itemDetail,
       { gameMode, ...reference },
-      { signal: AbortSignal.timeout(SERVER_RENDER_TIMEOUT_MS) }
+      { signal: AbortSignal.timeout(timeout) }
     )) as ComposedItem | null;
-  } catch {
+  } catch (error) {
+    unstable_rethrow(error);
+    console.warn("Item page rendered without its item:", error instanceof Error ? error.message : error);
     return undefined;
   } finally {
     releaseOperationSlot();

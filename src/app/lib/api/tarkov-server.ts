@@ -26,6 +26,7 @@ import type {
 } from "@/app/lib/types/gunBuilder";
 import type { TaskIndex, TaskNode } from "@/app/lib/builds/quests";
 import { barterCost } from "@/app/lib/builds/price";
+import { bestSell } from "@/app/lib/item-price";
 import type {
   ExtractFaction,
   MapBoss,
@@ -677,6 +678,70 @@ export async function getGroupItems(gameMode: GameMode, names: string[]): Promis
     }));
     return [projectCachedItem(item, name, offers, usedInTasks, itemContext.fleaMarket)];
   });
+}
+
+export interface PriceHighlight {
+  name: string;
+  shortName: string | null;
+  normalizedName: string;
+  gridImageLink: string | null;
+  /** Best sell price: the flea price after its fee, or the best trader's. */
+  price: number;
+  vendor: string;
+  flea: boolean;
+  slots: number;
+  perSlot: number;
+  changeLast48hPercent: number | null;
+}
+
+export interface PriceHighlights {
+  byPerSlot: PriceHighlight[];
+  byPrice: PriceHighlight[];
+  keys: PriceHighlight[];
+}
+
+const HIGHLIGHT_EXCLUDED_TYPES = new Set(["preset", "gun"]);
+
+/** The most valuable loot, for the item prices page: best per slot, best overall, and keys. */
+export async function getPriceHighlights(gameMode: GameMode, limit = 30): Promise<PriceHighlights> {
+  const [itemContext, offers] = await Promise.all([loadItems(gameMode), loadOfferContext(gameMode)]);
+  throwIfRequestAborted();
+  const all = memo(`${gameMode}/price-highlights`, [itemContext, offers], () =>
+    itemContext.items.flatMap((item): (PriceHighlight & { key: boolean })[] => {
+      const types = item.types ?? [];
+      if (!item.id || !item.normalizedName || types.some((type) => HIGHLIGHT_EXCLUDED_TYPES.has(type))) return [];
+      if (!/^[a-z0-9][a-z0-9-]*$/.test(item.normalizedName)) return [];
+      const name = translate(item.name, itemContext.translations);
+      if (!name) return [];
+      const projected = projectCachedItem(item, name, offers, [], itemContext.fleaMarket);
+      const best = bestSell(projected);
+      if (!best) return [];
+      const slots = projected.width * projected.height;
+      return [{
+        name,
+        shortName: projected.shortName,
+        normalizedName: projected.normalizedName,
+        gridImageLink: projected.gridImageLink,
+        price: best.price,
+        vendor: best.vendor,
+        flea: best.flea,
+        slots,
+        perSlot: Math.round(best.price / slots),
+        changeLast48hPercent: projected.changeLast48hPercent,
+        key: types.includes("keys"),
+      }];
+    })
+  );
+  const top = (rows: typeof all, by: (row: PriceHighlight) => number) =>
+    rows
+      .toSorted((a, b) => by(b) - by(a))
+      .slice(0, limit)
+      .map(({ key: _key, ...row }) => row);
+  return {
+    byPerSlot: top(all.filter((row) => !row.key), (row) => row.perSlot),
+    byPrice: top(all, (row) => row.price),
+    keys: top(all.filter((row) => row.key), (row) => row.price),
+  };
 }
 
 export type ItemReference = { name: string } | { slug: string };

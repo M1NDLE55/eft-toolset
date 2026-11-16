@@ -17,7 +17,8 @@ import { LazyMapCanvas } from "./lazy-canvas";
 import { MAP_STAGE_CLASS, MapAttribution } from "./map-chrome";
 import { focusRing, iconButton, overlayPanel } from "./ui";
 
-export function MapViewer({ mapKey }: { mapKey: string }) {
+/** withGuide leaves room under the map for the strip that links down to the written guide. */
+export function MapViewer({ mapKey, withGuide = false }: { mapKey: string; withGuide?: boolean }) {
   const config = getMapConfig(mapKey)!;
   const router = useRouter();
   const [activeFloor, setActiveFloor] = useState(() => defaultFloor(config));
@@ -59,7 +60,7 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
   }
 
   return (
-    <div className={MAP_STAGE_CLASS}>
+    <div className={cn(MAP_STAGE_CLASS, withGuide && "h-[calc(100dvh-65px-2.75rem)]")}>
       <LazyMapCanvas
         config={config}
         activeFloor={activeFloor}
@@ -76,6 +77,7 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
           <div className="min-w-0 flex-1 px-1">
             <h1 className="truncate text-xs font-bold uppercase tracking-widest text-[#c9b88d] sm:text-sm">
               {config.name}
+              <span className="sr-only"> interactive map</span>
             </h1>
             <p className="truncate text-[10px] uppercase tracking-widest text-[#888]">
               {details?.raidDuration || details?.players
