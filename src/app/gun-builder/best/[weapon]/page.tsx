@@ -8,6 +8,7 @@ import { bestBuildDescription, bestBuildFaq, bestBuildTitle, BEST_BUILDS_HUB_NAM
 import { isItemSlug } from "@/app/lib/item-links";
 import { loadBestBuildWeapons, loadWeaponBestBuilds } from "../load";
 import { caliberSlug } from "@/app/lib/seo/ammo";
+import { FaqSection } from "@/app/components/seo/faq-section";
 
 interface PageProps {
   params: Promise<{ weapon: string }>;
@@ -97,19 +98,7 @@ export default async function Page({ params }: PageProps) {
           by penetration, damage and price.
         </p>
       )}
-      <section aria-labelledby="build-faq" className="flex flex-col gap-2">
-        <h2 id="build-faq" className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">
-          {result.weapon.shortName} build questions
-        </h2>
-        <dl className="flex flex-col divide-y divide-[#1a1a1a] border border-[#1a1a1a] bg-[#0c0c0c]">
-          {faq.map((entry) => (
-            <div key={entry.question} className="flex flex-col gap-1 px-3 py-2.5">
-              <dt className="text-sm font-semibold text-[#ddd]">{entry.question}</dt>
-              <dd className="text-sm text-[#999]">{entry.answer}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <FaqSection id="build-faq" title={`${result.weapon.shortName} build questions`} entries={faq} />
       {[
         { title: `More ${result.weapon.caliber ?? ""} weapon builds`.replace("  ", " "), list: sameCaliber },
         { title: `More ${result.weapon.weaponClass.toLowerCase()}`, list: sameClass },

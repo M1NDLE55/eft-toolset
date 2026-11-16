@@ -6,6 +6,7 @@ import { ServerModeNote } from "@/components/game-mode/server-mode-note";
 import { isCrawlerRequest } from "@/app/lib/api/server-render";
 import { AMMO_HUB_DESCRIPTION, AMMO_HUB_TITLE, bestByCaliber } from "@/app/lib/seo/ammo";
 import { loadCalibers } from "./load";
+import { FaqSection } from "@/app/components/seo/faq-section";
 
 export const metadata: Metadata = {
   title: AMMO_HUB_TITLE,
@@ -82,19 +83,7 @@ export default async function Page() {
           ))}
         </>
       )}
-      <section aria-labelledby="ammo-faq" className="flex flex-col gap-2">
-        <h2 id="ammo-faq" className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">
-          Ammo questions
-        </h2>
-        <dl className="flex flex-col divide-y divide-[#1a1a1a] border border-[#1a1a1a] bg-[#0c0c0c]">
-          {faq.map((entry) => (
-            <div key={entry.question} className="flex flex-col gap-1 px-3 py-2.5">
-              <dt className="text-sm font-semibold text-[#ddd]">{entry.question}</dt>
-              <dd className="text-sm text-[#999]">{entry.answer}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <FaqSection id="ammo-faq" title="Ammo questions" entries={faq} />
     </div>
   );
 }

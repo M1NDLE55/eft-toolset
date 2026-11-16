@@ -5,6 +5,7 @@ import { JsonLd, breadcrumbList, faqPage } from "@/app/components/seo/json-ld";
 import { getPriceHighlights } from "@/app/lib/api/tarkov-server";
 import { isCrawlerRequest, readForRender } from "@/app/lib/api/server-render";
 import { UseModeButton } from "@/components/game-mode/use-mode-button";
+import { FaqSection } from "@/app/components/seo/faq-section";
 
 const TITLE = "Tarkov PVE Flea Market Prices: Live PVE Item Values";
 const DESCRIPTION =
@@ -72,19 +73,7 @@ export default async function Page() {
       ) : (
         <p className="text-sm text-[#888]">PVE prices are temporarily unavailable. Try again in a moment.</p>
       )}
-      <section aria-labelledby="pve-faq" className="flex flex-col gap-2">
-        <h2 id="pve-faq" className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">
-          PVE price questions
-        </h2>
-        <dl className="flex flex-col divide-y divide-[#1a1a1a] border border-[#1a1a1a] bg-[#0c0c0c]">
-          {FAQ.map((entry) => (
-            <div key={entry.question} className="flex flex-col gap-1 px-3 py-2.5">
-              <dt className="text-sm font-semibold text-[#ddd]">{entry.question}</dt>
-              <dd className="text-sm text-[#999]">{entry.answer}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <FaqSection id="pve-faq" title="PVE price questions" entries={FAQ} />
     </>
   );
 }

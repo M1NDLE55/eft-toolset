@@ -19,6 +19,7 @@ import {
   gunsmithTitle,
 } from "@/app/lib/seo/gunsmith";
 import { loadGunsmithTask, loadGunsmithTasks } from "../load";
+import { FaqSection } from "@/app/components/seo/faq-section";
 
 interface PageProps {
   params: Promise<{ task: string }>;
@@ -247,19 +248,7 @@ export default async function Page({ params }: PageProps) {
         <Objective key={objective.weapon.id} objective={objective} taskName={task.name} several={several} />
       ))}
       {faq.length > 0 && (
-        <section aria-labelledby="gunsmith-faq" className="flex flex-col gap-2">
-          <h2 id="gunsmith-faq" className={heading}>
-            {task.name} questions
-          </h2>
-          <dl className={`${panel} flex flex-col divide-y divide-[#1a1a1a]`}>
-            {faq.map((entry) => (
-              <div key={entry.question} className="flex flex-col gap-1 px-3 py-2.5">
-                <dt className="text-sm font-semibold text-[#ddd]">{entry.question}</dt>
-                <dd className="text-sm text-[#999]">{entry.answer}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
+        <FaqSection id="gunsmith-faq" title={`${task.name} questions`} entries={faq} />
       )}
       {neighbours.length > 0 && (
         <nav aria-label="More Gunsmith builds" className="flex flex-col gap-2">

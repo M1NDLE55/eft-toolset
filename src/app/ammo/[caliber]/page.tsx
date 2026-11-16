@@ -8,6 +8,7 @@ import { isCrawlerRequest, readForRender } from "@/app/lib/api/server-render";
 import { listBestBuildWeapons } from "@/app/lib/builds/best-builds";
 import { caliberDescription, caliberFaq, caliberTitle } from "@/app/lib/seo/ammo";
 import { loadCalibers } from "../load";
+import { FaqSection } from "@/app/components/seo/faq-section";
 
 interface PageProps {
   params: Promise<{ caliber: string }>;
@@ -47,7 +48,7 @@ export default async function Page({ params }: PageProps) {
     if (await isCrawlerRequest()) throw new AmmoUnavailableError();
     return <p className="text-sm text-[#888]">Ammo data is temporarily unavailable. Try again in a moment.</p>;
   }
-  const { caliber, calibers, gameMode } = found;
+  const { caliber, gameMode } = found;
   if (!caliber) notFound();
   const faq = caliberFaq(caliber);
   const weapons = ((await readForRender("Ammo weapons", () => listBestBuildWeapons("regular"))) ?? [])
@@ -77,19 +78,7 @@ export default async function Page({ params }: PageProps) {
         </p>
       </header>
       <AmmoTable caliber={caliber} />
-      <section aria-labelledby="caliber-faq" className="flex flex-col gap-2">
-        <h2 id="caliber-faq" className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">
-          {caliber.name} ammo questions
-        </h2>
-        <dl className="flex flex-col divide-y divide-[#1a1a1a] border border-[#1a1a1a] bg-[#0c0c0c]">
-          {faq.map((entry) => (
-            <div key={entry.question} className="flex flex-col gap-1 px-3 py-2.5">
-              <dt className="text-sm font-semibold text-[#ddd]">{entry.question}</dt>
-              <dd className="text-sm text-[#999]">{entry.answer}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <FaqSection id="caliber-faq" title={`${caliber.name} ammo questions`} entries={faq} />
       {weapons.length > 0 && (
         <nav aria-labelledby="caliber-weapons" className="flex flex-col gap-2">
           <h2 id="caliber-weapons" className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">
@@ -109,23 +98,6 @@ export default async function Page({ params }: PageProps) {
           </ul>
         </nav>
       )}
-      <nav aria-label="Other calibres" className="flex flex-col gap-2">
-        <h2 className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">Other calibres</h2>
-        <ul className="flex flex-wrap gap-2">
-          {calibers
-            .filter((entry) => entry.id !== caliber.id)
-            .map((entry) => (
-              <li key={entry.id}>
-                <Link
-                  href={`/ammo/${entry.slug}`}
-                  className="inline-block border border-[#2a2a2a] px-2.5 py-1.5 text-xs text-[#aaa] hover:border-[#9a8866] hover:text-[#e6d9b8]"
-                >
-                  {entry.name}
-                </Link>
-              </li>
-            ))}
-        </ul>
-      </nav>
     </div>
   );
 }

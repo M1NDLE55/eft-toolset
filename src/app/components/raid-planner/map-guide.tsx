@@ -2,11 +2,11 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import type { MapConfig } from "@/app/lib/raid-planner/types";
 import type { MapDetails, MapExtract } from "@/app/lib/types/raidPlanner";
-import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
 import { isItemSlug } from "@/app/lib/item-links";
 import { formatChance, isNamedBoss, mapIntro, type MapGuide as Guide } from "@/app/lib/seo/map";
 import type { FaqEntry } from "@/app/lib/seo/item";
 import { formatRoubles, plural } from "@/app/lib/seo/format";
+import { FaqSection } from "@/app/components/seo/faq-section";
 
 export const MAP_GUIDE_ID = "map-guide";
 /** Height of the strip under the map that links down to the guide. */
@@ -56,30 +56,6 @@ export function MapGuideStrip({ config }: { config: MapConfig }) {
   );
 }
 
-function OtherMaps({ config }: { config: MapConfig }) {
-  return (
-    <nav aria-labelledby="other-maps" className="flex flex-col gap-3">
-      <h2 id="other-maps" className={heading}>
-        Other Tarkov maps
-      </h2>
-      <ul className="flex flex-wrap gap-2">
-        {mapConfigs
-          .filter((map) => map.key !== config.key)
-          .map((map) => (
-            <li key={map.key}>
-              <Link
-                href={`/raid-planner/map/${map.key}`}
-                className="inline-block border border-[#2a2a2a] px-2.5 py-1.5 text-xs text-[#aaa] hover:border-[#9a8866] hover:text-[#e6d9b8]"
-              >
-                {map.name} map
-              </Link>
-            </li>
-          ))}
-      </ul>
-    </nav>
-  );
-}
-
 /** Shown while the map's data loads, or when it can't be loaded on the server. */
 export function MapGuideFallback({ config }: { config: MapConfig }) {
   return (
@@ -95,7 +71,6 @@ export function MapGuideFallback({ config }: { config: MapConfig }) {
             or press Plan to draw a route and share it with your squad.
           </p>
         </div>
-        <OtherMaps config={config} />
       </div>
     </section>
   );
@@ -215,22 +190,8 @@ export function MapGuide({
         )}
 
         {faq.length > 0 && (
-          <section aria-labelledby="map-faq" className="flex flex-col gap-3">
-            <h2 id="map-faq" className={heading}>
-              {name} questions
-            </h2>
-            <dl className={`${panel} flex flex-col divide-y divide-[#1a1a1a]`}>
-              {faq.map((entry) => (
-                <div key={entry.question} className="flex flex-col gap-1 px-3 py-2.5">
-                  <dt className="text-sm font-semibold text-[#ddd]">{entry.question}</dt>
-                  <dd className="text-sm text-[#999]">{entry.answer}</dd>
-                </div>
-              ))}
-            </dl>
-          </section>
+          <FaqSection id="map-faq" title={`${name} questions`} entries={faq} />
         )}
-
-        <OtherMaps config={config} />
       </div>
     </section>
   );
