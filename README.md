@@ -5,7 +5,7 @@ Fast, free tools for Escape From Tarkov players, built on live [tarkov.dev](http
 ## Tools
 
 ### Item Scanner
-Look up any item for trader and flea prices, the best place to sell it (flea price after the listing fee), value per slot, and every task, barter, and craft that uses it. Search ranks results by name and short name; press `/` anywhere to search. Item pages render on the server at readable URLs such as `/item/salewa-first-aid-kit`, and the prices you have seen are kept so the page can show how they changed since your last visit.
+Look up any item for trader and flea prices, the best place to sell it (flea price after the listing fee), value per slot, and every task, barter, and craft that uses it. Search ranks results by name and short name; press `/` anywhere to search. Item pages render on the server at readable URLs such as `/item/salewa-first-aid-kit`, and the prices you have seen are kept so the page can show how they changed since your last visit. `/flea-market/pve` lists the most valuable PVE loot, `/ammo` charts every round by calibre, and `/keys` lists every key by map with its price and quest uses.
 
 ### Item Groups
 Build watchlists of loot with live best-sell prices, value per slot, totals, and changes since your last visit. Add items straight from search, sort by price or value per slot, and copy a group as a price list ready to paste into Discord.

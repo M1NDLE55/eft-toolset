@@ -30,6 +30,14 @@ const icons = {
   "/raid-planner": MapIcon,
 } as const;
 
+const GUIDES = [
+  { href: "/gun-builder/best", text: "Best weapon builds" },
+  { href: "/gun-builder/gunsmith", text: "Gunsmith builds" },
+  { href: "/ammo", text: "Ammo chart" },
+  { href: "/keys", text: "Keys by map" },
+  { href: "/flea-market/pve", text: "PVE flea prices" },
+];
+
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -111,23 +119,26 @@ export default function Home() {
           ))}
         </ul>
       </nav>
-      <Link
-        href="/gun-builder/best"
-        className="mt-6 flex items-center gap-2 text-xs uppercase tracking-widest text-[#888] underline-offset-4 hover:text-[#c8b384] hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
-      >
-        <Crosshair className="h-4 w-4 text-[#9a8866]" />
-        Best builds for every weapon
-      </Link>
-      <Link
-        href="/gun-builder/gunsmith"
-        className="mt-3 flex items-center gap-2 text-xs uppercase tracking-widest text-[#888] underline-offset-4 hover:text-[#c8b384] hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
-      >
-        <Crosshair className="h-4 w-4 text-[#9a8866]" />
-        Gunsmith builds for every part
-      </Link>
+      <nav aria-labelledby="home-guides" className="mt-6 flex w-full max-w-3xl flex-col gap-3">
+        <h2 id="home-guides" className="text-[10px] font-bold uppercase tracking-widest text-[#777]">
+          Guides and charts
+        </h2>
+        <ul className="flex flex-wrap gap-2">
+          {GUIDES.map((guide) => (
+            <li key={guide.href}>
+              <Link
+                href={guide.href}
+                className="inline-block border border-[#1a1a1a] bg-[#0c0c0c] px-2.5 py-1.5 text-xs text-[#aaa] hover:border-[#9a8866] hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+              >
+                {guide.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
       <Link
         href="/mcp"
-        className="mt-3 flex items-center gap-2 text-xs uppercase tracking-widest text-[#888] underline-offset-4 hover:text-[#c8b384] hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+        className="mt-8 flex items-center gap-2 text-xs uppercase tracking-widest text-[#888] underline-offset-4 hover:text-[#c8b384] hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
       >
         <Bot className="h-4 w-4 text-[#9a8866]" />
         Use every tool from Claude and other AI assistants

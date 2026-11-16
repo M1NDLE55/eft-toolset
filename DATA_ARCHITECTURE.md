@@ -106,6 +106,21 @@ them as checked in game. When nothing passes, the page shows the closest attempt
 starting build. Results are kept for an hour per instance, and optimiser runs share the
 limit in `optimizer-slots.ts`.
 
+## Ammo, keys and PVE prices
+
+- **`/ammo` and `/ammo/<calibre slug>`** chart every round by calibre from `getAllAmmo`. The
+  calibre slug comes from its readable name ("5.56x45mm NATO" → `5-56x45mm-nato`). Each
+  round has its stats and its cheapest trader or flea price, and calibre pages link to that
+  calibre's best-build pages.
+- **`/keys` and `/keys/<map>`** list the keys that open locks on each map, from the map
+  details. Each key has its group-item prices and the tasks that use it. Maps without keys
+  return 404.
+- **`/flea-market/pve`** always shows the PVE price tables, with a button that switches the
+  site to PVE.
+
+All three render with the visitor's game mode (PVE for the PVE page) and fall back like the
+other pages: crawlers get a 500 to retry, and visitors a short notice.
+
 ## MCP endpoint
 
 `/api/mcp` is a public, read-only [Model Context Protocol](https://modelcontextprotocol.io)

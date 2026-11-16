@@ -7,6 +7,7 @@ import { isCrawlerRequest } from "@/app/lib/api/server-render";
 import { bestBuildDescription, bestBuildFaq, bestBuildTitle, BEST_BUILDS_HUB_NAME } from "@/app/lib/seo/builds";
 import { isItemSlug } from "@/app/lib/item-links";
 import { loadBestBuildWeapons, loadWeaponBestBuilds } from "../load";
+import { caliberSlug } from "@/app/lib/seo/ammo";
 
 interface PageProps {
   params: Promise<{ weapon: string }>;
@@ -87,6 +88,15 @@ export default async function Page({ params }: PageProps) {
         </Link>
       </nav>
       <BestBuildsView result={result} />
+      {result.weapon.caliber && (
+        <p className="-mt-4 text-sm text-[#999]">
+          Choosing a round?{" "}
+          <Link href={`/ammo/${caliberSlug(result.weapon.caliber)}`} className="text-[#c8b384] underline underline-offset-2">
+            Compare every {result.weapon.caliber} round
+          </Link>{" "}
+          by penetration, damage and price.
+        </p>
+      )}
       <section aria-labelledby="build-faq" className="flex flex-col gap-2">
         <h2 id="build-faq" className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">
           {result.weapon.shortName} build questions

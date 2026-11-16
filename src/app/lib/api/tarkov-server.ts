@@ -940,6 +940,19 @@ export async function getAmmoItems(
   });
 }
 
+/** Every round of ammunition, for the ammo chart. */
+export async function getAllAmmo(gameMode: GameMode): Promise<AmmoItemData[]> {
+  const context = await loadOfferContext(gameMode);
+  throwIfRequestAborted();
+  return memo(`${gameMode}/all-ammo`, [context], () =>
+    Array.from(context.itemById.values()).flatMap((item) =>
+      item.properties?.propertiesType === "ItemPropertiesAmmo" && item.properties.caliber && item.normalizedName
+        ? [projectAmmoItem(item, context)]
+        : []
+    )
+  );
+}
+
 export async function getPreset(gameMode: GameMode, id: string): Promise<PresetContents | null> {
   const { byId } = await loadItems(gameMode);
   throwIfRequestAborted();
