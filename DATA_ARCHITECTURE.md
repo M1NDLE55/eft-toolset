@@ -81,6 +81,31 @@ Optimiser runs share a per-instance limit with the MCP tools (`optimizer-slots.t
 builds can't be worked out in time, crawlers get a 500 to retry and visitors a short notice.
 Each build links to the gun builder as a share link. Every weapon page is in the sitemap.
 
+## Gunsmith builds
+
+`/gun-builder/gunsmith` lists every task with a `buildWeapon` objective (the Gunsmith chain
+and a few others), and `/gun-builder/gunsmith/<task slug>` shows each objective's
+requirements and a build that meets them. `getWeaponBuildTasks` reads the objectives' stat
+limits (`buildAttributes`), required parts (`containsAll`) and part categories
+(`containsCategory`) from tarkov.dev's task data.
+
+`src/app/lib/builds/gunsmith.ts` solves an objective from the weapon's default preset:
+
+1. It installs the required parts, then a part from each required category, a sight that
+   reaches the sighting range, and a small enough magazine. Each comes with the parts it
+   hangs from: chains up to four parts long are found through a reverse index of which parts
+   accept which.
+2. It trims the build to those parts and their holders.
+3. It lets the optimiser fill the rest, with each goal and with mixes of ergonomics, recoil
+   and weight (the optimiser's internal `blend` option).
+4. It keeps the cheapest result that passes every check.
+
+The recoil requirement is vertical plus horizontal recoil, and sighting range is the longest
+among the weapon and its sights. Durability and build size aren't in the data, so pages mark
+them as checked in game. When nothing passes, the page shows the closest attempt and a
+starting build. Results are kept for an hour per instance, and optimiser runs share the
+limit in `optimizer-slots.ts`.
+
 ## MCP endpoint
 
 `/api/mcp` is a public, read-only [Model Context Protocol](https://modelcontextprotocol.io)

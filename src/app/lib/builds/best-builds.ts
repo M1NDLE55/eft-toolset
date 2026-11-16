@@ -54,8 +54,12 @@ export interface BestBuildPart {
   traderName: string | null;
 }
 
-export interface BestBuild {
+export interface BestBuild extends DescribedBuild {
   kind: BestBuildKind;
+}
+
+/** A build as the best-build and Gunsmith pages show it. */
+export interface DescribedBuild {
   ergonomics: number | null;
   recoilVertical: number | null;
   recoilHorizontal: number | null;
@@ -171,12 +175,20 @@ async function describe(
   lookup: PartLookup,
   pricing: Parameters<typeof computeStats>[4]
 ): Promise<BestBuild> {
+  return { kind, ...(await describeBuild(`${BUILD_NAMES[kind]} ${weapon.shortName}`, root, lookup, pricing)) };
+}
+
+/** Stats, parts with prices, and a share link that opens the build in the gun builder. */
+export async function describeBuild(
+  name: string,
+  root: BuildNode,
+  lookup: PartLookup,
+  pricing: Parameters<typeof computeStats>[4]
+): Promise<DescribedBuild> {
   const stats = computeStats(root, lookup, BEST_BUILD_PRICES, null, pricing);
   const shopping = buildShoppingList(root, lookup, BEST_BUILD_PRICES, true, pricing);
-  const name = `${BUILD_NAMES[kind]} ${weapon.shortName}`;
-  const payload = await encodeBuildSharePayload({ id: "best", name, weaponId: weapon.id, root, createdAt: 0, updatedAt: 0 });
+  const payload = await encodeBuildSharePayload({ id: "best", name, weaponId: root.itemId, root, createdAt: 0, updatedAt: 0 });
   return {
-    kind,
     ergonomics: stats.ergonomics,
     recoilVertical: stats.recoilVertical,
     recoilHorizontal: stats.recoilHorizontal,

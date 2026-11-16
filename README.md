@@ -18,7 +18,7 @@ Assemble weapons part by part with compatible slots, factory presets, and live e
 - side-by-side build comparison and a printable or copyable shopping list;
 - undo, keyboard navigation, and share links that others can import by pasting.
 
-Best-build pages at `/gun-builder/best` show the lowest recoil and max ergonomics build for every weapon, next to its factory preset, with every part and live prices.
+Best-build pages at `/gun-builder/best` show the lowest recoil and max ergonomics build for every weapon, next to its factory preset, with every part and live prices. Gunsmith pages at `/gun-builder/gunsmith` give a ready build for every Gunsmith task, checked against its requirements.
 
 ### Raid Planner
 Plan raids on interactive maps, including Icebreaker and its decks. Draw routes, arrows, waypoints, and notes on each level, measure distances, and toggle extracts, transits, spawns, locks, hazards, and loot layers. Plans support undo and redo, show their total route distance, and can be shared by link or exported to a file.

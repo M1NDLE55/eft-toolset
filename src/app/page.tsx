@@ -119,6 +119,13 @@ export default function Home() {
         Best builds for every weapon
       </Link>
       <Link
+        href="/gun-builder/gunsmith"
+        className="mt-3 flex items-center gap-2 text-xs uppercase tracking-widest text-[#888] underline-offset-4 hover:text-[#c8b384] hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+      >
+        <Crosshair className="h-4 w-4 text-[#9a8866]" />
+        Gunsmith builds for every part
+      </Link>
+      <Link
         href="/mcp"
         className="mt-3 flex items-center gap-2 text-xs uppercase tracking-widest text-[#888] underline-offset-4 hover:text-[#c8b384] hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
       >

@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
 import type { BestBuild, BestBuildKind, WeaponBestBuilds } from "@/app/lib/builds/best-builds";
 import { MODE_LABEL, useServerModeSync } from "@/components/game-mode/use-server-mode-sync";
 import { Rubles } from "@/app/lib/currency";
 import { cn } from "@/lib/utils";
+import { BuildPartsSection } from "./build-parts";
 
 const KIND_TITLE: Record<BestBuildKind, string> = {
   preset: "Factory preset",
@@ -29,64 +29,14 @@ const STATS: { label: string; value: (build: BestBuild) => string; best?: "low" 
   { label: "Cost", value: (build) => (build.costRUB === null ? "—" : Rubles.format(build.costRUB)), read: (build) => build.costRUB },
 ];
 
-function sourceLabel(part: BestBuild["parts"][number]) {
-  if (part.withWeapon) return "With the preset";
-  if (part.source === "flea") return "Flea";
-  if (part.source === "trader") return part.traderName ?? "Trader";
-  if (part.source === "barter") return "Barter";
-  return "Not for sale";
-}
-
 function BuildSection({ build, shortName }: { build: BestBuild; shortName: string }) {
   const id = `${build.kind}-build`;
   return (
-    <section aria-labelledby={id} className="flex flex-col gap-2">
-      <div className="flex flex-wrap items-end justify-between gap-2">
-        <h2 id={id} className={heading}>
-          {build.kind === "preset" ? `${shortName} factory preset` : `${KIND_TITLE[build.kind]} ${shortName} build`}
-        </h2>
-        <a
-          href={build.shareHref}
-          className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-[#c8b384] underline-offset-2 hover:underline"
-        >
-          Open in gun builder <ExternalLink aria-hidden className="h-3 w-3" />
-        </a>
-      </div>
-      <table className={cn(panel, "w-full table-fixed text-sm")}>
-        <colgroup>
-          <col />
-          <col className="w-28 sm:w-36" />
-        </colgroup>
-        <thead className="text-left text-[10px] uppercase tracking-widest text-[#666]">
-          <tr>
-            <th scope="col" className="px-3 py-1.5 font-bold">Slot and part</th>
-            <th scope="col" className="px-3 py-1.5 text-right font-bold">Price</th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-[#151515]">
-          {build.parts.map((part, index) => (
-            <tr key={`${part.slot}-${index}`}>
-              <td className="break-words px-3 py-1.5">
-                <span className="block text-[10px] uppercase tracking-wider text-[#777]">{part.slot}</span>
-                {part.slug ? (
-                  <Link href={`/item/${part.slug}`} className="text-[#ccc] underline-offset-2 hover:text-[#e6d9b8] hover:underline">
-                    {part.name}
-                  </Link>
-                ) : (
-                  <span className="text-[#ccc]">{part.name}</span>
-                )}
-              </td>
-              <td className="px-3 py-1.5 text-right">
-                <span className="block tabular-nums text-[#ddd]">
-                  {part.withWeapon ? "—" : part.priceRUB === null ? "—" : Rubles.format(part.priceRUB)}
-                </span>
-                <span className="block truncate text-[10px] text-[#777]">{sourceLabel(part)}</span>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </section>
+    <BuildPartsSection
+      id={id}
+      title={build.kind === "preset" ? `${shortName} factory preset` : `${KIND_TITLE[build.kind]} ${shortName} build`}
+      build={build}
+    />
   );
 }
 
