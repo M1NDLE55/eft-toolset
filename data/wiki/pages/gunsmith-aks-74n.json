@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - AKS-74N",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_AKS-74N",
-  "revisionId": 356797,
-  "lastEdited": "2026-08-29T20:28:32Z",
+  "revisionId": 364365,
+  "lastEdited": "2026-10-13T15:12:40Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,6 +12,7 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,12 +24,12 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"I have two neural networks, one scans the faces on the cameras and compares them with the database, and the other one monitors cryptocurrency trading and reacts to it. Today I've decided to create one more, which will monitor the temperature, humidity, pressure, and other parameters of my hideout, and among other things — respond to my mood. Let's see how it turns out when I'm done. There is an order for AKS-74N with Zenit parts. Ergonomics should be over 52, recoil sum less than 275, and the gun should be taking up no more than 10 slots. Now for the most important part — the kit itself. We need a B-30 handguard, RK-0 foregrip, B-33 dust cover, RK-3 pistol grip, PT-3 stock, Klesch-2IKS illuminator, DTK-1 brake, and the newer AK-12 magazine, basically Zenit all around. Perhaps this is a gift for a former Saint Petersburg resident.\""
+      "text": "\"Hello. I won't keep you tied up with a long explanation. I've got an order for an AKS-74N with Zenitco parts. It needs ergonomics at or above 52, combined recoil below 275, and must take up no more than 10 slots. The most important part is that it has to include a B-30 handguard, B-33 dust cover, DTK-1 muzzle brake, RK-0 vert grip, RK-3 pistol grip, PT-3 stock, new-gen AK-12 magazine, a Klesch-2IKS device, and any other Zenit parts you can find. I assume it's meant as a gift for some former Saint Petersburg resident.\""
     },
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Must be level 17 to start this quest."
+      "text": "- This quest is only obtainable by BEAR PMCs."
     },
     {
       "heading": "Objectives",
@@ -38,7 +39,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +8,600 EXP\n- Mechanic Rep +0.02\n- 75,000 Roubles\n  - 78,750 Roubles with Intelligence Center Level 1\n  - 86,250 Roubles with Intelligence Center Level 2\n- 2× AKS-74U CAA XRSU47SU tactical handguard\n- 2× AK-74 thread type JMac Customs RRD-4C multi-caliber muzzle brake\n- 2× 5.45x39mm BS gs ammo pack (30 pcs)\n\"So, is the Zenit AK ready? Great, leave it on that crate, thank you. You can come over for the next order tomorrow, if you want.\""
+      "text": "- +28,000 EXP\n- Mechanic Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"So, is that Saint-P AK ready? Leave it in that crate. Thanks.\""
     },
     {
       "heading": "Guide",

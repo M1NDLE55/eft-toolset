@@ -1,8 +1,8 @@
 {
   "title": "Keycard with a blue marking",
   "url": "https://escapefromtarkov.fandom.com/wiki/Keycard_with_a_blue_marking",
-  "revisionId": 355013,
-  "lastEdited": "2026-08-18T11:56:09Z",
+  "revisionId": 363832,
+  "lastEdited": "2026-10-09T21:25:13Z",
   "kind": "key",
   "categories": [
     "Keycards"
@@ -13,8 +13,6 @@
     "weight": "0.01 kg",
     "grid": "1x1",
     "usage": "Unlocks Sanitar's room on the second level of The Lab.",
-    "loot xp": "20",
-    "exam xp": "10",
     "storage_wallet": "Yes",
     "storage_keytool": "No",
     "storage_doccase": "Yes",
@@ -40,7 +38,7 @@
       "text": "- Used in Therapist's quest TerraGroup Employee\n- Used in Therapist's quest Health Care Privacy - Part 6"
     },
     {
-      "heading": "Location",
+      "heading": "Key Location",
       "level": 2,
       "text": "- On Sanitar"
     },
@@ -50,7 +48,7 @@
       "text": "The door just in front of the Laboratory block (G22) on the second level in The Lab.\n\nLocation marked on map\n\nThe door"
     },
     {
-      "heading": "Behind the lock",
+      "heading": "Behind the Lock",
       "level": 2,
       "text": "- Loose loot (Meds and Medical supplies)\n- 1x Jacket\n- Ophthalmoscope spawns\n- Stimulants"
     },

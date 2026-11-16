@@ -1,8 +1,8 @@
 {
   "title": "Grenadier",
   "url": "https://escapefromtarkov.fandom.com/wiki/Grenadier",
-  "revisionId": 361734,
-  "lastEdited": "2026-09-24T12:28:07Z",
+  "revisionId": 365496,
+  "lastEdited": "2026-10-27T23:51:41Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Prapor",
-    "LL requirement": "2",
-    "reqkappa": "No"
+    "LL requirement": "2"
   },
   "sections": [
     {
@@ -27,7 +26,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 5 of any target with grenades or grenade launchers"
+      "text": "- Eliminate any 5 targets with hand grenades or grenade launchers"
     },
     {
       "heading": "Rewards",
@@ -42,7 +41,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "In this quest you have to kill 5 of any target with grenades.\n\nUnderbarrel grenade launchers, grenade launchers can be used, however rocket launchers can not be used."
+      "text": "In this quest you have to kill any 5 targets with grenades or underbarrel grenade launchers.\n\nStandalone grenade launchers and rocket launchers can not be used."
     }
   ]
 }

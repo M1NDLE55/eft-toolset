@@ -1,8 +1,8 @@
 {
   "title": "The Huntsman Path - Trophy",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Trophy",
-  "revisionId": 359767,
-  "lastEdited": "2026-09-13T20:21:45Z",
+  "revisionId": 365910,
+  "lastEdited": "2026-10-27T23:58:53Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "location": "Customs",
     "given by": "Jaeger",
-    "previous": "The Huntsman Path - Secured Perimeter",
-    "leads to": "Stray Dogs, The Huntsman Path - Relentless",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -24,17 +23,17 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Oh, it's you? I have something special for you today, a new hunt. There is this bastard, folks call him Reshala. You've definitely heard of him. He's got that golden pistol, one of a kind. This moron with the gang of his has been there for a while - robbing and killing people. He himself is just a coward, always hiding behind his guards. Help people get rid of him, the whole Tarkov will breathe easier. And take his pistol, It will be a good gift for Mechanic and his collection. But be extremely careful, many good fighters have already been killed by his gang. Good luck, hunter.\""
+      "text": "\"I've got a hunting job for you, kid... There's this cockroach around here they call Reshala. I'm sure you've heard of him already, haven't you? Walks around with a golden pistol, showing it off like some kind of king. He's been interfering with me and my work for a long time, dragging his gang along with him. A lot of good people have ended up dead because of him. As for him, he's nothing but a coward, always hiding behind his guards. Help me get rid of him, and Tarkov will breathe a little easier. While you're at it, bring me his pistol. It'll make a fine gift for the Mechanic. Just be extremely careful. Good hunting, warrior.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate Reshala\n- Find 1 Reshala's Golden TT in raid\n- Hand over 1 Reshala's Golden TT to Jaeger"
+      "text": "- Locate and neutralize Reshala\n- Hand over the found in raid Reshala's Golden TT-33 pistol to Jaeger"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +15,300 EXP\n- Jaeger Rep +0.02\n- 90,000 Roubles\n  - 94,500 Roubles with Intelligence Center Level 1\n  - 103,500 Roubles with Intelligence Center Level 2\n- 1× Magazine case\n- 3× Golden neck chain\n- 2× Gold skull ring\n- 1× Roler Submariner gold wrist watch\n\"You've done a good deed. One less bastard walking on this land. Take this, a gift from me and Mechanic.\""
+      "text": "- +3,000 EXP\n- Jaeger Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 2× Corrugated hose\n\"You've done a good deed. One less bastard walking on this land. Take this, a gift from me and Mechanic.\""
     },
     {
       "heading": "Guide",

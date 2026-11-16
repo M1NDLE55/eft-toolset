@@ -1,0 +1,48 @@
+{
+  "title": "Halloween: For the Greater Good",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_For_the_Greater_Good",
+  "revisionId": 366991,
+  "lastEdited": "2026-11-01T23:47:33Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "previous": "Halloween: First Results",
+    "leads to": "Halloween: For the Greater Good - An Agreement, Halloween: The Final Push"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: For the Greater Good is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"I've compared the data we've obtained with the records from the previous outbreak. There are too many similarities to be coincidental. The strain has changed, as has the infected's response to our treatments, but the overall pattern is almost identical. Skier is still sticking to his story, claiming he was set up. I'm not prepared to take his word for it. However, he now claims to have important information. I'm willing to examine it and share some of my own findings on the infection with him. Perhaps by comparing our information, we'll finally understand what they're testing here and how to fight it. Deliver my findings to Skier.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the infection data to Skier"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +24,000 EXP\n- 150,000 Roubles\n  - 157,500 Roubles with Intelligence Center Level 1\n  - 172,500 Roubles with Intelligence Center Level 2\n- 4× TerraGroup Labs access keycard\n- 2× Ibuprofen painkillers\n- 2× Augmentin antibiotic pills\n\"Thank you for your help. I hope we can finally get to the bottom of what's happening in Tarkov.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount |\n| Therapist's infection progression data | 1 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Hand over the flash drive to Skier in Halloween: For the Greater Good - An Agreement."
+    }
+  ]
+}

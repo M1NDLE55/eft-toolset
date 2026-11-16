@@ -1,0 +1,55 @@
+{
+  "title": "Halloween: Initial Examination",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_Initial_Examination",
+  "revisionId": 367012,
+  "lastEdited": "2026-11-02T00:34:54Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "location": "Lighthouse",
+    "previous": "Accept Halloween: Unexpected Help",
+    "leads to": "Halloween: Tightening the Quarantine (+15 mins)",
+    "related": "Halloween: Unexpected Help"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: Initial Examination is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I know Skier has asked you to deliver a batch of vaccine. That's precisely why I'm contacting you now. We still haven't identified the exact strain of the virus, and we don't know whether this preparation has anything to do with it at all. Its origin, storage conditions, and composition have barely been checked. Yet Skier has already decided that's good enough. If you hand the shipment over to him, the drug will immediately be distributed to the public. I'm asking you to do otherwise and bring the batch to me. I need to examine the vaccine before anyone starts using it.\""
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This quest gets automatically added to the quest list upon accepting Halloween: Unexpected Help."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over vaccine shipment"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +38,000 EXP\n- 200,000 Roubles\n  - 210,000 Roubles with Intelligence Center Level 1\n  - 230,000 Roubles with Intelligence Center Level 2\n- 1× Document case\n\"I knew you had a good head on your shoulders. It's a shame there are so few people like you.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"You... I thought you were a conscientious person. But I see there's rot in you, too. I suppose that's what Tarkov does to people.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| TG-VI-26 vaccine batch | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to locate and obtain the vaccine shipment on Lighthouse and hand it over to Therapist. It can be found on the second floor of water treatment building no. 3, on a desk in the western office."
+    }
+  ]
+}

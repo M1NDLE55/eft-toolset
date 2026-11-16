@@ -1,8 +1,8 @@
 {
   "title": "Object 21WS keycard",
   "url": "https://escapefromtarkov.fandom.com/wiki/Object_21WS_keycard",
-  "revisionId": 360261,
-  "lastEdited": "2026-09-15T11:56:04Z",
+  "revisionId": 363830,
+  "lastEdited": "2026-10-09T21:25:07Z",
   "kind": "key",
   "categories": [
     "Keycards"
@@ -14,7 +14,7 @@
     "type": "Keycard",
     "weight": "0.01 kg",
     "grid": "1x1",
-    "usage": "Unlocks the red TerraGroup container in the container lot outside the mall on Interchange",
+    "usage": "Unlocks the red TerraGroup container in the container lot outside the mall on Interchange.",
     "loot xp": "60",
     "exam xp": "10",
     "storage_wallet": "Yes",
@@ -102,7 +102,7 @@
       "text": "Located south west of the mall in a container lot on Interchange. On the red TerraGroup container that is stacked on top of other containers."
     },
     {
-      "heading": "Behind The Lock",
+      "heading": "Behind the Lock",
       "level": 2,
       "text": "- Loose loot (Weapon mods, Valuables)\n- 1x Weapon box (4x4)\n- 1x Weapon box (6x4)\n- 1x Weapon box (6x2)\n- 1x SIG MPX 9x19 submachine gun spawn\n- 1x HighCom Trooper TFO body armor (MultiCam) spawn"
     },

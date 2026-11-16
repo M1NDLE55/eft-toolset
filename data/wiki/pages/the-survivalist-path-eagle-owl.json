@@ -1,8 +1,8 @@
 {
   "title": "The Survivalist Path - Eagle-Owl",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Eagle-Owl",
-  "revisionId": 359787,
-  "lastEdited": "2026-09-13T20:22:05Z",
+  "revisionId": 365929,
+  "lastEdited": "2026-10-27T23:59:12Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,7 +12,8 @@
   ],
   "infobox": {
     "given by": "Jaeger",
-    "previous": "The Survivalist Path - Tough Guy",
+    "previous": "The Survivalist Path - Cold Blooded",
+    "leads to": "The Survivalist Path - Junkie",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -24,7 +25,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"As I've read in one article, the human eye can get used to the darkness. You know, I wanted to check, and I almost broke my leg in a deadfall. Guess I'm a little old for such a metamorphosis. But you, I think, are in the prime of life. A well-trained night eyesight can help us very much in our difficult tasks. So take care of this. You're a tough guy, you can take a punch. But what if you can't see anything at night and suddenly get ambushed by some scum? Those things happen quite often, not everyone can take NVG's into their raids. So, show me how you see in the dark, without any gadgets.\""
+      "text": "\"As I've read in one article, the human eye can get used to the darkness. You know, I wanted to check, and I almost broke my leg in a deadfall. Guess I'm a little old for such a metamorphosis. But you, I think, are in the prime of life. A well-trained night eyesight can help us very much in our difficult tasks. So take care of this. You're a tough guy, you can take a punch. But what if you can't see anything at night and suddenly get ambushed by some scum? Those things happen quite often, not everyone can take NVGs into their raids. So, show me how you see in the dark, without any gadgets.\""
     },
     {
       "heading": "Objectives",
@@ -34,7 +35,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +5,900 EXP\n- +0.5 Perception skill level\n- Jaeger Rep +0.02\n- 40,000 Roubles\n  - 42,000 Roubles with Intelligence Center Level 1\n  - 46,000 Roubles with Intelligence Center Level 2\n- 3× Armasight Vulcan MG 3.5x Bravo night vision scope\n\"How many you say there were, six? And you got them all without the \"goggles\"? Indeed, you are a great night hunter, kid.\""
+      "text": "- +28,000 EXP\n- 3× Armasight Vulcan MG 3.5x Bravo night vision scope\n- 1× VSS Vintorez 9x39 special sniper rifle\n- 4× 9x39mm SPP gs ammo pack (20 pcs)\n- Unlocks purchase of VSS/VAL TOZ 6P29M mount at Jaeger LL3\n\"How many you say there were, six? And you got them all without the \"goggles\"? Indeed, you are a great night hunter, kid.\""
     },
     {
       "heading": "Guide",

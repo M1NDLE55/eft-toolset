@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_1",
-  "revisionId": 356778,
-  "lastEdited": "2026-08-29T20:11:57Z",
+  "revisionId": 364389,
+  "lastEdited": "2026-10-13T18:45:55Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,6 +13,8 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "4",
+    "leads to": "Gunsmith Master - Part 2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -24,7 +26,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Hello. There is a new order for a Western HK 416A5 rifle. Requires tan-colored attachments: SureFire SOCOM556-RC2 silencer, Magpul RVG tactical grip, EOTech EXPS3 holographic sight, Magpul MOE pistol grip, Magpul UBR GEN2 stock, LA-5B/PEQ tactical module, and a mag with at least 30 round capacity. Ergonomics over 50, recoil sum under 310, weight 4 kilos or lower. Just like in Special Forces, right? Oh, and try to find a rifle that isn't thrashed, technical condition must be at least 80%.\""
+      "text": "\"Hello. A new order came in for an imported HK 416A5 rifle, the black variant. I spent some time thinking about who to assign it to, and realized you're the only one who can handle it right now. From now on, I'll be giving you more challenging jobs. The client wants the rifle built using tan or FDE-colored components: a SureFire SOCOM556-RC2 suppressor, Magpul RVG foregrip, EOTech EXPS3-0 holographic sight, Magpul MOE pistol grip, Magpul UBR GEN2 stock, an LA-5B/PEQ tactical device, and a magazine with a capacity of at least 30 rounds. It needs at least 50 ergonomics, no more than 310 total recoil, and must weigh under 4 kilograms. Just like something you'd see in the hands of some SOF guys, right? One more thing: try to find a rifle that hasn't been beaten to hell. Its durability must be at least 80%.\""
     },
     {
       "heading": "Requirements",
@@ -39,7 +41,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +14,900 EXP\n- Mechanic Rep +0.02\n- 500 Dollars\n  - 525 Dollars with Intelligence Center Level 1\n  - 575 Dollars with Intelligence Center Level 2\n- 1× Torrey Pines Logic T12W 30Hz thermal reflex sight\n- 3× Gunpowder \"Eagle\"\n- Unlocks purchase of AR-15 Magpul PRS GEN3 stock (Black) at Peacekeeper LL3\n\"A real door kicker blaster! Thank you for the help, mercenary.\""
+      "text": "- +10,000 EXP\n- 1× AR-15 HK Ergo PSG-1 style pistol grip\n- 1× AR-15 Strike Industries Advanced Receiver Extension\n- Unlocks purchase of AR-15 HK Ergo PSG-1 style pistol grip at Mechanic LL4\n- Unlocks purchase of AR-15 Strike Industries Advanced Receiver Extension at Mechanic LL4\n\"A real door kicker blaster! Thank you for the help, mercenary.\""
     },
     {
       "heading": "Guide",

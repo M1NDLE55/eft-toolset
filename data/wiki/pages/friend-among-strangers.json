@@ -1,8 +1,8 @@
 {
   "title": "Friend Among Strangers",
   "url": "https://escapefromtarkov.fandom.com/wiki/Friend_Among_Strangers",
-  "revisionId": 359307,
-  "lastEdited": "2026-09-13T20:13:58Z",
+  "revisionId": 366060,
+  "lastEdited": "2026-10-28T00:50:00Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Fence",
     "previous": "Establish Contact",
-    "leads to": "Immunity",
-    "reqkappa": "No"
+    "leads to": "Immunity"
   },
   "sections": [
     {

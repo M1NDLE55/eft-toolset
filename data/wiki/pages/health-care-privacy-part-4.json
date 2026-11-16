@@ -1,8 +1,8 @@
 {
   "title": "Health Care Privacy - Part 4",
   "url": "https://escapefromtarkov.fandom.com/wiki/Health_Care_Privacy_-_Part_4",
-  "revisionId": 359369,
-  "lastEdited": "2026-09-13T20:15:02Z",
+  "revisionId": 365508,
+  "lastEdited": "2026-10-27T23:51:53Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,9 +12,9 @@
   ],
   "infobox": {
     "given by": "Therapist",
+    "LL requirement": "3",
     "previous": "Health Care Privacy - Part 3",
-    "leads to": "Health Care Privacy - Part 5",
-    "reqkappa": "Yes"
+    "leads to": "Health Care Privacy - Part 5"
   },
   "sections": [
     {

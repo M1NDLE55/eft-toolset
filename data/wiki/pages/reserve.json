@@ -1,8 +1,8 @@
 {
   "title": "Reserve",
   "url": "https://escapefromtarkov.fandom.com/wiki/Reserve",
-  "revisionId": 357731,
-  "lastEdited": "2026-09-06T19:44:51Z",
+  "revisionId": 362703,
+  "lastEdited": "2026-09-29T23:57:16Z",
   "kind": "location",
   "categories": [
     "Locations"
@@ -49,7 +49,7 @@
     {
       "heading": "Extractions",
       "level": 2,
-      "text": "To locate the extractions use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Armored Train | All | no | yes | - | Arrives between 16 and 12 minutes left in the raid.; Honks twice on arrival.; Stays for 7 min.; Honks once 1 min before departure.; Honks twice on closing doors.; Scav Raiders may spawn at the train yard around the time of arrival. |\n| Bunker Hermetic Door | All | yes | no | Activate the lever in the shack west of the white pawn barracks. | The activation lasts for 4 minutes and a siren wails for the duration.; Activating the lever has a chance to make some Scav Raiders spawn at the train yard. |\n| Checkpoint Fence | Scav | yes | no | - | |\n| Cliff Descent | PMC | yes | no | Red Rebel ice pick; Paracord; No armor vest equipped | |\n| D-2 | PMC | yes | no | 1.Turn on power with a lever in the command part of the underground bunker system; 2.Press the button on the wall next to the sliding door | Activating the lever has the chance to make some Scav Raiders spawn in the command part of the bunker. |\n| Depot Hermetic Door | Scav | yes | no | - | |\n| Exit to Woods | All | yes | no | Minefield map (Reserve); Minefield map (Reserve) | |\n| Heating Pipe | Scav | yes | no | - | |\n| Hole in the Wall by the Mountains | Scav | yes | no | - | |\n| Scav Lands (Co-Op) | All | yes | no | Scav + PMC | |\n| Sewer Manhole | All | yes | no | No backpack equipped | |"
+      "text": "To locate the extractions use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Armored Train | All | no | yes | - | Arrives between 16 and 12 minutes left in the raid.; Honks twice on arrival.; Stays for 7 min.; Honks once 1 min before departure.; Honks twice on closing doors.; Scav Raiders may spawn at the train yard around the time of arrival. |\n| Bunker Hermetic Door | All | yes | no | Activate the lever in the shack west of the white pawn barracks. | The activation lasts for 4 minutes and a siren wails for the duration.; Activating the lever has a chance to make some Scav Raiders spawn at the train yard. |\n| Checkpoint Fence | Scav | yes | no | - | |\n| Cliff Descent | PMC | yes | no | Red Rebel ice pick; Paracord; No armor vest equipped | |\n| D-2 | PMC | yes | no | 1.Turn on power with a lever in the; underground bunker system; 2.Press the button on the wall next to the sliding door | Activating the lever has the chance to make some Scav Raiders spawn in the command part of the bunker. |\n| Depot Hermetic Door | Scav | yes | no | - | |\n| Exit to Woods | All | yes | no | Minefield map (Reserve); Minefield map (Reserve) | |\n| Heating Pipe | Scav | yes | no | - | |\n| Hole in the Wall by the Mountains | Scav | yes | no | - | |\n| Scav Lands (Co-Op) | All | yes | no | Scav + PMC | |\n| Sewer Manhole | All | yes | no | No backpack equipped | |"
     },
     {
       "heading": "Transits",

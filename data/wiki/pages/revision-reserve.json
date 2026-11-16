@@ -1,17 +1,17 @@
 {
   "title": "Revision - Reserve",
   "url": "https://escapefromtarkov.fandom.com/wiki/Revision_-_Reserve",
-  "revisionId": 359612,
-  "lastEdited": "2026-09-13T20:19:10Z",
+  "revisionId": 367467,
+  "lastEdited": "2026-11-03T14:45:37Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Reserve",
     "given by": "Peacekeeper",
-    "reqkappa": "Yes"
+    "location": "Reserve",
+    "LL requirement": "3"
   },
   "sections": [
     {
@@ -23,11 +23,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Good day. As you know, the blue helmets are here to lower the level of aggression in the region. That is why I want you to assess the danger levels. Infiltrate the military base and search it for anything that could present military danger. After all, the blue helmets are supposed to keep the peace. Some knowledgeable people have provided me with a list of military machinery located in the military base area, which also includes NATO units. I think they want to safely dispose of it, or something else, I don't know. Anyway, you have to find the machinery and mark it with beacons. The clients offer good money for this, so don't let me down, mercenary.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 3 with Peacekeeper to obtain this quest."
     },
     {
       "heading": "Objectives",

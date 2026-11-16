@@ -1,8 +1,8 @@
 {
   "title": "Arena Events",
   "url": "https://escapefromtarkov.fandom.com/wiki/Arena_Events",
-  "revisionId": 362006,
-  "lastEdited": "2026-09-24T18:14:42Z",
+  "revisionId": 367657,
+  "lastEdited": "2026-11-08T13:27:39Z",
   "kind": "game",
   "categories": [
     "Escape from Tarkov: Arena"
@@ -13,12 +13,22 @@
     {
       "heading": "Introduction",
       "level": 1,
-      "text": "For the main game, see Events.\n\nEvents in Escape from Tarkov: Arena are limited time activities that give players new challenges, adjust gameplay & mechanics, and introduce new items that are being tested by the developers for a limited time. Some events are \"lore-oriented\" which give an insight or backstory to the Tarkov/Norvinsk region, while other events are seasonal holiday events that are done just for fun."
+      "text": "For the main game, see Events.\n\nEvents in Escape from Tarkov: Arena are limited time activities that give players new challenges, adjust gameplay & mechanics, and introduce new items that are being tested by the developers for a limited time. Some events are \"lore-oriented\" which give an insight or backstory to the Tarkov/Norvinsk region, while other events are seasonal holiday events that are done just for fun.\n\n| This section describes past events. |"
+    },
+    {
+      "heading": "Bloodlust (29 October 2026)",
+      "level": 2,
+      "text": "\"The bloodbath has begun!\"\n- Quest Let the Blades Do the Talking has been added.\n- Quest Movie Star has been added.\n- Quest Scream in the Dark has been added.\n- Quest Flesh of Steel has been added.\n- Quest The Final Scene has been added.\n- New game mode \"Checkpoint: Bloodlust\" has been added.\n  - Matches in this mode provide double EXP.\n  - The only locations available for this mode are Bowl and Fort.\n  - Compared to traditional Checkpoint matches, each match has a maximum duration of 8 minutes and the score required for an early win is lowered to 800.\n  - On match start and upon each respawn, players are given a random melee weapon and a Halloween-themed face cover.\n  - Presets are selected from the following:\n    - APOK Tactical Wasteland Gladius + Extreme cold weather face mask\n    - Crash Axe + Slender mask\n    - United Cutlery M48 Tactical Kukri + Ghoul mask\n    - Miller Bros. Blades M-2 Tactical Sword + Faceless mask\n    - SOG Voodoo Hawk tactical tomahawk + Spooky skull mask\n    - Cultist knife + Pestily plague mask\n    - UVSR Taiga-1 survival machete + Misha Mayorov mask\n    - SP-8 Survival Machete + Jason mask\n    - Red Rebel ice pick + Jack-o'-lantern tactical pumpkin helmet + NPP KlASS Korund-VM body armor (Black)\n      - This is the only preset with any form of armor.\n      - The Red Rebel ice pick has modified damage values: Chop 150 Damage, Stab 300 Damage.\n- Both Checkpoint modes give 50% bonus to gained EXP."
+    },
+    {
+      "heading": "Wildcard (16 October 2026)",
+      "level": 2,
+      "text": "- New class \"Wildcard\" has been added: \"A versatile fighter unrestricted by class specializations. Can use any type of weapon and equipment, freely combining them to create unique loadouts for any tactical situation.\"\n- Quest Wildcard: Breaking the Mold has been added.\n- Quest Wildcard: Winner's Pick has been added.\n- Quest Wildcard: In a Hurry has been added.\n- Quest Wildcard: Next Candidate! has been added.\n- Quest Wildcard: True Marksman has been added.\n- Quest Wildcard: Heavy Weapons Guy has been added.\n- Quest Wildcard: Limits Are Only in Your Head has been added.\n- Quest Wildcard: Slayer has been added.\n- Quest Wildcard: Let's Start Over has been added."
     },
     {
       "heading": "Free Weekend (24 September 2026)",
       "level": 2,
-      "text": "- Quest Smells Like Gunpowder has been added.\n- Quest A New Classic has been added.\n- Quest Firework has been added.\n- Quest Double Tap has been added.\n- Quest Miracle Worker has been added.\n\n| This section describes past events. |"
+      "text": "- Quest Smells Like Gunpowder has been added.\n- Quest A New Classic has been added.\n- Quest Firework has been added.\n- Quest Double Tap has been added.\n- Quest Miracle Worker has been added."
     },
     {
       "heading": "CheckChamber (31 July 2026)",

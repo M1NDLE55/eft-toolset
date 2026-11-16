@@ -1,8 +1,8 @@
 {
   "title": "Key to the City",
   "url": "https://escapefromtarkov.fandom.com/wiki/Key_to_the_City",
-  "revisionId": 359438,
-  "lastEdited": "2026-09-13T20:16:11Z",
+  "revisionId": 365577,
+  "lastEdited": "2026-10-27T23:53:03Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -38,7 +38,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +55,000 EXP\n- Ragman Rep +0.02\n- 145,000 Roubles\n  - 152,250 Roubles with Intelligence center Level 1\n  - 166,750 Roubles with Intelligence center Level 2\n- 3× Bottle of Fierce Hatchling moonshine\n\"You got it? Nice! What do those numbers mean? Only the bright minds who know about Tarkov's history will understand that, probably.\""
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 3× Bottle of Fierce Hatchling moonshine\n- 1× Item case\n\"You got it? Nice! What do those numbers mean? Only the bright minds who know about Tarkov's history will understand that, probably.\""
     },
     {
       "heading": "Guide",

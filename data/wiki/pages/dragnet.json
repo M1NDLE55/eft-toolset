@@ -1,8 +1,8 @@
 {
   "title": "Dragnet",
   "url": "https://escapefromtarkov.fandom.com/wiki/Dragnet",
-  "revisionId": 359245,
-  "lastEdited": "2026-09-13T20:12:55Z",
+  "revisionId": 366614,
+  "lastEdited": "2026-10-31T05:31:52Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "location": "Factory",
     "given by": "Jaeger",
-    "previous": "One Less Loose End, or, A Healthy Alternative",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -33,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +17,300 EXP\n- Jaeger Rep +0.02\n- 92,000 Roubles\n  - 96,600 Roubles with Intelligence Center Level 1\n  - 105,800 Roubles with Intelligence Center Level 2\n- 1× Springfield Armory M1A 7.62x51 rifle\n- 3× M14 7.62x51 30-round magazine\n- 6× 7.62x51mm M62 Tracer ammo pack (20 pcs)\n\"You're a good kid. My comrade will find a good stash spot for this thingie where no one will ever find it.\""
+      "text": "- +10,000 EXP\n- Jaeger Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"You're a good kid. My comrade will find a good stash spot for this thingie where no one will ever find it.\""
     },
     {
       "heading": "Guide",

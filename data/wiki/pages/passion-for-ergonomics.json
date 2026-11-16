@@ -1,8 +1,8 @@
 {
   "title": "Passion for Ergonomics",
   "url": "https://escapefromtarkov.fandom.com/wiki/Passion_for_Ergonomics",
-  "revisionId": 359546,
-  "lastEdited": "2026-09-13T20:18:02Z",
+  "revisionId": 365688,
+  "lastEdited": "2026-10-27T23:54:56Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Customs",
     "given by": "Mechanic",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -32,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +7,200 EXP\n- Mechanic Rep +0.02\n- 25,000 Roubles\n  - 26,250 Roubles with Intelligence center Level 1\n  - 28,750 Roubles with Intelligence center Level 2\n- 2× Electric motor\n\"Hmm... He would never let his car burn down willingly. Something must have happened there. A car mechanic's death would be just an imperceptible blip in the death toll on the Tarkov scale. But hopefully he was able to make it out and find safety. Maybe we'll see each other again.\""
+      "text": "- +3,000 EXP\n- Mechanic Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"Hmm... He would never let his car burn down willingly. Something must have happened there. A car mechanic's death would be just an imperceptible blip in the death toll on the Tarkov scale. But hopefully he was able to make it out and find safety. Maybe we'll see each other again.\""
     },
     {
       "heading": "Guide",

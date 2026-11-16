@@ -1,19 +1,18 @@
 {
   "title": "Forge a Friendship",
   "url": "https://escapefromtarkov.fandom.com/wiki/Forge_a_Friendship",
-  "revisionId": 360848,
-  "lastEdited": "2026-09-20T12:28:48Z",
+  "revisionId": 365441,
+  "lastEdited": "2026-10-27T23:50:45Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Prapor",
+    "location": "Shoreline",
     "previous": "Swift Retribution, Natural Exchange",
-    "leads to": "Half-Empty",
-    "reqkappa": "No"
+    "leads to": "Half-Empty"
   },
   "sections": [
     {

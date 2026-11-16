@@ -1,0 +1,47 @@
+{
+  "title": "Halloween: For the Greater Good - An Agreement",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_For_the_Greater_Good_-_An_Agreement",
+  "revisionId": 367047,
+  "lastEdited": "2026-11-02T21:07:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "previous": "Accept Halloween: For the Greater Good"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: For the Greater Good - An Agreement is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Heard the old c***'s finally decided to get in touch. Wants to pass along her data on this infection. Well, that's something, at least. Bring me everything she's given you. We'll see what she's dug up and whether any of it's actually worth a damn.\""
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This quest gets automatically added to the quest list upon accepting Halloween: For the Greater Good."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the infection data"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +18,000 EXP\n- 1,800 Euros\n  - 1,890 Euros with Intelligence Center Level 1\n  - 2,070 Euros with Intelligence Center Level 2\n- 2× Infected tissue sample\n\"All right, this data's decent. I'll tell my lads to leave Therapist's teams alone from now on. If it comes to it, we'll even cover her people. We can't sort this whole fucking mess out by clearing out the infected alone. We need a vaccine, and there won't be enough to go around. So, for now, it's better for us to stick together with Therapist.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Therapist's infection progression data | 1 | Required | N/A | Received from Therapist |\nHand over the flash drive given by Therapist in Halloween: For the Greater Good."
+    }
+  ]
+}

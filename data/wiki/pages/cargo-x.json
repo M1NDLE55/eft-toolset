@@ -1,18 +1,18 @@
 {
   "title": "Cargo X",
   "url": "https://escapefromtarkov.fandom.com/wiki/Cargo_X",
-  "revisionId": 362659,
-  "lastEdited": "2026-09-29T21:21:21Z",
+  "revisionId": 367456,
+  "lastEdited": "2026-11-03T14:33:32Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Peacekeeper",
+    "location": "Shoreline",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "2"
   },
   "sections": [
     {

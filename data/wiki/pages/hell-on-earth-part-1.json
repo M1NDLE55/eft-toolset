@@ -1,8 +1,8 @@
 {
   "title": "Hell on Earth - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Hell_on_Earth_-_Part_1",
-  "revisionId": 359372,
-  "lastEdited": "2026-09-13T20:15:05Z",
+  "revisionId": 365511,
+  "lastEdited": "2026-10-27T23:51:56Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Prapor",
     "previous": "Accept The Good Times - Part 1",
-    "leads to": "Hell on Earth - Part 2",
-    "reqkappa": "No"
+    "leads to": "Hell on Earth - Part 2"
   },
   "sections": [
     {

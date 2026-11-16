@@ -1,19 +1,18 @@
 {
   "title": "The Higher They Fly",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Higher_They_Fly",
-  "revisionId": 362477,
-  "lastEdited": "2026-09-29T15:46:32Z",
+  "revisionId": 367427,
+  "lastEdited": "2026-11-03T13:42:20Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods",
     "given by": "Skier",
+    "location": "Woods",
     "previous": "Swift Retribution, or, Inevitable Response",
-    "leads to": "Route Deviation (+6hr)",
-    "reqkappa": "No"
+    "leads to": "Route Deviation (+6hr)"
   },
   "sections": [
     {

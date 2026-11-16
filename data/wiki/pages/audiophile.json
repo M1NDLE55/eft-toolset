@@ -1,8 +1,8 @@
 {
   "title": "Audiophile",
   "url": "https://escapefromtarkov.fandom.com/wiki/Audiophile",
-  "revisionId": 359091,
-  "lastEdited": "2026-09-13T20:10:18Z",
+  "revisionId": 367869,
+  "lastEdited": "2026-11-12T00:42:43Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "location": "Streets of Tarkov",
     "given by": "Ragman",
-    "previous": "Minibus, Ballet Lover",
+    "LL requirement": "3",
     "reqkappa": "No"
   },
   "sections": [
@@ -26,11 +26,6 @@
       "text": "\"I have another detective job for you. I have a client, a very good guy. A rocker. I used to sell their band all sorts of stuff when they were playing in our town! The guy was in Tarkov when it all started, rehearsing at someone's crib. And then the evacuation started and all that bullshit. So the guy lost his guitar pick... Yeah, man, you're gonna go looking for a plectrum. Why are you so surprised? He got that pick from either Hetfield or that hairy, what's-his-name... The hairy one, you should know! Too-doo-doo, too-doo-doo-doo-doo... Oh, man, they won't take you to Guess the Tune. Anyway, find the plectrum, it's got the AG initials on it, you won't mistake it. You have no idea how much a dude is willing to pay for that plastic shit. An address? If he could remember the address, I'd go to the address myself!\""
     },
     {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 25 to start this quest."
-    },
-    {
       "heading": "Objectives",
       "level": 2,
       "text": "- Locate the musician gathering spot on Streets of Tarkov\n- Obtain the engraved guitar pick\n- Hand over the guitar pick to Ragman"
@@ -38,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +17,200 EXP\n- Ragman Rep +0.02\n- 87,000 Roubles\n  - 91,350 Roubles with Intelligence Center Level 1\n  - 100,050 Roubles with Intelligence Center Level 2\n- 1× Roler Submariner gold wrist watch\n- 1× Gold skull ring\n- Unlocks purchase of CQC Osprey MK4A plate carrier (Assault, MTP) at Ragman LL3\n\"How the fuck did you find one tiny guitar pick in a huge city?! Better than Sherlock, I swear. All right, give me the plectrum, because the client's all pissed off right now, can't find a muse or something. Tell me, do you have any idea why this plastic thing can cost so much?\""
+      "text": "- +28,000 EXP\n- Ragman Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"How the fuck did you find one tiny guitar pick in a huge city?! Better than Sherlock, I swear. All right, give me the plectrum, because the client's all pissed off right now, can't find a muse or something. Tell me, do you have any idea why this plastic thing can cost so much?\""
     },
     {
       "heading": "Guide",
@@ -53,7 +48,7 @@
     {
       "heading": "First spawn",
       "level": 4,
-      "text": "On a yellow book in the pile of books on the ground left after entering. Proning required."
+      "text": "On a yellow book in the pile of books on the floor left after entering. Proning required."
     },
     {
       "heading": "Second spawn",
@@ -63,7 +58,7 @@
     {
       "heading": "Third spawn",
       "level": 4,
-      "text": "In a blue cup on the ground in front of the drum set."
+      "text": "On the floor next to the electric guitar in front of the drum set."
     },
     {
       "heading": "Fourth spawn",
@@ -88,7 +83,7 @@
     {
       "heading": "Seventh spawn",
       "level": 4,
-      "text": "On the ground between a package and the right hand wall after entering."
+      "text": "On the floor between a package and the right hand wall after entering."
     },
     {
       "heading": "Eighth spawn",

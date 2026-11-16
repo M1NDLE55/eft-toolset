@@ -1,18 +1,17 @@
 {
   "title": "The Cult",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Cult",
-  "revisionId": 362634,
-  "lastEdited": "2026-09-29T20:47:12Z",
+  "revisionId": 367729,
+  "lastEdited": "2026-11-09T00:34:55Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Peacekeeper",
-    "LL requirement": "2",
-    "reqkappa": "Yes"
+    "location": "Shoreline",
+    "LL requirement": "2"
   },
   "sections": [
     {
@@ -33,7 +32,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +10,00 EXP\n- Peacekeeper Rep +0.25\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n\"Kurwa! This is far too strange... I will continue looking into it myself. Thanks!\""
+      "text": "- +10,000 EXP\n- Peacekeeper Rep +0.25\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n\"Kurwa! This is far too strange... I will continue looking into it myself. Thanks!\""
     },
     {
       "heading": "Guide",

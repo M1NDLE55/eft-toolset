@@ -1,8 +1,8 @@
 {
   "title": "The Huntsman Path - Justice",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Justice",
-  "revisionId": 359760,
-  "lastEdited": "2026-09-13T20:21:38Z",
+  "revisionId": 365903,
+  "lastEdited": "2026-10-27T23:58:46Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "location": "Customs",
     "given by": "Jaeger",
-    "previous": "The Huntsman Path - Secured Perimeter",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,22 +23,22 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Ah, it's you? Glad to see you, friend. Ever tracked your prey on a hunt? When all this fuss started here in Tarkov, lots of things changed, brothers started fighting one another - it’s the usual thing now. And the same works for the authorities, those who had to protect the law before became unscrupulous creatures, some haven't even changed from uniform, can you imagine? I have a personal score with them. Well, if you send some Scavs to hell, it will be for the better, there has been nothing human left in these men for a long time anyway. Get rid of the remains of Reshala's gang, they're dressed in police uniform, can't miss them.\""
+      "text": "\"Good to see you, kid. Have you ever tracked prey during a hunt? When all this chaos started in Tarkov, I've seen all kinds of things. Those who were supposed to uphold the law became even worse than the criminals they were meant to stop. Some of them didn't even bother changing out of their uniforms, can you believe that? I have my own reasons for wanting them gone. Deal with the remaining members of Reshala's crew. They'll be wearing police uniforms, so you won't have any trouble recognizing them. And bring me one of their armor vests as a trophy.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 3 Scavs dressed in police uniform (Reshala's bodyguards)"
+      "text": "- Eliminate 3 Reshala's guards\n- Hand over one of Reshala's guards' armor vest"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +12,300 EXP\n- Jaeger Rep +0.02\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\n- 3× Expeditionary fuel tank\n- 2× Propane tank (5L)\n- 1× WD-40 (400ml)\n\"Protected the honor of the uniform? That's great. Fuck them, there is nothing worse than giving the oath and then falling into crime.\""
+      "text": "- +3,000 EXP\n- Jaeger Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 2× Corrugated hose\n\"You did a good thing. One more piece of filth has been removed from this world. Here, this is from both me and the Mechanic.\""
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "In this quest you have to kill 3 of Reshala's followers."
+      "text": "In this quest you have to kill 3 of Reshala's followers and hand over 1 of their found in raid armors. You can hand over any of the following:\n- 6B43 Zabralo-Sh body armor (EMR)\n- BNTI Gzhel-K body armor\n- BNTI Zhuk body armor (EMR)\n- BNTI Zhuk body armor (EMR)\n- FORT Defender-2 body armor\n- FORT Redut-M body armor\n- NPP KlASS Korund-VM body armor (Black)"
     }
   ]
 }

@@ -1,18 +1,17 @@
 {
   "title": "Operation Aquarius",
   "url": "https://escapefromtarkov.fandom.com/wiki/Operation_Aquarius",
-  "revisionId": 361694,
-  "lastEdited": "2026-09-24T12:09:24Z",
+  "revisionId": 365676,
+  "lastEdited": "2026-10-27T23:54:44Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs",
     "given by": "Therapist",
-    "LL requirement": "1",
-    "reqkappa": "No"
+    "location": "Customs",
+    "LL requirement": "1"
   },
   "sections": [
     {
@@ -38,7 +37,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Dorm room 206 key | 1 | Required | N/A | Unlocks dorm room 206 in the two-story dorms on Customs where the hidden water is located. |\n| Bottle of water (0.6L) | 3 | Required | Yes | Hand over item. |\n| Aquamari water bottle with filter | 3 | Required | Yes | Hand over item. |\n| Canister with purified water | 3 | Required | Yes | Hand over item. |\n| Bottle of YMXC water | 3 | Required | Yes | Hand over item. |\n| Emergency Water Ration | 3 | Required | Yes | Hand over item. |\nIn this quest you have to find the hidden water on Customs. It can be found in room 206 on the second floor of the two-story dorms building. A Dorm room 206 key is required to enter it. You also need to hand over 3 water drinking items found in raid to Therapist."
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in Raid | Notes |\n| Dorm room 206 key | Dorm room 206 key | 1 | Required | N/A | Unlocks dorm room 206 in the two-story dorms on Customs where the hidden water is located. |\n| Bottle of water (0.6L); or; Aquamari water bottle with filter; or; Canister with purified water; or; Bottle of YMXC water; or; Emergency Water Ration | Bottle of water (0.6L); or; Aquamari water bottle with filter; or; Canister with purified water; or; Bottle of YMXC water; or; Emergency Water Ration | 3 | Handover item | Yes | |\nIn this quest you have to find the hidden water on Customs. It can be found in room 206 on the second floor of the two-story dorms building. A Dorm room 206 key is required to enter it. You also need to hand over 3 water drinking items found in raid to Therapist."
     }
   ]
 }

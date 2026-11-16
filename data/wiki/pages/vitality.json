@@ -1,8 +1,8 @@
 {
   "title": "Vitality",
   "url": "https://escapefromtarkov.fandom.com/wiki/Vitality",
-  "revisionId": 362595,
-  "lastEdited": "2026-09-29T19:47:49Z",
+  "revisionId": 364435,
+  "lastEdited": "2026-10-13T21:56:48Z",
   "kind": "skill",
   "categories": [
     "Physical skills"
@@ -38,9 +38,9 @@
       "text": "- 0.01 points for every 5 points of damage taken\n- 0.3 points for getting bloodloss\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention\n- Completing the quest Decontamination Service"
     },
     {
-      "heading": "Tips",
+      "heading": "Leveling Guide",
       "level": 2,
-      "text": "- Getting a heavy bleed and using a Propital regenerative stimulant injector to heal against it without stopping the bleed is a way to get constant damage.\n- Since skill points are gained by damage taken including self inflicted, dying to own grenades is an efficient way too. (Always use air filtering unit if you are trying to power level this skill.)"
+      "text": "- Getting the heavy bleeding status effect and using a Propital regenerative stimulant injector to heal against it without stopping the bleed is a way to get constant damage.\n- Since skill points are gained by damage taken including self inflicted, dying to own grenades is an efficient way too."
     }
   ]
 }

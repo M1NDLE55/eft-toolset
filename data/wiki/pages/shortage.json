@@ -1,8 +1,8 @@
 {
   "title": "Shortage",
   "url": "https://escapefromtarkov.fandom.com/wiki/Shortage",
-  "revisionId": 361692,
-  "lastEdited": "2026-09-24T12:08:11Z",
+  "revisionId": 367764,
+  "lastEdited": "2026-11-09T01:00:59Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,8 @@
   "infobox": {
     "given by": "Therapist",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "1",
+    "previous": "First in Line, or, Operation Aquarius, or, Supply Plans"
   },
   "sections": [
     {
@@ -37,7 +38,7 @@
     {
       "heading": "Initial Equipment",
       "level": 2,
-      "text": "- Unlocks craft for Salewa first aid kit at Medstation level 1"
+      "text": "Unlocks craft for Salewa first aid kit at Medstation level 1."
     },
     {
       "heading": "Guide",

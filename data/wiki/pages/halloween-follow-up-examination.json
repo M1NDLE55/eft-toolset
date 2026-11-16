@@ -1,0 +1,54 @@
+{
+  "title": "Halloween: Follow-Up Examination",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_Follow-Up_Examination",
+  "revisionId": 367403,
+  "lastEdited": "2026-11-03T12:06:06Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "location": "Infected Lab, Infected Factory",
+    "previous": "Accept Halloween: The Best Defense",
+    "leads to": "Halloween: Unexpected Help"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: Follow-Up Examination is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Good afternoon. It seems Tarkov still won't give us a moment's peace... Yes, I am aware of the infection. Something similar happened not so long ago. Back then, we managed to stop the disease from spreading, with my help among other things. It seems I'll have to get involved again, fortunately, we already know where to start. First, we need to establish whether this is the same pathogen. Bring me a blood sample. Bear in mind, I don't need a specimen you've killed yourself. It must be someone who died from the virus on their own. That is the only way I can be sure the virus had enough time to develop inside them. We absolutely cannot afford to waste time on careless mistakes right now. Head to the infected areas and look for lab personnel in protective suits. I suspect they were the first to bear the brunt of the outbreak.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the dead scientist in a hazmat suit on Infected Lab or Infected Factory\n- Open the scientist's body using Medical instruments\n- Obtain the blood sample on Infected Lab or Infected Factory\n- Hand over the blood sample"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +40,000 EXP\n- 2,700 Euros\n  - 2,835 Euros with Intelligence Center Level 1\n  - 3,105 Euros with Intelligence Center Level 2\n- 2× TerraGroup Labs access keycard\n- 2× Adrenaline injector\n- 2× Trimadol stimulant injector\n\"Excellent work, young man. I'll begin the analysis as soon as possible.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Blood sample (Halloween 2026) | Blood sample | 1 | Handover item | No | |\n| Medical tools | Medical tools | 1 | Required | No | Required to collect the Blood sample, consumed on use. |\nIn this quest you have to locate a dead scientist in a hazmat suit on either Infected Lab or Infected Factory and take a blood sample. Getting a sample is not guaranteed and requires a set of Medical tools per opening."
+    },
+    {
+      "heading": "Infected Lab",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Infected Factory",
+      "level": 4,
+      "text": ""
+    }
+  ]
+}

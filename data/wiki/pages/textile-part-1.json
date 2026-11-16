@@ -1,8 +1,8 @@
 {
   "title": "Textile - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Textile_-_Part_1",
-  "revisionId": 359729,
-  "lastEdited": "2026-09-13T20:21:07Z",
+  "revisionId": 365872,
+  "lastEdited": "2026-10-27T23:58:12Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,7 +12,7 @@
   ],
   "infobox": {
     "given by": "Ragman",
-    "previous": "Sew it Good - Part 4",
+    "LL requirement": "4",
     "leads to": "Textile - Part 2",
     "reqkappa": "No"
   },
@@ -40,12 +40,7 @@
     {
       "heading": "USEC Exclusive",
       "level": 4,
-      "text": "\"Come on in, no need to stand in the doorway. I have a job for you. I'm all busy with orders, and I'm almost out of materials. Can you find me some? I'll be able to offer you something new in return. It won't be cheap though. Made in.. well, you know where. And yeah, make sure that those materials are pristine, get them yourself, without traders' help. Anyway, bring them in as soon as you get them. Find them wherever you want, but I think there was a big supply of them in Ultra mall. Lemme make a list for you.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 4 with Ragman to obtain this quest."
+      "text": "\"Come on in, no need to stand in the doorway. I have a job for you. I'm all busy with orders, and I'm almost out of materials. Can you find me some? I'll be able to offer you something new in return. It won't be cheap though. Made in.. well, you know where. And yeah, make sure that those materials are pristine, get them yourself, without traders' help. Anyway, bring them in as soon as you get them. Find them wherever you want, but I think there was a big supply of them in the Ultra mall. Lemme make a list for you.\""
     },
     {
       "heading": "Objectives",
@@ -55,7 +50,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +32,000 EXP\n- 100,000 Roubles\n  - 105,000 Roubles with Intelligence Center Level 1\n  - 115,000 Roubles with Intelligence Center Level 2\n- Unlocks purchase of IOTV Gen4 body armor (Assault Kit, MultiCam) at Ragman LL4"
+      "text": "- +65,000 EXP\n- 1× Mystery Ranch Blackjack 50 backpack (MultiCam)\n- 1× Peltor ComTac IV Hybrid headset (Coyote Brown)\n- Unlocks barter for Mystery Ranch Blackjack 50 backpack (MultiCam) at Ragman LL4"
     },
     {
       "heading": "BEAR Exclusive",
@@ -65,7 +60,7 @@
     {
       "heading": "USEC Exclusive",
       "level": 4,
-      "text": "- Unlocks purchase of USEC Commando lower clothing at Ragman LL3\n\"You got it? Good work. Come back a bit later, I will have another task for you. You can try on the new clothes, by the way.\""
+      "text": "- Unlocks purchase of USEC Commando lower clothing at Ragman LL3\n- Unlocks purchase of IOTV Gen4 body armor (Assault Kit, MultiCam) at Ragman LL4\n\"You got it? Good work. Come back a bit later, I will have another task for you. You can try on the new clothes, by the way.\""
     },
     {
       "heading": "Guide",

@@ -1,18 +1,18 @@
 {
   "title": "Power of Persuasion",
   "url": "https://escapefromtarkov.fandom.com/wiki/Power_of_Persuasion",
-  "revisionId": 361737,
-  "lastEdited": "2026-09-24T12:28:43Z",
+  "revisionId": 365710,
+  "lastEdited": "2026-10-27T23:55:19Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods, Ground Zero, Interchange, Customs",
     "given by": "Prapor",
+    "location": "Customs, Ground Zero, Interchange, Woods",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "5"
   },
   "sections": [
     {

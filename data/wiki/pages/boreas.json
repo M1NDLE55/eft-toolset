@@ -1,8 +1,8 @@
 {
   "title": "Boreas",
   "url": "https://escapefromtarkov.fandom.com/wiki/Boreas",
-  "revisionId": 362243,
-  "lastEdited": "2026-09-26T15:46:10Z",
+  "revisionId": 367776,
+  "lastEdited": "2026-11-09T19:40:17Z",
   "kind": "quest",
   "categories": [
     "Story chapters"
@@ -33,7 +33,7 @@
     {
       "heading": "Talk to Mechanic",
       "level": 3,
-      "text": "Visit Mechanic in the menu through the trader screen and ask him about the distress signal."
+      "text": "Visit Mechanic in the menu through the trader screen."
     },
     {
       "heading": "Locate and repair the equipment under the cellular tower on Woods",
@@ -148,7 +148,7 @@
     {
       "heading": "Locate and obtain the engine room keycard",
       "level": 4,
-      "text": "| Item name | Amount | Requirement | Find in raid |\n| Boreas engine room keycard | 1 | Unlocks the engine room door | N/A |\nThe engine room keycard is located in the center medical room at level 1, next to an engineer body."
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Boreas engine room keycard | 1 | Unlocks the engine room door | N/A |\nThe engine room keycard is located in the center medical room on level 1, next to an engineer body."
     },
     {
       "heading": "Reach the engine room",
@@ -228,7 +228,7 @@
     {
       "heading": "Locate and obtain the engine room keycard",
       "level": 4,
-      "text": "| Item name | Amount | Requirement | Find in raid |\n| Boreas engine room keycard | 1 | Unlocks the engine room door | N/A |\nThe engine room keycard is located in the center medical room at level 1 next to an engineer body."
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Boreas engine room keycard | 1 | Unlocks the engine room door | N/A |\nThe engine room keycard is located in the center medical room on level 1 next to an engineer body."
     },
     {
       "heading": "Reach the engine room",
@@ -273,7 +273,7 @@
     {
       "heading": "Find something to thaw the hatch on the roof of the bridge",
       "level": 3,
-      "text": "| Item name | Amount | Requirement | Find in raid |\n| BBQ-S43 gas torch | 1 | Used to thaw the hatch on the roof of the bridge. | N/A |\nThe BBQ-S43 gas torch can be found at level 3 inside the kitchen where The Wedge appears."
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| BBQ-S43 gas torch | 1 | Used to thaw the hatch on the roof of the bridge. | N/A |\nThe BBQ-S43 gas torch can be found on level 3 inside the kitchen where The Wedge appears."
     },
     {
       "heading": "Access Compartment C-1",
@@ -329,6 +329,11 @@
       "heading": "Analyse the data from the icebreaker",
       "level": 3,
       "text": "| Item name | Amount | Requirement | Find in raid |\n| Icebreaker archive data | 1 | Required | N/A |\nRead the Icebreaker archive data through the handbook after receiving it from your messages."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "- Unlocks achievement Cracks in the Ice"
     },
     {
       "heading": "Inform the scientist about the captain's death",

@@ -1,8 +1,8 @@
 {
   "title": "The Huntsman Path - Administrator",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Administrator",
-  "revisionId": 359751,
-  "lastEdited": "2026-09-13T20:21:29Z",
+  "revisionId": 367687,
+  "lastEdited": "2026-11-08T19:48:22Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "BEAR: Reserve, USEC: Lighthouse",
     "given by": "Jaeger",
+    "LL requirement": "3",
     "reqkappa": "No"
   },
   "sections": [
@@ -40,11 +41,6 @@
       "text": "\"You're not one of us, of course, but I can tell there's something in you... something that understands. In our line of work, we can't afford to rest or slow down. Evil won't be crushed that way. So here's my next task for you. I've been told that something suspicious is happening at the water treatment plant, around the loading area. Head there and deal with whatever filth has gathered there. And don't forget to fire the signal flare first, so I know you've begun your work. I'll take care of anyone who tries to run.\""
     },
     {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 3 with Jaeger to obtain this quest."
-    },
-    {
       "heading": "Objectives",
       "level": 2,
       "text": ""
@@ -52,17 +48,17 @@
     {
       "heading": "BEAR Exclusive",
       "level": 4,
-      "text": "- Launch a yellow signal flare at the train depot on Reserve\n- Eliminate any 6 targets at the train depot on Reserve\nNote: The \"Eliminate\" objective will appear after the \"Launch a yellow signal flare\" objective is completed."
+      "text": "- Launch a yellow signal flare at the train depot on Reserve\n- Eliminate any 6 targets at the train depot on Reserve"
     },
     {
       "heading": "USEC Exclusive",
       "level": 4,
-      "text": "- Eliminate any 6 targets at the train station territory on Lighthouse\n- Launch a yellow signal flare at the train station on Lighthouse\nNote: The \"Eliminate\" objective will appear after the \"Launch a yellow signal flare\" objective is completed."
+      "text": "- Launch a yellow signal flare at the train station on Lighthouse\n- Eliminate any 6 targets at the train station territory on Lighthouse\nNote: The \"Eliminate\" objective will appear after the \"Launch a yellow signal flare\" objective is completed."
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,600 EXP\n- Jaeger Rep +0.75\n- 275,000 Roubles\n  - 288,050 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2"
+      "text": "- +28,000 EXP\n- Jaeger Rep +0.75\n- 275,000 Roubles\n  - 288,050 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2"
     },
     {
       "heading": "BEAR Exclusive",

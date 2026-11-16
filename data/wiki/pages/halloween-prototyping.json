@@ -1,0 +1,42 @@
+{
+  "title": "Halloween: Prototyping",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_Prototyping",
+  "revisionId": 367053,
+  "lastEdited": "2026-11-02T21:13:59Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "previous": "Halloween: Danger Zone"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: Prototyping is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Heard Therapist's been handing out some new vaccine to her lot. A bloody prototype, no less. Whether the thing works or not, I couldn't give a toss just yet. What matters is, it's in demand, which means I could do with some of that myself. Keep some for my lads and flog the rest to whoever's buying. Anyway, her little lapdogs are carrying these prototypes around. Know how to haggle? Good. Time to show us what you're made of! Get yourself over to the Flea Market and ask around. Don't bother going to Therapist just now. Best you'll get out of her is a load of bollocks, and not even the good kind, ha!\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Obtain 2 new TG-Vi-24 vaccine prototype\n- Hand over the items"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +34,000 EXP\n- 1,800 Euros\n  - 1,890 Euros with Intelligence Center Level 1\n  - 2,070 Euros with Intelligence Center Level 2\n- Unlocks barter for MPS Auto Assault-12 Gen 2 12ga automatic shotgun at Skier LL11\n- Unlocks barter for Sako TRG M10 .338 LM bolt-action sniper rifle at Skier LL2\n- Unlocks barter for Physical Bitcoin at Skier LL3\n\"Well, then. Tongue still working after all that haggling? Never mind, give it a day's rest and you'll be right as rain.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| TG-Vi-24 vaccine prototype (B.1.2 strain) | 2 | Required | No | Can only be bought on the flea market if the player has not sided with Therapist |\nThe TG-Vi-24 vaccine prototype (B.1.2 strain) have to be bought from the flea market because they are only obtainable as reward from Therapist's event tasks."
+    }
+  ]
+}

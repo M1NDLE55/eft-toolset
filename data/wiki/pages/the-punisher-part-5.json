@@ -1,8 +1,8 @@
 {
   "title": "The Punisher - Part 5",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Punisher_-_Part_5",
-  "revisionId": 359779,
-  "lastEdited": "2026-09-13T20:21:57Z",
+  "revisionId": 367713,
+  "lastEdited": "2026-11-09T00:25:11Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,8 +13,7 @@
   "infobox": {
     "given by": "Prapor",
     "previous": "The Punisher - Part 4",
-    "leads to": "The Punisher - Part 6",
-    "reqkappa": "Yes"
+    "leads to": "The Punisher - Part 6"
   },
   "sections": [
     {
@@ -35,7 +34,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,000 EXP\n- 1× Kalashnikov AK-308 7.62x51 assault rifle\n- 1× AK-308 7.62x51 QD sound suppressor\n- 1x Documents case\n- Unlocks purchase of Kalashnikov AK-308 7.62x51 assault rifle at Prapor LL4\n- Unlocks purchase of AK-308 7.62x51 QD sound suppressor at Prapor LL4\n\"Got it all done? That's what I like to see! Here's your reward.\""
+      "text": "- +28,000 EXP\n- 1× Kalashnikov AK-308 7.62x51 assault rifle\n- 1× AK-308 7.62x51 QD sound suppressor\n- 1× Document case\n- Unlocks purchase of Kalashnikov AK-308 7.62x51 assault rifle at Prapor LL4\n- Unlocks purchase of AK-308 7.62x51 QD sound suppressor at Prapor LL4\n\"Got it all done? That's what I like to see! Here's your reward.\""
     },
     {
       "heading": "Guide",

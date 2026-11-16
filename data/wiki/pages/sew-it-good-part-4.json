@@ -1,8 +1,8 @@
 {
   "title": "Sew it Good - Part 4",
   "url": "https://escapefromtarkov.fandom.com/wiki/Sew_it_Good_-_Part_4",
-  "revisionId": 359655,
-  "lastEdited": "2026-09-13T20:19:54Z",
+  "revisionId": 365798,
+  "lastEdited": "2026-10-27T23:56:50Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,7 +12,7 @@
   ],
   "infobox": {
     "given by": "Ragman",
-    "reqkappa": "Yes"
+    "previous": "Sew it Good - Part 3"
   },
   "sections": [
     {
@@ -23,22 +23,22 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Oh, brother, I'd be neck-deep in work without you. I'm doing it all so the city keeps on living, mind you, that's why I do all the moves. Alright, I'll tell you about my secret affair, since it has been going so smoothly so far. I'm thinking of setting up garment manufacture, to sew and sell vests, holsters, armor. As in the best fashion houses in Europe, haha. This time I need to understand what exactly is inside the 6B43 armor, the green one, it's also heavy as shit, you probably know. I want to figure out how it breaks down, and what it's based on. Just like the last time, bring me a couple of those, one totaled, and one a bit more pristine.\""
+      "text": "\"I would've been completely swamped without you, seriously. My idea is working, and the first prototypes are already being tested. We'll mostly be making stuff for civilians, so I doubt you'll be interested in our products, haha. Now, back to business. I need a 6B43 armor vest, the full package. We want to figure out how everything is put together inside. Can you bring me one? And some plates for it. I'll make it worth your while.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Hand over the 6B43 assault armor in 0-75% durability\n- Hand over the 6B43 assault armor in 75-100% durability"
+      "text": "- Obtain a 6B43 Zabralo-Sh body armor (EMR)\n- Hand over the item\n- Obtain 10 class 5 or 6 ballistic plates\n- Hand over the items"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +18,200 EXP\n- Ragman Rep +0.03\n- 65,000 Roubles\n  - 68,250 Roubles with Intelligence Center Level 1\n  - 74,750 Roubles with Intelligence Center Level 2\n- 1× FORT Redut-T5 body armor (Smog)\n- Unlocks barter for 6Sh118 raid backpack (EMR) at Prapor LL4\n\"Oh, you got them? Give 'em here, let's have a look. Whoa, why the fuck are they so heavy?! Alright, I'll check them later. Here, take this for the help.\""
+      "text": "- +10,000 EXP\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- Unlocks craft for 5.11 Tactical TacTec plate carrier (Ranger Green) at Lavatory level 3\n\"I don't think I'll ever get used to how heavy these things are... Here, this is for your work.\""
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in Raid |\n| 6B43 Zabralo-Sh body armor (EMR) | 2 | Handover item | No |\n\nIn this quest you have to hand over 2 6B43 Zabralo-Sh body armors. One with 0-75% durability and one with 75-100% durability. The armors require no inserted armor plates since the condition is measured by the integrated soft armor.\n\nSince friendly fire is always active, you can easily complete this quest with the help of a another player through the use of a Blicky pistol.\n\nAnother way to complete this quest solo is to let border snipers shoot you so that your character dies far outside the playable space of the map. You can insure the armor with Prapor to receive it back in roughly a day to a day and a half, but it will be quicker if you use Therapist to insure it. You may have to do this method multiple times for the same armor to get it down to the required durability.\n\nAnother option is to shoot the orange propane containers found on The Lab or Customs whilst being inside the radius. The hot gas damage will damage all parts of your armour, so be careful as this will also deal a lot of body damage and may kill you if you are not being careful. It is best not to stand directly next to the propane while it explodes, and to only use one explosion at a time. Take in extra gear and meds to swap to so that you do not fight with broken armour or low health."
+      "text": "| Item name | Amount | Requirement | Find in Raid |\n| 6B43 Zabralo-Sh body armor (EMR) | 1 | Handover item | No |\n| Any class 5 or 6 armor plate | 10 | Required | No |"
     }
   ]
 }

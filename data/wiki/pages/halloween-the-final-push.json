@@ -1,0 +1,47 @@
+{
+  "title": "Halloween: The Final Push",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_The_Final_Push",
+  "revisionId": 367529,
+  "lastEdited": "2026-11-03T20:33:05Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "previous": "Halloween: For the Greater Good"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: The Final Push is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The data I received from Skier has helped me prepare a new version of the vaccine. We'll test it the same way as the previous preparation, using gas grenades. The procedure for obtaining an experimental sample remains unchanged. Once you have one, use it on the infected and eliminate those affected by the gas. I still need fresh virus samples as well. Work in the infected areas and eliminate as many carriers as possible. My people will collect the necessary material afterwards.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 infected while they are under the effect of the experimental gas grenade\n  - (Optional) Obtain the RDA-78 experimental CS gas grenade\n- Eliminate the infected Tagilla"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +60,000 EXP\n- 450,000 Roubles\n  - 472,500 Roubles with Intelligence Center Level 1\n  - 517,500 Roubles with Intelligence Center Level 2\n- 1× Item case\n- 1× RDA-78 vaccine (Replicative DNA Attenuator)\n- 2× TG-Vi-24 vaccine prototype (B.1.2 strain)\n- Unlocks barter for RDA-78 vaccine (Replicative DNA Attenuator) at Therapist LL1\n- Unlocks barter for SWORD International Mk-18 .338 LM marksman rifle at Jaeger LL1\n- Unlocks barter for T-7 Thermal Goggles with a Night Vision mount at Jaeger LL2\n- Unlocks barter for Kalashnikov PKP 7.62x54R infantry machine gun at Prapor LL1\n- Unlocks barter for RB-BK marked key at Prapor LL2\n- Unlocks barter for Trijicon REAP-IR thermal scope at Skier LL1\n- Unlocks barter for Weapon case at Skier LL2\n- Unlocks barter for BNTI Zhuk body armor (EMR) at Ragman LL1\n- Unlocks barter for Milkor M32A1 MSGL 40mm grenade launcher at Peacekeeper LL1\n- Unlocks barter for T H I C C item case at Peacekeeper LL2\n- Unlocks achievement Triumph of Science\n\"The vaccine works, but supplies are too limited, so the quarantine must remain in place for now. We've managed to contain the outbreak, and it's gradually subsiding. Unfortunately, TerraGroup still got what they wanted: data on the new strain and the results of its testing in Tarkov. I hope this was nothing more than scientific curiosity.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "Unlocks barter for Model 8230 CS gas grenade (RDA-78) at Therapist LL1.\n| Item name | Amount |\n| Model 8230 CS gas grenade (RDA-78) | 1 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "15 infected must be killed while they are inside the gas area of the Model 8230 CS gas grenade (RDA-78). Infected Tagilla can be found in the Infected Factory and the Infected Lab, as well as occasionally in Factory and on Interchange."
+    }
+  ]
+}

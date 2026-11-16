@@ -1,8 +1,8 @@
 {
   "title": "Combat Proven",
   "url": "https://escapefromtarkov.fandom.com/wiki/Combat_Proven",
-  "revisionId": 359183,
-  "lastEdited": "2026-09-13T20:11:51Z",
+  "revisionId": 365316,
+  "lastEdited": "2026-10-27T23:48:39Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -33,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +92,000 EXP\n- Ragman Rep +0.03\n- 340,000 Roubles\n  - 357,000 Roubles with Intelligence Center Level 1\n  - 391,000 Roubles with Intelligence Center Level 2\n- 3× NPP KlASS Bagariy plate carrier (EMR)\n- Unlocks Laminate Hideout floor style\n\"So, how was it? No stiffness, no tearing? Then maybe I can increase the price a bit... Oh, right, here's your reward, you're a life saver!\""
+      "text": "- +92,000 EXP\n- 340,000 Roubles\n  - 357,000 Roubles with Intelligence Center Level 1\n  - 391,000 Roubles with Intelligence Center Level 2\n- 3× NPP KlASS Bagariy plate carrier (EMR)\n- Unlocks Laminate Hideout floor style\n\"So, how was it? No stiffness, no tearing? Then maybe I can increase the price a bit... Oh, right, here's your reward, you're a life saver!\""
     },
     {
       "heading": "Initial Equipment",

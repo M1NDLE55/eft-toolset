@@ -1,8 +1,8 @@
 {
   "title": "Establish Contact",
   "url": "https://escapefromtarkov.fandom.com/wiki/Establish_Contact",
-  "revisionId": 359260,
-  "lastEdited": "2026-09-13T20:13:10Z",
+  "revisionId": 366059,
+  "lastEdited": "2026-10-28T00:49:05Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Fence",
-    "leads to": "Friend Among Strangers",
-    "reqkappa": "No"
+    "leads to": "Friend Among Strangers"
   },
   "sections": [
     {

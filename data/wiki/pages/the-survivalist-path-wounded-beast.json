@@ -1,8 +1,8 @@
 {
   "title": "The Survivalist Path - Wounded Beast",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Wounded_Beast",
-  "revisionId": 359792,
-  "lastEdited": "2026-09-13T20:22:10Z",
+  "revisionId": 365934,
+  "lastEdited": "2026-10-27T23:59:17Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,8 +13,8 @@
   "infobox": {
     "location": "Any",
     "given by": "Jaeger",
-    "previous": "The Survivalist Path - Zhivchik",
-    "leads to": "The Survivalist Path - Tough Guy, The Survivalist Path - Cold Blooded",
+    "previous": "The Survivalist Path - Unprotected but Dangerous",
+    "leads to": "The Survivalist Path - Tough Guy",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -36,7 +36,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +5,800 EXP\n- +1 Stress resistance skill level\n- Jaeger Rep +0.02\n- 65,000 Roubles\n  - 68,250 Roubles with Intelligence Center Level 1\n  - 74,750 Roubles with Intelligence Center Level 2\n- Unlocks purchase of Benelli M3 Super 90 12ga dual-mode shotgun at Jaeger LL2\n- Unlocks Bear Hideout shooting range target style\n\"Handled it? Nicely done. Your training is almost done. If we keep it that way, we may start taking care of the order in the city earlier than planned.\""
+      "text": "- +10,000 EXP\n- 1× Benelli M3 Super 90 12ga dual-mode shotgun\n- 1× 12/70 flechette ammo pack (25 pcs)\n- Unlocks purchase of Benelli M3 Super 90 12ga dual-mode shotgun at Jaeger LL2\n- Unlocks Bear Hideout shooting range target style\n\"Handled it? Nicely done. Your training is almost done, friend. If we keep it that way, we may start taking care of the order in the city earlier than planned.\""
     },
     {
       "heading": "Guide",

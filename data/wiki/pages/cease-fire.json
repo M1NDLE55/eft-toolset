@@ -1,8 +1,8 @@
 {
   "title": "Cease Fire!",
   "url": "https://escapefromtarkov.fandom.com/wiki/Cease_Fire!",
-  "revisionId": 359149,
-  "lastEdited": "2026-09-13T20:11:16Z",
+  "revisionId": 366600,
+  "lastEdited": "2026-10-31T05:04:19Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "location": "Streets of Tarkov",
     "given by": "Jaeger",
-    "previous": "The Delicious Sausage",
-    "leads to": "Paramedic",
+    "LL requirement": "2",
     "reqkappa": "No"
   },
   "sections": [
@@ -24,12 +23,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"I'm stumped today, warrior. There are good people who need to escape the city. The closest they can get is through the Avenue of Death, but there are snipers overlooking the whole area. One kid told me that if you shoot a signal flare there, the snipers should let you pass through, in that particular spot. But who knows if the kid was lying? Maybe he's trying to lead us to death. how do we find out if it's true that the snipers will stop firing after the signal... I got a couple flares lying around, why don't you go check it out, eh?\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 10 to start this quest."
+      "text": "\"I'm stumped today, warrior. There are good people who need to escape the city. The closest they can get is through Avenue of Death, but there are snipers overlooking the whole area. One kid told me that if you shoot a signal flare there, the snipers should let you pass through, in that particular spot. But who knows if the kid was lying? Maybe he's trying to lead us to death. How do we find out if it's true that the snipers will stop firing after the signal... I got a couple flares lying around, why don't you go check it out, eh?\""
     },
     {
       "heading": "Objectives",
@@ -39,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +5,600 EXP\n- Jaeger Rep +0.02\n- 27,000 Roubles\n  - 28,350 Roubles with Intelligence Center Level 1\n  - 31,050 Roubles with Intelligence Center Level 2\n- 1× ZiD SP-81 26x75 signal pistol\n- 3× 26x75mm flare cartridge (Green)\n\"So he was correct, it is the cease fire condition, I'll keep that in mind. You really put your head on the line, didn't you? I respect that.\""
+      "text": "- +10,000 EXP\n- Jaeger Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"So he was correct, it is the cease fire condition, I'll keep that in mind. You really put your head on the line, didn't you? I respect that.\""
     },
     {
       "heading": "Initial equipment",

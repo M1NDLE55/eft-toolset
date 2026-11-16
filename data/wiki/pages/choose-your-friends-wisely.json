@@ -1,8 +1,8 @@
 {
   "title": "Choose Your Friends Wisely",
   "url": "https://escapefromtarkov.fandom.com/wiki/Choose_Your_Friends_Wisely",
-  "revisionId": 362565,
-  "lastEdited": "2026-09-29T19:26:27Z",
+  "revisionId": 365295,
+  "lastEdited": "2026-10-27T23:48:18Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -49,7 +49,7 @@
     {
       "heading": "Customs to Reserve",
       "level": 3,
-      "text": "Next to the Military Base CP extraction."
+      "text": ""
     },
     {
       "heading": "Reserve to Woods",

@@ -1,8 +1,8 @@
 {
   "title": "Small Things, Big Help",
   "url": "https://escapefromtarkov.fandom.com/wiki/Small_Things%2C_Big_Help",
-  "revisionId": 359683,
-  "lastEdited": "2026-09-13T20:20:22Z",
+  "revisionId": 366134,
+  "lastEdited": "2026-10-28T22:36:12Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Woods",
     "given by": "Ragman",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -22,12 +23,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Salam, brother. So there's this guy, he was selling me some stuff he found near the lumber mill, and so he told me that he found some stashes filled with fuel barrels, you see? We don't know if it was PMCs or Scavs who stashed them there, those barrels might even be empty, but it's still worth checking out. Mechanic throws some serious cash for fuel these days, he spilled that he has some kind of a farm that needs fuel 24/7. So anyway, the guy said that he's seen three of those fuel stashes on Woods, and I want you to mark them with beacons, alright?\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 30 to start this quest."
+      "text": "\"Howdy, brother! How you been? Alright, we'll chat later. Business first! I found out there are some fuel stashes in the forest, not far from the cliffs. At the very least, there are barrels out there. Worth checking! Fuel is never a bad thing to have, especially with a buyer as hungry as Mechanic. He bought my entire last shipment. So, go look for those barrels and mark them with beacons. I heard about three stashes. That'll be enough for me.\""
     },
     {
       "heading": "Objectives",
@@ -37,7 +33,12 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +21,300 EXP\n- Ragman Rep +0.04\n- 75,000 Roubles\n  - 78,750 Roubles with Intelligence Center Level 1\n  - 86,250 Roubles with Intelligence Center Level 2\n- 1× Mystery Ranch Blackjack 50 backpack (MultiCam)\n- Unlocks barter for HighCom Trooper TFO body armor (MultiCam) at Ragman LL4\n\"Thanks a lot, I'll send the boys over to see if we could get something drained from those barrels. How's the situation there, by the way? Seen anyone near those stashes?\""
+      "text": "- +3,000 EXP\n- Ragman Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 3× Energy-saving lamp\n\"Signal's coming through, my guys are ready to move out!\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item Name | Amount | Notes |\n| MS2000 Marker | 3 | This item is placed at the fuel stashes. When placed, the item is removed from the players' inventory. |"
     },
     {
       "heading": "Guide",

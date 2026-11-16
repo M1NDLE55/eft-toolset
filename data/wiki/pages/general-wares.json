@@ -1,8 +1,8 @@
 {
   "title": "General Wares",
   "url": "https://escapefromtarkov.fandom.com/wiki/General_Wares",
-  "revisionId": 361699,
-  "lastEdited": "2026-09-24T12:12:22Z",
+  "revisionId": 367762,
+  "lastEdited": "2026-11-09T00:58:48Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,7 +13,7 @@
   "infobox": {
     "given by": "Therapist",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -29,7 +29,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Find 15 item in raid: Can of beef stew (Small)\n- Hand over the 15 items"
+      "text": "- Find 15 Cans of beef stew (Small) in raid\n- Hand over the 15 items"
     },
     {
       "heading": "Rewards",
@@ -39,12 +39,12 @@
     {
       "heading": "Initial Equipment",
       "level": 2,
-      "text": "- Unlocks craft for Can of beef stew (Small) at Nutrition unit level 1"
+      "text": "Unlocks craft for Can of beef stew (Small) at Nutrition Unit level 1."
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Can of beef stew (Small) | 15 | Handover item | Yes | Can be crafted in the Hideout (Nutrition unit lv. 1). |\n\n- A high amount of Tushonka can be found inside the shopping mall on Interchange. Particularly, the \"Goshan\" (written \"гошан\" on its signs) supermarket stores a very large amount on its shelves. However, this is a hot-spot for players as many wish to take the Tushonka or loot the registers, so it should be approached with care.\n- Tushonka is also commonly found in \"Ration supply crates\" near tanks on Reserve, however like Goshan, Reserve is a highly populated map, with many threats, so it should be approached with care.\n- Tushonka and other food items are also plentiful at the camp on woods next to scav bunker in a ration supply crate and as loose loot. Farther south, USEC camp is also a good spot to find food items\n\n- Tushonka can be crafted in the Hideout at the Nutrition unit Lvl 1."
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Can of beef stew (Small) | 15 | Handover item | Yes | Can be crafted in the Hideout (Nutrition unit lv. 1). |\n\n- A high amount of cans of beef stew can be found inside the shopping mall on Interchange. Particularly, the \"Goshan\" (written \"гошан\" on its signs) supermarket stores a very large amount on its shelves. However, this is a hot-spot for players looking for provisions or to loot the registers, so it should be approached with care.\n- Can of beef stew (Small) is also commonly found in Ration supply crates near tanks on Reserve. However, like Goshan, Reserve is a highly populated map with many threats, so it should be approached with care.\n- Can of beef stew (Small) and other food items are also plentiful at the camp on Woods next to Scav bunker in Ration supply crates and as loose loot. Farther down south, the USEC camp is also a good spot to find food items."
     }
   ]
 }

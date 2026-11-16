@@ -1,8 +1,8 @@
 {
   "title": "Back Door",
   "url": "https://escapefromtarkov.fandom.com/wiki/Back_Door",
-  "revisionId": 359093,
-  "lastEdited": "2026-09-13T20:10:19Z",
+  "revisionId": 365225,
+  "lastEdited": "2026-10-27T23:47:05Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,8 +13,7 @@
   "infobox": {
     "location": "Reserve",
     "given by": "Mechanic",
-    "previous": "Scout",
-    "leads to": "Surplus Goods",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -26,22 +25,17 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Hey there, what do you think of complex technology? I, for example, was always fascinated by this stuff, when one part depends on another, and even works without human participation, well, almost without it. So, I've been told that somewhere on Reserve there is some underground exit, which is activated from somewhere else, but from where exactly - hell knows. Anyhow, It would be great if you sniffed that place out. The base is quite a hell hole as you know, and I am willing to pay generously for any information on how to get out of there safely. I want to send people there to gather military equipment, but I'm afraid they'll just get killed if they don't find that secret exit.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 14 to start this quest."
+      "text": "\"Word reached me that there's some kind of underground exit at the Reserve military base. Doesn't sound all that unusual on its own, except it has to be activated from the outside. From where exactly? That's what I need you to figure out. That extraction would be extremely useful to me. Reserve is full of military equipment that could come in handy for my work. I'd rather not send my own people - they're not as well prepared as you are. Find out how the extraction works, then come back and tell me. Your payment will be waiting.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Find the unpowered secret exit on Reserve\n- Survive and extract from the location through the secret exit"
+      "text": "- Locate the secret underground bunker exit on Reserve\n  - (Optional) Locate the switch that activates the exit\n- Survive and extract from the location through the secret exit"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +8,200 EXP\n- Mechanic Rep +0.02\n- 1,000 Euros\n  - 1,050 Euros with Intelligence Center Level 1\n  - 1,150 Euros with Intelligence Center Level 2\n- 1× SV-98 7.62x54R bolt-action sniper rifle\n\"So the exit works? Excellent. I'm still preparing your reward, so tell me more about the opening mechanism for that bunker door.\""
+      "text": "- +28,000 EXP\n- Mechanic Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"You managed to activate the door? Excellent. Here's your payment, just as promised.\""
     },
     {
       "heading": "Guide",

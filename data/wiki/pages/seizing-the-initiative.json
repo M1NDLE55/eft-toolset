@@ -1,18 +1,17 @@
 {
   "title": "Seizing the Initiative",
   "url": "https://escapefromtarkov.fandom.com/wiki/Seizing_the_Initiative",
-  "revisionId": 359644,
-  "lastEdited": "2026-09-13T20:19:43Z",
+  "revisionId": 367838,
+  "lastEdited": "2026-11-11T13:53:58Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs, Shoreline",
     "given by": "Peacekeeper",
-    "previous": "Humanitarian Supplies",
-    "reqkappa": "No"
+    "location": "Customs, Shoreline",
+    "LL requirement": "1"
   },
   "sections": [
     {
@@ -33,12 +32,12 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +3,000 EXP\n- Peacekeeper Rep +0.1\n- Dollars\n  - 550 Dollars with Intelligence Center Level 1\n  - 673 Dollars with Intelligence Center Level 2\n\"This will help us cut off the escape routes of those who prevent us from conducting our business. Everyone needs resources to operate in Tarkov, and the Blue Helmets are no exception.\""
+      "text": "- +3,000 EXP\n- Peacekeeper Rep +0.1\n- 550 Dollars\n  - 578 Dollars with Intelligence Center Level 1\n  - 632 Dollars with Intelligence Center Level 2\n\"This will help us cut off the escape routes of those who prevent us from conducting our business. Everyone needs resources to operate in Tarkov, and the Blue Helmets are no exception.\""
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "The transit is located behind the \"Sniper Roadblock\" Scav extraction, inside the bus. Transits are only available 1 min after raid start."
+      "text": "The transit is located behind the roadblock south of the main crossroad, inside the bus. Transits are only available 1 min after raid start."
     }
   ]
 }

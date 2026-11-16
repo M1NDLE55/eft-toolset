@@ -1,18 +1,18 @@
 {
   "title": "The Walls Have Eyes",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Walls_Have_Eyes",
-  "revisionId": 362441,
-  "lastEdited": "2026-09-29T14:45:38Z",
+  "revisionId": 367423,
+  "lastEdited": "2026-11-03T13:31:49Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Factory",
     "given by": "Skier",
+    "location": "Factory",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "4"
   },
   "sections": [
     {

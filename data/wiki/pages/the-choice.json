@@ -1,8 +1,8 @@
 {
   "title": "The Choice",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Choice",
-  "revisionId": 359738,
-  "lastEdited": "2026-09-13T20:21:16Z",
+  "revisionId": 366058,
+  "lastEdited": "2026-10-28T00:47:41Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Fence",
-    "previous": "The Punisher - Part 6",
-    "reqkappa": "No"
+    "previous": "The Punisher - Part 6"
   },
   "sections": [
     {

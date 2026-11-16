@@ -1,19 +1,18 @@
 {
   "title": "This Tape Sucks",
   "url": "https://escapefromtarkov.fandom.com/wiki/This_Tape_Sucks",
-  "revisionId": 361823,
-  "lastEdited": "2026-09-24T13:37:04Z",
+  "revisionId": 367716,
+  "lastEdited": "2026-11-09T00:26:23Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "The Labyrinth",
     "given by": "Therapist",
+    "location": "The Labyrinth",
     "previous": "Offensive Reconnaissance",
-    "leads to": "Keeper's Word",
-    "reqkappa": "No"
+    "leads to": "Keeper's Word"
   },
   "sections": [
     {
@@ -34,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 2× SJ12 TGLabs combat stimulant injector\n- 2× Meldonin injector\n- 2× 3-(b-TG) stimulant injector\n- 1x Taurus poster\n\"A video tape... You haven't watched it yet, have you? Now I know what is happening. I was wrong before. The resort was one of the evacuation points when it all started, and its cellars could have been used for, uh, different purposes... The situation wasn't so severe yet at that time, and they tried to isolate the deceased bodies from crowded places. This tape is definitely not a cause for concern... However, I would refrain from visiting these cellars if I were you. Ventilation in bomb shelters has always been a weak point, and humidity only contributes to possible intoxication...\""
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 2× SJ12 TGLabs combat stimulant injector\n- 2× Meldonin injector\n- 2× 3-(b-TG) stimulant injector\n- 1× Taurus poster\n\"A video tape... You haven't watched it yet, have you? Now I know what is happening. I was wrong before. The resort was one of the evacuation points when it all started, and its cellars could have been used for, uh, different purposes... The situation wasn't so severe yet at that time, and they tried to isolate the deceased bodies from crowded places. This tape is definitely not a cause for concern... However, I would refrain from visiting these cellars if I were you. Ventilation in bomb shelters has always been a weak point, and humidity only contributes to possible intoxication...\""
     },
     {
       "heading": "Guide",

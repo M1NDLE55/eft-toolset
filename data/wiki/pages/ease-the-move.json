@@ -1,8 +1,8 @@
 {
   "title": "Ease the Move",
   "url": "https://escapefromtarkov.fandom.com/wiki/Ease_the_Move",
-  "revisionId": 362092,
-  "lastEdited": "2026-09-24T19:45:56Z",
+  "revisionId": 366647,
+  "lastEdited": "2026-10-31T12:12:50Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "location": "Lighthouse",
     "given by": "Peacekeeper",
-    "previous": "Callsign Malachite",
+    "previous": "Scope the Clearing",
     "reqkappa": "No"
   },
   "sections": [

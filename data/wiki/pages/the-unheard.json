@@ -1,8 +1,8 @@
 {
   "title": "The Unheard",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Unheard",
-  "revisionId": 354657,
-  "lastEdited": "2026-08-15T18:17:24Z",
+  "revisionId": 366096,
+  "lastEdited": "2026-10-28T01:55:46Z",
   "kind": "quest",
   "categories": [
     "Story chapters"
@@ -73,7 +73,7 @@
     {
       "heading": "Locate A.P.'s room in the Health Resort/Obtain A.P.'s data storage device and his personal belongings",
       "level": 3,
-      "text": "| Item name | Amount | Requirement | Find in raid |\n| Sliderkey flash drive marked with A.P. | 1 | Required | Yes |\n| TerraGroup corporate apartment key | 1 | Required | No |\n| Guard post note | 1 | Optional | Yes |\n| Fragment of an unknown document | 1 | Optional | Yes |\nA.P.'s room is east wing room 305 at the health resort on Shoreline. The Sliderkey flash drive marked with A.P. is stuck into the laptop on the table. A.P.'s belongings in the form of TerraGroup corporate apartment key can be found on the right nightstand. The optional Fragment of an unknown document can be found on the left nightstand.\n\nThe optional Guard post note to locate the room can be found on the first floor of the health resort west wing, on the desk next to the security room at the southern entrance."
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Sliderkey flash drive marked with A.P. | 1 | Required | Yes |\n| TerraGroup corporate apartment key | 1 | Required | N/A |\n| Guard post note | 1 | Optional | Yes |\n| Fragment of an unknown document | 1 | Optional | Yes |\nA.P.'s room is east wing room 305 at the health resort on Shoreline. The Sliderkey flash drive marked with A.P. is stuck into the laptop on the table. A.P.'s belongings in the form of TerraGroup corporate apartment key can be found on the right nightstand. The optional Fragment of an unknown document can be found on the left nightstand.\n\nThe optional Guard post note to locate the room can be found on the first floor of the health resort west wing, on the desk next to the security room at the southern entrance."
     },
     {
       "heading": "Decrypt the flash drive from A.P.'s room",

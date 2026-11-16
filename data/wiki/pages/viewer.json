@@ -1,19 +1,18 @@
 {
   "title": "Viewer",
   "url": "https://escapefromtarkov.fandom.com/wiki/Viewer",
-  "revisionId": 360834,
-  "lastEdited": "2026-09-20T12:09:20Z",
+  "revisionId": 367730,
+  "lastEdited": "2026-11-09T00:35:30Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods, Shoreline, Factory",
     "given by": "Prapor",
+    "location": "Factory, Shoreline, Woods",
     "previous": "Minute of Fame",
-    "leads to": "Serious Allegations",
-    "reqkappa": "No"
+    "leads to": "Serious Allegations"
   },
   "sections": [
     {
@@ -39,7 +38,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- 65,000 EXP\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 5× Bottle of Pevko Light beer\n- 5× Bottle of Tarkovskaya vodka\n\"I think I'm beginning to understand why people watch these \"live streams\". It's addictive!\""
+      "text": "- +65,000 EXP\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 5× Bottle of Pevko Light beer\n- 5× Bottle of Tarkovskaya vodka\n\"I think I'm beginning to understand why people watch these \"live streams\". It's addictive!\""
     },
     {
       "heading": "Guide",

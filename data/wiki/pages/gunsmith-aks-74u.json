@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - AKS-74U",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_AKS-74U",
-  "revisionId": 355239,
-  "lastEdited": "2026-08-19T17:12:28Z",
+  "revisionId": 364366,
+  "lastEdited": "2026-10-13T15:15:10Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,6 +12,7 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,12 +24,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"You have not failed me with the shotgun, so you may know your way around tools. That didn’t save me much time though. All exchanges are on fire, hope it won’t start a panic. Nevertheless, I think it's not for long, so the plan remains the same. Okay, I need to work. And you, try to get hold of an AKS-74U. With a Zenit B-11 handguard, 60-round extended mag, and make it compact, 6 slots max. Ergonomics over 56, recoil sum less than 550, sighting range 100 or more. And, of course, as light as possible, 3.5 kg or less. Yes, indexes here have nothing to do with that. I hope you've remembered everything. See you soon.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 5 to start this quest."
+      "text": "\"Hello, mercenary. I need your help. I've been flooded with orders for custom weapon builds, and I simply can't keep up with them all on my own. I could use an extra pair of hands. Interested in making some money? Take this AKS-74U. I need it fitted with a Zenit B-11 handguard, a 60-round extended magazine, ergonomics at least 56, combined recoil below 550, and a sighting range of at least 100. One more thing: it must weigh no more than 3.5 kg and take up no more than 6 slots. That's all. Don't keep me waiting.\""
     },
     {
       "heading": "Objectives",
@@ -38,7 +34,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +2,000 EXP\n- Mechanic Rep +0.01\n- 15,000 Roubles\n  - 15,750 Roubles with Intelligence Center Level 1\n  - 17,250 Roubles with Intelligence Center Level 2\n- 2× Capacitors\n- 2× Bundle of wires\n- 2× Light bulb\n- Unlocks purchase of AK 100-series polymer handguard at Prapor LL1\n\"Well, in the capable hands this weapon can overthrow regimes and create revolutions. Leave it in the corner, I'll check it later.\""
+      "text": "- +3,000 EXP\n- Mechanic Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"Good. Leave it in the corner, I'll inspect it later.\""
     },
     {
       "heading": "Initial Equipment",
@@ -58,7 +54,7 @@
     {
       "heading": "Notes:",
       "level": 4,
-      "text": "- This build is based on a standard AKS-74U. You get one in the mail from Mechanic upon accepting this quest.\n- The stock has to be folded.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AKS-74U Zenit B-11 handguard | MechanicSkier | LL1 (Barter)LL1 |\n| AK-74 5.45x39 6L31 60-round magazine | PraporRef | LL2 (Barter) after completing The Punisher - Part 2; LL4LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+      "text": "- This build is based on a standard AKS-74U. You get one in the mail from Mechanic upon accepting this quest.\n- The stock has to be folded.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AKS-74U Zenit B-11 handguard | MechanicSkier | LL1 (Barter)LL1 |\n| AK-74 5.45x39 6L31 60-round magazine | PraporRef | LL2 (Barter) after The Punisher - Part 2; LL4LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
   ]
 }

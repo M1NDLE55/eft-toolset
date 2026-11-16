@@ -1,8 +1,8 @@
 {
   "title": "Insurance",
   "url": "https://escapefromtarkov.fandom.com/wiki/Insurance",
-  "revisionId": 353060,
-  "lastEdited": "2026-08-09T23:32:31Z",
+  "revisionId": 363469,
+  "lastEdited": "2026-10-06T22:21:16Z",
   "kind": "game",
   "categories": [
     "Escape from Tarkov"
@@ -13,7 +13,7 @@
     {
       "heading": "Introduction",
       "level": 1,
-      "text": "Insurance allows you to retrieve any items that have not been extracted from a raid, with a delay.\n\nYou can only insure gear items (like weapons and armors). Items such as containers (a Key tool, a Documents case or an Item case) and intel items (paper maps) and consumable items (Food, Meds or Ammo) cannot be insured. However, there are exceptions to the insurance system which should not be ignored.\n\nSecure containers, the Compass, Melee weapons (Except the Cultist knife), and Armbands cannot be insured nor be looted from your body upon death as long as they are equipped in their appropriate slot, and do not need to be insured.\n\nInsured items have a thick yellow outline around the stash space they occupy."
+      "text": "Insurance allows you to retrieve any items that have not been extracted from a raid, with a delay.\n\nYou can only insure gear items (like weapons and armors). Items such as containers (a Key tool, a Document case or an Item case) and intel items (paper maps) and consumable items (Food, Meds or Ammo) cannot be insured. However, there are exceptions to the insurance system which should not be ignored.\n\nSecure containers, the Compass, Melee weapons (Except the Cultist knife), and Armbands cannot be insured nor be looted from your body upon death as long as they are equipped in their appropriate slot, and do not need to be insured.\n\nInsured items have a thick yellow outline around the stash space they occupy."
     },
     {
       "heading": "Insurers",

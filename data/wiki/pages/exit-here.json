@@ -1,18 +1,17 @@
 {
   "title": "Exit Here",
   "url": "https://escapefromtarkov.fandom.com/wiki/Exit_Here",
-  "revisionId": 362445,
-  "lastEdited": "2026-09-29T14:52:45Z",
+  "revisionId": 367424,
+  "lastEdited": "2026-11-03T13:36:57Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Factory",
     "given by": "Skier",
-    "LL requirement": "2",
-    "reqkappa": "Yes"
+    "location": "Factory",
+    "LL requirement": "2"
   },
   "sections": [
     {

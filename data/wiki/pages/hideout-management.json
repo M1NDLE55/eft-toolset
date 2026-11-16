@@ -1,8 +1,8 @@
 {
   "title": "Hideout Management",
   "url": "https://escapefromtarkov.fandom.com/wiki/Hideout_Management",
-  "revisionId": 362576,
-  "lastEdited": "2026-09-29T19:36:09Z",
+  "revisionId": 364873,
+  "lastEdited": "2026-10-23T18:47:04Z",
   "kind": "skill",
   "categories": [
     "Practical skills"
@@ -35,7 +35,7 @@
     {
       "heading": "How to raise",
       "level": 2,
-      "text": "- Crafting items in the Hideout\n  - 0.8 upon finishing a craft\n  - The point gain is not affected by the Library even though it's a Practical skill\n- Using Scav Case in the Hideout\n- Spending resources in the Hideout\n- Upgrading modules of the Hideout\n  - 12 points per upgrade\n- Completing the quest The Choice\n- Completing the quest Never Too Late To Learn\n- Completing the quest Profit Retention\n- Completing the quest A Life Lesson\n- Completing the quest Get a Foothold"
+      "text": "- Upgrading modules in the Hideout\n- Consuming resources (fuel etc.) in the Hideout\n- Crafting items in the Hideout\n- Using the Scav Case in the Hideout\n- Completing the quest The Choice\n- Completing the quest Never Too Late To Learn\n- Completing the quest Profit Retention\n- Completing the quest A Life Lesson\n- Completing the quest Get a Foothold"
     }
   ]
 }

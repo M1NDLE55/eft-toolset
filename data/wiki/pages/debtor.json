@@ -1,18 +1,18 @@
 {
   "title": "Debtor",
   "url": "https://escapefromtarkov.fandom.com/wiki/Debtor",
-  "revisionId": 362406,
-  "lastEdited": "2026-09-29T13:31:11Z",
+  "revisionId": 367410,
+  "lastEdited": "2026-11-03T13:14:55Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Skier",
+    "location": "Streets of Tarkov",
     "LL requirement": "2",
-    "reqkappa": "No"
+    "LL quests": "1"
   },
   "sections": [
     {

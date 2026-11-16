@@ -1,8 +1,8 @@
 {
   "title": "New Beginning (Prestige 5)",
   "url": "https://escapefromtarkov.fandom.com/wiki/New_Beginning_(Prestige_5)",
-  "revisionId": 359498,
-  "lastEdited": "2026-09-13T20:17:12Z",
+  "revisionId": 365640,
+  "lastEdited": "2026-10-27T23:54:06Z",
   "kind": "quest",
   "categories": [
     "Quests",
@@ -29,7 +29,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Must be level 47 to start this quest.\n- Must have Prestige level 4"
+      "text": "- Must be level 47 to start this quest (45 in the PvE mode).\n- Must have Prestige level 4"
     },
     {
       "heading": "Objectives",

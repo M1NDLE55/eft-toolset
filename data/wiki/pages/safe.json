@@ -1,8 +1,8 @@
 {
   "title": "Safe",
   "url": "https://escapefromtarkov.fandom.com/wiki/Safe",
-  "revisionId": 333957,
-  "lastEdited": "2026-02-08T18:01:52Z",
+  "revisionId": 364103,
+  "lastEdited": "2026-10-13T00:38:52Z",
   "kind": "container",
   "categories": [
     "Loot Containers"
@@ -22,7 +22,7 @@
     {
       "heading": "Description",
       "level": 2,
-      "text": "A 3x3 grid loot container that spawns currency, valuables and info items. The small safes on top of blue weapon lockers share the same loot table as the big black ones."
+      "text": "A 3x3 grid loot container that spawns currency, valuables and info items. The small safes on top of blue weapon lockers spawn instead."
     },
     {
       "heading": "Notes",

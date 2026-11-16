@@ -1,18 +1,18 @@
 {
   "title": "Our Own Land",
   "url": "https://escapefromtarkov.fandom.com/wiki/Our_Own_Land",
-  "revisionId": 361752,
-  "lastEdited": "2026-09-24T12:32:05Z",
+  "revisionId": 367044,
+  "lastEdited": "2026-11-02T20:56:34Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Prapor",
+    "location": "Lighthouse",
     "LL requirement": "3",
-    "reqkappa": "No"
+    "LL quests": "3"
   },
   "sections": [
     {
@@ -38,7 +38,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 1× Military power filter\n- Unlocks purchase of Korund-VM ballistic plates (Front) at Prapor LL3\n- Unlocks purchase of 23x75mm Zvezda flashbang round at Prapor LL3\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Thank you, warrior. Our homeland won't forget this!\""
+      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Military power filter\n- Unlocks purchase of 23x75mm Zvezda flashbang round at Prapor LL3\n- Unlocks barter for Korund-VM ballistic plates (Front) at Prapor LL3\n\"Thank you, warrior. Our homeland won't forget this!\""
     },
     {
       "heading": "Initial Equipment",
@@ -46,7 +46,7 @@
       "text": "- Unlocks purchase of 40mm VOG-25 grenade at Prapor LL3\n- Unlocks barter of GP-25 Kostyor 40mm underbarrel grenade launcher at Prapor LL3"
     },
     {
-      "heading": "See Also",
+      "heading": "See also",
       "level": 2,
       "text": "- Ironclad Proof - The USEC counterpart quest"
     }

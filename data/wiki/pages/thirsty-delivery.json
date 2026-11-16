@@ -1,19 +1,18 @@
 {
   "title": "Thirsty - Delivery",
   "url": "https://escapefromtarkov.fandom.com/wiki/Thirsty_-_Delivery",
-  "revisionId": 362438,
-  "lastEdited": "2026-09-29T14:38:40Z",
+  "revisionId": 367422,
+  "lastEdited": "2026-11-03T13:31:13Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods, Customs",
     "given by": "Skier",
+    "location": "Customs, Woods",
     "previous": "Thirsty - Breadwinner",
-    "leads to": "Thirsty - Echo",
-    "reqkappa": "No"
+    "leads to": "Thirsty - Echo"
   },
   "sections": [
     {

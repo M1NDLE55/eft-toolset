@@ -1,8 +1,8 @@
 {
   "title": "A Life Lesson",
   "url": "https://escapefromtarkov.fandom.com/wiki/A_Life_Lesson",
-  "revisionId": 362193,
-  "lastEdited": "2026-09-25T21:38:17Z",
+  "revisionId": 367433,
+  "lastEdited": "2026-11-03T14:03:23Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Skier",
     "previous": "Safety Guarantee",
-    "leads to": "Profit Retention",
-    "reqkappa": "No"
+    "leads to": "Profit Retention"
   },
   "sections": [
     {

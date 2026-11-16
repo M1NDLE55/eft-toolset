@@ -1,17 +1,18 @@
 {
   "title": "Counteraction",
   "url": "https://escapefromtarkov.fandom.com/wiki/Counteraction",
-  "revisionId": 359202,
-  "lastEdited": "2026-09-13T20:12:10Z",
+  "revisionId": 367473,
+  "lastEdited": "2026-11-03T14:52:20Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Peacekeeper",
-    "reqkappa": "No"
+    "location": "Ground Zero, Lighthouse, Reserve, Shoreline, Streets of Tarkov",
+    "LL requirement": "4",
+    "LL quests": "3"
   },
   "sections": [
     {
@@ -27,7 +28,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- This quest is only obtainable by USEC PMCs.\n- Must reach Loyalty Level 4 with Peacekeeper to obtain this quest."
+      "text": "- This quest is only obtainable by USEC PMCs."
     },
     {
       "heading": "Objectives",
@@ -37,7 +38,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000EXP\n- Peacekeeper Rep +1.5\n- 2,300 Dollars\n  - 2,415 Dollars with Intelligence center Level 1\n  - 3,368 Dollars with Intelligence center Level 2\n- 1x AFAK tactical individual first aid kit\n- Unlocks purchase of AFAK tactical individual first aid kit at Peacekeeper LL4\n- +2 levels in Aim Drills\n- +4 levels in Submachine Guns\n\"I hope you understand that such an assignment is not given to just anyone. But the reward is appropriate. Here's what you've earned.\""
+      "text": "- +65,000 EXP\n- +2 Aim Drills skill levels\n- +4 Submachine Guns skill levels\n- Peacekeeper Rep +1.5\n- 2,750 Dollars\n  - 2,888 Dollars with Intelligence Center Level 1\n  - 3,162 Dollars with Intelligence Center Level 2\n- 4× AFAK tactical individual first aid kit\n- 1× CENS ProFlex DX5 tactical earplug\n- Unlocks purchase of AFAK tactical individual first aid kit at Peacekeeper LL4\n- Unlocks purchase of CENS ProFlex DX5 tactical earplug at Peacekeeper LL4\n- Unlocks barter for SAPI level III+ ballistic plate at Peacekeeper LL4\n\"I hope you understand that such an assignment is not given to just anyone. But the reward is appropriate. Here's what you've earned.\""
     },
     {
       "heading": "Guide",
@@ -45,7 +46,7 @@
       "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| Dogtag | BEAR Dogtag | 20 | Handover item | Yes |"
     },
     {
-      "heading": "See Also",
+      "heading": "See also",
       "level": 2,
       "text": "- Insomnia - The BEAR counterpart quest"
     }

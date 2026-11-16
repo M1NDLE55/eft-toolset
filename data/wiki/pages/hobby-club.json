@@ -1,8 +1,8 @@
 {
   "title": "Hobby Club",
   "url": "https://escapefromtarkov.fandom.com/wiki/Hobby_Club",
-  "revisionId": 360436,
-  "lastEdited": "2026-09-15T23:31:26Z",
+  "revisionId": 365522,
+  "lastEdited": "2026-10-27T23:52:07Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Reserve, Customs",
     "given by": "Mechanic",
+    "LL requirement": "4",
     "leads to": "Fair Price - Part 1",
     "reqkappa": "No"
   },
@@ -28,7 +29,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Must be level 45 to start this quest.\n- Must reach Loyalty Level 4 with Mechanic to obtain this quest."
+      "text": "- Must be level 45 to start this quest."
     },
     {
       "heading": "Objectives",
@@ -38,7 +39,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +21,380 EXP\n- Mechanic Rep +0.05\n- 1× TheAKGuy AK-50 .50 BMG anti-materiel rifle\n- 2× M82A1 .50 BMG 10-round magazine\n- 50× .50 BMG M33\n- Unlocks barter for AK-50 .50 BMG muzzle brake at Mechanic LL4\n- Unlocks barter for AK-50 M-LOK handguard with gas tube at Mechanic LL4\n- Unlocks barter for AK-50 dust cover at Mechanic LL4\n- Unlocks barter for AK-50 .50 BMG 24 inch barrel at Mechanic LL4\n\"You got everything? This is definitely something to celebrate... There's no other rifle like it not just in Tarkov, but in the whole world! This is what happens when a man with skills takes his dream seriously. You already have the blueprint with the main rifle body, and you can get the missing parts from me in the future. And yes, drop by my place after you've tested this beast. I plan to send word to my friend and tell him what his creation can do in the field.\""
+      "text": "- +65,000 EXP\n- 1× TheAKGuy AK-50 .50 BMG anti-materiel rifle\n- 2× M82A1 .50 BMG 10-round magazine\n- 50× .50 BMG M33\n- Unlocks barter for AK-50 .50 BMG muzzle brake at Mechanic LL4\n- Unlocks barter for AK-50 M-LOK handguard with gas tube at Mechanic LL4\n- Unlocks barter for AK-50 dust cover at Mechanic LL4\n- Unlocks barter for AK-50 .50 BMG 24 inch barrel at Mechanic LL4\n\"You got everything? This is definitely something to celebrate... There's no other rifle like it not just in Tarkov, but in the whole world! This is what happens when a man with skills takes his dream seriously. You already have the blueprint with the main rifle body, and you can get the missing parts from me in the future. And yes, drop by my place after you've tested this beast. I plan to send word to my friend and tell him what his creation can do in the field.\""
     },
     {
       "heading": "Initial Equipment",

@@ -1,8 +1,8 @@
 {
   "title": "Black Division keycard",
   "url": "https://escapefromtarkov.fandom.com/wiki/Black_Division_keycard",
-  "revisionId": 358669,
-  "lastEdited": "2026-09-10T22:55:34Z",
+  "revisionId": 363079,
+  "lastEdited": "2026-10-04T11:00:26Z",
   "kind": "key",
   "categories": [
     "Keycards"
@@ -35,7 +35,7 @@
     {
       "heading": "Notes",
       "level": 2,
-      "text": "- Cannot be discarded."
+      "text": "- Cannot be discarded.\n- Cannot be put inside secure containers."
     },
     {
       "heading": "Key Location",

@@ -1,18 +1,17 @@
 {
   "title": "Capturing Outposts",
   "url": "https://escapefromtarkov.fandom.com/wiki/Capturing_Outposts",
-  "revisionId": 361748,
-  "lastEdited": "2026-09-24T12:31:19Z",
+  "revisionId": 365275,
+  "lastEdited": "2026-10-27T23:47:57Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs, Woods, Shoreline",
     "given by": "Prapor",
-    "LL requirement": "2",
-    "reqkappa": "No"
+    "location": "Customs, Shoreline, Woods",
+    "LL requirement": "2"
   },
   "sections": [
     {
@@ -28,7 +27,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 12 PMC operatives at the specified Scav base on Customs,Woods, or Shoreline"
+      "text": "- Eliminate 12 PMC operatives at the specified Scav bases on Customs, Shoreline, or Woods"
     },
     {
       "heading": "Rewards",

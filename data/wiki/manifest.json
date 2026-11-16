@@ -3,24 +3,24 @@
   "source": {
     "url": "https://s3.amazonaws.com/wikia_xml_dumps/e/es/escapefromtarkov_gamepedia_pages_current.xml.7z",
     "file": "escapefromtarkov_gamepedia_pages_current.xml.7z",
-    "bytes": 3822175,
-    "sha256": "d9ac70587ecc59d804d2268d74f44d5e52d9a961275a176c87e124746f641895",
-    "lastModified": "Tue, 29 Sep 2026 21:24:02 GMT"
+    "bytes": 3860378,
+    "sha256": "4aa69bc4b6d3e93700b8c855cc82d99be6c25de3a1f618c1d77a511695126535",
+    "lastModified": "Thu, 12 Nov 2026 01:15:43 GMT"
   },
-  "snapshotDate": "2026-09-29T21:21:49Z",
+  "snapshotDate": "2026-11-12T01:15:12Z",
   "builtWith": "node scripts/build-wiki-snapshot.mjs",
-  "pages": 1049,
+  "pages": 1061,
   "kinds": {
     "character": 28,
     "container": 62,
     "game": 42,
-    "key": 241,
-    "location": 24,
-    "quest": 580,
+    "key": 243,
+    "location": 26,
+    "quest": 588,
     "skill": 60,
     "trader": 12
   },
-  "redirects": 506,
-  "leftOut": 6458,
-  "pageBytes": 4519662
+  "redirects": 511,
+  "leftOut": 6537,
+  "pageBytes": 4568560
 }

@@ -1,8 +1,8 @@
 {
   "title": "Decisions, Decisions",
   "url": "https://escapefromtarkov.fandom.com/wiki/Decisions%2C_Decisions",
-  "revisionId": 359219,
-  "lastEdited": "2026-09-13T20:12:27Z",
+  "revisionId": 365353,
+  "lastEdited": "2026-10-27T23:49:16Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -39,7 +39,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "Seasonal change: the quest awards a barter for the Secure container Theta at Ref LL3, instead of the container directly.\n- +18,500 EXP\n- Ref Rep +0.15\n- Fence Rep -0.15\n- 72 GP coins\n  - 76 GP coins with Intelligence Center Level 1\n  - 83 GP coins with Intelligence Center Level 2\n- 1× Secure container Theta\n\"You made the right choice. Never doubted you, brother. All right, no more funny business from now on, you hear me?\""
+      "text": "Seasonal change: the quest awards a barter for the Secure container Theta at Ref LL3, instead of the container directly.\n- +18,500 EXP\n- Ref Rep +0.15\n- Fence Rep -0.15\n- 72 GP coins\n  - 76 GP coins with Intelligence Center Level 1\n  - 83 GP coins with Intelligence Center Level 2\n- 1× Secure container Theta\n- Unlocks Parquet Hideout floor style\n\"You made the right choice. Never doubted you, brother. All right, no more funny business from now on, you hear me?\""
     },
     {
       "heading": "Failure Dialogue",

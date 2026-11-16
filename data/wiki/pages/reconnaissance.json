@@ -1,18 +1,18 @@
 {
   "title": "Reconnaissance",
   "url": "https://escapefromtarkov.fandom.com/wiki/Reconnaissance",
-  "revisionId": 361753,
-  "lastEdited": "2026-09-24T12:32:16Z",
+  "revisionId": 365744,
+  "lastEdited": "2026-10-27T23:55:54Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Prapor",
+    "location": "Lighthouse",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {

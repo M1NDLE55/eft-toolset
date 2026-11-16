@@ -1,17 +1,19 @@
 {
   "title": "Gunsmith - HK MP5",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_HK_MP5",
-  "revisionId": 352572,
-  "lastEdited": "2026-08-09T19:49:33Z",
+  "revisionId": 364368,
+  "lastEdited": "2026-10-13T15:22:42Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [
-    "Gunsmith HK MP5"
+    "Gunsmith HK MP5",
+    "Gunsmith MP5"
   ],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,12 +25,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"When I was a child, people used to say that it is not the destination that matters, but the journey itself. But what if the destination is yourself, what you know, how good you use your reflexes, and how many rounds you have in the magazine? This feels particularly true when you're supposed to survive, clinging to this world with your teeth. Well, to the point: I need an MP5. With a 50-round extended mag, silencer, tactical flashlight, and sighting range of more than 200. Ergonomics above 45, recoil sum less than 240. Maximum weight of 4 kg. And decide for yourself what is more important to you, the journey or the destination.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 7 to start this quest."
+      "text": "\"New clients mean new weapon builds, and I've only got two hands... I'd also like to sleep every now and then. If you're looking to make some money, you could help me out. Right now I need an MP5 with a 50-round extended magazine, a suppressor, a tactical flashlight, and a sighting range above 200. Ergonomics at or above 45, combined recoil at or below 240, and a weight of no more than 4 kg. I'll provide the MP5. Everything else is up to you. Bring it back when it's ready.\""
     },
     {
       "heading": "Objectives",
@@ -38,7 +35,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +2,800 EXP\n- Mechanic Rep +0.01\n- 250 Dollars\n  - 263 Dollars with Intelligence Center Level 1\n  - 288 Dollars with Intelligence Center Level 2\n- 2× SwampFox Trihawk Prism Scope 3x30\n- 2× Magpul RVG foregrip (FDE)\n- Unlocks barter for Glock 17 9x19 pistol (variant Tac 3) at Mechanic LL1\n\"Handy for CQB and quiet... Good modification, the client will be satisfied.\""
+      "text": "- +3,000 EXP\n- Mechanic Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 2× Bundle of wires\n- Unlocks barter for Glock 17 9x19 pistol (variant Tac 3) at Mechanic LL1\n\"Compact, quiet, and well-suited for close quarters... A solid build. The client will be pleased.\""
     },
     {
       "heading": "Guide",

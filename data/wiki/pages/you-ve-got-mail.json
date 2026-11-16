@@ -1,18 +1,17 @@
 {
   "title": "You've Got Mail",
   "url": "https://escapefromtarkov.fandom.com/wiki/You've_Got_Mail",
-  "revisionId": 361758,
-  "lastEdited": "2026-09-24T12:33:24Z",
+  "revisionId": 366047,
+  "lastEdited": "2026-10-28T00:01:20Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Prapor",
-    "LL requirement": "2",
-    "reqkappa": "No"
+    "location": "Streets of Tarkov",
+    "LL requirement": "2"
   },
   "sections": [
     {

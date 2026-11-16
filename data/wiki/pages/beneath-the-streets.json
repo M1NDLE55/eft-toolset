@@ -1,18 +1,17 @@
 {
   "title": "Beneath The Streets",
   "url": "https://escapefromtarkov.fandom.com/wiki/Beneath_The_Streets",
-  "revisionId": 361836,
-  "lastEdited": "2026-09-24T13:50:58Z",
+  "revisionId": 367631,
+  "lastEdited": "2026-11-08T01:42:03Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov, The Lab",
     "given by": "Therapist",
-    "LL requirement": "4",
-    "reqkappa": "No"
+    "location": "Streets of Tarkov, The Lab",
+    "LL requirement": "4"
   },
   "sections": [
     {
@@ -33,7 +32,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- Therapist Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks craft for eTG-change regenerative stimulant injector at Medstation level 2\n- +2 Health skill levels\n- +4 Surgery skill levels\n\"So you have found it indeed. Excellent! How's the passage, is it safe? In a state of disrepair, you say? Well, it seems like this opportunity won't be with us for long. I'll send my men as soon as possible.\""
+      "text": "- +65,000 EXP\n- +2 Health skill levels\n- +4 Surgery skill levels\n- Therapist Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks craft for eTG-change regenerative stimulant injector at Medstation level 2\n\"So you have found it indeed. Excellent! How's the passage, is it safe? In a state of disrepair, you say? Well, it seems like this opportunity won't be with us for long. I'll send my men as soon as possible.\""
     },
     {
       "heading": "Initial Equipment",
@@ -64,11 +63,6 @@
       "heading": "Scout the hazard dome",
       "level": 3,
       "text": "In the main working area on the first level."
-    },
-    {
-      "heading": "The Lab to Streets of Tarkov",
-      "level": 3,
-      "text": "Near the orange dome, next to the office with the billiard table. Transits are only available 1 min after raid start."
     }
   ]
 }

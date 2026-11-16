@@ -1,18 +1,18 @@
 {
   "title": "Unique Experience",
   "url": "https://escapefromtarkov.fandom.com/wiki/Unique_Experience",
-  "revisionId": 361741,
-  "lastEdited": "2026-09-24T12:29:45Z",
+  "revisionId": 366007,
+  "lastEdited": "2026-10-28T00:00:37Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse, The Lab",
     "given by": "Prapor",
+    "location": "Lighthouse, The Lab",
     "LL requirement": "4",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -33,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 1× Kalashnikov AK-12 5.45x39 assault rifle\n- Unlocks purchase for Kalashnikov AK-12 5.45x39 assault rifle at Prapor LL4\n- 1× 5.45x39mm BP gs ammo pack (120 pcs)\n- Unlocks craft for 5.45x39mm BP gs at Workbench level 3\n- +4 Light Machine Guns skill levels\n- +4 Heavy Machine Guns skill levels\n\n\"So, it's good, you say? Well then, maybe I can raise the price a little, what do you think?\""
+      "text": "- +65,000 EXP\n- +4 Light Machine Guns skill levels\n- +4 Heavy Machine Guns skill levels\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 1× Kalashnikov AK-12 5.45x39 assault rifle\n- 1× 5.45x39mm BP gs ammo pack (120 pcs)\n- Unlocks barter for Kalashnikov AK-12 5.45x39 assault rifle at Prapor LL4\n- Unlocks craft for 5.45x39mm BP gs at Workbench level 3\n\"So, it's good, you say? Well then, maybe I can raise the price a little, what do you think?\""
     },
     {
       "heading": "Initial Equipment",

@@ -1,8 +1,8 @@
 {
   "title": "Import",
   "url": "https://escapefromtarkov.fandom.com/wiki/Import",
-  "revisionId": 359411,
-  "lastEdited": "2026-09-13T20:15:43Z",
+  "revisionId": 365549,
+  "lastEdited": "2026-10-27T23:52:35Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,6 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -21,22 +22,17 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"I have recently stumbled upon some interesting devices... The first one appears to be some foreign storage device and the second one is apparently a reader of some sort. Extremely interesting pieces of tech, let me tell you. And most importantly, it’s the first time I’ve ever seen them. Maybe some kind of import broke through the blockade or somebody looted a secret warehouse. It's clearly not domestic production, so my money is on the latter. And hey, you'll need to find it yourself since it's high-quality equipment. You can't rely on resellers, they would fool you for sure. If you can bring them to me, I’ll make it worth your while.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 35 to start this quest."
+      "text": "\"I came across some interesting devices recently. The first one is clearly a storage unit, and the second appears to be an RFID reader. Nothing like this has ever been seen in Tarkov before. Most likely, they're either from new shipments that bypassed the usual channels, or they were recovered from a sealed storage facility. Either way, both options won't stay available for long, so deliver one of each device to my people. Don't bring them directly to me - it's too risky while we don't know where these devices came from.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Find 1 UHF RFID Fixed Reader in raid\n- Find 1 VPX Flash Storage Module in raid\n- Hand over 1 UHF RFID Fixed Reader to Mechanic\n- Hand over 1 VPX Flash Storage Module to Mechanic"
+      "text": "- Find the item in raid: 1 UHF RFID Reader\n- Find the item in raid: 1 VPX Flash Storage Module\n- Hand over the item\n- Hand over the item"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +29,000 EXP\n- Mechanic Rep +0.03\n- Jaeger Rep -0.01\n- 85,000 Roubles\n  - 89,250 Roubles with Intelligence Center Level 1\n  - 97,750 Roubles with Intelligence Center Level 2\n- 2× Physical Bitcoin\n- 1× Iridium military thermal vision module\n- 1× Trijicon REAP-IR thermal scope\n- Unlocks purchase of 4.6x30mm FMJ SX at Mechanic LL4\n\"You actually brought them! I'm pleased! Let me have a closer look at them.\""
+      "text": "- +28,000 EXP\n- Mechanic Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Tech manual\n- Unlocks purchase of Magazine case at Mechanic LL3\n\"My people confirmed they received the devices. Thank you!\""
     },
     {
       "heading": "Guide",

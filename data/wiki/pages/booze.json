@@ -1,8 +1,8 @@
 {
   "title": "Booze",
   "url": "https://escapefromtarkov.fandom.com/wiki/Booze",
-  "revisionId": 359121,
-  "lastEdited": "2026-09-13T20:10:48Z",
+  "revisionId": 365253,
+  "lastEdited": "2026-10-27T23:47:34Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,6 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Ragman",
+    "LL requirement": "3",
     "reqkappa": "No"
   },
   "sections": [
@@ -22,11 +23,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Welcome, brother! Say, how do you feel about booze? I've got an order for a large batch of alcohol. Just imagine, there's war going around, but people still drink... Anyway, I need it to be fresh, so make sure you find only the good stuff. You've got golden hands, always find everything I need. So what do you think, can you find me some grog? We'll have a good drink to success after! Some vodka and whiskey would be great for a start. Oh, and get some water canisters too. For the eventual hangover, you know.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 50 to start this quest.\n- Obtain level 3 loyalty with Ragman"
     },
     {
       "heading": "Objectives",

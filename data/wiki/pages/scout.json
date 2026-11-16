@@ -1,8 +1,8 @@
 {
   "title": "Scout",
   "url": "https://escapefromtarkov.fandom.com/wiki/Scout",
-  "revisionId": 360492,
-  "lastEdited": "2026-09-17T20:21:53Z",
+  "revisionId": 365779,
+  "lastEdited": "2026-10-27T23:56:30Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Factory",
     "given by": "Mechanic",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -22,12 +23,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Someday we will get rid of the invisible hand, which used to brand us with employee badges and now has caused this mess, and I think it leads us to a great war. At least, all current event look like preconditions to it. I worked here for the chemical plant, as an ordinary foreman. It was a good time, everyone thought so, including me. Now it’s full of Scavs and swarming with brigands and outlaws. I want to make use of some of the factory premises, find out what exits can still be used. Go there and check it out.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 12 to start this quest."
+      "text": "\"Someday we will get rid of the invisible hand, which used to brand us with employee badges and now has caused this mess, and I think it leads us to a great war. At least, all current events look like preconditions to it. I worked here for the chemical plant, as an ordinary foreman. It was a good time, everyone thought so, including me. Now it’s full of Scavs and swarming with brigands and outlaws. I want to make use of some of the factory premises, find out what exits can still be used. Go there and check it out.\""
     },
     {
       "heading": "Objectives",
@@ -37,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +6,800 EXP\n- Mechanic Rep +0.02\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n\"Good old Factory has sure changed, but you've brought good news. The sealed doors are still there...\""
+      "text": "- +10,000 EXP\n- Mechanic Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"Good old Factory has sure changed, but you've brought good news. The sealed doors are still there...\""
     },
     {
       "heading": "Guide",

@@ -1,8 +1,8 @@
 {
   "title": "Postman Pat - Part 2",
   "url": "https://escapefromtarkov.fandom.com/wiki/Postman_Pat_-_Part_2",
-  "revisionId": 360904,
-  "lastEdited": "2026-09-20T14:59:34Z",
+  "revisionId": 365708,
+  "lastEdited": "2026-10-27T23:55:16Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,10 +11,9 @@
     "Postman Pat, p. 2"
   ],
   "infobox": {
-    "location": "Factory",
     "given by": "Therapist",
-    "previous": "Postman Pat - Part 1",
-    "reqkappa": "Yes"
+    "location": "Factory",
+    "previous": "Accept Postman Pat - Part 1"
   },
   "sections": [
     {

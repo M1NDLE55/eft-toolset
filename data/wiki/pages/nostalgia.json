@@ -1,8 +1,8 @@
 {
   "title": "Nostalgia",
   "url": "https://escapefromtarkov.fandom.com/wiki/Nostalgia",
-  "revisionId": 359519,
-  "lastEdited": "2026-09-13T20:17:34Z",
+  "revisionId": 365661,
+  "lastEdited": "2026-10-27T23:54:28Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "location": "Shoreline",
     "given by": "Jaeger",
-    "previous": "Courtesy Visit",
-    "leads to": "Fishing Place, Forester's Duty",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -34,12 +33,12 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Locate Jaeger's Health Resort room with a view of the bay on Shoreline\n- Obtain Jaeger's Photo album\n- Hand over the Photo album to Jaeger"
+      "text": "- Locate Jaeger's Health Resort room with a view of the bay on Shoreline\n- Locate and obtain Jaeger's Photo album\n- Hand over the Photo album to Jaeger"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +16,800 EXP\n- Jaeger Rep +0.02\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n- 1× Documents case\n- 1× HEP station storage room key\n\"There's no way you actually found it! Thank you so much! Wait. Here, take this. A few days ago I've picked up a badly wounded USEC in the forest. I bandaged him up, but the poor fella didn't make it. Before dying, he gave a key, looks like it is from one of their group stashes somewhere in the Health resort area. I don't need it, but you might find it useful.\""
+      "text": "- +10,000 EXP\n- Jaeger Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 3× KEKTAPE duct tape\n\"There's no way you actually found it! Thank you so much! Wait. Here, take this. A few days ago I've picked up a badly wounded USEC in the forest. I bandaged him up, but the poor fella didn't make it. Before dying, he gave me a key, looks like it is from one of his stashes somewhere in the Health Resort area. I don't need it, but you might find it useful.\""
     },
     {
       "heading": "Guide",

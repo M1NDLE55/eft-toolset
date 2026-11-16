@@ -1,18 +1,18 @@
 {
   "title": "Luxurious Life",
   "url": "https://escapefromtarkov.fandom.com/wiki/Luxurious_Life",
-  "revisionId": 361686,
-  "lastEdited": "2026-09-24T12:03:03Z",
+  "revisionId": 365602,
+  "lastEdited": "2026-10-27T23:53:28Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Ground Zero",
     "given by": "Prapor",
+    "location": "Ground Zero",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {

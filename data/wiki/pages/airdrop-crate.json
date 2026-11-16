@@ -1,8 +1,8 @@
 {
   "title": "Airdrop crate",
   "url": "https://escapefromtarkov.fandom.com/wiki/Airdrop_crate",
-  "revisionId": 347174,
-  "lastEdited": "2026-06-20T10:37:51Z",
+  "revisionId": 362731,
+  "lastEdited": "2026-09-30T20:53:43Z",
   "kind": "container",
   "categories": [
     "Loot Containers"
@@ -34,7 +34,7 @@
     {
       "heading": "Mechanic",
       "level": 2,
-      "text": "A loud plane can be heard and seen flying over the location. It will fire off countermeasure flares in its flight path in even intervals, until it reaches the drop zone, where it fires off multiple flares at once and diverts from its original flight path after dropping a crate. The crate can be dropped at a set number of positions and will slowly fall to the ground via parachute. Once on the ground, the crate will emit red smoke.\n\nAirdrops can also be called in by using a signal pistol with a 26x75mm red flare cartridge or the handheld RSP-30 red flare.\n\nThere is a 15-17 minute cooldown period between airdrops which is indicated by a \"Wait for arrival! Airspace is congested\" notification in the bottom right corner of the screen when trying to call one too early after another. The airdrop will arrive after the cooldown is over."
+      "text": "A loud plane can be heard and seen flying over the location. It will fire off countermeasure flares in its flight path in even intervals, until it reaches the drop zone, where it fires off multiple flares at once and diverts from its original flight path after dropping a crate. The crate can be dropped at a set number of positions and will slowly fall to the ground via parachute. Once on the ground, the crate will emit red smoke.\n\nAirdrops can also be called in by using a signal pistol with a 26x75mm red flare cartridge or the handheld RSP-30 red flare.\n\nThere is a cooldown period between airdrops which is indicated by a \"Wait for arrival! Airspace is congested\" notification in the bottom right corner of the screen when trying to call one too early after another. The airdrop will arrive after the cooldown is over."
     },
     {
       "heading": "Location",

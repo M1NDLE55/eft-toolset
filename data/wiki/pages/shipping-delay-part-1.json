@@ -1,18 +1,17 @@
 {
   "title": "Shipping Delay - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Shipping_Delay_-_Part_1",
-  "revisionId": 360845,
-  "lastEdited": "2026-09-20T12:25:00Z",
+  "revisionId": 365806,
+  "lastEdited": "2026-10-27T23:56:58Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods",
     "given by": "Prapor",
-    "previous": "Accept A Helping Hand",
-    "reqkappa": "No"
+    "location": "Woods",
+    "previous": "Accept A Helping Hand"
   },
   "sections": [
     {

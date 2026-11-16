@@ -1,18 +1,18 @@
 {
   "title": "Scrap Metal",
   "url": "https://escapefromtarkov.fandom.com/wiki/Scrap_Metal",
-  "revisionId": 362614,
-  "lastEdited": "2026-09-29T20:13:10Z",
+  "revisionId": 367445,
+  "lastEdited": "2026-11-03T14:25:54Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Peacekeeper",
+    "location": "Shoreline",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {
@@ -46,7 +46,7 @@
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 3 | Required | N/A | Used to mark the tanks. When placed, the item is removed from the players' inventory. |\nNote that you do not have to plant all markers in the same raid. As with previous quests, once you have survived the required amount of time after each plant, you can die and do the remaining objectives and extract in subsequent raids."
     },
     {
-      "heading": "See Also",
+      "heading": "See also",
       "level": 2,
       "text": "- Tigr Safari - The USEC counterpart quest"
     },

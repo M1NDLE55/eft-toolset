@@ -1,8 +1,8 @@
 {
   "title": "Chemical - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Chemical_-_Part_1",
-  "revisionId": 362222,
-  "lastEdited": "2026-09-26T14:52:42Z",
+  "revisionId": 366074,
+  "lastEdited": "2026-10-28T01:10:29Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,10 +11,12 @@
     "Chemical, p.1"
   ],
   "infobox": {
-    "location": "Customs",
     "given by": "Skier",
-    "leads to": "Chemical - Part 2",
-    "reqkappa": "Yes"
+    "location": "Customs",
+    "LL requirement": "1",
+    "LL quests": "3",
+    "previous": "Burning Rubber, or, Supplier",
+    "leads to": "Chemical - Part 2"
   },
   "sections": [
     {
@@ -35,7 +37,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +3,000 EXP\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 518 Euros with Intelligence Center Level 2\n- 1× MSA ACH TC-2002 MICH Series helmet (Olive Drab)\n- 1× 7.62x54mm R SP BT gzh ammo pack (20 pcs)\n- Unlocks purchase for 7.62x54mm R SP BT at Skier LL1\n\"How long I live and wonder still. How was he surviving all this time? He can’t put two words together! Whatever. Let's first disinfect all this and wash it with cologne, and then open it and have a look.\""
+      "text": "- +3,000 EXP\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 518 Euros with Intelligence Center Level 2\n- 1× MSA ACH TC-2002 MICH Series helmet (Olive Drab)\n- 1× 7.62x54mm R SP BT gzh ammo pack (20 pcs)\n- Unlocks purchase of 7.62x54mm R SP BT at Skier LL1\n\"How long I live and wonder still. How was he surviving all this time? He can’t put two words together! Whatever. Let's first disinfect all this and wash it with cologne, and then open it and have a look.\""
     },
     {
       "heading": "Guide",

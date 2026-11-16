@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 7",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_7",
-  "revisionId": 352606,
-  "lastEdited": "2026-08-09T19:59:06Z",
+  "revisionId": 364401,
+  "lastEdited": "2026-10-13T19:06:54Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,6 +13,8 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "previous": "Gunsmith Master - Part 6",
+    "leads to": "Gunsmith Master - Part 8",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -27,11 +29,6 @@
       "text": "\"This one is for Sniper, it seems that he’s about to set out to the woods somewhere to hunt down villains for a week. Judging from the fact that he packed one hell of a backpack with an MRE, firesteel, batteries, and water. Left it at my place for now. He needs an M1A, fitted with an UltiMAK M8 Forward Optic mount, Nightforce ATACR 7-35x56 scope, Micro T-1 reflex sight, Holosun LS321 tactical device, and a 20-round mag. Ergonomics above 20, recoil sum below 400, and a total weight of 7.3 kg or less.\""
     },
     {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 37 to start this quest."
-    },
-    {
       "heading": "Objectives",
       "level": 2,
       "text": "- Modify an M1A to comply with the given specifications"
@@ -39,7 +36,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +26,600 EXP\n- Mechanic Rep +0.03\n- 500 Euros\n  - 525 Euros with Intelligence Center Level 1\n  - 575 Euros with Intelligence Center Level 2\n- 1× AR-15 Hera Arms CQR pistol grip/buttstock\n- 1× Hera Arms CQR tactical foregrip\n- Unlocks purchase of AR-10 KAC QDC 7.62x51 Muzzle Brake Kit at Mechanic LL3\n- Unlocks purchase of Magpul MOE Carbine rubber buttpad at Peacekeeper LL4\n\"The rifle is ready? Great. I guess you have already figured out that Sniper's real name is Dima, I let it slip a while ago. Not a word about him to anybody, I hope you understand.\""
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 3× Magpul MOE Carbine rubber buttpad\n- Unlocks purchase of Magpul MOE Carbine rubber buttpad at Peacekeeper LL4\n\"The rifle is ready? Great. I guess you have already figured out that Sniper's real name is Dima, I let it slip a while ago. Not a word about him to anybody, I hope you understand.\""
     },
     {
       "heading": "Guide",

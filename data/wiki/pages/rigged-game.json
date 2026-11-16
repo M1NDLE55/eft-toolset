@@ -1,8 +1,8 @@
 {
   "title": "Rigged Game",
   "url": "https://escapefromtarkov.fandom.com/wiki/Rigged_Game",
-  "revisionId": 362259,
-  "lastEdited": "2026-09-26T16:16:30Z",
+  "revisionId": 366148,
+  "lastEdited": "2026-10-29T03:33:42Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,10 +11,10 @@
     "Rigged game"
   ],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Skier",
+    "location": "Shoreline",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {

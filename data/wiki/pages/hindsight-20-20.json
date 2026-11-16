@@ -1,19 +1,18 @@
 {
   "title": "Hindsight 20/20",
   "url": "https://escapefromtarkov.fandom.com/wiki/Hindsight_20/20",
-  "revisionId": 362481,
-  "lastEdited": "2026-09-29T16:00:06Z",
+  "revisionId": 367429,
+  "lastEdited": "2026-11-03T13:47:32Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods",
     "given by": "Skier",
+    "location": "Woods",
     "previous": "Route Deviation (+6hr)",
-    "leads to": "Key Partner (+6hr)",
-    "reqkappa": "No"
+    "leads to": "Key Partner (+6hr)"
   },
   "sections": [
     {

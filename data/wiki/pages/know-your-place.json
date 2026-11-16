@@ -1,8 +1,8 @@
 {
   "title": "Know Your Place!",
   "url": "https://escapefromtarkov.fandom.com/wiki/Know_Your_Place!",
-  "revisionId": 359450,
-  "lastEdited": "2026-09-13T20:16:23Z",
+  "revisionId": 365589,
+  "lastEdited": "2026-10-27T23:53:15Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Streets of Tarkov, Interchange",
     "given by": "Ragman",
+    "LL requirement": "3",
     "reqkappa": "No"
   },
   "sections": [
@@ -32,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,800 EXP\n- Ragman Rep +0.03\n- 95,000 Roubles\n  - 99,750 Roubles with Intelligence Center Level 1\n  - 109,250 Roubles with Intelligence Center Level 2\n- 2× Peltor ComTac VI headset (Coyote Brown)\n\"I think we got the wrong guys, man. Someone came by and told me that this route is used by some very important people. Should've thought this through...\""
+      "text": "- +28,000 EXP\n- Ragman Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"I think we got the wrong guys, man. Someone came by and told me that this route is used by some very important people. Should've thought this through...\""
     },
     {
       "heading": "Guide",

@@ -1,8 +1,8 @@
 {
   "title": "Snatch",
   "url": "https://escapefromtarkov.fandom.com/wiki/Snatch",
-  "revisionId": 360185,
-  "lastEdited": "2026-09-15T07:57:04Z",
+  "revisionId": 365828,
+  "lastEdited": "2026-10-27T23:57:22Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -39,7 +39,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- Lightkeeper Rep +0.01\n- 3× VPX Flash Storage Module\n- 1× Lighthouse island stash key\n- Unlocks purchase of Atomic Defense CQCM ballistic mask (Black) at Ragman LL4\n- Unlocks craft for UHF RFID Reader at Intelligence Center level 2\n- Unlocks the Lightkeeper service \"Sacred Amulet\"\n\"Welcome back. Now, let's see what they're up to.\""
+      "text": "- Lightkeeper Rep +0.01\n- 3× VPX Flash Storage Module\n- 1× Substation marked key\n- Unlocks purchase of Atomic Defense CQCM ballistic mask (Black) at Ragman LL4\n- Unlocks craft for UHF RFID Reader at Intelligence Center level 2\n- Unlocks the Lightkeeper service \"Sacred Amulet\"\n\"Welcome back. Now, let's see what they're up to.\""
     },
     {
       "heading": "Guide",

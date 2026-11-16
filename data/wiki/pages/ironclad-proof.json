@@ -1,8 +1,8 @@
 {
   "title": "Ironclad Proof",
   "url": "https://escapefromtarkov.fandom.com/wiki/Ironclad_Proof",
-  "revisionId": 361733,
-  "lastEdited": "2026-09-24T12:27:55Z",
+  "revisionId": 367043,
+  "lastEdited": "2026-11-02T20:56:30Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "given by": "Prapor",
     "LL requirement": "3",
-    "reqkappa": "No"
+    "LL quests": "3"
   },
   "sections": [
     {
@@ -37,7 +37,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 1× Military power filter\n- Unlocks purchase of Korund-VM ballistic plates (Front) at Prapor LL3\n- Unlocks purchase of 23x75mm Zvezda flashbang round at Prapor LL3\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Hm... well, alright. Old offenses are forgotten, let's keep working. Just be careful around that Skier character, he's a shady dude.\""
+      "text": "- +28,000 EXP\n- Prapor Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Military power filter\n- Unlocks purchase of 23x75mm Zvezda flashbang round at Prapor LL3\n- Unlocks barter for Korund-VM ballistic plates (Front) at Prapor LL3\n\"Hm... well, alright. Old offenses are forgotten, let's keep working. Just be careful around that Skier character, he's a shady dude.\""
     },
     {
       "heading": "Initial Equipment",
@@ -50,7 +50,7 @@
       "text": "| Item name | Amount | Requirement | Find in raid |\n| RGD-5 hand grenade | 10 | Handover item | Yes |\n| VOG-17 Khattabka improvised hand grenade | 10 | Handover item | Yes |\n| VOG-25 Khattabka improvised hand grenade | 10 | Handover item | Yes |\n| F-1 hand grenade | 10 | Handover item | Yes |\n| F-1 hand grenade (Reduced delay) | 10 | Handover item | Yes |\n| RGN hand grenade | 10 | Handover item | Yes |\n| RGO hand grenade | 10 | Handover item | Yes |\n| Zarya stun grenade | 10 | Handover item | Yes |\n| 40mm VOG-25 grenade | 10 | Handover item | Yes |"
     },
     {
-      "heading": "See Also",
+      "heading": "See also",
       "level": 2,
       "text": "- Our Own Land - The BEAR counterpart quest"
     }

@@ -1,8 +1,8 @@
 {
   "title": "Peacekeeping Mission",
   "url": "https://escapefromtarkov.fandom.com/wiki/Peacekeeping_Mission",
-  "revisionId": 361639,
-  "lastEdited": "2026-09-24T00:48:54Z",
+  "revisionId": 367464,
+  "lastEdited": "2026-11-03T14:43:46Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,9 +11,10 @@
     "Peacekeeping mission"
   ],
   "infobox": {
-    "location": "Woods, Reserve, Customs, Lighthouse, Shoreline, Streets of Tarkov, Ground Zero, Interchange",
     "given by": "Peacekeeper",
-    "reqkappa": "Yes"
+    "location": "Customs, Ground Zero, Interchange, Lighthouse, Reserve, Shoreline, Streets of Tarkov, Woods",
+    "LL requirement": "4",
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -24,12 +25,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Have you seen the news? Recently, media have been pushing the agenda that \"the Blue Helmets are not doing their job in Tarkov, do not follow the procedures\" and so forth... Those damn bastards, kurwa! I hate these journalist scumbags. We are one step away from losing financing, which, my friend, is the opposite of profitable for us. So, we need to convince the public that the helmets are actually doing what they promised to do. You must address the issue of eliminating the illegal bandit group activities but do so under the UN flag. I'll give you the initial set of equipment you'll need, but if you lose it, don't come asking for more.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 4 with Peacekeeper to obtain this quest."
+      "text": "\"Have you seen the news? Recently, media have been pushing the agenda that \\\"the Blue Helmets are not doing their job in Tarkov, do not follow the procedures\\\" and so forth... Those damn bastards, kurwa! I hate these journalist scumbags. We are one step away from losing financing, which, my friend, is the opposite of profitable for us. So, we need to convince the public that the helmets are actually doing what they promised to do. You must address the issue of eliminating the illegal bandit group activities but do so under the UN flag. I’ll give you the initial set of equipment you'll need, but if you lose it, don't come asking for more.\""
     },
     {
       "heading": "Objectives",

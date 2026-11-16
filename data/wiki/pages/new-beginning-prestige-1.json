@@ -1,8 +1,8 @@
 {
   "title": "New Beginning (Prestige 1)",
   "url": "https://escapefromtarkov.fandom.com/wiki/New_Beginning_(Prestige_1)",
-  "revisionId": 359494,
-  "lastEdited": "2026-09-13T20:17:08Z",
+  "revisionId": 365636,
+  "lastEdited": "2026-10-27T23:54:02Z",
   "kind": "quest",
   "categories": [
     "Quests",
@@ -27,9 +27,14 @@
       "text": "\"Hello my brother! So how's it hanging? Not bored yet? I know what'll rev you up. The effect is out of this world! Hey, don't get the wrong idea, it's nothing that was illegal in our past lives. Long story short, there are some special people making lists of the realest alphas in Tarkov. And I happen to know these special people. Rarely do I get to meet such influential figures in my life, that's for sure. With guys like that, you gotta do business in an exceptional fashion, not a single fuck-up. You mess up, you lose your chance to live a happy life ever after, if you catch my drift. Okay, so I can see you're clearly interested in finding out what this chad list is for. Tell you what, I have no fucking clue. I sure wish they'd tell me though! Anyway, you yourself can make it on this list. All you gotta do is prove you're worthy. They gave me a mission checklist, here ya go.\""
     },
     {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This quest is not available in the PvE game mode since it is not required for Prestige level 1."
+    },
+    {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Must be level 25 to start this quest.\n- Must have no Prestige."
+      "text": "- Must be level 25 to start this quest."
     },
     {
       "heading": "Objectives",

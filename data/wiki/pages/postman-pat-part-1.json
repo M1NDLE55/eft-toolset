@@ -1,19 +1,19 @@
 {
   "title": "Postman Pat - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Postman_Pat_-_Part_1",
-  "revisionId": 361727,
-  "lastEdited": "2026-09-24T12:25:57Z",
+  "revisionId": 365707,
+  "lastEdited": "2026-10-27T23:55:15Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Factory",
     "given by": "Prapor",
+    "location": "Factory",
     "LL requirement": "2",
-    "leads to": "Postman Pat - Part 2",
-    "reqkappa": "Yes"
+    "LL quests": "3",
+    "leads to": "Postman Pat - Part 2"
   },
   "sections": [
     {

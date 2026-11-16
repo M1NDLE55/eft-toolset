@@ -1,18 +1,18 @@
 {
   "title": "Sanitary Standards",
   "url": "https://escapefromtarkov.fandom.com/wiki/Sanitary_Standards",
-  "revisionId": 361693,
-  "lastEdited": "2026-09-24T12:08:59Z",
+  "revisionId": 365772,
+  "lastEdited": "2026-10-27T23:56:23Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Daytime Factory",
     "given by": "Therapist",
+    "location": "Daytime Factory",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "2"
   },
   "sections": [
     {

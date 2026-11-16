@@ -1,8 +1,8 @@
 {
   "title": "New Beginning (Prestige 6)",
   "url": "https://escapefromtarkov.fandom.com/wiki/New_Beginning_(Prestige_6)",
-  "revisionId": 359499,
-  "lastEdited": "2026-09-13T20:17:13Z",
+  "revisionId": 365641,
+  "lastEdited": "2026-10-27T23:54:07Z",
   "kind": "quest",
   "categories": [
     "Quests",
@@ -28,7 +28,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Must be level 47 to start this quest.\n- Must have Prestige level 5"
+      "text": "- Must be level 47 to start this quest (45 in the PvE mode).\n- Must have Prestige level 5"
     },
     {
       "heading": "Objectives",
@@ -58,7 +58,7 @@
     {
       "heading": "Customs to Reserve",
       "level": 3,
-      "text": "Next to the Military Base CP extraction."
+      "text": ""
     }
   ]
 }

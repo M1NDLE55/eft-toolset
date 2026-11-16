@@ -1,8 +1,8 @@
 {
   "title": "To the Light - Bite the Dust",
   "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_Bite_the_Dust",
-  "revisionId": 360023,
-  "lastEdited": "2026-09-14T00:09:24Z",
+  "revisionId": 367845,
+  "lastEdited": "2026-11-11T14:01:37Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Peacekeeper",
     "previous": "To the Light - Fallen Bird",
-    "leads to": "To the Light - A Time to Throw Stones",
-    "reqkappa": "No"
+    "leads to": "To the Light - A Time to Throw Stones"
   },
   "sections": [
     {

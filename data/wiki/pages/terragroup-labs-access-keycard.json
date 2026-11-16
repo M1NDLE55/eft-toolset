@@ -1,8 +1,8 @@
 {
   "title": "TerraGroup Labs access keycard",
   "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_access_keycard",
-  "revisionId": 362236,
-  "lastEdited": "2026-09-26T15:28:49Z",
+  "revisionId": 363825,
+  "lastEdited": "2026-10-09T21:24:53Z",
   "kind": "key",
   "categories": [
     "Keycards"
@@ -38,7 +38,7 @@
     {
       "heading": "Notes",
       "level": 2,
-      "text": "- Will be consumed upon entering The Lab. Will not be consumed in the practice and practice co-op game modes.\n  - When playing in a group, all players need their own.\n- Only 5 can be held in a raid inventory at the same time"
+      "text": "- Will be consumed upon entering The Lab. Will not be consumed in the practice and practice co-op game modes.\n  - When playing in a group, all players need their own."
     },
     {
       "heading": "Quests",
@@ -81,7 +81,7 @@
       "text": "The Lab map selection screen."
     },
     {
-      "heading": "Behind The Lock",
+      "heading": "Behind the Lock",
       "level": 2,
       "text": "- The Lab"
     },

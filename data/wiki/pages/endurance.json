@@ -1,8 +1,8 @@
 {
   "title": "Endurance",
   "url": "https://escapefromtarkov.fandom.com/wiki/Endurance",
-  "revisionId": 362571,
-  "lastEdited": "2026-09-29T19:31:55Z",
+  "revisionId": 364427,
+  "lastEdited": "2026-10-13T21:41:04Z",
   "kind": "skill",
   "categories": [
     "Physical skills"
@@ -35,12 +35,7 @@
     {
       "heading": "How to raise",
       "level": 2,
-      "text": "- Sprinting while not being overweight (i.e yellow or red number)\n- Walking while not being overweight (i.e yellow or red number)\n- Completing quick time events (QTE) in the Gym\n- Completing the quest A Life Lesson\n- Completing the quest Never Too Late To Learn"
-    },
-    {
-      "heading": "Tips",
-      "level": 2,
-      "text": "- Using a stimulant to temporarily increase carrying capacity or strength at the start of a raid will generally put the player below overweight, allowing endurance to be leveled."
+      "text": "- Walk or sprint while not being overweight (<33.77% of current total weight)\n- Using the Gym\n- Completing the quest A Life Lesson\n- Completing the quest Never Too Late To Learn"
     }
   ]
 }

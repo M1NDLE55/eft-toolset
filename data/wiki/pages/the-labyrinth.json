@@ -1,8 +1,8 @@
 {
   "title": "The Labyrinth",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Labyrinth",
-  "revisionId": 359378,
-  "lastEdited": "2026-09-13T20:15:11Z",
+  "revisionId": 367816,
+  "lastEdited": "2026-11-10T13:23:23Z",
   "kind": "location",
   "categories": [
     "Locations"
@@ -135,7 +135,7 @@
     {
       "heading": "Trivia",
       "level": 2,
-      "text": "- This location was originally only planned to be a temporary addition for the Labyrinth event. After overwhelmingly positive player feedback, the devs decided to permanently keep it in the game.\n- Scavs in this location are better equipped than regular ones and sometimes carry xTG-12 injectors.\n- Scavs in this location have Greek mythology names such as Μορφέας (Morpheus) and Πύθων (Python). This follows the overall Greek theme of related entities (Knossos, Ariadne) and items (Labrys)."
+      "text": "- This location was released together with the video \"The Λabyrinth\".\n- Scavs in this location are better equipped than regular ones and sometimes carry xTG-12 injectors.\n- Scavs in this location have Greek mythology names such as Μορφέας (Morpheus) and Πύθων (Python). This follows the overall Greek theme of related entities (Knossos, Ariadne) and items (Labrys)."
     }
   ]
 }

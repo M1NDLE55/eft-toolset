@@ -1,8 +1,8 @@
 {
   "title": "Black Swan",
   "url": "https://escapefromtarkov.fandom.com/wiki/Black_Swan",
-  "revisionId": 360499,
-  "lastEdited": "2026-09-17T20:32:03Z",
+  "revisionId": 365249,
+  "lastEdited": "2026-10-27T23:47:30Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Factory",
     "given by": "Mechanic",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hello, mercenary. I've been asking myself the same question all day: why does no one notice the obvious patterns in platinum price fluctuations? A crisis is coming, and they keep calling me a pessimist... That's alright. We'll see how much they're willing to pay for platinum once the prices go through the roof. I need to prepare. There are old heat exchangers scattered across Tarkov, and they still contain Soviet-era corrugated tubing with platinum inserts. Would you help me replenish my reserves? Just mark the heat exchangers with strobes, and I'll pay you well.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 2 with Mechanic to obtain this quest."
     },
     {
       "heading": "Objectives",

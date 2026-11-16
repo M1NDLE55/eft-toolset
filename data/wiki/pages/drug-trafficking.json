@@ -1,18 +1,18 @@
 {
   "title": "Drug Trafficking",
   "url": "https://escapefromtarkov.fandom.com/wiki/Drug_Trafficking",
-  "revisionId": 361715,
-  "lastEdited": "2026-09-24T12:22:21Z",
+  "revisionId": 366135,
+  "lastEdited": "2026-10-28T22:37:27Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Therapist",
+    "location": "Lighthouse",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {
@@ -38,7 +38,7 @@
     {
       "heading": "Initial Equipment",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera | 1 | Required | N/A | Can be purchased from Mechanic LL1. |"
+      "text": "| Item name | Amount | Notes |\n| WI-FI Camera | 1 | This item is placed in the drug lab. When placed, the item is removed from the players' inventory. |"
     },
     {
       "heading": "Guide",

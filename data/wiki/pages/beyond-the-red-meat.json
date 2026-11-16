@@ -1,18 +1,17 @@
 {
   "title": "Beyond the Red Meat",
   "url": "https://escapefromtarkov.fandom.com/wiki/Beyond_the_Red_Meat",
-  "revisionId": 362411,
-  "lastEdited": "2026-09-29T13:35:46Z",
+  "revisionId": 367411,
+  "lastEdited": "2026-11-03T13:15:31Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Skier",
-    "LL requirement": "2",
-    "reqkappa": "No"
+    "location": "Streets of Tarkov",
+    "LL requirement": "2"
   },
   "sections": [
     {

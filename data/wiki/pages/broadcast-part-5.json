@@ -1,8 +1,8 @@
 {
   "title": "Broadcast - Part 5",
   "url": "https://escapefromtarkov.fandom.com/wiki/Broadcast_-_Part_5",
-  "revisionId": 359131,
-  "lastEdited": "2026-09-13T20:10:58Z",
+  "revisionId": 367739,
+  "lastEdited": "2026-11-09T00:38:04Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -28,12 +28,12 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate Priest\n- Locate the ritual spot on Chekannaya st. on Streets of Tarkov\n- Stash a Cultist knife at the ritual spot\n- Survive and extract from the location\nNote: The \"Locate\" and \"Stash\" objectives will appear after the \"Eliminate\" objective is completed."
+      "text": "- Eliminate Priest\n- Locate the ritual spot on Chekannaya st. on Streets of Tarkov\n- Stash a Cultist knife at the ritual spot\nNote: The \"Locate\" and \"Stash\" objectives will appear after the \"Eliminate\" objective is completed."
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- 24,000 EXP\n- Jaeger Rep +0.03\n- 75,000 Roubles\n  - 78,750 Roubles with Intelligence Center Level 1\n  - 86,250 Roubles with Intelligence Center Level 2\n- 2× Molot Arms VPO-101 Vepr-Hunter 7.62x51 carbine\n- 2× 7.62x51mm M61 ammo pack (20 pcs)\n- Unlocks barter for Armasight Zeus-Pro 640 2-8x50 30Hz thermal scope at Jaeger LL4\n\"Yeah! You think they've got the hint? I think they did! Thank you, kid.\""
+      "text": "- +28,000 EXP\n- 1× Armasight Zeus-Pro 640 2-8x50 30Hz thermal scope\n- Unlocks barter for Armasight Zeus-Pro 640 2-8x50 30Hz thermal scope at Jaeger LL3\n\"Yeah! You think they've got the hint? I think they did! Thank you, kid.\""
     },
     {
       "heading": "Guide",

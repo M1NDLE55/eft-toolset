@@ -1,19 +1,18 @@
 {
   "title": "Irresistible",
   "url": "https://escapefromtarkov.fandom.com/wiki/Irresistible",
-  "revisionId": 362448,
-  "lastEdited": "2026-09-29T14:58:58Z",
+  "revisionId": 367719,
+  "lastEdited": "2026-11-09T00:27:32Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Interchange",
     "given by": "Skier",
+    "location": "Interchange",
     "LL requirement": "3",
-    "leads to": "Dangerous Props",
-    "reqkappa": "No"
+    "leads to": "Dangerous Props"
   },
   "sections": [
     {
@@ -34,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,000 EXP\n- 1,650 Euros\n  - 1,732 Euros with Intelligence Center Level 1\n  - 1,897 Euros with Intelligence Center Level 2\n- 1x MPS Auto Assault-12 Gen 1 12ga automatic shotgun\n- 2x 12/70 flechette ammo pack (25 pcs)\n- Unlocks purchase of MPS Auto Assault-12 Gen 1 12ga automatic shotgun at Skier LL3\n\"Atta boy! It'll sell real good real quick, I'm telling you! Not many guns can boast such a flashy advertisement...\""
+      "text": "- +28,000 EXP\n- 1,650 Euros\n  - 1,732 Euros with Intelligence Center Level 1\n  - 1,897 Euros with Intelligence Center Level 2\n- 1× MPS Auto Assault-12 Gen 1 12ga automatic shotgun\n- 2× 12/70 flechette ammo pack (25 pcs)\n- Unlocks purchase of MPS Auto Assault-12 Gen 1 12ga automatic shotgun at Skier LL3\n\"Atta boy! It'll sell real good real quick, I'm telling you! Not many guns can boast such a flashy advertisement...\""
     },
     {
       "heading": "Guide",

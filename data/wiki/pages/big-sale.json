@@ -1,8 +1,8 @@
 {
   "title": "Big Sale",
   "url": "https://escapefromtarkov.fandom.com/wiki/Big_Sale",
-  "revisionId": 359115,
-  "lastEdited": "2026-09-13T20:10:42Z",
+  "revisionId": 365247,
+  "lastEdited": "2026-10-27T23:47:28Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,6 +13,7 @@
   "infobox": {
     "location": "Interchange",
     "given by": "Ragman",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -24,7 +25,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"You know, brother, I'll tell you what, clothes will always be of value. War or no war, people still buy that stuff. Ultra had a bunch of brand outlets, the ones folks used to hype on, and I could use the things from there now. Do a quick sweep, check if there is anything left if they're not thrashed yet. Don't worry, I'm not asking you to loot any clothes, I just want you to check if there's anything left in the stores, we will figure everything out later. Just don't go about rummaging through trash, remember, brand stuff only.\""
+      "text": "\"You know, brother, I'll tell you what, clothes will always be of value. War or no war, people still buy that stuff. Ultra had a bunch of brand outlets, the ones folks used to hype on, and I could use the things from there now. Do a quick sweep, check if there is anything left if they’re not thrashed yet. Don't worry, I'm not asking you to loot any clothes, I just want you to check if there's anything left in the stores, we will figure everything out later. Just don’t go about rummaging through trash, remember, brand stuff only.\""
     },
     {
       "heading": "Objectives",
@@ -34,7 +35,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +8,200 EXP\n- Ragman Rep +0.03\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n- 1× Oakley Mechanism heavy duty backpack (Black)\n\"Great, awesome, got some stuff to look into. Seems like you scared off those Scavs back then. I'll send my guys, gonna have a new supply.\""
+      "text": "- +10,000 EXP\n- Ragman Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"Great, awesome, got some stuff to look into. Seems like you scared off those Scavs back then. I'll send my guys, gonna have a new supply.\""
     },
     {
       "heading": "Guide",

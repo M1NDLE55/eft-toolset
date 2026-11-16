@@ -1,8 +1,8 @@
 {
   "title": "Wooden ammo box",
   "url": "https://escapefromtarkov.fandom.com/wiki/Wooden_ammo_box",
-  "revisionId": 295880,
-  "lastEdited": "2024-11-05T23:59:28Z",
+  "revisionId": 364891,
+  "lastEdited": "2026-10-24T10:44:48Z",
   "kind": "container",
   "categories": [
     "Loot Containers"
@@ -28,6 +28,11 @@
       "heading": "Loot Table",
       "level": 2,
       "text": "| Type |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Ammo packs |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Rounds |\n| Rounds |\n| Ammo packs |\n| Rounds |\n| Rounds |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Rounds |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Rounds |\n| Rounds |\n| Rounds |\n| Ammo packs |\n| Rounds |\n| Ammo packs |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Ammo packs |\n| Ammo packs |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Ammo packs |\n| Ammo packs |\n| Rounds |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Ammo packs |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Rounds |\n| Ammo packs |\n| Rounds |\n| Rounds |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The container is based on the standard Warsaw Pact ammo crate. Its dimensions were 488mm Long × 353mm Wide × 151mm High, giving it a volume of 0.026 Cubic Meters (0.918 Cubic Feet). Each ammo crate contained 2 hermetically-sealed sheet-steel \"spam cans\" and a large steel can opener."
     }
   ]
 }

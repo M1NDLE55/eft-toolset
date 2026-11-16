@@ -1,8 +1,8 @@
 {
   "title": "Antique Enthusiast",
   "url": "https://escapefromtarkov.fandom.com/wiki/Antique_Enthusiast",
-  "revisionId": 360488,
-  "lastEdited": "2026-09-17T20:14:28Z",
+  "revisionId": 365213,
+  "lastEdited": "2026-10-27T23:46:53Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,6 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Ragman",
+    "LL requirement": "4",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -22,11 +23,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hey, brother! There's only one true connoisseur left in all of Tarkov. My favorite client! And now he's decided it's time to expand his collection. He's looking for antique vases and teapots. Between you and me, I can understand the vases, but why anyone would need that many collectible teapots is beyond me... Still, an order's an order, and he pays well. Everything has to be found by your own hand, as pristine as antiques can possibly be, so get out there and track them down yourself.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 4 with Ragman to obtain this quest."
     },
     {
       "heading": "Objectives",

@@ -1,8 +1,8 @@
 {
   "title": "Simple Side Job",
   "url": "https://escapefromtarkov.fandom.com/wiki/Simple_Side_Job",
-  "revisionId": 359676,
-  "lastEdited": "2026-09-13T20:20:14Z",
+  "revisionId": 365819,
+  "lastEdited": "2026-10-27T23:57:12Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -47,12 +47,12 @@
     },
     {
       "heading": "Reserve Case location",
-      "level": 4,
+      "level": 3,
       "text": ""
     },
     {
       "heading": "Woods Stashing location",
-      "level": 4,
+      "level": 3,
       "text": ""
     }
   ]

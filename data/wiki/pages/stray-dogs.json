@@ -1,8 +1,8 @@
 {
   "title": "Stray Dogs",
   "url": "https://escapefromtarkov.fandom.com/wiki/Stray_Dogs",
-  "revisionId": 359710,
-  "lastEdited": "2026-09-13T20:20:49Z",
+  "revisionId": 366598,
+  "lastEdited": "2026-10-31T04:58:31Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "location": "Customs, Woods, Shoreline, Lighthouse",
     "given by": "Jaeger",
-    "previous": "The Huntsman Path - Trophy, The Huntsman Path - Sellout, The Huntsman Path - Woods Keeper",
+    "LL requirement": "4",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,22 +23,17 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Good day to you, soldier. Though could I actually say it's good? As a wise person used to say, people are made to torment each other. When I first read it, I didn't honestly believe it. But now my heart bleeds every time I remember this quote. Some new renegades are terrorizing the city. I've sent a man to negotiate with them, maybe even guide them to the right path, but those savages decapitated him and sent his head back to me, with the letter I wrote for them... They're not locals, all came from USEC. Long renounced from their own people too. They must be hunted down. This is our land. No more peace talks.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 35 to start this quest."
+      "text": "\"Good day to you, soldier. Though what's so good about it? You know what a wise man once said? \"People were made to torment one another\". When I first read that, I thought it couldn't be true. Now I remember those words, and my heart aches. We've got a new gang stirring up trouble in the city. I sent one of my men to talk to them, to try and bring them to their senses. They sent his head back to me. The letter I had asked him to deliver, they stuffed it into his mouth... They're not from around here. All of them came out of USEC, though they've long since turned their backs on their own. They need to be tracked down and wiped out, every last one of them. This is our land. There'll be no more talking with them.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Locate and eliminate Knight\n- Locate and eliminate Big Pipe\n- Locate and eliminate Birdeye"
+      "text": "- Locate and eliminate Knight (in one raid)\n- Locate and eliminate Big Pipe (in one raid)\n- Locate and eliminate Birdeye (in one raid)"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +35,000 EXP\n- Jaeger Rep +0.02\n- 230,000 Roubles\n  - 241,500 Roubles with Intelligence center Level 1\n  - 264,500 Roubles with Intelligence center Level 2\n- 1× S I C C organizational pouch\n- 1× SWORD International Mk-18 .338 LM marksman rifle\n- 2× Mk-18 .338 LM 10-round magazine\n- 1× .338 Lapua Magnum FMJ ammo pack (20 pcs)\n\"Don't think about your hands getting bloody again, soldier. Think that you have cleared this land of the wicked.\""
+      "text": "- +65,000 EXP\n- +4 Covert Movement skill levels\n- Jaeger Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 1× S I C C organizational pouch\n\"Don't think about your hands getting bloody again, soldier. Think that you have cleared this land of the wicked.\""
     },
     {
       "heading": "Guide",

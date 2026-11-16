@@ -1,8 +1,8 @@
 {
   "title": "Profit Retention",
   "url": "https://escapefromtarkov.fandom.com/wiki/Profit_Retention",
-  "revisionId": 362562,
-  "lastEdited": "2026-09-29T19:20:37Z",
+  "revisionId": 367436,
+  "lastEdited": "2026-11-03T14:14:01Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Skier",
     "previous": "A Life Lesson",
-    "leads to": "Consolation Prize",
-    "reqkappa": "No"
+    "leads to": "Consolation Prize"
   },
   "sections": [
     {

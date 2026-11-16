@@ -1,8 +1,8 @@
 {
   "title": "Dangerous Props",
   "url": "https://escapefromtarkov.fandom.com/wiki/Dangerous_Props",
-  "revisionId": 362453,
-  "lastEdited": "2026-09-29T15:09:26Z",
+  "revisionId": 367720,
+  "lastEdited": "2026-11-09T00:27:49Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Skier",
     "LL requirement": "4",
-    "previous": "Irresistible",
-    "reqkappa": "No"
+    "previous": "Irresistible"
   },
   "sections": [
     {
@@ -33,7 +32,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- 130,000 Roubles\n  - 136,500 Roubles with Intelligence Center Level 1\n  - 149,500 Roubles with Intelligence Center Level 2\n- 1x MPS Auto Assault-12 Gen 2 12ga automatic shotgun\n- 2x 12/70 AP-20 ammo pack (25 pcs)\n- Unlocks barter for MPS Auto Assault-12 Gen 2 12ga automatic shotgun at Skier LL4\n\"Now we're talking... The orders are rolling in, so it's a total success! Here's your share, fair and square.\""
+      "text": "- +65,000 EXP\n- 130,000 Roubles\n  - 136,500 Roubles with Intelligence Center Level 1\n  - 149,500 Roubles with Intelligence Center Level 2\n- 1× MPS Auto Assault-12 Gen 2 12ga automatic shotgun\n- 2× 12/70 AP-20 ammo pack (25 pcs)\n- Unlocks barter for MPS Auto Assault-12 Gen 2 12ga automatic shotgun at Skier LL4\n\"Now we're talking... The orders are rolling in, so it's a total success! Here's your share, fair and square.\""
     },
     {
       "heading": "Initial Equipment",

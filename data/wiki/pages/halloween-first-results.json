@@ -1,0 +1,49 @@
+{
+  "title": "Halloween: First Results",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_First_Results",
+  "revisionId": 367528,
+  "lastEdited": "2026-11-03T20:32:55Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "previous": "Halloween: High-Risk, High-Reward",
+    "leads to": "Halloween: For the Greater Good",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: First Results is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The vaccine prototype works, but it only slows the progression of the infection. I've prepared an antibody serum and want to test it directly on the infected. Administering the drug by hand is too dangerous, so we'll try dispersing it as a gas. For that, we need gas grenades, and there are very few left in Tarkov. If you find any, bring them to me. If not, valuable items will do. Anyone who still has grenades is bound to be interested in a trade. In return, you'll receive an experimental sample. Use it on the infected and check the results.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 infected while they are under the effect of the experimental gas grenade\n  - (Optional) Obtain the RDA-68 experimental CS gas grenade"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +42,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 5× Grizzly medical kit\n\"The effect was quite different from what I'd expected. There's no point in continuing trials of this serum. I'm discontinuing its development. We'll have to find another way to affect the virus.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "Unlocks barter for Model 8230 CS gas grenade (RDA-68) at Therapist LL1.\n| Item name | Amount |\n| Model 8230 CS gas grenade (RDA-68) | 3 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "15 infected must be killed while they are inside the gas area of the Model 8230 CS gas grenade (RDA-68)."
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "title": "The Survivalist Path - Cold Blooded",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Cold_Blooded",
-  "revisionId": 359785,
-  "lastEdited": "2026-09-13T20:22:03Z",
+  "revisionId": 365927,
+  "lastEdited": "2026-10-27T23:59:10Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,7 +12,8 @@
   ],
   "infobox": {
     "given by": "Jaeger",
-    "previous": "The Survivalist Path - Wounded Beast",
+    "previous": "The Huntsman Path - Controller",
+    "leads to": "The Survivalist Path - Eagle-Owl",
     "reqkappa": "No"
   },
   "sections": [
@@ -34,7 +35,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +5,900 EXP\n- +1 Stress Resistance skill level\n- Jaeger Rep +0.02\n- 75,000 Roubles\n  - 78,750 Roubles with Intelligence Center Level 1\n  - 86,250 Roubles with Intelligence Center Level 2\n\"So you can even handle tremors? Great! To be honest, I didn't think you would succeed, the task was very difficult.\""
+      "text": "- +28,000 EXP\n- 2× 12/70 AP-20 ammo pack (25 pcs)\n- 2× Saiga-12K 12ga automatic shotgun\n- Unlocks craft for 12/70 AP-20 armor-piercing slug at Workbench level 3\n\"So you can even handle tremors? Great! To be honest, I didn't think you would succeed, the task was very difficult.\""
     },
     {
       "heading": "Guide",

@@ -1,8 +1,8 @@
 {
   "title": "Special Offer",
   "url": "https://escapefromtarkov.fandom.com/wiki/Special_Offer",
-  "revisionId": 359689,
-  "lastEdited": "2026-09-13T20:20:28Z",
+  "revisionId": 365833,
+  "lastEdited": "2026-10-27T23:57:28Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -33,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +85,500 EXP\n- Ragman Rep +0.03\n- 328,000 Roubles\n  - 344,400 Roubles with Intelligence Center Level 1\n  - 377,200 Roubles with Intelligence Center Level 2\n- 2× Walker's XCEL 500BT Digital headset\n- 2× Diamond Age Bastion helmet (Black)\n\"You know what? These thingies are so good I'm gonna measure them and produce them myself. They're gonna sell out instantly!\""
+      "text": "- +85,500 EXP\n- 328,000 Roubles\n  - 344,400 Roubles with Intelligence Center Level 1\n  - 377,200 Roubles with Intelligence Center Level 2\n- 2× Walker's XCEL 500BT Digital headset\n- 2× Diamond Age Bastion helmet (Black)\n\"You know what? These thingies are so good I'm gonna measure them and produce them myself. They're gonna sell out instantly!\""
     },
     {
       "heading": "Guide",

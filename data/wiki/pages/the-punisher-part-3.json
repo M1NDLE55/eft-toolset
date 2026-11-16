@@ -1,8 +1,8 @@
 {
   "title": "The Punisher - Part 3",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Punisher_-_Part_3",
-  "revisionId": 361729,
-  "lastEdited": "2026-09-24T12:26:50Z",
+  "revisionId": 365919,
+  "lastEdited": "2026-10-27T23:59:02Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,12 +11,11 @@
     "The Punisher. Part 3."
   ],
   "infobox": {
-    "location": "Reserve",
     "given by": "Prapor",
+    "location": "Reserve",
     "LL requirement": "3",
     "previous": "The Punisher - Part 2",
-    "leads to": "The Punisher - Part 4",
-    "reqkappa": "Yes"
+    "leads to": "The Punisher - Part 4"
   },
   "sections": [
     {

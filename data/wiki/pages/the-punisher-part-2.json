@@ -1,8 +1,8 @@
 {
   "title": "The Punisher - Part 2",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Punisher_-_Part_2",
-  "revisionId": 359776,
-  "lastEdited": "2026-09-13T20:21:53Z",
+  "revisionId": 365918,
+  "lastEdited": "2026-10-27T23:59:01Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,11 +11,10 @@
     "The Punisher. Part 2."
   ],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Prapor",
+    "location": "Shoreline",
     "previous": "The Punisher - Part 1",
-    "leads to": "The Punisher - Part 3",
-    "reqkappa": "Yes"
+    "leads to": "The Punisher - Part 3"
   },
   "sections": [
     {

@@ -1,8 +1,8 @@
 {
   "title": "Drip-Out - Part 2",
   "url": "https://escapefromtarkov.fandom.com/wiki/Drip-Out_-_Part_2",
-  "revisionId": 359248,
-  "lastEdited": "2026-09-13T20:12:57Z",
+  "revisionId": 365384,
+  "lastEdited": "2026-10-27T23:49:48Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,7 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Ragman",
-    "previous": "Accept Dandies",
+    "LL requirement": "4",
     "reqkappa": "No"
   },
   "sections": [
@@ -32,22 +32,22 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": ""
+      "text": "- +65,000 EXP\n- 1× LBT-6094A Slick Plate Carrier (Coyote Tan)"
     },
     {
       "heading": "BEAR Exclusive",
       "level": 4,
-      "text": "- Unlocks purchase of BEAR OPS MGS Black clothing at Ragman LL3\n- Unlocks purchase of BEAR URON Coyote clothing at Ragman LL3"
+      "text": "- Unlocks barter for FORT Redut-M body armor at Ragman LL4\n- Unlocks purchase of BEAR OPS MGS Black clothing at Ragman LL3\n- Unlocks purchase of BEAR URON Coyote clothing at Ragman LL3"
     },
     {
       "heading": "USEC Exclusive",
       "level": 4,
-      "text": "- Unlocks purchase of USEC BOSS Delta MC clothing at Ragman LL3\n- Unlocks purchase of USEC Defender WG clothing at Ragman LL3\n\n\"Uhh, you want your cut? Here's the thing, brother, it's kinda not an option, you know? Better yet, look at this new drip I'm offering now!\""
+      "text": "- Unlocks purchase of IOTV Gen4 body armor (High Mobility Kit, MultiCam) at Ref LL4\n- Unlocks purchase of USEC BOSS Delta MC clothing at Ragman LL3\n- Unlocks purchase of USEC Defender WG clothing at Ragman LL3\n\n\"Uhh, you want your cut? Here's the thing, brother, it's kinda not an option, you know? Better yet, look at this new drip I'm offering now!\""
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "In this quest you need to kill 100 Rogues and hand over 50 pieces of LBT brand equipment with found in raid status.\n\n| Item name |\n| LBT-6094A Slick Plate Carrier (Black) |\n| LBT-6094A Slick Plate Carrier (Olive Drab) |\n| LBT-6094A Slick Plate Carrier (Coyote Tan) |\n| LBT-1961A Load Bearing Chest Rig (MAS Grey) |\n| LBT-1961A Load Bearing Chest Rig (Goons Edition) |\n| LBT-1476A 3Day Pack (Woodland) |\n| LBT-2670 Slim Field Med Pack (Black) |\n| LBT-8005A Day Pack backpack (MultiCam Black) |"
+      "text": "In this quest you need to kill 100 Rogues and hand over 50 pieces of LBT brand equipment with found in raid status.\n\n| Item name |\n| LBT-1476A 3Day Pack (Woodland) |\n| LBT-1476A 3Day Pack (MultiCam Alpine) |\n| LBT-2670 Slim Field Med Pack (Black) |\n| LBT-8005A Day Pack backpack (MultiCam Black) |\n| LBT-1961A Load Bearing Chest Rig (MAS Grey) |\n| LBT-1961A Load Bearing Chest Rig (Goons Edition) |\n| LBT-1961A Load Bearing Chest Rig (AOR1) |\n| LBT-1961A Load Bearing Chest Rig (DNC) |\n| LBT-1961A Load Bearing Chest Rig (MultiCam) |\n| LBT-6094A Slick Plate Carrier (Black) |\n| LBT-6094A Slick Plate Carrier (Coyote Tan) |\n| LBT-6094A Slick Plate Carrier (Olive Drab) |"
     }
   ]
 }

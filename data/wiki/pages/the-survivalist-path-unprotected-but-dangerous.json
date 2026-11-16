@@ -1,8 +1,8 @@
 {
   "title": "The Survivalist Path - Unprotected but Dangerous",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Unprotected_but_Dangerous",
-  "revisionId": 362348,
-  "lastEdited": "2026-09-28T21:46:12Z",
+  "revisionId": 365933,
+  "lastEdited": "2026-10-27T23:59:16Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,6 +10,8 @@
   "redirects": [],
   "infobox": {
     "given by": "Jaeger",
+    "previous": "The Survivalist Path - Zhivchik",
+    "leads to": "The Survivalist Path - Wounded Beast",
     "reqkappa": "Yes"
   },
   "sections": [

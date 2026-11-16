@@ -1,18 +1,17 @@
 {
   "title": "Fishing Gear",
   "url": "https://escapefromtarkov.fandom.com/wiki/Fishing_Gear",
-  "revisionId": 362609,
-  "lastEdited": "2026-09-29T20:05:10Z",
+  "revisionId": 367443,
+  "lastEdited": "2026-11-03T14:24:39Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Peacekeeper",
-    "LL requirement": "2",
-    "reqkappa": "Yes"
+    "location": "Shoreline",
+    "LL requirement": "2"
   },
   "sections": [
     {

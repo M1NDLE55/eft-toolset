@@ -1,8 +1,8 @@
 {
   "title": "Interchange",
   "url": "https://escapefromtarkov.fandom.com/wiki/Interchange",
-  "revisionId": 360210,
-  "lastEdited": "2026-09-15T10:14:08Z",
+  "revisionId": 364904,
+  "lastEdited": "2026-10-25T12:07:28Z",
   "kind": "location",
   "categories": [
     "Locations"
@@ -44,7 +44,7 @@
     {
       "heading": "Extractions",
       "level": 2,
-      "text": "To locate the extractions use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Emercom Checkpoint | All | yes | no | - | |\n| Path to River (Flare) | PMC | yes | no | Shoot a green flare into the sky while inside the signal flare area. If the flare doesn't reach a certain height, the extraction won't open.; Flares:; Handheld RSP-30 green flare; Signal pistol fired 26x75mm green flare; Only one person amongst a lobby-made group needs to shoot a flare to open the extraction for all members of the group. | Upon entering the signal flare area, a notification will pop up in the bottom right corner of the screen:; If the flare was fired correctly, a new notification pops up:; Signal flare area and extract zone map |\n| Power Station V-Ex | PMC | no | yes | 5000 Roubles per player; Maximum of 4 players | The fee amount is influenced by your Scav karma.; There are border snipers beyond the vehicle. |\n| Railway Exfil | All | yes | no | - | |\n| Saferoom Exfil | PMC | yes | yes | 1.Turn on power at the power station; 2.Flush urinal in the \"Burger Spot\" restaurant; 3.Swipe Object #11SR keycard at revealed keycard panel; 4.Lock the extraction door from inside with the button next to it | A lever to open the Object-14 container can be found inside the extraction. |\n| Scav Camp (Co-Op) | All | yes | no | Scav + PMC | |\n| Smugglers' Tunnel | All | yes | no | Interchange underground utility plan; Interchange underground utility plan | |"
+      "text": "To locate the extractions use the maps below the table.\n| Name | Faction | Always available | Single-Use | Requirements | Notes |\n| Emercom Checkpoint | All | yes | no | - | |\n| Path to River (Flare) | PMC | yes | no | Shoot a green flare into the sky while inside the signal flare area. If the flare doesn't reach a certain height, the extraction won't open.; Flares:; Handheld RSP-30 green flare; Signal pistol fired 26x75mm green flare; Only one person amongst a lobby-made group needs to shoot a flare to open the extraction for all members of the group. | Upon entering the signal flare area, a notification will pop up in the bottom right corner of the screen:; If the flare was fired correctly, a new notification pops up:; Signal flare area and extract zone map |\n| Power Station V-Ex | PMC | no | yes | 5000 Roubles per player; Maximum of 4 players | The fee amount is influenced by your Scav karma.; There are border snipers beyond the vehicle. |\n| Railway Exfil | All | yes | no | - | |\n| Saferoom Exfil | PMC | yes | yes | 1.Turn on power at the power station; 2.Flush urinal in the \"Burger Spot\" restaurant; 3.Swipe Object #11SR keycard at revealed keycard panel; 4.Lock the extraction door from inside with the button next to it | A lever to open the Object-14 container can be found inside the extraction. |\n| Scav Camp (Co-Op) | All | yes | no | Scav + PMC | |\n| Smugglers' Tunnel; Note: This extraction does currently not work. | All | yes | no | Interchange underground utility plan; Interchange underground utility plan | |"
     },
     {
       "heading": "Transits",

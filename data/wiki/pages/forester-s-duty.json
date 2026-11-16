@@ -1,8 +1,8 @@
 {
   "title": "Forester's Duty",
   "url": "https://escapefromtarkov.fandom.com/wiki/Forester's_Duty",
-  "revisionId": 359301,
-  "lastEdited": "2026-09-13T20:13:52Z",
+  "revisionId": 366616,
+  "lastEdited": "2026-10-31T05:37:46Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Lighthouse, Shoreline",
     "given by": "Jaeger",
+    "LL requirement": "3",
     "previous": "Nostalgia",
     "reqkappa": "No"
   },
@@ -33,7 +34,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +25,600 EXP\n- Jaeger Rep +0.03\n- 105,000 Roubles\n  - 110,250 Roubles with Intelligence Center Level 1\n  - 120,750 Roubles with Intelligence Center Level 2\n- 1× Magnum Research Desert Eagle L6 .50 AE pistol\n- 3× Desert Eagle .50 AE 7-round magazine\n- 30× .50 AE Hawk JSP\n\"The forest likes quiet, we can't let them destroy such places. I don't know how they could have found out about this trail... My friend has never shown his paths to bad people.\""
+      "text": "- +28,000 EXP\n- Jaeger Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 2× Shustrilo sealing foam\n\"The forest likes quiet, we can't let them destroy such places. I don't know how they could have found out about this trail... My friend has never shown his paths to bad people.\""
     },
     {
       "heading": "Guide",

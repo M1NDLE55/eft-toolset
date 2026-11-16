@@ -1,18 +1,18 @@
 {
   "title": "Best Job in the World",
   "url": "https://escapefromtarkov.fandom.com/wiki/Best_Job_in_the_World",
-  "revisionId": 361756,
-  "lastEdited": "2026-09-24T12:33:00Z",
+  "revisionId": 365242,
+  "lastEdited": "2026-10-27T23:47:23Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Reserve, Lighthouse",
     "given by": "Prapor",
+    "location": "Lighthouse, Reserve",
     "LL requirement": "4",
-    "reqkappa": "No"
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -33,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 1× Armband (BEAR)\n- 1× ASh-12 12.7x55 assault rifle\n- 10× 12.7x55mm PS12B (10 pcs)\n- Unlocks purchase of ASh-12 12.7x55 assault rifle at Prapor LL4\n- +4 Mag Drills skill levels\n\n\"Oh, you actually remembered to come back. Good man. Here's your reward.\""
+      "text": "- +65,000 EXP\n- +4 Mag Drills skill levels\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 1× Armband (BEAR)\n- 1× ASh-12 12.7x55 assault rifle\n- 10× 12.7x55mm PS12B (10 pcs)\n- Unlocks barter for ASh-12 12.7x55 assault rifle at Prapor LL4\n\"Oh, you actually remembered to come back. Good man. Here's your reward.\""
     },
     {
       "heading": "Guide",

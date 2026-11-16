@@ -1,8 +1,8 @@
 {
   "title": "Compartment C-3 keycard",
   "url": "https://escapefromtarkov.fandom.com/wiki/Compartment_C-3_keycard",
-  "revisionId": 358455,
-  "lastEdited": "2026-09-10T21:28:58Z",
+  "revisionId": 363815,
+  "lastEdited": "2026-10-09T21:17:45Z",
   "kind": "key",
   "categories": [
     "Keycards"
@@ -48,7 +48,7 @@
       "text": "Door to the laboratory on level 1 of Icebreaker. Note: The door can't be opened when players without the required progress in the story chapter Boreas entered the raid."
     },
     {
-      "heading": "Behind The Lock",
+      "heading": "Behind the Lock",
       "level": 2,
       "text": "- 1x Medbag\n- Loose loot (Medical supplies, Stimulants, Meds)\n- 4x LEDX Skin Transilluminator in the overseeing cabin\n- Boreas scientist audio tape in the overseeing cabin"
     }

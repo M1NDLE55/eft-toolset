@@ -1,8 +1,8 @@
 {
   "title": "The Huntsman Path - Secured Perimeter",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Secured_Perimeter",
-  "revisionId": 359765,
-  "lastEdited": "2026-09-13T20:21:43Z",
+  "revisionId": 367744,
+  "lastEdited": "2026-11-09T00:40:26Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Factory",
     "given by": "Jaeger",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -22,22 +23,22 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Well, fighter, it's time to start cleaning Tarkov from all this trash. You and I have come a long way and you still have a lot to learn. Well then, let's start with the area of the chemical plant? A lot of useful things were being produced there, I had been working there for half a year as the security chief until the TerraGroup arrived. Since then, weird shit started happening there, I'm telling you, they gave up on producing cleaners and went on for something different, something dark. And as the lawlessness began and they left, the marauders began tearing the factory apart. It's sad to see it like this, I still remember every nook and cranny there. Long story short, it's wrong. So go teach the bandits a lesson. If something useful still remains there, it would definitely be in the office area, you won't miss it. Make the looters forget the way there, at least for a while.\""
+      "text": "\"I've heard there's trouble brewing at the chemical plant these days. Looters are crawling all over the place, carrying off anything they can get their hands on. And I know every inch of that place. I worked security there myself for half a year, before TerraGroup showed up. None of this sits right with me. Those bandits need to be taught a lesson. Make them forget the road to that factory, if only for a little while.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 6 PMСs in the office area (any floor) on Factory"
+      "text": "- Eliminate 6 PMC operatives on Factory"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +9,800 EXP\n- Jaeger Rep +0.02\n- 37,000 Roubles\n  - 38,850 Roubles with Intelligence Center Level 1\n  - 42,550 Roubles with Intelligence Center Level 2\n- 2× Pliers Elite\n- 1× Toolset\n- 2× Nippers\n- 2× Corrugated hose\n\"Good job! Of course, there is enough scum in Tarkov, others will come for sure. But at least they will think twice before tearing the place apart.\""
+      "text": "- +28,000 EXP\n- Jaeger Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Well done! There's no shortage of scum in Tarkov, and others will come soon enough. But next time, they'll think twice before helping themselves to what isn't theirs.\""
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "In this quest you have to kill 6 PMСs in and around the office area on Factory. Only the enemy PMCs have to be in the highlighted area for the kills to count towards this quest."
+      "text": "In this quest you have to kill 6 PMCs anywhere on Factory"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "title": "Trophies",
   "url": "https://escapefromtarkov.fandom.com/wiki/Trophies",
-  "revisionId": 362175,
-  "lastEdited": "2026-09-25T12:06:15Z",
+  "revisionId": 367475,
+  "lastEdited": "2026-11-03T14:53:52Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,7 +10,8 @@
   "redirects": [],
   "infobox": {
     "given by": "Peacekeeper",
-    "LL requirement": "4"
+    "LL requirement": "4",
+    "LL quests": "1"
   },
   "sections": [
     {

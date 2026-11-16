@@ -1,0 +1,91 @@
+{
+  "title": "Halloween: A New Vaccine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_A_New_Vaccine",
+  "revisionId": 367051,
+  "lastEdited": "2026-11-02T21:12:29Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Infected Factory, Infected Lab",
+    "given by": "Therapist",
+    "previous": "Halloween: Initial Examination (+15 mins), Halloween: Tightening the Quarantine",
+    "leads to": "Halloween: High-Risk, High-Reward",
+    "related": "Halloween: Tightening the Quarantine",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: A New Vaccine is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Skier questline exclusive",
+      "level": 4,
+      "text": "\"Hello. I've received the results of the analysis of Skier's chemical. Yes, the very same one you helped him distribute all over Tarkov. I had to buy it back at extortionate prices through intermediaries. You owe me for that, young man. Back to the matter at hand: it isn't a vaccine. Its composition was designed to accelerate the mutation of an existing strain. As a result, the disease now progresses faster, the infected are more aggressive, and our previous methods of suppression are becoming less effective. If you decide to stay with me, you'll need to work directly in the infected areas. I need people who can enter both the infected Factory and Laboratory, assess the situation and make it back out alive. First, we'll establish exactly what we're dealing with. Only then can we look for a way to stop it.\""
+    },
+    {
+      "heading": "Therapist questline exclusive",
+      "level": 4,
+      "text": "\"Hello. I've received the results of the analysis of Skier's chemical. It isn't a vaccine. Its composition was designed to accelerate the mutation of an existing strain. As a result, the disease now progresses faster, the infected are more aggressive, and our previous methods of suppression are becoming less effective. If you decide to stay with me, you'll need to work directly in the infected areas. I need people who can enter Infected Factory or the Laboratory, assess the situation and make it back out alive. First, we'll establish exactly what we're dealing with. Only then can we look for a way to stop it.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Skier questline exclusive",
+      "level": 4,
+      "text": "- Survive and extract from Infected Factory\n- Survive and extract from Infected Lab\n  - (Optional) Obtain the special item to use the exfil\n- Hand over 2,000 USD"
+    },
+    {
+      "heading": "Therapist questline exclusive",
+      "level": 4,
+      "text": "- Survive and extract from Infected Factory or Infected Lab"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Skier questline exclusive",
+      "level": 4,
+      "text": "- +41,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 1× Mr. Holodilnick thermal bag\n\"You've chosen the side of the reasonable people, young man.\""
+    },
+    {
+      "heading": "Therapist questline exclusive",
+      "level": 4,
+      "text": "- +41,000 EXP\n- 150,000 Roubles\n  - 157,500 Roubles with Intelligence Center Level 1\n  - 172,500 Roubles with Intelligence Center Level 2\n- 2× TerraGroup Labs access keycard\n- 2× Surv12 field surgical kit\n\"You've chosen the side of the reasonable people, young man.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"I'll be honest, you've surprised me. In the worst possible way. I don't think we can continue working together. Not while you're still taking orders from that boor, at any rate.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Skier questline",
+      "level": 4,
+      "text": "In this quest you have to survive and extract from both Infected Factory and Infected Lab and hand over 2,000 Dollars."
+    },
+    {
+      "heading": "Therapist questline",
+      "level": 4,
+      "text": "In this quest you have to survive and extract from either Infected Factory or Infected Lab."
+    }
+  ]
+}

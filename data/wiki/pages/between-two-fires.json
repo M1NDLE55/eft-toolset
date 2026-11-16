@@ -1,19 +1,18 @@
 {
   "title": "Between Two Fires",
   "url": "https://escapefromtarkov.fandom.com/wiki/Between_Two_Fires",
-  "revisionId": 359112,
-  "lastEdited": "2026-09-13T20:10:39Z",
+  "revisionId": 366057,
+  "lastEdited": "2026-10-28T00:46:06Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs",
     "given by": "Fence",
+    "location": "Customs",
     "previous": "Against the Conscience - Part 2",
-    "related": "Decisions, Decisions, Surprise Gift",
-    "reqkappa": "No"
+    "related": "Decisions, Decisions, Surprise Gift"
   },
   "sections": [
     {
@@ -34,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "Seasonal change: the quest awards a barter for the Secure container Theta at Ref LL3, instead of the container directly.\n- +18,500 EXP\n- Fence Rep +0.2\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 1× Secure container Theta\n\"Well done. Glad you took your fate by the balls. Make sure you speak nothing of this to Ref.\""
+      "text": "Seasonal change: the quest awards a barter for the Secure container Theta at Ref LL3, instead of the container directly.\n- +18,500 EXP\n- Fence Rep +0.2\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 1× Secure container Theta\n- Unlocks Parquet Hideout floor style\n\"Well done. Glad you took your fate by the balls. Make sure you speak nothing of this to Ref.\""
     },
     {
       "heading": "Failure Dialogue",

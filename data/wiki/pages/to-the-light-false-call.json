@@ -1,8 +1,8 @@
 {
   "title": "To the Light - False Call",
   "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_False_Call",
-  "revisionId": 362179,
-  "lastEdited": "2026-09-25T19:43:14Z",
+  "revisionId": 365990,
+  "lastEdited": "2026-10-28T00:00:19Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -54,7 +54,7 @@
     {
       "heading": "Shoreline transit",
       "level": 4,
-      "text": "The transit is located behind the \"Sniper Roadblock\" Scav extraction. Shoot a yellow flare into the sky while being near the bus. If the flare doesn't reach a certain height, the quest objective won't complete. You can use either the handheld RSP-30 yellow flare which can be bought at Prapor LL1 or a 26x75mm yellow flare cartridge which can be bought at Jaeger LL1, and is fired from a signal pistol. If you use the handheld RSP-30 yellow flare, make sure to aim it upwards, but not too much or it lands behind you."
+      "text": "The transit is located behind the roadblock south of the main crossroad. Shoot a yellow flare into the sky while being near the bus. If the flare doesn't reach a certain height, the quest objective won't complete. You can use either the handheld RSP-30 yellow flare which can be bought at Prapor LL1 or a 26x75mm yellow flare cartridge which can be bought at Jaeger LL1, and is fired from a signal pistol. If you use the handheld RSP-30 yellow flare, make sure to aim it upwards, but not too much or it lands behind you."
     }
   ]
 }

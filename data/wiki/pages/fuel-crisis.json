@@ -1,8 +1,8 @@
 {
   "title": "Fuel Crisis",
   "url": "https://escapefromtarkov.fandom.com/wiki/Fuel_Crisis",
-  "revisionId": 359319,
-  "lastEdited": "2026-09-13T20:14:11Z",
+  "revisionId": 365458,
+  "lastEdited": "2026-10-27T23:51:03Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Interchange",
     "given by": "Ragman",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hey there, brother! Mechanic stopped by recently. Grumpy and quiet as always, but I've gotten used to it. He's asking for fuel, and wouldn't you know it, I'm completely out! But I always know where to find more. I heard there are some tanker trucks near Ultra with German flags on them. Find them and mark them with beacons so my guys don't waste time searching.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 1 with Ragman to obtain this quest."
     },
     {
       "heading": "Objectives",

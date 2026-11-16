@@ -1,8 +1,8 @@
 {
   "title": "Provide Viewership",
   "url": "https://escapefromtarkov.fandom.com/wiki/Provide_Viewership",
-  "revisionId": 359591,
-  "lastEdited": "2026-09-13T20:18:47Z",
+  "revisionId": 365734,
+  "lastEdited": "2026-10-27T23:55:44Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -43,7 +43,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Notes |\n| WI-FI Camera | 4 | Required | Can be purchased from Mechanic LL1. |\n\nIn this quest you first have to install 4 WI-FI Cameras in the industrial plant on Customs. Afterwards you have to kill any 15 targets inside of it."
+      "text": "| Item name | Amount | Requirement | Notes |\n| WI-FI Camera | 4 | Required | Can be purchased from Mechanic LL1. |\n\nIn this quest you first have to install 4 WI-FI Cameras in the industrial plant on Customs. Afterwards you have to kill any 15 targets in and around it."
     },
     {
       "heading": "Camera 4 and 2 - First floor garage and northern building",

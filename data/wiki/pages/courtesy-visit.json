@@ -1,8 +1,8 @@
 {
   "title": "Courtesy Visit",
   "url": "https://escapefromtarkov.fandom.com/wiki/Courtesy_Visit",
-  "revisionId": 359203,
-  "lastEdited": "2026-09-13T20:12:11Z",
+  "revisionId": 365336,
+  "lastEdited": "2026-10-27T23:48:59Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,8 +13,7 @@
   "infobox": {
     "location": "Shoreline",
     "given by": "Jaeger",
-    "previous": "The Survivalist Path - Tough Guy",
-    "leads to": "Nostalgia",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -26,12 +25,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Come in, I want to ask you for something. You know the health resort area, right? At first, the factory workers were convalescing there, and then the TerraGroup employees settled there their staff. I've been to those parts a long time ago, my classmates lived there. So, I want you to check on them, it's the old village with the church. The priest, his name is Pyotr. Misha, the fisherman. And Stepan, the local chairman. Check their houses, find out if any of them are still there.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 20 to start this quest."
+      "text": "\"Come in, I want to ask you for something. You know the health resort area, right? At first, the factory workers were convalescing there, and then the TerraGroup employees settled there their staff. I’ve been to those parts a long time ago, my classmates lived there. So, I want you to check on them, it's the old village with the church. The priest, his name is Pyotr. Misha, the fisherman. And Stepan, the local chairman. Check their houses, find out if any of them are still there.\""
     },
     {
       "heading": "Objectives",
@@ -41,7 +35,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +11,800 EXP\n- Jaeger Rep +0.03\n- 35,000 Roubles\n  - 36,750 Roubles with Intelligence Center Level 1\n  - 40,250 Roubles with Intelligence Center Level 2\n- 5× Emelya rye croutons\n- 5× Pack of milk\n\"So you say only the chairman's house is still intact, but you didn't see him himself? No? Oh, Stepan...\""
+      "text": "- +10,000 EXP\n- Jaeger Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"So you say only the chairman's house is still intact, but you didn't see him himself? No? Oh, Stepan...\""
     },
     {
       "heading": "Guide",

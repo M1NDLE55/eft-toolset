@@ -1,8 +1,8 @@
 {
   "title": "Thirsty - Breadwinner",
   "url": "https://escapefromtarkov.fandom.com/wiki/Thirsty_-_Breadwinner",
-  "revisionId": 362437,
-  "lastEdited": "2026-09-29T14:36:07Z",
+  "revisionId": 367421,
+  "lastEdited": "2026-11-03T13:30:26Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Skier",
     "previous": "Thirsty - Hounds",
-    "leads to": "Thirsty - Delivery",
-    "reqkappa": "No"
+    "leads to": "Thirsty - Delivery"
   },
   "sections": [
     {

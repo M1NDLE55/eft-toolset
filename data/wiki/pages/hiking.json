@@ -1,16 +1,18 @@
 {
   "title": "Hiking",
   "url": "https://escapefromtarkov.fandom.com/wiki/Hiking",
-  "revisionId": 362299,
-  "lastEdited": "2026-09-27T00:41:17Z",
+  "revisionId": 367842,
+  "lastEdited": "2026-11-11T13:58:10Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
+    "given by": "Peacekeeper",
     "location": "Woods",
-    "given by": "Peacekeeper"
+    "LL requirement": "1",
+    "LL quests": "3"
   },
   "sections": [
     {
@@ -22,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hello, my friend! Do you enjoy hiking? I do not, which is why I need your help. In the northwestern part of the Priozersk forest, scavengers are preventing my men from delivering humanitarian supplies. The area must be cleared. Got it?\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 1 with Peacekeeper to obtain this quest."
     },
     {
       "heading": "Objectives",

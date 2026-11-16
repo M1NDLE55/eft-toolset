@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 6",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_6",
-  "revisionId": 352849,
-  "lastEdited": "2026-08-09T21:40:55Z",
+  "revisionId": 364402,
+  "lastEdited": "2026-10-13T19:07:16Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,6 +13,8 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "previous": "Gunsmith Master - Part 5",
+    "leads to": "Gunsmith Master - Part 7",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -27,11 +29,6 @@
       "text": "\"Hi, I have a job for you. I need an SVDS in the following config: black Magpul UBR GEN2 buttstock, SAG MK1 chassis, black Magpul MOE pistol grip, March Tactical 3-24x42 FFP scope and a suppressor. Ergonomics should be at least 10 and the recoil sum no higher than 500.\""
     },
     {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 36 to start this quest."
-    },
-    {
       "heading": "Objectives",
       "level": 2,
       "text": "- Modify an SVDS to comply with the given specifications"
@@ -39,7 +36,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +25,500 EXP\n- Mechanic Rep +0.03\n- 75,000 Roubles\n  - 78,750 Roubles with Intelligence Center Level 1\n  - 86,250 Roubles with Intelligence Center Level 2\n- 1× Ratchet wrench\n- 1× Bulbex cable cutter\n- Unlocks purchase of AK Custom Arms AGS-74 PRO + Sniper Kit pistol grip at Skier LL4\n\"You're done? Excellent. Leave it on the table next to me, I'm a bit busy at the moment...\""
+      "text": "- +28,000 EXP\n- 2× .45 ACP RIP ammo pack (50 pcs)\n- Unlocks purchase of .45 ACP RIP at Mechanic LL4\n\"You're done? Excellent. Leave it on the table next to me, I'm a bit busy at the moment...\""
     },
     {
       "heading": "Guide",

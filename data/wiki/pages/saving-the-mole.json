@@ -1,8 +1,8 @@
 {
   "title": "Saving the Mole",
   "url": "https://escapefromtarkov.fandom.com/wiki/Saving_the_Mole",
-  "revisionId": 359632,
-  "lastEdited": "2026-09-13T20:19:31Z",
+  "revisionId": 365775,
+  "lastEdited": "2026-10-27T23:56:26Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Ground Zero",
     "given by": "Mechanic",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -32,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +3,800 EXP\n- Mechanic Rep +0.01\n- 15,000 Roubles\n  - 15,750 Roubles with Intelligence Center Level 1\n  - 17,250 Roubles with Intelligence Center Level 2\n- 2× Tube of Poxeram cold welding\n- 2× Metal spare parts\n\"They killed him? Well, that's sad, but expected. TerraGroup was desperate to cover their tracks. You've done a good job. And thanks for the data drive.\""
+      "text": "- +3,000 EXP\n- Mechanic Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"They killed him? Well, that's sad, but expected. TerraGroup was desperate to cover their tracks. You've done a good job. And thanks for the data drive.\""
     },
     {
       "heading": "Guide",

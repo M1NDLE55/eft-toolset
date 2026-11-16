@@ -1,18 +1,18 @@
 {
   "title": "Gifts from Tarkov",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gifts_from_Tarkov",
-  "revisionId": 359332,
-  "lastEdited": "2026-09-13T20:14:24Z",
+  "revisionId": 367711,
+  "lastEdited": "2026-11-09T00:22:18Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Peacekeeper",
-    "leads to": "Your Car Needs a Service, Insomnia, Setting Priorities",
-    "reqkappa": "Yes"
+    "location": "Lighthouse",
+    "LL requirement": "3",
+    "LL quests": "4"
   },
   "sections": [
     {
@@ -23,27 +23,22 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"My men discovered a TerraGroup shipment hidden inside a secret wall at the Resort, but it does not fully match the manifests in our possession. We have theories about where this shipment was delivered to the Resort from, but for now, this information is completely classified. Your task in this operation is to find evidence of a TerraGroup shipment on Cape Dalniy, near the sandy shore. I believe it would be best to behind your search from the tunnel side. Also, clear the areas of Reserve and Lighthouse using our equipment. Keep in touch, my friend.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be Loyalty Level 3 to start this quest"
-    },
-    {
-      "heading": "Initial Equipment",
-      "level": 2,
-      "text": "- Unlock purchase of M203 40mm underbarrel grenade launcher at Peacekeeper LL3 when you accept the quest\n- Unlock purchase of 40x46mm M386 (HE) grenade at Peacekeeper LL3 when you accept the quest"
+      "text": "\"My men discovered a TerraGroup shipment hidden inside a secret wall at the Resort, but it does not fully match the manifests in our possession. We have theories about where this shipment was delivered to the Resort from, but for now, this information is completely classified. Your task in this operation is to find evidence of a TerraGroup shipment on Cape Dalniy, near the sandy shore. I believe it would be best to begin your search from the tunnel side. Also, clear the areas of Reserve and Lighthouse using our equipment. Keep in touch, my friend.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Locate and mark the TerraGroup cargo with an MS2000 Marker on Lighthouse\n- Eliminate 10 of any targets using M203 40mm underbarrel grenade launcher on Lighthouse or Reserve"
+      "text": "- Locate and mark the TerraGroup cargo with an MS2000 Marker on Lighthouse\n- Eliminate any 10 targets with an M203 40mm underbarrel grenade launcher on Lighthouse or Reserve"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,000EXP\n- Peacekeeper Rep +0.75\n- Dollars\n  - Dollars with Intelligence center Level 1\n  - 2327 Dollars with Intelligence center Level 2\n- 4x Power supply unit\n- Unlock barter for M203 40mm underbarrel grenade launcher at Peacekeeper LL3\n- Unlock purchase of 40x46mm M386 (HE) grenade at Peacekeeper LL3\n\"So you found the cargo on the shore, exactly in the place where the TerraGroup transports moored? Okay, so they were shipped straight from the bay... Thank you for your work, mercenary. We will contact you about the next stage of our operation when the time is right.\""
+      "text": "- +28,000 EXP\n- Peacekeeper Rep +0.75\n- 1,900 Dollars\n  - 1,995 Dollars with Intelligence Center Level 1\n  - 2,185 Dollars with Intelligence Center Level 2\n- 4× Power supply unit\n\"The shipment was on the shore, where TerraGroup's transports used to dock? I see... So it was delivered directly from the gulf. Thank you for your work, mercenary.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "- Unlock barter for M203 40mm underbarrel grenade launcher at Peacekeeper LL3.\n- Unlock purchase of 40x46mm M386 (HE) grenade at Peacekeeper LL3."
     },
     {
       "heading": "Guide",

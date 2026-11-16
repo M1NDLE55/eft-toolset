@@ -1,8 +1,8 @@
 {
   "title": "Lighthouse island stash key",
   "url": "https://escapefromtarkov.fandom.com/wiki/Lighthouse_island_stash_key",
-  "revisionId": 360190,
-  "lastEdited": "2026-09-15T08:15:47Z",
+  "revisionId": 367302,
+  "lastEdited": "2026-11-02T23:56:20Z",
   "kind": "key",
   "categories": [
     "Keys"
@@ -12,7 +12,7 @@
     "type": "Key",
     "weight": "0.01 kg",
     "grid": "1x1",
-    "usage": "Unlocks a bedroom at the peninsula territory on Lighthouse.",
+    "usage": "Unlocks Lightkeeper's stash room at the peninsula territory on Lighthouse.",
     "storage_wallet": "No",
     "storage_keytool": "Yes",
     "storage_doccase": "Yes",
@@ -40,22 +40,27 @@
     {
       "heading": "Quests",
       "level": 2,
-      "text": "- Used in the story chapter The Ticket"
+      "text": "- Used in the story chapter The Ticket if the player sided with Lightkeeper."
     },
     {
-      "heading": "Key location",
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Information Source\n- 1 can be obtained as a quest reward from Return the Favor\n- 1 can be obtained as a quest reward from Provocation\n- 1 can be obtained as a quest reward from Make an Impression"
+    },
+    {
+      "heading": "Key Location",
       "level": 2,
       "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
     },
     {
       "heading": "Lock Location",
       "level": 2,
-      "text": "Door to a bedroom on the second floor of the house that is located next to the guard building at the lighthouse peninsula territory on Lighthouse. Note: The bridge that leads to the peninsula is guarded by Zryachiy and full of Claymores. To safely pass the bridge, an encoded Digital secure DSP radio transmitter is required."
+      "text": "Door to Lightkeeper's stash room on the second floor of the house that is located next to the guard building at the lighthouse peninsula territory on Lighthouse. Note: The bridge that leads to the peninsula is guarded by Zryachiy and full of Claymores. To safely pass the bridge, an encoded Digital secure DSP radio transmitter is required."
     },
     {
       "heading": "Behind the Lock",
       "level": 2,
-      "text": "- Loose loot (Containers, Valuables, Weapon mods, , Stimulants)"
+      "text": "- Loose loot (Containers, Valuables, Weapon mods, , Provisions, Stimulants)\n- 1x Sports bag\n- 1x Medcase\n- 1x Jacket"
     }
   ]
 }

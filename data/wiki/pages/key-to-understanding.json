@@ -1,8 +1,8 @@
 {
   "title": "Key to Understanding",
   "url": "https://escapefromtarkov.fandom.com/wiki/Key_to_Understanding",
-  "revisionId": 360513,
-  "lastEdited": "2026-09-17T22:05:01Z",
+  "revisionId": 365579,
+  "lastEdited": "2026-10-27T23:53:05Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -43,7 +43,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Black Division encryption keys | 1 | Required | Yes | Can only be found on Black Division |\nIn this quest you have to find a document that only spawns on Black Division. They are not guaranteed to have one."
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Black Division encryption keys | 1 | Required | No | Can only be found on Black Division |\nIn this quest you have to find a document that only spawns on Black Division. They are not guaranteed to have one."
     }
   ]
 }

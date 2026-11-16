@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - P226R",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_P226R",
-  "revisionId": 353009,
-  "lastEdited": "2026-08-09T22:25:30Z",
+  "revisionId": 364379,
+  "lastEdited": "2026-10-13T15:42:08Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,6 +12,7 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,7 +24,12 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Oh, hey. There's an unusual matter that has come up. I don't often get orders for pistols, but this is a special occasion. We need a SIG P226R, Stainless Elite Wooden grip, Stainless Elite slide, extended magazine and a flashlight. Ergonomics not below 77, recoil sum not above 610. A weapon for true enthusiasts.\""
+      "text": "\"Oh, hey. I've got an unusual request this time. I don't often get orders for sidearms, but this is a special case. Bring me a SIG P226R with a Stainless Elite Wooden grip, a Stainless Elite slide, an extended magazine, and a flashlight. Ergonomics no lower than 77, combined recoil no higher than 610. A weapon for true enthusiasts.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by USEC PMCs."
     },
     {
       "heading": "Objectives",
@@ -33,7 +39,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +9,800 EXP\n- Mechanic Rep +0.02\n- 300 Euros\n  - 315 Euros with Intelligence Center Level 1\n  - 345 Euros Intelligence Center Level 2\n- 2× Gunpowder \"Hawk\"\n- Unlocks purchase of Colt M4A1 5.56x45 assault rifle (variant SOPMOD I) at Mechanic LL3\n- Unlocks purchase of 5.7x28mm R37.F at Mechanic LL3\n\"All set? Thanks for your help. Boy, I wish I had one of those in my collection...\""
+      "text": "- +28,000 EXP\n- Mechanic Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Finished? Thanks for your help. I might have to add one of these to my own collection...\""
     },
     {
       "heading": "Guide",

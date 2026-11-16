@@ -1,8 +1,8 @@
 {
   "title": "Broadcast - Part 3",
   "url": "https://escapefromtarkov.fandom.com/wiki/Broadcast_-_Part_3",
-  "revisionId": 359129,
-  "lastEdited": "2026-09-13T20:10:56Z",
+  "revisionId": 366601,
+  "lastEdited": "2026-10-31T05:07:19Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Streets of Tarkov",
     "given by": "Jaeger",
+    "LL requirement": "3",
     "previous": "Broadcast - Part 2",
     "leads to": "Broadcast - Part 4",
     "reqkappa": "No"
@@ -27,11 +28,6 @@
       "text": "\"Hello, Mechanic gave me the gist of the situation. It's horrible, gives me the creeps. But we have to get to the truth. And you know what's even worse? The camera that Mechanic's techs looked at contained not only the recordings we knew of, but also even more at different places. As if someone is playing with us and wants us to see these recordings. There was an old house, with corpses at the table, like in a biblical story. Find this place, something's not right about this.\""
     },
     {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 20 to start this quest."
-    },
-    {
       "heading": "Objectives",
       "level": 2,
       "text": "- Locate the place of bloody broadcast inside the old house on Streets of Tarkov\n- Survive and extract from the location"
@@ -39,7 +35,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +10,800 EXP\n- Jaeger Rep +0.02\n- 68,000 Roubles\n  - 71.400 Roubles with Intelligence Center Level 1\n  - 78.200 Roubles with Intelligence Center Level 2\n\"Did you find it? That's the place, you're saying? And the camera is there again? Don't touch any of it, I'll have Mechanic's specialists take it all apart.\""
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× MP-155 12ga semi-automatic shotgun\n- 1× 12/70 flechette ammo pack (25 pcs)\n- Unlocks barter for MP-155 Ultima thermal camera at Jaeger LL3\n\"Did you find it? That's the place, you're saying? And the camera is there again? Don't touch any of it, I'll have Mechanic's specialists take it all apart.\""
     },
     {
       "heading": "Guide",

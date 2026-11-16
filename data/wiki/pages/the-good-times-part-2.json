@@ -1,8 +1,8 @@
 {
   "title": "The Good Times - Part 2",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Good_Times_-_Part_2",
-  "revisionId": 360831,
-  "lastEdited": "2026-09-20T12:03:21Z",
+  "revisionId": 365889,
+  "lastEdited": "2026-10-27T23:58:31Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Prapor",
     "previous": "Airmail",
-    "leads to": "Minute of Fame",
-    "reqkappa": "No"
+    "leads to": "Minute of Fame"
   },
   "sections": [
     {

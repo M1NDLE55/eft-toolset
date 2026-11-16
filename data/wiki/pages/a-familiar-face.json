@@ -1,8 +1,8 @@
 {
   "title": "A Familiar Face...",
   "url": "https://escapefromtarkov.fandom.com/wiki/A_Familiar_Face...",
-  "revisionId": 360072,
-  "lastEdited": "2026-09-14T09:15:56Z",
+  "revisionId": 366655,
+  "lastEdited": "2026-10-31T12:23:17Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,11 +11,10 @@
     "A Familiar Face"
   ],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Skier",
-    "previous": "All-Inclusive Support",
-    "leads to": "Scope the Clearing",
-    "reqkappa": "No"
+    "location": "Lighthouse",
+    "LL requirement": "2",
+    "leads to": "Scope the Clearing"
   },
   "sections": [
     {

@@ -1,19 +1,18 @@
 {
   "title": "Confidential Info",
   "url": "https://escapefromtarkov.fandom.com/wiki/Confidential_Info",
-  "revisionId": 359194,
-  "lastEdited": "2026-09-13T20:12:02Z",
+  "revisionId": 367839,
+  "lastEdited": "2026-11-11T13:55:34Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "The Labyrinth",
     "given by": "Peacekeeper",
+    "location": "The Labyrinth",
     "previous": "Offensive Reconnaissance",
-    "leads to": "Keeper's Word",
-    "reqkappa": "No"
+    "leads to": "Keeper's Word"
   },
   "sections": [
     {
@@ -34,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,000EXP\n- Dollars\n  - Dollars with Intelligence Center Level 1\n  - 2,327 Dollars with Intelligence Center Level 2\n- 1× AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine\n- 1× Final Moment poster\n- Unlock purchase of AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine at Peacekeeper LL4\n\"Great job, my friend! My partner especially appreciates your respect for privacy and requested a proper reward for you.\""
+      "text": "- +28,000 EXP\n- 1,900 Dollars\n  - 1,995 Dollars with Intelligence Center Level 1\n  - 2,185 Dollars with Intelligence Center Level 2\n- 2× AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine\n- 1× Final Moment poster\n- Unlocks barter for AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine at Peacekeeper LL4\n\"Great job, my friend! My partner especially appreciates your respect for privacy and requested a proper reward for you.\""
     },
     {
       "heading": "Guide",

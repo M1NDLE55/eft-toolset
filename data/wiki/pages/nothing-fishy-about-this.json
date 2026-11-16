@@ -1,8 +1,8 @@
 {
   "title": "Nothing Fishy About This",
   "url": "https://escapefromtarkov.fandom.com/wiki/Nothing_Fishy_About_This",
-  "revisionId": 359522,
-  "lastEdited": "2026-09-13T20:17:37Z",
+  "revisionId": 365664,
+  "lastEdited": "2026-10-27T23:54:31Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "location": "Shoreline",
     "given by": "Ragman",
-    "previous": "Big Sale",
+    "LL requirement": "2",
     "reqkappa": "No"
   },
   "sections": [
@@ -33,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +7,200 EXP\n- Ragman Rep +0.01\n- 25,000 Roubles\n  - 26,250 Roubles with Intelligence center Level 1\n  - 28,750 Roubles with Intelligence center Level 2\n- 1× Stich Profi Chest Rig MK2 (Recon, A-TACS FG)\n\"It's in the fucking swamp? That explains the fucking price. It would cost more to get it out from there and clean it up! All right, here, that's for helping me out.\""
+      "text": "- +10,000 EXP\n- Ragman Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"It's in the fucking swamp? That explains the fucking price. It would cost more to get it out from there and clean it up! All right, here, that's for helping me out.\""
     },
     {
       "heading": "Guide",

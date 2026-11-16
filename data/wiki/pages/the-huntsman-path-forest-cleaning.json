@@ -1,8 +1,8 @@
 {
   "title": "The Huntsman Path - Forest Cleaning",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Forest_Cleaning",
-  "revisionId": 359759,
-  "lastEdited": "2026-09-13T20:21:37Z",
+  "revisionId": 365902,
+  "lastEdited": "2026-10-27T23:58:45Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,9 @@
     "The Huntsman Path - Woods Cleaning"
   ],
   "infobox": {
+    "location": "Streets of Tarkov, Reserve, Lighthouse, Shoreline",
     "given by": "Jaeger",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,17 +25,12 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Greetings. For years I've been hunting in these woods, and among other things, I've learned that animals are way more humane than humankind itself. When shit hit the fan, all that's left of those remains of humane in people just vanished. There are so many monsters out there, that I can't even imagine. Those are no longer people, nor they are animals, they are something way worse... We can't let them destroy our city, we have to sort this out. Deal with this, hunter.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Obtain level 3 loyalty with Jaeger"
+      "text": "\"Greetings. For years I've been hunting in these woods, and among other things, I've learned that animals are way more humane than humankind itself. When the conflict started, all that's left of those remains of humane in people just vanished entirely. There are so many monsters out there that I can't even imagine. Those are no longer people, nor they are animals, they are something way worse... We can't let them destroy our city, we have to sort this out. Deal with this, hunter.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 50 Scavs all over the Tarkov territory"
+      "text": "- Eliminate 50 Scavs on Streets of Tarkov, Reserve, Lighthouse, or Shoreline"
     },
     {
       "heading": "Rewards",
@@ -43,7 +40,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "Kill 50 Scavs on any map."
+      "text": "Kill 50 Scavs on Streets of Tarkov, Reserve, Lighthouse, or Shoreline."
     }
   ]
 }

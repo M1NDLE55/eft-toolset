@@ -1,18 +1,17 @@
 {
   "title": "Fair Price - Part 2",
   "url": "https://escapefromtarkov.fandom.com/wiki/Fair_Price_-_Part_2",
-  "revisionId": 362600,
-  "lastEdited": "2026-09-29T19:54:49Z",
+  "revisionId": 367441,
+  "lastEdited": "2026-11-03T14:19:04Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods",
     "given by": "Skier",
-    "previous": "Fair Price - Part 1",
-    "reqkappa": "No"
+    "location": "Woods",
+    "previous": "Fair Price - Part 1"
   },
   "sections": [
     {

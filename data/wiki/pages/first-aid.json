@@ -1,8 +1,8 @@
 {
   "title": "First Aid",
   "url": "https://escapefromtarkov.fandom.com/wiki/First_Aid",
-  "revisionId": 359287,
-  "lastEdited": "2026-09-13T20:13:38Z",
+  "revisionId": 365426,
+  "lastEdited": "2026-10-27T23:50:30Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,7 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Jaeger",
-    "previous": "Acquaintance",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -27,27 +27,12 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Find 4 items from the Medkits category Found In Raid\n- Hand over the items\n- Find 4 items from the Injury treatment category Found In Raid\n- Hand over the items"
+      "text": "- Find 4 items from the category in raid\n- Hand over the items\n- Find 4 items from the category in raid\n- Hand over the items"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +3,000 EXP\n- Jaeger Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"Got it? Great. Hopefully, I won't have to watch people die helplessly anymore.\""
-    },
-    {
-      "heading": "Guide",
-      "level": 2,
-      "text": ""
-    },
-    {
-      "heading": "Medical Category",
-      "level": 3,
-      "text": "For the Medical category you can hand over the following Found In Raid Items Salewa, Grizzly medical kit, AFAK tactical individual first aid kit, AI-2 medkit, IFAK individual first aid kit, Car first aid kit."
-    },
-    {
-      "heading": "Injury treatment",
-      "level": 3,
-      "text": "For the Injury category you can hand over the following Found In Raid Items Esmarch tourniquet, Immobilizing splint, Surv12 field surgical kit, CALOK-B hemostatic applicator, CMS surgical kit, Aseptic bandage, Golden Star balm, Vaseline balm, Army bandage, Tigzresq splint."
+      "text": "- +3,000 EXP\n- Jaeger Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"Now maybe there'll be fewer needless deaths... Thank you, kid.\""
     }
   ]
 }

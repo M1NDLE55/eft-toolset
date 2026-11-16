@@ -1,8 +1,8 @@
 {
   "title": "Playing the Market",
   "url": "https://escapefromtarkov.fandom.com/wiki/Playing_the_Market",
-  "revisionId": 359560,
-  "lastEdited": "2026-09-13T20:18:16Z",
+  "revisionId": 365702,
+  "lastEdited": "2026-10-27T23:55:10Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Factory",
     "given by": "Mechanic",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Someone decided to crash the market recently. Dumped a massive batch of bitcoins, enough for TARGox to start filling orders at ten times below the usual market price. You could watch the order queue disappearing in real time. I barely managed to grab a couple hundred coins before it was over. And today the price is back where it was before. If the market is going to stay this heavily manipulated, we need to move fast while the opportunity is still there. There are control panels in the Polikhim factory, marked by red emergency lights. Take a couple of toolkits and repair the panels while I deal with the cooling system. Do that, and you'll get a share of the profits.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 2 with Mechanic to obtain this quest."
     },
     {
       "heading": "Objectives",

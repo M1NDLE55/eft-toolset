@@ -1,18 +1,17 @@
 {
   "title": "First in Line",
   "url": "https://escapefromtarkov.fandom.com/wiki/First_in_Line",
-  "revisionId": 361766,
-  "lastEdited": "2026-09-24T12:44:57Z",
+  "revisionId": 365428,
+  "lastEdited": "2026-10-27T23:50:32Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Ground Zero",
     "given by": "Therapist",
-    "LL requirement": "1",
-    "reqkappa": "Yes"
+    "location": "Ground Zero",
+    "LL requirement": "1"
   },
   "sections": [
     {
@@ -38,7 +37,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "In this quest you have to find the Emercom station on Ground Zero, and hand over any 3 found in raid medical items to Therapist.\n\nThe Emercom station can be found in front of the \"Unity Credit\" bank."
+      "text": "In this quest you have to find the Emercom station on Ground Zero, and hand over any 3 found in raid meds or medical supplies to Therapist. Stimulants aren't accepted.\n\nThe Emercom station can be found in front of the \"Unity Credit\" bank."
     }
   ]
 }

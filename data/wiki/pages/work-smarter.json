@@ -1,8 +1,8 @@
 {
   "title": "Work Smarter",
   "url": "https://escapefromtarkov.fandom.com/wiki/Work_Smarter",
-  "revisionId": 359894,
-  "lastEdited": "2026-09-13T20:23:53Z",
+  "revisionId": 366618,
+  "lastEdited": "2026-10-31T05:39:20Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "location": "Customs",
     "given by": "Jaeger",
-    "previous": "Acquaintance",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -33,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +6,600 EXP\n- Jaeger Rep +0.01\n- 32,000 Roubles\n  - 33,600 Roubles with Intelligence Center Level 1\n  - 36,800 Roubles with Intelligence Center Level 2\n- 2× CMS surgical kit\n\"You've learned your lesson. Make sure you don't forget it. Always be prepared for your return path to be cut short. No matter which part of Tarkov you find yourself in. Your knowledge of the terrain, the paths between the areas and safe escape routes is your strength.\""
+      "text": "- +3,000 EXP\n- Jaeger Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 2× Corrugated hose\n\"You've learned your lesson. Make sure you don't forget it. Always be prepared for your return path to be cut short. No matter which part of Tarkov you find yourself in. Your knowledge of the terrain, the paths between the areas and safe escape routes is your strength.\""
     },
     {
       "heading": "Guide",

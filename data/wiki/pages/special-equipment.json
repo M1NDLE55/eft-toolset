@@ -1,8 +1,8 @@
 {
   "title": "Special Equipment",
   "url": "https://escapefromtarkov.fandom.com/wiki/Special_Equipment",
-  "revisionId": 359688,
-  "lastEdited": "2026-09-13T20:20:27Z",
+  "revisionId": 365832,
+  "lastEdited": "2026-10-27T23:57:27Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,7 +10,8 @@
   "redirects": [],
   "infobox": {
     "given by": "Peacekeeper",
-    "reqkappa": "No"
+    "LL requirement": "4",
+    "LL quests": "3"
   },
   "sections": [
     {
@@ -22,11 +23,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Greetings, mercenary. My contacts are in need of a large supply of military equipment. You could definitely help us in this matter. Will you find the required items for us? I will make a list of the needed equipment.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 4 with Peacekeeper to obtain this quest."
     },
     {
       "heading": "Objectives",

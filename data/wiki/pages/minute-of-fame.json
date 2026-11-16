@@ -1,19 +1,18 @@
 {
   "title": "Minute of Fame",
   "url": "https://escapefromtarkov.fandom.com/wiki/Minute_of_Fame",
-  "revisionId": 362431,
-  "lastEdited": "2026-09-29T14:26:40Z",
+  "revisionId": 367418,
+  "lastEdited": "2026-11-03T13:28:12Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Interchange",
     "given by": "Skier",
+    "location": "Interchange",
     "previous": "The Good Times - Part 2",
-    "leads to": "Viewer",
-    "reqkappa": "No"
+    "leads to": "Viewer"
   },
   "sections": [
     {

@@ -1,8 +1,8 @@
 {
   "title": "Easy Money - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Easy_Money_-_Part_1",
-  "revisionId": 362429,
-  "lastEdited": "2026-09-29T14:21:41Z",
+  "revisionId": 367417,
+  "lastEdited": "2026-11-03T13:19:59Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,11 +11,10 @@
     "Easy Money. Part 1"
   ],
   "infobox": {
-    "location": "Customs",
     "given by": "Skier",
+    "location": "Customs",
     "LL requirement": "2",
-    "leads to": "Easy Money - Part 2",
-    "reqkappa": "No"
+    "leads to": "Easy Money - Part 2"
   },
   "sections": [
     {
@@ -51,7 +50,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Arena advertisement poster | 1 | Item to stash | N/A | Can be purchased from Skier LL1. |\nIn this quest you have to stash an Arena advertisement poster in the living quarters of the Scav base (ZB-013 extraction) building with the numerous mounted weapons on Customs.\n\n3 posters are provided by Skier via in-game mail. While a poster can't be put directly in secure containers, it can be put into a Documents case or S I C C organizational pouch to prevent losing it upon death.\n\nThe poster has to be stashed at one of five beds on the first floor."
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Arena advertisement poster | 1 | Item to stash | N/A | Can be purchased from Skier LL1. |\nIn this quest you have to stash an Arena advertisement poster in the living quarters of the Scav base (ZB-1013 extraction) building with the numerous mounted weapons on Customs.\n\n3 posters are provided by Skier via in-game mail. While a poster can't be put directly in secure containers, it can be put into a Document case or S I C C organizational pouch to prevent losing it upon death.\n\nThe poster has to be stashed at one of five beds on the first floor."
     }
   ]
 }

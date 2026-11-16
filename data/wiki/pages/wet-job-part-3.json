@@ -1,8 +1,8 @@
 {
   "title": "Wet Job - Part 3",
   "url": "https://escapefromtarkov.fandom.com/wiki/Wet_Job_-_Part_3",
-  "revisionId": 359883,
-  "lastEdited": "2026-09-13T20:23:42Z",
+  "revisionId": 367460,
+  "lastEdited": "2026-11-03T14:35:56Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,11 +11,11 @@
     "Wet Job. Part 3"
   ],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Peacekeeper",
+    "location": "Shoreline",
+    "LL requirement": "3",
     "previous": "Wet Job - Part 2",
-    "leads to": "Wet Job - Part 4",
-    "reqkappa": "Yes"
+    "leads to": "Wet Job - Part 4"
   },
   "sections": [
     {
@@ -26,12 +26,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"You hit the spot there, my friend. My partners are very interested in what this affair could bring us. The Helmets inspected the place you marked and found out that some fisherman lived there for a while. It seems, though, he is long dead, and people on cameras are his friends. However, we know that he was friends with a certain person called Artyom, who was often seen driving a yellow Daihyn. Their shared business was somehow linked to the Russian military, now you understand why it could prove interesting? Artyom’s car is most likely still on the Shoreline, I doubt he could've drove off on it after the conflict. Use the provided description to find it, write down the plate number, and we’ll use it to get the details on who that Artyom may be.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 14 to start this quest."
+      "text": "\"My partners are very interested in our new venture. The Blue Helmets inspected the location you mentioned and discovered that some kind of fisherman lived there. It appears he has been dead for quite some time, and the people with the cameras were his friends. We know he was acquainted with someone named Artyom, who was often seen driving a yellow sedan. Their shared activities were somehow connected to the Russian military. Now you understand why this could be interesting? Most likely, Artyom's vehicle is still somewhere on the road along the shore. Search for it based on the description and mark it. The Blue Helmets will immediately search the area. This way, we can find out who Artyom really is.\""
     },
     {
       "heading": "Objectives",
@@ -41,7 +36,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,000 EXP\n- 2x .300 Blackout M62 Tracer ammo pack (50 pcs)\n- 1,900 Dollars\n  - 1,995 Dollars with Intelligence Center Level 1\n  - 2,185 Dollars with Intelligence Center Level 2\n- 1× NcSTAR ADO P4 Sniper 3-9x42 riflescope\n- Unlocks ability to craft .300 Blackout M62 Tracer in hideout\n\"So, the car was there, no damage? No signs of attack, yes? We’ll run it through the database, I feel we’re in for more fascinating discoveries.\""
+      "text": "- +28,000 EXP\n- 1,900 Dollars\n  - 1,995 Dollars with Intelligence Center Level 1\n  - 2,185 Dollars with Intelligence Center Level 2\n- 1× NcSTAR ADO P4 Sniper 3-9x42 riflescope\n- 2× .300 Blackout M62 Tracer ammo pack (50 pcs)\n- Unlocks craft for .300 Blackout M62 Tracer at Workbench level 2\n\"So, the vehicle was intact? No signs of an attack, correct? We'll investigate further. I believe there is still much more to discover.\""
     },
     {
       "heading": "Guide",

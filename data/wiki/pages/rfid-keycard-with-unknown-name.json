@@ -1,8 +1,8 @@
 {
   "title": "RFID keycard with unknown name",
   "url": "https://escapefromtarkov.fandom.com/wiki/RFID_keycard_with_unknown_name",
-  "revisionId": 341214,
-  "lastEdited": "2026-04-24T19:21:46Z",
+  "revisionId": 363826,
+  "lastEdited": "2026-10-09T21:24:56Z",
   "kind": "key",
   "categories": [
     "Keycards"
@@ -49,7 +49,7 @@
       "text": "Port garrison intercom on Shoreline."
     },
     {
-      "heading": "Behind The Lock",
+      "heading": "Behind the Lock",
       "level": 2,
       "text": "- Terminal"
     }

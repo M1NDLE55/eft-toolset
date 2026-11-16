@@ -1,8 +1,8 @@
 {
   "title": "Claustrophobia",
   "url": "https://escapefromtarkov.fandom.com/wiki/Claustrophobia",
-  "revisionId": 359175,
-  "lastEdited": "2026-09-13T20:11:42Z",
+  "revisionId": 367735,
+  "lastEdited": "2026-11-09T00:37:11Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "location": "Factory",
     "given by": "Jaeger",
-    "previous": "The Huntsman Path - Forest Cleaning",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,22 +23,22 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Haven't seen you in a while. I was just talking about you with my friend, talking about clever youth... He told me a story about some amateur soldiers who went raiding into the old tunnels. One got spooked by a noise and started shooting everywhere, another one threw a bad grenade and killed everyone in their group. Turns out my comrade didn't even need a tripwire in the end. Disappointing, he said. If you don't want to find yourself in a similar situation, take a shotgun and go to those tunnels at the chemical plant. If you can handle the enemy in such conditions, then cramped space will become your ally.\""
+      "text": "\"My friend and I were talking about you yesterday. About capable young folks... Then he told me about a couple of soldiers who went down into some catacombs. One panicked and fired off a shot for no reason, the other botched a grenade throw. My friend ended up having to disarm one of his own tripwires on the way back, never got to use it because of this embarrassment. If you don't want to end up making the same kind of mistakes, grab whatever weapon suits you and head into those \"dungeons\" beneath the Factory. If you can handle your enemies in a place like that, cramped spaces will become your ally.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate any 5 targets in the old cellars while using a shotgun on Factory"
+      "text": "- Eliminate any 5 targets in the basement tunnel network on Factory"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- 25,400 EXP\n- Jaeger Rep +0.03\n- 89,000 Roubles\n  - 93,450 Roubles with Intelligence Center Level 1\n  - 97,900 Roubles with Intelligence Center Level 2\n- 2× Burris FullField TAC30 1-4x24 30mm riflescope\n\"Alive and well, I see? Well, now you're the apex predator in those dungeons.\""
+      "text": "- +10,000 EXP\n- Jaeger Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 3× KEKTAPE duct tape\n\"Alive and well, I see? Well, now you're the apex predator in those dungeons.\""
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "In this quest you have to kill any 5 targets in the underground on Factory while using shotguns. Only the targets have to be in the area for the kills to count towards the quest.\n\nThe only area that doesn't count is beneath the tank containers."
+      "text": "In this quest you have to kill any 5 targets in the underground on Factory. Only the targets have to be in the area for the kills to count towards the quest."
     }
   ]
 }

@@ -1,0 +1,54 @@
+{
+  "title": "Halloween: The Best Defense",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_The_Best_Defense",
+  "revisionId": 367059,
+  "lastEdited": "2026-11-02T21:26:01Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "location": "Infected Lab",
+    "previous": "Halloween: Rumors",
+    "leads to": "Halloween: Follow-Up Examination, Halloween: Unexpected Help"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: The Best Defense is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"These dodgy rumors ain't just doing the rounds between you and me anymore. Heard even the gangs are joining forces to stop this infection and those lab and factory psychos from getting out? Been a bloody long time since those lot shook hands. Things must be well and truly fucked. Funny thing is, I had a crew head into the lab just before all this kicked off. Went in to have a rummage, see what loot they could get their hands on... They even managed to check in with me, then the line went dead. All I got was a shout that the lights had gone out. After that, I spent another minute listening to noises straight out of a horror flick. Get over there and have a look. Might be someone left alive.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Visit the Infected Lab\n  - (Optional) Obtain the special item to use the exfil\n  - (Optional) Survive and extract from Infected Lab\n- Eliminate 10 infected on Infected Lab"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +36,000 EXP\n- 2,700 Euros\n  - 2,835 Euros with Intelligence Center Level 1\n  - 3,105 Euros with Intelligence Center Level 2\n- 1× Norinco QBZ-191 5.8x42 assault rifle\n- 3× QBZ-191 5.8x42 30-round magazine\n- 4× 5.8x42mm DBX95 ammo pack (30 pcs)\n\"No one? Fucking useless lot. They've gone and lost me a whole load of loot... Ah, well. Here's your cut for the trouble.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Notes |\n| Car keys; or; Collector map | Car keys; or; Collector map | 1 | Required | Used to activate the extractions in the Infected Lab |\nIn this quest you have to kill 10 infected in the Infected Lab. You can only use the \"Parking\" and \"Sewage Conduit\" extractions with the related special items."
+    },
+    {
+      "heading": "Parking extraction - Car keys",
+      "level": 4,
+      "text": "- On and around the round table with the cat statues in the recreational area (R21) on the second level.\n\n- In the mouth of an infected head on top of a water dispenser in office O23 on the second level."
+    },
+    {
+      "heading": "Sewage Conduit extraction - Collector map",
+      "level": 4,
+      "text": "- On and around the round table with the cat statues in the recreational area (R21) on the second level.\n\n- Behind the screen on the desk in Kruglov's office (R22) on the second level.\n\n- On a desk in office O23 on the second level."
+    }
+  ]
+}

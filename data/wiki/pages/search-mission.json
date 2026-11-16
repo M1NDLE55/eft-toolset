@@ -1,8 +1,8 @@
 {
   "title": "Search Mission",
   "url": "https://escapefromtarkov.fandom.com/wiki/Search_Mission",
-  "revisionId": 361745,
-  "lastEdited": "2026-09-24T12:30:43Z",
+  "revisionId": 365781,
+  "lastEdited": "2026-10-27T23:56:32Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,10 +11,9 @@
     "Search mission"
   ],
   "infobox": {
-    "location": "Woods",
     "given by": "Prapor",
-    "LL requirement": "1",
-    "reqkappa": "Yes"
+    "location": "Woods",
+    "LL requirement": "1"
   },
   "sections": [
     {

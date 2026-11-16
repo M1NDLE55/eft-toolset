@@ -1,8 +1,8 @@
 {
   "title": "The Price of Independence",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Price_of_Independence",
-  "revisionId": 352236,
-  "lastEdited": "2026-08-07T21:00:15Z",
+  "revisionId": 363769,
+  "lastEdited": "2026-10-08T23:07:55Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -54,7 +54,7 @@
     {
       "heading": "Customs to Reserve transit",
       "level": 3,
-      "text": "Next to the Military Base CP extraction."
+      "text": ""
     },
     {
       "heading": "Reserve Letter stashing location",

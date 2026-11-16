@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 9",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_9",
-  "revisionId": 353720,
-  "lastEdited": "2026-08-14T22:43:25Z",
+  "revisionId": 364406,
+  "lastEdited": "2026-10-13T19:19:28Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,6 +13,8 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "previous": "Gunsmith Master - Part 8",
+    "leads to": "Gunsmith Master - Part 10",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -24,12 +26,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"What do you think, how much does human life cost? Not much, I guess. But what's even more surprising for me, it's the contemporary art market. The value of art pieces by renowned artists grows every year. They are definitely talented, but the more you look at it, the more it seems that anything can be art. It can be a Rothko painting, a displaced urinal, or a bunch of garbage. However, in my opinion, the most amazing pieces of art are weapons, starting from the melee - which is already universally recognized as such and can be found in many museums - to an old AK or M4, which are beautiful as they are. But a weapon only transcends to true art when it becomes unique, one-of-a-kind, in the hands of someone who knows how to use it, who modifies it for his own needs, creating a masterpiece worthy of being displayed in the best of museums. Bring me one such masterpiece, an M4A1 with a KAC QDSS NT-4 (FDE) silencer, Alexander Arms MK10 rifle-length handguard, REAP-IR thermal scope, and a 60-round magazine. Ergonomics should be not less than 40, the recoil sum less than 280, and the weight of 5 kg or less.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 39 to start this quest."
+      "text": "\"What do you think, how much does human life cost? Not much, I guess. But what’s even more surprising for me, it’s the contemporary art market. The value of art pieces by renowned artists grows every year. They are definitely talented, but the more you look at it, the more it seems that anything can be art. It can be a Rothko painting, a displaced urinal, or a bunch of garbage. However, in my opinion, the most amazing pieces of art are weapons, starting from the melee - which is already universally recognized as such and can be found in many museums - to an old AK or M4, which are beautiful as they are. But a weapon only transcends to true art when it becomes unique, one-of-a-kind, in the hands of someone who knows how to use it, who modifies it for his own needs, creating a masterpiece worthy of being displayed in the best of museums. Bring me one such masterpiece, an M4A1 with a KAC QDSS NT-4 (FDE) silencer, Alexander Arms MK10 rifle-length handguard, REAP-IR thermal scope, and a 60-round magazine. Ergonomics should be not less than 40, the recoil sum less than 280, and the weight of 5 kg or less.\""
     },
     {
       "heading": "Objectives",
@@ -39,7 +36,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,900 EXP\n- Mechanic Rep +0.03\n- 1,000 Euros\n  - 1,050 Euros with Intelligence Center Level 1\n  - 1,150 Euros with Intelligence Center Level 2\n- 1× Magazine case\n- 2× FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope\n- Unlocks barter for Trijicon REAP-IR thermal scope at Mechanic LL4\n- Unlocks barter for SilencerCo Saker ASR 556 5.56x45 sound suppressor at Peacekeeper LL4\n- Unlocks craft for Trijicon REAP-IR thermal scope at Workbench level 3\n\"Makes me want to put it on a showcase display. Masterful work, it truly did turn out to be a masterpiece.\""
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Magazine case\n\"Makes me want to put it on a showcase display. Masterful work, it truly did turn out to be a masterpiece.\""
     },
     {
       "heading": "Guide",

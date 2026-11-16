@@ -1,8 +1,8 @@
 {
   "title": "Akimbo",
   "url": "https://escapefromtarkov.fandom.com/wiki/Akimbo",
-  "revisionId": 359901,
-  "lastEdited": "2026-09-13T20:28:09Z",
+  "revisionId": 365198,
+  "lastEdited": "2026-10-27T23:46:37Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Lighthouse",
     "given by": "Ragman",
+    "LL requirement": "3",
     "reqkappa": "No"
   },
   "sections": [
@@ -23,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Good to see you, brother! I've got a job, and it's one only a master like you can handle. Some Scavs recently intercepted a shipment of plate carriers I had near the lighthouse. Nothing too fancy in there, but those fuckers need to pay for stealing my goods! Only, we're gonna do this one a little differently. I want to see how plate carriers in this price range hold up against different calibers, and now we've got a bunch of idiots walking around wearing them! So we might as well make this test as close to real combat as possible. Take two different caliber rifles on the job and do your part. Just don't shoot 'em in the head, okay? I'm interested in how well the armor holds up! Don't bring the carriers back to me. Once you're done, I'll send my guys to collect the \"samples\".\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 3 with Ragman to obtain this quest."
     },
     {
       "heading": "Objectives",

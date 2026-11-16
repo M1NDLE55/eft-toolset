@@ -1,18 +1,19 @@
 {
   "title": "Shipment Tracking",
   "url": "https://escapefromtarkov.fandom.com/wiki/Shipment_Tracking",
-  "revisionId": 361802,
-  "lastEdited": "2026-09-24T13:28:01Z",
+  "revisionId": 365805,
+  "lastEdited": "2026-10-27T23:56:57Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs",
     "given by": "Therapist",
+    "location": "Customs",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "4",
+    "previous": "First in Line, or, Operation Aquarius, or, Supply Plans"
   },
   "sections": [
     {

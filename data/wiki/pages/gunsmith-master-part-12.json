@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 12",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_12",
-  "revisionId": 356757,
-  "lastEdited": "2026-08-29T19:47:46Z",
+  "revisionId": 364415,
+  "lastEdited": "2026-10-13T19:29:12Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,6 +13,8 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "previous": "Gunsmith Master - Part 11",
+    "leads to": "Gunsmith Master - Part 13",
     "reqkappa": "No"
   },
   "sections": [
@@ -27,11 +29,6 @@
       "text": "\"Hello. Do you ever find yourself crossing paths with a classmate decades after high school and hardly recognizing them? Although, I'd likely shock some of the folks from my class myself. Recently, a certain guy from my school days reached out to me. After school, he went into the army, wanting to join the special forces... It was clear even then that he had a peculiar, uh, aptitude for that job. Somehow he found me here and asked me for a favor. He wants to remember his early years in basic training. I'm not a big fan of that sort of hospitality, plus I've got heaps of work to do. But let me put it this way: he was, um, very insistent. I don't need any more trouble, so I agreed to his deal, hoping you'd help me sort it all out. People say this kind of equipment used to be somewhat standard issue at his job: ORSIS T-5000, Vityaz and a Glock 17. All with the special mods, of course. The rifle was equipped with an ATACR 7-35x56 34mm scope, Harris bipod, and a suppressor, I can't recall which exact one... Well, probably doesn't matter. Just get any suitable silencer, that'll work. For Vityaz I need the Micro T-1 red dot with a spacer, Zenit RK-6 front grip and RK-3 pistol grip, PT-3 Klassika buttstock... I also need a PEQ-15, Klesch-2P flashlight, and, as you probably guessed, a suppressor, the standard Vityaz one. Ergonomics no less than 49, recoil sum no more than 400, and at least a 30-round magazine. The Glock is simple. You need to replace the barrel with the Double Diamond with their thread protector, add a Pachmayr Grip Glove, Klesch-2P flashlight, and a 21-round extendo mag. I think that's everything.\""
     },
     {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 17 to start this quest."
-    },
-    {
       "heading": "Objectives",
       "level": 2,
       "text": "- Modify a PP-19-01 to comply with the given specifications\n- Modify a T-5000M to comply with the given specifications\n- Modify a Glock 17 to comply with the given specifications"
@@ -39,7 +36,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +21,930 EXP\n- Mechanic Rep +0.04\n- 155,000 Roubles\n  - 162,750 Roubles with Intelligence center Level 1\n  - 178,250 Roubles with Intelligence center Level 2\n- Unlocks purchase of Ballistic plate case at Mechanic LL2\n\"Alright, let me check the attachment list... Okay, my friend will be very pleased. It's amazing that there's still room for some nostalgia in all of us, even if the conditions around us burn out all other emotions.\""
+      "text": "- +28,000 EXP\n- 1× TerraGroup Labs keycard (Black)\n- Unlocks barter for TerraGroup Labs keycard (Black) at Mechanic LL4\n\"Alright, let me check the attachment list... Okay, my friend will be very pleased. It's amazing that there's still room for some nostalgia in all of us, even if the conditions around us burn out all other emotions.\""
     },
     {
       "heading": "Guide",

@@ -1,15 +1,15 @@
 {
   "title": "Sensory Analysis - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Sensory_Analysis_-_Part_1",
-  "revisionId": 359647,
-  "lastEdited": "2026-09-13T20:19:46Z",
+  "revisionId": 367574,
+  "lastEdited": "2026-11-05T01:53:38Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods, Streets of Tarkov",
+    "location": "Woods, Lighthouse, Streets of Tarkov",
     "given by": "Ragman",
     "previous": "Hidden Layer (+30min)",
     "leads to": "Sensory Analysis - Part 2",
@@ -34,12 +34,12 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Obtain the item: Bottle of Fierce Hatchling moonshine\n- Go to Woods or Streets of Tarkov\n- Hand over the Bottle of Fierce Hatchling moonshine to BTR Driver"
+      "text": "- Obtain the item: Bottle of Fierce Hatchling moonshine\n- Go to Woods, Lighthouse or Streets of Tarkov\n- Hand over the Bottle of Fierce Hatchling moonshine to BTR Driver"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +20,300 EXP\n- Ragman Rep +0.02\n- 112,000 Roubles\n  - 117,800 Roubles with Intelligence Center Level 1\n  - 128,800 Roubles with Intelligence Center Level 2\n- 2× Safariland Liberator HP 2.0 Hearing Protection Headset (FDE)\n- 2× ECLiPSE RBAV-AF plate carrier (Ranger Green)\n\"So, did'ya deliver the bottle? Huh? Man, this driver guy's such a prick. I love him! Hey, easy there, man, I get it. Listen, some things just shouldn't be talked about right off the bat, the Labyrinth is one of them. I have to consider all the risks that come with this info, so sit tight for a little while.\""
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 2× Safariland Liberator HP 2.0 Hearing Protection Headset (FDE)\n- 2× ECLiPSE RBAV-AF plate carrier (Ranger Green)\n\"So, did'ya deliver the bottle? Huh? Man, this driver guy's such a prick. I love him! Hey, easy there, man, I get it. Listen, some things just shouldn't be talked about right off the bat, the Labyrinth is one of them. I have to consider all the risks that come with this info, so sit tight for a little while.\""
     },
     {
       "heading": "Initial Equipment",
@@ -49,7 +49,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in raid |\n| Bottle of Fierce Hatchling moonshine | 1 | Handover item | No |\nIn this quest you have to hand over a Bottle of Fierce Hatchling moonshine to the BTR Driver. Ragman provides one via in-game mail. To complete the second objective, you have to kill a Scav on Woods or Streets of Tarkov."
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Bottle of Fierce Hatchling moonshine | 1 | Handover item | No |\nIn this quest you have to hand over a Bottle of Fierce Hatchling moonshine to the BTR Driver. Ragman provides one via in-game mail."
     }
   ]
 }
