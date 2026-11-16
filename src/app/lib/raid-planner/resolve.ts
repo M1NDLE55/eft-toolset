@@ -4,6 +4,9 @@ import { InputError } from "@/app/lib/input-error";
 import { normalizeText } from "@/app/lib/search/normalize-text";
 import { editDistance, nameWords, typoAllowance } from "@/app/lib/search/name-match";
 import { floorAt, floorName } from "./floors";
+import { spawnZoneName } from "./spawn-areas";
+
+export { spawnZoneName };
 import { mapConfigs } from "./maps-config";
 import { decodePlanSharePayload, type DecodedSharedPlan } from "./share";
 import { PLAN_COLORS, type GamePoint, type MapConfig, type RaidPlan } from "./types";
@@ -32,7 +35,6 @@ const NEAREST_PLACE_METERS = 30;
 const SPAWN_CLUSTER_METERS = 40;
 const SPAWN_LANDMARK_METERS = 150;
 const SPAWN_MERGE_METERS = 150;
-const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 /** Finds a map by key, name, or common short name such as "labs" or "streets". */
 export function resolveMap(reference: string): MapConfig {
@@ -121,17 +123,6 @@ function collectPlaces(details: MapDetails): Place[] {
       lock.keyName ? [{ kind: `${lock.lockType} lock`, name: lock.keyName, position: lock.position }] : []
     ),
   ];
-}
-
-/** A readable spawn zone name, or null for unnamed (UUID) zones. */
-export function spawnZoneName(zoneName: string | null, label?: string | null) {
-  if (label) return label;
-  if (!zoneName || UUID_PATTERN.test(zoneName)) return null;
-  return zoneName
-    .replace(/^(Bot)?Zone_?/, "")
-    .replace(/_/g, " ")
-    .replace(/([a-z])([A-Z])/g, "$1 $2")
-    .trim() || null;
 }
 
 /** One place per named spawn zone and kind, at the centre of its spawn points. */
