@@ -70,6 +70,17 @@ same way, through `readForRender` in `src/app/lib/api/server-render.ts`: the mos
 items per slot, overall and among keys, and a written guide under each map (extracts,
 transits, bosses and keys). Without the data in time, they render without those sections.
 
+## Best weapon builds
+
+`/gun-builder/best` lists every weapon in the main classes (assault rifles to pistols), and
+`/gun-builder/best/<weapon slug>` shows that weapon's factory preset next to the lowest
+recoil and the max ergonomics build. `src/app/lib/builds/best-builds.ts` runs the gun
+builder's optimiser on the server from the default preset, with trader and flea prices, and
+keeps each weapon's result for an hour per instance (sooner when the part data changes).
+Optimiser runs share a per-instance limit with the MCP tools (`optimizer-slots.ts`). If the
+builds can't be worked out in time, crawlers get a 500 to retry and visitors a short notice.
+Each build links to the gun builder as a share link. Every weapon page is in the sitemap.
+
 ## MCP endpoint
 
 `/api/mcp` is a public, read-only [Model Context Protocol](https://modelcontextprotocol.io)

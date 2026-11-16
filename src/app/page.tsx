@@ -112,8 +112,15 @@ export default function Home() {
         </ul>
       </nav>
       <Link
+        href="/gun-builder/best"
+        className="mt-6 flex items-center gap-2 text-xs uppercase tracking-widest text-[#888] underline-offset-4 hover:text-[#c8b384] hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+      >
+        <Crosshair className="h-4 w-4 text-[#9a8866]" />
+        Best builds for every weapon
+      </Link>
+      <Link
         href="/mcp"
-        className="mt-8 flex items-center gap-2 text-xs uppercase tracking-widest text-[#888] underline-offset-4 hover:text-[#c8b384] hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+        className="mt-3 flex items-center gap-2 text-xs uppercase tracking-widest text-[#888] underline-offset-4 hover:text-[#c8b384] hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
       >
         <Bot className="h-4 w-4 text-[#9a8866]" />
         Use every tool from Claude and other AI assistants

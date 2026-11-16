@@ -2,15 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import type { PriceHighlight, PriceHighlights } from "@/app/lib/api/tarkov-server";
 import type { GameMode } from "@/components/game-mode/mode";
-import { useGameMode } from "@/components/game-mode/context";
+import { MODE_LABEL, useServerModeSync } from "@/components/game-mode/use-server-mode-sync";
 import { Rubles } from "@/app/lib/currency";
 import { cn } from "@/lib/utils";
-
-const MODE_LABEL: Record<GameMode, string> = { regular: "PVP", pve: "PVE" };
 
 function HighlightTable({
   id,
@@ -81,16 +77,7 @@ function HighlightTable({
 
 /** Server-rendered price tables for the cookie's game mode, refreshed when the visitor switches mode. */
 export function PriceHighlightTables({ gameMode, highlights }: { gameMode: GameMode; highlights: PriceHighlights }) {
-  const router = useRouter();
-  const { gameMode: current, hydrated } = useGameMode();
-  const switching = hydrated && current !== gameMode;
-
-  useEffect(() => {
-    if (!switching) return;
-    // Let the provider write the game mode cookie first, then render again on the server.
-    const timer = window.setTimeout(() => router.refresh(), 0);
-    return () => window.clearTimeout(timer);
-  }, [switching, router]);
+  const { switching, current } = useServerModeSync(gameMode);
 
   return (
     <div className={cn("flex flex-col gap-6 transition-opacity", switching && "opacity-50")} aria-busy={switching}>
