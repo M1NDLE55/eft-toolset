@@ -11,13 +11,15 @@ import {
   identifyCaller,
   isChatGptRequest,
   mcpAuthConfig,
-  OPTIONAL_OAUTH_SECURITY_SCHEMES,
+  OAUTH_SECURITY_SCHEMES,
+  signInRequiredButMissing,
   signInToolResult,
   wwwAuthenticate,
   type ChallengeReason,
   type McpAuthConfig,
 } from "./auth";
-import { chargeMcpBudget, type McpBudget, type Payer } from "./budget";
+import type { RequestBudget } from "@/app/lib/api/rate-limit";
+import { chargeMcpBudget, type Payer } from "./budget";
 import { createEftMcpServer } from "./server";
 
 export interface McpHttpLimits {
@@ -77,33 +79,36 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
   const cors = corsHeaders(request, auth);
   if (!cors) return jsonRpcError(null, 403, -32000, "Requests from this origin are not allowed.");
 
+  if (signInRequiredButMissing(auth)) {
+    logMissingSignIn();
+    return jsonRpcError(cors, 503, -32000, "The AI tools are unavailable right now. Try again later.");
+  }
+
   const caller = await identifyCaller(request, auth);
   if (caller.kind === "unverifiable") {
     return jsonRpcError(cors, 503, -32000, "Sign-in can't be checked right now. Try again shortly.", { "Retry-After": "5" });
   }
-  // Not rate limited: the challenge is what makes clients refresh.
-  if (caller.kind === "invalid" && auth) {
-    return authChallenge(request, auth, cors, "invalid_token", await readMessageIfPossible(request, limits, cors));
+  // Every request needs a valid token. Challenges aren't rate limited: they are what makes
+  // clients sign in or refresh.
+  if (auth && caller.kind !== "user") {
+    const reason = caller.kind === "invalid" ? "invalid_token" : "sign_in";
+    return authChallenge(request, auth, cors, reason, await readMessageIfPossible(request, limits, cors));
   }
   const payer: Payer = caller.kind === "user" ? caller : { kind: "anonymous", ip: clientIp(request) };
-  const limited = async (budget: McpBudget, message: JsonRpcMessage | null) => {
-    if (auth && payer.kind === "anonymous" && budget.limitedBy === "payer") {
-      return authChallenge(request, auth, cors, "sign_in", message ?? (await readMessageIfPossible(request, limits, cors)));
-    }
-    return jsonRpcError(cors, 429, -32000, "Too many requests.", { "Retry-After": String(budget.retryAfterSeconds) });
-  };
+  const limited = (budget: RequestBudget) =>
+    jsonRpcError(cors, 429, -32000, "Too many requests.", { "Retry-After": String(budget.retryAfterSeconds) });
 
-  // Charge the base cost before reading the body so over-budget clients can't keep reads busy
-  // (sign-in challenges excepted); a tool call that can't pay the rest gets the base cost back.
+  // Charge the base cost before reading the body so over-budget clients can't keep reads busy;
+  // a tool call that can't pay the rest gets the base cost back.
   const base = await chargeMcpBudget(payer, BASE_COST);
-  if (!base.allowed) return limited(base, null);
+  if (!base.allowed) return limited(base);
   const message = await readMessage(request, limits, cors);
   if (message instanceof Response) return message;
   const isToolCall = message.method === "tools/call";
   if (isToolCall) {
     const toolName = typeof message.params?.name === "string" ? message.params.name : "";
     const tool = await chargeMcpBudget(payer, (TOOL_COSTS[toolName] ?? TOOL_CALL_COST) - BASE_COST, BASE_COST);
-    if (!tool.allowed) return limited(tool, message);
+    if (!tool.allowed) return limited(tool);
   }
 
   // A stateless server has nothing to do with a notification.
@@ -118,9 +123,9 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
       origin: linkOrigin(request),
       signal: AbortSignal.any([request.signal, AbortSignal.timeout(limits.toolDeadlineMs)]),
       requestId,
-      signedIn: payer.kind === "user",
+      userId: payer.kind === "user" ? payer.subject : undefined,
     },
-    { securitySchemes: auth ? OPTIONAL_OAUTH_SECURITY_SCHEMES : undefined }
+    { securitySchemes: auth ? OAUTH_SECURITY_SCHEMES : undefined }
   );
   try {
     const transport = new WebStandardStreamableHTTPServerTransport({
@@ -158,8 +163,16 @@ function authChallenge(
     );
   }
   const headers = { ...BASE_HEADERS, ...cors, "WWW-Authenticate": wwwAuthenticate(auth, reason) };
-  const text = reason === "sign_in" ? "Sign in to keep using EFT Toolset." : "The access token is expired or invalid.";
+  const text = reason === "sign_in" ? "Sign in to use EFT Toolset." : "The access token is expired or invalid.";
   return Response.json({ jsonrpc: "2.0", error: { code: -32000, message: text }, id }, { status: 401, headers });
+}
+
+let missingSignInLogged = false;
+
+function logMissingSignIn() {
+  if (missingSignInLogged) return;
+  missingSignInLogged = true;
+  console.error("MCP endpoint is closed: production requires sign-in, but MCP_AUTHKIT_DOMAIN is not set.");
 }
 
 async function readMessageIfPossible(request: Request, limits: McpHttpLimits, cors: Record<string, string>) {

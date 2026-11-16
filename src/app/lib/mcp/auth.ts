@@ -115,7 +115,7 @@ export async function identifyCaller(request: Request, config: McpAuthConfig | n
 export type ChallengeReason = "sign_in" | "invalid_token";
 
 const CHALLENGE_DESCRIPTIONS: Record<ChallengeReason, string> = {
-  sign_in: "Anonymous use of EFT Toolset is rate limited right now. Sign in to EFT Toolset to keep going with your own limit.",
+  sign_in: "EFT Toolset's AI tools need a free account. Sign in to EFT Toolset to use them.",
   invalid_token: "The access token is expired or invalid. Sign in again.",
 };
 
@@ -148,4 +148,13 @@ export function signInToolResult(config: McpAuthConfig, reason: ChallengeReason)
   };
 }
 
-export const OPTIONAL_OAUTH_SECURITY_SCHEMES = [{ type: "noauth" }, { type: "oauth2", scopes: [] as string[] }];
+/** Every tool needs a signed-in user. */
+export const OAUTH_SECURITY_SCHEMES = [{ type: "oauth2", scopes: [] as string[] }];
+
+/**
+ * Production never serves the MCP endpoint without sign-in, so a missing setting closes it
+ * instead of opening it to everyone. Development runs without sign-in when it isn't set.
+ */
+export function signInRequiredButMissing(config: McpAuthConfig | null) {
+  return config === null && process.env.NODE_ENV === "production";
+}

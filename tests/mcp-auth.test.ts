@@ -131,11 +131,11 @@ describe("access token validation", () => {
 describe("MCP endpoint with sign-in on", () => {
   beforeEach(enableAuth);
 
-  it("serves anonymous callers and offers sign-in on every tool", async () => {
-    const response = await mcp("tools/list");
+  it("serves signed-in users and marks every tool as needing sign-in", async () => {
+    const response = await mcp("tools/list", await bearer());
     expect(response.status).toBe(200);
     const { result } = await response.json();
-    const schemes = [{ type: "noauth" }, { type: "oauth2", scopes: [] }];
+    const schemes = [{ type: "oauth2", scopes: [] }];
     expect(result.tools.length).toBeGreaterThan(0);
     for (const tool of result.tools) {
       expect(tool.securitySchemes).toEqual(schemes);
@@ -143,17 +143,24 @@ describe("MCP endpoint with sign-in on", () => {
     }
   });
 
-  it("asks an anonymous caller over its budget to sign in with a 401 that names the metadata", async () => {
-    vi.stubEnv("MCP_ANON_RATE_BURST", "1");
-    vi.stubEnv("MCP_ANON_RATE_PER_SECOND", "0.001");
-    expect((await mcp("tools/call", {}, lookupTerm)).status).toBe(200);
+  it("passes the user id to tools and logs the call as signed in", async () => {
+    const info = vi.mocked(console.info);
+    expect((await mcp("tools/call", await bearer({ sub: "user_42" }), lookupTerm)).status).toBe(200);
+    const line = JSON.parse(String(info.mock.calls.at(-1)?.[0]));
+    expect(line).toMatchObject({ event: "mcp_tool_call", tool: "lookup_term", signedIn: true });
+    expect(JSON.stringify(line)).not.toContain("user_42");
+  });
 
+  it("asks anonymous callers to sign in with a 401 that names the metadata, on every request", async () => {
     for (const [method, params, headers] of [
+      ["initialize", { protocolVersion: "2025-06-18", capabilities: {}, clientInfo: { name: "t", version: "1" } }, {}],
+      ["ping", undefined, {}],
       ["tools/list", undefined, {}],
       ["tools/call", lookupTerm, {}],
       ["tools/call", lookupTerm, { "User-Agent": "claude-code/2.1.0" }],
       ["tools/call", lookupTerm, { "User-Agent": "Claude-User" }],
       ["tools/call", lookupTerm, { "User-Agent": "Cursor/2.4.28 (darwin arm64)" }],
+      ["tools/list", undefined, { Authorization: "Basic dXNlcjpwYXNz" }],
     ] as const) {
       const response = await mcp(method, headers, params);
       expect(response.status).toBe(401);
@@ -163,15 +170,16 @@ describe("MCP endpoint with sign-in on", () => {
       expect(body.error.message).toMatch(/sign in/i);
       expect(body.id).toBe(requestId);
     }
+    expect((await mcp("tools/call", await bearer(), lookupTerm)).status).toBe(200);
+  });
 
+  it("challenges anonymous callers without charging any budget", async () => {
+    // More tool calls than the global budget holds, so a charge would turn them into 429s.
+    for (let i = 0; i < 300; i += 1) expect((await mcp("tools/call", {}, lookupTerm)).status).toBe(401);
     expect((await mcp("tools/call", await bearer(), lookupTerm)).status).toBe(200);
   });
 
   it("asks ChatGPT to sign in with a tool result challenge, recognised by its _meta or User-Agent", async () => {
-    vi.stubEnv("MCP_ANON_RATE_BURST", "1");
-    vi.stubEnv("MCP_ANON_RATE_PER_SECOND", "0.001");
-    expect((await mcp("tools/call", {}, lookupTerm)).status).toBe(200);
-
     const fromMeta = { ...lookupTerm, _meta: { "openai/subject": "v1/abc", "openai/session": "s1" } };
     for (const [params, headers] of [
       [fromMeta, {}],
@@ -197,11 +205,7 @@ describe("MCP endpoint with sign-in on", () => {
     expect(listed.headers.get("www-authenticate")).toBe(`Bearer resource_metadata="${METADATA_URL}"`);
   });
 
-  it("answers bad tokens with invalid_token challenges, never as anonymous, even when the IP is out of budget", async () => {
-    vi.stubEnv("MCP_ANON_RATE_BURST", "0.25");
-    vi.stubEnv("MCP_ANON_RATE_PER_SECOND", "0.001");
-    expect((await mcp("ping")).status).toBe(200);
-    expect((await mcp("ping")).status).toBe(401);
+  it("answers bad tokens with invalid_token challenges", async () => {
     const expired = await token({}, { expiresIn: Math.floor(Date.now() / 1000) - 120 });
     for (const authorization of [`Bearer ${expired}`, "Bearer garbage", "Bearer"]) {
       const listed = await mcp("tools/list", { Authorization: authorization });
@@ -213,7 +217,6 @@ describe("MCP endpoint with sign-in on", () => {
       expect(called.status).toBe(401);
       expect(called.headers.get("www-authenticate")).toBe(listed.headers.get("www-authenticate"));
     }
-    expect((await mcp("tools/list", { Authorization: "Basic dXNlcjpwYXNz", "CF-Connecting-IP": "192.0.2.20" })).status).toBe(200);
   });
 
   it("asks ChatGPT to sign in again from a tool result when its token is bad", async () => {
@@ -233,21 +236,18 @@ describe("MCP endpoint with sign-in on", () => {
     expect(listed.status).toBe(401);
   });
 
-  it("keys signed-in budgets on the token's subject, apart from IPs and other users", async () => {
+  it("keys budgets on the token's subject, apart from IPs and other users", async () => {
     vi.stubEnv("MCP_USER_RATE_BURST", "1");
     vi.stubEnv("MCP_USER_RATE_PER_SECOND", "0.001");
-    vi.stubEnv("MCP_ANON_RATE_BURST", "1");
-    vi.stubEnv("MCP_ANON_RATE_PER_SECOND", "0.001");
     expect((await mcp("tools/call", await bearer({}, "198.51.100.1"), lookupTerm)).status).toBe(200);
     const limited = await mcp("tools/call", await bearer({}, "198.51.100.2"), lookupTerm);
     expect(limited.status).toBe(429);
     expect(limited.headers.get("www-authenticate")).toBeNull();
     expect(Number(limited.headers.get("retry-after"))).toBeGreaterThan(0);
     expect((await mcp("tools/call", await bearer({ sub: "user_02" }, "198.51.100.1"), lookupTerm)).status).toBe(200);
-    expect((await mcp("tools/call", { "CF-Connecting-IP": "198.51.100.1" }, lookupTerm)).status).toBe(200);
   });
 
-  it("starts an MCP SDK client's sign-in when its tool call runs out of budget", async () => {
+  it("starts an MCP SDK client's sign-in when it connects", async () => {
     const redirects: URL[] = [];
     const provider: OAuthClientProvider = {
       redirectUrl: "http://localhost:9876/callback",
@@ -281,27 +281,28 @@ describe("MCP endpoint with sign-in on", () => {
       fetch: route as typeof fetch,
     });
     const client = new Client({ name: "t", version: "1" });
-    await client.connect(transport);
-    vi.stubEnv("MCP_ANON_RATE_BURST", "0.5");
-    vi.stubEnv("MCP_ANON_RATE_PER_SECOND", "0.001");
-    await expect(client.callTool(lookupTerm)).rejects.toThrow(UnauthorizedError);
+    await expect(client.connect(transport)).rejects.toThrow(UnauthorizedError);
     expect(redirects).toHaveLength(1);
     expect(redirects[0].origin + redirects[0].pathname).toBe(`${ISSUER}/oauth2/authorize`);
     expect(redirects[0].searchParams.get("resource")).toBe(RESOURCE);
-    await client.close();
   });
 
   it("delivers the tool challenge to an MCP SDK client that sends ChatGPT's _meta, as a tool result", async () => {
+    let authorization = `Bearer ${await token()}`;
     const transport = new StreamableHTTPClientTransport(new URL("http://localhost/api/mcp"), {
-      fetch: (async (url: string | URL, init?: RequestInit) => POST(new Request(url, init))) as typeof fetch,
+      fetch: (async (url: string | URL, init?: RequestInit) => {
+        const headers = new Headers(init?.headers);
+        headers.set("Authorization", authorization);
+        return POST(new Request(url, { ...init, headers }));
+      }) as typeof fetch,
     });
     const client = new Client({ name: "t", version: "1" });
     await client.connect(transport);
-    vi.stubEnv("MCP_ANON_RATE_BURST", "0.5");
-    vi.stubEnv("MCP_ANON_RATE_PER_SECOND", "0.001");
+    // The token expires between calls.
+    authorization = `Bearer ${await token({}, { expiresIn: Math.floor(Date.now() / 1000) - 120 })}`;
     const result = await client.callTool({ ...lookupTerm, _meta: { "openai/session": "s1" } });
     expect(result.isError).toBe(true);
-    expect(result._meta?.["mcp/www_authenticate"]).toEqual([expect.stringContaining('error="insufficient_scope"')]);
+    expect(result._meta?.["mcp/www_authenticate"]).toEqual([expect.stringContaining('error="invalid_token"')]);
     await client.close();
   });
 
@@ -328,7 +329,7 @@ describe("MCP endpoint with sign-in on", () => {
 });
 
 describe("MCP endpoint with sign-in off", () => {
-  it("behaves as before: no schemes, no metadata, tokens ignored, and 429 when over budget", async () => {
+  it("serves everyone in development: no schemes, no metadata, and tokens ignored", async () => {
     expect(mcpAuthConfig()).toBeNull();
     const listed = await mcp("tools/list", { Authorization: "Bearer garbage" });
     expect(listed.status).toBe(200);
@@ -337,18 +338,23 @@ describe("MCP endpoint with sign-in off", () => {
       expect(tool).not.toHaveProperty("securitySchemes");
       expect(tool._meta).toBeUndefined();
     }
+    expect((await mcp("tools/call", {}, lookupTerm)).status).toBe(200);
     expect(metadataGet(new Request("https://www.eft-toolset.com/.well-known/oauth-protected-resource")).status).toBe(404);
     expect(
       OPTIONS(new Request("http://localhost/api/mcp", { method: "OPTIONS" })).headers.get("access-control-allow-headers")
     ).toBe("Content-Type, Accept, Mcp-Protocol-Version");
-
-    vi.stubEnv("MCP_ANON_RATE_BURST", "1");
-    vi.stubEnv("MCP_ANON_RATE_PER_SECOND", "0.001");
-    expect((await mcp("tools/call", {}, lookupTerm)).status).toBe(200);
-    const limited = await mcp("tools/list");
-    expect(limited.status).toBe(429);
-    expect(limited.headers.get("www-authenticate")).toBeNull();
     expect(sharedRateLimitStore()).toBe(memoryRateLimitStore);
+  });
+
+  it("stays closed in production instead of serving without sign-in", async () => {
+    vi.stubEnv("NODE_ENV", "production");
+    const error = vi.spyOn(console, "error").mockImplementation(() => undefined);
+    for (const headers of [{}, await bearer()]) {
+      const response = await mcp("tools/list", headers);
+      expect(response.status).toBe(503);
+      expect(response.headers.get("www-authenticate")).toBeNull();
+    }
+    expect(error).toHaveBeenCalledTimes(1);
   });
 });
 

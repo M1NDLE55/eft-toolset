@@ -61,6 +61,7 @@ const EXAMPLES = [
 ];
 
 export default function McpPage() {
+  const signIn = mcpAuthConfig() !== null;
   return (
     <main className="flex flex-1 justify-center p-4 pb-12">
       <article className="flex w-full max-w-2xl flex-col gap-8">
@@ -76,7 +77,7 @@ export default function McpPage() {
               Model Context Protocol
             </a>
             . Assistants get the same live tarkov.dev data, prices, and calculations as the app, for PVP and PVE. It is
-            free, read-only, and needs no account.
+            free and read-only.{signIn && " Assistants connect with a free EFT Toolset account; the website itself needs none."}
           </p>
         </header>
 
@@ -86,8 +87,8 @@ export default function McpPage() {
           </h2>
           <CopySnippet template="{endpoint}" label="server URL" />
           <p className="text-xs text-[#888]">
-            {mcpAuthConfig()
-              ? "Streamable HTTP. No API key. Signing in is optional and gives you a higher rate limit of your own; your assistant asks when it's worth it."
+            {signIn
+              ? "Streamable HTTP with OAuth sign-in. No API key."
               : "Streamable HTTP. No sign-in or API key."}
           </p>
         </section>
@@ -96,6 +97,13 @@ export default function McpPage() {
           <h2 id="connect" className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">
             Connect
           </h2>
+          {signIn && (
+            <p className="text-sm leading-relaxed text-[#bbb]">
+              When you add the server, your assistant opens an EFT Toolset sign-in page in your browser, where you can sign in
+              or create an account. In Claude Code, run <code className="font-mono text-[#c8b384]">/mcp</code>, pick
+              eft-toolset, and choose Authenticate.
+            </p>
+          )}
           {CLIENTS.map((client) => (
             <div key={client.name} className="flex flex-col gap-1.5">
               <h3 className="text-sm font-bold text-[#ddd]">{client.name}</h3>
