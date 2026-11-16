@@ -1,0 +1,21 @@
+{
+  "title": "HK MP5 Navy Style 3-lug suppressor adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_Navy_Style_3-lug_suppressor_adapter",
+  "revisionId": 337583,
+  "lastEdited": "2026-03-06T00:07:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.091 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+2",
+    "node": "5c0000c00db834001a6697fc",
+    "ID": "muzzle_mp5_hk_navy_style_3_lug_supressor_adapter_9x19"
+  },
+  "sections": []
+}

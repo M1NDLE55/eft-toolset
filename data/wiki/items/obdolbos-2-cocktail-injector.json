@@ -1,0 +1,34 @@
+{
+  "title": "Obdolbos 2 cocktail injector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Obdolbos_2_cocktail_injector",
+  "revisionId": 363948,
+  "lastEdited": "2026-10-11T20:57:16Z",
+  "kind": "item",
+  "categories": [
+    "Stimulants"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injector",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "effect": "Buffs:, 1s Delay; 1800s Duration: - Increases Endurance (+20) - Increases Strength (+20) - Increases Attention (+20) - Increases Perception (+20) - Increases weight limit (+45%) Debuffs:, 1s Delay; 1800s Duration: - Decreased maximum stamina (-20) - Decreased stamina recovery rate (-1/s) - Decreased health regeneration (-1/s)",
+    "use time": "2s",
+    "loot xp": "20",
+    "exam xp": "8",
+    "node": "637b60c3b7afa97bfc3d7001",
+    "ID": "Obdolbos2"
+  },
+  "sections": [
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- TerraGroup office in the alley behind the Klimov shopping mall, on the desks in the cubicles\n- In the cell block - the cell directly in front of the stairs when you come up"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Laboratory experiment's area (G12) on the first level (Requires TerraGroup Labs keycard (Black))\n- Sanitar's room in the Laboratory block (G22) on the second level (Requires Keycard with a blue marking)\n- On the floor of the \"Med Hut\" on the main floor, first Level (O11)\n- On the left hand table in the Laboratory quarantine zone (G11) (Requires TerraGroup Labs keycard (Blue))\n- In the laboratories inside the containment block"
+    }
+  ]
+}

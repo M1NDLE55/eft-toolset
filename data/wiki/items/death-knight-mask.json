@@ -1,0 +1,35 @@
+{
+  "title": "Death Knight mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Death_Knight_mask",
+  "revisionId": 347830,
+  "lastEdited": "2026-07-14T15:26:35Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light Armored mask",
+    "slot": "Face cover",
+    "weight": "0.78 kg",
+    "grid": "2x2",
+    "material": "Aramid",
+    "armor": "1",
+    "armor coverage": "Head top, Eyes",
+    "durability": "55",
+    "blindness protect": "0%",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, +0% Ergonomics, No sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "62963c18dbc8ab5f0d382d0b",
+    "id": "item_equipment_facecover_mask_boss_blackknight"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Knight"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Killa and Tagilla poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Killa_and_Tagilla_poster",
+  "revisionId": 331650,
+  "lastEdited": "2026-01-07T19:44:19Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a04fdb8913ff13e0496bb",
+    "id": "item_barter_flyers_killa_tagilla_anime"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The artwork for this poster is drawn by automatic8."
+    }
+  ]
+}

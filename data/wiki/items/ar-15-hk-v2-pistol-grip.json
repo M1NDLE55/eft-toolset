@@ -1,0 +1,25 @@
+{
+  "title": "AR-15 HK V2 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_HK_V2_pistol_grip",
+  "revisionId": 342019,
+  "lastEdited": "2026-04-28T00:08:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽3,100",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+3",
+    "recoil": "-1",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c6d7b3d2e221600114c9b7d",
+    "ID": "pistolgrip_ar15_hk_grip_v2"
+  },
+  "sections": []
+}

@@ -1,0 +1,32 @@
+{
+  "title": "V40 Mini-Grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/V40_Mini-Grenade",
+  "revisionId": 358670,
+  "lastEdited": "2026-09-10T22:55:38Z",
+  "kind": "item",
+  "categories": [
+    "Fragmentation grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Fragmentation grenade",
+    "weight": "0.136 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2",
+    "explosion delay": "3s",
+    "explosion distance": "2-5 meters",
+    "concussion distance": "7 meters",
+    "fragments count": "25x",
+    "node": "66dae7cbeb28f0f96809f325",
+    "ID": "weapon_grenade_v40"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Grenade box\n- Wooden crate\n- Weapon box (6x2)\n- Buried barrel cache\n- Ground cache\n- Common fund stash"
+    }
+  ]
+}

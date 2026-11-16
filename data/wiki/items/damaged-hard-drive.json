@@ -1,0 +1,31 @@
+{
+  "title": "Damaged hard drive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Damaged_hard_drive",
+  "revisionId": 328143,
+  "lastEdited": "2025-12-16T21:12:13Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "node": "590a386e86f77429692b27ab",
+    "id": "item_barter_electr_hdd"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- PC block\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The damaged hard drive is based off Seagate's \"Barracuda 7200.10 3.5-inch hard drive\" model made in China."
+    }
+  ]
+}

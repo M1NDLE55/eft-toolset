@@ -1,0 +1,26 @@
+{
+  "title": "VSS/VAL 9x39 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSS/VAL_9x39_30-round_magazine",
+  "revisionId": 353695,
+  "lastEdited": "2026-08-14T21:41:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.254 kg",
+    "grid": "1x2",
+    "trader": "Prapor LL4",
+    "ergonomics": "-3.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "+5",
+    "feedfailure": "Medium",
+    "capacity": "30",
+    "caliber": "9x39mm",
+    "node": "65118f531b90b4fc77015083",
+    "ID": "mag_vss_tochmash_vss_val_9x39_30"
+  },
+  "sections": []
+}

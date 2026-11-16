@@ -1,0 +1,21 @@
+{
+  "title": "Vltor CASV KeyMod 6 inch rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vltor_CASV_KeyMod_6_inch_rail",
+  "revisionId": 340739,
+  "lastEdited": "2026-04-22T07:09:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.075 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-0.25",
+    "node": "59e0bed186f774156f04ce84",
+    "ID": "mount_keymod_vltor_6_inch_casv_rail_section"
+  },
+  "sections": []
+}

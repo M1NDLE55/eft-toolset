@@ -1,0 +1,25 @@
+{
+  "title": "P226 9x19 20-round extended magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_9x19_20-round_extended_magazine",
+  "revisionId": 352582,
+  "lastEdited": "2026-08-09T19:51:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-2",
+    "checkaccuracy": "1",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "9x19mm Parabellum",
+    "node": "5c920e902e221644f31c3c99",
+    "ID": "mag_p226_sig_extended_mag_9x19_20"
+  },
+  "sections": []
+}

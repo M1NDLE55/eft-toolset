@@ -1,0 +1,24 @@
+{
+  "title": "Mosin Rifle Tacfire Tanker Style 7.62x54R muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_Tacfire_Tanker_Style_7.62x54R_muzzle_brake",
+  "revisionId": 366564,
+  "lastEdited": "2026-10-31T04:18:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2 after completing his task The Tarkov Shooter - Part 2",
+    "ergonomics": "-3",
+    "accuracy": "+2",
+    "recoil": "-9",
+    "Heat": "-1",
+    "node": "5bbdb83fd4351e44f824c44b",
+    "ID": "muzzle_mosin_tacfire_tanker_style_762x54r"
+  },
+  "sections": []
+}

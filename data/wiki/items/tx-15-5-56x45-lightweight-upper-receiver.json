@@ -1,0 +1,26 @@
+{
+  "title": "TX-15 5.56x45 Lightweight upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TX-15_5.56x45_Lightweight_upper_receiver",
+  "revisionId": 356570,
+  "lastEdited": "2026-08-26T03:01:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.19 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+7",
+    "velocity": "+0",
+    "recoil": "-2",
+    "Dura Burn": "-2",
+    "Heat": "-1.7",
+    "Cooling": "+1.3",
+    "node": "5d4405aaa4b9361e6a4e6bd3",
+    "ID": "reciever_ar15_lone_star_tx15_lightweight"
+  },
+  "sections": []
+}

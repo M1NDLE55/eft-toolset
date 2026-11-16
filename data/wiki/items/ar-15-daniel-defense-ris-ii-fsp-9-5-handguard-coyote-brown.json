@@ -1,0 +1,26 @@
+{
+  "title": "AR-15 Daniel Defense RIS II FSP 9.5 handguard (Coyote Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Daniel_Defense_RIS_II_FSP_9.5_handguard_(Coyote_Brown)",
+  "revisionId": 342031,
+  "lastEdited": "2026-04-28T00:17:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.3 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+15.5",
+    "recoil": "+0",
+    "Heat": "-1.2",
+    "Cooling": "+3.9",
+    "loot xp": "20",
+    "exam xp": "3",
+    "node": "5c9a26332e2216001219ea70",
+    "ID": "handguard_ar15_dd_ris_ii_fsp_9,5"
+  },
+  "sections": []
+}

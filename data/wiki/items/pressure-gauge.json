@@ -1,0 +1,43 @@
+{
+  "title": "Pressure gauge",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pressure_gauge",
+  "revisionId": 352248,
+  "lastEdited": "2026-08-07T21:03:11Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.8 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5d1b327086f7742525194449",
+    "ID": "item_barter_building_pressuregauge"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Inside the rail station on the yellow metal catwalks"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In the OLI, close to the storage area\n- In Goshan, close to the storage area"
+    }
+  ]
+}

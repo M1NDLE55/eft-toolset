@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Precision Reflex GEN III SPR Top Rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Precision_Reflex_GEN_III_SPR_Top_Rail",
+  "revisionId": 343376,
+  "lastEdited": "2026-05-05T20:50:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.295 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-2",
+    "Cooling": "-1",
+    "node": "68caacb4c8ac87b10507c5a6",
+    "ID": "mount_ar15_precision_reflex_spr_peq_rifle_lenght_top_rail_gen_3"
+  },
+  "sections": []
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Interceptor OTV body armor (Woodland)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Interceptor_OTV_body_armor_(Woodland)",
+  "revisionId": 348642,
+  "lastEdited": "2026-07-30T22:21:05Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "3.8 kg",
+    "grid": "3x3",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 1",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "132",
+    "penalties": "-2% movement speed, -1% turn speed, +0% Ergonomics",
+    "node": "68a89942431252e29a02dbf6",
+    "ID": "item_equipment_armor_otv_woodland_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

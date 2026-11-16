@@ -1,0 +1,21 @@
+{
+  "title": "Armasight Vulcan MG scope eyecup",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armasight_Vulcan_MG_scope_eyecup",
+  "revisionId": 319280,
+  "lastEdited": "2025-10-12T15:48:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+6",
+    "node": "5b3cbc235acfc4001863ac44",
+    "ID": "tactical_vulcan_armasight_eyecup"
+  },
+  "sections": []
+}

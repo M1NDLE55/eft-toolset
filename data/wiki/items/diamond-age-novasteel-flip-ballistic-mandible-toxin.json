@@ -1,0 +1,33 @@
+{
+  "title": "Diamond Age NovaSteel Flip Ballistic Mandible (Toxin)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Diamond_Age_NovaSteel_Flip_Ballistic_Mandible_(Toxin)",
+  "revisionId": 361564,
+  "lastEdited": "2026-09-23T21:26:05Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.358 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in the The Lab Tactical Map",
+    "material": "Armor steel",
+    "armor": "3",
+    "armor coverage": "Face, Jaws, Throat",
+    "durability": "20",
+    "penalties": "+0% movement speed, -1.2% Ergonomics",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6a8338bc992762b7bf08ffb3",
+    "id": "item_equipment_helmet_neosteel_gen2_mandible_toxin_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

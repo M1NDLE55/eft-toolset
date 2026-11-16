@@ -1,0 +1,24 @@
+{
+  "title": "Mosin Rifle Tiger Rock 7.62x51 thread adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_Tiger_Rock_7.62x51_thread_adapter",
+  "revisionId": 255731,
+  "lastEdited": "2023-11-25T13:44:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "price": "₽2,950",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+0",
+    "recoil": "-1",
+    "loot xp": "10",
+    "node": "5cf79599d7f00c10875d9212",
+    "ID": "muzzle_mosin_tiger_rock_muzzle_brake_adapter_multi"
+  },
+  "sections": []
+}

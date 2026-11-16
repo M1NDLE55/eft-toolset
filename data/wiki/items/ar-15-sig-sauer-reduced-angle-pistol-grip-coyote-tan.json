@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 SIG Sauer Reduced Angle Pistol Grip (Coyote Tan)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_SIG_Sauer_Reduced_Angle_Pistol_Grip_(Coyote_Tan)",
+  "revisionId": 342396,
+  "lastEdited": "2026-04-29T01:08:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+5",
+    "recoil": "-1.5",
+    "node": "652911675ae2ae97b80fdf3c",
+    "ID": "pistolgrip_ar15_sig_reduced_angle_pistol_grip_ct"
+  },
+  "sections": []
+}

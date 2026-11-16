@@ -1,0 +1,26 @@
+{
+  "title": "VPO-215 wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-215_wooden_stock",
+  "revisionId": 296191,
+  "lastEdited": "2024-11-09T21:55:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.25 kg",
+    "grid": "4x1",
+    "price": "₽2,350",
+    "ergonomics": "+17",
+    "recoil": "-28",
+    "Heat": "+12",
+    "Cooling": "-8.3",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5de655be4a9f347bc92edb88",
+    "ID": "stock_vpo215_molot_vpo_215_std_wood"
+  },
+  "sections": []
+}

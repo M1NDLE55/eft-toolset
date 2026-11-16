@@ -1,0 +1,27 @@
+{
+  "title": "HK UMP .45 ACP 25-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_UMP_.45_ACP_25-round_magazine",
+  "revisionId": 337759,
+  "lastEdited": "2026-03-06T02:02:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.17 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-1",
+    "checkaccuracy": "1",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "25",
+    "caliber": ".45 ACP",
+    "node": "5fc3e466187fea44d52eda90",
+    "ID": "mag_ump_hk_ump_1143x23_25"
+  },
+  "sections": []
+}

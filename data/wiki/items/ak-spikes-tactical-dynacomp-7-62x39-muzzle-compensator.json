@@ -1,0 +1,26 @@
+{
+  "title": "AK Spikes Tactical Dynacomp 7.62x39 muzzle compensator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Spikes_Tactical_Dynacomp_7.62x39_muzzle_compensator",
+  "revisionId": 321687,
+  "lastEdited": "2025-11-16T18:59:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.076 kg",
+    "grid": "1x1",
+    "price": "₽5,400",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-3",
+    "accuracy": "+0",
+    "recoil": "-8",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "5a9ea27ca2750c00137fa672",
+    "ID": "muzzle_ak_spike_tactical_ak_dynacomp_762x39"
+  },
+  "sections": []
+}

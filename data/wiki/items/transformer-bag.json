@@ -1,0 +1,23 @@
+{
+  "title": "Transformer Bag",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Transformer_Bag",
+  "revisionId": 347943,
+  "lastEdited": "2026-07-16T16:45:32Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bag",
+    "slot": "Backpack",
+    "weight": "0.84 kg",
+    "grid": "3x3",
+    "trader": "Ragman LL1",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics",
+    "slots": "3x3 grid (9 slots)",
+    "node": "56e33680d2720be2748b4576",
+    "id": "tactical_backpack"
+  },
+  "sections": []
+}

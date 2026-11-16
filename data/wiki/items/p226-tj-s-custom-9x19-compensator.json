@@ -1,0 +1,24 @@
+{
+  "title": "P226 TJ's Custom 9x19 compensator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_TJ's_Custom_9x19_compensator",
+  "revisionId": 352583,
+  "lastEdited": "2026-08-09T19:51:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.036 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-1",
+    "accuracy": "-2",
+    "recoil": "-8",
+    "Heat": "-1",
+    "node": "5c6beec32e221601da3578f2",
+    "ID": "muzzle_p226_tj_compensator_9x19"
+  },
+  "sections": []
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Bulbex cable cutter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bulbex_cable_cutter",
+  "revisionId": 362670,
+  "lastEdited": "2026-09-29T22:15:59Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "0.55 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "619cbfeb6b8a1b37a54eebfa",
+    "id": "item_barter_tools_cablecutter"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Bulbex cable cutter is based off \"Knipex cable cutter (ratchet principle, 3-stage)\""
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Benelli M3 Super 90 12ga Toni System 11-shell magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Benelli_M3_Super_90_12ga_Toni_System_11-shell_magazine",
+  "revisionId": 337872,
+  "lastEdited": "2026-03-07T06:39:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.299 kg",
+    "grid": "3x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-4",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "11",
+    "caliber": "12/70",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "625ff3046d721f05d93bf2ee",
+    "ID": "mag_m3_benelli_magazine_extension_12g_11"
+  },
+  "sections": []
+}

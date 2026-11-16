@@ -1,0 +1,32 @@
+{
+  "title": "Smoke balaclava",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Smoke_balaclava",
+  "revisionId": 347765,
+  "lastEdited": "2026-07-11T17:25:17Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽",
+    "node": "5fd8d28367cb5e077335170f",
+    "id": "item_equipment_facecover_smoke"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On Dead Scav\n- On Scavs\n- On Rogues\n- In Airdrop crate\n- In Jacket\n- In Buried barrel cache\n- In Common fund stash\n- In Sports bag\n- In Plastic suitcase"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator Smoke."
+    }
+  ]
+}

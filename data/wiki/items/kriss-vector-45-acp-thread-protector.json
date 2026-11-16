@@ -1,0 +1,21 @@
+{
+  "title": "KRISS Vector .45 ACP thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KRISS_Vector_.45_ACP_thread_protector",
+  "revisionId": 306876,
+  "lastEdited": "2025-03-18T13:52:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "ergonomics": "+0",
+    "Dura Burn": "-4",
+    "node": "5fb6548dd1409e5ca04b54f9",
+    "ID": "muzzle_vector_kriss_thread_protector_std_1143x23"
+  },
+  "sections": []
+}

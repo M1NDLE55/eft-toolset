@@ -1,0 +1,29 @@
+{
+  "title": "Shattered mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shattered_mask",
+  "revisionId": 357820,
+  "lastEdited": "2026-09-08T13:54:50Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.3 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL4",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "5b432b2f5acfc4771e1c6622",
+    "id": "item_equipment_facecover_shatteredmask"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The Shattered lightweight armored mask is a parody of the ballistic face mask from the video game series \"Army of T.W.O\""
+    }
+  ]
+}

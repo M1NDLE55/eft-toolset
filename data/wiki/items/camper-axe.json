@@ -1,0 +1,39 @@
+{
+  "title": "Camper axe",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Camper_axe",
+  "revisionId": 358764,
+  "lastEdited": "2026-09-10T23:05:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.64 kg",
+    "grid": "1x3",
+    "fire modes": "Chop 32 Damage, Stab 35 Damage",
+    "range": "Chop 0.45m, Stab 0.55m",
+    "node": "5c012ffc0db834001d23f03f",
+    "ID": "weapon_utility_axe"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Weapon box (6x6)\n- Partisan\n- Kaban's guards"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- In Leon's hideout"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The axe appears to be based off either a \"Fiskars X7\" or a \"Gerber 14-inch Freescape Hatchet\", it is most likely it was based of the former considering a model of what seems to be the early camper axe is a 1:1 recreation of the Fiskars X7, the model was scrapped and altered into an unbranded model presumably to avoid copyright issues, the original model was removed in the patch 0.12.0.4785 along with another Gerber weapon which was the Grylls Ultimate Fixed Blade, However a replacement model for it was never re-implemented, removing the weapon completely."
+    }
+  ]
+}

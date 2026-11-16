@@ -1,0 +1,20 @@
+{
+  "title": "Chiappa Rhino front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chiappa_Rhino_front_sight",
+  "revisionId": 210724,
+  "lastEdited": "2022-09-20T10:42:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0"
+  },
+  "sections": []
+}

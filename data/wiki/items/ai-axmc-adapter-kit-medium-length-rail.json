@@ -1,0 +1,20 @@
+{
+  "title": "AI AXMC Adapter Kit medium length rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_Adapter_Kit_medium_length_rail",
+  "revisionId": 296634,
+  "lastEdited": "2024-11-12T13:25:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL4",
+    "node": "628120dd308cb521f87a8fa1",
+    "ID": "mount_keyslot_accuracy_international_adapter_kit_medium_rail_pb"
+  },
+  "sections": []
+}

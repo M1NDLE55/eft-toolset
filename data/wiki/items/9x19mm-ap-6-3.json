@@ -1,0 +1,36 @@
+{
+  "title": "9x19mm AP 6.3",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_AP_6.3",
+  "revisionId": 335522,
+  "lastEdited": "2026-02-14T21:56:42Z",
+  "kind": "ammo",
+  "categories": [
+    "9x19mm Parabellum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.009 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "velocity": "392 m/s",
+    "damage": "52",
+    "penetration": "30",
+    "armor damage": "48",
+    "ricochet": "20%",
+    "durability burn": "+35",
+    "heat": "+13.6",
+    "feedfailure": "Medium",
+    "misfire": "Medium",
+    "node": "5c925fa22e221601da359b7b",
+    "id": "patron_9x19_ap_63"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

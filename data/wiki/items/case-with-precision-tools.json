@@ -1,0 +1,25 @@
+{
+  "title": "Case with precision tools",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Case_with_precision_tools",
+  "revisionId": 309898,
+  "lastEdited": "2025-04-10T20:30:03Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "6 kg",
+    "grid": "4x4",
+    "node": "66b22630a6b4e5ec7c02cdb7",
+    "id": "item_quest_instruments"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Secrets of Polikhim from Mechanic"
+    }
+  ]
+}

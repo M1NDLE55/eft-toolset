@@ -1,0 +1,24 @@
+{
+  "title": "5.45x39mm BS gs ammo pack (120 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_BS_gs_ammo_pack_(120_pcs)",
+  "revisionId": 367156,
+  "lastEdited": "2026-11-02T23:09:57Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.1 kg",
+    "grid": "2x1",
+    "node": "57372b832459776701014e41 57372bad245977670b7cd242",
+    "ID": "item_ammo_box_545x39_120_bs item_ammo_box_545x39_120_bs_damaged"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- There is also a \"damaged\" variant of this item that has a slightly different image but also always contains 120 rounds."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Maska-1SCh face shield (Killa Edition)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Maska-1SCh_face_shield_(Killa_Edition)",
+  "revisionId": 346861,
+  "lastEdited": "2026-06-14T21:09:23Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1.1 kg",
+    "grid": "2x1",
+    "material": "Armor steel",
+    "armor": "6",
+    "armor coverage": "Face, Eyes, Jaws",
+    "durability": "50",
+    "blindness protect": "35%",
+    "penalties": "+0% turn speed, -13% Ergonomics",
+    "BlocksEyewear": "No",
+    "node": "5c0e842486f77443a74d2976",
+    "id": "item_equipment_helmet_maska_1sh_shield_killa"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- While it may seem like it, it's not possible to shoot through the eye-slit"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Killa\n- Vengeful Killa"
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained by completing the quest Surprise"
+    }
+  ]
+}

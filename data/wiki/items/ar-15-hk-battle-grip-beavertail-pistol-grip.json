@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 HK Battle Grip Beavertail pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_HK_Battle_Grip_Beavertail_pistol_grip",
+  "revisionId": 356494,
+  "lastEdited": "2026-08-26T02:14:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2: Black, Green brown",
+    "ergonomics": "+3",
+    "recoil": "-1",
+    "node": "5bb20e0ed4351e3bac1212dc 6193dcd0f8ee7e52e4210a28",
+    "ID": "pistolgrip_ar15_hk_battle_grip_beavertail pistolgrip_ar15_hk_battle_grip_beavertail_ral"
+  },
+  "sections": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Horse figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Horse_figurine",
+  "revisionId": 363450,
+  "lastEdited": "2026-10-06T22:01:34Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.5 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "loot xp": "30",
+    "exam xp": "5",
+    "node": "573478bc24597738002c6175",
+    "id": "horse_figurine"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

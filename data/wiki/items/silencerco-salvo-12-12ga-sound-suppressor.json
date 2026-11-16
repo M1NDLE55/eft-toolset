@@ -1,0 +1,27 @@
+{
+  "title": "SilencerCo Salvo 12 12ga sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SilencerCo_Salvo_12_12ga_sound_suppressor",
+  "revisionId": 268821,
+  "lastEdited": "2024-02-05T17:57:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.97 kg",
+    "grid": "2x1",
+    "price": "₽35,500",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-28",
+    "velocity": "+1.2",
+    "recoil": "-13",
+    "Dura Burn": "+75",
+    "Heat": "+18",
+    "Cooling": "+13",
+    "node": "5b363dd25acfc4001a598fd2",
+    "ID": "silencer_base_silencerco_salvo_12g"
+  },
+  "sections": []
+}

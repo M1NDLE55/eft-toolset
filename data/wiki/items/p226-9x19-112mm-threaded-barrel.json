@@ -1,0 +1,26 @@
+{
+  "title": "P226 9x19 112mm threaded barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_9x19_112mm_threaded_barrel",
+  "revisionId": 352587,
+  "lastEdited": "2026-08-09T19:52:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-2",
+    "velocity": "-2",
+    "MOA": "10.31",
+    "recoil": "-2.8",
+    "Heat": "+14",
+    "Cooling": "+21",
+    "node": "587de4282459771bca0ec90b",
+    "ID": "barrel_p226_112mm_threaded_9x19"
+  },
+  "sections": []
+}

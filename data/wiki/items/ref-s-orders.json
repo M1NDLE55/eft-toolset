@@ -1,0 +1,25 @@
+{
+  "title": "Ref’s orders",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ref%E2%80%99s_orders",
+  "revisionId": 346524,
+  "lastEdited": "2026-06-07T01:34:22Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6a1eb24a5f583f09ff0181fa",
+    "id": "event_arena_letter2"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Guardian of Nature"
+    }
+  ]
+}

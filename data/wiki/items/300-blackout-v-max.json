@@ -1,0 +1,39 @@
+{
+  "title": ".300 Blackout V-Max",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.300_Blackout_V-Max",
+  "revisionId": 322856,
+  "lastEdited": "2025-11-18T21:29:27Z",
+  "kind": "ammo",
+  "categories": [
+    ".300 Blackout ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "velocity": "723 m/s",
+    "damage": "72",
+    "accuracy": "+30",
+    "recoil": "-10",
+    "penetration": "20",
+    "armor damage": "25",
+    "ricochet": "10%",
+    "l bleed chance": "+22",
+    "durability burn": "+10",
+    "heat": "+80",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "6196364158ef8c428c287d9f",
+    "id": "patron_762x35_vmax"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

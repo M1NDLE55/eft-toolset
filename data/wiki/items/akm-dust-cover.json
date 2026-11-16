@@ -1,0 +1,23 @@
+{
+  "title": "AKM dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM_dust_cover",
+  "revisionId": 322062,
+  "lastEdited": "2025-11-17T01:18:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.088 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+3",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "node": "59d6507c86f7741b846413a2",
+    "ID": "reciever_ak_izhmash_akm_std"
+  },
+  "sections": []
+}

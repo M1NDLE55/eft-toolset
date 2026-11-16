@@ -1,0 +1,28 @@
+{
+  "title": "FN Five-seveN 5.7x28 120mm threaded barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_Five-seveN_5.7x28_120mm_threaded_barrel",
+  "revisionId": 342066,
+  "lastEdited": "2026-04-28T01:25:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "price": "₽4,200",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+0",
+    "velocity": "+0",
+    "MOA": "8.25",
+    "recoil": "-2.4",
+    "Heat": "+12",
+    "Cooling": "+18",
+    "loot xp": "10",
+    "node": "5d3eb59ea4b9361c284bb4b2",
+    "ID": "barrel_57_fn_120mm_threaded_57x28"
+  },
+  "sections": []
+}

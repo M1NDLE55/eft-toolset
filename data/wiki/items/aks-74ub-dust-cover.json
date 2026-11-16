@@ -1,0 +1,25 @@
+{
+  "title": "AKS-74UB dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74UB_dust_cover",
+  "revisionId": 322045,
+  "lastEdited": "2025-11-17T01:01:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.142 kg",
+    "grid": "2x1",
+    "sightrange": "500",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "node": "5839a7742459773cf9693481",
+    "ID": "reciever_aks74u_izhmash_aks74ub_std"
+  },
+  "sections": []
+}

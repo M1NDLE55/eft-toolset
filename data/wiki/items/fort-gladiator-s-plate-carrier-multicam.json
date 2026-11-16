@@ -1,0 +1,46 @@
+{
+  "title": "FORT Gladiator-S plate carrier (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FORT_Gladiator-S_plate_carrier_(MultiCam)",
+  "revisionId": 360531,
+  "lastEdited": "2026-09-18T15:39:06Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "4.83 kg",
+    "grid": "3x4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Groin",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "235",
+    "penalties": "-5% movement speed, -3.5% turn speed, -3% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "22 Slots",
+    "node": "69d28cdc274c032dd804afe0",
+    "ID": "item_equipment_armor_gladiator_s_mltcm"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Glukhar's \"assault\" followers\n- Kaban's followers\n- Kollontay's followers\n- Reshala's followers"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

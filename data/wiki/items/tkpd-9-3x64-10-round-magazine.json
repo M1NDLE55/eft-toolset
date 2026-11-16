@@ -1,0 +1,27 @@
+{
+  "title": "TKPD 9.3x64 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TKPD_9.3x64_10-round_magazine",
+  "revisionId": 343339,
+  "lastEdited": "2026-05-05T19:39:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.112 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "checkmodifier": "-15",
+    "loadmodifier": "-15",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "9.3x64mm",
+    "node": "68aef9bf4efeccb5220d25c6",
+    "ID": "mag_svd_izhmash_svdk_std_93x64_10"
+  },
+  "sections": []
+}

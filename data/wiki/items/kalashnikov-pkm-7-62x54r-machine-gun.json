@@ -1,0 +1,42 @@
+{
+  "title": "Kalashnikov PKM 7.62x54R machine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kalashnikov_PKM_7.62x54R_machine_gun",
+  "revisionId": 352284,
+  "lastEdited": "2026-08-07T21:21:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Light machine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light machine gun",
+    "slot": "Primary",
+    "weight": "8.994 kg",
+    "grid": "6x3",
+    "fire modes": "Full Auto",
+    "sightrange": "500",
+    "ergonomics": "13",
+    "velocity": "976 m/s",
+    "range": "750 m",
+    "MOA": "1.08",
+    "Weaprecoil": "Vertical: 81, Horizontal: 301",
+    "rof": "650",
+    "caliber": "7.62x54mmR",
+    "def mag": "PK 7.62x54R 100-round box",
+    "node": "64637076203536ad5600c990",
+    "ID": "weapon_zid_pkm_762x54r"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Unlike other weapons, the PKM cannot sustain automatic fire when switching between point-fire and aiming down sights."
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Variant Name |\n| PKM Zenit |"
+    }
+  ]
+}

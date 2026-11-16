@@ -1,0 +1,27 @@
+{
+  "title": "Neoprene mask (M90 Desert)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Neoprene_mask_(M90_Desert)",
+  "revisionId": 348564,
+  "lastEdited": "2026-07-30T22:02:13Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 0",
+    "node": "67aaf808bf7609058606a926",
+    "id": "item_equipment_facecover_redflame_arena_bp_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

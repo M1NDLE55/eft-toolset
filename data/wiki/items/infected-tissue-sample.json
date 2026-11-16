@@ -1,0 +1,31 @@
+{
+  "title": "Infected tissue sample",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Infected_tissue_sample",
+  "revisionId": 367552,
+  "lastEdited": "2026-11-03T22:41:36Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "6acc4af5ada0d6309902b049",
+    "id": "item_hall_quest_blood_hazard"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be put inside secure containers\n- 3 can be dropped per raid"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Halloween: For the Greater Good - An Agreement\n- 2 can be obtained as a quest reward from Halloween: Danger Zone"
+    }
+  ]
+}

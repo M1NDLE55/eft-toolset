@@ -1,0 +1,18 @@
+{
+  "title": "5.45x39mm SP ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_SP_ammo_pack_(30_pcs)",
+  "revisionId": 367170,
+  "lastEdited": "2026-11-02T23:10:43Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "573733c72459776b0b7b51b0",
+    "id": "item_ammo_box_545x39_30_bpz_sp"
+  },
+  "sections": []
+}

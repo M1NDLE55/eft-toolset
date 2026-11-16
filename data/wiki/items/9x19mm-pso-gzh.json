@@ -1,0 +1,36 @@
+{
+  "title": "9x19mm PSO gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_PSO_gzh",
+  "revisionId": 322753,
+  "lastEdited": "2025-11-18T21:14:19Z",
+  "kind": "ammo",
+  "categories": [
+    "9x19mm Parabellum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1, Jaeger LL1",
+    "velocity": "340 m/s",
+    "damage": "59",
+    "penetration": "10",
+    "armor damage": "32",
+    "ricochet": "6.5%",
+    "heat": "+1.2",
+    "feedfailure": "Low",
+    "misfire": "Medium",
+    "effects": "Subsonic",
+    "node": "58864a4f2459770fcc257101",
+    "id": "patron_9x19_PSO_gzh"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Tac-Kek SAPI Level III+ ballistic plate (Replica)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tac-Kek_SAPI_Level_III%2B_ballistic_plate_(Replica)",
+  "revisionId": 361908,
+  "lastEdited": "2026-09-24T15:05:40Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light Armor plate",
+    "weight": "1.1 kg",
+    "grid": "2x2",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "1",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "90",
+    "penalties": "-0.5% movement speed, -0.25% turn speed, -0.5% Ergonomics",
+    "node": "6943c85be2f21398e70378cc",
+    "id": "item_equipment_plate_SAPI_tac_kek_1class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

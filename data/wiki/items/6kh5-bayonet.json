@@ -1,0 +1,31 @@
+{
+  "title": "6Kh5 Bayonet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6Kh5_Bayonet",
+  "revisionId": 365058,
+  "lastEdited": "2026-10-26T21:47:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.223 kg",
+    "grid": "2x1",
+    "fire modes": "Chop 24 Damage, Stab 31 Damage",
+    "range": "Chop 0.4m, Stab 0.5m",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5bffdc370db834001d23eca8",
+    "ID": "weapon_izhmash_6x5"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The design for the 6Kh5 Bayonet seems to based on the real life Russian AK-127B Bayonet."
+    }
+  ]
+}

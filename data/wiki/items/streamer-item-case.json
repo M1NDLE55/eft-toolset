@@ -1,0 +1,41 @@
+{
+  "title": "Streamer item case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Streamer_item_case",
+  "revisionId": 345618,
+  "lastEdited": "2026-05-30T00:53:15Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "7 kg",
+    "grid": "3x3",
+    "effect": "Provides 88 inventory slots while only taking up 9",
+    "node": "66bc98a01a47be227a5e956e",
+    "ID": "item_container_streamer_case"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Streamer item case is a container with the purpose of saving space within the player's inventory. It provides 88 inventory slots in a 8x11 grid and only takes up 9 inventory slots itself. It can only store items required for the quest Collector from Fence."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Is This a Reference?"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This item was first introduced as a reward for a promotional event on Twitch in September 2024. Players that participated in the event can claim it for their PvP character on the Escape from Tarkov website without having to complete the quest Is This a Reference?."
+    }
+  ]
+}

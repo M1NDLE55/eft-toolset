@@ -1,0 +1,50 @@
+{
+  "title": "Hand drill",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hand_drill",
+  "revisionId": 366593,
+  "lastEdited": "2026-10-31T04:53:44Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "2.3 kg",
+    "grid": "3x2",
+    "node": "5d1b317c86f7742523398392",
+    "ID": "item_barter_tools_handdrill"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the Goshan back-stock shelves\n- On the Idea back-stock shelves\n- On top of barrel next to hole in the fence.\n- On top of barrel next to broken bridge hidden cache.\n- In the back of a heavy truck by Railway Exfil with the cement walkway behind it"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In the gas station/grocery store near the Svetily dead end extract\n- In the admin offices of health resort\n- In West Wing Room 301 on the floor\n- On a box at the back of a house in Svetliy Village\n- On the desk in the radar towers main room\n- On a box in the construction area near the shore."
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On racks in the storage containers\n- At the electric pylon, sitting on the wooden spools\n- In repair shop, beside the green screen room\n- In one of the cabins near Trailer Park Worker's Shack\n- In gas station storage room"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- At the forklift between the silos"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the first room at Scav bunker.\n- Next to the campfire in Dead Man's Place.\n- On the floor of Building on road between Bus Station and UN Roadblock.\n- On the shelf underground in Scav Bunker.\n- On top of a crate in the northeast corner of EMERCOM Camp.\n- In the ritual circle"
+    }
+  ]
+}

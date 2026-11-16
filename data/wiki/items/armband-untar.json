@@ -1,0 +1,31 @@
+{
+  "title": "Armband (UNTAR)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(UNTAR)",
+  "revisionId": 363152,
+  "lastEdited": "2026-10-04T23:02:59Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "619bdf9cc9546643a67df6f8",
+    "id": "item_equipment_armband_un"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Peacekeeping Mission"
+    }
+  ]
+}

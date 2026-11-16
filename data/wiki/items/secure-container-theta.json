@@ -1,0 +1,32 @@
+{
+  "title": "Secure container Theta",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_container_Theta",
+  "revisionId": 366969,
+  "lastEdited": "2026-11-01T20:58:42Z",
+  "kind": "item",
+  "categories": [
+    "Secure containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Secure container",
+    "slot": "Pouch",
+    "weight": "1.4 kg",
+    "grid": "3x3",
+    "slots": "4x2 + 1x2 grid (10 slots)",
+    "node": "664a55d84a90fc2c8a6305c9",
+    "ID": "Tetta_container"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only fit:\n  - Document case\n  - Dogtag case\n  - Gingy keychain\n  - Injector case\n  - Key tool\n  - Keycard holder case\n  - S I C C organizational pouch\n  - Simple wallet\n  - WZ Wallet\n  - Loot\n  - Provisions\n  - Meds\n  - Keys, Keycards & Maps\n  - Weapon mods (Besides magazines, special scopes and some mounts)\n  - Armor plates\n  - Currency\n  - Armbands\n  - Earpieces\n  - Vanity Face cover\n  - Vanity Headwear\n  - Vanity Eyewear\n  - Melee weapons\n  - Special equipment (Besides repair kits)"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Between Two Fires or Decisions, Decisions or Postponed Reward (Questline starts with Easy Money - Part 1, requires Escape from Tarkov: Arena)\nSeasonal change: the quests do not award the container directly and instead unlock a barter for it at Ref LL3."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": ".50 AE Copper Solid ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_AE_Copper_Solid_ammo_pack_(20_pcs)",
+  "revisionId": 367104,
+  "lastEdited": "2026-11-02T23:07:10Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "676009ddb623f3b8ba079419",
+    "ID": "item_ammo_box_127x33_20_cooper"
+  },
+  "sections": []
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Document case (EXFIL Brothers)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Document_case_(EXFIL_Brothers)",
+  "revisionId": 363576,
+  "lastEdited": "2026-10-07T16:12:43Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "0.82 kg",
+    "grid": "1x2",
+    "effect": "Provides 16 inventory slots while only taking up 2",
+    "node": "6a99780174a5ba1141063ea7",
+    "id": "item_info_docbag_candidate"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only obtainable as a reward from the \"EXFIL Brothers\" program."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Document case is a container with the purpose of saving space within the player's inventory. It provides 16 inventory slots in a 4x4 grid and only takes up 2 inventory slots itself. It can only store:\n- Currency\n- Keys & Keycards\n- Posters\n- Maps\n- Info items\n- Keycard holder case\n- DesmondPilak CD\n- Physical Bitcoin\n- Veritas guitar pick"
+    }
+  ]
+}

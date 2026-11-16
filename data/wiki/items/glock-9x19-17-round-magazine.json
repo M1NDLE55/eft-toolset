@@ -1,0 +1,29 @@
+{
+  "title": "Glock 9x19 17-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_17-round_magazine",
+  "revisionId": 338860,
+  "lastEdited": "2026-03-18T09:37:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.096 kg",
+    "grid": "1x1",
+    "price": "₽1,400",
+    "trader": "Mechanic LL1",
+    "checkaccuracy": "1",
+    "checkmodifier": "-10",
+    "loadmodifier": "-10",
+    "feedfailure": "Low",
+    "capacity": "17",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5a718b548dc32e000d46d262",
+    "ID": "mag_glock_glock_std_9x19_17"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Norotos Titanium Advanced Tactical Mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Norotos_Titanium_Advanced_Tactical_Mount",
+  "revisionId": 344237,
+  "lastEdited": "2026-05-24T21:25:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Helmet mods",
+    "Helmet mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "node": "5a16b8a9fcdbcb00165aa6ca",
+    "ID": "nvg_norotos_tatm_universal"
+  },
+  "sections": []
+}

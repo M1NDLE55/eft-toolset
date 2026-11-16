@@ -1,0 +1,21 @@
+{
+  "title": "SR-1MP sound suppressor mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-1MP_sound_suppressor_mount",
+  "revisionId": 211497,
+  "lastEdited": "2022-09-20T11:17:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-1",
+    "node": "5a27b3d0c4a282000d721ec1",
+    "ID": "mount_sr1mp_tochmash_silencer_base"
+  },
+  "sections": []
+}

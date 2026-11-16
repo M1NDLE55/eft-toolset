@@ -1,0 +1,66 @@
+{
+  "title": "Propane tank (5L)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Propane_tank_(5L)",
+  "revisionId": 358853,
+  "lastEdited": "2026-09-11T20:36:30Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable material",
+    "weight": "5.3 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "node": "59fafb5d86f774067a6f2084",
+    "id": "item_barter_flam_propane"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the shelving in the Oli store\n- In the back warehouse area of Goshan, on the shelves\n- In the power station\n- At the loose loot spawns inside object 21WS Container\n- At the loose loot spawns inside Object 11SR Room\n- On barrels next to Hole in fence extract"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- At the camp in Dead Man's Place\n- At the back of the crashed airplane\n- At the train depot"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- At the desks and stoves of the Old House closest to the Ruined House Fence extract (chairman house)"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On top of the box where you need to place the document in Delivery From the Past"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the floor in front of the cash register desk at New Gas Station"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- On boxes lining the construction area that leads to the Water Treatment Plant."
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On metal shelves on the ground floor of the Black Knight building."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from A Fuel Matter\n- 2 can be obtained as a quest reward from The Huntsman Path - Justice\n- 1 can be obtained as a quest reward from No Swiping"
+    }
+  ]
+}

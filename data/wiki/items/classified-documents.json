@@ -1,0 +1,30 @@
+{
+  "title": "Classified documents",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Classified_documents",
+  "revisionId": 356000,
+  "lastEdited": "2026-08-25T13:46:43Z",
+  "kind": "item",
+  "categories": [
+    "BattlePass documents"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "BattlePass documents",
+    "weight": "0.42 kg",
+    "grid": "1x2",
+    "node": "6a3183258f113efdb7093622",
+    "ID": "Item_barter_info_secretdoc"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used to unlock rewards from the Season 1: KORD BREACH BattlePass.\n- A total of 501 documents are required to complete the BattlePass in Season 1: KORD BREACH."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Can only be purchased in the Expansion Hub for TarCoins.\n  - One is awarded for free upon account creation."
+    }
+  ]
+}

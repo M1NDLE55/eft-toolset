@@ -1,0 +1,35 @@
+{
+  "title": "Diamond Age Bastion helmet armor plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Diamond_Age_Bastion_helmet_armor_plate",
+  "revisionId": 319861,
+  "lastEdited": "2025-10-24T14:53:58Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.99 kg",
+    "grid": "2x1",
+    "material": "Ceramic",
+    "armor": "6",
+    "armor coverage": "Head top, Nape",
+    "durability": "40",
+    "penalties": "-6% turn speed, -5% Ergonomics",
+    "node": "5ea18c84ecf1982c7712d9a2",
+    "id": "item_equipment_helmet_diamond_age_bastion_shield"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The Diamond Age Bastion helmet is a modular combat helmet. Despite the 6th class protection ingame, this armor is closer to a strong 4 or weak 5, as it is only intended to stop M855A1 combined with the Bastion helmet in something analogous to a combined NIJ III+.\n- This along with the Diamond Age Bastion helmet appears to no longer be for sale. The company itself has rebranded to Adept Armor."
+    }
+  ]
+}

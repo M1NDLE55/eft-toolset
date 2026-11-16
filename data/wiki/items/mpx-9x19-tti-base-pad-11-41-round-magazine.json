@@ -1,0 +1,30 @@
+{
+  "title": "MPX 9x19 TTI \"Base Pad +11\" 41-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_9x19_TTI_%22Base_Pad_%2B11%22_41-round_magazine",
+  "revisionId": 337611,
+  "lastEdited": "2026-03-06T00:24:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "price": "₽5,273",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "checkaccuracy": "1",
+    "checkmodifier": "+5",
+    "loadmodifier": "+5",
+    "feedfailure": "Very low",
+    "capacity": "41",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c5db6652e221600113fba51",
+    "ID": "mag_mpx_tti_sig_mag_w_base_pad_9x19_41"
+  },
+  "sections": []
+}

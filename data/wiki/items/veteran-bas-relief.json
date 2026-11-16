@@ -1,0 +1,25 @@
+{
+  "title": "Veteran Bas-Relief",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Veteran_Bas-Relief",
+  "revisionId": 360385,
+  "lastEdited": "2026-09-15T15:56:22Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "1 kg",
+    "grid": "2x2",
+    "node": "6a91b5142f7e57600b0a4ccc",
+    "id": "item_barter_flyers_leagues_rank_3"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

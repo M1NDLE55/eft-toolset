@@ -1,0 +1,21 @@
+{
+  "title": "RPD wooden pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_wooden_pistol_grip",
+  "revisionId": 342385,
+  "lastEdited": "2026-04-29T00:58:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+2",
+    "node": "6513f13a8cb24472490ee32f",
+    "ID": "pistolgrip_rpd_zid_wood_std"
+  },
+  "sections": []
+}

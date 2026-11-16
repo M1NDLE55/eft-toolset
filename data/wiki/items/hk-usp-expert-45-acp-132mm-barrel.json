@@ -1,0 +1,26 @@
+{
+  "title": "HK USP Expert .45 ACP 132mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_Expert_.45_ACP_132mm_barrel",
+  "revisionId": 356367,
+  "lastEdited": "2026-08-26T00:32:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.141 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1",
+    "velocity": "-1",
+    "MOA": "8.94",
+    "recoil": "-1.5",
+    "Heat": "+10",
+    "Cooling": "+15",
+    "node": "6194eff92d2c397d6600348b",
+    "ID": "barrel_hk_usp_132mm_1143x23_expert"
+  },
+  "sections": []
+}

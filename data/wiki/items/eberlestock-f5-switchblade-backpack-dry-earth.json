@@ -1,0 +1,23 @@
+{
+  "title": "Eberlestock F5 Switchblade backpack (Dry Earth)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Eberlestock_F5_Switchblade_backpack_(Dry_Earth)",
+  "revisionId": 324232,
+  "lastEdited": "2025-11-21T22:48:40Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.632 kg",
+    "grid": "5x6",
+    "penalties": "-3% movement speed, -1% turn speed, -3% Ergonomics",
+    "slots": "5x6 (30 slots)",
+    "exam xp": "10",
+    "node": "5f5e467b0bc58666c37e7821",
+    "ID": "item_equipment_backpack_f5switchblade"
+  },
+  "sections": []
+}

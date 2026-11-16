@@ -1,0 +1,22 @@
+{
+  "title": "HK USP Tactical thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_Tactical_thread_protector",
+  "revisionId": 318897,
+  "lastEdited": "2025-10-02T22:24:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+1",
+    "Dura Burn": "-5",
+    "node": "6194f1f918a3974e5e7421e4",
+    "ID": "muzzle_usp_hk_usp_std_thread_protector_1143x23"
+  },
+  "sections": []
+}

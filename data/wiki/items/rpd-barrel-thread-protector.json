@@ -1,0 +1,26 @@
+{
+  "title": "RPD barrel thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_barrel_thread_protector",
+  "revisionId": 307284,
+  "lastEdited": "2025-03-22T13:15:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-2",
+    "Heat": "+0",
+    "node": "6513f0f5e63f29908d0ffab8",
+    "ID": "muzzle_rpd_zid_thread_protector_762x39"
+  },
+  "sections": []
+}

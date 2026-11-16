@@ -1,0 +1,18 @@
+{
+  "title": "7.62x39mm FMJ ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_FMJ_ammo_pack_(20_pcs)",
+  "revisionId": 367220,
+  "lastEdited": "2026-11-02T23:13:18Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "64ace9d9b5bf5e95f50a4c1d",
+    "ID": "item_ammo_box_762x39_20_fmj"
+  },
+  "sections": []
+}

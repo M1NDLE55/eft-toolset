@@ -1,0 +1,32 @@
+{
+  "title": "HK MP7A2 4.6x30 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP7A2_4.6x30_submachine_gun",
+  "revisionId": 345059,
+  "lastEdited": "2026-05-26T17:09:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "2.23 kg",
+    "grid": "3x1",
+    "trader": "Ref LL2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "72.5",
+    "velocity": "701 m/s",
+    "range": "200 m",
+    "MOA": "8.34",
+    "Weaprecoil": "Vertical: 41, Horizontal: 146",
+    "rof": "950",
+    "caliber": "4.6x30mm HK",
+    "def mag": "HK MP7 4.6x30 20-round magazine",
+    "node": "5bd70322209c4d00d7167b8f",
+    "ID": "weapon_hk_mp7a2_46x30"
+  },
+  "sections": []
+}

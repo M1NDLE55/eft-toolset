@@ -1,0 +1,29 @@
+{
+  "title": "ZSh-1-2M helmet (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ZSh-1-2M_helmet_(Olive_Drab)",
+  "revisionId": 344391,
+  "lastEdited": "2026-05-24T22:13:51Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "3.7 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL2",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "63",
+    "RicochetChance": "Medium",
+    "penalties": "+0% movement speed, -2% turn speed, +0% Ergonomics, High sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5aa7e454e5b5b0214e506fa2",
+    "id": "helmet_zsh_1-2m_v1"
+  },
+  "sections": []
+}

@@ -1,0 +1,39 @@
+{
+  "title": "20/70 Poleva-3 slug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20/70_Poleva-3_slug",
+  "revisionId": 322831,
+  "lastEdited": "2025-11-18T21:26:32Z",
+  "kind": "ammo",
+  "categories": [
+    "20/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.029 kg",
+    "grid": "1x1",
+    "price": "₽48",
+    "trader": "Jaeger LL1",
+    "velocity": "425 m/s",
+    "damage": "140",
+    "accuracy": "+110",
+    "recoil": "-15",
+    "penetration": "14",
+    "armor damage": "35",
+    "ricochet": "10%",
+    "durability burn": "+50",
+    "heat": "+106.6",
+    "feedfailure": "Very low",
+    "misfire": "High",
+    "node": "5d6e6a53a4b9361bd473feec",
+    "id": "patron_20x70_slug_poleva_3"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

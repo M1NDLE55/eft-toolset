@@ -1,0 +1,28 @@
+{
+  "title": "MP-133 12ga 750mm barrel with rib",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-133_12ga_750mm_barrel_with_rib",
+  "revisionId": 266844,
+  "lastEdited": "2024-01-17T01:03:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.55 kg",
+    "grid": "5x1",
+    "price": "₽7,680",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-17",
+    "velocity": "+18.9",
+    "MOA": "10.31",
+    "recoil": "-10",
+    "Dura Burn": "+10",
+    "Heat": "-18",
+    "Cooling": "-14",
+    "node": "5608379a4bdc2d26448b4569",
+    "ID": "barrel_mr133_750mm_plank"
+  },
+  "sections": []
+}

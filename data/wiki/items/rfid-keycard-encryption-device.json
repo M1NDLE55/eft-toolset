@@ -1,0 +1,19 @@
+{
+  "title": "RFID keycard encryption device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RFID_keycard_encryption_device",
+  "revisionId": 339355,
+  "lastEdited": "2026-03-28T00:06:18Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "node": "67c0324acc87f341720274b6",
+    "ID": "q_card_encryption_device"
+  },
+  "sections": []
+}

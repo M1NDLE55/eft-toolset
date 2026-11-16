@@ -1,0 +1,27 @@
+{
+  "title": "SilencerCo Osprey 9 9x19 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SilencerCo_Osprey_9_9x19_sound_suppressor",
+  "revisionId": 333402,
+  "lastEdited": "2026-02-02T17:35:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "price": "₽41,300",
+    "trader": "Peacekeeper LL3, Mechanic LL3",
+    "ergonomics": "-17",
+    "velocity": "+0.7",
+    "recoil": "-8",
+    "Dura Burn": "+65",
+    "Heat": "+13",
+    "Cooling": "+8",
+    "node": "5a32a064c4a28200741e22de",
+    "ID": "silencer_all_silencerco_osprey_9_9x19"
+  },
+  "sections": []
+}

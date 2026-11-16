@@ -1,0 +1,35 @@
+{
+  "title": "TerraGroup Labs advertisement",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_advertisement",
+  "revisionId": 331647,
+  "lastEdited": "2026-01-07T19:42:09Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a0a91af26c56ee1090728",
+    "id": "item_barter_flyers_arrs1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This poster is a reference to the 3rd season of Chronicles of Ryzhy ARG. Players had to find these posters in France, Japan, Russia and the US to get different Google Drive links, that were used to progress the ARG further. The text in the bottom left corner reads \"We are waiting for you at the address: 1zOivDIyL3IClKLjq3upuPk91xUQEt5X9\", hinting at a Google Drive folder published by \"Mr Kermen\"."
+    }
+  ]
+}

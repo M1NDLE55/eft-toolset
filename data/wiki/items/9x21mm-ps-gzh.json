@@ -1,0 +1,38 @@
+{
+  "title": "9x21mm PS gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x21mm_PS_gzh",
+  "revisionId": 362908,
+  "lastEdited": "2026-10-03T10:53:42Z",
+  "kind": "ammo",
+  "categories": [
+    "9x21mm Gyurza ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.011 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "velocity": "410 m/s",
+    "damage": "59",
+    "accuracy": "+1",
+    "recoil": "-3",
+    "penetration": "22",
+    "armor damage": "39",
+    "ricochet": "40%",
+    "durability burn": "+35",
+    "heat": "+18.8",
+    "feedfailure": "Medium",
+    "misfire": "Very low",
+    "node": "5a269f97c4a282000b151807",
+    "id": "patron_9x21_sp10"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

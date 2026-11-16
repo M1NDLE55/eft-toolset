@@ -1,0 +1,23 @@
+{
+  "title": "SA58/FAL Belgian Style handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58/FAL_Belgian_Style_handguard",
+  "revisionId": 340856,
+  "lastEdited": "2026-04-22T08:34:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.51 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+16",
+    "recoil": "+0",
+    "Cooling": "-4.9",
+    "node": "5b7d671b5acfc43d82528ddd",
+    "ID": "handguard_fal_ds_arms_belgian_style_full_lenght"
+  },
+  "sections": []
+}

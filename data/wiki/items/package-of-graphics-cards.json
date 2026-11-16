@@ -1,0 +1,32 @@
+{
+  "title": "Package of graphics cards",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Package_of_graphics_cards",
+  "revisionId": 352981,
+  "lastEdited": "2026-08-09T22:16:46Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "1.2 kg",
+    "grid": "1x2",
+    "loot xp": "150",
+    "exam xp": "45",
+    "node": "5ac620eb86f7743a8e6e0da0",
+    "id": "quest_package"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This package does not actually contain any graphics cards and is only useful for the quest Farming."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Farming from Mechanic"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "AKS-74 skeletonized stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74_skeletonized_stock",
+  "revisionId": 294433,
+  "lastEdited": "2024-10-27T10:26:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.264 kg",
+    "grid": "2x1",
+    "ergonomics": "+10",
+    "recoil": "-21",
+    "node": "5ab626e4d8ce87272e4c6e43",
+    "ID": "stock_aks74_izhmash_aks74_std"
+  },
+  "sections": []
+}

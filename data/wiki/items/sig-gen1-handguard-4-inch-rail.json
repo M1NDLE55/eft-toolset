@@ -1,0 +1,21 @@
+{
+  "title": "SIG GEN1 handguard 4 inch rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_GEN1_handguard_4_inch_rail",
+  "revisionId": 340714,
+  "lastEdited": "2026-04-22T06:38:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-0.15",
+    "node": "58a5c12e86f7745d585a2b9e",
+    "ID": "mount_mpx_4_inch_rail"
+  },
+  "sections": []
+}

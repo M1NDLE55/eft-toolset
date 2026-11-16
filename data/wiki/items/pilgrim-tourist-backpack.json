@@ -1,0 +1,29 @@
+{
+  "title": "Pilgrim tourist backpack",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pilgrim_tourist_backpack",
+  "revisionId": 324238,
+  "lastEdited": "2025-11-21T22:50:37Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "3.48 kg",
+    "grid": "5x7",
+    "price": "₽33,500",
+    "penalties": "-7% movement speed, -4% turn speed, -8% Ergonomics",
+    "slots": "5x7 grid (35 slots)",
+    "node": "59e763f286f7742ee57895da",
+    "id": "backpack_pilgrim"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only 1 can be held in a raid inventory at the same time"
+    }
+  ]
+}

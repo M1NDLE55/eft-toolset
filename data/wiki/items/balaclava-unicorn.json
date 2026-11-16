@@ -1,0 +1,27 @@
+{
+  "title": "Balaclava (Unicorn)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balaclava_(Unicorn)",
+  "revisionId": 348417,
+  "lastEdited": "2026-07-30T20:10:32Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in the Customs Tactical Map",
+    "node": "68a9acd9389d6cb1f90af562",
+    "id": "item_equipment_facecover_balaclava_pink_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

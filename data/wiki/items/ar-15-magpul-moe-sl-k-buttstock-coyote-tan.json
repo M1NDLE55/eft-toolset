@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Magpul MOE SL-K buttstock (Coyote Tan)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Magpul_MOE_SL-K_buttstock_(Coyote_Tan)",
+  "revisionId": 337963,
+  "lastEdited": "2026-03-08T00:19:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.226 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+8",
+    "recoil": "-22",
+    "node": "6529370c405a5f51dd023db8",
+    "ID": "stock_ar15_magpul_moe_sl_k_carbine_ct"
+  },
+  "sections": []
+}

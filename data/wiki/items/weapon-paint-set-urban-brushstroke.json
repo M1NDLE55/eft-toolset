@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Urban Brushstroke)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Urban_Brushstroke)",
+  "revisionId": 348398,
+  "lastEdited": "2026-07-30T19:57:05Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "68d148da081ce70a1f034671",
+    "id": "item_camo_brushstroke_urban"
+  },
+  "sections": []
+}

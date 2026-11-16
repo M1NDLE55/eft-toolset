@@ -1,0 +1,26 @@
+{
+  "title": "AR-15 Magpul MOE SL medium length M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Magpul_MOE_SL_medium_length_M-LOK_handguard",
+  "revisionId": 342024,
+  "lastEdited": "2026-04-28T00:10:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.23 kg",
+    "grid": "2x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+16",
+    "recoil": "+0",
+    "Heat": "+6.4",
+    "Cooling": "+2.1",
+    "loot xp": "20",
+    "exam xp": "3",
+    "node": "5c78f26f2e221601da3581d1",
+    "ID": "handguard_ar15_magpul_moe_sl_mid_length"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Cultist figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cultist_figurine",
+  "revisionId": 343715,
+  "lastEdited": "2026-05-10T10:59:54Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "655c669103999d3c810c025b",
+    "id": "Item_barter_tarko_сultist"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    }
+  ]
+}

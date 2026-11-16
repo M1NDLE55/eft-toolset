@@ -1,0 +1,33 @@
+{
+  "title": "Anti-fragmentation glasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Anti-fragmentation_glasses",
+  "revisionId": 348359,
+  "lastEdited": "2026-07-29T15:27:44Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.11 kg",
+    "grid": "2x1",
+    "trader": "Ragman LL3",
+    "material": "Glass",
+    "armor": "1",
+    "armor coverage": "Eyes",
+    "durability": "25",
+    "blindness protect": "10%",
+    "penalties": "-2% Ergonomics",
+    "node": "59e770b986f7742cbd762754",
+    "id": "tactical_glass"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen"
+    }
+  ]
+}

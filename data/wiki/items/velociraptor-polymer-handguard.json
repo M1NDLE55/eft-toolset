@@ -1,0 +1,23 @@
+{
+  "title": "Velociraptor polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Velociraptor_polymer_handguard",
+  "revisionId": 342750,
+  "lastEdited": "2026-04-30T21:12:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.17 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+11",
+    "Heat": "+4.5",
+    "Cooling": "-3.8",
+    "node": "674d5e287075e056160e0176",
+    "ID": "handguard_velociraptor_tapco_galil_style_handguard"
+  },
+  "sections": []
+}

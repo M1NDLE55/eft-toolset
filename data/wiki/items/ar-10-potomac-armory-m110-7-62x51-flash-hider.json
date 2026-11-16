@@ -1,0 +1,22 @@
+{
+  "title": "AR-10 Potomac Armory M110 7.62x51 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Potomac_Armory_M110_7.62x51_flash_hider",
+  "revisionId": 356274,
+  "lastEdited": "2026-08-25T21:51:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-0.5",
+    "recoil": "-8",
+    "node": "6932af0bbe542622170428bd",
+    "ID": "muzzle_ar10_potomac_armory_m110_flash_hider_762x51"
+  },
+  "sections": []
+}

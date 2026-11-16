@@ -1,0 +1,53 @@
+{
+  "title": "NIXXOR lens",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NIXXOR_lens",
+  "revisionId": 362821,
+  "lastEdited": "2026-10-01T22:04:55Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "price": "Ref LL4",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5d1b2ffd86f77425243e8d17",
+    "ID": "item_barter_electr_lens"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from Hot Wheels - Let's Try Again"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Drawers\n- In Ground caches\n- In Sport bags"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In the Marked Room"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On shelves in the small storage room behind IDEA computer room\n- On shelves inside of the Techlight, Rasmussen & Texco stores\n- On shelves inside the Power Station"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter Eggs and References: This item is a parody of the Nikon AF-S DX NIKKOR 35mm f/1.8G."
+    }
+  ]
+}

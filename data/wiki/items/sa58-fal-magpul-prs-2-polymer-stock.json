@@ -1,0 +1,23 @@
+{
+  "title": "SA58/FAL Magpul PRS 2 polymer stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58/FAL_Magpul_PRS_2_polymer_stock",
+  "revisionId": 337548,
+  "lastEdited": "2026-03-05T23:49:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.86 kg",
+    "grid": "2x1",
+    "price": "₽16,300",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+5",
+    "recoil": "-24",
+    "node": "5b7d63b75acfc400170e2f8a",
+    "ID": "stock_fal_magpul_prs_2"
+  },
+  "sections": []
+}

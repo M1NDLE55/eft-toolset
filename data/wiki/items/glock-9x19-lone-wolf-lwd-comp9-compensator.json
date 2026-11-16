@@ -1,0 +1,26 @@
+{
+  "title": "Glock 9x19 Lone Wolf LWD-COMP9 compensator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_Lone_Wolf_LWD-COMP9_compensator",
+  "revisionId": 337489,
+  "lastEdited": "2026-03-05T23:20:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.036 kg",
+    "grid": "1x1",
+    "price": "₽3,360",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-4",
+    "accuracy": "-3",
+    "recoil": "-12",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "5a7ad1fb51dfba0013379715",
+    "ID": "muzzle_glock_lone_wolf_compensator_9_9x19"
+  },
+  "sections": []
+}

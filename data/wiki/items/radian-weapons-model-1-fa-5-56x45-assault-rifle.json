@@ -1,0 +1,32 @@
+{
+  "title": "Radian Weapons Model 1 FA 5.56x45 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Radian_Weapons_Model_1_FA_5.56x45_assault_rifle",
+  "revisionId": 356999,
+  "lastEdited": "2026-08-30T17:27:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.011 kg",
+    "grid": "5x2",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 1",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "72",
+    "velocity": "940 m/s",
+    "range": "500 m",
+    "MOA": "0.92",
+    "Weaprecoil": "Vertical: 58, Horizontal: 174",
+    "rof": "800",
+    "caliber": "5.56x45mm NATO",
+    "def mag": "AR-15 5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine",
+    "node": "6895bb82c4519957df062f82",
+    "ID": "weapon_radian_ar15_model1_fa_556x45"
+  },
+  "sections": []
+}

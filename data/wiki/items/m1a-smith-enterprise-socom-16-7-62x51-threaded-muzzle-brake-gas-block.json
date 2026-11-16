@@ -1,0 +1,25 @@
+{
+  "title": "M1A Smith Enterprise SOCOM 16 7.62x51 threaded muzzle brake & gas block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1A_Smith_Enterprise_SOCOM_16_7.62x51_threaded_muzzle_brake_%26_gas_block",
+  "revisionId": 337507,
+  "lastEdited": "2026-03-05T23:29:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1",
+    "accuracy": "+0",
+    "recoil": "-4",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "5ab3afb2d8ce87001660304d",
+    "ID": "muzzle_m1a_smith_enterprise_socom_16_threaded_gas_lock_762x51"
+  },
+  "sections": []
+}

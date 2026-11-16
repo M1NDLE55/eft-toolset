@@ -1,0 +1,23 @@
+{
+  "title": "AK-308 7.62x51 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-308_7.62x51_flash_hider",
+  "revisionId": 343062,
+  "lastEdited": "2026-05-03T14:54:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-2",
+    "accuracy": "+0",
+    "recoil": "-8",
+    "node": "689167d79f03ec70cb0ea066",
+    "ID": "muzzle_ak308_izhmash_ak308_flash_hider_std_762x51"
+  },
+  "sections": []
+}

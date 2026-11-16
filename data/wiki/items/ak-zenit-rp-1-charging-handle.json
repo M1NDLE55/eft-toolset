@@ -1,0 +1,21 @@
+{
+  "title": "AK Zenit RP-1 charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Zenit_RP-1_charging_handle",
+  "revisionId": 323697,
+  "lastEdited": "2025-11-20T05:50:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+1",
+    "node": "5648ac824bdc2ded0b8b457d",
+    "ID": "charge_ak_zenit_rp1"
+  },
+  "sections": []
+}

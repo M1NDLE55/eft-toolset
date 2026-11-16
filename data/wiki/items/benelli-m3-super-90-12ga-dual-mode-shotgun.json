@@ -1,0 +1,33 @@
+{
+  "title": "Benelli M3 Super 90 12ga dual-mode shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Benelli_M3_Super_90_12ga_dual-mode_shotgun",
+  "revisionId": 342978,
+  "lastEdited": "2026-05-01T16:29:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "3.306 kg",
+    "grid": "5x2",
+    "trader": "Jaeger LL2, after completing his quest The Survivalist Path - Wounded Beast",
+    "fire modes": "Single, Semi Auto",
+    "sightrange": "600",
+    "ergonomics": "58",
+    "velocity": "442 m/s",
+    "range": "70 m",
+    "MOA": "18.22",
+    "Weaprecoil": "Vertical: 242, Horizontal: 428",
+    "rof": "60",
+    "caliber": "12/70",
+    "loot xp": "30",
+    "exam xp": "6",
+    "node": "6259b864ebedf17603599e88",
+    "ID": "weapon_benelli_m3_s90_12g"
+  },
+  "sections": []
+}

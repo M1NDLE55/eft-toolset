@@ -1,0 +1,24 @@
+{
+  "title": "Trijicon SRS-02 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trijicon_SRS-02_reflex_sight",
+  "revisionId": 341750,
+  "lastEdited": "2026-04-26T21:24:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.39 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-1",
+    "modes": "1",
+    "node": "5d2da1e948f035477b1ce2ba",
+    "ID": "scope_all_trijicon_srs_02"
+  },
+  "sections": []
+}

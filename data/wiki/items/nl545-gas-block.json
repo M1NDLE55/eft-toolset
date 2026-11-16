@@ -1,0 +1,25 @@
+{
+  "title": "NL545 gas block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NL545_gas_block",
+  "revisionId": 343082,
+  "lastEdited": "2026-05-03T14:57:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-1",
+    "recoil": "-1",
+    "Dura Burn": "-1",
+    "Heat": "-1",
+    "Cooling": "+0.8",
+    "node": "68c2a99647eb77c6310b170f",
+    "ID": "gas_block_nl545_cgnl_nl545_std"
+  },
+  "sections": []
+}

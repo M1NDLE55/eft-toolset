@@ -1,0 +1,31 @@
+{
+  "title": "Glock 9x19 SGM Tactical 50-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_SGM_Tactical_50-round_drum_magazine",
+  "revisionId": 337484,
+  "lastEdited": "2026-03-05T23:17:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.6 kg",
+    "grid": "1x2",
+    "price": "₽8,400",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-10",
+    "recoil": "+0",
+    "checkaccuracy": "No",
+    "checkmodifier": "+15",
+    "loadmodifier": "+10",
+    "feedfailure": "Medium",
+    "capacity": "50",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5a718f958dc32e00094b97e7",
+    "ID": "mag_glock_sgmt_glock_drum_50_9x19_50"
+  },
+  "sections": []
+}

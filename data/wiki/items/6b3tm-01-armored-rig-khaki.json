@@ -1,0 +1,29 @@
+{
+  "title": "6B3TM-01 armored rig (Khaki)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B3TM-01_armored_rig_(Khaki)",
+  "revisionId": 362795,
+  "lastEdited": "2026-10-01T21:32:53Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "8.2 kg",
+    "grid": "3x4",
+    "material": "Titan",
+    "armor": "Stomach, Thorax, Groin: 4 , Back, Buttocks: 2",
+    "armor coverage": "Stomach, Thorax, Back, Groin, Buttocks",
+    "durability": "86",
+    "penalties": "-5% movement speed, -1% turn speed, -7% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "12 Slots",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5d5d646386f7742797261fd9",
+    "ID": "item_equipment_armor_6b3"
+  },
+  "sections": []
+}

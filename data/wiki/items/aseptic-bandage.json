@@ -1,0 +1,31 @@
+{
+  "title": "Aseptic bandage",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aseptic_bandage",
+  "revisionId": 358736,
+  "lastEdited": "2026-09-10T23:01:02Z",
+  "kind": "item",
+  "categories": [
+    "Injury treatment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injury treatment",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "price": "₽1,300",
+    "trader": "Therapist LL1",
+    "effect": "Removes:",
+    "use time": "2s",
+    "loot xp": "10",
+    "exam xp": "10",
+    "node": "544fb25a4bdc2dfb738b4567",
+    "id": "bandage"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Dead Scav\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    }
+  ]
+}

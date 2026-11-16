@@ -1,0 +1,22 @@
+{
+  "title": "HK MP5 B&T tri-rail receiver mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_B%26T_tri-rail_receiver_mount",
+  "revisionId": 236199,
+  "lastEdited": "2023-06-03T14:36:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.223 kg",
+    "grid": "2x1",
+    "price": "₽3,780",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1.5",
+    "node": "5a966ec8a2750c00171b3f36",
+    "ID": "mount_mp5_bt_mounting_rail_nar_low_profile_long"
+  },
+  "sections": []
+}

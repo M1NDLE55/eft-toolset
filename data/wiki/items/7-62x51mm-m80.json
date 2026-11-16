@@ -1,0 +1,40 @@
+{
+  "title": "7.62x51mm M80",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_M80",
+  "revisionId": 364958,
+  "lastEdited": "2026-10-25T21:42:55Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x51mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.024 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3, Peacekeeper LL4, after completing his task The Cleaner",
+    "velocity": "820 m/s",
+    "damage": "80",
+    "accuracy": "-13",
+    "recoil": "+1",
+    "penetration": "43",
+    "armor damage": "67",
+    "ricochet": "38%",
+    "l bleed chance": "+8",
+    "h bleed chance": "+8",
+    "durability burn": "+12",
+    "heat": "+10",
+    "feedfailure": "High",
+    "misfire": "Low",
+    "node": "58dd3ad986f77403051cba8f",
+    "id": "patron_762x51_M80"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

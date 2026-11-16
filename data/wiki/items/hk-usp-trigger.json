@@ -1,0 +1,20 @@
+{
+  "title": "HK USP trigger",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_trigger",
+  "revisionId": 215611,
+  "lastEdited": "2022-12-02T16:09:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.013 kg",
+    "grid": "1x1",
+    "ergonomics": "+2",
+    "node": "6193d3cded0429009f543e6a",
+    "ID": "trigger_usp_hk_usp_std_trigger"
+  },
+  "sections": []
+}

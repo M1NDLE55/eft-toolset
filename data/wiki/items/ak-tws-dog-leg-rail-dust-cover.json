@@ -1,0 +1,25 @@
+{
+  "title": "AK TWS Dog Leg Rail dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_TWS_Dog_Leg_Rail_dust_cover",
+  "revisionId": 322400,
+  "lastEdited": "2025-11-18T16:07:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.195 kg",
+    "grid": "2x1",
+    "price": "₽11,600",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+0.8",
+    "recoil": "-0.5",
+    "Dura Burn": "-3",
+    "loot xp": "10",
+    "node": "5d2c772c48f0355d95672c25",
+    "ID": "reciever_ak_texas_weapon_systems_dog_leg_rail_gen_3"
+  },
+  "sections": []
+}

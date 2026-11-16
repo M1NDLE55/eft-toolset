@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Digital Arctic)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Digital_Arctic)",
+  "revisionId": 348661,
+  "lastEdited": "2026-07-30T22:26:19Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "69369d9c43a075ed970b4297",
+    "id": "item_camo_digital_arctic"
+  },
+  "sections": []
+}

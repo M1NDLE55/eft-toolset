@@ -1,0 +1,31 @@
+{
+  "title": "BEAR operative figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_operative_figurine",
+  "revisionId": 343700,
+  "lastEdited": "2026-05-10T10:51:50Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "655c652d60d0ac437100fed7",
+    "id": "Item_barter_tarko_bear"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The model alludes to a Funko-type figurine."
+    }
+  ]
+}

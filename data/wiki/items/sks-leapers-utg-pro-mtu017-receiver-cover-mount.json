@@ -1,0 +1,22 @@
+{
+  "title": "SKS Leapers UTG PRO MTU017 receiver cover mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_Leapers_UTG_PRO_MTU017_receiver_cover_mount",
+  "revisionId": 273754,
+  "lastEdited": "2024-03-10T11:38:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.215 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+7",
+    "Dura Burn": "-3",
+    "node": "6415c694da439c6a97048b56",
+    "ID": "reciever_sks_utg_mtu017"
+  },
+  "sections": []
+}

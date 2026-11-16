@@ -1,0 +1,28 @@
+{
+  "title": "Wilcox RAPTAR ES Tactical Rangefinder",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wilcox_RAPTAR_ES_Tactical_Rangefinder",
+  "revisionId": 318935,
+  "lastEdited": "2025-10-03T14:45:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.308 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-1",
+    "modes": "5",
+    "node": "61605d88ffa6e502ac5e7eeb",
+    "ID": "tactical_all_wilcox_raptar_es"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is red\n- The maximum measurable distance is 2500 meters"
+    }
+  ]
+}

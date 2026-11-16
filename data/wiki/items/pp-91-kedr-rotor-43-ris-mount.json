@@ -1,0 +1,22 @@
+{
+  "title": "PP-91 Kedr Rotor 43 RIS mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-91_Kedr_Rotor_43_RIS_mount",
+  "revisionId": 288233,
+  "lastEdited": "2024-08-25T23:31:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "price": "₽3,680",
+    "trader": "Skier LL2",
+    "ergonomics": "-1",
+    "node": "57ee59b42459771c7b045da5",
+    "ID": "mount_pp-91_rotor_43_kedr_ris"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "12.7x108mm B-32",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12.7x108mm_B-32",
+  "revisionId": 353373,
+  "lastEdited": "2026-08-12T21:55:36Z",
+  "kind": "ammo",
+  "categories": [
+    "12.7x108mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.133 kg",
+    "grid": "1x1",
+    "velocity": "818 m/s",
+    "damage": "182",
+    "penetration": "88",
+    "armor damage": "88",
+    "ricochet": "38%",
+    "node": "5cde8864d7f00c0010373be1",
+    "id": "patron_127x108"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": ".300 Blackout CBJ ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.300_Blackout_CBJ_ammo_pack_(50_pcs)",
+  "revisionId": 367081,
+  "lastEdited": "2026-11-02T23:06:14Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3",
+    "node": "657023a9126cc4a57d0e17a6",
+    "ID": "item_ammo_box_blackout_50_cbj"
+  },
+  "sections": [
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 4 can be obtained as a quest reward from Protect the Sky"
+    }
+  ]
+}

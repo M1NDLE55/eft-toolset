@@ -1,0 +1,37 @@
+{
+  "title": "9x18mm PM PPe gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_PPe_gzh",
+  "revisionId": 322777,
+  "lastEdited": "2025-11-18T21:16:27Z",
+  "kind": "ammo",
+  "categories": [
+    "9x18mm Makarov ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.009 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "velocity": "297 m/s",
+    "damage": "61",
+    "penetration": "7",
+    "armor damage": "15",
+    "ricochet": "5%",
+    "l bleed chance": "+15",
+    "heat": "-7.4",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "effects": "Subsonic",
+    "node": "57371b192459775a9f58a5e0",
+    "id": "patron_9x18pm_PPE_gzh"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

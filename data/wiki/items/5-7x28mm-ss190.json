@@ -1,0 +1,38 @@
+{
+  "title": "5.7x28mm SS190",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.7x28mm_SS190",
+  "revisionId": 343613,
+  "lastEdited": "2026-05-08T18:19:13Z",
+  "kind": "ammo",
+  "categories": [
+    "5.7x28mm FN Ammuntion",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.006 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3, Peacekeeper LL4",
+    "velocity": "715 m/s",
+    "damage": "49",
+    "penetration": "37",
+    "armor damage": "43",
+    "ricochet": "60%",
+    "durability burn": "+20",
+    "heat": "+17",
+    "feedfailure": "High",
+    "misfire": "Low",
+    "loot xp": "0",
+    "exam xp": "10",
+    "node": "5cc80f38e4a949001152b560",
+    "id": "patron_57x28_ss190"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "26x75mm flare cartridge (Red)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/26x75mm_flare_cartridge_(Red)",
+  "revisionId": 367822,
+  "lastEdited": "2026-11-10T14:31:04Z",
+  "kind": "ammo",
+  "categories": [
+    "26x75mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flare cartridge",
+    "weight": "0.042 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3",
+    "velocity": "80 m/s",
+    "damage": "37",
+    "penetration": "0",
+    "armor damage": "60",
+    "node": "62389ba9a63f32501b1b4451",
+    "id": "patron_26x75_red"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Firing this flare into the sky will call in an airdrop and illuminate the surrounding area for 20 seconds after ignition\n- (Unavailable on Ground Zero, Factory, The Lab, The Labyrinth, Terminal, Icebreaker)"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Dead Scav\n- Weapon box (4x4)\n- Wooden ammo box\n- Wooden crate"
+    }
+  ]
+}

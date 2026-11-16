@@ -1,0 +1,81 @@
+{
+  "title": "Physical Bitcoin",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Physical_Bitcoin",
+  "revisionId": 364416,
+  "lastEdited": "2026-10-13T19:30:46Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "59faff1d86f7746c51718c9c",
+    "id": "item_barter_valuable_bitcoin"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only 10 can be held in a raid inventory at the same time\n- Can be produced in the Bitcoin farm every 83 hours 20 minutes, when having one Graphics card installed.\n- The value of this item is linked to the real world Bitcoin price. This has been confirmed by Nikita, the COO of Battlestate Games on Reddit.\n  - The value is refreshed each day at midnight GMT+4."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In the Customs marked room in the 3 story dorms\n- In the right side of the depot building northwest of zb-1011\n- On the bed next to the duffle bag in room 218 in the 2 story dorms\n- In the north east side of the basement in warehouse 4"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On the back of the pick-up truck near the middle of the map"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the couch and shelf of Saferoom Exfil (#11SR)\n- In the lockers in the front end of Goshan\n- On a plastic chair in OLI. (In the middle of the store surrounded by sandbags)\n- On the yellow couch inside the closed off section next to Interchange underground utility plan exfil"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- In the south chalet, on the table to the right of the entrance, and on the seats\n- On the tool chest near the first BRDM marked for Revision - Lighthouse\n- Inside of the Water treatment plant storage room\n- Inside of the Operating room\n- Inside of the Rogue USEC barrack room\n- In the Merin car trunk"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On a chair in the last room on the top floor of the white knight building\n- In marked rooms RB-BK, RB-PKPM, and RB-VO"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In cardboard box in bathroom of Health Resort east wing room 222\n- On desks in Health Resort east wing room 310\n- To the right of the laptop on the mattress in Health Resort east wing room 306\n- Next to the Weapon box (6x4) in Health Resort east wing room 226\n- On the blue tray of the cart near the admin basement\n- On the tables inside of the metal containers in Smugglers Base"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- On the floor of the director's office in the Beluga restaurant\n- On the chairs inside of the Relaxation room as well as in front of the mannequin\n- On the couch inside of the Beluga restaurant's 2nd floor behind the door\n- Inside of the Abandoned factory marked key\n- Inside of Chek. 13\n- Inside of Chekannaya 15 apartment key in multiple locations\n- Inside of MVD academy entrance hall guard room key in multiple locations; notably next to the water cooler, on the photocopier and next to the green chair\n- Next to the trophies in the trophy cabinet in PE teacher's office"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Inside of the laboratory security arsenal (R23) on the shelves\n- Inside of the blue office, on the floor and table\n- Inside of the Red card room, on the shelf to the left of the gated room\n- In the Violet card room on the floor\n- In the Yellow card room in multiple locations on both the floor as well as the couch chairs\n- In the Kruglov's office (R22) both in the safe located in the far back of the office as well as in multiple locations in the office itself: Under the binders on the floor, on the coffee table, on the couch, in front of the laptop on the desk, in front of the computer on the floor\n- In the Green card room In the room to the left after entering on the floor between the table on the left and the shelve as well as on the chair to the right and on the floor next to it\n- In the Res Unit card room on the bean bag chair"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- Sniper Scav Bunker near the sealed door\n- Underneath a bed inside the eastern-most house of the eastern village\n- Inside the steeple of the church in Sunken Village\n- Inside the crashed plane before the cockpit entrance on the ground\n- In the door frame of the stash house in Sunken Village\n- On the beds at the train depot\n- On a bed in the bathroom inside the bunker under the mountain\n- On the grave site for lost Bear unit"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Small Business - Part 2\n- 2 can be obtained as a quest reward from New Beginning (Prestige 3)\n- 3 can be obtained as a quest reward from New Beginning (Prestige 4)\n- 3 can be obtained as a quest reward from New Beginning (Prestige 5)\n- 3 can be obtained as a quest reward from New Beginning (Prestige 6)\n- 3 can be obtained as a quest reward from To the Light - A Time to Gather Stones\n- 2 can be obtained as a quest reward from Small Business - Part 2"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Mk-18 .338 LM upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mk-18_.338_LM_upper_receiver",
+  "revisionId": 214389,
+  "lastEdited": "2022-11-16T17:39:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "ergonomics": "+6",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-1",
+    "Heat": "-7.5",
+    "Cooling": "+7.5",
+    "node": "5fc278107283c4046c581489",
+    "ID": "reciever_mk18_sword_mjolnir_std"
+  },
+  "sections": []
+}

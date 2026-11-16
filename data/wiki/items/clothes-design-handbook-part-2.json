@@ -1,0 +1,25 @@
+{
+  "title": "Clothes design handbook - Part 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Clothes_design_handbook_-_Part_2",
+  "revisionId": 305388,
+  "lastEdited": "2025-02-07T07:46:10Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "node": "5ae9a4fc86f7746e381e1753",
+    "id": "book_part_2"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest The Key to Success from Ragman"
+    }
+  ]
+}

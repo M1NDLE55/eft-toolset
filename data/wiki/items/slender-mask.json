@@ -1,0 +1,28 @@
+{
+  "title": "Slender mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Slender_mask",
+  "revisionId": 344296,
+  "lastEdited": "2026-05-24T21:41:28Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "No",
+    "BlocksHeadwear": "Yes",
+    "node": "5bd06f5d86f77427101ad47c",
+    "id": "item_equipment_facecover_HALLOWEEN_Slander"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This mask was added as part of Escape from Tarkov's 2018 Halloween Celebration.\n- Easter eggs and References: Based on the infamous \"Slenderman\" mask from the iconic horror movie \"Slender Man\". Its origin is the creepypasta \"The Slenderman\"."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "DevTac Samurai Menpo Mask (White)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Samurai_Menpo_Mask_(White)",
+  "revisionId": 357801,
+  "lastEdited": "2026-09-08T12:51:31Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 1",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "68bee246ede5c8489f08e1b3",
+    "id": "item_equipment_facecover_devtac_samurai_bp2_white"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

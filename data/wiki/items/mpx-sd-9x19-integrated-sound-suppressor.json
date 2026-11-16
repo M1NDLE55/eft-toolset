@@ -1,0 +1,29 @@
+{
+  "title": "MPX-SD 9x19 integrated sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX-SD_9x19_integrated_sound_suppressor",
+  "revisionId": 337411,
+  "lastEdited": "2026-03-05T22:40:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-5",
+    "velocity": "+0.7",
+    "accuracy": "+0",
+    "recoil": "-5",
+    "Dura Burn": "+35",
+    "Heat": "+13",
+    "Cooling": "+7",
+    "loot xp": "30",
+    "exam xp": "4",
+    "node": "58aeac1b86f77457c419f475",
+    "ID": "silencer_sig_mpx_sd_9x19"
+  },
+  "sections": []
+}

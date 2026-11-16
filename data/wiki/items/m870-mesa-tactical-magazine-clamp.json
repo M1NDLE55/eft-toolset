@@ -1,0 +1,22 @@
+{
+  "title": "M870 Mesa Tactical magazine clamp",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_Mesa_Tactical_magazine_clamp",
+  "revisionId": 276886,
+  "lastEdited": "2024-05-07T11:53:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.087 kg",
+    "grid": "1x1",
+    "price": "₽3,640",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1",
+    "node": "5a789261c5856700186c65d3",
+    "ID": "mount_12g_mesa_tactical_magazine_clamp"
+  },
+  "sections": []
+}

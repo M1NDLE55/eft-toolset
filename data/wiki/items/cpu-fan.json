@@ -1,0 +1,28 @@
+{
+  "title": "CPU fan",
+  "url": "https://escapefromtarkov.fandom.com/wiki/CPU_fan",
+  "revisionId": 366101,
+  "lastEdited": "2026-10-28T20:07:53Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "30",
+    "exam xp": "5",
+    "node": "5734779624597737e04bf329",
+    "id": "cooler_fan"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- PC block\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "SIG Sauer Locking Stock Hinge Assembly",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_Locking_Stock_Hinge_Assembly",
+  "revisionId": 323646,
+  "lastEdited": "2025-11-20T05:06:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-2",
+    "recoil": "+0",
+    "node": "6529348224cbe3c74a05e5c4",
+    "ID": "stock_all_sig_stock_locking_hinge_assembly"
+  },
+  "sections": []
+}

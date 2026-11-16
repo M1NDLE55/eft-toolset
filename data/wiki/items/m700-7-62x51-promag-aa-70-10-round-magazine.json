@@ -1,0 +1,30 @@
+{
+  "title": "M700 7.62x51 ProMag AA-70 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_7.62x51_ProMag_AA-70_10-round_magazine",
+  "revisionId": 337690,
+  "lastEdited": "2026-03-06T01:23:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "price": "₽4,340",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "7.62x51mm NATO",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "5d25af8f8abbc3055079fec5",
+    "ID": "mag_m700_promag_aa70_762x51_10"
+  },
+  "sections": []
+}

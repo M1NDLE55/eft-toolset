@@ -1,0 +1,42 @@
+{
+  "title": "SV-98 7.62x54R bolt-action sniper rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SV-98_7.62x54R_bolt-action_sniper_rifle",
+  "revisionId": 360772,
+  "lastEdited": "2026-09-19T13:15:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Bolt-action rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bolt-action rifle",
+    "slot": "Primary",
+    "weight": "5.188 kg",
+    "grid": "6x2",
+    "trader": "Prapor LL2: Standard, after completing his task Kings of the Rooftops, Jaeger LL3: OV variant",
+    "fire modes": "Single",
+    "sightrange": "500",
+    "ergonomics": "30",
+    "velocity": "887 m/s",
+    "range": "1000 m",
+    "MOA": "0.58",
+    "Weaprecoil": "Vertical: 200, Horizontal: 569",
+    "rof": "30",
+    "caliber": "7.62x54mmR",
+    "node": "55801eed4bdc2d89578b4588",
+    "ID": "weapon_izhmash_sv-98_762x54r"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Kings of the Rooftops"
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant | Attachments |\n| SV-98 OV | 2x |"
+    }
+  ]
+}

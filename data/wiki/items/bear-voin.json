@@ -1,0 +1,22 @@
+{
+  "title": "BEAR VOIN",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_VOIN",
+  "revisionId": 261761,
+  "lastEdited": "2024-01-02T04:01:30Z",
+  "kind": "item",
+  "categories": [
+    "BEAR lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "603d01a1b41c9b37c6592047",
+    "ID": "bear_lower_voin"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The pants are modeled after the \"Voin URON Combat Pants\" in KLMK, and the belt is modeled after the 5.11 Maverick Assaulters Belt in Black."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "AFAK tactical individual first aid kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AFAK_tactical_individual_first_aid_kit",
+  "revisionId": 358682,
+  "lastEdited": "2026-09-10T22:56:40Z",
+  "kind": "item",
+  "categories": [
+    "Medkits"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medkit",
+    "weight": "0.8 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4, after completing his task Insomnia/Counteraction",
+    "effect": "Max heal per use: 60 Buffs:, Removes:, Radiation Exposure, Adds:, Debuffs:, Causes: only when treating heavy bleeding",
+    "use time": "3s",
+    "loot xp": "25",
+    "exam xp": "10",
+    "node": "60098ad7c2240c0fe85c570a",
+    "id": "item_meds_afak"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Healing removes 30 HP from the AFAK\n- Healing removes 170 HP from the AFAK"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Jacket (114 key)\n- Sport bag\n- Wooden crate\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The AFAK is modeled after the real life product FalcomTac Trauma Kit."
+    }
+  ]
+}

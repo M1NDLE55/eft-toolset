@@ -1,0 +1,25 @@
+{
+  "title": "MPX A2 9x19 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_A2_9x19_flash_hider",
+  "revisionId": 355535,
+  "lastEdited": "2026-08-23T00:22:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.063 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "price": "₽905",
+    "ergonomics": "+0.5",
+    "velocity": "+0",
+    "accuracy": "+3",
+    "recoil": "-5",
+    "node": "58949dea86f77409483e16a8",
+    "ID": "muzzle_mpx_sig_mpx_a2_9x19"
+  },
+  "sections": []
+}

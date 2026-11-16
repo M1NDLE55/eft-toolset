@@ -1,0 +1,25 @@
+{
+  "title": "KOSA UAV electronic jamming device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KOSA_UAV_electronic_jamming_device",
+  "revisionId": 304282,
+  "lastEdited": "2025-01-21T08:30:59Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "3 kg",
+    "grid": "3x2",
+    "node": "67499b9b909d2013670a5029 67499d4deca8acb2d206163b",
+    "id": "item_quest_btr_reb item_quest_btr_reb_other"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Protect the Sky from the BTR Driver\n- Used in the quest Order From Outside from Lightkeeper"
+    }
+  ]
+}

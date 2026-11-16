@@ -1,0 +1,26 @@
+{
+  "title": "Left half of a Physical Bitcoin",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Left_half_of_a_Physical_Bitcoin",
+  "revisionId": 355948,
+  "lastEdited": "2026-08-25T11:52:38Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "68f119c6121d878a2303eee3",
+    "id": "item_barter_valuable_bitcoin_part_left"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

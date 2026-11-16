@@ -1,0 +1,26 @@
+{
+  "title": "PP-19-01 Vityaz dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-19-01_Vityaz_dust_cover",
+  "revisionId": 288308,
+  "lastEdited": "2024-08-26T00:04:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.136 kg",
+    "grid": "2x1",
+    "price": "₽1,200",
+    "trader": "Prapor LL2",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "node": "59985a8086f77414ec448d1a",
+    "ID": "reciever_pp-19-01_izhmash_vityaz_std"
+  },
+  "sections": []
+}

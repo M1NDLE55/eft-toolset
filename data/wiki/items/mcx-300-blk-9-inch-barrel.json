@@ -1,0 +1,26 @@
+{
+  "title": "MCX .300 BLK 9 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX_.300_BLK_9_inch_barrel",
+  "revisionId": 342115,
+  "lastEdited": "2026-04-28T03:57:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.479 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-4",
+    "velocity": "+0",
+    "MOA": "2.75",
+    "recoil": "-4.1",
+    "Heat": "+2",
+    "Cooling": "+3",
+    "node": "5fbbfacda56d053a3543f799",
+    "ID": "barrel_mcx_229mm_762x35"
+  },
+  "sections": []
+}

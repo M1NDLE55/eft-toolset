@@ -1,0 +1,21 @@
+{
+  "title": "M700 Badger Ordnance Scope Rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_Badger_Ordnance_Scope_Rail",
+  "revisionId": 305471,
+  "lastEdited": "2025-02-08T21:59:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.163 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+0.5",
+    "node": "65f064eec4da400cbb0dc1fe",
+    "ID": "mount_m700_badger_ordnance_scope_rail"
+  },
+  "sections": []
+}

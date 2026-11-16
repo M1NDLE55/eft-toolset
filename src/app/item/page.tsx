@@ -54,22 +54,24 @@ export default async function Page() {
         ])}
       />
       <JsonLd data={faqPage(FAQ)} />
-      <div className="flex flex-col gap-2 border border-[#1a1a1a] bg-[#0c0c0c] p-4">
-        <h1 className="text-sm font-bold uppercase tracking-widest text-[#c8b384]">Tarkov flea market prices</h1>
-        <p className="text-sm text-[#999]">
-          Live flea market and trader prices for every Escape from Tarkov item, in PVP and PVE. Search any item to see
-          what it sells for, the best place to sell it after the flea fee, its value per slot, and every task, hideout
-          upgrade, barter and craft that needs it. Press <kbd className="border border-[#2a2a2a] px-1 text-[11px]">/</kbd>{" "}
-          anywhere to search. Playing PVE? See the{" "}
-          <Link href="/flea-market/pve" className="text-[#c8b384] underline underline-offset-2">
-            PVE flea market prices
-          </Link>
-          .
-        </p>
+      <div className="mx-auto flex w-full max-w-2xl flex-col gap-5">
+        <div className="flex flex-col gap-2 border border-[#1a1a1a] bg-[#0c0c0c] p-4">
+          <h1 className="text-sm font-bold uppercase tracking-widest text-[#c8b384]">Tarkov flea market prices</h1>
+          <p className="text-sm text-[#999]">
+            Live flea market and trader prices for every Escape from Tarkov item, in PVP and PVE. Search any item to see
+            what it sells for, the best place to sell it after the flea fee, its value per slot, and every task, hideout
+            upgrade, barter and craft that needs it. Press <kbd className="border border-[#2a2a2a] px-1 text-[11px]">/</kbd>{" "}
+            anywhere to search. Playing PVE? See the{" "}
+            <Link href="/flea-market/pve" className="text-[#c8b384] underline underline-offset-2">
+              PVE flea market prices
+            </Link>
+            .
+          </p>
+        </div>
+        <RecentItems />
+        {highlights && <PriceHighlightTables gameMode={gameMode} highlights={highlights} />}
+        <FaqSection id="price-faq" title="Flea market price questions" entries={FAQ} />
       </div>
-      <RecentItems />
-      {highlights && <PriceHighlightTables gameMode={gameMode} highlights={highlights} />}
-      <FaqSection id="price-faq" title="Flea market price questions" entries={FAQ} />
     </>
   );
 }

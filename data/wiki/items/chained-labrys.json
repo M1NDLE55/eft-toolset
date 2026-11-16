@@ -1,0 +1,33 @@
+{
+  "title": "Chained Labrys",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chained_Labrys",
+  "revisionId": 309584,
+  "lastEdited": "2025-04-08T14:20:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "19.08 kg",
+    "fire modes": "Chop 166 Damage, Stab 199 Damage",
+    "range": "Chop 0.9m, Stab 0.9m",
+    "node": "679ba90d269ddfea47012159",
+    "ID": "weapon_labris_axe"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- When getting struck, is added for 20 seconds, causing tinnitus and muffled audio\n- When getting struck, is added for 20 seconds\n- When getting struck, is added"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Shadow of Tagilla\n  - Not lootable"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Duck figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Duck_figurine",
+  "revisionId": 357773,
+  "lastEdited": "2026-09-08T11:47:34Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "697cddb414e932098005748d",
+    "id": "item_barter_tarko_duck"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item is available as a permanent reward to players who have obtained the \"Duck Hunt\" event achievement."
+    }
+  ]
+}

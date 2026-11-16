@@ -1,0 +1,29 @@
+{
+  "title": "Glock 9x19 \"Big Stick\" 24-round magazine (Coyote)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_%22Big_Stick%22_24-round_magazine_(Coyote)",
+  "revisionId": 338847,
+  "lastEdited": "2026-03-18T08:22:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.112 kg",
+    "grid": "1x2",
+    "trader": "Skier LL2",
+    "ergonomics": "-1",
+    "checkaccuracy": "1",
+    "checkmodifier": "-5",
+    "feedfailure": "Medium",
+    "capacity": "24",
+    "caliber": "9x19mm Parabellum",
+    "spawn chance": "10%",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "630769c4962d0247b029dc60",
+    "ID": "mag_glock_glock_big_stick_9x19_24_fde"
+  },
+  "sections": []
+}

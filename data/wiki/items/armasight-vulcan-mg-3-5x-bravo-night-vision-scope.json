@@ -1,0 +1,30 @@
+{
+  "title": "Armasight Vulcan MG 3.5x Bravo night vision scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armasight_Vulcan_MG_3.5x_Bravo_night_vision_scope",
+  "revisionId": 319269,
+  "lastEdited": "2025-10-12T15:28:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Night vision scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Night vision scope",
+    "weight": "0.9 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "500",
+    "ergonomics": "-15",
+    "modes": "1",
+    "node": "5b3b6e495acfc4330140bd88",
+    "ID": "scope_base_armasight_vulcan_gen3_bravo_mg_3,5x"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from The Survivalist Path - Eagle-Owl"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Dunduk floppy disk",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dunduk_floppy_disk",
+  "revisionId": 347756,
+  "lastEdited": "2026-07-09T18:38:42Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.14 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "69f9d60b5de6674f08060f2a",
+    "id": "Item_barter_info_diskette"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Safe\n- Dead Scav\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator Dunduk."
+    }
+  ]
+}

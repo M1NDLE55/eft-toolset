@@ -1,0 +1,21 @@
+{
+  "title": "SVT-40 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVT-40_rear_sight",
+  "revisionId": 318880,
+  "lastEdited": "2025-10-02T22:15:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "sightrange": "500",
+    "node": "64119d90dcf48d656f0aa275",
+    "ID": "sight_rear_svt40_toz_svt40_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,38 @@
+{
+  "title": ".366 TKM EKO",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.366_TKM_EKO",
+  "revisionId": 356410,
+  "lastEdited": "2026-08-26T01:00:42Z",
+  "kind": "ammo",
+  "categories": [
+    ".366 TKM ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "velocity": "770 m/s",
+    "damage": "73",
+    "accuracy": "-10",
+    "recoil": "-15",
+    "penetration": "30",
+    "armor damage": "40",
+    "ricochet": "10%",
+    "h bleed chance": "+20",
+    "heat": "+81.6",
+    "feedfailure": "Very low",
+    "misfire": "High",
+    "node": "59e655cb86f77411dc52a77b",
+    "id": "patron_366_TKM_EKO"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Blue Force Gear PLATEminus V2 Plate Carrier (Wolf Gray)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Blue_Force_Gear_PLATEminus_V2_Plate_Carrier_(Wolf_Gray)",
+  "revisionId": 361842,
+  "lastEdited": "2026-09-24T14:19:52Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.67 kg",
+    "grid": "3x4",
+    "trader": "Ref LL3, after unlocking it in the The Lab Tactical Map",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Thorax, Back, Sides",
+    "default plates": "None",
+    "durability": "68",
+    "penalties": "+0% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "23 Slots",
+    "node": "6a7b45c3400bf8420f0e06fe",
+    "ID": "item_equipment_armor_plateminus_advanced_bp04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

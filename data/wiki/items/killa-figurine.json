@@ -1,0 +1,26 @@
+{
+  "title": "Killa figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Killa_figurine",
+  "revisionId": 343713,
+  "lastEdited": "2026-05-10T10:59:28Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "66572c82ad599021091c6118",
+    "id": "Item_barter_tarko_killa"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

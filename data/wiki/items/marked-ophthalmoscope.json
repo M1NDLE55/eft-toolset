@@ -1,0 +1,25 @@
+{
+  "title": "Marked Ophthalmoscope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Marked_Ophthalmoscope",
+  "revisionId": 352697,
+  "lastEdited": "2026-08-09T20:38:51Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "node": "5efdaf6de6a30218ed211a48",
+    "ID": "quest_diagset_Sanitar"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Tarkov-Style Diplomacy from Therapist"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "PK 7.62x54R 100-round box",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PK_7.62x54R_100-round_box",
+  "revisionId": 352283,
+  "lastEdited": "2026-08-07T21:21:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "1.5 kg",
+    "grid": "2x2",
+    "trader": "Prapor LL4",
+    "ergonomics": "-7",
+    "checkaccuracy": "No",
+    "checkmodifier": "+20",
+    "loadmodifier": "+20",
+    "feedfailure": "Very low",
+    "capacity": "100",
+    "caliber": "7.62x54mmR",
+    "node": "646372518610c40fc20204e8",
+    "ID": "mag_pkm_zid_pk_std_762x54r_100"
+  },
+  "sections": []
+}

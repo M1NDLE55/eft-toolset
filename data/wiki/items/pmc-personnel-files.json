@@ -1,0 +1,30 @@
+{
+  "title": "PMC personnel files",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PMC_personnel_files",
+  "revisionId": 361378,
+  "lastEdited": "2026-09-22T22:43:28Z",
+  "kind": "item",
+  "categories": [
+    "BattlePass documents"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "BattlePass documents",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "node": "6a317b9692cfdcddcb02a58e",
+    "ID": "Item_barter_info_personal"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used to unlock rewards from the Season 1: KORD BREACH BattlePass."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Single-axis Fiber Optic Gyroscope 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Single-axis_Fiber_Optic_Gyroscope_1",
+  "revisionId": 353195,
+  "lastEdited": "2026-08-11T17:57:59Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "node": "5af04e0a86f7743a532b79e2",
+    "id": "item_barter_electr_gyroscope"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Metal Birds from Peacekeeper"
+    }
+  ]
+}

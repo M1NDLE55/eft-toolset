@@ -1,0 +1,28 @@
+{
+  "title": "Kiver-M face shield",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kiver-M_face_shield",
+  "revisionId": 318451,
+  "lastEdited": "2025-09-24T13:29:26Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1.2 kg",
+    "grid": "2x1",
+    "price": "₽18,900",
+    "trader": "Ragman LL2",
+    "material": "Glass",
+    "armor": "3",
+    "armor coverage": "Face, Eyes, Jaws",
+    "durability": "40",
+    "blindness protect": "10%",
+    "penalties": "+0% turn speed, -5% Ergonomics",
+    "BlocksEyewear": "No",
+    "node": "5b46238386f7741a693bcf9c",
+    "id": "item_equipment_helmet_kiverm_shield"
+  },
+  "sections": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Special girl poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Special_girl_poster",
+  "revisionId": 344217,
+  "lastEdited": "2026-05-24T14:38:13Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6759e91d8367ee2b0c0f4b94",
+    "id": "item_barter_flyers_girl_6"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This poster shows Ana Cheri."
+    }
+  ]
+}

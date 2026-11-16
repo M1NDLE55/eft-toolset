@@ -1,0 +1,33 @@
+{
+  "title": "Can of sprats",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_sprats",
+  "revisionId": 345113,
+  "lastEdited": "2026-05-26T18:24:13Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.28 kg",
+    "grid": "1x1",
+    "effect": "Energy: +55, Hydration: -5",
+    "use time": "4s",
+    "loot xp": "20",
+    "node": "5bc9c29cd4351e003562b8a3",
+    "id": "item_food_sprats"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Ration supply crate\n- In Sport bags\n- In Plastic suitcases"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator alconafter."
+    }
+  ]
+}

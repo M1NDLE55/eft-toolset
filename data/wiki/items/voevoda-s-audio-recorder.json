@@ -1,0 +1,35 @@
+{
+  "title": "Voevoda's audio recorder",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Voevoda's_audio_recorder",
+  "revisionId": 348852,
+  "lastEdited": "2026-08-02T00:36:43Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "node": "68d152b9915f131d4e05ee6c",
+    "id": "item_voevoda_recorder"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This item is not lootable from players and can only be placed in a special item slot."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "The recorder must be equipped to play found audio tapes (Default keybind: M) in raid. Collected audio tapes can also be listened to in the handbook without having the recorder equipped.\n\nBug: This item currently leads to multiple game-breaking issues when used in-raid."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- 1 can be obtained as a reward from completing the story chapter Batya"
+    }
+  ]
+}

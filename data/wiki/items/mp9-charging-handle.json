@@ -1,0 +1,23 @@
+{
+  "title": "MP9 charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP9_charging_handle",
+  "revisionId": 211212,
+  "lastEdited": "2022-09-20T11:04:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "price": "₽650",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5de922d4b11454561e39239f",
+    "ID": "charge_mp9_bt_mp9_charging_handle_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Armband (Lighthouse)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Lighthouse)",
+  "revisionId": 348869,
+  "lastEdited": "2026-08-02T02:01:09Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "68d41fb0a1c275dbaa0798bf",
+    "id": "Item_equipment_armband_story_03_didnt_escape_from_yourself"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only obtainable by escaping from Tarkov with the \"Debtor\" ending"
+    }
+  ]
+}

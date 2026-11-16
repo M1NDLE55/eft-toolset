@@ -1,0 +1,25 @@
+{
+  "title": "Sako TRG M10 .338 LM 8-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_M10_.338_LM_8-round_magazine",
+  "revisionId": 339782,
+  "lastEdited": "2026-04-07T02:54:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.19 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "8",
+    "caliber": ".338 Lapua Magnum",
+    "node": "673cbdfad0453ba50c0f76d6",
+    "ID": "mag_trg_sako_trg_m10_86x70_8"
+  },
+  "sections": []
+}

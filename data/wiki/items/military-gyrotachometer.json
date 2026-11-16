@@ -1,0 +1,32 @@
+{
+  "title": "Military gyrotachometer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Military_gyrotachometer",
+  "revisionId": 358704,
+  "lastEdited": "2026-09-10T22:58:39Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.9 kg",
+    "grid": "1x2",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5d03784a86f774203e7e0c4d",
+    "ID": "item_barter_electr_gyrotachometer"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Wooden crate\n- Dead Scav\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the RB-ST key room\n- In the RB-PKPTS key room\n- In the room just before the \"D-2\" extraction\n- On white pawn roof, on the green crates in the middle of the roof\n- Beside tanks, west bunkers\n- In the 3rd floor of the black bishop building\n- In the RB-BK marked room\n- In the Tech Building\n- In the Dome Building, on the stack of pallets near the back door of the first floor."
+    }
+  ]
+}

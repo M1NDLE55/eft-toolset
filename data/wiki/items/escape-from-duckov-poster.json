@@ -1,0 +1,25 @@
+{
+  "title": "Escape from Duckov poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Escape_from_Duckov_poster",
+  "revisionId": 366885,
+  "lastEdited": "2026-11-01T13:01:55Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "697cdbfd14e9320980057487",
+    "id": "item_barter_flyers_ducks"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AK-74 SRVV MBR Jet 5.45x39 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_SRVV_MBR_Jet_5.45x39_muzzle_brake",
+  "revisionId": 337652,
+  "lastEdited": "2026-03-06T00:45:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "price": "₽5,660",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-3.5",
+    "accuracy": "+0",
+    "recoil": "-12.5",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5cc9a96cd7f00c011c04e04a",
+    "ID": "muzzle_ak74_srvv_mbr_jet_545_545x39"
+  },
+  "sections": []
+}

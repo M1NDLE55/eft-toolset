@@ -1,0 +1,31 @@
+{
+  "title": "Kalashnikov AK-102 5.56x45 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kalashnikov_AK-102_5.56x45_assault_rifle",
+  "revisionId": 357008,
+  "lastEdited": "2026-08-30T17:28:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.205 kg",
+    "grid": "4x2",
+    "trader": "Mechanic LL3",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "500",
+    "ergonomics": "63.6",
+    "velocity": "974 m/s",
+    "range": "650 m",
+    "MOA": "1.93",
+    "Weaprecoil": "Vertical: 74, Horizontal: 202",
+    "rof": "600",
+    "caliber": "5.56x45mm NATO",
+    "node": "5ac66d015acfc400180ae6e4",
+    "ID": "weapon_izhmash_ak102_556x45"
+  },
+  "sections": []
+}

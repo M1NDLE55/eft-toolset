@@ -1,0 +1,25 @@
+{
+  "title": "Case with goods for the smugglers 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Case_with_goods_for_the_smugglers_1",
+  "revisionId": 359903,
+  "lastEdited": "2026-09-13T20:36:53Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "7 kg",
+    "grid": "4x2",
+    "node": "6a898f9486c2a3db7e01ab25",
+    "id": "t3_carbon_case_goods1"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Sisyphus"
+    }
+  ]
+}

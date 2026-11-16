@@ -1,0 +1,27 @@
+{
+  "title": "Altyn helmet face shield",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Altyn_helmet_face_shield",
+  "revisionId": 361474,
+  "lastEdited": "2026-09-23T18:56:23Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1.4 kg",
+    "grid": "2x1",
+    "material": "Combined materials",
+    "armor": "5",
+    "armor coverage": "Head",
+    "armor segments": "Face, Eyes, Jaws",
+    "durability": "50",
+    "blindness protect": "25%",
+    "penalties": "-8% turn speed, -8% Ergonomics",
+    "BlocksEyewear": "No",
+    "node": "5aa7e373e5b5b000137b76f0",
+    "id": "helmet_altyn_face_shield"
+  },
+  "sections": []
+}

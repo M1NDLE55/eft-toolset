@@ -1,0 +1,33 @@
+{
+  "title": "Crye Precision AirFrame Chops (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_Chops_(MultiCam)",
+  "revisionId": 362098,
+  "lastEdited": "2026-09-24T19:46:32Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.45 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in Echo Belli crate",
+    "armor": "3",
+    "armor coverage": "Ears, Jaws",
+    "durability": "30",
+    "material": "Aluminium",
+    "penalties": "-1% turn speed, -1% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69cbd3188eeaa243ed09710e",
+    "ID": "item_equipment_helmet_crye_airframe_chops_multicam_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

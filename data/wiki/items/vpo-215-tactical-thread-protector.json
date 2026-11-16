@@ -1,0 +1,22 @@
+{
+  "title": "VPO-215 tactical thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-215_tactical_thread_protector",
+  "revisionId": 356972,
+  "lastEdited": "2026-08-30T14:29:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+1",
+    "Dura Burn": "-5",
+    "node": "68b985da5133d696f7032d37",
+    "ID": "muzzle_vpo215_molot_vpo_215_thread_protector_tactical_366tkm"
+  },
+  "sections": []
+}

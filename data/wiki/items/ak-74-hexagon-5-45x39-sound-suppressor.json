@@ -1,0 +1,28 @@
+{
+  "title": "AK-74 Hexagon 5.45x39 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_Hexagon_5.45x39_sound_suppressor",
+  "revisionId": 362632,
+  "lastEdited": "2026-09-29T20:39:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.462 kg",
+    "grid": "2x1",
+    "price": "₽37,930",
+    "trader": "Skier LL1 after completing his task Chemical - Part 2/Humanitarian Supplies",
+    "ergonomics": "-5",
+    "velocity": "+0.7",
+    "accuracy": "+0",
+    "recoil": "-1",
+    "Dura Burn": "+75",
+    "Heat": "+14.5",
+    "Cooling": "+8",
+    "node": "593d493f86f7745e6b2ceb22",
+    "ID": "silencer_ak74_hexagon_ak74_545x39"
+  },
+  "sections": []
+}

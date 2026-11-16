@@ -1,0 +1,21 @@
+{
+  "title": "AR-15 ADAR 2-15 charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_ADAR_2-15_charging_handle",
+  "revisionId": 322134,
+  "lastEdited": "2025-11-17T01:57:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.039 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+0.5",
+    "node": "5c0faf68d174af02a96260b8",
+    "ID": "charge_ar15_adar_charging_handle"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "RayBench Aviator glasses (Green lenses)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RayBench_Aviator_glasses_(Green_lenses)",
+  "revisionId": 348531,
+  "lastEdited": "2026-07-30T21:54:12Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "weight": "0.027 kg",
+    "grid": "2x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 0",
+    "blindness protect": "25%",
+    "node": "67af425c2676ade5750b50e6",
+    "id": "item_equipment_glasses_aviator_arena_bp_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Gus baseball cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gus_baseball_cap",
+  "revisionId": 318676,
+  "lastEdited": "2025-09-27T01:31:37Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "65749cb8e0423b9ebe0c79c9",
+    "id": "item_equipment_head_wild_security_flagcap"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Kaban's bodyguard Gus"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Based on the 5.11 Tactical Flag Bearer Cap."
+    }
+  ]
+}

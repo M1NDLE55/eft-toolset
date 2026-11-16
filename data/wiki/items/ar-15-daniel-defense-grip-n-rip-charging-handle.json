@@ -1,0 +1,21 @@
+{
+  "title": "AR-15 Daniel Defense GRIP-N-RIP charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Daniel_Defense_GRIP-N-RIP_charging_handle",
+  "revisionId": 296618,
+  "lastEdited": "2024-11-11T21:31:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.043 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+2",
+    "node": "651bf5617b3b552ef6712cb7",
+    "ID": "charge_ar15_dd_grip_n_rip_charging_handle"
+  },
+  "sections": []
+}

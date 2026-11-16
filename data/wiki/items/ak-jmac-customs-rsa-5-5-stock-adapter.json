@@ -1,0 +1,22 @@
+{
+  "title": "AK JMac Customs RSA-5.5 stock adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_JMac_Customs_RSA-5.5_stock_adapter",
+  "revisionId": 343066,
+  "lastEdited": "2026-05-03T14:55:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-0.5",
+    "recoil": "+0",
+    "node": "688c9df121038434840a1e06",
+    "ID": "stock_ak_jmac_rsa_1913_adapter"
+  },
+  "sections": []
+}

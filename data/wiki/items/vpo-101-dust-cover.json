@@ -1,0 +1,24 @@
+{
+  "title": "VPO-101 dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-101_dust_cover",
+  "revisionId": 293150,
+  "lastEdited": "2024-09-29T20:33:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.12 kg",
+    "grid": "2x1",
+    "price": "₽1,020",
+    "ergonomics": "+2",
+    "Dura Burn": "-3",
+    "loot xp": "5",
+    "exam xp": "2",
+    "node": "5c503d0a2e221602b542b7ef",
+    "ID": "reciever_vepr_molot_vpo-101_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "AR-10 Desert Tech 7.62x51 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Desert_Tech_7.62x51_flash_hider",
+  "revisionId": 358332,
+  "lastEdited": "2026-09-09T20:13:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-2",
+    "accuracy": "+1",
+    "recoil": "-7",
+    "Heat": "-1",
+    "node": "5dcbe965e4ed22586443a79d",
+    "ID": "muzzle_ar10_dt_mdr_std_762x51"
+  },
+  "sections": []
+}

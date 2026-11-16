@@ -1,0 +1,24 @@
+{
+  "title": "TT Razor Arms rubber grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TT_Razor_Arms_rubber_grip",
+  "revisionId": 340895,
+  "lastEdited": "2026-04-22T09:01:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "price": "₽4,900",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+3",
+    "loot xp": "5",
+    "exam xp": "2",
+    "node": "5c079ec50db834001966a706",
+    "ID": "pistolgrip_tt_razor_arms_rubber_grip"
+  },
+  "sections": []
+}

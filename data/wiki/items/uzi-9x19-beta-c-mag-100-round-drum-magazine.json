@@ -1,0 +1,26 @@
+{
+  "title": "UZI 9x19 Beta C-Mag 100-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_9x19_Beta_C-Mag_100-round_drum_magazine",
+  "revisionId": 338010,
+  "lastEdited": "2026-03-08T00:41:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.997 kg",
+    "grid": "2x2",
+    "ergonomics": "-10",
+    "checkaccuracy": "1",
+    "checkmodifier": "+20",
+    "loadmodifier": "+10",
+    "feedfailure": "High",
+    "capacity": "100",
+    "caliber": "9x19mm Parabellum",
+    "node": "676176a162e0497044079f46",
+    "ID": "mag_uzi_beta_c_mag_9x19_100"
+  },
+  "sections": []
+}

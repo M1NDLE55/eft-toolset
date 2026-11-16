@@ -1,0 +1,33 @@
+{
+  "title": "Crye Precision AirFrame Ears (Coyote)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_Ears_(Coyote)",
+  "revisionId": 362102,
+  "lastEdited": "2026-09-24T19:46:48Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in the Factory Tactical Map",
+    "armor": "3",
+    "armor coverage": "Ears",
+    "durability": "27",
+    "material": "Aluminium",
+    "penalties": "+0% turn speed, +0% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69cbd36d8eeaa243ed097112",
+    "ID": "item_equipment_helmet_crye_airframe_ears_shark_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

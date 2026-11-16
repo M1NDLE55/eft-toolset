@@ -1,0 +1,29 @@
+{
+  "title": "HK MP7 4.6x30 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP7_4.6x30_20-round_magazine",
+  "revisionId": 337556,
+  "lastEdited": "2026-03-05T23:52:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽3,700",
+    "trader": "Mechanic LL1, Peacekeeper LL3",
+    "ergonomics": "+5",
+    "checkaccuracy": "No",
+    "checkmodifier": "-30",
+    "loadmodifier": "-25",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "4.6x30mm HK",
+    "loot xp": "10",
+    "node": "5ba264f6d4351e0034777d52",
+    "ID": "mag_mp7_hk_std_46x30_20"
+  },
+  "sections": []
+}

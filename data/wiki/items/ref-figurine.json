@@ -1,0 +1,31 @@
+{
+  "title": "Ref figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ref_figurine",
+  "revisionId": 355942,
+  "lastEdited": "2026-08-25T11:51:44Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "68f26063b2b53abd200b9553",
+    "id": "Item_barter_tarko_ref"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This figurine was first obtainable during Release Twitch Drops (October 2025)."
+    }
+  ]
+}

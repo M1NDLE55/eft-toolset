@@ -1,0 +1,27 @@
+{
+  "title": "Glock Moto Cut pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_Moto_Cut_pistol_slide",
+  "revisionId": 356364,
+  "lastEdited": "2026-08-26T00:28:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-1",
+    "Dura Burn": "-2",
+    "Heat": "-2.2",
+    "Cooling": "+7.8",
+    "node": "5a9685b1a2750c0032157104",
+    "ID": "reciever_glock_gspc_moto_slide_cut"
+  },
+  "sections": []
+}

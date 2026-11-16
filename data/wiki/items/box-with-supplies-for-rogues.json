@@ -1,0 +1,25 @@
+{
+  "title": "Box with supplies for Rogues",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Box_with_supplies_for_Rogues",
+  "revisionId": 360092,
+  "lastEdited": "2026-09-14T11:40:22Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "1.2 kg",
+    "grid": "1x2",
+    "node": "6a898d53c891636d94044435",
+    "id": "t3_quest_package"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Stimulating Demand"
+    }
+  ]
+}

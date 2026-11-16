@@ -1,0 +1,21 @@
+{
+  "title": "Armasight Vulcan universal base",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armasight_Vulcan_universal_base",
+  "revisionId": 319271,
+  "lastEdited": "2025-10-12T15:35:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-1",
+    "node": "5b3b6dc75acfc47a8773fb1e",
+    "ID": "mount_all_armasight_un_nv_ir_qd_mount"
+  },
+  "sections": []
+}

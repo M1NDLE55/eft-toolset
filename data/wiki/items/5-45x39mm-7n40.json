@@ -1,0 +1,40 @@
+{
+  "title": "5.45x39mm 7N40",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_7N40",
+  "revisionId": 352179,
+  "lastEdited": "2026-08-07T20:27:42Z",
+  "kind": "ammo",
+  "categories": [
+    "5.45x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.011 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4, after completing Mechanic's task Calibration",
+    "velocity": "915 m/s",
+    "damage": "55",
+    "accuracy": "+50",
+    "recoil": "-10",
+    "penetration": "42",
+    "armor damage": "45",
+    "ricochet": "30%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+15",
+    "durability burn": "+35",
+    "heat": "+75.2",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "61962b617c6c7b169525f168",
+    "id": "patron_545x39_7n40"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

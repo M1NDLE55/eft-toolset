@@ -1,0 +1,23 @@
+{
+  "title": "AR-10 KAC ambidextrous charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_KAC_ambidextrous_charging_handle",
+  "revisionId": 293202,
+  "lastEdited": "2024-09-29T21:10:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.046 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+1",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5df8e085bb49d91fb446d6a8",
+    "ID": "charge_ar10_kac_ambi_charging_handle"
+  },
+  "sections": []
+}

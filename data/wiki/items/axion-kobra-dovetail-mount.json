@@ -1,0 +1,21 @@
+{
+  "title": "Axion Kobra dovetail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Axion_Kobra_dovetail_mount",
+  "revisionId": 340719,
+  "lastEdited": "2026-04-22T06:41:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.043 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-3",
+    "node": "591ee00d86f774592f7b841e",
+    "ID": "mount_dovetail_aksion_kobra"
+  },
+  "sections": []
+}

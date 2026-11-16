@@ -1,0 +1,43 @@
+{
+  "title": "12/70 Piranha",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_Piranha",
+  "revisionId": 324859,
+  "lastEdited": "2025-11-23T17:25:21Z",
+  "kind": "ammo",
+  "categories": [
+    "12/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Buckshot",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "velocity": "310 m/s",
+    "damage": "25",
+    "accuracy": "-5",
+    "projectiles": "10",
+    "penetration": "24",
+    "armor damage": "22",
+    "ricochet": "10%",
+    "l bleed chance": "+15",
+    "h bleed chance": "+15",
+    "durability burn": "+50",
+    "heat": "+110.8",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "effects": "Subsonic",
+    "loot xp": "0",
+    "exam xp": "10",
+    "node": "64b8ee384b75259c590fa89b",
+    "id": "patron_12x70_piranha"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

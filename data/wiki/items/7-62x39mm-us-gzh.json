@@ -1,0 +1,39 @@
+{
+  "title": "7.62x39mm US gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_US_gzh",
+  "revisionId": 356455,
+  "lastEdited": "2026-08-26T01:29:42Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "velocity": "301 m/s",
+    "damage": "56",
+    "accuracy": "+5",
+    "recoil": "-30",
+    "penetration": "29",
+    "armor damage": "42",
+    "ricochet": "35.8%",
+    "durability burn": "-20",
+    "heat": "-10.4",
+    "feedfailure": "Very low",
+    "misfire": "Very low",
+    "effects": "Subsonic",
+    "node": "59e4d24686f7741776641ac7",
+    "id": "patron_762x39_US"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

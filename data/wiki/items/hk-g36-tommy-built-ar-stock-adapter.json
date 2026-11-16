@@ -1,0 +1,23 @@
+{
+  "title": "HK G36 Tommy Built AR Stock Adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_Tommy_Built_AR_Stock_Adapter",
+  "revisionId": 343522,
+  "lastEdited": "2026-05-07T22:38:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.14 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-2",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "node": "6706a159c67236b2f703bb95",
+    "ID": "stock_g36_tommy_built_ar15_stock_adapter"
+  },
+  "sections": []
+}

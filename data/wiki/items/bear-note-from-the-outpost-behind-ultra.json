@@ -1,0 +1,25 @@
+{
+  "title": "BEAR note from the outpost behind Ultra",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_note_from_the_outpost_behind_Ultra",
+  "revisionId": 348858,
+  "lastEdited": "2026-08-02T01:21:39Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "68d2f7334aae290cf704e36d",
+    "ID": "item_info_note_bogatir_gnezdo"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    }
+  ]
+}

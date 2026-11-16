@@ -1,0 +1,40 @@
+{
+  "title": "NFM THOR Concealable Reinforced Vest body armor (Head Eyes)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NFM_THOR_Concealable_Reinforced_Vest_body_armor_(Head_Eyes)",
+  "revisionId": 348431,
+  "lastEdited": "2026-07-30T20:16:24Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "1.7 kg",
+    "grid": "3x3",
+    "trader": "Ref LL2, after unlocking it in the Customs Tactical Map",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "70",
+    "penalties": "+0% movement speed, -1% turn speed, +0% Ergonomics",
+    "node": "68a89146212dbbeead0d5636",
+    "ID": "item_equipment_armor_custom_thorcrv_skull_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

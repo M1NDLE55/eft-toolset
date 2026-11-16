@@ -1,0 +1,25 @@
+{
+  "title": "Crash Axe",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crash_Axe",
+  "revisionId": 365059,
+  "lastEdited": "2026-10-26T21:47:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "1.4 kg",
+    "grid": "1x3",
+    "fire modes": "Chop 31 Damage, Stab 52 Damage",
+    "range": "Chop 0.45m, Stab 0.5m",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5bffe7930db834001b734a39",
+    "ID": "weapon_crash_axe"
+  },
+  "sections": []
+}

@@ -1,0 +1,37 @@
+{
+  "title": "WARTECH TV-110 plate carrier (Coyote)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/WARTECH_TV-110_plate_carrier_(Coyote)",
+  "revisionId": 346868,
+  "lastEdited": "2026-06-14T21:17:59Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "3.5 kg",
+    "grid": "4x3",
+    "trader": "Ragman LL4",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Thorax, Back",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "70",
+    "penalties": "-1% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "23 Slots",
+    "node": "5c0e746986f7741453628fe5",
+    "ID": "item_equipment_rig_tv110"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

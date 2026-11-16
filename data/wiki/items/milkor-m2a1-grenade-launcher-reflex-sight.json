@@ -1,0 +1,24 @@
+{
+  "title": "Milkor M2A1 grenade launcher reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Milkor_M2A1_grenade_launcher_reflex_sight",
+  "revisionId": 253303,
+  "lastEdited": "2023-11-02T21:54:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.6 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "zeroing": "50, 100, 150, 200, 250, 300, 350, 400",
+    "sightrange": "300",
+    "ergonomics": "-6",
+    "modes": "1",
+    "node": "6284bd5f95250a29bc628a30",
+    "ID": "scope_all_milkor_m2a1_reflex_sight"
+  },
+  "sections": []
+}

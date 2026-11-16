@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (FDE)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(FDE)",
+  "revisionId": 342210,
+  "lastEdited": "2026-04-28T21:29:11Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67c6c13350d016f15e0c4dba",
+    "id": "item_camo_solid_color_fde"
+  },
+  "sections": []
+}

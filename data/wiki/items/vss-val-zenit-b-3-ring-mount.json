@@ -1,0 +1,22 @@
+{
+  "title": "VSS/VAL Zenit B-3 ring mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSS/VAL_Zenit_B-3_ring_mount",
+  "revisionId": 289942,
+  "lastEdited": "2024-09-02T06:19:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "price": "₽2,680",
+    "trader": "Skier LL3",
+    "ergonomics": "-1",
+    "node": "57a3459f245977764a01f703",
+    "ID": "mount_vss_zenit_b3"
+  },
+  "sections": []
+}

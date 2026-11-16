@@ -1,0 +1,35 @@
+{
+  "title": "NPP KlASS Korund-VM body armor (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NPP_KlASS_Korund-VM_body_armor_(Black)",
+  "revisionId": 348303,
+  "lastEdited": "2026-07-28T10:51:41Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "1.9 kg",
+    "grid": "3x4",
+    "trader": "Prapor LL4",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Groin, Buttocks",
+    "default plates": "1x , 1x , 2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate, Sides",
+    "durability": "160",
+    "penalties": "-5% movement speed, -2.5% turn speed, -3% Ergonomics",
+    "node": "5f5f41476bdad616ad46d631",
+    "id": "item_equipment_armor_korundvm"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

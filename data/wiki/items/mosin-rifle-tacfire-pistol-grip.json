@@ -1,0 +1,22 @@
+{
+  "title": "Mosin Rifle Tacfire pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_Tacfire_pistol_grip",
+  "revisionId": 366566,
+  "lastEdited": "2026-10-31T04:20:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.16 kg",
+    "grid": "1x1",
+    "price": "₽1,950",
+    "trader": "Jaeger LL2 after completing his task The Tarkov Shooter - Part 3",
+    "ergonomics": "+5",
+    "node": "5bbde41ed4351e003562b038",
+    "ID": "pistolgrip_mosin_tacfire_pgmn"
+  },
+  "sections": []
+}

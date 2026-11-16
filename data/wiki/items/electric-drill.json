@@ -1,0 +1,26 @@
+{
+  "title": "Electric drill",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Electric_drill",
+  "revisionId": 364352,
+  "lastEdited": "2026-10-13T14:52:13Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "node": "59e35de086f7741778269d84",
+    "id": "item_barter_electr_drill"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

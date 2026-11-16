@@ -1,0 +1,20 @@
+{
+  "title": "Type 20 charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Type_20_charging_handle",
+  "revisionId": 357272,
+  "lastEdited": "2026-09-01T09:39:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.035 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "node": "6a3cf2f17047a606b90f532e",
+    "ID": "charge_type20_howa_type20_std"
+  },
+  "sections": []
+}

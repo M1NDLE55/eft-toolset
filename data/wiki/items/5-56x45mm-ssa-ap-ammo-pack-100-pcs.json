@@ -1,0 +1,24 @@
+{
+  "title": "5.56x45mm SSA AP ammo pack (100 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_SSA_AP_ammo_pack_(100_pcs)",
+  "revisionId": 367193,
+  "lastEdited": "2026-11-02T23:11:51Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702681bfc87b3a3409325f",
+    "ID": "item_ammo_box_556x45_100_ssa_ap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Wilcox Stubby Para Grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wilcox_Stubby_Para_Grip",
+  "revisionId": 361256,
+  "lastEdited": "2026-09-22T16:31:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.185 kg",
+    "grid": "1x1",
+    "recoil": "-1.5",
+    "node": "6a675e0706a5419b2508f26c",
+    "ID": "foregrip_all_wilcox_stubby_para_grip"
+  },
+  "sections": []
+}

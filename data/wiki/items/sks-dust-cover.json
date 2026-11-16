@@ -1,0 +1,21 @@
+{
+  "title": "SKS dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_dust_cover",
+  "revisionId": 293076,
+  "lastEdited": "2024-09-29T20:01:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+2",
+    "node": "634f05ca517ccc8a960fc748",
+    "ID": "reciever_sks_toz_sks_std"
+  },
+  "sections": []
+}

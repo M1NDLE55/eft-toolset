@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 Magpul Enhanced Receiver Extension",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Magpul_Enhanced_Receiver_Extension",
+  "revisionId": 354981,
+  "lastEdited": "2026-08-18T02:02:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.162 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1.5",
+    "recoil": "-1",
+    "Dura Burn": "-1",
+    "node": "5a33ca0fc4a282000d72292f",
+    "ID": "stock_ar15_magpul_enhanced_rifle_tube"
+  },
+  "sections": []
+}

@@ -1,0 +1,41 @@
+{
+  "title": "9x39mm SPP gs",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x39mm_SPP_gs",
+  "revisionId": 343850,
+  "lastEdited": "2026-05-14T09:22:37Z",
+  "kind": "ammo",
+  "categories": [
+    "9x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.023 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "velocity": "310 m/s",
+    "damage": "68",
+    "accuracy": "+10",
+    "recoil": "+7",
+    "penetration": "35",
+    "armor damage": "48",
+    "ricochet": "40%",
+    "l bleed chance": "+10",
+    "h bleed chance": "+20",
+    "durability burn": "+10",
+    "heat": "+45",
+    "feedfailure": "Medium",
+    "misfire": "Very low",
+    "effects": "Subsonic",
+    "node": "5c0d668f86f7747ccb7f13b2",
+    "id": "patron_9x39_spp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

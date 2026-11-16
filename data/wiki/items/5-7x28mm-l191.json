@@ -1,0 +1,41 @@
+{
+  "title": "5.7x28mm L191",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.7x28mm_L191",
+  "revisionId": 322818,
+  "lastEdited": "2025-11-18T21:23:32Z",
+  "kind": "ammo",
+  "categories": [
+    "5.7x28mm FN Ammuntion",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.006 kg",
+    "grid": "1x1",
+    "price": "₽112",
+    "trader": "Peacekeeper LL3",
+    "velocity": "715 m/s",
+    "damage": "53",
+    "accuracy": "-4",
+    "penetration": "33",
+    "armor damage": "41",
+    "ricochet": "60%",
+    "durability burn": "+15",
+    "heat": "+11.2",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "effects": "Tracer (red)",
+    "loot xp": "0",
+    "exam xp": "10",
+    "node": "5cc80f53e4a949000e1ea4f8",
+    "id": "patron_57x28_l191"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

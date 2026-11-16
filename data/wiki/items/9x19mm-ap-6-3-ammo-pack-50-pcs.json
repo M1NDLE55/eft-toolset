@@ -1,0 +1,18 @@
+{
+  "title": "9x19mm AP 6.3 ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_AP_6.3_ammo_pack_(50_pcs)",
+  "revisionId": 367276,
+  "lastEdited": "2026-11-02T23:16:21Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702591c5d7d4cb4d07857c",
+    "ID": "item_ammo_box_9x19_50_ap63"
+  },
+  "sections": []
+}

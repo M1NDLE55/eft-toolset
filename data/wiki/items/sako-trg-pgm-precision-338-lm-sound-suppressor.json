@@ -1,0 +1,26 @@
+{
+  "title": "Sako TRG PGM Precision .338 LM sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_PGM_Precision_.338_LM_sound_suppressor",
+  "revisionId": 338000,
+  "lastEdited": "2026-03-08T00:35:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.665 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-2",
+    "velocity": "+0.9",
+    "recoil": "-8",
+    "Dura Burn": "+27",
+    "Heat": "+18",
+    "Cooling": "+8",
+    "node": "673f0a9370a3ddcf0d0ee0b8",
+    "ID": "silencer_trg_pgm_sako_trg_type_86x70"
+  },
+  "sections": []
+}

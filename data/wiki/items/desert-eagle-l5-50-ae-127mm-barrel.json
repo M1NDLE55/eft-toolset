@@ -1,0 +1,25 @@
+{
+  "title": "Desert Eagle L5 .50 AE 127mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Eagle_L5_.50_AE_127mm_barrel",
+  "revisionId": 298318,
+  "lastEdited": "2024-12-18T07:37:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.336 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-2",
+    "MOA": "8.25",
+    "recoil": "-1",
+    "Heat": "+9.4",
+    "Cooling": "+14.8",
+    "node": "669fa4ba1bd4416eaa09b3c6",
+    "ID": "barrel_deagle_magnum_research_l5_std_127mm_127x33"
+  },
+  "sections": []
+}

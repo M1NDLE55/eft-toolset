@@ -1,0 +1,25 @@
+{
+  "title": "AR-15 FAB Defense GLR-16-S stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_FAB_Defense_GLR-16-S_stock",
+  "revisionId": 337575,
+  "lastEdited": "2026-03-06T00:05:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.276 kg",
+    "grid": "2x1",
+    "price": "₽4,800",
+    "trader": "Skier LL3",
+    "ergonomics": "+6",
+    "recoil": "-21.5",
+    "loot xp": "10",
+    "exam xp": "4",
+    "node": "5bfe86df0db834001b734685",
+    "ID": "stock_ar15_fab_defense_glr_16_s"
+  },
+  "sections": []
+}

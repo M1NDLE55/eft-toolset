@@ -1,0 +1,35 @@
+{
+  "title": ".300 Blackout BCP FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.300_Blackout_BCP_FMJ",
+  "revisionId": 322858,
+  "lastEdited": "2025-11-18T21:29:37Z",
+  "kind": "ammo",
+  "categories": [
+    ".300 Blackout ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "velocity": "605 m/s",
+    "damage": "60",
+    "penetration": "30",
+    "armor damage": "36",
+    "ricochet": "30%",
+    "heat": "+59.2",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "5fbe3ffdf8b6a877a729ea82",
+    "id": "patron_762x35_blackout"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Secure container Gamma",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_container_Gamma",
+  "revisionId": 363474,
+  "lastEdited": "2026-10-06T22:21:33Z",
+  "kind": "item",
+  "categories": [
+    "Secure containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Secure container",
+    "slot": "Pouch",
+    "weight": "1.2 kg",
+    "grid": "3x3",
+    "slots": "3x3 grid (9 slots)",
+    "node": "5857a8bc2459772bad15db29 665ee77ccf2d642e98220bca 68f8e04eae031982b00e7aaf",
+    "id": "Gamma container Gamma container_tue item_container_gamma_damaged"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Players with the \"Edge of Darkness\" or \"The Unheard\" game editions will start with this container.\n- Can only fit:\n  - Document case\n  - Dogtag case\n  - Gingy keychain\n  - Injector case\n  - Key tool\n  - Keycard holder case\n  - S I C C organizational pouch\n  - Simple wallet\n  - WZ Wallet\n  - Loot\n  - Provisions\n  - Meds\n  - Keys, Keycards & Maps\n  - Weapon mods (Besides magazines, special scopes and some mounts)\n  - Armor plates\n  - Currency\n  - Armbands\n  - Earpieces\n  - Vanity Face cover\n  - Vanity Headwear\n  - Vanity Eyewear\n  - Melee weapons\n  - Special equipment (Besides repair kits)"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The Secure container Gamma is modeled after the real life pistol case called the SE Series™ Scoped Pistol Case. The only differences between the real life counterpart and the in-game model is coloration."
+    }
+  ]
+}

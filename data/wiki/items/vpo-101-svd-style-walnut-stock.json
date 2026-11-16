@@ -1,0 +1,27 @@
+{
+  "title": "VPO-101 SVD-style walnut stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-101_SVD-style_walnut_stock",
+  "revisionId": 293207,
+  "lastEdited": "2024-09-29T21:11:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.07 kg",
+    "grid": "4x1",
+    "price": "₽5,400",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+21",
+    "recoil": "-25",
+    "Heat": "+4.9",
+    "Cooling": "-4.2",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5f63405df5750b524b45f114",
+    "ID": "stock_vepr_pflevsha_svd_type_walnut"
+  },
+  "sections": []
+}

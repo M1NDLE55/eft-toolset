@@ -1,0 +1,28 @@
+{
+  "title": "MDR 5.56x45 16 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MDR_5.56x45_16_inch_barrel",
+  "revisionId": 356392,
+  "lastEdited": "2026-08-26T00:41:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.509 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-12",
+    "velocity": "-4",
+    "MOA": "1.44",
+    "recoil": "-8.1",
+    "Heat": "-2",
+    "Cooling": "-1",
+    "loot xp": "20",
+    "exam xp": "6",
+    "node": "5c48a2852e221602b21d5923",
+    "ID": "barrel_mdr_dt_406mm_556x45"
+  },
+  "sections": []
+}

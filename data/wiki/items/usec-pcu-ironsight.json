@@ -1,0 +1,22 @@
+{
+  "title": "USEC PCU Ironsight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_PCU_Ironsight",
+  "revisionId": 252761,
+  "lastEdited": "2023-11-02T21:49:16Z",
+  "kind": "item",
+  "categories": [
+    "USEC upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f56a686f7744bce0ee9eb",
+    "ID": "usec_upper_pcuironsight"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The jacket is modeled on the ORC Industries PCU Level 5 jacket, and gloves are modeled on the Outdoor Research Ironsight gloves."
+    }
+  ]
+}

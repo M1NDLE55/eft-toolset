@@ -1,0 +1,35 @@
+{
+  "title": "Tarkov train station poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tarkov_train_station_poster",
+  "revisionId": 356939,
+  "lastEdited": "2026-08-30T01:14:25Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "68f25b4219a2b503d70dc28d",
+    "id": "item_barter_flyers_art_06"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The poster was first obtainable during Release Twitch Drops (October 2025)."
+    }
+  ]
+}

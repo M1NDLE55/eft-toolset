@@ -1,0 +1,21 @@
+{
+  "title": "OP-SKS dovetail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OP-SKS_dovetail_mount",
+  "revisionId": 333102,
+  "lastEdited": "2026-01-27T18:41:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-1",
+    "node": "587e08ee245977446b4410cf",
+    "ID": "mount_sks_molot_op_sks_std"
+  },
+  "sections": []
+}

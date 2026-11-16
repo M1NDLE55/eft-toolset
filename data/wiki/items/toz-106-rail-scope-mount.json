@@ -1,0 +1,24 @@
+{
+  "title": "TOZ-106 rail scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TOZ-106_rail_scope_mount",
+  "revisionId": 213413,
+  "lastEdited": "2022-10-30T18:45:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "price": "₽2,300",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5c61627a2e22160012542c55",
+    "ID": "mount_dovetail_noname_toz106_angled_mount"
+  },
+  "sections": []
+}

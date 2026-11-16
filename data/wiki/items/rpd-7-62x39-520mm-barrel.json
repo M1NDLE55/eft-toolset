@@ -1,0 +1,27 @@
+{
+  "title": "RPD 7.62x39 520mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_7.62x39_520mm_barrel",
+  "revisionId": 342384,
+  "lastEdited": "2026-04-29T00:58:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.8 kg",
+    "grid": "4x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-32",
+    "velocity": "+0",
+    "MOA": "1.31",
+    "recoil": "-9.4",
+    "Dura Burn": "+0",
+    "Heat": "-10",
+    "Cooling": "-7.5",
+    "node": "6513eff1e06849f06c0957d4",
+    "ID": "barrel_rpd_zid_rpd_520mm_762x39"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Mosin Rifle Kiba Arms 7.62x54R custom thread adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_Kiba_Arms_7.62x54R_custom_thread_adapter",
+  "revisionId": 290643,
+  "lastEdited": "2024-09-04T00:40:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "node": "5cf79389d7f00c10941a0c4d",
+    "ID": "muzzle_mosin_noname_custom_thread_adapter_multi"
+  },
+  "sections": []
+}

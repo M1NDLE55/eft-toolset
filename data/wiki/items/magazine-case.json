@@ -1,0 +1,52 @@
+{
+  "title": "Magazine case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magazine_case",
+  "revisionId": 367607,
+  "lastEdited": "2026-11-07T21:15:20Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "3.94 kg",
+    "grid": "3x2",
+    "trader": "Ref LL2, Mechanic LL3, after completing his task Import",
+    "effect": "Provides 64 inventory slots while only taking up 6",
+    "node": "5c127c4486f7745625356c13",
+    "ID": "item_container_magbox"
+  },
+  "sections": [
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Magazine case is a container with the purpose of saving space within the player's inventory. It provides 64 inventory slots in an 8x8 grid and only takes up 6 inventory slots itself. Only magazines can be stored in it."
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- At the three-story dorms in the \"marked room\"\n- On a industrial shelf in warehouse 3 at the shipping yard\n\n- \"Old Gas Station\":\n  - On the desk inside\n  - At the \"giving tree\" behind it"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Gunsmith Master - Part 9\n- 1 can be obtained as a quest reward from Chemical - Part 4"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The Magazine case is modeled after the 1510 Protector Carry-on Case by Pelican."
+    }
+  ]
+}

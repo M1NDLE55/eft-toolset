@@ -1,0 +1,20 @@
+{
+  "title": "M1911A1 trigger",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_trigger",
+  "revisionId": 255633,
+  "lastEdited": "2023-11-23T15:22:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.014 kg",
+    "grid": "1x1",
+    "ergonomics": "+1",
+    "node": "5e81c6a2ac2bb513793cdc7f",
+    "ID": "trigger_m1911_colt_m1911a1_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,38 @@
+{
+  "title": "S&S Precision PlateFrame plate carrier (Goons Edition)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/S%26S_Precision_PlateFrame_plate_carrier_(Goons_Edition)",
+  "revisionId": 329753,
+  "lastEdited": "2025-12-25T21:43:08Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "1.32 kg",
+    "grid": "3x3",
+    "armor": "0 (No integrated inserts)",
+    "default plates": "2x , 2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate, Sides",
+    "penalties": "+0% movement speed, +0% turn speed, -1% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "10 Slots",
+    "node": "628b9784bcf6e2659e09b8a2",
+    "ID": "item_equipment_rig_boss_big_pipe"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Big Pipe"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

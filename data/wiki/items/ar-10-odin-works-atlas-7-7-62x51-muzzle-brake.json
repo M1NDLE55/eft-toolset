@@ -1,0 +1,26 @@
+{
+  "title": "AR-10 Odin Works ATLAS-7 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Odin_Works_ATLAS-7_7.62x51_muzzle_brake",
+  "revisionId": 352319,
+  "lastEdited": "2026-08-07T21:35:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "price": "₽10,300",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-5",
+    "recoil": "-12",
+    "Dura Burn": "-4",
+    "Heat": "-1.5",
+    "loot xp": "40",
+    "node": "5bbdb8bdd4351e4502011460",
+    "ID": "muzzle_ar10_odin_works_atlas_7_muzzle_brake_762x51"
+  },
+  "sections": []
+}

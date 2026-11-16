@@ -1,0 +1,31 @@
+{
+  "title": "Tripwire installation kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tripwire_installation_kit",
+  "revisionId": 367623,
+  "lastEdited": "2026-11-07T22:02:34Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.35 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "node": "666b11055a706400b717cfa5",
+    "id": "item_spec_mining_kit"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- The kit is not lootable from players and persists upon death as long as it is placed in a special item slot.\n\n- Only 4 can be held in a raid inventory at the same time\n- Partisan and Shadow of Tagilla do not set off tripwires."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- The kit must be placed in any inventory slot and equipped via the \"Change weapon fire mode\" keybind (Default: B) while holding any grenade besides the RDG-2B in hands.\n  - The tripwire can be placed freely on any flat surface, with a minimum of 0.8, and a maximum wire distance of 3 meters.\n  - The explosion delay depends on the used grenade.\n  - A player placed tripwire will persist till it is triggered or disarmed.\n\n- Tripwires can be disarmed at the grenade with bare hands in 11 seconds, and with a Leatherman Multitool in the inventory in 3 seconds. The used grenade can be picked up again but the kit is destroyed.\n\n- Tripwires can also be activated/disarmed by bullets and shrapnel hitting their wire. Hitting the pegs or the grenade does not work."
+    }
+  ]
+}

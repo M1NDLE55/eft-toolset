@@ -1,0 +1,44 @@
+{
+  "title": "Bottle of Dan Jackiel whiskey",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bottle_of_Dan_Jackiel_whiskey",
+  "revisionId": 362970,
+  "lastEdited": "2026-10-03T11:35:49Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "1.4 kg",
+    "grid": "1x2",
+    "effect": "Energy: +10, Hydration: -35, , Buffs:, Removes: for 210 seconds,, Radiation Exposure, Adds: for 210 seconds, 1s Delay; 210s Duration: - Increases Stress Resistance (+2), Debuffs:, 1s Delay; 210s Duration: - Decreases Health (-2) 220s Delay; 60s Duration:, Causes",
+    "use time": "4s",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5d403f9186f7743cac3f229b",
+    "ID": "item_food_jack"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Sport bags\n- In Common fund stash"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the relaxation room, on tables"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the chairs or table in the camp west of the railroad tracks. It is accessible by jumping from the red awning (covering the gym equipment) to the shipping container."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This is a parody of Jack Daniel's Whiskey."
+    }
+  ]
+}

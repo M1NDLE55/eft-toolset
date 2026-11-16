@@ -1,0 +1,25 @@
+{
+  "title": "SIG Sauer BRAVO4 4x30 scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_BRAVO4_4x30_scope",
+  "revisionId": 265057,
+  "lastEdited": "2024-01-13T05:51:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.419 kg",
+    "grid": "2x1",
+    "price": "₽45,520",
+    "trader": "Peacekeeper LL4",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "800",
+    "ergonomics": "-2",
+    "modes": "1",
+    "node": "57adff4f24597737f373b6e6",
+    "ID": "scope_all_sig_bravo4_4x30"
+  },
+  "sections": []
+}

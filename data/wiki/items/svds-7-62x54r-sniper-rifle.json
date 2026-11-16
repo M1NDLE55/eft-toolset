@@ -1,0 +1,38 @@
+{
+  "title": "SVDS 7.62x54R sniper rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVDS_7.62x54R_sniper_rifle",
+  "revisionId": 363904,
+  "lastEdited": "2026-10-10T16:03:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Designated marksman rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Designated marksman rifle",
+    "slot": "Primary",
+    "weight": "4.386 kg",
+    "grid": "6x2",
+    "trader": "Prapor LL3",
+    "fire modes": "Single",
+    "sightrange": "600",
+    "ergonomics": "51",
+    "velocity": "875 m/s",
+    "range": "900 m",
+    "MOA": "1.03",
+    "Weaprecoil": "Vertical: 114, Horizontal: 336",
+    "rof": "700",
+    "caliber": "7.62x54mmR",
+    "def mag": "SVD 7.62x54R 10-round magazine",
+    "node": "5c46fbd72e2216398b5a8c9c",
+    "ID": "weapon_izhmash_svd_s_762x54"
+  },
+  "sections": [
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On second floor of Black Knight, against a window\n- On middle \"K-building\" / \"loading dock\" against the sandbags\n- On Black Bishop / \"School\" on the boxes by the mounted machine gun facing the White Bishop building"
+    }
+  ]
+}

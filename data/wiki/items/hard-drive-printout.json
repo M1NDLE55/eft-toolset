@@ -1,0 +1,26 @@
+{
+  "title": "Hard drive printout",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hard_drive_printout",
+  "revisionId": 348073,
+  "lastEdited": "2026-07-19T12:25:31Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "689b512b075404ce7e09ec12",
+    "id": "item_info_note_correspondence_himcombinat"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

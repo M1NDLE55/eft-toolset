@@ -1,0 +1,35 @@
+{
+  "title": "Crye Precision AirFrame helmet (Tan)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_helmet_(Tan)",
+  "revisionId": 362082,
+  "lastEdited": "2026-09-24T19:41:49Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.88 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL4, after completing his task Trophies",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5c17a7ed2e2216152142459c",
+    "ID": "item_equipment_helmet_crye_airframe_tan"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

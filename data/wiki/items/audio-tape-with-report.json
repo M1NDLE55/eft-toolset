@@ -1,0 +1,32 @@
+{
+  "title": "Audio tape with report",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Audio_tape_with_report",
+  "revisionId": 348049,
+  "lastEdited": "2026-07-19T12:22:59Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes",
+    "Minor TerraGroup evidence"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "0:27",
+    "node": "6888958794cca0a80b070ae9",
+    "ID": "item_info_recorder_tape_voevoda_01"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya\n- This is one of the minor evidence used in The Ticket"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Voevoda: To the commander of the Gnezdo base. Reporting. After the combat task was completed, someone detonated an explosive. We have casualties among USEC operators and civilians. One of ours is critically wounded, the rest have light injuries. Assistance required. I repeat, assistance required!"
+    }
+  ]
+}

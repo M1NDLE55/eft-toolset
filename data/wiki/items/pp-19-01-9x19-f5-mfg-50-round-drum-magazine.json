@@ -1,0 +1,27 @@
+{
+  "title": "PP-19-01 9x19 F5 MFG 50-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-19-01_9x19_F5_MFG_50-round_drum_magazine",
+  "revisionId": 338003,
+  "lastEdited": "2026-03-08T00:36:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.68 kg",
+    "grid": "1x2",
+    "trader": "Skier LL3",
+    "ergonomics": "-7",
+    "checkaccuracy": "No",
+    "checkmodifier": "+10",
+    "loadmodifier": "+10",
+    "feedfailure": "Medium",
+    "capacity": "50",
+    "caliber": "9x19mm Parabellum",
+    "node": "6749c40822a2740bb408d066",
+    "ID": "mag_pp-19-01_f5mfg_kr9_drum_mag_9x19_50"
+  },
+  "sections": []
+}

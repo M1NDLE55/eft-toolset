@@ -1,0 +1,42 @@
+{
+  "title": "First Spear Strandhogg plate carrier (MultiCam Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/First_Spear_Strandhogg_plate_carrier_(MultiCam_Black)",
+  "revisionId": 349307,
+  "lastEdited": "2026-08-03T23:15:26Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "3.2 kg",
+    "grid": "3x4",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 2",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "108",
+    "penalties": "-1% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "17 Slots",
+    "node": "69d36347705756116e0a901c",
+    "id": "item_equipment_rig_strandhogg_multicam_black_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

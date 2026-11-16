@@ -1,0 +1,20 @@
+{
+  "title": "M45A1 slide lock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M45A1_slide_lock",
+  "revisionId": 255640,
+  "lastEdited": "2023-11-23T16:26:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.008 kg",
+    "grid": "1x1",
+    "ergonomics": "+2",
+    "node": "5f3e777688ca2d00ad199d25",
+    "ID": "catch_m1911_colt_m45a1_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "AR-15 5.56x45 Molot Arms 16 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_Molot_Arms_16_inch_barrel",
+  "revisionId": 343507,
+  "lastEdited": "2026-05-07T22:26:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.594 kg",
+    "grid": "3x1",
+    "trader": "Skier LL1",
+    "ergonomics": "-16",
+    "velocity": "+2",
+    "MOA": "2.2",
+    "recoil": "-8.1",
+    "Dura Burn": "+4",
+    "Heat": "-2",
+    "Cooling": "-1",
+    "node": "5c0e2f94d174af029f650d56",
+    "ID": "barrel_ar15_adar_406mm"
+  },
+  "sections": []
+}

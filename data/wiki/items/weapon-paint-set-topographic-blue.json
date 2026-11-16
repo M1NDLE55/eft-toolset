@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Topographic Blue)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Topographic_Blue)",
+  "revisionId": 361051,
+  "lastEdited": "2026-09-21T21:22:52Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "6a847940f95d613c3d03f08e",
+    "id": "item_camo_topographic_blue"
+  },
+  "sections": []
+}

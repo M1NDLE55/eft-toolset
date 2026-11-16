@@ -1,0 +1,27 @@
+{
+  "title": "FN SCAR-L 5.56x45 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR-L_5.56x45_flash_hider",
+  "revisionId": 337852,
+  "lastEdited": "2026-03-07T06:29:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "accuracy": "+1",
+    "recoil": "-7",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "618407a850224f204c1da549",
+    "ID": "muzzle_ar15_fn_scar_l_3_prong_flash_hider_w_mount_556x45"
+  },
+  "sections": []
+}

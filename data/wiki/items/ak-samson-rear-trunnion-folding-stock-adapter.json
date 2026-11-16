@@ -1,0 +1,21 @@
+{
+  "title": "AK Samson Rear Trunnion Folding Stock Adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Samson_Rear_Trunnion_Folding_Stock_Adapter",
+  "revisionId": 353527,
+  "lastEdited": "2026-08-13T21:00:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.34 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-0.5",
+    "node": "688cbdc341e2a57a8f0c1c6c",
+    "ID": "stock_ak_samson_1913_stock_adapter"
+  },
+  "sections": []
+}

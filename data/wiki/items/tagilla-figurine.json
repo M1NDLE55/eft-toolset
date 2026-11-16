@@ -1,0 +1,26 @@
+{
+  "title": "Tagilla figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tagilla_figurine",
+  "revisionId": 343717,
+  "lastEdited": "2026-05-10T11:00:19Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "66572cbdad599021091c611a",
+    "id": "Item_barter_tarko_tagilla"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

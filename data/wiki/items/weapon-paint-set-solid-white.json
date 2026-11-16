@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Solid White)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Solid_White)",
+  "revisionId": 348497,
+  "lastEdited": "2026-07-30T21:22:32Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67c6c1542d0b47e5f60c48e5",
+    "id": "item_camo_solid_color_white"
+  },
+  "sections": []
+}

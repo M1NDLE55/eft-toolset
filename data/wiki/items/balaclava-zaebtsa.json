@@ -1,0 +1,27 @@
+{
+  "title": "Balaclava (Zaebtsa)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balaclava_(Zaebtsa)",
+  "revisionId": 348625,
+  "lastEdited": "2026-07-30T22:17:35Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 1",
+    "node": "68a9adc2bc09b91c4f07dbe6",
+    "id": "item_equipment_facecover_balaclava_zaebtsa_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

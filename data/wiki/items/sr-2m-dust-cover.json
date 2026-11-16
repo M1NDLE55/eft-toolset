@@ -1,0 +1,25 @@
+{
+  "title": "SR-2M dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-2M_dust_cover",
+  "revisionId": 253067,
+  "lastEdited": "2023-11-02T21:51:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.168 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "node": "62e27a7865f0b1592a49e17b",
+    "ID": "reciever_sr2m_tochmash_sr2_std"
+  },
+  "sections": []
+}

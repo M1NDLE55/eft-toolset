@@ -1,0 +1,22 @@
+{
+  "title": "PKM wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PKM_wooden_stock",
+  "revisionId": 270203,
+  "lastEdited": "2024-02-08T20:16:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "+3",
+    "recoil": "-20",
+    "node": "646371a9f2404ab67905c8e6",
+    "ID": "stock_pk_zid_wood_std"
+  },
+  "sections": []
+}

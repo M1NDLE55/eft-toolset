@@ -1,0 +1,30 @@
+{
+  "title": "P226 Axelson Tactical MK25 pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Axelson_Tactical_MK25_pistol_slide",
+  "revisionId": 231555,
+  "lastEdited": "2023-03-23T10:20:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.24 kg",
+    "grid": "2x1",
+    "price": "₽9,900",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+4",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-4",
+    "Dura Burn": "-3",
+    "Heat": "-5",
+    "Cooling": "+6.5",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5bffe7c50db834001d23ece1",
+    "ID": "reciever_p226_axelson_tactical_mk25"
+  },
+  "sections": []
+}

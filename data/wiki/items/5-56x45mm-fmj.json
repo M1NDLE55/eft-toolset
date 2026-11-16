@@ -1,0 +1,35 @@
+{
+  "title": "5.56x45mm FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_FMJ",
+  "revisionId": 362900,
+  "lastEdited": "2026-10-03T10:48:48Z",
+  "kind": "ammo",
+  "categories": [
+    "5.56x45mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "velocity": "957 m/s",
+    "damage": "57",
+    "penetration": "23",
+    "armor damage": "33",
+    "ricochet": "26%",
+    "heat": "+50.1",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "59e6920f86f77411d82aa167",
+    "id": "patron_556x45_55_FMJ"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

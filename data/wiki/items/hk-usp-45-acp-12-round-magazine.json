@@ -1,0 +1,25 @@
+{
+  "title": "HK USP .45 ACP 12-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_.45_ACP_12-round_magazine",
+  "revisionId": 338850,
+  "lastEdited": "2026-03-18T08:35:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.099 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "1",
+    "feedfailure": "Very low",
+    "capacity": "12",
+    "caliber": ".45 ACP",
+    "node": "6193d338de3cdf1d2614a6fc",
+    "ID": "mag_usp_hk_usp_1143x23_12"
+  },
+  "sections": []
+}

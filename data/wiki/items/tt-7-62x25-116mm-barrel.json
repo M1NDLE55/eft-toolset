@@ -1,0 +1,26 @@
+{
+  "title": "TT 7.62x25 116mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TT_7.62x25_116mm_barrel",
+  "revisionId": 266908,
+  "lastEdited": "2024-01-17T01:21:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "price": "₽1,100",
+    "ergonomics": "-4",
+    "velocity": "-2.32",
+    "MOA": "12.03",
+    "recoil": "-3",
+    "Heat": "+12",
+    "Cooling": "+18",
+    "node": "571a26d524597720680fbe8a",
+    "ID": "barrel_tt_116mm_762x25tt_std"
+  },
+  "sections": []
+}

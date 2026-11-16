@@ -1,0 +1,20 @@
+{
+  "title": "BOSS cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BOSS_cap",
+  "revisionId": 334312,
+  "lastEdited": "2026-02-10T14:44:25Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "60a7acf20c5cb24b01346648",
+    "id": "item_equipment_head_tagillacap"
+  },
+  "sections": []
+}

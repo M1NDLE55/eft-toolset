@@ -1,0 +1,26 @@
+{
+  "title": "Nightforce NXS 2.5-10x24 scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nightforce_NXS_2.5-10x24_scope",
+  "revisionId": 284266,
+  "lastEdited": "2024-08-08T18:10:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.51 kg",
+    "grid": "2x1",
+    "ergonomics": "-1",
+    "node": "544a3d0a4bdc2d1b388b4567",
+    "ID": "scope_all_nightforce_nxs_2,5-10x24"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The Nightforce NXS 2.5-10x24 scope is an unfinished and unobtainable item in the game that is only visible in the weapon preset editor of accounts with access to all items in the game, for example special tournament accounts."
+    }
+  ]
+}

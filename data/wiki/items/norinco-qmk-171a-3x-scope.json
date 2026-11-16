@@ -1,0 +1,24 @@
+{
+  "title": "Norinco QMK-171A 3x scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Norinco_QMK-171A_3x_scope",
+  "revisionId": 356661,
+  "lastEdited": "2026-08-27T20:42:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.39 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4 after unlocking QBZ-191 in BattlePass Season 1",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "800",
+    "ergonomics": "-3",
+    "modes": "1",
+    "node": "69f9f0e4df2c2358a904186b",
+    "ID": "scope_base_norinco_qmk_171a"
+  },
+  "sections": []
+}

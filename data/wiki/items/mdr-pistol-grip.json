@@ -1,0 +1,21 @@
+{
+  "title": "MDR pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MDR_pistol_grip",
+  "revisionId": 341998,
+  "lastEdited": "2026-04-27T23:54:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3: FDE, Mechanic LL4: Black",
+    "ergonomics": "+3",
+    "node": "5c48a2c22e221602b313fb6c 5dcbd6dddbd3d91b3e5468de",
+    "ID": "pistolgrip_mdr_dt_mdr_std pistolgrip_mdr_dt_mdr_std_blk"
+  },
+  "sections": []
+}

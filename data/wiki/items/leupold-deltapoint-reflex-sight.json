@@ -1,0 +1,25 @@
+{
+  "title": "Leupold DeltaPoint Reflex Sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Leupold_DeltaPoint_Reflex_Sight",
+  "revisionId": 230730,
+  "lastEdited": "2023-03-12T14:04:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Compact reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Compact reflex sight",
+    "weight": "0.053 kg",
+    "grid": "1x1",
+    "price": "₽10,327",
+    "trader": "Peacekeeper LL2",
+    "zeroing": "25, 50, 100",
+    "sightrange": "150",
+    "ergonomics": "+0",
+    "modes": "1",
+    "node": "58d268fc86f774111273f8c2",
+    "ID": "scope_base_leupold_deltapoint"
+  },
+  "sections": []
+}

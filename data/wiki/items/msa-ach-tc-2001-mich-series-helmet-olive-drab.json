@@ -1,0 +1,29 @@
+{
+  "title": "MSA ACH TC-2001 MICH Series helmet (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MSA_ACH_TC-2001_MICH_Series_helmet_(Olive_Drab)",
+  "revisionId": 362949,
+  "lastEdited": "2026-10-03T11:22:26Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.4 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL2",
+    "material": "Combined Materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "30",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -2% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5d5e7d28a4b936645d161203",
+    "ID": "helmet_mich2001_od"
+  },
+  "sections": []
+}

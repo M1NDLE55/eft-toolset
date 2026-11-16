@@ -1,0 +1,26 @@
+{
+  "title": "GK-02 12ga muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/GK-02_12ga_muzzle_brake",
+  "revisionId": 302199,
+  "lastEdited": "2025-01-05T23:34:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.233 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-1",
+    "accuracy": "+0",
+    "recoil": "-10",
+    "Dura Burn": "-2",
+    "Heat": "-1.7",
+    "Cooling": "+1.6",
+    "node": "58272d7f2459774f6311ddfd",
+    "ID": "muzzle_12g_red_heat_gk-02_12g"
+  },
+  "sections": []
+}

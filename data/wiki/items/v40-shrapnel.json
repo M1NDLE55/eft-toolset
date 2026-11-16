@@ -1,0 +1,24 @@
+{
+  "title": "V40 Shrapnel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/V40_Shrapnel",
+  "revisionId": 313825,
+  "lastEdited": "2025-05-25T22:01:42Z",
+  "kind": "ammo",
+  "categories": [
+    "Shrapnel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shrapnel",
+    "velocity": "100 m/s",
+    "damage": "25",
+    "penetration": "3",
+    "armor damage": "32",
+    "ricochet": "20%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+20",
+    "node": "67654a6759116d347b0bfb86",
+    "id": "shrapnel_v40"
+  },
+  "sections": []
+}

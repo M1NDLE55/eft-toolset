@@ -1,0 +1,25 @@
+{
+  "title": "Sacred Amulet from the mysterious room",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sacred_Amulet_from_the_mysterious_room",
+  "revisionId": 348811,
+  "lastEdited": "2026-08-01T14:28:44Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6908ef18d3e8386fcc04ac77",
+    "id": "quest_cultist_amulet2"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player sided with Lightkeeper."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "AI .338 LM Tactical Sound Moderator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_.338_LM_Tactical_Sound_Moderator",
+  "revisionId": 337881,
+  "lastEdited": "2026-03-07T06:42:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.665 kg",
+    "grid": "2x1",
+    "ergonomics": "-25",
+    "velocity": "+0.9",
+    "recoil": "-11",
+    "Dura Burn": "+115",
+    "Heat": "+25",
+    "Cooling": "+8",
+    "node": "62811fa609427b40ab14e765",
+    "ID": "silencer_ai_accuracy_international_tactical_sound_moderator_86x70"
+  },
+  "sections": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Sanitar's bag",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sanitar's_bag",
+  "revisionId": 304501,
+  "lastEdited": "2025-01-22T12:14:23Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.44 kg",
+    "grid": "4x4",
+    "penalties": "-4% movement speed, -1% turn speed, -3% Ergonomics",
+    "slots": "4x4 grid (16 slots)",
+    "node": "5e997f0b86f7741ac73993e2",
+    "id": "backpack_sanitar_medbag"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sanitar"
+    }
+  ]
+}

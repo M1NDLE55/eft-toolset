@@ -1,0 +1,27 @@
+{
+  "title": "Mosin Rifle sniper carbine stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_sniper_carbine_stock",
+  "revisionId": 270182,
+  "lastEdited": "2024-02-08T20:09:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.55 kg",
+    "grid": "3x1",
+    "price": "₽3,580",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+11",
+    "recoil": "-19",
+    "Heat": "+8.8",
+    "Cooling": "-8.6",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5bfd37c80db834001d23e842",
+    "ID": "stock_mosin_izhmash_mosin_carabine_sniper_cut_wood"
+  },
+  "sections": []
+}

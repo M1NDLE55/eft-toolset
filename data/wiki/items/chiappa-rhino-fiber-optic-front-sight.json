@@ -1,0 +1,22 @@
+{
+  "title": "Chiappa Rhino Fiber Optic front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chiappa_Rhino_Fiber_Optic_front_sight",
+  "revisionId": 350071,
+  "lastEdited": "2026-08-05T10:45:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "619f52454c58466fe122843b",
+    "ID": "sight_front_rhino_chiappa_night_sight"
+  },
+  "sections": []
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Kalashnikov AKM 7.62x39 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kalashnikov_AKM_7.62x39_assault_rifle",
+  "revisionId": 353008,
+  "lastEdited": "2026-08-09T22:24:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.495 kg",
+    "grid": "5x2",
+    "trader": "Ref LL1, Prapor LL2: Standard",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "500",
+    "ergonomics": "42",
+    "velocity": "730 m/s",
+    "range": "400 m",
+    "MOA": "2.3",
+    "Weaprecoil": "Vertical: 90, Horizontal: 221",
+    "rof": "600",
+    "caliber": "7.62x39mm",
+    "def mag": "AK 7.62x39 30-round magazine (issued '55 or later)",
+    "node": "59d6088586f774275f37482f",
+    "ID": "weapon_izhmash_akm_762x39"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Variant Name | Attachments |\n| AKMP | |\n| AKMB | |\n| AKM 2k17 NY | 2x |\n| AKM T-OPS | |"
+    }
+  ]
+}

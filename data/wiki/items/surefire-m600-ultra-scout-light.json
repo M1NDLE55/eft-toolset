@@ -1,0 +1,22 @@
+{
+  "title": "SureFire M600 Ultra Scout Light",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SureFire_M600_Ultra_Scout_Light",
+  "revisionId": 354932,
+  "lastEdited": "2026-08-17T19:52:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Flashlights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flashlight",
+    "weight": "0.224 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1.5",
+    "modes": "1",
+    "node": "689c887cd18a3665b8045743",
+    "ID": "flashlight_surefire_m600_ultra_scout"
+  },
+  "sections": []
+}

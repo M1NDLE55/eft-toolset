@@ -1,0 +1,26 @@
+{
+  "title": "Silicone tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Silicone_tube",
+  "revisionId": 352249,
+  "lastEdited": "2026-08-07T21:03:15Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.220 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5d1b39a386f774252339976f",
+    "id": "item_barter_building_silicontube"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    }
+  ]
+}

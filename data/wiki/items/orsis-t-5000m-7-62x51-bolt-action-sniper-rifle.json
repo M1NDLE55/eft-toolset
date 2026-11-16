@@ -1,0 +1,43 @@
+{
+  "title": "ORSIS T-5000M 7.62x51 bolt-action sniper rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ORSIS_T-5000M_7.62x51_bolt-action_sniper_rifle",
+  "revisionId": 362232,
+  "lastEdited": "2026-09-26T15:06:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Bolt-action rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bolt-action rifle",
+    "slot": "Primary",
+    "weight": "5.9 kg",
+    "grid": "5x2",
+    "trader": "Skier LL2 after completing his task Chemical - Part 3",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "49.5",
+    "velocity": "941 m/s",
+    "range": "1000 m",
+    "MOA": "0.66",
+    "Weaprecoil": "Vertical: 76, Horizontal: 306",
+    "rof": "30",
+    "caliber": "7.62x51mm NATO",
+    "def mag": "ORSIS T-5000M 7.62x51 5-round magazine",
+    "node": "5df24cf80dee1b22f862e9bc",
+    "ID": "weapon_orsis_t5000_762x51"
+  },
+  "sections": [
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the RB-KPRL room next to the weapon locker"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the MVD guard room behind the fallen water dispenser under the window"
+    }
+  ]
+}

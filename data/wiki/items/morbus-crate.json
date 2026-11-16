@@ -1,0 +1,30 @@
+{
+  "title": "Morbus crate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Morbus_crate",
+  "revisionId": 361090,
+  "lastEdited": "2026-09-21T22:23:47Z",
+  "kind": "item",
+  "categories": [
+    "Loot Boxes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot box",
+    "weight": "10 kg",
+    "grid": "3x2",
+    "node": "6a843f89e0ad22393c004188",
+    "ID": "item_container_arena_battlepass_s3_CM"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Arena BattlePass Season 3\n- The Lab Tactical Map\n- Can be purchased for 45 Battle Points"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "- All rewards except for currency can be obtained just once. Every time you receive a common rarity reward, the chance of receiving higher rarity rewards increases:\n  - Rare by 0.5%\n  - Super Rare by 0.33%\n  - Epic by 0.17%\n  - Legendary by 0.11%\n- Upon receiving a higher rarity reward, the chance of that rarity resets.\n\n| Icon | Name | Type | Rarity |\n| GP coin | GP coin ×20 | Currency | Common |\n| | Battle Point ×20 | Currency | Common |\n| GP coin | GP coin ×40 | Currency | Common |\n| Baseball cap (Zaebtsa Red Tiger Stripe) | Baseball cap (Zaebtsa Red Tiger Stripe) | Headwear | Common |\n| AR-15 Unique-ARs Heat Shield (Anodized Red) | AR-15 Unique-ARs Heat Shield (Anodized Red) | Weapon mod | Common |\n| Team Wendy EXFIL helmet cover (Arctic Chocolate Chip) | Team Wendy EXFIL helmet cover (Arctic Chocolate Chip) | Helmet mod | Common |\n| AK Hexagon Cheese Grater mod.2 handguard (Anodized Red) | AK Hexagon Cheese Grater mod.2 handguard (Anodized Red) | Weapon mod | Common |\n| Fit Viper glasses (Exec) | Fit Viper glasses (Exec) | Eyewear | Common |\n| Weapon paint set (Arctic Chocolate Chip) | Weapon paint set (Arctic Chocolate Chip) | Weapon camouflage | Common |\n| Weapon paint set (Smoke) | Weapon paint set (Smoke) | Weapon camouflage | Rare |\n| Blue Force Gear PLATEminus V2 Plate Carrier (Coyote Brown) | Blue Force Gear PLATEminus V2 Plate Carrier (Coyote Brown) | Chest rig | Super Rare |\n| Diamond Age NovaSteel helmet (Custos Mortis) | Diamond Age NovaSteel helmet (Custos Mortis) | Headwear | Epic |\n| USEC QILO Blue Choco Chip | USEC QILO Blue Choco Chip | Tactical clothing | Legendary |"
+    }
+  ]
+}

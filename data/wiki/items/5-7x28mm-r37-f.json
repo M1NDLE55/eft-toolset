@@ -1,0 +1,37 @@
+{
+  "title": "5.7x28mm R37.F",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.7x28mm_R37.F",
+  "revisionId": 362826,
+  "lastEdited": "2026-10-01T22:14:07Z",
+  "kind": "ammo",
+  "categories": [
+    "5.7x28mm FN Ammuntion",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.006 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3, after completing his task Secrets of Polikhim",
+    "velocity": "729 m/s",
+    "damage": "98",
+    "penetration": "8",
+    "armor damage": "7",
+    "ricochet": "5%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+20",
+    "heat": "-2.9",
+    "feedfailure": "Medium",
+    "misfire": "Medium",
+    "node": "5cc86832d7f00c000d3a6e6c",
+    "id": "patron_57x28_r37f"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

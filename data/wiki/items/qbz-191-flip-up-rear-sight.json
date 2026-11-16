@@ -1,0 +1,22 @@
+{
+  "title": "QBZ-191 flip-up rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/QBZ-191_flip-up_rear_sight",
+  "revisionId": 357266,
+  "lastEdited": "2026-09-01T09:19:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.036 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "sightrange": "300",
+    "ergonomics": "+0.5",
+    "node": "69f9f0a86b45e1d5210c6955",
+    "ID": "sight_rear_qbz191_norinco_191_folding_sight"
+  },
+  "sections": []
+}

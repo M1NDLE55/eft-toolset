@@ -1,0 +1,28 @@
+{
+  "title": "Ghoul mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ghoul_mask",
+  "revisionId": 344293,
+  "lastEdited": "2026-05-24T21:41:24Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.15 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "No",
+    "node": "6176a40f0b8c0312ac75a3d3",
+    "id": "item_equipment_facecover_halloween_vampire"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This mask is part of Escape from Tarkov's 2021 Halloween Celebration."
+    }
+  ]
+}

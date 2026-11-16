@@ -1,0 +1,25 @@
+{
+  "title": "M14 Smith Enterprise Vortex 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_Smith_Enterprise_Vortex_7.62x51_muzzle_brake",
+  "revisionId": 337517,
+  "lastEdited": "2026-03-05T23:34:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "accuracy": "+2",
+    "recoil": "-6",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "node": "5addbba15acfc400185c2854",
+    "ID": "muzzle_m14_smith_enterprise_vortex_dc_flash_eliminator_762x51"
+  },
+  "sections": []
+}

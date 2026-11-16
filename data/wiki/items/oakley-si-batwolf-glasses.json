@@ -1,0 +1,33 @@
+{
+  "title": "Oakley SI Batwolf glasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Oakley_SI_Batwolf_glasses",
+  "revisionId": 348358,
+  "lastEdited": "2026-07-29T15:19:56Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.05 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "material": "Glass",
+    "armor": "1",
+    "armor coverage": "Eyes",
+    "durability": "20",
+    "blindness protect": "18%",
+    "penalties": "-1% Ergonomics",
+    "node": "62a61c988ec41a51b34758d5",
+    "id": "Item_equipment_glasses_oakley"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Schmidt & Bender PM II 1-8x24 30mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Schmidt_%26_Bender_PM_II_1-8x24_30mm_riflescope",
+  "revisionId": 352692,
+  "lastEdited": "2026-08-09T20:38:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.9 kg",
+    "grid": "2x1",
+    "zeroing": "50, 100, 150, 200, 250, 300, 350, 400, 450",
+    "sightrange": "1500",
+    "ergonomics": "-3",
+    "modes": "1",
+    "loot xp": "40",
+    "exam xp": "8",
+    "node": "617151c1d92c473c770214ab",
+    "ID": "scope_30mm_s&b_pm_ii_1_8x24"
+  },
+  "sections": []
+}

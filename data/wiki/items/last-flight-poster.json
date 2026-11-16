@@ -1,0 +1,30 @@
+{
+  "title": "Last Flight poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Last_Flight_poster",
+  "revisionId": 331637,
+  "lastEdited": "2026-01-07T19:36:22Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a1a244ff23436160d8033",
+    "id": "item_barter_flyers_movie_reis"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

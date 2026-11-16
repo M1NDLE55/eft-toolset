@@ -1,0 +1,36 @@
+{
+  "title": "7.62x51mm BCP FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_BCP_FMJ",
+  "revisionId": 326414,
+  "lastEdited": "2025-12-01T23:05:27Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x51mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.023 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "velocity": "840 m/s",
+    "damage": "83",
+    "penetration": "37",
+    "armor damage": "56",
+    "ricochet": "40%",
+    "l bleed chance": "+12",
+    "h bleed chance": "+12",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "5e023e53d4353e3302577c4c",
+    "id": "patron_762x51_bpz_fmj"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

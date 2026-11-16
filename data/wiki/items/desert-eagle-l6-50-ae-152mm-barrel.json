@@ -1,0 +1,25 @@
+{
+  "title": "Desert Eagle L6 .50 AE 152mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Eagle_L6_.50_AE_152mm_barrel",
+  "revisionId": 312137,
+  "lastEdited": "2025-04-25T11:36:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.436 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-3",
+    "MOA": "6.88",
+    "recoil": "-3.5",
+    "Heat": "+5.6",
+    "Cooling": "+10.3",
+    "node": "669fa47da0bab4e8510d9526",
+    "ID": "barrel_deagle_magnum_research_l6_std_152mm_127x33"
+  },
+  "sections": []
+}

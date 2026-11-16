@@ -1,0 +1,25 @@
+{
+  "title": "TerraGroup Labs master keycard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_Labs_master_keycard",
+  "revisionId": 339349,
+  "lastEdited": "2026-03-28T00:05:00Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "67bdf097600629c8f20322e5",
+    "id": "q_card_master_access"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player did not refuse to work with Mr. Kerman."
+    }
+  ]
+}

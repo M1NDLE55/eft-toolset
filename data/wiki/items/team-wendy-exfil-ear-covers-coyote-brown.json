@@ -1,0 +1,27 @@
+{
+  "title": "Team Wendy EXFIL Ear Covers (Coyote Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Team_Wendy_EXFIL_Ear_Covers_(Coyote_Brown)",
+  "revisionId": 344252,
+  "lastEdited": "2026-05-24T21:27:30Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.172 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL4",
+    "armor": "3",
+    "armor coverage": "Ears",
+    "durability": "30",
+    "material": "Aluminium",
+    "penalties": "+0% turn speed, +0% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5e01f31d86f77465cf261343",
+    "ID": "helmet_team_wendy_exfil_ear_covers_coyote"
+  },
+  "sections": []
+}

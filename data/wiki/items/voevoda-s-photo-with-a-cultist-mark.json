@@ -1,0 +1,30 @@
+{
+  "title": "Voevoda's photo with a cultist mark",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Voevoda's_photo_with_a_cultist_mark",
+  "revisionId": 348017,
+  "lastEdited": "2026-07-19T01:49:55Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "68d2f9164aae290cf704e36f",
+    "id": "item_info_note_photo_voevoda"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The photo is a reference to the the \"Chronicles of Ryzhy\" Season 2 Chapter 4 short film. In this chapter, a flashback by Dan reveals that this photo was taken at the training base of the PMC unit that Voevoda and Dan himself were part of at the time.\n\nThis photo can also be seen at the end of Chapter 6 of Season 2 hanging on the board that Dan is examining."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Secure container Alpha-1 with TerraGroup evidence",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_container_Alpha-1_with_TerraGroup_evidence",
+  "revisionId": 339582,
+  "lastEdited": "2026-04-02T15:42:50Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "67c033719dacd7c19f0f9f46 68f77d874ea3f761790e8c05",
+    "ID": "q_flash_docs_digital_orig q_flash_docs_digital_orig_terminal"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "If a player dies while having this item in their in-raid quest inventory, it is returned back to them via in-game mail."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player did not refuse to work with Mr. Kerman, assisted him with finding evidence and then continued searching."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "On the desk under the window in the armory inside the armory building on Terminal. Note: Only spawns if the player brought it into the raid."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This Secure container Alpha is the same container that appears in Battlestate Games The Raid movie."
+    }
+  ]
+}

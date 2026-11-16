@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 KRISS Defiance DS150 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_KRISS_Defiance_DS150_stock",
+  "revisionId": 349667,
+  "lastEdited": "2026-08-04T08:51:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.4 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3: Black, FDE",
+    "ergonomics": "+10",
+    "recoil": "-21.5",
+    "node": "5fbbaa86f9986c4cff3fe5f6 5fce16961f152d4312622bc9",
+    "ID": "stock_ar15_kriss_defiance_ds150 stock_ar15_kriss_defiance_ds150_fde"
+  },
+  "sections": []
+}

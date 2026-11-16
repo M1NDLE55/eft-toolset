@@ -1,0 +1,26 @@
+{
+  "title": "M590A1 12ga 20 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M590A1_12ga_20_inch_barrel",
+  "revisionId": 329264,
+  "lastEdited": "2025-12-24T16:35:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.52 kg",
+    "grid": "3x1",
+    "ergonomics": "-8",
+    "velocity": "+5.2",
+    "accuracy": "+5",
+    "MOA": "17.88",
+    "recoil": "-6",
+    "Heat": "-8",
+    "Cooling": "-4",
+    "node": "5e87071478f43e51ca2de5e1",
+    "ID": "barrel_590_590a1_std_508mm_12g"
+  },
+  "sections": []
+}

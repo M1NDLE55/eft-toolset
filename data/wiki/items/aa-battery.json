@@ -1,0 +1,26 @@
+{
+  "title": "AA Battery",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AA_Battery",
+  "revisionId": 353700,
+  "lastEdited": "2026-08-14T21:45:20Z",
+  "kind": "item",
+  "categories": [
+    "Energy elements"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Energy element",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5672cb124bdc2d1a0f8b4568",
+    "id": "item_battery_aa"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    }
+  ]
+}

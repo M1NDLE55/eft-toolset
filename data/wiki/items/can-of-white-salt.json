@@ -1,0 +1,26 @@
+{
+  "title": "Can of white salt",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_white_salt",
+  "revisionId": 352041,
+  "lastEdited": "2026-08-07T09:25:56Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.32 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "62a09ee4cf4a99369e262453",
+    "id": "item_barter_household_salt"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Drawer\n- Ration supply crate"
+    }
+  ]
+}

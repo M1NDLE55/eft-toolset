@@ -1,0 +1,26 @@
+{
+  "title": "Fuel catalyst test report",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fuel_catalyst_test_report",
+  "revisionId": 348040,
+  "lastEdited": "2026-07-19T12:14:51Z",
+  "kind": "item",
+  "categories": [
+    "Major TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.13 kg",
+    "grid": "1x1",
+    "node": "689b5187665c386d9c007a43",
+    "id": "item_info_note_report_tests_blueIce"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard\n- This is one of the major evidence used in The Ticket"
+    }
+  ]
+}

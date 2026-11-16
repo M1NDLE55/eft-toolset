@@ -1,0 +1,25 @@
+{
+  "title": "M590 Magpul MOE forend",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M590_Magpul_MOE_forend",
+  "revisionId": 342094,
+  "lastEdited": "2026-04-28T03:43:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+15",
+    "Heat": "+1.9",
+    "Cooling": "-1.2",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5eea21647547d6330471b3c9",
+    "ID": "handguard_590_magpul_moe_590"
+  },
+  "sections": []
+}

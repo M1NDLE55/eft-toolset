@@ -1,0 +1,25 @@
+{
+  "title": "FN SCAR-H 7.62x51 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR-H_7.62x51_20-round_magazine",
+  "revisionId": 337800,
+  "lastEdited": "2026-03-06T02:20:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "Black: 0.33 kg, FDE: 0.35 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL3: Black, Peacekeeper LL4: FDE",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "7.62x51mm NATO",
+    "node": "618168dc8004cc50514c34fc 6183d53f1cb55961fa0fdcda",
+    "ID": "mag_mk17_fn_mk17_std_762x51_20 mag_mk17_fn_mk17_std_762x51_20_fde"
+  },
+  "sections": []
+}

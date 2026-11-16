@@ -1,0 +1,25 @@
+{
+  "title": "5.45x39mm PS gs ammo pack (120 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_PS_gs_ammo_pack_(120_pcs)",
+  "revisionId": 367168,
+  "lastEdited": "2026-11-02T23:10:36Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.1 kg",
+    "grid": "2x1",
+    "price": "₽",
+    "node": "57372e73245977685d4159b4 57372e94245977685648d3e1",
+    "id": "item_ammo_box_545x39_120_ps item_ammo_box_545x39_120_ps_damaged"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- There is also a \"damaged\" variant of this item that has a slightly different image but also always contains 120 rounds."
+    }
+  ]
+}

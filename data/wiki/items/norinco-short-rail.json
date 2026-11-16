@@ -1,0 +1,21 @@
+{
+  "title": "Norinco short rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Norinco_short_rail",
+  "revisionId": 357370,
+  "lastEdited": "2026-09-01T13:40:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-0.15",
+    "node": "69fa0168e72acd254602c64a",
+    "ID": "mount_qbz191_norinco_short_rail"
+  },
+  "sections": []
+}

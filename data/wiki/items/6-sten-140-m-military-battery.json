@@ -1,0 +1,45 @@
+{
+  "title": "6-STEN-140-M military battery",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6-STEN-140-M_military_battery",
+  "revisionId": 367587,
+  "lastEdited": "2026-11-05T22:05:28Z",
+  "kind": "item",
+  "categories": [
+    "Energy elements"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Energy element",
+    "weight": "43.2 kg",
+    "grid": "4x2",
+    "node": "5d03794386f77420415576f5",
+    "ID": "item_barter_energy_batterymilitary"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be put inside secure containers"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Dead Scav\n- Ground cache\n- Sport bag\n- Technical supply crate"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the old house room\n- In the old house toilet (guaranteed spawn)."
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- In the Tennis court of the Southern mountain villa, on a pallet near the internal metal fence\n- In the garage of the Southern mountain villa\n\n- In rogue camp building 1\n\n- In rogue camp building 2\n\n- In Rogue Camp, last tent"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Near any tank\n- Service bay in repair center (White Knight)\n- Can be found in the RB-ST room\n- Can be found in the RB-GN room\n- Can be found in the RB-MP21\n- Can be found in the RB-MP22\n- Can be found in the RB-MP12\n- Can be found in the RB-MP13\n- On a shelf near four locked food warehouses"
+    }
+  ]
+}

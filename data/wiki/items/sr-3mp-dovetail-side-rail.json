@@ -1,0 +1,21 @@
+{
+  "title": "SR-3MP dovetail side rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-3MP_dovetail_side_rail",
+  "revisionId": 317697,
+  "lastEdited": "2025-08-26T21:45:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4: Black, Plum",
+    "ergonomics": "-0.5",
+    "node": "67069c8cee8138ed2f05ad34 67069cbbb29a2cd33803338c",
+    "ID": "mount_dovetail_tochmash_sr3mp_side_rail mount_dovetail_tochmash_sr3mp_side_rail_plum"
+  },
+  "sections": []
+}

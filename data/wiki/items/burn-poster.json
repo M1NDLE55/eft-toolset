@@ -1,0 +1,25 @@
+{
+  "title": "BURN poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BURN_poster",
+  "revisionId": 356294,
+  "lastEdited": "2026-08-25T22:10:42Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6a4264160a2dca942e08292d",
+    "id": "item_barter_flyers_tbattlepass_s1_burn"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

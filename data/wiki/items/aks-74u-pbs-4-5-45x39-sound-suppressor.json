@@ -1,0 +1,27 @@
+{
+  "title": "AKS-74U PBS-4 5.45x39 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74U_PBS-4_5.45x39_sound_suppressor",
+  "revisionId": 362914,
+  "lastEdited": "2026-10-03T10:55:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.7 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-18",
+    "velocity": "+0.5",
+    "accuracy": "-3",
+    "recoil": "-2",
+    "Dura Burn": "+70",
+    "Heat": "+14",
+    "Cooling": "+10",
+    "node": "57ffb0e42459777d047111c5",
+    "ID": "silencer_aks74u_tochmash_pbs-4_545x39"
+  },
+  "sections": []
+}

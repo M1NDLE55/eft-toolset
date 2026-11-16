@@ -1,0 +1,26 @@
+{
+  "title": "AWC Thor PSR XL multi-caliber sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AWC_Thor_PSR_XL_multi-caliber_sound_suppressor",
+  "revisionId": 342356,
+  "lastEdited": "2026-04-29T00:39:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.737 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-20",
+    "velocity": "+1",
+    "recoil": "-2",
+    "Dura Burn": "+50",
+    "Heat": "+10",
+    "Cooling": "+10",
+    "node": "63877c99e785640d436458ea",
+    "ID": "silencer_base_awc_thor_psr_xl_multi"
+  },
+  "sections": []
+}

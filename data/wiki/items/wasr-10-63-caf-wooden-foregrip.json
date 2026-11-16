@@ -1,0 +1,25 @@
+{
+  "title": "WASR-10/63 CAF wooden foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/WASR-10/63_CAF_wooden_foregrip",
+  "revisionId": 342064,
+  "lastEdited": "2026-04-28T01:23:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.28 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+10",
+    "recoil": "-0.5",
+    "Heat": "+5",
+    "Cooling": "-5.3",
+    "loot xp": "10",
+    "node": "5d2c829448f0353a5c7d6674",
+    "ID": "handguard_ak_cugir_arms_factory_wasr_10_63_std"
+  },
+  "sections": []
+}

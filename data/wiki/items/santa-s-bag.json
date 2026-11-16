@@ -1,0 +1,38 @@
+{
+  "title": "Santa's Bag",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Santa's_Bag",
+  "revisionId": 333849,
+  "lastEdited": "2026-02-07T22:17:24Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2.64 kg",
+    "grid": "5x7",
+    "penalties": "-4% movement speed, -3% turn speed, -7% Ergonomics",
+    "slots": "5x7 grid (35 slots)",
+    "node": "61b9e1aaef9a1b5d6a79899a",
+    "id": "backpack_pilgrim_red"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Santa Claus"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This backpack is a red and white variant of the Pilgrim tourist backpack"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "HK USP rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_rear_sight",
+  "revisionId": 356502,
+  "lastEdited": "2026-08-26T02:16:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.004 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "6194f2912d2c397d6600348d",
+    "ID": "sight_rear_usp_hk_std_rear_sight"
+  },
+  "sections": []
+}

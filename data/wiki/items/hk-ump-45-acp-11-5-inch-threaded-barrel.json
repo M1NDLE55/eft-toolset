@@ -1,0 +1,26 @@
+{
+  "title": "HK UMP .45 ACP 11.5 inch threaded barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_UMP_.45_ACP_11.5_inch_threaded_barrel",
+  "revisionId": 356897,
+  "lastEdited": "2026-08-29T21:50:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.52 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-8",
+    "velocity": "-13.3",
+    "MOA": "2.75",
+    "recoil": "-3.4",
+    "Heat": "-3",
+    "Cooling": "+3",
+    "node": "6a146cd20d72113135000a1f",
+    "ID": "barrel_ump_kiba_292mm_threaded_1143x23"
+  },
+  "sections": []
+}

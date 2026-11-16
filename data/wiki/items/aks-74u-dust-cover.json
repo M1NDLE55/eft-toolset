@@ -1,0 +1,27 @@
+{
+  "title": "AKS-74U dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74U_dust_cover",
+  "revisionId": 322041,
+  "lastEdited": "2025-11-17T00:59:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.136 kg",
+    "grid": "2x1",
+    "price": "₽1,200",
+    "trader": "Prapor LL1",
+    "sightrange": "500",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "node": "57dc334d245977597164366f",
+    "ID": "reciever_aks74u_izhmash_aks74u_std"
+  },
+  "sections": []
+}

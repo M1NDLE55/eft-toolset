@@ -1,0 +1,22 @@
+{
+  "title": "Chaos HK Style rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chaos_HK_Style_rear_sight",
+  "revisionId": 322668,
+  "lastEdited": "2025-11-18T19:03:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.140 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "node": "674fe8cf4472d471fb0f07df",
+    "ID": "sight_rear_all_chaos_hk_style_sight"
+  },
+  "sections": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Soap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Soap",
+  "revisionId": 358485,
+  "lastEdited": "2026-09-10T21:32:16Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.080 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5c13cd2486f774072c757944",
+    "ID": "item_barter_household_soap"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    }
+  ]
+}

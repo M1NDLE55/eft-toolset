@@ -1,0 +1,24 @@
+{
+  "title": "SilencerCo Saker ASR 556 5.56x45 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SilencerCo_Saker_ASR_556_5.56x45_sound_suppressor",
+  "revisionId": 362971,
+  "lastEdited": "2026-10-03T11:35:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.51 kg",
+    "grid": "2x1",
+    "ergonomics": "-17",
+    "velocity": "+1.2",
+    "recoil": "-4",
+    "Dura Burn": "+58",
+    "Heat": "+13",
+    "node": "60926df0132d4d12c81fd9df",
+    "ID": "silencer_asr_silencerco_saker_556_556x45"
+  },
+  "sections": []
+}

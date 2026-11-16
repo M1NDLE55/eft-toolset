@@ -1,0 +1,30 @@
+{
+  "title": "Blueprints and technical documentation",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Blueprints_and_technical_documentation",
+  "revisionId": 359035,
+  "lastEdited": "2026-09-13T20:07:53Z",
+  "kind": "item",
+  "categories": [
+    "BattlePass documents"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "BattlePass documents",
+    "weight": "0.65 kg",
+    "grid": "2x2",
+    "node": "6a31824878450ec91c0ea1ae",
+    "ID": "Item_barter_info_scheme"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used to unlock rewards from the Season 1: KORD BREACH BattlePass."
+    }
+  ]
+}

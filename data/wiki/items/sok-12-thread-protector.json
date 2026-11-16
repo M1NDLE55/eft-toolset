@@ -1,0 +1,21 @@
+{
+  "title": "SOK-12 thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_thread_protector",
+  "revisionId": 337379,
+  "lastEdited": "2026-03-05T22:18:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "price": "₽700",
+    "ergonomics": "+2",
+    "node": "576167ab2459773cad038c43",
+    "ID": "muzzle_saiga12_izhmash_saiga12_std_12g"
+  },
+  "sections": []
+}

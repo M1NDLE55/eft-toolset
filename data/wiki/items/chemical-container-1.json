@@ -1,0 +1,25 @@
+{
+  "title": "Chemical container 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chemical_container_1",
+  "revisionId": 352795,
+  "lastEdited": "2026-08-09T21:21:57Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "5b43237186f7742f3a4ab252",
+    "id": "item_quest_chem_container"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Vitamins from Skier"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "AS VAL 9x39 integral barrel-suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_9x39_integral_barrel-suppressor",
+  "revisionId": 318917,
+  "lastEdited": "2025-10-03T10:47:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.496 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-5",
+    "velocity": "+1.1",
+    "recoil": "-14",
+    "Dura Burn": "+52",
+    "Heat": "+24",
+    "Cooling": "+5",
+    "node": "57c44dd02459772d2e0ae249",
+    "ID": "silencer_val_tochmash_std_9x39"
+  },
+  "sections": []
+}

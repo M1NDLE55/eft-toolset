@@ -1,0 +1,31 @@
+{
+  "title": "Pile of meds",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pile_of_meds",
+  "revisionId": 362228,
+  "lastEdited": "2026-09-26T14:57:42Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5d1b3a5d86f774252167ba22",
+    "ID": "item_barter_medical_pile"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from The Survivalist Path - Tough Guy"
+    }
+  ]
+}

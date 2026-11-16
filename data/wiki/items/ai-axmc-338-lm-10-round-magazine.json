@@ -1,0 +1,25 @@
+{
+  "title": "AI AXMC .338 LM 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_.338_LM_10-round_magazine",
+  "revisionId": 337882,
+  "lastEdited": "2026-03-07T06:42:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.4 kg",
+    "grid": "1x2",
+    "trader": "Jaeger LL4",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": ".338 Lapua Magnum",
+    "node": "628120fd5631d45211793c9f",
+    "ID": "mag_ax_accuracy_international_ax_86x70_10_pb"
+  },
+  "sections": []
+}

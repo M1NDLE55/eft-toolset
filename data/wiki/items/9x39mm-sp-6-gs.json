@@ -1,0 +1,41 @@
+{
+  "title": "9x39mm SP-6 gs",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x39mm_SP-6_gs",
+  "revisionId": 349264,
+  "lastEdited": "2026-08-03T22:50:36Z",
+  "kind": "ammo",
+  "categories": [
+    "9x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.023 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4, after completing his task The Punisher - Part 4, Ref LL4",
+    "velocity": "305 m/s",
+    "damage": "60",
+    "recoil": "+5",
+    "penetration": "48",
+    "armor damage": "64",
+    "ricochet": "50%",
+    "fragmentation": "10%",
+    "l bleed chance": "+10",
+    "h bleed chance": "+10",
+    "durability burn": "+45",
+    "heat": "+61",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "effects": "Subsonic",
+    "node": "57a0e5022459774d1673f889",
+    "id": "patron_9x39_sp6"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

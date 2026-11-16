@@ -1,0 +1,25 @@
+{
+  "title": "TKPD 9.3x64 457mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TKPD_9.3x64_457mm_barrel",
+  "revisionId": 362973,
+  "lastEdited": "2026-10-03T11:36:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.97 kg",
+    "grid": "3x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-15",
+    "velocity": "-6.18",
+    "recoil": "-8",
+    "Heat": "-15",
+    "Cooling": "-1",
+    "node": "68aee9b89df2c1144f0aaa46",
+    "ID": "barrel_tkpd_sniperarms_dynamics_464mm_93x64"
+  },
+  "sections": []
+}

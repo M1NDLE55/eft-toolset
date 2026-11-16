@@ -1,0 +1,22 @@
+{
+  "title": "Vertx Ready Pack backpack (Red)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vertx_Ready_Pack_backpack_(Red)",
+  "revisionId": 316893,
+  "lastEdited": "2025-08-13T20:19:10Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "0.453 kg",
+    "grid": "4x4",
+    "penalties": "-1% movement speed, +0% turn speed, -1% Ergonomics",
+    "slots": "4x4 grid (16 slots)",
+    "node": "66b5f247af44ca0014063c02",
+    "id": "item_equipment_backpack_vertx_readypack_red"
+  },
+  "sections": []
+}

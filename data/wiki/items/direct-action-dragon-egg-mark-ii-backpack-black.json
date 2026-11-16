@@ -1,0 +1,24 @@
+{
+  "title": "Direct Action Dragon Egg Mark II backpack (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Direct_Action_Dragon_Egg_Mark_II_backpack_(Black)",
+  "revisionId": 304491,
+  "lastEdited": "2025-01-22T09:42:59Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2.95 kg",
+    "grid": "5x5",
+    "trader": "Ragman LL3",
+    "penalties": "-1% movement speed, -1% turn speed, -1% Ergonomics",
+    "slots": "25 slots, 1x 5x3 grid, 1x 2x2 grid, 1x 3x2 grid",
+    "exam xp": "2",
+    "node": "656f198fb27298d6fd005466",
+    "id": "item_equipment_backpack_dragon_egg_mk_ii"
+  },
+  "sections": []
+}

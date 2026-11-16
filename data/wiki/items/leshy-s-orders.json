@@ -1,0 +1,25 @@
+{
+  "title": "Leshy's orders",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Leshy's_orders",
+  "revisionId": 348854,
+  "lastEdited": "2026-08-02T00:54:37Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "68d2fa018c12620073059932",
+    "id": "item_info_note_comand_from_leshiy"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Labyrinth"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Rainier Arms Avalanche MOD2 charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Rainier_Arms_Avalanche_MOD2_charging_handle",
+  "revisionId": 210629,
+  "lastEdited": "2022-09-20T10:37:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.028 kg",
+    "grid": "1x1",
+    "price": "₽7,000",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+3",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5f633ff5c444ce7e3c30a006",
+    "ID": "charge_ar15_rainer_arms_avalanche_mod2"
+  },
+  "sections": []
+}

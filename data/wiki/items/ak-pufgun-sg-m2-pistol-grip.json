@@ -1,0 +1,22 @@
+{
+  "title": "AK PUFGUN SG-M2 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_PUFGUN_SG-M2_pistol_grip",
+  "revisionId": 342387,
+  "lastEdited": "2026-04-29T00:59:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.132 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+3",
+    "recoil": "-1",
+    "node": "651580dc71a4f10aec4b6056",
+    "ID": "pistolgrip_ak_pufgun_sg_m2"
+  },
+  "sections": []
+}

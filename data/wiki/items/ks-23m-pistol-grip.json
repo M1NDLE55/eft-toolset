@@ -1,0 +1,20 @@
+{
+  "title": "KS-23M pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KS-23M_pistol_grip",
+  "revisionId": 340400,
+  "lastEdited": "2026-04-20T14:53:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "ergonomics": "+10",
+    "node": "5e848d99865c0f329958c83b",
+    "ID": "pistolgrip_ks23_toz_ks23_plastic"
+  },
+  "sections": []
+}

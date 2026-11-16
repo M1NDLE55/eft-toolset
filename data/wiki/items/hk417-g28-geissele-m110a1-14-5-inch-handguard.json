@@ -1,0 +1,23 @@
+{
+  "title": "HK417/G28 Geissele M110A1 14.5 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK417/G28_Geissele_M110A1_14.5_inch_handguard",
+  "revisionId": 357406,
+  "lastEdited": "2026-09-01T17:59:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.402 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+18.5",
+    "Heat": "-6",
+    "Cooling": "+7.5",
+    "node": "6a158e90bf497aade10030e4",
+    "ID": "handguard_417_geissele_m110a1_m_lok_145_inch"
+  },
+  "sections": []
+}

@@ -1,0 +1,39 @@
+{
+  "title": "20/70 TSS Armor Piercing Slug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20/70_TSS_Armor_Piercing_Slug",
+  "revisionId": 322823,
+  "lastEdited": "2025-11-18T21:26:11Z",
+  "kind": "ammo",
+  "categories": [
+    "20/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.040 kg",
+    "grid": "1x1",
+    "velocity": "482 m/s",
+    "damage": "155",
+    "accuracy": "+64",
+    "recoil": "+48",
+    "penetration": "30",
+    "armor damage": "54",
+    "ricochet": "18%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+30",
+    "durability burn": "+121",
+    "heat": "+144",
+    "feedfailure": "Very low",
+    "misfire": "Medium",
+    "node": "660137d8481cc6907a0c5cda",
+    "id": "patron_20x70_slug_ap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Goshan cargo manifests",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Goshan_cargo_manifests",
+  "revisionId": 352931,
+  "lastEdited": "2026-08-09T22:02:36Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "node": "5ae9a0dd86f7742e5f454a05",
+    "id": "statements_GOSHAN"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Inventory Files from Ragman"
+    }
+  ]
+}

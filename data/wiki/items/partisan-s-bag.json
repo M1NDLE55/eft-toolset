@@ -1,0 +1,28 @@
+{
+  "title": "Partisan's bag",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Partisan's_bag",
+  "revisionId": 314021,
+  "lastEdited": "2025-05-31T05:56:42Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "0.7 kg",
+    "grid": "4x3",
+    "penalties": "-5% movement speed, -2% turn speed, -8% Ergonomics",
+    "slots": "5x4 grid (20 slots)",
+    "node": "66a9f98f3bd5a41b162030f4",
+    "ID": "backpack_partizan"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Partisan"
+    }
+  ]
+}

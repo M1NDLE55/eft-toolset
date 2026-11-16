@@ -1,0 +1,24 @@
+{
+  "title": "Steiner LAS/TAC 2 tactical flashlight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steiner_LAS/TAC_2_tactical_flashlight",
+  "revisionId": 362972,
+  "lastEdited": "2026-10-03T11:36:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.086 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, Mechanic LL3",
+    "ergonomics": "-1",
+    "modes": "1",
+    "loot xp": "23",
+    "exam xp": "10",
+    "node": "5b07dd285acfc4001754240d",
+    "ID": "tactical_all_steiner_las_tac_2"
+  },
+  "sections": []
+}

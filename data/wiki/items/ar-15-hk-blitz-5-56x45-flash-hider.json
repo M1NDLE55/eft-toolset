@@ -1,0 +1,27 @@
+{
+  "title": "AR-15 HK BLITZ 5.56x45 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_HK_BLITZ_5.56x45_flash_hider",
+  "revisionId": 337787,
+  "lastEdited": "2026-03-06T02:13:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.085 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-3",
+    "accuracy": "+1",
+    "recoil": "-10",
+    "Dura Burn": "-2",
+    "Heat": "-1.3",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "618407a850224f204c1da549",
+    "ID": "muzzle_ar15_hk_blitz_flash_hider_556x45"
+  },
+  "sections": []
+}

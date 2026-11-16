@@ -1,0 +1,24 @@
+{
+  "title": "SwampFox Trihawk Prism Scope 3x30",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SwampFox_Trihawk_Prism_Scope_3x30",
+  "revisionId": 314576,
+  "lastEdited": "2025-06-25T16:41:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.436 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "500",
+    "ergonomics": "-3",
+    "modes": "1",
+    "node": "626bb8532c923541184624b4",
+    "ID": "scope_all_swampfox_trihawk_prism_scope_3x30"
+  },
+  "sections": []
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Tamatthi kunai knife replica",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tamatthi_kunai_knife_replica",
+  "revisionId": 316822,
+  "lastEdited": "2025-08-11T09:47:57Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.438 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "66b37ea4c5d72b0277488439",
+    "id": "item_barter_valuable_kunai"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a reference to the content creator tamatthi."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "HK G36 gas block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_gas_block",
+  "revisionId": 253554,
+  "lastEdited": "2023-11-02T21:56:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "recoil": "+0",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "node": "622b327b267a1b13a44abea3",
+    "ID": "gas_block_g36_hk_std"
+  },
+  "sections": []
+}

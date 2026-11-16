@@ -1,0 +1,21 @@
+{
+  "title": "STM-9 magwell",
+  "url": "https://escapefromtarkov.fandom.com/wiki/STM-9_magwell",
+  "revisionId": 237289,
+  "lastEdited": "2023-06-27T21:18:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+5",
+    "node": "602f85fd9b513876d4338d9c 60338ff388382f4fab3fd2c8",
+    "ID": "tactical_stm9_stmarms_magwell tactical_stm9_stmarms_magwell_gry"
+  },
+  "sections": []
+}

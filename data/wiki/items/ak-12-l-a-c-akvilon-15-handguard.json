@@ -1,0 +1,24 @@
+{
+  "title": "AK-12 L.A.C. Akvilon-15 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_L.A.C._Akvilon-15_handguard",
+  "revisionId": 343348,
+  "lastEdited": "2026-05-05T19:46:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.4 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "+2.6",
+    "Cooling": "-2.7",
+    "node": "682315b0f8d8f8681e0744b0",
+    "ID": "handguard_ak12_lac_akvilon15_mlok"
+  },
+  "sections": []
+}

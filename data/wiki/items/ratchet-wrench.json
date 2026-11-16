@@ -1,0 +1,41 @@
+{
+  "title": "Ratchet wrench",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ratchet_wrench",
+  "revisionId": 358449,
+  "lastEdited": "2026-09-10T21:17:15Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "1.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "60391afc25aff57af81f7085",
+    "id": "item_barter_tools_ratchetwrench"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Dead Scav\n- Ground cache\n- Sport bag\n- Technical supply crate\n- Toolbox"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the 2nd floor sofa in 3-story dorms"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- On metal shelves in the blue warehouse at the lumber mill"
+    }
+  ]
+}

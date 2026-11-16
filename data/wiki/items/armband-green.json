@@ -1,0 +1,22 @@
+{
+  "title": "Armband (Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Green)",
+  "revisionId": 320822,
+  "lastEdited": "2025-11-11T20:24:50Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "price": "₽550",
+    "trader": "Ragman LL1",
+    "node": "5b3f3b0186f774021a2afef7",
+    "id": "armband_green"
+  },
+  "sections": []
+}

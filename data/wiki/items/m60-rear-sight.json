@@ -1,0 +1,21 @@
+{
+  "title": "M60 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M60_rear_sight",
+  "revisionId": 311876,
+  "lastEdited": "2025-04-19T15:09:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.092 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "sightrange": "1100",
+    "node": "6601265f98a610c1aa0ea637",
+    "ID": "sight_rear_m60_usord_m60_std"
+  },
+  "sections": []
+}

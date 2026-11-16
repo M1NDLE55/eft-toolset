@@ -1,0 +1,25 @@
+{
+  "title": "AKS-74U Zenit B-11 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74U_Zenit_B-11_handguard",
+  "revisionId": 352895,
+  "lastEdited": "2026-08-09T21:55:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "price": "₽5,974",
+    "trader": "Skier LL1",
+    "ergonomics": "+12",
+    "recoil": "+0",
+    "Heat": "-0.6",
+    "Cooling": "-3",
+    "node": "57ffa9f4245977728561e844",
+    "ID": "handguard_aks74u_zenit_b11"
+  },
+  "sections": []
+}

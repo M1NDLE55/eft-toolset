@@ -1,0 +1,33 @@
+{
+  "title": "Crye Precision AirFrame Ears (Morbus Incorsio)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_Ears_(Morbus_Incorsio)",
+  "revisionId": 362106,
+  "lastEdited": "2026-09-24T19:49:49Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 3",
+    "armor": "3",
+    "armor coverage": "Ears",
+    "durability": "27",
+    "material": "Aluminium",
+    "penalties": "+0% turn speed, +0% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69cbd389c0c2364a330c6474",
+    "ID": "item_equipment_helmet_crye_airframe_ears_snake_skin_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

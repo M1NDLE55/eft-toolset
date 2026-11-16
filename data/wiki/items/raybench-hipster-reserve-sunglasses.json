@@ -1,0 +1,32 @@
+{
+  "title": "RayBench Hipster Reserve sunglasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RayBench_Hipster_Reserve_sunglasses",
+  "revisionId": 356965,
+  "lastEdited": "2026-08-30T10:19:41Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.08 kg",
+    "grid": "2x1",
+    "blindness protect": "25%",
+    "node": "5aa2b9aee5b5b00015693121",
+    "id": "glasses_Rayban"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: RayBench is a parody of the sunglasses brand Ray Ban"
+    }
+  ]
+}

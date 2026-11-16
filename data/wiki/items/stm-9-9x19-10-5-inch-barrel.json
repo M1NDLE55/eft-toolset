@@ -1,0 +1,28 @@
+{
+  "title": "STM-9 9x19 10.5 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/STM-9_9x19_10.5_inch_barrel",
+  "revisionId": 342178,
+  "lastEdited": "2026-04-28T21:13:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.409 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-2",
+    "MOA": "3.78",
+    "recoil": "-6.7",
+    "Dura Burn": "-19",
+    "Heat": "-3",
+    "Cooling": "+3",
+    "loot xp": "6",
+    "exam xp": "20",
+    "node": "603372b4da11d6478d5a07ff",
+    "ID": "barrel_stm9_stmarms_266mm_9x19"
+  },
+  "sections": []
+}

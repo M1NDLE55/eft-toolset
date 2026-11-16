@@ -1,0 +1,25 @@
+{
+  "title": "OLI cargo route documents",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OLI_cargo_route_documents",
+  "revisionId": 352266,
+  "lastEdited": "2026-08-07T21:16:13Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "node": "5ae9a25386f7746dd946e6d9",
+    "id": "documents_OLI"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest A Big Loss from Ragman"
+    }
+  ]
+}

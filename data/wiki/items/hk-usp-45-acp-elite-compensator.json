@@ -1,0 +1,23 @@
+{
+  "title": "HK USP .45 ACP Elite compensator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_.45_ACP_Elite_compensator",
+  "revisionId": 318907,
+  "lastEdited": "2025-10-02T22:27:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.31 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-8",
+    "velocity": "+0",
+    "recoil": "-10",
+    "node": "619621a4de3cdf1d2614a7a7",
+    "ID": "mount_usp_hk_elite_compensator"
+  },
+  "sections": []
+}

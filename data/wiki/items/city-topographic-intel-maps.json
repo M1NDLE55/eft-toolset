@@ -1,0 +1,25 @@
+{
+  "title": "City topographic intel maps",
+  "url": "https://escapefromtarkov.fandom.com/wiki/City_topographic_intel_maps",
+  "revisionId": 336968,
+  "lastEdited": "2026-03-03T02:45:34Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "node": "67c04b15e7a5da1e070f6dea",
+    "id": "q_data_map2"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player sided with Lightkeeper."
+    }
+  ]
+}

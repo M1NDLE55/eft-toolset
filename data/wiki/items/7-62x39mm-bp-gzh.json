@@ -1,0 +1,38 @@
+{
+  "title": "7.62x39mm BP gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_BP_gzh",
+  "revisionId": 324983,
+  "lastEdited": "2025-11-23T18:38:57Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.016 kg",
+    "grid": "1x1",
+    "trader": "Ref LL4",
+    "velocity": "730 m/s",
+    "damage": "58",
+    "accuracy": "-3",
+    "recoil": "+7",
+    "penetration": "47",
+    "armor damage": "63",
+    "ricochet": "31.5%",
+    "durability burn": "+45",
+    "heat": "+91.9",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "59e0d99486f7744a32234762",
+    "id": "patron_762x39_BP"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

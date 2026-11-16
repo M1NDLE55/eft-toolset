@@ -1,0 +1,29 @@
+{
+  "title": "ANA Tactical Alpha chest rig (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ANA_Tactical_Alpha_chest_rig_(MultiCam)",
+  "revisionId": 348515,
+  "lastEdited": "2026-07-30T21:51:05Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.7 kg",
+    "grid": "4x4",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 0",
+    "BlocksArmor": "No",
+    "slots": "20 Slots",
+    "node": "67ab3ea96d7ece17bf0096f6",
+    "id": "item_equipment_rig_alpha_arena_bp_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

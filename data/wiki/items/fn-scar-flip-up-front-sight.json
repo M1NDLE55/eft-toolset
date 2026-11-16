@@ -1,0 +1,25 @@
+{
+  "title": "FN SCAR flip-up front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_flip-up_front_sight",
+  "revisionId": 210786,
+  "lastEdited": "2022-09-20T10:45:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.034 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+0",
+    "sightrange": "300",
+    "accuracy": "+0",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "61816fcad92c473c770215cc",
+    "ID": "sight_front_mk16_scar_front_sight_std"
+  },
+  "sections": []
+}

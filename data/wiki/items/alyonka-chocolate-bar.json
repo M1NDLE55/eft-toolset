@@ -1,0 +1,28 @@
+{
+  "title": "Alyonka chocolate bar",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Alyonka_chocolate_bar",
+  "revisionId": 324352,
+  "lastEdited": "2025-11-22T00:20:43Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽413",
+    "effect": "Energy: +35, Hydration: -15, , Buffs:, 1s Delay; 120s Duration: - Increases Attention (+2) - Increases Stress Resistance (+2) - Increases Intellect (+2)",
+    "use time": "2s",
+    "node": "57505f6224597709a92585a9",
+    "id": "alyonka"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Jackets\n- In Ration supply crates\n- In Sport bags"
+    }
+  ]
+}

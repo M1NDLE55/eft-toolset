@@ -1,0 +1,43 @@
+{
+  "title": "AR-15 Tyrant Designs MOD Chevron pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Tyrant_Designs_MOD_Chevron_pistol_grip",
+  "revisionId": 356297,
+  "lastEdited": "2026-08-25T22:15:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.112 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3: Black, after unlocking it in the Factory Tactical Map, Ref LL3: Yellow, after unlocking it in Arena BattlePass Season 2, Ref LL3: Red, after unlocking it in Echo Belli crate",
+    "ergonomics": "+6",
+    "recoil": "-1.2",
+    "node": "6984b7d56be2752c150e6895 698dac21772d6f3dc00e4284 6985eb089edef67ade080b72",
+    "ID": "pistolgrip_ar15_tyrant_designs_chevron_grip pistolgrip_ar15_tyrant_designs_chevron_grip_ylw pistolgrip_ar15_tyrant_designs_chevron_grip_red"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Black variant",
+      "level": 4,
+      "text": "- Factory Tactical Map"
+    },
+    {
+      "heading": "Yellow variant",
+      "level": 4,
+      "text": "- Arena BattlePass Season 2 level 59\n- 4 Battle Points"
+    },
+    {
+      "heading": "Red variant",
+      "level": 4,
+      "text": "- Echo Belli crate"
+    }
+  ]
+}

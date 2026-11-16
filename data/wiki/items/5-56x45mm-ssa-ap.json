@@ -1,0 +1,37 @@
+{
+  "title": "5.56x45mm SSA AP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_SSA_AP",
+  "revisionId": 343614,
+  "lastEdited": "2026-05-08T18:19:19Z",
+  "kind": "ammo",
+  "categories": [
+    "5.56x45mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.013 kg",
+    "grid": "1x1",
+    "velocity": "1013 m/s",
+    "damage": "38",
+    "accuracy": "-9%",
+    "recoil": "+6",
+    "penetration": "57",
+    "armor damage": "58",
+    "ricochet": "48%",
+    "durability burn": "+80",
+    "heat": "+90",
+    "feedfailure": "Very high",
+    "misfire": "Medium",
+    "node": "601949593ae8f707c4608daa",
+    "id": "patron_556x45_ssa_ap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

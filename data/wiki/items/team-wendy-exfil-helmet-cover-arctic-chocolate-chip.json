@@ -1,0 +1,26 @@
+{
+  "title": "Team Wendy EXFIL helmet cover (Arctic Chocolate Chip)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Team_Wendy_EXFIL_helmet_cover_(Arctic_Chocolate_Chip)",
+  "revisionId": 361545,
+  "lastEdited": "2026-09-23T20:56:22Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Vanity helmet mod",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Morbus crate",
+    "node": "6a8355f881430c75c10db040",
+    "ID": "item_equipment_helmet_exfil_cover_chocoChip_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item does not provide any additional armor.\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

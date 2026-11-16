@@ -1,0 +1,22 @@
+{
+  "title": "PM pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PM_pistol_slide",
+  "revisionId": 317730,
+  "lastEdited": "2025-08-26T23:12:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.28 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+1",
+    "Cooling": "+8.1",
+    "node": "6374a822e629013b9c0645c8",
+    "ID": "reciever_pm_izhmeh_pm_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Type 20 5.56x45 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Type_20_5.56x45_upper_receiver",
+  "revisionId": 357291,
+  "lastEdited": "2026-09-01T10:54:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.2 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+6",
+    "recoil": "-3",
+    "Dura Burn": "-1",
+    "Heat": "-3",
+    "Cooling": "+2",
+    "node": "6a3ce9c28ce058e3a2059b15",
+    "ID": "reciever_type20_howa_type20_std"
+  },
+  "sections": []
+}

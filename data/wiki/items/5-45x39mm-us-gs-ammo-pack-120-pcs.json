@@ -1,0 +1,18 @@
+{
+  "title": "5.45x39mm US gs ammo pack (120 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_US_gs_ammo_pack_(120_pcs)",
+  "revisionId": 367173,
+  "lastEdited": "2026-11-02T23:10:52Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.1 kg",
+    "grid": "2x1",
+    "node": "57372f7d245977699b53e301 57372fc52459776998772ca1",
+    "id": "item_ammo_box_545x39_120_us item_ammo_box_545x39_120_us_damaged"
+  },
+  "sections": []
+}

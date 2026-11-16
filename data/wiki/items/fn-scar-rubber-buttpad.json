@@ -1,0 +1,21 @@
+{
+  "title": "FN SCAR rubber buttpad",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_rubber_buttpad",
+  "revisionId": 340394,
+  "lastEdited": "2026-04-20T14:49:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.100 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+2",
+    "node": "618167616ef05c2ce828f1a8",
+    "ID": "stock_mk16_fn_scar_stock_butt_pad"
+  },
+  "sections": []
+}

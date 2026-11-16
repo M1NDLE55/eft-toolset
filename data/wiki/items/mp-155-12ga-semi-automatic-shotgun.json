@@ -1,0 +1,42 @@
+{
+  "title": "MP-155 12ga semi-automatic shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_12ga_semi-automatic_shotgun",
+  "revisionId": 343031,
+  "lastEdited": "2026-05-03T14:01:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "3.464 kg",
+    "grid": "6x1",
+    "trader": "Jaeger LL2",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "51",
+    "velocity": "468 m/s",
+    "range": "70 m",
+    "MOA": "17.88",
+    "Weaprecoil": "Vertical: 235, Horizontal: 315",
+    "rof": "40",
+    "caliber": "12/70",
+    "node": "606dae0ab0e443224b421bb7",
+    "ID": "weapon_kalashnikov_mp155_12g"
+  },
+  "sections": [
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Silent Caliber (Ultima variant)"
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| MP-155 Ultima |"
+    }
+  ]
+}

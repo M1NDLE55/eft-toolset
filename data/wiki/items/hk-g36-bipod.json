@@ -1,0 +1,22 @@
+{
+  "title": "HK G36 bipod",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_bipod",
+  "revisionId": 313465,
+  "lastEdited": "2025-05-17T14:10:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Bipods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bipod",
+    "weight": "0.226 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-4",
+    "recoil": "When mounted: -80",
+    "node": "622b397c9a3d4327e41843b6",
+    "ID": "bipod_g36_hk_std"
+  },
+  "sections": []
+}

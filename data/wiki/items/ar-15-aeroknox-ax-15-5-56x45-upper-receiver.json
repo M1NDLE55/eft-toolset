@@ -1,0 +1,28 @@
+{
+  "title": "AR-15 Aeroknox AX-15 5.56x45 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Aeroknox_AX-15_5.56x45_upper_receiver",
+  "revisionId": 343504,
+  "lastEdited": "2026-05-07T22:24:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.285 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+11",
+    "velocity": "+0",
+    "recoil": "-3.5",
+    "Dura Burn": "-3",
+    "Heat": "-2.5",
+    "Cooling": "+1.8",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "63f5ed14534b2c3d5479a677",
+    "ID": "reciever_ar15_aeroknox_ax15_upper"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "M590 Magpul SGA stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M590_Magpul_SGA_stock",
+  "revisionId": 321743,
+  "lastEdited": "2025-11-16T19:17:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.68 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+10",
+    "recoil": "-29",
+    "loot xp": "10",
+    "exam xp": "1",
+    "node": "5eea217fc64c5d0dfc05712a",
+    "ID": "stock_590_magpul_sga"
+  },
+  "sections": []
+}

@@ -1,0 +1,38 @@
+{
+  "title": "HK MP7A1 4.6x30 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP7A1_4.6x30_submachine_gun",
+  "revisionId": 345245,
+  "lastEdited": "2026-05-27T21:54:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "2.27 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL3",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "72.5",
+    "velocity": "701 m/s",
+    "range": "200 m",
+    "MOA": "8.34",
+    "Weaprecoil": "Vertical: 41, Horizontal: 146",
+    "rof": "950",
+    "caliber": "4.6x30mm HK",
+    "def mag": "HK MP7 4.6x30 20-round magazine",
+    "node": "5ba26383d4351e00334c93d9",
+    "ID": "weapon_hk_mp7a1_46x30"
+  },
+  "sections": [
+    {
+      "heading": "Weapon Variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| MP7A1 SEALS |\n| MP7A1 Wedge |"
+    }
+  ]
+}

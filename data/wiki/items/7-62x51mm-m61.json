@@ -1,0 +1,40 @@
+{
+  "title": "7.62x51mm M61",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_M61",
+  "revisionId": 343617,
+  "lastEdited": "2026-05-08T18:20:56Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x51mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.024 kg",
+    "grid": "1x1",
+    "trader": "Ref LL4",
+    "velocity": "833 m/s",
+    "damage": "73",
+    "accuracy": "+5",
+    "recoil": "+3",
+    "penetration": "60",
+    "armor damage": "79",
+    "ricochet": "30%",
+    "l bleed chance": "+6",
+    "h bleed chance": "+6",
+    "durability burn": "+40",
+    "heat": "+30",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "5a6086ea4f39f99cd479502f",
+    "id": "patron_762x51_M61"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Steyr AUG A3 Vltor 5.56x45 receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_A3_Vltor_5.56x45_receiver",
+  "revisionId": 312209,
+  "lastEdited": "2025-04-26T13:46:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.7 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+3",
+    "recoil": "-4",
+    "Dura Burn": "-3",
+    "Heat": "-4.6",
+    "Cooling": "+6",
+    "node": "67110d8d388bded67304ceb4",
+    "ID": "reciever_aug_vltor_aug_a3"
+  },
+  "sections": []
+}

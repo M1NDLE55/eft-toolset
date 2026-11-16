@@ -1,0 +1,46 @@
+{
+  "title": "Secure Flash drive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_Flash_drive",
+  "revisionId": 358750,
+  "lastEdited": "2026-09-10T23:04:43Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "590c621186f774138d11ea29",
+    "id": "item_flash_card_ironkey"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Plugged into the front of PCs\n\n- Buried barrel cache\n- Common fund stash (Shturman's stash)\n- Dead Scav\n- Drawer\n- Ground cache\n- Jacket\n- PC block\n- Plastic suitcase\n- Safe\n- Sport bag\n- Weapon box (6x6)"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- A tent south-west of the lumber camp on Woods has a dedicated spawn for up to 2 possible flash drives at once"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- A campsite west of the two-story dorms on Customs has a dedicated spawn for up to 2 possible flash drives at once\n\n- On the bed of dorm room 110 in the two-story dorms on Customs"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This item is based off Kingston's \"IronKeyTM Encrypted Flash Drives\"."
+    }
+  ]
+}

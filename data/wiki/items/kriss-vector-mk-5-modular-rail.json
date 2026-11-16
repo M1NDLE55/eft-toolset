@@ -1,0 +1,22 @@
+{
+  "title": "KRISS Vector Mk.5 modular rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KRISS_Vector_Mk.5_modular_rail",
+  "revisionId": 352590,
+  "lastEdited": "2026-08-09T19:53:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.147 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "recoil": "+0",
+    "node": "5fbb978207e8a97d1f0902d3",
+    "ID": "mount_vector_kriss_mk5_modular_rail"
+  },
+  "sections": []
+}

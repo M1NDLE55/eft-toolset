@@ -1,0 +1,27 @@
+{
+  "title": "OLI cargo manifests",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OLI_cargo_manifests",
+  "revisionId": 352930,
+  "lastEdited": "2026-08-09T22:02:32Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "loot xp": "20",
+    "exam xp": "Examined by default",
+    "node": "5ae9a18586f7746e381e16a3",
+    "id": "statements_OLI"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Inventory Files from Ragman"
+    }
+  ]
+}

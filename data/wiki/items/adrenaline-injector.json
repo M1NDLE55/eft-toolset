@@ -1,0 +1,35 @@
+{
+  "title": "Adrenaline injector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Adrenaline_injector",
+  "revisionId": 362226,
+  "lastEdited": "2026-09-26T14:57:05Z",
+  "kind": "item",
+  "categories": [
+    "Stimulants"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injector",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL4, after completing her task Health Care Privacy - Part 6",
+    "effect": "Buffs:, Removes: for 60 seconds, for 65 seconds, Adds: for 65 seconds, 1s Delay; 60s Duration: - Increases Endurance (+10) - Increases Strength (+10) 1s Delay; 15s Duration: - Increases health regeneration (+4/s) Debuffs:, 1s Delay; 60s Duration: - Decreases Stress Resistance (-10) 50s Delay; 30s Duration: - Decreases energy recovery (-0.8/s) - Decreases hydration recovery (-1/s)",
+    "use time": "2s",
+    "loot xp": "20",
+    "exam xp": "8",
+    "node": "5c10c8fd86f7743d7d706df3",
+    "ID": "Adrenaline"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate\n- Knight\n- Sanitar and his guards"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Laboratory experiment's area (G12) on the first level (Requires TerraGroup Labs keycard (Black))\n- Sanitar's room in the Laboratory block (G22) on the second level (Requires Keycard with a blue marking)\n- On the floor of the \"Med Hut\" on the main floor, first Level (O11)\n- On the left hand table in the Laboratory quarantine zone (G11) (Requires TerraGroup Labs keycard (Blue))\n- In the laboratories inside the containment block"
+    }
+  ]
+}

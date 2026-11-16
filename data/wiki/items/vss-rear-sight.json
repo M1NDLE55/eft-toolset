@@ -1,0 +1,24 @@
+{
+  "title": "VSS rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSS_rear_sight",
+  "revisionId": 211639,
+  "lastEdited": "2022-09-20T11:23:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "price": "₽1,000",
+    "trader": "Prapor LL4",
+    "sightrange": "420",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "57838e1b2459774a256959b1",
+    "ID": "sight_rear_vss_tochmash_vss_std"
+  },
+  "sections": []
+}

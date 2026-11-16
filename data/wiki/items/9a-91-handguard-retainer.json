@@ -1,0 +1,25 @@
+{
+  "title": "9A-91 handguard retainer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9A-91_handguard_retainer",
+  "revisionId": 318899,
+  "lastEdited": "2025-10-02T22:24:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+3",
+    "recoil": "-0",
+    "Dura Burn": "-3",
+    "Heat": "-0.5",
+    "Cooling": "+0.3",
+    "node": "64527a263d52156624001fd7",
+    "ID": "muzzle_9a91_kbp_hanguard_retainer"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "M870 12ga 4-shell magazine cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_12ga_4-shell_magazine_cap",
+  "revisionId": 337485,
+  "lastEdited": "2026-03-05T23:19:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "ergonomics": "+3",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "4",
+    "caliber": "12/70",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5a7882dcc5856700177af662",
+    "ID": "mag_870_remington_magazie_cap_12g_4"
+  },
+  "sections": []
+}

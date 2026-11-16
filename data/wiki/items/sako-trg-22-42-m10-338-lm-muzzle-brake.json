@@ -1,0 +1,24 @@
+{
+  "title": "Sako TRG 22/42/M10 .338 LM muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_22/42/M10_.338_LM_muzzle_brake",
+  "revisionId": 314162,
+  "lastEdited": "2025-06-05T17:57:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.281 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-2",
+    "recoil": "-8",
+    "Dura Burn": "-3",
+    "Heat": "-1",
+    "node": "673f4046259f5945d70e43ab",
+    "ID": "muzzle_trg_sako_trg_22_42_m10_muzzle_brake_86x70"
+  },
+  "sections": []
+}

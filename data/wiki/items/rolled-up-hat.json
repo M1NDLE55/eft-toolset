@@ -1,0 +1,26 @@
+{
+  "title": "Rolled up hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rolled_up_hat",
+  "revisionId": 320868,
+  "lastEdited": "2025-11-11T20:41:36Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "65ddeae866d3c1b9050957bc",
+    "id": "cap_deputy"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item is exclusive to players that obtained the now removed \"Deputy\" preset from Twitch Drops."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "RGD-5 Shrapnel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RGD-5_Shrapnel",
+  "revisionId": 307609,
+  "lastEdited": "2025-03-27T23:56:58Z",
+  "kind": "ammo",
+  "categories": [
+    "Shrapnel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shrapnel",
+    "velocity": "90 m/s",
+    "damage": "55",
+    "penetration": "10",
+    "armor damage": "32",
+    "ricochet": "20%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+20",
+    "node": "5996f6cb86f774678763a6ca",
+    "id": "shrapnel_RGD5"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This shrapnel is also used by the VOG-17 Khattabka improvised hand grenade, RGD-5 hand grenade, 20/70 Elephant killer slug and the RGN hand grenade."
+    }
+  ]
+}

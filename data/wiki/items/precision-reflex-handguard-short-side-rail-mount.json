@@ -1,0 +1,21 @@
+{
+  "title": "Precision Reflex handguard short side rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Precision_Reflex_handguard_short_side_rail_mount",
+  "revisionId": 274241,
+  "lastEdited": "2024-03-16T10:38:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "+0",
+    "node": "6388c4478d895f557a0c6512",
+    "ID": "mount_pri_precision_reflex_short_rail_section_gen3"
+  },
+  "sections": []
+}

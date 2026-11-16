@@ -1,0 +1,21 @@
+{
+  "title": "Aimpoint Micro H-2 Standard Mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aimpoint_Micro_H-2_Standard_Mount",
+  "revisionId": 214472,
+  "lastEdited": "2022-11-17T07:49:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+0",
+    "node": "616554fe50224f204c1da2aa",
+    "ID": "mount_all_aimpoint_h2_weaver"
+  },
+  "sections": []
+}

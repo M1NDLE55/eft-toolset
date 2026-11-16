@@ -1,0 +1,26 @@
+{
+  "title": "Screw nuts",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Screw_nuts",
+  "revisionId": 337142,
+  "lastEdited": "2026-03-04T10:37:01Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.4 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "57347c77245977448d35f6e2",
+    "id": "screw_nuts"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    }
+  ]
+}

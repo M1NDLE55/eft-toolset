@@ -1,0 +1,25 @@
+{
+  "title": "M870 12ga 508mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_12ga_508mm_barrel",
+  "revisionId": 329265,
+  "lastEdited": "2025-12-24T16:35:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.405 kg",
+    "grid": "3x1",
+    "ergonomics": "-8",
+    "velocity": "+5.4",
+    "MOA": "18.91",
+    "recoil": "-6",
+    "Heat": "-8",
+    "Cooling": "-4",
+    "node": "5a787f7ac5856700177af660",
+    "ID": "barrel_870_fixed_improved_cylinder_508mm"
+  },
+  "sections": []
+}

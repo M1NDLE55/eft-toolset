@@ -1,0 +1,30 @@
+{
+  "title": "Galvion Caiman Fixed Arm Visor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Galvion_Caiman_Fixed_Arm_Visor",
+  "revisionId": 320485,
+  "lastEdited": "2025-10-28T12:19:17Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1 kg",
+    "grid": "2x1",
+    "price": "₽18,698",
+    "trader": "Peacekeeper LL3",
+    "material": "Glass",
+    "armor": "2",
+    "armor coverage": "Face, Eyes",
+    "durability": "30",
+    "blindness protect": "15%",
+    "penalties": "+0% turn speed, -3% Ergonomics",
+    "BlocksEyewear": "No",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5f60bf4558eff926626a60f2",
+    "id": "item_equipment_helmet_galvion_fixed_arm_visor"
+  },
+  "sections": []
+}

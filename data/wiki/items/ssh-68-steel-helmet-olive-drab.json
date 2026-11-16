@@ -1,0 +1,29 @@
+{
+  "title": "SSh-68 steel helmet (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SSh-68_steel_helmet_(Olive_Drab)",
+  "revisionId": 344334,
+  "lastEdited": "2026-05-24T22:01:07Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.5 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL1",
+    "material": "Armor steel",
+    "armor": "3",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "54",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -2% turn speed, -3% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5c06c6a80db834001b735491",
+    "id": "item_equipment_helmet_ssh-68"
+  },
+  "sections": []
+}

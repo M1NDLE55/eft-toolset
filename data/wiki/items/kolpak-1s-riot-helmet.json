@@ -1,0 +1,29 @@
+{
+  "title": "Kolpak-1S riot helmet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kolpak-1S_riot_helmet",
+  "revisionId": 344319,
+  "lastEdited": "2026-05-24T21:57:46Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.9 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL1",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "45",
+    "RicochetChance": "Low",
+    "penalties": "+0% movement speed, -2% turn speed, -2% Ergonomics, High sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "59e7711e86f7746cae05fbe1",
+    "id": "helmet_k1c"
+  },
+  "sections": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": "P226 Stainless Elite pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Stainless_Elite_pistol_slide",
+  "revisionId": 352584,
+  "lastEdited": "2026-08-09T19:51:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.22 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-1",
+    "Dura Burn": "-3",
+    "Heat": "-4.3",
+    "Cooling": "+6.5",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c0009510db834001966907f",
+    "ID": "reciever_p226_sig_stainless_elite"
+  },
+  "sections": []
+}

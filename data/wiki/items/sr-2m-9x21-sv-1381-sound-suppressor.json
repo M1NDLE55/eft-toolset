@@ -1,0 +1,26 @@
+{
+  "title": "SR-2M 9x21 SV-1381 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-2M_9x21_SV-1381_sound_suppressor",
+  "revisionId": 352232,
+  "lastEdited": "2026-08-07T20:58:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.575 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-14",
+    "velocity": "+0.9",
+    "recoil": "-6",
+    "Dura Burn": "+75",
+    "Heat": "+18",
+    "Cooling": "+0",
+    "node": "62e2a7138e1ac9380579c122",
+    "ID": "silencer_sr2m_tochmash_suppressor_9x21"
+  },
+  "sections": []
+}

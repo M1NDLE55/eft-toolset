@@ -1,0 +1,21 @@
+{
+  "title": "TOZ-106 002 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TOZ-106_002_pistol_grip",
+  "revisionId": 340770,
+  "lastEdited": "2026-04-22T07:26:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "price": "₽700",
+    "ergonomics": "+3",
+    "node": "5a38eecdc4a282329a73b512",
+    "ID": "pistolgrip_toz-106_toz_000_002"
+  },
+  "sections": []
+}

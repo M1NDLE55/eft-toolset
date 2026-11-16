@@ -1,0 +1,22 @@
+{
+  "title": "M9A3 Sight Mount rear sight rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M9A3_Sight_Mount_rear_sight_rail",
+  "revisionId": 322358,
+  "lastEdited": "2025-11-18T14:34:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.028 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "sightrange": "200",
+    "ergonomics": "-0.5",
+    "node": "5cadd954ae921500103bb3c2",
+    "ID": "sight_rear_m9_sight_mount_m9"
+  },
+  "sections": []
+}

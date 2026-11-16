@@ -1,0 +1,22 @@
+{
+  "title": "P226 thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_thread_protector",
+  "revisionId": 337399,
+  "lastEdited": "2026-03-05T22:32:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+2",
+    "Dura Burn": "-2",
+    "node": "587de5ba2459771c0f1e8a58",
+    "ID": "muzzle_p226_sig_thread_protector_std_9x19"
+  },
+  "sections": []
+}

@@ -1,0 +1,38 @@
+{
+  "title": ".45 ACP Hydra-Shok",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.45_ACP_Hydra-Shok",
+  "revisionId": 356473,
+  "lastEdited": "2026-08-26T02:04:17Z",
+  "kind": "ammo",
+  "categories": [
+    ".45 ACP ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "velocity": "274 m/s",
+    "damage": "100",
+    "penetration": "13",
+    "armor damage": "30",
+    "ricochet": "6.6%",
+    "h bleed chance": "+30",
+    "durability burn": "+10",
+    "heat": "+13.8",
+    "feedfailure": "High",
+    "misfire": "Low",
+    "effects": "Subsonic",
+    "node": "5efb0fc6aeb21837e749c801",
+    "id": "patron_1143x23_acp_hydra_shok"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

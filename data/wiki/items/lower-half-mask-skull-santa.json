@@ -1,0 +1,27 @@
+{
+  "title": "Lower half-mask (Skull Santa)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lower_half-mask_(Skull_Santa)",
+  "revisionId": 353491,
+  "lastEdited": "2026-08-13T19:40:43Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 1",
+    "node": "6936fe4a3f4d6dfa3900c33c",
+    "id": "item_equipment_facecover_skull_half_mask_skull_santa"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

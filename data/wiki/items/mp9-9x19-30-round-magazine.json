@@ -1,0 +1,27 @@
+{
+  "title": "MP9 9x19 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP9_9x19_30-round_magazine",
+  "revisionId": 314132,
+  "lastEdited": "2025-06-04T15:12:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.08 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "5de8eac42a78646d96665d91",
+    "ID": "mag_mp9_bt_mp9_std_9x19_30"
+  },
+  "sections": []
+}

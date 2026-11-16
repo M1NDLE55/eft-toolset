@@ -1,0 +1,21 @@
+{
+  "title": "SAG Bit low profile dovetail sidemount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SAG_Bit_low_profile_dovetail_sidemount",
+  "revisionId": 304973,
+  "lastEdited": "2025-01-31T14:56:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.075 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-0.5",
+    "node": "638db77630c4240f9e06f8b6",
+    "ID": "mount_dovetail_sag_bit_bracket"
+  },
+  "sections": []
+}

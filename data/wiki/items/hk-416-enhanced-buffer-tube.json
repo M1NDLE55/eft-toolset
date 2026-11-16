@@ -1,0 +1,23 @@
+{
+  "title": "HK 416 Enhanced Buffer Tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416_Enhanced_Buffer_Tube",
+  "revisionId": 340870,
+  "lastEdited": "2026-04-22T08:43:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.162 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1.5",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "node": "5bb20e58d4351e00320205d7",
+    "ID": "stock_ar15_hk_enhanced_stock_tube"
+  },
+  "sections": []
+}

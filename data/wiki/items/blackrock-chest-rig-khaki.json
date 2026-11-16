@@ -1,0 +1,29 @@
+{
+  "title": "BlackRock chest rig (Khaki)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BlackRock_chest_rig_(Khaki)",
+  "revisionId": 348516,
+  "lastEdited": "2026-07-30T21:51:27Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.8 kg",
+    "grid": "3x4",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 0",
+    "BlocksArmor": "No",
+    "slots": "20 Slots",
+    "node": "67ab3f146d7ece17bf0096ff",
+    "id": "item_equipment_rig_blackRock_arena_bp_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

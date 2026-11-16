@@ -1,0 +1,28 @@
+{
+  "title": "TW EXFIL Peltor ComTac VI headset (Ranger Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TW_EXFIL_Peltor_ComTac_VI_headset_(Ranger_Green)",
+  "revisionId": 348445,
+  "lastEdited": "2026-07-30T20:23:36Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces",
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet headset",
+    "weight": "0.439 kg",
+    "grid": "2x1",
+    "trader": "Ref LL3, after unlocking it in the Factory Tactical Map",
+    "BlocksHeadset": "Yes",
+    "node": "69c26593ea474c30ad069f8f",
+    "id": "item_equipment_headset_comtac_6_green_bp03_exfil"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

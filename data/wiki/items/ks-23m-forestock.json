@@ -1,0 +1,23 @@
+{
+  "title": "KS-23M forestock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KS-23M_forestock",
+  "revisionId": 239428,
+  "lastEdited": "2023-07-26T20:05:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.58 kg",
+    "grid": "2x1",
+    "ergonomics": "+5",
+    "recoil": "+0",
+    "Heat": "+1.8",
+    "Cooling": "-1.9",
+    "node": "5e848d51e4dbc5266a4ec63b",
+    "ID": "handguard_ks23_toz_ks23m_std"
+  },
+  "sections": []
+}

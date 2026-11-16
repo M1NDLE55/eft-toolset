@@ -1,0 +1,24 @@
+{
+  "title": "M700 extended multi-slot Weaver rail base",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_extended_multi-slot_Weaver_rail_base",
+  "revisionId": 253362,
+  "lastEdited": "2023-11-02T21:54:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.09 kg",
+    "grid": "2x1",
+    "price": "₽2,640",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5bfebc530db834001d23eb65",
+    "ID": "mount_m700_weaver_extended_multi_slot_base"
+  },
+  "sections": []
+}

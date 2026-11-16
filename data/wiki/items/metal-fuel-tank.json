@@ -1,0 +1,56 @@
+{
+  "title": "Metal fuel tank",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Metal_fuel_tank",
+  "revisionId": 356719,
+  "lastEdited": "2026-08-28T21:43:53Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable material",
+    "weight": "9.25 kg",
+    "grid": "2x3",
+    "trader": "Jaeger LL2, Ref LL3",
+    "node": "5d1b36a186f7742523398433",
+    "ID": "item_barter_flam_gasoline"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the shelves in the OLI store\n- On top of barrels on the highway near the EMERCOM tents\n- On the green and white shelf in The National store\n- On the shelves in the Goshan stockroom"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the bunkers ZB-014 and ZB-016"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Loose in the warehouse east of crane yard\n- Along side the train cars in the new construction zone\n- On the bed in Dorm room 110\n- In the trunk of the white van at the old gas station"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On the ground around the K buildings and the garage next to White Knight\n- On the ground around fuel tanks located between the king building and the dome\n- On the ground inside the ground floor of the Queen building\n- In the tunnel connecting the King building and the White pawn\n- On the ground inside of the blue container next to the Heating Pipe Scav extract"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- At the gas station"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Survivalist Path - Thrifty"
+    }
+  ]
+}

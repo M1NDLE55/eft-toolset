@@ -1,0 +1,35 @@
+{
+  "title": "Model 7290 Flash Bang grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Model_7290_Flash_Bang_grenade",
+  "revisionId": 358680,
+  "lastEdited": "2026-09-10T22:56:33Z",
+  "kind": "item",
+  "categories": [
+    "Stun grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stun grenade",
+    "weight": "0.42 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "explosion delay": "1.5s",
+    "concussion distance": "10 meters",
+    "node": "619256e5f8af2c1a4e1f5d92",
+    "ID": "weapon_grenade_m7290"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- When looking at the explosion, is added for 40 seconds, causing a blinding effect that starts to fade out after 20 seconds, as well as a visual impairment which lasts 90 seconds\n- Within a 10m radius around the explosion, is added for 20 seconds, causing tinnitus and muffled audio"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Grenade box\n- Weapon box (6x2)\n- Buried barrel cache\n- Ground cache"
+    }
+  ]
+}

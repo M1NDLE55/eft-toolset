@@ -1,0 +1,30 @@
+{
+  "title": "Kiba Arms Titan ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kiba_Arms_Titan_ballistic_plate",
+  "revisionId": 362254,
+  "lastEdited": "2026-09-26T16:06:51Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "2.25 kg",
+    "grid": "2x2",
+    "material": "Titan",
+    "armor": "4",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "55",
+    "penalties": "-1% movement speed, -0.5% turn speed, -0.5% Ergonomics",
+    "node": "656fa25e94b480b8a500c0e0",
+    "id": "item_equipment_plate_SAPI_KibaArms_Titan_4class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

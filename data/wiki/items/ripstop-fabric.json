@@ -1,0 +1,31 @@
+{
+  "title": "Ripstop fabric",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ripstop_fabric",
+  "revisionId": 367803,
+  "lastEdited": "2026-11-10T13:13:55Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.09 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "node": "5e2af4a786f7746d3f3c3400",
+    "ID": "Item_barter_other_cloth_ripstop"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- Spawns in clothing stores in the shopping mall"
+    }
+  ]
+}

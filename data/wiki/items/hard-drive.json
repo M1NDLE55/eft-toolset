@@ -1,0 +1,25 @@
+{
+  "title": "Hard drive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hard_drive",
+  "revisionId": 289534,
+  "lastEdited": "2024-09-01T12:15:38Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "node": "66760b3deb51b08bd40c2b08",
+    "id": "item_barter_electr_hdd_NosQuests_quest"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Serious Allegations from Skier"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "MF-UNTAR body armor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MF-UNTAR_body_armor",
+  "revisionId": 362631,
+  "lastEdited": "2026-09-29T20:31:41Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "8.5 kg",
+    "grid": "3x3",
+    "trader": "Peacekeeper LL2",
+    "material": "Aluminium",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides",
+    "durability": "100",
+    "penalties": "-9% movement speed, -3% turn speed, -4% Ergonomics",
+    "node": "5ab8e4ed86f7742d8e50c7fa",
+    "id": "armor_un"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Note for Kozlov",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_for_Kozlov",
+  "revisionId": 336358,
+  "lastEdited": "2026-02-21T17:29:24Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "68d2f09fb350a6169f04bea9",
+    "id": "item_info_note_kozlov_debt"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Accidental Witness"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "P226 Bridge sight mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Bridge_sight_mount",
+  "revisionId": 256894,
+  "lastEdited": "2023-12-07T10:38:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-1",
+    "node": "5b3a08b25acfc4001754880c",
+    "ID": "mount_p226_sig_sauer_bridge_mount"
+  },
+  "sections": []
+}

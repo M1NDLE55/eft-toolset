@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 ERGO F93 PRO stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_ERGO_F93_PRO_stock",
+  "revisionId": 340828,
+  "lastEdited": "2026-04-22T08:17:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.59 kg",
+    "grid": "2x1",
+    "price": "₽9,540",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+12",
+    "recoil": "-21.5",
+    "Dura Burn": "-2",
+    "node": "5b0800175acfc400153aebd4",
+    "ID": "stock_ar15_ergo_f93_pro_stock"
+  },
+  "sections": []
+}

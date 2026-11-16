@@ -1,0 +1,22 @@
+{
+  "title": "Duffle bag",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Duffle_bag",
+  "revisionId": 347328,
+  "lastEdited": "2026-06-23T21:14:38Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bag",
+    "slot": "Backpack",
+    "weight": "1.08 kg",
+    "grid": "4x3",
+    "penalties": "-4% movement speed, -1% turn speed, -3% Ergonomics",
+    "slots": "4x3 grid (12 slots)",
+    "node": "56e33634d2720bd8058b456b",
+    "id": "forward_backpack"
+  },
+  "sections": []
+}

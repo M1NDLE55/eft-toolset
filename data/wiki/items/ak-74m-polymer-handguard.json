@@ -1,0 +1,24 @@
+{
+  "title": "AK-74M polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74M_polymer_handguard",
+  "revisionId": 340613,
+  "lastEdited": "2026-04-21T08:58:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "+12",
+    "recoil": "+0",
+    "Heat": "+4.5",
+    "Cooling": "-3.8",
+    "node": "5648b1504bdc2d9d488b4584",
+    "ID": "handguard_ak_izhmash_ak74m_std_plastic"
+  },
+  "sections": []
+}

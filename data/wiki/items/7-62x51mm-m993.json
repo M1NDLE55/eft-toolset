@@ -1,0 +1,39 @@
+{
+  "title": "7.62x51mm M993",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_M993",
+  "revisionId": 326426,
+  "lastEdited": "2025-12-01T23:09:44Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x51mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.022 kg",
+    "grid": "1x1",
+    "velocity": "930 m/s",
+    "damage": "70",
+    "accuracy": "+15",
+    "recoil": "+6",
+    "penetration": "65",
+    "armor damage": "85",
+    "ricochet": "28%",
+    "l bleed chance": "+5",
+    "h bleed chance": "+5",
+    "durability burn": "+65",
+    "heat": "+50",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "5efb0c1bd79ff02a1f5e68d9",
+    "id": "patron_762x51_m993"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

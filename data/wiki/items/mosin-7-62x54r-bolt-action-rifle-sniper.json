@@ -1,0 +1,42 @@
+{
+  "title": "Mosin 7.62x54R bolt-action rifle (Sniper)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_7.62x54R_bolt-action_rifle_(Sniper)",
+  "revisionId": 351462,
+  "lastEdited": "2026-08-05T22:48:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Bolt-action rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bolt-action rifle",
+    "slot": "Primary",
+    "weight": "4.88 kg",
+    "grid": "6x1",
+    "trader": "Prapor LL2",
+    "fire modes": "Single",
+    "sightrange": "600",
+    "ergonomics": "4",
+    "velocity": "898 m/s",
+    "range": "1000 m",
+    "MOA": "1.3",
+    "Weaprecoil": "Vertical: 178, Horizontal: 541",
+    "rof": "30",
+    "caliber": "7.62x54mmR",
+    "node": "5ae08f0a5acfc408fb1398a1",
+    "ID": "weapon_izhmash_mosin_rifle_762x54"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "It should be noted that when reloading the weapon with a round still in the chamber, said round will be ejected onto the ground and can be recovered by being picked up. The rifle can contain a max of 5+1 rounds, but can only be loaded in the field up to 4+1. If reloaded by dragging the ammo to the rifle in your inventory while it is not currently being held, it can be reloaded back to 5."
+    },
+    {
+      "heading": "Weapon Variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| Mosin (Sniper) Carbine |\n| Mosin (Sniper) Obrez |\n| Mosin (Sniper) Obrez M |"
+    }
+  ]
+}

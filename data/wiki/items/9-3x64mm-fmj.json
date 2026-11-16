@@ -1,0 +1,40 @@
+{
+  "title": "9.3x64mm FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9.3x64mm_FMJ",
+  "revisionId": 360929,
+  "lastEdited": "2026-09-20T17:15:42Z",
+  "kind": "ammo",
+  "categories": [
+    "9.3x64mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.042 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4, after completing his task Special Order",
+    "velocity": "793 m/s",
+    "damage": "115",
+    "accuracy": "+15",
+    "penetration": "44",
+    "armor damage": "55",
+    "ricochet": "40%",
+    "fragmentation": "5%",
+    "l bleed chance": "+80",
+    "h bleed chance": "+50",
+    "durability burn": "+40",
+    "heat": "+193.4",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "68bac6ca653ee6b1e406d978",
+    "id": "patron_93x64_fmj"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

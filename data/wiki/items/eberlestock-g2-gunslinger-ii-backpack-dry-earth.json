@@ -1,0 +1,29 @@
+{
+  "title": "Eberlestock G2 Gunslinger II backpack (Dry Earth)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Eberlestock_G2_Gunslinger_II_backpack_(Dry_Earth)",
+  "revisionId": 334291,
+  "lastEdited": "2026-02-10T14:35:09Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2.948 kg",
+    "grid": "5x7",
+    "trader": "Ragman LL4",
+    "penalties": "-4% movement speed, -1% turn speed, -3% Ergonomics",
+    "slots": "35 slots, 1x 3x5 grid, 1x 2x7 grid, 1x 3x2 grid",
+    "node": "6034d2d697633951dc245ea6",
+    "id": "item_equipment_backpack_g2_gunslinger"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

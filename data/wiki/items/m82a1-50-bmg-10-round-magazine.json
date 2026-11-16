@@ -1,0 +1,27 @@
+{
+  "title": "M82A1 .50 BMG 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M82A1_.50_BMG_10-round_magazine",
+  "revisionId": 316391,
+  "lastEdited": "2025-07-21T15:05:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.612 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-5",
+    "checkaccuracy": "No",
+    "checkmodifier": "+15",
+    "loadmodifier": "+5",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": ".50 BMG",
+    "node": "67d418d0ffb910d21f04720e",
+    "ID": "mag_m82_barrett_m82a1_127x99_10"
+  },
+  "sections": []
+}

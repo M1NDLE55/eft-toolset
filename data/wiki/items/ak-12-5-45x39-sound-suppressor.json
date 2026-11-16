@@ -1,0 +1,26 @@
+{
+  "title": "AK-12 5.45x39 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_5.45x39_sound_suppressor",
+  "revisionId": 352535,
+  "lastEdited": "2026-08-09T19:38:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-12",
+    "velocity": "+0.6",
+    "recoil": "-5",
+    "Dura Burn": "+70",
+    "Heat": "+13.5",
+    "Cooling": "+10",
+    "node": "64c196ad26a15b84aa07132f",
+    "ID": "silencer_ak12_izhmash_ak12_supressor_std_545x39"
+  },
+  "sections": []
+}

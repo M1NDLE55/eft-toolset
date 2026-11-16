@@ -1,0 +1,25 @@
+{
+  "title": "Case with military equipment",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Case_with_military_equipment",
+  "revisionId": 356007,
+  "lastEdited": "2026-08-25T13:57:55Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "7 kg",
+    "grid": "4x2",
+    "node": "6a671d87ff6f8a0b080b6bf3",
+    "id": "q_kord_military_case1"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "Used in the quests:\n- Uninvited Guests - Part 1 from Prapor\n- Uninvited Guests - Part 2 from the BTR Driver"
+    }
+  ]
+}

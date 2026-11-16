@@ -1,0 +1,27 @@
+{
+  "title": "Baseball cap (Zaebtsa Woodland)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Baseball_cap_(Zaebtsa_Woodland)",
+  "revisionId": 361582,
+  "lastEdited": "2026-09-23T21:55:59Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 3",
+    "node": "6a622ebeace4474db90fc85c",
+    "id": "item_equipment_head_zaebtsa_cap_woodland_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

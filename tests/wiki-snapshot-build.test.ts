@@ -151,6 +151,24 @@ describe("building the snapshot", () => {
     });
   });
 
+  it("keeps item, weapon, and ammo pages apart for the item page, by tarkov.dev id", () => {
+    const { files, index, manifest } = build();
+    const ids = JSON.parse(files.get("item-ids.json")!);
+    expect(ids).toEqual({
+      "544fb45d4bdc2dee738b4568": "items/salewa-first-aid-kit.json",
+      "5e81c3cbac2bb513793cdc75": "items/colt-m1911a1-45-acp-pistol.json",
+      "5fd20ff893a8961fc660a954": "items/300-blackout-ap.json",
+    });
+    const salewa: Record = JSON.parse(files.get(ids["544fb45d4bdc2dee738b4568"])!);
+    expect(salewa).toMatchObject({ title: "Salewa first aid kit", kind: "item" });
+    const headings = salewa.sections.map((entry) => entry.heading);
+    expect(headings).toEqual(expect.arrayContaining(["Notes", "Location", "Quest rewards"]));
+    // tarkov.dev serves these, or they're only media.
+    for (const heading of ["Introduction", "Description", "Quests", "Trading", "Crafting"]) expect(headings).not.toContain(heading);
+    expect(index.pages.map((entry: { title: string }) => entry.title)).not.toContain("Salewa first aid kit");
+    expect(manifest).toMatchObject({ itemPages: 3, itemIds: 3 });
+  });
+
   it("builds the same files from the same dump", () => {
     expect([...build().files]).toEqual([...build().files]);
   });

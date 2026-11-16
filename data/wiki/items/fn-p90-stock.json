@@ -1,0 +1,24 @@
+{
+  "title": "FN P90 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_stock",
+  "revisionId": 360626,
+  "lastEdited": "2026-09-18T19:00:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.4 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+26.5",
+    "recoil": "-5",
+    "Heat": "+4.2",
+    "Cooling": "-3.9",
+    "node": "5cc700b9e4a949000f0f0f25",
+    "ID": "stock_p90_fn_p90_std"
+  },
+  "sections": []
+}

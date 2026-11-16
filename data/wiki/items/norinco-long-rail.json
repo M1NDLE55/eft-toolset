@@ -1,0 +1,21 @@
+{
+  "title": "Norinco long rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Norinco_long_rail",
+  "revisionId": 357372,
+  "lastEdited": "2026-09-01T13:41:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.075 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-0.25",
+    "node": "69fa0173c5a215197a0e0c85",
+    "ID": "mount_qbz191_norinco_long_rail"
+  },
+  "sections": []
+}

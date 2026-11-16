@@ -1,0 +1,60 @@
+{
+  "title": "FP-100 filter absorber",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FP-100_filter_absorber",
+  "revisionId": 360479,
+  "lastEdited": "2026-09-17T18:50:11Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "13 kg",
+    "grid": "3x3",
+    "node": "5d1b2f3f86f774252167a52c",
+    "ID": "item_barter_other_airfilter"
+  },
+  "sections": [
+    {
+      "heading": "Locations",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Ration supply crate"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In the bathroom at the two story dorm\n- In warehouse 4 between generators on side without power switch\n- In warehouse 5, on the bottom shelf next to the chemical van\n- In the back room upstairs at the USEC stash building\n- Next to the supply crate in the building just west of ZB-1011\n- On the bricks to the left of the locked gate leading to ZB-1013 extract"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Various locations in the underground area near D-2 power switch\n- Inside the RB-AM room\n- Inside the RB-GN room"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On the wooden shelves outside office window"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the shelves in Adik\n- Back shelves in Oli\n- Back shelves in Idea\n- Floor of Power Station"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On the main floor of the power station\n- On the shelves in the terminal"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the corner of the main area in the ZB-014 bunker\n- On shelves in scav bunker"
+    },
+    {
+      "heading": "Ground Zero",
+      "level": 3,
+      "text": "- In the grenade launcher room as loose loot"
+    }
+  ]
+}

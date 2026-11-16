@@ -1,0 +1,29 @@
+{
+  "title": "ANA Tactical Alpha chest rig (A-TACS AU)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ANA_Tactical_Alpha_chest_rig_(A-TACS_AU)",
+  "revisionId": 348629,
+  "lastEdited": "2026-07-30T22:18:03Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.7 kg",
+    "grid": "4x4",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 1",
+    "BlocksArmor": "No",
+    "slots": "20 Slots",
+    "node": "68a85ac615a5769d50029cd9",
+    "id": "item_equipment_rig_alpha_au_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

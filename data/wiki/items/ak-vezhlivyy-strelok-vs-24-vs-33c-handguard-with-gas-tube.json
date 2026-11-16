@@ -1,0 +1,25 @@
+{
+  "title": "AK Vezhlivyy Strelok VS-24 + VS-33c handguard with gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Vezhlivyy_Strelok_VS-24_%2B_VS-33c_handguard_with_gas_tube",
+  "revisionId": 356552,
+  "lastEdited": "2026-08-26T02:54:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.385 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+17",
+    "recoil": "-0.5",
+    "Heat": "-4.4",
+    "Cooling": "+4.2",
+    "loot xp": "50",
+    "node": "5cf656f2d7f00c06585fb6eb (Black) =5d4aab30a4b9365435358c55 (White)",
+    "ID": "gas_block_ak_vs_vs_33c =gas_block_ak_vs_vs_33c_wht"
+  },
+  "sections": []
+}

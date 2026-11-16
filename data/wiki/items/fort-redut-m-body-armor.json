@@ -1,0 +1,34 @@
+{
+  "title": "FORT Redut-M body armor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FORT_Redut-M_body_armor",
+  "revisionId": 365042,
+  "lastEdited": "2026-10-26T00:08:57Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "7.7 kg",
+    "grid": "3x4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Groin, Buttocks",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "248",
+    "penalties": "-3% movement speed, -3% turn speed, -3% Ergonomics",
+    "node": "5ca2151486f774244a3b8d30",
+    "id": "item_equipment_armor_redut_m"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "OP-SKS front trunnion",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OP-SKS_front_trunnion",
+  "revisionId": 321775,
+  "lastEdited": "2025-11-16T19:30:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-1",
+    "node": "634f05a21f9f536910079b56",
+    "ID": "mount_sks_molot_sks_rear_sight_block"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "MP-443 Grach Zenit B-8 mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-443_Grach_Zenit_B-8_mount",
+  "revisionId": 288126,
+  "lastEdited": "2024-08-25T22:22:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "price": "₽2,687",
+    "trader": "Skier LL1",
+    "ergonomics": "-1",
+    "node": "576a7c512459771e796e0e17",
+    "ID": "mount_mp443_zenit_b8"
+  },
+  "sections": []
+}

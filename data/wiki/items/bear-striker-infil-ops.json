@@ -1,0 +1,22 @@
+{
+  "title": "BEAR Striker Infil Ops",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_Striker_Infil_Ops",
+  "revisionId": 248060,
+  "lastEdited": "2023-09-22T17:53:37Z",
+  "kind": "item",
+  "categories": [
+    "BEAR lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f58ab86f7743014162042",
+    "ID": "bear_lower_striker"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The pants are modeled on the UF PRO Striker HT in Brown Grey, and the boots are modeled on the Under Armour Infil Ops Gore-Tex."
+    }
+  ]
+}

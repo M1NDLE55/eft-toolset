@@ -1,0 +1,28 @@
+{
+  "title": "MP-133 12ga 750mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-133_12ga_750mm_barrel",
+  "revisionId": 266843,
+  "lastEdited": "2024-01-17T01:03:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.5 kg",
+    "grid": "5x1",
+    "price": "₽7,061",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-19",
+    "velocity": "+18.9",
+    "MOA": "10.31",
+    "recoil": "-10",
+    "Dura Burn": "+10",
+    "Heat": "-18",
+    "Cooling": "-14",
+    "node": "560837824bdc2d57468b4568",
+    "ID": "barrel_mr133_750mm"
+  },
+  "sections": []
+}

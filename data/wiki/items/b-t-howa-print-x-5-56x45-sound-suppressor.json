@@ -1,0 +1,25 @@
+{
+  "title": "B&T Howa Print-X 5.56x45 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/B%26T_Howa_Print-X_5.56x45_sound_suppressor",
+  "revisionId": 357289,
+  "lastEdited": "2026-09-01T10:49:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.43 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-15",
+    "velocity": "+0.6",
+    "recoil": "-2",
+    "Dura Burn": "+60",
+    "Heat": "+14",
+    "node": "6a3ceab8194a2625b40c8641",
+    "ID": "silencer_base_bt_print_x_type20_556x45"
+  },
+  "sections": []
+}

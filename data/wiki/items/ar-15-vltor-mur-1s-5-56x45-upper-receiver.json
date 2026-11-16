@@ -1,0 +1,31 @@
+{
+  "title": "AR-15 Vltor MUR-1S 5.56x45 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Vltor_MUR-1S_5.56x45_upper_receiver",
+  "revisionId": 362749,
+  "lastEdited": "2026-10-01T05:55:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.246 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4 after completing his task The Guide",
+    "ergonomics": "+7",
+    "recoil": "-4",
+    "Dura Burn": "-4",
+    "Heat": "-2.5",
+    "Cooling": "+2",
+    "node": "59bfe68886f7746004266202",
+    "ID": "reciever_ar15_vltor_mur-1s"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The QR code visible near the charging handle links directly to the Vltor website."
+    }
+  ]
+}

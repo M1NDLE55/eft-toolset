@@ -1,0 +1,25 @@
+{
+  "title": "AK-74 5.45x39 6L23 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_5.45x39_6L23_30-round_magazine",
+  "revisionId": 351193,
+  "lastEdited": "2026-08-05T18:58:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.215 kg",
+    "grid": "1x2",
+    "trader": "Prapor LL1: BlackPrapor LL2: Plum",
+    "ergonomics": "-1.5",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.45x39mm",
+    "node": "55d480c04bdc2d1d4e8b456a 5cbdaf89ae9215000e5b9c94",
+    "ID": "mag_ak74_izhmash_6L23_545x39_30 mag_ak74_izhmash_6L23_plum_545x39_30 (Plum)"
+  },
+  "sections": []
+}

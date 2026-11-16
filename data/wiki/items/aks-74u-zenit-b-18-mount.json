@@ -1,0 +1,21 @@
+{
+  "title": "AKS-74U Zenit B-18 Mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74U_Zenit_B-18_Mount",
+  "revisionId": 340646,
+  "lastEdited": "2026-04-21T09:24:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.053 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-1",
+    "node": "57ffb0062459777a045af529",
+    "ID": "mount_all_zenit_b18"
+  },
+  "sections": []
+}

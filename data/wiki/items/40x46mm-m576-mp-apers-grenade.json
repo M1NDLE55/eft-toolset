@@ -1,0 +1,36 @@
+{
+  "title": "40x46mm M576 (MP-APERS) grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/40x46mm_M576_(MP-APERS)_grenade",
+  "revisionId": 322723,
+  "lastEdited": "2025-11-18T21:08:20Z",
+  "kind": "ammo",
+  "categories": [
+    "40x46mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Grenade launcher cartridge",
+    "weight": "0.35 kg",
+    "grid": "1x1",
+    "velocity": "269 m/s",
+    "damage": "160",
+    "accuracy": "+100",
+    "projectiles": "15",
+    "penetration": "5",
+    "armor damage": "95",
+    "ricochet": "0%",
+    "misfire": "Low",
+    "fuze time": "0s",
+    "effects": "Subsonic",
+    "node": "5ede475339ee016e8c534742",
+    "id": "patron_40x46_m576"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

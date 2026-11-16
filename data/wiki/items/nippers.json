@@ -1,0 +1,27 @@
+{
+  "title": "Nippers",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nippers",
+  "revisionId": 356434,
+  "lastEdited": "2026-08-26T01:11:30Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tools",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5d40425986f7743185265461",
+    "ID": "item_barter_tools_nippers"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

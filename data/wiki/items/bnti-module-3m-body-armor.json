@@ -1,0 +1,42 @@
+{
+  "title": "BNTI Module-3M body armor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BNTI_Module-3M_body_armor",
+  "revisionId": 362211,
+  "lastEdited": "2026-09-26T14:04:16Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "6 kg",
+    "grid": "3x3",
+    "trader": "Skier LL1",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides",
+    "durability": "80",
+    "penalties": "-1% movement speed, -1% turn speed, +0% Ergonomics",
+    "node": "59e7635f86f7742cbf2c1095",
+    "id": "module_3m"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel cache\n- In Dead Scavs\n- In Ground cache\n- In Weapon box (6x6)\n- In Weapon box (6x4)\n- In Weapon box (4x4)\n- On Scavs"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On the right file cabinet in the Office room"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- By a cupboard in the green bungalow in the Village area\n\n- On the sofa upstairs in a brown house in the Village area\n\n- In the Village house with the attached garage (x2)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "9x39mm FMJ ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x39mm_FMJ_ammo_pack_(20_pcs)",
+  "revisionId": 367294,
+  "lastEdited": "2026-11-02T23:17:06Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657984a50fbff513dd435765",
+    "ID": "item_ammo_box_9x39_20_fmj"
+  },
+  "sections": []
+}

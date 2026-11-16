@@ -1,0 +1,30 @@
+{
+  "title": "Safariland Liberator HP 2.0 Hearing Protection Headset (MultiCam Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Safariland_Liberator_HP_2.0_Hearing_Protection_Headset_(MultiCam_Black)",
+  "revisionId": 348685,
+  "lastEdited": "2026-07-30T22:31:01Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.34 kg",
+    "grid": "2x2",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 2",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "69c14fa8b33aad3beb036878",
+    "id": "item_equipment_headset_liberator_multicam_black_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Military flash drive with topographic intel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Military_flash_drive_with_topographic_intel",
+  "revisionId": 336963,
+  "lastEdited": "2026-03-03T02:43:38Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "node": "67c04b8de7a5da1e070f6dec",
+    "id": "q_flash_didntescape_03"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player sided with Lightkeeper."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Glock 9x19 Fischer Development FD917 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_Fischer_Development_FD917_sound_suppressor",
+  "revisionId": 337491,
+  "lastEdited": "2026-03-05T23:22:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.35 kg",
+    "grid": "2x1",
+    "price": "₽46,200",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "velocity": "+0.9",
+    "recoil": "-15",
+    "Dura Burn": "+43",
+    "Heat": "+12",
+    "Cooling": "+10",
+    "node": "5a7ad74e51dfba0015068f45",
+    "ID": "silencer_glock_fischer_development_fd917_9x19"
+  },
+  "sections": []
+}

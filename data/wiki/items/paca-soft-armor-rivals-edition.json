@@ -1,0 +1,25 @@
+{
+  "title": "PACA Soft Armor (Rivals Edition)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PACA_Soft_Armor_(Rivals_Edition)",
+  "revisionId": 346770,
+  "lastEdited": "2026-06-13T21:20:21Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "3.5 kg",
+    "grid": "3x3",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides",
+    "durability": "100",
+    "penalties": "-1% movement speed, +0% turn speed, -1% Ergonomics",
+    "node": "607f20859ee58b18e41ecd90",
+    "id": "item_equipment_armor_paca_twitch"
+  },
+  "sections": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Blue Fire witness note",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Blue_Fire_witness_note",
+  "revisionId": 353598,
+  "lastEdited": "2026-08-14T19:11:08Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "6891bb9f81d0bf37b10249f4",
+    "id": "item_info_note_blueFire_witness"
+  },
+  "sections": []
+}

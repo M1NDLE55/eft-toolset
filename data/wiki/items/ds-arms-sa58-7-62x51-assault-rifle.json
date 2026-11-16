@@ -1,0 +1,37 @@
+{
+  "title": "DS Arms SA58 7.62x51 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DS_Arms_SA58_7.62x51_assault_rifle",
+  "revisionId": 362928,
+  "lastEdited": "2026-10-03T11:04:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.951 kg",
+    "grid": "5x2",
+    "trader": "Peacekeeper LL3: BEL variant, Ref LL3, Peacekeeper LL4: Standard, Mechanic LL4: Stripped variant",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "500",
+    "ergonomics": "51.5",
+    "velocity": "580 m/s",
+    "range": "900 m",
+    "MOA": "2.67",
+    "Weaprecoil": "Vertical: 135, Horizontal: 267",
+    "rof": "700",
+    "caliber": "7.62x51mm NATO",
+    "node": "5b0bbe4e5acfc40dc528a72d",
+    "ID": "weapon_dsa_sa58_762x51"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Samples."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "UZI 9x19 3-lug barrel thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_9x19_3-lug_barrel_thread_protector",
+  "revisionId": 337980,
+  "lastEdited": "2026-03-08T00:27:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.085 kg",
+    "grid": "1x1",
+    "ergonomics": "+2",
+    "Dura Burn": "-2",
+    "node": "6698c9c636ba38d291017711",
+    "ID": "muzzle_uzi_iwi_3_lug_barrel_thread_protector_9x19"
+  },
+  "sections": []
+}

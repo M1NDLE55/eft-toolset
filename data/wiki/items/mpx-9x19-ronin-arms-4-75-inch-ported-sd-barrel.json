@@ -1,0 +1,27 @@
+{
+  "title": "MPX 9x19 Ronin Arms 4.75 inch Ported SD Barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_9x19_Ronin_Arms_4.75_inch_Ported_SD_Barrel",
+  "revisionId": 342760,
+  "lastEdited": "2026-04-30T21:15:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-2",
+    "velocity": "-4",
+    "MOA": "8.35",
+    "recoil": "-3",
+    "Dura Burn": "-21",
+    "Heat": "+5.7",
+    "Cooling": "+8.7",
+    "node": "67614994e889e1972605d6bb",
+    "ID": "barrel_mpx_ronin_121mm_ported_9x19"
+  },
+  "sections": []
+}

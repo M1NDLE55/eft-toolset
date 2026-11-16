@@ -1,0 +1,33 @@
+{
+  "title": "Aramid fiber fabric",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aramid_fiber_fabric",
+  "revisionId": 367802,
+  "lastEdited": "2026-11-10T13:13:51Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.14 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5e2af4d286f7746d4159f07a",
+    "ID": "Item_barter_other_cloth_aramid"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Weapon box (4x4)\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- Spawns in clothing stores in the shopping mall"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Steyr AUG A3 M1 1.5x optic sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_A3_M1_1.5x_optic_sight",
+  "revisionId": 272083,
+  "lastEdited": "2024-02-20T22:19:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.624 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "600",
+    "ergonomics": "-2",
+    "modes": "1",
+    "node": "62ebd290c427473eff0baafb",
+    "ID": "scope_aug_steyr_rail_optic_1,5x"
+  },
+  "sections": []
+}

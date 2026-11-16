@@ -1,0 +1,28 @@
+{
+  "title": "Misha Mayorov mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Misha_Mayorov_mask",
+  "revisionId": 344295,
+  "lastEdited": "2026-05-24T21:41:27Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "5bd0716d86f774171822ef4b",
+    "id": "item_equipment_facecover_HALLOWEEN_Micheal"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Based on the infamous \"Michael Myers\" mask from the iconic horror movie \"Halloween\".\n- This mask was added as part of Escape from Tarkov's 2018 Halloween Celebration."
+    }
+  ]
+}

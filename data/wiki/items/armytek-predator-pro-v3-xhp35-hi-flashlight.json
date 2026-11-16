@@ -1,0 +1,24 @@
+{
+  "title": "Armytek Predator Pro v3 XHP35 HI flashlight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armytek_Predator_Pro_v3_XHP35_HI_flashlight",
+  "revisionId": 313628,
+  "lastEdited": "2025-05-20T21:15:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Flashlights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flashlight",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-2",
+    "modes": "2",
+    "loot xp": "20",
+    "exam xp": "6",
+    "node": "59d790f486f77403cb06aec6",
+    "ID": "flashlight_armytek_predator_pro_v3_xhp35_hi"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "USEC Night Patrol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_Night_Patrol",
+  "revisionId": 276052,
+  "lastEdited": "2024-04-15T21:40:13Z",
+  "kind": "item",
+  "categories": [
+    "USEC upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5f5e4075df4f3100376a8138",
+    "ID": "user_upper_NightPatrol"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The jacket is modeled after the US Army Issue Desert Night Parka which is modified in a popular style. The gloves are modeled after the Magpul Patrol Glove 2.0.\n\nThe Camouflage featured on this top is designated \"Desert Night Camo\" which is a two-color grid camouflage pattern used by the United States military during the Gulf War. It was designed to aid soldiers in concealment from Soviet-based night vision devices, but is still used in modern forms that counter conventional night-vision devices used today."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "PP-91-01 Kedr-B 9x18PM sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-91-01_Kedr-B_9x18PM_sound_suppressor",
+  "revisionId": 288231,
+  "lastEdited": "2024-08-25T23:31:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.13 kg",
+    "grid": "2x1",
+    "ergonomics": "-16",
+    "velocity": "+0.5",
+    "recoil": "-9",
+    "Dura Burn": "+62",
+    "Heat": "+13",
+    "node": "57f3c8cc2459773ec4480328",
+    "ID": "silencer_pp-91-01_zmz_kedr_b_std_9x18pm"
+  },
+  "sections": []
+}

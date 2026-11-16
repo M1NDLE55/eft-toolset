@@ -1,0 +1,25 @@
+{
+  "title": "AK-50 handguard with gas block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-50_handguard_with_gas_block",
+  "revisionId": 317638,
+  "lastEdited": "2025-08-26T07:48:35Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.729 kg",
+    "grid": "1x1",
+    "node": "683ed6ccd9a096739b0c9228",
+    "id": "item_quest_ak50_gasblock"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Hobby Club from Mechanic\n- Used in the quest Fair Price - Part 2 from Skier"
+    }
+  ]
+}

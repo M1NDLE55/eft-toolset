@@ -1,0 +1,26 @@
+{
+  "title": "KRISS Vector 9x19 6 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KRISS_Vector_9x19_6_inch_barrel",
+  "revisionId": 343003,
+  "lastEdited": "2026-05-02T03:00:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.2 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-2",
+    "velocity": "+0",
+    "MOA": "6.19",
+    "recoil": "-2",
+    "Heat": "+4",
+    "Cooling": "+7",
+    "node": "5fbbc383d5cb881a7363194a",
+    "ID": "barrel_vector_170mm_9x19"
+  },
+  "sections": []
+}

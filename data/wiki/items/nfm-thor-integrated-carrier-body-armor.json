@@ -1,0 +1,39 @@
+{
+  "title": "NFM THOR Integrated Carrier body armor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NFM_THOR_Integrated_Carrier_body_armor",
+  "revisionId": 346962,
+  "lastEdited": "2026-06-16T00:27:50Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "8.5 kg",
+    "grid": "4x4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Shoulders, Groin",
+    "default plates": "2x , 2x",
+    "default plates armor class": "6",
+    "default plates armor coverage": "Front Plate, Back Plate, Sides",
+    "durability": "310",
+    "penalties": "-8% movement speed, -5% turn speed, -8% Ergonomics",
+    "node": "60a283193cb70855c43a381d",
+    "id": "item_equipment_armor_custom_thorintcar"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

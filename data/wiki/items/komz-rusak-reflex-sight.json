@@ -1,0 +1,24 @@
+{
+  "title": "KOMZ Rusak reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KOMZ_Rusak_reflex_sight",
+  "revisionId": 309455,
+  "lastEdited": "2025-04-07T01:17:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.24 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "zeroing": "50",
+    "sightrange": "50",
+    "ergonomics": "-2",
+    "modes": "1",
+    "node": "65f05b9d39dab9e9ec049cfd",
+    "ID": "scope_dovetail_komz_rusak"
+  },
+  "sections": []
+}

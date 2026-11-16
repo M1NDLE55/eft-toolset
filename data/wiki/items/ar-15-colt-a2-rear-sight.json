@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Colt A2 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Colt_A2_rear_sight",
+  "revisionId": 322001,
+  "lastEdited": "2025-11-17T00:08:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "sightrange": "600",
+    "ergonomics": "-0.5",
+    "node": "55d5f46a4bdc2d1b198b4567",
+    "ID": "sight_rear_ar15_colt_a2"
+  },
+  "sections": []
+}

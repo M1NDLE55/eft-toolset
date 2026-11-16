@@ -1,0 +1,37 @@
+{
+  "title": "Chiappa Rhino 200DS 9x19 revolver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chiappa_Rhino_200DS_9x19_revolver",
+  "revisionId": 340909,
+  "lastEdited": "2026-04-22T21:42:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Revolvers",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Revolver",
+    "slot": "Secondary",
+    "weight": "0.713 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "fire modes": "Single action, Double action",
+    "sightrange": "200",
+    "ergonomics": "97",
+    "velocity": "457 m/s",
+    "range": "70 m",
+    "MOA": "9.63",
+    "recoil": "Vertical: 306, Horizontal: 200",
+    "rof": "30",
+    "caliber": "9x19mm Parabellum",
+    "node": "624c2e8614da335f1e034d8c",
+    "ID": "weapon_chiappa_rhino_200ds_9x19"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This weapon will never malfunction."
+    }
+  ]
+}

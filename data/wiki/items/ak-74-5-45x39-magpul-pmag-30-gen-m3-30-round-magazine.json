@@ -1,0 +1,27 @@
+{
+  "title": "AK-74 5.45x39 Magpul PMAG 30 GEN M3 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_5.45x39_Magpul_PMAG_30_GEN_M3_30-round_magazine",
+  "revisionId": 341676,
+  "lastEdited": "2026-04-26T20:55:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "checkmodifier": "-10",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.45x39mm",
+    "node": "5aaa4194e5b5b055d06310a5 68d566b2aa07af2e14059e01",
+    "ID": "mag_ak74_magpul_pmag_30_ak74_gen_m3_545x39_30 mag_ak74_magpul_pmag_30_ak74_gen_m3_545x39_30_fde"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Get Well poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Get_Well_poster",
+  "revisionId": 363686,
+  "lastEdited": "2026-10-07T22:13:40Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6aa2d6d611d6c6361804dd5b",
+    "id": "item_barter_flyers_prestige_04_pve"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

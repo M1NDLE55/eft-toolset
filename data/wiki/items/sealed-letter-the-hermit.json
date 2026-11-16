@@ -1,0 +1,27 @@
+{
+  "title": "Sealed letter (The Hermit)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sealed_letter_(The_Hermit)",
+  "revisionId": 338985,
+  "lastEdited": "2026-03-22T21:50:18Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "61904c9df62c89219a56e034",
+    "id": "item_quest_hunt_fr"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest The Hermit from Jaeger"
+    }
+  ]
+}

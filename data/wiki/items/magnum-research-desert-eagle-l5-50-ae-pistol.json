@@ -1,0 +1,36 @@
+{
+  "title": "Magnum Research Desert Eagle L5 .50 AE pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magnum_Research_Desert_Eagle_L5_.50_AE_pistol",
+  "revisionId": 340931,
+  "lastEdited": "2026-04-22T21:56:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "1.507 kg",
+    "grid": "2x1",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "73",
+    "velocity": "440 m/s",
+    "range": "50 m",
+    "MOA": "8.25",
+    "Weaprecoil": "Vertical: 460, Horizontal: 327",
+    "rof": "30",
+    "caliber": ".50 Action Express",
+    "node": "669fa3f88abd2662d80eee77",
+    "ID": "weapon_magnum_research_desert_eagle_l5_127x33"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- With weapon mastery level 3, having a round in the chamber and exactly one round in the magazine triggers a special drawing animation from the game \"Counter-Strike: Source\"."
+    }
+  ]
+}

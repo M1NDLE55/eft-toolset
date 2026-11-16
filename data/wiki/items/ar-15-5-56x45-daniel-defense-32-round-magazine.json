@@ -1,0 +1,27 @@
+{
+  "title": "AR-15 5.56x45 Daniel Defense 32-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_Daniel_Defense_32-round_magazine",
+  "revisionId": 357295,
+  "lastEdited": "2026-09-01T11:15:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.15 kg",
+    "grid": "1x2",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "-5",
+    "loadmodifier": "-5",
+    "feedfailure": "Very low",
+    "capacity": "32",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "node": "6a16f3a28873771c3704a132",
+    "ID": "mag_stanag_dd_mag_556x45_32"
+  },
+  "sections": []
+}

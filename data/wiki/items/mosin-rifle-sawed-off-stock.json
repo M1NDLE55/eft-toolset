@@ -1,0 +1,27 @@
+{
+  "title": "Mosin Rifle sawed-off stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_sawed-off_stock",
+  "revisionId": 270181,
+  "lastEdited": "2024-02-08T20:09:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.8 kg",
+    "grid": "2x1",
+    "price": "₽1,600",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+16",
+    "recoil": "-3",
+    "Heat": "+7.9",
+    "Cooling": "-8.2",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5bfd36ad0db834001c38ef66",
+    "ID": "stock_mosin_izhmash_mosin_carabine_sawn_off_wood"
+  },
+  "sections": []
+}

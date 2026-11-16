@@ -1,0 +1,20 @@
+{
+  "title": "Toni System Tactical Barrel Clamp",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Toni_System_Tactical_Barrel_Clamp",
+  "revisionId": 314491,
+  "lastEdited": "2025-06-23T21:57:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.118 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "node": "676177b09cfcc4c25b027446",
+    "ID": "mount_12g_toni_system_barrel_clamp_rail"
+  },
+  "sections": []
+}

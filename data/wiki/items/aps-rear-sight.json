@@ -1,0 +1,23 @@
+{
+  "title": "APS rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/APS_rear_sight",
+  "revisionId": 210549,
+  "lastEdited": "2022-09-20T10:34:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.008 kg",
+    "grid": "1x1",
+    "price": "₽600",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5aba637ad8ce87001773e17f",
+    "ID": "sight_rear_aps_molot_aps_std"
+  },
+  "sections": []
+}

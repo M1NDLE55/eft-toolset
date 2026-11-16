@@ -1,0 +1,18 @@
+{
+  "title": "7.62x25mm TT M855A1 ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x25mm_TT_M855A1_ammo_pack_(25_pcs)",
+  "revisionId": 367213,
+  "lastEdited": "2026-11-02T23:12:56Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "68e9176da7bbc64c07028543",
+    "ID": "item_ammo_box_762x25_25_855a1"
+  },
+  "sections": []
+}

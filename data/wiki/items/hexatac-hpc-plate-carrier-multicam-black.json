@@ -1,0 +1,38 @@
+{
+  "title": "Hexatac HPC Plate Carrier (MultiCam Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hexatac_HPC_Plate_Carrier_(MultiCam_Black)",
+  "revisionId": 346951,
+  "lastEdited": "2026-06-16T00:01:47Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "0.47 kg",
+    "grid": "3x3",
+    "armor": "0 (No integrated inserts)",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "penalties": "+0% movement speed, -1% turn speed, +0% Ergonomics",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "63737f448b28897f2802b874",
+    "ID": "item_equipment_armor_hexatac"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Ground caches\n- In Dead Scavs"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

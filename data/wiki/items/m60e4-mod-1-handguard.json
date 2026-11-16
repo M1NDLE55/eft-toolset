@@ -1,0 +1,24 @@
+{
+  "title": "M60E4 Mod 1 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M60E4_Mod_1_handguard",
+  "revisionId": 342702,
+  "lastEdited": "2026-04-30T20:49:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.567 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4: Black",
+    "ergonomics": "+16",
+    "recoil": "+0",
+    "Heat": "-3.5",
+    "Cooling": "+2.4",
+    "node": "66012d64c752a02bbe05e69b",
+    "ID": "handguard_m60_usord_m60e4_mod1"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "M700 ProMag Archangel chassis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_ProMag_Archangel_chassis",
+  "revisionId": 302789,
+  "lastEdited": "2025-01-09T21:32:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chassis",
+    "weight": "2.2 kg",
+    "grid": "3x1",
+    "price": "₽21,000",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+28",
+    "accuracy": "+3",
+    "recoil": "-25",
+    "Heat": "-5.9",
+    "Cooling": "+6.5",
+    "loot xp": "10",
+    "node": "5cf13123d7f00c1085616a50",
+    "ID": "stock_m700_promag_archangel_precision_stock"
+  },
+  "sections": []
+}

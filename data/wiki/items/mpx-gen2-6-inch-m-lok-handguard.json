@@ -1,0 +1,24 @@
+{
+  "title": "MPX GEN2 6 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_GEN2_6_inch_M-LOK_handguard",
+  "revisionId": 342780,
+  "lastEdited": "2026-04-30T21:17:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.305 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+14",
+    "recoil": "+0",
+    "Heat": "-1.4",
+    "Cooling": "+3",
+    "node": "67614a3ce2cf1419500357f4",
+    "ID": "handguard_mpx_sig_mpx_gen2_6_inch_m_lok"
+  },
+  "sections": []
+}

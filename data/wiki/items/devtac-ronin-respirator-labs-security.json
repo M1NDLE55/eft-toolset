@@ -1,0 +1,35 @@
+{
+  "title": "DevTac Ronin Respirator (LABS Security)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Ronin_Respirator_(LABS_Security)",
+  "revisionId": 361558,
+  "lastEdited": "2026-09-23T21:13:01Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "2.65 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in the The Lab Tactical Map",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Eyes, Jaws, Face, Ears",
+    "durability": "180",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, -2% turn speed, -1% Ergonomics, High sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksFaceCover": "Yes",
+    "node": "6a670ae11ab6ac490a0b9a99",
+    "id": "item_equipment_facecover_devtac_respirator_lab_security_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Contrary to its name, this item doesn't provide any protection against gas grenades.\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

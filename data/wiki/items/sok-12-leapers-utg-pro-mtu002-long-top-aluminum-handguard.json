@@ -1,0 +1,25 @@
+{
+  "title": "SOK-12 Leapers UTG PRO MTU002 Long Top aluminum handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_Leapers_UTG_PRO_MTU002_Long_Top_aluminum_handguard",
+  "revisionId": 340648,
+  "lastEdited": "2026-04-21T09:27:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.428 kg",
+    "grid": "2x1",
+    "price": "₽10,200",
+    "trader": "Skier LL3",
+    "ergonomics": "+14",
+    "recoil": "+0",
+    "Heat": "+3.6",
+    "Cooling": "+4.2",
+    "node": "5827272a24597748c74bdeea",
+    "ID": "handguard_saiga12_utg_pro_mtu002_long_top"
+  },
+  "sections": []
+}

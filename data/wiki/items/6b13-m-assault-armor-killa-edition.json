@@ -1,0 +1,41 @@
+{
+  "title": "6B13 M assault armor (Killa Edition)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B13_M_assault_armor_(Killa_Edition)",
+  "revisionId": 348313,
+  "lastEdited": "2026-07-28T11:38:16Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "2.8 kg",
+    "grid": "3x4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Groin",
+    "default plates": "1x , 1x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "154",
+    "penalties": "-1% movement speed, +0% turn speed, +0% Ergonomics",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5c0e541586f7747fa54205c9",
+    "id": "item_equipment_armor_6b13_killa"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Killa"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

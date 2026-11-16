@@ -1,0 +1,30 @@
+{
+  "title": "AR-10 7.62x51 KAC 10-round steel magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_7.62x51_KAC_10-round_steel_magazine",
+  "revisionId": 337711,
+  "lastEdited": "2026-03-06T01:40:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.41 kg",
+    "grid": "1x1",
+    "price": "₽1,800",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+4",
+    "checkaccuracy": "No",
+    "checkmodifier": "-10",
+    "loadmodifier": "-30",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "7.62x51mm NATO, 6.8x51mm",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5df8f535bb49d91fb446d6b0",
+    "ID": "mag_ar10_kac_steel_762x51_10"
+  },
+  "sections": []
+}

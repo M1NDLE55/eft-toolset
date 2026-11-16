@@ -1,0 +1,63 @@
+{
+  "title": "Salewa first aid kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Salewa_first_aid_kit",
+  "revisionId": 360862,
+  "lastEdited": "2026-09-20T12:51:36Z",
+  "kind": "item",
+  "categories": [
+    "Medkits"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medkit",
+    "weight": "0.6 kg",
+    "grid": "1x2",
+    "trader": "Therapist LL1, after completing her task Postman Pat - Part 2",
+    "effect": "Max heal per use: 85 Buffs:, Removes:, Adds:, Debuffs:, Causes: only when treating heavy bleeding",
+    "use time": "3s",
+    "node": "544fb45d4bdc2dee738b4568",
+    "id": "salewa"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Healing removes 45 HP from the Salewa\n- Healing removes 175 HP from the Salewa"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Jacket (114 key)\n- Sport bag\n- Wooden crate\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In the north-western part of the storage area, there is a car trunk that spawns medical items.\n- The ambulance in front of the gas station can spawn medical items (and the EMERCOM medical unit key as a bonus).\n- Behind the Old Gas Station, there is a concrete circle object with a Medbag inside of it.\n- Inside the Scavenger hideout within the Stronghold."
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- Mantis has several containers and loose spawns (shelves, tables and beds) that can spawn Salewas. Keep in mind that Mantis is one of the hottest areas on the whole map.\n- Emercom contains several spawns, but requires the EMERCOM medical unit key to unlock.\n- The upstairs pharmacy on the opposite side of Techlight as well as the locked storage room (requires power + ULTRA medical storage key). Same as Mantis: Danger zone!\n- There are four ambulances along the western side of the map, which can spawn Salewas in the back.\n- Salewas can spawn on some boxes in the underground car park."
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- The White Bishop building contains a medical room on the ground floor towards the train tracks.\n- The second floor of the Black Pawn building has a medical section with a Medbag and loose spawns.\n- The forklift near the helicopter in the courtyard has loaded a Medical supply crate. There is also a supply crate in the bunker in the map room.\n- In RB-PSV1 and RB-PSV2"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- The health resort, while being a high traffic area, contains a large amount of Medbags and Medcases.\n- There are two ambulances near the tunnel exfil and one directly outside of the resort.\n- The scav/treasure island (near tunnel exfil, past a beached barge) has a wooden shed that contains two Medbags.\n- There is a Medbag in the ground floor of the main building weather station."
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- The medical encampment on the RUAF Roadblock side of the logger's camp has numerous medbags, duffles and loose medical loot.\n- Various military resource boxes and duffles around the map."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 4 can be obtained as a quest reward from Health Care Privacy - Part 2"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Oakley SI Gascan White glasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Oakley_SI_Gascan_White_glasses",
+  "revisionId": 332927,
+  "lastEdited": "2026-01-21T23:45:07Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.034 kg",
+    "grid": "2x1",
+    "blindness protect": "15%",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "675ffec518a4418c2e08c026",
+    "ID": "item_equipment_glasses_gascan_white"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- These glasses were added during Escape from Tarkov: Arena's 2024 Christmas Celebration and could be obtained via Twitch Drops."
+    }
+  ]
+}

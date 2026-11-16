@@ -1,0 +1,26 @@
+{
+  "title": "M9A3 front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M9A3_front_sight",
+  "revisionId": 211155,
+  "lastEdited": "2022-09-20T11:02:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "price": "₽460",
+    "sightrange": "200 m",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "loot xp": "20",
+    "exam xp": "2",
+    "modes": "1",
+    "node": "5cadd919ae921500126a77f3",
+    "ID": "sight_front_m9_beretta_m9a3_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Atlant Armour Titan Aramid helmet (OD Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Atlant_Armour_Titan_Aramid_helmet_(OD_Green)",
+  "revisionId": 348688,
+  "lastEdited": "2026-07-30T22:31:28Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.58 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 2",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69ce70a321c1fc42cd01affa",
+    "id": "item_equipment_helmet_atlant_armor_titan_od_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

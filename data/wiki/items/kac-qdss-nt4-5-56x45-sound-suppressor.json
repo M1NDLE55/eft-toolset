@@ -1,0 +1,26 @@
+{
+  "title": "KAC QDSS NT4 5.56x45 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KAC_QDSS_NT4_5.56x45_sound_suppressor",
+  "revisionId": 362946,
+  "lastEdited": "2026-10-03T11:21:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.68 kg",
+    "grid": "2x1",
+    "ergonomics": "-12",
+    "velocity": "+0.7",
+    "accuracy": "+0",
+    "recoil": "-0.5",
+    "Dura Burn": "+75",
+    "Heat": "+14",
+    "Cooling": "+5",
+    "node": "57da93632459771cb65bf83f 57dbb57e2459774673234890",
+    "ID": "silencer_kac_nt-4_556x45_blk silencer_kac_nt-4_556x45_fde"
+  },
+  "sections": []
+}

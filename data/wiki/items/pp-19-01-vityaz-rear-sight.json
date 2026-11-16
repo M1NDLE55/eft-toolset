@@ -1,0 +1,23 @@
+{
+  "title": "PP-19-01 Vityaz rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-19-01_Vityaz_rear_sight",
+  "revisionId": 288300,
+  "lastEdited": "2024-08-26T00:04:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "price": "₽400",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "599860e986f7743bb57573a6",
+    "ID": "sight_rear_pp-19-01_izhmash_vityaz_std"
+  },
+  "sections": []
+}

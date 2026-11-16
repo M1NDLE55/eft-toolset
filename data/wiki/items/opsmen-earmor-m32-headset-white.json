@@ -1,0 +1,24 @@
+{
+  "title": "OPSMEN Earmor M32 headset (White)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OPSMEN_Earmor_M32_headset_(White)",
+  "revisionId": 348663,
+  "lastEdited": "2026-07-30T22:26:34Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.49 kg",
+    "grid": "2x2",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 1",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "693bb59250fafa102607aeb7",
+    "id": "item_equipment_headset_m32_arena_NY2025"
+  },
+  "sections": []
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Paradigm Shipping poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Paradigm_Shipping_poster",
+  "revisionId": 347767,
+  "lastEdited": "2026-07-11T23:15:47Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "699f0b877c23862b4b0ee19c",
+    "id": "item_ice_quest_barter_flyers_paradigm"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 1 can be held in a raid inventory at the same time\n- Obtaining this poster starts the story chapter Boreas.\n- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Ground Zero",
+      "level": 3,
+      "text": "- On a wall near the Emercom checkpoint\n\n- On the wall next to the roller door of the TerraGroup parking garage\n\n- On the wall next to the hallway in the TerraGroup parking garage\n\n- On the wall in the hallway that connects the TerraGroup parking garage with the main building\n\n- On the left side stairs of the TerraGroup main building\n\n- On the wall at the right side stairs of the TerraGroup main building\n\n- On the wall at the southern entrance of the Kyshperski office\n\n- On the wall to the right of the Nakatani building entrance"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the cabin located on top of the hill southwest of the new gas station.\n\n- On a wall on the third floor of the three-story dorms building, opposite of the stairs at the garbage.\n\n- On a wall on the first floor of the laboratory building, next to the eastern door."
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- On the northern main doors of the warehouse at the freight yard\n\n- On the eastern door of the warehouse at the freight yard\n\n- On the side of a train at the north of the freight yard"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On a pillar on the first floor of the office area."
+    }
+  ]
+}

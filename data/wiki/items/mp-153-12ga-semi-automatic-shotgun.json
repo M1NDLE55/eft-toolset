@@ -1,0 +1,33 @@
+{
+  "title": "MP-153 12ga semi-automatic shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-153_12ga_semi-automatic_shotgun",
+  "revisionId": 340961,
+  "lastEdited": "2026-04-22T22:17:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "3.62 kg",
+    "grid": "7x1",
+    "trader": "Jaeger LL2",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "40",
+    "velocity": "489 m/s",
+    "range": "70 m",
+    "MOA": "10.31",
+    "Weaprecoil": "Vertical: 230, Horizontal: 313",
+    "rof": "40",
+    "caliber": "12/70",
+    "loot xp": "30",
+    "exam xp": "6",
+    "node": "56dee2bdd2720bc8328b4567",
+    "ID": "weapon_izhmeh_mr153_12g"
+  },
+  "sections": []
+}

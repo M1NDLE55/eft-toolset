@@ -1,0 +1,26 @@
+{
+  "title": "VPO-101 gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-101_gas_tube",
+  "revisionId": 293145,
+  "lastEdited": "2024-09-29T20:31:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "price": "₽1,750",
+    "ergonomics": "+0",
+    "recoil": "+0",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "loot xp": "50",
+    "exam xp": "10",
+    "node": "5c5039be2e221602b177c9ff",
+    "ID": "gas_block_vepr_molot_vpo-101_std"
+  },
+  "sections": []
+}

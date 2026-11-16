@@ -1,0 +1,34 @@
+{
+  "title": "Saiga-9 9x19 carbine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Saiga-9_9x19_carbine",
+  "revisionId": 362962,
+  "lastEdited": "2026-10-03T11:27:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "3.011 kg",
+    "grid": "4x2",
+    "trader": "Skier LL1",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "54.5",
+    "velocity": "375 m/s",
+    "range": "300 m",
+    "MOA": "2.41",
+    "Weaprecoil": "Vertical: 30, Horizontal: 175",
+    "rof": "650",
+    "caliber": "9x19mm Parabellum",
+    "def mag": "PP-19-01 Vityaz 9x19 30-round magazine",
+    "loot xp": "30",
+    "exam xp": "8",
+    "node": "59f9cabd86f7743a10721f46",
+    "ID": "weapon_izhmash_saiga_9_9x19"
+  },
+  "sections": []
+}

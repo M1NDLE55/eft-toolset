@@ -1,0 +1,27 @@
+{
+  "title": "SV-98 7.62x54R thread adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SV-98_7.62x54R_thread_adapter",
+  "revisionId": 215176,
+  "lastEdited": "2022-11-22T20:41:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "price": "₽4,817",
+    "trader": "Prapor LL3",
+    "ergonomics": "-2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5c4eec9b2e2216398b5aaba2",
+    "ID": "muzzle_sv98_izhmash_thread_muzzle_adapter_762x54"
+  },
+  "sections": []
+}

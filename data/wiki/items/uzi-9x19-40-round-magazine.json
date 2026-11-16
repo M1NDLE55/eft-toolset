@@ -1,0 +1,27 @@
+{
+  "title": "UZI 9x19 40-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_9x19_40-round_magazine",
+  "revisionId": 339068,
+  "lastEdited": "2026-03-24T16:26:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.26 kg",
+    "grid": "1x2",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-3",
+    "checkaccuracy": "No",
+    "checkmodifier": "+5",
+    "loadmodifier": "+5",
+    "feedfailure": "Very low",
+    "capacity": "40",
+    "caliber": "9x19mm Parabellum",
+    "node": "66992725ae08c5c29e0c4f9a",
+    "ID": "mag_uzi_iwi_9x19_40"
+  },
+  "sections": []
+}

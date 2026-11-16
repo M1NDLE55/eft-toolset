@@ -1,0 +1,28 @@
+{
+  "title": "AK 7.62x39 6P2 bakelite 40-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_7.62x39_6P2_bakelite_40-round_magazine",
+  "revisionId": 337532,
+  "lastEdited": "2026-03-05T23:42:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.32 kg",
+    "grid": "1x3",
+    "price": "₽3,550",
+    "trader": "Prapor LL3",
+    "ergonomics": "-4.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "+10",
+    "loadmodifier": "+10",
+    "feedfailure": "Medium",
+    "capacity": "40",
+    "caliber": "7.62x39mm, .366 TKM",
+    "node": "5b1fb3e15acfc4001637f068",
+    "ID": "mag_ak_izhmash_rpk_std_bakelite_762x39_40"
+  },
+  "sections": []
+}

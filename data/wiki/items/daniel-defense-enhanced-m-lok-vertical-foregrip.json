@@ -1,0 +1,22 @@
+{
+  "title": "Daniel Defense Enhanced M-LOK Vertical Foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Daniel_Defense_Enhanced_M-LOK_Vertical_Foregrip",
+  "revisionId": 353704,
+  "lastEdited": "2026-08-14T21:57:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.028 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4: Black, Coyote Brown",
+    "ergonomics": "+6",
+    "recoil": "-2",
+    "node": "651a8bf3a8520e48047bf708 651a8e529829226ceb67c319",
+    "ID": "foregrip_m-lok_dd_enhanced_vertical_foregrip foregrip_m-lok_dd_enhanced_vertical_foregrip_cb"
+  },
+  "sections": []
+}

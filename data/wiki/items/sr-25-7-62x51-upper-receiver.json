@@ -1,0 +1,26 @@
+{
+  "title": "SR-25 7.62x51 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-25_7.62x51_upper_receiver",
+  "revisionId": 353509,
+  "lastEdited": "2026-08-13T20:21:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.65 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3: Taupe",
+    "ergonomics": "+5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-6.5",
+    "Cooling": "+6.7",
+    "node": "5df8e4080b92095fd441e594 6932ac58be542622170428aa",
+    "ID": "reciever_ar10_kac_sr25_upper_std reciever_ar10_kac_sr25_upper_std_tau"
+  },
+  "sections": []
+}

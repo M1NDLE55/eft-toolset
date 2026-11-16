@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 B5 Systems Collapsible Precision Stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_B5_Systems_Collapsible_Precision_Stock",
+  "revisionId": 342125,
+  "lastEdited": "2026-04-28T04:00:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.658 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+2",
+    "accuracy": "+5",
+    "recoil": "-23",
+    "node": "5fc2369685fd526b824a5713",
+    "ID": "stock_ar15_b5_precision"
+  },
+  "sections": []
+}

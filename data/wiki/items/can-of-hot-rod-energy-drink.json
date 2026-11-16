@@ -1,0 +1,32 @@
+{
+  "title": "Can of Hot Rod energy drink",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_Hot_Rod_energy_drink",
+  "revisionId": 329586,
+  "lastEdited": "2025-12-25T14:37:35Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "0.54 kg",
+    "grid": "1x1",
+    "effect": "Energy: +10, Hydration: +20, , Buffs:, 1s Delay; 300s Duration: - Increases Endurance (+1) - Increases Strength (+1) - Increases Mag Drills (+1)",
+    "use time": "2s",
+    "node": "5751496424597720a27126da",
+    "id": "hotrod"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Jackets\n- In Sport bags"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Hot Rod is a parody of Red Bull."
+    }
+  ]
+}

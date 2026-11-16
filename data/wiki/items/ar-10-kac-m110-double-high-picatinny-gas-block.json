@@ -1,0 +1,24 @@
+{
+  "title": "AR-10 KAC M110 Double High Picatinny Gas Block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_KAC_M110_Double_High_Picatinny_Gas_Block",
+  "revisionId": 353516,
+  "lastEdited": "2026-08-13T20:34:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.116 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-2",
+    "recoil": "-2.5",
+    "Heat": "-1",
+    "Cooling": "+0.8",
+    "node": "6932aeebbe542622170428ba 6936bde84737190b66053bb1",
+    "ID": "gas_block_ar10_kac_m110_double_high_picatinny gas_block_ar10_kac_m110_double_high_picatinny_tau"
+  },
+  "sections": []
+}

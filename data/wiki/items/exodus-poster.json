@@ -1,0 +1,30 @@
+{
+  "title": "Exodus poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Exodus_poster",
+  "revisionId": 331645,
+  "lastEdited": "2026-01-07T19:40:21Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a0d2d57dd12f0260c4a31",
+    "id": "item_barter_flyers_bambetov"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

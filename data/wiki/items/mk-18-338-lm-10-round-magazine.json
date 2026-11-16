@@ -1,0 +1,25 @@
+{
+  "title": "Mk-18 .338 LM 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mk-18_.338_LM_10-round_magazine",
+  "revisionId": 337756,
+  "lastEdited": "2026-03-06T02:00:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.6 kg",
+    "grid": "1x2",
+    "trader": "Jaeger LL4",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": ".338 Lapua Magnum",
+    "node": "5fc23426900b1d5091531e15",
+    "ID": "mag_mk18_sword_mjolnir_std_86x70_10"
+  },
+  "sections": []
+}

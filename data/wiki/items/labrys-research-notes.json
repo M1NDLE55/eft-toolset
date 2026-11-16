@@ -1,0 +1,25 @@
+{
+  "title": "Labrys research notes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Labrys_research_notes",
+  "revisionId": 346843,
+  "lastEdited": "2026-06-14T20:37:14Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.33 kg",
+    "grid": "1x2",
+    "node": "679b992329acd1f2f60985a5",
+    "ID": "item_barter_info_labrys"
+  },
+  "sections": [
+    {
+      "heading": "The Labyrinth",
+      "level": 3,
+      "text": "- On Shadow of Tagilla\n- On Vengeful Killa\n- In the observation room\n- In different locations in the prototype weapon area."
+    }
+  ]
+}

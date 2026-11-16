@@ -1,0 +1,42 @@
+{
+  "title": "Maska-1SCh face shield (Vida Edition)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Maska-1SCh_face_shield_(Vida_Edition)",
+  "revisionId": 339546,
+  "lastEdited": "2026-04-01T11:39:43Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1.1 kg",
+    "grid": "2x1",
+    "material": "Armor steel",
+    "armor": "6",
+    "armor coverage": "Face, Eyes, Jaws",
+    "durability": "50",
+    "blindness protect": "35%",
+    "penalties": "+0% turn speed, -13% Ergonomics",
+    "BlocksEyewear": "No",
+    "node": "697c7a457c3b0223c30d16e6",
+    "id": "item_equipment_helmet_maska_1sh_shield_vida"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- While it may seem like it, it's not possible to shoot through the eye-slit"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Killa"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item first appeared during Escape from Tarkov's 2026 Escape from Duckov Collaboration and is a direct reference to the boss Vida."
+    }
+  ]
+}

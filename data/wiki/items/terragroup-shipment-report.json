@@ -1,0 +1,25 @@
+{
+  "title": "TerraGroup shipment report",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TerraGroup_shipment_report",
+  "revisionId": 304624,
+  "lastEdited": "2025-01-25T08:47:35Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "node": "675f7acc4076a741a3061566",
+    "id": "item_quest_cust_exp_kab2_docs"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Shipment Tracking from Therapist"
+    }
+  ]
+}

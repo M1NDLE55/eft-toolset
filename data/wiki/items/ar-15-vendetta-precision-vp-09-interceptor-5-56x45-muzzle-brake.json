@@ -1,0 +1,26 @@
+{
+  "title": "AR-15 Vendetta Precision VP-09 Interceptor 5.56x45 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Vendetta_Precision_VP-09_Interceptor_5.56x45_muzzle_brake",
+  "revisionId": 337494,
+  "lastEdited": "2026-03-05T23:24:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "price": "₽11,040",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-2",
+    "accuracy": "+4",
+    "recoil": "-8.5",
+    "Dura Burn": "-4",
+    "Heat": "-0.9",
+    "node": "5a7c147ce899ef00150bd8b8",
+    "ID": "muzzle_ar15_vendetta_precision_vp_09_556x45"
+  },
+  "sections": []
+}

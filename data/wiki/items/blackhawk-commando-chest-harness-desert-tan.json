@@ -1,0 +1,23 @@
+{
+  "title": "BlackHawk! Commando chest harness (Desert Tan)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BlackHawk!_Commando_chest_harness_(Desert_Tan)",
+  "revisionId": 310194,
+  "lastEdited": "2025-04-13T12:00:55Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.35 kg",
+    "grid": "4x3",
+    "trader": "Ragman LL2",
+    "BlocksArmor": "No",
+    "slots": "16 Slots",
+    "node": "5b44c8ea86f7742d1627baf1",
+    "id": "item_equipment_rig_commando"
+  },
+  "sections": []
+}

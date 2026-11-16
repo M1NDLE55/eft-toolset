@@ -1,0 +1,21 @@
+{
+  "title": "Corvus Defensio KeyMod 1.8 inch rail section",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Corvus_Defensio_KeyMod_1.8_inch_rail_section",
+  "revisionId": 322665,
+  "lastEdited": "2025-11-18T19:00:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.21 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-0.1",
+    "node": "67111094d1758189fc0bd223",
+    "ID": "mount_keymod_corvus_defencio_1_8_inch_rail_section"
+  },
+  "sections": []
+}

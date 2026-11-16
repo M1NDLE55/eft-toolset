@@ -1,0 +1,38 @@
+{
+  "title": "12/70 6.5mm Express buckshot",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_6.5mm_Express_buckshot",
+  "revisionId": 322837,
+  "lastEdited": "2025-11-18T21:27:21Z",
+  "kind": "ammo",
+  "categories": [
+    "12/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Buckshot",
+    "weight": "0.048 kg",
+    "grid": "1x1",
+    "price": "₽39",
+    "trader": "Jaeger LL1",
+    "velocity": "430 m/s",
+    "damage": "35",
+    "accuracy": "+15",
+    "projectiles": "9",
+    "penetration": "3",
+    "armor damage": "26",
+    "ricochet": "0%",
+    "heat": "+125.9",
+    "feedfailure": "Very low",
+    "misfire": "Medium",
+    "node": "5d6e67fba4b9361bc73bc779",
+    "id": "patron_12x70_buckshot_65"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "7.62x51mm BCP FMJ ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_BCP_FMJ_ammo_pack_(20_pcs)",
+  "revisionId": 367228,
+  "lastEdited": "2026-11-02T23:13:44Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702561cfc010a0f5006a28",
+    "ID": "item_ammo_box_762x51_20_fmj"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as initial equipment from Break the Deal"
+    }
+  ]
+}

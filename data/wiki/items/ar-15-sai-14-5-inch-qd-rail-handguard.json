@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 SAI 14.5 inch QD Rail handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_SAI_14.5_inch_QD_Rail_handguard",
+  "revisionId": 342022,
+  "lastEdited": "2026-04-28T00:09:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.355 kg",
+    "grid": "3x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "-3.2",
+    "Cooling": "+6.9",
+    "node": "5c78f2492e221600114c9f04",
+    "ID": "handguard_ar15_sai_qd_rail_long"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "AA-12 12ga 20-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AA-12_12ga_20-round_drum_magazine",
+  "revisionId": 338841,
+  "lastEdited": "2026-03-18T08:05:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "1.13 kg",
+    "grid": "2x2",
+    "ergonomics": "-10",
+    "checkaccuracy": "1",
+    "feedfailure": "Medium",
+    "capacity": "20",
+    "caliber": "12/70",
+    "node": "6709133fa532466d5403fb7c",
+    "ID": "mag_aa12_mps_aa12_drum_mag_12g_20"
+  },
+  "sections": []
+}

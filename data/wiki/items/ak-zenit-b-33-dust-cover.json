@@ -1,0 +1,25 @@
+{
+  "title": "AK Zenit B-33 dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Zenit_B-33_dust_cover",
+  "revisionId": 353017,
+  "lastEdited": "2026-08-09T22:26:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.215 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+0.5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-0.8",
+    "Dura Burn": "-3",
+    "node": "5649af884bdc2d1b2b8b4589",
+    "ID": "reciever_ak_zenit_b33"
+  },
+  "sections": []
+}

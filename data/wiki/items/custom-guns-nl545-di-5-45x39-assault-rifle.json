@@ -1,0 +1,31 @@
+{
+  "title": "Custom Guns NL545 (DI) 5.45x39 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Custom_Guns_NL545_(DI)_5.45x39_assault_rifle",
+  "revisionId": 344528,
+  "lastEdited": "2026-05-25T13:37:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "2.978 kg",
+    "grid": "5x2",
+    "trader": "Skier LL3",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "60",
+    "velocity": "843 m/s",
+    "range": "500 m",
+    "MOA": "1.38",
+    "Weaprecoil": "Vertical: 64, Horizontal: 187",
+    "rof": "800",
+    "caliber": "5.45x39mm",
+    "node": "68c16b9ab6b75a8a480520a6",
+    "ID": "weapon_cgnl_nl545_di_545x39"
+  },
+  "sections": []
+}

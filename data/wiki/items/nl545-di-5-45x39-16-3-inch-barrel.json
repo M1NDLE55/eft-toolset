@@ -1,0 +1,27 @@
+{
+  "title": "NL545 (DI) 5.45x39 16.3 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NL545_(DI)_5.45x39_16.3_inch_barrel",
+  "revisionId": 343510,
+  "lastEdited": "2026-05-07T22:26:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.78 kg",
+    "grid": "3x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-16.5",
+    "velocity": "-4.6",
+    "MOA": "1.38",
+    "recoil": "-5",
+    "Dura Burn": "+1",
+    "Heat": "-3",
+    "Cooling": "-2",
+    "node": "68c16edf83e2d814b0093f76",
+    "ID": "barrel_nl545_cgnl_di_415mm_545x39"
+  },
+  "sections": []
+}

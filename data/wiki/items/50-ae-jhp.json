@@ -1,0 +1,40 @@
+{
+  "title": ".50 AE JHP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_AE_JHP",
+  "revisionId": 322729,
+  "lastEdited": "2025-11-18T21:10:48Z",
+  "kind": "ammo",
+  "categories": [
+    ".50 Action Express ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.029 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "velocity": "440 m/s",
+    "damage": "147",
+    "accuracy": "-10",
+    "recoil": "+5",
+    "penetration": "12",
+    "armor damage": "23",
+    "ricochet": "2%",
+    "l bleed chance": "+35",
+    "h bleed chance": "+40",
+    "durability burn": "+20",
+    "heat": "+91",
+    "feedfailure": "Very high",
+    "misfire": "Very low",
+    "node": "66a0d1c87d0d369e270bb9de",
+    "id": "patron_127x33_jhp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

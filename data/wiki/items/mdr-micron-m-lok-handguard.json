@@ -1,0 +1,24 @@
+{
+  "title": "MDR Micron M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MDR_Micron_M-LOK_handguard",
+  "revisionId": 342820,
+  "lastEdited": "2026-04-30T21:36:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.102 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3: FDE , Mechanic LL4: Black",
+    "ergonomics": "+12",
+    "recoil": "-1",
+    "Heat": "-1.7",
+    "Cooling": "+0.7",
+    "node": "6810d3d8dc7bbeec2f0081c9 6810ca87002deee76b04970b",
+    "ID": "handguard_mdr_dt_micron_mlok_blk handguard_mdr_dt_micron_mlok"
+  },
+  "sections": []
+}

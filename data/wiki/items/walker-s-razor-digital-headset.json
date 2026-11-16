@@ -1,0 +1,23 @@
+{
+  "title": "Walker's Razor Digital headset",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Walker's_Razor_Digital_headset",
+  "revisionId": 320870,
+  "lastEdited": "2025-11-11T20:43:37Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.43 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "5e4d34ca86f774264f758330",
+    "ID": "item_equipment_headset_walkers_razor"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "AKMSN folding stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKMSN_folding_stock",
+  "revisionId": 340416,
+  "lastEdited": "2026-04-20T15:04:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "ergonomics": "+13",
+    "recoil": "-19.5",
+    "node": "5abcd472d8ce8700166032ae",
+    "ID": "stock_akms_izhmash_akmsn_std"
+  },
+  "sections": []
+}

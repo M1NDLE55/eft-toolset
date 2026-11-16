@@ -1,0 +1,26 @@
+{
+  "title": "Oakley Mechanism heavy duty backpack (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Oakley_Mechanism_heavy_duty_backpack_(Black)",
+  "revisionId": 304484,
+  "lastEdited": "2025-01-22T09:39:47Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "0.997 kg",
+    "grid": "5x5",
+    "price": "₽51,000",
+    "trader": "Ragman LL2",
+    "penalties": "-2% movement speed, -1% turn speed, -3% Ergonomics",
+    "slots": "32 slots, 1x 4x4 grid, 4x 2x2 grid",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5d5d940f86f7742797262046",
+    "ID": "item_equipment_backpack_mech"
+  },
+  "sections": []
+}

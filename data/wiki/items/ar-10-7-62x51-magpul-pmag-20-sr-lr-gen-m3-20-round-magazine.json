@@ -1,0 +1,27 @@
+{
+  "title": "AR-10 7.62x51 Magpul PMAG 20 SR-LR GEN M3 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_7.62x51_Magpul_PMAG_20_SR-LR_GEN_M3_20-round_magazine",
+  "revisionId": 344199,
+  "lastEdited": "2026-05-23T23:48:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.35 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "checkmodifier": "-10",
+    "loadmodifier": "-5",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "7.62x51mm NATO, 6.8x51mm",
+    "node": "5a3501acc4a282000d72293a",
+    "ID": "mag_ar10_magpul_pmag_sr_gen_3_762x51_20"
+  },
+  "sections": []
+}

@@ -1,0 +1,18 @@
+{
+  "title": "7.62x51mm Ultra Nosler ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_Ultra_Nosler_ammo_pack_(20_pcs)",
+  "revisionId": 367235,
+  "lastEdited": "2026-11-02T23:14:07Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570255dbfc87b3a3409324a",
+    "ID": "item_ammo_box_762x51_20_ultra_nosler"
+  },
+  "sections": []
+}

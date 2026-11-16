@@ -1,0 +1,31 @@
+{
+  "title": "Topographic survey maps",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Topographic_survey_maps",
+  "revisionId": 361801,
+  "lastEdited": "2026-09-24T13:22:14Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "node": "62a0a124de7ac81993580542",
+    "id": "item_barter_info_maps"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Safe\n- Dead Scav\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Counteraction"
+    }
+  ]
+}

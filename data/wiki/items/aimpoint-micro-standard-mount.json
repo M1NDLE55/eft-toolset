@@ -1,0 +1,22 @@
+{
+  "title": "Aimpoint Micro Standard Mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aimpoint_Micro_Standard_Mount",
+  "revisionId": 253958,
+  "lastEdited": "2023-11-02T23:30:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "price": "₽2,180",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+0",
+    "node": "58d39d3d86f77445bb794ae7",
+    "ID": "mount_all_aimpoint_h1_t1_weaver"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "RPD 7.62x39 Buben 100-round box",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_7.62x39_Buben_100-round_box",
+  "revisionId": 337953,
+  "lastEdited": "2026-03-08T00:03:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.8 kg",
+    "grid": "2x2",
+    "trader": "Prapor LL3",
+    "ergonomics": "-6",
+    "checkaccuracy": "No",
+    "checkmodifier": "+20",
+    "loadmodifier": "+15",
+    "feedfailure": "Very low",
+    "capacity": "100",
+    "caliber": "7.62x39mm",
+    "node": "6513f0a194c72326990a3868",
+    "ID": "mag_rpd_zid_rpd_762x39_100"
+  },
+  "sections": []
+}

@@ -1,0 +1,33 @@
+{
+  "title": "NPP KlASS Condor glasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NPP_KlASS_Condor_glasses",
+  "revisionId": 344690,
+  "lastEdited": "2026-05-25T16:35:05Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.03 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL4",
+    "material": "Glass",
+    "armor": "1",
+    "armor coverage": "Eyes",
+    "durability": "25",
+    "blindness protect": "10%",
+    "penalties": "-1% Ergonomics",
+    "node": "603409c80ca681766b6a0fb2",
+    "id": "item_equipment_glasses_npp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen"
+    }
+  ]
+}

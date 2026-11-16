@@ -1,0 +1,36 @@
+{
+  "title": "RSh-12 12.7x55 revolver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RSh-12_12.7x55_revolver",
+  "revisionId": 342988,
+  "lastEdited": "2026-05-01T16:45:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Revolvers",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Revolver",
+    "slot": "Secondary",
+    "weight": "2.2 kg",
+    "grid": "2x1",
+    "fire modes": "Single action, Double action",
+    "sightrange": "100",
+    "ergonomics": "42",
+    "velocity": "360 m/s",
+    "range": "70 m",
+    "MOA": "6.25",
+    "recoil": "Vertical: 483, Horizontal: 333",
+    "rof": "30",
+    "caliber": "12.7x55mm",
+    "node": "633ec7c2a6918cb895019c6c",
+    "ID": "weapon_kbp_rsh_12_127x55"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This weapon will never malfunction."
+    }
+  ]
+}

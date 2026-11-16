@@ -1,0 +1,30 @@
+{
+  "title": "Death Shadow mask (Gray)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Death_Shadow_mask_(Gray)",
+  "revisionId": 357995,
+  "lastEdited": "2026-09-08T16:39:48Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.25 kg",
+    "grid": "2x2",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 1",
+    "blindness protect": "25%",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "No",
+    "node": "68a9b852cdf661cc5a0626c9",
+    "id": "item_equipment_facecover_strikeball_mask_grey_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

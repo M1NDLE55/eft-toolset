@@ -1,0 +1,30 @@
+{
+  "title": "Bison vs Undertaker poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bison_vs_Undertaker_poster",
+  "revisionId": 356986,
+  "lastEdited": "2026-08-30T16:57:05Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a04c01474133a0d0bb212",
+    "id": "item_barter_flyers_arena3"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "HK G36 KAC 600m Rear Sight Rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_KAC_600m_Rear_Sight_Rail",
+  "revisionId": 343353,
+  "lastEdited": "2026-05-05T19:48:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.108 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "sightrange": "300",
+    "ergonomics": "+0.5",
+    "node": "680b884f1a335f66240ecde7",
+    "ID": "sight_rear_g36_kac_600_folding_sight_short_rail"
+  },
+  "sections": []
+}

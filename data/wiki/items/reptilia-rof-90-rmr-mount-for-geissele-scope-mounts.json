@@ -1,0 +1,26 @@
+{
+  "title": "Reptilia ROF-90 RMR mount for Geissele scope mounts",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Reptilia_ROF-90_RMR_mount_for_Geissele_scope_mounts",
+  "revisionId": 332375,
+  "lastEdited": "2026-01-14T23:41:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4: Black, DDC",
+    "node": "618b9682a3884f56c957ca78 618ba92152ecee1505530bd3",
+    "ID": "mount_geissele_reptilia_rof_90_trijicon_30mm mount_geissele_reptilia_rof_90_trijicon_30mm_ddc"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The red dot may not be visible when using scopes with a big diameter."
+    }
+  ]
+}

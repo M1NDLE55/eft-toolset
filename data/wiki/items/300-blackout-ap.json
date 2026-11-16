@@ -1,0 +1,38 @@
+{
+  "title": ".300 Blackout AP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.300_Blackout_AP",
+  "revisionId": 349837,
+  "lastEdited": "2026-08-04T21:26:05Z",
+  "kind": "ammo",
+  "categories": [
+    ".300 Blackout ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.014 kg",
+    "grid": "1x1",
+    "velocity": "635 m/s",
+    "damage": "51",
+    "recoil": "+3",
+    "penetration": "48",
+    "armor damage": "65",
+    "ricochet": "30%",
+    "l bleed chance": "+15",
+    "h bleed chance": "+15",
+    "durability burn": "+50",
+    "heat": "+99",
+    "feedfailure": "Medium",
+    "misfire": "Medium",
+    "node": "5fd20ff893a8961fc660a954",
+    "id": "patron_762x35_blackout_ap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

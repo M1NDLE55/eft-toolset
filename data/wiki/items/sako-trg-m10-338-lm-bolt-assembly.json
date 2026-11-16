@@ -1,0 +1,22 @@
+{
+  "title": "Sako TRG M10 .338 LM bolt assembly",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_M10_.338_LM_bolt_assembly",
+  "revisionId": 314595,
+  "lastEdited": "2025-06-25T20:54:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.45 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "-2",
+    "recoil": "-1",
+    "node": "673cb4054ff4aa8f86076f4a",
+    "ID": "charge_trg_sako_trg_m10_bolt_86x70"
+  },
+  "sections": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": "FN Five-seveN 5.7x28 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_Five-seveN_5.7x28_20-round_magazine",
+  "revisionId": 337694,
+  "lastEdited": "2026-03-06T01:25:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.088 kg",
+    "grid": "1x1",
+    "price": "₽3,660",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "checkaccuracy": "1",
+    "loadmodifier": "-10",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "5.7x28mm FN",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5d3eb5eca4b9363b1f22f8e4",
+    "ID": "mag_57_fn_five_seven_std_57x28_20"
+  },
+  "sections": []
+}

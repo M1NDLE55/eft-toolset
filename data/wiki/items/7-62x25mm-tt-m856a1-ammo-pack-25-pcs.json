@@ -1,0 +1,18 @@
+{
+  "title": "7.62x25mm TT M856A1 ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x25mm_TT_M856A1_ammo_pack_(25_pcs)",
+  "revisionId": 367214,
+  "lastEdited": "2026-11-02T23:12:59Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "68e9179c553e40054d06dd15",
+    "ID": "item_ammo_box_762x25_25_856a1"
+  },
+  "sections": []
+}

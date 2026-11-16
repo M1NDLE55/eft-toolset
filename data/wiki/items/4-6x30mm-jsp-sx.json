@@ -1,0 +1,36 @@
+{
+  "title": "4.6x30mm JSP SX",
+  "url": "https://escapefromtarkov.fandom.com/wiki/4.6x30mm_JSP_SX",
+  "revisionId": 322817,
+  "lastEdited": "2025-11-18T21:23:29Z",
+  "kind": "ammo",
+  "categories": [
+    "4.6x30mm HK ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "velocity": "579 m/s",
+    "damage": "46",
+    "penetration": "32",
+    "armor damage": "37",
+    "ricochet": "35%",
+    "durability burn": "-10",
+    "heat": "-1",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "64b6979341772715af0f9c39",
+    "id": "patron_46x30_jsp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

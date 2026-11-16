@@ -1,0 +1,37 @@
+{
+  "title": "12/70 7mm buckshot",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_7mm_buckshot",
+  "revisionId": 366595,
+  "lastEdited": "2026-10-31T04:54:09Z",
+  "kind": "ammo",
+  "categories": [
+    "12/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Buckshot",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "price": "₽30",
+    "trader": "Skier LL1, Jaeger LL1",
+    "velocity": "415 m/s",
+    "damage": "39",
+    "projectiles": "8",
+    "penetration": "3",
+    "armor damage": "26",
+    "ricochet": "0%",
+    "heat": "+103.3",
+    "feedfailure": "Very low",
+    "misfire": "High",
+    "node": "560d5e524bdc2d25448b4571",
+    "id": "patron_12x70_buckshot"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

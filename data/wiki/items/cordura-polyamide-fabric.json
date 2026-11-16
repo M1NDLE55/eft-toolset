@@ -1,0 +1,33 @@
+{
+  "title": "Cordura polyamide fabric",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cordura_polyamide_fabric",
+  "revisionId": 364935,
+  "lastEdited": "2026-10-25T21:23:39Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.11 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5e2af41e86f774755a234b67",
+    "ID": "Item_barter_other_cloth_cordura"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Weapon box (4x4)\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- Spawns in clothing stores in the shopping mall"
+    }
+  ]
+}

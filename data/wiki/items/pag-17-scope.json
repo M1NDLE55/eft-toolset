@@ -1,0 +1,26 @@
+{
+  "title": "PAG-17 scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PAG-17_scope",
+  "revisionId": 314406,
+  "lastEdited": "2025-06-22T10:09:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.51 kg",
+    "grid": "2x1",
+    "ergonomics": "-1",
+    "node": "5d53f4b7a4b936793d58c780",
+    "ID": "scope_ags_npz_pag17_2,7x"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The PAG-17 scope is an unobtainable item in the game that is only visible in the handbook of accounts with access to all items in the game, for example special tournament accounts."
+    }
+  ]
+}

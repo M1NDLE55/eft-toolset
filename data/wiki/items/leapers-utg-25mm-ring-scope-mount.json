@@ -1,0 +1,24 @@
+{
+  "title": "Leapers UTG 25mm ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Leapers_UTG_25mm_ring_scope_mount",
+  "revisionId": 215938,
+  "lastEdited": "2022-12-05T16:30:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.19 kg",
+    "grid": "2x1",
+    "price": "₽1,650",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-2",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5dff77c759400025ea5150cf",
+    "ID": "mount_all_utg_rings_25_4mm"
+  },
+  "sections": []
+}

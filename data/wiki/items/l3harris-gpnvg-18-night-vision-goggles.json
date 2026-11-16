@@ -1,0 +1,34 @@
+{
+  "title": "L3Harris GPNVG-18 night vision goggles",
+  "url": "https://escapefromtarkov.fandom.com/wiki/L3Harris_GPNVG-18_night_vision_goggles",
+  "revisionId": 342825,
+  "lastEdited": "2026-04-30T21:40:30Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods",
+    "Night vision devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Night vision device",
+    "weight": "0.88 kg",
+    "grid": "2x1",
+    "trader": "Ref LL3, Peacekeeper LL4",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5c0558060db834001b735271",
+    "ID": "nvg_l3_gpnvg-18_anvis"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The GPNVG-18 in the game is modeled with a Wilcox GSGM mount."
+    }
+  ]
+}

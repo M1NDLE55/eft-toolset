@@ -1,0 +1,25 @@
+{
+  "title": "Steyr AUG A3 5.56x45 closed flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_A3_5.56x45_closed_flash_hider",
+  "revisionId": 337896,
+  "lastEdited": "2026-03-07T06:50:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-1",
+    "accuracy": "+0",
+    "recoil": "-5",
+    "Dura Burn": "-5",
+    "Heat": "-1",
+    "node": "630f28f0cadb1fe05e06f004",
+    "ID": "muzzle_aug_steyr_a3_closed_flash_hider_556x45"
+  },
+  "sections": []
+}

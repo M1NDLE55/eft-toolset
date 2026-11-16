@@ -1,0 +1,30 @@
+{
+  "title": "Safariland Liberator HP 2.0 Hearing Protection Headset (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Safariland_Liberator_HP_2.0_Hearing_Protection_Headset_(Black)",
+  "revisionId": 347625,
+  "lastEdited": "2026-07-03T20:17:28Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.34 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in Echo Belli crate",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "69c14efe66c213ea750e1960",
+    "id": "item_equipment_headset_liberator_black_red_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

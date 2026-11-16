@@ -1,0 +1,18 @@
+{
+  "title": "5.45x39mm PS gs ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_PS_gs_ammo_pack_(30_pcs)",
+  "revisionId": 367169,
+  "lastEdited": "2026-11-02T23:10:40Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "node": "57372ebf2459776862260582",
+    "id": "item_ammo_box_545x39_30_ps"
+  },
+  "sections": []
+}

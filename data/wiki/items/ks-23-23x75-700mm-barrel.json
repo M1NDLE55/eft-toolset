@@ -1,0 +1,25 @@
+{
+  "title": "KS-23 23x75 700mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KS-23_23x75_700mm_barrel",
+  "revisionId": 215585,
+  "lastEdited": "2022-12-02T15:30:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.230 kg",
+    "grid": "5x1",
+    "ergonomics": "-10",
+    "velocity": "+2.4",
+    "MOA": "15.47",
+    "recoil": "-8",
+    "Heat": "-18",
+    "Cooling": "-14",
+    "node": "5e848d2eea0a7c419c2f9bfd",
+    "ID": "barrel_ks23_700mm_23x75"
+  },
+  "sections": []
+}

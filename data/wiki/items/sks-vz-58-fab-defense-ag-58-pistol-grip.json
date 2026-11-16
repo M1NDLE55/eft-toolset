@@ -1,0 +1,25 @@
+{
+  "title": "SKS/VZ-58 FAB Defense AG-58 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS/VZ-58_FAB_Defense_AG-58_pistol_grip",
+  "revisionId": 342052,
+  "lastEdited": "2026-04-28T00:31:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.113 kg",
+    "grid": "1x1",
+    "price": "₽6,356",
+    "trader": "Skier LL3",
+    "ergonomics": "+5",
+    "recoil": "-1",
+    "loot xp": "5",
+    "exam xp": "2",
+    "node": "5d023784d7ad1a049d4aa7f2",
+    "ID": "pistolgrip_vz58_fab_defence_ag_58"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 Custom Guns buffer tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Custom_Guns_buffer_tube",
+  "revisionId": 354982,
+  "lastEdited": "2026-08-18T02:05:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.132 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3: Black, Skier LL4: FDE",
+    "ergonomics": "-1",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "node": "68c17005ba442c8112076088 68c1701cba442c811207608b",
+    "ID": "stock_ar15_cgnl_stock_tube stock_ar15_cgnl_stock_tube_fde"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "M1911A1 pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_pistol_slide",
+  "revisionId": 276735,
+  "lastEdited": "2024-05-03T00:16:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.417 kg",
+    "grid": "2x1",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-4.2",
+    "Cooling": "+6",
+    "node": "5e81edc13397a21db957f6a1",
+    "ID": "reciever_m1911_colt_m1911a1_std"
+  },
+  "sections": []
+}

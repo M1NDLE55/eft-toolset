@@ -1,0 +1,23 @@
+{
+  "title": "AK Zenit PT-1 \"Klassika\" stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Zenit_PT-1_%22Klassika%22_stock",
+  "revisionId": 337535,
+  "lastEdited": "2026-03-05T23:43:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.29 kg",
+    "grid": "2x1",
+    "price": "₽10,000",
+    "trader": "Skier LL2",
+    "ergonomics": "+7",
+    "recoil": "-25",
+    "node": "5b222d405acfc400153af4fe",
+    "ID": "stock_ak_zenit_pt_1"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Note about the Eye of the World",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_about_the_Eye_of_the_World",
+  "revisionId": 348299,
+  "lastEdited": "2026-07-28T09:37:33Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "689b52ff147eeab4410ecd16",
+    "ID": "item_info_note_sectant_corpse"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Picking up and reading this note starts the story chapter They Are Already Here."
+    }
+  ]
+}

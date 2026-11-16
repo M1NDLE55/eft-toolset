@@ -1,0 +1,24 @@
+{
+  "title": "FN SCAR flip-up rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_flip-up_rear_sight",
+  "revisionId": 210787,
+  "lastEdited": "2022-09-20T10:45:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.036 kg",
+    "grid": "1x1",
+    "price": "₽800",
+    "trader": "Peacekeeper LL2",
+    "sightrange": "300",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "61817865d3a39d50044c13a4",
+    "ID": "sight_rear_all_fn_scar_rear_sight_std"
+  },
+  "sections": []
+}

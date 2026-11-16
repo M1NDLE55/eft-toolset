@@ -1,0 +1,24 @@
+{
+  "title": "TOZ-106 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TOZ-106_stock",
+  "revisionId": 263823,
+  "lastEdited": "2024-01-08T21:08:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.25 kg",
+    "grid": "4x1",
+    "price": "₽1,560",
+    "ergonomics": "+6",
+    "recoil": "-24",
+    "Heat": "+2.2",
+    "Cooling": "-2.6",
+    "node": "5a38ef1fc4a282000b1521f6",
+    "ID": "stock_toz-106_toz_short_std_wood"
+  },
+  "sections": []
+}

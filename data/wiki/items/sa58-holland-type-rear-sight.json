@@ -1,0 +1,24 @@
+{
+  "title": "SA58 Holland Type rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_Holland_Type_rear_sight",
+  "revisionId": 300355,
+  "lastEdited": "2024-12-30T14:55:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "price": "₽470",
+    "trader": "Mechanic LL3",
+    "sightrange": "500",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5b0bc22d5acfc47a8607f085",
+    "ID": "sight_rear_sa58_ds_arms_metric_holand_type_rear_sight"
+  },
+  "sections": []
+}

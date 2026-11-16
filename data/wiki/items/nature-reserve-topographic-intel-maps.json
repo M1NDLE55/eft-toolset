@@ -1,0 +1,25 @@
+{
+  "title": "Nature reserve topographic intel maps",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nature_reserve_topographic_intel_maps",
+  "revisionId": 336972,
+  "lastEdited": "2026-03-03T02:46:16Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "node": "67c04b351becc43a45071286",
+    "id": "q_data_map4"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player sided with Lightkeeper."
+    }
+  ]
+}

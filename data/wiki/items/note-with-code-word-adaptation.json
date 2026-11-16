@@ -1,0 +1,26 @@
+{
+  "title": "Note with code word Adaptation",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_with_code_word_Adaptation",
+  "revisionId": 302655,
+  "lastEdited": "2025-01-08T22:28:03Z",
+  "kind": "item",
+  "categories": [
+    "Extraction intel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Extraction intel",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Activates the \"Tartowers Sales Office\" extraction on Ground Zero.",
+    "node": "675aaae75a3ab8372d0b02a7",
+    "id": "item_info_secret_extraction_codeword_adaptation"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Activates the \"Tartowers Sales Office\" extraction on Ground Zero.\n- Cannot be taken out of a raid"
+    }
+  ]
+}

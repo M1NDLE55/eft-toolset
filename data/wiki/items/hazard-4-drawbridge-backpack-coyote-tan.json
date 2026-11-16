@@ -1,0 +1,22 @@
+{
+  "title": "Hazard 4 Drawbridge backpack (Coyote Tan)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hazard_4_Drawbridge_backpack_(Coyote_Tan)",
+  "revisionId": 304582,
+  "lastEdited": "2025-01-23T16:31:15Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.67 kg",
+    "grid": "5x5",
+    "penalties": "-2% movement speed, -2% Ergonomics",
+    "slots": "5x5 grid (25 slots)",
+    "node": "60a272cc93ef783291411d8e",
+    "id": "item_equipment_backpack_drawbridge"
+  },
+  "sections": []
+}

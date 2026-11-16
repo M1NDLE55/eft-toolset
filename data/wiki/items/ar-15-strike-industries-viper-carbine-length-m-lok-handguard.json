@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Strike Industries Viper carbine length M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Strike_Industries_Viper_carbine_length_M-LOK_handguard",
+  "revisionId": 342047,
+  "lastEdited": "2026-04-28T00:28:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.077 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3: Black, FDE",
+    "ergonomics": "+5",
+    "recoil": "+0",
+    "Heat": "+0.8",
+    "Cooling": "+3.1",
+    "node": "5d00e0cbd7ad1a6c6566a42d 5d00f63bd7ad1a59283b1c1e",
+    "ID": "handguard_ar15_strike_industries_viper handguard_ar15_strike_industries_viper_fde"
+  },
+  "sections": []
+}

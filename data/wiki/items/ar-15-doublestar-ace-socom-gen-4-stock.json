@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 DoubleStar ACE SOCOM Gen.4 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_DoubleStar_ACE_SOCOM_Gen.4_stock",
+  "revisionId": 337682,
+  "lastEdited": "2026-03-06T01:19:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.47 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+13",
+    "recoil": "-20",
+    "Dura Burn": "-2",
+    "loot xp": "10",
+    "node": "5d120a10d7ad1a4e1026ba85",
+    "ID": "stock_ar15_double_star_ace_socom_gen_4"
+  },
+  "sections": []
+}

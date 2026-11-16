@@ -1,0 +1,28 @@
+{
+  "title": "AR-15 5.56x45 HK Steel Maritime STANAG 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_HK_Steel_Maritime_STANAG_30-round_magazine",
+  "revisionId": 341715,
+  "lastEdited": "2026-04-26T21:21:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.32 kg",
+    "grid": "1x2",
+    "price": "₽4,300",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5c05413a0db834001c390617",
+    "ID": "mag_stanag_hk_416_steel_maritime_556x45_30"
+  },
+  "sections": []
+}

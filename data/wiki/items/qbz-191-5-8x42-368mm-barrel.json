@@ -1,0 +1,26 @@
+{
+  "title": "QBZ-191 5.8x42 368mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/QBZ-191_5.8x42_368mm_barrel",
+  "revisionId": 356919,
+  "lastEdited": "2026-08-29T21:54:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.66 kg",
+    "grid": "3x1",
+    "trader": "Skier LL4 after unlocking QBZ-191 in BattlePass Season 1",
+    "ergonomics": "-12.5",
+    "MOA": "2.06",
+    "recoil": "-7.3",
+    "Dura Burn": "-6",
+    "Heat": "+2",
+    "Cooling": "+2",
+    "node": "69fb18608a19a890b70a6ba4",
+    "ID": "barrel_qbz191_norinco_368mm_58x42"
+  },
+  "sections": []
+}

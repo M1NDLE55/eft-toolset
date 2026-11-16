@@ -1,0 +1,30 @@
+{
+  "title": "LShZ-2DTM face shield",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LShZ-2DTM_face_shield",
+  "revisionId": 333261,
+  "lastEdited": "2026-01-30T04:17:53Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1 kg",
+    "grid": "2x1",
+    "price": "₽29,000",
+    "trader": "Ragman LL4",
+    "material": "Glass",
+    "armor": "4",
+    "armor coverage": "Face, Eyes, Jaws",
+    "durability": "50",
+    "blindness protect": "10%",
+    "penalties": "-5% turn speed, -4% Ergonomics",
+    "BlocksEyewear": "No",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5d6d3829a4b9361bc8618943",
+    "ID": "item_equipment_helmet_lshz2dtm_shield"
+  },
+  "sections": []
+}

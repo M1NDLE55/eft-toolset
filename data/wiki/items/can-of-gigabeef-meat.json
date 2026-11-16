@@ -1,0 +1,32 @@
+{
+  "title": "Can of GigaBeef meat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_GigaBeef_meat",
+  "revisionId": 356577,
+  "lastEdited": "2026-08-26T07:53:05Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "1.45 kg",
+    "grid": "2x2",
+    "effect": "Energy: +100, Hydration: -50",
+    "use time": "5s",
+    "node": "6a3532423ec9d7082a05d430",
+    "id": "item_food_gigabeef"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Sport bags\n- In Dead Scavs\n- In Plastic suitcases\n- In Ground caches\n- In Buried barrel caches\n- In Ration supply crates"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator Gigabeef."
+    }
+  ]
+}

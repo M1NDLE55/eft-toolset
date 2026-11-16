@@ -1,0 +1,34 @@
+{
+  "title": "Golden Star balm",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Golden_Star_balm",
+  "revisionId": 358733,
+  "lastEdited": "2026-09-10T23:00:53Z",
+  "kind": "item",
+  "categories": [
+    "Drugs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Balm",
+    "weight": "0.016 kg",
+    "grid": "1x1",
+    "effect": "Buffs:, Removes:, for 370 seconds,, Radiation Exposure for 420 seconds, Adds: for 370 seconds, 1s Delay; 5s Duration: - Increases energy recovery (+1/s) - Increases hydration recovery (+1/s) Debuffs:, Adds: Energy (-19), 1s Delay; 5s Duration:, Causes",
+    "use time": "7s",
+    "loot xp": "250",
+    "exam xp": "4",
+    "node": "5751a89d24597722aa0e8db0",
+    "id": "golden_star_balm"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the USEC camp"
+    }
+  ]
+}

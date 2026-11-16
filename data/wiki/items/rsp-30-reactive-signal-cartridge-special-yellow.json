@@ -1,0 +1,37 @@
+{
+  "title": "RSP-30 reactive signal cartridge (Special Yellow)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RSP-30_reactive_signal_cartridge_(Special_Yellow)",
+  "revisionId": 347196,
+  "lastEdited": "2026-06-20T20:22:16Z",
+  "kind": "ammo",
+  "categories": [
+    "Handheld flares",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handheld flare",
+    "weight": "0.19 kg",
+    "grid": "1x2",
+    "sightrange": "100",
+    "ergonomics": "51",
+    "velocity": "80 m/s",
+    "damage": "40",
+    "penetration": "0",
+    "armor damage": "60",
+    "node": "66d9f1abb16d9aacf5068468",
+    "id": "weapon_rsp30_yellow_event"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only 1 can be held in a raid inventory at the same time\n- Firing this flare into the sky will call in a special airdrop containing PC components and military electronics, as well as illuminate the surrounding area for 20 seconds after ignition\n- (Unavailable on Ground Zero, Factory, The Lab, The Labyrinth, Terminal, Icebreaker)\n\n- The flare is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as initial equipment for Half-Empty"
+    }
+  ]
+}

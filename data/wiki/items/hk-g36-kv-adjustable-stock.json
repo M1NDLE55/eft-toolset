@@ -1,0 +1,22 @@
+{
+  "title": "HK G36 KV adjustable stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_KV_adjustable_stock",
+  "revisionId": 337863,
+  "lastEdited": "2026-03-07T06:36:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.907 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+10",
+    "recoil": "-22",
+    "node": "622f14e899892a7f9e08f6c5",
+    "ID": "stock_g36_hk_kv_3_adjustable"
+  },
+  "sections": []
+}

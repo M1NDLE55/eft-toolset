@@ -1,0 +1,26 @@
+{
+  "title": "PKM 7.62x54R 658mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PKM_7.62x54R_658mm_barrel",
+  "revisionId": 351674,
+  "lastEdited": "2026-08-06T04:40:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "2.4 kg",
+    "grid": "4x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-33",
+    "velocity": "+11",
+    "MOA": "1.03",
+    "recoil": "-16.5",
+    "Heat": "-14",
+    "Cooling": "-9",
+    "node": "646371faf2404ab67905c8e9",
+    "ID": "barrel_pkm_zid_std_658mm_762x54r"
+  },
+  "sections": []
+}

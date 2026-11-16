@@ -1,0 +1,36 @@
+{
+  "title": "Nailhead figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nailhead_figurine",
+  "revisionId": 333921,
+  "lastEdited": "2026-02-07T23:48:20Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "679b9cce4e4ed4b3b40ae5c5",
+    "id": "Item_barter_tarko_spike_mask"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "The Labyrinth",
+      "level": 3,
+      "text": "- On Shadow of Tagilla\n- In different locations in spawn chamber 2."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This figurine is a direct reference to the main antagonist of the Hellraiser franchise, Pinhead."
+    }
+  ]
+}

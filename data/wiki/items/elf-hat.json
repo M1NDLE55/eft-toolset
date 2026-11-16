@@ -1,0 +1,26 @@
+{
+  "title": "Elf hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Elf_hat",
+  "revisionId": 329226,
+  "lastEdited": "2025-12-24T16:22:08Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "675aadf3003bb2e826030996",
+    "id": "item_equipment_head_xmass_elf"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This headwear first appeared during Escape from Tarkov's 2024 Christmas Celebration."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "30x29mm VOG-30",
+  "url": "https://escapefromtarkov.fandom.com/wiki/30x29mm_VOG-30",
+  "revisionId": 353116,
+  "lastEdited": "2026-08-10T17:12:39Z",
+  "kind": "ammo",
+  "categories": [
+    "30x29mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Grenade launcher cartridge",
+    "weight": "0.35 kg",
+    "grid": "1x1",
+    "velocity": "185 m/s",
+    "damage": "199",
+    "penetration": "1",
+    "armor damage": "95",
+    "ricochet": "0",
+    "fragmentation": "0",
+    "fuze time": "0.1s",
+    "explosion radius": "4-10m",
+    "explosion strength": "100",
+    "fragments count": "15x",
+    "effects": "Subsonic, Explosive",
+    "loot xp": "0",
+    "node": "5d70e500a4b9364de70d38ce",
+    "id": "patron_30x29_vog_30"
+  },
+  "sections": []
+}

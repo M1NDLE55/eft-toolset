@@ -1,0 +1,33 @@
+{
+  "title": "Rys-T face shield",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rys-T_face_shield",
+  "revisionId": 360563,
+  "lastEdited": "2026-09-18T18:43:45Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1.2 kg",
+    "grid": "2x1",
+    "material": "Combined materials",
+    "armor": "5",
+    "armor coverage": "Head",
+    "armor segments": "Face, Eyes, Jaws",
+    "durability": "55",
+    "blindness protect": "30%",
+    "penalties": "-6% turn speed, -9% Ergonomics",
+    "BlocksEyewear": "No",
+    "node": "5f60c85b58eff926626a60f7",
+    "id": "item_equipment_helmet_rys_t_shield"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

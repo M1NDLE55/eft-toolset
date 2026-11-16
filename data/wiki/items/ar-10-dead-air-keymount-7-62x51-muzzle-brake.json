@@ -1,0 +1,25 @@
+{
+  "title": "AR-10 Dead Air Keymount 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Dead_Air_Keymount_7.62x51_muzzle_brake",
+  "revisionId": 337885,
+  "lastEdited": "2026-03-07T06:44:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-3.5",
+    "accuracy": "+3",
+    "recoil": "-11",
+    "Dura Burn": "-2",
+    "Heat": "-1.3",
+    "node": "628a66b41d5e41750e314f34",
+    "ID": "muzzle_ar10_dead_air_silencers_keymount_muzzle_brake_762x51"
+  },
+  "sections": []
+}

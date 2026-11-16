@@ -1,0 +1,24 @@
+{
+  "title": "M1A SOCOM 16 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1A_SOCOM_16_stock",
+  "revisionId": 340797,
+  "lastEdited": "2026-04-22T07:46:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.004 kg",
+    "grid": "3x1",
+    "price": "₽13,056",
+    "ergonomics": "+28",
+    "recoil": "-26",
+    "Heat": "-3",
+    "Cooling": "+2",
+    "node": "5aaf8e43e5b5b00015693246",
+    "ID": "stock_m1a_springfield_armory_socom_16"
+  },
+  "sections": []
+}

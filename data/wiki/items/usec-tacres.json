@@ -1,0 +1,22 @@
+{
+  "title": "USEC TACRES",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_TACRES",
+  "revisionId": 248092,
+  "lastEdited": "2023-09-22T17:58:26Z",
+  "kind": "item",
+  "categories": [
+    "USEC lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f593286f7743014162044",
+    "ID": "usec_lower_tacres"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The pants are modeled on the TRU-SPEC T.R.U. Pants."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Ops-Core FAST multi-hit ballistic face shield",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ops-Core_FAST_multi-hit_ballistic_face_shield",
+  "revisionId": 362094,
+  "lastEdited": "2026-09-24T19:46:18Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL4 after completing his task Samples",
+    "material": "Glass",
+    "armor": "3",
+    "armor coverage": "Face, Eyes, Jaws",
+    "durability": "40",
+    "blindness protect": "10%",
+    "penalties": "-8% turn speed, -6% Ergonomics",
+    "BlocksEyewear": "No",
+    "node": "5a16b7e1fcdbcb00165aa6c9",
+    "id": "helmet_ops_core_handgun_face_shield"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

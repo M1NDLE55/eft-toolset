@@ -1,0 +1,26 @@
+{
+  "title": "Politician Mutkevich figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Politician_Mutkevich_figurine",
+  "revisionId": 343707,
+  "lastEdited": "2026-05-10T10:56:02Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "655c66e40b2de553b618d4b8",
+    "id": "Item_barter_tarko_deputat"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    }
+  ]
+}

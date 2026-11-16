@@ -1,0 +1,37 @@
+{
+  "title": "PP-19-01 Vityaz 9x19 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-19-01_Vityaz_9x19_submachine_gun",
+  "revisionId": 364979,
+  "lastEdited": "2026-10-25T21:56:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "2.858 kg",
+    "grid": "3x2",
+    "trader": "Prapor LL1: Standard, Ref LL1: Zenit variant after completing Mechanic's task Farming",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "200",
+    "ergonomics": "57.5",
+    "velocity": "375 m/s",
+    "range": "200 m",
+    "MOA": "4.47",
+    "Weaprecoil": "Vertical: 41, Horizontal: 192",
+    "rof": "700",
+    "caliber": "9x19mm Parabellum",
+    "node": "59984ab886f7743e98271174",
+    "ID": "weapon_izhmash_pp-19-01_9x19"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| PP-19-01 Zenit |\n| PP-19-01 FSB |\n| PP-19-01 Kiba |"
+    }
+  ]
+}

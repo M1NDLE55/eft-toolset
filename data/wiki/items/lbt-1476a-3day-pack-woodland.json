@@ -1,0 +1,22 @@
+{
+  "title": "LBT-1476A 3Day Pack (Woodland)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LBT-1476A_3Day_Pack_(Woodland)",
+  "revisionId": 348320,
+  "lastEdited": "2026-07-28T14:05:33Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.133 kg",
+    "grid": "4x5",
+    "penalties": "-1% movement speed, +0% turn speed, -2% Ergonomics",
+    "slots": "5x5 grid (25 slots)",
+    "node": "618cfae774bb2d036a049e7c",
+    "id": "item_equipment_backpack_lbt1476a"
+  },
+  "sections": []
+}

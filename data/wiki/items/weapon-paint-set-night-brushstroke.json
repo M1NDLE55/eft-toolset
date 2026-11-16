@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Night Brushstroke)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Night_Brushstroke)",
+  "revisionId": 348601,
+  "lastEdited": "2026-07-30T22:14:51Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "68d1497f74c1cc6e9603a873",
+    "id": "item_camo_brushstroke_night"
+  },
+  "sections": []
+}

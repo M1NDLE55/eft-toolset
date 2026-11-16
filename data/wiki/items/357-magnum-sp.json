@@ -1,0 +1,40 @@
+{
+  "title": ".357 Magnum SP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.357_Magnum_SP",
+  "revisionId": 322740,
+  "lastEdited": "2025-11-18T21:13:19Z",
+  "kind": "ammo",
+  "categories": [
+    ".357 Magnum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.016 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "velocity": "455 m/s",
+    "damage": "108",
+    "accuracy": "+27",
+    "recoil": "-29",
+    "penetration": "12",
+    "armor damage": "15",
+    "ricochet": "3%",
+    "l bleed chance": "+35",
+    "h bleed chance": "+20",
+    "durability burn": "+30",
+    "heat": "-7",
+    "feedfailure": "High",
+    "misfire": "Low",
+    "node": "62330c40bdd19b369e1e53d1",
+    "id": "patron_9x33r_sp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

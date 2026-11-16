@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { ItemPageClient } from "./item-page-client";
+import { ITEM_VIEW_COOKIE, decodeViewCookie } from "@/app/lib/item-views/views";
+import { readItemWiki } from "@/app/lib/wiki/item-wiki";
 import { resolveItemRoute } from "./item-route";
-import { JsonLd, breadcrumbList, faqPage } from "@/app/components/seo/json-ld";
-import { itemFaq, itemPageDescription, itemPageTitle } from "@/app/lib/seo/item";
+import { JsonLd, breadcrumbList } from "@/app/components/seo/json-ld";
+import { itemPageDescription, itemPageTitle } from "@/app/lib/seo/item";
 import { ITEM_HUB_NAME } from "@/app/lib/seo/site-copy";
 
 interface ItemPageProps {
@@ -28,24 +31,39 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
   };
 }
 
+/** The view the visitor last chose, which the client keeps in a cookie; crawlers get the default. */
+async function requestItemLayout() {
+  const raw = (await cookies()).get(ITEM_VIEW_COOKIE)?.value;
+  let value = raw;
+  try {
+    value = raw && decodeURIComponent(raw);
+  } catch {
+    // Leave it as sent; decoding fails only on a cookie we didn't write.
+  }
+  return decodeViewCookie(value);
+}
+
 export default async function Page({ params }: ItemPageProps) {
   const { gameMode, item, reference, canonical, renderedAt } = await resolveItemRoute((await params).itemName);
   if (!reference) return null;
+  const [layout, wiki] = await Promise.all([requestItemLayout(), item ? readItemWiki(item.id) : null]);
   return (
     <>
       {item && canonical && (
-        <>
-          <JsonLd
-            data={breadcrumbList([
-              { name: "EFT Toolset", path: "/" },
-              { name: ITEM_HUB_NAME, path: "/item" },
-              { name: item.name, path: `/item/${canonical}` },
-            ])}
-          />
-          <JsonLd data={faqPage(itemFaq(item))} />
-        </>
+        <JsonLd
+          data={breadcrumbList([
+            { name: "EFT Toolset", path: "/" },
+            { name: ITEM_HUB_NAME, path: "/item" },
+            { name: item.name, path: `/item/${canonical}` },
+          ])}
+        />
       )}
-      <ItemPageClient reference={reference} initial={item ? { gameMode, item, renderedAt } : null} />
+      <ItemPageClient
+        reference={reference}
+        initial={item ? { gameMode, item, renderedAt } : null}
+        wiki={wiki}
+        layout={{ id: layout.id, cards: layout.cards }}
+      />
     </>
   );
 }

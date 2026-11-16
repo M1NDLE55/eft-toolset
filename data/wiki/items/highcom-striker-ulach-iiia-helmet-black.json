@@ -1,0 +1,29 @@
+{
+  "title": "HighCom Striker ULACH IIIA helmet (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HighCom_Striker_ULACH_IIIA_helmet_(Black)",
+  "revisionId": 344389,
+  "lastEdited": "2026-05-24T22:13:45Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.9 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "66",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -2% turn speed, -1% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5b40e1525acfc4771e1c6611",
+    "id": "item_equipment_helmet_ULACH_black"
+  },
+  "sections": []
+}

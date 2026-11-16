@@ -1,0 +1,25 @@
+{
+  "title": "Skier's wallet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Skier's_wallet",
+  "revisionId": 302632,
+  "lastEdited": "2025-01-08T21:57:44Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.8 kg",
+    "grid": "1x1",
+    "node": "675f7f224076a741a3061568",
+    "id": "item_quest_cust_exp_miss_wallet"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Private Club from Skier"
+    }
+  ]
+}

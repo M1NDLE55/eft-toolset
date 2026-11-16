@@ -1,0 +1,26 @@
+{
+  "title": "Toothpaste",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Toothpaste",
+  "revisionId": 361644,
+  "lastEdited": "2026-09-24T10:00:53Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "57347c93245977448d35f6e3",
+    "id": "toothpaste"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Dead Scav\n- Ground cache\n- Medical supply crate\n- Plastic suitcase\n- Sport bag"
+    }
+  ]
+}

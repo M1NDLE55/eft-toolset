@@ -1,0 +1,30 @@
+{
+  "title": "Esmarch tourniquet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Esmarch_tourniquet",
+  "revisionId": 360861,
+  "lastEdited": "2026-09-20T12:51:25Z",
+  "kind": "item",
+  "categories": [
+    "Injury treatment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injury treatment",
+    "weight": "0.132 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL1",
+    "effect": "Removes:, Causes:",
+    "use time": "5s",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5e831507ea0a7c419c2f9bd9",
+    "id": "item_meds_esmarch"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

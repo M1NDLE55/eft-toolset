@@ -1,0 +1,37 @@
+{
+  "title": "Saiga-12K ver.10 12ga semi-automatic shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Saiga-12K_ver.10_12ga_semi-automatic_shotgun",
+  "revisionId": 358377,
+  "lastEdited": "2026-09-09T21:11:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "3.6 kg",
+    "grid": "5x2",
+    "trader": "Jaeger LL2",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "61",
+    "velocity": "426 m/s",
+    "range": "70 m",
+    "MOA": "20.63",
+    "Weaprecoil": "Vertical: 226, Horizontal: 400",
+    "rof": "40",
+    "caliber": "12/70",
+    "node": "576165642459773c7a400233",
+    "ID": "weapon_izhmash_saiga12k_10_12g"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant | Attachments |\n| Saiga-12K NERFGUN | 2x |"
+    }
+  ]
+}

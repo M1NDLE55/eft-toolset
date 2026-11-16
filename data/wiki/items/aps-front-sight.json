@@ -1,0 +1,23 @@
+{
+  "title": "APS front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/APS_front_sight",
+  "revisionId": 210548,
+  "lastEdited": "2022-09-20T10:34:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "price": "₽500",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5aba62f8d8ce87001943946b",
+    "ID": "sight_front_aps_molot_aps_std"
+  },
+  "sections": []
+}

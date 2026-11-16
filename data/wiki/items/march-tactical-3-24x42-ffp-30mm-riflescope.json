@@ -1,0 +1,25 @@
+{
+  "title": "March Tactical 3-24x42 FFP 30mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/March_Tactical_3-24x42_FFP_30mm_riflescope",
+  "revisionId": 352614,
+  "lastEdited": "2026-08-09T19:59:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.64 kg",
+    "grid": "2x1",
+    "price": "₽45,805",
+    "trader": "Jaeger LL4",
+    "zeroing": "50, 100, 150, 200, 250, 300, 350, 400, 450",
+    "sightrange": "1000",
+    "ergonomics": "-4",
+    "modes": "1",
+    "node": "57c5ac0824597754771e88a9",
+    "ID": "scope_30mm_march_tactical_3-24x42"
+  },
+  "sections": []
+}

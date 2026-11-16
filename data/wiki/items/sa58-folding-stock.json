@@ -1,0 +1,29 @@
+{
+  "title": "SA58 folding stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_folding_stock",
+  "revisionId": 337550,
+  "lastEdited": "2026-03-05T23:50:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.8 kg",
+    "grid": "2x1",
+    "price": "₽14,000",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+10",
+    "recoil": "-20",
+    "node": "5b7d63cf5acfc4001876c8df",
+    "ID": "stock_sa58_ds_arms_para_folding_stock"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Despite the name, it is currently unfoldable."
+    }
+  ]
+}

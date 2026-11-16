@@ -1,0 +1,25 @@
+{
+  "title": "MCX-SPEAR Clutch-Lok QD 6.8x51 Shouldered Flash Hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX-SPEAR_Clutch-Lok_QD_6.8x51_Shouldered_Flash_Hider",
+  "revisionId": 309469,
+  "lastEdited": "2025-04-08T06:52:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.122 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-1",
+    "accuracy": "+3",
+    "recoil": "-7",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "6529113b5ae2ae97b80fdf39",
+    "ID": "muzzle_ar10_sig_clutch_lok_qd_flash_hider_68x51"
+  },
+  "sections": []
+}

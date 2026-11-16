@@ -1,0 +1,28 @@
+{
+  "title": "NcSTAR Tactical Blue Laser",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NcSTAR_Tactical_Blue_Laser",
+  "revisionId": 320593,
+  "lastEdited": "2025-10-28T20:53:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "ergonomics": "-1",
+    "modes": "1",
+    "node": "5cc9c20cd7f00c001336c65d",
+    "ID": "tactical_all_ncstar_tactical_blue_laser"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is blue"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 FAB Defense GL-SHOCK buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_FAB_Defense_GL-SHOCK_buttstock",
+  "revisionId": 353025,
+  "lastEdited": "2026-08-09T22:30:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.308 kg",
+    "grid": "2x1",
+    "price": "₽7,500",
+    "trader": "Skier LL4",
+    "ergonomics": "+4",
+    "recoil": "-22.5",
+    "node": "5a9eb32da2750c00171b3f9c",
+    "ID": "stock_ar15_fab_defense_gl_shock"
+  },
+  "sections": []
+}

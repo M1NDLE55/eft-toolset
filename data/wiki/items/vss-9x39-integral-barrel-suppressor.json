@@ -1,0 +1,26 @@
+{
+  "title": "VSS 9x39 integral barrel-suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSS_9x39_integral_barrel-suppressor",
+  "revisionId": 288128,
+  "lastEdited": "2024-08-25T22:31:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.496 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-5",
+    "velocity": "+1.1",
+    "recoil": "-14",
+    "Dura Burn": "+49",
+    "Heat": "+24",
+    "Cooling": "+6",
+    "node": "57838c962459774a1651ec63",
+    "ID": "silencer_vss_tochmash_std_9x39"
+  },
+  "sections": []
+}

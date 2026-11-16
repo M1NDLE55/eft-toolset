@@ -1,0 +1,23 @@
+{
+  "title": "MTs-255-12 beechwood forestock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MTs-255-12_beechwood_forestock",
+  "revisionId": 216218,
+  "lastEdited": "2022-12-09T14:53:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.8 kg",
+    "grid": "2x1",
+    "ergonomics": "+9",
+    "recoil": "-2",
+    "Heat": "+2.6",
+    "Cooling": "-3.6",
+    "node": "6123649463849f3d843da7c4",
+    "ID": "handguard_mc255_ckib_255_std_wood"
+  },
+  "sections": []
+}

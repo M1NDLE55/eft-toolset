@@ -1,0 +1,28 @@
+{
+  "title": "Glock 9x19 \"Big Stick\" 31-round magazine (Coyote)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_%22Big_Stick%22_31-round_magazine_(Coyote)",
+  "revisionId": 338846,
+  "lastEdited": "2026-03-18T08:21:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.14 kg",
+    "grid": "1x2",
+    "trader": "Skier LL3",
+    "ergonomics": "-3",
+    "checkaccuracy": "1",
+    "loadmodifier": "+5",
+    "feedfailure": "Medium",
+    "capacity": "31",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "630767c37d50ff5e8a1ea71a",
+    "ID": "mag_glock_glock_big_stick_9x19_31_fde"
+  },
+  "sections": []
+}

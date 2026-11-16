@@ -1,0 +1,29 @@
+{
+  "title": "MTEK FLUX Ballistic helmet (MultiCam Alpine)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MTEK_FLUX_Ballistic_helmet_(MultiCam_Alpine)",
+  "revisionId": 344371,
+  "lastEdited": "2026-05-24T22:12:19Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL4",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "50",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, +0% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "675956062f6ddfe8ff0e2806",
+    "id": "Item_equipment_helmet_flux_multicam"
+  },
+  "sections": []
+}

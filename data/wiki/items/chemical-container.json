@@ -1,0 +1,25 @@
+{
+  "title": "Chemical container",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chemical_container",
+  "revisionId": 298481,
+  "lastEdited": "2024-12-22T12:48:52Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "66a0e523e749756c920d02d0",
+    "id": "item_quest_chem_container_nf2024"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Dragnet from Jaeger"
+    }
+  ]
+}

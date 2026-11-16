@@ -1,0 +1,35 @@
+{
+  "title": "Slim diary",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Slim_diary",
+  "revisionId": 367806,
+  "lastEdited": "2026-11-10T13:15:07Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "590c651286f7741e566b6461",
+    "id": "item_thin_diary"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Common fund stash\n- Dead Scav\n- Drawer\n- Ground cache\n- Jacket\n- Safe\n- Sport bag\n- Plastic suitcase\n- Weapon box (6x6)"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In the \"Marked room\"\n- In the old gas station\n- In Big Red (\"Tarkone\")'s office room 2"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Inside the rooms RB-BK, RB-PKPM and RB-VO"
+    }
+  ]
+}

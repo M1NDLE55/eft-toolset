@@ -1,0 +1,27 @@
+{
+  "title": "SVDS custom cut dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVDS_custom_cut_dust_cover",
+  "revisionId": 276253,
+  "lastEdited": "2024-04-18T12:16:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.05 kg",
+    "grid": "2x1",
+    "price": "₽1,450",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "loot xp": "5",
+    "exam xp": "2",
+    "node": "5dfce88fe9dc277128008b2e",
+    "ID": "reciever_svd_izhmash_svd_s_cut_off"
+  },
+  "sections": []
+}

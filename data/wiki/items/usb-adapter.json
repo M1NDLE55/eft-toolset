@@ -1,0 +1,28 @@
+{
+  "title": "USB Adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USB_Adapter",
+  "revisionId": 363010,
+  "lastEdited": "2026-10-03T13:00:21Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.4 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "30",
+    "exam xp": "5",
+    "node": "5909e99886f7740c983b9984",
+    "id": "usbadapter"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Glock .45 ACP KRISS G30 MagEx 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_.45_ACP_KRISS_G30_MagEx_30-round_magazine",
+  "revisionId": 337743,
+  "lastEdited": "2026-03-06T01:54:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.18 kg",
+    "grid": "1x2",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "checkaccuracy": "1",
+    "checkmodifier": "-15",
+    "loadmodifier": "+0",
+    "feedfailure": "Medium",
+    "capacity": "30",
+    "caliber": ".45 ACP",
+    "node": "5fb651dc85f90547f674b6f4",
+    "ID": "mag_glock_kriss_magex_g30_1143x23_30"
+  },
+  "sections": []
+}

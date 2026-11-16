@@ -1,0 +1,26 @@
+{
+  "title": "Nut Sack balaclava",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nut_Sack_balaclava",
+  "revisionId": 333885,
+  "lastEdited": "2026-02-07T22:49:19Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "69398e94ca94fd2877039504",
+    "id": "item_equipment_facecover_balaclava_burntpeanut"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a reference to the content creator TheBurntPeanut."
+    }
+  ]
+}

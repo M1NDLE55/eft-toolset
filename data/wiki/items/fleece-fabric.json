@@ -1,0 +1,33 @@
+{
+  "title": "Fleece fabric",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Fleece_fabric",
+  "revisionId": 360602,
+  "lastEdited": "2026-09-18T18:51:15Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.05 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5e2af47786f7746d404f3aaa",
+    "ID": "Item_barter_other_cloth_fleece"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- Spawns in clothing stores in the shopping mall"
+    }
+  ]
+}

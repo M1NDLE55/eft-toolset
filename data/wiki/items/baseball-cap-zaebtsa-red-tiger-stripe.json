@@ -1,0 +1,27 @@
+{
+  "title": "Baseball cap (Zaebtsa Red Tiger Stripe)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Baseball_cap_(Zaebtsa_Red_Tiger_Stripe)",
+  "revisionId": 361458,
+  "lastEdited": "2026-09-23T18:34:23Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Morbus crate",
+    "node": "6a622f797a1ca14e57077819",
+    "id": "item_equipment_head_zaebtsa_cap_tigerstripe_red_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

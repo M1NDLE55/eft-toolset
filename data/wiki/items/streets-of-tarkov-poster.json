@@ -1,0 +1,30 @@
+{
+  "title": "Streets of Tarkov poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Streets_of_Tarkov_poster",
+  "revisionId": 356276,
+  "lastEdited": "2026-08-25T22:00:01Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6a426fbe99757acd420f64b0",
+    "id": "item_barter_flyers_streets_of_tarkov"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This poster is a parody of promotional posters for the \"Street Fighter\" games."
+    }
+  ]
+}

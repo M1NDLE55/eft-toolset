@@ -1,0 +1,25 @@
+{
+  "title": "ORSIS T-5000M padded handguard grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ORSIS_T-5000M_padded_handguard_grip",
+  "revisionId": 342077,
+  "lastEdited": "2026-04-28T01:34:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽1,850",
+    "trader": "Skier LL3",
+    "ergonomics": "+5",
+    "recoil": "-0.5",
+    "loot xp": "30",
+    "exam xp": "6",
+    "node": "5df36948bb49d91fb446d5ad",
+    "ID": "foregrip_t5000_orsis_t5000m_pad_std"
+  },
+  "sections": []
+}

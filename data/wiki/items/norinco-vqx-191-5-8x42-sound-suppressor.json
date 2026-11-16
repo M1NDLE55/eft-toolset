@@ -1,0 +1,27 @@
+{
+  "title": "Norinco VQX-191 5.8x42 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Norinco_VQX-191_5.8x42_sound_suppressor",
+  "revisionId": 357302,
+  "lastEdited": "2026-09-01T11:22:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.58 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4 after unlocking QBZ-191 in BattlePass Season 1",
+    "ergonomics": "-10",
+    "velocity": "+0.85",
+    "accuracy": "-5",
+    "recoil": "-4.5",
+    "Dura Burn": "+80",
+    "Heat": "+14",
+    "Cooling": "+5",
+    "node": "69f9f0d3df2c2358a9041867",
+    "ID": "silencer_qbz191_norinco_vqx191_58x42"
+  },
+  "sections": []
+}

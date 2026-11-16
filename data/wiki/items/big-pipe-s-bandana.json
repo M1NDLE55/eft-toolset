@@ -1,0 +1,26 @@
+{
+  "title": "Big Pipe's bandana",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Big_Pipe's_bandana",
+  "revisionId": 305010,
+  "lastEdited": "2025-01-31T15:30:11Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bandana",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "628e4dd1f477aa12234918aa",
+    "id": "item_equipment_head_bandana_boss_Big_Pipe"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Big Pipe"
+    }
+  ]
+}

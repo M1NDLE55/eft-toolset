@@ -1,0 +1,28 @@
+{
+  "title": "Mystery Ranch NICE COMM 3 BVS frame system (Coyote)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mystery_Ranch_NICE_COMM_3_BVS_frame_system_(Coyote)",
+  "revisionId": 305490,
+  "lastEdited": "2025-02-09T11:41:50Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "15 kg",
+    "grid": "4x5",
+    "penalties": "-6% movement speed, -1% turn speed, -5% Ergonomics",
+    "slots": "2x7 grid (14 slots)",
+    "node": "628bc7fb408e2b2e9c0801b1",
+    "ID": "item_equipment_backpack_boss_birdeye"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Birdeye"
+    }
+  ]
+}

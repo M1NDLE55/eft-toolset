@@ -1,0 +1,30 @@
+{
+  "title": "The Hunted poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Hunted_poster",
+  "revisionId": 331627,
+  "lastEdited": "2026-01-07T19:31:58Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a20c83fb2de89670113b4",
+    "id": "item_barter_flyers_the_hunted"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

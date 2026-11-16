@@ -1,0 +1,26 @@
+{
+  "title": "Document on changes in enterprise interactions",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Document_on_changes_in_enterprise_interactions",
+  "revisionId": 348072,
+  "lastEdited": "2026-07-19T12:25:26Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "node": "689b50ec127673bbd40706d1",
+    "id": "item_info_note_TGlabs_related_companys"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "TKPD front trunnion",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TKPD_front_trunnion",
+  "revisionId": 343075,
+  "lastEdited": "2026-05-03T14:56:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.216 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-1",
+    "node": "68aee9731ef0d507780a61c9",
+    "ID": "mount_tkpd_sniperarms_dynamics_tkpd_lower_band_std"
+  },
+  "sections": []
+}

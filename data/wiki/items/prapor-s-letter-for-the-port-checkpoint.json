@@ -1,0 +1,27 @@
+{
+  "title": "Prapor's letter for the port checkpoint",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Prapor's_letter_for_the_port_checkpoint",
+  "revisionId": 345945,
+  "lastEdited": "2026-06-01T00:30:27Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.105 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1 after progressing through the story chapter The Ticket and refusing to work with Mr. Kerman",
+    "effect": "Allows access to the Terminal location a single time.",
+    "node": "68f213f8ea61d1803707cf7a",
+    "ID": "item_info_Survived_letter_Prapor"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market, be sold to traders or destroyed.\n- This item is not lootable from players and can only be placed in a special item slot."
+    }
+  ]
+}

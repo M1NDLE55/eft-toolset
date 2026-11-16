@@ -1,0 +1,25 @@
+{
+  "title": "SV-98 anti-heat ribbon",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SV-98_anti-heat_ribbon",
+  "revisionId": 215577,
+  "lastEdited": "2022-12-02T15:14:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.053 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "+2",
+    "Heat": "-20",
+    "Cooling": "+20",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "56083eab4bdc2d26448b456a",
+    "ID": "tactical_sv-98_izhmash_heat_ribbon"
+  },
+  "sections": []
+}

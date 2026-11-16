@@ -1,0 +1,26 @@
+{
+  "title": "Khorovod armband",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Khorovod_armband",
+  "revisionId": 347529,
+  "lastEdited": "2026-07-01T11:55:08Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "67614b3ab8c060ebb204b106",
+    "id": "item_equipment_armband_xmass"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This item is only available to players who have obtained the \"Khorovod\" event achievement."
+    }
+  ]
+}

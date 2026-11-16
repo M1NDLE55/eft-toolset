@@ -1,0 +1,23 @@
+{
+  "title": "M14 SAGE International M14ALCS (MOD-0) pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_SAGE_International_M14ALCS_(MOD-0)_pistol_grip",
+  "revisionId": 340821,
+  "lastEdited": "2026-04-22T08:13:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽2,600",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+5",
+    "recoil": "-1",
+    "node": "5addc7db5acfc4001669f279",
+    "ID": "pistolgrip_m14_sage_ebr_m14alcs_grip"
+  },
+  "sections": []
+}

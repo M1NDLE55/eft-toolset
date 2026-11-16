@@ -1,0 +1,26 @@
+{
+  "title": "Note on preparations for the Arrival",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_on_preparations_for_the_Arrival",
+  "revisionId": 353595,
+  "lastEdited": "2026-08-14T19:09:27Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "6877c834b52f568d4b0ea5a5",
+    "ID": "item_info_note_quest_sectantPriest_victim"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

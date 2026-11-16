@@ -1,0 +1,25 @@
+{
+  "title": "Carbon case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Carbon_case",
+  "revisionId": 289588,
+  "lastEdited": "2024-09-01T12:21:42Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "6 kg",
+    "grid": "4x4",
+    "node": "5910922b86f7747d96753483",
+    "id": "item_quest_container_carbon_case"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Pharmacist from Therapist"
+    }
+  ]
+}

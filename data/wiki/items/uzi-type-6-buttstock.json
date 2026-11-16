@@ -1,0 +1,22 @@
+{
+  "title": "UZI Type 6 buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_Type_6_buttstock",
+  "revisionId": 306743,
+  "lastEdited": "2025-03-17T04:45:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.29 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+7",
+    "recoil": "-20",
+    "node": "669924a69950f5f4cd060295",
+    "ID": "stock_uzi_iwi_type_6"
+  },
+  "sections": []
+}

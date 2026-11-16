@@ -1,0 +1,23 @@
+{
+  "title": "Scav Vest",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Scav_Vest",
+  "revisionId": 333866,
+  "lastEdited": "2026-02-07T22:32:24Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.4 kg",
+    "grid": "2x3",
+    "price": "₽3,100",
+    "BlocksArmor": "No",
+    "slots": "6 Slots",
+    "node": "572b7adb24597762ae139821",
+    "id": "wild_vest"
+  },
+  "sections": []
+}

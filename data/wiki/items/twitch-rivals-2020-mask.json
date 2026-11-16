@@ -1,0 +1,26 @@
+{
+  "title": "Twitch Rivals 2020 mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Twitch_Rivals_2020_mask",
+  "revisionId": 313669,
+  "lastEdited": "2025-05-21T06:56:08Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "node": "5e71f6be86f77429f2683c44",
+    "id": "item_equipment_facecover_redflame_twitch"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The masks were distributed to viewers of the 14 Apr 2020 Twitch Rivals event via random loot drops.\n- The mask first appeared after the v0.12.4.6673 patch (08 Apr 2020) as a random drop from the scav case. This was likely unintentional."
+    }
+  ]
+}

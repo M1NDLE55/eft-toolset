@@ -1,0 +1,25 @@
+{
+  "title": "Diamond Age NovaSteel Aventail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Diamond_Age_NovaSteel_Aventail",
+  "revisionId": 361535,
+  "lastEdited": "2026-09-23T20:40:57Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.2 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL3",
+    "material": "Armor steel",
+    "armor": "3",
+    "armor coverage": "Back neck",
+    "durability": "15",
+    "penalties": "-2% turn speed, +0% Ergonomics,",
+    "node": "6a8338c851cfbe231b091a1b",
+    "ID": "item_equipment_helmet_neosteel_gen2_aventail_bp_04"
+  },
+  "sections": []
+}

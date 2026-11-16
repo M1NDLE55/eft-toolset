@@ -1,0 +1,27 @@
+{
+  "title": "SKS 7.62x39 10-round internal box magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_7.62x39_10-round_internal_box_magazine",
+  "revisionId": 337400,
+  "lastEdited": "2026-03-05T22:32:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.185 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+5",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "7.62x39mm",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "587df3a12459772c28142567",
+    "ID": "mag_sks_toz_std_internal_762x39_10"
+  },
+  "sections": []
+}

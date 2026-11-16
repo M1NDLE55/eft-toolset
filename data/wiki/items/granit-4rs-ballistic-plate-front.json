@@ -1,0 +1,35 @@
+{
+  "title": "Granit 4RS ballistic plate (Front)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Granit_4RS_ballistic_plate_(Front)",
+  "revisionId": 297970,
+  "lastEdited": "2024-12-15T14:39:30Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "3.5 kg",
+    "grid": "2x3",
+    "material": "Ceramic",
+    "armor": "6",
+    "armor coverage": "Front Plate",
+    "durability": "55",
+    "penalties": "-2.5% movement speed, -2% turn speed, -1.5% Ergonomics",
+    "node": "656f63c027aed95beb08f62c",
+    "id": "item_equipment_plate_granit4rs_6class_front"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate"
+    }
+  ]
+}

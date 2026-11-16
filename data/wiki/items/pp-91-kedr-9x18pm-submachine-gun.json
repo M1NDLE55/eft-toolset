@@ -1,0 +1,37 @@
+{
+  "title": "PP-91 Kedr 9x18PM submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-91_Kedr_9x18PM_submachine_gun",
+  "revisionId": 340950,
+  "lastEdited": "2026-04-22T22:11:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "1.529 kg",
+    "grid": "3x2",
+    "trader": "Prapor LL1",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "67",
+    "velocity": "284 m/s",
+    "range": "100 m",
+    "MOA": "8.59",
+    "Weaprecoil": "Vertical: 50, Horizontal: 211",
+    "rof": "900",
+    "caliber": "9x18mm Makarov",
+    "node": "57d14d2524597714373db789",
+    "ID": "weapon_zmz_pp-91_9x18pm"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- While the PP-91 Kedr 9x18PM submachine gun can hold 9x18mm PMM PstM gzh ammunition in its magazine, it can not fire it.\n- Folding the stock will not affect the recoil of this weapon."
+    }
+  ]
+}

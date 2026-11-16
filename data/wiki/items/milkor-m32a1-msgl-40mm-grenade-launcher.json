@@ -1,0 +1,41 @@
+{
+  "title": "Milkor M32A1 MSGL 40mm grenade launcher",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Milkor_M32A1_MSGL_40mm_grenade_launcher",
+  "revisionId": 344754,
+  "lastEdited": "2026-05-25T18:10:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Grenade launchers",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Revolver grenade launcher",
+    "slot": "Primary",
+    "weight": "5.02 kg",
+    "grid": "4x2",
+    "fire modes": "Single",
+    "sightrange": "300",
+    "ergonomics": "23",
+    "velocity": "76 m/s",
+    "range": "70 m",
+    "MOA": "16.5",
+    "Weaprecoil": "Vertical: 183, Horizontal: 431",
+    "rof": "30",
+    "caliber": "40x46mm",
+    "node": "6275303a9f372d6ea97f9ec7",
+    "ID": "weapon_milkor_m32a1_msgl_40x46"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Due to its revolver magazine mechanism this weapon contributes EXP towards, and benefits from the revolvers skill."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Big Pipe"
+    }
+  ]
+}

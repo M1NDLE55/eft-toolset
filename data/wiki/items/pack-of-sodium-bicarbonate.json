@@ -1,0 +1,26 @@
+{
+  "title": "Pack of sodium bicarbonate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pack_of_sodium_bicarbonate",
+  "revisionId": 324152,
+  "lastEdited": "2025-11-21T21:55:11Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "59e35abd86f7741778269d82",
+    "id": "item_barter_household_soda"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Schaman shampoo",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Schaman_shampoo",
+  "revisionId": 324262,
+  "lastEdited": "2025-11-21T23:04:18Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.45 kg",
+    "grid": "1x2",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5d40412b86f7743cb332ac3a",
+    "ID": "item_barter_household_shampoo"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: This is a parody of the shampoo brand Schauma by Schwarzkopf."
+    }
+  ]
+}

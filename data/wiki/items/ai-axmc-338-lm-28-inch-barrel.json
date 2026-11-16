@@ -1,0 +1,27 @@
+{
+  "title": "AI AXMC .338 LM 28 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_.338_LM_28_inch_barrel",
+  "revisionId": 342244,
+  "lastEdited": "2026-04-28T21:48:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.93 kg",
+    "grid": "4x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "-45",
+    "velocity": "+5",
+    "accuracy": "+10",
+    "MOA": "0.38",
+    "recoil": "-17.2",
+    "Heat": "+5",
+    "Cooling": "-6",
+    "node": "628121434fa03b6b6c35dc6a",
+    "ID": "barrel_ax_accuracy_international_686mm_86x70_pb"
+  },
+  "sections": []
+}

@@ -1,0 +1,78 @@
+{
+  "title": "Tetriz portable game console",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tetriz_portable_game_console",
+  "revisionId": 361174,
+  "lastEdited": "2026-09-22T08:39:21Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.13 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "5",
+    "node": "5c12620d86f7743f8b198b72",
+    "ID": "item_barter_electr_tetriz"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Shipping Delay - Part 2"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Dead Scav\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Can spawn in big red next to the mattress on the floor, in the back of the warehouse\n- Can spawn on the first floor of 2 story dorms, on the couch closest to the fence line.\n- Can spawn in the green screen room in the Repair Shop building underneath the desk with the two computers.\n- Can spawn in the room connected to the green screen room on a workbench.\n- Can spawn on the wooden table inside the unlocked room at new gas station.\n- Can spawn on the shelves in the new gas station.\n- Can spawn on the floor amidst the garbage in front of cashier's counter.\n- Can spawn in trunk of white car between new gas station and checkpoint\n- Can spawn on shelf of red shed in crossroads storage area"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- Can spawn in marked circle\n- Can spawn in two story wooden house in Scav Town"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- Can spawn inside the White House on the South West side of the town back room in the blue drawer.\n- Can spawn on second floor of weather station, beside the safe, beneath the computer bank.\n- Can spawn inside East wing 107, on the desk.\n- Can spawn inside East wing 222, on workbench.\n- Can spawn inside East wing 328, on the desk.\n- Can spawn inside West wing 216, on the box to the left.\n- Can spawn inside West wing 301, on floor next to white barrels.\n- Can spawn inside Admin 2nd floor East side room with open safe, on the shelf.\n- Can spawn inside of East wing 110 (Sanitar's Office)"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- Can spawn in Texho on the shelving area.\n- Can spawn in Rasmussen on the shelves and inside the desk\n- Can be located inside electronics stores in the ULTRA shopping mall.\n- Can spawn inside the power station on the shelf in the office next to the entrance.\n- Can spawn inside Idea offices on the side desks.\n- Can spawn on the Idea checkout.\n- Can spawn on the tools shelves behind the Goshan food store in the ULTRA shopping mall.\n- Can spawn inside EMERCOM medical unit\n- Can spawn inside Tagilla's hideout"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Can spawn on the server shelves on Reserve.\n- Very commonly found in the RB-AK room.\n- Can spawn in the Black Knight building, 3rd room on the left from main entrance on a desk."
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- Can spawn on the desk on the first floor of the office building with a green light inside.\n- Can spawn on the barrels under the Factory break room, near Gate 3."
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- Can spawn on the desk, next to the screens, in the shop between Corner Diner and Golden World"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This item is modeled after \"X in 1 Brick Game\". Many variations exist such as the 188 in 1 talking brick game, and 132 in 1 talking brick game. It also came in different languages such as the Spanish talking brick game."
+    }
+  ]
+}

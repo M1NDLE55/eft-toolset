@@ -1,0 +1,26 @@
+{
+  "title": "AK-12 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_handguard",
+  "revisionId": 342381,
+  "lastEdited": "2026-04-29T00:56:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.134 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+15",
+    "recoil": "+0",
+    "Heat": "+2.7",
+    "Cooling": "-2.8",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "649ec127c93611967b034957",
+    "ID": "handguard_ak12_izhmash_ak12_std"
+  },
+  "sections": []
+}

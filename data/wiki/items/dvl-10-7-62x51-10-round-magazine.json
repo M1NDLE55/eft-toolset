@@ -1,0 +1,28 @@
+{
+  "title": "DVL-10 7.62x51 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DVL-10_7.62x51_10-round_magazine",
+  "revisionId": 360839,
+  "lastEdited": "2026-09-20T12:14:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "price": "₽4,500",
+    "trader": "Skier LL2",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "7.62x51mm NATO",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "5888988e24597752fe43a6fa",
+    "ID": "mag_dvl-10_lobaev_308_10"
+  },
+  "sections": []
+}

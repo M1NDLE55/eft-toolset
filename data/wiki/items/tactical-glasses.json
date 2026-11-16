@@ -1,0 +1,28 @@
+{
+  "title": "Tactical glasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tactical_glasses",
+  "revisionId": 348361,
+  "lastEdited": "2026-07-29T15:34:05Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.05 kg",
+    "grid": "2x1",
+    "trader": "Ragman LL1",
+    "blindness protect": "10%",
+    "node": "557ff21e4bdc2d89578b4586",
+    "id": "Goggles"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen\n- Contrary to the description, this item doesn't provide any ballistic protection"
+    }
+  ]
+}

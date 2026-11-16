@@ -1,0 +1,77 @@
+{
+  "title": "Graphics card",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Graphics_card",
+  "revisionId": 364299,
+  "lastEdited": "2026-10-13T13:18:45Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "trader": "Ref LL4",
+    "effect": "Generic loot item",
+    "node": "57347ca924597744596b4e71",
+    "id": "video_card"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- PC block\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- Under the PC desk in the Green Screen room\n- On the dead scav\n- On the left grocery shelf in Gas Station\n- On the ground in front of the counter in Gas Station\n- On the 1st floor sofa in 3-story dorms\n- On the table in the unlocked room in Gas Station\n- On the floor in the middle of the second room inside of Big Red\n- On the floor in 3-story dorm room 314 (Marked Room)\n- On the floor in Big Red next to the Fire Can (rare)"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On shelves of electronics stores (Texho, German, Techlight, Rasmussen)\n- In the furniture store across from Texho by the PS4\n- On the Tables in TTS medical store across from Emercom\n- In the Idea office\n- On the tech shelf in the back of Power Station"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In East wing room 222, East wing room 328, West wing room 216, , East wing room 110, West wing room 311 (always open), West wing room 205 and East wing office 107\n- On second floor desks of Admin Building\n- On the second floor of the weather station, in front of the server bay\n- In the East wing storage room\n- On counter top in the south most house in village (Right in front of tank)"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- In the \"pumping station\"\n- In the bottom blue container outside Gate 3 (Two stacked blue containers)\n- On top of one of the yellow cart by pit\n- Office hallway shelf"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- Marked circle\n- As spawn next to dead scav at Dead Man`s Place camp\n- On floor of buildings in Village"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Can be found on server racks inside multiple buildings\n- In the shelves of RB-AK on second floor of the black bishop building, north of the helicopter\n- In Black Knight on a desk, 3rd room on the left from main entrance\n- In RB-VO"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Right side of orange dome, on white boxes next to a white shelf\n- Right side of orange dome, on the last white table before the stairs that go up to management office."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Natural Exchange"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "It's modeled after an ASUS GeForce® GTX 750 TI performance graphics card (GTX750TI-OC-2GD5)"
+    }
+  ]
+}

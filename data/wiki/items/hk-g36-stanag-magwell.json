@@ -1,0 +1,21 @@
+{
+  "title": "HK G36 STANAG magwell",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_STANAG_magwell",
+  "revisionId": 294236,
+  "lastEdited": "2024-10-20T22:04:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1",
+    "node": "622f039199f4ea1a4d6c9a17",
+    "ID": "mount_g36_hk_magwell_ar15_conversion"
+  },
+  "sections": []
+}

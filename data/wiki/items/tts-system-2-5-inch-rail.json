@@ -1,0 +1,21 @@
+{
+  "title": "TTS System 2.5 inch rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TTS_System_2.5_inch_rail",
+  "revisionId": 357374,
+  "lastEdited": "2026-09-01T13:42:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.054 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-0.1",
+    "node": "688b7c1b0e99e554a90c0fb7",
+    "ID": "mount_9a91_tts_handguard_short_rail"
+  },
+  "sections": []
+}

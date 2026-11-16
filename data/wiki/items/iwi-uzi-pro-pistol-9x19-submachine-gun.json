@@ -1,0 +1,31 @@
+{
+  "title": "IWI UZI PRO Pistol 9x19 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/IWI_UZI_PRO_Pistol_9x19_submachine_gun",
+  "revisionId": 340939,
+  "lastEdited": "2026-04-22T22:00:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "1.66 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "80",
+    "velocity": "424 m/s",
+    "range": "100 m",
+    "MOA": "7.73",
+    "Weaprecoil": "Vertical: 57, Horizontal: 197",
+    "rof": "1075",
+    "caliber": "9x19mm Parabellum",
+    "node": "6680304edadb7aa61d00cef0",
+    "ID": "weapon_iwi_uzi_pro_pistol_9x19"
+  },
+  "sections": []
+}

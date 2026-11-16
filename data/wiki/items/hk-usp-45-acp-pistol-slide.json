@@ -1,0 +1,26 @@
+{
+  "title": "HK USP .45 ACP pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_.45_ACP_pistol_slide",
+  "revisionId": 356500,
+  "lastEdited": "2026-08-26T02:16:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.409 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-4",
+    "Cooling": "+6",
+    "node": "6193d382ed0429009f543e65",
+    "ID": "reciever_usp_hk_usp_std"
+  },
+  "sections": []
+}

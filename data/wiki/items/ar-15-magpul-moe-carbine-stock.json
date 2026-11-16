@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Magpul MOE Carbine stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Magpul_MOE_Carbine_stock",
+  "revisionId": 362401,
+  "lastEdited": "2026-09-29T13:27:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.226 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3: Black, after completing his task Top Secret, Peacekeeper LL3: FDE, FG, SG, OD",
+    "ergonomics": "+8",
+    "recoil": "-21",
+    "node": "56eabf3bd2720b75698b4569 58d2946386f774496974c37e 58d2946c86f7744e271174b5 58d2947686f774485c6a1ee5 58d2947e86f77447aa070d53",
+    "ID": "stock_ar15_magpul_moe_carbine_blk stock_ar15_magpul_moe_carbine_fde stock_ar15_magpul_moe_carbine_fg stock_ar15_magpul_moe_carbine_od stock_ar15_magpul_moe_carbine_sg"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "RPD 7.62x39 sawed-off 350mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_7.62x39_sawed-off_350mm_barrel",
+  "revisionId": 342392,
+  "lastEdited": "2026-04-29T01:01:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.1 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-14",
+    "velocity": "-8",
+    "MOA": "2.13",
+    "recoil": "-6.3",
+    "Dura Burn": "-15",
+    "Heat": "-4",
+    "Cooling": "-2",
+    "node": "65266fd43341ed9aa903dd56",
+    "ID": "barrel_rpd_kiba_sawed_off_350mm_762x39"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "UZI PRO 9x19 Masada thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_PRO_9x19_Masada_thread_protector",
+  "revisionId": 337977,
+  "lastEdited": "2026-03-08T00:26:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.085 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+2",
+    "Dura Burn": "-2.4",
+    "node": "668670f52a2296a8d909963c",
+    "ID": "muzzle_uzi_pro_iwi_masada_thread_protector_9x19"
+  },
+  "sections": []
+}

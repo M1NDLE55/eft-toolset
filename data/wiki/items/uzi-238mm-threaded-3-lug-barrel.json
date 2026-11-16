@@ -1,0 +1,27 @@
+{
+  "title": "UZI 238mm threaded 3-lug barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_238mm_threaded_3-lug_barrel",
+  "revisionId": 343216,
+  "lastEdited": "2026-05-03T21:21:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.128 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-4",
+    "velocity": "-1",
+    "MOA": "4.74",
+    "recoil": "-6",
+    "Dura Burn": "-8",
+    "Heat": "+2",
+    "Cooling": "+5",
+    "node": "6698c89bfbc8142e60024b0e",
+    "ID": "barrel_uzi_iwi_238mm_3_lug_threaded_9x19"
+  },
+  "sections": []
+}

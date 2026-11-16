@@ -1,0 +1,44 @@
+{
+  "title": "6B13 M assault armor (Christmas Edition)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B13_M_assault_armor_(Christmas_Edition)",
+  "revisionId": 346924,
+  "lastEdited": "2026-06-15T15:33:24Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "2.8 kg",
+    "grid": "3x4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Groin",
+    "default plates": "1x , 1x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "154",
+    "penalties": "-1% movement speed, +0% turn speed, +0% Ergonomics",
+    "node": "674d91ce6e862d5a95059ed6",
+    "id": "item_equipment_armor_6b13_killa_xmass"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Killa\n- Vengeful Killa"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This armor first appeared during Escape from Tarkov's 2024 Christmas Celebration."
+    }
+  ]
+}

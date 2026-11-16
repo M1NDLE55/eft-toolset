@@ -1,0 +1,26 @@
+{
+  "title": "HK MP5 PTR Tri-Rail handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_PTR_Tri-Rail_handguard",
+  "revisionId": 342058,
+  "lastEdited": "2026-04-28T00:44:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.308 kg",
+    "grid": "2x1",
+    "price": "₽10,200",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+14",
+    "recoil": "+0",
+    "Heat": "-2.5",
+    "Cooling": "+6.9",
+    "loot xp": "10",
+    "node": "5d19cd96d7ad1a4a992c9f52",
+    "ID": "handguard_mp5_ptr_tri_rail_forearm"
+  },
+  "sections": []
+}

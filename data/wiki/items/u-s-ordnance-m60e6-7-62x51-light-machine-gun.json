@@ -1,0 +1,41 @@
+{
+  "title": "U.S. Ordnance M60E6 7.62x51 light machine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/U.S._Ordnance_M60E6_7.62x51_light_machine_gun",
+  "revisionId": 357588,
+  "lastEdited": "2026-09-01T20:46:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Light machine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light machine gun",
+    "slot": "Primary",
+    "weight": "9.499 kg",
+    "grid": "5x2",
+    "fire modes": "Full Auto",
+    "sightrange": "1100 m",
+    "ergonomics": "21",
+    "velocity": "835 m/s",
+    "range": "800 m",
+    "MOA": "1.33",
+    "Weaprecoil": "Vertical: 87, Horizontal: 409",
+    "rof": "550",
+    "caliber": "7.62x51mm NATO",
+    "node": "661ceb1b9311543c7104149b 661cec09b2c6356b4d0c7a36",
+    "ID": "weapon_usord_m60e6_762x51 weapon_usord_m60e6_762x51_fde"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This weapon will never malfunction."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The flat dark earth variant of the M60E6 being by default equipped with the Mk 43 Mod 1 handguard and the ELCAN SpecterDR scope is supposed to replicate the real-life configuration of the Danish Army's M60E6 machine guns."
+    }
+  ]
+}

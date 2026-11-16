@@ -1,0 +1,24 @@
+{
+  "title": "AR-10 SureFire ProComp 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_SureFire_ProComp_7.62x51_muzzle_brake",
+  "revisionId": 337772,
+  "lastEdited": "2026-03-06T02:08:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.097 kg",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "accuracy": "+3",
+    "recoil": "-9",
+    "Dura Burn": "-2",
+    "Heat": "-1.3",
+    "node": "607ffb988900dc2d9a55b6e4",
+    "ID": "muzzle_ar10_surefire_procomp_762_muzzle_brake_762x51"
+  },
+  "sections": []
+}

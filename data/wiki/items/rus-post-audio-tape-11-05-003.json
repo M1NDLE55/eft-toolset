@@ -1,0 +1,31 @@
+{
+  "title": "Rus Post audio tape 11.05 / 003",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rus_Post_audio_tape_11.05_/_003",
+  "revisionId": 348819,
+  "lastEdited": "2026-08-01T14:56:30Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "0:38",
+    "node": "68889504f6192726ac07c66c",
+    "ID": "item_info_recorder_tape_courier_03"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Blue Fire"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Answering Machine: Hello, you have reached the Rus Post courier service. All operators are busy right now. Please leave a message after the tone.\n\nCourier: This is a complete clusterfuck! They're stopping everyone at the checkpoint, the line's already kilometers long. The truck driver in front of me started arguing with them, and they fucking shot him! Are you fucking hearing this?! A stray bullet hit my car! I almost fucking died!\n\nCourier: You know what, I don't get paid for this. I'm getting outta here on foot to my family. I'm leaving the car, all the parcels are inside. Life's more important. If you send someone — the key… the key is under the wheel."
+    }
+  ]
+}

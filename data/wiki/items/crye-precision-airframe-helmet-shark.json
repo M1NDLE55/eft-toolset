@@ -1,0 +1,35 @@
+{
+  "title": "Crye Precision AirFrame helmet (Shark)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_helmet_(Shark)",
+  "revisionId": 362084,
+  "lastEdited": "2026-09-24T19:41:56Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.88 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in the Factory Tactical Map",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69cbfe3a2f657c59da06e262",
+    "id": "item_equipment_helmet_crye_airframe_shark_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

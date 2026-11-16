@@ -1,0 +1,23 @@
+{
+  "title": "Zulu Nylon Gear M4 Reduced Signature Chest Rig (Ranger Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zulu_Nylon_Gear_M4_Reduced_Signature_Chest_Rig_(Ranger_Green)",
+  "revisionId": 348337,
+  "lastEdited": "2026-07-29T10:18:43Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.521 kg",
+    "grid": "2x3",
+    "trader": "Ragman LL1",
+    "BlocksArmor": "No",
+    "slots": "6 Slots",
+    "node": "64be7095047e826eae02b0c1",
+    "id": "item_equipment_rig_rscr_zulu"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 AB Arms MOD1 lower handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_AB_Arms_MOD1_lower_handguard",
+  "revisionId": 342378,
+  "lastEdited": "2026-04-29T00:54:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.033 kg",
+    "grid": "2x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+6.5",
+    "recoil": "+0",
+    "Heat": "+0.4",
+    "Cooling": "+1",
+    "node": "647def638295ebcb5b02f05b",
+    "ID": "handguard_ar15_abarms_mod1_handguard_lower"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "7.62x54mm R PS gzh ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_PS_gzh_ammo_pack_(20_pcs)",
+  "revisionId": 367241,
+  "lastEdited": "2026-11-02T23:14:27Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570257cc5d7d4cb4d078579",
+    "ID": "item_ammo_box_762x54r_20_ps"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from Shipping Delay - Part 1\n- 3 can be obtained as a quest reward from The Punisher - Part 4"
+    }
+  ]
+}

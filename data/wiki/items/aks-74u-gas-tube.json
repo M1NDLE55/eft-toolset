@@ -1,0 +1,24 @@
+{
+  "title": "AKS-74U gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74U_gas_tube",
+  "revisionId": 357135,
+  "lastEdited": "2026-08-30T22:30:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+0",
+    "recoil": "+0",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "node": "59d36a0086f7747e673f3946",
+    "ID": "gas_block_aksu_izhmash_aksu_std"
+  },
+  "sections": []
+}

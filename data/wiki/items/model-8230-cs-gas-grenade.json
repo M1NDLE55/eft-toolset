@@ -1,0 +1,34 @@
+{
+  "title": "Model 8230 CS gas grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Model_8230_CS_gas_grenade",
+  "revisionId": 366869,
+  "lastEdited": "2026-11-01T12:33:01Z",
+  "kind": "item",
+  "categories": [
+    "Gas grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas grenade",
+    "weight": "0.19 kg",
+    "grid": "1x1",
+    "explosion delay": "5s",
+    "emission time": "30s",
+    "node": "69f07893e761ac1c200ae15b",
+    "ID": "weapon_grenade_m8230"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only 12 can be held in the raid inventory at the same time, while only 3 can be brought into a raid.\n- Within the gas cloud and the tear gas asphyxiation effect is added, preventing the use of medical items, draining stamina, causing eye irritations and coughing as well as damage to the thorax (2 HP/second).\n  - Wearing a Respirator or Gentex Ops-Core SOTR respirator protects against the thorax damage and coughing, while wearing a GP-5 gas mask, GP-7 gas mask, Avon M53A1 gas mask or MSA Millennium Riot Control gas mask protects against everything."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- The Wedge\n- Black Division on Icebreaker"
+    }
+  ]
+}

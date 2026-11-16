@@ -1,0 +1,25 @@
+{
+  "title": ".338 Lapua Magnum FMJ ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.338_Lapua_Magnum_FMJ_ammo_pack_(20_pcs)",
+  "revisionId": 367088,
+  "lastEdited": "2026-11-02T23:06:29Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "2x1",
+    "trader": "Ref LL4",
+    "node": "657023ccbfc87b3a3409320a",
+    "ID": "item_ammo_box_338_20_fmj"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

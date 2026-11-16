@@ -1,0 +1,29 @@
+{
+  "title": "FORT Kiver-M bulletproof helmet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FORT_Kiver-M_bulletproof_helmet",
+  "revisionId": 367561,
+  "lastEdited": "2026-11-04T16:59:45Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.2 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL1",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "3",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "63",
+    "RicochetChance": "Medium",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics, High sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5645bc214bdc2d363b8b4571",
+    "id": "helmet"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "M870 SpeedFeed Short handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_SpeedFeed_Short_handguard",
+  "revisionId": 340780,
+  "lastEdited": "2026-04-22T07:31:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.121 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+8",
+    "recoil": "+0",
+    "Heat": "+2",
+    "Cooling": "-1",
+    "node": "5a788089c5856700142fdd9c",
+    "ID": "handguard_870_remington_12g_speedfeed_short"
+  },
+  "sections": []
+}

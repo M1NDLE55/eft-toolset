@@ -1,0 +1,40 @@
+{
+  "title": "9.3x64mm 7N33",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9.3x64mm_7N33",
+  "revisionId": 325488,
+  "lastEdited": "2025-11-25T16:50:12Z",
+  "kind": "ammo",
+  "categories": [
+    "9.3x64mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.040 kg",
+    "grid": "1x1",
+    "velocity": "790 m/s",
+    "damage": "108",
+    "accuracy": "-5",
+    "recoil": "+20",
+    "penetration": "56",
+    "armor damage": "55",
+    "ricochet": "40%",
+    "fragmentation": "5%",
+    "l bleed chance": "+80",
+    "h bleed chance": "+50",
+    "durability burn": "+40",
+    "heat": "+193.4",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "68bad8376cb22acf1107a586",
+    "id": "patron_93x64_7n33"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

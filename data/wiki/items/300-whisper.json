@@ -1,0 +1,44 @@
+{
+  "title": ".300 Whisper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.300_Whisper",
+  "revisionId": 322855,
+  "lastEdited": "2025-11-18T21:29:26Z",
+  "kind": "ammo",
+  "categories": [
+    ".300 Blackout ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "velocity": "853 m/s",
+    "damage": "90",
+    "accuracy": "+5",
+    "recoil": "-5",
+    "penetration": "14",
+    "armor damage": "18",
+    "ricochet": "10%",
+    "h bleed chance": "+20",
+    "durability burn": "+5",
+    "heat": "+97",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "6196365d58ef8c428c287da1",
+    "id": "patron_762x35_whisper"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This round is based on the \"Close Quarters 78gr Bullet\" from Lehigh Defense."
+    }
+  ]
+}

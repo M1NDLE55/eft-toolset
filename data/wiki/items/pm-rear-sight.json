@@ -1,0 +1,21 @@
+{
+  "title": "PM rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PM_rear_sight",
+  "revisionId": 255109,
+  "lastEdited": "2023-11-09T17:00:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "sightrange": "200",
+    "node": "63c6adcfb4ba094317063742",
+    "ID": "sight_rear_pm_izhmeh_pm_std"
+  },
+  "sections": []
+}

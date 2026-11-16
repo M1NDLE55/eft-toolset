@@ -1,0 +1,18 @@
+{
+  "title": "4.6x30mm Action SX ammo pack (40 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/4.6x30mm_Action_SX_ammo_pack_(40_pcs)",
+  "revisionId": 367148,
+  "lastEdited": "2026-11-02T23:09:32Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657024c81419851aef03e712",
+    "ID": "item_ammo_box_46x30_40_action_sx"
+  },
+  "sections": []
+}

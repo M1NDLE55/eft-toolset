@@ -1,0 +1,26 @@
+{
+  "title": "Agent network deployment report",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Agent_network_deployment_report",
+  "revisionId": 348036,
+  "lastEdited": "2026-07-19T12:14:20Z",
+  "kind": "item",
+  "categories": [
+    "Major TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "node": "68d3041818d70f97e704ad7b",
+    "ID": "item_info_note_report_unknowns_spynet"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya\n- This is one of the major evidence used in The Ticket"
+    }
+  ]
+}

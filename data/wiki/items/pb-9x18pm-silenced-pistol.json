@@ -1,0 +1,33 @@
+{
+  "title": "PB 9x18PM silenced pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PB_9x18PM_silenced_pistol",
+  "revisionId": 340917,
+  "lastEdited": "2026-04-22T21:49:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.952 kg",
+    "grid": "3x1",
+    "trader": "Prapor LL1",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "60",
+    "velocity": "265 m/s",
+    "range": "50 m",
+    "MOA": "10.31",
+    "Weaprecoil": "Vertical: 350, Horizontal: 239",
+    "rof": "30",
+    "caliber": "9x18mm Makarov",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "56e0598dd2720bb5668b45a6",
+    "ID": "weapon_tochmash_pb_9x18pm"
+  },
+  "sections": []
+}

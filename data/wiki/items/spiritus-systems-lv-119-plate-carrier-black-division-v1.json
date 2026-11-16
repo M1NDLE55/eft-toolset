@@ -1,0 +1,51 @@
+{
+  "title": "Spiritus Systems LV-119 Plate Carrier (Black Division V1)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Spiritus_Systems_LV-119_Plate_Carrier_(Black_Division_V1)",
+  "revisionId": 366868,
+  "lastEdited": "2026-11-01T12:32:45Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "3.9 kg",
+    "grid": "4x3",
+    "material": "Aramid",
+    "armor": "Thorax, Back: 3 , Sides: 4",
+    "armor coverage": "Thorax, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "6",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "120",
+    "penalties": "-1% movement speed, -1% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "24 Slots",
+    "node": "689479a4a733b1602007e2eb",
+    "ID": "item_equipment_rig_BD1_spiritus"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division (Not on Icebreaker)"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The chest rig is modeled after a Spiritus Systems LV-119 (in Wolf Grey) configured with a range of commercially available accessories from Spiritus Systems and other manufacturers. The carrier is outfitted with:\n- Spiritus Systems Micro Fight Chassis Mk4 equipped with a Microfight MK2 Half Flap mounted to the front plate bag\n- A Spiritus Systems Recovery Handle MK2 is mounted to the rear plate bag using a Petzl OK Carabiner\n- Spiritus Systems Trifold Shoulder Covers for cable management\n  - The placard carries three AR-15 5.56x45 Magpul PMAG 30 GEN M3 W STANAG 30-round magazines, while the front utility pocket contains a Leatherman MUT EOD multitool, a Glock 9x19 17-round magazine, a paint marker, and two Cyalume infrared chemlights.\n  - A North American Rescue C.A.T tourniquet is strapped to the bottom.\n- Spiritus Systems MOLLE HLT Cummerbund, mounted with:\n  - One Spiritus Systems JSTA Pouch loaded with one Glock 9x19 17-round magazine and one AR-15 5.56x45 Magpul PMAG 30 GEN M3 W STANAG 30-round magazine\n  - One Spiritus Systems Elastic Magazine Pouch (EMP) with one Magpul PMAG magazine\n  - One Spiritus Systems Multi Platform Radio Chassis Mk5 carrying a Persistent Systems' MPU5 networking radio connected to a Push-to-Talk (PTT) adapter\n  - One S&S Precision IZLID® Quick-Draw Pouch with a B.E. Meyers IZLID Ultra infrared laser emitter\n  - Spiritus Systems Side Armor Bags."
+    }
+  ]
+}

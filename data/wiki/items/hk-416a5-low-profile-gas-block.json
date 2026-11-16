@@ -1,0 +1,26 @@
+{
+  "title": "HK 416A5 low profile gas block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416A5_low_profile_gas_block",
+  "revisionId": 216270,
+  "lastEdited": "2022-12-09T15:58:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "price": "₽2,600",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+0",
+    "recoil": "+0",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "loot xp": "30",
+    "node": "5bb20dcad4351e3bac1212da",
+    "ID": "gas_block_416_hk_416a5_std"
+  },
+  "sections": []
+}

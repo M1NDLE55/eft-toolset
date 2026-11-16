@@ -1,0 +1,22 @@
+{
+  "title": "Magpul MOE Carbine rubber buttpad",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magpul_MOE_Carbine_rubber_buttpad",
+  "revisionId": 357663,
+  "lastEdited": "2026-09-05T01:31:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.055 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4 after completing Mechanic's task Gunsmith Master - Part 7, Skier LL4 after completing his task Night Sweep.",
+    "ergonomics": "+3",
+    "recoil": "+0",
+    "node": "58d2912286f7744e27117493",
+    "ID": "stock_ar15_magpul_rubber_butt_pad"
+  },
+  "sections": []
+}

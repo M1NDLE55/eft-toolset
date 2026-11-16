@@ -1,0 +1,31 @@
+{
+  "title": "Memento Server RAM Module",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Memento_Server_RAM_Module",
+  "revisionId": 360587,
+  "lastEdited": "2026-09-18T18:49:30Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "69bb424e99f3fda8f107247d",
+    "id": "item_ice_memory_spec"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Icebreaker",
+      "level": 3,
+      "text": "- Inside C-1 room on servers racks on level 7\n\n- Inside the archives room on level 4\n\n- Inside the central control station room on level 0\n- Inside room No. 15 on level 3\n\n- Inside the bridge on level 9\n\n- Next to the staircase on level 7"
+    }
+  ]
+}

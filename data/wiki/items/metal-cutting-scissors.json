@@ -1,0 +1,27 @@
+{
+  "title": "Metal cutting scissors",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Metal_cutting_scissors",
+  "revisionId": 364938,
+  "lastEdited": "2026-10-25T21:24:09Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tools",
+    "weight": "0.89 kg",
+    "grid": "1x2",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5d40419286f774318526545f",
+    "ID": "item_barter_tools_metalscissors"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

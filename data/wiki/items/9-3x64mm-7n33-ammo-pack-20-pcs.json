@@ -1,0 +1,24 @@
+{
+  "title": "9.3x64mm 7N33 ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9.3x64mm_7N33_ammo_pack_(20_pcs)",
+  "revisionId": 367245,
+  "lastEdited": "2026-11-02T23:14:39Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "68ee0103b5db65191e0ec07c",
+    "ID": "item_ammo_box_93x64_20_7n33"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

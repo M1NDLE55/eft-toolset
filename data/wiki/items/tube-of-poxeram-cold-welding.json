@@ -1,0 +1,28 @@
+{
+  "title": "Tube of Poxeram cold welding",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tube_of_Poxeram_cold_welding",
+  "revisionId": 331911,
+  "lastEdited": "2026-01-09T00:05:17Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5e2af22086f7746d3f3c33fa",
+    "ID": "item_barter_building_poxeram"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

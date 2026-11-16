@@ -1,0 +1,22 @@
+{
+  "title": "MP-443 Grach polymer pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-443_Grach_polymer_pistol_grip",
+  "revisionId": 340632,
+  "lastEdited": "2026-04-21T09:14:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.055 kg",
+    "grid": "1x1",
+    "price": "₽700",
+    "trader": "Prapor LL1",
+    "ergonomics": "+3",
+    "node": "576a63cd2459771e796e0e11",
+    "ID": "pistolgrip_mp443_izmeh_mp443_std"
+  },
+  "sections": []
+}

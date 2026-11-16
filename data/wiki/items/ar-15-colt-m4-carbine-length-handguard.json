@@ -1,0 +1,26 @@
+{
+  "title": "AR-15 Colt M4 Carbine Length handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Colt_M4_Carbine_Length_handguard",
+  "revisionId": 341679,
+  "lastEdited": "2026-04-26T20:56:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.193 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1Mechanic LL2",
+    "ergonomics": "+4",
+    "recoil": "+0",
+    "Heat": "+3.2",
+    "Cooling": "-0.9",
+    "loot xp": "20",
+    "exam xp": "5",
+    "node": "5ae30db85acfc408fb139a05",
+    "ID": "handguard_ar15_colt_m4_length_std"
+  },
+  "sections": []
+}

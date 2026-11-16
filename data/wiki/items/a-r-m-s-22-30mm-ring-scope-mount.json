@@ -1,0 +1,21 @@
+{
+  "title": "A.R.M.S. 22 30mm ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A.R.M.S._22_30mm_ring_scope_mount",
+  "revisionId": 343375,
+  "lastEdited": "2026-05-05T20:50:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.18 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-1",
+    "node": "68caacc7933990601c07f479",
+    "ID": "mount_all_arms_22_scope_rings_high"
+  },
+  "sections": []
+}

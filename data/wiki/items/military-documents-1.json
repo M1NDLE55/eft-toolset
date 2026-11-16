@@ -1,0 +1,25 @@
+{
+  "title": "Military documents 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Military_documents_1",
+  "revisionId": 232790,
+  "lastEdited": "2023-04-02T04:50:41Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "node": "60915994c49cf53e4772cc38",
+    "id": "quest_military_secret_documents_1"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Documents from Prapor"
+    }
+  ]
+}

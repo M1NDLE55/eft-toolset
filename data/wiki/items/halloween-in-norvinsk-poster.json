@@ -1,0 +1,35 @@
+{
+  "title": "Halloween in Norvinsk poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween_in_Norvinsk_poster",
+  "revisionId": 366904,
+  "lastEdited": "2026-11-01T13:40:35Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6ad9ce5ad2be28d75701a170",
+    "id": "item_barter_flyers_locations_halloween26"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The poster was first obtainable during Escape from Tarkov's 2026 Halloween celebration."
+    }
+  ]
+}

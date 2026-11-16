@@ -1,0 +1,27 @@
+{
+  "title": "AK-308 railed dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-308_railed_dust_cover",
+  "revisionId": 343108,
+  "lastEdited": "2026-05-03T15:04:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.215 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "+1.5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-0.5",
+    "Dura Burn": "-4",
+    "Heat": "+0",
+    "Cooling": "+0",
+    "node": "689167248f19dbc8190728ed",
+    "ID": "reciever_ak308_izhmash_ak308_std"
+  },
+  "sections": []
+}

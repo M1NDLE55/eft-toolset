@@ -1,0 +1,37 @@
+{
+  "title": "5.45x39mm PPBS gs Igolnik",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_PPBS_gs_Igolnik",
+  "revisionId": 306257,
+  "lastEdited": "2025-03-08T06:18:19Z",
+  "kind": "ammo",
+  "categories": [
+    "5.45x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.011 kg",
+    "grid": "1x1",
+    "velocity": "905 m/s",
+    "damage": "37",
+    "accuracy": "-5",
+    "recoil": "+15",
+    "penetration": "62",
+    "armor damage": "59",
+    "ricochet": "38%",
+    "durability burn": "+70",
+    "heat": "+77",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "5c0d5e4486f77478390952fe",
+    "id": "patron_545x39_7n39"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

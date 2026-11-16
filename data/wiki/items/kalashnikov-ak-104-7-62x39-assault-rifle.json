@@ -1,0 +1,42 @@
+{
+  "title": "Kalashnikov AK-104 7.62x39 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kalashnikov_AK-104_7.62x39_assault_rifle",
+  "revisionId": 364309,
+  "lastEdited": "2026-10-13T13:41:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.205 kg",
+    "grid": "4x2",
+    "trader": "Ref LL2: RPKT mod.1 variant after completing Mechanic's task Gunsmith - Model 870, Prapor LL3: Standard",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "500",
+    "ergonomics": "62.1",
+    "velocity": "730 m/s",
+    "range": "650 m",
+    "MOA": "2.27",
+    "Weaprecoil": "Vertical: 86, Horizontal: 227",
+    "rof": "600",
+    "caliber": "7.62x39mm",
+    "node": "5ac66d725acfc43b321d4b60",
+    "ID": "weapon_izhmash_ak104_762x39"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| AK-104 T-SAW |\n| AK-104 RPKT mod.1 |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The \"RPKT mod.1\" variant is a near-identical copy of the \"RPKT\" which was one of the light machine guns available to the player in both of Escape From Tarkov's prequels and predecessors, \"Hired Ops\" and \"Contract Wars\"\n  - This machinegun sports a rather fictitious design, being described as as a modification on the basis of the AK-100 series of guns. Escape From Tarkov's rendition is pretty faithful to its Contract Wars appearance. The only significant difference being the RPKT in Escape From Tarkov lacks certain markings, and the barrel length seems to be shorter compared to the RPKTs found in Contract Wars and Hired Ops. Oddly, the RPKTs in Hired Ops and Contract Wars don't have 1.5mm RPK receivers, which would make them regular AKs, not RPKs.\n- Description of the RPKT from \"Contract Wars\"\n  - \"Modification of the RPK from 100th AK series to meet the demands of small task forces. It boasts its high cyclic rate of fire, a powerful round, and a large magazine allow operator to apply suppressing fire, forcing the enemy to lie substantially in the field. However, these advantages are mitigated by its weight, long reload and recoil.\"\n- Description of the RPKT from \"Hired Ops\"\n  - \"The RPKT Machine gun, created on the base of the AK 100 series by RusTact Dynamics, for the needs of small tactical groups, it has a high rate of fire, powerful cartridge, and a drum magazine.\""
+    }
+  ]
+}

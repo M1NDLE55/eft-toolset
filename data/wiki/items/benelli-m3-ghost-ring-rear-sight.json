@@ -1,0 +1,23 @@
+{
+  "title": "Benelli M3 Ghost Ring rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Benelli_M3_Ghost_Ring_rear_sight",
+  "revisionId": 253876,
+  "lastEdited": "2023-11-02T23:30:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.035 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "sightrange": "600",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "625ebcef6f53af4aa66b44dc",
+    "ID": "sight_rear_m3_benelli_ghost_ring_sight"
+  },
+  "sections": []
+}

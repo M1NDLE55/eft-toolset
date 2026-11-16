@@ -1,0 +1,47 @@
+{
+  "title": "Remington Model 700 7.62x51 bolt-action sniper rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Remington_Model_700_7.62x51_bolt-action_sniper_rifle",
+  "revisionId": 366580,
+  "lastEdited": "2026-10-31T04:32:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Bolt-action rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bolt-action rifle",
+    "slot": "Primary",
+    "weight": "4.06 kg",
+    "grid": "5x1",
+    "trader": "Peacekeeper LL2: Standard, Jaeger LL3: ARCH variant, Jaeger LL3: AICS variant, after completing his task The Huntsman Path - Controller, Jaeger LL4: PRO variant, after completing his task The Tarkov Shooter - Part 6",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "32",
+    "velocity": "939 m/s",
+    "range": "1000 m",
+    "MOA": "0.71",
+    "Weaprecoil": "Vertical: 127, Horizontal: 427",
+    "rof": "30",
+    "caliber": "7.62x51mm NATO",
+    "node": "5bfea6e90db834001b7347f3",
+    "ID": "weapon_remington_model_700_762x51"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- If you have a magazine in the gun, you can reload bullets straight into the gun without removing the magazine."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Fishing Place (variant AAC SD)"
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant | Attachments |\n| M700 AAC SD | |\n| M700 ARCH | |\n| M700 AICS | |\n| M700 PRO | |\n| M700 MRS | 3x |\n| M700 Mescalero | |"
+    }
+  ]
+}

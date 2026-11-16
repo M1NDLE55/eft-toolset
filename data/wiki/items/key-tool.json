@@ -1,0 +1,52 @@
+{
+  "title": "Key tool",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Key_tool",
+  "revisionId": 360274,
+  "lastEdited": "2026-09-15T11:59:50Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1",
+    "effect": "Provides 16 inventory slots while only taking up 1",
+    "node": "59fafd4b86f7745ca07e1232",
+    "id": "item_container_keybar"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Key tool is a container with the purpose of saving space within the player's inventory. It provides 16 inventory slots in a 4x4 grid and only takes up 1 inventory slot itself. Only Keys can be stored in it."
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- At the three-story dorms in the \"marked room\"\n- On a industrial shelf in warehouse 3 at the shipping yard\n\n- \"Old Gas Station\":\n  - On the desk inside\n  - At the \"giving tree\" behind it"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item was previously called Key-Bar Tool"
+    }
+  ]
+}

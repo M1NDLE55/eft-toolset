@@ -1,0 +1,38 @@
+{
+  "title": "9x18mm PM PSV",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_PSV",
+  "revisionId": 322770,
+  "lastEdited": "2025-11-18T21:16:11Z",
+  "kind": "ammo",
+  "categories": [
+    "9x18mm Makarov ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "price": "₽36",
+    "trader": "Jaeger LL2",
+    "velocity": "280 m/s",
+    "damage": "69",
+    "penetration": "3",
+    "armor damage": "5",
+    "ricochet": "1%",
+    "l bleed chance": "+10",
+    "heat": "-8.8",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "effects": "Subsonic",
+    "node": "5737207f24597760ff7b25f2",
+    "id": "patron_9x18pm_PSV"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Secure container Alpha",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_container_Alpha",
+  "revisionId": 363477,
+  "lastEdited": "2026-10-06T22:21:42Z",
+  "kind": "item",
+  "categories": [
+    "Secure containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Secure container",
+    "slot": "Pouch",
+    "weight": "0.6 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL2",
+    "slots": "2x2 grid (4 slots)",
+    "node": "544a11ac4bdc2d470e8b456a",
+    "id": "Контейнер Альфа"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Players with the \"Left Behind\" or \"Standard\" game editions start with this container.\n  - If the container is left in the pouch slot upon upgrading to a game version that comes with a bigger one, it will be removed and replaced.\n- Can only fit:\n  - Document case\n  - Dogtag case\n  - Gingy keychain\n  - Injector case\n  - Key tool\n  - Keycard holder case\n  - S I C C organizational pouch\n  - Simple wallet\n  - WZ Wallet\n  - Loot\n  - Provisions\n  - Meds\n  - Keys, Keycards & Maps\n  - Weapon mods (Besides magazines, special scopes and some mounts)\n  - Armor plates\n  - Currency\n  - Armbands\n  - Earpieces\n  - Vanity Face cover\n  - Vanity Headwear\n  - Vanity Eyewear\n  - Melee weapons\n  - Special equipment"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The Secure container Alpha is closely modeled after the real life case called the iM2050 Storm Case by Pelican. The only differences between the real life counterpart and the in-game model is the handle type.\n- In the early stages of game development, the Alpha Container used to be green."
+    }
+  ]
+}

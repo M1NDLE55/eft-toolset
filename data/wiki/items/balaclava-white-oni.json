@@ -1,0 +1,27 @@
+{
+  "title": "Balaclava (White Oni)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balaclava_(White_Oni)",
+  "revisionId": 348555,
+  "lastEdited": "2026-07-30T22:00:51Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a9ea7e4fb4a4a8a00d282a",
+    "id": "item_equipment_facecover_balaclavaSkull_arena_bp_05_white"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

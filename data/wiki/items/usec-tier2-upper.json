@@ -1,0 +1,22 @@
+{
+  "title": "USEC TIER2 upper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_TIER2_upper",
+  "revisionId": 306355,
+  "lastEdited": "2025-03-08T18:38:22Z",
+  "kind": "item",
+  "categories": [
+    "USEC upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5e4bb35286f77406a511c9bc",
+    "ID": "usec_upper_tier_2"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The Flannel is modeled after the 5.11 Tactical Flannel Shirt the pattern depicted in game is the Storm pattern and the gloves are modeled after the Under Armour UA Tactical Service Gloves"
+    }
+  ]
+}

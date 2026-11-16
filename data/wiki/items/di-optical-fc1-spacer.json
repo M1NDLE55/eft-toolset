@@ -1,0 +1,27 @@
+{
+  "title": "DI Optical FC1 Spacer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DI_Optical_FC1_Spacer",
+  "revisionId": 356655,
+  "lastEdited": "2026-08-27T20:40:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, after unlocking DI Optical FC1 reflex sight in Arena BattlePass Season 2",
+    "ergonomics": "-0.5",
+    "node": "6985bee16be2752c150e689b",
+    "ID": "mount_base_di_optical_fc1_spacer"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

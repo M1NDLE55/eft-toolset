@@ -1,0 +1,24 @@
+{
+  "title": "BEAR baseball cap (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_baseball_cap_(Olive_Drab)",
+  "revisionId": 310166,
+  "lastEdited": "2025-04-13T10:22:01Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽1,600",
+    "trader": "Ragman LL1",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5aa2b87de5b5b00016327c25",
+    "id": "cap_BEAR"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "TKPD railed dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TKPD_railed_dust_cover",
+  "revisionId": 343384,
+  "lastEdited": "2026-05-05T20:51:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.268 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "+5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-1",
+    "node": "68aee8f8130c00663d08aeb3",
+    "ID": "reciever_tkpd_sniperarms_dynamics_tkpd_std"
+  },
+  "sections": []
+}

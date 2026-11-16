@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Desert Night Camo FDE)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Desert_Night_Camo_FDE)",
+  "revisionId": 348507,
+  "lastEdited": "2026-07-30T21:23:22Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67e6a3bfbb1c56733b0511ca",
+    "id": "item_camo_dnc_fde"
+  },
+  "sections": []
+}

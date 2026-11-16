@@ -1,0 +1,21 @@
+{
+  "title": "SOK-12 Kiba Arms Zombie Custom dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_Kiba_Arms_Zombie_Custom_dust_cover",
+  "revisionId": 344126,
+  "lastEdited": "2026-05-21T10:01:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.12 kg",
+    "grid": "2x1",
+    "ergonomics": "+2",
+    "Dura Burn": "-3",
+    "node": "676017fe8cfeeba9f707c8d6",
+    "ID": "reciever_saiga12_izhmash_fa_zombie_custom"
+  },
+  "sections": []
+}

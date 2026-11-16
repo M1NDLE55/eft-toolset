@@ -1,0 +1,24 @@
+{
+  "title": "WARTECH TV-109 + TV-106 chest rig (A-TACS FG)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/WARTECH_TV-109_%2B_TV-106_chest_rig_(A-TACS_FG)",
+  "revisionId": 355238,
+  "lastEdited": "2026-08-19T13:59:56Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.8 kg",
+    "grid": "3x3",
+    "price": "₽26,000",
+    "trader": "Ragman LL1",
+    "BlocksArmor": "No",
+    "slots": "10 Slots",
+    "node": "59e7643b86f7742cbf2c109a",
+    "id": "wartech_vest"
+  },
+  "sections": []
+}

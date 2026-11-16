@@ -1,0 +1,37 @@
+{
+  "title": "HK G28 7.62x51 marksman rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G28_7.62x51_marksman_rifle",
+  "revisionId": 363049,
+  "lastEdited": "2026-10-03T16:34:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Designated marksman rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Designated marksman rifle",
+    "slot": "Primary",
+    "weight": "5.468 kg",
+    "grid": "6x2",
+    "trader": "Jaeger LL4 after completing his task Slaughterhouse",
+    "fire modes": "Single",
+    "sightrange": "1500",
+    "ergonomics": "37.5",
+    "velocity": "842 m/s",
+    "range": "700 m",
+    "MOA": "1.1",
+    "Weaprecoil": "Vertical: 75, Horizontal: 206",
+    "rof": "700",
+    "caliber": "7.62x51mm NATO",
+    "node": "6176aca650224f204c1da3fb",
+    "ID": "weapon_hk_g28_762x51"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| G28 Patrol |"
+    }
+  ]
+}

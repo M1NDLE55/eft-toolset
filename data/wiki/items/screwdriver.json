@@ -1,0 +1,26 @@
+{
+  "title": "Screwdriver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Screwdriver",
+  "revisionId": 358092,
+  "lastEdited": "2026-09-08T20:30:19Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "590c2d8786f774245b1f03f3",
+    "id": "item_tools_screwdriver"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

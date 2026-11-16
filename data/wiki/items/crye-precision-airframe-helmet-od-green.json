@@ -1,0 +1,35 @@
+{
+  "title": "Crye Precision AirFrame helmet (OD Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_helmet_(OD_Green)",
+  "revisionId": 362083,
+  "lastEdited": "2026-09-24T19:41:53Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.88 kg",
+    "grid": "2x2",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksHeadset": "No",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69cbfe34c293038df7002963",
+    "id": "item_equipment_helmet_crye_airframe_olivedrab"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This helmet can currently unintentionally be obtained in the main game via the the Scav Case."
+    }
+  ]
+}

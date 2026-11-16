@@ -1,0 +1,28 @@
+{
+  "title": "Glock ZEV Tech HEX Gen3 RMR pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_ZEV_Tech_HEX_Gen3_RMR_pistol_slide",
+  "revisionId": 338497,
+  "lastEdited": "2026-03-15T15:06:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.19 kg",
+    "grid": "2x1",
+    "price": "₽20,000",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+9",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-3",
+    "Dura Burn": "-4",
+    "Heat": "-5.5",
+    "Cooling": "+6.3",
+    "node": "5a71e22f8dc32e00094b97f4",
+    "ID": "reciever_glock_zev_tech_hex_rmr_cut_gen_3"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "AK skeletonized stock (Customized)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_skeletonized_stock_(Customized)",
+  "revisionId": 296611,
+  "lastEdited": "2024-11-11T21:10:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.264 kg",
+    "grid": "2x1",
+    "ergonomics": "+11.5",
+    "recoil": "-21",
+    "node": "66ac9d9740e27931602042d4",
+    "ID": "stock_ak_kiba_framestock_tourniquet"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Partisan"
+    }
+  ]
+}

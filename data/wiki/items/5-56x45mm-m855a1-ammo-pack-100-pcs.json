@@ -1,0 +1,18 @@
+{
+  "title": "5.56x45mm M855A1 ammo pack (100 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_M855A1_ammo_pack_(100_pcs)",
+  "revisionId": 367181,
+  "lastEdited": "2026-11-02T23:11:19Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "2x1",
+    "node": "65702652cfc010a0f5006a53",
+    "ID": "item_ammo_box_556x45_100_855a1"
+  },
+  "sections": []
+}

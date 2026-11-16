@@ -1,0 +1,28 @@
+{
+  "title": "SA58/FAL/SLR 7.62x51 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58/FAL/SLR_7.62x51_30-round_magazine",
+  "revisionId": 337547,
+  "lastEdited": "2026-03-05T23:49:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.49 kg",
+    "grid": "1x2",
+    "price": "₽4,520",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-4",
+    "checkaccuracy": "No",
+    "checkmodifier": "+10",
+    "loadmodifier": "+10",
+    "feedfailure": "Medium",
+    "capacity": "30",
+    "caliber": "7.62x51mm NATO",
+    "node": "5b7d37845acfc400170e2f87",
+    "ID": "mag_fal_sarco_fal_l1a1_orig_762x51_30"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "5.8x42mm DVX12 ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.8x42mm_DVX12_ammo_pack_(30_pcs)",
+  "revisionId": 367206,
+  "lastEdited": "2026-11-02T23:12:33Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6a9961ed793941a095047a7f",
+    "ID": "item_ammo_box_58x42_30_dvx12"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

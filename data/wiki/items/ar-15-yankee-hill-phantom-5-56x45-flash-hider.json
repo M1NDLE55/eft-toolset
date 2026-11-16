@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 Yankee Hill Phantom 5.56x45 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Yankee_Hill_Phantom_5.56x45_flash_hider",
+  "revisionId": 337877,
+  "lastEdited": "2026-03-07T06:40:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.063 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "recoil": "-6",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "node": "626a74340be03179a165e30c",
+    "ID": "muzzle_ar15_yankee_hill_phantom_aggressive_end_flash_hider_556x45"
+  },
+  "sections": []
+}

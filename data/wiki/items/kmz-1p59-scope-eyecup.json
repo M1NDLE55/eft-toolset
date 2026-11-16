@@ -1,0 +1,23 @@
+{
+  "title": "KMZ 1P59 scope eyecup",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KMZ_1P59_scope_eyecup",
+  "revisionId": 286022,
+  "lastEdited": "2024-08-21T21:40:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "price": "₽576",
+    "trader": "Prapor LL2",
+    "ergonomics": "+5",
+    "loot xp": "5",
+    "node": "5d0b5cd3d7ad1a3fe32ad263",
+    "ID": "tactical_1p59_kmz_eyecup"
+  },
+  "sections": []
+}

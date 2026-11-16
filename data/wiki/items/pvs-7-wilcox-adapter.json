@@ -1,0 +1,21 @@
+{
+  "title": "PVS-7 Wilcox Adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PVS-7_Wilcox_Adapter",
+  "revisionId": 344234,
+  "lastEdited": "2026-05-24T21:24:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Helmet mods",
+    "Helmet mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "node": "5c11046cd174af02a012e42b",
+    "ID": "nvg_wilcox_pvs7_adapter"
+  },
+  "sections": []
+}

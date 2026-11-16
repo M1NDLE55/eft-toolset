@@ -1,0 +1,23 @@
+{
+  "title": "M1A SA XS Post .125 Blade front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1A_SA_XS_Post_.125_Blade_front_sight",
+  "revisionId": 211103,
+  "lastEdited": "2022-09-20T11:00:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.038 kg",
+    "grid": "1x1",
+    "price": "₽1,600",
+    "sightrange": "500",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5aafa49ae5b5b00015042a58",
+    "ID": "sight_front_m1a_springfield_armory_xs_post_125_blade"
+  },
+  "sections": []
+}

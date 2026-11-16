@@ -1,0 +1,23 @@
+{
+  "title": "M18 smoke grenade (Yellow)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M18_smoke_grenade_(Yellow)",
+  "revisionId": 345036,
+  "lastEdited": "2026-05-26T16:36:46Z",
+  "kind": "item",
+  "categories": [
+    "Smoke grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Smoke grenade",
+    "weight": "0.539 kg",
+    "grid": "1x1",
+    "explosion delay": "1s",
+    "emission time": "30s",
+    "node": "670fa9618f83118aed06c89b",
+    "ID": "weapon_grenade_m18_yellow"
+  },
+  "sections": []
+}

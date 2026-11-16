@@ -1,0 +1,24 @@
+{
+  "title": "VSK-94 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSK-94_handguard",
+  "revisionId": 318906,
+  "lastEdited": "2025-10-02T22:26:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.167 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "+5",
+    "recoil": "+0",
+    "Heat": "+4",
+    "Cooling": "-3.5",
+    "node": "6448f2f6d4928d46d30be3f6",
+    "ID": "handguard_9a91_kbp_vsk94_std"
+  },
+  "sections": []
+}

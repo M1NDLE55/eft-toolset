@@ -1,0 +1,24 @@
+{
+  "title": "AK-308 7.62x51 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-308_7.62x51_20-round_magazine",
+  "revisionId": 343107,
+  "lastEdited": "2026-05-03T15:03:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.26 kg",
+    "grid": "1x2",
+    "trader": "Prapor LL4",
+    "ergonomics": "-2",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "7.62x51mm NATO",
+    "node": "68916701bd91cc17c109c758",
+    "ID": "mag_ak308_izhmash_ak308_std_762x51_20"
+  },
+  "sections": []
+}

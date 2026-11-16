@@ -1,0 +1,41 @@
+{
+  "title": "12/70 RIP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_RIP",
+  "revisionId": 362807,
+  "lastEdited": "2026-10-01T21:47:56Z",
+  "kind": "ammo",
+  "categories": [
+    "12/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "price": "₽302",
+    "trader": "Jaeger LL4",
+    "velocity": "410 m/s",
+    "damage": "265",
+    "accuracy": "+80",
+    "recoil": "+35",
+    "penetration": "2",
+    "armor damage": "11",
+    "ricochet": "1%",
+    "l bleed chance": "+40",
+    "h bleed chance": "+25",
+    "durability burn": "+60",
+    "heat": "+138.5",
+    "feedfailure": "Very low",
+    "misfire": "Medium",
+    "node": "5c0d591486f7744c505b416f",
+    "id": "patron_12x70_rip"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

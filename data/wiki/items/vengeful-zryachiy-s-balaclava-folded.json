@@ -1,0 +1,36 @@
+{
+  "title": "Vengeful Zryachiy's balaclava (folded)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vengeful_Zryachiy's_balaclava_(folded)",
+  "revisionId": 305017,
+  "lastEdited": "2025-01-31T15:39:18Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6531119b9afebff7ff0a1769",
+    "id": "item_equipment_head_BOSS_zryachi_balaclava_open_HALLOWEEN"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Glows in the dark"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Vengeful Zryachiy"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item was first added as part of Escape from Tarkov's 2023 Halloween celebration."
+    }
+  ]
+}

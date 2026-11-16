@@ -1,0 +1,38 @@
+{
+  "title": "Paracord",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Paracord",
+  "revisionId": 363043,
+  "lastEdited": "2026-10-03T15:41:37Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.35 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5c12688486f77426843c7d32",
+    "ID": "item_barter_other_paracord"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Required for the \"Cliff Descent\" extraction on Reserve along with a Red Rebel ice pick.\n- Required for the \"Mountain Pass\" extraction on Lighthouse along with a Red Rebel ice pick.\n- Required for the \"Climber's Trail\" extraction on Shoreline along with a Red Rebel ice pick.\n- The item is not consumed upon extraction.\n- The item is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Weapon box (6x2)\n- Weapon box (6x4)\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- On the couch to the left, right after entering the real estate agency building."
+    }
+  ]
+}

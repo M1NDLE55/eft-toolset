@@ -26,8 +26,13 @@ export function ChangeBadge({ points, price, now }: { points: readonly PricePoin
   );
 }
 
+/** The recorded points, without any from the last minute, ending at the live price. */
+export function trendSeries(points: readonly PricePoint[], price: number, now: number) {
+  return [...points.filter((point) => now - point.t > 60_000), { t: now, p: price }];
+}
+
 export function PriceTrend({ points, price, now }: { points: readonly PricePoint[]; price: number; now: number }) {
-  const series = [...points.filter((point) => now - point.t > 60_000), { t: now, p: price }];
+  const series = trendSeries(points, price, now);
   if (series.length < 2) return null;
   const change = changeSinceLastVisit(points, price, now);
   const values = series.map((point) => point.p);
@@ -46,9 +51,9 @@ export function PriceTrend({ points, price, now }: { points: readonly PricePoint
   const up = change ? change.ratio >= 0 : values.at(-1)! >= values[0];
 
   return (
-    <section aria-label="Your price history" className="flex flex-col gap-2 border border-[#1a1a1a] bg-[#0c0c0c] p-3">
+    <div className="flex flex-col gap-2">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h2 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">Best sell, as you&apos;ve seen it</h2>
+        <p className="text-xs text-[#888]">Best sell, as you&apos;ve seen it</p>
         {change && (
           <p className="text-xs text-[#999]">
             <span className={cn("font-semibold tabular-nums", up ? "text-emerald-400" : "text-red-400")}>
@@ -68,6 +73,6 @@ export function PriceTrend({ points, price, now }: { points: readonly PricePoint
           {Rubles.format(min)} – {Rubles.format(max)}
         </span>
       </div>
-    </section>
+    </div>
   );
 }

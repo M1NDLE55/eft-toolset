@@ -1,0 +1,35 @@
+{
+  "title": "Crye Precision AirFrame helmet (Botched)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_helmet_(Botched)",
+  "revisionId": 362080,
+  "lastEdited": "2026-09-24T19:41:08Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.88 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 3",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6a567ae55cbe811cbe0136a8",
+    "id": "item_equipment_helmet_crye_airframe_multicam_black_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

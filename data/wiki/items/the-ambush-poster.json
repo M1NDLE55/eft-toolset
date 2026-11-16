@@ -1,0 +1,30 @@
+{
+  "title": "The Ambush poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/The_Ambush_poster",
+  "revisionId": 331628,
+  "lastEdited": "2026-01-07T19:32:36Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a202b6aaafea7210915fd",
+    "id": "item_barter_flyers_the_ambush"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

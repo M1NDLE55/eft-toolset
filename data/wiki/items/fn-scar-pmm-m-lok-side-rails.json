@@ -1,0 +1,20 @@
+{
+  "title": "FN SCAR PMM M-LOK side rails",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_PMM_M-LOK_side_rails",
+  "revisionId": 317708,
+  "lastEdited": "2025-08-26T21:54:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.021 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3: Black, FDE",
+    "node": "66ffe6c36f11538c7d0581e3 66ffe7bab8da88805e07a03e",
+    "ID": "mount_mk16_pmm_side_rail_m_lok mount_mk16_pmm_side_rail_m_lok_fde"
+  },
+  "sections": []
+}

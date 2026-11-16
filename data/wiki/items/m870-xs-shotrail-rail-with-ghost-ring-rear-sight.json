@@ -1,0 +1,21 @@
+{
+  "title": "M870 XS SHOTRAIL rail with Ghost Ring rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_XS_SHOTRAIL_rail_with_Ghost_Ring_rear_sight",
+  "revisionId": 340782,
+  "lastEdited": "2026-04-22T07:32:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.1 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "node": "5a78948ec5856700177b1124",
+    "ID": "mount_870_xs_shot_rail_ghost_ring"
+  },
+  "sections": []
+}

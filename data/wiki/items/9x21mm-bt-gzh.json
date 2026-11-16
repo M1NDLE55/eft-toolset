@@ -1,0 +1,39 @@
+{
+  "title": "9x21mm BT gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x21mm_BT_gzh",
+  "revisionId": 355143,
+  "lastEdited": "2026-08-19T00:00:30Z",
+  "kind": "ammo",
+  "categories": [
+    "9x21mm Gyurza ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.0115 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3, after completing his task Oil Run/Shaking Up the Teller, Ref LL3",
+    "velocity": "410 m/s",
+    "damage": "52",
+    "accuracy": "-5",
+    "recoil": "+5",
+    "penetration": "32",
+    "armor damage": "42",
+    "ricochet": "40%",
+    "durability burn": "+40",
+    "heat": "+25",
+    "feedfailure": "Medium",
+    "misfire": "Very low",
+    "effects": "Tracer (red)",
+    "node": "5a26ac0ec4a28200741e1e18",
+    "id": "patron_9x21_sp13"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

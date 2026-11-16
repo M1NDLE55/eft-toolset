@@ -1,0 +1,71 @@
+{
+  "title": "LEDX Skin Transilluminator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LEDX_Skin_Transilluminator",
+  "revisionId": 366609,
+  "lastEdited": "2026-10-31T05:22:02Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.083 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5c0530ee86f774697952d952",
+    "ID": "Item_barter_medical_transilluminator"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Airdrops (Common & Medical)\n- Buried barrel cache\n- Common fund stash\n- Dead Scav\n- Ground cache\n- Medbag\n- Medcase\n- Medical supply crate\n- Plastic suitcase\n- Sport bag"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the couch on the first floor of the three-story dorms\n- On the far right shelf near the red forklift in Warehouse 3\n- On the right side corner of the table in the backroom of New Gas"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In the server room office (B12), next to the leftmost laptop\n- Inside the round shaped metal box in Laboratory block (G22) (Green Keycard)\n- On the metal shelf(s) in Quarantine Zone at Laboratory block (G11) (Blue Keycard)\n- On the metal shelf beside the desk in Laboratory block (R14) (Red Keycard)\n- On the floor in the far back of the Security (R23) (Violet Keycard)\n- In multiple locations inside of the Vestibules (Y11) (Yellow Keycard)\n- On the floor, near the hospital bed in the center of the room in Laboratory experiment's area (G12) (Black Keycard)\n- On the safe in southern office space (O23)\n- On various metal barrels in the chemical spill dome\n- Next to the forklift on the floor in the chemical spill dome"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- West wing room 104 on the white shelves\n- West wing room 205 on nightstand and another spawn to the right of the toolbox (West wing room 203 allows access to West room 205)\n- West wing room 216 two spawns immediately to the left on entry, on the ammo boxes and desk.\n- West wing room 301 on the top of the white cans (can also be found in the room attached via balcony on desk or on the bed)\n- West wing room 311 (always open) behind the bed on the pile of papers\n- East wing office room 107 on the white shelves\n- East wing room 110 (Sanitar's office)\n- East wing room 209 (always open) in the open drawer next to the table or on the window sill.\n- East wing room 219 (always open) on the floor next to table.\n\n- East wing room 226 on the shelves in the dresser behind the door and on the nightstand, in the corner next to the bed on the floor (East wing room 222 allows access to east wing room 226)\n- East wing room 227 (always open) on top of washer/dryer\n- East wing room 306 (East wing room 308 allows access to East room 306)\n- East wing room 313 on the top of boxes (East wing room 314 allows access to East room 313)\n- East wing room 328 (Health Resort universal utility room key also allows access)\n- Admin Building, on top of metal cart next to cafeteria tray\n- In the back of the ambulance outside the front of the resort building\n- Sanitar\n- At the radio tower on the empty cable spool behind the red container near the fence\n- In Voron's hideout on the floor to the right when you enter the room"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In the Pharmacy\n- In the EMERCOM medical unit\n- In the ULTRA medical storage room\n- On the shelves around the ULTRA medical storage room door\n- Can be found in the back of an ambulance, west entrance to the mall\n- On tables (or in round shaped metal boxes) in the \"Mantis\" Store\n- On the metal L table in the back of Goshan\n- In the broken box under techlight\n- On metal shelves inside tent at bear camp\n- On metal shelves inside tent at scav camp\n- In the metal tin in the back of the medical tent at the smuggler base"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the USEC camp, ontop of and under the medical table\n- Inside the EMERCOM camp on the tables (in container on the medical table, or small metal shelves next to it.)\n- In a blue locker the gray warehouse in the lumber camp\n\n- Prapor convoy, corpse where medical items spawn\n- In ZB-14 the shelves of the lockers"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- Inside the whale slide, top floor of the toystore in the Klimov Shopping Mall.\n- Inside blue cargo container at front of Lexos, on the bench.\n- Inside Mysterious room marked key\n- Inside green cargo container closest to the gate, inside on the table.\n- Behind the counter on the East side of the Concordia building facing Lexos, under the pile of meds.\n- Inside the X-ray room on the table.\n- Inside the 2nd story locked bunkhouse near downed crane, inside on the table.\n\n- Inside the Zmejskij Alley computer's room, on the bench, next to the body."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from Payback"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The LEDX Skin Transilluminator is based directly on the Veinlite LEDX Vein Finder"
+    }
+  ]
+}

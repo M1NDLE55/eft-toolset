@@ -1,0 +1,40 @@
+{
+  "title": "5.45x39mm HP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_HP",
+  "revisionId": 324805,
+  "lastEdited": "2025-11-23T16:50:01Z",
+  "kind": "ammo",
+  "categories": [
+    "5.45x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽70",
+    "trader": "Jaeger LL1",
+    "velocity": "884 m/s",
+    "damage": "76",
+    "accuracy": "+3",
+    "recoil": "-3",
+    "penetration": "9",
+    "armor damage": "15",
+    "ricochet": "20%",
+    "l bleed chance": "+15",
+    "h bleed chance": "+15",
+    "heat": "+41.6",
+    "feedfailure": "Low",
+    "misfire": "Very low",
+    "node": "56dff216d2720bbd668b4568",
+    "id": "patron_545x39_HP"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

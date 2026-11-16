@@ -1,0 +1,18 @@
+{
+  "title": "12.7x55mm PS12A ammo pack (10 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12.7x55mm_PS12A_ammo_pack_(10_pcs)",
+  "revisionId": 367113,
+  "lastEdited": "2026-11-02T23:07:36Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702420bfc87b3a34093219",
+    "ID": "item_ammo_box_127x55_10_ps12a"
+  },
+  "sections": []
+}

@@ -1,0 +1,32 @@
+{
+  "title": "FN Five-seveN MK2 5.7x28 pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_Five-seveN_MK2_5.7x28_pistol",
+  "revisionId": 362737,
+  "lastEdited": "2026-10-01T05:24:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.662 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3: Black, Peacekeeper LL2: FDE, after completing his task Wet Job - Part 1",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "88",
+    "velocity": "594 m/s",
+    "range": "50 m",
+    "MOA": "7.5",
+    "Weaprecoil": "Vertical: 274, Horizontal: 234",
+    "rof": "30",
+    "caliber": "5.7x28mm FN",
+    "def mag": "FN Five-seveN 5.7x28 20-round magazine",
+    "node": "5d3eb3b0a4b93615055e84d2 5d67abc1a4b93614ec50137f",
+    "ID": "weapon_fn_five_seven_57x28 weapon_fn_five_seven_57x28_fde"
+  },
+  "sections": []
+}

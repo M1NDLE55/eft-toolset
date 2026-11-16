@@ -1,0 +1,51 @@
+{
+  "title": "Ferro Concepts FCPC V5 Plate Carrier (Black Division)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ferro_Concepts_FCPC_V5_Plate_Carrier_(Black_Division)",
+  "revisionId": 357204,
+  "lastEdited": "2026-08-30T23:54:51Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "5.3 kg",
+    "grid": "3x3",
+    "material": "Aramid",
+    "armor": "Thorax, Back: 3 , Sides: 4",
+    "armor coverage": "Thorax, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "108",
+    "penalties": "-4% movement speed, -3% turn speed, -1% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "14 Slots",
+    "node": "689479cb47e5acd1e10be986",
+    "ID": "item_equipment_rig_BD2_ferro"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The chest rig is based on a real Ferro Concepts FCPC V5 plate carrier configured with numerous commercially available Ferro Concepts accessories. In addition to the FCPC V5 base, the configuration shown in-game includes:\n- Ferro Concepts ADAPT 3\" Assault Cummerbund (3AC)\n  - With Ferro Concepts 3AC Side Plate Pockets 6X6 on the insides\n- Ferro Concepts Roll 1 Trauma Pouch mounted beneath the front flap as an IFAK for medical supplies\n- Ferro Concepts KTAR Front Flap, a triple rifle magazine placard mounted to the front of the carrier\n- Ferro Concepts Wingman V2 wing pouches and 3AC 6x6 Side Plate Pockets mounted to the cummerbund\n- Ferro Concepts Shoulder Pads.\n\nThe model is also depicted carrying an AN/PRC-148 Multiband Inter/Intra Team Radio, AN/PRC-152 Multiband Handheld Radio, a TEA U94 Gen II Push-to-Talk (PTT), and a Samsung S23 Tactical Edition mounted in a Juggernaut Case PALS Armor Mount.\n\nOther visible accessories include a North American Rescue (NAR) CAT Tourniquet, NAR ARS Decompression Needle, ASP Tri-Fold Restraints with both the Molded Pull (black) and Key Ring Pull (rescue orange) retention variants, and utility pouches."
+    }
+  ]
+}

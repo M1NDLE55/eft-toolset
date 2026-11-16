@@ -1,0 +1,30 @@
+{
+  "title": "P226 9x19 15-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_9x19_15-round_magazine",
+  "revisionId": 337367,
+  "lastEdited": "2026-03-05T22:12:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.096 kg",
+    "grid": "1x1",
+    "price": "₽1,900",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "1",
+    "checkmodifier": "-10",
+    "loadmodifier": "-10",
+    "feedfailure": "Very low",
+    "capacity": "15",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "10",
+    "exam xp": "Examined by default",
+    "node": "56d59948d2720bb7418b4582",
+    "ID": "mag_p226_sig_std_9x19_15"
+  },
+  "sections": []
+}

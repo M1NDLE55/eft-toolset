@@ -1,0 +1,22 @@
+{
+  "title": "AK-50 dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-50_dust_cover",
+  "revisionId": 344991,
+  "lastEdited": "2026-05-26T13:42:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "1.644 kg",
+    "grid": "3x1",
+    "ergonomics": "+2",
+    "recoil": "-3",
+    "Dura Burn": "-3",
+    "node": "67d416e19bd76ef20f0e743b",
+    "ID": "reciever_ak50_theakguy_ak50_cover"
+  },
+  "sections": []
+}

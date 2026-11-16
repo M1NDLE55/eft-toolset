@@ -1,0 +1,24 @@
+{
+  "title": "NPZ 1P78-1 2.8x scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NPZ_1P78-1_2.8x_scope",
+  "revisionId": 328994,
+  "lastEdited": "2025-12-24T13:40:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.6 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "zeroing": "50, 75, 100, 125, 150",
+    "sightrange": "600",
+    "ergonomics": "-6",
+    "modes": "1",
+    "node": "618a75f0bd321d49084cd399",
+    "ID": "scope_base_npz_1p78_1_2"
+  },
+  "sections": []
+}

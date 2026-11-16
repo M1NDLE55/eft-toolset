@@ -1,0 +1,30 @@
+{
+  "title": "Arena poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Arena_poster",
+  "revisionId": 339178,
+  "lastEdited": "2026-03-27T20:03:53Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a046b8f547d6cae01922e",
+    "id": "item_barter_flyers_arena2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

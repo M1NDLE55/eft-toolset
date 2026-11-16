@@ -1,0 +1,24 @@
+{
+  "title": "R11 RSASS handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/R11_RSASS_handguard",
+  "revisionId": 341675,
+  "lastEdited": "2026-04-26T20:55:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.1 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+18.5",
+    "recoil": "+0",
+    "Heat": "-2.5",
+    "Cooling": "+3.8",
+    "node": "5a329052c4a28200741e22d3",
+    "ID": "handguard_ar15_jp_rsass_std_fde"
+  },
+  "sections": []
+}

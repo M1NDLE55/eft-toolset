@@ -1,0 +1,24 @@
+{
+  "title": "SVD SAG low profile sidemount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVD_SAG_low_profile_sidemount",
+  "revisionId": 216052,
+  "lastEdited": "2022-12-06T16:17:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.165 kg",
+    "grid": "1x1",
+    "price": "₽8,100",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5dff8db859400025ea5150d4",
+    "ID": "mount_dovetail_sag_svd_low_sidemount"
+  },
+  "sections": []
+}

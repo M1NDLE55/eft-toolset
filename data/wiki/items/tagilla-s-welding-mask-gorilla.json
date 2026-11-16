@@ -1,0 +1,40 @@
+{
+  "title": "Tagilla's welding mask \"Gorilla\"",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tagilla's_welding_mask_%22Gorilla%22",
+  "revisionId": 344280,
+  "lastEdited": "2026-05-24T21:30:15Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armored mask",
+    "slot": "Face cover",
+    "weight": "1.5 kg",
+    "grid": "2x2",
+    "material": "Armor steel",
+    "armor": "5",
+    "armor coverage": "Face, Head top, Ears, Eyes, Jaws",
+    "durability": "40",
+    "blindness protect": "50%",
+    "RicochetChance": "High",
+    "penalties": "-2% movement speed, -10% turn speed, -15% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "60a7ad3a0c5cb24b0134664a",
+    "id": "item_equipment_facecover_welding_gorilla"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Tagilla"
+    }
+  ]
+}

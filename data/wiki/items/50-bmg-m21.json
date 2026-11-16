@@ -1,0 +1,41 @@
+{
+  "title": ".50 BMG M21",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_BMG_M21",
+  "revisionId": 364895,
+  "lastEdited": "2026-10-24T13:41:07Z",
+  "kind": "ammo",
+  "categories": [
+    ".50 BMG ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.121 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "velocity": "867 m/s",
+    "damage": "220",
+    "recoil": "+20",
+    "penetration": "45",
+    "armor damage": "55",
+    "ricochet": "15%",
+    "l bleed chance": "+50",
+    "h bleed chance": "+30",
+    "effects": "Tracer (red)",
+    "node": "67dc212493ce32834b0fa446",
+    "id": "patron_127x99_m21"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The .50-caliber M21 Tracer (Head Light) round was designed for Army Air Service / Army Air Forces use to dazzle attacking aircraft to distract or blind them (like oncoming headlights). This was achieved by using igniter chemical filling rather than a compound of igniter and tracer chemicals. This produced a bright white tracer visible from the front as well as the back. The cartridge can be identified from its red tip and the marking \"Tracer (H.L.)\" on the packaging."
+    }
+  ]
+}

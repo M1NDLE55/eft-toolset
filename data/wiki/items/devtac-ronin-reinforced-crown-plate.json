@@ -1,0 +1,25 @@
+{
+  "title": "DevTac Ronin Reinforced Crown Plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Ronin_Reinforced_Crown_Plate",
+  "revisionId": 364358,
+  "lastEdited": "2026-10-13T15:00:25Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.65 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4 after completing his task Setting Priorities",
+    "material": "Aramid",
+    "armor": "4",
+    "armor coverage": "Head top",
+    "durability": "14",
+    "penalties": "-1% movement speed, +0% turn speed, +0% Ergonomics",
+    "node": "6a8433f15917e01c560716fc",
+    "ID": "item_equipment_facecover_devtac_head_armor_02"
+  },
+  "sections": []
+}

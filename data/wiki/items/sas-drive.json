@@ -1,0 +1,32 @@
+{
+  "title": "SAS drive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SAS_drive",
+  "revisionId": 363110,
+  "lastEdited": "2026-10-04T14:51:48Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.23 kg",
+    "grid": "1x1",
+    "loot xp": "150",
+    "exam xp": "45",
+    "node": "590c37d286f77443be3d7827",
+    "id": "quest_sas"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Safe\n- Dead Scav\n- Weapon box (6x6)\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: It is modeled after ICYDOCK ToughArmor MB991IK-B Rugged 2.5\" SAS/SATA HDD & SSD Mobile Rack"
+    }
+  ]
+}

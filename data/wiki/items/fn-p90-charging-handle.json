@@ -1,0 +1,23 @@
+{
+  "title": "FN P90 charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_charging_handle",
+  "revisionId": 210775,
+  "lastEdited": "2022-09-20T10:45:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "price": "₽1,600",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5cc6ea78e4a949000e1ea3c1",
+    "ID": "charge_p90_fn_p90_std"
+  },
+  "sections": []
+}

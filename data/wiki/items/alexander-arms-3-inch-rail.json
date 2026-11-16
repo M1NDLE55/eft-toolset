@@ -1,0 +1,21 @@
+{
+  "title": "Alexander Arms 3 inch rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Alexander_Arms_3_inch_rail",
+  "revisionId": 322092,
+  "lastEdited": "2025-11-17T01:38:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.022 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-0.15",
+    "node": "5b30bc165acfc40016387293",
+    "ID": "mount_mk10_alexander_arms_3_inch_rail_section"
+  },
+  "sections": []
+}

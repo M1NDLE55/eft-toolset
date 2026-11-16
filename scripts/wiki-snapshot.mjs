@@ -20,6 +20,17 @@ const KEPT = [
   ],
 ];
 
+// Left out of get_wiki_page, but kept for the item page under items/ (see DATA_ARCHITECTURE.md).
+const ITEM_PAGE_KINDS = new Set(["item", "weapon", "ammo"]);
+const ITEM_ID = /^[0-9a-f]{24}$/;
+// Item page sections that repeat what tarkov.dev serves (prices, uses, attachments) or hold only media.
+const ITEM_SECTIONS_LEFT_OUT = new Set(
+  [
+    "Introduction", "Description", "Trading", "Crafting", "Hideout", "Quests", "Requirements", "Mods",
+    "Gallery", "Layout", "Reticle", "Preview", "Vision", "Content", "See also", "Conflicting items",
+  ].map((heading) => heading.toLowerCase())
+);
+
 const LEFT_OUT = [
   ["weapon", (page) => page.infobox === "infobox weapon" || page.infobox === "infobox magazine"],
   ["ammo", (page) => page.infobox === "infobox ammo" || hasCategory(page, "Rounds")],
@@ -122,13 +133,19 @@ export function buildSnapshot(xml, source) {
   const pages = readDumpPages(xml);
   const content = pages.filter((page) => !page.redirect);
   const kept = [];
+  const itemPages = [];
   const leftOut = {};
   for (const page of content) {
     const verdict = classify(page);
     if (verdict.kept) kept.push({ ...page, kind: verdict.kind, categories: verdict.categories });
     else leftOut[page.title] = verdict.kind;
+    if (!verdict.kept && ITEM_PAGE_KINDS.has(verdict.kind)) {
+      itemPages.push({ ...page, kind: verdict.kind, categories: describe(page).categories });
+    }
   }
-  kept.sort((a, b) => (a.title < b.title ? -1 : a.title > b.title ? 1 : 0));
+  const byTitle = (a, b) => (a.title < b.title ? -1 : a.title > b.title ? 1 : 0);
+  kept.sort(byTitle);
+  itemPages.sort(byTitle);
 
   const keptTitles = new Set(kept.map((page) => page.title));
   const redirects = {};
@@ -143,39 +160,54 @@ export function buildSnapshot(xml, source) {
     }
   }
 
-  const slugCounts = new Map();
-  for (const page of kept) slugCounts.set(slug(page.title), (slugCounts.get(slug(page.title)) ?? 0) + 1);
-  const fileFor = (title) => `${slugCounts.get(slug(title)) > 1 ? `${slug(title)}-${shortHash(title)}` : slug(title)}.json`;
-
   const files = new Map();
   const index = [];
   const kinds = {};
-  let pageBytes = 0;
-  for (const page of kept) {
-    const { infobox, sections } = wikitextToPage(page.wikitext, page.title);
-    const record = {
-      title: page.title,
-      url: wikiPageUrl(page.title),
-      revisionId: page.revisionId,
-      lastEdited: page.lastEdited,
-      kind: page.kind,
-      categories: page.categories,
-      redirects: (aliases.get(page.title) ?? []).toSorted(),
-      infobox,
-      sections,
-    };
-    const file = fileFor(page.title);
-    const json = `${JSON.stringify(record, null, 2)}\n`;
-    files.set(`pages/${file}`, json);
-    pageBytes += Buffer.byteLength(json);
-    index.push({ title: page.title, file, kind: page.kind, lastEdited: page.lastEdited });
-    kinds[page.kind] = (kinds[page.kind] ?? 0) + 1;
-  }
+  // Item pages tarkov.dev ids point at, from both sets: the item page reads them by id.
+  const itemIds = {};
+  const write = (set, directory) => {
+    const slugCounts = new Map();
+    for (const page of set) slugCounts.set(slug(page.title), (slugCounts.get(slug(page.title)) ?? 0) + 1);
+    let bytes = 0;
+    for (const page of set) {
+      const parsed = wikitextToPage(page.wikitext, page.title);
+      const { infobox } = parsed;
+      const sections =
+        directory === "items"
+          ? parsed.sections.filter((section) => section.text && !ITEM_SECTIONS_LEFT_OUT.has(section.heading.toLowerCase()))
+          : parsed.sections;
+      const record = {
+        title: page.title,
+        url: wikiPageUrl(page.title),
+        revisionId: page.revisionId,
+        lastEdited: page.lastEdited,
+        kind: page.kind,
+        categories: page.categories,
+        redirects: (aliases.get(page.title) ?? []).toSorted(),
+        infobox,
+        sections,
+      };
+      const file = `${slugCounts.get(slug(page.title)) > 1 ? `${slug(page.title)}-${shortHash(page.title)}` : slug(page.title)}.json`;
+      const json = `${JSON.stringify(record, null, 2)}\n`;
+      files.set(`${directory}/${file}`, json);
+      bytes += Buffer.byteLength(json);
+      const id = infobox.node?.trim();
+      if (id && ITEM_ID.test(id) && !itemIds[id]) itemIds[id] = `${directory}/${file}`;
+      if (directory === "pages") {
+        index.push({ title: page.title, file, kind: page.kind, lastEdited: page.lastEdited });
+        kinds[page.kind] = (kinds[page.kind] ?? 0) + 1;
+      }
+    }
+    return bytes;
+  };
+  const pageBytes = write(kept, "pages");
+  const itemPageBytes = write(itemPages, "items");
 
   const snapshotDate = pages.reduce((latest, page) => (page.lastEdited > latest ? page.lastEdited : latest), "");
   const sortedObject = (object) => Object.fromEntries(Object.entries(object).toSorted(([a], [b]) => (a < b ? -1 : 1)));
   files.set("index.json", lines({ format: SNAPSHOT_FORMAT, snapshotDate, pages: index, redirects: sortedObject(redirects) }));
   files.set("left-out.json", lines(sortedObject(leftOut)));
+  files.set("item-ids.json", lines(sortedObject(itemIds)));
   const manifest = {
     format: SNAPSHOT_FORMAT,
     source,
@@ -186,6 +218,9 @@ export function buildSnapshot(xml, source) {
     redirects: Object.keys(redirects).length,
     leftOut: Object.keys(leftOut).length,
     pageBytes,
+    itemPages: itemPages.length,
+    itemIds: Object.keys(itemIds).length,
+    itemPageBytes,
   };
   files.set("manifest.json", `${JSON.stringify(manifest, null, 2)}\n`);
   return { files, manifest };

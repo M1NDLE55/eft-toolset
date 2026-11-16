@@ -1,0 +1,23 @@
+{
+  "title": "SIG Sauer Collapsing/Telescoping Stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_Collapsing/Telescoping_Stock",
+  "revisionId": 355542,
+  "lastEdited": "2026-08-23T00:34:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.396 kg",
+    "grid": "2x1",
+    "price": "₽1,830",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+23",
+    "recoil": "-18",
+    "node": "5894a13e86f7742405482982",
+    "ID": "stock_all_sig_mpx_mcx_early_type"
+  },
+  "sections": []
+}

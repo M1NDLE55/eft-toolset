@@ -1,0 +1,25 @@
+{
+  "title": "Bogatyrs patch",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bogatyrs_patch",
+  "revisionId": 348853,
+  "lastEdited": "2026-08-02T00:44:47Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "node": "68dbc04cd700686fbf0d77bd",
+    "id": "item_note_quest_bogatir_patch"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "M590A1 polymer stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M590A1_polymer_stock",
+  "revisionId": 321745,
+  "lastEdited": "2025-11-16T19:17:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.64 kg",
+    "grid": "2x1",
+    "price": "₽1,500",
+    "ergonomics": "+7",
+    "recoil": "-23",
+    "loot xp": "10",
+    "exam xp": "1",
+    "node": "5e87116b81c4ed43e83cefdd",
+    "ID": "stock_590_mossberg_590a1_std"
+  },
+  "sections": []
+}

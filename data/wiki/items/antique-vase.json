@@ -1,0 +1,53 @@
+{
+  "title": "Antique vase",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Antique_vase",
+  "revisionId": 362349,
+  "lastEdited": "2026-09-28T21:46:32Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "2 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "loot xp": "200",
+    "exam xp": "50",
+    "node": "590de7e986f7741b096e5f32",
+    "id": "item_quest_barter_valuable_vase"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In the manager office\n- In the arsenal storage"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On the ground by the cabinet on the top floor, in the office hallway"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- Next to dead scav by shore\n- Next to bed in the Usec camp"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- Next to dead body under structure left of helicopter\n- By the pipes in the broken wall in the tunnel leading to D2 extract"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In east wing room 310\n- In east wing room 205\n- In west wing room 220"
+    }
+  ]
+}

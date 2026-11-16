@@ -1,0 +1,27 @@
+{
+  "title": "HK G36 5.56x45 318mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_5.56x45_318mm_barrel",
+  "revisionId": 342233,
+  "lastEdited": "2026-04-28T21:40:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.47 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-12",
+    "velocity": "-18",
+    "MOA": "2.06",
+    "recoil": "-6.4",
+    "Dura Burn": "-17",
+    "Heat": "+4",
+    "Cooling": "+6",
+    "node": "622b3858034a3e17ad0b81f5",
+    "ID": "barrel_g36_hk_318mm_556x45"
+  },
+  "sections": []
+}

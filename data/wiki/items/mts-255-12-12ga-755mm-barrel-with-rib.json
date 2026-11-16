@@ -1,0 +1,26 @@
+{
+  "title": "MTs-255-12 12ga 755mm barrel with rib",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MTs-255-12_12ga_755mm_barrel_with_rib",
+  "revisionId": 266828,
+  "lastEdited": "2024-01-17T00:59:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.55 kg",
+    "grid": "5x1",
+    "ergonomics": "-18",
+    "velocity": "+18.9",
+    "MOA": "9.63",
+    "recoil": "-10",
+    "Dura Burn": "+8",
+    "Heat": "-18",
+    "Cooling": "-14",
+    "node": "612368f58b401f4f51239b33",
+    "ID": "barrel_mc255_755mm_12g"
+  },
+  "sections": []
+}

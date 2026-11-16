@@ -1,0 +1,21 @@
+{
+  "title": "Pompon hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pompon_hat",
+  "revisionId": 336623,
+  "lastEdited": "2026-02-26T21:03:06Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽1,500",
+    "node": "5b4329075acfc400153b78ff",
+    "id": "item_equipment_head_pompon"
+  },
+  "sections": []
+}

@@ -1,0 +1,34 @@
+{
+  "title": "NFM THOR Concealable Reinforced Vest body armor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NFM_THOR_Concealable_Reinforced_Vest_body_armor",
+  "revisionId": 367807,
+  "lastEdited": "2026-11-10T13:15:11Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "1.7 kg",
+    "grid": "3x3",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "70",
+    "penalties": "+0% movement speed, -1% turn speed, +0% Ergonomics",
+    "node": "609e8540d5c319764c2bc2e9",
+    "id": "item_equipment_armor_custom_thorcrv"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

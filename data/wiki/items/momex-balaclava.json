@@ -1,0 +1,27 @@
+{
+  "title": "Momex balaclava",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Momex_balaclava",
+  "revisionId": 362530,
+  "lastEdited": "2026-09-29T16:24:23Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL3",
+    "node": "5b432f3d5acfc4704b4a1dfb",
+    "id": "item_equipment_facecover_nomexBalaclava"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- \"Momex\" is likely a play on Nomex, a fire-retardant aramid material extensively used in firefighter gear, military flight suits and racecar driver coveralls."
+    }
+  ]
+}

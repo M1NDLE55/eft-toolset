@@ -1,0 +1,21 @@
+{
+  "title": "FN SCAR charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_charging_handle",
+  "revisionId": 210784,
+  "lastEdited": "2022-09-20T10:45:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+1",
+    "node": "6181688c6c780c1e710c9b04",
+    "ID": "unknown (charge_fn_scar_charging_handle?)"
+  },
+  "sections": []
+}

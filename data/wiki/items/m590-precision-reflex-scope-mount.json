@@ -1,0 +1,21 @@
+{
+  "title": "M590 Precision Reflex Scope Mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M590_Precision_Reflex_Scope_Mount",
+  "revisionId": 343190,
+  "lastEdited": "2026-05-03T20:55:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.1 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-0.5",
+    "node": "68badf5030572e90770cd688",
+    "ID": "mount_590_precision_reflex_scope_mount"
+  },
+  "sections": []
+}

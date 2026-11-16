@@ -1,0 +1,21 @@
+{
+  "title": "P226 Axelson Tactical MK25 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Axelson_Tactical_MK25_pistol_grip",
+  "revisionId": 340890,
+  "lastEdited": "2026-04-22T08:59:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+3",
+    "node": "5bffec120db834001c38f5fa",
+    "ID": "pistolgrip_p226_axelson_tactical_mk25"
+  },
+  "sections": []
+}

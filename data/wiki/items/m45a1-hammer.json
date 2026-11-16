@@ -1,0 +1,20 @@
+{
+  "title": "M45A1 hammer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M45A1_hammer",
+  "revisionId": 255639,
+  "lastEdited": "2023-11-23T16:13:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "ergonomics": "+2",
+    "node": "5f3e76d86cda304dcc634054",
+    "ID": "hammer_m1911_colt_m45a1_std"
+  },
+  "sections": []
+}

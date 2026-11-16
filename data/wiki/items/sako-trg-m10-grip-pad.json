@@ -1,0 +1,21 @@
+{
+  "title": "Sako TRG M10 grip pad",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_M10_grip_pad",
+  "revisionId": 314168,
+  "lastEdited": "2025-06-05T23:28:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.105 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+6",
+    "node": "673cb81f5b1511adb10cd326",
+    "ID": "foregrip_trg_sako_m10_base_pad"
+  },
+  "sections": []
+}

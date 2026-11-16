@@ -1,0 +1,27 @@
+{
+  "title": "UZI PRO 9x19 Pike Arms 114mm threaded barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_PRO_9x19_Pike_Arms_114mm_threaded_barrel",
+  "revisionId": 343211,
+  "lastEdited": "2026-05-03T21:20:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.128 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-1",
+    "velocity": "-3",
+    "MOA": "7.56",
+    "recoil": "-2.9",
+    "Dura Burn": "-15",
+    "Heat": "+5.8",
+    "Cooling": "+9.6",
+    "node": "668031705014e211b4078046",
+    "ID": "barrel_uzi_pro_pike_threaded_114mm_9x19"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "M1895/MXLR Magpul ELG M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1895/MXLR_Magpul_ELG_M-LOK_handguard",
+  "revisionId": 342784,
+  "lastEdited": "2026-04-30T21:20:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.22 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+13",
+    "recoil": "+0",
+    "Heat": "-1.2",
+    "Cooling": "+8.2",
+    "node": "67c542aeb032bbdb530201c6 67ff26a2abb53266190dfc6c",
+    "ID": "handguard_m1895_magpul_elg_m_lok_ handguard_m1895_magpul_elg_m_lok_fde"
+  },
+  "sections": []
+}

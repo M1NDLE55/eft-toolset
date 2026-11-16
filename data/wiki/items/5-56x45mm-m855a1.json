@@ -1,0 +1,39 @@
+{
+  "title": "5.56x45mm M855A1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_M855A1",
+  "revisionId": 353672,
+  "lastEdited": "2026-08-14T21:20:48Z",
+  "kind": "ammo",
+  "categories": [
+    "5.56x45mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "price": "₽292",
+    "trader": "Ref LL4",
+    "velocity": "945 m/s",
+    "damage": "49",
+    "accuracy": "-5",
+    "recoil": "+5",
+    "penetration": "44",
+    "armor damage": "47",
+    "ricochet": "38%",
+    "durability burn": "+34",
+    "heat": "+71",
+    "feedfailure": "High",
+    "misfire": "Low",
+    "node": "54527ac44bdc2d36668b4567",
+    "id": "patron_556x45_M855A1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

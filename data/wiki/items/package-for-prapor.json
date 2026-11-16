@@ -1,0 +1,25 @@
+{
+  "title": "Package for Prapor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Package_for_Prapor",
+  "revisionId": 304631,
+  "lastEdited": "2025-01-25T13:01:07Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "1.2 kg",
+    "grid": "1x2",
+    "node": "67499a9669a58fceba104a41",
+    "id": "item_quest_btr_package1"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest A Helping Hand/Shipping Delay - Part 1"
+    }
+  ]
+}

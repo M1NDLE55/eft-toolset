@@ -1,0 +1,31 @@
+{
+  "title": "Kotton beanie",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kotton_beanie",
+  "revisionId": 345118,
+  "lastEdited": "2026-05-26T18:27:37Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Beanie",
+    "slot": "Headwear",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "node": "5bd073c986f7747f627e796c",
+    "id": "item_equipment_head_kotton"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Head slots of Scavs and Scav Raiders\n- In Ground Caches"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator Kotton who is wearing the beanie during his streams."
+    }
+  ]
+}

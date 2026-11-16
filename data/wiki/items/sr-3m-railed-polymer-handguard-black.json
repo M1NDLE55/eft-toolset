@@ -1,0 +1,24 @@
+{
+  "title": "SR-3M railed polymer handguard (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-3M_railed_polymer_handguard_(Black)",
+  "revisionId": 342693,
+  "lastEdited": "2026-04-30T20:38:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "+8",
+    "recoil": "+0",
+    "Heat": "+4.2",
+    "Cooling": "-3.8",
+    "node": "6568a6bf2c5fb7afc70bc424",
+    "ID": "handguard_sr3m_kiba_railed_handguard"
+  },
+  "sections": []
+}

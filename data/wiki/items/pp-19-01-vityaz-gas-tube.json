@@ -1,0 +1,23 @@
+{
+  "title": "PP-19-01 Vityaz gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-19-01_Vityaz_gas_tube",
+  "revisionId": 288304,
+  "lastEdited": "2024-08-26T00:04:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "Heat": "-1.5",
+    "Cooling": "+1.3",
+    "loot xp": "50",
+    "exam xp": "10",
+    "node": "59ccd11386f77428f24a488f",
+    "ID": "gas_block_ak_izhmash_pp-19-01_std"
+  },
+  "sections": []
+}

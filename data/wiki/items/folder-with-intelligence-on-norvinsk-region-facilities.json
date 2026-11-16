@@ -1,0 +1,31 @@
+{
+  "title": "Folder with intelligence on Norvinsk region facilities",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Folder_with_intelligence_on_Norvinsk_region_facilities",
+  "revisionId": 348849,
+  "lastEdited": "2026-08-01T20:03:22Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "node": "689b5072665c386d9c007a41",
+    "id": "item_info_note_intelligence_data"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- This is one of the minor evidence used in The Ticket"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "In the safe inside Kruglov's office (R22) on the second level in The Lab. Two TerraGroup Labs keycard (Black) swipes are required to access it."
+    }
+  ]
+}

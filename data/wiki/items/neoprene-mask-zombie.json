@@ -1,0 +1,27 @@
+{
+  "title": "Neoprene mask (Zombie)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Neoprene_mask_(Zombie)",
+  "revisionId": 348567,
+  "lastEdited": "2026-07-30T22:02:44Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 0",
+    "node": "67aaf851bf7609058606a928",
+    "id": "item_equipment_facecover_redflame_arena_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Desert Digital)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Desert_Digital)",
+  "revisionId": 356794,
+  "lastEdited": "2026-08-29T20:24:54Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67d7f01a89b779ee2a0a5cc8",
+    "id": "item_camo_digital_desert"
+  },
+  "sections": []
+}

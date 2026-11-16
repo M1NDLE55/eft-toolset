@@ -1,0 +1,23 @@
+{
+  "title": "SOK-12 Custom Guns Type-340 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_Custom_Guns_Type-340_handguard",
+  "revisionId": 342194,
+  "lastEdited": "2026-04-28T21:22:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.24 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+20",
+    "recoil": "+0",
+    "Heat": "+2.1",
+    "node": "6086b5731246154cad35d6c7",
+    "ID": "handguard_saiga12_custom_guns_type_340"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Hexagon medium length rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hexagon_medium_length_rail",
+  "revisionId": 361808,
+  "lastEdited": "2026-09-24T13:31:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.075 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4: Black, Skier LL4: Anodized red",
+    "ergonomics": "-0.2",
+    "node": "5b800ebc86f774394e230a90 5b8403a086f7747ff856f4e2",
+    "ID": "mount_hex_hexagon_medium mount_hex_hexagon_medium_red"
+  },
+  "sections": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Haley Strategic D3CRX Chest Harness (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Haley_Strategic_D3CRX_Chest_Harness_(MultiCam)",
+  "revisionId": 361495,
+  "lastEdited": "2026-09-23T19:40:32Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.9 kg",
+    "grid": "3x3",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 3",
+    "BlocksArmor": "No",
+    "slots": "18 Slots",
+    "node": "6a7c85022369e59dd307130c",
+    "ID": "item_equipment_d3crx_multicam"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

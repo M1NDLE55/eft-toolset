@@ -1,0 +1,32 @@
+{
+  "title": "Stechkin APB 9x18PM silenced machine pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stechkin_APB_9x18PM_silenced_machine_pistol",
+  "revisionId": 340934,
+  "lastEdited": "2026-04-22T21:57:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "1.611 kg",
+    "grid": "4x1",
+    "trader": "Prapor LL2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "200",
+    "ergonomics": "62",
+    "velocity": "291 m/s",
+    "range": "50 m",
+    "MOA": "11",
+    "Weaprecoil": "Vertical: 220, Horizontal: 174",
+    "rof": "750",
+    "caliber": "9x18mm Makarov",
+    "loot xp": "20",
+    "node": "5abccb7dd8ce87001773e277",
+    "ID": "weapon_toz_apb_9x18pm"
+  },
+  "sections": []
+}

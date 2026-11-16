@@ -1,0 +1,26 @@
+{
+  "title": "Glock 9x19 CARVER Custom 4 Port compensator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_CARVER_Custom_4_Port_compensator",
+  "revisionId": 337488,
+  "lastEdited": "2026-03-05T23:20:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.036 kg",
+    "grid": "1x1",
+    "price": "₽6,160",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-5",
+    "accuracy": "+2",
+    "recoil": "-15",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "5a7ad0c451dfba0013379712",
+    "ID": "muzzle_glock_carver_custom_4_port_gen_3_9x19"
+  },
+  "sections": []
+}

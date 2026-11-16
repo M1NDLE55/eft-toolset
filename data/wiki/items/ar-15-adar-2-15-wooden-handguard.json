@@ -1,0 +1,26 @@
+{
+  "title": "AR-15 ADAR 2-15 wooden handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_ADAR_2-15_wooden_handguard",
+  "revisionId": 340896,
+  "lastEdited": "2026-04-22T09:01:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.385 kg",
+    "grid": "2x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+12",
+    "recoil": "+0",
+    "Heat": "+7.4",
+    "Cooling": "-3.2",
+    "loot xp": "20",
+    "exam xp": "5",
+    "node": "5c0e2f5cd174af02a012cfc9",
+    "ID": "handguard_ar15_adar_wood_v1"
+  },
+  "sections": []
+}

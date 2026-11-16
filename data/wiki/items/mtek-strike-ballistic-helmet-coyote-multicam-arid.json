@@ -1,0 +1,29 @@
+{
+  "title": "MTEK STRIKE Ballistic helmet (Coyote/MultiCam Arid)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MTEK_STRIKE_Ballistic_helmet_(Coyote/MultiCam_Arid)",
+  "revisionId": 344369,
+  "lastEdited": "2026-05-24T22:12:13Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.95 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL4",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "40",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "67597d241d5a44f2f605df06",
+    "id": "Item_equipment_helmet_strike_ballistic_coyote_camouflage"
+  },
+  "sections": []
+}

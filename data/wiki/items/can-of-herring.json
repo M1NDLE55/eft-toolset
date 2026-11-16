@@ -1,0 +1,28 @@
+{
+  "title": "Can of herring",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_herring",
+  "revisionId": 264598,
+  "lastEdited": "2024-01-10T23:20:50Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.28 kg",
+    "grid": "1x1",
+    "price": "₽820",
+    "effect": "Energy: +47, Hydration: -3",
+    "use time": "5s",
+    "node": "57347d9c245977448b40fa85",
+    "id": "herring"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Ration supply crates\n- In Sport bags"
+    }
+  ]
+}

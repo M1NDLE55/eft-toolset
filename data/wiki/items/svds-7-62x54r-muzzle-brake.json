@@ -1,0 +1,26 @@
+{
+  "title": "SVDS 7.62x54R muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVDS_7.62x54R_muzzle_brake",
+  "revisionId": 341993,
+  "lastEdited": "2026-04-27T23:51:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽602",
+    "trader": "Prapor LL3",
+    "ergonomics": "-1",
+    "accuracy": "+0",
+    "recoil": "-10",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5c471bfc2e221602b21d4e17",
+    "ID": "muzzle_svd_izhmash_svd_s_std_762x54"
+  },
+  "sections": []
+}

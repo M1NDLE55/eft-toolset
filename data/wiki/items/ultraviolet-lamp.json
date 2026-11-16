@@ -1,0 +1,32 @@
+{
+  "title": "Ultraviolet lamp",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ultraviolet_lamp",
+  "revisionId": 355914,
+  "lastEdited": "2026-08-24T21:27:03Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "50",
+    "node": "590a3d9c86f774385926e510",
+    "id": "item_electr_uvlamp"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Samson is a parody of the trademark Samsung"
+    }
+  ]
+}

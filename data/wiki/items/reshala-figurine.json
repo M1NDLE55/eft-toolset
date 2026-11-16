@@ -1,0 +1,26 @@
+{
+  "title": "Reshala figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Reshala_figurine",
+  "revisionId": 343716,
+  "lastEdited": "2026-05-10T11:00:17Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "66572be36a723f7f005a066e",
+    "id": "Item_barter_tarko_reshala"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

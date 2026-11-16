@@ -1,0 +1,38 @@
+{
+  "title": "Bundle of wires",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bundle_of_wires",
+  "revisionId": 364292,
+  "lastEdited": "2026-10-13T12:56:11Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5c06779c86f77426e00dd782",
+    "ID": "item_barter_electr_wires"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the server rooms in White Queen"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In TechLight\n- In Texho\n- In Rasmussen"
+    }
+  ]
+}

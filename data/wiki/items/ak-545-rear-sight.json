@@ -1,0 +1,22 @@
+{
+  "title": "AK-545 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-545_rear_sight",
+  "revisionId": 293240,
+  "lastEdited": "2024-09-29T22:24:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "sightrange": "500",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "628b9471078f94059a4b9bfb",
+    "ID": "sight_rear_ak_sag_mk3_chassis_rear_sight"
+  },
+  "sections": []
+}

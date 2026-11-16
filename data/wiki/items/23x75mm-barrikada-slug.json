@@ -1,0 +1,38 @@
+{
+  "title": "23x75mm Barrikada slug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/23x75mm_Barrikada_slug",
+  "revisionId": 353117,
+  "lastEdited": "2026-08-10T17:15:15Z",
+  "kind": "ammo",
+  "categories": [
+    "23x75mmR ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "velocity": "420 m/s",
+    "damage": "192",
+    "accuracy": "-5",
+    "recoil": "+25",
+    "penetration": "39",
+    "armor damage": "75",
+    "ricochet": "40%",
+    "durability burn": "+170",
+    "heat": "+232.5",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "node": "5e85aa1a988a8701445df1f5",
+    "id": "patron_23x75_barricade"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

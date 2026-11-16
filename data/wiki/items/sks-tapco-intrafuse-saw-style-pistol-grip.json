@@ -1,0 +1,23 @@
+{
+  "title": "SKS TAPCO Intrafuse SAW-Style pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_TAPCO_Intrafuse_SAW-Style_pistol_grip",
+  "revisionId": 340825,
+  "lastEdited": "2026-04-22T08:16:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "price": "₽2,500",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+3",
+    "recoil": "-1",
+    "node": "5afd7e445acfc4001637e35a",
+    "ID": "pistolgrip_sks_tapco_saw_style"
+  },
+  "sections": []
+}

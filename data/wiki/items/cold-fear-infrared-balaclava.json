@@ -1,0 +1,23 @@
+{
+  "title": "Cold Fear infrared balaclava",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cold_Fear_infrared_balaclava",
+  "revisionId": 334287,
+  "lastEdited": "2026-02-10T14:31:45Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL2",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5ab8f39486f7745cd93a1cca",
+    "id": "balaclava_cg"
+  },
+  "sections": []
+}

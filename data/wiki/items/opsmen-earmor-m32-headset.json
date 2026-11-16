@@ -1,0 +1,24 @@
+{
+  "title": "OPSMEN Earmor M32 headset",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OPSMEN_Earmor_M32_headset",
+  "revisionId": 320873,
+  "lastEdited": "2025-11-11T20:43:56Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.49 kg",
+    "grid": "2x2",
+    "trader": "Skier LL1",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "6033fa48ffd42c541047f728",
+    "id": "item_equipment_headset_m32"
+  },
+  "sections": []
+}

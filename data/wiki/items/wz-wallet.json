@@ -1,0 +1,51 @@
+{
+  "title": "WZ Wallet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/WZ_Wallet",
+  "revisionId": 360258,
+  "lastEdited": "2026-09-15T11:54:47Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "0.069 kg",
+    "grid": "1x1",
+    "effect": "Provides 4 inventory slots while only taking up 1",
+    "node": "60b0f6c058e0b0481a09ad11",
+    "id": "item_barter_walletwz"
+  },
+  "sections": [
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The WZ Wallet is a container with the purpose of saving space within the player's inventory. It provides 4 inventory slots in a 2x2 grid and only takes up 1 inventory slot itself. It can only store:\n- Currency\n- Keycards"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- At the three-story dorms in the \"marked room\"\n- On a industrial shelf in warehouse 3 at the shipping yard\n\n- \"Old Gas Station\":\n  - On the desk inside\n  - At the \"giving tree\" behind it"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator WillerZ."
+    }
+  ]
+}

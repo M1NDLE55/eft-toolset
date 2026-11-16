@@ -1,0 +1,20 @@
+{
+  "title": "HK417 E1 Extended Charging Handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK417_E1_Extended_Charging_Handle",
+  "revisionId": 297073,
+  "lastEdited": "2024-11-24T22:45:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.041 kg",
+    "grid": "1x1",
+    "ergonomics": "+1",
+    "node": "61702d8a67085e45ef140b24",
+    "ID": "charge_417_hk_e1_extended_charging_handle"
+  },
+  "sections": []
+}

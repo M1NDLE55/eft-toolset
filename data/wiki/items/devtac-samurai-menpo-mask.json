@@ -1,0 +1,29 @@
+{
+  "title": "DevTac Samurai Menpo Mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Samurai_Menpo_Mask",
+  "revisionId": 357800,
+  "lastEdited": "2026-09-08T12:51:27Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, after unlocking it in the Customs Tactical Map",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "No",
+    "node": "68bee22e79c8186398098e6d",
+    "id": "item_equipment_facecover_devtac_samurai_bp2_black"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

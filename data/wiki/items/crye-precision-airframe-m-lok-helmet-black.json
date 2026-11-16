@@ -1,0 +1,35 @@
+{
+  "title": "Crye Precision AirFrame M-LOK helmet (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_M-LOK_helmet_(Black)",
+  "revisionId": 348722,
+  "lastEdited": "2026-07-30T22:36:11Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.88 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 2",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69cd423343c6b278a2076cca",
+    "id": "item_equipment_helmet_crye_airframe_mlok_black_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

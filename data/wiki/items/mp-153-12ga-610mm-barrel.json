@@ -1,0 +1,27 @@
+{
+  "title": "MP-153 12ga 610mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-153_12ga_610mm_barrel",
+  "revisionId": 266829,
+  "lastEdited": "2024-01-17T00:59:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.25 kg",
+    "grid": "4x1",
+    "price": "₽7,180",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-7",
+    "velocity": "+9.8",
+    "MOA": "19.94",
+    "recoil": "-4",
+    "Heat": "-12",
+    "Cooling": "-8",
+    "node": "588200af24597742fa221dfb",
+    "ID": "barrel_mr153_610mm"
+  },
+  "sections": []
+}

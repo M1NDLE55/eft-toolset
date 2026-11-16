@@ -1,0 +1,20 @@
+{
+  "title": "RFB thread spacer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RFB_thread_spacer",
+  "revisionId": 220542,
+  "lastEdited": "2023-01-02T18:31:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.091 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "node": "5f2aa43ba9b91d26f20ae6d2",
+    "ID": "muzzle_all_kel_tec_thread_spacer_762x51"
+  },
+  "sections": []
+}

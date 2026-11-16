@@ -1,0 +1,27 @@
+{
+  "title": "LShZ-2DTM aventail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LShZ-2DTM_aventail",
+  "revisionId": 296996,
+  "lastEdited": "2024-11-22T21:32:11Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.2 kg",
+    "grid": "2x1",
+    "trader": "Ragman LL4",
+    "material": "Combined materials",
+    "armor": "5",
+    "armor coverage": "Back neck",
+    "durability": "35",
+    "penalties": "-15% turn speed, -4% Ergonomics,",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "5d6d3be5a4b9361bc73bc763",
+    "ID": "item_equipment_helmet_lshz2dtm_aventail"
+  },
+  "sections": []
+}

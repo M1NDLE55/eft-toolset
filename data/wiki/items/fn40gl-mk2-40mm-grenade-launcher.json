@@ -1,0 +1,36 @@
+{
+  "title": "FN40GL Mk2 40mm grenade launcher",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN40GL_Mk2_40mm_grenade_launcher",
+  "revisionId": 340980,
+  "lastEdited": "2026-04-22T22:29:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Grenade launchers",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Grenade launcher",
+    "slot": "Primary",
+    "weight": "3 kg",
+    "grid": "3x2",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "54",
+    "velocity": "76 m/s",
+    "range": "50 m",
+    "MOA": "24.06",
+    "Weaprecoil": "Vertical: 228, Horizontal: 455",
+    "rof": "30",
+    "caliber": "40x46mm",
+    "node": "5e81ebcd8e146c7080625e15",
+    "ID": "weapon_fn_40gl_s"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be found on Big Pipe"
+    }
+  ]
+}

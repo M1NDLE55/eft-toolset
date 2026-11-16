@@ -1,0 +1,27 @@
+{
+  "title": "HK MP5 9x19 X Products X-5 50-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_9x19_X_Products_X-5_50-round_drum_magazine",
+  "revisionId": 352907,
+  "lastEdited": "2026-08-09T21:57:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.64 kg",
+    "grid": "1x2",
+    "trader": "Ref LL2",
+    "ergonomics": "-10",
+    "checkaccuracy": "No",
+    "checkmodifier": "+15",
+    "loadmodifier": "+10",
+    "feedfailure": "Low",
+    "capacity": "50",
+    "caliber": "9x19mm Parabellum",
+    "node": "5a351711c4a282000b1521a4",
+    "ID": "mag_mp5_x_products_x_5_9x19_50"
+  },
+  "sections": []
+}

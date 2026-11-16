@@ -1,0 +1,35 @@
+{
+  "title": "HighCom Trooper TFO body armor (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HighCom_Trooper_TFO_body_armor_(MultiCam)",
+  "revisionId": 367809,
+  "lastEdited": "2026-11-10T13:15:20Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "4.1 kg",
+    "grid": "3x3",
+    "trader": "Ref LL3",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "100",
+    "penalties": "-1% movement speed, -1% turn speed, +0% Ergonomics",
+    "node": "5c0e655586f774045612eeb2",
+    "ID": "item_equipment_armor_trooper"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

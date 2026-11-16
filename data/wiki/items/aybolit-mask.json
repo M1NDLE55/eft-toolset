@@ -1,0 +1,26 @@
+{
+  "title": "Aybolit mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aybolit_mask",
+  "revisionId": 333135,
+  "lastEdited": "2026-01-27T22:59:01Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "676029e22749de558a0b7e69",
+    "ID": "item_equipment_facecover_xmass_mask_doctor"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This face cover first appeared during Escape from Tarkov's 2024 Christmas Celebration.\n- Doctor Aybolit is a fictional character in Russia. Aybolit may be translated as \"Ai\" (\"Ouch\"), \"Bolit\" ([it] hurts!)\"."
+    }
+  ]
+}

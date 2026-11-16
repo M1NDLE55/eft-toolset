@@ -1,0 +1,32 @@
+{
+  "title": "42 Signature Blend English Tea",
+  "url": "https://escapefromtarkov.fandom.com/wiki/42_Signature_Blend_English_Tea",
+  "revisionId": 363223,
+  "lastEdited": "2026-10-05T15:48:36Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.22 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "15",
+    "node": "5bc9be8fd4351e00334cae6e",
+    "id": "item_barter_other_tea"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Ration supply crate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator Sacriel. The \"42nd\" is what \"Sacriel\" calls his subscribers. It is a reference to the naming of military platoons. The number 42, specifically, was chosen as a reference to Douglas Adams' \"The Hitchhiker's Guide to the Galaxy\"."
+    }
+  ]
+}

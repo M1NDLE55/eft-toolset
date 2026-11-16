@@ -1,0 +1,36 @@
+{
+  "title": "AK 7.62x39 ProMag AK-A-16 73-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_7.62x39_ProMag_AK-A-16_73-round_drum_magazine",
+  "revisionId": 352318,
+  "lastEdited": "2026-08-07T21:35:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.72 kg",
+    "grid": "2x2",
+    "price": "₽41,600",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-8",
+    "checkaccuracy": "No",
+    "checkmodifier": "+15",
+    "loadmodifier": "+12.5",
+    "feedfailure": "High",
+    "capacity": "73",
+    "caliber": "7.62x39mm, .366 TKM",
+    "loot xp": "15",
+    "exam xp": "2",
+    "node": "5c6175362e221600133e3b94",
+    "ID": "mag_ak_promag_ak_a_16_drum_762x39_73"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

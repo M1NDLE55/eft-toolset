@@ -1,0 +1,29 @@
+{
+  "title": "LBT-1961A Load Bearing Chest Rig (DNC)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LBT-1961A_Load_Bearing_Chest_Rig_(DNC)",
+  "revisionId": 348699,
+  "lastEdited": "2026-07-30T22:33:26Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.36 kg",
+    "grid": "3x3",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 2",
+    "BlocksArmor": "No",
+    "slots": "18 Slots",
+    "node": "69b124822c6ed131290d921f",
+    "id": "item_equipment_rig_bearing_dnc_green_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "title": "ANA Tactical M2 plate carrier (A-TACS iX)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ANA_Tactical_M2_plate_carrier_(A-TACS_iX)",
+  "revisionId": 362052,
+  "lastEdited": "2026-09-24T18:58:06Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.25 kg",
+    "grid": "4x4",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 3",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Thorax, Stomach, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "96",
+    "penalties": "-2% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "18 Slots",
+    "node": "6a5629dfbd83cb160606681c",
+    "id": "item_equipment_rig_M2_atacsx_fg_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

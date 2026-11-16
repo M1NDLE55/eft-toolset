@@ -1,0 +1,25 @@
+{
+  "title": "ARRS station mechanic's notes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ARRS_station_mechanic's_notes",
+  "revisionId": 353529,
+  "lastEdited": "2026-08-13T21:03:13Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "6877c84d020406d3ea060551",
+    "id": "item_info_note_quest_kord_mechanic"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here"
+    }
+  ]
+}

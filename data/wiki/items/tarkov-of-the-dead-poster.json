@@ -1,0 +1,30 @@
+{
+  "title": "Tarkov of the Dead poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tarkov_of_the_Dead_poster",
+  "revisionId": 366905,
+  "lastEdited": "2026-11-01T13:40:41Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6ad9ce23e0f9657cf507add6",
+    "id": "item_barter_flyers_event_halloween26"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This poster is a reference to the movie \"Shaun of the Dead\"."
+    }
+  ]
+}

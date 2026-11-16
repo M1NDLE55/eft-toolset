@@ -1,0 +1,39 @@
+{
+  "title": ".366 TKM FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.366_TKM_FMJ",
+  "revisionId": 322786,
+  "lastEdited": "2025-11-18T21:19:57Z",
+  "kind": "ammo",
+  "categories": [
+    ".366 TKM ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.016 kg",
+    "grid": "1x1",
+    "price": "₽42",
+    "trader": "Jaeger LL1",
+    "velocity": "580 m/s",
+    "damage": "98",
+    "recoil": "+10",
+    "penetration": "23",
+    "armor damage": "48",
+    "ricochet": "6.5%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+25",
+    "heat": "+83.9",
+    "feedfailure": "Low",
+    "misfire": "Medium",
+    "node": "59e6542b86f77411dc52a77a",
+    "id": "patron_366_TKM_FMJ"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Spiritus Systems Bank Robber chest rig (MultiCam Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Spiritus_Systems_Bank_Robber_chest_rig_(MultiCam_Black)",
+  "revisionId": 333600,
+  "lastEdited": "2026-02-03T10:30:08Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.7 kg",
+    "grid": "3x2",
+    "trader": "Ragman LL1",
+    "BlocksArmor": "No",
+    "slots": "8 Slots",
+    "node": "5e4abc1f86f774069619fbaa",
+    "ID": "item_equipment_rig_bankrobber"
+  },
+  "sections": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "\"The Eye\" mortar strike signaling device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/%22The_Eye%22_mortar_strike_signaling_device",
+  "revisionId": 312367,
+  "lastEdited": "2025-04-29T11:50:28Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "node": "6655e35b6bc645cb7b059912",
+    "id": "Item_spec_detector"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market, be sold to traders or destroyed.\n- While a player has the device equipped, there is a notification in the bottom right corner of the screen when a mortar fire barrage happens. When it's near a major landmark, the location is also mentioned.\n\n- The device vibrates (sound indicator) when a mortar fire barrage is very close. This can also be heard by other players.\n\n- This item is not lootable from players and can only be placed in a special item slot."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from A Helping Hand"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item was first introduced in the Mortar Strike event"
+    }
+  ]
+}

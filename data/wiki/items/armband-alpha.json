@@ -1,0 +1,26 @@
+{
+  "title": "Armband (Alpha)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Alpha)",
+  "revisionId": 362728,
+  "lastEdited": "2026-09-30T20:38:49Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "619bc61e86e01e16f839a999",
+    "id": "item_equipment_armband_alpha"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This armband is only available to players who have created their account in the Closed Alpha Testing stage of Escape from Tarkov which lasted till 26th July 2017."
+    }
+  ]
+}

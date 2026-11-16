@@ -1,0 +1,37 @@
+{
+  "title": "SR-2M Veresk 9x21 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-2M_Veresk_9x21_submachine_gun",
+  "revisionId": 362669,
+  "lastEdited": "2026-09-29T22:15:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "1.773 kg",
+    "grid": "3x1",
+    "trader": "Prapor LL3",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "90",
+    "velocity": "467 m/s",
+    "range": "200 m",
+    "MOA": "7.83",
+    "Weaprecoil": "Vertical: 44, Horizontal: 190",
+    "rof": "950",
+    "caliber": "9x21mm Gyurza",
+    "node": "62e14904c2699c0ec93adc47",
+    "ID": "weapon_tochmash_sr2m_veresk_9x21"
+  },
+  "sections": [
+    {
+      "heading": "Weapon Variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| SR-2M FSB |\n| SR-2M TAC |"
+    }
+  ]
+}

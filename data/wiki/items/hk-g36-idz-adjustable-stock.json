@@ -1,0 +1,22 @@
+{
+  "title": "HK G36 IDZ adjustable stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_IDZ_adjustable_stock",
+  "revisionId": 337997,
+  "lastEdited": "2026-03-08T00:34:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.41 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+9",
+    "recoil": "-21",
+    "node": "67110d06723c2733410161e8",
+    "ID": "stock_g36_hk_idz"
+  },
+  "sections": []
+}

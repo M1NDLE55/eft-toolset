@@ -1,0 +1,25 @@
+{
+  "title": "HK MP5 CAA HX-5 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_CAA_HX-5_handguard",
+  "revisionId": 342050,
+  "lastEdited": "2026-04-28T00:30:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.308 kg",
+    "grid": "2x1",
+    "price": "₽14,400",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+12",
+    "recoil": "+0",
+    "Heat": "-2",
+    "loot xp": "10",
+    "node": "5d010d1cd7ad1a59283b1ce7",
+    "ID": "handguard_mp5_caa_hx5"
+  },
+  "sections": []
+}

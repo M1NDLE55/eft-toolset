@@ -1,0 +1,28 @@
+{
+  "title": "5.11 Tactical RUSH 100 backpack (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.11_Tactical_RUSH_100_backpack_(Black)",
+  "revisionId": 355729,
+  "lastEdited": "2026-08-23T19:34:47Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2.6 kg",
+    "grid": "6x7",
+    "penalties": "-5% movement speed, -3% turn speed, -7% Ergonomics",
+    "slots": "45 slots, 2x 2x2 grid, 1x 1x2 grid, 1x 5x7 grid",
+    "node": "67458730df3c1da90b0b052b",
+    "ID": "item_equipment_tactical_rush100"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

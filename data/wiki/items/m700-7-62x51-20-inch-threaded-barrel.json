@@ -1,0 +1,27 @@
+{
+  "title": "M700 7.62x51 20 inch threaded barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_7.62x51_20_inch_threaded_barrel",
+  "revisionId": 340888,
+  "lastEdited": "2026-04-22T08:59:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.2 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-34",
+    "velocity": "+10",
+    "accuracy": "+10",
+    "MOA": "0.79",
+    "recoil": "-15.2",
+    "Heat": "-15",
+    "Cooling": "-10",
+    "node": "5bfebc320db8340019668d79",
+    "ID": "barrel_m700_remington_heavy_threaded_508mm"
+  },
+  "sections": []
+}

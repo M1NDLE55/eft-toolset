@@ -1,0 +1,27 @@
+{
+  "title": "AKM Hexagon 7.62x39 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM_Hexagon_7.62x39_sound_suppressor",
+  "revisionId": 337419,
+  "lastEdited": "2026-03-05T22:44:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.462 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-5",
+    "velocity": "+0.7",
+    "accuracy": "+0",
+    "recoil": "-1.5",
+    "Dura Burn": "+75",
+    "Heat": "+14",
+    "Cooling": "+6",
+    "node": "593d489686f7745c6255d58a",
+    "ID": "silencer_akm_hexagon_akm_762x39"
+  },
+  "sections": []
+}

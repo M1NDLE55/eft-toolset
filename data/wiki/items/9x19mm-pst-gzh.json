@@ -1,0 +1,37 @@
+{
+  "title": "9x19mm Pst gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_Pst_gzh",
+  "revisionId": 356447,
+  "lastEdited": "2026-08-26T01:26:50Z",
+  "kind": "ammo",
+  "categories": [
+    "9x19mm Parabellum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "price": "₽42",
+    "trader": "Prapor LL1, Mechanic LL2",
+    "velocity": "457 m/s",
+    "damage": "54",
+    "penetration": "20",
+    "armor damage": "33",
+    "ricochet": "5%",
+    "durability burn": "+117",
+    "heat": "+7.1",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "56d59d3ad2720bdb418b4577",
+    "id": "patron_9x19_PST_gzh"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "12/70 Dual Sabot slug ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_Dual_Sabot_slug_ammo_pack_(25_pcs)",
+  "revisionId": 367121,
+  "lastEdited": "2026-11-02T23:08:03Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570243fcfc010a0f50069fb",
+    "ID": "item_ammo_box_12g_25_dual_sabot_slug"
+  },
+  "sections": []
+}

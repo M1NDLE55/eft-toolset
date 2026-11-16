@@ -1,0 +1,23 @@
+{
+  "title": "Stich Profi Chimera boonie hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stich_Profi_Chimera_boonie_hat",
+  "revisionId": 356958,
+  "lastEdited": "2026-08-30T10:10:15Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.15 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL2",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "60b52e5bc7d8103275739d67",
+    "id": "item_equipment_head_panama_stichprofi"
+  },
+  "sections": []
+}

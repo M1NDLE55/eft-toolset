@@ -1,0 +1,23 @@
+{
+  "title": "MP-153 polymer forestock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-153_polymer_forestock",
+  "revisionId": 340626,
+  "lastEdited": "2026-04-21T09:11:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.31 kg",
+    "grid": "2x1",
+    "price": "₽3,400",
+    "ergonomics": "+10",
+    "Heat": "+2.2",
+    "Cooling": "-1.9",
+    "node": "56deed6ed2720b4c698b4583",
+    "ID": "handguard_mr153_izhmeh_polymer"
+  },
+  "sections": []
+}

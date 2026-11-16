@@ -1,0 +1,23 @@
+{
+  "title": "VPO-136 Vepr-KM wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-136_Vepr-KM_wooden_stock",
+  "revisionId": 337440,
+  "lastEdited": "2026-03-05T22:55:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "price": "₽1,830",
+    "trader": "Skier LL1",
+    "ergonomics": "+3",
+    "recoil": "-21",
+    "node": "59e6227d86f77440d64f5dc2",
+    "ID": "stock_ak_molot_vepr_km_vpo_136"
+  },
+  "sections": []
+}

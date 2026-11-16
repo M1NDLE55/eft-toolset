@@ -1,0 +1,30 @@
+{
+  "title": "Diary",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Diary",
+  "revisionId": 358747,
+  "lastEdited": "2026-09-10T23:04:32Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "node": "590c645c86f77412b01304d9",
+    "id": "item_thick_diary"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Safe\n- Sport bag\n- Dead Scav\n- Weapon box (6x6)\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the bed inside of Dorm Room 110 in the two-story dorms."
+    }
+  ]
+}

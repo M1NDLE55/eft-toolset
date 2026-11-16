@@ -1,0 +1,27 @@
+{
+  "title": "FN P90 Attenuator 5.7x28 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_Attenuator_5.7x28_sound_suppressor",
+  "revisionId": 337662,
+  "lastEdited": "2026-03-06T00:49:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.677 kg",
+    "grid": "2x1",
+    "price": "₽63,450",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-10",
+    "velocity": "+0.7",
+    "recoil": "-2",
+    "Dura Burn": "+66",
+    "Heat": "+13",
+    "loot xp": "30",
+    "node": "5cebec00d7f00c065c53522a",
+    "ID": "silencer_p90_fn_p90_attenuator_57x28"
+  },
+  "sections": []
+}

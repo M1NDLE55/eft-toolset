@@ -1,0 +1,24 @@
+{
+  "title": "4.6x30mm AP SX ammo pack (40 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/4.6x30mm_AP_SX_ammo_pack_(40_pcs)",
+  "revisionId": 367147,
+  "lastEdited": "2026-11-02T23:09:28Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6489870774a806211e4fb685",
+    "ID": "item_ammo_box_46x30_40_ap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "3V Gear Paratus 3-Day Operator's Tactical backpack (Foliage Grey)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/3V_Gear_Paratus_3-Day_Operator's_Tactical_backpack_(Foliage_Grey)",
+  "revisionId": 323757,
+  "lastEdited": "2025-11-20T08:27:43Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2.01 kg",
+    "grid": "5x7",
+    "price": "₽59,200",
+    "trader": "Peacekeeper LL4",
+    "penalties": "-3% movement speed, -1% turn speed, -5% Ergonomics",
+    "slots": "35 slots, 1x 5x5 grid, 2x 1x2 grid, 1x 3x2 grid",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5c0e805e86f774683f3dd637",
+    "ID": "item_equipment_backpack_paratus"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

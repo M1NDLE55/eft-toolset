@@ -1,0 +1,21 @@
+{
+  "title": "VOMZ Pilad 043-02 dovetail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VOMZ_Pilad_043-02_dovetail_mount",
+  "revisionId": 340633,
+  "lastEdited": "2026-04-21T09:15:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-3",
+    "node": "57acb6222459771ec34b5cb0",
+    "ID": "mount_dovetail_pilad_043_02"
+  },
+  "sections": []
+}

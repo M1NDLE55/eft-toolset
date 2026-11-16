@@ -1,0 +1,29 @@
+{
+  "title": "SSO Attack 2 raid backpack (Khaki)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SSO_Attack_2_raid_backpack_(Khaki)",
+  "revisionId": 304479,
+  "lastEdited": "2025-01-22T09:37:51Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2.8 kg",
+    "grid": "5x7",
+    "price": "₽41,500",
+    "penalties": "-5% movement speed, -3% turn speed, -7% Ergonomics",
+    "slots": "5x7 grid (35 slots)",
+    "node": "5ab8ebf186f7742d8b372e80",
+    "id": "backpack_sso_attack2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only 1 can be held in a raid inventory at the same time"
+    }
+  ]
+}

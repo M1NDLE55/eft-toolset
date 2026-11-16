@@ -1,0 +1,35 @@
+{
+  "title": "26x75mm flare cartridge (White)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/26x75mm_flare_cartridge_(White)",
+  "revisionId": 367823,
+  "lastEdited": "2026-11-10T14:31:09Z",
+  "kind": "ammo",
+  "categories": [
+    "26x75mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flare cartridge",
+    "weight": "0.055 kg",
+    "grid": "1x1",
+    "velocity": "80 m/s",
+    "damage": "37",
+    "penetration": "0",
+    "armor damage": "60",
+    "node": "62389bc9423ed1685422dc57",
+    "id": "patron_26x75_white"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Unlike the Red Flare Cartridge, this one does not call in an airdrop.\n- Firing this flare will illuminate the surrounding area for 20 seconds after ignition\n  - The white flare is notably brighter than the other colours"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Dead Scav\n- Weapon box (4x4)\n- Wooden ammo box\n- Wooden crate"
+    }
+  ]
+}

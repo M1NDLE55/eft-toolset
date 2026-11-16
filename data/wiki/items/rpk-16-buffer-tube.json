@@ -1,0 +1,23 @@
+{
+  "title": "RPK-16 buffer tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPK-16_buffer_tube",
+  "revisionId": 352815,
+  "lastEdited": "2026-08-09T21:33:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.142 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "node": "5beec8b20db834001961942a",
+    "ID": "stock_rpk16_izhmash_rpk_stock_tube"
+  },
+  "sections": []
+}

@@ -1,0 +1,43 @@
+{
+  "title": "HK MP5 9x19 submachine gun (Navy 3 Round Burst)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_9x19_submachine_gun_(Navy_3_Round_Burst)",
+  "revisionId": 364456,
+  "lastEdited": "2026-10-14T07:05:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "2.71 kg",
+    "grid": "4x2",
+    "trader": "Peacekeeper LL1, Mechanic LL1, Ref LL2: SD variant, Peacekeeper LL2: SD variant, after completing his task Master Key",
+    "fire modes": "Single, 3-round Burst, Full Auto",
+    "sightrange": "200",
+    "ergonomics": "72",
+    "velocity": "435 m/s",
+    "range": "200 m",
+    "MOA": "6.88",
+    "Weaprecoil": "Vertical: 43, Horizontal: 209",
+    "rof": "800",
+    "caliber": "9x19mm Parabellum",
+    "def mag": "HK MP5 9x19 30-round magazine",
+    "node": "5926bb2186f7744b1c6c6e60",
+    "ID": "weapon_hk_mp5_navy3_9x19"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| MP5 SD |\n| MP5 SD Spec |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The MP5 version used in Escape from Tarkov is the MP5-N, a model designed for use for the United States Navy, which includes a Navy trigger group (including safe, single fire, 2–3 round burst, and full automatic)."
+    }
+  ]
+}

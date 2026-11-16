@@ -1,0 +1,31 @@
+{
+  "title": "Baddie's red beard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Baddie's_red_beard",
+  "revisionId": 333856,
+  "lastEdited": "2026-02-07T22:23:06Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x2",
+    "node": "62a09dd4621468534a797ac7",
+    "ID": "item_equipment_facecover_beard_red"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Jacket"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator Baddie."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": ".308 ME LOKT ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.308_ME_LOKT_ammo_pack_(20_pcs)",
+  "revisionId": 367085,
+  "lastEdited": "2026-11-02T23:06:22Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "68e914c3a7bbc64c0702853f",
+    "ID": "item_ammo_box_784x49_20_lokt"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Horny Ammunition is a play on Hornady Ammunition.\n- LVR Advance with Tip Safe Technology is a fictional stand-in for Hornady's LEVERrevolution with Flex Tip Technology. It is a pointed bullet with an elastic polymer tip to allow it to be loaded in a tubular-magazine rifle - like most lever actions and some bolt actions - safely and reliably. Otherwise a pointed bullet with a metal-tip might set off the primer of the cartridge ahead of it."
+    }
+  ]
+}

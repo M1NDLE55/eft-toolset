@@ -1,0 +1,41 @@
+{
+  "title": "MPS Auto Assault-12 Gen 2 12ga automatic shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPS_Auto_Assault-12_Gen_2_12ga_automatic_shotgun",
+  "revisionId": 338705,
+  "lastEdited": "2026-03-16T22:26:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "5.16 kg",
+    "grid": "5x2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "45",
+    "velocity": "439 m/s",
+    "range": "70 m",
+    "MOA": "22",
+    "Weaprecoil": "Vertical: 168, Horizontal: 225",
+    "rof": "330",
+    "caliber": "12/70",
+    "node": "67124dcfa3541f2a1f0e788b",
+    "ID": "weapon_mps_aa_12_gen_2_12g"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This weapon will never malfunction."
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| AA-12 Gen 2 TerraGroup Labs |"
+    }
+  ]
+}

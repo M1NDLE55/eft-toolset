@@ -1,0 +1,21 @@
+{
+  "title": "AI AXMC pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_pistol_grip",
+  "revisionId": 284289,
+  "lastEdited": "2024-08-08T22:56:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.22 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "+5",
+    "node": "62811e2510e26c1f344e6554",
+    "ID": "pistolgrip_ax_accuracy_international_ax_pistol_grip_pb"
+  },
+  "sections": []
+}

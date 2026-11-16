@@ -1,0 +1,28 @@
+{
+  "title": "MP-133 12ga 6-shell magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-133_12ga_6-shell_magazine",
+  "revisionId": 268710,
+  "lastEdited": "2024-02-04T23:57:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.2 kg",
+    "grid": "2x1",
+    "price": "₽1,200",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "6",
+    "caliber": "12/70",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "55d484b44bdc2d1d4e8b456d",
+    "ID": "mag_mr133_izhmeh_12g_6"
+  },
+  "sections": []
+}

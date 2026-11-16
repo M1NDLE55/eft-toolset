@@ -1,0 +1,21 @@
+{
+  "title": "AR-15 Daniel Defense Fixed Rear Sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Daniel_Defense_Fixed_Rear_Sight",
+  "revisionId": 357265,
+  "lastEdited": "2026-09-01T09:15:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "sightrange": "600",
+    "node": "6a1578658d059ca69c0a7853",
+    "ID": "sight_rear_all_dd_ar15_fixed_sight"
+  },
+  "sections": []
+}

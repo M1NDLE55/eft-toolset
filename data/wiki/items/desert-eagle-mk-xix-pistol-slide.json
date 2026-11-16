@@ -1,0 +1,25 @@
+{
+  "title": "Desert Eagle Mk XIX pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Eagle_Mk_XIX_pistol_slide",
+  "revisionId": 312145,
+  "lastEdited": "2025-04-25T11:57:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.43 kg",
+    "grid": "2x1",
+    "ergonomics": "+4",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-5",
+    "Cooling": "+6.3",
+    "node": "668fe60b56984d93550462c6",
+    "ID": "reciever_deagle_magnum_research_mk19_std"
+  },
+  "sections": []
+}

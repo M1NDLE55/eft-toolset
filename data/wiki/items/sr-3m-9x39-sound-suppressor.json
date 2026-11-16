@@ -1,0 +1,27 @@
+{
+  "title": "SR-3M 9x39 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-3M_9x39_sound_suppressor",
+  "revisionId": 314606,
+  "lastEdited": "2025-06-25T21:20:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.575 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-5",
+    "velocity": "+1.1",
+    "accuracy": "+1",
+    "recoil": "-14",
+    "Dura Burn": "+36",
+    "Heat": "+14",
+    "Cooling": "+6.5",
+    "node": "65144ff50e00edc79406836f",
+    "ID": "silencer_sr3m_tochmash_std_9x39"
+  },
+  "sections": []
+}

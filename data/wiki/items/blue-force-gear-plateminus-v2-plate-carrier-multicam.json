@@ -1,0 +1,40 @@
+{
+  "title": "Blue Force Gear PLATEminus V2 Plate Carrier (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Blue_Force_Gear_PLATEminus_V2_Plate_Carrier_(MultiCam)",
+  "revisionId": 361880,
+  "lastEdited": "2026-09-24T14:48:07Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.41 kg",
+    "grid": "3x4",
+    "trader": "Ref LL3, after unlocking it in Panacea crate",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Thorax, Back, Sides",
+    "default plates": "None",
+    "durability": "68",
+    "penalties": "+0% movement speed, +0% turn speed, +0% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "20 Slots",
+    "node": "6a7c84862369e59dd30712f6",
+    "ID": "item_equipment_armor_plateminus_milspec_bp04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Work Peak training mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Work_Peak_training_mask",
+  "revisionId": 348619,
+  "lastEdited": "2026-07-30T22:16:53Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 1",
+    "BlocksEyewear": "No",
+    "BlocksHeadwear": "No",
+    "node": "68bee0ee79c8186398098e6b",
+    "id": "item_equipment_facecover_training_mask_bp2_black"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

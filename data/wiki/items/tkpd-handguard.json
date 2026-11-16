@@ -1,0 +1,24 @@
+{
+  "title": "TKPD handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TKPD_handguard",
+  "revisionId": 342882,
+  "lastEdited": "2026-04-30T22:03:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.41 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "-8.7",
+    "Cooling": "+8.5",
+    "node": "68aee9fe130c00663d08aeb6 68d5676f43adc7372a0c8ae0",
+    "ID": "handguard_tkpd_sniperarms_dynamics_tkpd_std handguard_tkpd_sniperarms_dynamics_tkpd_std_fde"
+  },
+  "sections": []
+}

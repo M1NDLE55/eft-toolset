@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Hexagon Grid 1 Yellow)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Hexagon_Grid_1_Yellow)",
+  "revisionId": 348511,
+  "lastEdited": "2026-07-30T21:23:39Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67ea97696ec870e7ce056ef0",
+    "id": "item_camo_hexagon_grid_01_yellow"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Burris FullField TAC30 1-4x24 30mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Burris_FullField_TAC30_1-4x24_30mm_riflescope",
+  "revisionId": 355726,
+  "lastEdited": "2026-08-23T19:30:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.48 kg",
+    "grid": "2x1",
+    "zeroing": "50, 100, 150, 200, 250, 300",
+    "sightrange": "800",
+    "ergonomics": "-3",
+    "modes": "1",
+    "node": "5b2388675acfc4771e1be0be",
+    "ID": "scope_30mm_burris_fullfield_tac30_1_4x24"
+  },
+  "sections": []
+}

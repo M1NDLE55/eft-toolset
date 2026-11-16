@@ -1,0 +1,35 @@
+{
+  "title": "Tarkov City souvenir key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tarkov_City_souvenir_key",
+  "revisionId": 339104,
+  "lastEdited": "2026-03-25T17:10:17Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "66687bc89111279d600b5062",
+    "ID": "keyFromCity_quest"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This key does not open any lock. It's a quest item only."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Key to the City from Ragman"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The engraving \"05.08 2016\" on the handle refers to the start of the Closed Alpha of the game, even though it was actually August 4, 2016."
+    }
+  ]
+}

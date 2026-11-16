@@ -1,0 +1,27 @@
+{
+  "title": "MP-155 12ga 660mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_12ga_660mm_barrel",
+  "revisionId": 354940,
+  "lastEdited": "2026-08-17T21:13:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.8 kg",
+    "grid": "4x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-10",
+    "velocity": "+12.8",
+    "MOA": "17.88",
+    "recoil": "-7",
+    "Dura Burn": "-2",
+    "Heat": "-12",
+    "Cooling": "-8",
+    "node": "68540a07961c6f351f04d917",
+    "ID": "barrel_mp155_sight_660mm_12g"
+  },
+  "sections": []
+}

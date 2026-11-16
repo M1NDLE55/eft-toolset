@@ -1,0 +1,33 @@
+{
+  "title": "Dundukk sport sunglasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dundukk_sport_sunglasses",
+  "revisionId": 354816,
+  "lastEdited": "2026-08-16T11:28:20Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.05 kg",
+    "grid": "2x1",
+    "trader": "Ragman LL1",
+    "blindness protect": "15%",
+    "node": "5aa2b986e5b5b00014028f4c",
+    "id": "glasses_Duduma"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Based on the Duduma polarized sport sunglasses."
+    }
+  ]
+}

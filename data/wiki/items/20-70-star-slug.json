@@ -1,0 +1,40 @@
+{
+  "title": "20/70 Star slug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20/70_Star_slug",
+  "revisionId": 322833,
+  "lastEdited": "2025-11-18T21:26:39Z",
+  "kind": "ammo",
+  "categories": [
+    "20/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.028 kg",
+    "grid": "1x1",
+    "price": "₽20",
+    "trader": "Jaeger LL3",
+    "velocity": "415 m/s",
+    "damage": "154",
+    "accuracy": "+130",
+    "recoil": "+5",
+    "penetration": "16",
+    "armor damage": "42",
+    "ricochet": "10%",
+    "h bleed chance": "+30",
+    "durability burn": "+80",
+    "heat": "+127",
+    "feedfailure": "Very low",
+    "misfire": "Medium",
+    "node": "5d6e6a05a4b93618084f58d0",
+    "id": "patron_20x70_slug_star"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

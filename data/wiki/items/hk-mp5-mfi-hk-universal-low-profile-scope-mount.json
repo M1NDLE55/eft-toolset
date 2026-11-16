@@ -1,0 +1,20 @@
+{
+  "title": "HK MP5 MFI HK universal low profile scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_MFI_HK_universal_low_profile_scope_mount",
+  "revisionId": 340720,
+  "lastEdited": "2026-04-22T06:42:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.071 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "node": "5926dad986f7741f82604363",
+    "ID": "mount_hk_mfi_universal"
+  },
+  "sections": []
+}

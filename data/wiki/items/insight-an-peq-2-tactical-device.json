@@ -1,0 +1,30 @@
+{
+  "title": "Insight AN/PEQ-2 tactical device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Insight_AN/PEQ-2_tactical_device",
+  "revisionId": 293318,
+  "lastEdited": "2024-09-30T05:01:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.21 kg",
+    "grid": "1x1",
+    "price": "₽10,258",
+    "trader": "Peacekeeper LL2",
+    "modes": "2",
+    "ergonomics": "-2",
+    "loot xp": "30",
+    "node": "5d10b49bd7ad1a1a560708b0",
+    "ID": "tactical_all_insight_anpeq2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is red"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Rotor 43 7.62x39 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Rotor_43_7.62x39_sound_suppressor",
+  "revisionId": 352840,
+  "lastEdited": "2026-08-09T21:40:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.57 kg",
+    "grid": "2x1",
+    "price": "₽30,000",
+    "ergonomics": "-14",
+    "velocity": "+0.8",
+    "recoil": "-3",
+    "Dura Burn": "+71",
+    "Heat": "+14",
+    "loot xp": "30",
+    "exam xp": "4",
+    "node": "5a9fbacda2750c00141e080f",
+    "ID": "silencer_all_rotor_43_v2_762x39"
+  },
+  "sections": []
+}

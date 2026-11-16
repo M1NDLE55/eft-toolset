@@ -1,0 +1,25 @@
+{
+  "title": "Flash drive for ARRS station",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Flash_drive_for_ARRS_station",
+  "revisionId": 348298,
+  "lastEdited": "2026-07-28T09:07:27Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "node": "68c725b516027530a50f0d4b",
+    "id": "q_here_flash_find"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here"
+    }
+  ]
+}

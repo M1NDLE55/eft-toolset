@@ -1,0 +1,24 @@
+{
+  "title": "MPX/MCX Maxim Defense CQB stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX/MCX_Maxim_Defense_CQB_stock",
+  "revisionId": 340407,
+  "lastEdited": "2026-04-20T14:57:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.501 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+12",
+    "recoil": "-21",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c5db6ee2e221600113fba54",
+    "ID": "stock_mpx_maxim_defence_cqb_stock"
+  },
+  "sections": []
+}

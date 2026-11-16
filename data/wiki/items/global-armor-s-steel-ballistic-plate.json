@@ -1,0 +1,31 @@
+{
+  "title": "Global Armor’s Steel ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Global_Armor%E2%80%99s_Steel_ballistic_plate",
+  "revisionId": 361897,
+  "lastEdited": "2026-09-24T15:04:26Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "3.4 kg",
+    "grid": "2x2",
+    "trader": "Skier LL3",
+    "material": "Armor Steel",
+    "armor": "4",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "45",
+    "penalties": "-1.5% movement speed, -0.5% turn speed, -1% Ergonomics",
+    "node": "656fa0fb498d1b7e3e071d9c",
+    "id": "item_equipment_plate_SAPI_GlobalArmors_Steel_4class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 Radian Weapons Model 1 14 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Radian_Weapons_Model_1_14_inch_handguard",
+  "revisionId": 349224,
+  "lastEdited": "2026-08-03T22:25:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.47 kg",
+    "grid": "3x1",
+    "ergonomics": "+19",
+    "recoil": "+0",
+    "Heat": "-3.8",
+    "Cooling": "+7.4",
+    "node": "6895bd19d55f0ebf6a0c0306",
+    "ID": "handguard_ar15_radian_model1_m_lok_14_inch"
+  },
+  "sections": []
+}

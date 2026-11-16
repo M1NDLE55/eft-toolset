@@ -1,0 +1,21 @@
+{
+  "title": "NPZ 1P78-1 dovetail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NPZ_1P78-1_dovetail_mount",
+  "revisionId": 304969,
+  "lastEdited": "2025-01-31T14:56:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "-1",
+    "node": "618a75c9a3884f56c957ca1b",
+    "ID": "mount_dovetail_npz_1p78_1_mount_std"
+  },
+  "sections": []
+}

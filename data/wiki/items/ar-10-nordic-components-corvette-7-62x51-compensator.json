@@ -1,0 +1,25 @@
+{
+  "title": "AR-10 Nordic Components Corvette 7.62x51 compensator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Nordic_Components_Corvette_7.62x51_compensator",
+  "revisionId": 356357,
+  "lastEdited": "2026-08-26T00:23:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.125 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-3",
+    "accuracy": "+3",
+    "recoil": "-11.5",
+    "Dura Burn": "-2",
+    "Heat": "-1.3",
+    "node": "5d02677ad7ad1a04a15c0f95",
+    "ID": "muzzle_ar10_nordic_corvette_compensator_762x51"
+  },
+  "sections": []
+}

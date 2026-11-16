@@ -1,0 +1,28 @@
+{
+  "title": "Tasmanian Tiger Trooper 35 backpack (Khaki)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tasmanian_Tiger_Trooper_35_backpack_(Khaki)",
+  "revisionId": 304480,
+  "lastEdited": "2025-01-22T09:38:11Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.004 kg",
+    "grid": "5x7",
+    "penalties": "-4% movement speed, -1% turn speed, -5% Ergonomics",
+    "slots": "5x7 grid (35 slots)",
+    "node": "639346cc1c8f182ad90c8972",
+    "id": "item_equipment_backpack_trooper_35"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only 1 can be held in a raid inventory at the same time"
+    }
+  ]
+}

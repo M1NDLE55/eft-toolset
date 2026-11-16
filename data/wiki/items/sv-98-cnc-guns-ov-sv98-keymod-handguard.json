@@ -1,0 +1,23 @@
+{
+  "title": "SV-98 CNC Guns OV-SV98 KeyMod handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SV-98_CNC_Guns_OV-SV98_KeyMod_handguard",
+  "revisionId": 342238,
+  "lastEdited": "2026-04-28T21:45:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.33 kg",
+    "grid": "2x1",
+    "ergonomics": "+20",
+    "recoil": "+0",
+    "Heat": "-4",
+    "Cooling": "+5",
+    "node": "623c3c1f37b4b31470357737",
+    "ID": "handguard_sv-98_cnc_guns_ov_unif_keymod"
+  },
+  "sections": []
+}

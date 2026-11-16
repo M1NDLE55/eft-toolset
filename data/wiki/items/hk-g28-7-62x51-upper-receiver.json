@@ -1,0 +1,25 @@
+{
+  "title": "HK G28 7.62x51 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G28_7.62x51_upper_receiver",
+  "revisionId": 357132,
+  "lastEdited": "2026-08-30T22:23:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "ergonomics": "+5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-7.1",
+    "Cooling": "+7.2",
+    "node": "61713a8fd92c473c770214a4",
+    "ID": "reciever_g28_hk_g28_std"
+  },
+  "sections": []
+}

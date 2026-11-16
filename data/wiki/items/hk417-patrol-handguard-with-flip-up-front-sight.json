@@ -1,0 +1,23 @@
+{
+  "title": "HK417 Patrol handguard with flip-up front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK417_Patrol_handguard_with_flip-up_front_sight",
+  "revisionId": 342209,
+  "lastEdited": "2026-04-28T21:28:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.43 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+16",
+    "recoil": "+0",
+    "Cooling": "+5.6",
+    "node": "61712eae6c780c1e710c9a1d",
+    "ID": "handguard_417_hk_417_patrol_rail"
+  },
+  "sections": []
+}

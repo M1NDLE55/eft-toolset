@@ -1,0 +1,18 @@
+{
+  "title": "9x18mm PM PS gs PPO ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_PS_gs_PPO_ammo_pack_(50_pcs)",
+  "revisionId": 367261,
+  "lastEdited": "2026-11-02T23:15:32Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702621cfc010a0f5006a44",
+    "ID": "item_ammo_box_9x18_50_ppo"
+  },
+  "sections": []
+}

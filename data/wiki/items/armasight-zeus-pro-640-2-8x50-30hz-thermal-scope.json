@@ -1,0 +1,30 @@
+{
+  "title": "Armasight Zeus-Pro 640 2-8x50 30Hz thermal scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armasight_Zeus-Pro_640_2-8x50_30Hz_thermal_scope",
+  "revisionId": 366607,
+  "lastEdited": "2026-10-31T05:21:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Thermal vision sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Thermal vision sight",
+    "weight": "0.9 kg",
+    "grid": "2x1",
+    "refresh rate": "21 Hz",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "500",
+    "ergonomics": "-18",
+    "modes": "4",
+    "node": "63fc44e2429a8a166c7f61e6",
+    "ID": "scope_base_armasight_zeus_pro_640_2_16x50_30hz"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market\n- Cannot be insured.\n- Cannot be put in secure containers\n- Only 5 can be held in a raid inventory at the same time\n- The thermal detection range is ~230 m at 0° angle, it goes up to ~250 m aiming uphill or downhill"
+    }
+  ]
+}

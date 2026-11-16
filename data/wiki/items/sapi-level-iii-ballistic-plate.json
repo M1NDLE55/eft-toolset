@@ -1,0 +1,36 @@
+{
+  "title": "SAPI level III+ ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SAPI_level_III%2B_ballistic_plate",
+  "revisionId": 363112,
+  "lastEdited": "2026-10-04T14:51:52Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "1.82 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4",
+    "material": "Ceramic",
+    "armor": "5",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "50",
+    "penalties": "-1% movement speed, -0.5% turn speed, -1.5% Ergonomics",
+    "node": "655746010177119f4a097ff7",
+    "id": "item_equipment_plate_sapi_5class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

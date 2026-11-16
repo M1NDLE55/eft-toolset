@@ -1,0 +1,41 @@
+{
+  "title": "Dry fuel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Dry_fuel",
+  "revisionId": 362736,
+  "lastEdited": "2026-10-01T05:23:37Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable material",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "590a373286f774287540368b",
+    "id": "item_barter_flam_dry"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket\n- Drawer\n- Airdrop crate"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the shelving in the OLI store\n- On the shelving in the IDEA store\n- On the shelving in the Goshan store\n- On the shelving in the Brutal shop\n- On the shelving in Mantis\n- On the shelving in Hardware store next to TTS"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- On the boxes and cable wheels that line the construction area leading to the water treatment plant.\n- In the boot of a rusted out car that sits in the left-hand ditch of the road leading into Side Tunnel Extract."
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On surfaces/ground in the construction site east of the pier."
+    }
+  ]
+}

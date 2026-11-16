@@ -1,0 +1,36 @@
+{
+  "title": "7.62x39mm FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_FMJ",
+  "revisionId": 356454,
+  "lastEdited": "2026-08-26T01:29:39Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "velocity": "775 m/s",
+    "damage": "63",
+    "accuracy": "+2",
+    "recoil": "-2",
+    "penetration": "26",
+    "armor damage": "33",
+    "ricochet": "25%",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "64b7af5a8532cf95ee0a0dbd",
+    "id": "patron_762x39_fmj"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

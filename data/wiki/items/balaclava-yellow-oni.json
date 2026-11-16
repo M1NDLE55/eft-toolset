@@ -1,0 +1,27 @@
+{
+  "title": "Balaclava (Yellow Oni)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balaclava_(Yellow_Oni)",
+  "revisionId": 348553,
+  "lastEdited": "2026-07-30T22:00:20Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a9ea10c185de5a4d0c2a15",
+    "id": "item_equipment_facecover_balaclavaSkull_arena_bp_05_gold"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

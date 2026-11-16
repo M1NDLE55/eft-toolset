@@ -1,0 +1,22 @@
+{
+  "title": "BT10 V8 Atlas Bipod",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BT10_V8_Atlas_Bipod",
+  "revisionId": 314166,
+  "lastEdited": "2025-06-05T23:18:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Bipods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bipod",
+    "weight": "0.312 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-3",
+    "recoil": "When mounted: -65",
+    "node": "6644920d49817dc7d505ca71",
+    "ID": "bipod_all_atlas_v8_bt10"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "FN SCAR PWS SRX rail extension",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_PWS_SRX_rail_extension",
+  "revisionId": 274246,
+  "lastEdited": "2024-03-16T10:45:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.224 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+5",
+    "recoil": "+0",
+    "Heat": "-5",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "61965d9058ef8c428c287e0d",
+    "ID": "mount_mk16_pws_srx"
+  },
+  "sections": []
+}

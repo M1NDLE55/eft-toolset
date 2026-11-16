@@ -1,0 +1,28 @@
+{
+  "title": "Sliderkey Flash drive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sliderkey_Flash_drive",
+  "revisionId": 198658,
+  "lastEdited": "2022-05-10T11:19:25Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽12,000",
+    "loot xp": "30",
+    "exam xp": "10",
+    "node": "5a29357286f77409c705e025",
+    "id": "item_flash_card_san"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Wet Job - Part 4 from Peacekeeper"
+    }
+  ]
+}

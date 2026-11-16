@@ -1,0 +1,25 @@
+{
+  "title": "HK MP5 B&T QD 9x19 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_B%26T_QD_9x19_muzzle_brake",
+  "revisionId": 268605,
+  "lastEdited": "2024-02-04T18:02:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.128 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "accuracy": "+0",
+    "recoil": "-8",
+    "Dura Burn": "-3",
+    "Heat": "-1",
+    "node": "615d8df08004cc50514c3236",
+    "ID": "muzzle_mp5_b&t_mp5_qd_muzzle_brake_9x19"
+  },
+  "sections": []
+}

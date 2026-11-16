@@ -1,0 +1,25 @@
+{
+  "title": "Decrypted Sliderkey flash drive marked with A.P.",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Decrypted_Sliderkey_flash_drive_marked_with_A.P.",
+  "revisionId": 356114,
+  "lastEdited": "2026-08-25T17:08:28Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "node": "68e7d1be6656898e78015bd9",
+    "id": "q_unk_flash_tg_deciphered"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard"
+    }
+  ]
+}

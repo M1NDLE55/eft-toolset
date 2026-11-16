@@ -1,0 +1,25 @@
+{
+  "title": "FN SCAR-L 5.56x45 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR-L_5.56x45_30-round_magazine",
+  "revisionId": 339075,
+  "lastEdited": "2026-03-24T16:27:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.117 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL2: Black, FDE",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "node": "61840bedd92c473c77021635 =61840d85568c120fdd2962a5",
+    "ID": "mag_stanag_fn_mk16_std_556x45_30 =mag_stanag_fn_mk16_std_556x45_30_fde"
+  },
+  "sections": []
+}

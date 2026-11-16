@@ -1,0 +1,24 @@
+{
+  "title": "EOTech XPS3-0 holographic sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/EOTech_XPS3-0_holographic_sight",
+  "revisionId": 341657,
+  "lastEdited": "2026-04-26T20:53:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.255 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4, Peacekeeper LL4",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-2",
+    "modes": "1",
+    "node": "58491f3324597764bc48fa02",
+    "ID": "scope_all_eotech_xps3-0"
+  },
+  "sections": []
+}

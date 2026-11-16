@@ -1,0 +1,24 @@
+{
+  "title": "Ultrafire WF-501B flashlight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ultrafire_WF-501B_flashlight",
+  "revisionId": 313629,
+  "lastEdited": "2025-05-20T21:16:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Flashlights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flashlight",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1, Peacekeeper LL1",
+    "ergonomics": "-2",
+    "modes": "2",
+    "loot xp": "20",
+    "exam xp": "6",
+    "node": "57d17c5e2459775a5c57d17d",
+    "ID": "flashlight_ultrafire_WF-501B"
+  },
+  "sections": []
+}

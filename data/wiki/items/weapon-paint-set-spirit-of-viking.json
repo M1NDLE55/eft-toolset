@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Spirit of Viking)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Spirit_of_Viking)",
+  "revisionId": 348396,
+  "lastEdited": "2026-07-30T19:56:55Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "68d14bfc3699cb5bec0c0566",
+    "id": "item_camo_viking_spirit"
+  },
+  "sections": []
+}

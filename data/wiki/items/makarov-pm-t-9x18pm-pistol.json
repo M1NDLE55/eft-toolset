@@ -1,0 +1,33 @@
+{
+  "title": "Makarov PM (t) 9x18PM pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Makarov_PM_(t)_9x18PM_pistol",
+  "revisionId": 340915,
+  "lastEdited": "2026-04-22T21:48:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.737 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL1: Stripped variant",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "87",
+    "velocity": "288 m/s",
+    "range": "50 m",
+    "MOA": "13.06",
+    "Weaprecoil": "Vertical: 380, Horizontal: 265",
+    "rof": "30",
+    "caliber": "9x18mm Makarov",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "579204f224597773d619e051",
+    "ID": "weapon_izhmeh_pm_treaded_9x18pm"
+  },
+  "sections": []
+}

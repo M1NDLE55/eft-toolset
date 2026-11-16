@@ -1,0 +1,31 @@
+{
+  "title": "Awl",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Awl",
+  "revisionId": 352241,
+  "lastEdited": "2026-08-07T21:01:51Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "62a0a098de7ac8199358053b",
+    "id": "item_barter_tools_awl"
+  },
+  "sections": [
+    {
+      "heading": "Locations",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jackets"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The Ragman LL1 barter of 1 Awl for 1 Soap is a reference to the Russian idiom \"Менять шило на мыло\" (change an Awl for a Soap), which means to trade for something worse."
+    }
+  ]
+}

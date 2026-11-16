@@ -1,0 +1,28 @@
+{
+  "title": "Azimut SS \"Khamelion\" chest harness (Olive)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Azimut_SS_%22Khamelion%22_chest_harness_(Olive)",
+  "revisionId": 316832,
+  "lastEdited": "2025-08-11T09:55:19Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.7 kg",
+    "grid": "4x3",
+    "BlocksArmor": "No",
+    "slots": "12 Slots",
+    "node": "63611865ba5b90db0c0399d1",
+    "id": "item_equipment_rig_boss_zryachi"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Zryachiy and his guards"
+    }
+  ]
+}

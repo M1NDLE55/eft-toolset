@@ -1,0 +1,30 @@
+{
+  "title": "Key to the closed premises of the Health Resort",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Key_to_the_closed_premises_of_the_Health_Resort",
+  "revisionId": 351939,
+  "lastEdited": "2026-08-06T23:33:56Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "5a0448bc86f774736f14efa8",
+    "ID": "Quest Drugs Key"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This key does not open any lock. It's a quest item only."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Master Key from Peacekeeper"
+    }
+  ]
+}

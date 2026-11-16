@@ -1,0 +1,23 @@
+{
+  "title": "ORSIS T-5000M pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ORSIS_T-5000M_pistol_grip",
+  "revisionId": 342078,
+  "lastEdited": "2026-04-28T01:34:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽2,716",
+    "ergonomics": "+5",
+    "loot xp": "5",
+    "exam xp": "2",
+    "node": "5df38a5fb74cd90030650cb6",
+    "ID": "pistolgrip_t5000_orsis_t5000_std"
+  },
+  "sections": []
+}

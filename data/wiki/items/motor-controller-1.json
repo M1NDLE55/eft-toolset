@@ -1,0 +1,25 @@
+{
+  "title": "Motor Controller 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Motor_Controller_1",
+  "revisionId": 353196,
+  "lastEdited": "2026-08-11T17:58:00Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "2 kg",
+    "grid": "2x1",
+    "node": "5af04c0b86f774138708f78e",
+    "id": "item_barter_electr_controller"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Metal Birds from Peacekeeper"
+    }
+  ]
+}

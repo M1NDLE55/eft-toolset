@@ -1,0 +1,18 @@
+{
+  "title": "9x19mm QuakeMaker ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_QuakeMaker_ammo_pack_(50_pcs)",
+  "revisionId": 367284,
+  "lastEdited": "2026-11-02T23:16:46Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570259fcfc010a0f5006a32",
+    "ID": "item_ammo_box_9x19_50_quakemaker"
+  },
+  "sections": []
+}

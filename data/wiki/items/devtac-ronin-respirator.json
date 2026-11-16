@@ -1,0 +1,35 @@
+{
+  "title": "DevTac Ronin Respirator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Ronin_Respirator",
+  "revisionId": 360624,
+  "lastEdited": "2026-09-18T18:59:25Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "2.65 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL4, after completing Lightkeeper's task Payback",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Eyes, Jaws, Face, Ears",
+    "durability": "180",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, -2% turn speed, -1% Ergonomics, High sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksFaceCover": "Yes",
+    "node": "5b4329f05acfc47a86086aa1",
+    "id": "item_equipment_facecover_devtac"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Contrary to its name, this item doesn't provide any protection against gas grenades."
+    }
+  ]
+}

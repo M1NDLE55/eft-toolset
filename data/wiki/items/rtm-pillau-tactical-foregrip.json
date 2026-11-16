@@ -1,0 +1,22 @@
+{
+  "title": "RTM Pillau tactical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RTM_Pillau_tactical_foregrip",
+  "revisionId": 337921,
+  "lastEdited": "2026-03-07T09:24:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2: Black, Sand",
+    "ergonomics": "+4",
+    "recoil": "-1",
+    "node": "5cf4fb76d7f00c065703d3ac 648067db042be0705c0b3009",
+    "ID": "foregrip_all_rtm_pillau foregrip_all_rtm_pillau_snd"
+  },
+  "sections": []
+}

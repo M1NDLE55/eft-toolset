@@ -1,0 +1,25 @@
+{
+  "title": "AR-15 Soyuz-TM 12 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Soyuz-TM_12_inch_M-LOK_handguard",
+  "revisionId": 342185,
+  "lastEdited": "2026-04-28T21:18:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.2 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+18",
+    "Heat": "-1.8",
+    "Cooling": "+11.5",
+    "loot xp": "20",
+    "exam xp": "3",
+    "node": "6034e3e20ddce744014cb878",
+    "ID": "handguard_ar15_stmarms_12_inch_m_lok"
+  },
+  "sections": []
+}

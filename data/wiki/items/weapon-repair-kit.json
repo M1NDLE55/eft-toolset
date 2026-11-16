@@ -1,0 +1,56 @@
+{
+  "title": "Weapon repair kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_repair_kit",
+  "revisionId": 364020,
+  "lastEdited": "2026-10-12T21:55:32Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "7 kg",
+    "grid": "3x2",
+    "trader": "Ref LL3",
+    "node": "5910968f86f77425cf569c32",
+    "id": "item_spec_weaprepair"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Requires the Hideout module \"Workbench\" to be used\n- Used to repair weapons\n- Cannot be used in raid\n- Usage increases the Weapon Maintenance skill"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "Weapon repair kits share their spawn locations with Body armor repair kits."
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On top of the green military crates, stacked next to the center staircase\n\n- On the floor inside pumping station\n\n- On a catwalk near the center of the map"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On a pallet near the \"Welcome to Tarkov\" truck\n\n- On a table in the metal shack that is located next to the roadblock south of the main crossroad\n\n- Inside the \"Tigr\" vehicle that is located near the bridge\n\n- On a shelf in the big red Paradigm warehouse\n\n- In a locker that is located on the first floor of the Scav base (\"Fortress\")\n\n- On a brick stack that is located on top of the eastern construction site\n\n- On the back wall shelves of the container building (Chemical - Part 4 warehouse)\n\n- On the second floor of the USEC warehouse, on a fallen over workbench"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- On the roof of the \"white pawn\" building\n\n- In the \"white knight\" building\n\n- On a tool trolley close to the RB-PSP1 cage in the underground storage bunker\n\n- On a tool trolley near the RB-PSV2 key cage in the underground storage bunker\n\n- On a shelf near the RB-PSV2 cage in the underground storage bunker\n\n- On a pallet next to the Tunguska on the northeast bunker hills"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- On the shelves/lockers inside the warehouse at the lumber mill\n- On the bed in the brick house north of the lumber camp"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- In the trailer north of the sunken building\n\n- In the garage of the blue chalet, where the quads are located\n\n- Second floor of the garage at the blue chalet, in the room furthest away from the stairs, on top of the table\n- At the the water treatment plant, on a table right next to the red container that is located left of the southern main entrance\n\n- At the the water treatment plant, on a desk in the tent located west of the southern tower\n\n- At the black SUV on the main road, next to the dead Scav"
+    }
+  ]
+}

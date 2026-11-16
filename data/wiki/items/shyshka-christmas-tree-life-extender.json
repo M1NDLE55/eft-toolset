@@ -1,0 +1,20 @@
+{
+  "title": "SHYSHKA Christmas tree life extender",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SHYSHKA_Christmas_tree_life_extender",
+  "revisionId": 330519,
+  "lastEdited": "2025-12-31T23:54:23Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "67586c61a0c49554ed0bb4a8",
+    "id": "item_barter_household_tree_life_extender"
+  },
+  "sections": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": "MSA Gallet TC 800 High Cut combat helmet (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MSA_Gallet_TC_800_High_Cut_combat_helmet_(Black)",
+  "revisionId": 344394,
+  "lastEdited": "2026-05-24T22:14:07Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.17 kg",
+    "grid": "2x2",
+    "trader": "Ref LL2",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "36",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -2% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5e4bfc1586f774264f7582d3",
+    "ID": "item_equipment_helmet_tc800"
+  },
+  "sections": []
+}

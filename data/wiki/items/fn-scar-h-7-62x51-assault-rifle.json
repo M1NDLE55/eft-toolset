@@ -1,0 +1,42 @@
+{
+  "title": "FN SCAR-H 7.62x51 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR-H_7.62x51_assault_rifle",
+  "revisionId": 362995,
+  "lastEdited": "2026-10-03T12:43:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.802 kg",
+    "grid": "5x2",
+    "trader": "Peacekeeper LL4: LB variant, Peacekeeper LL4: FDE variant, Mechanic LL4: FDE CQC variant, Mechanic LL4: Stripped X-17 version, Ref LL4",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "36",
+    "velocity": "823 m/s",
+    "range": "500 m",
+    "MOA": "1.65",
+    "Weaprecoil": "Vertical: 112, Horizontal: 282",
+    "rof": "600",
+    "caliber": "7.62x51mm NATO",
+    "node": "6183afd850224f204c1da514 6165ac306ef05c2ce828ef74 676176d362e0497044079f4c",
+    "ID": "weapon_fn_mk17_762x51 weapon_fn_mk17_762x51_fde weapon_x_products_x17_scar_17_762x51"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The non-X17 version cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| Mk 17 Face |\n| Mk 17 Face |\n| Mk 17 Face |\n| Mk 17 LB |\n| Mk 17 CQC |"
+    }
+  ]
+}

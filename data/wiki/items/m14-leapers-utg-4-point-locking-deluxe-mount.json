@@ -1,0 +1,22 @@
+{
+  "title": "M14 Leapers UTG 4-Point Locking Deluxe mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_Leapers_UTG_4-Point_Locking_Deluxe_mount",
+  "revisionId": 340817,
+  "lastEdited": "2026-04-22T08:01:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "price": "₽8,700",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "node": "5addbfef5acfc400185c2857",
+    "ID": "mount_m14_leapers_utg_4_point_locking_deluxe_scope_mount"
+  },
+  "sections": []
+}

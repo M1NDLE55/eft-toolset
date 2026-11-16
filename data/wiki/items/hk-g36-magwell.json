@@ -1,0 +1,21 @@
+{
+  "title": "HK G36 magwell",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_magwell",
+  "revisionId": 253552,
+  "lastEdited": "2023-11-02T21:56:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+0.5",
+    "node": "622f02437762f55aaa68ac85",
+    "ID": "mount_g36_hk_magwell_std"
+  },
+  "sections": []
+}

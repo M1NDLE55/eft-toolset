@@ -1,0 +1,28 @@
+{
+  "title": "Repellent",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Repellent",
+  "revisionId": 305064,
+  "lastEdited": "2025-01-31T23:08:24Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.15 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "loot xp": "25",
+    "exam xp": "10",
+    "node": "5e2aef7986f7746d3f3c33f5",
+    "ID": "item_barter_household_repellent"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "M1A 7.62x51 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1A_7.62x51_20-round_magazine",
+  "revisionId": 337505,
+  "lastEdited": "2026-03-05T23:29:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.226 kg",
+    "grid": "1x2",
+    "price": "₽2,106",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1.5",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "7.62x51mm NATO",
+    "node": "5aaf8a0be5b5b00015693243",
+    "ID": "mag_m14_springfield_armory_762x51_20"
+  },
+  "sections": []
+}

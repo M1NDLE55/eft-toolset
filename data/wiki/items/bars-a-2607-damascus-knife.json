@@ -1,0 +1,31 @@
+{
+  "title": "Bars A-2607 Damascus knife",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bars_A-2607_Damascus_knife",
+  "revisionId": 324550,
+  "lastEdited": "2025-11-22T20:31:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.28 kg",
+    "grid": "2x1",
+    "fire modes": "Chop 18 Damage, Stab 25 Damage",
+    "range": "Chop 0.35m, Stab 0.45m",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "57e26ea924597715ca604a09",
+    "ID": "weapon_bars_a-2607_damask"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Scavs"
+    }
+  ]
+}

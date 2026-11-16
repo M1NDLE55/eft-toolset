@@ -1,0 +1,32 @@
+{
+  "title": "Cult victim audio tape 2",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cult_victim_audio_tape_2",
+  "revisionId": 348816,
+  "lastEdited": "2026-08-01T14:48:42Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes",
+    "Minor TerraGroup evidence"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "0:34",
+    "node": "688893c5a030f9346505e6d5",
+    "ID": "item_info_recorder_tape_igor_02"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here\n- This is one of the minor evidence used in The Ticket"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Cult Victim: The last tape ran out. I didn't think it would happen this fast. Alright, I'll make this quick.\n\nCult Victim: Anyway, those guys... those guys in hoods... They're watching me. I just found a note stuck in my door. You know, between the door and the frame—whatever! It said something about the \"Eye of the World\", that I look through it and it looks back at me... The Priests called me the chosen one!\n\nCult Victim: I need to run. I'm recording this on my way to the train station. I have to get out of here, doesn't matter where or how anymore!"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "HK G36 Hensoldt HKV ZF 1.5x carry handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_Hensoldt_HKV_ZF_1.5x_carry_handle",
+  "revisionId": 272077,
+  "lastEdited": "2024-02-20T22:13:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.192 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "zeroing": "Scope: 50, 100, 150, 200, Iron sight: 25",
+    "sightrange": "800",
+    "ergonomics": "-2",
+    "accuracy": "+0",
+    "modes": "2",
+    "node": "622b4f54dc8dcc0ba8742f85",
+    "ID": "scope_g36_hensoldt_hkv_single_optic_carry_handle_1"
+  },
+  "sections": []
+}

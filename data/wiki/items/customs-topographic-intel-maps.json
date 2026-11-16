@@ -1,0 +1,25 @@
+{
+  "title": "Customs topographic intel maps",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Customs_topographic_intel_maps",
+  "revisionId": 336971,
+  "lastEdited": "2026-03-03T02:46:08Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "node": "67c04b286df6ad43b3005fb9",
+    "id": "q_data_map3"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player sided with Lightkeeper."
+    }
+  ]
+}

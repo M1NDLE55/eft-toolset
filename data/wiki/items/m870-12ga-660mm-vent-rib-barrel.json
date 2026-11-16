@@ -1,0 +1,28 @@
+{
+  "title": "M870 12ga 660mm vent rib barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_12ga_660mm_vent_rib_barrel",
+  "revisionId": 329263,
+  "lastEdited": "2025-12-24T16:35:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.826 kg",
+    "grid": "4x1",
+    "price": "₽13,736",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-12",
+    "velocity": "+5.4",
+    "MOA": "11",
+    "recoil": "-9",
+    "Dura Burn": "+8",
+    "Heat": "-14",
+    "Cooling": "-10",
+    "node": "5a787fadc5856700155a6ca1",
+    "ID": "barrel_870_vent_rib_barrel_660mm"
+  },
+  "sections": []
+}

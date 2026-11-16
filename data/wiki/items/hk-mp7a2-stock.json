@@ -1,0 +1,22 @@
+{
+  "title": "HK MP7A2 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP7A2_stock",
+  "revisionId": 341686,
+  "lastEdited": "2026-04-26T20:56:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.2 kg",
+    "grid": "2x1",
+    "price": "₽2,100",
+    "ergonomics": "+3",
+    "recoil": "-12",
+    "node": "5bd704e7209c4d00d7167c31",
+    "ID": "stock_mp7_hk_a2_std"
+  },
+  "sections": []
+}

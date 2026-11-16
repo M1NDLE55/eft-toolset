@@ -1,0 +1,33 @@
+{
+  "title": "Mr. Holodilnick thermal bag",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mr._Holodilnick_thermal_bag",
+  "revisionId": 333201,
+  "lastEdited": "2026-01-29T16:55:38Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "12 kg",
+    "grid": "3x3",
+    "effect": "Provides 64 inventory slots while only taking up 9",
+    "loot xp": "30",
+    "exam xp": "10",
+    "node": "5c093db286f7740a1b2617e3",
+    "ID": "item_container_food"
+  },
+  "sections": [
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Mr. Holodilnick thermal bag is a container with the purpose of saving space within the player's inventory. It provides 64 inventory slots in a 8x8 grid and only takes up 9 inventory slots itself. It can only store:\n- Provisions\n- Can of Majaica coffee beans\n- Can of Dr. Lupo's coffee beans\n- 42 Signature Blend English Tea\n- Pack of Arseniy buckwheat"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - It refers to the content creator \"Mr. Holodilnick\"\n  - Holodilnick (Холодильник) can be translated from Russian to \"Refrigerator\"\n  - The Mr. Holodilnick thermal bag is modeled after the Mobicool S32"
+    }
+  ]
+}

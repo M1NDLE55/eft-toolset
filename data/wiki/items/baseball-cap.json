@@ -1,0 +1,28 @@
+{
+  "title": "Baseball cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Baseball_cap",
+  "revisionId": 333842,
+  "lastEdited": "2026-02-07T22:11:27Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "572b7d8524597762b472f9d1",
+    "id": "cap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Despite the in-game description, this item does not provide any glare reduction."
+    }
+  ]
+}

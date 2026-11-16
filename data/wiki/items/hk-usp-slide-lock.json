@@ -1,0 +1,20 @@
+{
+  "title": "HK USP slide lock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_slide_lock",
+  "revisionId": 255641,
+  "lastEdited": "2023-11-23T16:39:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.008 kg",
+    "grid": "1x1",
+    "ergonomics": "+2",
+    "node": "6193d5d4f8ee7e52e4210a1b",
+    "ID": "catch_usp_hk_usp_std"
+  },
+  "sections": []
+}

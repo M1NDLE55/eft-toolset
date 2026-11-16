@@ -1,0 +1,37 @@
+{
+  "title": "SWORD International Mk-18 .338 LM marksman rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SWORD_International_Mk-18_.338_LM_marksman_rifle",
+  "revisionId": 356750,
+  "lastEdited": "2026-08-29T17:48:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Designated marksman rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Designated marksman rifle",
+    "slot": "Primary",
+    "weight": "7 kg",
+    "grid": "6x2",
+    "trader": "Jaeger LL4 after completing his task The Tarkov Shooter - Part 7",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "24",
+    "velocity": "882 m/s",
+    "range": "900 m",
+    "MOA": "0.54",
+    "Weaprecoil": "Vertical: 238, Horizontal: 511",
+    "rof": "30",
+    "caliber": ".338 Lapua Magnum",
+    "node": "5fc22d7c187fea44d52eda44",
+    "ID": "weapon_sword_int_mk_18_mjolnir_86x70"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Tarkov Shooter - Part 7"
+    }
+  ]
+}

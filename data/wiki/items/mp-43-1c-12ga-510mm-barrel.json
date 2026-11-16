@@ -1,0 +1,28 @@
+{
+  "title": "MP-43-1C 12ga 510mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-43-1C_12ga_510mm_barrel",
+  "revisionId": 243586,
+  "lastEdited": "2023-08-14T12:29:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.4 kg",
+    "grid": "4x1",
+    "price": "₽200",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-5",
+    "velocity": "+7",
+    "MOA": "17.53",
+    "recoil": "-5",
+    "Dura Burn": "-11",
+    "Heat": "-12.6",
+    "Cooling": "-8.8",
+    "node": "5580169d4bdc2d9d138b4585",
+    "ID": "barrel_mr43e-1c_510mm"
+  },
+  "sections": []
+}

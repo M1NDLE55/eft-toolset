@@ -1,0 +1,48 @@
+{
+  "title": "TOZ KS-23M 23x75mm pump-action shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TOZ_KS-23M_23x75mm_pump-action_shotgun",
+  "revisionId": 340968,
+  "lastEdited": "2026-04-22T22:20:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "3.76 kg",
+    "grid": "6x1",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "39",
+    "velocity": "430 m/s",
+    "range": "70 m",
+    "MOA": "16.24",
+    "Weaprecoil": "Vertical: 318, Horizontal: 409",
+    "rof": "30",
+    "caliber": "23x75mmR",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "5e848cc2988a8701445df1e8",
+    "ID": "weapon_toz_ks23m_23x75"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Huntsman Path - Forest Cleaning\n- 3 can be obtained as a quest reward from Our Own Land"
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| KS-23M Drozd |"
+    }
+  ]
+}

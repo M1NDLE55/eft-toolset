@@ -1,0 +1,23 @@
+{
+  "title": "SKS rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_rear_sight",
+  "revisionId": 273614,
+  "lastEdited": "2024-03-08T19:17:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "sightrange": "500",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "574db213245977459a2f3f5d",
+    "ID": "sight_rear_sks_toz_sks_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,37 @@
+{
+  "title": "5.45x39mm BP gs",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_BP_gs",
+  "revisionId": 351179,
+  "lastEdited": "2026-08-05T18:53:58Z",
+  "kind": "ammo",
+  "categories": [
+    "5.45x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "velocity": "890 m/s",
+    "damage": "48",
+    "accuracy": "-3",
+    "recoil": "+7",
+    "penetration": "45",
+    "armor damage": "46",
+    "ricochet": "36%",
+    "durability burn": "+35",
+    "heat": "+59.3",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "56dfef82d2720bbd668b4567",
+    "id": "patron_545x39_BP"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Moreman's personnel file",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Moreman's_personnel_file",
+  "revisionId": 358986,
+  "lastEdited": "2026-09-13T14:09:46Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "node": "68d3054f0c834c20c00a81da",
+    "ID": "item_info_note_personalfile_moreman"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

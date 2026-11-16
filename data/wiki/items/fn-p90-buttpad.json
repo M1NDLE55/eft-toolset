@@ -1,0 +1,25 @@
+{
+  "title": "FN P90 buttpad",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_buttpad",
+  "revisionId": 270142,
+  "lastEdited": "2024-02-08T19:52:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "price": "₽2,250",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+2",
+    "recoil": "-1",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5cc700cae4a949035e43ba72",
+    "ID": "stock_p90_fn_p90_butt_pad_std"
+  },
+  "sections": []
+}

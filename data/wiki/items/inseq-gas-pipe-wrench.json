@@ -1,0 +1,31 @@
+{
+  "title": "Inseq gas pipe wrench",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Inseq_gas_pipe_wrench",
+  "revisionId": 362720,
+  "lastEdited": "2026-09-30T19:43:19Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "0.533 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "66b37f114410565a8f6789e2",
+    "id": "item_barter_tools_plumber_wrench"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Dead Scav\n- Ground cache\n- Sport bag\n- Technical supply crate\n- Toolbox"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a reference to the content creator inseq."
+    }
+  ]
+}

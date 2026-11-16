@@ -1,0 +1,25 @@
+{
+  "title": "AR-15 SureFire Warden 5.56x45 blast regulator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_SureFire_Warden_5.56x45_blast_regulator",
+  "revisionId": 337876,
+  "lastEdited": "2026-03-07T06:40:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.221 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-2.5",
+    "accuracy": "+2",
+    "recoil": "-9",
+    "Dura Burn": "-2",
+    "Heat": "-0.9",
+    "node": "62669bccdb9ebb4daa44cd14",
+    "ID": "muzzle_ar15_surefire_warden_direct_thread_blast_regulator_556x45"
+  },
+  "sections": []
+}

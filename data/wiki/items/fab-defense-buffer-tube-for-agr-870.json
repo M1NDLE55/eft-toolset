@@ -1,0 +1,26 @@
+{
+  "title": "FAB Defense buffer tube for AGR-870",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FAB_Defense_buffer_tube_for_AGR-870",
+  "revisionId": 342940,
+  "lastEdited": "2026-04-30T23:23:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.162 kg",
+    "grid": "2x1",
+    "price": "₽1,070",
+    "trader": "Skier LL2",
+    "velocity": "-2.5",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5bfe89510db834001808a127",
+    "ID": "stock_870_fab_defense_agr_870_stock_tube"
+  },
+  "sections": []
+}

@@ -1,0 +1,36 @@
+{
+  "title": "CQC Osprey MK4A plate carrier (Protection, MTP)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/CQC_Osprey_MK4A_plate_carrier_(Protection%2C_MTP)",
+  "revisionId": 346893,
+  "lastEdited": "2026-06-14T21:46:56Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "6.9 kg",
+    "grid": "4x3",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Shoulders",
+    "default plates": "2x , 2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate, Sides",
+    "durability": "132",
+    "penalties": "-3% movement speed, -1% turn speed, -2% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "24 Slots",
+    "node": "60a3c68c37ea821725773ef5",
+    "ID": "item_equipment_rig_custom_osprey_defence"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

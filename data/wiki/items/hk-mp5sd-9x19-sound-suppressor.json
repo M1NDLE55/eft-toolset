@@ -1,0 +1,27 @@
+{
+  "title": "HK MP5SD 9x19 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5SD_9x19_sound_suppressor",
+  "revisionId": 337417,
+  "lastEdited": "2026-03-05T22:43:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.496 kg",
+    "grid": "2x1",
+    "price": "₽17,000",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-5",
+    "velocity": "+1.2",
+    "recoil": "-8",
+    "Dura Burn": "+40",
+    "Heat": "+13",
+    "Cooling": "+8",
+    "node": "5926d33d86f77410de68ebc0",
+    "ID": "silencer_hk_mp5_sd_std_9x19"
+  },
+  "sections": []
+}

@@ -1,0 +1,18 @@
+{
+  "title": "12/70 Grizzly 40 slug ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_Grizzly_40_slug_ammo_pack_(25_pcs)",
+  "revisionId": 367123,
+  "lastEdited": "2026-11-02T23:08:10Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570244ec5d7d4cb4d078558",
+    "ID": "item_ammo_box_12g_25_slug_grizzly_40"
+  },
+  "sections": []
+}

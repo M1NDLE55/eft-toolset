@@ -1,0 +1,23 @@
+{
+  "title": "AK-50 .50 BMG muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-50_.50_BMG_muzzle_brake",
+  "revisionId": 316447,
+  "lastEdited": "2025-07-23T15:48:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.22 kg",
+    "grid": "1x1",
+    "ergonomics": "-4",
+    "recoil": "-8",
+    "Dura Burn": "-3",
+    "Heat": "-2.4",
+    "node": "67d41883f378a36c4706eeb7",
+    "ID": "muzzle_ak50_theakguy_ak50_muzzle_brake_127x99"
+  },
+  "sections": []
+}

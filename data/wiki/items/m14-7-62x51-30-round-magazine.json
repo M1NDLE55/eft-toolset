@@ -1,0 +1,28 @@
+{
+  "title": "M14 7.62x51 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_7.62x51_30-round_magazine",
+  "revisionId": 339077,
+  "lastEdited": "2026-03-24T16:27:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.34 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL4",
+    "price": "₽5,100",
+    "ergonomics": "-5",
+    "checkaccuracy": "No",
+    "checkmodifier": "+10",
+    "loadmodifier": "+10",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "7.62x51mm NATO",
+    "node": "5addcce35acfc4001a5fc635",
+    "ID": "mag_m14_triple_k_m14_magazine_762x51_30"
+  },
+  "sections": []
+}

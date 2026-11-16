@@ -1,0 +1,21 @@
+{
+  "title": "SAG AK dovetail sidemount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SAG_AK_dovetail_sidemount",
+  "revisionId": 284219,
+  "lastEdited": "2024-08-07T22:24:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.165 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-1",
+    "node": "63d114019e35b334d82302f7",
+    "ID": "mount_dovetail_sag_ak_sidemount"
+  },
+  "sections": []
+}

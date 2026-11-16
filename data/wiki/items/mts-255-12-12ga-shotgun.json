@@ -1,0 +1,37 @@
+{
+  "title": "MTs-255-12 12ga shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MTs-255-12_12ga_shotgun",
+  "revisionId": 339388,
+  "lastEdited": "2026-03-28T00:21:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Revolver shotgun",
+    "slot": "Primary",
+    "weight": "4.25 kg",
+    "grid": "6x1",
+    "trader": "Jaeger LL1",
+    "fire modes": "Single action, Double action",
+    "sightrange": "100",
+    "ergonomics": "43",
+    "velocity": "493 m/s",
+    "range": "70 m",
+    "MOA": "9.34",
+    "Weaprecoil": "Vertical: 226, Horizontal: 301",
+    "rof": "30",
+    "caliber": "12/70",
+    "node": "60db29ce99594040e04c4a27",
+    "ID": "weapon_ckib_mc_255_12g"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Due to its revolver magazine mechanism this weapon contributes EXP towards, and benefits from the revolvers skill instead of the shotguns skill.\n- This weapon will never malfunction."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "MCX-SPEAR 6.8x51 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX-SPEAR_6.8x51_upper_receiver",
+  "revisionId": 339777,
+  "lastEdited": "2026-04-07T00:54:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+5",
+    "recoil": "-1",
+    "Heat": "-1.1",
+    "Cooling": "+1",
+    "node": "6529119424cbe3c74a05e5bb",
+    "ID": "reciever_mcx_sig_spear_upper"
+  },
+  "sections": []
+}

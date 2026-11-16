@@ -1,0 +1,21 @@
+{
+  "title": "VPO-215 tactical chassis front rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-215_tactical_chassis_front_rail",
+  "revisionId": 340347,
+  "lastEdited": "2026-04-20T12:57:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+1",
+    "node": "68b97e7fd9dbc47f4808b09d",
+    "ID": "mount_vpo215_molot_vpo_215_tactical_front_rail"
+  },
+  "sections": []
+}

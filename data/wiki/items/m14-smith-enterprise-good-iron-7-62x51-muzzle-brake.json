@@ -1,0 +1,26 @@
+{
+  "title": "M14 Smith Enterprise Good Iron 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_Smith_Enterprise_Good_Iron_7.62x51_muzzle_brake",
+  "revisionId": 337516,
+  "lastEdited": "2026-03-05T23:34:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.14 kg",
+    "grid": "1x1",
+    "price": "₽7,300",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-3",
+    "accuracy": "+1",
+    "recoil": "-11",
+    "Dura Burn": "-4",
+    "Heat": "-0.9",
+    "node": "5addbb945acfc4001a5fc44e",
+    "ID": "muzzle_m14_smith_enterprise_good_iron_muzzle_brake_762x51"
+  },
+  "sections": []
+}

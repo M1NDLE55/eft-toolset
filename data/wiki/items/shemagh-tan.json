@@ -1,0 +1,21 @@
+{
+  "title": "Shemagh (Tan)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shemagh_(Tan)",
+  "revisionId": 313643,
+  "lastEdited": "2025-05-21T05:33:34Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL2",
+    "node": "5b4325355acfc40019478126",
+    "id": "item_equipment_facecover_shemagh_02"
+  },
+  "sections": []
+}

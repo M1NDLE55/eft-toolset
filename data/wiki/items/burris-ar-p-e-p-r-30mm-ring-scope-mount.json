@@ -1,0 +1,21 @@
+{
+  "title": "Burris AR-P.E.P.R. 30mm ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Burris_AR-P.E.P.R._30mm_ring_scope_mount",
+  "revisionId": 338478,
+  "lastEdited": "2026-03-15T14:38:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.246 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "-1",
+    "node": "5b2389515acfc4771e1be0c0",
+    "ID": "mount_all_burris_ar_p_e_p_r_30mm"
+  },
+  "sections": []
+}

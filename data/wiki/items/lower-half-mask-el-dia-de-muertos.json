@@ -1,0 +1,27 @@
+{
+  "title": "Lower half-mask (El Día de Muertos)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lower_half-mask_(El_D%C3%ADa_de_Muertos)",
+  "revisionId": 348544,
+  "lastEdited": "2026-07-30T21:59:10Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a5f989f7041a25760dda36",
+    "id": "item_equipment_facecover_skull_half_mask_arena_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

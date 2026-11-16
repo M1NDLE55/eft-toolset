@@ -1,0 +1,31 @@
+{
+  "title": "SZ-1 explosive charge (Icebreaker)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SZ-1_explosive_charge_(Icebreaker)",
+  "revisionId": 346791,
+  "lastEdited": "2026-06-14T12:50:15Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "1.4 kg",
+    "grid": "2x2",
+    "trader": "Prapor LL1, after progressing through the story chapter Boreas",
+    "node": "69a0174087a75d2cbd0842e8",
+    "id": "item_ice_c3"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The charge is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "Used to open the damaged door on level 3 of Icebreaker."
+    }
+  ]
+}

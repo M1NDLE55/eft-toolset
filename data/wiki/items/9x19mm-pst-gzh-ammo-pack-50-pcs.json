@@ -1,0 +1,18 @@
+{
+  "title": "9x19mm Pst gzh ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_Pst_gzh_ammo_pack_(50_pcs)",
+  "revisionId": 367283,
+  "lastEdited": "2026-11-02T23:16:44Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657025a81419851aef03e724",
+    "ID": "item_ammo_box_9x19_50_pst"
+  },
+  "sections": []
+}

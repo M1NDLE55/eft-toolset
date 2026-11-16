@@ -1,0 +1,41 @@
+{
+  "title": "40x46mm M386 (HE) grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/40x46mm_M386_(HE)_grenade",
+  "revisionId": 363118,
+  "lastEdited": "2026-10-04T15:16:32Z",
+  "kind": "ammo",
+  "categories": [
+    "40x46mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Grenade launcher cartridge",
+    "weight": "0.35 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3, after accepting his task Gifts from Tarkov/completing his task Worst Job in the World",
+    "velocity": "76 m/s",
+    "damage": "199",
+    "penetration": "1",
+    "armor damage": "95",
+    "ricochet": "0",
+    "fragmentation": "0",
+    "misfire": "Low",
+    "fuze time": "0.26s",
+    "explosion radius": "1-7 m",
+    "explosion strength": "70",
+    "fragments count": "10x",
+    "effects": "Subsonic, Explosive",
+    "loot xp": "0",
+    "exam xp": "10",
+    "node": "5ede475b549eed7c6d5c18fb",
+    "id": "patron_40x46_m386"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

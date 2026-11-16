@@ -1,0 +1,26 @@
+{
+  "title": "HK MP7 B&T Rotex 2 4.6x30 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP7_B%26T_Rotex_2_4.6x30_sound_suppressor",
+  "revisionId": 341684,
+  "lastEdited": "2026-04-26T20:56:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.607 kg",
+    "grid": "2x1",
+    "price": "₽48,000",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-12",
+    "velocity": "+0.8",
+    "recoil": "-3.5",
+    "Dura Burn": "+74",
+    "Heat": "+13",
+    "node": "5ba26ae8d4351e00367f9bdb",
+    "ID": "silencer_mp7_bt_rotex_2_46x30"
+  },
+  "sections": []
+}

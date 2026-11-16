@@ -1,0 +1,21 @@
+{
+  "title": "RFB handguard rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RFB_handguard_rail_mount",
+  "revisionId": 322417,
+  "lastEdited": "2025-11-18T16:23:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.075 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-0.2",
+    "node": "5f2aa493cd375f14e15eea72",
+    "ID": "mount_rfb_kel_tec_bottom_rail_std"
+  },
+  "sections": []
+}

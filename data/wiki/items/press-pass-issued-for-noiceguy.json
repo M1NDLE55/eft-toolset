@@ -1,0 +1,31 @@
+{
+  "title": "Press pass (issued for NoiceGuy)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Press_pass_(issued_for_NoiceGuy)",
+  "revisionId": 324573,
+  "lastEdited": "2025-11-22T20:47:16Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.12 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "62a09cb7a04c0c5c6e0a84f8",
+    "id": "Item_barter_other_bage_ng"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a reference to the content creator NoiceGuy."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "PP-19-01 Vityaz pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-19-01_Vityaz_pistol_grip",
+  "revisionId": 340730,
+  "lastEdited": "2026-04-22T07:02:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "+3",
+    "node": "5998517986f7746017232f7e",
+    "ID": "pistolgrip_pp-19-01_izhmash_vityaz_plastic"
+  },
+  "sections": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "HighCom Striker ULACH IIIA helmet (Winter Mesh Spray)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HighCom_Striker_ULACH_IIIA_helmet_(Winter_Mesh_Spray)",
+  "revisionId": 348436,
+  "lastEdited": "2026-07-30T20:17:01Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.9 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in the Customs Tactical Map",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "66",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -2% turn speed, -1% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "693be8f650fafa102607aed4",
+    "id": "item_equipment_helmet_ulach_arena_NY2025"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

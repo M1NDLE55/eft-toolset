@@ -1,0 +1,39 @@
+{
+  "title": "IOTV Gen4 body armor (Full Protection Kit, MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/IOTV_Gen4_body_armor_(Full_Protection_Kit%2C_MultiCam)",
+  "revisionId": 357592,
+  "lastEdited": "2026-09-01T21:07:52Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "9.08 kg",
+    "grid": "4x4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Shoulders, Groin, Buttocks",
+    "default plates": "2x , 2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate, Sides",
+    "durability": "248",
+    "penalties": "-7% movement speed, -4% turn speed, -6% Ergonomics",
+    "node": "5b44cd8b86f774503d30cba2",
+    "id": "item_equipment_armor_iotv"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nRight Plate:\nRight Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The IOTV Gen 4 is a US issue armor vest intended to sustain significant damage. It is made using ceramic strike faces and soft armor to cover any other areas. According to testing, this armor is at least able to sustain 2 .30-06 M2 AP impacts, or 7.62x63mm AP, without failure."
+    }
+  ]
+}

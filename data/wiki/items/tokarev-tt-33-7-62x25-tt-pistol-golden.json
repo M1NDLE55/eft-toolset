@@ -1,0 +1,36 @@
+{
+  "title": "Tokarev TT-33 7.62x25 TT pistol (Golden)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tokarev_TT-33_7.62x25_TT_pistol_(Golden)",
+  "revisionId": 340912,
+  "lastEdited": "2026-04-22T21:46:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.874 kg",
+    "grid": "2x1",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "68",
+    "velocity": "420 m/s",
+    "range": "50 m",
+    "MOA": "12.03",
+    "Weaprecoil": "Vertical: 536, Horizontal: 315",
+    "rof": "30",
+    "caliber": "7.62x25mm Tokarev",
+    "node": "5b3b713c5acfc4330140bd8d",
+    "ID": "weapon_toz_tt_762x25tt_gold"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Reshala"
+    }
+  ]
+}

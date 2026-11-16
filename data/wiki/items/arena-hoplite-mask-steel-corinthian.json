@@ -1,0 +1,36 @@
+{
+  "title": "Arena Hoplite mask (Steel Corinthian)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Arena_Hoplite_mask_(Steel_Corinthian)",
+  "revisionId": 320865,
+  "lastEdited": "2025-11-11T20:41:01Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light Armored mask",
+    "slot": "Face cover",
+    "weight": "0.3 kg",
+    "grid": "2x2",
+    "material": "Aramid",
+    "armor": "1",
+    "armor coverage": "Face, Head top, Eyes, Jaws",
+    "durability": "40",
+    "blindness protect": "0%",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, +0% Ergonomics, No sound reduction",
+    "BlocksHeadset": "No",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "67aee7897db706ad6b06ad35",
+    "id": "item_equipment_facecover_shatteredmask_gladiator_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item is an exclusive reward from tournaments."
+    }
+  ]
+}

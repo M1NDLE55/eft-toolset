@@ -1,0 +1,22 @@
+{
+  "title": "PKP polymer stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PKP_polymer_stock",
+  "revisionId": 270204,
+  "lastEdited": "2024-02-08T20:17:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.5 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "+4.5",
+    "recoil": "-20",
+    "node": "6492e3a97df7d749100e29ee",
+    "ID": "stock_pk_zid_plastic_std"
+  },
+  "sections": []
+}

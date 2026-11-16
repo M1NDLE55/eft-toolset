@@ -1,0 +1,25 @@
+{
+  "title": "Chemical container with samples",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chemical_container_with_samples",
+  "revisionId": 289562,
+  "lastEdited": "2024-09-01T12:18:16Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x2",
+    "node": "63927b29c115f907b14700b9",
+    "id": "item_quest_c11_gmed"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Urban Medicine from Therapist"
+    }
+  ]
+}

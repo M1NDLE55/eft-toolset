@@ -1,0 +1,24 @@
+{
+  "title": "Steyr AUG A1 STG77 1.5x optic sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_A1_STG77_1.5x_optic_sight",
+  "revisionId": 318920,
+  "lastEdited": "2025-10-03T11:11:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "1.22 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "zeroing": "Scope: 50, 100, 150, 200, Iron sight: 25",
+    "sightrange": "600",
+    "ergonomics": "-3",
+    "modes": "2",
+    "node": "62ea7c793043d74a0306e19f",
+    "ID": "scope_aug_steyr_stg77_optic_1,5x"
+  },
+  "sections": []
+}

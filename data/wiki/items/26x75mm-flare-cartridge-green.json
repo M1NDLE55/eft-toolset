@@ -1,0 +1,41 @@
+{
+  "title": "26x75mm flare cartridge (Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/26x75mm_flare_cartridge_(Green)",
+  "revisionId": 365045,
+  "lastEdited": "2026-10-26T01:30:59Z",
+  "kind": "ammo",
+  "categories": [
+    "26x75mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flare cartridge",
+    "weight": "0.043 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1",
+    "velocity": "80 m/s",
+    "damage": "37",
+    "penetration": "0",
+    "armor damage": "60",
+    "node": "62389aaba63f32501b1b444f",
+    "id": "patron_26x75_green"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Unlike the Red Flare Cartridge, this one does not call in an airdrop.\n- Required for the \"Klimov Street\" extraction on Streets of Tarkov\n- Required for the \"Mira Ave\" extraction on Ground Zero.\n- Required for the \"Power Line Passage\" extraction on Woods.\n- Required for the \"Railroad Passage\" extraction on Customs.\n- Required for the \"Path to River\" extraction on Interchange.\n- Required for the \"Helicopter\" extraction on Icebreaker.\n- Firing this flare will illuminate the surrounding area for 20 seconds after ignition"
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "To open a flare extraction, shoot the flare into the sky while being inside the respective signal flare area. If the flare doesn't reach a certain height, the extraction won't open. Only one person amongst a lobby-made group needs to shoot a flare to open the extraction for all members of the group.\n\nUpon entering a signal flare area, a notification pops up in the bottom right corner of the screen: .\n\nIf the flare was fired correctly, a new notification pops up: ."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Dead Scav\n- Weapon box (4x4)\n- Wooden ammo box\n- Wooden crate"
+    }
+  ]
+}

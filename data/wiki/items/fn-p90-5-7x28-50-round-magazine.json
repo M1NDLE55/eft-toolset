@@ -1,0 +1,33 @@
+{
+  "title": "FN P90 5.7x28 50-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_5.7x28_50-round_magazine",
+  "revisionId": 337649,
+  "lastEdited": "2026-03-06T00:43:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1.5",
+    "checkaccuracy": "1",
+    "checkmodifier": "-75",
+    "loadmodifier": "+15",
+    "feedfailure": "Very low",
+    "capacity": "50",
+    "caliber": "5.7x28mm FN",
+    "node": "5cc70093e4a949033c734312",
+    "ID": "mag_p90_fn_p90_std_57x28_50"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Before the 1.0 release, this magazine had the Russian text \"потом будет прозрачный\" written on the side which translates to \"Will be transparent later\". With the 1.0 release, this text was changed to \"Походу Не Будет :(\" which translates to \"Probably won't :(\"."
+    }
+  ]
+}

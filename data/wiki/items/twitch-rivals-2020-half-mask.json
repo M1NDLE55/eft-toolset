@@ -1,0 +1,26 @@
+{
+  "title": "Twitch Rivals 2020 half-mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Twitch_Rivals_2020_half-mask",
+  "revisionId": 313660,
+  "lastEdited": "2025-05-21T06:25:25Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "5e71fad086f77422443d4604",
+    "ID": "item_equipment_facecover_twitch"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The half masks were distributed to viewers of the 14 Apr 2020 Twitch Rivals event via random loot drops.\n- The half mask first appeared after the v0.12.4.6673 patch (08 Apr 2020) as a random drop from the scav case. This was likely unintentional."
+    }
+  ]
+}

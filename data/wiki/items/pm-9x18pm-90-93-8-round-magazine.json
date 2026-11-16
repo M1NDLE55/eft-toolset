@@ -1,0 +1,27 @@
+{
+  "title": "PM 9x18PM 90-93 8-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PM_9x18PM_90-93_8-round_magazine",
+  "revisionId": 337327,
+  "lastEdited": "2026-03-05T21:17:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.045 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "-1",
+    "checkaccuracy": "1",
+    "feedfailure": "Very low",
+    "capacity": "8",
+    "caliber": "9x18mm Makarov",
+    "loot xp": "10",
+    "exam xp": "Examined by default",
+    "node": "5448c12b4bdc2d02308b456f",
+    "ID": "mag_pm_izhmeh_9x18pm_8"
+  },
+  "sections": []
+}

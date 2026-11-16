@@ -1,0 +1,22 @@
+{
+  "title": "SureFire XC1 tactical flashlight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SureFire_XC1_tactical_flashlight",
+  "revisionId": 264252,
+  "lastEdited": "2024-01-09T23:42:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-1",
+    "modes": "1",
+    "node": "5a7b483fe899ef0016170d15",
+    "ID": "tactical_all_surefire_xc1"
+  },
+  "sections": []
+}

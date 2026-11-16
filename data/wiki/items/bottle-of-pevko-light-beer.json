@@ -1,0 +1,32 @@
+{
+  "title": "Bottle of Pevko Light beer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bottle_of_Pevko_Light_beer",
+  "revisionId": 345681,
+  "lastEdited": "2026-05-30T14:15:57Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "0.85 kg",
+    "grid": "1x2",
+    "effect": "Energy: +10, Hydration: +40, , Buffs:, 5s Delay; 120s Duration: - Increases Stress Resistance (+1) - Increases Charisma (+1) Debuffs:, 5s Delay; 120s Duration: - Decreases Attention (-3)",
+    "use time": "3s",
+    "node": "62a09f32621468534a797acb",
+    "id": "item_drink_beer"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 5 can be obtained as a quest reward from Viewer"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Sport bags"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Atomic Defense CQCM ballistic mask (Target)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Atomic_Defense_CQCM_ballistic_mask_(Target)",
+  "revisionId": 348526,
+  "lastEdited": "2026-07-30T21:53:27Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light Armored mask",
+    "slot": "Face cover",
+    "weight": "1.5 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 0",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "3",
+    "armor coverage": "Face, Jaws, Eyes, Head top",
+    "durability": "35",
+    "blindness protect": "0%",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, -3% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "67a5c5f37f52620c5b05b4d6",
+    "id": "item_equipment_facecover_ballistic_mask_arena_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

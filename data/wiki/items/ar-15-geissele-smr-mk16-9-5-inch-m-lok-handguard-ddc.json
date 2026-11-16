@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 Geissele SMR MK16 9.5 inch M-LOK handguard (DDC)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Geissele_SMR_MK16_9.5_inch_M-LOK_handguard_(DDC)",
+  "revisionId": 356561,
+  "lastEdited": "2026-08-26T02:57:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.335 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+15.5",
+    "Heat": "-0.4",
+    "Cooling": "+5.4",
+    "node": "5ea16acdfadf1d18c87b0784",
+    "ID": "handguard_ar15_geissele_smr_mk16_95_inch"
+  },
+  "sections": []
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Chain with Prokill medallion",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chain_with_Prokill_medallion",
+  "revisionId": 362251,
+  "lastEdited": "2026-09-26T15:59:42Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "50",
+    "exam xp": "10",
+    "node": "5c1267ee86f77416ec610f72",
+    "ID": "item_barter_valuable_prokill"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In Marked Room\n- On the couch at first floor in 3 story dorms\n- On the wooden bedside Table in the building next to ZB-1011 (upper floor room)\n- In Stronghold in between the 2 beds under the cloth (Room with barrel on fire)"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In Saferoom Extract\n- In tent at Goshan"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- In Merin Car Trunk"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In crawlspace between the helicopter and King, aka Stimpee"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On the balcony floor in west wing 301\n- On the table in the east wing room 310\n- On the floor behind bathtub in Marked Room (East wing 321)\n- On the cardboard box in the west wing room 220\n- In the East wing room 110 (Sanitar's office)"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the Marked Circle\n- Next to the bed, inside tent, at second lost convoy."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The \"Prokill\" is a killstreak award given in the prequel games \"Contract Wars\" and \"Hired Ops\", attributed by getting 20 consecutive kills, both games were developed by Battlestate Games' sister company, Absolutsoft."
+    }
+  ]
+}

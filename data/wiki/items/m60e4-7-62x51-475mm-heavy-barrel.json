@@ -1,0 +1,27 @@
+{
+  "title": "M60E4 7.62x51 475mm heavy barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M60E4_7.62x51_475mm_heavy_barrel",
+  "revisionId": 342699,
+  "lastEdited": "2026-04-30T20:47:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "2.53 kg",
+    "grid": "4x1",
+    "ergonomics": "-38",
+    "velocity": "+1",
+    "accuracy": "+4",
+    "MOA": "1.17",
+    "recoil": "-14.3",
+    "Dura Burn": "-9",
+    "Heat": "-18.9",
+    "Cooling": "-8",
+    "node": "66012788c752a02bbe05e68e",
+    "ID": "barrel_m60_usord_e4_heavy_fluted_475mm_762x51"
+  },
+  "sections": []
+}

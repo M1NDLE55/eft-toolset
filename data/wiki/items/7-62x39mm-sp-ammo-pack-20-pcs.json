@@ -1,0 +1,18 @@
+{
+  "title": "7.62x39mm SP ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_SP_ammo_pack_(20_pcs)",
+  "revisionId": 367225,
+  "lastEdited": "2026-11-02T23:13:35Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "64ace9ff03378853630da538",
+    "ID": "item_ammo_box_762x39_20_sp"
+  },
+  "sections": []
+}

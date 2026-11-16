@@ -1,0 +1,26 @@
+{
+  "title": "Bottle of saline solution",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bottle_of_saline_solution",
+  "revisionId": 358512,
+  "lastEdited": "2026-09-10T21:38:22Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "59e3606886f77417674759a5",
+    "id": "item_barter_medical_nacl"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Dead Scav\n- Weapon box (4x4)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    }
+  ]
+}

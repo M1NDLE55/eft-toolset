@@ -1,0 +1,25 @@
+{
+  "title": "DevTac Ronin Mandible",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Ronin_Mandible",
+  "revisionId": 364359,
+  "lastEdited": "2026-10-13T15:00:39Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.67 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4 after completing his task Setting Priorities",
+    "material": "Aramid",
+    "armor": "4",
+    "armor coverage": "Face, Ears, Jaws",
+    "durability": "21",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics",
+    "node": "6a8433fa2309518e9e03a2ae",
+    "ID": "item_equipment_facecover_devtac_mandibule"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Ase Utra BoreLock thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ase_Utra_BoreLock_thread_protector",
+  "revisionId": 307288,
+  "lastEdited": "2025-03-22T13:23:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.092 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+1.5",
+    "Dura Burn": "-2",
+    "node": "673f3f2f40aeca974e0b5c66",
+    "ID": "muzzle_borelock_aseutra_borelock_thread_protector_86x70"
+  },
+  "sections": []
+}

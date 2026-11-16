@@ -1,0 +1,38 @@
+{
+  "title": "Capacitors",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Capacitors",
+  "revisionId": 364291,
+  "lastEdited": "2026-10-13T12:56:03Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5c06782b86f77426df5407d2",
+    "ID": "item_barter_electr_capacitors"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- PC block\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the server rooms in White Queen"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In TechLight\n- In Texho\n- In Rasmussen\n- In TTS"
+    }
+  ]
+}

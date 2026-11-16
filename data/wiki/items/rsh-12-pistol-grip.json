@@ -1,0 +1,20 @@
+{
+  "title": "RSh-12 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RSh-12_pistol_grip",
+  "revisionId": 342254,
+  "lastEdited": "2026-04-28T21:53:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "ergonomics": "+3",
+    "node": "633ec8e4025b096d320a3b1e",
+    "ID": "pistolgrip_rsh12_kbp_rsh12_std"
+  },
+  "sections": []
+}

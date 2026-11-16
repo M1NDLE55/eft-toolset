@@ -1,0 +1,46 @@
+{
+  "title": "20/70 Devastator slug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20/70_Devastator_slug",
+  "revisionId": 322830,
+  "lastEdited": "2025-11-18T21:26:29Z",
+  "kind": "ammo",
+  "categories": [
+    "20/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.029 kg",
+    "grid": "1x1",
+    "price": "₽180",
+    "trader": "Jaeger LL3",
+    "velocity": "405 m/s",
+    "damage": "198",
+    "accuracy": "+125",
+    "recoil": "+30",
+    "penetration": "5",
+    "armor damage": "13",
+    "ricochet": "10%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+30",
+    "durability burn": "+50",
+    "heat": "+104.3",
+    "feedfailure": "Very low",
+    "misfire": "Medium",
+    "node": "5d6e6a5fa4b93614ec501745",
+    "id": "patron_20x70_slug_broadhead"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Eastereggs and References: 20/70 Devastator slug is based off \"DDupleks Broadhead Devastator 20 Gauge hollowpoint expanding steel slug\"."
+    }
+  ]
+}

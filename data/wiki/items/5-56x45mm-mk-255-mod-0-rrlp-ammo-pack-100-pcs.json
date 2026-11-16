@@ -1,0 +1,18 @@
+{
+  "title": "5.56x45mm MK 255 Mod 0 (RRLP) ammo pack (100 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_MK_255_Mod_0_(RRLP)_ammo_pack_(100_pcs)",
+  "revisionId": 367189,
+  "lastEdited": "2026-11-02T23:11:39Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702664cfc010a0f5006a59",
+    "ID": "item_ammo_box_556x45_100_mk_255"
+  },
+  "sections": []
+}

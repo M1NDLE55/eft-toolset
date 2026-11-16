@@ -1,0 +1,30 @@
+{
+  "title": "Glock 9x19 Magpul PMAG GL9 21-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_Magpul_PMAG_GL9_21-round_magazine",
+  "revisionId": 352000,
+  "lastEdited": "2026-08-07T00:00:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽1,720",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "1",
+    "checkmodifier": "-10",
+    "loadmodifier": "-5",
+    "feedfailure": "Very low",
+    "capacity": "21",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5a718da68dc32e000d46d264",
+    "ID": "mag_glock_magpul_pmag_21_gl9_9x19_21"
+  },
+  "sections": []
+}

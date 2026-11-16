@@ -1,0 +1,38 @@
+{
+  "title": "Makarov PM 9x18PM pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Makarov_PM_9x18PM_pistol",
+  "revisionId": 340914,
+  "lastEdited": "2026-04-22T21:47:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.73 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL1",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "88",
+    "velocity": "288 m/s",
+    "range": "50 m",
+    "MOA": "13.41",
+    "Weaprecoil": "Vertical: 380, Horizontal: 265",
+    "rof": "30",
+    "caliber": "9x18mm Makarov",
+    "loot xp": "20",
+    "node": "5448bd6b4bdc2dfc2f8b4569",
+    "ID": "weapon_izhmeh_pm_9x18pm"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The ingame model used to actually be modelled off a blank-only firing replica of the Makarov, designated the MP-371, which is most easily identifiable by the shape of the triggerguard, as on the blank firing pistol, its completely flat in the front, where as in a real Makarov it has a more \"oval\" shape.\n  - A rework for the pistol was announced by Nikita on a podcast, saying it is not modelled accurately, the rework happened in the 0.13.5.0 patch."
+    }
+  ]
+}

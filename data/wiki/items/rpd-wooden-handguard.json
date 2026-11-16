@@ -1,0 +1,24 @@
+{
+  "title": "RPD wooden handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_wooden_handguard",
+  "revisionId": 273841,
+  "lastEdited": "2024-03-10T14:27:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+5",
+    "recoil": "+0",
+    "Heat": "+5.5",
+    "Cooling": "-3.8",
+    "node": "6513f05a94c72326990a3866",
+    "ID": "handguard_rpd_zid_std_wood"
+  },
+  "sections": []
+}

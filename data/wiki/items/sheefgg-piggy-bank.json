@@ -1,0 +1,51 @@
+{
+  "title": "SheefGG piggy bank",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SheefGG_piggy_bank",
+  "revisionId": 360249,
+  "lastEdited": "2026-09-15T11:53:28Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "5 kg",
+    "grid": "2x2",
+    "effect": "Provides 16 inventory slots while only taking up 4",
+    "node": "69f9d319c906cd16da03b374",
+    "id": "Item_container_moneybox_sheefgg"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The SheefGG piggy bank is a container with the purpose of saving space within the player's inventory. It provides 16 inventory slots in a 4x4 grid and only takes up 4 inventory slots itself. It can only store:\n- GP coin\n- TarCoin\n- Physical Bitcoin\n- Right half of a Physical Bitcoin\n- Left half of a Physical Bitcoin"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- At the three-story dorms in the \"marked room\"\n- On an industrial shelf in warehouse 3 at the shipping yard\n\n- \"Old Gas Station\":\n  - On the desk inside\n  - At the \"giving tree\" behind it"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator SheefGG."
+    }
+  ]
+}

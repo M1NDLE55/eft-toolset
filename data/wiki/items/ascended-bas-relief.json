@@ -1,0 +1,25 @@
+{
+  "title": "Ascended Bas-Relief",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ascended_Bas-Relief",
+  "revisionId": 360388,
+  "lastEdited": "2026-09-15T15:56:28Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "1 kg",
+    "grid": "2x2",
+    "node": "6a91b61314210be75a0260db",
+    "id": "item_barter_flyers_leagues_rank_6"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

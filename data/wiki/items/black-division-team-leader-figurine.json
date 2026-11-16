@@ -1,0 +1,26 @@
+{
+  "title": "Black Division Team Leader figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Black_Division_Team_Leader_figurine",
+  "revisionId": 367025,
+  "lastEdited": "2026-11-02T14:23:41Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "6ad9cce9e1f879d17605ca33",
+    "id": "item_barter_tarko_black_division_team_leader"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    }
+  ]
+}

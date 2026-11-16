@@ -1,0 +1,24 @@
+{
+  "title": "MCX-SPEAR 11 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX-SPEAR_11_inch_M-LOK_handguard",
+  "revisionId": 342394,
+  "lastEdited": "2026-04-29T01:04:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.43 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+16",
+    "recoil": "+0",
+    "Heat": "-3.8",
+    "Cooling": "+5.1",
+    "node": "652910ef50dc782999054b97",
+    "ID": "handguard_mcx_sig_spear_m_lok"
+  },
+  "sections": []
+}

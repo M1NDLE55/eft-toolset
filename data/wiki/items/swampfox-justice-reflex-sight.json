@@ -1,0 +1,24 @@
+{
+  "title": "SwampFox Justice reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SwampFox_Justice_reflex_sight",
+  "revisionId": 348592,
+  "lastEdited": "2026-07-30T22:13:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Compact reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Compact reflex sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 1",
+    "zeroing": "25, 50, 100",
+    "sightrange": "150",
+    "ergonomics": "+0",
+    "modes": "1",
+    "node": "68a5ac69b55a6b93c20a2bc7",
+    "ID": "scope_base_swampfox_justice"
+  },
+  "sections": []
+}

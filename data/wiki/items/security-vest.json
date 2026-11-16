@@ -1,0 +1,23 @@
+{
+  "title": "Security vest",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Security_vest",
+  "revisionId": 332081,
+  "lastEdited": "2026-01-11T00:59:43Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.51 kg",
+    "grid": "2x3",
+    "price": "₽3,900",
+    "BlocksArmor": "No",
+    "slots": "6 Slots",
+    "node": "item_equipment_rig_ctactical",
+    "id": "5fd4c5477a8d854fa0105061"
+  },
+  "sections": []
+}

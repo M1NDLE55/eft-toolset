@@ -1,0 +1,23 @@
+{
+  "title": "M870 Mesa Tactical LEO stock adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_Mesa_Tactical_LEO_stock_adapter",
+  "revisionId": 337523,
+  "lastEdited": "2026-03-05T23:38:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.4 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+10",
+    "recoil": "-0",
+    "Dura Burn": "-2",
+    "node": "5ae35b315acfc4001714e8b0",
+    "ID": "stock_870_mesa_leo_stock_adapter"
+  },
+  "sections": []
+}

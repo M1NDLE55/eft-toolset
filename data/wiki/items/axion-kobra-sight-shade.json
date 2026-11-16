@@ -1,0 +1,24 @@
+{
+  "title": "Axion Kobra sight shade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Axion_Kobra_sight_shade",
+  "revisionId": 215592,
+  "lastEdited": "2022-12-02T15:42:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "price": "₽100",
+    "trader": "Prapor LL1",
+    "ergonomics": "+3",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "591c4e1186f77410354b316e",
+    "ID": "tactical_ekp_killflash"
+  },
+  "sections": []
+}

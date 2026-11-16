@@ -1,0 +1,30 @@
+{
+  "title": "Walker's Razor Slim headset (Woodland)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Walker's_Razor_Slim_headset_(Woodland)",
+  "revisionId": 361625,
+  "lastEdited": "2026-09-23T22:45:29Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.43 kg",
+    "grid": "2x2",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 3",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "6a56665a3b664c6b2c0d784a",
+    "ID": "Item_equipment_headset_walkers_razor_woodland_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

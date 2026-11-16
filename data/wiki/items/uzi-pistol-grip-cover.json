@@ -1,0 +1,21 @@
+{
+  "title": "UZI pistol grip cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_pistol_grip_cover",
+  "revisionId": 342730,
+  "lastEdited": "2026-04-30T21:03:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+3",
+    "node": "669946c157df3e2b4e0a0dc5",
+    "ID": "pistolgrip_uzi_iwi_uzi_cover_std"
+  },
+  "sections": []
+}

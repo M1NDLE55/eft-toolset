@@ -1,0 +1,26 @@
+{
+  "title": "AS VAL 9x39 NB MOD.4 JailBrake muzzle device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_9x39_NB_MOD.4_JailBrake_muzzle_device",
+  "revisionId": 343310,
+  "lastEdited": "2026-05-05T19:01:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-9",
+    "accuracy": "+3",
+    "recoil": "-4",
+    "Dura Burn": "-2",
+    "Heat": "-5",
+    "Cooling": "+3",
+    "node": "6878c1c723c3173d7f06d926",
+    "ID": "muzzle_val_mod4_nb_jail_break_9x39"
+  },
+  "sections": []
+}

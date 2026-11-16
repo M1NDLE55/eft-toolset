@@ -1,0 +1,28 @@
+{
+  "title": "FN SCAR-L 5.56x45 10 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR-L_5.56x45_10_inch_barrel",
+  "revisionId": 342215,
+  "lastEdited": "2026-04-28T21:32:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.9 kg",
+    "grid": "2x1",
+    "price": "₽27,130",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-3",
+    "velocity": "-8",
+    "MOA": "2.68",
+    "recoil": "-5.1",
+    "Dura Burn": "-18",
+    "Heat": "+6",
+    "Cooling": "+9",
+    "node": "6183fc15d3a39d50044c13e9",
+    "ID": "barrel_mk16_fn_254mm_556x45"
+  },
+  "sections": []
+}

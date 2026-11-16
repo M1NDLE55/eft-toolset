@@ -1,0 +1,29 @@
+{
+  "title": "ER FULCRUM BAYONET",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ER_FULCRUM_BAYONET",
+  "revisionId": 358744,
+  "lastEdited": "2026-09-10T23:04:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "fire modes": "Chop 25 Damage, Stab 27 Damage",
+    "range": "Chop 0.4m, Stab 0.5m",
+    "node": "54491bb74bdc2d09088b4567",
+    "ID": "ER Bayonet"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Weapon box (6x6)\n- Scavs"
+    }
+  ]
+}

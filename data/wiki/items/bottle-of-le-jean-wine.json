@@ -1,0 +1,25 @@
+{
+  "title": "Bottle of Le Jean wine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bottle_of_Le_Jean_wine",
+  "revisionId": 289536,
+  "lastEdited": "2024-09-01T12:16:02Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.9 kg",
+    "grid": "1x2",
+    "node": "6582bd252b50c61c565828e2",
+    "id": "item_info_vine_quest"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Luxurious Life from Prapor"
+    }
+  ]
+}

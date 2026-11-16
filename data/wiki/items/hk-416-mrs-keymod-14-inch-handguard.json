@@ -1,0 +1,24 @@
+{
+  "title": "HK 416 MRS KeyMod 14 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_416_MRS_KeyMod_14_inch_handguard",
+  "revisionId": 349201,
+  "lastEdited": "2026-08-03T22:08:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.39 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "-2.3",
+    "Cooling": "+0.8",
+    "node": "5c6d10e82e221601da357b07",
+    "ID": "handguard_416_hk_mrs_keymod_14_inch"
+  },
+  "sections": []
+}

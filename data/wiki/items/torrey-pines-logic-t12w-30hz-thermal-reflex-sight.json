@@ -1,0 +1,33 @@
+{
+  "title": "Torrey Pines Logic T12W 30Hz thermal reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Torrey_Pines_Logic_T12W_30Hz_thermal_reflex_sight",
+  "revisionId": 333199,
+  "lastEdited": "2026-01-29T16:52:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Thermal vision sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Thermal vision sight",
+    "weight": "0.063 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "refresh rate": "10 Hz",
+    "zeroing": "25, 50",
+    "sightrange": "500",
+    "ergonomics": "-1",
+    "modes": "1",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "609bab8b455afd752b2e6138",
+    "ID": "scope_all_torrey_pines_logic_t12_w_30hz"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be insured.\n- Cannot be put in secure containers\n- Only 5 can be held in a raid inventory at the same time\n- The sight can be used while point firing"
+    }
+  ]
+}

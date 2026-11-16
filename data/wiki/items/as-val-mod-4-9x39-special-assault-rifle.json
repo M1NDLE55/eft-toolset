@@ -1,0 +1,47 @@
+{
+  "title": "AS VAL MOD.4 9x39 special assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_MOD.4_9x39_special_assault_rifle",
+  "revisionId": 343469,
+  "lastEdited": "2026-05-07T22:18:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault carbines",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault carbine",
+    "slot": "Primary",
+    "weight": "3.2 kg",
+    "grid": "4x2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "46.5",
+    "velocity": "293 m/s",
+    "range": "400 m",
+    "MOA": "3.97",
+    "Weaprecoil": "Vertical: 40, Horizontal: 147",
+    "rof": "900",
+    "caliber": "9x39mm",
+    "def mag": "VSS/VAL 9x39 30-round magazine",
+    "node": "6871284e9a353bb50606f3ed",
+    "ID": "weapon_nb_val_mod4_9x39"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant | Attachments |\n| AS VAL MOD.4 Mod.4 Future Soldier | 2x |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The AS VAL MOD.4 is the next iteration in the line of quasi-fictitious custom weapons based on the real-life AS VAL (GRAU index - 6P30) special rifle. Originally conceptualized for the early 2010s cancelled Russia 2028 game prototype as the AS VAL MOD.2 and AS VAL MOD.3, the weapon was later repurposed for Escape From Tarkov's predecessors and prequels, Contract Wars and Hired Ops, with an iteration appearing in every game in the series thus far."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Magpul M-LOK AFG tactical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magpul_M-LOK_AFG_tactical_foregrip",
+  "revisionId": 352836,
+  "lastEdited": "2026-08-09T21:38:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.042 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3: Black, FDE, OD, SG, Peacekeeper LL3: Black, FDE, OD, SG",
+    "ergonomics": "+8",
+    "recoil": "+0",
+    "node": "57cffb66245977632f391a99 57cffcd624597763133760c5 57cffcdd24597763f5110006 57cffce524597763b31685d8",
+    "ID": "foregrip_m-lok_magpul_m-lok_afg_blk foregrip_m-lok_magpul_m-lok_afg_fde foregrip_m-lok_magpul_m-lok_afg_od foregrip_m-lok_magpul_m-lok_afg_sg"
+  },
+  "sections": []
+}

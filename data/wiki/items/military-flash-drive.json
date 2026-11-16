@@ -1,0 +1,36 @@
+{
+  "title": "Military flash drive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Military_flash_drive",
+  "revisionId": 362641,
+  "lastEdited": "2026-09-29T21:05:04Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.14 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "62a0a16d0b9d3c46de5b6e97",
+    "id": "item_barter_info_militaryflash"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Safe\n- Dead Scav\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from I Need More Power\n- 2 can be obtained as a quest reward from Your Car Needs a Service\n- 2 can be obtained as a quest reward from Weapons Circulation\n- 2 can be obtained as a quest reward from Friend Among Strangers\n- 3 can be obtained as a quest reward from Discombobulate\n- 2 can be obtained as a quest reward from I'm Something of a BTR Myself"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: Military flash drive is based off TECHAYA MILTECH M64 MIL-STD flash drive."
+    }
+  ]
+}

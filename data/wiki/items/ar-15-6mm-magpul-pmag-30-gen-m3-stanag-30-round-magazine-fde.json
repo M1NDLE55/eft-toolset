@@ -1,0 +1,31 @@
+{
+  "title": "AR-15 6mm Magpul PMAG 30 GEN M3 STANAG 30-round magazine (FDE)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_6mm_Magpul_PMAG_30_GEN_M3_STANAG_30-round_magazine_(FDE)",
+  "revisionId": 337866,
+  "lastEdited": "2026-03-07T06:37:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.138 kg",
+    "grid": "1x2",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "-10",
+    "loadmodifier": "+0",
+    "feedfailure": "Low",
+    "capacity": "30",
+    "node": "6241c2c2117ad530666a5108",
+    "ID": "mag_stanag_maopul_pmag_airsoft_6_30_fde"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Introduced as part of Escape from Tarkov's 2022 April fools event."
+    }
+  ]
+}

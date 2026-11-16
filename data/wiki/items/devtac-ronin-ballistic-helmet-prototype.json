@@ -1,0 +1,35 @@
+{
+  "title": "DevTac Ronin ballistic helmet (Prototype)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Ronin_ballistic_helmet_(Prototype)",
+  "revisionId": 361942,
+  "lastEdited": "2026-09-24T15:49:40Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.382 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in the The Lab Tactical Map",
+    "material": "Combined materials",
+    "armor": "Nape: 3 , Head top, Ears, Eyes, Jaws: 1",
+    "armor coverage": "Head top, Nape, Ears, Eyes, Jaws",
+    "durability": "180",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -1% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksFaceCover": "No",
+    "node": "6a846223460e01329005b720",
+    "id": "item_equipment_facecover_devtac_duryaviy"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "SA58 Austrian Style 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_Austrian_Style_7.62x51_muzzle_brake",
+  "revisionId": 337554,
+  "lastEdited": "2026-03-05T23:51:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "price": "₽2,300",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-3",
+    "accuracy": "+4",
+    "recoil": "-12",
+    "Heat": "-1",
+    "node": "5b7d68af5acfc400170e30c3",
+    "ID": "muzzle_fal_ds_arms_austrian_style_muzzle_brake_long_762x51"
+  },
+  "sections": []
+}

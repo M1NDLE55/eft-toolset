@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Hexagon Grid ACS)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Hexagon_Grid_ACS)",
+  "revisionId": 319403,
+  "lastEdited": "2025-10-19T20:31:38Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "685a96ed2ca38dd84f03de97",
+    "id": "item_camo_hexagon_grid_01_ACS"
+  },
+  "sections": []
+}

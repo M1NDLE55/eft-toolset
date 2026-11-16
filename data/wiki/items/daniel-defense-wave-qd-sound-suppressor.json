@@ -1,0 +1,27 @@
+{
+  "title": "Daniel Defense WAVE QD sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Daniel_Defense_WAVE_QD_sound_suppressor",
+  "revisionId": 342046,
+  "lastEdited": "2026-04-28T00:26:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.488 kg",
+    "grid": "2x1",
+    "price": "₽51,000",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-16",
+    "velocity": "+0.7",
+    "recoil": "+0",
+    "Dura Burn": "+67",
+    "Heat": "+14",
+    "loot xp": "20",
+    "node": "5cff9e84d7ad1a049e54ed55",
+    "ID": "silencer_wave_dd_wave_qd_supressor_multi"
+  },
+  "sections": []
+}

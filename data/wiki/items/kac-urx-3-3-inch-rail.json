@@ -1,0 +1,23 @@
+{
+  "title": "KAC URX 3 3 inch rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KAC_URX_3_3_inch_rail",
+  "revisionId": 227103,
+  "lastEdited": "2023-01-31T19:04:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "price": "₽1,573",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "node": "5d133067d7ad1a33013f95b4",
+    "ID": "mount_urx_kac_3_inch_rail_section"
+  },
+  "sections": []
+}

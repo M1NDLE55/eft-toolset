@@ -1,0 +1,29 @@
+{
+  "title": "T-7 Thermal Goggles with a Night Vision mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/T-7_Thermal_Goggles_with_a_Night_Vision_mount",
+  "revisionId": 322026,
+  "lastEdited": "2025-11-17T00:49:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Helmet mods",
+    "Thermal vision devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Thermal vision device",
+    "weight": "0.92 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL4",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5c110624d174af029e69734c",
+    "ID": "thermal_spi_t7"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be insured.\n- Only 5 can be held in a raid inventory at the same time\n- The goggles range is ~250 m at 0° angle\n- Since IR rays don't go through glass, it is recommended to use iron sights with these goggles, any other optics will be unusable."
+    }
+  ]
+}

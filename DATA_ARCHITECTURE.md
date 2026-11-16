@@ -66,6 +66,20 @@ available they get a 500 so they retry later, rather than indexing an empty page
 pages are never marked `noindex` for a temporary failure. Every item slug is listed in the
 sitemap.
 
+An item page is a grid of cards (`src/app/components/item/cards.tsx`), laid out by a view:
+Raid, Standard and Full are built in, each showing everything the one before does and more,
+and visitors can copy one into their own view to reorder, resize, add and remove cards.
+Views are kept in local storage (`src/app/lib/item-views/store.ts`) and included in backups.
+The active view is mirrored in the `eft-item-view` cookie (a preset's id, or a custom view's
+id and cards), so the server renders the page as the visitor will see it; crawlers get
+Standard. Besides prices and uses, `item.detail` returns the item's description, weight,
+category, flea statistics, and the barters and crafts that give it.
+
+The Full view adds the item's wiki page, read on the server from the snapshot below by
+tarkov.dev id (`src/app/lib/wiki/item-wiki.ts`), and passed to the page with the item. It
+shows where to find the item (and for keys, the lock and what's behind it), notes, and a few
+infobox facts, each with a credit line linking the page.
+
 The item prices page (`/item`) and each map page render more of the adapter's data the
 same way, through `readForRender` in `src/app/lib/api/server-render.ts`: the most valuable
 items per slot, overall and among keys, and a written guide under each map (extracts,
@@ -187,7 +201,13 @@ for one points the model to `search_items`, `get_item`, `get_weapon`, or `get_am
 instead. `data/wiki/index.json` lists every kept page and redirect (with the section a redirect
 points at); it is read once per instance, and pages are read one file at a time as they are
 asked for, so a cold start loads about 150 KB. `next.config.mjs` traces `data/wiki` into the
-MCP function. Titles match exactly, through a redirect, or ignoring case and punctuation; a
+MCP function and the item pages.
+
+Item, weapon, and ammo pages are also written, apart, to `data/wiki/items/` for the item page,
+without the sections that repeat tarkov.dev (description, trading, crafting, hideout, quests,
+attachments) or hold only media. `data/wiki/item-ids.json` maps each tarkov.dev item id, taken
+from the infobox's `node` field, to its page in `items/` or `pages/` (for keys); `get_wiki_page`
+doesn't read either. Titles match exactly, through a redirect, or ignoring case and punctuation; a
 miss returns up to eight titles sharing the most words with the request. Without `sections`,
 pages up to 4,000 characters come back whole and longer ones as their introduction, with the
 section list for asking by heading; results are cut at 12,000 characters. Wiki text is written

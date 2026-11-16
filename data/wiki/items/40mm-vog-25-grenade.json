@@ -1,0 +1,43 @@
+{
+  "title": "40mm VOG-25 grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/40mm_VOG-25_grenade",
+  "revisionId": 360822,
+  "lastEdited": "2026-09-20T11:25:50Z",
+  "kind": "ammo",
+  "categories": [
+    "40x53mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Grenade launcher cartridge",
+    "weight": "0.255 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3, after accepting his task Ironclad Proof",
+    "velocity": "76 m/s",
+    "damage": "199",
+    "penetration": "1",
+    "armor damage": "68",
+    "ricochet": "0",
+    "fragmentation": "0",
+    "fuze time": "0.13s",
+    "explosion radius": "1-4.5m",
+    "explosion strength": "80",
+    "fragments count": "15x",
+    "effects": "Subsonic, Explosive",
+    "node": "5656eb674bdc2d35148b457c",
+    "id": "40 VOG-25"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Grenade boxes"
+    }
+  ]
+}

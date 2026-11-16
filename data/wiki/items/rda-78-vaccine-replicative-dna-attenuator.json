@@ -1,0 +1,25 @@
+{
+  "title": "RDA-78 vaccine (Replicative DNA Attenuator)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RDA-78_vaccine_(Replicative_DNA_Attenuator)",
+  "revisionId": 367554,
+  "lastEdited": "2026-11-03T22:41:50Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.35 kg",
+    "grid": "1x1",
+    "node": "6acc4e8fada0d6309902b04d",
+    "id": "item__hall_quest_virus_rd78"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Halloween: Enemy of My Enemy - An Agreement\n- 1 can be obtained as a quest reward from Halloween: The Final Push"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Pointy guy figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pointy_guy_figurine",
+  "revisionId": 333919,
+  "lastEdited": "2026-02-07T23:48:08Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "679b9d6390622daf9708da76",
+    "id": "Item_barter_tarko_triangle_face"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "The Labyrinth",
+      "level": 3,
+      "text": "- On Shadow of Tagilla\n- In different locations in spawn chamber 1."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This figurine is a direct reference to a monster featured in the Silent Hill game series."
+    }
+  ]
+}

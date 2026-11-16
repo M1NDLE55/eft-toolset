@@ -1,0 +1,24 @@
+{
+  "title": "Ase Utra BoreLock .338 LM muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ase_Utra_BoreLock_.338_LM_muzzle_brake",
+  "revisionId": 314160,
+  "lastEdited": "2025-06-05T17:49:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.192 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-1",
+    "accuracy": "+1",
+    "recoil": "-5",
+    "Heat": "-2",
+    "node": "673f3ef1259f5945d70e43a8",
+    "ID": "muzzle_all_aseutra_borelock_muzzle_brake_86x70"
+  },
+  "sections": []
+}

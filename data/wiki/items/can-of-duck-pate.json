@@ -1,0 +1,27 @@
+{
+  "title": "Can of duck pate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_duck_pate",
+  "revisionId": 337922,
+  "lastEdited": "2026-03-07T17:53:35Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.34 kg",
+    "grid": "1x1",
+    "effect": "Energy: +50, Hydration: +5",
+    "use time": "5s",
+    "node": "69774bb0a247161ff1068335",
+    "id": "item_food_pate_duck"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Pockets and bags of Scavs\n- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Ration supply crate\n- In Sport bags\n- In Plastic suitcases"
+    }
+  ]
+}

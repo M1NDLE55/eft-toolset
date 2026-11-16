@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Hexagon Grid Hazardous)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Hexagon_Grid_Hazardous)",
+  "revisionId": 361047,
+  "lastEdited": "2026-09-21T21:11:27Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "6a8477b63e19541864092fd8",
+    "id": "item_camo_hexagon_grid_01_hazardous"
+  },
+  "sections": []
+}

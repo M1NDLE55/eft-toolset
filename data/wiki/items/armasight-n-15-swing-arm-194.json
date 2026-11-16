@@ -1,0 +1,21 @@
+{
+  "title": "Armasight N-15 Swing Arm 194",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armasight_N-15_Swing_Arm_194",
+  "revisionId": 344240,
+  "lastEdited": "2026-05-24T21:25:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Helmet mods",
+    "Helmet mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet mount",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "node": "68d159d46c606e46b605094d",
+    "ID": "nvg_armasight_n15_194_swing_arm_mount"
+  },
+  "sections": []
+}

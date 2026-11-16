@@ -1,0 +1,25 @@
+{
+  "title": "Nuclear power unit control log",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nuclear_power_unit_control_log",
+  "revisionId": 348843,
+  "lastEdited": "2026-08-01T19:20:12Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "node": "69bb42b9ce2b96840302b92b",
+    "id": "item_ice_journal_control"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Peaceful Atom from Peacekeeper"
+    }
+  ]
+}

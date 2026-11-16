@@ -1,0 +1,24 @@
+{
+  "title": "Monstrum Tactical Marksman 3x30 Prism Scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Monstrum_Tactical_Marksman_3x30_Prism_Scope",
+  "revisionId": 356583,
+  "lastEdited": "2026-08-26T08:20:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.48 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL3",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "500",
+    "ergonomics": "-2",
+    "modes": "2",
+    "node": "6a18508bae175e037a0be420",
+    "ID": "scope_all_monstrum_marksman_3x30"
+  },
+  "sections": []
+}

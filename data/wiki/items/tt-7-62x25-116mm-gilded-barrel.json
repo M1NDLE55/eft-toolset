@@ -1,0 +1,31 @@
+{
+  "title": "TT 7.62x25 116mm gilded barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TT_7.62x25_116mm_gilded_barrel",
+  "revisionId": 318626,
+  "lastEdited": "2025-09-26T18:11:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "ergonomics": "-4",
+    "velocity": "-2.32",
+    "MOA": "12.03",
+    "recoil": "-3",
+    "Heat": "+12",
+    "Cooling": "+18",
+    "node": "5b3baf8f5acfc40dc5296692",
+    "ID": "barrel_tt_gold_116mm_762x25tt_std"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Reshala"
+    }
+  ]
+}

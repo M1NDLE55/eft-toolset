@@ -1,0 +1,22 @@
+{
+  "title": "A3 Tactical MVF001 KeyMod vertical foregrip (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A3_Tactical_MVF001_KeyMod_vertical_foregrip_(Black)",
+  "revisionId": 353703,
+  "lastEdited": "2026-08-14T21:54:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.096 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+12",
+    "recoil": "+0",
+    "node": "5fc0f9b5d724d907e2077d82",
+    "ID": "foregrip_keymod_sig_modular_vertical_grip"
+  },
+  "sections": []
+}

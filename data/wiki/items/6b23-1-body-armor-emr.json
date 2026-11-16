@@ -1,0 +1,37 @@
+{
+  "title": "6B23-1 body armor (EMR)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B23-1_body_armor_(EMR)",
+  "revisionId": 346918,
+  "lastEdited": "2026-06-15T15:14:22Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "3.3 kg",
+    "grid": "3x4",
+    "trader": "Ragman LL2",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Groin, Buttocks",
+    "default plates": "1x",
+    "default plates armor class": "3",
+    "default plates armor coverage": "Front Plate",
+    "durability": "156",
+    "penalties": "-1% movement speed, -1% turn speed, -2.5% Ergonomics",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5c0e5bab86f77461f55ed1f3",
+    "ID": "item_equipment_armor_6b23_digital"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

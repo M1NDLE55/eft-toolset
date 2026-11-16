@@ -1,0 +1,31 @@
+{
+  "title": "M1911A1 Caspian Arms Trik Trigger",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_Caspian_Arms_Trik_Trigger",
+  "revisionId": 255637,
+  "lastEdited": "2023-11-23T15:58:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "price": "₽3,700",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+3",
+    "Dura Burn": "-3",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5ef32e4d1c1fd62aea6a150d",
+    "ID": "trigger_m1911_caspian_trik_trigger"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Manufacturer's page for the item"
+    }
+  ]
+}

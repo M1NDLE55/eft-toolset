@@ -1,0 +1,27 @@
+{
+  "title": "Baseball cap (Zaebtsa Berezka)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Baseball_cap_(Zaebtsa_Berezka)",
+  "revisionId": 353557,
+  "lastEdited": "2026-08-14T07:52:06Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 2",
+    "node": "69ce8ea6c5fbc777150faf69",
+    "id": "item_equipment_head_zaebtsa_cap_berezka_white_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

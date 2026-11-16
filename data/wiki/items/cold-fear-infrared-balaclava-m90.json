@@ -1,0 +1,27 @@
+{
+  "title": "Cold Fear infrared balaclava (M90)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cold_Fear_infrared_balaclava_(M90)",
+  "revisionId": 353492,
+  "lastEdited": "2026-08-13T19:42:39Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 2",
+    "node": "69d46480fe02b60eed07a402",
+    "id": "item_equipment_facecover_coldgear_m90_bp_03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

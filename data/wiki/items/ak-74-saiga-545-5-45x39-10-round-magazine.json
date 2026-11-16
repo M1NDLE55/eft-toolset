@@ -1,0 +1,27 @@
+{
+  "title": "AK-74 \"Saiga 545\" 5.45x39 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_%22Saiga_545%22_5.45x39_10-round_magazine",
+  "revisionId": 337339,
+  "lastEdited": "2026-03-05T21:38:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.112 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+5",
+    "checkaccuracy": "No",
+    "checkmodifier": "-50",
+    "loadmodifier": "-35",
+    "feedfailure": "Low",
+    "capacity": "10",
+    "caliber": "5.45x39mm",
+    "node": "55d4837c4bdc2d1d4e8b456c",
+    "ID": "mag_ak74_izhmash_saiga_545_std_545x39_10"
+  },
+  "sections": []
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Glock 18C 9x19 machine pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_18C_9x19_machine_pistol",
+  "revisionId": 340925,
+  "lastEdited": "2026-04-22T21:52:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.842 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "200",
+    "ergonomics": "91",
+    "velocity": "370 m/s",
+    "range": "50 m",
+    "MOA": "12.03",
+    "Weaprecoil": "Vertical: 297, Horizontal: 278",
+    "rof": "1200",
+    "caliber": "9x19mm Parabellum",
+    "def mag": "Glock 9x19 17-round magazine",
+    "loot xp": "20",
+    "node": "5b1fa9b25acfc40018633c01",
+    "ID": "weapon_glock_glock_18c_gen3_9x19"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Bad Habit"
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| Glock 18C Lizzie |"
+    }
+  ]
+}

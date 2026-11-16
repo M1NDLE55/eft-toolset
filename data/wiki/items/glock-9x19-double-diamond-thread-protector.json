@@ -1,0 +1,23 @@
+{
+  "title": "Glock 9x19 Double Diamond thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_Double_Diamond_thread_protector",
+  "revisionId": 352002,
+  "lastEdited": "2026-08-07T00:00:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽700",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+2",
+    "Dura Burn": "-2",
+    "node": "5a6b592c8dc32e00094b97bf",
+    "ID": "muzzle_glock_double_diamond_thread_protector_9x19"
+  },
+  "sections": []
+}

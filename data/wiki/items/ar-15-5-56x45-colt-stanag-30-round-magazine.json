@@ -1,0 +1,27 @@
+{
+  "title": "AR-15 5.56x45 Colt STANAG 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_Colt_STANAG_30-round_magazine",
+  "revisionId": 343679,
+  "lastEdited": "2026-05-09T18:28:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.117 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "node": "55d4887d4bdc2d962f8b4570",
+    "ID": "mag_stanag_colt_ar15_std_556x45_30"
+  },
+  "sections": []
+}

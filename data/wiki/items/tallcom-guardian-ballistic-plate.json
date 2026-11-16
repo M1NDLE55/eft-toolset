@@ -1,0 +1,40 @@
+{
+  "title": "TallCom Guardian ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TallCom_Guardian_ballistic_plate",
+  "revisionId": 361907,
+  "lastEdited": "2026-09-24T15:05:34Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "3.5 kg",
+    "grid": "2x2",
+    "material": "Combined Materials",
+    "armor": "5",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "55",
+    "penalties": "-2% movement speed, -0.5% turn speed, -1.5% Ergonomics",
+    "node": "656fa53d94b480b8a500c0e4",
+    "id": "item_equipment_plate_SAPI_TallCom_Guardian_5class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Generically based on the Highcom Guardian plate line. Specs line up with the Guardian 4sas4.\n  - The name TallCom is presumably a way to spoof copyright issues."
+    }
+  ]
+}

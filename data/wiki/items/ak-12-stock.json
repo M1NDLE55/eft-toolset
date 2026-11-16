@@ -1,0 +1,25 @@
+{
+  "title": "AK-12 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_stock",
+  "revisionId": 341710,
+  "lastEdited": "2026-04-26T21:20:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.148 kg",
+    "grid": "2x1",
+    "price": "₽4,500",
+    "trader": "Prapor LL3",
+    "ergonomics": "+11",
+    "recoil": "-21",
+    "loot xp": "10",
+    "exam xp": "4",
+    "node": "5beec8c20db834001d2c465c",
+    "ID": "stock_ar15_izhmash_ak12_std"
+  },
+  "sections": []
+}

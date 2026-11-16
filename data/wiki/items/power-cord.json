@@ -1,0 +1,26 @@
+{
+  "title": "Power cord",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Power_cord",
+  "revisionId": 364335,
+  "lastEdited": "2026-10-13T14:17:38Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "node": "59e36c6f86f774176c10a2a7",
+    "id": "item_barter_electr_powercord"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- PC block\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

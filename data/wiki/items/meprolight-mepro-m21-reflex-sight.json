@@ -1,0 +1,24 @@
+{
+  "title": "MeproLight Mepro M21 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MeproLight_Mepro_M21_reflex_sight",
+  "revisionId": 341513,
+  "lastEdited": "2026-04-26T15:32:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.24 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "0",
+    "ergonomics": "-1",
+    "modes": "1",
+    "node": "688a0b38467521f9080693a3",
+    "ID": "scope_base_meprolight_mepro_m21"
+  },
+  "sections": []
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (AmStripe)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(AmStripe)",
+  "revisionId": 356792,
+  "lastEdited": "2026-08-29T20:24:06Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67e6b5ac84fadc570a011d98",
+    "id": "item_camo_stripes_02"
+  },
+  "sections": []
+}

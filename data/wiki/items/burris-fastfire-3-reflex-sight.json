@@ -1,0 +1,24 @@
+{
+  "title": "Burris FastFire 3 reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Burris_FastFire_3_reflex_sight",
+  "revisionId": 356763,
+  "lastEdited": "2026-08-29T19:51:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Compact reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Compact reflex sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1, Skier LL2",
+    "zeroing": "25, 50, 100",
+    "sightrange": "100",
+    "ergonomics": "+0",
+    "modes": "1",
+    "node": "577d141e24597739c5255e01",
+    "ID": "scope_base_burris_fast_fire_3"
+  },
+  "sections": []
+}

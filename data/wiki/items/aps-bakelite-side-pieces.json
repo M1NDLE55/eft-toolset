@@ -1,0 +1,21 @@
+{
+  "title": "APS bakelite side-pieces",
+  "url": "https://escapefromtarkov.fandom.com/wiki/APS_bakelite_side-pieces",
+  "revisionId": 340759,
+  "lastEdited": "2026-04-22T07:19:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.102 kg",
+    "grid": "1x1",
+    "price": "₽1,000",
+    "ergonomics": "+3",
+    "node": "5a17fc70fcdbcb0176308b3d",
+    "ID": "pistolgrip_aps_molot_aps_apb_std"
+  },
+  "sections": []
+}

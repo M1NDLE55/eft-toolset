@@ -1,0 +1,28 @@
+{
+  "title": "Pack of Grand juice",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pack_of_Grand_juice",
+  "revisionId": 314328,
+  "lastEdited": "2025-06-16T08:55:41Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "1 kg",
+    "grid": "1x2",
+    "price": "₽400",
+    "effect": "Energy: +6, Hydration: +30",
+    "use time": "4s",
+    "node": "57513f9324597720a7128161",
+    "id": "drink_juice_grand"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Sport bags"
+    }
+  ]
+}

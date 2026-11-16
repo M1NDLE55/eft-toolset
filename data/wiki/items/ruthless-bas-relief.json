@@ -1,0 +1,25 @@
+{
+  "title": "Ruthless Bas-Relief",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ruthless_Bas-Relief",
+  "revisionId": 360386,
+  "lastEdited": "2026-09-15T15:56:24Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "1 kg",
+    "grid": "2x2",
+    "node": "6a91b58214210be75a0260d8",
+    "id": "item_barter_flyers_leagues_rank_4"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

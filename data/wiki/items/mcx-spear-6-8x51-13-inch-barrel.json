@@ -1,0 +1,26 @@
+{
+  "title": "MCX-SPEAR 6.8x51 13 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX-SPEAR_6.8x51_13_inch_barrel",
+  "revisionId": 342393,
+  "lastEdited": "2026-04-29T01:03:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.479 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-13",
+    "velocity": "-3",
+    "MOA": "1.48",
+    "recoil": "-6",
+    "Heat": "-3.2",
+    "Cooling": "-2.9",
+    "node": "652910565ae2ae97b80fdf35",
+    "ID": "barrel_mcx_sig_spear_330mm_68x51"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PNV-10T dovetail adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PNV-10T_dovetail_adapter",
+  "revisionId": 344236,
+  "lastEdited": "2026-05-24T21:24:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Helmet mods",
+    "Helmet mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet mount",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+0",
+    "node": "5c0695860db834001b735461",
+    "ID": "nvg_custom_pnv10t_dovetail_mount"
+  },
+  "sections": []
+}

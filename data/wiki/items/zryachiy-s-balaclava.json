@@ -1,0 +1,26 @@
+{
+  "title": "Zryachiy's balaclava",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zryachiy's_balaclava",
+  "revisionId": 313674,
+  "lastEdited": "2025-05-21T07:37:09Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "63626d904aa74b8fe30ab426",
+    "id": "item_equipment_facecover_BOSS_zryachi_balaclava_closed"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Zryachiy"
+    }
+  ]
+}

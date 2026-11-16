@@ -1,0 +1,22 @@
+{
+  "title": "BEAR SRVV",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_SRVV",
+  "revisionId": 261760,
+  "lastEdited": "2024-01-02T04:01:16Z",
+  "kind": "item",
+  "categories": [
+    "BEAR lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5fce42bc187e6a2b994b8247",
+    "ID": "bear_lower_srvv"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The pants are modeled on the SRVV Triarius in A-TACS LE-X."
+    }
+  ]
+}

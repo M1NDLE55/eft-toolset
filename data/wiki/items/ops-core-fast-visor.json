@@ -1,0 +1,28 @@
+{
+  "title": "Ops-Core FAST Visor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ops-Core_FAST_Visor",
+  "revisionId": 362093,
+  "lastEdited": "2026-09-24T19:46:15Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1 kg",
+    "grid": "2x1",
+    "price": "₽11,500",
+    "material": "Glass",
+    "armor": "2",
+    "armor coverage": "Face, Eyes",
+    "durability": "20",
+    "blindness protect": "0%",
+    "penalties": "+0% turn speed, +0% Ergonomics",
+    "BlocksEyewear": "No",
+    "trader": "Peacekeeper LL3, Ragman LL2",
+    "node": "5a16b672fcdbcb001912fa83",
+    "id": "helmet_ops_core_fast_visor"
+  },
+  "sections": []
+}

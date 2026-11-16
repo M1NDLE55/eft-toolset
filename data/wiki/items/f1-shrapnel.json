@@ -1,0 +1,30 @@
+{
+  "title": "F1 Shrapnel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/F1_Shrapnel",
+  "revisionId": 307611,
+  "lastEdited": "2025-03-27T23:57:05Z",
+  "kind": "ammo",
+  "categories": [
+    "Shrapnel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shrapnel",
+    "velocity": "90 m/s",
+    "damage": "40",
+    "penetration": "15",
+    "armor damage": "38",
+    "ricochet": "30%",
+    "l bleed chance": "+10",
+    "h bleed chance": "+25",
+    "node": "63b35f281745dd52341e5da7",
+    "id": "shrapnel_F1_new"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This shrapnel is also used by the VOG-25 Khattabka improvised hand grenade, RGO hand grenade and 40mm VOG-25 grenade."
+    }
+  ]
+}

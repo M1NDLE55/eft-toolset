@@ -1,0 +1,35 @@
+{
+  "title": "MTEK STRIKE Ballistic helmet (Carbon Fiber)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MTEK_STRIKE_Ballistic_helmet_(Carbon_Fiber)",
+  "revisionId": 362028,
+  "lastEdited": "2026-09-24T18:34:10Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.9 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in the The Lab Tactical Map",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "40",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6a568dda1d89fcfb35010389",
+    "id": "item_equipment_helmet_strike_ballistic_carbon_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "M700 Hogue Overmolded Ghillie stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_Hogue_Overmolded_Ghillie_stock",
+  "revisionId": 290725,
+  "lastEdited": "2024-09-04T18:54:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.8 kg",
+    "grid": "3x1",
+    "price": "₽8,500",
+    "ergonomics": "+14",
+    "recoil": "-21",
+    "Heat": "+2.1",
+    "Cooling": "-1.6",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5bfeb32b0db834001a6694d9",
+    "ID": "stock_m700_hogue_overmolded_ghillie_green_pillar_bedded_stock"
+  },
+  "sections": []
+}

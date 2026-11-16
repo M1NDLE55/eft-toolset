@@ -1,0 +1,24 @@
+{
+  "title": "HK MP5 End Cap stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_End_Cap_stock",
+  "revisionId": 329261,
+  "lastEdited": "2025-12-24T16:34:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+3",
+    "recoil": "+0",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c07c9660db834001a66b588",
+    "ID": "stock_mp5_hk_pistol_end_cap"
+  },
+  "sections": []
+}

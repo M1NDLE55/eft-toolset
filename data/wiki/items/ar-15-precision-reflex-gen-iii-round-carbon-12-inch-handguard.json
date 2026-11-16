@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Precision Reflex GEN III Round Carbon 12 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Precision_Reflex_GEN_III_Round_Carbon_12_inch_handguard",
+  "revisionId": 342890,
+  "lastEdited": "2026-04-30T22:10:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.499 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+17.5",
+    "recoil": "+0",
+    "Heat": "-3.5",
+    "Cooling": "+6",
+    "node": "68caac28f42a4476cf0be2ac 68cc2ae66e59cb54f4054f47",
+    "ID": "handguard_ar15_precision_reflex_carbon_round_gen_3_12_inch handguard_ar15_precision_reflex_carbon_round_gen_3_12_inch_fde"
+  },
+  "sections": []
+}

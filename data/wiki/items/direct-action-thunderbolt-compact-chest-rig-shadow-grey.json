@@ -1,0 +1,31 @@
+{
+  "title": "Direct Action Thunderbolt compact chest rig (Shadow Grey)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Direct_Action_Thunderbolt_compact_chest_rig_(Shadow_Grey)",
+  "revisionId": 276718,
+  "lastEdited": "2024-05-02T16:45:24Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.62 kg",
+    "grid": "3x3",
+    "price": "₽29,600",
+    "BlocksArmor": "No",
+    "slots": "16 Slots",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5f5f41f56760b4138443b352",
+    "id": "item_equipment_rig_thunderbolt"
+  },
+  "sections": [
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Tigr Safari"
+    }
+  ]
+}

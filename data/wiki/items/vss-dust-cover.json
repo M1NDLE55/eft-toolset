@@ -1,0 +1,26 @@
+{
+  "title": "VSS dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSS_dust_cover",
+  "revisionId": 328201,
+  "lastEdited": "2025-12-17T16:13:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.2 kg",
+    "grid": "2x1",
+    "price": "₽1,500",
+    "trader": "Prapor LL4",
+    "ergonomics": "+2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "node": "578395402459774a256959b5",
+    "ID": "reciever_vss_tochmash_vss_std"
+  },
+  "sections": []
+}

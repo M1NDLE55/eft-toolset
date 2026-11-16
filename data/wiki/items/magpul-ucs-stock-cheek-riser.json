@@ -1,0 +1,21 @@
+{
+  "title": "Magpul UCS Stock Cheek Riser",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magpul_UCS_Stock_Cheek_Riser",
+  "revisionId": 343338,
+  "lastEdited": "2026-05-05T19:39:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.043 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+2",
+    "node": "68badc0366a72211fe004bc7",
+    "ID": "stock_ucs_magpul_ucs_buttstock_cheek"
+  },
+  "sections": []
+}

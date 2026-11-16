@@ -1,0 +1,27 @@
+{
+  "title": "AR-10 Thunder Beast Arms 30CB 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Thunder_Beast_Arms_30CB_7.62x51_muzzle_brake",
+  "revisionId": 337699,
+  "lastEdited": "2026-03-06T01:29:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.109 kg",
+    "grid": "1x1",
+    "price": "₽7,280",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-4",
+    "accuracy": "+1",
+    "recoil": "-8",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "loot xp": "20",
+    "node": "5d443f8fa4b93678dd4a01aa",
+    "ID": "muzzle_ar10_thunder_beast_30cb_muzzle_brake_762x51"
+  },
+  "sections": []
+}

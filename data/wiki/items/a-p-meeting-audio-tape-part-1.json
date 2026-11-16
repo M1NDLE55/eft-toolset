@@ -1,0 +1,32 @@
+{
+  "title": "A.P. meeting audio tape Part 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/A.P._meeting_audio_tape_Part_1",
+  "revisionId": 348067,
+  "lastEdited": "2026-07-19T12:25:04Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes",
+    "Minor TerraGroup evidence"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "1:57",
+    "node": "68109c867807b4d2dd0b5df5",
+    "ID": "item_info_recorder_tape_tgmeeting_01"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard\n- This is one of the minor evidence used in The Ticket"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "A.P.: Friends! Who's still out there? Dmitry Sergeevich, come in and close the door, please. Thank you. Are all departments represented? I see they are. Let us begin, then.\n\nA.P.: By now, everyone's noticed that communications have been down since this morning and many divisions are in lockdown. I'd like to say this is just another drill, but this time it's very serious. We received an order from New York today. We're evacuating.\n\nA.P.: Quiet, colleagues! I understand your concern, but we have to stay focused. I initiated the protocol a few hours ago. The specialists are already working on data destruction and sealing the premises.\n\nA.P..: All projects in Tarkov are being shut down, including affiliated enterprises. From now on, contact with them will be handled only through… hmm… Gennady Viktorovich, I don't see you, raise your hand, please. There, that's the man you'll need. I believe there shouldn't be any issues. Those drills we ran weren't for nothing…\n\nQuestion from the audience: Half of my samples aren't ready yet. What's going to happen to them?\n\nA.P.: Pyotr Alekseevich, please, hold your questions…\n\nQuestion from the audience: Excuse me, what about the large equipment?\n\nA.P.: The centrifuge has already been disassembled, literally an hour ago. Enough! Time is precious right now!\n\nA.P.: You'll be able to ask your questions at the end, but for now, let's stay on topic. Key personnel will be evacuated to the Health Resort — many of you have already vacationed there before. It's now being used as an interim evacuation site. Logistics, escort, and security are handled by United Security personnel.\n\nA.P.: But be careful! Our cooperation with them ends immediately after arrival at the Health Resort! After that point, a new contractor will make contact, and management strongly advises against approaching USEC operatives."
+    }
+  ]
+}

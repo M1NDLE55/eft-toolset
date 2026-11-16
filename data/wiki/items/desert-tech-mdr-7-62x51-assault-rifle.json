@@ -1,0 +1,42 @@
+{
+  "title": "Desert Tech MDR 7.62x51 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Tech_MDR_7.62x51_assault_rifle",
+  "revisionId": 349128,
+  "lastEdited": "2026-08-03T21:19:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "4.469 kg",
+    "grid": "4x2",
+    "trader": "Ref LL4, Peacekeeper LL4: Standard after completing his task Peacekeeping Mission, Mechanic LL4: T.O 2k24 variant",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "61",
+    "velocity": "823 m/s",
+    "range": "500 m",
+    "MOA": "1.36",
+    "Weaprecoil": "Vertical: 104, Horizontal: 257",
+    "rof": "650",
+    "caliber": "7.62x51mm NATO",
+    "node": "5dcbd56fdbd3d91b3e5468d5",
+    "ID": "weapon_dt_mdr_762x51"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| MDR Killtube |\n| MDR T.O 2k24 |"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Glock FAB Defense GLR-17 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_FAB_Defense_GLR-17_stock",
+  "revisionId": 270150,
+  "lastEdited": "2024-02-08T19:58:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.39 kg",
+    "grid": "2x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+4",
+    "recoil": "-23",
+    "loot xp": "10",
+    "exam xp": "4",
+    "node": "5d1c702ad7ad1a632267f429",
+    "ID": "stock_glock_fab_defence_glr_17"
+  },
+  "sections": []
+}

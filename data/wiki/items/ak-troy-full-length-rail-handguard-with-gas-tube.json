@@ -1,0 +1,26 @@
+{
+  "title": "AK TROY Full Length Rail handguard with gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_TROY_Full_Length_Rail_handguard_with_gas_tube",
+  "revisionId": 340834,
+  "lastEdited": "2026-04-22T08:22:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.55 kg",
+    "grid": "2x1",
+    "price": "₽16,500",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+17",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "Heat": "-7",
+    "Cooling": "+2.2",
+    "node": "5b237e425acfc4771e1be0b6",
+    "ID": "gas_block_ak_troy_top_bottom_vent_hole_combo"
+  },
+  "sections": []
+}

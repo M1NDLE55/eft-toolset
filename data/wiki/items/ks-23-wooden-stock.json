@@ -1,0 +1,22 @@
+{
+  "title": "KS-23 wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KS-23_wooden_stock",
+  "revisionId": 270161,
+  "lastEdited": "2024-02-08T20:02:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.44 kg",
+    "grid": "2x1",
+    "price": "₽1,486",
+    "ergonomics": "+6",
+    "recoil": "-24",
+    "node": "5e848db4681bea2ada00daa9",
+    "ID": "stock_ks23_toz_ks23_std_wood"
+  },
+  "sections": []
+}

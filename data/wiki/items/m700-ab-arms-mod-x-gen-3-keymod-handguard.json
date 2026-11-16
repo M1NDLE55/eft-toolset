@@ -1,0 +1,26 @@
+{
+  "title": "M700 AB Arms MOD*X GEN 3 KeyMod handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_AB_Arms_MOD*X_GEN_3_KeyMod_handguard",
+  "revisionId": 352622,
+  "lastEdited": "2026-08-09T20:02:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.39 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+10",
+    "recoil": "-3",
+    "Heat": "-3.5",
+    "Cooling": "+0.8",
+    "loot xp": "20",
+    "exam xp": "3",
+    "node": "5cde7afdd7f00c000d36b89d",
+    "ID": "handguard_m700_abarms_mrs_mod_x_gen_3"
+  },
+  "sections": []
+}

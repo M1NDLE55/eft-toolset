@@ -1,0 +1,29 @@
+{
+  "title": "DevTac Ronin helmet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Ronin_helmet",
+  "revisionId": 362927,
+  "lastEdited": "2026-10-03T11:02:40Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.382 kg",
+    "grid": "2x2",
+    "trader": "Mechanic LL2",
+    "material": "Combined materials",
+    "armor": "Nape: 3 , Head top, Ears, Eyes, Jaws: 1",
+    "armor coverage": "Head top, Nape, Ears, Eyes, Jaws",
+    "durability": "180",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -1% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksFaceCover": "No",
+    "node": "66bdc28a0b603c26902b2011",
+    "id": "item_equipment_facecover_devtac_old"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Mk47 ambidextrous charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mk47_ambidextrous_charging_handle",
+  "revisionId": 341733,
+  "lastEdited": "2026-04-26T21:23:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.030 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+1",
+    "node": "606587bd6d0bd7580617bacc",
+    "ID": "charge_mk47_cmmg_mid_charging_handle"
+  },
+  "sections": []
+}

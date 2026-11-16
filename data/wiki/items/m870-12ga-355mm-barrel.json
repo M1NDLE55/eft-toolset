@@ -1,0 +1,26 @@
+{
+  "title": "M870 12ga 355mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_12ga_355mm_barrel",
+  "revisionId": 329262,
+  "lastEdited": "2025-12-24T16:35:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.968 kg",
+    "grid": "2x1",
+    "ergonomics": "-3",
+    "velocity": "+3.4",
+    "MOA": "22",
+    "recoil": "-2",
+    "Dura Burn": "-14",
+    "Heat": "-4",
+    "Cooling": "+2",
+    "node": "5a787f25c5856700186c4ab9",
+    "ID": "barrel_870_extra_barrel_355mm"
+  },
+  "sections": []
+}

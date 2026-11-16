@@ -1,0 +1,27 @@
+{
+  "title": "USEC Standard lower",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_Standard_lower",
+  "revisionId": 313863,
+  "lastEdited": "2025-05-27T18:47:38Z",
+  "kind": "item",
+  "categories": [
+    "USEC lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5cde9e957d6c8b0474535da7",
+    "ID": "DefaultUsecLowerSuite"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This is the default USEC lower-clothing."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The trouser appears to be modeled on Crye Gen2 (AC) Combat Pants, as the frontal pockets adjoin the stretch material around the knee pads. Latter variant Gen3 Combat Pants have some spacing between said pockets and stretch material, and come with grooved knee pads.\n- Before the clothing model update in version 0.12.12.30 (28 Jun 2022), the USEC Standard upper had a inaccurate model which mixed the shoulder pockets of Gen3 Combat Shirt and elbow pad holes of the Gen2 (AC) Combat Shirt. After the update, the base upper is now consistent with the Gen2 appearance and the lower received the camouflage to replace the previous flat green color, making two pieces of the base set matching each other."
+    }
+  ]
+}

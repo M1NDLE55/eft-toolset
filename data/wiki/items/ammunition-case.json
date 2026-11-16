@@ -1,0 +1,47 @@
+{
+  "title": "Ammunition case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ammunition_case",
+  "revisionId": 364106,
+  "lastEdited": "2026-10-13T00:39:12Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "0.508 kg",
+    "grid": "2x2",
+    "trader": "Mechanic LL2, after completing his task Playing the Market, Ref LL2",
+    "effect": "Provides 49 inventory slots while only taking up 4",
+    "node": "5aafbde786f774389d0cbc0f",
+    "id": "item_container_ammo"
+  },
+  "sections": [
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Ammunition case is a container with the purpose of saving space within the player's inventory. It provides 49 inventory slots in a 7x7 grid and only takes up 4 inventory slots itself. It can only store:\n- Ammunition"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- At the three-story dorms in the \"marked room\"\n- On an industrial shelf in warehouse 3 at the shipping yard\n\n- \"Old Gas Station\":\n  - On the desk inside\n  - At the \"giving tree\" behind it"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Big Customer\n- 1 can be obtained as a quest reward from Broadcast - Part 1\n- 2 can be obtained as a quest reward from The Good Times - Part 2\n- 1 can be obtained as a quest reward from The Higher They Fly\n- 1 can be obtained as a quest reward from Needle in a Haystack"
+    }
+  ]
+}

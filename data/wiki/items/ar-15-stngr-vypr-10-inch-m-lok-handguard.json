@@ -1,0 +1,26 @@
+{
+  "title": "AR-15 STNGR VYPR 10 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_STNGR_VYPR_10_inch_M-LOK_handguard",
+  "revisionId": 342017,
+  "lastEdited": "2026-04-28T00:06:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.209 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+16.5",
+    "recoil": "+0",
+    "Heat": "-1.5",
+    "Cooling": "+5.5",
+    "loot xp": "20",
+    "exam xp": "3",
+    "node": "5c6d5d8b2e221644fc630b39",
+    "ID": "handguard_ar15_stngr_vypr_m_lok_10_inch"
+  },
+  "sections": []
+}

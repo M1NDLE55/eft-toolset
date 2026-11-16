@@ -1,0 +1,22 @@
+{
+  "title": "M60E6 front sight rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M60E6_front_sight_rail",
+  "revisionId": 311875,
+  "lastEdited": "2025-04-19T15:08:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.078 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "sightrange": "300",
+    "ergonomics": "+2",
+    "node": "660126a98f2b23af220b27e7",
+    "ID": "sight_front_m60_usord_m60e6_front_sight_rail"
+  },
+  "sections": []
+}

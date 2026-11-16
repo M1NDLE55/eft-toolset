@@ -1,0 +1,35 @@
+{
+  "title": "Atlant Armour Titan Aramid helmet (EMR)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Atlant_Armour_Titan_Aramid_helmet_(EMR)",
+  "revisionId": 362030,
+  "lastEdited": "2026-09-24T18:37:29Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.58 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in the The Lab Tactical Map",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6a568340263768e2ae0c9696",
+    "id": "item_equipment_helmet_atlant_armor_titan_emr_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

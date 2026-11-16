@@ -1,0 +1,23 @@
+{
+  "title": "Leupold Mark 5HD 5-25x56mm 35mm riflescope (FDE)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Leupold_Mark_5HD_5-25x56mm_35mm_riflescope_(FDE)",
+  "revisionId": 352946,
+  "lastEdited": "2026-08-09T22:06:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.85 kg",
+    "grid": "2x1",
+    "zeroing": "50, 100, 150, 200, 250, 300, 350, 400, 450",
+    "sightrange": "2000",
+    "ergonomics": "-10",
+    "modes": "1",
+    "node": "676175789dcee773150c6925",
+    "ID": "scope_35mm_leupold_mark_5hd_5_25x56_fde"
+  },
+  "sections": []
+}

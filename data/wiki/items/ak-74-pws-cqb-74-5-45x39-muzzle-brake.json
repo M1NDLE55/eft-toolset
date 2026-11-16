@@ -1,0 +1,26 @@
+{
+  "title": "AK-74 PWS CQB 74 5.45x39 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_PWS_CQB_74_5.45x39_muzzle_brake",
+  "revisionId": 337424,
+  "lastEdited": "2026-03-05T22:46:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.19 kg",
+    "grid": "1x1",
+    "price": "₽8,300",
+    "trader": "Skier LL3",
+    "ergonomics": "-3.5",
+    "velocity": "+0",
+    "recoil": "-10.5",
+    "Dura Burn": "-2",
+    "Heat": "-1.1",
+    "node": "5943eeeb86f77412d6384f6b",
+    "ID": "muzzle_ak74_pws_cqb74_545x39"
+  },
+  "sections": []
+}

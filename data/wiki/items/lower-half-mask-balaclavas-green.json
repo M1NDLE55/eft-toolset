@@ -1,0 +1,27 @@
+{
+  "title": "Lower half-mask (Balaclavas Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lower_half-mask_(Balaclavas_Green)",
+  "revisionId": 348546,
+  "lastEdited": "2026-07-30T21:59:25Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a5f9c8fafb8efd440694b8",
+    "id": "item_equipment_facecover_skull_half_mask_arena_bp_06_green"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

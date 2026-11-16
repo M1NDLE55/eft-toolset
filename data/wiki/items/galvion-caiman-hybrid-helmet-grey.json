@@ -1,0 +1,35 @@
+{
+  "title": "Galvion Caiman Hybrid helmet (Grey)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Galvion_Caiman_Hybrid_helmet_(Grey)",
+  "revisionId": 360462,
+  "lastEdited": "2026-09-16T21:39:48Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.12 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL2, after completing his task Hiking",
+    "material": "Combined materials",
+    "armor": "3",
+    "armor coverage": "Head top, Nape",
+    "durability": "60",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -2% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5f60b34a41e30a4ab12a6947",
+    "id": "item_equipment_helmet_galvion_caiman"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The helmet in the game is modeled after the non ballistic version of the helmet."
+    }
+  ]
+}

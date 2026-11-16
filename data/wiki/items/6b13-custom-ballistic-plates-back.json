@@ -1,0 +1,30 @@
+{
+  "title": "6B13 custom ballistic plates (Back)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B13_custom_ballistic_plates_(Back)",
+  "revisionId": 314123,
+  "lastEdited": "2025-06-03T20:16:28Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "4.1 kg",
+    "grid": "2x2",
+    "material": "Armor Steel",
+    "armor": "4",
+    "armor coverage": "Back Plate",
+    "durability": "45",
+    "penalties": "-2.5% movement speed, +0% turn speed, -0.5% Ergonomics",
+    "node": "656efd66034e8e01c407f35c",
+    "id": "item_equipment_plate_granit4_4class_diy_back"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Back Plate:\nBack Plate"
+    }
+  ]
+}

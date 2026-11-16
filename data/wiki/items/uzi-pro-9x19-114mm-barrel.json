@@ -1,0 +1,27 @@
+{
+  "title": "UZI PRO 9x19 114mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_PRO_9x19_114mm_barrel",
+  "revisionId": 343212,
+  "lastEdited": "2026-05-03T21:20:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.131 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "velocity": "-3",
+    "MOA": "7.73",
+    "recoil": "-2.9",
+    "Dura Burn": "-15",
+    "Heat": "+6.5",
+    "Cooling": "+10",
+    "node": "66866fe776d1a87cd80fd388",
+    "ID": "barrel_uzi_pro_iwi_semi_114mm_9x19"
+  },
+  "sections": []
+}

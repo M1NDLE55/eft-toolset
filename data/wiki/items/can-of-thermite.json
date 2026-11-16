@@ -1,0 +1,46 @@
+{
+  "title": "Can of thermite",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_thermite",
+  "revisionId": 366573,
+  "lastEdited": "2026-10-31T04:24:41Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable materials",
+    "weight": "0.65 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "60391a8b3364dc22b04d0ce5",
+    "id": "item_barter_flammable_thermite"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the shelves in the Warehouses"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the shelves behind IDEA and Goshan\n- On the steps of the reach stacker in the shipping container lot Southwest of Oli and on nearby crates\n- On the back shelfs of Brutal"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- Aside the truck near Southern road exfil\n- On crates near the construction area on the main road"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Pest Control"
+    }
+  ]
+}

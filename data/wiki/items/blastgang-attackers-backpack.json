@@ -1,0 +1,31 @@
+{
+  "title": "BlastGang attackers' backpack",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BlastGang_attackers'_backpack",
+  "revisionId": 313943,
+  "lastEdited": "2025-05-29T15:23:36Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2.64 kg",
+    "grid": "5x7",
+    "node": "6669a73bef0f6220df0ed178",
+    "ID": "bomb_backpack_new"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item is exclusive to Arena's Blast Gang gamemode and is the main objective.\n- Only the attacking team is able to wear this backpack."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This backpack is a a modified Mystery Ranch NICE COMM 3 BVS frame system backpack."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Magpul M-LOK 0.93 inch rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magpul_M-LOK_0.93_inch_rail",
+  "revisionId": 322655,
+  "lastEdited": "2025-11-18T18:24:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.035 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-0.1",
+    "node": "669a6a4a525be1d2d004b8eb",
+    "ID": "mount_m_lok_magpul_0,93_inch_picatinny_rail_section"
+  },
+  "sections": []
+}

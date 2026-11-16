@@ -1,0 +1,24 @@
+{
+  "title": "Walther MRS reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Walther_MRS_reflex_sight",
+  "revisionId": 236541,
+  "lastEdited": "2023-06-11T05:00:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.113 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-3",
+    "modes": "4",
+    "node": "570fd721d2720bc5458b4596",
+    "ID": "scope_all_walther_mrs"
+  },
+  "sections": []
+}

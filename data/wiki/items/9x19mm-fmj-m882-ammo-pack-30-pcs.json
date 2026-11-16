@@ -1,0 +1,24 @@
+{
+  "title": "9x19mm FMJ M882 ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_FMJ_M882_ammo_pack_(30_pcs)",
+  "revisionId": 367277,
+  "lastEdited": "2026-11-02T23:16:24Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "64aceafcb5bf5e95f50a4c20",
+    "ID": "item_ammo_box_9x19_50_fmj"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Although the name and description of this item suggests 30 rounds, the image and icon correctly display that it holds 50."
+    }
+  ]
+}

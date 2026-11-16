@@ -1,0 +1,23 @@
+{
+  "title": "ORSIS T-5000M aluminium body",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ORSIS_T-5000M_aluminium_body",
+  "revisionId": 270200,
+  "lastEdited": "2024-02-08T20:16:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.64 kg",
+    "grid": "2x1",
+    "ergonomics": "+16",
+    "recoil": "-1",
+    "loot xp": "10",
+    "exam xp": "1",
+    "node": "5df35e59c41b2312ea3334d5",
+    "ID": "stock_t5000_orsis_t5000_se_chassis"
+  },
+  "sections": []
+}

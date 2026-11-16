@@ -1,0 +1,27 @@
+{
+  "title": "Wrench",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wrench",
+  "revisionId": 356433,
+  "lastEdited": "2026-08-26T01:11:24Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "10",
+    "node": "590c311186f77424d1667482",
+    "id": "item_tools_wrench"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Dead Scav\n- Ground cache\n- Sport bag\n- Technical supply crate\n- Toolbox"
+    }
+  ]
+}

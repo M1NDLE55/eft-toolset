@@ -1,0 +1,26 @@
+{
+  "title": "Interchange underground utility plan",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Interchange_underground_utility_plan",
+  "revisionId": 327898,
+  "lastEdited": "2025-12-14T13:13:04Z",
+  "kind": "item",
+  "categories": [
+    "Extraction intel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Extraction intel",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "effect": "Activates the \"Smugglers' Tunnel\" extraction on Interchange.",
+    "node": "6900a54ae85e475e590c96be",
+    "id": "item_info_secret_extraction_map_interchange"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Activates the \"Smugglers' Tunnel\" extraction on Interchange.\n- Cannot be taken out of a raid"
+    }
+  ]
+}

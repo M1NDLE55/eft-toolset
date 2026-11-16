@@ -1,0 +1,24 @@
+{
+  "title": "AI AXMC .338 LM chassis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_.338_LM_chassis",
+  "revisionId": 284285,
+  "lastEdited": "2024-08-08T22:54:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chassis",
+    "weight": "0.31 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "+4",
+    "recoil": "-1",
+    "Heat": "-1.1",
+    "Cooling": "+1",
+    "node": "6281204f308cb521f87a8f9b",
+    "ID": "reciever_ax_accuracy_international_axmc_std_86x70_pb"
+  },
+  "sections": []
+}

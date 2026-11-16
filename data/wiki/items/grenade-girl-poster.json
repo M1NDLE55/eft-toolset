@@ -1,0 +1,35 @@
+{
+  "title": "Grenade girl poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Grenade_girl_poster",
+  "revisionId": 331653,
+  "lastEdited": "2026-01-07T19:46:40Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "67f924adb45d94a2600a8cc8",
+    "id": "item_barter_flyers_girl_streamer_2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This poster shows the content creator Irina Shoroh."
+    }
+  ]
+}

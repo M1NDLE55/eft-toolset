@@ -1,0 +1,28 @@
+{
+  "title": "Aquapeps water purification tablets",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aquapeps_water_purification_tablets",
+  "revisionId": 358460,
+  "lastEdited": "2026-09-10T21:29:27Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "1.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "6389c6c7dbfd5e4b95197e68",
+    "id": "item_barter_medical_aquatabs"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    }
+  ]
+}

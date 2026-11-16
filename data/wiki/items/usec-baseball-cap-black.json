@@ -1,0 +1,22 @@
+{
+  "title": "USEC baseball cap (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_baseball_cap_(Black)",
+  "revisionId": 310167,
+  "lastEdited": "2025-04-13T10:22:31Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽1,600",
+    "trader": "Ragman LL1",
+    "node": "5b40e61f5acfc4001a599bec",
+    "id": "item_equipment_head_usec_black"
+  },
+  "sections": []
+}

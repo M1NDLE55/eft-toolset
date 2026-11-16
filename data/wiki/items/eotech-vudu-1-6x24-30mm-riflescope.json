@@ -1,0 +1,35 @@
+{
+  "title": "EOTech Vudu 1-6x24 30mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/EOTech_Vudu_1-6x24_30mm_riflescope",
+  "revisionId": 352843,
+  "lastEdited": "2026-08-09T21:40:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.57 kg",
+    "grid": "2x1",
+    "trader": "Ref LL3",
+    "zeroing": "50, 100, 150, 200, 250, 300",
+    "sightrange": "1500",
+    "ergonomics": "-3",
+    "modes": "1",
+    "node": "5b3b99475acfc432ff4dcbee",
+    "ID": "scope_30mm_eotech_vudu_1_6x24"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Informed Means Armed"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The reticle is specifically the SR-1 MRAD."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PP-19-01 Vityaz 9x19 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-19-01_Vityaz_9x19_muzzle_brake",
+  "revisionId": 337430,
+  "lastEdited": "2026-03-05T22:49:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.07 Kg",
+    "grid": "1x1",
+    "ergonomics": "-0.5",
+    "accuracy": "+0",
+    "recoil": "-5",
+    "node": "5998597786f77414ea6da093",
+    "ID": "muzzle_pp-19-01_izhmash_vityaz_std_9x19"
+  },
+  "sections": []
+}

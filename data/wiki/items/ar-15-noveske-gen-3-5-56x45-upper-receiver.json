@@ -1,0 +1,29 @@
+{
+  "title": "AR-15 Noveske Gen.3 5.56x45 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Noveske_Gen.3_5.56x45_upper_receiver",
+  "revisionId": 343499,
+  "lastEdited": "2026-05-07T22:22:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.212 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+8",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-2",
+    "Dura Burn": "-3",
+    "Heat": "-2.1",
+    "Cooling": "+1.7",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c07a8770db8340023300450",
+    "ID": "reciever_ar15_noveske_gen3"
+  },
+  "sections": []
+}

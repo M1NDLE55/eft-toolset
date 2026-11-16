@@ -1,0 +1,27 @@
+{
+  "title": "Round frame sunglasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Round_frame_sunglasses",
+  "revisionId": 356954,
+  "lastEdited": "2026-08-30T10:04:26Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.04 kg",
+    "grid": "2x1",
+    "blindness protect": "20%",
+    "node": "5aa2b923e5b5b000137b7589",
+    "id": "glasses_Aoron"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen"
+    }
+  ]
+}

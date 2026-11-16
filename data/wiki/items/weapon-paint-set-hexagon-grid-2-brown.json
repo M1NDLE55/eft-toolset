@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Hexagon Grid 2 Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Hexagon_Grid_2_Brown)",
+  "revisionId": 348395,
+  "lastEdited": "2026-07-30T19:56:50Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67ea9777b28a5f006c0131a1",
+    "id": "item_camo_hexagon_grid_02_brown"
+  },
+  "sections": []
+}

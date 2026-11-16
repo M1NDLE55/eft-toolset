@@ -1,0 +1,26 @@
+{
+  "title": "Armband (Beta)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Beta)",
+  "revisionId": 362723,
+  "lastEdited": "2026-09-30T20:30:58Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "68f25be683ec644ebf046787",
+    "id": "item_equipment_armband_beta"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This armband is only available to players who have created their account before the end of the beta testing stage of Escape from Tarkov, which lasted until 15th November 2025."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "TDI KRISS Vector Gen.2 .45 ACP submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TDI_KRISS_Vector_Gen.2_.45_ACP_submachine_gun",
+  "revisionId": 363185,
+  "lastEdited": "2026-10-05T00:03:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "2.646 kg",
+    "grid": "3x2",
+    "trader": "Skier LL3, after completing his task Stimulating Demand/Pyramid Scheme",
+    "fire modes": "Single, 2-round Burst, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "70",
+    "velocity": "377 m/s",
+    "range": "200 m",
+    "MOA": "6.88",
+    "Weaprecoil": "Vertical: 45, Horizontal: 272",
+    "rof": "1100",
+    "caliber": ".45 ACP",
+    "node": "5fb64bc92b1b027b1f50bcf2",
+    "ID": "weapon_tdi_kriss_vector_gen_2_1143x23"
+  },
+  "sections": []
+}

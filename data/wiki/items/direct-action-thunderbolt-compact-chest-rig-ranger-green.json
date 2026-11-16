@@ -1,0 +1,29 @@
+{
+  "title": "Direct Action Thunderbolt compact chest rig (Ranger Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Direct_Action_Thunderbolt_compact_chest_rig_(Ranger_Green)",
+  "revisionId": 348711,
+  "lastEdited": "2026-07-30T22:34:55Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.62 kg",
+    "grid": "3x3",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 2",
+    "BlocksArmor": "No",
+    "slots": "16 Slots",
+    "node": "69b11f46f3783ec37c03a116",
+    "id": "item_equipment_rig_thunderbolt_ranger_green_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

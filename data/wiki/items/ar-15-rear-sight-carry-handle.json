@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 rear sight carry handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_rear_sight_carry_handle",
+  "revisionId": 356327,
+  "lastEdited": "2026-08-25T22:40:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "sightrange": "600",
+    "ergonomics": "-1",
+    "node": "5ae30bad5acfc400185c2dc4",
+    "ID": "sight_rear_ar15_colt_carry_hande_std"
+  },
+  "sections": []
+}

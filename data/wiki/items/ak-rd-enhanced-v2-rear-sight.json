@@ -1,0 +1,28 @@
+{
+  "title": "AK RD Enhanced V2 Rear Sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_RD_Enhanced_V2_Rear_Sight",
+  "revisionId": 322437,
+  "lastEdited": "2025-11-18T16:45:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.026 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "sightrange": "500",
+    "ergonomics": "+0.1",
+    "node": "628a7b23b0f75035732dd565",
+    "ID": "sight_rear_ak_rifle_dynamics_enhanced_v2"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item is modeled after its highlighted version."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "HK USP Red Dot sight mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_Red_Dot_sight_mount",
+  "revisionId": 322428,
+  "lastEdited": "2025-11-18T16:40:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.028 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "sightrange": "200",
+    "ergonomics": "-0.5",
+    "node": "61963a852d2c397d660036ad",
+    "ID": "sight_rear_hk_red_dot_mount"
+  },
+  "sections": []
+}

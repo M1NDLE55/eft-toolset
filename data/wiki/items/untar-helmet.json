@@ -1,0 +1,29 @@
+{
+  "title": "UNTAR helmet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UNTAR_helmet",
+  "revisionId": 362630,
+  "lastEdited": "2026-09-29T20:31:34Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "2.2 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL1",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "45",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -2% turn speed, -1% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5aa7d03ae5b5b00016327db5",
+    "id": "helmet_un"
+  },
+  "sections": []
+}

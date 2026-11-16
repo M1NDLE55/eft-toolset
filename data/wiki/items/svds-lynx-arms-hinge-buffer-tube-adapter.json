@@ -1,0 +1,22 @@
+{
+  "title": "SVDS Lynx Arms Hinge buffer tube adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVDS_Lynx_Arms_Hinge_buffer_tube_adapter",
+  "revisionId": 321677,
+  "lastEdited": "2025-11-16T18:54:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.127 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-0.5",
+    "recoil": "+0",
+    "node": "6197b229af1f5202c57a9bea",
+    "ID": "stock_svd_s_lynxarms_sch_svd_s"
+  },
+  "sections": []
+}

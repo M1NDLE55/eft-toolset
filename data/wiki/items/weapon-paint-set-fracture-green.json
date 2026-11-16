@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Fracture Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Fracture_Green)",
+  "revisionId": 356805,
+  "lastEdited": "2026-08-29T20:33:29Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "69ce824644c06a77080b5a4a",
+    "id": "item_camo_fracture_green"
+  },
+  "sections": []
+}

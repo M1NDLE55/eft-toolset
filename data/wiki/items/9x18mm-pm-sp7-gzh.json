@@ -1,0 +1,38 @@
+{
+  "title": "9x18mm PM SP7 gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_SP7_gzh",
+  "revisionId": 362906,
+  "lastEdited": "2026-10-03T10:52:59Z",
+  "kind": "ammo",
+  "categories": [
+    "9x18mm Makarov ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.011 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "velocity": "420 m/s",
+    "damage": "77",
+    "penetration": "2",
+    "armor damage": "5",
+    "ricochet": "5%",
+    "l bleed chance": "+25",
+    "h bleed chance": "+10",
+    "fragmentation": "2%",
+    "heat": "-6.5",
+    "feedfailure": "Very low",
+    "misfire": "Very low",
+    "node": "57372140245977611f70ee91",
+    "id": "patron_9x18pm_SP7_gzh"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

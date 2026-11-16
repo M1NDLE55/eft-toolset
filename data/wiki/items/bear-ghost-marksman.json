@@ -1,0 +1,22 @@
+{
+  "title": "BEAR Ghost Marksman",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_Ghost_Marksman",
+  "revisionId": 248080,
+  "lastEdited": "2023-09-22T17:56:05Z",
+  "kind": "item",
+  "categories": [
+    "BEAR upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f567786f7744bcc04874f",
+    "ID": "bear_upper_ghostmarksman"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and references: The jacket is modeled on the SSO Prizrak in Moh over the SSO Gorka-E in SS-Leto, and gloves are modeled on the 5.11 Tactical Scene One Gloves in Black."
+    }
+  ]
+}

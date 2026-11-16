@@ -1,0 +1,21 @@
+{
+  "title": "Wilcox L4G24 NVG Mount (Coyote)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wilcox_L4G24_NVG_Mount_(Coyote)",
+  "revisionId": 345405,
+  "lastEdited": "2026-05-28T20:13:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Helmet mods",
+    "Helmet mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet mount",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL4",
+    "node": "689b8883b49f27df1c0873f8",
+    "ID": "nvg_wilcox_l4g24_mount_coy"
+  },
+  "sections": []
+}

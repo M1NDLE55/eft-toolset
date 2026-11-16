@@ -1,0 +1,24 @@
+{
+  "title": "AK CAA RS47 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_CAA_RS47_handguard",
+  "revisionId": 340611,
+  "lastEdited": "2026-04-21T08:58:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.22 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+14",
+    "recoil": "+0",
+    "Heat": "+3.2",
+    "Cooling": "+3.5",
+    "node": "5648ae314bdc2d3d1c8b457f",
+    "ID": "handguard_ak_caa_quad_rail_polymer"
+  },
+  "sections": []
+}

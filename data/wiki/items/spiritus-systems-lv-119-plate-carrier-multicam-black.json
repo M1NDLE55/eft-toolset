@@ -1,0 +1,51 @@
+{
+  "title": "Spiritus Systems LV-119 Plate Carrier (MultiCam Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Spiritus_Systems_LV-119_Plate_Carrier_(MultiCam_Black)",
+  "revisionId": 362357,
+  "lastEdited": "2026-09-29T09:04:13Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "5.1 kg",
+    "grid": "4x4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Thorax, Back",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "88",
+    "penalties": "-2% movement speed, -2% turn speed, -1% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "28 Slots",
+    "node": "69e2441a18cb3157560855ec",
+    "ID": "item_equipment_rig_spiritus_icebreaker"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- The Wedge"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This chest rig is modeled after a Spiritus Systems LV-119 Overt configured in MultiCam Black.\n\nBeyond the front and rear LV-119 Overt plate bags, the in-game carrier is fitted with several commercially available Spiritus Systems components, including:\n- Spiritus Systems Elastic HLT Cummerbund with Spiritus Systems Trifold Shoulder Covers\n- Spiritus Systems Micro Fight MkV Chassis mounted to the front plate bag\n- Blue Force Gear Ten-Speed Quad MP7 Magazine Pouch secured to the front of the MkV Chassis loaded with three Model 8230 CS gas grenades and a Leatherman MUT multi-tool\n- Spiritus Systems SACK Pouch Mk3 suspended beneath the placard\n- Spiritus Systems MOLLE Back Panel (Tegris) mounted to the rear plate bag.\n\nAdditional equipment visible on the carrier consists of a North American Rescue (NAR) C-A-T Tourniquet, Thyrm DarkVault protective case, Kagwerks Samsung Galaxy S7 case, and a custom Black Division ID patch."
+    }
+  ]
+}

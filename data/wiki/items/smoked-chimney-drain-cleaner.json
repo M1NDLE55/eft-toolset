@@ -1,0 +1,31 @@
+{
+  "title": "Smoked Chimney drain cleaner",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Smoked_Chimney_drain_cleaner",
+  "revisionId": 352068,
+  "lastEdited": "2026-08-07T09:29:28Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.75 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "5e2af00086f7746d3f3c33f7",
+    "ID": "item_barter_household_pipecleaner"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Airdrop Supply Crate"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In the \"Crack House\" (lab building close to the warehouse 17) in the library on the second floor."
+    }
+  ]
+}

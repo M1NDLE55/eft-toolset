@@ -1,0 +1,22 @@
+{
+  "title": "AK-12 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_pistol_grip",
+  "revisionId": 356460,
+  "lastEdited": "2026-08-26T01:41:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+5",
+    "recoil": "-1",
+    "node": "5beec8ea0db834001a6f9dbf",
+    "ID": "pistolgrip_ak_izhmash_ak12_std"
+  },
+  "sections": []
+}

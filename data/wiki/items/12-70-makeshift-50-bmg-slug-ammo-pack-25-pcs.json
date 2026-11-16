@@ -1,0 +1,18 @@
+{
+  "title": "12/70 makeshift .50 BMG slug ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_makeshift_.50_BMG_slug_ammo_pack_(25_pcs)",
+  "revisionId": 367131,
+  "lastEdited": "2026-11-02T23:08:36Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "65702469c5d7d4cb4d07855b",
+    "ID": "item_ammo_box_12g_25_slug_50_bmg"
+  },
+  "sections": []
+}

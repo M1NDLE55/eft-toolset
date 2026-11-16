@@ -1,0 +1,40 @@
+{
+  "title": "Serdyukov SR-1MP Gyurza 9x21 pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Serdyukov_SR-1MP_Gyurza_9x21_pistol",
+  "revisionId": 362965,
+  "lastEdited": "2026-10-03T11:31:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol",
+    "slot": "Secondary",
+    "weight": "0.895 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "81",
+    "velocity": "413 m/s",
+    "range": "50 m",
+    "MOA": "7.49",
+    "Weaprecoil": "Vertical: 442, Horizontal: 325",
+    "rof": "30",
+    "caliber": "9x21mm Gyurza",
+    "def mag": "SR-1MP 9x21 18-round magazine",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "59f98b4986f7746f546d2cef",
+    "ID": "weapon_tochmash_sr1mp_9x21"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Variant Name |\n| SR-1MP Tactical 1 |\n| SR-1MP Tactical 2 |"
+    }
+  ]
+}

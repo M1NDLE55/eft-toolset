@@ -1,0 +1,25 @@
+{
+  "title": "M45A1 Novak Lomount front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M45A1_Novak_Lomount_front_sight",
+  "revisionId": 211111,
+  "lastEdited": "2022-09-20T11:00:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "price": "₽750",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5f3e78a7fbf956000b716b8e",
+    "ID": "sight_front_m1911_novak_lomount_front_sight"
+  },
+  "sections": []
+}

@@ -1,0 +1,34 @@
+{
+  "title": "LBT-6094A Slick Plate Carrier (Coyote Tan)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LBT-6094A_Slick_Plate_Carrier_(Coyote_Tan)",
+  "revisionId": 348307,
+  "lastEdited": "2026-07-28T10:59:06Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "1.3 kg",
+    "grid": "3x3",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Front Plate, Back Plate",
+    "default plates": "2x",
+    "default plates armor class": "6",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "100",
+    "penalties": "-5% movement speed, -1% turn speed, +0% Ergonomics",
+    "node": "6038b4b292ec1c3103795a0b",
+    "ID": "item_equipment_armor_slick_tan"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

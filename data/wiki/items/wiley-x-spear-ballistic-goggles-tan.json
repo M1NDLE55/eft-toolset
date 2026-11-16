@@ -1,0 +1,33 @@
+{
+  "title": "Wiley X SPEAR ballistic goggles (Tan)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Wiley_X_SPEAR_ballistic_goggles_(Tan)",
+  "revisionId": 348457,
+  "lastEdited": "2026-07-30T20:25:03Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.12 kg",
+    "grid": "2x1",
+    "trader": "Ref LL2, after unlocking it in the Factory Tactical Map",
+    "material": "Glass",
+    "armor": "1",
+    "armor coverage": "Eyes",
+    "durability": "25",
+    "blindness protect": "15%",
+    "penalties": "-2% Ergonomics",
+    "node": "69cfe095b96c8e8d3e002aa3",
+    "id": "item_equipment_glasses_wiley_spear_tan_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

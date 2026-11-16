@@ -1,0 +1,31 @@
+{
+  "title": "Medicine case (EXFIL Brothers)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Medicine_case_(EXFIL_Brothers)",
+  "revisionId": 363578,
+  "lastEdited": "2026-10-07T16:13:08Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "6.35 kg",
+    "grid": "3x3",
+    "effect": "Provides 64 inventory slots while only taking up 9",
+    "node": "6a997c025aec2a3abc08b152",
+    "id": "item_container_meds_candidate"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Cannot be stored in a backpack and Secure containers.\n- Only obtainable as a reward from the \"EXFIL Brothers\" program."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Medicine case is a container with the purpose of saving space within the player's inventory. It provides 64 inventory slots in a 8x8 grid and only takes up 9 inventory slots itself. It can only store:\n- Meds\n- Medical supplies"
+    }
+  ]
+}

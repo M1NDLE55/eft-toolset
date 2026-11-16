@@ -1,0 +1,38 @@
+{
+  "title": "9x21mm 7N42 Zubilo",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x21mm_7N42_Zubilo",
+  "revisionId": 343610,
+  "lastEdited": "2026-05-08T18:18:50Z",
+  "kind": "ammo",
+  "categories": [
+    "9x21mm Gyurza ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.011 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "velocity": "400 m/s",
+    "damage": "49",
+    "accuracy": "-3",
+    "recoil": "+10",
+    "penetration": "38",
+    "armor damage": "47",
+    "ricochet": "50%",
+    "durability burn": "+50",
+    "heat": "+45",
+    "feedfailure": "High",
+    "misfire": "Very low",
+    "node": "6576f4708ca9c4381d16cd9d",
+    "id": "patron_9x21_7n42"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

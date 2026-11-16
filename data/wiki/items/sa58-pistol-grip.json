@@ -1,0 +1,22 @@
+{
+  "title": "SA58 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_pistol_grip",
+  "revisionId": 340857,
+  "lastEdited": "2026-04-22T08:35:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "price": "₽1,100",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+2",
+    "node": "5b7d678a5acfc4001a5c4022",
+    "ID": "pistolgrip_sa58_ds_arms_metric_std"
+  },
+  "sections": []
+}

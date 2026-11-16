@@ -1,0 +1,36 @@
+{
+  "title": ".45 ACP Match FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.45_ACP_Match_FMJ",
+  "revisionId": 356463,
+  "lastEdited": "2026-08-26T02:01:36Z",
+  "kind": "ammo",
+  "categories": [
+    ".45 ACP ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "velocity": "340 m/s",
+    "damage": "72",
+    "penetration": "25",
+    "armor damage": "36",
+    "ricochet": "6.5%",
+    "heat": "-0.4",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "effects": "Subsonic",
+    "node": "5e81f423763d9f754677bf2e",
+    "id": "patron_1143x23_acp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Jason mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Jason_mask",
+  "revisionId": 344294,
+  "lastEdited": "2026-05-24T21:41:25Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "price": "₽4,500",
+    "BlocksEyewear": "No",
+    "BlocksHeadwear": "Yes",
+    "node": "5bd071d786f7747e707b93a3",
+    "id": "item_equipment_facecover_HALLOWEEN_Jason"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Based on the infamous \"Jason Voorhees\" mask from the iconic horror movie \"Friday the 13th\".\n- This mask is part of Escape from Tarkov's 2018 Halloween Celebration."
+    }
+  ]
+}

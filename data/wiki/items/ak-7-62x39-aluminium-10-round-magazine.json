@@ -1,0 +1,28 @@
+{
+  "title": "AK 7.62x39 aluminium 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_7.62x39_aluminium_10-round_magazine",
+  "revisionId": 337533,
+  "lastEdited": "2026-03-05T23:42:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.12 kg",
+    "grid": "1x2",
+    "price": "₽700",
+    "trader": "Skier LL1",
+    "ergonomics": "+4",
+    "checkaccuracy": "No",
+    "checkmodifier": "-50",
+    "loadmodifier": "-35",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "7.62x39mm, .366 TKM",
+    "node": "5b1fd4e35acfc40018633c39",
+    "ID": "mag_ak_izhmash_akms_aluminium_762x39_10"
+  },
+  "sections": []
+}

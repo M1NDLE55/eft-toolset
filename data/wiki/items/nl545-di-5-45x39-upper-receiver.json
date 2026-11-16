@@ -1,0 +1,25 @@
+{
+  "title": "NL545 (DI) 5.45x39 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NL545_(DI)_5.45x39_upper_receiver",
+  "revisionId": 353504,
+  "lastEdited": "2026-08-13T20:12:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+5",
+    "recoil": "-2",
+    "Dura Burn": "-2",
+    "Heat": "-2",
+    "Cooling": "+1.6",
+    "node": "68c16e84fc90c174e50de1a8",
+    "ID": "reciever_nl545_cgnl_nl545_di"
+  },
+  "sections": []
+}

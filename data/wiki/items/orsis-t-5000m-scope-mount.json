@@ -1,0 +1,24 @@
+{
+  "title": "ORSIS T-5000M scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ORSIS_T-5000M_scope_mount",
+  "revisionId": 344116,
+  "lastEdited": "2026-05-20T13:05:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.14 kg",
+    "grid": "2x1",
+    "price": "₽2,200",
+    "trader": "Skier LL3",
+    "ergonomics": "-1",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5df35e970b92095fd441e4d2",
+    "ID": "mount_t5000_orsis_scope_mount_rail_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Door Kicker boonie hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Door_Kicker_boonie_hat",
+  "revisionId": 356960,
+  "lastEdited": "2026-08-30T10:10:34Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5d96141523f0ea1b7f2aacab",
+    "ID": "item_equipment_head_doorkicker"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The description of this item contains a reference to Captain John Price from the Call of Duty franchise."
+    }
+  ]
+}

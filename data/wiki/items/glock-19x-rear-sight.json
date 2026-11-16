@@ -1,0 +1,23 @@
+{
+  "title": "Glock 19X rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_19X_rear_sight",
+  "revisionId": 356366,
+  "lastEdited": "2026-08-26T00:28:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.008 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "630765cb962d0247b029dc45",
+    "ID": "sight_rear_glock_glock_19x"
+  },
+  "sections": []
+}

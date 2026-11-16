@@ -1,0 +1,24 @@
+{
+  "title": "MXLR standard handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MXLR_standard_handguard",
+  "revisionId": 343372,
+  "lastEdited": "2026-05-05T20:47:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.22 kg",
+    "grid": "3x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+8",
+    "recoil": "+0",
+    "Heat": "+0",
+    "Cooling": "+2",
+    "node": "67c542c126265106dd0697ab",
+    "ID": "handguard_m1895_marlin_mxlr_std"
+  },
+  "sections": []
+}

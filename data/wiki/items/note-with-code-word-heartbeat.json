@@ -1,0 +1,26 @@
+{
+  "title": "Note with code word Heartbeat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_with_code_word_Heartbeat",
+  "revisionId": 302646,
+  "lastEdited": "2025-01-08T22:12:02Z",
+  "kind": "item",
+  "categories": [
+    "Extraction intel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Extraction intel",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Activates the \"Mountain Bunker\" extraction on Shoreline.",
+    "node": "675aab0d6b6addc02a08f097",
+    "id": "item_info_secret_extraction_codeword_heartbeat"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Activates the \"Mountain Bunker\" extraction on Shoreline.\n- Cannot be taken out of a raid"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "23x75mm Shrapnel-10 buckshot",
+  "url": "https://escapefromtarkov.fandom.com/wiki/23x75mm_Shrapnel-10_buckshot",
+  "revisionId": 322725,
+  "lastEdited": "2025-11-18T21:09:00Z",
+  "kind": "ammo",
+  "categories": [
+    "23x75mmR ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Buckshot",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "velocity": "270 m/s",
+    "damage": "87",
+    "projectiles": "8",
+    "penetration": "11",
+    "armor damage": "20",
+    "ricochet": "20%",
+    "heat": "+180",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "node": "5e85a9a6eacf8c039e4e2ac1",
+    "id": "patron_23x75_shrapnel_10"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

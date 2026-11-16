@@ -1,0 +1,35 @@
+{
+  "title": "Trio poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trio_poster",
+  "revisionId": 356971,
+  "lastEdited": "2026-08-30T13:26:24Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "68f25a45b2b53abd200b954d",
+    "id": "item_barter_flyers_art_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The poster was first obtainable during Release Twitch Drops (October 2025)."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "MPX ambidextrous charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_ambidextrous_charging_handle",
+  "revisionId": 355537,
+  "lastEdited": "2026-08-23T00:27:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.033 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "price": "₽730",
+    "ergonomics": "+1",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "58949edd86f77409483e16a9",
+    "ID": "charge_mpx_sig_mpx_double_latch"
+  },
+  "sections": []
+}

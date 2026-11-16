@@ -1,0 +1,24 @@
+{
+  "title": "M700 Magpul Pro 700 chassis inline mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_Magpul_Pro_700_chassis_inline_mount",
+  "revisionId": 240064,
+  "lastEdited": "2023-07-29T20:52:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.28 kg",
+    "grid": "2x1",
+    "price": "₽2,340",
+    "trader": "Skier LL3",
+    "ergonomics": "-1",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5cdeaca5d7f00c00b61c4b70",
+    "ID": "mount_m700_magpul_pro_700_inline_mount"
+  },
+  "sections": []
+}

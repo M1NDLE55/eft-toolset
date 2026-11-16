@@ -1,0 +1,22 @@
+{
+  "title": "AKMS FAB Defense M4-AKMS P stock adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKMS_FAB_Defense_M4-AKMS_P_stock_adapter",
+  "revisionId": 356554,
+  "lastEdited": "2026-08-26T02:55:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.436 kg",
+    "grid": "2x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-2.5",
+    "recoil": "-0.5",
+    "node": "6761763448fa5c377e06fc39",
+    "ID": "stock_akms_fab_defence_m4_akms_p"
+  },
+  "sections": []
+}

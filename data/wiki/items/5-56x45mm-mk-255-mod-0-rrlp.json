@@ -1,0 +1,37 @@
+{
+  "title": "5.56x45mm MK 255 Mod 0 (RRLP)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_MK_255_Mod_0_(RRLP)",
+  "revisionId": 322862,
+  "lastEdited": "2025-11-18T21:29:48Z",
+  "kind": "ammo",
+  "categories": [
+    "5.56x45mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "velocity": "936 m/s",
+    "damage": "72",
+    "penetration": "11",
+    "armor damage": "24",
+    "ricochet": "10%",
+    "fragmentation": "3%",
+    "durability burn": "+10",
+    "heat": "+59.6",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "node": "59e6918f86f7746c9f75e849",
+    "id": "patron_556x45_MK_255_Mod_0"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

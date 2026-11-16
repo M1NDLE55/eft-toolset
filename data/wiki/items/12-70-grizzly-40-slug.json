@@ -1,0 +1,41 @@
+{
+  "title": "12/70 Grizzly 40 slug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_Grizzly_40_slug",
+  "revisionId": 322842,
+  "lastEdited": "2025-11-18T21:27:35Z",
+  "kind": "ammo",
+  "categories": [
+    "12/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.055 kg",
+    "grid": "1x1",
+    "price": "₽66",
+    "trader": "Jaeger LL1",
+    "velocity": "390 m/s",
+    "damage": "190",
+    "accuracy": "+80",
+    "recoil": "+20",
+    "penetration": "12",
+    "armor damage": "48",
+    "ricochet": "10%",
+    "h bleed chance": "+10",
+    "heat": "+102.1",
+    "feedfailure": "Very low",
+    "misfire": "Medium",
+    "loot xp": "0",
+    "exam xp": "10",
+    "node": "5d6e6869a4b9361c140bcfde",
+    "id": "patron_12x70_slug_grizzly_40"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

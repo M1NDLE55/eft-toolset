@@ -1,0 +1,36 @@
+{
+  "title": "9x19mm FMJ M882",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_FMJ_M882",
+  "revisionId": 356467,
+  "lastEdited": "2026-08-26T02:02:25Z",
+  "kind": "ammo",
+  "categories": [
+    "9x19mm Parabellum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "velocity": "385 m/s",
+    "damage": "56",
+    "penetration": "18",
+    "armor damage": "35",
+    "ricochet": "10%",
+    "durability burn": "+5",
+    "heat": "+7.1",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "64b7bbb74b75259c590fa897",
+    "id": "patron_9x19_m882"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

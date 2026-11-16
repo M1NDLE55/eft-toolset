@@ -1,0 +1,23 @@
+{
+  "title": "MPX single latch charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_single_latch_charging_handle",
+  "revisionId": 300244,
+  "lastEdited": "2024-12-30T14:17:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.032 kg",
+    "grid": "1x1",
+    "price": "₽700",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "58949fac86f77409483e16aa",
+    "ID": "charge_mpx_sig_mpx_single_latch"
+  },
+  "sections": []
+}

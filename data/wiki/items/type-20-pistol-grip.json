@@ -1,0 +1,22 @@
+{
+  "title": "Type 20 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Type_20_pistol_grip",
+  "revisionId": 357314,
+  "lastEdited": "2026-09-01T11:30:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+3",
+    "recoil": "-1",
+    "node": "6a3cea0d277d1c54b5008e27",
+    "ID": "pistolgrip_ar15_howa_type20_std"
+  },
+  "sections": []
+}

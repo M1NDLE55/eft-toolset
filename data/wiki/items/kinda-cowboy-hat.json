@@ -1,0 +1,33 @@
+{
+  "title": "Kinda cowboy hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kinda_cowboy_hat",
+  "revisionId": 352905,
+  "lastEdited": "2026-08-09T21:57:07Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.2 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5aa2b9ede5b5b000137b758b",
+    "id": "hats_cowboy"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On Scavs\n- On Rogues\n- On mannequins in the clothing stores on Interchange"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This item was previously called \"Cowboy hat\" but was renamed because of a Reddit post, and also had the \"or not\" part added to its description."
+    }
+  ]
+}

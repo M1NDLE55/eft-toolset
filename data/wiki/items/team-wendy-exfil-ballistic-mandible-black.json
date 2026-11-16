@@ -1,0 +1,27 @@
+{
+  "title": "Team Wendy EXFIL Ballistic Mandible (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Team_Wendy_EXFIL_Ballistic_Mandible_(Black)",
+  "revisionId": 363117,
+  "lastEdited": "2026-10-04T15:11:31Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.59 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL4 after completing his task Worst Job in the World",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "3",
+    "armor coverage": "Face, Ears, Jaws, Throat",
+    "durability": "36",
+    "penalties": "+0% movement speed, -0.5% turn speed, -1.5% Ergonomics",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6a834d1f992762b7bf08ffd2",
+    "id": "item_equipment_helmet_exfil_mandible_black_bp_04"
+  },
+  "sections": []
+}

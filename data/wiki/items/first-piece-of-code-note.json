@@ -1,0 +1,25 @@
+{
+  "title": "First piece of code note",
+  "url": "https://escapefromtarkov.fandom.com/wiki/First_piece_of_code_note",
+  "revisionId": 348007,
+  "lastEdited": "2026-07-19T00:12:25Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "68d2f69e91c2fa84e2044a08",
+    "ID": "item_info_note_radiocode_bogatir_01"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    }
+  ]
+}

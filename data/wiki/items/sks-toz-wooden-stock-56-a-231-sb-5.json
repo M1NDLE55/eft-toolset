@@ -1,0 +1,24 @@
+{
+  "title": "SKS TOZ wooden stock (56-A-231 Sb.5)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_TOZ_wooden_stock_(56-A-231_Sb.5)",
+  "revisionId": 340630,
+  "lastEdited": "2026-04-21T09:13:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.703 kg",
+    "grid": "4x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+17",
+    "recoil": "-28",
+    "Heat": "+4.1",
+    "Cooling": "-3.9",
+    "node": "574dad8024597745964bf05c",
+    "ID": "stock_sks_toz_sks_std_wood"
+  },
+  "sections": []
+}

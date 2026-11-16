@@ -1,0 +1,25 @@
+{
+  "title": "Galvion Caiman Hybrid Ballistic Applique",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Galvion_Caiman_Hybrid_Ballistic_Applique",
+  "revisionId": 343569,
+  "lastEdited": "2026-05-08T18:13:23Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.68 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "40",
+    "penalties": "-6% turn speed, -6% Ergonomics",
+    "node": "5f60b85bbdb8e27dee3dc985",
+    "ID": "item_equipment_helmet_galvion_applique"
+  },
+  "sections": []
+}

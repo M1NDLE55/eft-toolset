@@ -1,0 +1,21 @@
+{
+  "title": "AKS-74U bakelite pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74U_bakelite_pistol_grip",
+  "revisionId": 340643,
+  "lastEdited": "2026-04-21T09:21:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+2",
+    "node": "57e3dba62459770f0c32322b",
+    "ID": "pistolgrip_ak_izhmash_aks74u_std"
+  },
+  "sections": []
+}

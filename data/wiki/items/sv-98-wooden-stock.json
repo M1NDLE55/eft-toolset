@@ -1,0 +1,26 @@
+{
+  "title": "SV-98 wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SV-98_wooden_stock",
+  "revisionId": 270218,
+  "lastEdited": "2024-02-08T20:23:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "2.913 kg",
+    "grid": "4x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "+6",
+    "recoil": "-20",
+    "Heat": "+17.5",
+    "Cooling": "-9",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "61faa91878830f069b6b7967",
+    "ID": "stock_sv-98_izhmash_wood"
+  },
+  "sections": []
+}

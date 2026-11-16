@@ -1,0 +1,29 @@
+{
+  "title": "Extreme cold weather face mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Extreme_cold_weather_face_mask",
+  "revisionId": 348662,
+  "lastEdited": "2026-07-30T22:26:28Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.25 kg",
+    "grid": "2x2",
+    "trader": "Ref LL1, after unlocking it in Arena BattlePass Season 1",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "No",
+    "node": "69412e1d0045b2176002e4eb",
+    "id": "item_equipment_facecover_extreme_cold_weather"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

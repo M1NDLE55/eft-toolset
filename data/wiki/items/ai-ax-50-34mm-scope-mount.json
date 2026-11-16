@@ -1,0 +1,21 @@
+{
+  "title": "AI AX-50 34mm scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AX-50_34mm_scope_mount",
+  "revisionId": 254047,
+  "lastEdited": "2023-11-02T23:31:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.23 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-1",
+    "node": "62811f461d5df4475f46a332",
+    "ID": "mount_all_accuracy_international_ax50_scope_mount_34mm_pb"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "AI AXMC AX buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI_AXMC_AX_buttstock",
+  "revisionId": 284287,
+  "lastEdited": "2024-08-08T22:55:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.52 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "+4",
+    "recoil": "-19",
+    "node": "62811f828193841aca4a45c3",
+    "ID": "stock_ax_accuracy_international_ax_butt_stock_pb"
+  },
+  "sections": []
+}

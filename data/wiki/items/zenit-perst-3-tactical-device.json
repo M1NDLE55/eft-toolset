@@ -1,0 +1,31 @@
+{
+  "title": "Zenit Perst-3 tactical device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zenit_Perst-3_tactical_device",
+  "revisionId": 252672,
+  "lastEdited": "2023-11-02T21:48:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "price": "₽17,050",
+    "trader": "Skier LL4",
+    "ergonomics": "-2",
+    "modes": "4",
+    "loot xp": "30",
+    "exam xp": "10",
+    "node": "5c5952732e2216398b5abda2",
+    "ID": "tactical_all_zenit_perst_3"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is red"
+    }
+  ]
+}

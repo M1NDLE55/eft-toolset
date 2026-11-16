@@ -1,0 +1,70 @@
+{
+  "title": "Bottle of Fierce Hatchling moonshine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bottle_of_Fierce_Hatchling_moonshine",
+  "revisionId": 362189,
+  "lastEdited": "2026-09-25T21:34:40Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "1.2 kg",
+    "grid": "1x2",
+    "price": "₽100,000",
+    "effect": "Energy: +20, Hydration: -10, , Buffs: , Removes: for 500 seconds,, Radiation Exposure, Adds: for 500 seconds, 1s Delay; 500s Duration: - Increases Stress Resistance (+3), Debuffs:, 1s Delay; 500s Duration: - Decreases Health (-1) 510s Delay; 150s Duration:, Causes",
+    "use time": "6s",
+    "loot xp": "10",
+    "exam xp": "10",
+    "node": "5d1b376e86f774252519444e",
+    "ID": "item_food_moonshine"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be used as payment for the \"Scav case\" module in the Hideout"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Sport bags\n- In Dead Scavs\n- In Plastic suitcases\n- In Ground caches\n- In Buried barrel caches"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the kitchen table inside new construction glass building\n- In the basement of warehouse 4 next to the sleeping bag\n- In the back of the van between old gas station and railway bridge\n- In the repair shop on the right side of the greenscreen\n- In the fort, in the room next to the stairs, on a box\n\n- In 3 story dorms, 2nd floor kitchen table, next to the radio"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In the saferoom exfil (#11SR), on the metal shelves to the left of the table with the microwave or on the ground directly in front of the metal shelves\n- On the boxes on the right side of the staircase at the entrance to OLI\n- On the chairs or table in the camp west of the railroad tracks. It is accessible by jumping from the red awning (covering the gym equipment) to the shipping container."
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In West Wing room 216 on the table with the beer bottle\n- In East Wing room 226 on the table next to the bed\n- In East Wing room 308 on the table with the ashtray and lamp\n- On the blue tray next to the LEDX spawn in admin basement\n- In the weather station on the bottom floor table\n- In the smugglers' base"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- On a table inside a portable cabin near the Southern Road extract\n- On an overturned filing cabinet inside a portable cabin, near the southeast entrance to the water treatment plant."
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the kitchen of the 2 story house in Scav town\n- On the table of the second room into the bunker in \"Scav Bunker\"\n- USEC camp side with the cars on the outside of the tent on some crates and on the table with food\n- Among the plane wreckage\n- In cabin No. 1 of the three, located in the north-east of the sawmill\n\n- In a tent south-west of the lumber mill\n\n- On a chair on the North side of the Medical Camp"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the relaxation room"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from Key to the City\n- 2 can be obtained as a quest reward from Circulate\n- 1 can be obtained as a quest reward from Building Foundations"
+    }
+  ]
+}

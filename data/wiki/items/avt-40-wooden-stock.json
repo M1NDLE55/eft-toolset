@@ -1,0 +1,23 @@
+{
+  "title": "AVT-40 wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AVT-40_wooden_stock",
+  "revisionId": 340357,
+  "lastEdited": "2026-04-20T13:20:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.217 kg",
+    "grid": "4x1",
+    "ergonomics": "+36",
+    "recoil": "-18",
+    "Heat": "+11",
+    "Cooling": "-5",
+    "node": "6410745d5dd49d77bd078485",
+    "ID": "stock_avt40_toz_wood_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Compact disc",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Compact_disc",
+  "revisionId": 355408,
+  "lastEdited": "2026-08-21T23:18:00Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "node": "689f6f33b3b8c90a1c0545b8",
+    "id": "q_ann_disk_data_3"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market, be sold to traders or destroyed."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "Can be used at the Rest Space level 3 in the Hideout, but has no effect."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "In a bus at the bus depot on Customs. Guaranteed spawn every raid."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This item was originally added as a part of the 2025 Targrad Tales event, but was not removed from the game with the release. Before release, its description used to say \"A scratched disk. The smudges make it impossible to tell what was actually written on it. Will it even start up?\" and it could have been used at the Rest Space level 3 in the Hideout to play a very short early version of \"Targrad Tales\" till a disk read error occured."
+    }
+  ]
+}

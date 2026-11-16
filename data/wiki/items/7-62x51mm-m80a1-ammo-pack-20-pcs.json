@@ -1,0 +1,24 @@
+{
+  "title": "7.62x51mm M80A1 ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_M80A1_ammo_pack_(20_pcs)",
+  "revisionId": 367232,
+  "lastEdited": "2026-11-02T23:13:57Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6769b8e3c1a1466c850658a8",
+    "ID": "item_ammo_box_762x51_20_m80a1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

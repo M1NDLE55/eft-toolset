@@ -1,0 +1,24 @@
+{
+  "title": "ME Cylinder 12ga muzzle adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ME_Cylinder_12ga_muzzle_adapter",
+  "revisionId": 329240,
+  "lastEdited": "2025-12-24T16:27:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-1",
+    "Heat": "-1",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5c0111ab0db834001966914d",
+    "ID": "muzzle_12g_me_muzzle_adapter_cylinder_12g"
+  },
+  "sections": []
+}

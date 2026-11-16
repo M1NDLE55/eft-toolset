@@ -1,0 +1,22 @@
+{
+  "title": "AK-545 Mk. 2.1 gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-545_Mk._2.1_gas_tube",
+  "revisionId": 293234,
+  "lastEdited": "2024-09-29T22:23:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "Heat": "-5",
+    "Cooling": "+5",
+    "node": "628b8d83717774443b15e248",
+    "ID": "gas_block_ak_sag_mk_21"
+  },
+  "sections": []
+}

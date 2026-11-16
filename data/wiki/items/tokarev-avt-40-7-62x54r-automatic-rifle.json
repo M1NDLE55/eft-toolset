@@ -1,0 +1,36 @@
+{
+  "title": "Tokarev AVT-40 7.62x54R automatic rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tokarev_AVT-40_7.62x54R_automatic_rifle",
+  "revisionId": 360769,
+  "lastEdited": "2026-09-19T12:47:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault carbines",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault carbine",
+    "slot": "Primary",
+    "weight": "4.219 kg",
+    "grid": "6x2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "500",
+    "ergonomics": "24",
+    "velocity": "865 m/s",
+    "range": "400 m",
+    "MOA": "1.37",
+    "Weaprecoil": "Vertical: 104, Horizontal: 401",
+    "rof": "750",
+    "caliber": "7.62x54mmR",
+    "node": "6410733d5dd49d77bd07847e",
+    "ID": "weapon_toz_avt_40_762x54r"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

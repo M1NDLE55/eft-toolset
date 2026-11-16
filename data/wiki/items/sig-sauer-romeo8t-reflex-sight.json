@@ -1,0 +1,24 @@
+{
+  "title": "SIG Sauer ROMEO8T reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_ROMEO8T_reflex_sight",
+  "revisionId": 237814,
+  "lastEdited": "2023-07-04T22:42:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.388 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-3.5",
+    "modes": "1",
+    "node": "60a23797a37c940de7062d02",
+    "ID": "scope_all_sig_romeo_8t"
+  },
+  "sections": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": ".50 BMG M903 SLAP ammo pack (10 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_BMG_M903_SLAP_ammo_pack_(10_pcs)",
+  "revisionId": 367111,
+  "lastEdited": "2026-11-02T23:07:31Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "68e915dfd996b7754e0f25c9",
+    "ID": "item_ammo_box_127x99_10_m903"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The QR code contains the text \"I luv pixel art\"."
+    }
+  ]
+}

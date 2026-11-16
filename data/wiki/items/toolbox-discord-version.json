@@ -1,0 +1,31 @@
+{
+  "title": "Toolbox (Discord Version)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Toolbox_(Discord_Version)",
+  "revisionId": 357770,
+  "lastEdited": "2026-09-08T11:47:09Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "5.7 kg",
+    "grid": "2x2",
+    "effect": "Provides 36 inventory slots while only taking up 4",
+    "node": "688b2dba67bf6fa26c07e918",
+    "ID": "item_container_moderator_toolbox"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item is only available as a reward for players who have linked a Discord account to their game account on the Escape from Tarkov website.\n- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Toolbox (Discord Version) is a container with the purpose of saving space within the player's inventory. It provides 36 inventory slots in a 6x6 grid and only takes up 4 inventory slots itself. It can only store:\n- Tools\n- Building materials\n- Paracord\n- Leatherman Multitool\n- Freeman crowbar"
+    }
+  ]
+}

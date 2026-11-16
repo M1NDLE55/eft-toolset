@@ -1,0 +1,19 @@
+{
+  "title": "5.56x45mm MK 318 Mod 0 (SOST) ammo pack (100 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_MK_318_Mod_0_(SOST)_ammo_pack_(100_pcs)",
+  "revisionId": 367191,
+  "lastEdited": "2026-11-02T23:11:45Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2",
+    "node": "6570266bc5d7d4cb4d078594",
+    "ID": "item_ammo_box_556x45_100_mk_318"
+  },
+  "sections": []
+}

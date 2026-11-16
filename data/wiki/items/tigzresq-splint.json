@@ -1,0 +1,37 @@
+{
+  "title": "Tigzresq splint",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tigzresq_splint",
+  "revisionId": 367502,
+  "lastEdited": "2026-11-03T15:48:05Z",
+  "kind": "item",
+  "categories": [
+    "Injury treatment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injury treatment",
+    "weight": "0.22 kg",
+    "grid": "1x1",
+    "effect": "Removes:",
+    "use time": "3s",
+    "node": "6937ecf8628ee476240c07cb",
+    "id": "item_meds_splint_tigzresq"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "When applying the splint to your leg you will be unable to move for the duration of the application. You are able to move while it is applied to an arm."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Ground cache\n- Medbag\n- Sport bag\n- Weapon box (6x2)"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This item is a reference to the content creator Tigz. The QR code on it links directly to his Twitch channel.\n\n- The link between Tigz and a splint comes from his first Terminal attempt, in which no splints spawned on the location and he ran out of painkillers. He was then sent a message by the developers via in-game mail with the text \"We heard you were looking for splints.\" which included 5 splints and 5 alu splints. As a reward for becoming the first player to escape from Tarkov, Nikita, the COO of Battlestate Games, posted this item as Tigz streamer item on Twitter."
+    }
+  ]
+}

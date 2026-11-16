@@ -1,0 +1,29 @@
+{
+  "title": "AR-15 Strike Industries GRIDLOK 8.5 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Strike_Industries_GRIDLOK_8.5_inch_handguard",
+  "revisionId": 354975,
+  "lastEdited": "2026-08-18T01:52:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.162 kg",
+    "grid": "2x1",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 2",
+    "ergonomics": "+14",
+    "Heat": "-2.2",
+    "Cooling": "+3.7",
+    "node": "68a5dc4eed35a7eac1048ff6",
+    "ID": "handguard_ar15_strike_industries_gridlok_8_5_inch_m_lok"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

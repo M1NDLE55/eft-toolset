@@ -1,0 +1,37 @@
+{
+  "title": "Far-forward GPS Signal Amplifier Unit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Far-forward_GPS_Signal_Amplifier_Unit",
+  "revisionId": 321183,
+  "lastEdited": "2025-11-14T21:22:52Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.44 kg",
+    "grid": "1x1",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "6389c7f115805221fb410466",
+    "ID": "Item_barter_electr_adv_amplifier"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Cannot be put in secure containers."
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Electronics spawns"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Following the Bread Crumbs"
+    }
+  ]
+}

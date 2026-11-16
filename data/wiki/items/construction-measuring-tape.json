@@ -1,0 +1,33 @@
+{
+  "title": "Construction measuring tape",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Construction_measuring_tape",
+  "revisionId": 352043,
+  "lastEdited": "2026-08-07T09:26:04Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "15",
+    "exam xp": "2",
+    "node": "590c2c9c86f774245b1f03f2",
+    "id": "item_tools_roulette"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Civilian body\n- Dead Scav\n- Drawer\n- Ground cache\n- Sport bag\n- Technical supply crate\n- Toolbox"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The construction measuring tape is based off Stanley's \"5m/16ft Powerlock Tape Measure\" model."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "AK-545 Mk.3 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-545_Mk.3_handguard",
+  "revisionId": 342247,
+  "lastEdited": "2026-04-28T21:49:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.617 kg",
+    "grid": "2x1",
+    "ergonomics": "+19.5",
+    "accuracy": "+2",
+    "recoil": "+0",
+    "Heat": "+8",
+    "Cooling": "+6",
+    "node": "628b916469015a4e1711ed8d",
+    "ID": "handguard_ak_sag_mk3_chassis_ak545_type"
+  },
+  "sections": []
+}

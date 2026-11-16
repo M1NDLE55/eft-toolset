@@ -1,0 +1,29 @@
+{
+  "title": "Gruppa 99 T20 backpack (Umber Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gruppa_99_T20_backpack_(Umber_Brown)",
+  "revisionId": 348319,
+  "lastEdited": "2026-07-28T14:01:07Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.25 kg",
+    "grid": "5x5",
+    "trader": "Ragman LL3",
+    "penalties": "-1% movement speed, +0% turn speed, -1% Ergonomics",
+    "slots": "5x5 grid (25 slots)",
+    "node": "618bb76513f5097c8d5aa2d5",
+    "id": "item_equipment_backpack_gr99t20"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 1 can be held in a raid inventory at the same time"
+    }
+  ]
+}

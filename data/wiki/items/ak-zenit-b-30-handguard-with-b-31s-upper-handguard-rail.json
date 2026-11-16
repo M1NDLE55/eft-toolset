@@ -1,0 +1,26 @@
+{
+  "title": "AK Zenit B-30 handguard with B-31S upper handguard rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Zenit_B-30_handguard_with_B-31S_upper_handguard_rail",
+  "revisionId": 353010,
+  "lastEdited": "2026-08-09T22:25:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.39 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "-9.4",
+    "Cooling": "+8.2",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5efaf417aeb21837e749c7f2",
+    "ID": "handguard_ak_zenit_b30"
+  },
+  "sections": []
+}

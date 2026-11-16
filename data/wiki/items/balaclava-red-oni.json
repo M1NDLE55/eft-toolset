@@ -1,0 +1,27 @@
+{
+  "title": "Balaclava (Red Oni)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balaclava_(Red_Oni)",
+  "revisionId": 348554,
+  "lastEdited": "2026-07-30T22:00:34Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a9ea39de7fb0f19e077da6",
+    "id": "item_equipment_facecover_balaclavaSkull_arena_bp_05_red"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

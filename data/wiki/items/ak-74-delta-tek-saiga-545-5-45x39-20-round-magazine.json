@@ -1,0 +1,29 @@
+{
+  "title": "AK-74 Delta-Tek Saiga 545 5.45x39 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_Delta-Tek_Saiga_545_5.45x39_20-round_magazine",
+  "revisionId": 337949,
+  "lastEdited": "2026-03-08T00:01:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.13 kg",
+    "grid": "1x2",
+    "trader": "Skier LL1",
+    "ergonomics": "+1.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "-25",
+    "loadmodifier": "-20",
+    "feedfailure": "Low",
+    "capacity": "20",
+    "caliber": "5.45x39mm",
+    "loot xp": "15",
+    "exam xp": "2",
+    "node": "64b9e265c94d0d15c5027e35",
+    "ID": "mag_ak74_deltatech_saiga_mk_545_20_545x39_20"
+  },
+  "sections": []
+}

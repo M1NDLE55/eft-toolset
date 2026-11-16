@@ -1,0 +1,24 @@
+{
+  "title": "PL-15 pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PL-15_pistol_slide",
+  "revisionId": 306862,
+  "lastEdited": "2025-03-18T13:48:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.16 kg",
+    "grid": "2x1",
+    "ergonomics": "+4",
+    "Heat": "-4.5",
+    "Cooling": "+6.3",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "60228924961b8d75ee233c32",
+    "ID": "reciever_pl15_izhmash_pl15_std"
+  },
+  "sections": []
+}

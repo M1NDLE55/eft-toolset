@@ -1,0 +1,18 @@
+{
+  "title": "9x39mm SP-5 gs ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x39mm_SP-5_gs_ammo_pack_(20_pcs)",
+  "revisionId": 367296,
+  "lastEdited": "2026-11-02T23:17:10Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657025d4c5d7d4cb4d078585",
+    "ID": "item_ammo_box_9x39_20_sp5"
+  },
+  "sections": []
+}

@@ -1,0 +1,30 @@
+{
+  "title": "WARTECH MK3 TV-104 chest rig (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/WARTECH_MK3_TV-104_chest_rig_(MultiCam)",
+  "revisionId": 348346,
+  "lastEdited": "2026-07-29T11:22:00Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.65 kg",
+    "grid": "3x4",
+    "price": "₽42,000",
+    "trader": "Ragman LL3",
+    "BlocksArmor": "No",
+    "slots": "20 Slots",
+    "node": "5ab8dab586f77441cd04f2a2",
+    "id": "wartech_mk3"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The TV-103 is part of a long line of \"rhodesian recon vest\" patterned plate carrier/load bearing vest hybrids. It has room for a single armor plate in the front, as per usual."
+    }
+  ]
+}

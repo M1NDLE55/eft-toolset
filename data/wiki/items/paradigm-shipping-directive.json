@@ -1,0 +1,26 @@
+{
+  "title": "Paradigm Shipping directive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Paradigm_Shipping_directive",
+  "revisionId": 348058,
+  "lastEdited": "2026-07-19T12:24:19Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "69bb4499957ebbdeb600393f",
+    "id": "item_info_note_ice_paradigm_shipping"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Boreas\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

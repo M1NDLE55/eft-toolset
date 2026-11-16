@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Alexander Arms MK10 rifle length handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Alexander_Arms_MK10_rifle_length_handguard",
+  "revisionId": 352874,
+  "lastEdited": "2026-08-09T21:46:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.38 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+17",
+    "recoil": "+0",
+    "Heat": "-0.7",
+    "Cooling": "+4.6",
+    "node": "5b2cfa535acfc432ff4db7a0",
+    "ID": "handguard_ar15_alexander_arms_mk10_rifle_lenght"
+  },
+  "sections": []
+}

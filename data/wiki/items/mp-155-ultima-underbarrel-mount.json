@@ -1,0 +1,24 @@
+{
+  "title": "MP-155 Ultima underbarrel mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_Ultima_underbarrel_mount",
+  "revisionId": 214144,
+  "lastEdited": "2022-11-12T09:46:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "price": "₽",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+5",
+    "Heat": "-0.6",
+    "Cooling": "+0.8",
+    "node": "606f26752535c57a13424d22",
+    "ID": "tactical_mp155_kalashnikov_ultima_underbarrel_mount"
+  },
+  "sections": []
+}

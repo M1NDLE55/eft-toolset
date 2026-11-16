@@ -1,0 +1,35 @@
+{
+  "title": "CAT hemostatic tourniquet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/CAT_hemostatic_tourniquet",
+  "revisionId": 358681,
+  "lastEdited": "2026-09-10T22:56:36Z",
+  "kind": "item",
+  "categories": [
+    "Injury treatment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injury treatment",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "effect": "Removes:, Causes:",
+    "use time": "3s",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "60098af40accd37ef2175f27",
+    "id": "item_meds_cat"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This tourniquet is modeled after the real life product Combat Application Tourniquet (C-A-T)"
+    }
+  ]
+}

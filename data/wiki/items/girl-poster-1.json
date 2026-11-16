@@ -1,0 +1,35 @@
+{
+  "title": "Girl poster 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Girl_poster_1",
+  "revisionId": 344212,
+  "lastEdited": "2026-05-24T14:37:58Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6759e19a8367ee2b0c0f4b92",
+    "id": "item_barter_flyers_girl_1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This poster shows Helen Flanagan."
+    }
+  ]
+}

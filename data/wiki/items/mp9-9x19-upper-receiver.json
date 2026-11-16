@@ -1,0 +1,28 @@
+{
+  "title": "MP9 9x19 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP9_9x19_upper_receiver",
+  "revisionId": 216294,
+  "lastEdited": "2022-12-09T17:22:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.19 kg",
+    "grid": "2x1",
+    "price": "₽4,880",
+    "ergonomics": "+8",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "+4.2",
+    "Cooling": "-3.7",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5e0090f7e9dc277128008b93",
+    "ID": "reciever_mp9_bt_mp9_upper_std_fde"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Insight WMX200 tactical flashlight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Insight_WMX200_tactical_flashlight",
+  "revisionId": 253458,
+  "lastEdited": "2023-11-02T21:55:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.21 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "modes": "2",
+    "node": "626becf9582c3e319310b837",
+    "ID": "tactical_all_insight_wmx200"
+  },
+  "sections": []
+}

@@ -1,0 +1,31 @@
+{
+  "title": "6B33 ballistic plate (Front)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B33_ballistic_plate_(Front)",
+  "revisionId": 364809,
+  "lastEdited": "2026-10-20T15:36:20Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "3.7 kg",
+    "grid": "2x3",
+    "trader": "Prapor LL3",
+    "material": "Armor Steel",
+    "armor": "4",
+    "armor coverage": "Front Plate",
+    "durability": "50",
+    "penalties": "-2.5% movement speed, -2.5% turn speed, -1% Ergonomics",
+    "node": "656f603f94b480b8a500c0d6",
+    "id": "item_equipment_plate_granit4_6b33_4class_front"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate"
+    }
+  ]
+}

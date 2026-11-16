@@ -1,0 +1,39 @@
+{
+  "title": ".357 Magnum FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.357_Magnum_FMJ",
+  "revisionId": 322743,
+  "lastEdited": "2025-11-18T21:13:29Z",
+  "kind": "ammo",
+  "categories": [
+    ".357 Magnum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.016 kg",
+    "grid": "1x1",
+    "price": "₽150",
+    "trader": "Jaeger LL2",
+    "velocity": "385 m/s",
+    "damage": "70",
+    "recoil": "+12",
+    "penetration": "35",
+    "armor damage": "43",
+    "ricochet": "6.5%",
+    "h bleed chance": "+10",
+    "durability burn": "+50",
+    "heat": "+28",
+    "feedfailure": "High",
+    "misfire": "Low",
+    "node": "62330b3ed4dc74626d570b95",
+    "id": "patron_9x33r_fmj"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

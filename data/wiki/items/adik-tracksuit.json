@@ -1,0 +1,23 @@
+{
+  "title": "Adik tracksuit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Adik_tracksuit",
+  "revisionId": 349016,
+  "lastEdited": "2026-08-03T09:02:01Z",
+  "kind": "item",
+  "categories": [
+    "BEAR upper-body clothing",
+    "USEC upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5cdea42e7d6c8b0474535dad",
+    "ID": "KillaUpperSuite"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The tracksuit has the logo of \"Abibas\", rather than \"Adik\".\n- Prior to the achievement system, this clothing was unlocked by the quest The Stylish One."
+    }
+  ]
+}

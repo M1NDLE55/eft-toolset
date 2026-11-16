@@ -1,0 +1,18 @@
+{
+  "title": "5.45x39mm 7N40 ammo pack (120 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_7N40_ammo_pack_(120_pcs)",
+  "revisionId": 367152,
+  "lastEdited": "2026-11-02T23:09:44Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "2x1",
+    "node": "6570900858b315e8b70a8a98",
+    "ID": "item_ammo_box_545x39_120_7n40"
+  },
+  "sections": []
+}

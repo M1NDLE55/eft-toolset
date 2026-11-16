@@ -1,0 +1,21 @@
+{
+  "title": "VSS/VAL Zenit B-3 mount combo",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSS/VAL_Zenit_B-3_mount_combo",
+  "revisionId": 340793,
+  "lastEdited": "2026-04-22T07:40:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "node": "5a9fc7e6a2750c0032157184",
+    "ID": "mount_vss_zenit_b3_combo"
+  },
+  "sections": []
+}

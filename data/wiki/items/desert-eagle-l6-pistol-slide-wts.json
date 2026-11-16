@@ -1,0 +1,25 @@
+{
+  "title": "Desert Eagle L6 pistol slide (WTS)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Eagle_L6_pistol_slide_(WTS)",
+  "revisionId": 312146,
+  "lastEdited": "2025-04-25T12:40:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.43 kg",
+    "grid": "2x1",
+    "ergonomics": "+4",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-5",
+    "Cooling": "+6.3",
+    "node": "669fa5271bd4416eaa09b3ce",
+    "ID": "reciever_deagle_magnum_research_l6_tiger"
+  },
+  "sections": []
+}

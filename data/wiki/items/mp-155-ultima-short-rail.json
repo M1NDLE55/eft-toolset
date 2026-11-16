@@ -1,0 +1,20 @@
+{
+  "title": "MP-155 Ultima short rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_Ultima_short_rail",
+  "revisionId": 290732,
+  "lastEdited": "2024-09-04T18:57:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "node": "607ea812232e5a31c233d53c",
+    "ID": "mount_mp155_kalashnikov_rail_section"
+  },
+  "sections": []
+}

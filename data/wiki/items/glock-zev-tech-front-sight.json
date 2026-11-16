@@ -1,0 +1,24 @@
+{
+  "title": "Glock ZEV Tech front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_ZEV_Tech_front_sight",
+  "revisionId": 318885,
+  "lastEdited": "2025-10-02T22:16:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "price": "₽1,300",
+    "trader": "Mechanic LL2",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5a71e0048dc32e000c52ecc8",
+    "ID": "sight_front_glock_zev_tech"
+  },
+  "sections": []
+}

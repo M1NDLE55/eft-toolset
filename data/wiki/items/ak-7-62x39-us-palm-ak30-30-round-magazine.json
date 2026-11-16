@@ -1,0 +1,27 @@
+{
+  "title": "AK 7.62x39 US Palm AK30 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_7.62x39_US_Palm_AK30_30-round_magazine",
+  "revisionId": 337450,
+  "lastEdited": "2026-03-05T22:59:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL3: Black, FDE",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "-8",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "7.62x39mm, .366 TKM",
+    "node": "59fafc5086f7740dbe19f6c3 59fafc9386f774067d462453",
+    "ID": "mag_ak_us_palm_ak30_762x39_blk mag_ak_us_palm_ak30_762x39_fde"
+  },
+  "sections": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Sako TRG M10 .338 LM receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_M10_.338_LM_receiver",
+  "revisionId": 314193,
+  "lastEdited": "2025-06-07T15:46:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.54 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+4",
+    "recoil": "-1",
+    "Heat": "-1.1",
+    "Cooling": "+1",
+    "node": "673cb491280680de5e02ff36",
+    "ID": "reciever_trg_sako_trg_m10_std"
+  },
+  "sections": []
+}

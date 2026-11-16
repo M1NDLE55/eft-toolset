@@ -1,0 +1,18 @@
+{
+  "title": "20/70 Star slug ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20/70_Star_slug_ammo_pack_(25_pcs)",
+  "revisionId": 367141,
+  "lastEdited": "2026-11-02T23:09:09Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570249f1419851aef03e709",
+    "ID": "item_ammo_box_20g_25_slug_star"
+  },
+  "sections": []
+}

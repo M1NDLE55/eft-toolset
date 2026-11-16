@@ -1,0 +1,21 @@
+{
+  "title": "SIG Sauer Taper-LOK 7.62x51/.300 BLK muzzle adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_Taper-LOK_7.62x51/.300_BLK_muzzle_adapter",
+  "revisionId": 255735,
+  "lastEdited": "2023-11-25T14:01:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+0",
+    "node": "5fbc22ccf24b94483f726483",
+    "ID": "muzzle_all_sig_qd_muzzle_base_762x51"
+  },
+  "sections": []
+}

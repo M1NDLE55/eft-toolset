@@ -1,0 +1,25 @@
+{
+  "title": "Elektronik's flash drive",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Elektronik's_flash_drive",
+  "revisionId": 332720,
+  "lastEdited": "2026-01-19T16:58:33Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "67bde548cf0cc29475092192",
+    "id": "q_skyf41_flash_protected"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Falling Skies"
+    }
+  ]
+}

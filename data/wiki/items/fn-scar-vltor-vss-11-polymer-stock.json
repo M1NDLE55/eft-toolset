@@ -1,0 +1,22 @@
+{
+  "title": "FN SCAR Vltor VSS-11 polymer stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_Vltor_VSS-11_polymer_stock",
+  "revisionId": 337992,
+  "lastEdited": "2026-03-08T00:32:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.22 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3: Black, Patriot Brown",
+    "ergonomics": "+12",
+    "recoil": "-24",
+    "node": "66ffc2bd132225f0fe0611d8 66ffc2ecfe9b3825960652f7",
+    "ID": "stock_mk16_vltor_vss_11 stock_mk16_vltor_vss_11_fde"
+  },
+  "sections": []
+}

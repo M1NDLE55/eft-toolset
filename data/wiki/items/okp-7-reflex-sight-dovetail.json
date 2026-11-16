@@ -1,0 +1,24 @@
+{
+  "title": "OKP-7 reflex sight (Dovetail)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/OKP-7_reflex_sight_(Dovetail)",
+  "revisionId": 304963,
+  "lastEdited": "2025-01-31T14:55:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.295 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "250",
+    "ergonomics": "-4",
+    "modes": "1",
+    "node": "57486e672459770abd687134",
+    "ID": "scope_dovetail_ekb_okp7_dovetail"
+  },
+  "sections": []
+}

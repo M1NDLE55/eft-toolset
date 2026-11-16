@@ -1,0 +1,23 @@
+{
+  "title": "AK Strike Industries Enhanced Pistol Grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Strike_Industries_Enhanced_Pistol_Grip",
+  "revisionId": 356390,
+  "lastEdited": "2026-08-26T00:40:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.091 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3: Black, FDE",
+    "ergonomics": "+5",
+    "recoil": "-1",
+    "loot xp": "5",
+    "node": "5cf50850d7f00c056e24104c (black) 5cf508bfd7f00c056e24104e (FDE)",
+    "ID": "pistolgrip_ak_strike_indsustries_enhanced_pistol_grip pistolgrip_ak_strike_indsustries_enhanced_pistol_grip_fde"
+  },
+  "sections": []
+}

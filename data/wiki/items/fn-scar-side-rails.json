@@ -1,0 +1,21 @@
+{
+  "title": "FN SCAR side rails",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_side_rails",
+  "revisionId": 294736,
+  "lastEdited": "2024-10-31T19:32:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+0",
+    "node": "61816dfa6ef05c2ce828f1ad",
+    "ID": "mount_mk16_fn_scar_side_rail_std"
+  },
+  "sections": []
+}

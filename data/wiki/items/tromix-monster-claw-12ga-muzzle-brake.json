@@ -1,0 +1,27 @@
+{
+  "title": "Tromix Monster Claw 12ga muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tromix_Monster_Claw_12ga_muzzle_brake",
+  "revisionId": 364312,
+  "lastEdited": "2026-10-13T13:45:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.34 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3, after completing his quest Gunsmith - Model 870",
+    "ergonomics": "-7",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-19",
+    "Dura Burn": "-4",
+    "Heat": "-2",
+    "Cooling": "+2",
+    "node": "59fb137a86f7740adb646af1",
+    "ID": "muzzle_saiga12_css_monster_caw_large_12g"
+  },
+  "sections": []
+}

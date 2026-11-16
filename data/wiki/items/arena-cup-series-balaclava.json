@@ -1,0 +1,26 @@
+{
+  "title": "Arena Cup Series balaclava",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Arena_Cup_Series_balaclava",
+  "revisionId": 320869,
+  "lastEdited": "2025-11-11T20:41:59Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "67f90180f07898267b0a4ed7",
+    "ID": "item_equipment_facecover_smoke_arena_cupseries_3"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This balaclava was distributed to viewers of the 26 April 2025 Arena Cup Series III via Twitch Drops."
+    }
+  ]
+}

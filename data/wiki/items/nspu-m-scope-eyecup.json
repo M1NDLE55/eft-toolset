@@ -1,0 +1,23 @@
+{
+  "title": "NSPU-M scope eyecup",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NSPU-M_scope_eyecup",
+  "revisionId": 250443,
+  "lastEdited": "2023-10-22T15:43:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "price": "₽258",
+    "trader": "Prapor LL2",
+    "ergonomics": "+6",
+    "loot xp": "5",
+    "node": "5ba36f85d4351e0085325c81",
+    "ID": "tactical_nspum_npz_eyecup"
+  },
+  "sections": []
+}

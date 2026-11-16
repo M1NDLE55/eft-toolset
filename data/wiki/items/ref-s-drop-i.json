@@ -1,0 +1,35 @@
+{
+  "title": "Ref's Drop I",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ref's_Drop_I",
+  "revisionId": 361092,
+  "lastEdited": "2026-09-21T22:23:55Z",
+  "kind": "item",
+  "categories": [
+    "Loot Boxes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot box",
+    "weight": "10 kg",
+    "grid": "3x2",
+    "node": "68c944200bf756126e00d801",
+    "ID": "item_container_arena_battlepass_s1_01"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Customs Tactical Map"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "- All rewards except for currency can be obtained just once. Every time you receive a common rarity reward, the chance of receiving higher rarity rewards increases:\n  - Rare by 0.5%\n  - Super Rare by 0.33%\n  - Epic by 0.17%\n  - Legendary by 0.1%\n- Upon receiving a higher rarity reward, the chance of that rarity resets.\n\n| Icon | Name | Type | Rarity |\n| GP coin | GP coin ×35 | Currency | Common |\n| Lega Medal | Lega Medal | Currency | Common |\n| | Battle Point ×20 | Currency | Common |\n| Atomic Defense CQCM ballistic mask (Loui Peeton) | Atomic Defense CQCM ballistic mask (Loui Peeton) | Face cover | Common |\n| HighCom Striker ULACH IIIA helmet (Mesh Spray) | HighCom Striker ULACH IIIA helmet (Mesh Spray) | Headwear | Common |\n| Rash guard (Cuirass) | Rash guard (Cuirass) | Tactical clothing | Common |\n| Stich Profi Plate Carrier V2 (MARPAT Woodland) | Stich Profi Plate Carrier V2 (MARPAT Woodland) | Chest rig | Common |\n| Weapon paint set (Woodland) | Weapon paint set (Woodland) | Weapon camouflage | Common |\n| Weapon paint set (T-Block Urban) | Weapon paint set (T-Block Urban) | Weapon camouflage | Common |\n| Weapon paint set (M/98) | Weapon paint set (M/98) | Weapon camouflage | Common |\n| Weapon paint set (Noch 91) | Weapon paint set (Noch 91) | Weapon camouflage | Common |\n| Diamond Age NeoSteel helmet ballistic mandible (Black) | Diamond Age NeoSteel helmet ballistic mandible (Black) | Helmet mod | Common |\n| Figley sunglasses | Figley sunglasses | Eyewear | Common |\n| DevTac Ronin Respirator (Eternal Green) | DevTac Ronin Respirator (Eternal Green) | Headwear | Rare |\n| Rash guard (Tatau) | Rash guard (Tatau) | Tactical clothing | Super Rare |\n| Weapon paint set (Cat Watcher) | Weapon paint set (Cat Watcher) | Weapon camouflage | Epic |\n| Weapon paint set (Miami Brushstroke) | Weapon paint set (Miami Brushstroke) | Weapon camouflage | Legendary |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "In the main game this item is called \"Ref's Cache I\"."
+    }
+  ]
+}

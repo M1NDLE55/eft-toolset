@@ -1,0 +1,31 @@
+{
+  "title": "HK MP5K 9x19 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5K_9x19_submachine_gun",
+  "revisionId": 340956,
+  "lastEdited": "2026-04-22T22:14:53Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "2.09 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "fire modes": "Single, 3-round Burst, Full Auto",
+    "sightrange": "200",
+    "ergonomics": "77",
+    "velocity": "435 m/s",
+    "range": "200 m",
+    "MOA": "7.56",
+    "Weaprecoil": "Vertical: 55, Horizontal: 259",
+    "rof": "900",
+    "caliber": "9x19mm Parabellum",
+    "node": "5d2f0d8048f0356c925bc3b0",
+    "ID": "weapon_hk_mp5_kurtz_9x19"
+  },
+  "sections": []
+}

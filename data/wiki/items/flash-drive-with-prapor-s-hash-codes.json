@@ -1,0 +1,25 @@
+{
+  "title": "Flash drive with Prapor's hash codes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Flash_drive_with_Prapor's_hash_codes",
+  "revisionId": 348148,
+  "lastEdited": "2026-07-21T18:15:39Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "67c04a9bd98287be7b0923d8",
+    "id": "q_flash_hash_final"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

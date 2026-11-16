@@ -1,0 +1,36 @@
+{
+  "title": "Energy-saving lamp",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Energy-saving_lamp",
+  "revisionId": 364348,
+  "lastEdited": "2026-10-13T14:46:24Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "590a3cd386f77436f20848cb",
+    "id": "item_electr_eslamp"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from Gratitude\n- 3 can be obtained as a quest reward from Long Line\n- 3 can be obtained as a quest reward from Small Things, Big Help"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Eastereggs and References: Samson Energy-saving lamp (ES Lamp) is based off \"Samsung Energy-saving lamp\"."
+    }
+  ]
+}

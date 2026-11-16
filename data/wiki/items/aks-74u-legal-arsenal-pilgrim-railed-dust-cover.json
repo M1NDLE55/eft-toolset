@@ -1,0 +1,24 @@
+{
+  "title": "AKS-74U Legal Arsenal Pilgrim railed dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74U_Legal_Arsenal_Pilgrim_railed_dust_cover",
+  "revisionId": 322464,
+  "lastEdited": "2025-11-18T17:24:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.12 kg",
+    "grid": "2x1",
+    "trader": "Skier LL1",
+    "sightrange": "500",
+    "ergonomics": "+1.5",
+    "recoil": "+0",
+    "Dura Burn": "-1.5",
+    "node": "655cb6b5d680a544f30607fa",
+    "ID": "reciever_aks74u_legal_arsenal_pilgrim_dust_cover"
+  },
+  "sections": []
+}

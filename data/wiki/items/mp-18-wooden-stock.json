@@ -1,0 +1,22 @@
+{
+  "title": "MP-18 wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-18_wooden_stock",
+  "revisionId": 270188,
+  "lastEdited": "2024-02-08T20:11:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.56 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+6",
+    "recoil": "-22",
+    "node": "61f7b234ea4ab34f2f59c3ec",
+    "ID": "stock_mp18_izhmash_wood"
+  },
+  "sections": []
+}

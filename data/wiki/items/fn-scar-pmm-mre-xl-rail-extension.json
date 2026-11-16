@@ -1,0 +1,23 @@
+{
+  "title": "FN SCAR PMM MRE XL rail extension",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_PMM_MRE_XL_rail_extension",
+  "revisionId": 342732,
+  "lastEdited": "2026-04-30T21:04:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.125 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3: Black, FDE",
+    "ergonomics": "+5",
+    "Heat": "-1.4",
+    "Cooling": "+3.2",
+    "node": "66ffe2fbab3336cc0106382b 66ffe5edfe9b38259606530d",
+    "ID": "mount_mk16_pmm_mre_xl_m_lok mount_mk16_pmm_mre_xl_m_lok_fde"
+  },
+  "sections": []
+}

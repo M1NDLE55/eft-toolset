@@ -1,0 +1,22 @@
+{
+  "title": "BEAR G99 upper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_G99_upper",
+  "revisionId": 297797,
+  "lastEdited": "2024-12-08T15:28:50Z",
+  "kind": "item",
+  "categories": [
+    "BEAR upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f564b86f7744bcb0acd16",
+    "ID": "bear_upper_g99"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The shirt is modeled on the \"Gruppa 99 L10 Tropical Combat Shirt\", and gloves are modeled on the Viktos LEO Vented Duty Glove."
+    }
+  ]
+}

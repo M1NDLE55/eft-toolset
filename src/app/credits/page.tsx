@@ -83,16 +83,18 @@ const sections: { heading: string; content: ReactNode }[] = [
           <External href="https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki">Escape from Tarkov Wiki</External>{" "}
           on Fandom is written by its contributors and licensed{" "}
           <External href="https://www.fandom.com/licensing">CC BY-NC-SA</External>, as the wiki states. We adapt it:
-          the AI assistant tool <code>get_wiki_page</code> converts pages to plain text and shortens long ones, and
-          our glossary&apos;s meanings are mostly written from wiki pages. Each wiki result and glossary entry links to the
-          page it came from.
+          the AI assistant tool <code>get_wiki_page</code> converts pages to plain text and shortens long ones, item
+          pages show sections of an item&apos;s wiki page (where to find it, notes, and trivia) as plain text, and our
+          glossary&apos;s meanings are mostly written from wiki pages. Each wiki result, item page section, and glossary
+          entry links to the page it came from.
         </p>
         <p>
-          <code>get_wiki_page</code> reads a copy of the wiki built from the XML database dump that Fandom publishes
-          for download, currently the dump of {wikiSnapshot.snapshotDate.slice(0, 10)}. It makes no requests to the
-          wiki: the copy is updated by downloading a newer dump. It keeps the {wikiSnapshot.pages.toLocaleString("en-US")}{" "}
-          pages on quests, bosses, maps, keys, traders, skills, mechanics, and lore, and leaves out item, weapon, and
-          ammo pages, whose stats come from tarkov.dev.
+          Both read a copy of the wiki built from the XML database dump that Fandom publishes for download, currently
+          the dump of {wikiSnapshot.snapshotDate.slice(0, 10)}. They make no requests to the wiki: the copy is updated
+          by downloading a newer dump. <code>get_wiki_page</code> reads the{" "}
+          {wikiSnapshot.pages.toLocaleString("en-US")} pages on quests, bosses, maps, keys, traders, skills, mechanics,
+          and lore, and leaves out item, weapon, and ammo pages, whose stats come from tarkov.dev. Item pages read
+          those, without the sections that repeat tarkov.dev&apos;s data.
         </p>
       </>
     ),

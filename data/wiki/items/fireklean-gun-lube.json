@@ -1,0 +1,61 @@
+{
+  "title": "FireKlean gun lube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FireKlean_gun_lube",
+  "revisionId": 358851,
+  "lastEdited": "2026-09-11T20:36:22Z",
+  "kind": "item",
+  "categories": [
+    "Flammable materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flammable material",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5bc9b355d4351e6d1509862a",
+    "id": "item_barter_flammable_klean"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket\n- Drawer"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On the shelf between office doors"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the bed in dorm room 110"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Caged robot arms area between the server room and the weapons testing area"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- On the mattress inside the Chairmans house, on the west side of the swamp"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the Negotiation room on the bottom of the blue mattress"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- At the train depot as loose loot (access via BTR)"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This item is a parody of the gun lubricant \"FIREClean\" and also a reference to the content creator and former Battlestate Games community manager Klean. It likely originated from Klean making the joke \"Fire Klean\" around the time the Escape from Tarkov community questioned his suitability for the community manager role.\n  - The packaging is based on the \"Slip 2000 Gun Lube\".\n  - The phrase \"Can also be used in some other cases!\" from the description refers to a \"FIREClean\" controversy in which it was discovered that its chemical composition is very similar to common vegetable oil."
+    }
+  ]
+}

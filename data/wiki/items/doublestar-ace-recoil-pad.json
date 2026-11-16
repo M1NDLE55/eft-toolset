@@ -1,0 +1,25 @@
+{
+  "title": "DoubleStar ACE recoil pad",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DoubleStar_ACE_recoil_pad",
+  "revisionId": 342054,
+  "lastEdited": "2026-04-28T00:39:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.22 kg",
+    "grid": "1x1",
+    "price": "₽4,779",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+1",
+    "recoil": "+0",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5d120a28d7ad1a1c8962e295",
+    "ID": "stock_ace_double_star_ace_recoil_pad_05"
+  },
+  "sections": []
+}

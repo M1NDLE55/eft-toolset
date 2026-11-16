@@ -1,0 +1,32 @@
+{
+  "title": "Can of beef stew (Small)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_beef_stew_(Small)",
+  "revisionId": 360881,
+  "lastEdited": "2026-09-20T13:50:41Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.34 kg",
+    "grid": "1x1",
+    "effect": "Energy: +45, Hydration: -5",
+    "use time": "5s",
+    "node": "57347d7224597744596b4e72",
+    "id": "canned_beef"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Ration supply crates\n- In Sport bags"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- A high amount can be found in the grocery store called \"Goshan/гошан\", in the shopping mall"
+    }
+  ]
+}

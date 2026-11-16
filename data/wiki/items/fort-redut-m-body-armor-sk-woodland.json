@@ -1,0 +1,40 @@
+{
+  "title": "FORT Redut-M body armor (SK Woodland)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FORT_Redut-M_body_armor_(SK_Woodland)",
+  "revisionId": 348520,
+  "lastEdited": "2026-07-30T21:51:56Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "7.7 kg",
+    "grid": "3x4",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 0",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Groin, Buttocks",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "248",
+    "penalties": "-3% movement speed, -3% turn speed, -3% Ergonomics",
+    "node": "67ab2f5adafe3b22670c911f",
+    "id": "item_equipment_armor_redut_M_arena_bp_01"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

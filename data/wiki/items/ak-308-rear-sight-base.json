@@ -1,0 +1,21 @@
+{
+  "title": "AK-308 rear sight base",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-308_rear_sight_base",
+  "revisionId": 343314,
+  "lastEdited": "2026-05-05T19:03:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "sightrange": "600",
+    "node": "68916765fa628c6b9f0ed6f6",
+    "ID": "sight_rear_all_izhmash_ak308_rear_sight_base"
+  },
+  "sections": []
+}

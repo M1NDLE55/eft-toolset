@@ -1,0 +1,37 @@
+{
+  "title": "ROP-30 reactive flare cartridge (White)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ROP-30_reactive_flare_cartridge_(White)",
+  "revisionId": 358623,
+  "lastEdited": "2026-09-10T22:40:59Z",
+  "kind": "ammo",
+  "categories": [
+    "Handheld flares",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handheld flare",
+    "weight": "0.19 kg",
+    "grid": "1x2",
+    "sightrange": "100",
+    "ergonomics": "51",
+    "velocity": "80 m/s",
+    "damage": "40",
+    "penetration": "0",
+    "armor damage": "60",
+    "node": "62178be9d0050232da3485d9",
+    "id": "weapon_rsp30_white"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Unlike the Red Signal Cartridge, this one does not call in an airdrop.\n- Firing this flare will illuminate the surrounding area for 20 seconds after ignition.\n  - The white flare is notably brighter than the other colors.\n\n- The flare is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Ground cache\n- Weapon box (6x2)\n- Weapon box (4x4)\n- Weapon box (6x4)\n- Weapon box (6x6)"
+    }
+  ]
+}

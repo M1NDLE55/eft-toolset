@@ -1,0 +1,20 @@
+{
+  "title": "M1911A1 slide stop",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_slide_stop",
+  "revisionId": 255631,
+  "lastEdited": "2023-11-23T15:19:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.009 kg",
+    "grid": "1x1",
+    "ergonomics": "+1",
+    "node": "5e81c539cb2b95385c177553",
+    "ID": "catch_m1911_colt_m1911a1_std"
+  },
+  "sections": []
+}

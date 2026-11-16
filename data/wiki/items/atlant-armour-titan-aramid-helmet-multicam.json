@@ -1,0 +1,35 @@
+{
+  "title": "Atlant Armour Titan Aramid helmet (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Atlant_Armour_Titan_Aramid_helmet_(MultiCam)",
+  "revisionId": 347513,
+  "lastEdited": "2026-06-30T21:49:27Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.58 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in Echo Belli crate",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69ce70df606696c00301a760",
+    "id": "item_equipment_helmet_atlant_armor_titan_multicam_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "M203 40mm underbarrel grenade launcher",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M203_40mm_underbarrel_grenade_launcher",
+  "revisionId": 367864,
+  "lastEdited": "2026-11-11T21:29:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Underbarrel grenade launchers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Underbarrel grenade launcher",
+    "weight": "2.92 kg",
+    "grid": "2x1",
+    "ergonomics": "-41",
+    "recoil": "-10",
+    "caliber": "40x46mm",
+    "node": "6357c98711fb55120211f7e1",
+    "ID": "launcher_ar15_colt_m203_40x46"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- To use the M203, press the hotkey (Default 2 or 3) for the weapon it is attached to, while it is in your hands."
+    }
+  ]
+}

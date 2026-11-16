@@ -1,0 +1,39 @@
+{
+  "title": "Kel-Tec RFB 7.62x51 rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kel-Tec_RFB_7.62x51_rifle",
+  "revisionId": 341014,
+  "lastEdited": "2026-04-22T23:34:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault carbines",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault carbine",
+    "slot": "Primary",
+    "weight": "3.756 kg",
+    "grid": "4x2",
+    "trader": "Skier LL3",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "87.8",
+    "velocity": "840 m/s",
+    "range": "900 m",
+    "MOA": "1.48",
+    "Weaprecoil": "Vertical: 131, Horizontal: 272",
+    "rof": "700",
+    "caliber": "7.62x51mm NATO",
+    "loot xp": "30",
+    "exam xp": "8",
+    "node": "5f2a9575926fd9352339381f",
+    "ID": "weapon_kel_tec_rfb_762x51"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Despite being classified as assault carbine, this weapon contributes EXP towards, and benefits from the DMRs skill instead of the assault rifles skill"
+    }
+  ]
+}

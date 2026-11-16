@@ -1,0 +1,24 @@
+{
+  "title": "9x19mm RIP ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_RIP_ammo_pack_(20_pcs)",
+  "revisionId": 367285,
+  "lastEdited": "2026-11-02T23:16:48Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "5c1127bdd174af44217ab8b9",
+    "ID": "item_ammo_box_9x19_20_rip"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and references: 9x19mm RIP ammo pack (20 pcs) is based off \"G2Research Ammunitions, R.I.P Series 9x19mm Ammunition pack\""
+    }
+  ]
+}

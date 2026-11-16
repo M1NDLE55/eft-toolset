@@ -1,0 +1,35 @@
+{
+  "title": "DevTac Ronin Respirator (Eternal Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Ronin_Respirator_(Eternal_Green)",
+  "revisionId": 360642,
+  "lastEdited": "2026-09-18T19:24:30Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "2.65 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in Ref's Drop I",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Eyes, Jaws, Face, Ears",
+    "durability": "180",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, -2% turn speed, -1% Ergonomics, High sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksFaceCover": "Yes",
+    "node": "68a9a92b838d65bcb3050176",
+    "id": "item_equipment_facecover_devtac_gen2_green_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Contrary to its name, this item doesn't provide any protection against gas grenades.\n- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

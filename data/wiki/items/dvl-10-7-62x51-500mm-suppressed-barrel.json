@@ -1,0 +1,27 @@
+{
+  "title": "DVL-10 7.62x51 500mm suppressed barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DVL-10_7.62x51_500mm_suppressed_barrel",
+  "revisionId": 340706,
+  "lastEdited": "2026-04-22T06:26:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "2.9 kg",
+    "grid": "3x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-15",
+    "velocity": "+8",
+    "MOA": "0.76",
+    "recoil": "-12.5",
+    "Dura Burn": "+61",
+    "Heat": "-5",
+    "Cooling": "-10",
+    "node": "5888945a2459774bf43ba385",
+    "ID": "barrel_dvl-10_500mm"
+  },
+  "sections": []
+}

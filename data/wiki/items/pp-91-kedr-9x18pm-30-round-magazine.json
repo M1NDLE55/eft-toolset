@@ -1,0 +1,27 @@
+{
+  "title": "PP-91 Kedr 9x18PM 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-91_Kedr_9x18PM_30-round_magazine",
+  "revisionId": 356443,
+  "lastEdited": "2026-08-26T01:22:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.128 kg",
+    "grid": "1x2",
+    "trader": "Prapor LL1",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "checkmodifier": "-15",
+    "loadmodifier": "-5",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "9x18mm Makarov",
+    "node": "57d1519e24597714373db79d",
+    "ID": "mag_pp-91_zmz_pp-91_std_9x18pm_30"
+  },
+  "sections": []
+}

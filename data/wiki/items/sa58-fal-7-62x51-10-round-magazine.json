@@ -1,0 +1,28 @@
+{
+  "title": "SA58/FAL 7.62x51 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58/FAL_7.62x51_10-round_magazine",
+  "revisionId": 337543,
+  "lastEdited": "2026-03-05T23:47:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.27 kg",
+    "grid": "1x1",
+    "price": "₽1,800",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+3",
+    "checkaccuracy": "No",
+    "checkmodifier": "-35",
+    "loadmodifier": "-20",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "7.62x51mm NATO",
+    "node": "5b7bef1e5acfc43d82528402",
+    "ID": "mag_fal_ds_arms_fal_sa58_762x51_10"
+  },
+  "sections": []
+}

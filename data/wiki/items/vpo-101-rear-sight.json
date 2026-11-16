@@ -1,0 +1,25 @@
+{
+  "title": "VPO-101 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-101_rear_sight",
+  "revisionId": 293138,
+  "lastEdited": "2024-09-29T20:30:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "sightrange": "500",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5c503b1c2e221602b21d6e9d",
+    "ID": "sight_rear_vepr_molot_vpo-101_std"
+  },
+  "sections": []
+}

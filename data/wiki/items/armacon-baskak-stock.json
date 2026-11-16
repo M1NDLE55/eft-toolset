@@ -1,0 +1,23 @@
+{
+  "title": "Armacon Baskak stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armacon_Baskak_stock",
+  "revisionId": 337317,
+  "lastEdited": "2026-03-05T20:00:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "price": "₽5,370",
+    "trader": "Skier LL1",
+    "ergonomics": "+16",
+    "recoil": "-19",
+    "node": "57ade1442459771557167e15",
+    "ID": "stock_ar15_armacon_baskak"
+  },
+  "sections": []
+}

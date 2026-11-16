@@ -1,0 +1,27 @@
+{
+  "title": "Benelli M3 Super 90 12ga 500mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Benelli_M3_Super_90_12ga_500mm_barrel",
+  "revisionId": 302667,
+  "lastEdited": "2025-01-08T22:56:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.8 kg",
+    "grid": "3x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-8",
+    "velocity": "+6.4",
+    "MOA": "18.22",
+    "recoil": "-7",
+    "Dura Burn": "-2",
+    "Heat": "-5",
+    "Cooling": "+2",
+    "node": "6259c2c1d714855d182bad85",
+    "ID": "barrel_m3_benelli_500mm_12g"
+  },
+  "sections": []
+}

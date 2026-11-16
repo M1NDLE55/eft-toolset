@@ -1,0 +1,32 @@
+{
+  "title": "Secure container Epsilon",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_container_Epsilon",
+  "revisionId": 363473,
+  "lastEdited": "2026-10-06T22:21:30Z",
+  "kind": "item",
+  "categories": [
+    "Secure containers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Secure container",
+    "slot": "Pouch",
+    "weight": "1.1 kg",
+    "grid": "4x2",
+    "slots": "4x2 grid (8 slots)",
+    "node": "59db794186f77448bc595262",
+    "id": "Epsilon container"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only fit:\n  - Document case\n  - Dogtag case\n  - Gingy keychain\n  - Injector case\n  - Key tool\n  - Keycard holder case\n  - S I C C organizational pouch\n  - Simple wallet\n  - WZ Wallet\n  - Loot\n  - Provisions\n  - Meds\n  - Keys, Keycards & Maps\n  - Weapon mods (Besides magazines, special scopes and some mounts)\n  - Armor plates\n  - Currency\n  - Armbands\n  - Earpieces\n  - Vanity Face cover\n  - Vanity Headwear\n  - Vanity Eyewear\n  - Melee weapons\n  - Special equipment (Besides repair kits)"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Punisher - Part 6"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "BBQ-S43 gas torch",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BBQ-S43_gas_torch",
+  "revisionId": 345804,
+  "lastEdited": "2026-05-31T16:27:28Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.5 kg",
+    "grid": "1x2",
+    "node": "67ab3d4b83869afd170fdd3f",
+    "id": "item_key_labyrinth_torch"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The torch is not lootable from players as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "The Labyrinth",
+      "level": 3,
+      "text": "- Used to open the door at the start of spawn chamber 3\n\n- Used to open the round door in the left side room of spawn chamber 5"
+    },
+    {
+      "heading": "Icebreaker",
+      "level": 3,
+      "text": "- Used to open the hatch on level 10"
+    },
+    {
+      "heading": "Spawn chamber 3 - Fire hazard",
+      "level": 4,
+      "text": "In the area behind the far locked door. Key 03 required."
+    },
+    {
+      "heading": "Spawn chamber 5 - Toxic puddle",
+      "level": 4,
+      "text": "In the room to the right."
+    },
+    {
+      "heading": "Icebreaker",
+      "level": 3,
+      "text": "In the kitchen on level 3."
+    }
+  ]
+}

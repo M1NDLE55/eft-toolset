@@ -1,0 +1,22 @@
+{
+  "title": "HK MP5SD B&T tri-rail ring mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5SD_B%26T_tri-rail_ring_mount",
+  "revisionId": 333398,
+  "lastEdited": "2026-02-02T17:15:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.082 kg",
+    "grid": "1x1",
+    "price": "₽2,680",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "node": "59c63b4486f7747afb151c1c",
+    "ID": "mount_mp5sd_bt_tri_rail_ring"
+  },
+  "sections": []
+}

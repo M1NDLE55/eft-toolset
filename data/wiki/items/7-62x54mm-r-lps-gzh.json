@@ -1,0 +1,37 @@
+{
+  "title": "7.62x54mm R LPS gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_LPS_gzh",
+  "revisionId": 324993,
+  "lastEdited": "2025-11-23T18:40:47Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x54mmR ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.024 kg",
+    "grid": "1x1",
+    "price": "₽172",
+    "velocity": "865 m/s",
+    "damage": "81",
+    "accuracy": "-5",
+    "penetration": "42",
+    "armor damage": "78",
+    "ricochet": "39%",
+    "durability burn": "+10",
+    "heat": "+131.3",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "5887431f2459777e1612938f",
+    "id": "patron_762х54R_LPS_Gzh"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

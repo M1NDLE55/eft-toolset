@@ -1,0 +1,24 @@
+{
+  "title": "Glock Dead Ringer Snake Eye front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_Dead_Ringer_Snake_Eye_front_sight",
+  "revisionId": 318883,
+  "lastEdited": "2025-10-02T22:16:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "price": "₽1,900",
+    "trader": "Mechanic LL2",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5a7d90eb159bd400165484f1",
+    "ID": "sight_front_glock_dead_ringer_snake_eyes_glock_sights"
+  },
+  "sections": []
+}

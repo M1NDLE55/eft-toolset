@@ -1,0 +1,36 @@
+{
+  "title": "Can of Majaica coffee beans",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_Majaica_coffee_beans",
+  "revisionId": 360878,
+  "lastEdited": "2026-09-20T13:42:34Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5af0484c86f7740f02001f7f",
+    "id": "item_barter_other_coffee"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Ration supply crate"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from No Swiping"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Majaica coffee is an anagram of and reference to the Jamaica Blue Mountain variety of coffee beans, grown in the eponymous Blue Mountains region of Jamaica. The beans are in high demand and limited supply, so are expensive and difficult to procure."
+    }
+  ]
+}

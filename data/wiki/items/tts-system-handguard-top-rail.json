@@ -1,0 +1,21 @@
+{
+  "title": "TTS System handguard top rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TTS_System_handguard_top_rail",
+  "revisionId": 357373,
+  "lastEdited": "2026-09-01T13:42:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.061 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-0.1",
+    "node": "688b7b0d934c59b7bf0af0b7",
+    "ID": "mount_9a91_tts_handguard_scope_rail"
+  },
+  "sections": []
+}

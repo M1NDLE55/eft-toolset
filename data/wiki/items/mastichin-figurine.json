@@ -1,0 +1,26 @@
+{
+  "title": "Mastichin figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mastichin_figurine",
+  "revisionId": 343709,
+  "lastEdited": "2026-05-10T10:57:15Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "68f261f6928cd23ddf0471fd",
+    "id": "Item_barter_tarko_scav_mastexin"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    }
+  ]
+}

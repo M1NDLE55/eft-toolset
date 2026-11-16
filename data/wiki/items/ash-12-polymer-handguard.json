@@ -1,0 +1,26 @@
+{
+  "title": "ASh-12 polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ASh-12_polymer_handguard",
+  "revisionId": 341753,
+  "lastEdited": "2026-04-26T21:25:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.27 kg",
+    "grid": "1x1",
+    "price": "₽1,022",
+    "trader": "Prapor LL4",
+    "ergonomics": "+5",
+    "recoil": "+0",
+    "Heat": "+3.4",
+    "Cooling": "-2.8",
+    "loot xp": "10",
+    "node": "5cdaa99dd7f00c002412d0b2",
+    "ID": "handguard_ash12_ckib_ash12_std"
+  },
+  "sections": []
+}

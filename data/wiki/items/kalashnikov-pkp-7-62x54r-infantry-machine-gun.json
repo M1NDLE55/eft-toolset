@@ -1,0 +1,47 @@
+{
+  "title": "Kalashnikov PKP 7.62x54R infantry machine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kalashnikov_PKP_7.62x54R_infantry_machine_gun",
+  "revisionId": 352279,
+  "lastEdited": "2026-08-07T21:21:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Light machine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light machine gun",
+    "slot": "Primary",
+    "weight": "9.637 kg",
+    "grid": "6x3",
+    "fire modes": "Full Auto",
+    "sightrange": "500",
+    "ergonomics": "17.5",
+    "velocity": "976 m/s",
+    "range": "750 m",
+    "MOA": "1.01",
+    "Weaprecoil": "Vertical: 88, Horizontal: 327",
+    "rof": "650",
+    "caliber": "7.62x54mmR",
+    "def mag": "PK 7.62x54R 100-round box",
+    "node": "64ca3d3954fc657e230529cc",
+    "ID": "weapon_zid_pkp_762x54r"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Unlike other weapons, the PKP cannot sustain automatic fire when switching between point-fire and aiming down sights."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Kaban"
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Variant Name |\n| PKP Zenit |"
+    }
+  ]
+}

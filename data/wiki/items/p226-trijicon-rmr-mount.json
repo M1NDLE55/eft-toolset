@@ -1,0 +1,22 @@
+{
+  "title": "P226 Trijicon RMR mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Trijicon_RMR_mount",
+  "revisionId": 338503,
+  "lastEdited": "2026-03-15T15:07:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "price": "₽1,580",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+0",
+    "node": "5a32aa0cc4a28232996e405f",
+    "ID": "mount_p226_trijicon_rm50"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Armband (Prestige 4)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Prestige_4)",
+  "revisionId": 363594,
+  "lastEdited": "2026-10-07T19:10:09Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "6841b3463fcc417de40a6768",
+    "id": "item_equipment_armband_prestige_4"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only obtainable by reaching Prestige level 4."
+    }
+  ]
+}

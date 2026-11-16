@@ -1,0 +1,24 @@
+{
+  "title": "SVT-40 SVD style stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVT-40_SVD_style_stock",
+  "revisionId": 354912,
+  "lastEdited": "2026-08-17T18:40:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.217 kg",
+    "grid": "4x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "+40",
+    "recoil": "-20",
+    "Heat": "+11",
+    "Cooling": "-5",
+    "node": "6888ac0f5978b35e90010b49",
+    "ID": "stock_svt40_pflevsha_svd_type_beechwood"
+  },
+  "sections": []
+}

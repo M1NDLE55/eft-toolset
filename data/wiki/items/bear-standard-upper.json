@@ -1,0 +1,27 @@
+{
+  "title": "BEAR Standard upper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_Standard_upper",
+  "revisionId": 313861,
+  "lastEdited": "2025-05-27T18:47:32Z",
+  "kind": "item",
+  "categories": [
+    "BEAR upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5cc0858d14c02e000c6bea66",
+    "ID": "DefaultBearBody"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This is the default BEAR upper-clothing"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The gloves are modeled on the first generation Mechanix M-Pact 3 in Black. The watch, which is shared between all BEAR uppers, is modeled on the Traser P66 Automatic Pro on a rubber strap."
+    }
+  ]
+}

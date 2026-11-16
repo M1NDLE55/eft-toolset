@@ -1,0 +1,39 @@
+{
+  "title": "12/70 AP-20 armor-piercing slug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_AP-20_armor-piercing_slug",
+  "revisionId": 366591,
+  "lastEdited": "2026-10-31T04:53:10Z",
+  "kind": "ammo",
+  "categories": [
+    "12/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slug",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "price": "₽196",
+    "velocity": "510 m/s",
+    "damage": "164",
+    "accuracy": "+80",
+    "recoil": "+50",
+    "penetration": "37",
+    "armor damage": "65",
+    "ricochet": "10%",
+    "h bleed chance": "+10",
+    "durability burn": "+120",
+    "heat": "+148.5",
+    "feedfailure": "Very low",
+    "misfire": "Medium",
+    "node": "5d6e68a8a4b9360b6c0d54e2",
+    "id": "patron_12x70_slug_ap_20"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

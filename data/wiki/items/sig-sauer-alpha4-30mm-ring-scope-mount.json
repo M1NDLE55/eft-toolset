@@ -1,0 +1,21 @@
+{
+  "title": "SIG Sauer ALPHA4 30mm ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_ALPHA4_30mm_ring_scope_mount",
+  "revisionId": 338481,
+  "lastEdited": "2026-03-15T14:38:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.19 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-1",
+    "node": "6567e751a715f85433025998",
+    "ID": "mount_all_sig_alpha4_ultralight_30mm"
+  },
+  "sections": []
+}

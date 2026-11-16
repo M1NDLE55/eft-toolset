@@ -1,0 +1,25 @@
+{
+  "title": "Glock 19X 9x19 102mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_19X_9x19_102mm_barrel",
+  "revisionId": 342250,
+  "lastEdited": "2026-04-28T21:51:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "ergonomics": "+0",
+    "velocity": "-2",
+    "MOA": "10.31",
+    "recoil": "-2.6",
+    "Heat": "+10",
+    "Cooling": "+23",
+    "node": "630764fea987397c0816d219",
+    "ID": "barrel_glock_glock_gmb_102mm_9x19_std"
+  },
+  "sections": []
+}

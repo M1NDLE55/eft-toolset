@@ -1,0 +1,24 @@
+{
+  "title": "MCX gas block",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX_gas_block",
+  "revisionId": 214479,
+  "lastEdited": "2022-11-17T08:03:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.049 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-1",
+    "recoil": "-3",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "node": "5fbc210bf24b94483f726481",
+    "ID": "gas_block_mcx_sig_mcx_std"
+  },
+  "sections": []
+}

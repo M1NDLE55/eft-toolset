@@ -1,0 +1,53 @@
+{
+  "title": "Military COFDM Wireless Signal Transmitter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Military_COFDM_Wireless_Signal_Transmitter",
+  "revisionId": 362249,
+  "lastEdited": "2026-09-26T15:58:37Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "2.0 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "loot xp": "45",
+    "exam xp": "5",
+    "node": "5c052f6886f7746b1e3db148",
+    "ID": "Item_barter_electr_wirelesstranmitter"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Airdrops (Common)\n- Buried barrel cache\n- Dead Scav\n- Ground cache\n- Sport bag\n- Weapon box (6x6)"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the Dome building (White Queen)\n  - On the shelves in the RB-RLSA room on the 2nd floor\n  - On the shelves in the RB-RS room on the 2nd floor\n  - In the server room on the first floor. On the paracord extract side\n- Inside room RB-AK on the Shelves.\n- Inside room RB-PKPTS key.\n- In RB-VO marked room\n- In RB-BK marked room\n- On roof of white pawn building on wooden crate\n- In the D2 tunnel, on top of the wooden crates, racks, and blades on the ground (room where the White Queen and Bunker tunnels meet)"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- Inside broken wooden boxes\n- On the tables on the docks\n- Inside tents on roofs of Rogue Buildings\n- Inside the small open wooden boxes in Rogue Towers\n- Inside the Hillside house\n- Inside the Merin car trunk\n\n- Inside the upper Chalet, on the dining table, next to the radio\n- Outside the upper Chalet bottom floor, below the patio stairs, on a wooden crate\n- Inside the Operating room of B1, on the desk, left of the body\n- Inside the USEC cottage first safe and USEC cottage second safe located in the second floor of the USEC cottage in the furthest northern and southern bedrooms.\n- Inside the small building with pizza on the table, just northwest of the USEC cottage, in the northwest corner chair\n- In the red brick house near Path to Shoreline extract, upstairs in the gaming PC room\n- Inside of Water treatment plant storage room key"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In Chekannaya 15 apartment\n- In Chekannaya building in (unlocked) cell 3\n\n- In Zmeisky 5 apartment 20 in the office\n- In the room next to the Concordia apartment 63 room key on the table clipped inside some folders\n- In the Concordia 63 bedroom, inside the blue suitcase on the bed.\n- In Concordia apartment 64 and its office room\n- In Concordia apartment 34 room\n- In the Zmeisky 6 offices\n- In Concordia apartment 8 home cinema on the floor in front of the projector screen\n- In Car dealership closed section on the table at the edge of the room\n- In \"Negotiation\" room key On the table leaning against the wall on the right\n- In Pinewood hotel room 215 on the ground next to the black chair"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Simple Side Job / Order From Outside"
+    }
+  ]
+}

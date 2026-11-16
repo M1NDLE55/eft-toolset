@@ -1,0 +1,21 @@
+{
+  "title": "M14 UltiMAK M8 Forward Optic mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M14_UltiMAK_M8_Forward_Optic_mount",
+  "revisionId": 352855,
+  "lastEdited": "2026-08-09T21:43:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.19 kg",
+    "grid": "2x1",
+    "price": "₽11,000",
+    "ergonomics": "-1",
+    "node": "5addbfbb5acfc400194dbcf7",
+    "ID": "mount_m14_ultimak_m8_forward_optic_mount"
+  },
+  "sections": []
+}

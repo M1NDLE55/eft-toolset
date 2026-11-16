@@ -1,0 +1,26 @@
+{
+  "title": "Steyr AUG Relfex T4AUG Ranger 5.56x45 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_Relfex_T4AUG_Ranger_5.56x45_sound_suppressor",
+  "revisionId": 337898,
+  "lastEdited": "2026-03-07T06:51:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.38 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-12",
+    "velocity": "+0.2",
+    "recoil": "-1.5",
+    "Dura Burn": "+71",
+    "Heat": "+14",
+    "Cooling": "+3",
+    "node": "630f2982cdb9e392db0cbcc7",
+    "ID": "silencer_aug_reflex_suppressor_t4aug_ranger_556x45"
+  },
+  "sections": []
+}

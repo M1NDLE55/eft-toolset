@@ -1,0 +1,21 @@
+{
+  "title": "P226 Stainless Elite Wooden pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226_Stainless_Elite_Wooden_pistol_grip",
+  "revisionId": 352585,
+  "lastEdited": "2026-08-09T19:51:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+3",
+    "node": "5c00076d0db834001d23ee1f",
+    "ID": "pistolgrip_p226_sig_stainless_elite"
+  },
+  "sections": []
+}

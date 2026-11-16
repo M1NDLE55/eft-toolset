@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Hera Arms HG-15 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Hera_Arms_HG-15_pistol_grip",
+  "revisionId": 342039,
+  "lastEdited": "2026-04-28T00:21:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽5,100",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+5",
+    "recoil": "-1.5",
+    "loot xp": "10",
+    "node": "5cc9bcaed7f00c011c04e179",
+    "ID": "pistolgrip_ar15_hera_arms_hg15"
+  },
+  "sections": []
+}

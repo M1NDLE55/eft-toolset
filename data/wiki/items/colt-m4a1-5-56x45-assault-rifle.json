@@ -1,0 +1,47 @@
+{
+  "title": "Colt M4A1 5.56x45 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Colt_M4A1_5.56x45_assault_rifle",
+  "revisionId": 364377,
+  "lastEdited": "2026-10-13T15:37:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "2.849 kg",
+    "grid": "5x2",
+    "trader": "Peacekeeper LL3: Standard, Mechanic LL3: Stripped variant, Ref LL2: SAI variant after completing Mechanic's task Gunsmith - AS VAL/Gunsmith - MPX, Mechanic LL3: SOPMOD I variant after completing his task Gunsmith - AS VAL/Gunsmith - MPX, Ref LL3, Mechanic LL4: T.O 2k24 variant, Ref LL4",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "600",
+    "ergonomics": "55",
+    "velocity": "922 m/s",
+    "range": "500 m",
+    "MOA": "1.82",
+    "Weaprecoil": "Vertical: 78, Horizontal: 224",
+    "rof": "800",
+    "caliber": "5.56x45mm NATO",
+    "node": "5447a9cd4bdc2dbd208b4567",
+    "ID": "weapon_colt_m4a1_556x45"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as initial equipment from Peacekeeping Mission"
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| M4A1 Carbine |\n| M4A1 SOPMOD I |\n| M4A1 SOPMOD II |\n| M4A1 Space Trooper |\n| M4A1 2K17 NY |\n| M4A1 LVOA |\n| M4A1 SAI |\n| M4A1 USASOC-I |\n| M4A1 USASOC-II |\n| M4A1 Custom |\n| M4A1 Your-Ex |\n| M4A1 T.O 2k24 |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Due to its futuristic looks, the Space Trooper variant is a reference to either the weapons used by the \"Stormtroopers\" in the \"Star Wars\" movie series, or the weapons used by the soldiers in the movie \"Starship Troopers\".\n- Despite being classified as an assault rifle in-game, the M4A1 is actually a carbine version of the M16 assault rifle, as it has a shorter standard barrel length of 14.5 inches, compared to the M16's 20-inch barrel."
+    }
+  ]
+}

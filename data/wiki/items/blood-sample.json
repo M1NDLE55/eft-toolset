@@ -1,0 +1,25 @@
+{
+  "title": "Blood sample",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Blood_sample",
+  "revisionId": 366356,
+  "lastEdited": "2026-10-29T22:11:14Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "5a687e7886f7740c4a5133fb 66a0f0926fee20fa70036da6",
+    "id": "item_barter_quest_blood item_barter_quest_blood_nf2024"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "Used in the quests:\n- Health Care Privacy - Part 3 from Therapist\n- Health Care Privacy - Part 6 from Therapist"
+    }
+  ]
+}

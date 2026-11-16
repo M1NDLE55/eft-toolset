@@ -1,0 +1,25 @@
+{
+  "title": "HK MP5K polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5K_polymer_handguard",
+  "revisionId": 342065,
+  "lastEdited": "2026-04-28T01:24:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.17 kg",
+    "grid": "1x1",
+    "ergonomics": "+10",
+    "recoil": "-3",
+    "Heat": "+4.2",
+    "Cooling": "-3.9",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5d2f259b48f0355a844acd74",
+    "ID": "handguard_mp5k_hk_kurtz_grip_std"
+  },
+  "sections": []
+}

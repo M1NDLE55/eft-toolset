@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 Badger Ordnance Tactical Charging Handle Latch",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Badger_Ordnance_Tactical_Charging_Handle_Latch",
+  "revisionId": 333401,
+  "lastEdited": "2026-02-02T17:34:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "price": "₽4,060",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+1",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "56ea7165d2720b6e518b4583",
+    "ID": "charge_ar15_badger_ordnance_tactical_latch"
+  },
+  "sections": []
+}

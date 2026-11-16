@@ -1,0 +1,28 @@
+{
+  "title": "Gas mask air filter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gas_mask_air_filter",
+  "revisionId": 358648,
+  "lastEdited": "2026-09-10T22:46:17Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.5 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "loot xp": "35",
+    "exam xp": "10",
+    "node": "590c595c86f7747884343ad7",
+    "id": "item_other_filter"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Wooden crate\n- Dead Scav\n- Weapon box (6x4)\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

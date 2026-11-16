@@ -1,0 +1,22 @@
+{
+  "title": "Burris FastFire Weaver Base",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Burris_FastFire_Weaver_Base",
+  "revisionId": 211762,
+  "lastEdited": "2022-09-20T15:08:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "price": "₽1,580",
+    "trader": "Peacekeeper LL1, Skier LL2",
+    "ergonomics": "+0",
+    "node": "577d128124597739d65d0e56",
+    "ID": "mount_all_burris_fast_fire_weaver"
+  },
+  "sections": []
+}

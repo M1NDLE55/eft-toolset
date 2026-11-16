@@ -1,0 +1,41 @@
+{
+  "title": "9x19mm QuakeMaker",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_QuakeMaker",
+  "revisionId": 322750,
+  "lastEdited": "2025-11-18T21:13:56Z",
+  "kind": "ammo",
+  "categories": [
+    "9x19mm Parabellum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.013 kg",
+    "grid": "1x1",
+    "price": "₽140",
+    "trader": "Peacekeeper LL4",
+    "velocity": "290 m/s",
+    "damage": "85",
+    "accuracy": "+10",
+    "recoil": "+10",
+    "penetration": "8",
+    "armor damage": "22",
+    "ricochet": "10%",
+    "l bleed chance": "+15",
+    "h bleed chance": "+22",
+    "durability burn": "+10",
+    "heat": "-1.8",
+    "feedfailure": "High",
+    "misfire": "Very low",
+    "node": "5efb0e16aeb21837e749c7ff",
+    "id": "patron_9x19_quakemaker"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

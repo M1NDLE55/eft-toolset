@@ -1,0 +1,30 @@
+{
+  "title": "7.62x51mm M61 ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_M61_ammo_pack_(20_pcs)",
+  "revisionId": 367229,
+  "lastEdited": "2026-11-02T23:13:48Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Ref LL4",
+    "node": "6570254fcfc010a0f5006a22",
+    "ID": "item_ammo_box_762x51_20_m61"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 3 can be obtained as a quest reward from Wet Job - Part 6\n- 2 can be obtained as a quest reward from Broadcast - Part 5"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Saiga-12K 12ga automatic shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Saiga-12K_12ga_automatic_shotgun",
+  "revisionId": 354812,
+  "lastEdited": "2026-08-16T11:27:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "5.659 kg",
+    "grid": "6x2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "200",
+    "ergonomics": "30.9",
+    "velocity": "426 m/s",
+    "range": "70 m",
+    "MOA": "20.63",
+    "Weaprecoil": "Vertical: 170, Horizontal: 300",
+    "rof": "450",
+    "caliber": "12/70",
+    "node": "674fe9a75e51f1c47c04ec23",
+    "ID": "weapon_kiba_saiga12k_fa_12g"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Players who completed the Halloween 2024 event quest line have a purchase option for this weapon on Prapor LL4 (Fatal Outcome achievement) or Jaeger LL4 (Complete Remission achievement)."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This Saiga-12K FA is based upon the custom modification previously featured and available to players in both of Escape From Tarkov's prequels and predecessors, Hired Ops and Contract Wars.\n- The particular configuration featured in Escape From Tarkov is based upon the specific \"Saiga ZHunter\" variant which came with an Aimpoint CompM4 reflex sight equipped by default, and could be obtained by completing the Saiga FA's Weapon Task, which was attaining 50 Rage Kills (5 elimination Killstreak) with the weapon. Hired Ops also featured this specific configuration, albeit in the form of a consumable in-match purchase as a special weapon."
+    }
+  ]
+}

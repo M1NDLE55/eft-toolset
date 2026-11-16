@@ -1,0 +1,24 @@
+{
+  "title": "Schmidt & Bender PM II 5-25x56 34mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Schmidt_%26_Bender_PM_II_5-25x56_34mm_riflescope",
+  "revisionId": 352947,
+  "lastEdited": "2026-08-09T22:06:58Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "1.08 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL3",
+    "zeroing": "50, 100, 150, 200, 250, 300, 350, 400, 450",
+    "sightrange": "2000",
+    "ergonomics": "-8",
+    "modes": "1",
+    "node": "62850c28da09541f43158cca",
+    "ID": "scope_34mm_s&b_pm_ii_5_25x56"
+  },
+  "sections": []
+}

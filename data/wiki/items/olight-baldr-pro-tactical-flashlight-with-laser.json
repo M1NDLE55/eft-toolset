@@ -1,0 +1,28 @@
+{
+  "title": "Olight Baldr Pro tactical flashlight with laser",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Olight_Baldr_Pro_tactical_flashlight_with_laser",
+  "revisionId": 255615,
+  "lastEdited": "2023-11-23T09:25:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.129 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2: BlackSkier LL3: Tan",
+    "ergonomics": "-1",
+    "modes": "3",
+    "node": "6272370ee4013c5d7e31f418 6272379924e29f06af4d5ecb",
+    "ID": "tactical_all_olight_baldr_pro tactical_all_olight_baldr_pro_tan"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is red"
+    }
+  ]
+}

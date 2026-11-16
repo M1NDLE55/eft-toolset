@@ -1,0 +1,39 @@
+{
+  "title": "Remington Model 870 12ga pump-action shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Remington_Model_870_12ga_pump-action_shotgun",
+  "revisionId": 362958,
+  "lastEdited": "2026-10-03T11:26:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "3.276 kg",
+    "grid": "5x1",
+    "trader": "Skier LL1",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "54",
+    "velocity": "437 m/s",
+    "range": "70 m",
+    "MOA": "18.91",
+    "Weaprecoil": "Vertical: 278, Horizontal: 330",
+    "rof": "30",
+    "caliber": "12/70",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "5a7828548dc32e5a9c28b516",
+    "ID": "weapon_remington_model_870_12g"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Variant Name |\n| M870 Breacher |\n| M870 Hammer |"
+    }
+  ]
+}

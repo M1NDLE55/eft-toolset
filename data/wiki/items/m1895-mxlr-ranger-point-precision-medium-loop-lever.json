@@ -1,0 +1,21 @@
+{
+  "title": "M1895/MXLR Ranger Point Precision medium loop lever",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1895/MXLR_Ranger_Point_Precision_medium_loop_lever",
+  "revisionId": 328044,
+  "lastEdited": "2025-12-15T04:30:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+5",
+    "node": "67c5418f26265106dd06979e",
+    "ID": "charge_m1895_ranger_point_precision_medium_loop_lever"
+  },
+  "sections": []
+}

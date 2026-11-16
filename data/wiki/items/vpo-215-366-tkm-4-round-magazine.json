@@ -1,0 +1,27 @@
+{
+  "title": "VPO-215 .366 TKM 4-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-215_.366_TKM_4-round_magazine",
+  "revisionId": 337701,
+  "lastEdited": "2026-03-06T01:31:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+1",
+    "checkaccuracy": "No",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "4",
+    "caliber": ".366 TKM",
+    "node": "5de653abf76fdc1ce94a5a2a",
+    "ID": "mag_vpo215_molot_vpo_215_366tkm_4"
+  },
+  "sections": []
+}

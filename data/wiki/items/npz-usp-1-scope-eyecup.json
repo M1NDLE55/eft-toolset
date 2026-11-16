@@ -1,0 +1,24 @@
+{
+  "title": "NPZ USP-1 scope eyecup",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NPZ_USP-1_scope_eyecup",
+  "revisionId": 255629,
+  "lastEdited": "2023-11-23T15:09:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "price": "₽276",
+    "trader": "Prapor LL1",
+    "ergonomics": "+5",
+    "loot xp": "5",
+    "exam xp": "10",
+    "node": "5cf639aad7f00c065703d455",
+    "ID": "tactical_1p29_npz_eyecup"
+  },
+  "sections": []
+}

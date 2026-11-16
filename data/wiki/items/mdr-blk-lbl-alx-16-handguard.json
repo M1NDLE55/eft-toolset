@@ -1,0 +1,24 @@
+{
+  "title": "MDR BLK LBL ALX 16 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MDR_BLK_LBL_ALX_16_handguard",
+  "revisionId": 342819,
+  "lastEdited": "2026-04-30T21:35:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.244 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL3: FDE , Mechanic LL4: Black",
+    "ergonomics": "+13",
+    "recoil": "+0",
+    "Heat": "+1",
+    "Cooling": "-1",
+    "node": "6810aa1474bf67765c02e91a 6810a469f6c2827d680d1f4c",
+    "ID": "handguard_mdr_blk_lbl_alx_16_inch_mlok_blk handguard_mdr_blk_lbl_alx_16_inch_mlok"
+  },
+  "sections": []
+}

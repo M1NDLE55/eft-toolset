@@ -1,0 +1,33 @@
+{
+  "title": "Kalashnikov AKS-74UB 5.45x39 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kalashnikov_AKS-74UB_5.45x39_assault_rifle",
+  "revisionId": 363007,
+  "lastEdited": "2026-10-03T12:59:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.341 kg",
+    "grid": "5x2",
+    "trader": "Prapor LL1",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "500",
+    "ergonomics": "49.5",
+    "velocity": "735 m/s",
+    "range": "300 m",
+    "MOA": "3.54",
+    "Weaprecoil": "Vertical: 83, Horizontal: 209",
+    "rof": "650",
+    "caliber": "5.45x39mm",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "5839a40f24597726f856b511",
+    "ID": "weapon_izhmash_aks74ub_545x39"
+  },
+  "sections": []
+}

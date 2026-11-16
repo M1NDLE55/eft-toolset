@@ -1,0 +1,24 @@
+{
+  "title": "UZI handguard with foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_handguard_with_foregrip",
+  "revisionId": 342729,
+  "lastEdited": "2026-04-30T21:02:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+7",
+    "recoil": "-1",
+    "Heat": "+1.6",
+    "Cooling": "-2.8",
+    "node": "66993149558c59581e03c028",
+    "ID": "handguard_uzi_iwi_vertical_grip_railed"
+  },
+  "sections": []
+}

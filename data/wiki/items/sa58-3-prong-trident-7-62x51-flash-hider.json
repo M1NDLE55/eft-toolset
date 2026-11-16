@@ -1,0 +1,24 @@
+{
+  "title": "SA58 3-Prong Trident 7.62x51 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_3-Prong_Trident_7.62x51_flash_hider",
+  "revisionId": 300344,
+  "lastEdited": "2024-12-30T14:52:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "price": "₽1,600",
+    "ergonomics": "-1",
+    "accuracy": "+3",
+    "recoil": "-5",
+    "Heat": "-1",
+    "node": "5b099b7d5acfc400186331e4",
+    "ID": "muzzle_sa58_ds_arms_3_prong_trident_flash_hider_762x51"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Can of Max Energy energy drink",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_Max_Energy_energy_drink",
+  "revisionId": 349927,
+  "lastEdited": "2026-08-04T23:28:29Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "0.36 kg",
+    "grid": "1x1",
+    "effect": "Energy: +12, Hydration: +20, , Buffs:, 1s Delay; 300s Duration: - Increases Endurance (+1) - Increases Mag Drills (+1) Debuffs:, 1s Delay; 300s Duration: - Decreases Stress Resistance (-1)",
+    "use time": "2s",
+    "node": "5751435d24597720a27126d1",
+    "id": "drink_maxenergy"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Sport bags"
+    }
+  ]
+}

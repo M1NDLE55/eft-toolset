@@ -1,0 +1,24 @@
+{
+  "title": "VOMZ Pilad P1x42 Weaver reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VOMZ_Pilad_P1x42_Weaver_reflex_sight",
+  "revisionId": 355530,
+  "lastEdited": "2026-08-22T23:55:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.16 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-3",
+    "modes": "3",
+    "node": "584984812459776a704a82a6",
+    "ID": "scope_all_vomz_pilad_p1x42_weaver"
+  },
+  "sections": []
+}

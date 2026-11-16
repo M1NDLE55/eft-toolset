@@ -1,0 +1,25 @@
+{
+  "title": "UAV SAS disk 1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UAV_SAS_disk_1",
+  "revisionId": 232783,
+  "lastEdited": "2023-04-02T04:47:25Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.8 kg",
+    "grid": "1x1",
+    "node": "5a294d7c86f7740651337cf9",
+    "id": "quest_sas_san1"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Eagle Eye from Peacekeeper"
+    }
+  ]
+}

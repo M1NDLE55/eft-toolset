@@ -1,0 +1,32 @@
+{
+  "title": "Grenade case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Grenade_case",
+  "revisionId": 360698,
+  "lastEdited": "2026-09-19T10:09:12Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "3 kg",
+    "grid": "3x3",
+    "trader": "Ref LL2",
+    "effect": "Provides 64 inventory slots while only taking up 9",
+    "node": "5e2af55f86f7746d4159f07c",
+    "ID": "item_container_grenadebox"
+  },
+  "sections": [
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Grenade case is a container with the purpose of saving space within the player's inventory. It provides 64 inventory slots in a 8x8 grid and only takes up 9 inventory slots itself. It can only store:\n- Grenades\n- Grenade launcher cartridges\n- UZRGM grenade fuze"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Big Customer"
+    }
+  ]
+}

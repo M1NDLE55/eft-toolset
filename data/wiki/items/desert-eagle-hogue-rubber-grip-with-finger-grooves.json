@@ -1,0 +1,21 @@
+{
+  "title": "Desert Eagle Hogue Rubber Grip with finger grooves",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Eagle_Hogue_Rubber_Grip_with_finger_grooves",
+  "revisionId": 342731,
+  "lastEdited": "2026-04-30T21:03:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+5",
+    "node": "66a0da76b6f47fcfeb025e96",
+    "ID": "pistolgrip_deagle_hogue_rubber_grips_ergo"
+  },
+  "sections": []
+}

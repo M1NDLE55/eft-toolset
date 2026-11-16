@@ -1,0 +1,26 @@
+{
+  "title": "USEC commander's audio tape labeled \"For the USEC\"",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_commander's_audio_tape_labeled_%22For_the_USEC%22",
+  "revisionId": 348818,
+  "lastEdited": "2026-08-01T14:54:56Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "0:32",
+    "node": "68889aab3fcaf13e48003ba7",
+    "ID": "item_info_recorder_tape_startmission_forusec"
+  },
+  "sections": [
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Squad Leader: To all USEC units! Blast killed all our electronics — no comm with the HQ. We've lost control of the facility. Evacuate through Exfil Three towards the port… Exfil Three! Expect enemy contact, proceed with caution. Any non-USEC individuals are to be considered hostile! Defend yourselves. Use sound judgment."
+    }
+  ]
+}

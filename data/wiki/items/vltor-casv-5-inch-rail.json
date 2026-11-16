@@ -1,0 +1,21 @@
+{
+  "title": "Vltor CASV 5 inch rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vltor_CASV_5_inch_rail",
+  "revisionId": 340850,
+  "lastEdited": "2026-04-22T08:31:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-0.2",
+    "node": "5b7be46e5acfc400170e2dcf",
+    "ID": "mount_casv_vltor_5_inch_picatinny_rail_section"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "M1895/MXLR XS Marlin Ghost front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1895/MXLR_XS_Marlin_Ghost_front_sight",
+  "revisionId": 343129,
+  "lastEdited": "2026-05-03T15:23:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "67c5427eac40c364490664f6",
+    "ID": "sight_front_m1895_xs_marlin_ghost_sight"
+  },
+  "sections": []
+}

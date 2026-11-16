@@ -1,0 +1,25 @@
+{
+  "title": "RD-704 SLR ION Lite + Railed Gas Tube handguard with gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RD-704_SLR_ION_Lite_%2B_Railed_Gas_Tube_handguard_with_gas_tube",
+  "revisionId": 342246,
+  "lastEdited": "2026-04-28T21:49:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.48 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+15",
+    "recoil": "-5",
+    "Heat": "-5.5",
+    "Cooling": "+8.2",
+    "loot xp": "50",
+    "node": "628a83c29179c324ed269508",
+    "ID": "gas_block_akp_slr_ak_railed_gas_tube"
+  },
+  "sections": []
+}

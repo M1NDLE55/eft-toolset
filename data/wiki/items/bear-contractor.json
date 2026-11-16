@@ -1,0 +1,22 @@
+{
+  "title": "BEAR Contractor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_Contractor",
+  "revisionId": 306035,
+  "lastEdited": "2025-03-01T01:10:05Z",
+  "kind": "item",
+  "categories": [
+    "BEAR upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f565786f7743f8362bcd5",
+    "ID": "bear_upper_contractortshirt"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The Gloves are modeled after Mechanix Wear Breacher FR Combat Gloves"
+    }
+  ]
+}

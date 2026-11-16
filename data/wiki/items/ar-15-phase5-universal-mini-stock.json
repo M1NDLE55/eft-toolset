@@ -1,0 +1,43 @@
+{
+  "title": "AR-15 Phase5 Universal Mini Stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Phase5_Universal_Mini_Stock",
+  "revisionId": 357277,
+  "lastEdited": "2026-09-01T10:00:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.17 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2: Black, after unlocking it in the Factory Tactical Map, Ref LL2: Yellow, after unlocking it in Arena BattlePass Season 2, Ref LL2: Red, after unlocking it in Echo Belli crate",
+    "ergonomics": "+20",
+    "recoil": "-18.5",
+    "node": "698b338649b46ae2d0092e82 698b3592e700c6d632003753 698b358b49b46ae2d0092e86",
+    "ID": "stock_ar15_phase5_ums stock_ar15_phase5_ums_ylw stock_ar15_phase5_ums_red"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Black variant",
+      "level": 4,
+      "text": "- Factory Tactical Map"
+    },
+    {
+      "heading": "Yellow variant",
+      "level": 4,
+      "text": "- Arena BattlePass Season 2 level 59\n- 7 Battle Points"
+    },
+    {
+      "heading": "Red variant",
+      "level": 4,
+      "text": "- Echo Belli crate"
+    }
+  ]
+}

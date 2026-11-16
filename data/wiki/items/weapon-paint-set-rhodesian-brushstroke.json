@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Rhodesian Brushstroke)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Rhodesian_Brushstroke)",
+  "revisionId": 348603,
+  "lastEdited": "2026-07-30T22:15:03Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "68d14a78c361e65c98037591",
+    "id": "item_camo_brushstroke_rhodesian"
+  },
+  "sections": []
+}

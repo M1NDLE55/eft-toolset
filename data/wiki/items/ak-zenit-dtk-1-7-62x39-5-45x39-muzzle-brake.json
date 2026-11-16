@@ -1,0 +1,26 @@
+{
+  "title": "AK Zenit DTK-1 7.62x39/5.45x39 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Zenit_DTK-1_7.62x39/5.45x39_muzzle_brake",
+  "revisionId": 353582,
+  "lastEdited": "2026-08-14T17:50:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.128 kg",
+    "grid": "1x1",
+    "price": "₽3,990",
+    "trader": "Skier LL3",
+    "ergonomics": "-2.5",
+    "velocity": "+0",
+    "recoil": "-11.5",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "5649ab884bdc2ded0b8b457f",
+    "ID": "muzzle_ak_zenit_dtk1_762x39_545x39"
+  },
+  "sections": []
+}

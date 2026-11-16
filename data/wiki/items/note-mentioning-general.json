@@ -1,0 +1,25 @@
+{
+  "title": "Note mentioning General",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_mentioning_General",
+  "revisionId": 348859,
+  "lastEdited": "2026-08-02T01:22:23Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "68d2f9bd2ca1a737d107b84d",
+    "id": "item_info_note_bogatir_mention_general"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    }
+  ]
+}

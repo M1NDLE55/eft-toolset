@@ -1,0 +1,30 @@
+{
+  "title": "Cyclone Shakhin 3.7x thermal scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cyclone_Shakhin_3.7x_thermal_scope",
+  "revisionId": 344527,
+  "lastEdited": "2026-05-25T13:37:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Thermal vision sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Thermal vision sight",
+    "weight": "1.014 kg",
+    "grid": "2x1",
+    "refresh rate": "21 Hz",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "500",
+    "ergonomics": "-20",
+    "modes": "1",
+    "node": "67641b461c2eb66ade05dba6",
+    "ID": "scope_base_ciklon_shakhin_37x-ir"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market\n- Cannot be insured.\n- Cannot be put in secure containers"
+    }
+  ]
+}

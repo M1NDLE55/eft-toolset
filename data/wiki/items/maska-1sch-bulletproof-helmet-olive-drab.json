@@ -1,0 +1,29 @@
+{
+  "title": "Maska-1SCh bulletproof helmet (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Maska-1SCh_bulletproof_helmet_(Olive_Drab)",
+  "revisionId": 344380,
+  "lastEdited": "2026-05-24T22:12:52Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "2.6 kg",
+    "grid": "2x2",
+    "trader": "Prapor LL3",
+    "material": "Armor steel",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "108",
+    "RicochetChance": "Medium",
+    "penalties": "+0% movement speed, -1% turn speed, -4% Ergonomics, High sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5c091a4e0db834001d5addc8",
+    "id": "item_equipment_helmet_maska_1sh"
+  },
+  "sections": []
+}

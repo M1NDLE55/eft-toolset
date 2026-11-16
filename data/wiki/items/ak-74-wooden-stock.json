@@ -1,0 +1,22 @@
+{
+  "title": "AK-74 wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_wooden_stock",
+  "revisionId": 337359,
+  "lastEdited": "2026-03-05T21:45:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+3",
+    "recoil": "-21",
+    "node": "5649b1c04bdc2d16268b457c",
+    "ID": "stock_ak74_izhmash_ak74_std_wood"
+  },
+  "sections": []
+}

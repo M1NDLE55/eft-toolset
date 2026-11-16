@@ -1,0 +1,38 @@
+{
+  "title": "FN P90 5.7x28 submachine gun (Scourge)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_5.7x28_submachine_gun_(Scourge)",
+  "revisionId": 360981,
+  "lastEdited": "2026-09-20T23:06:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "3.737 kg",
+    "grid": "3x2",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 3",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "200",
+    "ergonomics": "64",
+    "velocity": "603 m/s",
+    "range": "200 m",
+    "MOA": "3.75",
+    "Weaprecoil": "Vertical: 43, Horizontal: 193",
+    "rof": "910",
+    "caliber": "5.7x28mm FN",
+    "def mag": "FN P90 5.7x28 50-round magazine",
+    "node": "6a78b7f8c2016eb33e0027cd",
+    "ID": "weapon_fn_p90_dragon_57x28"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "USEC baseball cap (Coyote)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_baseball_cap_(Coyote)",
+  "revisionId": 304906,
+  "lastEdited": "2025-01-31T14:26:25Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽1,600",
+    "trader": "Ragman LL1",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5aa2a7e8e5b5b00016327c16",
+    "id": "cap_USEC"
+  },
+  "sections": []
+}

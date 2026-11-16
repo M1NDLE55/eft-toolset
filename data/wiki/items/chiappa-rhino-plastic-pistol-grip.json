@@ -1,0 +1,20 @@
+{
+  "title": "Chiappa Rhino plastic pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chiappa_Rhino_plastic_pistol_grip",
+  "revisionId": 342229,
+  "lastEdited": "2026-04-28T21:38:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "ergonomics": "+3",
+    "node": "619f4ab2d25cbd424731fb95",
+    "ID": "pistolgrip_rhino_chiappa_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Haley Strategic D3CRX Chest Harness (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Haley_Strategic_D3CRX_Chest_Harness_(Black)",
+  "revisionId": 348704,
+  "lastEdited": "2026-07-30T22:33:58Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.9 kg",
+    "grid": "3x3",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 2",
+    "BlocksArmor": "No",
+    "slots": "16 Slots",
+    "node": "69d37050705756116e0a9037",
+    "ID": "item_equipment_rig_d3crx_black_bp03"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

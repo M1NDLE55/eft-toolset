@@ -1,0 +1,25 @@
+{
+  "title": "ASh-12 12.7x55 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ASh-12_12.7x55_muzzle_brake",
+  "revisionId": 342033,
+  "lastEdited": "2026-04-28T00:18:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "ergonomics": "-5",
+    "accuracy": "+0",
+    "recoil": "-20",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "5caf17c9ae92150b30006be1",
+    "ID": "muzzle_ash12_ckib_ash12_std_127x55"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Pliers",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pliers",
+  "revisionId": 324804,
+  "lastEdited": "2025-11-23T16:49:56Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "590c2b4386f77425357b6123",
+    "id": "item_tools_pliers"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    }
+  ]
+}

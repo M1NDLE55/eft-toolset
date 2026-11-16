@@ -1,0 +1,50 @@
+{
+  "title": "Silicon Optoelectronic Integrated Circuits textbook",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Silicon_Optoelectronic_Integrated_Circuits_textbook",
+  "revisionId": 355224,
+  "lastEdited": "2026-08-19T12:13:22Z",
+  "kind": "item",
+  "categories": [
+    "Info items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Info item",
+    "weight": "0.5 kg",
+    "grid": "1x2",
+    "node": "6389c8fb46b54c634724d847",
+    "id": "Item_barter_info_book_circuits"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- In Safes"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- On a desk in the trainyard warehouse\n- Building 2 of the Water Treatment Plant"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Inside the containment block on the first level, On the desk in the security room (labeled 1) to the right after entering the block.\n- Inside the Kruglov's office (R22) in multiple locations on the main table"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Return the Favor"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The cover of the book is based on the covers of the Springer Series in Advanced Microelectronics textbooks."
+    }
+  ]
+}

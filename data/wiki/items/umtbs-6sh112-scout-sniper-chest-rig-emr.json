@@ -1,0 +1,23 @@
+{
+  "title": "UMTBS 6Sh112 Scout-Sniper chest rig (EMR)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UMTBS_6Sh112_Scout-Sniper_chest_rig_(EMR)",
+  "revisionId": 322057,
+  "lastEdited": "2025-11-17T01:13:51Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.7 kg",
+    "grid": "3x4",
+    "trader": "Ragman LL2",
+    "BlocksArmor": "No",
+    "slots": "12 Slots",
+    "node": "5929a2a086f7744f4b234d43",
+    "id": "item_equipment_rig_6h112"
+  },
+  "sections": []
+}

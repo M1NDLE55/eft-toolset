@@ -1,0 +1,26 @@
+{
+  "title": "Hostage evacuation report from Voevoda",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hostage_evacuation_report_from_Voevoda",
+  "revisionId": 348051,
+  "lastEdited": "2026-07-19T12:23:09Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "node": "68d3037c91c2fa84e2044a0d",
+    "ID": "item_info_note_raport_voevoda"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "title": "7.62x39mm SP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_SP",
+  "revisionId": 322798,
+  "lastEdited": "2025-11-18T21:21:14Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "velocity": "772 m/s",
+    "damage": "68",
+    "accuracy": "+5",
+    "recoil": "-5",
+    "penetration": "20",
+    "armor damage": "27",
+    "ricochet": "20%",
+    "l bleed chance": "+5",
+    "h bleed chance": "+5",
+    "heat": "-4.5",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "64b7af734b75259c590fa895",
+    "id": "patron_762x39_sp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

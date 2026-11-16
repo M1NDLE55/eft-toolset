@@ -1,0 +1,26 @@
+{
+  "title": "Astronomer mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Astronomer_mask",
+  "revisionId": 329227,
+  "lastEdited": "2025-12-24T16:22:17Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "67602a39c8e72a73250de739",
+    "ID": "item_equipment_facecover_xmass_mask_wizard"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This face cover first appeared during Escape from Tarkov's 2024 Christmas Celebration."
+    }
+  ]
+}

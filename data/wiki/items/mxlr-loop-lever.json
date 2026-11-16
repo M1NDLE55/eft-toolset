@@ -1,0 +1,21 @@
+{
+  "title": "MXLR loop lever",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MXLR_loop_lever",
+  "revisionId": 354943,
+  "lastEdited": "2026-08-17T21:18:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+3",
+    "node": "67c54183b032bbdb530201bc",
+    "ID": "charge_m1895_marlin_mxlr_std"
+  },
+  "sections": []
+}

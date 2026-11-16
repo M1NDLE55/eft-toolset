@@ -1,0 +1,25 @@
+{
+  "title": "Informant's journal",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Informant's_journal",
+  "revisionId": 289563,
+  "lastEdited": "2024-09-01T12:18:19Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "node": "63989ced706b793c7d60cfef",
+    "id": "item_quest_keeper2_diary"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Missing Informant from Lightkeeper"
+    }
+  ]
+}

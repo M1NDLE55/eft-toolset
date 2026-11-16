@@ -1,0 +1,31 @@
+{
+  "title": "Marlin MXLR .308 ME lever-action rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Marlin_MXLR_.308_ME_lever-action_rifle",
+  "revisionId": 364897,
+  "lastEdited": "2026-10-24T18:08:29Z",
+  "kind": "weapon",
+  "categories": [
+    "Bolt-action rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bolt-action rifle",
+    "slot": "Primary",
+    "weight": "3.075 kg",
+    "grid": "5x1",
+    "trader": "Jaeger LL2",
+    "fire modes": "Single",
+    "sightrange": "200",
+    "ergonomics": "32.8",
+    "velocity": "846 m/s",
+    "range": "1000 m",
+    "MOA": "1.33",
+    "Weaprecoil": "Vertical: 122, Horizontal: 252",
+    "rof": "100",
+    "caliber": ".308 Marlin Express",
+    "node": "67c6de3ce39861860909e8e5",
+    "ID": "weapon_marlin_m1895_mxlr_784x49"
+  },
+  "sections": []
+}

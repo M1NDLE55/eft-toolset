@@ -1,0 +1,28 @@
+{
+  "title": "Glock Viper Cut pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_Viper_Cut_pistol_slide",
+  "revisionId": 231551,
+  "lastEdited": "2023-03-23T10:14:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "price": "₽11,200",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+6",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-1",
+    "Dura Burn": "-2",
+    "Heat": "-2.5",
+    "Cooling": "+8.3",
+    "node": "5a6f5f078dc32e00094b97dd",
+    "ID": "reciever_glock_gspc_viper_slide_cut"
+  },
+  "sections": []
+}

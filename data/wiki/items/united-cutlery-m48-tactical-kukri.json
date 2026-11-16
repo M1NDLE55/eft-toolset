@@ -1,0 +1,29 @@
+{
+  "title": "United Cutlery M48 Tactical Kukri",
+  "url": "https://escapefromtarkov.fandom.com/wiki/United_Cutlery_M48_Tactical_Kukri",
+  "revisionId": 356591,
+  "lastEdited": "2026-08-26T12:14:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "fire modes": "Chop 27 Damage, Stab 32 Damage",
+    "range": "Chop 0.4m, Stab 0.5m",
+    "node": "65ca457b4aafb5d7fc0dcb5d",
+    "ID": "weapon_united_cutlery_m48_kukri"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

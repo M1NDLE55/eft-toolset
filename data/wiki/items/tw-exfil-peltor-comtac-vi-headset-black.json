@@ -1,0 +1,33 @@
+{
+  "title": "TW EXFIL Peltor ComTac VI headset (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TW_EXFIL_Peltor_ComTac_VI_headset_(Black)",
+  "revisionId": 362358,
+  "lastEdited": "2026-09-29T09:19:09Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces",
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet headset",
+    "weight": "0.439 kg",
+    "grid": "2x1",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 2",
+    "BlocksHeadset": "Yes",
+    "node": "69c264c00f660b3f0d058fcf",
+    "id": "item_equipment_headset_comtac_6_black_bp03_exfil"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- The Wedge"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "AS VAL MOD.4 9x39 integral barrel-suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_MOD.4_9x39_integral_barrel-suppressor",
+  "revisionId": 343098,
+  "lastEdited": "2026-05-03T14:58:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.279 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-4",
+    "velocity": "+1.1",
+    "recoil": "-11",
+    "Dura Burn": "+51",
+    "Heat": "+25",
+    "Cooling": "+7",
+    "node": "68712ce2251b8d4c6c04ec1f",
+    "ID": "silencer_val_mod4_nb_mod4_std_9x39"
+  },
+  "sections": []
+}

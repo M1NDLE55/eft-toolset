@@ -1,0 +1,56 @@
+{
+  "title": "Bronze lion figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bronze_lion_figurine",
+  "revisionId": 367810,
+  "lastEdited": "2026-11-10T13:15:24Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "7.2 kg",
+    "grid": "3x2",
+    "effect": "Generic loot item",
+    "node": "59e3639286f7741777737013",
+    "id": "item_barter_valuable_lion"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the bottom shelf of the dining room in crack house\n- Behind toilet head in USEC building\n- Between beds in ground floor room of Scav Stronghold"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- On the wooden shelf near the breachable office door."
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- Dead Mans Stash\n- At the ritual circle within the abandoned village\n- In the boat at the dock near the abandoned village\n- In the ruined House near the abandoned village right next to the secret stash inside\n- In the bunker at the top of the sniper mountain\n- At the campsite southwest of the sawmill\n- Next to last bed in the southern tent of the USEC camp"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In Mantis\n- In Generic Shop, on a bed\n- In dresser drawers in IDEA\n- In saferoom exfil (#11SR)\n- In 21WS container"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In Arsenal storage room\n- In Manager office"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- In chalet"
+    }
+  ]
+}

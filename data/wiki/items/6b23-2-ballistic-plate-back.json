@@ -1,0 +1,31 @@
+{
+  "title": "6B23-2 ballistic plate (Back)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B23-2_ballistic_plate_(Back)",
+  "revisionId": 320539,
+  "lastEdited": "2025-10-28T13:50:59Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "3.5 kg",
+    "grid": "2x2",
+    "trader": "Prapor LL2",
+    "material": "Armor Steel",
+    "armor": "4",
+    "armor coverage": "Back Plate",
+    "durability": "40",
+    "penalties": "-1.5% movement speed, +0% turn speed, -0.5% Ergonomics",
+    "node": "657b22485f444d6dff0c6c2f",
+    "id": "item_equipment_plate_korund_back_6b23_2_4class_back"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Back Plate:\nBack Plate"
+    }
+  ]
+}

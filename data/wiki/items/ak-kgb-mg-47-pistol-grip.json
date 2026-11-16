@@ -1,0 +1,22 @@
+{
+  "title": "AK KGB MG-47 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_KGB_MG-47_pistol_grip",
+  "revisionId": 356560,
+  "lastEdited": "2026-08-26T02:57:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.153 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3: BronzeSkier LL4: Anodized red",
+    "ergonomics": "+5",
+    "recoil": "-1.5",
+    "node": "5cf54404d7f00c108840b2ef 5e2192a498a36665e8337386",
+    "ID": "pistolgrip_ak_kgb_mg47 pistolgrip_ak_kgb_mg47_red"
+  },
+  "sections": []
+}

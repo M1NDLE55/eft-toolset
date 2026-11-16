@@ -1,0 +1,21 @@
+{
+  "title": "Arisaka Inline Scout Mount KeyMod",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Arisaka_Inline_Scout_Mount_KeyMod",
+  "revisionId": 338574,
+  "lastEdited": "2026-03-15T17:50:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-0.2",
+    "node": "689c8a2b4b91399db3085f27",
+    "ID": "mount_keymod_arisaka_inline_scout_mount"
+  },
+  "sections": []
+}

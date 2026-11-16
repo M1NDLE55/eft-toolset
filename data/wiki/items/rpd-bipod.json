@@ -1,0 +1,22 @@
+{
+  "title": "RPD bipod",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_bipod",
+  "revisionId": 313462,
+  "lastEdited": "2025-05-17T14:04:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Bipods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bipod",
+    "weight": "0.455 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-8",
+    "recoil": "When mounted: -80",
+    "node": "6513f037e06849f06c0957d7",
+    "ID": "bipod_rpd_zid_rpd_std"
+  },
+  "sections": []
+}

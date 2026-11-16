@@ -1,0 +1,25 @@
+{
+  "title": "HK G36 Hensoldt HKV 3x carry handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_Hensoldt_HKV_3x_carry_handle",
+  "revisionId": 253561,
+  "lastEdited": "2023-11-02T21:56:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault scope",
+    "weight": "0.198 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "zeroing": "Scope: 50, 100, 150, 200, Iron sight: 25",
+    "sightrange": "800",
+    "ergonomics": "-2",
+    "accuracy": "+0",
+    "modes": "2",
+    "node": "622b4d7df9cfc87d675d2ded",
+    "ID": "scope_g36_hensoldt_hkv_carry_handle_3x"
+  },
+  "sections": []
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Superfors DB 2020 Dead Blow Hammer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Superfors_DB_2020_Dead_Blow_Hammer",
+  "revisionId": 315639,
+  "lastEdited": "2025-07-13T19:12:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "1.4 kg",
+    "fire modes": "Chop 103 Damage, Stab 125 Damage",
+    "range": "Chop 0.8m, Stab 0.8m",
+    "node": "6087e570b998180e9f76dc24",
+    "ID": "weapon_hultafors_db5000"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- When getting struck, is added for 20 seconds, causing tinnitus and muffled audio"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Tagilla\n  - Not lootable"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The hammer appears to be based off of the \"Hultafors DB 5000 Dead Blow Hammer.\""
+    }
+  ]
+}

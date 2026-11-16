@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Spray Desert Net)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Spray_Desert_Net)",
+  "revisionId": 356783,
+  "lastEdited": "2026-08-29T20:15:31Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67c6c16605bceb0b4f06fad6",
+    "id": "item_camo_spraypaint_stencil_net_desert"
+  },
+  "sections": []
+}

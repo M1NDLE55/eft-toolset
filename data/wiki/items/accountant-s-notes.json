@@ -1,0 +1,25 @@
+{
+  "title": "Accountant's notes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Accountant's_notes",
+  "revisionId": 289564,
+  "lastEdited": "2024-09-01T12:18:22Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "node": "63a943cead5cc12f22161ff7",
+    "id": "item_quest_c2_aud_docs1"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Audit from Ragman"
+    }
+  ]
+}

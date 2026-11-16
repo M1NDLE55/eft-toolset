@@ -1,0 +1,29 @@
+{
+  "title": "Diamond Age Bastion helmet (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Diamond_Age_Bastion_helmet_(Black)",
+  "revisionId": 344387,
+  "lastEdited": "2026-05-24T22:13:27Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.07 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL3",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5ea17ca01412a1425304d1c0",
+    "id": "item_equipment_helmet_diamond_age_bastion"
+  },
+  "sections": []
+}

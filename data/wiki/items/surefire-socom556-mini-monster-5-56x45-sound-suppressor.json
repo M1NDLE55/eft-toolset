@@ -1,0 +1,26 @@
+{
+  "title": "SureFire SOCOM556-MINI MONSTER 5.56x45 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SureFire_SOCOM556-MINI_MONSTER_5.56x45_sound_suppressor",
+  "revisionId": 340607,
+  "lastEdited": "2026-04-21T08:54:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.413 kg",
+    "grid": "2x1",
+    "price": "₽36,000",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-9",
+    "velocity": "+0.5",
+    "recoil": "-0.5",
+    "Dura Burn": "+55",
+    "Heat": "+8",
+    "node": "55d6190f4bdc2d87028b4567",
+    "ID": "silencer_socom_surefire_socom556_mini_monster_556x45"
+  },
+  "sections": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AK-74M polymer stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74M_polymer_stock",
+  "revisionId": 323685,
+  "lastEdited": "2025-11-20T05:44:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.35 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "+5",
+    "recoil": "-22",
+    "node": "5ac50c185acfc400163398d4",
+    "ID": "stock_ak74m_izhmash_ak74m_std"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This item and SOK-12 AK-style stock are in fact the same stock, using the same model but with different recoil and ergonomics values, slightly different texture and are they are **not** interchangeable between each other, which probably is a bug and was not intended, as both items were added at different patches."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Hell or Highwater poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hell_or_Highwater_poster",
+  "revisionId": 331641,
+  "lastEdited": "2026-01-07T19:38:24Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a125caf26c56ee109072a",
+    "id": "item_barter_flyers_hell_of_highwater"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

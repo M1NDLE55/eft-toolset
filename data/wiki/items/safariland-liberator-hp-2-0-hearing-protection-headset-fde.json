@@ -1,0 +1,24 @@
+{
+  "title": "Safariland Liberator HP 2.0 Hearing Protection Headset (FDE)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Safariland_Liberator_HP_2.0_Hearing_Protection_Headset_(FDE)",
+  "revisionId": 320880,
+  "lastEdited": "2025-11-11T20:45:04Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.34 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL3",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "66b5f68de98be930d701c00e",
+    "id": "item_equipment_headset_liberator"
+  },
+  "sections": []
+}

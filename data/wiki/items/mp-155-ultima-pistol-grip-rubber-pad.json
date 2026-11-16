@@ -1,0 +1,22 @@
+{
+  "title": "MP-155 Ultima pistol grip rubber pad",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_Ultima_pistol_grip_rubber_pad",
+  "revisionId": 214145,
+  "lastEdited": "2022-11-12T09:47:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "price": "₽258",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+5",
+    "node": "60785c0d232e5a31c233d51c",
+    "ID": "tactical_mp155_kalshnikov_ultima_pistol_grip_rubberpad"
+  },
+  "sections": []
+}

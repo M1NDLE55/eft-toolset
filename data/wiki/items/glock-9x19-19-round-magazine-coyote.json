@@ -1,0 +1,27 @@
+{
+  "title": "Glock 9x19 19-round magazine (Coyote)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_9x19_19-round_magazine_(Coyote)",
+  "revisionId": 337890,
+  "lastEdited": "2026-03-07T06:47:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.106 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "1",
+    "checkmodifier": "-10",
+    "loadmodifier": "-8",
+    "feedfailure": "Low",
+    "capacity": "19",
+    "caliber": "9x19mm Parabellum",
+    "node": "63076701a987397c0816d21b",
+    "ID": "mag_glock_glock_w_pad_9x19_19_fde"
+  },
+  "sections": []
+}

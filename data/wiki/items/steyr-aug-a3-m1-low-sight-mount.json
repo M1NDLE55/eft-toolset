@@ -1,0 +1,20 @@
+{
+  "title": "Steyr AUG A3 M1 low sight mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_A3_M1_low_sight_mount",
+  "revisionId": 252929,
+  "lastEdited": "2023-11-02T21:50:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.114 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "node": "62ebba1fb658e07ef9082b5a",
+    "ID": "mount_aug_steyr_aug_a3_m1_short_rail"
+  },
+  "sections": []
+}

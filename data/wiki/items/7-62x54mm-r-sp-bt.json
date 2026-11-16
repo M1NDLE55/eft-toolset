@@ -1,0 +1,37 @@
+{
+  "title": "7.62x54mm R SP BT",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_SP_BT",
+  "revisionId": 362221,
+  "lastEdited": "2026-09-26T14:51:17Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x54mmR ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.024 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1, after completing his task Chemical - Part 1",
+    "velocity": "703 m/s",
+    "damage": "92",
+    "accuracy": "+7",
+    "penetration": "31",
+    "armor damage": "56",
+    "ricochet": "12%",
+    "durability burn": "-10",
+    "heat": "+42.3",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "node": "64b8f7b5389d7ffd620ccba2",
+    "id": "patron_762x54r_spbt"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Printer paper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Printer_paper",
+  "revisionId": 339333,
+  "lastEdited": "2026-03-28T00:00:55Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.7 kg",
+    "grid": "2x1",
+    "effect": "Generic loot item",
+    "node": "577e1c9d2459773cd707c525",
+    "id": "copy_paper"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a parody of the trademark \"SvetoCopy\"."
+    }
+  ]
+}

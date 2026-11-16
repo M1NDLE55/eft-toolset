@@ -1,0 +1,25 @@
+{
+  "title": "Secured tape",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secured_tape",
+  "revisionId": 289555,
+  "lastEdited": "2024-09-01T12:17:53Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "node": "6398a4cfb5992f573c6562b3",
+    "id": "item_quest_keeper7_securedtape"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Following the Bread Crumbs from Lightkeeper"
+    }
+  ]
+}

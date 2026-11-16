@@ -1,0 +1,27 @@
+{
+  "title": "M9A3 9x19 127mm threaded barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M9A3_9x19_127mm_threaded_barrel",
+  "revisionId": 306910,
+  "lastEdited": "2025-03-18T14:17:11Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "price": "₽1,660",
+    "ergonomics": "-4",
+    "velocity": "-2.4",
+    "MOA": "9.97",
+    "recoil": "-3",
+    "Heat": "+10",
+    "Cooling": "+15",
+    "loot xp": "10",
+    "node": "5cadc1c6ae9215000f2775a4",
+    "ID": "barrel_m9_127mm_m9a3_std_9x19"
+  },
+  "sections": []
+}

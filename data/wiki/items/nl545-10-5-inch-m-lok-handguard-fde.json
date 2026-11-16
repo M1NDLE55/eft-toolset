@@ -1,0 +1,24 @@
+{
+  "title": "NL545 10.5 inch M-LOK handguard (FDE)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NL545_10.5_inch_M-LOK_handguard_(FDE)",
+  "revisionId": 343379,
+  "lastEdited": "2026-05-05T20:50:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.48 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+15",
+    "recoil": "+0",
+    "Heat": "-3.4",
+    "Cooling": "+7",
+    "node": "68c2989dc9061bb2f50478f6",
+    "ID": "handguard_416_cgnl_nl545_105_inch_fde"
+  },
+  "sections": []
+}

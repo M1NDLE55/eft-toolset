@@ -1,0 +1,33 @@
+{
+  "title": "B&T MP9-N 9x19 submachine gun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/B%26T_MP9-N_9x19_submachine_gun",
+  "revisionId": 347930,
+  "lastEdited": "2026-07-16T05:34:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Submachine guns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Submachine gun",
+    "slot": "Primary",
+    "weight": "1.41 kg",
+    "grid": "3x1",
+    "trader": "Ref LL2",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "200",
+    "ergonomics": "85.85",
+    "velocity": "435 m/s",
+    "range": "200 m",
+    "MOA": "7.22",
+    "Weaprecoil": "Vertical: 44, Horizontal: 218",
+    "rof": "1100",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "30",
+    "exam xp": "8",
+    "node": "5de7bd7bfd6b4e6e2276dc25",
+    "ID": "weapon_bt_mp9n_9x19"
+  },
+  "sections": []
+}

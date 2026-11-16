@@ -1,0 +1,24 @@
+{
+  "title": "MP-133/153 Taktika Tula 12003 stock adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-133/153_Taktika_Tula_12003_stock_adapter",
+  "revisionId": 256884,
+  "lastEdited": "2023-12-07T10:23:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Skier LL1",
+    "ergonomics": "-2",
+    "recoil": "0",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5bfe7fb30db8340018089fed",
+    "ID": "mount_mr133_tactica_tula_12003"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "UZI PRO A3 Tactical Modular Folding Brace",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_PRO_A3_Tactical_Modular_Folding_Brace",
+  "revisionId": 323637,
+  "lastEdited": "2025-11-20T05:05:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.102 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+14",
+    "recoil": "-12",
+    "node": "6686717ffb75ee4a5e02eb19",
+    "ID": "stock_uzi_pro_a3_tactical_modular_folding_brace"
+  },
+  "sections": []
+}

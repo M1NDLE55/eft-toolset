@@ -1,0 +1,31 @@
+{
+  "title": "Bars A-2607 95Kh18 knife",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bars_A-2607_95Kh18_knife",
+  "revisionId": 324611,
+  "lastEdited": "2025-11-22T21:40:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Melee weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Melee weapon",
+    "slot": "Melee",
+    "weight": "0.28 kg",
+    "grid": "2x1",
+    "fire modes": "Chop 19 Damage, Stab 25 Damage",
+    "range": "Chop 0.35m, Stab 0.45m",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "57e26fc7245977162a14b800",
+    "ID": "weapon_bars_a-2607_95x18"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Scavs"
+    }
+  ]
+}

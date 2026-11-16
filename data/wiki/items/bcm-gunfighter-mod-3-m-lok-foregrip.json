@@ -1,0 +1,22 @@
+{
+  "title": "BCM GUNFIGHTER MOD 3 M-LOK foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BCM_GUNFIGHTER_MOD_3_M-LOK_foregrip",
+  "revisionId": 355406,
+  "lastEdited": "2026-08-21T22:16:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.054 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3: Black, FDE",
+    "ergonomics": "-2",
+    "recoil": "-3.5",
+    "node": "665d5d9e338229cfd6078da1 665edce564fb556f940ab32a",
+    "ID": "foregrip_m-lok_bcm_mod_3 foregrip_m-lok_bcm_mod_3_fde"
+  },
+  "sections": []
+}

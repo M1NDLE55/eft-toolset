@@ -1,0 +1,30 @@
+{
+  "title": "Analgin painkillers",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Analgin_painkillers",
+  "revisionId": 358739,
+  "lastEdited": "2026-09-10T23:01:34Z",
+  "kind": "item",
+  "categories": [
+    "Drugs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pills",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL1",
+    "use time": "3s",
+    "effect": "Buffs:, Removes: for 95 seconds, Adds: for 95 seconds",
+    "storage_medcase": "Yes",
+    "storage_securecont": "Yes",
+    "node": "544fb37f4bdc2dee738b4567",
+    "id": "painkiller"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate\n- Jacket"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Signal Jammer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Signal_Jammer",
+  "revisionId": 366129,
+  "lastEdited": "2026-10-28T22:29:11Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1 after accepting his task Ill-Wisher",
+    "node": "5ac78a9b86f7741cca0bbd8d",
+    "id": "item_quest_signal_jammer"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The jammer is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    }
+  ]
+}

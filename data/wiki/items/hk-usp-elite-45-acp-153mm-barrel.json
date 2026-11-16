@@ -1,0 +1,28 @@
+{
+  "title": "HK USP Elite .45 ACP 153mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_Elite_.45_ACP_153mm_barrel",
+  "revisionId": 356368,
+  "lastEdited": "2026-08-26T00:32:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.163 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-2",
+    "velocity": "+2",
+    "accuracy": "+1",
+    "MOA": "7.22",
+    "recoil": "-1.8",
+    "Dura Burn": "-2",
+    "Heat": "+6",
+    "Cooling": "+9",
+    "node": "6194f017ed0429009f543eaa",
+    "ID": "barrel_hk_usp_153mm_1143x23_elite"
+  },
+  "sections": []
+}

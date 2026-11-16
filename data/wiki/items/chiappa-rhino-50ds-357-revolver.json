@@ -1,0 +1,47 @@
+{
+  "title": "Chiappa Rhino 50DS .357 revolver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chiappa_Rhino_50DS_.357_revolver",
+  "revisionId": 362924,
+  "lastEdited": "2026-10-03T10:59:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Revolvers",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Revolver",
+    "slot": "Secondary",
+    "weight": "0.902 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2: Standard, Skier LL2: Tactical variant",
+    "fire modes": "Single action, Double action",
+    "sightrange": "200",
+    "ergonomics": "82",
+    "velocity": "462 m/s",
+    "range": "70 m",
+    "MOA": "5.16",
+    "recoil": "Vertical: 383, Horizontal: 280",
+    "rof": "30",
+    "caliber": ".357 Magnum",
+    "node": "61a4c8884f95bc3b2c5dc96f",
+    "ID": "weapon_chiappa_rhino_50ds_9x33R"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This weapon will never malfunction."
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| CR 50DS Tactical |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The model name on the right side of the gun is misspelled \"0DS\" instead of \"50DS\"."
+    }
+  ]
+}

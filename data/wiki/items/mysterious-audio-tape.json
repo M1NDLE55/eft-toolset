@@ -1,0 +1,31 @@
+{
+  "title": "Mysterious audio tape",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mysterious_audio_tape",
+  "revisionId": 348010,
+  "lastEdited": "2026-07-19T00:16:06Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "0:55",
+    "node": "688895322f6b5b76380e6af5",
+    "ID": "item_info_recorder_tape_cultists"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Priest: The new masters of the world are already here, and the process has begun… The New World has started to take shape, and the Wardens have already been chosen.\n\nPriest: Know that the Eye of the World has been watching you for a long time, and all… all your deeds are imprinted in the memory that the Wardens will carry from the old world into the new. Soon, it will be the only thing of value.\n\nPriest: I knew you would come here. It was all foretold. We awaited the Blind One who would help us prepare everything for the Riders of the Arrival. And in you… we found him.\n\nPriest: Behold the power of The Unheard before it is too late…"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "DVL-10 M2 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DVL-10_M2_7.62x51_muzzle_brake",
+  "revisionId": 356557,
+  "lastEdited": "2026-08-26T02:56:41Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.098 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-8",
+    "Dura Burn": "-3",
+    "Heat": "-1",
+    "node": "5888996c24597754281f9419",
+    "ID": "muzzle_dvl-10_lobaev_dvl-10_m2_std_308"
+  },
+  "sections": []
+}

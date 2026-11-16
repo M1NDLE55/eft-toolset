@@ -1,0 +1,24 @@
+{
+  "title": "AR-10 Delta-Tek DTK-AR10 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Delta-Tek_DTK-AR10_7.62x51_muzzle_brake",
+  "revisionId": 337974,
+  "lastEdited": "2026-03-08T00:25:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.125 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-2.5",
+    "recoil": "-10",
+    "Heat": "-1.7",
+    "Cooling": "+1.1",
+    "node": "6642f63667f5cb56a00662eb",
+    "ID": "muzzle_ar10_deltatech_dtk_ar10_762x51"
+  },
+  "sections": []
+}

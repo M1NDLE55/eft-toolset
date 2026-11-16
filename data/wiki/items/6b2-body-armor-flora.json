@@ -1,0 +1,28 @@
+{
+  "title": "6B2 body armor (Flora)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B2_body_armor_(Flora)",
+  "revisionId": 313718,
+  "lastEdited": "2025-05-22T09:53:49Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "5.4 kg",
+    "grid": "3x3",
+    "trader": "Prapor LL1",
+    "material": "Titan",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back",
+    "durability": "128",
+    "penalties": "-3% movement speed, -1% turn speed, -3% Ergonomics",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5df8a2ca86f7740bfe6df777",
+    "id": "item_equipment_armor_6b2"
+  },
+  "sections": []
+}

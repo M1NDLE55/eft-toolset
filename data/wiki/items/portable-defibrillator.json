@@ -1,0 +1,56 @@
+{
+  "title": "Portable defibrillator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Portable_defibrillator",
+  "revisionId": 358480,
+  "lastEdited": "2026-09-10T21:31:59Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "1.5 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5c052e6986f7746b207bc3c9",
+    "ID": "Item_barter_medical_defibrillator"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- In the New Gas Station on the floor infront of the register\n- At the Old Gas Station under the Giving Tree\n- At the Old Gas Station on the table inside"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Multiple locations on tables in G22\n- On the desk in the enclosed medical area in section O11 (Main Work Area)"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In the EMERCOM medical unit\n- In the Mantis Store\n- In the ULTRA medical storage room\n- In multiple locations inside of the medical tents in the Scav camp infront of the mall\n- In the medical tent in the Gnezdo Outpost on the ground under the metal shelves"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In East wing room 209 on the table with the monitor\n- In Sanitar's Office, East wing room 110 in the shower on top of the decontamination suit\n- In West wing room 304 on a chair next to a table"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The portable defibrillator is based off Philips \"HeartStart FRx Automated external defibrillator."
+    }
+  ]
+}

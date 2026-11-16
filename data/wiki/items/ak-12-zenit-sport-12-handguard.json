@@ -1,0 +1,24 @@
+{
+  "title": "AK-12 Zenit Sport-12 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_Zenit_Sport-12_handguard",
+  "revisionId": 343347,
+  "lastEdited": "2026-05-05T19:46:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.15 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+10",
+    "recoil": "+0",
+    "Heat": "+2.4",
+    "Cooling": "-2.6",
+    "node": "682315c58639961c6001dbe7",
+    "ID": "handguard_ak12_zenit_sport_12"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "M700 AI AT AICS polymer chassis",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_AI_AT_AICS_polymer_chassis",
+  "revisionId": 302790,
+  "lastEdited": "2025-01-09T21:32:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chassis",
+    "weight": "0.64 kg",
+    "grid": "4x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+38",
+    "accuracy": "+6",
+    "recoil": "-24",
+    "Heat": "-3",
+    "Cooling": "+2",
+    "node": "5d25d0ac8abbc3054f3e61f7",
+    "ID": "stock_m700_ai_at_aics_chasiss"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "PK Front Zveno buffer tube adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PK_Front_Zveno_buffer_tube_adapter",
+  "revisionId": 357409,
+  "lastEdited": "2026-09-01T18:00:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-3",
+    "node": "6a182c39b913af92800d8b5d",
+    "ID": "stock_pk_front_zveno_stock_adapter"
+  },
+  "sections": []
+}

@@ -53,6 +53,7 @@ const INVALID_TITLE = /[<>[\]{}|#\u0000-\u001F\u007F]/;
 let directory = join(process.cwd(), "data", "wiki");
 let index: Promise<LoadedIndex> | null = null;
 let leftOut: Promise<{ title: string; kind: string; key: string }[]> | null = null;
+let itemIds: Promise<Record<string, string>> | null = null;
 const pages = new Map<string, Promise<WikiPageRecord>>();
 
 /** Points the reader at another snapshot directory; for tests. */
@@ -60,6 +61,7 @@ export function setWikiSnapshotDirectory(path: string) {
   directory = path;
   index = null;
   leftOut = null;
+  itemIds = null;
   pages.clear();
 }
 
@@ -85,16 +87,33 @@ function loadIndex() {
 }
 
 function readPage(entry: IndexEntry) {
-  let page = pages.get(entry.file);
+  return readRecord(`pages/${entry.file}`);
+}
+
+function readRecord(path: string) {
+  let page = pages.get(path);
   if (page) {
-    pages.delete(entry.file);
+    pages.delete(path);
   } else {
-    page = readJson<WikiPageRecord>(`pages/${entry.file}`);
-    page.catch(() => pages.delete(entry.file));
+    page = readJson<WikiPageRecord>(path);
+    page.catch(() => pages.delete(path));
   }
-  pages.set(entry.file, page);
+  pages.set(path, page);
   while (pages.size > MAX_CACHED_PAGES) pages.delete(pages.keys().next().value!);
   return page;
+}
+
+const ITEM_PAGE_PATH = /^(pages|items)\/[a-z0-9-]+\.json$/;
+
+/** The wiki page for a tarkov.dev item id: an item, weapon, or ammo page, or a kept page such as a key's. */
+export async function findItemWikiPage(id: string): Promise<WikiPageRecord | null> {
+  if (!/^[0-9a-f]{24}$/.test(id)) return null;
+  if (!itemIds) {
+    itemIds = readJson<Record<string, string>>("item-ids.json");
+    itemIds.catch(() => (itemIds = null));
+  }
+  const path = (await itemIds)[id];
+  return path && ITEM_PAGE_PATH.test(path) ? readRecord(path) : null;
 }
 
 export async function wikiSnapshotDate() {

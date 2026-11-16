@@ -1,0 +1,21 @@
+{
+  "title": "SKS Leapers UTG SOCOM rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_Leapers_UTG_SOCOM_rail_mount",
+  "revisionId": 340722,
+  "lastEdited": "2026-04-22T06:58:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+0",
+    "node": "593d1fa786f7746da62d61ac",
+    "ID": "mount_sks_utg_socom_rail"
+  },
+  "sections": []
+}

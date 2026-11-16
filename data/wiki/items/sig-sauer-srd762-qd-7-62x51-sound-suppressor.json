@@ -1,0 +1,26 @@
+{
+  "title": "SIG Sauer SRD762-QD 7.62x51 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_SRD762-QD_7.62x51_sound_suppressor",
+  "revisionId": 342119,
+  "lastEdited": "2026-04-28T03:58:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.46 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-15",
+    "velocity": "+0.7",
+    "recoil": "-2",
+    "Dura Burn": "+65",
+    "Heat": "+13.5",
+    "Cooling": "+4",
+    "node": "5fbe760793164a5b6278efc8",
+    "ID": "silencer_base_sig_srd_762_qd_762x51"
+  },
+  "sections": []
+}

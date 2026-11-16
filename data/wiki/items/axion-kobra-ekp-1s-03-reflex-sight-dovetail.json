@@ -1,0 +1,24 @@
+{
+  "title": "Axion Kobra EKP-1S-03 reflex sight (Dovetail)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Axion_Kobra_EKP-1S-03_reflex_sight_(Dovetail)",
+  "revisionId": 352235,
+  "lastEdited": "2026-08-07T20:59:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.273 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-3",
+    "modes": "4",
+    "node": "6544d4187c5457729210d277",
+    "ID": "scope_dovetail_aksion_ekp_1s_03"
+  },
+  "sections": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Toilet paper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Toilet_paper",
+  "revisionId": 362945,
+  "lastEdited": "2026-10-03T11:21:51Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5c13cef886f774072e618e82",
+    "ID": "item_barter_household_toiletpaper"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    }
+  ]
+}

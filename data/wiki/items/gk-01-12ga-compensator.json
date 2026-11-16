@@ -1,0 +1,27 @@
+{
+  "title": "GK-01 12ga compensator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/GK-01_12ga_compensator",
+  "revisionId": 284257,
+  "lastEdited": "2024-08-08T18:06:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.151 kg",
+    "grid": "1x1",
+    "Heat": "-1.7",
+    "Cooling": "+0.6",
+    "node": "5580239d4bdc2de7118b4583",
+    "ID": "muzzle_tkpd_izhmash_93x64"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "The GK-01 12ga compensator is an unfinished and unobtainable item in the game that is only visible in the handbook of accounts with access to all items in the game, for example special tournament accounts."
+    }
+  ]
+}

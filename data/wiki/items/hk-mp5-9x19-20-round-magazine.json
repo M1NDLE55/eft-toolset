@@ -1,0 +1,30 @@
+{
+  "title": "HK MP5 9x19 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_9x19_20-round_magazine",
+  "revisionId": 337693,
+  "lastEdited": "2026-03-06T01:25:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "price": "₽3,617",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+3",
+    "checkaccuracy": "No",
+    "checkmodifier": "-25",
+    "loadmodifier": "-20",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5d2f213448f0355009199284",
+    "ID": "mag_mp5_hk_kurtz_std_9x19_20"
+  },
+  "sections": []
+}

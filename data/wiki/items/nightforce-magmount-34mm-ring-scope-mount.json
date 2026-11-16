@@ -1,0 +1,22 @@
+{
+  "title": "Nightforce Magmount 34mm ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Nightforce_Magmount_34mm_ring_scope_mount",
+  "revisionId": 333203,
+  "lastEdited": "2026-01-29T17:00:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.226 kg",
+    "grid": "2x1",
+    "price": "₽5,620",
+    "trader": "Jaeger LL4",
+    "ergonomics": "-2",
+    "node": "5aa66a9be5b5b0214e506e89",
+    "ID": "mount_all_nightforce_x_treme_duty_ultralite_one_piece_magmount_34mm"
+  },
+  "sections": []
+}

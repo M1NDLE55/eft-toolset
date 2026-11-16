@@ -1,0 +1,30 @@
+{
+  "title": "Men in Tarkov",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Men_in_Tarkov",
+  "revisionId": 363577,
+  "lastEdited": "2026-10-07T16:12:52Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "6a86e521148940106f0bbb8e",
+    "id": "item_barter_flyers_referral_men_in_tarkov"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This poster is a parody of a promotional poster for the \"Men in Black\" (1997) movie."
+    }
+  ]
+}

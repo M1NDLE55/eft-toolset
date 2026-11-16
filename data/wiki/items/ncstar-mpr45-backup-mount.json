@@ -1,0 +1,21 @@
+{
+  "title": "NcSTAR MPR45 Backup mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NcSTAR_MPR45_Backup_mount",
+  "revisionId": 352305,
+  "lastEdited": "2026-08-07T21:25:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "node": "5649a2464bdc2d91118b45a8",
+    "ID": "mount_all_ncstar_mpr45"
+  },
+  "sections": []
+}

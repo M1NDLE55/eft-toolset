@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 Magpul PRS GEN2 stock (FDE)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Magpul_PRS_GEN2_stock_(FDE)",
+  "revisionId": 344156,
+  "lastEdited": "2026-05-22T09:05:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.79 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+3",
+    "accuracy": "+5",
+    "recoil": "-23.5",
+    "node": "5a33cae9c4a28232980eb086",
+    "ID": "stock_ar15_magpul_prs_gen2_fde"
+  },
+  "sections": []
+}

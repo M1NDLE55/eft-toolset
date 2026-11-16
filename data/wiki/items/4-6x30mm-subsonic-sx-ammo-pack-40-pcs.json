@@ -1,0 +1,18 @@
+{
+  "title": "4.6x30mm Subsonic SX ammo pack (40 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/4.6x30mm_Subsonic_SX_ammo_pack_(40_pcs)",
+  "revisionId": 367151,
+  "lastEdited": "2026-11-02T23:09:41Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657024d2bfc87b3a34093235",
+    "ID": "item_ammo_box_46x30_40_subsonic_sx"
+  },
+  "sections": []
+}

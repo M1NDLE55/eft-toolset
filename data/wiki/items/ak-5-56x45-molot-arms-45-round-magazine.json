@@ -1,0 +1,27 @@
+{
+  "title": "AK 5.56x45 Molot Arms 45-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_5.56x45_Molot_Arms_45-round_magazine",
+  "revisionId": 338015,
+  "lastEdited": "2026-03-08T00:43:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.3 kg",
+    "grid": "1x3",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-4.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "+10",
+    "loadmodifier": "+10",
+    "feedfailure": "Low",
+    "capacity": "45",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "node": "6764139c44b3c96e7b0e2f7b",
+    "ID": "mag_ak_molot_mag_223_556x45_45"
+  },
+  "sections": []
+}

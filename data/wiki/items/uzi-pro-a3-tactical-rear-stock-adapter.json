@@ -1,0 +1,20 @@
+{
+  "title": "UZI PRO A3 Tactical Rear Stock Adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_PRO_A3_Tactical_Rear_Stock_Adapter",
+  "revisionId": 306728,
+  "lastEdited": "2025-03-17T04:30:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "node": "668672b8c99550c6fd0f0b29",
+    "ID": "stock_uzi_pro_a3_tactical_rear_stock_adapter"
+  },
+  "sections": []
+}

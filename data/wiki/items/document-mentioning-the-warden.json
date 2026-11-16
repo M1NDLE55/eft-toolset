@@ -1,0 +1,26 @@
+{
+  "title": "Document mentioning the Warden",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Document_mentioning_the_Warden",
+  "revisionId": 348034,
+  "lastEdited": "2026-07-19T12:13:56Z",
+  "kind": "item",
+  "categories": [
+    "Major TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "689b5218533aa51a060f810a",
+    "id": "item_info_note_mention_keepers"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard\n- This is one of the major evidence used in The Ticket"
+    }
+  ]
+}

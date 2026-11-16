@@ -1,0 +1,30 @@
+{
+  "title": "MP-443 Grach 9x19 18-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-443_Grach_9x19_18-round_magazine",
+  "revisionId": 337381,
+  "lastEdited": "2026-03-05T22:19:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.105 kg",
+    "grid": "1x1",
+    "price": "₽1,500",
+    "trader": "Prapor LL1",
+    "ergonomics": "-1",
+    "checkaccuracy": "1",
+    "checkmodifier": "-10",
+    "loadmodifier": "-10",
+    "feedfailure": "Very low",
+    "capacity": "18",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "15",
+    "exam xp": "Examined by default",
+    "node": "576a5ed62459771e9c2096cb",
+    "ID": "mag_mp443_izhmeh_std_9x19_18"
+  },
+  "sections": []
+}

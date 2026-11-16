@@ -1,0 +1,31 @@
+{
+  "title": "Armband (BEAR)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(BEAR)",
+  "revisionId": 363158,
+  "lastEdited": "2026-10-04T23:06:13Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "619bdd8886e01e16f839a99c",
+    "id": "item_equipment_armband_bear"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Airdrops\n- Buried barrel cache\n- Dead Scav\n- Ground cache\n- Weapon box (4x4)\n- Weapon box (6x4)\n- Weapon box (6x6)\n- Jacket"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Best Job in the World"
+    }
+  ]
+}

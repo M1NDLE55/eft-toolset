@@ -1,0 +1,31 @@
+{
+  "title": "Galvion Caiman Hybrid Ballistic Applique (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Galvion_Caiman_Hybrid_Ballistic_Applique_(MultiCam)",
+  "revisionId": 353522,
+  "lastEdited": "2026-08-13T20:49:00Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.68 kg",
+    "grid": "2x1",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 1",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "40",
+    "penalties": "-6% turn speed, -6% Ergonomics",
+    "node": "68a9b601863d2a71fa0494ae",
+    "ID": "item_equipment_helmet_galvion_applique_multicam_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

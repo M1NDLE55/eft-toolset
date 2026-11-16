@@ -2,7 +2,16 @@ import type { GameMode } from "@/components/game-mode/context";
 import { apiFetch } from "@/app/lib/api/transport";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import type { QueryDefinition } from "@/app/lib/api/queryClient";
-import type { CachedItem, CachedVendorPrice, CatalogEntry, CatalogItem, ComposedItem, MarketBoard, MarketRow } from "./types";
+import type {
+  CachedItem,
+  CachedItemInfo,
+  CachedVendorPrice,
+  CatalogEntry,
+  CatalogItem,
+  ComposedItem,
+  MarketBoard,
+  MarketRow,
+} from "./types";
 import { isTaskUnlock as isOfferUnlock } from "./gunBuilder";
 import { MAX_GROUP_ITEMS } from "@/app/lib/item-groups/limits";
 import { isItemSlug } from "@/app/lib/item-links";
@@ -100,7 +109,7 @@ export const groupItemsQuery: QueryDefinition<GroupVariables, CachedItem[]> = {
 
 export const itemDetailQuery: QueryDefinition<DetailVariables, ComposedItem | null> = {
   id: "item-detail",
-  version: 5,
+  version: 6,
   staleTime: 5 * MINUTE,
   maxAge: DAY,
   persist: true,
@@ -255,7 +264,34 @@ function isComposedItem(value: unknown): value is ComposedItem {
     item.bartersUsing.every(isBarter) &&
     Array.isArray(item.craftsUsing) &&
     item.craftsUsing.length <= 5_000 &&
-    item.craftsUsing.every(isCraft)
+    item.craftsUsing.every(isCraft) &&
+    (item.bartersGiving === undefined ||
+      (Array.isArray(item.bartersGiving) && item.bartersGiving.length <= 5_000 && item.bartersGiving.every(isBarter))) &&
+    (item.craftsGiving === undefined ||
+      (Array.isArray(item.craftsGiving) && item.craftsGiving.length <= 5_000 && item.craftsGiving.every(isCraft))) &&
+    (item.info === undefined || isItemInfo(item.info))
+  );
+}
+
+function isItemInfo(value: unknown): value is CachedItemInfo {
+  if (!value || typeof value !== "object") return false;
+  const info = value as Partial<Record<keyof CachedItemInfo, unknown>>;
+  const numbers = [
+    info.weight,
+    info.basePrice,
+    info.avg24hPrice,
+    info.low24hPrice,
+    info.high24hPrice,
+    info.lastLowPrice,
+    info.lastOfferCount,
+    info.stackMaxSize,
+  ];
+  return (
+    (info.description === null || (typeof info.description === "string" && info.description.length <= 4_000)) &&
+    numbers.every((entry) => entry === null || isFiniteNumber(entry)) &&
+    Array.isArray(info.categories) &&
+    info.categories.length <= 10 &&
+    info.categories.every((entry) => typeof entry === "string" && entry.length <= 200)
   );
 }
 

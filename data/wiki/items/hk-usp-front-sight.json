@@ -1,0 +1,23 @@
+{
+  "title": "HK USP front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_front_sight",
+  "revisionId": 356501,
+  "lastEdited": "2026-08-26T02:16:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "sightrange": "200",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "6194f35c18a3974e5e7421e6",
+    "ID": "sight_front_usp_hk_usp_std_front_sight"
+  },
+  "sections": []
+}

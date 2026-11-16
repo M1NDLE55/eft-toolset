@@ -1,0 +1,39 @@
+{
+  "title": "Kalashnikov AKS-74UN 5.45x39 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Kalashnikov_AKS-74UN_5.45x39_assault_rifle",
+  "revisionId": 357138,
+  "lastEdited": "2026-08-30T22:33:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "2.735 kg",
+    "grid": "4x2",
+    "trader": "Prapor LL1",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "500",
+    "ergonomics": "66.5",
+    "velocity": "731 m/s",
+    "range": "300 m",
+    "MOA": "3.44",
+    "Weaprecoil": "Vertical: 80, Horizontal: 201",
+    "rof": "650",
+    "caliber": "5.45x39mm",
+    "loot xp": "20",
+    "exam xp": "4",
+    "node": "583990e32459771419544dd2",
+    "ID": "weapon_izhmash_aks74un_545x39"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| AKS-74UN Zenit |\n| AKS-74UN Recon |"
+    }
+  ]
+}

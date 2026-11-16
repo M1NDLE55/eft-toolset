@@ -1,0 +1,24 @@
+{
+  "title": "MP9 stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP9_stock",
+  "revisionId": 292151,
+  "lastEdited": "2024-09-26T20:10:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.15 kg",
+    "grid": "2x1",
+    "price": "₽2,350",
+    "ergonomics": "+3",
+    "recoil": "-13",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5de910da8b6c4240ba2651b5",
+    "ID": "stock_mp9_bt_mp9_folding_stock_std"
+  },
+  "sections": []
+}

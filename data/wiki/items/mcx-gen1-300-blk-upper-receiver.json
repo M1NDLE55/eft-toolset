@@ -1,0 +1,26 @@
+{
+  "title": "MCX GEN1 .300 BLK upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX_GEN1_.300_BLK_upper_receiver",
+  "revisionId": 341740,
+  "lastEdited": "2026-04-26T21:23:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.488 kg",
+    "grid": "2x1",
+    "ergonomics": "+5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "Heat": "-1.1",
+    "Cooling": "+1",
+    "node": "5fbcc3e4d6fa9c00c571bb58",
+    "ID": "reciever_mcx_sig_mcx_gen1"
+  },
+  "sections": []
+}

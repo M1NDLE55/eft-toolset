@@ -1,0 +1,26 @@
+{
+  "title": "SVT-40 7.62x54R 625mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVT-40_7.62x54R_625mm_barrel",
+  "revisionId": 342367,
+  "lastEdited": "2026-04-29T00:50:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.33 kg",
+    "grid": "3x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "-32",
+    "velocity": "+0",
+    "MOA": "1.31",
+    "recoil": "-15.6",
+    "Heat": "-16",
+    "Cooling": "-11",
+    "node": "6410758c857473525b08bb77",
+    "ID": "barrel_svt40_toz_625mm_762x54r"
+  },
+  "sections": []
+}

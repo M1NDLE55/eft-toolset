@@ -1,0 +1,24 @@
+{
+  "title": "MPX Geissele SCH charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_Geissele_SCH_charging_handle",
+  "revisionId": 211228,
+  "lastEdited": "2022-09-20T11:05:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "price": "₽1,780",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+2",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c5db6b32e221600102611a0",
+    "ID": "charge_mpx_geissele_sch"
+  },
+  "sections": []
+}

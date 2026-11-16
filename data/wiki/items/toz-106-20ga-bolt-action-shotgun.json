@@ -1,0 +1,33 @@
+{
+  "title": "TOZ-106 20ga bolt-action shotgun",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TOZ-106_20ga_bolt-action_shotgun",
+  "revisionId": 362212,
+  "lastEdited": "2026-09-26T14:04:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "2.715 kg",
+    "grid": "4x1",
+    "trader": "Skier LL1, Jaeger LL1",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "73",
+    "velocity": "438 m/s",
+    "range": "70 m",
+    "MOA": "24.06",
+    "Weaprecoil": "Vertical: 504, Horizontal: 445",
+    "rof": "30",
+    "caliber": "20/70",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5a38e6bac4a2826c6e06d79b",
+    "ID": "weapon_toz_toz-106_20g"
+  },
+  "sections": []
+}

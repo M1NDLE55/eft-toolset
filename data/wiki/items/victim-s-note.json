@@ -1,0 +1,25 @@
+{
+  "title": "Victim's note",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Victim's_note",
+  "revisionId": 353586,
+  "lastEdited": "2026-08-14T19:04:20Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "689b53952b1ac3b0810b7fe0",
+    "ID": "item_info_note_from_arshavin"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "AR-15 Colt A2 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Colt_A2_pistol_grip",
+  "revisionId": 341655,
+  "lastEdited": "2026-04-26T20:53:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+3",
+    "node": "55d4b9964bdc2d1d4e8b456e",
+    "ID": "pistolgrip_ar15_colt_a2"
+  },
+  "sections": []
+}

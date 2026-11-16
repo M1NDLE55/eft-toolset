@@ -1,0 +1,24 @@
+{
+  "title": "Mosin Rifle rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_rear_sight",
+  "revisionId": 222521,
+  "lastEdited": "2023-01-08T16:13:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "price": "₽800",
+    "trader": "Prapor LL1",
+    "sightrange": "600",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5ae099925acfc4001a5fc7b3",
+    "ID": "sight_rear_mosin_izhmash_mosin_std"
+  },
+  "sections": []
+}

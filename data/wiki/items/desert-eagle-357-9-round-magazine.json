@@ -1,0 +1,25 @@
+{
+  "title": "Desert Eagle .357 9-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Eagle_.357_9-round_magazine",
+  "revisionId": 338842,
+  "lastEdited": "2026-03-18T08:11:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-1",
+    "checkaccuracy": "1",
+    "feedfailure": "Very low",
+    "capacity": "9",
+    "caliber": ".357 Magnum",
+    "node": "669fa435803b94fb5d0e3a76",
+    "ID": "mag_deagle_magnum_research_l5_std_9x33r_9"
+  },
+  "sections": []
+}

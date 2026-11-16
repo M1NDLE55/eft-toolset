@@ -1,0 +1,42 @@
+{
+  "title": "RShG-2 72.5mm rocket launcher",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RShG-2_72.5mm_rocket_launcher",
+  "revisionId": 364275,
+  "lastEdited": "2026-10-13T01:11:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Rocket launchers",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Rocket launcher",
+    "slot": "Primary",
+    "weight": "4 kg",
+    "grid": "4x1",
+    "trader": "Prapor LL4, after completing his task The Art of Explosion",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "39",
+    "velocity": "144 m/s",
+    "range": "50 m",
+    "MOA": "24.06",
+    "Weaprecoil": "Vertical: 180, Horizontal: 150",
+    "rof": "30",
+    "caliber": "72.5mm",
+    "node": "676bf44c5539167c3603e869",
+    "ID": "weapon_bazalt_rshg2_725"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be insured.\n- Cannot be listed for sale on the flea market.\n- (Empty ones can currently be listed, recognizable by a weight of 3.77 kg)\n- Only 2 can be held in a raid inventory at the same time.\n- The hot gases from the backblast cause damage to players when fired close to a wall, the ground or players.\n- Cannot be used in the Hideout shooting range."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Art of Explosion"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "title": "12/70 5.25mm buckshot",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12/70_5.25mm_buckshot",
+  "revisionId": 322836,
+  "lastEdited": "2025-11-18T21:26:47Z",
+  "kind": "ammo",
+  "categories": [
+    "12/70 ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Buckshot",
+    "weight": "0.044 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "velocity": "330 m/s",
+    "damage": "37",
+    "projectiles": "8",
+    "penetration": "1",
+    "armor damage": "15",
+    "ricochet": "0%",
+    "heat": "+100.8",
+    "feedfailure": "Very low",
+    "misfire": "High",
+    "effects": "Subsonic",
+    "node": "5d6e6772a4b936088465b17c",
+    "id": "patron_12x70_buckshot_525"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

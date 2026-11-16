@@ -1,0 +1,27 @@
+{
+  "title": "NL545 (GP) 5.45x39 16.5 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NL545_(GP)_5.45x39_16.5_inch_barrel",
+  "revisionId": 343085,
+  "lastEdited": "2026-05-03T14:57:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.78 kg",
+    "grid": "3x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-19",
+    "velocity": "-4.2",
+    "MOA": "1.31",
+    "recoil": "-5.6",
+    "Dura Burn": "+3",
+    "Heat": "-5",
+    "Cooling": "-3",
+    "node": "68c294750f5ebd68290d6c1c",
+    "ID": "barrel_nl545_cgnl_420mm_545x39"
+  },
+  "sections": []
+}

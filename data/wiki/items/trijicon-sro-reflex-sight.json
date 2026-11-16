@@ -1,0 +1,24 @@
+{
+  "title": "Trijicon SRO reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trijicon_SRO_reflex_sight",
+  "revisionId": 338036,
+  "lastEdited": "2026-03-08T15:41:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Compact reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Compact reflex sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "zeroing": "25, 50, 100",
+    "sightrange": "150",
+    "ergonomics": "+0",
+    "modes": "1",
+    "node": "688b44cb28bf8d85cd0ff108 688b4bd81cef2a61d0052738",
+    "ID": "scope_base_trijicon_sro scope_base_trijicon_sro_fde"
+  },
+  "sections": []
+}

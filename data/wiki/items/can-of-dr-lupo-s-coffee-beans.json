@@ -1,0 +1,58 @@
+{
+  "title": "Can of Dr. Lupo's coffee beans",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Can_of_Dr._Lupo's_coffee_beans",
+  "revisionId": 284977,
+  "lastEdited": "2024-08-20T20:03:03Z",
+  "kind": "item",
+  "categories": [
+    "Other"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Other",
+    "weight": "0.6 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5e54f6af86f7742199090bf3",
+    "ID": "item_barter_other_lupo"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Ration supply crate"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the couch first floor in 3 story Dorms"
+    },
+    {
+      "heading": "Factory",
+      "level": 3,
+      "text": "- In the corridor outside office, on the wooden shelves."
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- In the Marked Circle"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- Inside the western house near the swamp \"chairman house\", on the table in the right corner.\n- Under the west wing stairs on the white medical shelves. (storage room)"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator DrLupo."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "SIG Sauer Folding Knuckle Stock Adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_Folding_Knuckle_Stock_Adapter",
+  "revisionId": 323641,
+  "lastEdited": "2025-11-20T05:06:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-2",
+    "recoil": "+0",
+    "node": "58ac1bf086f77420ed183f9f",
+    "ID": "stock_all_sig_folding_knuckle"
+  },
+  "sections": []
+}

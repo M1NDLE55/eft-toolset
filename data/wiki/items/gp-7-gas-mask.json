@@ -1,0 +1,28 @@
+{
+  "title": "GP-7 gas mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/GP-7_gas_mask",
+  "revisionId": 361604,
+  "lastEdited": "2026-09-23T22:20:03Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas mask",
+    "slot": "Face cover",
+    "weight": "0.6 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "No",
+    "node": "60363c0c92ec1c31037959f5",
+    "id": "item_equipment_facecover_gasmask_gp7"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Protects against all effects of the Model 8230 CS gas grenade."
+    }
+  ]
+}

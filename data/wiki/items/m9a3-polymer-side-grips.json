@@ -1,0 +1,23 @@
+{
+  "title": "M9A3 polymer side grips",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M9A3_polymer_side_grips",
+  "revisionId": 342032,
+  "lastEdited": "2026-04-28T00:17:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "price": "₽800",
+    "ergonomics": "+2",
+    "loot xp": "5",
+    "exam xp": "2",
+    "node": "5cadc431ae921500113bb8d5",
+    "ID": "pistolgrip_m9_beretta_m9a3_std"
+  },
+  "sections": []
+}

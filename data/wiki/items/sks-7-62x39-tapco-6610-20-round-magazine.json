@@ -1,0 +1,30 @@
+{
+  "title": "SKS 7.62x39 TAPCO 6610 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_7.62x39_TAPCO_6610_20-round_magazine",
+  "revisionId": 337402,
+  "lastEdited": "2026-03-05T22:33:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.112 kg",
+    "grid": "1x2",
+    "price": "$68",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+2",
+    "checkaccuracy": "No",
+    "checkmodifier": "-15",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "7.62x39mm",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "587df583245977373c4f1129",
+    "ID": "mag_sks_tapco_mag6610_762x39_20"
+  },
+  "sections": []
+}

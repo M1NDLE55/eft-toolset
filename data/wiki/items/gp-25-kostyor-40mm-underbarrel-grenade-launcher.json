@@ -1,0 +1,33 @@
+{
+  "title": "GP-25 Kostyor 40mm underbarrel grenade launcher",
+  "url": "https://escapefromtarkov.fandom.com/wiki/GP-25_Kostyor_40mm_underbarrel_grenade_launcher",
+  "revisionId": 367863,
+  "lastEdited": "2026-11-11T21:28:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Underbarrel grenade launchers"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Underbarrel grenade launcher",
+    "weight": "2.92 kg",
+    "grid": "2x1",
+    "ergonomics": "-35",
+    "recoil": "-8",
+    "caliber": "40x53mm",
+    "node": "62e7e7bbe6da9612f743f1e0",
+    "ID": "launcher_ak_toz_gp25_40_vog"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- To use the GP-25, press the hotkey (Default 2 or 3) for the weapon it is attached to, while it is in your hands."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "\"Kostyor\", the project codename for the GP-25, translates to \"Bonfire\" in Russian."
+    }
+  ]
+}

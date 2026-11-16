@@ -1,0 +1,25 @@
+{
+  "title": "Water pump operation data",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Water_pump_operation_data",
+  "revisionId": 289571,
+  "lastEdited": "2024-09-01T12:19:25Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "node": "619268de2be33f2604340159",
+    "id": "quest_find_data2"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Corporate Secrets from Mechanic"
+    }
+  ]
+}

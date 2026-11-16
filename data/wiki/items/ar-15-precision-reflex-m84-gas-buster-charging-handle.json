@@ -1,0 +1,21 @@
+{
+  "title": "AR-15 Precision Reflex M84 Gas Buster Charging Handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Precision_Reflex_M84_Gas_Buster_Charging_Handle",
+  "revisionId": 343072,
+  "lastEdited": "2026-05-03T14:55:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.049 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+2",
+    "node": "68caabebc71156cf470bc186",
+    "ID": "charge_ar15_precision_reflex_m84_gas_buster_w_military_latch"
+  },
+  "sections": []
+}

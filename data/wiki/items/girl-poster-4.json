@@ -1,0 +1,35 @@
+{
+  "title": "Girl poster 4",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Girl_poster_4",
+  "revisionId": 344215,
+  "lastEdited": "2026-05-24T14:38:07Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6759e7a44ff23436160d7ff5",
+    "id": "item_barter_flyers_girl_4"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This poster shows Jenah Yamamoto."
+    }
+  ]
+}

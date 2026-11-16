@@ -1,0 +1,24 @@
+{
+  "title": "TOZ-106 dovetail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TOZ-106_dovetail_mount",
+  "revisionId": 214398,
+  "lastEdited": "2022-11-16T17:57:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "price": "₽1,100",
+    "trader": "Jaeger LL1",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5c6162682e22160010261a2b",
+    "ID": "mount_toz-106_noname_dovetail_mount"
+  },
+  "sections": []
+}

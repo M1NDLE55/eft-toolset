@@ -1,0 +1,27 @@
+{
+  "title": "MP-153 12ga 4-shell magazine cap",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-153_12ga_4-shell_magazine_cap",
+  "revisionId": 268708,
+  "lastEdited": "2024-02-04T23:56:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽500",
+    "ergonomics": "+1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "4",
+    "caliber": "12/70",
+    "loot xp": "10",
+    "exam xp": "Examined by default",
+    "node": "56deee15d2720bee328b4567",
+    "ID": "mag_mr153_izhmeh_12g_4"
+  },
+  "sections": []
+}

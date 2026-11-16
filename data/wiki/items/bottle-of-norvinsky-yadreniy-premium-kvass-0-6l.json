@@ -1,0 +1,29 @@
+{
+  "title": "Bottle of Norvinsky Yadreniy premium kvass (0.6L)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Bottle_of_Norvinsky_Yadreniy_premium_kvass_(0.6L)",
+  "revisionId": 352352,
+  "lastEdited": "2026-08-08T00:25:15Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "0.621 kg",
+    "grid": "1x2",
+    "effect": "Energy: +15, Hydration: +65,",
+    "use time": "3s",
+    "loot xp": "10",
+    "exam xp": "10",
+    "node": "5e8f3423fd7471236e6e3b64",
+    "ID": "item_drink_kvas"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Sport bags\n- In Dead Scavs\n- In Plastic suitcases\n- In Ground caches\n- In Buried barrel caches"
+    }
+  ]
+}

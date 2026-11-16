@@ -1,0 +1,23 @@
+{
+  "title": "MPX Midwest Industries 14 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_Midwest_Industries_14_inch_M-LOK_handguard",
+  "revisionId": 342007,
+  "lastEdited": "2026-04-28T00:00:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.269 kg",
+    "grid": "2x1",
+    "ergonomics": "+18",
+    "recoil": "+0",
+    "Heat": "-4.8",
+    "Cooling": "+3.2",
+    "node": "5c5db63a2e2216000f1b284a",
+    "ID": "handguard_mpx_midwest_14_inch_m_lok"
+  },
+  "sections": []
+}

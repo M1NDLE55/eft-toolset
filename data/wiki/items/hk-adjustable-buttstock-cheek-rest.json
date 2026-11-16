@@ -1,0 +1,21 @@
+{
+  "title": "HK Adjustable Buttstock cheek rest",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_Adjustable_Buttstock_cheek_rest",
+  "revisionId": 210874,
+  "lastEdited": "2022-09-20T10:49:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.057 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL4",
+    "ergonomics": "+5",
+    "node": "61715e7e67085e45ef140b33",
+    "ID": "stock_417_hk_417_adjustable_buttstock_cheek"
+  },
+  "sections": []
+}

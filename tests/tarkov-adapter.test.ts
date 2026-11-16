@@ -8,6 +8,7 @@ import {
   getTaskIndex,
 } from "@/app/lib/api/tarkov-server";
 import { createTarkovFixtures } from "./fixtures/tarkov";
+import type { ComposedItem } from "@/app/lib/cache/types";
 import type { MapDetails } from "@/app/lib/types/raidPlanner";
 
 let fixtures: Record<string, unknown> = createTarkovFixtures();
@@ -407,6 +408,22 @@ describe("Tarkov JSON adapter", () => {
         ],
       })
     );
+  });
+
+  it("lists the barters and crafts that give an item, and its facts", async () => {
+    const reward = (await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, { gameMode: "regular", name: "Reward" })) as ComposedItem;
+    expect(reward.bartersGiving).toEqual([
+      expect.objectContaining({
+        trader: { name: "Tester" },
+        level: 2,
+        requiredItems: [{ item: { name: "Test Rifle", normalizedName: "test-rifle" }, quantity: 2 }],
+      }),
+    ]);
+    expect(reward.craftsGiving).toEqual([
+      expect.objectContaining({ station: { name: "Workbench" }, level: 3, rewardItems: [expect.objectContaining({ quantity: 2 })] }),
+    ]);
+    const mod = (await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, { gameMode: "regular", name: "Test Mod" })) as ComposedItem;
+    expect(mod.info).toMatchObject({ description: null, weight: 0.2, lastLowPrice: 12_000, categories: [] });
   });
 
   it("lists only tasks and objectives that need the item, not any-item objectives", async () => {

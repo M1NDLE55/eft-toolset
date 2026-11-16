@@ -1,0 +1,30 @@
+{
+  "title": "M18 smoke grenade (Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M18_smoke_grenade_(Green)",
+  "revisionId": 367026,
+  "lastEdited": "2026-11-02T14:24:00Z",
+  "kind": "item",
+  "categories": [
+    "Smoke grenades",
+    "Throwable weapons",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Smoke grenade",
+    "weight": "0.539 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1, Peacekeeper LL2",
+    "explosion delay": "1s",
+    "emission time": "90s",
+    "node": "617aa4dd8166f034d57de9c5",
+    "ID": "weapon_grenade_m18"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Grenade box\n- Weapon box (6x2)\n- Buried barrel cache\n- Ground cache"
+    }
+  ]
+}

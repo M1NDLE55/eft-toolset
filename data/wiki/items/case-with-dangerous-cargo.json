@@ -1,0 +1,25 @@
+{
+  "title": "Case with dangerous cargo",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Case_with_dangerous_cargo",
+  "revisionId": 346553,
+  "lastEdited": "2026-06-07T18:34:03Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "6.2 kg",
+    "grid": "3x3",
+    "node": "67c049bf6df6ad43b3005fb6",
+    "id": "q_fall_BO_case"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player refused to assist Mr. Kerman in finding compromising evidence on TerraGroup."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "TarCoin",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TarCoin",
+  "revisionId": 347947,
+  "lastEdited": "2026-07-17T01:43:10Z",
+  "kind": "item",
+  "categories": [
+    "Currency"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Currency",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "69dd0de23dfe95d9e70b5ebb",
+    "id": "item_barter_valuable_tarcoin"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Not available in the PvE game mode\n- Cannot be listed for sale on the flea market.\n- Cannot be put inside secure containers\n- Stacks to 100\n- Cannot be brought into a raid\n- Only 100 can be held in a raid inventory at the same time\n- Spawns in stacks of 3-9"
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "- Used as a currency to purchase expansions in the in-game Expansions Hub.\n- Does not take up space in the stash, all looted TarCoins are converted into Expansions Hub balance upon extraction.\n- Can also be purchased for real money on the Escape from Tarkov website or in the Expansions Hub."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Can be found in Valuables spawns with a low spawn rate"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In Bank cash registers"
+    }
+  ]
+}

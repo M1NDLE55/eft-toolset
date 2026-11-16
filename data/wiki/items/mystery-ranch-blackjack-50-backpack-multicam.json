@@ -1,0 +1,31 @@
+{
+  "title": "Mystery Ranch Blackjack 50 backpack (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mystery_Ranch_Blackjack_50_backpack_(MultiCam)",
+  "revisionId": 354856,
+  "lastEdited": "2026-08-16T21:22:58Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "3.265 kg",
+    "grid": "5x7",
+    "price": "₽82,000",
+    "penalties": "-4% movement speed, -2% turn speed, -6% Ergonomics",
+    "slots": "6x7 grid (42 slots)",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5c0e774286f77468413cc5b2",
+    "ID": "item_equipment_backpack_blackjack"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Only 1 can be held in a raid inventory at the same time"
+    }
+  ]
+}

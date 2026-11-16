@@ -1,0 +1,24 @@
+{
+  "title": "9x39mm BP ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x39mm_BP_ammo_pack_(20_pcs)",
+  "revisionId": 367292,
+  "lastEdited": "2026-11-02T23:17:02Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6489854673c462723909a14e",
+    "ID": "item_ammo_box_9x39_20_bp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

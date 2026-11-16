@@ -1,0 +1,29 @@
+{
+  "title": "5.45x39mm BP gs ammo pack (120 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_BP_gs_ammo_pack_(120_pcs)",
+  "revisionId": 367154,
+  "lastEdited": "2026-11-02T23:09:51Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.1 kg",
+    "grid": "2x1",
+    "node": "5737292724597765e5728562 57372a7f24597766fe0de0c1",
+    "id": "item_ammo_box_545x39_120_bp item_ammo_box_545x39_120_bp_damaged"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- There is also a \"damaged\" variant of this item that has a slightly different image but also always contains 120 rounds."
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Forge a Friendship"
+    }
+  ]
+}

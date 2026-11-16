@@ -1,0 +1,29 @@
+{
+  "title": "RPK-16 5.45x39 95-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPK-16_5.45x39_95-round_drum_magazine",
+  "revisionId": 339078,
+  "lastEdited": "2026-03-24T16:27:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.68 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3",
+    "ergonomics": "-12",
+    "checkaccuracy": "No",
+    "checkmodifier": "+15",
+    "loadmodifier": "+15",
+    "feedfailure": "High",
+    "capacity": "95",
+    "caliber": "5.45x39mm",
+    "loot xp": "15",
+    "exam xp": "2",
+    "node": "5bed625c0db834001c062946",
+    "ID": "mag_ak_izhmash_rpk16_drum_545x39_95"
+  },
+  "sections": []
+}

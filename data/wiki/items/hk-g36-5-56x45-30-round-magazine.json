@@ -1,0 +1,27 @@
+{
+  "title": "HK G36 5.56x45 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_5.56x45_30-round_magazine",
+  "revisionId": 339074,
+  "lastEdited": "2026-03-24T16:27:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.14 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.56x45mm NATO",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "62307b7b10d2321fa8741921",
+    "ID": "mag_g36_hk_std_556x45_30"
+  },
+  "sections": []
+}

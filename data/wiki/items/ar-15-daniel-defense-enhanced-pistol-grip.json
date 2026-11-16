@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Daniel Defense Enhanced Pistol Grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Daniel_Defense_Enhanced_Pistol_Grip",
+  "revisionId": 357310,
+  "lastEdited": "2026-09-01T11:28:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4: Black, Cerakote",
+    "ergonomics": "+5",
+    "recoil": "-1.5",
+    "node": "6a1577a0bf497aade1002754 6a1577b09bbb889992032c14",
+    "ID": "pistolgrip_ar15_dd_enhanced pistolgrip_ar15_dd_enhanced_mspc"
+  },
+  "sections": []
+}

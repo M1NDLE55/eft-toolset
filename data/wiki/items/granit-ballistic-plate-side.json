@@ -1,0 +1,30 @@
+{
+  "title": "Granit ballistic plate (Side)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Granit_ballistic_plate_(Side)",
+  "revisionId": 342741,
+  "lastEdited": "2026-04-30T21:08:27Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "1.3 kg",
+    "grid": "1x1",
+    "material": "Ceramic",
+    "armor": "6",
+    "armor coverage": "Left Plate , Right Plate",
+    "durability": "20",
+    "penalties": "-0.75% movement speed, -0.75% turn speed, +0% Ergonomics",
+    "node": "64afd81707e2cf40e903a316",
+    "id": "item_equipment_plate_granit_6class_side"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Left Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

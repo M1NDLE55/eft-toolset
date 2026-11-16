@@ -1,0 +1,23 @@
+{
+  "title": "Molot Arms AKM-type dust cover",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Molot_Arms_AKM-type_dust_cover",
+  "revisionId": 322073,
+  "lastEdited": "2025-11-17T01:24:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Dust cover",
+    "weight": "0.088 kg",
+    "grid": "2x1",
+    "trader": "Skier LL1",
+    "ergonomics": "+3",
+    "recoil": "+0",
+    "Dura Burn": "-3",
+    "node": "59e6449086f7746c9f75e822",
+    "ID": "reciever_ak_izhmash_akm_std"
+  },
+  "sections": []
+}

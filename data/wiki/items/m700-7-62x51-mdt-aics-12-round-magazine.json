@@ -1,0 +1,29 @@
+{
+  "title": "M700 7.62x51 MDT AICS 12-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_7.62x51_MDT_AICS_12-round_magazine",
+  "revisionId": 337687,
+  "lastEdited": "2026-03-06T01:22:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.6 kg",
+    "grid": "1x2",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-3",
+    "checkaccuracy": "No",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "12",
+    "caliber": "7.62x51mm NATO",
+    "loot xp": "30",
+    "exam xp": "2",
+    "node": "5d25a6a48abbc306c62e6310",
+    "ID": "mag_m700_mdt_aics_762x51_12"
+  },
+  "sections": []
+}

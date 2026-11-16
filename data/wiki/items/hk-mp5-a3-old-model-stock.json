@@ -1,0 +1,22 @@
+{
+  "title": "HK MP5 A3 old model stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5_A3_old_model_stock",
+  "revisionId": 329252,
+  "lastEdited": "2025-12-24T16:32:30Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.67 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+7",
+    "recoil": "-23",
+    "node": "5926d40686f7740f152b6b7e",
+    "ID": "stock_mp5_hk_a3_std"
+  },
+  "sections": []
+}

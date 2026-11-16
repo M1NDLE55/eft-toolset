@@ -1,0 +1,24 @@
+{
+  "title": "UZI PRO 9x19 32-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_PRO_9x19_32-round_magazine",
+  "revisionId": 356471,
+  "lastEdited": "2026-08-26T02:03:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.246 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL1",
+    "checkaccuracy": "No",
+    "feedfailure": "Low",
+    "capacity": "32",
+    "caliber": "9x19mm Parabellum",
+    "node": "66866f622a2296a8d9099639",
+    "ID": "mag_uzi_pro_iwi_uzi_pro_9x19_32"
+  },
+  "sections": []
+}

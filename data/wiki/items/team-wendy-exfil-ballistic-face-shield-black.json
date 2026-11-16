@@ -1,0 +1,33 @@
+{
+  "title": "Team Wendy EXFIL Ballistic face shield (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Team_Wendy_EXFIL_Ballistic_face_shield_(Black)",
+  "revisionId": 342829,
+  "lastEdited": "2026-04-30T21:41:22Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "0.8 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "material": "Glass",
+    "armor": "3",
+    "armor coverage": "Face, Eyes, Jaws",
+    "durability": "45",
+    "blindness protect": "10%",
+    "penalties": "-10% turn speed, -6% Ergonomics",
+    "BlocksEyewear": "No",
+    "node": "5e00cdd986f7747473332240",
+    "ID": "item_equipment_helmet_team_wendy_exfil_face_shield"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

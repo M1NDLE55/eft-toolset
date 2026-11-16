@@ -1,0 +1,33 @@
+{
+  "title": "Team Wendy EXFIL Ballistic Mandible (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Team_Wendy_EXFIL_Ballistic_Mandible_(MultiCam)",
+  "revisionId": 361569,
+  "lastEdited": "2026-09-23T21:39:40Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.59 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 3",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "3",
+    "armor coverage": "Face, Ears, Jaws, Throat",
+    "durability": "36",
+    "penalties": "+0% movement speed, -0.5% turn speed, -1.5% Ergonomics",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6a834d307bea762f500e1b59",
+    "id": "item_equipment_helmet_exfil_mandible_multicam_bp_04"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

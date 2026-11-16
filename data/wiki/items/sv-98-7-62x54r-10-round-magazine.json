@@ -1,0 +1,26 @@
+{
+  "title": "SV-98 7.62x54R 10-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SV-98_7.62x54R_10-round_magazine",
+  "revisionId": 337335,
+  "lastEdited": "2026-03-05T21:36:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.115 kg",
+    "grid": "1x1",
+    "price": "₽4,500",
+    "trader": "Prapor LL2",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "10",
+    "caliber": "7.62x54mmR",
+    "node": "559ba5b34bdc2d1f1a8b4582",
+    "ID": "mag_sv98_izhmash_sv98_std_762x54r_10"
+  },
+  "sections": []
+}

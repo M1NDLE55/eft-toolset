@@ -1,0 +1,24 @@
+{
+  "title": "Canister with purified water",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Canister_with_purified_water",
+  "revisionId": 355025,
+  "lastEdited": "2026-08-18T14:26:09Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "3.3 kg",
+    "grid": "2x2",
+    "price": "₽50,000",
+    "effect": ", Energy: +25, Hydration: +100, , Buffs:, Removes: - Radiation Exposure, 1s Delay; 600s Duration: - Increases Endurance (+1) - Increases Strength (+1) - Increases Vitality (+1) - Increases Health (+1) - Increases Stress Resistance (+1) - Increases Metabolism (+1) - Increases Immunity (+1) - Increases Intellect (+1) - Increases Perception (+1) - Increases Attention (+1) 3s Delay; 60s Duration: - Increases health regeneration (+1/s)",
+    "use time": "15s",
+    "loot xp": "10",
+    "exam xp": "10",
+    "node": "5d1b33a686f7742523398398",
+    "ID": "item_food_purewater"
+  },
+  "sections": []
+}

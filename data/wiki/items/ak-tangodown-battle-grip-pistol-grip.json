@@ -1,0 +1,22 @@
+{
+  "title": "AK TangoDown Battle Grip pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_TangoDown_Battle_Grip_pistol_grip",
+  "revisionId": 342245,
+  "lastEdited": "2026-04-28T21:48:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3: Black, FDE",
+    "ergonomics": "+3",
+    "recoil": "-1",
+    "node": "628a664bccaab13006640e47 628c9ab845c59e5b80768a81",
+    "ID": "pistolgrip_ak_tango_down_ak_battle_grip pistolgrip_ak_tango_down_ak_battle_grip_fde"
+  },
+  "sections": []
+}

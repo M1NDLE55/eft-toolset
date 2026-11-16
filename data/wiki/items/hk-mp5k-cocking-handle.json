@@ -1,0 +1,23 @@
+{
+  "title": "HK MP5K cocking handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5K_cocking_handle",
+  "revisionId": 210925,
+  "lastEdited": "2022-09-20T10:51:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "price": "₽1,550",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5d2f2d5748f03572ec0c0139",
+    "ID": "charge_mp5k_hk_kurtz_std"
+  },
+  "sections": []
+}

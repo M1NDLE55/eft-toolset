@@ -1,0 +1,21 @@
+{
+  "title": "SKS CHOATE scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_CHOATE_scope_mount",
+  "revisionId": 293090,
+  "lastEdited": "2024-09-29T20:04:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.175 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-1",
+    "node": "6415d33eda439c6a97048b5b",
+    "ID": "mount_sks_choate_sks_scope_mount"
+  },
+  "sections": []
+}

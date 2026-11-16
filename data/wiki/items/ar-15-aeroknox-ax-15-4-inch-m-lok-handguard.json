@@ -1,0 +1,25 @@
+{
+  "title": "AR-15 Aeroknox AX-15 4 inch M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Aeroknox_AX-15_4_inch_M-LOK_handguard",
+  "revisionId": 342363,
+  "lastEdited": "2026-04-29T00:47:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.103 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+12",
+    "recoil": "+0",
+    "Heat": "-7.9",
+    "Cooling": "+9.4",
+    "loot xp": "20",
+    "node": "63f4ba71f31d4a33b87bd046",
+    "ID": "handguard_ar15_aeroknox_ax15_4_m_lok"
+  },
+  "sections": []
+}

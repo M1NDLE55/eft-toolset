@@ -1,0 +1,31 @@
+{
+  "title": "Hot Rod beverage cooler bag",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hot_Rod_beverage_cooler_bag",
+  "revisionId": 356684,
+  "lastEdited": "2026-08-28T01:17:37Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "4 kg",
+    "grid": "3x3",
+    "effect": "Provides 49 inventory slots while only taking up 9",
+    "node": "6937ecd37713b904480013ac",
+    "ID": "item_container_food_hot_rod"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only obtainable from paid Twitch Drops.\n- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Hot Rod beverage cooler bag is a container with the purpose of saving space within the player's inventory. It provides 49 inventory slots in a 7x7 grid and only takes up 9 inventory slots itself. It can only store:\n- Drinks\n- Ox bleach"
+    }
+  ]
+}

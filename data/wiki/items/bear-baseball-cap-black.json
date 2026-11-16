@@ -1,0 +1,22 @@
+{
+  "title": "BEAR baseball cap (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/BEAR_baseball_cap_(Black)",
+  "revisionId": 310165,
+  "lastEdited": "2025-04-13T10:21:04Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽1,600",
+    "trader": "Ragman LL1",
+    "node": "5b40e5e25acfc4001a599bea",
+    "id": "item_equipment_head_bear_black"
+  },
+  "sections": []
+}

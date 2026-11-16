@@ -1,0 +1,29 @@
+{
+  "title": "M9A3 9x19 17-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M9A3_9x19_17-round_magazine",
+  "revisionId": 337639,
+  "lastEdited": "2026-03-06T00:36:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.082 kg",
+    "grid": "1x1",
+    "price": "₽1,800",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-0.5",
+    "accuracy": "+0",
+    "checkaccuracy": "1",
+    "loadmodifier": "-15",
+    "feedfailure": "Very low",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5cadc2e0ae9215051e1c21e7",
+    "ID": "mag_m9_beretta_m9a3_std_9x19_17"
+  },
+  "sections": []
+}

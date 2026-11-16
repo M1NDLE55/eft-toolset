@@ -1,0 +1,20 @@
+{
+  "title": "Armasight Zeus universal base",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armasight_Zeus_universal_base",
+  "revisionId": 255107,
+  "lastEdited": "2023-11-09T16:55:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL4",
+    "node": "63fc449f5bd61c6cf3784a88",
+    "ID": "mount_all_armasight_zeus_pro_qd_mount"
+  },
+  "sections": []
+}

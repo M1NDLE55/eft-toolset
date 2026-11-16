@@ -1,0 +1,30 @@
+{
+  "title": "Audio recorder",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Audio_recorder",
+  "revisionId": 336415,
+  "lastEdited": "2026-02-22T00:59:55Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "node": "6526909b539ee574cb624991",
+    "id": "item_recorder"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- The recorder is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "The recorder must be equipped to play found audio tapes (Default keybind: M) in raid. Collected audio tapes can also be listened to in the handbook without having the recorder equipped."
+    }
+  ]
+}

@@ -3,8 +3,11 @@ const nextConfig = {
   poweredByHeader: false,
   agentRules: false,
   reactCompiler: true,
-  // get_wiki_page reads the wiki snapshot from disk, a page at a time. See DATA_ARCHITECTURE.md.
-  outputFileTracingIncludes: { "/api/mcp": ["./data/wiki/**/*"] },
+  // get_wiki_page and item pages read the wiki snapshot from disk, a page at a time. See DATA_ARCHITECTURE.md.
+  outputFileTracingIncludes: {
+    "/api/mcp": ["./data/wiki/**/*"],
+    "/item/*": ["./data/wiki/index.json", "./data/wiki/item-ids.json", "./data/wiki/pages/**/*", "./data/wiki/items/**/*"],
+  },
   async headers() {
     return [
       {

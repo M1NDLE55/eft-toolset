@@ -1,0 +1,51 @@
+{
+  "title": "Document case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Document_case",
+  "revisionId": 363447,
+  "lastEdited": "2026-10-06T22:01:10Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "0.82 kg",
+    "grid": "1x2",
+    "effect": "Provides 16 inventory slots while only taking up 2",
+    "node": "590c60fc86f77412b13fddcf",
+    "id": "item_info_docbag"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 5 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Document case is a container with the purpose of saving space within the player's inventory. It provides 16 inventory slots in a 4x4 grid and only takes up 2 inventory slots itself. It can only store:\n- Currency\n- Keys & Keycards\n- Posters\n- Maps\n- Info items\n- Keycard holder case\n- DesmondPilak CD\n- Physical Bitcoin\n- Veritas guitar pick"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Punisher - Part 5\n- 1 can be obtained as a quest reward from Out of Curiosity"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- At the three-story dorms in the \"marked room\"\n- On a industrial shelf in warehouse 3 at the shipping yard\n\n- \"Old Gas Station\":\n  - On the desk inside\n  - At the \"giving tree\" behind it"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    }
+  ]
+}

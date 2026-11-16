@@ -1,0 +1,26 @@
+{
+  "title": "Tagilla's welding mask \"ZABEY\" (Replica)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tagilla's_welding_mask_%22ZABEY%22_(Replica)",
+  "revisionId": 333920,
+  "lastEdited": "2026-02-07T23:48:15Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "1 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "node": "67ea616a74f765cefd009fb7",
+    "id": "item_barter_valuable_welding_minotaur"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be placed in the Hall of Fame."
+    }
+  ]
+}

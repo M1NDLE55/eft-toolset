@@ -1,0 +1,25 @@
+{
+  "title": "TT 7.62x25 makeshift sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TT_7.62x25_makeshift_sound_suppressor",
+  "revisionId": 318820,
+  "lastEdited": "2025-09-29T20:41:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.332 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-12",
+    "velocity": "+0.7",
+    "recoil": "-7",
+    "Dura Burn": "+75",
+    "Heat": "+15",
+    "node": "571a28e524597720b4066567",
+    "ID": "silencer_tt_custom_noname_762x25tt"
+  },
+  "sections": []
+}

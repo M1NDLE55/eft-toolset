@@ -1,0 +1,26 @@
+{
+  "title": "M9A3 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M9A3_rear_sight",
+  "revisionId": 211157,
+  "lastEdited": "2022-09-20T11:02:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.008 kg",
+    "grid": "1x1",
+    "price": "₽505",
+    "sightrange": "200 m",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "modes": "1",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5cadd940ae9215051e1c2316",
+    "ID": "sight_rear_m9_beretta_m9a3_std"
+  },
+  "sections": []
+}

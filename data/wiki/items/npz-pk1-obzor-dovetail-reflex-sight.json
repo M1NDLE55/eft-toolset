@@ -1,0 +1,24 @@
+{
+  "title": "NPZ PK1 Obzor dovetail reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NPZ_PK1_Obzor_dovetail_reflex_sight",
+  "revisionId": 304962,
+  "lastEdited": "2025-01-31T14:55:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.520 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "0",
+    "ergonomics": "-3",
+    "modes": "1",
+    "node": "618a5d5852ecee1505530b2a",
+    "ID": "scope_dovetail_npz_pk_1"
+  },
+  "sections": []
+}

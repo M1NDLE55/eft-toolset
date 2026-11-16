@@ -1,0 +1,22 @@
+{
+  "title": "USEC PCS MultiCam",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_PCS_MultiCam",
+  "revisionId": 262021,
+  "lastEdited": "2024-01-02T23:58:09Z",
+  "kind": "item",
+  "categories": [
+    "USEC upper-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5d1f56ff86f7743f8362bcd7",
+    "ID": "usec_upper_pcsmulticam"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The shirt is modeled on the British Army PCS Combat Shirt, and gloves are modeled on the Mechanix M-Pact MultiCam gloves."
+    }
+  ]
+}

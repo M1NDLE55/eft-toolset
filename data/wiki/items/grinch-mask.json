@@ -1,0 +1,26 @@
+{
+  "title": "Grinch mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Grinch_mask",
+  "revisionId": 329231,
+  "lastEdited": "2025-12-24T16:22:38Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "67602a0f97f19b78f00a0199",
+    "ID": "item_equipment_facecover_xmass_mask_grinch"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This face cover first appeared during Escape from Tarkov's 2024 Christmas Celebration.\n- The \"Grinch\" is a fictional character from the book \"How the Grinch Stole Christmas!\", written by Theodor Seuss Geisel."
+    }
+  ]
+}

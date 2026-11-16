@@ -1,0 +1,31 @@
+{
+  "title": "Velocity Systems MPPV Multi-Purpose Patrol Vest (Wolf Grey)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Velocity_Systems_MPPV_Multi-Purpose_Patrol_Vest_(Wolf_Grey)",
+  "revisionId": 333259,
+  "lastEdited": "2026-01-30T03:27:56Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "1.6 kg",
+    "grid": "4x3",
+    "price": "₽49,200",
+    "BlocksArmor": "No",
+    "slots": "24 Slots",
+    "loot xp": "20",
+    "exam xp": "10",
+    "node": "5df8a42886f77412640e2e75",
+    "id": "item_equipment_rig_multipurpose"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 2 can be held in a raid inventory at the same time"
+    }
+  ]
+}

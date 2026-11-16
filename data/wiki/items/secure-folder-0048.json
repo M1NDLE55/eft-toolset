@@ -1,0 +1,30 @@
+{
+  "title": "Secure Folder 0048",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Secure_Folder_0048",
+  "revisionId": 305393,
+  "lastEdited": "2025-02-07T07:51:53Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.8 kg",
+    "grid": "1x2",
+    "node": "593965cf86f774087a77e1b6",
+    "id": "case_0048"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest The Extortionist from Skier"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The symbol on the case is Omega (Ω), the 24th and last letter of the Greek alphabet."
+    }
+  ]
+}

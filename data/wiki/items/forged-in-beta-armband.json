@@ -1,0 +1,26 @@
+{
+  "title": "Forged In Beta Armband",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Forged_In_Beta_Armband",
+  "revisionId": 348829,
+  "lastEdited": "2026-08-01T17:45:58Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "node": "68fb9480e6ad35a767066feb",
+    "id": "item_equipment_armband_pestily"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- This armband could be obtained via paid Twitch Drops."
+    }
+  ]
+}

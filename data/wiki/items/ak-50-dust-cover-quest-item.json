@@ -1,0 +1,25 @@
+{
+  "title": "AK-50 dust cover (quest item)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-50_dust_cover_(quest_item)",
+  "revisionId": 357362,
+  "lastEdited": "2026-09-01T13:16:11Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "1.644 kg",
+    "grid": "3x1",
+    "node": "683ed6c2e4b1dd7ec4069dc8",
+    "id": "item_quest_ak50_upper_reciever"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Hobby Club from Mechanic"
+    }
+  ]
+}

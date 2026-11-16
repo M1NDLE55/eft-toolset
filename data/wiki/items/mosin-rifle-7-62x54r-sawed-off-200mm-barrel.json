@@ -1,0 +1,29 @@
+{
+  "title": "Mosin Rifle 7.62x54R sawed-off 200mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_7.62x54R_sawed-off_200mm_barrel",
+  "revisionId": 340883,
+  "lastEdited": "2026-04-22T08:55:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.7 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+0",
+    "velocity": "-54",
+    "MOA": "6.19",
+    "recoil": "-5",
+    "Dura Burn": "-19",
+    "Heat": "-8",
+    "Cooling": "-2",
+    "loot xp": "110",
+    "exam xp": "6",
+    "node": "5bfd4cc90db834001d23e846",
+    "ID": "barrel_mosin_izhmash_mosin_sawn_off_200mm"
+  },
+  "sections": []
+}

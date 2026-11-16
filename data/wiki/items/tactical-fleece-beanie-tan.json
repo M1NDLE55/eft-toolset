@@ -1,0 +1,22 @@
+{
+  "title": "Tactical fleece beanie (Tan)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tactical_fleece_beanie_(Tan)",
+  "revisionId": 310169,
+  "lastEdited": "2025-04-13T10:23:42Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Beanie",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "price": "₽2,200",
+    "trader": "Ragman LL2",
+    "node": "5aa2ba19e5b5b00014028f4e",
+    "id": "hats_fleece"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "FN Five-seveN MK2 pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_Five-seveN_MK2_pistol_slide",
+  "revisionId": 215801,
+  "lastEdited": "2022-12-04T10:48:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.16 kg",
+    "grid": "2x1",
+    "price": "₽4,210",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "+5.7",
+    "Cooling": "-1.9",
+    "loot xp": "10",
+    "node": "5d3eb44aa4b93650d64e4979",
+    "ID": "reciever_57_fn_five_seven_cover_std"
+  },
+  "sections": []
+}

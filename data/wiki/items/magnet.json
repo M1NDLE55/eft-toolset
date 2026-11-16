@@ -1,0 +1,26 @@
+{
+  "title": "Magnet",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magnet",
+  "revisionId": 352011,
+  "lastEdited": "2026-08-07T00:05:21Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.4 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "590a391c86f774385a33c404",
+    "id": "item_barter_electr_magnet"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

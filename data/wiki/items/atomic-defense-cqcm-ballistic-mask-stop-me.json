@@ -1,0 +1,41 @@
+{
+  "title": "Atomic Defense CQCM ballistic mask (Stop Me)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Atomic_Defense_CQCM_ballistic_mask_(Stop_Me)",
+  "revisionId": 348528,
+  "lastEdited": "2026-07-30T21:53:45Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light Armored mask",
+    "slot": "Face cover",
+    "weight": "1.5 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 0",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "3",
+    "armor coverage": "Face, Jaws, Eyes, Head top",
+    "durability": "35",
+    "blindness protect": "0%",
+    "RicochetChance": "High",
+    "penalties": "-1% movement speed, -3% turn speed, -2% Ergonomics, No sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksHeadwear": "Yes",
+    "node": "67a5c5b6dfdf568c9009af66",
+    "id": "item_equipment_facecover_ballistic_mask_arena_bp_02"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This mask is directly inspired by a mask featured in the game \"Manhunt\", worn by members of the gang \"The Smileys\", which are named after their off-putting smiley masks."
+    }
+  ]
+}

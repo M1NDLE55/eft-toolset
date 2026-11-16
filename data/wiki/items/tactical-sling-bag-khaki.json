@@ -1,0 +1,32 @@
+{
+  "title": "Tactical sling bag (Khaki)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tactical_sling_bag_(Khaki)",
+  "revisionId": 324198,
+  "lastEdited": "2025-11-21T22:21:50Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Bag",
+    "slot": "Backpack",
+    "weight": "0.48 kg",
+    "grid": "3x3",
+    "price": "₽1,700",
+    "trader": "Ragman LL1",
+    "penalties": "+0% movement speed, +0% turn speed, -2% Ergonomics",
+    "slots": "3x2 grid (6 slots)",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5ab8f04f86f774585f4237d8",
+    "id": "backpack_molle"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Based off the Maxpedition Remora Gearslinger pack."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "SSD with TerraGroup evidence",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SSD_with_TerraGroup_evidence",
+  "revisionId": 356112,
+  "lastEdited": "2026-08-25T17:07:03Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "node": "67c0497068e50a07b10d2576",
+    "id": "q_bilet_ssd1"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket"
+    }
+  ]
+}

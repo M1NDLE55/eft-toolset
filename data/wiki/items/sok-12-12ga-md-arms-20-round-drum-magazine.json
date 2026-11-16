@@ -1,0 +1,26 @@
+{
+  "title": "SOK-12 12ga MD Arms 20-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_12ga_MD_Arms_20-round_drum_magazine",
+  "revisionId": 338004,
+  "lastEdited": "2026-03-08T00:37:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.66 kg",
+    "grid": "2x2",
+    "ergonomics": "-17",
+    "checkaccuracy": "1",
+    "checkmodifier": "-10",
+    "loadmodifier": "+20",
+    "feedfailure": "Medium",
+    "capacity": "20",
+    "caliber": "12/70",
+    "node": "674fe8f6f34d761ab8020cc8",
+    "ID": "mag_saiga12_md_arms_saiga_drum_12g_20"
+  },
+  "sections": []
+}

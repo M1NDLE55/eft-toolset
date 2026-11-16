@@ -1,0 +1,26 @@
+{
+  "title": "AR-10 7.62x51 18 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_7.62x51_18_inch_barrel",
+  "revisionId": 343002,
+  "lastEdited": "2026-05-02T02:47:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.12 kg",
+    "grid": "4x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-23",
+    "velocity": "+1",
+    "MOA": "1.2",
+    "recoil": "-11.4",
+    "Heat": "-9",
+    "Cooling": "-4",
+    "node": "5a34f7f1c4a2826c6e06d75d",
+    "ID": "barrel_ar10_457mm"
+  },
+  "sections": []
+}

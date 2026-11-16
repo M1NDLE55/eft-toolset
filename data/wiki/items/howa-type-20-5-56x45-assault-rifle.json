@@ -1,0 +1,43 @@
+{
+  "title": "Howa Type 20 5.56x45 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Howa_Type_20_5.56x45_assault_rifle",
+  "revisionId": 356350,
+  "lastEdited": "2026-08-26T00:19:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.5 kg",
+    "grid": "4x2",
+    "trader": "Peacekeeper LL3, after unlocking it in BattlePass Season 1",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "300",
+    "ergonomics": "67.5",
+    "velocity": "842 m/s",
+    "range": "500 m",
+    "MOA": "2.14",
+    "Weaprecoil": "Vertical: 56, Horizontal: 155",
+    "rof": "700",
+    "caliber": "5.56x45mm NATO",
+    "def mag": "AR-15 5.56x45 Magpul PMAG 30 GEN M3 W STANAG 30-round magazine",
+    "node": "6a3bffbebc377285900b85cf",
+    "ID": "weapon_howa_type20_556x45"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division"
+    }
+  ]
+}

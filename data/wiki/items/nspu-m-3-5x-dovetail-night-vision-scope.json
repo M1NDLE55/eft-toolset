@@ -1,0 +1,25 @@
+{
+  "title": "NSPU-M 3.5x dovetail night vision scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NSPU-M_3.5x_dovetail_night_vision_scope",
+  "revisionId": 353028,
+  "lastEdited": "2026-08-09T22:30:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Night vision scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Night vision scope",
+    "weight": "1.9 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL1",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "300",
+    "ergonomics": "-20",
+    "modes": "1",
+    "recoil": "-5",
+    "node": "5a7c74b3e899ef0014332c29",
+    "ID": "scope_dovetail_npz_nspum_3,5x"
+  },
+  "sections": []
+}

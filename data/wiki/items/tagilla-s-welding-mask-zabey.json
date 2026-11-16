@@ -1,0 +1,37 @@
+{
+  "title": "Tagilla's welding mask \"ZABEY\"",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tagilla's_welding_mask_%22ZABEY%22",
+  "revisionId": 317014,
+  "lastEdited": "2025-08-20T06:26:21Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armored mask",
+    "slot": "Face cover",
+    "weight": "1.5 kg",
+    "material": "Armor steel",
+    "armor": "6",
+    "armor coverage": "Face, Head top, Nape, Ears, Eyes, Jaws, Throat, Back neck",
+    "durability": "100",
+    "blindness protect": "50%",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -10% Ergonomics",
+    "node": "678f84bb9e85556ca60f0362",
+    "id": "item_equipment_facecover_welding_minotaur"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Shadow of Tagilla\n  - Not lootable"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The mask causes Shadow of Tagilla to resemble Minotaur, the creature living in the Labyrinth, from Greek mythology.\n- In the Russian localization, \"ZABEY\" is spelled \"ЗАБЕЙ\", which is an imperative word meaning \"to slaughter\" (among other possible meanings)."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Emergency Water Ration",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Emergency_Water_Ration",
+  "revisionId": 312673,
+  "lastEdited": "2025-04-30T00:02:59Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "0.128 kg",
+    "grid": "1x1",
+    "effect": "Energy: +5, Hydration: +50",
+    "use time": "2s",
+    "loot xp": "10",
+    "exam xp": "10",
+    "node": "60098b1705871270cd5352a1",
+    "id": "item_drink_waterration"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Sport bags\n- In Ration supply crates"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The Emergency Water Ration is based off \"Mainstay Emergency Drinking Water\"."
+    }
+  ]
+}

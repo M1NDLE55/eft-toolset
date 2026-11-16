@@ -1,0 +1,27 @@
+{
+  "title": "Glock 17 pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_17_pistol_slide",
+  "revisionId": 268974,
+  "lastEdited": "2024-02-05T22:03:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.355 kg",
+    "grid": "2x1",
+    "price": "₽3,100",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "+5.8",
+    "Cooling": "-2",
+    "node": "5a6f5e048dc32e00094b97da",
+    "ID": "reciever_glock_glock_17_std"
+  },
+  "sections": []
+}

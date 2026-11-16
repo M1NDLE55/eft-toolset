@@ -1,0 +1,27 @@
+{
+  "title": "MP-155 12ga 6-shell magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_12ga_6-shell_magazine",
+  "revisionId": 337771,
+  "lastEdited": "2026-03-06T02:07:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.124 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "6",
+    "caliber": "12/70",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "6076c87f232e5a31c233d50e",
+    "ID": "mag_mp155_kalashnikov_12g_6"
+  },
+  "sections": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "AR-10 Precision Armanent M11 Severe-Duty 7.62x51 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_Precision_Armanent_M11_Severe-Duty_7.62x51_muzzle_brake",
+  "revisionId": 337657,
+  "lastEdited": "2026-03-06T00:47:47Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "price": "₽9350",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-3",
+    "accuracy": "+2",
+    "recoil": "-10",
+    "Dura Burn": "-4",
+    "Heat": "-1.3",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5cdd7693d7f00c0010373aa5",
+    "ID": "muzzle_ar10_precision_armament_m11_severe_duty_muzzle_brake_762x51"
+  },
+  "sections": []
+}

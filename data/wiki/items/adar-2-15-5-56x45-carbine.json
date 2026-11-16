@@ -1,0 +1,32 @@
+{
+  "title": "ADAR 2-15 5.56x45 carbine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ADAR_2-15_5.56x45_carbine",
+  "revisionId": 357010,
+  "lastEdited": "2026-08-30T17:28:16Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault carbines",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault carbine",
+    "slot": "Primary",
+    "weight": "3.267 kg",
+    "grid": "5x2",
+    "trader": "Skier LL1",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "62.5",
+    "velocity": "976 m/s",
+    "range": "500 m",
+    "MOA": "2.2",
+    "Weaprecoil": "Vertical: 80, Horizontal: 228",
+    "rof": "800",
+    "caliber": "5.56x45mm NATO",
+    "def mag": "AR-15 5.56x45 Magpul PMAG 10 GEN M3 STANAG 10-round magazine",
+    "node": "5c07c60e0db834002330051f",
+    "ID": "weapon_adar_2-15_556x45"
+  },
+  "sections": []
+}

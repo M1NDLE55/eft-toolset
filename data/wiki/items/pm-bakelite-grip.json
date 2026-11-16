@@ -1,0 +1,21 @@
+{
+  "title": "PM bakelite grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PM_bakelite_grip",
+  "revisionId": 342347,
+  "lastEdited": "2026-04-29T00:34:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+3",
+    "node": "6374a7e7417239a7bf00f042",
+    "ID": "pistolgrip_pm_izhmeh_pm_std"
+  },
+  "sections": []
+}

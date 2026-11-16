@@ -1,0 +1,23 @@
+{
+  "title": "Leupold Mark 4 LR 6.5-20x50 30mm riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Leupold_Mark_4_LR_6.5-20x50_30mm_riflescope",
+  "revisionId": 321685,
+  "lastEdited": "2025-11-16T18:58:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.62 kg",
+    "grid": "2x1",
+    "zeroing": "50, 100, 150, 200, 250, 300, 350, 400, 450",
+    "sightrange": "1500",
+    "ergonomics": "-3",
+    "modes": "1",
+    "node": "5a37cb10c4a282329a73b4e7",
+    "ID": "scope_30mm_leupold_mark4_lr_6,5_20x50"
+  },
+  "sections": []
+}

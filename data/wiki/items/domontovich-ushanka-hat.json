@@ -1,0 +1,28 @@
+{
+  "title": "Domontovich ushanka hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Domontovich_ushanka_hat",
+  "revisionId": 344311,
+  "lastEdited": "2026-05-24T21:49:28Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.35 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "6937f02dfd6488bb27024839",
+    "id": "item_equipment_head_ushanka_dmnt"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a reference to the content creator Domontovich."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Item 1156 specification",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Item_1156_specification",
+  "revisionId": 348037,
+  "lastEdited": "2026-07-19T12:14:23Z",
+  "kind": "item",
+  "categories": [
+    "Major TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "node": "689b52d6886e9848a4085917",
+    "id": "item_info_note_postal_product1156"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Blue Fire\n- This is one of the major evidence used in The Ticket"
+    }
+  ]
+}

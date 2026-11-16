@@ -1,0 +1,27 @@
+{
+  "title": "AR-15 Daniel Defense RIS II 12.25 handguard (Coyote Brown)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Daniel_Defense_RIS_II_12.25_handguard_(Coyote_Brown)",
+  "revisionId": 342030,
+  "lastEdited": "2026-04-28T00:16:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.352 kg",
+    "grid": "2x1",
+    "price": "₽17,400",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+10",
+    "recoil": "+0",
+    "Heat": "-3.2",
+    "Cooling": "+4.4",
+    "loot xp": "20",
+    "exam xp": "3",
+    "node": "5c9a25172e2216000f20314e",
+    "ID": "handguard_ar15_dd_ris_ii_12,25"
+  },
+  "sections": []
+}

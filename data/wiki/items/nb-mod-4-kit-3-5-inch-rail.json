@@ -1,0 +1,21 @@
+{
+  "title": "NB MOD.4 Kit 3.5 inch rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NB_MOD.4_Kit_3.5_inch_rail",
+  "revisionId": 326942,
+  "lastEdited": "2025-12-06T03:44:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+0",
+    "node": "68712b57a1be89347f0d8179",
+    "ID": "mount_val_mod4_nb_short_rail"
+  },
+  "sections": []
+}

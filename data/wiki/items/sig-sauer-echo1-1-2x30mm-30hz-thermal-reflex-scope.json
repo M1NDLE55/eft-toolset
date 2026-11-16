@@ -1,0 +1,31 @@
+{
+  "title": "SIG Sauer ECHO1 1-2x30mm 30Hz thermal reflex scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_ECHO1_1-2x30mm_30Hz_thermal_reflex_scope",
+  "revisionId": 322021,
+  "lastEdited": "2025-11-17T00:48:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Thermal vision sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Thermal vision sight",
+    "weight": "0.417 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL4",
+    "refresh rate": "Red hot mode: 21 Hz, Fusion mode: 10 Hz",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "500",
+    "ergonomics": "-10",
+    "modes": "4",
+    "node": "6478641c19d732620e045e17",
+    "ID": "scope_all_sig_sauer_echo1_thermal_reflex_sight_1_2x_30hz"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market\n- Cannot be insured.\n- Cannot be put in secure containers\n- Only 5 can be held in a raid inventory at the same time\n- The thermal detection range is ~230 m at 0° angle, it goes up to ~250 m aiming uphill or downhill"
+    }
+  ]
+}

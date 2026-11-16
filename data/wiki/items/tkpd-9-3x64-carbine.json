@@ -1,0 +1,46 @@
+{
+  "title": "TKPD 9.3x64 carbine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TKPD_9.3x64_carbine",
+  "revisionId": 355087,
+  "lastEdited": "2026-08-18T20:34:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Designated marksman rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Designated marksman rifle",
+    "slot": "Primary",
+    "weight": "5.28 kg",
+    "grid": "6x2",
+    "fire modes": "Single",
+    "sightrange": "300",
+    "ergonomics": "42",
+    "velocity": "683 m/s",
+    "range": "900 m",
+    "MOA": "1.21",
+    "Weaprecoil": "Vertical: 259, Horizontal: 604",
+    "rof": "25",
+    "caliber": "9.3x64mm",
+    "node": "68aee763130c00663d08aea8",
+    "ID": "weapon_sniperarms_dynamics_tkpd_93x64"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| TKPD Assault |\n| TKPD Sniper |"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The TKPD Sniper and TKPD Assault are quasi-fictitious custom weapons based on the real-life SVDK (GRAU index - 6V9) precision rifle. Originally conceptualized for the early 2010s cancelled Russia 2028 game prototype, the weapons were later repurposed for Escape From Tarkov's predecessors and prequels, Contract Wars and Hired Ops, appearing in every game in the series thus far."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Trijicon RMR reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trijicon_RMR_reflex_sight",
+  "revisionId": 252779,
+  "lastEdited": "2023-11-02T21:49:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Compact reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Compact reflex sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "price": "₽12,404",
+    "trader": "Peacekeeper LL2",
+    "zeroing": "25, 50, 100",
+    "sightrange": "150",
+    "ergonomics": "+0",
+    "modes": "1",
+    "node": "5a32aa8bc4a2826c6e06d737",
+    "ID": "scope_base_trijicon_rmr"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Visible near the top of the optic, the model of the RMR is inscribed along with 2PE1:19, referencing the biblical verse 2 Peter 1:19\n\n\"And so we have the prophetic word confirmed, which you do well to heed as a light that shines in a dark place, until the day dawns and the morning star rises in your hearts.\""
+    }
+  ]
+}

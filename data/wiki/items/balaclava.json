@@ -1,0 +1,21 @@
+{
+  "title": "Balaclava",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Balaclava",
+  "revisionId": 313586,
+  "lastEdited": "2025-05-20T11:06:45Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL1",
+    "node": "572b7f1624597762ae139822",
+    "id": "balaclava"
+  },
+  "sections": []
+}

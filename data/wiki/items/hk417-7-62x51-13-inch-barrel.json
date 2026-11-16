@@ -1,0 +1,27 @@
+{
+  "title": "HK417 7.62x51 13 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK417_7.62x51_13_inch_barrel",
+  "revisionId": 357311,
+  "lastEdited": "2026-09-01T11:29:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.02 kg",
+    "grid": "3x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-15",
+    "velocity": "-6.3",
+    "MOA": "2.06",
+    "recoil": "-8.3",
+    "Dura Burn": "-8",
+    "Heat": "-4",
+    "Cooling": "-4",
+    "node": "6a28137cc55ac6942e06ba16",
+    "ID": "barrel_417_hk_330mm_762x51"
+  },
+  "sections": []
+}

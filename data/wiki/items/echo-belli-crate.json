@@ -1,0 +1,30 @@
+{
+  "title": "Echo Belli crate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Echo_Belli_crate",
+  "revisionId": 361089,
+  "lastEdited": "2026-09-21T22:23:45Z",
+  "kind": "item",
+  "categories": [
+    "Loot Boxes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Loot box",
+    "weight": "10 kg",
+    "grid": "3x2",
+    "node": "69d39aacf1954acdb3083285",
+    "ID": "item_container_arena_battlepass_s2"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Factory Tactical Map"
+    },
+    {
+      "heading": "Loot Table",
+      "level": 2,
+      "text": "- All rewards except for currency can be obtained just once. Every time you receive a common rarity reward, the chance of receiving higher rarity rewards increases:\n  - Rare by 0.67%\n  - Super Rare by 0.4%\n  - Epic by 0.2%\n  - Legendary by 0.12%\n- Upon receiving a higher rarity reward, the chance of that rarity resets.\n\n| Icon | Name | Type | Rarity |\n| GP coin | GP coin ×30 | Currency | Common |\n| | Battle Point ×15 | Currency | Common |\n| GP coin | GP coin ×70 | Currency | Common |\n| Wiley X SPEAR ballistic goggles (Black) | Wiley X SPEAR ballistic goggles (Black) | Eyewear | Common |\n| Weapon paint set (Tropic Snake) | Weapon paint set (Tropic Snake) | Weapon camouflage | Common |\n| Weapon paint set (Kamysh Gray) | Weapon paint set (Kamysh Gray) | Weapon camouflage | Common |\n| Safariland Liberator HP 2.0 Hearing Protection Headset (Black) | Safariland Liberator HP 2.0 Hearing Protection Headset (Black) | Earpiece | Common |\n| Cold Fear infrared balaclava (Blue Moss) | Cold Fear infrared balaclava (Blue Moss) | Face cover | Common |\n| Crye Precision AirFrame Ears (MultiCam) | Crye Precision AirFrame Ears (MultiCam) | Helmet mod | Common |\n| Crye Precision AirFrame Chops (MultiCam) | Crye Precision AirFrame Chops (MultiCam) | Helmet mod | Common |\n| Atlant Armour Titan Aramid helmet (MultiCam) | Atlant Armour Titan Aramid helmet (MultiCam) | Headwear | Common |\n| FORT Gladiator-S plate carrier (Lightweight, MultiCam) | FORT Gladiator-S plate carrier (Lightweight, MultiCam) | Chest rig | Common |\n| Baseball cap (Boston) | Baseball cap (Boston) | Headwear | Rare |\n| FORT Redut-M body armor (Prisoner of the Arena) | FORT Redut-M body armor (Prisoner of the Arena) | Armor vest | Rare |\n| Rash guard (Blue Raven) | Rash guard (Blue Raven) | Tactical clothing | Super Rare |\n| Rash guard (Gray Raven) | Rash guard (Gray Raven) | Tactical clothing | Super Rare |\n| AR-15 Strike Industries GRIDLOK Extension (Red) | AR-15 Strike Industries GRIDLOK Extension (Red) | Weapon mod | Epic |\n| AR-15 Strike Industries GRIDLOK base (Red) | AR-15 Strike Industries GRIDLOK base (Red) | Weapon mod | Epic |\n| AR-15 Tyrant Designs MOD Chevron pistol grip (Red) | AR-15 Tyrant Designs MOD Chevron pistol grip (Red) | Weapon mod | Epic |\n| AR-15 Phase5 Universal Mini Stock (Red) | AR-15 Phase5 Universal Mini Stock (Red) | Weapon mod | Epic |\n| Weapon paint set (Predator) | Weapon paint set (Predator) | Weapon camouflage | Legendary |\n| Weapon paint set (Topographic) | Weapon paint set (Topographic) | Weapon camouflage | Legendary |"
+    }
+  ]
+}

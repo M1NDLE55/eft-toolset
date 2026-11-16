@@ -1,0 +1,24 @@
+{
+  "title": "ORSIS T-5000M stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ORSIS_T-5000M_stock",
+  "revisionId": 270201,
+  "lastEdited": "2024-02-08T20:16:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.31 kg",
+    "grid": "2x1",
+    "price": "₽3,150",
+    "ergonomics": "+11",
+    "recoil": "-18",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5df35ddddfc58d14537c2036",
+    "ID": "stock_t5000_orsis_t5000_se_folding_stock_std"
+  },
+  "sections": []
+}

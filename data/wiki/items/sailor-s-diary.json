@@ -1,0 +1,31 @@
+{
+  "title": "Sailor's diary",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sailor's_diary",
+  "revisionId": 348839,
+  "lastEdited": "2026-08-01T18:50:46Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.003 kg",
+    "grid": "1x1",
+    "node": "69bb4558b44453acde02ebe7",
+    "id": "item_info_note_ice_sailor_diary"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- This is one of the minor evidence used in The Ticket"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "On the desk in crew room no. 18 on level 4 of Icebreaker. A Boreas crew quarters keycard is required to access it."
+    }
+  ]
+}

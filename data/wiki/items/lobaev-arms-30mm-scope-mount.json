@@ -1,0 +1,22 @@
+{
+  "title": "Lobaev Arms 30mm scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lobaev_Arms_30mm_scope_mount",
+  "revisionId": 329635,
+  "lastEdited": "2025-12-25T17:18:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "price": "₽3,680",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-1",
+    "node": "57c69dd424597774c03b7bbc",
+    "ID": "mount_all_lobaev_dvl_std"
+  },
+  "sections": []
+}

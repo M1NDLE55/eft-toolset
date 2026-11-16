@@ -1,0 +1,39 @@
+{
+  "title": "7.62x39mm MAI AP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_MAI_AP",
+  "revisionId": 306431,
+  "lastEdited": "2025-03-10T04:19:04Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "velocity": "875 m/s",
+    "damage": "53",
+    "accuracy": "-5",
+    "recoil": "+10",
+    "penetration": "58",
+    "armor damage": "76",
+    "ricochet": "43.5%",
+    "l bleed chance": "+10",
+    "h bleed chance": "+10",
+    "durability burn": "+70",
+    "heat": "+102",
+    "feedfailure": "High",
+    "misfire": "Medium",
+    "node": "601aa3d2b2bcb34913271e6d",
+    "id": "patron_762x39_mai_ap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

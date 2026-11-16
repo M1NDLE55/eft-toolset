@@ -1,0 +1,27 @@
+{
+  "title": "D Size battery",
+  "url": "https://escapefromtarkov.fandom.com/wiki/D_Size_battery",
+  "revisionId": 323899,
+  "lastEdited": "2025-11-20T23:48:31Z",
+  "kind": "item",
+  "categories": [
+    "Energy elements"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Energy element",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "20",
+    "node": "5672cb304bdc2dc2088b456a",
+    "id": "item_battery_d"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Plastic suitcase\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    }
+  ]
+}

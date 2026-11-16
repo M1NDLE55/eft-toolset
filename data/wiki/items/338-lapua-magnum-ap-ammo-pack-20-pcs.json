@@ -1,0 +1,24 @@
+{
+  "title": ".338 Lapua Magnum AP ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.338_Lapua_Magnum_AP_ammo_pack_(20_pcs)",
+  "revisionId": 367087,
+  "lastEdited": "2026-11-02T23:06:26Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "2x1",
+    "node": "6489848173c462723909a14b",
+    "ID": "item_ammo_box_338_20_ap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

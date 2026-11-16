@@ -1,0 +1,25 @@
+{
+  "title": "Ref dirt",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ref_dirt",
+  "revisionId": 309869,
+  "lastEdited": "2025-04-10T20:16:22Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "node": "664fce7a90294949fe2d81cb",
+    "id": "Item_barter_info_host_quest"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "Used in the quests:\n- Decisions, Decisions from Ref\n- Between Two Fires from Fence\n- Surprise Gift from Lightkeeper"
+    }
+  ]
+}

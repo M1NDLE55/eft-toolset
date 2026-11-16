@@ -1,0 +1,56 @@
+{
+  "title": "Ophthalmoscope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ophthalmoscope",
+  "revisionId": 358493,
+  "lastEdited": "2026-09-10T21:34:22Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.067 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5af0534a86f7743b6f354284",
+    "id": "item_barter_medical_diagset"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "Woods",
+      "level": 3,
+      "text": "- At the back of the white container with corpses in the Emercom camp\n- On the shelves in Emercom camp towards Lumber Mill\n- Under the Bloody stretcher in the USEC camp"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- In the laboratory block on the second floor\n- In the Arsenal storage room\n- In the TerraGroup Labs keycard (Yellow)\n- In the TerraGroup Labs keycard (Violet)\n- In the TerraGroup Labs keycard (Red)\n- In Sanitar's room\n- In the medical hut (on the left of the orange dome)"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- In any medical loot spawn room such as West wing 301 and East wing 226"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In RB-SMP on the shelves"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- In Mantis\n- In ULTRA medical storage\n- In NecrusPharm pharmacy\n- In Emercom Medical"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Ophthalmoscope is based off \"Welch Allyn Ophthalmoscope\"."
+    }
+  ]
+}

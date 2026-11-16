@@ -1,0 +1,27 @@
+{
+  "title": "Glock .45 ACP 13-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_.45_ACP_13-round_magazine",
+  "revisionId": 337742,
+  "lastEdited": "2026-03-06T01:53:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.096 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-3",
+    "checkaccuracy": "1",
+    "checkmodifier": "-35",
+    "loadmodifier": "-25",
+    "feedfailure": "Very low",
+    "capacity": "13",
+    "caliber": ".45 ACP",
+    "node": "5fb651b52b1b027b1f50bcff",
+    "ID": "mag_glock_glock_21_std_1143x23_13"
+  },
+  "sections": []
+}

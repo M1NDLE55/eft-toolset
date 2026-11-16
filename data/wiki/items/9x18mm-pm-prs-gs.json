@@ -1,0 +1,39 @@
+{
+  "title": "9x18mm PM PRS gs",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x18mm_PM_PRS_gs",
+  "revisionId": 322775,
+  "lastEdited": "2025-11-18T21:16:23Z",
+  "kind": "ammo",
+  "categories": [
+    "9x18mm Makarov ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.011 kg",
+    "grid": "1x1",
+    "price": "₽30",
+    "trader": "Prapor LL1",
+    "velocity": "302 m/s",
+    "damage": "58",
+    "penetration": "6",
+    "armor damage": "16",
+    "ricochet": "0.5%",
+    "fragmentation": "30%",
+    "l bleed chance": "+15",
+    "heat": "-9.9",
+    "feedfailure": "Low",
+    "misfire": "Low",
+    "effects": "Subsonic",
+    "node": "57371eb62459776125652ac1",
+    "id": "patron_9x18pm_PRS_gs"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

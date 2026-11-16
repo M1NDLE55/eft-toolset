@@ -1,0 +1,25 @@
+{
+  "title": "Voevoda's audio recorder (quest item)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Voevoda's_audio_recorder_(quest_item)",
+  "revisionId": 344995,
+  "lastEdited": "2026-05-26T13:45:16Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "node": "68fd5aa1c85d51c0130623c9",
+    "id": "item_quest_voevoda_recorder"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya"
+    }
+  ]
+}

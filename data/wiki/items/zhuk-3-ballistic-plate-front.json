@@ -1,0 +1,30 @@
+{
+  "title": "Zhuk-3 ballistic plate (Front)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Zhuk-3_ballistic_plate_(Front)",
+  "revisionId": 297952,
+  "lastEdited": "2024-12-15T14:36:36Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Light Armor plate",
+    "weight": "2.4 kg",
+    "grid": "2x3",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "3",
+    "armor coverage": "Front Plate",
+    "durability": "40",
+    "penalties": "-2% movement speed, -1.5% turn speed, -1% Ergonomics",
+    "node": "656f57dc27aed95beb08f628",
+    "id": "item_equipment_plate_granit4_zhukBr3_3class_front"
+  },
+  "sections": [
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate"
+    }
+  ]
+}

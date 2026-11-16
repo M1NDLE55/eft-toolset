@@ -1,0 +1,26 @@
+{
+  "title": "WARTECH Berkut BB-102 backpack (A-TACS FG)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/WARTECH_Berkut_BB-102_backpack_(A-TACS_FG)",
+  "revisionId": 304499,
+  "lastEdited": "2025-01-22T12:01:01Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1 kg",
+    "grid": "4x5",
+    "price": "₽19,200",
+    "trader": "Ragman LL2",
+    "penalties": "-2% Ergonomics",
+    "slots": "4x5 grid (20 slots)",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5ca20d5986f774331e7c9602",
+    "ID": "item_equipment_backpack_wartech"
+  },
+  "sections": []
+}

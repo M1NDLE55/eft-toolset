@@ -1,0 +1,38 @@
+{
+  "title": "9x39mm FMJ",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x39mm_FMJ",
+  "revisionId": 322790,
+  "lastEdited": "2025-11-18T21:20:50Z",
+  "kind": "ammo",
+  "categories": [
+    "9x39mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.023 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "velocity": "330 m/s",
+    "damage": "75",
+    "accuracy": "+5",
+    "recoil": "-5",
+    "penetration": "17",
+    "armor damage": "28",
+    "ricochet": "40%",
+    "heat": "+24",
+    "feedfailure": "Medium",
+    "misfire": "Medium",
+    "effects": "Subsonic",
+    "node": "6576f96220d53a5b8f3e395e",
+    "id": "patron_9x39_fmj"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

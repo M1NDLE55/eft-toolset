@@ -1,0 +1,24 @@
+{
+  "title": "M700 AB Arms MOD*X buffer tube adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M700_AB_Arms_MOD*X_buffer_tube_adapter",
+  "revisionId": 321670,
+  "lastEdited": "2025-11-16T18:54:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "price": "₽2,602",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-1",
+    "recoil": "+0",
+    "loot xp": "10",
+    "node": "5cde77a9d7f00c000f261009",
+    "ID": "stock_m700_abarms_mod_x_side_folder"
+  },
+  "sections": []
+}

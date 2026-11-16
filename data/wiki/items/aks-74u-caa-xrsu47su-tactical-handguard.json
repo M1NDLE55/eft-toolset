@@ -1,0 +1,24 @@
+{
+  "title": "AKS-74U CAA XRSU47SU tactical handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKS-74U_CAA_XRSU47SU_tactical_handguard",
+  "revisionId": 340789,
+  "lastEdited": "2026-04-22T07:37:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.52 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+17",
+    "recoil": "+0",
+    "Heat": "-6.9",
+    "Cooling": "+8.8",
+    "node": "5a957c3fa2750c00137fa5f7",
+    "ID": "handguard_aks74u_caa_xrsu47su"
+  },
+  "sections": []
+}

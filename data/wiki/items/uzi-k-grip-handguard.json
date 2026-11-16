@@ -1,0 +1,24 @@
+{
+  "title": "UZI K-Grip handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_K-Grip_handguard",
+  "revisionId": 342728,
+  "lastEdited": "2026-04-30T21:02:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+10",
+    "recoil": "-1",
+    "Heat": "+3.1",
+    "Cooling": "-4.0",
+    "node": "6699313af74fef4dfd0b04f6",
+    "ID": "handguard_uzi_iwi_k_grip"
+  },
+  "sections": []
+}

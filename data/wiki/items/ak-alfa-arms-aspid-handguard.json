@@ -1,0 +1,24 @@
+{
+  "title": "AK Alfa Arms ASPID handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Alfa_Arms_ASPID_handguard",
+  "revisionId": 342376,
+  "lastEdited": "2026-04-29T00:54:05Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.37 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+19",
+    "recoil": "+0",
+    "Heat": "-8.7",
+    "Cooling": "+8.5",
+    "node": "647dd2b8a12ebf96c3031655",
+    "ID": "handguard_ak_alfa_arms_aspid"
+  },
+  "sections": []
+}

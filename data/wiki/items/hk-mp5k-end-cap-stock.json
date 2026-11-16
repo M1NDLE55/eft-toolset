@@ -1,0 +1,22 @@
+{
+  "title": "HK MP5K End Cap stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5K_End_Cap_stock",
+  "revisionId": 329260,
+  "lastEdited": "2025-12-24T16:34:21Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+3",
+    "recoil": "+0",
+    "node": "5d2f25bc48f03502573e5d85",
+    "ID": "stock_mp5k_hk_kurtz_end_cap"
+  },
+  "sections": []
+}

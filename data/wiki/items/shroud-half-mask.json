@@ -1,0 +1,31 @@
+{
+  "title": "Shroud half-mask",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shroud_half-mask",
+  "revisionId": 313659,
+  "lastEdited": "2025-05-21T06:18:07Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "5e54f76986f7740366043752",
+    "ID": "item_equipment_facecover_shroud"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On Scavs\n- In Sport bags\n- In Jackets\n- In Buried barrel caches\n- In Ground caches"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator Shroud."
+    }
+  ]
+}

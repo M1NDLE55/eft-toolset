@@ -1,0 +1,25 @@
+{
+  "title": "M45A1 pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M45A1_pistol_slide",
+  "revisionId": 276734,
+  "lastEdited": "2024-05-03T00:15:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.47 kg",
+    "grid": "2x1",
+    "ergonomics": "+4",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-4.6",
+    "Cooling": "+6",
+    "node": "5f3e7823ddc4f03b010e2045",
+    "ID": "reciever_m1911_colt_m45a1_std"
+  },
+  "sections": []
+}

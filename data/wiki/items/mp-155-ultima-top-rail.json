@@ -1,0 +1,24 @@
+{
+  "title": "MP-155 Ultima top rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_Ultima_top_rail",
+  "revisionId": 214426,
+  "lastEdited": "2022-11-16T19:39:38Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.45 kg",
+    "grid": "3x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-2",
+    "recoil": "-2",
+    "Heat": "-1.8",
+    "Cooling": "+1.2",
+    "node": "60785ce5132d4d12c81fd918",
+    "ID": "mount_mp155_kalashnikov_ultima_top_rail"
+  },
+  "sections": []
+}

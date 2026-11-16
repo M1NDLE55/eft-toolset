@@ -1,0 +1,21 @@
+{
+  "title": "VPO-136 Vepr-KM 7.62x39 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VPO-136_Vepr-KM_7.62x39_muzzle_brake",
+  "revisionId": 321641,
+  "lastEdited": "2025-11-16T18:45:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "price": "₽600",
+    "recoil": "-4",
+    "node": "59e61eb386f77440d64f5daf",
+    "ID": "muzzle_ak_molot_vepr_km_vpo_136_762x39"
+  },
+  "sections": []
+}

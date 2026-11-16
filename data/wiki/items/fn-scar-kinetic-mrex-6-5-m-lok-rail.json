@@ -1,0 +1,23 @@
+{
+  "title": "FN SCAR Kinetic MREX 6.5 M-LOK rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_Kinetic_MREX_6.5_M-LOK_rail",
+  "revisionId": 342225,
+  "lastEdited": "2026-04-28T21:36:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.226 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3: Black, Peacekeeper LL3: FDE",
+    "ergonomics": "+8",
+    "recoil": "+0",
+    "Heat": "-1",
+    "node": "619666f4af1f5202c57a952d 66ffc6ceb7ff397142017c3a",
+    "ID": "mount_mk16_kinetic_mrex_6_5_m_lok mount_mk16_kinetic_mrex_6_5_m_lok_fde"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "USEC Rangemaster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_Rangemaster",
+  "revisionId": 274253,
+  "lastEdited": "2024-03-16T12:05:45Z",
+  "kind": "item",
+  "categories": [
+    "USEC lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "63a8a446dd384f7e8d716f9d",
+    "ID": "usec_kit_lower_carinthia_softshell"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The kneepad seen here is modeled on the Arcteryx Leaf Combat Knee Cap In the \"Crocodile\" color. Also, the boots seen here are modeled on the Danner Mountain Pass boots with the Gold/Tan laces also from Danner."
+    }
+  ]
+}

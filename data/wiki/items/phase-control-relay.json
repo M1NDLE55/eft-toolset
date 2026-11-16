@@ -1,0 +1,30 @@
+{
+  "title": "Phase control relay",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Phase_control_relay",
+  "revisionId": 364976,
+  "lastEdited": "2026-10-25T21:55:09Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "node": "5d1b313086f77425227d1678",
+    "ID": "item_barter_electr_relay"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Supervisor\n- 2 can be obtained as a quest reward from Minibus\n- 2 can be obtained as a quest reward from The Key to Success"
+    }
+  ]
+}

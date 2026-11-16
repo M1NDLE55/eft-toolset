@@ -1,0 +1,36 @@
+{
+  "title": "Stich Profi Stich Defense mod.2 plate carrier (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Stich_Profi_Stich_Defense_mod.2_plate_carrier_(MultiCam)",
+  "revisionId": 360633,
+  "lastEdited": "2026-09-18T19:04:07Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "2.71 kg",
+    "grid": "4x3",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Thorax, Back, Sides",
+    "default plates": "2x",
+    "default plates armor class": "6",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "130",
+    "penalties": "-6% movement speed, -3% turn speed, -1% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "14 Slots",
+    "node": "66b6295178bbc0200425f995",
+    "ID": "item_equipment_rig_stich_defense_mod2"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

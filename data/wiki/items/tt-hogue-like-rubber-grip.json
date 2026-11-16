@@ -1,0 +1,24 @@
+{
+  "title": "TT Hogue-like rubber grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TT_Hogue-like_rubber_grip",
+  "revisionId": 340894,
+  "lastEdited": "2026-04-22T09:00:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "price": "₽2,700",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+3",
+    "loot xp": "5",
+    "exam xp": "2",
+    "node": "5c0684e50db834002a12585a",
+    "ID": "pistolgrip_tt_noname_hogue_like"
+  },
+  "sections": []
+}

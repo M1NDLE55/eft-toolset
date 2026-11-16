@@ -1,0 +1,34 @@
+{
+  "title": "Ops-Core FAST MT Super High Cut helmet (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ops-Core_FAST_MT_Super_High_Cut_helmet_(Black)",
+  "revisionId": 344386,
+  "lastEdited": "2026-05-24T22:13:24Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.9 kg",
+    "grid": "2x2",
+    "material": "Combined materials",
+    "armor": "4",
+    "armor coverage": "Head top, Nape",
+    "durability": "48",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5a154d5cfcdbcb001a3b00da",
+    "id": "helmet_ops_core_fast"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

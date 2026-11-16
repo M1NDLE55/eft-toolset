@@ -1,0 +1,25 @@
+{
+  "title": "Therapist's message",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Therapist's_message",
+  "revisionId": 357063,
+  "lastEdited": "2026-08-30T19:28:47Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6a6101b09b3e38f37a0dc67e",
+    "id": "q_kord_ter_note1"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Unanswered Calls from Therapist"
+    }
+  ]
+}

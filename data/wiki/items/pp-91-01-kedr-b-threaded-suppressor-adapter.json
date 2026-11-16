@@ -1,0 +1,22 @@
+{
+  "title": "PP-91-01 Kedr-B threaded suppressor adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PP-91-01_Kedr-B_threaded_suppressor_adapter",
+  "revisionId": 288249,
+  "lastEdited": "2024-08-25T23:43:15Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "ergonomics": "+0",
+    "velocity": "+0",
+    "recoil": "-7",
+    "node": "57f3c7e024597738ea4ba286",
+    "ID": "muzzle_pp-91-01_zmz_std_9x18pm"
+  },
+  "sections": []
+}

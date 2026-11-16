@@ -1,0 +1,25 @@
+{
+  "title": "7.62x39mm BP gzh ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x39mm_BP_gzh_ammo_pack_(20_pcs)",
+  "revisionId": 367219,
+  "lastEdited": "2026-11-02T23:13:15Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "trader": "Ref LL4",
+    "node": "64acea16c4eda9354b0226b0",
+    "ID": "item_ammo_box_762x39_20_bp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

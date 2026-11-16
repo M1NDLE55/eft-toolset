@@ -1,0 +1,33 @@
+{
+  "title": "Vulkan-5 helmet face shield",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vulkan-5_helmet_face_shield",
+  "revisionId": 343565,
+  "lastEdited": "2026-05-08T18:13:08Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Visor",
+    "weight": "1.8 kg",
+    "grid": "2x1",
+    "material": "Glass",
+    "armor": "4",
+    "armor coverage": "Head",
+    "armor segments": "Face, Eyes, Jaws",
+    "durability": "85",
+    "blindness protect": "10%",
+    "penalties": "-5% turn speed, -2% Ergonomics",
+    "BlocksEyewear": "No",
+    "node": "5ca2113f86f7740b2547e1d2",
+    "id": "item_equipment_helmet_vulkan_shield"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

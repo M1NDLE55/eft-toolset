@@ -1,0 +1,22 @@
+{
+  "title": "CNC Guns OV-SV98 M12B stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/CNC_Guns_OV-SV98_M12B_stock",
+  "revisionId": 253825,
+  "lastEdited": "2023-11-02T23:29:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.104 kg",
+    "grid": "2x1",
+    "price": "₽4,660",
+    "ergonomics": "+12",
+    "recoil": "-28",
+    "node": "624c29ce09cd027dff2f8cd7",
+    "ID": "stock_cnc_cnc_guns_m12b"
+  },
+  "sections": []
+}

@@ -1,0 +1,40 @@
+{
+  "title": "5.56x45mm M856A1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_M856A1",
+  "revisionId": 322863,
+  "lastEdited": "2025-11-18T21:29:51Z",
+  "kind": "ammo",
+  "categories": [
+    "5.56x45mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "price": "₽182",
+    "trader": "Peacekeeper LL4",
+    "velocity": "940 m/s",
+    "damage": "52",
+    "accuracy": "-4",
+    "recoil": "+4",
+    "penetration": "38",
+    "armor damage": "44",
+    "ricochet": "38%",
+    "durability burn": "+20",
+    "heat": "+65.3",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "effects": "Tracer (red)",
+    "node": "59e6906286f7746c9f75e847",
+    "id": "patron_556x45_M856A1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

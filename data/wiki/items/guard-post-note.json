@@ -1,0 +1,25 @@
+{
+  "title": "Guard post note",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Guard_post_note",
+  "revisionId": 336666,
+  "lastEdited": "2026-02-27T22:58:04Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "689b51b2987b304021088e93",
+    "ID": "item_info_note_security_sanatorium"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Unheard"
+    }
+  ]
+}

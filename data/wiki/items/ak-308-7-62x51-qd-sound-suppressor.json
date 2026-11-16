@@ -1,0 +1,25 @@
+{
+  "title": "AK-308 7.62x51 QD sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-308_7.62x51_QD_sound_suppressor",
+  "revisionId": 355170,
+  "lastEdited": "2026-08-19T00:54:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.81 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL4, after completing The Punisher - Part 5",
+    "ergonomics": "-10",
+    "velocity": "+0.8",
+    "recoil": "-4",
+    "Dura Burn": "+63",
+    "Heat": "+15",
+    "node": "68d56685f3d7cd248f0a06d9",
+    "ID": "silencer_base_izhmash_ak308_qd_std_762x51"
+  },
+  "sections": []
+}

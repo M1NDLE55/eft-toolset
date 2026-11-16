@@ -1,0 +1,21 @@
+{
+  "title": "Trijicon MRO low profile mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trijicon_MRO_low_profile_mount",
+  "revisionId": 356947,
+  "lastEdited": "2026-08-30T09:24:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.26 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "node": "6a16dc17b7b9778bee072c65",
+    "ID": "mount_all_trijicon_ac32067"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "M590A1 SpeedFeed short handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M590A1_SpeedFeed_short_handguard",
+  "revisionId": 342090,
+  "lastEdited": "2026-04-28T03:41:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.65 kg",
+    "grid": "2x1",
+    "ergonomics": "+10",
+    "recoil": "+0",
+    "Heat": "+2.4",
+    "Cooling": "-1.8",
+    "node": "5e87076ce2db31558c75a11d",
+    "ID": "handguard_590_mossberg_590a1_std"
+  },
+  "sections": []
+}

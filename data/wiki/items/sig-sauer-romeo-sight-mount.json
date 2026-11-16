@@ -1,0 +1,22 @@
+{
+  "title": "SIG Sauer ROMEO sight mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_ROMEO_sight_mount",
+  "revisionId": 355541,
+  "lastEdited": "2026-08-23T00:32:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "price": "₽1,850",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+0",
+    "node": "5b31163c5acfc400153b71cb",
+    "ID": "mount_all_sig_romeo_4_base_weaver"
+  },
+  "sections": []
+}

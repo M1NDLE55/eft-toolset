@@ -1,0 +1,23 @@
+{
+  "title": "PK Zenit B-50 handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PK_Zenit_B-50_handguard",
+  "revisionId": 352280,
+  "lastEdited": "2026-08-07T21:21:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.36 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+10",
+    "Heat": "+3",
+    "Cooling": "+2.5",
+    "node": "6491c6f6ef312a876705191b",
+    "ID": "handguard_pk_zenit_b50"
+  },
+  "sections": []
+}

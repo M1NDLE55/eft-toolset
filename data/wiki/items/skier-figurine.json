@@ -1,0 +1,31 @@
+{
+  "title": "Skier figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Skier_figurine",
+  "revisionId": 343727,
+  "lastEdited": "2026-05-10T11:37:07Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "68f25eba19a2b503d70dc28f",
+    "id": "Item_barter_tarko_skier"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This figurine was first obtainable during Release Twitch Drops (October 2025)."
+    }
+  ]
+}

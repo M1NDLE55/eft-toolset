@@ -1,0 +1,21 @@
+{
+  "title": "ETMI-019 shotgun rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ETMI-019_shotgun_rail_mount",
+  "revisionId": 322413,
+  "lastEdited": "2025-11-18T16:15:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.053 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-0.1",
+    "node": "5dfe14f30b92095fd441edaf",
+    "ID": "mount_7mm_etmi_019"
+  },
+  "sections": []
+}

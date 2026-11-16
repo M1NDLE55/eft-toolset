@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Tiger Stripe Urban)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Tiger_Stripe_Urban)",
+  "revisionId": 356800,
+  "lastEdited": "2026-08-29T20:29:49Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "69cd57d452de0098450264dd",
+    "id": "item_camo_tigerstripe_urban"
+  },
+  "sections": []
+}

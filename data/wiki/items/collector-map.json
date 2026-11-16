@@ -1,0 +1,31 @@
+{
+  "title": "Collector map",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Collector_map",
+  "revisionId": 366936,
+  "lastEdited": "2026-11-01T14:23:44Z",
+  "kind": "item",
+  "categories": [
+    "Extraction intel"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Extraction intel",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Activates the \"Sewage Conduit\" extraction in the Infected Lab.",
+    "node": "6ad5f06c0d239d9ef60e7670",
+    "id": "item_secret_extraction_halloween_2026_collector"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Activates the \"Sewage Conduit\" extraction in the Infected Lab.\n- Cannot be taken out of a raid"
+    },
+    {
+      "heading": "Infected Lab",
+      "level": 3,
+      "text": "- On and around the round table with the cat statues in the recreational area (R21) on the second level.\n\n- Behind the screen on the desk in Kruglov's office (R22) on the second level.\n\n- On a desk in office O23 on the second level."
+    }
+  ]
+}

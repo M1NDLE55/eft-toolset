@@ -1,0 +1,21 @@
+{
+  "title": "MP9 bottom rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP9_bottom_rail",
+  "revisionId": 322406,
+  "lastEdited": "2025-11-18T16:11:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-0.1",
+    "node": "5de8fbf2b74cd90030650c79",
+    "ID": "mount_mp9_bt_mp9_bottom_rail"
+  },
+  "sections": []
+}

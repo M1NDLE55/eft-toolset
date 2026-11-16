@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Desert Night Camo Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Desert_Night_Camo_Green)",
+  "revisionId": 348598,
+  "lastEdited": "2026-07-30T22:14:23Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67e6a3d8ae1610b21706fc64",
+    "id": "item_camo_dnc_green"
+  },
+  "sections": []
+}

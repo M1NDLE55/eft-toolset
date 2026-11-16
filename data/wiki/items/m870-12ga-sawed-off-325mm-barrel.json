@@ -1,0 +1,28 @@
+{
+  "title": "M870 12ga sawed-off 325mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_12ga_sawed-off_325mm_barrel",
+  "revisionId": 329267,
+  "lastEdited": "2025-12-24T16:36:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.899 kg",
+    "grid": "2x1",
+    "price": "₽5,585",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+2",
+    "velocity": "+2.4",
+    "MOA": "22.35",
+    "recoil": "-1",
+    "Dura Burn": "-18",
+    "Heat": "-2",
+    "Cooling": "+4",
+    "node": "5a787fdfc5856700142fdd9a",
+    "ID": "barrel_870_vent_rib_barrel_cut_off_325mm"
+  },
+  "sections": []
+}

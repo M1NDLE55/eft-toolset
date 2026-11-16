@@ -1,0 +1,41 @@
+{
+  "title": ".357 Magnum HP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.357_Magnum_HP",
+  "revisionId": 322742,
+  "lastEdited": "2025-11-18T21:13:26Z",
+  "kind": "ammo",
+  "categories": [
+    ".357 Magnum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.016 kg",
+    "grid": "1x1",
+    "price": "₽129",
+    "trader": "Jaeger LL1",
+    "velocity": "481 m/s",
+    "damage": "99",
+    "accuracy": "+15",
+    "recoil": "+15",
+    "penetration": "18",
+    "armor damage": "20",
+    "ricochet": "2.5%",
+    "l bleed chance": "+40",
+    "h bleed chance": "+30",
+    "durability burn": "+60",
+    "heat": "+44",
+    "feedfailure": "Very high",
+    "misfire": "Medium",
+    "node": "62330bfadc5883093563729b",
+    "id": "patron_9x33r_hp"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "AA-12 12ga 457mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AA-12_12ga_457mm_barrel",
+  "revisionId": 305635,
+  "lastEdited": "2025-02-12T21:38:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.14 kg",
+    "grid": "3x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-6",
+    "velocity": "+4.73",
+    "MOA": "20.97",
+    "recoil": "-6",
+    "Dura Burn": "+10",
+    "Heat": "-7",
+    "Cooling": "-5",
+    "node": "670fced86a7e274b1a0964e8",
+    "ID": "barrel_aa12_mps_457mm_12g"
+  },
+  "sections": []
+}

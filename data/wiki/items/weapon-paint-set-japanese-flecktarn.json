@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Japanese Flecktarn)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Japanese_Flecktarn)",
+  "revisionId": 348499,
+  "lastEdited": "2026-07-30T21:22:41Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67d7f17bb25aeca529056997",
+    "id": "item_camo_flecktarn_japanese"
+  },
+  "sections": []
+}

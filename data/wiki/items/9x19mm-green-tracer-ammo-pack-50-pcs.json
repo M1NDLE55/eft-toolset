@@ -1,0 +1,18 @@
+{
+  "title": "9x19mm Green Tracer ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/9x19mm_Green_Tracer_ammo_pack_(50_pcs)",
+  "revisionId": 367278,
+  "lastEdited": "2026-11-02T23:16:27Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657025961419851aef03e721",
+    "ID": "item_ammo_box_9x19_50_green_tracer"
+  },
+  "sections": []
+}

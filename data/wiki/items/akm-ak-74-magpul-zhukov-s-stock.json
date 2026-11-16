@@ -1,0 +1,28 @@
+{
+  "title": "AKM/AK-74 Magpul Zhukov-S stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM/AK-74_Magpul_Zhukov-S_stock",
+  "revisionId": 352845,
+  "lastEdited": "2026-08-09T21:40:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.425 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "+15",
+    "recoil": "-23",
+    "node": "5b0e794b5acfc47a877359b2",
+    "ID": "stock_ak_magpul_zhukov_s"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Despite being unfoldable in-game, this stock can be folded in real life.\n- The \"ZHUKOV\" text used on both sides of the stock is incorrect.\n  - The text used on the left of the stock is in reverse and is supposed to say \"MAGPUL\".\n  - The text on right of the stock is supposed to say \"ZHUKOV-S\"."
+    }
+  ]
+}

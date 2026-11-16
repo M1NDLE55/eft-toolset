@@ -1,0 +1,34 @@
+{
+  "title": "7.62x25mm TT M995",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x25mm_TT_M995",
+  "revisionId": 331688,
+  "lastEdited": "2026-01-07T22:58:52Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x25mm Tokarev ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.014 kg",
+    "grid": "1x1",
+    "velocity": "940 m/s",
+    "damage": "32",
+    "penetration": "37",
+    "armor damage": "36",
+    "l bleed chance": "+14",
+    "h bleed chance": "+4",
+    "durability burn": "+100",
+    "heat": "+12",
+    "node": "68c15f77ed3d7df9220debd6",
+    "id": "patron_762x25tt_timbs_995"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

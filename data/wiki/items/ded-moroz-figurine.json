@@ -1,0 +1,26 @@
+{
+  "title": "Ded Moroz figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ded_Moroz_figurine",
+  "revisionId": 366461,
+  "lastEdited": "2026-10-30T12:24:23Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "655c67ab0d37ca5135388f4b",
+    "id": "Item_barter_tarko_ded_moroz"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    }
+  ]
+}

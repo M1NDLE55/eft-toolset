@@ -1,0 +1,24 @@
+{
+  "title": ".50 BMG HP ammo pack (10 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_BMG_HP_ammo_pack_(10_pcs)",
+  "revisionId": 367108,
+  "lastEdited": "2026-11-02T23:07:23Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "68e9156326fbff63b30106a0",
+    "ID": "item_ammo_box_127x99_10_hp"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The QR code contains the text \"I luv pixel art\"."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "AK-50 M-LOK handguard with gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-50_M-LOK_handguard_with_gas_tube",
+  "revisionId": 323279,
+  "lastEdited": "2025-11-19T20:36:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.729 kg",
+    "grid": "1x1",
+    "ergonomics": "+2",
+    "recoil": "-3",
+    "Dura Burn": "-2",
+    "Heat": "+9.4",
+    "Cooling": "-9.5",
+    "node": "67d417c023ec241bb70d4896",
+    "ID": "gas_block_ak50_theakguy_ak50_gastube_handguard_combo_mlok"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Strike Industries Cobra Tactical foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Strike_Industries_Cobra_Tactical_foregrip",
+  "revisionId": 341758,
+  "lastEdited": "2026-04-26T21:25:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3: Black, FDE",
+    "ergonomics": "+12",
+    "loot xp": "30",
+    "exam xp": "6",
+    "node": "5c791e872e2216001219c40a 655dccfdbdcc6b5df71382b6",
+    "ID": "foregrip_all_strike_industries_cobra_tactical foregrip_all_strike_industries_cobra_tactical_fde"
+  },
+  "sections": []
+}

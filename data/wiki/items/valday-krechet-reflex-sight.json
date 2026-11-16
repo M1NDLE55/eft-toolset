@@ -1,0 +1,24 @@
+{
+  "title": "Valday Krechet reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Valday_Krechet_reflex_sight",
+  "revisionId": 276641,
+  "lastEdited": "2024-04-29T10:23:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Reflex sight",
+    "weight": "0.35 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL2",
+    "zeroing": "50, 100, 150, 200",
+    "sightrange": "200",
+    "ergonomics": "-4.5",
+    "modes": "1",
+    "node": "609a63b6e2ff132951242d09",
+    "ID": "scope_all_valday_krechet"
+  },
+  "sections": []
+}

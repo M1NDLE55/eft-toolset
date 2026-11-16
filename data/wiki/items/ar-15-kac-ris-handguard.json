@@ -1,0 +1,24 @@
+{
+  "title": "AR-15 KAC RIS handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_KAC_RIS_handguard",
+  "revisionId": 340600,
+  "lastEdited": "2026-04-21T08:50:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.226 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+7",
+    "recoil": "+0",
+    "Heat": "+1.8",
+    "Cooling": "+1",
+    "node": "55d459824bdc2d892f8b4573",
+    "ID": "handguard_ar15_kac_ris"
+  },
+  "sections": []
+}

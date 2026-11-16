@@ -1,0 +1,45 @@
+{
+  "title": "5.56x45mm Warmageddon",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_Warmageddon",
+  "revisionId": 322860,
+  "lastEdited": "2025-11-18T21:29:42Z",
+  "kind": "ammo",
+  "categories": [
+    "5.56x45mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.011 kg",
+    "grid": "1x1",
+    "price": "₽156",
+    "trader": "Peacekeeper LL2, after completing his task Humanitarian Supplies",
+    "velocity": "936 m/s",
+    "damage": "88",
+    "accuracy": "+10",
+    "recoil": "+10",
+    "penetration": "3",
+    "armor damage": "11",
+    "ricochet": "5%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+20",
+    "heat": "+53.9",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "5c0d5ae286f7741e46554302",
+    "id": "patron_556x45_varmageddon"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: 5.56x45mm Warmageddon is based off \"Nosler's Varmageddon 223 Rem Varmint ammunition\" this particular one is 55 grain FB (Flat Base) Tipped."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "MCX Lancer Carbon Fiber M-LOK 10.5 inch handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MCX_Lancer_Carbon_Fiber_M-LOK_10.5_inch_handguard",
+  "revisionId": 342831,
+  "lastEdited": "2026-04-30T21:41:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.159 kg",
+    "grid": "3x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+16",
+    "recoil": "+0",
+    "Heat": "-3.3",
+    "Cooling": "+3.4",
+    "loot xp": "15",
+    "exam xp": "3",
+    "node": "68120dcbb90552f01004e5ca",
+    "ID": "handguard_mcx_lancer_oem_gen1_105_inch_mlok"
+  },
+  "sections": []
+}

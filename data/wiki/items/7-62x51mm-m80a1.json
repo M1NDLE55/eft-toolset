@@ -1,0 +1,39 @@
+{
+  "title": "7.62x51mm M80A1",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_M80A1",
+  "revisionId": 364954,
+  "lastEdited": "2026-10-25T21:42:04Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x51mm NATO ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.022 kg",
+    "grid": "1x1",
+    "velocity": "929 m/s",
+    "damage": "75",
+    "accuracy": "-5",
+    "recoil": "+4",
+    "penetration": "55",
+    "armor damage": "74",
+    "ricochet": "25%",
+    "l bleed chance": "+7",
+    "h bleed chance": "+7",
+    "durability burn": "+50",
+    "heat": "+35",
+    "feedfailure": "High",
+    "misfire": "Low",
+    "node": "6768c25aa7b238f14a08d3f6",
+    "id": "patron_762x51_m80a1"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

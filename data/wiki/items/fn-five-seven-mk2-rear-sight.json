@@ -1,0 +1,25 @@
+{
+  "title": "FN Five-seveN MK2 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_Five-seveN_MK2_rear_sight",
+  "revisionId": 210762,
+  "lastEdited": "2022-09-20T10:44:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.007 kg",
+    "grid": "1x1",
+    "price": "₽900",
+    "sightrange": "200 m",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5d3eb4aba4b93650d64e497d",
+    "ID": "sight_rear_57_fn_five_seven_std"
+  },
+  "sections": []
+}

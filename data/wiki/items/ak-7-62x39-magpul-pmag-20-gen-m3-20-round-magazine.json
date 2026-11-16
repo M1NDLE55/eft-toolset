@@ -1,0 +1,27 @@
+{
+  "title": "AK 7.62x39 Magpul PMAG 20 GEN M3 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_7.62x39_Magpul_PMAG_20_GEN_M3_20-round_magazine",
+  "revisionId": 339070,
+  "lastEdited": "2026-03-24T16:26:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.141 kg",
+    "grid": "1x2",
+    "trader": "Skier LL1",
+    "ergonomics": "+2.5",
+    "checkaccuracy": "No",
+    "checkmodifier": "-30",
+    "loadmodifier": "-25",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "7.62x39mm, .366 TKM",
+    "node": "64b9cf0ac12b9c38db26923a",
+    "ID": "mag_ak_magpul_pmag_20_ak_akm_gen_m3_762x39_20"
+  },
+  "sections": []
+}

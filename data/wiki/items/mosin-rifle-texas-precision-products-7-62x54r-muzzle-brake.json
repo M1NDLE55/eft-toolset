@@ -1,0 +1,25 @@
+{
+  "title": "Mosin Rifle Texas Precision Products 7.62x54R muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_Texas_Precision_Products_7.62x54R_muzzle_brake",
+  "revisionId": 362954,
+  "lastEdited": "2026-10-03T11:26:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.19 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-5",
+    "accuracy": "+3",
+    "recoil": "-16",
+    "Dura Burn": "-4",
+    "Heat": "-1",
+    "node": "5bc5a351d4351e003477a414",
+    "ID": "muzzle_mosin_tpp_clamp_on_muzzle_brake_762x54r"
+  },
+  "sections": []
+}

@@ -1,0 +1,20 @@
+{
+  "title": "HK USP hammer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_USP_hammer",
+  "revisionId": 215610,
+  "lastEdited": "2022-12-02T16:07:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.017 kg",
+    "grid": "1x1",
+    "ergonomics": "+2",
+    "node": "6193d3be7c6c7b169525f0da",
+    "ID": "hammer_usp_hk_usp_std"
+  },
+  "sections": []
+}

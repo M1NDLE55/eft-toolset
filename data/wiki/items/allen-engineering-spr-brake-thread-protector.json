@@ -1,0 +1,26 @@
+{
+  "title": "Allen Engineering SPR Brake thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Allen_Engineering_SPR_Brake_thread_protector",
+  "revisionId": 353515,
+  "lastEdited": "2026-08-13T20:31:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.026 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+2",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Dura Burn": "-2",
+    "Heat": "+0",
+    "node": "68caac63269e10396503acfc",
+    "ID": "muzzle_ar15_allen_engineering_spr_thread_protector_556x45"
+  },
+  "sections": []
+}

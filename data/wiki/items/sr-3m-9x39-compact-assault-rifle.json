@@ -1,0 +1,37 @@
+{
+  "title": "SR-3M 9x39 compact assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-3M_9x39_compact_assault_rifle",
+  "revisionId": 357748,
+  "lastEdited": "2026-09-07T18:00:33Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault carbines",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault carbine",
+    "slot": "Primary",
+    "weight": "2.593 kg",
+    "grid": "3x2",
+    "trader": "Prapor LL4 after completing his task The Punisher - Part 6",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "100",
+    "ergonomics": "66",
+    "velocity": "290 m/s",
+    "range": "400 m",
+    "MOA": "5.02",
+    "Weaprecoil": "Vertical: 60, Horizontal: 207",
+    "rof": "900",
+    "caliber": "9x39mm",
+    "node": "651450ce0e00edc794068371",
+    "ID": "weapon_tochmash_sr3m_9x39"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

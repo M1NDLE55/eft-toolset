@@ -1,0 +1,21 @@
+{
+  "title": "Geissele SMR HK short rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Geissele_SMR_HK_short_rail",
+  "revisionId": 358328,
+  "lastEdited": "2026-09-09T20:11:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-0.1",
+    "node": "6a157e289bbb889992032c22",
+    "ID": "mount_smrhk_geissele_short_rail_section"
+  },
+  "sections": []
+}

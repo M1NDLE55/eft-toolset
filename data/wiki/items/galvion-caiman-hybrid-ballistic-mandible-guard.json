@@ -1,0 +1,27 @@
+{
+  "title": "Galvion Caiman Hybrid Ballistic Mandible Guard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Galvion_Caiman_Hybrid_Ballistic_Mandible_Guard",
+  "revisionId": 344241,
+  "lastEdited": "2026-05-24T21:26:54Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.1 kg",
+    "grid": "2x2",
+    "trader": "Peacekeeper LL3",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Jaws",
+    "durability": "20",
+    "penalties": "+0% turn speed, -2% Ergonomics",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5f60c076f2bcbb675b00dac2",
+    "id": "item_equipment_helmet_galvion_mandible"
+  },
+  "sections": []
+}

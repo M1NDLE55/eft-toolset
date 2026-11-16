@@ -1,0 +1,25 @@
+{
+  "title": "MP9 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP9_rear_sight",
+  "revisionId": 211213,
+  "lastEdited": "2022-09-20T11:04:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "price": "₽900",
+    "ergonomics": "+0",
+    "sightrange": "200 m",
+    "accuracy": "+0",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5de8fb539f98ac2bc659513a",
+    "ID": "sight_rear_mp9_bt_mp9_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "AA-12 12ga 8-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AA-12_12ga_8-round_magazine",
+  "revisionId": 338840,
+  "lastEdited": "2026-03-18T08:04:40Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.34 kg",
+    "grid": "1x2",
+    "trader": "Skier LL4",
+    "ergonomics": "-1",
+    "checkaccuracy": "No",
+    "feedfailure": "Very low",
+    "capacity": "8",
+    "caliber": "12/70",
+    "node": "66ffaab91f7492c901027bb8",
+    "ID": "mag_aa12_mps_aa12_box_mag_12g_8"
+  },
+  "sections": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Recknagel Era-Tac 34mm ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Recknagel_Era-Tac_34mm_ring_scope_mount",
+  "revisionId": 211426,
+  "lastEdited": "2022-09-20T11:14:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "node": "61713cc4d8e3106d9806c109",
+    "ID": "mount_all_recknagel_era_tac_one_piece_mount_34mm"
+  },
+  "sections": []
+}

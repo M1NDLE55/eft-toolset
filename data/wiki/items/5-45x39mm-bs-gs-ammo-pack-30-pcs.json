@@ -1,0 +1,24 @@
+{
+  "title": "5.45x39mm BS gs ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_BS_gs_ammo_pack_(30_pcs)",
+  "revisionId": 367157,
+  "lastEdited": "2026-11-02T23:10:01Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.015 kg",
+    "grid": "1x1",
+    "node": "57372bd3245977670b7cd243",
+    "id": "item_ammo_box_545x39_30_bs"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "AR-15 Radian Weapons Raptor charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Radian_Weapons_Raptor_charging_handle",
+  "revisionId": 356384,
+  "lastEdited": "2026-08-26T00:38:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL4: Tungsten grey, FDE",
+    "ergonomics": "+3",
+    "node": "5b2240bf5acfc40dc528af69 5d44334ba4b9362b346d1948",
+    "ID": "charge_ar15_radian_raptor_ambidextrous_charging_handle charge_ar15_radian_raptor_ambidextrous_charging_handle_gry"
+  },
+  "sections": []
+}

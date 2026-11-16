@@ -1,0 +1,23 @@
+{
+  "title": "AR-15 Colt early type charging handle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Colt_early_type_charging_handle",
+  "revisionId": 343344,
+  "lastEdited": "2026-05-05T19:42:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Charging handles"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Charging handle",
+    "weight": "0.035 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+0",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "68a63a9522b1e0bd360afe5f",
+    "ID": "charge_ar15_colt_charging_handle_early"
+  },
+  "sections": []
+}

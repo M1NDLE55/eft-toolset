@@ -1,0 +1,51 @@
+{
+  "title": "Spiritus Systems LV-119 Plate Carrier (Black Division V2)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Spiritus_Systems_LV-119_Plate_Carrier_(Black_Division_V2)",
+  "revisionId": 357203,
+  "lastEdited": "2026-08-30T23:54:49Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armored chest rig",
+    "slot": "Chest rig",
+    "weight": "5.1 kg",
+    "grid": "4x4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Thorax, Back",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "88",
+    "penalties": "-2% movement speed, -2% turn speed, -1% Ergonomics",
+    "BlocksArmor": "Yes",
+    "slots": "25 Slots",
+    "node": "689479eb30cc5ba7be00f5ff",
+    "ID": "item_equipment_rig_BD3_spiritus"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division"
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "The chest rig is modeled after a Spiritus Systems LV-119 Overt configured with a variety of commercially available accessories for breaching and sustainment. The loadout combines equipment from several manufacturers, including:\n- Spiritus Systems LV-119 Overt Plate Bags with Spiritus Systems Shoulder Covers and a Spiritus Systems HLT Cummerbund\n- Spiritus Systems Micro Fight Mk4 Chassis (MultiCam) fitted with an AXL Advanced Micro Fight Zipper Insert (MultiCam)\n- Spiritus Systems Lunchbox Pouch Mk2 mounted beneath the placard in its folded configuration, together with breaching charge strips\n\n- A Spiritus Systems MOLLE Back Panel attached the rear plate bag.\n- A Blue Force Gear Single Smoke Pouch (Black), two Eagle Industries Strip Charge Pouches (Ranger Green), and an ACS Grenade Trigger Pouch (Green) mounted to the rear panel\n- Two Spiritus Systems Medium GP Pouches in (MultiCam), and a MPRC Mk5 Radio Chassis Mounted to the Cummerbund\nAdditional equipment includes HK MP7 4.6x30 30-round magazines, an MPU5 networking radio with compatible MPU5 Push-to-Talk (PTT), and a Thyrm DarkVault Critical Gear Case."
+    }
+  ]
+}

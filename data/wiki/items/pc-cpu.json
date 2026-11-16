@@ -1,0 +1,31 @@
+{
+  "title": "PC CPU",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PC_CPU",
+  "revisionId": 356938,
+  "lastEdited": "2026-08-30T01:05:27Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "573477e124597737dd42e191",
+    "id": "CPU"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- PC block\n- Sport bag\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This is a parody of the CPU produced by Intel."
+    }
+  ]
+}

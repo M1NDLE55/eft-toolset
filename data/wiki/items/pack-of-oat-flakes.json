@@ -1,0 +1,28 @@
+{
+  "title": "Pack of oat flakes",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pack_of_oat_flakes",
+  "revisionId": 331988,
+  "lastEdited": "2026-01-09T22:12:06Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.4 kg",
+    "grid": "1x2",
+    "price": "₽1,425",
+    "effect": "Energy: +40, Hydration: -13",
+    "use time": "6s",
+    "node": "57347d90245977448f7b7f65",
+    "id": "oatmeal"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Plastic suitcases\n- In Ration supply crates\n- In Ground caches\n- In Sport bags"
+    }
+  ]
+}

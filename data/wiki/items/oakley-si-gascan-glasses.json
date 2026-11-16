@@ -1,0 +1,28 @@
+{
+  "title": "Oakley SI Gascan glasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Oakley_SI_Gascan_glasses",
+  "revisionId": 348881,
+  "lastEdited": "2026-08-02T13:02:31Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.034 kg",
+    "grid": "2x1",
+    "trader": "Ragman LL3",
+    "blindness protect": "15%",
+    "node": "5d6d2e22a4b9361bd5780d05",
+    "ID": "item_equipment_glasses_gascan"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen"
+    }
+  ]
+}

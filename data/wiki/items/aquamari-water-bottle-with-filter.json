@@ -1,0 +1,40 @@
+{
+  "title": "Aquamari water bottle with filter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aquamari_water_bottle_with_filter",
+  "revisionId": 345680,
+  "lastEdited": "2026-05-30T14:15:38Z",
+  "kind": "item",
+  "categories": [
+    "Drinks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Drink",
+    "weight": "0.6 kg",
+    "grid": "1x2",
+    "price": "₽8,600",
+    "effect": "Energy: +20, Hydration: +100",
+    "use time": "3s",
+    "loot xp": "10",
+    "exam xp": "10",
+    "node": "5c0fa877d174af02a012e1cf",
+    "ID": "drink_aquamari"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from The Survivalist Path - Zhivchik\n- 4 can be obtained as a quest reward from Thirsty - Echo"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Buried barrel caches\n- In Dead Scavs\n- In Ground caches\n- In Plastic suitcases\n- In Ration supply crates\n- In Sport bags"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Aquamari is a parody of the trademark Aquamira"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Iridium military thermal vision module",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Iridium_military_thermal_vision_module",
+  "revisionId": 364445,
+  "lastEdited": "2026-10-13T23:32:35Z",
+  "kind": "item",
+  "categories": [
+    "Electronics"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Electronics",
+    "weight": "0.21 kg",
+    "grid": "1x1",
+    "loot xp": "40",
+    "exam xp": "5",
+    "node": "5d0377ce86f774186372f689",
+    "ID": "item_barter_electr_thermalmodule"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Wooden crate\n- Dead Scav\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Reserve",
+      "level": 2,
+      "text": "- On the roof of white pawn, on some crates next to the 3 jackets\n- In the server racks near the D-2 power switch\n- On tank near Hole in the Fence extract"
+    },
+    {
+      "heading": "The Lab",
+      "level": 2,
+      "text": "- Inside of Yellow Keycard room\n- Inside of Violet Keycard room\n- Inside of Green Keycard room in the room to the left of the entrance\n- Inside of Red Keycard room"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Import"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item is based on a real life thermal vision module that is made in Russia. It's called \"Iridium II\"."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Ushanka ear flap hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Ushanka_ear_flap_hat",
+  "revisionId": 346762,
+  "lastEdited": "2026-06-13T21:05:16Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.35 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "59e7708286f7742cbd762753",
+    "id": "ushanka"
+  },
+  "sections": []
+}

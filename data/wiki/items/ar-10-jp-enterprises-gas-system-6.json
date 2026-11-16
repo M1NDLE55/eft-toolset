@@ -1,0 +1,26 @@
+{
+  "title": "AR-10 JP Enterprises Gas System-6",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_JP_Enterprises_Gas_System-6",
+  "revisionId": 228034,
+  "lastEdited": "2023-02-09T22:29:45Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.218 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "recoil": "-4",
+    "Heat": "-1",
+    "Cooling": "+0.8",
+    "loot xp": "50",
+    "exam xp": "10",
+    "node": "5a34fbadc4a28200741e230a",
+    "ID": "gas_block_ar10_jp_jpgs6"
+  },
+  "sections": []
+}

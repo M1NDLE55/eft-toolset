@@ -1,0 +1,25 @@
+{
+  "title": "Unknown device fragment",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Unknown_device_fragment",
+  "revisionId": 334903,
+  "lastEdited": "2026-02-11T22:20:19Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "3.2 kg",
+    "grid": "3x2",
+    "node": "68e638cf85c63c556c0272db 68e6394e658d876c930977b1",
+    "id": "item_quest_mysterious_device_spawn item_quest_mysterious_device_from_mechanic"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Blue Fire"
+    }
+  ]
+}

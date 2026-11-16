@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Desert Flecktarn)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Desert_Flecktarn)",
+  "revisionId": 348597,
+  "lastEdited": "2026-07-30T22:14:18Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67d7f0bf06f67cc02706317f",
+    "id": "item_camo_flecktarn_desert"
+  },
+  "sections": []
+}

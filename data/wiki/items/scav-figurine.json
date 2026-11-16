@@ -1,0 +1,31 @@
+{
+  "title": "Scav figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Scav_figurine",
+  "revisionId": 343712,
+  "lastEdited": "2026-05-10T10:58:21Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "655c673673a43e23e857aebd",
+    "id": "Item_barter_tarko_scav"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Plastic suitcase"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The model alludes to a Funko-type figurine."
+    }
+  ]
+}

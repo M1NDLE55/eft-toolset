@@ -1,0 +1,24 @@
+{
+  "title": "M870 Magpul MOE handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_Magpul_MOE_handguard",
+  "revisionId": 352258,
+  "lastEdited": "2026-08-07T21:09:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.184 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+15",
+    "recoil": "+0",
+    "Heat": "+2.5",
+    "Cooling": "-1.9",
+    "node": "5a788068c5856700137e4c8f",
+    "ID": "handguard_870_magpul_moe_870"
+  },
+  "sections": []
+}

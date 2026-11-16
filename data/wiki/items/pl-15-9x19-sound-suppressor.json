@@ -1,0 +1,27 @@
+{
+  "title": "PL-15 9x19 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PL-15_9x19_sound_suppressor",
+  "revisionId": 337762,
+  "lastEdited": "2026-03-06T02:04:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.293 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL2",
+    "ergonomics": "-8",
+    "velocity": "+0.8",
+    "recoil": "-3",
+    "Dura Burn": "+60",
+    "Heat": "+12",
+    "loot xp": "30",
+    "exam xp": "4",
+    "node": "602a97060ddce744014caf6f",
+    "ID": "silencer_all_izhmash_pl15_std_9x19"
+  },
+  "sections": []
+}

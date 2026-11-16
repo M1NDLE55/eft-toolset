@@ -1,0 +1,21 @@
+{
+  "title": "FN SCAR bottom rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_bottom_rail",
+  "revisionId": 216159,
+  "lastEdited": "2022-12-08T15:39:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.075 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+0",
+    "node": "61816df1d3a39d50044c139e",
+    "ID": "mount_mk16_fn_scar_bottom_rail_std"
+  },
+  "sections": []
+}

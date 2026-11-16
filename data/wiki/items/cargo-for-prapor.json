@@ -1,0 +1,25 @@
+{
+  "title": "Cargo for Prapor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Cargo_for_Prapor",
+  "revisionId": 313976,
+  "lastEdited": "2025-05-30T16:46:56Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "1.2 kg",
+    "grid": "1x2",
+    "node": "67499adbeca8acb2d2061634",
+    "id": "item_quest_btr_package2"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Forge a Friendship given by Prapor"
+    }
+  ]
+}

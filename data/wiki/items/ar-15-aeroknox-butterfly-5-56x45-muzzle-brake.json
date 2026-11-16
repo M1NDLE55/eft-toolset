@@ -1,0 +1,25 @@
+{
+  "title": "AR-15 Aeroknox Butterfly 5.56x45 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Aeroknox_Butterfly_5.56x45_muzzle_brake",
+  "revisionId": 337914,
+  "lastEdited": "2026-03-07T09:17:51Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-4.5",
+    "accuracy": "+4",
+    "recoil": "-10.5",
+    "Dura Burn": "-3",
+    "Heat": "-1.1",
+    "node": "6405ff6bd4578826ec3e377a",
+    "ID": "muzzle_ar15_aeroknox_butterfly_muzzle_brake_556x45"
+  },
+  "sections": []
+}

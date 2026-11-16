@@ -1,0 +1,28 @@
+{
+  "title": "Gruppa 99 T30 backpack (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gruppa_99_T30_backpack_(MultiCam)",
+  "revisionId": 331426,
+  "lastEdited": "2026-01-06T18:53:22Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.4 kg",
+    "grid": "5x6",
+    "penalties": "-2% movement speed, -1% turn speed, -2% Ergonomics",
+    "slots": "5x6 grid (30 slots)",
+    "node": "62a1b7fbc30cfa1d366af586",
+    "id": "item_equipment_backpack_gr99_t30_multicam"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 1 can be held in a raid inventory at the same time"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Petya Crooker figurine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Petya_Crooker_figurine",
+  "revisionId": 333922,
+  "lastEdited": "2026-02-07T23:48:24Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "effect": "Generic loot item",
+    "node": "679b9d43597ba2ed120c3d44",
+    "id": "Item_barter_tarko_dream_killer"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "The Labyrinth",
+      "level": 3,
+      "text": "- On Shadow of Tagilla\n- In different locations in spawn chamber 5."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This figurine is a direct reference to the antagonist of the A Nightmare on Elm Street horror film franchise."
+    }
+  ]
+}

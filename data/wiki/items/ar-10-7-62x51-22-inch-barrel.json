@@ -1,0 +1,27 @@
+{
+  "title": "AR-10 7.62x51 22 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_7.62x51_22_inch_barrel",
+  "revisionId": 340765,
+  "lastEdited": "2026-04-22T07:23:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.2 kg",
+    "grid": "5x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-38",
+    "velocity": "+3",
+    "MOA": "0.79",
+    "recoil": "-14",
+    "Dura Burn": "+9",
+    "Heat": "-13",
+    "Cooling": "-8",
+    "node": "5a34fae7c4a2826c6e06d760",
+    "ID": "barrel_ar10_558mm"
+  },
+  "sections": []
+}

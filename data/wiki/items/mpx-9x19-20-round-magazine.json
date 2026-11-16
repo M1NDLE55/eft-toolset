@@ -1,0 +1,30 @@
+{
+  "title": "MPX 9x19 20-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_9x19_20-round_magazine",
+  "revisionId": 337610,
+  "lastEdited": "2026-03-06T00:23:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.14 kg",
+    "grid": "1x1",
+    "price": "₽1,450",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+3",
+    "checkaccuracy": "1",
+    "checkmodifier": "-25",
+    "loadmodifier": "-25",
+    "feedfailure": "Very low",
+    "capacity": "20",
+    "caliber": "9x19mm Parabellum",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c5db6552e2216001026119d",
+    "ID": "mag_mpx_sig_mag_std_9x19_20"
+  },
+  "sections": []
+}

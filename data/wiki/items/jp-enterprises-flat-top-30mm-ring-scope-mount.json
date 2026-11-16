@@ -1,0 +1,21 @@
+{
+  "title": "JP Enterprises Flat-Top 30mm ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/JP_Enterprises_Flat-Top_30mm_ring_scope_mount",
+  "revisionId": 338483,
+  "lastEdited": "2026-03-15T14:39:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.194 kg",
+    "grid": "2x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-1",
+    "node": "5a37ca54c4a282000d72296a",
+    "ID": "mount_all_jp_enterprises_ftsm_30mm"
+  },
+  "sections": []
+}

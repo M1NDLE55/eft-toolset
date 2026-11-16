@@ -1,0 +1,25 @@
+{
+  "title": "NPZ USP-1 Tyulpan 4x scope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NPZ_USP-1_Tyulpan_4x_scope",
+  "revisionId": 352288,
+  "lastEdited": "2026-08-07T21:22:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.795 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "zeroing": "50, 75, 100, 125, 150, 200, 250, 300",
+    "sightrange": "600",
+    "ergonomics": "-6",
+    "modes": "1",
+    "mods": "1",
+    "node": "5cf638cbd7f00c06595bc936",
+    "ID": "scope_dovetail_npz_1p29_4x"
+  },
+  "sections": []
+}

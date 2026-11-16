@@ -1,0 +1,27 @@
+{
+  "title": "Steyr AUG 5.56x45 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_5.56x45_30-round_magazine",
+  "revisionId": 339072,
+  "lastEdited": "2026-03-24T16:27:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.13 kg",
+    "grid": "1x2",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "checkaccuracy": "1",
+    "checkmodifier": "+0",
+    "loadmodifier": "+0",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.56x45mm NATO",
+    "node": "62e7c98b550c8218d602cbb4",
+    "ID": "mag_aug_steyr_std_556x45_30"
+  },
+  "sections": []
+}

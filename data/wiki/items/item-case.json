@@ -1,0 +1,32 @@
+{
+  "title": "Item case",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Item_case",
+  "revisionId": 351835,
+  "lastEdited": "2026-08-06T21:03:06Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "7 kg",
+    "grid": "4x4",
+    "trader": "Therapist LL3",
+    "effect": "Provides 64 inventory slots while only taking up 16",
+    "node": "59fb042886f7746c5005a7b2",
+    "id": "item_container_trackcase"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be stored in a backpack."
+    },
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Item case is a container with the purpose of saving space within the player's inventory. It provides 64 inventory slots in an 8x8 grid and only takes up 16 inventory slots itself. It can store everything except:\n- Item case\n- T H I C C item case\n- Weapon case\n- T H I C C Weapon case\n- Lucky Scav Junk box\n- SheefGG piggy bank\n- Some special equipment"
+    }
+  ]
+}

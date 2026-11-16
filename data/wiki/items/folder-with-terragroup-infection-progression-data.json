@@ -1,0 +1,25 @@
+{
+  "title": "Folder with TerraGroup infection progression data",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Folder_with_TerraGroup_infection_progression_data",
+  "revisionId": 367021,
+  "lastEdited": "2026-11-02T06:47:27Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.23 kg",
+    "grid": "2x1",
+    "node": "6ad23bd2792fc140b70a9e0a",
+    "id": "item_note_hall_quest_evidence"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "Used in the quests:\n- Halloween: Coincidence?\n- Halloween: Enemy of My Enemy - An Agreement"
+    }
+  ]
+}

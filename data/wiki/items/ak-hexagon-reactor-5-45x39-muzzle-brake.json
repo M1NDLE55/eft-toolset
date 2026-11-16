@@ -1,0 +1,24 @@
+{
+  "title": "AK Hexagon Reactor 5.45x39 muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Hexagon_Reactor_5.45x39_muzzle_brake",
+  "revisionId": 337789,
+  "lastEdited": "2026-03-06T02:14:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.095 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-4",
+    "accuracy": "+0",
+    "recoil": "-8",
+    "Heat": "-1",
+    "node": "615d8f5dd92c473c770212ef",
+    "ID": "muzzle_ak_hexagon_reactor_muzzle_brake_545x39"
+  },
+  "sections": []
+}

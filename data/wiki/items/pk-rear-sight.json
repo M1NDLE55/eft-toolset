@@ -1,0 +1,21 @@
+{
+  "title": "PK rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PK_rear_sight",
+  "revisionId": 255104,
+  "lastEdited": "2023-11-09T16:49:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL4",
+    "sightrange": "500",
+    "node": "6492fb8253acae0af00a29b6",
+    "ID": "sight_rear_pk_zid_pk_std"
+  },
+  "sections": []
+}

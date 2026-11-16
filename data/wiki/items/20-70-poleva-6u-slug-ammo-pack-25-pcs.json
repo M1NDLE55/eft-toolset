@@ -1,0 +1,18 @@
+{
+  "title": "20/70 Poleva-6u slug ammo pack (25 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/20/70_Poleva-6u_slug_ammo_pack_(25_pcs)",
+  "revisionId": 367140,
+  "lastEdited": "2026-11-02T23:09:06Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657024a91419851aef03e70c",
+    "ID": "item_ammo_box_20g_25_slug_poleva_6u"
+  },
+  "sections": []
+}

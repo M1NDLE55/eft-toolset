@@ -1,0 +1,24 @@
+{
+  "title": "SA58 quad rail full length handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_quad_rail_full_length_handguard",
+  "revisionId": 340848,
+  "lastEdited": "2026-04-22T08:30:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.61 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4",
+    "ergonomics": "+20",
+    "recoil": "+0",
+    "Heat": "-6",
+    "Cooling": "+1.6",
+    "node": "5b7be1ca5acfc400170e2d2f",
+    "ID": "handguard_sa58_ds_arms_picatinny_full_lenght_quad_rail"
+  },
+  "sections": []
+}

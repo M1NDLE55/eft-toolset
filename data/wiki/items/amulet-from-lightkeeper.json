@@ -1,0 +1,25 @@
+{
+  "title": "Amulet from Lightkeeper",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Amulet_from_Lightkeeper",
+  "revisionId": 360016,
+  "lastEdited": "2026-09-13T23:58:05Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6a89a01424707bdeef0c54d7",
+    "id": "t3_watch_amulet"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "Used in the quests:\n- To the Light - Dangerous Ambitions from Mechanic\n- To the Light - Bite the Dust from Peacekeeper"
+    }
+  ]
+}

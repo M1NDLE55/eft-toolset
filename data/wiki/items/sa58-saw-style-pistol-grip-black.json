@@ -1,0 +1,22 @@
+{
+  "title": "SA58 SAW-style pistol grip (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_SAW-style_pistol_grip_(Black)",
+  "revisionId": 347276,
+  "lastEdited": "2026-06-23T10:31:36Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.082 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+3",
+    "recoil": "-1",
+    "node": "5b099b965acfc400186331e6",
+    "ID": "pistolgrip_sa58_ds_arms_saw_style"
+  },
+  "sections": []
+}

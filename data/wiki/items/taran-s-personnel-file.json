@@ -1,0 +1,26 @@
+{
+  "title": "Taran's personnel file",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Taran's_personnel_file",
+  "revisionId": 357853,
+  "lastEdited": "2026-09-08T14:14:44Z",
+  "kind": "item",
+  "categories": [
+    "Minor TerraGroup evidence",
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.09 kg",
+    "grid": "1x1",
+    "node": "68d305c35f98276b7503c336",
+    "ID": "item_info_note_personalfile_taran"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Batya\n- This is one of the minor evidence used in The Ticket"
+    }
+  ]
+}

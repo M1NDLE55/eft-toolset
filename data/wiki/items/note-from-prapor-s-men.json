@@ -1,0 +1,24 @@
+{
+  "title": "Note from Prapor's men",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_from_Prapor's_men",
+  "revisionId": 348863,
+  "lastEdited": "2026-08-02T01:41:12Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "grid": "1x1",
+    "node": "689b5093987b304021088e91",
+    "id": "item_info_note_quest_praporsmen"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket"
+    }
+  ]
+}

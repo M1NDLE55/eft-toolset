@@ -1,0 +1,21 @@
+{
+  "title": "Armband (Blue)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Armband_(Blue)",
+  "revisionId": 320823,
+  "lastEdited": "2025-11-11T20:24:57Z",
+  "kind": "item",
+  "categories": [
+    "Armbands"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armband",
+    "slot": "Armband",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Ragman LL1",
+    "node": "5b3f3af486f774679e752c1f",
+    "id": "armband_blue"
+  },
+  "sections": []
+}

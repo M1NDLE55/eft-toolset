@@ -1,0 +1,22 @@
+{
+  "title": "AK Mission First Tactical ENGAGE AK47 pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Mission_First_Tactical_ENGAGE_AK47_pistol_grip",
+  "revisionId": 342364,
+  "lastEdited": "2026-04-29T00:48:26Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+5",
+    "recoil": "-1.5",
+    "node": "63f4da90f31d4a33b87bd054",
+    "ID": "pistolgrip_ak_mft_engage_ak47_pistol_grip"
+  },
+  "sections": []
+}

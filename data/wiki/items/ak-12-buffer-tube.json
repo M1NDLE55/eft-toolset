@@ -1,0 +1,23 @@
+{
+  "title": "AK-12 buffer tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_buffer_tube",
+  "revisionId": 343520,
+  "lastEdited": "2026-05-07T22:35:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.142 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "-1",
+    "recoil": "-0.5",
+    "Dura Burn": "-2",
+    "node": "649ec87d8007560a9001ab36",
+    "ID": "stock_ak12_izhmash_ak12_stock_tube_std"
+  },
+  "sections": []
+}

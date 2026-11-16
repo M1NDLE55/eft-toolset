@@ -1,0 +1,27 @@
+{
+  "title": "Flat screwdriver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Flat_screwdriver",
+  "revisionId": 348275,
+  "lastEdited": "2026-07-26T09:07:06Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "0.3 kg",
+    "grid": "1x1",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5d63d33b86f7746ea9275524",
+    "ID": "item_barter_tools_screwdriver_flat"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

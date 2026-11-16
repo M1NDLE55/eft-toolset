@@ -1,0 +1,30 @@
+{
+  "title": "Big Pipe's smoking pipe",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Big_Pipe's_smoking_pipe",
+  "revisionId": 313673,
+  "lastEdited": "2025-05-21T07:33:52Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "62a61bbf8ec41a51b34758d2",
+    "id": "item_equipment_facecover_pipe"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Big Pipe"
+    }
+  ]
+}

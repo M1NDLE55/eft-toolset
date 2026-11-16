@@ -1,0 +1,25 @@
+{
+  "title": "Note with a warning",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_with_a_warning",
+  "revisionId": 336356,
+  "lastEdited": "2026-02-21T16:58:35Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "68d2f302be7c1493b90cd3f5",
+    "id": "item_info_note_toReshala_warning"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Accidental Witness"
+    }
+  ]
+}

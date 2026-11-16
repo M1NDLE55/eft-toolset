@@ -1,0 +1,26 @@
+{
+  "title": "SHIELD Absolute Cinema hard hat (White)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SHIELD_Absolute_Cinema_hard_hat_(White)",
+  "revisionId": 353546,
+  "lastEdited": "2026-08-14T06:50:26Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hard hat",
+    "slot": "Headwear",
+    "weight": "0.45 kg",
+    "grid": "2x2",
+    "node": "68a6d96fddf0111c2f04c9c9",
+    "id": "Item_equipment_construction_helmet_white"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "This item is worn by civilians on Terminal and not obtainable."
+    }
+  ]
+}

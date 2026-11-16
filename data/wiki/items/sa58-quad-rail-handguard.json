@@ -1,0 +1,23 @@
+{
+  "title": "SA58 quad rail handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_quad_rail_handguard",
+  "revisionId": 340830,
+  "lastEdited": "2026-04-22T08:19:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.48 kg",
+    "grid": "2x1",
+    "ergonomics": "+14.5",
+    "recoil": "+0",
+    "Heat": "-6.9",
+    "Cooling": "+1",
+    "node": "5b099a9d5acfc47a8607efe7",
+    "ID": "handguard_sa58_ds_arms_picatinny_quad_rail"
+  },
+  "sections": []
+}

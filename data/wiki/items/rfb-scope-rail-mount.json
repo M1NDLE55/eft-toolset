@@ -1,0 +1,21 @@
+{
+  "title": "RFB scope rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RFB_scope_rail_mount",
+  "revisionId": 240119,
+  "lastEdited": "2023-07-29T23:05:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.09 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+0",
+    "node": "5f2aa49f9b44de6b1b4e68d4",
+    "ID": "mount_rfb_ket_tec_rfb_scope_mount_std"
+  },
+  "sections": []
+}

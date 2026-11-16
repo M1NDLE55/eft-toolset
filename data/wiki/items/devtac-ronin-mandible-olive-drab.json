@@ -1,0 +1,24 @@
+{
+  "title": "DevTac Ronin Mandible (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Ronin_Mandible_(Olive_Drab)",
+  "revisionId": 361999,
+  "lastEdited": "2026-09-24T18:06:08Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "0.67 kg",
+    "grid": "1x1",
+    "material": "Aramid",
+    "armor": "4",
+    "armor coverage": "Face, Ears, Jaws",
+    "durability": "21",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics",
+    "node": "6a845e60d68fc921f9023983",
+    "ID": "item_equipment_facecover_devtac_mandibule_olive_drab"
+  },
+  "sections": []
+}

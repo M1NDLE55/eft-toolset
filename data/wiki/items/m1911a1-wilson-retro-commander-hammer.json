@@ -1,0 +1,23 @@
+{
+  "title": "M1911A1 Wilson Retro Commander hammer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_Wilson_Retro_Commander_hammer",
+  "revisionId": 255636,
+  "lastEdited": "2023-11-23T15:26:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.016 kg",
+    "grid": "1x1",
+    "price": "₽1,500",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+2",
+    "Dura Burn": "-3",
+    "node": "5ef35d2ac64c5d0dfc0571b0",
+    "ID": "hammer_m1911_wilson_retro_commander"
+  },
+  "sections": []
+}

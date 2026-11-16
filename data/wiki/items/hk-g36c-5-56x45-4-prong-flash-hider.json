@@ -1,0 +1,25 @@
+{
+  "title": "HK G36C 5.56x45 4-prong flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36C_5.56x45_4-prong_flash_hider",
+  "revisionId": 337862,
+  "lastEdited": "2026-03-07T06:34:52Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "accuracy": "+3",
+    "recoil": "-6",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "622f0ee47762f55aaa68ac87",
+    "ID": "muzzle_g36_hk_complete_flash_hider_556x45"
+  },
+  "sections": []
+}

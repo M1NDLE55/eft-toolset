@@ -1,0 +1,28 @@
+{
+  "title": "TT DLP Tactical Precision Laser Sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TT_DLP_Tactical_Precision_Laser_Sight",
+  "revisionId": 293113,
+  "lastEdited": "2024-09-29T20:18:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.086 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-1",
+    "modes": "1",
+    "node": "5c079ed60db834001a66b372",
+    "ID": "tactical_tt_dlp_tactical_precision_laser_sight"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is red"
+    }
+  ]
+}

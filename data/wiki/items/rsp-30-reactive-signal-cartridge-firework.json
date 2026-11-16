@@ -1,0 +1,32 @@
+{
+  "title": "RSP-30 reactive signal cartridge (Firework)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RSP-30_reactive_signal_cartridge_(Firework)",
+  "revisionId": 347195,
+  "lastEdited": "2026-06-20T20:22:01Z",
+  "kind": "ammo",
+  "categories": [
+    "Handheld flares",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handheld flare",
+    "weight": "0.19 kg",
+    "grid": "1x2",
+    "sightrange": "100",
+    "ergonomics": "51",
+    "velocity": "80 m/s",
+    "damage": "40",
+    "penetration": "0",
+    "armor damage": "60",
+    "node": "675ea3d6312c0a5c4e04e317",
+    "id": "weapon_rsp30_newyear"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Firing this flare into the sky will call in a festive airdrop and launch firework. Note: These airdrops are only available during Christmas.\n- (Unavailable on Ground Zero, Factory, The Lab, The Labyrinth, Terminal, Icebreaker)\n\n- The flare is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    }
+  ]
+}

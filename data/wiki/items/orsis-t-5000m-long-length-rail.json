@@ -1,0 +1,21 @@
+{
+  "title": "ORSIS T-5000M long length rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ORSIS_T-5000M_long_length_rail",
+  "revisionId": 356568,
+  "lastEdited": "2026-08-26T03:00:55Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+0",
+    "node": "5df35ea9c41b2312ea3334d8",
+    "ID": "mount_orsis_orsis_rail_section_long"
+  },
+  "sections": []
+}

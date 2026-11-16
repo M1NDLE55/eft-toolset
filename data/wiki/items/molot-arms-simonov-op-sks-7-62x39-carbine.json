@@ -1,0 +1,38 @@
+{
+  "title": "Molot Arms Simonov OP-SKS 7.62x39 carbine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Molot_Arms_Simonov_OP-SKS_7.62x39_carbine",
+  "revisionId": 362217,
+  "lastEdited": "2026-09-26T14:20:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault carbines",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault carbine",
+    "slot": "Primary",
+    "weight": "3.793 kg",
+    "grid": "5x1",
+    "trader": "Jaeger LL1: Standard, Ref LL1",
+    "fire modes": "Single",
+    "sightrange": "500",
+    "ergonomics": "37",
+    "velocity": "791 m/s",
+    "range": "400 m",
+    "MOA": "1.69",
+    "Weaprecoil": "Vertical: 97, Horizontal: 225",
+    "rof": "40",
+    "caliber": "7.62x39mm",
+    "def mag": "SKS 7.62x39 10-round internal box magazine",
+    "node": "587e02ff24597743df3deaeb",
+    "ID": "weapon_molot_op_sks_762x39"
+  },
+  "sections": [
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| OP-SKS Sniper |\n| OP-SKS Tactical |"
+    }
+  ]
+}

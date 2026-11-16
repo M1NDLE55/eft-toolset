@@ -1,0 +1,27 @@
+{
+  "title": "Steyr AUG A3 5.56x45 16 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_A3_5.56x45_16_inch_barrel",
+  "revisionId": 342251,
+  "lastEdited": "2026-04-28T21:52:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.53 kg",
+    "grid": "3x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-14",
+    "velocity": "-5",
+    "MOA": "1.58",
+    "recoil": "-8.3",
+    "Dura Burn": "+2",
+    "Heat": "-1",
+    "Cooling": "-4",
+    "node": "630e39c3bd357927e4007c15",
+    "ID": "barrel_aug_steyr_a3_417mm_556x45"
+  },
+  "sections": []
+}

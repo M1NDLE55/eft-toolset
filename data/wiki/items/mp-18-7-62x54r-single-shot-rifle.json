@@ -1,0 +1,31 @@
+{
+  "title": "MP-18 7.62x54R single-shot rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-18_7.62x54R_single-shot_rifle",
+  "revisionId": 340963,
+  "lastEdited": "2026-04-22T22:18:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Shotguns",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Shotgun",
+    "slot": "Primary",
+    "weight": "2.852 kg",
+    "grid": "5x1",
+    "trader": "Jaeger LL1",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "25",
+    "velocity": "760 m/s",
+    "range": "100",
+    "MOA": "3.09",
+    "Weaprecoil": "Vertical: 186, Horizontal: 474",
+    "rof": "10",
+    "caliber": "7.62x54mmR",
+    "node": "61f7c9e189e6fb1a5e3ea78d",
+    "ID": "weapon_izhmash_mp18_multi"
+  },
+  "sections": []
+}

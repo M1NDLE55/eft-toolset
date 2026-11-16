@@ -1,0 +1,35 @@
+{
+  "title": "Granit Br4 ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Granit_Br4_ballistic_plate",
+  "revisionId": 367801,
+  "lastEdited": "2026-11-10T13:13:46Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "2.9 kg",
+    "grid": "2x2",
+    "material": "Ceramic",
+    "armor": "5",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "55",
+    "penalties": "-1.5% movement speed, -1% turn speed, -1% Ergonomics",
+    "node": "65573fa5655447403702a816",
+    "id": "item_equipment_plate_granitBr4_5 class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

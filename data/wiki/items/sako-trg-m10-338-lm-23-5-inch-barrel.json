@@ -1,0 +1,27 @@
+{
+  "title": "Sako TRG M10 .338 LM 23.5 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_M10_.338_LM_23.5_inch_barrel",
+  "revisionId": 342742,
+  "lastEdited": "2026-04-30T21:08:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "2.03 kg",
+    "grid": "4x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-39",
+    "velocity": "+5",
+    "accuracy": "+5",
+    "MOA": "0.46",
+    "recoil": "-14.9",
+    "Heat": "+1",
+    "Cooling": "-1",
+    "node": "673cb551093e0ea7fd0b874a",
+    "ID": "barrel_trg_sako_m10_597mm_86x70"
+  },
+  "sections": []
+}

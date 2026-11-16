@@ -1,0 +1,30 @@
+{
+  "title": "Valve handwheel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Valve_handwheel",
+  "revisionId": 352405,
+  "lastEdited": "2026-08-08T20:00:59Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.5 kg",
+    "grid": "1x1",
+    "node": "678fa929819ddc4c350c0317",
+    "id": "item_key_labyrinth_valve"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "Used to disable the steam hazard in spawn chamber 2 inside The Labyrinth."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "In different locations on the second floor of spawn chamber 2 inside The Labyrinth. Key 02 required."
+    }
+  ]
+}

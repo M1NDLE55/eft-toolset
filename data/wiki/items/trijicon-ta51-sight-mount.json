@@ -1,0 +1,22 @@
+{
+  "title": "Trijicon TA51 sight mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Trijicon_TA51_sight_mount",
+  "revisionId": 356326,
+  "lastEdited": "2026-08-25T22:40:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.113 kg",
+    "grid": "1x1",
+    "price": "₽3,680",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-1",
+    "node": "59db7eed86f77461f8380365",
+    "ID": "mount_all_trijicon_ta51"
+  },
+  "sections": []
+}

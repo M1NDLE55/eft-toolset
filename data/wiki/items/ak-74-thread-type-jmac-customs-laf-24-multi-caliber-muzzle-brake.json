@@ -1,0 +1,24 @@
+{
+  "title": "AK-74 thread type JMac Customs LAF-24 multi-caliber muzzle brake",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-74_thread_type_JMac_Customs_LAF-24_multi-caliber_muzzle_brake",
+  "revisionId": 357407,
+  "lastEdited": "2026-09-01T17:59:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.13 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-3.5",
+    "recoil": "-11.5",
+    "Dura Burn": "-5",
+    "Cooling": "-2",
+    "node": "6a16dc8b12144b7727017dad",
+    "ID": "muzzle_ak74_jmac_laf_24_multi"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "AA-12 12ga choke",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AA-12_12ga_choke",
+  "revisionId": 337996,
+  "lastEdited": "2026-03-08T00:33:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.101 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+0",
+    "recoil": "-3",
+    "Dura Burn": "-2",
+    "Heat": "-1.5",
+    "Cooling": "+1.2",
+    "node": "670fd1cc95c92bfc8e0bea39",
+    "ID": "muzzle_12g_mps_aa12_muzzle_device_12g"
+  },
+  "sections": []
+}

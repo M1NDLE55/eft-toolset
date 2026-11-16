@@ -1,0 +1,25 @@
+{
+  "title": "Programmer's note",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Programmer's_note",
+  "revisionId": 353596,
+  "lastEdited": "2026-08-14T19:09:47Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "689b536a4b553916720119aa",
+    "ID": "item_info_note_from_igor"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter They Are Already Here"
+    }
+  ]
+}

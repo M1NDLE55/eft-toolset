@@ -1,0 +1,23 @@
+{
+  "title": "HK G36 rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_rear_sight",
+  "revisionId": 253549,
+  "lastEdited": "2023-11-02T21:56:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+0",
+    "sightrange": "600",
+    "accuracy": "+0",
+    "node": "6231670f0b8aa5472d060095",
+    "ID": "sight_rear_g36_hk_std"
+  },
+  "sections": []
+}

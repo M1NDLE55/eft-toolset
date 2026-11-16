@@ -1,0 +1,26 @@
+{
+  "title": "12.7x108mm BZT-44M",
+  "url": "https://escapefromtarkov.fandom.com/wiki/12.7x108mm_BZT-44M",
+  "revisionId": 353374,
+  "lastEdited": "2026-08-12T21:55:46Z",
+  "kind": "ammo",
+  "categories": [
+    "12.7x108mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.128 kg",
+    "grid": "1x1",
+    "velocity": "818 m/s",
+    "damage": "199",
+    "penetration": "80",
+    "armor damage": "95",
+    "ricochet": "38%",
+    "effects": "Tracer (green)",
+    "node": "5d2f2ab648f03550091993ca",
+    "id": "patron_127x108_bzt"
+  },
+  "sections": []
+}

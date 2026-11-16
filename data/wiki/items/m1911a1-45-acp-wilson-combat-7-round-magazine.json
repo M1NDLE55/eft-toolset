@@ -1,0 +1,26 @@
+{
+  "title": "M1911A1 .45 ACP Wilson Combat 7-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_.45_ACP_Wilson_Combat_7-round_magazine",
+  "revisionId": 356488,
+  "lastEdited": "2026-08-26T02:11:24Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.140 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "checkaccuracy": "1",
+    "checkmodifier": "-10",
+    "loadmodifier": "-10",
+    "feedfailure": "Very low",
+    "capacity": "7",
+    "caliber": ".45 ACP",
+    "node": "5f3e77b26cda304dcc634057",
+    "ID": "mag_m1911_colt_m45a1_std_1143x23_7"
+  },
+  "sections": []
+}

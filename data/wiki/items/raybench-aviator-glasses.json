@@ -1,0 +1,32 @@
+{
+  "title": "RayBench Aviator glasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RayBench_Aviator_glasses",
+  "revisionId": 352934,
+  "lastEdited": "2026-08-09T22:02:50Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "weight": "0.027 kg",
+    "grid": "2x1",
+    "trader": "Ragman LL4",
+    "blindness protect": "25%",
+    "node": "5d6d2ef3a4b93618084f58bd",
+    "ID": "item_equipment_glasses_aviator"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: RayBench is a parody of the sunglasses brand Ray Ban"
+    }
+  ]
+}

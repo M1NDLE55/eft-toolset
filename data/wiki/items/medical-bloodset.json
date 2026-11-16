@@ -1,0 +1,31 @@
+{
+  "title": "Medical bloodset",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Medical_bloodset",
+  "revisionId": 358490,
+  "lastEdited": "2026-09-10T21:32:46Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5b4335ba86f7744d2837a264",
+    "id": "item_barter_medical_bloodset"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Sport bag\n- Dead Scav\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: Medical bloodset is based off \"BD Vacutainer® push button blood collection set\"."
+    }
+  ]
+}

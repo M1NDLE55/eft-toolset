@@ -1,0 +1,25 @@
+{
+  "title": "Thunder Beast Arms Ultra 5 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Thunder_Beast_Arms_Ultra_5_sound_suppressor",
+  "revisionId": 342069,
+  "lastEdited": "2026-04-28T01:27:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.21 kg",
+    "grid": "2x1",
+    "ergonomics": "-10",
+    "velocity": "+0.5",
+    "recoil": "+0",
+    "Dura Burn": "+52",
+    "Heat": "+13.5",
+    "loot xp": "20",
+    "node": "5d44064fa4b9361e4f6eb8b5",
+    "ID": "silencer_tbac_thunder_beast_ultra_5_762x51"
+  },
+  "sections": []
+}

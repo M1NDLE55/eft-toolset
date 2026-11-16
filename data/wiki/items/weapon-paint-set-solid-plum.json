@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Solid Plum)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Solid_Plum)",
+  "revisionId": 348512,
+  "lastEdited": "2026-07-30T21:23:43Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67ee5a168c4ea717cf0d4737",
+    "id": "item_camo_solid_color_plum"
+  },
+  "sections": []
+}

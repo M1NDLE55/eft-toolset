@@ -1,0 +1,22 @@
+{
+  "title": "MP-155 Ultima large recoil pad",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MP-155_Ultima_large_recoil_pad",
+  "revisionId": 270190,
+  "lastEdited": "2024-02-08T20:12:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.273 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL3",
+    "ergonomics": "-2",
+    "recoil": "-5",
+    "node": "606f263a8900dc2d9a55b68d",
+    "ID": "stock_mp155_kalshnikov_ultima_stock_buttpad_large"
+  },
+  "sections": []
+}

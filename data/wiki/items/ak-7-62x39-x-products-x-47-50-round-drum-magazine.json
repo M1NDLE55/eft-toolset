@@ -1,0 +1,35 @@
+{
+  "title": "AK 7.62x39 X Products X-47 50-round drum magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_7.62x39_X_Products_X-47_50-round_drum_magazine",
+  "revisionId": 337672,
+  "lastEdited": "2026-03-06T00:54:08Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.7 kg",
+    "grid": "1x2",
+    "trader": "Mechanic LL4",
+    "ergonomics": "-9",
+    "checkaccuracy": "No",
+    "checkmodifier": "+15",
+    "loadmodifier": "+10",
+    "feedfailure": "Medium",
+    "capacity": "50",
+    "caliber": "7.62x39mm, .366 TKM",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5cfe8010d7ad1a59283b14c6",
+    "ID": "mag_ak_x_products_x_47_drum_762x39_50"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "TOZ-106 custom cut Mosin stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TOZ-106_custom_cut_Mosin_stock",
+  "revisionId": 270221,
+  "lastEdited": "2024-02-08T20:24:54Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "1.29 kg",
+    "grid": "4x1",
+    "price": "₽4,850",
+    "trader": "Jaeger LL2",
+    "ergonomics": "+9",
+    "recoil": "-29",
+    "Heat": "+4.3",
+    "Cooling": "-4.5",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5c99f3592e221644fc633070",
+    "ID": "stock_toz-106_pafnuch_mosin_custom"
+  },
+  "sections": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "FN P90 Strike Industries SMC-90 Short M-LOK handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_Strike_Industries_SMC-90_Short_M-LOK_handguard",
+  "revisionId": 362136,
+  "lastEdited": "2026-09-24T20:31:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.204 kg",
+    "grid": "1x1",
+    "ergonomics": "+10",
+    "Heat": "+0.7",
+    "Cooling": "-0.8",
+    "node": "6a688026daa5d47171082d6b",
+    "ID": "handguard_p90_strike_industries_smc_90_short"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

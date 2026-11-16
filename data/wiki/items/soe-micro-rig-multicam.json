@@ -1,0 +1,24 @@
+{
+  "title": "SOE Micro Rig (MultiCam)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOE_Micro_Rig_(MultiCam)",
+  "revisionId": 348340,
+  "lastEdited": "2026-07-29T10:22:56Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.8 kg",
+    "grid": "2x3",
+    "price": "₽9,600",
+    "trader": "Peacekeeper LL2",
+    "BlocksArmor": "No",
+    "slots": "8 Slots",
+    "node": "5d5d8ca986f7742798716522",
+    "id": "item_equipment_rig_micro"
+  },
+  "sections": []
+}

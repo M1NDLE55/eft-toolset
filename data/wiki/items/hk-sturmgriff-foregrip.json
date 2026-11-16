@@ -1,0 +1,23 @@
+{
+  "title": "HK Sturmgriff foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_Sturmgriff_foregrip",
+  "revisionId": 355533,
+  "lastEdited": "2026-08-23T00:18:28Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.068 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "recoil": "-1.5",
+    "node": "619386379fb0c665d5490dbe",
+    "ID": "foregrip_all_hk_sturmgriff_assault_grip"
+  },
+  "sections": []
+}

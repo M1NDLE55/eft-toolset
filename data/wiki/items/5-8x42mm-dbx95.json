@@ -1,0 +1,38 @@
+{
+  "title": "5.8x42mm DBX95",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.8x42mm_DBX95",
+  "revisionId": 356546,
+  "lastEdited": "2026-08-26T02:50:11Z",
+  "kind": "ammo",
+  "categories": [
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "velocity": "910 m/s",
+    "damage": "57",
+    "accuracy": "-3",
+    "recoil": "-5",
+    "penetration": "33",
+    "armor damage": "40",
+    "ricochet": "40%",
+    "durability burn": "+25",
+    "heat": "+92",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "effects": "Tracer (green)",
+    "node": "6a42661705016139300b2085",
+    "ID": "patron_58x42_dbx95"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

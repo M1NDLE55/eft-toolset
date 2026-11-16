@@ -1,0 +1,24 @@
+{
+  "title": "Mosin Rifle Arbalet Patriot K+W rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_Arbalet_Patriot_K%2BW_rail_mount",
+  "revisionId": 211295,
+  "lastEdited": "2022-09-20T11:08:12Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.2 kg",
+    "grid": "1x1",
+    "price": "₽2,450",
+    "trader": "Jaeger LL1",
+    "ergonomics": "-1",
+    "loot xp": "10",
+    "exam xp": "5",
+    "node": "5d024f5cd7ad1a04a067e91a",
+    "ID": "mount_kochetov_arbalet_patriot_k_w"
+  },
+  "sections": []
+}

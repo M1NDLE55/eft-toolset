@@ -1,0 +1,19 @@
+{
+  "title": "5.45x39mm FMJ ammo pack (30 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.45x39mm_FMJ_ammo_pack_(30_pcs)",
+  "revisionId": 367160,
+  "lastEdited": "2026-11-02T23:10:10Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2",
+    "node": "5737330a2459776af32363a1",
+    "id": "item_ammo_box_545x39_30_bpz_fmj"
+  },
+  "sections": []
+}

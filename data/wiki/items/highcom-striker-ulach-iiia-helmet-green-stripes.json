@@ -1,0 +1,35 @@
+{
+  "title": "HighCom Striker ULACH IIIA helmet (Green Stripes)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HighCom_Striker_ULACH_IIIA_helmet_(Green_Stripes)",
+  "revisionId": 348639,
+  "lastEdited": "2026-07-30T22:20:45Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.9 kg",
+    "grid": "2x2",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 1",
+    "material": "Ultra high molecular weight polyethylene",
+    "armor": "4",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "66",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -2% turn speed, -1% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "68bee2d9af253218c00ebbb4",
+    "id": "item_equipment_helmet_ulach_bp2_green_stripes"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Photo album",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Photo_album",
+  "revisionId": 253187,
+  "lastEdited": "2023-11-02T21:53:32Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "1x2",
+    "loot xp": "40",
+    "exam xp": "10",
+    "node": "5d357d6b86f7745b606e3508",
+    "ID": "quest_photoalbum"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Nostalgia from Jaeger"
+    }
+  ]
+}

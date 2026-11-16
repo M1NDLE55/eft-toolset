@@ -1,0 +1,38 @@
+{
+  "title": "CALOK-B hemostatic applicator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/CALOK-B_hemostatic_applicator",
+  "revisionId": 358685,
+  "lastEdited": "2026-09-10T22:56:53Z",
+  "kind": "item",
+  "categories": [
+    "Injury treatment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injury treatment",
+    "weight": "0.043 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL3",
+    "effect": "Removes:, Causes:",
+    "use time": "3s",
+    "node": "5e8488fa988a8701445df1e4",
+    "id": "item_meds_hemostatic"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Ground cache\n- Medbag\n- Sport bag\n- Weapon box (6x2)"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 5 can be obtained as a quest reward from Disease History"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The CALOK-B Hemostatic is based off Celox Medical's \"CELOX-A\"."
+    }
+  ]
+}

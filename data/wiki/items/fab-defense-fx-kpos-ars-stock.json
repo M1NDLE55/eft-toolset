@@ -1,0 +1,28 @@
+{
+  "title": "FAB Defense FX-KPOS ARS stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FAB_Defense_FX-KPOS_ARS_stock",
+  "revisionId": 362361,
+  "lastEdited": "2026-09-29T09:46:43Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "ergonomics": "+8",
+    "accuracy": "+3",
+    "recoil": "-10",
+    "node": "69985e7819f8713b630de3d6",
+    "ID": "stock_base_fab_defense_fx_kpos_ars"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- The Wedge"
+    }
+  ]
+}

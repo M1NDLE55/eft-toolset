@@ -1,0 +1,25 @@
+{
+  "title": "Lighthouse topographic intel maps",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lighthouse_topographic_intel_maps",
+  "revisionId": 333710,
+  "lastEdited": "2026-02-06T00:28:08Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.270 kg",
+    "grid": "2x1",
+    "node": "67c04b420610e91bea05699c",
+    "id": "q_data_map5"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player sided with Lightkeeper."
+    }
+  ]
+}

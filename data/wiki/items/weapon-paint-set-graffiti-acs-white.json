@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Graffiti ACS White)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Graffiti_ACS_White)",
+  "revisionId": 319402,
+  "lastEdited": "2025-10-19T20:31:34Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "685a7df2e6fec655300cc147",
+    "id": "item_camo_graffiti_acs_white"
+  },
+  "sections": []
+}

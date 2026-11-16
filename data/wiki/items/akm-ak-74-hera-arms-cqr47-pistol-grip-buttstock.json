@@ -1,0 +1,22 @@
+{
+  "title": "AKM/AK-74 Hera Arms CQR47 pistol grip/buttstock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AKM/AK-74_Hera_Arms_CQR47_pistol_grip/buttstock",
+  "revisionId": 363484,
+  "lastEdited": "2026-10-07T00:57:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.525 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL4 after completing his task Gunsmith Master - Part 4",
+    "ergonomics": "+13",
+    "recoil": "-23",
+    "node": "619b69037b9de8162902673e",
+    "ID": "stock_ak_hera_arms_cqr47"
+  },
+  "sections": []
+}

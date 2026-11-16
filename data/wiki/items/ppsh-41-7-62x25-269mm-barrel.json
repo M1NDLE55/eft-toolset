@@ -1,0 +1,25 @@
+{
+  "title": "PPSh-41 7.62x25 269mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PPSh-41_7.62x25_269mm_barrel",
+  "revisionId": 306886,
+  "lastEdited": "2025-03-18T13:54:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.51 kg",
+    "grid": "2x1",
+    "ergonomics": "-5",
+    "velocity": "-2",
+    "MOA": "7.22",
+    "recoil": "-3",
+    "Heat": "-3",
+    "Cooling": "+3",
+    "node": "5ea02bb600685063ec28bfa1",
+    "ID": "barrel_ppsh_269mm_762x25"
+  },
+  "sections": []
+}

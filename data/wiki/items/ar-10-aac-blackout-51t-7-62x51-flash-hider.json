@@ -1,0 +1,28 @@
+{
+  "title": "AR-10 AAC Blackout 51T 7.62x51 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_AAC_Blackout_51T_7.62x51_flash_hider",
+  "revisionId": 304914,
+  "lastEdited": "2025-01-31T14:41:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.122 kg",
+    "grid": "1x1",
+    "price": "₽5,840",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-1",
+    "accuracy": "+3",
+    "recoil": "-5",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "loot xp": "20",
+    "exam xp": "5",
+    "node": "5a34fd2bc4a282329a73b4c5",
+    "ID": "muzzle_ar10_aac_blackout_51t_flash_hider_762x51"
+  },
+  "sections": []
+}

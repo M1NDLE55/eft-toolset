@@ -1,0 +1,38 @@
+{
+  "title": "JohnB Liquid DNB glasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/JohnB_Liquid_DNB_glasses",
+  "revisionId": 358626,
+  "lastEdited": "2026-09-10T22:41:15Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.06 kg",
+    "grid": "2x1",
+    "blindness protect": "25%",
+    "penalties": "-1% Ergonomics",
+    "node": "62a09e410b9d3c46de5b6e78",
+    "ID": "item_equipment_glasses_johnb"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Reduces the size and number of raindrops on the players' screen"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On Kaban's bodyguard Gus\n- On Dead Scav\n- On Scavs\n- On Scav Raiders\n- In Buried barrel cache\n- In Ground cache\n- Weapon box (6x2)\n- Weapon box (4x4)\n- Weapon box (6x4)\n- Weapon box (6x6)"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator John B.."
+    }
+  ]
+}

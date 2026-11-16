@@ -1,0 +1,41 @@
+{
+  "title": "Poster tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Poster_tube",
+  "revisionId": 360250,
+  "lastEdited": "2026-09-15T11:53:34Z",
+  "kind": "item",
+  "categories": [
+    "Containers & cases"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Container",
+    "weight": "0.352 kg",
+    "grid": "1x3",
+    "effect": "Provides 80 inventory slots while only taking up 3",
+    "node": "697883474afb9f7de10380ba",
+    "id": "item_container_tube_flyer"
+  },
+  "sections": [
+    {
+      "heading": "Info",
+      "level": 2,
+      "text": "The Poster tube is a container with the purpose of saving space within the player's inventory. It provides 80 inventory slots in a 8x10 grid and only takes up 3 inventory slots itself. Only posters can be stored in it."
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- At the three-story dorms in the \"marked room\"\n- On a industrial shelf in warehouse 3 at the shipping yard\n\n- \"Old Gas Station\":\n  - On the desk inside\n  - At the \"giving tree\" behind it"
+    },
+    {
+      "heading": "Reserve",
+      "level": 3,
+      "text": "- In the \"marked rooms\" RB-BK, RB-PKPM and RB-VO"
+    },
+    {
+      "heading": "Streets of Tarkov",
+      "level": 3,
+      "text": "- In the \"marked room\" at the abandoned factory\n- In the \"marked room\" at Chekannaya 13"
+    }
+  ]
+}

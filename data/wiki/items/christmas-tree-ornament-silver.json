@@ -1,0 +1,32 @@
+{
+  "title": "Christmas tree ornament (Silver)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Christmas_tree_ornament_(Silver)",
+  "revisionId": 347213,
+  "lastEdited": "2026-06-21T11:17:11Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "loot xp": "30",
+    "exam xp": "10",
+    "node": "5df8a72c86f77412640e2e83",
+    "id": "item_barter_valuable_nyball_silver"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- During Escape from Tarkov's 2019, 2020, 2021, 2022, 2023, 2024 and 2025 Christmas Celebration this item spawned throughout Tarkov and was used as a crafting item in the Christmas Tree module in the Hideout.\n- In 2024 it also became a part of Escape from Tarkov: Arenas's Christmas Celebration."
+    }
+  ]
+}

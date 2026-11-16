@@ -1,0 +1,24 @@
+{
+  "title": "AK TDI AKM-L handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_TDI_AKM-L_handguard",
+  "revisionId": 358327,
+  "lastEdited": "2026-09-09T20:09:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.221 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2: Black, Skier LL3: Anodized bronze, Skier LL4: Anodized red",
+    "ergonomics": "+15",
+    "recoil": "+0",
+    "Heat": "-1.4",
+    "Cooling": "+3.2",
+    "node": "5d1b198cd7ad1a604869ad72 5d4aaa54a4b9365392071170 5d4aaa73a4b9365392071175",
+    "ID": "handguard_ak_tdi_akm_l handguard_ak_tdi_akm_l_red handguard_ak_tdi_akm_l_gld"
+  },
+  "sections": []
+}

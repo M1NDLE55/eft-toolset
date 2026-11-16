@@ -1,0 +1,33 @@
+{
+  "title": "AI-2 medkit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AI-2_medkit",
+  "revisionId": 362227,
+  "lastEdited": "2026-09-26T14:57:19Z",
+  "kind": "item",
+  "categories": [
+    "Medkits"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medkit",
+    "weight": "0.135 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL1",
+    "effect": "Max heal per use: 50 Buffs:, Removes: Radiation Exposure , Adds:",
+    "use time": "2s",
+    "node": "5755356824597772cb798962",
+    "id": "medkit"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Medcase\n- Jacket (114 key)\n- Sport bag\n- Wooden crate\n- Dead Scav\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "It's sometimes referred to as \"Cheese\" by players, due to its yellow, thin appearance"
+    }
+  ]
+}

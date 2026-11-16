@@ -1,0 +1,18 @@
+{
+  "title": "5.7x28mm SS198LF ammo pack (50 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.7x28mm_SS198LF_ammo_pack_(50_pcs)",
+  "revisionId": 367202,
+  "lastEdited": "2026-11-02T23:12:20Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "6570252dbfc87b3a34093241",
+    "ID": "item_ammo_box_57x28_50_ss198lf"
+  },
+  "sections": []
+}

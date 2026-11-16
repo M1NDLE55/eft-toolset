@@ -1,0 +1,21 @@
+{
+  "title": "Magpul M-LOK Offset Light Mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Magpul_M-LOK_Offset_Light_Mount",
+  "revisionId": 274245,
+  "lastEdited": "2024-03-16T10:43:13Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.037 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "+0",
+    "node": "6269545d0e57f218e4548ca2",
+    "ID": "mount_m_lok_magpul_offset_light_optic_mount"
+  },
+  "sections": []
+}

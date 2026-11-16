@@ -1,0 +1,29 @@
+{
+  "title": "Strike Industries Hexion Tech Seeker reflex sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Strike_Industries_Hexion_Tech_Seeker_reflex_sight",
+  "revisionId": 361636,
+  "lastEdited": "2026-09-23T23:57:48Z",
+  "kind": "weapon",
+  "categories": [
+    "Compact reflex sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Compact reflex sight",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Ref LL3, after unlocking it in Arena BattlePass Season 3",
+    "zeroing": "25, 50, 100",
+    "sightrange": "150",
+    "modes": "1",
+    "node": "6a675e25dfb2de5e320d454e",
+    "ID": "scope_base_strike_industries_seeker"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

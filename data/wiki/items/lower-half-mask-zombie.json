@@ -1,0 +1,27 @@
+{
+  "title": "Lower half-mask (Zombie)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Lower_half-mask_(Zombie)",
+  "revisionId": 348542,
+  "lastEdited": "2026-07-30T21:58:42Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mask",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 0",
+    "node": "67a5f94e802d287c670bb966",
+    "id": "item_equipment_facecover_skull_half_mask_arena_bp_02"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

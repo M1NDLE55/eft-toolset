@@ -1,0 +1,37 @@
+{
+  "title": "XTG-12 antidote injector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/XTG-12_antidote_injector",
+  "revisionId": 362225,
+  "lastEdited": "2026-09-26T14:56:45Z",
+  "kind": "item",
+  "categories": [
+    "Stimulants"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injector",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "effect": "Buffs:, 6s Delay; 60s Duration:, - Antidote (removes and prevents) Debuffs:, 6s Delay; 60s Duration: - Decreases Health (-5)",
+    "use time": "2s",
+    "node": "5fca138c2a7b221b2852a5c6",
+    "ID": "x-TG-12_antidote"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be used in-raid to remove the effects of the Unknown toxin inflicted by the Cultists and barbed wire in The Labyrinth\n- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Weapon box (6x2)"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Laboratory experiment's area (G12) on the first level (Requires TerraGroup Labs keycard (Black))\n- Sanitar's room in the Laboratory block (G22) on the second level (Requires Keycard with a blue marking)\n- On the floor of the \"Med Hut\" on the main floor, first Level (O11)\n- On the left hand table in the Laboratory quarantine zone (G11) (Requires TerraGroup Labs keycard (Blue))\n- In the laboratories inside the containment block"
+    }
+  ]
+}

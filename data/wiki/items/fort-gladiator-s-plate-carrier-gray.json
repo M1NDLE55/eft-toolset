@@ -1,0 +1,40 @@
+{
+  "title": "FORT Gladiator-S plate carrier (Gray)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FORT_Gladiator-S_plate_carrier_(Gray)",
+  "revisionId": 348713,
+  "lastEdited": "2026-07-30T22:35:09Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "3.31 kg",
+    "grid": "3x3",
+    "trader": "Ref LL4, after unlocking it in Arena BattlePass Season 2",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck",
+    "default plates": "2x",
+    "default plates armor class": "5",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "235",
+    "penalties": "-3% movement speed, -2% turn speed, -2% Ergonomics",
+    "node": "69d3708c8d8009073d0a9df4",
+    "id": "item_equipment_armor_gladiator_s"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

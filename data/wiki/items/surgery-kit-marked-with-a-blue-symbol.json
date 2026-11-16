@@ -1,0 +1,25 @@
+{
+  "title": "Surgery kit marked with a blue symbol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Surgery_kit_marked_with_a_blue_symbol",
+  "revisionId": 352696,
+  "lastEdited": "2026-08-09T20:38:47Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.3 kg",
+    "grid": "2x1",
+    "node": "5efdafc1e70b5e33f86de058",
+    "ID": "quest_surgical_kit_Sanitar"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest Tarkov-Style Diplomacy from Therapist"
+    }
+  ]
+}

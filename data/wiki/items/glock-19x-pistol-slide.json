@@ -1,0 +1,25 @@
+{
+  "title": "Glock 19X pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_19X_pistol_slide",
+  "revisionId": 269067,
+  "lastEdited": "2024-02-05T22:26:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.27 kg",
+    "grid": "2x1",
+    "ergonomics": "+4",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "+5.8",
+    "Cooling": "-2",
+    "node": "63075cc5962d0247b029dc2a",
+    "ID": "reciever_glock_glock_19x_std"
+  },
+  "sections": []
+}

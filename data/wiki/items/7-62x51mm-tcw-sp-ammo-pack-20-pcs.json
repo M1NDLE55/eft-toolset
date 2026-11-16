@@ -1,0 +1,19 @@
+{
+  "title": "7.62x51mm TCW SP ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x51mm_TCW_SP_ammo_pack_(20_pcs)",
+  "revisionId": 367234,
+  "lastEdited": "2026-11-02T23:14:04Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Ref LL2",
+    "node": "65702566bfc87b3a3409324d",
+    "ID": "item_ammo_box_762x51_20_sp"
+  },
+  "sections": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "M1895/MXLR Ranger Point Precision hammer spur extension",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1895/MXLR_Ranger_Point_Precision_hammer_spur_extension",
+  "revisionId": 338763,
+  "lastEdited": "2026-03-17T17:00:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Auxiliary parts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Auxiliary part",
+    "weight": "0.03 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+1.5",
+    "node": "67c5414226265106dd06979c 67ff1eaf8e8db1dcb80ccad8",
+    "ID": "tactical_m1895_ranger_point_precision_hammer_spur_extension tactical_m1895_ranger_point_precision_hammer_spur_extension_blk"
+  },
+  "sections": []
+}

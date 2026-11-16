@@ -1,0 +1,27 @@
+{
+  "title": "SKS gas tube",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SKS_gas_tube",
+  "revisionId": 293096,
+  "lastEdited": "2024-09-29T20:08:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Gas blocks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Gas block",
+    "weight": "0.12 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-0.5",
+    "Cooling": "+0.4",
+    "loot xp": "50",
+    "exam xp": "10",
+    "node": "634f02d7517ccc8a960fc744",
+    "ID": "gas_block_sks_toz_sks_std"
+  },
+  "sections": []
+}

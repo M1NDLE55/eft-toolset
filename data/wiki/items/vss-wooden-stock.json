@@ -1,0 +1,22 @@
+{
+  "title": "VSS wooden stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/VSS_wooden_stock",
+  "revisionId": 292961,
+  "lastEdited": "2024-09-29T19:08:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.59 kg",
+    "grid": "2x1",
+    "trader": "Prapor LL3",
+    "ergonomics": "+8",
+    "recoil": "-22",
+    "node": "578395e82459774a0e553c7b",
+    "ID": "stock_vss_tochmash_vss_std_wood"
+  },
+  "sections": []
+}

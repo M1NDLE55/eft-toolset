@@ -1,0 +1,26 @@
+{
+  "title": "SVDS polymer handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SVDS_polymer_handguard",
+  "revisionId": 341994,
+  "lastEdited": "2026-04-27T23:51:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "price": "₽1,580",
+    "ergonomics": "+12",
+    "recoil": "+0",
+    "Heat": "-0.6",
+    "Cooling": "+0.8",
+    "loot xp": "10",
+    "exam xp": "3",
+    "node": "5c471c6c2e221602b66cd9ae",
+    "ID": "handguard_svd_izhmash_svd_s_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Audio tape with incriminating evidence",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Audio_tape_with_incriminating_evidence",
+  "revisionId": 348035,
+  "lastEdited": "2026-07-19T12:14:15Z",
+  "kind": "item",
+  "categories": [
+    "Audio tapes",
+    "Major TerraGroup evidence"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Audio tape",
+    "weight": "0.065 kg",
+    "grid": "1x1",
+    "duration": "1:38",
+    "node": "688897e094cca0a80b070aed",
+    "ID": "item_info_recorder_tape_witness"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Accidental Witness\n- This is one of the major evidence used in The Ticket"
+    },
+    {
+      "heading": "Transcript",
+      "level": 3,
+      "text": "Deputy Minister Shkurenko: …so. There are no exact dates yet. We think everything will start in about… three months. You and your, um, team should move in right after our signal.\n\nChepyga:\nAnd the cops? I'm not sending my boys to their deaths for nothing.\n\nDeputy Minister Shkurenko: The mayor is aware and will take care of it. The pay is good, considering all your risks. Sponsors pay in foreign currency, just the way we like it.\n\nChepyga: So the old scheme, then?\n\nDeputy Minister Shkurenko: Only this time you'll be able to take control of the whole city. Once the dust settles, obviously.\n\nChepyga: Shit's getting serious. There'll be a lots of bodies.\n\nDeputy Minister Shkurenko: There will be a lot of blood spilled, but not yours and not ours, assuming we act together. Equipment, weapons, medical supplies — everything will be provided. Your tasks are tough, we won't leave you without support.\n\nChepyga: We'll need more people. And waste a couple of local big shots beforehand so they don't start nosing around. It'll be harder if we don't do it soon enough.\n\nDeputy Minister Shkurenko: If you handle it cleanly, I'll help cover it up. After things heat up, we won't have trouble finding volunteers.\n\nChepyga: Aight. When do we get the guns?\n\nShkurenko's assistant: Yaroslav Grigoryevich, look…\n\nChepyga: Hey you! The fuck you doing here?! Come here!"
+    }
+  ]
+}

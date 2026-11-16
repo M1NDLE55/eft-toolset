@@ -1,0 +1,33 @@
+{
+  "title": "NcSTAR ADO P4 Sniper 3-9x42 riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NcSTAR_ADO_P4_Sniper_3-9x42_riflescope",
+  "revisionId": 303315,
+  "lastEdited": "2025-01-14T21:18:39Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.595 kg",
+    "grid": "2x1",
+    "price": "₽51,344",
+    "trader": "Jaeger LL4",
+    "zeroing": "Scope: 50, 100, 150, 200, Reflex sight: 25, 50, 100",
+    "sightrange": "1000",
+    "ergonomics": "-2",
+    "modes": "1",
+    "loot xp": "40",
+    "exam xp": "8",
+    "node": "5dfe6104585a0c3e995c7b82",
+    "ID": "scope_all_ncstar_advance_dual_optic_3_9x_42"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Huntsman Path - Controller"
+    }
+  ]
+}

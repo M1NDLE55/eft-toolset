@@ -1,0 +1,25 @@
+{
+  "title": "Note at the seaport door",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_at_the_seaport_door",
+  "revisionId": 338037,
+  "lastEdited": "2026-03-08T17:47:20Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.002 kg",
+    "grid": "1x1",
+    "node": "68ea987a90ddcd52210da6bd",
+    "id": "item_info_note_terminal_portgates"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- This item is related to the story chapter The Ticket"
+    }
+  ]
+}

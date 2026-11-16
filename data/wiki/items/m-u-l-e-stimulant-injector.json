@@ -1,0 +1,45 @@
+{
+  "title": "M.U.L.E. stimulant injector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M.U.L.E._stimulant_injector",
+  "revisionId": 358689,
+  "lastEdited": "2026-09-10T22:57:16Z",
+  "kind": "item",
+  "categories": [
+    "Stimulants"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injector",
+    "max uses": "1",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "use time": "2s",
+    "effect": "Buffs:, 1s Delay; 900s Duration: - Increases weight limit (+50%) Debuffs:, 1s Delay; 900s Duration: - Decreases health regeneration (-0.1/s)",
+    "storage_medcase": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5ed51652f6c34d2cc26336a1",
+    "id": "M.U.L.E"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from Thirsty - Echo"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Sanitar and his guards"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Laboratory experiment's area (G12) on the first level (Requires TerraGroup Labs keycard (Black))\n- Sanitar's room in the Laboratory block (G22) on the second level (Requires Keycard with a blue marking)\n- On the floor of the \"Med Hut\" on the main floor, first Level (O11)\n- On the left hand table in the Laboratory quarantine zone (G11) (Requires TerraGroup Labs keycard (Blue))\n- In the laboratories inside the containment block"
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 3,
+      "text": "- In the USEC cottage top floor on the middle shelf facing west and on the tool cart in the garage\n- In the hidden drug lab on the tables\n- In the broken wooden crates around building 1 in the water treatment area"
+    }
+  ]
+}

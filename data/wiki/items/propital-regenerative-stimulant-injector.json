@@ -1,0 +1,38 @@
+{
+  "title": "Propital regenerative stimulant injector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Propital_regenerative_stimulant_injector",
+  "revisionId": 361805,
+  "lastEdited": "2026-09-24T13:30:30Z",
+  "kind": "item",
+  "categories": [
+    "Stimulants"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injector",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Therapist LL4",
+    "effect": "Buffs:, Removes: for 240 seconds, for 245 seconds, Adds: for 245 seconds, 1s Delay; 300s Duration: - Increases Metabolism (+20) - Increases Health (+20) - Increases Vitality (+20) - Increases health regeneration (+1/s) Debuffs:, 270s Delay; 30s Duration:, Causes",
+    "use time": "2s",
+    "node": "5c0e530286f7747fa1419862",
+    "ID": "Propital"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    },
+    {
+      "heading": "The Lab",
+      "level": 3,
+      "text": "- Laboratory experiment's area (G12) on the first level (Requires TerraGroup Labs keycard (Black))\n- Sanitar's room in the Laboratory block (G22) on the second level (Requires Keycard with a blue marking)\n- On the floor of the \"Med Hut\" on the main floor, first Level (O11)\n- On the left hand table in the Laboratory quarantine zone (G11) (Requires TerraGroup Labs keycard (Blue))\n- In the laboratories inside the containment block"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 5 can be obtained as a quest reward from Quality Standard (\"Edge of Darkness\" game edition buyers only)"
+    }
+  ]
+}

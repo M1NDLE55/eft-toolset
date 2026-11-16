@@ -1,0 +1,24 @@
+{
+  "title": "FAL original handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FAL_original_handguard",
+  "revisionId": 340853,
+  "lastEdited": "2026-04-22T08:33:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.61 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+15",
+    "recoil": "+0",
+    "Heat": "+3.8",
+    "Cooling": "-2.5",
+    "node": "5b7bed205acfc400161d08cc",
+    "ID": "handguard_fal_fn_original_stamped_steel"
+  },
+  "sections": []
+}

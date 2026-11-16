@@ -1,0 +1,24 @@
+{
+  "title": "CENS ProFlex DX5 tactical earplug",
+  "url": "https://escapefromtarkov.fandom.com/wiki/CENS_ProFlex_DX5_tactical_earplug",
+  "revisionId": 363113,
+  "lastEdited": "2026-10-04T14:51:54Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "In-ear headset",
+    "slot": "Earpiece",
+    "weight": "0.012 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4, after completing his task Insomnia/Counteraction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "69413241b1ce1e5fbb09ed0a",
+    "id": "item_equipment_headset_cens_proflex_dx5"
+  },
+  "sections": []
+}

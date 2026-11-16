@@ -1,0 +1,18 @@
+{
+  "title": "Weapon paint set (Solid Cybergreen)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Weapon_paint_set_(Solid_Cybergreen)",
+  "revisionId": 319406,
+  "lastEdited": "2025-10-19T20:31:48Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "67ea96da51312eb91f06330d",
+    "id": "item_camo_solid_color_cybergreen"
+  },
+  "sections": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Car first aid kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Car_first_aid_kit",
+  "revisionId": 360860,
+  "lastEdited": "2026-09-20T12:51:23Z",
+  "kind": "item",
+  "categories": [
+    "Medkits"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medkit",
+    "weight": "1 kg",
+    "grid": "2x1",
+    "trader": "Therapist LL1, after completing her task Health Care Privacy - Part 1",
+    "effect": "Max heal per use: 70 Buffs:, Removes:, Adds:",
+    "use time": "3s",
+    "loot xp": "25",
+    "exam xp": "10",
+    "node": "590c661e86f7741e566b646a",
+    "id": "item_meds_automedkit"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Healing removes 50 HP from the first aid kit"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Jacket (114 key)\n- Sport bag\n- Wooden crate\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache\n- Medical supply crate"
+    }
+  ]
+}

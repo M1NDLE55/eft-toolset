@@ -1,0 +1,22 @@
+{
+  "title": "SA58 FAB Defense AG-FAL pistol grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SA58_FAB_Defense_AG-FAL_pistol_grip",
+  "revisionId": 340858,
+  "lastEdited": "2026-04-22T08:35:23Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.088 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+5",
+    "recoil": "-1",
+    "node": "5b7d679f5acfc4001a5c4024",
+    "ID": "pistolgrip_fal_fab_defense_ag_fal"
+  },
+  "sections": []
+}

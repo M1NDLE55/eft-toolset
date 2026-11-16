@@ -1,0 +1,26 @@
+{
+  "title": "MPX 9x19 8 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_9x19_8_inch_barrel",
+  "revisionId": 355544,
+  "lastEdited": "2026-08-23T00:40:02Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.25 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-6",
+    "velocity": "+0",
+    "MOA": "5.16",
+    "recoil": "-5.1",
+    "Heat": "+3",
+    "Cooling": "+6",
+    "node": "5894a2c386f77427140b8342",
+    "ID": "barrel_mpx_203mm"
+  },
+  "sections": []
+}

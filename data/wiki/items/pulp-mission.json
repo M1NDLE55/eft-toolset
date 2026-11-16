@@ -1,0 +1,30 @@
+{
+  "title": "Pulp Mission",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Pulp_Mission",
+  "revisionId": 363580,
+  "lastEdited": "2026-10-07T16:13:20Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "6a86e54e5d0c9c998907a9da",
+    "id": "item_barter_flyers_referral_pulp_mission"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This poster is a reference to the movie \"Pulp Fiction\"."
+    }
+  ]
+}

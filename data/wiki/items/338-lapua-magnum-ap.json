@@ -1,0 +1,38 @@
+{
+  "title": ".338 Lapua Magnum AP",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.338_Lapua_Magnum_AP",
+  "revisionId": 306498,
+  "lastEdited": "2025-03-12T12:15:00Z",
+  "kind": "ammo",
+  "categories": [
+    ".338 Lapua Magnum ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.049 kg",
+    "grid": "1x1",
+    "velocity": "849 m/s",
+    "damage": "115",
+    "recoil": "+10",
+    "penetration": "79",
+    "armor damage": "89",
+    "ricochet": "30%",
+    "l bleed chance": "+20",
+    "h bleed chance": "+55",
+    "durability burn": "+140",
+    "heat": "+226",
+    "feedfailure": "Medium",
+    "misfire": "Low",
+    "node": "5fc382a9d724d907e2077dab",
+    "id": "patron_86x70_lapua_ap"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Steyr AUG A3 Corvus Defensio Receiver Rail MOI 30 Slots",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steyr_AUG_A3_Corvus_Defensio_Receiver_Rail_MOI_30_Slots",
+  "revisionId": 305459,
+  "lastEdited": "2025-02-08T21:54:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.18 kg",
+    "grid": "2x1",
+    "trader": "Skier LL4",
+    "ergonomics": "-0.5",
+    "node": "67110dd41ad01bb88705347b",
+    "ID": "mount_aug_corvus_defencio_a3_rail_moi_30_slots"
+  },
+  "sections": []
+}

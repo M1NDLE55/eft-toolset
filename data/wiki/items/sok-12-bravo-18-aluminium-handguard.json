@@ -1,0 +1,25 @@
+{
+  "title": "SOK-12 Bravo-18 aluminium handguard",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SOK-12_Bravo-18_aluminium_handguard",
+  "revisionId": 342107,
+  "lastEdited": "2026-04-28T03:49:27Z",
+  "kind": "weapon",
+  "categories": [
+    "Handguards"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Handguard",
+    "weight": "0.37 kg",
+    "grid": "2x1",
+    "price": "₽13,200",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+16",
+    "recoil": "+0",
+    "Heat": "+4.9",
+    "Cooling": "+8.2",
+    "node": "5f63418ef5750b524b45f116",
+    "ID": "handguard_saiga12_bravo18_saiga_handguard"
+  },
+  "sections": []
+}

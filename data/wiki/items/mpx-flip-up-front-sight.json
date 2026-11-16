@@ -1,0 +1,24 @@
+{
+  "title": "MPX flip-up front sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX_flip-up_front_sight",
+  "revisionId": 327062,
+  "lastEdited": "2025-12-07T05:31:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.13 kg",
+    "grid": "1x1",
+    "price": "₽600",
+    "trader": "Peacekeeper LL1",
+    "sightrange": "300",
+    "ergonomics": "+0",
+    "accuracy": "+0",
+    "node": "5894a73486f77426d259076c",
+    "ID": "sight_front_all_sig_mpx_std"
+  },
+  "sections": []
+}

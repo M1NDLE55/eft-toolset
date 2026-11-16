@@ -1,0 +1,42 @@
+{
+  "title": "AS VAL 9x39 special assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AS_VAL_9x39_special_assault_rifle",
+  "revisionId": 353030,
+  "lastEdited": "2026-08-09T22:30:37Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "2.5 kg",
+    "grid": "5x2",
+    "trader": "Ref LL4, Prapor LL4",
+    "fire modes": "Single, Full Auto",
+    "sightrange": "420",
+    "ergonomics": "59.5",
+    "velocity": "293 m/s",
+    "range": "400 m",
+    "MOA": "3.44",
+    "Weaprecoil": "Vertical: 54, Horizontal: 184",
+    "rof": "900",
+    "caliber": "9x39mm",
+    "node": "57c44b372459772d2b39b8ce",
+    "ID": "weapon_tochmash_val_9x39"
+  },
+  "sections": [
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Anesthesia\n- 1 can be obtained as a quest reward from Stick in the Wheel"
+    },
+    {
+      "heading": "Weapon variants",
+      "level": 2,
+      "text": "| Weapon Variant |\n| AS VAL Kobra |"
+    }
+  ]
+}

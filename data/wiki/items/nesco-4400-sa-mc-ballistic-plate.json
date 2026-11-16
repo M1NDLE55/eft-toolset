@@ -1,0 +1,40 @@
+{
+  "title": "NESCO 4400-SA-MC ballistic plate",
+  "url": "https://escapefromtarkov.fandom.com/wiki/NESCO_4400-SA-MC_ballistic_plate",
+  "revisionId": 361902,
+  "lastEdited": "2026-09-24T15:05:03Z",
+  "kind": "item",
+  "categories": [
+    "Armor plates"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Heavy Armor plate",
+    "weight": "3.6 kg",
+    "grid": "2x2",
+    "material": "Combined Materials",
+    "armor": "6",
+    "armor coverage": "Front Plate , Back Plate",
+    "durability": "60",
+    "penalties": "-2.5% movement speed, -1% turn speed, -1% Ergonomics",
+    "node": "656fa61e94b480b8a500c0e8",
+    "id": "item_equipment_plate_SAPI_NESCO_4400_6class_frontback"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Compatible armor",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Based on the real-world \"Hesco 4400 Level IV Stand Alone Plate\""
+    }
+  ]
+}

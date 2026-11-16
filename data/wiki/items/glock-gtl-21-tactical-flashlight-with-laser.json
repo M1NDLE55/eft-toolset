@@ -1,0 +1,30 @@
+{
+  "title": "Glock GTL 21 tactical flashlight with laser",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_GTL_21_tactical_flashlight_with_laser",
+  "revisionId": 352321,
+  "lastEdited": "2026-08-07T21:35:17Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.086 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "-1",
+    "modes": "3",
+    "loot xp": "23",
+    "exam xp": "10",
+    "node": "5a800961159bd4315e3a1657",
+    "ID": "tactical_all_glock_gl_21_vis_lam"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is red"
+    }
+  ]
+}

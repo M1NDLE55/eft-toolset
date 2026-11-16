@@ -1,0 +1,22 @@
+{
+  "title": "M870 Shockwave Raptor grip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M870_Shockwave_Raptor_grip",
+  "revisionId": 329259,
+  "lastEdited": "2025-12-24T16:33:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.22 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+6",
+    "recoil": "-6",
+    "node": "5a788169c5856700142fdd9e",
+    "ID": "stock_870_shockwave_technologies_raptor_grip"
+  },
+  "sections": []
+}

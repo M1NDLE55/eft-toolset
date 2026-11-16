@@ -1,0 +1,36 @@
+{
+  "title": "KEKTAPE duct tape",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KEKTAPE_duct_tape",
+  "revisionId": 352058,
+  "lastEdited": "2026-08-07T09:28:30Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5e2af29386f7746d4159f077",
+    "ID": "item_barter_building_kektape"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- On the OLI shelves"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This item is a reference to \"Flex Tape\".\n- \"Kek\" is the shortened form of \"kekeke\", a transliteration of an onomatopoetic Korean phrase used online to represent laughter. It's the equivalent to \"hahaha\"."
+    }
+  ]
+}

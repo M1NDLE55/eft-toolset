@@ -1,0 +1,25 @@
+{
+  "title": "Tarkov Herald summary",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Tarkov_Herald_summary",
+  "revisionId": 336362,
+  "lastEdited": "2026-02-21T17:53:13Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "68eaddac9b384b24740f91de",
+    "id": "item_info_note_newspaper_criminal_summary"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter Accidental Witness"
+    }
+  ]
+}

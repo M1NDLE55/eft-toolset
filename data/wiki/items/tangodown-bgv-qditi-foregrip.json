@@ -1,0 +1,22 @@
+{
+  "title": "TangoDown BGV-QDITI foregrip",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TangoDown_BGV-QDITI_foregrip",
+  "revisionId": 356484,
+  "lastEdited": "2026-08-26T02:07:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Foregrips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Foregrip",
+    "weight": "0.136 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4: Black, FDE",
+    "ergonomics": "-2",
+    "recoil": "-3.5",
+    "node": "661e52e29c8b4dadef008577 (Black) 661e53149c8b4dadef008579 (FDE)",
+    "ID": "foregrip_all_tango_down_bgv_qditi foregrip_all_tango_down_bgv_qditi_fde"
+  },
+  "sections": []
+}

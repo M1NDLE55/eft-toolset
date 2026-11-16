@@ -1,0 +1,30 @@
+{
+  "title": "Medical documents",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Medical_documents",
+  "revisionId": 359033,
+  "lastEdited": "2026-09-13T20:07:48Z",
+  "kind": "item",
+  "categories": [
+    "BattlePass documents"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "BattlePass documents",
+    "weight": "0.26 kg",
+    "grid": "1x2",
+    "node": "6a3182dc6cd8de21cf0a3a7d",
+    "ID": "Item_barter_info_medicine"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used to unlock rewards from the Season 1: KORD BREACH BattlePass."
+    }
+  ]
+}

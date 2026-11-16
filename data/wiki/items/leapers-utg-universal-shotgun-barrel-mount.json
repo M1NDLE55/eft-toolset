@@ -1,0 +1,21 @@
+{
+  "title": "Leapers UTG Universal Shotgun Barrel Mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Leapers_UTG_Universal_Shotgun_Barrel_Mount",
+  "revisionId": 305458,
+  "lastEdited": "2025-02-08T21:54:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.125 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-1",
+    "node": "6710cea62bb09af72f0e6bf8",
+    "ID": "mount_12g_leapers_utg_universal_shotgun_barrel_mount_3_slot"
+  },
+  "sections": []
+}

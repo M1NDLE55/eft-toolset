@@ -1,0 +1,20 @@
+{
+  "title": "HK G36 side handguard rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_G36_side_handguard_rail",
+  "revisionId": 253548,
+  "lastEdited": "2023-11-02T21:56:32Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "node": "62444cd3674028188b052799",
+    "ID": "mount_g36_hk_side_rail_std"
+  },
+  "sections": []
+}

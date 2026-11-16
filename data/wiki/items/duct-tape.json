@@ -1,0 +1,26 @@
+{
+  "title": "Duct tape",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Duct_tape",
+  "revisionId": 344969,
+  "lastEdited": "2026-05-26T13:07:21Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "57347c1124597737fb1379e3",
+    "id": "ducttape"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Drawer\n- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate\n- Jacket"
+    }
+  ]
+}

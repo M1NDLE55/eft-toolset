@@ -1,0 +1,31 @@
+{
+  "title": "LBT-2670 Slim Field Med Pack (Black)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LBT-2670_Slim_Field_Med_Pack_(Black)",
+  "revisionId": 312319,
+  "lastEdited": "2025-04-28T15:41:51Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "1.92 kg",
+    "grid": "4x5",
+    "price": "₽90000",
+    "penalties": "-4% movement speed, -1% turn speed, -6% Ergonomics",
+    "slots": "6x8 grid (48 slots)",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5e4abc6786f77406812bd572",
+    "ID": "item_equipment_backpack_medpack"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only meds and medical supplies can be stored in it."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "PU 3.5x riflescope",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PU_3.5x_riflescope",
+  "revisionId": 316821,
+  "lastEdited": "2025-08-11T09:45:50Z",
+  "kind": "weapon",
+  "categories": [
+    "Scopes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Scope",
+    "weight": "0.4 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "zeroing": "50, 100, 150, 200, 250, 300",
+    "sightrange": "500",
+    "ergonomics": "-5",
+    "modes": "1",
+    "node": "5b3f7c1c5acfc40dc5296b1d",
+    "ID": "scope_base_progress_pu_3,5x"
+  },
+  "sections": []
+}

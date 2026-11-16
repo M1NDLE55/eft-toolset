@@ -1,0 +1,38 @@
+{
+  "title": "7.62x54mm R T-46M gzh",
+  "url": "https://escapefromtarkov.fandom.com/wiki/7.62x54mm_R_T-46M_gzh",
+  "revisionId": 322791,
+  "lastEdited": "2025-11-18T21:20:54Z",
+  "kind": "ammo",
+  "categories": [
+    "7.62x54mmR ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Round",
+    "weight": "0.025 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL3",
+    "velocity": "800 m/s",
+    "damage": "82",
+    "accuracy": "-1",
+    "recoil": "-5",
+    "penetration": "41",
+    "armor damage": "83",
+    "ricochet": "30%",
+    "heat": "+105.6",
+    "feedfailure": "Very low",
+    "misfire": "Low",
+    "effects": "Tracer (green)",
+    "node": "5e023cf8186a883be655e54f",
+    "id": "patron_762х54R_T46M"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

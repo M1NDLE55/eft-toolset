@@ -1,0 +1,20 @@
+{
+  "title": "M1911A1 side grips",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1911A1_side_grips",
+  "revisionId": 342089,
+  "lastEdited": "2026-04-28T03:40:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Pistol grips"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Pistol grip",
+    "weight": "0.270 kg",
+    "grid": "1x1",
+    "ergonomics": "+2",
+    "node": "5e81c6bf763d9f754677beff",
+    "ID": "pistolgrip_m1911_colt_m1911a1_std"
+  },
+  "sections": []
+}

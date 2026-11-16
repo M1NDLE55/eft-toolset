@@ -1,0 +1,28 @@
+{
+  "title": "FN P90 5.7x28 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_P90_5.7x28_upper_receiver",
+  "revisionId": 215787,
+  "lastEdited": "2022-12-04T10:08:34Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.31 kg",
+    "grid": "2x1",
+    "price": "₽2,400",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-5",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-4.9",
+    "Cooling": "+5.2",
+    "loot xp": "5",
+    "node": "5cc70102e4a949035e43ba74",
+    "ID": "reciever_p90_fn_p90_std"
+  },
+  "sections": []
+}

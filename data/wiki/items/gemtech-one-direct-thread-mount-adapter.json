@@ -1,0 +1,24 @@
+{
+  "title": "Gemtech ONE Direct Thread Mount adapter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gemtech_ONE_Direct_Thread_Mount_adapter",
+  "revisionId": 304933,
+  "lastEdited": "2025-01-31T14:46:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.11 kg",
+    "grid": "1x1",
+    "price": "₽3,970",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+0",
+    "loot xp": "5",
+    "exam xp": "5",
+    "node": "5c7954d52e221600106f4cc7",
+    "ID": "muzzle_all_gemtech_direct_mount_multi"
+  },
+  "sections": []
+}

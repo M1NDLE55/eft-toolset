@@ -1,0 +1,21 @@
+{
+  "title": "B&T QD NAR mount for Aimpoint ACRO",
+  "url": "https://escapefromtarkov.fandom.com/wiki/B%26T_QD_NAR_mount_for_Aimpoint_ACRO",
+  "revisionId": 318875,
+  "lastEdited": "2025-10-02T21:00:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+0",
+    "node": "615d8d878004cc50514c3233",
+    "ID": "mount_all_b&t_acro_nar_mount_39mm"
+  },
+  "sections": []
+}

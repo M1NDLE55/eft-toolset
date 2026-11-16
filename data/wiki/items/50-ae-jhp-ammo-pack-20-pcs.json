@@ -1,0 +1,18 @@
+{
+  "title": ".50 AE JHP ammo pack (20 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/.50_AE_JHP_ammo_pack_(20_pcs)",
+  "revisionId": 367107,
+  "lastEdited": "2026-11-02T23:07:20Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "676009fe8f1fee08740f947c",
+    "ID": "item_ammo_box_127x33_20_jhp"
+  },
+  "sections": []
+}

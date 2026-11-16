@@ -1,0 +1,22 @@
+{
+  "title": "Glock SAI 9x19 thread protector",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_SAI_9x19_thread_protector",
+  "revisionId": 337476,
+  "lastEdited": "2026-03-05T23:13:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Muzzle adapters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Muzzle adapter",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "+2",
+    "Dura Burn": "-3",
+    "node": "5a6b59a08dc32e000b452fb7",
+    "ID": "muzzle_glock_salient_arms_thread_protector_9x19"
+  },
+  "sections": []
+}

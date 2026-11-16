@@ -1,0 +1,28 @@
+{
+  "title": "Glock ZEV Tech HEX Spartan RMR pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Glock_ZEV_Tech_HEX_Spartan_RMR_pistol_slide",
+  "revisionId": 338498,
+  "lastEdited": "2026-03-15T15:06:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.19 kg",
+    "grid": "2x1",
+    "price": "₽22,400",
+    "trader": "Mechanic LL3",
+    "ergonomics": "+10",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "-7",
+    "Dura Burn": "-5",
+    "Heat": "-1.7",
+    "Cooling": "+7.4",
+    "node": "5a71e4f48dc32e001207fb26",
+    "ID": "reciever_glock_zev_tech_spartan_rmr_cut_gen_3"
+  },
+  "sections": []
+}

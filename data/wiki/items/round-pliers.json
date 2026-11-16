@@ -1,0 +1,28 @@
+{
+  "title": "Round pliers",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Round_pliers",
+  "revisionId": 364983,
+  "lastEdited": "2026-10-25T21:58:09Z",
+  "kind": "item",
+  "categories": [
+    "Tools"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tool",
+    "weight": "0.25 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5d1b31ce86f7742523398394",
+    "id": "item_barter_tools_pliers_round"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Toolbox\n- Dead Scav\n- Ground cache\n- Buried barrel cache\n- Technical supply crate"
+    }
+  ]
+}

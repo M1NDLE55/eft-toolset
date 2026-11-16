@@ -1,0 +1,22 @@
+{
+  "title": "AK Custom Arms ST-EF 74 skeleton stock extension",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK_Custom_Arms_ST-EF_74_skeleton_stock_extension",
+  "revisionId": 290742,
+  "lastEdited": "2024-09-04T19:10:59Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.055 kg",
+    "grid": "1x1",
+    "trader": "Skier LL4",
+    "ergonomics": "+1",
+    "recoil": "-2",
+    "node": "6494094948796d891603e59f",
+    "ID": "stock_ak_custom_arms_st_ef74_butt_extension"
+  },
+  "sections": []
+}

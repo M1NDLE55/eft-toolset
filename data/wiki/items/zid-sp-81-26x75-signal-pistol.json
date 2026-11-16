@@ -1,0 +1,42 @@
+{
+  "title": "ZiD SP-81 26x75 signal pistol",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ZiD_SP-81_26x75_signal_pistol",
+  "revisionId": 340907,
+  "lastEdited": "2026-04-22T21:33:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Signal pistols",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Signal pistol",
+    "slot": "Secondary",
+    "weight": "0.6 kg",
+    "grid": "2x1",
+    "trader": "Ref LL2",
+    "fire modes": "Single",
+    "sightrange": "100",
+    "ergonomics": "51",
+    "velocity": "0 m/s",
+    "range": "50 m",
+    "MOA": "24.06",
+    "Weaprecoil": "Vertical: 170, Horizontal: 400",
+    "rof": "30",
+    "caliber": "26x75mm",
+    "node": "620109578d82e67e7911abf2",
+    "ID": "weapon_zid_sp81_26x75"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be used to call in an airdrop when firing a red flare cartridge.\n- Can be used to open flare extractions when firing a green flare cartridge.\n- The pistol is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a Quest Reward from Cease Fire!"
+    }
+  ]
+}

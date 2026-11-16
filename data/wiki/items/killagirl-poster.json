@@ -1,0 +1,25 @@
+{
+  "title": "Killagirl poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Killagirl_poster",
+  "revisionId": 355952,
+  "lastEdited": "2026-08-25T12:27:02Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "68f0f8a1375a44d1ed01ea4b",
+    "id": "item_barter_flyers_prestige_5"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

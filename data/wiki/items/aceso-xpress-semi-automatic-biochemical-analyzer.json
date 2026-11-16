@@ -1,0 +1,36 @@
+{
+  "title": "Aceso Xpress semi-automatic biochemical analyzer",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Aceso_Xpress_semi-automatic_biochemical_analyzer",
+  "revisionId": 348871,
+  "lastEdited": "2026-08-02T02:04:35Z",
+  "kind": "item",
+  "categories": [
+    "Medical supplies"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Medical supply",
+    "weight": "5.1 kg",
+    "grid": "2x2",
+    "effect": "Generic loot item",
+    "node": "69bb435ff609db77390b0e25",
+    "id": "item_ice_Aceso_Xpress"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be put inside secure containers\n- Only 10 can be held in a raid inventory at the same time"
+    },
+    {
+      "heading": "Icebreaker",
+      "level": 3,
+      "text": "- Inside the med storage room on level 1\n\n- In the med office room on level 1\n\n- On a table in draw room on level 1\n\n- In the gym on level 3\n\n- On the desk in the laboratory office on level 1\n- Inside room 32 on level 6\n\n- Inside room 03 on level 1\n\n- Inside the room 01 on level 1\n\n- Inside the room 02 on level 1\n\n- Under a fallen desk chair in the staircase at level 4"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: This item is based on the Piccolo Xpress chemistry analyzer."
+    }
+  ]
+}

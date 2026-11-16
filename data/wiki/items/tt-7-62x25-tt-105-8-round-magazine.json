@@ -1,0 +1,28 @@
+{
+  "title": "TT 7.62x25 tt-105 8-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/TT_7.62x25_tt-105_8-round_magazine",
+  "revisionId": 338861,
+  "lastEdited": "2026-03-18T09:41:10Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "price": "₽900",
+    "trader": "Prapor LL1",
+    "ergonomics": "-1",
+    "checkaccuracy": "1",
+    "feedfailure": "Very low",
+    "capacity": "8",
+    "caliber": "7.62x25mm Tokarev",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "571a29dc2459771fb2755a6a",
+    "ID": "mag_tt_toz_std_762x25tt_8"
+  },
+  "sections": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Sacred Amulet from room 314",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Sacred_Amulet_from_room_314",
+  "revisionId": 348806,
+  "lastEdited": "2026-08-01T14:18:30Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "6908edf0a99bfa6b670f825f",
+    "id": "quest_cultist_amulet1"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the story chapter The Ticket if the player sided with Lightkeeper."
+    }
+  ]
+}

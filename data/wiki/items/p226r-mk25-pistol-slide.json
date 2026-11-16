@@ -1,0 +1,26 @@
+{
+  "title": "P226R MK25 pistol slide",
+  "url": "https://escapefromtarkov.fandom.com/wiki/P226R_MK25_pistol_slide",
+  "revisionId": 320622,
+  "lastEdited": "2025-10-30T20:26:19Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Slide",
+    "weight": "0.19 kg",
+    "grid": "2x1",
+    "trader": "Mechanic LL1",
+    "ergonomics": "+3",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "-3.8",
+    "Cooling": "+5.9",
+    "node": "56d5a407d2720bb3418b456b",
+    "ID": "reciever_p226_sig_p226r_std"
+  },
+  "sections": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Flash drive marked with blue tape",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Flash_drive_marked_with_blue_tape",
+  "revisionId": 288845,
+  "lastEdited": "2024-08-27T19:16:27Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "loot xp": "30",
+    "exam xp": "10",
+    "node": "5eff135be0d3331e9d282b7b",
+    "ID": "item_flash_quest_sanitar"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest TerraGroup Employee from Peacekeeper"
+    }
+  ]
+}

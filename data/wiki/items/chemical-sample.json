@@ -1,0 +1,25 @@
+{
+  "title": "Chemical sample",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Chemical_sample",
+  "revisionId": 298482,
+  "lastEdited": "2024-12-22T12:51:51Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "669fac549b0ce3feae01a137",
+    "id": "item_quest_chimicalsample"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest All Is Revealed from Therapist"
+    }
+  ]
+}

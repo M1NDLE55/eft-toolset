@@ -1,0 +1,27 @@
+{
+  "title": "UZI 9x19 259mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/UZI_9x19_259mm_barrel",
+  "revisionId": 343217,
+  "lastEdited": "2026-05-03T21:21:31Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.288 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "-4",
+    "velocity": "+1",
+    "MOA": "4.4",
+    "recoil": "-6.5",
+    "Dura Burn": "+0",
+    "Heat": "-2",
+    "Cooling": "+4",
+    "node": "6698c8ab29e062525d0ad8ab",
+    "ID": "barrel_uzi_iwi_259mm_9x19"
+  },
+  "sections": []
+}

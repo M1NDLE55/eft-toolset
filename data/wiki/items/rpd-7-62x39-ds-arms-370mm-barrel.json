@@ -1,0 +1,27 @@
+{
+  "title": "RPD 7.62x39 DS Arms 370mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/RPD_7.62x39_DS_Arms_370mm_barrel",
+  "revisionId": 342850,
+  "lastEdited": "2026-04-30T21:47:09Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.1 kg",
+    "grid": "3x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-16",
+    "velocity": "-7",
+    "MOA": "1.89",
+    "recoil": "-6.7",
+    "Dura Burn": "-9",
+    "Heat": "-4.8",
+    "Cooling": "-3.5",
+    "node": "6830601984a12bb973021fc2",
+    "ID": "barrel_rpd_ds_arms_370mm_762x39"
+  },
+  "sections": []
+}

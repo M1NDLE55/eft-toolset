@@ -1,0 +1,21 @@
+{
+  "title": "PU 3.5x ring scope mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/PU_3.5x_ring_scope_mount",
+  "revisionId": 253212,
+  "lastEdited": "2023-11-02T21:53:44Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.02 kg",
+    "grid": "1x1",
+    "trader": "Prapor LL1",
+    "ergonomics": "-1",
+    "node": "5b3f7c005acfc4704b4a1de8",
+    "ID": "mount_kochetov_progress_pu_base"
+  },
+  "sections": []
+}

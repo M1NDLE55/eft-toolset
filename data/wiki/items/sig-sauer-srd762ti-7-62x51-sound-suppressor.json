@@ -1,0 +1,25 @@
+{
+  "title": "SIG Sauer SRD762Ti 7.62x51 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_SRD762Ti_7.62x51_sound_suppressor",
+  "revisionId": 342120,
+  "lastEdited": "2026-04-28T03:59:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.46 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-13",
+    "velocity": "+0.8",
+    "recoil": "-2",
+    "Dura Burn": "+40",
+    "Heat": "+14",
+    "node": "5fbe7618d6fa9c00c571bb6c",
+    "ID": "silencer_all_sig_srd_762_762x51"
+  },
+  "sections": []
+}

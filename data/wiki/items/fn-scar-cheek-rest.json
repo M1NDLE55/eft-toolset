@@ -1,0 +1,20 @@
+{
+  "title": "FN SCAR cheek rest",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FN_SCAR_cheek_rest",
+  "revisionId": 340391,
+  "lastEdited": "2026-04-20T14:48:22Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.06 kg",
+    "grid": "2x1",
+    "ergonomics": "+1",
+    "node": "618167441cb55961fa0fdc71 61825d24d3a39d50044c13af",
+    "ID": "stock_mk16_fn_scar_folding_stock_cheek stock_mk16_fn_scar_folding_stock_cheek_fde"
+  },
+  "sections": []
+}

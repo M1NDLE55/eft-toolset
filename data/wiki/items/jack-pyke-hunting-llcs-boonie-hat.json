@@ -1,0 +1,22 @@
+{
+  "title": "Jack Pyke Hunting LLCS boonie hat",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Jack_Pyke_Hunting_LLCS_boonie_hat",
+  "revisionId": 356959,
+  "lastEdited": "2026-08-30T10:10:26Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.18 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "Yes",
+    "BlocksFaceCover": "Yes",
+    "node": "618aef6d0a5a59657e5f55ee",
+    "id": "item_equipment_head_panama_jackpyke"
+  },
+  "sections": []
+}

@@ -1,0 +1,39 @@
+{
+  "title": "FORT Redut-T5 body armor (Smog)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/FORT_Redut-T5_body_armor_(Smog)",
+  "revisionId": 367811,
+  "lastEdited": "2026-11-10T13:15:30Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "8.1 kg",
+    "grid": "4x4",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Throat, Back neck, Shoulders, Groin, Buttocks",
+    "default plates": "2x , 2x",
+    "default plates armor class": "Front: 5, Back: 5, Sides: 6",
+    "default plates armor coverage": "Front Plate, Back Plate, Sides",
+    "durability": "354",
+    "penalties": "-8% movement speed, -3% turn speed, -5% Ergonomics",
+    "node": "5ca21c6986f77479963115a7",
+    "id": "item_equipment_armor_redut_t"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate\n\nLeft Plate:\nLeft Plate\n\nRight Plate:\nRight Plate"
+    }
+  ]
+}

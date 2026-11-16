@@ -1,0 +1,38 @@
+{
+  "title": "40x46mm M433 (HEDP) grenade",
+  "url": "https://escapefromtarkov.fandom.com/wiki/40x46mm_M433_(HEDP)_grenade",
+  "revisionId": 313034,
+  "lastEdited": "2025-05-03T13:55:13Z",
+  "kind": "ammo",
+  "categories": [
+    "40x46mm ammunition",
+    "Rounds"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Grenade launcher cartridge",
+    "weight": "0.35 kg",
+    "grid": "1x1",
+    "velocity": "76 m/s",
+    "damage": "199",
+    "penetration": "1",
+    "armor damage": "95",
+    "ricochet": "0",
+    "fragmentation": "0",
+    "misfire": "Low",
+    "fuze time": "0.26s",
+    "explosion radius": "1-5 m",
+    "explosion strength": "90",
+    "fragments count": "15x",
+    "effects": "Subsonic, Explosive",
+    "node": "5f0c892565703e5c461894e9",
+    "id": "patron_40x46_m433"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

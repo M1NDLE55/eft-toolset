@@ -1,0 +1,24 @@
+{
+  "title": "MPX/MCX PMM ULSS stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MPX/MCX_PMM_ULSS_stock",
+  "revisionId": 337613,
+  "lastEdited": "2026-03-06T00:25:20Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.462 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "+16",
+    "recoil": "-20",
+    "loot xp": "10",
+    "exam xp": "2",
+    "node": "5c5db6f82e2216003a0fe914",
+    "ID": "stock_mpx_pmm_ulss"
+  },
+  "sections": []
+}

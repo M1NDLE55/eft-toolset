@@ -1,0 +1,21 @@
+{
+  "title": "SR-2M Zenit B-17 mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SR-2M_Zenit_B-17_mount",
+  "revisionId": 253068,
+  "lastEdited": "2023-11-02T21:51:49Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.04 kg",
+    "grid": "1x1",
+    "trader": "Skier LL2",
+    "ergonomics": "-1",
+    "node": "62e281349ecd3f493f6df954",
+    "ID": "mount_sr2m_zenit_b17"
+  },
+  "sections": []
+}

@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 Magpul CTR Carbine stock",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_Magpul_CTR_Carbine_stock",
+  "revisionId": 350003,
+  "lastEdited": "2026-08-05T02:43:25Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.226 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+10",
+    "recoil": "-21",
+    "node": "5d135e83d7ad1a21b83f42d8 5d135ecbd7ad1a21c176542e",
+    "ID": "stock_ar15_magpul_ctr_carbine stock_ar15_magpul_ctr_carbine_fde"
+  },
+  "sections": []
+}

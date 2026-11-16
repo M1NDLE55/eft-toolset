@@ -1,0 +1,26 @@
+{
+  "title": "AR-10 SureFire Warden 7.62x51 blast regulator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-10_SureFire_Warden_7.62x51_blast_regulator",
+  "revisionId": 340396,
+  "lastEdited": "2026-04-20T14:52:06Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.21 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-3.5",
+    "accuracy": "+2",
+    "recoil": "-10.5",
+    "Dura Burn": "-2",
+    "Heat": "-0.9",
+    "loot xp": "20",
+    "node": "615d8eb350224f204c1da1cf",
+    "ID": "muzzle_ar10_surefire_warden_direct_thread_blast_regulator_762x51"
+  },
+  "sections": []
+}

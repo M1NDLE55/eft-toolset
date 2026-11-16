@@ -1,0 +1,32 @@
+{
+  "title": "AR-15 5.56x45 SureFire MAG5-60 STANAG 60-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_5.56x45_SureFire_MAG5-60_STANAG_60-round_magazine",
+  "revisionId": 352961,
+  "lastEdited": "2026-08-09T22:10:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.18 kg",
+    "grid": "1x2",
+    "ergonomics": "-9",
+    "checkaccuracy": "No",
+    "checkmodifier": "+10",
+    "loadmodifier": "+10",
+    "feedfailure": "High",
+    "capacity": "60",
+    "caliber": "5.56x45mm NATO, .300 Blackout",
+    "node": "544a37c44bdc2d25388b4567",
+    "ID": "mag_stanag_surefire_mag5_556x45_60"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

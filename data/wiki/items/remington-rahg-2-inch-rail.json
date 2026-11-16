@@ -1,0 +1,21 @@
+{
+  "title": "Remington RAHG 2 inch rail",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Remington_RAHG_2_inch_rail",
+  "revisionId": 322127,
+  "lastEdited": "2025-11-17T01:54:46Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.05 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL2",
+    "ergonomics": "-0.15",
+    "node": "5c0102aa0db834001b734ba1",
+    "ID": "mount_rahg_remington_2_inch_rahg_rail_section"
+  },
+  "sections": []
+}

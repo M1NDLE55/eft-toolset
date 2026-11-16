@@ -1,0 +1,29 @@
+{
+  "title": "SIG Sauer SRD9 9x19 sound suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/SIG_Sauer_SRD9_9x19_sound_suppressor",
+  "revisionId": 337615,
+  "lastEdited": "2026-03-06T00:26:04Z",
+  "kind": "weapon",
+  "categories": [
+    "Suppressors"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Suppressor",
+    "weight": "0.255 kg",
+    "grid": "2x1",
+    "price": "₽28,600",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "-5",
+    "velocity": "+0.7",
+    "recoil": "-1",
+    "Dura Burn": "+50",
+    "Heat": "+12",
+    "Cooling": "+3",
+    "loot xp": "30",
+    "exam xp": "4",
+    "node": "5c6165902e22160010261b28",
+    "ID": "silencer_all_sig_srd_9_9x19"
+  },
+  "sections": []
+}

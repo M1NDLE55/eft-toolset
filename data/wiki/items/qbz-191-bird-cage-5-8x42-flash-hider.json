@@ -1,0 +1,22 @@
+{
+  "title": "QBZ-191 Bird Cage 5.8x42 flash hider",
+  "url": "https://escapefromtarkov.fandom.com/wiki/QBZ-191_Bird_Cage_5.8x42_flash_hider",
+  "revisionId": 357308,
+  "lastEdited": "2026-09-01T11:26:57Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.064 kg",
+    "grid": "1x1",
+    "trader": "Skier LL3",
+    "ergonomics": "-0.5",
+    "recoil": "-6.5",
+    "node": "69f9eca1ddaf0c377d0eb74e",
+    "ID": "muzzle_qbz191_norinco_191_std_58x42"
+  },
+  "sections": []
+}

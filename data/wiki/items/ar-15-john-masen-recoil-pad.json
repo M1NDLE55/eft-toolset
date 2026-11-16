@@ -1,0 +1,22 @@
+{
+  "title": "AR-15 John Masen Recoil Pad",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AR-15_John_Masen_Recoil_Pad",
+  "revisionId": 354906,
+  "lastEdited": "2026-08-17T18:00:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Stocks & chassis"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Stock",
+    "weight": "0.07 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+2",
+    "recoil": "-1",
+    "node": "68a63c998e1fe612970728fe",
+    "ID": "stock_ar15_john_masen_n1_recoil_pad"
+  },
+  "sections": []
+}

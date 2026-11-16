@@ -1,0 +1,23 @@
+{
+  "title": "KAC Folding rear sight",
+  "url": "https://escapefromtarkov.fandom.com/wiki/KAC_Folding_rear_sight",
+  "revisionId": 322137,
+  "lastEdited": "2025-11-17T01:59:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Iron sights"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Iron sight",
+    "weight": "0.08 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL2",
+    "ergonomics": "+0.5",
+    "sightrange": "300",
+    "accuracy": "+0",
+    "node": "5c1780312e221602b66cc189",
+    "ID": "sight_rear_all_kac_folding_sight"
+  },
+  "sections": []
+}

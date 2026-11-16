@@ -1,0 +1,26 @@
+{
+  "title": "HK MP5K 9x19 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/HK_MP5K_9x19_upper_receiver",
+  "revisionId": 318667,
+  "lastEdited": "2025-09-27T01:00:14Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.45 kg",
+    "grid": "2x1",
+    "trader": "Peacekeeper LL1",
+    "ergonomics": "+6",
+    "velocity": "+0",
+    "accuracy": "+0",
+    "recoil": "+0",
+    "Heat": "+1.8",
+    "Cooling": "+12.3",
+    "node": "5d2f261548f03576f500e7b7",
+    "ID": "reciever_mp5k_hk_kurtz_std"
+  },
+  "sections": []
+}

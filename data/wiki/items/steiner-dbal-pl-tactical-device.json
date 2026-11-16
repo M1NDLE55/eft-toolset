@@ -1,0 +1,30 @@
+{
+  "title": "Steiner DBAL-PL tactical device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Steiner_DBAL-PL_tactical_device",
+  "revisionId": 352301,
+  "lastEdited": "2026-08-07T21:25:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.153 kg",
+    "grid": "1x1",
+    "price": "₽13,500",
+    "trader": "Peacekeeper LL3",
+    "ergonomics": "-1",
+    "modes": "6",
+    "loot xp": "33",
+    "node": "5d2369418abbc306c62e0c80",
+    "ID": "tactical_all_steiner_9021_dbal_pl"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is green"
+    }
+  ]
+}

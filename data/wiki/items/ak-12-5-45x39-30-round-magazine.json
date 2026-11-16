@@ -1,0 +1,29 @@
+{
+  "title": "AK-12 5.45x39 30-round magazine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AK-12_5.45x39_30-round_magazine",
+  "revisionId": 353012,
+  "lastEdited": "2026-08-09T22:25:42Z",
+  "kind": "weapon",
+  "categories": [
+    "Magazines"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Magazine",
+    "weight": "0.19 kg",
+    "grid": "1x2",
+    "trader": "Prapor LL3",
+    "ergonomics": "-0.5",
+    "checkaccuracy": "1",
+    "checkmodifier": "-15",
+    "loadmodifier": "-7.5",
+    "feedfailure": "Very low",
+    "capacity": "30",
+    "caliber": "5.45x39mm",
+    "loot xp": "15",
+    "exam xp": "2",
+    "node": "5bed61680db834001d2c45ab",
+    "ID": "mag_ak_izhmash_ak12_std_545x39_30"
+  },
+  "sections": []
+}

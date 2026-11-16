@@ -1,0 +1,45 @@
+{
+  "title": "Surv12 field surgical kit",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Surv12_field_surgical_kit",
+  "revisionId": 358700,
+  "lastEdited": "2026-09-10T22:58:05Z",
+  "kind": "item",
+  "categories": [
+    "Injury treatment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Injury treatment",
+    "weight": "1.2 kg",
+    "grid": "3x1",
+    "trader": "Jaeger LL3, after completing his task The Survivalist Path - Tough Guy",
+    "use time": "20s",
+    "effect": "Removes:, (1) destroyed body part per use.",
+    "storage_medcase": "Yes",
+    "storage_securecont": "Yes",
+    "node": "5d02797c86f774203f38e30a",
+    "id": "survival_first_aid_rollup_kit"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The Surv12 field surgical kit restores a destroyed (\"blacked-out\") body part to 1 HP. The player can use medkits afterwards, to heal the body part further.\n- Destroyed parts that are restored with a Surv12 field surgical kit will only have 60% - 72% of their maximum HP for the remainder of the raid. If the body part is destroyed a subsequent time, performing surgery again will lower the maximum HP of that body part further.\n- Neither the head nor the thorax can be repaired after being destroyed.\n- The Surv12 field surgical kit will not only restore a destroyed body part, but will simultaneously remove a fracture from that same body part when used.\n- The kit is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Medbag\n- Sport bag\n- Weapon box (6x2)\n- Ground cache\n- Buried barrel cache"
+    },
+    {
+      "heading": "Quest Rewards",
+      "level": 2,
+      "text": "- 2 can be obtained as a quest reward from completing The Huntsman Path - Sadist"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References: The surgical kit is modeled after the real life product 12 Survivors' First Aid Rollup Kit."
+    }
+  ]
+}

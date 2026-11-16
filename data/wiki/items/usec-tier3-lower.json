@@ -1,0 +1,22 @@
+{
+  "title": "USEC TIER3 lower",
+  "url": "https://escapefromtarkov.fandom.com/wiki/USEC_TIER3_lower",
+  "revisionId": 274194,
+  "lastEdited": "2024-03-14T23:10:15Z",
+  "kind": "item",
+  "categories": [
+    "USEC lower-body clothing"
+  ],
+  "redirects": [],
+  "infobox": {
+    "node": "5fcf940bce1ba36a513bb9cc",
+    "ID": "usec_lower_tier3"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "Easter eggs and References: The pants are modeled on the ZAPT Tactical Molle Ripstop Combat Trousers."
+    }
+  ]
+}

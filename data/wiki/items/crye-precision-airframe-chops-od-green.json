@@ -1,0 +1,27 @@
+{
+  "title": "Crye Precision AirFrame Chops (OD Green)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Crye_Precision_AirFrame_Chops_(OD_Green)",
+  "revisionId": 347728,
+  "lastEdited": "2026-07-08T21:29:09Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.45 kg",
+    "grid": "2x2",
+    "armor": "3",
+    "armor coverage": "Ears, Jaws",
+    "durability": "30",
+    "material": "Aluminium",
+    "penalties": "-1% turn speed, -1% Ergonomics, Low sound reduction",
+    "BlocksHeadset": "Yes",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "69cbd33bc293038df7002951",
+    "ID": "item_equipment_helmet_crye_airframe_chops_olive_drab_green"
+  },
+  "sections": []
+}

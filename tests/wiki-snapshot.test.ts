@@ -28,6 +28,16 @@ describe("the committed wiki snapshot", () => {
     expect(readdirSync(join(DIRECTORY, "pages")).toSorted()).toEqual(files);
   });
 
+  it("points every item id at a page file that exists", () => {
+    const ids = read("item-ids.json");
+    expect(Object.keys(ids).length).toBeGreaterThan(1_000);
+    for (const [id, path] of Object.entries<string>(ids)) {
+      expect(id).toMatch(/^[0-9a-f]{24}$/);
+      expect(existsSync(join(DIRECTORY, path)), path).toBe(true);
+    }
+    expect(ids["5e2aedd986f7746d404f3aa4"]).toBe("items/greenbat-lithium-battery.json");
+  });
+
   it("points every redirect at an indexed page", () => {
     const titles = new Set(index.pages.map((entry: { title: string }) => entry.title));
     for (const [from, to] of Object.entries<string>(index.redirects)) expect(titles.has(to.split("#")[0]), from).toBe(true);

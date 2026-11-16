@@ -1,0 +1,25 @@
+{
+  "title": "M1A National Match 7.62x51 flash suppressor",
+  "url": "https://escapefromtarkov.fandom.com/wiki/M1A_National_Match_7.62x51_flash_suppressor",
+  "revisionId": 358321,
+  "lastEdited": "2026-09-09T20:04:56Z",
+  "kind": "weapon",
+  "categories": [
+    "Flash hiders & muzzle brakes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Flash hider/muzzle brake",
+    "weight": "0.14 kg",
+    "grid": "1x1",
+    "trader": "Mechanic LL3",
+    "ergonomics": "-2",
+    "accuracy": "+2",
+    "recoil": "-9",
+    "Dura Burn": "-2",
+    "Heat": "-1",
+    "node": "5addbb6e5acfc408fb1393fd",
+    "ID": "muzzle_m1a_springfield_armory_national_match_flash_suppressor_762x51"
+  },
+  "sections": []
+}

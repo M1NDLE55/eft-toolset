@@ -1,0 +1,46 @@
+{
+  "title": "Deadlyslob's beard oil",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Deadlyslob's_beard_oil",
+  "revisionId": 362340,
+  "lastEdited": "2026-09-27T20:34:23Z",
+  "kind": "item",
+  "categories": [
+    "Household goods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Household item",
+    "weight": "0.06 kg",
+    "grid": "1x1",
+    "effect": "Generic loot item",
+    "node": "5bc9b9ecd4351e3bac122519",
+    "id": "item_barter_valuable_beardoil"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Drawers"
+    },
+    {
+      "heading": "Interchange",
+      "level": 3,
+      "text": "- Counter tops in OLI offices\n- On the metal shelf of the Power Station office\n\n- In the furniture Store opposite OLI\n- Inside Intourist (top floor) on the southwest desk"
+    },
+    {
+      "heading": "Shoreline",
+      "level": 3,
+      "text": "- Admin office on the wooden shelf near the hole in the floor\n- On the mattress inside the Chairman's house, on the west side of the swamp\n\n- On the shelf next to the West Wing breach entrance\n- On the desk in East Wing 107"
+    },
+    {
+      "heading": "Customs",
+      "level": 3,
+      "text": "- On the mattress in storage unit 49 within the trailer park area."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator DeadlySlob."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Get Lost poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Get_Lost_poster",
+  "revisionId": 363685,
+  "lastEdited": "2026-10-07T22:13:39Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "6aa2d686667ebebca605d8fa",
+    "id": "item_barter_flyers_prestige_03_pve"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

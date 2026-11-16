@@ -1,0 +1,33 @@
+{
+  "title": "Galvion Caiman Hybrid Ballistic Mandible Guard (MultiCam Alpine)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Galvion_Caiman_Hybrid_Ballistic_Mandible_Guard_(MultiCam_Alpine)",
+  "revisionId": 348825,
+  "lastEdited": "2026-08-01T16:31:16Z",
+  "kind": "item",
+  "categories": [
+    "Helmet mods"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Additional armor",
+    "weight": "1.1 kg",
+    "grid": "2x2",
+    "trader": "Ref LL2, after unlocking it in Arena BattlePass Season 1",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Jaws",
+    "durability": "20",
+    "penalties": "+0% turn speed, -2% Ergonomics",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "693be056fd3a5c751e00de04",
+    "id": "item_equipment_helmet_galvion_mandible_arena_NY2025"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

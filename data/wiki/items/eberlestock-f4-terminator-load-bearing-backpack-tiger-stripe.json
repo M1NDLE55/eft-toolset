@@ -1,0 +1,30 @@
+{
+  "title": "Eberlestock F4 Terminator load bearing backpack (Tiger Stripe)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Eberlestock_F4_Terminator_load_bearing_backpack_(Tiger_Stripe)",
+  "revisionId": 304477,
+  "lastEdited": "2025-01-22T09:37:12Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "4.194 kg",
+    "grid": "5x7",
+    "trader": "Ragman LL4, Ref LL4",
+    "penalties": "-5% movement speed, -1% turn speed, -4% Ergonomics",
+    "slots": "40 slots, 1x 5x4 grid, 2x 5x2 grid",
+    "exam xp": "2",
+    "node": "5f5e46b96bdad616ad46d613",
+    "id": "item_equipment_backpack_f4terminator"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

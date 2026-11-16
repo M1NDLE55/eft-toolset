@@ -1,0 +1,35 @@
+{
+  "title": "Vulkan-5 LShZ-5 bulletproof helmet (Eight-ball)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vulkan-5_LShZ-5_bulletproof_helmet_(Eight-ball)",
+  "revisionId": 353499,
+  "lastEdited": "2026-08-13T19:57:08Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "4.5 kg",
+    "grid": "2x2",
+    "trader": "Ref LL4, after unlocking it in the Customs Tactical Map",
+    "material": "Combined materials",
+    "armor": "5",
+    "armor coverage": "Head top, Nape, Ears",
+    "durability": "75",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, -2% turn speed, -3% Ergonomics, High sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "68a986ca5c0073fa2d0d8cb8",
+    "id": "item_equipment_helmet_vulkan5_eightball_bp2"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    }
+  ]
+}

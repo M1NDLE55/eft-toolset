@@ -1,0 +1,29 @@
+{
+  "title": "Camelbak Tri-Zip assault backpack (Foliage)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Camelbak_Tri-Zip_assault_backpack_(Foliage)",
+  "revisionId": 362922,
+  "lastEdited": "2026-10-03T10:59:17Z",
+  "kind": "item",
+  "categories": [
+    "Backpacks"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Backpack",
+    "slot": "Backpack",
+    "weight": "2.2 kg",
+    "grid": "5x6",
+    "trader": "Ragman LL3",
+    "penalties": "-3% movement speed, -1% turn speed, -4% Ergonomics",
+    "slots": "5x6 grid (30 slots)",
+    "node": "545cdae64bdc2d39198b4568",
+    "id": "bigBackpack"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Only 1 can be held in a raid inventory at the same time"
+    }
+  ]
+}

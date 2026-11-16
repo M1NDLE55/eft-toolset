@@ -1,0 +1,32 @@
+{
+  "title": "Gatorz Specter MILSPEC ballistic glasses",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gatorz_Specter_MILSPEC_ballistic_glasses",
+  "revisionId": 361590,
+  "lastEdited": "2026-09-23T22:09:55Z",
+  "kind": "item",
+  "categories": [
+    "Eyewear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Goggles",
+    "slot": "Eyewear",
+    "weight": "0.032 kg",
+    "grid": "2x1",
+    "blindness protect": "15%",
+    "node": "689b3fffa1295e322207a677",
+    "id": "item_equipment_glasses_gatorz_specter_ballistic"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Reduces the size and number of raindrops on the players' screen\n- Contrary to the description, this item doesn't provide any ballistic protection"
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division"
+    }
+  ]
+}

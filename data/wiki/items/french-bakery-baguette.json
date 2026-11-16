@@ -1,0 +1,32 @@
+{
+  "title": "French bakery baguette",
+  "url": "https://escapefromtarkov.fandom.com/wiki/French_bakery_baguette",
+  "revisionId": 356047,
+  "lastEdited": "2026-08-25T15:15:59Z",
+  "kind": "item",
+  "categories": [
+    "Food"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Food",
+    "weight": "0.25 kg",
+    "grid": "3x1",
+    "effect": "Energy: +40, Hydration: -18",
+    "use time": "5s",
+    "node": "6a35322b81d315afe1018ef3",
+    "id": "item_food_baguette"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- In Sport bags\n- In Dead Scavs\n- In Plastic suitcases\n- In Ground caches\n- In Buried barrel caches\n- In Ration supply crates"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- Easter eggs and References:\n  - This is a reference to the content creator Cocao."
+    }
+  ]
+}

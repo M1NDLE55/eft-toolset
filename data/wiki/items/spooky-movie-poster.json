@@ -1,0 +1,30 @@
+{
+  "title": "Spooky Movie poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Spooky_Movie_poster",
+  "revisionId": 331635,
+  "lastEdited": "2026-01-07T19:35:28Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "node": "675a1af21474133a0d0bb216",
+    "id": "item_barter_flyers_movie_scary"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can be installed in the Hideout."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- On walls all over Tarkov"
+    }
+  ]
+}

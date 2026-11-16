@@ -1,0 +1,30 @@
+{
+  "title": "Gold skull ring",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gold_skull_ring",
+  "revisionId": 364996,
+  "lastEdited": "2026-10-25T22:13:10Z",
+  "kind": "item",
+  "categories": [
+    "Valuables"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Valuable",
+    "weight": "0.006 kg",
+    "grid": "1x1",
+    "node": "5d235a5986f77443f6329bc6",
+    "ID": "item_barter_valuable_skullring"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Safe\n- Sport bag\n- Dead Scav\n- Plastic suitcase\n- Common fund stash\n- Ground cache\n- Buried barrel cache\n- Jacket"
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from The Invisible Hand"
+    }
+  ]
+}

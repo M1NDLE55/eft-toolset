@@ -1,0 +1,24 @@
+{
+  "title": "AC paint set (Splinter Stripe Gold)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/AC_paint_set_(Splinter_Stripe_Gold)",
+  "revisionId": 356791,
+  "lastEdited": "2026-08-29T20:20:52Z",
+  "kind": "item",
+  "categories": [
+    "Weapon camouflages"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Weapon camouflage",
+    "weight": "1 kg",
+    "node": "69cd3e734f52d4ce020f0ea8",
+    "id": "item_camo_abstract_splinter_stripes_gold"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Can only be applied to assault carbines."
+    }
+  ]
+}

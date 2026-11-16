@@ -1,0 +1,28 @@
+{
+  "title": "DevTac Ronin ballistic helmet (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DevTac_Ronin_ballistic_helmet_(Olive_Drab)",
+  "revisionId": 361914,
+  "lastEdited": "2026-09-24T15:12:24Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "1.382 kg",
+    "grid": "2x2",
+    "material": "Combined materials",
+    "armor": "Nape: 3 , Head top, Ears, Eyes, Jaws: 1",
+    "armor coverage": "Head top, Nape, Ears, Eyes, Jaws",
+    "durability": "180",
+    "RicochetChance": "High",
+    "penalties": "+0% movement speed, +0% turn speed, -1% Ergonomics, Low sound reduction",
+    "BlocksEyewear": "Yes",
+    "BlocksFaceCover": "No",
+    "node": "6a84624507f6c3032e00c65d",
+    "id": "item_equipment_facecover_devtac_olive_drab"
+  },
+  "sections": []
+}

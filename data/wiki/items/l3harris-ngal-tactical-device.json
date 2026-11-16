@@ -1,0 +1,28 @@
+{
+  "title": "L3Harris NGAL tactical device",
+  "url": "https://escapefromtarkov.fandom.com/wiki/L3Harris_NGAL_tactical_device",
+  "revisionId": 358324,
+  "lastEdited": "2026-09-09T20:06:00Z",
+  "kind": "weapon",
+  "categories": [
+    "Tactical combo devices"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Tactical combo device",
+    "weight": "0.18 kg",
+    "grid": "1x1",
+    "trader": "Peacekeeper LL4",
+    "ergonomics": "-1.5",
+    "modes": "4",
+    "node": "6a186ccfbe0d66d438005e4e",
+    "ID": "tactical_all_l3harris_ngal"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The integrated laser is red"
+    }
+  ]
+}

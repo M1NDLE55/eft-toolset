@@ -1,0 +1,25 @@
+{
+  "title": "Note with ramblings about the Purification",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Note_with_ramblings_about_the_Purification",
+  "revisionId": 334978,
+  "lastEdited": "2026-02-12T02:01:06Z",
+  "kind": "item",
+  "categories": [
+    "Notes"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Note",
+    "weight": "0.005 kg",
+    "grid": "1x1",
+    "node": "6877c87dd66d08f590036126",
+    "ID": "item_info_note_mention_unknowns"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "Picking up and reading this note starts the story chapter The Unheard."
+    }
+  ]
+}

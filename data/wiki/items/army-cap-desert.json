@@ -1,0 +1,20 @@
+{
+  "title": "Army cap (Desert)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Army_cap_(Desert)",
+  "revisionId": 310234,
+  "lastEdited": "2025-04-13T13:58:07Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Cap",
+    "slot": "Headwear",
+    "weight": "0.1 kg",
+    "grid": "1x1",
+    "node": "60361b0b5a45383c122086a1",
+    "id": "item_equipment_head_military2_sand"
+  },
+  "sections": []
+}

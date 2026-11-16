@@ -1,0 +1,26 @@
+{
+  "title": "Shustrilo sealing foam",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Shustrilo_sealing_foam",
+  "revisionId": 347690,
+  "lastEdited": "2026-07-05T22:38:36Z",
+  "kind": "item",
+  "categories": [
+    "Building materials"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Building material",
+    "weight": "1 kg",
+    "grid": "1x3",
+    "effect": "Generic loot item",
+    "node": "590c35a486f774273531c822",
+    "id": "polyurethane_foam_open"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Buried barrel cache\n- Dead Scav\n- Ground cache\n- Sport bag\n- Technical supply crate\n- Toolbox"
+    }
+  ]
+}

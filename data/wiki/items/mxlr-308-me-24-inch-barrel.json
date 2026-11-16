@@ -1,0 +1,26 @@
+{
+  "title": "MXLR .308 ME 24 inch barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/MXLR_.308_ME_24_inch_barrel",
+  "revisionId": 343154,
+  "lastEdited": "2026-05-03T15:50:07Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "1.1 kg",
+    "grid": "4x1",
+    "trader": "Jaeger LL2",
+    "ergonomics": "-14",
+    "velocity": "-2.8",
+    "MOA": "1.31",
+    "recoil": "-9",
+    "Heat": "-7",
+    "Cooling": "-5",
+    "node": "67c5425e26265106dd0697a7",
+    "ID": "barrel_m1895_marlin_610mm_784x49"
+  },
+  "sections": []
+}

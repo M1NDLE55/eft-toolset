@@ -1,0 +1,24 @@
+{
+  "title": "QBZ-191 5.8x42 upper receiver",
+  "url": "https://escapefromtarkov.fandom.com/wiki/QBZ-191_5.8x42_upper_receiver",
+  "revisionId": 356912,
+  "lastEdited": "2026-08-29T21:53:03Z",
+  "kind": "weapon",
+  "categories": [
+    "Receivers and slides"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Receiver",
+    "weight": "0.3 kg",
+    "grid": "2x1",
+    "trader": "Skier LL3",
+    "ergonomics": "+6",
+    "recoil": "-3",
+    "Heat": "-1.1",
+    "Cooling": "+1",
+    "node": "69f9ecc5df2c2358a904185c",
+    "ID": "reciever_qbz191_norinco_191_std"
+  },
+  "sections": []
+}

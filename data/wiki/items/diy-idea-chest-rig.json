@@ -1,0 +1,22 @@
+{
+  "title": "DIY IDEA chest rig",
+  "url": "https://escapefromtarkov.fandom.com/wiki/DIY_IDEA_chest_rig",
+  "revisionId": 269435,
+  "lastEdited": "2024-02-06T00:28:07Z",
+  "kind": "item",
+  "categories": [
+    "Chest rigs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Chest rig",
+    "slot": "Chest rig",
+    "weight": "0.22 kg",
+    "grid": "3x2",
+    "BlocksArmor": "No",
+    "slots": "8 Slots",
+    "node": "5fd4c4fa16cac650092f6771",
+    "id": "item_equipment_rig_idea"
+  },
+  "sections": []
+}

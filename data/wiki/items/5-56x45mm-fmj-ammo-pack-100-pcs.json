@@ -1,0 +1,18 @@
+{
+  "title": "5.56x45mm FMJ ammo pack (100 pcs)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/5.56x45mm_FMJ_ammo_pack_(100_pcs)",
+  "revisionId": 367175,
+  "lastEdited": "2026-11-02T23:10:59Z",
+  "kind": "ammo",
+  "categories": [
+    "Ammo packs"
+  ],
+  "redirects": [],
+  "infobox": {
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "node": "657026451419851aef03e733",
+    "ID": "item_ammo_box_556x45_100_fmj"
+  },
+  "sections": []
+}

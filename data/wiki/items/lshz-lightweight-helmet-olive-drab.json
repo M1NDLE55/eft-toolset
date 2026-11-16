@@ -1,0 +1,35 @@
+{
+  "title": "LShZ lightweight helmet (Olive Drab)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/LShZ_lightweight_helmet_(Olive_Drab)",
+  "revisionId": 344335,
+  "lastEdited": "2026-05-24T22:01:10Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Helmet",
+    "slot": "Headwear",
+    "weight": "0.95 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL2",
+    "material": "Aramid",
+    "armor": "3",
+    "armor coverage": "Head top, Nape",
+    "durability": "36",
+    "RicochetChance": "Medium",
+    "penalties": "+0% movement speed, -1% turn speed, -1% Ergonomics, No sound reduction",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "node": "5b432d215acfc4771e1c6624",
+    "id": "item_equipment_helmet_LSHZ"
+  },
+  "sections": [
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- It is modeled after the LShZ-1+ ballistic helmet used by troops of the Russian Federation."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Vortex Ranger 1500 rangefinder",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Vortex_Ranger_1500_rangefinder",
+  "revisionId": 306051,
+  "lastEdited": "2025-03-02T16:39:39Z",
+  "kind": "item",
+  "categories": [
+    "Special equipment"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Special item",
+    "weight": "0.218 kg",
+    "grid": "1x1",
+    "trader": "Jaeger LL1",
+    "node": "61605e13ffa6e502ac5e7eef",
+    "id": "item_ranger_1500"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- The rangefinder is not lootable from players and persists upon death as long as it is placed in a special item slot."
+    },
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "The rangefinder must be placed in any inventory slot and assigned to a hotkey to be used."
+    }
+  ]
+}

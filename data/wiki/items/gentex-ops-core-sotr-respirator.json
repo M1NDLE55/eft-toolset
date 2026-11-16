@@ -1,0 +1,33 @@
+{
+  "title": "Gentex Ops-Core SOTR respirator",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Gentex_Ops-Core_SOTR_respirator",
+  "revisionId": 361602,
+  "lastEdited": "2026-09-23T22:19:45Z",
+  "kind": "item",
+  "categories": [
+    "Face cover"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Respirator",
+    "slot": "Face cover",
+    "weight": "0.1 kg",
+    "grid": "2x2",
+    "BlocksEyewear": "No",
+    "BlocksHeadwear": "No",
+    "node": "689b404db49f27df1c0873f6",
+    "id": "item_equipment_facecover_gasmask_gentex_ops_core_sotr"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Protects against the thorax damage and coughing effects of the Model 8230 CS gas grenade."
+    },
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Black Division"
+    }
+  ]
+}

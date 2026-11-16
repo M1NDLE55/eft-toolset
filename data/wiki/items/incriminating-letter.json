@@ -1,0 +1,25 @@
+{
+  "title": "Incriminating letter",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Incriminating_letter",
+  "revisionId": 313977,
+  "lastEdited": "2025-05-30T17:08:17Z",
+  "kind": "item",
+  "categories": [
+    "Quest Items"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Quest item",
+    "weight": "0.2 kg",
+    "grid": "1x2",
+    "node": "67499d0eeca8acb2d2061639",
+    "id": "item_quest_btr_letter"
+  },
+  "sections": [
+    {
+      "heading": "Usage",
+      "level": 2,
+      "text": "- Used in the quest The Price of Independence from the BTR Driver"
+    }
+  ]
+}

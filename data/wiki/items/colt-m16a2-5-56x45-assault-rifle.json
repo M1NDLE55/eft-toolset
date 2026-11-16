@@ -1,0 +1,31 @@
+{
+  "title": "Colt M16A2 5.56x45 assault rifle",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Colt_M16A2_5.56x45_assault_rifle",
+  "revisionId": 357011,
+  "lastEdited": "2026-08-30T17:29:35Z",
+  "kind": "weapon",
+  "categories": [
+    "Assault rifles",
+    "Weapons"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Assault rifle",
+    "slot": "Primary",
+    "weight": "3.351 kg",
+    "grid": "6x2",
+    "trader": "Peacekeeper LL1",
+    "fire modes": "Single, 3-round Burst",
+    "sightrange": "100",
+    "ergonomics": "32.5",
+    "velocity": "968 m/s",
+    "range": "500 m",
+    "MOA": "1.24",
+    "Weaprecoil": "Vertical: 69, Horizontal: 200",
+    "rof": "800",
+    "caliber": "5.56x45mm NATO",
+    "node": "68a6399922b1e0bd360afe56",
+    "ID": "weapon_colt_m16a2_556x45"
+  },
+  "sections": []
+}

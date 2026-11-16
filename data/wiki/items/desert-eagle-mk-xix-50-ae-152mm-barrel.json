@@ -1,0 +1,26 @@
+{
+  "title": "Desert Eagle Mk XIX .50 AE 152mm barrel",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Desert_Eagle_Mk_XIX_.50_AE_152mm_barrel",
+  "revisionId": 297855,
+  "lastEdited": "2024-12-11T19:07:01Z",
+  "kind": "weapon",
+  "categories": [
+    "Barrels"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Barrel",
+    "weight": "0.436 kg",
+    "grid": "1x1",
+    "ergonomics": "-4",
+    "accuracy": "+2",
+    "MOA": "6.53",
+    "recoil": "-3",
+    "Dura Burn": "-3",
+    "Heat": "+5.6",
+    "Cooling": "+8.7",
+    "node": "668fe5f62a0f85eea407cc18",
+    "ID": "barrel_deagle_magnum_research_mk19_std_152mm_127x33"
+  },
+  "sections": []
+}

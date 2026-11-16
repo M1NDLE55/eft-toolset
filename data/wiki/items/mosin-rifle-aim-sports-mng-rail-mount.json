@@ -1,0 +1,22 @@
+{
+  "title": "Mosin Rifle AIM Sports MNG rail mount",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Mosin_Rifle_AIM_Sports_MNG_rail_mount",
+  "revisionId": 366560,
+  "lastEdited": "2026-10-31T04:15:18Z",
+  "kind": "weapon",
+  "categories": [
+    "Mounts"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Mount",
+    "weight": "0.074 kg",
+    "grid": "1x1",
+    "price": "₽1,500",
+    "trader": "Jaeger LL1 after completing his task The Tarkov Shooter - Part 1",
+    "ergonomics": "-1",
+    "node": "5bc5a372d4351e44f824d17f",
+    "ID": "mount_mosin_aim_sports_mng"
+  },
+  "sections": []
+}

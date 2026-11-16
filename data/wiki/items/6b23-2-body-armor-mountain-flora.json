@@ -1,0 +1,36 @@
+{
+  "title": "6B23-2 body armor (Mountain Flora)",
+  "url": "https://escapefromtarkov.fandom.com/wiki/6B23-2_body_armor_(Mountain_Flora)",
+  "revisionId": 364805,
+  "lastEdited": "2026-10-20T15:35:48Z",
+  "kind": "item",
+  "categories": [
+    "Armor vests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Armor vest",
+    "slot": "Body armor",
+    "weight": "3.3 kg",
+    "grid": "3x4",
+    "material": "Aramid",
+    "armor": "2",
+    "armor coverage": "Stomach, Thorax, Back, Sides, Back neck, Throat, Groin, Buttocks",
+    "default plates": "1x , 1x",
+    "default plates armor class": "4",
+    "default plates armor coverage": "Front Plate, Back Plate",
+    "durability": "156",
+    "penalties": "-1% movement speed, -1% turn speed, -2.5% Ergonomics",
+    "loot xp": "20",
+    "exam xp": "2",
+    "node": "5c0e57ba86f7747fa141986d",
+    "ID": "item_equipment_armor_6b23_mflora"
+  },
+  "sections": [
+    {
+      "heading": "Armor Plates",
+      "level": 2,
+      "text": "Front Plate:\nFront Plate\n\nBack Plate:\nBack Plate"
+    }
+  ]
+}

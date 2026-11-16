@@ -1,0 +1,31 @@
+{
+  "title": "Hat with antlers",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Hat_with_antlers",
+  "revisionId": 334310,
+  "lastEdited": "2026-02-10T14:44:01Z",
+  "kind": "item",
+  "categories": [
+    "Headwear"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Hat",
+    "slot": "Headwear",
+    "weight": "0.15 kg",
+    "grid": "1x1",
+    "node": "675aae1c26dc64e17800fee6",
+    "id": "item_equipment_head_tagillacap_xmass"
+  },
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 2,
+      "text": "- Tagilla"
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This headwear first appeared during Escape from Tarkov's 2024 Christmas Celebration."
+    }
+  ]
+}

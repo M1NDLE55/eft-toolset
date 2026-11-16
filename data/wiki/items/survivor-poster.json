@@ -1,0 +1,25 @@
+{
+  "title": "Survivor poster",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Survivor_poster",
+  "revisionId": 355958,
+  "lastEdited": "2026-08-25T12:27:30Z",
+  "kind": "item",
+  "categories": [
+    "Posters"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Poster",
+    "weight": "0.05 kg",
+    "grid": "2x2",
+    "node": "68df97725d4e135b130392c8",
+    "id": "item_barter_flyers_story_01_and_survived"
+  },
+  "sections": [
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market.\n- Can be installed in the Hideout."
+    }
+  ]
+}

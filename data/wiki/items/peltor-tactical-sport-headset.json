@@ -1,0 +1,24 @@
+{
+  "title": "Peltor Tactical Sport headset",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Peltor_Tactical_Sport_headset",
+  "revisionId": 320874,
+  "lastEdited": "2025-11-11T20:44:03Z",
+  "kind": "item",
+  "categories": [
+    "Earpieces"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Headset",
+    "slot": "Earpiece",
+    "weight": "0.6 kg",
+    "grid": "2x2",
+    "trader": "Ragman LL4",
+    "BlocksEyewear": "No",
+    "BlocksFaceCover": "No",
+    "BlocksHeadwear": "No",
+    "node": "5c165d832e2216398b5a7e36",
+    "ID": "item_equipment_headset_tactical_sport"
+  },
+  "sections": []
+}
