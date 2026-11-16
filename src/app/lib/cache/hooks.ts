@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { useGameMode, type GameMode } from "@/components/game-mode/context";
 import { useDataQuery } from "@/app/lib/api/useDataQuery";
 import { primeQuery } from "@/app/lib/api/queryClient";
-import { groupItemsQuery, itemCatalogQuery, itemDetailQuery, type ItemReference } from "./fetcher";
+import { groupItemsQuery, itemCatalogQuery, itemDetailQuery, marketBoardQuery, type ItemReference } from "./fetcher";
 import type { CachedItem, CatalogItem, ComposedItem } from "./types";
 
 const EMPTY_CATALOG: CatalogItem[] = [];
@@ -29,6 +29,19 @@ export function useCatalog() {
     error: query.error ?? null,
     stale: query.stale,
     refresh: query.refresh,
+  };
+}
+
+export function useMarketBoard() {
+  const { gameMode, hydrated } = useGameMode();
+  const variables = useMemo(() => ({ gameMode }), [gameMode]);
+  const query = useDataQuery(marketBoardQuery, variables, { enabled: hydrated });
+  return {
+    board: query.data ?? null,
+    loading: !query.data && query.status !== "error",
+    error: query.data ? null : (query.error ?? null),
+    updatedAt: query.updatedAt ?? null,
+    retry: () => void query.refresh().catch(() => undefined),
   };
 }
 

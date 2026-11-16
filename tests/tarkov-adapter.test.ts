@@ -620,6 +620,34 @@ describe("Tarkov JSON adapter", () => {
     expect(readableMobName("Infected Tagilla")).toBe("Infected Tagilla");
   });
 
+  it("ranks flea movers and sell value per slot for the market board", async () => {
+    const items = (fixtures.items as { data: { items: Record<string, Record<string, unknown>> } }).data.items;
+    Object.assign(items.weapon, { types: ["gun", "barter"] });
+    Object.assign(items.mod, {
+      basePrice: 10_000,
+      avg24hPrice: 13_000,
+      changeLast48hPercent: -12,
+      types: ["barter"],
+      sellToTrader: [{ trader: "trader", priceRUB: 30_000 }],
+    });
+    // Thinly traded parts and implausible swings are not market moves.
+    Object.assign(items.ammo, { lastLowPrice: 40_000, avg24hPrice: 40_000, changeLast48hPercent: 20, types: ["ammo"] });
+    items.spike = { id: "spike", name: "spike-name", lastLowPrice: 90_000, avg24hPrice: 90_000, changeLast48hPercent: 900, types: ["barter"] };
+    const board = (await executeTarkovOperation(TARKOV_OPERATIONS.marketBoard, { gameMode: "regular" })) as {
+      risers: { name: string; price: number; vendor: string; changeLast48hPercent: number }[];
+      fallers: { name: string; price: number; changeLast48hPercent: number }[];
+      perSlot: { name: string; price: number; perSlot: number; vendor: string }[];
+    };
+    expect(board.risers.map((row) => row.name)).toEqual(["Test Rifle"]);
+    expect(board.risers[0]).toMatchObject({ price: 50_000, vendor: "Flea", changeLast48hPercent: 5 });
+    expect(board.fallers).toHaveLength(1);
+    expect(board.fallers[0]).toMatchObject({ price: 12_000, changeLast48hPercent: -12 });
+    // Weapons are left out of the per-slot list, and the best sell here is the trader.
+    expect(board.perSlot.some((row) => row.name === "Test Rifle")).toBe(false);
+    expect(board.perSlot[0]).toMatchObject({ name: board.fallers[0].name, price: 30_000, perSlot: 30_000 });
+    expect(board.perSlot[0].vendor).not.toBe("Flea");
+  });
+
   it("rejects variables outside the operation contract", async () => {
     await expect(
       executeTarkovOperation(TARKOV_OPERATIONS.buildItems, {

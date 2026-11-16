@@ -6,6 +6,7 @@ import { PLAN_STORE } from "@/app/lib/raid-planner/store";
 import { LAYER_STORE } from "@/app/lib/raid-planner/layer-store";
 import { TOOLBAR_STORE } from "@/app/lib/raid-planner/toolbar-store";
 import { GAME_MODE_STORE } from "@/components/game-mode/mode";
+import { HOME_LAYOUT_STORE } from "@/app/lib/settings/store";
 import { BACKUP_FORMAT, BACKUP_VERSION } from "./store-keys";
 
 export const MAX_BACKUP_BYTES = 10 * 1024 * 1024;
@@ -26,6 +27,7 @@ export const BACKUP_STORES: readonly BackupEntry[] = [
   { label: "Raid plans", definition: PLAN_STORE as StoreDefinition<unknown>, identity: field("id") },
   { label: "Recently viewed items", definition: SCOUTED_STORE as StoreDefinition<unknown>, identity: field("name") },
   { label: "Game mode", definition: GAME_MODE_STORE as StoreDefinition<unknown> },
+  { label: "Home screen", definition: HOME_LAYOUT_STORE as StoreDefinition<unknown> },
   { label: "Gun builder price sources", definition: PRICE_SOURCE_STORE as StoreDefinition<unknown> },
   { label: "Gun builder view", definition: VIEW_STORE as StoreDefinition<unknown> },
   { label: "Raid planner layers", definition: LAYER_STORE as StoreDefinition<unknown> },

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSyncExternalStore } from "react";
-import { Menu } from "lucide-react";
+import { Menu, Settings } from "lucide-react";
 import { appLinks } from "@/app/lib/links";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -68,6 +68,18 @@ export function Header() {
             </span>
           )}
           <GameModeToggle />
+          <Link
+            href="/settings"
+            aria-label="Settings"
+            title="Settings"
+            aria-current={isActive(pathname, "/settings") ? "page" : undefined}
+            className={cn(
+              "hidden h-10 w-10 items-center justify-center transition-colors focus-visible:outline-2 focus-visible:outline-[#9a8866] md:flex",
+              isActive(pathname, "/settings") ? "text-[#c8b384]" : "text-[#888] hover:text-[#ccc]"
+            )}
+          >
+            <Settings className="h-4 w-4" aria-hidden />
+          </Link>
           <div className="md:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -87,6 +99,15 @@ export function Header() {
                     </Link>
                   </DropdownMenuItem>
                 ))}
+                <DropdownMenuItem asChild className="py-3">
+                  <Link
+                    href="/settings"
+                    aria-current={isActive(pathname, "/settings") ? "page" : undefined}
+                    className={cn(isActive(pathname, "/settings") && "text-[#c8b384]")}
+                  >
+                    Settings
+                  </Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
