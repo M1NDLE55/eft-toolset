@@ -1,8 +1,8 @@
 {
   "title": "ZB-014 key",
   "url": "https://escapefromtarkov.fandom.com/wiki/ZB-014_key",
-  "revisionId": 358746,
-  "lastEdited": "2026-09-10T23:04:27Z",
+  "revisionId": 364748,
+  "lastEdited": "2026-10-20T11:19:48Z",
   "kind": "key",
   "categories": [
     "Keys"
@@ -35,7 +35,7 @@
     {
       "heading": "Quests",
       "level": 2,
-      "text": "- 1 needs to be found for the quest Aid Stations"
+      "text": "- 1 needs to be found for the quest Aid Stations\n- This is an optional quest location for Ice Cream Cones"
     },
     {
       "heading": "Key Location",
@@ -55,7 +55,7 @@
     {
       "heading": "Behind the Lock",
       "level": 2,
-      "text": "- 1x Weapon box (6x6)\n- ZB-014 extraction (Green flare = Open)"
+      "text": "- 1x Weapon box (6x6)\n- Loose loot (Meds, Building materials)\n- Multiple AK-74 5.45x39 6L31 60-round magazines\n\n- ZB-014 extraction (Green flare = Open)"
     }
   ]
 }

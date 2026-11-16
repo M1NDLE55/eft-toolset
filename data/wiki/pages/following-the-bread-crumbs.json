@@ -1,8 +1,8 @@
 {
   "title": "Following the Bread Crumbs",
   "url": "https://escapefromtarkov.fandom.com/wiki/Following_the_Bread_Crumbs",
-  "revisionId": 360195,
-  "lastEdited": "2026-09-15T08:25:07Z",
+  "revisionId": 365435,
+  "lastEdited": "2026-10-27T23:50:39Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -39,7 +39,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- Lightkeeper Rep +0.04\n- 1× Far-forward GPS Signal Amplifier Unit\n- Unlocks barter for Far-forward GPS Signal Amplifier Unit at Mechanic LL4\n\"Do you have the recorder? Perfect, give it to me. It will take time to complete the decoding. I'll let you know when we're done.\""
+      "text": "- Lightkeeper Rep +0.04\n- 1× Far-forward GPS Signal Amplifier Unit\n- 1× Substation marked key\n- Unlocks barter for Far-forward GPS Signal Amplifier Unit at Mechanic LL4\n\"Do you have the recorder? Perfect, give it to me. It will take time to complete the decoding. I'll let you know when we're done.\""
     },
     {
       "heading": "Guide",

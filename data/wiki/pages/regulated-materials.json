@@ -1,8 +1,8 @@
 {
   "title": "Regulated Materials",
   "url": "https://escapefromtarkov.fandom.com/wiki/Regulated_Materials",
-  "revisionId": 361742,
-  "lastEdited": "2026-09-24T12:29:55Z",
+  "revisionId": 365747,
+  "lastEdited": "2026-10-27T23:55:57Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,10 +11,9 @@
     "Regulated materials"
   ],
   "infobox": {
-    "location": "Reserve",
     "given by": "Prapor",
-    "LL requirement": "4",
-    "reqkappa": "Yes"
+    "location": "Reserve",
+    "LL requirement": "4"
   },
   "sections": [
     {
@@ -35,7 +34,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks craft for 6-STEN-140-M military battery at Workbench level 1\n- +2 Charisma skill levels\n\n\"Now that's the good stuff! Heavy as hell, yeah? So anyway, I keep my word about the reward, check out the new rifles I have...\""
+      "text": "- +65,000 EXP\n- +2 Charisma skill levels\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks craft for 6-STEN-140-M military battery at Workbench level 1\n\"Now that's the good stuff! Heavy as hell, yeah? So anyway, I keep my word about the reward, check out the new rifles I have...\""
     },
     {
       "heading": "Guide",

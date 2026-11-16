@@ -1,8 +1,8 @@
 {
   "title": "Scope the Clearing",
   "url": "https://escapefromtarkov.fandom.com/wiki/Scope_the_Clearing",
-  "revisionId": 360429,
-  "lastEdited": "2026-09-15T21:22:34Z",
+  "revisionId": 366644,
+  "lastEdited": "2026-10-31T12:09:13Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,6 +12,7 @@
     "location": "Lighthouse",
     "given by": "Skier",
     "previous": "A Familiar Face...",
+    "leads to": "Ease the Move, Cut Down to the Root",
     "reqkappa": "No"
   },
   "sections": [

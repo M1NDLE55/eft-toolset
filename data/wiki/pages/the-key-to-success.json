@@ -1,8 +1,8 @@
 {
   "title": "The Key to Success",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Key_to_Success",
-  "revisionId": 359770,
-  "lastEdited": "2026-09-13T20:21:48Z",
+  "revisionId": 365913,
+  "lastEdited": "2026-10-27T23:58:56Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,8 +13,7 @@
   "infobox": {
     "location": "Interchange",
     "given by": "Ragman",
-    "previous": "Sew it Good - Part 2",
-    "leads to": "Supervisor",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -26,22 +25,17 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Good day to you! We already went so far together, you're like a brother to me. Like family, see, don't get me wrong. So, like a brother, answer frankly, do you like reading? I devoured books back then, as a kid. But now I need a serious book, for business. A rare bitch for sure, but I know you can get a devil from under the ground if you'd want. Get me the book about designing clothes from special fabrics, all that military stuff has to be made with aramid fabric, which has its own tricks to it. There should be a manual for them, in two volumes. If you can get it, that'd be capital. Should probably check in the book stores, they must be there.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 26 to start this quest."
+      "text": "\"Good day to you! We already went so far together, you’re like a brother to me. Like family, see, don’t get me wrong. So, like a brother, answer frankly, do you like reading? I devoured books back then, as a kid. But now I need a serious book, for business. A rare bitch for sure, but I know you can get a devil from under the ground if you'd want. Get me the book about designing clothes from special fabrics, all that military stuff has to be made with aramid fabric, which has its own tricks to it. There should be a manual for them, in two volumes. If you can get it, that’d be capital. Should probably check in the book stores, they must be there. ULTRA had, as I remember, the \"Knigoyed\" and \"Museum of History\" stores, so make sure to search them both.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Obtain the Clothes design handbook - Part 1 on Interchange\n- Hand over the Clothes design handbook - Part 1 to Ragman\n- Obtain the Clothes design handbook - Part 2 on Interchange\n- Hand over the Clothes design handbook - Part 2 to Ragman"
+      "text": "- Locate and obtain the Clothes design handbook - Part 1 on Interchange\n- Hand over the Clothes design handbook - Part 1 to Ragman\n- Locate and obtain the Clothes design handbook - Part 2 on Interchange\n- Hand over the Clothes design handbook - Part 2 to Ragman"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +15,600 EXP\n- Ragman Rep +0.03\n- 60,000 Roubles\n  - 63,000 Roubles with Intelligence Center Level 1\n  - 69,000 Roubles with Intelligence Center Level 2\n- 2× Ghost balaclava\n- Unlocks White Hideout ceiling style\n\"You really found them? Thank you, friend. Don't get any ideas, these books are very important, they'll help me with my business.\""
+      "text": "- +10,000 EXP\n- Ragman Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 2× Phase control relay\n- 1× MSA Sordin Supreme PRO-X/L headset\n- 1× Walker's XCEL 500BT Digital headset\n\"You really found them? Thank you, friend. Don't get any ideas, these books are very important, they'll help me with my business.\""
     },
     {
       "heading": "Guide",

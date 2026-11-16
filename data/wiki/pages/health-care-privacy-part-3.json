@@ -1,8 +1,8 @@
 {
   "title": "Health Care Privacy - Part 3",
   "url": "https://escapefromtarkov.fandom.com/wiki/Health_Care_Privacy_-_Part_3",
-  "revisionId": 359368,
-  "lastEdited": "2026-09-13T20:15:01Z",
+  "revisionId": 365507,
+  "lastEdited": "2026-10-27T23:51:52Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,11 +11,10 @@
     "Health Care Privacy. Part 3"
   ],
   "infobox": {
-    "location": "Woods",
     "given by": "Therapist",
+    "location": "Woods",
     "previous": "Health Care Privacy - Part 2",
-    "leads to": "Health Care Privacy - Part 4",
-    "reqkappa": "Yes"
+    "leads to": "Health Care Privacy - Part 4"
   },
   "sections": [
     {

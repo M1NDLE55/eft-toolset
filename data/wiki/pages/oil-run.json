@@ -1,18 +1,18 @@
 {
   "title": "Oil Run",
   "url": "https://escapefromtarkov.fandom.com/wiki/Oil_Run",
-  "revisionId": 361724,
-  "lastEdited": "2026-09-24T12:24:58Z",
+  "revisionId": 365670,
+  "lastEdited": "2026-10-27T23:54:37Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs",
     "given by": "Prapor",
+    "location": "Customs",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "5"
   },
   "sections": [
     {

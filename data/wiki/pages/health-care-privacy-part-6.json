@@ -1,19 +1,18 @@
 {
   "title": "Health Care Privacy - Part 6",
   "url": "https://escapefromtarkov.fandom.com/wiki/Health_Care_Privacy_-_Part_6",
-  "revisionId": 361703,
-  "lastEdited": "2026-09-24T12:14:35Z",
+  "revisionId": 365510,
+  "lastEdited": "2026-10-27T23:51:55Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Factory, The Lab",
     "given by": "Therapist",
+    "location": "Factory, The Lab",
     "LL requirement": "4",
-    "previous": "Health Care Privacy - Part 5",
-    "reqkappa": "Yes"
+    "previous": "Health Care Privacy - Part 5"
   },
   "sections": [
     {

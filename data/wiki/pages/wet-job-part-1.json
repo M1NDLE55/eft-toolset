@@ -1,8 +1,8 @@
 {
   "title": "Wet Job - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Wet_Job_-_Part_1",
-  "revisionId": 359881,
-  "lastEdited": "2026-09-13T20:23:40Z",
+  "revisionId": 367458,
+  "lastEdited": "2026-11-03T14:34:38Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,9 +11,10 @@
     "Wet Job. Part 1"
   ],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Peacekeeper",
-    "reqkappa": "Yes"
+    "location": "Shoreline",
+    "LL requirement": "2",
+    "leads to": "Wet Job - Part 2"
   },
   "sections": [
     {
@@ -24,22 +25,17 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Hello, my friend, glad to see you. It's great you're still alive, ha-ha. As you can see, my people and I have assimilated on Shoreline, and we also communicate with our partners and customers from here. We've managed to re-purpose the local meteorological equipment to transmit signals. Scavs, however -- and not only them -- always try to destroy or damage our antennas. We routinely deal with communication problems, even had to install surveillance cameras. However, it's common knowledge that those vandal gangs only understand violence. Your task today is what you do best. Explain to them that the weather station and the entire Shoreline is not the best place to damage the Blue Helmets' property.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 14 to start this quest."
+      "text": "\"Hello, good to see you! It is good to see you are still alive, haha. As you can see, my men and I have established the strongest presence on the coast. This is also where we communicate with our partners and buyers. We have managed to use the local meteorological equipment to transmit signals. However, scavengers, and not only them, keep trying to damage or destroy our antennas. We regularly deal with communication issues, and we even had to install surveillance cameras. But, as we know, vandals only understand force. Make it clear that the weather station and the entire shore are not places where people can damage our property without consequences. Show them exactly who they are interfering with. Use Blue Helmet equipment.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 10 Scavs while using a suppressed M4A1, ADAR or TX-15 on Shoreline"
+      "text": "- Eliminate 10 Scavs whith a M4A1, M16 ,ADAR or TX-15 on Shoreline"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +11,400 EXP\n- Peacekeeper Rep +0.04\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n- 2× Secure magnetic tape cassette\n- Unlocks craft for .300 Blackout M62 Tracer at Workbench level 3\n\"Great job, mister. The Scav attacks have suddenly stopped. Looks like they understand what they did wrong.\""
+      "text": "- +10,000 EXP\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n- 1× FN Five-seveN MK2 5.7x28 pistol (FDE)\n- 1× 5.7x28mm L191 ammo pack (50 pcs)\n- Unlocks purchase of FN Five-seveN MK2 5.7x28 pistol (FDE) at Peacekeeper LL2\n\"Scav raids have stopped almost completely. It seems they finally understood the situation.\""
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "title": "The Huntsman Path - Liberation",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Liberation",
-  "revisionId": 359761,
-  "lastEdited": "2026-09-13T20:21:39Z",
+  "revisionId": 365904,
+  "lastEdited": "2026-10-27T23:58:47Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "The Lab, Reserve",
     "given by": "Jaeger",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -22,7 +23,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"The most shitty situations usually quickly make it clear on who is who. Some people stay the same, some people don't. And recently I've heard the rumors about the new forces in the area. They come out of nowhere, tear places apart, take whatever they want and vanish as if they never were there. They call themselves Raiders. People say that they are mostly ex-military and ex-PMCs. I've also heard that they have someone really powerful behind them, pulling the strings from abroad. Calm down those Raiders.\""
+      "text": "\"When life goes to hell, you find out real quick who people really are. Who stays human, and who doesn't. Not everyone manages to hold on to their conscience. Word reached me that a new force has appeared in the region. All they care about is looting and taking whatever isn't nailed down. They call themselves the Raiders. Former soldiers and mercenaries, gathering into squads and putting key locations under their own \\\"protection\\\". Folks say they've got an influential patron somewhere beyond the border. Put those bandits down.\""
     },
     {
       "heading": "Objectives",
@@ -32,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +22,500 EXP\n- Jaeger Rep +0.02\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 1× FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope\n- Unlocks barter for MP-155 Ultima thermal camera at Jaeger LL4\n\"So they're operating near laboratories and military positions... Oh, I hope it won't start another war, on top of the one already going on. Well, fellow, it's not for us to resolve this, at least for now.\""
+      "text": "- +28,000 EXP\n- Jaeger Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 2× Shustrilo sealing foam\n\"So they're operating near laboratories and military facilities... Oh, I hope it won't start another war, on top of the one already going on. Well, kid, it's not for us to resolve this, at least for now.\""
     },
     {
       "heading": "Guide",

@@ -1,8 +1,8 @@
 {
   "title": "Hot Delivery",
   "url": "https://escapefromtarkov.fandom.com/wiki/Hot_Delivery",
-  "revisionId": 359389,
-  "lastEdited": "2026-09-13T20:15:20Z",
+  "revisionId": 365527,
+  "lastEdited": "2026-10-27T23:52:12Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,6 +13,7 @@
   "infobox": {
     "location": "Interchange",
     "given by": "Ragman",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -25,11 +26,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hey, brother! You're an experienced fighter, you can stop by my place without a second thought. But my other clients aren't so lucky. One of them was found lying in a pool of blood at the gas station. Looks like someone had been watching him. Now the rest are spooked and don't want to be seen carrying cash. Seems like someone's keeping an eye on anyone who looks like they've got money. My clients don't want to expose themselves anymore, so they stay out of sight. Doesn't hurt business, though. If you don't come to the goods, the goods will come to you! Do me a favor, brother. Get the gear my guys need and stash it on Interchange. Leave one set consisting of a 6B47 helmet and a Peltor ComTac 2 headset in the trash at Avokado. Then stash one gray Gzhel armor in the trash near the outdoor stage, right across from Ultra's main entrance. I won't forget the favor, trust me.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 2 with Ragman to obtain this quest."
     },
     {
       "heading": "Objectives",

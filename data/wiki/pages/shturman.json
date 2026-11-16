@@ -1,8 +1,8 @@
 {
   "title": "Shturman",
   "url": "https://escapefromtarkov.fandom.com/wiki/Shturman",
-  "revisionId": 362390,
-  "lastEdited": "2026-09-29T13:22:01Z",
+  "revisionId": 364847,
+  "lastEdited": "2026-10-21T18:32:48Z",
   "kind": "character",
   "categories": [
     "Bosses"
@@ -30,12 +30,12 @@
     {
       "heading": "Notes",
       "level": 2,
-      "text": "- Shturman's footsteps have reduced volume.\n- Shturman and his 2-3 followers have different health values than PMCs and Scavs.\n\nShturman:\n| Stats |\n| Head: 62; Thorax: 180; Stomach: 150; Arms: 100 each; Legs: 110 each; Total: 812 |\n\nFollower:\n| Stats |\n| Head: 62; Thorax: 138; Stomach: 120; Arms: 100 each; Legs: 110 each; Total: 740 |\n\n- Instead of the typical 4 single slot pockets, he has 5 triple slot pockets, bringing their total space to 15 slots."
+      "text": "- Shturman's footsteps have reduced volume.\n- Shturman and his 2-4 followers have different health values than PMCs and Scavs.\n\nShturman:\n| Stats |\n| Head: 62; Thorax: 180; Stomach: 150; Arms: 100 each; Legs: 110 each; Total: 812 |\n\nFollower:\n| Stats |\n| Head: 62; Thorax: 138; Stomach: 120; Arms: 100 each; Legs: 110 each; Total: 740 |\n\n- Instead of the typical 4 single slot pockets, he has 5 triple slot pockets, bringing their total space to 15 slots."
     },
     {
       "heading": "Quests",
       "level": 2,
-      "text": "- Shturman needs to be killed once each for the quests The Huntsman Path - Woods Keeper and The Huntsman Path - Relentless and once from 75m away with a M700 Sniper rifle for the quest Hunting Trip."
+      "text": "- Shturman needs to be killed once each for the quests The Huntsman Path - Woods Keeper and The Huntsman Path - Relentless."
     },
     {
       "heading": "Location",

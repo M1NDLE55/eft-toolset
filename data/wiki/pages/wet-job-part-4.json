@@ -1,8 +1,8 @@
 {
   "title": "Wet Job - Part 4",
   "url": "https://escapefromtarkov.fandom.com/wiki/Wet_Job_-_Part_4",
-  "revisionId": 359884,
-  "lastEdited": "2026-09-13T20:23:43Z",
+  "revisionId": 367461,
+  "lastEdited": "2026-11-03T14:36:24Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,11 +11,10 @@
     "Wet Job. Part 4"
   ],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Peacekeeper",
+    "location": "Shoreline",
     "previous": "Wet Job - Part 3",
-    "leads to": "Wet Job - Part 5",
-    "reqkappa": "Yes"
+    "leads to": "Wet Job - Part 5"
   },
   "sections": [
     {
@@ -26,22 +25,17 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"We have run this Artyom through our database. It seems he lived in the health resort after the conflict and may have been connected to TerraGroup, but it is unconfirmed, no precise info yet. The nature of their joint operation with the fisherman is also not completely clear, but, considering how secretive their meetings were, I'm pretty sure it's some kind of military tech. We need to find where exactly Artyom’s quarters were, the info could be in the list of tenants, which has to be in the administration office, if it is still intact, of course. Find those documents and bring them to me.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 14 to start this quest."
+      "text": "\"We have run this Artyom through our database. It seems he lived in the health resort after the conflict and may have been connected to TerraGroup, but it is unconfirmed, no precise info yet. The nature of their joint operation with the fisherman is also not completely clear, but, considering how secretive their meetings were, I'm pretty sure it's some kind of military tech. We need to find where exactly Artyom’s quarters were, the info could be in the list of Health Resort tenants, which has to be in the administration office, if it is still intact, of course. Find those documents and bring them to me.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Obtain a list of the resort's tenants on Shoreline\n- Hand over the list of tenants to Peacekeeper"
+      "text": "- Locate and obtain the list of the resort's tenants on Shoreline\n- Hand over the item"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +8,300 EXP\n- Peacekeeper Rep +0.03\n- 1,700 Dollars\n  - 1,785 Dollars with Intelligence Center Level 1\n  - 1,955 Dollars with Intelligence Center Level 2\n- 1× Shoreline Health Resort plan map\n- Unlocks purchase of Desert Tech MDR 7.62x51 assault rifle at Peacekeeper LL4\n\"The documents are intact? Good work, my friend. We will check the data for the information we need. Your reward.\""
+      "text": "- +28,000 EXP\n- 1,900 Dollars\n  - 1,995 Dollars with Intelligence Center Level 1\n  - 2,185 Dollars with Intelligence Center Level 2\n- 5× 7.62x51mm M80A1 ammo pack (20 pcs)\n- 5× M67 hand grenade\n- Unlocks craft for 7.62x51mm M80A1 at Workbench level 3\n\"The documents are intact? Good work, my friend. We will check the data for the information we need. Your reward.\""
     },
     {
       "heading": "Guide",

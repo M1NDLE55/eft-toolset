@@ -1,17 +1,18 @@
 {
   "title": "Road Closed",
   "url": "https://escapefromtarkov.fandom.com/wiki/Road_Closed",
-  "revisionId": 359619,
-  "lastEdited": "2026-09-13T20:19:17Z",
+  "revisionId": 367477,
+  "lastEdited": "2026-11-03T14:55:46Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Peacekeeper",
-    "reqkappa": "No"
+    "location": "Streets of Tarkov",
+    "LL requirement": "2",
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -27,7 +28,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- This quest is only obtainable by USEC PMCs\n- Must be Loyalty Level 2 to start this quest"
+      "text": "- This quest is only obtainable by USEC PMCs"
     },
     {
       "heading": "Objectives",
@@ -37,7 +38,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +10,000 EXP\n- Peacekeeper Rep +0.25\n- Dollars\n  - Dollars with Intelligence Center Level 1\n  - 1,347 Dollars with Intelligence Center Level 2\n\"The cargo is in place, that's reassuring. If the attack was from a car dealership, then it wasn't the BEARs. So it's Kaban again... Thank you for your work.\""
+      "text": "- +10,000 EXP\n- Peacekeeper Rep +0.25\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n\"The cargo is in place, that's reassuring. If the attack was from a car dealership, then it wasn't the BEARs. So it's Kaban again... Thank you for your work.\""
     },
     {
       "heading": "Guide",

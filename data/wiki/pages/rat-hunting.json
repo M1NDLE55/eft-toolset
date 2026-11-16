@@ -1,8 +1,8 @@
 {
   "title": "Rat Hunting",
   "url": "https://escapefromtarkov.fandom.com/wiki/Rat_Hunting",
-  "revisionId": 359600,
-  "lastEdited": "2026-09-13T20:18:58Z",
+  "revisionId": 365743,
+  "lastEdited": "2026-10-27T23:55:53Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,6 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -22,11 +23,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hello. You know, a few days ago I caught myself thinking that Tarkov had somehow become... quieter. At least for me. Then yesterday I realized that feeling was misleading. Someone's been deliberately jamming signals in my area of operation. I don't like it, but I don't want to scare them off just yet. You understand why, they could always come back with something more sophisticated. So first I'm going to try a little trick to work around the jammers without alerting whoever's behind them. To do that, I'll need a few components... Here's the list.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 2 with Mechanic to obtain this quest."
     },
     {
       "heading": "Objectives",

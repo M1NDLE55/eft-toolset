@@ -1,18 +1,19 @@
 {
   "title": "Abandoned Cargo",
   "url": "https://escapefromtarkov.fandom.com/wiki/Abandoned_Cargo",
-  "revisionId": 361814,
-  "lastEdited": "2026-09-24T13:35:08Z",
+  "revisionId": 365182,
+  "lastEdited": "2026-10-27T23:46:21Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs",
     "given by": "Therapist",
+    "location": "Customs",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "2",
+    "previous": "First in Line, or, Operation Aquarius, or, Supply Plans"
   },
   "sections": [
     {
@@ -46,17 +47,17 @@
       "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed on the cargo. When placed, the item is removed from the players' inventory. |\nIn this quest you have to mark 1 of 7 cargo pallets on Customs with a MS2000 Marker."
     },
     {
-      "heading": "Red customs control warehouse - Cargo 1",
+      "heading": "Red customs control warehouse - 1 Cargo",
       "level": 3,
       "text": ""
     },
     {
-      "heading": "Warehouse 17 - Cargo 3, 6, 7",
+      "heading": "Warehouse 17 - 3 Cargos",
       "level": 3,
       "text": ""
     },
     {
-      "heading": "Boiler building - Cargo 2, 4, 5",
+      "heading": "Boiler building - 3 Cargos",
       "level": 3,
       "text": ""
     },

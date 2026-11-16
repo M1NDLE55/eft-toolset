@@ -1,18 +1,17 @@
 {
   "title": "Missing Cargo",
   "url": "https://escapefromtarkov.fandom.com/wiki/Missing_Cargo",
-  "revisionId": 362370,
-  "lastEdited": "2026-09-29T12:33:41Z",
+  "revisionId": 367407,
+  "lastEdited": "2026-11-03T13:12:10Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Skier",
-    "LL requirement": "3",
-    "reqkappa": "Yes"
+    "location": "Lighthouse",
+    "LL requirement": "3"
   },
   "sections": [
     {

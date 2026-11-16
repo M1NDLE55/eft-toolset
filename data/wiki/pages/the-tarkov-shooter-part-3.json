@@ -1,8 +1,8 @@
 {
   "title": "The Tarkov Shooter - Part 3",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Shooter_-_Part_3",
-  "revisionId": 359800,
-  "lastEdited": "2026-09-13T20:22:18Z",
+  "revisionId": 366567,
+  "lastEdited": "2026-10-31T04:20:50Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,7 +13,7 @@
   "infobox": {
     "given by": "Jaeger",
     "previous": "The Tarkov Shooter - Part 2",
-    "leads to": "The Tarkov Shooter - Part 4, The Huntsman Path - Secured Perimeter",
+    "leads to": "The Tarkov Shooter - Part 4",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -35,7 +35,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +10,500 EXP\n- Jaeger Rep +0.02\n- 70,000 Roubles\n  - 73,500 Roubles with Intelligence Center Level 1\n  - 80,500 Roubles with Intelligence Center Level 2\n- 1× Mosin Rifle Tacfire Tanker Style 7.62x54R muzzle brake\n- 1× Mosin Rifle AIM Sports Recoil Pad\n- Unlocks purchase of Mosin Rifle Tacfire Tanker Style 7.62x54R muzzle brake at Jaeger LL2\n- Unlocks purchase of Mosin Rifle AIM Sports Recoil Pad at Jaeger LL2\n- Unlocks craft for .366 TKM AP-M at Workbench level 3\n- Unlocks Colored Hideout shooting range target style\n\"You have got a good reaction time since you're still standing here. Grab your new hat, as promised! Go on, shooter, new tests await you.\""
+      "text": "- +10,000 EXP\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 1× Mosin Rifle Tacfire pistol grip\n- Unlocks purchase of Mosin Rifle Tacfire pistol grip at Jaeger LL2\n- Unlocks craft for .366 TKM AP-M at Workbench level 1\n- Unlocks Colored Hideout shooting range target style\n\"You have got a good reaction time since you're still standing here. Grab your new hat, as promised! Go on, shooter, new tests await you.\""
     },
     {
       "heading": "Guide",

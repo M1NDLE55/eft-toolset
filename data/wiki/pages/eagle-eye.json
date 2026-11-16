@@ -1,18 +1,18 @@
 {
   "title": "Eagle Eye",
   "url": "https://escapefromtarkov.fandom.com/wiki/Eagle_Eye",
-  "revisionId": 362616,
-  "lastEdited": "2026-09-29T20:15:21Z",
+  "revisionId": 367446,
+  "lastEdited": "2026-11-03T14:26:26Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Peacekeeper",
+    "location": "Shoreline",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {

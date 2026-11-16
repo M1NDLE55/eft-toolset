@@ -1,18 +1,19 @@
 {
   "title": "No Swiping",
   "url": "https://escapefromtarkov.fandom.com/wiki/No_Swiping",
-  "revisionId": 362422,
-  "lastEdited": "2026-09-29T14:07:38Z",
+  "revisionId": 367718,
+  "lastEdited": "2026-11-09T00:27:10Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline, Interchange",
     "given by": "Skier",
+    "location": "Interchange, Shoreline",
     "LL requirement": "1",
-    "reqkappa": "No"
+    "LL quests": "3",
+    "previous": "Burning Rubber, or, Supplier"
   },
   "sections": [
     {
@@ -28,12 +29,12 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 10 any target at the smuggler bases on Shoreline or Interchange"
+      "text": "- Eliminate any 10 targets at the smuggler bases on Shoreline or Interchange"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +3,000 EXP\n- Skier Rep +0.1\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 517 Euros with Intelligence Center Level 2\n- 2x Pack of screws\n\"Yeah, yeah, I've heard all about those shits running away with tails between their legs. Here, your goodies.\""
+      "text": "- +3,000 EXP\n- Skier Rep +0.1\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 517 Euros with Intelligence Center Level 2\n- 2× Pack of screws\n\"Yeah, yeah, I've heard all about those shits running away with tails between their legs. Here, your goodies.\""
     },
     {
       "heading": "Guide",

@@ -1,8 +1,8 @@
 {
   "title": "USEC stash key",
   "url": "https://escapefromtarkov.fandom.com/wiki/USEC_stash_key",
-  "revisionId": 356811,
-  "lastEdited": "2026-08-29T20:37:33Z",
+  "revisionId": 363833,
+  "lastEdited": "2026-10-09T21:32:43Z",
   "kind": "key",
   "categories": [
     "Keys"
@@ -38,7 +38,7 @@
       "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
     },
     {
-      "heading": "Lock Locations",
+      "heading": "Lock Location",
       "level": 2,
       "text": "Door to a storage room on the first floor of warehouse #6 on Customs."
     },

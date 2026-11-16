@@ -1,8 +1,8 @@
 {
   "title": "What’s on the Flash Drive?",
   "url": "https://escapefromtarkov.fandom.com/wiki/What%E2%80%99s_on_the_Flash_Drive%3F",
-  "revisionId": 362218,
-  "lastEdited": "2026-09-26T14:22:01Z",
+  "revisionId": 366072,
+  "lastEdited": "2026-10-28T01:08:26Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,7 +13,8 @@
   "infobox": {
     "given by": "Skier",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "3",
+    "previous": "Burning Rubber, or, Supplier"
   },
   "sections": [
     {

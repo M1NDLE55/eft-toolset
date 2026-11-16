@@ -1,8 +1,8 @@
 {
   "title": "The Huntsman Path - Factory Chief",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Factory_Chief",
-  "revisionId": 359758,
-  "lastEdited": "2026-09-13T20:21:36Z",
+  "revisionId": 366587,
+  "lastEdited": "2026-10-31T04:45:20Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "location": "Factory, Interchange",
     "given by": "Jaeger",
-    "previous": "Scout, The Huntsman Path - Forest Cleaning",
-    "leads to": "The Huntsman Path - Relentless",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -29,12 +28,12 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate Tagilla\n- Find 1 BOSS cap in raid\n- Hand over 1 BOSS cap to Jaeger"
+      "text": "- Locate and neutralize Tagilla\n- Find 1 BOSS cap in raid\n- Hand over 1 BOSS cap to Jaeger"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +16,000 EXP\n- Jaeger Rep +0.02\n- 700,000 Roubles\n  - 735,000 Roubles with Intelligence Center Level 1\n  - 805,000 Roubles with Intelligence Center Level 2\n- 1× Factory emergency exit key\n\"That's good news. The world will only get cleaner. Hope the bastard didn't get you with his sledgehammer?\""
+      "text": "- +10,000 EXP\n- Jaeger Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"That's good news. The world will only get cleaner. Hope the bastard didn't get you with his sledgehammer?\""
     },
     {
       "heading": "Guide",

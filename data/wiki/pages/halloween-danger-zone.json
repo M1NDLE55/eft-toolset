@@ -1,0 +1,39 @@
+{
+  "title": "Halloween: Danger Zone",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_Danger_Zone",
+  "revisionId": 367054,
+  "lastEdited": "2026-11-02T21:14:58Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "location": "Ground Zero, Customs, Woods, Interchange, Shoreline, Streets of Tarkov, Lighthouse, Reserve",
+    "previous": "Halloween: Tightening the Quarantine",
+    "leads to": "Halloween: Prototyping, Halloween: Coincidence?"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: Danger Zone is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Things are kicking off all over Tarkov. Someone coughs in the wrong place and they've got a gun shoved in their face. The bosses are tightening the screws, searching everyone at the checkpoints and shooting anyone who looks dodgy without asking questions. And, funny enough, that could work in my favor. Reputation's a funny thing. You've just got to know when to make your move. Since everyone's decided I'm somehow mixed up in this shit, I'll show 'em how to get things under control. I've supplied the men, the guns, the grub, and the ammo. My lads are keeping the quarantine in place and chasing off anyone who looks even remotely infected. You're joining in, too. Spot someone suspicious? Deal with 'em before they infect half of Tarkov. And I've got a little something useful for you in return. I'll give you access to the bodies of the infected. Word is, Therapist pays good money for tissue samples. I'm not about to start poking around in that filth myself, but if you're up for it, get cutting, collect what you can and take it to her. Might as well squeeze some cash out of the old c***.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 15 any targets on Ground Zero or Customs\n- Eliminate 15 any targets on Woods or Interchange\n- Eliminate 15 any targets on Shoreline or Streets of Tarkov\n- Eliminate 15 any targets on Lighthouse or Reserve"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +44,000 EXP\n- 2,800 Euros\n  - 2,940 Euros with Intelligence Center Level 1\n  - 3,220 Euros with Intelligence Center Level 2\n- 1× Weapon repair kit\n- 1× IOTV Gen4 body armor (Full Protection Kit, MultiCam)\n- 2× Infected tissue sample\n- Unlocks barter for Lucky Scav Junk box at Therapist LL1\n- Unlocks barter for Medicine case at Therapist LL2\n- +2 daily operational tasks with Infected tissue sample reward\n\"Knew you could handle it. Just don't get too comfortable!\""
+    }
+  ]
+}

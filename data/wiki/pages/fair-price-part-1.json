@@ -1,8 +1,8 @@
 {
   "title": "Fair Price - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Fair_Price_-_Part_1",
-  "revisionId": 362598,
-  "lastEdited": "2026-09-29T19:53:59Z",
+  "revisionId": 367440,
+  "lastEdited": "2026-11-03T14:18:38Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Skier",
     "previous": "Accept Hobby Club",
-    "leads to": "Fair Price - Part 2",
-    "reqkappa": "No"
+    "leads to": "Fair Price - Part 2"
   },
   "sections": [
     {

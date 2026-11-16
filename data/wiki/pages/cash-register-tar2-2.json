@@ -1,8 +1,8 @@
 {
   "title": "Cash register TAR2-2",
   "url": "https://escapefromtarkov.fandom.com/wiki/Cash_register_TAR2-2",
-  "revisionId": 295852,
-  "lastEdited": "2024-11-05T23:54:03Z",
+  "revisionId": 363491,
+  "lastEdited": "2026-10-07T12:58:25Z",
   "kind": "container",
   "categories": [
     "Loot Containers"
@@ -22,7 +22,7 @@
     {
       "heading": "Description",
       "level": 2,
-      "text": "Bigger than the standard Cash register, has a 2x2 grid that only spawns stacks of Roubles."
+      "text": "Bigger than the standard Cash register, has a 2x2 grid that spawns stacks of Roubles. The locked ones located in the IDEA, OLI and Goshan stores at the ULTRA shopping mall on Interchange can also spawn Physical Bitcoins."
     },
     {
       "heading": "Loot Table",

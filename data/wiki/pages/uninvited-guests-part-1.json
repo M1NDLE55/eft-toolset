@@ -1,8 +1,8 @@
 {
   "title": "Uninvited Guests - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Uninvited_Guests_-_Part_1",
-  "revisionId": 359864,
-  "lastEdited": "2026-09-13T20:23:22Z",
+  "revisionId": 366005,
+  "lastEdited": "2026-10-28T00:00:35Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -34,7 +34,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Locate and obtain the case with military equipment\n  - (Optional) Investigate the shack next to the sordi tower on Shoreline\n  - (Optional) Investigate the second floor of the weather station building on Shoreline\n  - (Optional) Investigate the hydroelectric power station on Shoreline"
+      "text": "- Locate and obtain the case with military equipment\n  - (Optional) Investigate the shack next to the sordi tower on Shoreline\n  - (Optional) Investigate the second floor of the weather station building on Shoreline\n  - (Optional) Investigate the hydroelectric power station on Shoreline\n- Bring the case with military equipment to the BTR Driver"
     },
     {
       "heading": "Rewards",

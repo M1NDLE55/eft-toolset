@@ -1,14 +1,15 @@
 {
   "title": "RUAF",
   "url": "https://escapefromtarkov.fandom.com/wiki/RUAF",
-  "revisionId": 348791,
-  "lastEdited": "2026-08-01T01:09:21Z",
+  "revisionId": 364790,
+  "lastEdited": "2026-10-20T13:15:59Z",
   "kind": "character",
   "categories": [
     "Factions"
   ],
   "redirects": [
-    "AF"
+    "AF",
+    "Russian Armed Forces"
   ],
   "infobox": {
     "location": "Shoreline, Terminal"

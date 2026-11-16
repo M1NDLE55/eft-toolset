@@ -1,8 +1,8 @@
 {
   "title": "The Tarkov Shooter - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Shooter_-_Part_1",
-  "revisionId": 359798,
-  "lastEdited": "2026-09-13T20:22:16Z",
+  "revisionId": 366562,
+  "lastEdited": "2026-10-31T04:15:52Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,7 +12,6 @@
   ],
   "infobox": {
     "given by": "Jaeger",
-    "previous": "Acquaintance",
     "leads to": "The Tarkov Shooter - Part 2",
     "reqkappa": "No, but a subsequent quest Yes"
   },
@@ -35,7 +34,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +12,300 EXP\n- Jaeger Rep +0.02\n- 50,000 Roubles\n  - 52,500 Roubles with Intelligence Center Level 1\n  - 57,500 Roubles with Intelligence Center Level 2\n- 2× PU 3.5x riflescope\n- 2× PU 3.5x ring scope mount\n- 2× Mosin Rifle Kochetov mount\n\"So, do you feel like Zaitsev yet? Sniper is satisfied with the first test results and has already prepared the next task.\""
+      "text": "- +3,000 EXP\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n- 2× Mosin Rifle AIM Sports MNG rail mount\n- 2× Mosin Rifle AIM Sports Recoil Pad\n- Unlocks purchase of Mosin Rifle AIM Sports MNG rail mount at Jaeger LL1\n- Unlocks purchase of Mosin Rifle AIM Sports Recoil Pad at Jaeger LL1\n\"So, do you feel like Zaitsev yet? Sniper is satisfied with the first test results and has already prepared the next task.\""
     },
     {
       "heading": "Guide",

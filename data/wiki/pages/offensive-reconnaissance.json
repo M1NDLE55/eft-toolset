@@ -1,8 +1,8 @@
 {
   "title": "Offensive Reconnaissance",
   "url": "https://escapefromtarkov.fandom.com/wiki/Offensive_Reconnaissance",
-  "revisionId": 359526,
-  "lastEdited": "2026-09-13T20:17:41Z",
+  "revisionId": 365668,
+  "lastEdited": "2026-10-27T23:54:35Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Shoreline",
     "given by": "Mechanic",
+    "LL requirement": "3",
     "previous": "Hidden Layer",
     "leads to": "Vacate the Premises, Hypotheses Testing, Confidential Info, Indisputable Authority, This Tape Sucks",
     "reqkappa": "No"
@@ -34,7 +35,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +4,500 EXP\n\"An old bunker? Yes, there was one mentioned in the archives, an old Soviet shelter. Thing is, it was closed down about twenty years ago due to some kind of technical failure. Looks like Knossos restored it to working order. But why would TerraGroup need an abandoned bomb shelter? Um, hang on. I'm picking up a signal from my interception network. An encrypted message that seems to be coming straight from these cellars... Give me a minute.\""
+      "text": "- +28,000 EXP\n\"An old bunker? Yes, there was one mentioned in the archives, an old Soviet shelter. Thing is, it was closed down about twenty years ago due to some kind of technical failure. Looks like Knossos restored it to working order. But why would TerraGroup need an abandoned bomb shelter? Um, hang on. I'm picking up a signal from my interception network. An encrypted message that seems to be coming straight from these cellars... Give me a minute.\""
     },
     {
       "heading": "Guide",

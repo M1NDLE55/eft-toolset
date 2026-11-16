@@ -1,18 +1,18 @@
 {
   "title": "Master Key",
   "url": "https://escapefromtarkov.fandom.com/wiki/Master_Key",
-  "revisionId": 362650,
-  "lastEdited": "2026-09-29T21:11:11Z",
+  "revisionId": 367454,
+  "lastEdited": "2026-11-03T14:32:16Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Peacekeeper",
+    "location": "Shoreline",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {

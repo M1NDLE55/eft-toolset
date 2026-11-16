@@ -1,18 +1,18 @@
 {
   "title": "Pets Won't Need It",
   "url": "https://escapefromtarkov.fandom.com/wiki/Pets_Won't_Need_It",
-  "revisionId": 361761,
-  "lastEdited": "2026-09-24T12:34:32Z",
+  "revisionId": 365698,
+  "lastEdited": "2026-10-27T23:55:06Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Therapist",
+    "location": "Streets of Tarkov",
     "LL requirement": "2",
-    "reqkappa": "No"
+    "LL quests": "4"
   },
   "sections": [
     {

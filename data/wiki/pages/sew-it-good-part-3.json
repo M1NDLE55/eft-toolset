@@ -1,8 +1,8 @@
 {
   "title": "Sew it Good - Part 3",
   "url": "https://escapefromtarkov.fandom.com/wiki/Sew_it_Good_-_Part_3",
-  "revisionId": 359654,
-  "lastEdited": "2026-09-13T20:19:53Z",
+  "revisionId": 365797,
+  "lastEdited": "2026-10-27T23:56:49Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,8 +13,7 @@
   "infobox": {
     "given by": "Ragman",
     "previous": "Sew it Good - Part 2",
-    "leads to": "Sew it Good - Part 4, The Key to Success",
-    "reqkappa": "Yes"
+    "leads to": "Sew it Good - Part 4"
   },
   "sections": [
     {
@@ -25,22 +24,22 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Hey, what's up. You've dealt with hats quick and clean, good stuff. Now let's move onto some serious things, you've got to be agent 007 for this one. I need a couple of Gzhel body armor pieces for my thing, and the trick is that I need one to be fucked up badly, and another one in a mint condition. Get them however you want, it doesn't really matter now. Can you do it?\""
+      "text": "\"Barev! I haven't seen such a decicated dude like you in a long time. Seriously, brother, I'm not joking!\\n\\nThis time I need a Trooper plate carrier and a Gzhel armor. You've heard of those, right? Popular items. The condition doesn't matter, I'll put everything to good use. And I promised I'd tell you why I need all this. I was thinking it'd be great to start making my own stuff. I've already found a few good tailors, and they're studying the samples right now. But not a word to anyone, got it? I don't want competitors trying to copy me.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Obtain BNTI Gzhel-K armor in 0-50% durability\n- Hand over the armor\n- Obtain BNTI Gzhel-K armor in 50-100% durability\n- Hand over the armor"
+      "text": "- Obtain 2 HighCom Trooper TFO body armor (MultiCam)\n- Hand over the items\n- Obtain 2 BNTI Gzhel-K body armor\n- Hand over the items"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +17,500 EXP\n- Ragman Rep +0.03\n- 1× ZSh-1-2M face shield\n- 1× Maska-1SCh face shield (Olive Drab)\n- 1× Altyn helmet face shield\n\"\"Shaken, not stirred\". You're pretty good, man, got the job done and fast. My thing is almost ready, just need a couple more items.\""
+      "text": "- +10,000 EXP\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 1× Oakley Mechanism heavy duty backpack (Black)\n- Unlocks craft for Ars Arma A18 Skanda plate carrier (MultiCam) at Lavatory level 2\n\"Found them? Great! Here, this is for you.\""
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in Raid |\n| BNTI Gzhel-K body armor | 2 | Handover item | No |\n\nIn this quest you have to hand over 2 BNTI Gzhel-K body armors. One with 0-50% durability and one with 50-100% durability. The armors require no inserted armor plates since the condition is measured by the integrated soft armor.\n\nSince friendly fire is always active, you can easily complete this quest with the help of a another player through the use of a Blicky pistol.\n\nAnother way to complete this quest solo is to let border snipers shoot you so that your character dies far outside the playable space of the map. You can insure the armor with Prapor to receive it back in roughly a day to a day and a half, but it will be quicker if you use Therapist to insure it. You may have to do this method multiple times for the same armor to get it down to the required durability.\n\nAnother option is to shoot the orange propane containers found on The Lab or Customs whilst being inside the radius. The hot gas damage will damage all parts of your armour, this will however also deal a lot of body damage and may kill you if you are not being careful. It is best not to stand directly next to the propane while it explodes, and to only use one explosion at a time. Take in extra gear and meds to swap to so that you do not fight with broken armour or low health."
+      "text": "| Item name | Amount | Requirement | Find in Raid |\n| HighCom Trooper TFO body armor (MultiCam) | 2 | Handover item | No |\n| BNTI Gzhel-K body armor | 2 | Handover item | No |"
     }
   ]
 }

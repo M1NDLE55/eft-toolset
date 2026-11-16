@@ -1,8 +1,8 @@
 {
   "title": "Compartment C-1 keycard",
   "url": "https://escapefromtarkov.fandom.com/wiki/Compartment_C-1_keycard",
-  "revisionId": 346978,
-  "lastEdited": "2026-06-16T14:09:18Z",
+  "revisionId": 363818,
+  "lastEdited": "2026-10-09T21:19:53Z",
   "kind": "key",
   "categories": [
     "Keycards"
@@ -48,7 +48,7 @@
       "text": "Door to the server room on level 7 of Icebreaker."
     },
     {
-      "heading": "Behind The Lock",
+      "heading": "Behind the Lock",
       "level": 2,
       "text": "- 2x PC block\n- Loose loot (Electronics)"
     }

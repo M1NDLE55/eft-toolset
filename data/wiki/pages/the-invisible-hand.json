@@ -1,8 +1,8 @@
 {
   "title": "The Invisible Hand",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Invisible_Hand",
-  "revisionId": 359769,
-  "lastEdited": "2026-09-13T20:21:47Z",
+  "revisionId": 365912,
+  "lastEdited": "2026-10-27T23:58:55Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,6 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Ragman",
+    "LL requirement": "4",
     "leads to": "Circulate",
     "reqkappa": "No"
   },
@@ -25,11 +26,6 @@
       "text": "\"Hey, bro. My friendly competitors are poaching my customers. If they want to declare a trade war on me, then my answer has to be very serious. I found out how they transport their goods. They hire guys with big backpacks. Take care of those mules, will you?\""
     },
     {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 35 to start this quest."
-    },
-    {
       "heading": "Objectives",
       "level": 2,
       "text": "- Eliminate any 15 targets that are using a 20+ container size backpack"
@@ -37,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +12,800 EXP\n- Ragman Rep +0.02\n- 86,000 Roubles\n  - 90,300 Roubles with Intelligence Center Level 1\n  - 98,900 Roubles with Intelligence Center Level 2\n- 1× Gold skull ring\n\"Sick! That's how trade issues should always be dealt with.\""
+      "text": "- +12,800 EXP\n- 86,000 Roubles\n  - 90,300 Roubles with Intelligence Center Level 1\n  - 98,900 Roubles with Intelligence Center Level 2\n- 1× Gold skull ring\n\"Sick! That's how trade issues should always be dealt with.\""
     },
     {
       "heading": "Guide",

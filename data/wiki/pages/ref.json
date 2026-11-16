@@ -1,8 +1,8 @@
 {
   "title": "Ref",
   "url": "https://escapefromtarkov.fandom.com/wiki/Ref",
-  "revisionId": 351221,
-  "lastEdited": "2026-08-05T19:20:37Z",
+  "revisionId": 366056,
+  "lastEdited": "2026-10-28T00:18:05Z",
   "kind": "trader",
   "categories": [
     "Traders"
@@ -16,7 +16,7 @@
     "origin": "Unknown",
     "wares": "- Well-modified weapons - Rare weapon mods - Rare armor, armor plates, helmets, and backpacks - Packs of rare ammunition - Containers - Barter items - Signal pistol and ammunition - Keys to rooms of fallen Arena gladiators",
     "services": "Arena item and currency transfer",
-    "currencies": "GP coin"
+    "currencies": "GP coin (GP)"
   },
   "sections": [
     {

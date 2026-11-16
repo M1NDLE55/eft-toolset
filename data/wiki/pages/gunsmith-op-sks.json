@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - OP-SKS",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_OP-SKS",
-  "revisionId": 353696,
-  "lastEdited": "2026-08-14T21:43:14Z",
+  "revisionId": 364378,
+  "lastEdited": "2026-10-13T15:39:58Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,6 +12,7 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,12 +24,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Oh, hello there. Do you like hunting? Elk, deer... I've always been somewhat neutral about hunting, even though I love my gunsmithing craft. Well, anyway, that's what I'm getting at. There's a new order, and I wanted to ask you to help with it. I need an upgraded Simonov carbine, with a silencer and optic scope. 20-round or larger mag, ergonomics over 35, recoil sum no more than 350.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 9 to start this quest."
+      "text": "\"I've got a new order from a client who's apparently a former hunter. You into hunting yourself? If you are, you'd probably get along with him... Though I can't tell you who he is. You understand - anonymity is essential in this line of work. He needs a modernized Simonov carbine with a suppressor and an optic. It also needs a magazine with at least 20-round capacity, ergonomics at or above 35, and combined recoil below 350. I've already prepared the carbine. The rest is up to you.\""
     },
     {
       "heading": "Objectives",
@@ -38,7 +34,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +3,600 EXP\n- Mechanic Rep +0.01\n- 25,000 Roubles\n  - 26,250 Roubles with Intelligence Center Level 1\n  - 28,750 Roubles with Intelligence Center Level 2\n- 2× Gunpowder \"Kite\"\n- 1× Car battery\n- 1× Electric motor\n- Unlocks purchase of PP-19-01 Vityaz 9x19 submachine gun (variant Zenit) at Ref LL1\n\"Oh, you've done it rather quick. Thank you!\""
+      "text": "- +10,000 EXP\n- Mechanic Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n\"You finished it rather quickly. Impressive.\""
     },
     {
       "heading": "Guide",

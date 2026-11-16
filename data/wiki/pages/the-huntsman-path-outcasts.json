@@ -1,8 +1,8 @@
 {
   "title": "The Huntsman Path - Outcasts",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Outcasts",
-  "revisionId": 359762,
-  "lastEdited": "2026-09-13T20:21:40Z",
+  "revisionId": 366597,
+  "lastEdited": "2026-10-31T04:55:01Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "location": "Lighthouse, Icebreaker",
     "given by": "Jaeger",
-    "previous": "The Huntsman Path - Forest Cleaning",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -33,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +9,000 EXP\n- Jaeger Rep +0.02\n- 110,000 Roubles\n  - 115,500 Roubles with Intelligence center Level 1\n  - 126,500 Roubles with Intelligence center Level 2\n- Unlocks craft for 12/70 AP-20 armor-piercing slug at Workbench level 3\n\"Finally, you're back! I've started to worry. Come, let me at least get you something to eat.\""
+      "text": "- +28,000 EXP\n- Jaeger Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 2× Shustrilo sealing foam\n\"Finally, you're back! I've started to worry. Come, let me at least get you something to eat.\""
     },
     {
       "heading": "Guide",

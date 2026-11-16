@@ -1,18 +1,18 @@
 {
   "title": "Tigr Safari",
   "url": "https://escapefromtarkov.fandom.com/wiki/Tigr_Safari",
-  "revisionId": 362610,
-  "lastEdited": "2026-09-29T20:07:42Z",
+  "revisionId": 367444,
+  "lastEdited": "2026-11-03T14:25:10Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs",
     "given by": "Peacekeeper",
+    "location": "Customs",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -46,7 +46,7 @@
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed on the armored cars. When placed, you must stay alive until the timer finishes or it will need to be replaced. |\n\nMS2000 Markers can be bought from Prapor or Ragman."
     },
     {
-      "heading": "See Also",
+      "heading": "See also",
       "level": 2,
       "text": "- Scrap Metal - The BEAR counterpart quest"
     },

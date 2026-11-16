@@ -1,8 +1,8 @@
 {
   "title": "Lighthouse",
   "url": "https://escapefromtarkov.fandom.com/wiki/Lighthouse",
-  "revisionId": 360441,
-  "lastEdited": "2026-09-16T00:31:01Z",
+  "revisionId": 367830,
+  "lastEdited": "2026-11-10T15:41:34Z",
   "kind": "location",
   "categories": [
     "Locations"
@@ -45,7 +45,7 @@
     {
       "heading": "Usable Keys",
       "level": 2,
-      "text": "| Key Name | Used in Quest |\n| Conference room key | |\n| Convenience store storage room key | |\n| Hillside house key | |\n| Leon's hideout key | |\n| Lighthouse island stash key | yes |\n| Merin car trunk key | |\n| Operating room key | yes |\n| Police truck cabin key | |\n| Radar station commandant room key | yes |\n| Rogue USEC barrack key | yes |\n| Rogue USEC stash key | |\n| Rogue USEC workshop key | |\n| Substation marked key | |\n| USEC cottage first safe key | |\n| USEC cottage room key | |\n| USEC cottage second safe key | |\n| Water treatment plant storage room key | yes |"
+      "text": "| Key Name | Used in Quest |\n| Conference room key | |\n| Convenience store storage room key | |\n| Hillside house key | |\n| Leon's hideout key | |\n| Lighthouse island stash key | yes |\n| Merin car trunk key | |\n| Operating room key | yes |\n| Police truck cabin key | |\n| Radar station commandant room key | yes |\n| Rogue USEC barrack key | |\n| Rogue USEC stash key | |\n| Rogue USEC workshop key | |\n| Substation marked key | |\n| USEC cottage first safe key | |\n| USEC cottage room key | |\n| USEC cottage second safe key | |\n| Water treatment plant storage room key | |"
     },
     {
       "heading": "Bosses",

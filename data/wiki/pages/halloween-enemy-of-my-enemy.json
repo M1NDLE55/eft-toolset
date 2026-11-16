@@ -1,0 +1,48 @@
+{
+  "title": "Halloween: Enemy of My Enemy",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_Enemy_of_My_Enemy",
+  "revisionId": 367015,
+  "lastEdited": "2026-11-02T00:43:34Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "previous": "Halloween: Coincidence?",
+    "leads to": "Halloween: Blind the Enemy, Halloween: Enemy of My Enemy - An Agreement"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: Enemy of My Enemy is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Well, fuck me sideways. Now it all makes sense. TerraGroup deliberately unleashed this infection AGAIN. The whole of Tarkov's their bloody testing ground, same as before. And that vaccine they palmed off on me? Part of the scheme. That's what they used to kick off the next stage. Those c***s were watching the whole bloody thing: how fast the quarantine went up, how people fought back, whether anyone could cook up a cure. We're all just lab rats in their reports. So, for the record, I'm not the only one to blame here. They slipped me the shit, and I had no idea what was in it. Looks like it's time to stop butting heads with Therapist, at least for a bit, and give the people playing games with us a bloody nose instead. Take these documents to her. Let her have a read.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the clues to Therapist"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +24,000 EXP\n- 1,800 Euros\n  - 1,890 Euros with Intelligence Center Level 1\n  - 2,070 Euros with Intelligence Center Level 2\n- 3× BNTI Gzhel-K body armor\n\"Hope she stops giving me grief now. Here, take this for your help.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item name | Amount |\n| Folder with TerraGroup infection progression data | 1 |"
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "Hand over the folder to Therapist in Halloween: Enemy of My Enemy - An Agreement."
+    }
+  ]
+}

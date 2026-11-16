@@ -1,18 +1,17 @@
 {
   "title": "Possessor",
   "url": "https://escapefromtarkov.fandom.com/wiki/Possessor",
-  "revisionId": 361688,
-  "lastEdited": "2026-09-24T12:04:58Z",
+  "revisionId": 365706,
+  "lastEdited": "2026-10-27T23:55:14Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Factory",
     "given by": "Prapor",
-    "LL requirement": "2",
-    "reqkappa": "Yes"
+    "location": "Factory",
+    "LL requirement": "2"
   },
   "sections": [
     {

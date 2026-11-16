@@ -1,8 +1,8 @@
 {
   "title": "Safety Guarantee",
   "url": "https://escapefromtarkov.fandom.com/wiki/Safety_Guarantee",
-  "revisionId": 362556,
-  "lastEdited": "2026-09-29T19:03:40Z",
+  "revisionId": 367432,
+  "lastEdited": "2026-11-03T14:02:06Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Skier",
     "LL requirement": "4",
-    "leads to": "A Life Lesson",
-    "reqkappa": "No"
+    "leads to": "A Life Lesson"
   },
   "sections": [
     {

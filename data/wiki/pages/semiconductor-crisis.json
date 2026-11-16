@@ -1,8 +1,8 @@
 {
   "title": "Semiconductor Crisis",
   "url": "https://escapefromtarkov.fandom.com/wiki/Semiconductor_Crisis",
-  "revisionId": 359646,
-  "lastEdited": "2026-09-13T20:19:45Z",
+  "revisionId": 365789,
+  "lastEdited": "2026-10-27T23:56:40Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,6 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -21,27 +22,22 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Yesterday, as I was installing a reflex sight onto an M4, I spotted some weird local on the monitor, he seemed to be praying. He painted different signs on the wall and on the floor, then walked into the middle of the circle these symbols formed, and started placing weapons there. To be honest, it didn’t even look strange, it made perfect sense to me. It’s natural for people to offer the most valuable things they have to their gods, and these days it’s weapons. Those are cultists, you might've already encountered them. I have enough power capacity for now. Look for some more graphics cards and coolers. And thanks for the package, by the way.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 14 to start this quest."
+      "text": "\"Yesterday, while I was mounting a red dot on an M4, I noticed someone on one of my monitors who looked like he was praying. He had covered the walls with strange symbols, drawn a circle on the floor, and started placing weapons inside it. Oddly enough... it made sense to me. That's how religion works, isn't it? You offer your gods the things that matter most to you. Seems those cultists think the same way. You've probably run into them already. Anyway, back to business. I've got enough electrical capacity for now. Go find me some more graphics cards and cooling fans.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Find 3 Graphics cards in raid\n- Find 15 CPU fans in raid\n- Hand over 3 Graphics cards to Mechanic\n- Hand over 15 CPU fans to Mechanic"
+      "text": "- Find the item in raid: 1 Graphics card\n- Hand over the item\n- Find the item in raid: 8 CPU fan\n- Hand over the items"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +8,000 EXP\n- +3 Attention skill level\n- Mechanic Rep +0.02\n- 1× Pistol case\n- 2× Physical Bitcoin\n- 4× Tetriz portable game console\n- 1× Glock 17 9x19 pistol (variant Viper)\n\n\"Ah, you've returned. I'll try to assemble them till nightfall, thanks. I know, it's really hard to find such electronics during these hard times, but I didn't doubt you.\""
+      "text": "- +28,000 EXP\n- Mechanic Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Tech manual\n- Unlocks barter of Kalashnikov AK-104 7.62x39 assault rifle (variant T-SAW) at Mechanic LL3\n\"Ah, you've returned. I'll try to assemble them till nightfall, thanks. I know, it's really hard to find such electronics during these hard times, but I never doubted you.\""
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Graphics card | 3 | Handover item | Yes | Can be crafted in the Hideout (Intelligence Center lv. 3). |\n| CPU fan | 15 | Handover item | Yes | |\n\n- CPU fans can be found inside of electronics stores, but are most commonly found inside of PC blocks.\n\n- Graphics cards can be found:\n  - In PC blocks\n  - In Sport bags\n  - Inside Buried barrel cache\n  - Inside Ground cache"
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Graphics card | 1 | Handover item | Yes | Can be crafted in the Hideout (Intelligence Center lv. 3). |\n| CPU fan | 8 | Handover item | Yes | |\n\n- CPU fans can be found inside of electronics stores, but are most commonly found inside of PC blocks.\n\n- Graphics cards can be found:\n  - In PC blocks\n  - In Sport bags\n  - Inside Buried barrel cache\n  - Inside Ground cache"
     },
     {
       "heading": "Customs",

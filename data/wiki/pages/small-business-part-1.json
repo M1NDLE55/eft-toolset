@@ -1,8 +1,8 @@
 {
   "title": "Small Business - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Small_Business_-_Part_1",
-  "revisionId": 359680,
-  "lastEdited": "2026-09-13T20:20:18Z",
+  "revisionId": 366460,
+  "lastEdited": "2026-10-30T12:24:15Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Fence",
     "previous": "Immunity",
-    "leads to": "Small Business - Part 2",
-    "reqkappa": "No"
+    "leads to": "Small Business - Part 2"
   },
   "sections": [
     {
@@ -28,7 +27,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Find a Ded Moroz figurine in raid\n- Hand over the item to Fence\n- Find a Politician Mutkevich figurine in raid\n- Hand over the item to Fence\n- Find a Killa figurine in raid\n- Hand over the item to Fence\n- Find a Reshala figurine in raid\n- Hand over the item to Fence\n- Find a Ryzhy figurine in raid\n- Hand over the item to Fence\n- Find a Scav figurine in raid\n- Hand over the item to Fence\n- Find a Tagilla figurine in raid\n- Hand over the item to Fence\n- Find a Cultist figurine in raid\n- Hand over the item to Fence\n- Find a Den figurine in raid\n- Hand over the item to Fence"
+      "text": "- Find a Politician Mutkevich figurine in raid\n- Hand over the item to Fence\n- Find a Killa figurine in raid\n- Hand over the item to Fence\n- Find a Reshala figurine in raid\n- Hand over the item to Fence\n- Find a Ryzhy figurine in raid\n- Hand over the item to Fence\n- Find a Scav figurine in raid\n- Hand over the item to Fence\n- Find a Tagilla figurine in raid\n- Hand over the item to Fence\n- Find a Cultist figurine in raid\n- Hand over the item to Fence\n- Find a Den figurine in raid\n- Hand over the item to Fence"
     },
     {
       "heading": "Rewards",
@@ -38,7 +37,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in raid |\n| Ded Moroz figurine | 1 | Handover item | Yes |\n| Politician Mutkevich figurine | 1 | Handover item | Yes |\n| Killa figurine | 1 | Handover item | Yes |\n| Reshala figurine | 1 | Handover item | Yes |\n| Ryzhy figurine | 1 | Handover item | Yes |\n| Scav figurine | 1 | Handover item | Yes |\n| Tagilla figurine | 1 | Handover item | Yes |\n| Cultist figurine | 1 | Handover item | Yes |\n| Den figurine | 1 | Handover item | Yes |"
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| Politician Mutkevich figurine | 1 | Handover item | Yes |\n| Killa figurine | 1 | Handover item | Yes |\n| Reshala figurine | 1 | Handover item | Yes |\n| Ryzhy figurine | 1 | Handover item | Yes |\n| Scav figurine | 1 | Handover item | Yes |\n| Tagilla figurine | 1 | Handover item | Yes |\n| Cultist figurine | 1 | Handover item | Yes |\n| Den figurine | 1 | Handover item | Yes |"
     }
   ]
 }

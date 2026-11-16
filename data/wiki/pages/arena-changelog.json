@@ -1,8 +1,8 @@
 {
   "title": "Arena Changelog",
   "url": "https://escapefromtarkov.fandom.com/wiki/Arena_Changelog",
-  "revisionId": 361419,
-  "lastEdited": "2026-09-23T14:54:35Z",
+  "revisionId": 367848,
+  "lastEdited": "2026-11-11T16:06:54Z",
   "kind": "game",
   "categories": [
     "Escape from Tarkov: Arena"
@@ -14,6 +14,206 @@
       "heading": "Introduction",
       "level": 1,
       "text": "For the main game, see Changelog.\n\nThis page contains a collection of official patch notes for Escape from Tarkov: Arena.\n\nIt entered the Closed Beta state on December 17, 2023 and the current game version is ."
+    },
+    {
+      "heading": "0.6.2.0.48720 (11 November 2026)",
+      "level": 2,
+      "text": "- Technical update"
+    },
+    {
+      "heading": "0.6.2.0.48598 (10 November 2026)",
+      "level": 2,
+      "text": "- 7.62×39 mm PS gzh ammo is now available to the Enforcer again.\n- Adjusted standard presets with a Meta score exceeding 10,000 points.\n- Fixed an issue that prevented 5.8×42 mm DVX12 ammo from dealing blunt damage."
+    },
+    {
+      "heading": "0.6.2.0.48598 (5 November 2026)",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Balance Changes",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Metascore",
+      "level": 4,
+      "text": "The Metascore of the following item categories has been adjusted:\n- Sights;\n- Tactical grips;\n- Gas blocks;\n- Suppressors.\n\nWe expect these changes to simplify weapon and preset customization, making Metascore values easier to understand. The Metascore differences between individual sights have now been minimized and depend solely on the sight category and its Ergonomics stat."
+    },
+    {
+      "heading": "BlastGang",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Quality-of-Life Improvements",
+      "level": 4,
+      "text": "The following improvements have been added to BlastGang:\n- The ability to return unused, undamaged weapons and gear purchased during the current round for a full refund.\n- Compensation for rounds played while outnumbered.\n- The ability to customize weapon magazines.\n- The ability to join a match through the Backfill system during the first few rounds."
+    },
+    {
+      "heading": "Weapon Balance",
+      "level": 4,
+      "text": "- 7N40 ammunition for the NL545 DI and NL545 GP rifles has been replaced with BP ammunition.\n- The M4A1's base build has been changed, and the maximum Metascore of available modifications has been reduced.\n- Additional magazines for the AK-50 have been removed.\n- The Beretta M9A3 pistol is now available only to the attacking side.\n- The SIG P226R pistol is now available only to the defending side.\n- The CMMG Mk47 Mutant assault rifle is now available only to the defending side.\n- AS VAL magazines have been replaced with 20-round magazines, and the number of spare magazines has been increased from 3 to 4.\n- The reward for a kill using budget weapons has been increased to $800."
+    },
+    {
+      "heading": "Shop Price Changes",
+      "level": 4,
+      "text": "- The price of all Class I armor has been reduced to $300.\n- The price of all Class II armor has been reduced to $1,000.\n- The price of all helmets has been reduced by $200.\n- The price of the NL545 GP assault rifle has been reduced to $3,300.\n- The price of the FN SCAR-H X-17 has been reduced to $3,100.\n- The price of the HK MP7A1, Desert Tech MDR 7.62x51, and Steyr AUG A3 has been increased to $3,300.\n- The price of the NL545 DI and Colt M4A1 assault rifles has been increased to $3,500.\n- The price of the ASH-12 has been increased to $4,000.\n- The price of the TheAKGuy AK-50 large-caliber rifle has been increased to $5,000.\n- The price of the FN Five-seveN MK2 pistol has been increased to $600.\n- The price of the Desert Eagle L6 pistol has been reduced to $400.\n- The price of the Serdyukov SR-1MP Gyurza pistol has been reduced to $450.\n- The price of the Stechkin and Silenced automatic pistols has been increased to $700.\n- The price of the HK MP5 submachine gun has been increased to $1,600.\n- The price of the B&T MP9 submachine gun has been increased to $1,800.\n- The price of the AS VAL special-purpose assault rifle has been increased to $2,000."
+    },
+    {
+      "heading": "Item Synchronization Between EFT and EFT: Arena",
+      "level": 3,
+      "text": "New items from Escape from Tarkov have been added to the Armory."
+    },
+    {
+      "heading": "Weapons and Modifications",
+      "level": 4,
+      "text": "- Norinco QBZ-191 5.8x42 mm assault rifle, its modifications, and ammunition.\n- Howa Type-20 5.56x45 mm assault rifle and its modifications."
+    },
+    {
+      "heading": "Armor and Gear",
+      "level": 4,
+      "text": "- Spiritus Systems LV-119 plate carrier (Black Division, Lightweight).\n- Ferro Concepts FCPC V5 plate carrier (Black Division).\n- Spiritus Systems LV-119 plate carrier (Black Division, Loaded).\n- Gatorz Specter MILSPEC protective glasses.\n- Gentex Ops-Core SOTR respirator.\n- AVON M53A1 gas mask."
+    },
+    {
+      "heading": "Melee Weapons",
+      "level": 4,
+      "text": "- NKVD Finka knife (PvP Zone).\n- NKVD Finka knife (PvE Zone).\n- Akula push dagger.\n- Kasatka push dagger.\n- Ka-Bar USMC Fighter knife.\n- Microtech Jagdkommando knife."
+    },
+    {
+      "heading": "PMC Voice Sets",
+      "level": 4,
+      "text": "- BEAR: Den.\n- USEC: Tony.\n\nSome of the new items can be unlocked by reaching Prestige in PvP Zone or PvE Zone, completing Battle Pass requirements, participating in Leagues, and earning seasonal rewards from the Kord Breach season in Escape from Tarkov. Alternative unlock methods are available for certain items."
+    },
+    {
+      "heading": "Arsenal Expansion",
+      "level": 3,
+      "text": "New modules and modifications have been added for the following weapons:\n- HK UMP-45 submachine gun.\n- HK 416A5 assault rifle.\n- PKP machine gun.\n- AKS-74U assault rifle.\n- U.S. Ordnance M60E6 machine gun.\n- FN SCAR-L assault rifle.\n- And other weapons.\n\nNew modules and modifications can be unlocked by leveling up the corresponding weapon and completing daily tasks."
+    },
+    {
+      "heading": "Fixes",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "BlastGang",
+      "level": 4,
+      "text": "- Fixed an issue that caused a black screen to appear when spectating a teammate after the player's character died.\n- Fixed an issue that prevented the player from switching weapons while aiming.\n- Fixed the Crye AirFrame Shark helmet loadout. It now has only the AirFrame Chops additional armor installed, without a face shield."
+    },
+    {
+      "heading": "Technical Improvements",
+      "level": 4,
+      "text": "- Fixed an issue that caused the Auto RAM Cleaner setting to reset after relaunching the game.\n- Fixed several causes of memory leaks and performance spikes during matches.\n- Improved the hit registration system."
+    },
+    {
+      "heading": "Interface",
+      "level": 4,
+      "text": "- Fixed an issue that caused daily, weekly, and other tasks to be completed automatically when opening Ref's Tasks tab.\n- Fixed an issue that prevented players from voting to kick a player after new participants joined a match.\n- Fixed the action confirmation window. It can now be closed by pressing Enter.\n- Fixed a discrepancy between the XP values displayed on the match results screen and in the match history.\n- Fixed the incorrect display of certain icons.\n- Made other minor interface changes."
+    },
+    {
+      "heading": "Other Changes",
+      "level": 4,
+      "text": "- Fixed the Metascore of the DS Arms stock for the RPD.\n- Fixed an issue that made a laser designator available for the CGNL NL545 DI assault rifle.\n- Fixed an issue with the 1P78 sight that allowed players to see other players' sights through walls.\n- Fixed the attachment point positions of new items picked up from the ground during a match.\n- Fixed an issue that prevented players from picking up items when holding a knife picked up from the ground.\n- Made several other minor fixes."
+    },
+    {
+      "heading": "0.6.2.0.48473 (29 October 2026)",
+      "level": 2,
+      "text": "The new CheckPoint mode: BloodLust is now live in #TarkovArena!\n\nUntil November 5, test your skills in bloody battles on the Fort and Stadium maps, using melee weapons only.\n\nIn addition, event participants can look forward to:\n- Double match XP in CPT: #BloodLust mode;\n- 50% more BattlePass XP;\n- A special questline;\n- An achievement and rewards for completing all event quests."
+    },
+    {
+      "heading": "0.6.1.5 (23 October 2026)",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Wildcard Class Balance Adjustments",
+      "level": 3,
+      "text": "Half of the in-game event has already passed, and many of you have probably noticed that armor has become less effective and the time to kill (TTK) has decreased significantly.\n\nTo address this, we have decided to bring the ammunition available to weapons used by the Wildcard class in line with the restrictions imposed on the classes those weapons belong to. This will help adjust TTK, improve armor effectiveness, and create a more balanced gameplay experience.\n\nThe following ammunition types are now unavailable for weapons used by the Wildcard class:\n\n7.62x51mm\n- BPZ FMJ: M1A, G28, SR-25, SR-25 (tau), R11 RSASS, RFB, VPO-101, DVL-10, Model 700, T-5000M.\n- M61: AK-308, SA-58, MDR 7.62x51, SCAR-H, SCAR-H \"X-17\", M60E6.\n\n7.62x54mm R\n- LPS Gzh / FMJ: SVDS, AVT-40, SVT-40, Mosin 1891, SV-98.\n- BT Gzh: PKP.\n\n7.62x39mm\n- PS Gzh: OP-SKS, RD-704, AK-103, AK-104, AKMN, AKMSN, Mk47 Mutant.\n- PP Gzh: OP-SKS, RPDN.\n- BP Gzh: RPDN.\n- MAI AP: RPDN, RD-704, Mk47 Mutant.\n\n5.56x45mm\n- M855A1: Mk 12 SPR, TX-15 DML.\n- M995: M16A1, M4A1, HK 416A5, HK G36, Model 1 FA AR-15.\n\n5.45x39mm\n- BT GS: RPK-16, AK-105, AK-12, AK-74M, AK-74N, AKS-74UN, NL545 (DI), NL545 (GP).\n- BS GS: NL545 (DI), NL545 (GP).\n\n9x39mm\n- SP-6 GS: VSS Vintorez, 9A-91, AS VAL, AS VAL MOD.4, SR-3M.\n- PAB-9 GS: AS VAL MOD.4, SR-3M.\n\n12/70\n- AP-20: Auto Assault-12 Gen 2, Saiga-12K, Saiga-12K \"Redline\", Saiga-12K Ver. 10, Benelli M3, MP-153, MP-155.\n- Piranha: MP-133, Mossberg 590A1, Remington 870.\n- 8.5mm Magnum: MP-133, Mossberg 590A1, Remington 870.\n- Flechette: Mossberg 590A1.\n\nOther Calibers\n- .338 Lapua Magnum AP: SWORD International Mk-18.\n- .300 Blackout AP: SIG MCX."
+    },
+    {
+      "heading": "0.6.1.0.48206 (19 October 2026)",
+      "level": 2,
+      "text": "- Fixed an issue that prevented the preset selection screen from appearing.\n- Fixed an issue that caused player presets and character models to display incorrectly on the preset selection screen during a match.\n- Fixed an issue that prevented players from looting bodies."
+    },
+    {
+      "heading": "0.6.1.0.48163 (16 October 2026)",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "In-Game Event: Wildcard",
+      "level": 3,
+      "text": "New Class — Wildcard\n\nA new class, Wildcard, has been added to EFT: Arena as part of the Wildcard event.\n\nThe class's main feature is the ability to use any gear from the Arsenal without class restrictions, subject to the Metascore limit."
+    },
+    {
+      "heading": "Wildcard Questline",
+      "level": 3,
+      "text": "A limited-time questline consisting of 9 quests is now available. Completing it grants a matching achievement."
+    },
+    {
+      "heading": "Selling Items for GP",
+      "level": 3,
+      "text": "You can now sell certain items from the Arena Stash for GP Coins.\n\nTo sell an item, right-click it and select Sell. The selling price depends on your loyalty level with Ref.\n\nThe following items can be sold:\n- Sealed Gear Case (Battle Pass: Season 0);\n- Sealed Gear Case (Rare);\n- Sealed Valuables Case (Rare);\n- Sealed Supply Case (Rare);\n- Sealed Weapon Case (Rare);\n- Red Christmas Ball Ornament;\n- Silver Christmas Ball Ornament;\n- Purple Christmas Ball Ornament."
+    },
+    {
+      "heading": "BattlePass Balance Changes",
+      "level": 3,
+      "text": "- Increased the daily currency exchange limit for Battle Points from 10 to 20 units. The change will take effect once the player's individual limit resets."
+    },
+    {
+      "heading": "Fixes",
+      "level": 3,
+      "text": "- Fixed several causes of memory leaks.\n- Fixed an issue where a character's hands could appear detached from their body during a match.\n- Fixed an issue where the reward for the “A New Classic” quest was only granted after restarting the game.\n- Fixed an issue where the reward for a barter at the exchange point on The Lab tactical map was not granted if the barter was completed during the final second before the exchange point refreshed.\n- Fixed an issue where the quest widget would not open when switching presets in TeamFight.\n- Improved the MVP point calculation system in CheckPoint mode.\n- Fixed an issue where players could get stuck with the timer at zero in the preset selection window during a match.\n- Fixed the display of quest mechanic UI elements and several in-game icons.\n- Made several other minor fixes."
+    },
+    {
+      "heading": "BlastGang Fixes",
+      "level": 3,
+      "text": "- Fixed the announcer volume.\n- Fixed an issue where a match would not start with 10 players and one spectator in the lobby.\n- Fixed an issue where the penalty system for killing teammates would not work correctly after a round ended or between rounds.\n- Fixed an issue where the player-kick voting system did not work correctly in spectator mode.\n- Fixed an issue where a player could not see the Device if the game froze as it spawned on the map and another player picked it up.\n- Fixed an issue where quickly purchasing several types of weapons caused the character's hands to disappear. Additionally, controls would stop working when attempting to pick up a dropped weapon."
+    },
+    {
+      "heading": "Weapons and Modifications",
+      "level": 3,
+      "text": "- Replaced 7.62×39 PP gs ammunition with 7.62×39 PS gs ammunition in the standard Alpha preset.\n- Fixed an issue that prevented the PTR “Tri-Rail” handguard for the HK MP5 from being installed on the HK MP5 9×19."
+    },
+    {
+      "heading": "0.6.0.0.47752 (30 September 2026)",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Changes & QoL",
+      "level": 3,
+      "text": "- Server-side improvements to hit registration.\n- Added a visual kill impact.\n- Fixed an issue that prevented players from reporting or adding players to their friends list through match history if they weren't already friends.\n- Fixed memory leaks that could occur when repeatedly joining matches using the Next Game button.\n- Fixed an issue with the custom game list not updating correctly."
+    },
+    {
+      "heading": "BlastGang",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "New Weapons",
+      "level": 4,
+      "text": "- MP7A1.\n- MP7A2.\n- AK-50.\n- Mk18 Mjolnir.\n- APS.\n- APB.\n- TT-33."
+    },
+    {
+      "heading": "New Armor Vests",
+      "level": 4,
+      "text": "- BFG Grey.\n- BFG Coyote."
+    },
+    {
+      "heading": "Weapon Changes",
+      "level": 4,
+      "text": "- Kedr-B: price increased to 900; spare magazine count reduced to 2.\n- PP-9 Klin: price increased to 900; spare magazine count reduced to 2.\n- Model 590: price reduced to 700.\n- AS VAL: price increased to 1,900; spare magazine count reduced to 3.\n- SR-3M: price increased to 2,000; spare magazine count reduced to 3.\n- MCX: price increased to 2,400.\n- Mk47 Mutant: price changed to 2,200."
+    },
+    {
+      "heading": "Other BlastGang Changes",
+      "level": 4,
+      "text": "- Improved item handling during a match: moving an item to an occupied slot now drops the item currently occupying that slot on the ground.\n- Fixed an issue that could cause the Device to be duplicated during a match.\n- Fixed an issue with magazines disappearing from a player's rig when loading ammunition.\n- Fixed an issue that allowed weapon builds exceeding the meta weight limit to be saved if the party leader started matchmaking while the build was being assembled.\n- Fixed the loadout invalidity icon being displayed incorrectly after returning a loadout to the shop and opening it again.\n- Fixed an issue where builds that players cannot customize were not updated after their parameters were changed.\n- Fixed an issue that could cause a black screen to appear when switching rounds.\n- Fixed an issue with the player's preset name being displayed incorrectly.\n- Added visual interference to the player's screen during an explosion.\n- Various other minor BlastGang changes."
+    },
+    {
+      "heading": "Interface",
+      "level": 3,
+      "text": "- Fixed the BattlePass XP bar on the match results screen: all earned XP is now displayed using the colors of the current BattlePass.\n- Fixed the Disable FPS Limit checkbox being displayed incorrectly after changing graphics settings.\n- Fixed the new content marker being displayed incorrectly for items without connections in the Connections tab.\n- Fixed an issue with the Inspector popup when viewing a preset during a match.\n- Various other minor interface changes."
     },
     {
       "heading": "0.6.0.0.47588 (23 September 2026)",

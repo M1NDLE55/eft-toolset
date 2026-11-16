@@ -1,18 +1,17 @@
 {
   "title": "Indisputable Authority",
   "url": "https://escapefromtarkov.fandom.com/wiki/Indisputable_Authority",
-  "revisionId": 362483,
-  "lastEdited": "2026-09-29T16:08:46Z",
+  "revisionId": 367430,
+  "lastEdited": "2026-11-03T13:48:44Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "The Labyrinth",
     "given by": "Skier",
-    "previous": "Offensive Reconnaissance",
-    "reqkappa": "No"
+    "location": "The Labyrinth",
+    "previous": "Offensive Reconnaissance"
   },
   "sections": [
     {

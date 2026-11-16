@@ -1,8 +1,8 @@
 {
   "title": "Steady Signal",
   "url": "https://escapefromtarkov.fandom.com/wiki/Steady_Signal",
-  "revisionId": 359702,
-  "lastEdited": "2026-09-13T20:20:41Z",
+  "revisionId": 366133,
+  "lastEdited": "2026-10-28T22:35:31Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Woods",
     "given by": "Mechanic",
+    "LL requirement": "1",
     "reqkappa": "No"
   },
   "sections": [
@@ -22,7 +23,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Hm, you'll be perfect for this. You know the weather stations in Woods? They monitor the atmosphere, and they have power supplies for their sensors inside. And I coincidentally have to power the transmitters. I doubt they've been disturbed since the start of the conflict. Which means there could be power supplies inside in operational condition. Find the weather stations and set up the trackers. Then I'll have my crew attach the transmitters to them.\""
+      "text": "\"Greetings. I have a job for you. There are several weather stations scattered throughout the Priozersk forest. Back when things were still normal, they monitored atmospheric conditions. To keep them running continuously, they were equipped with independent power supplies. Now they're just sitting there, rusting away. I doubt anyone will object if I put those power supplies to better use. There's just one problem: nobody knows exactly where all the stations are. You spend plenty of time in that forest, so find one and mark it with a strobe marker. I'll pay you for the work, don't worry.\""
     },
     {
       "heading": "Objectives",
@@ -32,7 +33,12 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +14,000 EXP\n- Mechanic Rep +0.02\n- 48,000 Roubles\n  - 50,400 Roubles with Intelligence Center Level 1\n  - 55,200 Roubles with Intelligence Center Level 2\n- 1× Military cable\n- 1× Military circuit board\n\"I'm receiving the signals, my men are on their way to Woods. Your reward.\""
+      "text": "- +3,000 EXP\n- Mechanic Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"The signals are already coming through. My people are on their way to the forest. Here's your payment.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "| Item Name | Amount | Notes |\n| MS2000 Marker | 1 | This item is placed at the weather stations. When placed, the item is removed from the players' inventory. |"
     },
     {
       "heading": "Guide",

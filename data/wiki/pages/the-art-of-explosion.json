@@ -1,8 +1,8 @@
 {
   "title": "The Art of Explosion",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Art_of_Explosion",
-  "revisionId": 361735,
-  "lastEdited": "2026-09-24T12:28:15Z",
+  "revisionId": 365875,
+  "lastEdited": "2026-10-27T23:58:16Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Prapor",
-    "LL requirement": "4",
-    "reqkappa": "No"
+    "LL requirement": "4"
   },
   "sections": [
     {
@@ -32,7 +31,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks purchase of RShG-2 72.5mm rocket launcher at Prapor LL4\n- Unlocks purchase of Granit 4 ballistic plate (Front) at Prapor LL4\n- 1× RShG-2 72.5mm rocket launcher\n- 1× Granit 4 ballistic plate (Front)\n- +4 Grenade Launchers skill levels\n- +4 Underbarrel Launchers skill levels\n\"Yup, I've already heard about your handiwork. In your hands, an RShG's more of an asset than a liability. Like I said, these things are hard to come by, but I'll set one aside for you whenever I get a shipment.When you use it, make sure you've got plenty of space around you and nobody standing behind you. Oh, and read the instructions printed on the launcher. Don't be an idiot.\""
+      "text": "- +65,000 EXP\n- +4 Grenade Launchers skill levels\n- +4 Underbarrel Launchers skill levels\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 1× RShG-2 72.5mm rocket launcher\n- 1× Granit 4 ballistic plate (Front)\n- Unlocks purchase of RShG-2 72.5mm rocket launcher at Prapor LL4\n- Unlocks purchase of Granit 4 ballistic plate (Front) at Prapor LL4\n\"Yup, I've already heard about your handiwork. In your hands, an RShG's more of an asset than a liability. Like I said, these things are hard to come by, but I'll set one aside for you whenever I get a shipment.When you use it, make sure you've got plenty of space around you and nobody standing behind you. Oh, and read the instructions printed on the launcher. Don't be an idiot.\""
     },
     {
       "heading": "Guide",

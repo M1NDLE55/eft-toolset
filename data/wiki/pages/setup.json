@@ -1,18 +1,18 @@
 {
   "title": "Setup",
   "url": "https://escapefromtarkov.fandom.com/wiki/Setup",
-  "revisionId": 362247,
-  "lastEdited": "2026-09-26T15:50:59Z",
+  "revisionId": 366145,
+  "lastEdited": "2026-10-29T03:31:21Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs",
     "given by": "Skier",
+    "location": "Customs",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "4"
   },
   "sections": [
     {

@@ -1,8 +1,8 @@
 {
   "title": "Terminal",
   "url": "https://escapefromtarkov.fandom.com/wiki/Terminal",
-  "revisionId": 359900,
-  "lastEdited": "2026-09-13T20:25:46Z",
+  "revisionId": 367598,
+  "lastEdited": "2026-11-07T20:09:06Z",
   "kind": "location",
   "categories": [
     "Locations"
@@ -29,7 +29,7 @@
     {
       "heading": "Notes",
       "level": 2,
-      "text": "- When leaving this location by either dying or extracting, the state of the character is returned as it was before entering, besides the consumed access item.\n\n- This location can only be entered through transiting from Shoreline in the time period of 21:00-6:00 after presenting an access item at the port garrison intercom.\n| Icon | Item name |\n| Reprogrammed RFID keycard with Mr. Kerman's hash codes; +; Secure container Alpha-1 with TerraGroup evidence | Reprogrammed RFID keycard with Mr. Kerman's hash codes; +; Secure container Alpha-1 with TerraGroup evidence |\n| RFID keycard with unknown name | RFID keycard with unknown name |\n| Reprogrammed RFID keycard with Prapor's hash codes | Reprogrammed RFID keycard with Prapor's hash codes |\n| Prapor's letter for the port checkpoint | Prapor's letter for the port checkpoint |"
+      "text": "- When leaving this location by either dying or extracting, the state of the character is returned as it was before entering, besides the consumed access item.\n\n- This location can only be entered through transiting from Shoreline in the time period of 21:00-6:00 after presenting an access item at the port garrison intercom.\n| Icon | Item name |\n| Reprogrammed RFID keycard with Mr. Kerman's hash codes; +; Secure container Alpha-1 with TerraGroup evidence | Reprogrammed RFID keycard with Mr. Kerman's hash codes; +; Secure container Alpha-1 with TerraGroup evidence |\n| RFID keycard with unknown name | RFID keycard with unknown name |\n| Prapor's letter for the port checkpoint | Prapor's letter for the port checkpoint |\n| Reprogrammed RFID keycard with Prapor's hash codes | Reprogrammed RFID keycard with Prapor's hash codes |"
     },
     {
       "heading": "Features",
@@ -39,7 +39,7 @@
     {
       "heading": "Key Items",
       "level": 2,
-      "text": "| Icon | Name |\n| Armory key | Armory key |\n| Black Division keycard | Black Division keycard |\n| SZ-1 explosive charge (Terminal) | SZ-1 explosive charge |\n| Pier door key | Pier door key |"
+      "text": "| Icon | Name |\n| Armory key | Armory key |\n| Black Division keycard | Black Division keycard |\n| Pier door key | Pier door key |\n| SZ-1 explosive charge (Terminal) | SZ-1 explosive charge |"
     },
     {
       "heading": "Bosses",
@@ -72,7 +72,7 @@
       "text": ""
     },
     {
-      "heading": "Electrical Panel Map Translated - North right",
+      "heading": "Ingame Electrical Panel Map Translated - North right",
       "level": 3,
       "text": ""
     },

@@ -1,8 +1,8 @@
 {
   "title": "Sisyphus",
   "url": "https://escapefromtarkov.fandom.com/wiki/Sisyphus",
-  "revisionId": 360501,
-  "lastEdited": "2026-09-17T20:48:51Z",
+  "revisionId": 365820,
+  "lastEdited": "2026-10-27T23:57:13Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Woods, Reserve, Lighthouse",
     "given by": "Ragman",
+    "LL requirement": "3",
     "reqkappa": "No"
   },
   "sections": [
@@ -23,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"How's your physical shape, ahper? I've got one deal that's still hanging over my head, and I could really use some help. But I'll tell you right now, you can throw your back out in no time doing this! So, I've made contact with the smugglers. Wouldn't exactly call it a partnership, but they've got a decent job for me. We need to deliver some armor plates to their boys. Everything's already packed up and waiting at the drop-off points, so all that's left is getting it to the recipients. You in? Both cases with the armor plates are in Priozersk right now. One's in the bunker, and the other's at the abandoned USEC checkpoint. One case needs to be hauled to the guardhouse at the military base. You want the one next to the trail leading to Woods. The second case is supposed to go in the railcar with the Ural truck at the train station near the water treatment plant. Once you've left both cases at the right spots, let the armored train engineer know.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 3 with Ragman to obtain this quest."
     },
     {
       "heading": "Objectives",

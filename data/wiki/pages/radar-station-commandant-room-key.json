@@ -1,8 +1,8 @@
 {
   "title": "Radar station commandant room key",
   "url": "https://escapefromtarkov.fandom.com/wiki/Radar_station_commandant_room_key",
-  "revisionId": 339133,
-  "lastEdited": "2026-03-26T00:14:20Z",
+  "revisionId": 367638,
+  "lastEdited": "2026-11-08T12:28:47Z",
   "kind": "key",
   "categories": [
     "Keys"
@@ -50,7 +50,7 @@
     {
       "heading": "Behind the Lock",
       "level": 2,
-      "text": "- Loose loot (Valuables, Weapon mods)\n- Jacket\n- Weapon box (4x4)\n- PC block"
+      "text": "- Loose loot (Valuables, Electronics, Tools, Weapon mods)\n- Jacket\n- Weapon box (4x4)\n- PC block"
     }
   ]
 }

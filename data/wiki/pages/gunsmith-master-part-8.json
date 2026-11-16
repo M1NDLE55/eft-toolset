@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 8",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_8",
-  "revisionId": 356775,
-  "lastEdited": "2026-08-29T20:07:55Z",
+  "revisionId": 364403,
+  "lastEdited": "2026-10-13T19:09:05Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,6 +13,8 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "previous": "Gunsmith Master - Part 7",
+    "leads to": "Gunsmith Master - Part 9",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -27,11 +29,6 @@
       "text": "\"I have an interesting order here. Not just one usual piece of art, but two in one order. I think you can do it. The first piece is a Remington Model 700 sniper rifle with a full AB Arms body kit, with powerful optic and a silencer. Ergonomics not less than 35, recoil sum - less than 500. And make it lightweight, with a small magazine. The second piece is a Colt M1911 pistol, with a Pachmayr grip, Anarchy Outdoors muzzle brake and a flashlight of any kind.\""
     },
     {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 38 to start this quest."
-    },
-    {
       "heading": "Objectives",
       "level": 2,
       "text": "- Modify an M700 to comply with the given specifications\n- Modify an M1911 to comply with the given specifications"
@@ -39,7 +36,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +27,700 EXP\n- Mechanic Rep +0.03\n- 1× Pistol case\n- 3× 7.62x51mm M993 ammo pack (20 pcs)\n- Unlocks purchase of AR-15 HK Ergo PSG-1 style pistol grip at Mechanic LL4\n- Unlocks purchase of AR-15 Strike Industries Advanced Receiver Extension (Black) at Mechanic LL4\n\"Okay, I see the bolty, and what about the handgun? There it is, my precious. Good work, friend. The next order is coming in tomorrow, so you can go do your own work until then.\""
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Pistol case\n- 3× 7.62x51mm M993 ammo pack (20 pcs)\n\"Okay, I see the bolty, and what about the handgun? There it is, my precious. Good work, friend. The next order is coming in tomorrow, so you can go do your own work until then.\""
     },
     {
       "heading": "Guide",

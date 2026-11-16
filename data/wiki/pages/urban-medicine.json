@@ -1,18 +1,18 @@
 {
   "title": "Urban Medicine",
   "url": "https://escapefromtarkov.fandom.com/wiki/Urban_Medicine",
-  "revisionId": 361719,
-  "lastEdited": "2026-09-24T12:23:27Z",
+  "revisionId": 366010,
+  "lastEdited": "2026-10-28T00:00:40Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Therapist",
+    "location": "Streets of Tarkov",
     "LL requirement": "2",
-    "reqkappa": "No"
+    "LL quests": "1"
   },
   "sections": [
     {

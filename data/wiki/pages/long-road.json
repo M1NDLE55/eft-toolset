@@ -1,18 +1,18 @@
 {
   "title": "Long Road",
   "url": "https://escapefromtarkov.fandom.com/wiki/Long_Road",
-  "revisionId": 362369,
-  "lastEdited": "2026-09-29T12:31:46Z",
+  "revisionId": 367406,
+  "lastEdited": "2026-11-03T13:11:17Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse, Shoreline",
     "given by": "Skier",
+    "location": "Lighthouse, Shoreline",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {

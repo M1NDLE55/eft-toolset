@@ -1,16 +1,14 @@
 {
   "title": "Falling Skies",
   "url": "https://escapefromtarkov.fandom.com/wiki/Falling_Skies",
-  "revisionId": 355403,
-  "lastEdited": "2026-08-21T21:30:02Z",
+  "revisionId": 366093,
+  "lastEdited": "2026-10-28T01:55:07Z",
   "kind": "quest",
   "categories": [
     "Story chapters"
   ],
   "redirects": [],
-  "infobox": {
-    "leads to": "The Ticket"
-  },
+  "infobox": {},
   "sections": [
     {
       "heading": "Introduction",
@@ -30,7 +28,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Locate the fallen plane\n- Reach Loyalty Level 2 with Prapor\n- Ask the traders about the fallen plane\n- (Optional) Hand over 2,000 USD to Therapist to learn details about the SUV\n- Retrieve the flash drive from one of the G-Wagon SUVs\n- Hand over the flash drive to Prapor\n- Wait for information from Prapor\n- Retrieve the plane's flight recorder\n- Leave the flight recorder in the specified spot\n- Visit Prapor\n- Hand over 3 found in raid Rechargeable batteries\n- Hand over 5 found in raid Printed circuit boards\n- Hand over 2 found in raid Toolsets\n- Wait for information from Prapor\n- Hand over the flight crew's transcript to Prapor\n- Hand over Elektronik's secure flash drive to Prapor\n- Wait for information from Prapor\n- Retrieve the armored case\n  - (Optional) Find any additional clues\n- Keep the armored case for yourself or hand it over to Prapor"
+      "text": "- Locate the fallen plane\n- Reach Loyalty Level 2 with Prapor\n- Ask the traders about the fallen plane\n- (Optional) Hand over 2,000 USD to Therapist to learn details about the right G-Wagon SUV\n- Retrieve the flash drive from one of the G-Wagon SUVs\n- Hand over the flash drive to Prapor\n- Wait for information from Prapor\n- Retrieve the plane's flight recorder\n- Leave the flight recorder in the specified spot\n- Visit Prapor\n- Hand over 3 found in raid Rechargeable batteries\n- Hand over 5 found in raid Printed circuit boards\n- Hand over 2 found in raid Toolsets\n- Wait for information from Prapor\n- Hand over the flight crew's transcript to Prapor\n- Hand over Elektronik's secure flash drive to Prapor\n- Wait for information from Prapor\n- Retrieve the armored case\n  - (Optional) Find any additional clues\n- Keep the armored case for yourself or hand it over to Prapor"
     },
     {
       "heading": "Guide",
@@ -58,7 +56,7 @@
       "text": "Visit Prapor, Therapist, Skier, Mechanic and Jaeger in the menu through the trader screen and ask them about the fallen plane."
     },
     {
-      "heading": "(Optional) Hand over 2,000 USD to Therapist to learn details about the SUV",
+      "heading": "(Optional) Hand over 2,000 USD to Therapist to learn details about the right G-Wagon SUV",
       "level": 3,
       "text": "| Item name | Amount | Requirement | Find in raid |\n| Dollars | 2,000 | Handover item | No |\nVisit Therapist in the menu through the trader screen and ask her about information on the fallen plane. Upon handing over 2,000 USD, she reveals the position of the wanted SUV."
     },
@@ -70,7 +68,7 @@
     {
       "heading": "Wait for the information from Prapor",
       "level": 3,
-      "text": "Wait 1 hour then visit Prapor in the menu through the trader screen and ask him about the fallen plane."
+      "text": "Wait 30 minutes then visit Prapor in the menu through the trader screen and ask him about the fallen plane."
     },
     {
       "heading": "Retrieve the plane's flight recorder",
@@ -120,7 +118,7 @@
     {
       "heading": "Keep the armored case for yourself or hand it over to Prapor",
       "level": 3,
-      "text": "This is an important point of no return choice! The rewards differ depending on the decision."
+      "text": "This is an important point of no return choice! It influences the course of the story chapter The Ticket."
     },
     {
       "heading": "Decision: Keep the armored case",
@@ -140,7 +138,7 @@
     {
       "heading": "Rewards",
       "level": 5,
-      "text": "- +80,000 EXP\n- 1,500,000 Roubles\n- Unlocks achievement Man of His Word"
+      "text": "- +80,000 EXP\n- 1,000,000 Roubles\n  - 1,050,000 Roubles with Intelligence Center Level 1\n  - 1,150,000 Roubles with Intelligence Center Level 2\n- Unlocks achievement Man of His Word"
     },
     {
       "heading": "Decision: Pretend you didn't find the armored case, but still hand it over to Prapor",
@@ -150,7 +148,7 @@
     {
       "heading": "Rewards",
       "level": 5,
-      "text": "- +80,000 EXP\n- 1,000,000 Roubles\n- Unlocks achievement Man of His Word"
+      "text": "- +80,000 EXP\n- 1,000,000 Roubles\n  - 1,050,000 Roubles with Intelligence Center Level 1\n  - 1,150,000 Roubles with Intelligence Center Level 2\n- Unlocks achievement Man of His Word"
     }
   ]
 }

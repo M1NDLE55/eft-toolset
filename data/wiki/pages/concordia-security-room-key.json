@@ -1,8 +1,8 @@
 {
   "title": "Concordia security room key",
   "url": "https://escapefromtarkov.fandom.com/wiki/Concordia_security_room_key",
-  "revisionId": 313377,
-  "lastEdited": "2025-05-13T11:04:01Z",
+  "revisionId": 364112,
+  "lastEdited": "2026-10-13T00:39:49Z",
   "kind": "key",
   "categories": [
     "Keys"
@@ -50,7 +50,7 @@
     {
       "heading": "Behind the Lock",
       "level": 2,
-      "text": "- 2x PC block\n- 1x Safe\n- Loose loot (Weapons, Weapon mods)"
+      "text": "- Loose loot (Weapons, Weapon mods, )\n- 2x PC block\n- 1x Safe"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "title": "Rusted bloody key",
   "url": "https://escapefromtarkov.fandom.com/wiki/Rusted_bloody_key",
-  "revisionId": 355930,
-  "lastEdited": "2026-08-25T08:13:14Z",
+  "revisionId": 364115,
+  "lastEdited": "2026-10-13T00:40:07Z",
   "kind": "key",
   "categories": [
     "Keys"
@@ -14,9 +14,9 @@
     "grid": "1x1",
     "usage": "Unlocks a door on the fourth floor of the Klimova 16A building on Streets of Tarkov.",
     "storage_wallet": "No",
-    "storage_keytool": "No",
-    "storage_doccase": "No",
-    "storage_sicc": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
     "storage_securecont": "No",
     "node": "64d4b23dc1b37504b41ac2b6",
     "ID": "city_key42"

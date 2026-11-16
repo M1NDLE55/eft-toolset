@@ -1,8 +1,8 @@
 {
   "title": "Batya",
   "url": "https://escapefromtarkov.fandom.com/wiki/Batya",
-  "revisionId": 361187,
-  "lastEdited": "2026-09-22T12:13:54Z",
+  "revisionId": 366668,
+  "lastEdited": "2026-10-31T13:01:20Z",
   "kind": "quest",
   "categories": [
     "Story chapters"
@@ -78,7 +78,7 @@
     {
       "heading": "Locate the Carousel outpost",
       "level": 3,
-      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| Taran's personnel file | Taran's personnel file | 1 | Required | Yes |\n| Voevoda's personnel file | Voevoda's personnel file | 1 | Required | Yes |\n| Strelets' personnel file | Strelets' personnel file | 1 | Required | Yes |\n| Strelets' note | Strelets' note | 1 | Required | Yes |\n| Taran's postcard | Taran's postcard | 1 | Required | Yes |\n| Voevoda's audio recorder (quest item) | Voevoda's audio recorder | 1 | Required | Yes |\n| Voevoda's thoughts audio tape | Voevoda's thoughts audio tape | 1 | Required | Yes |\nThe Carousel outpost is located opposite the IDEA store checkout area inside the ULTRA shopping mall on Interchange. From the outpost, you have to pick up two quest items, pick up and read 4 notes as well as pick up an audio tape. Taran's postcard and Voevoda's audio recorder should be transferred to the off-raid quest inventory to not lose them in subsequent raids. They will be needed later."
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Taran's personnel file | Taran's personnel file | 1 | Required | Yes | Learn more about Taran |\n| Voevoda's personnel file | Voevoda's personnel file | 1 | Required | Yes | Learn more about Voevoda |\n| Strelets' personnel file | Strelets' personnel file | 1 | Required | Yes | Learn more about Strelets |\n| Strelets' note | Strelets' note | 1 | Required | Yes | Bogatyr squad's personal notes |\n| Taran's postcard | Taran's postcard | 1 | Required | Yes | Personal item of one of the Bogatyrs |\n| Voevoda's audio recorder (quest item) | Voevoda's audio recorder | 1 | Required | Yes | Squad commander's recorder |\n| Voevoda's thoughts audio tape | Voevoda's thoughts audio tape | 1 | Required | Yes | Voevoda's personal belongings |\nThe Carousel outpost is located opposite the IDEA store checkout area inside the ULTRA shopping mall on Interchange. From the outpost, you have to pick up two quest items, pick up and read 4 notes as well as pick up an audio tape. Taran's postcard and Voevoda's audio recorder should be transferred to the off-raid quest inventory to not lose them in subsequent raids. They will be needed later."
     },
     {
       "heading": "Locate the Gnezdo outpost",

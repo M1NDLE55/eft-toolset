@@ -1,8 +1,8 @@
 {
   "title": "Surplus Goods",
   "url": "https://escapefromtarkov.fandom.com/wiki/Surplus_Goods",
-  "revisionId": 359718,
-  "lastEdited": "2026-09-13T20:20:56Z",
+  "revisionId": 365861,
+  "lastEdited": "2026-10-27T23:57:59Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,8 +13,7 @@
   "infobox": {
     "location": "Reserve",
     "given by": "Mechanic",
-    "previous": "Back Door",
-    "related": "-",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -26,7 +25,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Hello. I've decided to get involved with military electronics, it's quite a promising business, and I've got interested people for that. And the army, as you know, has the most secure communication: digital encryptions, GPS, GLONASS and all kinds of other things. So anyway, I've got info about some device on Reserve, usually seen in workshops, I think it's used in machinery, it's some kind of control and navigation block. I want you to find this block and bring it to me. Would be interesting to see what it has inside of it. I'll reward you of course.\""
+      "text": "\"Hello. I've decided to get involved with military electronics, it's quite a promising business, and I've got interested people for that. And the army, as you know, has the most secure communication: digital encryptions, GPS, GLONASS and all kinds of other things. So anyway, I've got info about some device on Reserve, usually seen in workshops in the service and repair centers, I think it's used in machinery, it's some kind of control and navigation block. I want you to find this block and bring it to me. Would be interesting to see what it has inside of it. I'll reward you of course.\""
     },
     {
       "heading": "Objectives",
@@ -36,7 +35,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +7,500 EXP\n- Mechanic Rep +0.02\n- 40,000 Roubles\n  - 42,000 Roubles with Intelligence Center Level 1\n  - 46,000 Roubles with Intelligence Center Level 2\n- 2× Ultraviolet lamp\n- 2× Energy-saving lamp\n\"So that's how it looks! Great. Thank you, I'll study it more thoroughly later. Here's your reward, as promised.\""
+      "text": "- +28,000 EXP\n- Mechanic Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"So that's how it looks! Great. Thank you, I'll study it more thoroughly later. Here's your reward, as promised.\""
     },
     {
       "heading": "Guide",

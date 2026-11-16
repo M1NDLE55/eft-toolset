@@ -1,18 +1,18 @@
 {
   "title": "Metal Birds",
   "url": "https://escapefromtarkov.fandom.com/wiki/Metal_Birds",
-  "revisionId": 362629,
-  "lastEdited": "2026-09-29T20:27:16Z",
+  "revisionId": 367733,
+  "lastEdited": "2026-11-09T00:36:32Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods",
     "given by": "Peacekeeper",
+    "location": "Woods",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -33,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- 3,000 EXP\n- Peacekeeper Rep +0.1\n- 550 Dollars\n  - 578 Dollars with Intelligence Center Level 1\n  - 633 Dollars with Intelligence Center Level 2\n\"Wonderful, you found everything! Thank you for your work. Here is your share of the payment.\""
+      "text": "- +3,000 EXP\n- Peacekeeper Rep +0.1\n- 550 Dollars\n  - 578 Dollars with Intelligence Center Level 1\n  - 633 Dollars with Intelligence Center Level 2\n\"Wonderful, you found everything! Thank you for your work. Here is your share of the payment.\""
     },
     {
       "heading": "Guide",

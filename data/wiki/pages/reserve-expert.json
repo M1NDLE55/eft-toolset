@@ -1,8 +1,8 @@
 {
   "title": "Reserve Expert",
   "url": "https://escapefromtarkov.fandom.com/wiki/Reserve_Expert",
-  "revisionId": 359607,
-  "lastEdited": "2026-09-13T20:19:05Z",
+  "revisionId": 365750,
+  "lastEdited": "2026-10-27T23:56:01Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Reserve",
     "given by": "Ragman",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Come on in, brother! I've got a job for you. There's a couple soldier barracks at the Reserve base, and according to regulations, they should have armories and storage rooms inside. I need to know what's left in there, whether it's worth putting together a serious team or if someone's already cleaned the place out. Can you head over there and scout it out? And just so I'm not taking your word for nothing, bring me something from there. I'll take a look.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 3 with Ragman to obtain this quest."
     },
     {
       "heading": "Objectives",

@@ -1,8 +1,8 @@
 {
   "title": "RB-PSV1 key",
   "url": "https://escapefromtarkov.fandom.com/wiki/RB-PSV1_key",
-  "revisionId": 357728,
-  "lastEdited": "2026-09-06T19:44:13Z",
+  "revisionId": 363417,
+  "lastEdited": "2026-10-06T17:57:59Z",
   "kind": "key",
   "categories": [
     "Keys"
@@ -12,7 +12,6 @@
     "type": "Key",
     "weight": "0.01 kg",
     "grid": "1x1",
-    "price": "₽55,000",
     "loot xp": "20",
     "exam xp": "10",
     "storage_wallet": "No",

@@ -1,18 +1,18 @@
 {
   "title": "House Arrest",
   "url": "https://escapefromtarkov.fandom.com/wiki/House_Arrest",
-  "revisionId": 362405,
-  "lastEdited": "2026-09-29T13:30:08Z",
+  "revisionId": 367409,
+  "lastEdited": "2026-11-03T13:14:04Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Skier",
+    "location": "Streets of Tarkov",
     "LL requirement": "2",
-    "reqkappa": "No"
+    "LL quests": "1"
   },
   "sections": [
     {

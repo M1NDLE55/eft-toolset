@@ -1,0 +1,58 @@
+{
+  "title": "Infected Factory",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Infected_Factory",
+  "revisionId": 367480,
+  "lastEdited": "2026-11-03T14:57:42Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [],
+  "infobox": {
+    "enemies": "Infected, Infected Tagilla",
+    "players": "4-6",
+    "duration": "15 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Infected Factory is a location in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "The factory's old production halls, untouched by reconstruction, feature narrow passageways, worn-out equipment, and an extensive network of maintenance rooms. The infected, carrying an unknown virus, now roam these halls."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- All doors are unlocked on this location."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Insurance",
+      "level": 3,
+      "text": "All insured items left in a raid by players will not be returned. Upon death, insurance Traders will send the usual in-game mail about dispatching people to recover the items, but when the insurance timer runs out they will explain that their people don't go to the location, didn't find it or died in the process."
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "| Name | Faction | Always available | Single-Use | Requirements |\n| Gate 0 | PMC | yes | no | - |\n| Gate 3 | PMC | yes | no | - |"
+    },
+    {
+      "heading": "Gallery",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "This location is based on the Factory location prior to patch 0.15.0.0.32128 from August 20, 2024."
+    }
+  ]
+}

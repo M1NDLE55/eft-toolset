@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - MPX",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_MPX",
-  "revisionId": 353681,
-  "lastEdited": "2026-08-14T21:36:19Z",
+  "revisionId": 364874,
+  "lastEdited": "2026-10-23T20:42:02Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,6 +12,7 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,12 +24,12 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Okay, we have an urgent order here, don't have much time. Some guy stopped by, said wants to sort it out with Reshala, who is operating somewhere around dorms together with folks from the factory. Build him an MPX, with the Tactical Dynamics Skeletonized pistol grip, Annihilator flash hider, and Steiner LAS/TAC 2 tactical flashlight. Aim for a sighting range of 300 or more, ergonomics above 47, weight less than 4 kg, the less than 225 recoil sum. And don't tell anyone why you need this gun. If Reshala hears about it, he won't be too happy, and his guys are quite a mean bunch, all served in the military before working at the factory.\""
+      "text": "\"A guy came by recently looking for the right weapon to settle a score with Reshala from the dorms. I don't particularly like that... person, so I agreed to help. But I don't have enough hands to do everything myself. That's where you come in. Build an MPX with a Tactical Dynamics Skeletonized pistol grip, Annihilator flash hider, and a Steiner LAS/TAC 2 flashlight. It needs a sighting range above 300, ergonomics at or above 47, a weight below 4 kg, and combined recoil below 225. Don't tell anyone what this is for. Rumors spread quickly in Tarkov, and Reshala definitely won't be happy if word gets out.\""
     },
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Must be level 23 to start this quest."
+      "text": "- This quest is only obtainable by USEC PMCs."
     },
     {
       "heading": "Objectives",
@@ -38,7 +39,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +12,300 EXP\n- Mechanic Rep +0.02\n- 500 Dollars\n  - 525 Dollars with Intelligence Center Level 1\n  - 575 Dollars with Intelligence Center Level 2\n- 2× AR-15 Vendetta Precision VP-09 Interceptor 5.56x45 muzzle brake\n- 1× FN P90 Attenuator 5.7x28 sound suppressor\n- 1× AR-15 5.56x45 SureFire MAG5-100 STANAG 100-round magazine\n\"Come on, give it here, I need to hand it over to the client and fast. I hope you haven’t told anyone what this MPX is built for. Well, let's wish the guy luck.\""
+      "text": "- +28,000 EXP\n- Mechanic Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Tech manual\n- Unlocks purchase of Colt M4A1 5.56x45 assault rifle (variant SOPMOD I) at Mechanic LL3\n- Unlocks purchase of Colt M4A1 5.56x45 assault rifle (variant SAI) at Ref LL3\n\"Finished? Excellent. Bring it here, I'll pass it on to the client as soon as possible.\""
     },
     {
       "heading": "Guide",
@@ -54,6 +55,11 @@
       "heading": "Notes:",
       "level": 4,
       "text": "- This build is based on a standard MPX from Peacekeeper LL2.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AR-15 Tactical Dynamics Skeletonized pistol grip | Skier | LL3 |\n| Yankee Hill Annihilator multi-caliber flash hider | Mechanic | LL2 |\n| Steiner LAS/TAC 2 tactical flashlight | MechanicRef | LL3LL2 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
+    },
+    {
+      "heading": "See also",
+      "level": 2,
+      "text": "- Gunsmith - AS VAL - The BEAR counterpart quest"
     }
   ]
 }

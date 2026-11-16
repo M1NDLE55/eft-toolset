@@ -1,17 +1,18 @@
 {
   "title": "The Cleaner",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Cleaner",
-  "revisionId": 361094,
-  "lastEdited": "2026-09-21T22:39:09Z",
+  "revisionId": 367469,
+  "lastEdited": "2026-11-03T14:46:51Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Reserve, The Lab",
     "given by": "Peacekeeper",
-    "reqkappa": "No"
+    "location": "Reserve, The Lab",
+    "LL requirement": "3",
+    "LL quests": "4"
   },
   "sections": [
     {
@@ -23,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"You know, I have foreign partners who are working on evacuating important assets from Tarkov. They are especially interested in Reserve and the laboratory beneath the city. But recently, they have encountered some competition... Can you help and eliminate these obstacles?\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 3 with Peacekeeper to obtain this quest.\n- Must complete 4 Loyalty Level 3 quests from Peacekeeper to obtain this quest."
     },
     {
       "heading": "Objectives",

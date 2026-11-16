@@ -1,8 +1,8 @@
 {
   "title": "Covert Movement",
   "url": "https://escapefromtarkov.fandom.com/wiki/Covert_Movement",
-  "revisionId": 362463,
-  "lastEdited": "2026-09-29T15:34:59Z",
+  "revisionId": 365098,
+  "lastEdited": "2026-10-26T23:15:59Z",
   "kind": "skill",
   "categories": [
     "Practical skills"
@@ -30,7 +30,7 @@
     {
       "heading": "How to raise",
       "level": 2,
-      "text": "- Moving with less than 25% speed, the speaker icon needs to have no bar. The XP gain is calculated based on distance covered when the player stops moving.\n\n- Completing the quest Profitable Venture\n- Completing the quest Safety Guarantee\n- Completing the quest Connections Up North"
+      "text": "- Moving with less than 25% speed, the speaker icon needs to have no bar. The XP gain is calculated based on distance covered when the player stops moving.\n\n- Completing the quest Profitable Venture\n- Completing the quest Safety Guarantee\n- Completing the quest Connections Up North\n- Completing the quest The Huntsman Path - Sadist"
     }
   ]
 }

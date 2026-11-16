@@ -1,8 +1,8 @@
 {
   "title": "The Huntsman Path - Eraser",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Eraser",
-  "revisionId": 359757,
-  "lastEdited": "2026-09-13T20:21:35Z",
+  "revisionId": 365900,
+  "lastEdited": "2026-10-27T23:58:43Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Reserve",
     "given by": "Jaeger",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -22,22 +23,22 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Come on in, sit down, there is a special task for you. Do you know the military base south of customs? One character set up there, a former marine. Even before the trouble in Tarkov occurred, he found himself interested in the crime business. They got everything under control back then: the security, customs services, everything. Then most of the gang fled, but not him... He gathered the most loyal of his men, also former soldiers, and they dug in somewhere at the base. He fumbles with warehouse reserves and sells them abroad, that bastard. Doesn't like uninvited guests either. He must be stopped, but this one will not be an easy walk. His fighters are well-trained, so think with your head how to deal with them.\""
+      "text": "\"Come in, have a seat. I've got a special job for you. You know the military base south of the customs terminal? There's a man holed up there, a former Marine. Even before everything fell apart in Tarkov, he had already turned to crime. His people had connections everywhere: law enforcement, customs, the whole lot. When it all went to hell, the gang fell apart, except for him... He gathered a circle of trusted men, fellow former soldiers, and dug in at the base. Now he's selling off military stockpiles on the black market and doesn't take kindly to visitors. Worse still, I've heard he's smuggling goods beyond the region. That has to end. Rid Tarkov of him and his crew. And one more thing: bring me a few trophies from them.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate Glukhar"
+      "text": "- Locate and neutralize Glukhar\n- Hand over 2 found in raid Glukhar's guards' helmets\n  - (Optional) Search Glukhar's guards and collect their helmets of Class 4 or higher"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +18,300 EXP\n- Jaeger Rep +0.02\n- 200,000 Roubles\n  - 210,000 Roubles with Intelligence Center Level 1\n  - 230,000 Roubles with Intelligence Center Level 2\n- 5,000 Dollars\n  - 5,250 Dollars with Intelligence Center Level 1\n  - 5,750 Dollars with Intelligence Center Level 2\n- 1× Weapon case\n\n\"Welcome back, hunter. So you've dealt with the bandits? Can't even imagine how much of a hassle that was, you did a great job.\""
+      "text": "- +28,000 EXP\n- Jaeger Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Welcome back, hunter. So you dealt with the bandits? I can only imagine how much trouble they gave you. You did well. Excellent work.\""
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "In this quest you have to kill Glukhar."
+      "text": "In this quest you have to kill Glukhar and hand over 2 found in raid helmets of class 4 or higher. You can hand over any of the following helmets:\n- Altyn assault helmet (Olive Drab)\n- Vulkan-5 LShZ-5 bulletproof helmet (Black)\n- HighCom Striker ULACH IIIA helmet (Black)\n- HighCom Striker ULACH IIIA helmet (Desert Tan)\n- MSA Gallet TC 800 High Cut combat helmet (Black)\n- Ops-Core FAST MT Super High Cut helmet (Black)\n- BNTI LShZ-2DTM helmet (Black)\n- Maska-1SCh bulletproof helmet (Olive Drab)\n- MSA ACH TC-2002 MICH Series helmet (Olive Drab)\n- 6B47 Ratnik-BSh helmet (EMR cover)\n- NPP KlASS Tor-2 helmet (Olive Drab)\n- NFM HJELM helmet (Hellhound Grey)\n- ZSh-1-2M helmet (Black cover)\n- ZSh-1-2M helmet (Olive Drab)"
     }
   ]
 }

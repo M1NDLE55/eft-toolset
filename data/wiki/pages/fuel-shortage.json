@@ -1,8 +1,8 @@
 {
   "title": "Fuel Shortage",
   "url": "https://escapefromtarkov.fandom.com/wiki/Fuel_Shortage",
-  "revisionId": 362640,
-  "lastEdited": "2026-09-29T21:01:36Z",
+  "revisionId": 367452,
+  "lastEdited": "2026-11-03T14:30:54Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Peacekeeper",
-    "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL requirement": "1"
   },
   "sections": [
     {

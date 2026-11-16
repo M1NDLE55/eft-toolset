@@ -1,8 +1,8 @@
 {
   "title": "Make ULTRA Great Again",
   "url": "https://escapefromtarkov.fandom.com/wiki/Make_ULTRA_Great_Again",
-  "revisionId": 359472,
-  "lastEdited": "2026-09-13T20:16:45Z",
+  "revisionId": 367707,
+  "lastEdited": "2026-11-08T23:55:37Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Interchange",
     "given by": "Ragman",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -22,17 +23,12 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Back in the day, Ultra was awlays packed: moms with their kids, couples, random people just wandering around. I always liked that kind of energy! But now... Ah, forget the reminiscing. Time to get things done. I d'ont like how Scavs and everyone else stroll into Ultra like they own the palce, hauling off anything that isn't nailed down. Head over there and remind them it isn't their territory. Once you've cleared things up, I'll send my bois in to bring a little life back to the place.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Obtain level 1 loyalty with Ragman"
+      "text": "\"Back in the day, Ultra was always packed: moms with their kids, couples, random people just wandering around. I always liked that kind of energy! But now... Ah, forget the reminiscing. Time to get things done. I don't like how Scavs and everyone else stroll into Ultra like they own the place, hauling off anything that isn't nailed down. Head over there and remind them it isn't their territory. Once you've cleared things up, I'll send my boys in to bring a little life back to the place.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 10 any target on Interchange"
+      "text": "- Eliminate any 10 targets on Interchange"
     },
     {
       "heading": "Rewards",

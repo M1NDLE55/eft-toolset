@@ -1,8 +1,8 @@
 {
   "title": "Preserve a Valuable Piece",
   "url": "https://escapefromtarkov.fandom.com/wiki/Preserve_a_Valuable_Piece",
-  "revisionId": 362111,
-  "lastEdited": "2026-09-24T19:51:53Z",
+  "revisionId": 366660,
+  "lastEdited": "2026-10-31T12:41:09Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "location": "Lighthouse",
     "given by": "Lightkeeper",
-    "previous": "Callsign Malachite",
+    "previous": "Accept Cut Down to the Root",
     "related": "Cut Down to the Root",
     "reqkappa": "No"
   },

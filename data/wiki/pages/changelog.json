@@ -1,8 +1,8 @@
 {
   "title": "Changelog",
   "url": "https://escapefromtarkov.fandom.com/wiki/Changelog",
-  "revisionId": 360533,
-  "lastEdited": "2026-09-18T17:54:09Z",
+  "revisionId": 367836,
+  "lastEdited": "2026-11-11T09:49:40Z",
   "kind": "game",
   "categories": [
     "Escape from Tarkov"
@@ -21,6 +21,196 @@
       "heading": "Introduction",
       "level": 1,
       "text": "For the Arena, see Arena Changelog.\n\nThis page contains a collection of official patch notes for Escape from Tarkov. It's not complete, and it has to be noted that the developer Battlestate Games intentionally doesn't announce every change to keep surprises for the players.\n\nThe game released on November 15, 2025 and the current game version is ."
+    },
+    {
+      "heading": "1.3.0.1.48558 (11 November 2026)",
+      "level": 2,
+      "text": "- Technical update"
+    },
+    {
+      "heading": "1.3.0.1.48558 (3 November 2026)",
+      "level": 2,
+      "text": "- Added the «Halloween» menu background to the rewards for the «Triumph of Science» and «Shields Up!» achievements;\n- Reduced the required number of kills in tasks to eliminate infected under the effect of a gas grenade."
+    },
+    {
+      "heading": "1.3.0.1.48558 (3 November 2026)",
+      "level": 2,
+      "text": "- Fixed incorrect lighting in certain areas of the Infected Factory map;\n- Fixed an issue where it was not possible to search one of the scientist' corpses in the Infected Laboratory map;\n- Fixed the low resolution of the Halloween main menu background when texture settings were set to low;\n- Fixed the absence of the Halloween main menu background animation after exiting a raid."
+    },
+    {
+      "heading": "1.3.0.0.48484 (30 October 2026)",
+      "level": 2,
+      "text": "- Fixed an issue where players were unable to vault or move whilst prone in certain areas;\n- Fixed an issue where searching containers would be interrupted in some cases."
+    },
+    {
+      "heading": "1.3.0.0.48484 (29 October 2026)",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Changes",
+      "level": 3,
+      "text": "- New Halloween in-game event;\n- Switched the in-game weather season to fall;\n- Changed the colliders of certain items in the Currency and Valuables categories to make them easier to find and pick up during raids;\n- Added high-difficulty PMC bots to PvE Zone. They can spawn on high-level locations;\n- Added new Hideout customization sets to the Expansion Hub:\n  - Your Own Celestial Empire;\n  - Once Upon a Time in Tarkov.\n\nOther themed Hideout customization options will become available in upcoming updates.\n\nThe technical update transitioning to Unity 6, previously scheduled for October, has been moved to mid-November as part of update 1.3.5.0."
+    },
+    {
+      "heading": "Balance changes",
+      "level": 3,
+      "text": "- Adjusted the leveling mechanics for the Metabolism skill. Skill progression is now calculated based on the amount of energy or hydration restored;\n- Significantly increased the leveling speed of all skills in Seasonal mode;\n- Balanced the effect of diminishing returns on skill progression calculations;\n- Increased the lifetime of tripwires placed by players."
+    },
+    {
+      "heading": "Fixes",
+      "level": 3,
+      "text": "- Fixed an incorrect calculation of the chance for Partisan to spawn in raids without bad PMC karma players;\n- Fixed an issue that could prevent magazines from being loaded or unloaded after a weapon malfunction;\n- Fixed an incorrect field of view when using certain optics;\n- Fixed incorrect breathing volume for certain PMC voices;\n- Fixed various visual issues with geometry and colliders on Icebreaker, Interchange, and Shoreline;\n- Fixed an issue that prevented some players from accessing traders’ interactive scenes;\n- Fixed an issue that caused PMC bots to behave incorrectly in certain cases. PMC bots now always consider players hostile;\n- Fixed weapon skill leveling speed. It now matches the leveling speed of other skills."
+    },
+    {
+      "heading": "1.2.5.0.48146 (20 October 2026)",
+      "level": 2,
+      "text": "A unique achievement has been added to the game, which can be obtained by completing the event task line. For players who have already completed it, the achievement will be granted shortly.\n\nWe’ve also made the following balancing changes to Scourge and his guards:\n- Reduced health of all body parts;\n- Decreased field of view;\n- Increased spread when firing at a distance;\n- Reduced enemy detection speed."
+    },
+    {
+      "heading": "1.2.5.0.48146 (16 October 2026)",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Changes",
+      "level": 3,
+      "text": "PMC bot behavior adjustments in PvE ZONE:\n- Reduced the distance at which PMC bots react to gunfire\n- Reduced the amount of time PMC bots spend in cover when reacting to gunfire\n- Reduced the amount of time PMC bots spend near points of interest while covering teammates when searching for loot"
+    },
+    {
+      "heading": "Fixes",
+      "level": 3,
+      "text": "- Fixed an issue that could cause Black Division bots to teleport in some cases\n- Fixed an issue that allowed the RShG-2 to be unloaded, which could cause a player to softlock during the raid\n- Fixed an issue that prevented the task \"...for the Good of the Chosen\" from being automatically accepted after completing the previous task"
+    },
+    {
+      "heading": "1.2.0.0.47965 (9 October 2026)",
+      "level": 2,
+      "text": "- Fixed an issue that prevented some players from loading into a raid as a Scav."
+    },
+    {
+      "heading": "1.2.0.0.47965 (9 October 2026)",
+      "level": 2,
+      "text": "- Fixed incorrect position of Zryachiy on Lighthouse;\n- Fixed incorrect Boss behavior towards player Scavs with Fence reputation higher than 6;\n- Fixed incorrect behavior of exits on several locations;\n- Fixed an issue where an ending was not registered upon completing the storyline if another ending had previously been obtained;\n- Fixed display of the selected ending on the character screen;\n- Fixed missing tooltips for some achievements;\n- Fixed several geometry issues on Customs where the character could get stuck;\n- Fixed an issue with wrong Prestige icons being displayed next to nicknames of other players;\n- Fixed incorrect display of transit names in the exit list after changing the client language;\n- Fixed inability to pick up Magazine Cases and Weapon Cases while using certain backpacks."
+    },
+    {
+      "heading": "1.2.0.0.47888 (6 October 2026)",
+      "level": 2,
+      "text": "- Technical update"
+    },
+    {
+      "heading": "1.2.0.0.47888 (6 October 2026)",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "EXFIL Brothers Program",
+      "level": 3,
+      "text": "Added the EXFIL Brothers Program to the game. As part of the program, experienced players (Operators) can receive bonuses for playing together with friends who have just started their journey in Tarkov (Candidates).\n\nOperators and Candidates receive a 5% XP bonus for playing raids together, as well as other rewards tied to the Candidate's progress or game edition.\n\nCandidate rewards are designed to make it easier for new players to get into the game. Operator rewards are intended to help during the later stages of progression and allow Operators to stand out with unique customization.\n\nThe program can be completed and rewards can be earned in any Escape from Tarkov mode, but it has no connection to Escape from Tarkov: Arena."
+    },
+    {
+      "heading": "Rules",
+      "level": 4,
+      "text": "To participate in the program, an Operator must share their unique referral link from the \"My Candidates\" table with a friend. This table is located on the \"Management\" tab of the \"EXFIL Brothers\" page on the escapefromtarkov.com website.\n\nTo start the program, a Candidate who is logged in to escapefromtarkov.com must follow their friend's link and confirm that they want to establish the connection.\n\nA player can become an Operator if their account was registered more than 7 days ago and they are level 30 in any Escape from Tarkov game mode.\n\nA player can become a Candidate if their account was registered less than 7 days ago.\n\nTo view the details and all available rewards, visit the \"EXFIL Brothers\" page on the official Escape from Tarkov website."
+    },
+    {
+      "heading": "Rewards",
+      "level": 4,
+      "text": "The following rewards are available to players as part of EXFIL Brothers:"
+    },
+    {
+      "heading": "Candidate",
+      "level": 5,
+      "text": "- 5 support kits;\n- 9 500 000 roubles;\n- 10 000 dollars;\n- Junk Box;\n- Ammunition case;\n- Magazine case;\n- Key case;\n- Unique Document case;\n- Unique Medicine case;\n- Unique Weapon case;\n- Unique Item case;\n- Armband (Candidate)."
+    },
+    {
+      "heading": "Operator",
+      "level": 5,
+      "text": "- Up to 1200 TarCoins per Candidate;\n- “Shoulder to Lean On” achievement;\n- Up to 6 Bitcoins per Candidate;\n- Boot Camp Hideout set;\n- PMC Operator Upper;\n- Unique Document case;\n- Unique Medicine case;\n- Unique Weapon case;\n- Unique Item case;\n- Armband (Operator);\n- Men in Tarkov poster;\n- Pulp Mission poster;\n- EXFIL Bros poster."
+    },
+    {
+      "heading": "Changes to faction relations between bots in PvE",
+      "level": 3,
+      "text": "We've reworked bot interaction logic to make the world feel more dynamic and unpredictable:\n- Significantly increased the chance of USEC and BEAR PMC bots teaming up and remaining non-hostile to each other;\n- Added a small chance for PMC bots to remain neutral toward a PMC player until the player approaches or attacks them;\n- Reduced the chance of PMC bots being neutral toward Scav bots;\n- PMC bots will more often initiate combat with Scavs and Bosses;\n- PMC bots won't attack Player Scavs first unless the player Scav approaches or attacks them."
+    },
+    {
+      "heading": "Changes to PMC bot behavior on locations",
+      "level": 3,
+      "text": "We've changed the behavior system and number of PMC bots on locations. These changes affect their movement and activity."
+    },
+    {
+      "heading": "Points of interest and movement",
+      "level": 4,
+      "text": "PMC bots will now move more actively toward points of interest and task areas. They can be encountered in areas they didn't previously visit, and their movement is now less linear and more varied."
+    },
+    {
+      "heading": "PMC bot numbers and distribution",
+      "level": 4,
+      "text": "There will now always be PMC bots present at the start of a raid on a location. Their numbers are more consistent, with less variation. PMC bot spawns are also distributed more evenly across locations.\n\nAdded PMC bot spawns to The Labyrinth, where they will participate in combat on the location.\n\nDepending on the location, PMC bots of appropriate levels will appear in raids. For example, The Lab will have more high-level PMC bots."
+    },
+    {
+      "heading": "PMC bot gear, difficulty, and weapons",
+      "level": 4,
+      "text": "A PMC bot's gear, weapons, and combat difficulty now depend on its level and faction.\n\nLow-level bots pose less of a threat to players and use gear usually available to players at lower trader Loyalty Levels.\n\nHigh-level bots are more dangerous, use better weapons, and are equipped with high-level gear."
+    },
+    {
+      "heading": "Prestige system in PvE Zone",
+      "level": 3,
+      "text": "Prestige is a mechanic for high-level players that unlocks a set of new unique rewards and allows them to start their exploration of Tarkov again while retaining part of their progression.\n\nTo Prestige, players must meet a number of different requirements, which become more demanding with each subsequent Prestige level. These requirements may include:\n- High character level;\n- Completion of certain in-game tasks;\n- Construction of certain Hideout zones;\n- Completion of the main storyline;\n- Having certain items and a certain amount of money in the stash;\n- Leveling character skills.\n\nThe first Prestige level in PvE Zone has reduced requirements compared to PvP. All players who haven't reset their progression since the release of Escape from Tarkov can now do so through Prestige. In this case, they will not only receive its rewards, but also unlock the release content, storyline, Icebreaker chapter, and all future events.\n\nEach Prestige level resets the player's profile progression only in PvE Zone.\n\nWhen Prestiging, players can retain some gear, a certain percentage of character skills, and weapon mastery, up to 50%.\n\nPatch 1.2.0.0 features six PvE Prestige levels.\n\nMany rewards earned through Prestige in PvE Zone will remain with the player permanently, but only for their PvE Zone character.\n\nThere are also rewards that can only be earned through Prestige in PvE Zone but will be available in all modes:\n- TarCoins;\n- Unique dogtags;\n- Unique Shooting Range Targets;\n- Unique Hideout Posters;\n- Unique melee weapons;\n- Unique Tarko figurines;\n- Unique Secure container Gamma."
+    },
+    {
+      "heading": "QoL",
+      "level": 3,
+      "text": "- Improved server-side player position synchronization to reduce the number of rubber-banding situations. Further network synchronization improvements are planned for upcoming updates;\n- Added the ability to switch trading modes with \"Ctrl+LMB\": while on the trading screen, players can use the hotkey on an item from a trader or in their stash to automatically switch between the purchase and sale screens. If an item has been placed on the sales table and the player switches to the purchase screen, the item will remain on the sales table until they fully exit the trading menu;\n- Added the ability to pin players in the friends list;\n- Added a visual indicator for the \"Run-Through\" extraction status. The extraction timer will now be displayed in white if the player will receive this status when the timer expires;\n- Improved the interaction with drum magazines: loading ammunition through the context menu, unloading ammunition from the drum, displaying loaded ammunition, and loading an ammo pack;\n- Added the ability to inspect your own PMC dogtag on the character screen;\n- Improved the profile customization. Players can now choose which ending to display on their profile. Endings can be displayed on any player profile, including PvP, PvE Zone, and PvP Seasons profiles."
+    },
+    {
+      "heading": "Location changes",
+      "level": 3,
+      "text": ""
+    },
+    {
+      "heading": "Customs",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Balancing changes",
+      "level": 5,
+      "text": "- Adjusted the PMC and Scav extracts: added new exits;\n- Added new loot spots in locked dorms rooms, the USEC warehouse, and other areas of the location;\n- Locked containers are now guaranteed to contain loot;\n- Added two new keys: ZB-1013 Key and Guard Post Key."
+    },
+    {
+      "heading": "Fixes",
+      "level": 5,
+      "text": "- Fixed the flare extraction area: the sniper will no longer open fire when moving along the wall;\n- The safes in the company director's office that were previously inaccessible can now be opened;\n- Fixed the Boiler Room Basement (Co-op) extract: it is now available regardless of which part of the location the player spawned in;\n- Fixed various doors that were previously locked by the Factory emergency exit key;\n- Fixed various geometry issues on the location."
+    },
+    {
+      "heading": "Interchange",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Balancing changes",
+      "level": 5,
+      "text": "- Added new loot spots at the Emercom camp, Objects #11SR, #14, and #21WS, OLI service areas, Kiba Arms store, and other areas of the location;\n- Locked containers are now guaranteed to contain loot;\n- Added new loot containers to the location, including PMC bodies;\n- Changed the loot template for the cash registers in OLI, Goshan, and IDEA;\n- Keys are no longer required to open cash registers in the standalone ULTRA stores. Keys are still required for the cash registers in Goshan, IDEA, and OLI."
+    },
+    {
+      "heading": "Fixes",
+      "level": 5,
+      "text": "- Fixed the truck cabins previously locked by the Factory emergency exit key;\n- Fixed various geometry issues on the location."
+    },
+    {
+      "heading": "Shoreline",
+      "level": 4,
+      "text": "- Reworked environmental audio on the location."
+    },
+    {
+      "heading": "Expansion Hub",
+      "level": 3,
+      "text": "- Added the ability to purchase in-game roubles in PvE Zone;\n- Added USEC Tony and BEAR Den PMC voiceover packs."
+    },
+    {
+      "heading": "Fixes",
+      "level": 3,
+      "text": "- Fixed an issue that prevented transitions between locations after a series of transitions in certain cases;\n- Fixed an issue that caused red visual artifacts to appear in optic lenses in certain cases;\n- Fixed an issue with incorrect lighting in the Hideout in certain cases;\n- Fixed various visual, culling, and collider issues across all locations;\n- Fixed an issue where loading into PvE Zone would not progress past the \"Loading configuration files\" stage;\n- Fixed an issue that prevented players from leaving the starting area on Terminal in certain cases;\n- Fixed an issue with incorrect differences in gunshot volume between single and automatic fire;\n- Fixed incorrect bot interactions with smoke from smoke grenades;\n- Fixed an issue that caused bots to get stuck on collisions in local raids in PvE Zone;\n- Fixed incorrect bot vision through transparent objects in The Lab;\n- Fixed an issue that allowed players to load ammunition into the same magazine while multiple players were simultaneously inspecting a container;\n- Fixed incorrect Black Division positioning on Ground Zero in certain cases;\n- Fixed incorrect display of the money transfer screen when transitioning to Icebreaker in certain cases;\n- Fixed incorrect landmine behavior in local raids in PvE Zone in certain cases;\n- Fixed incorrect display of player nicknames on the group formation screen;\n- Fixed an issue that caused death sounds to replay incorrectly on the raid-end screen in certain cases;\n- Fixed an issue that caused players to become invulnerable after interacting with the BTR in local raids in PvE Zone in certain cases;\n- Fixed an issue that allowed players to plant a PMC dogtag that wasn't in their inventory when completing tasks;\n- Fixed an issue that caused task-related items to be lost when moving them during raid loading in certain cases;\n- Fixed an issue where shadow and volumetric lighting settings weren't saved after restarting the game client;\n- Fixed incorrect display of the transition list on Lighthouse in certain cases;\n- Fixed an issue that prevented players from transitioning in online raids in PvE Zone in certain cases;\n- Fixed incorrect display of the AGS-17 sight;\n- Fixed various minor issues when interacting with the UI outside of raids;\n- Fixed Tagilla spawning near the player at the beginning of a raid on Factory."
     },
     {
       "heading": "1.1.5.1.47510 (18 September 2026)",

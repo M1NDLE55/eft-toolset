@@ -1,8 +1,8 @@
 {
   "title": "Rough Tarkov",
   "url": "https://escapefromtarkov.fandom.com/wiki/Rough_Tarkov",
-  "revisionId": 359621,
-  "lastEdited": "2026-09-13T20:19:19Z",
+  "revisionId": 366613,
+  "lastEdited": "2026-10-31T05:30:13Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "location": "Woods, Ground Zero",
     "given by": "Jaeger",
-    "previous": "Acquaintance",
-    "leads to": "Every Hunter Knows This",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -34,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +4,440 EXP\n- Jaeger Rep +0.01\n- 60,000 Roubles\n  - 63,000 Roubles with Intelligence Center Level 1\n  - 69,000 Roubles with Intelligence Center Level 2\n- 2× Tripwire installation kit\n\"Would you look at that, you're alive! While you were gone, I've prepped this little thingie for you, so you can learn the secrets of booby trapping on your own. Consider it a homework assignment, but just make sure to not blow yourself up.\""
+      "text": "- +3,000 EXP\n- Jaeger Rep +0.1\n- 80,000 Roubles\n  - 84,000 Roubles with Intelligence Center Level 1\n  - 92,000 Roubles with Intelligence Center Level 2\n\"Would you look at that, you're alive! While you were gone, I've prepped this little thingie for you, so you can learn the secrets of booby trapping on your own. Consider it a homework assignment, but just make sure to not blow yourself up.\""
     },
     {
       "heading": "Guide",

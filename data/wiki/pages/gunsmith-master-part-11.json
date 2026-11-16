@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 11",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_11",
-  "revisionId": 356764,
-  "lastEdited": "2026-08-29T19:55:24Z",
+  "revisionId": 364409,
+  "lastEdited": "2026-10-13T19:24:57Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,6 +13,8 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "previous": "Gunsmith Master - Part 10",
+    "leads to": "Gunsmith Master - Part 12",
     "reqkappa": "No"
   },
   "sections": [
@@ -34,7 +36,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +31,250 EXP\n- Mechanic Rep +0.03\n- 1,500 Euros\n  - 1,575 Euros with Intelligence Center Level 1\n  - 1,725 Euros with Intelligence Center Level 2\n- 3× Pipe grip wrench\n- 2× FP-100 filter absorber\n\"I'd expect nothing less from you!\""
+      "text": "- +28,000 EXP\n- 1× Trijicon REAP-IR thermal scope\n- Unlocks barter for Trijicon REAP-IR thermal scope at Mechanic LL4\n- Unlocks craft for Trijicon REAP-IR thermal scope at Workbench level 3\n\"I'd expect nothing less from you!\""
     },
     {
       "heading": "Guide",

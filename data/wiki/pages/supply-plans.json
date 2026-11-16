@@ -1,8 +1,8 @@
 {
   "title": "Supply Plans",
   "url": "https://escapefromtarkov.fandom.com/wiki/Supply_Plans",
-  "revisionId": 361698,
-  "lastEdited": "2026-09-24T12:11:56Z",
+  "revisionId": 365860,
+  "lastEdited": "2026-10-27T23:57:57Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,11 +11,9 @@
     "Supply plans"
   ],
   "infobox": {
-    "location": "Woods",
     "given by": "Therapist",
-    "LL requirement": "1",
-    "related": "Kind of Sabotage",
-    "reqkappa": "No, but a subsequent quest Yes"
+    "location": "Woods",
+    "LL requirement": "1"
   },
   "sections": [
     {

@@ -1,19 +1,18 @@
 {
   "title": "Quality Standard",
   "url": "https://escapefromtarkov.fandom.com/wiki/Quality_Standard",
-  "revisionId": 361769,
-  "lastEdited": "2026-09-24T12:48:14Z",
+  "revisionId": 365739,
+  "lastEdited": "2026-10-27T23:55:49Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "The Lab",
     "given by": "Therapist",
+    "location": "The Lab",
     "previous": "The Good Times - Part 1",
-    "leads to": "Airmail",
-    "reqkappa": "No"
+    "leads to": "Airmail"
   },
   "sections": [
     {

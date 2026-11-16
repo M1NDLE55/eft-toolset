@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - M4A1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_M4A1",
-  "revisionId": 356790,
-  "lastEdited": "2026-08-29T20:19:41Z",
+  "revisionId": 364369,
+  "lastEdited": "2026-10-13T15:25:15Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,6 +12,7 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,12 +24,12 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Sometimes I think it's good that I got stuck here in Tarkov. The whole world feels like it’s descending into an abyss, a gaping, cold abyss. Everything has lost its meaning. People, their values, their thoughts, and their goals. They don't know anymore why they should take joy, work, have children. Everyone is tired from the illusion of choice they were offered all this time, from having to work and buy either blue or red cigarettes. It’s happening everywhere, in every corner of the world. But here in Tarkov, we are honest with ourselves. We see it all in an already exaggerated way, without false values, when you don't just decide what laundry detergent is better at removing stains, but how to keep warm at night and where to find ammo to deal with the next lowlife who wants to kill you. Only in such an honest society, people show their true selves. What do you think? Okay, thanks for hearing me out. Some folks requested a fully packed M4. They need a silencer, 60-round extended mag, ergonomics above 37, and recoil sum less than 300. And mind the weight, no more than 3.8 kg, with a sighting range of 800 or beyond.\""
+      "text": "\"I need the help of someone who really knows their way around firearms. You're the perfect fit. People who used to hold a lot of influence in Tarkov stop by from time to time. Funny how everything's been turned upside down - now they're the ones asking me for help. One of them recently ordered an M4. It needs a suppressor, a 60-round magazine, ergonomics at or above 37, combined recoil below 300, a weight of no more than 3.8 kg, and a sighting range above 800.\""
     },
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Must be level 15 to start this quest."
+      "text": "- This quest is only obtainable by USEC PMCs."
     },
     {
       "heading": "Objectives",
@@ -38,7 +39,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +6,300 EXP\n- Mechanic Rep +0.01\n- 500 Dollars\n  - 525 Dollars with Intelligence Center Level 1\n  - 575 Dollars with Intelligence Center Level 2\n- 1× Pliers Elite\n- 1× Electric drill\n- Unlocks purchase of AR-15 Daniel Defense MK12 Low Profile Gas Block at Mechanic LL2\n\"Hand it over, let's check out your build. Yeah, the weapon of democracy... Thank you.\""
+      "text": "- +28,000 EXP\n- Mechanic Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Let's have a closer look. Right... the weapon of democracy, indeed. Everything checks out.\""
     },
     {
       "heading": "Guide",

@@ -1,0 +1,48 @@
+{
+  "title": "Infected Lab",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Infected_Lab",
+  "revisionId": 367020,
+  "lastEdited": "2026-11-02T06:26:54Z",
+  "kind": "location",
+  "categories": [
+    "Locations"
+  ],
+  "redirects": [],
+  "infobox": {
+    "enemies": "Infected, Infected Tagilla",
+    "players": "8-10",
+    "duration": "30 minutes"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Infected Lab is a location in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "An underground TerraGroup Labs facility in central Tarkov that officially doesn't exist. The limited information available about its classified research has now been supplemented by reports of infected individuals carrying an unknown virus wandering the facility's interior."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This location can only be entered with a TerraGroup Labs access keycard.\n- The illumination is turned off on this location.\n- All doors are unlocked on this location."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Insurance",
+      "level": 3,
+      "text": "All insured items left in a raid by players will not be returned. Upon death, insurance Traders will send the usual in-game mail about dispatching people to recover the items, but when the insurance timer runs out they will explain that their people don't go to the location, didn't find it or died in the process."
+    },
+    {
+      "heading": "Extractions",
+      "level": 2,
+      "text": "| Name | Faction | Always available | Single-Use | Requirements |\n| Parking | PMC | yes | no | Car keys; Car keys |\n| Sewage Conduit | PMC | yes | no | Collector map; Collector map |"
+    }
+  ]
+}

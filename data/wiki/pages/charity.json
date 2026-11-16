@@ -1,8 +1,8 @@
 {
   "title": "Charity",
   "url": "https://escapefromtarkov.fandom.com/wiki/Charity",
-  "revisionId": 361696,
-  "lastEdited": "2026-09-24T12:10:46Z",
+  "revisionId": 367633,
+  "lastEdited": "2026-11-08T03:03:57Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Therapist",
-    "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL requirement": "3"
   },
   "sections": [
     {

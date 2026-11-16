@@ -1,18 +1,18 @@
 {
   "title": "Belka and Strelka",
   "url": "https://escapefromtarkov.fandom.com/wiki/Belka_and_Strelka",
-  "revisionId": 361690,
-  "lastEdited": "2026-09-24T12:06:06Z",
+  "revisionId": 365239,
+  "lastEdited": "2026-10-27T23:47:19Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs",
     "given by": "Prapor",
+    "location": "Customs",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {
@@ -43,7 +43,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "In this quest you have to extract from Customs via the \"Railroad Passage\" extraction with the \"survived\" status. For the extraction to open, you have to shoot a green flare into the sky while being inside the signal flare area. Upon entering the signal flare area, a notifcation will pop up in the bottom right corner of the screen: If the flare doesn't reach a certain height, the extraction won't open. If the flare was fired correctly, a new notification pops up: You can use either the handheld RSP-30 green flare provided by Prapor via in-game mail or a 26x75mm green flare cartridge fired from a signal pistol. If you use the handheld RSP-30 green flare, make sure to aim it upwards, but not too much or it lands behind you. If you need additional flares you can buy them from Jaeger. To avoid the \"run through\" status, gain at least 200 EXP in raid (by killing or looting) or be in raid for at least 7 minutes before extracting. Staying on the tracks is required to not get shot."
+      "text": "In this quest you have to extract from Customs via the \"Railroad Passage\" extraction with the \"survived\" status. For the extraction to open, you have to shoot a green flare into the sky while being inside the signal flare area. Upon entering the signal flare area, a notifcation will pop up in the bottom right corner of the screen: If the flare doesn't reach a certain height, the extraction won't open. If the flare was fired correctly, a new notification pops up: You can use either the handheld RSP-30 green flare provided by Prapor via in-game mail or a 26x75mm green flare cartridge fired from a signal pistol. If you use the handheld RSP-30 green flare, make sure to aim it upwards, but not too much or it lands behind you. If you need additional flares you can buy them from Jaeger. To avoid the \"run through\" status, gain at least 200 EXP in raid (by killing or looting) or be in raid for at least 7 minutes before extracting."
     },
     {
       "heading": "Trivia",

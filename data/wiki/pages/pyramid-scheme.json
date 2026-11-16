@@ -1,18 +1,18 @@
 {
   "title": "Pyramid Scheme",
   "url": "https://escapefromtarkov.fandom.com/wiki/Pyramid_Scheme",
-  "revisionId": 362426,
-  "lastEdited": "2026-09-29T14:13:30Z",
+  "revisionId": 367751,
+  "lastEdited": "2026-11-09T00:46:44Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Skier",
+    "location": "Streets of Tarkov",
     "LL requirement": "3",
-    "reqkappa": "No"
+    "LL quests": "3"
   },
   "sections": [
     {
@@ -33,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,000 EXP\n- Skier Rep +0.75\n- 1,650 Euros\n  - 1,732 Euros with Intelligence center Level 1\n  - 1,897 Euros with Intelligence center Level 2\n- 2x Golden neck chain\n- 2x Glock .45 ACP KRISS G30 MagEx 30-round magazine\n- 2x .45 ACP RIP ammo pack (50 pcs)\n- Unlocks purchase of TDI KRISS Vector Gen.2 .45 ACP submachine gun at Skier LL3\n\"Still got some intact ones? Cool. We'll crack them open and see what they've got. Here's your reward.\""
+      "text": "- +28,000 EXP\n- Skier Rep +0.75\n- 1,650 Euros\n  - 1,732 Euros with Intelligence center Level 1\n  - 1,897 Euros with Intelligence center Level 2\n- 2× Golden neck chain\n- 2× Glock .45 ACP KRISS G30 MagEx 30-round magazine\n- 2× .45 ACP RIP ammo pack (50 pcs)\n- Unlocks purchase of TDI KRISS Vector Gen.2 .45 ACP submachine gun at Skier LL3\n\"Still got some intact ones? Cool. We'll crack them open and see what they've got. Here's your reward.\""
     },
     {
       "heading": "Guide",

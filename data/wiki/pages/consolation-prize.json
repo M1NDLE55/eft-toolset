@@ -1,18 +1,17 @@
 {
   "title": "Consolation Prize",
   "url": "https://escapefromtarkov.fandom.com/wiki/Consolation_Prize",
-  "revisionId": 362293,
-  "lastEdited": "2026-09-26T22:37:39Z",
+  "revisionId": 367437,
+  "lastEdited": "2026-11-03T14:15:17Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "The Lab",
     "given by": "Skier",
-    "previous": "Profit Retention, or, Get a Foothold",
-    "reqkappa": "No"
+    "location": "The Lab",
+    "previous": "Profit Retention, or, Get a Foothold"
   },
   "sections": [
     {
@@ -33,7 +32,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +1 Aim Drills skill level\n- +1 Assault Rifles skill level\n- +1 Sniping skill level\n- +1 Weapon Maintenance skill level\n- +1 Troubleshooting skill level\n- +1 DMRs skill level\n- +1 Heavy Machine Guns skill level\n- +1 Light Machine Guns skill level\n- +1 Melee skill level\n- +1 Pistols skill level\n- +1 Revolvers skill level\n- +1 Grenade Launchers skill level\n- +1 Shotguns skill level\n- +1 Submachine Guns skill level\n- +1 Throwables skill level\n- +1 Underbarrel Launchers skill level\n- Unlocks achievement All on Red\n- +1 weekly operational task with skill reward (level 61+)\n\"While you were running around the Lab, I sorted out your reward. You liked that whole extra education thing, didn't you? I've got a mate who used to work for Ref. Was a gunsmith there. Here's his contact. Tell him you're from me and have a chat. Won't make back the money you spent on this, but it might save your life one day. And that's worth more.\""
+      "text": "- +1 Aim Drills skill level\n- +1 Assault Rifles skill level\n- +1 Sniping skill level\n- +1 Weapon Maintenance skill level\n- +1 Troubleshooting skill level\n- +1 DMRs skill level\n- +1 Heavy Machine Guns skill level\n- +1 Light Machine Guns skill level\n- +1 Melee skill level\n- +1 Pistols skill level\n- +1 Revolvers skill level\n- +1 Grenade Launchers skill level\n- +1 Shotguns skill level\n- +1 Submachine Guns skill level\n- +1 Throwables skill level\n- +1 Underbarrel Launchers skill level\n- +1 weekly operational task with skill reward (level 61+)\n- Unlocks achievement All on Red\n\"While you were running around the Lab, I sorted out your reward. You liked that whole extra education thing, didn't you? I've got a mate who used to work for Ref. Was a gunsmith there. Here's his contact. Tell him you're from me and have a chat. Won't make back the money you spent on this, but it might save your life one day. And that's worth more.\""
     }
   ]
 }

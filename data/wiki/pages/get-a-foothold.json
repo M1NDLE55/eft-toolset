@@ -1,8 +1,8 @@
 {
   "title": "Get a Foothold",
   "url": "https://escapefromtarkov.fandom.com/wiki/Get_a_Foothold",
-  "revisionId": 362561,
-  "lastEdited": "2026-09-29T19:10:27Z",
+  "revisionId": 367438,
+  "lastEdited": "2026-11-03T14:16:45Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "given by": "Skier",
     "previous": "Never Too Late To Learn",
-    "reqkappa": "No"
+    "leads to": "Consolation Prize"
   },
   "sections": [
     {

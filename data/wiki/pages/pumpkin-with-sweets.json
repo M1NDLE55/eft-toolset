@@ -1,8 +1,8 @@
 {
   "title": "Pumpkin with sweets",
   "url": "https://escapefromtarkov.fandom.com/wiki/Pumpkin_with_sweets",
-  "revisionId": 333900,
-  "lastEdited": "2026-02-07T23:30:59Z",
+  "revisionId": 367503,
+  "lastEdited": "2026-11-03T18:02:44Z",
   "kind": "container",
   "categories": [
     "Loot Containers"
@@ -29,7 +29,7 @@
     {
       "heading": "Notes",
       "level": 2,
-      "text": "- Can only be opened outside of a raid\n- Cannot be listed for sale on the flea market\n- Destroyed after unpacking (Right-click \"unpack\")"
+      "text": "- Cannot be put inside secure containers\n- Cannot be listed for sale on the flea market\n- Can only be opened outside of a raid\n- Destroyed after unpacking (Right-click \"unpack\")"
     },
     {
       "heading": "Location",

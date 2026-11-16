@@ -1,8 +1,8 @@
 {
   "title": "Decontamination Service",
   "url": "https://escapefromtarkov.fandom.com/wiki/Decontamination_Service",
-  "revisionId": 362149,
-  "lastEdited": "2026-09-24T20:47:45Z",
+  "revisionId": 367701,
+  "lastEdited": "2026-11-08T23:52:20Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,10 +11,9 @@
     "Decontamination service"
   ],
   "infobox": {
-    "location": "The Lab",
     "given by": "Therapist",
-    "LL requirement": "4",
-    "reqkappa": "Yes"
+    "location": "The Lab",
+    "LL requirement": "4"
   },
   "sections": [
     {
@@ -30,12 +29,12 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 40 any target from less than 60 meters away while wearing a gas mask or respirator on The Lab"
+      "text": "- Eliminate any 40 targets from less than 60 meters away while wearing a gas mask or respirator on The Lab"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- Therapist Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks craft for M.U.L.E. stimulant injector at Medstation level 2\n- +2 Vitality skill levels\n- +4 Immunity skill levels\n\"Thank you for your work, and don't concern yourself. Some people only understand when they're approached from a position of strength.\""
+      "text": "- +65,000 EXP\n- +2 Vitality skill levels\n- +4 Immunity skill levels\n- Therapist Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks craft for M.U.L.E. stimulant injector at Medstation level 2\n\"Thank you for your work, and don't concern yourself. Some people only understand when they're approached from a position of strength.\""
     },
     {
       "heading": "Guide",

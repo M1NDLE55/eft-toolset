@@ -1,18 +1,18 @@
 {
   "title": "I Need More Power",
   "url": "https://escapefromtarkov.fandom.com/wiki/I_Need_More_Power",
-  "revisionId": 362643,
-  "lastEdited": "2026-09-29T21:06:15Z",
+  "revisionId": 367734,
+  "lastEdited": "2026-11-09T00:37:09Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Peacekeeper",
+    "location": "Shoreline",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "5"
   },
   "sections": [
     {
@@ -33,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- 10,000 EXP\n- Peacekeeper Rep +0.25\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n- 2× Military flash drive\n- Unlocks purchase of AR-15 Magpul PRS GEN3 stock (Black) at Peacekeeper LL3\n\"Good work, my friend. I will pass this information on to my men. Now, if only we could move those generators to our base without drawing attention...\""
+      "text": "- +10,000 EXP\n- Peacekeeper Rep +0.25\n- 1,100 Dollars\n  - 1,155 Dollars with Intelligence Center Level 1\n  - 1,265 Dollars with Intelligence Center Level 2\n- 2× Military flash drive\n- Unlocks purchase of AR-15 Magpul PRS GEN3 stock (Black) at Peacekeeper LL3\n\"Good work, my friend. I will pass this information on to my men. Now, if only we could move those generators to our base without drawing attention...\""
     },
     {
       "heading": "Guide",

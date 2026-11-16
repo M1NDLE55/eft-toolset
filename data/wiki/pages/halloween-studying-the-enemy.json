@@ -1,0 +1,42 @@
+{
+  "title": "Halloween: Studying the Enemy",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_Studying_the_Enemy",
+  "revisionId": 367050,
+  "lastEdited": "2026-11-02T21:11:48Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "previous": "Halloween: High-Risk, High-Reward"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: Studying the Enemy is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I've been informed that Skier isn't destroying the infected bodies but storing them in refrigerated containers. I have no intention of approaching him directly, but those samples could be a great help in developing a vaccine. Obtain tissue samples from those bodies for me. The more material I have, the more accurately I can study the changes in the virus. I wouldn't recommend going directly to Skier. He certainly won't sell you anything at the moment. Try negotiating with other PMCs or look on the Flea Market. I'm prepared to pay well for this work.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over 2 new infected tissue sample"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +34,000 EXP\n- 150,000 Roubles\n  - 157,500 Roubles with Intelligence Center Level 1\n  - 172,500 Roubles with Intelligence Center Level 2\n- Unlocks barter for Lucky Scav Junk box at Therapist LL1\n- Unlocks barter for Medicine case at Therapist LL2\n- Unlocks barter for TerraGroup Labs keycard (Green) at Therapist LL3\n- Unlocks barter for Item case at Therapist LL4\n\"Thank you. This will help us understand what's happening.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Infected tissue sample | 2 | Required | No | Can only be bought on the flea market if the player has not sided with Skier |\nThe Infected tissue samples have to be bought from the flea market because they are only obtainable as reward from Skier's event tasks."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "ZB-1013 key",
+  "url": "https://escapefromtarkov.fandom.com/wiki/ZB-1013_key",
+  "revisionId": 363415,
+  "lastEdited": "2026-10-06T17:52:16Z",
+  "kind": "key",
+  "categories": [
+    "Keys"
+  ],
+  "redirects": [],
+  "infobox": {
+    "type": "Key",
+    "weight": "0.01 kg",
+    "grid": "1x1",
+    "usage": "Unlocks the ZB-1013 extraction on Customs.",
+    "storage_wallet": "No",
+    "storage_keytool": "Yes",
+    "storage_doccase": "Yes",
+    "storage_sicc": "Yes",
+    "storage_securecont": "Yes",
+    "node": "6aa2f6565d82e97ee9076820",
+    "ID": "item_key_customs_zb1013"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "ZB-1013 key (ZB-1013) is a Key in Escape from Tarkov."
+    },
+    {
+      "heading": "Description",
+      "level": 2,
+      "text": "A key engraved with letters \"ZB-013\" that opens the metal door beneath the unfinished construction site in the Customs terminal industrial area, nicknamed \"Fortress\" by the locals."
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Key Location",
+      "level": 2,
+      "text": "- In Jackets\n- In Drawers\n- Pockets and bags of Scavs"
+    },
+    {
+      "heading": "Lock Location",
+      "level": 2,
+      "text": "Door leading to the ZB-1013 extraction in the basement of the Scav base on Customs."
+    },
+    {
+      "heading": "Behind the Lock",
+      "level": 2,
+      "text": "The \"ZB-013\" extraction."
+    }
+  ]
+}

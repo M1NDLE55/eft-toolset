@@ -1,8 +1,8 @@
 {
   "title": "Connections Up North",
   "url": "https://escapefromtarkov.fandom.com/wiki/Connections_Up_North",
-  "revisionId": 362465,
-  "lastEdited": "2026-09-29T15:35:28Z",
+  "revisionId": 365328,
+  "lastEdited": "2026-10-27T23:48:51Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "given by": "Skier",
     "LL requirement": "4",
-    "reqkappa": "No"
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -32,7 +32,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- Skier Rep +1.5\n- 2,400 Euros\n  - 2,520 Euros with Intelligence Center Level 1\n  - 2,760 Euros with Intelligence Center Level 2\n- 1× Sako TRG M10 .338 LM bolt-action sniper rifle\n- 2× Sako TRG M10 .338 LM 8-round magazine\n- 1× .338 Lapua Magnum FMJ ammo pack (20 pcs)\n- +4 Attention skill levels\n- +4 Covert Movement skill levels\n- Unlocks purchase of Sako TRG M10 .338 LM bolt-action sniper rifle at Skier LL4\n\"Even my contacts have started hearing the rumors! They reckon there's no countering a trick like that. With a rifle like this, you'll become a proper legend.\""
+      "text": "- +65,000 EXP\n- +4 Attention skill levels\n- +4 Covert Movement skill levels\n- Skier Rep +1.5\n- 2,400 Euros\n  - 2,520 Euros with Intelligence Center Level 1\n  - 2,760 Euros with Intelligence Center Level 2\n- 1× Sako TRG M10 .338 LM bolt-action sniper rifle\n- 2× Sako TRG M10 .338 LM 8-round magazine\n- 1× .338 Lapua Magnum FMJ ammo pack (20 pcs)\n- Unlocks purchase of Sako TRG M10 .338 LM bolt-action sniper rifle at Skier LL4\n\"Even my contacts have started hearing the rumors! They reckon there's no countering a trick like that. With a rifle like this, you'll become a proper legend.\""
     },
     {
       "heading": "Guide",

@@ -1,18 +1,17 @@
 {
   "title": "The Bunker",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Bunker",
-  "revisionId": 361743,
-  "lastEdited": "2026-09-24T12:30:09Z",
+  "revisionId": 367693,
+  "lastEdited": "2026-11-08T22:56:41Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Reserve",
     "given by": "Prapor",
-    "LL requirement": "3",
-    "reqkappa": "Yes"
+    "location": "Reserve",
+    "LL requirement": "3"
   },
   "sections": [
     {
@@ -38,7 +37,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "The control room is located in the center of the Reserve underground bunker system. You can reach it by using any staircase of your choice.\n\nThe hermetic doors are the entry doors to the underground bunker system on Reserve."
+      "text": "The underground bunker on Reserve can be reached by using any staircase. The hermetic doors are the entry doors to the bunker. The control room is located in the center of the bunker. All objectives have to be completed in the same raid."
     }
   ]
 }

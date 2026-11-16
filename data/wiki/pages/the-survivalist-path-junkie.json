@@ -1,8 +1,8 @@
 {
   "title": "The Survivalist Path - Junkie",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Junkie",
-  "revisionId": 359788,
-  "lastEdited": "2026-09-13T20:22:06Z",
+  "revisionId": 365930,
+  "lastEdited": "2026-10-27T23:59:13Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -14,6 +14,8 @@
   "infobox": {
     "location": "Woods",
     "given by": "Jaeger",
+    "LL requirement": "4",
+    "previous": "The Survivalist Path - Eagle-Owl",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -35,7 +37,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +5,900 EXP\n- +2 Metabolism skill levels\n- Jaeger Rep +0.02\n- 30,000 Roubles\n  - 31,500 Roubles with Intelligence Center Level 1\n  - 34,500 Roubles with Intelligence Center Level 2\n- 6× 12/70 RIP ammo pack (5 pcs)\n- 4× 5.56x45mm Warmageddon ammo pack (20 pcs)\n- 1× 5.45x39mm BT gs ammo pack (120 pcs)\n\"So I see you've made it. How's your head? Dizzy? Feeling like you're going to throw up? That's the side effects of those drugs, you have to pay the price to stay alive, even pay with your health. But anyway, listen here, I have some tips on how to reduce those side effects, so next time you would feel a little better.\""
+      "text": "- +65,000 EXP\n- 1× Dorm room 314 marked key\n- 5× 12/70 RIP ammo pack (5 pcs)\n- 4× 5.56x45mm Warmageddon ammo pack (20 pcs)\n- 4× 5.45x39mm BT gs ammo pack (120 pcs)\n- Unlocks barter for Dorm room 314 marked key at Jaeger LL4\n\"So I see you've made it. How's your head? Dizzy? Feeling like you're going to throw up? That's the side effects of those drugs, you have to pay the price to stay alive, even pay with your health. But anyway, listen here, I have some tips on how to reduce those side effects, so next time you would feel a little better.\""
     },
     {
       "heading": "Guide",

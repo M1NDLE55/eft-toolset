@@ -1,8 +1,8 @@
 {
   "title": "The Huntsman Path - Controller",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Controller",
-  "revisionId": 359755,
-  "lastEdited": "2026-09-13T20:21:33Z",
+  "revisionId": 365898,
+  "lastEdited": "2026-10-27T23:58:41Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,8 @@
   "infobox": {
     "location": "Any",
     "given by": "Jaeger",
-    "previous": "The Huntsman Path - Forest Cleaning",
+    "LL requirement": "3",
+    "previous": "The Survivalist Path - Tough Guy",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -33,7 +34,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +7,200 EXP\n- Jaeger Rep +0.02\n- 50,000 Roubles\n  - 52,500 Roubles with Intelligence Center Level 1\n  - 57,500 Roubles with Intelligence Center Level 2\n- 1× NcSTAR ADO P4 Sniper 3-9x42 riflescope\n\n\"Learned the lesson? Good. See, you can disarm an enemy in many ways.\""
+      "text": "- +28,000 EXP\n- 1× NcSTAR ADO P4 Sniper 3-9x42 riflescope\n- 1× 7.62x51mm M80 ammo pack (20 pcs)\n- Unlocks purchase of Remington Model 700 7.62x51 bolt-action sniper rifle (variant AICS) at Jaeger LL3\n\"Learned the lesson? Good. See, you can disarm an enemy in many ways.\""
     },
     {
       "heading": "Guide",

@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 5",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_5",
-  "revisionId": 352605,
-  "lastEdited": "2026-08-09T19:59:01Z",
+  "revisionId": 364397,
+  "lastEdited": "2026-10-13T19:00:00Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,6 +13,8 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "previous": "Gunsmith Master - Part 4",
+    "leads to": "Gunsmith Master - Part 6",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -24,12 +26,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"I want to try teaching Lusya to tell if someone's lying, if the result will be at least 90% accurate, it will be interesting to listen to all those politicians and TerraGroup whales, who've been expatiating upon their ideals and noble goals just yesterday, assured of the benefits of our economic zone and a bright future ahead. How much of this was a concentrated lie? I think, all of it. There's a request for a Magpul edition AKMN. I.e. the handguard, stock, and pistol grip have to be Magpul. All in black. Additionally, a Rotor 43 muzzle brake, black Magpul M-LOK AFG Tactical grip, and EOTech HHS-1 hybrid sight. Recoil sum lower than 380, ergonomics above 40, and weight of 5 kg or less with sighting range of 500.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 33 to start this quest."
+      "text": "\"I want to try teaching Lusya to tell if someone's lying, if the result will be at least 90% accurate, it will be interesting to listen to all those politicians and TerraGroup whales, who’ve been expatiating upon their ideals and noble goals just yesterday, assured of the benefits of our economic zone and a bright future ahead. How much of this was a concentrated lie? I think, all of it. There’s a request for a Magpul edition AKMN. I.e. the handguard, stock, and pistol grip have to be Magpul. All in black. Additionally, a Rotor 43 muzzle brake, black Magpul M-LOK AFG Tactical grip, and EOTech HHS-1 hybrid sight. Recoil sum lower than 380, ergonomics above 40, and weight of 5 kg or less with sighting range of 500.\""
     },
     {
       "heading": "Objectives",
@@ -39,7 +36,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +23,100 EXP\n- Mechanic Rep +0.03\n- 50,000 Roubles\n  - 52,500 Roubles with Intelligence Center Level 1\n  - 57,500 Roubles with Intelligence Center Level 2\n- 1× EOTech Vudu 1-6x24 30mm riflescope\n- 1× AK-74 Hexagon Wafflemaker 5.45x39 sound suppressor\n- 1× AK Hexagon Reactor 5.45x39 muzzle brake\n- Unlocks purchase of Steiner LAS/TAC 2 tactical flashlight at Mechanic LL3\n- Unlocks purchase of AKM 7.62x39 Kiba Arms .308 muzzle device adapter at Mechanic LL3\n\"Thanks, leave them somewhere here. I’m a bit busy right now, catch you later.\""
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× EOTech Vudu 1-6x24 30mm riflescope\n- 1× AK Hexagon Reactor 5.45x39 muzzle brake\n\"Thanks, leave them somewhere here. I’m a bit busy right now, catch you later.\""
     },
     {
       "heading": "Guide",

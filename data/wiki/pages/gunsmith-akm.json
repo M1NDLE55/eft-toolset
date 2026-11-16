@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - AKM",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_AKM",
-  "revisionId": 353691,
-  "lastEdited": "2026-08-14T21:39:16Z",
+  "revisionId": 364364,
+  "lastEdited": "2026-10-13T15:10:41Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,6 +12,7 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,7 +24,12 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"How do you think, is all the suffering that befell the inhabitants of our city the result of the actions of the society, or a controlled process, and this is just the beginning? I've been thinking about this all the time after that guy with the lightning tattoo. Although I decided for myself that even if it's someone's invisible hand, our society has deserved it. We have, by our actions, by buying sneakers or even beet salad, supported those who build laboratories and manufacturers, and then use them to plunge us into the abyss. Okay, I'm rambling again, back to business. Get me an AKM with a Fortis Shift grip, silencer, and 30-round Magpul mag. Ergonomics over 25, recoil sum less than 400, sighting range of 800 meters or more.\""
+      "text": "\"Good day, mercenary. I've got another job for you. One of my regular clients is looking for an AKM fitted with a Fortis Shift foregrip, a suppressor, and a 30-round Magpul magazine. It also needs ergonomics at or above 25, combined recoil below 400, and a sighting range of at least 800. Think you can handle it? There's no rush, but I'd rather not keep the client waiting too long.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by BEAR PMCs."
     },
     {
       "heading": "Objectives",
@@ -33,7 +39,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +5,800 EXP\n- Mechanic Rep +0.01\n- 50,000 Roubles\n  - 52,500 Roubles with Intelligence Center Level 1\n  - 57,500 Roubles with Intelligence Center Level 2\n- 2× Pack of screws\n- 2× Phase control relay\n- 3× 7.62x39mm BP gzh ammo pack (20 pcs)\n- Unlocks purchase of AK GP-25 accessory kit recoil pad at Prapor LL2\n\"A comfortable weapon, masterfully done, thank you. I'll let the client know the weapon is ready.\""
+      "text": "- +28,000 EXP\n- Mechanic Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Comfortable to handle, and expertly put together. Thank you. I'll let the client know their weapon is ready for pickup.\""
     },
     {
       "heading": "Guide",

@@ -1,0 +1,48 @@
+{
+  "title": "Halloween: Rumors",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_Rumors",
+  "revisionId": 367060,
+  "lastEdited": "2026-11-02T21:26:15Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "location": "Infected Factory",
+    "leads to": "Halloween: The Best Defense"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: Rumors is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Alright mate? Got a job for you. Some fucked-up rumors are spreading all over Tarkov... Even my guys are gossiping like a bunch of old ladies in the stairwell. What're they talking about? Some new infection, supposedly, and people going crazy from it. And only in certain areas! Normally, I'd blow it off, but we've had this kind of shit in Tarkov before. Go check the factory, then come back and tell me what you've seen. I'll sort you out when you're back. And if you bump into any of those nutters, put 'em down. Don't need 'em distracting my boys with all this bollocks.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Visit the Infected Factory\n- Eliminate 10 infected on Infected Factory"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +26,000 EXP\n- 1,800 Euros\n  - 1,890 Euros with Intelligence Center Level 1\n  - 2,070 Euros with Intelligence Center Level 2\n- 1× MPS Auto Assault-12 Gen 2 12ga automatic shotgun (variant TerraGroup Labs)\n- 3× AA-12 12ga 20-round drum magazine\n- 4× 12/70 SuperFormance HP slug ammo pack (25 pcs)\n\"You run into any nutters? They come charging at you and all? Fuck me, what a bloody mess... Right, we'll have to think this through.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 10 infected in the Infected Factory."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This questline was released together with the video \"Escape from Undead Tarkov\"."
+    }
+  ]
+}

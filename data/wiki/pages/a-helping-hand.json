@@ -1,19 +1,18 @@
 {
   "title": "A Helping Hand",
   "url": "https://escapefromtarkov.fandom.com/wiki/A_Helping_Hand",
-  "revisionId": 359043,
-  "lastEdited": "2026-09-13T20:09:28Z",
+  "revisionId": 366086,
+  "lastEdited": "2026-10-28T01:45:43Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods",
     "given by": "Mechanic",
-    "previous": "Saving the Mole",
-    "leads to": "Shipping Delay - Part 1, Shipping Delay - Part 2, Hot Wheels",
-    "reqkappa": "No"
+    "location": "Woods",
+    "LL requirement": "2",
+    "leads to": "Shipping Delay - Part 1, Shipping Delay - Part 2, Hot Wheels"
   },
   "sections": [
     {
@@ -39,7 +38,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +14,000 EXP\n- Mechanic Rep +0.02\n- 70,000 Roubles\n  - 73,500 Roubles with Intelligence Center Level 1\n  - 80,500 Roubles with Intelligence Center Level 2\n- 1× \"The Eye\" mortar strike signaling device\n\"I told him it was dangerous to become part of Skier's gang... Granted, it does have its privileges, but you can hardly stay independent in such a big business. I wonder who could have turned against Skier? After all, the BTR should be under his protection...\""
+      "text": "- +10,000 EXP\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 1× \"The Eye\" mortar strike signaling device\n\"I told him it was dangerous to become part of Skier's gang... Granted, it does have its privileges, but you can hardly stay independent in such a big business. I wonder who could have turned against Skier? After all, the BTR should be under his protection...\""
     },
     {
       "heading": "Guide",

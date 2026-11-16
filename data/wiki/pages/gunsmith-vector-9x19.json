@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - Vector 9x19",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_Vector_9x19",
-  "revisionId": 356506,
-  "lastEdited": "2026-08-26T02:18:39Z",
+  "revisionId": 364382,
+  "lastEdited": "2026-10-13T15:44:20Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,6 +12,7 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,12 +24,12 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Perfect timing, friend. If you have time, help me out with some gun customization. A major customer has placed an order for a KRISS Vector 9x19 submachine gun. He wants it to be equipped with an Mk.5 Modular Rail mount, Tactical Dynamics Skeletonized Foregrip, some iron sights or a scope with at least 300 meter sighting range, magazine with at least 33 rounds, and a silencer. Ergonomics over 48 and recoil under 240. Thanks!\""
+      "text": "\"You're right on time, mercenary. If you've got the time, help me with a custom build. A high-profile client placed an order for a KRISS Vector submachine gun chambered in 9x19. It must have a Mk.5 Modular Rail, a Tactical Dynamics Skeletonized Foregrip, an optic or iron sights with an effective range of 300 meters, at least 33-round mag, and a suppressor. Ergonomics no lower than 48, combined recoil below 240. Once it's ready, I'll pay you.\""
     },
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Must be level 22 to start this quest."
+      "text": "- This quest is only obtainable by USEC PMCs."
     },
     {
       "heading": "Objectives",
@@ -38,7 +39,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +11,600 EXP\n- Mechanic Rep +0.02\n- 500 Dollars\n  - 525 Dollars with Intelligence Center Level 1\n  - 575 Dollars with Intelligence Center Level 2\n- 1× SureFire SOCOM556-MINI MONSTER 5.56x45 sound suppressor\n- Unlocks purchase of Colt M4A1 5.56x45 assault rifle (variant SAI ) at Ref LL2\n\"You know, I prefer forty-five personally, but a Vector is a Vector! What a beautiful beast.\""
+      "text": "- +28,000 EXP\n- Mechanic Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"Personally, I prefer the forty-five version, but a Vector is a Vector! Excellent work.\""
     },
     {
       "heading": "Guide",

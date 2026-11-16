@@ -1,0 +1,45 @@
+{
+  "title": "Halloween: High-Risk, High-Reward",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_High-Risk%2C_High-Reward",
+  "revisionId": 367061,
+  "lastEdited": "2026-11-02T21:27:36Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "location": "Infected Factory, Infected Lab",
+    "given by": "Therapist",
+    "previous": "Halloween: A New Vaccine",
+    "leads to": "Halloween: First Results, Halloween: Studying the Enemy",
+    "reqkappa": "No"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: High-Risk, High-Reward is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"The situation is getting worse. Security measures across the city are being tightened, but shooting everyone who looks ill won't solve the problem. I need full samples of the mutated virus, and the only way to obtain them is from freshly killed infected. Head to the infected Factory or the Laboratory and eliminate as many carriers as possible. My people will collect the bodies afterwards and deliver the material for research. If all goes well, I'll give you the first vaccine prototypes. In the current situation, they'll be worth their weight in gold.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Eliminate 30 infected on Infected Factory or Infected Lab"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +41,000 EXP\n- 300,000 Roubles\n  - 315,000 Roubles with Intelligence Center Level 1\n  - 345,000 Roubles with Intelligence Center Level 2\n- 3× Propital regenerative stimulant injector\n- 3× Zagustin hemostatic drug injector\n- 2× TG-Vi-24 vaccine prototype (B.1.2 strain)\n- Unlocks barter for FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope at Jaeger LL1\n- Unlocks barter for RShG-2 72.5mm rocket launcher at Prapor LL1\n- Unlocks barter for DevTac Ronin helmet at Ragman LL1\n- Unlocks barter for SIG MCX-SPEAR 6.8x51 assault rifle at Peacekeeper LL1\n- +2 daily operational tasks with TG-Vi-24 vaccine prototype (B.1.2 strain) reward\n\"My people have already reported that they've started collecting the material. Excellent work, young man.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "In this quest you have to kill 10 infected in the Infected Factory or the Infected Lab."
+    }
+  ]
+}

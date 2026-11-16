@@ -1,18 +1,17 @@
 {
   "title": "Classified Technologies",
   "url": "https://escapefromtarkov.fandom.com/wiki/Classified_Technologies",
-  "revisionId": 362423,
-  "lastEdited": "2026-09-29T14:10:54Z",
+  "revisionId": 367414,
+  "lastEdited": "2026-11-03T13:18:07Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Reserve",
     "given by": "Skier",
-    "LL requirement": "3",
-    "reqkappa": "Yes"
+    "location": "Reserve",
+    "LL requirement": "3"
   },
   "sections": [
     {

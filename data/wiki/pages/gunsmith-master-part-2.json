@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 2",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_2",
-  "revisionId": 354696,
-  "lastEdited": "2026-08-15T22:16:38Z",
+  "revisionId": 364391,
+  "lastEdited": "2026-10-13T18:48:18Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,6 +13,8 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "previous": "Gunsmith Master - Part 1",
+    "leads to": "Gunsmith Master - Part 3",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -27,11 +29,6 @@
       "text": "\"Are you good at hiding? Not good enough for Sniper not to find you, I think. I don't envy the guy, what’s his name, Brendan I think. Interesting, all those heroes of the past who we admired so much, where have they all gone? Why has everybody become so empty? Why now, with this chaos around, such folk as Sniper became heroes for us? Why have we been ignoring such war dogs, and now we’re looking forward to being friends with them? What do you think? I have another order, for an R11 RSASS. With a sighting range of 1500 or above. Weight 6.7 kg or less. Also needs a silencer, ergonomics more than 17, and recoil sum less than 300.\""
     },
     {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 25 to start this quest."
-    },
-    {
       "heading": "Objectives",
       "level": 2,
       "text": "- Modify an R11 RSASS to comply with the given specifications"
@@ -39,7 +36,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +13,600 EXP\n- Mechanic Rep +0.02\n- 500 Dollars\n  - 525 Dollars with Intelligence Center Level 1\n  - 575 Dollars with Intelligence Center Level 2\n- 2× Corrugated hose\n- 2× Pack of nails\n- Unlocks barter for KAC PRS/QDC 7.62x51 sound suppressor at Peacekeeper LL3\n\"Yeah, you can't hide from something like this. Love 7.62, a good caliber. Thanks for the work. Next order should be tomorrow.\""
+      "text": "- +10,000 EXP\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- 1× AI .338 LM Tactical Sound Moderator\n- 1× SilencerCo Hybrid 46 multi-caliber sound suppressor\n\"Yeah, you can't hide from something like this. Love 7.62, a good caliber. Thanks for the work. Next order should be tomorrow.\""
     },
     {
       "heading": "Guide",

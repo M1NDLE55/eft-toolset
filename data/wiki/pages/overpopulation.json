@@ -1,17 +1,18 @@
 {
   "title": "Overpopulation",
   "url": "https://escapefromtarkov.fandom.com/wiki/Overpopulation",
-  "revisionId": 359540,
-  "lastEdited": "2026-09-13T20:17:56Z",
+  "revisionId": 367706,
+  "lastEdited": "2026-11-08T23:55:09Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Peacekeeper",
-    "reqkappa": "Yes"
+    "location": "Lighthouse",
+    "LL requirement": "3",
+    "LL quests": "2"
   },
   "sections": [
     {
@@ -22,27 +23,22 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Mercenary, there is work for you. According to our intelligence, after the initial conflict, the former base of your USEC comrades, in the cottage area at Cape Dalniy, was abandoned with a lot of valuable equipment and information that could sponsor the Blue Helmets operations. The only problem is that the entire territory is currently under the control of the Scavs, and I would like to get rid of them, or at least scare them out of this zone so that my people can extract all the necessary resources without combat. This is your task, my friend. Naturally, everything that you have just heard will remain strictly between us. I look forward to your report.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be Loyalty Level 3 to start this quest"
+      "text": "\"Mercenary, I have a job for you. At the former USEC base belonging to your associates in the chalet area at Cape Dalniy, a large amount of valuable equipment and information was left behind after the conflict. This could help fund our operations. But there is one problem: the entire area is currently under enemy control. We need to eliminate them permanently, or at least temporarily remove the threat. While you are there, search the location for documents and bring them to me. That is your task, my friend. Naturally, everything you have heard will remain between us. I await your report.\""
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 10 targests around the chalet area on Lighthouse\n- Hand over 5 Topographic survey maps, Intelligence folder, or TerraGroup \"Blue Folders\" materials marked with the Found in raid status"
+      "text": "- Eliminate any 10 targets around the chalets on Lighthouse\n- Hand over 5 Topographic survey maps, Intelligence folder, or TerraGroup \"Blue Folders\" materials marked with the Found in raid status"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,000 EXP\n- Peacekeeper Rep +0.75\n- Dollars\n  - Dollars with Intelligence center Level 1\n  - 2,327 Dollars with Intelligence center Level 2\n\"My recon group has already reported your success, mercenary. I think you have earned a generous reward. You're free to go.\""
+      "text": "- +28,000 EXP\n- Peacekeeper Rep +0.75\n- 1,900 Dollars\n  - 1,995 Dollars with Intelligence Center Level 1\n  - 2,185 Dollars with Intelligence Center Level 2\n\"My observers have already informed me of your work, mercenary. I believe you have earned a generous reward.\""
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "For this quest you have to kill 10 targets around and between the cottages on Lighthouse."
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in Raid |\n| Topographic survey maps; or; Intelligence folder; or; TerraGroup \"Blue Folders\" materials | Topographic survey maps; or; Intelligence folder; or; TerraGroup \"Blue Folders\" materials | 5 | Handover item | Yes |\nFor this quest you have to kill 10 targets around and between the cottages on Lighthouse and then hand over 5 of any of the following items: Topographic survey maps or Intelligence folder orTerraGroup \"Blue Folders\" materials"
     }
   ]
 }

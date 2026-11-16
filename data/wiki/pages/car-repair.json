@@ -1,8 +1,8 @@
 {
   "title": "Car Repair",
   "url": "https://escapefromtarkov.fandom.com/wiki/Car_Repair",
-  "revisionId": 361700,
-  "lastEdited": "2026-09-24T12:12:51Z",
+  "revisionId": 367761,
+  "lastEdited": "2026-11-09T00:58:45Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,9 +13,7 @@
   "infobox": {
     "given by": "Therapist",
     "LL requirement": "3",
-    "time limit": "None",
-    "quest number": "10",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -36,12 +34,17 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,000 EXP\n- Therapist Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\n\"You have no idea what exactly you’ve accomplished for these people.\""
+      "text": "- +28,000 EXP\n- Therapist Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n\"You have no idea what exactly you’ve accomplished for these people.\""
+    },
+    {
+      "heading": "Initial Equipment",
+      "level": 2,
+      "text": "Unlocks craft for Car battery at Workbench level 2."
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Car battery | 4 | Handover item | Yes | Can be crafted in the Hideout (Workbench lv. 2). |\n| Spark plug | 8 | Handover item | Yes | Can be crafted in the Hideout (Workbench lv. 2). |\n\nInterchange is great place to go for this quest:\n- OLI (home improvement store) very commonly spawns car batteries and spark plugs on its shelves.\n- Goshan / гошан (grocery store) commonly spawns car batteries on the store shelves located south of the big fire.\n\nDrawers commonly spawn spark plugs. Reserve is a great place to loot these filing cabinets, with several in the Knight buildings, Queen building, and underground office area."
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Car battery | 4 | Handover item | Yes | Can be crafted in the Hideout (Workbench lv. 2). |\n| Spark plug | 8 | Handover item | Yes | Can be crafted in the Hideout (Workbench lv. 2). |"
     }
   ]
 }

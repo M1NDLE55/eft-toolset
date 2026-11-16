@@ -1,0 +1,54 @@
+{
+  "title": "Halloween: Coincidence?",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_Coincidence%3F",
+  "revisionId": 366983,
+  "lastEdited": "2026-11-01T23:37:53Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "location": "Lighthouse",
+    "previous": "Halloween: Danger Zone",
+    "leads to": "Halloween: Enemy of My Enemy"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: Coincidence? is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Listen, this infection's spreading across Tarkov a bit too neatly. One place flares up, then another, like someone's deliberately testing the quarantine to see how much it'll take. Things don't usually happen like that on their own. On top of that, my lads picked up some dodgy signal coming from Lighthouse. What the hell it is, I've no bloody idea, but I don't like the coincidence. Get over there, find the source and have a proper rummage around the area. If you find anything useful, bring it straight to me. I want to know what the hell's going on.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate the source of the signal on Lighthouse\n- Obtain any clues in the area\n- Hand over the found clue"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +42,000 EXP\n- 2,700 Euros\n  - 2,835 Euros with Intelligence Center Level 1\n  - 3,105 Euros with Intelligence Center Level 2\n- 1× Kalashnikov PKM 7.62x54R machine gun\n- 2× PK 7.62x54R 100-round box\n- 10× 7.62x54mm R BT gzh ammo pack (20 pcs)\n\"So, you managed to have a good look around? I'll go through all of it.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Folder with TerraGroup infection progression data | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find the signal source on Lighthouse and pick up a folder."
+    },
+    {
+      "heading": "Locate the source of the signal on Lighthouse",
+      "level": 4,
+      "text": "The source of the signal is located inside water treatment building no. 2, on the first floor in the room with the world map."
+    },
+    {
+      "heading": "Obtain any clues in the area",
+      "level": 4,
+      "text": "The folder is located in the same room, next to one of the doors."
+    }
+  ]
+}

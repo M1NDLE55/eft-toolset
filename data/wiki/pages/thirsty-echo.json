@@ -1,19 +1,18 @@
 {
   "title": "Thirsty - Echo",
   "url": "https://escapefromtarkov.fandom.com/wiki/Thirsty_-_Echo",
-  "revisionId": 361773,
-  "lastEdited": "2026-09-24T12:52:49Z",
+  "revisionId": 365969,
+  "lastEdited": "2026-10-27T23:59:56Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Therapist",
+    "location": "Shoreline",
     "previous": "Thirsty - Delivery",
-    "leads to": "Thirsty - Secrets (+12-13hr)",
-    "reqkappa": "No"
+    "leads to": "Thirsty - Secrets (+12-13hr)"
   },
   "sections": [
     {

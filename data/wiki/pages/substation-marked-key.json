@@ -1,8 +1,8 @@
 {
   "title": "Substation marked key",
   "url": "https://escapefromtarkov.fandom.com/wiki/Substation_marked_key",
-  "revisionId": 360271,
-  "lastEdited": "2026-09-15T11:59:12Z",
+  "revisionId": 364108,
+  "lastEdited": "2026-10-13T00:39:22Z",
   "kind": "key",
   "categories": [
     "Keys"
@@ -31,6 +31,11 @@
       "heading": "Description",
       "level": 2,
       "text": "A key with some strange symbols scratched onto it. Seems to be used for unlocking the electrical substation at the water treatment plant near the Lighthouse."
+    },
+    {
+      "heading": "Quest rewards",
+      "level": 2,
+      "text": "- 1 can be obtained as a quest reward from Snatch\n- 1 can be obtained as a quest reward from Payback\n- 1 can be obtained as a quest reward from Following the Bread Crumbs\n- 1 can be obtained as a quest reward from Spotter\n- 1 can be obtained as a quest reward from Trouble in the Big City"
     },
     {
       "heading": "Key Location",

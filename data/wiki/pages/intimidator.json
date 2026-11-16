@@ -1,8 +1,8 @@
 {
   "title": "Intimidator",
   "url": "https://escapefromtarkov.fandom.com/wiki/Intimidator",
-  "revisionId": 362191,
-  "lastEdited": "2026-09-25T21:37:35Z",
+  "revisionId": 365561,
+  "lastEdited": "2026-10-27T23:52:47Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "given by": "Prapor",
     "LL requirement": "4",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -32,7 +32,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 5× 7.62x39mm BP gzh ammo pack (20 pcs)\n- +2 Mag Drills skill levels\n- +4 Submachine Guns skill levels\n- Unlocks craft for 7.62x39mm BP gzh at Workbench level 3\n\n\"There you go, that's way better. Thank you, warrior. The guys are saying it's calmed down now, so looks like the morons understood your message.\""
+      "text": "- +65,000 EXP\n- +2 Mag Drills skill levels\n- +4 Submachine Guns skill levels\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 5× 7.62x39mm BP gzh ammo pack (20 pcs)\n- Unlocks craft for 7.62x39mm BP gzh at Workbench level 3\n\n\"There you go, that's way better. Thank you, warrior. The guys are saying it's calmed down now, so looks like the morons understood your message.\""
     }
   ]
 }

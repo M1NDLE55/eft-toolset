@@ -1,8 +1,8 @@
 {
   "title": "Shootout Picnic",
   "url": "https://escapefromtarkov.fandom.com/wiki/Shootout_Picnic",
-  "revisionId": 361722,
-  "lastEdited": "2026-09-24T12:24:25Z",
+  "revisionId": 365811,
+  "lastEdited": "2026-10-27T23:57:03Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,10 +11,10 @@
     "Shootout picnic"
   ],
   "infobox": {
-    "location": "Woods, Ground Zero, Customs, Interchange",
     "given by": "Prapor",
+    "location": "Customs, Ground Zero, Interchange, Woods",
     "LL requirement": "1",
-    "reqkappa": "No"
+    "LL quests": "1"
   },
   "sections": [
     {

@@ -1,16 +1,14 @@
 {
   "title": "Tour",
   "url": "https://escapefromtarkov.fandom.com/wiki/Tour",
-  "revisionId": 358785,
-  "lastEdited": "2026-09-11T11:26:56Z",
+  "revisionId": 366098,
+  "lastEdited": "2026-10-28T01:56:03Z",
   "kind": "quest",
   "categories": [
     "Story chapters"
   ],
   "redirects": [],
-  "infobox": {
-    "location": "Ground Zero (Tutorial)"
-  },
+  "infobox": {},
   "sections": [
     {
       "heading": "Introduction",

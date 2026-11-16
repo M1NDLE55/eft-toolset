@@ -1,18 +1,18 @@
 {
   "title": "Humanitarian Supplies",
   "url": "https://escapefromtarkov.fandom.com/wiki/Humanitarian_Supplies",
-  "revisionId": 362633,
-  "lastEdited": "2026-09-29T20:44:44Z",
+  "revisionId": 367448,
+  "lastEdited": "2026-11-03T14:27:26Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Peacekeeper",
+    "location": "Shoreline",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {

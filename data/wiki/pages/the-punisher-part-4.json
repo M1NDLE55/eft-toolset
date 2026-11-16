@@ -1,8 +1,8 @@
 {
   "title": "The Punisher - Part 4",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Punisher_-_Part_4",
-  "revisionId": 361730,
-  "lastEdited": "2026-09-24T12:27:15Z",
+  "revisionId": 365920,
+  "lastEdited": "2026-10-27T23:59:03Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,12 +11,11 @@
     "The Punisher. Part 4."
   ],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Prapor",
+    "location": "Lighthouse",
     "LL requirement": "4",
     "previous": "The Punisher - Part 3",
-    "leads to": "The Punisher - Part 5",
-    "reqkappa": "Yes"
+    "leads to": "The Punisher - Part 5"
   },
   "sections": [
     {

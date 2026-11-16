@@ -1,8 +1,8 @@
 {
   "title": "Small Business - Part 2",
   "url": "https://escapefromtarkov.fandom.com/wiki/Small_Business_-_Part_2",
-  "revisionId": 359681,
-  "lastEdited": "2026-09-13T20:20:20Z",
+  "revisionId": 366063,
+  "lastEdited": "2026-10-28T00:52:33Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Fence",
     "previous": "Small Business - Part 1",
-    "leads to": "Small Business - Part 3",
-    "reqkappa": "No"
+    "leads to": "Small Business - Part 3"
   },
   "sections": [
     {

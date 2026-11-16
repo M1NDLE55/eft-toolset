@@ -1,18 +1,18 @@
 {
   "title": "Escort",
   "url": "https://escapefromtarkov.fandom.com/wiki/Escort",
-  "revisionId": 361750,
-  "lastEdited": "2026-09-24T12:31:40Z",
+  "revisionId": 367747,
+  "lastEdited": "2026-11-09T00:43:27Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Daytime Factory, Customs, Shoreline, Reserve, Woods, Interchange, The Lab, Ground Zero",
     "given by": "Prapor",
+    "location": "Customs, Daytime Factory, Ground Zero, Interchange, Reserve, Shoreline, The Lab, Woods",
     "LL requirement": "4",
-    "reqkappa": "No"
+    "LL quests": "2"
   },
   "sections": [
     {
@@ -33,7 +33,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- +4 Grenade Launchers skill levels\n- +4 Underbarrel Launchers skill levels\n- +4 Mag Drills skill levels\n- 1× SR-2M Veresk 9x21 submachine gun FSB\n- 1× Rys-T assault helmet (Black)\n- 1× Rys-T face shield\n- Unlocks purchase of SR-2M Veresk 9x21 submachine gun at Prapor LL4\n- Unlocks craft for Rys-T assault helmet (Black) at Lavatory level 3\n\"Ah, here is our hero! Well done, my dogs have already reported that everything went well. Thank you, really helped me out.\""
+      "text": "- +65,000 EXP\n- +4 Grenade Launchers skill levels\n- +4 Underbarrel Launchers skill levels\n- +4 Mag Drills skill levels\n- Prapor Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- 1× SR-2M Veresk 9x21 submachine gun (variant FSB)\n- 1× Rys-T assault helmet (Black)\n- 1× Rys-T face shield\n- Unlocks barter for SR-2M Veresk 9x21 submachine gun (variant FSB) at Prapor LL4\n- Unlocks craft for Rys-T assault helmet (Black) at Lavatory level 3\n\"Ah, here is our hero! Well done, my dogs have already reported that everything went well. Thank you, really helped me out.\""
     },
     {
       "heading": "Failure Dialogue",
@@ -43,7 +43,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "You must kill 2 PMC's on each listed location consecutively without dying, disconnecting, or running out the timer 2 times. If you do any of these more than 1 time you will have to start again. You do not have to do the maps in any order, they can be done in any fashion as long as you survive."
+      "text": "In this quest you have to kill 2 PMCs each on the specified locations in one run. Dying, disconnecting or going MIA is allowed once before the quest fails and resets."
     }
   ]
 }

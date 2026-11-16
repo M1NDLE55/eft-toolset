@@ -1,8 +1,8 @@
 {
   "title": "BTR Driver",
   "url": "https://escapefromtarkov.fandom.com/wiki/BTR_Driver",
-  "revisionId": 357761,
-  "lastEdited": "2026-09-08T08:31:37Z",
+  "revisionId": 363928,
+  "lastEdited": "2026-10-11T16:08:27Z",
   "kind": "trader",
   "categories": [
     "Traders"
@@ -12,7 +12,9 @@
   ],
   "infobox": {
     "faction": "Scavs",
+    "full name": "Unknown",
     "location": "Lighthouse, Streets of Tarkov, Woods",
+    "origin": "Unknown",
     "wares": "Currently none",
     "services": "- Taxi service - Covering fire - Item extraction",
     "currencies": "Roubles (₽)"

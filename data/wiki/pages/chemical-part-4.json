@@ -1,8 +1,8 @@
 {
   "title": "Chemical - Part 4",
   "url": "https://escapefromtarkov.fandom.com/wiki/Chemical_-_Part_4",
-  "revisionId": 362237,
-  "lastEdited": "2026-09-26T15:30:06Z",
+  "revisionId": 366784,
+  "lastEdited": "2026-10-31T23:19:36Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,11 +11,11 @@
     "Chemical, p. 4"
   ],
   "infobox": {
-    "location": "Customs",
     "given by": "Skier",
+    "location": "Customs",
     "previous": "Chemical - Part 3",
-    "related": "Out of Curiosity, or, Big Customer",
-    "reqkappa": "No, but a subsequent quest Yes"
+    "leads to": "Out of Curiosity, Big Customer",
+    "related": "Out of Curiosity, or, Big Customer"
   },
   "sections": [
     {
@@ -39,7 +39,7 @@
       "text": "- +10,000 EXP\n- 1× Key case\n- 1× Magazine case\n- 2× TerraGroup Labs access keycard\n\"Now that is right on! Well, now we’re tied up good, bro. Awesome that you didn’t chicken out at the last moment. Now I can fill you in on some real serious business.\""
     },
     {
-      "heading": "Failure Penalty",
+      "heading": "Failure Dialogue",
       "level": 2,
       "text": "\"Oh, you bloody bastard! Everything down the damn drain! So much fucking effort just wasted! The hell is wrong with you? Thought you were a sensible dude, not an airhead. Ah, to hell with you, spoiled such a jackpot! No way I’m letting you in on something major. You won't take part in any of my serious jobs, that's for sure. Gonna get smoked someday since you love ratting so much.\""
     },

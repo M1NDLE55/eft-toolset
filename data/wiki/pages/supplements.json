@@ -1,18 +1,18 @@
 {
   "title": "Supplements",
   "url": "https://escapefromtarkov.fandom.com/wiki/Supplements",
-  "revisionId": 362241,
-  "lastEdited": "2026-09-26T15:40:00Z",
+  "revisionId": 366080,
+  "lastEdited": "2026-10-28T01:30:20Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs",
     "given by": "Skier",
+    "location": "Customs",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {

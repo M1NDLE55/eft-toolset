@@ -1,0 +1,42 @@
+{
+  "title": "Halloween: Enemy of My Enemy - An Agreement",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_Enemy_of_My_Enemy_-_An_Agreement",
+  "revisionId": 366985,
+  "lastEdited": "2026-11-01T23:40:16Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Therapist",
+    "previous": "Accept Halloween: Enemy of My Enemy"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: Enemy of My Enemy - An Agreement is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello. I have already been informed that Skier wishes to get in touch again. To be frank, after everything that has happened, I wasn't particularly eager to speak with him. However, if he really has information about the origin of the outbreak and what caused it, I'm willing to examine it. Bring me everything you've managed to find. If the information proves significant enough to support his claims, I'll try to put our previous conflict behind us.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the clues\n  - (Optional) Obtain the virus clue"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +18,000 EXP\n- 150,000 Roubles\n  - 157,500 Roubles with Intelligence Center Level 1\n  - 172,500 Roubles with Intelligence Center Level 2\n- 1× RDA-78 vaccine (Replicative DNA Attenuator)\n- 2× TG-Vi-24 vaccine prototype (B.1.2 strain)\n- Unlocks barter for RDA-78 vaccine (Replicative DNA Attenuator) at Therapist LL1\n- Unlocks barter for SWORD International Mk-18 .338 LM marksman rifle at Jaeger LL1\n- Unlocks barter for T-7 Thermal Goggles with a Night Vision mount at Jaeger LL2\n- Unlocks barter for Kalashnikov PKP 7.62x54R infantry machine gun at Prapor LL1\n- Unlocks barter for RB-BK marked key at Prapor LL2\n- Unlocks barter for Trijicon REAP-IR thermal scope at Skier LL1\n- Unlocks barter for Weapon case at Skier LL2\n- Unlocks barter for BNTI Zhuk body armor (EMR) at Ragman LL1\n- Unlocks barter for Milkor M32A1 MSGL 40mm grenade launcher at Peacekeeper LL1\n- Unlocks barter for T H I C C item case at Peacekeeper LL2\n\"I've reviewed the materials. They confirm what was already becoming clear. Skier was certainly deceived, although he would do well to reflect on his own conduct. For now, however, working with him is the more practical option. I've managed to develop a working vaccine, but producing it requires far too many resources. For the time being, I can only manufacture limited batches alongside the prototype. It's too early to lift the quarantine. There won't be enough doses for everyone.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Folder with TerraGroup infection progression data | 1 | Required | N/A | Received from Skier |\nHand over the folder given by Skier in Halloween: Enemy of My Enemy."
+    }
+  ]
+}

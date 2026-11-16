@@ -1,8 +1,8 @@
 {
   "title": "Fall Ailment",
   "url": "https://escapefromtarkov.fandom.com/wiki/Fall_Ailment",
-  "revisionId": 361827,
-  "lastEdited": "2026-09-24T13:44:28Z",
+  "revisionId": 365416,
+  "lastEdited": "2026-10-27T23:50:20Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,7 +10,9 @@
   "redirects": [],
   "infobox": {
     "given by": "Therapist",
-    "LL requirement": "1"
+    "LL requirement": "1",
+    "LL quests": "4",
+    "previous": "First in Line, or, Operation Aquarius, or, Supply Plans"
   },
   "sections": [
     {

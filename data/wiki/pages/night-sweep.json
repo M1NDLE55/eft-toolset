@@ -1,8 +1,8 @@
 {
   "title": "Night Sweep",
   "url": "https://escapefromtarkov.fandom.com/wiki/Night_Sweep",
-  "revisionId": 362263,
-  "lastEdited": "2026-09-26T16:32:12Z",
+  "revisionId": 366150,
+  "lastEdited": "2026-10-29T03:36:07Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "given by": "Skier",
     "LL requirement": "4",
-    "reqkappa": "No"
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -32,7 +32,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- Skier Rep +1.5\n- 2,400 Euros\n  - 2,520 Euros with Intelligence Center Level 1\n  - 2,760 Euros with Intelligence Center Level 2\n- 1× CMMG Mk47 Mutant 7.62x39 assault rifle\n- 5× 7.62x39mm PP gzh ammo pack (20 pcs)\n- Unlocks purchase of CMMG Mk47 Mutant 7.62x39 assault rifle at Skier LL4\n- Unlocks purchase of Magpul MOE Carbine rubber buttpad at Skier LL4\n- +4 Search skill levels\n- +4 Stress Resistance skill levels\n\"Bloody hell... You got them all by yourself? You've got guts, that's for sure. Somethin' ain't right about those psychos, I'm tellin' you...\""
+      "text": "- +65,000 EXP\n- +4 Search skill levels\n- +4 Stress Resistance skill levels\n- Skier Rep +1.5\n- 2,400 Euros\n  - 2,520 Euros with Intelligence Center Level 1\n  - 2,760 Euros with Intelligence Center Level 2\n- 1× CMMG Mk47 Mutant 7.62x39 assault rifle\n- 5× 7.62x39mm PP gzh ammo pack (20 pcs)\n- Unlocks purchase of CMMG Mk47 Mutant 7.62x39 assault rifle at Skier LL4\n- Unlocks purchase of Magpul MOE Carbine rubber buttpad at Skier LL4\n\"Bloody hell... You got them all by yourself? You've got guts, that's for sure. Somethin' ain't right about those psychos, I'm tellin' you...\""
     },
     {
       "heading": "Guide",

@@ -1,8 +1,8 @@
 {
   "title": "A Difficult Choice",
   "url": "https://escapefromtarkov.fandom.com/wiki/A_Difficult_Choice",
-  "revisionId": 360914,
-  "lastEdited": "2026-09-20T15:37:45Z",
+  "revisionId": 365169,
+  "lastEdited": "2026-10-27T23:46:07Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,8 @@
   "redirects": [],
   "infobox": {
     "given by": "Therapist",
-    "related": "The Huntsman Path - Sadist",
-    "reqkappa": "No, but a subsequent quest Yes"
+    "previous": "Accept The Huntsman Path - Sadist",
+    "related": "The Huntsman Path - Sadist"
   },
   "sections": [
     {
@@ -23,11 +23,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Young man, wait. I knew that Jaeger would ask you to kill Sanitar, but you don't have to do it. I understand Jaeger's point of view, that he's just some kind of monster in the flesh, but he is not. I'm sure Sanitar is just trying to help the locals. Given the current circumstances, he performs the most complex surgeries and it is not surprising that they often end badly. He is a doctor with the most valuable knowledge that can save many more lives. A doctor with access to a warehouse of medicines that are extremely important to us. And he has already entered into negotiations with me and will soon begin to cooperate. But for this, I need something that will interest him and I think I know what will: the Laboratory. Access keys and samples of military stimulants, I think they are the basis on which he conducts his experiments. Can you find them for me? You can get the access keycards however you want, but the stimulants must be sealed, so you need to find them yourself.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must accept Jaeger's quest The Huntsman Path - Sadist to obtain this quest."
     },
     {
       "heading": "Objectives",

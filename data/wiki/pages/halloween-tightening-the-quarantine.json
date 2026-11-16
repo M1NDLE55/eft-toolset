@@ -1,0 +1,79 @@
+{
+  "title": "Halloween: Tightening the Quarantine",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_Tightening_the_Quarantine",
+  "revisionId": 366979,
+  "lastEdited": "2026-11-01T23:07:21Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "previous": "Accept Halloween: A New Vaccine, Halloween: Unexpected Help (+15-60 mins)",
+    "leads to": "Halloween: Danger Zone",
+    "related": "Halloween: A New Vaccine"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: Tightening the Quarantine is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Skier questline exclusive",
+      "level": 4,
+      "text": "\"Well, fuck me. It's all gone tits up. Since that vaccine went out, people have been dropping like flies even faster. The infected turn feral in no time, and they take one hell of a lot to put down. My suppliers have vanished off the bloody map and left me holding the bag! And who's getting the blame? Yours fucking truly. That old cow Therapist has already blabbed to half of Tarkov about who got the vaccine and handed it out. So now we've got to clean up this shit ourselves, especially since you're in it up to your neck as well. It's not like I was the one who brought the vaccine here! We put down the infected and keep the clean areas under quarantine. And make your mind up whose side you're on. If you go helping Therapist, don't come crawling back to me. I don't keep rats around. Here's what I need from you now: round up whatever medical supplies you can find. I'll hand them out to my lads in case things go sideways.\""
+    },
+    {
+      "heading": "Therapist questline exclusive",
+      "level": 4,
+      "text": "\"Fucking finally. I got my hands on the vaccine you decided to drag over to Therapist like the fucking turncoat you are. Had a feeling something stank about the whole thing, didn't ya? Since that vaccine went out, people have been dropping like flies even faster. The infected turn feral in no time, and they take one hell of a lot to put down. And my suppliers have done a runner, leaving me high and dry! Now I'm the one taking all the bloody blame. That old bitch Therapist has already blabbed to half of Tarkov about who got the vaccine and handed it out. So now we have to clean up this mess. Kill the infected and keep the clean areas under quarantine. I've already talked to the right people, and we've reached a deal. Nobody wants to die, and everyone needs protection from these fucking zombies. I'll cut you in, seeing as you're helping me. But decide right now whose side you're on. If you keep helping Therapist, don't bother coming back to me. I don't keep rats around. Here's what I need you to do: collect all kinds of medical supplies for me. I'll hand them out to my boys in case something happens.\""
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "text": "- This quest gets automatically added to the quest list upon accepting Halloween: A New Vaccine."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Skier questline exclusive",
+      "level": 4,
+      "text": "- Hand over the found in raid item: 5 Any that can remove heavy bleeding\n- Hand over the found in raid item: 2 Any medical balm\n- Hand over the found in raid item: 2 Any surgical kit"
+    },
+    {
+      "heading": "Therapist questline exclusive",
+      "level": 4,
+      "text": "- Hand over the found in raid item: 7 Any that can remove heavy bleeding\n- Hand over the found in raid item: 3 Any medical balm\n- Hand over the found in raid item: 3 Any surgical kit"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": ""
+    },
+    {
+      "heading": "Skier questline exclusive",
+      "level": 4,
+      "text": "- +48,000 EXP\n- 1,800 Euros\n  - 1,890 Euros with Intelligence Center Level 1\n  - 2,070 Euros with Intelligence Center Level 2\n- 1× Kalashnikov AK-12 5.45x39 assault rifle\n- 3× AK-12 5.45x39 early model 30-round magazine\n- 1× 5.45x39mm 7N40 ammo pack (120 pcs)\n\"You made the right call, mate. No point running errands for Therapist.\""
+    },
+    {
+      "heading": "Therapist questline exclusive",
+      "level": 4,
+      "text": "- +48,000 EXP\n- 2,700 Euros\n  - 2,835 Euros with Intelligence Center Level 1\n  - 3,105 Euros with Intelligence Center Level 2\n- 1× Money case\n\"You made the right call, mate. No point running errands for Therapist.\""
+    },
+    {
+      "heading": "Failure Dialogue",
+      "level": 2,
+      "text": "\"So you've decided to crawl under that c***'s wing after all? Then piss off, you little rat.\""
+    }
+  ]
+}

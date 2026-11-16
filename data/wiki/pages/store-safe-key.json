@@ -1,8 +1,8 @@
 {
   "title": "Store safe key",
   "url": "https://escapefromtarkov.fandom.com/wiki/Store_safe_key",
-  "revisionId": 332301,
-  "lastEdited": "2026-01-14T01:39:06Z",
+  "revisionId": 363983,
+  "lastEdited": "2026-10-12T13:28:21Z",
   "kind": "key",
   "categories": [
     "Keys"
@@ -19,7 +19,7 @@
     "storage_sicc": "Yes",
     "storage_securecont": "Yes",
     "node": "5a0f075686f7745bcc42ee12",
-    "ID": "Сейф Побережье Магазин"
+    "ID": "Safe Coast Store"
   },
   "sections": [
     {

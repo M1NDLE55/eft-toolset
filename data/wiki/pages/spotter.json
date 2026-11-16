@@ -1,8 +1,8 @@
 {
   "title": "Spotter",
   "url": "https://escapefromtarkov.fandom.com/wiki/Spotter",
-  "revisionId": 359692,
-  "lastEdited": "2026-09-13T20:20:31Z",
+  "revisionId": 365836,
+  "lastEdited": "2026-10-27T23:57:31Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -34,12 +34,12 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Locate a good sniping position in Concordia overlooking the construction site\n- Hide AI .338 LM Tactical Sound Moderator near the red table\n- Locate a good sniping position at Primorsky overlooking the movie theater\n- Hide Trijicon REAP-IR thermal scope under Makhors' bed\n- Survive and extract from the location"
+      "text": "- Locate a good sniping position in Concordia overlooking the construction site\n- Hide AI .338 LM Tactical Sound Moderator near the red table\n- Locate a good sniping position at Primorsky overlooking the movie theater\n- Hide Trijicon REAP-IR thermal scope under Makhors' bed"
     },
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- Lightkeeper Rep +0.04\n- 1× Microcontroller board\n- Unlocks craft for Microcontroller board at Workbench level 3\n\"All the equipment is in place, over... Okay, mercenary, you're going to have to work hard for the next part.\""
+      "text": "- Lightkeeper Rep +0.04\n- 1× Microcontroller board\n- 1× Substation marked key\n- Unlocks craft for Microcontroller board at Workbench level 3\n\"All the equipment is in place, over... Okay, mercenary, you're going to have to work hard for the next part.\""
     },
     {
       "heading": "Guide",

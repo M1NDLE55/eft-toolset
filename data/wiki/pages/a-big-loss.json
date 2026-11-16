@@ -1,8 +1,8 @@
 {
   "title": "A Big Loss",
   "url": "https://escapefromtarkov.fandom.com/wiki/A_Big_Loss",
-  "revisionId": 359037,
-  "lastEdited": "2026-09-13T20:09:22Z",
+  "revisionId": 365167,
+  "lastEdited": "2026-10-27T23:46:05Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "location": "Interchange",
     "given by": "Ragman",
+    "LL requirement": "1",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -27,7 +28,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Obtain the OLI cargo route documents on Interchange\n- Hand over the documents to Ragman"
+      "text": "- Locate and obtain the OLI cargo route documents on Interchange\n- Hand over the documents to Ragman"
     },
     {
       "heading": "Rewards",

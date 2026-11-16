@@ -1,8 +1,8 @@
 {
   "title": "Disease History",
   "url": "https://escapefromtarkov.fandom.com/wiki/Disease_History",
-  "revisionId": 361708,
-  "lastEdited": "2026-09-24T12:19:07Z",
+  "revisionId": 367752,
+  "lastEdited": "2026-11-09T00:46:50Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,10 +11,10 @@
     "Disease history"
   ],
   "infobox": {
-    "location": "Reserve",
     "given by": "Therapist",
+    "location": "Reserve",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {
@@ -35,7 +35,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,00 EXP\n- Therapist Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Ophthalmoscope\n\"Did you manage to find them? Thank you very much. Of course, these documents will be used only for the good of humanity, you can trust me.\""
+      "text": "- +28,000 EXP\n- Therapist Rep +0.75\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 1× Ophthalmoscope\n\"Did you manage to find them? Thank you very much. Of course, these documents will be used only for the good of humanity, you can trust me.\""
     },
     {
       "heading": "Guide",

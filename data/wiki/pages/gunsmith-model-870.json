@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - Model 870",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_Model_870",
-  "revisionId": 357642,
-  "lastEdited": "2026-09-04T22:10:05Z",
+  "revisionId": 364370,
+  "lastEdited": "2026-10-13T15:29:15Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,6 +12,7 @@
   ],
   "infobox": {
     "given by": "Mechanic",
+    "LL requirement": "2",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -23,12 +24,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"Just when I finally sorted out the stable Internet connection and power supply for it, the Government stepped up the game and started blocking half the IP addresses that handled most of the data flow in Tarkov. All that because TerraGroup allegedly uses \"Ebambium\" ISP to further destabilize the situation in the city and wreak havoc. Sounds like some gibberish about the Ragnarok coming, don't you think? By the way about gibberish and weapons — some weirdo with a lightning symbol tattooed on his face asked for a Remington 870 shotgun. Equipped with a tactical device, Magpul MOE handguard, and a tactical foregrip. Ergonomics above 60 and recoil sum less than 500.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 10 to start this quest."
+      "text": "\"Hello. Right on time, as always. I've got a job for you. A fellow stopped by not long ago with a lightning bolt symbol tattooed across his face. Nervous type, kept looking over his shoulder. At first I thought he was bringing trouble to my doorstep, but it turned out to be nothing. That's just... the way he is. He asked me to modify a Remington Model 870 with a laser device, a Magpul MOE handguard, and a tactical foregrip. It needs ergonomics at or above 60 and combined recoil below 500. He practically begged me to hurry, said someone was after him. Think you can handle it?\""
     },
     {
       "heading": "Objectives",
@@ -38,7 +34,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +4,100 EXP\n- Mechanic Rep +0.01\n- 300 Dollars\n  - 315 Dollars with Intelligence Center Level 1\n  - 345 Dollars Intelligence Center Level 2\n- 3× Weapon parts\n\"Great gun, a solid build.\""
+      "text": "- +10,000 EXP\n- Mechanic Rep +0.25\n- 165,000 Roubles\n  - 173,250 Roubles with Intelligence Center Level 1\n  - 189,750 Roubles with Intelligence Center Level 2\n- Unlocks purchase of Tromix Monster Claw 12ga muzzle brake at Mechanic LL3\n- Unlocks purchase of Kalashnikov AK-104 7.62x39 assault rifle (variant RPKT mod.1) at Ref LL2\n\"Turned out to be a fine shotgun. I'll pass it along to the client. Here's your payment. He paid in advance.\""
     },
     {
       "heading": "Guide",

@@ -1,8 +1,8 @@
 {
   "title": "Make an Impression",
   "url": "https://escapefromtarkov.fandom.com/wiki/Make_an_Impression",
-  "revisionId": 360198,
-  "lastEdited": "2026-09-15T08:27:23Z",
+  "revisionId": 366841,
+  "lastEdited": "2026-11-01T11:07:05Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -38,12 +38,12 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- Lightkeeper Rep +0.04\n- 2× Phased array element\n- Unlocks the Lightkeeper service \"Zryachiy support\"\n\"We've been watching you. My shooter gave the go-ahead. That's all for now. I'll let you know when the time comes.\""
+      "text": "- Lightkeeper Rep +0.04\n- 2× Phased array element\n- 1× Substation marked key\n- 1× Lighthouse island stash key\n- Unlocks the Lightkeeper service \"Zryachiy support\"\n\"We've been watching you. My shooter gave the go-ahead. That's all for now. I'll let you know when the time comes.\""
     },
     {
       "heading": "Guide",
       "level": 2,
-      "text": "In this quest you have to kill 10 sniper Scavs from over 200 meters away, and reach level 10 in the bolt-action rifles skill. The Vortex Ranger 1500 rangefinder or the Wilcox RAPTAR ES Tactical Rangefinder can be used to determine the required distance."
+      "text": "In this quest you have to kill 10 snipers from the Scavs faction from over 200 meters away, and reach level 10 in the bolt-action rifles skill. The Vortex Ranger 1500 rangefinder or the Wilcox RAPTAR ES Tactical Rangefinder can be used to determine the required distance.\n\nAside from regular sniper Scavs, the following enemies also count:\n- Shturman\n- Shturman's followers\n- Glukhar's scout followers\n- Kaban's snipers"
     }
   ]
 }

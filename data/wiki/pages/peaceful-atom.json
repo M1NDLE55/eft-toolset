@@ -1,19 +1,18 @@
 {
   "title": "Peaceful Atom",
   "url": "https://escapefromtarkov.fandom.com/wiki/Peaceful_Atom",
-  "revisionId": 359551,
-  "lastEdited": "2026-09-13T20:18:07Z",
+  "revisionId": 367841,
+  "lastEdited": "2026-11-11T13:57:24Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Icebreaker",
     "given by": "Peacekeeper",
+    "location": "Icebreaker",
     "previous": "Oil Change",
-    "leads to": "Wiring the Vessel",
-    "reqkappa": "No"
+    "leads to": "Wiring the Vessel"
   },
   "sections": [
     {

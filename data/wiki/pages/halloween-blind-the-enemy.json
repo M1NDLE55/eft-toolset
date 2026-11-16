@@ -1,0 +1,68 @@
+{
+  "title": "Halloween: Blind the Enemy",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Halloween:_Blind_the_Enemy",
+  "revisionId": 367052,
+  "lastEdited": "2026-11-02T21:13:05Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Skier",
+    "location": "Woods, Customs, Lighthouse, Reserve, Shoreline",
+    "previous": "Halloween: Enemy of My Enemy"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Halloween: Blind the Enemy is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Well, looks like Therapist's vaccine actually works, but it ain't much use if there's not enough to go around. So we're keeping the quarantine in place, and personally, I'd tighten the screws even more. Better to stop someone unnecessarily than have to clean up all of Tarkov again. But we've got a more pressing job now. TerraGroup have been watching us this whole time and leaking data through their transmitters. Those are what we need to shut down. Find the equipment and smash the lot to bits. I'm sick of being a lab rat for those c***s. And one more thing: bring me some of Therapist's RDA-78 vaccine. For my lads, and, well, a few others too.\""
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Hand over the RDA-78 vaccine\n- Destroy 2 cameras at the train depot on Woods\n- Destroy 3 cameras at the dorms on Customs\n- Destroy 3 cameras at the water treatment plant on Lighthouse\n- Destroy 3 cameras at the train depot on Reserve\n- Destroy 3 cameras at the Health Resort on Shoreline"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +60,000 EXP\n- 4,000 Euros\n  - 4,200 Euros with Intelligence Center Level 1\n  - 4,600 Euros with Intelligence Center Level 2\n- 1× Weapon case\n- Unlocks achievement Shields Up!\n\"The quarantine's holding, the vaccine works, and the infection's slowly backing off. But TerraGroup have already got what they wanted: tested a new strain, watched how we reacted, recorded the lot and walked off with the data. Fuckers played us all along.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "| Item name | Amount | Requirement | Find in raid |\n| RDA-78 vaccine (Replicative DNA Attenuator) | 1 | Handover item | No |"
+    },
+    {
+      "heading": "Woods",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Customs",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Lighthouse",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Reserve",
+      "level": 4,
+      "text": ""
+    },
+    {
+      "heading": "Shoreline",
+      "level": 4,
+      "text": ""
+    }
+  ]
+}

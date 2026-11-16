@@ -1,8 +1,8 @@
 {
   "title": "The Survivalist Path - Tough Guy",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Tough_Guy",
-  "revisionId": 359790,
-  "lastEdited": "2026-09-13T20:22:08Z",
+  "revisionId": 365932,
+  "lastEdited": "2026-10-27T23:59:15Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -14,7 +14,7 @@
     "location": "Woods",
     "given by": "Jaeger",
     "previous": "The Survivalist Path - Wounded Beast",
-    "leads to": "Courtesy Visit, The Hermit, The Survivalist Path - Eagle-Owl, The Huntsman Path - Secured Perimeter",
+    "leads to": "The Huntsman Path - Controller",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -26,7 +26,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"You know, in combat - as in hunting, there are only two behaviors. You are either a hunter or prey. And since you intend to become a real hunter, you must learn to track prey without exposing yourself.\""
+      "text": "\"You know, in combat - as in hunting, there are only two behavior models. You are either a hunter or prey. And since you intend to become a real hunter, you must learn to track prey without exposing yourself.\""
     },
     {
       "heading": "Objectives",
@@ -36,7 +36,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +7,000 EXP\n- +1 Perception skill level\n- Jaeger Rep +0.02\n- 40,000 Roubles\n  - 42,000 Roubles with Intelligence Center Level 1\n  - 46,000 Roubles with Intelligence Center Level 2\n\n- 1× CMS surgical kit\n- 3× Pile of meds\n\"Successful? Great! Sweat saves the blood! Don't get too ecstatic now, there are some more tasks for you.\""
+      "text": "- +28,000 EXP\n- 3× CMS surgical kit\n- 3× Pile of meds\n- Unlocks purchase of Surv12 field surgical kit at Jaeger LL3\n\"Successful? Great! Sweat saves the blood! Don't get too ecstatic now, there are some more tasks for you.\""
     },
     {
       "heading": "Failure Dialogue",

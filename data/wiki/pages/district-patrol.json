@@ -1,18 +1,17 @@
 {
   "title": "District Patrol",
   "url": "https://escapefromtarkov.fandom.com/wiki/District_Patrol",
-  "revisionId": 361759,
-  "lastEdited": "2026-09-24T12:33:32Z",
+  "revisionId": 367700,
+  "lastEdited": "2026-11-08T23:51:44Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Prapor",
-    "LL requirement": "2",
-    "reqkappa": "No"
+    "location": "Streets of Tarkov",
+    "LL requirement": "2"
   },
   "sections": [
     {
@@ -28,7 +27,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate any 20 any target using Assault rifles or Assault carbines on Streets of Tarkov"
+      "text": "- Eliminate any 20 targets using Assault rifles or Assault carbines on Streets of Tarkov"
     },
     {
       "heading": "Rewards",

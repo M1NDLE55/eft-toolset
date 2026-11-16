@@ -1,18 +1,18 @@
 {
   "title": "A Healthy Alternative",
   "url": "https://escapefromtarkov.fandom.com/wiki/A_Healthy_Alternative",
-  "revisionId": 361791,
-  "lastEdited": "2026-09-24T13:10:08Z",
+  "revisionId": 365172,
+  "lastEdited": "2026-10-27T23:46:11Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Factory",
     "given by": "Therapist",
-    "related": "One Less Loose End",
-    "reqkappa": "No, but a subsequent quest Yes"
+    "location": "Factory",
+    "previous": "Accept One Less Loose End",
+    "related": "One Less Loose End"
   },
   "sections": [
     {

@@ -1,8 +1,8 @@
 {
   "title": "Cut Down to the Root",
   "url": "https://escapefromtarkov.fandom.com/wiki/Cut_Down_to_the_Root",
-  "revisionId": 362104,
-  "lastEdited": "2026-09-24T19:49:18Z",
+  "revisionId": 366659,
+  "lastEdited": "2026-10-31T12:40:22Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "location": "Lighthouse",
     "given by": "Jaeger",
-    "previous": "Callsign Malachite",
+    "previous": "Scope the Clearing",
     "related": "Preserve a Valuable Piece",
     "reqkappa": "No"
   },

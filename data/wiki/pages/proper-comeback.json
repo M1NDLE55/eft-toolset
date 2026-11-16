@@ -1,19 +1,18 @@
 {
   "title": "Proper Comeback",
   "url": "https://escapefromtarkov.fandom.com/wiki/Proper_Comeback",
-  "revisionId": 362435,
-  "lastEdited": "2026-09-29T14:33:10Z",
+  "revisionId": 367420,
+  "lastEdited": "2026-11-03T13:29:39Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods, Shoreline, Factory",
     "given by": "Skier",
+    "location": "Woods, Shoreline, Factory",
     "previous": "Camera, Action!",
-    "leads to": "Key to the City",
-    "reqkappa": "No"
+    "leads to": "Key to the City"
   },
   "sections": [
     {

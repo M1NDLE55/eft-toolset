@@ -1,8 +1,8 @@
 {
   "title": "Insomnia",
   "url": "https://escapefromtarkov.fandom.com/wiki/Insomnia",
-  "revisionId": 359421,
-  "lastEdited": "2026-09-13T20:15:53Z",
+  "revisionId": 367472,
+  "lastEdited": "2026-11-03T14:51:15Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,7 +10,9 @@
   "redirects": [],
   "infobox": {
     "given by": "Peacekeeper",
-    "reqkappa": "Yes"
+    "location": "Ground Zero, Lighthouse, Reserve, Shoreline, Streets of Tarkov",
+    "LL requirement": "4",
+    "LL quests": "3"
   },
   "sections": [
     {
@@ -26,7 +28,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- This quest is only obtainable by BEAR PMCs.\n- Must reach Loyalty Level 4 with Peacekeeper to obtain this quest."
+      "text": "- This quest is only obtainable by BEAR PMCs."
     },
     {
       "heading": "Objectives",
@@ -36,10 +38,10 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- Peacekeeper Rep +1.5\n- Dollars\n  - Dollars with Intelligence Center Level 1\n  - 3,368 Dollars with Intelligence Center Level 2\n- 1× CENS ProFlex DX5 tactical earplug\n- Unlocks purchase of CENS ProFlex DX5 tactical earplug at Peacekeeper LL4\n- Unlocks barter for SAPI level III+ ballistic plate at Peacekeeper LL4\n- +2 Levels for Aim Drills\n- +4 levels for Submachine Guns\n\"Good work, my friend! Everything went according to the plan.\""
+      "text": "- +65,000 EXP\n- +2 Aim Drills skill levels\n- +4 Submachine Guns skill levels\n- Peacekeeper Rep +1.5\n- 2,750 Dollars\n  - 2,888 Dollars with Intelligence Center Level 1\n  - 3,162 Dollars with Intelligence Center Level 2\n- 4× AFAK tactical individual first aid kit\n- 1× CENS ProFlex DX5 tactical earplug\n- Unlocks purchase of AFAK tactical individual first aid kit at Peacekeeper LL4\n- Unlocks purchase of CENS ProFlex DX5 tactical earplug at Peacekeeper LL4\n- Unlocks barter for SAPI level III+ ballistic plate at Peacekeeper LL4\n\"Good work, my friend! Everything went according to the plan.\""
     },
     {
-      "heading": "See Also",
+      "heading": "See also",
       "level": 2,
       "text": "- Counteraction - The USEC counterpart quest"
     }

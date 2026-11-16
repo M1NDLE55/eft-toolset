@@ -1,8 +1,8 @@
 {
   "title": "Informed Means Armed",
   "url": "https://escapefromtarkov.fandom.com/wiki/Informed_Means_Armed",
-  "revisionId": 362242,
-  "lastEdited": "2026-09-26T15:44:11Z",
+  "revisionId": 367732,
+  "lastEdited": "2026-11-09T00:36:22Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,10 +11,11 @@
     "Informed means armed"
   ],
   "infobox": {
-    "location": "Interchange, Woods",
     "given by": "Skier",
+    "location": "Interchange, Woods",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "1",
+    "previous": "Burning Rubber, or, Supplier"
   },
   "sections": [
     {
@@ -35,7 +36,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- 3,000 EXP\n- Skier Rep +0.1\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 517 Euros Intelligence Center Level 2\n\"All this tech shit is clearly not for me, the picture is hazed and the signal is shit, but I've already spotted some \"fat rats\" while you were setting the last cams up. Thanks, huge help!\""
+      "text": "- +3,000 EXP\n- Skier Rep +0.1\n- 450 Euros\n  - 472 Euros with Intelligence Center Level 1\n  - 517 Euros with Intelligence Center Level 2\n\"All this tech shit is clearly not for me, the picture is hazed and the signal is shit, but I've already spotted some \"fat rats\" while you were setting the last cams up. Thanks, huge help!\""
     },
     {
       "heading": "Initial Equipment",

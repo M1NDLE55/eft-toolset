@@ -1,16 +1,17 @@
 {
   "title": "Demonstration Model",
   "url": "https://escapefromtarkov.fandom.com/wiki/Demonstration_Model",
-  "revisionId": 359225,
-  "lastEdited": "2026-09-13T20:12:33Z",
+  "revisionId": 367844,
+  "lastEdited": "2026-11-11T14:00:33Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
+    "given by": "Peacekeeper",
     "location": "Reserve",
-    "given by": "Peacekeeper"
+    "LL requirement": "3"
   },
   "sections": [
     {
@@ -22,11 +23,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Good day, mercenary. You arrived just in time. Some of my partners would like us to test the weapons before purchasing them. They require a demonstration. Take 7.62x51 assault rifles and designated marksman rifles and head to Reserve. There has been some suspicious activity reported there recently... Let us combine business with pleasure.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 3 with Peacekeeper to obtain this quest."
     },
     {
       "heading": "Objectives",

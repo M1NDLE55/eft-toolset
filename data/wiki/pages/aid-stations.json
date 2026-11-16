@@ -1,8 +1,8 @@
 {
   "title": "Aid Stations",
   "url": "https://escapefromtarkov.fandom.com/wiki/Aid_Stations",
-  "revisionId": 361704,
-  "lastEdited": "2026-09-24T12:15:15Z",
+  "revisionId": 365196,
+  "lastEdited": "2026-10-27T23:46:35Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Therapist",
-    "LL requirement": "2",
-    "reqkappa": "No"
+    "LL requirement": "2"
   },
   "sections": [
     {

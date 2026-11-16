@@ -1,17 +1,17 @@
 {
   "title": "Tracker",
   "url": "https://escapefromtarkov.fandom.com/wiki/Tracker",
-  "revisionId": 359857,
-  "lastEdited": "2026-09-13T20:23:15Z",
+  "revisionId": 367457,
+  "lastEdited": "2026-11-03T14:34:03Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Peacekeeper",
-    "reqkappa": "Yes"
+    "location": "Shoreline",
+    "LL requirement": "3"
   },
   "sections": [
     {
@@ -23,11 +23,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hello, my friend! I have a task for you. My men found some information about a TerraGroup shipment. According to the documents, it contains two parts. One is somewhere on the first floor of the east wing of the Health Resort, and the second is in the basement of the west wing. My men are currently occupied with other matters, so there is no one available to go there. So, go there and find both parts of the shipment.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must reach Loyalty Level 3 with Peacekeeper to obtain this quest."
     },
     {
       "heading": "Objectives",

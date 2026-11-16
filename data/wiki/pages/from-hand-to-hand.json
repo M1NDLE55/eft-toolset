@@ -1,18 +1,18 @@
 {
   "title": "From Hand to Hand",
   "url": "https://escapefromtarkov.fandom.com/wiki/From_Hand_to_Hand",
-  "revisionId": 362414,
-  "lastEdited": "2026-09-29T13:41:42Z",
+  "revisionId": 367413,
+  "lastEdited": "2026-11-03T13:16:58Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Skier",
+    "location": "Lighthouse",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {

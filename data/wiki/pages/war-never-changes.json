@@ -1,18 +1,17 @@
 {
   "title": "War Never Changes",
   "url": "https://escapefromtarkov.fandom.com/wiki/War_Never_Changes",
-  "revisionId": 359874,
-  "lastEdited": "2026-09-13T20:23:33Z",
+  "revisionId": 366015,
+  "lastEdited": "2026-10-28T00:00:46Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Icebreaker",
     "given by": "Therapist",
-    "leads to": "Biochemistry",
-    "reqkappa": "No"
+    "location": "Icebreaker",
+    "leads to": "Biochemistry"
   },
   "sections": [
     {

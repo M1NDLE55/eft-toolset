@@ -1,8 +1,8 @@
 {
   "title": "Ice Cream Cones",
   "url": "https://escapefromtarkov.fandom.com/wiki/Ice_Cream_Cones",
-  "revisionId": 361726,
-  "lastEdited": "2026-09-24T12:25:46Z",
+  "revisionId": 365543,
+  "lastEdited": "2026-10-27T23:52:29Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,8 +13,7 @@
   ],
   "infobox": {
     "given by": "Prapor",
-    "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL requirement": "2"
   },
   "sections": [
     {
@@ -45,7 +44,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| AK-74 5.45x39 6L31 60-round magazine | 3 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 1). |\n\nThe locked ZB-014 bunker on Woods mentioned by Prapor does not have a guaranteed or increased spawn chance for the wanted magazines.\n\nObtaining them from weapon boxes, green wooden crates or bosses and their guards, for example Sanitar is usually way more reliable."
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| AK-74 5.45x39 6L31 60-round magazine | 3 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 1). |\n| ZB-014 key | 1 | Optional | N/A | Unlocks the ZB-014 bunker on Woods. |\n\nThe locked section of the ZB-014 bunker on Woods mentioned by Prapor does not have a guaranteed chance for the wanted magazines, but they can be found there quite often. A ZB-014 key is required to enter it.\n\nThey can also be obtained from weapon boxes, green wooden crates or bosses and their guards, for example Sanitar."
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "title": "Health Care Privacy - Part 5",
   "url": "https://escapefromtarkov.fandom.com/wiki/Health_Care_Privacy_-_Part_5",
-  "revisionId": 360901,
-  "lastEdited": "2026-09-20T14:55:35Z",
+  "revisionId": 365509,
+  "lastEdited": "2026-10-27T23:51:54Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,13 +11,10 @@
     "Health Care Privacy. Part 5"
   ],
   "infobox": {
-    "location": "Nighttime Factory",
     "given by": "Therapist",
-    "time limit": "None",
-    "quest number": "14",
+    "location": "Nighttime Factory",
     "previous": "Health Care Privacy - Part 4",
-    "leads to": "Health Care Privacy - Part 6",
-    "reqkappa": "Yes"
+    "leads to": "Health Care Privacy - Part 6"
   },
   "sections": [
     {
@@ -38,7 +35,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,00 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 3× IFAK individual first aid kit\n- Unlocks purchase for IFAK individual first aid kit at Therapist LL3\n\"Nicely done, Mechanic has received the propellant. Thank you.\""
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 3× IFAK individual first aid kit\n- Unlocks purchase of IFAK individual first aid kit at Therapist LL3\n\"Nicely done, Mechanic has received the propellant. Thank you.\""
     },
     {
       "heading": "Guide",

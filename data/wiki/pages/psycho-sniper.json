@@ -1,8 +1,8 @@
 {
   "title": "Psycho Sniper",
   "url": "https://escapefromtarkov.fandom.com/wiki/Psycho_Sniper",
-  "revisionId": 359593,
-  "lastEdited": "2026-09-13T20:18:50Z",
+  "revisionId": 367750,
+  "lastEdited": "2026-11-09T00:46:40Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,7 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Mechanic",
-    "previous": "Wet Job - Part 6",
+    "LL requirement": "4",
     "reqkappa": "Yes"
   },
   "sections": [
@@ -25,11 +25,6 @@
       "text": "\"Hello, mercenary. I had an acquaintance named Dima. He worked as a sniper in many hot zones. Once he told me: \"Anyone can pull a trigger, but only a few can become a true Sniper\". Even if that's true, knowing how to work with bolt-action rifles won't hurt in Tarkov. And I don't mind encouraging you to develop that skill. Take out your opponents, and I'll reward you for it.\""
     },
     {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 27 to start this quest.\n- Must reach Loyalty Level 4 with Mechanic to obtain this quest."
-    },
-    {
       "heading": "Objectives",
       "level": 2,
       "text": "- Eliminate any 15 targets without dying while using a bolt-action rifle"
@@ -37,7 +32,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- +4 Bolt-action Rifles skill levels\n- +4 Troubleshooting skill levels\n- Mechanic Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks purchase of 4.6x30mm FMJ SX at Mechanic LL4\n- 3x 4.6x30mm FMJ SX ammo pack (40 pcs)\n\"Frankly speaking, i wasn't sure you could do it. But it sure seems that you're no regular pleb.\""
+      "text": "- +65,000 EXP\n- +4 Bolt-action Rifles skill levels\n- +4 Troubleshooting skill levels\n- Mechanic Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks purchase of 4.6x30mm FMJ SX at Mechanic LL4\n- 3× 4.6x30mm FMJ SX ammo pack (40 pcs)\n\"Honestly, I even started to doubt my own idea a little, but you handled everything. Here's the reward I promised.\""
     },
     {
       "heading": "Failure Dialogue",

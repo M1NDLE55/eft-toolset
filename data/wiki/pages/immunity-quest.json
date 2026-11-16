@@ -1,8 +1,8 @@
 {
   "title": "Immunity (quest)",
   "url": "https://escapefromtarkov.fandom.com/wiki/Immunity_(quest)",
-  "revisionId": 359410,
-  "lastEdited": "2026-09-13T20:15:42Z",
+  "revisionId": 366061,
+  "lastEdited": "2026-10-28T00:51:00Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Fence",
     "previous": "Friend Among Strangers",
-    "leads to": "Small Business - Part 1",
-    "reqkappa": "No"
+    "leads to": "Small Business - Part 1"
   },
   "sections": [
     {

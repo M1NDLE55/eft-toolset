@@ -1,8 +1,8 @@
 {
   "title": "Profitable Venture",
   "url": "https://escapefromtarkov.fandom.com/wiki/Profitable_Venture",
-  "revisionId": 362555,
-  "lastEdited": "2026-09-29T19:02:26Z",
+  "revisionId": 367431,
+  "lastEdited": "2026-11-03T13:58:43Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Skier",
     "LL requirement": "4",
-    "leads to": "Never Too Late To Learn",
-    "reqkappa": "No"
+    "leads to": "Never Too Late To Learn"
   },
   "sections": [
     {

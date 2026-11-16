@@ -1,8 +1,8 @@
 {
   "title": "Stress Resistance",
   "url": "https://escapefromtarkov.fandom.com/wiki/Stress_Resistance",
-  "revisionId": 362596,
-  "lastEdited": "2026-09-29T19:49:35Z",
+  "revisionId": 364434,
+  "lastEdited": "2026-10-13T21:51:32Z",
   "kind": "skill",
   "categories": [
     "Physical skills"
@@ -35,12 +35,7 @@
     {
       "heading": "How to raise",
       "level": 2,
-      "text": "- 0.033 points/sec for being low on health points\n- 0.33 points for each \"Pain\" debuff\n- Completing the quest Profitable Venture\n- Completing the quest Bullshit\n- Completing the quest Safety Guarantee\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention\n- Completing the quest The Guide\n- Completing the quest Night Sweep\n- Completing the quest TerraGroup Employee"
-    },
-    {
-      "heading": "Tips",
-      "level": 2,
-      "text": "Stress resistance can be power leveled by throwing grenades in enclosed objects like crates with an open top and staying nearby, to get consussed + the pain effect but not suffer lethal damage."
+      "text": "- 0.033 points/sec while having <130 health\n- 0.33 points for getting a \"Pain\" status effect\n- Completing the quest Profitable Venture\n- Completing the quest Bullshit\n- Completing the quest Safety Guarantee\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention\n- Completing the quest The Guide\n- Completing the quest Night Sweep\n- Completing the quest TerraGroup Employee"
     }
   ]
 }

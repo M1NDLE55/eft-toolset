@@ -1,18 +1,17 @@
 {
   "title": "Small Business - Part 3",
   "url": "https://escapefromtarkov.fandom.com/wiki/Small_Business_-_Part_3",
-  "revisionId": 359682,
-  "lastEdited": "2026-09-13T20:20:21Z",
+  "revisionId": 366064,
+  "lastEdited": "2026-10-28T00:53:28Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline, Woods",
     "given by": "Fence",
-    "previous": "Small Business - Part 2",
-    "reqkappa": "No"
+    "location": "Shoreline, Woods",
+    "previous": "Small Business - Part 2"
   },
   "sections": [
     {
