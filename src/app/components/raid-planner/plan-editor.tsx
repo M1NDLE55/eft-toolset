@@ -43,7 +43,7 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
   const toolbarPrefs = useToolbarPrefs();
 
   const plan = draft ?? storedPlan;
-  const layerGroups = useMemo(() => (details ? getLayerGroups(details) : null), [details]);
+  const layerGroups = useMemo(() => (details ? getLayerGroups(details, config) : null), [details, config]);
   const enabledSet = useMemo(() => new Set(plan.enabledLayers), [plan.enabledLayers]);
   const selectedNote = plan.notes.find((note) => note.id === selectedNoteId) ?? null;
 

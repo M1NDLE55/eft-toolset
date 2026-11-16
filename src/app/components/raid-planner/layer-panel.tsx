@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useId, useState, useSyncExternalStore } from "react";
 import { Check, Layers, LoaderCircle, X } from "lucide-react";
 import type { LayerGroupOptions } from "@/app/lib/raid-planner/layer-options";
 import { cn } from "@/lib/utils";
@@ -13,11 +13,48 @@ interface LayerPanelProps {
   loading: boolean;
   error: boolean;
   onRetry: () => void;
+  /** Start open on wide screens, where the panel leaves most of the map visible. */
+  openOnWideScreens?: boolean;
 }
 
-export function LayerPanel({ groups, enabled, onChange, loading, error, onRetry }: LayerPanelProps) {
-  const [open, setOpen] = useState(false);
+const WIDE_QUERY = "(min-width: 1024px)";
+
+function subscribeWide(listener: () => void) {
+  const query = window.matchMedia(WIDE_QUERY);
+  query.addEventListener("change", listener);
+  return () => query.removeEventListener("change", listener);
+}
+
+function useWideScreen() {
+  return useSyncExternalStore(
+    subscribeWide,
+    () => window.matchMedia(WIDE_QUERY).matches,
+    () => false
+  );
+}
+
+// Once someone closes the panel, later maps in the same visit start closed too.
+let closedThisVisit = false;
+
+export function LayerPanel({
+  groups,
+  enabled,
+  onChange,
+  loading,
+  error,
+  onRetry,
+  openOnWideScreens = false,
+}: LayerPanelProps) {
+  const wide = useWideScreen();
+  const [choice, setChoice] = useState<boolean | null>(null);
+  const open = choice ?? (openOnWideScreens && wide && !closedThisVisit);
   const panelId = useId();
+
+  function setOpen(next: boolean | ((value: boolean) => boolean)) {
+    const value = typeof next === "function" ? next(open) : next;
+    closedThisVisit = !value;
+    setChoice(value);
+  }
 
   return (
     <>
@@ -28,7 +65,7 @@ export function LayerPanel({ groups, enabled, onChange, loading, error, onRetry 
         aria-controls={panelId}
         className={cn(
           overlayPanel,
-          "flex h-10 items-center gap-2 px-3 text-[10px] font-bold uppercase tracking-widest transition-colors hover:border-[#9a8866] hover:text-[#ddd] max-sm:w-10 max-sm:justify-center max-sm:px-0",
+          "flex h-10 items-center gap-2 px-3 text-[10px] font-bold uppercase tracking-widest transition-colors hover:border-[#9a8866] hover:text-[#ddd] max-sm:gap-1.5 max-sm:px-2.5",
           focusRing,
           open ? "border-[#9a8866] text-[#ddd]" : "text-[#999]"
         )}
@@ -38,9 +75,9 @@ export function LayerPanel({ groups, enabled, onChange, loading, error, onRetry 
         ) : (
           <Layers className="h-4 w-4" aria-hidden />
         )}
-        <span className="max-sm:sr-only">Layers</span>
+        <span>Layers</span>
         {enabled.size > 0 && (
-          <span className="bg-[#9a8866] px-1.5 py-0.5 text-[10px] font-bold leading-none text-black max-sm:absolute max-sm:-right-1 max-sm:-top-1 max-sm:px-1">
+          <span className="bg-[#9a8866] px-1.5 py-0.5 text-[10px] font-bold leading-none text-black">
             {enabled.size}
             <span className="sr-only"> enabled</span>
           </span>
@@ -56,7 +93,7 @@ export function LayerPanel({ groups, enabled, onChange, loading, error, onRetry 
           }}
           className={cn(
             overlayPanel,
-            "pointer-events-auto absolute inset-x-2 top-full z-10 flex max-h-[min(70dvh,32rem)] flex-col bg-[#090909]/97 sm:left-auto sm:right-3 sm:w-72"
+            "pointer-events-auto absolute inset-x-2 top-full z-10 flex max-h-[min(45dvh,32rem)] flex-col bg-[#090909]/97 sm:left-auto sm:right-3 sm:max-h-[min(70dvh,32rem)] sm:w-72"
           )}
         >
           <header className="flex items-center justify-between border-b border-[#2a2a2a] pl-3">

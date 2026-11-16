@@ -16,12 +16,12 @@ export function SharedPreview({ config, plan }: { config: MapConfig; plan: RaidP
   const layerLabels = useMemo(() => {
     if (!details) return [];
     const enabled = new Set(plan.enabledLayers);
-    return getLayerGroups(details).flatMap((group) =>
+    return getLayerGroups(details, config).flatMap((group) =>
       group.options
         .filter((option) => enabled.has(option.id))
         .map((option) => (group.name === "Extractions" && option.id !== "transits" ? `${option.label} extracts` : option.label))
     );
-  }, [details, plan.enabledLayers]);
+  }, [details, config, plan.enabledLayers]);
 
   return (
     <>

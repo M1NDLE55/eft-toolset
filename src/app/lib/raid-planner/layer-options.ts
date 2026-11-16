@@ -1,4 +1,5 @@
 import type { MapDetails, SpawnKind } from "@/app/lib/types/raidPlanner";
+import type { MapConfig } from "./types";
 
 export interface LayerOption {
   id: string;
@@ -19,7 +20,34 @@ const SPAWN_KIND_LABELS: { kind: SpawnKind; label: string }[] = [
   { kind: "raider", label: "Raider / Rogue" },
 ];
 
-export function getLayerGroups(details: MapDetails): LayerGroupOptions[] {
+export const LABELS_LAYER = "labels";
+
+/** Layers shown on a map the viewer has never customised. */
+export const DEFAULT_LAYER_IDS = [
+  LABELS_LAYER,
+  "extracts:pmc",
+  "extracts:shared",
+  "transits",
+  "spawns:pmc",
+] as const;
+
+/**
+ * The default layers for a map, without ones it has nothing to show for.
+ * Before the map details load, only the place names can be checked.
+ */
+export function getDefaultLayers(config: Pick<MapConfig, "labels">, details: MapDetails | null): string[] {
+  const available = details
+    ? new Set(getLayerGroups(details, config).flatMap((group) => group.options.map((option) => option.id)))
+    : null;
+  return DEFAULT_LAYER_IDS.filter((id) =>
+    id === LABELS_LAYER ? Boolean(config.labels?.length) : !available || available.has(id)
+  );
+}
+
+export function getLayerGroups(
+  details: MapDetails,
+  config?: Pick<MapConfig, "labels">
+): LayerGroupOptions[] {
   const extractCount = (faction: string) =>
     details.extracts.filter((e) => e.faction === faction).length;
 
@@ -31,6 +59,10 @@ export function getLayerGroups(details: MapDetails): LayerGroupOptions[] {
   }
 
   const groups: LayerGroupOptions[] = [
+    {
+      name: "Map",
+      options: [{ id: LABELS_LAYER, label: "Place names", count: config?.labels?.length ?? 0 }],
+    },
     {
       name: "Extractions",
       options: [

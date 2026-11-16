@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { ArrowLeft, Plus } from "lucide-react";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
 import { createPlan } from "@/app/lib/raid-planner/store";
-import { getLayerGroups } from "@/app/lib/raid-planner/layer-options";
+import { getDefaultLayers, getLayerGroups } from "@/app/lib/raid-planner/layer-options";
 import { useStoredLayers, writeStoredLayers } from "@/app/lib/raid-planner/layer-store";
 import { MAX_LAYERS } from "@/app/lib/raid-planner/limits";
 import { useMapDetails } from "@/app/lib/cache/raidPlanner";
@@ -23,9 +23,13 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
   const [activeFloor, setActiveFloor] = useState(() => defaultFloor(config));
   const [actionError, setActionError] = useState("");
   const { details, loading, error, retry } = useMapDetails(config.key);
-  const enabledLayers = useStoredLayers(config.key);
+  const storedLayers = useStoredLayers(config.key);
+  const enabledLayers = useMemo(
+    () => storedLayers ?? getDefaultLayers(config, details),
+    [storedLayers, config, details]
+  );
   const enabledSet = useMemo(() => new Set(enabledLayers), [enabledLayers]);
-  const layerGroups = useMemo(() => (details ? getLayerGroups(details) : null), [details]);
+  const layerGroups = useMemo(() => (details ? getLayerGroups(details, config) : null), [details, config]);
 
   function changeLayers(ids: string[], checked: boolean) {
     const next = new Set(enabledLayers);
@@ -47,7 +51,7 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
 
   function startPlan() {
     try {
-      const plan = createPlan(`${config.name} raid`, config.key);
+      const plan = createPlan(`${config.name} raid`, config.key, enabledLayers);
       router.push(`/raid-planner/${plan.id}`);
     } catch (reason) {
       setActionError(reason instanceof Error ? reason.message : "Could not create this plan.");
@@ -98,6 +102,7 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
             loading={loading}
             error={error}
             onRetry={retry}
+            openOnWideScreens
           />
         </div>
       </div>

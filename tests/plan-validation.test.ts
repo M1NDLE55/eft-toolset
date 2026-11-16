@@ -50,5 +50,13 @@ describe("raid-plan validation", () => {
     expect(createPlan("   ", "customs").name).toBe("Untitled raid");
     expect(createPlan("x".repeat(500), "customs").name).toHaveLength(MAX_PLAN_NAME_LENGTH);
   });
+
+  it("starts a plan with the given layers, without duplicates", () => {
+    expect(createPlan("Layers", "customs", ["labels", "extracts:pmc", "labels"]).enabledLayers).toEqual([
+      "labels",
+      "extracts:pmc",
+    ]);
+    expect(createPlan("No layers", "customs").enabledLayers).toEqual([]);
+  });
 });
 
