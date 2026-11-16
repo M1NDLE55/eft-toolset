@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
+import { CC_BY_NC_SA_4, SVG_MAP_SOURCE } from "@/app/components/raid-planner/map-chrome";
 import wikiSnapshot from "../../../data/wiki/manifest.json";
 
 export const metadata: Metadata = {
@@ -8,8 +9,6 @@ export const metadata: Metadata = {
   description: "The data, maps, and software that EFT Toolset is built on, with their licences.",
   alternates: { canonical: "/credits" },
 };
-
-const CC_BY_NC_SA_4 = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
 
 function External({ href, children }: { href: string; children: ReactNode }) {
   return (
@@ -32,7 +31,7 @@ const sections: { heading: string; content: ReactNode }[] = [
           Item, price, trader, quest, and map data comes from the free{" "}
           <External href="https://tarkov.dev/api/">tarkov.dev API</External> by{" "}
           <External href="https://github.com/the-hideout">The Hideout</External>. The raid planner&apos;s map
-          setup is generated from tarkov.dev&apos;s{" "}
+          setup and place names are generated from tarkov.dev&apos;s{" "}
           <External href="https://github.com/the-hideout/tarkov-dev/blob/main/src/data/maps.json">maps.json</External>,
           and item images, map tiles, and map SVGs load from assets.tarkov.dev.
         </p>
@@ -58,9 +57,11 @@ const sections: { heading: string; content: ReactNode }[] = [
       <>
         <p>
           The SVG maps of {mapNames((map) => map.strategy === "svg")} are by Shebuka, from{" "}
-          <External href="https://github.com/the-hideout/tarkov-dev-svg-maps">tarkov-dev-svg-maps</External>, licensed{" "}
-          <External href={CC_BY_NC_SA_4}>CC BY-NC-SA 4.0</External>. We don&apos;t edit the map artwork: the planner only controls
-          which floors are visible, and your plan&apos;s markings are drawn on a separate layer on top.
+          <External href={SVG_MAP_SOURCE}>tarkov-dev-svg-maps</External>, licensed{" "}
+          <External href={CC_BY_NC_SA_4}>CC BY-NC-SA 4.0</External>. Each map credits them the same way. We modify
+          them in one way, noted on each map as &ldquo;Modified: floor visibility&rdquo;: the planner shows only the
+          floor you pick and fades or hides the others. We don&apos;t redraw the artwork, and your plan&apos;s
+          markings, place names and map layers are drawn on separate layers on top.
         </p>
         <p>
           The other maps are image tiles from assets.tarkov.dev, credited on each map as tarkov.dev lists them: Shebuka

@@ -123,7 +123,13 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
         <FloorSwitcher config={config} activeFloor={activeFloor} onChange={setActiveFloor} />
       </div>
 
-      <MapAttribution config={config} className="bottom-2 left-2 sm:bottom-3 sm:left-3" />
+      <MapAttribution
+        config={config}
+        className={cn(
+          "bottom-2 left-2 sm:bottom-3 sm:left-3",
+          config.floors.length > 0 && "max-sm:bottom-14"
+        )}
+      />
     </div>
   );
 }

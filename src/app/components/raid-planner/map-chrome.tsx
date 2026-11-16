@@ -5,42 +5,74 @@ import { overlayPanel } from "./ui";
 
 export const MAP_STAGE_CLASS = "relative isolate h-[calc(100dvh-65px)] min-h-[22rem] w-full overflow-hidden bg-[#050505]";
 
-export function MapAttribution({ config, className }: { config: MapConfig; className?: string }) {
+export const SVG_MAP_SOURCE = "https://github.com/the-hideout/tarkov-dev-svg-maps";
+export const CC_BY_NC_SA_4 = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
+
+const linkClass =
+  "inline-block py-1 text-[#b8a77e] underline underline-offset-2 hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:outline-[#9a8866] sm:py-0.5";
+const separator = <span aria-hidden className="px-1 text-[#555]">·</span>;
+
+interface MapAttributionProps {
+  config: MapConfig;
+  className?: string;
+  /** "overlay" floats over the map; "inline" sits in normal page flow. */
+  placement?: "overlay" | "inline";
+  /** True when the SVG artwork is shown with our own colours. */
+  restyled?: boolean;
+}
+
+/**
+ * Credits the base map. The SVG maps are CC BY-NC-SA 4.0, so their credit names the
+ * author, links the source and the licence, and says what we change (section 3(a)).
+ */
+export function MapAttribution({ config, className, placement = "overlay", restyled = false }: MapAttributionProps) {
   if (!config.author) return null;
+  const boxClass = cn(
+    "text-[10px] leading-4 text-[#999]",
+    placement === "overlay" &&
+      "pointer-events-auto absolute z-999 max-w-[calc(100%-1rem)] bg-[#090909]/85 px-2 py-0.5 backdrop-blur-xs",
+    className
+  );
+
+  if (!config.svgPath) {
+    return (
+      <p className={cn(boxClass, "uppercase tracking-widest")}>
+        Map by{" "}
+        {config.authorLink ? (
+          <a href={config.authorLink} target="_blank" rel="noopener noreferrer" className={linkClass}>
+            {config.author}
+          </a>
+        ) : (
+          config.author
+        )}
+      </p>
+    );
+  }
+
   return (
-    <p
-      className={cn(
-        "pointer-events-auto absolute z-999 max-w-[calc(100%-4rem)] bg-[#090909]/80 px-2 py-1 text-[10px] uppercase tracking-widest text-[#888]",
-        className
-      )}
-    >
-      Map by{" "}
-      {config.authorLink ? (
+    <p className={boxClass}>
+      <span>
+        Map by {config.author}
+        {separator}
         <a
-          href={config.authorLink}
+          href={SVG_MAP_SOURCE}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#9a8866] underline underline-offset-2"
+          className={linkClass}
+          aria-label="Source: tarkov-dev-svg-maps on GitHub"
         >
-          {config.author}
+          <span className="sm:hidden">Source</span>
+          <span className="max-sm:hidden">tarkov-dev-svg-maps</span>
         </a>
-      ) : (
-        config.author
-      )}
-      {config.svgPath ? (
-        <>
-          {" · "}
-          <a
-            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-            target="_blank"
-            rel="noopener noreferrer license"
-            className="text-[#9a8866] underline underline-offset-2"
-          >
-            CC BY-NC-SA 4.0
-          </a>
-          {" · "}Unmodified except floor visibility
-        </>
-      ) : null}
+        {separator}
+        <a href={CC_BY_NC_SA_4} target="_blank" rel="noopener noreferrer license" className={linkClass}>
+          CC BY-NC-SA 4.0
+        </a>
+      </span>
+      <span className="max-sm:block">
+        <span className="max-sm:hidden">{separator}</span>
+        Modified: {restyled ? "floor visibility, recoloured" : "floor visibility"}
+      </span>
     </p>
   );
 }

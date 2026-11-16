@@ -7,6 +7,7 @@ import { getLayerGroups } from "@/app/lib/raid-planner/layer-options";
 import { useMapDetails } from "@/app/lib/cache/raidPlanner";
 import { defaultFloor, FloorSwitcher } from "./floor-switcher";
 import { LazyPlanEditorCanvas } from "./lazy-canvas";
+import { MapAttribution } from "./map-chrome";
 
 export function SharedPreview({ config, plan }: { config: MapConfig; plan: RaidPlan }) {
   const [activeFloor, setActiveFloor] = useState(() => defaultFloor(config));
@@ -37,6 +38,7 @@ export function SharedPreview({ config, plan }: { config: MapConfig; plan: RaidP
           <FloorSwitcher config={config} activeFloor={activeFloor} onChange={setActiveFloor} />
         </div>
       </div>
+      <MapAttribution config={config} placement="inline" className="-mt-1" />
       {hasLayers && (
         <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] uppercase tracking-widest text-[#888]">
           <span className="flex items-center gap-1.5 text-[#9a8866]">
