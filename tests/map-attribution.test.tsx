@@ -2,6 +2,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { CC_BY_NC_SA_4, MapAttribution, SVG_MAP_SOURCE } from "@/app/components/raid-planner/map-chrome";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
+import { parseSvgMapStyle } from "@/app/lib/raid-planner/map-style";
 
 function render(element: React.ReactElement) {
   const host = document.createElement("div");
@@ -31,5 +32,14 @@ describe("map attribution", () => {
     expect(host.textContent).toContain(`Map by ${customs.author}`);
     expect(host.textContent).not.toContain("CC BY-NC-SA");
     expect(host.textContent).not.toContain("Modified");
+  });
+});
+
+describe("svg map style switch", () => {
+  it("accepts only the known styles", () => {
+    expect(parseSvgMapStyle("?mapStyle=topo")).toBe("topo");
+    expect(parseSvgMapStyle("?mapStyle=dusk")).toBe("dusk");
+    expect(parseSvgMapStyle("?mapStyle=neon")).toBeNull();
+    expect(parseSvgMapStyle("")).toBeNull();
   });
 });

@@ -98,6 +98,115 @@
   opacity: 0.25;
 }
 
+/*
+ * Experimental recolourings of the CC BY-NC-SA SVG maps (dev-only ?mapStyle=).
+ * They override the maps' shared class names; the credit says "recoloured" when on.
+ */
+.rp-map svg.rp-svg-style--topo {
+  --svg-water: #2c6688;
+  --svg-shore: #6fa3c2;
+  --svg-land: #485a37;
+  --svg-trees: #36472a;
+  --svg-rock: #7b7566;
+  --svg-rock-edge: #2a2721;
+  --svg-cement: #9d988d;
+  --svg-tarmac: #8c8c86;
+  --svg-road: #cdc6b2;
+  --svg-gravel: #93744a;
+  --svg-building: #23211d;
+  --svg-building-edge: #e2d8bf;
+  --svg-floor: #5d6064;
+  --svg-locked: #3b3f44;
+  --svg-wood: #7d5733;
+  --svg-rail: #a3634d;
+  --svg-fence: rgb(190 210 180 / 0.55);
+  --svg-border: #050505;
+}
+
+.rp-map svg.rp-svg-style--dusk {
+  --svg-water: #1b3d5c;
+  --svg-shore: #3f6b8e;
+  --svg-land: #26352a;
+  --svg-trees: #1d2a21;
+  --svg-rock: #4d4a42;
+  --svg-rock-edge: #0b0b09;
+  --svg-cement: #5c5a53;
+  --svg-tarmac: #505356;
+  --svg-road: #958f7f;
+  --svg-gravel: #6c573a;
+  --svg-building: #0e0f11;
+  --svg-building-edge: #b3a07a;
+  --svg-floor: #3f4245;
+  --svg-locked: #2e3136;
+  --svg-wood: #574029;
+  --svg-rail: #85513f;
+  --svg-fence: rgb(140 160 135 / 0.5);
+  --svg-border: #000;
+}
+
+.rp-map svg[class*="rp-svg-style--"] .water {
+  fill: var(--svg-water);
+}
+.rp-map svg[class*="rp-svg-style--"] g.land path {
+  stroke: var(--svg-shore);
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+.rp-map svg[class*="rp-svg-style--"] .land {
+  fill: var(--svg-land);
+}
+.rp-map svg[class*="rp-svg-style--"] .trees {
+  fill: var(--svg-trees);
+}
+.rp-map svg[class*="rp-svg-style--"] .rock {
+  fill: var(--svg-rock);
+  filter: drop-shadow(1.5px 1.5px 0 var(--svg-rock-edge));
+}
+.rp-map svg[class*="rp-svg-style--"] .cement {
+  fill: var(--svg-cement);
+}
+.rp-map svg[class*="rp-svg-style--"] .tarmac {
+  fill: var(--svg-road);
+}
+.rp-map svg[class*="rp-svg-style--"] .road_tarmac {
+  stroke: var(--svg-road);
+}
+.rp-map svg[class*="rp-svg-style--"] .gravel {
+  fill: var(--svg-gravel);
+}
+.rp-map svg[class*="rp-svg-style--"] .road_gravel {
+  stroke: var(--svg-gravel);
+}
+.rp-map svg[class*="rp-svg-style--"] .building {
+  fill: var(--svg-building);
+  stroke: var(--svg-building-edge);
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+.rp-map svg[class*="rp-svg-style--"] .building path,
+.rp-map svg[class*="rp-svg-style--"] .building rect,
+.rp-map svg[class*="rp-svg-style--"] .building polygon {
+  vector-effect: non-scaling-stroke;
+}
+.rp-map svg[class*="rp-svg-style--"] .floor {
+  fill: var(--svg-floor);
+}
+.rp-map svg[class*="rp-svg-style--"] .locked {
+  fill: var(--svg-locked);
+}
+.rp-map svg[class*="rp-svg-style--"] .wood {
+  fill: var(--svg-wood);
+}
+.rp-map svg[class*="rp-svg-style--"] .railroad {
+  stroke: var(--svg-rail);
+}
+.rp-map svg[class*="rp-svg-style--"] .fence {
+  stroke: var(--svg-fence);
+}
+.rp-map svg[class*="rp-svg-style--"] .map_border {
+  stroke: var(--svg-border);
+}
+
 .rp-map .leaflet-control-zoom {
   border: 1px solid #2a2a2a;
   border-radius: 0;
