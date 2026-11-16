@@ -307,6 +307,44 @@ sign-in, charging each IP's budget, so local tools and tests work without WorkOS
 Reading the body to shape a challenge is the one read a request without a valid token can
 trigger; reads stay capped by size, time, and the MCP pool's concurrency limit.
 
+### Website accounts
+
+The website itself needs no account, but people need somewhere to see, sign out of, and
+delete the account their AI assistants sign in with. The Settings page's Account section does
+this with WorkOS's Node SDK (`src/app/lib/account/server.ts`), using the same WorkOS
+environment as the MCP endpoint, so a person has the same user id in both. It's on when
+`WORKOS_API_KEY`, `WORKOS_CLIENT_ID`, and `WORKOS_COOKIE_PASSWORD` are set.
+
+Only these routes touch sessions, so every other page stays static and never reads cookies:
+
+- `GET /auth/sign-in` (`?screen=sign-up` for the sign-up screen) stores a random state in an
+  httpOnly cookie scoped to the callback and redirects to AuthKit's hosted sign-in.
+- `GET /auth/callback` checks the state, exchanges the code for a session sealed with the
+  cookie password, and sets it as the httpOnly `eft_session` cookie (30 days, SameSite=Lax).
+- `GET /api/account` returns the user's email, name, and sign-up date, refreshing an expired
+  access token once and rewriting the cookie. A session that can't be read or refreshed
+  clears the cookies.
+- `POST /api/account/sign-out` clears the cookies and returns AuthKit's logout URL, which
+  ends the WorkOS session too. It answers with JSON for the page to follow, because the
+  `form-action 'self'` policy blocks a form that redirects to another origin.
+- `DELETE /api/account` deletes the user in WorkOS. Their assistants' tokens stop working
+  once they expire, since refreshing needs the user.
+
+Requests that change the account must come from the site's own pages (`Sec-Fetch-Site:
+same-origin`, or a matching `Origin` where browsers don't send it). Account routes share the
+website's per-client rate limit. Next to the session, a readable `eft_signed_in=1` cookie,
+which holds nothing secret, lets the header show a signed-in account icon on static pages
+without a request; the account API clears it whenever it finds no session.
+
+Sign-in returns to the canonical site on the production deployment (`VERCEL_ENV=production`,
+or a production build outside Vercel) and to the request's own origin on preview
+deployments and in development, so each preview hostname completes its own sign-in.
+
+In WorkOS, the environment needs `<site>/auth/callback` as a redirect URI (and
+`http://localhost:3000/auth/callback` for development, plus a wildcard for preview hostnames
+if previews should sign in), `<site>/settings` allowed as a sign-out redirect, and sign-up
+enabled in AuthKit.
+
 ## Upstream resources
 
 - Items, weapon structures, prices, presets: `/{gameMode}/items` and `_en`.

@@ -6,6 +6,7 @@ type FooterLink = { text: string; href: string };
 
 const SITE_LINKS: FooterLink[] = [
   { text: "Settings", href: "/settings" },
+  { text: "Account", href: "/settings#account" },
   { text: "Backup & restore", href: "/data" },
   { text: "AI assistants", href: "/mcp" },
   { text: "Credits", href: "/credits" },

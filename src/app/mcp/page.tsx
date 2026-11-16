@@ -101,7 +101,11 @@ export default function McpPage() {
             <p className="text-sm leading-relaxed text-[#bbb]">
               When you add the server, your assistant opens an EFT Toolset sign-in page in your browser, where you can sign in
               or create an account. In Claude Code, run <code className="font-mono text-[#c8b384]">/mcp</code>, pick
-              eft-toolset, and choose Authenticate.
+              eft-toolset, and choose Authenticate. Manage or delete your account in{" "}
+              <Link href="/settings#account" className="text-[#c8b384] underline underline-offset-2 hover:text-[#e6d9b8]">
+                Settings
+              </Link>
+              .
             </p>
           )}
           {CLIENTS.map((client) => (

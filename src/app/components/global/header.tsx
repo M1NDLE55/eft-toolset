@@ -4,8 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSyncExternalStore } from "react";
-import { Menu, Settings } from "lucide-react";
+import { Menu, Settings, UserRound } from "lucide-react";
 import { navLinks } from "@/app/lib/links";
+import { useSignedInHint } from "@/app/lib/account/signed-in";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -29,6 +30,8 @@ function isActive(pathname: string, href: string) {
 export function Header() {
   const pathname = usePathname() ?? "/";
   const staleUpstream = useSyncExternalStore(subscribeStale, isUpstreamStale, () => false);
+  const signedIn = useSignedInHint();
+  const accountLabel = signedIn ? "Account" : "Sign in";
 
   return (
     <header className="w-full border-b border-[#1a1a1a] bg-[#070707]">
@@ -69,6 +72,15 @@ export function Header() {
           )}
           <GameModeToggle />
           <Link
+            href="/settings#account"
+            aria-label={accountLabel}
+            title={accountLabel}
+            className="relative hidden h-10 w-10 items-center justify-center text-[#888] transition-colors hover:text-[#ccc] focus-visible:outline-2 focus-visible:outline-[#9a8866] md:flex"
+          >
+            <UserRound className={cn("h-4 w-4", signedIn && "text-[#c8b384]")} aria-hidden />
+            {signedIn && <span aria-hidden className="absolute right-2.5 top-2.5 h-1.5 w-1.5 rounded-full bg-[#c8b384]" />}
+          </Link>
+          <Link
             href="/settings"
             aria-label="Settings"
             title="Settings"
@@ -99,6 +111,9 @@ export function Header() {
                     </Link>
                   </DropdownMenuItem>
                 ))}
+                <DropdownMenuItem asChild className="py-3">
+                  <Link href="/settings#account">{accountLabel}</Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem asChild className="py-3">
                   <Link
                     href="/settings"
