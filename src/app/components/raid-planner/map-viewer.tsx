@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { ArrowLeft, Plus } from "lucide-react";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
 import { createPlan } from "@/app/lib/raid-planner/store";
-import { getLayerGroups } from "@/app/lib/raid-planner/layer-options";
+import { getDefaultLayers, getLayerGroups } from "@/app/lib/raid-planner/layer-options";
 import { useStoredLayers, writeStoredLayers } from "@/app/lib/raid-planner/layer-store";
 import { MAX_LAYERS } from "@/app/lib/raid-planner/limits";
 import { useMapDetails } from "@/app/lib/cache/raidPlanner";
@@ -23,9 +23,13 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
   const [activeFloor, setActiveFloor] = useState(() => defaultFloor(config));
   const [actionError, setActionError] = useState("");
   const { details, loading, error, retry } = useMapDetails(config.key);
-  const enabledLayers = useStoredLayers(config.key);
+  const storedLayers = useStoredLayers(config.key);
+  const enabledLayers = useMemo(
+    () => storedLayers ?? getDefaultLayers(config, details),
+    [storedLayers, config, details]
+  );
   const enabledSet = useMemo(() => new Set(enabledLayers), [enabledLayers]);
-  const layerGroups = useMemo(() => (details ? getLayerGroups(details) : null), [details]);
+  const layerGroups = useMemo(() => (details ? getLayerGroups(details, config) : null), [details, config]);
 
   function changeLayers(ids: string[], checked: boolean) {
     const next = new Set(enabledLayers);
@@ -47,7 +51,7 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
 
   function startPlan() {
     try {
-      const plan = createPlan(`${config.name} raid`, config.key);
+      const plan = createPlan(`${config.name} raid`, config.key, enabledLayers);
       router.push(`/raid-planner/${plan.id}`);
     } catch (reason) {
       setActionError(reason instanceof Error ? reason.message : "Could not create this plan.");
@@ -56,7 +60,12 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
 
   return (
     <div className={MAP_STAGE_CLASS}>
-      <LazyMapCanvas config={config} activeFloor={activeFloor} details={details} enabledLayers={enabledLayers} />
+      <LazyMapCanvas
+        config={config}
+        activeFloor={activeFloor}
+        details={details}
+        enabledLayers={enabledLayers}
+      />
 
       <div className="pointer-events-none absolute inset-x-0 top-0 z-1000 flex items-start gap-2 p-2 sm:p-3">
         <div className={cn(overlayPanel, "pointer-events-auto flex min-w-0 items-center max-sm:flex-1")}>
@@ -98,6 +107,7 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
             loading={loading}
             error={error}
             onRetry={retry}
+            openOnWideScreens
           />
         </div>
       </div>
@@ -118,7 +128,13 @@ export function MapViewer({ mapKey }: { mapKey: string }) {
         <FloorSwitcher config={config} activeFloor={activeFloor} onChange={setActiveFloor} />
       </div>
 
-      <MapAttribution config={config} className="bottom-2 left-2 sm:bottom-3 sm:left-3" />
+      <MapAttribution
+        config={config}
+        className={cn(
+          "bottom-2 left-2 sm:bottom-3 sm:left-3",
+          config.floors.length > 0 && "max-sm:bottom-14"
+        )}
+      />
     </div>
   );
 }

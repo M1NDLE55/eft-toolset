@@ -86,6 +86,17 @@ export interface MapFloor {
   extents?: FloorExtent[];
 }
 
+export interface MapLabel {
+  text: string;
+  /** Game x and z. */
+  position: [number, number];
+  /** Relative size in percent; 100 when omitted. */
+  size?: number;
+  rotation?: number;
+  top?: number;
+  bottom?: number;
+}
+
 export type TileGrid = Record<string, [number, number]>;
 
 export interface MapConfig {
@@ -105,6 +116,7 @@ export interface MapConfig {
   heightRange?: [number, number];
   baseFloorName?: string;
   floors: MapFloor[];
+  labels?: MapLabel[];
   author?: string;
   authorLink?: string;
   tileGrid?: TileGrid;

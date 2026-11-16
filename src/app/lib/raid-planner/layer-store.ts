@@ -37,10 +37,9 @@ export const LAYER_STORE: StoreDefinition<StoredLayers> = {
   },
 };
 
-const EMPTY: string[] = [];
-
-export function useStoredLayers(mapKey: string): string[] {
-  return useStore(LAYER_STORE)[mapKey] ?? EMPTY;
+/** The viewer's saved layers for a map, or undefined if they never changed them. */
+export function useStoredLayers(mapKey: string): string[] | undefined {
+  return useStore(LAYER_STORE)[mapKey];
 }
 
 export function writeStoredLayers(mapKey: string, ids: string[]) {

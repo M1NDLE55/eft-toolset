@@ -11,6 +11,7 @@ import { downloadPlanFile, readPlanFile } from "@/app/lib/raid-planner/plan-file
 import { formatDistance, routeLength } from "@/app/lib/raid-planner/route-distance";
 import { prefetchMap } from "@/app/lib/raid-planner/prefetch";
 import { MAX_PLAN_NAME_LENGTH } from "@/app/lib/raid-planner/limits";
+import { getDefaultLayers } from "@/app/lib/raid-planner/layer-options";
 import { useHydrated } from "@/app/lib/storage/use-store";
 import { useGameMode } from "@/components/game-mode/context";
 import { Button } from "@/components/ui/button";
@@ -87,7 +88,11 @@ export default function RaidPlannerPage() {
 
   function handleCreate(config: MapConfig) {
     run(() => {
-      const plan = createPlan(createName.trim() || `${config.name} raid`, config.key);
+      const plan = createPlan(
+        createName.trim() || `${config.name} raid`,
+        config.key,
+        getDefaultLayers(config, null)
+      );
       setCreateOpen(false);
       router.push(`/raid-planner/${plan.id}`);
     }, "Could not create this plan.");

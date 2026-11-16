@@ -4,7 +4,8 @@ import type {
   MapExtract,
   SpawnKind,
 } from "@/app/lib/types/raidPlanner";
-import type { FloorExtent, GamePoint, MapConfig } from "./types";
+import type { FloorExtent, GamePoint, MapConfig, MapLabel } from "./types";
+import { LABELS_LAYER } from "./layer-options";
 import { gameToLatLng } from "./coords";
 import { itemHref } from "@/app/lib/item-links";
 import { makeLayerAccessible } from "./leaflet-accessibility";
@@ -45,7 +46,8 @@ export interface LayerEntry {
 }
 
 export interface LayerBuildContext {
-  details: MapDetails;
+  config: Pick<MapConfig, "labels">;
+  details: MapDetails | null;
   renderer: L.Canvas;
 }
 
@@ -91,7 +93,11 @@ export function buildLayer(
   id: string,
   context: LayerBuildContext
 ): LayerEntry | null {
+  if (id === LABELS_LAYER) return buildLabels(context.config.labels ?? []);
+
   const { details } = context;
+  if (!details) return null;
+  const detailContext = { ...context, details };
 
   if (id.startsWith("extracts:")) {
     const faction = id.slice("extracts:".length);
@@ -136,9 +142,9 @@ export function buildLayer(
         { shape: "diamond", color: COLORS.transit }
       );
     case "locks":
-      return buildLocks(context);
+      return buildLocks(detailContext);
     case "hazards":
-      return buildHazards(context);
+      return buildHazards(detailContext);
     case "switches":
       return buildGlyphs(
         details.switches.map((s) => ({
@@ -302,7 +308,9 @@ const LOCK_TYPE_LABELS: Record<string, string> = {
   switch: "Locked switch",
 };
 
-function buildLocks(context: LayerBuildContext): LayerEntry {
+type DetailContext = LayerBuildContext & { details: MapDetails };
+
+function buildLocks(context: DetailContext): LayerEntry {
   const group = L.layerGroup();
   const dimmables: Dimmable[] = [];
 
@@ -342,7 +350,7 @@ function buildLocks(context: LayerBuildContext): LayerEntry {
   return { group, dimmables };
 }
 
-function buildHazards(context: LayerBuildContext): LayerEntry {
+function buildHazards(context: DetailContext): LayerEntry {
   const group = L.layerGroup();
   const dimmables: Dimmable[] = [];
   const zoneStyle = { opacity: 0.7, fillOpacity: 0.12 };
@@ -369,6 +377,97 @@ function buildHazards(context: LayerBuildContext): LayerEntry {
       );
     }
   }
+
+  return { group, dimmables };
+}
+
+const LABEL_BASE_PX = 12;
+const LABEL_GAP_PX = 4;
+const HIDDEN_LABEL_CLASS = "rp-label--crowded";
+
+/**
+ * Place names drawn as plain text under every marker; they never take clicks.
+ * Labels from other floors are hidden, and where labels collide only the larger
+ * (or earlier) one stays visible until the map is zoomed in far enough.
+ */
+function buildLabels(labels: MapLabel[]): LayerEntry {
+  const group = L.layerGroup();
+  const dimmables: Dimmable[] = [];
+  const placed: { marker: L.Marker; size: number }[] = [];
+
+  labels.forEach((label) => {
+    const [x, z] = label.position;
+    const top = label.top ?? 100000;
+    const bottom = label.bottom ?? -100000;
+    const position = { x, z, y: label.top !== undefined && label.bottom !== undefined ? (top + bottom) / 2 : 0 };
+    const text = document.createElement("span");
+    text.className = "rp-label";
+    text.textContent = label.text;
+    const size = label.size ?? 100;
+    const scale = Math.min(Math.max(size / 100, 0.75), 1.5);
+    text.style.fontSize = `${Math.round(LABEL_BASE_PX * scale)}px`;
+    if (label.rotation) text.style.rotate = `${label.rotation}deg`;
+
+    const marker = L.marker(gameToLatLng(position), {
+      icon: L.divIcon({ className: "rp-label-wrap", html: text, iconSize: [0, 0] }),
+      interactive: false,
+      keyboard: false,
+      zIndexOffset: -1000,
+    });
+    marker.addTo(group);
+    placed.push({ marker, size });
+    const dimmable = markerDimmable(marker, position, top, bottom);
+    dimmables.push({
+      ...dimmable,
+      setDimmed: (dimmed) => {
+        dimmable.setDimmed(dimmed);
+        scheduleDeclutter();
+      },
+    });
+  });
+
+  const ranked = [...placed].sort((a, b) => b.size - a.size);
+  let frame = 0;
+
+  function declutter() {
+    frame = 0;
+    const candidates = ranked
+      .map(({ marker }) => marker.getElement())
+      .filter((element): element is HTMLElement => Boolean(element) && !element!.classList.contains("rp-off-level"));
+    for (const element of candidates) element.classList.remove(HIDDEN_LABEL_CLASS);
+    const rects = candidates.map((element) => element.firstElementChild?.getBoundingClientRect());
+    const kept: DOMRect[] = [];
+    candidates.forEach((element, index) => {
+      const rect = rects[index];
+      if (!rect) return;
+      const crowded = kept.some(
+        (other) =>
+          rect.left < other.right + LABEL_GAP_PX &&
+          rect.right + LABEL_GAP_PX > other.left &&
+          rect.top < other.bottom + LABEL_GAP_PX &&
+          rect.bottom + LABEL_GAP_PX > other.top
+      );
+      if (crowded) element.classList.add(HIDDEN_LABEL_CLASS);
+      else kept.push(rect);
+    });
+  }
+
+  function scheduleDeclutter() {
+    if (!frame && typeof requestAnimationFrame === "function") frame = requestAnimationFrame(declutter);
+  }
+
+  let attached: L.Map | null = null;
+  group.on("add", () => {
+    attached = (group as unknown as { _map: L.Map | null })._map;
+    attached?.on("zoomend resize", scheduleDeclutter);
+    scheduleDeclutter();
+  });
+  group.on("remove", () => {
+    attached?.off("zoomend resize", scheduleDeclutter);
+    attached = null;
+    if (frame) cancelAnimationFrame(frame);
+    frame = 0;
+  });
 
   return { group, dimmables };
 }

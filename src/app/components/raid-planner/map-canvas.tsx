@@ -140,8 +140,6 @@ export function MapCanvas({
       cache.entries.clear();
       cache.details = details;
     }
-    if (!details) return;
-
     const enabled = new Set(enabledLayers);
     cache.entries.forEach((entry, id) => {
       if (!enabled.has(id)) entry.group.remove();
@@ -150,7 +148,7 @@ export function MapCanvas({
     for (const id of enabled) {
       let entry = cache.entries.get(id);
       if (!entry) {
-        const built = buildLayer(id, { details, renderer: cache.renderer });
+        const built = buildLayer(id, { config, details, renderer: cache.renderer });
         if (!built) continue;
         cache.entries.set(id, built);
         entry = built;

@@ -98,6 +98,89 @@
   opacity: 0.25;
 }
 
+/*
+ * Our colour scheme for the CC BY-NC-SA SVG maps (credited as "recoloured").
+ * It overrides the class names the maps share; shapes are untouched.
+ */
+.rp-map svg.rp-base-svg {
+  --svg-water: #2c6688;
+  --svg-land: #485a37;
+  --svg-trees: #36472a;
+  --svg-rock: #7b7566;
+  --svg-rock-edge: #2a2721;
+  --svg-cement: #9d988d;
+  --svg-road: #cdc6b2;
+  --svg-gravel: #93744a;
+  --svg-building: #23211d;
+  --svg-building-edge: #e2d8bf;
+  --svg-floor: #5d6064;
+  --svg-locked: #3b3f44;
+  --svg-structure: #4d4a44;
+  --svg-wood: #7d5733;
+  --svg-rail: #a3634d;
+  --svg-fence: rgb(190 210 180 / 0.55);
+  --svg-border: #050505;
+}
+
+.rp-map svg.rp-base-svg .water {
+  fill: var(--svg-water);
+}
+.rp-map svg.rp-base-svg .land {
+  fill: var(--svg-land);
+}
+.rp-map svg.rp-base-svg .trees {
+  fill: var(--svg-trees);
+}
+.rp-map svg.rp-base-svg .rock {
+  fill: var(--svg-rock);
+  filter: drop-shadow(1.5px 1.5px 0 var(--svg-rock-edge));
+}
+.rp-map svg.rp-base-svg .cement {
+  fill: var(--svg-cement);
+}
+.rp-map svg.rp-base-svg .tarmac {
+  fill: var(--svg-road);
+}
+.rp-map svg.rp-base-svg .road_tarmac {
+  stroke: var(--svg-road);
+}
+.rp-map svg.rp-base-svg .gravel {
+  fill: var(--svg-gravel);
+}
+.rp-map svg.rp-base-svg .road_gravel {
+  stroke: var(--svg-gravel);
+}
+.rp-map svg.rp-base-svg .building {
+  fill: var(--svg-building);
+  stroke: var(--svg-building-edge);
+  stroke-width: 1px;
+}
+.rp-map svg.rp-base-svg .building,
+.rp-map svg.rp-base-svg .building * {
+  vector-effect: non-scaling-stroke;
+}
+.rp-map svg.rp-base-svg .floor {
+  fill: var(--svg-floor);
+}
+.rp-map svg.rp-base-svg .locked {
+  fill: var(--svg-locked);
+}
+.rp-map svg.rp-base-svg .structure {
+  fill: var(--svg-structure);
+}
+.rp-map svg.rp-base-svg .wood {
+  fill: var(--svg-wood);
+}
+.rp-map svg.rp-base-svg .railroad {
+  stroke: var(--svg-rail);
+}
+.rp-map svg.rp-base-svg .fence {
+  stroke: var(--svg-fence);
+}
+.rp-map svg.rp-base-svg .map_border {
+  stroke: var(--svg-border);
+}
+
 .rp-map .leaflet-control-zoom {
   border: 1px solid #2a2a2a;
   border-radius: 0;
@@ -153,6 +236,36 @@
 
 .rp-map .leaflet-marker-icon.rp-off-level {
   opacity: 0.2;
+}
+
+.rp-label-wrap {
+  background: none;
+  border: none;
+  pointer-events: none;
+}
+
+.rp-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  translate: -50% -50%;
+  white-space: nowrap;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  color: #f2ead6;
+  text-shadow:
+    0 0 2px #050505,
+    0 0 2px #050505,
+    0 1px 3px rgb(0 0 0 / 0.95),
+    0 0 6px rgb(0 0 0 / 0.7);
+  user-select: none;
+}
+
+.rp-map .leaflet-marker-icon.rp-label-wrap.rp-off-level,
+.rp-map .leaflet-marker-icon.rp-label-wrap.rp-label--crowded {
+  visibility: hidden;
 }
 
 .rp-waypoint,

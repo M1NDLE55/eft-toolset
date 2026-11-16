@@ -4,7 +4,7 @@ import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/v
 import { useStore } from "@/app/lib/storage/use-store";
 import { createId } from "@/app/lib/id";
 import { STORE_KEYS } from "@/app/lib/storage/store-keys";
-import { MAX_PLAN_NAME_LENGTH, MAX_PLANS } from "./limits";
+import { MAX_LAYERS, MAX_PLAN_NAME_LENGTH, MAX_PLANS } from "./limits";
 import { isPlan, isPlanList } from "./plan-validation";
 
 export const PLAN_STORE: StoreDefinition<RaidPlan[]> = {
@@ -43,7 +43,7 @@ export function getPlan(id: string): RaidPlan | undefined {
   return readPlans().find((plan) => plan.id === id);
 }
 
-export function createPlan(name: string, mapKey: string): RaidPlan {
+export function createPlan(name: string, mapKey: string, enabledLayers: readonly string[] = []): RaidPlan {
   const timestamp = Date.now();
   return appendPlan({
     id: createId(),
@@ -51,7 +51,7 @@ export function createPlan(name: string, mapKey: string): RaidPlan {
     mapKey,
     createdAt: timestamp,
     updatedAt: timestamp,
-    enabledLayers: [],
+    enabledLayers: [...new Set(enabledLayers)].slice(0, MAX_LAYERS),
     route: [],
     drawings: [],
     notes: [],
