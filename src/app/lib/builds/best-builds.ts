@@ -9,6 +9,7 @@ import { presetParts } from "./purchase";
 import { computeStats } from "./stats";
 import { buildShoppingList } from "./shopping";
 import { slotLabel, type PartLookup } from "./resolve";
+import { sightRole } from "./sights";
 import { encodeBuildSharePayload, slugifyBuildName } from "./share";
 import { formatCaliber } from "@/app/lib/mcp/build-projection";
 import { isItemSlug } from "@/app/lib/item-links";
@@ -126,6 +127,37 @@ function partsOf(root: BuildNode, lookup: PartLookup, shopping: ReturnType<typeo
   return parts;
 }
 
+const MOUNT_SLOT = /^mod_(scope|mount|sight)/i;
+
+/**
+ * Removes sight mounts with nothing to aim with on them. The optimiser keeps an empty ring
+ * mount when it adds a little ergonomics, which is a fair trade in the builder but reads as a
+ * mistake on a page of recommended builds. Only chains of parts in scope, mount and sight slots
+ * are removed, and only when no sight is anywhere on them: a rail holding a light or a foregrip
+ * stays, and required slots are never emptied.
+ */
+export function pruneEmptyMounts(root: BuildNode, lookup: PartLookup): BuildNode {
+  const isEmptyMount = (node: BuildNode, slotNameId: string): boolean => {
+    if (!MOUNT_SLOT.test(slotNameId) || sightRole(lookup.get(node.itemId), slotNameId)) return false;
+    const item = lookup.get(node.itemId);
+    return Object.entries(node.slots).every(([slotId, child]) => {
+      const childSlot = item?.slots.find((slot) => slot.id === slotId);
+      return childSlot ? isEmptyMount(child, childSlot.nameId) : false;
+    });
+  };
+  const prune = (node: BuildNode): BuildNode => {
+    const item = lookup.get(node.itemId);
+    const slots: Record<string, BuildNode> = {};
+    for (const [slotId, child] of Object.entries(node.slots)) {
+      const slot = item?.slots.find((entry) => entry.id === slotId);
+      if (slot && !slot.required && isEmptyMount(child, slot.nameId)) continue;
+      slots[slotId] = prune(child);
+    }
+    return { itemId: node.itemId, slots };
+  };
+  return prune(root);
+}
+
 const BUILD_NAMES: Record<BestBuildKind, string> = {
   preset: "Factory preset",
   recoil: "Lowest recoil",
@@ -180,7 +212,7 @@ async function computeBestBuilds(gameMode: GameMode, weapon: BestBuildWeapon, si
         { goal, priceSources: BEST_BUILD_PRICES, ...pricing, replaceExisting: true, allowUnpriced: false, ammoId: null },
         { signal }
       );
-      builds.push(await describe(goal, weapon, result.root, lookup, pricing));
+      builds.push(await describe(goal, weapon, pruneEmptyMounts(result.root, lookup), lookup, pricing));
     } finally {
       releaseOptimizerSlot();
     }

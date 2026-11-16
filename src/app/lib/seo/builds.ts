@@ -89,7 +89,7 @@ export function bestBuildFaq(result: WeaponBestBuilds): FaqEntry[] {
   entries.push({
     question: "How are these builds chosen?",
     answer:
-      "The gun builder's optimiser searches every compatible part that can be bought from traders or the flea market, keeps a magazine at least as large as the preset's and sights of the same kind, and picks the combination with the lowest recoil or highest ergonomics. Builds update as prices and parts change.",
+      "The gun builder's optimiser searches every compatible part that can be bought from traders or the flea market, keeps a magazine at least as large as the preset's and sights of the same kind, and picks the combination with the lowest recoil or highest ergonomics. Sight mounts with nothing on them are left off. Builds update as prices and parts change.",
   });
   return entries;
 }

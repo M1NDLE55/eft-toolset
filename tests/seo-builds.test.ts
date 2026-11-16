@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { BestBuild, WeaponBestBuilds } from "@/app/lib/builds/best-builds";
 import { bestBuildDescription, bestBuildFaq, bestBuildTitle, recoilReduction } from "@/app/lib/seo/builds";
+import { pruneEmptyMounts } from "@/app/lib/builds/best-builds";
 
 function build(kind: BestBuild["kind"], overrides: Partial<BestBuild> = {}): BestBuild {
   return {
@@ -63,5 +64,34 @@ describe("best build SEO copy", () => {
   it("leaves out the preset comparison when the weapon has no preset", () => {
     const bare = { ...result, builds: result.builds.slice(1) };
     expect(bestBuildDescription(bare)).toMatch(/^Lowest recoil M4A1 build: 49 vertical and 141 horizontal recoil, 38 ergonomics/);
+  });
+});
+
+describe("empty sight mounts on best builds", () => {
+  const slot = (id: string, nameId: string, required = false) => ({ id, name: id, nameId, required, allowedItemIds: [] });
+  const part = (id: string, slots: ReturnType<typeof slot>[] = [], sight: "optic" | "iron" | null = null) =>
+    [id, { id, name: id, slots, sight }] as const;
+  const lookup = new Map([
+    part("gun", [slot("scope", "mod_scope"), slot("rail", "mod_mount_000"), slot("req", "mod_scope_001", true)]),
+    part("ring", [slot("cap", "mod_mount")]),
+    part("cap"),
+    part("rail", [slot("light", "mod_tactical")]),
+    part("light"),
+    part("dot", [], "optic"),
+    part("base", [slot("sight", "mod_scope")]),
+  ]) as unknown as Parameters<typeof pruneEmptyMounts>[1];
+
+  it("drops a mount chain with no sight, keeps mounts holding a sight or a device, and never empties required slots", () => {
+    const root = {
+      itemId: "gun",
+      slots: {
+        scope: { itemId: "ring", slots: { cap: { itemId: "cap", slots: {} } } },
+        rail: { itemId: "rail", slots: { light: { itemId: "light", slots: {} } } },
+        req: { itemId: "ring", slots: {} },
+      },
+    };
+    expect(Object.keys(pruneEmptyMounts(root, lookup).slots)).toEqual(["rail", "req"]);
+    const withSight = { itemId: "gun", slots: { scope: { itemId: "base", slots: { sight: { itemId: "dot", slots: {} } } } } };
+    expect(pruneEmptyMounts(withSight, lookup)).toEqual(withSight);
   });
 });
