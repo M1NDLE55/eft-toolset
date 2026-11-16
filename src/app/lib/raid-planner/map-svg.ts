@@ -1,4 +1,8 @@
 import { parseSafeSvg } from "./sanitize-svg";
+import type { MapConfig } from "./types";
+
+const HIDDEN_GROUP_CLASS = "rp-hidden";
+const DIMMED_GROUP_CLASS = "rp-dimmed";
 
 const MAX_MAP_SVG_BYTES = 8 * 1024 * 1024;
 const MAX_CACHED_SVGS = 4;
@@ -53,5 +57,45 @@ async function readTextWithLimit(response: Response, maxBytes: number): Promise<
     return chunks.join("");
   } finally {
     reader.releaseLock();
+  }
+}
+
+/**
+ * The element whose child groups are the map's floors. The tarkov.dev SVGs put the
+ * floor groups straight under the root, after <style> and <defs>; older files wrapped
+ * them in one more group, so look one level down as well.
+ */
+export function findFloorContainer(svg: Element, baseLayer: string | undefined): Element | null {
+  const hasBase = (element: Element) =>
+    Array.from(element.children).some((child) => child.nodeName === "g" && child.id === baseLayer);
+  if (hasBase(svg)) return svg;
+  return Array.from(svg.children).find(hasBase) ?? null;
+}
+
+/** Shows the base level plus the active floor, fading the base while a floor is picked. */
+export function applySvgFloor(
+  svg: Element,
+  config: Pick<MapConfig, "svgLayer" | "floors">,
+  activeFloor: string | null
+) {
+  const container = findFloorContainer(svg, config.svgLayer);
+  if (!container) return;
+  const activeGroupId = config.floors.find((floor) => floor.id === activeFloor)?.svgLayer;
+
+  for (const child of Array.from(container.children)) {
+    if (child.nodeName !== "g" || !child.id) continue;
+    const isBase =
+      child.id === config.svgLayer ||
+      (child as SVGGElement).dataset?.["keepWithGroup"] === config.svgLayer;
+
+    if (isBase) {
+      child.classList.remove(HIDDEN_GROUP_CLASS);
+      child.classList.toggle(DIMMED_GROUP_CLASS, Boolean(activeGroupId));
+    } else if (activeGroupId && child.id === activeGroupId) {
+      child.classList.remove(HIDDEN_GROUP_CLASS, DIMMED_GROUP_CLASS);
+    } else {
+      child.classList.add(HIDDEN_GROUP_CLASS);
+      child.classList.remove(DIMMED_GROUP_CLASS);
+    }
   }
 }
