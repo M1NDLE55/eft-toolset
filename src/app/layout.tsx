@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 import { preconnect } from "react-dom";
@@ -9,6 +8,7 @@ import { headers } from "next/headers";
 import { GameModeProvider } from "@/components/game-mode/context";
 import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
 import { Header } from "@/app/components/global/header";
+import { SiteFooter } from "@/app/components/global/site-footer";
 import { ServiceWorker } from "@/app/components/global/service-worker";
 import { SITE_ORIGIN } from "@/app/lib/site";
 import { HOME_DESCRIPTION, SITE_NAME } from "@/app/lib/seo/site-copy";
@@ -66,51 +66,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
             {children}
           </div>
         </GameModeProvider>
-        <footer className="border-t border-[#1a1a1a] bg-[#070707] px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
-          <div className="flex w-full flex-col-reverse items-center gap-4 text-[10px] uppercase tracking-widest text-[#888] sm:flex-row sm:justify-between">
-            <div className="flex flex-col-reverse items-center gap-3 sm:flex-row sm:gap-5">
-              <p>&copy; {new Date().getFullYear()} EFT Toolset</p>
-              <p>
-                Maintained by{" "}
-                <a href="https://github.com/M1NDLE55" rel="noopener noreferrer" className="text-[#9a8866] underline underline-offset-2">
-                  M1NDLE55
-                </a>
-              </p>
-              <Link href="/settings" className="underline underline-offset-2 hover:text-[#ccc]">
-                Settings
-              </Link>
-              <Link href="/data" className="underline underline-offset-2 hover:text-[#ccc]">
-                Backup &amp; restore
-              </Link>
-              <Link href="/mcp" className="underline underline-offset-2 hover:text-[#ccc]">
-                AI assistants
-              </Link>
-              <Link href="/policies/disclaimer-and-use-policy" className="underline underline-offset-2 hover:text-[#ccc]">
-                Disclaimer and use policy
-              </Link>
-              <Link href="/credits" className="underline underline-offset-2 hover:text-[#ccc]">
-                Credits
-              </Link>
-              <p>
-                Data from{" "}
-                <a href="https://tarkov.dev" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-[#ccc]">
-                  tarkov.dev
-                </a>
-              </p>
-            </div>
-            <a
-              title="GitHub repository"
-              aria-label="GitHub repository"
-              href="https://github.com/M1NDLE55/eft-toolset"
-              rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center text-[#9a8866] hover:text-[#e6d9b8]"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4" fill="currentColor">
-                <path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z" />
-              </svg>
-            </a>
-          </div>
-        </footer>
+        <SiteFooter />
         <ServiceWorker />
         <CloudflareAnalytics nonce={nonce} />
       </body>

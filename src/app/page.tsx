@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { HomeScreen } from "@/app/components/home/home-screen";
-import { HomeDirectory } from "@/app/components/home/home-directory";
 import { JsonLd } from "@/app/components/seo/json-ld";
 import { HOME_DESCRIPTION, HOME_TITLE, SITE_NAME } from "@/app/lib/seo/site-copy";
 import { SITE_ORIGIN } from "@/app/lib/site";
@@ -48,9 +47,7 @@ export default function Home() {
   return (
     <>
       <JsonLd data={structuredData} />
-      <HomeScreen>
-        <HomeDirectory />
-      </HomeScreen>
+      <HomeScreen />
     </>
   );
 }

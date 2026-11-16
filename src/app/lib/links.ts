@@ -33,3 +33,12 @@ export const appLinks: AppLink[] = [
     description: "Watchlists of loot with live best-sell prices and totals.",
   },
 ];
+
+/** Reference pages listed in the site footer next to the main tools. */
+export const guideLinks: { text: string; href: string }[] = [
+  { text: "PVE flea prices", href: "/flea-market/pve" },
+  { text: "Best weapon builds", href: "/gun-builder/best" },
+  { text: "Gunsmith builds", href: "/gun-builder/gunsmith" },
+  { text: "Ammo chart", href: "/ammo" },
+  { text: "Keys by map", href: "/keys" },
+];
