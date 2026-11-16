@@ -238,6 +238,67 @@
   opacity: 0.2;
 }
 
+.rp-extract-wrap {
+  background: none;
+  border: none;
+}
+
+.rp-extract {
+  position: absolute;
+  left: 0;
+  top: 0;
+  translate: -50% -50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 7px 3px 5px;
+  border: 1.5px solid var(--glyph);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--glyph) 22%, rgb(8 8 8 / 0.88));
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.6);
+  color: #f2ead6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: default;
+  user-select: none;
+  transition: opacity 120ms ease-out;
+}
+
+/* Fade the pill on hover so the extract zone underneath shows through. */
+.rp-extract-wrap:hover .rp-extract {
+  opacity: 0.25;
+}
+
+.rp-extract-icon {
+  display: inline-flex;
+  color: color-mix(in srgb, var(--glyph) 55%, #fff);
+}
+
+.rp-extract.rp-extract--compact {
+  padding: 3px;
+}
+
+.rp-extract--compact .rp-extract-name {
+  display: none;
+}
+
+.rp-extract.rp-extract--crowded {
+  visibility: hidden;
+}
+
+.rp-map .leaflet-marker-icon.rp-extract-wrap:focus-visible {
+  outline: none;
+}
+
+.rp-map .leaflet-marker-icon.rp-extract-wrap:focus-visible .rp-extract {
+  outline: 2px solid #f0f0f0;
+  outline-offset: 2px;
+}
+
 .rp-label-wrap {
   background: none;
   border: none;

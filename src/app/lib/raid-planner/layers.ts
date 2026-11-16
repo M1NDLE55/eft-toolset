@@ -9,6 +9,7 @@ import { LABELS_LAYER } from "./layer-options";
 import { gameToLatLng } from "./coords";
 import { itemHref } from "@/app/lib/item-links";
 import { makeLayerAccessible } from "./leaflet-accessibility";
+import { SPAWN_AREA_PADDING_METERS, spawnAreas, type SpawnAreaPoint } from "./spawn-areas";
 
 const COLORS = {
   pmc: "#7da05f",
@@ -103,7 +104,8 @@ export function buildLayer(
     const faction = id.slice("extracts:".length);
     return buildExtracts(
       details.extracts.filter((e) => e.faction === faction),
-      COLORS[faction as keyof typeof COLORS] ?? COLORS.shared
+      COLORS[faction as keyof typeof COLORS] ?? COLORS.shared,
+      EXTRACT_FACTION_LABELS[faction] ?? "Extract"
     );
   }
 
@@ -111,14 +113,9 @@ export function buildLayer(
     const kind = id.slice("spawns:".length) as SpawnKind;
     const spec = SPAWN_KINDS.find((s) => s.kind === kind);
     if (!spec) return null;
-    return buildDots(
-      details.spawns
-        .filter((s) => s.kind === kind)
-        .map((s) => ({
-          position: s.position,
-          tooltip: s.zoneName ? `${spec.label} — ${s.zoneName}` : spec.label,
-        })),
-      { color: spec.color, radius: 5, renderer: context.renderer }
+    return buildSpawnAreas(
+      details.spawns.filter((s) => s.kind === kind),
+      spec
     );
   }
 
@@ -271,34 +268,271 @@ function buildDots(
   return { group, dimmables };
 }
 
-function buildExtracts(extracts: MapExtract[], color: string): LayerEntry {
+const EXTRACT_FACTION_LABELS: Record<string, string> = {
+  pmc: "PMC extract",
+  scav: "Scav extract",
+  shared: "Shared extract",
+};
+
+/** Map event fired when markers that place names should keep clear of come or go. */
+const LABEL_OBSTACLES_EVENT = "rp:labelobstacles";
+const LABEL_OBSTACLE_SELECTOR = ".rp-extract";
+const VISIBLE_OBSTACLE_SELECTOR = ".rp-extract:not(.rp-extract--crowded)";
+
+const EXIT_ICON =
+  '<svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 2.5h-4v11h4"/><path d="M7 8h7M11 5l3 3-3 3"/></svg>';
+
+/** A pill naming the extract, so it reads as an exit without hovering it. */
+function extractIcon(name: string, color: string) {
+  const chip = document.createElement("span");
+  chip.className = "rp-extract";
+  chip.style.setProperty("--glyph", color);
+  const icon = document.createElement("span");
+  icon.className = "rp-extract-icon";
+  icon.innerHTML = EXIT_ICON;
+  const text = document.createElement("span");
+  text.className = "rp-extract-name";
+  text.textContent = name;
+  chip.append(icon, text);
+  return L.divIcon({ className: "rp-extract-wrap", html: chip, iconSize: [0, 0] });
+}
+
+function extractDescription(extract: MapExtract, factionLabel: string) {
+  const parts = [`${extract.name} — ${factionLabel}`];
+  if (extract.transferItem) {
+    parts.push(`costs ${extract.transferItem.count.toLocaleString("en-US")} × ${extract.transferItem.name}`);
+  }
+  return parts.join(", ");
+}
+
+function buildExtracts(extracts: MapExtract[], color: string, factionLabel: string): LayerEntry {
   const group = L.layerGroup();
   const dimmables: Dimmable[] = [];
-  const outlineStyle = { opacity: 0.8, fillOpacity: 0.1 };
+  // Zones stay hidden to keep the map clean; hovering an extract's pill shows its zone.
+  const hiddenStyle = { opacity: 0, fillOpacity: 0, weight: 2 };
+  const shownStyle = { opacity: 1, fillOpacity: 0.3, weight: 2 };
+  const dimmedStyle = { opacity: 0.25, fillOpacity: 0.08, weight: 2 };
 
   for (const extract of extracts) {
+    let polygon: L.Polygon | null = null;
+    let dimmed = false;
+    let hovered = false;
+    const restyle = () =>
+      polygon?.setStyle(!hovered ? hiddenStyle : dimmed ? dimmedStyle : shownStyle);
+    const setHovered = (next: boolean) => {
+      hovered = next;
+      restyle();
+    };
+
     if (extract.outline.length >= 3) {
-      const polygon = L.polygon(
+      polygon = L.polygon(
         extract.outline.map((p) => gameToLatLng(p)),
-        { color, weight: 1, ...outlineStyle }
+        { color, interactive: false, ...hiddenStyle }
       );
       polygon.addTo(group);
-      dimmables.push(
-        pathDimmable(polygon, outlineStyle, extract.position, extract.top, extract.bottom)
-      );
+      dimmables.push({
+        top: extract.top ?? extract.position.y,
+        bottom: extract.bottom ?? extract.position.y,
+        position: extract.position,
+        setDimmed: (next) => {
+          dimmed = next;
+          restyle();
+        },
+      });
     }
 
+    // Hovering the pill fades it (see globals.css) and shows the zone under it.
     const marker = L.marker(gameToLatLng(extract.position), {
-      icon: glyphIcon("square", color),
+      icon: extractIcon(extract.name, color),
+      riseOnHover: true,
     });
-    bindTooltip(marker, extract.name);
+    marker.on("mouseover", () => setHovered(true));
+    marker.on("mouseout", () => setHovered(false));
+    marker.on("add", () => {
+      const element = marker.getElement();
+      element?.addEventListener("focus", () => setHovered(true));
+      element?.addEventListener("blur", () => setHovered(false));
+    });
+    // The pill already names the extract, so it has no tooltip; screen readers get the full description.
+    makeLayerAccessible(marker, extractDescription(extract, factionLabel));
     marker.addTo(group);
     dimmables.push(
       markerDimmable(marker, extract.position, extract.top, extract.bottom)
     );
   }
 
+  announceLabelObstacles(group);
   return { group, dimmables };
+}
+
+const COMPACT_EXTRACT_CLASS = "rp-extract--compact";
+const HIDDEN_EXTRACT_CLASS = "rp-extract--crowded";
+const extractFrames = new WeakMap<L.Map, number>();
+
+/**
+ * Where extract pills overlap, later ones shrink to their icon (the name stays
+ * in the tooltip), and any that still overlap wait for a closer zoom; then the
+ * place names re-check for overlaps.
+ */
+function declutterExtracts(map: L.Map) {
+  extractFrames.delete(map);
+  const chips = Array.from(map.getContainer().querySelectorAll<HTMLElement>(LABEL_OBSTACLE_SELECTOR));
+  for (const chip of chips) chip.classList.remove(COMPACT_EXTRACT_CLASS, HIDDEN_EXTRACT_CLASS);
+  const kept: DOMRect[] = [];
+  const crowded = (rect: DOMRect) =>
+    kept.some(
+      (other) =>
+        rect.left < other.right + LABEL_GAP_PX &&
+        rect.right + LABEL_GAP_PX > other.left &&
+        rect.top < other.bottom + LABEL_GAP_PX &&
+        rect.bottom + LABEL_GAP_PX > other.top
+    );
+  for (const chip of chips) {
+    let rect = chip.getBoundingClientRect();
+    if (crowded(rect)) {
+      chip.classList.add(COMPACT_EXTRACT_CLASS);
+      rect = chip.getBoundingClientRect();
+      if (crowded(rect)) {
+        chip.classList.add(HIDDEN_EXTRACT_CLASS);
+        continue;
+      }
+    }
+    kept.push(rect);
+  }
+  map.fire(LABEL_OBSTACLES_EVENT);
+}
+
+function scheduleExtractDeclutter(map: L.Map) {
+  if (extractFrames.has(map) || typeof requestAnimationFrame !== "function") return;
+  extractFrames.set(map, requestAnimationFrame(() => declutterExtracts(map)));
+}
+
+/** Re-checks extract and place-name overlaps when this group is shown, hidden, or zoomed. */
+function announceLabelObstacles(group: L.LayerGroup) {
+  let attached: L.Map | null = null;
+  const schedule = () => attached && scheduleExtractDeclutter(attached);
+  group.on("add", () => {
+    attached = (group as unknown as { _map: L.Map | null })._map;
+    attached?.on("zoomend resize", schedule);
+    schedule();
+  });
+  group.on("remove", () => {
+    attached?.off("zoomend resize", schedule);
+    schedule();
+    attached = null;
+  });
+}
+
+/**
+ * Spawns drawn as soft-edged areas rather than exact points: where you will
+ * roughly start matters more than the exact spot.
+ */
+function buildSpawnAreas(
+  spawns: SpawnAreaPoint[],
+  spec: { label: string; color: string }
+): LayerEntry {
+  const group = L.layerGroup();
+  const dimmables: Dimmable[] = [];
+  const baseStyle = { opacity: 0, fillOpacity: 0.55 };
+  const hoverStyle = { opacity: 0, fillOpacity: 0.8 };
+  // A lighter tint than the layer colour, so the area stands out from grass and concrete.
+  const fill = lighten(spec.color, 0.3);
+
+  for (const area of spawnAreas(spawns)) {
+    const polygon = L.polygon(
+      area.outline.map((p) => gameToLatLng(p)),
+      { color: fill, fillColor: fill, weight: 0, className: "rp-spawn-area", ...baseStyle }
+    );
+    const points = area.count === 1 ? "1 spawn point" : `${area.count} spawn points`;
+    const tooltip = area.zone
+      ? `${spec.label} spawn — ${area.zone} (${points})`
+      : `${spec.label} spawn (${points})`;
+    bindTooltip(polygon, tooltip);
+
+    let dimmed = false;
+    const restingStyle = () =>
+      dimmed
+        ? { opacity: 0, fillOpacity: baseStyle.fillOpacity * 0.2 }
+        : baseStyle;
+    polygon.on("mouseover", () => polygon.setStyle(dimmed ? restingStyle() : hoverStyle));
+    polygon.on("mouseout", () => polygon.setStyle(restingStyle()));
+    polygon.on("add", () => {
+      const map = (polygon as unknown as { _map: L.Map | null })._map;
+      const element = polygon.getElement();
+      if (map && element) element.setAttribute("filter", `url(#${softEdgeFilter(map)})`);
+    });
+
+    polygon.addTo(group);
+    dimmables.push({
+      top: area.top,
+      bottom: area.bottom,
+      position: area.centre,
+      setDimmed: (next) => {
+        dimmed = next;
+        polygon.setStyle(restingStyle());
+      },
+    });
+  }
+
+  let attached: L.Map | null = null;
+  const resize = () => attached && updateSoftEdge(attached);
+  group.on("add", () => {
+    attached = (group as unknown as { _map: L.Map | null })._map;
+    attached?.on("zoomend", resize);
+    resize();
+  });
+  group.on("remove", () => {
+    attached?.off("zoomend", resize);
+    attached = null;
+  });
+
+  return { group, dimmables };
+}
+
+function lighten(hex: string, amount: number) {
+  const channels = [1, 3, 5].map((start) => parseInt(hex.slice(start, start + 2), 16));
+  return `#${channels
+    .map((channel) => Math.round(channel + (255 - channel) * amount).toString(16).padStart(2, "0"))
+    .join("")}`;
+}
+
+const SVG_NS = "http://www.w3.org/2000/svg";
+
+/** The id of a blur filter, made once per map, that feathers spawn areas' edges. */
+function softEdgeFilter(map: L.Map): string {
+  const id = `rp-soft-edge-${L.stamp(map)}`;
+  const container = map.getContainer();
+  if (container.querySelector(`#${id}`)) return id;
+
+  const svg = document.createElementNS(SVG_NS, "svg");
+  svg.setAttribute("aria-hidden", "true");
+  svg.setAttribute("width", "0");
+  svg.setAttribute("height", "0");
+  svg.style.position = "absolute";
+  const filter = document.createElementNS(SVG_NS, "filter");
+  filter.id = id;
+  for (const [name, value] of [["x", "-100%"], ["y", "-100%"], ["width", "300%"], ["height", "300%"]]) {
+    filter.setAttribute(name, value);
+  }
+  const blur = document.createElementNS(SVG_NS, "feGaussianBlur");
+  filter.append(blur);
+  svg.append(filter);
+  container.append(svg);
+  updateSoftEdge(map);
+  return id;
+}
+
+/** Scales the blur with the zoom so an area's edge always fades over part of its padding. */
+function updateSoftEdge(map: L.Map) {
+  const blur = map
+    .getContainer()
+    .querySelector(`#rp-soft-edge-${L.stamp(map)} feGaussianBlur`);
+  if (!blur) return;
+  const origin = map.latLngToLayerPoint(gameToLatLng({ x: 0, z: 0 }));
+  const step = map.latLngToLayerPoint(gameToLatLng({ x: SPAWN_AREA_PADDING_METERS, z: 0 }));
+  const paddingPx = origin.distanceTo(step);
+  const deviation = Math.min(Math.max(paddingPx * 0.3, 1.5), 12);
+  blur.setAttribute("stdDeviation", deviation.toFixed(1));
 }
 
 const LOCK_TYPE_LABELS: Record<string, string> = {
@@ -436,7 +670,11 @@ function buildLabels(labels: MapLabel[]): LayerEntry {
       .filter((element): element is HTMLElement => Boolean(element) && !element!.classList.contains("rp-off-level"));
     for (const element of candidates) element.classList.remove(HIDDEN_LABEL_CLASS);
     const rects = candidates.map((element) => element.firstElementChild?.getBoundingClientRect());
-    const kept: DOMRect[] = [];
+    const kept: DOMRect[] = attached
+      ? Array.from(attached.getContainer().querySelectorAll(VISIBLE_OBSTACLE_SELECTOR), (element) =>
+          element.getBoundingClientRect()
+        )
+      : [];
     candidates.forEach((element, index) => {
       const rect = rects[index];
       if (!rect) return;
@@ -459,11 +697,11 @@ function buildLabels(labels: MapLabel[]): LayerEntry {
   let attached: L.Map | null = null;
   group.on("add", () => {
     attached = (group as unknown as { _map: L.Map | null })._map;
-    attached?.on("zoomend resize", scheduleDeclutter);
+    attached?.on(`zoomend resize ${LABEL_OBSTACLES_EVENT}`, scheduleDeclutter);
     scheduleDeclutter();
   });
   group.on("remove", () => {
-    attached?.off("zoomend resize", scheduleDeclutter);
+    attached?.off(`zoomend resize ${LABEL_OBSTACLES_EVENT}`, scheduleDeclutter);
     attached = null;
     if (frame) cancelAnimationFrame(frame);
     frame = 0;
