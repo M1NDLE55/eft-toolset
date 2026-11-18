@@ -7,6 +7,7 @@ import { Check } from "lucide-react";
 import type { GameMode } from "@/components/game-mode/mode";
 import { MODE_LABEL } from "@/components/game-mode/mode";
 import { questStates, type QuestStatus } from "@/app/lib/quests/availability";
+import { aroundItemName } from "@/app/lib/quests/display";
 import { questGraph } from "@/app/lib/quests/graph";
 import { setObjectiveDone, useQuestProgress } from "@/app/lib/quests/progress-store";
 import { useQuestList } from "@/app/lib/quests/query";
@@ -123,6 +124,51 @@ function Conditions({ conditions, items }: { conditions: QuestObjectiveCondition
   ));
 }
 
+function ObjectiveCheck({
+  objective,
+  checked,
+  touch,
+}: {
+  objective: QuestObjective;
+  checked: boolean;
+  /** Draw the box inside a larger hit area, for compact rows. */
+  touch?: boolean;
+}) {
+  const { gameMode, hydrated, actions } = useTracking();
+  const box = cn(
+    "flex h-6 w-6 shrink-0 items-center justify-center border transition-colors",
+    checked ? "border-emerald-800 bg-emerald-950/40 text-emerald-300" : "border-[#2a2a2a] text-transparent"
+  );
+  return (
+    <button
+      type="button"
+      role="checkbox"
+      aria-checked={checked}
+      aria-label={objective.description || "Objective"}
+      disabled={!hydrated}
+      onClick={() => {
+        try {
+          setObjectiveDone(gameMode, objective.id, !checked);
+        } catch (reason) {
+          actions.setError(reason instanceof Error ? reason.message : "Could not save your progress.");
+        }
+      }}
+      className={cn(
+        "group shrink-0 focus-visible:outline-2 focus-visible:outline-[#9a8866] disabled:opacity-40",
+        touch ? "flex h-10 w-10 items-center justify-center" : cn("mt-0.5", box, !checked && "hover:border-[#9a8866]")
+      )}
+    >
+      {touch ? (
+        <span className={cn(box, !checked && "group-hover:border-[#9a8866]")}>
+          <Check className="h-3.5 w-3.5" aria-hidden />
+        </span>
+      ) : (
+        <Check className="h-3.5 w-3.5" aria-hidden />
+      )}
+    </button>
+  );
+}
+
 /** The quest's objectives as a checklist: ticks are saved with the player's progress. */
 export function ObjectiveChecklist({
   objectives,
@@ -133,7 +179,7 @@ export function ObjectiveChecklist({
   items: Record<string, QuestItem>;
   maps: Record<string, QuestMap>;
 }) {
-  const { gameMode, hydrated, progress, actions } = useTracking();
+  const { progress } = useTracking();
   const done = new Set(progress.objectives);
   const link = "text-[#aaa] underline-offset-2 hover:text-[#e6d9b8] hover:underline";
   return (
@@ -144,40 +190,44 @@ export function ObjectiveChecklist({
         const objectiveMaps = Array.from(
           new Set(objective.maps.map((key) => (maps[key]?.page && maps[maps[key].page!]?.name) || maps[key]?.name || key))
         );
-        // "Hand over the item: Salewa" already names its one item.
-        const named = objective.items.length === 1 && Boolean(items[objective.items[0]]?.name && objective.description.includes(items[objective.items[0]].name));
+        const count = objective.count !== null && objective.count > 1 && <span className="ml-2 text-xs text-[#9a8866]">×{objective.count}</span>;
+        // Item rows repeat the found-in-raid mark down a long list, so they say it short.
+        const badges = (short: boolean) => (
+          <>
+            {objective.optional && <Badge tone="plain">Optional</Badge>}
+            {objective.foundInRaid && (short ? <Badge title="Found in raid: bought copies won't count">FIR</Badge> : <Badge>Found in raid</Badge>)}
+            {objectiveMaps.length > 0 && <span className="text-[11px] text-[#777]">{objectiveMaps.join(", ")}</span>}
+          </>
+        );
+        // "Hand over the item: Salewa" names its one item: a compact row, the name linking to the item.
+        const item = objective.items.length === 1 ? items[objective.items[0]] : undefined;
+        const around = item ? aroundItemName(objective.description, item.name) : null;
+        if (item && around) {
+          return (
+            <li key={objective.id} className="flex items-center gap-1 py-0.5 pl-1 pr-3">
+              <ObjectiveCheck objective={objective} checked={checked} touch />
+              <p className={cn("flex min-w-0 flex-1 flex-wrap items-center gap-x-1.5 gap-y-0.5 text-sm", checked ? "text-[#777] line-through" : "text-[#ddd]")}>
+                {around.before.trim() && <span className="text-xs text-[#999]">{around.before.trim()}</span>}
+                <span className="inline-flex min-w-0 flex-wrap items-center gap-1.5">
+                  {item.image && <Image src={item.image} alt="" width={24} height={24} className="h-6 w-6 shrink-0 bg-[#111] object-contain" />}
+                  <ItemLink item={item} className={cn(link, checked ? "text-[#777]" : "text-[#ddd]")} />
+                  {around.after.trim() && <span>{around.after.trim()}</span>}
+                  {count}
+                  {badges(true)}
+                </span>
+              </p>
+            </li>
+          );
+        }
         return (
           <li key={objective.id} className="flex items-start gap-3 px-3 py-2.5">
-            <button
-              type="button"
-              role="checkbox"
-              aria-checked={checked}
-              aria-label={objective.description || "Objective"}
-              disabled={!hydrated}
-              onClick={() => {
-                try {
-                  setObjectiveDone(gameMode, objective.id, !checked);
-                } catch (reason) {
-                  actions.setError(reason instanceof Error ? reason.message : "Could not save your progress.");
-                }
-              }}
-              className={cn(
-                "mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center border transition-colors focus-visible:outline-2 focus-visible:outline-[#9a8866] disabled:opacity-40",
-                checked ? "border-emerald-800 bg-emerald-950/40 text-emerald-300" : "border-[#2a2a2a] text-transparent hover:border-[#9a8866]"
-              )}
-            >
-              <Check className="h-3.5 w-3.5" aria-hidden />
-            </button>
+            <ObjectiveCheck objective={objective} checked={checked} />
             <div className="flex min-w-0 flex-1 flex-col gap-1">
               <p className={cn("text-sm", checked ? "text-[#777] line-through" : "text-[#ddd]")}>
                 {objective.description || "Objective"}
-                {objective.count !== null && objective.count > 1 && <span className="ml-2 text-xs text-[#9a8866]">×{objective.count}</span>}
+                {count}
               </p>
-              <div className="flex flex-wrap items-center gap-1.5">
-                {objective.optional && <Badge tone="plain">Optional</Badge>}
-                {objective.foundInRaid && <Badge>Found in raid</Badge>}
-                {objectiveMaps.length > 0 && <span className="text-[11px] text-[#777]">{objectiveMaps.join(", ")}</span>}
-              </div>
+              <div className="flex flex-wrap items-center gap-1.5">{badges(false)}</div>
               {objective.questItem && (
                 <p className="flex items-center gap-2 text-xs text-[#999]">
                   {objective.questItem.image && (
@@ -187,7 +237,7 @@ export function ObjectiveChecklist({
                   <span className="text-[#666]">(only spawns while the quest is active)</span>
                 </p>
               )}
-              {objective.items.length > 0 && !named && (
+              {objective.items.length > 0 && (
                 <p className="flex flex-wrap gap-x-2 gap-y-0.5 text-xs text-[#888]">
                   {objective.items.length > 1 && "Any of:"}
                   {objective.items.slice(0, 12).map((id) => (

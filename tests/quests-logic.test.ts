@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { completedDependents, questStates, withPrerequisites } from "@/app/lib/quests/availability";
 import { filterQuests } from "@/app/lib/quests/filters";
+import { aroundItemName } from "@/app/lib/quests/display";
 import { chainAfter, chainBefore, questGraph, traderChain } from "@/app/lib/quests/graph";
 import { itemsNeeded } from "@/app/lib/quests/items-needed";
 import type { QuestList, QuestProgress, QuestSummary } from "@/app/lib/quests/types";
@@ -240,5 +241,17 @@ describe("quest filters", () => {
     expect(ids({ states: ["available"] }, statuses)).toEqual(["b", "c"]);
     expect(ids({ ownFaction: true }, statuses)).not.toContain("g");
     expect(ids({ states: ["available"] })).toEqual([]);
+  });
+});
+
+describe("item objectives", () => {
+  it("splits an objective's description around the one item it names", () => {
+    expect(aroundItemName("Hand over the found in raid item: Antique axe", "Antique axe")).toEqual({
+      before: "Hand over the found in raid item: ",
+      after: "",
+    });
+    expect(aroundItemName("Find Salewa in raid", "Salewa")).toEqual({ before: "Find ", after: " in raid" });
+    expect(aroundItemName("Hand over the fabrics", "Fleece fabric")).toBeNull();
+    expect(aroundItemName("Hand over the item", null)).toBeNull();
   });
 });

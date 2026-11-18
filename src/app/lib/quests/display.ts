@@ -26,3 +26,14 @@ export function requirementLabel(status: readonly RequirementStatus[]) {
 export function levelLabel(level: number) {
   return level > 1 ? `Level ${level}` : null;
 }
+
+/**
+ * For an objective that names its one item ("Hand over the found in raid item: Salewa"), the
+ * words before and after the name, so the name can link to the item; null when it isn't named.
+ */
+export function aroundItemName(description: string, name: string | null | undefined) {
+  if (!name) return null;
+  const at = description.lastIndexOf(name);
+  if (at < 0) return null;
+  return { before: description.slice(0, at), after: description.slice(at + name.length) };
+}
