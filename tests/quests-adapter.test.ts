@@ -144,6 +144,25 @@ describe("the quest list", () => {
     expect(isQuestList(list)).toBe(true);
   });
 
+  it("is checked before the client cache trusts it", async () => {
+    const list = await getQuestList("regular");
+    const [first, ...rest] = list.quests;
+    const withQuest = (patch: Record<string, unknown>) => ({ ...list, quests: [{ ...first, ...patch }, ...rest] });
+    expect(isQuestList(list)).toBe(true);
+    expect(isQuestList(null)).toBe(false);
+    expect(isQuestList([])).toBe(false);
+    expect(isQuestList({ ...list, quests: "nope" })).toBe(false);
+    expect(isQuestList({ ...list, traders: undefined })).toBe(false);
+    expect(isQuestList(withQuest({ id: "../etc" }))).toBe(false);
+    expect(isQuestList(withQuest({ slug: "Not A Slug" }))).toBe(false);
+    expect(isQuestList(withQuest({ faction: "Scav" }))).toBe(false);
+    expect(isQuestList(withQuest({ requires: [{ id: "a", status: ["done"] }] }))).toBe(false);
+    expect(isQuestList(withQuest({ needs: [{ objectives: [], items: ["x"], count: "2", foundInRaid: true }] }))).toBe(false);
+    expect(isQuestList(withQuest({ image: "javascript:alert(1)" }))).toBe(false);
+    expect(isQuestList({ ...list, items: { mod: { ...list.items.mod, image: "https://example.com/x.png" } } })).toBe(false);
+    expect(isQuestList({ ...list, maps: { factory: { key: "factory", name: "Factory", page: "../x" } } })).toBe(false);
+  });
+
   it("counts finding and handing over the same items once, and lists alternatives honestly", async () => {
     const first = (await getQuestList("regular")).quests.find((quest) => quest.id === "first")!;
     expect(first.needs).toEqual([
