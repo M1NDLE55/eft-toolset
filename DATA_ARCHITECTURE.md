@@ -37,13 +37,14 @@ server-side, cached in-process, and never forwarded wholesale to a browser.
 | `gun.ammo-items` | `gameMode`, up to 100 IDs | Ammo ballistics, prices, and trader details |
 | `map.details` | `gameMode`, normalized map key | One joined map projection |
 | `market.board` | `gameMode` | Top 48-hour flea movers and best sell value per slot |
+| `quest.list` | `gameMode` | Every quest with its requirements and item needs, and the items and maps they name |
 
 Operation names live in `src/app/lib/api/operations.ts`. The route rejects unknown
 operations, undeclared variables, invalid game modes, oversized batches, request bodies
 over 64 KiB, slow bodies, and URLs over 2 KiB. It does not accept an upstream URL,
 resource name, field selection, or arbitrary query.
 
-`item.catalog`, `item.detail`, `gun.list`, `gun.preset`, `map.details`, and `market.board` are also served
+`item.catalog`, `item.detail`, `gun.list`, `gun.preset`, `map.details`, `market.board`, and `quest.list` are also served
 over GET. The variables must be canonical JSON (sorted keys, no extra query parameters),
 so each logical request has exactly one URL. Successful GETs are sent with
 `Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=<n>`, where the
@@ -120,6 +121,48 @@ among the weapon and its sights. Durability and build size aren't in the data, s
 them as checked in game. When nothing passes, the page shows the closest attempt and a
 starting build. Results are kept for an hour per instance, and optimiser runs share the
 limit in `optimizer-slots.ts`.
+
+## Quests
+
+`/quests` lists every quest in the visitor's game mode and `/quests/<slug>` shows one. Both
+read tarkov.dev's task data through the adapter:
+
+- `getQuestList` (the `quest.list` operation) projects each task to a `QuestSummary`
+  (`src/app/lib/quests/types.ts`): trader, level, faction, Kappa and Lightkeeper flags, maps,
+  requirements with the statuses that meet them, the quests whose completion fails it,
+  trader levels, keys, objective ids, and item needs. Items and maps come once each, in
+  dictionaries beside the quests. Pages render it with `loadQuestList`
+  (`src/app/quests/load.ts`) and seed the client query cache with it, as item pages do; the
+  client refetches it when the game mode changes.
+- `getQuestDetail` adds objectives, rewards (items, standing, offer, craft and trader unlocks,
+  skills), what the quest unlocks, the chain before and after it, and buy and sell prices for
+  every item it names. It is rendered on the server only, through `loadQuestDetail`.
+
+Slugs are tarkov.dev's `normalizedName`. Tasks that share one get `-usec` or `-bear` (a task
+for every faction keeps the plain slug), and anything still shared gets the task id; tasks
+without a valid slug have no page. Zone quests have a copy in each game mode that differs only
+in its `-pvp-zone` or `-pve-zone` suffix, so a page asked for in the other mode shows this
+mode's copy; a quest only the other mode has is shown from that mode.
+
+An item need is one objective that takes items (hand over, plant, sell, mark, or use), with
+any find objective for the same items, so finding and handing over count once; a find
+objective with no hand-over is a need of its own. An objective any of several items meets
+stays one need with its alternatives, and when too many qualify to list, only its
+description. Maps are keyed by tarkov.dev's map `normalizedName`; variants (night Factory,
+Ground Zero 21+, the dark Lab and others) name the raid planner and keys page they share.
+
+`src/app/lib/quests/` holds the browser's logic: the requirement graph and per-trader chain
+columns, each quest's state from progress, level and faction (a quest is failed when a quest
+that fails it is complete; trader loyalty isn't tracked), the items still needed with
+found-in-raid apart, and the list filters. Progress (completed quests, done objectives, level,
+and faction) is kept per game mode in local storage (`progress-store.ts`) and included in
+backups. Completing a quest also marks the quests it strictly needed completed; un-completing
+one changes only that quest.
+
+Quest pages show the guide from the wiki snapshot (`src/app/lib/wiki/quest-wiki.ts`), found by
+the task's wiki link and only if it is a quest's page, without the objectives, rewards, and
+requirements tarkov.dev serves, and with the dialogue apart. It carries the same credit line as
+the item page.
 
 ## Ammo, keys and PVE prices
 
@@ -201,7 +244,7 @@ for one points the model to `search_items`, `get_item`, `get_weapon`, or `get_am
 instead. `data/wiki/index.json` lists every kept page and redirect (with the section a redirect
 points at); it is read once per instance, and pages are read one file at a time as they are
 asked for, so a cold start loads about 150 KB. `next.config.mjs` traces `data/wiki` into the
-MCP function and the item pages.
+MCP function, the item pages, and the quest pages.
 
 Item, weapon, and ammo pages are also written, apart, to `data/wiki/items/` for the item page,
 without the sections that repeat tarkov.dev (description, trading, crafting, hideout, quests,
