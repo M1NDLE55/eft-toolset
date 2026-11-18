@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import type { ReactNode } from "react";
 import { ExternalLink } from "lucide-react";
 import { ItemImage, ItemLink } from "@/app/components/quests/items-needed-view";
@@ -234,7 +234,9 @@ export default async function Page({ params }: PageProps) {
   }
   const { detail, gameMode } = loaded;
   const { quest } = detail;
-  if (quest.slug && quest.slug !== slug) permanentRedirect(`/quests/${quest.slug}`);
+  // Only a zone quest's copy for the visitor's mode has another slug, which depends on the mode
+  // cookie: a temporary redirect, so nothing caches it for visitors in the other mode.
+  if (quest.slug && quest.slug !== slug) redirect(`/quests/${quest.slug}`);
 
   const builds = detail.objectives.some((objective) => objective.type === "buildWeapon");
   const [wiki, keyMaps, questList, gunsmith] = await Promise.all([
