@@ -42,6 +42,7 @@ const objective = (id: string) => ({
   alternatives: 0,
   questItem: null,
   requiredKeys: [],
+  conditions: [],
 });
 
 const ref = (id: string, name: string) => ({ id, name, slug: id, trader: "Therapist", minPlayerLevel: 1, faction: null });

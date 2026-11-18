@@ -47,6 +47,23 @@ function questFixtures() {
       craftUnlock: [{ station: "station", level: 1, item: "reward", count: 1 }],
     },
   };
+  tasks.tasks.shooter = {
+    id: "shooter",
+    name: "shooter-name",
+    normalizedName: "shooter",
+    trader: "trader",
+    objectives: [
+      {
+        id: "shoot",
+        type: "shoot",
+        count: 5,
+        usingWeapon: [{ id: "weapon", name: "Weapon" }, { id: "ghost" }, { id: "weapon" }],
+        usingWeaponMods: [["mod", "ammo"], ["ghost"]],
+        wearing: [[{ id: "key", name: "Key" }]],
+        notWearing: [{ id: "reward" }],
+      },
+    ],
+  };
   tasks.tasks.usec = {
     id: "usec",
     name: "variant-name",
@@ -213,6 +230,7 @@ describe("a quest's detail", () => {
       alternatives: 1,
       questItem: null,
       requiredKeys: [],
+      conditions: [],
     });
     expect(detail.objectives[4].optional).toBe(true);
     expect(detail.objectives[5]).toMatchObject({
@@ -223,6 +241,19 @@ describe("a quest's detail", () => {
     expect(detail.items.mod).toMatchObject({ name: "Test Mod", buy: { price: 10_000, vendor: "Tester" } });
     expect(detail.items.reward).toMatchObject({ name: "Reward", buy: null, sell: null });
     expect(Object.keys(detail.maps).sort()).toEqual(["factory", "night-factory"]);
+  });
+
+  it("names the weapons, mods and gear an objective asks for", async () => {
+    const detail = (await getQuestDetail("regular", "shooter"))!;
+    expect(detail.objectives[0].conditions).toEqual([
+      { kind: "usingWeapon", groups: [["weapon"]] },
+      { kind: "usingWeaponMods", groups: [["mod", "ammo"]] },
+      { kind: "wearing", groups: [["key"]] },
+      { kind: "notWearing", groups: [["reward"]] },
+    ]);
+    expect(Object.keys(detail.items).sort()).toEqual(["ammo", "key", "mod", "reward", "weapon"]);
+    const first = (await getQuestDetail("regular", "first-quest"))!;
+    expect(first.objectives[0].conditions).toEqual([]);
   });
 
   it("names rewards: items, standing, offers, skills, traders and crafts", async () => {

@@ -101,6 +101,16 @@ export interface PricedQuestItem extends QuestItem {
   sell: { price: number; vendor: string } | null;
 }
 
+/**
+ * Gear an objective asks for: a weapon (any of them), weapon mods or worn gear (every item of
+ * any one group), or gear not to wear (none of them).
+ */
+export interface QuestObjectiveCondition {
+  kind: "usingWeapon" | "usingWeaponMods" | "wearing" | "notWearing";
+  /** Item ids; usingWeapon and notWearing have one item per group. */
+  groups: string[][];
+}
+
 export interface QuestObjective {
   id: string;
   type: string | null;
@@ -117,6 +127,7 @@ export interface QuestObjective {
   questItem: { name: string; image: string | null } | null;
   /** Keys it needs: every group, any one key of each group. */
   requiredKeys: string[][];
+  conditions: QuestObjectiveCondition[];
 }
 
 export interface QuestRewards {

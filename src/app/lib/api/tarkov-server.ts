@@ -41,6 +41,7 @@ import {
   type QuestList,
   type QuestMap,
   type QuestObjective,
+  type QuestObjectiveCondition,
   type QuestRef,
   type QuestRequirement,
   type QuestRewards,
@@ -235,6 +236,7 @@ interface RawTaskObjective {
   wearing?: unknown;
   usingWeapon?: unknown;
   usingWeaponMods?: unknown;
+  notWearing?: unknown;
   /** buildWeapon objectives: item categories the build must contain one of each. */
   containsCategory?: unknown;
   /** buildWeapon objectives: stat requirements, such as {ergonomics: {compareMethod: ">=", value: 40}}. */
@@ -1646,6 +1648,33 @@ function objectiveItems(objective: RawTaskObjective): string[] {
   return objectiveNeedItems(objective) ?? [];
 }
 
+const GEAR_CONDITIONS = ["usingWeapon", "usingWeaponMods", "wearing", "notWearing"] as const;
+// Mods and worn gear come in groups to use together; weapons and gear not to wear are single items.
+const GROUPED_CONDITIONS = new Set<string>(["usingWeaponMods", "wearing"]);
+
+// Condition items are ids or {id, name} records.
+const conditionItemId = (entry: unknown) => (typeof entry === "string" ? entry : isRecord(entry) && typeof entry.id === "string" ? entry.id : null);
+
+/** The weapons, mods and gear an objective asks to use, wear or not wear, as known item ids. */
+function objectiveConditions(
+  objective: RawTaskObjective,
+  known: (id: string | null | undefined) => id is string
+): QuestObjectiveCondition[] {
+  return GEAR_CONDITIONS.flatMap((kind): QuestObjectiveCondition[] => {
+    const value = objective[kind];
+    if (!Array.isArray(value)) return [];
+    const seen = new Set<string>();
+    const groups = (GROUPED_CONDITIONS.has(kind) ? value : value.map((entry) => [entry])).flatMap((group) => {
+      const found = Array.from(new Set((Array.isArray(group) ? group : [group]).map(conditionItemId))).filter(known);
+      const key = found.toSorted().join(",");
+      if (found.length === 0 || seen.has(key)) return [];
+      seen.add(key);
+      return [found];
+    });
+    return groups.length > 0 ? [{ kind, groups: groups.slice(0, MAX_LISTED_ALTERNATIVES) }] : [];
+  });
+}
+
 const readableSkill = (skill: string) => skill.replace(/([a-z])([A-Z])/g, "$1 $2");
 
 function projectRewards(
@@ -1749,6 +1778,7 @@ export async function getQuestDetail(gameMode: GameMode, slug: string): Promise<
         requiredKeys: (objective.requiredKeys ?? [])
           .map((group) => Array.from(new Set(group.filter(known))))
           .filter((group) => group.length > 0),
+        conditions: objectiveConditions(objective, known),
       },
     ];
   });
@@ -1776,7 +1806,11 @@ export async function getQuestDetail(gameMode: GameMode, slug: string): Promise<
   const itemIds = new Set([
     ...quest.needs.flatMap((need) => need.items),
     ...quest.keys.flatMap((entry) => entry.keys),
-    ...objectives.flatMap((objective) => [...objective.items, ...objective.requiredKeys.flat()]),
+    ...objectives.flatMap((objective) => [
+      ...objective.items,
+      ...objective.requiredKeys.flat(),
+      ...objective.conditions.flatMap((condition) => condition.groups.flat()),
+    ]),
     ...[rewards, startRewards].flatMap((entry) => [
       ...entry.items.map((reward) => reward.id),
       ...entry.offerUnlocks.map((offer) => offer.id),
@@ -2408,6 +2442,7 @@ function isRawTaskObjective(value: unknown): value is RawTaskObjective {
       value.wearing,
       value.usingWeapon,
       value.usingWeaponMods,
+      value.notWearing,
     ].every((entry) => optional(entry, isBoundedJsonTree))
   );
 }
