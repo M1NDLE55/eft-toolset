@@ -6,7 +6,7 @@ import { RotateCcw } from "lucide-react";
 import { ConfirmDialog } from "@/components/confirm-dialog";
 import { Button } from "@/components/ui/button";
 import type { GameMode } from "@/components/game-mode/mode";
-import { MODE_LABEL } from "@/components/game-mode/use-server-mode-sync";
+import { MODE_LABEL } from "@/components/game-mode/mode";
 import { MAX_PLAYER_LEVEL, resetQuestProgress, setFaction, setPlayerLevel } from "@/app/lib/quests/progress-store";
 import { FACTIONS, type Faction, type QuestProgress } from "@/app/lib/quests/types";
 import { plural } from "@/app/lib/seo/format";

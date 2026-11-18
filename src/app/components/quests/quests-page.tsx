@@ -4,7 +4,7 @@ import { useDeferredValue, useMemo, useState, type ReactNode } from "react";
 import { AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { GameMode } from "@/components/game-mode/mode";
-import { MODE_LABEL } from "@/components/game-mode/use-server-mode-sync";
+import { MODE_LABEL } from "@/components/game-mode/mode";
 import { questStates } from "@/app/lib/quests/availability";
 import { questName } from "@/app/lib/quests/display";
 import { filterQuests, questMatches } from "@/app/lib/quests/filters";

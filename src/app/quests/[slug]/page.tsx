@@ -11,7 +11,7 @@ import { FaqSection } from "@/app/components/seo/faq-section";
 import { JsonLd, breadcrumbList, faqPage } from "@/app/components/seo/json-ld";
 import { WikiCredit, WikiSections } from "@/app/components/wiki/wiki-text";
 import { ServerModeNote } from "@/components/game-mode/server-mode-note";
-import { MODE_LABEL } from "@/components/game-mode/use-server-mode-sync";
+import { MODE_LABEL } from "@/components/game-mode/mode";
 import { isCrawlerRequest, readForRender } from "@/app/lib/api/server-render";
 import { Rubles } from "@/app/lib/currency";
 import { isItemSlug } from "@/app/lib/item-links";

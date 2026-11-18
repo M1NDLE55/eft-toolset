@@ -3,9 +3,9 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useGameMode } from "./context";
-import type { GameMode } from "./mode";
+import { MODE_LABEL, type GameMode } from "./mode";
 
-export const MODE_LABEL: Record<GameMode, string> = { regular: "PVP", pve: "PVE" };
+export { MODE_LABEL };
 
 /**
  * For data the server rendered for one game mode: when the visitor's mode differs, render the

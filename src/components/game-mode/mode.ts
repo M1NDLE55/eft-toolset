@@ -2,6 +2,8 @@ import type { StoreDefinition } from "@/app/lib/storage/versioned-store";
 
 export type GameMode = "regular" | "pve";
 
+export const MODE_LABEL: Record<GameMode, string> = { regular: "PVP", pve: "PVE" };
+
 export const GAME_MODE_COOKIE = "eft-game-mode";
 
 export function isGameMode(value: unknown): value is GameMode {

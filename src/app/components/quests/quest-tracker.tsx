@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import type { GameMode } from "@/components/game-mode/mode";
-import { MODE_LABEL } from "@/components/game-mode/use-server-mode-sync";
+import { MODE_LABEL } from "@/components/game-mode/mode";
 import { questStates, type QuestStatus } from "@/app/lib/quests/availability";
 import { questGraph } from "@/app/lib/quests/graph";
 import { setObjectiveDone, useQuestProgress } from "@/app/lib/quests/progress-store";
