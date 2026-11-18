@@ -128,22 +128,28 @@ function listNames(names: string[]) {
   return names.length > MAX_NAMED ? `${names.slice(0, MAX_NAMED).join(", ")} and ${names.length - MAX_NAMED} more` : names.join(", ");
 }
 
+function NoticeBody({ notice, onDismiss }: { notice: QuestNotice; onDismiss: () => void }) {
+  return (
+    <p
+      className={cn(
+        "flex items-start justify-between gap-3 border px-3 py-2 text-sm",
+        notice.tone === "error" ? "border-red-900/60 bg-red-950/30 text-red-200" : "border-[#3a3326] bg-[#1a1610] text-[#d8c9a3]"
+      )}
+    >
+      <span>{notice.text}</span>
+      <button type="button" onClick={onDismiss} aria-label="Dismiss" className="shrink-0 text-[#888] hover:text-[#ccc]">
+        <X className="h-4 w-4" aria-hidden />
+      </button>
+    </p>
+  );
+}
+
+/** Errors in an alert region and other notices in a status one: each region keeps its role, so screen readers announce changes. */
 export function Notice({ notice, onDismiss }: { notice: QuestNotice | null; onDismiss: () => void }) {
   return (
-    <div role={notice?.tone === "error" ? "alert" : "status"} aria-live="polite">
-      {notice && (
-        <p
-          className={cn(
-            "flex items-start justify-between gap-3 border px-3 py-2 text-sm",
-            notice.tone === "error" ? "border-red-900/60 bg-red-950/30 text-red-200" : "border-[#3a3326] bg-[#1a1610] text-[#d8c9a3]"
-          )}
-        >
-          <span>{notice.text}</span>
-          <button type="button" onClick={onDismiss} aria-label="Dismiss" className="shrink-0 text-[#888] hover:text-[#ccc]">
-            <X className="h-4 w-4" aria-hidden />
-          </button>
-        </p>
-      )}
+    <div>
+      <div role="status">{notice?.tone === "info" && <NoticeBody notice={notice} onDismiss={onDismiss} />}</div>
+      <div role="alert">{notice?.tone === "error" && <NoticeBody notice={notice} onDismiss={onDismiss} />}</div>
     </div>
   );
 }

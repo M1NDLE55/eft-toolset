@@ -8,7 +8,7 @@ import { traderChain, type QuestGraph } from "@/app/lib/quests/graph";
 import type { QuestMap } from "@/app/lib/quests/types";
 import { cn } from "@/lib/utils";
 import { Toggle } from "./quest-filters";
-import { heading, panel } from "./quest-bits";
+import { STATE_LABEL, heading, panel } from "./quest-bits";
 
 const NODE_TONE: Record<QuestState | "unknown", string> = {
   completed: "border-emerald-800 bg-emerald-950/40 text-emerald-200",
@@ -59,7 +59,7 @@ type Hints = ReadonlyMap<string, string>;
 function Tree({ layout, graph, statuses, hints }: { layout: ChainLayout; graph: QuestGraph; statuses: ReadonlyMap<string, QuestStatus> | null; hints: Hints }) {
   const pad = 12;
   return (
-    <div className={cn(panel, "max-h-[75vh] overflow-auto overscroll-contain")} tabIndex={0} aria-label="Quest chain, scrolls both ways">
+    <div role="region" className={cn(panel, "max-h-[75vh] overflow-auto overscroll-contain")} tabIndex={0} aria-label="Quest chain, scrolls both ways">
       <div className="relative" style={{ width: layout.width + pad * 2, height: layout.height + pad * 2 }}>
         <svg aria-hidden className="absolute inset-0" width={layout.width + pad * 2} height={layout.height + pad * 2}>
           <g transform={`translate(${pad} ${pad})`} fill="none" strokeWidth={1.5}>
@@ -92,7 +92,10 @@ function Tree({ layout, graph, statuses, hints }: { layout: ChainLayout; graph: 
           const style = { left: node.x + pad, top: node.y + pad, width: CHAIN_NODE.width, height: CHAIN_NODE.height };
           const body = (
             <>
-              <span className="truncate font-semibold">{name}</span>
+              <span className="truncate font-semibold">
+                {name}
+                {state !== "unknown" && <span className="sr-only"> ({STATE_LABEL[state]})</span>}
+              </span>
               <span className="flex gap-2 text-[10px] text-[#777] no-underline">
                 {hints.has(node.id) && <span className="truncate">{hints.get(node.id)}</span>}
                 {quest.minPlayerLevel > 1 && <span className="shrink-0">Lv {quest.minPlayerLevel}</span>}
@@ -141,7 +144,7 @@ function Steps({ layout, graph, statuses, hints }: { layout: ChainLayout; graph:
                     ) : (
                       <span className="font-semibold text-[#ddd]">{questName(quest)}</span>
                     )}
-                    {state !== "unknown" && <span className="sr-only">({state})</span>}
+                    {state !== "unknown" && <span className="sr-only">({STATE_LABEL[state]})</span>}
                   </span>
                   <span className="flex flex-wrap gap-x-3 text-[11px] text-[#777]">
                     {hints.has(id) && <span>{hints.get(id)}</span>}
@@ -196,7 +199,7 @@ function Standalone({ layout, graph, statuses, hints }: { layout: ChainLayout; g
                   {name}
                 </span>
               )}
-              {state !== "unknown" && <span className="sr-only">({state})</span>}
+              {state !== "unknown" && <span className="sr-only">({STATE_LABEL[state]})</span>}
               <span className="ml-auto flex shrink-0 gap-2 text-[10px] text-[#777] no-underline">
                 {hints.has(id) && <span>{hints.get(id)}</span>}
                 {quest.minPlayerLevel > 1 && <span>Lv {quest.minPlayerLevel}</span>}
