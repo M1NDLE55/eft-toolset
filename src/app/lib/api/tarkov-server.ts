@@ -28,6 +28,26 @@ import type {
   TraderOffer,
 } from "@/app/lib/types/gunBuilder";
 import type { TaskIndex, TaskNode } from "@/app/lib/builds/quests";
+import { chainAfter, chainBefore, questGraph } from "@/app/lib/quests/graph";
+import { mapPageKey } from "@/app/lib/quests/maps";
+import {
+  isFaction,
+  type Faction,
+  type PricedQuestItem,
+  type QuestDetail,
+  type QuestItem,
+  type QuestItemNeed,
+  type QuestKeys,
+  type QuestList,
+  type QuestMap,
+  type QuestObjective,
+  type QuestRef,
+  type QuestRequirement,
+  type QuestRewards,
+  type QuestSummary,
+  type RequirementStatus,
+} from "@/app/lib/quests/types";
+import { isItemSlug } from "@/app/lib/item-links";
 import { barterCost } from "@/app/lib/builds/price";
 import { bestSell, FLEA_MARKET } from "@/app/lib/item-price";
 import type {
@@ -201,6 +221,7 @@ interface RawItem {
 }
 
 interface RawTaskObjective {
+  id?: string | null;
   description?: string | null;
   type?: string | null;
   count?: number | null;
@@ -218,6 +239,33 @@ interface RawTaskObjective {
   containsCategory?: unknown;
   /** buildWeapon objectives: stat requirements, such as {ergonomics: {compareMethod: ">=", value: 40}}. */
   buildAttributes?: unknown;
+  /** Map ids. */
+  maps?: string[] | null;
+  /** Keys the objective needs: every group, any one key of each. */
+  requiredKeys?: string[][] | null;
+  /** findQuestItem, giveQuestItem, and plantQuestItem objectives: an id in the tasks data's questItems. */
+  questItem?: string | null;
+  /** useItem objectives: items any of which can be used. */
+  useAny?: string[] | null;
+  /** taskStatus objectives and fail conditions: the other task and the statuses that count. */
+  task?: string | null;
+  status?: string[] | null;
+}
+
+interface RawTaskRewards {
+  traderStanding?: { trader?: string | null; standing?: number | null }[] | null;
+  items?: RawContainedItem[] | null;
+  offerUnlock?: { trader?: string | null; level?: number | null; item?: string | null }[] | null;
+  skillLevelReward?: { skill?: string | null; level?: number | null }[] | null;
+  /** Trader ids. */
+  traderUnlock?: string[] | null;
+  craftUnlock?: { station?: string | null; level?: number | null; item?: string | null; count?: number | null }[] | null;
+}
+
+interface RawQuestItem {
+  name?: string | null;
+  shortName?: string | null;
+  gridImageLink?: string | null;
 }
 
 interface RawTask {
@@ -237,6 +285,17 @@ interface RawTask {
     compareMethod?: string | null;
     value?: number | null;
   }[] | null;
+  experience?: number | null;
+  kappaRequired?: boolean | null;
+  lightkeeperRequired?: boolean | null;
+  restartable?: boolean | null;
+  taskImageLink?: string | null;
+  /** The task's map id, when it has one. */
+  map?: string | null;
+  neededKeys?: { map?: string | null; keys?: string[] | null }[] | null;
+  failConditions?: RawTaskObjective[] | null;
+  startRewards?: RawTaskRewards | null;
+  finishRewards?: RawTaskRewards | null;
 }
 
 interface RawBarter {
@@ -357,6 +416,7 @@ interface ItemsData {
 
 interface TasksData {
   tasks?: Dictionary<RawTask>;
+  questItems?: Dictionary<RawQuestItem>;
 }
 
 interface MapsData {
@@ -407,6 +467,7 @@ interface TasksContext {
   tasks: RawTask[];
   byId: Map<string, RawTask>;
   byItem: Map<string, TaskItemUse[]>;
+  questItems: Dictionary<RawQuestItem>;
   translations: TranslationDictionary;
 }
 
@@ -499,6 +560,7 @@ const OPERATION_VARIABLES: Record<TarkovOperation, readonly string[]> = {
   [TARKOV_OPERATIONS.ammoItems]: ["gameMode", "ids"],
   [TARKOV_OPERATIONS.mapDetails]: ["gameMode", "mapKey"],
   [TARKOV_OPERATIONS.marketBoard]: ["gameMode"],
+  [TARKOV_OPERATIONS.questList]: ["gameMode"],
 };
 
 export interface TarkovReadOptions {
@@ -585,6 +647,8 @@ export async function executeTarkovOperation(
         return getMapDetails(gameMode, readString(input.mapKey, "mapKey", 80));
       case TARKOV_OPERATIONS.marketBoard:
         return getMarketBoard(gameMode);
+      case TARKOV_OPERATIONS.questList:
+        return getQuestList(gameMode);
     }
   }, options);
 }
@@ -1162,6 +1226,7 @@ async function loadTasks(gameMode: GameMode): Promise<TasksContext> {
       tasks,
       byId: new Map(tasks.flatMap((task) => (task.id ? ([[task.id, task]] as const) : []))),
       byItem: indexTasksByItem(tasks),
+      questItems: tasksEnvelope.data.questItems ?? {},
       translations: translationsEnvelope.data,
     };
   });
@@ -1334,6 +1399,400 @@ export async function getWeaponBuildTasks(gameMode: GameMode): Promise<WeaponBui
       ];
     })
   );
+}
+
+/** Alternatives beyond this many ("sell any items") are described rather than listed. */
+const MAX_LISTED_ALTERNATIVES = 100;
+const REQUIREMENT_STATUSES = new Set<string>(["complete", "active", "failed"]);
+
+function requirementStatuses(status: string[] | null | undefined): RequirementStatus[] {
+  return (status ?? []).filter((entry): entry is RequirementStatus => REQUIREMENT_STATUSES.has(entry));
+}
+
+function questFaction(task: RawTask): Faction | null {
+  return isFaction(task.factionName) ? task.factionName : null;
+}
+
+/** Items an objective takes or uses up; null for objectives that need no item from the player. */
+function objectiveNeedItems(objective: RawTaskObjective): string[] | null {
+  switch (objective.type) {
+    case "giveItem":
+    case "plantItem":
+    case "sellItem":
+    case "findItem":
+      return objective.items ?? [];
+    case "mark":
+      return objective.markerItem ? [objective.markerItem] : [];
+    case "useItem":
+      return objective.useAny ?? [];
+    default:
+      return null;
+  }
+}
+
+/**
+ * Each objective that takes items is one need. A find objective for the same items joins it, so
+ * finding and handing over counts once; a find objective nothing hands over is a need of its own.
+ */
+function questNeeds(task: RawTask, translations: TranslationDictionary, itemById: Map<string, RawItem>): QuestItemNeed[] {
+  const needs: (QuestItemNeed & { key: string })[] = [];
+  const finds: { id: string; items: string[]; key: string; count: number; foundInRaid: boolean; label: string }[] = [];
+  for (const objective of task.objectives ?? []) {
+    const items = objectiveNeedItems(objective);
+    const count = finiteNumber(objective.count) ?? 1;
+    if (!items || objective.optional || !objective.id || count <= 0) continue;
+    const known = Array.from(new Set(items.filter((id) => itemById.has(id))));
+    if (known.length === 0) continue;
+    const entry = {
+      id: objective.id,
+      items: known,
+      key: known.toSorted().join(","),
+      count,
+      foundInRaid: objective.foundInRaid === true,
+      label: translate(objective.description, translations),
+    };
+    if (objective.type === "findItem") finds.push(entry);
+    else needs.push(questNeed(entry));
+  }
+  for (const find of finds) {
+    const handOver = needs.find((need) => need.key === find.key);
+    if (handOver) {
+      handOver.objectives.push(find.id);
+      handOver.foundInRaid ||= find.foundInRaid;
+    } else {
+      needs.push(questNeed(find));
+    }
+  }
+  return needs.map(({ key: _key, ...need }) => need);
+}
+
+function questNeed(entry: { id: string; items: string[]; key: string; count: number; foundInRaid: boolean; label: string }) {
+  const several = entry.items.length > 1;
+  return {
+    key: entry.key,
+    objectives: [entry.id],
+    items: entry.items.length > MAX_LISTED_ALTERNATIVES ? [] : entry.items,
+    count: entry.count,
+    foundInRaid: entry.foundInRaid,
+    ...(several ? { label: entry.label, alternatives: entry.items.length } : {}),
+  };
+}
+
+/**
+ * Quest slugs are tarkov.dev's normalizedName. When tasks share one (faction variants), a task
+ * for every faction keeps it and USEC or BEAR tasks get "-usec" or "-bear"; anything still
+ * shared gets the task id. Tasks without a valid slug get none.
+ */
+function questSlugs(tasks: RawTask[]): Map<string, string> {
+  const groups = new Map<string, RawTask[]>();
+  for (const task of tasks) {
+    if (!task.id || !task.normalizedName || !isItemSlug(task.normalizedName)) continue;
+    groups.set(task.normalizedName, [...(groups.get(task.normalizedName) ?? []), task]);
+  }
+  const slugs = new Map<string, string>();
+  const used = new Set<string>();
+  for (const [slug, group] of groups) {
+    if (group.length === 1) {
+      slugs.set(group[0].id!, slug);
+      used.add(slug);
+    }
+  }
+  for (const [slug, group] of groups) {
+    if (group.length === 1) continue;
+    const candidates = group.toSorted((a, b) => a.id!.localeCompare(b.id!)).map((task) => {
+      const faction = questFaction(task);
+      return { task, slug: faction ? `${slug}-${faction.toLowerCase()}` : slug };
+    });
+    for (const candidate of candidates) {
+      const shared = used.has(candidate.slug) || candidates.filter((other) => other.slug === candidate.slug).length > 1;
+      const final = shared ? `${slug}-${candidate.task.id!.toLowerCase()}` : candidate.slug;
+      if (!isItemSlug(final) || used.has(final)) continue;
+      slugs.set(candidate.task.id!, final);
+      used.add(final);
+    }
+  }
+  return slugs;
+}
+
+async function loadMapNames(gameMode: GameMode): Promise<Map<string, QuestMap>> {
+  const [mapsEnvelope, translationsEnvelope] = await Promise.all([
+    loadResource<MapsData>(gameMode, "maps"),
+    loadResource<TranslationDictionary>(gameMode, "maps_en"),
+  ]);
+  return memo(`${gameMode}/map-names`, [mapsEnvelope, translationsEnvelope], () =>
+    new Map(
+      Object.entries(mapsEnvelope.data.maps ?? {}).flatMap(([id, map]): [string, QuestMap][] => {
+        const key = map.normalizedName;
+        if (!key || !isItemSlug(key)) return [];
+        return [[id, { key, name: translate(map.name, translationsEnvelope.data) || key, page: mapPageKey(key) }]];
+      })
+    )
+  );
+}
+
+function questItem(item: RawItem, translations: TranslationDictionary): QuestItem {
+  return {
+    name: translate(item.name, translations),
+    shortName: translateNullable(item.shortName, translations),
+    slug: item.normalizedName && isItemSlug(item.normalizedName) ? item.normalizedName : null,
+    image: safeAssetUrl(item.gridImageLink),
+  };
+}
+
+function projectQuestSummary(
+  task: RawTask & { id: string },
+  slug: string | null,
+  tasks: TasksContext,
+  traderNames: Map<string, string>,
+  items: ItemsContext,
+  mapNames: Map<string, QuestMap>
+): QuestSummary {
+  const objectives = (task.objectives ?? []).filter((objective) => objective.id);
+  const mapKeys = [task.map, ...objectives.flatMap((objective) => objective.maps ?? [])].flatMap((id) => {
+    const map = id ? mapNames.get(id) : undefined;
+    return map ? [map.key] : [];
+  });
+  return {
+    id: task.id,
+    name: translate(task.name, tasks.translations) || task.id,
+    slug,
+    trader: (task.trader && (traderNames.get(task.trader) ?? task.trader)) || null,
+    minPlayerLevel: finiteNumber(task.minPlayerLevel) ?? 0,
+    faction: questFaction(task),
+    kappaRequired: task.kappaRequired === true,
+    lightkeeperRequired: task.lightkeeperRequired === true,
+    maps: Array.from(new Set(mapKeys)),
+    requires: taskRequirements(task.taskRequirements),
+    traderLevels: (task.traderRequirements ?? []).flatMap((requirement) => {
+      const level = finiteNumber(requirement.value);
+      return requirement.trader && requirement.requirementType === "level" && level !== null
+        ? [{ trader: traderNames.get(requirement.trader) ?? requirement.trader, level }]
+        : [];
+    }),
+    failedBy: taskRequirements(
+      (task.failConditions ?? []).flatMap((condition) =>
+        condition.type === "taskStatus" ? [{ task: condition.task, status: condition.status }] : []
+      )
+    ),
+    experience: finiteNumber(task.experience) ?? 0,
+    needs: questNeeds(task, tasks.translations, items.byId),
+    keys: (task.neededKeys ?? []).flatMap((entry): QuestKeys[] => {
+      const keys = Array.from(new Set((entry.keys ?? []).filter((id) => items.byId.has(id))));
+      return keys.length ? [{ map: (entry.map && mapNames.get(entry.map)?.key) || null, keys }] : [];
+    }),
+    objectives: objectives.flatMap((objective) => (objective.optional ? [] : [objective.id!])),
+    optionalObjectives: objectives.flatMap((objective) => (objective.optional ? [objective.id!] : [])),
+    image: safeAssetUrl(task.taskImageLink),
+  };
+}
+
+function taskRequirements(requirements: RawTask["taskRequirements"]): QuestRequirement[] {
+  return (requirements ?? []).flatMap((requirement) => {
+    const status = requirementStatuses(requirement.status);
+    return requirement.task && status.length ? [{ id: requirement.task, status }] : [];
+  });
+}
+
+/** Every task in the game mode, with the items, maps and traders it mentions. */
+export async function getQuestList(gameMode: GameMode): Promise<QuestList> {
+  const [tasks, traderNames, items, mapNames] = await Promise.all([
+    loadTasks(gameMode),
+    loadTraderNames(gameMode),
+    loadItems(gameMode),
+    loadMapNames(gameMode),
+  ]);
+  return memo(`${gameMode}/quest-list`, [tasks, traderNames, items, mapNames], () => {
+    const slugs = questSlugs(tasks.tasks);
+    const quests = tasks.tasks
+      .flatMap((task) =>
+        task.id ? [projectQuestSummary(task as RawTask & { id: string }, slugs.get(task.id) ?? null, tasks, traderNames, items, mapNames)] : []
+      )
+      .sort((a, b) => (a.trader ?? "").localeCompare(b.trader ?? "") || a.minPlayerLevel - b.minPlayerLevel || a.name.localeCompare(b.name));
+    const itemIds = new Set(
+      quests.flatMap((quest) => [...quest.needs.flatMap((need) => need.items), ...quest.keys.flatMap((entry) => entry.keys)])
+    );
+    const mapKeys = new Set(quests.flatMap((quest) => [...quest.maps, ...quest.keys.flatMap((entry) => (entry.map ? [entry.map] : []))]));
+    const givers = new Set(quests.map((quest) => quest.trader));
+    return {
+      quests,
+      items: Object.fromEntries(Array.from(itemIds, (id) => [id, questItem(items.byId.get(id)!, items.translations)])),
+      maps: Object.fromEntries(Array.from(mapNames.values()).filter((map) => mapKeys.has(map.key)).map((map) => [map.key, map])),
+      traders: Array.from(new Set(traderNames.values())).filter((name) => givers.has(name)),
+    };
+  });
+}
+
+/** Slugs of every quest with a page in the game mode. */
+export async function listQuestSlugs(gameMode: GameMode): Promise<string[]> {
+  const list = await getQuestList(gameMode);
+  return list.quests.flatMap((quest) => (quest.slug ? [quest.slug] : []));
+}
+
+/** Items an objective names, beyond those it takes: the weapon to build. */
+function objectiveItems(objective: RawTaskObjective): string[] {
+  if (objective.type === "buildWeapon") return objective.item ? [objective.item] : [];
+  return objectiveNeedItems(objective) ?? [];
+}
+
+const readableSkill = (skill: string) => skill.replace(/([a-z])([A-Z])/g, "$1 $2");
+
+function projectRewards(
+  rewards: RawTaskRewards | null | undefined,
+  traderNames: Map<string, string>,
+  stationNames: Map<string, string>,
+  known: (id: string | null | undefined) => id is string
+): QuestRewards {
+  const trader = (id: string) => traderNames.get(id) ?? id;
+  return {
+    items: (rewards?.items ?? []).flatMap((entry) => {
+      const count = finiteNumber(entry.count) ?? 1;
+      return known(entry.item) && count > 0 ? [{ id: entry.item, count }] : [];
+    }),
+    traderStanding: (rewards?.traderStanding ?? []).flatMap((entry) => {
+      const standing = finiteNumber(entry.standing);
+      return entry.trader && standing !== null ? [{ trader: trader(entry.trader), standing }] : [];
+    }),
+    offerUnlocks: (rewards?.offerUnlock ?? []).flatMap((entry) =>
+      known(entry.item) && entry.trader ? [{ id: entry.item, trader: trader(entry.trader), level: finiteNumber(entry.level) }] : []
+    ),
+    skills: (rewards?.skillLevelReward ?? []).flatMap((entry) => {
+      const level = finiteNumber(entry.level);
+      return entry.skill && level !== null ? [{ name: readableSkill(entry.skill), level }] : [];
+    }),
+    traderUnlocks: (rewards?.traderUnlock ?? []).map(trader),
+    craftUnlocks: (rewards?.craftUnlock ?? []).flatMap((entry) =>
+      known(entry.item) && entry.station
+        ? [
+            {
+              id: entry.item,
+              count: finiteNumber(entry.count) ?? 1,
+              station: stationNames.get(entry.station) ?? entry.station,
+              level: finiteNumber(entry.level),
+            },
+          ]
+        : []
+    ),
+  };
+}
+
+function pricedQuestItem(item: RawItem, items: ItemsContext, offers: OfferContext): PricedQuestItem {
+  const base = questItem(item, items.translations);
+  const cached = projectCachedItem(item, base.name, offers, [], items.fleaMarket);
+  const buy = cached.buyFor.reduce<CachedVendorPrice | null>(
+    (cheapest, offer) => (!cheapest || offer.priceRUB < cheapest.priceRUB ? offer : cheapest),
+    null
+  );
+  const sell = bestSell(cached);
+  return {
+    ...base,
+    buy: buy ? { price: buy.priceRUB, vendor: buy.vendor.name } : null,
+    sell: sell ? { price: sell.price, vendor: sell.vendor } : null,
+  };
+}
+
+/** One quest by slug, with its objectives, rewards, chain and priced items; null for an unknown slug. */
+export async function getQuestDetail(gameMode: GameMode, slug: string): Promise<QuestDetail | null> {
+  const [list, tasks, traderNames, items, mapNames, offers, stationNames] = await Promise.all([
+    getQuestList(gameMode),
+    loadTasks(gameMode),
+    loadTraderNames(gameMode),
+    loadItems(gameMode),
+    loadMapNames(gameMode),
+    loadOfferContext(gameMode),
+    loadStationNames(gameMode),
+  ]);
+  throwIfRequestAborted();
+  const graph = questGraph(list.quests);
+  const quest = graph.bySlug.get(slug);
+  const task = quest && tasks.byId.get(quest.id);
+  if (!quest || !task) return null;
+  const details = memo(
+    `${gameMode}/quest-details`,
+    [list, tasks, traderNames, items, mapNames, offers, stationNames],
+    () => new Map<string, QuestDetail>()
+  );
+  const cached = details.get(quest.id);
+  if (cached) return cached;
+
+  const known = (id: string | null | undefined): id is string => Boolean(id && items.byId.has(id));
+  const objectives = (task.objectives ?? []).flatMap((objective): QuestObjective[] => {
+    if (!objective.id) return [];
+    const named = Array.from(new Set(objectiveItems(objective).filter(known)));
+    const questItemId = objective.questItem;
+    const special = questItemId && Object.hasOwn(tasks.questItems, questItemId) ? tasks.questItems[questItemId] : null;
+    return [
+      {
+        id: objective.id,
+        type: objective.type ?? null,
+        description: translate(objective.description, tasks.translations),
+        count: finiteNumber(objective.count),
+        foundInRaid: objective.foundInRaid === true,
+        optional: objective.optional === true,
+        maps: Array.from(new Set((objective.maps ?? []).flatMap((id) => mapNames.get(id)?.key ?? []))),
+        items: named.length > MAX_LISTED_ALTERNATIVES ? [] : named,
+        alternatives: named.length,
+        questItem: special
+          ? { name: translate(special.name, tasks.translations) || questItemId!, image: safeAssetUrl(special.gridImageLink) }
+          : null,
+        requiredKeys: (objective.requiredKeys ?? [])
+          .map((group) => Array.from(new Set(group.filter(known))))
+          .filter((group) => group.length > 0),
+      },
+    ];
+  });
+  const rewards = projectRewards(task.finishRewards, traderNames, stationNames, known);
+  const startRewards = projectRewards(task.startRewards, traderNames, stationNames, known);
+  const unlocks = [...(graph.unlocks.get(quest.id) ?? [])];
+  const chain = { before: chainBefore(graph, quest.id), after: chainAfter(graph, quest.id) };
+
+  const questIds = new Set([
+    quest.id,
+    ...quest.requires.map((entry) => entry.id),
+    ...quest.failedBy.map((entry) => entry.id),
+    ...unlocks.map((entry) => entry.id),
+    ...chain.before,
+    ...chain.after,
+  ]);
+  const quests: Record<string, QuestRef> = {};
+  for (const id of questIds) {
+    const entry = graph.byId.get(id);
+    if (entry) {
+      const { name, slug: entrySlug, trader, minPlayerLevel, faction } = entry;
+      quests[id] = { id, name, slug: entrySlug, trader, minPlayerLevel, faction };
+    }
+  }
+  const itemIds = new Set([
+    ...quest.needs.flatMap((need) => need.items),
+    ...quest.keys.flatMap((entry) => entry.keys),
+    ...objectives.flatMap((objective) => [...objective.items, ...objective.requiredKeys.flat()]),
+    ...[rewards, startRewards].flatMap((entry) => [
+      ...entry.items.map((reward) => reward.id),
+      ...entry.offerUnlocks.map((offer) => offer.id),
+      ...entry.craftUnlocks.map((craft) => craft.id),
+    ]),
+  ]);
+  const mapKeys = new Set([
+    ...quest.maps,
+    ...objectives.flatMap((objective) => objective.maps),
+    ...quest.keys.flatMap((entry) => (entry.map ? [entry.map] : [])),
+  ]);
+  const detail: QuestDetail = {
+    gameMode,
+    quest,
+    wikiLink: safeHttpsUrl(task.wikiLink),
+    restartable: task.restartable === true,
+    objectives,
+    rewards,
+    startRewards,
+    prerequisites: quest.requires,
+    unlocks,
+    chain,
+    quests,
+    items: Object.fromEntries(Array.from(itemIds, (id) => [id, pricedQuestItem(items.byId.get(id)!, items, offers)])),
+    maps: Object.fromEntries(Array.from(mapNames.values()).filter((map) => mapKeys.has(map.key)).map((map) => [map.key, map])),
+  };
+  details.set(quest.id, detail);
+  return detail;
 }
 
 /** tarkov.dev item categories by id, with their English names and slugs. */
@@ -1727,7 +2186,13 @@ function validateResourceData(resource: Resource, data: unknown): boolean {
         )
       );
     case "tasks":
-      return isRecord(data) && optionalDictionary(data.tasks, isRawTask);
+      return (
+        isRecord(data) &&
+        optionalDictionary(data.tasks, isRawTask) &&
+        optionalDictionary(data.questItems, (item) =>
+          isRecord(item) && [item.name, item.shortName, item.gridImageLink].every(optionalShortString)
+        )
+      );
     case "maps":
       return (
         isRecord(data) &&
@@ -1873,6 +2338,37 @@ function isRawTask(value: unknown): value is RawTask {
       isRecord(requirement) &&
       [requirement.trader, requirement.requirementType, requirement.compareMethod].every(optionalShortString) &&
       optionalFiniteNumber(requirement.value)
+    ) &&
+    optionalFiniteNumber(value.experience) &&
+    [value.kappaRequired, value.lightkeeperRequired, value.restartable].every(optionalBoolean) &&
+    [value.taskImageLink, value.map].every(optionalShortString) &&
+    optionalArray(value.neededKeys, (entry) =>
+      isRecord(entry) && optionalShortString(entry.map) && optionalStringArray(entry.keys)
+    ) &&
+    optionalArray(value.failConditions, isRawTaskObjective) &&
+    optional(value.startRewards, isRawTaskRewards) &&
+    optional(value.finishRewards, isRawTaskRewards)
+  );
+}
+
+function isRawTaskRewards(value: unknown): value is RawTaskRewards {
+  return (
+    isRecord(value) &&
+    optionalArray(value.traderStanding, (entry) =>
+      isRecord(entry) && optionalShortString(entry.trader) && optionalFiniteNumber(entry.standing)
+    ) &&
+    optionalArray(value.items, isRawContainedItem) &&
+    optionalArray(value.offerUnlock, (entry) =>
+      isRecord(entry) && [entry.trader, entry.item].every(optionalShortString) && optionalFiniteNumber(entry.level)
+    ) &&
+    optionalArray(value.skillLevelReward, (entry) =>
+      isRecord(entry) && optionalShortString(entry.skill) && optionalFiniteNumber(entry.level)
+    ) &&
+    optionalStringArray(value.traderUnlock) &&
+    optionalArray(value.craftUnlock, (entry) =>
+      isRecord(entry) &&
+      [entry.station, entry.item].every(optionalShortString) &&
+      [entry.level, entry.count].every(optionalFiniteNumber)
     )
   );
 }
@@ -1880,11 +2376,17 @@ function isRawTask(value: unknown): value is RawTask {
 function isRawTaskObjective(value: unknown): value is RawTaskObjective {
   if (!isRecord(value)) return false;
   return (
-    [value.description, value.type, value.item, value.markerItem].every(optionalShortString) &&
+    [value.id, value.description, value.type, value.item, value.markerItem, value.questItem, value.task].every(
+      optionalShortString
+    ) &&
     optionalFiniteNumber(value.count) &&
     optionalBoolean(value.foundInRaid) &&
     optionalBoolean(value.optional) &&
     optionalStringArray(value.items) &&
+    optionalStringArray(value.maps) &&
+    optionalStringArray(value.useAny) &&
+    optionalStringArray(value.status) &&
+    optionalArray(value.requiredKeys, (group) => boundedArray(group, isShortString, MAX_NESTED_ENTRIES)) &&
     [
       value.containsAll,
       value.containsOne,
