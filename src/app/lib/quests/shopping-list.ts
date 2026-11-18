@@ -22,6 +22,8 @@ export interface ShoppingList {
   money: ShoppingRow[];
   /** Needs any one of several items meets. */
   choices: NeededChoice[];
+  /** See `ItemsNeeded.factionVersions`. */
+  factionVersions: boolean;
 }
 
 /**
@@ -43,7 +45,7 @@ export function shoppingList(needed: ItemsNeeded): ShoppingList {
     if (item.other > 0) other.push({ id: item.id, count: item.other, quests: rows(false) });
   }
   const byCount = (a: ShoppingRow, b: ShoppingRow) => b.count - a.count || a.id.localeCompare(b.id);
-  return { foundInRaid: foundInRaid.sort(byCount), other: other.sort(byCount), money: money.sort(byCount), choices: needed.choices };
+  return { foundInRaid: foundInRaid.sort(byCount), other: other.sort(byCount), money: money.sort(byCount), choices: needed.choices, factionVersions: needed.factionVersions };
 }
 
 const MONEY_SYMBOL: Readonly<Record<string, string>> = {

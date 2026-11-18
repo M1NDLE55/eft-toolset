@@ -142,6 +142,7 @@ describe("quest shopping list", () => {
         { id: "bolts", foundInRaid: 0, other: 4, quests: [{ id: "a", count: 4, foundInRaid: false }] },
       ],
       choices: [],
+      factionVersions: true,
     });
     expect(list.foundInRaid).toEqual([{ id: "salewa", count: 3, quests: [{ id: "a", count: 3 }] }]);
     expect(list.other).toEqual([
@@ -149,5 +150,6 @@ describe("quest shopping list", () => {
       { id: "salewa", count: 1, quests: [{ id: "b", count: 1 }] },
     ]);
     expect(list.money).toEqual([{ id: roubles, count: 50_000, quests: [{ id: "c", count: 50_000 }] }]);
+    expect(list.factionVersions).toBe(true);
   });
 });

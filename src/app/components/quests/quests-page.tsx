@@ -26,7 +26,7 @@ import { plural } from "@/app/lib/seo/format";
 import { cn } from "@/lib/utils";
 import { ChainsView } from "./chains-view";
 import { ItemsNeededView } from "./items-needed-view";
-import { LevelAndFaction, ProgressSettings } from "./progress-settings";
+import { FactionToggles, LevelAndFaction, ProgressSettings } from "./progress-settings";
 import { empty, panel } from "./quest-bits";
 import { QuestFilters, Toggle } from "./quest-filters";
 import { QuestRows } from "./quest-rows";
@@ -143,6 +143,7 @@ export function QuestsPage({ initial, search }: { initial: QuestsInitial | null;
     const include = (quest: Parameters<typeof stillToDo>[0], status: Parameters<typeof stillToDo>[1]) =>
       stillToDo(quest, status) && (state.scope === "remaining" || status?.state === "available") && questMatches(quest, questOnly, list, status);
     const counted = list.quests.filter((quest) => include(quest, statuses?.get(quest.id))).length;
+    const shopping = shoppingList(itemsNeeded(graph, progress, include, statuses ?? new Map()));
     body = (
       <div className="flex flex-col gap-4">
         <QuestFilters
@@ -163,8 +164,16 @@ export function QuestsPage({ initial, search }: { initial: QuestsInitial | null;
             Available now
           </Toggle>
         </div>
+        {hydrated && shopping.factionVersions && (
+          <section className={`${panel} flex flex-wrap items-center justify-between gap-3 p-3`}>
+            <p className="text-xs text-[#bbb]">
+              Your faction isn&apos;t set, so quests with a USEC and a BEAR version count once, at the larger need. Set it to count only yours.
+            </p>
+            <FactionToggles gameMode={gameMode} progress={progress} disabled={!hydrated} onError={reportError} />
+          </section>
+        )}
         <ItemsNeededView
-          shopping={shoppingList(itemsNeeded(graph, progress, include, statuses ?? new Map()))}
+          shopping={shopping}
           list={list}
           graph={graph}
           text={text}

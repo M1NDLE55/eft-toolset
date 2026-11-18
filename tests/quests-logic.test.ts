@@ -168,6 +168,52 @@ describe("items still needed", () => {
     expect(needed.choices).toEqual([]);
   });
 
+  it("counts a quest's USEC and BEAR versions once until the faction is set", () => {
+    const fabric = (count: number) => ({ objectives: [`fabric-${count}`], items: ["fabric"], count, foundInRaid: true });
+    const versions = questGraph([
+      quest("textile-usec", { name: "Textile - Part 2", trader: "Ragman", faction: "USEC", needs: [fabric(10)] }),
+      quest("textile-bear", {
+        name: "Textile - Part 2",
+        trader: "Ragman",
+        faction: "BEAR",
+        needs: [fabric(12), { objectives: ["bear-salewa"], items: ["salewa"], count: 1, foundInRaid: false }],
+      }),
+      quest("other", { needs: [fabric(3)] }),
+    ]);
+    const unset = itemsNeeded(versions, progress());
+    expect(unset.factionVersions).toBe(true);
+    expect(unset.items).toEqual([
+      {
+        id: "fabric",
+        foundInRaid: 15,
+        other: 0,
+        quests: [
+          { id: "textile-bear", count: 12, foundInRaid: true },
+          { id: "other", count: 3, foundInRaid: true },
+        ],
+      },
+      { id: "salewa", foundInRaid: 0, other: 1, quests: [{ id: "textile-bear", count: 1, foundInRaid: false }] },
+    ]);
+    // Once one version's objective is done, the other version's need is the larger.
+    const half = itemsNeeded(versions, progress({ objectives: ["fabric-12"] }));
+    expect(half.items[0]).toMatchObject({ id: "fabric", foundInRaid: 13, quests: [{ id: "textile-usec", count: 10, foundInRaid: true }, { id: "other", count: 3, foundInRaid: true }] });
+
+    const usec = itemsNeeded(versions, progress({ faction: "USEC" }));
+    expect(usec.factionVersions).toBe(false);
+    expect(usec.items).toEqual([
+      {
+        id: "fabric",
+        foundInRaid: 13,
+        other: 0,
+        quests: [
+          { id: "textile-usec", count: 10, foundInRaid: true },
+          { id: "other", count: 3, foundInRaid: true },
+        ],
+      },
+    ]);
+    expect(itemsNeeded(graph, progress()).factionVersions).toBe(false);
+  });
+
   it("can be limited to some quests", () => {
     const needed = itemsNeeded(graph, progress(), (entry) => entry.id === "g");
     expect(needed.items).toMatchObject([{ id: "salewa", foundInRaid: 1, other: 0 }]);

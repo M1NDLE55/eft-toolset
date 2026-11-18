@@ -13,6 +13,45 @@ import { plural } from "@/app/lib/seo/format";
 import { Toggle } from "./quest-filters";
 import { heading, panel } from "./quest-bits";
 
+function saving(onError: (message: string) => void) {
+  return (work: () => void) => {
+    try {
+      work();
+    } catch (reason) {
+      onError(reason instanceof Error ? reason.message : "Could not save your progress.");
+    }
+  };
+}
+
+/** The player's faction, saved as it changes. */
+export function FactionToggles({
+  gameMode,
+  progress,
+  disabled,
+  onError,
+}: {
+  gameMode: GameMode;
+  progress: QuestProgress;
+  disabled: boolean;
+  onError: (message: string) => void;
+}) {
+  const save = saving(onError);
+  return (
+    <div role="group" aria-label="Faction" className="flex gap-1.5">
+      {[null, ...FACTIONS].map((faction: Faction | null) => (
+        <Toggle
+          key={faction ?? "any"}
+          pressed={progress.faction === faction}
+          disabled={disabled}
+          onClick={() => save(() => setFaction(gameMode, faction))}
+        >
+          {faction ?? "Not set"}
+        </Toggle>
+      ))}
+    </div>
+  );
+}
+
 /** The player's level and faction, which decide what's available; saved as they change. */
 export function LevelAndFaction({
   gameMode,
@@ -27,13 +66,7 @@ export function LevelAndFaction({
 }) {
   // Typing goes through text so a half-typed level isn't saved; a whole one is.
   const [draft, setDraft] = useState<string | null>(null);
-  const save = (work: () => void) => {
-    try {
-      work();
-    } catch (reason) {
-      onError(reason instanceof Error ? reason.message : "Could not save your progress.");
-    }
-  };
+  const save = saving(onError);
   return (
     <div className="flex flex-wrap items-end gap-4">
       <label className="flex flex-col gap-1">
@@ -59,18 +92,7 @@ export function LevelAndFaction({
       </label>
       <div className="flex flex-col gap-1">
         <span className="text-[10px] font-bold uppercase tracking-widest text-[#777]">Faction</span>
-        <div role="group" aria-label="Faction" className="flex gap-1.5">
-          {[null, ...FACTIONS].map((faction: Faction | null) => (
-            <Toggle
-              key={faction ?? "any"}
-              pressed={progress.faction === faction}
-              disabled={disabled}
-              onClick={() => save(() => setFaction(gameMode, faction))}
-            >
-              {faction ?? "Not set"}
-            </Toggle>
-          ))}
-        </div>
+        <FactionToggles gameMode={gameMode} progress={progress} disabled={disabled} onError={onError} />
       </div>
     </div>
   );
