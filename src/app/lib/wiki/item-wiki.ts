@@ -1,12 +1,7 @@
+import { groupWikiSections, type WikiPageSection } from "./page-sections";
 import { findItemWikiPage, wikiSnapshotDate } from "./snapshot";
 
-/** One section of an item's wiki page, as plain text: "- " starts a list line, "| " a table row. */
-export interface ItemWikiSection {
-  heading: string;
-  /** Subsections of a section, such as each map under "Location". */
-  subsections: { heading: string; text: string }[];
-  text: string;
-}
+export type ItemWikiSection = WikiPageSection;
 
 /** What the item page shows from an item's wiki page. Wiki text is written by anyone: show it as text only. */
 export interface ItemWiki {
@@ -51,39 +46,12 @@ const FACTS: [key: string, label: string][] = [
   ["exam xp", "Examine XP"],
 ];
 
-const MAX_TEXT = 4_000;
-
-function clip(text: string) {
-  return text.length > MAX_TEXT ? `${text.slice(0, MAX_TEXT).trimEnd()}…` : text;
-}
-
 /** The item's wiki page shaped for the item page, or null when there is none or it can't be read. */
 export async function readItemWiki(id: string): Promise<ItemWiki | null> {
   try {
     const page = await findItemWikiPage(id);
     if (!page) return null;
-    const whereToFind: ItemWikiSection[] = [];
-    const notes: ItemWikiSection[] = [];
-    let parent: { section: ItemWikiSection; level: number } | null = null;
-    for (const entry of page.sections) {
-      const heading = entry.heading.trim();
-      if (parent && entry.level > parent.level) {
-        if (entry.text) parent.section.subsections.push({ heading, text: clip(entry.text) });
-        continue;
-      }
-      parent = null;
-      // The introduction is level 1 and every other section follows it, so only nested sections group.
-      const nests = entry.level >= 2;
-      if (LEFT_OUT.has(heading.toLowerCase())) {
-        // Drop its subsections too.
-        if (nests) parent = { section: { heading, subsections: [], text: "" }, level: entry.level };
-        continue;
-      }
-      const section: ItemWikiSection = { heading, subsections: [], text: clip(entry.text) };
-      if (nests) parent = { section, level: entry.level };
-      (WHERE.test(heading) ? whereToFind : notes).push(section);
-    }
-    const keep = (section: ItemWikiSection) => section.text || section.subsections.length > 0;
+    const sections = groupWikiSections(page.sections, LEFT_OUT);
     const facts = FACTS.flatMap(([key, label]) => {
       const value = page.infobox[key]?.trim();
       // Some infobox templates leave empty labels behind ("Buffs:, Removes:,"); skip those values.
@@ -95,8 +63,8 @@ export async function readItemWiki(id: string): Promise<ItemWiki | null> {
       lastEdited: page.lastEdited,
       snapshotDate: await wikiSnapshotDate(),
       facts,
-      whereToFind: whereToFind.filter(keep),
-      notes: notes.filter(keep),
+      whereToFind: sections.filter((section) => WHERE.test(section.heading)),
+      notes: sections.filter((section) => !WHERE.test(section.heading)),
     };
   } catch (error) {
     console.warn("Item wiki page could not be read:", error instanceof Error ? error.message : error);
