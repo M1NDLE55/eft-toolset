@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState, type ReactNode } from "react";
-import { ChevronRight, Crosshair, Layers, Map as MapIcon, ScanSearch } from "lucide-react";
+import { ChevronRight, Crosshair, Layers, ListChecks, Map as MapIcon, ScanSearch } from "lucide-react";
 import { appLinks } from "@/app/lib/links";
 import { Rubles } from "@/app/lib/currency";
 import { bestSell } from "@/app/lib/item-price";
@@ -42,6 +42,7 @@ const toolIcons = {
   "/item-groups": Layers,
   "/gun-builder": Crosshair,
   "/raid-planner": MapIcon,
+  "/quests": ListChecks,
 } as const;
 
 function ago(timestamp: number, now: number) {
@@ -586,7 +587,7 @@ export function MapsGrid() {
 
 export function ToolLinks({ compact = false, className }: { compact?: boolean; className?: string }) {
   return (
-    <nav aria-label="Tools" className={cn("grid w-full grid-cols-1 gap-3", compact ? "sm:grid-cols-2 lg:grid-cols-4" : "sm:grid-cols-2", className)}>
+    <nav aria-label="Tools" className={cn("grid w-full grid-cols-1 gap-3", compact ? "sm:grid-cols-2 lg:grid-cols-5" : "sm:grid-cols-2", className)}>
       {appLinks.map((link) => {
         const Icon = toolIcons[link.href as keyof typeof toolIcons];
         return (

@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 
 import type { MetadataRoute } from "next";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
-import { listItemSlugs, releaseOperationSlot, tryAcquireOperationSlot } from "@/app/lib/api/tarkov-server";
+import { listItemSlugs, listQuestSlugs, releaseOperationSlot, tryAcquireOperationSlot } from "@/app/lib/api/tarkov-server";
 import { SITE_ORIGIN as ORIGIN } from "@/app/lib/site";
 import { listBestBuildWeapons } from "@/app/lib/builds/best-builds";
 import { listGunsmithTasks } from "@/app/lib/builds/gunsmith-pages";
@@ -29,12 +29,14 @@ async function loadSlugs(list: () => Promise<string[]>): Promise<string[]> {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [itemSlugs, weaponSlugs, gunsmithSlugs, caliberSlugs, keyMaps] = await Promise.all([
+  const [itemSlugs, weaponSlugs, gunsmithSlugs, caliberSlugs, keyMaps, questSlugs] = await Promise.all([
     loadSlugs(() => listItemSlugs()),
     loadSlugs(async () => (await listBestBuildWeapons("regular")).map((weapon) => weapon.slug)),
     loadSlugs(async () => (await listGunsmithTasks("regular")).map((task) => task.slug)),
     loadSlugs(async () => groupAmmo(await getAllAmmo("regular")).map((caliber) => caliber.slug)),
     loadSlugs(async () => (await getKeyCounts("regular")).map((map) => map.key)),
+    // PVP's quests: a PVE zone quest's slug redirects to its PVP copy for visitors without a mode.
+    loadSlugs(() => listQuestSlugs("regular")),
   ]);
   const routes = [
     { path: "/", priority: 1, changeFrequency: "monthly" as const },
@@ -45,6 +47,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/gun-builder/gunsmith", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/ammo", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/keys", priority: 0.7, changeFrequency: "weekly" as const },
+    { path: "/quests", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/flea-market/pve", priority: 0.8, changeFrequency: "daily" as const },
     { path: "/raid-planner", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/mcp", priority: 0.5, changeFrequency: "monthly" as const },
@@ -80,6 +83,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${ORIGIN}/gun-builder/gunsmith/${slug}`,
       changeFrequency: "weekly" as const,
       priority: 0.7,
+    })),
+    ...questSlugs.map((slug) => ({
+      url: `${ORIGIN}/quests/${slug}`,
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
     })),
     ...weaponSlugs.map((slug) => ({
       url: `${ORIGIN}/gun-builder/best/${slug}`,
