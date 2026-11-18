@@ -153,7 +153,8 @@ export function QuestFilters({
         </Toggle>
         <Toggle
           pressed={state.ownFaction}
-          disabled={hydrated && !factionSet}
+          // Left on from a link without a faction set, it can still be turned off.
+          disabled={hydrated && !factionSet && !state.ownFaction}
           onClick={() => onChange({ ownFaction: !state.ownFaction })}
           title={factionSet ? "Hide the other faction's quests" : "Set your faction in Progress first"}
         >
