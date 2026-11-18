@@ -330,7 +330,7 @@ export default async function Page({ params }: PageProps) {
             Only in {MODE_LABEL[detail.gameMode]}: this quest isn&apos;t in {MODE_LABEL[gameMode]}, so this page shows {MODE_LABEL[detail.gameMode]} data.{" "}
           </strong>
         )}
-        Objectives, items and rewards come from tarkov.dev; tick objectives off as you go. <ServerModeNote rendered={detail.gameMode} />
+        Objectives, items and rewards come from tarkov.dev; tick objectives off as you go. <ServerModeNote rendered={gameMode} prices={detail.gameMode} />
       </p>
       {pages.length > 0 && (
         <nav aria-label="Maps" className="-mt-4 flex flex-wrap gap-1.5">
