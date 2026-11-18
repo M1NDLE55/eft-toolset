@@ -22,7 +22,7 @@ export function WikiText({ text }: { text: string }) {
     else blocks.push({ kind, lines: [line] });
   }
   return (
-    <div className="flex flex-col gap-1.5 text-sm text-[#bbb]">
+    <div className="flex min-w-0 flex-col gap-1.5 text-sm text-[#bbb] [overflow-wrap:anywhere]">
       {blocks.map((block, index) => {
         if (block.kind === "list") {
           return (
