@@ -68,6 +68,14 @@ export function useQuestActions(gameMode: GameMode, graph: QuestGraph | null, pr
     run(() => {
       const added = completeQuest(gameMode, graph ?? NO_QUESTS, id);
       const earlier = added.filter((entry) => entry !== id);
+      if (!graph) {
+        // Without this mode's quest list there's no telling which quests came first.
+        setNotice({
+          tone: "info",
+          text: `Marked ${name} complete. The quest list for this mode hasn't loaded, so earlier quests it needed weren't marked: mark them from the quest list.`,
+        });
+        return;
+      }
       setNotice(
         earlier.length > 0
           ? {

@@ -34,9 +34,9 @@ const quest = (id: string, requires: QuestSummary["requires"] = []): QuestSummar
 
 const graph = questGraph([quest("a"), quest("b", [{ id: "a", status: ["complete"] }]), quest("c", [{ id: "b", status: ["complete"] }])]);
 
-function Harness() {
+function Harness({ loaded = true }: { loaded?: boolean }) {
   const progress = useQuestProgress("regular");
-  const actions = useQuestActions("regular", graph, progress);
+  const actions = useQuestActions("regular", loaded ? graph : null, progress);
   return (
     <div>
       {["a", "b", "c"].map((id) => (
@@ -75,6 +75,15 @@ describe("marking quests complete", () => {
     click('[data-quest="c"]');
     expect(completed()).toEqual(["a", "b", "c"]);
     expect(document.querySelector("[data-notice]")?.textContent).toBe("Marked C complete, and 2 earlier quests it needed: B, A.");
+  });
+
+  it("says earlier quests weren't marked when the quest list hasn't loaded", () => {
+    act(() => root.render(<Harness loaded={false} />));
+    click('[data-quest="c"]');
+    expect(completed()).toEqual(["c"]);
+    expect(document.querySelector("[data-notice]")?.textContent).toBe(
+      "Marked this quest complete. The quest list for this mode hasn't loaded, so earlier quests it needed weren't marked: mark them from the quest list."
+    );
   });
 
   it("un-marks a quest nothing later needed without asking", () => {
