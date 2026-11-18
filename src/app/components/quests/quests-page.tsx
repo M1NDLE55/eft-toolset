@@ -42,7 +42,8 @@ const VIEWS: { id: QuestView; label: string }[] = [
 
 function ViewTabs({ active, onSelect }: { active: QuestView; onSelect: (view: QuestView) => void }) {
   return (
-    <div role="group" aria-label="Quest view" className="flex max-w-full overflow-x-auto border border-[#1a1a1a]">
+    // Wraps rather than scrolls, so every view shows on a phone.
+    <div role="group" aria-label="Quest view" className="flex max-w-full flex-wrap border border-[#1a1a1a]">
       {VIEWS.map((view) => (
         <button
           key={view.id}
@@ -50,7 +51,7 @@ function ViewTabs({ active, onSelect }: { active: QuestView; onSelect: (view: Qu
           aria-pressed={view.id === active}
           onClick={() => onSelect(view.id)}
           className={cn(
-            "h-8 shrink-0 px-3 text-[11px] font-bold uppercase tracking-widest transition-colors",
+            "h-8 grow whitespace-nowrap px-3 text-[11px] font-bold uppercase tracking-widest transition-colors sm:grow-0",
             view.id === active ? "bg-[#c8b384] text-black" : "text-[#888] hover:bg-[#111] hover:text-[#ccc]"
           )}
         >
