@@ -111,7 +111,8 @@ export function ItemsNeededView({
   return (
     <div className="flex flex-col gap-6">
       <p className="text-xs text-[#888]">
-        For {questCount.toLocaleString("en-US")} quests. Mark an objective done on a quest&apos;s page to take its items off this list.
+        For {questCount.toLocaleString("en-US")} quests. Mark an objective done on a quest&apos;s page to take its items off this list. Both
+        sides of a choice you haven&apos;t made yet are counted, until you complete one.
       </p>
       {shopping.money.length > 0 && !text && (
         <section className="flex flex-col gap-2">

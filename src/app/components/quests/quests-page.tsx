@@ -152,7 +152,6 @@ export function QuestsPage({ initial, search }: { initial: QuestsInitial | null;
     const questOnly = { ...filter, text: undefined, states: undefined };
     const include = (quest: Parameters<typeof stillToDo>[0], status: Parameters<typeof stillToDo>[1]) =>
       stillToDo(quest, status) && (state.scope === "remaining" || status?.state === "available") && questMatches(quest, questOnly, list, status);
-    const counted = list.quests.filter((quest) => include(quest, statuses?.get(quest.id))).length;
     const shopping = shoppingList(itemsNeeded(graph, progress, include, statuses ?? new Map()));
     body = (
       <div className="flex flex-col gap-4">
@@ -187,7 +186,7 @@ export function QuestsPage({ initial, search }: { initial: QuestsInitial | null;
           list={list}
           graph={graph}
           text={text}
-          questCount={counted}
+          questCount={shopping.quests}
         />
       </div>
     );

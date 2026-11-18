@@ -204,6 +204,7 @@ describe("items still needed", () => {
     ]);
     const unset = itemsNeeded(versions, progress());
     expect(unset.factionVersions).toBe(true);
+    expect(unset.quests).toBe(2);
     expect(unset.items).toEqual([
       {
         id: "fabric",
@@ -222,6 +223,7 @@ describe("items still needed", () => {
 
     const usec = itemsNeeded(versions, progress({ faction: "USEC" }));
     expect(usec.factionVersions).toBe(false);
+    expect(usec.quests).toBe(2);
     expect(usec.items).toEqual([
       {
         id: "fabric",

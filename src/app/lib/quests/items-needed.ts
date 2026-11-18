@@ -26,6 +26,8 @@ export interface ItemsNeeded {
    * need per item; setting a faction counts only that faction's.
    */
   factionVersions: boolean;
+  /** How many quests were counted, a quest's USEC and BEAR versions as one. */
+  quests: number;
 }
 
 /** By default every quest not completed or failed, and not only for the other faction. */
@@ -96,5 +98,6 @@ export function itemsNeeded(
     ),
     choices,
     factionVersions,
+    quests: groups.size,
   };
 }
