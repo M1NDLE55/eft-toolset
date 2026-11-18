@@ -82,7 +82,7 @@ export function completeQuest(gameMode: GameMode, graph: QuestGraph, id: string)
   let added: string[] = [];
   update(gameMode, (progress) => {
     const completed = new Set(progress.completed);
-    added = withPrerequisites(graph, id).filter((entry) => !completed.has(entry));
+    added = withPrerequisites(graph, id, progress.faction).filter((entry) => !completed.has(entry));
     if (!graph.byId.has(id) && !completed.has(id)) added = [id];
     return { ...progress, completed: [...progress.completed, ...added] };
   });

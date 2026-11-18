@@ -121,6 +121,27 @@ describe("quest availability", () => {
   });
 });
 
+describe("quests that need one only the other faction gets", () => {
+  const teller = questGraph([
+    quest("start"),
+    quest("teller", { faction: "USEC", requires: [{ id: "start", status: ["complete"] }] }),
+    quest("mediator", { requires: [{ id: "teller", status: ["complete"] }], needs: [{ objectives: ["m-1"], items: ["salewa"], count: 1, foundInRaid: false }] }),
+  ]);
+
+  it("doesn't lock them for the other faction, but does until the faction is set", () => {
+    expect(questStates(teller, progress({ faction: "BEAR" })).get("mediator")!.state).toBe("available");
+    expect(questStates(teller, progress({ faction: "USEC" })).get("mediator")!.state).toBe("locked");
+    expect(questStates(teller, progress()).get("mediator")!.state).toBe("locked");
+    expect(itemsNeeded(teller, progress({ faction: "BEAR" })).items).toMatchObject([{ id: "salewa", other: 1 }]);
+  });
+
+  it("doesn't mark the other faction's quest, or what led to it, when completing one", () => {
+    expect(withPrerequisites(teller, "mediator", "BEAR")).toEqual(["mediator"]);
+    expect(withPrerequisites(teller, "mediator", "USEC").toSorted()).toEqual(["mediator", "start", "teller"]);
+    expect(withPrerequisites(teller, "mediator").toSorted()).toEqual(["mediator", "start", "teller"]);
+  });
+});
+
 describe("quest chains", () => {
   it("walks prerequisites first and followers nearest first, skipping failure branches", () => {
     expect(chainBefore(graph, "d")).toEqual(["a", "b"]);
