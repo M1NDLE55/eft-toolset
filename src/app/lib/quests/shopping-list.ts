@@ -45,3 +45,17 @@ export function shoppingList(needed: ItemsNeeded): ShoppingList {
   const byCount = (a: ShoppingRow, b: ShoppingRow) => b.count - a.count || a.id.localeCompare(b.id);
   return { foundInRaid: foundInRaid.sort(byCount), other: other.sort(byCount), money: money.sort(byCount), choices: needed.choices };
 }
+
+const MONEY_SYMBOL: Readonly<Record<string, string>> = {
+  "5449016a4bdc2d6f028b456f": " ₽",
+  "5696686a4bdc2da3298b456a": "$",
+  "569668774bdc2da2298b4568": "€",
+};
+
+/** "50,000 ₽", "$1,000" or "€450" for money; null for any other item. */
+export function moneyLabel(id: string, count: number) {
+  if (!Object.hasOwn(MONEY_SYMBOL, id)) return null;
+  const amount = Math.round(count).toLocaleString("en-US");
+  const symbol = MONEY_SYMBOL[id];
+  return symbol.startsWith(" ") ? `${amount}${symbol}` : `${symbol}${amount}`;
+}
