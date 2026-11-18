@@ -12,6 +12,15 @@ import { Rubles } from "@/app/lib/currency";
 import { formatRoubles, plural } from "@/app/lib/seo/format";
 import type { FaqEntry } from "@/app/lib/seo/item";
 import { FaqSection } from "@/app/components/seo/faq-section";
+import { loadQuestList } from "@/app/quests/load";
+import type { QuestList } from "@/app/lib/quests/types";
+
+/** Quest pages by name, for names only one quest has (faction variants share theirs). */
+function questPages(list: QuestList | undefined) {
+  const slugs = new Map<string, string | null>();
+  for (const quest of list?.quests ?? []) slugs.set(quest.name, slugs.has(quest.name) ? null : quest.slug);
+  return slugs;
+}
 
 interface PageProps {
   params: Promise<{ map: string }>;
@@ -84,7 +93,9 @@ export default async function Page({ params }: PageProps) {
   }
   if (!loaded || loaded.keys.length === 0) notFound();
   const faq = keysFaq(loaded);
-  const otherMaps = ((await readForRender("Keys list", () => getKeyCounts("regular"))) ?? []).filter((map) => map.key !== config.key);
+  const [counts, quests] = await Promise.all([readForRender("Keys list", () => getKeyCounts("regular")), loadQuestList()]);
+  const otherMaps = (counts ?? []).filter((map) => map.key !== config.key);
+  const questSlugs = questPages(quests?.gameMode === loaded.gameMode ? quests.list : undefined);
   return (
     <div className="flex w-full max-w-4xl flex-col gap-8">
       <JsonLd
@@ -145,7 +156,25 @@ export default async function Page({ params }: PageProps) {
                   <span className="block text-[10px] text-[#777]">{key.buySource === "Flea Market" ? "Flea" : (key.buySource ?? "Loot only")}</span>
                 </td>
                 <td className="px-2 py-1.5 text-right tabular-nums text-[#aaa]">{key.sellPrice === null ? "—" : Rubles.format(key.sellPrice)}</td>
-                <td className="px-3 py-1.5 text-xs text-[#999]">{key.tasks.length ? key.tasks.join(", ") : "—"}</td>
+                <td className="px-3 py-1.5 text-xs text-[#999]">
+                  {key.tasks.length
+                    ? key.tasks.map((task, index) => {
+                        const slug = questSlugs.get(task);
+                        return (
+                          <span key={task}>
+                            {index > 0 && ", "}
+                            {slug ? (
+                              <Link href={`/quests/${slug}`} className="underline-offset-2 hover:text-[#e6d9b8] hover:underline">
+                                {task}
+                              </Link>
+                            ) : (
+                              task
+                            )}
+                          </span>
+                        );
+                      })
+                    : "—"}
+                </td>
               </tr>
             ))}
           </tbody>
