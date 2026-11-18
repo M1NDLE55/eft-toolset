@@ -40,7 +40,7 @@ export function Header() {
           <Link href="/" className="flex shrink-0 items-center" aria-label="EFT Toolset home">
             <Image src="/black-logo.svg" alt="" height={37} width={100} priority className="invert" />
           </Link>
-          <nav aria-label="Tools" className="hidden items-center md:flex">
+          <nav aria-label="Tools" className="hidden items-center lg:flex">
             {navLinks.map((link) => {
               const active = isActive(pathname, link.href);
               return (
@@ -49,7 +49,7 @@ export function Header() {
                   href={link.href}
                   aria-current={active ? "page" : undefined}
                   className={cn(
-                    "relative px-3 py-5 text-xs font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:outline-[#9a8866]",
+                    "relative whitespace-nowrap px-3 py-5 text-xs font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:outline-[#9a8866]",
                     active ? "text-[#c8b384]" : "text-[#888] hover:text-[#ccc]"
                   )}
                 >
@@ -75,7 +75,7 @@ export function Header() {
             href="/settings#account"
             aria-label={accountLabel}
             title={accountLabel}
-            className="relative hidden h-10 w-10 items-center justify-center text-[#888] transition-colors hover:text-[#ccc] focus-visible:outline-2 focus-visible:outline-[#9a8866] md:flex"
+            className="relative hidden h-10 w-10 items-center justify-center text-[#888] transition-colors hover:text-[#ccc] focus-visible:outline-2 focus-visible:outline-[#9a8866] lg:flex"
           >
             <UserRound className={cn("h-4 w-4", signedIn && "text-[#c8b384]")} aria-hidden />
             {signedIn && <span aria-hidden className="absolute right-2.5 top-2.5 h-1.5 w-1.5 rounded-full bg-[#c8b384]" />}
@@ -86,13 +86,13 @@ export function Header() {
             title="Settings"
             aria-current={isActive(pathname, "/settings") ? "page" : undefined}
             className={cn(
-              "hidden h-10 w-10 items-center justify-center transition-colors focus-visible:outline-2 focus-visible:outline-[#9a8866] md:flex",
+              "hidden h-10 w-10 items-center justify-center transition-colors focus-visible:outline-2 focus-visible:outline-[#9a8866] lg:flex",
               isActive(pathname, "/settings") ? "text-[#c8b384]" : "text-[#888] hover:text-[#ccc]"
             )}
           >
             <Settings className="h-4 w-4" aria-hidden />
           </Link>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="icon" className="h-10 w-10" aria-label="Open menu">
