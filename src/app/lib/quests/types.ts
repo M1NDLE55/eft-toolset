@@ -165,7 +165,7 @@ export interface QuestDetail {
 /** One game mode's progress, as the progress store keeps it. */
 export interface QuestProgress {
   completed: string[];
-  /** Objectives marked done on quests that aren't complete yet. */
+  /** Objectives marked done; kept when their quest is completed, so un-completing it loses nothing. */
   objectives: string[];
   /** Null until the player sets it: then level requirements aren't checked. */
   level: number | null;

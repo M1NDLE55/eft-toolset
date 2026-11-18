@@ -8,6 +8,7 @@ import { TOOLBAR_STORE } from "@/app/lib/raid-planner/toolbar-store";
 import { GAME_MODE_STORE } from "@/components/game-mode/mode";
 import { HOME_LAYOUT_STORE } from "@/app/lib/settings/store";
 import { ITEM_VIEWS_STORE } from "@/app/lib/item-views/store";
+import { QUEST_PROGRESS_STORE } from "@/app/lib/quests/progress-store";
 import { BACKUP_FORMAT, BACKUP_VERSION } from "./store-keys";
 
 export const MAX_BACKUP_BYTES = 10 * 1024 * 1024;
@@ -26,6 +27,7 @@ export const BACKUP_STORES: readonly BackupEntry[] = [
   { label: "Item groups", definition: GROUP_STORE as StoreDefinition<unknown>, identity: (entry) => field("name")(entry).toLocaleLowerCase() },
   { label: "Gun builds", definition: BUILD_STORE as StoreDefinition<unknown>, identity: field("id") },
   { label: "Raid plans", definition: PLAN_STORE as StoreDefinition<unknown>, identity: field("id") },
+  { label: "Quest progress", definition: QUEST_PROGRESS_STORE as StoreDefinition<unknown> },
   { label: "Recently viewed items", definition: SCOUTED_STORE as StoreDefinition<unknown>, identity: field("name") },
   { label: "Game mode", definition: GAME_MODE_STORE as StoreDefinition<unknown> },
   { label: "Home screen", definition: HOME_LAYOUT_STORE as StoreDefinition<unknown> },
