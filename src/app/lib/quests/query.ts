@@ -92,6 +92,7 @@ function isQuestSummary(value: unknown): boolean {
     list(quest.requires, isRequirement) &&
     list(quest.traderLevels, (entry) => isRecord(entry) && isText(entry.trader) && isNumber(entry.level)) &&
     list(quest.failedBy, isRequirement) &&
+    (quest.prestige === null || isNumber(quest.prestige)) &&
     isNumber(quest.experience) &&
     list(quest.needs, isNeed) &&
     list(quest.keys, (entry) =>

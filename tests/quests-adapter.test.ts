@@ -15,7 +15,7 @@ let fixtures: Record<string, unknown> = createTarkovFixtures();
 
 function questFixtures() {
   const all = createTarkovFixtures();
-  const tasks = (all.tasks as Data).data as { tasks: Record<string, unknown>; questItems?: unknown };
+  const tasks = (all.tasks as Data).data as { tasks: Record<string, unknown>; questItems?: unknown; prestige?: unknown };
   tasks.tasks.first = {
     id: "first",
     name: "first-name",
@@ -55,6 +55,7 @@ function questFixtures() {
     factionName: "USEC",
     taskRequirements: [{ task: "first", status: ["complete", "unknown-status"] }],
     failConditions: [{ id: "fail", type: "taskStatus", task: "bear", status: ["complete"] }],
+    requiredPrestige: "prestige-2",
   };
   tasks.tasks.bear = {
     id: "bear",
@@ -71,6 +72,7 @@ function questFixtures() {
     minPlayerLevel: 30,
     taskRequirements: [{ task: "usec", status: ["failed"] }, { task: "missing", status: ["complete"] }],
   };
+  tasks.prestige = [{ id: "prestige-2", prestigeLevel: 2 }];
   tasks.questItems = { letter: { name: "letter-name", gridImageLink: "https://assets.tarkov.dev/letter.webp" } };
   Object.assign((all.tasks_en as Data).data, {
     "first-name": "First Quest",
@@ -145,6 +147,7 @@ describe("the quest list", () => {
     const quests = new Map((await getQuestList("regular")).quests.map((quest) => [quest.id, quest]));
     expect(quests.get("usec")).toMatchObject({
       faction: "USEC",
+      prestige: 2,
       requires: [{ id: "first", status: ["complete"] }],
       failedBy: [{ id: "bear", status: ["complete"] }],
     });

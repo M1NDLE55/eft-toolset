@@ -73,6 +73,8 @@ export interface QuestSummary {
   traderLevels: { trader: string; level: number }[];
   /** Completing any of these quests with the given status fails this one (the other branch of a choice). */
   failedBy: QuestRequirement[];
+  /** The prestige level the quest needs, which tells apart quests that share a name (New Beginning). */
+  prestige: number | null;
   experience: number;
   /** Items the required objectives take; optional objectives are left out. */
   needs: QuestItemNeed[];

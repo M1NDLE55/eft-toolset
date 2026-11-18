@@ -12,14 +12,28 @@ export const loadQuestList = cache(async () => {
 
 const OTHER_MODE: Record<GameMode, GameMode> = { regular: "pve", pve: "regular" };
 
+// Zone quests have a copy in each mode, told apart only by this suffix.
+const ZONE_SUFFIX = /-(pvp|pve)-zone$/;
+
+function zoneCounterpart(slug: string) {
+  const match = ZONE_SUFFIX.exec(slug);
+  return match ? slug.replace(ZONE_SUFFIX, match[1] === "pvp" ? "-pve-zone" : "-pvp-zone") : null;
+}
+
 /**
- * One quest in the visitor's game mode, or in the other one when only that mode has it
- * (`detail.gameMode` says which). undefined: couldn't be worked out in time. null: no such quest.
+ * One quest in the visitor's game mode. A zone quest from the other mode gives this mode's copy,
+ * and a quest only the other mode has comes from that mode (`detail.gameMode` says which), so
+ * `detail.quest.slug` can differ from the slug asked for. undefined: couldn't be worked out in
+ * time. null: no such quest.
  */
 export const loadQuestDetail = cache(async (slug: string) => {
   const gameMode = await requestGameMode();
   return readForRender("Quest page", async () => {
-    const detail = (await getQuestDetail(gameMode, slug)) ?? (await getQuestDetail(OTHER_MODE[gameMode], slug));
-    return detail && { gameMode, detail, renderedAt: Date.now() };
+    const counterpart = zoneCounterpart(slug);
+    const detail =
+      (await getQuestDetail(gameMode, slug)) ??
+      (counterpart && (await getQuestDetail(gameMode, counterpart))) ??
+      (await getQuestDetail(OTHER_MODE[gameMode], slug));
+    return detail ? { gameMode, detail, renderedAt: Date.now() } : null;
   });
 });

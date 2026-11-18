@@ -27,6 +27,7 @@ const quest = (id: string, requires: QuestSummary["requires"] = []): QuestSummar
   requires,
   traderLevels: [],
   failedBy: [],
+  prestige: null,
   experience: 0,
   needs: [],
   keys: [],

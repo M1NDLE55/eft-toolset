@@ -19,6 +19,7 @@ function quest(id: string, overrides: Partial<QuestSummary> = {}): QuestSummary 
     requires: [],
     traderLevels: [],
     failedBy: [],
+    prestige: null,
     experience: 0,
     needs: [],
     keys: [],

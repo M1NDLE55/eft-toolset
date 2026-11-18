@@ -296,6 +296,8 @@ interface RawTask {
   failConditions?: RawTaskObjective[] | null;
   startRewards?: RawTaskRewards | null;
   finishRewards?: RawTaskRewards | null;
+  /** The id of a prestige the task needs, in the tasks data's prestige list. */
+  requiredPrestige?: string | null;
 }
 
 interface RawBarter {
@@ -417,6 +419,7 @@ interface ItemsData {
 interface TasksData {
   tasks?: Dictionary<RawTask>;
   questItems?: Dictionary<RawQuestItem>;
+  prestige?: { id?: string | null; prestigeLevel?: number | null }[] | null;
 }
 
 interface MapsData {
@@ -468,6 +471,8 @@ interface TasksContext {
   byId: Map<string, RawTask>;
   byItem: Map<string, TaskItemUse[]>;
   questItems: Dictionary<RawQuestItem>;
+  /** Prestige id to its level. */
+  prestigeLevels: Map<string, number>;
   translations: TranslationDictionary;
 }
 
@@ -1227,6 +1232,12 @@ async function loadTasks(gameMode: GameMode): Promise<TasksContext> {
       byId: new Map(tasks.flatMap((task) => (task.id ? ([[task.id, task]] as const) : []))),
       byItem: indexTasksByItem(tasks),
       questItems: tasksEnvelope.data.questItems ?? {},
+      prestigeLevels: new Map(
+        (tasksEnvelope.data.prestige ?? []).flatMap((entry) => {
+          const level = finiteNumber(entry.prestigeLevel);
+          return entry.id && level !== null ? [[entry.id, level] as const] : [];
+        })
+      ),
       translations: translationsEnvelope.data,
     };
   });
@@ -1574,6 +1585,7 @@ function projectQuestSummary(
         condition.type === "taskStatus" ? [{ task: condition.task, status: condition.status }] : []
       )
     ),
+    prestige: task.requiredPrestige ? (tasks.prestigeLevels.get(task.requiredPrestige) ?? null) : null,
     experience: finiteNumber(task.experience) ?? 0,
     needs: questNeeds(task, tasks.translations, items.byId),
     keys: (task.neededKeys ?? []).flatMap((entry): QuestKeys[] => {
@@ -2191,6 +2203,9 @@ function validateResourceData(resource: Resource, data: unknown): boolean {
         optionalDictionary(data.tasks, isRawTask) &&
         optionalDictionary(data.questItems, (item) =>
           isRecord(item) && [item.name, item.shortName, item.gridImageLink].every(optionalShortString)
+        ) &&
+        optionalArray(data.prestige, (entry) =>
+          isRecord(entry) && optionalShortString(entry.id) && optionalFiniteNumber(entry.prestigeLevel)
         )
       );
     case "maps":
@@ -2341,7 +2356,7 @@ function isRawTask(value: unknown): value is RawTask {
     ) &&
     optionalFiniteNumber(value.experience) &&
     [value.kappaRequired, value.lightkeeperRequired, value.restartable].every(optionalBoolean) &&
-    [value.taskImageLink, value.map].every(optionalShortString) &&
+    [value.taskImageLink, value.map, value.requiredPrestige].every(optionalShortString) &&
     optionalArray(value.neededKeys, (entry) =>
       isRecord(entry) && optionalShortString(entry.map) && optionalStringArray(entry.keys)
     ) &&
