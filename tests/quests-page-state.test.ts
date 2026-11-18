@@ -96,21 +96,52 @@ describe("quest chain layout", () => {
     quest("e", { requires: [{ id: "c", status: ["failed"] }, { id: "s", status: ["complete"] }] }),
     quest("s", { trader: "Skier" }),
     quest("t", { trader: "Skier", requires: [{ id: "d", status: ["complete"] }] }),
+    quest("f", { minPlayerLevel: 3, requires: [{ id: "s", status: ["complete"] }] }),
   ];
   const graph = questGraph(quests);
   const layout = layoutChain(graph, traderChain(graph, "Prapor"));
 
-  it("orders a column by where its prerequisites sit", () => {
-    // c and d share a level; c follows b (row 1), d follows a (row 0), so d goes first.
-    expect(layout.columns).toEqual([["a", "b"], ["d", "c"], ["e"]]);
-    expect(layout.nodes.find((node) => node.id === "c")).toMatchObject({
+  it("stacks each chain apart, the biggest first, and lists unlinked quests apart", () => {
+    // {b, c, e} is the bigger chain, so it goes first; {a, d} below it; f has no link to another Prapor quest.
+    expect(layout.columns).toEqual([["b", "a"], ["c", "d"], ["e"]]);
+    expect(layout.standalone).toEqual(["f"]);
+    expect(layout.nodes.map((node) => node.id)).not.toContain("f");
+    expect(layout.chains).toEqual([
+      { top: 0, height: CHAIN_NODE.height },
+      { top: CHAIN_NODE.height + CHAIN_NODE.chainGap, height: CHAIN_NODE.height },
+    ]);
+    expect(layout.nodes.find((node) => node.id === "d")).toMatchObject({
       column: 1,
-      row: 1,
+      row: 0,
       x: CHAIN_NODE.width + CHAIN_NODE.columnGap,
-      y: CHAIN_NODE.height + CHAIN_NODE.rowGap,
+      y: CHAIN_NODE.height + CHAIN_NODE.chainGap,
     });
     expect(layout.width).toBe(3 * CHAIN_NODE.width + 2 * CHAIN_NODE.columnGap);
-    expect(layout.height).toBe(2 * CHAIN_NODE.height + CHAIN_NODE.rowGap);
+    expect(layout.height).toBe(2 * CHAIN_NODE.height + CHAIN_NODE.chainGap);
+  });
+
+  it("orders a column within a chain by where its prerequisites sit", () => {
+    const branching = questGraph([
+      quest("root"),
+      quest("x", { minPlayerLevel: 2 }),
+      quest("left", { requires: [{ id: "root", status: ["complete"] }] }),
+      quest("right", { requires: [{ id: "x", status: ["complete"] }] }),
+      quest("joined", { requires: [{ id: "root", status: ["complete"] }, { id: "x", status: ["complete"] }] }),
+    ]);
+    const tree = layoutChain(branching, traderChain(branching, "Prapor"));
+    // joined links root and x into one chain; right follows x (row 1), so it sits below left.
+    expect(tree.chains).toHaveLength(1);
+    expect(tree.columns).toEqual([["root", "x"], ["left", "joined", "right"]]);
+    expect(tree.nodes.find((node) => node.id === "right")).toMatchObject({ row: 2, y: 2 * (CHAIN_NODE.height + CHAIN_NODE.rowGap) });
+    expect(tree.height).toBe(3 * CHAIN_NODE.height + 2 * CHAIN_NODE.rowGap);
+  });
+
+  it("starts a chain held together only by a requirement cycle at the first column", () => {
+    const cycle = questGraph([quest("y", { requires: [{ id: "z", status: ["complete"] }] }), quest("z", { requires: [{ id: "y", status: ["complete"] }] })]);
+    const tree = layoutChain(cycle, traderChain(cycle, "Prapor"));
+    expect(tree.standalone).toEqual([]);
+    expect(Math.min(...tree.nodes.map((node) => node.column))).toBe(0);
+    expect(tree.nodes.map((node) => node.id).toSorted()).toEqual(["y", "z"]);
   });
 
   it("draws the trader's own edges by kind and notes other traders' quests", () => {
@@ -119,9 +150,10 @@ describe("quest chain layout", () => {
       ["a", "d", "active"],
       ["c", "e", "failed"],
     ]);
-    expect(layout.paths[0].d).toMatch(/^M188 79C/);
+    expect(layout.paths[0].d).toMatch(/^M188 23C/);
     expect(layout.external.get("e")).toEqual({ needs: ["s"], unlocks: [] });
     expect(layout.external.get("d")).toEqual({ needs: [], unlocks: ["t"] });
+    expect(layout.external.get("f")).toEqual({ needs: ["s"], unlocks: [] });
   });
 
   it("tells a failure branch from a requirement any status meets", () => {

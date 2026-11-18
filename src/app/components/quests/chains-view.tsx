@@ -60,6 +60,17 @@ function Tree({ layout, graph, statuses }: { layout: ChainLayout; graph: QuestGr
       <div className="relative" style={{ width: layout.width + pad * 2, height: layout.height + pad * 2 }}>
         <svg aria-hidden className="absolute inset-0" width={layout.width + pad * 2} height={layout.height + pad * 2}>
           <g transform={`translate(${pad} ${pad})`} fill="none" strokeWidth={1.5}>
+            {layout.chains.slice(1).map((chain) => (
+              <line
+                key={chain.top}
+                x1={0}
+                x2={layout.width}
+                y1={chain.top - CHAIN_NODE.chainGap / 2}
+                y2={chain.top - CHAIN_NODE.chainGap / 2}
+                stroke="#1f1f1f"
+                strokeWidth={1}
+              />
+            ))}
             {layout.paths.map((path) => (
               <path key={`${path.from}-${path.to}`} d={path.d} stroke={EDGE_STYLE[path.kind].stroke} strokeDasharray={EDGE_STYLE[path.kind].dash} />
             ))}
@@ -153,6 +164,46 @@ function Steps({ layout, graph, statuses }: { layout: ChainLayout; graph: QuestG
   );
 }
 
+/** The trader's quests with no link to their others, as a compact grid under the chains. */
+function Standalone({ layout, graph, statuses }: { layout: ChainLayout; graph: QuestGraph; statuses: ReadonlyMap<string, QuestStatus> | null }) {
+  if (layout.standalone.length === 0) return null;
+  return (
+    <section className="flex flex-col gap-2">
+      <h3 className={heading}>
+        Standalone quests <span className="text-[#666]">· {layout.standalone.length}</span>
+      </h3>
+      <p className="-mt-1 text-xs text-[#777]">No other quest from this trader comes before or after these.</p>
+      <ul className="grid grid-cols-1 gap-1.5 sm:grid-cols-2 lg:grid-cols-3">
+        {layout.standalone.map((id) => {
+          const quest = graph.byId.get(id);
+          if (!quest) return null;
+          const state = statuses?.get(id)?.state ?? "unknown";
+          const name = questName(quest);
+          return (
+            <li key={id} className={cn("flex min-w-0 items-center gap-2 border px-2 py-1.5 text-xs", NODE_TONE[state])}>
+              {quest.slug ? (
+                <Link href={`/quests/${quest.slug}`} title={name} className="min-w-0 truncate font-semibold underline-offset-2 hover:underline">
+                  {name}
+                </Link>
+              ) : (
+                <span title={name} className="min-w-0 truncate font-semibold">
+                  {name}
+                </span>
+              )}
+              {state !== "unknown" && <span className="sr-only">({state})</span>}
+              <span className="ml-auto flex shrink-0 gap-2 text-[10px] text-[#777] no-underline">
+                {quest.minPlayerLevel > 1 && <span>Lv {quest.minPlayerLevel}</span>}
+                {quest.faction && <span>{quest.faction}</span>}
+                <ExternalNote layout={layout} id={id} graph={graph} />
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
 function Legend() {
   const swatch = (state: QuestState) => <span aria-hidden className={cn("h-2.5 w-2.5 border", NODE_TONE[state])} />;
   const line = (kind: ChainEdgeKind) => (
@@ -214,15 +265,24 @@ export function ChainsView({
           </Toggle>
         </div>
       </div>
-      {layout.nodes.length === 0 ? (
+      {layout.nodes.length === 0 && layout.standalone.length === 0 ? (
         <p className="border border-dashed border-[#2a2a2a] p-6 text-center text-sm text-[#888]">{trader} gives no quests in this mode.</p>
-      ) : mode === "tree" ? (
-        <>
-          <p className="text-xs text-[#777]">Each column follows the one before it. Scroll the chart sideways on a narrow screen, or switch to steps.</p>
-          <Tree layout={layout} graph={graph} statuses={statuses} />
-        </>
       ) : (
-        <Steps layout={layout} graph={graph} statuses={statuses} />
+        <>
+          {layout.nodes.length > 0 &&
+            (mode === "tree" ? (
+              <>
+                <p className="text-xs text-[#777]">
+                  Each block is one chain, and each column follows the one before it. Scroll the chart sideways on a narrow screen, or switch to
+                  steps.
+                </p>
+                <Tree layout={layout} graph={graph} statuses={statuses} />
+              </>
+            ) : (
+              <Steps layout={layout} graph={graph} statuses={statuses} />
+            ))}
+          <Standalone layout={layout} graph={graph} statuses={statuses} />
+        </>
       )}
     </div>
   );
