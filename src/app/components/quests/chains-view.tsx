@@ -3,8 +3,9 @@
 import Link from "next/link";
 import type { QuestState, QuestStatus } from "@/app/lib/quests/availability";
 import { CHAIN_NODE, layoutChain, type ChainEdgeKind, type ChainLayout } from "@/app/lib/quests/chain-layout";
-import { questName } from "@/app/lib/quests/display";
+import { questName, sameNameHints } from "@/app/lib/quests/display";
 import { traderChain, type QuestGraph } from "@/app/lib/quests/graph";
+import type { QuestMap } from "@/app/lib/quests/types";
 import { cn } from "@/lib/utils";
 import { Toggle } from "./quest-filters";
 import { heading, panel } from "./quest-bits";
@@ -53,7 +54,9 @@ function ExternalNote({ layout, id, graph }: { layout: ChainLayout; id: string; 
   );
 }
 
-function Tree({ layout, graph, statuses }: { layout: ChainLayout; graph: QuestGraph; statuses: ReadonlyMap<string, QuestStatus> | null }) {
+type Hints = ReadonlyMap<string, string>;
+
+function Tree({ layout, graph, statuses, hints }: { layout: ChainLayout; graph: QuestGraph; statuses: ReadonlyMap<string, QuestStatus> | null; hints: Hints }) {
   const pad = 12;
   return (
     <div className={cn(panel, "max-h-[75vh] overflow-auto overscroll-contain")} tabIndex={0} aria-label="Quest chain, scrolls both ways">
@@ -81,6 +84,7 @@ function Tree({ layout, graph, statuses }: { layout: ChainLayout; graph: QuestGr
           if (!quest) return null;
           const state = statuses?.get(node.id)?.state ?? "unknown";
           const name = questName(quest);
+          const hint = hints.get(node.id);
           const className = cn(
             "absolute flex flex-col justify-center gap-0.5 overflow-hidden border px-2 text-[11px] leading-tight transition-colors hover:border-[#c8b384]",
             NODE_TONE[state]
@@ -90,6 +94,7 @@ function Tree({ layout, graph, statuses }: { layout: ChainLayout; graph: QuestGr
             <>
               <span className="truncate font-semibold">{name}</span>
               <span className="flex gap-2 text-[10px] text-[#777] no-underline">
+                {hints.has(node.id) && <span className="truncate">{hints.get(node.id)}</span>}
                 {quest.minPlayerLevel > 1 && <span className="shrink-0">Lv {quest.minPlayerLevel}</span>}
                 {quest.faction && <span className="shrink-0">{quest.faction}</span>}
                 <ExternalNote layout={layout} id={node.id} graph={graph} />
@@ -97,11 +102,11 @@ function Tree({ layout, graph, statuses }: { layout: ChainLayout; graph: QuestGr
             </>
           );
           return quest.slug ? (
-            <Link key={node.id} href={`/quests/${quest.slug}`} title={name} className={className} style={style}>
+            <Link key={node.id} href={`/quests/${quest.slug}`} title={hint ? `${name} (${hint})` : name} className={className} style={style}>
               {body}
             </Link>
           ) : (
-            <span key={node.id} title={name} className={className} style={style}>
+            <span key={node.id} title={hint ? `${name} (${hint})` : name} className={className} style={style}>
               {body}
             </span>
           );
@@ -111,7 +116,7 @@ function Tree({ layout, graph, statuses }: { layout: ChainLayout; graph: QuestGr
   );
 }
 
-function Steps({ layout, graph, statuses }: { layout: ChainLayout; graph: QuestGraph; statuses: ReadonlyMap<string, QuestStatus> | null }) {
+function Steps({ layout, graph, statuses, hints }: { layout: ChainLayout; graph: QuestGraph; statuses: ReadonlyMap<string, QuestStatus> | null; hints: Hints }) {
   const parents = new Map<string, { id: string; kind: ChainEdgeKind }[]>();
   for (const path of layout.paths) parents.set(path.to, [...(parents.get(path.to) ?? []), { id: path.from, kind: path.kind }]);
   return (
@@ -139,6 +144,7 @@ function Steps({ layout, graph, statuses }: { layout: ChainLayout; graph: QuestG
                     {state !== "unknown" && <span className="sr-only">({state})</span>}
                   </span>
                   <span className="flex flex-wrap gap-x-3 text-[11px] text-[#777]">
+                    {hints.has(id) && <span>{hints.get(id)}</span>}
                     {quest.minPlayerLevel > 1 && <span>Level {quest.minPlayerLevel}</span>}
                     {after.length > 0 && (
                       <span>
@@ -165,7 +171,7 @@ function Steps({ layout, graph, statuses }: { layout: ChainLayout; graph: QuestG
 }
 
 /** The trader's quests with no link to their others, as a compact grid under the chains. */
-function Standalone({ layout, graph, statuses }: { layout: ChainLayout; graph: QuestGraph; statuses: ReadonlyMap<string, QuestStatus> | null }) {
+function Standalone({ layout, graph, statuses, hints }: { layout: ChainLayout; graph: QuestGraph; statuses: ReadonlyMap<string, QuestStatus> | null; hints: Hints }) {
   if (layout.standalone.length === 0) return null;
   return (
     <section className="flex flex-col gap-2">
@@ -192,6 +198,7 @@ function Standalone({ layout, graph, statuses }: { layout: ChainLayout; graph: Q
               )}
               {state !== "unknown" && <span className="sr-only">({state})</span>}
               <span className="ml-auto flex shrink-0 gap-2 text-[10px] text-[#777] no-underline">
+                {hints.has(id) && <span>{hints.get(id)}</span>}
                 {quest.minPlayerLevel > 1 && <span>Lv {quest.minPlayerLevel}</span>}
                 {quest.faction && <span>{quest.faction}</span>}
                 <ExternalNote layout={layout} id={id} graph={graph} />
@@ -229,6 +236,7 @@ function Legend() {
 
 export function ChainsView({
   graph,
+  maps,
   traders,
   trader,
   layout: mode,
@@ -237,6 +245,7 @@ export function ChainsView({
   onLayout,
 }: {
   graph: QuestGraph;
+  maps: Readonly<Record<string, QuestMap>>;
   traders: string[];
   trader: string;
   layout: "tree" | "steps";
@@ -245,6 +254,7 @@ export function ChainsView({
   onLayout: (layout: "tree" | "steps") => void;
 }) {
   const layout = layoutChain(graph, traderChain(graph, trader));
+  const hints = sameNameHints(graph, maps);
   return (
     <div className="flex flex-col gap-3">
       <div role="group" aria-label="Trader" className="flex flex-wrap gap-1.5">
@@ -276,12 +286,12 @@ export function ChainsView({
                   Each block is one chain, and each column follows the one before it. Scroll the chart sideways on a narrow screen, or switch to
                   steps.
                 </p>
-                <Tree layout={layout} graph={graph} statuses={statuses} />
+                <Tree layout={layout} graph={graph} statuses={statuses} hints={hints} />
               </>
             ) : (
-              <Steps layout={layout} graph={graph} statuses={statuses} />
+              <Steps layout={layout} graph={graph} statuses={statuses} hints={hints} />
             ))}
-          <Standalone layout={layout} graph={graph} statuses={statuses} />
+          <Standalone layout={layout} graph={graph} statuses={statuses} hints={hints} />
         </>
       )}
     </div>

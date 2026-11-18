@@ -1,4 +1,5 @@
-import type { Faction, RequirementStatus } from "./types";
+import type { QuestGraph } from "./graph";
+import type { Faction, QuestMap, RequirementStatus } from "./types";
 
 /** A quest's name, told apart from others that share it by its prestige level (New Beginning). */
 export function questName(quest: { name: string; prestige?: number | null }) {
@@ -36,4 +37,43 @@ export function aroundItemName(description: string, name: string | null | undefi
   const at = description.lastIndexOf(name);
   if (at < 0) return null;
   return { before: description.slice(0, at), after: description.slice(at + name.length) };
+}
+
+const hintCache = new WeakMap<QuestGraph, ReadonlyMap<string, string>>();
+
+/**
+ * A few words telling apart quests that share a name and faction (Battery Change, The Tarkov
+ * Shooter - Part 5): what they follow, else their map, else their level, whichever differs for
+ * each of them; else which copy they are, in list order. Quests with a name of their own get none.
+ */
+export function sameNameHints(graph: QuestGraph, maps: Readonly<Record<string, QuestMap>>): ReadonlyMap<string, string> {
+  const cached = hintCache.get(graph);
+  if (cached) return cached;
+  const groups = new Map<string, QuestGraph["quests"][number][]>();
+  for (const quest of graph.quests) {
+    const key = `${questName(quest)}\u0000${quest.faction ?? ""}`;
+    groups.set(key, [...(groups.get(key) ?? []), quest]);
+  }
+  const hints = new Map<string, string>();
+  for (const group of groups.values()) {
+    if (group.length < 2) continue;
+    const ways = [
+      (quest: (typeof group)[number]) => {
+        const names = quest.requires.flatMap((entry) => {
+          const other = graph.byId.get(entry.id);
+          return other ? [questName(other)] : [];
+        });
+        return names.length > 0 ? `after ${names.toSorted().join(", ")}` : "";
+      },
+      (quest: (typeof group)[number]) => (quest.maps[0] ? `on ${maps[quest.maps[0]]?.name ?? quest.maps[0]}` : ""),
+      (quest: (typeof group)[number]) => (quest.minPlayerLevel > 1 ? `level ${quest.minPlayerLevel}` : ""),
+    ];
+    const way = ways.find((hint) => {
+      const values = group.map(hint);
+      return values.every(Boolean) && new Set(values).size === values.length;
+    });
+    group.forEach((quest, index) => hints.set(quest.id, way ? way(quest) : `copy ${index + 1} of ${group.length}`));
+  }
+  hintCache.set(graph, hints);
+  return hints;
 }

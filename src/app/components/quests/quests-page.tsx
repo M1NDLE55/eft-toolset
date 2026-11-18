@@ -128,6 +128,7 @@ export function QuestsPage({ initial, search }: { initial: QuestsInitial | null;
     body = trader ? (
       <ChainsView
         graph={graph}
+        maps={list.maps}
         traders={list.traders}
         trader={trader}
         layout={state.layout}

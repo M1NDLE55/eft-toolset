@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import type { QuestStatus } from "@/app/lib/quests/availability";
-import { levelLabel, questName } from "@/app/lib/quests/display";
+import { levelLabel, questName, sameNameHints } from "@/app/lib/quests/display";
+import { questGraph } from "@/app/lib/quests/graph";
 import type { QuestList, QuestSummary } from "@/app/lib/quests/types";
 import { CompleteToggle, QuestBadges, StatePill, heading, lockedReason, panel } from "./quest-bits";
 
@@ -17,16 +18,20 @@ function QuestRow({
   onToggle,
   disabled,
   nameOf,
+  hint,
 }: {
   quest: QuestSummary;
   list: QuestList;
   status: QuestStatus | undefined;
+  /** Tells it apart from quests with the same name. */
+  hint: string | undefined;
   onToggle: (quest: QuestSummary) => void;
   disabled: boolean;
   nameOf: (id: string) => string;
 }) {
   const name = questName(quest);
   const meta = [
+    hint ?? null,
     levelLabel(quest.minPlayerLevel),
     ...quest.traderLevels.map((entry) => `${entry.trader} LL${entry.level}`),
     mapNames(quest, list).join(", ") || null,
@@ -70,6 +75,7 @@ export function QuestRows({
   disabled: boolean;
   nameOf: (id: string) => string;
 }) {
+  const hints = sameNameHints(questGraph(list.quests), list.maps);
   const groups = new Map<string, QuestSummary[]>();
   for (const quest of quests) {
     const trader = quest.trader ?? "Other";
@@ -86,7 +92,7 @@ export function QuestRows({
           </h3>
           <ul className={`${panel} divide-y divide-[#151515]`}>
             {entries.map((quest) => (
-              <QuestRow key={quest.id} quest={quest} list={list} status={statuses?.get(quest.id)} onToggle={onToggle} disabled={disabled} nameOf={nameOf} />
+              <QuestRow key={quest.id} quest={quest} list={list} status={statuses?.get(quest.id)} onToggle={onToggle} disabled={disabled} nameOf={nameOf} hint={hints.get(quest.id)} />
             ))}
           </ul>
         </section>

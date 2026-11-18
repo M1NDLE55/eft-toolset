@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { completedDependents, questStates, withPrerequisites } from "@/app/lib/quests/availability";
 import { filterQuests } from "@/app/lib/quests/filters";
-import { aroundItemName } from "@/app/lib/quests/display";
+import { aroundItemName, sameNameHints } from "@/app/lib/quests/display";
 import { chainAfter, chainBefore, questGraph, traderChain } from "@/app/lib/quests/graph";
 import { itemsNeeded } from "@/app/lib/quests/items-needed";
 import type { QuestList, QuestProgress, QuestSummary } from "@/app/lib/quests/types";
@@ -274,5 +274,33 @@ describe("item objectives", () => {
     expect(aroundItemName("Find Salewa in raid", "Salewa")).toEqual({ before: "Find ", after: " in raid" });
     expect(aroundItemName("Hand over the fabrics", "Fleece fabric")).toBeNull();
     expect(aroundItemName("Hand over the item", null)).toBeNull();
+  });
+});
+
+describe("quests that share a name", () => {
+  it("tells them apart by what they follow, their map or level, else which copy they are", () => {
+    const maps = { customs: { key: "customs", name: "Customs", page: "customs" }, streets: { key: "streets", name: "Streets of Tarkov", page: "streets" } };
+    const twins = questGraph([
+      quest("wheel"),
+      quest("business"),
+      quest("battery-1", { name: "Battery Change", requires: [{ id: "wheel", status: ["complete"] }] }),
+      quest("battery-2", { name: "Battery Change", requires: [{ id: "business", status: ["complete"] }] }),
+      quest("shooter-1", { name: "Shooter 5", maps: ["customs"], requires: [{ id: "wheel", status: ["complete"] }] }),
+      quest("shooter-2", { name: "Shooter 5", maps: ["streets"], requires: [{ id: "wheel", status: ["complete"] }] }),
+      quest("price-1", { name: "Price", requires: [{ id: "battery-1", status: ["complete"] }] }),
+      quest("price-2", { name: "Price", requires: [{ id: "battery-2", status: ["complete"] }] }),
+      quest("usec", { name: "Textile", faction: "USEC" }),
+      quest("bear", { name: "Textile", faction: "BEAR" }),
+    ]);
+    const hints = sameNameHints(twins, maps);
+    expect(Object.fromEntries(hints)).toEqual({
+      "battery-1": "after WHEEL",
+      "battery-2": "after BUSINESS",
+      "shooter-1": "on Customs",
+      "shooter-2": "on Streets of Tarkov",
+      "price-1": "copy 1 of 2",
+      "price-2": "copy 2 of 2",
+    });
+    expect(sameNameHints(twins, maps)).toBe(hints);
   });
 });
