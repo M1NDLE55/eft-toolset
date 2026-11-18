@@ -138,9 +138,11 @@ read tarkov.dev's task data through the adapter:
   skills), what the quest unlocks, the chain before and after it, and buy and sell prices for
   every item it names. It is rendered on the server only, through `loadQuestDetail`.
 
-Slugs are tarkov.dev's `normalizedName`. Tasks that share one get `-usec` or `-bear` (a task
-for every faction keeps the plain slug), and anything still shared gets the task id; tasks
-without a valid slug have no page. Zone quests have a copy in each game mode that differs only
+Slugs are tarkov.dev's `normalizedName`, which is already unique per task (faction versions
+come as `-usec` and `-bear`, repeated names with a number). `questSlugs` guards against that
+changing: should two tasks ever share one, they get `-usec` or `-bear` (a task for every faction
+keeps the plain slug), and anything still shared gets the task id. Tasks without a valid slug
+have no page. Zone quests have a copy in each game mode that differs only
 in its `-pvp-zone` or `-pve-zone` suffix, so a page asked for in the other mode shows this
 mode's copy; a quest only the other mode has is shown from that mode.
 
@@ -151,13 +153,24 @@ stays one need with its alternatives, and when too many qualify to list, only it
 description. Maps are keyed by tarkov.dev's map `normalizedName`; variants (night Factory,
 Ground Zero 21+, the dark Lab and others) name the raid planner and keys page they share.
 
-`src/app/lib/quests/` holds the browser's logic: the requirement graph and per-trader chain
-columns, each quest's state from progress, level and faction (a quest is failed when a quest
-that fails it is complete; trader loyalty isn't tracked), the items still needed with
-found-in-raid apart, and the list filters. Progress (completed quests, done objectives, level,
-and faction) is kept per game mode in local storage (`progress-store.ts`) and included in
-backups. Completing a quest also marks the quests it strictly needed completed; un-completing
-one changes only that quest.
+`src/app/lib/quests/` holds the browser's logic: the requirement graph, each quest's state
+from progress, level and faction, the items still needed, the chain layout, and the list
+filters. Progress (completed quests, done objectives, level, and faction) is kept per game mode
+in local storage (`progress-store.ts`) and included in backups.
+
+- A quest is failed when a quest that fails it is complete. Trader loyalty isn't tracked.
+  Once the faction is set, a requirement on a quest only the other faction gets is ignored,
+  since some quests for both factions require a USEC-only one.
+- Completing a quest also marks the quests it strictly needed completed, except quests only for
+  the other faction. Un-completing one that later completed quests needed asks first, and can
+  un-mark only it or them too.
+- Items needed adds up the needs of the quests left, found-in-raid apart. Both sides of a
+  choice not made yet count. With no faction set, a quest's USEC and BEAR versions (same
+  trader, name and prestige) count once: the larger need per item, shown against that version.
+- The chains view (`chain-layout.ts`) stacks each group of a trader's quests linked by that
+  trader's own requirements as a block, the biggest first, one column per depth. Quests with
+  no such link are listed apart under it as standalone quests. Quests that share a name and
+  faction get a short hint (what they follow, their map or level) to tell them apart.
 
 Quest pages show the guide from the wiki snapshot (`src/app/lib/wiki/quest-wiki.ts`), found by
 the task's wiki link and only if it is a quest's page, without the objectives, rewards, and
