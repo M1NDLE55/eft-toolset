@@ -161,3 +161,14 @@ export interface QuestDetail {
   items: Record<string, PricedQuestItem>;
   maps: Record<string, QuestMap>;
 }
+
+/** One game mode's progress, as the progress store keeps it. */
+export interface QuestProgress {
+  completed: string[];
+  /** Objectives marked done on quests that aren't complete yet. */
+  objectives: string[];
+  /** Null until the player sets it: then level requirements aren't checked. */
+  level: number | null;
+  /** Null until the player sets it: then quests for either faction are shown. */
+  faction: Faction | null;
+}

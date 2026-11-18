@@ -83,6 +83,7 @@ export interface TraderChain {
    * Each column is ordered by level, then name.
    */
   columns: string[][];
+  /** Each quest's column. */
   depth: ReadonlyMap<string, number>;
   /** Requirements between the trader's quests, and to or from other traders' quests. */
   edges: ChainEdge[];
@@ -117,12 +118,14 @@ export function traderChain(graph: QuestGraph, trader: string): TraderChain {
       edges.push({ from: from.id, to: quest.id, status: requirement.status, crossTrader: from.trader !== quest.trader });
     }
   }
+  // Only a cycle leaves a column empty; drop it so columns and depths agree.
+  const laidOut = Array.from(columns, (column) => (column ?? []).toSorted(byLevelThenName).map((quest) => quest.id)).filter(
+    (column) => column.length > 0
+  );
   return {
     trader,
-    columns: Array.from(columns, (column) =>
-      (column ?? []).toSorted(byLevelThenName).map((quest) => quest.id)
-    ).filter((column) => column.length > 0),
-    depth,
+    columns: laidOut,
+    depth: new Map(laidOut.flatMap((column, index) => column.map((id) => [id, index] as const))),
     edges,
   };
 }
