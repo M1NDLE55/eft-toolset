@@ -126,7 +126,8 @@ export function MapViewer({ mapKey, withGuide = false }: { mapKey: string; withG
         </p>
       )}
 
-      <div className="pointer-events-auto absolute bottom-2 right-2 z-1000 sm:bottom-24 sm:right-3">
+      {/* On wide screens the layer panel starts open down the right side, so the levels sit bottom left, above the credit. */}
+      <div className="pointer-events-auto absolute bottom-2 right-2 z-1000 sm:bottom-14 sm:left-3 sm:right-auto">
         <FloorSwitcher config={config} activeFloor={activeFloor} onChange={setActiveFloor} />
       </div>
 

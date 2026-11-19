@@ -4,6 +4,7 @@ import { useId, useState, useSyncExternalStore } from "react";
 import { Check, Layers, LoaderCircle, X } from "lucide-react";
 import type { LayerGroupOptions } from "@/app/lib/raid-planner/layer-options";
 import { cn } from "@/lib/utils";
+import { LayerIcon } from "./layer-icon";
 import { focusRing, iconButton, overlayPanel } from "./ui";
 
 interface LayerPanelProps {
@@ -186,6 +187,7 @@ export function LayerPanel({
                           >
                             {checked && <Check className="size-3 text-black" strokeWidth={3} />}
                           </span>
+                          <LayerIcon layerId={option.id} />
                           <span
                             className={cn("min-w-0 flex-1 truncate text-xs", checked ? "text-[#ddd]" : "text-[#999]")}
                           >

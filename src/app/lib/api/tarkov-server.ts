@@ -388,6 +388,7 @@ interface RawMap {
   }[];
   hazards?: {
     name?: string | null;
+    hazardType?: string | null;
     position?: RawPosition | null;
     outline?: { x: number; z: number }[] | null;
     top?: number | null;
@@ -2614,7 +2615,7 @@ function isRawMap(value: unknown): value is RawMap {
     ) &&
     optionalArray(value.hazards, (entry) =>
       isRecord(entry) &&
-      optionalShortString(entry.name) &&
+      [entry.name, entry.hazardType].every(optionalShortString) &&
       optional(entry.position, isPosition) &&
       optionalArray(entry.outline, isOutlinePoint) &&
       optionalFiniteNumber(entry.top) &&
@@ -3341,6 +3342,7 @@ function projectMap(
         ? [
             {
               name: translate(hazard.name, translations) || "Hazard",
+              hazardType: hazard.hazardType ?? null,
               position: hazard.position,
               outline: hazard.outline ?? [],
               top: finiteNumber(hazard.top),

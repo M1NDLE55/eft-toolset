@@ -38,7 +38,6 @@ interface BaseMap {
 interface LayerCache {
   map: L.Map;
   details: MapDetails | null;
-  renderer: L.Canvas;
   entries: Map<string, LayerEntry>;
 }
 
@@ -133,7 +132,7 @@ export function MapCanvas({
     const { map } = base;
     let cache = layerCache.current;
     if (!cache || cache.map !== map) {
-      cache = { map, details, renderer: L.canvas({ padding: 0.5 }), entries: new Map() };
+      cache = { map, details, entries: new Map() };
       layerCache.current = cache;
     } else if (cache.details !== details) {
       cache.entries.forEach((entry) => entry.group.remove());
@@ -148,7 +147,7 @@ export function MapCanvas({
     for (const id of enabled) {
       let entry = cache.entries.get(id);
       if (!entry) {
-        const built = buildLayer(id, { config, details, renderer: cache.renderer });
+        const built = buildLayer(id, { config, details });
         if (!built) continue;
         cache.entries.set(id, built);
         entry = built;

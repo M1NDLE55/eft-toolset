@@ -46,6 +46,8 @@ export interface MapLock {
 
 export interface MapHazard {
   name: string;
+  /** tarkov.dev's kind of hazard: "minefield", "sniper" or "hazard". */
+  hazardType?: string | null;
   position: Required<GamePoint>;
   outline: GamePoint[];
   top: number | null;
