@@ -2,21 +2,23 @@ export const dynamic = "force-dynamic";
 
 import type { MetadataRoute } from "next";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
-import { listItemSlugs, listQuestSlugs, releaseOperationSlot, tryAcquireOperationSlot } from "@/app/lib/api/tarkov-server";
+import { getQuestList, listItemSlugs, releaseOperationSlot, tryAcquireOperationSlot } from "@/app/lib/api/tarkov-server";
 import { SITE_ORIGIN as ORIGIN } from "@/app/lib/site";
 import { listBestBuildWeapons } from "@/app/lib/builds/best-builds";
 import { listGunsmithTasks } from "@/app/lib/builds/gunsmith-pages";
 import { getAllAmmo } from "@/app/lib/api/tarkov-server";
 import { groupAmmo } from "@/app/lib/seo/ammo";
 import { getKeyCounts } from "@/app/lib/reference/keys";
+import { questSitemapEntries, type SitemapQuest } from "@/app/lib/seo/sitemap-quests";
+import { wikiLastEdited, wikiSnapshotDate } from "@/app/lib/wiki/snapshot";
 
-async function loadSlugs(list: () => Promise<string[]>): Promise<string[]> {
+async function loadSlugs<T = string>(list: () => Promise<T[]>): Promise<T[]> {
   if (!tryAcquireOperationSlot()) return [];
   let timer: ReturnType<typeof setTimeout> | undefined;
   try {
     return await Promise.race([
       list(),
-      new Promise<string[]>((resolve) => {
+      new Promise<T[]>((resolve) => {
         timer = setTimeout(() => resolve([]), 5_000);
       }),
     ]);
@@ -28,16 +30,27 @@ async function loadSlugs(list: () => Promise<string[]>): Promise<string[]> {
   }
 }
 
+/** Quest pages with their wiki page's last edit; without the snapshot they're still listed, undated. */
+async function questEntries(pvp: readonly SitemapQuest[], pve: readonly SitemapQuest[]) {
+  try {
+    const [edited, snapshotDate] = await Promise.all([wikiLastEdited([...pvp, ...pve].map((quest) => quest.name), "quest"), wikiSnapshotDate()]);
+    return questSitemapEntries(pvp, pve, edited, snapshotDate);
+  } catch {
+    return questSitemapEntries(pvp, pve, new Map(), "").map(({ path }) => ({ path, lastModified: undefined }));
+  }
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [itemSlugs, weaponSlugs, gunsmithSlugs, caliberSlugs, keyMaps, questSlugs] = await Promise.all([
+  const [itemSlugs, weaponSlugs, gunsmithSlugs, caliberSlugs, keyMaps, pvpQuests, pveQuests] = await Promise.all([
     loadSlugs(() => listItemSlugs()),
     loadSlugs(async () => (await listBestBuildWeapons("regular")).map((weapon) => weapon.slug)),
     loadSlugs(async () => (await listGunsmithTasks("regular")).map((task) => task.slug)),
     loadSlugs(async () => groupAmmo(await getAllAmmo("regular")).map((caliber) => caliber.slug)),
     loadSlugs(async () => (await getKeyCounts("regular")).map((map) => map.key)),
-    // PVP's quests: a PVE zone quest's slug redirects to its PVP copy for visitors without a mode.
-    loadSlugs(() => listQuestSlugs("regular")),
+    loadSlugs(async () => (await getQuestList("regular")).quests),
+    loadSlugs(async () => (await getQuestList("pve")).quests),
   ]);
+  const quests = await questEntries(pvpQuests, pveQuests);
   const routes = [
     { path: "/", priority: 1, changeFrequency: "monthly" as const },
     { path: "/item", priority: 0.9, changeFrequency: "weekly" as const },
@@ -84,8 +97,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly" as const,
       priority: 0.7,
     })),
-    ...questSlugs.map((slug) => ({
-      url: `${ORIGIN}/quests/${slug}`,
+    ...quests.map((quest) => ({
+      url: `${ORIGIN}${quest.path}`,
+      lastModified: quest.lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.6,
     })),

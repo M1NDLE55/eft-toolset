@@ -165,8 +165,8 @@ function canonical(title: string) {
   return spaced.charAt(0).toUpperCase() + spaced.slice(1);
 }
 
-export async function findWikiPage(title: string): Promise<FoundPage | null> {
-  const loaded = await loadIndex();
+/** The index entry a title names, directly, by a near match, or through a redirect; reads no page. */
+function resolveTitle(loaded: LoadedIndex, title: string) {
   let wanted = canonical(title);
   let matchedBy: FoundPage["matchedBy"] = "title";
   if (!loaded.byTitle.has(wanted) && !loaded.redirects[wanted]) {
@@ -178,17 +178,35 @@ export async function findWikiPage(title: string): Promise<FoundPage | null> {
     matchedBy = "search";
   }
   const entry = loaded.byTitle.get(wanted);
-  if (entry) return { page: await readPage(entry), matchedBy };
+  if (entry) return { entry, matchedBy };
   const target = loaded.redirects[wanted];
   const at = target.indexOf("#");
   const targetEntry = loaded.byTitle.get(at < 0 ? target : target.slice(0, at));
   if (!targetEntry) return null;
   return {
-    page: await readPage(targetEntry),
+    entry: targetEntry,
     matchedBy,
     redirectedFrom: wanted,
     ...(at >= 0 && target.slice(at + 1) ? { redirectFragment: target.slice(at + 1) } : {}),
   };
+}
+
+export async function findWikiPage(title: string): Promise<FoundPage | null> {
+  const resolved = resolveTitle(await loadIndex(), title);
+  if (!resolved) return null;
+  const { entry, ...match } = resolved;
+  return { page: await readPage(entry), ...match };
+}
+
+/** When each title's page of that kind was last edited, as of the snapshot; titles without one are left out. Reads only the index. */
+export async function wikiLastEdited(titles: Iterable<string>, kind: string): Promise<Map<string, string>> {
+  const loaded = await loadIndex();
+  const dates = new Map<string, string>();
+  for (const title of titles) {
+    const entry = isPossibleTitle(title) ? resolveTitle(loaded, title)?.entry : undefined;
+    if (entry?.kind === kind) dates.set(title, entry.lastEdited);
+  }
+  return dates;
 }
 
 export async function searchWiki(text: string): Promise<WikiSearchResult[]> {
