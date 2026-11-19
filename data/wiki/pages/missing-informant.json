@@ -56,5 +56,63 @@
       "level": 4,
       "text": "The second hideout is located inside the stairs to the cinema. A Backup hideout key is required to enter it. The journal has multiple spawns throughout the hideout."
     }
+  ],
+  "images": [
+    {
+      "file": "Backup_hideout_key_Location_Map.png",
+      "hashPath": "c/cf",
+      "caption": "Room marked on map",
+      "section": "Guide",
+      "subsection": "First hideout"
+    },
+    {
+      "file": "HideoutBackupKeySpawnRoom.png",
+      "hashPath": "3/35",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "First hideout"
+    },
+    {
+      "file": "HideoutBackupKeySportBag.png",
+      "hashPath": "2/2b",
+      "caption": "The sports bag",
+      "section": "Guide",
+      "subsection": "First hideout"
+    },
+    {
+      "file": "BackupHideoutMap.png",
+      "hashPath": "3/38",
+      "caption": "Hideout marked on the map",
+      "section": "Guide",
+      "subsection": "Second hideout and journal"
+    },
+    {
+      "file": "BackupHideoutDoor.png",
+      "hashPath": "f/f6",
+      "caption": "Door to the hideout",
+      "section": "Guide",
+      "subsection": "Second hideout and journal"
+    },
+    {
+      "file": "MIJournal2.png",
+      "hashPath": "b/b2",
+      "caption": "First journal spawn: Tucked under the jacket pile on the ground to the right after entering",
+      "section": "Guide",
+      "subsection": "Second hideout and journal"
+    },
+    {
+      "file": "MIJournal3.png",
+      "hashPath": "4/47",
+      "caption": "Second journal spawn: Next to a package in the back right, under the rubble",
+      "section": "Guide",
+      "subsection": "Second hideout and journal"
+    },
+    {
+      "file": "MIJournal1.png",
+      "hashPath": "1/1a",
+      "caption": "Third journal spawn: Tucked under a blue trash bag on the ground next to the shelf in the back left",
+      "section": "Guide",
+      "subsection": "Second hideout and journal"
+    }
   ]
 }

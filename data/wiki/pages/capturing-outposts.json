@@ -39,5 +39,28 @@
       "level": 2,
       "text": "Only the enemy PMCs have to be in the marked areas for the kills to count towards the objective. Any kills outside of the marked areas do not count towards the objective."
     }
+  ],
+  "images": [
+    {
+      "file": "Customs_Capturing_Outpost_Location.png",
+      "hashPath": "e/eb",
+      "caption": "Customs kill area marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Shoreline_Capturing_Outposts_Location.png",
+      "hashPath": "6/65",
+      "caption": "Shoreline kill area marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Woods_Capturing_Outposts_Location.png",
+      "hashPath": "1/1e",
+      "caption": "Woods kill area marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

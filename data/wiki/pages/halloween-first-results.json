@@ -45,5 +45,35 @@
       "level": 2,
       "text": "15 infected must be killed while they are inside the gas area of the Model 8230 CS gas grenade (RDA-68)."
     }
+  ],
+  "images": [
+    {
+      "file": "InfectedCivilian.png",
+      "hashPath": "5/5a",
+      "caption": "Infected civilian",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "InfectedLabTechnician.png",
+      "hashPath": "d/d0",
+      "caption": "Infected lab technician",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "InfectedPMC.png",
+      "hashPath": "1/16",
+      "caption": "Infected PMC",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "InfectedBlackDivision.png",
+      "hashPath": "8/8d",
+      "caption": "Infected Black Division operative",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

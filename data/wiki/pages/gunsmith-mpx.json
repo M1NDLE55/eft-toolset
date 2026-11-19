@@ -61,5 +61,21 @@
       "level": 2,
       "text": "- Gunsmith - AS VAL - The BEAR counterpart quest"
     }
+  ],
+  "images": [
+    {
+      "file": "GunsmithPart13Mods.png",
+      "hashPath": "f/f9",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithPart13Mods2.png",
+      "hashPath": "0/0e",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

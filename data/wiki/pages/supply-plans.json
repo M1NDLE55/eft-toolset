@@ -46,5 +46,28 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Secure Folder 0052 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe documents are located at the lumber camp on Woods, under a bed in the wooden cabin #3."
     }
+  ],
+  "images": [
+    {
+      "file": "SupplyPlansMap.png",
+      "hashPath": "c/cf",
+      "caption": "Map with cabin location marked",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Cabins_in_the_lumber_yard.png",
+      "hashPath": "c/c5",
+      "caption": "The cabins inside the lumber yard",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Docs_0052_Location.png",
+      "hashPath": "3/3f",
+      "caption": "The docs under the bed of cabin #3",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

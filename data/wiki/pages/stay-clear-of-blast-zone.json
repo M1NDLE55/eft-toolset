@@ -45,5 +45,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| TP-200 TNT brick | 3 | Required | N/A | Stashed item |\nIn this quest you have to plant 3 TP-200 TNT bricks at the breaches of the health resort fence on Shoreline."
     }
+  ],
+  "images": [
+    {
+      "file": "Stay_Clear_of_Blast_Zone_Map.png",
+      "hashPath": "3/38",
+      "caption": "Breach locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Stay_Clear_of_Blast_Zone_West_Fence.png",
+      "hashPath": "6/63",
+      "caption": "West side fence breach",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Stay_Clear_of_Blast_Zone_North_Fence.png",
+      "hashPath": "7/70",
+      "caption": "North side fence breach",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Stay_Clear_of_Blast_Zone_East_Fence.png",
+      "hashPath": "7/74",
+      "caption": "East side fence breach",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

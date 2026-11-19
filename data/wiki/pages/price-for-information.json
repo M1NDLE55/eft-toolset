@@ -61,5 +61,49 @@
       "level": 3,
       "text": "At the map border northwest of the train yard."
     }
+  ],
+  "images": [
+    {
+      "file": "ShorelineTransitToLighthouseMap.png",
+      "hashPath": "1/12",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Shoreline to Lighthouse"
+    },
+    {
+      "file": "Path_to_Lighthouse.png",
+      "hashPath": "d/d3",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Shoreline to Lighthouse"
+    },
+    {
+      "file": "LighthouseTransitToReserveMap.png",
+      "hashPath": "7/76",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Lighthouse to Reserve"
+    },
+    {
+      "file": "LighthouseTransitToReserve.png",
+      "hashPath": "7/75",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Lighthouse to Reserve"
+    },
+    {
+      "file": "ReserveTransitToWoodsMap.png",
+      "hashPath": "a/a3",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Reserve to Woods transit"
+    },
+    {
+      "file": "ReserveTransitToWoods.png",
+      "hashPath": "5/50",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Reserve to Woods transit"
+    }
   ]
 }

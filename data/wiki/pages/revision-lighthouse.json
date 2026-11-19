@@ -44,5 +44,56 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "Revision2Map.png",
+      "hashPath": "e/e0",
+      "caption": "Vehicle locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Revision2BRDMWestWater.png",
+      "hashPath": "3/3e",
+      "caption": "First BRDM at the water treatment plant",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Revision2BRDMNorthWater.png",
+      "hashPath": "4/46",
+      "caption": "Second BRDM at the water treatment plant",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Revision2BRDMUNCheckpoint.png",
+      "hashPath": "2/25",
+      "caption": "Third BRDM at the UN checkpoint",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Revision2StrykerLighthouse.png",
+      "hashPath": "0/0b",
+      "caption": "First Stryker on the road to the lighthouse peninsula territory",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Revision2StrykerUphill.png",
+      "hashPath": "1/1b",
+      "caption": "Second Stryker on the road to the blue (northern) chalet",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Revision2StrykerSeaside.png",
+      "hashPath": "f/f2",
+      "caption": "Third Stryker at the shore northwest of water treatment plant building #3",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

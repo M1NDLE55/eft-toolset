@@ -50,5 +50,21 @@
       "level": 2,
       "text": "- Supplements - The USEC counterpart quest"
     }
+  ],
+  "images": [
+    {
+      "file": "One_Less_Loose_End_Factory_Map.png",
+      "hashPath": "b/b1",
+      "caption": "Laboratory location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Vitamins_Chemcont_Location.png",
+      "hashPath": "0/0c",
+      "caption": "Container location",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

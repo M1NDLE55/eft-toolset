@@ -40,5 +40,35 @@
       "level": 2,
       "text": "| Item name | Find in raid | Notes |\n| Bomber beanie | N/A | Needs to be worn to progress through the quest |\n| RayBench Hipster Reserve sunglasses | N/A | Need to be worn to progress through the quest |\nIn this quest you have to kill any 15 entities on Streets of Tarkov while wearing a Bomber beanie and RayBench Hipster Reserve sunglasses. Afterwards you have to stash the outfit in the barber shop at the Concordia building complex."
     }
+  ],
+  "images": [
+    {
+      "file": "Dandies_Map.png",
+      "hashPath": "b/bb",
+      "caption": "Barber shop marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Dandies_Barber_Shop.png",
+      "hashPath": "6/6d",
+      "caption": "The barber shop",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Dandies_Stash_1.png",
+      "hashPath": "4/49",
+      "caption": "First stashing location at the table",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Dandies_Stash_2.png",
+      "hashPath": "f/f7",
+      "caption": "Second stashing location at the left side chairs",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

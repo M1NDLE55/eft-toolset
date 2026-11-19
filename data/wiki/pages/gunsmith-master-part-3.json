@@ -53,5 +53,21 @@
       "level": 4,
       "text": "- This build is based on a standard DVL-10 from Skier LL3.\n- Besides the scope listed below, you can also use the Schmidt & Bender PM II 5-25x56 34mm riflescope which can be bought at Jaeger LL3. Note that it is not compatible with the IEA Mil-Optics KH/F 34mm one-piece magmount.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| NcSTAR Tactical Blue Laser | Skier | LL1 |\n| Nightforce ATACR 7-35x56 34mm riflescope | Jaeger | LL2 (Barter); LL4 |\n| IEA Mil-Optics KH/F 34mm one-piece magmount | MechanicJaeger | LL2 (Barter)LL3 |\n| Nightforce Magmount 34mm ring scope mount | Jaeger | LL2 (Barter); LL4 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "Gunsmith-Pt_5_Inspect_View.png",
+      "hashPath": "7/73",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithPart5Guide.png",
+      "hashPath": "9/92",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

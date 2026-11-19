@@ -41,5 +41,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Encrypted message | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find Jaeger's encrypted message on Woods. The message is located under a hunting stand which is located in the eastern part of the location, near the crashed plane. Once you have obtained the message, you must extract from the location and hand it over to Mechanic."
     }
+  ],
+  "images": [
+    {
+      "file": "Hunting_Stand_map.jpg",
+      "hashPath": "3/3d",
+      "caption": "Crashed plane and hunting stand marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_Location_of_the_Hunting_Camp.png",
+      "hashPath": "4/41",
+      "caption": "Location of the hunting stand, view from the front of the crashed plane",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "JaegersHuntingStand.png",
+      "hashPath": "c/c8",
+      "caption": "The hunting stand",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_message_benath_the_Hunting_Stand.png",
+      "hashPath": "b/b7",
+      "caption": "Message beneath the hunting stand",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

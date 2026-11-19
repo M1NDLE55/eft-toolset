@@ -40,5 +40,49 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Cottage back door key | 1 | Required | N/A | Unlocks the back door of the villa where the Marked Ophthalmoscope is located. |\n| Marked Ophthalmoscope | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Surgery kit marked with a blue symbol | 1 | Handover item | Yes |\nIn this quest you have to find Sanitar's Surgery kit marked with a blue symbol and his Marked Ophthalmoscope on Shoreline.\n\nThe surgery kit can be found on the second floor of the office building at the pier, located on top of a wardrobe.\n\nThe ophthalmoscope can be found inside the locked villa in the western part of the map, near the swamp. You need a Cottage back door key to unlock the back door to enter the villa. The ophthalmoscope can be found in the left hand room on the second floor, inside a potted plant on the table."
     }
+  ],
+  "images": [
+    {
+      "file": "PierOfficeBuildingShorelineMap.png",
+      "hashPath": "d/d2",
+      "caption": "Office building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "PierOfficeBuilding.png",
+      "hashPath": "0/0c",
+      "caption": "The wanted building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Surgery_kit.png",
+      "hashPath": "9/9b",
+      "caption": "Surgery kit on top of the wardrobe",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "LockedVillaShorelineMap.png",
+      "hashPath": "c/c4",
+      "caption": "The wanted villa marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ShorelineLockedVillaBackEntrance.png",
+      "hashPath": "b/bc",
+      "caption": "The wanted villa from the backside with back door",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ophtalmoscope.png",
+      "hashPath": "0/05",
+      "caption": "Ophthalmoscope inside the potted plant",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

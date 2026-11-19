@@ -125,5 +125,315 @@
       "level": 4,
       "text": "- +128,000 EXP\n- Unlocks achievement Trail of Breadcrumbs"
     }
+  ],
+  "images": [
+    {
+      "file": "BeyondMeat2.png",
+      "hashPath": "a/a2",
+      "caption": "Building location marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "TerraGroup_security_post_Building.png",
+      "hashPath": "b/b3",
+      "caption": "The building entrance",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "TerraGroup_security_armory_Way_1.png",
+      "hashPath": "8/88",
+      "caption": "Way to the surveillance room 1",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "TerraGroup_security_armory_Way_2.png",
+      "hashPath": "f/fa",
+      "caption": "Way to the surveillance room 2",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "The_Unheard_Activation_Location_1.png",
+      "hashPath": "f/f0",
+      "caption": "The note on the desk",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Beyond_the_Red_Meat_2_31.png",
+      "hashPath": "7/71",
+      "caption": "Way to the office",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "The_Unheard_Activation_Location_2.png",
+      "hashPath": "3/3f",
+      "caption": "The note on a cabinet next to the meeting room door",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Saving_the_Mole_Map.png",
+      "hashPath": "e/e8",
+      "caption": "TerraGroup building location marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Ground_Zero_TerraGroup_Building.png",
+      "hashPath": "a/a8",
+      "caption": "The TerraGroup building",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Scientist's_Office.png",
+      "hashPath": "b/bc",
+      "caption": "Door to the office",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "The_Unheard_Activation_Location_3.png",
+      "hashPath": "a/a0",
+      "caption": "Note on the desk with turned on screens",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "The_Unheard_Changes_and_Fax_Map.png",
+      "hashPath": "1/19",
+      "caption": "Locations marked on map",
+      "section": "Guide",
+      "subsection": "Learn more about TerraGroup's activities/Learn more about the \"fuel\" mentioned in the note"
+    },
+    {
+      "file": "The_Unheard_Changes_Lab.png",
+      "hashPath": "4/4b",
+      "caption": "The laboratory",
+      "section": "Guide",
+      "subsection": "Learn more about TerraGroup's activities/Learn more about the \"fuel\" mentioned in the note"
+    },
+    {
+      "file": "The_Unheard_Changes.png",
+      "hashPath": "4/45",
+      "caption": "The document in the laboratory next to the screen",
+      "section": "Guide",
+      "subsection": "Learn more about TerraGroup's activities/Learn more about the \"fuel\" mentioned in the note"
+    },
+    {
+      "file": "The_Unheard_Fax.png",
+      "hashPath": "7/70",
+      "caption": "The fax in the office on the lowboard next to the safe",
+      "section": "Guide",
+      "subsection": "Learn more about TerraGroup's activities/Learn more about the \"fuel\" mentioned in the note"
+    },
+    {
+      "file": "The_Unheard_Transport_Log_Map.jpg",
+      "hashPath": "6/67",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Find more information about the special catalyst shipment"
+    },
+    {
+      "file": "Location_of_unheard_log.png",
+      "hashPath": "c/cc",
+      "caption": "The log on a yellow barrel next to the hole in the floor",
+      "section": "Guide",
+      "subsection": "Find more information about the special catalyst shipment"
+    },
+    {
+      "file": "Rzhevsky's_Service_Vehicle_on_map.png",
+      "hashPath": "f/ff",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Locate Rzhevsky's service vehicle and obtain his personal belongings"
+    },
+    {
+      "file": "Rzhevsky's_Service_Vehicle.png",
+      "hashPath": "1/1b",
+      "caption": "The wanted car",
+      "section": "Guide",
+      "subsection": "Locate Rzhevsky's service vehicle and obtain his personal belongings"
+    },
+    {
+      "file": "HDD_in_Rzhevsky's_Service_Vehicle.png",
+      "hashPath": "6/69",
+      "caption": "The hard drive",
+      "section": "Guide",
+      "subsection": "Locate Rzhevsky's service vehicle and obtain his personal belongings"
+    },
+    {
+      "file": "TerraGroup_storage_room_keycard_map.png",
+      "hashPath": "8/89",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Locate and obtain the documents on the Blue Ice fuel catalyst research/Find as much information as possible about the plans of The Unheard"
+    },
+    {
+      "file": "TerraGroup_storage_room_keycard_door.png",
+      "hashPath": "f/f1",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "Locate and obtain the documents on the Blue Ice fuel catalyst research/Find as much information as possible about the plans of The Unheard"
+    },
+    {
+      "file": "The_Unheard_Fuel_catalyst_test_report_Spawn_2.png",
+      "hashPath": "1/19",
+      "caption": "Test report spawn 1 on the bookshelf next to the door",
+      "section": "Guide",
+      "subsection": "Locate and obtain the documents on the Blue Ice fuel catalyst research/Find as much information as possible about the plans of The Unheard"
+    },
+    {
+      "file": "The_Unheard_Fuel_catalyst_test_report_Spawn_1.png",
+      "hashPath": "e/e3",
+      "caption": "Test report spawn 2 on the safe next to the table",
+      "section": "Guide",
+      "subsection": "Locate and obtain the documents on the Blue Ice fuel catalyst research/Find as much information as possible about the plans of The Unheard"
+    },
+    {
+      "file": "The_Unheard_Burnt_document_Spawn_1.png",
+      "hashPath": "9/98",
+      "caption": "Burnt document spawn 1 on the table",
+      "section": "Guide",
+      "subsection": "Locate and obtain the documents on the Blue Ice fuel catalyst research/Find as much information as possible about the plans of The Unheard"
+    },
+    {
+      "file": "The_Unheard_Burnt_document_Spawn_2.png",
+      "hashPath": "e/e1",
+      "caption": "Burnt document spawn 2 on the right metal shelf",
+      "section": "Guide",
+      "subsection": "Locate and obtain the documents on the Blue Ice fuel catalyst research/Find as much information as possible about the plans of The Unheard"
+    },
+    {
+      "file": "APsWhiteboardAndTapes.png",
+      "hashPath": "f/f8",
+      "caption": "Locations marked on map",
+      "section": "Guide",
+      "subsection": "Search for any mention of A.P. in The Lab/Learn more about A.P.'s role and activities"
+    },
+    {
+      "file": "The_Unheard_AP_Whiteboard_1.png",
+      "hashPath": "d/db",
+      "caption": "Whiteboard 1 in office O23",
+      "section": "Guide",
+      "subsection": "Search for any mention of A.P. in The Lab/Learn more about A.P.'s role and activities"
+    },
+    {
+      "file": "The_Unheard_AP_Whiteboard_2.png",
+      "hashPath": "7/7e",
+      "caption": "Whiteboard 2 in the admin office R22",
+      "section": "Guide",
+      "subsection": "Search for any mention of A.P. in The Lab/Learn more about A.P.'s role and activities"
+    },
+    {
+      "file": "Location_of_first_tapeunheardlabs.png",
+      "hashPath": "c/ce",
+      "caption": "Tape #1 in the lecture room on the stairs",
+      "section": "Guide",
+      "subsection": "Search for any mention of A.P. in The Lab/Learn more about A.P.'s role and activities"
+    },
+    {
+      "file": "Location_of_second_tapetheunheardlabs.png",
+      "hashPath": "b/b7",
+      "caption": "Tape #2 in the lecture room on one of the desks next to a laptop",
+      "section": "Guide",
+      "subsection": "Search for any mention of A.P. in The Lab/Learn more about A.P.'s role and activities"
+    },
+    {
+      "file": "HealthResortEastWing.jpg",
+      "hashPath": "d/d9",
+      "caption": "Health resort east wing location marked on map",
+      "section": "Guide",
+      "subsection": "Locate A.P.'s room in the Health Resort/Obtain A.P.'s data storage device and his personal belongings"
+    },
+    {
+      "file": "Sliderkey_flash_drive_marked_with_A.P._spawn.png",
+      "hashPath": "b/bc",
+      "caption": "Flash drive at the laptop",
+      "section": "Guide",
+      "subsection": "Locate A.P.'s room in the Health Resort/Obtain A.P.'s data storage device and his personal belongings"
+    },
+    {
+      "file": "TerraGroup_Corporate_Apartment_Key_Spawn.png",
+      "hashPath": "7/76",
+      "caption": "Key on the right nightstand",
+      "section": "Guide",
+      "subsection": "Locate A.P.'s room in the Health Resort/Obtain A.P.'s data storage device and his personal belongings"
+    },
+    {
+      "file": "Fragment_of_an_unknown_document_spawn.png",
+      "hashPath": "c/cd",
+      "caption": "Document fragment on the left nightstand",
+      "section": "Guide",
+      "subsection": "Locate A.P.'s room in the Health Resort/Obtain A.P.'s data storage device and his personal belongings"
+    },
+    {
+      "file": "Guard_post_note_spawn.png",
+      "hashPath": "5/5a",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Locate A.P.'s room in the Health Resort/Obtain A.P.'s data storage device and his personal belongings"
+    },
+    {
+      "file": "Cardinal_apartment_complex_Map.jpg",
+      "hashPath": "7/70",
+      "caption": "Cardinal apartment complex location marked on map",
+      "section": "Guide",
+      "subsection": "Integrate the files from A.P.'s flash drive into a keycard and access the hidden room in his apartment"
+    },
+    {
+      "file": "Cardinal_apartment_complex.png",
+      "hashPath": "b/bb",
+      "caption": "The Cardinal apartment complex",
+      "section": "Guide",
+      "subsection": "Integrate the files from A.P.'s flash drive into a keycard and access the hidden room in his apartment"
+    },
+    {
+      "file": "TerraGroup_corporate_apartment_key_door.png",
+      "hashPath": "7/7b",
+      "caption": "Door to apartment 1",
+      "section": "Guide",
+      "subsection": "Integrate the files from A.P.'s flash drive into a keycard and access the hidden room in his apartment"
+    },
+    {
+      "file": "TerraGroup_corporate_apartment_key_inside_4.png",
+      "hashPath": "d/d6",
+      "caption": "Door to the hidden room",
+      "section": "Guide",
+      "subsection": "Integrate the files from A.P.'s flash drive into a keycard and access the hidden room in his apartment"
+    },
+    {
+      "file": "Order_from_TerraGroup_Worldwide_headquarters_spawn.png",
+      "hashPath": "f/f7",
+      "caption": "On the floor next to the packages",
+      "section": "Guide",
+      "subsection": "Study the TerraGroup documentation in A.P.'s office"
+    },
+    {
+      "file": "Copy_of_report_for_TG_Worldwide_spawn.png",
+      "hashPath": "f/f3",
+      "caption": "On the left end of the desk",
+      "section": "Guide",
+      "subsection": "Study the role of the Blue Ice catalyst in The Unheard's protocol"
+    },
+    {
+      "file": "Document_mentioning_a_protocol_spawn.png",
+      "hashPath": "4/46",
+      "caption": "On the pile of documents",
+      "section": "Guide",
+      "subsection": "Learn more about The Unheard's protocol"
+    },
+    {
+      "file": "Document_mentioning_the_Warden_spawn.png",
+      "hashPath": "9/94",
+      "caption": "On the right end of the desk",
+      "section": "Guide",
+      "subsection": "Figure out how The Unheard are connected to Tarkov"
+    }
   ]
 }

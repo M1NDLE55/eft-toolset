@@ -61,5 +61,112 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "Cast_the_Net_Shoreline_Map.png",
+      "hashPath": "f/f0",
+      "caption": "Location of the places to find the wi-fi camera.",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Cast_the_Net_Shoreline_Camera_1.png",
+      "hashPath": "2/24",
+      "caption": "The excavator at the smuggler camp.",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Cast_the_Net_Shoreline_Camera_1_close.png",
+      "hashPath": "9/97",
+      "caption": "On the left track of the excavator.",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Cast_the_Net_Shoreline_Camera_2.png",
+      "hashPath": "0/0b",
+      "caption": "The ural truck next to the power station.",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Cast_the_Net_Shoreline_Camera_2_close.png",
+      "hashPath": "8/88",
+      "caption": "On the left edge of the truck's rear bumper.",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Cast_the_Net_Streets_of_Tarkov_Map.png",
+      "hashPath": "6/6a",
+      "caption": "Location of the places to find the wi-fi camera.",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "Cast_the_Net_Streets_of_Tarkov_Camera_1.png",
+      "hashPath": "f/fc",
+      "caption": "At the mixer truck next to the collapsed crane.",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "Cast_the_Net_SOT_Camera_1_close.png",
+      "hashPath": "6/63",
+      "caption": "The camera is located on the left backwheel of the truck.",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "Cast_the_Net_Streets_of_Tarkov_Camera_2.png",
+      "hashPath": "c/c8",
+      "caption": "The bio toilets in front of the Rodina cinema.",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "Cast_the_Net_SOT_Camera_2_close.png",
+      "hashPath": "4/4d",
+      "caption": "The camera is located inside the open toilet box.",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "Cast_the_Net_Ground_Zero_Map.png",
+      "hashPath": "5/5c",
+      "caption": "Location of the places to find the wi-fi camera.",
+      "section": "Guide",
+      "subsection": "Ground Zero"
+    },
+    {
+      "file": "Cast_the_Net_Ground_Zero_Camera_1.png",
+      "hashPath": "a/a8",
+      "caption": "At the truck in the ramp leading to Streets of Tarkov transit.",
+      "section": "Guide",
+      "subsection": "Ground Zero"
+    },
+    {
+      "file": "Reverse_Gear_GZ_Camera_1_close.png",
+      "hashPath": "c/cf",
+      "caption": "The camera on the fuel tank of the truck.",
+      "section": "Guide",
+      "subsection": "Ground Zero"
+    },
+    {
+      "file": "Cast_the_Net_Ground_Zero_Camera_2.png",
+      "hashPath": "5/51",
+      "caption": "Inside the yellow bus located underground.",
+      "section": "Guide",
+      "subsection": "Ground Zero"
+    },
+    {
+      "file": "Reverse_Gear_GZ_Camera_2_close.png",
+      "hashPath": "7/7f",
+      "caption": "On top of one the back seat.",
+      "section": "Guide",
+      "subsection": "Ground Zero"
+    }
   ]
 }

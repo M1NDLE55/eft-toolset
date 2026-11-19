@@ -50,5 +50,70 @@
       "level": 4,
       "text": "The second case can be found next to the portable toilets at the USEC checkpoint on Woods. It has to be stashed in the railcar with the Ural truck at the train platform in the north of Lighthouse."
     }
+  ],
+  "images": [
+    {
+      "file": "IceCreamConesWoods.png",
+      "hashPath": "9/9a",
+      "caption": "ZB-014 bunker location marked on Woods map",
+      "section": "Guide",
+      "subsection": "First case"
+    },
+    {
+      "file": "ZB-014-Bunker.png",
+      "hashPath": "2/29",
+      "caption": "ZB-014 bunker entrance",
+      "section": "Guide",
+      "subsection": "First case"
+    },
+    {
+      "file": "Sisyphus_Case_1_Spawn.png",
+      "hashPath": "c/cf",
+      "caption": "Case location in the bunker",
+      "section": "Guide",
+      "subsection": "First case"
+    },
+    {
+      "file": "Sisyphus_Case_1_Stashing_Map.png",
+      "hashPath": "7/71",
+      "caption": "Guard booth location marked on Reserve map",
+      "section": "Guide",
+      "subsection": "First case"
+    },
+    {
+      "file": "Sisyphus_Case_1_Stashing.png",
+      "hashPath": "0/09",
+      "caption": "The wooden planks at the booth",
+      "section": "Guide",
+      "subsection": "First case"
+    },
+    {
+      "file": "Sisyphus_Case_2_Spawn_Map.png",
+      "hashPath": "3/3c",
+      "caption": "USEC checkpoint location marked on Woods map",
+      "section": "Guide",
+      "subsection": "Second case"
+    },
+    {
+      "file": "Sisyphus_Case_2_Spawn.png",
+      "hashPath": "d/d4",
+      "caption": "Case location next to the toilets",
+      "section": "Guide",
+      "subsection": "Second case"
+    },
+    {
+      "file": "Sisyphus_Case_2_Stashing_Map.jpg",
+      "hashPath": "f/f2",
+      "caption": "Railcar location marked on Lighthouse map",
+      "section": "Guide",
+      "subsection": "Second case"
+    },
+    {
+      "file": "Sisyphus_Case_2_Stashing.png",
+      "hashPath": "6/68",
+      "caption": "The wanted railcar",
+      "section": "Guide",
+      "subsection": "Second case"
+    }
   ]
 }

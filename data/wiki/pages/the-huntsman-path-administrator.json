@@ -75,5 +75,21 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| RSP-30 reactive signal cartridge (Yellow) | 1 | Required | N/A | Must be fired into the sky while being in the train area. |\n| ZiD SP-81 26x75 signal pistol | 1 | Required | N/A | Used to fire the flare cartridge. |\n| 26x75mm flare cartridge (Yellow) | 1 | Required | N/A | Must be fired into the sky while being in the train area. |\n\nIn this quest you first have to shoot a yellow flare into the sky while being inside the train area on Reserve or Lighthouse, depending on your faction. If the flare doesn't reach a certain height, the quest objective won't complete. You can use either the handheld RSP-30 yellow flare which can be bought at Prapor LL1 or a 26x75mm yellow flare cartridge which can be bought at Jaeger LL1, and is fired from a signal pistol. If you use the handheld RSP-30 yellow flare, make sure to aim it upwards, but not too much or it lands behind you. Afterwards you have to kill any 6 targets in the area in the same raid."
     }
+  ],
+  "images": [
+    {
+      "file": "TheHuntsmanPathAdministratorMapBEAR.png",
+      "hashPath": "a/af",
+      "caption": "BEAR: Reserve kill and flare areas marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "TheHuntsmanPathAdministratorMapUSEC.png",
+      "hashPath": "5/5c",
+      "caption": "USEC: Lighthouse kill and flare areas marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -51,5 +51,14 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| TG-VI-26 vaccine batch | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to locate and obtain the vaccine shipment on Lighthouse and hand it over to Therapist. It can be found on the second floor of water treatment building no. 3, on a desk in the western office."
     }
+  ],
+  "images": [
+    {
+      "file": "Halloween_Unexpected_Help_Lighthouse_Spawn.png",
+      "hashPath": "a/a5",
+      "caption": "The vaccine on the desk",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

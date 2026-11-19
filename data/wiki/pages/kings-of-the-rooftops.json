@@ -40,5 +40,14 @@
       "level": 2,
       "text": "In this quest you have to kill 8 sniper Scavs on Streets of Tarkov."
     }
+  ],
+  "images": [
+    {
+      "file": "KoRSniperMap.png",
+      "hashPath": "e/e8",
+      "caption": "Sniper Scav locations marked on the map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

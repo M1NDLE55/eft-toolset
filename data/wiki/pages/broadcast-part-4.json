@@ -41,5 +41,42 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Abandoned factory marked key | 1 | Required | N/A | Used to open the marked room |\nIn this quest you have to find the location of the cultist meeting spot on Streets of Tarkov. The meeting spot is located on the third floor of the northern abandoned factory building in the marked room."
     }
+  ],
+  "images": [
+    {
+      "file": "AbandonedFactoryNorthernBuilding.png",
+      "hashPath": "2/20",
+      "caption": "Marked room location in the northern building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "FactoryMarkedRoomOutside.png",
+      "hashPath": "1/11",
+      "caption": "Marked room in the building and basement entrance marked",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MarkedRoomFromStairsView.png",
+      "hashPath": "d/d4",
+      "caption": "View to the marked room from second floor staircase",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "FactoryMarkedRoomDoor.png",
+      "hashPath": "4/44",
+      "caption": "Door to the marked room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "FactoryMarkedRoomInside2.png",
+      "hashPath": "7/7a",
+      "caption": "Inside the marked room",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

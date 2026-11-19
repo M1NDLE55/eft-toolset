@@ -55,5 +55,98 @@
       "level": 2,
       "text": "Debtor - The BEAR counterpart quest"
     }
+  ],
+  "images": [
+    {
+      "file": "Chekannaya15Map.png",
+      "hashPath": "a/a1",
+      "caption": "Apartment building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chekannaya15ApartmentBuilding.png",
+      "hashPath": "d/d5",
+      "caption": "The apartment building with the entrance in the wall marked",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WesternStaircaseMap.png",
+      "hashPath": "f/fc",
+      "caption": "Way to the western staircase marked on building map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WesternStaircaseWay1.png",
+      "hashPath": "7/71",
+      "caption": "Way to the western staircase 1",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WesternStaircaseWay2.png",
+      "hashPath": "f/f1",
+      "caption": "Way to the western staircase 2",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WesternStaircaseWay3.png",
+      "hashPath": "a/a0",
+      "caption": "Way to the western staircase 3",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chekannaya15ApartmentBuildingWesternStairs.png",
+      "hashPath": "6/6f",
+      "caption": "The western staircase",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "HouseArrestCell1.png",
+      "hashPath": "c/c5",
+      "caption": "Third floor hallway with cell no. 1 marked",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "HouseArrestCell1Inside.png",
+      "hashPath": "b/b7",
+      "caption": "The prison cell",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "PineWoodHotelNorthMap.png",
+      "hashPath": "c/c1",
+      "caption": "Building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "PineWoodHotelNorthBuilding.png",
+      "hashPath": "e/e0",
+      "caption": "Northern entrance",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "HotelRoom206Door.png",
+      "hashPath": "8/8a",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "DeadDebtor.png",
+      "hashPath": "d/d0",
+      "caption": "The debtor on the ground",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

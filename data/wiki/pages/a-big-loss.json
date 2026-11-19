@@ -40,5 +40,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| OLI logistics department office key | 1 | Required | N/A | Unlocks the OLI logistics department office where the OLI cargo route documents are located. |\n| OLI cargo route documents | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you have to obtain the OLI cargo route documents from the OLI logistics department office on the first floor of the ULTRA shopping mall on Interchange. A OLI logistics department office key is required to enter it."
     }
+  ],
+  "images": [
+    {
+      "file": "Interchange_Database_part_2_Guide.png",
+      "hashPath": "2/2f",
+      "caption": "Office location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Oli_Offices.png",
+      "hashPath": "1/18",
+      "caption": "Entrance to the OLI front offices",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Oli_Logistics_Door.png",
+      "hashPath": "0/0e",
+      "caption": "Door to the wanted office",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Database_Part_2_Guide.png",
+      "hashPath": "e/ef",
+      "caption": "Documents on the left side shelf",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

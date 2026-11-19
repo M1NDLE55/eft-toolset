@@ -56,5 +56,21 @@
       "level": 4,
       "text": "- This build is based on a standard KRISS Vector 9x19 from Skier LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| KRISS Vector Mk.5 modular rail | SkierMechanic | LL2 (Barter)LL3 |\n| Tactical Dynamics Skeletonized Foregrip | Skier | LL3 |\n| Glock 9x19 \"Big Stick\" 33-round magazine | SkierMechanic | LL3LL3 |\n| KRISS Vector 9x19 6 inch barrel | Skier | LL2 (Barter); LL3 |\n| SilencerCo Osprey 9 9x19 sound suppressor | MechanicPeacekeeper | LL1 (Barter); LL3LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "Gunsmith11VectorIns.png",
+      "hashPath": "1/19",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "Gunsmith11VectorMod.png",
+      "hashPath": "f/f2",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

@@ -40,5 +40,28 @@
       "level": 2,
       "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Object 21WS keycard | Object #21WS keycard | 1 | Required | N/A | Unlocks the secret container on Interchange. |\n| Stolen weapon case | Stolen weapon case | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe lost weapon crate can be found inside a red container at the container lot in the southwest of the mall on Interchange. Activated power station power and Object #21WS keycard required."
     }
+  ],
+  "images": [
+    {
+      "file": "21WSMap.png",
+      "hashPath": "5/5c",
+      "caption": "Container location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "21ws_outside.jpg",
+      "hashPath": "a/a6",
+      "caption": "The red container",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "IrresistibleQuestStolenCase.png",
+      "hashPath": "6/60",
+      "caption": "The lost crate",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

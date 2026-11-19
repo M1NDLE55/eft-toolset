@@ -44,5 +44,21 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Accuracy International AXMC .338 LM bolt-action sniper rifle | 1 | Required | N/A | Stashed item |\n| Roler Submariner gold wrist watch | 1 | Required | N/A | Stashed item |\n| Military flash drive | 1 | Required | N/A | Stashed item |\nIn this quest you have to stash the 3 specified items in trash bags at the tennis court on Lighthouse. You must not kill any Rogues or The Goons while the task is active. It is possible to completely disassemble the AXMC rifle since it doesn't need to be functional to be stashed."
     }
+  ],
+  "images": [
+    {
+      "file": "LostContactMap.png",
+      "hashPath": "5/51",
+      "caption": "Tennis court location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "BullShitStashingLocation.png",
+      "hashPath": "6/66",
+      "caption": "The trash bags",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -45,5 +45,42 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "EnergyCrisisMap.png",
+      "hashPath": "7/78",
+      "caption": "Locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "EnergyCrisisTrainyardTanks.png",
+      "hashPath": "8/8a",
+      "caption": "The tanks are located in the northeast of the northern freight yard",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "EnergyCrisisTrainyardTruck.png",
+      "hashPath": "4/4a",
+      "caption": "The first truck is located in the east of the northern freight yard, next to the rails",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "EnergyCrisisEastWaterplantTruck.png",
+      "hashPath": "6/68",
+      "caption": "The second truck is located at the eastern wall of the water treatment plant",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "EnergyCrisisOppositeWaterplantTruck.png",
+      "hashPath": "f/fe",
+      "caption": "The third truck is located next to the southern entrance of the water treatment plant",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

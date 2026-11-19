@@ -40,5 +40,35 @@
       "level": 2,
       "text": "In this quest you have to scout the BTR stops \"UN Checkpoint\", \"Village Crossroads\" and \"WTP Building 2 Parking\" on Lighthouse."
     }
+  ],
+  "images": [
+    {
+      "file": "Lighthouse_BTR_stops_map.png",
+      "hashPath": "e/ec",
+      "caption": "BTR stops marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Honest_Review_UN_Checkpoint.png",
+      "hashPath": "8/88",
+      "caption": "UN Checkpoint",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Honest_Review_Village_Crossroads.png",
+      "hashPath": "6/62",
+      "caption": "Village Crossroads",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Honest_Review_WTP_Building_2_Parking.png",
+      "hashPath": "4/4e",
+      "caption": "WTP Building 2 Parking",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

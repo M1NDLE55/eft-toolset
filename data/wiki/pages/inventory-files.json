@@ -55,5 +55,63 @@
       "level": 3,
       "text": "Turn right after entering Oli via the main entrance. Go to the back of the store and look for a cube-shaped desk. The desk is marked by a sign over it, the manifest will be laying on the desk."
     }
+  ],
+  "images": [
+    {
+      "file": "Interchange_Database_part_1_Guide.png",
+      "hashPath": "9/9c",
+      "caption": "Locations marked on map",
+      "section": "Guide",
+      "subsection": "IDEA Manifest"
+    },
+    {
+      "file": "IDEA_Manifest_1_Outside.png",
+      "hashPath": "a/ad",
+      "caption": "View of the entrance to the IDEA office, under the main entrance",
+      "section": "Guide",
+      "subsection": "IDEA Manifest"
+    },
+    {
+      "file": "IDEA_Manifest_2_inside.png",
+      "hashPath": "1/17",
+      "caption": "The computer room where the manifest is located",
+      "section": "Guide",
+      "subsection": "IDEA Manifest"
+    },
+    {
+      "file": "Database_Part_1_Guide_(3).png",
+      "hashPath": "5/5d",
+      "caption": "The IDEA manifest is on a desk, in the IDEA computer room",
+      "section": "Guide",
+      "subsection": "IDEA Manifest"
+    },
+    {
+      "file": "Database_Part_1_Guide_(2).png",
+      "hashPath": "0/0c",
+      "caption": "The Goshan manifest is on a desk, in the north Goshan computer room",
+      "section": "Guide",
+      "subsection": "Goshan Manifest"
+    },
+    {
+      "file": "Oli_Manifest2.png",
+      "hashPath": "b/b4",
+      "caption": "Top of the escalator after the main entrance to the OLI store",
+      "section": "Guide",
+      "subsection": "OLI Manifest"
+    },
+    {
+      "file": "Oli_Manifest1.png",
+      "hashPath": "4/45",
+      "caption": "View inside of the OLI store, where the cube-shaped desk is located",
+      "section": "Guide",
+      "subsection": "OLI Manifest"
+    },
+    {
+      "file": "Database_Part_1_Guide_(1).png",
+      "hashPath": "b/bd",
+      "caption": "The OLI manifest is on a desk, in the information booth on the west part of the OLI",
+      "section": "Guide",
+      "subsection": "OLI Manifest"
+    }
   ]
 }

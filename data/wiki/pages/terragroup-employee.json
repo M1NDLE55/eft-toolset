@@ -42,5 +42,28 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Keycard with a blue marking | 1 | Required | N/A | Unlocks Sanitar's room where the flash drive is located. |\n| Flash drive marked with blue tape | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nThe Flash drive marked with blue tape can be found in Sanitar's room in The Lab. The room is located on the second floor, directly across from the laboratory block (G22) and requires a Keycard with a blue marking to enter.\n\nIn Sanitar's room, the Flash drive marked with blue tape is stuck into the laptop that is located on the left desk after you enter."
     }
+  ],
+  "images": [
+    {
+      "file": "TheLabSanitarsRoom.png",
+      "hashPath": "9/95",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "SanitarsRoom.png",
+      "hashPath": "8/85",
+      "caption": "Door to Sanitar's room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Marked_with_tape_flash_drive-position.png",
+      "hashPath": "8/88",
+      "caption": "Flash drive plugged into the laptop",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

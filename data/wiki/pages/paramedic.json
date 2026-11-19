@@ -80,5 +80,126 @@
       "level": 4,
       "text": "In the back of the ambulance at the loading area, to the south of Razvedchikov street."
     }
+  ],
+  "images": [
+    {
+      "file": "Ambulances-streets.png",
+      "hashPath": "6/69",
+      "caption": "Ambulance locations marked on the map.",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ambulances_Again_7.png",
+      "hashPath": "3/39",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "Ambulances_Again_7_Location.png",
+      "hashPath": "5/58",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "Ambulances_Again_4.png",
+      "hashPath": "5/5a",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "Ambulances_Again_4_Location.png",
+      "hashPath": "3/3f",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "Ambulances_Again_1.png",
+      "hashPath": "5/59",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "Ambulances_Again_1.1.png",
+      "hashPath": "8/84",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "Ambulances_Again_3.png",
+      "hashPath": "a/a8",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    },
+    {
+      "file": "Ambulances_Again_3_Location.png",
+      "hashPath": "e/ea",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    },
+    {
+      "file": "Ambulances_Again_2.png",
+      "hashPath": "a/a4",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fifth spawn"
+    },
+    {
+      "file": "Ambulances_Again_2.1.png",
+      "hashPath": "e/ef",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fifth spawn"
+    },
+    {
+      "file": "Ambulances_Again_5.png",
+      "hashPath": "4/48",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Sixth spawn"
+    },
+    {
+      "file": "Ambulances_Again_5.1.png",
+      "hashPath": "f/f5",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Sixth spawn"
+    },
+    {
+      "file": "Ambulances_Again_8.png",
+      "hashPath": "2/2f",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Seventh spawn"
+    },
+    {
+      "file": "Ambulances_Again_8.1.png",
+      "hashPath": "f/f5",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Seventh spawn"
+    },
+    {
+      "file": "Ambulances_Again_6.png",
+      "hashPath": "7/79",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Eighth spawn"
+    },
+    {
+      "file": "Ambulances_Again_6_Location.png",
+      "hashPath": "8/8d",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Eighth spawn"
+    }
   ]
 }

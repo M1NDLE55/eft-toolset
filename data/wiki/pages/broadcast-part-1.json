@@ -40,5 +40,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Operating room key | 1 | Required | N/A | Used to open the recording studio |\n| Signal Jammer | 1 | Required | N/A | Can be purchased from Mechanic LL1. |\nIn this quest you have to find the hidden recording studio on Lighthouse and place a Signal Jammer there. An Operating room key is needed to enter it. The studio can be found on the first floor of office building #1, which is located at the water treatment plant area in the north."
     }
+  ],
+  "images": [
+    {
+      "file": "OperatingRoomMap.png",
+      "hashPath": "d/df",
+      "caption": "Building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "OfficeBuilding1.png",
+      "hashPath": "1/10",
+      "caption": "Office building #1 at the water treatment plant",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "OperatingRoom.png",
+      "hashPath": "f/f8",
+      "caption": "The studio is in the northeast corner",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "OperatingRoomClose.png",
+      "hashPath": "5/52",
+      "caption": "Inside the room",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

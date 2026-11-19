@@ -42,5 +42,35 @@
       "level": 2,
       "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in Raid |\n| RB-PSP1 key; or; RB-PSP2 key; or; RB-PSV1 key; or; RB-PSV2 key | RB-PSP1 key; or; RB-PSP2 key; or; RB-PSV1 key; or; RB-PSV2 key | 3 | Handover item | Yes |\n\nIn this quest you have to kill 5 Scavs in the underground warehouse and the ramps leading down to it on Reserve. The wanted warehouse is located in the northwest and marked with \"Д\"."
     }
+  ],
+  "images": [
+    {
+      "file": "Reserv_guide.jpg",
+      "hashPath": "5/54",
+      "caption": "Warehouse \"Д\" marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ReserveQuestWarehouse.png",
+      "hashPath": "4/41",
+      "caption": "Warehouse \"Д\" gates",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Safe_corridor.png",
+      "hashPath": "e/e2",
+      "caption": "Inside the warehouse",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Safe_corridor_map.png",
+      "hashPath": "6/66",
+      "caption": "Kill area marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -51,5 +51,14 @@
       "level": 2,
       "text": "During The Labyrinth event, this quest unlocked the In Search of an Exit achievement."
     }
+  ],
+  "images": [
+    {
+      "file": "Labryrinth_missile_area_map.png",
+      "hashPath": "5/5b",
+      "caption": "Prototype weapon area marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

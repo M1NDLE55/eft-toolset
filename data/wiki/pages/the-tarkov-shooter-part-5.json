@@ -62,5 +62,35 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "KoRSniperMap.png",
+      "hashPath": "e/e8",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "Sniper-Scavs-Customs.png",
+      "hashPath": "5/5c",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "Sniper-Scavs-Shoreline.png",
+      "hashPath": "0/03",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Sniper-Scavs-Woods.png",
+      "hashPath": "6/69",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Woods"
+    }
   ]
 }

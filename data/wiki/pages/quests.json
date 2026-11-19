@@ -67,5 +67,14 @@
       "level": 3,
       "text": "Weekly operational tasks are also available to players at level 15. The tasks are a lot more difficult but the rewards are also vastly higher."
     }
+  ],
+  "images": [
+    {
+      "file": "OperationalTaskAvailable.png",
+      "hashPath": "3/33",
+      "caption": "Therapist has a quest available.",
+      "section": "Introduction",
+      "subsection": null
+    }
   ]
 }

@@ -46,5 +46,28 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "HotWheelsMap.png",
+      "hashPath": "3/3a",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "SurplusGoodsGarage.png",
+      "hashPath": "6/60",
+      "caption": "The garage",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "HotWheelsLocation.png",
+      "hashPath": "b/bb",
+      "caption": "The wheels in the garage",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -53,5 +53,21 @@
       "level": 4,
       "text": "- This build is based on a standard M1A from Peacekeeper LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| M1A 7.62x51 20-round magazine | Peacekeeper | LL2 |\n| M1A ProMag Archangel chassis | Mechanic | LL2 (Barter); LL3 |\n| Holosun LS321 Tactical device | Skier | LL3 |\n| M14 UltiMAK M8 Forward Optic mount | Mechanic | LL2 (Barter) |\n| Aimpoint Micro Standard Mount | Peacekeeper | LL1 |\n| Aimpoint Micro T-1 reflex sight | Peacekeeper | LL2 |\n| M14 Leapers UTG 4-Point Locking Deluxe mount | MechanicPeacekeeper | LL2 (Barter); LL3LL2 (Barter) |\n| IEA Mil-Optics KH/F 34mm one-piece magmount | MechanicJaeger | LL2 (Barter)LL3 |\n| Nightforce ATACR 7-35x56 34mm riflescope | Jaeger | LL2 (Barter); LL4 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "GunsmithPart15Mods.png",
+      "hashPath": "a/aa",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithPart15Mods2.png",
+      "hashPath": "6/66",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

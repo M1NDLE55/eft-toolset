@@ -50,5 +50,42 @@
       "level": 3,
       "text": "The spot is located in the three-story dorms, on the stairs from the 1st to the 2nd floor at the inner staircase."
     }
+  ],
+  "images": [
+    {
+      "file": "HCPP5.png",
+      "hashPath": "0/00",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Factory tripwire spot"
+    },
+    {
+      "file": "The_breach_room.png",
+      "hashPath": "a/a0",
+      "caption": "The door to the \"breach room\" where you find the spot",
+      "section": "Guide",
+      "subsection": "Factory tripwire spot"
+    },
+    {
+      "file": "EHKT_Factory_spot.png",
+      "hashPath": "0/08",
+      "caption": "The spot",
+      "section": "Guide",
+      "subsection": "Factory tripwire spot"
+    },
+    {
+      "file": "Every_Hunter_Knows_This_Map.png",
+      "hashPath": "1/1b",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Customs tripwire spot"
+    },
+    {
+      "file": "EHKT_Customs.png",
+      "hashPath": "9/9a",
+      "caption": "The spot",
+      "section": "Guide",
+      "subsection": "Customs tripwire spot"
+    }
   ]
 }

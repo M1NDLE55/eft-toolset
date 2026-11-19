@@ -51,5 +51,21 @@
       "level": 4,
       "text": "- This build is based on a standard OP-SKS from Jaeger LL1.\n\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| SKS 7.62x39 TAPCO 6610 20-round magazine | PeacekeeperSkier | LL1LL1 (Barter) |\n| OP-SKS dovetail mount | Jaeger | LL1 |\n| NPZ USP-1 Tyulpan 4x scope | Prapor | LL1 |\n| NPZ USP-1 scope eyecup | Prapor | LL1 |\n| SKS TAPCO Intrafuse chassis | Mechanic | LL1 (Barter); LL1 |\n| SKS TAPCO Intrafuse buffer tube | Mechanic | LL1 |\n| AR-15 Magpul CTR Carbine stock | Peacekeeper | LL2 |\n| SKS TAPCO Intrafuse SAW-Style pistol grip | Mechanic | LL1 |\n| SKS TAPCO Intrafuse chassis lower rail | Mechanic | LL1 |\n| Zenit RK-6 tactical foregrip | Skier | LL3 |\n| SKS Hexagon 7.62x39 sound suppressor | Skier | LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "GunSmithPart4Guide2.png",
+      "hashPath": "e/e1",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunSmithPart4Guide.png",
+      "hashPath": "2/23",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

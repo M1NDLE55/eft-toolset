@@ -39,5 +39,21 @@
       "level": 2,
       "text": "In this quest you have to extract from Factory through the \"Courtyard Gate\" extraction with the \"Survived\" status. If you extract from the raid with the \"Run Through\" status, the quest will not count as being completed. To avoid the \"Run Through\" status, gain at least 200 EXP in raid (by killing or looting) or be in raid for at least 7 minutes before extracting."
     }
+  ],
+  "images": [
+    {
+      "file": "Exit_Here_Map.jpg",
+      "hashPath": "5/59",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Factory_Courtyard_Gate.png",
+      "hashPath": "8/86",
+      "caption": "The extraction",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

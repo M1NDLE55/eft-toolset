@@ -42,5 +42,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Sliderkey Flash drive | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe flash drive with the information can be found in the administration part (theatre wing) of the resort, on a desk in an office on the eastern side on the top floor."
     }
+  ],
+  "images": [
+    {
+      "file": "ShorelineWetJobPt4Map.png",
+      "hashPath": "4/4e",
+      "caption": "Map showing the location of the office",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Health_resort_management_office_safe_key_office.png",
+      "hashPath": "a/a8",
+      "caption": "The office (middle room)",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WetJob4OfficeLocation2.png",
+      "hashPath": "1/10",
+      "caption": "The desk where the flash drive is located",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Sliderkey_flash_drive_location.png",
+      "hashPath": "5/5b",
+      "caption": "The flash drive",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

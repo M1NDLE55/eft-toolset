@@ -53,5 +53,21 @@
       "level": 4,
       "text": "- This build is based on a standard black SR-25 from Peacekeeper LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Icon | Attachment | Sold By | Loyalty Level |\n| AR-15 HK Ergo PSG-1 style pistol grip | AR-15 HK Ergo PSG-1 style pistol grip | Mechanic | LL4 |\n| AR-10 7.62x51 KAC 10-round steel magazine | AR-10 7.62x51 KAC 10-round steel magazine | Peacekeeper | LL2 |\n| AR-15 Magpul PRS GEN3 stock | AR-15 Magpul PRS GEN3 stock | Peacekeeper | LL3 |\n| FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope | FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope | JaegerMechanic | LL3 (Barter); LL4LL4 (Barter) |\n| KAC PRS/QDC 7.62x51 sound suppressor | KAC PRS/QDC 7.62x51 sound suppressor | Peacekeeper | LL3 (Barter) |\n| Magpul M-LOK 2.5 inch rail | Magpul M-LOK 2.5 inch rail | Mechanic | LL1 |\n| Steiner DBAL-PL tactical device | Steiner DBAL-PL tactical device | Peacekeeper | LL3 |\n| Magpul M-LOK 4.1 inch rail | Magpul M-LOK 4.1 inch rail | Mechanic | LL1 (Barter); LL1 |\n| Stark SE-5 Express Forward foregrip | Stark SE-5 Express Forward foregrip (Black) | MechanicRef | LL4LL3 |\n| NcSTAR MPR45 Backup mount | NcSTAR MPR45 Backup mount | Peacekeeper | LL2 |\n| Burris FastFire Weaver Base | Burris FastFire Weaver Base | PeacekeeperSkier | LL1LL2 |\n| Burris FastFire 3 reflex sight | Burris FastFire 3 reflex sight | PeacekeeperSkier | LL1LL2 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "GunsmithPart24Insp.png",
+      "hashPath": "9/90",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithPart24Mods.png",
+      "hashPath": "a/a5",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

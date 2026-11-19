@@ -42,5 +42,14 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Notes |\n| Health Resort office key with a blue tape | 1 | Required | Unlocks room 110 of the East wing in the Health Resort on Shoreline. |\nIn this quest you have to find Sanitar's office, which is located in the health resort on Shoreline. The wanted office is room 110 on the first floor of the resort east wing. A Health Resort office key with a blue tape is required to unlock the room. After you unlocked the door, simply walk into the room to complete the objective. After you completed the objective, you have to extract from Shoreline."
     }
+  ],
+  "images": [
+    {
+      "file": "HealthResortEastWing.jpg",
+      "hashPath": "d/d9",
+      "caption": "Health resort east wing location marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

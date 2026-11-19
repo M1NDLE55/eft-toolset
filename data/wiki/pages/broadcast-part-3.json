@@ -42,5 +42,28 @@
       "level": 2,
       "text": "In this quest you have to find the location of another bloody broadcast on Streets of Tarkov. The broadcast location is inside the \"Dostoevski\" restaurant at the Malevicha street."
     }
+  ],
+  "images": [
+    {
+      "file": "Broadcast3Map.png",
+      "hashPath": "c/cf",
+      "caption": "Restaurant marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Broadcast_part_3,1.png",
+      "hashPath": "4/44",
+      "caption": "The restaurant",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Broadcast_part_3,2.png",
+      "hashPath": "4/45",
+      "caption": "The broadcast location",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

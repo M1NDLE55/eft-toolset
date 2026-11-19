@@ -56,5 +56,21 @@
       "level": 4,
       "text": "- This build is based on a standard AK-105 from Prapor LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AK-74 5.45x39 6L31 60-round magazine | PraporRef | LL2 (Barter) after The Punisher - Part 2; LL4LL3 |\n| SilencerCo Hybrid 46 Direct Thread Mount adapter | MechanicPeacekeeper | LL1 (Barter); LL2LL2 |\n| SilencerCo Hybrid 46 multi-caliber sound suppressor | PeacekeeperMechanic | LL2LL2 (Barter) |\n| AK AKademia Bastion dust cover | Skier | LL1 |\n| SIG Sauer ROMEO7 1x30 reflex sight (Prototype) | Skier | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "Gunsmith-Pt_10_Inspect_View.png",
+      "hashPath": "d/d6",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "Gunsmith10AK105.png",
+      "hashPath": "8/88",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

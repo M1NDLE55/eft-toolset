@@ -56,5 +56,21 @@
       "level": 4,
       "text": "- This build is based on a standard AKM from Prapor LL2.\n- The Fortis Shift tactical foregrip can also be obtained through the MPX (MQB variant) barter at Mechanic LL1.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Icon | Attachment | Sold By | Loyalty Level |\n| AK 100-series polymer handguard | AK 100-series polymer handguard | Prapor | LL1 |\n| Fortis Shift tactical foregrip | Fortis Shift tactical foregrip | Peacekeeper | LL3 |\n| SilencerCo Hybrid 46 Direct Thread Mount adapter | SilencerCo Hybrid 46 Direct Thread Mount adapter | MechanicPeacekeeper | LL1 (Barter); LL2LL2 |\n| SilencerCo Hybrid 46 multi-caliber sound suppressor | SilencerCo Hybrid 46 multi-caliber sound suppressor | PeacekeeperMechanic | LL2LL2 (Barter) |\n| AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine | AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine (Black) | Peacekeeper | LL2 |\n| AK AKademia Bastion dust cover | AK AKademia Bastion dust cover | Skier | LL1 |\n| SIG Sauer ROMEO7 1x30 reflex sight (Prototype) | SIG Sauer ROMEO7 1x30 reflex sight (Prototype) | Skier | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "Gunsmith-Pt_8_Inspect_View.png",
+      "hashPath": "f/f3",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "Gunsmith8AKM.png",
+      "hashPath": "4/4d",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

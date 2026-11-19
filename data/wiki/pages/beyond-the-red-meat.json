@@ -59,5 +59,70 @@
       "level": 4,
       "text": "On the third floor inside the restaurant director's room, on the illuminated shelf."
     }
+  ],
+  "images": [
+    {
+      "file": "Beluga_restaurant_map.png",
+      "hashPath": "6/6c",
+      "caption": "Beluga restaurant marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "BeyondTheRedMeatSpawn0201.png",
+      "hashPath": "1/11",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "BeyondTheRedMeatSpawn0202.png",
+      "hashPath": "4/4e",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "Beyond_the_Red_Meat_Part_1_3rd_spawn_far.png",
+      "hashPath": "2/2a",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "Beyond_the_Red_Meat_Part_1_3rd_spawn.png",
+      "hashPath": "7/77",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "BeyondTheRedMeatSpawn0101.png",
+      "hashPath": "7/7b",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "BeyondTheRedMeatSpawn0102.png",
+      "hashPath": "5/55",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "The_Red_Meat_Part_1_4th_spawn_far.png",
+      "hashPath": "8/8d",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    },
+    {
+      "file": "The_Red_Meat_Part_1_4th_spawn_close.png",
+      "hashPath": "2/22",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    }
   ]
 }

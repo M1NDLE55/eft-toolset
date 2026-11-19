@@ -22,8 +22,11 @@
   },
   "redirects": 511,
   "leftOut": 6537,
-  "pageBytes": 4568560,
+  "pageBytes": 4984680,
   "itemPages": 4587,
   "itemIds": 4541,
-  "itemPageBytes": 3335688
+  "itemPageBytes": 3335688,
+  "questPagesWithImages": 316,
+  "questImages": 2061,
+  "imageFiles": 1704
 }

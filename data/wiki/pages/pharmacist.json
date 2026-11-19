@@ -41,5 +41,21 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Dorm room 114 key | 1 | Required | N/A | Unlocks dorm room 114 in the two-story dorms on Customs where the Carbon case is located. |\n| Carbon case | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find a carbon case on Customs. It can be found on a safe in room 114 on the first floor of the two-story dorms building. A Dorm room 114 key is required to enter it."
     }
+  ],
+  "images": [
+    {
+      "file": "Pharmacist_Customs.png",
+      "hashPath": "a/ab",
+      "caption": "2 story dorms and room 114 marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Carbon_Case_Location.png",
+      "hashPath": "7/7a",
+      "caption": "The carbon case on the safe",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

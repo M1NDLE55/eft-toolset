@@ -150,5 +150,126 @@
       "level": 4,
       "text": "- Unlocks The Lab in the location selection\n- Unlocks achievement Pathfinder"
     }
+  ],
+  "images": [
+    {
+      "file": "Tutorial_By_xTycho.png",
+      "hashPath": "b/b8",
+      "caption": "Map of the location",
+      "section": "Guide",
+      "subsection": "Escape Ground Zero"
+    },
+    {
+      "file": "Tour_Shoreline_Map.png",
+      "hashPath": "f/fa",
+      "caption": "Intercom location marked on map",
+      "section": "Guide",
+      "subsection": "Terminal"
+    },
+    {
+      "file": "Tour_Shoreline_Tower.png",
+      "hashPath": "c/c5",
+      "caption": "Watchtower where the intercom is located",
+      "section": "Guide",
+      "subsection": "Terminal"
+    },
+    {
+      "file": "Tour_Shoreline_Intercom.png",
+      "hashPath": "a/ad",
+      "caption": "The intercom",
+      "section": "Guide",
+      "subsection": "Terminal"
+    },
+    {
+      "file": "StreetsTransitToLabsMap.png",
+      "hashPath": "7/75",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov to The Lab"
+    },
+    {
+      "file": "StreetsTransitToLabsUpstairs.png",
+      "hashPath": "e/e5",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov to The Lab"
+    },
+    {
+      "file": "StreetsTransitToLabsDownstairs.png",
+      "hashPath": "4/42",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov to The Lab"
+    },
+    {
+      "file": "FactoryTransitToLabsMap.png",
+      "hashPath": "8/8d",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Factory to The Lab"
+    },
+    {
+      "file": "FactoryTransitToTheLab2.png",
+      "hashPath": "e/e0",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Factory to The Lab"
+    },
+    {
+      "file": "FactoryTransitToTheLab.png",
+      "hashPath": "3/31",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Factory to The Lab"
+    },
+    {
+      "file": "Lab_Managers_Location.png",
+      "hashPath": "4/4f",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Search the top management offices"
+    },
+    {
+      "file": "Lab_Managers_Bridge.png",
+      "hashPath": "a/a8",
+      "caption": "The top management offices",
+      "section": "Guide",
+      "subsection": "Search the top management offices"
+    },
+    {
+      "file": "LabsServerRoomMap.png",
+      "hashPath": "3/37",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Search the server room"
+    },
+    {
+      "file": "LabsServerRoom.png",
+      "hashPath": "f/f8",
+      "caption": "The server room",
+      "section": "Guide",
+      "subsection": "Search the server room"
+    },
+    {
+      "file": "Tour_The_Lab_Escape_path_Map.png",
+      "hashPath": "f/f8",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Locate the escape path through the drainage"
+    },
+    {
+      "file": "Tour_The_Lab_Escape_path_1.png",
+      "hashPath": "2/24",
+      "caption": "One of the doors leading into the sewers",
+      "section": "Guide",
+      "subsection": "Locate the escape path through the drainage"
+    },
+    {
+      "file": "Tour_The_Lab_Escape_path_2.png",
+      "hashPath": "c/cf",
+      "caption": "The escape path at the end of the sewers",
+      "section": "Guide",
+      "subsection": "Locate the escape path through the drainage"
+    }
   ]
 }

@@ -50,5 +50,35 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "Blood_of_War_-_Part_3_Map.png",
+      "hashPath": "a/ae",
+      "caption": "Stash locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Bow1.png",
+      "hashPath": "0/04",
+      "caption": "Stash #1 near the checkpoint",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Bow3.png",
+      "hashPath": "3/3a",
+      "caption": "Stash #2 at the twin rocks near the \"ZB-016\" extraction",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Bow2.png",
+      "hashPath": "e/e1",
+      "caption": "Stash #3 at the \"Mountain Stash\" Scav extraction",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

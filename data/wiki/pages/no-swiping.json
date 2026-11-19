@@ -41,5 +41,21 @@
       "level": 2,
       "text": "In this quest you have to kill any 10 enemies in and around the smugglers base on Shoreline or Interchange."
     }
+  ],
+  "images": [
+    {
+      "file": "No_Swiping_Map.png",
+      "hashPath": "5/5f",
+      "caption": "Shoreline base location and kill area marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "No_Swiping_Interchange_Map.jpg",
+      "hashPath": "5/50",
+      "caption": "Interchange base location and kill area marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

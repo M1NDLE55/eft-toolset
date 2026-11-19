@@ -50,5 +50,28 @@
       "level": 4,
       "text": "The generators in the west wing are located in room 219 on the second floor. You can complete the objective by getting into the room, which requires a Health Resort west wing room 219 key, or by looking into it from the joint balcony in room 220 which requires a Health Resort west wing room 220 key."
     }
+  ],
+  "images": [
+    {
+      "file": "220EastGens.png",
+      "hashPath": "3/3d",
+      "caption": "220 east with generators",
+      "section": "Guide",
+      "subsection": "East wing generators location"
+    },
+    {
+      "file": "219WestGens.png",
+      "hashPath": "0/05",
+      "caption": "219 west with generators",
+      "section": "Guide",
+      "subsection": "West wing generators location"
+    },
+    {
+      "file": "220WestBalcony219.png",
+      "hashPath": "a/ae",
+      "caption": "Looking into 219 west from the joint balcony",
+      "section": "Guide",
+      "subsection": "West wing generators location"
+    }
   ]
 }

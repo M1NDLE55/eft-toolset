@@ -64,5 +64,91 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "Wiring_the_Vessel_Leading_to_engine_Map.jpg",
+      "hashPath": "9/9b",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Equipment in the automation room leading to the engine - Level 0"
+    },
+    {
+      "file": "Wiring_the_Vessel_Leading_to_engine_Equipment.png",
+      "hashPath": "2/2a",
+      "caption": "The equipment",
+      "section": "Guide",
+      "subsection": "Equipment in the automation room leading to the engine - Level 0"
+    },
+    {
+      "file": "Wiring_the_Vessel_Near_the_storage_Map.jpg",
+      "hashPath": "f/f4",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Equipment in the automation room near the storage room - Level 0"
+    },
+    {
+      "file": "Wiring_the_Vessel_Near_the_storage_Equipment.png",
+      "hashPath": "1/15",
+      "caption": "The equipment",
+      "section": "Guide",
+      "subsection": "Equipment in the automation room near the storage room - Level 0"
+    },
+    {
+      "file": "Peaceful_Atom_Automation_Room_Map.jpg",
+      "hashPath": "3/3b",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Equipment in the automation room under the engine room - Level -3"
+    },
+    {
+      "file": "Peaceful_Atom_Automation_Room_Code_Room.png",
+      "hashPath": "4/43",
+      "caption": "The cabin with the code",
+      "section": "Guide",
+      "subsection": "Equipment in the automation room under the engine room - Level -3"
+    },
+    {
+      "file": "Peaceful_Atom_Automation_Room_Code.png",
+      "hashPath": "2/23",
+      "caption": "The code on the pinboard",
+      "section": "Guide",
+      "subsection": "Equipment in the automation room under the engine room - Level -3"
+    },
+    {
+      "file": "Wiring_the_Vessel_Under_engine_Entry.png",
+      "hashPath": "7/7e",
+      "caption": "The stairs to the room from the engine room",
+      "section": "Guide",
+      "subsection": "Equipment in the automation room under the engine room - Level -3"
+    },
+    {
+      "file": "Wiring_the_Vessel_Under_engine_Equipment.png",
+      "hashPath": "b/b5",
+      "caption": "The equipment",
+      "section": "Guide",
+      "subsection": "Equipment in the automation room under the engine room - Level -3"
+    },
+    {
+      "file": "Peaceful_Atom_Control_Room_Map.jpg",
+      "hashPath": "7/70",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Install the hacking device in the central control station room - Level 0"
+    },
+    {
+      "file": "Wiring_the_Vessel_Control_Room.png",
+      "hashPath": "9/96",
+      "caption": "Placement location in the room",
+      "section": "Guide",
+      "subsection": "Install the hacking device in the central control station room - Level 0"
+    },
+    {
+      "file": "Wiring_the_Vessel_Control_Room_Placement.png",
+      "hashPath": "8/8c",
+      "caption": "Placement location close-up",
+      "section": "Guide",
+      "subsection": "Install the hacking device in the central control station room - Level 0"
+    }
   ]
 }

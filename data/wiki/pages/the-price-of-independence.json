@@ -76,5 +76,126 @@
       "level": 3,
       "text": "Shoot a yellow flare into the sky while being in the specified areas. If the flare doesn't reach a certain height, the quest objective won't complete. If you use the handheld RSP-30 yellow flare, make sure to aim it upwards, but not too much or it lands behind you."
     }
+  ],
+  "images": [
+    {
+      "file": "Customs_industrial_plant_map.png",
+      "hashPath": "9/9e",
+      "caption": "Building location marked on map",
+      "section": "Guide",
+      "subsection": "Customs Letter location"
+    },
+    {
+      "file": "Provide_Viewership_building.png",
+      "hashPath": "2/2a",
+      "caption": "The industrial plant",
+      "section": "Guide",
+      "subsection": "Customs Letter location"
+    },
+    {
+      "file": "TPoI_Letter_Office.png",
+      "hashPath": "d/dc",
+      "caption": "Door to the office on the third floor",
+      "section": "Guide",
+      "subsection": "Customs Letter location"
+    },
+    {
+      "file": "TPoI_Spawn_1.png",
+      "hashPath": "9/97",
+      "caption": "First spawn behind the switch box to the left after entering",
+      "section": "Guide",
+      "subsection": "Customs Letter location"
+    },
+    {
+      "file": "TPoI_Spawn_2.png",
+      "hashPath": "a/aa",
+      "caption": "Second spawn in the center fuse box Note: Proning required",
+      "section": "Guide",
+      "subsection": "Customs Letter location"
+    },
+    {
+      "file": "TPoI_Spawn_3.png",
+      "hashPath": "f/fe",
+      "caption": "Third spawn floating next to the fallen over table",
+      "section": "Guide",
+      "subsection": "Customs Letter location"
+    },
+    {
+      "file": "TPoI_Spawn_4.png",
+      "hashPath": "3/3f",
+      "caption": "Fourth spawn on the shelf directly next to the desk",
+      "section": "Guide",
+      "subsection": "Customs Letter location"
+    },
+    {
+      "file": "TPoI_Spawn_5.png",
+      "hashPath": "f/ff",
+      "caption": "Fifth spawn on the desk",
+      "section": "Guide",
+      "subsection": "Customs Letter location"
+    },
+    {
+      "file": "CustomsTransitToReserveMap.png",
+      "hashPath": "1/10",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Customs to Reserve transit"
+    },
+    {
+      "file": "CustomsTransitToReserve.png",
+      "hashPath": "f/fe",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Customs to Reserve transit"
+    },
+    {
+      "file": "TPoI_Letter_Map_Reserve.jpg",
+      "hashPath": "0/03",
+      "caption": "Building location marked on map",
+      "section": "Guide",
+      "subsection": "Reserve Letter stashing location"
+    },
+    {
+      "file": "TPoI_Reserve_Stashing_Location.png",
+      "hashPath": "7/78",
+      "caption": "Stashing location",
+      "section": "Guide",
+      "subsection": "Reserve Letter stashing location"
+    },
+    {
+      "file": "ReserveTransitToWoodsMap.png",
+      "hashPath": "a/a3",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Reserve to Woods transit"
+    },
+    {
+      "file": "ReserveTransitToWoods.png",
+      "hashPath": "5/50",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Reserve to Woods transit"
+    },
+    {
+      "file": "WoodsTransitToLighthouseMap.jpg",
+      "hashPath": "6/61",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Woods to Lighthouse transit"
+    },
+    {
+      "file": "WoodsTransitToLighthouse.png",
+      "hashPath": "c/c1",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Woods to Lighthouse transit"
+    },
+    {
+      "file": "TPoI_Flares_Map.png",
+      "hashPath": "9/91",
+      "caption": "Flare areas marked on map",
+      "section": "Guide",
+      "subsection": "Lighthouse Yellow flare launch locations"
+    }
   ]
 }

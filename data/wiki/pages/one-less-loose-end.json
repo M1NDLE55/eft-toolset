@@ -57,5 +57,77 @@
       "level": 3,
       "text": "The journal has to be stashed inside a house at the old sawmill in the east of the location."
     }
+  ],
+  "images": [
+    {
+      "file": "One_Less_Loose_End_Factory_Map.png",
+      "hashPath": "b/b1",
+      "caption": "Laboratory location marked on map",
+      "section": "Guide",
+      "subsection": "Factory journal location"
+    },
+    {
+      "file": "One_Less_Loose_End_Factory_Lab.png",
+      "hashPath": "4/42",
+      "caption": "Entrance to the laboratory",
+      "section": "Guide",
+      "subsection": "Factory journal location"
+    },
+    {
+      "file": "One_Less_Loose_End_Factory_Spawn_1.png",
+      "hashPath": "1/18",
+      "caption": "Spawn #1: In the first room on the trolley",
+      "section": "Guide",
+      "subsection": "Factory journal location"
+    },
+    {
+      "file": "One_Less_Loose_End_Factory_Spawn_2.png",
+      "hashPath": "8/8f",
+      "caption": "Spawn #2: In the first room on the chest of drawers next to the glass cabinet",
+      "section": "Guide",
+      "subsection": "Factory journal location"
+    },
+    {
+      "file": "One_Less_Loose_End_Factory_Spawn_3.png",
+      "hashPath": "f/f4",
+      "caption": "Spawn #3: In the second room in the bottom compartment of the right industrial shelf",
+      "section": "Guide",
+      "subsection": "Factory journal location"
+    },
+    {
+      "file": "One_Less_Loose_End_Factory_Spawn_4.png",
+      "hashPath": "c/cc",
+      "caption": "Spawn #4: In the second room in the small fridge on the floor",
+      "section": "Guide",
+      "subsection": "Factory journal location"
+    },
+    {
+      "file": "One_Less_Loose_End_Factory_Spawn_5.png",
+      "hashPath": "d/d8",
+      "caption": "Spawn #5: In the second room on the right desk",
+      "section": "Guide",
+      "subsection": "Factory journal location"
+    },
+    {
+      "file": "One_Less_Loose_End_Woods_Map.png",
+      "hashPath": "8/84",
+      "caption": "House location marked on map",
+      "section": "Guide",
+      "subsection": "Woods stashing location"
+    },
+    {
+      "file": "One_Less_Loose_End_Woods_Building.png",
+      "hashPath": "e/e4",
+      "caption": "The wanted house",
+      "section": "Guide",
+      "subsection": "Woods stashing location"
+    },
+    {
+      "file": "One_Less_Loose_End_Woods_Stashing_Spot.png",
+      "hashPath": "d/d9",
+      "caption": "Stashing spot",
+      "section": "Guide",
+      "subsection": "Woods stashing location"
+    }
   ]
 }

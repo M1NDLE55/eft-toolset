@@ -41,5 +41,35 @@
       "level": 2,
       "text": "In this quest you have to find the location of the bloody broadcast on Streets of Tarkov. The broadcast location is inside the Primorsky ave Sparja store."
     }
+  ],
+  "images": [
+    {
+      "file": "SparjaStoreMap.png",
+      "hashPath": "b/b1",
+      "caption": "Sparja store marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "SparjaStoreOutside.png",
+      "hashPath": "3/30",
+      "caption": "The Sparja store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "BroadCast2CamLoc.png",
+      "hashPath": "3/38",
+      "caption": "Broadcast location as seen from main entrance",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "BroadCast2Cam.png",
+      "hashPath": "7/75",
+      "caption": "The broadcast location",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

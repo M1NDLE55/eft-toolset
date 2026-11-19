@@ -185,5 +185,448 @@
       "level": 4,
       "text": "- +128,000 EXP\n- Unlocks achievement Through Another's Eyes\n- Unlocks achievement When the Light Fades"
     }
+  ],
+  "images": [
+    {
+      "file": "They_Are_Already_Here_Customs_Activation_Location.png",
+      "hashPath": "a/a2",
+      "caption": "Note on a stack of books",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "They_Are_Already_Here_Reserve_Activation_Location_1.png",
+      "hashPath": "a/a5",
+      "caption": "In RB-BK on the table with the pig carcass",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "They_Are_Already_Here_Reserve_Activation_Location_2.png",
+      "hashPath": "5/56",
+      "caption": "In RB-VO on the table with the pig carcass",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "They_Are_Already_Here_Reserve_Activation_Location_3.png",
+      "hashPath": "5/55",
+      "caption": "In RB-PKPM on the desk",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "They_Are_Already_Here_Woods_Activation_Location_Map.png",
+      "hashPath": "0/09",
+      "caption": "Circle location marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "The_second_ritual_spot_in_the_Woods.png",
+      "hashPath": "f/f8",
+      "caption": "The marked circle",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "They_Are_Already_Here_Woods_Activation_Location.png",
+      "hashPath": "9/9f",
+      "caption": "Note next to the burning candles",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "WetJob2IslandMap.png",
+      "hashPath": "3/37",
+      "caption": "Island location marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "EOTW_Shoreline_location.png",
+      "hashPath": "5/57",
+      "caption": "Note on the floor in the house, first location",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "EOTW_Shoreline_location_2.png",
+      "hashPath": "3/3c",
+      "caption": "Note on the floor in the house, second location",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Cult_victims_apartment_key_Spawn_Map.png",
+      "hashPath": "8/8d",
+      "caption": "House location marked on map",
+      "section": "Guide",
+      "subsection": "Locate a place connected to the Eye of the World/Learn more about the cultist's victim from the torture room"
+    },
+    {
+      "file": "Cult_victims_apartment_key_Spawn_House.png",
+      "hashPath": "b/b2",
+      "caption": "The wanted house",
+      "section": "Guide",
+      "subsection": "Locate a place connected to the Eye of the World/Learn more about the cultist's victim from the torture room"
+    },
+    {
+      "file": "Cult_victim_audio_tape_2_spawn.png",
+      "hashPath": "3/3b",
+      "caption": "The tape on the chair",
+      "section": "Guide",
+      "subsection": "Locate a place connected to the Eye of the World/Learn more about the cultist's victim from the torture room"
+    },
+    {
+      "file": "Cult_victims_apartment_key_Spawn_4.png",
+      "hashPath": "2/27",
+      "caption": "Spawn 1 on the fallen over shelf",
+      "section": "Guide",
+      "subsection": "Locate a place connected to the Eye of the World/Learn more about the cultist's victim from the torture room"
+    },
+    {
+      "file": "Cult_victims_apartment_key_Spawn_1.png",
+      "hashPath": "5/51",
+      "caption": "Spawn 2 on the chair",
+      "section": "Guide",
+      "subsection": "Locate a place connected to the Eye of the World/Learn more about the cultist's victim from the torture room"
+    },
+    {
+      "file": "Cult_victims_apartment_key_Spawn_2.png",
+      "hashPath": "2/2e",
+      "caption": "Spawn 3 on the wooden table",
+      "section": "Guide",
+      "subsection": "Locate a place connected to the Eye of the World/Learn more about the cultist's victim from the torture room"
+    },
+    {
+      "file": "Cult_victims_apartment_key_Spawn_3.png",
+      "hashPath": "e/ed",
+      "caption": "Spawn 4 on the metal table",
+      "section": "Guide",
+      "subsection": "Locate a place connected to the Eye of the World/Learn more about the cultist's victim from the torture room"
+    },
+    {
+      "file": "CultVictimsApartmentKeyMap.png",
+      "hashPath": "f/f0",
+      "caption": "Building location marked on map",
+      "section": "Guide",
+      "subsection": "Locate the cult victim's apartment"
+    },
+    {
+      "file": "CultVictimsApartmentKeyBuilding.png",
+      "hashPath": "6/67",
+      "caption": "The old apartment building",
+      "section": "Guide",
+      "subsection": "Locate the cult victim's apartment"
+    },
+    {
+      "file": "CultVictimsApartmentKeyDoor.png",
+      "hashPath": "3/3a",
+      "caption": "Door to apartment 5",
+      "section": "Guide",
+      "subsection": "Locate the cult victim's apartment"
+    },
+    {
+      "file": "Cult_Victim_Apartment_Office.png",
+      "hashPath": "6/62",
+      "caption": "Door to the office",
+      "section": "Guide",
+      "subsection": "Investigate the victim's apartment/Obtain the victim's first audio tape and the book the Cultists planted"
+    },
+    {
+      "file": "Book_on_the_Arrival.png",
+      "hashPath": "3/34",
+      "caption": "The book on the bookshelf",
+      "section": "Guide",
+      "subsection": "Investigate the victim's apartment/Obtain the victim's first audio tape and the book the Cultists planted"
+    },
+    {
+      "file": "Note_on_preparations_for_the_Arrival.png",
+      "hashPath": "c/c2",
+      "caption": "The note on the desk",
+      "section": "Guide",
+      "subsection": "Investigate the victim's apartment/Obtain the victim's first audio tape and the book the Cultists planted"
+    },
+    {
+      "file": "Cult_Victim_Tape_1.png",
+      "hashPath": "5/58",
+      "caption": "The tape on the desk",
+      "section": "Guide",
+      "subsection": "Investigate the victim's apartment/Obtain the victim's first audio tape and the book the Cultists planted"
+    },
+    {
+      "file": "TheCultPart2DormsMap.png",
+      "hashPath": "5/5f",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "Marked_Room_Door.png",
+      "hashPath": "8/84",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "Customs_Cultist_priest's_note_spawn.png",
+      "hashPath": "a/a4",
+      "caption": "Note on a stack of books",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "AbandonedFactoryNorthernBuilding.png",
+      "hashPath": "2/20",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "FactoryMarkedRoomDoor.png",
+      "hashPath": "4/44",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "Streets_of_Tarkov_Cultist_priest's_note_spawn.png",
+      "hashPath": "5/59",
+      "caption": "Note on the floor",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "RB-BK_lock_location.png",
+      "hashPath": "6/6c",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "RB-BK"
+    },
+    {
+      "file": "2019-10-28marked.png",
+      "hashPath": "3/3d",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "RB-BK"
+    },
+    {
+      "file": "Reserve_RB-BK_Cultist_priest's_note_spawn.png",
+      "hashPath": "c/c0",
+      "caption": "Note on the bookshelf",
+      "section": "Guide",
+      "subsection": "RB-BK"
+    },
+    {
+      "file": "RB-PKPM.png",
+      "hashPath": "1/1e",
+      "caption": "Room location marked on underground map",
+      "section": "Guide",
+      "subsection": "RB-PKPM"
+    },
+    {
+      "file": "RBPKPM_Entrance.png",
+      "hashPath": "c/c1",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "RB-PKPM"
+    },
+    {
+      "file": "Reserve_RB-PKPM_Cultist_priest's_note_spawn.png",
+      "hashPath": "0/04",
+      "caption": "Note on the fallen over bookshelf",
+      "section": "Guide",
+      "subsection": "RB-PKPM"
+    },
+    {
+      "file": "RB-VO_lock_location.png",
+      "hashPath": "5/50",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "RB-VO"
+    },
+    {
+      "file": "RB-VO.png",
+      "hashPath": "f/f9",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "RB-VO"
+    },
+    {
+      "file": "Reserve_RB-VO_Cultist_priest's_note_spawn.png",
+      "hashPath": "e/eb",
+      "caption": "Note on the bookshelf",
+      "section": "Guide",
+      "subsection": "RB-VO"
+    },
+    {
+      "file": "BlueChaletMapKTT.png",
+      "hashPath": "1/18",
+      "caption": "Chalet marked on map",
+      "section": "Guide",
+      "subsection": "Locate the place marked with the Eye of the World on Lighthouse/Investigate the cultist room in the chalet/Obtain the victim's key"
+    },
+    {
+      "file": "Victim's_Note_Spawn.png",
+      "hashPath": "5/54",
+      "caption": "Note on the balcony",
+      "section": "Guide",
+      "subsection": "Locate the place marked with the Eye of the World on Lighthouse/Investigate the cultist room in the chalet/Obtain the victim's key"
+    },
+    {
+      "file": "14-4_dmg._Spawn.png",
+      "hashPath": "8/82",
+      "caption": "Keycard on the ATV",
+      "section": "Guide",
+      "subsection": "Locate the place marked with the Eye of the World on Lighthouse/Investigate the cultist room in the chalet/Obtain the victim's key"
+    },
+    {
+      "file": "EFT_TAAH_Woods_House_Map.png",
+      "hashPath": "1/15",
+      "caption": "House location marked on map",
+      "section": "Guide",
+      "subsection": "Locate the place marked with the Eye of the World on Woods"
+    },
+    {
+      "file": "EFT_TAAH_Woods_House.png",
+      "hashPath": "5/52",
+      "caption": "The wanted house",
+      "section": "Guide",
+      "subsection": "Locate the place marked with the Eye of the World on Woods"
+    },
+    {
+      "file": "EFT_TAAH_Woods_Newspaper.png",
+      "hashPath": "4/4e",
+      "caption": "Newspaper on the whiteboard",
+      "section": "Guide",
+      "subsection": "Locate the place marked with the Eye of the World on Woods"
+    },
+    {
+      "file": "Shoreline_Eye_of_World_Map.jpg",
+      "hashPath": "9/9f",
+      "caption": "Radio tower location marked on map",
+      "section": "Guide",
+      "subsection": "Locate the place marked with the Eye of the World on Shoreline/Investigate the area/Repair the Sordi tower"
+    },
+    {
+      "file": "Signal3.png",
+      "hashPath": "b/b0",
+      "caption": "The radio tower",
+      "section": "Guide",
+      "subsection": "Locate the place marked with the Eye of the World on Shoreline/Investigate the area/Repair the Sordi tower"
+    },
+    {
+      "file": "Shoreline_Eye_of_World_Location.png",
+      "hashPath": "a/a7",
+      "caption": "The shack",
+      "section": "Guide",
+      "subsection": "Locate the place marked with the Eye of the World on Shoreline/Investigate the area/Repair the Sordi tower"
+    },
+    {
+      "file": "Shoreline_Eye_of_World_Dead_Body_Relative_Location.png",
+      "hashPath": "5/5f",
+      "caption": "Location of the body",
+      "section": "Guide",
+      "subsection": "Locate the place marked with the Eye of the World on Shoreline/Investigate the area/Repair the Sordi tower"
+    },
+    {
+      "file": "Note_in_dead_body.png",
+      "hashPath": "4/40",
+      "caption": "The note at the right hand of the body",
+      "section": "Guide",
+      "subsection": "Locate the place marked with the Eye of the World on Shoreline/Investigate the area/Repair the Sordi tower"
+    },
+    {
+      "file": "Repair_location_for_the_Sordi_tower.png",
+      "hashPath": "3/3a",
+      "caption": "Repair location in the shack",
+      "section": "Guide",
+      "subsection": "Locate the place marked with the Eye of the World on Shoreline/Investigate the area/Repair the Sordi tower"
+    },
+    {
+      "file": "PowerStationMap.png",
+      "hashPath": "8/8f",
+      "caption": "Power station marked on map",
+      "section": "Guide",
+      "subsection": "Gain access to NGO Cobalt's secret facility"
+    },
+    {
+      "file": "InterchangePowerStation.png",
+      "hashPath": "d/d9",
+      "caption": "The power station",
+      "section": "Guide",
+      "subsection": "Gain access to NGO Cobalt's secret facility"
+    },
+    {
+      "file": "PowerStationStairsDoor.png",
+      "hashPath": "5/5f",
+      "caption": "Door to the basement stairs",
+      "section": "Guide",
+      "subsection": "Gain access to NGO Cobalt's secret facility"
+    },
+    {
+      "file": "Station_14-4_KORD_Door.png",
+      "hashPath": "b/b6",
+      "caption": "Door to the secret facility",
+      "section": "Guide",
+      "subsection": "Gain access to NGO Cobalt's secret facility"
+    },
+    {
+      "file": "Reader_in_14-4_KORD.png",
+      "hashPath": "0/01",
+      "caption": "The keycard panel",
+      "section": "Guide",
+      "subsection": "Restore power at the station"
+    },
+    {
+      "file": "Grate_door_in_14-4_KORD.png",
+      "hashPath": "5/56",
+      "caption": "The grate door",
+      "section": "Guide",
+      "subsection": "Turn on the cooling system in the server room"
+    },
+    {
+      "file": "Lever_in_14-4_KORD.png",
+      "hashPath": "4/40",
+      "caption": "The lever",
+      "section": "Guide",
+      "subsection": "Turn on the cooling system in the server room"
+    },
+    {
+      "file": "USB_Plant_Location_inside_Cooling_Room_in_14-4_KORD.png",
+      "hashPath": "f/f3",
+      "caption": "Stashing location",
+      "section": "Guide",
+      "subsection": "Install a flash drive to download the data"
+    },
+    {
+      "file": "Mysterious_Audio_Tape_spawn.png",
+      "hashPath": "f/f4",
+      "caption": "The tape in the safe",
+      "section": "Guide",
+      "subsection": "Investigate ARRS Station 14-4 KORD thoroughly"
+    },
+    {
+      "file": "ARRS_mech..png",
+      "hashPath": "0/09",
+      "caption": "The notes on the desk",
+      "section": "Guide",
+      "subsection": "Find a way to disconnect the station from external agents"
+    },
+    {
+      "file": "ARRS_disconnect_button.png",
+      "hashPath": "8/8f",
+      "caption": "The button",
+      "section": "Guide",
+      "subsection": "Restore the ARRS station to backup settings"
+    },
+    {
+      "file": "ARRS_USB_spawn.png",
+      "hashPath": "e/e7",
+      "caption": "The flash drive",
+      "section": "Guide",
+      "subsection": "Collect the flash drive from the ARRS station"
+    }
   ]
 }

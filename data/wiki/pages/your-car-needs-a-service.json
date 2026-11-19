@@ -45,5 +45,56 @@
       "level": 2,
       "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Secure Flash drive (Your car Needs a Service) | Secure Flash drive | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Car dealership director's office room key | Car dealership director's office room key | 1 | Required | N/A | Key to the car dealership manager's office |\n| Car dealership closed section key | Car dealership closed section key | 1 | Required | N/A | Key to the closed car dealership section |\n\nIn this quest you have to find a flash drive on Streets of Tarkov. It can be found on a desk inside the LexOs car dealership director's office, which is located in the closed section on the second floor. A Car dealership closed section key is required to access the office, and the Car dealership director's office room key provided by Peacekeeper via in-game mail is required to open it.\n\nBe aware that the premises of the LexOs car dealership are riddled with Claymores."
     }
+  ],
+  "images": [
+    {
+      "file": "CarDealerMap.png",
+      "hashPath": "8/80",
+      "caption": "Car dealership marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "LexOsClaymoreOverview.png",
+      "hashPath": "d/df",
+      "caption": "LexOs complex overview",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CarDealer.png",
+      "hashPath": "a/a4",
+      "caption": "The car dealership",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CarDealerClosedSectionDoor.png",
+      "hashPath": "1/15",
+      "caption": "Grate door to the closed section",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CarDealerOfficeDoor.png",
+      "hashPath": "a/a4",
+      "caption": "Door to the office",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CarDealerOfficeInside.png",
+      "hashPath": "d/d3",
+      "caption": "Inside the office",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "YCNAS_Flashdrive_location.png",
+      "hashPath": "7/7f",
+      "caption": "Flash drive on the desk",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

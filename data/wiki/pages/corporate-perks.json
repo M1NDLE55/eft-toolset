@@ -50,5 +50,28 @@
       "level": 2,
       "text": "- The Secret to Productivity - The USEC counterpart quest"
     }
+  ],
+  "images": [
+    {
+      "file": "Developer's_Secrets_-_Part_1_Map.png",
+      "hashPath": "e/ec",
+      "caption": "Building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Developer's_Secrets_-_Part_1_Building.png",
+      "hashPath": "4/4a",
+      "caption": "The building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Developer's_Secrets_-_Part_1_Room.png",
+      "hashPath": "7/7d",
+      "caption": "The negotiation room",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

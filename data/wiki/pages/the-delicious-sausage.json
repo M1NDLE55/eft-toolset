@@ -40,5 +40,49 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in Raid |\n| Salty Dog beef sausage | 1 | Handover item | Yes |\nIn this quest you have to visit the 4 the stores listed in the quest objective on Streets of Tarkov and hand over a found in raid Salty Dog beef sausage. The stores can be visited in different raids, and progress is saved upon death. For the store objectives to register, walk up to the center of them. The beef sausage can be found at any food spawn."
     }
+  ],
+  "images": [
+    {
+      "file": "TheDeliciousSausageMap.png",
+      "hashPath": "0/05",
+      "caption": "Stores marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "TheDeliciousSausageShestyorochka.png",
+      "hashPath": "a/ab",
+      "caption": "The Shestyorochka store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "SparjaStoreOutside.png",
+      "hashPath": "3/30",
+      "caption": "The Primorsky ave Sparja store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "TheDeliciousSausagePinewoodSparja.png",
+      "hashPath": "e/ef",
+      "caption": "The Pinewood hotel Sparja store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "TheDeliciousSausageGoshanOutside.png",
+      "hashPath": "e/e9",
+      "caption": "Outside Concordia house no. 3, Goshan store marked",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "TheDeliciousSausageGoshanInside.png",
+      "hashPath": "1/18",
+      "caption": "Inside Concordia house no. 3, door to the Goshan store",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

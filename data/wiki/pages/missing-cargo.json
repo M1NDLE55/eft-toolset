@@ -39,5 +39,49 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Stolen military documents | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player does not place the item and fails to extract with it, they will lose it. |\n\nThe crashed helicopter is located on a hill in the south-southeast of Lighthouse.\n\nThe documents can be found on the first floor of the chalet that is located on the hill in the south-east of Lighthouse."
     }
+  ],
+  "images": [
+    {
+      "file": "MissingCargoHeliMap.png",
+      "hashPath": "f/f2",
+      "caption": "Helicopter marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MissingCargoHeli.png",
+      "hashPath": "1/19",
+      "caption": "The wanted helicopter",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MissingCargoChaletMap.png",
+      "hashPath": "9/90",
+      "caption": "Chalet marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MissingCargoChalet.png",
+      "hashPath": "9/96",
+      "caption": "The chalet",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MissingCargoDocuments.png",
+      "hashPath": "c/ce",
+      "caption": "The documents are located in a black files folder on a desk to the right after you enter",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MissingCargoMilitaryDocuments.jpg",
+      "hashPath": "d/dd",
+      "caption": "Documents in the files folder",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

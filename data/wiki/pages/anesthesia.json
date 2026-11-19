@@ -45,5 +45,35 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "AnesthesiaxRiggedGameMap.png",
+      "hashPath": "b/b6",
+      "caption": "Locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "AnesthesiaxRiggedGameLocation1.png",
+      "hashPath": "d/d9",
+      "caption": "1: Next to the ambulance at the resort",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "AnesthesiaxRiggedGameLocation2.png",
+      "hashPath": "6/65",
+      "caption": "2: In the backyard of the locked cottage",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "AnesthesiaxRiggedGameLocation3.png",
+      "hashPath": "b/b5",
+      "caption": "3: In front of the office building at the pier",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

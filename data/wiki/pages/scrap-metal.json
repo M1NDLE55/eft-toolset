@@ -55,5 +55,35 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "Scrap_Metal_Locations.png",
+      "hashPath": "4/41",
+      "caption": "Tanks marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Secondtankshoreline.png",
+      "hashPath": "b/bd",
+      "caption": "The first tank is located next to the bunker northern of the resort, near the river.",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Firsttankshoreline.png",
+      "hashPath": "a/a7",
+      "caption": "The second tank is located on the road that goes from the tunnel extraction through the village.",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Thirdtankshoreline.png",
+      "hashPath": "4/47",
+      "caption": "The third tank is located on the bridge between the power station and the weather station. You can find it by following the dirt road.",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -50,5 +50,84 @@
       "level": 3,
       "text": "The claymore mine is located on the first floor of the Tarbank building, in the customer desk booth no. 3. To fulfill the objective you only have to get in front of the booth, there is no need to enter it."
     }
+  ],
+  "images": [
+    {
+      "file": "Rough_Tarkov_Woods_Map.png",
+      "hashPath": "5/5d",
+      "caption": "Mined area marked on map",
+      "section": "Guide",
+      "subsection": "Woods heavily mined area"
+    },
+    {
+      "file": "RoughTarkovSandbags.png",
+      "hashPath": "d/d0",
+      "caption": "The sandbags that block the path to the mines",
+      "section": "Guide",
+      "subsection": "Woods heavily mined area"
+    },
+    {
+      "file": "Woods_USEC_camp_northwest_approach_mines.png",
+      "hashPath": "a/ae",
+      "caption": "North-west approach view that leads to the mined forested area",
+      "section": "Guide",
+      "subsection": "Woods heavily mined area"
+    },
+    {
+      "file": "Woods_USEC_camp_northwest_approach_mines2.png",
+      "hashPath": "1/15",
+      "caption": "View on the mined forested area from the camp, recognized by tree stumps, corpses and craters",
+      "section": "Guide",
+      "subsection": "Woods heavily mined area"
+    },
+    {
+      "file": "Woods_USEC_camp_west_approach_mines2.png",
+      "hashPath": "e/e1",
+      "caption": "West rocks approach view with detonated mine spots",
+      "section": "Guide",
+      "subsection": "Woods heavily mined area"
+    },
+    {
+      "file": "Woods_USEC_camp_west_approach_mines.png",
+      "hashPath": "e/ea",
+      "caption": "West ramp approach view with detonated mine spots",
+      "section": "Guide",
+      "subsection": "Woods heavily mined area"
+    },
+    {
+      "file": "Rough_Tarkov_Ground_Zero_Map.png",
+      "hashPath": "1/14",
+      "caption": "Claymore mine marked on map",
+      "section": "Guide",
+      "subsection": "Ground Zero claymore mine"
+    },
+    {
+      "file": "Tarbank_Building.png",
+      "hashPath": "2/26",
+      "caption": "The Tarbank building",
+      "section": "Guide",
+      "subsection": "Ground Zero claymore mine"
+    },
+    {
+      "file": "Rough_Tarkov_Ground_Zero_Approach1.png",
+      "hashPath": "d/d5",
+      "caption": "Way to the customer desk booths",
+      "section": "Guide",
+      "subsection": "Ground Zero claymore mine"
+    },
+    {
+      "file": "Rough_Tarkov_Ground_Zero_Approach3.png",
+      "hashPath": "f/f7",
+      "caption": "Way to the customer desk booth no. 3",
+      "section": "Guide",
+      "subsection": "Ground Zero claymore mine"
+    },
+    {
+      "file": "Rough_Tarkov_Ground_Zero_Approach2.png",
+      "hashPath": "7/77",
+      "caption": "The booth with the claymore",
+      "section": "Guide",
+      "subsection": "Ground Zero claymore mine"
+    }
   ]
 }

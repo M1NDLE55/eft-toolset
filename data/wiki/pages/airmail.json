@@ -56,5 +56,14 @@
       "level": 2,
       "text": "The quest dialogue is referencing the unannounced implementation, and surprise activation of airdrops on December 30, 2021."
     }
+  ],
+  "images": [
+    {
+      "file": "AirmailFlareMap.png",
+      "hashPath": "c/c2",
+      "caption": "Flare area marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

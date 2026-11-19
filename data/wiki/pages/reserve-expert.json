@@ -50,5 +50,77 @@
       "level": 4,
       "text": "- First Armory Room\n4th floor White Pawn, locked grate door (RB-ORB1) on side towards black pawn\n- Second Armory Room\n2nd floor White Pawn, locked grate door (RB-ORB2) on side towards black pawn"
     }
+  ],
+  "images": [
+    {
+      "file": "InventoryCheck.png",
+      "hashPath": "4/4b",
+      "caption": "Room locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Black_pawn_objstaircase.png",
+      "hashPath": "4/42",
+      "caption": "Northern staircase",
+      "section": "Guide",
+      "subsection": "Eastern Barracks - Black Pawn"
+    },
+    {
+      "file": "Reserve_-_RB-ORB3_key_-_door.png",
+      "hashPath": "3/30",
+      "caption": "2nd floor, Second Armory (RB-ORB3)",
+      "section": "Guide",
+      "subsection": "Eastern Barracks - Black Pawn"
+    },
+    {
+      "file": "RB-OB_door1.png",
+      "hashPath": "9/97",
+      "caption": "3rd floor, Duty Room (RB-OB)",
+      "section": "Guide",
+      "subsection": "Eastern Barracks - Black Pawn"
+    },
+    {
+      "file": "RB-ORBX_door.png",
+      "hashPath": "e/e6",
+      "caption": "4th floor, First Armory on side towards Black bishop",
+      "section": "Guide",
+      "subsection": "Eastern Barracks - Black Pawn"
+    },
+    {
+      "file": "Black_Pawn_Obj.png",
+      "hashPath": "6/6a",
+      "caption": "All objectives rooms from outside",
+      "section": "Guide",
+      "subsection": "Eastern Barracks - Black Pawn"
+    },
+    {
+      "file": "White_pawn.png",
+      "hashPath": "3/3e",
+      "caption": "White pawn building",
+      "section": "Guide",
+      "subsection": "Southern Barracks - White Pawn"
+    },
+    {
+      "file": "Screenshot_2019-10-29_19.22.44.png",
+      "hashPath": "d/d2",
+      "caption": "4th floor, First Armory (RB-ORB1)",
+      "section": "Guide",
+      "subsection": "Southern Barracks - White Pawn"
+    },
+    {
+      "file": "RB-ORB2_door.png",
+      "hashPath": "2/21",
+      "caption": "2nd floor, Second Armory (RB-ORB2)",
+      "section": "Guide",
+      "subsection": "Southern Barracks - White Pawn"
+    },
+    {
+      "file": "White_pawn_obj.png",
+      "hashPath": "8/8b",
+      "caption": "Both rooms from outside view",
+      "section": "Guide",
+      "subsection": "Southern Barracks - White Pawn"
+    }
   ]
 }

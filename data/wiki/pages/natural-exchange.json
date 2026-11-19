@@ -41,5 +41,28 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Notes |\n| Metal fuel tank | 2 | Stashed item | Any durability |\nIn this quest you have to stash 2 metal fuel tanks in the warehouses at the smuggler base on Shoreline."
     }
+  ],
+  "images": [
+    {
+      "file": "NaturalExchangeMap.png",
+      "hashPath": "6/61",
+      "caption": "Warehouse locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "NaturalExchangePlacement1.png",
+      "hashPath": "1/1d",
+      "caption": "First stashing spot in the southern warehouse",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "NaturalExchangePlacement2.png",
+      "hashPath": "e/e2",
+      "caption": "Second stashing spot in the northern warehouse",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

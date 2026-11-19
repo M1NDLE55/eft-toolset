@@ -55,5 +55,70 @@
       "level": 4,
       "text": "This room requires a code to be entered. The code can be found in a nearby overseeing cabin on a pinboard. The code changes every raid."
     }
+  ],
+  "images": [
+    {
+      "file": "Peaceful_Atom_Control_Room_Map.jpg",
+      "hashPath": "7/70",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Central control station room - Level 0"
+    },
+    {
+      "file": "Peaceful_Atom_Control_Room_Spawn.png",
+      "hashPath": "4/4a",
+      "caption": "The log on one of the tables",
+      "section": "Guide",
+      "subsection": "Central control station room - Level 0"
+    },
+    {
+      "file": "Peaceful_Atom_Overseeing_Cabin_Map.jpg",
+      "hashPath": "2/29",
+      "caption": "Cabin location marked on map",
+      "section": "Guide",
+      "subsection": "Overseeing cabin in the engine room - Level -2"
+    },
+    {
+      "file": "Peaceful_Atom_Automation_Room_Code_Room.png",
+      "hashPath": "4/43",
+      "caption": "The cabin",
+      "section": "Guide",
+      "subsection": "Overseeing cabin in the engine room - Level -2"
+    },
+    {
+      "file": "Peaceful_Atom_Overseeing_Cabin_Spawn.png",
+      "hashPath": "2/2e",
+      "caption": "The log on the shelf",
+      "section": "Guide",
+      "subsection": "Overseeing cabin in the engine room - Level -2"
+    },
+    {
+      "file": "Peaceful_Atom_Automation_Room_Map.jpg",
+      "hashPath": "3/3b",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Automation room under the engine room - Level -3"
+    },
+    {
+      "file": "Peaceful_Atom_Automation_Room_Code.png",
+      "hashPath": "2/23",
+      "caption": "The code on the pinboard",
+      "section": "Guide",
+      "subsection": "Automation room under the engine room - Level -3"
+    },
+    {
+      "file": "Wiring_the_Vessel_Under_engine_Entry.png",
+      "hashPath": "7/7e",
+      "caption": "The stairs to the room from the engine room",
+      "section": "Guide",
+      "subsection": "Automation room under the engine room - Level -3"
+    },
+    {
+      "file": "Peaceful_Atom_Automation_Room_Spawn.png",
+      "hashPath": "e/ee",
+      "caption": "The log on top of monitoring equipment",
+      "section": "Guide",
+      "subsection": "Automation room under the engine room - Level -3"
+    }
   ]
 }

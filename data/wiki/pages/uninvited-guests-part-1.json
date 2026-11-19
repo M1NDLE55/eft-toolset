@@ -46,5 +46,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Case with military equipment | 1 | Required | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to obtain a case with military equipment on Shoreline\n\nThe case is located at one of the 3 locations.\n\nAfter picking up the case, it will be placed in your quest items inventory. You must successfully extract with the case to hand it in. If you die before reaching the BTR Driver, you will have to retrieve it again. Hand the case over to the BTR Driver in Uninvited Guests - Part 2 to complete the quest."
     }
+  ],
+  "images": [
+    {
+      "file": "Uninvited_Guests_-_Part_1_Map.png",
+      "hashPath": "0/0c",
+      "caption": "Location of the case spawns on the map.",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Uninvited_Guests_-_Part_1_Spawn_1.png",
+      "hashPath": "7/71",
+      "caption": "The case inside the sordi tower bunkhouse",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Uninvited_Guests_-_Part_1_Spawn_2.png",
+      "hashPath": "0/00",
+      "caption": "The case on the second floor of the weather station in a corner next to drawers",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Uninvited_Guests_-_Part_1_Spawn_3.png",
+      "hashPath": "0/0a",
+      "caption": "The case inside the hydroelectric power station next to HEP station storage room key door",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

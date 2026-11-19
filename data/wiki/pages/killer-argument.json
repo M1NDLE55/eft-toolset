@@ -46,5 +46,56 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Lightkeeper's case | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to pick up Lightkeeper's case from the Scav house on Woods. There are multiple spawns. The house can be found near the \"Outskirts\" extraction in the southwest of the location."
     }
+  ],
+  "images": [
+    {
+      "file": "Simple_Side_Job_Woods_Map.png",
+      "hashPath": "f/f1",
+      "caption": "Scav house location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Scav_House.png",
+      "hashPath": "0/08",
+      "caption": "The Scav house",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Killer_Argument_Spawn_1.png",
+      "hashPath": "c/cb",
+      "caption": "Spawn 1 inside the house",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Killer_Argument_Spawn_2.png",
+      "hashPath": "d/d1",
+      "caption": "Spawn 2 next to the Utyos machine gun at the house",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Killer_Argument_Spawn_3.png",
+      "hashPath": "f/fc",
+      "caption": "Spawn 3 at the fallen over table next to the street along the house",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Killer_Argument_Spawn_4.png",
+      "hashPath": "5/50",
+      "caption": "Spawn 4 at the circular fortification east of the house",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Killer_Argument_Spawn_5.png",
+      "hashPath": "3/3b",
+      "caption": "Spawn 5 under a metal barricade next to the street along the house",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

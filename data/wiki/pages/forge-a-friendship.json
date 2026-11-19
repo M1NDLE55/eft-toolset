@@ -75,5 +75,56 @@
       "level": 4,
       "text": "Under one of the desks in the right side of the building."
     }
+  ],
+  "images": [
+    {
+      "file": "PierOfficeBuildingShorelineMap.png",
+      "hashPath": "d/d2",
+      "caption": "Office building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "PierOfficeBuilding.png",
+      "hashPath": "0/0c",
+      "caption": "The wanted building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Forge_a_Friendship_Spawn_1.png",
+      "hashPath": "9/97",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "Forge_a_Friendship_Spawn_2.png",
+      "hashPath": "f/f1",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "Forge_a_Friendship_Spawn_3.png",
+      "hashPath": "c/ca",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "Forge_a_Friendship_Spawn_4.png",
+      "hashPath": "0/08",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    },
+    {
+      "file": "Forge_a_Friendship_Spawn_5.png",
+      "hashPath": "7/7e",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fifth spawn"
+    }
   ]
 }

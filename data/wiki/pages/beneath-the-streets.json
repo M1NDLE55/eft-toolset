@@ -64,5 +64,70 @@
       "level": 3,
       "text": "In the main working area on the first level."
     }
+  ],
+  "images": [
+    {
+      "file": "StreetsTransitToLabsMap.png",
+      "hashPath": "7/75",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov to The Lab"
+    },
+    {
+      "file": "StreetsTransitToLabsUpstairs.png",
+      "hashPath": "e/e5",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov to The Lab"
+    },
+    {
+      "file": "StreetsTransitToLabsDownstairs.png",
+      "hashPath": "4/42",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov to The Lab"
+    },
+    {
+      "file": "LabsControlRoomMap.png",
+      "hashPath": "2/2d",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Scout the control room"
+    },
+    {
+      "file": "LabsControlRoom.png",
+      "hashPath": "5/5f",
+      "caption": "The control room",
+      "section": "Guide",
+      "subsection": "Scout the control room"
+    },
+    {
+      "file": "LabsServerRoomMap.png",
+      "hashPath": "3/37",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Scout the server room"
+    },
+    {
+      "file": "LabsServerRoom.png",
+      "hashPath": "f/f8",
+      "caption": "The server room",
+      "section": "Guide",
+      "subsection": "Scout the server room"
+    },
+    {
+      "file": "Quality_Standard_Yellow_Dome_Map.png",
+      "hashPath": "7/71",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Scout the hazard dome"
+    },
+    {
+      "file": "Quality_Standard_Yellow_Dome.png",
+      "hashPath": "5/5a",
+      "caption": "The dome",
+      "section": "Guide",
+      "subsection": "Scout the hazard dome"
+    }
   ]
 }

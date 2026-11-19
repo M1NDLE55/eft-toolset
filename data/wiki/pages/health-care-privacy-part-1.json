@@ -48,5 +48,42 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "HCPP1.png",
+      "hashPath": "5/56",
+      "caption": "Ambulance locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ambulance2.png",
+      "hashPath": "2/23",
+      "caption": "Ambulance 1 at the \"Tunnel\" extraction",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ambulance1.png",
+      "hashPath": "5/57",
+      "caption": "Ambulance 2 at the \"Tunnel\" extraction",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ambulance3.png",
+      "hashPath": "5/54",
+      "caption": "Ambulance 3 at the health resort",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ambulance4.png",
+      "hashPath": "d/dc",
+      "caption": "Ambulance 4 at the cottages",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

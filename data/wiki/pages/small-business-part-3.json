@@ -49,5 +49,84 @@
       "level": 3,
       "text": "The first stashing spot is located at the dilapidated village in the north. The circle itself is north of the church in the backyard of a house.\n\nThe second stashing spot is located in the woods west of the sawmill near the checkpoint. This spot can easily be located when you go to the checkpoint, stay at the barrier and line your view up with a big stone south of it. See pictures below."
     }
+  ],
+  "images": [
+    {
+      "file": "SmallBusinessPart3ChurchMap.png",
+      "hashPath": "d/d6",
+      "caption": "Church marked on map",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "SmallBusinessPart3Church.png",
+      "hashPath": "9/90",
+      "caption": "The church",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "ShorelineChurchInside.png",
+      "hashPath": "a/ae",
+      "caption": "Stashing spot at the table",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "HealthResortEastWing.jpg",
+      "hashPath": "d/d9",
+      "caption": "Health resort east wing location marked on map",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "HealthResortEastWingMarkedRoom.png",
+      "hashPath": "d/d9",
+      "caption": "Room location marked on east wing map",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Shorelineritualsite.png",
+      "hashPath": "9/9e",
+      "caption": "Stashing spot at the bathtub",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "WoodsRitualSpotMapMarked.png",
+      "hashPath": "5/53",
+      "caption": "Location marked on map (top)",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "The_second_ritual_spot_in_the_Woods.png",
+      "hashPath": "f/f8",
+      "caption": "Stashing spot at the marked circle",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "CheckPointViewToMarkedCircle.png",
+      "hashPath": "e/e6",
+      "caption": "View from the checkpoint towards the marked circle stashing spot",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "MarkedCircleViewToCheckpoint.png",
+      "hashPath": "0/0e",
+      "caption": "View from the marked circle stashing spot towards the checkpoint",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "Cultists_ritual_place.png",
+      "hashPath": "8/82",
+      "caption": "The marked circle",
+      "section": "Guide",
+      "subsection": "Woods"
+    }
   ]
 }

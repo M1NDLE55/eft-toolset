@@ -50,5 +50,35 @@
       "level": 2,
       "text": "- Green Corridor - The BEAR counterpart quest"
     }
+  ],
+  "images": [
+    {
+      "file": "StreetsConvoyMap.png",
+      "hashPath": "c/cf",
+      "caption": "Convoy and ambush spot with Claymores marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "LexOsClaymoreOverview.png",
+      "hashPath": "d/df",
+      "caption": "LexOs complex overview",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "StreetsConvoy.png",
+      "hashPath": "7/78",
+      "caption": "The convoy",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "StreetsConvoyAmbushSpot.png",
+      "hashPath": "6/68",
+      "caption": "The ambush spot",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

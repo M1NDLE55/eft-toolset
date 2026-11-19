@@ -53,5 +53,56 @@
       "level": 4,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "ZB_Bunker_location.png",
+      "hashPath": "5/5e",
+      "caption": "Bunker locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Zb-016_entrance.png",
+      "hashPath": "2/28",
+      "caption": "ZB-016 bunker entrance",
+      "section": "Guide",
+      "subsection": "ZB-016"
+    },
+    {
+      "file": "The_survivalist_path_-_Thrifty_Crate_overview.png",
+      "hashPath": "6/65",
+      "caption": "Stashing location in the bunker",
+      "section": "Guide",
+      "subsection": "ZB-016"
+    },
+    {
+      "file": "The_survivalist_path_-_Thrifty_Crate_close-up.png",
+      "hashPath": "6/60",
+      "caption": "Wooden crate where the items have to be stashed",
+      "section": "Guide",
+      "subsection": "ZB-016"
+    },
+    {
+      "file": "ZB-014-Bunker.png",
+      "hashPath": "2/29",
+      "caption": "ZB-014 bunker entrance",
+      "section": "Guide",
+      "subsection": "ZB-014"
+    },
+    {
+      "file": "The_survivalist_path_-_Thrifty_Crate_overview2.png",
+      "hashPath": "d/de",
+      "caption": "Stashing location in the bunker",
+      "section": "Guide",
+      "subsection": "ZB-014"
+    },
+    {
+      "file": "The_survivalist_path_-_Thrifty_Crate_close-up2.png",
+      "hashPath": "a/aa",
+      "caption": "Wooden crate where the items have to be stashed",
+      "section": "Guide",
+      "subsection": "ZB-014"
+    }
   ]
 }

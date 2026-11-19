@@ -55,5 +55,35 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "Markedcustoms.jpg",
+      "hashPath": "4/41",
+      "caption": "Vehicle locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "TigerSafari2.png",
+      "hashPath": "f/fa",
+      "caption": "First Tigr vehicle",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "TigerSafari3.png",
+      "hashPath": "3/3d",
+      "caption": "Second Tigr vehicle",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "TigerSafari1.png",
+      "hashPath": "3/32",
+      "caption": "Third Tigr vehicle",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

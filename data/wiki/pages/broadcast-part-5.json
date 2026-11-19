@@ -40,5 +40,56 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Mysterious room marked key | 1 | Required | N/A | Unlocks the marked room on the first floor of the Chekannaya 13 apartment building on Streets of Tarkov where the Cultist knife must be stashed. |\n| Cultist knife | 1 | Required | N/A | Must be stashed at the ritual spot |\nIn this quest you have to kill a Cultist priest on any location and obtain a Cultist knife to stash it in the ritual spot at Chekannaya st. 13 on Streets of Tarkov."
     }
+  ],
+  "images": [
+    {
+      "file": "Mysterious_marked_key_onmap.png",
+      "hashPath": "3/33",
+      "caption": "Ritual spot location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Mysterious_key_building_entrance.png",
+      "hashPath": "c/cc",
+      "caption": "Entrance to the building through a window from the courtyard",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Mysterious_key_path1.png",
+      "hashPath": "e/ea",
+      "caption": "Once inside, get in the corridor and move to the second room on the left",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Mysterious_key_path2.png",
+      "hashPath": "a/a3",
+      "caption": "In the bedroom, go through the hole in the wall",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Mysterious_key_path3.png",
+      "hashPath": "2/27",
+      "caption": "After going through the hole, get downstairs and open the door to the left",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Mysterious_key_room_door.png",
+      "hashPath": "9/96",
+      "caption": "You get in front of the door to unlock",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Mysterious_key_room.png",
+      "hashPath": "d/d4",
+      "caption": "Stashing location at the cross",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

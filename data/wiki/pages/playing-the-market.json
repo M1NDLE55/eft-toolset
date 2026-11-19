@@ -40,5 +40,28 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Toolset | 2 | Required | N/A | This item is used to repair the control boards. When used, the item is removed from the players' inventory. |\n\nIn this quest you have to repair 2 control boards with 2 Toolsets in Factory. They can be recognized by blinking red lights. It is recommended to repair them in separate raids, carrying the toolsets in your secure container. If you have a Secure container Epsilon or a Secure container Theta, you can safely place 2 per raid."
     }
+  ],
+  "images": [
+    {
+      "file": "FarmingPart1Guide.jpg",
+      "hashPath": "1/14",
+      "caption": "Control boards marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Blinky-2.png",
+      "hashPath": "7/71",
+      "caption": "First control board",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Bilnky-1.png",
+      "hashPath": "4/43",
+      "caption": "Second control board",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

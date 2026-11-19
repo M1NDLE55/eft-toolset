@@ -41,5 +41,14 @@
       "level": 2,
       "text": "In this quest you have to kill 5 Scav Raiders in the underground bunker on Reserve. Scav Raiders have the chance to spawn there at the start of a raid, and additional ones may appear after the \"D-2\" extraction switch has been activated."
     }
+  ],
+  "images": [
+    {
+      "file": "UndergroundCommandAreMap.png",
+      "hashPath": "6/67",
+      "caption": "Quest area marked on underground map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

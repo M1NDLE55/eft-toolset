@@ -44,5 +44,35 @@
       "level": 2,
       "text": "- This questline was released together with the video \"Escape from Undead Tarkov\"."
     }
+  ],
+  "images": [
+    {
+      "file": "InfectedCivilian.png",
+      "hashPath": "5/5a",
+      "caption": "Infected civilian",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "InfectedLabTechnician.png",
+      "hashPath": "d/d0",
+      "caption": "Infected lab technician",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "InfectedPMC.png",
+      "hashPath": "1/16",
+      "caption": "Infected PMC",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "InfectedBlackDivision.png",
+      "hashPath": "8/8d",
+      "caption": "Infected Black Division operative",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

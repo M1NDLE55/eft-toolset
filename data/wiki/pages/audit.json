@@ -40,5 +40,49 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Accountant's notes | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you have to obtain the accountant's notes in the \"ФИНАНС\" (\"FINANCE\") building on Streets of Tarkov. They can be found on the second floor, in the first office to the right. A diary with the notes is tucked in a red file folder on the floor."
     }
+  ],
+  "images": [
+    {
+      "file": "FinancialInstitutionMap.png",
+      "hashPath": "c/c6",
+      "caption": "Building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "FinancialInstitutionBuilding.png",
+      "hashPath": "d/dd",
+      "caption": "The building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "FinancialInstitutionOfficeStairs.png",
+      "hashPath": "5/5d",
+      "caption": "Staircase to the second floor",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Audit2ndFloorOffice.png",
+      "hashPath": "a/ac",
+      "caption": "The wanted office",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "AuditFolderLocation.png",
+      "hashPath": "1/1e",
+      "caption": "The wanted file folder",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Audit_5.png",
+      "hashPath": "1/12",
+      "caption": "Diary inside the file folder",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

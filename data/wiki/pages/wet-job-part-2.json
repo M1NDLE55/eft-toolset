@@ -47,5 +47,21 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "WetJob2IslandMap.png",
+      "hashPath": "3/37",
+      "caption": "Island location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_house_on_the_island_with_the_weapon_box_in_it.png",
+      "hashPath": "b/bd",
+      "caption": "The fishing table next to the house",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

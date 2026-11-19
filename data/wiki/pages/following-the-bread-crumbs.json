@@ -91,5 +91,105 @@
       "level": 4,
       "text": "In the locked manager's area, between the desktop and the drawers of the desk with the two screens."
     }
+  ],
+  "images": [
+    {
+      "file": "BreadCrumbsBlackTestingMap.png",
+      "hashPath": "b/bf",
+      "caption": "Locations marked on map",
+      "section": "Guide",
+      "subsection": "Weapon testing area and experiment room location"
+    },
+    {
+      "file": "Lab_Key_testing_area_(weap.)_-_Outside.png",
+      "hashPath": "b/b9",
+      "caption": "The weapon testing area",
+      "section": "Guide",
+      "subsection": "Weapon testing area and experiment room location"
+    },
+    {
+      "file": "The_Lab_Showcase_16.png",
+      "hashPath": "1/18",
+      "caption": "The glassed room",
+      "section": "Guide",
+      "subsection": "Weapon testing area and experiment room location"
+    },
+    {
+      "file": "BreadCrumbsManagersMap.png",
+      "hashPath": "c/c8",
+      "caption": "Conference room location marked on map",
+      "section": "Guide",
+      "subsection": "Conference room and secured tape location"
+    },
+    {
+      "file": "ManagersOfficeEntrance.png",
+      "hashPath": "d/dc",
+      "caption": "Entrance to the conference room",
+      "section": "Guide",
+      "subsection": "Conference room and secured tape location"
+    },
+    {
+      "file": "BreadCrumbsReception.png",
+      "hashPath": "1/11",
+      "caption": "Red folder",
+      "section": "Guide",
+      "subsection": "First/Second spawn"
+    },
+    {
+      "file": "BreadCrumbsReception2.png",
+      "hashPath": "d/de",
+      "caption": "Blue folder",
+      "section": "Guide",
+      "subsection": "First/Second spawn"
+    },
+    {
+      "file": "BreadCrumbsRightSideTable.png",
+      "hashPath": "b/b0",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "BreadCrumbsUnlocked1.png",
+      "hashPath": "a/aa",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    },
+    {
+      "file": "BreadCrumbsFloor.png",
+      "hashPath": "9/93",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fifth spawn"
+    },
+    {
+      "file": "BreadCrumbsChair1.png",
+      "hashPath": "c/c9",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Sixth spawn"
+    },
+    {
+      "file": "BreadCrumbsChair2.png",
+      "hashPath": "e/e0",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Sixth spawn"
+    },
+    {
+      "file": "BreadCrumbsOneScreenDesk.png",
+      "hashPath": "1/1b",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Seventh spawn"
+    },
+    {
+      "file": "BreadCrumbsDesk.png",
+      "hashPath": "2/28",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Eighth spawn"
+    }
   ]
 }

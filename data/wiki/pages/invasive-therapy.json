@@ -55,5 +55,42 @@
       "level": 3,
       "text": "On the first floor in the dining area opposite of the fireplace."
     }
+  ],
+  "images": [
+    {
+      "file": "To_the_Light_Getting_Acquainted_Chalet_Map.png",
+      "hashPath": "1/16",
+      "caption": "Upper chalet location marked on map",
+      "section": "Guide",
+      "subsection": "Med bay in the upper chalet"
+    },
+    {
+      "file": "Invasive_Therapy_Med_bay_Stash.png",
+      "hashPath": "1/19",
+      "caption": "The med bay",
+      "section": "Guide",
+      "subsection": "Med bay in the upper chalet"
+    },
+    {
+      "file": "Invasive_Therapy_Guest_hall_Stash.png",
+      "hashPath": "c/c3",
+      "caption": "The guest hall supplies",
+      "section": "Guide",
+      "subsection": "Guest hall supplies in the upper chalet"
+    },
+    {
+      "file": "Invasive_Therapy_Invasive_Therapy_Map_2.png",
+      "hashPath": "a/aa",
+      "caption": "Lower chalet location marked on map",
+      "section": "Guide",
+      "subsection": "Ammo stockpile in the lower chalet"
+    },
+    {
+      "file": "Invasive_Therapy_Ammo_stockpile_Stash.png",
+      "hashPath": "1/1a",
+      "caption": "The ammunition stockpile",
+      "section": "Guide",
+      "subsection": "Ammo stockpile in the lower chalet"
+    }
   ]
 }

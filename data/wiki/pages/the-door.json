@@ -40,5 +40,63 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| WI-FI Camera | 2 | Required | N/A | Can be purchased from Mechanic LL1. |\n| Rusted bloody key | 1 | Required | N/A | Unlocks the door on the fourth floor of the Klimova 16A building. |\nIn this quest you have to place two WI-FI Cameras in the Klimova 16A building on Streets of Tarkov. A Rusted bloody key is required. One has to be placed in the staircase in front of the locked door on the fourth floor, and the other one has to be placed at the heater next to the chained door in the area behind the locked door."
     }
+  ],
+  "images": [
+    {
+      "file": "Klimova_16A_Map.png",
+      "hashPath": "c/c9",
+      "caption": "Klimova 16A building location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Klimova_16A_Astronaut_Painting.png",
+      "hashPath": "3/3f",
+      "caption": "Cosmonaut painting on the south side of the building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Klimova_16A_Main_Entrance.png",
+      "hashPath": "a/a5",
+      "caption": "Main entrance to the building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Klimova_16A_Back_Entrance.png",
+      "hashPath": "0/0d",
+      "caption": "Back entrance to the building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Klimova_16A_3_To_4_Floor_Stairs.png",
+      "hashPath": "6/62",
+      "caption": "Third to fourth floor stairs with trash that has to be climbed over",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Rusted_Bloody_Key_Door.png",
+      "hashPath": "2/27",
+      "caption": "Locked door on the fourth floor",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_Door_Camera_Location_2.png",
+      "hashPath": "c/cb",
+      "caption": "First camera location at the heater next to the chained door",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_Door_Camera_Location_1.png",
+      "hashPath": "7/7a",
+      "caption": "Second camera location at the trash bags in front of the locked door",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

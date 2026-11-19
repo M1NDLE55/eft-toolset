@@ -42,5 +42,56 @@
       "level": 2,
       "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| RB-KSM key | RB-KSM key | 1 | Required | N/A | Unlocks room RB-KSM on the second floor of the hospital building (White Bishop) on Reserve where the Medical Journal #1 is located. |\n| RB-SMP key | RB-SMP key | 1 | Required | N/A | Unlocks room RB-SMP on the second floor of the hospital building (White Bishop) on Reserve where the Medical Journal #2 is located. |\n| Medical record 1 | Medical record #1 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Medical record 2 | Medical record #2 | 1 | Handover item | Yes |\nThe medical record journals are located in two locked rooms on the second floor of the hospital building (White Bishop) on Reserve.\n\nThe first one is located in the RB-KSM room in the bottom right compartment of the left hand cabinet after entering.\n\nThe second one is located in the RB-SMP room on the floor between the right hand shelves after entering."
     }
+  ],
+  "images": [
+    {
+      "file": "HospitalMap.jpeg",
+      "hashPath": "4/4a",
+      "caption": "Hospital building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Whitebishopstairs1.png",
+      "hashPath": "c/c5",
+      "caption": "Bottom of the stairs going to second floor objective rooms",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Whitebishopstairs2.png",
+      "hashPath": "6/64",
+      "caption": "Stairs going to second floor objective rooms",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "RB-KSM_door.png",
+      "hashPath": "a/a3",
+      "caption": "RB-KSM door",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Disease_history_Journal_1.png",
+      "hashPath": "a/a4",
+      "caption": "Journal #1",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "RB-SMP_door.png",
+      "hashPath": "6/6e",
+      "caption": "RB-SMP door",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Disease_history_Journal_2.png",
+      "hashPath": "4/46",
+      "caption": "Journal #2",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

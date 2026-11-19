@@ -52,5 +52,42 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Arena advertisement poster | 1 | Item to stash | N/A | Can be purchased from Skier LL1. |\nIn this quest you have to stash an Arena advertisement poster in the living quarters of the Scav base (ZB-1013 extraction) building with the numerous mounted weapons on Customs.\n\n3 posters are provided by Skier via in-game mail. While a poster can't be put directly in secure containers, it can be put into a Document case or S I C C organizational pouch to prevent losing it upon death.\n\nThe poster has to be stashed at one of five beds on the first floor."
     }
+  ],
+  "images": [
+    {
+      "file": "EasyMoneyPart1CustomsMap1.png",
+      "hashPath": "5/5a",
+      "caption": "Scav base marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ZB-013_Building.png",
+      "hashPath": "b/b9",
+      "caption": "The Scav base",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "EasyMoneyPart1CustomsMap2.png",
+      "hashPath": "0/02",
+      "caption": "Beds marked on first floor map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "EasyMoneyPart1CustomsBeds1.png",
+      "hashPath": "5/52",
+      "caption": "Middle room beds",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "EasyMoneyPart1CustomsBeds2.png",
+      "hashPath": "d/d6",
+      "caption": "Southern room beds",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

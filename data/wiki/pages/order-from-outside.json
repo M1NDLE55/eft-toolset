@@ -50,5 +50,63 @@
       "level": 4,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "Airspace_Control_Center_Map.jpg",
+      "hashPath": "9/96",
+      "caption": "Airspace control center location marked on map",
+      "section": "Guide",
+      "subsection": "Reserve Pickup location"
+    },
+    {
+      "file": "Order_From_Outside_Room_Map.png",
+      "hashPath": "d/d4",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Reserve Pickup location"
+    },
+    {
+      "file": "Order_From_Outside_Door.png",
+      "hashPath": "8/8f",
+      "caption": "Door to the room, way when entering from the east",
+      "section": "Guide",
+      "subsection": "Reserve Pickup location"
+    },
+    {
+      "file": "Order_From_Outside_Spawn_1.png",
+      "hashPath": "d/d4",
+      "caption": "Spawn 1 in the back left corner behind the green crates",
+      "section": "Guide",
+      "subsection": "Reserve Pickup location"
+    },
+    {
+      "file": "Order_From_Outside_Spawn_2.png",
+      "hashPath": "3/3b",
+      "caption": "Spawn 2 under the table",
+      "section": "Guide",
+      "subsection": "Reserve Pickup location"
+    },
+    {
+      "file": "Order_From_Outside_Spawn_3.png",
+      "hashPath": "b/bf",
+      "caption": "Spawn 3 in the back right corner in a green crate",
+      "section": "Guide",
+      "subsection": "Reserve Pickup location"
+    },
+    {
+      "file": "Protect_the_Sky_Map.png",
+      "hashPath": "a/ae",
+      "caption": "Gravesite location marked on map",
+      "section": "Guide",
+      "subsection": "Woods Stashing location"
+    },
+    {
+      "file": "Order_From_Outside_Stashing_Location.png",
+      "hashPath": "e/eb",
+      "caption": "The gravesite",
+      "section": "Guide",
+      "subsection": "Woods Stashing location"
+    }
   ]
 }

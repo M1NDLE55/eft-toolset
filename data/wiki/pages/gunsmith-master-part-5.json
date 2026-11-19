@@ -53,5 +53,21 @@
       "level": 3,
       "text": "- This build is based on a standard AKMN from Prapor LL3.\n- Make sure to use all parts in black and not stealth grey.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Icon | Attachment | Sold By | Loyalty Level |\n| AK Magpul MOE AKM handguard (Black) | AK Magpul MOE AKM handguard (Black) | Skier | LL3 |\n| Magpul M-LOK AFG tactical foregrip (Black) | Magpul M-LOK AFG tactical foregrip (Black) | PeacekeeperSkier | LL3LL3 |\n| AKM/AK-74 Magpul Zhukov-S stock | AKM/AK-74 Magpul Zhukov-S stock | Peacekeeper | LL4 |\n| AK Magpul MOE pistol grip (Black) | AK Magpul MOE pistol grip (Black) | Mechanic | LL4 |\n| AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine | AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine (Black) | Peacekeeper | LL2 |\n| Rotor 43 7.62x39 sound suppressor | Rotor 43 7.62x39 sound suppressor | Mechanic | LL2 (Barter) |\n| EOTech HHS-1 hybrid sight | EOTech HHS-1 hybrid sight (Black) | Peacekeeper | LL4 |\n| AK AKademia Bastion dust cover | AK AKademia Bastion dust cover | Skier | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "GunsmithPart14Mods.png",
+      "hashPath": "f/fc",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithPart14Mods2.png",
+      "hashPath": "3/3c",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

@@ -74,5 +74,98 @@
       "level": 4,
       "text": "Inside the left unlocked office, underneath the desk with the fallen bookcase against it."
     }
+  ],
+  "images": [
+    {
+      "file": "PopulationCensusMap.png",
+      "hashPath": "f/f4",
+      "caption": "Housing department marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "PopulationCensusBuilding.png",
+      "hashPath": "7/76",
+      "caption": "Housing department building backside with entrance",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Hall1.png",
+      "hashPath": "e/ef",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "Spawn1.png",
+      "hashPath": "9/9e",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "PopulationCensusThirdOfficeRightLampDesk.png",
+      "hashPath": "5/59",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "Populationcensus3spawn.png",
+      "hashPath": "9/9a",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "PopCenStaircase.png",
+      "hashPath": "f/f1",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "PopCenDiary1.png",
+      "hashPath": "8/80",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "PopulationCensusLastOfficeLeftDeskSpawn.png",
+      "hashPath": "b/b3",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    },
+    {
+      "file": "Spawn2.png",
+      "hashPath": "4/4a",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    },
+    {
+      "file": "ArchiveRoomStaircase.png",
+      "hashPath": "f/f2",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fifth spawn"
+    },
+    {
+      "file": "PopulationCensusSecondFloorUnderFallenShelf.png",
+      "hashPath": "0/08",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fifth spawn"
+    },
+    {
+      "file": "PopCens_5th_Spawn.png",
+      "hashPath": "c/c4",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fifth spawn"
+    }
   ]
 }

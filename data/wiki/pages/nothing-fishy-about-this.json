@@ -40,5 +40,21 @@
       "level": 2,
       "text": "In this quest you have to find Ragman's lost SUV on Shoreline. It is located in the east of the swamp village, driven into a pond."
     }
+  ],
+  "images": [
+    {
+      "file": "Nothing_Fishy_About_This_Map.png",
+      "hashPath": "5/54",
+      "caption": "SUV location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Nothing_Fishy_About_This_Location.png",
+      "hashPath": "3/31",
+      "caption": "The SUV in the pond",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

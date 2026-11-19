@@ -50,5 +50,42 @@
       "level": 2,
       "text": "Belka and Strelka are names of the first two dogs who went to the Earth's orbit and returned alive."
     }
+  ],
+  "images": [
+    {
+      "file": "KlimovStreetSignalAreaNote.png",
+      "hashPath": "2/22",
+      "caption": null,
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "FlareSuccessNote.png",
+      "hashPath": "7/7f",
+      "caption": null,
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Belka_and_Strelka_Map.png",
+      "hashPath": "7/70",
+      "caption": "Extraction marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Railroad_Passage.png",
+      "hashPath": "4/48",
+      "caption": "The extraction",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "RailroadPassageCustomsSignalArea.png",
+      "hashPath": "5/52",
+      "caption": "Signal flare area and extract zone map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

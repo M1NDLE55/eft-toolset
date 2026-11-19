@@ -52,5 +52,21 @@
       "level": 4,
       "text": "- The PKP machine gun can only be obtained by killing Kaban on Streets of Tarkov.\n- The bipod has to be taken off\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| PK Zenit B-50 handguard | Skier | LL4 |\n| NcSTAR Tactical Blue Laser | Skier | LL1 |\n| PKM 7.62x54R 658mm barrel | Prapor | LL4 |\n| PK Zenit DTK-1P 7.62x54R muzzle brake | Skier | LL4 |\n| PK Zenit PT-2 \"Klassika\" stock | Skier | LL4 |\n| NPZ USP-1 Tyulpan 4x scope | Prapor | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "GunsmithPart25Insp.png",
+      "hashPath": "7/74",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithPart25Mods.png",
+      "hashPath": "f/fb",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

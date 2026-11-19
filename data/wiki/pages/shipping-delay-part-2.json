@@ -40,5 +40,49 @@
       "level": 2,
       "text": "In this quest you have to scout the 3 specified locations at the train depot on Woods. The depot can only be accessed via the BTR Driver's taxi service. After scouting, the quest A Helping Hand must also be completed to hand in this one.\n\nIt is also possible to leave the depot through walking on top of the western train. When walking on top of the train it is important to stick to the center to not get hit by snipers or mines."
     }
+  ],
+  "images": [
+    {
+      "file": "Shipping_Delay_Part_2_location.png",
+      "hashPath": "3/39",
+      "caption": "Locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Warehouse_Depot_Woods.png",
+      "hashPath": "a/ae",
+      "caption": "1. The warehouse",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "A_Helping_Hand_Building.png",
+      "hashPath": "d/d9",
+      "caption": "2. The office",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Garages_Depot_Woods.png",
+      "hashPath": "5/50",
+      "caption": "3. The garages",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WoodsTrainDepotExit.png",
+      "hashPath": "3/3a",
+      "caption": "Way to the train",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WoodsTrainDepotExit2.png",
+      "hashPath": "6/6c",
+      "caption": "The train",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

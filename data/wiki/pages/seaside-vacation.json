@@ -40,5 +40,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Laptop with information | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe briefcase is located under a bed on the second floor of one of the western houses that is directly located at the shore."
     }
+  ],
+  "images": [
+    {
+      "file": "SeasideVacationMap.png",
+      "hashPath": "3/3b",
+      "caption": "House marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "SeasideVacationHouse.png",
+      "hashPath": "f/f4",
+      "caption": "The wanted house",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "SeasideVacationRoom.png",
+      "hashPath": "5/5f",
+      "caption": "First room on the left when you use the little bridge",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "SeasideVacationClose.png",
+      "hashPath": "4/4e",
+      "caption": "The briefcase is located underneath the bed on the window side",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

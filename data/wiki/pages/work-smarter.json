@@ -40,5 +40,28 @@
       "level": 2,
       "text": "In this quest you have to visit either of the 2 hidden extractions on Customs. The hidden ones are \"Smugglers' Boat\" and \"Smugglers' Bunker (ZB-1012)\". Extracting through them is not required."
     }
+  ],
+  "images": [
+    {
+      "file": "Work_Smarter_Map.png",
+      "hashPath": "2/2f",
+      "caption": "Extractions marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Smuggler's_Boat.png",
+      "hashPath": "8/86",
+      "caption": "The Smugglers' Boat extraction",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ZB-1012.png",
+      "hashPath": "2/20",
+      "caption": "The Smugglers' Bunker (ZB-1012) extraction",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -40,5 +40,14 @@
       "level": 2,
       "text": "In this quest you have to kill 10 Scavs at, and around the 4 mentioned locations on Woods."
     }
+  ],
+  "images": [
+    {
+      "file": "Hiking_Map.jpg",
+      "hashPath": "a/af",
+      "caption": "Locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

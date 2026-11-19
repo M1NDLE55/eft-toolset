@@ -59,5 +59,63 @@
       "level": 4,
       "text": "In the bottom compartment of the bookshelf, on top of books."
     }
+  ],
+  "images": [
+    {
+      "file": "StreetsOfTarkovMapCPSUPart2MarkedOnMap.png",
+      "hashPath": "4/42",
+      "caption": "Building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CPSUPart2Outside.png",
+      "hashPath": "6/64",
+      "caption": "The museum building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CPSUPart2Inside.png",
+      "hashPath": "c/c3",
+      "caption": "Way to the stairs",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CPSUPart2RoomDoor.png",
+      "hashPath": "0/07",
+      "caption": "Way to the room with the spawns",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "JournalSpawn1.png",
+      "hashPath": "b/b0",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "CPSU_Part_2.png",
+      "hashPath": "9/9f",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "CPSU2_3rd_spawn.png",
+      "hashPath": "2/22",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "JournalSpawn2.png",
+      "hashPath": "d/d6",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    }
   ]
 }

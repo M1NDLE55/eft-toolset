@@ -67,5 +67,14 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Aramid fiber fabric | 5 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 1). |\n| Ripstop fabric | 10 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 1). |\n| Paracord | 3 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 2). |\nAramid fiber fabric can commonly be found in clothing stores on Interchange. Ripstop fabric can be found in the same locations, though more rarely. They can also be found inside of Sport bags, Buried barrel caches, and Ground caches.\nParacord can be found in Sport bags. They can also be found spawning on the map Reserve. For more specific spawn locations visit the Paracord page."
     }
+  ],
+  "images": [
+    {
+      "file": "Textile_1_and_2_locations.png",
+      "hashPath": "9/98",
+      "caption": "Pieces of fabric locations on Interchange",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

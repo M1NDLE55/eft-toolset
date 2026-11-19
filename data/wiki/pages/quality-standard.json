@@ -55,5 +55,28 @@
       "level": 2,
       "text": "The quest item location is a memento to a former LEDX Skin Transilluminator spawn location in the exact same place."
     }
+  ],
+  "images": [
+    {
+      "file": "Quality_Standard_Yellow_Dome_Map.png",
+      "hashPath": "7/71",
+      "caption": "Dome location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Quality_Standard_Yellow_Dome.png",
+      "hashPath": "5/5a",
+      "caption": "The dome",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Quality_Standard_Yellow_Dome_Spawn.png",
+      "hashPath": "b/b6",
+      "caption": "US LEDX on a blue barrel",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

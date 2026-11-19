@@ -50,5 +50,28 @@
       "level": 4,
       "text": "The folder is located in the same room, next to one of the doors."
     }
+  ],
+  "images": [
+    {
+      "file": "Halloween_Coincidence?_Room_Map.png",
+      "hashPath": "d/d0",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Locate the source of the signal on Lighthouse"
+    },
+    {
+      "file": "Halloween_Coincidence?_Room.png",
+      "hashPath": "c/cb",
+      "caption": "The room",
+      "section": "Guide",
+      "subsection": "Locate the source of the signal on Lighthouse"
+    },
+    {
+      "file": "Halloween_Coincidence?_Folder_Spawn.png",
+      "hashPath": "4/4a",
+      "caption": "The folder",
+      "section": "Guide",
+      "subsection": "Obtain any clues in the area"
+    }
   ]
 }

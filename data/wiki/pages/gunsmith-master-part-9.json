@@ -53,5 +53,21 @@
       "level": 4,
       "text": "- This build is based on a standard M4A1 from Peacekeeper LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AR-15 5.56x45 SureFire MAG5-60 STANAG 60-round magazine | Peacekeeper | LL3 (Barter) |\n| AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine | PeacekeeperRef | LL4 (Barter)LL4 |\n| AR-15 5.56x45 SureFire MAG5-100 STANAG 100-round magazine | Mechanic | LL4 |\n| AR-15 Alexander Arms MK10 rifle length handguard | Mechanic | LL4 |\n| Alexander Arms 10 inch rail | Mechanic | LL4 |\n| Zenit RK-1 tactical foregrip | Skier | LL3 |\n| AR-15 Magpul MIAD pistol grip (FDE) | Peacekeeper | LL2 |\n| AR-15 5.56x45 10.3 inch barrel | PeacekeeperMechanic | LL2 (Barter); LL3LL2 (Barter) |\n| AR-15 KAC QDC 5.56x45 Flash Suppressor Kit | Peacekeeper | LL2 |\n| KAC QDSS NT4 5.56x45 sound suppressor (FDE) | Loot Only | |\n| AR-15 Ballistic Advantage Lo-Pro Gas Block | Mechanic | LL3 |\n| UNV DLOC-IRD sight mount | Jaeger | LL2 (Barter) |\n| Trijicon REAP-IR thermal scope | MechanicSkier | LL4 (Barter)LL4 (Barter) |\n| Trijicon REAP-IR scope eyecup | Jaeger | LL3 (Barter); LL3 |\n| AR-15 KRISS Defiance DS150 stock | Peacekeeper | LL3 |\n| AR-15 Magpul B.A.D. Lever bolt release | Mechanic | LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "GunsmithPart16Mods.png",
+      "hashPath": "8/8b",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithPart16Mods2.png",
+      "hashPath": "b/bd",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    }
   ]
 }

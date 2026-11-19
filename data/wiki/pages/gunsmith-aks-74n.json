@@ -56,5 +56,21 @@
       "level": 4,
       "text": "- This build is based on a standard AKS-74N from Prapor LL2.\n- Make sure to use the correct AK-12 5.45x39 30-round magazine, not the AK-12 5.45x39 early model 30-round magazine.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Icon | Attachment | Sold By | Loyalty Level |\n| AKS-74/AKS-74U Zenit PT Lock | AKS-74/AKS-74U Zenit PT Lock | Skier | LL2 |\n| AK Zenit PT-3 \"Klassika\" stock | AK Zenit PT-3 \"Klassika\" stock | Skier | LL3 |\n| AK Zenit RK-3 pistol grip | AK Zenit RK-3 pistol grip (Black) | Skier | LL3 |\n| AK Zenit B-33 dust cover | AK Zenit B-33 dust cover | Skier | LL3 |\n| AK Zenit DTK-1 7.62x39/5.45x39 muzzle brake | AK Zenit DTK-1 7.62x39/5.45x39 muzzle brake | Skier | LL3 |\n| AK Zenit B-30 handguard with B-31S upper handguard rail | AK Zenit B-30 handguard with B-31S upper handguard rail | MechanicSkier | LL2 (Barter)LL4 |\n| Zenit Klesch-2IKS IR illuminator with laser | Zenit Klesch-2IKS IR illuminator with laser | Skier | LL2 |\n| Zenit RK-0 tactical foregrip | Zenit RK-0 tactical foregrip | Skier | LL3 |\n| AK-12 5.45x39 30-round magazine | AK-12 5.45x39 30-round magazine | Prapor | LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "Gunsmith-Pt_9_Inspect_View.png",
+      "hashPath": "2/25",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "Gunsmith9AK74.png",
+      "hashPath": "e/ee",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

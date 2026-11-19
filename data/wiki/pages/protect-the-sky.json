@@ -41,5 +41,49 @@
       "level": 2,
       "text": "The quest Simple Side Job from Lightkeeper will automatically fail if this quest is completed first.\n| Item name | Amount | Requirement | Find in raid | Notes |\n| KOSA UAV electronic jamming device | 1 | Handover item* | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n- This item will only appear in your next Woods raid after accepting this quest.\n\nIn this quest you have to find a KOSA UAV electronic jamming device on Woods. There are multiple spawns at a gravesite south of the dilapidated village in the north."
     }
+  ],
+  "images": [
+    {
+      "file": "Protect_the_Sky_Map.png",
+      "hashPath": "a/ae",
+      "caption": "Gravesite location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Protect_the_Sky_Spawn_1.png",
+      "hashPath": "6/65",
+      "caption": "Spawn 1 next to the stretchers",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Protect_the_Sky_Spawn_2.png",
+      "hashPath": "b/bb",
+      "caption": "Spawn 2 in the supply crate",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Protect_the_Sky_Spawn_3.png",
+      "hashPath": "5/5d",
+      "caption": "Spawn 3 next to the supply crate",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Protect_the_Sky_Spawn_4.png",
+      "hashPath": "0/0e",
+      "caption": "Spawn 4 in the bushes towards the lake",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Protect_the_Sky_Spawn_5.png",
+      "hashPath": "f/f2",
+      "caption": "Spawn 5 in the green crate",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -40,5 +40,49 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| TerraGroup storage room keycard | 1 | Required | N/A | Unlocks the door to the TerraGroup storage room on Factory where the chemical container is located |\n| Chemical container | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe chemical container can be found in the TerraGroup storage room on Factory, which is located in the underground tunnels right next to the \"Camera Bunker Door\" Scav extraction. A TerraGroup storage room keycard is required to enter it. There are multiple spawns throughout the room."
     }
+  ],
+  "images": [
+    {
+      "file": "TerraGroup_storage_room_keycard_map.png",
+      "hashPath": "8/89",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "TerraGroup_storage_room_keycard_door.png",
+      "hashPath": "f/f1",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Dragnet_spawn_location_1.png",
+      "hashPath": "7/7b",
+      "caption": "First spawn: On the packages to the right after entering",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Dragnet_spawn_location_4.png",
+      "hashPath": "4/4f",
+      "caption": "Second spawn: In the middle compartment of the left industrial shelf",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Dragnet_spawn_location_2.png",
+      "hashPath": "0/02",
+      "caption": "Third spawn: On the table",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Dragnet_spawn_location_3.png",
+      "hashPath": "a/a7",
+      "caption": "Fourth spawn: On the shelf to the left after entering",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

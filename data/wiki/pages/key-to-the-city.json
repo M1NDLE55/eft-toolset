@@ -60,5 +60,84 @@
       "level": 2,
       "text": "The engraved date (5. August 2016) on the quest item's handle refers to the start of the Closed Alpha of the game."
     }
+  ],
+  "images": [
+    {
+      "file": "StreetsOfTarkovMapCPSUPart2MarkedOnMap.png",
+      "hashPath": "4/42",
+      "caption": "Building marked on the map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CPSUPart2Outside.png",
+      "hashPath": "6/64",
+      "caption": "The museum building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "TarkovCitySouvenirKeyAllDisplayCases.png",
+      "hashPath": "4/42",
+      "caption": "First floor key locations marked",
+      "section": "Guide",
+      "subsection": "First floor"
+    },
+    {
+      "file": "TarkovCitySouvenirKeyDisplayCase1.png",
+      "hashPath": "2/2b",
+      "caption": "1: In a display case, against the inner front edge",
+      "section": "Guide",
+      "subsection": "First floor"
+    },
+    {
+      "file": "TarkovCitySouvenirKeyBehindBook.png",
+      "hashPath": "f/f9",
+      "caption": "2: In a display case, behind an angled display stand",
+      "section": "Guide",
+      "subsection": "First floor"
+    },
+    {
+      "file": "TarkovCitySouvenirKeyExhibit.png",
+      "hashPath": "8/8b",
+      "caption": "3: In a display case, in the inner left corner",
+      "section": "Guide",
+      "subsection": "First floor"
+    },
+    {
+      "file": "TarkovCitySouvenirKeyDisplayCase4.png",
+      "hashPath": "d/da",
+      "caption": "4: In a display case, under a book",
+      "section": "Guide",
+      "subsection": "First floor"
+    },
+    {
+      "file": "CPSUPart2Inside.png",
+      "hashPath": "c/c3",
+      "caption": "Way to the stairs",
+      "section": "Guide",
+      "subsection": "Second floor"
+    },
+    {
+      "file": "TarkovCitySouvenirKeyShelf.png",
+      "hashPath": "f/fd",
+      "caption": "On the lowboard in the hallway",
+      "section": "Guide",
+      "subsection": "Second floor"
+    },
+    {
+      "file": "TarkovCitySouvenirKeyTable.png",
+      "hashPath": "0/09",
+      "caption": "On the desk in the room with the kitchen",
+      "section": "Guide",
+      "subsection": "Second floor"
+    },
+    {
+      "file": "TarkovCitySouvenirKeyBookShelf.png",
+      "hashPath": "8/8d",
+      "caption": "In the middle compartment of the bedroom bookshelf",
+      "section": "Guide",
+      "subsection": "Second floor"
+    }
   ]
 }

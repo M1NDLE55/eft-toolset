@@ -45,5 +45,28 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "1st_&_2nd_Group_of_tankers.jpg",
+      "hashPath": "9/97",
+      "caption": "Fuel tanks marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Tarkovwiki1.png",
+      "hashPath": "3/36",
+      "caption": "First group of tanks next to the \"Sewer Manhole\" extraction",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Tarkovwiki3e.png",
+      "hashPath": "a/a4",
+      "caption": "Second group of tanks next to the train depot",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

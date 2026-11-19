@@ -51,5 +51,21 @@
       "level": 4,
       "text": "- This build is based on a standard MP-133 from Jaeger LL1.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| MP-133 custom plastic forestock with rails | MechanicJaeger | LL1 (Barter)LL2 |\n| MP-133/153 plastic pistol grip | Jaeger | LL1 |\n| NcSTAR Tactical Blue Laser | Skier | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "Gunsmithpart1Modding2.png",
+      "hashPath": "7/76",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "Gunsmithpart1Modding.png",
+      "hashPath": "6/6a",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

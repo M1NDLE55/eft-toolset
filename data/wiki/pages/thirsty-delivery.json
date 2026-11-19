@@ -55,5 +55,42 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "ThirstyDeliveryWoodsMap.png",
+      "hashPath": "2/28",
+      "caption": "Scav bunker location marked on map",
+      "section": "Guide",
+      "subsection": "Woods stashing location"
+    },
+    {
+      "file": "ThirstyDeliveryWoodsLocation.png",
+      "hashPath": "a/a3",
+      "caption": "Stashing location in the bunker",
+      "section": "Guide",
+      "subsection": "Woods stashing location"
+    },
+    {
+      "file": "ThirstyDeliveryCustomsMap.png",
+      "hashPath": "2/2f",
+      "caption": "Store location marked on map",
+      "section": "Guide",
+      "subsection": "Customs stashing location"
+    },
+    {
+      "file": "ThirstyDeliveryCustomsStore.png",
+      "hashPath": "2/23",
+      "caption": "The store",
+      "section": "Guide",
+      "subsection": "Customs stashing location"
+    },
+    {
+      "file": "ThirstyDeliveryCustomsLocation.png",
+      "hashPath": "b/bf",
+      "caption": "Stashing location in the backroom of the store",
+      "section": "Guide",
+      "subsection": "Customs stashing location"
+    }
   ]
 }

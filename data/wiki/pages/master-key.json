@@ -40,5 +40,28 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Key to the closed premises of the Health Resort | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe Key to the closed premises of the Health Resort has to be picked up on Shoreline, laying on a chair in the bunker that is located north of the health resort. It only spawns while the quest is active. Once retrieved, you must extract and turn in the item to Peacekeeper. If you die after retrieving it and before turning it in, you will have to go and retrieve it again."
     }
+  ],
+  "images": [
+    {
+      "file": "SpaTour5BunkerMap.jpg",
+      "hashPath": "9/93",
+      "caption": "Bunker marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_bunker_by_rock_passage.png",
+      "hashPath": "7/7d",
+      "caption": "The bunker north of the health resort",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Sanatorium_Key_Location.png",
+      "hashPath": "6/62",
+      "caption": "The key on the chair",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

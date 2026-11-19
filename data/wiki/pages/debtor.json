@@ -55,5 +55,105 @@
       "level": 2,
       "text": "House Arrest - The USEC counterpart quest"
     }
+  ],
+  "images": [
+    {
+      "file": "PineWoodHotelNorthMap.png",
+      "hashPath": "c/c1",
+      "caption": "Building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "PineWoodHotelNorthBuilding.png",
+      "hashPath": "e/e0",
+      "caption": "Northern entrance",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "HotelRoom206Door.png",
+      "hashPath": "8/8a",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "DeadDebtor.png",
+      "hashPath": "d/d0",
+      "caption": "The debtor on the ground",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chekannaya15Map.png",
+      "hashPath": "a/a1",
+      "caption": "Apartment building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chekannaya15ApartmentBuilding.png",
+      "hashPath": "d/d5",
+      "caption": "The apartment building with entrance in the wall marked",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WesternStaircaseMap.png",
+      "hashPath": "f/fc",
+      "caption": "Way to the western staircase marked on building map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WesternStaircaseWay1.png",
+      "hashPath": "7/71",
+      "caption": "Way to the western staircase 1",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WesternStaircaseWay2.png",
+      "hashPath": "f/f1",
+      "caption": "Way to the western staircase 2",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WesternStaircaseWay3.png",
+      "hashPath": "a/a0",
+      "caption": "Way to the western staircase 3",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chekannaya15ApartmentBuildingWesternStairs.png",
+      "hashPath": "6/6f",
+      "caption": "The western staircase",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chek15TFHallway.png",
+      "hashPath": "c/cc",
+      "caption": "Third floor hallway with hole in cell #5 floor marked",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chek15SFHallway.png",
+      "hashPath": "d/de",
+      "caption": "Second floor hallway with debris passage marked",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chek15AptDoor.png",
+      "hashPath": "3/3e",
+      "caption": "The door to the warden's apartment",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

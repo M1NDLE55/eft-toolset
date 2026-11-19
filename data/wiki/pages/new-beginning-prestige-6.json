@@ -60,5 +60,49 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "StreetsTransitToInterchangeMap.png",
+      "hashPath": "9/9e",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov to Interchange"
+    },
+    {
+      "file": "StreetsTransitToInterchange.png",
+      "hashPath": "f/f8",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov to Interchange"
+    },
+    {
+      "file": "InterchangeTransitToCustomsMap.jpg",
+      "hashPath": "0/0c",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Interchange to Customs"
+    },
+    {
+      "file": "InterchangeTransitToCustoms.png",
+      "hashPath": "3/33",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Interchange to Customs"
+    },
+    {
+      "file": "CustomsTransitToReserveMap.png",
+      "hashPath": "1/10",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Customs to Reserve"
+    },
+    {
+      "file": "CustomsTransitToReserve.png",
+      "hashPath": "f/fe",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Customs to Reserve"
+    }
   ]
 }

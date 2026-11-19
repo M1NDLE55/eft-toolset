@@ -53,5 +53,49 @@
       "level": 3,
       "text": "- These builds are based on a standard PP-19-01 from Prapor LL1, a standard T-5000M from Skier LL2 and a standard Glock 17 from Mechanic LL1.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nPP-19-01 Shop. List:\nPP-19-01 Shop. List\n| Icon | Attachment | Sold By | Loyalty Level |\n| PP-19-01 Vityaz-SN dust cover | PP-19-01 Vityaz-SN dust cover | Prapor | LL1 |\n| Aimpoint Micro Standard Mount | Aimpoint Micro Standard Mount | Peacekeeper | LL1 |\n| Aimpoint Micro Spacer High | Aimpoint Micro Spacer High | Peacekeeper | LL1 |\n| Aimpoint Micro T-1 reflex sight | Aimpoint Micro T-1 reflex sight | Peacekeeper | LL2 |\n| AK-74M/AK-100 Zenit PT Lock | AK-74M/AK-100 Zenit PT Lock | Skier | LL2 |\n| AK Zenit PT-3 \"Klassika\" stock | AK Zenit PT-3 \"Klassika\" stock | Skier | LL3 |\n| AK Zenit RK-3 pistol grip | AK Zenit RK-3 pistol grip (Black) | Skier | LL3 |\n| PP-19-01 Vityaz 9x19 sound suppressor | PP-19-01 Vityaz 9x19 sound suppressor | Mechanic | LL2 |\n| PP-19-01 Vityaz SAG MK1 M-LOK handguard with gas tube | PP-19-01 Vityaz SAG MK1 M-LOK handguard with gas tube | Mechanic | LL2 |\n| Magpul M-LOK 4.1 inch rail | Magpul M-LOK 4.1 inch rail | Mechanic | LL1 (Barter); LL1 |\n| Zenit RK-6 tactical foregrip | Zenit RK-6 tactical foregrip | Skier | LL3 |\n| L3Harris AN/PEQ-15 tactical device | L3Harris AN/PEQ-15 tactical device (Tan) | Peacekeeper | LL3 |\n| Magpul M-LOK 2.5 inch rail | Magpul M-LOK 2.5 inch rail | Mechanic | LL1 |\n| Zenit Klesch-2P flashlight with laser | Zenit Klesch-2P flashlight with laser | Skier | LL2 |\n\nPP-19-01 Insp. View:\nPP-19-01 Insp. View\n\nPP-19-01 Mod. Screen:\nPP-19-01 Mod. Screen\n\nT-5000M Shop. List:\nT-5000M Shop. List\n| Attachment | Sold By | Loyalty Level |\n| Harris S-BRM 6-9\" Bipod | Skier | LL2 |\n| IEA Mil-Optics KH/F 34mm one-piece magmount | MechanicJaeger | LL2 (Barter)LL3 |\n| Nightforce ATACR 7-35x56 34mm riflescope | Jaeger | LL2 (Barter); LL4 |\n| SilencerCo Hybrid 46 Direct Thread Mount adapter | MechanicPeacekeeper | LL1 (Barter); LL2LL2 |\n| SilencerCo Hybrid 46 multi-caliber sound suppressor | PeacekeeperMechanic | LL2LL2 (Barter) |\n\nT-5000M Insp. View:\nT-5000M Insp. View\n\nT-5000M Mod. Screen:\nT-5000M Mod. Screen\n\nGlock 17 Shop. List:\nGlock 17 Shop. List\n| Attachment | Sold By | Loyalty Level |\n| Glock 9x19 Double Diamond 114mm threaded barrel | Mechanic | LL2 |\n| Glock 9x19 Double Diamond thread protector | Mechanic | LL1 |\n| Glock Pachmayr Tactical Grip Glove | Mechanic | LL1 |\n| Glock 9x19 Magpul PMAG GL9 21-round magazine | Mechanic | LL1 |\n| Zenit Klesch-2P flashlight with laser | Skier | LL2 |\n\nGlock 17 Insp. View:\nGlock 17 Insp. View\n\nGlock 17 Mod. Screen:\nGlock 17 Mod. Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "GunsmithOFPP-19-01Inspect.png",
+      "hashPath": "b/be",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithOFPP-19-01Modding.png",
+      "hashPath": "3/38",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithOFT-5000MInspect.png",
+      "hashPath": "4/4b",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithOFT-5000MModding.png",
+      "hashPath": "e/e8",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithOFGlock_17Inspect.png",
+      "hashPath": "3/3b",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithOFGlock_17Modding.png",
+      "hashPath": "2/27",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    }
   ]
 }

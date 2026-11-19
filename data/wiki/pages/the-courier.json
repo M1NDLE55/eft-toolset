@@ -45,5 +45,21 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Trijicon REAP-IR thermal scope | 1 | Required | N/A | Stashed item |\nIn this quest you have to place a Trijicon REAP-IR thermal scopes on Customs. The scope can't be placed in your secure container.\n\nThe scope has to be placed behind the \"new\" gas station at a pile of barrels."
     }
+  ],
+  "images": [
+    {
+      "file": "The_Courier_Map.png",
+      "hashPath": "d/d4",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_Courier_Barrels_Location.png",
+      "hashPath": "e/e0",
+      "caption": "Barrels where the scope needs to be placed",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

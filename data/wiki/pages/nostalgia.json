@@ -45,5 +45,28 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Photo album | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you have to find Jaeger's photo album in the health resort on Shoreline. It can be found in west wing room 303 on the third floor, located in the bottom drawer of a nightstand. The room is always unlocked."
     }
+  ],
+  "images": [
+    {
+      "file": "Vitamins1_Shoreline_outdoor_map.png",
+      "hashPath": "e/e6",
+      "caption": "Health resort west wing location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "West_Wing_303_Door.png",
+      "hashPath": "4/45",
+      "caption": "Door to west wing room 303",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Jaeger_Photo_Album.png",
+      "hashPath": "d/d4",
+      "caption": "Photo album in the bottom drawer",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

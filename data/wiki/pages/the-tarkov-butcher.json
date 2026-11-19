@@ -49,5 +49,56 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "The_Tarkov_Butcher_Ground_Zero_Map.png",
+      "hashPath": "d/d5",
+      "caption": "Trailer location marked on map",
+      "section": "Guide",
+      "subsection": "Ground Zero Container location"
+    },
+    {
+      "file": "The_Tarkov_Butcher_Ground_Zero_Truck.png",
+      "hashPath": "e/e9",
+      "caption": "The trailer",
+      "section": "Guide",
+      "subsection": "Ground Zero Container location"
+    },
+    {
+      "file": "The_Tarkov_Butcher_Ground_Zero_Spawn_1.png",
+      "hashPath": "9/93",
+      "caption": "First spawn in the pig carcass opposite the first corpse",
+      "section": "Guide",
+      "subsection": "Ground Zero Container location"
+    },
+    {
+      "file": "The_Tarkov_Butcher_Ground_Zero_Spawn_2.png",
+      "hashPath": "a/a3",
+      "caption": "Second spawn in the back of the trailer in the trash bag",
+      "section": "Guide",
+      "subsection": "Ground Zero Container location"
+    },
+    {
+      "file": "The_Tarkov_Butcher_Ground_Zero_Spawn_3.png",
+      "hashPath": "d/db",
+      "caption": "Third spawn in the back of the trailer in the snout of the pig head",
+      "section": "Guide",
+      "subsection": "Ground Zero Container location"
+    },
+    {
+      "file": "The_Tarkov_Butcher_Streets_of_Tarkov_Map.png",
+      "hashPath": "d/d4",
+      "caption": "Stashing location marked on map",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov Stashing location"
+    },
+    {
+      "file": "The_Tarkov_Butcher_Streets_of_Tarkov_Location.png",
+      "hashPath": "b/b6",
+      "caption": "Stashing location",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov Stashing location"
+    }
   ]
 }

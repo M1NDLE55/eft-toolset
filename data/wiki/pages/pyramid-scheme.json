@@ -40,5 +40,21 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| MS2000 Marker | 1 | Required | N/A | This item is placed at the ATM. When placed, the item is removed from the players' inventory. |\n\nIn this quest you have to mark an ATM inside the \"Unity Credit Bank\" branch of the Cardinal apartment complex on Streets of Tarkov with an MS2000 Marker."
     }
+  ],
+  "images": [
+    {
+      "file": "Pyramid_Scheme_Map.png",
+      "hashPath": "b/b1",
+      "caption": "ATM location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Pyramid_Scheme_Location_3.png",
+      "hashPath": "5/51",
+      "caption": "The wanted ATM",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

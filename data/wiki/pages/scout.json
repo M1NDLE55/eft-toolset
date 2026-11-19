@@ -40,5 +40,42 @@
       "level": 2,
       "text": "In this quest you have to visit the 4 listed Factory extractions. You need to visit all locations and extract in the same raid."
     }
+  ],
+  "images": [
+    {
+      "file": "FacExit0.png",
+      "hashPath": "8/8d",
+      "caption": "Extractions marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "FacExit2.png",
+      "hashPath": "2/26",
+      "caption": "1: Cellars extraction in the underground",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "FacExit3.png",
+      "hashPath": "7/75",
+      "caption": "2: Gate 0 extraction",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "FacExit1.png",
+      "hashPath": "f/f2",
+      "caption": "3: Gate 3 extraction",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "FacExit4.png",
+      "hashPath": "4/46",
+      "caption": "4: Med Tent Gate extraction",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

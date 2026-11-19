@@ -45,5 +45,35 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "InterchangeMinibusLocations.jpg",
+      "hashPath": "a/ab",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Minibus1.png",
+      "hashPath": "e/ee",
+      "caption": "Minibus 1 in the container lot.",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Minibus2.png",
+      "hashPath": "0/09",
+      "caption": "Minibus 2 close to the blocked-off down-ramp",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Minibus3.png",
+      "hashPath": "7/77",
+      "caption": "Minibus 3 opposite of the \"Saferoom Exfil\"",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

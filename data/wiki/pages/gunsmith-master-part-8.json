@@ -53,5 +53,35 @@
       "level": 3,
       "text": "- These builds are based on a standard M700 from Peacekeeper LL2 and a standard Colt M1911A1 .45 ACP pistol from Peacekeeper LL1.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nM700 Shopping List:\nM700 Shopping List\n| Attachment | Sold By | Loyalty Level |\n| M700 AB Arms MOD*X GEN 3 chassis | Peacekeeper | LL4 |\n| AR-15 Magpul MIAD pistol grip (FDE) | Peacekeeper | LL2 |\n| M700 AB Arms MOD*X GEN 3 KeyMod handguard | Peacekeeper | LL4 |\n| Strike Industries KeyMod 6 inch rail | Mechanic | LL1 |\n| Zenit RK-6 tactical foregrip | Skier | LL3 |\n| AR-15 ADAR 2-15 buffer tube | Skier | LL1 |\n| AR-15 KRISS Defiance DS150 stock | Peacekeeper | LL3 |\n| AR-10 Daniel Defense WAVE 7.62x51 muzzle brake | Mechanic | LL3 |\n| Daniel Defense WAVE QD sound suppressor | Mechanic | LL3 |\n| M700 AB Arms MOD*X rail mount | Peacekeeper | LL4 |\n| Recknagel Era-Tac 34mm ring scope mount | Jaeger | LL3 |\n| Schmidt & Bender PM II 5-25x56 34mm riflescope | Jaeger | LL3 |\n| M700 7.62x51 Magpul PMAG AC 5-round magazine | Skier | LL2 |\n\nM700 Inspect View:\nM700 Inspect View\n\nM700 Modding Screen:\nM700 Modding Screen\n\nM1911 Shopping List:\nM1911 Shopping List\n| Icon | Attachment | Sold By | Loyalty Level |\n| M1911 Pachmayr American Legend Grip 423 | M1911 Pachmayr American Legend Grip #423 | Mechanic | LL1 |\n| M1911 Anarchy Outdoors .45 ACP muzzle brake | M1911 Anarchy Outdoors .45 ACP muzzle brake | Mechanic | LL1 |\n| M1911A1 NcSTAR trigger guard mount | M1911A1 NcSTAR trigger guard mount | Mechanic | LL1 |\n| NcSTAR Tactical Blue Laser | NcSTAR Tactical Blue Laser | Skier | LL1 |\n\nM1911 Inspect View:\nM1911 Inspect View\n\nM1911 Modding Screen:\nM1911 Modding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "GS21_Insp_M700.png",
+      "hashPath": "0/0f",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GS21_Mods_M700.png",
+      "hashPath": "7/75",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GS21_Insp_1911.png",
+      "hashPath": "3/3c",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GS21_Mods_1911.png",
+      "hashPath": "2/29",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    }
   ]
 }

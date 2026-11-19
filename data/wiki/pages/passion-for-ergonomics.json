@@ -40,5 +40,49 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Box with upgraded tools | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you have to find the customized tool set at the garage complex Customs. It can be found in garage #11. There are multiple spawns throughout the garage."
     }
+  ],
+  "images": [
+    {
+      "file": "Passion_for_Ergonomics_Map.png",
+      "hashPath": "2/22",
+      "caption": "Garage #11 location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Passion_for_Ergonomics_Garage.png",
+      "hashPath": "3/37",
+      "caption": "The garage",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Passion_for_Ergonomics_Spawn_1.png",
+      "hashPath": "9/95",
+      "caption": "First spawn under the car",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Passion_for_Ergonomics_Spawn_2.png",
+      "hashPath": "e/e0",
+      "caption": "Second spawn on the ground below the shelf",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Passion_for_Ergonomics_Spawn_3.png",
+      "hashPath": "b/b8",
+      "caption": "Third spawn on the ground behind the car",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Passion_for_Ergonomics_Spawn_4.png",
+      "hashPath": "c/c2",
+      "caption": "Fourth spawn on the ground at the front of the car",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -61,5 +61,77 @@
       "level": 3,
       "text": "Behind the health resort east wing and at the construction site along the southern main road."
     }
+  ],
+  "images": [
+    {
+      "file": "Needle_in_a_Haystack_Ground_Zero_Map.png",
+      "hashPath": "5/58",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Ground Zero"
+    },
+    {
+      "file": "Needle_in_a_Haystack_Ground_Zero_Courtyard.png",
+      "hashPath": "a/a4",
+      "caption": "The courtyard park",
+      "section": "Guide",
+      "subsection": "Ground Zero"
+    },
+    {
+      "file": "Needle_in_a_Haystack_Interchange_Map.png",
+      "hashPath": "e/eb",
+      "caption": "Locations marked on map",
+      "section": "Guide",
+      "subsection": "Interchange"
+    },
+    {
+      "file": "Needle_in_a_Haystack_Interchange_Track.png",
+      "hashPath": "9/9a",
+      "caption": "The kart track",
+      "section": "Guide",
+      "subsection": "Interchange"
+    },
+    {
+      "file": "Needle_in_a_Haystack_Interchange_Playground.png",
+      "hashPath": "0/0a",
+      "caption": "The playground",
+      "section": "Guide",
+      "subsection": "Interchange"
+    },
+    {
+      "file": "Needle_in_a_Haystack_Streets_of_Tarkov_Map.png",
+      "hashPath": "6/62",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "Needle_in_a_Haystack_Streets_of_Tarkov_Playground.png",
+      "hashPath": "e/ec",
+      "caption": "The playground",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "Needle_in_a_Haystack_Shoreline_Map.png",
+      "hashPath": "f/fe",
+      "caption": "Locations marked on the map",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Needle_in_a_Haystack_Shoreline_Playground.png",
+      "hashPath": "c/c8",
+      "caption": "The playground",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Needle_in_a_Haystack_Shoreline_Construction.png",
+      "hashPath": "7/72",
+      "caption": "The construction site",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    }
   ]
 }

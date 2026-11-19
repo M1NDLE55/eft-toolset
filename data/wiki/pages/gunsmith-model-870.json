@@ -51,5 +51,21 @@
       "level": 4,
       "text": "- This build is based on a standard M870 from Skier LL1.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| ME Cylinder 12ga muzzle adapter | Jaeger | LL1 |\n| GK-02 12ga muzzle brake | Jaeger | LL2 |\n| M870 Magpul MOE handguard | Mechanic | LL1 (Barter); LL2 |\n| Magpul M-LOK 4.1 inch rail | Mechanic | LL1 (Barter); LL1 |\n| KAC vertical foregrip | Peacekeeper | LL1 |\n| Magpul M-LOK 2.5 inch rail | Mechanic | LL1 |\n| NcSTAR Tactical Blue Laser | Skier | LL1 |\n| M870 Magpul SGA polymer stock | Mechanic | LL1 (Barter); LL2 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "Gunsmith-Pt_7_Inspect_View.png",
+      "hashPath": "2/22",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "Gunsmith7M870.PNG",
+      "hashPath": "6/62",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    }
   ]
 }

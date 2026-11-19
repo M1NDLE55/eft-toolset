@@ -85,5 +85,84 @@
       "level": 2,
       "text": "The magazine referenced in this quest is issue #216 of the Russian computer games magazine \"Навигатор игрового мира\" (Game World Navigator)."
     }
+  ],
+  "images": [
+    {
+      "file": "MinuteOfFame_MapGuide.png",
+      "hashPath": "0/06",
+      "caption": "Location of the book store marked on the map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MinuteOfFameStore.png",
+      "hashPath": "b/b3",
+      "caption": "The store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MinuteOfFame_Location3.png",
+      "hashPath": "c/c5",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "MinuteOfFame_Location4.png",
+      "hashPath": "c/c1",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "MinuteOfFame_Location2.png",
+      "hashPath": "f/fb",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "MinuteOfFame_Location5.png",
+      "hashPath": "3/32",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    },
+    {
+      "file": "MinuteOfFame_Location7.png",
+      "hashPath": "0/09",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fifth spawn"
+    },
+    {
+      "file": "MinuteOfFame_Location9.png",
+      "hashPath": "7/7a",
+      "caption": "Shelf side facing the arcade machines",
+      "section": "Guide",
+      "subsection": "Sixth/Seventh spawn"
+    },
+    {
+      "file": "MinuteOfFame_Location8.png",
+      "hashPath": "4/4d",
+      "caption": "Opposite side",
+      "section": "Guide",
+      "subsection": "Sixth/Seventh spawn"
+    },
+    {
+      "file": "MinuteOfFame_Location1.png",
+      "hashPath": "f/fa",
+      "caption": "Shelf side facing the arcade machines",
+      "section": "Guide",
+      "subsection": "Eighth/Ninth spawn"
+    },
+    {
+      "file": "MinuteOfFame_Location6.png",
+      "hashPath": "6/67",
+      "caption": "Opposite side",
+      "section": "Guide",
+      "subsection": "Eighth/Ninth spawn"
+    }
   ]
 }

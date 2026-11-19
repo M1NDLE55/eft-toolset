@@ -46,5 +46,21 @@
       "level": 3,
       "text": "At the Path to Shoreline extraction. Transits are only available 1 min after raid start."
     }
+  ],
+  "images": [
+    {
+      "file": "LighthouseTransitToShoreline.png",
+      "hashPath": "7/7c",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Lighthouse to Shoreline"
+    },
+    {
+      "file": "LighthouseTransitToShoreline2.png",
+      "hashPath": "4/48",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Lighthouse to Shoreline"
+    }
   ]
 }

@@ -56,5 +56,49 @@
       "level": 4,
       "text": "The transit is located behind the roadblock south of the main crossroad. Shoot a yellow flare into the sky while being near the bus. If the flare doesn't reach a certain height, the quest objective won't complete. You can use either the handheld RSP-30 yellow flare which can be bought at Prapor LL1 or a 26x75mm yellow flare cartridge which can be bought at Jaeger LL1, and is fired from a signal pistol. If you use the handheld RSP-30 yellow flare, make sure to aim it upwards, but not too much or it lands behind you."
     }
+  ],
+  "images": [
+    {
+      "file": "ThirstyDeliveryCustomsMap.png",
+      "hashPath": "2/2f",
+      "caption": "Store location marked on map",
+      "section": "Guide",
+      "subsection": "WI-FI Camera stashing"
+    },
+    {
+      "file": "ThirstyDeliveryCustomsStore.png",
+      "hashPath": "2/23",
+      "caption": "The store",
+      "section": "Guide",
+      "subsection": "WI-FI Camera stashing"
+    },
+    {
+      "file": "False_Call_Camera_Location.png",
+      "hashPath": "e/e3",
+      "caption": "Stashing location at the air conditioning unit",
+      "section": "Guide",
+      "subsection": "WI-FI Camera stashing"
+    },
+    {
+      "file": "CustomsTransitToShorelineMap.png",
+      "hashPath": "f/f6",
+      "caption": "Transit location marked on map",
+      "section": "Guide",
+      "subsection": "Shoreline transit"
+    },
+    {
+      "file": "Sniper_Roadblock.png",
+      "hashPath": "9/9d",
+      "caption": "The roadblock",
+      "section": "Guide",
+      "subsection": "Shoreline transit"
+    },
+    {
+      "file": "CustomsTransitToShoreline.png",
+      "hashPath": "9/91",
+      "caption": "The transit",
+      "section": "Guide",
+      "subsection": "Shoreline transit"
+    }
   ]
 }

@@ -56,5 +56,21 @@
       "level": 4,
       "text": "- This build is based on a standard M4A1 from Peacekeeper LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AR-15 5.56x45 SureFire MAG5-60 STANAG 60-round magazine | Peacekeeper | LL3 (Barter) |\n| AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine | PeacekeeperRef | LL4 (Barter)LL4 |\n| AR-15 5.56x45 SureFire MAG5-100 STANAG 100-round magazine | Mechanic | LL4 |\n| SIG Sauer ROMEO7 1x30 reflex sight (Prototype) | Skier | LL1 |\n| AR-15 5.56x45 10.3 inch barrel | PeacekeeperMechanic | LL2 (Barter); LL3LL2 (Barter) |\n| AR-15 Daniel Defense MK12 Low Profile Gas Block | PeacekeeperMechanic | LL2LL2 |\n| AR-15 SureFire WarComp 5.56x45 flash hider | Skier | LL2 |\n| SureFire SOCOM556-MINI MONSTER 5.56x45 sound suppressor | SkierMechanic | LL2 (Barter)LL3 |\n| AR-15 MFT BUS stock | Peacekeeper | LL2 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "Gunsmith4Inspect.png",
+      "hashPath": "f/fa",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "Gunsmith4Mods.png",
+      "hashPath": "1/1e",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    }
   ]
 }

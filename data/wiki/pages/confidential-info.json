@@ -40,5 +40,56 @@
       "level": 2,
       "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| | Any fragmentation grenade | 1 | Required | N/A | Stashed item |\n| VPX Flash Storage Module marked Group 3 | VPX Flash Storage Module marked Group #3 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you first have to find a special storage module in the prototype weapon area inside The Labyrinth. Afterwards you have to stash a fragmentation grenade in the prototype weapon. Note: The F-1 hand grenade (Reduced delay) can't be used."
     }
+  ],
+  "images": [
+    {
+      "file": "Labryrinth_missile_area_map.png",
+      "hashPath": "5/5b",
+      "caption": "Prototype weapon area marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Confidential_Info_Spawn_1.png",
+      "hashPath": "1/16",
+      "caption": "Spawn 1: On the tool trolley next to the whiteboard",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Confidential_Info_Spawn_2.png",
+      "hashPath": "d/d5",
+      "caption": "Spawn 2: On the center table closest to the whiteboard",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Confidential_Info_Spawn_3.png",
+      "hashPath": "a/a6",
+      "caption": "Spawn 3: Ontop the pallet next to the grate door",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Confidential_Info_Spawn_4.png",
+      "hashPath": "7/70",
+      "caption": "Spawn 4: On the center table closest to the laptop",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Confidential_Info_Spawn_5.png",
+      "hashPath": "1/1c",
+      "caption": "Spawn 5: On the tool trolley next to the missile",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Confidential_Info_Spawn_6.png",
+      "hashPath": "c/c4",
+      "caption": "Spawn 6: On the table next to the laptop",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -100,5 +100,168 @@
       "level": 4,
       "text": "On the dressing table next to the window."
     }
+  ],
+  "images": [
+    {
+      "file": "Apartment10Map.png",
+      "hashPath": "d/d3",
+      "caption": "Apartment 10 marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Apartment10Outside.png",
+      "hashPath": "a/af",
+      "caption": "Apartment 10 from outside",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "UnderpassKeyMap.png",
+      "hashPath": "e/e9",
+      "caption": "Skybridge marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "UnderpassKeyUnderpass.png",
+      "hashPath": "7/7d",
+      "caption": "The skybridge from the ground",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "UnderpassKeyWay1.png",
+      "hashPath": "1/1b",
+      "caption": "Way to the Primorsky 46 staircase 1",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "UnderpassKeyWay2.png",
+      "hashPath": "2/2b",
+      "caption": "Way to the Primorsky 46 staircase 2",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "UnderpassKeyWay3.png",
+      "hashPath": "3/36",
+      "caption": "Way to the Primorsky 46 staircase 3",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "UnderpassKeyWay4.png",
+      "hashPath": "d/d3",
+      "caption": "Primorsky 46 staircase",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "UnderpassKeyStairsDoor.png",
+      "hashPath": "3/35",
+      "caption": "Door to the skybridge on the top floor",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "UnderpassKeyUnderpassLockedDoor.png",
+      "hashPath": "5/53",
+      "caption": "The skybridge with the unlockable door",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "UnderpassKeyDoor.png",
+      "hashPath": "9/91",
+      "caption": "Door to the Primorsky 48 apartment 10",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MusicRoom.png",
+      "hashPath": "0/07",
+      "caption": "Door to the music room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Apartment10Living2.png",
+      "hashPath": "1/1d",
+      "caption": "The music room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Eg_pick_streets_spawn6.png",
+      "hashPath": "2/2e",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "Eg_pick_streets_spawn5.png",
+      "hashPath": "1/1a",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "Eg_pick_streets_spawn1.png",
+      "hashPath": "a/a7",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "Eg_pick_streets_spawn2.png",
+      "hashPath": "0/04",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    },
+    {
+      "file": "EG_pick_streets_spawn3.png",
+      "hashPath": "8/88",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fifth spawn"
+    },
+    {
+      "file": "Eg_pick_streets_spawn8.png",
+      "hashPath": "4/47",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Sixth spawn"
+    },
+    {
+      "file": "AudiophileSpawn10.png",
+      "hashPath": "b/be",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Seventh spawn"
+    },
+    {
+      "file": "Eg_pick_streets_spawn9.png",
+      "hashPath": "8/82",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Eighth spawn"
+    },
+    {
+      "file": "Eg_pick_streets_spawn7.png",
+      "hashPath": "9/9e",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Ninth spawn"
+    },
+    {
+      "file": "Eg_pick_streets_spawn4.png",
+      "hashPath": "6/65",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Tenth spawn"
+    }
   ]
 }

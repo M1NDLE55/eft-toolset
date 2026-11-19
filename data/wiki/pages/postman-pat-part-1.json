@@ -46,5 +46,28 @@
       "level": 2,
       "text": "The quest name is a reference to the British children's TV show \"Postman Pat.\""
     }
+  ],
+  "images": [
+    {
+      "file": "PostmanPat1_Factory.png",
+      "hashPath": "b/b1",
+      "caption": "Bunker location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "PostmanPatLocation.png",
+      "hashPath": "b/b4",
+      "caption": "The wanted bunker, \"1986\" on the wall above it",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Postman_Pat_Letter_Location.png",
+      "hashPath": "a/a6",
+      "caption": "The letter on the ground",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

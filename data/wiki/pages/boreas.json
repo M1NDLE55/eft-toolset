@@ -390,5 +390,406 @@
       "level": 2,
       "text": "- +160,000 EXP\n- 1x Compartment C-3 keycard"
     }
+  ],
+  "images": [
+    {
+      "file": "ThirstyDeliveryWoodsMap.png",
+      "hashPath": "2/28",
+      "caption": "Scav bunker location marked on map",
+      "section": "Guide",
+      "subsection": "Locate and repair the equipment under the cellular tower on Woods"
+    },
+    {
+      "file": "Boreas_Equipment.png",
+      "hashPath": "d/d3",
+      "caption": "The equipment",
+      "section": "Guide",
+      "subsection": "Locate and repair the equipment under the cellular tower on Woods"
+    },
+    {
+      "file": "Boreas_Lighthouse_Warehouse_Map.png",
+      "hashPath": "6/65",
+      "caption": "Warehouse location marked on map",
+      "section": "Guide",
+      "subsection": "Locate and obtain the Paradigm Shipping documentation"
+    },
+    {
+      "file": "Boreas_Paradigm_Shipping_Directive.png",
+      "hashPath": "d/d5",
+      "caption": "The directive on the table next to the lamp",
+      "section": "Guide",
+      "subsection": "Locate and obtain the Paradigm Shipping documentation"
+    },
+    {
+      "file": "ReserveTransitToWoodsMap.png",
+      "hashPath": "a/a3",
+      "caption": "Transit location marked on map",
+      "section": "Guide",
+      "subsection": "Launch a yellow signal flare at the Woods transit on Reserve"
+    },
+    {
+      "file": "ReserveTransitToWoods2.png",
+      "hashPath": "3/35",
+      "caption": "Transit location",
+      "section": "Guide",
+      "subsection": "Launch a yellow signal flare at the Woods transit on Reserve"
+    },
+    {
+      "file": "ReserveTransitToWoods.png",
+      "hashPath": "5/50",
+      "caption": "The transit",
+      "section": "Guide",
+      "subsection": "Launch a yellow signal flare at the Woods transit on Reserve"
+    },
+    {
+      "file": "AMG-10_hydraulic_fluid_Spawn_Map.png",
+      "hashPath": "a/a2",
+      "caption": "Locations marked on map",
+      "section": "Guide",
+      "subsection": "Hand over the AMG-10 fluid to Prapor"
+    },
+    {
+      "file": "AMG-10_hydraulic_fluid_Spawn_6.png",
+      "hashPath": "b/b2",
+      "caption": "1: On one of the shelves in the northern storage area of the black bishop building basement",
+      "section": "Guide",
+      "subsection": "Hand over the AMG-10 fluid to Prapor"
+    },
+    {
+      "file": "AMG-10_hydraulic_fluid_Spawn_1.png",
+      "hashPath": "f/f9",
+      "caption": "2: On one of the shelves in the northern storage area of the black bishop building basement",
+      "section": "Guide",
+      "subsection": "Hand over the AMG-10 fluid to Prapor"
+    },
+    {
+      "file": "AMG-10_hydraulic_fluid_Spawn_2.png",
+      "hashPath": "7/7f",
+      "caption": "3: On the pallet with the spotlight in the northern storage area of the black bishop building basement",
+      "section": "Guide",
+      "subsection": "Hand over the AMG-10 fluid to Prapor"
+    },
+    {
+      "file": "AMG-10_hydraulic_fluid_Spawn_4.png",
+      "hashPath": "c/c7",
+      "caption": "4: Under the ladder inside the helicopter at the parade ground",
+      "section": "Guide",
+      "subsection": "Hand over the AMG-10 fluid to Prapor"
+    },
+    {
+      "file": "AMG-10_hydraulic_fluid_Spawn_3.png",
+      "hashPath": "c/c2",
+      "caption": "5: On the open wooden crate inside the helicopter at the parade ground",
+      "section": "Guide",
+      "subsection": "Hand over the AMG-10 fluid to Prapor"
+    },
+    {
+      "file": "AMG-10_hydraulic_fluid_Spawn_5.png",
+      "hashPath": "b/bc",
+      "caption": "6: Next to the forklift behind the helicopter at the parade ground",
+      "section": "Guide",
+      "subsection": "Hand over the AMG-10 fluid to Prapor"
+    },
+    {
+      "file": "Boreas_Skiers_Docs_Map.png",
+      "hashPath": "7/74",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Locate and obtain Skier's reports on Customs"
+    },
+    {
+      "file": "Boreas_Skiers_Docs_Location.png",
+      "hashPath": "1/17",
+      "caption": "The docs",
+      "section": "Guide",
+      "subsection": "Locate and obtain Skier's reports on Customs"
+    },
+    {
+      "file": "EasyMoneyPart1CustomsMap1.png",
+      "hashPath": "5/5a",
+      "caption": "Scav base location marked on map",
+      "section": "Guide",
+      "subsection": "Burn Skier's reports on Customs"
+    },
+    {
+      "file": "ZB-013_Building.png",
+      "hashPath": "b/b9",
+      "caption": "The Scav base",
+      "section": "Guide",
+      "subsection": "Burn Skier's reports on Customs"
+    },
+    {
+      "file": "Customs_Scav_Base_Fire_Barrel.png",
+      "hashPath": "d/da",
+      "caption": "The fire barrel",
+      "section": "Guide",
+      "subsection": "Burn Skier's reports on Customs"
+    },
+    {
+      "file": "Shoreline_Smuggler_Base_Map.png",
+      "hashPath": "b/b5",
+      "caption": "Shoreline smuggler base location marked on map",
+      "section": "Guide",
+      "subsection": "Eliminate any 15 targets at the smugglers' territories"
+    },
+    {
+      "file": "Interchange_Smuggler_Base_Map.jpg",
+      "hashPath": "6/69",
+      "caption": "Interchange smuggler base location marked on map",
+      "section": "Guide",
+      "subsection": "Eliminate any 15 targets at the smugglers' territories"
+    },
+    {
+      "file": "ShorelineTransitToIcebreakerMap.png",
+      "hashPath": "8/80",
+      "caption": "Shoreline hovercraft location marked on map",
+      "section": "Guide",
+      "subsection": "Board the smuggler hovercraft on Shoreline or Lighthouse"
+    },
+    {
+      "file": "ShorelineTransitToIcebreaker.png",
+      "hashPath": "e/e1",
+      "caption": "The hovercraft",
+      "section": "Guide",
+      "subsection": "Board the smuggler hovercraft on Shoreline or Lighthouse"
+    },
+    {
+      "file": "LighthouseTransitToIcebreakerMap.png",
+      "hashPath": "c/cf",
+      "caption": "Lighthouse hovercraft location marked on map",
+      "section": "Guide",
+      "subsection": "Board the smuggler hovercraft on Shoreline or Lighthouse"
+    },
+    {
+      "file": "LighthouseTransitToIcebreaker.png",
+      "hashPath": "3/30",
+      "caption": "The hovercraft",
+      "section": "Guide",
+      "subsection": "Board the smuggler hovercraft on Shoreline or Lighthouse"
+    },
+    {
+      "file": "BoreasScientistIntercomMap.jpg",
+      "hashPath": "8/8b",
+      "caption": "Intercom location marked on map",
+      "section": "Guide",
+      "subsection": "Check if any crew members survived on the ship"
+    },
+    {
+      "file": "BoreasDoorToScientistIntercom.png",
+      "hashPath": "f/f6",
+      "caption": "The door next to the stairs leading to the intercom",
+      "section": "Guide",
+      "subsection": "Check if any crew members survived on the ship"
+    },
+    {
+      "file": "BoreasScientistIntercom.png",
+      "hashPath": "7/7f",
+      "caption": "The intercom",
+      "section": "Guide",
+      "subsection": "Check if any crew members survived on the ship"
+    },
+    {
+      "file": "BoreasEngineRoomKeycardSpawn1.png",
+      "hashPath": "7/75",
+      "caption": "The keycard spawn next to the engineer head",
+      "section": "Guide",
+      "subsection": "Locate and obtain the engine room keycard"
+    },
+    {
+      "file": "BoreasEngineRoomKeycardSpawn2.png",
+      "hashPath": "f/f6",
+      "caption": "The keycard spawn in the right hand of the engineer",
+      "section": "Guide",
+      "subsection": "Locate and obtain the engine room keycard"
+    },
+    {
+      "file": "BoreasEngineRoomKeycardSpawn3.png",
+      "hashPath": "f/f3",
+      "caption": "The keycard spawn in the left hand of the engineer",
+      "section": "Guide",
+      "subsection": "Locate and obtain the engine room keycard"
+    },
+    {
+      "file": "BoreasEngineRoomKeycardDoorMap.jpg",
+      "hashPath": "a/a6",
+      "caption": "The locked door location marked on map",
+      "section": "Guide",
+      "subsection": "Reach the engine room"
+    },
+    {
+      "file": "BoreasEngineRoomKeycardDoor.png",
+      "hashPath": "f/f0",
+      "caption": "The door to the room",
+      "section": "Guide",
+      "subsection": "Reach the engine room"
+    },
+    {
+      "file": "BoreasEngineRoomMap.jpg",
+      "hashPath": "4/40",
+      "caption": "The room location marked on map",
+      "section": "Guide",
+      "subsection": "Reach the engine room"
+    },
+    {
+      "file": "BoreasEngineRoomDoor.png",
+      "hashPath": "4/4b",
+      "caption": "The door to unseal",
+      "section": "Guide",
+      "subsection": "Reach the engine room"
+    },
+    {
+      "file": "BoreasEngineRoomObjective.png",
+      "hashPath": "c/cf",
+      "caption": "Access to the engine room",
+      "section": "Guide",
+      "subsection": "Reach the engine room"
+    },
+    {
+      "file": "BoreasEngineRoom.png",
+      "hashPath": "6/64",
+      "caption": "The engine room",
+      "section": "Guide",
+      "subsection": "Reach the engine room"
+    },
+    {
+      "file": "BoreasDamagedDoorMap.jpg",
+      "hashPath": "5/50",
+      "caption": "The damaged door location marked on map",
+      "section": "Guide",
+      "subsection": "Find a way into the icebreaker superstructure"
+    },
+    {
+      "file": "BoreasHelipadToMinusTwoLevel.png",
+      "hashPath": "6/69",
+      "caption": "Take the stairs on the left after leaving the drone hangar and continue all round the zone",
+      "section": "Guide",
+      "subsection": "Find a way into the icebreaker superstructure"
+    },
+    {
+      "file": "BoreasSuperstructureWay.png",
+      "hashPath": "f/ff",
+      "caption": "The way to the Icebreaker superstructure",
+      "section": "Guide",
+      "subsection": "Find a way into the icebreaker superstructure"
+    },
+    {
+      "file": "Stick_To_It_Activation_Chained_Door.png",
+      "hashPath": "a/a6",
+      "caption": "The damaged door",
+      "section": "Guide",
+      "subsection": "Reach the damaged door on the roof of the engine room"
+    },
+    {
+      "file": "BoreasEnterIcebreakerSuperstructure.png",
+      "hashPath": "1/11",
+      "caption": "The entrance of the crew quarter",
+      "section": "Guide",
+      "subsection": "Enter the icebreaker superstructure from the roof of the engine room"
+    },
+    {
+      "file": "BoreasUpperDecksSealedDoor.png",
+      "hashPath": "4/4e",
+      "caption": "The door to unseal",
+      "section": "Guide",
+      "subsection": "Find a way to the upper decks of the icebreaker superstructure"
+    },
+    {
+      "file": "BoreasUpperDecksCodeLockedDoor.png",
+      "hashPath": "3/3c",
+      "caption": "The code-locked door",
+      "section": "Guide",
+      "subsection": "Find a way to the upper decks of the icebreaker superstructure"
+    },
+    {
+      "file": "Labs_Server_Room_Plant_Location.png",
+      "hashPath": "f/f2",
+      "caption": "Stashing location marked on map",
+      "section": "Guide",
+      "subsection": "Plant the hacking device in the server room in The Lab"
+    },
+    {
+      "file": "Labs_Server_Room_Plant_Location_2.png",
+      "hashPath": "5/5b",
+      "caption": "Stashing location next to the office chairs",
+      "section": "Guide",
+      "subsection": "Plant the hacking device in the server room in The Lab"
+    },
+    {
+      "file": "Compartment_C-1_keycard_map.jpg",
+      "hashPath": "d/d0",
+      "caption": "The location on the map",
+      "section": "Guide",
+      "subsection": "Locate compartment C-1"
+    },
+    {
+      "file": "Compartment_C-1_keycard_door.png",
+      "hashPath": "8/84",
+      "caption": "The door to the compartment C-1",
+      "section": "Guide",
+      "subsection": "Locate compartment C-1"
+    },
+    {
+      "file": "BoreasBridgeDoors.png",
+      "hashPath": "7/7c",
+      "caption": "The door to the bridge",
+      "section": "Guide",
+      "subsection": "Reach the upper decks"
+    },
+    {
+      "file": "Gas_torch_apply_Icebreaker.png",
+      "hashPath": "b/bb",
+      "caption": "The hatch to thaw",
+      "section": "Guide",
+      "subsection": "Thaw the hatch on the roof of the bridge"
+    },
+    {
+      "file": "BoreasBBQSpawn1.png",
+      "hashPath": "2/2f",
+      "caption": "On a countertop next to lockers",
+      "section": "Guide",
+      "subsection": "Find something to thaw the hatch on the roof of the bridge"
+    },
+    {
+      "file": "BoreasBBQSpawn2.png",
+      "hashPath": "6/63",
+      "caption": "Inside a green crate on a countertop next to lockers",
+      "section": "Guide",
+      "subsection": "Find something to thaw the hatch on the roof of the bridge"
+    },
+    {
+      "file": "BoreasBBQSpawn3.png",
+      "hashPath": "9/9f",
+      "caption": "Inside a wooden crate on a serving trolley",
+      "section": "Guide",
+      "subsection": "Find something to thaw the hatch on the roof of the bridge"
+    },
+    {
+      "file": "Compartment_C-1_keycard_spawn.png",
+      "hashPath": "b/ba",
+      "caption": "In the left hand of a body on level 9 of Icebreaker",
+      "section": "Guide",
+      "subsection": "Access Compartment C-1"
+    },
+    {
+      "file": "BoreasHDD1_spawn.png",
+      "hashPath": "2/24",
+      "caption": "On the shelf with the keyboard",
+      "section": "Guide",
+      "subsection": "Search the shelves in compartment C-1"
+    },
+    {
+      "file": "BoreasHDD2_spawn.png",
+      "hashPath": "3/32",
+      "caption": "On top of the PC blocks under the desk",
+      "section": "Guide",
+      "subsection": "Search the area near the workstation in compartment C-1"
+    },
+    {
+      "file": "BoreasHDD3_spawn.png",
+      "hashPath": "b/b5",
+      "caption": "On top of the server on the floor.",
+      "section": "Guide",
+      "subsection": "Search the servers in compartment C-1"
+    }
   ]
 }

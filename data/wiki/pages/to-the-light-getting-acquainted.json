@@ -63,5 +63,49 @@
       "level": 4,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "To_the_Light_Getting_Acquainted_Chalet_Map.png",
+      "hashPath": "1/16",
+      "caption": "Chalet location marked on map",
+      "section": "Guide",
+      "subsection": "First/Second spawn on the first floor"
+    },
+    {
+      "file": "To_the_Light_Getting_Acquainted_Spawn_3.png",
+      "hashPath": "8/87",
+      "caption": "Plugged into a laptop on the dining table",
+      "section": "Guide",
+      "subsection": "First/Second spawn on the first floor"
+    },
+    {
+      "file": "To_the_Light_Getting_Acquainted_Spawn_4.png",
+      "hashPath": "2/28",
+      "caption": "Plugged into a laptop on the dining table",
+      "section": "Guide",
+      "subsection": "First/Second spawn on the first floor"
+    },
+    {
+      "file": "To_the_Light_Getting_Acquainted_Spawn_2.png",
+      "hashPath": "4/48",
+      "caption": "Plugged into a laptop on a table",
+      "section": "Guide",
+      "subsection": "Third spawn in the basement"
+    },
+    {
+      "file": "LostContactMap.png",
+      "hashPath": "5/51",
+      "caption": "Tennis court location marked on map",
+      "section": "Guide",
+      "subsection": "Fourth spawn at the tennis court"
+    },
+    {
+      "file": "To_the_Light_Getting_Acquainted_Spawn_1.png",
+      "hashPath": "8/80",
+      "caption": "Plugged into a laptop on a table in the tent",
+      "section": "Guide",
+      "subsection": "Fourth spawn at the tennis court"
+    }
   ]
 }

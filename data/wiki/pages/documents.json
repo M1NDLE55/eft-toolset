@@ -40,5 +40,49 @@
       "level": 2,
       "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Military documents 1 | Military documents #1 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Military documents 2 | Military documents #2 | 1 | Handover item | Yes |\n| Military documents 3 | Military documents #3 | 1 | Handover item | Yes |\n\nIn this quest you have to find and extract three military documents. They are all located in the command part of the underground bunker system on Reserve.\n\nOne is located on a desk in the glassed-in command room that is accessible from the room that has the D-2 power lever.\n\nOne is located in the room that is connected to the glassed-in command room in the bottom compartment of a shelf in the corner of the room.\n\nOne is located in a wardrobe that can be found in the large central hallway."
     }
+  ],
+  "images": [
+    {
+      "file": "DocumentsMap.png",
+      "hashPath": "e/e0",
+      "caption": "Locations marked on underground map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Military_Document_1.png",
+      "hashPath": "6/64",
+      "caption": null,
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Military_Document_2-1.png",
+      "hashPath": "0/0a",
+      "caption": "The shelf",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Military_Document_2-2.png",
+      "hashPath": "5/51",
+      "caption": "The documents",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Military_Document_3-1.png",
+      "hashPath": "7/75",
+      "caption": "The wardrobe",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Military_Document_3-2.png",
+      "hashPath": "2/20",
+      "caption": "The documents",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

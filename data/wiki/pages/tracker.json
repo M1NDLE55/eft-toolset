@@ -39,5 +39,49 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Secure Folder 0013 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nThe secure folder is located on top of blue barrels in room 108 of the health resort east wing on Shoreline.\n\nThe cargo is located near the pool in the basement of the health resort west wing on Shoreline."
     }
+  ],
+  "images": [
+    {
+      "file": "HealthResortEastWing.jpg",
+      "hashPath": "d/d9",
+      "caption": "Health resort east wing location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CargoXPt2_FolderMap.png",
+      "hashPath": "4/45",
+      "caption": "East wing 108 location marked on room map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Inside_Room_108_in_East_wing_of_the_Resort.png",
+      "hashPath": "d/d3",
+      "caption": "The folder on the barrels",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ShorelineCargoXPt3.png",
+      "hashPath": "a/af",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CargoXPt3_Guide.png",
+      "hashPath": "e/e4",
+      "caption": "Way to the pool from the center staircase",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CargoXPt3Hole.png",
+      "hashPath": "a/a7",
+      "caption": "The cargo at the hole in the wall",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }
