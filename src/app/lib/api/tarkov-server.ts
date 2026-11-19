@@ -913,7 +913,7 @@ export async function getItemDetail(
   gameMode: GameMode,
   reference: ItemReference
 ): Promise<ComposedItem | null> {
-  const [itemContext, traderNames, taskContext, relations, hideout, offers, keyLocks] =
+  const [itemContext, traderNames, taskContext, relations, hideout, offers] =
     await Promise.all([
       loadItems(gameMode),
       loadTraderNames(gameMode),
@@ -921,7 +921,6 @@ export async function getItemDetail(
       loadRelations(gameMode),
       loadHideout(gameMode),
       loadOfferContext(gameMode, true),
-      loadKeyLocks(gameMode),
     ]);
   const stations = hideout.stationNames;
   throwIfRequestAborted();
@@ -934,7 +933,7 @@ export async function getItemDetail(
   const itemId = item.id;
   const details = memo(
     `${gameMode}/details`,
-    [itemContext, traderNames, taskContext, relations, hideout, offers, keyLocks],
+    [itemContext, traderNames, taskContext, relations, hideout, offers],
     () => new Map<string, ComposedItem>()
   );
   const cached = details.get(itemId);
@@ -1006,9 +1005,10 @@ export async function getItemDetail(
     craftsGiving,
     info: projectItemInfo(item, itemContext),
   };
-  const key = await keyInfo(item, itemContext, keyLocks);
-  if (key) detail.key = key;
-  details.set(itemId, detail);
+  const key = await keyInfo(gameMode, item, itemContext);
+  if (key.info) detail.key = key.info;
+  // Without the maps or the wiki this time, leave it out of the cache so the next request tries again.
+  if (key.complete) details.set(itemId, detail);
   return detail;
 }
 
@@ -1044,19 +1044,31 @@ async function loadKeyLocks(gameMode: GameMode): Promise<KeyLocks> {
 
 const KEY_CATEGORIES = new Set(["Key", "Keycard", "Mechanical Key"]);
 
-/** The maps whose locks the item opens and, from its wiki page, what it opens; undefined for other items. */
-async function keyInfo(item: RawItem, context: ItemsContext, keyLocks: KeyLocks): Promise<CachedKeyInfo | undefined> {
-  const maps = (item.id && keyLocks.get(item.id)) || [];
+/**
+ * For keys and keycards, the maps whose locks they open and, from the wiki page, what they open. Only keys
+ * wait for the maps. `complete` is false when the maps or the wiki couldn't be read.
+ */
+async function keyInfo(
+  gameMode: GameMode,
+  item: RawItem,
+  context: ItemsContext
+): Promise<{ info?: CachedKeyInfo; complete: boolean }> {
   const isKey = (item.categories ?? []).some((id) => KEY_CATEGORIES.has(context.categoryNames.get(id) ?? ""));
-  if (!item.id || (maps.length === 0 && !isKey)) return undefined;
-  let opens: string | null = null;
-  try {
-    const page = await findItemWikiPage(item.id);
-    opens = infoboxFact(page?.infobox.usage);
-  } catch (error) {
-    console.warn("Key wiki page could not be read:", error instanceof Error ? error.message : error);
-  }
-  return maps.length > 0 || opens ? { maps, opens } : undefined;
+  if (!item.id || !isKey) return { complete: true };
+  const id = item.id;
+  const [keyLocks, opens] = await Promise.all([
+    loadKeyLocks(gameMode),
+    findItemWikiPage(id).then(
+      (page) => infoboxFact(page?.infobox.usage),
+      (error: unknown) => {
+        console.warn("Key wiki page could not be read:", error instanceof Error ? error.message : error);
+        return undefined;
+      }
+    ),
+  ]);
+  const maps = keyLocks.get(id) ?? [];
+  const complete = keyLocks !== NO_KEY_LOCKS && opens !== undefined;
+  return { info: maps.length > 0 || opens ? { maps, opens: opens ?? null } : undefined, complete };
 }
 
 function projectItemInfo(item: RawItem, context: ItemsContext): CachedItemInfo {

@@ -2,10 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { createContext, useContext, useState, type ComponentProps, type MouseEvent, type ReactNode } from "react";
+import { createContext, useContext, useState, type ComponentProps, type ReactNode } from "react";
 import { isItemSlug, itemHref } from "@/app/lib/item-links";
 import type { QuestIdentity } from "@/app/lib/item-needs";
+import { isPlainClick } from "./plain-click";
 import { ItemRundownPopup, type RundownTarget } from "./rundown-popup";
+
+export { isPlainClick };
 
 type OpenRundown = (target: RundownTarget) => void;
 
@@ -35,11 +38,6 @@ export function ItemRundownQuest({ quest, children }: { quest: QuestIdentity; ch
   return <QuestContext.Provider value={quest}>{children}</QuestContext.Provider>;
 }
 
-/** A plain left click with no modifier key; anything else (new tab, new window, download) stays a link. */
-export function isPlainClick(event: Pick<MouseEvent, "button" | "metaKey" | "ctrlKey" | "shiftKey" | "altKey" | "defaultPrevented">) {
-  return !event.defaultPrevented && event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
-}
-
 let nextId = 0;
 
 type ItemRundownLinkProps = Omit<ComponentProps<typeof Link>, "href"> & {
@@ -53,14 +51,18 @@ type ItemRundownLinkProps = Omit<ComponentProps<typeof Link>, "href"> & {
 export function ItemRundownLink({ item, onClick, children, ...props }: ItemRundownLinkProps) {
   const open = useContext(OpenContext);
   const quest = useContext(QuestContext);
+  const pathname = usePathname();
   const href = itemHref(item);
   return (
     <Link
+      // A plain click shows the rundown, so loading the page ahead would mostly be wasted.
+      prefetch={false}
       {...props}
       href={href}
       onClick={(event) => {
         onClick?.(event);
-        if (!open || !isPlainClick(event) || (props.target && props.target !== "_self")) return;
+        // On the item's own page, the link does what it always did.
+        if (!open || !isPlainClick(event) || (props.target && props.target !== "_self") || href === pathname) return;
         event.preventDefault();
         const slug = item.normalizedName && isItemSlug(item.normalizedName) ? item.normalizedName : null;
         nextId += 1;

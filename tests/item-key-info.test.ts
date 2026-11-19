@@ -40,6 +40,7 @@ beforeEach(() => {
   fixtures = createTarkovFixtures() as Fixtures;
   const items = fixtures.items.data;
   items.items.tanker = { id: TANKER, name: "tanker-name", normalizedName: "tanker-key", categories: ["mech", "keys"] };
+  Object.assign(items.items.key as object, { categories: ["mech", "keys"] });
   items.items.keycard = { id: KEYCARD, name: "keycard-name", normalizedName: "access-keycard", categories: ["card", "keys"] };
   items.itemCategories = {
     keys: { name: "keys-name", normalizedName: "key" },
@@ -96,6 +97,20 @@ describe("item.detail for keys", () => {
     expect(item.name).toBe("Tanker key");
     expect(item.key).toEqual({ maps: expect.any(Array), opens: null });
     expect(item.key!.maps).toHaveLength(2);
+  });
+
+  it("reads the wiki again on the next request after a failed read", async () => {
+    setWikiSnapshotDirectory(join(tmpdir(), "missing-wiki-snapshot"));
+    vi.spyOn(console, "warn").mockImplementation(() => undefined);
+    expect((await detail("Tanker key")).key?.opens).toBeNull();
+    setWikiSnapshotDirectory(writeWiki());
+    expect((await detail("Tanker key")).key?.opens).toBe(OPENS);
+  });
+
+  it("doesn't load the maps for items that aren't keys", async () => {
+    await detail("Test Rifle");
+    const urls = vi.mocked(globalThis.fetch).mock.calls.map(([input]) => new URL(String(input)).pathname);
+    expect(urls.some((path) => path.endsWith("/maps"))).toBe(false);
   });
 });
 

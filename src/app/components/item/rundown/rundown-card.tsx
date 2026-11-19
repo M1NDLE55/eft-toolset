@@ -53,12 +53,19 @@ function Prices({ item }: { item: ComposedItem }) {
           )
         }
         note={
-          buy?.taskUnlock && (
-            <span className="flex items-center gap-1 truncate text-[11px] text-amber-300/80">
-              <Lock aria-hidden className="h-3 w-3 shrink-0" />
-              After {buy.taskUnlock.name}
-            </span>
-          )
+          <>
+            {buy?.preset && (
+              <span className="truncate text-[11px] text-[#777]" title={buy.preset}>
+                As the default preset
+              </span>
+            )}
+            {buy?.taskUnlock && (
+              <span className="flex items-center gap-1 truncate text-[11px] text-amber-300/80">
+                <Lock aria-hidden className="h-3 w-3 shrink-0" />
+                After {buy.taskUnlock.name}
+              </span>
+            )}
+          </>
         }
       />
       <Price title="Best sell" value={sell ? Rubles.format(sell.price) : "—"} source={sell ? sellSourceLabel(sell) : "Cannot be sold"} />
@@ -110,7 +117,8 @@ function Needs({ item, quest }: { item: ComposedItem; quest: QuestIdentity | nul
       )}
       <div className="flex items-baseline justify-between gap-3">
         <h3 className={label}>{current ? "Also needed for" : "Needed for"}</h3>
-        {needs && needs.total > 0 && (
+        {/* Totals take in every use, so beside "Also needed for" they would read as the other uses' count. */}
+        {!current && needs && needs.total > 0 && (
           <span className="text-xs tabular-nums text-[#888]">
             {needs.total.toLocaleString("en-US")} in all{needs.foundInRaid > 0 ? `, ${needs.foundInRaid} FIR` : ""}
           </span>

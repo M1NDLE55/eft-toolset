@@ -11,7 +11,8 @@ const navigations: string[] = [];
 const apiFetch = vi.fn();
 
 vi.mock("next/image", () => ({ default: () => null }));
-vi.mock("next/navigation", () => ({ usePathname: () => "/quests/background-check" }));
+let pathname = "/quests/background-check";
+vi.mock("next/navigation", () => ({ usePathname: () => pathname }));
 // A stand-in for next/link: it runs the link's click handler and, unless that prevents it, "navigates".
 vi.mock("next/link", () => ({
   default: ({ href, onClick, prefetch: _prefetch, children, ...props }: ComponentProps<"a"> & { prefetch?: boolean }) => (
@@ -120,6 +121,11 @@ describe("item rundown helpers", () => {
     expect(current?.need).toEqual({ count: 1, foundInRaid: 1 });
     expect(others.map((use) => use.task.name)).toEqual(["Other Quest"]);
     expect(taskUses(key, { name: "Background Check", trader: "Skier" }).current).toBeNull();
+    expect(taskUses(key, { name: "Background Check", trader: null }).current).not.toBeNull();
+    const usec = item({ usedInTasks: [{ ...key.usedInTasks[0], faction: "USEC" }] });
+    expect(taskUses(usec, { name: "Background Check", trader: "Prapor", faction: "BEAR" }).current).toBeNull();
+    expect(taskUses(usec, { name: "Background Check", trader: "Prapor", faction: "USEC" }).current).not.toBeNull();
+    expect(taskUses(usec, { name: "Background Check", trader: "Prapor", faction: null }).current).not.toBeNull();
     expect(taskUses(key).current).toBeNull();
     expect(bestBuy(key)?.vendor.name).toBe("Mechanic");
   });
@@ -133,6 +139,7 @@ describe("item rundown popup", () => {
     (globalThis as typeof globalThis & { IS_REACT_ACT_ENVIRONMENT: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
     window.localStorage.clear();
     navigations.length = 0;
+    pathname = "/quests/background-check";
     apiFetch.mockReset();
     host = document.createElement("div");
     document.body.append(host);
@@ -234,6 +241,8 @@ describe("item rundown popup", () => {
     expect(text).toContain("This quest");
     expect(text).toContain("×1FIR");
     expect(text).toContain("Also needed for");
+    // The total takes in this quest too, so it isn't shown beside the other uses.
+    expect(text).not.toContain("in all");
     expect(text).toContain("Other Quest");
     expect(text).toContain("Workbench");
   });
@@ -337,5 +346,77 @@ describe("item rundown popup", () => {
     expect(open.contains(document.activeElement)).toBe(true);
     // The page behind is out of reach.
     expect(host.querySelector("button")!.closest("[aria-hidden='true']")).not.toBeNull();
+  });
+
+  it("says so when the item has no details in this game mode", async () => {
+    apiFetch.mockResolvedValue(null);
+    const { anchor, slug } = mount();
+    click(anchor);
+    await settle();
+    expect(dialog()!.textContent).toContain("No details for this item in this game mode.");
+    expect(dialog()!.querySelector(`a[href="/item/${slug}"]`)).not.toBeNull();
+  });
+
+  it("leaves links that open elsewhere, or point at the page it's on, as links", async () => {
+    act(() =>
+      root.render(
+        <GameModeProvider>
+          <ItemRundownProvider>
+            <ItemRundownLink item={{ name: "Machinery key", normalizedName: "machinery-key" }} target="_blank">
+              New tab
+            </ItemRundownLink>
+          </ItemRundownProvider>
+        </GameModeProvider>
+      )
+    );
+    click(host.querySelector("a")!);
+    expect(dialog()).toBeNull();
+    expect(navigations).toEqual(["/item/machinery-key"]);
+
+    pathname = "/item/machinery-key";
+    act(() =>
+      root.render(
+        <GameModeProvider>
+          <ItemRundownProvider>
+            <ItemRundownLink item={{ name: "Machinery key", normalizedName: "machinery-key" }}>Here</ItemRundownLink>
+          </ItemRundownProvider>
+        </GameModeProvider>
+      )
+    );
+    click(host.querySelector("a")!);
+    expect(dialog()).toBeNull();
+    expect(navigations).toEqual(["/item/machinery-key", "/item/machinery-key"]);
+  });
+
+  it("closes when a link inside it is followed, even to the same page", async () => {
+    apiFetch.mockResolvedValue(item());
+    const { anchor } = mount();
+    click(anchor);
+    await settle();
+    click(dialog()!.querySelector('a[href="/keys/customs"]')!);
+    expect(navigations).toEqual(["/keys/customs"]);
+    expect(dialog()).toBeNull();
+  });
+
+  it("shows a bottom sheet on phones and touch screens", async () => {
+    const queries: string[] = [];
+    const matchMedia = vi.fn((query: string) => {
+      queries.push(query);
+      return { matches: true, media: query, addEventListener: () => undefined, removeEventListener: () => undefined } as unknown as MediaQueryList;
+    });
+    vi.stubGlobal("matchMedia", matchMedia);
+    try {
+      apiFetch.mockResolvedValue(item());
+      const { anchor } = mount();
+      click(anchor);
+      await settle();
+      expect(queries).toContain("(max-width: 639px), (pointer: coarse)");
+      expect(dialog()!.dataset.rundownLayout).toBe("sheet");
+      // Pinned to the bottom by its classes, not placed against the link.
+      expect(dialog()!.style.top).toBe("");
+      expect(dialog()!.className).toContain("bottom-0");
+    } finally {
+      vi.unstubAllGlobals();
+    }
   });
 });
