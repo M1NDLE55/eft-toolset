@@ -13,10 +13,12 @@ import { setObjectiveDone, useQuestProgress } from "@/app/lib/quests/progress-st
 import { useQuestList } from "@/app/lib/quests/query";
 import type { QuestMap, QuestObjective, QuestObjectiveCondition, QuestProgress, QuestRef, QuestItem } from "@/app/lib/quests/types";
 import { useHydrated } from "@/app/lib/storage/use-store";
+import type { QuestWikiImage } from "@/app/lib/wiki/wiki-images";
 import { cn } from "@/lib/utils";
 import { ItemLink } from "./items-needed-view";
 import { Badge, CompleteToggle, StatePill, lockedReason, panel } from "./quest-bits";
 import { Notice, useQuestActions } from "./use-quest-actions";
+import { WikiImages } from "./wiki-images";
 
 interface Tracking {
   gameMode: GameMode;
@@ -174,10 +176,13 @@ export function ObjectiveChecklist({
   objectives,
   items,
   maps,
+  images,
 }: {
   objectives: QuestObjective[];
   items: Record<string, QuestItem>;
   maps: Record<string, QuestMap>;
+  /** Wiki images that show an objective, by objective id. */
+  images?: Record<string, QuestWikiImage[]>;
 }) {
   const { progress } = useTracking();
   const done = new Set(progress.objectives);
@@ -202,7 +207,8 @@ export function ObjectiveChecklist({
         // "Hand over the item: Salewa" names its one item: a compact row, the name linking to the item.
         const item = objective.items.length === 1 ? items[objective.items[0]] : undefined;
         const around = item ? aroundItemName(objective.description, item.name) : null;
-        if (item && around) {
+        const objectiveImages = images?.[objective.id] ?? [];
+        if (item && around && objectiveImages.length === 0) {
           return (
             <li key={objective.id} className="flex items-center gap-1 py-0.5 pl-1 pr-3">
               <ObjectiveCheck objective={objective} checked={checked} touch />
@@ -266,6 +272,7 @@ export function ObjectiveChecklist({
                   ))}
                 </p>
               )}
+              {objectiveImages.length > 0 && <WikiImages images={objectiveImages} className="mt-1" />}
             </div>
           </li>
         );

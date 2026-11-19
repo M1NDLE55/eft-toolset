@@ -9,6 +9,7 @@ import { Badge, chip, heading, panel, QuestBadges } from "@/app/components/quest
 import { ObjectiveChecklist, QuestCompletePanel, QuestRefLink, QuestTrackingProvider } from "@/app/components/quests/quest-tracker";
 import { FaqSection } from "@/app/components/seo/faq-section";
 import { JsonLd, breadcrumbList, faqPage } from "@/app/components/seo/json-ld";
+import { WikiImages } from "@/app/components/quests/wiki-images";
 import { WikiCredit, WikiSections } from "@/app/components/wiki/wiki-text";
 import { ServerModeNote } from "@/components/game-mode/server-mode-note";
 import { MODE_LABEL } from "@/components/game-mode/mode";
@@ -20,6 +21,7 @@ import { moneyLabel } from "@/app/lib/quests/shopping-list";
 import type { PricedQuestItem, QuestDetail, QuestRef, QuestRewards } from "@/app/lib/quests/types";
 import { getKeyCounts } from "@/app/lib/reference/keys";
 import { QUEST_HUB_NAME, questDescription, questFaq, questTitle, rewardPhrases } from "@/app/lib/seo/quests";
+import { placeWikiImages } from "@/app/lib/quests/wiki-images";
 import { readQuestWiki } from "@/app/lib/wiki/quest-wiki";
 import { loadGunsmithTasks } from "@/app/gun-builder/gunsmith/load";
 import { loadQuestDetail, loadQuestList } from "../load";
@@ -261,6 +263,7 @@ export default async function Page({ params }: PageProps) {
   );
   const keys = questKeys(detail);
   const objectives = detail.objectives;
+  const images = wiki ? placeWikiImages(wiki.images, [...wiki.guide, ...wiki.dialogue], objectives, detail.maps) : null;
   const traderQuests =
     questList && questList.gameMode === detail.gameMode ? questList.list.quests.filter((entry) => entry.trader === quest.trader && entry.slug) : [];
   const index = traderQuests.findIndex((entry) => entry.id === quest.id);
@@ -364,10 +367,11 @@ export default async function Page({ params }: PageProps) {
           }
         >
           {objectives.length > 0 ? (
-            <ObjectiveChecklist objectives={objectives} items={detail.items} maps={detail.maps} />
+            <ObjectiveChecklist objectives={objectives} items={detail.items} maps={detail.maps} images={images?.objectives} />
           ) : (
             <p className="border border-dashed border-[#2a2a2a] p-4 text-sm text-[#888]">tarkov.dev lists no objectives for this quest.</p>
           )}
+          {images && images.other.length > 0 && <WikiImages images={images.other} title="From the EFT Wiki" className="mt-1" />}
         </Section>
 
         {quest.needs.length > 0 && (
@@ -479,7 +483,7 @@ export default async function Page({ params }: PageProps) {
       {wiki && wiki.guide.length > 0 ? (
         <Section id="guide" title="Wiki guide">
           <div className={`${panel} p-4`}>
-            <WikiSections sections={wiki.guide} />
+            <WikiSections sections={wiki.guide} images={images?.sections} />
             <WikiCredit wiki={wiki} />
           </div>
         </Section>
@@ -503,7 +507,7 @@ export default async function Page({ params }: PageProps) {
         <details className={`${panel} p-4`}>
           <summary className="cursor-pointer text-xs font-bold uppercase tracking-widest text-[#9a8866]">Dialogue</summary>
           <div className="mt-3">
-            <WikiSections sections={wiki.dialogue} />
+            <WikiSections sections={wiki.dialogue} images={images?.sections} />
             <WikiCredit wiki={wiki} />
           </div>
         </details>
