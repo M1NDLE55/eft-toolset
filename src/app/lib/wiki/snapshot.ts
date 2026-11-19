@@ -26,6 +26,9 @@ export interface WikiPageImage {
   caption: string | null;
   section: string;
   subsection: string | null;
+  /** Set when the page repeats the heading: which namesake the image is in (see groupWikiSections). */
+  sectionOccurrence?: number;
+  subsectionOccurrence?: number;
 }
 
 /** data/wiki/image-credits.json: who uploaded each quest image, from the wiki's API. */

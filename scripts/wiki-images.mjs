@@ -1,18 +1,10 @@
 // The images on a quest page that help with the quest, for the quest page (see DATA_ARCHITECTURE.md).
 import { createHash } from "node:crypto";
-import { wikitextToText } from "../src/app/lib/wiki/wikitext.ts";
+import { stripHidden, wikitextToText } from "../src/app/lib/wiki/wikitext.ts";
 
 const HEADING = /^(={1,6})\s*(.+?)\s*\1\s*$/;
 const FILE_PREFIX = /^\s*:?\s*(?:file|image)\s*:/i;
 const FILE_LINK = /\[\[\s*(?:file|image)\s*:/i;
-// What the page's own text leaves out, so headings match the sections it writes.
-const HIDDEN = [
-  /<!--[\s\S]*?(-->|$)/g,
-  /<ref\b[^>]*\/>/gi,
-  /<ref\b[^>]*>[\s\S]*?<\/ref>/gi,
-  /<(noinclude|includeonly|script|style|math|timeline|templatedata)\b[^>]*>[\s\S]*?<\/\1>/gi,
-  /<(span|div)\b[^>]*display\s*:\s*none[^>]*>[\s\S]*?<\/\1>/gi,
-];
 const GALLERY = /<gallery\b[^>]*>([\s\S]*?)<\/gallery>/gi;
 const MARK = "\u0000";
 
@@ -67,7 +59,7 @@ function plainText(wikitext, title) {
   return wikitextToText(wikitext, title).replace(/\s+/g, " ").trim();
 }
 
-/** A file's options: its caption (the last free text), alt text, link, and widest stated size. */
+/** A file's options: its caption (the last free text), alt text, link, and widest stated width. */
 function readOptions(parts, title) {
   let caption = "";
   let alt = "";
@@ -84,11 +76,9 @@ function readOptions(parts, title) {
       continue;
     }
     if (OPTION.test(part)) {
-      const size = /(\d*)x?(\d*)\s*px/i.exec(part);
-      if (size) {
-        const stated = Number(size[1] || size[2]);
-        if (stated) width = Math.max(width ?? 0, stated);
-      }
+      // "300px" and "300x200px" state a width; "x200px" only a height.
+      const stated = Number(/^\s*(\d*)(?:x\d+)?\s*px\s*$/i.exec(part)?.[1] || 0);
+      if (stated) width = Math.max(width ?? 0, stated);
       continue;
     }
     if (part.trim()) caption = part;
@@ -111,8 +101,8 @@ export function leftOutBecause(image) {
 
 /** Every file a page shows, in order, with the section it sits in and why it is left out (null when kept). */
 export function surveyImages(wikitext, title) {
-  let text = wikitext;
-  for (const pattern of HIDDEN) text = text.replace(pattern, "");
+  // Cleaned as the page's own text is, so headings match the sections it writes.
+  let text = stripHidden(wikitext, { keepGalleries: true });
   const galleries = [];
   text = text.replace(GALLERY, (_, body) => `${MARK}${galleries.push(body) - 1}${MARK}`);
 
@@ -120,11 +110,22 @@ export function surveyImages(wikitext, title) {
   let section = "Introduction";
   let sectionLevel = 1;
   let subsection = null;
+  // A page can repeat a heading: which of the section's (and subsection's) namesakes the image is in.
+  let sectionOccurrence = 0;
+  let subsectionOccurrence = 0;
+  const sectionsSeen = new Map();
+  let subsectionsSeen = new Map();
+  const nth = (seen, name) => {
+    const key = name.trim().toLowerCase();
+    const index = seen.get(key) ?? 0;
+    seen.set(key, index + 1);
+    return index;
+  };
   let depth = 0;
   const add = (target, options) => {
     const file = normaliseFileName(target);
     if (!/\.\w+$/.test(file)) return;
-    const image = { file, ...readOptions(options, title), section, subsection };
+    const image = { file, ...readOptions(options, title), section, subsection, sectionOccurrence, subsectionOccurrence };
     found.push({ ...image, leftOut: leftOutBecause(image) });
   };
   for (const line of text.split("\n")) {
@@ -137,8 +138,13 @@ export function surveyImages(wikitext, title) {
         section = name;
         sectionLevel = level;
         subsection = null;
+        // The introduction has no heading of its own, so level-one headings aren't counted.
+        sectionOccurrence = level >= 2 ? nth(sectionsSeen, name) : 0;
+        subsectionsSeen = new Map();
+        subsectionOccurrence = 0;
       } else {
         subsection = name;
+        subsectionOccurrence = nth(subsectionsSeen, name);
       }
       continue;
     }
@@ -174,6 +180,9 @@ export function questImages(wikitext, title) {
       caption: image.caption,
       section: image.section,
       subsection: image.subsection,
+      // Only for a repeated heading, as groupWikiSections counts them.
+      ...(image.sectionOccurrence ? { sectionOccurrence: image.sectionOccurrence } : {}),
+      ...(image.subsection !== null && image.subsectionOccurrence ? { subsectionOccurrence: image.subsectionOccurrence } : {}),
     });
   }
   return images;

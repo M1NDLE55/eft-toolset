@@ -1,6 +1,8 @@
 // @vitest-environment node
 import { describe, expect, it } from "vitest";
 import { hashPath, normaliseFileName, questImages, surveyImages } from "../scripts/wiki-images.mjs";
+import { groupWikiSections } from "../src/app/lib/wiki/page-sections";
+import { wikitextToSections } from "../src/app/lib/wiki/wikitext";
 
 // Shaped like the quest pages in the dump: an infobox banner, an icon table, packed galleries, inline files.
 const DELIVERY = [
@@ -148,5 +150,58 @@ describe("a quest page's images", () => {
   it("doesn't take a heading inside a table or template as a section break", () => {
     const text = ["==Guide==", "{|", "|", "==Not a heading==", "|}", "[[File:Spot.png]]"].join("\n");
     expect(questImages(text, "Quest")[0]).toMatchObject({ section: "Guide", subsection: null });
+  });
+
+  it("reads a height-only size as no width, so a tall picture isn't taken for an icon", () => {
+    const text = ["==Guide==", "[[File:Tall map.png|x300px]]", "[[File:Short wide.png|100x300px]]", "[[File:Stated.png|x60px|80px]]"].join("\n");
+    expect(surveyImages(text, "Quest").map(({ file, width, leftOut }) => [file, width, leftOut])).toEqual([
+      ["Tall_map.png", null, null],
+      ["Short_wide.png", 100, "size"],
+      ["Stated.png", 80, "size"],
+    ]);
+  });
+
+  it("cleans headings as the page's sections do, invisible characters included", () => {
+    const text = ["==Guide==\u200b", "Go. [[File:Spot.png]]", "__NOTOC__", "===Wo\u00adods===", "Here. [[File:Woods.png]]"].join("\n");
+    const sections = groupWikiSections(wikitextToSections(text, "Quest"), new Set());
+    expect(sections.map((section) => [section.heading, section.subsections.map((subsection) => subsection.heading)])).toEqual([
+      ["Guide", ["Woods"]],
+    ]);
+    expect(questImages(text, "Quest").map(({ file, section, subsection }) => [file, section, subsection])).toEqual([
+      ["Spot.png", "Guide", null],
+      ["Woods.png", "Guide", "Woods"],
+    ]);
+  });
+
+  it("records which of a repeated heading's sections an image sits in, as the page counts them", () => {
+    const text = [
+      "==Guide==",
+      "Go. [[File:First guide.png]]",
+      "===Woods===",
+      "[[File:First woods.png]]",
+      "===Note===",
+      "Text.",
+      "====Woods====",
+      "[[File:Second woods.png]]",
+      "==Rewards==",
+      "==Guide==",
+      "Again. [[File:Second guide.png]]",
+      "===Woods===",
+      "[[File:Woods in the second guide.png]]",
+    ].join("\n");
+    expect(
+      questImages(text, "Quest").map(({ file, sectionOccurrence, subsectionOccurrence }) => [file, sectionOccurrence, subsectionOccurrence])
+    ).toEqual([
+      ["First_guide.png", undefined, undefined],
+      ["First_woods.png", undefined, undefined],
+      ["Second_woods.png", undefined, 1],
+      ["Second_guide.png", 1, undefined],
+      ["Woods_in_the_second_guide.png", 1, undefined],
+    ]);
+    const sections = groupWikiSections(wikitextToSections(text, "Quest"), new Set(["rewards"]));
+    expect(sections.map((section) => [section.heading, section.occurrence])).toEqual([
+      ["Guide", undefined],
+      ["Guide", 1],
+    ]);
   });
 });
