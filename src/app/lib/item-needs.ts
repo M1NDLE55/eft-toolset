@@ -120,3 +120,41 @@ export function summarizeNeeds(uses: ItemUses): ItemNeeds | null {
     summary: head + parts.join("; "),
   };
 }
+
+/** The quest a page is about, to pick its task out of an item's uses. */
+export interface QuestIdentity {
+  name: string;
+  trader: string | null;
+  /** USEC or BEAR when only that faction gets the quest. */
+  faction?: string | null;
+}
+
+export interface TaskUse {
+  task: CachedTask;
+  need: TaskNeed;
+}
+
+/** True when the task is the quest: same name and trader, and no other faction. */
+export function isSameQuest(task: CachedTask, quest: QuestIdentity) {
+  return (
+    task.name === quest.name &&
+    (quest.trader === null || task.trader.name === quest.trader) &&
+    (!task.faction || !quest.faction || task.faction === quest.faction)
+  );
+}
+
+/**
+ * The item's tasks with what each needs, split into the given quest's own (when the item is one
+ * of its needs) and the rest, those that take the most first.
+ */
+export function taskUses(uses: Pick<ItemUses, "usedInTasks">, quest?: QuestIdentity | null) {
+  let current: TaskUse | null = null;
+  const others: TaskUse[] = [];
+  for (const task of uses.usedInTasks) {
+    const use = { task, need: taskNeed(task) };
+    if (!current && quest && isSameQuest(task, quest)) current = use;
+    else others.push(use);
+  }
+  others.sort((a, b) => b.need.count - a.need.count);
+  return { current, others };
+}

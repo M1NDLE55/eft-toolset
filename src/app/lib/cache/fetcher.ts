@@ -5,6 +5,7 @@ import type { QueryDefinition } from "@/app/lib/api/queryClient";
 import type {
   CachedItem,
   CachedItemInfo,
+  CachedKeyInfo,
   CachedVendorPrice,
   CatalogEntry,
   CatalogItem,
@@ -109,7 +110,7 @@ export const groupItemsQuery: QueryDefinition<GroupVariables, CachedItem[]> = {
 
 export const itemDetailQuery: QueryDefinition<DetailVariables, ComposedItem | null> = {
   id: "item-detail",
-  version: 6,
+  version: 7,
   staleTime: 5 * MINUTE,
   maxAge: DAY,
   persist: true,
@@ -269,7 +270,33 @@ function isComposedItem(value: unknown): value is ComposedItem {
       (Array.isArray(item.bartersGiving) && item.bartersGiving.length <= 5_000 && item.bartersGiving.every(isBarter))) &&
     (item.craftsGiving === undefined ||
       (Array.isArray(item.craftsGiving) && item.craftsGiving.length <= 5_000 && item.craftsGiving.every(isCraft))) &&
-    (item.info === undefined || isItemInfo(item.info))
+    (item.info === undefined || isItemInfo(item.info)) &&
+    (item.key === undefined || isKeyInfo(item.key))
+  );
+}
+
+/** Exported for tests. */
+export function isKeyInfo(value: unknown): value is CachedKeyInfo {
+  if (!value || typeof value !== "object") return false;
+  const key = value as Partial<Record<keyof CachedKeyInfo, unknown>>;
+  return (
+    Array.isArray(key.maps) &&
+    key.maps.length <= 50 &&
+    key.maps.every((entry: unknown) => {
+      if (!entry || typeof entry !== "object") return false;
+      const map = entry as Partial<Record<"key" | "name" | "locks", unknown>>;
+      return (
+        typeof map.key === "string" &&
+        map.key.length <= 80 &&
+        /^[a-z0-9][a-z0-9-]*$/.test(map.key) &&
+        typeof map.name === "string" &&
+        map.name.length <= 200 &&
+        isFiniteNumber(map.locks) &&
+        map.locks >= 1 &&
+        map.locks <= 1_000
+      );
+    }) &&
+    (key.opens === null || (typeof key.opens === "string" && key.opens.length <= 1_000))
   );
 }
 

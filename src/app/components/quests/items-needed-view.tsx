@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { itemHref } from "@/app/lib/item-links";
 import type { QuestGraph } from "@/app/lib/quests/graph";
 import { questName } from "@/app/lib/quests/display";
 import type { ShoppingList, ShoppingRow } from "@/app/lib/quests/shopping-list";
@@ -10,15 +9,16 @@ import { CURRENCY_ITEMS, moneyLabel } from "@/app/lib/quests/shopping-list";
 import type { QuestItem, QuestList } from "@/app/lib/quests/types";
 import { normalizeText } from "@/app/lib/search/normalize-text";
 import { Badge, empty, heading, panel, textLink } from "./quest-bits";
+import { ItemRundownLink } from "@/app/components/item/rundown/rundown-link";
 
 const MAX_CHOICE_ITEMS = 8;
 
 export function ItemLink({ item, className }: { item: QuestItem | undefined; className?: string }) {
   if (!item) return <span className={className}>Unknown item</span>;
   return (
-    <Link href={itemHref({ name: item.name, normalizedName: item.slug })} className={className ?? textLink} title={item.name}>
+    <ItemRundownLink item={{ name: item.name, normalizedName: item.slug }} className={className ?? textLink} title={item.name}>
       {item.name}
-    </Link>
+    </ItemRundownLink>
   );
 }
 

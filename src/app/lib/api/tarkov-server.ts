@@ -14,6 +14,7 @@ import type {
   MarketRow,
   ItemUses,
   CachedItemInfo,
+  CachedKeyInfo,
 } from "@/app/lib/cache/types";
 import type {
   AmmoItemData,
@@ -30,6 +31,9 @@ import type {
 import type { TaskIndex, TaskNode } from "@/app/lib/builds/quests";
 import { chainAfter, chainBefore, questGraph } from "@/app/lib/quests/graph";
 import { mapPageKey } from "@/app/lib/quests/maps";
+import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
+import { infoboxFact } from "@/app/lib/wiki/item-wiki";
+import { findItemWikiPage } from "@/app/lib/wiki/snapshot";
 import {
   isFaction,
   type Faction,
@@ -1001,8 +1005,70 @@ export async function getItemDetail(
     craftsGiving,
     info: projectItemInfo(item, itemContext),
   };
-  details.set(itemId, detail);
+  const key = await keyInfo(gameMode, item, itemContext);
+  if (key.info) detail.key = key.info;
+  // Without the maps or the wiki this time, leave it out of the cache so the next request tries again.
+  if (key.complete) details.set(itemId, detail);
   return detail;
+}
+
+/** Per-map lock counts by key item id: none when the maps can't be loaded, so item pages still work. */
+type KeyLocks = Map<string, CachedKeyInfo["maps"]>;
+
+const NO_KEY_LOCKS: KeyLocks = new Map();
+
+async function loadKeyLocks(gameMode: GameMode): Promise<KeyLocks> {
+  const [mapsEnvelope, itemContext] = await Promise.all([
+    loadResource<MapsData>(gameMode, "maps").catch(() => null),
+    loadItems(gameMode),
+  ]);
+  if (!mapsEnvelope) return NO_KEY_LOCKS;
+  return memo(`${gameMode}/key-locks`, [mapsEnvelope, itemContext], () => {
+    const rawMaps = Object.values(mapsEnvelope.data.maps ?? {});
+    const byKey: KeyLocks = new Map();
+    // mapConfigs order, the maps with a keys page; counted as buildMapGuide counts them there.
+    for (const config of mapConfigs) {
+      const raw = rawMaps.find((map) => map.normalizedName === config.key);
+      const counts = new Map<string, number>();
+      for (const lock of raw?.locks ?? []) {
+        if (!lock.position || !lock.key || !itemContext.nameById.get(lock.key)) continue;
+        counts.set(lock.key, (counts.get(lock.key) ?? 0) + 1);
+      }
+      for (const [id, locks] of counts) {
+        byKey.set(id, [...(byKey.get(id) ?? []), { key: config.key, name: config.name, locks }]);
+      }
+    }
+    return byKey;
+  });
+}
+
+const KEY_CATEGORIES = new Set(["Key", "Keycard", "Mechanical Key"]);
+
+/**
+ * For keys and keycards, the maps whose locks they open and, from the wiki page, what they open. Only keys
+ * wait for the maps. `complete` is false when the maps or the wiki couldn't be read.
+ */
+async function keyInfo(
+  gameMode: GameMode,
+  item: RawItem,
+  context: ItemsContext
+): Promise<{ info?: CachedKeyInfo; complete: boolean }> {
+  const isKey = (item.categories ?? []).some((id) => KEY_CATEGORIES.has(context.categoryNames.get(id) ?? ""));
+  if (!item.id || !isKey) return { complete: true };
+  const id = item.id;
+  const [keyLocks, opens] = await Promise.all([
+    loadKeyLocks(gameMode),
+    findItemWikiPage(id).then(
+      (page) => infoboxFact(page?.infobox.usage),
+      (error: unknown) => {
+        console.warn("Key wiki page could not be read:", error instanceof Error ? error.message : error);
+        return undefined;
+      }
+    ),
+  ]);
+  const maps = keyLocks.get(id) ?? [];
+  const complete = keyLocks !== NO_KEY_LOCKS && opens !== undefined;
+  return { info: maps.length > 0 || opens ? { maps, opens: opens ?? null } : undefined, complete };
 }
 
 function projectItemInfo(item: RawItem, context: ItemsContext): CachedItemInfo {

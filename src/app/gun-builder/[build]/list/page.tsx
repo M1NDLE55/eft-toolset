@@ -13,7 +13,6 @@ import { buildShoppingList, formatShoppingList } from "@/app/lib/builds/shopping
 import { useAmmoItems, useGunItems, useGunList, usePurchaseContext } from "@/app/lib/cache/gunBuilderHooks";
 import { isDetailed } from "@/app/lib/builds/stats";
 import { traderLabel } from "@/app/lib/builds/price";
-import { itemHref } from "@/app/lib/item-links";
 import { copyText } from "@/app/lib/browser/clipboard";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -23,6 +22,7 @@ import { formatRub, modeLabel, shownPrice, taskHint } from "@/app/components/gun
 import { PriceSource } from "@/app/components/gun-builder/price-source";
 import { useDocumentTitle } from "@/app/components/gun-builder/use-document-title";
 import { cn } from "@/lib/utils";
+import { ItemRundownLink } from "@/app/components/item/rundown/rundown-link";
 
 const PRINT_CSS = `
 @media print {
@@ -201,13 +201,13 @@ function ShoppingList({ build }: { build: GunBuild }) {
                           </span>
                           <span className="min-w-0">
                             {item ? (
-                              <Link
-                                href={itemHref({ name: row.name, normalizedName: row.normalizedName })}
+                              <ItemRundownLink
+                                item={{ name: row.name, normalizedName: row.normalizedName }}
                                 prefetch={false}
                                 className="line-clamp-2 text-sm font-semibold text-[#ddd] hover:text-[#e6d9b8] hover:underline"
                               >
                                 {row.name}
-                              </Link>
+                              </ItemRundownLink>
                             ) : (
                               <span className="text-sm text-[#888]">{row.name}</span>
                             )}
@@ -287,9 +287,9 @@ function ShoppingList({ build }: { build: GunBuild }) {
       {ammo && (
         <p className="flex flex-wrap items-center gap-x-3 gap-y-1 border border-[#1a1a1a] bg-[#0c0c0c] px-3 py-2 text-sm">
           <span className="text-[10px] font-bold uppercase tracking-widest text-[#888]">Ammo</span>
-          <Link href={itemHref(ammo)} prefetch={false} className="min-w-0 truncate font-semibold text-[#ddd] hover:text-[#e6d9b8] hover:underline">
+          <ItemRundownLink item={ammo} prefetch={false} className="min-w-0 truncate font-semibold text-[#ddd] hover:text-[#e6d9b8] hover:underline">
             {ammo.name}
-          </Link>
+          </ItemRundownLink>
           <span className="tabular-nums text-[#ccc]">{formatRub(ammoPrice?.price ?? null)} per round</span>
           {ammoPrice && <PriceSource shown={ammoPrice} className="text-xs" />}
           <span className="text-xs text-[#666]">Not included in the total</span>

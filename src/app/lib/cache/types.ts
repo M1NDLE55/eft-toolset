@@ -155,6 +155,14 @@ export interface CachedItemInfo {
   categories: string[];
 }
 
+/** For keys: the maps with locks it opens, and what it opens. */
+export interface CachedKeyInfo {
+  /** Maps with a keys page (src/app/lib/raid-planner/maps-config.ts mapConfigs key) where the key opens locks, in mapConfigs order. */
+  maps: { key: string; name: string; locks: number }[];
+  /** What the key opens, in words: the wiki infobox "usage" field (e.g. "Unlocks the driver-side door of the orange tanker truck at the construction site on Customs."); null without one. */
+  opens: string | null;
+}
+
 export interface ComposedItem extends Omit<CachedItem, "usedInTasks"> {
   usedInTasks: CachedTask[];
   hideoutRequirements: CachedHideoutRequirement[];
@@ -167,6 +175,8 @@ export interface ComposedItem extends Omit<CachedItem, "usedInTasks"> {
   bartersGiving?: CachedBarter[];
   craftsGiving?: CachedCraft[];
   info?: CachedItemInfo;
+  /** Set for items that open at least one lock on a map, or whose wiki page says what they open. */
+  key?: CachedKeyInfo;
 }
 
 /** What an item is needed for, without prices: the input to the needs summary. */

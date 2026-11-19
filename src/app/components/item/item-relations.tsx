@@ -1,11 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useState, type ReactNode } from "react";
 import { ExternalLink } from "lucide-react";
 import Accordion from "./accordion";
 import { RomanLiteral } from "@/app/lib/roman";
-import { itemHref } from "@/app/lib/item-links";
 import type {
   CachedBarter,
   CachedContainedItem,
@@ -16,6 +14,7 @@ import type {
   CachedTaskObjective,
   CachedTaskUnlock,
 } from "@/app/lib/cache/types";
+import { ItemRundownLink } from "@/app/components/item/rundown/rundown-link";
 
 const ITEM_COUNT_OBJECTIVES = new Set(["giveItem", "findItem", "plantItem", "sellItem", "mark"]);
 
@@ -72,8 +71,8 @@ function ItemLines({ items, tone }: { items: CachedContainedItem[]; tone: "in" |
       {items.map((entry, index) => (
         <li key={`${entry.item.name}-${index}`} className="flex gap-2">
           <span className="w-10 shrink-0 text-right tabular-nums text-[#888]">{entry.quantity}×</span>
-          <Link
-            href={itemHref(entry.item)}
+          <ItemRundownLink
+            item={entry.item}
             className={
               tone === "out"
                 ? "text-emerald-400 underline-offset-2 hover:underline"
@@ -81,7 +80,7 @@ function ItemLines({ items, tone }: { items: CachedContainedItem[]; tone: "in" |
             }
           >
             {entry.item.name}
-          </Link>
+          </ItemRundownLink>
           {entry.tool && <span className="text-xs text-[#777]">(tool, kept)</span>}
         </li>
       ))}

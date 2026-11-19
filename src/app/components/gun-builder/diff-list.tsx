@@ -1,10 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight, Equal, Minus, Plus, Repeat2 } from "lucide-react";
 import type { DiffStatus, SlotDiffRow } from "@/app/lib/builds/compare";
 import type { ItemLookup } from "@/app/lib/builds/stats";
-import { itemHref } from "@/app/lib/item-links";
 import { cn } from "@/lib/utils";
+import { ItemRundownLink } from "@/app/components/item/rundown/rundown-link";
 
 const STATUS: Record<DiffStatus, { label: string; icon: typeof Plus; className: string }> = {
   added: { label: "Added", icon: Plus, className: "border-emerald-800/70 text-emerald-300" },
@@ -43,14 +42,14 @@ function ItemCell({
   );
   if (link && item) {
     return (
-      <Link
-        href={itemHref(item)}
+      <ItemRundownLink
+        item={item}
         prefetch={false}
         title={`${side}: ${item.name}. View item`}
         className="flex min-w-0 items-center gap-2 hover:[&>span:last-child]:text-[#e6d9b8] hover:[&>span:last-child]:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
       >
         {content}
-      </Link>
+      </ItemRundownLink>
     );
   }
   return (
