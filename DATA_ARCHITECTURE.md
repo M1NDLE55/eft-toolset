@@ -29,7 +29,7 @@ server-side, cached in-process, and never forwarded wholesale to a browser.
 | --- | --- | --- |
 | `item.catalog` | `gameMode` | Search/catalog item projection |
 | `item.group` | `gameMode`, up to 100 names | Item-group prices and task names |
-| `item.detail` | `gameMode`, item name or slug | Item, tasks, barters, and crafts |
+| `item.detail` | `gameMode`, item name or slug | Item, tasks, barters, and crafts; for keys, the maps whose locks they open and what they open |
 | `gun.list` | `gameMode` | Weapon-picker rows |
 | `gun.build-items` | `gameMode`, up to 100 IDs | Complete build nodes |
 | `gun.pick-items` | `gameMode`, up to 100 IDs | Lightweight slot-picker rows |
@@ -74,7 +74,9 @@ Views are kept in local storage (`src/app/lib/item-views/store.ts`) and included
 The active view is mirrored in the `eft-item-view` cookie (a preset's id, or a custom view's
 id and cards), so the server renders the page as the visitor will see it; crawlers get
 Standard. Besides prices and uses, `item.detail` returns the item's description, weight,
-category, flea statistics, and the barters and crafts that give it.
+category, flea statistics, and the barters and crafts that give it. For keys it also returns
+the maps with a keys page whose locks they open, with a lock count for each, and what they
+open, from the wiki snapshot's infobox (so `/api/tarkov` traces the snapshot's item pages).
 
 The Full view adds the item's wiki page, read on the server from the snapshot below by
 tarkov.dev id (`src/app/lib/wiki/item-wiki.ts`), and passed to the page with the item. It

@@ -3,9 +3,10 @@ const nextConfig = {
   poweredByHeader: false,
   agentRules: false,
   reactCompiler: true,
-  // get_wiki_page, item pages and quest pages read the wiki snapshot from disk, a page at a time. See DATA_ARCHITECTURE.md.
+  // get_wiki_page, item pages, quest pages and item.detail (what a key opens) read the wiki snapshot from disk, a page at a time. See DATA_ARCHITECTURE.md.
   outputFileTracingIncludes: {
     "/api/mcp": ["./data/wiki/**/*"],
+    "/api/tarkov": ["./data/wiki/item-ids.json", "./data/wiki/pages/**/*", "./data/wiki/items/**/*"],
     "/item/*": ["./data/wiki/index.json", "./data/wiki/item-ids.json", "./data/wiki/pages/**/*", "./data/wiki/items/**/*"],
     "/quests/*": ["./data/wiki/index.json", "./data/wiki/image-credits.json", "./data/wiki/pages/**/*"],
   },

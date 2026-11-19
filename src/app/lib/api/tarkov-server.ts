@@ -14,6 +14,7 @@ import type {
   MarketRow,
   ItemUses,
   CachedItemInfo,
+  CachedKeyInfo,
 } from "@/app/lib/cache/types";
 import type {
   AmmoItemData,
@@ -30,6 +31,9 @@ import type {
 import type { TaskIndex, TaskNode } from "@/app/lib/builds/quests";
 import { chainAfter, chainBefore, questGraph } from "@/app/lib/quests/graph";
 import { mapPageKey } from "@/app/lib/quests/maps";
+import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
+import { infoboxFact } from "@/app/lib/wiki/item-wiki";
+import { findItemWikiPage } from "@/app/lib/wiki/snapshot";
 import {
   isFaction,
   type Faction,
@@ -909,7 +913,7 @@ export async function getItemDetail(
   gameMode: GameMode,
   reference: ItemReference
 ): Promise<ComposedItem | null> {
-  const [itemContext, traderNames, taskContext, relations, hideout, offers] =
+  const [itemContext, traderNames, taskContext, relations, hideout, offers, keyLocks] =
     await Promise.all([
       loadItems(gameMode),
       loadTraderNames(gameMode),
@@ -917,6 +921,7 @@ export async function getItemDetail(
       loadRelations(gameMode),
       loadHideout(gameMode),
       loadOfferContext(gameMode, true),
+      loadKeyLocks(gameMode),
     ]);
   const stations = hideout.stationNames;
   throwIfRequestAborted();
@@ -929,7 +934,7 @@ export async function getItemDetail(
   const itemId = item.id;
   const details = memo(
     `${gameMode}/details`,
-    [itemContext, traderNames, taskContext, relations, hideout, offers],
+    [itemContext, traderNames, taskContext, relations, hideout, offers, keyLocks],
     () => new Map<string, ComposedItem>()
   );
   const cached = details.get(itemId);
@@ -1001,8 +1006,57 @@ export async function getItemDetail(
     craftsGiving,
     info: projectItemInfo(item, itemContext),
   };
+  const key = await keyInfo(item, itemContext, keyLocks);
+  if (key) detail.key = key;
   details.set(itemId, detail);
   return detail;
+}
+
+/** Per-map lock counts by key item id: none when the maps can't be loaded, so item pages still work. */
+type KeyLocks = Map<string, CachedKeyInfo["maps"]>;
+
+const NO_KEY_LOCKS: KeyLocks = new Map();
+
+async function loadKeyLocks(gameMode: GameMode): Promise<KeyLocks> {
+  const [mapsEnvelope, itemContext] = await Promise.all([
+    loadResource<MapsData>(gameMode, "maps").catch(() => null),
+    loadItems(gameMode),
+  ]);
+  if (!mapsEnvelope) return NO_KEY_LOCKS;
+  return memo(`${gameMode}/key-locks`, [mapsEnvelope, itemContext], () => {
+    const rawMaps = Object.values(mapsEnvelope.data.maps ?? {});
+    const byKey: KeyLocks = new Map();
+    // mapConfigs order, the maps with a keys page; counted as buildMapGuide counts them there.
+    for (const config of mapConfigs) {
+      const raw = rawMaps.find((map) => map.normalizedName === config.key);
+      const counts = new Map<string, number>();
+      for (const lock of raw?.locks ?? []) {
+        if (!lock.position || !lock.key || !itemContext.nameById.get(lock.key)) continue;
+        counts.set(lock.key, (counts.get(lock.key) ?? 0) + 1);
+      }
+      for (const [id, locks] of counts) {
+        byKey.set(id, [...(byKey.get(id) ?? []), { key: config.key, name: config.name, locks }]);
+      }
+    }
+    return byKey;
+  });
+}
+
+const KEY_CATEGORIES = new Set(["Key", "Keycard", "Mechanical Key"]);
+
+/** The maps whose locks the item opens and, from its wiki page, what it opens; undefined for other items. */
+async function keyInfo(item: RawItem, context: ItemsContext, keyLocks: KeyLocks): Promise<CachedKeyInfo | undefined> {
+  const maps = (item.id && keyLocks.get(item.id)) || [];
+  const isKey = (item.categories ?? []).some((id) => KEY_CATEGORIES.has(context.categoryNames.get(id) ?? ""));
+  if (!item.id || (maps.length === 0 && !isKey)) return undefined;
+  let opens: string | null = null;
+  try {
+    const page = await findItemWikiPage(item.id);
+    opens = infoboxFact(page?.infobox.usage);
+  } catch (error) {
+    console.warn("Key wiki page could not be read:", error instanceof Error ? error.message : error);
+  }
+  return maps.length > 0 || opens ? { maps, opens } : undefined;
 }
 
 function projectItemInfo(item: RawItem, context: ItemsContext): CachedItemInfo {

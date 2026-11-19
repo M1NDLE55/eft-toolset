@@ -46,6 +46,13 @@ const FACTS: [key: string, label: string][] = [
   ["exam xp", "Examine XP"],
 ];
 
+/** An infobox value worth showing as a short fact, trimmed; null when empty, too long, or a template's leftover labels. */
+export function infoboxFact(raw: string | undefined): string | null {
+  const value = raw?.trim();
+  // Some infobox templates leave empty labels behind ("Buffs:, Removes:,"); skip those values.
+  return value && value.length <= 300 && !/:\s*(,|$)/.test(value) ? value : null;
+}
+
 /** The item's wiki page shaped for the item page, or null when there is none or it can't be read. */
 export async function readItemWiki(id: string): Promise<ItemWiki | null> {
   try {
@@ -53,9 +60,8 @@ export async function readItemWiki(id: string): Promise<ItemWiki | null> {
     if (!page) return null;
     const sections = groupWikiSections(page.sections, LEFT_OUT);
     const facts = FACTS.flatMap(([key, label]) => {
-      const value = page.infobox[key]?.trim();
-      // Some infobox templates leave empty labels behind ("Buffs:, Removes:,"); skip those values.
-      return value && value.length <= 300 && !/:\s*(,|$)/.test(value) ? [{ label, value }] : [];
+      const value = infoboxFact(page.infobox[key]);
+      return value ? [{ label, value }] : [];
     });
     return {
       title: page.title,
