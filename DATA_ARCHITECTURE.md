@@ -37,13 +37,14 @@ server-side, cached in-process, and never forwarded wholesale to a browser.
 | `gun.ammo-items` | `gameMode`, up to 100 IDs | Ammo ballistics, prices, and trader details |
 | `map.details` | `gameMode`, normalized map key | One joined map projection |
 | `market.board` | `gameMode` | Top 48-hour flea movers and best sell value per slot |
+| `quest.list` | `gameMode` | Every quest with its requirements and item needs, and the items and maps they name |
 
 Operation names live in `src/app/lib/api/operations.ts`. The route rejects unknown
 operations, undeclared variables, invalid game modes, oversized batches, request bodies
 over 64 KiB, slow bodies, and URLs over 2 KiB. It does not accept an upstream URL,
 resource name, field selection, or arbitrary query.
 
-`item.catalog`, `item.detail`, `gun.list`, `gun.preset`, `map.details`, and `market.board` are also served
+`item.catalog`, `item.detail`, `gun.list`, `gun.preset`, `map.details`, `market.board`, and `quest.list` are also served
 over GET. The variables must be canonical JSON (sorted keys, no extra query parameters),
 so each logical request has exactly one URL. Successful GETs are sent with
 `Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=<n>`, where the
@@ -120,6 +121,64 @@ among the weapon and its sights. Durability and build size aren't in the data, s
 them as checked in game. When nothing passes, the page shows the closest attempt and a
 starting build. Results are kept for an hour per instance, and optimiser runs share the
 limit in `optimizer-slots.ts`.
+
+## Quests
+
+`/quests` lists every quest in the visitor's game mode and `/quests/<slug>` shows one. Both
+read tarkov.dev's task data through the adapter:
+
+- `getQuestList` (the `quest.list` operation) projects each task to a `QuestSummary`
+  (`src/app/lib/quests/types.ts`): trader, level, faction, Kappa and Lightkeeper flags, maps,
+  requirements with the statuses that meet them, the quests whose completion fails it,
+  trader levels, keys, objective ids, and item needs. Items and maps come once each, in
+  dictionaries beside the quests. Pages render it with `loadQuestList`
+  (`src/app/quests/load.ts`) and seed the client query cache with it, as item pages do; the
+  client refetches it when the game mode changes.
+- `getQuestDetail` adds objectives, rewards (items, standing, offer, craft and trader unlocks,
+  skills), what the quest unlocks, the chain before and after it, and buy and sell prices for
+  every item it names. It is rendered on the server only, through `loadQuestDetail`.
+
+Slugs are tarkov.dev's `normalizedName`, which is already unique per task (faction versions
+come as `-usec` and `-bear`, repeated names with a number). `questSlugs` guards against that
+changing: should two tasks ever share one, they get `-usec` or `-bear` (a task for every faction
+keeps the plain slug), and anything still shared gets the task id. Tasks without a valid slug
+have no page. Zone quests have a copy in each game mode that differs only
+in its `-pvp-zone` or `-pve-zone` suffix, so a page asked for in the other mode shows this
+mode's copy; a quest only the other mode has is shown from that mode.
+
+An item need is one objective that takes items (hand over, plant, sell, mark, or use), with
+any find objective for the same items, so finding and handing over count once; a find
+objective with no hand-over is a need of its own. An objective any of several items meets
+stays one need with its alternatives, and when too many qualify to list, only its
+description. Maps are keyed by tarkov.dev's map `normalizedName`; variants (night Factory,
+Ground Zero 21+, the dark Lab and others) name the raid planner and keys page they share.
+
+`src/app/lib/quests/` holds the browser's logic: the requirement graph, each quest's state
+from progress, level and faction, the items still needed, the chain layout, and the list
+filters. Progress (completed quests, done objectives, level, and faction) is kept per game mode
+in local storage (`progress-store.ts`) and included in backups.
+
+- A quest is failed when a quest that fails it is complete. Trader loyalty isn't tracked.
+  Once the faction is set, a requirement on a quest only the other faction gets is ignored,
+  since some quests for both factions require a USEC-only one.
+- Completing a quest also marks the quests it strictly needed completed, except quests only for
+  the other faction. Un-completing one that later completed quests needed asks first, and can
+  un-mark only it or them too.
+- Items needed adds up the needs of the quests left, found-in-raid apart. Both sides of a
+  choice not made yet count. With no faction set, a quest's USEC and BEAR versions (same
+  trader, name and prestige) count once: the larger need per item, shown against that version.
+- The chains view (`chain-layout.ts`) stacks each group of a trader's quests linked by that
+  trader's own requirements as a block, the biggest first, one column per depth. Quests with
+  no such link are listed apart under it as standalone quests. Quests that share a name and
+  faction get a short hint (what they follow, their map or level) to tell them apart.
+
+Quest pages show the guide from the wiki snapshot (`src/app/lib/wiki/quest-wiki.ts`), found by
+the task's wiki link and only if it is a quest's page, without the objectives, rewards, and
+requirements tarkov.dev serves, and with the dialogue apart. It carries the same credit line as
+the item page. It also passes the page's map and location pictures (see "Quest images" under the
+wiki snapshot below) as file names and hash paths with their credits; the browser builds each
+image URL and loads it from the wiki's image host, so the server never fetches, stores or
+serves the images, and the page's HTML doesn't contain their URLs.
 
 ## Ammo, keys and PVE prices
 
@@ -201,7 +260,7 @@ for one points the model to `search_items`, `get_item`, `get_weapon`, or `get_am
 instead. `data/wiki/index.json` lists every kept page and redirect (with the section a redirect
 points at); it is read once per instance, and pages are read one file at a time as they are
 asked for, so a cold start loads about 150 KB. `next.config.mjs` traces `data/wiki` into the
-MCP function and the item pages.
+MCP function, the item pages, and the quest pages.
 
 Item, weapon, and ammo pages are also written, apart, to `data/wiki/items/` for the item page,
 without the sections that repeat tarkov.dev (description, trading, crafting, hideout, quests,
@@ -215,6 +274,58 @@ by anyone, so the tool description, the `content` field, and the server instruct
 the model to treat it as reference rather than instructions. The wiki is licensed CC BY-NC-SA,
 so every result carries a credit line naming the page, its contributors, the licence, and that
 it was adapted from the dump of a given date (see the README's Credits section).
+
+**Quest images.** Quest pages in the snapshot also carry an `images` list: the pictures on the
+wiki page that help with the quest (maps with markers, location screenshots, in-raid spots,
+build screenshots), each as `{ file, hashPath, caption, section, subsection }`, plus
+`sectionOccurrence` and `subsectionOccurrence` when the page repeats that heading (two Guide
+sections, or a Woods subsection under two objectives): how many namesakes come before it, counted
+as `groupWikiSections` counts them, so the image shows in the right one.
+`scripts/wiki-images.mjs` collects `[[File:…]]` and `[[Image:…]]` links and `<gallery>` entries
+with the section and subsection each sits in (cleaning the text as the page parser does, with
+`stripHidden`, so headings match), takes the caption (or the alt text) as plain text,
+and normalises each name as MediaWiki does (underscores for spaces, runs collapsed, first letter
+upper case). `hashPath` is the first one and two hex digits of the name's md5, the directories
+the wiki keeps the file under (`Delivery_from_the_past_Customs.png` → `4/4a`), so the image URL
+is `https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/<hashPath>/<file>`.
+Each file is listed once per page. Left out:
+
+- names containing "icon", "portrait", "banner" or "QuestPicture", item inspect pictures
+  (`_ins.`), main menu backgrounds, and SVGs;
+- files linked to another page (item pictures link to the item) and tab labels
+  (`class=wds-tabs…`); a link to the file itself (`{{filepath:…}}`) is kept;
+- files drawn at 128px wide or less (a height-only size such as `x300px` states no width);
+- files in the Objectives, Rewards, Dialogue, Initial equipment, and Trivia sections (reward
+  previews, item rows, asides). Requirements stay, since story quests show there where a quest
+  starts;
+- the infobox's picture, which is a template field rather than a file link.
+
+Images can sit in a section the quest page leaves out of its text (Requirements, Introduction)
+or in one with no text of its own. The quest page (`src/app/lib/quests/wiki-images.ts`) shows an
+image with its guide section or subsection when it renders that block, and with the section when
+only the subsection is missing. Otherwise it shows the image under an objective when its
+subsection or caption (or failing those, its file name) names exactly one of the quest's maps
+and only one objective is on that map; the rest go by the objectives checklist, grouped under
+their wiki section's name ("From the EFT Wiki: Requirements"). The manifest counts the quest pages with images, the images
+on them, and the distinct files.
+
+**Image credits.** After writing the pages, `scripts/build-wiki-snapshot.mjs` makes one pass over
+the wiki's MediaWiki API (`scripts/wiki-image-credits.mjs`): `meta=siteinfo&siprop=rightsinfo`
+once for the licence, then `prop=imageinfo&iiprop=user|url` for up to 50 files per request, one
+request after another with a second between them, `maxlag=5`, and the same User-Agent as the dump
+download. It writes `data/wiki/image-credits.json` as
+`{ fetchedAt, licence, images: { [file]: { uploader, filePage } } }`, where `uploader` is who
+uploaded the file's current version and files the wiki doesn't have are marked `missing`. It
+also compares the URL it builds from each name with the one the API returns and prints any that
+differ. `--no-credits` skips the pass, and so does any failure to read the API (a network error,
+an error response, or an HTML page such as a challenge, which isn't retried): the build then
+keeps the existing credits, writes `uploader: null` for new files, and drops files no page
+shows any more. Page files never depend on the API, so the snapshot still rebuilds identically
+from the same dump. `readQuestWiki` joins each image with its credit, leaves out files marked
+`missing`, and credits "EFT Wiki contributors" when there is no uploader. Under each image the
+quest page shows "Image: <file name> by <uploader>, Escape from Tarkov Wiki, CC BY-NC-SA",
+linking the file page and the licence (`src/app/lib/wiki/wiki-images.ts` builds the URL and the
+text). `next.config.mjs` traces `image-credits.json` into the quest pages.
 
 `lookup_term` reads no service at all. It answers from a curated glossary of player jargon
 (`src/app/lib/glossary/terms.json`): map callouts, item and ammo nicknames, bosses, traders,

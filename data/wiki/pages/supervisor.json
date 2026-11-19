@@ -40,5 +40,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Goshan cash register key | 1 | Required | N/A | Stashed item |\n| IDEA cash register key | 1 | Required | N/A | Stashed item |\n| OLI cash register key | 1 | Required | N/A | Stashed item |"
     }
+  ],
+  "images": [
+    {
+      "file": "Supervisor_Map.png",
+      "hashPath": "4/41",
+      "caption": "Stashing locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Supervisor_Goshan_Location.png",
+      "hashPath": "4/48",
+      "caption": "BIZARRO store changing rooms",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Supervisor_IDEA_Location.png",
+      "hashPath": "4/42",
+      "caption": "IDEA cash register no. 9",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Supervisor_OLI_Location.png",
+      "hashPath": "b/b6",
+      "caption": "OLI cash register no. 7-8",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

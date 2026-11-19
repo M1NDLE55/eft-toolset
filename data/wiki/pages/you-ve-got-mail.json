@@ -59,5 +59,84 @@
       "level": 4,
       "text": "In the adjacent storage room on the bottom of a shelf between packages."
     }
+  ],
+  "images": [
+    {
+      "file": "PostOfficeMap.png",
+      "hashPath": "9/9a",
+      "caption": "Post office marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "PostOffice.png",
+      "hashPath": "0/06",
+      "caption": "The post office",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "YouveGotMailSpawn01_01.png",
+      "hashPath": "b/bd",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "YouveGotMailSpawn01_02.png",
+      "hashPath": "b/b9",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "YouveGotMailSpawn01_03.png",
+      "hashPath": "b/b9",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "YouveGotMailSpawn02_01.png",
+      "hashPath": "d/d3",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "You've_Got_Mail_Spawn1.png",
+      "hashPath": "f/ff",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "Youvegotmail_4thspawn.jpeg",
+      "hashPath": "f/f2",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "You've_Got_Mail_Spawn2.png",
+      "hashPath": "4/48",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "PostOfficeStorageSpawn.png",
+      "hashPath": "d/dc",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    },
+    {
+      "file": "PostOfficeStorageSpawn2.png",
+      "hashPath": "3/3a",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    }
   ]
 }

@@ -53,5 +53,21 @@
       "level": 3,
       "text": "- This build is based on a standard SVDS from Prapor LL3.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| SVDS Lynx Arms AK-series pistol grip adapter | PraporMechanic | LL3 (Barter)LL3 |\n| AK Magpul MOE pistol grip (Black) | Mechanic | LL4 |\n| SVD SAG MK1 chassis | PraporMechanic | LL3 (Barter)LL3 |\n| SVDS custom cut dust cover | PraporMechanic | LL3 (Barter)LL3 |\n| SVDS Lynx Arms Hinge buffer tube adapter | Jaeger | LL2 |\n| AR-15 Magpul UBR GEN2 stock (Black) | Peacekeeper | LL3 |\n| SVDS Rotor 43 thread adapter | Mechanic | LL3 |\n| Rotor 43 7.62x54R sound suppressor | Skier | LL3 |\n| Lobaev Arms 30mm scope mount | Jaeger | LL1 (Barter); LL2 |\n| March Tactical 3-24x42 FFP 30mm riflescope | Jaeger | LL4 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "GS19_Insp.png",
+      "hashPath": "1/13",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GS19_Mods.png",
+      "hashPath": "d/dd",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

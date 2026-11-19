@@ -44,5 +44,28 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "EasyJobHeliMap.png",
+      "hashPath": "5/58",
+      "caption": "Helicopter marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "EasyJobHeliPic.png",
+      "hashPath": "1/16",
+      "caption": "The wanted helicopter",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "EasyJob2Map.png",
+      "hashPath": "e/eb",
+      "caption": "Quest kill area marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

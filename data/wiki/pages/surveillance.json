@@ -60,5 +60,77 @@
       "level": 4,
       "text": "In the compartment under the right side desk."
     }
+  ],
+  "images": [
+    {
+      "file": "SecurityRoomKeyMap.png",
+      "hashPath": "6/65",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ConcordiaBuilding.png",
+      "hashPath": "b/b9",
+      "caption": "The Concordia building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ConcordiaEntranceNr1.png",
+      "hashPath": "9/9e",
+      "caption": "Way to the parking garage via house no. 1 staircase",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "HouseNr1Staircase.png",
+      "hashPath": "2/2b",
+      "caption": "The staircase",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "SecurityRoomKeyStaircaseDoor.png",
+      "hashPath": "9/9c",
+      "caption": "Door location near the staircase",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "SecurityRoomKeyDoor.png",
+      "hashPath": "d/d8",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "HDDonPC.png",
+      "hashPath": "e/e6",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "HDDUnderDesk2.png",
+      "hashPath": "0/03",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "HDDPizzaBox.png",
+      "hashPath": "4/45",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "HDDUnderDesk.png",
+      "hashPath": "a/a5",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    }
   ]
 }

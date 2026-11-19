@@ -45,5 +45,21 @@
       "level": 3,
       "text": "Southwest of the Concordia apartment complex. Transits are only available 1 min after raid start."
     }
+  ],
+  "images": [
+    {
+      "file": "StreetsTransitToInterchangeMap.png",
+      "hashPath": "9/9e",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov to Interchange"
+    },
+    {
+      "file": "StreetsTransitToInterchange.png",
+      "hashPath": "f/f8",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov to Interchange"
+    }
   ]
 }

@@ -56,5 +56,35 @@
       "level": 3,
       "text": "At the southern end of the highway."
     }
+  ],
+  "images": [
+    {
+      "file": "StreetsTransitToInterchangeMap.png",
+      "hashPath": "9/9e",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov to Interchange"
+    },
+    {
+      "file": "StreetsTransitToInterchange.png",
+      "hashPath": "f/f8",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Streets of Tarkov to Interchange"
+    },
+    {
+      "file": "InterchangeTransitToCustomsMap.jpg",
+      "hashPath": "0/0c",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Interchange to Customs"
+    },
+    {
+      "file": "InterchangeTransitToCustoms.png",
+      "hashPath": "3/33",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Interchange to Customs"
+    }
   ]
 }

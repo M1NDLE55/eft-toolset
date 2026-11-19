@@ -21,6 +21,12 @@ export const appLinks: AppLink[] = [
     description: "Every map with extracts, spawns, bosses and keys. Draw routes and notes and share them with your squad.",
   },
   {
+    text: "Quests",
+    title: "Quest tracker",
+    href: "/quests",
+    description: "Every quest by trader, map and level. Track progress, see what's available now and every item to keep.",
+  },
+  {
     text: "Gun builder",
     title: "Gun builder",
     href: "/gun-builder",

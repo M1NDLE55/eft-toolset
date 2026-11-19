@@ -90,5 +90,112 @@
       "level": 2,
       "text": "The quest dialogue is referencing an incident that happened in 2018 between the content creator Eroktic and Battlestate Games. Eroktic uploaded a YouTube video in which he talked about an alleged user data leak from 1,900,000 game accounts, without providing any actual evidence. In response, Battlestate Games issued 47 DMCA strikes on his YouTube channel to stop the spread of misinformation, which were later removed. Battlestate Games commented on the allegations in a Facebook post."
     }
+  ],
+  "images": [
+    {
+      "file": "SeriousAllegations_map.png",
+      "hashPath": "b/bd",
+      "caption": "House locations marked on map",
+      "section": "Guide",
+      "subsection": "Swamp village houses"
+    },
+    {
+      "file": "SeriousAl_house1.png",
+      "hashPath": "6/65",
+      "caption": "House #1 entrance",
+      "section": "Guide",
+      "subsection": "House #1 - 2 spawns"
+    },
+    {
+      "file": "SA_house1-2.png",
+      "hashPath": "2/28",
+      "caption": "1: Against the wall near the inner door frame 2: Under the broken table",
+      "section": "Guide",
+      "subsection": "House #1 - 2 spawns"
+    },
+    {
+      "file": "SeriousAl_house2.png",
+      "hashPath": "9/91",
+      "caption": "House #2 entrance",
+      "section": "Guide",
+      "subsection": "House #2 - 2 spawns"
+    },
+    {
+      "file": "SA_house2.png",
+      "hashPath": "7/75",
+      "caption": "1: On the left side of the mattress 2: In the bottom compartment of the bookshelf",
+      "section": "Guide",
+      "subsection": "House #2 - 2 spawns"
+    },
+    {
+      "file": "SeriousAl_house3.png",
+      "hashPath": "e/e5",
+      "caption": "House #3 entrance",
+      "section": "Guide",
+      "subsection": "House #3 - 2 spawns"
+    },
+    {
+      "file": "SA_house3.png",
+      "hashPath": "9/90",
+      "caption": "1: In the big pallet stack 2: In the small pallet stack",
+      "section": "Guide",
+      "subsection": "House #3 - 2 spawns"
+    },
+    {
+      "file": "SeriousAl_house4.png",
+      "hashPath": "2/20",
+      "caption": "House #4 entrance",
+      "section": "Guide",
+      "subsection": "House #4 - 1 spawn"
+    },
+    {
+      "file": "SA_house4.png",
+      "hashPath": "2/21",
+      "caption": "In a pallet stack",
+      "section": "Guide",
+      "subsection": "House #4 - 1 spawn"
+    },
+    {
+      "file": "Priest_house.png",
+      "hashPath": "1/1f",
+      "caption": "House #5 entrance",
+      "section": "Guide",
+      "subsection": "House #5 - 2 spawns"
+    },
+    {
+      "file": "SA_house5.png",
+      "hashPath": "7/77",
+      "caption": "1: On the floor to the left of the bookshelf 2: In the bottom compartment of the bookshelf",
+      "section": "Guide",
+      "subsection": "House #5 - 2 spawns"
+    },
+    {
+      "file": "SeriousAl_house6.png",
+      "hashPath": "c/c3",
+      "caption": "House #6 entrance",
+      "section": "Guide",
+      "subsection": "House #6 - 3 spawns"
+    },
+    {
+      "file": "SA_house6.png",
+      "hashPath": "4/44",
+      "caption": "1: In the bottom compartment of the bookshelf 2: On the floor next to the wall pillar 3: Behind a pallet next to the window",
+      "section": "Guide",
+      "subsection": "House #6 - 3 spawns"
+    },
+    {
+      "file": "SA_Rock13_map.png",
+      "hashPath": "0/09",
+      "caption": "Rock location marked on map",
+      "section": "Guide",
+      "subsection": "South-eastern rock"
+    },
+    {
+      "file": "SA_Rock13.png",
+      "hashPath": "d/d2",
+      "caption": "Rock with the hard drive across the road from the blue-fenced construction area",
+      "section": "Guide",
+      "subsection": "South-eastern rock"
+    }
   ]
 }

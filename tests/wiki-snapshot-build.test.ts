@@ -95,6 +95,22 @@ describe("building the snapshot", () => {
     );
   });
 
+  it("keeps a quest's map and location pictures", () => {
+    const { files, manifest, page } = build();
+    expect(page("Chemical - Part 2")).toMatchObject({
+      images: [
+        { file: "Chemical2Map.png", hashPath: "b/b9", caption: "3 story dorms and room 220 marked on map", section: "Guide", subsection: null },
+        { file: "Sliderkey_Location.png", hashPath: "6/65", caption: "The flash drive plugged into the laptop", section: "Guide" },
+        { file: "Sealed_Letter_Location.png", hashPath: "2/25", caption: "The letter tucked between the binders", section: "Guide" },
+      ],
+    });
+    // Only quest pages carry images; credits live in their own file, written by the build script.
+    expect(page("Killa")).not.toHaveProperty("images");
+    expect(page("Customs")).not.toHaveProperty("images");
+    expect([...files.keys()]).not.toContain("image-credits.json");
+    expect(manifest).toMatchObject({ questPagesWithImages: 1, questImages: 3, imageFiles: 3 });
+  });
+
   it("keeps a map's extract rules as table rows, with the fee drawn as an icon", () => {
     const { section } = build();
     expect(section("Customs", "Extractions")).toContain(

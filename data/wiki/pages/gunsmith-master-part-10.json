@@ -53,5 +53,21 @@
       "level": 4,
       "text": "- This build is based on a standard CMMG Mk47 Mutant from Skier LL4. It can only be purchased after completing Night Sweep.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AR-10 Noveske SWS N6 Split handguard | Mechanic | LL4 |\n| Mk47 409mm barrel | Mechanic | LL4 |\n| AR-10 Odin Works ATLAS-7 7.62x51 muzzle brake | Mechanic | LL4 |\n| Tactical Dynamics Skeletonized Foregrip | Skier | LL3 |\n| Glock GTL 21 tactical flashlight with laser | Mechanic | LL1 |\n| Vortex Razor AMG UH-1 holographic sight | SkierRef | LL4LL2 |\n| AR-15 HK E1 buttstock | Peacekeeper | LL3 |\n| AR-15 F1 Firearms Skeletonized Style 2 pistol grip | Skier | LL4 |\n| AK 7.62x39 ProMag AK-A-16 73-round drum magazine | MechanicPeacekeeper | LL2 (Barter)LL4 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "GunsmithPart23insp.png",
+      "hashPath": "4/4a",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithPart23Mods.png",
+      "hashPath": "8/83",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

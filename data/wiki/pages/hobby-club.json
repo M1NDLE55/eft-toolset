@@ -66,5 +66,70 @@
       "level": 4,
       "text": "The four items have to be stashed in a blue locker inside the cabin located on top of the hill southwest of the new gas station."
     }
+  ],
+  "images": [
+    {
+      "file": "Hobby_Club_Reserve_Warehouses_Map.png",
+      "hashPath": "b/b0",
+      "caption": "Building locations marked on map",
+      "section": "Guide",
+      "subsection": "Reserve barrel location"
+    },
+    {
+      "file": "Hobby_Club_Reserve_Barrel_Location_1.png",
+      "hashPath": "3/3e",
+      "caption": "First spawn in building #6: On the table with the lamp and the bench drill",
+      "section": "Guide",
+      "subsection": "Reserve barrel location"
+    },
+    {
+      "file": "Hobby_Club_Reserve_Barrel_Location_2.png",
+      "hashPath": "2/22",
+      "caption": "Second spawn in building #4: In the bench vice on the table with the red helmet",
+      "section": "Guide",
+      "subsection": "Reserve barrel location"
+    },
+    {
+      "file": "Hobby_Club_Reserve_Barrel_Location_3.png",
+      "hashPath": "0/00",
+      "caption": "Third spawn in building #4: On the desk with the bench grinder next to the sink",
+      "section": "Guide",
+      "subsection": "Reserve barrel location"
+    },
+    {
+      "file": "Military_Checkpoint_map.png",
+      "hashPath": "9/9d",
+      "caption": "Tower location marked on map",
+      "section": "Guide",
+      "subsection": "Customs dust cover location"
+    },
+    {
+      "file": "Military_Checkpoint_door.png",
+      "hashPath": "3/37",
+      "caption": "The wanted tower, stairs on the backside",
+      "section": "Guide",
+      "subsection": "Customs dust cover location"
+    },
+    {
+      "file": "Hobby_Club_Customs_Dust_Cover_Location.png",
+      "hashPath": "f/fa",
+      "caption": "Dust cover on the armchair",
+      "section": "Guide",
+      "subsection": "Customs dust cover location"
+    },
+    {
+      "file": "Hobby_Club_Customs_Stashing_Map.png",
+      "hashPath": "2/2e",
+      "caption": "Cabin location marked on map",
+      "section": "Guide",
+      "subsection": "Customs stashing location"
+    },
+    {
+      "file": "Hobby_Club_Customs_Stashing_Location.png",
+      "hashPath": "c/cd",
+      "caption": "The wanted cabin",
+      "section": "Guide",
+      "subsection": "Customs stashing location"
+    }
   ]
 }

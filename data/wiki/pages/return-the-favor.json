@@ -46,5 +46,63 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| TerraGroup \"Blue Folders\" materials | 2 | Required | N/A | Stashed item |\nIn this quest you first have to kill 15 PMCs on Woods. Afterwards you have to hide 2 TerraGroup \"Blue Folders\" materials in the \"USEC camp\" which is located in the northwest. The west and north-west approaches to the camp are covered with landmines. One has to be stashed on the passenger side of a black SUV in the south of the camp, and the second one has to be stashed at the wooden crates next to the satellite antenna in the north of the camp.\n\nMined areas to avoid"
     }
+  ],
+  "images": [
+    {
+      "file": "ReturnTheFavorMap.png",
+      "hashPath": "4/44",
+      "caption": "Stashing locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "RTTBlackSVU.png",
+      "hashPath": "9/9a",
+      "caption": "The black SUV",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "RTTBlackSVU2.png",
+      "hashPath": "7/7c",
+      "caption": "SUV stashing spot on the passenger side",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "RTTCrates.png",
+      "hashPath": "1/1a",
+      "caption": "Wooden crates next to the satellite antenna stashing spot",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Woods_USEC_camp_northwest_approach_mines.png",
+      "hashPath": "a/ae",
+      "caption": "North-west approach view that leads to the mined forested area",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Woods_USEC_camp_northwest_approach_mines2.png",
+      "hashPath": "1/15",
+      "caption": "View on the mined forested area from the camp, recognized by tree stumps, corpses and craters",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Woods_USEC_camp_west_approach_mines2.png",
+      "hashPath": "e/e1",
+      "caption": "West rocks approach view with detonated mine spots",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Woods_USEC_camp_west_approach_mines.png",
+      "hashPath": "e/ea",
+      "caption": "West ramp approach view with detonated mine spots",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

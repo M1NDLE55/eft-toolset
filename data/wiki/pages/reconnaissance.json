@@ -40,5 +40,42 @@
       "level": 2,
       "text": "In this quest you have to find one the three office buildings on Lighthouse and get on its roofs. The office buildings are located at the water treatment plant area in the north. The roofs can be accessed via outside stairs. You need to get close to the outside ladders of one of the building while being on their roofs to get quest progress."
     }
+  ],
+  "images": [
+    {
+      "file": "StairsMap.png",
+      "hashPath": "8/80",
+      "caption": "Buildings and stairs marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Stairs1.png",
+      "hashPath": "4/4f",
+      "caption": "Office building #1 stairs",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Stairs2.png",
+      "hashPath": "a/a7",
+      "caption": "Office building #2 stairs",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Stairs3.png",
+      "hashPath": "a/a0",
+      "caption": "Office building #3 stairs",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "OutsideLadder.png",
+      "hashPath": "0/0c",
+      "caption": "Appearance of a ladder",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

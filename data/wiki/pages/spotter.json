@@ -56,5 +56,154 @@
       "level": 4,
       "text": "The sniping location at Primorsky is located at the bed in the bedroom of Primorsky 48 apartment no. 10 on the fourth floor of the Primorsky 48 apartment building. It can only be accessed via the skybridge which connects it with the Primorsky 46 staircase. A Primorsky 46-48 skybridge key is required to enter it via the skybridge from the adjoining Primorsky 46 staircase. The apartment 10 entrance door can be breached from the inside to leave."
     }
+  ],
+  "images": [
+    {
+      "file": "Apartment8KitchenMap.png",
+      "hashPath": "5/5a",
+      "caption": "Apartment 8 location marked on map",
+      "section": "Guide",
+      "subsection": "Concordia sniping location"
+    },
+    {
+      "file": "ConcordiaBuilding.png",
+      "hashPath": "b/b9",
+      "caption": "The Concordia building",
+      "section": "Guide",
+      "subsection": "Concordia sniping location"
+    },
+    {
+      "file": "SpotterApartment8Outside.png",
+      "hashPath": "4/4c",
+      "caption": "Way to apartment 8 from outside via house no. 1 staircase",
+      "section": "Guide",
+      "subsection": "Concordia sniping location"
+    },
+    {
+      "file": "HouseNr1Staircase.png",
+      "hashPath": "2/2b",
+      "caption": "Staircase to apartment 8",
+      "section": "Guide",
+      "subsection": "Concordia sniping location"
+    },
+    {
+      "file": "HouseNr1Hallway.png",
+      "hashPath": "9/9d",
+      "caption": "Hallway to apartment 8",
+      "section": "Guide",
+      "subsection": "Concordia sniping location"
+    },
+    {
+      "file": "Apartment8Door.png",
+      "hashPath": "5/59",
+      "caption": "Door to apartment 8",
+      "section": "Guide",
+      "subsection": "Concordia sniping location"
+    },
+    {
+      "file": "ConcordiaSnipingSpot.png",
+      "hashPath": "1/15",
+      "caption": "Red table in the kitchen",
+      "section": "Guide",
+      "subsection": "Concordia sniping location"
+    },
+    {
+      "file": "SpotterTable.png",
+      "hashPath": "a/a2",
+      "caption": "The table",
+      "section": "Guide",
+      "subsection": "Concordia sniping location"
+    },
+    {
+      "file": "Apartment10Map.png",
+      "hashPath": "d/d3",
+      "caption": "Apartment 10 marked on map",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    },
+    {
+      "file": "Apartment10Outside.png",
+      "hashPath": "a/af",
+      "caption": "Apartment 10 from outside",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    },
+    {
+      "file": "UnderpassKeyMap.png",
+      "hashPath": "e/e9",
+      "caption": "Skybridge marked on map",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    },
+    {
+      "file": "UnderpassKeyUnderpass.png",
+      "hashPath": "7/7d",
+      "caption": "The skybridge from the ground",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    },
+    {
+      "file": "UnderpassKeyWay1.png",
+      "hashPath": "1/1b",
+      "caption": "Way to the Primorsky 46 staircase 1",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    },
+    {
+      "file": "UnderpassKeyWay2.png",
+      "hashPath": "2/2b",
+      "caption": "Way to the Primorsky 46 staircase 2",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    },
+    {
+      "file": "UnderpassKeyWay3.png",
+      "hashPath": "3/36",
+      "caption": "Way to the Primorsky 46 staircase 3",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    },
+    {
+      "file": "UnderpassKeyWay4.png",
+      "hashPath": "d/d3",
+      "caption": "Primorsky 46 staircase",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    },
+    {
+      "file": "UnderpassKeyStairsDoor.png",
+      "hashPath": "3/35",
+      "caption": "Door to the skybridge on the top floor",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    },
+    {
+      "file": "UnderpassKeyUnderpassLockedDoor.png",
+      "hashPath": "5/53",
+      "caption": "The skybridge with the unlockable door",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    },
+    {
+      "file": "UnderpassKeyDoor.png",
+      "hashPath": "9/91",
+      "caption": "Door to the Primorsky 48 apartment 10",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    },
+    {
+      "file": "Apt10Bedroom.png",
+      "hashPath": "a/a6",
+      "caption": "Way to the bedroom",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    },
+    {
+      "file": "SpotterPrimorsky.png",
+      "hashPath": "b/b4",
+      "caption": "The bed",
+      "section": "Guide",
+      "subsection": "Primorsky sniping location"
+    }
   ]
 }

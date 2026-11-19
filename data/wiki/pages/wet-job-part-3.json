@@ -43,5 +43,21 @@
       "level": 2,
       "text": "In this quest you have to find Artyom's car on Shoreline. The car is yellow and located on the main road along the shore. It can be found next to a yellow bus and a police car."
     }
+  ],
+  "images": [
+    {
+      "file": "Wet_job_part_3.png",
+      "hashPath": "d/d7",
+      "caption": "Car location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WetJobPart3QuestLocation.png",
+      "hashPath": "2/25",
+      "caption": "The wanted car",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

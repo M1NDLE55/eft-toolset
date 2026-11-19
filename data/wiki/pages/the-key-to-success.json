@@ -42,5 +42,49 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Clothes design handbook - Part 1 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Clothes design handbook - Part 2 | 1 | Handover item | Yes |\n\nThe first book is located in a store called \"МУЗЕЙ ИСТОРИИ\" (\"Museum of History\") on the second floor of the shopping mall on Interchange. It can be found in a pile of books on the floor.\n\nThe second book is located in a book store on the first floor of the shopping mall on Interchange. It can be found on the middle shelf, in the lowest row that contains books."
     }
+  ],
+  "images": [
+    {
+      "file": "The_key_to_success_Marked.png",
+      "hashPath": "b/b7",
+      "caption": "Store location marked on second floor map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_key_to_success_Book1Store.png",
+      "hashPath": "3/3b",
+      "caption": "The store that contains the first book, arrow marks the pile of books",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_key_to_success_Book2.png",
+      "hashPath": "9/90",
+      "caption": "First book location",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_key_to_success_Marked2.png",
+      "hashPath": "a/a5",
+      "caption": "Store location marked on first floor map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_key_to_success_Book2Store.png",
+      "hashPath": "6/62",
+      "caption": "The store that contains the second book, arrow marks the middle shelf",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_key_to_success_Book1.png",
+      "hashPath": "4/4f",
+      "caption": "Second book location",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

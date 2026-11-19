@@ -64,5 +64,140 @@
       "level": 4,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "Halloween_Blind_the_Enemy_Woods_Map.png",
+      "hashPath": "c/c5",
+      "caption": "Camera locations marked on map",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Woods_Camera_1.png",
+      "hashPath": "4/49",
+      "caption": "On top of the crane on the south side",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Woods_Camera_2.png",
+      "hashPath": "f/fb",
+      "caption": "On top of a HESCO block at the north entrance",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Customs_Map.png",
+      "hashPath": "b/b2",
+      "caption": "Camera locations marked on map",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Customs_Camera_1.png",
+      "hashPath": "a/a1",
+      "caption": "On the corner on the roof of the two-story dorms, northwest",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Customs_Camera_2.png",
+      "hashPath": "1/1d",
+      "caption": "At the window of room 214 of the three-story dorms",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Customs_Camera_3.png",
+      "hashPath": "4/49",
+      "caption": "At the window of room 216 of the three-story dorms",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Lighthouse_Map.png",
+      "hashPath": "e/ef",
+      "caption": "Camera locations marked on map",
+      "section": "Guide",
+      "subsection": "Lighthouse"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Lighthouse_Camera_1.png",
+      "hashPath": "5/55",
+      "caption": "On the roof of WTP building #2 at the northeast corner",
+      "section": "Guide",
+      "subsection": "Lighthouse"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Lighthouse_Camera_2.png",
+      "hashPath": "a/a4",
+      "caption": "Inside WTP building #2 on top of a beam north of the building",
+      "section": "Guide",
+      "subsection": "Lighthouse"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Lighthouse_Camera_3.png",
+      "hashPath": "4/41",
+      "caption": "On the roof of WTP building #2 at the southwest corner",
+      "section": "Guide",
+      "subsection": "Lighthouse"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Reserve_Map.png",
+      "hashPath": "1/17",
+      "caption": "Camera locations marked on map",
+      "section": "Guide",
+      "subsection": "Reserve"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Reserve_Camera_1.png",
+      "hashPath": "8/84",
+      "caption": "On the roof of the white rook building, northwest",
+      "section": "Guide",
+      "subsection": "Reserve"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Reserve_Camera_2.png",
+      "hashPath": "e/e0",
+      "caption": "On the roof of the white rook building, northeast",
+      "section": "Guide",
+      "subsection": "Reserve"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Reserve_Camera_3.png",
+      "hashPath": "e/e2",
+      "caption": "Inside the white rook building on top of a beam",
+      "section": "Guide",
+      "subsection": "Reserve"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Shoreline_Map.png",
+      "hashPath": "3/3d",
+      "caption": "Camera locations marked on map",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Shoreline_Camera_1.png",
+      "hashPath": "3/36",
+      "caption": "On the edge of the west wing room 303 balcony",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Shoreline_Camera_2.png",
+      "hashPath": "8/85",
+      "caption": "On the edge of the bridge between west wing and east wing",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Halloween_Blind_the_Enemy_Shoreline_Camera_3.png",
+      "hashPath": "f/fa",
+      "caption": "On the roof of the storage building behind the east wing",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    }
   ]
 }

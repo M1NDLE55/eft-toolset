@@ -40,5 +40,42 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Machinery key | 1 | Required | N/A | Unlocks the driver side door of the fuel truck cabin at Customs where the Bronze pocket watch is located. |\n| Bronze pocket watch on a chain | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nHead into the map Customs. The Machinery key is required to access the bronze pocket watch. So if you do not have one, head to room 205 located on the second floor of the three-story dorms building in the south.\n\nTo enter the room you'll need to jump on top of debris blocking the hallway and crouch to get inside the doorway of the room. The Machinery key can be found within the blue jackets beside the wardrobe.\n\nAfter obtaining the key, head north to the fuel tanker truck that is located at the construction site. The driver side door of the cabin can be unlocked with the Machinery key.\n\nInside, the Bronze pocket watch can be found laying on the floor in front of the seat. Be careful of the sniper Scav overlooking the truck from the roof of the nearby boiler building.\n\nAfter picking up the pocket watch, it will be placed in your quest items inventory. You must successfully extract with the pocket watch to hand it in. If you die before extraction, you will have to retrieve it again. Hand the pocket watch over to Prapor to complete the quest."
     }
+  ],
+  "images": [
+    {
+      "file": "Checking_Map.png",
+      "hashPath": "f/f2",
+      "caption": "Dorms location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "DormRoom205Entrance.png",
+      "hashPath": "4/47",
+      "caption": "Room 205",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Dorms.png",
+      "hashPath": "e/e4",
+      "caption": "The jackets with the key",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Machinery_Key_Door.png",
+      "hashPath": "a/a2",
+      "caption": "The tanker truck",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Machinery_key_inside.png",
+      "hashPath": "8/82",
+      "caption": "The pocket watch",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

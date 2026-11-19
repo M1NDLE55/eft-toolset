@@ -39,5 +39,21 @@
       "level": 2,
       "text": "In this quest you have to find the Emercom station on Ground Zero, and hand over any 3 found in raid meds or medical supplies to Therapist. Stimulants aren't accepted.\n\nThe Emercom station can be found in front of the \"Unity Credit\" bank."
     }
+  ],
+  "images": [
+    {
+      "file": "First_in_Line_Map.png",
+      "hashPath": "c/c5",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ground_Zero_Emercom_Station.png",
+      "hashPath": "a/a9",
+      "caption": "The Emercom station",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

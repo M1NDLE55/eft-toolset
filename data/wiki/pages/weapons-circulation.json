@@ -55,5 +55,63 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "WoodsRitualSpotMapMarked.png",
+      "hashPath": "5/53",
+      "caption": "Location marked on map (bottom)",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "CheckPointViewToMarkedCircle.png",
+      "hashPath": "e/e6",
+      "caption": "View from the checkpoint towards the ritual spot",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "MarkedCircleViewToCheckpoint.png",
+      "hashPath": "0/0e",
+      "caption": "View from the ritual spot towards the checkpoint",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "Cultists_ritual_place.png",
+      "hashPath": "8/82",
+      "caption": "The marked circle",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "The_second_ritual_spot_in_the_Woods.png",
+      "hashPath": "f/f8",
+      "caption": "The second ritual spot in the dilapidated village",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "HealthResortEastWing.jpg",
+      "hashPath": "d/d9",
+      "caption": "Health resort east wing location marked on map",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "HealthResortEastWingMarkedRoom.png",
+      "hashPath": "d/d9",
+      "caption": "Room location marked on east wing map",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Shorelineritualsite.png",
+      "hashPath": "9/9e",
+      "caption": "The ritual spot where the marker needs to be placed",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    }
   ]
 }

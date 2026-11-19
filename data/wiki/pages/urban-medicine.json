@@ -75,5 +75,154 @@
       "level": 4,
       "text": "In the back right corner behind the boxes."
     }
+  ],
+  "images": [
+    {
+      "file": "UrbanMedicineMap.png",
+      "hashPath": "7/7b",
+      "caption": "Garage marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "LexOsClaymoreOverview.png",
+      "hashPath": "d/df",
+      "caption": "LexOs complex overview",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "UrbanMedicineGarage.png",
+      "hashPath": "8/8a",
+      "caption": "The garage",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "UrbanMedicineThirdBedSpawn.png",
+      "hashPath": "0/01",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "Urban_Medicine_5.png",
+      "hashPath": "8/8c",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "UrbanMedicineFifthSixthShelfSpawn.png",
+      "hashPath": "5/54",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second/Third/Fourth spawn"
+    },
+    {
+      "file": "Urban.png",
+      "hashPath": "8/80",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second/Third/Fourth spawn"
+    },
+    {
+      "file": "UrbanMedicine_Spawn06.png",
+      "hashPath": "3/3e",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second/Third/Fourth spawn"
+    },
+    {
+      "file": "Urban_Medicine_Spawn_2.png",
+      "hashPath": "2/24",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second/Third/Fourth spawn"
+    },
+    {
+      "file": "UrbanMedicineFourthShelfSpawn.png",
+      "hashPath": "d/d2",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fifth spawn"
+    },
+    {
+      "file": "UrbanMedicineSpawn05_02.png",
+      "hashPath": "5/51",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fifth spawn"
+    },
+    {
+      "file": "UrbanMedicineTrolleySpawn1.png",
+      "hashPath": "0/02",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Sixth spawn"
+    },
+    {
+      "file": "UrbanMedicineTrolleySpawn2.png",
+      "hashPath": "9/96",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Sixth spawn"
+    },
+    {
+      "file": "UrbanMedicineFirstBedSpawn.png",
+      "hashPath": "c/cd",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Seventh/Eighth spawn"
+    },
+    {
+      "file": "Urban_Medicine_3.png",
+      "hashPath": "2/28",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Seventh/Eighth spawn"
+    },
+    {
+      "file": "UrbanMedicineSeventhBedSpawn.png",
+      "hashPath": "d/d0",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Seventh/Eighth spawn"
+    },
+    {
+      "file": "UrbanMedicine4thspawn2.png",
+      "hashPath": "f/f2",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Seventh/Eighth spawn"
+    },
+    {
+      "file": "UrbanMedicine10.png",
+      "hashPath": "2/2e",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Ninth spawn"
+    },
+    {
+      "file": "UrbanMedicine10_2.png",
+      "hashPath": "1/17",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Ninth spawn"
+    },
+    {
+      "file": "UrbanMedicineSecondBoxSpawn.png",
+      "hashPath": "0/03",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Tenth spawn"
+    },
+    {
+      "file": "Urban_Medicine_4.png",
+      "hashPath": "c/cd",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Tenth spawn"
+    }
   ]
 }

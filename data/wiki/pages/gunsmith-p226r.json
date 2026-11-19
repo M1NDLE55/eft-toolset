@@ -56,5 +56,21 @@
       "level": 4,
       "text": "- This build is based on a standard P226R from Peacekeeper LL1.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| P226 Stainless Elite pistol slide | Mechanic | LL1 (Barter); LL2 |\n| P226 Stainless Elite Wooden pistol grip | Mechanic | LL1 (Barter); LL2 |\n| P226 9x19 20-round extended magazine | Peacekeeper | LL1 |\n| NcSTAR Tactical Blue Laser | Skier | LL1 |\n| P226 9x19 112mm threaded barrel | Peacekeeper | LL1 |\n| P226 TJ's Custom 9x19 compensator | Mechanic | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "Gunsmith9P226RIns.png",
+      "hashPath": "d/df",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "Gunsmith9P226RMod.png",
+      "hashPath": "f/f7",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

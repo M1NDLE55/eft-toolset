@@ -42,5 +42,49 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| RB-ST key | 1 | Required | N/A | Unlocks room RB-ST where the MBT Integrated Navigation System is located. |\n| MBT Integrated Navigation System | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you need to pick up and extract with an MBT Integrated Navigation System. It can be found inside a locked room in the bigger of the two garage buildings at the repair center (white knight) on Reserve. A RB-ST key is required to open the door.\n\nThe item can be found inside a wooden crate in the back left of the room."
     }
+  ],
+  "images": [
+    {
+      "file": "SurplusGoodsGarageMap.jpg",
+      "hashPath": "e/e8",
+      "caption": "Garage marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "SurplusGoodsGarage.png",
+      "hashPath": "6/60",
+      "caption": "The wanted garage",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "RB-ST_door_inside.png",
+      "hashPath": "6/67",
+      "caption": "The locked door",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Surplus_goods_1.png",
+      "hashPath": "e/e2",
+      "caption": "Pile of crates",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Surplus_goods_2.png",
+      "hashPath": "0/07",
+      "caption": "The wanted crate",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Surplusitem.png",
+      "hashPath": "9/9d",
+      "caption": "Close up of the item inside the crate",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

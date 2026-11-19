@@ -45,5 +45,31 @@
       "level": 2,
       "text": "In this quest you have to stash a Virtex programmable processor and a Military COFDM Wireless Signal Transmitter in the hidden drug lab on Lighthouse. It is located inside a group of stacked shipping containers in the container area of the train yard in the north."
     }
+  ],
+  "images": [
+    {
+      "file": "DrugLabMap.png",
+      "hashPath": "8/8a",
+      "caption": "Drug lab location marked on map",
+      "section": "Guide",
+      "subsection": null,
+      "sectionOccurrence": 1
+    },
+    {
+      "file": "ContainerGroup.png",
+      "hashPath": "7/74",
+      "caption": "The group of containers with entrance marked",
+      "section": "Guide",
+      "subsection": null,
+      "sectionOccurrence": 1
+    },
+    {
+      "file": "InsideLab.png",
+      "hashPath": "a/a0",
+      "caption": "Inside the lab, entrance on the left",
+      "section": "Guide",
+      "subsection": null,
+      "sectionOccurrence": 1
+    }
   ]
 }

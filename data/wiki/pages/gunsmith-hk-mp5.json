@@ -52,5 +52,21 @@
       "level": 4,
       "text": "- This build is based on a standard MP5 from Peacekeeper LL1.\n- Don't forget to transfer the rear sight from the old receiver.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| HK MP5SD 9x19 upper receiver | Peacekeeper | LL2 |\n| HK MP5SD polymer handguard | Peacekeeper | LL2 |\n| HK MP5SD 9x19 sound suppressor | Peacekeeper | LL2 |\n| HK MP5 9x19 X Products X-5 50-round drum magazine | MechanicPeacekeeperRef | LL2 (Barter)LL2 (Barter)LL2 |\n| HK MP5SD B&T tri-rail ring mount | PeacekeeperMechanic | LL2LL2 (Barter) |\n| NcSTAR Tactical Blue Laser | Skier | LL1 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "Gunsmithpart3Modding2.png",
+      "hashPath": "0/0b",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "Gunsmithpart3Modding.png",
+      "hashPath": "2/25",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

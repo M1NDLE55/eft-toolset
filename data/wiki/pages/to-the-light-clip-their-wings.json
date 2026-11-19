@@ -61,5 +61,84 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "TTLClipTheirWingsWoodsMap.png",
+      "hashPath": "f/f3",
+      "caption": "Stashing locations marked on map",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "Steady_Signal_2.png",
+      "hashPath": "4/48",
+      "caption": "The weather station on the mountain",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "WoodsBrickhouse.png",
+      "hashPath": "d/d9",
+      "caption": "The sawmill guardhouse",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "WoodsTransitToCustoms.png",
+      "hashPath": "8/8a",
+      "caption": "The transit to Customs",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "TTLClipTheirWingsCustomsMap.png",
+      "hashPath": "8/80",
+      "caption": "Stashing location marked on map",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "TTLClipTheirWingsCustomsConstructionSite.png",
+      "hashPath": "1/10",
+      "caption": "Staircase leading up to the stashing location",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "TTLClipTheirWingsCustomsConsutructionSitePlant.png",
+      "hashPath": "1/1c",
+      "caption": "The Stashing location",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "CustomsTransitToShoreline.png",
+      "hashPath": "9/91",
+      "caption": "Transit to Shoreline",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "TTLClipTheirWingsShorelineMap.png",
+      "hashPath": "c/c3",
+      "caption": "Stashing location marked on map",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "TTLClipTheirWingsHealthResortAdmin.png",
+      "hashPath": "6/6f",
+      "caption": "The admin building at the health resort",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "TTLClipTheirWingsHealthResortAdminPlant.png",
+      "hashPath": "d/db",
+      "caption": "Stashing location on the west side of the second floor",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    }
   ]
 }

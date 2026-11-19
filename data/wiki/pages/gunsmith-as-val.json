@@ -61,5 +61,21 @@
       "level": 2,
       "text": "- Gunsmith - MPX - The USEC counterpart quest"
     }
+  ],
+  "images": [
+    {
+      "file": "Gunsmith-Pt_11_Inspect_View.png",
+      "hashPath": "e/ee",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "Gunsmith11ASVAL.png",
+      "hashPath": "2/2d",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

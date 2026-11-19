@@ -55,5 +55,56 @@
       "level": 2,
       "text": "- You can buy additional MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "Streets_of_Tarkov_BTR_stops_map.png",
+      "hashPath": "e/e6",
+      "caption": "Stops marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Route_Deviation_Collapsed_Crane.png",
+      "hashPath": "5/55",
+      "caption": "Collapsed Crane: At the cabin next to the concrete mixer",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Route_Deviation_Old_Scav_Checkpoint.png",
+      "hashPath": "5/56",
+      "caption": "Old Scav Checkpoint: At the corner in front of the \"Golden World\" store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Route_Deviation_Pinewood_Hotel.png",
+      "hashPath": "c/c1",
+      "caption": "Pinewood Hotel: At the trash bags next to one of the pillars",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Route_Deviation_City_Center.png",
+      "hashPath": "d/d4",
+      "caption": "City Center: At the traffic light on the corner of the Primorsky 49 building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Route_Deviation_Tram.png",
+      "hashPath": "a/a3",
+      "caption": "Tram: At the barrier in front of the restaurant",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Route_Deviation_Rodina_Cinema.png",
+      "hashPath": "4/47",
+      "caption": "Rodina Cinema: At the container under the stairs",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

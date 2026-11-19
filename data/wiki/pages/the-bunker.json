@@ -39,5 +39,28 @@
       "level": 2,
       "text": "The underground bunker on Reserve can be reached by using any staircase. The hermetic doors are the entry doors to the bunker. The control room is located in the center of the bunker. All objectives have to be completed in the same raid."
     }
+  ],
+  "images": [
+    {
+      "file": "The_Bunker_Map.png",
+      "hashPath": "4/49",
+      "caption": "Locations marked on underground map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "HermeticDoorExample.png",
+      "hashPath": "8/8d",
+      "caption": "Appearance of a hermetic door",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Bunker_Part_1_Guide_1.png",
+      "hashPath": "b/b5",
+      "caption": "The control room",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -60,5 +60,77 @@
       "level": 4,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "TheCultPart2DormsMap.png",
+      "hashPath": "5/5f",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Customs marked room"
+    },
+    {
+      "file": "Marked_Room_Door.png",
+      "hashPath": "8/84",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "Customs marked room"
+    },
+    {
+      "file": "Marked_Room_Room.png",
+      "hashPath": "e/e3",
+      "caption": "The marked room",
+      "section": "Guide",
+      "subsection": "Customs marked room"
+    },
+    {
+      "file": "EFT_TAAH_Woods_House_Map.png",
+      "hashPath": "1/15",
+      "caption": "House with the circle location marked on map",
+      "section": "Guide",
+      "subsection": "Woods marked circle at the abandoned village"
+    },
+    {
+      "file": "EFT_TAAH_Woods_House.png",
+      "hashPath": "5/52",
+      "caption": "The wanted house",
+      "section": "Guide",
+      "subsection": "Woods marked circle at the abandoned village"
+    },
+    {
+      "file": "Historical_Prospects_Woods_Circle.png",
+      "hashPath": "e/ef",
+      "caption": "The marked circle",
+      "section": "Guide",
+      "subsection": "Woods marked circle at the abandoned village"
+    },
+    {
+      "file": "Nikitskaya_Street_8_Map.png",
+      "hashPath": "b/be",
+      "caption": "Nikitskaya St. 8 location marked on map",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov marked circle in Nikitskaya St. 8 second floor apartment"
+    },
+    {
+      "file": "Nikitskaya_Street_Second_Floor_Cultist_Apartment_Entrance.png",
+      "hashPath": "4/4c",
+      "caption": "Entrance to the building",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov marked circle in Nikitskaya St. 8 second floor apartment"
+    },
+    {
+      "file": "Nikitskaya_Street_Second_Floor_Cultist_Apartment_Door.png",
+      "hashPath": "b/bb",
+      "caption": "Door to the apartment",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov marked circle in Nikitskaya St. 8 second floor apartment"
+    },
+    {
+      "file": "Nikitskaya_Street_Second_Floor_Cultist_Apartment.png",
+      "hashPath": "c/c6",
+      "caption": "The marked circle",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov marked circle in Nikitskaya St. 8 second floor apartment"
+    }
   ]
 }

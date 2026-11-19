@@ -55,5 +55,42 @@
       "level": 2,
       "text": "- You can buy additional MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "BP_Depot_Marked_Map.png",
+      "hashPath": "3/39",
+      "caption": "Fuel tanker truck locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "BPTanker.png",
+      "hashPath": "5/51",
+      "caption": "Tanker truck #1 behind the new gas station",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "BPTanker2.png",
+      "hashPath": "2/27",
+      "caption": "Tanker truck #2 at the construction site with the fuel tanks",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "BPTanker3.png",
+      "hashPath": "b/b1",
+      "caption": "Tanker truck #3 next to the \"Old Gas Station\" extraction",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "BPTanker4.png",
+      "hashPath": "6/67",
+      "caption": "Tanker truck #4 behind the garages near the \"Trailer Park\" extraction",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

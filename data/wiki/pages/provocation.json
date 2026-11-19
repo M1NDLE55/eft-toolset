@@ -61,5 +61,70 @@
       "level": 4,
       "text": "The Toilet paper has to be placed on wooden crates inside a red container at the container lot in the southwest of the mall. Activated power station power and Object #21WS keycard required."
     }
+  ],
+  "images": [
+    {
+      "file": "ProvocationKibaMap.png",
+      "hashPath": "0/0e",
+      "caption": "Store marked on map",
+      "section": "Guide",
+      "subsection": "Sausage placement location"
+    },
+    {
+      "file": "KibaFencedCrate.png",
+      "hashPath": "d/d5",
+      "caption": "Wooden crate location",
+      "section": "Guide",
+      "subsection": "Sausage placement location"
+    },
+    {
+      "file": "ProvocationKibaPlacement.png",
+      "hashPath": "8/85",
+      "caption": "The wooden crate",
+      "section": "Guide",
+      "subsection": "Sausage placement location"
+    },
+    {
+      "file": "SafeRoomMap.png",
+      "hashPath": "2/24",
+      "caption": "Saferoom Exfil extraction marked on map",
+      "section": "Guide",
+      "subsection": "Moonshine placement location"
+    },
+    {
+      "file": "IC-Saferoom_EXFIL.png",
+      "hashPath": "5/58",
+      "caption": "Door to the Saferoom Exfil extraction",
+      "section": "Guide",
+      "subsection": "Moonshine placement location"
+    },
+    {
+      "file": "ProvocationCouch.png",
+      "hashPath": "b/bc",
+      "caption": "The couch",
+      "section": "Guide",
+      "subsection": "Moonshine placement location"
+    },
+    {
+      "file": "21WSMap.png",
+      "hashPath": "5/5c",
+      "caption": "Container location marked on map",
+      "section": "Guide",
+      "subsection": "Toilet paper placement location"
+    },
+    {
+      "file": "21ws_outside.jpg",
+      "hashPath": "a/a6",
+      "caption": "The red container",
+      "section": "Guide",
+      "subsection": "Toilet paper placement location"
+    },
+    {
+      "file": "ToiletPaperPlacement.png",
+      "hashPath": "d/d9",
+      "caption": "Placement location",
+      "section": "Guide",
+      "subsection": "Toilet paper placement location"
+    }
   ]
 }

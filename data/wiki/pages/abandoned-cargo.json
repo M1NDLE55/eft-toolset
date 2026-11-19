@@ -66,5 +66,91 @@
       "level": 2,
       "text": "- You can buy additional MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "Abandoned_Cargo_Map.png",
+      "hashPath": "1/11",
+      "caption": "Cargo location marked on map",
+      "section": "Guide",
+      "subsection": "Red customs control warehouse - 1 Cargo"
+    },
+    {
+      "file": "Abandoned_Cargo_1.png",
+      "hashPath": "9/9f",
+      "caption": "Cargo on the west side of the warehouse",
+      "section": "Guide",
+      "subsection": "Red customs control warehouse - 1 Cargo"
+    },
+    {
+      "file": "Warehouse17Map.png",
+      "hashPath": "d/d5",
+      "caption": "Warehouse 17 location marked on map",
+      "section": "Guide",
+      "subsection": "Warehouse 17 - 3 Cargos"
+    },
+    {
+      "file": "Warehouse17.png",
+      "hashPath": "6/6d",
+      "caption": "Warehouse 17 southern entrance",
+      "section": "Guide",
+      "subsection": "Warehouse 17 - 3 Cargos"
+    },
+    {
+      "file": "Abandoned_Cargo_7.png",
+      "hashPath": "e/ef",
+      "caption": "Cargo on the first floor",
+      "section": "Guide",
+      "subsection": "Warehouse 17 - 3 Cargos"
+    },
+    {
+      "file": "Abandoned_Cargo_3.png",
+      "hashPath": "f/f7",
+      "caption": "Cargo on the second floor in the staircase behind the wall paintings",
+      "section": "Guide",
+      "subsection": "Warehouse 17 - 3 Cargos"
+    },
+    {
+      "file": "Abandoned_Cargo_6.png",
+      "hashPath": "6/60",
+      "caption": "Cargo on the third floor/crane",
+      "section": "Guide",
+      "subsection": "Warehouse 17 - 3 Cargos"
+    },
+    {
+      "file": "BoilerBuildingMap.png",
+      "hashPath": "9/9a",
+      "caption": "Boiler building location marked on map",
+      "section": "Guide",
+      "subsection": "Boiler building - 3 Cargos"
+    },
+    {
+      "file": "BoilerBuilding.png",
+      "hashPath": "d/df",
+      "caption": "The boiler building",
+      "section": "Guide",
+      "subsection": "Boiler building - 3 Cargos"
+    },
+    {
+      "file": "Abandoned_Cargo_5.png",
+      "hashPath": "1/1a",
+      "caption": "Cargo outside on the north side of the building",
+      "section": "Guide",
+      "subsection": "Boiler building - 3 Cargos"
+    },
+    {
+      "file": "Abandoned_Cargo_2.png",
+      "hashPath": "9/90",
+      "caption": "Cargo next to the showers",
+      "section": "Guide",
+      "subsection": "Boiler building - 3 Cargos"
+    },
+    {
+      "file": "Abandoned_Cargo_4.png",
+      "hashPath": "5/5c",
+      "caption": "Cargo (barrels) next to the chimneys",
+      "section": "Guide",
+      "subsection": "Boiler building - 3 Cargos"
+    }
   ]
 }

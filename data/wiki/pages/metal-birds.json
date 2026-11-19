@@ -40,5 +40,42 @@
       "level": 2,
       "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Motor Controller 1 | Motor Controller #1 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Single-axis Fiber Optic Gyroscope 1 | Single-axis Fiber Optic Gyroscope #1 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nIn this quest you have to pick up a motor controller and a single-axis fiber optic gyroscope on Woods.\n\nThe motor controller can be found on the center console of a black SUV at the USEC checkpoint west of the sawmill.\n\nThe single-axis fiber optic gyroscope can be found in an open weapon box located in the back of a blue pickup at the sawmill."
     }
+  ],
+  "images": [
+    {
+      "file": "Woods_Land_Lease.png",
+      "hashPath": "b/b4",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "LandLease_MotorCont1.png",
+      "hashPath": "d/d3",
+      "caption": "The wanted SUV",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Controller-Woods.png",
+      "hashPath": "0/0d",
+      "caption": "The controller on the console",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Lend_Lease_Woods_Gyroscope_pickup.png",
+      "hashPath": "6/67",
+      "caption": "The wanted pickup",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "LandLease_Gyroscope.png",
+      "hashPath": "3/3a",
+      "caption": "The gyroscope in the box",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

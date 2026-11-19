@@ -40,5 +40,56 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| MS2000 Marker | 3 | Required | N/A | This item is placed at the stashes. When placed, the item is removed from the players' inventory. |\nIn this quest you have to mark Rogue stashes with MS2000 Markers on Lighthouse. For the first objective there are 3, and for the second objective there are 2 possible locations."
     }
+  ],
+  "images": [
+    {
+      "file": "Ease_the_Move_Map.png",
+      "hashPath": "1/1f",
+      "caption": "Stash locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ease_the_Move_Village_Location_1.1.png",
+      "hashPath": "8/81",
+      "caption": "First objective stash 1 (1.1)",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ease_the_Move_Village_Location_1.2.png",
+      "hashPath": "a/a5",
+      "caption": "First objective stash 2 (1.2)",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ease_the_Move_Village_Location_1.3.png",
+      "hashPath": "6/68",
+      "caption": "First objective stash 3 (1.3)",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ease_the_Move_Village_Location_2.1.png",
+      "hashPath": "c/c7",
+      "caption": "Second objective stash 1 (2.1)",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ease_the_Move_Village_Location_2.2.png",
+      "hashPath": "6/65",
+      "caption": "Second objective stash 2 (2.2)",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ease_the_Move_Grotto_Location.png",
+      "hashPath": "8/85",
+      "caption": "Third objective stash (Grotto)",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

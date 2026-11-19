@@ -80,5 +80,63 @@
       "level": 4,
       "text": "Inside the left side locked office, on the shelf in the back right corner."
     }
+  ],
+  "images": [
+    {
+      "file": "Properties_All_Around_Map.png",
+      "hashPath": "8/8b",
+      "caption": "Building location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Properties_All_Around_Building.png",
+      "hashPath": "3/30",
+      "caption": "The real estate agency building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Properties_All_Around_Spawn_1.png",
+      "hashPath": "7/75",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "Properties_All_Around_Spawn_2.png",
+      "hashPath": "c/ca",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "Properties_All_Around_Spawn_3.png",
+      "hashPath": "f/f6",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "Properties_All_Around_Spawn_4.png",
+      "hashPath": "5/5b",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    },
+    {
+      "file": "Properties_All_Around_Spawn_5.png",
+      "hashPath": "a/ac",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fifth spawn"
+    },
+    {
+      "file": "Properties_All_Around_Spawn_6.png",
+      "hashPath": "e/e1",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Sixth spawn"
+    }
   ]
 }

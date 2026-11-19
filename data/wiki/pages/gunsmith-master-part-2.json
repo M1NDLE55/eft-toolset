@@ -53,5 +53,21 @@
       "level": 4,
       "text": "- This build is based on a standard RSASS from Peacekeeper LL4. It can only be purchased after completing Wet Job - Part 5. It can also be obtained as a barter from Peacekeeper LL3.\n- The magazine needs to be removed.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| SilencerCo Hybrid 46 Direct Thread Mount adapter | MechanicPeacekeeper | LL1 (Barter); LL2LL2 |\n| SilencerCo Hybrid 46 multi-caliber sound suppressor | PeacekeeperMechanic | LL2LL2 (Barter) |\n| Remington RAHG 4 inch rail | Mechanic | LL2 |\n| Zenit RK-4 tactical foregrip | Skier | LL2 |\n| IEA Mil-Optics KH/F 34mm one-piece magmount | MechanicJaeger | LL2 (Barter)LL3 |\n| Nightforce ATACR 7-35x56 34mm riflescope | Jaeger | LL2 (Barter); LL4 |\n| AR-15 ADAR 2-15 buffer tube | Skier | LL1 |\n| AR-15 Magpul CTR Carbine stock | Peacekeeper | LL2 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "GunsmithPart13AlternateInspectScreen.png",
+      "hashPath": "8/81",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GunsmithPart13AlternateModdingScreen.png",
+      "hashPath": "e/e6",
+      "caption": null,
+      "section": "Builds",
+      "subsection": "Notes:"
+    }
   ]
 }

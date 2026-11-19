@@ -39,5 +39,28 @@
       "level": 2,
       "text": "The transit is located behind the roadblock south of the main crossroad, inside the bus. Transits are only available 1 min after raid start."
     }
+  ],
+  "images": [
+    {
+      "file": "CustomsTransitToShorelineMap.png",
+      "hashPath": "f/f6",
+      "caption": "Transit location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Sniper_Roadblock.png",
+      "hashPath": "9/9d",
+      "caption": "The roadblock",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CustomsTransitToShoreline.png",
+      "hashPath": "9/91",
+      "caption": "The transit",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

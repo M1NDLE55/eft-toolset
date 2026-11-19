@@ -41,5 +41,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| VOG-25 Khattabka improvised hand grenade | 3 | Required | N/A | Stashed item |\nIn this quest you have to stash 3 VOG-25 Khattabka improvised hand grenades at RPG ammo crates on Woods.\n\nBug: Accepting the quest and stashing the grenades in the same raid does currently not work in local PvE game mode raids."
     }
+  ],
+  "images": [
+    {
+      "file": "Discombobulate_Map.png",
+      "hashPath": "4/46",
+      "caption": "Stashing spots marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Discombobulate_Spot_1.png",
+      "hashPath": "3/36",
+      "caption": "Stashing spot 1 at the sawmill",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Discombobulate_Spot_2.png",
+      "hashPath": "5/5e",
+      "caption": "Stashing spot 2 at the USEC checkpoint",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Discombobulate_Spot_3.png",
+      "hashPath": "8/81",
+      "caption": "Stashing spot 3 at the \"Junction\" BTR stop",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

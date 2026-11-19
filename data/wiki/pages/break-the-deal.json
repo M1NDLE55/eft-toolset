@@ -45,5 +45,56 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Lobaev Arms DVL-10 7.62x51 bolt-action sniper rifle | 1 | Required | N/A | Placed item |\n| DVL-10 7.62x51 10-round magazine | 1 | Required | N/A | Placed item |\n| ELCAN SpecterDR 1x/4x scope | 1 | Required | N/A | Placed item |\n| Any 7.62x51mm NATO ammo pack | 1 | Required | N/A | Placed item |\n\nIn this quest you have to stash the 4 specified items on the scaffolding of the southern industrial plant building on Customs. After accepting the quest you will be sent a set of the required items via in-game mail. It is possible to completely disassemble the DVL-10 rifle since it doesn't need to be functional to be stashed.\n\nNote: If you have a DVL-10 equipped as primary or secondary weapon, it will be used up as first for the stashing."
     }
+  ],
+  "images": [
+    {
+      "file": "7.62x51mm_NATO_ammo_pack.png",
+      "hashPath": "c/ce",
+      "caption": null,
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Customs_industrial_plant_map.png",
+      "hashPath": "9/9e",
+      "caption": "Building location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Break_the_Deal_building.png",
+      "hashPath": "5/56",
+      "caption": "The scaffolding",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Break_the_Deal_spot_1.png",
+      "hashPath": "2/20",
+      "caption": "SpecterDR scope spot: 2nd floor at the crates in the far corner",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Break_the_Deal_spot_2.png",
+      "hashPath": "6/6e",
+      "caption": "DVL-10 magazine spot: 3rd floor in the broken crate",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Break_the_Deal_spot_3.png",
+      "hashPath": "a/af",
+      "caption": "Ammo pack spot: 4th floor at the stacked crates next to the stairs",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Break_the_Deal_spot_4.png",
+      "hashPath": "a/a3",
+      "caption": "DVL-10 rifle spot: 4th floor at the crates in the far corner",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

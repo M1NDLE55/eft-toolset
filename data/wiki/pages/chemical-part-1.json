@@ -59,5 +59,63 @@
       "level": 4,
       "text": "Between the wall and a pallet in the northeastern corner of the train car."
     }
+  ],
+  "images": [
+    {
+      "file": "Chemical1_Traincar_Map.png",
+      "hashPath": "6/69",
+      "caption": "Train car marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chemical1Traincar.png",
+      "hashPath": "f/fc",
+      "caption": "The train car",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chem1West2.png",
+      "hashPath": "0/04",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "Chem1West.png",
+      "hashPath": "5/50",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "Chem1East3.png",
+      "hashPath": "6/68",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "Chem1East1.png",
+      "hashPath": "b/b4",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "Chem1East2.png",
+      "hashPath": "6/67",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "Docs_0013-Location.png",
+      "hashPath": "9/9c",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    }
   ]
 }

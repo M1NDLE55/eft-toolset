@@ -164,5 +164,399 @@
       "level": 4,
       "text": "- Dogtag (Fallen)\n- Armband (To Fall in the Darkness)\n- \"Fallen\" Achievement\n- To Fall in the Darkness poster\n- Fallen in the Darkness ceiling Hideout ceiling style\n- Fallen in the Darkness walls Hideout wall style\n- Fallen in the Darkness floor Hideout floor style\n- \"Dusk of Humanity\" main menu background\n\n- +272,000 EXP\n- 10,000,000 Roubles (3,000,000 in PvE)\n- 1× Money case"
     }
+  ],
+  "images": [
+    {
+      "file": "The_Ticket_Flowchart_by_Callsign_Smokey.png",
+      "hashPath": "d/d6",
+      "caption": "Endings flowchart",
+      "section": "Introduction",
+      "subsection": null
+    },
+    {
+      "file": "Tour_Shoreline_Map.png",
+      "hashPath": "f/fa",
+      "caption": "The location of the intercom on the map.",
+      "section": "Terminal Guide",
+      "subsection": "Arrive at the entrance pathway to the port Terminal"
+    },
+    {
+      "file": "Tour_Shoreline_Tower.png",
+      "hashPath": "c/c5",
+      "caption": "Watchtower where the intercom is located.",
+      "section": "Terminal Guide",
+      "subsection": "Arrive at the entrance pathway to the port Terminal"
+    },
+    {
+      "file": "Tour_Shoreline_Intercom.png",
+      "hashPath": "a/ad",
+      "caption": "The intercom where you need to swipe the keycard or use the call button for the Survivor ending.",
+      "section": "Terminal Guide",
+      "subsection": "Arrive at the entrance pathway to the port Terminal"
+    },
+    {
+      "file": "Path_to_terminal_transit_1.png",
+      "hashPath": "d/dd",
+      "caption": "Get behind the blockade.",
+      "section": "Terminal Guide",
+      "subsection": "Access the port Terminal"
+    },
+    {
+      "file": "Path_to_terminal_transit_2.png",
+      "hashPath": "0/0c",
+      "caption": "Follow the road until you can switch to the left one.",
+      "section": "Terminal Guide",
+      "subsection": "Access the port Terminal"
+    },
+    {
+      "file": "Path_to_terminal_transit_3.png",
+      "hashPath": "6/6e",
+      "caption": "Get in the transit zone.",
+      "section": "Terminal Guide",
+      "subsection": "Access the port Terminal"
+    },
+    {
+      "file": "Armory_key_Map.png",
+      "hashPath": "f/f6",
+      "caption": "The location of the Armory on the map.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the armory with your confiscated equipment"
+    },
+    {
+      "file": "Armory_key_Spawn_Map.png",
+      "hashPath": "e/ec",
+      "caption": "The armory key spawn locations on the map.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the armory with your confiscated equipment"
+    },
+    {
+      "file": "Armory_key_Spawn_4.png",
+      "hashPath": "c/ca",
+      "caption": "In the right hand of a dead RUAF soldier right outside the spawn building.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the armory with your confiscated equipment"
+    },
+    {
+      "file": "Armory_key_Spawn_3.png",
+      "hashPath": "7/7d",
+      "caption": "In the left hand of a dead RUAF soldier on the way to the armory.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the armory with your confiscated equipment"
+    },
+    {
+      "file": "Armory_key_Spawn_1.png",
+      "hashPath": "e/e0",
+      "caption": "Inside a dead RUAF soldier outside of the armory building.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the armory with your confiscated equipment"
+    },
+    {
+      "file": "Armory_key_Spawn_2.png",
+      "hashPath": "b/b3",
+      "caption": "On a table inside the armory building.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the armory with your confiscated equipment"
+    },
+    {
+      "file": "Armory_Equipment_locker.png",
+      "hashPath": "e/e0",
+      "caption": "The equipment is in a random locker.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the armory with your confiscated equipment"
+    },
+    {
+      "file": "Secure_container_Alpha-1_Spawn.png",
+      "hashPath": "3/3d",
+      "caption": "Secure container Alpha-1 on the desk under the window inside the room.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the armory with your confiscated equipment"
+    },
+    {
+      "file": "Seaport_terminal_building_Map.png",
+      "hashPath": "1/1a",
+      "caption": "Building location marked on map.",
+      "section": "Terminal Guide",
+      "subsection": "Obtain the keycard to unlock the service passage"
+    },
+    {
+      "file": "Seaport_terminal_building_outer.png",
+      "hashPath": "9/91",
+      "caption": "The seaport Terminal building (MS).",
+      "section": "Terminal Guide",
+      "subsection": "Obtain the keycard to unlock the service passage"
+    },
+    {
+      "file": "Seaport_terminal_building_interior.png",
+      "hashPath": "3/34",
+      "caption": "The weapon box inside the building.",
+      "section": "Terminal Guide",
+      "subsection": "Obtain the keycard to unlock the service passage"
+    },
+    {
+      "file": "Black_Division_keycard_Spawn.png",
+      "hashPath": "0/0e",
+      "caption": "Inside the weapon box on an ATM.",
+      "section": "Terminal Guide",
+      "subsection": "Obtain the keycard to unlock the service passage"
+    },
+    {
+      "file": "Black_Division_keycard_Lock_Map.png",
+      "hashPath": "3/3e",
+      "caption": "Building location marked on map.",
+      "section": "Terminal Guide",
+      "subsection": "Access the Terminal loading zone"
+    },
+    {
+      "file": "Terminal_administration_building.png",
+      "hashPath": "a/af",
+      "caption": "The building.",
+      "section": "Terminal Guide",
+      "subsection": "Access the Terminal loading zone"
+    },
+    {
+      "file": "Black_Division_keycard_Lock.png",
+      "hashPath": "6/6a",
+      "caption": "The door.",
+      "section": "Terminal Guide",
+      "subsection": "Access the Terminal loading zone"
+    },
+    {
+      "file": "Terminal_Metal_Gate_Map.png",
+      "hashPath": "3/3f",
+      "caption": "Gate location marked on map.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the way into the fuel depot"
+    },
+    {
+      "file": "Terminalexplosivegate.png",
+      "hashPath": "b/b2",
+      "caption": "The gate.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the way into the fuel depot"
+    },
+    {
+      "file": "TerminalExplosiveSpawnsMap.png",
+      "hashPath": "0/07",
+      "caption": "The location of the SZ-1 explosive charge on the map.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the way into the fuel depot"
+    },
+    {
+      "file": "Terminalexplosivespawn6close.png",
+      "hashPath": "a/a5",
+      "caption": "No. 1 - The explosive in an open crate.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the way into the fuel depot"
+    },
+    {
+      "file": "Terminalexplosivespawn3close.png",
+      "hashPath": "c/c6",
+      "caption": "No. 2 - The explosive on a desk inside a tent.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the way into the fuel depot"
+    },
+    {
+      "file": "Terminalexplosivespawn5close.png",
+      "hashPath": "7/7f",
+      "caption": "No. 3 - The explosive on some barrels.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the way into the fuel depot"
+    },
+    {
+      "file": "Terminalexplosivespawn7close.png",
+      "hashPath": "5/5d",
+      "caption": "No. 4 - The explosive on a table.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the way into the fuel depot"
+    },
+    {
+      "file": "Terminalexplosivespawn2close.png",
+      "hashPath": "7/7f",
+      "caption": "No. 5 - The explosive on some crates.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the way into the fuel depot"
+    },
+    {
+      "file": "Terminalexplosivespawn4close.png",
+      "hashPath": "1/15",
+      "caption": "No. 6 - The explosive on a desk under a canopy.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the way into the fuel depot"
+    },
+    {
+      "file": "Terminalexplosivespawn1close.png",
+      "hashPath": "c/ca",
+      "caption": "No. 7 - The explosive on the corner of a trailer.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the way into the fuel depot"
+    },
+    {
+      "file": "TerminalElectricalPanelsMap.jpg",
+      "hashPath": "f/f2",
+      "caption": "Electrical panel locations marked on the map.",
+      "section": "Terminal Guide",
+      "subsection": "Restore power to the pumping station"
+    },
+    {
+      "file": "TerminalPanelNo1.png",
+      "hashPath": "d/df",
+      "caption": "No. 1 - To the left out of the spawn room near the crane that collapses at the start of the raid.",
+      "section": "Terminal Guide",
+      "subsection": "Restore power to the pumping station"
+    },
+    {
+      "file": "TerminalPanelNo2.png",
+      "hashPath": "6/68",
+      "caption": "No. 2 - Next to a metal tower east of the armory.",
+      "section": "Terminal Guide",
+      "subsection": "Restore power to the pumping station"
+    },
+    {
+      "file": "TerminalPanelNo3.png",
+      "hashPath": "5/5b",
+      "caption": "No. 3 - Outside of the alleyway between two large buildings east of the armory.",
+      "section": "Terminal Guide",
+      "subsection": "Restore power to the pumping station"
+    },
+    {
+      "file": "TerminalPanelNo4.png",
+      "hashPath": "d/d4",
+      "caption": "No. 4 - At the end of the road leading east from the armory next to two metal towers.",
+      "section": "Terminal Guide",
+      "subsection": "Restore power to the pumping station"
+    },
+    {
+      "file": "TerminalPanelNo5.png",
+      "hashPath": "c/c3",
+      "caption": "No. 5 - Next to a metal tower out front of the admin building (D3).",
+      "section": "Terminal Guide",
+      "subsection": "Restore power to the pumping station"
+    },
+    {
+      "file": "TerminalPanelNo6.png",
+      "hashPath": "f/f8",
+      "caption": "No. 6 - To the right up against the buildings just past where the Black Division keycard must be swiped.",
+      "section": "Terminal Guide",
+      "subsection": "Restore power to the pumping station"
+    },
+    {
+      "file": "TerminalPanelNo7.png",
+      "hashPath": "0/0b",
+      "caption": "No. 7 - To the right up against the buildings past where the Black Division keycard must be swiped.",
+      "section": "Terminal Guide",
+      "subsection": "Restore power to the pumping station"
+    },
+    {
+      "file": "TerminalPanelNo8.png",
+      "hashPath": "5/54",
+      "caption": "No. 8 - Up against a metal tower in the area to the right down the road past the metal gate.",
+      "section": "Terminal Guide",
+      "subsection": "Restore power to the pumping station"
+    },
+    {
+      "file": "TerminalPanelNo9.png",
+      "hashPath": "6/64",
+      "caption": "No. 9 - On the backside of the building to the right immediately past the metal gate tucked into a corner.",
+      "section": "Terminal Guide",
+      "subsection": "Restore power to the pumping station"
+    },
+    {
+      "file": "TerminalPanelNo10.png",
+      "hashPath": "7/7b",
+      "caption": "No. 10 - Right outside the door to the pumping station up against the building.",
+      "section": "Terminal Guide",
+      "subsection": "Restore power to the pumping station"
+    },
+    {
+      "file": "TerminalToolsetsMap.jpg",
+      "hashPath": "9/90",
+      "caption": "Toolset spawns marked on the map.",
+      "section": "Terminal Guide",
+      "subsection": "Toolset spawns"
+    },
+    {
+      "file": "TerminalToolsetSpawn1.png",
+      "hashPath": "3/3b",
+      "caption": "1: In front of the BRDM after opening the metal gate, on a concrete barricade.",
+      "section": "Terminal Guide",
+      "subsection": "Toolset spawns"
+    },
+    {
+      "file": "TerminalToolsetSpawn2.png",
+      "hashPath": "d/d9",
+      "caption": "2: To the left after opening the metal gate, on the base of a pillar.",
+      "section": "Terminal Guide",
+      "subsection": "Toolset spawns"
+    },
+    {
+      "file": "TerminalToolsetSpawn3.png",
+      "hashPath": "8/82",
+      "caption": "3: Next to the fuel pumps to the left after opening the metal gate, on a set of barrels.",
+      "section": "Terminal Guide",
+      "subsection": "Toolset spawns"
+    },
+    {
+      "file": "TerminalPumpingStationMap.png",
+      "hashPath": "4/41",
+      "caption": "Pumping station location marked on the map.",
+      "section": "Terminal Guide",
+      "subsection": "Drain the water in the pumping station"
+    },
+    {
+      "file": "TerminalPumpingStation.png",
+      "hashPath": "c/cf",
+      "caption": "Door to the pumping station.",
+      "section": "Terminal Guide",
+      "subsection": "Drain the water in the pumping station"
+    },
+    {
+      "file": "TerminalIMPumpingStationButton.png",
+      "hashPath": "f/fb",
+      "caption": "The button to drain the water.",
+      "section": "Terminal Guide",
+      "subsection": "Drain the water in the pumping station"
+    },
+    {
+      "file": "TerminalPierDoorKeyRooom.png",
+      "hashPath": "a/a3",
+      "caption": "The room where the safe is.",
+      "section": "Terminal Guide",
+      "subsection": "Obtain the key to the gate blocking the road to the pier"
+    },
+    {
+      "file": "Pier_door_key_Spawn.png",
+      "hashPath": "0/01",
+      "caption": "The safe.",
+      "section": "Terminal Guide",
+      "subsection": "Obtain the key to the gate blocking the road to the pier"
+    },
+    {
+      "file": "Terminal_Pier_Building_Map.png",
+      "hashPath": "b/bb",
+      "caption": "The pier door location on the map.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the exit leading to the pier"
+    },
+    {
+      "file": "Pier_door_key_door.png",
+      "hashPath": "8/81",
+      "caption": "The door.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the exit leading to the pier"
+    },
+    {
+      "file": "TheTicketTerminalReachingPierPathMap.png",
+      "hashPath": "8/8a",
+      "caption": "Possible paths to Pier door.",
+      "section": "Terminal Guide",
+      "subsection": "Locate the exit leading to the pier"
+    },
+    {
+      "file": "Zubr_Boat.png",
+      "hashPath": "6/64",
+      "caption": "The extraction",
+      "section": "Terminal Guide",
+      "subsection": "Escape from Tarkov"
+    }
   ]
 }

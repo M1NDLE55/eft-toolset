@@ -1,0 +1,79 @@
+import type { QuestGraph } from "./graph";
+import type { Faction, QuestMap, RequirementStatus } from "./types";
+
+/** A quest's name, told apart from others that share it by its prestige level (New Beginning). */
+export function questName(quest: { name: string; prestige?: number | null }) {
+  return quest.prestige ? `${quest.name} (Prestige ${quest.prestige})` : quest.name;
+}
+
+/** The name with its faction, for titles where no badge can say it. */
+export function questTitleName(quest: { name: string; prestige?: number | null; faction: Faction | null }) {
+  return quest.faction ? `${questName(quest)} (${quest.faction})` : questName(quest);
+}
+
+/** What a requirement asks of the other quest, as a short phrase. */
+export function requirementLabel(status: readonly RequirementStatus[]) {
+  const complete = status.includes("complete");
+  const active = status.includes("active");
+  const failed = status.includes("failed");
+  if (complete && failed) return "complete or fail";
+  if (complete && active) return "start or complete";
+  if (complete) return "complete";
+  if (active) return "start";
+  return "fail";
+}
+
+/** "Level 15" for a level requirement; nothing for quests open from the start. */
+export function levelLabel(level: number) {
+  return level > 1 ? `Level ${level}` : null;
+}
+
+/**
+ * For an objective that names its one item ("Hand over the found in raid item: Salewa"), the
+ * words before and after the name, so the name can link to the item; null when it isn't named.
+ */
+export function aroundItemName(description: string, name: string | null | undefined) {
+  if (!name) return null;
+  const at = description.lastIndexOf(name);
+  if (at < 0) return null;
+  return { before: description.slice(0, at), after: description.slice(at + name.length) };
+}
+
+const hintCache = new WeakMap<QuestGraph, ReadonlyMap<string, string>>();
+
+/**
+ * A few words telling apart quests that share a name and faction (Battery Change, The Tarkov
+ * Shooter - Part 5): what they follow, else their map, else their level, whichever differs for
+ * each of them; else which copy they are, in list order. Quests with a name of their own get none.
+ */
+export function sameNameHints(graph: QuestGraph, maps: Readonly<Record<string, QuestMap>>): ReadonlyMap<string, string> {
+  const cached = hintCache.get(graph);
+  if (cached) return cached;
+  const groups = new Map<string, QuestGraph["quests"][number][]>();
+  for (const quest of graph.quests) {
+    const key = `${questName(quest)}\u0000${quest.faction ?? ""}`;
+    groups.set(key, [...(groups.get(key) ?? []), quest]);
+  }
+  const hints = new Map<string, string>();
+  for (const group of groups.values()) {
+    if (group.length < 2) continue;
+    const ways = [
+      (quest: (typeof group)[number]) => {
+        const names = quest.requires.flatMap((entry) => {
+          const other = graph.byId.get(entry.id);
+          return other ? [questName(other)] : [];
+        });
+        return names.length > 0 ? `after ${names.toSorted().join(", ")}` : "";
+      },
+      (quest: (typeof group)[number]) => (quest.maps[0] ? `on ${maps[quest.maps[0]]?.name ?? quest.maps[0]}` : ""),
+      (quest: (typeof group)[number]) => (quest.minPlayerLevel > 1 ? `level ${quest.minPlayerLevel}` : ""),
+    ];
+    const way = ways.find((hint) => {
+      const values = group.map(hint);
+      return values.every(Boolean) && new Set(values).size === values.length;
+    });
+    group.forEach((quest, index) => hints.set(quest.id, way ? way(quest) : `copy ${index + 1} of ${group.length}`));
+  }
+  hintCache.set(graph, hints);
+  return hints;
+}

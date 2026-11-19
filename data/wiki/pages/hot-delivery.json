@@ -42,5 +42,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Peltor ComTac II headset (OD Green) | 1 | Required | N/A | Placed item |\n| 6B47 Ratnik-BSh helmet (Olive Drab) | 1 | Required | N/A | Placed item |\n| BNTI Gzhel-K body armor | 1 | Required | N/A | Placed item |\nThe headset and the helmet must be placed in a garbage pile in the \"Avokado\" store. The EMR cover and EMR Arctic cover variants of the 6B47 helmet can not be used.\n\nThe body armor must be placed outside the mall, in a garbage pile next to the stage in front of the \"ULTRA\" store. Armor plates can be removed to reduce weight."
     }
+  ],
+  "images": [
+    {
+      "file": "HotdeliveryAvokadoMap.png",
+      "hashPath": "9/93",
+      "caption": "Placement location for the headset and the helmet",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Hot_delivery_comtac_6b47.png",
+      "hashPath": "9/9a",
+      "caption": "Place the headset and the helmet here",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "HotdeliveryStageMap.png",
+      "hashPath": "f/f2",
+      "caption": "Placement location for the armor",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Hot_delivery_Gzhel.png",
+      "hashPath": "7/72",
+      "caption": "Place the armor here",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

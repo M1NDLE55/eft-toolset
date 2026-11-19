@@ -56,5 +56,49 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "Break_the_Chain_Customs_Map.jpg",
+      "hashPath": "6/6f",
+      "caption": "Transmitter locations marked on map",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "Break_the_Chain_Factory_Chimney_Repeater.png",
+      "hashPath": "6/61",
+      "caption": "Transmitter on top of the boiler building chimney",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "Break_the_Chain_Power_Line_Repeater.png",
+      "hashPath": "2/24",
+      "caption": "Transmitter on top of an electrical tower near the \"Railroad to Reserve\" extraction",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "Break_the_Chain_Woods_Map.png",
+      "hashPath": "f/f7",
+      "caption": "Transmitter locations and mountain peak shooting spot marked on map",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "Break_the_Chain_Mountain_Repeater.png",
+      "hashPath": "e/e1",
+      "caption": "View on the mountain peak transmitter from the shooting spot",
+      "section": "Guide",
+      "subsection": "Woods"
+    },
+    {
+      "file": "Break_the_Chain_Cell_Tower_Repeater.png",
+      "hashPath": "8/80",
+      "caption": "Transmitter on top of the radio tower at the \"Scav Bunker\" Scav extraction",
+      "section": "Guide",
+      "subsection": "Woods"
+    }
   ]
 }

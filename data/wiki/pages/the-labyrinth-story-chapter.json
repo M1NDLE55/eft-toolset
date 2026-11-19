@@ -102,5 +102,175 @@
       "level": 4,
       "text": "- +160,000 EXP\n- Unlocks achievement Theseus"
     }
+  ],
+  "images": [
+    {
+      "file": "Vitamins1_Shoreline_outdoor_map.png",
+      "hashPath": "e/e6",
+      "caption": "Health resort west wing location marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "The_Labyrinth_Transit_Map.png",
+      "hashPath": "b/be",
+      "caption": "Transit location marked on west wing basement map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "The_Labyrinth_Transit_Door.png",
+      "hashPath": "9/9e",
+      "caption": "Door to the transit",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "The_Labyrinth_Transit.png",
+      "hashPath": "5/58",
+      "caption": "The transit",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Leshy's_orders_location_map.png",
+      "hashPath": "4/4c",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Locate the traces of the BEAR squad"
+    },
+    {
+      "file": "Leshy's_orders_location_far.png",
+      "hashPath": "b/ba",
+      "caption": "Orders location in the food container",
+      "section": "Guide",
+      "subsection": "Locate the traces of the BEAR squad"
+    },
+    {
+      "file": "Leshy's_orders_location_close.png",
+      "hashPath": "1/1c",
+      "caption": "The orders",
+      "section": "Guide",
+      "subsection": "Locate the traces of the BEAR squad"
+    },
+    {
+      "file": "Labryrinth_missile_area_map.png",
+      "hashPath": "5/5b",
+      "caption": "Prototype weapon area marked on map",
+      "section": "Guide",
+      "subsection": "Investigate the BEAR squad regroup spot at Item 1156"
+    },
+    {
+      "file": "Labryrinth_torture_room_map.png",
+      "hashPath": "e/e6",
+      "caption": "Torture room location marked on map",
+      "section": "Guide",
+      "subsection": "Locate the squad leader/Gather more information about the squad"
+    },
+    {
+      "file": "Leshy's_diary_location_far.png",
+      "hashPath": "3/30",
+      "caption": "Squad leader location next to the torture room",
+      "section": "Guide",
+      "subsection": "Locate the squad leader/Gather more information about the squad"
+    },
+    {
+      "file": "Leshy's_diary_location_close.png",
+      "hashPath": "8/81",
+      "caption": "The diary",
+      "section": "Guide",
+      "subsection": "Locate the squad leader/Gather more information about the squad"
+    },
+    {
+      "file": "The_Labyrinth_Scientist_locations_map.png",
+      "hashPath": "7/77",
+      "caption": "Scientist locations marked on map",
+      "section": "Guide",
+      "subsection": "Investigate the 5 lab staff bodies"
+    },
+    {
+      "file": "Assistant_note_3_spawn.png",
+      "hashPath": "a/a8",
+      "caption": "- 1: Assistant's notes on Group #3 under the right hand",
+      "section": "Guide",
+      "subsection": "Investigate the 5 lab staff bodies"
+    },
+    {
+      "file": "Assistant_note_3_and_10_spawn.png",
+      "hashPath": "1/18",
+      "caption": "- 2: Assistant's notes on Group #8 under the left arm",
+      "section": "Guide",
+      "subsection": "Investigate the 5 lab staff bodies"
+    },
+    {
+      "file": "Assistant_note_8_spawn.png",
+      "hashPath": "3/38",
+      "caption": "- 3: Assistant's notes on Group #3 and Group #10 next to the body",
+      "section": "Guide",
+      "subsection": "Investigate the 5 lab staff bodies"
+    },
+    {
+      "file": "Assistant_note_12_spawn.png",
+      "hashPath": "9/94",
+      "caption": "- 4: Assistant's notes on Group #12 under the body",
+      "section": "Guide",
+      "subsection": "Investigate the 5 lab staff bodies"
+    },
+    {
+      "file": "Assistant_note_on_TG-Vi-24_test_subject_spawn.png",
+      "hashPath": "e/eb",
+      "caption": "- 5: Assistant's notes on TG-Vi-24 test subjects under the head",
+      "section": "Guide",
+      "subsection": "Investigate the 5 lab staff bodies"
+    },
+    {
+      "file": "Observation_room_Map.png",
+      "hashPath": "f/f8",
+      "caption": "Observation room location marked on map",
+      "section": "Guide",
+      "subsection": "Access the locked office"
+    },
+    {
+      "file": "Observation_room_Door.png",
+      "hashPath": "3/36",
+      "caption": "Door to the observation room",
+      "section": "Guide",
+      "subsection": "Access the locked office"
+    },
+    {
+      "file": "Deceased_scientist's_audio_tape_location_far.png",
+      "hashPath": "a/af",
+      "caption": "The scientist",
+      "section": "Guide",
+      "subsection": "Listen to the audio tape from the office"
+    },
+    {
+      "file": "Deceased_scientist's_audio_tape_location_close.png",
+      "hashPath": "5/50",
+      "caption": "The audio tape",
+      "section": "Guide",
+      "subsection": "Listen to the audio tape from the office"
+    },
+    {
+      "file": "Labyrinth_facility_research_report_location_map.png",
+      "hashPath": "a/a1",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Obtain and read the Labyrinth facility research report"
+    },
+    {
+      "file": "Labyrinth_facility_research_report_location_far.png",
+      "hashPath": "e/ef",
+      "caption": "Report location at the pipe",
+      "section": "Guide",
+      "subsection": "Obtain and read the Labyrinth facility research report"
+    },
+    {
+      "file": "Labyrinth_facility_research_report_location_close.png",
+      "hashPath": "e/ee",
+      "caption": "The report",
+      "section": "Guide",
+      "subsection": "Obtain and read the Labyrinth facility research report"
+    }
   ]
 }

@@ -46,5 +46,21 @@
       "level": 3,
       "text": "Transits are only available 1 min after raid start."
     }
+  ],
+  "images": [
+    {
+      "file": "WoodsTransitToReserve.png",
+      "hashPath": "1/19",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Woods to Reserve"
+    },
+    {
+      "file": "WoodsTransitToReserve2.png",
+      "hashPath": "4/47",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Woods to Reserve"
+    }
   ]
 }

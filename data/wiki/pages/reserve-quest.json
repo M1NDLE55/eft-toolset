@@ -40,5 +40,28 @@
       "level": 2,
       "text": "On Reserve, enter the north-western located underground storage warehouse marked with \"Д\". After you head down one of the ramps, you need to get next to the right side food storage cages, recognizable by the wooden crates inside."
     }
+  ],
+  "images": [
+    {
+      "file": "Reserv_guide.jpg",
+      "hashPath": "5/54",
+      "caption": "Warehouse \"Д\" marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ReserveQuestWarehouse.png",
+      "hashPath": "4/41",
+      "caption": "Warehouse \"Д\"",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Reservquest2.png",
+      "hashPath": "5/50",
+      "caption": "Food storage cage with wooden crates inside",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -45,5 +45,56 @@
       "level": 2,
       "text": "By completing One Less Loose End, you will lose access to this quest.\n| Item name | Amount | Requirement | Find in raid | Notes |\n| Lab journal | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe journal can be found in the laboratory on the second floor of Factory. There are multiple spawns throughout both rooms."
     }
+  ],
+  "images": [
+    {
+      "file": "One_Less_Loose_End_Factory_Map.png",
+      "hashPath": "b/b1",
+      "caption": "Laboratory location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "One_Less_Loose_End_Factory_Lab.png",
+      "hashPath": "4/42",
+      "caption": "Entrance to the laboratory",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "One_Less_Loose_End_Factory_Spawn_1.png",
+      "hashPath": "1/18",
+      "caption": "Spawn #1: In the first room on the trolley",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "One_Less_Loose_End_Factory_Spawn_2.png",
+      "hashPath": "8/8f",
+      "caption": "Spawn #2: In the first room on the chest of drawers next to the glass cabinet",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "One_Less_Loose_End_Factory_Spawn_3.png",
+      "hashPath": "f/f4",
+      "caption": "Spawn #3: In the second room in the bottom compartment of the right industrial shelf",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "One_Less_Loose_End_Factory_Spawn_4.png",
+      "hashPath": "c/cc",
+      "caption": "Spawn #4: In the second room in the small fridge on the floor",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "One_Less_Loose_End_Factory_Spawn_5.png",
+      "hashPath": "d/d8",
+      "caption": "Spawn #5: In the second room on the right desk",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

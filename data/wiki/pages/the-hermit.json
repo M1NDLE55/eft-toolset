@@ -40,5 +40,28 @@
       "level": 2,
       "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| Sealed letter (The Hermit) | Sealed letter | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n\nThe wanted message is located below the door to Jaeger's friends' hideout that can be found in the village on the eastern island. You need to extract with the message to complete the quest."
     }
+  ],
+  "images": [
+    {
+      "file": "Lighthouse_The_Hermit.png",
+      "hashPath": "0/0a",
+      "caption": "Hideout marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Hermit_spawn.png",
+      "hashPath": "d/dd",
+      "caption": "Hideout with message location",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Letter_beneath_door_of_stash.png",
+      "hashPath": "d/d6",
+      "caption": "Closeup of the hideout with the message",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

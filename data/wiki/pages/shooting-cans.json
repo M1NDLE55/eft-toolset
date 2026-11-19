@@ -49,5 +49,56 @@
       "level": 3,
       "text": "The AGS grenade launcher is located in the back office on the third floor of the Capital Insight building."
     }
+  ],
+  "images": [
+    {
+      "file": "Shooting_Cans_Map.png",
+      "hashPath": "d/dc",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Utyos"
+    },
+    {
+      "file": "Tarbank_Building.png",
+      "hashPath": "2/26",
+      "caption": "The Tarbank building",
+      "section": "Guide",
+      "subsection": "Utyos"
+    },
+    {
+      "file": "Tarbank_Building_Stairs.png",
+      "hashPath": "5/51",
+      "caption": "Way to the staircase",
+      "section": "Guide",
+      "subsection": "Utyos"
+    },
+    {
+      "file": "Shooting_Cans_Utyos.png",
+      "hashPath": "e/eb",
+      "caption": "The Utyos machine gun",
+      "section": "Guide",
+      "subsection": "Utyos"
+    },
+    {
+      "file": "Capital_Insight_Building.png",
+      "hashPath": "9/9d",
+      "caption": "The Capital Insight building",
+      "section": "Guide",
+      "subsection": "AGS"
+    },
+    {
+      "file": "Capital_Insight_Building_Stairs.png",
+      "hashPath": "7/7e",
+      "caption": "Way to the third floor",
+      "section": "Guide",
+      "subsection": "AGS"
+    },
+    {
+      "file": "Shooting_Cans_AGS.png",
+      "hashPath": "3/34",
+      "caption": "The AGS grenade launcher in the back office",
+      "section": "Guide",
+      "subsection": "AGS"
+    }
   ]
 }

@@ -52,5 +52,28 @@
       "level": 2,
       "text": "- You can buy additional MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death. However, unlike most quests that require you to mark an object, this one does require that you survive after placement. In the event of death, you will need to acquire another and re-place.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "BigCustomerMap.jpg",
+      "hashPath": "e/ed",
+      "caption": "Warehouse marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Depot-building_customs.png",
+      "hashPath": "6/64",
+      "caption": "The warehouse with the vehicle inside.",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_van_inside_the_depot-building.png",
+      "hashPath": "4/45",
+      "caption": "The vehicle where the beacon is placed.",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

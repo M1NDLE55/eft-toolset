@@ -39,5 +39,28 @@
       "level": 2,
       "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in Raid | Notes |\n| Dorm room 206 key | Dorm room 206 key | 1 | Required | N/A | Unlocks dorm room 206 in the two-story dorms on Customs where the hidden water is located. |\n| Bottle of water (0.6L); or; Aquamari water bottle with filter; or; Canister with purified water; or; Bottle of YMXC water; or; Emergency Water Ration | Bottle of water (0.6L); or; Aquamari water bottle with filter; or; Canister with purified water; or; Bottle of YMXC water; or; Emergency Water Ration | 3 | Handover item | Yes | |\nIn this quest you have to find the hidden water on Customs. It can be found in room 206 on the second floor of the two-story dorms building. A Dorm room 206 key is required to enter it. You also need to hand over 3 water drinking items found in raid to Therapist."
     }
+  ],
+  "images": [
+    {
+      "file": "OP_Aquarius1_Customs.png",
+      "hashPath": "9/92",
+      "caption": "2 story dorms and room 206 marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Rom_206_door.png",
+      "hashPath": "d/de",
+      "caption": "Room 206 in the two-story dorms",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Inside-Room-206.png",
+      "hashPath": "9/99",
+      "caption": "The hidden water",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

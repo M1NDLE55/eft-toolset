@@ -40,5 +40,21 @@
       "level": 2,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "LongRoadMap.png",
+      "hashPath": "7/72",
+      "caption": "Lighthouse kill area marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "LongRoadShorelineMap.png",
+      "hashPath": "c/c2",
+      "caption": "Shoreline kill area marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

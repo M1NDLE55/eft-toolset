@@ -45,5 +45,49 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Package for Prapor | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find Prapor's package on Woods. It can be found in 1 of 2 locations in the northwest building of the train depot. The depot can only be accessed via the BTR Driver's taxi service. After collecting the package, you have to hand it over to Prapor in his quest Shipping Delay - Part 1, afterwards you can complete this quest.\n\nIt is also possible to leave the depot through walking on top of the western train. When walking on top of the train it is important to stick to the center to not get hit by snipers or mines."
     }
+  ],
+  "images": [
+    {
+      "file": "A_Helping_Hand_Building_Map.png",
+      "hashPath": "4/43",
+      "caption": "Building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "A_Helping_Hand_Building.png",
+      "hashPath": "d/d9",
+      "caption": "The wanted building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "A_Helping_Hand_Spawn_1.png",
+      "hashPath": "7/77",
+      "caption": "First spawn under the table next to the bed",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "A_Helping_Hand_Spawn_2.png",
+      "hashPath": "f/f9",
+      "caption": "Second spawn on the desk in the back office",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WoodsTrainDepotExit.png",
+      "hashPath": "3/3a",
+      "caption": "Way to the train",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "WoodsTrainDepotExit2.png",
+      "hashPath": "6/6c",
+      "caption": "The train",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

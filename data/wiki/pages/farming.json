@@ -60,5 +60,63 @@
       "level": 4,
       "text": "Behind the desk."
     }
+  ],
+  "images": [
+    {
+      "file": "Delivery_from_the_past_Customs.png",
+      "hashPath": "4/4a",
+      "caption": "Warehouse marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Customs-Factory1-Outside-3.png",
+      "hashPath": "8/8a",
+      "caption": "The warehouse",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CustomsOffice.png",
+      "hashPath": "4/45",
+      "caption": "The office",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Farming3Office.png",
+      "hashPath": "5/5e",
+      "caption": "The second room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Farm3Closet.png",
+      "hashPath": "d/d3",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "Farming_part_3.png",
+      "hashPath": "e/ee",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "Farm3Copier.png",
+      "hashPath": "b/be",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "Farming3Desk.png",
+      "hashPath": "b/bc",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth spawn"
+    }
   ]
 }

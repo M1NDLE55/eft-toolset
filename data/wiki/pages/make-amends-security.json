@@ -45,5 +45,42 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera | 4 | Required | N/A | Can be purchased from Mechanic LL1. |\nIn this quest you have to place 4 WI-FI Cameras at different vehicles around the water treatment plant on Lighthouse."
     }
+  ],
+  "images": [
+    {
+      "file": "MakeAmendsSecurityMap.png",
+      "hashPath": "6/6a",
+      "caption": "Vehicles marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MakeAmendsBus.png",
+      "hashPath": "c/c7",
+      "caption": "The bus",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MakeAmendsBulldozer.png",
+      "hashPath": "7/71",
+      "caption": "The bulldozer",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MakeAmendsPoliceTruck.png",
+      "hashPath": "c/c6",
+      "caption": "The police truck",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "MakeAmendsArmyTruck.png",
+      "hashPath": "0/07",
+      "caption": "The army truck",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

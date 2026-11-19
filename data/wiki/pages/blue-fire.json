@@ -130,5 +130,301 @@
       "level": 4,
       "text": "- +112,000 EXP\n- Unlocks achievement Inferno"
     }
+  ],
+  "images": [
+    {
+      "file": "Blue_Fire_Woods_Activation_Location_Map.png",
+      "hashPath": "8/8e",
+      "caption": "Container marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Blue_Fire_Woods_Activation_Location_Container.png",
+      "hashPath": "a/a7",
+      "caption": "The wanted container",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Blue_Fire_Woods_Activation_Location.png",
+      "hashPath": "c/c1",
+      "caption": "Leaflet location on the right side of the cabinet",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Blue_Fire_Interchange_Activation_Location_Map_1.jpg",
+      "hashPath": "6/6e",
+      "caption": "Tent location marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Blue_Fire_Interchange_Activation_Location_1.png",
+      "hashPath": "a/ac",
+      "caption": "Leaflet location on the tent",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Blue_Fire_Interchange_Activation_Location_Map_2.jpg",
+      "hashPath": "9/96",
+      "caption": "Tent location marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Blue_Fire_Interchange_Activation_Location_2.png",
+      "hashPath": "1/13",
+      "caption": "Leaflet location on the tent",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Emercom_Location.jpg",
+      "hashPath": "a/ac",
+      "caption": "EMERCOM unit marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Blue_Fire_Interchange_Activation_Location_3.png",
+      "hashPath": "e/ed",
+      "caption": "Leaflet location",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Labryrinth_missile_area_map.png",
+      "hashPath": "5/5b",
+      "caption": "Prototype weapon area marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Blue_Fire_The_Labyrinth_Activation_Location.png",
+      "hashPath": "4/44",
+      "caption": "Note location",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "CarDealerMap.png",
+      "hashPath": "8/80",
+      "caption": "Car dealership marked on map",
+      "section": "Guide",
+      "subsection": "LexOs car dealership"
+    },
+    {
+      "file": "LexOsClaymoreOverview.png",
+      "hashPath": "d/df",
+      "caption": "LexOs complex overview",
+      "section": "Guide",
+      "subsection": "LexOs car dealership"
+    },
+    {
+      "file": "CarDealer.png",
+      "hashPath": "a/a4",
+      "caption": "The car dealership",
+      "section": "Guide",
+      "subsection": "LexOs car dealership"
+    },
+    {
+      "file": "CarDealerClosedSectionDoor.png",
+      "hashPath": "1/15",
+      "caption": "Grate door to the closed section",
+      "section": "Guide",
+      "subsection": "LexOs car dealership"
+    },
+    {
+      "file": "Blue_Fire_Device_Fragment_inside_LexOS_Sect..png",
+      "hashPath": "2/2e",
+      "caption": "The device in a food container",
+      "section": "Guide",
+      "subsection": "LexOs car dealership"
+    },
+    {
+      "file": "Mysterious_marked_key_onmap.png",
+      "hashPath": "3/33",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "Chekannaya 13 apartment building marked room"
+    },
+    {
+      "file": "Mysterious_key_building_entrance.png",
+      "hashPath": "c/cc",
+      "caption": "Entrance to the building through a window from the courtyard",
+      "section": "Guide",
+      "subsection": "Chekannaya 13 apartment building marked room"
+    },
+    {
+      "file": "Mysterious_key_path1.png",
+      "hashPath": "e/ea",
+      "caption": "Once inside, get in the corridor and move to the second room on the left",
+      "section": "Guide",
+      "subsection": "Chekannaya 13 apartment building marked room"
+    },
+    {
+      "file": "Mysterious_key_path2.png",
+      "hashPath": "a/a3",
+      "caption": "In the bedroom, go through the hole in the wall",
+      "section": "Guide",
+      "subsection": "Chekannaya 13 apartment building marked room"
+    },
+    {
+      "file": "Mysterious_key_path3.png",
+      "hashPath": "2/27",
+      "caption": "After going through the hole, get downstairs and open the door to the left",
+      "section": "Guide",
+      "subsection": "Chekannaya 13 apartment building marked room"
+    },
+    {
+      "file": "Mysterious_key_room_door.png",
+      "hashPath": "9/96",
+      "caption": "You get in front of the door to unlock",
+      "section": "Guide",
+      "subsection": "Chekannaya 13 apartment building marked room"
+    },
+    {
+      "file": "Chek13_MRK_img.png",
+      "hashPath": "1/13",
+      "caption": "The device in the flower pot",
+      "section": "Guide",
+      "subsection": "Chekannaya 13 apartment building marked room"
+    },
+    {
+      "file": "Labs_Server_Room_Plant_Location.png",
+      "hashPath": "f/f2",
+      "caption": "Stashing location marked on map",
+      "section": "Guide",
+      "subsection": "Plant the hacking device in the server room in the Lab"
+    },
+    {
+      "file": "Labs_Server_Room_Plant_Location_2.png",
+      "hashPath": "5/5b",
+      "caption": "Stashing location next to the office chairs",
+      "section": "Guide",
+      "subsection": "Plant the hacking device in the server room in the Lab"
+    },
+    {
+      "file": "Saving_the_Mole_Map.png",
+      "hashPath": "e/e8",
+      "caption": "TerraGroup building location marked on map",
+      "section": "Guide",
+      "subsection": "Ground Zero (Level 21+)"
+    },
+    {
+      "file": "Ground_Zero_TerraGroup_Building.png",
+      "hashPath": "a/a8",
+      "caption": "The TerraGroup building",
+      "section": "Guide",
+      "subsection": "Ground Zero (Level 21+)"
+    },
+    {
+      "file": "Scientist's_Office.png",
+      "hashPath": "b/bc",
+      "caption": "Door to the office",
+      "section": "Guide",
+      "subsection": "Ground Zero (Level 21+)"
+    },
+    {
+      "file": "Blue_Fire_Note_on_the_Ground_Zero.png",
+      "hashPath": "c/ca",
+      "caption": "The note on the desk in the back right",
+      "section": "Guide",
+      "subsection": "Ground Zero (Level 21+)"
+    },
+    {
+      "file": "BlueChaletMapKTT.png",
+      "hashPath": "1/18",
+      "caption": "Chalet location marked on map",
+      "section": "Guide",
+      "subsection": "Lighthouse"
+    },
+    {
+      "file": "BlueFire2.png",
+      "hashPath": "b/b6",
+      "caption": "The bookshelf with the note",
+      "section": "Guide",
+      "subsection": "Lighthouse"
+    },
+    {
+      "file": "Blue_Fire_Office_in_the_laboratory_map.png",
+      "hashPath": "1/17",
+      "caption": "Office location marked on map",
+      "section": "Guide",
+      "subsection": "The Lab"
+    },
+    {
+      "file": "Blue_Fire_Note_in_the_Lab_01.png",
+      "hashPath": "e/e3",
+      "caption": "Desk with the note",
+      "section": "Guide",
+      "subsection": "The Lab"
+    },
+    {
+      "file": "Blue_Fire_Note_in_the_Lab_02.png",
+      "hashPath": "8/83",
+      "caption": "Note on the desk",
+      "section": "Guide",
+      "subsection": "The Lab"
+    },
+    {
+      "file": "PostOfficeMap.png",
+      "hashPath": "9/9a",
+      "caption": "Post office marked on map",
+      "section": "Guide",
+      "subsection": "Investigate the Rus Post office"
+    },
+    {
+      "file": "PostOffice.png",
+      "hashPath": "0/06",
+      "caption": "The post office",
+      "section": "Guide",
+      "subsection": "Investigate the Rus Post office"
+    },
+    {
+      "file": "Rus_Post_audio_tape_1_spawn.png",
+      "hashPath": "3/34",
+      "caption": "Tape #1 on the desk with the screen behind the counter",
+      "section": "Guide",
+      "subsection": "Investigate the Rus Post office"
+    },
+    {
+      "file": "Rus_Post_audio_tape_2_spawn.png",
+      "hashPath": "3/39",
+      "caption": "Tape #2 on top of the coffee vending machine next to the storage room",
+      "section": "Guide",
+      "subsection": "Investigate the Rus Post office"
+    },
+    {
+      "file": "Rus_Post_audio_tape_3_spawn.png",
+      "hashPath": "9/99",
+      "caption": "Tape #3 on the desk in the back office accessed through the hallway behind the counter",
+      "section": "Guide",
+      "subsection": "Investigate the Rus Post office"
+    },
+    {
+      "file": "Rus_Post_car_key_Location.png",
+      "hashPath": "9/98",
+      "caption": "The post car",
+      "section": "Guide",
+      "subsection": "Locate the Rus Post Car/Obtain the blueprint for Item 1156"
+    },
+    {
+      "file": "RusPostCarKeySpawn.png",
+      "hashPath": "4/49",
+      "caption": "The key next to the wheel",
+      "section": "Guide",
+      "subsection": "Locate the Rus Post Car/Obtain the blueprint for Item 1156"
+    },
+    {
+      "file": "The_Ticket_Item_1156_Specification_Spawn.png",
+      "hashPath": "1/1e",
+      "caption": "The blueprint",
+      "section": "Guide",
+      "subsection": "Locate the Rus Post Car/Obtain the blueprint for Item 1156"
+    }
   ]
 }

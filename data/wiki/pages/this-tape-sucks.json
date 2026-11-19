@@ -40,5 +40,49 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Slaughter videotape | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you first have to find the torture room inside The Labyrinth. Afterwards you have to obtain evidence of the torture in form of a videotape. There are multiple spawn locations near the room."
     }
+  ],
+  "images": [
+    {
+      "file": "Labryrinth_torture_room_map.png",
+      "hashPath": "e/e6",
+      "caption": "Torture room location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Labryrinth_torture_room.png",
+      "hashPath": "0/0f",
+      "caption": "The torture room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "This_Tape_Sucks_Spawn_1.png",
+      "hashPath": "4/43",
+      "caption": "Spawn 1: Under the door",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "This_Tape_Sucks_Spawn_2.png",
+      "hashPath": "9/9f",
+      "caption": "Spawn 2: In the wall opposite the room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "This_Tape_Sucks_Spawn_3.png",
+      "hashPath": "e/ec",
+      "caption": "Spawn 3: In the hand of a dead Scav on the ground under the arch opposite the room Note: The body doesn't always spawn, but the tape can still be there",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "This_Tape_Sucks_Spawn_4.png",
+      "hashPath": "6/61",
+      "caption": "Spawn 4: On top of bloody barrels adjacent to the arch opposite the room",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

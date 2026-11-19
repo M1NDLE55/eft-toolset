@@ -50,5 +50,28 @@
       "level": 2,
       "text": "- \"Or as that hairy-chested spy, Austin or whatever, the dude in glasses.\" from the dialogue is a reference to secret agent Austin Powers from the series \"Austin Powers\"."
     }
+  ],
+  "images": [
+    {
+      "file": "Gratitudemap.png",
+      "hashPath": "f/f1",
+      "caption": "Pier location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "GratitudeLocation.png",
+      "hashPath": "0/04",
+      "caption": "The pier at the sawmill",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "GrattitudeBarrels.png",
+      "hashPath": "7/79",
+      "caption": "Stashing location at the barrels",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

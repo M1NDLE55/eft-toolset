@@ -42,5 +42,14 @@
       "level": 2,
       "text": "In this quest you have to kill 10 Scavs around of the black and white pawn barrack buildings. Getting tagged and cursed on purpose can help with getting Scavs in the quest area."
     }
+  ],
+  "images": [
+    {
+      "file": "Pestcontrol.png",
+      "hashPath": "c/c0",
+      "caption": "Kill area marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

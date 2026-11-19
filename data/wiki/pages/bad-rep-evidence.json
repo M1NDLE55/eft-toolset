@@ -47,5 +47,28 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Secure Folder 0031 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to obtain secure folder 0031 from a bunkhouse on Customs. Even though the bunkhouse is locked, the item can be grabbed through the window, not requiring its key."
     }
+  ],
+  "images": [
+    {
+      "file": "Bad_Rep_Evidence_Customs.png",
+      "hashPath": "c/c7",
+      "caption": "Bunkhouse location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Customs-Portable-cabin-portable.png",
+      "hashPath": "d/d0",
+      "caption": "The bunkhouse",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Docs_0031_location.png",
+      "hashPath": "a/af",
+      "caption": "The secure folder on the table",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

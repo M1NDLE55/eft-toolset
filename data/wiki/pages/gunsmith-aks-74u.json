@@ -56,5 +56,21 @@
       "level": 4,
       "text": "- This build is based on a standard AKS-74U. You get one in the mail from Mechanic upon accepting this quest.\n- The stock has to be folded.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AKS-74U Zenit B-11 handguard | MechanicSkier | LL1 (Barter)LL1 |\n| AK-74 5.45x39 6L31 60-round magazine | PraporRef | LL2 (Barter) after The Punisher - Part 2; LL4LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "Gunsmithpart2Modding2.png",
+      "hashPath": "e/ec",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "Gunsmithpart2Modding.png",
+      "hashPath": "3/36",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

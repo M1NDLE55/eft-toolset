@@ -55,5 +55,56 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "HospitalMap.jpeg",
+      "hashPath": "4/4a",
+      "caption": "Hospital location marked on map",
+      "section": "Guide",
+      "subsection": "Reserve Case location"
+    },
+    {
+      "file": "Simple_Side_Job_Spawn_4.png",
+      "hashPath": "6/61",
+      "caption": "First case spawn on the ground facing north",
+      "section": "Guide",
+      "subsection": "Reserve Case location"
+    },
+    {
+      "file": "Simple_Side_Job_Spawn_3.png",
+      "hashPath": "6/66",
+      "caption": "Second case spawn in the circular sandbag fortification",
+      "section": "Guide",
+      "subsection": "Reserve Case location"
+    },
+    {
+      "file": "Simple_Side_Job_Spawn_1.png",
+      "hashPath": "0/0e",
+      "caption": "Third case spawn on the table facing north",
+      "section": "Guide",
+      "subsection": "Reserve Case location"
+    },
+    {
+      "file": "Simple_Side_Job_Spawn_2.png",
+      "hashPath": "e/e5",
+      "caption": "Fourth case spawn on the ground facing east",
+      "section": "Guide",
+      "subsection": "Reserve Case location"
+    },
+    {
+      "file": "Simple_Side_Job_Woods_Map.png",
+      "hashPath": "f/f1",
+      "caption": "Scav house location marked on map",
+      "section": "Guide",
+      "subsection": "Woods Stashing location"
+    },
+    {
+      "file": "Scav_House.png",
+      "hashPath": "0/08",
+      "caption": "The Scav house",
+      "section": "Guide",
+      "subsection": "Woods Stashing location"
+    }
   ]
 }

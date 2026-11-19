@@ -40,8 +40,10 @@ export function matchTasks(index: TaskIndex, input: string): string[] {
   return keysFor(index).get(compact(trimmed)) ?? [];
 }
 
-const needsComplete = (status: string[]) => status.includes("complete");
-const needsStart = (status: string[]) => !needsComplete(status) && status.includes("active");
+/** A requirement completing the other task satisfies. */
+export const needsComplete = (status: readonly string[]) => status.includes("complete");
+/** A requirement that starting the other task satisfies, without completing it. */
+export const needsStart = (status: readonly string[]) => !needsComplete(status) && status.includes("active");
 
 /** The completed tasks and, recursively, the tasks they had to complete first. */
 export function expandCompleted(index: TaskIndex, ids: Iterable<string>): Set<string> {

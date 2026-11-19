@@ -42,5 +42,21 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in Raid |\n| Gunpowder \"Kite\" | 3 | Required | N/A |\nThe required room is the \"Breach Room\" on Factory. Place 3x Gunpowder \"Kite\" while night time there.\nThe \"Breach Room\" is the room between the office and the locked room on the third floor. Each Gunpowder \"Kite\" takes 30 seconds to place, leading to a total placement time of 90 seconds. Closing the door to the breach room is recommended while placing them, as Scavs will wander down the hallway periodically. If you wish to complete this quest with little to no resistance it is recommended to bring a squad to defend you as you plant the items. You do not have to successfully extract to complete this quest."
     }
+  ],
+  "images": [
+    {
+      "file": "HCPP5.png",
+      "hashPath": "0/00",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_breach_room.png",
+      "hashPath": "a/a0",
+      "caption": "The door to the \"breach\" room where you plant the Gunpowder \"Kite\"",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

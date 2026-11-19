@@ -85,13 +85,17 @@ function inlineText(wikitext: string, title: string) {
   return wikitextToText(wikitext, title).replace(/\s+/g, " ").trim();
 }
 
-function stripHidden(text: string) {
+const HIDDEN_BLOCKS = /<(gallery|noinclude|includeonly|script|style|math|timeline|templatedata)\b[^>]*>[\s\S]*?<\/\1>/gi;
+const HIDDEN_BLOCKS_BUT_GALLERIES = /<(noinclude|includeonly|script|style|math|timeline|templatedata)\b[^>]*>[\s\S]*?<\/\1>/gi;
+
+/** What readers don't see: invisible characters, comments, references, hidden blocks and galleries (unless kept). */
+export function stripHidden(text: string, { keepGalleries = false } = {}) {
   return text
     .replace(INVISIBLE, "")
     .replace(/<!--[\s\S]*?(-->|$)/g, "")
     .replace(/<ref\b[^>]*\/>/gi, "")
     .replace(/<ref\b[^>]*>[\s\S]*?<\/ref>/gi, "")
-    .replace(/<(gallery|noinclude|includeonly|script|style|math|timeline|templatedata)\b[^>]*>[\s\S]*?<\/\1>/gi, "")
+    .replace(keepGalleries ? HIDDEN_BLOCKS_BUT_GALLERIES : HIDDEN_BLOCKS, "")
     .replace(/<(span|div)\b[^>]*display\s*:\s*none[^>]*>[\s\S]*?<\/\1>/gi, "")
     .replace(/__[A-Z]+__/g, "");
 }

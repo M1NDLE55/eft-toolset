@@ -45,5 +45,28 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work."
     }
+  ],
+  "images": [
+    {
+      "file": "Humanitarian_Supplies_Map.png",
+      "hashPath": "a/ac",
+      "caption": "Map with truck locations marked.",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Secondshorelineuntruck.png",
+      "hashPath": "2/2d",
+      "caption": "The first UN truck is located on the north side of the health resort, next to the tennis court.",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Firstshorelineuntruck.png",
+      "hashPath": "f/fa",
+      "caption": "The second UN truck is located at the construction site along the southern main road, near the crane.",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

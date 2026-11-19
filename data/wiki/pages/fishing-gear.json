@@ -44,5 +44,21 @@
       "level": 2,
       "text": "In this quest you have to stash the 2 specified items in a rowboat at the beach near the gas station on Shoreline. After accepting the quest you will be sent a MF-UNTAR body armor and a Leatherman Multitool via in-game mail. The Leatherman Multitool is not lootable from players and persists upon death as long as it is placed in a special item slot. Each item takes 10 seconds to stash."
     }
+  ],
+  "images": [
+    {
+      "file": "Map_Shorline-Fishing-Gear.png",
+      "hashPath": "6/6e",
+      "caption": "Rowboat stashing location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "FishingGear.png",
+      "hashPath": "f/f9",
+      "caption": "The wanted rowboat",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

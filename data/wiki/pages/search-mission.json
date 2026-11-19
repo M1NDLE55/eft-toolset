@@ -56,5 +56,56 @@
       "level": 4,
       "text": "The USEC camp is located in the northwest. The west and north-west approaches to the camp are covered with landmines.\n\nMined areas to avoid"
     }
+  ],
+  "images": [
+    {
+      "file": "Search_Mission_map.jpg",
+      "hashPath": "0/0c",
+      "caption": "Convoy location marked on map",
+      "section": "Guide",
+      "subsection": "Convoy location"
+    },
+    {
+      "file": "Search_Mission_Convoy.png",
+      "hashPath": "0/0c",
+      "caption": "The convoy",
+      "section": "Guide",
+      "subsection": "Convoy location"
+    },
+    {
+      "file": "Search_mission_camp.png",
+      "hashPath": "d/dd",
+      "caption": "The USEC camp",
+      "section": "Guide",
+      "subsection": "USEC camp location"
+    },
+    {
+      "file": "Woods_USEC_camp_northwest_approach_mines.png",
+      "hashPath": "a/ae",
+      "caption": "North-west approach view that leads to the mined forested area",
+      "section": "Guide",
+      "subsection": "USEC camp location"
+    },
+    {
+      "file": "Woods_USEC_camp_northwest_approach_mines2.png",
+      "hashPath": "1/15",
+      "caption": "View on the mined forested area from the camp, recognized by tree stumps, corpses and craters",
+      "section": "Guide",
+      "subsection": "USEC camp location"
+    },
+    {
+      "file": "Woods_USEC_camp_west_approach_mines2.png",
+      "hashPath": "e/e1",
+      "caption": "West rocks approach view with detonated mine spots",
+      "section": "Guide",
+      "subsection": "USEC camp location"
+    },
+    {
+      "file": "Woods_USEC_camp_west_approach_mines.png",
+      "hashPath": "e/ea",
+      "caption": "West ramp approach view with detonated mine spots",
+      "section": "Guide",
+      "subsection": "USEC camp location"
+    }
   ]
 }

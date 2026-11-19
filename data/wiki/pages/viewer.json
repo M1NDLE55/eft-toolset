@@ -50,5 +50,49 @@
       "level": 2,
       "text": "The quest dialogue and success message are referencing the rapidly increasing popularity of the game on the streaming platform Twitch, likely directly relating to the first \"Drops\" campaign, which was available from December 30, 2019 till January 5, 2020."
     }
+  ],
+  "images": [
+    {
+      "file": "Viewer_Woodsmap.png",
+      "hashPath": "d/d2",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ViewerWoodsLocationOverview.png",
+      "hashPath": "2/2c",
+      "caption": "Placement location surroundings",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ViewerWoodsLocation.png",
+      "hashPath": "2/29",
+      "caption": "Placement location",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_TerraGroup_Trail_-_Part_19_Lighthouse_Map.jpg",
+      "hashPath": "5/57",
+      "caption": "Lighthouse location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Lighthouse.png",
+      "hashPath": "b/be",
+      "caption": "The lighthouse",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ViewerFactoryLocation.png",
+      "hashPath": "5/54",
+      "caption": "Placement location",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

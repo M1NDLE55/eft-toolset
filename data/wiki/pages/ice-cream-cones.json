@@ -46,5 +46,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| AK-74 5.45x39 6L31 60-round magazine | 3 | Handover item | Yes | Can be crafted in the Hideout (Lavatory lv. 1). |\n| ZB-014 key | 1 | Optional | N/A | Unlocks the ZB-014 bunker on Woods. |\n\nThe locked section of the ZB-014 bunker on Woods mentioned by Prapor does not have a guaranteed chance for the wanted magazines, but they can be found there quite often. A ZB-014 key is required to enter it.\n\nThey can also be obtained from weapon boxes, green wooden crates or bosses and their guards, for example Sanitar."
     }
+  ],
+  "images": [
+    {
+      "file": "IceCreamConesWoods.png",
+      "hashPath": "9/9a",
+      "caption": "Bunker location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ZB-014-Bunker.png",
+      "hashPath": "2/29",
+      "caption": "The bunker entrance",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ZB-014-Door.png",
+      "hashPath": "2/27",
+      "caption": "Door to the locked section",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ZB-014_6L31_Magazines.png",
+      "hashPath": "9/9b",
+      "caption": "Magazines on the barrels and on the ground",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

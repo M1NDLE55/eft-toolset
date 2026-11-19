@@ -40,5 +40,21 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Gas analyzer | 2 | Handover item | Yes | Can be crafted in the Hideout (Workbench lv. 1). |\n| Gas analyzer | 1 | Required | N/A | Stashed item |\nThe Gas analyzer has to be stashed on the second floor of the laboratory on Daytime Factory, specifically at the window of the second room."
     }
+  ],
+  "images": [
+    {
+      "file": "ITARStrategyGamesMap.jpg",
+      "hashPath": "0/06",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "SanitaryStandardsStashingLocation.png",
+      "hashPath": "5/5e",
+      "caption": "Stashing location at the window",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -43,5 +43,21 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Health Resort west wing room 306 key | 1 | Required | N/A | Unlocks Health Resort west wing room 306 on Shoreline where the Secure Folder 0060 is located. |\n| Secure Folder 0060 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe Secure Folder 0060 can be found on Shoreline, in room 306 of the west wing at the Resort, located on a windowsill."
     }
+  ],
+  "images": [
+    {
+      "file": "Inside_West_wing_room_306.png",
+      "hashPath": "6/6d",
+      "caption": "Folder location on the windowsill",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "HealthCarePrivacyPart2Docs.png",
+      "hashPath": "4/4b",
+      "caption": "The folder",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

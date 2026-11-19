@@ -50,5 +50,28 @@
       "level": 2,
       "text": "- Vitamins - The BEAR counterpart quest"
     }
+  ],
+  "images": [
+    {
+      "file": "MarathonSecretsOfPolikhimCustomsMap.png",
+      "hashPath": "1/1b",
+      "caption": "Lab location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Supplements_Chemcont_Location_1.png",
+      "hashPath": "a/ae",
+      "caption": "On the table in the corner with the pinboards",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Supplements_Chemcont_Location_2.png",
+      "hashPath": "7/70",
+      "caption": "On the table in the corner with the display",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

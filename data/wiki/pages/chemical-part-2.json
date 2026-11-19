@@ -47,5 +47,28 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Dorm room 220 key | 1 | Required | N/A | Unlocks dorm room 220 in the three-story dorms on Customs where the Sliderkey Secure Flash drive and the Sealed letter with a TG logo are located. |\n| Sealed letter with a TG logo | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Sliderkey Secure Flash drive | 1 | Handover item | Yes |\nIn this quest you have to find a flash drive and a letter on Customs. They can be found in room 220 on the second floor of the three-story dorms building. A Dorm room 220 key is required to enter it. You get one in the mail from Skier upon accepting this quest.\n\nThe flash drive can be found plugged into the laptop on the desk, and the letter is tucked between the binders on the metal shelf."
     }
+  ],
+  "images": [
+    {
+      "file": "Chemical2Map.png",
+      "hashPath": "b/b9",
+      "caption": "3 story dorms and room 220 marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Sliderkey_Location.png",
+      "hashPath": "6/65",
+      "caption": "The flash drive plugged into the laptop",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Sealed_Letter_Location.png",
+      "hashPath": "2/25",
+      "caption": "The letter tucked between the binders",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

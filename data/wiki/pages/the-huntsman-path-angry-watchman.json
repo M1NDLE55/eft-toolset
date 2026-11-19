@@ -40,5 +40,14 @@
       "level": 2,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "DormsMap.png",
+      "hashPath": "f/fe",
+      "caption": "Kill area marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

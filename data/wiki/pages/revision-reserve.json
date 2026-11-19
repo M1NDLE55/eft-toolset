@@ -44,5 +44,42 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "Revision_Reserve_Map.jpg",
+      "hashPath": "c/c9",
+      "caption": "BMPs marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Revision_5.png",
+      "hashPath": "1/1e",
+      "caption": "First BMP-2 near the \"Scav Lands\" co-op extraction",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Revision_2.png",
+      "hashPath": "5/58",
+      "caption": "Second BMP-2 in the \"White Knight\" building",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Revision_1.png",
+      "hashPath": "1/1d",
+      "caption": "Third BMP-2 in the locked RB-ST room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Revision_3.png",
+      "hashPath": "2/26",
+      "caption": "Fourth BMP-2 next to the \"Checkpoint Fence\" Scav extraction",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -50,5 +50,35 @@
       "level": 3,
       "text": "Next to the Mira Ave extraction. Transits are only available 1 min after raid start."
     }
+  ],
+  "images": [
+    {
+      "file": "MarathonNewDayNewPathsGZMap.png",
+      "hashPath": "1/1e",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Ground Zero intersection"
+    },
+    {
+      "file": "MarathonNewDayNewPathsGZ.png",
+      "hashPath": "f/f1",
+      "caption": "The intersection",
+      "section": "Guide",
+      "subsection": "Ground Zero intersection"
+    },
+    {
+      "file": "Ground_Zero_to_Streets_of_Tarkov_Map.png",
+      "hashPath": "d/df",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Ground Zero to Streets of Tarkov"
+    },
+    {
+      "file": "Ground_Zero_to_Street_of_Tarkov.png",
+      "hashPath": "5/51",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Ground Zero to Streets of Tarkov"
+    }
   ]
 }

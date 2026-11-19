@@ -39,5 +39,35 @@
       "level": 2,
       "text": "Locate the three bodies of the people Therapist hired on Shoreline. These corpses will be covered with white shrouds. All three corpses must be found in a single raid. If you leave the raid and have only found some of the corpses, the quest will reset. You must extract in the same raid in which you found all the corpses.\n\nThe three corpses can be found in the following locations:"
     }
+  ],
+  "images": [
+    {
+      "file": "Shoreline_Colleagues-1.png",
+      "hashPath": "0/0b",
+      "caption": "Locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "2020-0.png",
+      "hashPath": "4/45",
+      "caption": "Under the tail of the helicopter in front of the resort",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "18-39.png",
+      "hashPath": "9/90",
+      "caption": "In the backyard of the locked cottage",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "17-11.png",
+      "hashPath": "5/53",
+      "caption": "In front of the office building at the pier",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

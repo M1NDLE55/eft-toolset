@@ -81,5 +81,168 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "RB-BK_lock_location.png",
+      "hashPath": "6/6c",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "RB-BK"
+    },
+    {
+      "file": "2019-10-28marked.png",
+      "hashPath": "3/3d",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "RB-BK"
+    },
+    {
+      "file": "RB-BK1.png",
+      "hashPath": "c/c9",
+      "caption": "Plant anywhere in the room",
+      "section": "Guide",
+      "subsection": "RB-BK"
+    },
+    {
+      "file": "RB-PKPM.png",
+      "hashPath": "1/1e",
+      "caption": "Room location marked on underground map",
+      "section": "Guide",
+      "subsection": "RB-PKPM"
+    },
+    {
+      "file": "RBPKPM_Entrance.png",
+      "hashPath": "c/c1",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "RB-PKPM"
+    },
+    {
+      "file": "PKPM-Room.png",
+      "hashPath": "0/0e",
+      "caption": "Plant anywhere in the room",
+      "section": "Guide",
+      "subsection": "RB-PKPM"
+    },
+    {
+      "file": "RB-VO_lock_location.png",
+      "hashPath": "5/50",
+      "caption": "Room location marked on map",
+      "section": "Guide",
+      "subsection": "RB-VO"
+    },
+    {
+      "file": "RB-VO.png",
+      "hashPath": "f/f9",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "RB-VO"
+    },
+    {
+      "file": "AbandonedFactoryNorthernBuilding.png",
+      "hashPath": "2/20",
+      "caption": "Room location in the northern building marked on map",
+      "section": "Guide",
+      "subsection": "Abandoned factory"
+    },
+    {
+      "file": "FactoryMarkedRoomOutside.png",
+      "hashPath": "1/11",
+      "caption": "Room in the building and basement entrance marked",
+      "section": "Guide",
+      "subsection": "Abandoned factory"
+    },
+    {
+      "file": "MarkedRoomFromStairsView.png",
+      "hashPath": "d/d4",
+      "caption": "View to the room from second floor staircase",
+      "section": "Guide",
+      "subsection": "Abandoned factory"
+    },
+    {
+      "file": "FactoryMarkedRoomDoor.png",
+      "hashPath": "4/44",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "Abandoned factory"
+    },
+    {
+      "file": "FactoryMarkedRoomInside3.png",
+      "hashPath": "8/87",
+      "caption": "Plant anywhere in the room",
+      "section": "Guide",
+      "subsection": "Abandoned factory"
+    },
+    {
+      "file": "Mysterious_marked_key_onmap.png",
+      "hashPath": "3/33",
+      "caption": "Room marked on map",
+      "section": "Guide",
+      "subsection": "Mysterious room"
+    },
+    {
+      "file": "Mysterious_key_building_entrance.png",
+      "hashPath": "c/cc",
+      "caption": "Entrance to the building through a window from the courtyard",
+      "section": "Guide",
+      "subsection": "Mysterious room"
+    },
+    {
+      "file": "Mysterious_key_path1.png",
+      "hashPath": "e/ea",
+      "caption": "Once inside, get in the corridor and move to the second room on the left",
+      "section": "Guide",
+      "subsection": "Mysterious room"
+    },
+    {
+      "file": "Mysterious_key_path2.png",
+      "hashPath": "a/a3",
+      "caption": "In the bedroom, go through the hole in the wall",
+      "section": "Guide",
+      "subsection": "Mysterious room"
+    },
+    {
+      "file": "Mysterious_key_path3.png",
+      "hashPath": "2/27",
+      "caption": "After going through the hole, get downstairs and open the door to the left",
+      "section": "Guide",
+      "subsection": "Mysterious room"
+    },
+    {
+      "file": "Mysterious_key_room_door.png",
+      "hashPath": "9/96",
+      "caption": "You get in front of the door to unlock",
+      "section": "Guide",
+      "subsection": "Mysterious room"
+    },
+    {
+      "file": "Mysterious_key_room.png",
+      "hashPath": "d/d4",
+      "caption": "Plant anywhere inside the room",
+      "section": "Guide",
+      "subsection": "Mysterious room"
+    },
+    {
+      "file": "TheCultPart2DormsMap.png",
+      "hashPath": "5/5f",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "Marked_Room_Door.png",
+      "hashPath": "8/84",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": "Customs"
+    },
+    {
+      "file": "Marked_Room_Room.png",
+      "hashPath": "e/e3",
+      "caption": "Plant anywhere inside the room",
+      "section": "Guide",
+      "subsection": "Customs"
+    }
   ]
 }

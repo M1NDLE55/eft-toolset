@@ -130,5 +130,266 @@
       "level": 4,
       "text": "- +64,000 EXP\n- Unlocks achievement Pay Your Debt"
     }
+  ],
+  "images": [
+    {
+      "file": "Accidental_Witness_Map.png",
+      "hashPath": "0/03",
+      "caption": "Car location marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Accidental_Witness_Car.png",
+      "hashPath": "6/63",
+      "caption": "The wanted car",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Customs_2_Story_Dorms_Map.png",
+      "hashPath": "0/0c",
+      "caption": "Two-story dorms location marked on map",
+      "section": "Guide",
+      "subsection": "Figure out where Kozlov lived/Read the note on Kozlov's door"
+    },
+    {
+      "file": "Room_110_Door.png",
+      "hashPath": "2/25",
+      "caption": "Door to the room, note on the wall",
+      "section": "Guide",
+      "subsection": "Figure out where Kozlov lived/Read the note on Kozlov's door"
+    },
+    {
+      "file": "Letter_from_Kozlov's_room_spawn.png",
+      "hashPath": "4/44",
+      "caption": "The letter on the nightstand",
+      "section": "Guide",
+      "subsection": "Find out what Kozlov was involved in"
+    },
+    {
+      "file": "AccidentalWitnessKozlovOptionalNote.png",
+      "hashPath": "0/05",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Find out what Kozlov was involved in"
+    },
+    {
+      "file": "Zmeevsky3Apt8Map.png",
+      "hashPath": "3/36",
+      "caption": "Zmeisky 3 location marked on map",
+      "section": "Guide",
+      "subsection": "Access Skier's accomplice's apartment"
+    },
+    {
+      "file": "Zmeevsky3Building.png",
+      "hashPath": "d/d1",
+      "caption": "The Zmeisky 3 building with entrance marked",
+      "section": "Guide",
+      "subsection": "Access Skier's accomplice's apartment"
+    },
+    {
+      "file": "Zmeevsky3Door2.png",
+      "hashPath": "2/25",
+      "caption": "Door to apartment 7",
+      "section": "Guide",
+      "subsection": "Access Skier's accomplice's apartment"
+    },
+    {
+      "file": "The_Ninth_Circle_Issue_19_Spawn_1.png",
+      "hashPath": "5/56",
+      "caption": "First spawn on the wall to the right after entering the living room",
+      "section": "Guide",
+      "subsection": "The Ninth Circle Issue #19"
+    },
+    {
+      "file": "The_Ninth_Circle_Issue_19_Spawn_2.png",
+      "hashPath": "b/b5",
+      "caption": "Second spawn on the wall next to the armchair",
+      "section": "Guide",
+      "subsection": "The Ninth Circle Issue #19"
+    },
+    {
+      "file": "Tarkov_Herald_summary_Spawn_3.png",
+      "hashPath": "3/3a",
+      "caption": "First spawn in the bottom compartment of the shelf next to the TV",
+      "section": "Guide",
+      "subsection": "Tarkov Herald summary"
+    },
+    {
+      "file": "Tarkov_Herald_summary_Spawn_1.png",
+      "hashPath": "7/73",
+      "caption": "Second spawn on the armchair",
+      "section": "Guide",
+      "subsection": "Tarkov Herald summary"
+    },
+    {
+      "file": "Tarkov_Herald_summary_Spawn_2.png",
+      "hashPath": "1/17",
+      "caption": "Third spawn in the bottom compartment of the bookshelf",
+      "section": "Guide",
+      "subsection": "Tarkov Herald summary"
+    },
+    {
+      "file": "FSB_Report_Spawn_1.png",
+      "hashPath": "c/c1",
+      "caption": "First spawn in one of the drawers below the TV",
+      "section": "Guide",
+      "subsection": "FSB report"
+    },
+    {
+      "file": "FSB_Report_Spawn_2.png",
+      "hashPath": "1/19",
+      "caption": "Second spawn on the windowsill next to the TV",
+      "section": "Guide",
+      "subsection": "FSB report"
+    },
+    {
+      "file": "The_Ninth_Circle_Issue_14_Spawn_1.png",
+      "hashPath": "2/2d",
+      "caption": "First spawn on the wall next to the kitchen door",
+      "section": "Guide",
+      "subsection": "The Ninth Circle Issue #14"
+    },
+    {
+      "file": "The_Ninth_Circle_Issue_14_Spawn_2.png",
+      "hashPath": "d/df",
+      "caption": "Second spawn on the right side wall in the kitchen",
+      "section": "Guide",
+      "subsection": "The Ninth Circle Issue #14"
+    },
+    {
+      "file": "AccidentalWitnessAnastasiaBuildingMap.png",
+      "hashPath": "c/c5",
+      "caption": "Building location marked on map",
+      "section": "Guide",
+      "subsection": "Locate Anastasia's apartment"
+    },
+    {
+      "file": "AccidentalWitnessAnastasiaBuildingEntrance.png",
+      "hashPath": "f/f0",
+      "caption": "Building entrance",
+      "section": "Guide",
+      "subsection": "Locate Anastasia's apartment"
+    },
+    {
+      "file": "AccidentalWitnessAnastasiaApartmentDoor.png",
+      "hashPath": "6/62",
+      "caption": "Door to apartment 7",
+      "section": "Guide",
+      "subsection": "Locate Anastasia's apartment"
+    },
+    {
+      "file": "AccidentalWitnessAnastasiaMailboxNote1.png",
+      "hashPath": "d/dd",
+      "caption": "The newspaper",
+      "section": "Guide",
+      "subsection": "Learn more about Anastasia/Investigate the entrance of Anastasia's building"
+    },
+    {
+      "file": "AccidentalWitnessAnastasiaMailboxNote2.png",
+      "hashPath": "f/fb",
+      "caption": "The letter",
+      "section": "Guide",
+      "subsection": "Learn more about Anastasia/Investigate the entrance of Anastasia's building"
+    },
+    {
+      "file": "AccidentalWitnessPashaMap.png",
+      "hashPath": "7/7b",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Locate courier Pasha/Search the ambush spot"
+    },
+    {
+      "file": "AccidentalWitnessPashaLocation.png",
+      "hashPath": "f/f6",
+      "caption": "The ambush spot",
+      "section": "Guide",
+      "subsection": "Locate courier Pasha/Search the ambush spot"
+    },
+    {
+      "file": "AccidentalWitnessPashaNote.png",
+      "hashPath": "4/43",
+      "caption": "The note",
+      "section": "Guide",
+      "subsection": "Locate courier Pasha/Search the ambush spot"
+    },
+    {
+      "file": "ReshalasBunkhouseKeyMap.png",
+      "hashPath": "8/89",
+      "caption": "Bunkhouse location marked on map",
+      "section": "Guide",
+      "subsection": "Locate and investigate Reshala's stash"
+    },
+    {
+      "file": "ReshalasBunkhouse.png",
+      "hashPath": "5/5c",
+      "caption": "Door to the bunkhouse",
+      "section": "Guide",
+      "subsection": "Locate and investigate Reshala's stash"
+    },
+    {
+      "file": "AccidentalWitnessReshalasStashNote1.png",
+      "hashPath": "8/8e",
+      "caption": "First note on the left wall",
+      "section": "Guide",
+      "subsection": "Locate and investigate Reshala's stash"
+    },
+    {
+      "file": "AccidentalWitnessReshalasStashNote2.png",
+      "hashPath": "1/1f",
+      "caption": "Second note on the stool",
+      "section": "Guide",
+      "subsection": "Locate and investigate Reshala's stash"
+    },
+    {
+      "file": "AccidentalWitnessReshalasStashNote3.png",
+      "hashPath": "9/90",
+      "caption": "Third note on the right wall",
+      "section": "Guide",
+      "subsection": "Locate and investigate Reshala's stash"
+    },
+    {
+      "file": "AccidentalWitnessKozlovsHideoutMap.png",
+      "hashPath": "5/51",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Locate Kozlov's hideout and obtain his evidence"
+    },
+    {
+      "file": "AccidentalWitnessKozlovsHideout1.png",
+      "hashPath": "8/89",
+      "caption": "View on the house from the street",
+      "section": "Guide",
+      "subsection": "Locate Kozlov's hideout and obtain his evidence"
+    },
+    {
+      "file": "AccidentalWitnessKozlovsHideout2.png",
+      "hashPath": "4/40",
+      "caption": "The house",
+      "section": "Guide",
+      "subsection": "Locate Kozlov's hideout and obtain his evidence"
+    },
+    {
+      "file": "AccidentalWitnessKozlovsHideoutTapeFar.png",
+      "hashPath": "5/59",
+      "caption": "The flower bed",
+      "section": "Guide",
+      "subsection": "Locate Kozlov's hideout and obtain his evidence"
+    },
+    {
+      "file": "AccidentalWitnessKozlovsHideoutTapeClose.png",
+      "hashPath": "e/e2",
+      "caption": "The tape",
+      "section": "Guide",
+      "subsection": "Locate Kozlov's hideout and obtain his evidence"
+    },
+    {
+      "file": "AccidentalWitnessKozlovsHideoutOptionalPhoto.png",
+      "hashPath": "d/d7",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Locate Kozlov's hideout and obtain his evidence"
+    }
   ]
 }

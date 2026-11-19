@@ -50,5 +50,35 @@
       "level": 2,
       "text": "During The Labyrinth event, this quest unlocked the Dungeon Master achievement."
     }
+  ],
+  "images": [
+    {
+      "file": "Keepers_Word_map.png",
+      "hashPath": "2/2f",
+      "caption": "Stashing locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Keepers_Word_location_1.png",
+      "hashPath": "b/b3",
+      "caption": "Location 1 at the Minotaur shrine.",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Keepers_Word_location_2.png",
+      "hashPath": "3/3c",
+      "caption": "Location 2 at the Minotaur shrine.",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Keepers_Word_location_3.png",
+      "hashPath": "6/68",
+      "caption": "Location 3 in the corpse room. Corpse room key required.",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

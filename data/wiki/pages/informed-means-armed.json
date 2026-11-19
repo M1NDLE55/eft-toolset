@@ -48,5 +48,42 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera | 2 | Required | N/A | Can be purchased from Mechanic LL1. |\nPlacing each camera requires you to be stationary for 20 seconds, so be sure to secure the area first.\n\nThe first camera needs to be placed on top of a box in the \"Brutal\" store on Interchange.\n\nThe second camera needs to be placed in a pile of wooden planks next to the sawmill pier on Woods."
     }
+  ],
+  "images": [
+    {
+      "file": "Kiba_Arms_store_camera_Interhange_map.png",
+      "hashPath": "7/7a",
+      "caption": "Map with \"Brutal\" store camera location",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Informed_means_armed_overlook.png",
+      "hashPath": "8/8a",
+      "caption": "Box where the camera needs to be placed as seen from Kiba door",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Informed_means_armed_placement.png",
+      "hashPath": "7/7c",
+      "caption": "Placement, looking out on Kiba",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Pier_camera_Woods_map.png",
+      "hashPath": "e/ed",
+      "caption": "Map with pier camera location",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Pier.png",
+      "hashPath": "f/f2",
+      "caption": "Pile of wooden planks next to the pier where the camera needs to be placed",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

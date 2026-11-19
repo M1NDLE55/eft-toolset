@@ -45,5 +45,28 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Signal Jammer | 2 | Required | N/A | Can be purchased from Mechanic LL1. |\nIn this quest you have to locate two antennas on Shoreline and place a Signal Jammer on them."
     }
+  ],
+  "images": [
+    {
+      "file": "SignalPart1Guide.jpg",
+      "hashPath": "3/30",
+      "caption": "Locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Signal1.png",
+      "hashPath": "3/31",
+      "caption": "Antenna #1 on the roof of the health resort west wing",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Signal2.png",
+      "hashPath": "5/5f",
+      "caption": "Antenna #2 at the weather station",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

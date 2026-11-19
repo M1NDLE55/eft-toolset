@@ -60,5 +60,49 @@
       "level": 3,
       "text": "At the sandbag position on top of the eastern storage warehouse marked with \"Д\" (\"Bunker Hermetic Door\" extraction)."
     }
+  ],
+  "images": [
+    {
+      "file": "MarathonSpecialCommsWoodsMap.png",
+      "hashPath": "7/73",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Woods Stashing location"
+    },
+    {
+      "file": "MarathonSpecialCommsWoods.png",
+      "hashPath": "4/4a",
+      "caption": "Stashing location",
+      "section": "Guide",
+      "subsection": "Woods Stashing location"
+    },
+    {
+      "file": "WoodsTransitToReserve.png",
+      "hashPath": "1/19",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Woods to Reserve"
+    },
+    {
+      "file": "WoodsTransitToReserve2.png",
+      "hashPath": "4/47",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Woods to Reserve"
+    },
+    {
+      "file": "MarathonSpecialCommsReserveMap.png",
+      "hashPath": "a/af",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Reserve Stashing Location"
+    },
+    {
+      "file": "MarathonSpecialCommsReserve.png",
+      "hashPath": "f/ff",
+      "caption": "Stashing location",
+      "section": "Guide",
+      "subsection": "Reserve Stashing Location"
+    }
   ]
 }

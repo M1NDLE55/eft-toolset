@@ -42,5 +42,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Knossos LLC facility key | 1 | Required | N/A | Unlocks the door to the transit. |\nIn this quest you have to transit from Shoreline to The Labyrinth. The transit is located in the basement of the health resort west wing and requires a Labrys access keycard. The door to the transit is locked and requires the Knossos LLC facility key. Surviving the raid is not required."
     }
+  ],
+  "images": [
+    {
+      "file": "Vitamins1_Shoreline_outdoor_map.png",
+      "hashPath": "e/e6",
+      "caption": "Health resort west wing location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_Labyrinth_Transit_Map.png",
+      "hashPath": "b/be",
+      "caption": "Transit location marked on west wing basement map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_Labyrinth_Transit_Door.png",
+      "hashPath": "9/9e",
+      "caption": "Door to the transit",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_Labyrinth_Transit.png",
+      "hashPath": "5/58",
+      "caption": "The transit",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

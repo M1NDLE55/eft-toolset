@@ -60,5 +60,49 @@
       "level": 4,
       "text": "On the shelves in the storage room in the back of the store behind the big bar counter."
     }
+  ],
+  "images": [
+    {
+      "file": "Luxurious_Life_Map.png",
+      "hashPath": "c/c5",
+      "caption": "Liquor store marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "ASAP_Winery.png",
+      "hashPath": "2/21",
+      "caption": "The \"ASAP winery\" liquor store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Luxurious_Life_Spawn_3.png",
+      "hashPath": "0/0c",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "First spawn"
+    },
+    {
+      "file": "Luxurious_Life_Spawn_1.png",
+      "hashPath": "d/d4",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Second spawn"
+    },
+    {
+      "file": "Luxurious_Life_Spawn_2.png",
+      "hashPath": "8/8e",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Third spawn"
+    },
+    {
+      "file": "Luxurious_Life_Spawn_4_5_6.png",
+      "hashPath": "0/05",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Fourth/Fifth/Sixth spawn"
+    }
   ]
 }

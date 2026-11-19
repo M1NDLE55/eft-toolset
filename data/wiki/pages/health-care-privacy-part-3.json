@@ -42,5 +42,28 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Blood sample | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe wanted minivan is located at the shore on the eastern side of the lake on Woods. The blood sample needs to be taken from the right sliding door."
     }
+  ],
+  "images": [
+    {
+      "file": "WoodsVanLocation.png",
+      "hashPath": "d/dc",
+      "caption": "Minivan location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_car_by_the_lake.png",
+      "hashPath": "1/11",
+      "caption": "Minivan by the lake",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_blood_sample.png",
+      "hashPath": "c/cd",
+      "caption": "Blood sample location",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

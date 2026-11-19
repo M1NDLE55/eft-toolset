@@ -50,5 +50,119 @@
       "level": 4,
       "text": "- On and around the round table with the cat statues in the recreational area (R21) on the second level.\n\n- Behind the screen on the desk in Kruglov's office (R22) on the second level.\n\n- On a desk in office O23 on the second level."
     }
+  ],
+  "images": [
+    {
+      "file": "InfectedCivilian.png",
+      "hashPath": "5/5a",
+      "caption": "Infected civilian",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "InfectedLabTechnician.png",
+      "hashPath": "d/d0",
+      "caption": "Infected lab technician",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "InfectedPMC.png",
+      "hashPath": "1/16",
+      "caption": "Infected PMC",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "InfectedBlackDivision.png",
+      "hashPath": "8/8d",
+      "caption": "Infected Black Division operative",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Lab_Round_Table_Map.png",
+      "hashPath": "9/9c",
+      "caption": "Table location marked on map",
+      "section": "Guide",
+      "subsection": "Parking extraction - Car keys"
+    },
+    {
+      "file": "Car_keys_spawn_1.png",
+      "hashPath": "0/0d",
+      "caption": "First spawn",
+      "section": "Guide",
+      "subsection": "Parking extraction - Car keys"
+    },
+    {
+      "file": "Car_keys_spawn_2.png",
+      "hashPath": "8/85",
+      "caption": "Second spawn",
+      "section": "Guide",
+      "subsection": "Parking extraction - Car keys"
+    },
+    {
+      "file": "Car_keys_spawn_3.png",
+      "hashPath": "8/8e",
+      "caption": "Third spawn",
+      "section": "Guide",
+      "subsection": "Parking extraction - Car keys"
+    },
+    {
+      "file": "P23_office_map.png",
+      "hashPath": "b/b2",
+      "caption": "Office location marked on map",
+      "section": "Guide",
+      "subsection": "Parking extraction - Car keys"
+    },
+    {
+      "file": "Car_keys_spawn_4.png",
+      "hashPath": "b/b3",
+      "caption": "The head",
+      "section": "Guide",
+      "subsection": "Parking extraction - Car keys"
+    },
+    {
+      "file": "Collector_map_spawn_1.png",
+      "hashPath": "6/61",
+      "caption": "First spawn",
+      "section": "Guide",
+      "subsection": "Sewage Conduit extraction - Collector map"
+    },
+    {
+      "file": "Collector_map_spawn_2.png",
+      "hashPath": "5/59",
+      "caption": "Second spawn",
+      "section": "Guide",
+      "subsection": "Sewage Conduit extraction - Collector map"
+    },
+    {
+      "file": "Kruglov's_office_map.png",
+      "hashPath": "2/20",
+      "caption": "Office location marked on map",
+      "section": "Guide",
+      "subsection": "Sewage Conduit extraction - Collector map"
+    },
+    {
+      "file": "Kruglov's_office_door.png",
+      "hashPath": "7/77",
+      "caption": "Door to the office",
+      "section": "Guide",
+      "subsection": "Sewage Conduit extraction - Collector map"
+    },
+    {
+      "file": "Collector_map_spawn_3.png",
+      "hashPath": "4/49",
+      "caption": "The desk with the screen",
+      "section": "Guide",
+      "subsection": "Sewage Conduit extraction - Collector map"
+    },
+    {
+      "file": "Collector_map_spawn_4.png",
+      "hashPath": "e/e1",
+      "caption": "The desk",
+      "section": "Guide",
+      "subsection": "Sewage Conduit extraction - Collector map"
+    }
   ]
 }

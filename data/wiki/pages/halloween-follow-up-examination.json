@@ -50,5 +50,56 @@
       "level": 4,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "Follow-Up_Examination_Lab_Spawn_4.png",
+      "hashPath": "e/e8",
+      "caption": "At the reception on the first level",
+      "section": "Guide",
+      "subsection": "Infected Lab"
+    },
+    {
+      "file": "Follow-Up_Examination_Lab_Spawn_2.png",
+      "hashPath": "1/18",
+      "caption": "In the tented area near the TerraGroup Labs keycard (Blue) room on the first level",
+      "section": "Guide",
+      "subsection": "Infected Lab"
+    },
+    {
+      "file": "Follow-Up_Examination_Lab_Spawn_1.png",
+      "hashPath": "a/ae",
+      "caption": "In the tunnel leading to \"Sewage Conduit\" extraction in the basement",
+      "section": "Guide",
+      "subsection": "Infected Lab"
+    },
+    {
+      "file": "Follow-Up_Examination_Lab_Spawn_3.png",
+      "hashPath": "0/00",
+      "caption": "In the center of the main working area (O11) on the first level",
+      "section": "Guide",
+      "subsection": "Infected Lab"
+    },
+    {
+      "file": "Follow-Up_Examination_Factory_Spawn_1.png",
+      "hashPath": "e/e6",
+      "caption": "Outside of the laboratory",
+      "section": "Guide",
+      "subsection": "Infected Factory"
+    },
+    {
+      "file": "Follow-Up_Examination_Factory_Spawn_2.png",
+      "hashPath": "4/4f",
+      "caption": "Near to the pumping station on top of the tanks",
+      "section": "Guide",
+      "subsection": "Infected Factory"
+    },
+    {
+      "file": "Follow-Up_Examination_Factory_Spawn_3.png",
+      "hashPath": "9/98",
+      "caption": "Next to the offices against a pile of rubble",
+      "section": "Guide",
+      "subsection": "Infected Factory"
+    }
   ]
 }

@@ -40,5 +40,42 @@
       "level": 2,
       "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| UAV SAS disk 1 | UAV SAS disk #1 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| UAV SAS disk 2 | UAV SAS disk #2 | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to obtain two disks from crashed UAV drones on Shoreline."
     }
+  ],
+  "images": [
+    {
+      "file": "Eagle_Eye_Locations.png",
+      "hashPath": "2/20",
+      "caption": "Drones marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Firstshorelineuav.png",
+      "hashPath": "c/c2",
+      "caption": "The first UAV is located near the smuggler base",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Secondshorelineuav.png",
+      "hashPath": "5/5d",
+      "caption": "The second UAV is located east of the swamp village",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Shorelineuavsidepanel.png",
+      "hashPath": "6/68",
+      "caption": "The SAS disks can be found behind the side panels of the UAVs. Open up the panels to retrieve the disks",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "SAS_disk_in_drone.png",
+      "hashPath": "7/77",
+      "caption": "Opened panel with disk",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

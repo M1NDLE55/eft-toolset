@@ -45,5 +45,42 @@
       "level": 2,
       "text": "In this quest you have to extract from Streets of Tarkov via the \"Klimov Street\" extraction with the \"survived\" status. For the extraction to open, you have to shoot a green flare into the sky while being inside the signal flare area. Upon entering the signal flare area, a notifcation will pop up in the bottom right corner of the screen: If the flare doesn't reach a certain height, the extraction won't open. If the flare was fired correctly, a new notification pops up: You can use either the handheld RSP-30 green flare provided by Jaeger via in-game mail or a 26x75mm green flare cartridge fired from a signal pistol. If you use the handheld RSP-30 green flare, make sure to aim it upwards, but not too much or it lands behind you. If you need additional flares you can buy them from Jaeger. To avoid the \"run through\" status, gain at least 200 EXP in raid (by killing or looting) or be in raid for at least 7 minutes before extracting."
     }
+  ],
+  "images": [
+    {
+      "file": "KlimovStreetSignalAreaNote.png",
+      "hashPath": "2/22",
+      "caption": null,
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "FlareSuccessNote.png",
+      "hashPath": "7/7f",
+      "caption": null,
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "CeaseFireMap.png",
+      "hashPath": "b/b4",
+      "caption": "Extraction marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "KlimovStreetExtraction.png",
+      "hashPath": "1/1a",
+      "caption": "The extraction",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "KlimovStreetSignalArea.png",
+      "hashPath": "1/11",
+      "caption": "Signal flare area and extract zone map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -60,5 +60,70 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "Provide_Viewership_map.png",
+      "hashPath": "c/ca",
+      "caption": "Kill area marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Provide_Viewership_building.png",
+      "hashPath": "2/2a",
+      "caption": "The industrial plant",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Provide_Viewership_spot_4.png",
+      "hashPath": "9/94",
+      "caption": "Camera 4: In the garage at the stacked barrels in front of the truck",
+      "section": "Guide",
+      "subsection": "Camera 4 and 2 - First floor garage and northern building"
+    },
+    {
+      "file": "Provide_Viewership_4_to_2.png",
+      "hashPath": "5/54",
+      "caption": "Way from camera spot 4 to spot 2",
+      "section": "Guide",
+      "subsection": "Camera 4 and 2 - First floor garage and northern building"
+    },
+    {
+      "file": "Provide_Viewership_spot_2.png",
+      "hashPath": "a/a1",
+      "caption": "Camera 2: In the northern building at brick pallets",
+      "section": "Guide",
+      "subsection": "Camera 4 and 2 - First floor garage and northern building"
+    },
+    {
+      "file": "Provide_Viewership_spot_1_way.png",
+      "hashPath": "b/b1",
+      "caption": "Staircase to the third floor on the second floor",
+      "section": "Guide",
+      "subsection": "Camera 1 - Third floor northern building"
+    },
+    {
+      "file": "Provide_Viewership_spot_1.png",
+      "hashPath": "7/72",
+      "caption": "Camera 1: At the three blue barrels farthest from the staircase",
+      "section": "Guide",
+      "subsection": "Camera 1 - Third floor northern building"
+    },
+    {
+      "file": "Provide_Viewership_spot_3_way.png",
+      "hashPath": "f/f1",
+      "caption": "Connector to the southern building next to the staircase on the second floor of the northern building",
+      "section": "Guide",
+      "subsection": "Camera 3 - Second floor southern building"
+    },
+    {
+      "file": "Provide_Viewership_spot_3.png",
+      "hashPath": "2/2a",
+      "caption": "Camera 3: At the pipes to the left after leaving the connector",
+      "section": "Guide",
+      "subsection": "Camera 3 - Second floor southern building"
+    }
   ]
 }

@@ -51,5 +51,28 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Hard drive with false data | 1 | Required | N/A | Stashed item |\nIn this quest you first have to stash the hard drive provided in your off-raid quest inventory at the servers within the main working area (O11) on the first level of The Lab. It is not lost upon death. Afterwards you have to extract through the \"Ventilation Shaft\" extraction in the same raid. It can only be used without a backpack equipped."
     }
+  ],
+  "images": [
+    {
+      "file": "Trust_but_Verify_map.png",
+      "hashPath": "d/dd",
+      "caption": "Stashing and extraction locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Trust_but_Verify_location.png",
+      "hashPath": "7/7b",
+      "caption": "The stashing location",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "LabsVentilationShaftExtract.png",
+      "hashPath": "8/8d",
+      "caption": "The extraction",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

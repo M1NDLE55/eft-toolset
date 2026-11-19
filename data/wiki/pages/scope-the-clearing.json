@@ -41,5 +41,35 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| WI-FI Camera | 3 | Required | N/A | Can be purchased from Mechanic LL1. |\nIn this quest you have to stash 3 WI-FI Cameras in the north of Lighthouse."
     }
+  ],
+  "images": [
+    {
+      "file": "Scope_the_Clearing_Map.png",
+      "hashPath": "8/84",
+      "caption": "Stashing locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Scope_the_Clearing_Location_1.png",
+      "hashPath": "3/38",
+      "caption": "First train platform stashing location at a package pile",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Scope_the_Clearing_Location_2.png",
+      "hashPath": "f/fc",
+      "caption": "Second train platform stashing location at a package pile",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Scope_the_Clearing_Location_3.png",
+      "hashPath": "7/72",
+      "caption": "Woods transit stashing location at the turned over car",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -47,5 +47,21 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Dorm room 203 key | 1 | Required | N/A | Unlocks dorm room 203 in the three-story dorms on Customs where the Bank case is located. |\n| Bank case | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find a bank case on Customs. It can be found under the bed in room 203 on the second floor of the three-story dorms building. A Dorm room 203 key is required to enter it."
     }
+  ],
+  "images": [
+    {
+      "file": "Shaking_up_teller_customs_map.png",
+      "hashPath": "8/8c",
+      "caption": "3 story dorms and room 203 marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Bank_case_location.png",
+      "hashPath": "9/91",
+      "caption": "The bank case under the bed",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

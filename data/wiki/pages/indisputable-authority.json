@@ -39,5 +39,14 @@
       "level": 2,
       "text": "In this quest you to have to kill Shadow of Tagilla and 6 Scavs inside The Labyrinth."
     }
+  ],
+  "images": [
+    {
+      "file": "ShadowOfTagilla.png",
+      "hashPath": "b/b5",
+      "caption": "Shadow of Tagilla",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

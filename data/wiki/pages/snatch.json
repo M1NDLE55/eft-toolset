@@ -56,5 +56,84 @@
       "level": 4,
       "text": "The original intelligence can be found tucked in the right side tracks of a BMP-2 which is located in a locked room inside the bigger of the two garage buildings at the repair center (white knight) on Reserve. A RB-ST key is required to open the door. The forged intelligence has to be placed at the back of the BMP-2."
     }
+  ],
+  "images": [
+    {
+      "file": "SnatchContainerMap.png",
+      "hashPath": "6/65",
+      "caption": "Containers marked on map",
+      "section": "Guide",
+      "subsection": "Forged intelligence locations on Lighthouse"
+    },
+    {
+      "file": "SnatchContainer.png",
+      "hashPath": "0/09",
+      "caption": "The green container",
+      "section": "Guide",
+      "subsection": "Forged intelligence locations on Lighthouse"
+    },
+    {
+      "file": "SnatchContainerInside.png",
+      "hashPath": "e/ee",
+      "caption": "Inside the green container",
+      "section": "Guide",
+      "subsection": "Forged intelligence locations on Lighthouse"
+    },
+    {
+      "file": "SnatchForgedIntel.png",
+      "hashPath": "8/88",
+      "caption": "Forged intelligence between the weapon box and the barrels",
+      "section": "Guide",
+      "subsection": "Forged intelligence locations on Lighthouse"
+    },
+    {
+      "file": "SnatchContainerBlue.png",
+      "hashPath": "6/6e",
+      "caption": "The blue container",
+      "section": "Guide",
+      "subsection": "Forged intelligence locations on Lighthouse"
+    },
+    {
+      "file": "SnatchContainerBlueInside.png",
+      "hashPath": "a/a9",
+      "caption": "Inside the blue container, forged intelligence on the couch",
+      "section": "Guide",
+      "subsection": "Forged intelligence locations on Lighthouse"
+    },
+    {
+      "file": "SurplusGoodsGarageMap.jpg",
+      "hashPath": "e/e8",
+      "caption": "Garage marked on map",
+      "section": "Guide",
+      "subsection": "Original intelligence and exchange spot location on Reserve"
+    },
+    {
+      "file": "SurplusGoodsGarage.png",
+      "hashPath": "6/60",
+      "caption": "The wanted garage",
+      "section": "Guide",
+      "subsection": "Original intelligence and exchange spot location on Reserve"
+    },
+    {
+      "file": "RB-ST_door_inside.png",
+      "hashPath": "6/67",
+      "caption": "The locked door",
+      "section": "Guide",
+      "subsection": "Original intelligence and exchange spot location on Reserve"
+    },
+    {
+      "file": "SnatchBMP2.png",
+      "hashPath": "8/83",
+      "caption": "The BMP-2",
+      "section": "Guide",
+      "subsection": "Original intelligence and exchange spot location on Reserve"
+    },
+    {
+      "file": "SnatchOriginalIntel.png",
+      "hashPath": "3/36",
+      "caption": "Original intelligence in the right side tracks",
+      "section": "Guide",
+      "subsection": "Original intelligence and exchange spot location on Reserve"
+    }
   ]
 }

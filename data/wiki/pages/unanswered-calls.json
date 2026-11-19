@@ -50,5 +50,28 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Therapist's message | 1 | Required | N/A | The letter is sent back through messages if you die with it. |\nIn this quest you first have to stash a letter behind the reception desk on the second floor of the TerraGroup main building on Ground Zero. Afterwards you have to extract through the \"Emercom Checkpoint\" or \"Nakatani Basement Stairs\" extraction. Both objectives have to be completed in the same raid."
     }
+  ],
+  "images": [
+    {
+      "file": "Saving_the_Mole_Map.png",
+      "hashPath": "e/e8",
+      "caption": "TerraGroup building location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Ground_Zero_TerraGroup_Building.png",
+      "hashPath": "a/a8",
+      "caption": "The TerraGroup building complex",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Unanswered_Calls_stash_position.png",
+      "hashPath": "3/37",
+      "caption": "Stashing location behind the reception desk on the second floor",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

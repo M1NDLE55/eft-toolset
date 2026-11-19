@@ -40,5 +40,21 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| Toughbook reinforced laptop | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\n| Health Resort east wing room 306 key | 1 | Required* | N/A | Unlocks Health Resort East wing room 306 on Shoreline where the Toughbook reinforced laptop is located. |\n| Health Resort east wing room 308 key | 1 | Required* | N/A | Unlocks Health Resort East wing room 308 on Shoreline which allows access to Health Resort East wing room 306 via the joint balcony. |\n- Both keys give you access to east wing room 306, so only one of them is required.\n\nThe laptop can be found in east wing room 306 of the resort, located on a chair. Health Resort east wing room 306 key needed, alternatively Health Resort east wing room 308 key gives access to 306 via the balcony."
     }
+  ],
+  "images": [
+    {
+      "file": "HealthResortEastWing.jpg",
+      "hashPath": "d/d9",
+      "caption": "Health resort east wing location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Cargo_X_Pt_1_Laptop_Location.png",
+      "hashPath": "2/24",
+      "caption": "The laptop on the chair",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

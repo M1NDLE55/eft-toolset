@@ -150,5 +150,112 @@
       "level": 5,
       "text": "- +80,000 EXP\n- 1,000,000 Roubles\n  - 1,050,000 Roubles with Intelligence Center Level 1\n  - 1,150,000 Roubles with Intelligence Center Level 2\n- Unlocks achievement Man of His Word"
     }
+  ],
+  "images": [
+    {
+      "file": "Falling_Skies_Map.jpg",
+      "hashPath": "c/ce",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Locate the fallen plane"
+    },
+    {
+      "file": "Woods_Showcase_12.png",
+      "hashPath": "2/25",
+      "caption": "The wanted plane",
+      "section": "Guide",
+      "subsection": "Locate the fallen plane"
+    },
+    {
+      "file": "FallingSkiesGWagonUSBMap.png",
+      "hashPath": "9/9e",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": "Retrieve the flash drive from one of the G-Wagon SUVs"
+    },
+    {
+      "file": "FallingSkiesGWagonUSBSpawn.png",
+      "hashPath": "7/73",
+      "caption": "The wanted SUV with the flash drive on the running board",
+      "section": "Guide",
+      "subsection": "Retrieve the flash drive from one of the G-Wagon SUVs"
+    },
+    {
+      "file": "FallingSkiesFlightRecorderSpawn.png",
+      "hashPath": "8/8b",
+      "caption": "The broken section with the recorder",
+      "section": "Guide",
+      "subsection": "Retrieve the plane's flight recorder"
+    },
+    {
+      "file": "FallingSkiesFlightRecorderSpawnCloseUp.png",
+      "hashPath": "0/0c",
+      "caption": "The recorder",
+      "section": "Guide",
+      "subsection": "Retrieve the plane's flight recorder"
+    },
+    {
+      "file": "FallingSkiesFlightRecorderStashMap.png",
+      "hashPath": "d/d9",
+      "caption": "House location marked on map",
+      "section": "Guide",
+      "subsection": "Leave the flight recorder in the specified spot"
+    },
+    {
+      "file": "FallingSkiesFlightRecorderStashLocation.png",
+      "hashPath": "e/ea",
+      "caption": "Stashing location",
+      "section": "Guide",
+      "subsection": "Leave the flight recorder in the specified spot"
+    },
+    {
+      "file": "FallingSkiesElektroniksUSBMap.png",
+      "hashPath": "2/2d",
+      "caption": "House location marked on map",
+      "section": "Guide",
+      "subsection": "Hand over the flight crew's transcript and Elektronik's secure flash drive to Prapor"
+    },
+    {
+      "file": "Chairman_house.png",
+      "hashPath": "9/95",
+      "caption": "The wanted house",
+      "section": "Guide",
+      "subsection": "Hand over the flight crew's transcript and Elektronik's secure flash drive to Prapor"
+    },
+    {
+      "file": "FallingSkiesElektroniksTranscript.png",
+      "hashPath": "4/40",
+      "caption": "The transcript under mattress at the overturned bed",
+      "section": "Guide",
+      "subsection": "Hand over the flight crew's transcript and Elektronik's secure flash drive to Prapor"
+    },
+    {
+      "file": "FallingSkiesElektroniksFlashDrive.png",
+      "hashPath": "e/ee",
+      "caption": "The flash drive on top of the shelf next to the bed",
+      "section": "Guide",
+      "subsection": "Hand over the flight crew's transcript and Elektronik's secure flash drive to Prapor"
+    },
+    {
+      "file": "FallingSkiesArmoredCaseSpawn.png",
+      "hashPath": "e/eb",
+      "caption": "The Armored case",
+      "section": "Guide",
+      "subsection": "Retrieve the armored case/Find any additional clues"
+    },
+    {
+      "file": "FallingSkiesKermanNoteSpawn.png",
+      "hashPath": "d/d7",
+      "caption": "The Note from Mr. Kerman",
+      "section": "Guide",
+      "subsection": "Retrieve the armored case/Find any additional clues"
+    },
+    {
+      "file": "The_Ticket_Flowchart_by_Callsign_Smokey.png",
+      "hashPath": "d/d6",
+      "caption": "Decision consequences flowchart",
+      "section": "Guide",
+      "subsection": "Keep the armored case for yourself or hand it over to Prapor"
+    }
   ]
 }

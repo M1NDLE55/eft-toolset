@@ -45,5 +45,42 @@
       "level": 2,
       "text": "- You can buy MS2000 Markers from Prapor or Ragman if needed.\n- It is recommended that the player keeps the MS2000 Markers in their special slots or pouch so they are not lost in the event of their death.\n- The MS2000 Markers will automatically be used out of the players' inventory when needed, similar to how keys work"
     }
+  ],
+  "images": [
+    {
+      "file": "The_Blood_of_War_Part_1_Map.jpg",
+      "hashPath": "6/65",
+      "caption": "Fuel tanker truck locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Bloodofwartanker.png",
+      "hashPath": "4/40",
+      "caption": "Map marker 1: First power station truck behind the Goshan store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Bloodofwartanker3.png",
+      "hashPath": "f/f5",
+      "caption": "Map marker 3: Second power station truck at the power station",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Bloodofwartanker2.png",
+      "hashPath": "b/be",
+      "caption": "Map marker 2: First northern territory truck west of the highway in the area near the \"Path to River\" extraction",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Bloodofwartanker4.png",
+      "hashPath": "f/f8",
+      "caption": "Map marker 4: Second northern territory truck south of the trailer park",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -44,5 +44,49 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Golden neck chain | 6 | Required | N/A | Stashed item |\nThe \"microwave on the 3rd floor of dorms\" is located in the \"kitchen\" (Big room without door) of the 3 story dorms on Customs.\n\nThe \"middle wooden cabin at the sawmill\" means the wooden cabin #2 in the lumber yard on Woods."
     }
+  ],
+  "images": [
+    {
+      "file": "Dorm_3.png",
+      "hashPath": "c/c8",
+      "caption": "\"Kitchen\" location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chumm_micro.png",
+      "hashPath": "0/00",
+      "caption": "The wanted microwave",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chumm_micro2.png",
+      "hashPath": "4/4e",
+      "caption": "The goldchains have to be placed inside the open microwave",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Wood_Cabin_nr_2.jpg",
+      "hashPath": "4/46",
+      "caption": "Cabin marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Cabin2Woods.png",
+      "hashPath": "d/d3",
+      "caption": "Cabin #2 at the lumber yard",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chumm_woods.png",
+      "hashPath": "a/ab",
+      "caption": "The bed with the book near the safe where the goldchains need to be placed",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

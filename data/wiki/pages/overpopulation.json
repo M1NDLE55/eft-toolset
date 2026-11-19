@@ -40,5 +40,14 @@
       "level": 2,
       "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in Raid |\n| Topographic survey maps; or; Intelligence folder; or; TerraGroup \"Blue Folders\" materials | Topographic survey maps; or; Intelligence folder; or; TerraGroup \"Blue Folders\" materials | 5 | Handover item | Yes |\nFor this quest you have to kill 10 targets around and between the cottages on Lighthouse and then hand over 5 of any of the following items: Topographic survey maps or Intelligence folder orTerraGroup \"Blue Folders\" materials"
     }
+  ],
+  "images": [
+    {
+      "file": "OverpopulationMap.png",
+      "hashPath": "e/e5",
+      "caption": "Approximate quest area marked",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

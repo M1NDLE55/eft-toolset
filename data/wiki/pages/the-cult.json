@@ -39,5 +39,42 @@
       "level": 2,
       "text": "The informant is located in a ruined house in the swamps of Shoreline. You can find it by locating the church and following a blood trail."
     }
+  ],
+  "images": [
+    {
+      "file": "CultPart1Map.png",
+      "hashPath": "1/1e",
+      "caption": "Church and house marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Shorelinechurch.png",
+      "hashPath": "3/35",
+      "caption": "The church with the ruined house in the background",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Shorelinebloodtrail.png",
+      "hashPath": "d/d8",
+      "caption": "The start of the blood trail",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Priest_house.png",
+      "hashPath": "1/1f",
+      "caption": "The wanted house",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Shorelineinformant.png",
+      "hashPath": "2/2e",
+      "caption": "The informant inside the house",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

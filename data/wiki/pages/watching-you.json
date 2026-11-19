@@ -40,5 +40,42 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Pinewood hotel room 215 key | 1 | Required | N/A | Used to open the client's hotel room |\n| Flash drive with recordings | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to find a surveillance spot and obtain a flash drive on Streets of Tarkov. It can be found in room 215 on the second floor of the northern Pinewood hotel building. A Pinewood hotel room 215 key is required to enter it. The flash drive has multiple spawns throughout the room."
     }
+  ],
+  "images": [
+    {
+      "file": "PineWoodHotelNorthMap.png",
+      "hashPath": "c/c1",
+      "caption": "Building marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "PineWoodHotelNorthBuilding.png",
+      "hashPath": "e/e0",
+      "caption": "Northern entrance",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "HotelRoom215Door.png",
+      "hashPath": "3/3e",
+      "caption": "Door to the room",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "RecordingsFlashSpawn1.png",
+      "hashPath": "3/3b",
+      "caption": "Spawn location 1 on the window sill next to the book",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "RecordingsFlashSpawn2.png",
+      "hashPath": "1/1e",
+      "caption": "Spawn location 2 on the chest of drawers",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -47,5 +47,42 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Syringe with a chemical | 1 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nThe wanted Syringe with a chemical is located in a room on the 3rd floor of the Factory offices behind a door which must be breached. There are multiple spawns throughout the room."
     }
+  ],
+  "images": [
+    {
+      "file": "HCPP5.png",
+      "hashPath": "0/00",
+      "caption": "Location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "The_breach_room.png",
+      "hashPath": "a/a0",
+      "caption": "The door to the \"breach room\" where you find the syringe",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Syringe_with_a_chemical_Location.png",
+      "hashPath": "6/69",
+      "caption": "Syringe in the bottom compartment of the shelf to the right after entering",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Chemical_Pt_3_Syringe_Spawn.png",
+      "hashPath": "7/72",
+      "caption": "Syringe on the floor next to the stacked chairs",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Syringe_with_a_chemical_Location2.png",
+      "hashPath": "a/a2",
+      "caption": "Syringe on the fallen over filing cabinet to the left after entering",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

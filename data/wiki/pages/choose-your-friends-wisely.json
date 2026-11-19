@@ -61,5 +61,49 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "CustomsTransitToReserveMap.png",
+      "hashPath": "1/10",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Customs to Reserve"
+    },
+    {
+      "file": "CustomsTransitToReserve.png",
+      "hashPath": "f/fe",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Customs to Reserve"
+    },
+    {
+      "file": "ReserveTransitToWoodsMap.png",
+      "hashPath": "a/a3",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Reserve to Woods"
+    },
+    {
+      "file": "ReserveTransitToWoods.png",
+      "hashPath": "5/50",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Reserve to Woods"
+    },
+    {
+      "file": "WoodsTransitToLighthouseMap.jpg",
+      "hashPath": "6/61",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Woods to Lighthouse"
+    },
+    {
+      "file": "WoodsTransitToLighthouse.png",
+      "hashPath": "c/c1",
+      "caption": null,
+      "section": "Guide",
+      "subsection": "Woods to Lighthouse"
+    }
   ]
 }

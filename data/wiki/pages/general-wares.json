@@ -46,5 +46,21 @@
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Can of beef stew (Small) | 15 | Handover item | Yes | Can be crafted in the Hideout (Nutrition unit lv. 1). |\n\n- A high amount of cans of beef stew can be found inside the shopping mall on Interchange. Particularly, the \"Goshan\" (written \"гошан\" on its signs) supermarket stores a very large amount on its shelves. However, this is a hot-spot for players looking for provisions or to loot the registers, so it should be approached with care.\n- Can of beef stew (Small) is also commonly found in Ration supply crates near tanks on Reserve. However, like Goshan, Reserve is a highly populated map with many threats, so it should be approached with care.\n- Can of beef stew (Small) and other food items are also plentiful at the camp on Woods next to Scav bunker in Ration supply crates and as loose loot. Farther down south, the USEC camp is also a good spot to find food items."
     }
+  ],
+  "images": [
+    {
+      "file": "NewKIBALocation1.png",
+      "hashPath": "8/89",
+      "caption": "Goshan Store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Location_of_a_ration_supply_crate.png",
+      "hashPath": "e/e0",
+      "caption": "The location of a Ration supply crate next to a tank on Reserve",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

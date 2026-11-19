@@ -16,6 +16,28 @@ export interface WikiPageRecord {
   redirects: string[];
   infobox: Record<string, string>;
   sections: WikiSection[];
+  /** Quest pages only: the pictures that help with the quest, credited in image-credits.json. */
+  images?: WikiPageImage[];
+}
+
+export interface WikiPageImage {
+  file: string;
+  hashPath: string;
+  caption: string | null;
+  section: string;
+  subsection: string | null;
+  /** Set when the page repeats the heading: which namesake the image is in (see groupWikiSections). */
+  sectionOccurrence?: number;
+  subsectionOccurrence?: number;
+}
+
+/** data/wiki/image-credits.json: who uploaded each quest image, from the wiki's API. */
+export interface WikiImageCredits {
+  fetchedAt: string | null;
+  /** The licence as the wiki's API stated it at the last pass. */
+  licence?: { name: string; url: string | null } | null;
+  /** `missing` when the wiki had no such file at the last pass. */
+  images: Record<string, { uploader: string | null; filePage: string; missing?: true }>;
 }
 
 interface IndexEntry {
@@ -54,6 +76,7 @@ let directory = join(process.cwd(), "data", "wiki");
 let index: Promise<LoadedIndex> | null = null;
 let leftOut: Promise<{ title: string; kind: string; key: string }[]> | null = null;
 let itemIds: Promise<Record<string, string>> | null = null;
+let imageCredits: Promise<WikiImageCredits> | null = null;
 const pages = new Map<string, Promise<WikiPageRecord>>();
 
 /** Points the reader at another snapshot directory; for tests. */
@@ -62,6 +85,7 @@ export function setWikiSnapshotDirectory(path: string) {
   index = null;
   leftOut = null;
   itemIds = null;
+  imageCredits = null;
   pages.clear();
 }
 
@@ -114,6 +138,17 @@ export async function findItemWikiPage(id: string): Promise<WikiPageRecord | nul
   }
   const path = (await itemIds)[id];
   return path && ITEM_PAGE_PATH.test(path) ? readRecord(path) : null;
+}
+
+/** Who uploaded each quest image; no credits when the file is missing, so images read as by the wiki's contributors. */
+export function readImageCredits(): Promise<WikiImageCredits> {
+  if (!imageCredits) {
+    imageCredits = readJson<WikiImageCredits>("image-credits.json").catch((error: unknown) => {
+      if ((error as NodeJS.ErrnoException)?.code !== "ENOENT") imageCredits = null;
+      return { fetchedAt: null, images: {} };
+    });
+  }
+  return imageCredits;
 }
 
 export async function wikiSnapshotDate() {

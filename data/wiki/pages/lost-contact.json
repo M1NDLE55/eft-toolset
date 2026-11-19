@@ -39,5 +39,21 @@
       "level": 2,
       "text": "The lost group is located on a tennis court that is part of the chalet on the hill in the south-east of Lighthouse."
     }
+  ],
+  "images": [
+    {
+      "file": "LostContactMap.png",
+      "hashPath": "5/51",
+      "caption": "Tennis court marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "LostContactDeadBodies.png",
+      "hashPath": "8/8f",
+      "caption": "The corpses of the lost group",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

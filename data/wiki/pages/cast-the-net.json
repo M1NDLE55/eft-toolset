@@ -66,5 +66,70 @@
       "level": 3,
       "text": ""
     }
+  ],
+  "images": [
+    {
+      "file": "Cast_the_Net_Shoreline_Map.png",
+      "hashPath": "f/f0",
+      "caption": "Location of the places to place the wi-fi camera.",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Cast_the_Net_Shoreline_Camera_1.png",
+      "hashPath": "2/24",
+      "caption": "The excavator to place the camera at the smuggler camp.",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Cast_the_Net_Shoreline_Camera_2.png",
+      "hashPath": "0/0b",
+      "caption": "The ural truck next to the power station.",
+      "section": "Guide",
+      "subsection": "Shoreline"
+    },
+    {
+      "file": "Cast_the_Net_Streets_of_Tarkov_Map.png",
+      "hashPath": "6/6a",
+      "caption": "Location of the places to place the wi-fi camera.",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "Cast_the_Net_Streets_of_Tarkov_Camera_1.png",
+      "hashPath": "f/fc",
+      "caption": "At the mixer truck next to the collapsed crane.",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "Cast_the_Net_Streets_of_Tarkov_Camera_2.png",
+      "hashPath": "c/c8",
+      "caption": "The bio toilets in front of the Rodina cinema.",
+      "section": "Guide",
+      "subsection": "Streets of Tarkov"
+    },
+    {
+      "file": "Cast_the_Net_Ground_Zero_Map.png",
+      "hashPath": "5/5c",
+      "caption": "Location of the places to place the wi-fi camera.",
+      "section": "Guide",
+      "subsection": "Ground Zero"
+    },
+    {
+      "file": "Cast_the_Net_Ground_Zero_Camera_1.png",
+      "hashPath": "a/a8",
+      "caption": "At the truck in the ramp leading to Streets of Tarkov transit.",
+      "section": "Guide",
+      "subsection": "Ground Zero"
+    },
+    {
+      "file": "Cast_the_Net_Ground_Zero_Camera_2.png",
+      "hashPath": "5/51",
+      "caption": "Inside the yellow bus located underground.",
+      "section": "Guide",
+      "subsection": "Ground Zero"
+    }
   ]
 }

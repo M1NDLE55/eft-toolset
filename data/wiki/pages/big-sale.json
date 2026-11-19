@@ -42,5 +42,49 @@
       "level": 2,
       "text": "Walk into each of the listed stores in the same raid and survive to complete the quest. All of the stores are on the first floor of the ULTRA shopping mall."
     }
+  ],
+  "images": [
+    {
+      "file": "BigSaleMarked.jpg",
+      "hashPath": "5/5d",
+      "caption": "Stores marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Avokado.png",
+      "hashPath": "4/44",
+      "caption": "Avokado store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Kostin.png",
+      "hashPath": "b/bc",
+      "caption": "Kostin store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Trend.png",
+      "hashPath": "e/ef",
+      "caption": "tRend store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Dinoclothes.png",
+      "hashPath": "e/ef",
+      "caption": "Dino clothes store",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "Topbrand.png",
+      "hashPath": "4/4e",
+      "caption": "Top brand store",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }

@@ -45,5 +45,42 @@
       "level": 2,
       "text": "In this quest you have to kill 30 Rogues on any location."
     }
+  ],
+  "images": [
+    {
+      "file": "BoreasScientistIntercomMap.jpg",
+      "hashPath": "8/8b",
+      "caption": "Intercom location marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "BoreasDoorToScientistIntercom.png",
+      "hashPath": "f/f6",
+      "caption": "The door next to the stairs leading to the intercom",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "BoreasScientistIntercom.png",
+      "hashPath": "7/7f",
+      "caption": "The intercom",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "BoreasDamagedDoorMap.jpg",
+      "hashPath": "5/50",
+      "caption": "Door location marked on map",
+      "section": "Requirements",
+      "subsection": null
+    },
+    {
+      "file": "Stick_To_It_Activation_Chained_Door.png",
+      "hashPath": "a/a6",
+      "caption": "The door",
+      "section": "Requirements",
+      "subsection": null
+    }
   ]
 }

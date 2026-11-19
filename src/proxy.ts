@@ -12,7 +12,7 @@ export function buildContentSecurityPolicy(nonce: string, nodeEnv = process.env.
     `script-src 'self' ${CLOUDFLARE_BEACON_HOST} 'nonce-${nonce}' 'strict-dynamic'${developmentEval}`,
     "script-src-attr 'none'",
     "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: blob: https://assets.tarkov.dev",
+    "img-src 'self' data: blob: https://assets.tarkov.dev https://static.wikia.nocookie.net",
     `connect-src 'self' https://assets.tarkov.dev ${CLOUDFLARE_INSIGHTS_HOST}`,
     "font-src 'self' data:",
     "worker-src 'self' blob:",

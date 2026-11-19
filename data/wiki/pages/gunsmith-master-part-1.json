@@ -58,5 +58,21 @@
       "level": 3,
       "text": "- This build is based on a standard black HK 416A5 from Peacekeeper LL3. It can only be purchased after completing Weapons Circulation.\n- Make sure that the chamber is empty, otherwise the gun will be too heavy.\n- The quest check mark is not consistent even when all requirements are met, it not being present doesn't mean the gun can't be handed over.\n\nShopping List:\nShopping List\n| Attachment | Sold By | Loyalty Level |\n| AR-15 5.56x45 HK 30 STANAG polymer 30-round magazine | Peacekeeper | LL3 |\n| AR-15 Magpul MOE pistol grip (FDE) | Peacekeeper | LL4 |\n| AR-15 Magpul UBR GEN2 stock (FDE) | Peacekeeper | LL3 |\n| HK 416 5.56x45 11 inch barrel | PeacekeeperMechanic | LL2 (Barter)LL3 |\n| AR-15 SureFire SF3P 5.56x45 flash hider | Mechanic | LL2 |\n| SureFire SOCOM556-RC2 5.56x45 sound suppressor | Peacekeeper | LL4 |\n| HK 416 Midwest Industries 9 inch M-LOK handguard | Peacekeeper | LL2 (Barter); LL3 |\n| Magpul M-LOK 4.1 inch rail | Mechanic | LL1 (Barter); LL1 |\n| Magpul RVG foregrip (FDE) | Peacekeeper | LL2 |\n| L3Harris LA-5B/PEQ tactical device | Mechanic | LL4 |\n| Magpul MBUS Gen2 flip-up rear sight | Mechanic | LL2 |\n| Magpul MBUS Gen2 flip-up front sight | Mechanic | LL2 |\n| EOTech EXPS3-0 holographic sight (Tan) | MechanicRef | LL4LL3 |\n\nInspect View:\nInspect View\n\nModding Screen:\nModding Screen"
     }
+  ],
+  "images": [
+    {
+      "file": "GS14_Insp.png",
+      "hashPath": "a/a8",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    },
+    {
+      "file": "GS14_Mods.png",
+      "hashPath": "1/1f",
+      "caption": null,
+      "section": "Build",
+      "subsection": "Notes:"
+    }
   ]
 }

@@ -45,5 +45,28 @@
       "level": 2,
       "text": "In this quest you have to kill 2 guards from Kaban or Kollontay without harming either of the main bosses. Harming them while the quest is active will cause it to fail.\n\nBe aware that the premises of the LexOs car dealership where Kaban is located are riddled with Claymores."
     }
+  ],
+  "images": [
+    {
+      "file": "KabanSpawnsStreets.png",
+      "hashPath": "7/7a",
+      "caption": "Kaban's spawn location marked on map",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "LexOsClaymoreOverview.png",
+      "hashPath": "d/df",
+      "caption": "LexOs complex overview",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
+      "file": "KollontaySpawnsStreets.png",
+      "hashPath": "c/c0",
+      "caption": "Kollontay's spawn locations marked on map",
+      "section": "Guide",
+      "subsection": null
+    }
   ]
 }
