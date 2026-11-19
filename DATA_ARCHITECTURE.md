@@ -300,14 +300,21 @@ Each file is listed once per page. Left out:
   starts;
 - the infobox's picture, which is a template field rather than a file link.
 
-Images can sit in a section the quest page leaves out of its text (Requirements, Introduction)
-or in one with no text of its own. The quest page (`src/app/lib/quests/wiki-images.ts`) shows an
-image with its guide section or subsection when it renders that block, and with the section when
-only the subsection is missing. Otherwise it shows the image under an objective when its
-subsection or caption (or failing those, its file name) names exactly one of the quest's maps
-and only one objective is on that map; the rest go by the objectives checklist, grouped under
-their wiki section's name ("From the EFT Wiki: Requirements"). The manifest counts the quest pages with images, the images
-on them, and the distinct files.
+The quest page shows every image once, by the objectives, and the wiki guide's text below without
+them (`src/app/lib/quests/wiki-images.ts`). Only objectives on a map count, other than surviving the
+raid. An image goes under an objective when its subsection or caption (or failing those, its file
+name) names a map only one of them is on, or several are and the caption's words appear in only
+one's description; when it names no map but its caption's words appear in only one description;
+when it follows, in the same part of the page, an image that went under an objective and its words
+don't point at another; or when it's in the guide and only one objective is on a map. The rest go
+in a strip right under the objectives, labelled by subsection (or by section, outside the guide).
+The manifest counts the quest pages with images, the images on them, and the distinct files.
+
+The grid shows the CDN's scaled copies (`<image URL>/revision/latest/scale-to-width-down/<width>`,
+with a 400, 800 and 1200 wide srcset); only the enlarged view loads the original. The CDN serves
+them with the page's Referer (`strict-origin-when-cross-origin`) and turns away requests with
+none or with an unknown query string, so the URLs carry no query. An image that fails to load is
+tried twice more, after a short wait, before it becomes a link to its file page.
 
 **Image credits.** After writing the pages, `scripts/build-wiki-snapshot.mjs` makes one pass over
 the wiki's MediaWiki API (`scripts/wiki-image-credits.mjs`): `meta=siteinfo&siprop=rightsinfo`
@@ -322,9 +329,9 @@ an error response, or an HTML page such as a challenge, which isn't retried): th
 keeps the existing credits, writes `uploader: null` for new files, and drops files no page
 shows any more. Page files never depend on the API, so the snapshot still rebuilds identically
 from the same dump. `readQuestWiki` joins each image with its credit, leaves out files marked
-`missing`, and credits "EFT Wiki contributors" when there is no uploader. Under each image the
-quest page shows "Image: <file name> by <uploader>, Escape from Tarkov Wiki, CC BY-NC-SA",
-linking the file page and the licence (`src/app/lib/wiki/wiki-images.ts` builds the URL and the
+`missing`, and credits "EFT Wiki contributors" when there is no uploader. Under each group of
+images the quest page shows "Images: <file name> by <uploader>; …, Escape from Tarkov Wiki, CC
+BY-NC-SA" (and the enlarged view, the one image's line), linking each file page and the licence (`src/app/lib/wiki/wiki-images.ts` builds the URL and the
 text). `next.config.mjs` traces `image-credits.json` into the quest pages.
 
 `lookup_term` reads no service at all. It answers from a curated glossary of player jargon

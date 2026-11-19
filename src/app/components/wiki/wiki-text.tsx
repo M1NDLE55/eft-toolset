@@ -1,8 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import { WikiImages } from "@/app/components/quests/wiki-images";
-import { sectionKey } from "@/app/lib/quests/wiki-images";
 import type { WikiPageSection } from "@/app/lib/wiki/page-sections";
-import type { QuestWikiImage } from "@/app/lib/wiki/wiki-images";
 import { WIKI_LICENCE, WIKI_NAME } from "@/app/lib/wiki/wiki-url";
 import { cn } from "@/lib/utils";
 
@@ -64,24 +61,17 @@ export function WikiText({ text }: { text: string }) {
   );
 }
 
-/** `images`, keyed by `sectionKey`, show after the text of their section or subsection, loaded by the browser. */
-export function WikiSections({ sections, images }: { sections: WikiPageSection[]; images?: ReadonlyMap<string, QuestWikiImage[]> }) {
-  const imagesFor = (key: string) => {
-    const found = images?.get(key);
-    return found && found.length > 0 ? <WikiImages images={found} className="mt-1" /> : null;
-  };
+export function WikiSections({ sections }: { sections: WikiPageSection[] }) {
   return (
     <div className="flex flex-col gap-3">
       {sections.map((section) => (
         <div key={`${section.heading}-${section.occurrence ?? 0}`} className="flex flex-col gap-1.5">
           <h3 className="text-xs font-semibold text-[#ddd]">{section.heading}</h3>
           {section.text && <WikiText text={section.text} />}
-          {imagesFor(sectionKey(section.heading, section.occurrence))}
           {section.subsections.map((subsection) => (
             <div key={`${subsection.heading}-${subsection.occurrence ?? 0}`} className="flex flex-col gap-1 border-l border-[#2a2a2a] pl-2">
               <h4 className="text-[11px] font-semibold uppercase tracking-wider text-[#999]">{subsection.heading}</h4>
               <WikiText text={subsection.text} />
-              {imagesFor(sectionKey(section.heading, section.occurrence, subsection.heading, subsection.occurrence))}
             </div>
           ))}
         </div>
