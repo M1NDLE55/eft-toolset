@@ -4,6 +4,7 @@ import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { matchingRows } from "@/app/components/quests/items-needed-view";
 import { mapChoices } from "@/app/components/quests/quest-filters";
 import { lockedReason } from "@/app/components/quests/quest-bits";
+import { QuestRows } from "@/app/components/quests/quest-rows";
 import { useQuestActions } from "@/app/components/quests/use-quest-actions";
 import { questGraph } from "@/app/lib/quests/graph";
 import { QUEST_PROGRESS_STORE, useQuestProgress } from "@/app/lib/quests/progress-store";
@@ -149,5 +150,31 @@ describe("quest view helpers", () => {
         (id) => id.toUpperCase()
       )
     ).toBe("Other faction · Level 15 · start A · complete B");
+  });
+});
+
+describe("quest list rows", () => {
+  const maps = Object.fromEntries(
+    ["customs", "factory", "woods", "shoreline", "interchange", "reserve", "lighthouse", "streets-of-tarkov", "ground-zero"].map((key) => [
+      key,
+      { key, name: key, page: key },
+    ])
+  );
+  maps["night-factory"] = { key: "night-factory", name: "Night Factory", page: "factory" };
+
+  it("names each map once, variants under their base map, and most maps as any map", () => {
+    const host = document.createElement("div");
+    document.body.append(host);
+    const root = createRoot(host);
+    const quests = [
+      { ...quest("few"), maps: ["night-factory", "factory", "customs"] },
+      { ...quest("many"), maps: [...Object.keys(maps)] },
+    ];
+    const list: QuestList = { quests, items: {}, maps, traders: ["Prapor"] };
+    act(() => root.render(<QuestRows quests={quests} list={list} statuses={null} onToggle={() => {}} disabled nameOf={(id) => id} />));
+    const meta = Array.from(host.querySelectorAll("li p"), (line) => line.textContent);
+    expect(meta).toEqual(["factory, customs", "Any map"]);
+    act(() => root.unmount());
+    host.remove();
   });
 });

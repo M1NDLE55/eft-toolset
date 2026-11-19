@@ -16,7 +16,7 @@ import { MODE_LABEL } from "@/components/game-mode/mode";
 import { isCrawlerRequest, readForRender } from "@/app/lib/api/server-render";
 import { Rubles } from "@/app/lib/currency";
 import { isItemSlug } from "@/app/lib/item-links";
-import { questName, requirementLabel } from "@/app/lib/quests/display";
+import { ANY_MAP, mapLabels, questName, requirementLabel } from "@/app/lib/quests/display";
 import { moneyLabel } from "@/app/lib/quests/shopping-list";
 import type { PricedQuestItem, QuestDetail, QuestRef, QuestRewards } from "@/app/lib/quests/types";
 import { getKeyCounts } from "@/app/lib/reference/keys";
@@ -253,14 +253,18 @@ export default async function Page({ params }: PageProps) {
   const faq = questFaq(detail);
   const self: QuestRef = { ...detail.quests[quest.id], name };
   const otherMode = detail.gameMode !== gameMode;
-  const pages = Array.from(
-    new Map(
-      quest.maps.flatMap((key) => {
-        const map = detail.maps[key];
-        return map?.page ? [[map.page, detail.maps[map.page]?.name ?? map.name] as const] : [];
-      })
-    )
-  );
+  const anyMap = mapLabels(quest.maps, detail.maps)[0] === ANY_MAP;
+  // A quest for any map would link every map: the header and objectives say "any map" instead.
+  const pages = anyMap
+    ? []
+    : Array.from(
+        new Map(
+          quest.maps.flatMap((key) => {
+            const map = detail.maps[key];
+            return map?.page ? [[map.page, detail.maps[map.page]?.name ?? map.name] as const] : [];
+          })
+        )
+      );
   const keys = questKeys(detail);
   const objectives = detail.objectives;
   const images = wiki ? placeWikiImages(wiki.images, objectives, detail.maps) : null;
@@ -272,6 +276,7 @@ export default async function Page({ params }: PageProps) {
     quest.trader,
     quest.minPlayerLevel > 1 ? `level ${quest.minPlayerLevel}` : null,
     quest.faction ? `${quest.faction} only` : null,
+    anyMap ? "any map" : null,
     ...quest.traderLevels.map((entry) => `${entry.trader} LL${entry.level}`),
     quest.experience > 0 ? `${quest.experience.toLocaleString("en-US")} XP` : null,
     detail.restartable ? "restartable" : null,

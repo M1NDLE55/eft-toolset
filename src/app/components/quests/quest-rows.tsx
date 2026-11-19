@@ -2,14 +2,10 @@
 
 import Link from "next/link";
 import type { QuestStatus } from "@/app/lib/quests/availability";
-import { levelLabel, questName, sameNameHints } from "@/app/lib/quests/display";
+import { levelLabel, mapLabels, questName, sameNameHints } from "@/app/lib/quests/display";
 import { questGraph } from "@/app/lib/quests/graph";
 import type { QuestList, QuestSummary } from "@/app/lib/quests/types";
 import { CompleteToggle, QuestBadges, StatePill, heading, lockedReason, panel } from "./quest-bits";
-
-export function mapNames(quest: QuestSummary, list: Pick<QuestList, "maps">) {
-  return Array.from(new Set(quest.maps.map((key) => list.maps[key]?.name ?? key)));
-}
 
 function QuestRow({
   quest,
@@ -34,7 +30,7 @@ function QuestRow({
     hint ?? null,
     levelLabel(quest.minPlayerLevel),
     ...quest.traderLevels.map((entry) => `${entry.trader} LL${entry.level}`),
-    mapNames(quest, list).join(", ") || null,
+    mapLabels(quest.maps, list.maps).join(", ") || null,
   ].filter(Boolean);
   const reason = status?.state === "locked" ? lockedReason(status, nameOf) : "";
   return (

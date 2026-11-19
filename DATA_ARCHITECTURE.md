@@ -153,6 +153,17 @@ stays one need with its alternatives, and when too many qualify to list, only it
 description. Maps are keyed by tarkov.dev's map `normalizedName`; variants (night Factory,
 Ground Zero 21+, the dark Lab and others) name the raid planner and keys page they share.
 
+Quests come grouped by trader in the game's order (Prapor, Therapist, Fence, Skier,
+Peacekeeper, Mechanic, Ragman, Jaeger, Ref, Lightkeeper, BTR Driver, then any others), and
+within a trader in the order they're played (`src/app/lib/quests/order.ts`): never before a
+quest of the same trader they need, otherwise by level (0 and 1 alike), then by id. The game's
+ids begin with the time the quest was made, which follows each trader's line where tarkov.dev
+gives neither a level nor a prerequisite.
+
+Wherever a quest or objective names its maps (list rows, Available now, quest pages), variants
+merge into the map whose page they share, as the Map filter groups them, and eight or more maps
+read "Any map" (`mapLabels` in `display.ts`).
+
 `src/app/lib/quests/` holds the browser's logic: the requirement graph, each quest's state
 from progress, level and faction, the items still needed, the chain layout, and the list
 filters. Progress (completed quests, done objectives, level, and faction) is kept per game mode

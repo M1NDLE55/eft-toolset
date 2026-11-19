@@ -77,3 +77,24 @@ export function sameNameHints(graph: QuestGraph, maps: Readonly<Record<string, Q
   hintCache.set(graph, hints);
   return hints;
 }
+
+/**
+ * From this many maps (variants merged), a quest or objective works on nearly every raid: it says "Any map"
+ * rather than listing them. Ten maps make up the usual rotation, and quests either name a few or most of them.
+ */
+export const ANY_MAP_FROM = 8;
+export const ANY_MAP = "Any map";
+
+/**
+ * Map names for a quest or objective: variants (Night Factory, Ground Zero 21+, The Lab (Dark)) merge into the map
+ * whose page they share, as the Map filter groups them, and a list of most maps is just "Any map".
+ */
+export function mapLabels(keys: readonly string[], maps: Readonly<Record<string, QuestMap>>): string[] {
+  const names = new Map<string, string>();
+  for (const key of keys) {
+    const map = maps[key];
+    const base = map?.page ?? key;
+    if (!names.has(base)) names.set(base, (map?.page && maps[map.page]?.name) || map?.name || key);
+  }
+  return names.size >= ANY_MAP_FROM ? [ANY_MAP] : Array.from(names.values());
+}

@@ -7,7 +7,7 @@ import { Check } from "lucide-react";
 import type { GameMode } from "@/components/game-mode/mode";
 import { MODE_LABEL } from "@/components/game-mode/mode";
 import { questStates, type QuestStatus } from "@/app/lib/quests/availability";
-import { aroundItemName } from "@/app/lib/quests/display";
+import { aroundItemName, mapLabels } from "@/app/lib/quests/display";
 import { questGraph } from "@/app/lib/quests/graph";
 import { setObjectiveDone, useQuestProgress } from "@/app/lib/quests/progress-store";
 import { useQuestList } from "@/app/lib/quests/query";
@@ -191,10 +191,7 @@ export function ObjectiveChecklist({
     <ul className={`${panel} divide-y divide-[#151515]`}>
       {objectives.map((objective) => {
         const checked = done.has(objective.id);
-        // Variants (Ground Zero 21+) are named after the map whose page they share.
-        const objectiveMaps = Array.from(
-          new Set(objective.maps.map((key) => (maps[key]?.page && maps[maps[key].page!]?.name) || maps[key]?.name || key))
-        );
+        const objectiveMaps = mapLabels(objective.maps, maps);
         const count = objective.count !== null && objective.count > 1 && <span className="ml-2 text-xs text-[#9a8866]">×{objective.count}</span>;
         // Item rows repeat the found-in-raid mark down a long list, so they say it short.
         const badges = (short: boolean) => (
