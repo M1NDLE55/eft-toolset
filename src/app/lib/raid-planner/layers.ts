@@ -10,21 +10,15 @@ import { gameToLatLng } from "./coords";
 import { itemHref } from "@/app/lib/item-links";
 import { makeLayerAccessible } from "./leaflet-accessibility";
 import { SPAWN_AREA_PADDING_METERS, spawnAreas, type SpawnAreaPoint } from "./spawn-areas";
-
-const COLORS = {
-  pmc: "#7da05f",
-  scav: "#c08a3e",
-  shared: "#5f8aa0",
-  transit: "#8a6fa0",
-  sniper: "#a05050",
-  boss: "#c04848",
-  raider: "#8a8a8a",
-  lock: "#b8a35e",
-  hazard: "#a04f4f",
-  switch: "#5f8aa0",
-  stationary: "#9a8866",
-  loot: "#9a8866",
-} as const;
+import type { IconId } from "./layer-icon-art";
+import {
+  COLORS,
+  ensureLayerIconSprite,
+  hazardIconId,
+  iconColor,
+  layerIconMarkup,
+  lootIconId,
+} from "./layer-icons";
 
 const SPAWN_KINDS: { kind: SpawnKind; label: string; color: string }[] = [
   { kind: "pmc", label: "PMC", color: COLORS.pmc },
@@ -49,7 +43,6 @@ export interface LayerEntry {
 export interface LayerBuildContext {
   config: Pick<MapConfig, "labels">;
   details: MapDetails | null;
-  renderer: L.Canvas;
 }
 
 export function getActiveExtents(
@@ -126,11 +119,11 @@ export function buildLayer(
 
   if (id.startsWith("loot:")) {
     const typeId = id.slice("loot:".length);
-    return buildDots(
+    return buildIcons(
       details.lootContainers
         .filter((c) => c.typeId === typeId)
         .map((c) => ({ position: c.position, tooltip: c.typeName })),
-      { color: COLORS.loot, radius: 3, renderer: context.renderer }
+      lootIconId(typeId)
     );
   }
 
@@ -154,35 +147,24 @@ export function buildLayer(
     case "hazards":
       return buildHazards(detailContext);
     case "switches":
-      return buildGlyphs(
+      return buildIcons(
         details.switches.map((s) => ({
           position: s.position,
           tooltip: s.name ?? "Switch",
         })),
-        { shape: "diamond", color: COLORS.switch }
+        "switch"
       );
     case "stationary":
-      return buildGlyphs(
+      return buildIcons(
         details.stationaryWeapons.map((w) => ({
           position: w.position,
           tooltip: w.name,
         })),
-        { shape: "triangle", color: COLORS.stationary }
+        "stationary"
       );
     default:
       return null;
   }
-}
-
-type GlyphShape = "square" | "diamond" | "triangle";
-
-function glyphIcon(shape: GlyphShape, color: string) {
-  return L.divIcon({
-    className: "rp-glyph-wrap",
-    html: `<div class="rp-glyph rp-glyph--${shape}" style="--glyph:${color}"></div>`,
-    iconSize: [14, 14],
-    iconAnchor: [7, 7],
-  });
 }
 
 function markerDimmable(
@@ -234,49 +216,148 @@ function bindTooltip(layer: L.Layer, text: string) {
   makeLayerAccessible(layer, text);
 }
 
-function buildGlyphs(
-  points: PointSpec[],
-  style: { shape: GlyphShape; color: string }
-): LayerEntry {
+const badgeIcons = new Map<IconId, L.DivIcon>();
+
+/** A badge drawn from the shared icon sprite, sized by the map's --rp-icon-size. */
+function badgeIcon(id: IconId) {
+  let icon = badgeIcons.get(id);
+  if (!icon) {
+    icon = L.divIcon({
+      className: "rp-icon-wrap",
+      html: `<span class="rp-icon" style="--icon:${iconColor(id)}">${layerIconMarkup(id)}</span>`,
+      iconSize: [0, 0],
+      tooltipAnchor: [0, -6],
+      popupAnchor: [0, -8],
+    });
+    badgeIcons.set(id, icon);
+  }
+  return icon;
+}
+
+/** A layer of icon badges; addBadge places one with its tooltip and floor dimming. */
+function iconLayer() {
   const group = L.layerGroup();
   const dimmables: Dimmable[] = [];
+  const markers: L.Marker[] = [];
+  const relayout = trackIconOverlaps(group, markers);
 
-  for (const point of points) {
-    const marker = L.marker(gameToLatLng(point.position), {
-      icon: glyphIcon(style.shape, style.color),
-    });
+  function addBadge(point: PointSpec, icon: IconId) {
+    const marker = L.marker(gameToLatLng(point.position), { icon: badgeIcon(icon), riseOnHover: true });
     bindTooltip(marker, point.tooltip);
     marker.addTo(group);
-    dimmables.push(markerDimmable(marker, point.position, point.top, point.bottom));
+    markers.push(marker);
+    const dimmable = markerDimmable(marker, point.position, point.top, point.bottom);
+    dimmables.push({
+      ...dimmable,
+      setDimmed: (dimmed) => {
+        dimmable.setDimmed(dimmed);
+        relayout();
+      },
+    });
+    return marker;
   }
 
+  return { group, dimmables, addBadge };
+}
+
+function buildIcons(points: PointSpec[], icon: IconId): LayerEntry {
+  const { group, dimmables, addBadge } = iconLayer();
+  for (const point of points) addBadge(point, icon);
   return { group, dimmables };
 }
 
-function buildDots(
-  points: PointSpec[],
-  style: { color: string; radius: number; renderer: L.Canvas }
-): LayerEntry {
-  const group = L.layerGroup();
-  const dimmables: Dimmable[] = [];
-  const baseStyle = { opacity: 0.9, fillOpacity: 0.5 };
+const COMPACT_ICON_CLASS = "rp-icon--compact";
+const ICON_MIN_PX = 18;
+const ICON_MAX_PX = 28;
+/** Zoom levels above the map's minimum over which badges grow to full size. */
+const ICON_GROWTH_ZOOMS = 3;
 
-  for (const point of points) {
-    const marker = L.circleMarker(gameToLatLng(point.position), {
-      ...(points.length > 500 ? { renderer: style.renderer } : {}),
-      radius: style.radius,
-      color: style.color,
-      weight: 1.5,
-      ...baseStyle,
-    });
-    bindTooltip(marker, point.tooltip);
-    marker.addTo(group);
-    dimmables.push(
-      pathDimmable(marker, baseStyle, point.position, point.top, point.bottom)
-    );
+interface IconOverlaps {
+  layers: Set<L.Marker[]>;
+  frame: number;
+}
+
+const iconOverlaps = new WeakMap<L.Map, IconOverlaps>();
+
+function overlapsFor(map: L.Map): IconOverlaps {
+  let state = iconOverlaps.get(map);
+  if (!state) {
+    state = { layers: new Set(), frame: 0 };
+    iconOverlaps.set(map, state);
+  }
+  return state;
+}
+
+/**
+ * Sizes badges for the zoom, then shrinks any badge that would sit on one
+ * already placed (from any layer) to a dot that expands on hover or focus:
+ * every point stays visible, and the first in a crowd keeps its glyph.
+ */
+function layoutIcons(map: L.Map) {
+  const state = overlapsFor(map);
+  state.frame = 0;
+  const growth = Math.min(Math.max((map.getZoom() - map.getMinZoom()) / ICON_GROWTH_ZOOMS, 0), 1);
+  const size = Math.round(ICON_MIN_PX + (ICON_MAX_PX - ICON_MIN_PX) * growth);
+  map.getPane("markerPane")?.style.setProperty("--rp-icon-size", `${size}px`);
+
+  // Badges on the shown floor claim their spot before dimmed ones from other floors.
+  const onFloor: L.Marker[] = [];
+  const offFloor: L.Marker[] = [];
+  for (const markers of state.layers) {
+    for (const marker of markers) {
+      (marker.getElement()?.classList.contains("rp-off-level") ? offFloor : onFloor).push(marker);
+    }
   }
 
-  return { group, dimmables };
+  // Cells about one badge wide, so each badge is only checked against its neighbours.
+  const spacing = size * 0.8;
+  const grid = new Map<string, L.Point[]>();
+  for (const marker of [...onFloor, ...offFloor]) {
+    const element = marker.getElement();
+    if (!element) continue;
+    const point = map.latLngToLayerPoint(marker.getLatLng());
+    const column = Math.floor(point.x / spacing);
+    const row = Math.floor(point.y / spacing);
+    let crowded = false;
+    for (let dx = -1; dx <= 1 && !crowded; dx++) {
+      for (let dy = -1; dy <= 1 && !crowded; dy++) {
+        crowded = Boolean(grid.get(`${column + dx},${row + dy}`)?.some((other) => other.distanceTo(point) < spacing));
+      }
+    }
+    element.classList.toggle(COMPACT_ICON_CLASS, crowded);
+    if (crowded) continue;
+    const key = `${column},${row}`;
+    const cell = grid.get(key);
+    if (cell) cell.push(point);
+    else grid.set(key, [point]);
+  }
+}
+
+/** Lays the map's badges out again when this group is shown, hidden or zoomed; returns the scheduler. */
+function trackIconOverlaps(group: L.LayerGroup, markers: L.Marker[]) {
+  let attached: L.Map | null = null;
+  const schedule = () => {
+    const map = attached;
+    if (!map || typeof requestAnimationFrame !== "function") return;
+    const state = overlapsFor(map);
+    if (!state.frame) state.frame = requestAnimationFrame(() => layoutIcons(map));
+  };
+  group.on("add", () => {
+    ensureLayerIconSprite();
+    attached = (group as unknown as { _map: L.Map | null })._map;
+    if (!attached) return;
+    overlapsFor(attached).layers.add(markers);
+    attached.on("zoomend", schedule);
+    schedule();
+  });
+  group.on("remove", () => {
+    if (!attached) return;
+    overlapsFor(attached).layers.delete(markers);
+    attached.off("zoomend", schedule);
+    schedule();
+    attached = null;
+  });
+  return schedule;
 }
 
 const EXTRACT_FACTION_LABELS: Record<string, string> = {
@@ -364,9 +445,11 @@ function buildExits(exits: ExitSpec[], color: string): LayerEntry {
     }
 
     // Hovering the pill fades it (see globals.css) and shows the zone under it.
+    // Kept above icon badges, so a crowd of loot never covers an exit's name.
     const marker = L.marker(gameToLatLng(exit.position), {
       icon: exitIcon(exit.name, color),
       riseOnHover: true,
+      zIndexOffset: 1000,
     });
     marker.on("mouseover", () => setHovered(true));
     marker.on("mouseout", () => setHovered(false));
@@ -567,16 +650,14 @@ const LOCK_TYPE_LABELS: Record<string, string> = {
 type DetailContext = LayerBuildContext & { details: MapDetails };
 
 function buildLocks(context: DetailContext): LayerEntry {
-  const group = L.layerGroup();
-  const dimmables: Dimmable[] = [];
+  const { group, dimmables, addBadge } = iconLayer();
 
   for (const lock of context.details.locks) {
-    const marker = L.marker(gameToLatLng(lock.position), {
-      icon: glyphIcon("triangle", COLORS.lock),
-    });
-
     const title = LOCK_TYPE_LABELS[lock.lockType] ?? "Lock";
-    bindTooltip(marker, lock.keyName ? `${title} — ${lock.keyName}` : title);
+    const marker = addBadge(
+      { position: lock.position, tooltip: lock.keyName ? `${title} — ${lock.keyName}` : title },
+      "lock"
+    );
 
     if (lock.keyName) {
       const popup = document.createElement("div");
@@ -598,40 +679,32 @@ function buildLocks(context: DetailContext): LayerEntry {
       }
       marker.bindPopup(popup, { closeButton: false });
     }
-
-    marker.addTo(group);
-    dimmables.push(markerDimmable(marker, lock.position));
   }
 
   return { group, dimmables };
 }
 
+/** Each hazard is a badge, so it is easy to spot; zones are also outlined where known. */
 function buildHazards(context: DetailContext): LayerEntry {
-  const group = L.layerGroup();
-  const dimmables: Dimmable[] = [];
+  const { group, dimmables, addBadge } = iconLayer();
   const zoneStyle = { opacity: 0.7, fillOpacity: 0.12 };
 
   for (const hazard of context.details.hazards) {
     if (hazard.outline.length >= 3) {
+      // The badge carries the name and keyboard focus, so the zone itself takes no events.
       const polygon = L.polygon(
         hazard.outline.map((p) => gameToLatLng(p)),
-        { color: COLORS.hazard, weight: 1, dashArray: "4 3", ...zoneStyle }
+        { color: COLORS.hazard, weight: 1, dashArray: "4 3", interactive: false, ...zoneStyle }
       );
-      bindTooltip(polygon, hazard.name);
       polygon.addTo(group);
       dimmables.push(
         pathDimmable(polygon, zoneStyle, hazard.position, hazard.top, hazard.bottom)
       );
-    } else {
-      const marker = L.marker(gameToLatLng(hazard.position), {
-        icon: glyphIcon("triangle", COLORS.hazard),
-      });
-      bindTooltip(marker, hazard.name);
-      marker.addTo(group);
-      dimmables.push(
-        markerDimmable(marker, hazard.position, hazard.top, hazard.bottom)
-      );
     }
+    addBadge(
+      { position: hazard.position, tooltip: hazard.name, top: hazard.top, bottom: hazard.bottom },
+      hazardIconId(hazard.hazardType)
+    );
   }
 
   return { group, dimmables };

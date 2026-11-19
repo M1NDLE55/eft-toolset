@@ -7,6 +7,7 @@ import { getLayerGroups } from "@/app/lib/raid-planner/layer-options";
 import { useMapDetails } from "@/app/lib/cache/raidPlanner";
 import { defaultFloor, FloorSwitcher } from "./floor-switcher";
 import { LazyPlanEditorCanvas } from "./lazy-canvas";
+import { LayerIcon } from "./layer-icon";
 import { MapAttribution } from "./map-chrome";
 
 export function SharedPreview({ config, plan }: { config: MapConfig; plan: RaidPlan }) {
@@ -20,7 +21,10 @@ export function SharedPreview({ config, plan }: { config: MapConfig; plan: RaidP
     return getLayerGroups(details, config).flatMap((group) =>
       group.options
         .filter((option) => enabled.has(option.id))
-        .map((option) => (group.name === "Extractions" && option.id !== "transits" ? `${option.label} extracts` : option.label))
+        .map((option) => ({
+          id: option.id,
+          label: group.name === "Extractions" && option.id !== "transits" ? `${option.label} extracts` : option.label,
+        }))
     );
   }, [details, config, plan.enabledLayers]);
 
@@ -61,8 +65,9 @@ export function SharedPreview({ config, plan }: { config: MapConfig; plan: RaidP
               </button>
             </>
           ) : layerLabels.length > 0 ? (
-            layerLabels.map((label) => (
-              <span key={label} className="border border-[#2a2a2a] bg-[#090909] px-1.5 py-0.5 text-[#bbb]">
+            layerLabels.map(({ id, label }) => (
+              <span key={id} className="flex items-center gap-1 border border-[#2a2a2a] bg-[#090909] px-1.5 py-0.5 text-[#bbb]">
+                <LayerIcon layerId={id} className="size-3.5" />
                 {label}
               </span>
             ))

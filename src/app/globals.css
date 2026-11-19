@@ -277,22 +277,62 @@
   border: none;
 }
 
-.rp-glyph {
-  width: 14px;
-  height: 14px;
-  box-sizing: border-box;
-  border: 1.5px solid var(--glyph);
-  background: color-mix(in srgb, var(--glyph) 40%, transparent);
-}
-
-.rp-glyph--diamond {
-  transform: rotate(45deg) scale(0.85);
-}
-
-.rp-glyph--triangle {
+.rp-icon-wrap {
+  background: none;
   border: none;
-  background: var(--glyph);
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+/* Sized by --rp-icon-size, which the map sets for its zoom. */
+.rp-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  translate: -50% -50%;
+  display: block;
+  width: var(--rp-icon-size, 18px);
+  height: var(--rp-icon-size, 18px);
+  border-radius: 4px;
+  transition: scale 120ms ease-out;
+}
+
+.rp-icon-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.rp-map .leaflet-marker-icon.rp-icon-wrap:hover .rp-icon,
+.rp-map .leaflet-marker-icon.rp-icon-wrap:focus-visible .rp-icon {
+  scale: 1.2;
+}
+
+.rp-map .leaflet-marker-icon.rp-icon-wrap:focus-visible {
+  outline: none;
+}
+
+.rp-map .leaflet-marker-icon.rp-icon-wrap:focus-visible .rp-icon {
+  outline: 2px solid #f0f0f0;
+  outline-offset: 2px;
+}
+
+/* A badge crowded by another shows as a dot until hovered or focused. */
+.rp-icon-wrap.rp-icon--compact:not(:hover, :focus-visible) .rp-icon {
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid #111;
+  border-radius: 50%;
+  background: var(--icon);
+}
+
+.rp-icon-wrap.rp-icon--compact:not(:hover, :focus-visible) .rp-icon-svg {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rp-icon {
+    transition: none;
+  }
 }
 
 .rp-map .leaflet-marker-icon.rp-off-level {
