@@ -19,7 +19,7 @@ export function ChangeBadge({ points, price, now }: { points: readonly PricePoin
   return (
     <span
       title={`Was ${Rubles.format(change.previous)} ${ago(change.since, now)}`}
-      className={cn("text-[10px] font-semibold tabular-nums", up ? "text-emerald-400" : "text-red-400")}
+      className={cn("text-3xs font-semibold tabular-nums", up ? "text-emerald-400" : "text-red-400")}
     >
       {up ? "▲" : "▼"} {Math.abs(change.ratio * 100).toFixed(1)}%
     </span>
@@ -67,7 +67,7 @@ export function PriceTrend({ points, price, now }: { points: readonly PricePoint
       <svg viewBox="0 0 100 32" preserveAspectRatio="none" className="h-12 w-full" role="img" aria-label={`Price ranged from ${Rubles.format(min)} to ${Rubles.format(max)}`}>
         <path d={path} fill="none" stroke={up ? "#34d399" : "#f87171"} strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
       </svg>
-      <div className="flex justify-between text-[10px] tabular-nums text-[#777]">
+      <div className="flex justify-between text-3xs tabular-nums text-[#777]">
         <span>{ago(start, now)}</span>
         <span>
           {Rubles.format(min)} – {Rubles.format(max)}

@@ -75,7 +75,7 @@ function Objective({ objective, taskName, several }: { objective: GunsmithObject
           {weapon.shortName} requirements
         </h2>
         <table className={`${panel} w-full text-sm`}>
-          <thead className="text-left text-[10px] uppercase tracking-widest text-[#666]">
+          <thead className="text-left text-3xs uppercase tracking-widest text-[#666]">
             <tr>
               <th scope="col" className="px-3 py-1.5 font-bold">Requirement</th>
               <th scope="col" className="px-3 py-1.5 font-bold">Needs</th>
@@ -100,7 +100,7 @@ function Objective({ objective, taskName, several }: { objective: GunsmithObject
                 <th scope="row" className="px-3 py-1.5 text-left font-normal text-[#ccc]">
                   {check.label}
                   {check.status === "unknown" && UNCHECKED_HINTS[check.name] && (
-                    <span className="block text-[11px] text-[#888]">{UNCHECKED_HINTS[check.name]}</span>
+                    <span className="block text-2xs text-[#888]">{UNCHECKED_HINTS[check.name]}</span>
                   )}
                 </th>
                 <td className="px-3 py-1.5 text-[#999]">{formatRequirement(check)}</td>
@@ -116,7 +116,7 @@ function Objective({ objective, taskName, several }: { objective: GunsmithObject
         </table>
         {(objective.requiredParts.length > 0 || objective.requiredCategories.length > 0) && (
           <div className={`${panel} flex flex-col gap-1 px-3 py-2 text-sm`}>
-            <span className="text-[10px] font-bold uppercase tracking-widest text-[#666]">Must include</span>
+            <span className="text-3xs font-bold uppercase tracking-widest text-[#666]">Must include</span>
             <ul className="flex flex-col gap-0.5">
               {objective.requiredParts.map((part) => (
                 <li key={part.name}>
@@ -152,7 +152,7 @@ function Objective({ objective, taskName, several }: { objective: GunsmithObject
               ["Cost", build.costRUB === null ? "—" : Rubles.format(build.costRUB)],
             ].map(([label, value]) => (
               <div key={label} className={`${panel} flex flex-col gap-0.5 p-3`}>
-                <dt className="text-[10px] font-bold uppercase tracking-widest text-[#777]">{label}</dt>
+                <dt className="text-3xs font-bold uppercase tracking-widest text-[#777]">{label}</dt>
                 <dd className="text-lg font-semibold tabular-nums text-[#e6d9b8]">{value}</dd>
               </div>
             ))}
@@ -169,7 +169,7 @@ function Objective({ objective, taskName, several }: { objective: GunsmithObject
             . The table above shows the closest attempt. Start from the weapon with the required parts installed and finish
             it in the gun builder.
           </p>
-          <a href={objective.start.shareHref} className="w-fit text-[11px] font-bold uppercase tracking-widest text-[#c8b384] underline-offset-2 hover:underline">
+          <a href={objective.start.shareHref} className="w-fit text-2xs font-bold uppercase tracking-widest text-[#c8b384] underline-offset-2 hover:underline">
             Start this build in the gun builder
           </a>
         </section>
@@ -211,7 +211,7 @@ export default async function Page({ params }: PageProps) {
         ])}
       />
       {faq.length > 0 && <JsonLd data={faqPage(faq)} />}
-      <nav aria-label="Breadcrumb" className="-mb-4 text-[11px] uppercase tracking-widest text-[#777]">
+      <nav aria-label="Breadcrumb" className="-mb-4 text-2xs uppercase tracking-widest text-[#777]">
         <Link href="/gun-builder/gunsmith" className="hover:text-[#c8b384] hover:underline underline-offset-2">
           {GUNSMITH_HUB_NAME}
         </Link>

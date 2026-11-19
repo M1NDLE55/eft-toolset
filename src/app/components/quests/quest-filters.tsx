@@ -32,7 +32,7 @@ export function Toggle({
       title={title}
       onClick={onClick}
       className={cn(
-        "h-9 shrink-0 border px-2.5 text-[10px] font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:outline-[#9a8866] disabled:opacity-40",
+        "h-9 shrink-0 border px-2.5 text-3xs font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:outline-[#9a8866] disabled:opacity-40",
         pressed ? "border-[#9a8866] bg-[#1a1712] text-[#e6d9b8]" : "border-[#2a2a2a] text-[#888] hover:text-[#ccc]"
       )}
     >
@@ -44,7 +44,7 @@ export function Toggle({
 function LevelField({ label, value, onChange }: { label: string; value: number | null; onChange: (value: number | null) => void }) {
   return (
     <label className="flex min-w-0 flex-col gap-1">
-      <span className="text-[10px] font-bold uppercase tracking-widest text-[#777]">{label}</span>
+      <span className="text-3xs font-bold uppercase tracking-widest text-[#777]">{label}</span>
       <input
         type="number"
         inputMode="numeric"
@@ -113,7 +113,7 @@ export function QuestFilters({
       </label>
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
         <label className="flex min-w-0 flex-col gap-1">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-[#777]">Trader</span>
+          <span className="text-3xs font-bold uppercase tracking-widest text-[#777]">Trader</span>
           <select value={state.trader ?? ""} onChange={(event) => onChange({ trader: event.target.value || null })} className={field}>
             <option value="">Any trader</option>
             {traders.map((trader) => (
@@ -125,7 +125,7 @@ export function QuestFilters({
           </select>
         </label>
         <label className="flex min-w-0 flex-col gap-1">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-[#777]">Map</span>
+          <span className="text-3xs font-bold uppercase tracking-widest text-[#777]">Map</span>
           <select value={state.map ?? ""} onChange={(event) => onChange({ map: event.target.value || null })} className={field}>
             <option value="">Any map</option>
             {maps.map((map) => (
@@ -180,7 +180,7 @@ export function QuestFilters({
           <button
             type="button"
             onClick={onClear}
-            className="ml-auto h-9 px-2 text-[10px] font-bold uppercase tracking-widest text-[#c8b384] underline-offset-2 hover:underline"
+            className="ml-auto h-9 px-2 text-3xs font-bold uppercase tracking-widest text-[#c8b384] underline-offset-2 hover:underline"
           >
             Clear filters ({active})
           </button>

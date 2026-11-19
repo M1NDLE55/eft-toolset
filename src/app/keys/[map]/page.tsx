@@ -107,7 +107,7 @@ export default async function Page({ params }: PageProps) {
         ])}
       />
       <JsonLd data={faqPage(faq)} />
-      <nav aria-label="Breadcrumb" className="-mb-4 text-[11px] uppercase tracking-widest text-[#777]">
+      <nav aria-label="Breadcrumb" className="-mb-4 text-2xs uppercase tracking-widest text-[#777]">
         <Link href="/keys" className="hover:text-[#c8b384] hover:underline underline-offset-2">
           Keys by map
         </Link>
@@ -124,8 +124,8 @@ export default async function Page({ params }: PageProps) {
         </p>
       </header>
       <div className="overflow-x-auto border border-[#1a1a1a] bg-[#0c0c0c]">
-        <table className="w-full min-w-[36rem] text-sm">
-          <thead className="text-[10px] uppercase tracking-widest text-[#666]">
+        <table className="w-full min-w-144 text-sm">
+          <thead className="text-3xs uppercase tracking-widest text-[#666]">
             <tr>
               <th scope="col" className="px-3 py-1.5 text-left font-bold">Key</th>
               <th scope="col" className="px-2 py-1.5 text-right font-bold">Locks</th>
@@ -157,7 +157,7 @@ export default async function Page({ params }: PageProps) {
                 <td className="px-2 py-1.5 text-right tabular-nums text-[#aaa]">{key.locks}</td>
                 <td className="px-2 py-1.5 text-right">
                   <span className="block tabular-nums text-[#ddd]">{key.buyPrice === null ? "—" : Rubles.format(key.buyPrice)}</span>
-                  <span className="block text-[10px] text-[#777]">{key.buySource === "Flea Market" ? "Flea" : (key.buySource ?? "Loot only")}</span>
+                  <span className="block text-3xs text-[#777]">{key.buySource === "Flea Market" ? "Flea" : (key.buySource ?? "Loot only")}</span>
                 </td>
                 <td className="px-2 py-1.5 text-right tabular-nums text-[#aaa]">{key.sellPrice === null ? "—" : Rubles.format(key.sellPrice)}</td>
                 <td className="px-3 py-1.5 text-xs text-[#999]">

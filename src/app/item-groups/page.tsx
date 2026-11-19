@@ -43,7 +43,7 @@ export default function Page() {
       {!hydrated ? (
         <div className="flex flex-col gap-2">
           {Array.from({ length: 3 }, (_, index) => (
-            <Skeleton key={index} className="h-[68px] w-full" />
+            <Skeleton key={index} className="h-17 w-full" />
           ))}
         </div>
       ) : groups.length > 0 ? (

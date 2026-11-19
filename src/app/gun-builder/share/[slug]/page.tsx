@@ -137,7 +137,7 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
 
   return (
     <div className="flex w-full max-w-xl flex-col gap-4">
-      <p className="text-[11px] font-bold uppercase tracking-widest text-[#9a8866]">Shared build</p>
+      <p className="text-2xs font-bold uppercase tracking-widest text-[#9a8866]">Shared build</p>
 
       <div className="flex items-center gap-4 border border-[#1a1a1a] bg-[#0c0c0c] p-3">
         <span className="flex h-16 w-24 shrink-0 items-center justify-center bg-[#080808]">
@@ -158,7 +158,7 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
       <dl className="grid grid-cols-3 gap-px border border-[#1a1a1a] bg-[#1a1a1a] sm:grid-cols-5">
         {summary.map((entry) => (
           <div key={entry.label} className="bg-[#0c0c0c] px-3 py-2">
-            <dt className="text-[10px] font-bold uppercase tracking-widest text-[#888]">{entry.label}</dt>
+            <dt className="text-3xs font-bold uppercase tracking-widest text-[#888]">{entry.label}</dt>
             <dd className="truncate text-sm font-black tabular-nums text-[#e6d9b8]">
               {loading ? <span className="mt-1 block h-4 w-12 animate-shimmer" /> : entry.value}
             </dd>
@@ -168,7 +168,7 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
 
       {build.ammoId && (
         <p className="flex flex-wrap items-center gap-x-3 gap-y-1 border border-[#1a1a1a] bg-[#0c0c0c] px-3 py-2 text-sm">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-[#888]">Ammo</span>
+          <span className="text-3xs font-bold uppercase tracking-widest text-[#888]">Ammo</span>
           {ammo ? (
             <ItemRundownLink item={ammo} prefetch={false} className="min-w-0 truncate text-[#ddd] hover:text-[#e6d9b8] hover:underline">
               {ammo.name}
@@ -206,7 +206,7 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
 
       {parts > 0 && (
         <section aria-label="Parts" className="border border-[#1a1a1a] bg-[#0c0c0c]">
-          <h2 className="border-b border-[#1a1a1a] px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-[#888]">
+          <h2 className="border-b border-[#1a1a1a] px-3 py-2 text-3xs font-bold uppercase tracking-widest text-[#888]">
             Parts
           </h2>
           <ul>
@@ -235,7 +235,7 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
                     ) : (
                       <span className="block truncate text-sm text-[#ddd]">{loading ? "Loading…" : "Unavailable item"}</span>
                     )}
-                    {node.slot && <span className="block truncate text-[10px] uppercase tracking-widest text-[#666]">{node.slot.name}</span>}
+                    {node.slot && <span className="block truncate text-3xs uppercase tracking-widest text-[#666]">{node.slot.name}</span>}
                   </span>
                 </li>
               );

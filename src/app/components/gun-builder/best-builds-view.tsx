@@ -79,7 +79,7 @@ export function BestBuildsView({ result }: { result: WeaponBestBuilds }) {
         <div className="overflow-x-auto">
           <table className={cn(panel, "w-full text-xs sm:text-sm")}>
             <thead>
-              <tr className="text-[10px] uppercase tracking-widest text-[#777]">
+              <tr className="text-3xs uppercase tracking-widest text-[#777]">
                 <th scope="col" className="px-2 py-2 text-left font-bold sm:px-3">Stat</th>
                 {builds.map((build) => (
                   <th key={build.kind} scope="col" className="px-2 py-2 text-right font-bold sm:px-3">

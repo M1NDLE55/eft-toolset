@@ -20,8 +20,8 @@ export function AmmoTable({ caliber, headingLevel = 2 }: { caliber: Caliber; hea
         )}
       </Heading>
       <div className="overflow-x-auto border border-[#1a1a1a] bg-[#0c0c0c]">
-        <table className="w-full min-w-[40rem] text-sm">
-          <thead className="text-[10px] uppercase tracking-widest text-[#666]">
+        <table className="w-full min-w-160 text-sm">
+          <thead className="text-3xs uppercase tracking-widest text-[#666]">
             <tr>
               <th scope="col" className="px-3 py-1.5 text-left font-bold">Round</th>
               <th scope="col" className={`${cell} font-bold`} title="Penetration">Pen</th>
@@ -53,7 +53,7 @@ export function AmmoTable({ caliber, headingLevel = 2 }: { caliber: Caliber; hea
                 <td className={`${cell} text-[#aaa]`}>{round.recoil === 0 ? "0" : `${round.recoil > 0 ? "+" : ""}${Math.round(round.recoil * 100)}%`}</td>
                 <td className="px-3 py-1.5 text-right">
                   <span className="block tabular-nums text-[#ddd]">{round.price === null ? "—" : Rubles.format(round.price)}</span>
-                  <span className="block text-[10px] text-[#777]">{round.source ?? "Loot only"}</span>
+                  <span className="block text-3xs text-[#777]">{round.source ?? "Loot only"}</span>
                 </td>
               </tr>
             ))}

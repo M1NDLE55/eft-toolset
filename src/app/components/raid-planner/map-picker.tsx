@@ -26,7 +26,7 @@ function TileBody({ config }: { config: MapConfig }) {
         <span className="line-clamp-2 text-xs font-bold uppercase tracking-widest text-[#ccc] group-hover:text-[#c9b88d]">
           {config.name}
         </span>
-        <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest text-[#777]">
+        <span className="flex items-center gap-1.5 text-3xs uppercase tracking-widest text-[#777]">
           <Layers className="h-3 w-3" aria-hidden />
           {levelLabel(config)}
         </span>

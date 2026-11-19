@@ -31,7 +31,7 @@ export function WikiText({ text }: { text: string }) {
               key={index}
               className={cn(
                 "ml-4 list-disc space-y-0.5",
-                block.lines.length > 4 && block.lines.every((line) => line.length < 40) && "columns-[11rem] gap-x-8"
+                block.lines.length > 4 && block.lines.every((line) => line.length < 40) && "columns-[--spacing(44)] gap-x-8"
               )}
             >
               {block.lines.map((line, lineIndex) => (
@@ -70,7 +70,7 @@ export function WikiSections({ sections }: { sections: WikiPageSection[] }) {
           {section.text && <WikiText text={section.text} />}
           {section.subsections.map((subsection) => (
             <div key={`${subsection.heading}-${subsection.occurrence ?? 0}`} className="flex flex-col gap-1 border-l border-[#2a2a2a] pl-2">
-              <h4 className="text-[11px] font-semibold uppercase tracking-wider text-[#999]">{subsection.heading}</h4>
+              <h4 className="text-2xs font-semibold uppercase tracking-wider text-[#999]">{subsection.heading}</h4>
               <WikiText text={subsection.text} />
             </div>
           ))}
@@ -83,7 +83,7 @@ export function WikiSections({ sections }: { sections: WikiPageSection[] }) {
 /** The licence asks for credit and a link to the page with every use. */
 export function WikiCredit({ wiki }: { wiki: WikiPageCredit }) {
   return (
-    <p className="mt-3 border-t border-[#1a1a1a] pt-2 text-[11px] text-[#777]">
+    <p className="mt-3 border-t border-[#1a1a1a] pt-2 text-2xs text-[#777]">
       From{" "}
       <a href={wiki.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-0.5 text-[#b9a473] hover:underline">
         {wiki.title} <ExternalLink aria-hidden className="h-2.5 w-2.5" />

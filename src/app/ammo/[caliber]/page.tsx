@@ -64,7 +64,7 @@ export default async function Page({ params }: PageProps) {
         ])}
       />
       <JsonLd data={faqPage(faq)} />
-      <nav aria-label="Breadcrumb" className="-mb-4 text-[11px] uppercase tracking-widest text-[#777]">
+      <nav aria-label="Breadcrumb" className="-mb-4 text-2xs uppercase tracking-widest text-[#777]">
         <Link href="/ammo" className="hover:text-[#c8b384] hover:underline underline-offset-2">
           Ammo chart
         </Link>

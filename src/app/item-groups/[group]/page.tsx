@@ -145,7 +145,7 @@ export default function Page() {
     <div className="flex w-full max-w-4xl min-w-0 flex-col gap-4">
       <Link
         href="/item-groups"
-        className="inline-flex w-fit items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
+        className="inline-flex w-fit items-center gap-1 text-2xs font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
       >
         <ArrowLeft className="h-3.5 w-3.5" /> All groups
       </Link>
@@ -257,7 +257,7 @@ export default function Page() {
                       )
                     }
                     className={cn(
-                      "flex h-9 items-center gap-1 px-2.5 text-[10px] font-bold uppercase tracking-widest transition-colors",
+                      "flex h-9 items-center gap-1 px-2.5 text-3xs font-bold uppercase tracking-widest transition-colors",
                       active ? "bg-[#1a1712] text-[#e6d9b8]" : "text-[#888] hover:text-[#ccc]"
                     )}
                   >
@@ -291,7 +291,7 @@ export default function Page() {
                       <>
                         <span className="text-[#e6d9b8] sm:w-28 sm:text-right" title={row.vendor ?? undefined}>
                           {row.price !== null ? Rubles.format(row.price) : "No buyer"}
-                          {row.vendor && <span className="ml-1 text-[10px] uppercase text-[#777]">{row.vendor}</span>}
+                          {row.vendor && <span className="ml-1 text-3xs uppercase text-[#777]">{row.vendor}</span>}
                           <span className="ml-1.5">
                             <ChangeBadge points={history(row.name)} price={row.price} now={now} />
                           </span>

@@ -87,7 +87,7 @@ function WeaponPicker() {
 
   return (
     <>
-      <div className="grid gap-2 sm:grid-cols-[1fr_14rem]">
+      <div className="grid gap-2 sm:grid-cols-[1fr_--spacing(56)]">
         <div className="relative">
           <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#666]" />
           <Input
@@ -128,7 +128,7 @@ function WeaponPicker() {
         </div>
       )}
 
-      <p aria-live="polite" className="text-[10px] font-bold uppercase tracking-widest text-[#666]">
+      <p aria-live="polite" className="text-3xs font-bold uppercase tracking-widest text-[#666]">
         {loading ? "Loading weapons" : `${filtered.length} weapon${filtered.length === 1 ? "" : "s"}`}
       </p>
 

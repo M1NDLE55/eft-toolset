@@ -238,7 +238,7 @@ export function OptimizerDialog({
 
         <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto overscroll-contain p-4 sm:p-5">
           <fieldset className="flex flex-col gap-2">
-            <legend className="mb-2 text-[10px] font-bold uppercase tracking-widest text-[#888]">Optimise for</legend>
+            <legend className="mb-2 text-3xs font-bold uppercase tracking-widest text-[#888]">Optimise for</legend>
             <div role="radiogroup" aria-label="Optimise for" className="grid grid-cols-3 border border-[#2a2a2a]">
               {GOALS.map((option) => {
                 const active = goal === option.key;
@@ -254,8 +254,8 @@ export function OptimizerDialog({
                       active ? "bg-[#9a8866] text-[#070707]" : "text-[#aaa] hover:bg-[#121212] hover:text-[#e6d9b8]"
                     )}
                   >
-                    <span className="text-[11px] font-black uppercase tracking-widest">{option.label}</span>
-                    <span className={cn("text-[10px] leading-tight", active ? "text-[#070707]/80" : "text-[#666]")}>{option.hint}</span>
+                    <span className="text-2xs font-black uppercase tracking-widest">{option.label}</span>
+                    <span className={cn("text-3xs leading-tight", active ? "text-[#070707]/80" : "text-[#666]")}>{option.hint}</span>
                   </button>
                 );
               })}
@@ -263,7 +263,7 @@ export function OptimizerDialog({
           </fieldset>
 
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="optimizer-budget" className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
+            <label htmlFor="optimizer-budget" className="text-3xs font-bold uppercase tracking-widest text-[#888]">
               Max build cost <span className="normal-case tracking-normal text-[#666]">(optional, includes the weapon)</span>
             </label>
             <div className="relative">
@@ -345,7 +345,7 @@ export function OptimizerDialog({
                     </ul>
                   )}
                   <StatDeltaTable rows={phase.deltas} leftLabel="Current" rightLabel="Optimised" />
-                  <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
+                  <h3 className="text-3xs font-bold uppercase tracking-widest text-[#888]">
                     {phase.changes.length} change{phase.changes.length === 1 ? "" : "s"}
                   </h3>
                   <DiffList rows={phase.changes} lookup={phase.lookup} leftLabel="Current" rightLabel="Optimised" />

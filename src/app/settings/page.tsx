@@ -7,6 +7,7 @@ import { GameModeToggle } from "@/components/game-mode/toggle";
 import { LayoutPreview } from "@/app/components/home/layout-previews";
 import { CopySnippet } from "@/app/components/mcp/copy-snippet";
 import { AccountSection } from "@/app/components/settings/account-section";
+import { ContentScaleSetting } from "@/app/components/settings/content-scale-setting";
 import { useHydrated } from "@/app/lib/storage/use-store";
 import { DEFAULT_HOME_LAYOUT, HOME_LAYOUTS, setHomeLayout, useHomeLayout, type HomeLayout } from "@/app/lib/settings/store";
 import { cn } from "@/lib/utils";
@@ -15,6 +16,7 @@ const SECTIONS = [
   { id: "account", title: "Account" },
   { id: "ai-assistants", title: "AI assistants" },
   { id: "home-screen", title: "Home screen" },
+  { id: "content-size", title: "Content size" },
   { id: "game-mode", title: "Game mode" },
   { id: "data", title: "Your data" },
 ] as const;
@@ -121,7 +123,7 @@ export default function Page() {
           <p className="mt-1 text-sm text-[#888]">Your account, AI assistants, and how the site works for you.</p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[11rem_minmax(0,1fr)] lg:gap-10">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[--spacing(44)_minmax(0,1fr)] lg:gap-10">
           <SectionNav />
           <div className="flex min-w-0 flex-col gap-8">
         <Section
@@ -171,7 +173,7 @@ export default function Page() {
                       <span className="flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#ddd]">
                         {layout.name}
                         {layout.id === DEFAULT_HOME_LAYOUT && (
-                          <span className="border border-[#2a2a2a] px-1.5 py-0.5 text-[9px] text-[#888]">Default</span>
+                          <span className="border border-[#2a2a2a] px-1.5 py-0.5 text-4xs text-[#888]">Default</span>
                         )}
                       </span>
                       <span className="text-sm text-[#888]">{layout.description}</span>
@@ -186,6 +188,13 @@ export default function Page() {
               {error}
             </p>
           )}
+        </Section>
+
+        <Section
+          id="content-size"
+          description="How large text and controls appear across the site. Phones show at most 112.5%. Maps and the build and quest chain trees have their own zoom."
+        >
+          <ContentScaleSetting />
         </Section>
 
         <Section id="game-mode" description="Switches every price and data set between PVP and PVE. The same switch is in the header.">

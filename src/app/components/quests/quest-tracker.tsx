@@ -198,7 +198,7 @@ export function ObjectiveChecklist({
           <>
             {objective.optional && <Badge tone="plain">Optional</Badge>}
             {objective.foundInRaid && (short ? <Badge title="Found in raid: bought copies won't count">FIR</Badge> : <Badge>Found in raid</Badge>)}
-            {objectiveMaps.length > 0 && <span className="text-[11px] text-[#777]">{objectiveMaps.join(", ")}</span>}
+            {objectiveMaps.length > 0 && <span className="text-2xs text-[#777]">{objectiveMaps.join(", ")}</span>}
           </>
         );
         // "Hand over the item: Salewa" names its one item: a compact row, the name linking to the item.
@@ -290,7 +290,7 @@ export function QuestRefLink({ quest, note }: { quest: QuestRef; note?: string }
         <span className="text-sm text-[#ccc]">{quest.name}</span>
       )}
       {quest.faction && <Badge tone="plain">{quest.faction}</Badge>}
-      {note && <span className="text-[11px] text-[#777]">{note}</span>}
+      {note && <span className="text-2xs text-[#777]">{note}</span>}
       <QuestStateTag id={quest.id} />
     </span>
   );

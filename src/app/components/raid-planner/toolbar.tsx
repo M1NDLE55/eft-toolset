@@ -50,7 +50,7 @@ const toolButton = cn(
 const idleButton = "text-[#999] hover:bg-[#1a1a1a] hover:text-[#ddd]";
 
 const optionButton = cn(
-  "flex min-h-11 items-center gap-2 px-3 text-left text-[10px] font-bold uppercase tracking-widest text-[#bbb] transition-colors hover:bg-[#161616] hover:text-[#ddd]",
+  "flex min-h-11 items-center gap-2 px-3 text-left text-3xs font-bold uppercase tracking-widest text-[#bbb] transition-colors hover:bg-[#161616] hover:text-[#ddd]",
   focusRing
 );
 
@@ -255,7 +255,7 @@ function ToolbarOptions({
             Collapse toolbar
           </button>
           <span aria-hidden className="-mx-1 my-1 h-px bg-[#1d1d1d]" />
-          <p className="px-3 pb-1 pt-1 text-[10px] font-bold uppercase tracking-widest text-[#777]">Toolbar side</p>
+          <p className="px-3 pb-1 pt-1 text-3xs font-bold uppercase tracking-widest text-[#777]">Toolbar side</p>
           <div className="grid grid-cols-2 gap-1">
             {SIDES.map(({ side, label }) => (
               <button
@@ -264,7 +264,7 @@ function ToolbarOptions({
                 aria-pressed={prefs.side === side}
                 onClick={() => choose({ side })}
                 className={cn(
-                  "min-h-11 text-[10px] font-bold uppercase tracking-widest transition-colors",
+                  "min-h-11 text-3xs font-bold uppercase tracking-widest transition-colors",
                   focusRing,
                   prefs.side === side ? "bg-[#9a8866] text-black" : "border border-[#2a2a2a] text-[#999] hover:text-[#ddd]"
                 )}

@@ -45,7 +45,7 @@ function List({ children }: { children: ReactNode }) {
 
 function Badge({ children }: { children: ReactNode }) {
   return (
-    <span className="shrink-0 border border-[#3a3326] bg-[#1a1610] px-1.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-[#c8b384]">
+    <span className="shrink-0 border border-[#3a3326] bg-[#1a1610] px-1.5 py-0.5 text-2xs font-semibold uppercase tracking-wider text-[#c8b384]">
       {children}
     </span>
   );
@@ -215,11 +215,11 @@ function RecipeList({ recipes, label = "reward" }: { recipes: Recipe[]; label?: 
           <Unlock unlock={recipe.taskUnlock} />
           <div className="grid gap-3 sm:grid-cols-2">
             <div>
-              <p className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[#777]">Requires</p>
+              <p className="mb-1 text-3xs font-bold uppercase tracking-widest text-[#777]">Requires</p>
               <ItemLines items={recipe.requiredItems} tone="in" />
             </div>
             <div>
-              <p className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[#777]">Produces</p>
+              <p className="mb-1 text-3xs font-bold uppercase tracking-widest text-[#777]">Produces</p>
               <ItemLines items={recipe.rewardItems} tone="out" />
             </div>
           </div>

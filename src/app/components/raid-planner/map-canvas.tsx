@@ -183,7 +183,7 @@ export function MapCanvas({
       />
       {!baseReady && !baseError && (
         <div className="pointer-events-none absolute inset-0 z-500 flex items-center justify-center">
-          <span className="animate-pulse text-[10px] font-bold uppercase tracking-widest text-[#666]">
+          <span className="animate-pulse text-3xs font-bold uppercase tracking-widest text-[#666]">
             Loading {config.name}
           </span>
         </div>
@@ -196,7 +196,7 @@ export function MapCanvas({
           <span className="min-w-0">{baseError}</span>
           <button
             type="button"
-            className="h-9 shrink-0 px-3 text-[10px] font-bold uppercase tracking-widest text-[#ccc] underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+            className="h-9 shrink-0 px-3 text-3xs font-bold uppercase tracking-widest text-[#ccc] underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
             onClick={retry}
           >
             Retry

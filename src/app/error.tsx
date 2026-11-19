@@ -16,13 +16,13 @@ export default function Error({
   return (
     <main className="flex justify-center flex-col gap-6 items-center p-4 flex-1">
       <div className="text-center space-y-3">
-        <div className="bg-[#9a8866] text-black text-[10px] font-bold px-2 py-0.5 inline-block uppercase tracking-[0.2em]">
+        <div className="bg-[#9a8866] text-black text-3xs font-bold px-2 py-0.5 inline-block uppercase tracking-[0.2em]">
           System Error
         </div>
         <h1 className="text-5xl font-black tracking-[0.3em] text-[#9a8866] uppercase">
           ERROR
         </h1>
-        <p className="text-[11px] text-[#888] uppercase tracking-[0.3em] font-bold">
+        <p className="text-2xs text-[#888] uppercase tracking-[0.3em] font-bold">
           Something went wrong
         </p>
       </div>

@@ -40,7 +40,7 @@ export function SharedPreview({ config, plan }: { config: MapConfig; plan: RaidP
       </div>
       <MapAttribution config={config} placement="inline" className="-mt-1" />
       {hasLayers && (
-        <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] uppercase tracking-widest text-[#888]">
+        <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-3xs uppercase tracking-widest text-[#888]">
           <span className="flex items-center gap-1.5 text-[#9a8866]">
             {loading ? (
               <LoaderCircle className="h-3 w-3 animate-spin" aria-hidden />

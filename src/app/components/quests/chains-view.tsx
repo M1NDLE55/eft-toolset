@@ -60,7 +60,7 @@ function Tree({ layout, graph, statuses, hints }: { layout: ChainLayout; graph: 
   const pad = 12;
   return (
     <div role="region" className={cn(panel, "max-h-[75vh] overflow-auto overscroll-contain")} tabIndex={0} aria-label="Quest chain, scrolls both ways">
-      <div className="relative" style={{ width: layout.width + pad * 2, height: layout.height + pad * 2 }}>
+      <div className="unscaled relative" style={{ width: layout.width + pad * 2, height: layout.height + pad * 2 }}>
         <svg aria-hidden className="absolute inset-0" width={layout.width + pad * 2} height={layout.height + pad * 2}>
           <g transform={`translate(${pad} ${pad})`} fill="none" strokeWidth={1.5}>
             {layout.chains.slice(1).map((chain) => (
@@ -86,7 +86,7 @@ function Tree({ layout, graph, statuses, hints }: { layout: ChainLayout; graph: 
           const name = questName(quest);
           const hint = hints.get(node.id);
           const className = cn(
-            "absolute flex flex-col justify-center gap-0.5 overflow-hidden border px-2 text-[11px] leading-tight transition-colors hover:border-[#c8b384]",
+            "absolute flex flex-col justify-center gap-0.5 overflow-hidden border px-2 text-2xs leading-tight transition-colors hover:border-[#c8b384]",
             NODE_TONE[state]
           );
           const style = { left: node.x + pad, top: node.y + pad, width: CHAIN_NODE.width, height: CHAIN_NODE.height };
@@ -96,7 +96,7 @@ function Tree({ layout, graph, statuses, hints }: { layout: ChainLayout; graph: 
                 {name}
                 {state !== "unknown" && <span className="sr-only"> ({STATE_LABEL[state]})</span>}
               </span>
-              <span className="flex gap-2 text-[10px] text-[#777] no-underline">
+              <span className="flex gap-2 text-3xs text-[#777] no-underline">
                 {hints.has(node.id) && <span className="truncate">{hints.get(node.id)}</span>}
                 {quest.minPlayerLevel > 1 && <span className="shrink-0">Lv {quest.minPlayerLevel}</span>}
                 {quest.faction && <span className="shrink-0">{quest.faction}</span>}
@@ -146,7 +146,7 @@ function Steps({ layout, graph, statuses, hints }: { layout: ChainLayout; graph:
                     )}
                     {state !== "unknown" && <span className="sr-only">({STATE_LABEL[state]})</span>}
                   </span>
-                  <span className="flex flex-wrap gap-x-3 text-[11px] text-[#777]">
+                  <span className="flex flex-wrap gap-x-3 text-2xs text-[#777]">
                     {hints.has(id) && <span>{hints.get(id)}</span>}
                     {quest.minPlayerLevel > 1 && <span>Level {quest.minPlayerLevel}</span>}
                     {after.length > 0 && (
@@ -200,7 +200,7 @@ function Standalone({ layout, graph, statuses, hints }: { layout: ChainLayout; g
                 </span>
               )}
               {state !== "unknown" && <span className="sr-only">({STATE_LABEL[state]})</span>}
-              <span className="ml-auto flex shrink-0 gap-2 text-[10px] text-[#777] no-underline">
+              <span className="ml-auto flex shrink-0 gap-2 text-3xs text-[#777] no-underline">
                 {hints.has(id) && <span>{hints.get(id)}</span>}
                 {quest.minPlayerLevel > 1 && <span>Lv {quest.minPlayerLevel}</span>}
                 {quest.faction && <span>{quest.faction}</span>}
@@ -222,7 +222,7 @@ function Legend() {
     </svg>
   );
   return (
-    <ul className="flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-[#888]">
+    <ul className="flex flex-wrap gap-x-4 gap-y-1 text-2xs text-[#888]">
       <li className="flex items-center gap-1.5">{swatch("completed")} Done</li>
       <li className="flex items-center gap-1.5">{swatch("available")} Available</li>
       <li className="flex items-center gap-1.5">{swatch("locked")} Locked</li>

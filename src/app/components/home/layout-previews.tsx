@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const tile = "border border-[#222] bg-[#0e0e0e]";
 
 function Label({ children }: { children: ReactNode }) {
-  return <span className="text-[7px] font-bold uppercase leading-none tracking-widest text-[#9a8866]">{children}</span>;
+  return <span className="text-5xs font-bold uppercase leading-none tracking-widest text-[#9a8866]">{children}</span>;
 }
 
 function Line({ className }: { className?: string }) {

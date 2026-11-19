@@ -92,8 +92,8 @@ function EditorSkeleton() {
           <Skeleton className="h-3 w-40" />
         </div>
       </div>
-      <Skeleton className="h-[118px] w-full" />
-      <Skeleton className="h-[420px] w-full" />
+      <Skeleton className="h-29.5 w-full" />
+      <Skeleton className="h-105 w-full" />
     </div>
   );
 }
@@ -280,20 +280,20 @@ function BuildEditor({ build }: { build: GunBuild }) {
       <div className="flex items-center justify-between gap-3">
         <Link
           href="/gun-builder"
-          className="inline-flex h-6 w-fit items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
+          className="inline-flex h-6 w-fit items-center gap-1 text-2xs font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
         >
           <ArrowLeft className="h-3.5 w-3.5" /> All builds
         </Link>
         <Link
           href={`/gun-builder/compare?a=${encodeURIComponent(build.id)}`}
-          className="inline-flex h-6 w-fit items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
+          className="inline-flex h-6 w-fit items-center gap-1.5 text-2xs font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
         >
           <GitCompareArrows className="h-3.5 w-3.5" /> Compare
         </Link>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex min-w-0 flex-1 items-center gap-3">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        <div className="flex min-w-0 flex-1 items-center gap-3 sm:min-w-60">
           <span className="hidden h-14 w-24 shrink-0 items-center justify-center border border-[#1a1a1a] bg-[#0c0c0c] sm:flex">
             {image ? (
               <Image src={image} alt="" width={96} height={56} className="h-full w-full object-contain p-0.5" priority />
@@ -443,12 +443,12 @@ function BuildEditor({ build }: { build: GunBuild }) {
       />
 
       <div className="-mb-2 flex items-center justify-between gap-3">
-        <h2 className="text-[11px] font-bold uppercase tracking-widest text-[#888]">Parts</h2>
+        <h2 className="text-2xs font-bold uppercase tracking-widest text-[#888]">Parts</h2>
         <button
           type="button"
           aria-pressed={hideEmpty}
           onClick={() => run(() => setHideEmptySlots(!hideEmpty))}
-          className="flex h-9 items-center gap-2 px-1 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+          className="flex h-9 items-center gap-2 px-1 text-2xs font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
         >
           <span
             aria-hidden

@@ -40,7 +40,7 @@ export function RecentItems() {
   if (!hydrated || items.length === 0) return null;
   return (
     <section aria-labelledby="recent-items" className="flex flex-col gap-2 lg:hidden">
-      <h2 id="recent-items" className="text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">
+      <h2 id="recent-items" className="text-3xs font-bold uppercase tracking-widest text-[#9a8866]">
         Recently viewed
       </h2>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
@@ -91,13 +91,13 @@ export default function ScoutedSidebar() {
     <aside aria-label="Recently viewed items" className="w-56 shrink-0 self-stretch border-r border-[#1a1a1a] bg-[#070707]">
       <div className="sticky top-0 flex flex-col">
         <div className="flex items-center justify-between border-b border-[#1a1a1a] px-3 py-2">
-          <h2 className="text-[10px] font-semibold uppercase tracking-widest text-[#9a8866]">Recently viewed</h2>
+          <h2 className="text-3xs font-semibold uppercase tracking-widest text-[#9a8866]">Recently viewed</h2>
           <div className="flex items-center">
             {items.length > 0 && (
               <button
                 type="button"
                 onClick={() => clearScoutedItems()}
-                className="px-2 py-2 text-[10px] uppercase tracking-widest text-[#777] hover:text-[#ccc]"
+                className="px-2 py-2 text-3xs uppercase tracking-widest text-[#777] hover:text-[#ccc]"
               >
                 Clear
               </button>
@@ -113,10 +113,10 @@ export default function ScoutedSidebar() {
             </button>
           </div>
         </div>
-        {storageError && <p role="alert" className="px-3 pt-2 text-[10px] text-red-300">{storageError}</p>}
+        {storageError && <p role="alert" className="px-3 pt-2 text-3xs text-red-300">{storageError}</p>}
         <div className="flex max-h-[calc(100dvh-8rem)] flex-col overflow-y-auto py-1">
           {items.length === 0 ? (
-            <p className="px-3 py-4 text-[11px] text-[#888]">Items you open will appear here.</p>
+            <p className="px-3 py-4 text-2xs text-[#888]">Items you open will appear here.</p>
           ) : (
             items.map((item) => <ScoutedLink key={item.name} item={item} />)
           )}

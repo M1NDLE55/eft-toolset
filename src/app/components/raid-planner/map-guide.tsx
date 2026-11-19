@@ -27,7 +27,7 @@ function ExtractList({ title, extracts }: { title: string; extracts: MapExtract[
   if (extracts.length === 0) return null;
   return (
     <div className="flex flex-col gap-1.5">
-      <h3 className="text-[11px] font-bold uppercase tracking-widest text-[#bbb]">
+      <h3 className="text-2xs font-bold uppercase tracking-widest text-[#bbb]">
         {title} <span className="text-[#666]">· {extracts.length}</span>
       </h3>
       <ul className={`${panel} divide-y divide-[#151515] text-sm`}>
@@ -49,7 +49,7 @@ export function MapGuideStrip({ config }: { config: MapConfig }) {
   return (
     <a
       href={`#${MAP_GUIDE_ID}`}
-      className={`${MAP_GUIDE_STRIP_CLASS} flex items-center justify-center gap-2 border-t border-[#1a1a1a] bg-[#070707] text-[10px] font-bold uppercase tracking-widest text-[#9a8866] hover:text-[#c9b88d] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#9a8866]`}
+      className={`${MAP_GUIDE_STRIP_CLASS} flex items-center justify-center gap-2 border-t border-[#1a1a1a] bg-[#070707] text-3xs font-bold uppercase tracking-widest text-[#9a8866] hover:text-[#c9b88d] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#9a8866]`}
     >
       {config.name} extracts, bosses and keys
       <ChevronDown className="h-4 w-4" aria-hidden />

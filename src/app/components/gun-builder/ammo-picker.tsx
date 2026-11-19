@@ -93,7 +93,7 @@ export function AmmoPanel({
         className="flex min-w-0 flex-1 items-center gap-3 px-3 py-2 text-left transition-colors hover:bg-[#101010] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e6d9b8] disabled:cursor-default"
         aria-label={ammo ? `Ammo: ${ammo.name}. Change ammo` : "Choose ammo"}
       >
-        <span className="hidden w-14 shrink-0 text-[10px] font-bold uppercase tracking-widest text-[#888] sm:block">Ammo</span>
+        <span className="hidden w-14 shrink-0 text-3xs font-bold uppercase tracking-widest text-[#888] sm:block">Ammo</span>
         {ammoId ? (
           <>
             {ammo ? <AmmoThumb ammo={ammo} /> : <span className="h-10 w-10 shrink-0 animate-shimmer" />}
@@ -102,7 +102,7 @@ export function AmmoPanel({
                 {ammo?.name ?? (loading ? "Loading ammo…" : "Unavailable ammo")}
               </span>
               {ammo && (
-                <span className="flex flex-wrap gap-x-3 text-[11px] tabular-nums text-[#888]">
+                <span className="flex flex-wrap gap-x-3 text-2xs tabular-nums text-[#888]">
                   <span>
                     Pen <b className={cn("font-bold", penetrationTone(ammo.penetrationPower))}>{ammo.penetrationPower}</b>
                   </span>
@@ -115,7 +115,7 @@ export function AmmoPanel({
                 </span>
               )}
               {!fits && ammo && options.ids.length > 0 && (
-                <span className="mt-0.5 flex items-center gap-1 text-[11px] text-amber-300">
+                <span className="mt-0.5 flex items-center gap-1 text-2xs text-amber-300">
                   <AlertTriangle className="h-3 w-3 shrink-0" />
                   Doesn&apos;t fit the installed {options.source === "magazine" ? "magazine" : "weapon"}; not counted in stats
                 </span>
@@ -129,7 +129,7 @@ export function AmmoPanel({
             <span className="truncate text-xs text-[#666]">· {options.ids.length} compatible</span>
           </span>
         )}
-        <span className="shrink-0 text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">
+        <span className="shrink-0 text-3xs font-bold uppercase tracking-widest text-[#9a8866]">
           {ammoId ? "Change" : "Select"}
         </span>
       </button>
@@ -273,7 +273,7 @@ function AmmoPickerBody({
                   )
                 }
                 className={cn(
-                  "flex h-10 items-center justify-center gap-0.5 px-1.5 text-[10px] font-bold uppercase tracking-wider transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#9a8866] sm:px-2.5 sm:tracking-widest",
+                  "flex h-10 items-center justify-center gap-0.5 px-1.5 text-3xs font-bold uppercase tracking-wider transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#9a8866] sm:px-2.5 sm:tracking-widest",
                   active ? "bg-[#1a1712] text-[#e6d9b8]" : "text-[#888] hover:text-[#ccc]"
                 )}
               >
@@ -296,7 +296,7 @@ function AmmoPickerBody({
         </div>
       )}
 
-      <div className="hidden grid-cols-[2rem_minmax(0,1fr)_3.5rem_3rem_3.5rem_3.5rem_6.5rem_1rem] gap-3 px-3 text-[10px] font-bold uppercase tracking-widest text-[#666] sm:grid">
+      <div className="hidden grid-cols-[--spacing(8)_minmax(0,1fr)_--spacing(14)_--spacing(12)_--spacing(14)_--spacing(14)_--spacing(26)_--spacing(4)] gap-3 px-3 text-3xs font-bold uppercase tracking-widest text-[#666] sm:grid">
         <span className="col-span-2 flex items-center gap-2">
           {showSkeleton ? "Loading ammo" : `${rows.length} shown`}
           {loading && !showSkeleton && <LoaderCircle className="h-3 w-3 animate-spin text-[#9a8866]" />}
@@ -334,7 +334,7 @@ function AmmoPickerBody({
                 data-ammo
                 onClick={() => onSelect(ammo.id)}
                 className={cn(
-                  "grid w-full grid-cols-[2rem_minmax(0,1fr)_1rem] items-center gap-3 px-3 py-2 text-left transition-colors hover:bg-[#121212] focus-visible:bg-[#121212] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#9a8866] sm:grid-cols-[2rem_minmax(0,1fr)_3.5rem_3rem_3.5rem_3.5rem_6.5rem_1rem]",
+                  "grid w-full grid-cols-[--spacing(8)_minmax(0,1fr)_--spacing(4)] items-center gap-3 px-3 py-2 text-left transition-colors hover:bg-[#121212] focus-visible:bg-[#121212] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#9a8866] sm:grid-cols-[--spacing(8)_minmax(0,1fr)_--spacing(14)_--spacing(12)_--spacing(14)_--spacing(14)_--spacing(26)_--spacing(4)]",
                   current && "bg-[#14110c]"
                 )}
               >
@@ -369,7 +369,7 @@ function AmmoPickerBody({
                 </span>
                 <span className="hidden flex-col items-end text-xs tabular-nums sm:flex">
                   <span className="text-[#ccc]">{formatRub(price)}</span>
-                  <PriceSource shown={shown} className="max-w-full text-[10px]" lockClassName="h-2.5 w-2.5" />
+                  <PriceSource shown={shown} className="max-w-full text-3xs" lockClassName="h-2.5 w-2.5" />
                 </span>
                 {current ? <Check className="h-4 w-4 text-[#9a8866]" /> : <span />}
               </button>

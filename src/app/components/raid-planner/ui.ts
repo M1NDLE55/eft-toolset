@@ -5,4 +5,4 @@ export const overlayPanel = "border border-[#2a2a2a] bg-[#090909]/92 backdrop-bl
 
 export const iconButton = `flex size-10 shrink-0 items-center justify-center text-[#888] transition-colors hover:bg-[#1a1a1a] hover:text-[#ccc] disabled:pointer-events-none disabled:opacity-40 sm:size-9 ${focusRing}`;
 
-export const eyebrow = "text-[10px] font-bold uppercase tracking-widest text-[#888]";
+export const eyebrow = "text-3xs font-bold uppercase tracking-widest text-[#888]";

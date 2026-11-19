@@ -230,7 +230,7 @@ export function PlansHome() {
           {!hydrated ? (
             <div className="flex flex-col gap-2" aria-busy="true">
               {[0, 1].map((index) => (
-                <div key={index} className="h-[66px] animate-pulse border border-[#1d1d1d] bg-[#0c0c0c]" />
+                <div key={index} className="h-16.5 animate-pulse border border-[#1d1d1d] bg-[#0c0c0c]" />
               ))}
             </div>
           ) : plans.length > 0 ? (
@@ -305,7 +305,7 @@ function PlanRow({
         <span className="truncate text-sm font-bold text-[#ddd] group-hover:text-[#c9b88d]">
           {plan.name || "Untitled raid"}
         </span>
-        <span className="flex flex-wrap items-center gap-x-3 gap-y-0.5 text-[10px] uppercase tracking-widest text-[#888]">
+        <span className="flex flex-wrap items-center gap-x-3 gap-y-0.5 text-3xs uppercase tracking-widest text-[#888]">
           <span className="flex items-center gap-1 text-[#9a8866]">
             <MapIcon className="h-3 w-3" aria-hidden />
             {config?.name ?? "Unknown map"}

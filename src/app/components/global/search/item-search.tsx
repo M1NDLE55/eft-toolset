@@ -161,7 +161,7 @@ export function ItemSearch({
             </button>
           ) : (
             shortcut && (
-              <kbd className="hidden border border-[#2a2a2a] px-1.5 py-0.5 text-[10px] text-[#777] sm:inline">/</kbd>
+              <kbd className="hidden border border-[#2a2a2a] px-1.5 py-0.5 text-3xs text-[#777] sm:inline">/</kbd>
             )
           )}
         </div>
@@ -170,7 +170,7 @@ export function ItemSearch({
       {showList && (
         <div className="absolute inset-x-0 top-full z-40 mt-1 border border-[#2a2a2a] bg-[#0a0a0a] shadow-2xl shadow-black">
           {found?.fuzzy && results.length > 0 && (
-            <p className="px-3 pt-2 text-[11px] uppercase tracking-wider text-[#777]">No exact match. Close spellings:</p>
+            <p className="px-3 pt-2 text-2xs uppercase tracking-wider text-[#777]">No exact match. Close spellings:</p>
           )}
           {results.length > 0 ? (
             <ul
@@ -206,7 +206,7 @@ export function ItemSearch({
                   )}
                   <span className="min-w-0 flex-1 truncate">{item.name}</span>
                   {item.shortName && item.shortName !== item.name && (
-                    <span className="shrink-0 border border-[#2a2a2a] px-1.5 text-[10px] uppercase tracking-wider text-[#888]">
+                    <span className="shrink-0 border border-[#2a2a2a] px-1.5 text-3xs uppercase tracking-wider text-[#888]">
                       {item.shortName}
                     </span>
                   )}

@@ -42,7 +42,7 @@ function ViewTabs({ views, active, onSelect }: { views: ItemView[]; active: stri
           title={PRESET_DESCRIPTIONS[view.id] ?? "Your view"}
           onClick={() => onSelect(view.id)}
           className={cn(
-            "h-8 shrink-0 px-3 text-[11px] font-bold uppercase tracking-widest transition-colors",
+            "h-8 shrink-0 px-3 text-2xs font-bold uppercase tracking-widest transition-colors",
             view.id === active ? "bg-[#c8b384] text-black" : "text-[#888] hover:bg-[#111] hover:text-[#ccc]"
           )}
         >
@@ -70,7 +70,7 @@ function AddCardMenu({ cards, onAdd }: { cards: ViewCard[]; onAdd: (id: ViewCard
           return (
             <DropdownMenuGroup key={group}>
               {index > 0 && <DropdownMenuSeparator />}
-              <DropdownMenuLabel className="text-[10px] uppercase tracking-widest text-[#9a8866]">{group}</DropdownMenuLabel>
+              <DropdownMenuLabel className="text-3xs uppercase tracking-widest text-[#9a8866]">{group}</DropdownMenuLabel>
               {ids.map((id) => (
                 <DropdownMenuItem key={id} onSelect={() => onAdd(id)} className="flex flex-col items-start gap-0.5">
                   <span className="text-sm text-[#ddd]">{ITEM_CARDS[id].title}</span>
@@ -146,7 +146,7 @@ export function ItemPageView({ context, serverLayout }: { context: CardContext; 
             </Button>
           </div>
         ) : (
-          <div className="flex max-w-full items-center gap-2">
+          <div className="flex max-w-full flex-wrap items-center gap-2">
             <ViewTabs views={views} active={active.id} onSelect={(id) => attempt(() => setActiveView(id))} />
             <Button
               variant="outline"
