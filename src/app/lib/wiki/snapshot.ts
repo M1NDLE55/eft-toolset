@@ -31,6 +31,8 @@ export interface WikiPageImage {
 /** data/wiki/image-credits.json: who uploaded each quest image, from the wiki's API. */
 export interface WikiImageCredits {
   fetchedAt: string | null;
+  /** The licence as the wiki's API stated it at the last pass. */
+  licence?: { name: string; url: string | null } | null;
   /** `missing` when the wiki had no such file at the last pass. */
   images: Record<string, { uploader: string | null; filePage: string; missing?: true }>;
 }

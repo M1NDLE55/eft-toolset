@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ExternalLink, Maximize2 } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { UNKNOWN_UPLOADER, wikiImageUrl, type QuestWikiImage } from "@/app/lib/wiki/wiki-images";
-import { WIKI_LICENCE, WIKI_NAME } from "@/app/lib/wiki/wiki-url";
+import { useHydrated } from "@/app/lib/storage/use-store";
+import { imageCreditParts, wikiImageUrl, type QuestWikiImage } from "@/app/lib/wiki/wiki-images";
 import { cn } from "@/lib/utils";
 
 const link = "text-[#b9a473] underline-offset-2 hover:underline";
@@ -13,18 +13,19 @@ function fileName(image: QuestWikiImage) {
   return image.file.replace(/_/g, " ");
 }
 
-/** imageCredit's text, linking the file page and the licence. */
+/** The image's credit line, linking its file page and the licence. */
 export function WikiImageCredit({ image, className }: { image: QuestWikiImage; className?: string }) {
   return (
     <span className={cn("text-[11px] text-[#777] [overflow-wrap:anywhere]", className)}>
-      Image:{" "}
-      <a href={image.filePage} target="_blank" rel="noopener noreferrer" className={link}>
-        {fileName(image)}
-      </a>{" "}
-      by {image.uploader ?? UNKNOWN_UPLOADER}, {WIKI_NAME},{" "}
-      <a href={WIKI_LICENCE.url} target="_blank" rel="license noopener noreferrer" className={link}>
-        {WIKI_LICENCE.name}
-      </a>
+      {imageCreditParts(image).map((part, index) =>
+        part.href ? (
+          <a key={index} href={part.href} target="_blank" rel={part.license ? "license noopener noreferrer" : "noopener noreferrer"} className={link}>
+            {part.text}
+          </a>
+        ) : (
+          <span key={index}>{part.text}</span>
+        )
+      )}
     </span>
   );
 }
@@ -79,9 +80,10 @@ function WikiFigure({ image }: { image: QuestWikiImage }) {
             </button>
           </DialogTrigger>
           <DialogContent
-            className="flex max-h-[calc(100dvh-1rem)] w-auto max-w-[calc(100vw-1rem)] flex-col gap-2 border-[#2a2a2a] bg-[#080808] p-2 pt-10 sm:max-w-[calc(100vw-2rem)] sm:p-3 sm:pt-10"
+            className="flex max-h-[calc(100dvh-1rem)] w-[calc(100vw-1rem)] max-w-6xl flex-col gap-2 border-[#2a2a2a] bg-[#080808] p-2 pt-12 sm:w-[calc(100vw-2rem)] sm:p-3 sm:pt-12"
+            closeClassName="right-2 top-2 flex h-9 w-9 items-center justify-center rounded-full border border-[#555] bg-[#1a1a1a] text-[#eee] opacity-100 hover:border-[#c8b384] hover:bg-[#2a2a2a] focus:ring-[#c8b384] focus:ring-offset-[#080808] data-[state=open]:bg-[#1a1a1a] data-[state=open]:text-[#eee] [&_svg]:h-5 [&_svg]:w-5"
           >
-            <DialogTitle className="absolute top-3 right-12 left-3 truncate text-sm font-semibold text-[#ddd]">{title}</DialogTitle>
+            <DialogTitle className="absolute top-4 right-14 left-3 truncate text-sm font-semibold text-[#ddd]">{title}</DialogTitle>
             <div className="flex min-h-0 flex-1 items-center justify-center overflow-auto">
               {/* eslint-disable-next-line @next/next/no-img-element -- loaded by the visitor's browser from the wiki, never through our server */}
               <img
@@ -115,12 +117,8 @@ function WikiFigure({ image }: { image: QuestWikiImage }) {
  * URL: the visitor's browser builds it and loads the image straight from the wiki.
  */
 export function WikiImages({ images, title, className }: { images: QuestWikiImage[]; title?: string; className?: string }) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- render after mount only, by design
-    setMounted(true);
-  }, []);
-  if (!mounted || images.length === 0) return null;
+  const hydrated = useHydrated();
+  if (!hydrated || images.length === 0) return null;
   return (
     <div className={cn("flex flex-col gap-1.5", className)}>
       {title && <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">{title}</h3>}

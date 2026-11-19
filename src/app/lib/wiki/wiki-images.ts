@@ -19,8 +19,7 @@ export interface QuestWikiImage {
   filePage: string;
 }
 
-export const WIKI_IMAGE_HOST = "https://static.wikia.nocookie.net";
-const WIKI_IMAGE_BASE = `${WIKI_IMAGE_HOST}/escapefromtarkov_gamepedia/images`;
+const WIKI_IMAGE_BASE = "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images";
 
 /** Where the wiki serves the file. */
 export function wikiImageUrl(image: Pick<QuestWikiImage, "file" | "hashPath">): string {
@@ -29,7 +28,22 @@ export function wikiImageUrl(image: Pick<QuestWikiImage, "file" | "hashPath">): 
 
 export const UNKNOWN_UPLOADER = "EFT Wiki contributors";
 
-/** "Image: <file name> by <uploader>, Escape from Tarkov Wiki, CC BY-NC-SA". */
-export function imageCredit(image: Pick<QuestWikiImage, "file" | "uploader">): string {
-  return `Image: ${image.file.replace(/_/g, " ")} by ${image.uploader ?? UNKNOWN_UPLOADER}, ${WIKI_NAME}, ${WIKI_LICENCE.name}`;
+/** One run of the credit line: plain text, or a link (`license` marks the licence's). */
+export interface CreditPart {
+  text: string;
+  href?: string;
+  license?: true;
+}
+
+/**
+ * "Image: <file name> by <uploader>, Escape from Tarkov Wiki, CC BY-NC-SA", the file name linking its
+ * file page and the licence its terms. Joined, the parts' text is the credit as plain text.
+ */
+export function imageCreditParts(image: Pick<QuestWikiImage, "file" | "uploader" | "filePage">): CreditPart[] {
+  return [
+    { text: "Image: " },
+    { text: image.file.replace(/_/g, " "), href: image.filePage },
+    { text: ` by ${image.uploader ?? UNKNOWN_UPLOADER}, ${WIKI_NAME}, ` },
+    { text: WIKI_LICENCE.name, href: WIKI_LICENCE.url, license: true },
+  ];
 }

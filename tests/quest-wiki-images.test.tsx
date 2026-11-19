@@ -6,7 +6,7 @@ import { WikiImages } from "@/app/components/quests/wiki-images";
 import { placeWikiImages, sectionKey } from "@/app/lib/quests/wiki-images";
 import type { QuestMap, QuestObjective } from "@/app/lib/quests/types";
 import type { WikiPageSection } from "@/app/lib/wiki/page-sections";
-import { imageCredit, wikiImageUrl, type QuestWikiImage } from "@/app/lib/wiki/wiki-images";
+import { imageCreditParts, wikiImageUrl, type QuestWikiImage } from "@/app/lib/wiki/wiki-images";
 import { WIKI_LICENCE } from "@/app/lib/wiki/wiki-url";
 
 const image = (overrides: Partial<QuestWikiImage> = {}): QuestWikiImage => ({
@@ -88,7 +88,7 @@ describe("wiki images", () => {
     mount([image({ uploader: null })]);
     const credit = host.querySelector("figcaption")!;
     expect(credit.textContent).toContain("Image: Delivery from the past Customs.png by EFT Wiki contributors, Escape from Tarkov Wiki, CC BY-NC-SA");
-    expect(credit.querySelector("span:last-child")!.textContent).toBe(imageCredit(image({ uploader: null })));
+    expect(credit.querySelector("span:last-child")!.textContent).toBe(imageCreditParts(image({ uploader: null })).map((part) => part.text).join(""));
     expect(Array.from(credit.querySelectorAll("a"), (a) => a.getAttribute("href"))).toEqual([image().filePage, WIKI_LICENCE.url]);
     expect(credit.querySelector('a[rel~="license"]')?.textContent).toBe(WIKI_LICENCE.name);
   });
