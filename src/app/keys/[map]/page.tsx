@@ -14,6 +14,7 @@ import type { FaqEntry } from "@/app/lib/seo/item";
 import { FaqSection } from "@/app/components/seo/faq-section";
 import { loadQuestList } from "@/app/quests/load";
 import type { QuestList } from "@/app/lib/quests/types";
+import { ItemRundownLink } from "@/app/components/item/rundown/rundown-link";
 
 /** Quest pages by name, for names only one quest has (faction variants share theirs). */
 function questPages(list: QuestList | undefined) {
@@ -142,9 +143,12 @@ export default async function Page({ params }: PageProps) {
                       {key.gridImageLink && <Image src={key.gridImageLink} alt="" width={32} height={32} className="max-h-8 w-auto" />}
                     </span>
                     {key.slug ? (
-                      <Link href={`/item/${key.slug}`} className="text-[#ccc] underline-offset-2 hover:text-[#e6d9b8] hover:underline">
+                      <ItemRundownLink
+                        item={{ name: key.name, normalizedName: key.slug }}
+                        className="text-[#ccc] underline-offset-2 hover:text-[#e6d9b8] hover:underline"
+                      >
                         {key.name}
-                      </Link>
+                      </ItemRundownLink>
                     ) : (
                       <span className="text-[#ccc]">{key.name}</span>
                     )}

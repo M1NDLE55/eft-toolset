@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import type { PriceHighlight, PriceHighlights } from "@/app/lib/api/tarkov-server";
 import type { GameMode } from "@/components/game-mode/mode";
 import { MODE_LABEL, useServerModeSync } from "@/components/game-mode/use-server-mode-sync";
 import { Rubles } from "@/app/lib/currency";
 import { cn } from "@/lib/utils";
+import { ItemRundownLink } from "@/app/components/item/rundown/rundown-link";
 
 function HighlightTable({
   id,
@@ -47,7 +47,7 @@ function HighlightTable({
           {rows.map((row, index) => (
             <tr key={row.normalizedName} className="hover:bg-[#100f0c]">
               <td className="py-1.5 pl-2 pr-1">
-                <Link href={`/item/${row.normalizedName}`} className="flex min-w-0 items-center gap-2 text-[#ccc] hover:text-[#e6d9b8]">
+                <ItemRundownLink item={row} className="flex min-w-0 items-center gap-2 text-[#ccc] hover:text-[#e6d9b8]">
                   <span className="w-5 shrink-0 text-right text-[10px] tabular-nums text-[#555]">{index + 1}</span>
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-[#111]">
                     {row.gridImageLink && (
@@ -55,7 +55,7 @@ function HighlightTable({
                     )}
                   </span>
                   <span className="truncate">{row.name}</span>
-                </Link>
+                </ItemRundownLink>
               </td>
               <td className="py-1.5 pr-2 text-right tabular-nums text-[#e6d9b8] sm:w-32">
                 {Rubles.format(primary === "perSlot" ? row.perSlot : row.price)}

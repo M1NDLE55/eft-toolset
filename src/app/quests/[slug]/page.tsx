@@ -5,6 +5,7 @@ import { notFound, redirect } from "next/navigation";
 import type { ReactNode } from "react";
 import { ExternalLink } from "lucide-react";
 import { ItemImage, ItemLink } from "@/app/components/quests/items-needed-view";
+import { ItemRundownQuest } from "@/app/components/item/rundown/rundown-link";
 import { Badge, chip, heading, panel, QuestBadges } from "@/app/components/quests/quest-bits";
 import { ObjectiveChecklist, QuestCompletePanel, QuestRefLink, QuestTrackingProvider } from "@/app/components/quests/quest-tracker";
 import { FaqSection } from "@/app/components/seo/faq-section";
@@ -357,133 +358,135 @@ export default async function Page({ params }: PageProps) {
         </nav>
       )}
 
-      <QuestTrackingProvider gameMode={detail.gameMode}>
-        <QuestCompletePanel quest={self} names={detail.quests} />
+      <ItemRundownQuest quest={{ name: quest.name, trader: quest.trader, faction: quest.faction }}>
+        <QuestTrackingProvider gameMode={detail.gameMode}>
+          <QuestCompletePanel quest={self} names={detail.quests} />
 
-        <Section
-          id="objectives"
-          title="Objectives"
-          aside={
-            buildPage && (
-              <Link href={buildPage} className="text-[11px] font-bold uppercase tracking-widest text-[#c8b384] underline-offset-2 hover:underline">
-                Ready build for this quest
-              </Link>
-            )
-          }
-        >
-          {objectives.length > 0 ? (
-            <ObjectiveChecklist objectives={objectives} items={detail.items} maps={detail.maps} images={images?.objectives} />
-          ) : (
-            <p className="border border-dashed border-[#2a2a2a] p-4 text-sm text-[#888]">tarkov.dev lists no objectives for this quest.</p>
-          )}
-          {images && <WikiImageStrip groups={images.strip} />}
-        </Section>
-
-        {quest.needs.length > 0 && (
-          <Section id="items" title="Items to hand over" aside={<span className="text-[10px] uppercase tracking-widest text-[#666]">Buy price</span>}>
-            <ItemsNeeded detail={detail} />
+          <Section
+            id="objectives"
+            title="Objectives"
+            aside={
+              buildPage && (
+                <Link href={buildPage} className="text-[11px] font-bold uppercase tracking-widest text-[#c8b384] underline-offset-2 hover:underline">
+                  Ready build for this quest
+                </Link>
+              )
+            }
+          >
+            {objectives.length > 0 ? (
+              <ObjectiveChecklist objectives={objectives} items={detail.items} maps={detail.maps} images={images?.objectives} />
+            ) : (
+              <p className="border border-dashed border-[#2a2a2a] p-4 text-sm text-[#888]">tarkov.dev lists no objectives for this quest.</p>
+            )}
+            {images && <WikiImageStrip groups={images.strip} />}
           </Section>
-        )}
 
-        {keys.length > 0 && (
-          <Section id="keys" title="Keys">
-            <div className="flex flex-col gap-2">
-              {keys.map((group) => (
-                <div key={group.map ?? "any"} className="flex flex-col gap-1">
-                  {group.map && detail.maps[group.map] && (
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#777]">{detail.maps[group.map].name}</span>
-                  )}
-                  <ul className={`${panel} divide-y divide-[#151515]`}>
-                    {group.ids.map((id) => (
-                      <ItemRow key={id} item={detail.items[id]} />
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+          {quest.needs.length > 0 && (
+            <Section id="items" title="Items to hand over" aside={<span className="text-[10px] uppercase tracking-widest text-[#666]">Buy price</span>}>
+              <ItemsNeeded detail={detail} />
+            </Section>
+          )}
+
+          {keys.length > 0 && (
+            <Section id="keys" title="Keys">
+              <div className="flex flex-col gap-2">
+                {keys.map((group) => (
+                  <div key={group.map ?? "any"} className="flex flex-col gap-1">
+                    {group.map && detail.maps[group.map] && (
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#777]">{detail.maps[group.map].name}</span>
+                    )}
+                    <ul className={`${panel} divide-y divide-[#151515]`}>
+                      {group.ids.map((id) => (
+                        <ItemRow key={id} item={detail.items[id]} />
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </Section>
+          )}
+
+          <Section id="rewards" title="Rewards">
+            {hasRewards(detail.rewards) || quest.experience > 0 ? (
+              <Rewards detail={detail} rewards={detail.rewards} withExperience />
+            ) : (
+              <p className="text-sm text-[#888]">No rewards listed.</p>
+            )}
+            {hasRewards(detail.startRewards) && (
+              <div className="mt-2 flex flex-col gap-2">
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">On accepting</h3>
+                <Rewards detail={detail} rewards={detail.startRewards} withExperience={false} />
+              </div>
+            )}
           </Section>
-        )}
 
-        <Section id="rewards" title="Rewards">
-          {hasRewards(detail.rewards) || quest.experience > 0 ? (
-            <Rewards detail={detail} rewards={detail.rewards} withExperience />
-          ) : (
-            <p className="text-sm text-[#888]">No rewards listed.</p>
-          )}
-          {hasRewards(detail.startRewards) && (
-            <div className="mt-2 flex flex-col gap-2">
-              <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">On accepting</h3>
-              <Rewards detail={detail} rewards={detail.startRewards} withExperience={false} />
-            </div>
-          )}
-        </Section>
-
-        <Section id="requirements" title="Before and after">
-          <div className={`${panel} grid grid-cols-1 gap-4 p-3 sm:grid-cols-2`}>
-            <div className="flex flex-col gap-1.5">
-              <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">Needs</h3>
-              {detail.prerequisites.length === 0 && quest.minPlayerLevel <= 1 ? (
-                <p className="text-sm text-[#888]">Nothing: it&apos;s open from the start.</p>
-              ) : (
-                <ul className="flex flex-col gap-1.5">
-                  {quest.minPlayerLevel > 1 && <li className="text-sm text-[#ccc]">Level {quest.minPlayerLevel}</li>}
-                  {quest.traderLevels.map((entry) => (
-                    <li key={entry.trader} className="text-sm text-[#ccc]">
-                      {entry.trader} loyalty level {entry.level}
-                    </li>
-                  ))}
-                  {detail.prerequisites.map((requirement) =>
-                    detail.quests[requirement.id] ? (
-                      <li key={requirement.id}>
-                        <QuestRefLink quest={detail.quests[requirement.id]} note={requirementLabel(requirement.status)} />
-                      </li>
-                    ) : null
-                  )}
-                </ul>
-              )}
-              {quest.failedBy.length > 0 && (
-                <>
-                  <h3 className="mt-2 text-[10px] font-bold uppercase tracking-widest text-red-300/80">Fails if you complete</h3>
+          <Section id="requirements" title="Before and after">
+            <div className={`${panel} grid grid-cols-1 gap-4 p-3 sm:grid-cols-2`}>
+              <div className="flex flex-col gap-1.5">
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">Needs</h3>
+                {detail.prerequisites.length === 0 && quest.minPlayerLevel <= 1 ? (
+                  <p className="text-sm text-[#888]">Nothing: it&apos;s open from the start.</p>
+                ) : (
                   <ul className="flex flex-col gap-1.5">
-                    {quest.failedBy.map((entry) =>
-                      detail.quests[entry.id] ? (
-                        <li key={entry.id}>
-                          <QuestRefLink quest={detail.quests[entry.id]} />
+                    {quest.minPlayerLevel > 1 && <li className="text-sm text-[#ccc]">Level {quest.minPlayerLevel}</li>}
+                    {quest.traderLevels.map((entry) => (
+                      <li key={entry.trader} className="text-sm text-[#ccc]">
+                        {entry.trader} loyalty level {entry.level}
+                      </li>
+                    ))}
+                    {detail.prerequisites.map((requirement) =>
+                      detail.quests[requirement.id] ? (
+                        <li key={requirement.id}>
+                          <QuestRefLink quest={detail.quests[requirement.id]} note={requirementLabel(requirement.status)} />
                         </li>
                       ) : null
                     )}
                   </ul>
-                </>
-              )}
+                )}
+                {quest.failedBy.length > 0 && (
+                  <>
+                    <h3 className="mt-2 text-[10px] font-bold uppercase tracking-widest text-red-300/80">Fails if you complete</h3>
+                    <ul className="flex flex-col gap-1.5">
+                      {quest.failedBy.map((entry) =>
+                        detail.quests[entry.id] ? (
+                          <li key={entry.id}>
+                            <QuestRefLink quest={detail.quests[entry.id]} />
+                          </li>
+                        ) : null
+                      )}
+                    </ul>
+                  </>
+                )}
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">Leads to</h3>
+                {detail.unlocks.length === 0 ? (
+                  <p className="text-sm text-[#888]">No quest needs this one.</p>
+                ) : (
+                  <ul className="flex flex-col gap-1.5">
+                    {detail.unlocks.map((entry) =>
+                      detail.quests[entry.id] ? (
+                        <li key={entry.id}>
+                          <QuestRefLink
+                            quest={detail.quests[entry.id]}
+                            note={entry.status.length === 1 && entry.status[0] === "failed" ? "if this one fails" : entry.status.includes("complete") ? undefined : "once started"}
+                          />
+                        </li>
+                      ) : null
+                    )}
+                  </ul>
+                )}
+              </div>
             </div>
-            <div className="flex flex-col gap-1.5">
-              <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">Leads to</h3>
-              {detail.unlocks.length === 0 ? (
-                <p className="text-sm text-[#888]">No quest needs this one.</p>
-              ) : (
-                <ul className="flex flex-col gap-1.5">
-                  {detail.unlocks.map((entry) =>
-                    detail.quests[entry.id] ? (
-                      <li key={entry.id}>
-                        <QuestRefLink
-                          quest={detail.quests[entry.id]}
-                          note={entry.status.length === 1 && entry.status[0] === "failed" ? "if this one fails" : entry.status.includes("complete") ? undefined : "once started"}
-                        />
-                      </li>
-                    ) : null
-                  )}
-                </ul>
-              )}
-            </div>
-          </div>
-          {(detail.chain.before.length > detail.prerequisites.length || detail.chain.after.length > detail.unlocks.length) && (
-            <div className="mt-2 flex flex-col gap-3">
-              {detail.chain.before.length > 0 && <ChainList ids={detail.chain.before} quests={detail.quests} label="Whole chain before, in order" />}
-              {detail.chain.after.length > 0 && <ChainList ids={detail.chain.after} quests={detail.quests} label="Everything it leads to" />}
-            </div>
-          )}
-        </Section>
-      </QuestTrackingProvider>
+            {(detail.chain.before.length > detail.prerequisites.length || detail.chain.after.length > detail.unlocks.length) && (
+              <div className="mt-2 flex flex-col gap-3">
+                {detail.chain.before.length > 0 && <ChainList ids={detail.chain.before} quests={detail.quests} label="Whole chain before, in order" />}
+                {detail.chain.after.length > 0 && <ChainList ids={detail.chain.after} quests={detail.quests} label="Everything it leads to" />}
+              </div>
+            )}
+          </Section>
+        </QuestTrackingProvider>
+      </ItemRundownQuest>
 
       {wiki && wiki.guide.length > 0 ? (
         <Section id="guide" title="Wiki guide">

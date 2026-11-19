@@ -6,6 +6,7 @@ import { preconnect } from "react-dom";
 import { connection } from "next/server";
 import { headers } from "next/headers";
 import { GameModeProvider } from "@/components/game-mode/context";
+import { ItemRundownProvider } from "@/app/components/item/rundown/rundown-link";
 import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
 import { Header } from "@/app/components/global/header";
 import { SiteFooter } from "@/app/components/global/site-footer";
@@ -63,7 +64,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <GameModeProvider>
           <Header />
           <div id="content" className="flex flex-1 flex-col">
-            {children}
+            <ItemRundownProvider>{children}</ItemRundownProvider>
           </div>
         </GameModeProvider>
         <SiteFooter />

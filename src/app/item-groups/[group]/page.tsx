@@ -16,7 +16,6 @@ import { ItemSearch } from "@/app/components/global/search/item-search";
 import { customDecodeURI, customEncodeURI } from "@/app/lib/URIEncoding";
 import { useCatalog, useItemsInGroup } from "@/app/lib/cache/hooks";
 import type { CachedItem, CatalogItem } from "@/app/lib/cache/types";
-import { itemHref } from "@/app/lib/item-links";
 import { Rubles } from "@/app/lib/currency";
 import { bestSell } from "@/app/lib/item-price";
 import { useHydrated } from "@/app/lib/storage/use-store";
@@ -33,6 +32,7 @@ import {
 } from "@/app/lib/item-groups/store";
 import { MAX_GROUP_ITEMS, MAX_GROUP_NAME_LENGTH } from "@/app/lib/item-groups/limits";
 import { cn } from "@/lib/utils";
+import { ItemRundownLink } from "@/app/components/item/rundown/rundown-link";
 
 type SortKey = "order" | "name" | "price" | "slot";
 
@@ -280,12 +280,12 @@ export default function Page() {
                   <span className="h-10 w-10 shrink-0 bg-[#111]" />
                 )}
                 <div className="flex min-w-0 flex-1 flex-col gap-0.5 sm:flex-row sm:items-center sm:gap-4">
-                  <Link
-                    href={itemHref({ name: row.name, normalizedName: row.slug })}
+                  <ItemRundownLink
+                    item={{ name: row.name, normalizedName: row.slug }}
                     className="min-w-0 flex-1 truncate text-sm text-[#ddd] hover:text-[#e6d9b8] hover:underline"
                   >
                     {row.name}
-                  </Link>
+                  </ItemRundownLink>
                   <div className="flex items-center gap-3 text-xs tabular-nums sm:text-sm">
                     {row.data ? (
                       <>

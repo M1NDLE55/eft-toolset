@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { Lock } from "lucide-react";
 import { Rubles } from "@/app/lib/currency";
 import type { CachedVendorPrice, ComposedItem } from "@/app/lib/cache/types";
-import { FLEA_MARKET, bestSell, fleaPrices } from "@/app/lib/item-price";
+import { FLEA_MARKET, bestBuy, bestSell, fleaBuyBasis, sellSourceLabel } from "@/app/lib/item-price";
 import type { ItemNeeds } from "@/app/lib/item-needs";
 import type { PricePoint } from "@/app/lib/price-history";
 import type { ItemWiki } from "@/app/lib/wiki/item-wiki";
@@ -147,7 +147,7 @@ export const CARD_DEFINITIONS: Record<ItemCardId, CardDefinition> = {
       return (
         <StatValue
           value={best ? Rubles.format(best.price) : "—"}
-          hint={best ? (best.flea ? "Flea, after fee" : best.vendor) : "Cannot be sold"}
+          hint={best ? sellSourceLabel(best) : "Cannot be sold"}
         />
       );
     },
@@ -214,10 +214,7 @@ export const CARD_DEFINITIONS: Record<ItemCardId, CardDefinition> = {
   "buy-from": {
     empty: ({ item }) => item.buyFor.length === 0,
     render: ({ item }) => {
-      const offers = buyOffers(item);
-      return (
-        <PriceList offers={offers} best={offers[0]} fleaNote={fleaPrices(item)?.avg24h != null ? "24h avg" : "lowest listing"} />
-      );
+      return <PriceList offers={buyOffers(item)} best={bestBuy(item) ?? undefined} fleaNote={fleaBuyBasis(item)} />;
     },
   },
   "price-history": {

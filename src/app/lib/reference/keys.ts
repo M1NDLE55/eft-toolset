@@ -1,7 +1,7 @@
 import { getGroupItems, getMapDetails } from "@/app/lib/api/tarkov-server";
 import type { GameMode } from "@/components/game-mode/mode";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
-import { bestSell } from "@/app/lib/item-price";
+import { bestBuy, bestSell } from "@/app/lib/item-price";
 import { isItemSlug } from "@/app/lib/item-links";
 import { buildMapGuide } from "@/app/lib/seo/map";
 
@@ -37,10 +37,7 @@ export async function getMapKeys(gameMode: GameMode, mapKey: string): Promise<Ma
   const byName = new Map(items.map((item) => [item.name, item]));
   const keys = guide.keys.map((key): MapKeyRow => {
     const item = byName.get(key.name);
-    const buy = item?.buyFor.reduce<(typeof item.buyFor)[number] | null>(
-      (cheapest, offer) => (!cheapest || offer.priceRUB < cheapest.priceRUB ? offer : cheapest),
-      null
-    );
+    const buy = item ? bestBuy(item) : null;
     const sell = item ? bestSell(item) : null;
     return {
       name: key.name,

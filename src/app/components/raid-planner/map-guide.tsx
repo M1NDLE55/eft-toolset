@@ -7,6 +7,7 @@ import { formatChance, isNamedBoss, mapIntro, type MapGuide as Guide } from "@/a
 import type { FaqEntry } from "@/app/lib/seo/item";
 import { formatRoubles, plural } from "@/app/lib/seo/format";
 import { FaqSection } from "@/app/components/seo/faq-section";
+import { ItemRundownLink } from "@/app/components/item/rundown/rundown-link";
 
 export const MAP_GUIDE_ID = "map-guide";
 /** Height of the strip under the map that links down to the guide. */
@@ -176,9 +177,9 @@ export function MapGuide({
               {guide.keys.map((key) => (
                 <li key={key.name} className="flex items-baseline justify-between gap-2 border-b border-[#151515] py-1.5 text-sm">
                   {key.normalizedName && isItemSlug(key.normalizedName) ? (
-                    <Link href={`/item/${key.normalizedName}`} className="truncate text-[#ccc] underline-offset-2 hover:text-[#e6d9b8] hover:underline">
+                    <ItemRundownLink item={key} className="truncate text-[#ccc] underline-offset-2 hover:text-[#e6d9b8] hover:underline">
                       {key.name}
-                    </Link>
+                    </ItemRundownLink>
                   ) : (
                     <span className="truncate text-[#ccc]">{key.name}</span>
                   )}

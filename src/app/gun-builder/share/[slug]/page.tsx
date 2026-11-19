@@ -17,8 +17,8 @@ import { ammoFits, ammoOptions } from "@/app/lib/builds/ammo";
 import { formatDamage } from "@/app/components/gun-builder/ammo-picker";
 import { formatRub } from "@/app/components/gun-builder/format";
 import { MAX_BUILD_NAME_LENGTH } from "@/app/lib/builds/limits";
-import { itemHref } from "@/app/lib/item-links";
 import { useDocumentTitle } from "@/app/components/gun-builder/use-document-title";
+import { ItemRundownLink } from "@/app/components/item/rundown/rundown-link";
 
 type Decoded =
   | { payload: string; status: "ready"; build: DecodedSharedBuild }
@@ -170,9 +170,9 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
         <p className="flex flex-wrap items-center gap-x-3 gap-y-1 border border-[#1a1a1a] bg-[#0c0c0c] px-3 py-2 text-sm">
           <span className="text-[10px] font-bold uppercase tracking-widest text-[#888]">Ammo</span>
           {ammo ? (
-            <Link href={itemHref(ammo)} prefetch={false} className="min-w-0 truncate text-[#ddd] hover:text-[#e6d9b8] hover:underline">
+            <ItemRundownLink item={ammo} prefetch={false} className="min-w-0 truncate text-[#ddd] hover:text-[#e6d9b8] hover:underline">
               {ammo.name}
-            </Link>
+            </ItemRundownLink>
           ) : (
             <span className="text-[#888]">Loading…</span>
           )}
@@ -225,13 +225,13 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
                   </span>
                   <span className="min-w-0 flex-1">
                     {item ? (
-                      <Link
-                        href={itemHref(item)}
+                      <ItemRundownLink
+                        item={item}
                         prefetch={false}
                         className="block truncate text-sm text-[#ddd] hover:text-[#e6d9b8] hover:underline"
                       >
                         {item.name}
-                      </Link>
+                      </ItemRundownLink>
                     ) : (
                       <span className="block truncate text-sm text-[#ddd]">{loading ? "Loading…" : "Unavailable item"}</span>
                     )}
