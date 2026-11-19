@@ -13,11 +13,11 @@ export interface IndexableItem {
   types: readonly string[];
   /** For presets: the weapon (or other item) the preset is built on. */
   baseItemId: string | null;
-  /** True when the flea market has a price of its own for it: then it's an item in its own right. */
-  traded: boolean;
+  /** False for items the flea market can't trade (tarkov.dev's noFlea type). */
+  tradeable: boolean;
+  /** The handbook price traders' prices are based on; null when unknown. */
+  basePrice: number | null;
 }
-
-const NUMBERED = /-\d+$/;
 
 /**
  * Decides each item page's indexing:
@@ -26,9 +26,12 @@ const NUMBERED = /-\d+$/;
  * - A weapon's default preset ("… Default") points its canonical at the weapon: the weapon's page
  *   already prices its default build.
  * - Items sharing one name (Twitch drop cases, dogtags, sealed weapon cases, gear crates), which
- *   tarkov.dev tells apart only by a number on the slug, point their canonical at the one without
- *   a number (else the lowest number): one page per name. A copy the flea market prices on its
- *   own (a second Folding car key) is a different item that happens to share the name, and stays.
+ *   tarkov.dev tells apart only by a number on the slug, point their canonical at the shortest
+ *   slug (the one without a number, else the lowest): one page per name. A copy that can be
+ *   traded on the flea market at a base price of its own (a second Folding car key) is a
+ *   different item that happens to share the name, and stays. These are stable item facts, not
+ *   live prices, so a page's canonical doesn't flip from one data refresh to the next.
+ * Canonicals are then followed to their final page, so none points at a page that isn't indexed.
  * Everything else is indexed.
  */
 export function itemIndexing(items: readonly IndexableItem[]): Map<string, ItemIndexing> {
@@ -51,19 +54,28 @@ export function itemIndexing(items: readonly IndexableItem[]): Map<string, ItemI
   }
   for (const group of byName.values()) {
     if (group.length < 2) continue;
-    const representative = group.toSorted((a, b) => numberOf(a.slug) - numberOf(b.slug) || a.slug.localeCompare(b.slug))[0];
+    // Shortest first: "foo" before "foo-3", "foo-3" before "foo-15", and "foo-545" before "foo-545-1".
+    const representative = group.toSorted((a, b) => a.slug.length - b.slug.length || a.slug.localeCompare(b.slug))[0];
     for (const item of group) {
-      if (item !== representative && !item.traded) result.set(item.slug, { kind: "canonical", slug: representative.slug, reason: "same-name" });
+      const distinct = item.tradeable && item.basePrice !== null && item.basePrice !== representative.basePrice;
+      if (item !== representative && !distinct) result.set(item.slug, { kind: "canonical", slug: representative.slug, reason: "same-name" });
     }
   }
   for (const item of items) if (!result.has(item.slug)) result.set(item.slug, { kind: "index" });
+  for (const [slug, entry] of result) {
+    if (entry.kind !== "canonical") continue;
+    let target: ItemIndexing | undefined = entry;
+    let to = entry.slug;
+    for (let hops = 0; target?.kind === "canonical" && hops < 10; hops += 1) {
+      to = target.slug;
+      target = result.get(to);
+    }
+    // A chain ending at a page left out of search leaves this one out too; one ending in a loop, indexed.
+    if (target?.kind === "noindex") result.set(slug, target);
+    else if (target?.kind === "index") result.set(slug, { ...entry, slug: to });
+    else result.set(slug, { kind: "index" });
+  }
   return result;
-}
-
-/** The number tarkov.dev appends to a repeated name's slug; -1 for none, so the plain slug comes first. */
-function numberOf(slug: string) {
-  const match = NUMBERED.exec(slug);
-  return match ? Number(match[0].slice(1)) : -1;
 }
 
 /** The item pages the sitemap lists: the indexed ones, with when tarkov.dev last updated each. */

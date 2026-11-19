@@ -190,6 +190,13 @@ describe("quest share image icons", () => {
     expect(throwing).toHaveBeenCalledTimes(2);
   });
 
+  it("doesn't follow redirects, and skips an icon too big to draw without reading it", async () => {
+    const cache = new LruCache<IconEntry>(10);
+    const fetcher = vi.fn(async () => new Response(new Uint8Array([1]), { headers: { "content-type": "image/png", "content-length": String(10 * 1024 * 1024) } }));
+    expect(await loadOgIcon("https://assets.tarkov.dev/big.png", { fetcher, toPng: async () => null, cache })).toBeNull();
+    expect(fetcher).toHaveBeenCalledWith("https://assets.tarkov.dev/big.png", expect.objectContaining({ redirect: "error" }));
+  });
+
   it("keeps the cache bounded, dropping the least recently used", () => {
     const cache = new LruCache<number>(2);
     cache.set("a", 1);

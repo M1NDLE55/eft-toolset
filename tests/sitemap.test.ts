@@ -13,8 +13,9 @@ const LISTS = {
 vi.mock("@/app/lib/api/tarkov-server", () => ({
   tryAcquireOperationSlot: () => true,
   releaseOperationSlot: () => undefined,
-  getItemPageIndex: async (gameMode: "regular" | "pve") => ({
-    publishedAt: gameMode === "pve" ? "2026-11-19T08:30:00.000Z" : "2026-11-19T08:20:22.000Z",
+  itemsPublishedAt: async (gameMode: "regular" | "pve") => (gameMode === "pve" ? "2026-11-19T08:30:00.000Z" : "2026-11-19T08:20:22.000Z"),
+  getItemPageIndex: async () => ({
+    publishedAt: "2026-11-19T08:20:22.000Z",
     pages: new Map([
       ["graphics-card", { indexing: { kind: "index" }, updated: "2026-11-19T07:08:14.000Z" }],
       ["factory-emergency-exit-key", { indexing: { kind: "index" }, updated: null }],

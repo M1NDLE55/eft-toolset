@@ -3603,7 +3603,8 @@ export async function getItemPageIndex(gameMode: GameMode = "regular"): Promise<
               name: translate(item.name, context.translations),
               types: item.types ?? [],
               baseItemId: item.properties?.baseItem ?? null,
-              traded: Boolean(item.avg24hPrice || item.lastLowPrice),
+              tradeable: !(item.types ?? []).includes("noFlea"),
+              basePrice: finiteNumber(item.basePrice),
             },
           ]
         : []
@@ -3617,6 +3618,12 @@ export async function getItemPageIndex(gameMode: GameMode = "regular"): Promise<
     );
   });
   return { pages, publishedAt: isoTime(resourceCache.get(`${gameMode}/items`)?.lastModified) };
+}
+
+/** When tarkov.dev last published the mode's items data, as an ISO time; null when unknown. Loads no translations or index. */
+export async function itemsPublishedAt(gameMode: GameMode) {
+  await loadResource(gameMode, "items");
+  return isoTime(resourceCache.get(`${gameMode}/items`)?.lastModified);
 }
 
 /** An ISO time from tarkov.dev's ISO times or an HTTP date; null for anything else. */

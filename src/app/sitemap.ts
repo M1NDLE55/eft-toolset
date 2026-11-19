@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 
 import type { MetadataRoute } from "next";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
-import { getItemPageIndex, getQuestList, releaseOperationSlot, tryAcquireOperationSlot, type ItemPageIndex } from "@/app/lib/api/tarkov-server";
+import { getItemPageIndex, getQuestList, itemsPublishedAt, releaseOperationSlot, tryAcquireOperationSlot, type ItemPageIndex } from "@/app/lib/api/tarkov-server";
 import { SITE_ORIGIN as ORIGIN } from "@/app/lib/site";
 import { listBestBuildWeapons } from "@/app/lib/builds/best-builds";
 import { listGunsmithTasks } from "@/app/lib/builds/gunsmith-pages";
@@ -53,7 +53,7 @@ const latest = (dates: (string | null | undefined)[]) => dates.reduce<string | u
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [items, pveItems, weaponSlugs, gunsmithSlugs, caliberSlugs, keyMaps, pvpQuests, pveQuests] = await Promise.all([
     load(() => getItemPageIndex("regular"), NO_ITEMS),
-    load(() => getItemPageIndex("pve"), NO_ITEMS),
+    load(() => itemsPublishedAt("pve"), null),
     load(async () => (await listBestBuildWeapons("regular")).map((weapon) => weapon.slug), []),
     load(async () => (await listGunsmithTasks("regular")).map((task) => task.slug), []),
     load(async () => groupAmmo(await getAllAmmo("regular")).map((caliber) => caliber.slug), []),
@@ -74,7 +74,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/ammo", priority: 0.8, changeFrequency: "weekly", lastModified: prices },
     { path: "/keys", priority: 0.7, changeFrequency: "weekly", lastModified: prices },
     { path: "/quests", priority: 0.8, changeFrequency: "weekly", lastModified: latest(quests.map((quest) => quest.lastModified)) },
-    { path: "/flea-market/pve", priority: 0.8, changeFrequency: "daily", lastModified: pveItems.publishedAt ?? undefined },
+    { path: "/flea-market/pve", priority: 0.8, changeFrequency: "daily", lastModified: pveItems ?? undefined },
     { path: "/raid-planner", priority: 0.8, changeFrequency: "weekly" },
     { path: "/mcp", priority: 0.5, changeFrequency: "monthly" },
     { path: "/credits", priority: 0.2, changeFrequency: "yearly" },

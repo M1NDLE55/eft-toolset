@@ -42,6 +42,13 @@ function usageCounts(item: ComposedItem) {
   };
 }
 
+/** Slots the priced item takes: a weapon's default build (its flea price is for that), else the item. */
+function pricedSize(item: ComposedItem) {
+  const width = item.weapon?.defaultWidth;
+  const height = item.weapon?.defaultHeight;
+  return width && height ? { width, height } : { width: item.width, height: item.height };
+}
+
 /** The item's most specific category, unless it's one that says nothing ("Other", "Item"). */
 function categoryOf(item: ComposedItem) {
   const category = item.info?.categories[0];
@@ -69,7 +76,10 @@ export function itemPageDescription(item: ComposedItem, quests: ItemQuestUses | 
     sentences.push([category ? `${item.name} is a Tarkov ${category.toLowerCase()} item.` : `${item.name} in Escape from Tarkov.`]);
   }
   const named = quests?.needed.filter((quest) => quest.count > 0) ?? [];
-  const fir = named.some((quest) => quest.foundInRaid > 0) ? " (found in raid)" : "";
+  // "(found in raid)" only when every one of them must be; else how many of them.
+  const firCount = named.reduce((total, quest) => total + quest.foundInRaid, 0);
+  const firTotal = named.reduce((total, quest) => total + quest.count, 0);
+  const fir = firCount === 0 ? "" : firCount === firTotal ? " (found in raid)" : ` (${firCount} of ${firTotal} found in raid)`;
   const hideout = needs && needs.upgradeCount > 0 ? plural(needs.upgradeCount, "hideout upgrade") : null;
   // The quest list counts quests as the page links them; without it, tarkov.dev's task uses.
   const taskCount = quests ? named.length : (needs?.taskCount ?? 0);
@@ -85,7 +95,7 @@ export function itemPageDescription(item: ComposedItem, quests: ItemQuestUses | 
   const onFlea = item.buyFor.some((offer) => offer.vendor.name === FLEA_MARKET);
   if (seller) sentences.push([`${seller.vendor.name} sells it${seller.minTraderLevel ? ` at LL${seller.minTraderLevel}` : ""}.`]);
   else if (!onFlea) sentences.push([item.fleaBanned ? "No trader sells it and it can't be traded on the flea market." : "No trader sells it."]);
-  if (!best) sentences.push([`Takes ${item.width}×${item.height} slots.`]);
+  if (!best) sentences.push([`Takes ${pricedSize(item).width}×${pricedSize(item).height} slots.`]);
   if (best || onFlea) sentences.push(["Live PVP and PVE prices."]);
   let description = "";
   for (const variants of sentences) {
@@ -157,7 +167,7 @@ export function itemSummary(item: ComposedItem, quests: ItemQuestUses | null = n
 
   const best = bestSell(item);
   if (best) {
-    const slots = item.width * item.height;
+    const slots = pricedSize(item).width * pricedSize(item).height;
     const perSlot = slots > 1 ? `, about ${about(best.price / slots)} per slot` : "";
     paragraphs.push(
       best.flea

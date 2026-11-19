@@ -86,9 +86,37 @@ export function questKeyGroups(detail: Pick<QuestDetail, "quest" | "objectives">
   return Array.from(byMap, ([map, ids]) => ({ map, ids: Array.from(ids) }));
 }
 
-function keyNames(detail: QuestDetail) {
-  const ids = new Set(questKeyGroups(detail).flatMap((group) => group.ids));
-  return Array.from(ids, (id) => detail.items[id]?.name).filter((name): name is string => Boolean(name));
+/**
+ * The keys the quest needs, as choices: each is a set of keys any one of which will do (tarkov.dev's
+ * needed keys per map, then key groups objectives name that those leave out), with its map.
+ */
+export function keyChoices(detail: Pick<QuestDetail, "quest" | "objectives" | "items">) {
+  const choices: { map: string | null; ids: string[] }[] = [];
+  const seen = new Set<string>();
+  const add = (map: string | null, ids: string[]) => {
+    const known = Array.from(new Set(ids)).filter((id) => detail.items[id]);
+    const key = known.toSorted().join(",");
+    if (known.length === 0 || seen.has(key)) return;
+    seen.add(key);
+    choices.push({ map, ids: known });
+  };
+  for (const entry of detail.quest.keys) add(entry.map, entry.keys);
+  const listed = new Set(detail.quest.keys.flatMap((entry) => entry.keys));
+  for (const objective of detail.objectives) {
+    for (const group of objective.requiredKeys) if (!group.some((id) => listed.has(id))) add(objective.maps[0] ?? null, group);
+  }
+  return choices;
+}
+
+/** "A", "A or B", "A, B or C". */
+function either(names: string[]) {
+  return names.length > 1 ? `${names.slice(0, -1).join(", ")} or ${names.at(-1)}` : (names[0] ?? "");
+}
+
+/** "the Dorm room 314 marked key", or "the Dorm room 114 key or Dorm room 203 key" when any of them will do. */
+function choiceName(detail: Pick<QuestDetail, "items">, ids: string[], max = 3) {
+  const names = ids.map((id) => detail.items[id].name);
+  return `the ${names.length > max ? `${names.slice(0, max).join(", ")} or another` : either(names)}`;
 }
 
 const possessive = (name: string) => (name.endsWith("s") ? `${name}'` : `${name}'s`);
@@ -224,11 +252,11 @@ export function questDescription(detail: QuestDetail) {
     `${name}: ${quest.trader ?? "Tarkov"} quest.`,
   ];
 
-  const keys = keyNames(detail);
+  const choices = keyChoices(detail);
   const keyClause = [
-    keys.length > 0 ? `Bring the ${listed(keys, 2)}${keys.length > 2 ? " keys" : ""}.` : null,
-    keys.length > 1 ? `Bring ${keys.length} keys.` : null,
-    keys.length === 1 ? "Bring a key." : null,
+    choices.length > 0 && choices.length <= 2 ? `Bring ${listed(choices.map((choice) => choiceName(detail, choice.ids, 2)))}.` : null,
+    choices.length > 1 ? `Bring ${choices.length} keys.` : null,
+    choices.length === 1 ? "Bring a key." : null,
   ];
 
   const fir = firCount(detail);
@@ -328,10 +356,15 @@ export function questSummary(detail: QuestDetail, options: { buildPage?: boolean
   for (const entry of quest.traderLevels) byLevel.set(entry.level, [...(byLevel.get(entry.level) ?? []), entry.trader]);
   for (const [level, traders] of byLevel) opens.push(`with loyalty level ${level} at ${traders.length > 3 ? `${traders.length} traders` : listed(traders)}`);
   const giver = quest.trader ? `${quest.trader} gives ${name}` : `${name} is given`;
-  const intro = `${giver}${quest.faction ? ` to ${quest.faction} players` : ""}${opens.length > 0 ? ` ${listed(opens)}` : " from the start, with nothing to do first"}.`;
+  const intro = `${giver}${quest.faction ? ` to ${quest.faction} players` : ""}${opens.length > 0 ? ` ${listed(opens)}` : detail.prerequisites.length > 0 ? " once its earlier quests are done" : " from the start, with nothing to do first"}.`;
   const labels = mapLabels(quest.maps, detail.maps);
   // When no objective needs one map in particular, any of the maps will do.
-  const either = !detail.objectives.some((objective) => mapLabels(objective.maps, detail.maps).length === 1);
+  // Any of the maps will do only when every objective with a map takes the same choice of maps.
+  const objectiveLabels = detail.objectives.flatMap((objective) => {
+    const names = mapLabels(objective.maps, detail.maps);
+    return names.length > 0 ? [names.toSorted().join("\u0000")] : [];
+  });
+  const either = objectiveLabels.length > 0 && new Set(objectiveLabels).size === 1;
   const where =
     labels.length === 0
       ? "None of its objectives is tied to a map."
@@ -343,16 +376,14 @@ export function questSummary(detail: QuestDetail, options: { buildPage?: boolean
   paragraphs.push(`${intro} ${where}`);
 
   const bring: string[] = [];
-  const groups = questKeyGroups(detail);
-  const keyIds = Array.from(new Set(groups.flatMap((group) => group.ids)));
-  if (keyIds.length > 0) {
-    const named = keyIds.flatMap((id) => {
-      const item = detail.items[id];
-      if (!item) return [];
-      const map = groups.find((group) => group.ids.includes(id))?.map;
+  const choices = keyChoices(detail);
+  if (choices.length > 0) {
+    const named = choices.map(({ map, ids }) => {
       const where = map && detail.maps[map] && labels.length > 1 ? ` for ${detail.maps[map].name}` : "";
-      const price = item.buy ? ` (about ${formatRoubles(roughly(item.buy.price))}${item.buy.vendor === "Flea Market" ? " on the flea market" : ` from ${item.buy.vendor}`})` : "";
-      return [`the ${item.name}${where}${price}`];
+      // A price only for a single key: with alternatives, the cheapest is the player's call.
+      const item = ids.length === 1 ? detail.items[ids[0]] : null;
+      const price = item?.buy ? ` (about ${formatRoubles(roughly(item.buy.price))}${item.buy.vendor === "Flea Market" ? " on the flea market" : ` from ${item.buy.vendor}`})` : "";
+      return `${choiceName(detail, ids)}${where}${price}`;
     });
     if (named.length > 0) bring.push(`Bring ${listed(named, 4)}.`);
   }
@@ -365,8 +396,8 @@ export function questSummary(detail: QuestDetail, options: { buildPage?: boolean
   if (fir > 0) {
     bring.push(
       fir === 1
-        ? "The found-in-raid item has to come out of your own raid: one bought from a trader or the flea market won't count."
-        : `The ${fir} found-in-raid items have to come out of your own raids: ones bought from a trader or the flea market won't count, so keep them as you loot.`
+        ? "The found-in-raid item must come from your own raid or a hideout craft: one bought from a trader or the flea market won't count."
+        : `The ${fir} found-in-raid items must come from your own raids or hideout crafts: ones bought from a trader or the flea market won't count, so keep them as you loot.`
     );
   }
   const cost = buyCost(detail);
@@ -401,7 +432,7 @@ export function questSummary(detail: QuestDetail, options: { buildPage?: boolean
   const outro: string[] = [];
   if (paid.length > 0) outro.push(`Completing it gives ${listed(paid)}${unlock ? `${paid.length > 1 ? "," : ""} and unlocks ${unlock}` : ""}.`);
   else if (unlock) outro.push(`Completing it unlocks ${unlock}.`);
-  outro.push(next.length > 0 ? `It leads to ${listed(next, 4)}.` : "No other quest follows from it.");
+  outro.push(next.length > 0 ? `It leads to ${listed(next, 4)}.` : detail.unlocks.length > 0 ? "Other quests follow from it." : "No other quest follows from it.");
   if (quest.kappaRequired && quest.lightkeeperRequired) outro.push("You need it for both the Kappa container and Lightkeeper.");
   else if (quest.kappaRequired) outro.push("You need it for the Kappa container.");
   else if (quest.lightkeeperRequired) outro.push("You need it for Lightkeeper, though not for Kappa.");
@@ -429,11 +460,11 @@ export function questFaq(detail: QuestDetail): FaqEntry[] {
         (before.length ? ` First ${listed(before)}.` : " No other quest has to be done first."),
     });
   }
-  const keys = Array.from(new Set(quest.keys.flatMap((entry) => entry.keys))).map((id) => detail.items[id]?.name).filter(Boolean) as string[];
+  const keys = keyChoices(detail);
   if (quest.needs.length > 0 || keys.length > 0) {
     const parts: string[] = [];
     if (quest.needs.length > 0) parts.push(`${needVerb(detail)} ${listed(needPhrases(detail))}.`);
-    if (keys.length > 0) parts.push(`Bring the ${listed(keys)}.`);
+    if (keys.length > 0) parts.push(`Bring ${listed(keys.map((choice) => choiceName(detail, choice.ids)))}.`);
     entries.push({ question: `What items do you need for ${name}?`, answer: parts.join(" ") });
   }
   const rewards = rewardPhrases(detail, detail.rewards);

@@ -197,8 +197,8 @@ export interface IconLoader {
 let sharpModule: Promise<typeof import("sharp").default | null> | undefined;
 
 /**
- * Converts with sharp, which Next installs for its image optimizer (an optional dependency of next, not
- * one of ours), so it's loaded only when needed and may be missing: then the icon falls back to JPEG.
+ * Converts with sharp, a dependency with native binaries: it's loaded only when needed, and if it
+ * can't be loaded on a platform the icon falls back to tarkov.dev's JPEG copy.
  */
 export async function webpToPng(webp: Buffer) {
   sharpModule ??= import("sharp").then(
@@ -216,9 +216,15 @@ export async function webpToPng(webp: Buffer) {
 
 async function fetchImage(url: string, fetcher: typeof fetch) {
   try {
-    const response = await fetcher(url, { signal: AbortSignal.timeout(ICON_TIMEOUT_MS), next: { revalidate: ICON_REVALIDATE_SECONDS } });
+    // No redirects: only assets.tarkov.dev is fetched, and a redirect could lead anywhere.
+    const response = await fetcher(url, { signal: AbortSignal.timeout(ICON_TIMEOUT_MS), redirect: "error", next: { revalidate: ICON_REVALIDATE_SECONDS } });
     if (!response.ok) return null;
     const type = response.headers.get("content-type")?.split(";")[0].trim().toLowerCase() ?? "";
+    const length = Number(response.headers.get("content-length"));
+    if (Number.isFinite(length) && length > MAX_ICON_BYTES) {
+      await response.body?.cancel();
+      return null;
+    }
     const bytes = Buffer.from(await response.arrayBuffer());
     return bytes.length > 0 && bytes.length <= MAX_ICON_BYTES ? { type, bytes } : null;
   } catch {

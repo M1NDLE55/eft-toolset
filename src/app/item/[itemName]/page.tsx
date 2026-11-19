@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { ItemPageClient } from "./item-page-client";
 import { ITEM_VIEW_COOKIE, decodeViewCookie } from "@/app/lib/item-views/views";
 import { readItemWiki } from "@/app/lib/wiki/item-wiki";
-import { resolveItemRoute } from "./item-route";
+import { loadItemIndexing, resolveItemRoute } from "./item-route";
 import { JsonLd, breadcrumbList } from "@/app/components/seo/json-ld";
 import { itemPageDescription, itemPageTitle, itemSummary } from "@/app/lib/seo/item";
 import { heading } from "@/app/components/quests/quest-bits";
@@ -11,8 +11,6 @@ import { ITEM_HUB_NAME } from "@/app/lib/seo/site-copy";
 import { ItemQuestLinks } from "@/app/components/item/item-quests";
 import { questsUsingItem } from "@/app/lib/quests/item-quests";
 import { loadQuestList } from "@/app/quests/load";
-import { getItemPageIndex } from "@/app/lib/api/tarkov-server";
-import { readForRender } from "@/app/lib/api/server-render";
 
 interface ItemPageProps {
   params: Promise<{ itemName: string }>;
@@ -25,12 +23,11 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
   if (!item && !name) return { title: "Item prices" };
   if (!item) return { title: name, robots: { index: false, follow: true } };
   const title = itemPageTitle(item);
-  const quests = await loadQuestList();
-  const description = itemPageDescription(item, quests?.gameMode === gameMode ? questsUsingItem(quests.list, item.id) : null);
-  const images = item.gridImageLink ? [{ url: item.gridImageLink }] : [{ url: "/item-scanner-og.png", width: 1200, height: 630 }];
   // A near-duplicate (a weapon's default preset, a numbered copy of a name) names the page to show
   // instead; an ammo pack isn't indexed. Without the index in time, the page is its own canonical.
-  const indexing = canonical ? (await readForRender("Item index", () => getItemPageIndex(gameMode)))?.pages.get(canonical)?.indexing : undefined;
+  const [quests, indexing] = await Promise.all([loadQuestList(), canonical ? loadItemIndexing(canonical) : undefined]);
+  const description = itemPageDescription(item, quests?.gameMode === gameMode ? questsUsingItem(quests.list, item.id) : null);
+  const images = item.gridImageLink ? [{ url: item.gridImageLink }] : [{ url: "/item-scanner-og.png", width: 1200, height: 630 }];
   const url = indexing?.kind === "canonical" ? `/item/${indexing.slug}` : canonical ? `/item/${canonical}` : undefined;
   return {
     title,

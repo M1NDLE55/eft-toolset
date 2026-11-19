@@ -22,24 +22,33 @@ const BORDER = "#2a2a2a";
 
 // The site's font (Inter, as next/font serves it from Google Fonts), kept in the repo as TTF: the image renderer
 // can't read WOFF2, and the image shouldn't depend on Google at request time. Latin subset, three weights.
-const fonts = Promise.all(
-  (
-    [
-      ["Inter-Regular.ttf", 400],
-      ["Inter-Bold.ttf", 700],
-      ["Inter-Black.ttf", 900],
-    ] as const
-  ).map(async ([file, weight]) => ({
-    name: "Inter",
-    data: await readFile(join(process.cwd(), "assets/fonts", file)),
-    weight,
-    style: "normal" as const,
-  }))
-).catch((error) => {
-  // Without them the image still renders, in the renderer's own font.
-  console.warn("Share image fonts unavailable:", error instanceof Error ? error.message : error);
-  return [];
-});
+type OgFont = { name: string; data: Buffer; weight: 400 | 700 | 900; style: "normal" };
+let fonts: Promise<OgFont[]> | null = null;
+
+/** The fonts, read once; null when they can't be read, and tried again on the next image. */
+async function loadFonts(): Promise<OgFont[] | null> {
+  fonts ??= Promise.all(
+    (
+      [
+        ["Inter-Regular.ttf", 400],
+        ["Inter-Bold.ttf", 700],
+        ["Inter-Black.ttf", 900],
+      ] as const
+    ).map(async ([file, weight]) => ({
+      name: "Inter",
+      data: await readFile(join(process.cwd(), "assets/fonts", file)),
+      weight,
+      style: "normal" as const,
+    }))
+  );
+  try {
+    return await fonts;
+  } catch (error) {
+    fonts = null;
+    console.warn("Share image fonts unavailable:", error instanceof Error ? error.message : error);
+    return null;
+  }
+}
 
 /**
  * The quest in PVP, or in PVE for a quest only it has. Crawlers have no game mode cookie, and one
@@ -226,7 +235,10 @@ function FallbackImage() {
 }
 
 async function render(element: ReactElement, cacheControl: string, status = 200) {
-  return new ImageResponse(element, { ...size, fonts: await fonts, status, headers: { "Cache-Control": cacheControl } });
+  // Without the site's fonts, leave the option out: the renderer then uses its own font, while an
+  // empty list would make it fail.
+  const loaded = await loadFonts();
+  return new ImageResponse(element, { ...size, ...(loaded ? { fonts: loaded } : {}), status, headers: { "Cache-Control": cacheControl } });
 }
 
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {

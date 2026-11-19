@@ -84,12 +84,12 @@ describe("item page text", () => {
   };
 
   it("names the quests that need it in the description when there's room, else counts them", () => {
-    expect(itemPageDescription(item({ ...gas, name: "Gas" }), { needed: quests.needed.slice(0, 1), keys: [] })).toBe(
-      "Gas sells for 31,423 ₽ on the Tarkov flea market after fees. Therapist pays 11,065 ₽. Needed for Sanitary Standards (found in raid) and 1 hideout upgrade."
+    expect(itemPageDescription(item({ ...gas, name: "Gas" }), { needed: [{ name: "Shortage", count: 2, foundInRaid: 2 }], keys: [] })).toBe(
+      "Gas sells for 31,423 ₽ on the Tarkov flea market after fees. Therapist pays 11,065 ₽. Needed for Shortage (found in raid) and 1 hideout upgrade."
     );
     const description = itemPageDescription(gas, quests);
     expect(description).toBe(
-      "Gas analyzer sells for 31,423 ₽ on the Tarkov flea market after fees. Therapist pays 11,065 ₽. Needed for 2 quests (found in raid) and 1 hideout upgrade."
+      "Gas analyzer sells for 31,423 ₽ on the Tarkov flea market after fees. Therapist pays 11,065 ₽. Needed for 2 quests (4 of 5 found in raid) and 1 hideout upgrade."
     );
   });
 
@@ -133,6 +133,8 @@ describe("item page text", () => {
 
   it("sizes a weapon by its default build, which its flea price is for", () => {
     const rifle = item({ name: "Colt M4A1", weapon: { defaultWidth: 5, defaultHeight: 2 }, info: { ...gas.info!, categories: ["Assault rifle"] } });
+    const priced = item({ ...rifle, width: 2, height: 1, sellFor: [{ vendor: { name: "Flea Market" }, priceRUB: 120_000 }], fleaMarketFee: 0 });
+    expect(itemSummary(priced)[2]).toBe("It sells for about 120,000 ₽ on the flea market after the fee, about 12,000 ₽ per slot.");
     expect(itemSummary(rifle)[0]).toBe("In Escape from Tarkov, Colt M4A1 is in the Assault rifle category. Its default build takes 5×2 slots. Its flea market price is for that default build.");
   });
 });

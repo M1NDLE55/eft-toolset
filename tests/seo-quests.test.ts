@@ -153,7 +153,7 @@ describe("quest SEO copy", () => {
     };
     expect(questSummary(priced)).toEqual([
       "Therapist gives Sanitary Standards - Part 1 from level 12 and once you complete Shortage. The objectives take you to Customs.",
-      "Bring the Dorm room 314 marked key (about 21,000 ₽ on the flea market). You hand over 2× Gas analyzer (found in raid) and 1× any of Salewa first aid kit and IFAK individual first aid kit. The 2 found-in-raid items have to come out of your own raids: ones bought from a trader or the flea market won't count, so keep them as you loot.",
+      "Bring the Dorm room 314 marked key (about 21,000 ₽ on the flea market). You hand over 2× Gas analyzer (found in raid) and 1× any of Salewa first aid kit and IFAK individual first aid kit. The 2 found-in-raid items must come from your own raids or hideout crafts: ones bought from a trader or the flea market won't count, so keep them as you loot.",
       "The objectives are spread over 2 maps, so plan on more than one raid. Some objectives only count with particular gear, a weapon, mods or what you wear, so check them before you load out. You pick up Secure Folder 0022 in raid and have to extract with it.",
       "Completing it gives 8,400 XP, 45,000 ₽ and 2× Salewa first aid kit, and unlocks IFAK individual first aid kit at Therapist LL2. It leads to Sanitary Standards - Part 2. You need it for the Kappa container.",
     ]);
@@ -174,6 +174,49 @@ describe("quest SEO copy", () => {
       "There's nothing to hand over and no key to bring.",
       "Completing it gives 8,400 XP and 80,000 ₽. No other quest follows from it. It isn't needed for the Kappa container.",
     ]);
+  });
+
+  it("names up to two keys, any-of keys as alternatives, and counts more", () => {
+    const items = { ...detail.items, k1: item("Dorm room 114 key"), k2: item("Dorm room 203 key"), k3: item("Dorm room 206 key") };
+    const keyed = (keys: QuestSummary["keys"], requiredKeys: string[][] = []): QuestDetail => ({
+      ...detail,
+      items,
+      quest: { ...summary, keys, needs: [] },
+      objectives: [{ ...objective("o1"), requiredKeys }],
+    });
+    // Three keys, each needed: counted, never "… key keys".
+    const three = keyed([
+      { map: "customs", keys: ["k1"] },
+      { map: "customs", keys: ["k2"] },
+      { map: "customs", keys: ["k3"] },
+    ]);
+    expect(questDescription(three)).toContain("Bring 3 keys.");
+    expect(questDescription(three)).not.toMatch(/key keys/);
+    // Any one of a group will do.
+    const anyOf = keyed([], [["k1", "k2"]]);
+    expect(questDescription(anyOf)).toContain("Bring the Dorm room 114 key or Dorm room 203 key.");
+    expect(questSummary(anyOf)[1]).toBe("Bring the Dorm room 114 key or Dorm room 203 key.");
+    expect(questFaq(anyOf).find((entry) => entry.question.startsWith("What items"))?.answer).toBe("Bring the Dorm room 114 key or Dorm room 203 key.");
+  });
+
+  it("says any map will do only when the objectives share one choice of maps, and doesn't claim a start or an end it can't name", () => {
+    const maps = { ...detail.maps, woods: { key: "woods", name: "Woods", page: "woods" }, factory: { key: "factory", name: "Factory", page: "factory" } };
+    const split: QuestDetail = {
+      ...detail,
+      maps,
+      quest: { ...summary, maps: ["customs", "woods", "factory"] },
+      objectives: [
+        { ...objective("o1"), maps: ["customs", "woods"] },
+        { ...objective("o2"), maps: ["factory", "woods"] },
+      ],
+    };
+    expect(questSummary(split)[0]).toContain("The objectives take you to Customs, Woods and Factory.");
+    const shared: QuestDetail = { ...split, objectives: [{ ...objective("o1"), maps: ["customs", "woods"] }, { ...objective("o2"), maps: ["woods", "customs"] }] };
+    expect(questSummary(shared)[0]).toContain("You can do it on Customs, Woods or Factory.");
+    const unnamed: QuestDetail = { ...detail, quest: { ...summary, minPlayerLevel: 1 }, quests: { q1: detail.quests.q1 } };
+    const brief = questSummary(unnamed);
+    expect(brief[0]).toMatch(/^Therapist gives Sanitary Standards - Part 1 once its earlier quests are done\./);
+    expect(brief.at(-1)).toContain("Other quests follow from it.");
   });
 
   it("rounds prices to two significant figures", () => {
