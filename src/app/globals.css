@@ -28,6 +28,62 @@
 
 }
 
+/*
+ * Content size (Settings). Spacing, text and container widths are multiplied by --content-zoom,
+ * which each element inherits, so `.unscaled` subtrees (header, footer) keep their size.
+ * `inline` makes utilities use these expressions directly instead of reading the variables
+ * once on :root. Breakpoints are not scaled.
+ */
+@theme inline {
+  --spacing: calc(0.25rem * var(--content-zoom, 1));
+
+  --text-5xs: calc(0.4375rem * var(--content-zoom, 1));
+  --text-4xs: calc(0.5625rem * var(--content-zoom, 1));
+  --text-3xs: calc(0.625rem * var(--content-zoom, 1));
+  --text-2xs: calc(0.6875rem * var(--content-zoom, 1));
+  --text-xs: calc(0.75rem * var(--content-zoom, 1));
+  --text-sm: calc(0.875rem * var(--content-zoom, 1));
+  --text-base: calc(1rem * var(--content-zoom, 1));
+  --text-lg: calc(1.125rem * var(--content-zoom, 1));
+  --text-xl: calc(1.25rem * var(--content-zoom, 1));
+  --text-2xl: calc(1.5rem * var(--content-zoom, 1));
+  --text-3xl: calc(1.875rem * var(--content-zoom, 1));
+  --text-4xl: calc(2.25rem * var(--content-zoom, 1));
+  --text-5xl: calc(3rem * var(--content-zoom, 1));
+  --text-6xl: calc(3.75rem * var(--content-zoom, 1));
+
+  --container-3xs: calc(16rem * var(--content-zoom, 1));
+  --container-2xs: calc(18rem * var(--content-zoom, 1));
+  --container-xs: calc(20rem * var(--content-zoom, 1));
+  --container-sm: calc(24rem * var(--content-zoom, 1));
+  --container-md: calc(28rem * var(--content-zoom, 1));
+  --container-lg: calc(32rem * var(--content-zoom, 1));
+  --container-xl: calc(36rem * var(--content-zoom, 1));
+  --container-2xl: calc(42rem * var(--content-zoom, 1));
+  --container-3xl: calc(48rem * var(--content-zoom, 1));
+  --container-4xl: calc(56rem * var(--content-zoom, 1));
+  --container-5xl: calc(64rem * var(--content-zoom, 1));
+  --container-6xl: calc(72rem * var(--content-zoom, 1));
+  --container-7xl: calc(80rem * var(--content-zoom, 1));
+}
+
+:root {
+  /* The default size. A saved choice is set inline on <html> before first paint. */
+  --content-scale: 1.25;
+  --content-zoom: var(--content-scale);
+}
+
+/* Phones: cap the size so tight rows (the raid planner toolbar) still fit. Settings says so. */
+@media (max-width: 479px) {
+  :root {
+    --content-zoom: min(var(--content-scale), 1.125);
+  }
+}
+
+.unscaled {
+  --content-zoom: 1;
+}
+
 @utility animate-shimmer {
   animation: shimmer 1.5s infinite linear;
   background: linear-gradient(90deg, #111 0%, #1a1a1a 50%, #111 100%);
@@ -53,6 +109,10 @@
   }
   body {
     @apply bg-background text-foreground overflow-x-hidden;
+  }
+  body,
+  .unscaled {
+    font-size: calc(1rem * var(--content-zoom, 1));
   }
   button:not(:disabled),
   [role="button"]:not(:disabled) {

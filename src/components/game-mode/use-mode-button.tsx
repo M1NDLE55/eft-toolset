@@ -12,7 +12,7 @@ export function UseModeButton({ mode }: { mode: GameMode }) {
     <button
       type="button"
       onClick={() => setGameMode(mode)}
-      className="w-fit border border-[#9a8866] px-3 py-1.5 text-[11px] font-bold uppercase tracking-widest text-[#e6d9b8] hover:bg-[#1a1610] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+      className="w-fit border border-[#9a8866] px-3 py-1.5 text-2xs font-bold uppercase tracking-widest text-[#e6d9b8] hover:bg-[#1a1610] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
     >
       Use {MODE_LABEL[mode]} prices everywhere
     </button>

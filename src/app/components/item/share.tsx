@@ -29,7 +29,7 @@ export default function Share({ title }: { title: string }) {
       onClick={handleShare}
       aria-live="polite"
       aria-label={status === "idle" ? "Share this item" : undefined}
-      className="flex h-9 shrink-0 items-center gap-1.5 border border-[#2a2a2a] px-2.5 text-[11px] font-bold uppercase tracking-widest text-[#aaa] transition-colors hover:border-[#9a8866] hover:text-[#e6d9b8]"
+      className="flex h-9 shrink-0 items-center gap-1.5 border border-[#2a2a2a] px-2.5 text-2xs font-bold uppercase tracking-widest text-[#aaa] transition-colors hover:border-[#9a8866] hover:text-[#e6d9b8]"
     >
       {status === "copied" ? <Check className="h-4 w-4 text-emerald-400" /> : <Share2 className="h-4 w-4" />}
       <span className={status === "idle" ? "hidden sm:inline" : undefined}>

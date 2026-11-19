@@ -48,7 +48,7 @@ function QuestRow({
           <QuestBadges quest={quest} />
         </div>
         {meta.length > 0 && <p className="mt-0.5 text-xs text-[#777]">{meta.join(" · ")}</p>}
-        {reason && <p className="mt-0.5 line-clamp-2 text-[11px] text-[#666]">Needs: {reason}</p>}
+        {reason && <p className="mt-0.5 line-clamp-2 text-2xs text-[#666]">Needs: {reason}</p>}
       </div>
       {status && <StatePill state={status.state} />}
     </li>

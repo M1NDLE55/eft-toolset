@@ -17,7 +17,7 @@ export function Badge({ children, tone = "gold", title }: { children: ReactNode;
     <span
       title={title}
       className={cn(
-        "shrink-0 border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider",
+        "shrink-0 border px-1.5 py-0.5 text-3xs font-semibold uppercase tracking-wider",
         tone === "gold" && "border-[#3a3326] bg-[#1a1610] text-[#c8b384]",
         tone === "plain" && "border-[#2a2a2a] text-[#999]",
         tone === "red" && "border-red-900/60 bg-red-950/30 text-red-300"
@@ -67,7 +67,7 @@ export function lockedReason(status: QuestStatus, name: (id: string) => string) 
 
 export function StatePill({ state, title }: { state: QuestState; title?: string }) {
   return (
-    <span title={title} className={cn("shrink-0 border px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider", STATE_TONE[state])}>
+    <span title={title} className={cn("shrink-0 border px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wider", STATE_TONE[state])}>
       {STATE_LABEL[state]}
     </span>
   );

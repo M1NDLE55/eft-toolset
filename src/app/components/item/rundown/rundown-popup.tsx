@@ -111,7 +111,7 @@ export function ItemRundownPopup({ target, onClose }: { target: RundownTarget; o
             "fixed z-50 flex flex-col overflow-hidden border border-[#2a2a2a] bg-[#0b0b0b] text-[#ccc] shadow-2xl shadow-black/60 outline-none",
             sheet
               ? "inset-x-0 bottom-0 max-h-[85dvh] border-x-0 border-b-0 pb-[env(safe-area-inset-bottom)]"
-              : "w-[22rem] max-w-[calc(100vw-16px)]"
+              : "w-88 max-w-[calc(100vw-16px)]"
           )}
           onOpenAutoFocus={(event) => {
             // Start on the dialog itself, so a screen reader reads its name first.
@@ -134,7 +134,7 @@ export function ItemRundownPopup({ target, onClose }: { target: RundownTarget; o
                 <div className="flex min-w-0 flex-col gap-1">
                   <DialogPrimitive.Title className="text-base font-semibold leading-tight text-[#eee]">{item?.name ?? target.name}</DialogPrimitive.Title>
                   {item?.shortName && item.shortName !== item.name && (
-                    <span className="self-start border border-[#2a2a2a] px-1.5 py-0.5 text-[11px] uppercase tracking-wider text-[#999]">
+                    <span className="self-start border border-[#2a2a2a] px-1.5 py-0.5 text-2xs uppercase tracking-wider text-[#999]">
                       {item.shortName}
                     </span>
                   )}

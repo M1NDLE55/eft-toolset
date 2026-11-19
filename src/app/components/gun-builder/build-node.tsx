@@ -83,7 +83,7 @@ export function BuilderNode({
           <span className="block truncate text-sm font-black uppercase tracking-widest text-[#e6d9b8]">
             {item?.shortName ?? fallback?.shortName ?? MISSING_LABEL[status]}
           </span>
-          <span className="mt-0.5 block truncate text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">
+          <span className="mt-0.5 block truncate text-3xs font-bold uppercase tracking-widest text-[#9a8866]">
             Weapon
           </span>
         </span>
@@ -128,7 +128,7 @@ export function BuilderNode({
           </span>
           <span
             className={cn(
-              "mt-0.5 block text-[10px] font-bold uppercase tracking-widest",
+              "mt-0.5 block text-3xs font-bold uppercase tracking-widest",
               required ? "text-[#c8b384]" : "text-[#666]"
             )}
           >
@@ -163,18 +163,18 @@ export function BuilderNode({
       >
         {item || status !== "loading" ? <Thumb item={item} size="sm" /> : <span className="h-10 w-12 shrink-0 animate-shimmer" />}
         <span className="min-w-0 flex-1">
-          <span className="block truncate text-[10px] font-bold uppercase tracking-widest text-[#888]">
+          <span className="block truncate text-3xs font-bold uppercase tracking-widest text-[#888]">
             {slotLabel}
           </span>
           <span className="mt-0.5 block truncate text-sm font-bold text-[#ddd] group-hover:text-[#e6d9b8]">
             {item?.shortName ?? MISSING_LABEL[status]}
           </span>
           {node.incompatible ? (
-            <span className="mt-0.5 flex items-center gap-1 text-[11px] text-amber-300">
+            <span className="mt-0.5 flex items-center gap-1 text-2xs text-amber-300">
               <AlertTriangle className="h-3 w-3" /> Not compatible
             </span>
           ) : item ? (
-            <span className="mt-0.5 block truncate text-[11px] tabular-nums text-[#888]">
+            <span className="mt-0.5 block truncate text-2xs tabular-nums text-[#888]">
               {formatErgo(item.ergonomics)} ergo
               {item.recoilModifier ? ` · ${formatRecoilModifier(item.recoilModifier)} recoil` : ""}
             </span>

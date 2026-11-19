@@ -76,11 +76,11 @@ function Section({ id, title, children, aside }: { id: string; title: string; ch
 }
 
 function Price({ item }: { item: PricedQuestItem | undefined }) {
-  if (!item?.buy) return <span className="text-[10px] text-[#777]">Loot only</span>;
+  if (!item?.buy) return <span className="text-3xs text-[#777]">Loot only</span>;
   return (
     <span className="flex flex-col items-end">
       <span className="tabular-nums text-[#ddd]">{Rubles.format(item.buy.price)}</span>
-      <span className="text-[10px] text-[#777]">{item.buy.vendor === "Flea Market" ? "Flea" : item.buy.vendor}</span>
+      <span className="text-3xs text-[#777]">{item.buy.vendor === "Flea Market" ? "Flea" : item.buy.vendor}</span>
     </span>
   );
 }
@@ -202,13 +202,13 @@ function ChainList({ ids, quests, label }: { ids: string[]; quests: Record<strin
     ));
   return (
     <div className="flex flex-col gap-1.5">
-      <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">
+      <h3 className="text-3xs font-bold uppercase tracking-widest text-[#777]">
         {label} · {refs.length}
       </h3>
       <ol className="flex flex-wrap gap-1.5">{links(refs.slice(0, MAX_CHAIN_SHOWN))}</ol>
       {refs.length > MAX_CHAIN_SHOWN && (
         <details>
-          <summary className="cursor-pointer text-[11px] font-bold uppercase tracking-widest text-[#c8b384]">
+          <summary className="cursor-pointer text-2xs font-bold uppercase tracking-widest text-[#c8b384]">
             {refs.length - MAX_CHAIN_SHOWN} more
           </summary>
           <ol className="mt-1.5 flex flex-wrap gap-1.5">{links(refs.slice(MAX_CHAIN_SHOWN))}</ol>
@@ -293,7 +293,7 @@ export default async function Page({ params }: PageProps) {
         ])}
       />
       {faq.length > 0 && <JsonLd data={faqPage(faq)} />}
-      <nav aria-label="Breadcrumb" className="-mb-4 text-[11px] uppercase tracking-widest text-[#777]">
+      <nav aria-label="Breadcrumb" className="-mb-4 text-2xs uppercase tracking-widest text-[#777]">
         <Link href="/quests" className="hover:text-[#c8b384] hover:underline underline-offset-2">
           {QUEST_HUB_NAME}
         </Link>
@@ -367,7 +367,7 @@ export default async function Page({ params }: PageProps) {
             title="Objectives"
             aside={
               buildPage && (
-                <Link href={buildPage} className="text-[11px] font-bold uppercase tracking-widest text-[#c8b384] underline-offset-2 hover:underline">
+                <Link href={buildPage} className="text-2xs font-bold uppercase tracking-widest text-[#c8b384] underline-offset-2 hover:underline">
                   Ready build for this quest
                 </Link>
               )
@@ -382,7 +382,7 @@ export default async function Page({ params }: PageProps) {
           </Section>
 
           {quest.needs.length > 0 && (
-            <Section id="items" title="Items to hand over" aside={<span className="text-[10px] uppercase tracking-widest text-[#666]">Buy price</span>}>
+            <Section id="items" title="Items to hand over" aside={<span className="text-3xs uppercase tracking-widest text-[#666]">Buy price</span>}>
               <ItemsNeeded detail={detail} />
             </Section>
           )}
@@ -393,7 +393,7 @@ export default async function Page({ params }: PageProps) {
                 {keys.map((group) => (
                   <div key={group.map ?? "any"} className="flex flex-col gap-1">
                     {group.map && detail.maps[group.map] && (
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#777]">{detail.maps[group.map].name}</span>
+                      <span className="text-3xs font-bold uppercase tracking-widest text-[#777]">{detail.maps[group.map].name}</span>
                     )}
                     <ul className={`${panel} divide-y divide-[#151515]`}>
                       {group.ids.map((id) => (
@@ -414,7 +414,7 @@ export default async function Page({ params }: PageProps) {
             )}
             {hasRewards(detail.startRewards) && (
               <div className="mt-2 flex flex-col gap-2">
-                <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">On accepting</h3>
+                <h3 className="text-3xs font-bold uppercase tracking-widest text-[#777]">On accepting</h3>
                 <Rewards detail={detail} rewards={detail.startRewards} withExperience={false} />
               </div>
             )}
@@ -423,7 +423,7 @@ export default async function Page({ params }: PageProps) {
           <Section id="requirements" title="Before and after">
             <div className={`${panel} grid grid-cols-1 gap-4 p-3 sm:grid-cols-2`}>
               <div className="flex flex-col gap-1.5">
-                <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">Needs</h3>
+                <h3 className="text-3xs font-bold uppercase tracking-widest text-[#777]">Needs</h3>
                 {detail.prerequisites.length === 0 && quest.minPlayerLevel <= 1 ? (
                   <p className="text-sm text-[#888]">Nothing: it&apos;s open from the start.</p>
                 ) : (
@@ -445,7 +445,7 @@ export default async function Page({ params }: PageProps) {
                 )}
                 {quest.failedBy.length > 0 && (
                   <>
-                    <h3 className="mt-2 text-[10px] font-bold uppercase tracking-widest text-red-300/80">Fails if you complete</h3>
+                    <h3 className="mt-2 text-3xs font-bold uppercase tracking-widest text-red-300/80">Fails if you complete</h3>
                     <ul className="flex flex-col gap-1.5">
                       {quest.failedBy.map((entry) =>
                         detail.quests[entry.id] ? (
@@ -459,7 +459,7 @@ export default async function Page({ params }: PageProps) {
                 )}
               </div>
               <div className="flex flex-col gap-1.5">
-                <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">Leads to</h3>
+                <h3 className="text-3xs font-bold uppercase tracking-widest text-[#777]">Leads to</h3>
                 {detail.unlocks.length === 0 ? (
                   <p className="text-sm text-[#888]">No quest needs this one.</p>
                 ) : (

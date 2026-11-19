@@ -34,7 +34,7 @@ export function Header() {
   const accountLabel = signedIn ? "Account" : "Sign in";
 
   return (
-    <header className="w-full border-b border-[#1a1a1a] bg-[#070707]">
+    <header className="unscaled w-full border-b border-[#1a1a1a] bg-[#070707]">
       <div className="flex h-16 w-full items-center justify-between gap-3 px-4">
         <div className="flex min-w-0 items-center gap-4">
           <Link href="/" className="flex shrink-0 items-center" aria-label="EFT Toolset home">
@@ -65,7 +65,7 @@ export function Header() {
             <span
               role="status"
               title="Tarkov.dev is unavailable; showing the most recent cached data."
-              className="hidden text-[10px] uppercase tracking-widest text-amber-300 sm:inline"
+              className="hidden text-3xs uppercase tracking-widest text-amber-300 sm:inline"
             >
               Cached data
             </span>
@@ -99,7 +99,7 @@ export function Header() {
                   <Menu className="h-5 w-5" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="min-w-48">
+              <DropdownMenuContent align="end" className="unscaled min-w-48">
                 {navLinks.map((link) => (
                   <DropdownMenuItem key={link.href} asChild className="py-3">
                     <Link

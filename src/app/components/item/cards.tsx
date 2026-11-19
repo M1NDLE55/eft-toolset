@@ -66,7 +66,7 @@ function PriceList({ offers, best, fleaNote }: { offers: CachedVendorPrice[]; be
               {offer.vendor.name}
               {offer.minTraderLevel && <span className="ml-1.5 text-xs text-[#777]">LL{offer.minTraderLevel}</span>}
               {fleaNote && offer.vendor.name === FLEA_MARKET && <span className="ml-2 text-xs text-[#777]">{fleaNote}</span>}
-              {offer === best && <span className="ml-2 text-[10px] uppercase tracking-widest text-[#9a8866]">Best</span>}
+              {offer === best && <span className="ml-2 text-3xs uppercase tracking-widest text-[#9a8866]">Best</span>}
             </span>
             {offer.preset && (
               <span className="block truncate text-xs text-[#777]" title={offer.preset}>
@@ -129,7 +129,7 @@ function NeedsBody({ needs }: { needs: ItemNeeds | null }) {
           {needs.total > 0 ? `Keep ${needs.total}` : needs.hideoutSlots > 0 ? "Keep for the hideout" : "Check its tasks"}
         </p>
         {needs.foundInRaid > 0 && (
-          <span className="border border-[#3a3326] bg-[#1a1610] px-1.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-[#c8b384]">
+          <span className="border border-[#3a3326] bg-[#1a1610] px-1.5 py-0.5 text-2xs font-semibold uppercase tracking-wider text-[#c8b384]">
             {needs.foundInRaid} found in raid
           </span>
         )}

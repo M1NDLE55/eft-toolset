@@ -65,7 +65,7 @@ export function LayerPanel({
         aria-controls={panelId}
         className={cn(
           overlayPanel,
-          "flex h-10 items-center gap-2 px-3 text-[10px] font-bold uppercase tracking-widest transition-colors hover:border-[#9a8866] hover:text-[#ddd] max-sm:gap-1.5 max-sm:px-2.5",
+          "flex h-10 items-center gap-2 px-3 text-3xs font-bold uppercase tracking-widest transition-colors hover:border-[#9a8866] hover:text-[#ddd] max-sm:gap-1.5 max-sm:px-2.5",
           focusRing,
           open ? "border-[#9a8866] text-[#ddd]" : "text-[#999]"
         )}
@@ -77,7 +77,7 @@ export function LayerPanel({
         )}
         <span>Layers</span>
         {enabled.size > 0 && (
-          <span className="bg-[#9a8866] px-1.5 py-0.5 text-[10px] font-bold leading-none text-black">
+          <span className="bg-[#9a8866] px-1.5 py-0.5 text-3xs font-bold leading-none text-black">
             {enabled.size}
             <span className="sr-only"> enabled</span>
           </span>
@@ -97,14 +97,14 @@ export function LayerPanel({
           )}
         >
           <header className="flex items-center justify-between border-b border-[#2a2a2a] pl-3">
-            <h2 className="text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">Map layers</h2>
+            <h2 className="text-3xs font-bold uppercase tracking-widest text-[#9a8866]">Map layers</h2>
             <div className="flex items-center">
               {enabled.size > 0 && (
                 <button
                   type="button"
                   onClick={() => onChange(Array.from(enabled), false)}
                   className={cn(
-                    "h-10 px-3 text-[10px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ddd] sm:h-9",
+                    "h-10 px-3 text-3xs font-bold uppercase tracking-widest text-[#888] hover:text-[#ddd] sm:h-9",
                     focusRing
                   )}
                 >
@@ -126,7 +126,7 @@ export function LayerPanel({
                   type="button"
                   onClick={onRetry}
                   className={cn(
-                    "h-9 border border-[#2a2a2a] px-3 text-[10px] font-bold uppercase tracking-widest text-[#999] hover:border-[#9a8866] hover:text-[#ddd]",
+                    "h-9 border border-[#2a2a2a] px-3 text-3xs font-bold uppercase tracking-widest text-[#999] hover:border-[#9a8866] hover:text-[#ddd]",
                     focusRing
                   )}
                 >
@@ -148,14 +148,14 @@ export function LayerPanel({
                 return (
                   <div key={group.name} role="group" aria-label={group.name} className="mb-2 last:mb-0">
                     <div className="flex items-center justify-between px-1.5 pb-0.5 pt-1.5">
-                      <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">
+                      <h3 className="text-3xs font-bold uppercase tracking-widest text-[#777]">
                         {group.name}
                       </h3>
                       <button
                         type="button"
                         onClick={() => onChange(groupIds, !allOn)}
                         className={cn(
-                          "min-h-10 px-1.5 text-[10px] uppercase tracking-widest text-[#777] hover:text-[#9a8866] sm:min-h-8",
+                          "min-h-10 px-1.5 text-3xs uppercase tracking-widest text-[#777] hover:text-[#9a8866] sm:min-h-8",
                           focusRing
                         )}
                       >
@@ -191,7 +191,7 @@ export function LayerPanel({
                           >
                             {option.label}
                           </span>
-                          <span className="text-[10px] tabular-nums text-[#777]">{option.count}</span>
+                          <span className="text-3xs tabular-nums text-[#777]">{option.count}</span>
                         </button>
                       );
                     })}

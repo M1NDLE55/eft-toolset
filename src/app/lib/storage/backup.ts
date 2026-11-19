@@ -7,6 +7,7 @@ import { LAYER_STORE } from "@/app/lib/raid-planner/layer-store";
 import { TOOLBAR_STORE } from "@/app/lib/raid-planner/toolbar-store";
 import { GAME_MODE_STORE } from "@/components/game-mode/mode";
 import { HOME_LAYOUT_STORE } from "@/app/lib/settings/store";
+import { CONTENT_SCALE_STORE } from "@/app/lib/settings/content-scale";
 import { ITEM_VIEWS_STORE } from "@/app/lib/item-views/store";
 import { QUEST_PROGRESS_STORE } from "@/app/lib/quests/progress-store";
 import { BACKUP_FORMAT, BACKUP_VERSION } from "./store-keys";
@@ -31,6 +32,7 @@ export const BACKUP_STORES: readonly BackupEntry[] = [
   { label: "Recently viewed items", definition: SCOUTED_STORE as StoreDefinition<unknown>, identity: field("name") },
   { label: "Game mode", definition: GAME_MODE_STORE as StoreDefinition<unknown> },
   { label: "Home screen", definition: HOME_LAYOUT_STORE as StoreDefinition<unknown> },
+  { label: "Content size", definition: CONTENT_SCALE_STORE as StoreDefinition<unknown> },
   { label: "Item page views", definition: ITEM_VIEWS_STORE as StoreDefinition<unknown> },
   { label: "Gun builder price sources", definition: PRICE_SOURCE_STORE as StoreDefinition<unknown> },
   { label: "Gun builder view", definition: VIEW_STORE as StoreDefinition<unknown> },

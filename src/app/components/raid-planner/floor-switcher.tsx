@@ -45,7 +45,7 @@ export function FloorSwitcher({ config, activeFloor, onChange }: FloorSwitcherPr
         onClick={() => setExpanded((value) => !value)}
         className={cn(
           overlayPanel,
-          "flex h-10 items-center gap-2 px-3 text-[10px] font-bold uppercase tracking-widest text-[#c9b88d]",
+          "flex h-10 items-center gap-2 px-3 text-3xs font-bold uppercase tracking-widest text-[#c9b88d]",
           !compact && "sm:hidden",
           focusRing
         )}
@@ -77,7 +77,7 @@ export function FloorSwitcher({ config, activeFloor, onChange }: FloorSwitcherPr
               }}
               aria-pressed={active}
               className={cn(
-                "min-h-10 px-3 text-right text-[10px] font-bold uppercase tracking-widest transition-colors sm:min-h-8",
+                "min-h-10 px-3 text-right text-3xs font-bold uppercase tracking-widest transition-colors sm:min-h-8",
                 focusRing,
                 active ? "bg-[#9a8866] text-black" : "text-[#999] hover:bg-[#1a1a1a] hover:text-[#ddd]"
               )}

@@ -11,6 +11,8 @@ import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytic
 import { Header } from "@/app/components/global/header";
 import { SiteFooter } from "@/app/components/global/site-footer";
 import { ServiceWorker } from "@/app/components/global/service-worker";
+import { ContentScaleSync } from "@/app/components/global/content-scale";
+import { contentScaleScript } from "@/app/lib/settings/content-scale";
 import { SITE_ORIGIN } from "@/app/lib/site";
 import { HOME_DESCRIPTION, SITE_NAME } from "@/app/lib/seo/site-copy";
 
@@ -53,11 +55,15 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   preconnect("https://assets.tarkov.dev");
 
   return (
-    <html lang="en" className={inter.className}>
+    // The inline script sets the saved content size on <html> before hydration.
+    <html lang="en" className={inter.className} suppressHydrationWarning>
+      <head>
+        <script nonce={nonce} dangerouslySetInnerHTML={{ __html: contentScaleScript() }} />
+      </head>
       <body className="flex min-h-dvh flex-col">
         <a
           href="#content"
-          className="sr-only z-50 bg-[#9a8866] px-3 py-2 text-xs font-bold uppercase tracking-widest text-black focus:not-sr-only focus:fixed focus:left-2 focus:top-2"
+          className="unscaled sr-only z-50 bg-[#9a8866] px-3 py-2 text-xs font-bold uppercase tracking-widest text-black focus:not-sr-only focus:fixed focus:left-2 focus:top-2"
         >
           Skip to content
         </a>
@@ -69,6 +75,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         </GameModeProvider>
         <SiteFooter />
         <ServiceWorker />
+        <ContentScaleSync />
         <CloudflareAnalytics nonce={nonce} />
       </body>
     </html>

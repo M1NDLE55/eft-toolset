@@ -148,7 +148,7 @@ function ImportForm() {
             </span>
           </div>
           <label className="flex flex-col gap-1.5">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-[#888]">Build name</span>
+            <span className="text-3xs font-bold uppercase tracking-widest text-[#888]">Build name</span>
             <Input
               value={name}
               maxLength={MAX_BUILD_NAME_LENGTH}

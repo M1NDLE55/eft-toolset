@@ -33,7 +33,7 @@ function fileName(image: QuestWikiImage) {
 
 function Credit({ parts, className }: { parts: CreditPart[]; className?: string }) {
   return (
-    <span className={cn("text-[11px] text-[#777] [overflow-wrap:anywhere]", className)}>
+    <span className={cn("text-2xs text-[#777] [overflow-wrap:anywhere]", className)}>
       {parts.map((part, index) =>
         part.href ? (
           <a key={index} href={part.href} target="_blank" rel={part.license ? "license noopener noreferrer" : "noopener noreferrer"} className={link}>
@@ -190,7 +190,7 @@ export function WikiImages({
   if (!hydrated || images.length === 0) return null;
   return (
     <div className={cn("flex flex-col gap-1.5", className)}>
-      {title && <Title className="text-[10px] font-bold uppercase tracking-widest text-[#777]">{title}</Title>}
+      {title && <Title className="text-3xs font-bold uppercase tracking-widest text-[#777]">{title}</Title>}
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
         {images.map((image, index) => (
           <WikiFigure key={`${image.file}-${index}`} image={image} />
@@ -208,7 +208,7 @@ export function WikiImageStrip({ groups }: { groups: { label: string | null; ima
   if (!hydrated || groups.length === 0) return null;
   return (
     <section aria-labelledby={headingId} className="mt-1 flex flex-col gap-3">
-      <h3 id={headingId} className="text-[10px] font-bold uppercase tracking-widest text-[#777]">
+      <h3 id={headingId} className="text-3xs font-bold uppercase tracking-widest text-[#777]">
         From the EFT Wiki
       </h3>
       {groups.map((group, index) => (

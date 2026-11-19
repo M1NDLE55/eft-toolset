@@ -174,7 +174,7 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
             <h1 className="truncate text-xs font-bold uppercase tracking-widest text-[#c9b88d] sm:text-sm">
               {plan.name || "Untitled raid"}
             </h1>
-            <p className="truncate text-[10px] uppercase tracking-widest text-[#888]">
+            <p className="truncate text-3xs uppercase tracking-widest text-[#888]">
               {config.name}
               {plan.route.length > 1 ? ` · ${formatDistance(routeLength(plan.route))} route` : ""}
               {details?.raidDuration ? ` · ${details.raidDuration} min` : ""}
@@ -213,7 +213,7 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
           role={saveError ? "alert" : "status"}
           className={cn(
             overlayPanel,
-            "absolute left-1/2 z-1001 flex w-max max-w-[calc(100%-1rem)] -translate-x-1/2 items-center gap-3 py-1 pl-3 pr-1 text-xs max-sm:top-[3.75rem] sm:top-3",
+            "absolute left-1/2 z-1001 flex w-max max-w-[calc(100%-1rem)] -translate-x-1/2 items-center gap-3 py-1 pl-3 pr-1 text-xs max-sm:top-15 sm:top-3",
             saveError ? "border-red-900/60 text-red-200" : "text-[#ddd]"
           )}
         >
@@ -222,7 +222,7 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
             <button
               type="button"
               onClick={() => persist(draft)}
-              className="h-9 shrink-0 px-3 text-[10px] font-bold uppercase tracking-widest text-[#ddd] underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+              className="h-9 shrink-0 px-3 text-3xs font-bold uppercase tracking-widest text-[#ddd] underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-[#9a8866]"
             >
               Retry
             </button>
@@ -290,7 +290,7 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
         <FloorSwitcher config={config} activeFloor={activeFloor} onChange={setActiveFloor} />
       </div>
 
-      <MapAttribution config={config} className="left-2 top-[3.75rem] sm:bottom-3 sm:left-3 sm:top-auto" />
+      <MapAttribution config={config} className="left-2 top-15 sm:bottom-3 sm:left-3 sm:top-auto" />
 
       <Dialog open={renameOpen} onOpenChange={setRenameOpen}>
         <DialogContent className="max-w-sm">

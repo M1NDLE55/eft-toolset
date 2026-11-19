@@ -95,7 +95,7 @@ export function BuildsHome() {
       {!hydrated ? (
         <div className="flex flex-col gap-2">
           {Array.from({ length: 3 }, (_, index) => (
-            <Skeleton key={index} className="h-[74px] w-full" />
+            <Skeleton key={index} className="h-18.5 w-full" />
           ))}
         </div>
       ) : builds.length === 0 ? (

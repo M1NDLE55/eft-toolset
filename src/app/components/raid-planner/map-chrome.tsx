@@ -3,7 +3,7 @@ import type { MapConfig } from "@/app/lib/raid-planner/types";
 import { cn } from "@/lib/utils";
 import { overlayPanel } from "./ui";
 
-export const MAP_STAGE_CLASS = "relative isolate h-[calc(100dvh-65px)] min-h-[22rem] w-full overflow-hidden bg-[#050505]";
+export const MAP_STAGE_CLASS = "relative isolate h-[calc(100dvh-65px)] min-h-88 w-full overflow-hidden bg-[#050505]";
 
 export const SVG_MAP_SOURCE = "https://github.com/the-hideout/tarkov-dev-svg-maps";
 export const CC_BY_NC_SA_4 = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
@@ -28,7 +28,7 @@ interface MapAttributionProps {
 export function MapAttribution({ config, className, placement = "overlay" }: MapAttributionProps) {
   if (!config.author) return null;
   const boxClass = cn(
-    "text-[10px] leading-4 text-[#999]",
+    "text-3xs leading-4 text-[#999]",
     placement === "overlay" &&
       "pointer-events-auto absolute z-999 max-w-[calc(100%-1rem)] bg-[#090909]/85 px-2 py-0.5 backdrop-blur-xs",
     className
@@ -85,7 +85,7 @@ export function MapStageSkeleton({ children }: { children?: ReactNode }) {
         <div className={cn(overlayPanel, "ml-auto h-10 w-10 animate-pulse sm:w-28")} />
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
-        <span className="animate-pulse text-[10px] font-bold uppercase tracking-widest text-[#666]">
+        <span className="animate-pulse text-3xs font-bold uppercase tracking-widest text-[#666]">
           {children ?? "Loading"}
         </span>
       </div>

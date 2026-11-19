@@ -74,7 +74,7 @@ function CompareBuilds() {
     <div className="flex w-full max-w-5xl flex-col gap-4">
       <Link
         href="/gun-builder"
-        className="inline-flex h-6 w-fit items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
+        className="inline-flex h-6 w-fit items-center gap-1 text-2xs font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
       >
         <ArrowLeft className="h-3.5 w-3.5" /> All builds
       </Link>
@@ -121,7 +121,7 @@ function BuildSelect({
   const { byId } = useGunList();
   return (
     <label className="flex min-w-0 flex-1 flex-col gap-1.5">
-      <span className="text-[10px] font-bold uppercase tracking-widest text-[#888]">{label}</span>
+      <span className="text-3xs font-bold uppercase tracking-widest text-[#888]">{label}</span>
       <select
         value={value}
         onChange={(event) => onChange(event.target.value)}
@@ -212,7 +212,7 @@ function Comparison({
                 )}
               </span>
               <span className="min-w-0 flex-1">
-                <span className="block text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">Build {index === 0 ? "A" : "B"}</span>
+                <span className="block text-3xs font-bold uppercase tracking-widest text-[#9a8866]">Build {index === 0 ? "A" : "B"}</span>
                 <span className="flex items-center gap-1.5">
                   <span className="truncate text-sm font-black uppercase tracking-widest text-[#e6d9b8] group-hover:underline">
                     {build.name || "Untitled build"}
@@ -247,7 +247,7 @@ function Comparison({
 
       <section aria-labelledby="compare-stats" className="flex flex-col gap-2">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 id="compare-stats" className="text-[11px] font-bold uppercase tracking-widest text-[#888]">
+          <h2 id="compare-stats" className="text-2xs font-bold uppercase tracking-widest text-[#888]">
             Stats <span className="text-[#555]">· Δ is B minus A · {modeLabel(gameMode)} prices</span>
           </h2>
           <PriceSourcesControl priceSources={priceSources} onChange={setPriceSources} />
@@ -257,14 +257,14 @@ function Comparison({
 
       <section aria-labelledby="compare-parts" className="flex flex-col gap-2">
         <div className="flex items-center justify-between gap-3">
-          <h2 id="compare-parts" className="text-[11px] font-bold uppercase tracking-widest text-[#888]">
+          <h2 id="compare-parts" className="text-2xs font-bold uppercase tracking-widest text-[#888]">
             Parts <span className="text-[#555]">· {changed.length} difference{changed.length === 1 ? "" : "s"}</span>
           </h2>
           <button
             type="button"
             aria-pressed={showSame}
             onClick={() => setShowSame(!showSame)}
-            className="flex h-9 items-center gap-2 px-1 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+            className="flex h-9 items-center gap-2 px-1 text-2xs font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
           >
             <span
               aria-hidden

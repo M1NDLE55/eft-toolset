@@ -50,7 +50,7 @@ function CardFrame({
       )}
     >
       <header className="flex min-h-8 items-center gap-2 px-3 pt-2">
-        <h2 id={titleId} className="flex min-w-0 items-baseline gap-2 text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">
+        <h2 id={titleId} className="flex min-w-0 items-baseline gap-2 text-3xs font-bold uppercase tracking-widest text-[#9a8866]">
           <span className="truncate">{ITEM_CARDS[id].title}</span>
           {count !== undefined && <span className="text-[#666]">{count}</span>}
         </h2>
@@ -205,7 +205,7 @@ function GridCard({
         </button>
       )}
       {resizing && (
-        <span className="pointer-events-none absolute -top-2.5 right-3 z-20 bg-[#c8b384] px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-black">
+        <span className="pointer-events-none absolute -top-2.5 right-3 z-20 bg-[#c8b384] px-1.5 py-0.5 text-3xs font-bold uppercase tracking-widest text-black">
           {resizing.span} of {resizing.columns} columns
         </span>
       )}

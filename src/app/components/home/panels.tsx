@@ -34,7 +34,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 
 const focus = "focus-visible:outline-2 focus-visible:outline-[#9a8866]";
-const eyebrow = "text-[10px] font-bold uppercase tracking-widest";
+const eyebrow = "text-3xs font-bold uppercase tracking-widest";
 const relative = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 const toolIcons = {
@@ -69,7 +69,7 @@ function ItemIcon({ src, size = 28 }: { src: string | null | undefined; size?: n
 function Percent({ value, title }: { value: number; title?: string }) {
   const up = value > 0;
   return (
-    <span title={title} className={cn("text-[10px] font-semibold tabular-nums", up ? "text-emerald-400" : "text-red-400")}>
+    <span title={title} className={cn("text-3xs font-semibold tabular-nums", up ? "text-emerald-400" : "text-red-400")}>
       {up ? "▲" : "▼"} {Math.abs(value).toFixed(1)}%
     </span>
   );
@@ -201,7 +201,7 @@ export function RecentItemsPanel({ limit = 5, className }: { limit?: number; cla
 
 function StatBar({ label, value, share }: { label: string; value: string; share: number }) {
   return (
-    <div className="flex items-center gap-2 text-[11px] text-[#888]">
+    <div className="flex items-center gap-2 text-2xs text-[#888]">
       <span className="w-10 shrink-0">{label}</span>
       <span className="h-[3px] flex-1 bg-[#1a1a1a]" aria-hidden>
         <span className="block h-full bg-[#9a8866]" style={{ width: `${Math.max(0, Math.min(1, share)) * 100}%` }} />
@@ -456,7 +456,7 @@ function GroupTile({ group, now }: { group: Group; now: number }) {
         )}
         {Math.abs(change) >= 0.5 && <Percent value={change} title="Since your last visit" />}
       </span>
-      <span className="text-[11px] text-[#777]">{plural(group.items.length, "item")}</span>
+      <span className="text-2xs text-[#777]">{plural(group.items.length, "item")}</span>
     </Link>
   );
 }
@@ -504,7 +504,7 @@ function MoverList({ title, hint, rows, mode }: { title: string; hint: string; r
                 <ItemIcon src={row.gridImageLink} />
                 <span className="flex min-w-0 flex-1 flex-col">
                   <span className="truncate text-sm text-[#bbb] group-hover:text-[#e6d9b8]">{row.shortName || row.name}</span>
-                  <span className="truncate text-[11px] tabular-nums text-[#777]">
+                  <span className="truncate text-2xs tabular-nums text-[#777]">
                     {mode === "slot" ? `${Rubles.format(row.price)} · ${row.vendor}` : Rubles.format(row.price)}
                   </span>
                 </span>

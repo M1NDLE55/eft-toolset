@@ -32,7 +32,7 @@ export function ItemImage({ item }: { item: QuestItem | undefined }) {
 
 function QuestLinks({ quests, graph }: { quests: { id: string; count: number }[]; graph: QuestGraph }) {
   return (
-    <span className="flex flex-wrap gap-x-2 gap-y-0.5 text-[11px] text-[#777]">
+    <span className="flex flex-wrap gap-x-2 gap-y-0.5 text-2xs text-[#777]">
       {quests.map((entry) => {
         const quest = graph.byId.get(entry.id);
         if (!quest) return null;
@@ -120,7 +120,7 @@ export function ItemsNeededView({
           <dl className="grid grid-cols-1 gap-2 sm:grid-cols-3">
             {shopping.money.map((row) => (
               <div key={row.id} className={`${panel} flex flex-col gap-1 p-3`}>
-                <dt className="text-[10px] font-bold uppercase tracking-widest text-[#777]">{CURRENCY_ITEMS[row.id]}</dt>
+                <dt className="text-3xs font-bold uppercase tracking-widest text-[#777]">{CURRENCY_ITEMS[row.id]}</dt>
                 <dd className="text-lg font-semibold tabular-nums text-[#e6d9b8]">{moneyLabel(row.id, row.count)}</dd>
                 <dd>
                   <QuestLinks quests={row.quests} graph={graph} />

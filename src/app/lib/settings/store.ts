@@ -1,5 +1,6 @@
 import { writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
 import { useStore } from "@/app/lib/storage/use-store";
+import { CONTENT_SCALE_STORE, type ContentScale } from "./content-scale";
 
 export const HOME_LAYOUTS = [
   {
@@ -45,4 +46,12 @@ export function useHomeLayout() {
 
 export function setHomeLayout(layout: HomeLayout) {
   writeStore(HOME_LAYOUT_STORE, layout);
+}
+
+export function useContentScale() {
+  return useStore(CONTENT_SCALE_STORE);
+}
+
+export function setContentScale(scale: ContentScale) {
+  writeStore(CONTENT_SCALE_STORE, scale);
 }

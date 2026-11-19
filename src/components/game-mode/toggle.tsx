@@ -29,7 +29,7 @@ export function GameModeToggle() {
               title={mode.title}
               onClick={() => setGameMode(mode.value)}
               className={cn(
-                "min-w-11 px-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[#9a8866]",
+                "min-w-11 px-2.5 text-2xs font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[#9a8866]",
                 active ? "bg-[#9a8866] text-black" : "text-[#888] hover:text-[#ccc]"
               )}
             >
@@ -39,7 +39,7 @@ export function GameModeToggle() {
         })}
       </div>
       {storageError && (
-        <span role="alert" title={storageError} className="text-[10px] text-red-300">
+        <span role="alert" title={storageError} className="text-3xs text-red-300">
           Not saved
         </span>
       )}

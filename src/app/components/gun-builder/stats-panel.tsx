@@ -12,7 +12,7 @@ function Delta({ value, better, digits = 0 }: { value: number; better: "up" | "d
   if (rounded === 0) return null;
   const good = better === "up" ? rounded > 0 : rounded < 0;
   return (
-    <span className={cn("text-[11px] font-bold tabular-nums", good ? "text-emerald-300" : "text-red-300")}>
+    <span className={cn("text-2xs font-bold tabular-nums", good ? "text-emerald-300" : "text-red-300")}>
       {rounded > 0 ? "+" : ""}
       {rounded.toFixed(digits)}
     </span>
@@ -36,7 +36,7 @@ function Stat({
 }) {
   return (
     <div className={cn("flex min-w-0 flex-col gap-1 bg-[#0c0c0c] px-3 py-2 sm:py-2.5", className)}>
-      <dt className="truncate text-[10px] font-bold uppercase tracking-widest text-[#888]">
+      <dt className="truncate text-3xs font-bold uppercase tracking-widest text-[#888]">
         {shortLabel ? (
           <>
             <span className="sm:hidden">{shortLabel}</span>
@@ -67,7 +67,7 @@ function SourceToggle({ label, active, onClick }: { label: string; active: boole
       aria-pressed={active}
       onClick={onClick}
       className={cn(
-        "h-9 px-3 text-[10px] font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e6d9b8]",
+        "h-9 px-3 text-3xs font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e6d9b8]",
         active ? "bg-[#9a8866] text-[#070707]" : "text-[#888] hover:text-[#ccc]"
       )}
     >
@@ -89,7 +89,7 @@ export function PriceSourcesControl({
 }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="text-[10px] font-bold uppercase tracking-widest text-[#666]">Prices</span>
+      <span className="text-3xs font-bold uppercase tracking-widest text-[#666]">Prices</span>
       <div role="group" aria-label="Price sources" className="flex border border-[#2a2a2a]">
         <SourceToggle
           label="Traders"
@@ -209,7 +209,7 @@ export function StatsPanel({
                     type="button"
                     onClick={() => onFillSlot(missing)}
                     title={`Choose a part for ${missing.label}`}
-                    className="flex min-w-0 items-center gap-1 px-2 text-[10px] font-bold uppercase tracking-widest text-[#c8b384] transition-colors hover:bg-[#1a1610] hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e6d9b8]"
+                    className="flex min-w-0 items-center gap-1 px-2 text-3xs font-bold uppercase tracking-widest text-[#c8b384] transition-colors hover:bg-[#1a1610] hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e6d9b8]"
                   >
                     <Plus className="h-3 w-3 shrink-0" />
                     <span className="truncate">{missing.slot.name}</span>
@@ -233,7 +233,7 @@ export function StatsPanel({
             disabled={Boolean(filling) || noSources}
             onClick={() => onFillCheapest(null)}
             title={noSources ? "Select a price source first" : "Fill every empty required slot with the cheapest compatible part"}
-            className="flex h-8 shrink-0 items-center justify-center gap-1.5 border border-[#9a8866] px-3 text-[10px] font-bold uppercase tracking-widest text-[#e6d9b8] transition-colors hover:bg-[#9a8866] hover:text-[#070707] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6d9b8] disabled:pointer-events-none disabled:opacity-40"
+            className="flex h-8 shrink-0 items-center justify-center gap-1.5 border border-[#9a8866] px-3 text-3xs font-bold uppercase tracking-widest text-[#e6d9b8] transition-colors hover:bg-[#9a8866] hover:text-[#070707] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6d9b8] disabled:pointer-events-none disabled:opacity-40"
           >
             {filling === "all" ? <LoaderCircle className="h-3.5 w-3.5 animate-spin" /> : <RussianRuble className="h-3.5 w-3.5" />}
             Fill all cheapest

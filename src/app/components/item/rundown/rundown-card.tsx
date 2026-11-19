@@ -10,7 +10,7 @@ import { FLEA_MARKET, LOOT_ONLY, bestBuy, bestSell, fleaBuyBasis, sellSourceLabe
 /** How many quests, upgrades or maps to list before "+N more". */
 export const SHOWN = 3;
 
-const label = "text-[10px] font-bold uppercase tracking-widest text-[#9a8866]";
+const label = "text-3xs font-bold uppercase tracking-widest text-[#9a8866]";
 
 export function RundownImage({ item }: { item: Pick<ComposedItem, "gridImageLink"> | null }) {
   return (
@@ -55,12 +55,12 @@ function Prices({ item }: { item: ComposedItem }) {
         note={
           <>
             {buy?.preset && (
-              <span className="truncate text-[11px] text-[#777]" title={buy.preset}>
+              <span className="truncate text-2xs text-[#777]" title={buy.preset}>
                 As the default preset
               </span>
             )}
             {buy?.taskUnlock && (
-              <span className="flex items-center gap-1 truncate text-[11px] text-amber-300/80">
+              <span className="flex items-center gap-1 truncate text-2xs text-amber-300/80">
                 <Lock aria-hidden className="h-3 w-3 shrink-0" />
                 After {buy.taskUnlock.name}
               </span>
@@ -79,7 +79,7 @@ function Count({ need }: { need: TaskNeed }) {
     <span className="tabular-nums text-[#e6d9b8]">
       ×{need.count.toLocaleString("en-US")}
       {need.foundInRaid > 0 && (
-        <span className="ml-1 text-[10px] font-semibold uppercase tracking-wider text-[#c8b384]">
+        <span className="ml-1 text-3xs font-semibold uppercase tracking-wider text-[#c8b384]">
           {need.foundInRaid === need.count ? "FIR" : `${need.foundInRaid} FIR`}
         </span>
       )}

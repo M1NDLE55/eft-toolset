@@ -6,7 +6,7 @@ export default function GlobalError({ reset }: { error: Error & { digest?: strin
   return (
     <html lang="en">
       <body className="flex min-h-dvh flex-col items-center justify-center gap-6 bg-background p-4 text-center">
-        <p className="bg-[#9a8866] px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.2em] text-black">System error</p>
+        <p className="bg-[#9a8866] px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.2em] text-black">System error</p>
         <h1 className="text-3xl font-black uppercase tracking-[0.3em] text-[#9a8866]">Something broke</h1>
         <button
           type="button"

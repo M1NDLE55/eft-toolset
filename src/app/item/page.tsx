@@ -60,7 +60,7 @@ export default async function Page() {
           <p className="text-sm text-[#999]">
             Live flea market and trader prices for every Escape from Tarkov item, in PVP and PVE. Search any item to see
             what it sells for, the best place to sell it after the flea fee, its value per slot, and every task, hideout
-            upgrade, barter and craft that needs it. Press <kbd className="border border-[#2a2a2a] px-1 text-[11px]">/</kbd>{" "}
+            upgrade, barter and craft that needs it. Press <kbd className="border border-[#2a2a2a] px-1 text-2xs">/</kbd>{" "}
             anywhere to search. Playing PVE? See the{" "}
             <Link href="/flea-market/pve" className="text-[#c8b384] underline underline-offset-2">
               PVE flea market prices

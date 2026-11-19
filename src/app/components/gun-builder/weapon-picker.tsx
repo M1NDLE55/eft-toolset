@@ -128,7 +128,7 @@ function WeaponPicker() {
         </div>
       )}
 
-      <p aria-live="polite" className="text-[10px] font-bold uppercase tracking-widest text-[#666]">
+      <p aria-live="polite" className="text-3xs font-bold uppercase tracking-widest text-[#666]">
         {loading ? "Loading weapons" : `${filtered.length} weapon${filtered.length === 1 ? "" : "s"}`}
       </p>
 

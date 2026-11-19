@@ -70,7 +70,7 @@ export function LevelAndFaction({
   return (
     <div className="flex flex-wrap items-end gap-4">
       <label className="flex flex-col gap-1">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-[#777]">Your level</span>
+        <span className="text-3xs font-bold uppercase tracking-widest text-[#777]">Your level</span>
         <input
           type="number"
           inputMode="numeric"
@@ -91,7 +91,7 @@ export function LevelAndFaction({
         />
       </label>
       <div className="flex flex-col gap-1">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-[#777]">Faction</span>
+        <span className="text-3xs font-bold uppercase tracking-widest text-[#777]">Faction</span>
         <FactionToggles gameMode={gameMode} progress={progress} disabled={disabled} onError={onError} />
       </div>
     </div>
@@ -130,7 +130,7 @@ export function ProgressSettings({
           ["Objectives done", hydrated ? String(progress.objectives.length) : "—"],
         ].map(([label, value]) => (
           <div key={label} className={`${panel} flex flex-col gap-0.5 p-3`}>
-            <dt className="text-[10px] font-bold uppercase tracking-widest text-[#777]">{label}</dt>
+            <dt className="text-3xs font-bold uppercase tracking-widest text-[#777]">{label}</dt>
             <dd className="text-lg font-semibold tabular-nums text-[#e6d9b8]">{value}</dd>
           </div>
         ))}

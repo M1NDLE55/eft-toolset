@@ -49,7 +49,7 @@ export default function ShoppingListPage() {
       <div className="flex w-full max-w-4xl flex-col gap-4" aria-busy="true">
         <Skeleton className="h-4 w-28" />
         <Skeleton className="h-8 w-64" />
-        <Skeleton className="h-[420px] w-full" />
+        <Skeleton className="h-105 w-full" />
       </div>
     );
   }
@@ -99,14 +99,14 @@ function ShoppingList({ build }: { build: GunBuild }) {
       <Link
         data-print-hide
         href={`/gun-builder/${build.id}`}
-        className="inline-flex h-6 w-fit items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
+        className="inline-flex h-6 w-fit items-center gap-1 text-2xs font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc]"
       >
         <ArrowLeft className="h-3.5 w-3.5" /> Back to build
       </Link>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div className="min-w-0">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[#9a8866]">Shopping list</p>
+          <p className="text-2xs font-bold uppercase tracking-widest text-[#9a8866]">Shopping list</p>
           <h1 className="truncate text-xl font-black uppercase tracking-widest text-[#e6d9b8] sm:text-2xl">
             {build.name || "Untitled build"}
           </h1>
@@ -130,7 +130,7 @@ function ShoppingList({ build }: { build: GunBuild }) {
           type="button"
           aria-pressed={includeWeapon}
           onClick={() => setIncludeWeapon(!includeWeapon)}
-          className="flex h-9 items-center gap-2 px-1 text-[11px] font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
+          className="flex h-9 items-center gap-2 px-1 text-2xs font-bold uppercase tracking-widest text-[#888] hover:text-[#ccc] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
         >
           <span
             aria-hidden
@@ -171,7 +171,7 @@ function ShoppingList({ build }: { build: GunBuild }) {
       <div className="border border-[#1a1a1a] bg-[#0c0c0c]">
         <table className="w-full border-collapse text-sm">
           <thead>
-            <tr className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
+            <tr className="text-3xs font-bold uppercase tracking-widest text-[#888]">
               <th scope="col" className="px-3 py-2 text-left font-bold">Part</th>
               <th scope="col" className="hidden w-12 px-2 py-2 text-right font-bold sm:table-cell">Qty</th>
               <th scope="col" className="hidden w-32 px-2 py-2 text-right font-bold sm:table-cell">Trader</th>
@@ -211,7 +211,7 @@ function ShoppingList({ build }: { build: GunBuild }) {
                             ) : (
                               <span className="text-sm text-[#888]">{row.name}</span>
                             )}
-                            <span className="flex flex-wrap gap-x-3 text-[11px] tabular-nums text-[#777] sm:hidden">
+                            <span className="flex flex-wrap gap-x-3 text-2xs tabular-nums text-[#777] sm:hidden">
                               {row.count > 1 && <span>×{row.count}</span>}
                               {row.withWeapon > 0 && <span>+{row.withWeapon} with weapon</span>}
                               <span className={cn(row.source === "trader" && "text-[#c8b384]")}>
@@ -221,12 +221,12 @@ function ShoppingList({ build }: { build: GunBuild }) {
                               <span className={cn(row.source === "flea" && "text-[#c8b384]")}>Flea {formatRub(row.fleaPriceRUB)}</span>
                             </span>
                             {row.isWeapon && (
-                              <span className="hidden text-[10px] font-bold uppercase tracking-widest text-[#9a8866] sm:block">
+                              <span className="hidden text-3xs font-bold uppercase tracking-widest text-[#9a8866] sm:block">
                                 {row.offer?.preset || (row.source === "flea" && pricing.preset) ? "Weapon · default preset" : "Weapon"}
                               </span>
                             )}
                             {row.withWeapon > 0 && (
-                              <span className="hidden text-[10px] font-bold uppercase tracking-widest text-[#9a8866] sm:block">
+                              <span className="hidden text-3xs font-bold uppercase tracking-widest text-[#9a8866] sm:block">
                                 {row.count > 0 ? `${row.withWeapon} comes with the weapon` : "Comes with the weapon"}
                               </span>
                             )}
@@ -242,7 +242,7 @@ function ShoppingList({ build }: { build: GunBuild }) {
                       >
                         {formatRub(row.traderPriceRUB)}
                         {row.traderName && (
-                          <span className="flex items-center justify-end gap-1 text-[10px] font-normal text-[#9a8866]" title={taskHint(row.traderTask)}>
+                          <span className="flex items-center justify-end gap-1 text-3xs font-normal text-[#9a8866]" title={taskHint(row.traderTask)}>
                             {traderLabel(row.traderName, row.traderLevel)}
                             {row.traderTask && <Lock aria-label={taskHint(row.traderTask)} className="h-2.5 w-2.5 shrink-0" />}
                           </span>
@@ -258,7 +258,7 @@ function ShoppingList({ build }: { build: GunBuild }) {
                       </td>
                       <td className="px-3 py-2 text-right tabular-nums">
                         <span className="block font-black text-[#e6d9b8]">{formatRub(row.subtotalRUB)}</span>
-                        <span className="block text-[10px] uppercase tracking-widest text-[#666]">
+                        <span className="block text-3xs uppercase tracking-widest text-[#666]">
                           {row.source ?? (row.count === 0 ? "with weapon" : noSources ? "no source" : "no price")}
                         </span>
                       </td>
@@ -268,10 +268,10 @@ function ShoppingList({ build }: { build: GunBuild }) {
           </tbody>
           <tfoot>
             <tr className="border-t border-[#2a2a2a] bg-[#0f0d0a]">
-              <th scope="row" colSpan={1} className="px-3 py-3 text-left text-[11px] font-bold uppercase tracking-widest text-[#aaa]">
+              <th scope="row" colSpan={1} className="px-3 py-3 text-left text-2xs font-bold uppercase tracking-widest text-[#aaa]">
                 Total · {list.itemCount} item{list.itemCount === 1 ? "" : "s"}
                 {list.unpricedCount > 0 && (
-                  <span className="block text-[10px] font-normal normal-case tracking-normal text-[#c8b384]">
+                  <span className="block text-3xs font-normal normal-case tracking-normal text-[#c8b384]">
                     {list.unpricedCount} without a price from the selected sources
                   </span>
                 )}
@@ -286,7 +286,7 @@ function ShoppingList({ build }: { build: GunBuild }) {
       </div>
       {ammo && (
         <p className="flex flex-wrap items-center gap-x-3 gap-y-1 border border-[#1a1a1a] bg-[#0c0c0c] px-3 py-2 text-sm">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-[#888]">Ammo</span>
+          <span className="text-3xs font-bold uppercase tracking-widest text-[#888]">Ammo</span>
           <ItemRundownLink item={ammo} prefetch={false} className="min-w-0 truncate font-semibold text-[#ddd] hover:text-[#e6d9b8] hover:underline">
             {ammo.name}
           </ItemRundownLink>

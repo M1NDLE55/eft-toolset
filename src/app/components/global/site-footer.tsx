@@ -32,12 +32,12 @@ const linkClass = "hover:text-[#ccc] focus-visible:outline-2 focus-visible:outli
 /** Site-wide footer: a quiet site map, so every page links to every tool, guide and map. */
 export function SiteFooter() {
   return (
-    <footer className="border-t border-[#1a1a1a] bg-[#070707] px-4 pt-8 pb-[max(1rem,env(safe-area-inset-bottom))]">
+    <footer className="unscaled border-t border-[#1a1a1a] bg-[#070707] px-4 pt-8 pb-[max(1rem,env(safe-area-inset-bottom))]">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
         <div className="grid grid-cols-2 gap-x-6 gap-y-6 md:grid-cols-[1fr_1fr_1.6fr_1fr]">
           {SECTIONS.map((section) => (
             <nav key={section.title} aria-label={section.title} className={section.className}>
-              <h2 className="mb-3 text-[10px] font-bold uppercase tracking-widest text-[#777]">{section.title}</h2>
+              <h2 className="mb-3 text-3xs font-bold uppercase tracking-widest text-[#777]">{section.title}</h2>
               <ul className={section.listClassName ?? LIST}>
                 {section.links.map((link) => (
                   <li key={link.href}>
@@ -50,7 +50,7 @@ export function SiteFooter() {
             </nav>
           ))}
         </div>
-        <div className="flex flex-col-reverse items-center gap-3 border-t border-[#141414] pt-4 text-[10px] uppercase tracking-widest text-[#666] sm:flex-row sm:justify-between">
+        <div className="flex flex-col-reverse items-center gap-3 border-t border-[#141414] pt-4 text-3xs uppercase tracking-widest text-[#666] sm:flex-row sm:justify-between">
           <div className="flex flex-col-reverse items-center gap-2 sm:flex-row sm:gap-5">
             <p>&copy; {new Date().getFullYear()} EFT Toolset</p>
             <p>

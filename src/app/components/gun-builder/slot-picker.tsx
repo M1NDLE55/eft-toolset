@@ -249,7 +249,7 @@ function PickerBody({
                   )
                 }
                 className={cn(
-                  "flex h-10 flex-1 items-center justify-center gap-1 px-2.5 text-[10px] font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#9a8866] sm:flex-none",
+                  "flex h-10 flex-1 items-center justify-center gap-1 px-2.5 text-3xs font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#9a8866] sm:flex-none",
                   active ? "bg-[#1a1712] text-[#e6d9b8]" : "text-[#888] hover:text-[#ccc]"
                 )}
               >
@@ -275,7 +275,7 @@ function PickerBody({
         </div>
       )}
 
-      <div className="flex items-center justify-between text-[10px] font-bold uppercase tracking-widest text-[#666]">
+      <div className="flex items-center justify-between text-3xs font-bold uppercase tracking-widest text-[#666]">
         <span aria-live="polite">
           {showSkeleton ? "Loading parts" : `${available} available${candidates.length > available ? ` · ${candidates.length - available} blocked` : ""}`}
         </span>
@@ -323,7 +323,7 @@ function PickerBody({
                   <span className="flex items-center gap-2">
                     <span className="truncate text-sm font-semibold text-[#ddd]">{item.name}</span>
                     {current && (
-                      <span className="shrink-0 border border-[#9a8866] px-1 text-[9px] font-bold uppercase tracking-widest text-[#e6d9b8]">
+                      <span className="shrink-0 border border-[#9a8866] px-1 text-4xs font-bold uppercase tracking-widest text-[#e6d9b8]">
                         Installed
                       </span>
                     )}
@@ -352,7 +352,7 @@ function PickerBody({
                   <span className="w-16 text-right text-[#888]">{formatWeight(item.weight)}</span>
                   <span className="flex w-24 flex-col items-end">
                     <span className="text-[#ccc]">{formatRub(price)}</span>
-                    <PriceSource shown={shown} className="flex max-w-24 text-[10px]" lockClassName="h-2.5 w-2.5" />
+                    <PriceSource shown={shown} className="flex max-w-24 text-3xs" lockClassName="h-2.5 w-2.5" />
                   </span>
                 </span>
                 {applying === item.id ? (

@@ -51,7 +51,7 @@ function ViewTabs({ active, onSelect }: { active: QuestView; onSelect: (view: Qu
           aria-pressed={view.id === active}
           onClick={() => onSelect(view.id)}
           className={cn(
-            "h-8 grow whitespace-nowrap px-3 text-[11px] font-bold uppercase tracking-widest transition-colors sm:grow-0",
+            "h-8 grow whitespace-nowrap px-3 text-2xs font-bold uppercase tracking-widest transition-colors sm:grow-0",
             view.id === active ? "bg-[#c8b384] text-black" : "text-[#888] hover:bg-[#111] hover:text-[#ccc]"
           )}
         >
@@ -244,7 +244,7 @@ export function QuestsPage({ initial, search }: { initial: QuestsInitial | null;
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <ViewTabs active={state.view} onSelect={(view) => change({ view })} />
-        <span className="text-[10px] font-bold uppercase tracking-widest text-[#777]">
+        <span className="text-3xs font-bold uppercase tracking-widest text-[#777]">
           {hydrated ? `${MODE_LABEL[gameMode]} progress` : " "}
           {hydrated && list && ` · ${progress.completed.length} done`}
         </span>

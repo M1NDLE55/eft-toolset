@@ -90,7 +90,7 @@ export default function SharedPlanPage() {
     return (
       <div className="flex justify-center px-4 py-10 sm:py-16">
         <div className="flex w-full max-w-lg flex-col gap-4 border border-[#2a2a2a] bg-[#090909] p-5">
-          <p className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.25em] text-[#c9b88d]">
+          <p className="flex items-center gap-2 text-3xs font-bold uppercase tracking-[0.25em] text-[#c9b88d]">
             <AlertTriangle className="h-4 w-4" aria-hidden />
             Shared plan
           </p>
@@ -117,13 +117,13 @@ export default function SharedPlanPage() {
       <div className="flex w-full max-w-4xl flex-col gap-4">
         <header className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div className="min-w-0">
-            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#9a8866]">Shared plan</p>
+            <p className="text-3xs font-bold uppercase tracking-[0.25em] text-[#9a8866]">Shared plan</p>
             {shared && config ? (
               <>
                 <h1 className="line-clamp-2 break-words text-2xl font-black uppercase tracking-widest text-[#ddd] sm:text-3xl">
                   {shared.name}
                 </h1>
-                <p className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-[10px] uppercase tracking-widest text-[#888]">
+                <p className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-3xs uppercase tracking-widest text-[#888]">
                   <span className="flex items-center gap-1.5">
                     <MapPin className="h-3 w-3" aria-hidden />
                     {config.name}

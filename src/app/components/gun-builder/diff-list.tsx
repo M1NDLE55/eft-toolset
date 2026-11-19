@@ -76,7 +76,7 @@ export function DiffList({
     <ul className="border border-[#1a1a1a] bg-[#0c0c0c]">
       <li
         aria-hidden
-        className="hidden grid-cols-[minmax(0,13rem)_minmax(0,1fr)_1.5rem_minmax(0,1fr)] gap-3 px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-[#888] sm:grid"
+        className="hidden grid-cols-[minmax(0,13rem)_minmax(0,1fr)_1.5rem_minmax(0,1fr)] gap-3 px-3 py-2 text-3xs font-bold uppercase tracking-widest text-[#888] sm:grid"
       >
         <span>Slot</span>
         <span className="truncate">{leftLabel}</span>
@@ -102,11 +102,11 @@ export function DiffList({
               </span>
               <span className="min-w-0" style={{ paddingLeft: Math.min(row.depth, 5) * 8 }}>
                 {row.context.length > 0 && (
-                  <span className="block truncate text-[9px] font-bold uppercase tracking-widest text-[#555]">
+                  <span className="block truncate text-4xs font-bold uppercase tracking-widest text-[#555]">
                     {row.context.join(" / ")}
                   </span>
                 )}
-                <span className={cn("block truncate text-[11px] font-bold uppercase tracking-widest", same ? "text-[#666]" : "text-[#aaa]")}>
+                <span className={cn("block truncate text-2xs font-bold uppercase tracking-widest", same ? "text-[#666]" : "text-[#aaa]")}>
                   {row.label}
                 </span>
               </span>

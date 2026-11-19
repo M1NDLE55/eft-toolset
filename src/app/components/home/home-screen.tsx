@@ -38,7 +38,7 @@ function RecentChips() {
   if (!hydrated || items.length === 0) return null;
   return (
     <ul aria-label="Recently viewed items" className="flex flex-wrap items-center justify-center gap-2">
-      <li className="text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">Recent</li>
+      <li className="text-3xs font-bold uppercase tracking-widest text-[#9a8866]">Recent</li>
       {items.slice(0, 6).map((item) => (
         <li key={item.name}>
           <Link
@@ -46,9 +46,9 @@ function RecentChips() {
             className="flex max-w-48 items-center gap-2 border border-[#1f1f1f] bg-[#0c0c0c] py-1 pl-1 pr-2.5 text-xs text-[#aaa] transition-colors hover:border-[#9a8866] hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:outline-[#9a8866]"
           >
             {item.gridImageLink ? (
-              <Image src={item.gridImageLink} alt="" width={22} height={22} className="h-[22px] w-[22px] shrink-0 object-contain" />
+              <Image src={item.gridImageLink} alt="" width={22} height={22} className="size-5.5 shrink-0 object-contain" />
             ) : (
-              <span className="h-[22px] w-[22px] shrink-0 bg-[#151515]" />
+              <span className="size-5.5 shrink-0 bg-[#151515]" />
             )}
             <span className="truncate">{item.name}</span>
           </Link>
@@ -75,7 +75,7 @@ function Dashboard() {
 function SearchFirst() {
   return (
     <div className="flex w-full max-w-3xl flex-col items-center gap-5 pt-8 sm:pt-12">
-      <Image src="/black-logo.svg" alt="" height={110} width={300} priority className="h-auto w-full max-w-[300px] invert" />
+      <Image src="/black-logo.svg" alt="" height={110} width={300} priority className="h-auto w-full max-w-75 invert" />
       <p className="max-w-xl text-center text-sm text-[#999]">
         Fast, free tools for Escape from Tarkov. Live tarkov.dev data for PVP and PVE, saved locally, shareable by link.
       </p>

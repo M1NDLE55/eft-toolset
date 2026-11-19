@@ -48,7 +48,7 @@ function HighlightTable({
             <tr key={row.normalizedName} className="hover:bg-[#100f0c]">
               <td className="py-1.5 pl-2 pr-1">
                 <ItemRundownLink item={row} className="flex min-w-0 items-center gap-2 text-[#ccc] hover:text-[#e6d9b8]">
-                  <span className="w-5 shrink-0 text-right text-[10px] tabular-nums text-[#555]">{index + 1}</span>
+                  <span className="w-5 shrink-0 text-right text-3xs tabular-nums text-[#555]">{index + 1}</span>
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-[#111]">
                     {row.gridImageLink && (
                       <Image src={row.gridImageLink} alt="" width={32} height={32} className="max-h-8 w-auto object-contain" />

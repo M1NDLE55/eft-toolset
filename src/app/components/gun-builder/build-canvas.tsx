@@ -215,7 +215,7 @@ function TreeCanvas({
         </button>
         <button
           type="button"
-          className="h-8 min-w-12 px-1 text-[10px] font-bold tabular-nums tracking-widest text-[#888] hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#9a8866]"
+          className="h-8 min-w-12 px-1 text-3xs font-bold tabular-nums tracking-widest text-[#888] hover:text-[#e6d9b8] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#9a8866]"
           onClick={() => zoomTo(1)}
           aria-label="Reset zoom to 100%"
         >
@@ -246,7 +246,7 @@ function TreeCanvas({
       >
         <div className="relative" style={{ width: flow.width * scale, height: flow.height * scale }}>
           <div
-            className="absolute left-0 top-0 origin-top-left"
+            className="unscaled absolute left-0 top-0 origin-top-left"
             style={{ width: flow.width, height: flow.height, transform: `scale(${scale})` }}
           >
             <svg className="pointer-events-none absolute inset-0" width={flow.width} height={flow.height} aria-hidden="true">

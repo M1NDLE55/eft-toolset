@@ -33,7 +33,7 @@ export function BuildPartsSection({
         </h2>
         <a
           href={build.shareHref}
-          className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-[#c8b384] underline-offset-2 hover:underline"
+          className="inline-flex items-center gap-1.5 text-2xs font-bold uppercase tracking-widest text-[#c8b384] underline-offset-2 hover:underline"
         >
           {linkLabel} <ExternalLink aria-hidden className="h-3 w-3" />
         </a>
@@ -43,7 +43,7 @@ export function BuildPartsSection({
           <col />
           <col className="w-28 sm:w-36" />
         </colgroup>
-        <thead className="text-left text-[10px] uppercase tracking-widest text-[#666]">
+        <thead className="text-left text-3xs uppercase tracking-widest text-[#666]">
           <tr>
             <th scope="col" className="px-3 py-1.5 font-bold">Slot and part</th>
             <th scope="col" className="px-3 py-1.5 text-right font-bold">Price</th>
@@ -53,7 +53,7 @@ export function BuildPartsSection({
           {build.parts.map((part, index) => (
             <tr key={`${part.slot}-${index}`}>
               <td className="break-words px-3 py-1.5">
-                <span className="block text-[10px] uppercase tracking-wider text-[#777]">{part.slot}</span>
+                <span className="block text-3xs uppercase tracking-wider text-[#777]">{part.slot}</span>
                 {part.slug ? (
                   <Link href={`/item/${part.slug}`} className="text-[#ccc] underline-offset-2 hover:text-[#e6d9b8] hover:underline">
                     {part.name}
@@ -66,7 +66,7 @@ export function BuildPartsSection({
                 <span className="block tabular-nums text-[#ddd]">
                   {part.withWeapon || part.priceRUB === null ? "—" : Rubles.format(part.priceRUB)}
                 </span>
-                <span className="block truncate text-[10px] text-[#777]">{sourceLabel(part)}</span>
+                <span className="block truncate text-3xs text-[#777]">{sourceLabel(part)}</span>
               </td>
             </tr>
           ))}

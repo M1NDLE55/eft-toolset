@@ -41,7 +41,7 @@ export function StatDeltaTable({
   return (
     <table className="w-full table-fixed border-collapse border border-[#1a1a1a] bg-[#0c0c0c] text-sm">
       <thead>
-        <tr className="text-[10px] font-bold uppercase tracking-widest text-[#888]">
+        <tr className="text-3xs font-bold uppercase tracking-widest text-[#888]">
           <th scope="col" className="w-[25%] px-2 py-2 text-left font-bold sm:w-[28%] sm:px-3">Stat</th>
           <th scope="col" className="truncate px-2 py-2 text-right font-bold tracking-wider sm:tracking-widest" title={leftLabel}>{leftLabel}</th>
           <th scope="col" className="truncate px-2 py-2 text-right font-bold tracking-wider sm:tracking-widest" title={rightLabel}>{rightLabel}</th>
@@ -51,7 +51,7 @@ export function StatDeltaTable({
       <tbody>
         {rows.map((row) => (
           <tr key={row.key} className="border-t border-[#161616]">
-            <th scope="row" className="truncate px-2 py-2 text-left text-[11px] font-bold uppercase tracking-wide text-[#aaa] sm:px-3 sm:tracking-widest">
+            <th scope="row" className="truncate px-2 py-2 text-left text-2xs font-bold uppercase tracking-wide text-[#aaa] sm:px-3 sm:tracking-widest">
               <span className="sm:hidden">{SHORT_LABELS[row.key]}</span>
               <span className="max-sm:hidden">{row.label}</span>
             </th>

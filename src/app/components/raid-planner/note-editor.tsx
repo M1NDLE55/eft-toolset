@@ -50,7 +50,7 @@ export function NoteEditor({ note, onChange, onDelete, onClose }: NoteEditorProp
       className={cn(overlayPanel, "flex w-full flex-col gap-2 bg-[#090909]/97 p-3 sm:w-72")}
     >
       <header className="-mr-2 -mt-2 flex items-center justify-between">
-        <h2 id={titleId} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#9a8866]">
+        <h2 id={titleId} className="flex items-center gap-2 text-3xs font-bold uppercase tracking-widest text-[#9a8866]">
           <span aria-hidden className="size-2.5" style={{ backgroundColor: activeColor }} />
           Note
         </h2>

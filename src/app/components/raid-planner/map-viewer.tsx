@@ -79,7 +79,7 @@ export function MapViewer({ mapKey, withGuide = false }: { mapKey: string; withG
               {config.name}
               <span className="sr-only"> interactive map</span>
             </h1>
-            <p className="truncate text-[10px] uppercase tracking-widest text-[#888]">
+            <p className="truncate text-3xs uppercase tracking-widest text-[#888]">
               {details?.raidDuration || details?.players
                 ? [details.raidDuration && `${details.raidDuration} min`, details.players && `${details.players} players`]
                     .filter(Boolean)
@@ -91,7 +91,7 @@ export function MapViewer({ mapKey, withGuide = false }: { mapKey: string; withG
             type="button"
             onClick={startPlan}
             className={cn(
-              "ml-1 flex h-10 shrink-0 items-center gap-1.5 border-l border-[#2a2a2a] px-3 text-[10px] font-bold uppercase tracking-widest text-[#9a8866] transition-colors hover:bg-[#1a1a1a] hover:text-[#c9b88d] sm:h-9",
+              "ml-1 flex h-10 shrink-0 items-center gap-1.5 border-l border-[#2a2a2a] px-3 text-3xs font-bold uppercase tracking-widest text-[#9a8866] transition-colors hover:bg-[#1a1a1a] hover:text-[#c9b88d] sm:h-9",
               focusRing
             )}
           >
