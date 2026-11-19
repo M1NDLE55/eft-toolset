@@ -20,7 +20,8 @@ interface ModeVariables {
 
 export const questListQuery: QueryDefinition<ModeVariables, QuestList> = {
   id: "quest-list",
-  version: 1,
+  // 2: quests in trader and progression order.
+  version: 2,
   staleTime: 30 * MINUTE,
   maxAge: 7 * DAY,
   persist: true,

@@ -80,7 +80,7 @@ export interface TraderChain {
   /**
    * The trader's quests by depth: a quest with no prerequisite from the same trader is in the
    * first column, and every other one column after its deepest same-trader prerequisite.
-   * Each column is ordered by level, then name.
+   * Each column keeps the list's play order.
    */
   columns: string[][];
   /** Each quest's column. */
@@ -119,7 +119,11 @@ export function traderChain(graph: QuestGraph, trader: string): TraderChain {
     }
   }
   // Only a cycle leaves a column empty; drop it so columns and depths agree.
-  const laidOut = Array.from(columns, (column) => (column ?? []).toSorted(byLevelThenName).map((quest) => quest.id)).filter(
+  // The list is in play order (see order.ts): keep it within a column.
+  const position = new Map(graph.quests.map((quest, index) => [quest.id, index]));
+  const laidOut = Array.from(columns, (column) =>
+    (column ?? []).toSorted((a, b) => position.get(a.id)! - position.get(b.id)!).map((quest) => quest.id)
+  ).filter(
     (column) => column.length > 0
   );
   return {
@@ -128,8 +132,4 @@ export function traderChain(graph: QuestGraph, trader: string): TraderChain {
     depth: new Map(laidOut.flatMap((column, index) => column.map((id) => [id, index] as const))),
     edges,
   };
-}
-
-export function byLevelThenName(a: QuestSummary, b: QuestSummary) {
-  return a.minPlayerLevel - b.minPlayerLevel || a.name.localeCompare(b.name);
 }

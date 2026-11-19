@@ -77,3 +77,50 @@ export function sameNameHints(graph: QuestGraph, maps: Readonly<Record<string, Q
   hintCache.set(graph, hints);
   return hints;
 }
+
+/**
+ * From this many maps (variants merged), a quest or objective works on nearly every raid: it says "Any map"
+ * rather than listing them. Ten maps make up the usual rotation, and quests either name a few or most of them.
+ */
+export const ANY_MAP_FROM = 8;
+
+/**
+ * The game's maps by raid planner page key (or their own key, without a page), so a variant is named after its
+ * base map even when a list carries only the variant.
+ */
+export const MAP_NAMES: Readonly<Record<string, string>> = {
+  customs: "Customs",
+  factory: "Factory",
+  woods: "Woods",
+  shoreline: "Shoreline",
+  interchange: "Interchange",
+  reserve: "Reserve",
+  "the-lab": "The Lab",
+  lighthouse: "Lighthouse",
+  "streets-of-tarkov": "Streets of Tarkov",
+  "ground-zero": "Ground Zero",
+  "the-labyrinth": "The Labyrinth",
+  terminal: "Terminal",
+  icebreaker: "Icebreaker",
+};
+
+/** A map's name, or for a variant (Night Factory) its base map's. */
+export function baseMapName(key: string, maps: Readonly<Record<string, QuestMap>>): string {
+  const map = maps[key];
+  const page = map?.page;
+  return (page && (maps[page]?.name || MAP_NAMES[page])) || map?.name || key;
+}
+export const ANY_MAP = "Any map";
+
+/**
+ * Map names for a quest or objective: variants (Night Factory, Ground Zero 21+, The Lab (Dark)) merge into the map
+ * whose page they share, as the Map filter groups them, and a list of most maps is just "Any map".
+ */
+export function mapLabels(keys: readonly string[], maps: Readonly<Record<string, QuestMap>>): string[] {
+  const names = new Map<string, string>();
+  for (const key of keys) {
+    const base = maps[key]?.page ?? key;
+    if (!names.has(base)) names.set(base, baseMapName(key, maps));
+  }
+  return names.size >= ANY_MAP_FROM ? [ANY_MAP] : Array.from(names.values());
+}

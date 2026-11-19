@@ -21,9 +21,25 @@ export interface QuestWikiImage {
 
 const WIKI_IMAGE_BASE = "https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images";
 
-/** Where the wiki serves the file. */
+/** Where the wiki serves the file at full size: only the enlarged view loads it. */
 export function wikiImageUrl(image: Pick<QuestWikiImage, "file" | "hashPath">): string {
   return `${WIKI_IMAGE_BASE}/${image.hashPath}/${encodeURIComponent(image.file)}`;
+}
+
+/** Widths the thumbnails' srcset offers. */
+export const WIKI_THUMB_WIDTHS = [400, 800, 1200] as const;
+
+/**
+ * The CDN's copy of the file scaled to `width` (never up: a smaller original comes back as it is). It takes no
+ * query string, so the path is all there is.
+ */
+export function wikiThumbUrl(image: Pick<QuestWikiImage, "file" | "hashPath">, width: number): string {
+  return `${wikiImageUrl(image)}/revision/latest/scale-to-width-down/${width}`;
+}
+
+/** The thumbnail's srcset, from WIKI_THUMB_WIDTHS. */
+export function wikiThumbSrcSet(image: Pick<QuestWikiImage, "file" | "hashPath">): string {
+  return WIKI_THUMB_WIDTHS.map((width) => `${wikiThumbUrl(image, width)} ${width}w`).join(", ");
 }
 
 export const UNKNOWN_UPLOADER = "EFT Wiki contributors";
@@ -44,6 +60,24 @@ export function imageCreditParts(image: Pick<QuestWikiImage, "file" | "uploader"
     { text: "Image: " },
     { text: image.file.replace(/_/g, " "), href: image.filePage },
     { text: ` by ${image.uploader ?? UNKNOWN_UPLOADER}, ${WIKI_NAME}, ` },
+    { text: WIKI_LICENCE.name, href: WIKI_LICENCE.url, license: true },
+  ];
+}
+
+/**
+ * One credit line for a group of images: "Images: <file> by <uploader>; <file> by <uploader>, Escape from Tarkov
+ * Wiki, CC BY-NC-SA", each file name linking its file page and the licence its terms.
+ */
+export function imagesCreditParts(images: readonly Pick<QuestWikiImage, "file" | "uploader" | "filePage">[]): CreditPart[] {
+  if (images.length === 1) return imageCreditParts(images[0]);
+  return [
+    { text: "Images: " },
+    ...images.flatMap((image, index): CreditPart[] => [
+      ...(index > 0 ? [{ text: "; " }] : []),
+      { text: image.file.replace(/_/g, " "), href: image.filePage },
+      { text: ` by ${image.uploader ?? UNKNOWN_UPLOADER}` },
+    ]),
+    { text: `, ${WIKI_NAME}, ` },
     { text: WIKI_LICENCE.name, href: WIKI_LICENCE.url, license: true },
   ];
 }

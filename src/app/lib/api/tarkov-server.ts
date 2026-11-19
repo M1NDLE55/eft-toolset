@@ -58,6 +58,7 @@ import type {
   MapSpawn,
   SpawnKind,
 } from "@/app/lib/types/raidPlanner";
+import { orderQuests, orderTraders } from "@/app/lib/quests/order";
 import { TARKOV_OPERATIONS, type TarkovOperation } from "./operations";
 import { regionalCache } from "./shared-cache";
 import { USER_AGENT } from "./user-agent";
@@ -1617,21 +1618,21 @@ export async function getQuestList(gameMode: GameMode): Promise<QuestList> {
   ]);
   return memo(`${gameMode}/quest-list`, [tasks, traderNames, items, mapNames], () => {
     const slugs = questSlugs(tasks.tasks);
-    const quests = tasks.tasks
-      .flatMap((task) =>
-        task.id ? [projectQuestSummary(task as RawTask & { id: string }, slugs.get(task.id) ?? null, tasks, traderNames, items, mapNames)] : []
-      )
-      .sort((a, b) => (a.trader ?? "").localeCompare(b.trader ?? "") || a.minPlayerLevel - b.minPlayerLevel || a.name.localeCompare(b.name));
+    const summaries = tasks.tasks.flatMap((task) =>
+      task.id ? [projectQuestSummary(task as RawTask & { id: string }, slugs.get(task.id) ?? null, tasks, traderNames, items, mapNames)] : []
+    );
+    const givers = new Set(summaries.map((quest) => quest.trader));
+    const traders = orderTraders(Array.from(new Set(traderNames.values())).filter((name) => givers.has(name)));
+    const quests = orderQuests(summaries, traders);
     const itemIds = new Set(
       quests.flatMap((quest) => [...quest.needs.flatMap((need) => need.items), ...quest.keys.flatMap((entry) => entry.keys)])
     );
     const mapKeys = new Set(quests.flatMap((quest) => [...quest.maps, ...quest.keys.flatMap((entry) => (entry.map ? [entry.map] : []))]));
-    const givers = new Set(quests.map((quest) => quest.trader));
     return {
       quests,
       items: Object.fromEntries(Array.from(itemIds, (id) => [id, questItem(items.byId.get(id)!, items.translations)])),
       maps: Object.fromEntries(Array.from(mapNames.values()).filter((map) => mapKeys.has(map.key)).map((map) => [map.key, map])),
-      traders: Array.from(new Set(traderNames.values())).filter((name) => givers.has(name)),
+      traders,
     };
   });
 }
