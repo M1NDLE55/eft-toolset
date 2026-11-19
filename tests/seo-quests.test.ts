@@ -192,7 +192,7 @@ describe("quest SEO copy", () => {
     ]);
     expect(faq[0].answer).toBe("Therapist gives Sanitary Standards - Part 1, from player level 12. First complete Shortage.");
     expect(faq[1].answer).toBe(
-      "Hand over 2× Gas analyzer (found in raid) and 1× any of Salewa first aid kit and IFAK individual first aid kit. Bring Dorm room 314 marked key."
+      "Hand over 2× Gas analyzer (found in raid) and 1× any of Salewa first aid kit and IFAK individual first aid kit. Bring the Dorm room 314 marked key."
     );
     expect(faq[2].answer).toBe("8,400 XP, 45,000 ₽, 2× Salewa first aid kit, +0.03 Therapist standing and unlocks IFAK individual first aid kit at Therapist LL2.");
     expect(faq[5].answer).toBe("Yes. Completing Other Branch fails Sanitary Standards - Part 1, so choose one branch.");

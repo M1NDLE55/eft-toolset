@@ -432,8 +432,8 @@ export function questFaq(detail: QuestDetail): FaqEntry[] {
   const keys = Array.from(new Set(quest.keys.flatMap((entry) => entry.keys))).map((id) => detail.items[id]?.name).filter(Boolean) as string[];
   if (quest.needs.length > 0 || keys.length > 0) {
     const parts: string[] = [];
-    if (quest.needs.length > 0) parts.push(`Hand over ${listed(quest.needs.map((need) => needText(detail, need)))}.`);
-    if (keys.length > 0) parts.push(`Bring ${listed(keys)}.`);
+    if (quest.needs.length > 0) parts.push(`${needVerb(detail)} ${listed(needPhrases(detail))}.`);
+    if (keys.length > 0) parts.push(`Bring the ${listed(keys)}.`);
     entries.push({ question: `What items do you need for ${name}?`, answer: parts.join(" ") });
   }
   const rewards = rewardPhrases(detail, detail.rewards);
