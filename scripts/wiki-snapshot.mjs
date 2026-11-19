@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { wikiPageUrl } from "../src/app/lib/wiki/wiki-url.ts";
 import { wikitextToPage } from "../src/app/lib/wiki/wikitext.ts";
+import { questImages } from "./wiki-images.mjs";
 
 export const SNAPSHOT_FORMAT = 1;
 
@@ -165,6 +166,10 @@ export function buildSnapshot(xml, source) {
   const kinds = {};
   // Item pages tarkov.dev ids point at, from both sets: the item page reads them by id.
   const itemIds = {};
+  // The images quest pages show, once each, for the credit pass.
+  const images = new Map();
+  let questPagesWithImages = 0;
+  let questImageCount = 0;
   const write = (set, directory) => {
     const slugCounts = new Map();
     for (const page of set) slugCounts.set(slug(page.title), (slugCounts.get(slug(page.title)) ?? 0) + 1);
@@ -187,6 +192,15 @@ export function buildSnapshot(xml, source) {
         infobox,
         sections,
       };
+      if (directory === "pages" && page.kind === "quest") {
+        const shown = questImages(page.wikitext, page.title);
+        if (shown.length > 0) {
+          record.images = shown;
+          questPagesWithImages += 1;
+          questImageCount += shown.length;
+          for (const image of shown) images.set(image.file, { file: image.file, hashPath: image.hashPath });
+        }
+      }
       const file = `${slugCounts.get(slug(page.title)) > 1 ? `${slug(page.title)}-${shortHash(page.title)}` : slug(page.title)}.json`;
       const json = `${JSON.stringify(record, null, 2)}\n`;
       files.set(`${directory}/${file}`, json);
@@ -221,9 +235,13 @@ export function buildSnapshot(xml, source) {
     itemPages: itemPages.length,
     itemIds: Object.keys(itemIds).length,
     itemPageBytes,
+    questPagesWithImages,
+    questImages: questImageCount,
+    imageFiles: images.size,
   };
   files.set("manifest.json", `${JSON.stringify(manifest, null, 2)}\n`);
-  return { files, manifest };
+  const imageList = [...images.values()].toSorted((a, b) => (a.file < b.file ? -1 : a.file > b.file ? 1 : 0));
+  return { files, manifest, images: imageList };
 }
 
 /** JSON with one array entry or object member per line, so a new dump diffs line by line. */
