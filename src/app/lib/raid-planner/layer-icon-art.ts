@@ -327,5 +327,5 @@ export const BADGE_PATHS: Record<BadgeShape, string> = {
   hexagon: "M16 1.5l12.5 7.25v14.5L16 30.5 3.5 23.25V8.75z",
   shield: "M16 1.5l12 4.5v9c0 7.5-5.2 13-12 15.5C9.2 28 4 22.5 4 15V6z",
   triangle: "M16 2l15 27H1z",
-  pill: "M9 6h14a10 10 0 0 1 0 20H9a10 10 0 0 1 0-20z",
+  pill: "M10 7h12a9 9 0 0 1 0 18H10a9 9 0 0 1 0-18z",
 };

@@ -155,7 +155,10 @@ describe("layer markers", () => {
 
 describe("crowded badges", () => {
   let container: HTMLDivElement | null = null;
-  afterEach(() => container?.remove());
+  afterEach(() => {
+    container?.remove();
+    vi.unstubAllGlobals();
+  });
 
   it("shrinks a badge that would cover one already placed, and lets apart ones keep their glyph", async () => {
     vi.stubGlobal("requestAnimationFrame", (callback: FrameRequestCallback) => setTimeout(() => callback(0), 0));
@@ -178,5 +181,44 @@ describe("crowded badges", () => {
     expect(badges[0].getAttribute("aria-label")).toBe("Safe");
     expect(container.querySelector<HTMLElement>(".leaflet-marker-pane")!.style.getPropertyValue("--rp-icon-size")).toBe("18px");
     map.remove();
+  });
+
+  it("lets the same layer keep its glyphs whatever order layers were shown in", async () => {
+    vi.stubGlobal("requestAnimationFrame", (callback: FrameRequestCallback) => setTimeout(() => callback(0), 0));
+    container = document.createElement("div");
+    document.body.append(container);
+    const map = L.map(container, { crs: getMapCRS(customs), minZoom: customs.minZoom, zoomAnimation: false }).setView([0, 0], customs.minZoom);
+    const details = {
+      ...everyLayerDetails(),
+      locks: [{ ...everyLayerDetails().locks[0], position: at(0, 0) }],
+      lootContainers: [{ typeId: "safe", typeName: "Safe", position: at(0.1, 0) }],
+    };
+    const settle = () => new Promise((resolve) => setTimeout(resolve, 10));
+    const compactLabels = () =>
+      Array.from(container!.querySelectorAll(".rp-icon--compact"), (badge) => badge.getAttribute("aria-label"));
+
+    const loot = buildLayer("loot:safe", { config: customs, details })!.group.addTo(map);
+    const locks = buildLayer("locks", { config: customs, details })!.group.addTo(map);
+    await settle();
+    expect(compactLabels()).toEqual(["Safe"]);
+
+    // Showing the lock layer again puts it last in the map's layer order, but it still wins the spot.
+    locks.remove();
+    locks.addTo(map);
+    await settle();
+    expect(compactLabels()).toEqual(["Safe"]);
+    loot.remove();
+    map.remove();
+  });
+
+  it("keeps badges under place names, exit pills and plan markers", () => {
+    const [marker] = buildLayer("loot:safe", { config: customs, details: everyLayerDetails() })!.group.getLayers() as L.Marker[];
+    const [pill] = buildLayer("extracts:pmc", { config: customs, details: everyLayerDetails() })!.group
+      .getLayers()
+      .filter((layer) => layer instanceof L.Marker) as L.Marker[];
+    expect(marker.options.zIndexOffset).toBeLessThan(-1000);
+    expect(pill.options.zIndexOffset ?? 0).toBe(0);
+    expect(marker.options.riseOnHover).toBe(true);
+    expect(marker.options.zIndexOffset! + marker.options.riseOffset!).toBeGreaterThan(0);
   });
 });

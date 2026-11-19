@@ -10,7 +10,7 @@ import { gameToLatLng } from "./coords";
 import { itemHref } from "@/app/lib/item-links";
 import { makeLayerAccessible } from "./leaflet-accessibility";
 import { SPAWN_AREA_PADDING_METERS, spawnAreas, type SpawnAreaPoint } from "./spawn-areas";
-import type { IconId } from "./layer-icon-art";
+import { ICON_IDS, type IconId } from "./layer-icon-art";
 import {
   COLORS,
   ensureLayerIconSprite,
@@ -226,23 +226,39 @@ function badgeIcon(id: IconId) {
       className: "rp-icon-wrap",
       html: `<span class="rp-icon" style="--icon:${iconColor(id)}">${layerIconMarkup(id)}</span>`,
       iconSize: [0, 0],
-      tooltipAnchor: [0, -6],
-      popupAnchor: [0, -8],
+      // Clear of a full-size badge scaled up on hover.
+      tooltipAnchor: [0, -10],
+      popupAnchor: [0, -18],
     });
     badgeIcons.set(id, icon);
   }
   return icon;
 }
 
-/** A layer of icon badges; addBadge places one with its tooltip and floor dimming. */
-function iconLayer() {
+/**
+ * Badges sit under place names, exit pills and plan markers, so they never hide
+ * a name or block a waypoint; a hovered or focused badge rises above them all.
+ */
+const BADGE_Z_OFFSET = -5000;
+const BADGE_RISE_OFFSET = 10000;
+
+/**
+ * A layer of icon badges; addBadge places one with its tooltip and floor dimming.
+ * Where badges crowd, layers earlier in ICON_IDS keep their glyph, whatever order they were shown in.
+ */
+function iconLayer(priority: IconId) {
   const group = L.layerGroup();
   const dimmables: Dimmable[] = [];
   const markers: L.Marker[] = [];
-  const relayout = trackIconOverlaps(group, markers);
+  const relayout = trackIconOverlaps(group, markers, ICON_IDS.indexOf(priority));
 
   function addBadge(point: PointSpec, icon: IconId) {
-    const marker = L.marker(gameToLatLng(point.position), { icon: badgeIcon(icon), riseOnHover: true });
+    const marker = L.marker(gameToLatLng(point.position), {
+      icon: badgeIcon(icon),
+      zIndexOffset: BADGE_Z_OFFSET,
+      riseOnHover: true,
+      riseOffset: BADGE_RISE_OFFSET,
+    });
     bindTooltip(marker, point.tooltip);
     marker.addTo(group);
     markers.push(marker);
@@ -261,7 +277,7 @@ function iconLayer() {
 }
 
 function buildIcons(points: PointSpec[], icon: IconId): LayerEntry {
-  const { group, dimmables, addBadge } = iconLayer();
+  const { group, dimmables, addBadge } = iconLayer(icon);
   for (const point of points) addBadge(point, icon);
   return { group, dimmables };
 }
@@ -273,7 +289,8 @@ const ICON_MAX_PX = 28;
 const ICON_GROWTH_ZOOMS = 3;
 
 interface IconOverlaps {
-  layers: Set<L.Marker[]>;
+  /** Each shown layer's badges, with its priority (lower places first). */
+  layers: Map<L.Marker[], number>;
   frame: number;
 }
 
@@ -282,7 +299,7 @@ const iconOverlaps = new WeakMap<L.Map, IconOverlaps>();
 function overlapsFor(map: L.Map): IconOverlaps {
   let state = iconOverlaps.get(map);
   if (!state) {
-    state = { layers: new Set(), frame: 0 };
+    state = { layers: new Map(), frame: 0 };
     iconOverlaps.set(map, state);
   }
   return state;
@@ -303,7 +320,8 @@ function layoutIcons(map: L.Map) {
   // Badges on the shown floor claim their spot before dimmed ones from other floors.
   const onFloor: L.Marker[] = [];
   const offFloor: L.Marker[] = [];
-  for (const markers of state.layers) {
+  const ranked = Array.from(state.layers).sort(([, a], [, b]) => a - b);
+  for (const [markers] of ranked) {
     for (const marker of markers) {
       (marker.getElement()?.classList.contains("rp-off-level") ? offFloor : onFloor).push(marker);
     }
@@ -334,7 +352,7 @@ function layoutIcons(map: L.Map) {
 }
 
 /** Lays the map's badges out again when this group is shown, hidden or zoomed; returns the scheduler. */
-function trackIconOverlaps(group: L.LayerGroup, markers: L.Marker[]) {
+function trackIconOverlaps(group: L.LayerGroup, markers: L.Marker[], priority: number) {
   let attached: L.Map | null = null;
   const schedule = () => {
     const map = attached;
@@ -346,7 +364,7 @@ function trackIconOverlaps(group: L.LayerGroup, markers: L.Marker[]) {
     ensureLayerIconSprite();
     attached = (group as unknown as { _map: L.Map | null })._map;
     if (!attached) return;
-    overlapsFor(attached).layers.add(markers);
+    overlapsFor(attached).layers.set(markers, priority);
     attached.on("zoomend", schedule);
     schedule();
   });
@@ -445,11 +463,9 @@ function buildExits(exits: ExitSpec[], color: string): LayerEntry {
     }
 
     // Hovering the pill fades it (see globals.css) and shows the zone under it.
-    // Kept above icon badges, so a crowd of loot never covers an exit's name.
     const marker = L.marker(gameToLatLng(exit.position), {
       icon: exitIcon(exit.name, color),
       riseOnHover: true,
-      zIndexOffset: 1000,
     });
     marker.on("mouseover", () => setHovered(true));
     marker.on("mouseout", () => setHovered(false));
@@ -650,7 +666,7 @@ const LOCK_TYPE_LABELS: Record<string, string> = {
 type DetailContext = LayerBuildContext & { details: MapDetails };
 
 function buildLocks(context: DetailContext): LayerEntry {
-  const { group, dimmables, addBadge } = iconLayer();
+  const { group, dimmables, addBadge } = iconLayer("lock");
 
   for (const lock of context.details.locks) {
     const title = LOCK_TYPE_LABELS[lock.lockType] ?? "Lock";
@@ -686,7 +702,7 @@ function buildLocks(context: DetailContext): LayerEntry {
 
 /** Each hazard is a badge, so it is easy to spot; zones are also outlined where known. */
 function buildHazards(context: DetailContext): LayerEntry {
-  const { group, dimmables, addBadge } = iconLayer();
+  const { group, dimmables, addBadge } = iconLayer("hazard");
   const zoneStyle = { opacity: 0.7, fillOpacity: 0.12 };
 
   for (const hazard of context.details.hazards) {
