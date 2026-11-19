@@ -7,7 +7,7 @@ const nextConfig = {
   outputFileTracingIncludes: {
     "/api/mcp": ["./data/wiki/**/*"],
     "/item/*": ["./data/wiki/index.json", "./data/wiki/item-ids.json", "./data/wiki/pages/**/*", "./data/wiki/items/**/*"],
-    "/quests/*": ["./data/wiki/index.json", "./data/wiki/pages/**/*"],
+    "/quests/*": ["./data/wiki/index.json", "./data/wiki/image-credits.json", "./data/wiki/pages/**/*"],
   },
   async headers() {
     return [
