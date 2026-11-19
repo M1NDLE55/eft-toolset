@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { ComposedItem } from "@/app/lib/cache/types";
 import type { MapDetails } from "@/app/lib/types/raidPlanner";
-import { itemLabel, itemPageDescription, itemPageTitle } from "@/app/lib/seo/item";
+import { itemLabel, itemPageDescription, itemPageTitle, itemSummary } from "@/app/lib/seo/item";
 import { buildMapGuide, mapDescription, mapFaq, mapIntro } from "@/app/lib/seo/map";
 import { formatRoubles, plural } from "@/app/lib/seo/format";
 
@@ -52,6 +52,88 @@ describe("item SEO copy", () => {
   it("describes trader-only items without mentioning the flea market", () => {
     const banned = item({ fleaMarketFee: null, fleaBanned: true, sellFor: [{ vendor: { name: "Therapist" }, priceRUB: 9_000 }] });
     expect(itemPageDescription(banned)).toMatch(/^Graphics card sells for 9,000 ₽ to Therapist in Tarkov\./);
+  });
+});
+
+describe("item page text", () => {
+  const gas = item({
+    name: "Gas analyzer",
+    shortName: "GasAn",
+    width: 1,
+    height: 2,
+    sellFor: [
+      { vendor: { name: "Therapist" }, priceRUB: 11_065 },
+      { vendor: { name: "Flea Market" }, priceRUB: 51_423 },
+    ],
+    buyFor: [
+      { vendor: { name: "Flea Market" }, priceRUB: 30_412 },
+      { vendor: { name: "Therapist" }, priceRUB: 41_000, minTraderLevel: 2, taskUnlock: { id: "t", name: "Shortage", trader: "Therapist", minPlayerLevel: 1 } },
+    ],
+    fleaMinLevel: 20,
+    info: { description: null, weight: 0.4, basePrice: 15_000, avg24hPrice: null, low24hPrice: null, high24hPrice: null, lastLowPrice: null, lastOfferCount: null, stackMaxSize: 1, categories: ["Electronics", "Barter item"] },
+    hideoutRequirements: [{ station: { name: "Medstation" }, level: 2, count: 2, foundInRaid: false }],
+    craftsUsing: [{ station: { name: "Workbench" }, level: 1, taskUnlock: null, requiredItems: [], rewardItems: [] }],
+  });
+  const quests = {
+    needed: [
+      { name: "Sanitary Standards", count: 3, foundInRaid: 2 },
+      { name: "Sanitary Standards - Part 2", count: 2, foundInRaid: 2 },
+      { name: "Health Care Privacy", count: 0, foundInRaid: 0 },
+    ],
+    keys: [],
+  };
+
+  it("names the quests that need it in the description when there's room, else counts them", () => {
+    expect(itemPageDescription(item({ ...gas, name: "Gas" }), { needed: quests.needed.slice(0, 1), keys: [] })).toBe(
+      "Gas sells for 31,423 ₽ on the Tarkov flea market after fees. Therapist pays 11,065 ₽. Needed for Sanitary Standards (found in raid) and 1 hideout upgrade."
+    );
+    const description = itemPageDescription(gas, quests);
+    expect(description).toBe(
+      "Gas analyzer sells for 31,423 ₽ on the Tarkov flea market after fees. Therapist pays 11,065 ₽. Needed for 2 quests (found in raid) and 1 hideout upgrade."
+    );
+  });
+
+  it("describes an item with no price by what it is, who sells it and its size, not a stock line", () => {
+    const sealed = item({
+      name: "Sealed weapon case",
+      shortName: null,
+      fleaMarketFee: null,
+      fleaBanned: true,
+      buyFor: [],
+      sellFor: [],
+      width: 5,
+      height: 2,
+      info: { ...gas.info!, categories: ["Random Loot Container"] },
+    });
+    expect(itemPageDescription(sealed)).toBe(
+      "Sealed weapon case is a Tarkov random loot container item. No trader sells it and it can't be traded on the flea market. Takes 5×2 slots."
+    );
+  });
+
+  it("writes a brief: what it is, where to get it, what it sells for and what needs it", () => {
+    expect(itemSummary(gas, quests)).toEqual([
+      "In Escape from Tarkov, Gas analyzer is in the Electronics category. It takes 1×2 slots and weighs 0.4 kg.",
+      "Therapist sells it at loyalty level 2 for 41,000 ₽, once you complete Shortage. On the flea market it costs about 30,000 ₽, from player level 20.",
+      "It sells for about 31,000 ₽ on the flea market after the fee, about 16,000 ₽ per slot, or 11,000 ₽ to Therapist.",
+      "2 quests need 5 of it (4 found in raid): Sanitary Standards and Sanitary Standards - Part 2. 1 more quest accepts it among other items. Hideout upgrades need 2 for Medstation level 2. It goes into 1 craft.",
+    ]);
+  });
+
+  it("says when a key opens locks and which quests need it, and when nothing uses an item", () => {
+    const key = item({
+      name: "Dorm room 314 marked key",
+      info: { ...gas.info!, categories: ["Mechanical Key"] },
+      key: { maps: [{ key: "customs", name: "Customs", locks: 1 }], opens: null },
+    });
+    const brief = itemSummary(key, { needed: [], keys: [{ name: "Chemical - Part 1" }] });
+    expect(brief[0]).toBe("In Escape from Tarkov, Dorm room 314 marked key is in the Mechanical Key category. It takes 2×1 slots and weighs 0.4 kg. It opens 1 lock on Customs.");
+    expect(brief.at(-1)).toBe("As a key, it's needed for Chemical - Part 1.");
+    expect(itemSummary(item(), { needed: [], keys: [] }).at(-1)).toBe("No quest, hideout upgrade, barter or craft uses it.");
+  });
+
+  it("sizes a weapon by its default build, which its flea price is for", () => {
+    const rifle = item({ name: "Colt M4A1", weapon: { defaultWidth: 5, defaultHeight: 2 }, info: { ...gas.info!, categories: ["Assault rifle"] } });
+    expect(itemSummary(rifle)[0]).toBe("In Escape from Tarkov, Colt M4A1 is in the Assault rifle category. Its default build takes 5×2 slots. Its flea market price is for that default build.");
   });
 });
 

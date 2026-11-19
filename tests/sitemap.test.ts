@@ -13,7 +13,15 @@ const LISTS = {
 vi.mock("@/app/lib/api/tarkov-server", () => ({
   tryAcquireOperationSlot: () => true,
   releaseOperationSlot: () => undefined,
-  listItemSlugs: async () => ["graphics-card", "factory-emergency-exit-key"],
+  getItemPageIndex: async (gameMode: "regular" | "pve") => ({
+    publishedAt: gameMode === "pve" ? "2026-11-19T08:30:00.000Z" : "2026-11-19T08:20:22.000Z",
+    pages: new Map([
+      ["graphics-card", { indexing: { kind: "index" }, updated: "2026-11-19T07:08:14.000Z" }],
+      ["factory-emergency-exit-key", { indexing: { kind: "index" }, updated: null }],
+      ["colt-m4a1-556x45-assault-rifle-default", { indexing: { kind: "canonical", slug: "colt-m4a1-556x45-assault-rifle", reason: "default-preset" }, updated: null }],
+      ["9x18mm-pm-ppe-gzh-ammo-pack-50-pcs", { indexing: { kind: "noindex", reason: "ammo-pack" }, updated: null }],
+    ]),
+  }),
   getAllAmmo: async () => [],
   getQuestList: async (gameMode: "regular" | "pve") => ({ quests: LISTS[gameMode] }),
 }));
@@ -78,9 +86,21 @@ describe("sitemap", () => {
       expect(urls).toContain(path);
     }
     expect(urls).not.toContain("/quests/zone-pve-zone");
+    // Near-duplicates and pages kept out of search aren't listed.
+    expect(urls).not.toContain("/item/colt-m4a1-556x45-assault-rifle-default");
+    expect(urls).not.toContain("/item/9x18mm-pm-ppe-gzh-ammo-pack-50-pcs");
     const quests = entries.filter((entry) => entry.url.includes("/quests/"));
     expect(quests).toHaveLength(5);
     for (const entry of quests) expect(String(entry.lastModified)).toMatch(/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$/);
+    const at = (path: string) => entries.find((entry) => entry.url.endsWith(path))?.lastModified;
+    expect(at("/item/graphics-card")).toBe("2026-11-19T07:08:14.000Z");
+    // Without the item's own date, the items data's.
+    expect(at("/item/factory-emergency-exit-key")).toBe("2026-11-19T08:20:22.000Z");
+    expect(at("/ammo/556x45mm")).toBe("2026-11-19T08:20:22.000Z");
+    expect(at("/flea-market/pve")).toBe("2026-11-19T08:30:00.000Z");
+    expect(at("/quests")).toBe(quests.map((entry) => String(entry.lastModified)).toSorted().at(-1));
+    // Pages that only change with the site's code get no date rather than a made-up one.
+    expect(at("/credits")).toBeUndefined();
     // Rebuilt a second later, the dates don't move.
     const again = await sitemap();
     expect(again.filter((entry) => entry.url.includes("/quests/")).map((entry) => entry.lastModified)).toEqual(quests.map((entry) => entry.lastModified));
