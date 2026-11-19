@@ -1,3 +1,4 @@
+import { itemIndexing, type IndexableItem, type ItemIndexing } from "@/app/lib/seo/item-index";
 import type { GameMode } from "@/components/game-mode/context";
 import type {
   CachedBarter,
@@ -218,6 +219,8 @@ interface RawItem {
   types?: string[] | null;
   categories?: string[] | null;
   handbookCategories?: string[] | null;
+  /** When tarkov.dev last updated the item's data (its prices, mostly), as an ISO time. */
+  updated?: string | null;
   buyFromTrader?: RawTraderOffer[] | null;
   sellToTrader?: RawTraderOffer[] | null;
   conflictingItems?: string[] | null;
@@ -3572,9 +3575,62 @@ export function clearTarkovResourceCache() {
 
 export async function listItemSlugs(gameMode: GameMode = "regular") {
   const context = await loadItems(gameMode);
-  return memo(`${gameMode}/slugs`, [context], () =>
-    Array.from(context.bySlug.keys()).filter((slug) => /^[a-z0-9][a-z0-9-]*$/.test(slug))
-  );
+  return memo(`${gameMode}/slugs`, [context], () => listedSlugs(context));
+}
+
+function listedSlugs(context: ItemsContext) {
+  return Array.from(context.bySlug.keys()).filter((slug) => /^[a-z0-9][a-z0-9-]*$/.test(slug));
+}
+
+export interface ItemPageIndex {
+  /** Every item page: its indexing and when tarkov.dev last updated its data (null when unknown). */
+  pages: Map<string, { indexing: ItemIndexing; updated: string | null }>;
+  /** When tarkov.dev last published the items data, as an ISO time; null when unknown. */
+  publishedAt: string | null;
+}
+
+/** Each item page's indexing (see itemIndexing), for the sitemap and the item page's metadata. */
+export async function getItemPageIndex(gameMode: GameMode = "regular"): Promise<ItemPageIndex> {
+  const context = await loadItems(gameMode);
+  const pages = memo(`${gameMode}/item-page-index`, [context], () => {
+    const slugs = new Set(listedSlugs(context));
+    const items = context.items.flatMap((item): IndexableItem[] =>
+      item.id && item.normalizedName && slugs.has(item.normalizedName)
+        ? [
+            {
+              id: item.id,
+              slug: item.normalizedName,
+              name: translate(item.name, context.translations),
+              types: item.types ?? [],
+              baseItemId: item.properties?.baseItem ?? null,
+              tradeable: !(item.types ?? []).includes("noFlea"),
+              basePrice: finiteNumber(item.basePrice),
+            },
+          ]
+        : []
+    );
+    const indexing = itemIndexing(items);
+    return new Map(
+      items.map((item) => {
+        const updated = context.byId.get(item.id)?.updated;
+        return [item.slug, { indexing: indexing.get(item.slug)!, updated: isoTime(updated) }] as const;
+      })
+    );
+  });
+  return { pages, publishedAt: isoTime(resourceCache.get(`${gameMode}/items`)?.lastModified) };
+}
+
+/** When tarkov.dev last published the mode's items data, as an ISO time; null when unknown. Loads no translations or index. */
+export async function itemsPublishedAt(gameMode: GameMode) {
+  await loadResource(gameMode, "items");
+  return isoTime(resourceCache.get(`${gameMode}/items`)?.lastModified);
+}
+
+/** An ISO time from tarkov.dev's ISO times or an HTTP date; null for anything else. */
+function isoTime(value: string | null | undefined) {
+  if (!value) return null;
+  const time = Date.parse(value);
+  return Number.isFinite(time) ? new Date(time).toISOString() : null;
 }
 
 export async function warmTarkovCache(gameModes: GameMode[] = ["regular", "pve"]) {

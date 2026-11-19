@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { questName, requirementLabel } from "@/app/lib/quests/display";
 import type { QuestDetail, QuestSummary } from "@/app/lib/quests/types";
-import { questDescription, questFaq, questHubFaq, questTitle } from "@/app/lib/seo/quests";
+import { questDescription, questFaq, questHubFaq, questSummary, questTitle, roughly } from "@/app/lib/seo/quests";
 
 const ROUBLES = "5449016a4bdc2d6f028b456f";
 
@@ -72,18 +72,155 @@ const detail: QuestDetail = {
 };
 
 describe("quest SEO copy", () => {
-  it("titles the page with the quest name and what the page covers", () => {
-    expect(questTitle(detail)).toBe("Sanitary Standards - Part 1 Quest: Objectives, Items & Rewards");
-    expect(questTitle({ quest: { ...summary, name: "Textile - Part 1", faction: "USEC" } })).toBe("Textile - Part 1 (USEC) Quest: Objectives, Items & Rewards");
+  it("titles the page with the quest name, Tarkov, and as much of what it covers as fits in 60 characters", () => {
+    expect(questTitle(detail)).toBe("Sanitary Standards - Part 1 – Tarkov Quest Guide & Rewards");
+    const titled = (name: string, overrides: Partial<QuestSummary> = {}) => questTitle({ quest: { ...summary, name, ...overrides } });
+    expect(titled("Debut", { keys: [], needs: [] })).toBe("Debut – Tarkov Quest Guide: Objectives & Rewards");
+    expect(titled("Shortage", { keys: [] })).toBe("Shortage – Tarkov Quest Guide: Objectives, Items & Rewards");
+    expect(titled("Delivery From the Past")).toBe("Delivery From the Past – Tarkov Quest Guide: Keys & Rewards");
+    expect(titled("Textile - Part 1", { faction: "USEC", keys: [] })).toBe("Textile - Part 1 (USEC) – Tarkov Quest Guide & Rewards");
+    expect(titled("The Survivalist Path - Combat Medic")).toBe("The Survivalist Path - Combat Medic – Tarkov Quest Guide");
+    // Too long for any tail: still says what it is.
+    expect(titled("The Survivalist Path - Unprotected but Dangerous")).toBe("The Survivalist Path - Unprotected but Dangerous – Tarkov Quest");
     expect(questName({ name: "New Beginning", prestige: 2 })).toBe("New Beginning (Prestige 2)");
+    for (const name of ["A", "Delivery From the Past", "The Survivalist Path - Combat Medic", "Gunsmith - Part 22"]) {
+      expect(titled(name).length).toBeLessThanOrEqual(60);
+      expect(titled(name)).toContain("Tarkov Quest");
+    }
   });
 
-  it("describes the giver, level, items and first rewards within a search snippet", () => {
+  it("describes the giver, maps, keys, found-in-raid items and main reward in a search snippet", () => {
     const description = questDescription(detail);
     expect(description).toBe(
-      "Sanitary Standards - Part 1: Therapist quest from level 12. 3 objectives, 2 items to hand over (1 found in raid), needed for Kappa. Rewards: 8,400 XP, 45,000 ₽."
+      "Sanitary Standards - Part 1 is Therapist's level 12 quest on Customs. Bring the Dorm room 314 marked key. Hand over 3 items, 2 found in raid. Rewards: 8,400 XP."
     );
     expect(description.length).toBeLessThanOrEqual(160);
+  });
+
+  it("names the items and the main reward and unlock when there's room, and fills out short ones", () => {
+    const simple: QuestDetail = {
+      ...detail,
+      quest: { ...summary, name: "Shortage", minPlayerLevel: 1, keys: [], kappaRequired: false, needs: [{ objectives: ["o1"], items: ["salewa"], count: 3, foundInRaid: true }] },
+      unlocks: [],
+    };
+    const description = questDescription(simple);
+    expect(description).toBe(
+      "Shortage is Therapist's quest on Customs. Hand over 3× Salewa first aid kit (found in raid). Unlocks IFAK individual first aid kit at Therapist LL2."
+    );
+    expect(description.length).toBeLessThanOrEqual(160);
+
+    const bare: QuestDetail = { ...simple, quest: { ...simple.quest, needs: [], maps: [], trader: "Prapor" }, rewards: { ...detail.rewards, offerUnlocks: [], items: [] } };
+    expect(questDescription(bare)).toBe("Shortage is Prapor's quest. Objectives: o1; o2; o3. Rewards: 8,400 XP. See every objective and reward.");
+  });
+
+  it("merges an item handed over in parts and says when items are planted", () => {
+    const merged: QuestDetail = {
+      ...detail,
+      quest: {
+        ...summary,
+        keys: [],
+        needs: [
+          { objectives: ["o1"], items: ["gas"], count: 2, foundInRaid: true },
+          { objectives: ["o2"], items: ["gas"], count: 1, foundInRaid: false },
+        ],
+      },
+    };
+    expect(questDescription(merged)).toContain("Hand over 3× Gas analyzer (2 found in raid).");
+    const planted: QuestDetail = {
+      ...merged,
+      objectives: merged.objectives.map((entry) => ({ ...entry, type: "plantItem" })),
+      quest: { ...merged.quest, needs: [{ objectives: ["o1"], items: ["gas"], count: 1, foundInRaid: false }] },
+    };
+    expect(questDescription(planted)).toContain("Plant 1× Gas analyzer.");
+    expect(questSummary(planted)[1]).toMatch(/^You plant 1× Gas analyzer\./);
+  });
+
+  it("writes a summary brief from the data: giver and access, maps, what to bring, notes, and what follows", () => {
+    const priced: QuestDetail = {
+      ...detail,
+      items: {
+        ...detail.items,
+        dorm: { ...detail.items.dorm, buy: { price: 21_333, vendor: "Flea Market" } },
+      },
+      objectives: [
+        { ...objective("o1"), maps: ["customs"] },
+        { ...objective("o2"), maps: ["factory"] },
+        objective("o3"),
+        { ...objective("o4"), type: "shoot", conditions: [{ kind: "usingWeapon", groups: [["salewa"]] }] },
+        { ...objective("o5"), optional: true, questItem: { name: "Secure Folder 0022", image: null } },
+      ],
+      maps: { ...detail.maps, factory: { key: "factory", name: "Factory", page: "factory" } },
+    };
+    expect(questSummary(priced)).toEqual([
+      "Therapist gives Sanitary Standards - Part 1 from level 12 and once you complete Shortage. The objectives take you to Customs.",
+      "Bring the Dorm room 314 marked key (about 21,000 ₽ on the flea market). You hand over 2× Gas analyzer (found in raid) and 1× any of Salewa first aid kit and IFAK individual first aid kit. The 2 found-in-raid items must come from your own raids or hideout crafts: ones bought from a trader or the flea market won't count, so keep them as you loot.",
+      "The objectives are spread over 2 maps, so plan on more than one raid. Some objectives only count with particular gear, a weapon, mods or what you wear, so check them before you load out. You pick up Secure Folder 0022 in raid and have to extract with it.",
+      "Completing it gives 8,400 XP, 45,000 ₽ and 2× Salewa first aid kit, and unlocks IFAK individual first aid kit at Therapist LL2. It leads to Sanitary Standards - Part 2. You need it for the Kappa container.",
+    ]);
+  });
+
+  it("keeps the summary short for a quest with nothing to bring, any map and no follow-up", () => {
+    const open: QuestDetail = {
+      ...detail,
+      quest: { ...summary, name: "Debut", trader: "Prapor", minPlayerLevel: 1, requires: [], failedBy: [], needs: [], keys: [], kappaRequired: false, maps: ["customs", "factory"] },
+      objectives: [{ ...objective("o1"), type: "shoot", maps: ["customs", "factory"] }],
+      prerequisites: [],
+      unlocks: [],
+      rewards: { ...detail.rewards, items: [{ id: ROUBLES, count: 80_000 }], offerUnlocks: [], traderStanding: [] },
+      maps: { ...detail.maps, factory: { key: "factory", name: "Factory", page: "factory" } },
+    };
+    expect(questSummary(open)).toEqual([
+      "Prapor gives Debut from the start, with nothing to do first. You can do it on Customs or Factory.",
+      "There's nothing to hand over and no key to bring.",
+      "Completing it gives 8,400 XP and 80,000 ₽. No other quest follows from it. It isn't needed for the Kappa container.",
+    ]);
+  });
+
+  it("names up to two keys, any-of keys as alternatives, and counts more", () => {
+    const items = { ...detail.items, k1: item("Dorm room 114 key"), k2: item("Dorm room 203 key"), k3: item("Dorm room 206 key") };
+    const keyed = (keys: QuestSummary["keys"], requiredKeys: string[][] = []): QuestDetail => ({
+      ...detail,
+      items,
+      quest: { ...summary, keys, needs: [] },
+      objectives: [{ ...objective("o1"), requiredKeys }],
+    });
+    // Three keys, each needed: counted, never "… key keys".
+    const three = keyed([
+      { map: "customs", keys: ["k1"] },
+      { map: "customs", keys: ["k2"] },
+      { map: "customs", keys: ["k3"] },
+    ]);
+    expect(questDescription(three)).toContain("Bring 3 keys.");
+    expect(questDescription(three)).not.toMatch(/key keys/);
+    // Any one of a group will do.
+    const anyOf = keyed([], [["k1", "k2"]]);
+    expect(questDescription(anyOf)).toContain("Bring the Dorm room 114 key or Dorm room 203 key.");
+    expect(questSummary(anyOf)[1]).toBe("Bring the Dorm room 114 key or Dorm room 203 key.");
+    expect(questFaq(anyOf).find((entry) => entry.question.startsWith("What items"))?.answer).toBe("Bring the Dorm room 114 key or Dorm room 203 key.");
+  });
+
+  it("says any map will do only when the objectives share one choice of maps, and doesn't claim a start or an end it can't name", () => {
+    const maps = { ...detail.maps, woods: { key: "woods", name: "Woods", page: "woods" }, factory: { key: "factory", name: "Factory", page: "factory" } };
+    const split: QuestDetail = {
+      ...detail,
+      maps,
+      quest: { ...summary, maps: ["customs", "woods", "factory"] },
+      objectives: [
+        { ...objective("o1"), maps: ["customs", "woods"] },
+        { ...objective("o2"), maps: ["factory", "woods"] },
+      ],
+    };
+    expect(questSummary(split)[0]).toContain("The objectives take you to Customs, Woods and Factory.");
+    const shared: QuestDetail = { ...split, objectives: [{ ...objective("o1"), maps: ["customs", "woods"] }, { ...objective("o2"), maps: ["woods", "customs"] }] };
+    expect(questSummary(shared)[0]).toContain("You can do it on Customs, Woods or Factory.");
+    const unnamed: QuestDetail = { ...detail, quest: { ...summary, minPlayerLevel: 1 }, quests: { q1: detail.quests.q1 } };
+    const brief = questSummary(unnamed);
+    expect(brief[0]).toMatch(/^Therapist gives Sanitary Standards - Part 1 once its earlier quests are done\./);
+    expect(brief.at(-1)).toContain("Other quests follow from it.");
+  });
+
+  it("rounds prices to two significant figures", () => {
+    expect([roughly(21_333), roughly(126_520), roughly(950), roughly(8)]).toEqual([21_000, 130_000, 950, 8]);
   });
 
   it("answers who gives it, what it needs, what it rewards and where it leads", () => {
@@ -98,7 +235,7 @@ describe("quest SEO copy", () => {
     ]);
     expect(faq[0].answer).toBe("Therapist gives Sanitary Standards - Part 1, from player level 12. First complete Shortage.");
     expect(faq[1].answer).toBe(
-      "Hand over 2× Gas analyzer (found in raid) and 1× any of Salewa first aid kit and IFAK individual first aid kit. Bring Dorm room 314 marked key."
+      "Hand over 2× Gas analyzer (found in raid) and 1× any of Salewa first aid kit and IFAK individual first aid kit. Bring the Dorm room 314 marked key."
     );
     expect(faq[2].answer).toBe("8,400 XP, 45,000 ₽, 2× Salewa first aid kit, +0.03 Therapist standing and unlocks IFAK individual first aid kit at Therapist LL2.");
     expect(faq[5].answer).toBe("Yes. Completing Other Branch fails Sanitary Standards - Part 1, so choose one branch.");

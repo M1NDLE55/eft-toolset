@@ -21,7 +21,7 @@ import { ANY_MAP, mapLabels, questName, requirementLabel } from "@/app/lib/quest
 import { moneyLabel } from "@/app/lib/quests/shopping-list";
 import type { PricedQuestItem, QuestDetail, QuestRef, QuestRewards } from "@/app/lib/quests/types";
 import { getKeyCounts } from "@/app/lib/reference/keys";
-import { QUEST_HUB_NAME, questDescription, questFaq, questTitle, rewardPhrases } from "@/app/lib/seo/quests";
+import { QUEST_HUB_NAME, questDescription, questFaq, questKeyGroups, questSummary, questTitle, rewardPhrases } from "@/app/lib/seo/quests";
 import { placeWikiImages } from "@/app/lib/quests/wiki-images";
 import { readQuestWiki } from "@/app/lib/wiki/quest-wiki";
 import { loadGunsmithTasks } from "@/app/gun-builder/gunsmith/load";
@@ -51,13 +51,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const title = questTitle(detail);
   const description = questDescription(detail);
   const url = `/quests/${detail.quest.slug ?? slug}`;
-  const images = detail.quest.image ? [{ url: detail.quest.image }] : [{ url: "/home-og-image.png", width: 1200, height: 630 }];
+  // The share image is ./opengraph-image.tsx (and twitter-image.tsx), which Next adds to both.
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: url },
-    openGraph: { title: `${title} | EFT Toolset`, description, url, type: "article", images },
-    twitter: { card: "summary", title: `${title} | EFT Toolset`, description },
+    openGraph: { title: `${title} | EFT Toolset`, description, url, type: "article" },
+    twitter: { card: "summary_large_image", title: `${title} | EFT Toolset`, description },
   };
 }
 
@@ -144,17 +144,6 @@ function ItemsNeeded({ detail }: { detail: QuestDetail }) {
       })}
     </ul>
   );
-}
-
-function questKeys(detail: QuestDetail) {
-  const byMap = new Map<string | null, Set<string>>();
-  const add = (map: string | null, id: string) => byMap.set(map, (byMap.get(map) ?? new Set()).add(id));
-  for (const entry of detail.quest.keys) for (const id of entry.keys) add(entry.map, id);
-  const listed = new Set(detail.quest.keys.flatMap((entry) => entry.keys));
-  for (const objective of detail.objectives) {
-    for (const id of objective.requiredKeys.flat()) if (!listed.has(id)) add(objective.maps[0] ?? null, id);
-  }
-  return Array.from(byMap, ([map, ids]) => ({ map, ids: Array.from(ids) }));
 }
 
 function Rewards({ detail, rewards, withExperience }: { detail: QuestDetail; rewards: QuestRewards; withExperience: boolean }) {
@@ -266,7 +255,8 @@ export default async function Page({ params }: PageProps) {
           })
         )
       );
-  const keys = questKeys(detail);
+  const keys = questKeyGroups(detail);
+  const summary = questSummary(detail, { buildPage: buildPage !== null });
   const objectives = detail.objectives;
   const images = wiki ? placeWikiImages(wiki.images, objectives, detail.maps) : null;
   const traderQuests =
@@ -357,6 +347,14 @@ export default async function Page({ params }: PageProps) {
           ))}
         </nav>
       )}
+
+      <Section id="summary" title="Quest summary">
+        <div className={`${panel} flex flex-col gap-2 p-4 text-sm leading-relaxed text-[#ccc]`}>
+          {summary.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      </Section>
 
       <ItemRundownQuest quest={{ name: quest.name, trader: quest.trader, faction: quest.faction }}>
         <QuestTrackingProvider gameMode={detail.gameMode}>

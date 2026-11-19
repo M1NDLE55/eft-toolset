@@ -8,7 +8,8 @@ const nextConfig = {
     "/api/mcp": ["./data/wiki/**/*"],
     "/api/tarkov": ["./data/wiki/item-ids.json", "./data/wiki/pages/**/*", "./data/wiki/items/**/*"],
     "/item/*": ["./data/wiki/index.json", "./data/wiki/item-ids.json", "./data/wiki/pages/**/*", "./data/wiki/items/**/*"],
-    "/quests/*": ["./data/wiki/index.json", "./data/wiki/image-credits.json", "./data/wiki/pages/**/*"],
+    "/sitemap.xml": ["./data/wiki/index.json"],
+    "/quests/*": ["./data/wiki/index.json", "./data/wiki/image-credits.json", "./data/wiki/pages/**/*", "./assets/fonts/*.ttf"],
   },
   async headers() {
     return [
