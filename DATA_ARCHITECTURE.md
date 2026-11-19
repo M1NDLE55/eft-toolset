@@ -277,9 +277,13 @@ it was adapted from the dump of a given date (see the README's Credits section).
 
 **Quest images.** Quest pages in the snapshot also carry an `images` list: the pictures on the
 wiki page that help with the quest (maps with markers, location screenshots, in-raid spots,
-build screenshots), each as `{ file, hashPath, caption, section, subsection }`.
+build screenshots), each as `{ file, hashPath, caption, section, subsection }`, plus
+`sectionOccurrence` and `subsectionOccurrence` when the page repeats that heading (two Guide
+sections, or a Woods subsection under two objectives): how many namesakes come before it, counted
+as `groupWikiSections` counts them, so the image shows in the right one.
 `scripts/wiki-images.mjs` collects `[[File:…]]` and `[[Image:…]]` links and `<gallery>` entries
-with the section and subsection each sits in, takes the caption (or the alt text) as plain text,
+with the section and subsection each sits in (cleaning the text as the page parser does, with
+`stripHidden`, so headings match), takes the caption (or the alt text) as plain text,
 and normalises each name as MediaWiki does (underscores for spaces, runs collapsed, first letter
 upper case). `hashPath` is the first one and two hex digits of the name's md5, the directories
 the wiki keeps the file under (`Delivery_from_the_past_Customs.png` → `4/4a`), so the image URL
@@ -290,14 +294,19 @@ Each file is listed once per page. Left out:
   (`_ins.`), main menu backgrounds, and SVGs;
 - files linked to another page (item pictures link to the item) and tab labels
   (`class=wds-tabs…`); a link to the file itself (`{{filepath:…}}`) is kept;
-- files drawn at 128px wide or less;
+- files drawn at 128px wide or less (a height-only size such as `x300px` states no width);
 - files in the Objectives, Rewards, Dialogue, Initial equipment, and Trivia sections (reward
   previews, item rows, asides). Requirements stay, since story quests show there where a quest
   starts;
 - the infobox's picture, which is a template field rather than a file link.
 
 Images can sit in a section the quest page leaves out of its text (Requirements, Introduction)
-or in one with no text of its own. The manifest counts the quest pages with images, the images
+or in one with no text of its own. The quest page (`src/app/lib/quests/wiki-images.ts`) shows an
+image with its guide section or subsection when it renders that block, and with the section when
+only the subsection is missing. Otherwise it shows the image under an objective when its
+subsection or caption (or failing those, its file name) names exactly one of the quest's maps
+and only one objective is on that map; the rest go by the objectives checklist, grouped under
+their wiki section's name ("From the EFT Wiki: Requirements"). The manifest counts the quest pages with images, the images
 on them, and the distinct files.
 
 **Image credits.** After writing the pages, `scripts/build-wiki-snapshot.mjs` makes one pass over

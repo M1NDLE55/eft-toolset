@@ -3,6 +3,8 @@ import { createRoot, hydrateRoot, type Root } from "react-dom/client";
 import { renderToString } from "react-dom/server";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { WikiImages } from "@/app/components/quests/wiki-images";
+import { WikiSections } from "@/app/components/wiki/wiki-text";
+import { groupWikiSections } from "@/app/lib/wiki/page-sections";
 import { placeWikiImages, sectionKey } from "@/app/lib/quests/wiki-images";
 import type { QuestMap, QuestObjective } from "@/app/lib/quests/types";
 import type { WikiPageSection } from "@/app/lib/wiki/page-sections";
@@ -140,8 +142,8 @@ describe("placing wiki images", () => {
       objectives,
       maps
     );
-    expect(placed.sections.get(sectionKey("Guide", "Customs"))?.map((entry) => entry.file)).toEqual(["Delivery_from_the_past_Customs.png"]);
-    expect(placed.sections.get(sectionKey("Guide", null))?.map((entry) => entry.file)).toEqual(["B.png", "C.png"]);
+    expect(placed.sections.get(sectionKey("Guide", 0, "Customs"))?.map((entry) => entry.file)).toEqual(["Delivery_from_the_past_Customs.png"]);
+    expect(placed.sections.get(sectionKey("Guide"))?.map((entry) => entry.file)).toEqual(["B.png", "C.png"]);
     expect(placed.other).toEqual([]);
   });
 
@@ -174,10 +176,70 @@ describe("placing wiki images", () => {
   });
 
   it("passes on only the fields the browser needs", () => {
-    const extra = { ...image(), url: "https://example.org/x.png" } as QuestWikiImage;
+    const extra = { ...image(), sectionOccurrence: 0, url: "https://example.org/x.png" } as QuestWikiImage;
     const placed = placeWikiImages([extra], guide, objectives, maps);
-    expect(Object.keys(placed.sections.get(sectionKey("Guide", null))![0]).toSorted()).toEqual(
+    expect(Object.keys(placed.sections.get(sectionKey("Guide"))![0]).toSorted()).toEqual(
       ["caption", "file", "filePage", "hashPath", "section", "subsection", "uploader"].toSorted()
     );
+  });
+
+  it("shows each image once, in the namesake section or subsection it sits in", () => {
+    // Shaped like From Hand to Hand (two Guide sections) and Batya (Woods and Customs subsections repeated).
+    const sections = groupWikiSections(
+      [
+        { heading: "Introduction", level: 1, text: "A quest." },
+        { heading: "Guide", level: 2, text: "First guide." },
+        { heading: "Woods", level: 3, text: "The first Woods." },
+        { heading: "Customs", level: 3, text: "" },
+        { heading: "Note", level: 3, text: "A note." },
+        { heading: "Woods", level: 4, text: "The second Woods." },
+        { heading: "Customs", level: 4, text: "The second Customs." },
+        { heading: "Guide", level: 2, text: "Second guide." },
+      ],
+      new Set(["introduction"])
+    );
+    expect(sections.map((section) => [section.heading, section.occurrence ?? 0])).toEqual([
+      ["Guide", 0],
+      ["Guide", 1],
+    ]);
+    expect(sections[0].subsections.map((subsection) => [subsection.heading, subsection.occurrence ?? 0])).toEqual([
+      ["Woods", 0],
+      ["Note", 0],
+      ["Woods", 1],
+      ["Customs", 1],
+    ]);
+    const placed = placeWikiImages(
+      [
+        image({ file: "First_guide.png" }),
+        image({ file: "Second_guide.png", sectionOccurrence: 1 } as Partial<QuestWikiImage>),
+        image({ file: "First_woods.png", subsection: "Woods" }),
+        image({ file: "Second_woods.png", subsection: "Woods", subsectionOccurrence: 1 } as Partial<QuestWikiImage>),
+        image({ file: "First_customs.png", subsection: "Customs" }),
+        image({ file: "Second_customs.png", subsection: "Customs", subsectionOccurrence: 1 } as Partial<QuestWikiImage>),
+      ],
+      sections,
+      [],
+      maps
+    );
+    const host = document.createElement("div");
+    document.body.append(host);
+    const root = createRoot(host);
+    act(() => root.render(<WikiSections sections={sections} images={placed.sections} />));
+    const blocks = Array.from(host.querySelectorAll("h3, h4"), (heading) => [
+      heading.textContent,
+      Array.from(heading.parentElement!.querySelectorAll(":scope > div:not(.border-l) img"), (img) => img.getAttribute("src")!.split("/").at(-1)),
+    ]);
+    expect(blocks).toEqual([
+      // The first Customs has no text, so its image shows with its section.
+      ["Guide", ["First_guide.png", "First_customs.png"]],
+      ["Woods", ["First_woods.png"]],
+      ["Note", []],
+      ["Woods", ["Second_woods.png"]],
+      ["Customs", ["Second_customs.png"]],
+      ["Guide", ["Second_guide.png"]],
+    ]);
+    expect(host.querySelectorAll("img")).toHaveLength(6);
+    act(() => root.unmount());
+    host.remove();
   });
 });

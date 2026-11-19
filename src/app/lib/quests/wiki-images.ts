@@ -1,4 +1,5 @@
 import type { WikiPageSection } from "@/app/lib/wiki/page-sections";
+import type { QuestWikiPageImage } from "@/app/lib/wiki/quest-wiki";
 import type { QuestWikiImage } from "@/app/lib/wiki/wiki-images";
 import type { QuestMap, QuestObjective } from "./types";
 
@@ -13,13 +14,17 @@ export interface PlacedWikiImages {
 
 const norm = (text: string) => text.trim().toLowerCase();
 
-/** Where an image goes among a page's rendered sections: a subsection's heading, or null for the section itself. */
-export function sectionKey(section: string, subsection: string | null) {
-  return subsection === null ? norm(section) : `${norm(section)}\n${norm(subsection)}`;
+/**
+ * One block of a page's rendered sections: a section, or a subsection of it. The occurrences tell apart
+ * headings a page repeats (see groupWikiSections).
+ */
+export function sectionKey(section: string, sectionOccurrence = 0, subsection: string | null = null, subsectionOccurrence = 0) {
+  const key = `${norm(section)}#${sectionOccurrence}`;
+  return subsection === null ? key : `${key}\n${norm(subsection)}#${subsectionOccurrence}`;
 }
 
 /** Only the fields the client needs: nothing else of the page data reaches the browser with them. */
-function pick(image: QuestWikiImage): QuestWikiImage {
+function pick(image: QuestWikiPageImage): QuestWikiImage {
   const { file, hashPath, caption, section, subsection, uploader, filePage } = image;
   return { file, hashPath, caption, section, subsection, uploader, filePage };
 }
@@ -56,7 +61,7 @@ function matchObjective(image: QuestWikiImage, objectives: QuestObjective[], map
  * otherwise under the one objective they clearly show, or else in a block by the objectives.
  */
 export function placeWikiImages(
-  images: readonly QuestWikiImage[],
+  images: readonly QuestWikiPageImage[],
   rendered: readonly WikiPageSection[],
   objectives: QuestObjective[],
   maps: Record<string, QuestMap>
@@ -64,12 +69,17 @@ export function placeWikiImages(
   const placed: PlacedWikiImages = { sections: new Map(), objectives: {}, other: [] };
   const known = new Set<string>();
   for (const section of rendered) {
-    known.add(sectionKey(section.heading, null));
-    for (const subsection of section.subsections) known.add(sectionKey(section.heading, subsection.heading));
+    known.add(sectionKey(section.heading, section.occurrence));
+    for (const subsection of section.subsections) {
+      known.add(sectionKey(section.heading, section.occurrence, subsection.heading, subsection.occurrence));
+    }
   }
-  for (const image of images.map(pick)) {
-    let key: string | null = sectionKey(image.section, image.subsection);
-    if (!known.has(key)) key = known.has(sectionKey(image.section, null)) ? sectionKey(image.section, null) : null;
+  for (const entry of images) {
+    const image = pick(entry);
+    const inSection = sectionKey(entry.section, entry.sectionOccurrence);
+    const inSubsection =
+      entry.subsection === null ? null : sectionKey(entry.section, entry.sectionOccurrence, entry.subsection, entry.subsectionOccurrence);
+    const key = inSubsection !== null && known.has(inSubsection) ? inSubsection : known.has(inSection) ? inSection : null;
     if (key !== null) {
       placed.sections.set(key, [...(placed.sections.get(key) ?? []), image]);
       continue;
@@ -77,7 +87,7 @@ export function placeWikiImages(
     const objective = matchObjective(image, objectives, maps);
     if (objective) (placed.objectives[objective.id] ??= []).push(image);
     else {
-      const group = placed.other.find((entry) => norm(entry.section) === norm(image.section));
+      const group = placed.other.find((other) => norm(other.section) === norm(image.section));
       if (group) group.images.push(image);
       else placed.other.push({ section: image.section, images: [image] });
     }
