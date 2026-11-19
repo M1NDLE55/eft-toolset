@@ -160,7 +160,8 @@ describe("wiki images", () => {
     const targets = [
       (dialog: Element) => Array.from(dialog.querySelectorAll("button")).find((button) => button.textContent === "Close")!,
       (dialog: Element) => dialog.querySelector('a[rel~="license"]')!,
-      (dialog: Element) => dialog.querySelector("img")!,
+      (dialog: Element) => Array.from(dialog.querySelectorAll("a")).find((a) => a.textContent?.includes(".png"))!,
+      // The dialog itself, as after a click on the image.
       (dialog: Element) => dialog,
     ];
     for (const target of targets) {
@@ -169,6 +170,7 @@ describe("wiki images", () => {
       expect(dialog).not.toBeNull();
       const element = target(dialog) as HTMLElement;
       act(() => element.focus());
+      expect(document.activeElement).toBe(element);
       escape(element);
       expect(document.querySelector('[role="dialog"]')).toBeNull();
       // The dialog hands focus back once it has unmounted.
@@ -193,6 +195,22 @@ describe("wiki images", () => {
     act(() => trigger().focus());
     expect(dialog.contains(document.activeElement)).toBe(true);
     escape(document.activeElement!);
+  });
+
+  it("keeps the enlarged image open when its thumbnail gives up meanwhile, then shows the link", () => {
+    vi.useFakeTimers();
+    mount([image()]);
+    act(() => trigger().click());
+    const thumb = () => host.querySelector("button img");
+    for (const delay of IMAGE_RETRY_DELAYS_MS) {
+      fail(thumb()!);
+      act(() => void vi.advanceTimersByTime(delay));
+    }
+    fail(thumb()!);
+    expect(document.querySelector('[role="dialog"]')).not.toBeNull();
+    escape(document.querySelector('[role="dialog"]')!);
+    expect(document.querySelector('[role="dialog"]')).toBeNull();
+    expect(host.textContent).toContain("View on the EFT Wiki");
   });
 
   it("retries the enlarged image too, and links to the wiki inside the dialog when it never loads", () => {
@@ -225,7 +243,8 @@ describe("wiki images", () => {
         />
       )
     );
-    expect(host.querySelector("section")?.getAttribute("aria-label")).toBe("Images from the EFT Wiki");
+    const section = host.querySelector("section")!;
+    expect(document.getElementById(section.getAttribute("aria-labelledby")!)?.textContent).toBe("From the EFT Wiki");
     expect(Array.from(host.querySelectorAll("h4"), (heading) => heading.textContent)).toEqual(["First spawn"]);
     expect(host.querySelectorAll("img")).toHaveLength(3);
   });
@@ -409,6 +428,8 @@ describe("placing wiki images by the objectives", () => {
 
   it("puts guide images under the only objective on a map, but not ones naming another map or from other sections", () => {
     const objectives = [objective("find", "Locate the hideout on Woods", ["woods"], "visit"), objective("give", "Hand over the message", [])];
+    // As on the quest page: only the quest's own maps, so Customs is known by the game's map names.
+    const questMaps = { woods: maps.woods };
     const placed = placeWikiImages(
       [
         image({ file: "Hideout.png", caption: "Hideout with message location" }),
@@ -416,7 +437,7 @@ describe("placing wiki images by the objectives", () => {
         image({ file: "Gear.png", caption: null, section: "Build" }),
       ],
       objectives,
-      maps
+      questMaps
     );
     expect(files(placed)).toEqual({
       objectives: { find: ["Hideout.png"] },
@@ -427,10 +448,50 @@ describe("placing wiki images by the objectives", () => {
     });
   });
 
+  it("knows a map by its short name and a variant by its base map, even when the quest's maps lack it", () => {
+    const objectives = [
+      objective("lab", "Find the server on The Lab", ["the-lab-dark"], "visit"),
+      objective("night", "Stash it on Factory", ["night-factory"], "plantItem"),
+    ];
+    const questMaps: Record<string, QuestMap> = {
+      "the-lab-dark": { key: "the-lab-dark", name: "The Lab (Dark)", page: "the-lab" },
+      "night-factory": maps["night-factory"],
+    };
+    const placed = placeWikiImages(
+      [image({ file: "Server.png", caption: "The server room in Labs" }), image({ file: "Stash.png", caption: "The shack on Factory" })],
+      objectives,
+      questMaps
+    );
+    expect(files(placed).objectives).toEqual({ lab: ["Server.png"], night: ["Stash.png"] });
+  });
+
+  it("doesn't take an objective on most maps for the one a picture shows", () => {
+    const anywhere = ["customs", "factory", "woods", "shoreline", "interchange", "reserve", "lighthouse", "streets-of-tarkov"];
+    const objectives = [objective("kill", "Eliminate PMCs", anywhere, "shoot"), objective("give", "Hand over the tags", [])];
+    const placed = placeWikiImages([image({ file: "Tags.png", caption: "A dogtag" })], objectives, maps);
+    expect(files(placed)).toEqual({ objectives: {}, strip: [[null, ["Tags.png"]]] });
+  });
+
+  it("merges the strip's unlabelled images into one group", () => {
+    const placed = placeWikiImages(
+      [
+        image({ file: "A.png", caption: null }),
+        image({ file: "B.png", caption: null, subsection: "First spawn" }),
+        image({ file: "C.png", caption: null }),
+      ],
+      [],
+      maps
+    );
+    expect(files(placed).strip).toEqual([
+      [null, ["A.png", "C.png"]],
+      ["First spawn", ["B.png"]],
+    ]);
+  });
+
   it("shows each image once and passes on only the fields the browser needs", () => {
     const objectives = [objective("find", "Find it on Woods", ["woods"])];
     const extra = { ...image({ file: "Woods.png" }), sectionOccurrence: 1, url: "https://example.org/x.png" } as QuestWikiPageImage;
-    const placed = placeWikiImages([extra, image({ file: "Other_map.png", caption: "On Customs" })], objectives, maps);
+    const placed = placeWikiImages([extra, image({ file: "Other_map.png", caption: "On Customs" }), extra], objectives, maps);
     const all = [...Object.values(placed.objectives).flat(), ...placed.strip.flatMap((group) => group.images)];
     expect(all.map((entry) => entry.file)).toEqual(["Woods.png", "Other_map.png"]);
     expect(Object.keys(placed.objectives.find[0]).toSorted()).toEqual(

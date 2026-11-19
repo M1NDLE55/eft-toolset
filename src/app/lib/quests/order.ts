@@ -71,11 +71,27 @@ function byProgression<T extends Orderable>(quests: readonly T[]): T[] {
   const left = quests.toSorted(byLevelThenAge);
   const result: T[] = [];
   while (left.length > 0) {
-    // A cycle in the data leaves nothing ready: take the lowest level left rather than stall.
-    const index = Math.max(0, left.findIndex((quest) => waitingOn.get(quest.id)!.size === 0));
+    let index = left.findIndex((quest) => waitingOn.get(quest.id)!.size === 0);
+    if (index < 0) {
+      // A cycle in the data leaves nothing ready: break it at its lowest level quest, so quests that only follow
+      // the cycle stay after it.
+      const cycle = cycleFrom(left[0].id, waitingOn);
+      index = left.findIndex((quest) => cycle.has(quest.id));
+    }
     const [next] = left.splice(index, 1);
     result.push(next);
     for (const quest of left) waitingOn.get(quest.id)!.delete(next.id);
   }
   return result;
+}
+
+/** The quests on the cycle that following `id`'s waits leads into. Every quest waits on something here. */
+function cycleFrom(id: string, waitingOn: ReadonlyMap<string, ReadonlySet<string>>): Set<string> {
+  const path: string[] = [];
+  let at = id;
+  while (!path.includes(at)) {
+    path.push(at);
+    at = waitingOn.get(at)!.values().next().value!;
+  }
+  return new Set(path.slice(path.indexOf(at)));
 }

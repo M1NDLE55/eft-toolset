@@ -180,7 +180,8 @@ in local storage (`progress-store.ts`) and included in backups.
   trader, name and prestige) count once: the larger need per item, shown against that version.
 - The chains view (`chain-layout.ts`) stacks each group of a trader's quests linked by that
   trader's own requirements as a block, the biggest first, one column per depth. Quests with
-  no such link are listed apart under it as standalone quests. Quests that share a name and
+  no such link are listed apart under it as standalone quests. Each column keeps the list's
+  play order. Quests that share a name and
   faction get a short hint (what they follow, their map or level) to tell them apart.
 
 Quest pages show the guide from the wiki snapshot (`src/app/lib/wiki/quest-wiki.ts`), found by
@@ -313,12 +314,14 @@ Each file is listed once per page. Left out:
 
 The quest page shows every image once, by the objectives, and the wiki guide's text below without
 them (`src/app/lib/quests/wiki-images.ts`). Only objectives on a map count, other than surviving the
-raid. An image goes under an objective when its subsection or caption (or failing those, its file
+raid or anything on most maps. Captions are matched against every game map's name (Lab and Labs
+too; not Terminal, a common word in guides), and a variant counts as its base map. An image goes under an objective when its subsection or caption (or failing those, its file
 name) names a map only one of them is on, or several are and the caption's words appear in only
 one's description; when it names no map but its caption's words appear in only one description;
 when it follows, in the same part of the page, an image that went under an objective and its words
 don't point at another; or when it's in the guide and only one objective is on a map. The rest go
-in a strip right under the objectives, labelled by subsection (or by section, outside the guide).
+in a strip right under the objectives, grouped and labelled by subsection (or by section, outside
+the guide).
 The manifest counts the quest pages with images, the images on them, and the distinct files.
 
 The grid shows the CDN's scaled copies (`<image URL>/revision/latest/scale-to-width-down/<width>`,

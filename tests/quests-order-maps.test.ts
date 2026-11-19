@@ -34,9 +34,8 @@ describe("map labels", () => {
   });
 
   it("names a variant after its base map even when the list doesn't carry the base map", () => {
-    const onlyVariant = { "night-factory": MAPS["night-factory"] };
-    expect(mapLabels(["night-factory"], onlyVariant)).toEqual(["Night Factory"]);
-    expect(mapLabels(["night-factory"], { ...onlyVariant, factory: MAPS.factory })).toEqual(["Factory"]);
+    expect(mapLabels(["night-factory"], { "night-factory": MAPS["night-factory"] })).toEqual(["Factory"]);
+    expect(mapLabels(["infected-lab"], { "infected-lab": MAPS["infected-lab"] })).toEqual(["The Lab"]);
   });
 
   it("keeps maps without a page, and unknown keys, as they are", () => {
@@ -139,5 +138,16 @@ describe("quest order", () => {
     const quests = [quest("a", "Prapor", 1, ["b"]), quest("b", "Prapor", 2, ["a"]), quest("c", "Prapor", 3)];
     // c is ready first; then the cycle is broken at the lowest level.
     expect(ids(orderQuests(quests, traders))).toEqual(["c", "a", "b"]);
+  });
+
+  it("breaks a cycle at a quest on it, not at a lower level quest that needs it", () => {
+    const quests = [
+      quest("x", "Prapor", 5, ["y"]),
+      quest("y", "Prapor", 6, ["x"]),
+      // Lower levels than the cycle, but they need x: taking the lowest level left would put them first.
+      quest("after", "Prapor", 1, ["x"]),
+      quest("later", "Prapor", 1, ["after"]),
+    ];
+    expect(ids(orderQuests(quests, traders))).toEqual(["x", "after", "later", "y"]);
   });
 });

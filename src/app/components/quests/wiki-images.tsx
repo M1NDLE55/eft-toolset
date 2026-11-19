@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { ExternalLink, Maximize2 } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useHydrated } from "@/app/lib/storage/use-store";
@@ -80,6 +80,8 @@ function useRetryingLoad() {
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   useEffect(() => () => clearTimeout(timer.current), []);
   const onError = () => {
+    // A second error while waiting (a srcset candidate swapped, say) is the same failure.
+    if (waiting) return;
     if (attempt >= IMAGE_RETRY_DELAYS_MS.length) {
       setFailed(true);
       return;
@@ -112,13 +114,15 @@ function EnlargedImage({ image, alt }: { image: QuestWikiImage; alt: string }) {
 
 function WikiFigure({ image }: { image: QuestWikiImage }) {
   const load = useRetryingLoad();
+  const [open, setOpen] = useState(false);
   const title = image.caption ?? fileName(image);
   return (
     <figure className="flex min-w-0 flex-col gap-1">
-      {load.failed ? (
+      {/* An open dialog stays: it loads the original on its own, and swapping it out would drop the reader's focus. */}
+      {load.failed && !open ? (
         <WikiLinkInstead image={image} className="aspect-[4/3] w-full" />
       ) : (
-        <Dialog>
+        <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
             <button
               type="button"
@@ -200,10 +204,13 @@ export function WikiImages({
 /** The images no objective clearly shows, in a strip right under the objectives, grouped by where the wiki has them. */
 export function WikiImageStrip({ groups }: { groups: { label: string | null; images: QuestWikiImage[] }[] }) {
   const hydrated = useHydrated();
+  const headingId = useId();
   if (!hydrated || groups.length === 0) return null;
   return (
-    <section aria-label="Images from the EFT Wiki" className="mt-1 flex flex-col gap-3">
-      <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#777]">From the EFT Wiki</h3>
+    <section aria-labelledby={headingId} className="mt-1 flex flex-col gap-3">
+      <h3 id={headingId} className="text-[10px] font-bold uppercase tracking-widest text-[#777]">
+        From the EFT Wiki
+      </h3>
       {groups.map((group, index) => (
         <WikiImages key={`${group.label ?? ""}-${index}`} images={group.images} title={group.label ?? undefined} titleAs="h4" />
       ))}

@@ -1,13 +1,14 @@
 import type { QuestWikiPageImage } from "@/app/lib/wiki/quest-wiki";
 import type { QuestWikiImage } from "@/app/lib/wiki/wiki-images";
+import { ANY_MAP, MAP_NAMES, baseMapName, mapLabels } from "./display";
 import type { QuestMap, QuestObjective } from "./types";
 
 export interface PlacedWikiImages {
   /** Images that clearly show one objective, by objective id, in page order. */
   objectives: Record<string, QuestWikiImage[]>;
   /**
-   * The rest, for a strip under the objectives: runs of images from one part of the page, labelled with its
-   * subsection (or section, other than the guide itself) when it has one.
+   * The rest, for a strip under the objectives, grouped by the part of the page they're from: labelled with its
+   * subsection (or section, other than the guide itself), in order of first appearance.
    */
   strip: { label: string | null; images: QuestWikiImage[] }[];
 }
@@ -22,15 +23,18 @@ function escape(text: string) {
   return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-/** The name a map goes by in captions: its page map's (Night Factory is Factory), and shorter forms of it. */
-function mapNames(key: string, maps: Record<string, QuestMap>) {
-  const map = maps[key];
-  const name = (map?.page && maps[map.page]?.name) || map?.name || key;
+/** The names a map goes by in captions: its base map's (Night Factory is Factory), and shorter forms of it. */
+function captionNames(name: string) {
   const names = new Set([name.toLowerCase()]);
-  const short = name.replace(/^the\s+/i, "").replace(/\s+of\s+tarkov$/i, "");
-  if (short.length >= 4) names.add(short.toLowerCase());
+  const short = name.replace(/^the\s+/i, "").replace(/\s+of\s+tarkov$/i, "").toLowerCase();
+  names.add(short);
+  if (short === "lab") names.add("labs");
   return names;
 }
+
+// Every map's names, so a caption naming one the quest isn't on is told apart. Not Terminal: the word is too
+// common in guides (computer terminals) to read as the map.
+const GAME_MAP_NAMES = Object.entries(MAP_NAMES).flatMap(([key, name]) => (key === "terminal" ? [] : [...captionNames(name)]));
 
 // Words that say where in general, not which place: shared by too many captions and objectives to tell them apart.
 const GENERIC = new Set(
@@ -50,11 +54,13 @@ function words(text: string, ignore: ReadonlySet<string>) {
 }
 
 /**
- * Objectives a picture could show: those on a map, other than surviving the raid. Handing items over happens
- * at the trader, so nothing to picture there.
+ * Objectives a picture could show: those on a map, other than surviving the raid or anything on most maps.
+ * Handing items over happens at the trader, so nothing to picture there.
  */
-function placeObjectives(objectives: QuestObjective[]) {
-  return objectives.filter((objective) => objective.maps.length > 0 && objective.type !== "extract");
+function placeObjectives(objectives: QuestObjective[], maps: Record<string, QuestMap>) {
+  return objectives.filter(
+    (objective) => objective.maps.length > 0 && objective.type !== "extract" && mapLabels(objective.maps, maps)[0] !== ANY_MAP
+  );
 }
 
 const GUIDE = /guide/i;
@@ -73,10 +79,11 @@ const GUIDE = /guide/i;
  */
 export function placeWikiImages(images: readonly QuestWikiPageImage[], objectives: QuestObjective[], maps: Record<string, QuestMap>): PlacedWikiImages {
   const placed: PlacedWikiImages = { objectives: {}, strip: [] };
-  const candidates = placeObjectives(objectives);
-  const names = new Map(candidates.map((objective) => [objective, new Set(objective.maps.flatMap((key) => [...mapNames(key, maps)]))]));
-  // Every map the quest's data mentions, so an image naming one no objective is on isn't taken for a step there.
-  const allNames = new Set([...Object.keys(maps).flatMap((key) => [...mapNames(key, maps)]), ...Array.from(names.values(), (set) => [...set]).flat()]);
+  const candidates = placeObjectives(objectives, maps);
+  const names = new Map(
+    candidates.map((objective) => [objective, new Set(objective.maps.flatMap((key) => [...captionNames(baseMapName(key, maps))]))])
+  );
+  const allNames = new Set([...GAME_MAP_NAMES, ...Array.from(names.values(), (set) => [...set]).flat()]);
   const mapWords = new Set([...allNames].flatMap((name) => name.split(/\s+/)));
   const descriptionWords = new Map(candidates.map((objective) => [objective, words(objective.description, mapWords)]));
   const named = (text: string) =>
@@ -111,7 +118,10 @@ export function placeWikiImages(images: readonly QuestWikiPageImage[], objective
 
   // The last image's part of the page and objective, for the next image there to follow.
   let previous = null as { block: string; objective: QuestObjective | null } | null;
+  const seen = new Set<string>();
   for (const entry of images) {
+    if (seen.has(entry.file)) continue;
+    seen.add(entry.file);
     const image = pick(entry);
     const block = [entry.section, entry.sectionOccurrence ?? 0, entry.subsection, entry.subsectionOccurrence ?? 0].join("\u0000");
     let mapsNamed = named([image.subsection, image.caption].filter(Boolean).join(" "));
@@ -133,8 +143,8 @@ export function placeWikiImages(images: readonly QuestWikiPageImage[], objective
       continue;
     }
     const label = image.subsection ?? (GUIDE.test(image.section) ? null : image.section);
-    const last = placed.strip.at(-1);
-    if (last && last.label === label) last.images.push(image);
+    const group = placed.strip.find((entry) => entry.label === label);
+    if (group) group.images.push(image);
     else placed.strip.push({ label, images: [image] });
   }
   return placed;
