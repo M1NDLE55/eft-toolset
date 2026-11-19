@@ -175,7 +175,10 @@ in local storage (`progress-store.ts`) and included in backups.
 Quest pages show the guide from the wiki snapshot (`src/app/lib/wiki/quest-wiki.ts`), found by
 the task's wiki link and only if it is a quest's page, without the objectives, rewards, and
 requirements tarkov.dev serves, and with the dialogue apart. It carries the same credit line as
-the item page.
+the item page. It also passes the page's map and location pictures (see "Quest images" under the
+wiki snapshot below) as file names and hash paths with their credits; the browser builds each
+image URL and loads it from the wiki's image host, so the server never fetches, stores or
+serves the images, and the page's HTML doesn't contain their URLs.
 
 ## Ammo, keys and PVE prices
 
@@ -271,6 +274,49 @@ by anyone, so the tool description, the `content` field, and the server instruct
 the model to treat it as reference rather than instructions. The wiki is licensed CC BY-NC-SA,
 so every result carries a credit line naming the page, its contributors, the licence, and that
 it was adapted from the dump of a given date (see the README's Credits section).
+
+**Quest images.** Quest pages in the snapshot also carry an `images` list: the pictures on the
+wiki page that help with the quest (maps with markers, location screenshots, in-raid spots,
+build screenshots), each as `{ file, hashPath, caption, section, subsection }`.
+`scripts/wiki-images.mjs` collects `[[File:…]]` and `[[Image:…]]` links and `<gallery>` entries
+with the section and subsection each sits in, takes the caption (or the alt text) as plain text,
+and normalises each name as MediaWiki does (underscores for spaces, runs collapsed, first letter
+upper case). `hashPath` is the first one and two hex digits of the name's md5, the directories
+the wiki keeps the file under (`Delivery_from_the_past_Customs.png` → `4/4a`), so the image URL
+is `https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/<hashPath>/<file>`.
+Each file is listed once per page. Left out:
+
+- names containing "icon", "portrait", "banner" or "QuestPicture", item inspect pictures
+  (`_ins.`), main menu backgrounds, and SVGs;
+- files linked to another page (item pictures link to the item) and tab labels
+  (`class=wds-tabs…`); a link to the file itself (`{{filepath:…}}`) is kept;
+- files drawn at 128px wide or less;
+- files in the Objectives, Rewards, Dialogue, Initial equipment, and Trivia sections (reward
+  previews, item rows, asides). Requirements stay, since story quests show there where a quest
+  starts;
+- the infobox's picture, which is a template field rather than a file link.
+
+Images can sit in a section the quest page leaves out of its text (Requirements, Introduction)
+or in one with no text of its own. The manifest counts the quest pages with images, the images
+on them, and the distinct files.
+
+**Image credits.** After writing the pages, `scripts/build-wiki-snapshot.mjs` makes one pass over
+the wiki's MediaWiki API (`scripts/wiki-image-credits.mjs`): `meta=siteinfo&siprop=rightsinfo`
+once for the licence, then `prop=imageinfo&iiprop=user|url` for up to 50 files per request, one
+request after another with a second between them, `maxlag=5`, and the same User-Agent as the dump
+download. It writes `data/wiki/image-credits.json` as
+`{ fetchedAt, licence, images: { [file]: { uploader, filePage } } }`, where `uploader` is who
+uploaded the file's current version and files the wiki doesn't have are marked `missing`. It
+also compares the URL it builds from each name with the one the API returns and prints any that
+differ. `--no-credits` skips the pass, and so does any failure to read the API (a network error,
+an error response, or an HTML page such as a challenge, which isn't retried): the build then
+keeps the existing credits, writes `uploader: null` for new files, and drops files no page
+shows any more. Page files never depend on the API, so the snapshot still rebuilds identically
+from the same dump. `readQuestWiki` joins each image with its credit, leaves out files marked
+`missing`, and credits "EFT Wiki contributors" when there is no uploader. Under each image the
+quest page shows "Image: <file name> by <uploader>, Escape from Tarkov Wiki, CC BY-NC-SA",
+linking the file page and the licence (`src/app/lib/wiki/wiki-images.ts` builds the URL and the
+text). `next.config.mjs` traces `image-credits.json` into the quest pages.
 
 `lookup_term` reads no service at all. It answers from a curated glossary of player jargon
 (`src/app/lib/glossary/terms.json`): map callouts, item and ammo nicknames, bosses, traders,
