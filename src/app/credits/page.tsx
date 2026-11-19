@@ -96,6 +96,15 @@ const sections: { heading: string; content: ReactNode }[] = [
           and lore, and leaves out item, weapon, and ammo pages, whose stats come from tarkov.dev. Item pages read
           those, without the sections that repeat tarkov.dev&apos;s data.
         </p>
+        <p>
+          Quest pages also show the images in a quest&apos;s wiki page, such as where an objective is on the map. Your
+          browser loads them straight from Fandom&apos;s image server; our server
+          doesn&apos;t download, store, or resize them, and only passes on each image&apos;s file name, caption, and
+          uploader. They&apos;re licensed <External href="https://www.fandom.com/licensing">CC BY-NC-SA</External> like
+          the wiki&apos;s text. Each image is credited beneath it with its file name, its uploader (or the wiki&apos;s
+          contributors), and the licence, and links to its file page on the wiki. If an image doesn&apos;t load, a link
+          to its file page shows instead.
+        </p>
       </>
     ),
   },
