@@ -155,19 +155,22 @@ describe("placing wiki images", () => {
     expect(Object.keys(placed.objectives)).toEqual(["get"]);
   });
 
-  it("keeps an image by the objectives when its map has several objectives or it names several maps", () => {
+  it("keeps an image by the objectives, under its section's name, when its map has several objectives or it names several maps", () => {
     const placed = placeWikiImages(
       [
         image({ file: "Factory_shack.png", section: "Objectives", caption: null }),
+        image({ file: "None.png", section: "Requirements", caption: "A folder" }),
         image({ file: "Both.png", section: "Objectives", caption: "Customs and Factory" }),
-        image({ file: "None.png", section: "Gallery", caption: "A folder" }),
       ],
       guide,
       objectives,
       maps
     );
     expect(placed.objectives).toEqual({});
-    expect(placed.other.map((entry) => entry.file)).toEqual(["Factory_shack.png", "Both.png", "None.png"]);
+    expect(placed.other.map((group) => [group.section, group.images.map((entry) => entry.file)])).toEqual([
+      ["Objectives", ["Factory_shack.png", "Both.png"]],
+      ["Requirements", ["None.png"]],
+    ]);
   });
 
   it("passes on only the fields the browser needs", () => {

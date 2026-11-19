@@ -371,7 +371,9 @@ export default async function Page({ params }: PageProps) {
           ) : (
             <p className="border border-dashed border-[#2a2a2a] p-4 text-sm text-[#888]">tarkov.dev lists no objectives for this quest.</p>
           )}
-          {images && images.other.length > 0 && <WikiImages images={images.other} title="From the EFT Wiki" className="mt-1" />}
+          {images?.other.map((group) => (
+            <WikiImages key={group.section} images={group.images} title={`From the EFT Wiki: ${group.section}`} className="mt-1" />
+          ))}
         </Section>
 
         {quest.needs.length > 0 && (

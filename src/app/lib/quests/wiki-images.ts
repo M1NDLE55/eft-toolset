@@ -7,8 +7,8 @@ export interface PlacedWikiImages {
   sections: Map<string, QuestWikiImage[]>;
   /** Images matched to one objective, by objective id. */
   objectives: Record<string, QuestWikiImage[]>;
-  /** The rest, from sections the page leaves out (such as Objectives). */
-  other: QuestWikiImage[];
+  /** The rest, from sections the page leaves out (such as Requirements), by section in page order. */
+  other: { section: string; images: QuestWikiImage[] }[];
 }
 
 const norm = (text: string) => text.trim().toLowerCase();
@@ -76,7 +76,11 @@ export function placeWikiImages(
     }
     const objective = matchObjective(image, objectives, maps);
     if (objective) (placed.objectives[objective.id] ??= []).push(image);
-    else placed.other.push(image);
+    else {
+      const group = placed.other.find((entry) => norm(entry.section) === norm(image.section));
+      if (group) group.images.push(image);
+      else placed.other.push({ section: image.section, images: [image] });
+    }
   }
   return placed;
 }
