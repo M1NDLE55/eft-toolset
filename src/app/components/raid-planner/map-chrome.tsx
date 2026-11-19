@@ -3,7 +3,7 @@ import type { MapConfig } from "@/app/lib/raid-planner/types";
 import { cn } from "@/lib/utils";
 import { overlayPanel } from "./ui";
 
-export const MAP_STAGE_CLASS = "relative isolate h-[calc(100dvh-65px)] min-h-88 w-full overflow-hidden bg-[#050505]";
+export const MAP_STAGE_CLASS = "relative isolate h-[calc(100dvh-65px)] min-h-[22rem] w-full overflow-hidden bg-[#050505]";
 
 export const SVG_MAP_SOURCE = "https://github.com/the-hideout/tarkov-dev-svg-maps";
 export const CC_BY_NC_SA_4 = "https://creativecommons.org/licenses/by-nc-sa/4.0/";

@@ -79,6 +79,13 @@ describe("content size before first paint", () => {
     expect(applied()).toBe("1.5");
   });
 
+  it("applies a bare saved value, as the store also accepts", () => {
+    window.localStorage.setItem(CONTENT_SCALE_STORE.key, "137.5");
+    expect(readStore(CONTENT_SCALE_STORE)).toBe(137.5);
+    runScript();
+    expect(applied()).toBe("1.375");
+  });
+
   it("leaves the stylesheet default when nothing, the default or something invalid is saved", () => {
     runScript();
     expect(applied()).toBe("");
@@ -142,6 +149,20 @@ describe("content size after load", () => {
     act(() => option("Default (125%)").click());
     expect(applied()).toBe("");
     expect(readStore(CONTENT_SCALE_STORE)).toBe("default");
+  });
+
+  it("still applies a choice it could not save, and says so", () => {
+    const host = document.createElement("div");
+    document.body.appendChild(host);
+    act(() => createRoot(host).render(<ContentScaleSetting />));
+    vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => {
+      throw new Error("full");
+    });
+    const option = Array.from(host.querySelectorAll<HTMLButtonElement>("[role=radio]")).find((button) => button.textContent === "150%")!;
+    act(() => option.click());
+    expect(applied()).toBe("1.5");
+    expect(option.getAttribute("aria-checked")).toBe("true");
+    expect(host.querySelector("[role=alert]")?.textContent).toMatch(/Could not save/);
   });
 
   it("follows a change made in another tab", () => {

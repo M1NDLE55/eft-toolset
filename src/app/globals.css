@@ -32,7 +32,8 @@
  * Content size (Settings). Spacing, text and container widths are multiplied by --content-zoom,
  * which each element inherits, so `.unscaled` subtrees (header, footer) keep their size.
  * `inline` makes utilities use these expressions directly instead of reading the variables
- * once on :root. Breakpoints are not scaled.
+ * once on :root. Breakpoints are not scaled. Container-query variants (@sm: etc.) would read these
+ * --container-* values, where var() is invalid, so don't use them without unscaled sizes.
  */
 @theme inline {
   --spacing: calc(0.25rem * var(--content-zoom, 1));

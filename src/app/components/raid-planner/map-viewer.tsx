@@ -60,7 +60,7 @@ export function MapViewer({ mapKey, withGuide = false }: { mapKey: string; withG
   }
 
   return (
-    <div className={cn(MAP_STAGE_CLASS, withGuide && "h-[calc(100dvh-65px-2.75rem)]")}>
+    <div className={cn(MAP_STAGE_CLASS, withGuide && "h-[calc(100dvh-65px-(--spacing(11)))]")}>
       <LazyMapCanvas
         config={config}
         activeFloor={activeFloor}

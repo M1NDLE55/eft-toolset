@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { CONTENT_SCALES, DEFAULT_CONTENT_SCALE, type ContentScale } from "@/app/lib/settings/content-scale";
+import { applyContentScale, CONTENT_SCALES, contentScalePercent, type ContentScale } from "@/app/lib/settings/content-scale";
 import { setContentScale, useContentScale } from "@/app/lib/settings/store";
 import { useHydrated } from "@/app/lib/storage/use-store";
 import { cn } from "@/lib/utils";
 
 const OPTIONS: { value: ContentScale; label: string }[] = [
-  { value: "default", label: `Default (${DEFAULT_CONTENT_SCALE}%)` },
+  { value: "default", label: `Default (${contentScalePercent("default")}%)` },
   ...CONTENT_SCALES.map((percent) => ({ value: percent, label: `${percent}%` })),
 ];
 
@@ -24,6 +24,8 @@ export function ContentScaleSetting() {
       setFallback(null);
       setError("");
     } catch (reason) {
+      // Not saved, but still shown for this page so the selected option matches what you see.
+      applyContentScale(document.documentElement, scale);
       setFallback(scale);
       setError(reason instanceof Error ? reason.message : "Could not save this setting.");
     }

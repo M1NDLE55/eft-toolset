@@ -76,7 +76,7 @@ export function DiffList({
     <ul className="border border-[#1a1a1a] bg-[#0c0c0c]">
       <li
         aria-hidden
-        className="hidden grid-cols-[minmax(0,13rem)_minmax(0,1fr)_1.5rem_minmax(0,1fr)] gap-3 px-3 py-2 text-3xs font-bold uppercase tracking-widest text-[#888] sm:grid"
+        className="hidden grid-cols-[minmax(0,--spacing(52))_minmax(0,1fr)_--spacing(6)_minmax(0,1fr)] gap-3 px-3 py-2 text-3xs font-bold uppercase tracking-widest text-[#888] sm:grid"
       >
         <span>Slot</span>
         <span className="truncate">{leftLabel}</span>
@@ -90,7 +90,7 @@ export function DiffList({
         return (
           <li
             key={row.key}
-            className="grid grid-cols-[minmax(0,1fr)_1.25rem_minmax(0,1fr)] items-center gap-x-2 gap-y-1.5 border-t border-[#161616] px-3 py-2 sm:grid-cols-[minmax(0,13rem)_minmax(0,1fr)_1.5rem_minmax(0,1fr)] sm:gap-x-3"
+            className="grid grid-cols-[minmax(0,1fr)_--spacing(5)_minmax(0,1fr)] items-center gap-x-2 gap-y-1.5 border-t border-[#161616] px-3 py-2 sm:grid-cols-[minmax(0,--spacing(52))_minmax(0,1fr)_--spacing(6)_minmax(0,1fr)] sm:gap-x-3"
           >
             <span className="col-span-3 flex min-w-0 items-center gap-2 sm:col-span-1">
               <span
