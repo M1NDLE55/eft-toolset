@@ -7,6 +7,9 @@ import { resolveItemRoute } from "./item-route";
 import { JsonLd, breadcrumbList } from "@/app/components/seo/json-ld";
 import { itemPageDescription, itemPageTitle } from "@/app/lib/seo/item";
 import { ITEM_HUB_NAME } from "@/app/lib/seo/site-copy";
+import { ItemQuestLinks } from "@/app/components/item/item-quests";
+import { questsUsingItem } from "@/app/lib/quests/item-quests";
+import { loadQuestList } from "@/app/quests/load";
 
 interface ItemPageProps {
   params: Promise<{ itemName: string }>;
@@ -46,7 +49,13 @@ async function requestItemLayout() {
 export default async function Page({ params }: ItemPageProps) {
   const { gameMode, item, reference, canonical, renderedAt } = await resolveItemRoute((await params).itemName);
   if (!reference) return null;
-  const [layout, wiki] = await Promise.all([requestItemLayout(), item ? readItemWiki(item.id) : null]);
+  // The quest list is optional here: without it in time, the page just goes without its quest links.
+  const [layout, wiki, quests] = await Promise.all([
+    requestItemLayout(),
+    item ? readItemWiki(item.id) : null,
+    item ? loadQuestList() : undefined,
+  ]);
+  const usedBy = item && quests?.gameMode === gameMode ? questsUsingItem(quests.list, item.id) : null;
   return (
     <>
       {item && canonical && (
@@ -64,6 +73,7 @@ export default async function Page({ params }: ItemPageProps) {
         wiki={wiki}
         layout={{ id: layout.id, cards: layout.cards }}
       />
+      {usedBy && <ItemQuestLinks quests={usedBy} />}
     </>
   );
 }
