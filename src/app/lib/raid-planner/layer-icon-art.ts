@@ -164,8 +164,8 @@ export const ICON_ART: Record<IconId, IconArt> = {
   },
   "hazard-minefield": {
     shape: "triangle",
-    // Anti-personnel mine: dome on a plate with a trigger.
-    glyph: `<path ${S} d="M6 17.5a6 4.5 0 0 1 12 0h1.5v2.5h-15v-2.5z"/><path d="M12 13v-2.5M10 10.5h4"/>`,
+    // Round mine with spikes all around.
+    glyph: `<circle cx="12" cy="15.5" r="5.2" ${S}/><path d="M12 10.5L12 8.5M15.54 11.96L16.95 10.55M17 15.5L19 15.5M15.54 19.04L16.95 20.45M12 20.5L12 22.5M8.46 19.04L7.05 20.45M7 15.5L5 15.5M8.46 11.96L7.05 10.55"/>`,
   },
   "hazard-sniper": {
     shape: "triangle",
