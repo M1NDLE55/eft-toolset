@@ -2,7 +2,7 @@
 
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import Link from "next/link";
-import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useLayoutEffect, useState, type CSSProperties } from "react";
 import { X } from "lucide-react";
 import type { ItemReference } from "@/app/lib/cache/fetcher";
 import { useItem } from "@/app/lib/cache/hooks";
@@ -40,10 +40,11 @@ function useSheet() {
 
 /** Keeps the card against its link and on screen as its content loads or the window resizes. */
 function useAnchoredStyle(anchor: HTMLElement, enabled: boolean) {
-  const card = useRef<HTMLDivElement>(null);
-  const [style, setStyle] = useState<CSSProperties>({ visibility: "hidden" });
+  // The dialog's portal mounts after this component, so follow the element itself rather than a ref.
+  const [element, setElement] = useState<HTMLDivElement | null>(null);
+  // Transparent, not hidden, until placed: the dialog takes focus as it mounts.
+  const [style, setStyle] = useState<CSSProperties>({ opacity: 0 });
   useLayoutEffect(() => {
-    const element = card.current;
     if (!enabled || !element) return;
     const place = () => {
       const rect = anchor.getBoundingClientRect();
@@ -60,8 +61,8 @@ function useAnchoredStyle(anchor: HTMLElement, enabled: boolean) {
       observer?.disconnect();
       window.removeEventListener("resize", place);
     };
-  }, [anchor, enabled]);
-  return { card, style };
+  }, [anchor, element, enabled]);
+  return { setElement, style };
 }
 
 function LoadingBody() {
@@ -82,7 +83,7 @@ export function ItemRundownPopup({ target, onClose }: { target: RundownTarget; o
   const query = useItem(target.reference);
   const item = query.item;
   const sheet = useSheet();
-  const { card, style } = useAnchoredStyle(target.anchor, !sheet);
+  const { setElement, style } = useAnchoredStyle(target.anchor, !sheet);
   const error = query.error && !item;
   const missing = !item && !query.loading && !query.error;
 
@@ -91,7 +92,7 @@ export function ItemRundownPopup({ target, onClose }: { target: RundownTarget; o
       <DialogPrimitive.Portal>
         <DialogPrimitive.Overlay className={cn("fixed inset-0 z-50", sheet ? "bg-black/60" : "bg-transparent")} />
         <DialogPrimitive.Content
-          ref={card}
+          ref={setElement}
           aria-describedby={undefined}
           data-rundown-layout={sheet ? "sheet" : "card"}
           style={sheet ? undefined : style}
@@ -104,7 +105,7 @@ export function ItemRundownPopup({ target, onClose }: { target: RundownTarget; o
           onOpenAutoFocus={(event) => {
             // Start on the dialog itself, so a screen reader reads its name first.
             event.preventDefault();
-            card.current?.focus();
+            if (event.target instanceof HTMLElement) event.target.focus();
           }}
           onCloseAutoFocus={(event) => {
             event.preventDefault();

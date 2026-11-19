@@ -295,6 +295,10 @@ describe("item rundown popup", () => {
     anchor.focus();
     click(anchor);
     await settle();
+    // Placed against the link once its portal has mounted, and focused.
+    expect(dialog()!.dataset.rundownLayout).toBe("card");
+    expect(dialog()!.style.opacity).toBe("");
+    expect(dialog()!.style.top).toMatch(/px$/);
     expect(document.activeElement).toBe(dialog());
     key(document.activeElement!, "Escape");
     expect(dialog()).toBeNull();
