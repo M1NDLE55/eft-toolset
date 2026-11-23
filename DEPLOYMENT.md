@@ -6,9 +6,14 @@ www.eft-toolset.com from Vercel. DATA_ARCHITECTURE.md ("Platform") describes wha
 
 ## What the account needs
 
-- **Workers Paid plan.** It covers the 60-second CPU limit set in `wrangler.jsonc` (`limits.cpu_ms`;
-  the optimiser and cold data loads need more than the free plan's 10 ms), the static-asset file
-  count (more than the free plan allows), and Durable Objects with SQLite storage.
+- **Workers Paid plan.** It allows the CPU limit set in `wrangler.jsonc` (the optimiser and cold
+  data loads need far more than the free plan's 10 ms), the static-asset file count (more than the
+  free plan allows), and Durable Objects with SQLite storage.
+- **CPU limit per invocation**: `limits.cpu_ms` is 40 seconds, for requests and cron runs alike. It
+  equals the MCP tool deadline, so legitimate calls end at the app's own time limits with a clear
+  error first; only runaway work reaches it, which Cloudflare stops with error 1102 ("Worker
+  exceeded resource limits", outcome `exceededCpu` in the logs). It is a second guard beside the
+  account's spending limits. Limits apply only when deployed, not in `wrangler dev`.
 - **Workers KV**: one namespace for the binding `TARKOV_DATA`. Wrangler creates it on the first
   deploy (the binding has no `id`); after that, add the id it prints to `wrangler.jsonc` so later
   deploys don't depend on provisioning.

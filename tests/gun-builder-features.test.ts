@@ -262,6 +262,35 @@ describe("optimiser", () => {
     ).rejects.toBeDefined();
     await expect(optimize({ itemId: "missing", slots: {} }, data, {})).rejects.toThrow(/weapon details/i);
   });
+  it("lets a time limit fire even when the clock does not move during the run", async () => {
+    // Workers advance Date.now() only between I/O events, so the optimiser must yield on its own.
+    const data = lookup(
+      gun([slot("grip", ["g1", "g2", "g3"]), slot("stock", ["s1", "s2", "s3"]), slot("muzzle", ["m1", "m2", "m3"])]),
+      ...[1, 2, 3].flatMap((n) => [
+        item(`g${n}`, { ergonomics: n * 3, traderPriceRUB: n * 4_000 }),
+        item(`s${n}`, { ergonomics: n * 2, traderPriceRUB: n * 5_000 }),
+        item(`m${n}`, { ergonomics: n, traderPriceRUB: n * 3_000 }),
+      ])
+    );
+    const options: OptimizeOptions = { goal: "ergonomics", priceSources: BOTH, budget: 14_000 };
+    let total = 0;
+    await optimizeBuild(bare, data, options, { onProgress: (count) => (total = count) });
+    expect(total).toBeGreaterThan(8);
+
+    const now = vi.spyOn(Date, "now").mockReturnValue(1_000);
+    try {
+      const controller = new AbortController();
+      setTimeout(() => controller.abort(), 0);
+      let seen = 0;
+      await expect(
+        optimizeBuild(bare, data, options, { signal: controller.signal, onProgress: (count) => (seen = count) })
+      ).rejects.toBeDefined();
+      expect(seen).toBeLessThan(total);
+    } finally {
+      now.mockRestore();
+    }
+  });
+
   it("keeps a magazine, even when it is optional and the budget is tight", async () => {
     const data = lookup(
       gun([slot("magazine", ["mag"], { nameId: "mod_magazine" })], { traderPriceRUB: 10_000 }),

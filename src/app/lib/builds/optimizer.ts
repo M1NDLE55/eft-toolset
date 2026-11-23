@@ -119,12 +119,18 @@ interface Evaluation {
   rank: number;
 }
 
-function timeSlicedPause(sliceMs = 12) {
+// On Workers the clock only moves between I/O events, so a run that never yields would never see
+// time pass, and its time limit (an AbortSignal timer) could never fire. Yielding after a fixed
+// number of evaluations as well as after a time slice lets the clock and the timer advance.
+function timeSlicedPause(sliceMs = 12, everyCalls = 8) {
   let last = Date.now();
+  let calls = 0;
   return async () => {
-    if (Date.now() - last < sliceMs) return;
+    calls += 1;
+    if (Date.now() - last < sliceMs && calls < everyCalls) return;
     await new Promise<void>((resolve) => setTimeout(resolve, 0));
     last = Date.now();
+    calls = 0;
   };
 }
 

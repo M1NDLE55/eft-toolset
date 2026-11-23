@@ -7,8 +7,12 @@
   "compatibility_flags": ["nodejs_compat"],
   "observability": { "enabled": true },
   "limits": {
-    // Optimiser runs and cold data loads are CPU-heavy; the default is 30 s.
-    "cpu_ms": 60000
+    // CPU time allowed per invocation (requests and cron runs), a guard against runaway work. It
+    // matches the MCP tool deadline (DEFAULT_MCP_LIMITS.toolDeadlineMs): CPU time never exceeds
+    // wall time, so a legitimate call stops at the app's own deadlines (the optimiser's 20 s, the
+    // tool's 40 s) with a clear error before this limit cuts it off, and only work that ignores
+    // them reaches it. Keep it at or above toolDeadlineMs if that changes. Maximum 300000.
+    "cpu_ms": 40000
   },
   "assets": {
     "binding": "ASSETS",
