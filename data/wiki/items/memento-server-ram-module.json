@@ -1,8 +1,8 @@
 {
   "title": "Memento Server RAM Module",
   "url": "https://escapefromtarkov.fandom.com/wiki/Memento_Server_RAM_Module",
-  "revisionId": 360587,
-  "lastEdited": "2026-09-18T18:49:30Z",
+  "revisionId": 367988,
+  "lastEdited": "2026-11-14T21:09:29Z",
   "kind": "item",
   "categories": [
     "Electronics"
@@ -25,7 +25,7 @@
     {
       "heading": "Icebreaker",
       "level": 3,
-      "text": "- Inside C-1 room on servers racks on level 7\n\n- Inside the archives room on level 4\n\n- Inside the central control station room on level 0\n- Inside room No. 15 on level 3\n\n- Inside the bridge on level 9\n\n- Next to the staircase on level 7"
+      "text": "- Inside the central control station room on level 0\n- Inside room No. 15 on level 3\n\n- Inside the archives room on level 4\n\n- Inside C-1 room on servers racks on level 7\n\n- Next to the staircase on level 7\n\n- Inside the bridge on level 9"
     }
   ]
 }

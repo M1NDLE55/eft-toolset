@@ -1,15 +1,15 @@
 {
   "title": "Cast the Net",
   "url": "https://escapefromtarkov.fandom.com/wiki/Cast_the_Net",
-  "revisionId": 365279,
-  "lastEdited": "2026-10-27T23:48:01Z",
+  "revisionId": 368092,
+  "lastEdited": "2026-11-15T00:20:32Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov, Shoreline, Ground Zero",
+    "location": "Shoreline, Ground Zero",
     "given by": "Prapor",
     "previous": "Uninvited Guests - Part 2",
     "leads to": "Know Your Enemy",
@@ -34,7 +34,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Plant a WI-FI Camera in the Ural truck near the hydroelectric power station on Shoreline\n- Plant a WI-FI Camera in the excavator at the stream near the smugglers' base on Shoreline\n- Plant a WI-FI Camera on the concrete mixer truck at the collapsed crane on Streets of Tarkov\n- Plant a WI-FI Camera on the bio toilet near the Rodina cinema on Streets of Tarkov\n- Plant a WI-FI Camera in the cargo truck cabin near Mira Ave on Ground Zero\n- Plant a WI-FI Camera inside the yellow bus in the underground tunnel on Ground Zero"
+      "text": "- Plant a WI-FI Camera in the Ural truck near the hydroelectric power station on Shoreline\n- Plant a WI-FI Camera in the excavator at the stream near the smugglers' base on Shoreline\n- Plant a WI-FI Camera in the cargo truck cabin near Mira Ave on Ground Zero\n- Plant a WI-FI Camera inside the yellow bus in the underground tunnel on Ground Zero"
     },
     {
       "heading": "Rewards",
@@ -49,15 +49,10 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| WI-FI Camera | 6 | Required | N/A | Can be purchased from Mechanic LL1. |\nIn this quest you have to go on Shoreline, Streets of Tarkov and Ground Zero to place multiple WI-FI Camera at specific spots. They can be placed in any order."
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| WI-FI Camera | 4 | Required | N/A | Can be purchased from Mechanic LL1. |\nIn this quest you have to go on Shoreline and Ground Zero to place multiple WI-FI Camera at specific spots. They can be placed in any order."
     },
     {
       "heading": "Shoreline",
-      "level": 3,
-      "text": ""
-    },
-    {
-      "heading": "Streets of Tarkov",
       "level": 3,
       "text": ""
     },
@@ -88,27 +83,6 @@
       "caption": "The ural truck next to the power station.",
       "section": "Guide",
       "subsection": "Shoreline"
-    },
-    {
-      "file": "Cast_the_Net_Streets_of_Tarkov_Map.png",
-      "hashPath": "6/6a",
-      "caption": "Location of the places to place the wi-fi camera.",
-      "section": "Guide",
-      "subsection": "Streets of Tarkov"
-    },
-    {
-      "file": "Cast_the_Net_Streets_of_Tarkov_Camera_1.png",
-      "hashPath": "f/fc",
-      "caption": "At the mixer truck next to the collapsed crane.",
-      "section": "Guide",
-      "subsection": "Streets of Tarkov"
-    },
-    {
-      "file": "Cast_the_Net_Streets_of_Tarkov_Camera_2.png",
-      "hashPath": "c/c8",
-      "caption": "The bio toilets in front of the Rodina cinema.",
-      "section": "Guide",
-      "subsection": "Streets of Tarkov"
     },
     {
       "file": "Cast_the_Net_Ground_Zero_Map.png",

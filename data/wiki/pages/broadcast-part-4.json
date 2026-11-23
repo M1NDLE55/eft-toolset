@@ -1,19 +1,18 @@
 {
   "title": "Broadcast - Part 4",
   "url": "https://escapefromtarkov.fandom.com/wiki/Broadcast_-_Part_4",
-  "revisionId": 366602,
-  "lastEdited": "2026-10-31T05:10:05Z",
+  "revisionId": 368326,
+  "lastEdited": "2026-11-20T20:38:54Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Jaeger",
+    "location": "Streets of Tarkov",
     "previous": "Broadcast - Part 3",
-    "leads to": "Broadcast - Part 5",
-    "reqkappa": "No"
+    "leads to": "Broadcast - Part 5"
   },
   "sections": [
     {

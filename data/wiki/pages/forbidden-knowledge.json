@@ -1,8 +1,8 @@
 {
   "title": "Forbidden Knowledge",
   "url": "https://escapefromtarkov.fandom.com/wiki/Forbidden_Knowledge",
-  "revisionId": 365436,
-  "lastEdited": "2026-10-27T23:50:40Z",
+  "revisionId": 367883,
+  "lastEdited": "2026-11-12T18:36:11Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -33,7 +33,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Locate and obtain 3 14-4 KORD SSDs\n- Hand over the found intel"
+      "text": "- Locate and obtain 2 14-4 KORD SSDs\n- Hand over the found intel"
     },
     {
       "heading": "Rewards",
@@ -43,7 +43,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| 14-4 KORD SSD | 3 | Required | No | Can be looted off Black Division |\nIn this quest you have to obtain and hand over three 14-4 KORD SSDs to Fence. The SSDs can be found on Black Division."
+      "text": "| Item name | Amount | Requirement | Find in Raid | Notes |\n| 14-4 KORD SSD | 2 | Required | No | Can be looted off Black Division |\nIn this quest you have to obtain and hand over two 14-4 KORD SSDs to Fence. The SSDs can be found on Black Division."
     }
   ]
 }

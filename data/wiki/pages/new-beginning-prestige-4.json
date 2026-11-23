@@ -1,8 +1,8 @@
 {
   "title": "New Beginning (Prestige 4)",
   "url": "https://escapefromtarkov.fandom.com/wiki/New_Beginning_(Prestige_4)",
-  "revisionId": 365639,
-  "lastEdited": "2026-10-27T23:54:05Z",
+  "revisionId": 368415,
+  "lastEdited": "2026-11-20T23:25:59Z",
   "kind": "quest",
   "categories": [
     "Quests",
@@ -10,10 +10,11 @@
   ],
   "redirects": [],
   "infobox": {
-    "location": "The Lab, Streets of Tarkov, Interchange",
     "given by": "Ragman",
-    "related2": "New Beginning (Prestige 5)",
-    "reqkappa": "No"
+    "location": "Interchange, Streets of Tarkov, The Lab",
+    "PMC level": "PvP: 40, PvE: 35",
+    "previous": "New Beginning (Prestige 3)",
+    "leads to": "New Beginning (Prestige 5)"
   },
   "sections": [
     {
@@ -25,11 +26,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Always good to see you on my doorstep! Not bored, are you? What, am I repeating myself again? Hey come on, it's just a little joke! Alright, down to business. The lists are constantly being updated, and you know our reputations are on the line. You know that you're not going anywhere in Tarkov without it. So we have to get this job done. I've just been handed the new list... What, you've already done some of these? Cool, easier for you. You gotta look on the bright side, brother! Otherwise, you're not gonna live long. Go ahead, show all those list makers how tough you are!\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 40 to start this quest (35 in the PvE mode).\n- Must have Prestige level 3"
     },
     {
       "heading": "Objectives",

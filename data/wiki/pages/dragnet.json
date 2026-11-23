@@ -1,18 +1,17 @@
 {
   "title": "Dragnet",
   "url": "https://escapefromtarkov.fandom.com/wiki/Dragnet",
-  "revisionId": 366614,
-  "lastEdited": "2026-10-31T05:31:52Z",
+  "revisionId": 368341,
+  "lastEdited": "2026-11-20T20:50:16Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Factory",
     "given by": "Jaeger",
-    "LL requirement": "2",
-    "reqkappa": "Yes"
+    "location": "Factory",
+    "LL requirement": "2"
   },
   "sections": [
     {

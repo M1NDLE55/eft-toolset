@@ -1,8 +1,8 @@
 {
   "title": "Hindsight 20/20",
   "url": "https://escapefromtarkov.fandom.com/wiki/Hindsight_20/20",
-  "revisionId": 367429,
-  "lastEdited": "2026-11-03T13:47:32Z",
+  "revisionId": 368379,
+  "lastEdited": "2026-11-20T21:40:13Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -24,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"New assignment for ya. The driver still has someone helping him, and he knows too much to be left alone. If this shithead leaks my stashes, I'm gonna have to reorganize the whole fucking network! The lads are already looking for new spots for merchandise drop-offs and ammo storage. You need to check one of these points, it's supposedly somewhere under the large mountain in Priozersk. If the tip is accurate, you can leave the supplies there for my crew. We need Russian armor-piercing ammo specifically. Keep your NATO ammo and other junk to yourself.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 6 hours after completion of Route Deviation"
     },
     {
       "heading": "Objectives",

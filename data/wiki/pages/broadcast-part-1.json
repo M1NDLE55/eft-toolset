@@ -1,18 +1,18 @@
 {
   "title": "Broadcast - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Broadcast_-_Part_1",
-  "revisionId": 365259,
-  "lastEdited": "2026-10-27T23:47:40Z",
+  "revisionId": 368062,
+  "lastEdited": "2026-11-14T22:49:09Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Mechanic",
-    "leads to": "Broadcast - Part 2",
-    "reqkappa": "Yes"
+    "location": "Lighthouse",
+    "LL requirement": "2",
+    "leads to": "Broadcast - Part 2"
   },
   "sections": [
     {
@@ -24,6 +24,11 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hello, friend. I've been thinking about something. It's starting to seem to me that I don't really understand anything in life. Come, sit down... People are saying there's a live broadcast going somewhere in the city. They say that someone is performing surgeries and filming it on their camera. I'd understand if it was an actually good willed doctor helping people. I would even understand if there was an organ trade, although that in itself is disgusting. But tell me, why stream this? Is this a kink for some perverted oligarchs? I honestly don't have an answer. But I do know that this broadcast must be shut down. Can you put a jammer near them?\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Reach Loyalty Level 2 with Jaeger."
     },
     {
       "heading": "Objectives",

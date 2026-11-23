@@ -1,19 +1,18 @@
 {
   "title": "Hidden Layer",
   "url": "https://escapefromtarkov.fandom.com/wiki/Hidden_Layer",
-  "revisionId": 365513,
-  "lastEdited": "2026-10-27T23:51:58Z",
+  "revisionId": 368081,
+  "lastEdited": "2026-11-14T23:14:03Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Mechanic",
+    "location": "Shoreline",
     "previous": "Needle in a Haystack",
-    "leads to": "Offensive Reconnaissance, Sensory Analysis - Part 1 (+30min)",
-    "reqkappa": "No"
+    "leads to": "Offensive Reconnaissance, Sensory Analysis - Part 1 (+30min)"
   },
   "sections": [
     {

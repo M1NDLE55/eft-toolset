@@ -1,19 +1,18 @@
 {
   "title": "Forester's Duty",
   "url": "https://escapefromtarkov.fandom.com/wiki/Forester's_Duty",
-  "revisionId": 366616,
-  "lastEdited": "2026-10-31T05:37:46Z",
+  "revisionId": 368344,
+  "lastEdited": "2026-11-20T20:52:08Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse, Shoreline",
     "given by": "Jaeger",
+    "location": "Lighthouse, Shoreline",
     "LL requirement": "3",
-    "previous": "Nostalgia",
-    "reqkappa": "No"
+    "LL quests": "4"
   },
   "sections": [
     {

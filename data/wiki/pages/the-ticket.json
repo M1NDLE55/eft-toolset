@@ -1,17 +1,21 @@
 {
   "title": "The Ticket",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Ticket",
-  "revisionId": 367597,
-  "lastEdited": "2026-11-07T20:07:07Z",
+  "revisionId": 368466,
+  "lastEdited": "2026-11-22T17:06:13Z",
   "kind": "quest",
   "categories": [
     "Story chapters",
     "Table Progress Tracking"
   ],
   "redirects": [
+    "Major TerraGroup evidence",
     "Major TerraGroup evidence list",
+    "Major evidence",
     "Major evidence list",
+    "Minor TerraGroup evidence",
     "Minor TerraGroup evidence list",
+    "Minor evidence",
     "Minor evidence list",
     "Terminal guide"
   ],
@@ -72,7 +76,7 @@
     {
       "heading": "Arrive at the entrance pathway to the port Terminal",
       "level": 3,
-      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Notes |\n| Reprogrammed RFID keycard with Mr. Kerman's hash codes; +; Secure container Alpha-1 with TerraGroup evidence | Reprogrammed RFID keycard with Mr. Kerman's hash codes; +; Secure container Alpha-1 with TerraGroup evidence | 1 | Used only for the Savior ending. |\n| OR |\n| RFID keycard with unknown name | RFID keycard with unknown name | 1 | Used only for the Debtor ending. |\n| OR |\n| Prapor's letter for the port checkpoint | Prapor's letter for the port checkpoint | 1 | Used only for the Survivor ending. |\n| OR |\n| Reprogrammed RFID keycard with Prapor's hash codes | Reprogrammed RFID keycard with Prapor's hash codes | 1 | Used only for the Fallen ending. |\n\nYou will have to use the corresponding access item on the keycard swiping system, or the intercom call button for the Survivor ending on the intercom between the times 21:00 and 06:00. The corresponding access item will be accepted and the intercom will tell you to proceed to the gate. If you do not have a proper access item, or it is the wrong time of day, the guard will deny you entry via the intercom."
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Notes |\n| Reprogrammed RFID keycard with Mr. Kerman's hash codes; +; Secure container Alpha-1 with TerraGroup evidence | Reprogrammed RFID keycard with Mr. Kerman's hash codes; +; Secure container Alpha-1 with TerraGroup evidence | 1 | Used for the Savior ending. |\n| OR |\n| RFID keycard with unknown name | RFID keycard with unknown name | 1 | Used for the Debtor ending. |\n| OR |\n| Prapor's letter for the port checkpoint | Prapor's letter for the port checkpoint | 1 | Used for the Survivor ending. |\n| OR |\n| Reprogrammed RFID keycard with Prapor's hash codes | Reprogrammed RFID keycard with Prapor's hash codes | 1 | Used for the Fallen ending. |\n\nYou will have to use the corresponding access item on the keycard swiping system, or the intercom call button for the Survivor ending on the intercom between the times 21:00 and 06:00. The corresponding access item will be accepted and the intercom will tell you to proceed to the gate. If you do not have a proper access item, or it is the wrong time of day, the guard will deny you entry via the intercom."
     },
     {
       "heading": "Access the port Terminal",
@@ -92,7 +96,7 @@
     {
       "heading": "Locate the armory with your confiscated equipment",
       "level": 3,
-      "text": "| Item name | Amount | Notes |\n| Armory key | 1 | Needed to open the armory door. |\n\nYou will need to find your way to the armory building, and enter the armory to retrieve your equipment, as well as the Secure container Alpha-1 when doing the Savior ending route. You will have to find the corresponding key on your way to the armory. Once you have retrieved your equipment and have exited the armory to the west, a squad of Black Division operatives will approach the armory building from the southwest. You will have to fight them in order to continue to the next objective"
+      "text": "| Item name | Amount | Notes |\n| Armory key | 1 | Needed to open the armory door. |\n| Secure container Alpha-1 with TerraGroup evidence | 1 | Required for the \"Zubr Boat\" extraction when doing the Savior ending. |\n\nYou will need to find your way to the armory building, and enter the armory to retrieve your equipment, as well as the Secure container Alpha-1 when doing the Savior ending. You will have to find the corresponding key on your way to the armory. Once you have retrieved your equipment and have exited the armory to the west, a squad of Black Division operatives will approach the armory building from the southwest. You will have to fight them in order to continue to the next objective"
     },
     {
       "heading": "Obtain the keycard to unlock the service passage",
@@ -116,7 +120,7 @@
     },
     {
       "heading": "Toolset spawns",
-      "level": 5,
+      "level": 4,
       "text": "Three Toolsets can be found in every raid on Terminal in set locations."
     },
     {
@@ -188,8 +192,8 @@
       "subsection": "Arrive at the entrance pathway to the port Terminal"
     },
     {
-      "file": "Tour_Shoreline_Intercom.png",
-      "hashPath": "a/ad",
+      "file": "ShorelineIMIntercomButton.png",
+      "hashPath": "8/86",
       "caption": "The intercom where you need to swipe the keycard or use the call button for the Survivor ending.",
       "section": "Terminal Guide",
       "subsection": "Arrive at the entrance pathway to the port Terminal"
@@ -218,7 +222,7 @@
     {
       "file": "Armory_key_Map.png",
       "hashPath": "f/f6",
-      "caption": "The location of the Armory on the map.",
+      "caption": "The location of the armory on the map.",
       "section": "Terminal Guide",
       "subsection": "Locate the armory with your confiscated equipment"
     },

@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - MP-133",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_MP-133",
-  "revisionId": 364404,
-  "lastEdited": "2026-10-13T19:18:14Z",
+  "revisionId": 367994,
+  "lastEdited": "2026-11-14T21:15:56Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,8 +12,7 @@
   ],
   "infobox": {
     "given by": "Mechanic",
-    "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL requirement": "1"
   },
   "sections": [
     {

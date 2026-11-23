@@ -1,8 +1,8 @@
 {
   "title": "Payback",
   "url": "https://escapefromtarkov.fandom.com/wiki/Payback",
-  "revisionId": 365692,
-  "lastEdited": "2026-10-27T23:55:00Z",
+  "revisionId": 368361,
+  "lastEdited": "2026-11-20T21:12:52Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -25,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Well, the situation became plain enough. This group of hotshots is, as it turns out, run by Glukhar, an ex-marine who settled at the Reserve base with his crew. That's where he took the documents you planted. Who'd have thought he'd have the nerve to undermine me? Well, he signed his own sentence. Hunt them down and settle the matter. When it's done, give a signal with a flare rocket from high ground, and I'll send men to their lair to sort out their junk. We need to find out what else they've been digging up. As soon as you've fired the signal, you take the shortest possible route straight to me.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 10 hours after completion of Return the Favor"
     },
     {
       "heading": "Objectives",

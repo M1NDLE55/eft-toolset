@@ -1,18 +1,18 @@
 {
   "title": "Corporate Perks",
   "url": "https://escapefromtarkov.fandom.com/wiki/Corporate_Perks",
-  "revisionId": 366143,
-  "lastEdited": "2026-10-28T23:10:54Z",
+  "revisionId": 368067,
+  "lastEdited": "2026-11-14T22:52:59Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Mechanic",
+    "location": "Streets of Tarkov",
     "LL requirement": "2",
-    "reqkappa": "No"
+    "LL quests": "1"
   },
   "sections": [
     {

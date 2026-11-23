@@ -1,8 +1,8 @@
 {
   "title": "The Tarkov Shooter - Part 3",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Shooter_-_Part_3",
-  "revisionId": 366567,
-  "lastEdited": "2026-10-31T04:20:50Z",
+  "revisionId": 368300,
+  "lastEdited": "2026-11-20T20:05:51Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,8 +13,7 @@
   "infobox": {
     "given by": "Jaeger",
     "previous": "The Tarkov Shooter - Part 2",
-    "leads to": "The Tarkov Shooter - Part 4",
-    "reqkappa": "Yes"
+    "leads to": "The Tarkov Shooter - Part 4"
   },
   "sections": [
     {

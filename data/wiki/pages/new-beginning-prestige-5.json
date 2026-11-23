@@ -1,8 +1,8 @@
 {
   "title": "New Beginning (Prestige 5)",
   "url": "https://escapefromtarkov.fandom.com/wiki/New_Beginning_(Prestige_5)",
-  "revisionId": 365640,
-  "lastEdited": "2026-10-27T23:54:06Z",
+  "revisionId": 368416,
+  "lastEdited": "2026-11-20T23:27:31Z",
   "kind": "quest",
   "categories": [
     "Quests",
@@ -10,10 +10,11 @@
   ],
   "redirects": [],
   "infobox": {
-    "location": "The Lab, Streets of Tarkov, Interchange, Customs",
     "given by": "Ragman",
-    "related2": "New Beginning (Prestige 6)",
-    "reqkappa": "No"
+    "location": "Customs, Interchange, Streets of Tarkov, The Lab",
+    "PMC level": "PvP: 47, PvE: 45",
+    "previous": "New Beginning (Prestige 4)",
+    "leads to": "New Beginning (Prestige 6)"
   },
   "sections": [
     {
@@ -25,11 +26,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Heya, brother! You probably already know what this is about. Yes, those same lists you really can't afford to drop out of. So what does that mean? That's right, we keep working and showing just how good we are. The tasks are the same, just with a few small changes. Yup, it gets harder each time, but isn't that how life always is? Alright, get to work.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 47 to start this quest (45 in the PvE mode).\n- Must have Prestige level 4"
     },
     {
       "heading": "Objectives",

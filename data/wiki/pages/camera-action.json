@@ -1,8 +1,8 @@
 {
   "title": "Camera, Action!",
   "url": "https://escapefromtarkov.fandom.com/wiki/Camera%2C_Action!",
-  "revisionId": 365272,
-  "lastEdited": "2026-10-27T23:47:54Z",
+  "revisionId": 368076,
+  "lastEdited": "2026-11-14T23:08:09Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Mechanic",
     "previous": "Serious Allegations",
-    "leads to": "Proper Comeback",
-    "reqkappa": "No"
+    "leads to": "Proper Comeback"
   },
   "sections": [
     {

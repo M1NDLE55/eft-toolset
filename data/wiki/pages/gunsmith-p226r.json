@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - P226R",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_P226R",
-  "revisionId": 364379,
-  "lastEdited": "2026-10-13T15:42:08Z",
+  "revisionId": 368024,
+  "lastEdited": "2026-11-14T22:20:20Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,7 +13,7 @@
   "infobox": {
     "given by": "Mechanic",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {

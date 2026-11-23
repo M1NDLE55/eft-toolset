@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - AS VAL",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_AS_VAL",
-  "revisionId": 364877,
-  "lastEdited": "2026-10-23T20:42:11Z",
+  "revisionId": 368013,
+  "lastEdited": "2026-11-14T22:15:58Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,7 +13,7 @@
   "infobox": {
     "given by": "Mechanic",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "5"
   },
   "sections": [
     {

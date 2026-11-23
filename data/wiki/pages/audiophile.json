@@ -1,18 +1,17 @@
 {
   "title": "Audiophile",
   "url": "https://escapefromtarkov.fandom.com/wiki/Audiophile",
-  "revisionId": 367869,
-  "lastEdited": "2026-11-12T00:42:43Z",
+  "revisionId": 368180,
+  "lastEdited": "2026-11-18T18:07:56Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Ragman",
-    "LL requirement": "3",
-    "reqkappa": "No"
+    "location": "Streets of Tarkov",
+    "LL requirement": "3"
   },
   "sections": [
     {

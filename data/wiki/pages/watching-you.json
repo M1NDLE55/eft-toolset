@@ -1,18 +1,17 @@
 {
   "title": "Watching You",
   "url": "https://escapefromtarkov.fandom.com/wiki/Watching_You",
-  "revisionId": 366017,
-  "lastEdited": "2026-10-28T00:00:48Z",
+  "revisionId": 368065,
+  "lastEdited": "2026-11-14T22:51:00Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Mechanic",
-    "LL requirement": "2",
-    "reqkappa": "No"
+    "location": "Streets of Tarkov",
+    "LL requirement": "2"
   },
   "sections": [
     {

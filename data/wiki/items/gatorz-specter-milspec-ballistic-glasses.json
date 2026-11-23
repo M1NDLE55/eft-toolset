@@ -1,8 +1,8 @@
 {
   "title": "Gatorz Specter MILSPEC ballistic glasses",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gatorz_Specter_MILSPEC_ballistic_glasses",
-  "revisionId": 361590,
-  "lastEdited": "2026-09-23T22:09:55Z",
+  "revisionId": 367929,
+  "lastEdited": "2026-11-12T21:30:49Z",
   "kind": "item",
   "categories": [
     "Eyewear"
@@ -13,7 +13,8 @@
     "slot": "Eyewear",
     "weight": "0.032 kg",
     "grid": "2x1",
-    "blindness protect": "15%",
+    "trader": "Peacekeeper LL1, after unlocking it in Season 1: KORD BREACH",
+    "blindness protect": "20%",
     "node": "689b3fffa1295e322207a677",
     "id": "item_equipment_glasses_gatorz_specter_ballistic"
   },

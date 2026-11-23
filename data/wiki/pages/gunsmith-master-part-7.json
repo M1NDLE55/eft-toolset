@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 7",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_7",
-  "revisionId": 364401,
-  "lastEdited": "2026-10-13T19:06:54Z",
+  "revisionId": 368032,
+  "lastEdited": "2026-11-14T22:26:02Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -14,8 +14,7 @@
   "infobox": {
     "given by": "Mechanic",
     "previous": "Gunsmith Master - Part 6",
-    "leads to": "Gunsmith Master - Part 8",
-    "reqkappa": "Yes"
+    "leads to": "Gunsmith Master - Part 8"
   },
   "sections": [
     {

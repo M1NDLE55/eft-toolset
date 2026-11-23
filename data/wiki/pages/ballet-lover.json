@@ -1,18 +1,18 @@
 {
   "title": "Ballet Lover",
   "url": "https://escapefromtarkov.fandom.com/wiki/Ballet_Lover",
-  "revisionId": 365234,
-  "lastEdited": "2026-10-27T23:47:14Z",
+  "revisionId": 368181,
+  "lastEdited": "2026-11-18T18:08:33Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Ragman",
+    "location": "Streets of Tarkov",
     "LL requirement": "2",
-    "reqkappa": "No"
+    "LL quests": "2"
   },
   "sections": [
     {

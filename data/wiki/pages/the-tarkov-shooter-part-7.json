@@ -1,8 +1,8 @@
 {
   "title": "The Tarkov Shooter - Part 7",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Shooter_-_Part_7",
-  "revisionId": 366582,
-  "lastEdited": "2026-10-31T04:34:17Z",
+  "revisionId": 368304,
+  "lastEdited": "2026-11-20T20:08:38Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,8 +12,7 @@
   ],
   "infobox": {
     "given by": "Jaeger",
-    "previous": "The Tarkov Shooter - Part 6",
-    "reqkappa": "Yes"
+    "previous": "The Tarkov Shooter - Part 6"
   },
   "sections": [
     {

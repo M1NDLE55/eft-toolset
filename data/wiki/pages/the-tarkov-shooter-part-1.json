@@ -1,8 +1,8 @@
 {
   "title": "The Tarkov Shooter - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Shooter_-_Part_1",
-  "revisionId": 366562,
-  "lastEdited": "2026-10-31T04:15:52Z",
+  "revisionId": 368298,
+  "lastEdited": "2026-11-20T20:03:40Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,8 +12,9 @@
   ],
   "infobox": {
     "given by": "Jaeger",
-    "leads to": "The Tarkov Shooter - Part 2",
-    "reqkappa": "No, but a subsequent quest Yes"
+    "LL requirement": "1",
+    "LL quests": "3",
+    "leads to": "The Tarkov Shooter - Part 2"
   },
   "sections": [
     {

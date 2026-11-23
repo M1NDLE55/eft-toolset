@@ -1,8 +1,8 @@
 {
   "title": "Combat Proven",
   "url": "https://escapefromtarkov.fandom.com/wiki/Combat_Proven",
-  "revisionId": 365316,
-  "lastEdited": "2026-10-27T23:48:39Z",
+  "revisionId": 368257,
+  "lastEdited": "2026-11-20T17:04:33Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,8 +11,7 @@
   "infobox": {
     "given by": "Ragman",
     "previous": "Special Offer",
-    "leads to": "Old Patterns",
-    "reqkappa": "No"
+    "leads to": "Old Patterns"
   },
   "sections": [
     {

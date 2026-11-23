@@ -1,8 +1,8 @@
 {
   "title": "Hunting Trip",
   "url": "https://escapefromtarkov.fandom.com/wiki/Hunting_Trip",
-  "revisionId": 365534,
-  "lastEdited": "2026-10-27T23:52:20Z",
+  "revisionId": 368296,
+  "lastEdited": "2026-11-20T19:59:35Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,7 +12,8 @@
   ],
   "infobox": {
     "given by": "Jaeger",
-    "LL requirement": "4"
+    "LL requirement": "4",
+    "LL quests": "1"
   },
   "sections": [
     {

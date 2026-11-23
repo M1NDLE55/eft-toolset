@@ -1,8 +1,8 @@
 {
   "title": "Following the Bread Crumbs",
   "url": "https://escapefromtarkov.fandom.com/wiki/Following_the_Bread_Crumbs",
-  "revisionId": 365435,
-  "lastEdited": "2026-10-27T23:50:39Z",
+  "revisionId": 368388,
+  "lastEdited": "2026-11-20T22:08:07Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -25,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"The message found its recipient. Rats on a sinking ship began to scurry. The customers gave orders to destroy all evidence of ongoing developments. Your mission is to infiltrate TerraGroup's lab, find the data carrier containing the data we need, and deliver it to me. What are you waiting for, a candy for good luck? Hurry up!\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 10 hours after completion of Provocation"
     },
     {
       "heading": "Objectives",

@@ -1,8 +1,8 @@
 {
   "title": "Killer Argument",
   "url": "https://escapefromtarkov.fandom.com/wiki/Killer_Argument",
-  "revisionId": 365581,
-  "lastEdited": "2026-10-27T23:53:07Z",
+  "revisionId": 368375,
+  "lastEdited": "2026-11-20T21:38:23Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -25,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Have you already heard that the driver has poached some of the traders over to his side? This kid's gotten a little far from his nest, so it's time to end it. I've made a deal with a certain someone to share some RPG ammo, enough to penetrate his BTR's armor. Now I need someone to deliver the package from the Scav house in Priozersk. Nobody knows about the delivery yet, so it should go smoothly. You gotta work fast, so that the driver doesn't find out what I'm preparing for him.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 6 hours after completion of Key Partner"
     },
     {
       "heading": "Objectives",

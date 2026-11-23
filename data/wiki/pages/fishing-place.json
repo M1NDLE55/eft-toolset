@@ -1,8 +1,8 @@
 {
   "title": "Fishing Place",
   "url": "https://escapefromtarkov.fandom.com/wiki/Fishing_Place",
-  "revisionId": 365431,
-  "lastEdited": "2026-10-27T23:50:35Z",
+  "revisionId": 368294,
+  "lastEdited": "2026-11-20T19:58:24Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,8 +12,7 @@
   ],
   "infobox": {
     "given by": "Jaeger",
-    "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL requirement": "3"
   },
   "sections": [
     {

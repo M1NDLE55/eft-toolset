@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - HK MP5",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_HK_MP5",
-  "revisionId": 364368,
-  "lastEdited": "2026-10-13T15:22:42Z",
+  "revisionId": 368018,
+  "lastEdited": "2026-11-14T22:16:47Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -14,7 +14,7 @@
   "infobox": {
     "given by": "Mechanic",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {

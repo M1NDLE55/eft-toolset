@@ -1,19 +1,18 @@
 {
   "title": "Vacate the Premises",
   "url": "https://escapefromtarkov.fandom.com/wiki/Vacate_the_Premises",
-  "revisionId": 366011,
-  "lastEdited": "2026-10-28T00:00:41Z",
+  "revisionId": 368263,
+  "lastEdited": "2026-11-20T17:10:20Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "The Labyrinth",
     "given by": "Ragman",
+    "location": "The Labyrinth",
     "previous": "Offensive Reconnaissance",
-    "leads to": "Keeper's Word",
-    "reqkappa": "No"
+    "leads to": "Keeper's Word"
   },
   "sections": [
     {

@@ -1,8 +1,8 @@
 {
   "title": "The Tarkov Shooter - Part 6",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Shooter_-_Part_6",
-  "revisionId": 367697,
-  "lastEdited": "2026-11-08T23:48:34Z",
+  "revisionId": 368303,
+  "lastEdited": "2026-11-20T20:08:08Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -14,8 +14,7 @@
     "given by": "Jaeger",
     "LL requirement": "4",
     "previous": "The Tarkov Shooter - Part 5",
-    "leads to": "The Tarkov Shooter - Part 7",
-    "reqkappa": "Yes"
+    "leads to": "The Tarkov Shooter - Part 7"
   },
   "sections": [
     {

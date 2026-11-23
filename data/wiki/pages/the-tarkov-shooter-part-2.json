@@ -1,8 +1,8 @@
 {
   "title": "The Tarkov Shooter - Part 2",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Shooter_-_Part_2",
-  "revisionId": 366565,
-  "lastEdited": "2026-10-31T04:18:35Z",
+  "revisionId": 368299,
+  "lastEdited": "2026-11-20T20:05:11Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -14,8 +14,7 @@
     "given by": "Jaeger",
     "LL requirement": "2",
     "previous": "The Tarkov Shooter - Part 1",
-    "leads to": "The Tarkov Shooter - Part 3",
-    "reqkappa": "Yes"
+    "leads to": "The Tarkov Shooter - Part 3"
   },
   "sections": [
     {

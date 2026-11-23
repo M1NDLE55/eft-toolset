@@ -1,8 +1,8 @@
 {
   "title": "The Good Times - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Good_Times_-_Part_1",
-  "revisionId": 365888,
-  "lastEdited": "2026-10-27T23:58:30Z",
+  "revisionId": 368334,
+  "lastEdited": "2026-11-20T20:44:11Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,6 +12,7 @@
     "given by": "Prapor",
     "location": "Factory",
     "LL requirement": "2",
+    "previous": "See requirements",
     "leads to": "Hell on Earth - Part 1, Quality Standard"
   },
   "sections": [
@@ -28,7 +29,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- This quest is only available to buyers of the \"Edge of Darkness\" edition of the game.\n- Must reach Loyalty Level 2 with Prapor, Therapist, Skier, Mechanic and Ragman."
+      "text": "- This quest is only available to buyers of the \"Edge of Darkness\" edition of the game.\n- Reach Loyalty Level 2 with Prapor, Therapist, Skier, Mechanic and Ragman."
     },
     {
       "heading": "Objectives",

@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - Vector 9x19",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_Vector_9x19",
-  "revisionId": 364382,
-  "lastEdited": "2026-10-13T15:44:20Z",
+  "revisionId": 368025,
+  "lastEdited": "2026-11-14T22:21:03Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,7 +13,7 @@
   "infobox": {
     "given by": "Mechanic",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {

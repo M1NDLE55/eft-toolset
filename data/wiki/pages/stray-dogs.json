@@ -1,18 +1,17 @@
 {
   "title": "Stray Dogs",
   "url": "https://escapefromtarkov.fandom.com/wiki/Stray_Dogs",
-  "revisionId": 366598,
-  "lastEdited": "2026-10-31T04:58:31Z",
+  "revisionId": 368320,
+  "lastEdited": "2026-11-20T20:34:47Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs, Woods, Shoreline, Lighthouse",
     "given by": "Jaeger",
-    "LL requirement": "4",
-    "reqkappa": "Yes"
+    "location": "Customs, Lighthouse, Shoreline, Woods",
+    "LL requirement": "4"
   },
   "sections": [
     {

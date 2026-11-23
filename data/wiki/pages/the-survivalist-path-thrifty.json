@@ -1,8 +1,8 @@
 {
   "title": "The Survivalist Path - Thrifty",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Thrifty",
-  "revisionId": 365931,
-  "lastEdited": "2026-10-27T23:59:14Z",
+  "revisionId": 368271,
+  "lastEdited": "2026-11-20T19:23:17Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,11 +11,10 @@
     "The survivalist path - Thrifty"
   ],
   "infobox": {
-    "location": "Woods",
     "given by": "Jaeger",
+    "location": "Woods",
     "LL requirement": "2",
-    "leads to": "The Survivalist Path - Zhivchik",
-    "reqkappa": "Yes"
+    "leads to": "The Survivalist Path - Zhivchik"
   },
   "sections": [
     {

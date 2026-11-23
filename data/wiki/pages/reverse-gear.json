@@ -1,15 +1,15 @@
 {
   "title": "Reverse Gear",
   "url": "https://escapefromtarkov.fandom.com/wiki/Reverse_Gear",
-  "revisionId": 365753,
-  "lastEdited": "2026-10-27T23:56:04Z",
+  "revisionId": 368351,
+  "lastEdited": "2026-11-20T21:00:38Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov, Shoreline, Ground Zero",
+    "location": "Shoreline, Ground Zero",
     "given by": "Prapor",
     "previous": "Know Your Enemy (+0-2hr)",
     "leads to": "Key to Understanding, Riding the Wave",
@@ -29,12 +29,12 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Must be playing in the Seasonal mode.\n- Unlocks 0-2 hours after completion of Know Your Enemy"
+      "text": "- Must be playing in the Seasonal mode."
     },
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Locate and obtain the Wi-Fi Camera from the Ural truck near the hydroelectric power station on Shoreline\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from the excavator at the stream near the smugglers' base on Shoreline\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from the concrete mixer truck at the collapsed crane on Streets of Tarkov\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from the bio toilet near the Rodina cinema on Streets of Tarkov\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from the cargo truck cabin near Mira Ave on Ground Zero\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from yellow bus in the underground tunnel on Ground Zero\n- Hand over the camera"
+      "text": "- Locate and obtain the Wi-Fi Camera from the Ural truck near the hydroelectric power station on Shoreline\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from the excavator at the stream near the smugglers' base on Shoreline\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from the cargo truck cabin near Mira Ave on Ground Zero\n- Hand over the camera\n- Locate and obtain the Wi-Fi Camera from yellow bus in the underground tunnel on Ground Zero\n- Hand over the camera"
     },
     {
       "heading": "Rewards",
@@ -44,15 +44,10 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera (quest item) | WI-FI Camera | 6 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to go to Shoreline, Streets of Tarkov and Ground Zero to locate and obtain multiple WI-FI Cameras at specific spots and then hand them over to Prapor. Note: The special item WI-FI Camera cannot be used for this quest."
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid | Notes |\n| WI-FI Camera (quest item) | WI-FI Camera | 4 | Handover item | Yes | This quest item can only be found if the quest is active.; When picked up, this item is transferred to the player's quest item inventory.; If the player fails to extract with this item, they will lose it. |\nIn this quest you have to go to Shoreline and Ground Zero to locate and obtain multiple WI-FI Cameras at specific spots and then hand them over to Prapor. Note: The special item WI-FI Camera cannot be used for this quest."
     },
     {
       "heading": "Shoreline",
-      "level": 3,
-      "text": ""
-    },
-    {
-      "heading": "Streets of Tarkov",
       "level": 3,
       "text": ""
     },
@@ -97,41 +92,6 @@
       "caption": "On the left edge of the truck's rear bumper.",
       "section": "Guide",
       "subsection": "Shoreline"
-    },
-    {
-      "file": "Cast_the_Net_Streets_of_Tarkov_Map.png",
-      "hashPath": "6/6a",
-      "caption": "Location of the places to find the wi-fi camera.",
-      "section": "Guide",
-      "subsection": "Streets of Tarkov"
-    },
-    {
-      "file": "Cast_the_Net_Streets_of_Tarkov_Camera_1.png",
-      "hashPath": "f/fc",
-      "caption": "At the mixer truck next to the collapsed crane.",
-      "section": "Guide",
-      "subsection": "Streets of Tarkov"
-    },
-    {
-      "file": "Cast_the_Net_SOT_Camera_1_close.png",
-      "hashPath": "6/63",
-      "caption": "The camera is located on the left backwheel of the truck.",
-      "section": "Guide",
-      "subsection": "Streets of Tarkov"
-    },
-    {
-      "file": "Cast_the_Net_Streets_of_Tarkov_Camera_2.png",
-      "hashPath": "c/c8",
-      "caption": "The bio toilets in front of the Rodina cinema.",
-      "section": "Guide",
-      "subsection": "Streets of Tarkov"
-    },
-    {
-      "file": "Cast_the_Net_SOT_Camera_2_close.png",
-      "hashPath": "4/4d",
-      "caption": "The camera is located inside the open toilet box.",
-      "section": "Guide",
-      "subsection": "Streets of Tarkov"
     },
     {
       "file": "Cast_the_Net_Ground_Zero_Map.png",

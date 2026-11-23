@@ -1,8 +1,8 @@
 {
   "title": "The Tarkov Shooter - Part 5",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Shooter_-_Part_5",
-  "revisionId": 366579,
-  "lastEdited": "2026-10-31T04:29:20Z",
+  "revisionId": 368302,
+  "lastEdited": "2026-11-20T20:07:37Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,8 +13,7 @@
   "infobox": {
     "given by": "Jaeger",
     "previous": "The Tarkov Shooter - Part 4",
-    "leads to": "The Tarkov Shooter - Part 6",
-    "reqkappa": "Yes"
+    "leads to": "The Tarkov Shooter - Part 6"
   },
   "sections": [
     {

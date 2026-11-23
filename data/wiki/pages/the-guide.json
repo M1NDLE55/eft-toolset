@@ -1,8 +1,8 @@
 {
   "title": "The Guide",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Guide",
-  "revisionId": 367704,
-  "lastEdited": "2026-11-08T23:53:32Z",
+  "revisionId": 368374,
+  "lastEdited": "2026-11-20T21:37:11Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -26,11 +26,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Come in, I have a high-paying assignment for you. Some important people from outside the region... require the services of a professional guide. Someone who can lead a group to their destination, provide cover, and not ask unnecessary questions. They are willing to pay very well for this. Do you think you are suitable for the job? Prove yourself, and I will vouch for you.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be Loyalty Level 4 to start this quest"
     },
     {
       "heading": "Objectives",

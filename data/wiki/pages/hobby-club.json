@@ -1,19 +1,19 @@
 {
   "title": "Hobby Club",
   "url": "https://escapefromtarkov.fandom.com/wiki/Hobby_Club",
-  "revisionId": 365522,
-  "lastEdited": "2026-10-27T23:52:07Z",
+  "revisionId": 368402,
+  "lastEdited": "2026-11-20T22:54:38Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Reserve, Customs",
     "given by": "Mechanic",
+    "location": "Customs, Reserve",
+    "PMC level": "45",
     "LL requirement": "4",
-    "leads to": "Fair Price - Part 1",
-    "reqkappa": "No"
+    "leads to": "Fair Price - Part 1"
   },
   "sections": [
     {
@@ -25,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Excellent, I've been waiting for you. I have a friend in the States, a very skilled weapons professional. He's obsessed with Russian firearms, and for several years now he's been working on his own project, called the AK-50. I don't think you've ever seen an AK that fires a .50 cal... The NATO one, I mean. So the project is finally finished, and he sent me a test sample. Such a heavy and specialized rifle is too risky to be imported in one piece, so we broke the package into several parts. Well guess what, things in Tarkov didn't go according to plan. Shocker, I know. The main body comes as one part, and it was seized in Atlantic waters. However I have the blueprint, so I need you to use it to build a new one for me. It certainly won't be easy in our circumstances. But at least you'll still have a copy of the blueprint for later use. The handguard comes with the gas tube, and it was somehow intercepted by Skier's thugs. This part took two years to assemble, fit, and test, and the cost of development and prototypes has already gone over a couple million. The dust cover was intercepted at one of the checkpoints already in Tarkov. I don't know which one, you'll have to search through all of them. But the barrel is definitely at the military base. Glukhar's personally organized an ambush on my convoy, and apparently knew about this shipment. You'll have to fight for it, or hope for some divine intervention. When you've collected all the parts, drop them off at the transmission tower shack near the gas station at the customs district. I'll ask my crew to deliver them from there, and after that I'll be able to manufacture the parts myself. And, of course, I won't forget your help.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 45 to start this quest."
     },
     {
       "heading": "Objectives",

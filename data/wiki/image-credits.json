@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-19T04:46:18.737Z",
+  "fetchedAt": "2026-11-23T07:04:03.068Z",
   "licence": {
     "name": "CC BY-NC-SA",
     "url": "https://www.fandom.com/licensing"
@@ -1221,16 +1221,6 @@
       "uploader": "EreshFR",
       "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Cast_the_Net_Ground_Zero_Map.png"
     },
-    "Cast_the_Net_SOT_Camera_1_close.png": {
-      "uploader": null,
-      "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Cast_the_Net_SOT_Camera_1_close.png",
-      "missing": true
-    },
-    "Cast_the_Net_SOT_Camera_2_close.png": {
-      "uploader": null,
-      "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Cast_the_Net_SOT_Camera_2_close.png",
-      "missing": true
-    },
     "Cast_the_Net_Shoreline_Camera_1.png": {
       "uploader": "EreshFR",
       "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Cast_the_Net_Shoreline_Camera_1.png"
@@ -1250,21 +1240,6 @@
     "Cast_the_Net_Shoreline_Map.png": {
       "uploader": "EreshFR",
       "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Cast_the_Net_Shoreline_Map.png"
-    },
-    "Cast_the_Net_Streets_of_Tarkov_Camera_1.png": {
-      "uploader": null,
-      "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Cast_the_Net_Streets_of_Tarkov_Camera_1.png",
-      "missing": true
-    },
-    "Cast_the_Net_Streets_of_Tarkov_Camera_2.png": {
-      "uploader": null,
-      "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Cast_the_Net_Streets_of_Tarkov_Camera_2.png",
-      "missing": true
-    },
-    "Cast_the_Net_Streets_of_Tarkov_Map.png": {
-      "uploader": null,
-      "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Cast_the_Net_Streets_of_Tarkov_Map.png",
-      "missing": true
     },
     "CeaseFireMap.png": {
       "uploader": "Muhawi",
@@ -3165,6 +3140,10 @@
     "Inside_West_wing_room_306.png": {
       "uploader": "Mehabr",
       "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Inside_West_wing_room_306.png"
+    },
+    "InterchangeMapByre3mr.jpg": {
+      "uploader": "Reemr-gpuser",
+      "filePage": "https://escapefromtarkov.fandom.com/wiki/File:InterchangeMapByre3mr.jpg"
     },
     "InterchangeMinibusLocations.jpg": {
       "uploader": "Muhawi",
@@ -5142,6 +5121,10 @@
       "uploader": "Muhawi",
       "filePage": "https://escapefromtarkov.fandom.com/wiki/File:ShorelineChurchInside.png"
     },
+    "ShorelineIMIntercomButton.png": {
+      "uploader": "Muhawi",
+      "filePage": "https://escapefromtarkov.fandom.com/wiki/File:ShorelineIMIntercomButton.png"
+    },
     "ShorelineLockedVillaBackEntrance.png": {
       "uploader": "Muhawi",
       "filePage": "https://escapefromtarkov.fandom.com/wiki/File:ShorelineLockedVillaBackEntrance.png"
@@ -6286,16 +6269,12 @@
       "uploader": "Titi4600",
       "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Topbrand.png"
     },
-    "Tour_Shoreline_Intercom.png": {
-      "uploader": "The3ncy",
-      "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Tour_Shoreline_Intercom.png"
-    },
     "Tour_Shoreline_Map.png": {
       "uploader": "Muhawi",
       "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Tour_Shoreline_Map.png"
     },
     "Tour_Shoreline_Tower.png": {
-      "uploader": "The3ncy",
+      "uploader": "Muhawi",
       "filePage": "https://escapefromtarkov.fandom.com/wiki/File:Tour_Shoreline_Tower.png"
     },
     "Tour_The_Lab_Escape_path_1.png": {

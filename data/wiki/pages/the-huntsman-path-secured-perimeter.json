@@ -1,18 +1,18 @@
 {
   "title": "The Huntsman Path - Secured Perimeter",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Secured_Perimeter",
-  "revisionId": 367744,
-  "lastEdited": "2026-11-09T00:40:26Z",
+  "revisionId": 368280,
+  "lastEdited": "2026-11-20T19:33:00Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Factory",
     "given by": "Jaeger",
+    "location": "Factory",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "2"
   },
   "sections": [
     {

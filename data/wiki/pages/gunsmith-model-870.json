@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - Model 870",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_Model_870",
-  "revisionId": 364370,
-  "lastEdited": "2026-10-13T15:29:15Z",
+  "revisionId": 368021,
+  "lastEdited": "2026-11-14T22:17:57Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,7 +13,7 @@
   "infobox": {
     "given by": "Mechanic",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "5"
   },
   "sections": [
     {

@@ -1,8 +1,8 @@
 {
   "title": "Snatch",
   "url": "https://escapefromtarkov.fandom.com/wiki/Snatch",
-  "revisionId": 365828,
-  "lastEdited": "2026-10-27T23:57:22Z",
+  "revisionId": 368363,
+  "lastEdited": "2026-11-20T21:13:02Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -25,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"You're here, good. Now listen carefully. My men went to the meeting place, their job was to replace the folder these snakes were so diligently preparing with the one I had arranged, but it's already been several hours since my group stopped responding. The last time they contacted me, they reported seeing a group of Rogues. Knight and his men are not aware of this operation, perhaps one of them interfered with the delivery. The first thing you must do is to check the Rogues' base and find the lost data, but don't go to them right away, or they'll figure out I'm involved and will start asking questions. Then you'll have to deliver it to the federal reserve base, a meeting place has been set up at the machinery and equipment repair center. Find that folder and leave at the base, and bring the real one to me. It's crucial to deliver this information to me. It's time to find out who these suicidal moles are.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 10 hours after completion of Missing Informant"
     },
     {
       "heading": "Objectives",

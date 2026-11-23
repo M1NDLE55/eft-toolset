@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - M4A1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_M4A1",
-  "revisionId": 364369,
-  "lastEdited": "2026-10-13T15:25:15Z",
+  "revisionId": 368020,
+  "lastEdited": "2026-11-14T22:17:23Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,8 +12,7 @@
   ],
   "infobox": {
     "given by": "Mechanic",
-    "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL requirement": "3"
   },
   "sections": [
     {

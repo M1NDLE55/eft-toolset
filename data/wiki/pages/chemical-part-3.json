@@ -1,8 +1,8 @@
 {
   "title": "Chemical - Part 3",
   "url": "https://escapefromtarkov.fandom.com/wiki/Chemical_-_Part_3",
-  "revisionId": 366076,
-  "lastEdited": "2026-10-28T01:13:24Z",
+  "revisionId": 368333,
+  "lastEdited": "2026-11-20T20:44:05Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -30,7 +30,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Must reach Loyalty Level 2 with Jaeger to obtain this quest."
+      "text": "- Reach Loyalty Level 2 with Jaeger to obtain this quest."
     },
     {
       "heading": "Objectives",

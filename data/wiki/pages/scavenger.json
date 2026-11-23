@@ -1,8 +1,8 @@
 {
   "title": "Scavenger",
   "url": "https://escapefromtarkov.fandom.com/wiki/Scavenger",
-  "revisionId": 365777,
-  "lastEdited": "2026-10-27T23:56:28Z",
+  "revisionId": 368174,
+  "lastEdited": "2026-11-18T18:04:32Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "given by": "Ragman",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "2"
   },
   "sections": [
     {

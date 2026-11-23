@@ -1,8 +1,8 @@
 {
   "title": "Compensation for Damage - Barkeep",
   "url": "https://escapefromtarkov.fandom.com/wiki/Compensation_for_Damage_-_Barkeep",
-  "revisionId": 365320,
-  "lastEdited": "2026-10-27T23:48:43Z",
+  "revisionId": 368407,
+  "lastEdited": "2026-11-20T23:04:15Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,6 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Fence",
+    "previous": "See requirements",
     "reqkappa": "No"
   },
   "sections": [

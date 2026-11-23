@@ -1,8 +1,8 @@
 {
   "title": "Tour",
   "url": "https://escapefromtarkov.fandom.com/wiki/Tour",
-  "revisionId": 366098,
-  "lastEdited": "2026-10-28T01:56:03Z",
+  "revisionId": 368459,
+  "lastEdited": "2026-11-22T15:17:16Z",
   "kind": "quest",
   "categories": [
     "Story chapters"
@@ -174,8 +174,8 @@
       "subsection": "Terminal"
     },
     {
-      "file": "Tour_Shoreline_Intercom.png",
-      "hashPath": "a/ad",
+      "file": "ShorelineIMIntercomButton.png",
+      "hashPath": "8/86",
       "caption": "The intercom",
       "section": "Guide",
       "subsection": "Terminal"

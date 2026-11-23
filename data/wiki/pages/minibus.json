@@ -1,18 +1,18 @@
 {
   "title": "Minibus",
   "url": "https://escapefromtarkov.fandom.com/wiki/Minibus",
-  "revisionId": 365619,
-  "lastEdited": "2026-10-27T23:53:46Z",
+  "revisionId": 368165,
+  "lastEdited": "2026-11-18T17:52:35Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Interchange",
     "given by": "Ragman",
+    "location": "Interchange",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "4"
   },
   "sections": [
     {
