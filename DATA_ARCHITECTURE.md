@@ -720,8 +720,14 @@ URL on previews, sending `x-vercel-protection-bypass` when Vercel provides
 Fallbacks, in order: the instance's copy of the feed; a refresh through the CDN; then, while the feed
 is failing (or a preview's protection refuses it), the items file read exactly as before (the copy in
 memory, a revalidation with json.tarkov.dev, or the deployment snapshot), with the feed's last prices
-laid over it if they are newer. On a cold instance whose first feed fetch is slow, the snapshot's own
-prices are used, marked stale. A read never fails while any copy exists.
+laid over it if they are newer. Because the static copy isn't refreshed while the feed works, it can
+be older than a page render's six-hour limit when the feed starts failing; while the feed's last
+prices are within it, a read uses them, marked stale, and the items file is fetched in the
+background. On a cold instance whose first feed fetch is slow, the snapshot's own prices are used,
+marked stale. A read never fails while any copy exists. A refresh that brings the same items file
+(the same ETag) keeps the instance's copy and only notes when it was confirmed, so projections and
+cached tool results built from it stay valid until tarkov.dev publishes new prices. `price.feed` is
+served over GET only, and the feed is fetched without following redirects.
 
 The feed lists every item tarkov.dev has, so items the static copy lacks mean a game patch: the
 instance then loads the items file once, in the background, and the item index follows it.
