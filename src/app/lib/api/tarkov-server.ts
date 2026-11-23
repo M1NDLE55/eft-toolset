@@ -561,8 +561,32 @@ export function tryAcquireOperationSlot() {
   return true;
 }
 
+// Page renders queue for a slot instead of giving up: a cached page waits for its data.
+const slotWaiters: Array<() => void> = [];
+
+export function waitForOperationSlot(signal: AbortSignal): Promise<void> {
+  if (tryAcquireOperationSlot()) return Promise.resolve();
+  return new Promise((resolve, reject) => {
+    const grant = () => {
+      signal.removeEventListener("abort", abort);
+      resolve();
+    };
+    const abort = () => {
+      const index = slotWaiters.indexOf(grant);
+      if (index >= 0) slotWaiters.splice(index, 1);
+      reject(signal.reason);
+    };
+    if (signal.aborted) return abort();
+    signal.addEventListener("abort", abort, { once: true });
+    slotWaiters.push(grant);
+  });
+}
+
 export function releaseOperationSlot() {
-  activeOperations = Math.max(0, activeOperations - 1);
+  // Hand the slot straight to a waiting render, if there is one.
+  const next = slotWaiters.shift();
+  if (next) next();
+  else activeOperations = Math.max(0, activeOperations - 1);
 }
 
 const OPERATION_VARIABLES: Record<TarkovOperation, readonly string[]> = {

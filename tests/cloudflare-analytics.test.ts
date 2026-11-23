@@ -19,12 +19,12 @@ describe("Cloudflare Web Analytics beacon", () => {
     expect(cloudflareBeaconAttribute("token<script>")).toBeNull();
   });
 
-  it("renders the deferred beacon with the request nonce", () => {
+  it("renders the deferred beacon", () => {
     process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN = "0123456789abcdef0123";
     try {
-      const html = renderToStaticMarkup(createElement(CloudflareAnalytics, { nonce: "abc" }));
+      const html = renderToStaticMarkup(createElement(CloudflareAnalytics));
       expect(html).toContain('src="https://static.cloudflareinsights.com/beacon.min.js"');
-      expect(html).toContain('nonce="abc"');
+      expect(html).not.toContain("nonce");
       expect(html).toContain("defer");
       expect(html).toContain(
         'data-cf-beacon="{&quot;token&quot;:&quot;0123456789abcdef0123&quot;,&quot;spa&quot;:true}"'
@@ -38,7 +38,7 @@ describe("Cloudflare Web Analytics beacon", () => {
     const previous = process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN;
     delete process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN;
     try {
-      expect(renderToStaticMarkup(createElement(CloudflareAnalytics, { nonce: "abc" }))).toBe("");
+      expect(renderToStaticMarkup(createElement(CloudflareAnalytics))).toBe("");
     } finally {
       if (previous === undefined) delete process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN;
       else process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN = previous;

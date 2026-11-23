@@ -4,8 +4,6 @@ import {
   ITEM_CARDS,
   PRESET_VIEWS,
   copyName,
-  decodeViewCookie,
-  encodeViewCookie,
   isItemView,
   moveCard,
   presetView,
@@ -32,23 +30,6 @@ describe("item page views", () => {
       expect(after.size).toBeGreaterThan(before.length);
     }
     for (const view of PRESET_VIEWS) expect(view.cards.every((entry) => entry.id in ITEM_CARDS)).toBe(true);
-  });
-
-  it("round-trips the active view through the cookie, presets by id", () => {
-    expect(encodeViewCookie(presetView("raid")!)).toBe("raid");
-    expect(decodeViewCookie("raid")).toEqual(presetView("raid"));
-    const cookie = encodeViewCookie(mine);
-    expect(cookie).toBe("c:view-1|per-slot.2,wiki-where.4");
-    expect(decodeViewCookie(cookie)).toEqual({ id: "view-1", cards: mine.cards });
-    expect(decodeViewCookie(encodeViewCookie({ ...mine, cards: [] }))).toEqual({ id: "view-1", cards: [] });
-  });
-
-  it("falls back to the default view for a cookie it can't read, and skips cards that no longer exist", () => {
-    const fallback = presetView(DEFAULT_VIEW_ID);
-    for (const value of [undefined, "", "nope", "c:view-1|per-slot.9", "c:raid|per-slot.1", "c:view-1|per-slot.1,per-slot.2", "x".repeat(2_000)]) {
-      expect(decodeViewCookie(value), String(value)).toEqual(fallback);
-    }
-    expect(decodeViewCookie("c:view-1|gone.2,per-slot.1")).toEqual({ id: "view-1", cards: [{ id: "per-slot", w: 1 }] });
   });
 
   it("rejects views with unknown or repeated cards, bad widths, or a preset's id", () => {

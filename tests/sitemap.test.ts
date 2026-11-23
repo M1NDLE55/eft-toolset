@@ -11,8 +11,9 @@ const LISTS = {
 };
 
 vi.mock("@/app/lib/api/tarkov-server", () => ({
-  tryAcquireOperationSlot: () => true,
+  waitForOperationSlot: async () => undefined,
   releaseOperationSlot: () => undefined,
+  runTarkovRead: (work: () => Promise<unknown>) => work(),
   itemsPublishedAt: async (gameMode: "regular" | "pve") => (gameMode === "pve" ? "2026-11-19T08:30:00.000Z" : "2026-11-19T08:20:22.000Z"),
   getItemPageIndex: async () => ({
     publishedAt: "2026-11-19T08:20:22.000Z",
@@ -105,5 +106,22 @@ describe("sitemap", () => {
     // Rebuilt a second later, the dates don't move.
     const again = await sitemap();
     expect(again.filter((entry) => entry.url.includes("/quests/")).map((entry) => entry.lastModified)).toEqual(quests.map((entry) => entry.lastModified));
+  });
+});
+
+describe("robots.txt", () => {
+  it("lets search and answer bots in, keeps training crawlers and SEO tools out, and names the sitemap", async () => {
+    const { default: robots } = await import("@/app/robots");
+    const { rules, sitemap } = robots();
+    const groups = Array.isArray(rules) ? rules : [rules];
+    const groupFor = (agent: string) => groups.find((group) => [group.userAgent].flat().includes(agent));
+    for (const agent of ["Googlebot", "Bingbot", "OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "Claude-SearchBot", "*"]) {
+      expect(groupFor(agent)?.allow, agent).toBe("/");
+      expect(groupFor(agent)?.disallow, agent).toBeUndefined();
+    }
+    for (const agent of ["GPTBot", "CCBot", "Bytespider", "ClaudeBot", "Google-Extended", "AhrefsBot", "SemrushBot", "MJ12bot", "DotBot"]) {
+      expect(groupFor(agent)?.disallow, agent).toBe("/");
+    }
+    expect(sitemap).toBe("https://www.eft-toolset.com/sitemap.xml");
   });
 });

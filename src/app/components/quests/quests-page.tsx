@@ -78,13 +78,14 @@ export function QuestsPage({ initial, search }: { initial: QuestsInitial | null;
   const list = query.list ?? (initial && (!hydrated || initial.gameMode === gameMode) ? initial.list : null);
   const progress = useQuestProgress(gameMode);
   const [state, setState] = useState<QuestPageState>(() => parseQuestPageState(search));
-  // A link to /quests (the header's, say) renders the page again on the server without
-  // remounting this, passing new search params: read them then. The page's own changes only
-  // replace the URL, so they don't come back this way.
+  // A link to /quests (a quest page's chain link, say) changes the search params without
+  // remounting this: read them then. The page's own changes replace the URL and come back here
+  // too, so they leave the state alone.
   const [readSearch, setReadSearch] = useState(search);
   if (search !== readSearch) {
     setReadSearch(search);
-    setState(parseQuestPageState(search));
+    const next = parseQuestPageState(search);
+    if (questPageSearch(next) !== questPageSearch(state)) setState(next);
   }
   const text = useDeferredValue(state.text);
 

@@ -1,19 +1,15 @@
-import { useEffect } from "react";
 import { readStore, writeStore, type StoreDefinition } from "@/app/lib/storage/versioned-store";
 import { useHydrated, useStore } from "@/app/lib/storage/use-store";
 import {
   DEFAULT_VIEW_ID,
-  ITEM_VIEW_COOKIE,
   MAX_CUSTOM_VIEWS,
   PRESET_VIEWS,
   copyName,
-  encodeViewCookie,
   isItemView,
   isPresetId,
   recoverItemView,
   newViewId,
   presetView,
-  type ActiveLayout,
   type ItemView,
 } from "./views";
 
@@ -52,11 +48,6 @@ export const ITEM_VIEWS_STORE: StoreDefinition<ItemViewSettings> = {
     };
   },
 };
-
-function writeViewCookie(value: string) {
-  const secure = window.location.protocol === "https:" ? "; Secure" : "";
-  document.cookie = `${ITEM_VIEW_COOKIE}=${encodeURIComponent(value)}; Path=/item; Max-Age=31536000; SameSite=Lax${secure}`;
-}
 
 function update(change: (settings: ItemViewSettings) => ItemViewSettings) {
   return writeStore(ITEM_VIEWS_STORE, change(readStore(ITEM_VIEWS_STORE)));
@@ -97,26 +88,14 @@ export function deleteView(id: string) {
 }
 
 /**
- * Every view and the active one. Until the page hydrates it reports the view the server rendered,
- * from the cookie, so the first render matches; it then keeps the cookie in step with storage.
+ * Every view and the active one. Pages are cached for everyone, so until the page hydrates it
+ * reports the default view, which the server rendered; then the visitor's own.
  */
-export function useItemViews(serverLayout: ActiveLayout) {
+export function useItemViews() {
   const settings = useStore(ITEM_VIEWS_STORE);
   const hydrated = useHydrated();
   const views = [...PRESET_VIEWS, ...settings.custom];
-  const stored = views.find((view) => view.id === settings.active) ?? presetView(DEFAULT_VIEW_ID)!;
-  const cookie = encodeViewCookie(stored);
-
-  useEffect(() => {
-    if (!hydrated) return;
-    try {
-      writeViewCookie(cookie);
-    } catch {
-      // Cookies can be blocked; the page still works, it just renders the default view first.
-    }
-  }, [cookie, hydrated]);
-
-  if (hydrated) return { views, active: stored, hydrated };
-  const rendered = views.find((view) => view.id === serverLayout.id);
-  return { views, active: { id: serverLayout.id, name: rendered?.name ?? "", cards: serverLayout.cards }, hydrated };
+  const fallback = presetView(DEFAULT_VIEW_ID)!;
+  const stored = views.find((view) => view.id === settings.active) ?? fallback;
+  return { views, active: hydrated ? stored : fallback, hydrated };
 }

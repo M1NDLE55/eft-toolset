@@ -14,21 +14,17 @@ import { summarizeNeeds } from "@/app/lib/item-needs";
 import { recordPrices, usePriceHistories } from "@/app/lib/price-history";
 import { useGameMode } from "@/components/game-mode/context";
 import type { ItemWiki } from "@/app/lib/wiki/item-wiki";
-import type { ActiveLayout } from "@/app/lib/item-views/views";
 import { ItemPageView } from "@/app/components/item/item-view";
 
 export function ItemPageClient({
   reference,
   initial,
   wiki,
-  layout,
 }: {
   reference: ItemReference;
   initial: { gameMode: GameMode; item: ComposedItem; renderedAt: number } | null;
   /** The item's wiki page, the same in every game mode; null without one. */
   wiki: ItemWiki | null;
-  /** The view the server rendered, from the visitor's cookie. */
-  layout: ActiveLayout;
 }) {
   useState(() => {
     if (initial && typeof window !== "undefined") primeItem(reference, initial.gameMode, initial.item, initial.renderedAt);
@@ -82,7 +78,6 @@ export function ItemPageClient({
         </p>
       )}
       <ItemPageView
-        serverLayout={layout}
         context={{
           item,
           // A wiki page belongs to one item; ignore it if the page now shows another.

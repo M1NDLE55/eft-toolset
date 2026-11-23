@@ -145,42 +145,6 @@ export function isItemView(value: unknown): value is ItemView {
   );
 }
 
-// The cookie carries the active view, so the server renders the page as it will look: a preset's
-// id, or "c:", the custom view's id, "|", and each card as "id.width", comma-separated.
-export const ITEM_VIEW_COOKIE = "eft-item-view";
-const MAX_COOKIE_LENGTH = 1_000;
-
-export interface ActiveLayout {
-  id: string;
-  cards: ViewCard[];
-}
-
-export function encodeViewCookie(view: ItemView): string {
-  if (isPresetId(view.id)) return view.id;
-  return `c:${view.id}|${view.cards.map((entry) => `${entry.id}.${entry.w}`).join(",")}`;
-}
-
-/** The view the cookie names, or the default view when it's missing or can't be read. */
-export function decodeViewCookie(value: string | undefined | null): ActiveLayout {
-  const fallback = presetView(DEFAULT_VIEW_ID)!;
-  if (!value || value.length > MAX_COOKIE_LENGTH) return fallback;
-  const preset = presetView(value);
-  if (preset) return preset;
-  const match = /^c:([a-z0-9-]{1,40})\|(.*)$/.exec(value);
-  if (!match || isPresetId(match[1])) return fallback;
-  const cards = match[2]
-    ? match[2]
-        .split(",")
-        .map((part) => {
-          const at = part.lastIndexOf(".");
-          return { id: part.slice(0, at), w: Number(part.slice(at + 1)) };
-        })
-        // A card since removed from the site drops out rather than spoiling the view.
-        .filter((entry) => isItemCardId(entry.id))
-    : [];
-  return isViewCards(cards) ? { id: match[1], cards } : fallback;
-}
-
 /** Moves a card to a new index. */
 export function moveCard(cards: readonly ViewCard[], id: ItemCardId, to: number): ViewCard[] {
   const from = cards.findIndex((entry) => entry.id === id);
