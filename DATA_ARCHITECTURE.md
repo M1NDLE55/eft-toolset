@@ -1,9 +1,8 @@
 # Data architecture
 
 EFT Toolset integrates with Tarkov.dev through a small query system owned by this
-application. Tarkov.dev's current public documentation describes JSON responses to GET
-requests at `https://json.tarkov.dev`; the previous direct browser GraphQL transport is
-not used.
+application. It reads tarkov.dev's JSON API: JSON responses to GET requests at
+`https://json.tarkov.dev`.
 
 ## Request flow
 
@@ -737,12 +736,8 @@ stale-while-revalidate, an instance's copy up to 120 s; under steady traffic at 
 and typically about 90 seconds, against up to 35 minutes before (5 minutes fresh, then served while
 refreshing for up to 30). `dataAsOf` is the origin's confirmation time, so it includes every hop.
 
-**Why not tarkov.dev's GraphQL API.** Fetching only the requested items' prices with
-`items(ids: …)` from `api.tarkov.dev/graphql` would be smaller still per lookup, but on 23 Nov 2026
-it answered every request (POST and GET, both modes) with HTTP 422 "GraphQL server unavailable. Try
-again later.", its data had stopped updating on 16 Nov, and tarkov.dev's API page now documents
-only the JSON API. There is no per-item current-price JSON endpoint (`/{mode}/prices/{id}` is the
-price history). One feed carries every price, so the number of distinct items asked for doesn't
+**Why one feed for every item.** tarkov.dev only offers whole JSON files: there is no per-item
+current-price endpoint (`/{mode}/prices/{id}` is the price history). One feed carries every price, so the number of distinct items asked for doesn't
 change the upstream cost, and a CDN cache shared by every instance does what a per-item cache would.
 
 **Why the CDN and not a shared server cache.** Vercel's Runtime Cache (used for the small datasets
