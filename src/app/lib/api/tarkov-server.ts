@@ -76,21 +76,25 @@ const UPSTREAM_BASE_URL = (!process.env.VERCEL && process.env.TARKOV_UPSTREAM_UR
 const UPSTREAM_TIMEOUT_MS = 12_000;
 const UPSTREAM_MAX_BYTES = 32 * 1024 * 1024;
 const MAX_UPSTREAM_REQUESTS = 4;
-/** Requests per refresh: quick failures (a reset connection, a 5xx) are tried again after a short wait. */
+/**
+ * Requests per refresh for a caller with no copy at all: quick failures (a reset connection, a 5xx)
+ * are tried again after a short wait. Refreshes of a copy make one request; the copy is served if it fails.
+ */
 const UPSTREAM_ATTEMPTS = 3;
 const UPSTREAM_RETRY_DELAYS_MS = [250, 1_000];
 /** A 429 asking for a longer wait than this ends the refresh instead of being waited out. */
 const UPSTREAM_RETRY_AFTER_WAIT_MS = 2_000;
 // After a refresh fails, the dataset isn't requested again for a while (doubling up to the max),
-// so a tarkov.dev outage costs it one request per dataset per wait. Callers holding a copy get the
-// copy meanwhile; only a caller with no copy at all gets an error, with the time left as retryAfter.
-const RETRY_BASE_MS = 5_000;
-const RETRY_MAX_MS = 5 * 60_000;
+// so a tarkov.dev outage costs one request per dataset per wait (about ten an hour). Callers holding
+// a copy get the copy meanwhile; only a caller with no copy at all gets an error, with the time left
+// as retryAfter.
+const RETRY_BASE_MS = 10_000;
+const RETRY_MAX_MS = 10 * 60_000;
 const RETRY_AFTER_MAX_MS = 60 * 60_000;
 /** The wait to report for a dataset still being tried: its retries, then the longest first wait. */
 const UNSETTLED_WAIT_MS = 1.5 * UPSTREAM_RETRY_DELAYS_MS.reduce((sum, delay) => sum + delay, 0) + 1.2 * RETRY_BASE_MS;
-/** How long a caller holding a stale copy waits for its refresh before taking the copy. */
-const STALE_WAIT_MS = 2_500;
+/** How long an MCP tool holding a stale copy waits for its refresh before taking the copy (see staleWaitMs). */
+export const MCP_STALE_WAIT_MS = 2_500;
 /** The oldest copy a read accepts when tarkov.dev can't be reached, unless the read asks otherwise. */
 export const RESOURCE_MAX_STALE_MS = 6 * 60 * 60_000;
 const MINUTE_MS = 60_000;
@@ -579,12 +583,21 @@ const sharedCache = globalThis as typeof globalThis & {
 sharedCache[CACHE_KEY] ??= { resources: new Map(), memos: new Map() };
 const resourceCache = sharedCache[CACHE_KEY].resources;
 const memoCache = sharedCache[CACHE_KEY].memos;
+/** A copy a read used, with when it was confirmed and where it came from at the time. */
+interface UsedCopy {
+  entry: ResourceCacheEntry;
+  value: unknown;
+  fetchedAt: number;
+  source: DataSource;
+  /** Its refresh had failed, or didn't arrive within the read's wait. */
+  stale: boolean;
+}
+
 const operationContext = new AsyncLocalStorage<{
   resources: Set<ResourceCacheEntry>;
-  used: Map<string, { entry: ResourceCacheEntry; value: unknown }>;
-  /** Entries this read took a stale copy of because their refresh failed or was slow. */
-  fallbacks: Set<ResourceCacheEntry>;
+  used: Map<string, UsedCopy>;
   maxStaleMs: number;
+  staleWaitMs: number;
   signal?: AbortSignal;
 }>();
 /** Stands in for a dataset a read saw two different copies of, so its snapshot never matches. */
@@ -668,6 +681,12 @@ export interface TarkovReadOptions {
    * than caching older data; MCP tools take any copy and say how old it is.
    */
   maxStaleMs?: number;
+  /**
+   * How long to wait for a due refresh before taking the copy in hand (default: until the refresh
+   * ends). Page renders wait, so they don't cache an older copy when tarkov.dev is merely slow; MCP
+   * tools wait MCP_STALE_WAIT_MS and say the data is stale.
+   */
+  staleWaitMs?: number;
   /** Called when the result was built from a copy whose refresh failed or didn't finish in time. */
   onStale?: (info: { source: DataSource }) => void;
   onDataAge?: (ageMs: number) => void;
@@ -706,22 +725,23 @@ export async function runTarkovRead<T>(
 ): Promise<T> {
   const context = {
     resources: new Set<ResourceCacheEntry>(),
-    used: new Map(),
-    fallbacks: new Set<ResourceCacheEntry>(),
+    used: new Map<string, UsedCopy>(),
     maxStaleMs: options.maxStaleMs ?? RESOURCE_MAX_STALE_MS,
+    staleWaitMs: options.staleWaitMs ?? Number.POSITIVE_INFINITY,
     signal: options.signal,
   };
   return operationContext.run(context, async () => {
     options.signal?.throwIfAborted();
     const data = await waitForCaller(work(), options.signal).catch((error: unknown) => {
-      throw error instanceof TarkovUpstreamError ? withLongestWait(error, context.resources) : error;
+      throw error instanceof TarkovUpstreamError ? withLongestWait(error, context.resources, context.maxStaleMs) : error;
     });
-    const entries = Array.from(context.resources);
-    const stale = entries.filter((entry) => context.fallbacks.has(entry) || entry.failedAt !== undefined);
+    // From the copies the read used, not the entries now: a refresh may have landed since.
+    const used = Array.from(context.used.values());
+    const stale = used.filter((copy) => copy.stale || copy.entry.failedAt !== undefined);
     if (stale.length > 0) {
-      options.onStale?.({ source: stale.some((entry) => entry.source === "deployment") ? "deployment" : "tarkov.dev" });
+      options.onStale?.({ source: stale.some((copy) => copy.source === "deployment") ? "deployment" : "tarkov.dev" });
     }
-    const oldest = Math.min(...entries.map((entry) => entry.fetchedAt));
+    const oldest = Math.min(...used.map((copy) => copy.fetchedAt));
     if (Number.isFinite(oldest)) options.onDataAge?.(Math.max(0, Date.now() - oldest));
     options.onSnapshot?.(Array.from(context.used, ([key, { entry, value }]) => [key, entry, value] as const));
     return data;
@@ -732,13 +752,15 @@ export async function runTarkovRead<T>(
  * A read fails as soon as one dataset does, while others may still be failing or about to; retrying
  * after the first one's wait would only meet the next. So the error carries the longest wait.
  */
-function withLongestWait(error: TarkovUpstreamError, entries: Iterable<ResourceCacheEntry>) {
+function withLongestWait(error: TarkovUpstreamError, entries: Iterable<ResourceCacheEntry>, maxStaleMs: number) {
   const now = Date.now();
   let waitMs = error.retryAfterMs ?? 0;
   for (const entry of entries) {
+    // Datasets the read had a copy of didn't make it fail.
+    if (entry.value && now - entry.fetchedAt < maxStaleMs) continue;
     if (entry.retryAt !== undefined) waitMs = Math.max(waitMs, entry.retryAt - now);
     // Still trying with nothing to fall back on: it may fail and start a wait of its own.
-    else if (entry.inFlight && !entry.value) waitMs = Math.max(waitMs, UNSETTLED_WAIT_MS);
+    else if (entry.inFlight) waitMs = Math.max(waitMs, UNSETTLED_WAIT_MS);
   }
   return waitMs === error.retryAfterMs
     ? error
@@ -2109,26 +2131,34 @@ async function loadResource<T>(
 
   const policy = RESOURCE_POLICIES[resource];
   const age = Date.now() - entry.fetchedAt;
-  if (entry.value && age < policy.freshMs) return recordUse(cacheKey, entry, entry.value) as UpstreamEnvelope<T>;
+  if (entry.value && age < policy.freshMs) return recordUse(cacheKey, entry) as UpstreamEnvelope<T>;
   if (entry.value && age < policy.revalidateMs) {
     void refreshResource(gameMode, resource, entry).catch(() => undefined);
-    return recordUse(cacheKey, entry, entry.value) as UpstreamEnvelope<T>;
+    return recordUse(cacheKey, entry) as UpstreamEnvelope<T>;
   }
-  // Due for a refresh. With a copy this read accepts, wait briefly for the refresh (not at all while
-  // tarkov.dev is failing) and take the copy if it doesn't arrive; without one, wait for it.
-  const fallback = entry.value && age < (context?.maxStaleMs ?? RESOURCE_MAX_STALE_MS) ? entry.value : undefined;
+  // Due for a refresh. With a copy this read accepts, wait for the refresh as long as the read allows
+  // (not at all while tarkov.dev is failing) and take the copy if it fails or doesn't arrive; without
+  // one, wait for it, retrying quick failures.
+  const fallback =
+    entry.value && age < (context?.maxStaleMs ?? RESOURCE_MAX_STALE_MS)
+      ? { value: entry.value, fetchedAt: entry.fetchedAt, source: entry.source ?? "tarkov.dev" }
+      : undefined;
   const failing = (entry.failures ?? 0) > 0;
-  const refresh = refreshResource(gameMode, resource, entry);
-  if (!fallback) return recordUse(cacheKey, entry, await refresh) as UpstreamEnvelope<T>;
+  const refresh = refreshResource(gameMode, resource, entry, fallback ? 1 : UPSTREAM_ATTEMPTS);
+  if (!fallback) {
+    await refresh;
+    return recordUse(cacheKey, entry) as UpstreamEnvelope<T>;
+  }
   refresh.catch(() => undefined);
-  const fresh = failing ? undefined : await settledWithin(refresh, STALE_WAIT_MS);
-  if (fresh) return recordUse(cacheKey, entry, fresh) as UpstreamEnvelope<T>;
-  context?.fallbacks.add(entry);
-  return recordUse(cacheKey, entry, fallback) as UpstreamEnvelope<T>;
+  const waitMs = failing ? 0 : (context?.staleWaitMs ?? Number.POSITIVE_INFINITY);
+  const fresh = waitMs > 0 && (await settledWithin(refresh, waitMs));
+  if (fresh) return recordUse(cacheKey, entry) as UpstreamEnvelope<T>;
+  return recordUse(cacheKey, entry, { ...fallback, stale: true }) as UpstreamEnvelope<T>;
 }
 
-/** The promise's value if it fulfils within ms; undefined if it rejects or takes longer. */
+/** The promise's value if it fulfils within ms (or at all, for Infinity); undefined if it rejects or takes longer. */
 function settledWithin<T>(promise: Promise<T>, ms: number): Promise<T | undefined> {
+  if (!Number.isFinite(ms)) return promise.catch(() => undefined);
   return new Promise((resolve) => {
     const timer = setTimeout(() => resolve(undefined), ms);
     promise.then(
@@ -2161,18 +2191,35 @@ function seedFromSnapshot(gameMode: GameMode, resource: Resource, entry: Resourc
   return entry.seed;
 }
 
-function recordUse(key: string, entry: ResourceCacheEntry, value: UpstreamEnvelope<unknown>) {
+/** Hands out the entry's current copy, or the given one, and notes it (with its age and source) for the read. */
+function recordUse(
+  key: string,
+  entry: ResourceCacheEntry,
+  copy: { value: UpstreamEnvelope<unknown>; fetchedAt: number; source: DataSource; stale: boolean } = {
+    value: entry.value!,
+    fetchedAt: entry.fetchedAt,
+    source: entry.source ?? "tarkov.dev",
+    stale: false,
+  }
+) {
   const used = operationContext.getStore()?.used;
   const seen = used?.get(key);
-  used?.set(key, { entry, value: !seen || seen.value === value ? value : MIXED_COPIES });
-  return value;
+  const older = seen && seen.fetchedAt <= copy.fetchedAt ? seen : copy;
+  used?.set(key, {
+    entry,
+    value: !seen || seen.value === copy.value ? copy.value : MIXED_COPIES,
+    fetchedAt: older.fetchedAt,
+    source: older.source,
+    stale: copy.stale || (seen?.stale ?? false),
+  });
+  return copy.value;
 }
 
 /**
  * Refreshes the dataset, sharing one refresh among concurrent callers. Rejects when it fails, or at
  * once, without a request, while waiting out an earlier failure; callers with a copy fall back to it.
  */
-function refreshResource(gameMode: GameMode, resource: Resource, entry: ResourceCacheEntry) {
+function refreshResource(gameMode: GameMode, resource: Resource, entry: ResourceCacheEntry, attempts = 1) {
   if (entry.inFlight) return entry.inFlight;
   const waitMs = entry.retryAt === undefined ? 0 : entry.retryAt - Date.now();
   if (waitMs > 0) {
@@ -2180,7 +2227,7 @@ function refreshResource(gameMode: GameMode, resource: Resource, entry: Resource
       new TarkovUpstreamError(`Tarkov.dev is unavailable; ${resource} will be retried shortly.`, undefined, waitMs)
     );
   }
-  const inFlight = loadCurrent(gameMode, resource, entry)
+  const inFlight = loadCurrent(gameMode, resource, entry, attempts)
     .then((result) => {
       entry.value = result.value;
       entry.source = "tarkov.dev";
@@ -2223,7 +2270,7 @@ function retryDelay(failures: number, error: unknown) {
 
 /** How long to wait before asking again within one refresh, or undefined to give up. */
 function attemptDelay(error: unknown, attempt: number): number | undefined {
-  if (attempt >= UPSTREAM_ATTEMPTS || !(error instanceof TarkovUpstreamError) || error.permanent) return undefined;
+  if (!(error instanceof TarkovUpstreamError) || error.permanent) return undefined;
   if (error.timedOut) return undefined;
   const status = error.status;
   if (status === 429) {
@@ -2238,13 +2285,14 @@ function attemptDelay(error: unknown, attempt: number): number | undefined {
 async function fetchWithRetries(
   gameMode: GameMode,
   resource: Resource,
+  attempts: number,
   validators?: { etag?: string; lastModified?: string }
 ): Promise<Fetched> {
   for (let attempt = 1; ; attempt++) {
     try {
       return await withUpstreamSlot(() => fetchResource(gameMode, resource, validators));
     } catch (error) {
-      const delay = attemptDelay(error, attempt);
+      const delay = attempt < attempts ? attemptDelay(error, attempt) : undefined;
       if (delay === undefined) throw error;
       await new Promise((resolve) => setTimeout(resolve, delay));
     }
@@ -2306,7 +2354,8 @@ export function tarkovDataStatus(gameModes: readonly GameMode[] = ["regular", "p
 async function loadCurrent(
   gameMode: GameMode,
   resource: Resource,
-  entry: ResourceCacheEntry
+  entry: ResourceCacheEntry,
+  attempts: number
 ): Promise<Refreshed> {
   const policy = RESOURCE_POLICIES[resource];
   const sharedKey = `tarkov:${SHARED_KEY_VERSION}:${gameMode}/${resource}`;
@@ -2317,7 +2366,7 @@ async function loadCurrent(
   const previous = entry.value
     ? { value: entry.value, etag: entry.etag, lastModified: entry.lastModified }
     : undefined;
-  const fetched = await fetchWithRetries(gameMode, resource, previous);
+  const fetched = await fetchWithRetries(gameMode, resource, attempts, previous);
   const checkedAt = Date.now();
   if (fetched.notModified) {
     // fetchResource only accepts a 304 when it sent validators, which needs a previous copy.

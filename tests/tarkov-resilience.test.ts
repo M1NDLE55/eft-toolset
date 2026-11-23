@@ -7,6 +7,9 @@ import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import {
   clearTarkovResourceCache,
   executeTarkovOperation,
+  getItemCatalog,
+  MCP_STALE_WAIT_MS,
+  runTarkovRead,
   settleTarkovRefreshes,
   tarkovDataStatus,
   TarkovUpstreamError,
@@ -21,7 +24,7 @@ import { SNAPSHOT_RESOURCES, writeTarkovSnapshot } from "./fixtures/tarkov-snaps
 
 const RESOURCES = SNAPSHOT_RESOURCES;
 
-type Mode = "up" | "down" | "hang";
+type Mode = "up" | "down" | "hang" | "slow";
 
 let fixtures: Record<string, unknown>;
 let mode: Mode;
@@ -62,6 +65,7 @@ beforeEach(() => {
     const status = queued.shift();
     if (status) return new Response("upstream error", { status });
     if (mode === "down") return new Response("bad gateway", { status: 502 });
+    if (mode === "slow") await new Promise((resolve) => setTimeout(resolve, 3_500));
     if (mode === "hang") {
       return new Promise<Response>((_, reject) => {
         const fail = () => reject(new DOMException("aborted", "AbortError"));
@@ -117,7 +121,7 @@ describe("a cold instance with tarkov.dev down", () => {
     const retryAfterMs = (error as { retryAfterMs?: number }).retryAfterMs!;
     expect(retryAfterMs).toBeGreaterThan(0);
     // The longest wait among the datasets the call needed, so retrying then finds them all ready.
-    expect(retryAfterMs).toBeLessThanOrEqual(10_000);
+    expect(retryAfterMs).toBeLessThanOrEqual(15_000);
     // The first request and two quick retries, not one request per caller. The call fails as soon as
     // one dataset gives up, so let the others finish first.
     await settleTarkovRefreshes();
@@ -200,13 +204,44 @@ describe("refreshes", () => {
     mode = "hang";
     const onStale = vi.fn();
     const started = performance.now();
-    await expect(catalog({ onStale })).resolves.toContainEqual(["weapon", "Test Rifle", "Rifle", "weapon.webp", "test-rifle"]);
+    await expect(catalog({ onStale, staleWaitMs: MCP_STALE_WAIT_MS })).resolves.toContainEqual(
+      ["weapon", "Test Rifle", "Rifle", "weapon.webp", "test-rifle"]
+    );
     const waited = performance.now() - started;
-    expect(waited).toBeGreaterThan(2_000);
-    expect(waited).toBeLessThan(4_000);
+    expect(waited).toBeGreaterThanOrEqual(MCP_STALE_WAIT_MS - 50);
+    expect(waited).toBeLessThan(MCP_STALE_WAIT_MS + 2_500);
     expect(onStale).toHaveBeenCalledWith({ source: "tarkov.dev" });
     expect(tarkovDataStatus(["regular"]).find((status) => status.dataset === "items")!.state).toBe("refreshing");
   });
+
+  it("let page renders wait out a slow refresh, so they don't cache an older copy", async () => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    await catalog();
+    vi.setSystemTime(Date.now() + 31 * 60_000);
+    mode = "slow";
+    const onStale = vi.fn();
+    await catalog({ onStale });
+    expect(onStale).not.toHaveBeenCalled();
+    expect(tarkovDataStatus(["regular"]).find((status) => status.dataset === "items")).toMatchObject({ state: "fresh", ageSeconds: 0 });
+  }, 10_000);
+
+  it("date a result by the copy it used, even when a refresh lands during the read", async () => {
+    await writeSnapshot(3 * 60 * 60_000);
+    mode = "slow";
+    const onStale = vi.fn();
+    const onDataAge = vi.fn();
+    await runTarkovRead(
+      async () => {
+        await getItemCatalog("regular");
+        // The refresh lands while the read is still working.
+        await new Promise((resolve) => setTimeout(resolve, 1_500));
+      },
+      { onStale, onDataAge, maxStaleMs: Infinity, staleWaitMs: MCP_STALE_WAIT_MS }
+    );
+    expect(tarkovDataStatus(["regular"]).find((status) => status.dataset === "items")!.source).toBe("tarkov.dev");
+    expect(onStale).toHaveBeenCalledWith({ source: "deployment" });
+    expect(onDataAge.mock.calls[0][0]).toBeGreaterThanOrEqual(3 * 60 * 60_000);
+  }, 10_000);
 
   it("don't make callers with a copy wait at all while tarkov.dev is failing", async () => {
     vi.useFakeTimers({ toFake: ["Date"] });

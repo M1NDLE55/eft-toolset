@@ -1,5 +1,11 @@
 import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
-import { runTarkovRead, TarkovUpstreamError, type DataSnapshot, type DataSource } from "@/app/lib/api/tarkov-server";
+import {
+  MCP_STALE_WAIT_MS,
+  runTarkovRead,
+  TarkovUpstreamError,
+  type DataSnapshot,
+  type DataSource,
+} from "@/app/lib/api/tarkov-server";
 import { InputError } from "@/app/lib/input-error";
 import type { GameMode } from "@/components/game-mode/mode";
 import { readToolResult, storeToolResult } from "./result-cache";
@@ -29,7 +35,7 @@ const ERROR_MESSAGES: Record<Exclude<ToolOutcome, "ok" | "input_error">, string>
   crash: "The tool failed unexpectedly.",
 };
 
-/** The error codes in a failed result's structuredContent.error, for clients that branch on them. */
+/** The error codes in a failed result's error object, for clients that branch on them. */
 const ERROR_CODES: Record<Exclude<ToolOutcome, "ok">, string> = {
   input_error: "invalid_input",
   upstream_error: "upstream_unavailable",
@@ -40,13 +46,17 @@ const ERROR_CODES: Record<Exclude<ToolOutcome, "ok">, string> = {
 /** Retry hint when the adapter gives none. */
 const DEFAULT_RETRY_AFTER_SECONDS = 5;
 
+/** Where a failed result's error object sits in _meta. */
+export const ERROR_META_KEY = "eft-toolset/error";
+
 /**
  * Runs a tool body and turns what it returns into a tool result: JSON text plus the same
  * object as structured content, with dataAsOf (when the tarkov.dev data it used was last
  * confirmed) and a dataNotice when that data was stale. Tool reads accept any copy the server
- * has when tarkov.dev can't be reached, and say how old it is, rather than failing. Errors become
- * tool errors the model can act on, with structuredContent.error saying whether and when to
- * retry. Logs one structured line per call.
+ * has when tarkov.dev can't be reached or is slow, and say how old it is, rather than failing.
+ * Errors become tool errors the model can act on: a sentence, then the error object (code,
+ * retryable, retryAfterSeconds) as JSON, also in _meta. Not in structuredContent: clients check
+ * that against the tool's output schema even on errors. Logs one structured line per call.
  */
 export async function runTool(
   context: ToolContext,
@@ -63,6 +73,7 @@ export async function runTool(
     runTarkovRead(work, {
       signal: context.signal,
       maxStaleMs: Number.POSITIVE_INFINITY,
+      staleWaitMs: MCP_STALE_WAIT_MS,
       onStale: ({ source }) => {
         stale = true;
         if (source === "deployment") staleSource = source;
@@ -102,18 +113,19 @@ export async function runTool(
           : outcome === "upstream_error"
             ? `${ERROR_MESSAGES.upstream_error} Try again in ${retryAfterSeconds} seconds.`
             : ERROR_MESSAGES[outcome];
+    const details = {
+      code: ERROR_CODES[outcome],
+      // Input errors need a different request; a crash is a bug, so the same call would fail again.
+      retryable: outcome === "upstream_error" || outcome === "timeout",
+      ...(retryAfterSeconds !== null ? { retryAfterSeconds } : {}),
+    };
     return {
       isError: true,
-      content: [{ type: "text", text: message }],
-      structuredContent: {
-        error: {
-          code: ERROR_CODES[outcome],
-          message,
-          // Input errors need a different request; a crash is a bug, so the same call would fail again.
-          retryable: outcome === "upstream_error" || outcome === "timeout",
-          ...(retryAfterSeconds !== null ? { retryAfterSeconds } : {}),
-        },
-      },
+      content: [
+        { type: "text", text: message },
+        { type: "text", text: JSON.stringify({ error: details }) },
+      ],
+      _meta: { [ERROR_META_KEY]: details },
     };
   } finally {
     console.info(
@@ -150,7 +162,7 @@ function staleNotice(dataAgeMs: number | null, source: DataSource) {
               : `${Math.round(minutes / (24 * 60))} days`
         } ago`;
   const copy = source === "deployment" ? "the copy bundled with this server" : "cached data";
-  return `tarkov.dev is unavailable, so this uses ${copy}${age}. Prices may have changed.`;
+  return `tarkov.dev couldn't be reached in time, so this uses ${copy}${age}. Prices may have changed.`;
 }
 
 function classifyError(error: unknown, context: ToolContext): Exclude<ToolOutcome, "ok"> {

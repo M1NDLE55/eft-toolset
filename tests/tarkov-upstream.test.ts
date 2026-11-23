@@ -125,13 +125,13 @@ describe("tarkov.dev requests", () => {
     failure = new Response("down", { status: 503 });
     await Promise.all(Array.from({ length: 20 }, () => catalog()));
     for (let call = 0; call < 20; call += 1) await catalog();
-    // One refresh for the whole burst: the first request and two quick retries.
-    expect(requestsFor("items")).toHaveLength(4);
+    // One request for the whole burst: callers with a copy get it rather than retries.
+    expect(requestsFor("items")).toHaveLength(2);
 
     vi.setSystemTime(Date.now() + 40_000);
     failure = null;
     await catalog();
-    expect(requestsFor("items")).toHaveLength(5);
+    expect(requestsFor("items")).toHaveLength(3);
   });
 
   it("wait as long as a 429's Retry-After asks", async () => {

@@ -1,7 +1,10 @@
 // @vitest-environment node
 import { rm } from "node:fs/promises";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { Client } from "@modelcontextprotocol/sdk/client/index.js";
+import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
 import { POST } from "@/app/api/mcp/route";
+import { createEftMcpServer } from "@/app/lib/mcp/server";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
 import { clearTarkovResourceCache, settleTarkovRefreshes } from "@/app/lib/api/tarkov-server";
 import { setTarkovSnapshotDirForTests } from "@/app/lib/api/tarkov-snapshot";
@@ -20,6 +23,16 @@ interface ToolResult {
   isError?: boolean;
   content: { type: string; text?: string }[];
   structuredContent?: Record<string, any>;
+  _meta?: Record<string, any>;
+}
+
+/** A failed result's error object: the JSON after its sentence, also in _meta. */
+function errorOf(result: ToolResult) {
+  const fromText = JSON.parse(result.content[1].text!).error;
+  expect(result._meta?.["eft-toolset/error"]).toEqual(fromText);
+  // Clients check structuredContent against the output schema even on errors, so there is none.
+  expect(result.structuredContent).toBeUndefined();
+  return fromText;
 }
 
 async function call(name: string, args: Record<string, unknown> = {}) {
@@ -79,21 +92,41 @@ describe("MCP tools on a cold instance with tarkov.dev down", () => {
     upstreamDown = true;
     const result = await call("get_item", { item: "Test Rifle" });
     expect(result.isError).toBe(true);
-    expect(result.structuredContent!.error).toMatchObject({
-      code: "upstream_unavailable",
-      retryable: true,
-      retryAfterSeconds: expect.any(Number),
-    });
-    const { retryAfterSeconds } = result.structuredContent!.error;
+    const error = errorOf(result);
+    expect(error).toMatchObject({ code: "upstream_unavailable", retryable: true, retryAfterSeconds: expect.any(Number) });
+    const { retryAfterSeconds } = error;
     expect(retryAfterSeconds).toBeGreaterThanOrEqual(1);
-    expect(retryAfterSeconds).toBeLessThanOrEqual(10);
+    expect(retryAfterSeconds).toBeLessThanOrEqual(15);
     expect(result.content[0].text).toMatch(new RegExp(`Try again in ${retryAfterSeconds} seconds`));
   });
 
   it("mark input errors as not retryable", async () => {
     const result = await call("get_item", { item: "zzzz-no-such-item-qqqq" });
     expect(result.isError).toBe(true);
-    expect(result.structuredContent!.error).toMatchObject({ code: "invalid_input", retryable: false });
+    expect(errorOf(result)).toMatchObject({ code: "invalid_input", retryable: false });
+  });
+});
+
+describe("the MCP TypeScript SDK client", () => {
+  it("gets failed calls as tool errors rather than throwing on the output schema", async () => {
+    const server = createEftMcpServer({ origin: "http://localhost", signal: new AbortController().signal, requestId: "test" });
+    const client = new Client({ name: "test", version: "1" });
+    const [clientTransport, serverTransport] = InMemoryTransport.createLinkedPair();
+    await Promise.all([server.connect(serverTransport), client.connect(clientTransport)]);
+    try {
+      // Listing tools first makes the client check results against each tool's output schema.
+      await client.listTools();
+      // Matching a name needs only the catalog, so this loads items while tarkov.dev is up.
+      const invalid = (await client.callTool({ name: "get_item", arguments: { item: "zzzz-no-such-item-qqqq" } })) as ToolResult;
+      expect(errorOf(invalid)).toMatchObject({ code: "invalid_input" });
+      // The item's details need tasks, traders and the rest, which there is no copy of.
+      upstreamDown = true;
+      const failed = (await client.callTool({ name: "get_item", arguments: { item: "Test Rifle" } })) as ToolResult;
+      expect(failed.isError).toBe(true);
+      expect(errorOf(failed)).toMatchObject({ code: "upstream_unavailable", retryable: true });
+    } finally {
+      await client.close();
+    }
   });
 });
 

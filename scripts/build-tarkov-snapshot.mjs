@@ -14,6 +14,7 @@
 
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { pathToFileURL } from "node:url";
 import { brotliCompressSync, constants } from "node:zlib";
 
 export const MODES = ["regular", "pve"];
@@ -33,20 +34,23 @@ export const RESOURCES = [
 ];
 export const MANIFEST_VERSION = 1;
 
-const UPSTREAM = (process.env.TARKOV_UPSTREAM_URL || "https://json.tarkov.dev").replace(/\/+$/, "");
+// TARKOV_UPSTREAM_URL is for local builds against a stand-in (scripts/mcp-load.mjs), as in the app.
+const UPSTREAM = ((!process.env.VERCEL && process.env.TARKOV_UPSTREAM_URL) || "https://json.tarkov.dev").replace(/\/+$/, "");
 const USER_AGENT = "EFT-Toolset/1.0 (+https://www.eft-toolset.com; https://github.com/M1NDLE55/eft-toolset/issues) snapshot-build";
 const TIMEOUT_MS = 30_000;
 const ATTEMPTS = 3;
+/** The whole snapshot gives up after this, so a hanging tarkov.dev can't hold up the build. */
+const DEADLINE_MS = 120_000;
 const CONCURRENCY = 4;
 const MAX_BYTES = 32 * 1024 * 1024;
 
-async function fetchResource(mode, resource) {
+async function fetchResource(mode, resource, deadline) {
   let lastError;
-  for (let attempt = 1; attempt <= ATTEMPTS; attempt++) {
+  for (let attempt = 1; attempt <= ATTEMPTS && !deadline.aborted; attempt++) {
     try {
       const response = await fetch(`${UPSTREAM}/${mode}/${resource}`, {
         headers: { Accept: "application/json", "Accept-Encoding": "br, gzip", "User-Agent": USER_AGENT },
-        signal: AbortSignal.timeout(TIMEOUT_MS),
+        signal: AbortSignal.any([AbortSignal.timeout(TIMEOUT_MS), deadline]),
       });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const text = await response.text();
@@ -63,7 +67,7 @@ async function fetchResource(mode, resource) {
       if (attempt < ATTEMPTS) await new Promise((resolve) => setTimeout(resolve, 500 * attempt * (0.5 + Math.random())));
     }
   }
-  throw lastError;
+  throw lastError ?? new Error("out of time");
 }
 
 async function readManifest(out) {
@@ -84,11 +88,13 @@ export async function buildSnapshot(out, log = console) {
   const resources = {};
   const jobs = MODES.flatMap((mode) => RESOURCES.map((resource) => ({ mode, resource })));
   let failed = 0;
+  const deadline = AbortSignal.timeout(DEADLINE_MS);
   async function run({ mode, resource }) {
     const key = `${mode}/${resource}`;
     try {
+      if (deadline.aborted) throw new Error("out of time");
       const fetchedAt = Date.now();
-      const { text, etag, lastModified } = await fetchResource(mode, resource);
+      const { text, etag, lastModified } = await fetchResource(mode, resource, deadline);
       const raw = Buffer.from(text);
       const compressed = brotliCompressSync(raw, {
         params: { [constants.BROTLI_PARAM_QUALITY]: 9, [constants.BROTLI_PARAM_SIZE_HINT]: raw.length },
@@ -114,7 +120,8 @@ export async function buildSnapshot(out, log = console) {
   const sorted = Object.fromEntries(Object.entries(resources).sort(([a], [b]) => a.localeCompare(b)));
   const manifest = { version: MANIFEST_VERSION, builtAt: Date.now(), resources: sorted };
   await mkdir(out, { recursive: true });
-  await writeFile(join(out, "manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`);
+  await writeFile(join(out, "manifest.json.tmp"), `${JSON.stringify(manifest, null, 2)}\n`);
+  await rename(join(out, "manifest.json.tmp"), join(out, "manifest.json"));
   const total = Object.values(resources).reduce((sum, entry) => sum + entry.compressedBytes, 0);
   log.info(
     `tarkov snapshot: ${Object.keys(resources).length}/${jobs.length} datasets, ${(total / 1e6).toFixed(2)} MB compressed${failed ? `, ${failed} not fetched` : ""}`
@@ -122,7 +129,7 @@ export async function buildSnapshot(out, log = console) {
   return manifest;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const index = process.argv.indexOf("--out");
   const out = index > 0 ? process.argv[index + 1] : join(process.cwd(), "data", "tarkov");
   await buildSnapshot(out).catch((error) => {
