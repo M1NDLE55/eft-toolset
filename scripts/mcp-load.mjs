@@ -14,8 +14,7 @@
 // with TARKOV_UPSTREAM_URL=http://127.0.0.1:<upstream-port>, MCP_AUTHKIT_DOMAIN=http://127.0.0.1:<issuer-port>
 // and MCP_RESOURCE_URL=<url> (or pass --no-auth for a development server without sign-in).
 //
-// Only tarkov.dev's JSON API is stood in. The app does not use tarkov.dev's GraphQL API, so there is no
-// GraphQL stand-in.
+// Only tarkov.dev's JSON API is stood in: it is the only tarkov.dev API the app reads.
 //
 // The CDN stand-in: a reverse proxy in front of the instances (round-robin) that caches GET responses
 // keyed on the full URL (plus the accept-encoding bucket, like a CDN that varies on encoding), honouring
