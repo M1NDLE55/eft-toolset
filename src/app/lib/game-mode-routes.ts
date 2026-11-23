@@ -19,3 +19,13 @@ export const PVE_ROUTES = [
   "/gun-builder/best/:weapon",
   "/gun-builder/gunsmith/:task",
 ] as const;
+
+/**
+ * The URL a visitor sees for a path, without the PVE prefix. Vercel renders a PVE copy, and
+ * caches it, at its own path (/pve/item/…), while the browser shows /item/…: anything rendered
+ * from the path must use this, or the server's HTML and the first client render disagree.
+ */
+export function publicPathname(pathname: string): string {
+  if (pathname === PVE_ROUTE_PREFIX) return "/";
+  return pathname.startsWith(`${PVE_ROUTE_PREFIX}/`) ? pathname.slice(PVE_ROUTE_PREFIX.length) : pathname;
+}

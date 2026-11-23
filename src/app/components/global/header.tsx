@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { useSyncExternalStore } from "react";
 import { Menu, Settings, UserRound } from "lucide-react";
 import { navLinks } from "@/app/lib/links";
@@ -16,6 +15,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { GameModeToggle } from "@/components/game-mode/toggle";
+import { usePublicPathname } from "@/components/game-mode/use-public-pathname";
 import { STALE_UPSTREAM_EVENT, isUpstreamStale } from "@/app/lib/api/transport";
 
 function subscribeStale(listener: () => void) {
@@ -28,7 +28,7 @@ function isActive(pathname: string, href: string) {
 }
 
 export function Header() {
-  const pathname = usePathname() ?? "/";
+  const pathname = usePublicPathname() ?? "/";
   const staleUpstream = useSyncExternalStore(subscribeStale, isUpstreamStale, () => false);
   const signedIn = useSignedInHint();
   const accountLabel = signedIn ? "Account" : "Sign in";
