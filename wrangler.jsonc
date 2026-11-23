@@ -22,9 +22,9 @@
   },
   "kv_namespaces": [
     {
-      // Shared tarkov.dev copies and the price feed, written by the cron and by isolates. Wrangler
-      // creates the namespace on the first deploy and records it in the account.
-      "binding": "TARKOV_DATA"
+      // Shared tarkov.dev copies and the price feed, written by the cron and by isolates.
+      "binding": "TARKOV_DATA",
+      "id": "483768ea683c4c3cbb451c2cc0e778ea"
     }
   ],
   "durable_objects": {
@@ -58,11 +58,11 @@
   // `wrangler secret put`; see DEPLOYMENT.md.
   "vars": {
     "MCP_RESOURCE_URL": "https://www.eft-toolset.com/api/mcp",
-    // The WorkOS AuthKit domain (such as your-app.authkit.app). Empty keeps /api/mcp closed (503).
-    "MCP_AUTHKIT_DOMAIN": "",
+    // The WorkOS AuthKit domain (https:// is added). Empty keeps /api/mcp closed (503).
+    "MCP_AUTHKIT_DOMAIN": "courteous-dinosaur-02.authkit.app",
     // The WorkOS client id; with the two secrets, it turns on website accounts.
-    "WORKOS_CLIENT_ID": "",
+    "WORKOS_CLIENT_ID": "client_01M7D57AE083YF2F71D6KD2N98",
     // Cloudflare Web Analytics site token; empty leaves the beacon out.
-    "CLOUDFLARE_WEB_ANALYTICS_TOKEN": ""
+    "CLOUDFLARE_WEB_ANALYTICS_TOKEN": "43623679c51e4bc49533b715bee9b1a7"
   }
 }

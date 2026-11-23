@@ -14,9 +14,8 @@ www.eft-toolset.com from Vercel. DATA_ARCHITECTURE.md ("Platform") describes wha
   error first; only runaway work reaches it, which Cloudflare stops with error 1102 ("Worker
   exceeded resource limits", outcome `exceededCpu` in the logs). It is a second guard beside the
   account's spending limits. Limits apply only when deployed, not in `wrangler dev`.
-- **Workers KV**: one namespace for the binding `TARKOV_DATA`. Wrangler creates it on the first
-  deploy (the binding has no `id`); after that, add the id it prints to `wrangler.jsonc` so later
-  deploys don't depend on provisioning.
+- **Workers KV**: one namespace for the binding `TARKOV_DATA`, created with
+  `wrangler kv namespace create TARKOV_DATA`; its id is in `wrangler.jsonc`.
 - **Durable Objects**: `USER` (class `UserDO`) and `PLAN` (class `PlanDO`), SQLite-backed, created by
   the `v1` migration in `wrangler.jsonc` on the first deploy. Nothing to set up by hand.
 - **Rate limiting**: the bindings `MCP_IP_LIMITER` (namespace `1001`) and `WEB_IP_LIMITER`
@@ -32,22 +31,22 @@ www.eft-toolset.com from Vercel. DATA_ARCHITECTURE.md ("Platform") describes wha
 ## Settings
 
 Not secret, set in `wrangler.jsonc` under `vars` (prerendered pages are built with them, so they
-belong in the config, not the dashboard):
+belong in the config, not the dashboard). All are set to the production values:
 
 | Variable | Value |
 | --- | --- |
-| `MCP_AUTHKIT_DOMAIN` | The WorkOS AuthKit domain, as set on Vercel today. Empty keeps `/api/mcp` closed (503). |
-| `MCP_RESOURCE_URL` | `https://www.eft-toolset.com/api/mcp` (already set) |
-| `WORKOS_CLIENT_ID` | The WorkOS client id, as set on Vercel today |
-| `CLOUDFLARE_WEB_ANALYTICS_TOKEN` | The Web Analytics site token, as set on Vercel today (empty leaves the beacon out) |
-| `APP_ORIGIN` | Leave unset in production. For a test deploy on the `workers.dev` hostname, set it to that origin so sign-in returns there. |
+| `MCP_AUTHKIT_DOMAIN` | The production WorkOS AuthKit domain (`https://` is added). Empty keeps `/api/mcp` closed (503). |
+| `MCP_RESOURCE_URL` | `https://www.eft-toolset.com/api/mcp` |
+| `WORKOS_CLIENT_ID` | The production WorkOS client id |
+| `CLOUDFLARE_WEB_ANALYTICS_TOKEN` | The Web Analytics site token (empty leaves the beacon out) |
+| `APP_ORIGIN` | Not in the config: production uses `https://www.eft-toolset.com`. A deploy tested on the `workers.dev` hostname passes it on the command line (see Deploying) so sign-in returns there. |
 
 Secrets, set with `wrangler secret put <name>` (never in the config):
 
 | Secret | Value |
 | --- | --- |
 | `WORKOS_API_KEY` | The WorkOS API key, as set on Vercel today |
-| `WORKOS_COOKIE_PASSWORD` | The same 32+ character cookie password as on Vercel, so existing sign-ins keep working |
+| `WORKOS_COOKIE_PASSWORD` | A 32+ character cookie password. The Worker's is new, not Vercel's, so everyone signed in on the website signs in again once after the cutover |
 
 `MCP_USER_RATE_BURST` and `MCP_USER_RATE_PER_SECOND` are optional (`vars`). Upstash, `CLIENT_IP_HEADER`,
 `WARM_TARKOV_CACHE` and the Vercel variables are no longer used.
@@ -57,11 +56,12 @@ Secrets, set with `wrangler secret put <name>` (never in the config):
 Add, without removing anything Vercel uses until the cutover is done:
 
 - Redirect URI `https://www.eft-toolset.com/auth/callback` (already there for Vercel; it stays).
-- For a test deploy before cutover: `https://<worker>.<account>.workers.dev/auth/callback`, and set
-  `APP_ORIGIN` to that origin for that deploy.
+- For the deploy tested before cutover: `https://<worker>.<subdomain>.workers.dev/auth/callback`,
+  deployed with `APP_ORIGIN` set to that origin.
 - For local development with sign-in: `http://localhost:3000/auth/callback` (already there).
-- Sign-out redirect: `https://www.eft-toolset.com/settings` (already there), plus the `workers.dev`
-  `/settings` URL for a test deploy.
+- Sign-out redirect: the app returns to `<origin>/settings#account`, so
+  `https://www.eft-toolset.com/settings` (already there), plus the same path on the `workers.dev`
+  origin for the test deploy.
 
 MCP sign-in is unchanged: AuthKit stays the authorization server, and tokens must still name
 `https://www.eft-toolset.com/api/mcp` as their audience, so existing connectors (Claude, ChatGPT,
@@ -80,7 +80,9 @@ npx wrangler deploy           # uses the config the build wrote (dist/server/wra
 ```
 
 Run `wrangler deploy` without `--config wrangler.jsonc`: the Vite plugin writes the deploy config
-into the build output. The build needs network access to json.tarkov.dev for the snapshot (it never
+into the build output. To test sign-in on the `workers.dev` hostname before the cutover, deploy with
+`npx wrangler deploy --var APP_ORIGIN:https://<worker>.<subdomain>.workers.dev`; the next plain
+`wrangler deploy` drops it again, which is what production needs. The build needs network access to json.tarkov.dev for the snapshot (it never
 fails the build without it). After the first deploy, trigger the cron once from the dashboard (or
 wait a minute) so the price feed is in KV before traffic arrives; until then, reads use the items
 file as before.
@@ -100,8 +102,9 @@ an SPF TXT record. A Worker custom domain needs the zone on Cloudflare.
    the candidate read tarkov.dev minutes apart, so a few prices may differ).
 3. At the registrar, change the nameservers to the two Cloudflare gives you. Wait until Cloudflare shows
    the zone as active.
-4. In the Worker's settings, add the custom domain `www.eft-toolset.com`. Cloudflare replaces the
-   `www` CNAME with a record for the Worker and issues the certificate.
+4. Deploy once without `--var APP_ORIGIN` (a plain `npx wrangler deploy`), so sign-in returns to
+   www.eft-toolset.com. Then, in the Worker's settings, add the custom domain `www.eft-toolset.com`.
+   Cloudflare replaces the `www` CNAME with a record for the Worker and issues the certificate.
 5. For the apex: replace Vercel's `A` record with a proxied `AAAA eft-toolset.com 100::`, and
    add a Single Redirect rule: requests to `eft-toolset.com/*` → `https://www.eft-toolset.com/${1}`,
    308, keeping the query string. (Vercel did the same redirect.)
