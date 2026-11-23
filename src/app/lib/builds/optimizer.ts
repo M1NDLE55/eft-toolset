@@ -62,6 +62,11 @@ export interface OptimizeResult {
   changed: boolean;
   conflicts: number;
   evaluations: number;
+  /**
+   * The chosen build's score for the goal, penalties included (higher is better). Comparable
+   * between runs with the same inputs, such as two versions of the optimiser.
+   */
+  objective: number;
 }
 
 const REQUIRED_PENALTY = 1e7;
@@ -82,6 +87,10 @@ interface Solved {
   node: BuildNode;
   value: number;
   cost: number;
+  /** The penalties and bonuses inside value: emptied slots, ammo, magazine size, kept sights. */
+  penalty: number;
+  /** Required or previously filled slots left empty. */
+  emptied: number;
 }
 
 type Memo = Map<BuildNode | null, Map<string, Solved | null>>;
@@ -179,6 +188,10 @@ function presetChild(at: PresetPath | null, slotId: string) {
   return at?.children.get(slotId) ?? null;
 }
 
+function emptyChoice(value: number): Solved {
+  return { node: { itemId: "", slots: {} }, value, cost: 0, penalty: value, emptied: value < 0 ? 1 : 0 };
+}
+
 function samePath(a: string[], b: string[]) {
   return a.length === b.length && a.every((part, index) => part === b[index]);
 }
@@ -221,23 +234,30 @@ function emptyPenalty(slot: ModSlotDef, occupied: boolean, pass: Pass) {
   return occupied ? KEEP_PENALTY : 0;
 }
 
-/** Slot-specific value on top of a part's own: keeping sights and magazine capacity. */
+/**
+ * Slot-specific value on top of a part's own: keeping sights and magazine capacity. penalty is
+ * the part of it that is a penalty or bonus rather than a preference. Null when it adds nothing.
+ */
 function slotAdjustment(slot: ModSlotDef, itemId: string, oldRole: string | null, pass: Pass) {
   const item = pass.lookup.get(itemId);
   let value = 0;
+  let penalty = 0;
   const role = sightRole(item, slot.nameId);
-  if (oldRole && role === oldRole) value += SIGHT_BONUS;
-  else if (role === "optic" && pass.options.keepSights) value -= NEW_OPTIC_PENALTY;
+  if (oldRole && role === oldRole) {
+    value += SIGHT_BONUS;
+    penalty += SIGHT_BONUS;
+  } else if (role === "optic" && pass.options.keepSights) value -= NEW_OPTIC_PENALTY;
   const floor = pass.options.minMagazineCapacity;
   if (floor !== null && isMagazineSlot(slot) && typeof item?.capacity === "number" && item.capacity < floor) {
     value -= SMALL_MAGAZINE_PENALTY;
+    penalty -= SMALL_MAGAZINE_PENALTY;
   }
-  return value;
+  return value ? { value, penalty } : null;
 }
 
 function chooseForSlot(slot: ModSlotDef, at: PresetPath | null, old: BuildNode | undefined, pass: Pass): Solved | null {
   const emptyValue = -emptyPenalty(slot, Boolean(old), pass);
-  if (pass.restrictions.slots.has(slot.id)) return { node: { itemId: "", slots: {} }, value: emptyValue, cost: 0 };
+  if (pass.restrictions.slots.has(slot.id)) return emptyChoice(emptyValue);
   const oldRole = pass.options.keepSights && old ? sightRole(pass.lookup.get(old.itemId), slot.nameId) : null;
   let best: Solved | null = null;
   const tried = new Set<string>();
@@ -247,10 +267,12 @@ function chooseForSlot(slot: ModSlotDef, at: PresetPath | null, old: BuildNode |
     const unfixed = solveFree(id, at, old, isFree(at, id), pass);
     if (!unfixed) continue;
     const adjustment = slotAdjustment(slot, id, oldRole, pass);
-    const solved = adjustment ? { ...unfixed, value: unfixed.value + adjustment } : unfixed;
+    const solved = adjustment
+      ? { ...unfixed, value: unfixed.value + adjustment.value, penalty: unfixed.penalty + adjustment.penalty }
+      : unfixed;
     if (!best || solved.value > best.value) best = solved;
   }
-  if (!best || best.value <= emptyValue) return { node: { itemId: "", slots: {} }, value: emptyValue, cost: 0 };
+  if (!best || best.value <= emptyValue) return emptyChoice(emptyValue);
   return best;
 }
 
@@ -316,7 +338,12 @@ function solveFree(itemId: string, at: PresetPath | null, old: BuildNode | undef
   }
   pass.stack.add(itemId);
   let value = itemScore(item, price, goal, pass.options.blend) - (pass.lambda * (price ?? 0)) / 1000;
-  if (!ammoFitsItem(item, pass.options.ammoId)) value -= AMMO_PENALTY;
+  let penalty = 0;
+  let emptied = 0;
+  if (!ammoFitsItem(item, pass.options.ammoId)) {
+    value -= AMMO_PENALTY;
+    penalty -= AMMO_PENALTY;
+  }
   let cost = price ?? 0;
   const slots: Record<string, BuildNode> = {};
   const defs = isDetailed(item) ? item.slots : [];
@@ -326,10 +353,12 @@ function solveFree(itemId: string, at: PresetPath | null, old: BuildNode | undef
     if (!choice) continue;
     value += choice.value;
     cost += choice.cost;
+    penalty += choice.penalty;
+    emptied += choice.emptied;
     if (choice.node.itemId) slots[slot.id] = choice.node;
   }
   pass.stack.delete(itemId);
-  const solved = { node: { itemId, slots }, value, cost };
+  const solved = { node: { itemId, slots }, value, cost, penalty, emptied };
   cache.set(key, solved);
   return solved;
 }
@@ -359,6 +388,8 @@ function solveFixed(node: BuildNode, path: string[], at: PresetPath | null, pass
     (root ? priceScore(price, pass.options.goal) : item ? itemScore(item, price, pass.options.goal, pass.options.blend) : 0) -
     (pass.lambda * (price ?? 0)) / 1000;
   let cost = price ?? 0;
+  let penalty = 0;
+  let emptied = 0;
   const slots: Record<string, BuildNode> = {};
   const defs = isDetailed(item) ? item.slots : [];
   const defined = new Set(defs.map((slot) => slot.id));
@@ -367,6 +398,8 @@ function solveFixed(node: BuildNode, path: string[], at: PresetPath | null, pass
     const kept = solveFixed(child, [...path, slotId], presetChild(at, slotId), pass);
     value += kept.value;
     cost += kept.cost;
+    penalty += kept.penalty;
+    emptied += kept.emptied;
     slots[slotId] = kept.node;
   }
   for (const slot of defs) {
@@ -380,11 +413,13 @@ function solveFixed(node: BuildNode, path: string[], at: PresetPath | null, pass
     if (!choice) continue;
     value += choice.value;
     cost += choice.cost;
+    penalty += choice.penalty;
+    emptied += choice.emptied;
     if (choice.node.itemId) slots[slot.id] = choice.node;
   }
   const result = { itemId: node.itemId, slots };
   pass.fixed.add(result);
-  return { node: result, value, cost };
+  return { node: result, value, cost, penalty, emptied };
 }
 
 function repairOptions(conflict: BuildConflict, fixed: Set<BuildNode>): Ban[] {
@@ -399,6 +434,12 @@ function repairOptions(conflict: BuildConflict, fixed: Set<BuildNode>): Ban[] {
 
 function signature(restrictions: Restrictions) {
   return `${[...restrictions.items].sort().join(",")}|${[...restrictions.slots].sort().join(",")}`;
+}
+
+const NO_RESTRICTIONS: Restrictions = { items: new Set(), slots: new Set() };
+
+function unrestricted(restrictions: Restrictions) {
+  return restrictions.items.size === 0 && restrictions.slots.size === 0;
 }
 
 export async function optimizeBuild(
@@ -468,8 +509,8 @@ export async function optimizeBuild(
   }
 
   /** The best build at one lambda: a solve, then a beam search that bans parts to repair conflicts. */
-  async function solveAt(mode: PriceMode, lambda: number): Promise<Evaluation> {
-    const start = await evaluate(mode, lambda, { items: new Set(), slots: new Set() }, null);
+  async function solveAt(mode: PriceMode, lambda: number, initial: Restrictions = NO_RESTRICTIONS): Promise<Evaluation> {
+    const start = await evaluate(mode, lambda, initial, null);
     let best = start;
     let beam = [start];
     const seen = new Set([signature(start.restrictions)]);
@@ -504,15 +545,42 @@ export async function optimizeBuild(
     (evaluation.lambda * evaluation.solved.cost) / 1000 -
     evaluation.conflicts.length * CONFLICT_PENALTY;
 
-  async function solveMode(mode: PriceMode) {
-    let chosen = await solveAt(mode, 0);
-    if (budget === null || chosen.solved.cost <= budget) return { evaluation: chosen, withinBudget: true };
+  // The penalties and bonuses in an evaluation's objective, conflicts included.
+  const penaltyTier = (evaluation: Evaluation) => evaluation.solved.penalty - evaluation.conflicts.length * CONFLICT_PENALTY;
+
+  /**
+   * The cheapest-lambda search for a build within budget: doubles lambda until a build fits, then
+   * bisects for the best one that does. start is the solve at lambda 0, which didn't fit.
+   *
+   * With warmStart, each step starts its conflict repair from the bans the previous step ended
+   * with, since neighbouring lambdas usually need the same repairs. Those bans can be ones the new
+   * lambda no longer needs, so a step whose answer has a penalty-level problem (an emptied
+   * required or kept slot, a conflict left, or penalties worse than the last fresh solve's) is
+   * solved again from scratch, keeping the better answer.
+   */
+  async function searchBudget(mode: PriceMode, start: Evaluation, budget: number, warmStart: boolean) {
+    let previous = start;
+    let fresh = start;
+    const solveStep = async (lambda: number) => {
+      if (!warmStart || unrestricted(previous.restrictions)) {
+        previous = fresh = await solveAt(mode, lambda);
+        return previous;
+      }
+      const warm = await solveAt(mode, lambda, previous.restrictions);
+      previous = warm;
+      if (warm.conflicts.length > 0 || warm.solved.emptied > 0 || penaltyTier(warm) < penaltyTier(fresh)) {
+        fresh = await solveAt(mode, lambda);
+        // On a tie, the fresh solve: the answer without a warm start.
+        previous = fresh.rank >= warm.rank ? fresh : warm;
+      }
+      return previous;
+    };
     let low = 0;
     let high = 1e-3;
     let feasible: Evaluation | null = null;
-    let cheapest = chosen;
+    let cheapest = start;
     while (high <= MAX_LAMBDA) {
-      const attempt = await solveAt(mode, high);
+      const attempt = await solveStep(high);
       if (attempt.solved.cost < cheapest.solved.cost) cheapest = attempt;
       if (attempt.solved.cost <= budget) {
         feasible = attempt;
@@ -524,7 +592,7 @@ export async function optimizeBuild(
     if (!feasible) return { evaluation: cheapest, withinBudget: false };
     for (let step = 0; step < BUDGET_STEPS; step += 1) {
       const middle = (low + high) / 2;
-      const attempt = await solveAt(mode, middle);
+      const attempt = await solveStep(middle);
       if (attempt.solved.cost <= budget) {
         high = middle;
         if (objective(attempt) > objective(feasible)) feasible = attempt;
@@ -532,8 +600,21 @@ export async function optimizeBuild(
         low = middle;
       }
     }
-    chosen = feasible;
-    return { evaluation: chosen, withinBudget: true };
+    return { evaluation: feasible, withinBudget: true };
+  }
+
+  async function solveMode(mode: PriceMode) {
+    const start = await solveAt(mode, 0);
+    if (budget === null || start.solved.cost <= budget) return { evaluation: start, withinBudget: true };
+    // A warm start changes the steps the search takes, and a different path can end on a worse
+    // build as well as a better one. So the search runs both ways and the warm-started build is
+    // used only when it is better: within budget where the plain search's isn't, or a higher
+    // score. The result is never worse than the plain search's.
+    const plain = await searchBudget(mode, start, budget, false);
+    const warm = await searchBudget(mode, start, budget, true);
+    const warmIsBetter =
+      warm.withinBudget && (!plain.withinBudget || objective(warm.evaluation) > objective(plain.evaluation));
+    return warmIsBetter ? warm : plain;
   }
 
   let best: Awaited<ReturnType<typeof solveMode>> | null = null;
@@ -563,6 +644,7 @@ export async function optimizeBuild(
     changed: !treesEqual(root, result),
     conflicts: chosen.conflicts.length,
     evaluations,
+    objective: objective(chosen),
   };
 }
 
