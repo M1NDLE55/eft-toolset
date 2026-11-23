@@ -3,13 +3,17 @@ import Link from "next/link";
 import { FixedModePriceTables } from "@/app/components/item/price-highlights";
 import { JsonLd, breadcrumbList, faqPage } from "@/app/components/seo/json-ld";
 import { getPriceHighlights } from "@/app/lib/api/tarkov-server";
-import { isCrawlerRequest, readForRender } from "@/app/lib/api/server-render";
+import { readForRender } from "@/app/lib/api/server-render";
 import { UseModeButton } from "@/components/game-mode/use-mode-button";
 import { FaqSection } from "@/app/components/seo/faq-section";
 
 const TITLE = "Tarkov PVE Flea Market Prices: Live PVE Item Values";
 const DESCRIPTION =
   "Live Escape from Tarkov PVE flea market prices: the most valuable PVE loot per slot, the most expensive items and keys, and a price checker for every item with trader prices and quest uses.";
+
+// Flea market movers: refreshed every five minutes.
+export const revalidate = 300;
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -45,7 +49,8 @@ const FAQ = [
 
 export default async function Page() {
   const highlights = await readForRender("PVE prices page", () => getPriceHighlights("pve"));
-  if (!highlights && (await isCrawlerRequest())) throw new PricesUnavailableError();
+  // Fail the render rather than cache the page without its prices.
+  if (!highlights) throw new PricesUnavailableError();
   return (
     <>
       <JsonLd

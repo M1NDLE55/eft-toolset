@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { KeyRound } from "lucide-react";
 import { JsonLd, breadcrumbList } from "@/app/components/seo/json-ld";
-import { readForRender } from "@/app/lib/api/server-render";
+import { requireForRender } from "@/app/lib/api/server-render";
 import { getKeyCounts } from "@/app/lib/reference/keys";
 
 const TITLE = "Tarkov Keys by Map: Every Key, Price & Quest Use";
 const DESCRIPTION =
   "Every Escape from Tarkov key and keycard by map: which locks it opens, what it costs on the flea market and from traders, what it sells for, and the tasks that need it.";
+
+// Key counts per map change with patches.
+export const revalidate = 86400;
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -17,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const counts = (await readForRender("Keys list", () => getKeyCounts("regular"))) ?? [];
+  const counts = await requireForRender("Keys list", () => getKeyCounts("regular"));
   return (
     <div className="flex w-full max-w-4xl flex-col gap-8">
       <JsonLd data={breadcrumbList([{ name: "EFT Toolset", path: "/" }, { name: "Keys by map", path: "/keys" }])} />

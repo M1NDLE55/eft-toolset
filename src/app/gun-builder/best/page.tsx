@@ -1,3 +1,4 @@
+import { RenderDataUnavailableError } from "@/app/lib/api/server-render";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,9 @@ import { WEAPON_CLASSES } from "@/app/lib/builds/best-builds";
 import { BEST_BUILDS_HUB_DESCRIPTION, BEST_BUILDS_HUB_NAME, BEST_BUILDS_HUB_TITLE } from "@/app/lib/seo/builds";
 import { SITE_ORIGIN } from "@/app/lib/site";
 import { loadBestBuildWeapons } from "./load";
+
+export const revalidate = 21600;
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: BEST_BUILDS_HUB_TITLE,
@@ -20,7 +24,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const weapons = (await loadBestBuildWeapons()) ?? [];
+  const weapons = await loadBestBuildWeapons();
+  // Fail the render rather than cache an empty list.
+  if (!weapons) throw new RenderDataUnavailableError("Best builds list");
   const groups = WEAPON_CLASSES.map((entry) => ({
     name: entry.name,
     weapons: weapons.filter((weapon) => weapon.weaponClass === entry.name).sort((a, b) => a.shortName.localeCompare(b.shortName)),

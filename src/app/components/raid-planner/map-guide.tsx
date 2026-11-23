@@ -57,26 +57,6 @@ export function MapGuideStrip({ config }: { config: MapConfig }) {
   );
 }
 
-/** Shown while the map's data loads, or when it can't be loaded on the server. */
-export function MapGuideFallback({ config }: { config: MapConfig }) {
-  return (
-    <section id={MAP_GUIDE_ID} aria-labelledby="map-guide-title" className="flex justify-center px-4 py-10">
-      <div className="flex w-full max-w-4xl flex-col gap-8">
-        <div className="flex flex-col gap-2">
-          <h2 id="map-guide-title" className="text-xl font-black uppercase tracking-widest text-[#e6d9b8]">
-            {config.name} map guide
-          </h2>
-          <p className="max-w-3xl text-sm text-[#999]">
-            This interactive {config.name} map for Escape from Tarkov shows every extract, transit, PMC and Scav spawn,
-            boss spawn, locked door and key, hazard and loot container. Toggle them in the layers panel, switch floors,
-            or press Plan to draw a route and share it with your squad.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /** A written guide under the interactive map, from the same data: indexable and quick to scan. */
 export function MapGuide({
   config,

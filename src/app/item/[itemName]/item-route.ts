@@ -2,18 +2,17 @@ import { unstable_rethrow } from "next/navigation";
 import { cache } from "react";
 import { customDecodeURI } from "@/app/lib/URIEncoding";
 import { isItemSlug } from "@/app/lib/item-links";
-import { executeTarkovOperation, getItemPageIndex, releaseOperationSlot, tryAcquireOperationSlot } from "@/app/lib/api/tarkov-server";
+import { executeTarkovOperation, getItemPageIndex, releaseRenderSlot, waitForRenderSlot } from "@/app/lib/api/tarkov-server";
 import type { ItemIndexing } from "@/app/lib/seo/item-index";
-import { renderTimeoutMs, requestGameMode } from "@/app/lib/api/server-render";
+import { RENDER_TIMEOUT_MS } from "@/app/lib/api/server-render";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import type { GameMode } from "@/components/game-mode/mode";
 import type { ComposedItem } from "@/app/lib/cache/types";
 
-export { isCrawlerRequest, requestGameMode } from "@/app/lib/api/server-render";
-
 /**
- * Thrown for a crawler when the item couldn't be loaded in time, so the page answers with a
- * server error and the crawler retries later, instead of indexing an empty page or dropping it.
+ * Thrown when the item couldn't be loaded in time, so the render fails: a background render keeps
+ * the cached page, and a first render answers with a server error (crawlers retry later) instead
+ * of caching an empty page.
  */
 export class ItemTemporarilyUnavailableError extends Error {
   constructor() {
@@ -25,28 +24,25 @@ export class ItemTemporarilyUnavailableError extends Error {
 export const loadItem = cache(async (segment: string, gameMode: GameMode): Promise<ComposedItem | null | undefined> => {
   const reference = isItemSlug(segment) ? { slug: segment } : { name: customDecodeURI(segment) };
   if ("name" in reference && !reference.name) return null;
-  const timeout = await renderTimeoutMs();
-  if (!tryAcquireOperationSlot()) {
+  const signal = AbortSignal.timeout(RENDER_TIMEOUT_MS);
+  try {
+    await waitForRenderSlot(signal);
+  } catch {
     console.warn("Item page rendered without its item: the server is busy.");
     return undefined;
   }
   try {
-    return (await executeTarkovOperation(
-      TARKOV_OPERATIONS.itemDetail,
-      { gameMode, ...reference },
-      { signal: AbortSignal.timeout(timeout) }
-    )) as ComposedItem | null;
+    return (await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, { gameMode, ...reference }, { signal })) as ComposedItem | null;
   } catch (error) {
     unstable_rethrow(error);
     console.warn("Item page rendered without its item:", error instanceof Error ? error.message : error);
     return undefined;
   } finally {
-    releaseOperationSlot();
+    releaseRenderSlot();
   }
 });
 
-export async function resolveItemRoute(segment: string) {
-  const gameMode = await requestGameMode();
+export async function resolveItemRoute(gameMode: GameMode, segment: string) {
   const item = await loadItem(segment, gameMode);
   const slug = isItemSlug(segment) ? segment : null;
   const name = item?.name ?? (slug ? null : customDecodeURI(segment) || null);
@@ -62,7 +58,7 @@ export async function resolveItemRoute(segment: string) {
  * read in time.
  */
 export async function loadItemIndexing(slug: string): Promise<ItemIndexing | undefined> {
-  const timeout = await renderTimeoutMs();
+  const timeout = RENDER_TIMEOUT_MS;
   let timer: ReturnType<typeof setTimeout> | undefined;
   try {
     const index = await Promise.race([

@@ -4,11 +4,11 @@ import { preload } from "react-dom";
 import { Suspense, cache } from "react";
 import { getMapConfig, mapConfigs } from "@/app/lib/raid-planner/maps-config";
 import { MapViewer } from "@/app/components/raid-planner/map-viewer";
-import { MapGuide, MapGuideFallback, MapGuideStrip } from "@/app/components/raid-planner/map-guide";
+import { MapGuide, MapGuideStrip } from "@/app/components/raid-planner/map-guide";
 import type { MapConfig } from "@/app/lib/raid-planner/types";
 import { JsonLd, breadcrumbList, faqPage } from "@/app/components/seo/json-ld";
 import { getMapDetails } from "@/app/lib/api/tarkov-server";
-import { readForRender } from "@/app/lib/api/server-render";
+import { readForRender, RenderDataUnavailableError } from "@/app/lib/api/server-render";
 import { buildMapGuide, mapDescription, mapFaq } from "@/app/lib/seo/map";
 import { mapPageTitle } from "@/app/lib/seo/site-copy";
 
@@ -16,6 +16,9 @@ interface MapPageProps {
   params: Promise<{ map: string }>;
 }
 
+// Map guides change with patches. Every map is built with the site.
+export const revalidate = 86400;
+export const dynamic = "force-static";
 export function generateStaticParams() {
   return mapConfigs.map((config) => ({ map: config.key }));
 }
@@ -76,7 +79,8 @@ export default async function MapPage({ params }: MapPageProps) {
 
 async function GuideSection({ config }: { config: MapConfig }) {
   const loaded = await loadGuide(config.key);
-  if (!loaded) return <MapGuideFallback config={config} />;
+  // Fail the render rather than cache the map without its guide.
+  if (!loaded) throw new RenderDataUnavailableError("Map guide");
   const faq = mapFaq(config.name, loaded.details, loaded.guide);
   return (
     <>

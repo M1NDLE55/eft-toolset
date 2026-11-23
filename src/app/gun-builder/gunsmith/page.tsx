@@ -1,3 +1,4 @@
+import { RenderDataUnavailableError } from "@/app/lib/api/server-render";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd, breadcrumbList } from "@/app/components/seo/json-ld";
@@ -5,6 +6,9 @@ import { GUNSMITH_HUB_DESCRIPTION, GUNSMITH_HUB_NAME, GUNSMITH_HUB_TITLE } from 
 import { SITE_ORIGIN } from "@/app/lib/site";
 import type { GunsmithTaskSummary } from "@/app/lib/builds/gunsmith-pages";
 import { loadGunsmithTasks } from "./load";
+
+export const revalidate = 21600;
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: GUNSMITH_HUB_TITLE,
@@ -25,7 +29,9 @@ const GROUPS: { key: GunsmithTaskSummary["group"]; title: string }[] = [
 ];
 
 export default async function Page() {
-  const tasks = (await loadGunsmithTasks()) ?? [];
+  const tasks = await loadGunsmithTasks();
+  // Fail the render rather than cache an empty list.
+  if (!tasks) throw new RenderDataUnavailableError("Gunsmith list");
   return (
     <div className="flex w-full max-w-4xl flex-col gap-8">
       <JsonLd

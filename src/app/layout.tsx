@@ -3,8 +3,6 @@ import "./globals.css";
 import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 import { preconnect } from "react-dom";
-import { connection } from "next/server";
-import { headers } from "next/headers";
 import { GameModeProvider } from "@/components/game-mode/context";
 import { ItemRundownProvider } from "@/app/components/item/rundown/rundown-link";
 import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
@@ -49,16 +47,16 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-export default async function RootLayout({ children }: { children: ReactNode }) {
-  await connection();
-  const nonce = (await headers()).get("x-nonce") ?? undefined;
+// Pages are cached and served to everyone, so nothing here reads the request: no per-request CSP
+// nonce (see src/app/lib/security/headers.ts) and no cookies.
+export default function RootLayout({ children }: { children: ReactNode }) {
   preconnect("https://assets.tarkov.dev");
 
   return (
     // The inline script sets the saved content size on <html> before hydration.
     <html lang="en" className={inter.className} suppressHydrationWarning>
       <head>
-        <script nonce={nonce} dangerouslySetInnerHTML={{ __html: contentScaleScript() }} />
+        <script dangerouslySetInnerHTML={{ __html: contentScaleScript() }} />
       </head>
       <body className="flex min-h-dvh flex-col">
         <a
@@ -76,7 +74,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <SiteFooter />
         <ServiceWorker />
         <ContentScaleSync />
-        <CloudflareAnalytics nonce={nonce} />
+        <CloudflareAnalytics />
       </body>
     </html>
   );

@@ -20,7 +20,6 @@ import {
   PRESET_DESCRIPTIONS,
   isItemCardId,
   isPresetId,
-  type ActiveLayout,
   type ItemView,
   type ViewCard,
 } from "@/app/lib/item-views/views";
@@ -85,8 +84,8 @@ function AddCardMenu({ cards, onAdd }: { cards: ViewCard[]; onAdd: (id: ViewCard
   );
 }
 
-export function ItemPageView({ context, serverLayout }: { context: CardContext; serverLayout: ActiveLayout }) {
-  const { views, active, hydrated } = useItemViews(serverLayout);
+export function ItemPageView({ context }: { context: CardContext }) {
+  const { views, active, hydrated } = useItemViews();
   const [editing, setEditing] = useState(false);
   const [error, setError] = useState("");
   const custom = !isPresetId(active.id);

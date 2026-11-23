@@ -139,7 +139,10 @@ export function primeQuery<Variables, Data>(
   };
   memory.set(key, entry);
   evictMemoryEntries();
-  snapshots.set(key, { data, status: "success", isFetching: false, updatedAt, stale: Date.now() - updatedAt > definition.staleTime });
+  // Primed data is what the server rendered, which (from a cached page) can be older than staleTime.
+  // Report it as the server did, not stale, so hydration matches; the first fetch after the page
+  // mounts sees its age, marks it stale and refreshes it.
+  snapshots.set(key, { data, status: "success", isFetching: false, updatedAt, stale: false });
   queueMicrotask(() => notify(key));
   if (definition.persist) void cacheSet(persistenceKey(key), entry).catch(() => undefined);
 }

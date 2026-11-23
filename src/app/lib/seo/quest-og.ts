@@ -270,9 +270,14 @@ export async function loadOgIcon(url: string | null, { fetcher = fetch, toPng = 
   }
 }
 
-/** Cache-Control for the share image: a day at the CDN for a real one; briefly for a stand-in, so the real one follows soon. */
+/**
+ * Cache-Control for the share image. A real one changes only when the quest does, so it's kept at the
+ * CDN for a month and served stale while it refreshes (a deploy clears the CDN anyway). Not
+ * immutable: its URL stays the same when the quest changes. A stand-in is kept briefly, so the real
+ * one follows soon.
+ */
 export const OG_CACHE_CONTROL = {
-  quest: "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800",
+  quest: "public, max-age=86400, s-maxage=2592000, stale-while-revalidate=31536000",
   unavailable: "public, max-age=60, s-maxage=300",
   notFound: "public, max-age=3600, s-maxage=3600",
 } as const;

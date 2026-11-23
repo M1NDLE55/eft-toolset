@@ -1,8 +1,7 @@
-export const dynamic = "force-dynamic";
-
 import type { MetadataRoute } from "next";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
-import { getItemPageIndex, getQuestList, itemsPublishedAt, releaseOperationSlot, tryAcquireOperationSlot, type ItemPageIndex } from "@/app/lib/api/tarkov-server";
+import { getItemPageIndex, getQuestList, itemsPublishedAt } from "@/app/lib/api/tarkov-server";
+import { requireForRender } from "@/app/lib/api/server-render";
 import { SITE_ORIGIN as ORIGIN } from "@/app/lib/site";
 import { listBestBuildWeapons } from "@/app/lib/builds/best-builds";
 import { listGunsmithTasks } from "@/app/lib/builds/gunsmith-pages";
@@ -13,23 +12,10 @@ import { questSitemapEntries, type SitemapQuest } from "@/app/lib/seo/sitemap-qu
 import { itemSitemapEntries } from "@/app/lib/seo/item-index";
 import { wikiLastEdited, wikiSnapshotDate } from "@/app/lib/wiki/snapshot";
 
-async function load<T>(read: () => Promise<T>, fallback: T): Promise<T> {
-  if (!tryAcquireOperationSlot()) return fallback;
-  let timer: ReturnType<typeof setTimeout> | undefined;
-  try {
-    return await Promise.race([
-      read(),
-      new Promise<T>((resolve) => {
-        timer = setTimeout(() => resolve(fallback), 5_000);
-      }),
-    ]);
-  } catch {
-    return fallback;
-  } finally {
-    clearTimeout(timer);
-    releaseOperationSlot();
-  }
-}
+// Built once a day, and the copy is served to every crawler. A list that can't be read fails the
+// build (or the refresh, which then keeps yesterday's sitemap) rather than dropping its pages.
+export const revalidate = 86400;
+export const dynamic = "force-static";
 
 /** Quest pages with their wiki page's last edit; without the snapshot they're still listed, undated. */
 async function questEntries(pvp: readonly SitemapQuest[], pve: readonly SitemapQuest[]) {
@@ -41,7 +27,6 @@ async function questEntries(pvp: readonly SitemapQuest[], pve: readonly SitemapQ
   }
 }
 
-const NO_ITEMS: ItemPageIndex = { pages: new Map(), publishedAt: null };
 const latest = (dates: (string | null | undefined)[]) => dates.reduce<string | undefined>((max, date) => (date && (!max || date > max) ? date : max), undefined);
 
 /**
@@ -52,14 +37,14 @@ const latest = (dates: (string | null | undefined)[]) => dates.reduce<string | u
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [items, pveItems, weaponSlugs, gunsmithSlugs, caliberSlugs, keyMaps, pvpQuests, pveQuests] = await Promise.all([
-    load(() => getItemPageIndex("regular"), NO_ITEMS),
-    load(() => itemsPublishedAt("pve"), null),
-    load(async () => (await listBestBuildWeapons("regular")).map((weapon) => weapon.slug), []),
-    load(async () => (await listGunsmithTasks("regular")).map((task) => task.slug), []),
-    load(async () => groupAmmo(await getAllAmmo("regular")).map((caliber) => caliber.slug), []),
-    load(async () => (await getKeyCounts("regular")).map((map) => map.key), []),
-    load(async () => (await getQuestList("regular")).quests, []),
-    load(async () => (await getQuestList("pve")).quests, []),
+    requireForRender("Sitemap items", () => getItemPageIndex("regular")),
+    requireForRender("Sitemap PVE prices", () => itemsPublishedAt("pve")),
+    requireForRender("Sitemap builds", async () => (await listBestBuildWeapons("regular")).map((weapon) => weapon.slug)),
+    requireForRender("Sitemap Gunsmith", async () => (await listGunsmithTasks("regular")).map((task) => task.slug)),
+    requireForRender("Sitemap ammo", async () => groupAmmo(await getAllAmmo("regular")).map((caliber) => caliber.slug)),
+    requireForRender("Sitemap keys", async () => (await getKeyCounts("regular")).map((map) => map.key)),
+    requireForRender("Sitemap quests", async () => (await getQuestList("regular")).quests),
+    requireForRender("Sitemap PVE quests", async () => (await getQuestList("pve")).quests),
   ]);
   const quests = await questEntries(pvpQuests, pveQuests);
   const prices = items.publishedAt ?? undefined;

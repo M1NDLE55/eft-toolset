@@ -1,13 +1,6 @@
 import type { ReactNode } from "react";
-import { notFound, permanentRedirect } from "next/navigation";
-import { ItemTemporarilyUnavailableError, isCrawlerRequest, resolveItemRoute } from "./item-route";
+import { ItemRouteLayout, type ItemPageProps } from "./item-page";
 
-export default async function Layout({ children, params }: { children: ReactNode; params: Promise<{ itemName: string }> }) {
-  const segment = (await params).itemName;
-  const { item, canonical, reference } = await resolveItemRoute(segment);
-  if (canonical && canonical !== segment) permanentRedirect(`/item/${canonical}`);
-  if (!reference || item === null) notFound();
-  // Visitors get the page and load the item in the browser; crawlers get a server error to retry.
-  if (item === undefined && (await isCrawlerRequest())) throw new ItemTemporarilyUnavailableError();
-  return children;
+export default function Layout(props: ItemPageProps & { children: ReactNode }) {
+  return <ItemRouteLayout {...props} gameMode="regular" />;
 }

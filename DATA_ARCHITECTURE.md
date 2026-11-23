@@ -55,25 +55,53 @@ are `no-store`. Configure the CDN to key on the full query string.
 The catalog is sent as `[id, name, shortName, image, normalizedName]` tuples, where an
 empty image means the standard `{id}-grid-image.webp` asset.
 
+## Page caching
+
+Content pages (items, quests, ammo, keys, best and Gunsmith builds, the hubs, raid-planner
+maps and the sitemap) are rendered once and cached at the CDN with incremental static
+regeneration: each page exports `revalidate` and `dynamic = "force-static"`, and a stale copy is
+served while it renders again in the background. Hubs and map pages are built with the site;
+pages with a parameter render on their first visit (`generateStaticParams` returns nothing).
+Nothing in the render reads the request, so there is no middleware and no per-request CSP
+nonce: the security headers, CSP included, come from `next.config.ts`
+(`src/app/lib/security/headers.ts`).
+
+| Pages | Revalidate |
+| --- | --- |
+| `/item`, `/flea-market/pve`, `/ammo`, `/ammo/<calibre>`, `/keys/<map>` (prices are the content) | 5 minutes |
+| `/item/<slug>` (prices also refresh in the browser) | 6 hours |
+| `/gun-builder/best`, `/gun-builder/best/<weapon>`, `/gun-builder/gunsmith`, `/gun-builder/gunsmith/<task>` | 6 hours |
+| `/quests`, `/quests/<slug>`, `/keys`, `/raid-planner/map/<map>`, `/sitemap.xml` | 24 hours |
+
+A render waits up to 15 seconds for its data (`src/app/lib/api/server-render.ts`), queueing
+for an operation slot rather than giving up. Renders hold at most 12 of the 16 slots, so
+`/api/tarkov` and MCP calls, which answer busy rather than wait, always have some left. When a page's main data still can't be read, the
+render throws: a background render keeps the previous copy, and a first render answers with a
+500 that isn't cached, so crawlers retry later rather than indexing an empty page. Pages are
+never marked `noindex` for a temporary failure.
+
+Pages whose data depends on the game mode have a PVE copy under `/pve/...`
+(`src/app/lib/game-mode-routes.ts`). `next.config.ts` rewrites to it for visitors whose
+`eft-game-mode` cookie, which the client keeps in sync with its stored setting, says PVE. The
+rewrite runs in Vercel's routing, so both modes are cached separately and the PVP copy, which
+crawlers get, doesn't depend on it. `/pve/...` URLs redirect to the real page. When a visitor
+switches mode, `useServerModeSync` refreshes the route, which the rewrite now sends to the
+other copy.
+
 ## Item pages
 
 Item pages live at `/item/<normalizedName>` and are rendered on the server with the
-adapter's data for the visitor's game mode, read from the `eft-game-mode` cookie that the
-client keeps in sync with its stored setting. The client query cache is seeded with the
-same data. Older name-based links redirect permanently, unknown slugs return 404, and if
-the adapter takes longer than 2.5 seconds the page renders and loads data in the browser
-instead. Crawlers (Next's `userAgent().isBot`) get 9 seconds, and if the item still isn't
-available they get a 500 so they retry later, rather than indexing an empty page. Item
-pages are never marked `noindex` for a temporary failure. Every item slug is listed in the
-sitemap.
+adapter's data for their game mode (see Page caching). The client query cache is seeded with
+the same data and refetches it once it is older than five minutes, so a cached page still
+shows live prices. Older name-based links redirect permanently and unknown slugs return 404.
+Every item slug is listed in the sitemap.
 
 An item page is a grid of cards (`src/app/components/item/cards.tsx`), laid out by a view:
 Raid, Standard and Full are built in, each showing everything the one before does and more,
 and visitors can copy one into their own view to reorder, resize, add and remove cards.
 Views are kept in local storage (`src/app/lib/item-views/store.ts`) and included in backups.
-The active view is mirrored in the `eft-item-view` cookie (a preset's id, or a custom view's
-id and cards), so the server renders the page as the visitor will see it; crawlers get
-Standard. Besides prices and uses, `item.detail` returns the item's description, weight,
+The cached page is rendered with Standard, and the visitor's own view applies when the page
+hydrates. Besides prices and uses, `item.detail` returns the item's description, weight,
 category, flea statistics, and the barters and crafts that give it. For keys it also returns
 the maps with a keys page whose locks they open, with a lock count for each, and what they
 open, from the wiki snapshot's infobox (so `/api/tarkov` traces the snapshot's item pages).
@@ -96,7 +124,8 @@ recoil and the max ergonomics build. `src/app/lib/builds/best-builds.ts` runs th
 builder's optimiser on the server from the default preset, with trader and flea prices, and
 keeps each weapon's result for an hour per instance (sooner when the part data changes).
 Optimiser runs share a per-instance limit with the MCP tools (`optimizer-slots.ts`). If the
-builds can't be worked out in time, crawlers get a 500 to retry and visitors a short notice.
+builds can't be worked out in time, the render fails (see Page caching). Pages are cached for
+six hours, so the optimiser runs when a page is rendered again, not per request.
 Each build links to the gun builder as a share link. Every weapon page is in the sitemap.
 
 ## Gunsmith builds
@@ -206,8 +235,8 @@ serves the images, and the page's HTML doesn't contain their URLs.
 - **`/flea-market/pve`** always shows the PVE price tables, with a button that switches the
   site to PVE.
 
-All three render with the visitor's game mode (PVE for the PVE page) and fall back like the
-other pages: crawlers get a 500 to retry, and visitors a short notice.
+All three render for their game mode (PVE for the PVE page) and fail like the other pages
+when their data can't be read (see Page caching).
 
 ## MCP endpoint
 

@@ -3,11 +3,35 @@ import {
   ensureQuery,
   getQuerySnapshot,
   invalidateQuery,
+  primeQuery,
   queryKey,
   type QueryDefinition,
 } from "@/app/lib/api/queryClient";
 
 describe("query client", () => {
+  it("reports server-primed data as fresh until a fetch finds it old, then refreshes it", async () => {
+    let resolve!: (value: string) => void;
+    const fetcher = vi.fn(() => new Promise<string>((done) => { resolve = done; }));
+    const query: QueryDefinition<{ id: string }, string> = {
+      id: `prime-${crypto.randomUUID()}`,
+      version: 1,
+      staleTime: 60_000,
+      maxAge: 24 * 60 * 60_000,
+      fetch: fetcher,
+    };
+    const key = queryKey(query, { id: "a" });
+    // As from a cached page rendered an hour ago: hydration must see what the server rendered.
+    primeQuery(query, { id: "a" }, "cached", Date.now() - 60 * 60_000);
+    expect(getQuerySnapshot<string>(key)).toMatchObject({ data: "cached", stale: false });
+
+    await expect(ensureQuery(query, { id: "a" })).resolves.toBe("cached");
+    expect(getQuerySnapshot<string>(key)).toMatchObject({ data: "cached", stale: true });
+    await vi.waitFor(() => expect(fetcher).toHaveBeenCalledOnce());
+    resolve("fresh");
+    await vi.waitFor(() => expect(getQuerySnapshot<string>(key)).toMatchObject({ data: "fresh", stale: false }));
+    expect(fetcher).toHaveBeenCalledOnce();
+  });
+
   it("deduplicates concurrent requests and reuses fresh data", async () => {
     let resolve!: (value: string) => void;
     const fetcher = vi.fn(
