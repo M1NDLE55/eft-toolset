@@ -414,8 +414,21 @@ The layers are kept apart:
 
 Tools call the adapter's projections (`getItemCatalog`, `getItemDetail`, `getGroupItems`,
 `getGunList`, `getAmmoItems`, `getPreset`, `getMapDetails`) inside `runTarkovRead`, which
-applies the same cancellation and stale-data tracking as the route. Results built from stale
-data carry a `dataNotice` with the data's age. `getGunPartLookup` projects every weapon and
+applies the same cancellation and stale-data tracking as the route. Tool reads accept any
+copy when tarkov.dev can't be reached, however old. Every result built from tarkov.dev data
+carries `dataAsOf`, when the oldest data it used was last confirmed with tarkov.dev (or fetched
+by the build), and results built from a copy whose refresh failed or was slow also carry a
+`dataNotice` naming the copy (cached, or bundled with the server) and its age. `dataAsOf` and
+`dataNotice` are left out of each tool's published output schema, which stays open, and
+explained once in the server instructions.
+
+Failed calls are tool errors (`isError`) whose `structuredContent.error` is
+`{ code, message, retryable, retryAfterSeconds? }`: `upstream_unavailable` (retryable, with
+`retryAfterSeconds`; only when the server has no copy of a dataset at all), `timeout`
+(retryable with a narrower request), `invalid_input` and `internal_error` (not retryable).
+`get_data_status` reports, per game mode and dataset, whether the instance holds a copy, its
+source and age, its freshness target, and whether refreshing it is failing, with no request to
+tarkov.dev; scheduled routines can check it before a run. `getGunPartLookup` projects every weapon and
 every part any slot accepts once per upstream refresh, so builds are evaluated and optimised
 with the browser's own modules (`src/app/lib/builds/*`).
 
@@ -537,9 +550,28 @@ enabled in AuthKit.
 - Hideout station names: `/{gameMode}/hideout` and `_en`.
 - Raid-planner data: `/{gameMode}/maps` and `_en`.
 
-External requests have a 20-second timeout, a 32 MiB response-size guard, status and
+External requests have a 12-second timeout, a 32 MiB response-size guard, status and
 shape validation, and a bounded resource allowlist. Upstream failures are translated to
 a stable `UPSTREAM_UNAVAILABLE` response without exposing internals.
+
+The datasets are large but compress well. Measured on 23 Nov 2026 (regular mode; PVE is the same
+size):
+
+| Dataset | JSON | Over the wire (brotli) | In the deployment snapshot | Changes |
+| --- | --- | --- | --- | --- |
+| `items` | 17.3 MB | 1.8 MB | 0.87 MB | every few minutes (prices) |
+| `maps` | 9.0 MB | 0.80 MB | 0.50 MB | several times a day |
+| `tasks` | 2.1 MB | 0.27 MB | 0.18 MB | several times a day |
+| `items_en` | 1.7 MB | 0.49 MB | 0.35 MB | with game patches |
+| the other eight | 0.77 MB | 0.13 MB | 0.12 MB | barters and traders daily, the rest with patches |
+
+Node's `fetch` asks for brotli, so loading `items` downloads about 1.8 MB, not 17 MB. Parsing it
+takes about 100 ms and holds about 40 MB of heap per game mode.
+
+**Freshness targets.** Prices (`items`) about 5 minutes; tasks and maps about 30 minutes; trader,
+barter, craft and hideout data and the English names 2 hours; the catalog itself (names, ids,
+slots, stats) changes only with game patches. A copy older than its target is refreshed on its
+next use, and served meanwhile up to the revalidate age in `RESOURCE_POLICIES`.
 
 tarkov.dev asks only that clients use common sense, so the adapter keeps its requests few
 and identifiable:
@@ -553,15 +585,46 @@ and identifiable:
 - Callers share a refresh in progress, and an instance has at most 4 tarkov.dev requests in
   flight; the rest queue. A burst of tool calls or page loads therefore costs at most one
   request per dataset.
-- After a failed refresh, that dataset isn't requested again for 30 seconds, doubling to
-  10 minutes, with jitter, or for as long as a `Retry-After` asks (up to an hour). Meanwhile
-  callers get the stale copy, or fail at once when there is none.
+- A refresh asks again after quick failures (a reset connection, a 5xx, or a 429 asking for 2
+  seconds or less): at most 3 requests, 250 ms and 1 s apart with jitter. A timeout or a bad
+  payload isn't asked again within the refresh.
+- After a failed refresh, that dataset isn't requested again for 5 seconds, doubling to
+  5 minutes, with jitter, or for as long as a `Retry-After` asks (up to an hour). Meanwhile
+  callers get the newest copy there is (see below); only a caller with no copy at all fails,
+  at once and without a request, and the error carries the time left (`retryAfterMs`, the
+  longest wait among the datasets the read needed).
+- A caller whose copy is due waits up to 2.5 seconds for the refresh, then takes the copy and is
+  told it is stale; while tarkov.dev is failing it doesn't wait at all. A read takes copies up
+  to six hours old by default (`RESOURCE_MAX_STALE_MS`); cached pages keep that limit, so a failed
+  background render keeps the previous page rather than caching older data, while MCP tools
+  accept any copy and say how old it is.
 
 Worst case for one instance, with every dataset in use in both game modes: items 24, maps
-and tasks 8, `items_en` 1 request an hour, 33 an hour, most of them 304s. The shared
-datasets add about 8 an hour per region, however many instances run. A new instance makes
-at most 8 full downloads (the four unshared datasets in each mode); after a failure, at most
-one request per dataset per backoff interval.
+and tasks 8, `items_en` 1 request an hour, 33 an hour; maps, tasks and `items_en` are mostly
+304s. The shared datasets add about 8 an hour per region, however many instances run. A new
+instance revalidates the deployment snapshot instead of downloading it: datasets unchanged since
+the build cost a 304, and only the ones that changed (in practice `items`, and `maps` or `tasks`
+on some days) are downloaded, in the background when the caller already has the snapshot's copy.
+While tarkov.dev is down, at most 3 requests per dataset per backoff interval.
+
+### Deployment snapshot
+
+`npm run build` runs `scripts/build-tarkov-snapshot.mjs` before `next build`. It fetches every
+dataset in both game modes and writes each as brotli-compressed JSON to `data/tarkov/<mode>/`,
+with `data/tarkov/manifest.json` recording when each was fetched and its `ETag` and
+`Last-Modified` (about 4 MB in all; `data/tarkov` isn't committed). `next.config.ts` traces it
+into every function. A failure never fails the build: a dataset that can't be fetched keeps the
+copy already on disk, if any, or is left out, and the app waits for tarkov.dev for it as before.
+Pages prerendered during the build read the fresh snapshot, so the build itself barely asks
+tarkov.dev for anything.
+
+On an instance, a dataset with no copy in memory starts from the snapshot's copy
+(`src/app/lib/api/tarkov-snapshot.ts`, read once per dataset, about 25 ms to decompress
+`items`), dated when the build fetched it. If that is within the dataset's freshness it is used
+as it is; otherwise it is revalidated with its `ETag` like any other copy. So a cold instance
+answers at once, from the snapshot or after a 304, and when tarkov.dev is unreachable it still
+answers, from the snapshot, saying how old it is. The snapshot ages with the deployment: every
+deploy refreshes it, ISR renders don't.
 
 ## Cache ownership
 
@@ -569,7 +632,7 @@ one request per dataset per backoff interval.
   resource is fresh for its policy's time, then revalidated in the background without
   blocking requests (items for up to 30 minutes, maps and tasks 2 hours, the rest 4 hours),
   and served stale (flagged with `X-EFT-Data-Stale`) for up to six hours when tarkov.dev is
-  down.
+  down. It starts from the deployment snapshot (see above).
 - Small datasets that rarely change (barters, crafts, hideout, traders, and the task, map,
   hideout, and trader translations) are also kept in Vercel's Runtime Cache
   (`src/app/lib/api/shared-cache.ts`), which every instance in a region shares. A body is
