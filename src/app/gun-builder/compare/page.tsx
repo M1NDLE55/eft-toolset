@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense, useMemo, useState } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { usePublicPathname } from "@/components/game-mode/use-public-pathname";
 import { AlertTriangle, ArrowLeft, ArrowLeftRight, ExternalLink } from "lucide-react";
 import type { GunBuild } from "@/app/lib/types/gunBuilder";
 import { useHydrated } from "@/app/lib/storage/use-store";
@@ -49,7 +50,7 @@ function CompareBuilds() {
   const builds = sortBuilds(useBuilds());
   const params = useSearchParams();
   const router = useRouter();
-  const pathname = usePathname();
+  const pathname = usePublicPathname();
   useDocumentTitle("Compare builds");
 
   if (!hydrated) return <CompareSkeleton />;

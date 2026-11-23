@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - AK-105",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_AK-105",
-  "revisionId": 364363,
-  "lastEdited": "2026-10-13T15:07:48Z",
+  "revisionId": 368000,
+  "lastEdited": "2026-11-14T22:05:12Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,7 +13,7 @@
   "infobox": {
     "given by": "Mechanic",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {

@@ -1,8 +1,8 @@
 {
   "title": "Oil Change",
   "url": "https://escapefromtarkov.fandom.com/wiki/Oil_Change",
-  "revisionId": 365669,
-  "lastEdited": "2026-10-27T23:54:36Z",
+  "revisionId": 368307,
+  "lastEdited": "2026-11-20T20:09:56Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "given by": "Prapor",
     "location": "Icebreaker",
+    "previous": "See requirements",
     "leads to": "Peaceful Atom"
   },
   "sections": [

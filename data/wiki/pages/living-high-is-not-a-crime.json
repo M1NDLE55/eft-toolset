@@ -1,8 +1,8 @@
 {
   "title": "Living High is Not a Crime",
   "url": "https://escapefromtarkov.fandom.com/wiki/Living_High_is_Not_a_Crime",
-  "revisionId": 366109,
-  "lastEdited": "2026-10-28T21:54:59Z",
+  "revisionId": 368171,
+  "lastEdited": "2026-11-18T18:02:55Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "given by": "Ragman",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {

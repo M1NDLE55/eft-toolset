@@ -1,8 +1,8 @@
 {
   "title": "Make an Impression",
   "url": "https://escapefromtarkov.fandom.com/wiki/Make_an_Impression",
-  "revisionId": 366841,
-  "lastEdited": "2026-11-01T11:07:05Z",
+  "revisionId": 368358,
+  "lastEdited": "2026-11-20T21:12:38Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -24,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"It seems that before my marksman decides to take risks at your prepared positions, he needs proof of your skill as an experienced spotter. Which makes sense. Time allows, thankfully. Let's just say there are snipers in and around the city who are operating out of their positions. Improve your counter-sniper skills, and then my man will trust you. Go on then, seven feet under the keel.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 10 hours after completion of Spotter"
     },
     {
       "heading": "Objectives",

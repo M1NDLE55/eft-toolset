@@ -1,8 +1,8 @@
 {
   "title": "Shturman",
   "url": "https://escapefromtarkov.fandom.com/wiki/Shturman",
-  "revisionId": 364847,
-  "lastEdited": "2026-10-21T18:32:48Z",
+  "revisionId": 368430,
+  "lastEdited": "2026-11-21T19:53:20Z",
   "kind": "character",
   "categories": [
     "Bosses"
@@ -50,7 +50,7 @@
     {
       "heading": "Followers",
       "level": 2,
-      "text": "Shturman always has two or three followers, each with high caliber weapons and deadly accuracy.\n\nTheir weapons alternate between various semi-automatic rifles and an occasional VSS, and also have class 3 -> class 6 Armor vests.\nEach rifle is loaded with ammo that is ideal for shredding all types of armor, so one should beware of staying out in the open for too long.\n\nAll of the followers' last name is Svetloozerskiy, similar to the Reshala Guards"
+      "text": "Shturman has 2-4 followers, each with high caliber weapons and deadly accuracy.\n\nTheir weapons alternate between various semi-automatic rifles and an occasional VSS, and also have class 3 -> class 6 Armor vests.\nEach rifle is loaded with ammo that is ideal for shredding all types of armor, so one should beware of staying out in the open for too long."
     },
     {
       "heading": "Strategy",

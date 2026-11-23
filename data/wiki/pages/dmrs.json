@@ -1,8 +1,8 @@
 {
   "title": "DMRs",
   "url": "https://escapefromtarkov.fandom.com/wiki/DMRs",
-  "revisionId": 347952,
-  "lastEdited": "2026-07-17T11:03:42Z",
+  "revisionId": 368112,
+  "lastEdited": "2026-11-16T20:16:43Z",
   "kind": "skill",
   "categories": [
     "Combat skills"
@@ -32,7 +32,7 @@
     {
       "heading": "How to raise",
       "level": 2,
-      "text": "- Landing hits on enemies with Designated marksman rifles\n- Reloading Designated marksman rifles\n- Cycling the action/Unloading the chambers of Designated marksman rifles\n- Completing the quest The Cleaner\n- Completing the quest Consolation Prize"
+      "text": "- Landing hits on enemies with Designated marksman rifles\n- Reloading Designated marksman rifles\n- Cycling the action/Unloading the chambers of Designated marksman rifles\n- Completing the quest The Guide\n- Completing the quest Consolation Prize"
     }
   ]
 }

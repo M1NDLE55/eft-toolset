@@ -1,8 +1,8 @@
 {
   "title": "Desperate Assault",
   "url": "https://escapefromtarkov.fandom.com/wiki/Desperate_Assault",
-  "revisionId": 365360,
-  "lastEdited": "2026-10-27T23:49:23Z",
+  "revisionId": 367892,
+  "lastEdited": "2026-11-12T20:34:24Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -34,7 +34,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 15 Black Division operatives in The Lab"
+      "text": "- Eliminate 8 Black Division operatives in The Lab"
     },
     {
       "heading": "Rewards",
@@ -44,7 +44,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "In this quest you have to eliminate 15 Black Division members inside The Lab."
+      "text": "In this quest you have to kill 8 Black Division operatives in The Lab."
     }
   ]
 }

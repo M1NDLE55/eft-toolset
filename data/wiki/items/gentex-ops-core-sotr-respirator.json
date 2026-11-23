@@ -1,8 +1,8 @@
 {
   "title": "Gentex Ops-Core SOTR respirator",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gentex_Ops-Core_SOTR_respirator",
-  "revisionId": 361602,
-  "lastEdited": "2026-09-23T22:19:45Z",
+  "revisionId": 367913,
+  "lastEdited": "2026-11-12T21:04:33Z",
   "kind": "item",
   "categories": [
     "Face cover"
@@ -13,6 +13,7 @@
     "slot": "Face cover",
     "weight": "0.1 kg",
     "grid": "2x2",
+    "trader": "Ragman LL2, after unlocking it in BattlePass Season 1",
     "BlocksEyewear": "No",
     "BlocksHeadwear": "No",
     "node": "689b404db49f27df1c0873f6",

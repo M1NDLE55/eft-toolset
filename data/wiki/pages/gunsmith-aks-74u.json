@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - AKS-74U",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_AKS-74U",
-  "revisionId": 364366,
-  "lastEdited": "2026-10-13T15:15:10Z",
+  "revisionId": 368010,
+  "lastEdited": "2026-11-14T22:15:02Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,7 +13,7 @@
   "infobox": {
     "given by": "Mechanic",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {

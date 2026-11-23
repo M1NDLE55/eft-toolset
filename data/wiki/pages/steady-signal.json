@@ -1,18 +1,18 @@
 {
   "title": "Steady Signal",
   "url": "https://escapefromtarkov.fandom.com/wiki/Steady_Signal",
-  "revisionId": 366133,
-  "lastEdited": "2026-10-28T22:35:31Z",
+  "revisionId": 368069,
+  "lastEdited": "2026-11-14T22:53:59Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods",
     "given by": "Mechanic",
+    "location": "Woods",
     "LL requirement": "1",
-    "reqkappa": "No"
+    "LL quests": "1"
   },
   "sections": [
     {

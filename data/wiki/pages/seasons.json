@@ -1,8 +1,8 @@
 {
   "title": "Seasons",
   "url": "https://escapefromtarkov.fandom.com/wiki/Seasons",
-  "revisionId": 363245,
-  "lastEdited": "2026-10-05T20:04:45Z",
+  "revisionId": 368103,
+  "lastEdited": "2026-11-15T12:43:51Z",
   "kind": "game",
   "categories": [
     "Escape from Tarkov"
@@ -16,6 +16,11 @@
       "heading": "Introduction",
       "level": 1,
       "text": "Seasons fundamentally work the same as the PvP game mode, but on separate character and dedicated servers in a time-limited, modifier influenced gameplay cycle with exclusive content and rewards only obtainable in the respective season."
+    },
+    {
+      "heading": "Season 2: UNTAR Control",
+      "level": 2,
+      "text": "The start date for the 2nd season has not been confirmed yet.\n\"Uncover the truth behind the UN mission in Tarkov, where every intervention comes at a price, alliances are built on silence and diplomatic mandates clash with private agendas. Trace the decisions that led to the Norvinsk crisis, and discover who stands to gain from its aftermath. Everything is connected.\""
     },
     {
       "heading": "Season 1: KORD BREACH",
@@ -50,7 +55,7 @@
     {
       "heading": "Seasonal Rewards",
       "level": 3,
-      "text": "Completing a specific seasonal quest is required to claim the corresponding reward. Some rewards also require the player to reach a certain character level.\n| Name | Type | Player level | Quest |\n| Gatorz Specter MILSPEC ballistic glasses | Barter trade | N/A | Reverse Gear |\n| Avon M53A1 gas mask | Barter trade | N/A | Forbidden Knowledge |\n| Mystery Ranch 2 Day Assault Pack (Black) | Barter trade | 25 | Sheep in Wolf's Clothing |\n| Spiritus Systems LV-119 Plate Carrier (Black Division V1) | Barter trade | 30 | Digital Puzzle |\n| First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division) | Barter trade | 30 | Historical Prospects |"
+      "text": "Completing a specific seasonal quest and reaching a certain loyalty level (LL) with a trader is required to claim the corresponding reward. Some rewards also require the player to reach a certain character level.\n| Name | Type | Player level | Trader level | Quest |\n| Gatorz Specter MILSPEC ballistic glasses | Purchase option | 1 | Peacekeeper LL1 | Reverse Gear |\n| Avon M53A1 gas mask | Barter trade | 1 | Peacekeeper LL2 | Forbidden Knowledge |\n| Mystery Ranch 2 Day Assault Pack (Black) | Purchase option | 25 | Ragman LL3 | Sheep in Wolf's Clothing |\n| Spiritus Systems LV-119 Plate Carrier (Black Division V1) | Barter trade | 30 | Peacekeeper LL4 | Digital Puzzle |\n| First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division) | Barter trade | 30 | Peacekeeper LL4 | Historical Prospects |"
     },
     {
       "heading": "Leagues",

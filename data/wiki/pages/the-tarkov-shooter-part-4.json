@@ -1,8 +1,8 @@
 {
   "title": "The Tarkov Shooter - Part 4",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Tarkov_Shooter_-_Part_4",
-  "revisionId": 367698,
-  "lastEdited": "2026-11-08T23:49:56Z",
+  "revisionId": 368301,
+  "lastEdited": "2026-11-20T20:07:07Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -14,8 +14,7 @@
     "given by": "Jaeger",
     "LL requirement": "3",
     "previous": "The Tarkov Shooter - Part 3",
-    "leads to": "The Tarkov Shooter - Part 5, Collector",
-    "reqkappa": "Yes"
+    "leads to": "The Tarkov Shooter - Part 5, Collector"
   },
   "sections": [
     {
@@ -36,7 +35,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 2× Mosin Rifle ATI Monte Carlo stock\n- Unlocks purchase of Mosin Rifle ATI Monte Carlo stock at Jaeger LL3\n- Unlocks craft for 7.62x54mm R BT gzh at Workbench level 3\n\"Ready? Then let’s get to work. Sniper took a big interest in you.\""
+      "text": "- +28,000 EXP\n- 275,000 Roubles\n  - 288,750 Roubles with Intelligence Center Level 1\n  - 316,250 Roubles with Intelligence Center Level 2\n- 2× Mosin Rifle ATI Monte Carlo stock\n- Unlocks purchase of Mosin Rifle ATI Monte Carlo stock at Jaeger LL3\n- Unlocks craft for 7.62x54mm R BT gzh at Workbench level 3\n\"Ready? Then let's get to work. Sniper took a big interest in you.\""
     }
   ]
 }

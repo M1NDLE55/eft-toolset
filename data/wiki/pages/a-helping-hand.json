@@ -1,8 +1,8 @@
 {
   "title": "A Helping Hand",
   "url": "https://escapefromtarkov.fandom.com/wiki/A_Helping_Hand",
-  "revisionId": 366086,
-  "lastEdited": "2026-10-28T01:45:43Z",
+  "revisionId": 368400,
+  "lastEdited": "2026-11-20T22:51:32Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "given by": "Mechanic",
     "location": "Woods",
+    "PMC level": "20",
     "LL requirement": "2",
     "leads to": "Shipping Delay - Part 1, Shipping Delay - Part 2, Hot Wheels"
   },
@@ -24,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hello. I figure you've already seen the BTR that's been driving around Tarkov. The driver used to offer his services to PMCs like you, but lately he has started working with Skier as well. The driver came to me when he was restoring the BTR. It was an quite an interesting challenge, let me tell you. But that's beside the point. He hasn't been in touch for quite some time, and now he's suddenly asked for help. Apparently, something serious has happened. Can you check in with him and find out what's going on? There aren't many men of wit and ambition left in Tarkov. People like us should stick together.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 20 to start this quest."
     },
     {
       "heading": "Objectives",

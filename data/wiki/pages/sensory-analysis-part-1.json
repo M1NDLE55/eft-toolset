@@ -1,19 +1,18 @@
 {
   "title": "Sensory Analysis - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Sensory_Analysis_-_Part_1",
-  "revisionId": 367574,
-  "lastEdited": "2026-11-05T01:53:38Z",
+  "revisionId": 368371,
+  "lastEdited": "2026-11-20T21:30:19Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods, Lighthouse, Streets of Tarkov",
     "given by": "Ragman",
+    "location": "Lighthouse, Streets of Tarkov, Woods",
     "previous": "Hidden Layer (+30min)",
-    "leads to": "Sensory Analysis - Part 2",
-    "reqkappa": "No"
+    "leads to": "Sensory Analysis - Part 2"
   },
   "sections": [
     {
@@ -25,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hello my brother! Okay, okay, not so loud, I'm hung over as shit. Don't know how the BTR guy's still driving after last night. The engine is surely screeching louder than fucking generators! By the way, you came at a really good time, almost like you knew I'm gonna need help. So, about the meeting we had yesterday. I have a moonshine supplier, he makes legit good stuff! We've been working together for six months now, everything was fine. And now, customers started complaining that I was selling them fake stuff. So, I had to check the product quality, and no one in our region knows as much about liquor as the BTR driver. So I invited him over for... let's call it sampling, hehe. And there he was, saying that no one starts with hard hitters right off the bat, he needed a warm-up. Then another. Then another... So after all that, I checked the moonshine in the morning, and we didn't even open it! Long story short, the driver didn't finish the job. I'm not gonna live through this kind of sampling party a second time, so I'll let him taste everything by himself. Can you pass him this bottle? Don't lose it, alright?\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 30 minutes after completion of Hidden Layer"
     },
     {
       "heading": "Objectives",

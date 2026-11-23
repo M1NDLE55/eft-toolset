@@ -1,8 +1,8 @@
 {
   "title": "Decisions, Decisions",
   "url": "https://escapefromtarkov.fandom.com/wiki/Decisions%2C_Decisions",
-  "revisionId": 365353,
-  "lastEdited": "2026-10-27T23:49:16Z",
+  "revisionId": 368367,
+  "lastEdited": "2026-11-20T21:23:53Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "location": "Customs",
     "given by": "Ref",
-    "previous": "Against the Conscience - Part 2",
+    "previous": "Accept Between Two Fires",
     "related": "Between Two Fires, Surprise Gift",
     "reqkappa": "No"
   },
@@ -25,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"I've been hearing rumors... Very unpleasant rumors. They say you're trying to dig my business up. Look, we've known each other for a while. You're like a brother to me! Don't do something you'll regret later. The less you know, the better you sleep, you hear that? Until I'm absolutely confident in you, I'm gonna have my men watching you. I don't want you pulling any stunts, champ. And if you find anything during your little date with the old champion, bring it to me. Then we can forget about this happy little accident.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must accept Fence's quest Between Two Fires to obtain this quest."
     },
     {
       "heading": "Objectives",

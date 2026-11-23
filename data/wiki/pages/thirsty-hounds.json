@@ -1,19 +1,19 @@
 {
   "title": "Thirsty - Hounds",
   "url": "https://escapefromtarkov.fandom.com/wiki/Thirsty_-_Hounds",
-  "revisionId": 366610,
-  "lastEdited": "2026-10-31T05:27:53Z",
+  "revisionId": 368369,
+  "lastEdited": "2026-11-20T21:28:05Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Jaeger",
+    "location": "Shoreline",
     "LL requirement": "2",
-    "leads to": "Thirsty - Breadwinner",
-    "reqkappa": "No"
+    "previous": "See requirements",
+    "leads to": "Thirsty - Breadwinner"
   },
   "sections": [
     {
@@ -29,7 +29,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Must reach Loyalty Level 2 with Jaeger,Therapist,Skier to obtain this quest."
+      "text": "- Reach Loyalty Level 2 with Jaeger, Skier and Therapist."
     },
     {
       "heading": "Objectives",

@@ -1,8 +1,8 @@
 {
   "title": "Accuracy International AXMC .338 LM bolt-action sniper rifle",
   "url": "https://escapefromtarkov.fandom.com/wiki/Accuracy_International_AXMC_.338_LM_bolt-action_sniper_rifle",
-  "revisionId": 354799,
-  "lastEdited": "2026-08-16T11:01:18Z",
+  "revisionId": 368426,
+  "lastEdited": "2026-11-21T14:41:13Z",
   "kind": "weapon",
   "categories": [
     "Bolt-action rifles",
@@ -31,7 +31,7 @@
     {
       "heading": "Quest rewards",
       "level": 2,
-      "text": "- 1 can be obtained as a quest reward from A Wedge Between Us"
+      "text": "- 1 can be obtained as initial equipment from Hunting Trip\n- 1 can be obtained as a quest reward from A Wedge Between Us"
     }
   ]
 }

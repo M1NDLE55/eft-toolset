@@ -1,8 +1,8 @@
 {
   "title": "Changelog",
   "url": "https://escapefromtarkov.fandom.com/wiki/Changelog",
-  "revisionId": 367836,
-  "lastEdited": "2026-11-11T09:49:40Z",
+  "revisionId": 367956,
+  "lastEdited": "2026-11-13T19:33:42Z",
   "kind": "game",
   "categories": [
     "Escape from Tarkov"
@@ -21,6 +21,21 @@
       "heading": "Introduction",
       "level": 1,
       "text": "For the Arena, see Arena Changelog.\n\nThis page contains a collection of official patch notes for Escape from Tarkov. It's not complete, and it has to be noted that the developer Battlestate Games intentionally doesn't announce every change to keep surprises for the players.\n\nThe game released on November 15, 2025 and the current game version is ."
+    },
+    {
+      "heading": "1.3.0.2.48779 (13 November 2026)",
+      "level": 2,
+      "text": "- Technical update"
+    },
+    {
+      "heading": "1.3.0.1.48558 (13 November 2026)",
+      "level": 2,
+      "text": "- In Seasonal Mode, briefcases with documents have been added to airdrops;\n- For all gamemodes, the reward trade offers for Black Division gear, which were previously exchanged for dogtags, have been corrected. These offers now also require money or barter items."
+    },
+    {
+      "heading": "1.3.0.1.48558 (11 November 2026)",
+      "level": 2,
+      "text": "- Simplified the objectives of many seasonal tasks and lowered their starting requirements.\n- Changed the seasonal reward trade offers for Black Division gear: they now require money or barter items instead of special dogtags\n- Black Division spawn rate has been increased to 100% on all applicable locations.\n- Reduced reaction speed, accuracy, and health of all body parts for Black Division operatives on locations.\n- Reduced reaction speed, accuracy, and health of all body parts for Wedge and his guards. Changed the ammo they use.\n- Increased the number of Sudak-Tudak kits in rewards for operational tasks.\n- Medical documents for Battle Pass can now be found on Icebreaker.\n- Increased the amount of Battle Pass documentation found on Icebreaker.\n- PvP, Seasonal: Increased the daily limit for Battle Pass documentation.\n- Halloween decorations have been disabled. The in-game event is still active."
     },
     {
       "heading": "1.3.0.1.48558 (11 November 2026)",

@@ -1,8 +1,8 @@
 {
   "title": "Big Sale",
   "url": "https://escapefromtarkov.fandom.com/wiki/Big_Sale",
-  "revisionId": 365247,
-  "lastEdited": "2026-10-27T23:47:28Z",
+  "revisionId": 368158,
+  "lastEdited": "2026-11-18T17:45:58Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,10 +11,10 @@
     "Big sale"
   ],
   "infobox": {
-    "location": "Interchange",
     "given by": "Ragman",
+    "location": "Interchange",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "2"
   },
   "sections": [
     {
@@ -30,7 +30,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Locate the AVOKADO store on Interchange\n- Locate the KOSTIN store on Interchange\n- Locate the tRend store on Interchange\n- Locate the DINO CLOTHES store on Interchange\n- Locate the TOP BRAND store on Interchange\n- Survive and extract from the location"
+      "text": "- Locate the AVOKADO store on Interchange\n- Locate the KOSTIN store on Interchange\n- Locate the tRend store on Interchange\n- Locate the DINO CLOTHES store on Interchange\n- Locate the TOP BRAND store on Interchange"
     },
     {
       "heading": "Rewards",
@@ -40,7 +40,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "Walk into each of the listed stores in the same raid and survive to complete the quest. All of the stores are on the first floor of the ULTRA shopping mall."
+      "text": "Walk into each of the listed stores on the first floor of the ULTRA shopping mall on Interchange."
     }
   ],
   "images": [

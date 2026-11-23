@@ -1,18 +1,18 @@
 {
   "title": "Supervisor",
   "url": "https://escapefromtarkov.fandom.com/wiki/Supervisor",
-  "revisionId": 365856,
-  "lastEdited": "2026-10-27T23:57:53Z",
+  "revisionId": 368173,
+  "lastEdited": "2026-11-18T18:04:00Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Interchange",
     "given by": "Ragman",
+    "location": "Interchange",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "4"
   },
   "sections": [
     {

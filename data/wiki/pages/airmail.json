@@ -1,19 +1,18 @@
 {
   "title": "Airmail",
   "url": "https://escapefromtarkov.fandom.com/wiki/Airmail",
-  "revisionId": 365197,
-  "lastEdited": "2026-10-27T23:46:36Z",
+  "revisionId": 368075,
+  "lastEdited": "2026-11-14T23:07:31Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods",
     "given by": "Mechanic",
+    "location": "Woods",
     "previous": "Quality Standard",
-    "leads to": "The Good Times - Part 2",
-    "reqkappa": "No"
+    "leads to": "The Good Times - Part 2"
   },
   "sections": [
     {

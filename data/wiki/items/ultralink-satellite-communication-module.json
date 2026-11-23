@@ -1,8 +1,8 @@
 {
   "title": "Ultralink satellite communication module",
   "url": "https://escapefromtarkov.fandom.com/wiki/Ultralink_satellite_communication_module",
-  "revisionId": 348353,
-  "lastEdited": "2026-07-29T14:45:55Z",
+  "revisionId": 367986,
+  "lastEdited": "2026-11-14T21:07:07Z",
   "kind": "item",
   "categories": [
     "Electronics"
@@ -23,14 +23,9 @@
       "text": "- Only 10 can be held in a raid inventory at the same time"
     },
     {
-      "heading": "Location",
-      "level": 2,
-      "text": "- In airdrops"
-    },
-    {
       "heading": "Icebreaker",
       "level": 3,
-      "text": "- Inside the central control station room on level 0\n\n- In the changing room behind Boreas engine room keycard on level 0\n\n- Inside the room with the bulletin board in the engine room on level -2\n- Inside the lower automation room on level -3\n\n- On level 7 behind Compartment C-1 keycard\n\n- On level 3 in room #15 behind Boreas crew quarters keycard\n\n- Inside the bridge on level 9\n\n- Inside the conference room on level 5"
+      "text": "- Inside the lower automation room on level -3\n\n- Inside the room with the bulletin board in the engine room on level -2\n- Inside the central control station room on level 0\n\n- In the changing room behind Boreas engine room keycard on level 0\n\n- On level 3 in room #15 behind Boreas crew quarters keycard\n\n- Inside the conference room on level 5\n\n- On level 7 behind Compartment C-1 keycard\n\n- In the hallway near room no. 42 on level 7\n\n- Inside the bridge on level 9"
     }
   ]
 }

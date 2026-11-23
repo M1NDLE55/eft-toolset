@@ -1,8 +1,8 @@
 {
   "title": "Sako TRG M10 .338 LM bolt-action sniper rifle",
   "url": "https://escapefromtarkov.fandom.com/wiki/Sako_TRG_M10_.338_LM_bolt-action_sniper_rifle",
-  "revisionId": 340996,
-  "lastEdited": "2026-04-22T22:56:44Z",
+  "revisionId": 368427,
+  "lastEdited": "2026-11-21T14:41:49Z",
   "kind": "weapon",
   "categories": [
     "Bolt-action rifles",
@@ -36,7 +36,7 @@
     {
       "heading": "Quest rewards",
       "level": 2,
-      "text": "- 1 can be obtained as a quest reward from Connections Up North"
+      "text": "- 1 can be obtained as a quest reward from Connections Up North\n- 1 can be obtained as initial equipment from Hunting Trip"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "title": "Hell on Earth - Part 2",
   "url": "https://escapefromtarkov.fandom.com/wiki/Hell_on_Earth_-_Part_2",
-  "revisionId": 365512,
-  "lastEdited": "2026-10-27T23:51:57Z",
+  "revisionId": 368437,
+  "lastEdited": "2026-11-21T21:01:40Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -31,7 +31,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 2 hooded men while using the double barrel shotgun"
+      "text": "- Eliminate 2 hooded men with the double barrel shotgun"
     },
     {
       "heading": "Rewards",
@@ -46,7 +46,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement |\n| MP-43-1C 12ga double-barrel shotgun | As many as needed | Used by the player to eliminate Cultists. |\n| MP-43 12ga sawed-off double-barrel shotgun | As many as needed | Used by the player to eliminate Cultists. |\nIn this quest you have to kill 3 Cultists with a MP-43-1C 12ga double-barrel shotgun or MP-43 12ga sawed-off double-barrel shotgun. It can be in any configuration."
+      "text": "| Item name | Amount | Requirement |\n| MP-43-1C 12ga double-barrel shotgun | As many as needed | Used by the player to eliminate Cultists. |\n| MP-43 12ga sawed-off double-barrel shotgun | As many as needed | Used by the player to eliminate Cultists. |\nIn this quest you have to kill 2 Cultists with a MP-43-1C 12ga double-barrel shotgun or MP-43 12ga sawed-off double-barrel shotgun. It can be in any configuration."
     }
   ]
 }

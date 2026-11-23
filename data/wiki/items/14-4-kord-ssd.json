@@ -1,8 +1,8 @@
 {
   "title": "14-4 KORD SSD",
   "url": "https://escapefromtarkov.fandom.com/wiki/14-4_KORD_SSD",
-  "revisionId": 360417,
-  "lastEdited": "2026-09-15T20:32:27Z",
+  "revisionId": 367926,
+  "lastEdited": "2026-11-12T21:29:04Z",
   "kind": "item",
   "categories": [
     "Info items"
@@ -16,11 +16,6 @@
     "id": "q_kord_ssd1"
   },
   "sections": [
-    {
-      "heading": "Notes",
-      "level": 2,
-      "text": "- Cannot be listed for sale on the flea market."
-    },
     {
       "heading": "Location",
       "level": 2,

@@ -1,18 +1,18 @@
 {
   "title": "The Huntsman Path - Liberation",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Liberation",
-  "revisionId": 365904,
-  "lastEdited": "2026-10-27T23:58:47Z",
+  "revisionId": 368289,
+  "lastEdited": "2026-11-20T19:51:41Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "The Lab, Reserve",
     "given by": "Jaeger",
+    "location": "The Lab, Reserve",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "4"
   },
   "sections": [
     {
@@ -23,7 +23,7 @@
     {
       "heading": "Dialogue",
       "level": 2,
-      "text": "\"When life goes to hell, you find out real quick who people really are. Who stays human, and who doesn't. Not everyone manages to hold on to their conscience. Word reached me that a new force has appeared in the region. All they care about is looting and taking whatever isn't nailed down. They call themselves the Raiders. Former soldiers and mercenaries, gathering into squads and putting key locations under their own \\\"protection\\\". Folks say they've got an influential patron somewhere beyond the border. Put those bandits down.\""
+      "text": "\"When life goes to hell, you find out real quick who people really are. Who stays human, and who doesn't. Not everyone manages to hold on to their conscience. Word reached me that a new force has appeared in the region. All they care about is looting and taking whatever isn't nailed down. They call themselves the Raiders. Former soldiers and mercenaries, gathering into squads and putting key locations under their own \"protection\". Folks say they've got an influential patron somewhere beyond the border. Put those bandits down.\""
     },
     {
       "heading": "Objectives",

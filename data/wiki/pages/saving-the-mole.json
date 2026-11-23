@@ -1,18 +1,17 @@
 {
   "title": "Saving the Mole",
   "url": "https://escapefromtarkov.fandom.com/wiki/Saving_the_Mole",
-  "revisionId": 365775,
-  "lastEdited": "2026-10-27T23:56:26Z",
+  "revisionId": 367993,
+  "lastEdited": "2026-11-14T21:15:12Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Ground Zero",
     "given by": "Mechanic",
-    "LL requirement": "1",
-    "reqkappa": "Yes"
+    "location": "Ground Zero",
+    "LL requirement": "1"
   },
   "sections": [
     {

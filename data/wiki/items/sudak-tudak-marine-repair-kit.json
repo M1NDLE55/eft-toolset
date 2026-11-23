@@ -1,8 +1,8 @@
 {
   "title": "Sudak-Tudak marine repair kit",
   "url": "https://escapefromtarkov.fandom.com/wiki/Sudak-Tudak_marine_repair_kit",
-  "revisionId": 367870,
-  "lastEdited": "2026-11-12T01:07:13Z",
+  "revisionId": 367893,
+  "lastEdited": "2026-11-12T20:37:24Z",
   "kind": "item",
   "categories": [
     "Special equipment"
@@ -24,7 +24,7 @@
     {
       "heading": "Quest rewards",
       "level": 2,
-      "text": "- 5 can be obtained as a quest reward from Ragman's quest Pay the Fare! (10 in the PvE mode)\n- 1-2 can be obtained each day as a quest reward from Ragman's special operational task given after completing Pay the Fare!\n  - If your Charisma skill is leveled up to the elite tier, you will have 2 daily quests from the trader, and you will be able to obtain twice as many bundles."
+      "text": "- 5 can be obtained as a quest reward from Ragman's quest Pay the Fare! (10 in the PvE mode)\n- Can be obtained as a quest reward from Ragman's special operational task given after completing Pay the Fare!"
     }
   ]
 }

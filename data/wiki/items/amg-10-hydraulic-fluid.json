@@ -1,8 +1,8 @@
 {
   "title": "AMG-10 hydraulic fluid",
   "url": "https://escapefromtarkov.fandom.com/wiki/AMG-10_hydraulic_fluid",
-  "revisionId": 347452,
-  "lastEdited": "2026-06-27T20:41:28Z",
+  "revisionId": 368003,
+  "lastEdited": "2026-11-14T22:09:21Z",
   "kind": "item",
   "categories": [
     "Flammable materials"
@@ -25,7 +25,7 @@
     {
       "heading": "Icebreaker",
       "level": 3,
-      "text": "- Inside the supply closet room on level 0\n\n- Inside a small room above the helipad on level 4\n\n- Inside the drone room on level 2\n\n- Inside the storage area under the helipad on level 1 and 0\n\n- Inside the engine room on the catwalks\n- Inside safety gear storage room on level 0"
+      "text": "- Inside the supply closet room on level 0\n\n- Inside safety gear storage room on level 0\n\n- On the catwalks of the engine room on level 0 and 1\n- Inside the storage area under the helipad on level 0 and 1\n\n- Inside the drone room on level 2\n\n- Inside a small room above the helipad on level 4"
     }
   ]
 }

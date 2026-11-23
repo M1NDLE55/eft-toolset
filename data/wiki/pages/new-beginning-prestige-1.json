@@ -1,8 +1,8 @@
 {
   "title": "New Beginning (Prestige 1)",
   "url": "https://escapefromtarkov.fandom.com/wiki/New_Beginning_(Prestige_1)",
-  "revisionId": 365636,
-  "lastEdited": "2026-10-27T23:54:02Z",
+  "revisionId": 368412,
+  "lastEdited": "2026-11-20T23:18:52Z",
   "kind": "quest",
   "categories": [
     "Quests",
@@ -10,10 +10,10 @@
   ],
   "redirects": [],
   "infobox": {
-    "location": "The Lab",
     "given by": "Ragman",
-    "related2": "New Beginning (Prestige 2)",
-    "reqkappa": "No"
+    "location": "The Lab",
+    "PMC level": "25",
+    "leads to": "New Beginning (Prestige 2)"
   },
   "sections": [
     {
@@ -30,11 +30,6 @@
       "heading": "Notes",
       "level": 2,
       "text": "This quest is not available in the PvE game mode since it is not required for Prestige level 1."
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 25 to start this quest."
     },
     {
       "heading": "Objectives",

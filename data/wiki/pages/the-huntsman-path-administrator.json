@@ -1,18 +1,17 @@
 {
   "title": "The Huntsman Path - Administrator",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Administrator",
-  "revisionId": 367687,
-  "lastEdited": "2026-11-08T19:48:22Z",
+  "revisionId": 368314,
+  "lastEdited": "2026-11-20T20:17:51Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "BEAR: Reserve, USEC: Lighthouse",
     "given by": "Jaeger",
-    "LL requirement": "3",
-    "reqkappa": "No"
+    "location": "BEAR: Reserve, USEC: Lighthouse",
+    "LL requirement": "3"
   },
   "sections": [
     {

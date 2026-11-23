@@ -1,8 +1,8 @@
 {
   "title": "Know Your Enemy",
   "url": "https://escapefromtarkov.fandom.com/wiki/Know_Your_Enemy",
-  "revisionId": 365588,
-  "lastEdited": "2026-10-27T23:53:14Z",
+  "revisionId": 367879,
+  "lastEdited": "2026-11-12T18:30:41Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -33,7 +33,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Hand over 5 any Black Division plate carriers"
+      "text": "- Hand over 3 any Black Division plate carriers"
     },
     {
       "heading": "Rewards",
@@ -43,7 +43,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| Ferro Concepts FCPC V5 Plate Carrier (Black Division); or; Spiritus Systems LV-119 Plate Carrier (Black Division V2); or; Spiritus Systems LV-119 Plate Carrier (MultiCam Black); or; Spiritus Systems LV-119 Plate Carrier (Black Division V1); or; First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division) | Ferro Concepts FCPC V5 Plate Carrier (Black Division); or; Spiritus Systems LV-119 Plate Carrier (Black Division V2); or; Spiritus Systems LV-119 Plate Carrier (MultiCam Black); or; Spiritus Systems LV-119 Plate Carrier (Black Division V1); or; First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division) | 5 | Handover item | No |"
+      "text": "| Related Quest Items |\n| Icon | Item name | Amount | Requirement | Find in raid |\n| Ferro Concepts FCPC V5 Plate Carrier (Black Division); or; Spiritus Systems LV-119 Plate Carrier (Black Division V2); or; Spiritus Systems LV-119 Plate Carrier (MultiCam Black); or; Spiritus Systems LV-119 Plate Carrier (Black Division V1); or; First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division) | Ferro Concepts FCPC V5 Plate Carrier (Black Division); or; Spiritus Systems LV-119 Plate Carrier (Black Division V2); or; Spiritus Systems LV-119 Plate Carrier (MultiCam Black); or; Spiritus Systems LV-119 Plate Carrier (Black Division V1); or; First Spear Siege-R Optimized M.A.S.S. Plate Carrier (Black Division) | 3 | Handover item | No |"
     }
   ]
 }

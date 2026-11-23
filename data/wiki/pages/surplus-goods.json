@@ -1,8 +1,8 @@
 {
   "title": "Surplus Goods",
   "url": "https://escapefromtarkov.fandom.com/wiki/Surplus_Goods",
-  "revisionId": 365861,
-  "lastEdited": "2026-10-27T23:57:59Z",
+  "revisionId": 368055,
+  "lastEdited": "2026-11-14T22:40:56Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,10 +11,9 @@
     "Surplus goods"
   ],
   "infobox": {
-    "location": "Reserve",
     "given by": "Mechanic",
-    "LL requirement": "3",
-    "reqkappa": "Yes"
+    "location": "Reserve",
+    "LL requirement": "3"
   },
   "sections": [
     {

@@ -1,18 +1,18 @@
 {
   "title": "Nostalgia",
   "url": "https://escapefromtarkov.fandom.com/wiki/Nostalgia",
-  "revisionId": 365661,
-  "lastEdited": "2026-10-27T23:54:28Z",
+  "revisionId": 368329,
+  "lastEdited": "2026-11-20T20:40:27Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Jaeger",
+    "location": "Shoreline",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "5"
   },
   "sections": [
     {
@@ -24,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hello there, come in. You know, at times, sitting by the campfire, I look back on how it all began. That time I've been on vacation in the health resort, it was in the evening, I remember that as if it was yesterday. I have just returned to the room after dinner, sat by the window to gaze at the bay. It looked marvelous. And then I hear trucks, not just a single one, a whole convoy. It was your colleagues, the USECs. They kicked everyone out of the resort, didn’t even let people pack their belongings. I don't care about my clothes as much as my photo album which remained there. Not as a service but as an act of friendship, please try to find it there. It is painfully dear to me as a memory of those calm days. My room was on the top floor of the health resort, in the west wing. The reward will be bountiful.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 28 to start this quest."
     },
     {
       "heading": "Objectives",

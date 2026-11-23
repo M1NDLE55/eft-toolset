@@ -1,8 +1,8 @@
 {
   "title": "Setting Priorities",
   "url": "https://escapefromtarkov.fandom.com/wiki/Setting_Priorities",
-  "revisionId": 365793,
-  "lastEdited": "2026-10-27T23:56:44Z",
+  "revisionId": 368138,
+  "lastEdited": "2026-11-17T16:53:17Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Mechanic",
-    "LL requirement": "4",
-    "reqkappa": "No"
+    "LL requirement": "4"
   },
   "sections": [
     {
@@ -37,7 +36,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Find in raid | Notes |\n| Any earpiece* | N/A | Worn by the player while eliminating PMCs for the first objective |\n| TSh-4M-L soft tank crew helmet | N/A | Worn by the player while eliminating PMCs for the second objective |\nFor the first objective you must not wear any armor vest, armored chest rig, armored headwear or armored face cover.\n\n- 'Bug: The only earpieces currently working for this quest are:\n- CENS ProFlex DX5 tactical earplug\n- GSSh-01 active headset\n- MSA Sordin Supreme PRO-X/L headset\n- Ops-Core FAST RAC Headset\n- OPSMEN Earmor M32 headset\n- OPSMEN Earmor M32 headset (White)\n- Peltor ComTac II headset (OD Green)\n- Peltor ComTac IV Hybrid headset (Coyote Brown)\n- Peltor ComTac V headset (OD Green)\n- Peltor ComTac VI headset (Coyote Brown)\n- Peltor Tactical Sport headset\n- Peltor TEP-300 tactical earplug (Coyote Brown)\n- Safariland Liberator HP 2.0 Hearing Protection Headset (FDE)\n- TW EXFIL Peltor ComTac V headset (OD Green)\n- TW EXFIL Peltor ComTac VI headset (Coyote Brown)\n- Walker's Razor Digital headset\n- Walker's XCEL 500BT Digital headset"
+      "text": "| Item name | Find in raid | Notes |\n| Any earpiece* | N/A | Worn by the player while eliminating PMCs for the first objective |\n| TSh-4M-L soft tank crew helmet | N/A | Worn by the player while eliminating PMCs for the second objective |\nFor the first objective you must wear an earpiece while not wearing any armor vest, armored chest rig, armored headwear or armored face cover.\n\nFor the second objective you must wear the TSh-4M-L soft tank crew helmet while not wearing any earpiece.\n\n- 'Bug: The only earpieces currently working for this quest are:\n- CENS ProFlex DX5 tactical earplug\n- GSSh-01 active headset\n- MSA Sordin Supreme PRO-X/L headset\n- Ops-Core FAST RAC Headset\n- OPSMEN Earmor M32 headset\n- OPSMEN Earmor M32 headset (White)\n- Peltor ComTac II headset (OD Green)\n- Peltor ComTac IV Hybrid headset (Coyote Brown)\n- Peltor ComTac V headset (OD Green)\n- Peltor ComTac VI headset (Coyote Brown)\n- Peltor Tactical Sport headset\n- Peltor TEP-300 tactical earplug (Coyote Brown)\n- Safariland Liberator HP 2.0 Hearing Protection Headset (FDE)\n- TW EXFIL Peltor ComTac V headset (OD Green)\n- TW EXFIL Peltor ComTac VI headset (Coyote Brown)\n- Walker's Razor Digital headset\n- Walker's XCEL 500BT Digital headset"
     }
   ]
 }

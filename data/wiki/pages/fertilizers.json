@@ -1,8 +1,8 @@
 {
   "title": "Fertilizers",
   "url": "https://escapefromtarkov.fandom.com/wiki/Fertilizers",
-  "revisionId": 365420,
-  "lastEdited": "2026-10-27T23:50:24Z",
+  "revisionId": 368051,
+  "lastEdited": "2026-11-14T22:37:43Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "given by": "Mechanic",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {

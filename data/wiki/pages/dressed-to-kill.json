@@ -1,8 +1,8 @@
 {
   "title": "Dressed to Kill",
   "url": "https://escapefromtarkov.fandom.com/wiki/Dressed_to_Kill",
-  "revisionId": 366119,
-  "lastEdited": "2026-10-28T22:09:57Z",
+  "revisionId": 368160,
+  "lastEdited": "2026-11-18T17:47:43Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,7 +13,7 @@
   "infobox": {
     "given by": "Ragman",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {

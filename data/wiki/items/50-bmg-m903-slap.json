@@ -1,8 +1,8 @@
 {
   "title": ".50 BMG M903 SLAP",
   "url": "https://escapefromtarkov.fandom.com/wiki/.50_BMG_M903_SLAP",
-  "revisionId": 316352,
-  "lastEdited": "2025-07-21T00:51:56Z",
+  "revisionId": 368423,
+  "lastEdited": "2026-11-21T07:05:41Z",
   "kind": "ammo",
   "categories": [
     ".50 BMG ammunition",
@@ -30,6 +30,11 @@
       "heading": "Notes",
       "level": 2,
       "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- The .50 BMG M903 SLAP was developed for the US Marine Corps in the 1980s to increase penetration of light vehicle armor. It was made available beginning in 1990. It can be identified from its amber-colored high-strength translucent plastic sabot.\n- It is paired with the .50 BMG M962 SLAP-T, the Tracer version of the M903 SLAP. It can be identified from its red-colored high-strength translucent plastic sabot.\n- They are optimally designed for use with the M2HB heavy machinegun series."
     }
   ]
 }

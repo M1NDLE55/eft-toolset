@@ -1,8 +1,8 @@
 {
   "title": "VPX Flash Storage Module",
   "url": "https://escapefromtarkov.fandom.com/wiki/VPX_Flash_Storage_Module",
-  "revisionId": 364446,
-  "lastEdited": "2026-10-13T23:32:39Z",
+  "revisionId": 368232,
+  "lastEdited": "2026-11-19T21:48:30Z",
   "kind": "item",
   "categories": [
     "Electronics"
@@ -47,7 +47,7 @@
     {
       "heading": "Quest rewards",
       "level": 2,
-      "text": "- 1 can be obtained as a quest reward from The Huntsman Path - Woods Keeper\n- 2 can be obtained as a quest reward from I'm Something of a BTR Myself\n- 3 can be obtained as a quest reward from Snatch"
+      "text": "- 2 can be obtained as a quest reward from I'm Something of a BTR Myself\n- 3 can be obtained as a quest reward from Snatch"
     }
   ]
 }

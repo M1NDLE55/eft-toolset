@@ -1,8 +1,8 @@
 {
   "title": ".50 BMG M21",
   "url": "https://escapefromtarkov.fandom.com/wiki/.50_BMG_M21",
-  "revisionId": 364895,
-  "lastEdited": "2026-10-24T13:41:07Z",
+  "revisionId": 368421,
+  "lastEdited": "2026-11-21T02:39:37Z",
   "kind": "ammo",
   "categories": [
     ".50 BMG ammunition",
@@ -35,7 +35,7 @@
     {
       "heading": "Trivia",
       "level": 2,
-      "text": "The .50-caliber M21 Tracer (Head Light) round was designed for Army Air Service / Army Air Forces use to dazzle attacking aircraft to distract or blind them (like oncoming headlights). This was achieved by using igniter chemical filling rather than a compound of igniter and tracer chemicals. This produced a bright white tracer visible from the front as well as the back. The cartridge can be identified from its red tip and the marking \"Tracer (H.L.)\" on the packaging."
+      "text": "- The .50-caliber M21 Tracer (Head Light) round was designed for US Army Air Forces (USAAF) use to dazzle attacking aircraft to distract or blind them (like oncoming headlights). This was achieved by using igniter chemical filling rather than a compound of igniter and tracer chemicals. This produced a bright white tracer visible from the front as well as the back. The cartridge can be identified from its red tip and the marking \"Tracer (H.L.)\" on the packaging. It was first available from November of 1944 and was discontinued after World War Two (though large numbers existed in depots).\n- The M21 Tracer cartridge could potentially be mistaken for the earlier .50-caliber M1 Tracer because both have a red tip. Only the markings on their packaging distinguishes them. The .50 M10 Dim Tracer has an orange tip and the .50 M17 Tracer has a brown tip."
     }
   ]
 }

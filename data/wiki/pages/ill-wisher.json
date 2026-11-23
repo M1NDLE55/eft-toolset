@@ -1,18 +1,18 @@
 {
   "title": "Ill-Wisher",
   "url": "https://escapefromtarkov.fandom.com/wiki/Ill-Wisher",
-  "revisionId": 366136,
-  "lastEdited": "2026-10-28T22:38:22Z",
+  "revisionId": 368045,
+  "lastEdited": "2026-11-14T22:34:20Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Shoreline",
     "given by": "Mechanic",
+    "location": "Shoreline",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {

@@ -1,12 +1,13 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { usePublicPathname } from "@/components/game-mode/use-public-pathname";
 import { ItemSearch } from "@/app/components/global/search/item-search";
 import { itemHref } from "@/app/lib/item-links";
 
 export function ItemScannerSearch() {
   const router = useRouter();
-  const pathname = usePathname();
+  const pathname = usePublicPathname();
 
   return (
     <ItemSearch

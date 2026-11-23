@@ -1,18 +1,18 @@
 {
   "title": "Energy Crisis",
   "url": "https://escapefromtarkov.fandom.com/wiki/Energy_Crisis",
-  "revisionId": 365394,
-  "lastEdited": "2026-10-27T23:49:58Z",
+  "revisionId": 368061,
+  "lastEdited": "2026-11-14T22:45:12Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Mechanic",
+    "location": "Lighthouse",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {

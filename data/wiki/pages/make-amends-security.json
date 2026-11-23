@@ -1,18 +1,18 @@
 {
   "title": "Make Amends - Security",
   "url": "https://escapefromtarkov.fandom.com/wiki/Make_Amends_-_Security",
-  "revisionId": 365608,
-  "lastEdited": "2026-10-27T23:53:34Z",
+  "revisionId": 368394,
+  "lastEdited": "2026-11-20T22:23:22Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Mechanic",
-    "leads to": "Make Amends - Sweep Up",
-    "reqkappa": "No"
+    "location": "Lighthouse",
+    "previous": "See requirements",
+    "leads to": "Make Amends - Sweep Up"
   },
   "sections": [
     {

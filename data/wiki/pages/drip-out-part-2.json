@@ -1,8 +1,8 @@
 {
   "title": "Drip-Out - Part 2",
   "url": "https://escapefromtarkov.fandom.com/wiki/Drip-Out_-_Part_2",
-  "revisionId": 365384,
-  "lastEdited": "2026-10-27T23:49:48Z",
+  "revisionId": 368253,
+  "lastEdited": "2026-11-20T17:02:00Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Ragman",
-    "LL requirement": "4",
-    "reqkappa": "No"
+    "LL requirement": "4"
   },
   "sections": [
     {

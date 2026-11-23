@@ -1,8 +1,8 @@
 {
   "title": "The Survivalist Path - Junkie",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Junkie",
-  "revisionId": 365930,
-  "lastEdited": "2026-10-27T23:59:13Z",
+  "revisionId": 368279,
+  "lastEdited": "2026-11-20T19:31:39Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,11 +12,10 @@
     "The survivalist path - Junkie"
   ],
   "infobox": {
-    "location": "Woods",
     "given by": "Jaeger",
+    "location": "Woods",
     "LL requirement": "4",
-    "previous": "The Survivalist Path - Eagle-Owl",
-    "reqkappa": "Yes"
+    "previous": "The Survivalist Path - Eagle-Owl"
   },
   "sections": [
     {

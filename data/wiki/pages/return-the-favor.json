@@ -1,8 +1,8 @@
 {
   "title": "Return the Favor",
   "url": "https://escapefromtarkov.fandom.com/wiki/Return_the_Favor",
-  "revisionId": 365752,
-  "lastEdited": "2026-10-27T23:56:03Z",
+  "revisionId": 368362,
+  "lastEdited": "2026-11-20T21:12:57Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -25,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"The whole thing is starting to become clearer. It seems that the customer is not from around here, as I initially assumed. The order came from the beyond the border. I have contacts who are willing to assist, but they will need a favor in return. They own a certain, shall we say, facility, located in the Priozersky Natural Reserve. You can see the facility from everywhere, but nobody has a clue what is hiding under the mountain. If you've been in those places, you must have seen the hill that towers over the entire forest. So, some curious tourists began to flock around that hill, and they are itching to open all the doors they see. As you know, curiosity killed the cat. Do the right thing and get rid of those cats. And while you're there, leave the documents for the USECs in their camp. Remember, these documents must not fall into the wrong hands.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 10 hours after completion of Snatch"
     },
     {
       "heading": "Objectives",

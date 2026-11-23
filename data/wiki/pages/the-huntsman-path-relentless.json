@@ -1,8 +1,8 @@
 {
   "title": "The Huntsman Path - Relentless",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Relentless",
-  "revisionId": 366586,
-  "lastEdited": "2026-10-31T04:42:52Z",
+  "revisionId": 368309,
+  "lastEdited": "2026-11-20T20:11:56Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "given by": "Jaeger",
     "LL requirement": "4",
-    "reqkappa": "No"
+    "LL quests": "1"
   },
   "sections": [
     {

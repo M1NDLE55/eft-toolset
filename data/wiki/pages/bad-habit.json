@@ -1,8 +1,8 @@
 {
   "title": "Bad Habit",
   "url": "https://escapefromtarkov.fandom.com/wiki/Bad_Habit",
-  "revisionId": 367770,
-  "lastEdited": "2026-11-09T01:07:27Z",
+  "revisionId": 368048,
+  "lastEdited": "2026-11-14T22:35:39Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,7 +13,7 @@
   "infobox": {
     "given by": "Mechanic",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {

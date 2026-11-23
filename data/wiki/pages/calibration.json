@@ -1,8 +1,8 @@
 {
   "title": "Calibration",
   "url": "https://escapefromtarkov.fandom.com/wiki/Calibration",
-  "revisionId": 367721,
-  "lastEdited": "2026-11-09T00:28:22Z",
+  "revisionId": 368058,
+  "lastEdited": "2026-11-14T22:42:43Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Mechanic",
-    "LL requirement": "4",
-    "reqkappa": "No"
+    "LL requirement": "4"
   },
   "sections": [
     {
