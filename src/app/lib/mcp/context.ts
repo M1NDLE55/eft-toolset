@@ -177,7 +177,7 @@ function staleNotice(dataAgeMs: number | null, source: DataSource) {
               : `${Math.round(minutes / (24 * 60))} days`
         } ago`;
   const copy = source === "deployment" ? "the copy bundled with this server" : "cached data";
-  return `tarkov.dev couldn't be reached in time, so this uses ${copy}${age}. Prices may have changed.`;
+  return `Fresh tarkov.dev data couldn't be fetched in time, so this uses ${copy}${age}. Prices may have changed.`;
 }
 
 function classifyError(error: unknown, context: ToolContext): Exclude<ToolOutcome, "ok"> {

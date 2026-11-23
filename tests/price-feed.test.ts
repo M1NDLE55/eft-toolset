@@ -3,7 +3,7 @@ import { rm } from "node:fs/promises";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { rebuildItemIndexes } from "../scripts/build-tarkov-snapshot.mjs";
 import { POST as mcpPost } from "@/app/api/mcp/route";
-import { GET } from "@/app/api/tarkov/route";
+import { GET, POST } from "@/app/api/tarkov/route";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import {
   parsePriceFeed,
@@ -267,7 +267,7 @@ describe("prices from the feed", () => {
     expect(upstreamRequests("items")).toHaveLength(0);
   });
 
-  it("let a result built from the feed be reused until the feed copy changes", async () => {
+  it("let a result built from the feed be reused until the items file behind it changes", async () => {
     await oldSnapshot();
     const { snapshot } = await read(rifle);
     expect(snapshot.map(([key]) => key)).toEqual(expect.arrayContaining(["regular/prices", "regular/items#static"]));
@@ -281,11 +281,44 @@ describe("prices from the feed", () => {
     expect(canReuseSnapshot(snapshot)).toBe(true);
     await settleTarkovRefreshes();
     expect(feedRequests()).toHaveLength(2);
+    // The same items file behind it: the copy is kept, only confirmed again.
+    expect(canReuseSnapshot(snapshot)).toBe(true);
+
+    later(61_000);
+    feedResponse = () => Response.json({ data: feedWire(feedFixtures.items, { etag: '"items-3"' }) });
+    expect(canReuseSnapshot(snapshot)).toBe(true);
+    await settleTarkovRefreshes();
+    expect(feedRequests()).toHaveLength(3);
     expect(canReuseSnapshot(snapshot)).toBe(false);
   });
 });
 
 describe("when the feed fails", () => {
+  it("when the static copy is past the read's stale limit, use the feed's last prices rather than wait on the items file", async () => {
+    await oldSnapshot();
+    await read(rifle);
+    feedResponse = () => new Response("bad gateway", { status: 502 });
+    upstreamDown = true;
+    later(2 * 60_000 + 1);
+    vi.useFakeTimers({ toFake: ["Date"] });
+    // The first read refreshed every other dataset; only the static items copy is past a page render's six hours.
+    const result = await read(() => getGroupItems("regular", ["Test Rifle"]).then(([item]) => item), { maxStaleMs: 6 * HOUR });
+    expect(result.data.sellFor.at(-1)?.priceRUB).toBe(50_000);
+    expect(result.price).toMatchObject({ source: "feed", stale: true });
+  });
+
+  it("refuse price.feed over POST, so only the CDN-cached GET builds it", async () => {
+    const response = await POST(
+      new Request("http://localhost/api/tarkov", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ operation: TARKOV_OPERATIONS.priceFeed, variables: { gameMode: "regular" } }),
+      })
+    );
+    expect(response.status).toBe(400);
+    expect(upstreamRequests("items")).toHaveLength(0);
+  });
+
   it("fall back to the items file, then to the snapshot, and never fail while a copy exists", async () => {
     await oldSnapshot();
     feedResponse = () => new Response("bad gateway", { status: 502 });

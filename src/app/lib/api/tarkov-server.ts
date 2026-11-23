@@ -758,11 +758,6 @@ export function canReuseSnapshot(snapshot: DataSnapshot) {
       if (current !== entry || current.value !== value) return false;
       continue;
     }
-    const derived = derivedCopies.get(key);
-    if (derived) {
-      if (derived !== entry || derived.value !== value) return false;
-      continue;
-    }
     const current = resourceCache.get(key);
     if (current !== entry || current.value !== value || current.failedAt !== undefined) return false;
     const policy = RESOURCE_POLICIES[resourceOf(key)];
@@ -812,7 +807,7 @@ export async function runTarkovRead<T>(
     if (prices) {
       const [key, copy] = prices;
       options.onPriceSource?.({
-        source: key.endsWith(PRICES_SUFFIX) ? "feed" : copy.source === "deployment" ? "snapshot" : "items-file",
+        source: copy.source === "deployment" ? "snapshot" : key.endsWith(PRICES_SUFFIX) ? "feed" : "items-file",
         ageMs: Math.max(0, Date.now() - copy.fetchedAt),
         stale: isStale(copy),
       });
@@ -1510,6 +1505,16 @@ async function loadPricedItems(gameMode: GameMode): Promise<UpstreamEnvelope<Ite
   const key = `${gameMode}/items`;
   const entry = await peekResource(gameMode, "items");
   const feed = read.feed;
+  const maxStaleMs = context?.maxStaleMs ?? RESOURCE_MAX_STALE_MS;
+  if (read.failing && feed && entry.value && Date.now() - entry.fetchedAt >= maxStaleMs && Date.now() - feed.fetchedAt < maxStaleMs) {
+    // While the feed worked the static copy wasn't refreshed, so it can be older than this read accepts
+    // though the feed's last prices aren't. Use those, marked stale, rather than wait on (or fail for
+    // want of) a full download; the items file is fetched in the background meanwhile.
+    void refreshResource(gameMode, "items", entry).catch(() => undefined);
+    recordUse(key, entry, { value: entry.value, fetchedAt: entry.fetchedAt, source: entry.source ?? "tarkov.dev", stale: false, staticOnly: true });
+    recordPriceFeedUse(gameMode, feed, true);
+    return withFeedPrices(gameMode, entry.value as UpstreamEnvelope<ItemsData>, feed);
+  }
   if (read.failing || !entry.value) {
     const envelope = await loadResource<ItemsData>(gameMode, "items");
     const used = context?.used.get(key);

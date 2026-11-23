@@ -326,7 +326,16 @@ function refreshPriceFeed(origin: string, gameMode: GameMode, state: FeedState):
   }
   const inFlight = fetchPriceFeed(origin, gameMode)
     .then((feed) => {
-      state.feed = feed;
+      const held = state.feed;
+      if (held && feed.etag !== null && feed.etag === held.etag && feed.lastModified === held.lastModified) {
+        // The same items file: keep the held copy, so everything built from its prices stays valid,
+        // and note when it was confirmed.
+        held.fetchedAt = feed.fetchedAt;
+        held.source = feed.source;
+        held.stale = feed.stale;
+      } else {
+        state.feed = feed;
+      }
       state.checkedAt = Date.now();
       state.failures = 0;
       state.failedAt = state.retryAt = state.lastError = undefined;
@@ -371,10 +380,17 @@ async function fetchPriceFeed(origin: string, gameMode: GameMode): Promise<Price
     "User-Agent": USER_AGENT,
   };
   // Lets a preview deployment's own instances past its protection, when the project has a bypass secret.
-  const bypass = process.env.VERCEL_AUTOMATION_BYPASS_SECRET;
+  // Only on Vercel, where the origin is the deployment itself.
+  const bypass = process.env.VERCEL ? process.env.VERCEL_AUTOMATION_BYPASS_SECRET : undefined;
   if (bypass && origin !== SITE_ORIGIN) headers["x-vercel-protection-bypass"] = bypass;
   try {
-    const response = await fetch(priceFeedUrl(origin, gameMode), { headers, signal: controller.signal, cache: "no-store" });
+    // The feed URL never redirects; following one could hand the bypass secret to another host.
+    const response = await fetch(priceFeedUrl(origin, gameMode), {
+      headers,
+      signal: controller.signal,
+      cache: "no-store",
+      redirect: "error",
+    });
     if (!response.ok) {
       void response.body?.cancel().catch(() => undefined);
       throw new PriceFeedError(`The price feed returned ${response.status}.`, retryAfterMs(response.headers.get("retry-after")));

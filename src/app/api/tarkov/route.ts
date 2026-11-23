@@ -106,6 +106,10 @@ export async function POST(request: Request) {
   if (!isTarkovOperation(operation)) {
     return errorResponse("Unknown query operation.", "INVALID_OPERATION", 400);
   }
+  // The feed is for instances through the CDN; a POST would skip the cache and make the origin build it.
+  if (operation === TARKOV_OPERATIONS.priceFeed) {
+    return errorResponse("price.feed is served over GET only.", "INVALID_OPERATION", 400);
+  }
 
   return withSlot(() => execute(request, operation, variables, false));
 }
